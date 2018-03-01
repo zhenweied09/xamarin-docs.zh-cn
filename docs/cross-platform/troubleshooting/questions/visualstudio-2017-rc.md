@@ -1,0 +1,65 @@
+---
+title: "可以通过 Xamarin 使用 Visual Studio 自 2017 年 1 候选发布版本？"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 8E752F36-F73A-4EFC-9F82-4E18FDE1C9E2
+ms.technology: xamarin-cross-platform
+author: asb3993
+ms.author: amburns
+ms.date: 03/29/2017
+ms.openlocfilehash: 745e532a9543029f13e5fdffcc15153d780278ec
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/27/2018
+---
+# <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>可以通过 Xamarin 使用 Visual Studio 自 2017 年 1 候选发布版本？
+
+## <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>可以通过 Xamarin 使用 Visual Studio 自 2017 年 1 候选发布版本？
+
+可以。 现在能够利用 Xamarin 通过 Visual Studio 自 2017 年 1 候选发布版本。 但是，请注意，当前，到 Visual Studio 自 2017 年 1 RC 安装 Xamarin 将卸载任何早期版本的安装到 Visual Studio 2015/2013 Xamarin。 Xamarin 的 Visual Studio 2017 不能安装在同一时间作为 Xamarin 对于 Visual Studio 2015/2013 由于 Visual Studio 2017 远离朝着利用 Visual Studio 安装程序系统的 MSI 包。
+
+虽然团队当前研究如何绕过此预期的行为，建议用户选择其基于其需求的开发环境。 
+
+> [!IMPORTANT]
+> 如果你正在构建 Xamarin.iOS 项目，请确保 Visual Studio for Mac 配对 Mac 系统上为相同版本的 Xamarin.iOS 通道。
+
+## <a name="how-do-i-install-xamarin-to-visual-studio-2017-release-candidate"></a>如何到 Visual Studio 自 2017 年 1 候选发布版本安装 Xamarin
+
+### <a name="installing-during-the-visual-studio-2017-rc-installer"></a>Visual Studio 自 2017 年 1 RC 安装程序的过程中安装
+
+* 选择**Xamarin**作为新的一部分的组件**Visual Studio 安装程序**
+
+  [ ![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png)
+
+这将安装 Xamarin.iOS 和 Xamarin.Android 开发的 Visual Studio 扩展。
+
+### <a name="installing-or-reinstalling-xamarin-in-an-existing-installation-of-visual-studio-2017-rc"></a>在现有安装中的 Visual Studio 自 2017 年 1 RC 的安装或重新安装 Xamarin
+
+#### <a name="using-the-visual-studio-installer"></a>使用 Visual Studio 安装程序：
+
+1. 搜索 Visual Studio 安装程序应用程序
+
+  [ ![](visualstudio-2017-rc-images/reinstall1-sml.png "Visual Studio 安装程序应用程序的搜索结果")](visualstudio-2017-rc-images/reinstall1-orig.png)
+
+2. 选择：。 **使用.NET （预览版） 移动开发**在工作负荷选项卡中，或
+
+  [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 安装程序工作负荷选项卡")](visualstudio-2017-rc-images/reinstall2-orig.png) b。 **Xamarin**中**各个组件**选项卡
+
+  [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 安装程序组件选项卡")](visualstudio-2017-rc-images/reinstall3-orig.png)
+
+#### <a name="using-the-visual-studio-installer-within-visual-studio"></a>使用 Visual Studio 中的 Visual Studio 安装程序：
+1. 导航到 Visual Studio 自 2017 年 1 起始页
+2. 单击**多项目模板**下**新项目**部分
+
+    [ ![](visualstudio-2017-rc-images/reinstall4-sml.png "Visual Studio 起始页")](visualstudio-2017-rc-images/reinstall4-orig.png)
+3. 单击`Open Visual Studio Installer`的左窗格中
+
+    [ ![](visualstudio-2017-rc-images/reinstall5-sml.png "新建项目屏幕")](visualstudio-2017-rc-images/reinstall5-orig.png)
+4. 选择：
+    
+    a. **使用.NET （预览版） 移动开发**在工作负荷选项卡中，或
+
+    [ ![](visualstudio-2017-rc-images/reinstall2-sml.png "VS 安装程序工作负荷选项卡")](visualstudio-2017-rc-images/reinstall2-orig.png) b。 **Xamarin**中**各个组件**选项卡
+
+    [ ![](visualstudio-2017-rc-images/reinstall3-sml.png "VS 安装程序组件选项卡")](visualstudio-2017-rc-images/reinstall3-orig.png)
