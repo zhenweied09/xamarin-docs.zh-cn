@@ -1,0 +1,129 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.iOS
+metadata:
+  description: "Xamarin.iOS 为 .NET 开发人员提供了完整的 iOS SDK。"
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: landing-page
+  ms.openlocfilehash: b660a3e8ebfe88264a22532a8943daf2afe9dd28
+  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 02/27/2018
+abstract:
+  description: "Xamarin.iOS 为 .NET 开发人员提供了完整的 iOS SDK。 在 Visual Studio 中使用 C# 或 F# 生成完全本机的 iOS 应用。"
+  menu:
+    items:
+    - href: ~/ios/samples/
+      text: "iOS 示例"
+    - href: https://developer.xamarin.com/releases/ios/
+      text: "发行说明"
+    - href: https://developer.apple.com/documentation/
+      text: "Apple 开发人员文档"
+    - href: /visualstudio/
+      text: Visual Studio
+sections:
+- title: "开始操作"
+  items:
+  - type: paragraph
+    text: "了解如何使用 Xamarin 和 C# 生成首个 iOS 应用。"
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      text: "安装"
+      href: ~/ios/get-started/installation/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: "Hello，iOS"
+      href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: "多屏幕应用"
+      href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
+- title: "参考线"
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/ios/get-started/index.md
+        html: "通过 Xamarin.iOS 启动和运行的相关教程。 请确保正确安装所有项目，并生成首个 iOS 应用。"
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+          href: ~/ios/get-started/index.md
+        title: "入门"
+      - href: ~/ios/user-interface
+        html: "了解可在 UIKit 中用于 iOS 的用户界面控件的完整集合。"
+        image:
+          src: ~/media/icons/i_user-interface.svg
+          href: ~/ios/user-interface/
+        title: "用户界面"
+      - href: ~/ios/data-cloud/
+        html: "本地和远程数据存储和检索，以及其他基于云的服务。"
+        image:
+          src: ~/media/icons/i_data-cloud.svg
+          href: ~/ios/data-cloud/
+        title: "数据和云服务"
+      - href: ~/ios/internals/
+        html: "有关 Xamarin.iOS 工作原理的详细信息。"
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+          href: ~/ios/internals/
+        title: "高级概念和内部机制"
+      - href: ~/ios/watchos/
+        html: "生成 Apple Watch 应用！"
+        image:
+          src: ~/media/icons/i_watchos.svg
+          href: ~/ios/watchos/
+        title: watchOS
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/ios/app-fundamentals/
+        html: "生成 iOS 应用需要了解的所有内容，例如使用文件、映像、数据库等。"
+        image:
+          src: ~/media/icons/i_app-build.svg
+          href: ~/ios/app-fundamentals/
+        title: "应用程序基础知识"
+      - href: ~/ios/platform/
+        html: "使用 iOS 平台功能，如 ARKit 和 CoreML 以及 iOS 11 中的其他新功能。"
+        image:
+          src: ~/media/icons/i_platform.svg
+          href: ~/ios/platform/
+        title: "平台功能"
+      - href: ~/ios/deploy-test/
+        html: "有关构建应用并将其部署到应用商店的说明，和事先对其进行测试的提示！"
+        image:
+          src: ~/media/icons/i_deploy-test.svg
+          href: ~/ios/deploy-test/
+        title: "部署和测试"
+      - href: ~/ios/tvos/
+        html: "生成 Apple TV 应用！"
+        image:
+          src: ~/media/icons/i_tvos.svg
+          href: ~/ios/tvos/
+        title: tvOS
+- title: "参考"
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: API
+      href: 
+      html: "<p><a href=\"https://developer.xamarin.com/api/root/monotouch-lib/\">iOS API 文档</a></p><p><a href=\"https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinios-10.8\">基类库</a></p>"
+    - title: "示例"
+      href: https://developer.xamarin.com/samples
+      html: "<p><a href=\"https://developer.xamarin.com/samples/ios/all/\">iOS 示例</a></p><p><a href=\"https://developer.xamarin.com/samples/ios/all/\">watchOS 示例</a></p><p><a href=\"https://developer.xamarin.com/samples/ios/all/\">tvOS 示例</a></p>"
+    - title: "工作簿"
+      href: https://developer.xamarin.com/workbooks
+      html: "<p><a href=\"https://developer.xamarin.com/workbooks#ios\">iOS 工作簿</a></p>"

@@ -1,0 +1,47 @@
+---
+title: "iOS 入门"
+description: "从 Hello World 到 Hello App Store"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
+ms.technology: xamarin-ios
+author: bradumbaugh
+ms.author: brumbaug
+ms.date: 11/23/2016
+ms.openlocfilehash: 1c59a67a87087a821339e98bcdcc004a342e311a
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/27/2018
+---
+# <a name="getting-started-with-ios"></a>iOS 入门
+
+除了可随时获得一种新式语言 (C#) 的灵活性和优雅性、.NET 基类库 (BCL) 的强大功能，以及两个一流 IDE（Visual Studio for Mac 和 Visual Studio），Xamarin.iOS 还可使开发者使用 Objective-C 和 Xcode 中提供的相同 UI 控件来创建本机 iOS 应用程序。 本系列介绍如何设置和安装 Xamarin.iOS 并解决 Xamarin.iOS 开发的基础问题。
+
+## <a name="required-components"></a>必需组件
+
+若要针对 Xamarin.iOS 构建，需具备以下条件：
+
+-    iOS SDK 最新版。
+-    Xcode 最新版。
+-    macOS Sierra (10.12) 及更高版本。
+
+Xcode 的最新版可通过 [iOS 开发人员中心](https://developer.apple.com/devcenter/ios/index.action#downloads)（需要登录）或 Mac App Store 进行下载：
+
+## <a name="getting-started-series"></a>入门系列
+
+###  <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[设置和安装](~/ios/get-started/installation/index.md)
+
+在 Visual Studio for Mac 或 Visual Studio 中设置并运行 Xamarin.iOS。 本部分介绍如何下载、使用 Xamarin 安装程序进行安装、使用 Microsoft 帐户进行登录、常见故障排除项、设备预配等内容。
+
+###  <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello，iOS](~/ios/get-started/hello-ios/index.md)
+
+本指南由两部分构成，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成第一个 Xamarin.iOS 应用程序，并介绍使用 Xamarin 进行 iOS 应用程序开发的基础知识。 本指南还将介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
+
+###  <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[了解 iOS 多屏显示](~/ios/get-started/hello-ios-multiscreen/index.md)
+
+本指南由两部分构成，将探索如何扩展在《了解 iOS》指南中创建的应用程序，以处理第二个屏幕。 它介绍了“模型-视图-控制器”设计模式等概念，介绍了如何实现 iOS 导航，并更深入地介绍了 iOS 应用程序结构和功能。
+
+##  <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[面向 Objective-C 开发人员的 Xamarin](objective-c-developers/index.md)
+
+为 Objective-C 开发人员提供过渡到 Xamarin 平台的信息。
