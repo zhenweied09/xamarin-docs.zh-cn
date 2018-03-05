@@ -1,0 +1,372 @@
+---
+title: "本地化"
+ms.topic: article
+ms.prod: xamarin
+ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
+ms.technology: xamarin-cross-platform
+author: asb3993
+ms.author: amburns
+ms.date: 03/22/2017
+ms.openlocfilehash: 38b74c9f50ac0b61eecaa952367d41ef6242e8ac
+ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 02/27/2018
+---
+# <a name="localization"></a>本地化
+
+本指南介绍背后的概念*国际化*和*本地化*和有关如何生成 Xamarin 移动应用程序使用这些概念的说明的链接。
+
+如果你想要请直接跳到本地化的 Xamarin 应用的技术详细信息，请开头这些特定于平台的操作指南文章之一：
+
+- [**Xamarin.Forms** ](~/xamarin-forms/app-fundamentals/localization.md)使用 RESX 文件的跨平台本地化。
+- [**Xamarin.iOS** ](~/ios/app-fundamentals/localization/index.md)本机平台本地化。
+- [**Xamarin.Android** ](~/android/app-fundamentals/localization.md)本机平台本地化。
+
+## <a name="i18n-and-l10n"></a>i18n 和 L10n
+
+*国际化*是让代码能够显示不同的语言，并调整其显示为不同的区域设置 （如数字和日期格式设置） 的过程。 这也称为*全球化*。
+
+*本地化*是遵循 – 创建的每种语言的资源 （如字符串和图像），然后将它们捆绑与国际化应用程序的步骤。
+
+国际化通常将它缩短至 i18n – 18 字母"i"和"n"之间的速记。 到 L10n – 对于"L"和"n"之间的 10 个字母，同样将缩短本地化。
+
+## <a name="overview"></a>概述
+
+本文档介绍了与国际化和本地化，以及如何将它们应用于移动应用程序开发通常相关联的概念。
+在设计和构建应用程序，操作时你以前可能有硬编码，但其必须参数化本地化包括：
+
+-   屏幕布局和文本，
+-   图标、 图形和颜色，
+-   视频和声音文件
+-   动态文本和文本格式设置 （如数字、 货币和日期），
+ - 从右到左 (RTL) 语言的布局更改和
+-   数据排序。
+
+而你的应用面向这些提示的移动平台将帮助你生成高质量本地化应用程序。
+
+
+## <a name="design-considerations"></a>设计注意事项
+
+构建应用程序，以便可以本地化其内容称为国际化。 正确执行国际化超过不同语言只允许字符串要在运行时加载 – 设计良好的应用应允许的所有资源，若要更改根据语言和区域设置 （包括图像、 声音和视频） 和可调整格式设置和布局，以应对不同的大小调整字符串。
+
+本部分讨论一些设计注意事项，以生成国际化的应用程序时考虑到帐户。
+
+### <a name="layouts-and-string-length"></a>布局和字符串长度
+
+繁体中文和日语字符串可以是很短 – 有时一个或两个的字符可以是有意义足够的输入的字段标签。
+
+（例如） 德语字符串可能会很长;有时在英语中的相对较短单词变得非常长以其他语言 – 或者变得剪切或其他意外重排你的布局。
+
+比较在英语、 德语和日语 iOS 主屏幕上的几个项的字符串长度：
+
+[ ![](localization-images/language-compare-sml.png "德语 vs 日语字符串长度")](localization-images/language-compare.png)
+
+请注意，**设置**英文 （8 个字符） 需要为德语的转换，但在日语仅 2 个字符的 13 个字符。
+
+其中显示标签和输入的字段是并排显示的布局难以使用时标签长度可能大不相同。 通常是更轻松地本地化，因为整个屏幕的宽度是可用于标签和输入字段上方才显示标签的布局。
+
+作为一般规则，如果你在构建固定的布局 （尤其是通过并行元素） 将允许详细的宽度，除了你的英文字符串需要标签和文本至少 50%。 这不会解决每个问题，但将提供一个缓冲区，将在许多情况下工作。
+
+### <a name="input-validation"></a>输入的验证
+
+编写验证规则时，请注意的假设。 这可能看起来有效需要输入以"要求"至少三个字符在英语中，因为是一个字母极少数情况下有意义的文本字段。 中文和日语但单个字符可能是有效的值，并且验证消息"至少 3 个字符 is required"没有意义为那些语言。
+
+其他看似简单的任务如验证电子邮件地址或变得更为复杂的字符的网站 URL 并不局限于 ASCII 子集。
+
+编写国际化记住 – 你的验证规则选择的限制性最弱的规则，或编写逻辑，以便它的工作方式为每种语言。
+
+### <a name="images-and-color"></a>图像和颜色
+
+不是每个需要映像更改基于用户的语言选择。 许多图标或照片将是适用于所有用户，重要表情哪种语言。
+某些资源意义本地化不过，如：
+
+ - 映像进行描述，如果它显示了本地人员/位置人员或特定位置 – 您的应用程序可能会觉得与用户更相关。
+ - 图标 – 某些插图还可以是特定于区域性的并且可以使你的应用程序使用通过本地化图像以反映本地理解起来更为简便。
+ - 颜色 – 某些区域性了解颜色以不同方式 – 红色可能意味着在一个区域，但在另一个祝你好运警告。 设计您的应用程序，以确定是否应生成一种机制来本地化颜色时，请咨询本土人。
+
+
+### <a name="videos-and-sound"></a>视频和声音
+
+视频和本地化应用程序，因为相对较容易转换的字符串时，录制多个语音朗读跟踪或多个视频剪辑可能成本高昂，困难时的声音存在特殊挑战。
+
+（尤其是如果你将本地化为大量的语言，或具有多个媒体文件），视频和声音文件的多个副本可能也大大增加你的应用程序的大小。 你可以考虑之后用户在已安装你的应用，但这也可能导致不良的用户体验在慢速网络上下载仅需的语言资产。
+
+通常，多个方法来解决本地化问题 – 最重要的一点是要考虑它们前期并确保你的应用程序设计来处理它们。
+
+
+### <a name="dates-times-numbers-and-currency"></a>日期、 时间、 数字和货币
+
+如果你使用的.NET 格式设置函数，请记住，以便正确分析的小数点分隔符 （和避免转换引发的异常） 指定的区域性。 例如 1.99 和 1,99 是有效的十进制表示形式，具体取决于你的区域设置。
+
+当数据来自于已知源 (即。 从您自己的代码或你控制 web 服务) 可以进行硬编码匹配如 InvariantCulture 该值将适用于标准英语语言格式设置格式的区域性标识符。
+
+```csharp
+double.Parse("1,999.99", CultureInfo.InvariantCulture);
+```
+
+如果数据由应用程序用户正在输入、 分析使用反映其区域设置的 CultureInfo 实例：
+
+```csharp
+double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
+```
+
+请参阅[分析数值字符串](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx)和[分析日期和时间字符串](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx)MSDN 文章以获取其他信息。
+
+<a name="rtl" />
+
+### <a name="right-to-left-rtl-languages"></a>右到左 (RTL) 的语言
+
+（例如），某些语言，如阿拉伯语、 希伯来语和乌尔都语从右到左读取。
+支持这些语言的应用程序应使用屏幕设计适应右到左读取器，例如：
+
+ - 文本应为右对齐。
+ - 标签应会出现在输入字段的右侧。
+ - 默认按钮放置通常将被反转。
+ - 分层导航轻扫和动画 （和其他导航隐喻和动画），使用方向应也反转上下文。
+
+IOS 和 Android 支持从右向左的布局和字体呈现，具有各种内置功能，有助于使上述的调整。 Xamarin.Forms 不当前自动支持从右向左呈现。
+
+### <a name="sorting"></a>排序
+
+不同语言以不同方式，定义其字母表的排序顺序，即使它们使用相同的字符集。
+
+请参阅[详细信息的字符串比较](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison)中[在.NET Framework 中使用字符串的最佳实践](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx)有关其中语言 (CultureInfo) 会影响排序顺序示例。
+
+不太可能在移动平台上的内置数据库功能将支持特定于语言的排序顺序这样，你可能需在你的业务逻辑中实现附加代码。
+
+### <a name="text-search"></a>文本搜索
+
+确保你编写和记住测试与多个语言你搜索算法。 要考虑的事项包括：
+
+ - 自动完成 – 如果已生成一个自动完成的函数，则确保其源与用户的语言相关的建议。
+ - 对数据 – 匹配查询将搜索在特定输入的查询语言执行针对只是用该语言编写的内容或针对你的应用程序中的所有内容？
+ - 词干分析 – 如果您的搜索旨在搜索相似的单词、 word 根和其他搜索优化，是否为你支持的所有语言生成这些优化？
+ - 排序-请确保对结果进行排序正确 （如上所示）。
+
+
+### <a name="data-from-external-sources"></a>来自外部源的数据
+
+许多应用程序从外部源，从 Twitter 下载数据并 RSS 馈送到天气、 新闻或股票价格。 向用户显示此时需要考虑你将向其显示不相关或无法读取信息的屏幕的可能性。
+
+有几个可用于尝试并确保你的应用程序显示与用户相关数据的策略：
+
+ - 不同的源 – 你的应用程序可能从不同的源，具体取决于用户的语言或区域设置下载数据。 区域设置新闻、 天气和股票价格可能更有意义不是从北美馈送的内容下载。
+ - 本地化的显示 – 如果您要显示的 Twitter 或照片源，你应将元数据 （如所用的时间） 中显示他或她自己的语言，即使内容本身仍保留在原始语言。
+ - 翻译 – 你可以应用执行的操作的传入数据机器翻译到生成转换选项。 这可能是自动或用户的自行 – 只是一定要通知用户，如果这发生，因为机翻译永远不会是完美 ！
+
+这可能会影响到音频轨道的外部链接或视频 – 当设计应用程序时请务必为外包做好计划转换内容或确保，充分通知用户通过用户界面时内容不会出现在其语言。
+
+
+### <a name="dont-over-translate"></a>请不要过度翻译
+
+应用程序中的某些字符串可能不需要转换时，或最起码需要特别注意的转换器。 示例可能包括：
+
+ - Url – 如果列出的 URL，则它可能或可能不需要进行调整的语言。 例如，facebook.com 不需要转换它自动检测放在主站点的语言。 其他站点具有特定于区域设置的内容以及你可能想要提供其他 URL，例如与 yahoo.fr 或 yahoo.it yahoo.com。
+ - 电话号码-尤其是具有不同的国家/地区代码或某种特定语言的调用方的数字。
+ - 联系人详细信息 – 地址和其他信息可能因语言或区域设置而异。
+ - 商标和产品名称 – 某些字符串不需要转换，因为它们始终要编写的相同的语言。
+
+最后，请务必包括对该转换器的详细的说明，如果某些字符串需要特殊处理。
+
+
+### <a name="formatted-text"></a>带格式文本
+
+通常不使用移动应用程序问题因为字符串通常不设置丰富的格式。 如果在你的应用程序中需要 （如粗体或斜体格式） 的多格式文本但是确保转换器知道如何为输入的格式设置，你字符串的文件将其存储正确，并且它正确设置格式之前显示给用户 (ie。 不要意外让格式设置代码本身是向用户显示）。
+
+
+
+## <a name="translation-tips"></a>翻译提示
+
+转换使用的应用程序字符串被视为可在本地化过程的一部分。 通常此任务将外包给翻译服务并执行的多语言可能不知道你的应用程序或你的业务的人员。
+
+以下提示将帮助你制作可以更方便地准确地转换并因此提高你本地化的应用程序的质量的字符串。
+
+
+
+### <a name="localize-complete-strings-not-words"></a>本地化完整字符串，不字
+
+有时，开发人员采用尝试指定单个词或句子代码段，以便它们可以重新使用它们在整个应用程序的方法。 例如，文本"必须 5 条消息。" 它们可能会指定以下字符串进行转换
+
+**错误**:
+
+```csharp
+"You have"
+"no"
+"message"
+"messages"
+```
+
+然后尝试创建正确的短语上快速在代码中使用字符串串联：
+
+**错误**:
+
+```csharp
+"You have" + " " + numMsgs + " " + "messages"
+"You have" + " no " + "messages"
+```
+
+**这建议不要这样做**因为它将不一定能用于所有语言，并且将会比较困难转换器以了解每个短的段的上下文。 它还会导致重复使用的已翻译的字符串，更高版本会导致问题，如果它们在不同上下文中使用 （，然后更新）。
+
+
+### <a name="allow-for-parameter-re-ordering"></a>允许参数重新排序
+
+一些编程语言需要额外用于在字符串中，指定参数的顺序的语法，但.NET 已因此支持的带编号的占位符，概念
+
+**良好**:
+
+```csharp
+"a {0} b {1} cde {3}"
+```
+
+可能是转换的以下 （其中的位置和顺序占位符更改）
+
+```csharp
+"{2} {3} f g h {0}"
+```
+
+和令牌将排序用作应转换器。 请务必包括的每个占位符将字符串发送到一个转换器时所包含的说明。
+
+
+### <a name="use-multiple-strings-for-cardinality"></a>多个字符串用于基数
+
+避免字符串，例如`"You have {0} message/s."`为每个状态的特定字符串用于提供更好的用户体验：
+
+**良好**:
+
+```csharp
+"You have no messages."
+"You have 1 messages."
+"You have 2 messages."
+"You have {0} messages."
+```
+
+你将需要在计算的数目显示你的应用程序中编写代码，然后选择相应的字符串。 某些平台 （包括 iOS 和 Android） 有内置功能，可自动选择基于当前语言/区域设置的首选项的最佳复数形式的字符串。
+
+
+### <a name="allowing-for-gender"></a>允许性别
+
+基于 Latin 语言有时使用不同的单词，具体取决于使用者的性别。 如果你的应用程序就会了解有关性别，则应该允许已翻译的字符串，以反映这。
+
+此外还有更明显的情况下甚至在英语中，其中字符串，表示为特定人员或你的应用程序的用户。 例如，某些站点显示消息，如`"Bob commented on his post"`因此个男性、 女性，和非二进制或未知性别需要字符串：
+
+**良好**:
+
+```csharp
+"{0} commented on his post"
+"{0} commented on her post"
+"{0} commented on their post"
+```
+
+### <a name="dont-reuse-strings"></a>请勿重复使用的字符串
+
+或更准确地说，请勿重复使用字符串只是因为它们也是类似的字符串本身具有不同的目的和意义。
+
+例如： 假设应用程序中具有的打开/关闭开关和交换机控件需要的文本 on 和 off 要进行本地化。 您还显示该设置的值在其他位置的应用程序中的文本标签。 你应与开关的状态 （即使它们是以默认语言相同的字符串） – 交换机显示使用不同的字符串，例如所示：
+
+•"处理"– 显示在交换机本身 •"关闭"状态 – 显示在交换机本身 •"On"–"关闭"状态显示在标签 • – 在标签中显示
+
+这提供了对该转换器的最大的灵活性：
+
+• 对于设计原因，可能是交换机本身使用小写"打开"和"关闭"，但显示标签使用大写形式，"打开"和"关闭"。
+• 某些语言可能需要要缩写中容纳不下用户界面控件，而完成 （翻译） 单词可以显示在标签中的交换机值。
+• 或者，对于某些语言中的呈现你的交换机可能使用"I"和"O"适用于区域性的熟悉，但你仍可能会想标签为"On"或"Off"。
+
+<!--
+# Testing
+
+Once you’ve build and localized your app, you’ll want to be able to test. That means setting your emulator/simulator or device to use another locale or language.
+
+> [!IMPORTANT]
+> **WARNING:** Be careful when you set your device to a language you cannot read, as you may not be able to navigate the menu system to return it to your native language!
+
+
+## iOS
+
+Use Settings.app to switch the language and locale of the iOS Simulator or an iOS device.
+
+On the iOS Simulator you can use the Reset Content and Settings menu item (if the device is in a foreign language and you can’t navigate back to your native tongue).
+
+![]( "ios settings to change language")
+
+## Android
+
+To change the locale on a device
+
+**Home > Menu > Settings > **
+
+Then depending on Android version
+
+**Locale & text > Select locale**
+
+or
+
+**Language & Input > Select language**
+
+![]( "android settings to change language")
+
+When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
+
+###Spanish (Mexico)
+setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
+
+###French (France)
+setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
+
+###Japanese (Japan)
+setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
+
+###Portuguese (Brazil)
+setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
+
+###English (USA)
+setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
+
+**TIP:** the default location of ADB on Mac OS X is
+`/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
+
+
+## Windows Phone
+
+Refer to Microsoft’s instructions for [How to test region settings for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394014(v=vs.105).aspx).
+-->
+
+
+### <a name="translation-services"></a>转换服务
+
+#### <a name="machine-translation"></a>自动翻译
+
+出于测试的目的，它是可帮助使用许多的联机转换工具在开发过程中在你的应用程序中包含某些本地化后的文本。
+
+- [必应在线翻译](https://www.bing.com/translator/) <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
+
+- [Google 转换](http://translate.google.com)
+
+还有许多其他可用。 自动翻译的质量通常不会被视为足够好，若要释放应用程序没有首先评审并测试由专业翻译或本土人。
+
+#### <a name="professional-translation"></a>专业翻译
+
+也有专业翻译服务可将采用你字符串并将它们分发给其自己的转换器，向你提供完成翻译的费用。
+
+最知名的服务之一是[LionBridge](http://www.lionbridge.com/)。 最专业的服务支持所有常见文件类型包括字符串、 XML、 RESX 和 POT/PO。
+
+
+## <a name="summary"></a>摘要
+
+这篇文章引入了一些你应熟悉之前对你的应用程序，然后本地化你的资源，并还介绍如何更改每个平台的语言首选项的概念。
+
+这些概念可以应用于可能用于 Xamarin 的各种特定于平台的和跨平台国际化技术。
+
+继续读取为你感兴趣的平台的技术详细信息：
+
+- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md)使用 RESX 文件的跨平台本地化。
+- [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md)本机平台本地化。
+- [Xamarin.Android](~/android/app-fundamentals/localization.md)本机平台本地化。
+
+
+
+## <a name="related-links"></a>相关链接
+
+- [Apple 的本地化概述](https://developer.apple.com/internationalization/)
+- [Android 的本地化清单](http://developer.android.com/distribute/tools/localization-checklist.html)
+- [开发全球通用应用程序 (MSDN) 的最佳实践](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
