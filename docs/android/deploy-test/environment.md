@@ -107,7 +107,7 @@ Xamarin.Android 支持以下系统属性，可通过 `adb shell setprop` 或 `$(
 其值会重写默认检测到的目标设备的最大 GREF 计数。
 
 **注意：这只能与 `adb shell setprop
-debug.mono.max_grefc` 一起使用，因为当此值在 environment.txt**** 文件中时将不可用。
+debug.mono.max_grefc` 一起使用，因为当此值在 **environment.txt** 文件中时将不可用。
 
 ### `debug.mono.profile`
 

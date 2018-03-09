@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/12/2016
 ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2018
 ---
@@ -22,7 +22,7 @@ _Xamarin.Forms 布局用于将用户界面控件组合到逻辑结构。_
 
 ## <a name="layouts"></a>布局
 
-[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) Xamarin.Forms 中的类是视图，它充当容器其他布局或视图的专用子类型。 它通常包含在 Xamarin.Forms 应用程序中设置的位置和大小的子元素的逻辑。
+[`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) Xamarin.Forms 中的类是视图，它充当容器其他布局或视图的专用子类型。 它通常包含在 Xamarin.Forms 应用程序中设置的位置和大小的子元素的逻辑。
 
  [ ![](layouts-images/layouts-sml.png "Xamarin.Forms 布局类型")](layouts-images/layouts.png "Xamarin.Forms 布局类型")
 
