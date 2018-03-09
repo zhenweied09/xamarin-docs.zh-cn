@@ -10,7 +10,7 @@ ms.author: mamcle
 ms.date: 02/06/2018
 ms.openlocfilehash: 92cacd7ca5ff52a2bfe9060f47332b57d637609e
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
@@ -289,7 +289,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 **Textanalyzer.aar**示例包含图像文件驻留在**res/drawable/monkey.png**。 让我们访问此图像资源，并使用我们的示例应用程序：
 
-编辑**命名为 BindingTest**布局 (**main.axml**) 并添加`ImageView`到末尾`LinearLayout`容器。 这`ImageView`显示的图像位于** @drawable/monkey **; 此映像将加载的资源部分从**textanalyzer.aar**:
+编辑**命名为 BindingTest**布局 (**main.axml**) 并添加`ImageView`到末尾`LinearLayout`容器。 这`ImageView`显示的图像位于 **@drawable/monkey**; 此映像将加载的资源部分从**textanalyzer.aar**:
 
 ```xml
     ...

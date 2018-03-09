@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/17/2017
 ms.openlocfilehash: eed12c84b9952ef5c3dd27847071f05392bc16c4
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/27/2018
   - 转到**窗口 > 管理器**选择**存档**。
   - 从列表中选择的应用程序和存档。
   - （可选）**验证...**存档。
-  - **提交。。。**存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
+  - **提交...**存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
 
 阅读以下这些项与相关的特定提示。 请参阅[故障排除](#Troubleshooting)部分中如果遇到问题。
 

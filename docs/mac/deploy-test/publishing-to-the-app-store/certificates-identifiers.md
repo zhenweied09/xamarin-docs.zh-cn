@@ -167,7 +167,7 @@ _本指南介绍如何创建发布 Xamarin.Mac 应用时所需的证书和标识
      [![开发人员证书实用工具](certificates-identifiers-images/image29.png "开发人员证书实用工具")](certificates-identifiers-images/image29-large.png)
 11. 这两个新证书此时会出现在“密钥链”中： 
 
-     [![]密钥链访问中的证书(certificates-identifiers-images/image30.png "密钥链访问中的证书")](certificates-identifiers-images/image30-large.png)
+     [![密钥链访问中的证书](certificates-identifiers-images/image30.png "密钥链访问中的证书")](certificates-identifiers-images/image30-large.png)
 
 #### <a name="developer-id-certificates"></a>开发人员 ID 证书
 
