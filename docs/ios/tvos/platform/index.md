@@ -20,15 +20,15 @@ ms.lasthandoff: 02/27/2018
 
 但是，首先阅读[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)，因为它涵盖了关键概念和技术将在每篇文章中使用。
 
-## <a name="introduction-to-tvos-11iostvosplatformintroduction-to-tvos11md"></a>[TvOS 11 简介](~/ios/tvos/platform/introduction-to-tvos11.md)
+## <a name="introduction-to-tvos-11iostvosplatformintroduction-to-tvos11md"></a>[tvOS 11 简介](~/ios/tvos/platform/introduction-to-tvos11.md)
 
 本文介绍面向 Xamarin.tvOS 开发人员 tvOS 11 中可用的新功能。
 
-## <a name="introduction-to-tvos-10iostvosplatformintroduction-to-tvos10indexmd"></a>[TvOS 10 简介](~/ios/tvos/platform/introduction-to-tvos10/index.md)
+## <a name="introduction-to-tvos-10iostvosplatformintroduction-to-tvos10indexmd"></a>[tvOS 10 简介](~/ios/tvos/platform/introduction-to-tvos10/index.md)
 
 本文介绍的所有新增和更改 Api 和 tvOS 10 中可用的功能为 Xamarin.tvOS 开发人员。
 
-## <a name="introduction-to-tvos-9iostvosplatformtvos9md"></a>[TvOS 9 简介](~/ios/tvos/platform/tvos9.md)
+## <a name="introduction-to-tvos-9iostvosplatformtvos9md"></a>[tvOS 9 简介](~/ios/tvos/platform/tvos9.md)
 
 本文介绍的所有新增和更改 Api 和 tvOS 9 中可用的功能为 Xamarin.tvOS 开发人员。
 

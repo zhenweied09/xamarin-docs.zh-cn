@@ -16,7 +16,7 @@ ms.lasthandoff: 02/27/2018
 ---
 # <a name="getting-started-with-xamarintvos"></a>Getting Started with Xamarin.tvOS
 
-Xamarin.tvOS 可以创建的本机 tvOS 应用上的灵活性和雅致特征的现代的 C# 语言、 Visual Studio.NET 基类库 (BCL)，以及 power 用于 Mac 或 Visual Studio 2015 或 2017年在 Windows 上。
+Xamarin.tvOS允许在现代C＃语言的灵活性和优雅性，.NET基类库（BCL）和 Visual Studio for Mac或Visual Studio 2015或2017的Windows上创建本地tvOS应用程序。
 
 此系列引入了 Xamarin.tvOS 开发的基础知识。 它就会从安装 tvOS 支持的启动、 设计、 编码和运行应用程序。 与此同时，它会教会技能和工具集，将需要在任何 Xamarin.tvOS 应用上工作。
 

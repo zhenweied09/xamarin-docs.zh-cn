@@ -18,7 +18,7 @@ ms.lasthandoff: 02/27/2018
 
 _使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的接口生成器和 UX 设计原则。_
 
-在使用 C# 和.NET Xamarin.tvOS 应用中，你有权访问相同的用户界面控件的开发人员 Objective C 或 Swift 和 Xcode 中执行。 因为 Xamarin.tvOS 与 Xcode 直接集成，你可以使用 Xcode 的接口生成器来创建并维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
+在使用 C# 和.NET Xamarin.tvOS 应用中，你有权访问相同的用户界面控件的开发人员 Objective-C 或 Swift 和 Xcode 中执行。 因为 Xamarin.tvOS 与 Xcode 直接集成，你可以使用 Xcode 的接口生成器来创建并维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
 
 下面列出的指南提供有关使用 tvOS UI 中的元素的 Xamarin.tvOS 应用的详细的信息。 强烈建议你通读[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)首先，因为它涉及关键概念以及我们将在每篇文章中使用的技术。
 

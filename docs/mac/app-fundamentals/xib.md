@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2018
 ---
@@ -23,7 +23,7 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 ## <a name="overview"></a>概述
 
-在使用 C# 和.NET Xamarin.Mac 应用程序中，有权访问相同的用户界面元素和工具的开发人员*Objective C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
+在使用 C# 和.NET Xamarin.Mac 应用程序中，有权访问相同的用户界面元素和工具的开发人员*Objective-C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
 
 .Xib 文件是 macOS 用于在 Xcode 的接口生成器中以图形方式定义应用程序的用户界面元素 （如菜单、 Windows、 视图、 标签、 文本字段中） 创建和维护。
 
@@ -31,17 +31,17 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 在本文中，我们将介绍使用 Xamarin.Mac 应用程序中的.xib 文件的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章首先，因为它涉及关键概念以及我们将在本文中使用的技术。
 
-你可能想要看一看[公开 C# 类 / Objective C 的方法](~/mac/internals/how-it-works.md)部分[Xamarin.Mac 内部](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`属性用于连接你的 C# 类 OBJECTIVE-C 的对象和 UI 元素。
+你可能想要看一看[公开 C# 类 / Objective-C 的方法](~/mac/internals/how-it-works.md)部分[Xamarin.Mac 内部](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`属性用于连接你的 C# 类 Objective-C 的对象和 UI 元素。
 
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 和 Interface Builder 简介
 
-作为 Xcode 的一部分，Apple 已创建一个名为接口生成器中，可用于在设计器中以可视方式创建你的用户界面工具。 与接口生成器，使你可以使用 OBJECTIVE-C 的用户执行的相同工具创建你的 UI，Xamarin.Mac fluently 集成。
+作为 Xcode 的一部分，Apple 已创建一个名为接口生成器中，可用于在设计器中以可视方式创建你的用户界面工具。 与接口生成器，使你可以使用 Objective-C 的用户执行的相同工具创建你的 UI，Xamarin.Mac fluently 集成。
 
 
 ### <a name="components-of-xcode"></a>Xcode 组件
 
-它在中打开时的.xib 文件从 Visual Studio 的 Xcode 的 Mac，以打开**项目导航器**在左侧，**接口层次结构**和**界面编辑器**在中间和一个**属性和实用程序**右侧的部分：
+当您从Visual Studio for Mac在Xcode中打开.xib文件时，它将在左侧打开一个 **Project Navigator**，中间的 **Interface Hierarchy** 和 **Interface Editor** 以及右侧的 **Properties＆Utilities** 部分：
 
 [![Xcode UI 中的各组成部分](xib-images/xcode03.png "Xcode UI 的组件")](xib-images/xcode03-large.png)
 
@@ -50,7 +50,7 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 #### <a name="project-navigation"></a>项目导航
 
-当你打开.xib 文件进行编辑，在 Xcode 中时，适用于 Mac 的 Visual Studio 将创建在后台进行通信本身和 Xcode 之间更改的 Xcode 项目文件。 更高版本，当你切换回 Visual Studio for Mac 从 Xcode，对此项目进行任何更改与同步 Xamarin.Mac 项目由 Visual Studio for mac。
+当您打开一个用于在Xcode中进行编辑的.xib文件时，Visual Studio for Mac会在后台创建一个Xcode项目文件，以在其自身与Xcode之间传递更改。 更高版本，当你切换回 Visual Studio for Mac 从 Xcode，对此项目进行任何更改与同步 Xamarin.Mac 项目由 Visual Studio for Mac。
 
 **项目导航**部分允许您之间的所有文件组成此都导航_填充码_Xcode 项目。 通常情况下，你只会对感兴趣的.xib 文件类似于此列表中**MainMenu.xib**和**MainWindow.xib**。
 
@@ -134,7 +134,7 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 15. 选择**文件的所有者**从**接口层次结构**，切换到**连接检查器**拖动线条，将从委托到`AppDelegate` **对象**刚添加到项目：
 
     [![连接应用程序委托](xib-images/setup08.png "连接应用程序委托")](xib-images/setup08-large.png)
-16. 保存更改并返回到 Visual Studio for mac。
+16. 保存更改并返回到 Visual Studio for Mac。
 
 所有这些更改就地，编辑**AppDelegate.cs**文件并使其如下所示：
 
@@ -258,9 +258,9 @@ namespace MacXib
 
     [![编辑的类名称](xib-images/windowcontroller01.png "编辑的类名称")](xib-images/windowcontroller01-large.png)
 4. 保存所做的更改并返回到 Visual Studio for Mac 同步。
-5. A **WindowController.cs**文件将添加到项目中**解决方案 Pad**适用于 Mac 的 Visual Studio 中：
+5. 一个 **WindowController.cs** 文件将被添加到Visual Studio for Mac中 **解决方案板** 中的项目中：
 
-    ![Visual Studio 中适用于 Mac 的新类名称](xib-images/windowcontroller02.png "Visual Studio 中适用于 Mac 的新类名称")
+    ![Visual Studio for Mac中的新类名称](xib-images/windowcontroller02.png "Visual Studio for Mac") 中的新类名称
 6. 重新打开在 Xcode 的接口生成器情节提要。
 7. **WindowController.h**文件将可供使用：
 
@@ -276,7 +276,7 @@ namespace MacXib
 
 在 Xcode 中，容器和操作添加在通过的代码中直接*控件拖动*。 更具体地说，这意味着，若要创建 outlet 或操作的你选择你想要添加电源插座或操作，请按住的控件元素**控件**按钮在键盘上，并将该控件拖到你的代码的直接。
 
-对于 Xamarin.Mac 开发人员而言，这意味着，你将拖动到对应的 OBJECTIVE-C 的存根 （stub） 文件到想要创建 outlet 或操作的 C# 文件。 适用于 Mac 的 visual Studio 创建名为的文件**MainWindow.h**它生成填充码 Xcode 项目的一部分来使用接口生成器：
+对于 Xamarin.Mac 开发人员而言，这意味着，你将拖动到对应的 Objective-C 的存根 （stub） 文件到想要创建 outlet 或操作的 C# 文件。 Visual Studio for Mac创建了一个名为 **MainWindow.h** 的文件，作为使用Interface Builder生成的Shim Xcode项目的一部分：
 
 [![在 Xcode 中的.h 文件的示例](xib-images/xcode16.png "在 Xcode 中的.h 文件的示例")](xib-images/xcode16-large.png)
 
@@ -426,12 +426,12 @@ partial void ClickedButton (Foundation.NSObject sender);
 - (IBAction)ClickedButton:(id)sender;
 ```
 
-如你所见，适用于 Mac 的 Visual Studio 侦听对.h 文件的更改，然后会自动同步这些更改中各自**。 designer.cs**文件以将它们公开给你的应用程序。 你可能注意**MainWindow.designer.cs**是一个分部类，以便 Visual Studio for Mac 无需修改**了构成**这会覆盖我们具有对类进行了任何更改。
+如您所见，Visual Studio for Mac会监听.h文件的更改，然后自动同步各个 **.designer.cs** 文件中的这些更改以将它们公开给您的应用程序。 你可能注意**MainWindow.designer.cs**是一个分部类，以便 Visual Studio for Mac 无需修改**了构成**这会覆盖我们具有对类进行了任何更改。
 
 你通常将从不需要以打开**MainWindow.designer.cs**你自己，它此处提供出于教育目的仅。
 
 > [!IMPORTANT]
-> 在大多数情况下，适用于 Mac 的 Visual Studio 将自动请参阅在 Xcode 中所做的任何更改，并将它们同步到 Xamarin.Mac 项目。 如果同步不自动进行，请切换回 Xcode，然后再次切换到 Visual Studio for Mac。 这通常会开始同步周期。
+> 在大多数情况下，Visual Studio for Mac将自动查看Xcode中所做的任何更改并将其同步到Xamarin.Mac项目。 如果同步不自动进行，请切换回 Xcode，然后再次切换到 Visual Studio for Mac。 这通常会开始同步周期。
 
 
 ## <a name="adding-a-new-window-to-a-project"></a>向项目中添加一个新窗口

@@ -1,5 +1,5 @@
 ---
-title: "TvOS 简介"
+title: "tvOS 简介"
 description: "本文介绍在构建使用 Xamarin tvOS 应用。"
 ms.topic: article
 ms.prod: xamarin
@@ -10,11 +10,11 @@ ms.author: brumbaug
 ms.date: 02/02/2018
 ms.openlocfilehash: 8c40472f794be9a21045da4f4477d4104c3ddbdd
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
-# <a name="introduction-to-tvos"></a>TvOS 简介
+# <a name="introduction-to-tvos"></a>tvOS 简介
 
 ## <a name="introducing-tvos"></a>引入 tvOS
 
@@ -31,7 +31,7 @@ Apple TV 平台是打开开发人员，使他们能够创建丰富、 引人入�
 - [简介 tvOS 11](~/ios/tvos/platform/introduction-to-tvos11.md) -这篇文章介绍面向 Xamarin.tvOS 开发人员 tvOS 11 中可用的新功能。
 - [简介 tvOS 10](~/ios/tvos/platform/introduction-to-tvos10/index.md) -这篇文章介绍的新增和更改 Api 和 tvOS 10 中可用的功能的所有 Xamarin.tvOS 开发人员。
 - [简介 tvOS 9](~/ios/tvos/platform/tvos9.md) – 这篇文章介绍的新增和更改 Api 和 tvOS 9 中可用的功能的所有 Xamarin.tvOS 开发人员。 
-- [Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)– 本指南将指导完成创建第一个 Xamarin.tvOS 应用，并在过程中引入了开发工具链、 针对 Mac、 Xcode 和接口生成器包括 Visual Studio。 它还介绍插座和操作，它们将显示代码的 UI 控件，并最后，它演示如何生成、 运行和测试 Xamarin.tvOS 应用程序。
+- [Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)– 本指南介绍了创建第一个Xamarin.tvOS应用程序的过程，并介绍了开发工具链，包括Visual Studio for Mac，Xcode和Interface Builder。 它还介绍插座和操作，它们将显示代码的 UI 控件，并最后，它演示如何生成、 运行和测试 Xamarin.tvOS 应用程序。
 - [处理图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)– 此文章介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。
 - [使用导航和焦点](~/ios/tvos/app-fundamentals/navigation-focus.md)– 这篇文章讲述焦点以及如何使用它为在 Xamarin.tvOS 应用内部处理导航和呈现的概念。
 - [资源和数据存储](~/ios/tvos/app-fundamentals/resources-data-storage.md)– 本文介绍如何使用资源和 Xamarin.tvOS 应用中的持久数据存储。

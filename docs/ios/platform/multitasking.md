@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/20/2017
 ms.openlocfilehash: 8e5bb4747811729adf5363b0a893b0f85108b220
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
@@ -115,9 +115,9 @@ iOS 9 提供通过引入的 iPad 上的新多任务功能_滑动通过_，_拆�
 
 [ ![](multitasking-images/sizeclasses01.png "屏幕的大小和方向注意事项")](multitasking-images/sizeclasses01.png)
 
-在 iPad 上的全屏应用具有常规的水平和垂直大小类。 所有 Iphone 但 iPhone 6 Plus 和 iPhone 6s Plus，位于采用任何方向的两个方向中有压缩大小类。 IPhone 6 Plus 和 iPhone 6s Plus 在横向模式中具有一个正则的水平大小类和 Compact 的垂直大小类 （非常类似于 iPad 迷你）。
+在 iPad 上的全屏应用具有常规的水平和垂直大小类。 所有 iPhone 但 iPhone 6 Plus 和 iPhone 6s Plus，位于采用任何方向的两个方向中有压缩大小类。 iPhone 6 Plus 和 iPhone 6s Plus 在横向模式中具有一个正则的水平大小类和 Compact 的垂直大小类 （非常类似于 iPad 迷你）。
 
-在支持滑动通过和拆分视图的 Ipad，你可以结束，以下组合：
+在支持滑动通过和拆分视图的 IPad，你可以结束，以下组合：
 
 <table width=100% border="1px">
     <tr>
@@ -160,7 +160,7 @@ iOS 9 提供通过引入的 iPad 上的新多任务功能_滑动通过_，_拆�
 
 ### <a name="custom-hardware-keyboard-shortcuts"></a>自定义硬件键盘快捷方式
 
-在 iOS 9 iPad 上运行，Apple 有扩展的支持的硬件键盘。 Ipad 始终具有包括基本外部键盘支持通过蓝牙和某些键盘制造商创建键盘包含硬连线的特定于 iOS 的密钥。
+在 iOS 9 iPad 上运行，Apple 有扩展的支持的硬件键盘。 iPad 始终具有包括基本外部键盘支持通过蓝牙和某些键盘制造商创建键盘包含硬连线的特定于 iOS 的密钥。
 
 现在，使用 iOS 9，应用程序可以创建自己的自定义键盘快捷键。 此外，某些基本的键盘快捷方式与一样可用**命令 C** （副本），**命令 X** （剪切）、**命令 V** （粘贴） 和**命令 Shift H** （主），而无需应用程序正在对其进行专门编写的响应。
 
@@ -264,7 +264,7 @@ Xamarin.iOS 应用程序选择退出的任一滑出将在面板中或在拆分�
 
 ## <a name="summary"></a>摘要
 
-本文介绍了为确保 Xamarin.iOS 应用程序将运行并在 iOS 9 的新多任务能力 Ipad 中的正确行为所需的步骤。 此外，则覆盖选择加入扩展的应用程序，它不是适合的多任务。
+本文介绍了为确保 Xamarin.iOS 应用程序将运行并在 iOS 9 的新多任务能力 iPad 中的正确行为所需的步骤。 此外，则覆盖选择加入扩展的应用程序，它不是适合的多任务。
 
 
 

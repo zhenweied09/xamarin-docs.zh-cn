@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 06/07/2016
 ms.openlocfilehash: 6adba454ac153186c05715f4baa3261212e7b18b
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
@@ -57,11 +57,11 @@ Xamarin 支持为 Xamarin.tvOS 应用程序的程序集的列表。
 
 ###  <a name="linking-native-librariesiosplatformnative-interopmd"></a>[链接的本机库](~/ios/platform/native-interop.md)
 
-Xamarin.iOS 支持本机 C 库和 Objective C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 有关执行相同的 Objective C 库的信息，请参阅&nbsp;[绑定 Objective C 类型](~/ios/platform/binding-objective-c/index.md)&nbsp;文档。
+Xamarin.iOS 支持本机 C 库和 Objective-C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 有关执行相同的 Objective-C 库的信息，请参阅&nbsp;[绑定 Objective-C 类型](~/ios/platform/binding-objective-c/index.md)&nbsp;文档。
 
-##  <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[OBJECTIVE-C 的选择器](~/ios/internals/objective-c-selectors.md)
+##  <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Objective-C 的选择器](~/ios/internals/objective-c-selectors.md)
 
-说明并且直接调用 OBJECTIVE-C 的选择器 （方法） 的使用情况。
+说明并且直接调用 Objective-C 的选择器 （方法） 的使用情况。
 
 ###  <a name="systemdataiosdata-cloudsystemdatamd"></a>[System.Data](~/ios/data-cloud/system.data.md)
 
@@ -73,7 +73,7 @@ Xamarin.iOS 支持本机 C 库和 Objective C 库链接。 本文档讨论了如
 
 ###  <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[XIB 代码生成](~/ios/internals/xib-code-generation.md)
 
-如何适用于 Mac 的 Visual Studio 集成使用 Xcode 的接口生成器，以便您可以使用接口生成器设计用户界面。
+Visual Studio for Mac如何与Xcode的Interface Builder集成以允许您使用Interface Builder来设计UI。
 
 
 

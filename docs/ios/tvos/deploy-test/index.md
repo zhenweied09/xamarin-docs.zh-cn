@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/16/2017
 ms.openlocfilehash: 5ae7753fe7d12fd41b39f9429fa4a3ee97a22a5d
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---

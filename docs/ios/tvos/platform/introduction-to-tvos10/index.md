@@ -1,5 +1,5 @@
 ---
-title: "TvOS 10 简介"
+title: "tvOS 10 简介"
 description: "本文介绍的所有新增和更改 Api 和 tvOS 10 中可用的功能为 Xamarin.tvOS 开发人员。"
 ms.topic: article
 ms.prod: xamarin
@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
-# <a name="introduction-to-tvos-10"></a>TvOS 10 简介
+# <a name="introduction-to-tvos-10"></a>tvOS 10 简介
 
 _本文介绍的所有新增和更改 Api 和 tvOS 10 中可用的功能为 Xamarin.tvOS 开发人员。_
 
