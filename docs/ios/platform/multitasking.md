@@ -117,7 +117,7 @@ iOS 9 提供通过引入的 iPad 上的新多任务功能_滑动通过_，_拆�
 
 在 iPad 上的全屏应用具有常规的水平和垂直大小类。 所有 iPhone 但 iPhone 6 Plus 和 iPhone 6s Plus，位于采用任何方向的两个方向中有压缩大小类。 iPhone 6 Plus 和 iPhone 6s Plus 在横向模式中具有一个正则的水平大小类和 Compact 的垂直大小类 （非常类似于 iPad 迷你）。
 
-在支持滑动通过和拆分视图的 IPad，你可以结束，以下组合：
+在支持滑动通过和拆分视图的 iPad，你可以结束，以下组合：
 
 <table width=100% border="1px">
     <tr>
