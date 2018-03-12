@@ -8,7 +8,7 @@ ms.author: chape
 ms.date: 11/07/2017
 ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/27/2018
 ---
@@ -30,7 +30,7 @@ Xamarin.Forms 定义保留集合并显示其元素的三个视图：
 
 [ **PickerDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerDemo)示例演示如何使用 XAML 来设置`Picker` [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/)属性并添加`string`项到[ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/)集合。 当用户选择`Picker`，它显示中的项`Items`方式取决于平台的集合。
 
-[ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/)事件表示用户选择某个项。 从零开始[ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/)属性然后指示所选的项。 如果未不选定任何项，`SelectedIndex`等于 （&) #x 2013; 1。
+[ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/)事件表示用户选择某个项。 从零开始[ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/)属性然后指示所选的项。 如果未不选定任何项，`SelectedIndex`等于 &#x2013;1.
 
 你还可以使用`SelectedIndex`初始化，所选的项，但它必须设置后`Items`填充集合。 在 XAML 中，这意味着，你可能将使用的属性元素来设置`SelectedIndex`。
 
@@ -81,11 +81,11 @@ Xamarin.Forms 定义保留集合并显示其元素的三个视图：
 
 `ListView` 需要模板，以显示这些项。 在代码中，你可以设置[ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/)属性定义`ItemsView<TVisual>`到[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)对象使用[`DataTemplate`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/)，引用的派生[ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/)类。 `Cell` 具有五个衍生产品：
 
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) & #x 2014;包含两个`Label`（从概念上讲） 的视图
-- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) & #x 2014;将添加`Image`查看对 `TextCell`
-- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) & #x 2014;包含`Entry`的视图 `Label`
-- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) & #x 2014;包含`Switch`与 `Label`
-- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) & #x 2014;可以是任何`View`（可能具有子级）
+- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &#x2014;包含两个`Label`（从概念上讲） 的视图
+- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &#x2014;将添加`Image`查看对 `TextCell`
+- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &#x2014;包含`Entry`的视图 `Label`
+- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &#x2014;包含`Switch`与 `Label`
+- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &#x2014;可以是任何`View`（可能具有子级）
 
 然后调用[ `SetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/)和[ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/)上`DataTemplate`要将数值与相关联对象`Cell`属性，或者对其设置数据绑定`Cell`属性引用中的项的属性`ItemsSource`集合。 此进行了演示[ **TextCellListCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode)示例。
 
