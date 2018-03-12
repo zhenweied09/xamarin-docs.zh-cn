@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms 布局"
-description: "Xamarin.Forms 布局用于将用户界面控件组合到逻辑结构。"
+description: "Xamarin.Forms 布局用于组合成 visual 结构的用户界面控件。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
@@ -8,148 +8,106 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: aa16c5aa0304b012aa6197e192ef073b472817cc
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 布局
 
-_Xamarin.Forms 布局用于将用户界面控件组合到逻辑结构。_
+_Xamarin.Forms 布局用于组合成 visual 结构的用户界面控件。_
 
-<style>.tableimg {最大宽度： 无 ！ 重要;}</style>
+[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout)和[ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) Xamarin.Forms 中的类是作为容器的视图和其他布局视图的专用子类型。 `Layout`类本身派生自[ `View` ](views.md)。 A`Layout`派生通常包含逻辑，以便在 Xamarin.Forms 应用程序中设置的位置和子元素的大小。
 
-## <a name="layouts"></a>布局
+ [ ![](layouts-images/layouts-sml.png "Xamarin.Forms 布局类型")](layouts-images/layouts.png#lightbox "Xamarin.Forms 布局类型")
 
-[`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) Xamarin.Forms 中的类是视图，它充当容器其他布局或视图的专用子类型。 它通常包含在 Xamarin.Forms 应用程序中设置的位置和大小的子元素的逻辑。
+派生自的类`Layout`可以划分为两个类别：
 
- [ ![](layouts-images/layouts-sml.png "Xamarin.Forms 布局类型")](layouts-images/layouts.png "Xamarin.Forms 布局类型")
+## <a name="layouts-with-single-content"></a>具有单个内容布局
 
-<br clear="all" />
+这些类派生自[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)，后者定义了[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)和[ `IsClippedToBounds` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.IsClippedToBounds/)属性。
 
-Xamarin.Forms 支持：
+<a name="contentView" />
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-<thead>
-    <th>
-      <strong>类型</strong>
-    </th>
-    <th>
-      <strong>说明</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>屏幕快照</strong>
-    </th>
-  </thead>
-  <tbody>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/">ContentPresenter</a>
-    </td>
-    <td valign="top">
-用于模板化视图的布局管理器。 在中使用<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/">ControlTemplate</a>来标记要显示的内容的显示位置。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/Templates/ControlTemplates/SimpleTheme/SimpleTheme/App.xaml"><img src="layouts-images/ContentPresenter.png" title="ContentPresenter 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/">ContentView</a>
-    </td>
-    <td valign="top">
-具有单个内容的元素。 ContentView 具有很少用到它自己。 其目的是为作为用户定义的复合视图的基类。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ContentViewDemoPage.cs"><img src="layouts-images/ContentView.png" title="ContentView 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/">帧</a>
-    </td>
-    <td valign="top">
-包含与某些组帧选项存在单个子级的元素。 帧具有默认值<a href="https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/">Xamarin.Forms.Layout.Padding</a>为 20。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/FrameDemoPage.cs"><img src="layouts-images/Frame.png" title="框架示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">ScrollView</a>
-    </td>
-    <td valign="top">
-需要能够滚动是否内容的元素。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ScrollViewDemoPage.cs"><img src="layouts-images/ScrollView.png" title="ScrollView 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedView/">TemplatedView</a>
-    </td>
-    <td valign="top">
-显示使用控件模板，和类的基类的内容的元素<a href=""/api/type/Xamarin.Forms.ContentView/">ContentView</a>。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/tree/master/Templates/ControlTemplates/"><img src="layouts-images/TemplatedView.png" title="TemplatedView 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/">AbsoluteLayout</a>
-    </td>
-    <td valign="top">
-在绝对请求位置定位子元素。 分配锚点和边界的用户定义的位置和大小的控件。
-    </td>
-    <td valign="top">
-      <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/AbsoluteLayoutDemoPage.cs"><img src="layouts-images/AbsoluteLayout.png" title="AbsoluteLayout 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/">Grid</a>
-    </td>
-    <td valign="top">
-包含按行和列排列的视图布局。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/GridDemoPage.cs"><img src="layouts-images/Grid.png" title="网格示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/">RelativeLayout</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/%601">布局</a>使用<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/">约束</a>的布局及其子级。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/RelativeLayoutDemoPage.cs"><img src="layouts-images/RelativeLayout.png" title="RelativeLayout 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/">StackLayout</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/">布局</a>，简单地在一行可以面向垂直或水平定位子元素。 此布局将子边界期间自动设置布局周期。 分配边界的用户将被覆盖，因此不应设置子元素上的用户。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/StackLayoutDemoPage.cs"><img src="layouts-images/StackLayout.png" title="StackLayout 示例" class="tableimg">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
+### <a name="contentview"></a>ContentView
 
+|     |     |
+| --- | --- |
+| [`ContentView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) 包含设置的单个子[ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/)属性。 `Content`属性可以设置为任何`View`派生，包括其他`Layout`衍生产品。 `ContentView` 主要用作一种结构元素和用作基类到[ `Frame` ](#frame)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) | [![ContentView 示例](layouts-images/ContentView.png "ContentView 示例")](layouts-images/ContentView-Large.png#lightbox "ContentView 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+|     |     |
 
+<a named="frame" />
+
+### <a name="frame"></a>Frame
+
+|     |     |
+| --- | --- |
+| [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/)类派生自[ `ContentView` ](#contentView)并显示其子级矩形边框。 `Frame` 具有一个默认[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)值为 20，并还定义[ `OutlineColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/)， [ `CornerRadius` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.CornerRadius/)，和[ `HasShadow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.HasShadow/)属性。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) | [![帧示例](layouts-images/Frame.png "帧示例")](layouts-images/Frame-Large.png#lightbox "框架示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+|     |     |
+
+<a name="scrollView" />
+
+### <a name="scrollview"></a>ScrollView
+
+|     |     |
+| --- | --- |
+| [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 它能够滚动其内容。 设置[ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/)属性设置为适合于屏幕查看或布局太大。 (的内容`ScrollView`非常通常[ `StackLayout` ](#stackLayout)。)设置[ `Orientation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Orientation/)属性以指示是否滚动应为垂直，和 / 或水平。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) / [指南](~/xamarin-forms/user-interface/layouts/scroll-view.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![ScrollView 示例](layouts-images/ScrollView.png "ScrollView 示例")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+|     |     |
+
+### <a name="templatedview"></a>TemplatedView
+
+|     |     |
+| --- | --- |
+| [`TemplatedView`](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedView/) 显示与控件模板的内容，而且是类的基类[ `ContentView` ](#contentView)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedView/) / [指南](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![TemplatedView 示例](layouts-images/TemplatedView.png "TemplatedView 示例")](layouts-images/TemplatedView.png#lightbox "TemplatedView 示例") |
+|     |     |
+
+### <a name="contentpresenter"></a>ContentPresenter
+
+|     |     |
+| --- | --- |
+| [`ContentPresenter`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/) 为布局管理器中使用的模板化视图[ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/)标记显示内容的显示位置。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/) / [指南](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![ContentPresenter 示例](layouts-images/ContentPresenter.png "ContentPresenter 示例")](layouts-images/ContentPresenter.png#lightbox "ContentPresenter 示例") |
+|     |     |
+
+## <a name="layouts-with-multiple-children"></a>具有多个子级的布局
+
+这些类派生自[ `Layout<View>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/)。
+
+<a name="stackLayout" />
+
+### <a name="stacklayout"></a>StackLayout
+
+|     |     |
+| --- | --- |
+| [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 在水平或垂直取决于堆栈中定位子元素[ `Orientation` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Orientation/)属性。 [ `Spacing` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/)属性控制子级，之间的间距和的默认值为 6。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) / [指南](~/xamarin-forms/user-interface/layouts/stack-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)| [![StackLayout 示例](layouts-images/StackLayout.png "StackLayout 示例")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs) / [XAML 页]((https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml)) |
+|     |     |
+
+<a name="grid" />
+
+### <a name="grid"></a>Grid
+
+|     |     |
+| --- | --- |
+| [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 在行和列的网格中定位及其子元素。 指示子表位置[附加属性](~/xamarin-forms/xaml/attached-properties.md) [ `Row` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/)， [ `Column` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/)， [ `RowSpan` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/)，和[ `ColumnSpan` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) / [指南](~/xamarin-forms/user-interface/layouts/grid.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![网格示例](layouts-images/Grid.png "网格示例")](layouts-images/Grid-Large.png#lightbox "网格示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs) / [XAML 页]((https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml)) |
+|     |     |
+
+### <a name="absolutelayout"></a>AbsoluteLayout
+
+|     |     |
+| --- | --- |
+| [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 在相对于其父级的特定位置定位子元素。 指示子表位置[附加属性](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty/)和[ `LayoutFlags` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty/)。 `AbsoluteLayout`可用于进行动画处理的视图的位置。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) / [指南](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![AbsoluteLayout 示例](layouts-images/AbsoluteLayout.png "AbsoluteLayout 示例")](layouts-images/AbsoluteLayout-Large.png#lightbox "AbsoluteLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutdDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayout.xaml)与[代码隐藏](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayout.xaml.cs) |
+|     |     |
+
+### <a name="relativelayout"></a>RelativeLayout
+
+|     |     |
+| --- | --- |
+| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) 定位子元素相对于`RelativeLayout`本身或其同级。 指示子表位置[附加属性](~/xamarin-forms/xaml/attached-properties.md)，设置指向类型的对象[ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)和[ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)/ [指南](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 示例](layouts-images/RelativeLayout.png "RelativeLayout 示例")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 页]((https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml)) |
+|     |     |
 
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms 库 （示例）](https://developer.xamarin.com/samples/FormsGallery/)
-- [Xamarin.Forms 示例](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
-- [Xamarin.Forms API 文档](https://developer.xamarin.com/api/namespace/Xamarin.Forms)
+- [Xamarin.Forms FormsGallery 示例](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms API 文档](https://developer.xamarin.com/api/root/Xamarin.Forms/)

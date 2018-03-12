@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e78b76a531e9f8ea88adca46fc59b2063fce14cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>演练-与 Xamarin 设计器使用 iOS 自定义控件
 
@@ -33,13 +33,13 @@ Xamarin 设计器中为 iOS 是针对 Mac 和 Visual Studio 2015 和 2017 Window
 1. 创建新的解决方案从**iOS > 应用程序 > 单视图应用程序 > C#**模板，将其命名为`ScratchTicket`，并继续完成新项目向导：
 
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "创建新的解决方案")](ios-designable-controls-walkthrough-images/01new.png)
+    [![](ios-designable-controls-walkthrough-images/01new.png "创建新的解决方案")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 
 1. 创建名为的新的空类文件`ScratchTicketView`:
 
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "创建一个新的 ScratchTicketView 类")](ios-designable-controls-walkthrough-images/02new.png)
+    [![](ios-designable-controls-walkthrough-images/02new.png "创建一个新的 ScratchTicketView 类")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 
 1. 添加以下代码`ScratchTicketView`类：
@@ -168,63 +168,50 @@ Xamarin 设计器中为 iOS 是针对 Mac 和 Visual Studio 2015 和 2017 Window
     
 1. 双击`Main.storyboard`文件以在设计器中打开它：
 
-    
-    [![](ios-designable-controls-walkthrough-images/03new.png "IOS 设计器")](ios-designable-controls-walkthrough-images/03new.png)
-
+    [![](ios-designable-controls-walkthrough-images/03new.png "IOS 设计器")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
 1. 拖放**图像视图**从**工具箱**到情节提要中的视图。
 
-    
-    [![](ios-designable-controls-walkthrough-images/04new.png "图像视图添加到布局")](ios-designable-controls-walkthrough-images/04new.png)
+    [![](ios-designable-controls-walkthrough-images/04new.png "图像视图添加到布局")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
 1. 选择**图像视图**并更改其**映像**属性`Monkey.png`。
 
-    
-    [![](ios-designable-controls-walkthrough-images/05new.png "将图像视图图像属性设置为 Monkey.png")](ios-designable-controls-walkthrough-images/05new.png)
+    [![] (ios-可设计的控件的演练-映像/05new.png Monkey.png 到"设置图像视图图像属性)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
 1. 随着我们使用大小类我们将需要限制此图像视图。 单击此图像两次以将其放置约束模式。 让我们通过单击 center 固定句柄到中心约束它，并将其对齐同时垂直和水平方向：
-    
-    
-    [![](ios-designable-controls-walkthrough-images/06new.png "使映像内居中")](ios-designable-controls-walkthrough-images/06new.png)
 
-    
+    [![](ios-designable-controls-walkthrough-images/06new.png "使映像内居中")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+
 1. 若要将限制的高度和宽度，单击大小固定句柄 （骨骼调整句柄），并分别选择宽度和高度：
 
-    
-    [![](ios-designable-controls-walkthrough-images/07new.png "将约束添加")](ios-designable-controls-walkthrough-images/07new.png)
+    [![](ios-designable-controls-walkthrough-images/07new.png "将约束添加")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
 1. 更新基于通过单击工具栏中的更新按钮的约束的帧：
 
-
-    [![](ios-designable-controls-walkthrough-images/08new.png "约束工具栏")](ios-designable-controls-walkthrough-images/08new.png)
+    [![](ios-designable-controls-walkthrough-images/08new.png "约束工具栏")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
 1. 接下来，生成项目，以便**暂存票证视图**将出现在**自定义组件**工具箱中：
 
-    
-    [![](ios-designable-controls-walkthrough-images/09new.png "自定义组件工具箱")](ios-designable-controls-walkthrough-images/09new.png)
+    [![](ios-designable-controls-walkthrough-images/09new.png "自定义组件工具箱")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
 1. 拖放式**暂存票证视图**以使其 monkey 图像上方显示。 调整拖动手柄，让暂存票证视图涵盖 monkey 完全，如下所示：
 
-    
-    [![](ios-designable-controls-walkthrough-images/10new.png "暂存票证视图，通过该图像视图")](ios-designable-controls-walkthrough-images/10new.png)
-
+    [![](ios-designable-controls-walkthrough-images/10new.png "暂存票证视图，通过该图像视图")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. 通过绘制边框选择这两个视图来限制到图像视图的暂存票证视图。 选择相应选项以对其进行约束到宽度、 高度、 中心和中间和更新帧基于约束，如下所示：
- 
-    
-    [![](ios-designable-controls-walkthrough-images/11new.png "居中和添加约束")](ios-designable-controls-walkthrough-images/11new.png)
+
+    [![](ios-designable-controls-walkthrough-images/11new.png "居中和添加约束")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
 1. 运行应用程序和"暂存关闭"以显示 monkey 的映像。
 
-
- [ ![](ios-designable-controls-walkthrough-images/10-app.png "运行示例应用程序")](ios-designable-controls-walkthrough-images/10-app.png)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "运行示例应用程序")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="adding-design-time-properties"></a>添加设计时属性
 
@@ -286,7 +273,7 @@ public override void Draw(CGRect rect)
 
 包括`ExportAttribute`和`BrowsableAttribute`参数设置为`true`显示在设计器的属性会导致**属性**面板。 将属性更改为另一个映像包含项目后，如`FillTexture2.png`，导致控件也随之更新在设计时，如下所示：
 
- [ ![](ios-designable-controls-walkthrough-images/11-customproperty.png "编辑设计时属性")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "编辑设计时属性")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>摘要
 

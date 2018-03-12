@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 3990b226b74c17fb5cccc907dd50b46578c3ef6b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d8f805d8a3fcadd9c2a6758f1dc5592c03fe3ed4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>创建 MonoGame UWP 项目
 
@@ -45,15 +45,11 @@ _MonoGame 可用来创建游戏和应用适用于通用 Windows 平台，面向�
 1. 选择**文件** > **新** > **项目...**
 1. 选择**已安装** > **模板** > **Visual C#** > **MonoGame**类别： 
 
-
     ![](uwp-images/image1.png "MonoGame 类别")
-
 
 1. 选择**MonoGame Windows 10 通用项目**选项： 
 
-
     ![](uwp-images/image2.png "选择 MonoGame Windows 10 通用项目选项")
-
 
 1. 输入新项目的名称，然后单击**确定**。
 如果单击确定后，Visual Studio 显示任何错误，请验证安装了 Windows 10 工具和设备处于开发者模式。 
