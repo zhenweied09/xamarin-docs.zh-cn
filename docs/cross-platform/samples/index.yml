@@ -5,13 +5,13 @@ metadata:
   description: "面向移动开发人员的跨平台 Xamarin 示例应用。"
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 02/26/2018
   ms.topic: article
-  ms.openlocfilehash: c5e8c04dcc5a9bf18af0dd9ce2dcd85b6b760836
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: 24f32938930d7cf13374536f9513640ab8e834dc
+  ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 03/12/2018
 abstract:
   description: "帮助你使用 C# 和 Xamarin 开始生成移动应用的 Xamarin 跨平台示例应用和代码演示。"
   menu:
@@ -19,50 +19,68 @@ abstract:
     - href: https://developer.xamarin.com/samples/
       text: "所有 Xamarin 示例"
 sections:
-- title: 
+- title: "开始操作"
   items:
   - type: list
     style: cards
     className: cardsW
     items:
     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
-      html: "此示例演示了一个待办事项列表应用程序，该应用程序在本地 SQLite 数据库中存储和访问数据。"
+      html: "此示例演示了一个待办事项列表应用程序，该应用程序在本地 SQLite 数据库中存储和访问数据，用 Xamarin.Forms 生成。"
       image:
         src: images/todo.png
         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
       title: "代办事项"
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      html: "这是一个焕然一新的熟悉游戏。 10 个 bug 隐藏在磁贴的一个 9 x 9 网格中。 若要获胜，必须找到并标记所有 10 个 bug。"
+    - href: https://github.com/xamarinhq/app-myshoppe
+      html: "演示销售人员可用于跟踪其销售绩效、管理潜在客户、查看联系人、管理订单和浏览产品目录的应用。"
       image:
-        src: images/bugsweeper.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
-      title: BugSweeper
-    - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      html: "RPN（反向波兰语表示法）计算器允许输入数字和操作，而无需括号或等号键。"
+        src: images/myshoppe.png
+        href: https://github.com/xamarinhq/app-myshoppe
+      title: "我的 Shoppe"
+    - href: https://github.com/xamarin/app-crm
+      html: "演示销售人员可用于跟踪其销售绩效、管理潜在客户、查看联系人、管理订单和浏览产品目录的应用。"
       image:
-        src: images/rpncalc.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
-      title: "RPN 计算器"
-    - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      html: "该程序模拟一个旋转磁盘，你可以通过触摸和移动手指进行绘制。 SpinPaint 通过在手指下绘制一条线来响应触摸，但它还可以在该磁盘的其他三个象限的三个镜像中复制这条线。"
+        src: images/crm.png
+        href: https://github.com/xamarin/app-crm
+      title: Xamarin CRM
+- title: "Azure 与企业"
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
+    - href: https://github.com/xamarinhq/app-acquaint/
+      html: "包含详细信息和编辑屏幕的联系人列表应用。 源代码在 Xamarin.Forms 和 Xamarin 本机实现中都可用。"
       image:
-        src: images/spinpaint.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
-      title: SpinPaint
-    - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      html: "XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Forms 应用程序中使用标记（而不是代码）来定义用户界面。"
+        src: images/acquaint.jpg
+        href: https://github.com/xamarinhq/app-acquaint
+      title: "熟悉"
+    - href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      html: "连接 2017 演示，它生成包括 Xamarin 和 Azure 的应用套件。"
       image:
-        src: images/xaml.png
-        href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
-      title: "XAML 示例"
-    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      html: "XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Forms 应用程序中使用标记（而不是代码）来定义用户界面。"
+        src: images/smarthotel360.png
+        href: https://github.com/Microsoft/SmartHotel360-mobile-desktop-apps
+      title: SmartHotel360
+    - href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      html: "连接 2016 演示，它生成包括 Xamarin 和 Azure 的应用套件。"
       image:
-        src: images/xuzzle.png
-        href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
-      title: Xuzzle
+        src: images/bikesharing360.png
+        href: https://github.com/Microsoft/BikeSharing360_MobileApps
+      title: BikeSharing360
+    - href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      html: "有关在 Azure 上生成使用容器的应用的企业体系结构指南。"
+      image:
+        src: images/eshop.png
+        href: https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Mobile
+      title: "电子商店"
+- title: "所有示例"
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
     - href: https://developer.xamarin.com/samples/
-      html: "访问一组完整的 Xamarin 跨平台示例应用和代码演示。"
+      html: "一组完整的 Xamarin 跨平台示例应用和代码演示。"
       image:
         src: ~/media/shared/sample-download.svg
         href: https://developer.xamarin.com/samples/
