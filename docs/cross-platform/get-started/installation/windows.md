@@ -7,27 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: b68e03251b83192bdc5836af6ea54446ddaad24a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bffc6bb1bc6537745fe9603906b5938fc3c34fe1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarin-in-visual-studio-on-windows"></a>在 Visual Studio on Windows 中安装 Xamarin
 
 现在，所有版本的 Visual Studio 中都免费附带 Xamarin，并且不需要单独的许可证，可使用 Visual Studio 安装程序下载和安装 Xamarin 工具。
 
--   [要求](#requirements)
--   [安装](#installation)
--   [将 Xamarin 添加到 Visual Studio 2017](#vs2017)
--   [将 Xamarin 添加到 Visual Studio 2015](#vs2015)
--   [验证安装](#verifying)
--   [后续步骤](#nextsteps)
-
-
 <a name="requirements" />
 
-# <a name="requirements"></a>惠?
+## <a name="requirements"></a>惠?
 
 安装 Visual Studio tools for Xamarin 需要以下项：
 
@@ -44,7 +36,7 @@ ms.lasthandoff: 02/27/2018
 
 <a name="installation" />
 
-# <a name="installation"></a>安装
+## <a name="installation"></a>安装
 
 Xamarin 可安装为新 Visual Studio 的一部分。
 为此，请执行下列步骤：
@@ -55,7 +47,7 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 3. 从安装屏幕中选择“使用 .NET 的移动开发”工作负载： 
 
-    [![工作负载屏幕上具有 .NET 选择的移动开发](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png)
+    [![工作负载屏幕上具有 .NET 选择的移动开发](windows-images/01-mobile-dev-workload-sml.png)](windows-images/01-mobile-dev-workload.png#lightbox)
 
 4. 选择“使用 .NET 的移动开发”时，查看右侧的“摘要”面板。 可在此处取消选择不希望安装的移动开发选项。 默认情况下，会安装以下屏幕截图中的所有选项（Xamarin 工作簿、Xamarin Profiler、Xamarin Remoted Simulator、Android NDK、Android SDK、Java SE 开发工具包、Google Android 仿真器、F# 支持和 Intel HAXM）：
 
@@ -76,7 +68,7 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 <a name="vs2017" />
 
-## <a name="adding-xamarin-to-visual-studio-2017"></a>将 Xamarin 添加到 Visual Studio 2017
+### <a name="adding-xamarin-to-visual-studio-2017"></a>将 Xamarin 添加到 Visual Studio 2017
 
 如果已安装 Visual Studio 2017，可通过重新运行 Visual Studio 安装程序修改工作负载来添加 Xamarin（有关详细信息，请参阅[修改 Visual Studio ](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)）。 接下来，按照上面列出的步骤安装 Xamarin。
 
@@ -85,7 +77,7 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 <a name="vs2015" />
 
-## <a name="adding-xamarin-to-visual-studio-2015"></a>将 Xamarin 添加到 Visual Studio 2015
+### <a name="adding-xamarin-to-visual-studio-2015"></a>将 Xamarin 添加到 Visual Studio 2015
 
 若要将 Xamarin.Android 添加到 Visual Studio 2015 的现有安装中，请执行以下步骤：
 
@@ -104,7 +96,7 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 <a name="verifying" />
 
-## <a name="verifying-installation"></a>验证安装
+### <a name="verifying-installation"></a>验证安装
 
 在 Visual Studio 2017 中，可通过单击“帮助”菜单来验证是否安装了 Xamarin。 如果安装了 Xamarin，应该看到 Xamarin 菜单项，如此屏幕截图所示：
 
@@ -118,11 +110,11 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 <a name="nextsteps" />
 
-# <a name="next-steps"></a>后续步骤
+## <a name="next-steps"></a>后续步骤
 
 通过安装 Visual Studio Tools for Xamarin，可开始编写应用代码，但若要构建应用并将其部署到模拟器、仿真器和设备，则需要其他设置。 请访问以下指南，完成安装并开始跨平台应用构建。
 
-## <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 有关详细信息，请参阅[在 Windows 上安装 Xamarin.iOS](~/ios/get-started/installation/windows/index.md) 指南。 
 
@@ -133,7 +125,7 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 5. [远程 iOS 模拟器](~/tools/ios-simulator.md)
 6. [Xamarin.iOS for Visual Studio 简介](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
-## <a name="android"></a>Android
+### <a name="android"></a>Android
 
 有关详细信息，请参阅[在 Windows 上安装 Xamarin.Android](~/android/get-started/installation/windows.md) 指南。
 

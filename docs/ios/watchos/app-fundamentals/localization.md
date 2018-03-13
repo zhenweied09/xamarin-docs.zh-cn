@@ -7,11 +7,11 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4dde338a7c289f228f877fa4d968d156a941ba16
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-localization"></a>使用本地化
 
@@ -67,7 +67,7 @@ iOS 和监视操作系统自动将使用用户的语言选择加载正确的字�
 
 当您编辑情节提要时，选择每个元素和通知**本地化 ID**出现在**属性**填充：
 
-  [ ![](localization-images/storyboard-sml.png "在属性板中显示的本地化 ID")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "在属性板中显示的本地化 ID")](localization-images/storyboard.png#lightbox)
 
 在**Base.lproj**文件夹中，创建键-值对，如下所示，其中键通过形成**本地化 ID**并将其属性名称在控件上，联接由句点 (`.`)。
 

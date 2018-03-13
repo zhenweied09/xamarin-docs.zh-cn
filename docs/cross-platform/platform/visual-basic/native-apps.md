@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: dc107ee865ea93cdc12148a5498cf3d512f1dae9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95817c2ec22c4c27f0f4a933db54105614e54030
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>在 Xamarin iOS 和 Android 的 visual Basic.NET
 
 [TaskyPortable](/samples/mobile/VisualBasic/TaskyPortableVB/)示例应用程序演示如何通过 Xamarin 使用 Visual Basic 代码编译到可移植类库。 下面是在 iOS、 Android 和 Windows Phone 上运行的生成应用的一些屏幕快照：
 
- [ ![](native-apps-images/image5.png "iOS、 Android 和 Windows 手机上运行使用 Visual Basic 创建的应用程序")](native-apps-images/image5.png)
+ [![](native-apps-images/image5.png "iOS、 Android 和 Windows 手机上运行使用 Visual Basic 创建的应用程序")](native-apps-images/image5.png#lightbox)
 
 IOS、 Android 和 Windows Phone 在示例中的项目用 C# 编写。 每个应用程序的用户界面使用本机技术生成的 (情节提要、 Xml 和 Xaml 分别)，而`TodoItem`management 由 Visual Basic 可移植类库提供使用`IXmlStorage`由提供的实现本机项目。
 
@@ -26,7 +26,8 @@ IOS、 Android 和 Windows Phone 在示例中的项目用 C# 编写。 每个应
 
 本指南介绍如何将 Visual Basic 实现中[TaskyPortableVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)用于 iOS 和 Android 的 Xamarin 示例。
 
-> ⚠️ 在查看说明[Visual Basic.NET Pcl](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/)然后再继续进行本指南。
+> [!NOTE]
+> 在查看说明[Visual Basic.NET Pcl](/guides/cross-platform/application_fundamentals/pcl/portable_visual_basic_net/)然后再继续进行本指南。
 
 ## <a name="visualbasicportablelibrary"></a>VisualBasicPortableLibrary
 
@@ -158,9 +159,9 @@ Public Class TodoItemRepositoryXML
 End Class
 ```
 
-> ℹ️ **注意：**此代码是一种非常基本的数据存储机制的一个示例。
-> 提供它是为了演示如何可移植类库可以编写代码，针对一个访问特定于平台的功能 （在此情况下，加载和保存 Xml 文件） 的接口。
-> 但它并不是一个生产质量数据库的替代方案。
+> [!NOTE]
+> 此代码是一种非常基本的数据存储机制的一个示例。
+> 提供它是为了演示如何可移植类库可以编写代码，针对一个访问特定于平台的功能 （在此情况下，加载和保存 Xml 文件） 的接口。 但它并不是一个生产质量数据库的替代方案。
 
 ## <a name="ios-android-and-windows-phone-application-projects"></a>iOS、 Android 和 Windows Phone 应用程序项目
 
@@ -263,7 +264,7 @@ TodoMgr = new TodoItemManager(filename, xmlStorage);
 
 Windows Phone 应用程序的其余部分包含的 Xaml 和 C# 创建的用户界面和使用`TodoMgr`类来加载和保存`TodoItem`对象。
 
-# <a name="visual-basic-pcl-in-visual-studio-for-mac"></a>Visual Basic 在 Visual Studio 中适用于 Mac 的 PCL
+## <a name="visual-basic-pcl-in-visual-studio-for-mac"></a>Visual Basic 在 Visual Studio 中适用于 Mac 的 PCL
 
 适用于 Mac 的 visual Studio 不支持 Visual Basic 语言-无法创建或为 mac。 编译使用 Visual Studio 的 Visual Basic 项目
 
@@ -271,58 +272,58 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 
 本部分介绍如何 PCL 程序集在 Visual Studio 中的编译，然后确保将是存储在版本控制系统和其他项目引用的。
 
-## <a name="keeping-the-pcl-output-from-visual-studio"></a>从 Visual Studio 保持 PCL 输出
+### <a name="keeping-the-pcl-output-from-visual-studio"></a>从 Visual Studio 保持 PCL 输出
 
 默认情况下将配置 （包括 TFS 和 Git） 的大多数版本控制系统为忽略**/bin/**不会存储这意味着编译的 PCL 程序集的目录。 这意味着你将需要手动将其复制到运行 Visual Studio for Mac 以添加对它的引用的任何计算机。
 
 若要确保版本控制系统可以存储 PCL 程序集输出，可以创建将它复制到项目根目录的后期生成脚本。 此生成后步骤有助于确保可以轻松地添加到源代码管理和与其他项目共享程序集。
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+#### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. 右键单击项目并选择**属性 > 生成事件**部分。
 
 2. 添加_后期生成_将输出 DLL 中此项目复制到项目根目录下的脚本 (即之外**/bin/**)。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
 
-  [ ![](native-apps-images/image6-vs-sml.png "生成后生成脚本，以便将 VB DLL 复制的事件")](native-apps-images/image6-vs.png)
+  [![](native-apps-images/image6-vs-sml.png "生成后生成脚本，以便将 VB DLL 复制的事件")](native-apps-images/image6-vs.png#lightbox)
 
-### <a name="visual-studio-2015"></a>Visual Studio 2015
+#### <a name="visual-studio-2015"></a>Visual Studio 2015
 
 1.  右键单击项目并选择**属性 > 编译**，然后，确保在左上角梳理框中选择所有配置。 单击**生成事件...**右下角的按钮。
 
-  [ ![](native-apps-images/image6.png "项目属性编译部分")](native-apps-images/image6.png)
+    [![](native-apps-images/image6.png "项目属性编译部分")](native-apps-images/image6.png#lightbox)
 
 1.  添加后期生成脚本，将输出 DLL 中此项目复制到项目根目录下 (即之外**/bin/** )。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
 
-  [ ![](native-apps-images/image7.png "生成事件窗口")](native-apps-images/image7.png)
+    [![](native-apps-images/image7.png "生成事件窗口")](native-apps-images/image7.png#lightbox)
 
-### <a name="all-versions"></a>所有版本
+#### <a name="all-versions"></a>所有版本
 
 下一次生成项目时，可移植类库程序集将被复制到项目根目录位置，并且你检查中/提交/推送所做的更改 DLL 将存储 （以便适用于 Mac，可以使用 Visual Studio 的 Mac 上下载它）。
 
-  [ ![](native-apps-images/image8-sml.png "输出 Visual 基本程序集的文件位置")](native-apps-images/image8.png)
+  [![](native-apps-images/image8-sml.png "输出 Visual 基本程序集的文件位置")](native-apps-images/image8.png#lightbox)
 
 
 此程序集可以然后添加到 Visual Studio 中的 Xamarin 项目用于 Mac，即使 Xamarin iOS 或 Android 项目中不支持 Visual Basic 语言本身也是如此。
 
-## <a name="referencing-the-pcl-in-visual-studio-for-mac"></a>引用在 Visual Studio 中的 PCL for Mac
+### <a name="referencing-the-pcl-in-visual-studio-for-mac"></a>引用在 Visual Studio 中的 PCL for Mac
 
 由于 Xamarin 不支持 Visual Basic，因此它不能加载 PCL 项目中 （或 Windows Phone 应用），此屏幕截图中所示：
 
- [ ![](native-apps-images/image9.png "Mac 解决方案的 visual Studio")](native-apps-images/image9.png)
+ [![](native-apps-images/image9.png "Mac 解决方案的 visual Studio")](native-apps-images/image9.png#lightbox)
 
 我们仍可以在 Xamarin.iOS 和 Xamarin.Android 项目中包括 Visual Basic PCL 程序集 DLL:
 
 1.  右键单击**引用**节点，然后选择**编辑引用...**
 
-  [ ![](native-apps-images/image10.png "项目编辑引用菜单")](native-apps-images/image10.png)
+    [![](native-apps-images/image10.png "项目编辑引用菜单")](native-apps-images/image10.png#lightbox)
 
 1.  选择**.Net 程序集**选项卡上，并导航到 Visual Basic 项目目录中的输出 DLL。 即使适用于 Mac 的 Visual Studio 无法打开项目，所有文件应都在那里从源代码管理。 单击**添加**然后**确定**将此程序集添加到 iOS 和 Android 应用程序。
 
-  [ ![](native-apps-images/image11-sml.png "单击添加，然后确定将此程序集添加到 iOS 和 Android 应用程序")](native-apps-images/image11.png)
+    [![](native-apps-images/image11-sml.png "单击添加，然后确定将此程序集添加到 iOS 和 Android 应用程序")](native-apps-images/image11.png#lightbox)
 
 1.  IOS 和 Android 应用程序现在可以包含由 Visual Basic 可移植类库的应用程序逻辑。 此屏幕截图中显示的 iOS 应用程序引用 Visual Basic PCL，而且具有从该库中使用的功能的代码。
 
-  [ ![](native-apps-images/image12-sml.png "编辑引用添加.NET 程序集窗口")](native-apps-images/image12.png)
+    [![](native-apps-images/image12-sml.png "编辑引用添加.NET 程序集窗口")](native-apps-images/image12.png#lightbox)
 
 
 如果更改到 Visual Studio 中的 Visual Basic 项目记住若要生成项目，请在源代码管理中存储生成的程序集 DLL，然后拉取到你的 Mac 的源控件从该新 DLL，以便适用于 Mac 的 Visual Studio 将生成包含最新功能。

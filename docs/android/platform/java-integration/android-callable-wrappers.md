@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: f618f7257ab082a2a5b0aa587b135ad169d15133
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b74b1486d72176207d3ccd669c85e249d0706b6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-callable-wrappers"></a>Android 可调用包装器
 
@@ -22,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 Android 可调用包装器生成的**monodroid.exe**程序期间[生成过程](~/android/deploy-test/building-apps/build-process.md): （直接或间接） 继承的所有类型生成[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)。 
 
 
-<a name="ACW_Naming" />
 
 ## <a name="android-callable-wrapper-naming"></a>Android 可调用包装器命名
 
@@ -74,7 +73,6 @@ namespace My {
 在 Xamarin.Android 5.0 引入了基于 MD5SUM ACW 命名。 有关特性命名的详细信息，请参阅[RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)。 
 
 
-<a name="Implementing_Interfaces" />
 
 ## <a name="implementing-interfaces"></a>实现接口
 
@@ -97,7 +95,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="Implementation_Details" />
 
 ## <a name="implementation-details"></a>实现详细信息
 

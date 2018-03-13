@@ -3,16 +3,16 @@ title: "主动建议简介"
 description: "这篇文章演示如何在驱动器参与到 Xamarin.iOS 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>主动建议简介
 
@@ -63,7 +63,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 
 ## <a name="ride-sharing-based-suggestions"></a>写共享基于的建议
 
-如果持续一段时间共享应用程序使用[MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API，iOS 10 将显示为应用程序切换器中的一个选项有时时用户很可能需要持续一段时间。 应用程序必须还注册为持续一段时间共享应用程序通过指定`MKDirectionsModeRideShare`为[MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33)中的键其`Info.plist`文件。
+如果持续一段时间共享应用程序使用[MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API，iOS 10 将显示为应用程序切换器中的一个选项有时时用户很可能需要持续一段时间。 应用程序必须还注册为持续一段时间共享应用程序通过指定`MKDirectionsModeRideShare`为[MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)中的键其`Info.plist`文件。
 
 如果应用程序仅支持共享持续一段时间，以将开始系统建议*"Get 到持续一段时间..."*，如果支持其他类型的路由方向 （如 Walking 或自行车），则系统将使用*"获取路线到..."*
 
@@ -95,7 +95,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 
 如前所述，`NSUserActivity`可帮助了解哪些用户当前正在使用在屏幕的信息的系统。 `NSUserActivity` 轻量状态缓存机制它们浏览应用程序中捕获用户的活动。 例如，查看餐馆应用程序：
 
-[ ![](proactive-suggestions-images/activity02.png "缓存机制 NSUserActivity 轻量状态")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "缓存机制 NSUserActivity 轻量状态")](proactive-suggestions-images/activity02.png#lightbox)
 
 以下的交互：
 
@@ -105,7 +105,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 
 要进一步查看在最后一个屏幕中：
 
-[ ![](proactive-suggestions-images/activity03.png "NSUserActivity 详细信息")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "NSUserActivity 详细信息")](proactive-suggestions-images/activity03.png#lightbox)
 
 此处创建应用程序`NSUserActivity`和更高版本重新创建状态的信息填充。 应用程序还包含一些元数据，例如位置的名称和地址。 与此活动中创建，应用可以让 iOS 知道它表示用户的当前状态。
 
@@ -324,7 +324,7 @@ attributes.SupportsNavigation = true;
 
 看看如何应用程序可以指定用于交互：
 
-[ ![](proactive-suggestions-images/activity04.png "捐赠交互概述")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "捐赠交互概述")](proactive-suggestions-images/activity04.png#lightbox)
 
 应用程序创建`INInteraction`对象，其中包含**意向**(`INIntent`)，**参与者**和**元数据**。 **意向**表示用户操作，例如视频呼叫或发送短信。 **参与者**包含接收通信的人员。 **元数据**定义添加信息，例如成功发送消息，等等。
 
@@ -334,7 +334,7 @@ attributes.SupportsNavigation = true;
 
 交互时用户与联系人卡片中的应用程序交互时，获取与捆绑`NSUserActivity`，然后用于启动应用程序：
 
-[ ![](proactive-suggestions-images/activity05.png "获取与用于启动应用程序 NSUserActivity 捆绑在交互")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "获取与用于启动应用程序 NSUserActivity 捆绑在交互")](proactive-suggestions-images/activity05.png#lightbox)
 
 看一看发送的消息意图的下面的示例：
 
@@ -449,7 +449,7 @@ Schema.org 可以提供相同类型的基于位置到网站的交互。 Apple �
 - 有超过 500 的架构表示可用的各种概念。
 - 通过实现其网站上，开发人员可以获取的一些的使用好处`NSUserActivity`中的本机应用。
 
-架构在类似结构，其中特定类型，如树中布置*餐馆*，继承更泛型类型如*本地业务*。 有关详细信息，请参阅[Schema.org](#http://schema.org)。
+架构在类似结构，其中特定类型，如树中布置*餐馆*，继承更泛型类型如*本地业务*。 有关详细信息，请参阅[Schema.org](http://schema.org)。
 
 例如，如果 web 页包含以下数据：
 

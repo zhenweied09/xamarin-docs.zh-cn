@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 5e9874fba52b576494be5ac42ff13fdd0be4d9e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d340c3da220deacdb5606547a084e55d80c817e7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-on-device"></a>在设备上进行调试
 
@@ -22,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 
 可在 Android 设备上使用 Visual Studio for Mac 或 Visual Studio 调试 Xamarin.Android。 在设备上执行调试之前，必须[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)并将其连接到电脑或 Mac。
 
-<a name="Debug_Application" />
 
 ## <a name="debug-application"></a>调试应用程序
 
@@ -55,7 +54,6 @@ ms.lasthandoff: 02/27/2018
 -----
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

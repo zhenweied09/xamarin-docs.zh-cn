@@ -3,14 +3,15 @@ title: "章 28 的摘要。 位置和映射"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7361f65fecfed9d61b9df7088f9021ffa0192ad8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0968270f657d3195855a752da311b4855283e971
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>章 28 的摘要。 位置和映射
 
@@ -215,7 +216,7 @@ Windows 运行时应用程序需要使用身份验证密钥，以使用 Bing 地
 
 这在中使用[LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml)文件和[LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs)代码隐藏文件，还显示距离到博物馆从用户的位置：
 
-[![本地博物馆页面的三个屏幕截图](images/ch28fg28-small.png "到的位置的距离")](images/ch28fg28-large.png "到的位置的距离")
+[![本地博物馆页面的三个屏幕截图](images/ch28fg28-small.png "到的位置的距离")](images/ch28fg28-large.png#lightbox "到的位置的距离")
 
 该程序还演示如何动态限制的基于映射的位置的 pin 的数量。
 

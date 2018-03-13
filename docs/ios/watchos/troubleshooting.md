@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 故障排除
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/27/2018
 - 无法添加两个`WKNotificationControllers`到情节提要。
     解决方法：`notificationCategory`情节提要 XML 中的元素始终插入具有相同`id`。 若要解决此问题，你可以添加两个 （或多个） 通知控制器、 文本编辑器中打开情节提要文件和手动更改`id`元素是唯一的。
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "打开情节提要文件位于文本编辑器，并手动更改要是唯一的 id 元素")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "打开情节提要文件位于文本编辑器，并手动更改要是唯一的 id 元素")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - 你可能会看到错误"还未生成应用程序"时尝试启动应用程序。 之后将发生这种情况**清理**当启动项目设置为监视扩展项目。
     解决方法是选择**生成 > 全部重新生成**，然后重新启动应用程序。

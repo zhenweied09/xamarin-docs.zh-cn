@@ -6,18 +6,17 @@ ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/12/2017
-ms.openlocfilehash: aeb7115e3c7521f6679e8802eb759d7e56ba1cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: fcd77d97d492baee441cfd428e58ea83525f927e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-resources-for-varying-screens"></a>为不同的屏幕创建资源
 
 本身的 android 设备上运行多个不同，每个都具有各种分辨率、 屏幕大小和屏幕密度。 Android 将执行缩放和调整大小以使应用程序在这些设备上工作，但这可能会导致达不到最佳用户体验。 例如，映像可能出现的模糊，映像可能占用过多 （或没有足够） 屏幕空间这将导致用户界面元素在布局中的位置将重叠或太很远。
 
-<a name="Concepts" />
 
 ## <a name="concepts"></a>概念
 
@@ -39,7 +38,6 @@ ms.lasthandoff: 02/27/2018
 
 为了应对这种复杂性，Android 框架倾向于使用*密度无关的像素 (dp)*对于屏幕布局。 通过使用密度无关的像素，UI 元素将显示给用户以在具有不同密度的屏幕上具有相同的物理大小。
 
-<a name="Supporting_Various_Screen_Sizes_and_Densities" />
 
 ## <a name="supporting-various-screen-sizes-and-densities"></a>支持各种屏幕大小和密度
 
@@ -49,7 +47,6 @@ Android 处理大多数呈现布局为每个屏幕配置正确的工作。 但�
 Android 将缩放 drawables 在运行时到相应的大小。
 但是，很可能这种扩展将导致显示模糊的位图。 若要避免此问题，可能需要提供不同的密度的备用资源。 设计的多个解决方法和屏幕密度将证明更轻松的设备时开始更高的分辨率或密度映像，然后再然后缩小。 这将阻止任何模糊或调整大小，可能会导致的失真。
 
-<a name="Declare_the_Screen_Size_the_Application_Supports" />
 
 ### <a name="declare-the-screen-size-the-application-supports"></a>声明为应用程序支持的屏幕大小
 
@@ -59,29 +56,21 @@ Android 将缩放 drawables 在运行时到相应的大小。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android 清单](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-[![Android 清单](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png)
-
------
-
+[![Android 清单](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
 
 **AndroidManifest.xml**添加到**属性**目录。 然后编辑该文件以包括[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png)
+[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png)
+[![Android 清单](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
+
+**AndroidManifest.xml**添加到**属性**目录。 然后编辑该文件以包括[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+
+[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
 
 -----
-
-
-<a name="Provide_Alternate_Layouts_for_Different_Screen_Sizes" />
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>针对不同屏幕大小提供备用布局
 
@@ -148,7 +137,6 @@ Android 将缩放 drawables 在运行时到相应的大小。
 -----
 
 
-<a name="Provide_Different_Bitmaps_for_Different_Screen_Densities" />
 
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>为不同的屏幕密度提供不同的位图
 
@@ -162,17 +150,15 @@ Android 将缩放 drawables 在运行时到相应的大小。
 
 ![与密度特定资源的屏幕截图](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-<a name="Create_Varying_Density_Resources_with_Android_Asset_Studio" />
 
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>使用 Android 资产 Studio 创建不同的密度资源
 
 各种密度这些位图创建可能会有点需要很长时间。 在这种情况下，Google 已创建一个在线的实用程序，这会减少某些内容涉及调用这些位图创建麻烦[ **Android 资产 Studio**](https://romannurik.github.io/AndroidAssetStudio/)。
 
-[![Android 资产 Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png)
+[![Android 资产 Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 此网站将帮助创建目标的四个常见屏幕密度通过提供一个图像的位图。 Android Studio 中资产将然后创建一些自定义操作的位图，然后使他们可以作为 zip 文件下载。
 
-<a name="Tips_for_Multiple_Screens" />
 
 ## <a name="tips-for-multiple-screens"></a>多个屏幕的提示
 
@@ -189,7 +175,6 @@ Android 上会非常多个设备上，运行和屏幕大小和屏幕密度的组
 
 - **使用高度和宽度的 LayoutParams** -定义在 XML 布局文件中，UI 元素时 Android 应用程序中使用**wrap_content**和**fill_parent**值将具有多个成功确保正确查看跨不同设备比使用像素或密度的独立单元。 这些维度值来根据需要缩放位图资源导致 Android。 鉴于此相同密度无关的单位是最保留时指定边距和填充的 UI 元素。
 
-<a name="Testing_Multiple_Screens" />
 
 ## <a name="testing-multiple-screens"></a>测试多个屏幕
 

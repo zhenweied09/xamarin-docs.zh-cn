@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 372ea9a20e9f67c41c74fb01afb8110ee741a709
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>使用 Windows Communication Foundation (WCF) Web 服务
 
@@ -76,7 +76,7 @@ WCF 服务提供以下操作：
 有关应用程序中使用的数据模型的详细信息，请参阅[对数据进行建模](~/xamarin-forms/data-cloud/walkthrough.md)。
 
 > [!NOTE]
-> **请注意**： 示例应用程序使用 Xamarin 承载的 WCF 服务，提供对 web 服务的只读访问权限。 因此，创建、 更新和删除数据的操作不会更改应用程序中使用的数据。 但是，ASMX 服务的可承载版本位于**TodoWCFService**随附的示例应用程序中的文件夹。 此可承载的 WCF 服务允许完整版本创建、 更新、 读取，和删除的数据访问权限。
+> 示例应用程序使用 Xamarin 承载的 WCF 服务，提供对 web 服务的只读访问权限。 因此，创建、 更新和删除数据的操作不会更改应用程序中使用的数据。 但是，ASMX 服务的可承载版本位于**TodoWCFService**随附的示例应用程序中的文件夹。 此可承载的 WCF 服务允许完整版本创建、 更新、 读取，和删除的数据访问权限。
 
 A*代理*必须生成要使用 WCF 服务，它允许应用程序连接到服务。 代理是通过使用以定义的方法和关联的服务配置的服务元数据构造的。 由 web 服务生成 Web 服务描述语言 (WSDL) 文档形式公开此元数据。 可以使用在 Visual Studio 2017 Microsoft WCF Web 服务引用提供程序将 web 服务的服务引用添加到.NET 标准库生成代理。 创建在 Visual Studio 2017 中使用 Microsoft WCF Web 服务引用提供程序的代理的替代方法是使用 ServiceModel 元数据实用工具 (svcutil.exe)。 有关详细信息，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/)。
 

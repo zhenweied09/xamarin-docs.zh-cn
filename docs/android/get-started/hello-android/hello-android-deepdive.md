@@ -3,16 +3,16 @@ title: "了解 Android：深度分析"
 description: "本指南由两部分构成，在本指南中，用户将生成第一个 Xamarin.Android 应用程序，并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会向你介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: de6037b9cfeb66ee1c26c12c2e81913a4a2f1e79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9e554da80218d2e89ff79c6e89886d707b1ed95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-deep-dive"></a>了解 Android：深度分析
 
@@ -83,13 +83,13 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 以下屏幕截图列出了解决方案的内容。 下面是一个解决方案资源管理器，它包含与解决方案关联的目录结构和所有文件：
 
-[![“解决方案资源管理器”](hello-android-deepdive-images/vs/02-solution-structure-sml.png )](hello-android-deepdive-images/vs/02-solution-structure.png)
+[![“解决方案资源管理器”](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 以下屏幕截图列出了解决方案的内容。 下面是一个 Solution Pad，它包含与解决方案关联的目录结构和所有文件：
 
-[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png)
+[![Solution Pad](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 -----
 
@@ -135,11 +135,11 @@ Android 应用程序不具有单一入口点；也就是说，应用程序中没
 
 在仿真器或设备中首次打开 **Phoneword** 应用程序时，操作系统会创建第一个活动。 活动是特殊的 Android 类，对应于单个应用程序屏幕，负责绘制和支持用户界面。 Android 创建应用程序的第一个活动时，会加载整个应用程序：
 
-[![活动负载](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png)
+[![活动负载](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 由于 Android 应用程序中没有线性发展（可以通过多个点启动应用程序），Android 采用一种独特方式来跟踪哪些类和文件组成应用程序。 在 **Phoneword** 示例中，将向名为“Android 清单”的特殊 XML 文件注册组成应用程序的所有部分。 “Android 清单”的作用是跟踪应用程序的内容、属性和权限，并将这些信息告知 Android 操作系统。 可以将 **Phoneword** 应用程序当作单一活动（屏幕）和由 Android 清单文件捆绑在一起的资源文件和帮助程序文件的集合，如以下关系图所示：
 
-[![资源帮助程序](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png)
+[![资源帮助程序](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 以下几个部分将探索 **Phoneword** 应用程序各部分的关系；使你能更好地理解上面的关系图。 此探索先从用户界面开始，会讨论 Android 设计器和布局文件。
 
@@ -150,11 +150,11 @@ Android 应用程序不具有单一入口点；也就是说，应用程序中没
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 -----
 
@@ -162,11 +162,11 @@ Android 应用程序不具有单一入口点；也就是说，应用程序中没
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![TranslateButton ID 设置](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png)
+[![TranslateButton ID 设置](hello-android-deepdive-images/vs/04-translatebutton-sml.png "TranslateButton id setting")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![TranslateButton ID 设置](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png)
+[![TranslateButton ID 设置](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 -----
 
@@ -179,11 +179,11 @@ Android 应用程序不具有单一入口点；也就是说，应用程序中没
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![设计器源视图](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png)
+[![设计器源视图](hello-android-deepdive-images/vs/05-source-view-sml.png "Designer source view")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![设计器源视图](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png)
+[![设计器源视图](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 -----
 
@@ -223,7 +223,7 @@ public class MainActivity : Activity
 
 在 Android 中，活动会根据与用户的交互经历生命周期的不同阶段。 可以对活动进行创建、启动和暂停、恢复和销毁等操作。 `Activity` 类包含方法，系统会在屏幕生命周期的特定时间点调用这些方法。 下图说明了活动的典型生命周期以及一些相应的生命周期方法：
 
-[![活动生命周期](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png)
+[![活动生命周期](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 通过重写 `Activity` 生命周期方法，可以控制活动的加载方式和与用户的互动方式，甚至还可以控制活动从设备屏幕消失后会发生的情况。 例如，可以重写上图中的生命周期方法，以执行以下重要任务：
 
@@ -320,21 +320,20 @@ Visual Studio for Mac 和 Visual Studio 均提供许多用于测试和部署应�
 
 配置设备后，可通过插入设备，按“开始(播放)”，从“选择设备”对话框中将其选中，然后按“确定”，对设备进行部署：
 
-[![选择调试设备](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png)
+[![选择调试设备](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 -----
 
 这将启动设备上的应用程序：
 
-[![输入 Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png)
+[![输入 Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
-<a name="densities" />
 
 ### <a name="set-icons-for-different-screen-densities"></a>为不同的屏幕密度设置图标
 
 Android 设备具有不同的屏幕大小和分辨率，不是所有图像都能清晰显示在屏幕上。 例如，下面是一张高密度 Nexus 5 上低密度图标的屏幕截图。 可以看到，与周边的图标相比，它很模糊：
 
-[![模糊的图标](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png)
+[![模糊的图标](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 考虑到这一点，最好将不同分辨率的图标添加到 **Resources** 文件夹。 Android 提供了不同版本的 mipmap 文件夹来处理不同密度的启动器图标，包括针对中等密度屏幕的 mdpi、针对高密度屏幕的 hdpi，以及针对超高密度屏幕的 xhdpi、xxhdpi 和 xxxhdpi。 不同大小的图标存储在相应的 mipmap- 文件夹中：
 
@@ -344,13 +343,13 @@ Android 设备具有不同的屏幕大小和分辨率，不是所有图像都能
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Mipmap 文件夹](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png)
+[![Mipmap 文件夹](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 -----
 
 Android 根据合适的密度选择图标：
 
-[![合适密度下的图标](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png)
+[![合适密度下的图标](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### <a name="generate-custom-icons"></a>生成自定义图标
 
@@ -393,15 +392,15 @@ Google Play Services 是一套外接程序库，让 Android 开发人员可以�
 
 若要添加一个或多个 Google Play Service 库，右键单击项目树中的“包”节点，并单击“添加 Google Play Service...”：
 
-[![添加 Google Play 服务](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png)
+[![添加 Google Play 服务](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 出现“添加 Google Play Services”对话框时，选择想要添加到项目的包 (nuget)：
 
-[![选择包](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png)
+[![选择包](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 选择服务并单击“添加包”时，Visual Studio for Mac 会下载并安装所选包及其所需的任何 Google Play Services 依赖包。 在某些情况下，可能会看到“接受许可”对话框，要求在安装包之前单击“接受”：
 
-[![许可证接受](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png)
+[![许可证接受](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
 -----
 

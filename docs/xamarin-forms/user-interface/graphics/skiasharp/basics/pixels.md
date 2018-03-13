@@ -4,14 +4,15 @@ description: "浏览 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 2643e06474ffe0fd60830db3f315bf525c2f84eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>像素和设备无关的单位
 
@@ -98,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 下面是在所有三个平台上运行的程序：
 
-[![](pixels-images/surfacesize-small.png "三重的面大小页面的屏幕截图")](pixels-images/surfacesize-large.png "面大小页面的三个屏幕截图")
+[![](pixels-images/surfacesize-small.png "三重的面大小页面的屏幕截图")](pixels-images/surfacesize-large.png#lightbox "面大小页面的三个屏幕截图")
 
 如你所见，`CanvasSize`属性`SKCanvasView`和`Size`属性`SKImageInfo`值是在报告的像素大小中保持一致。 `Height`和`Width`属性`SKCanvasView`是 Xamarin.Forms 属性，并报告定义平台的独立于设备的单元中的视图的大小。
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处三个平台上运行它：
 
-[![](pixels-images/ellipsefill-small.png "三重的面大小页面的屏幕截图")](pixels-images/ellipsefill-large.png "面大小页面的三个屏幕截图")
+[![](pixels-images/ellipsefill-small.png "三重的面大小页面的屏幕截图")](pixels-images/ellipsefill-large.png#lightbox "面大小页面的三个屏幕截图")
 
 [其他`DrawOval`方法](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawOval/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有[ `SGRect` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRect/)自变量，这是根据其左上角和右下角的 X 和 Y 坐标定义一个矩形。 Oval 填充表明它可能是可以使用在该矩形**椭圆填充**页如下：
 

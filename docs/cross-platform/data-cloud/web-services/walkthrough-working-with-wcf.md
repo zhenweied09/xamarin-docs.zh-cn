@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 6aee83cd07a52d667c24c3e70fced2e291ed99c8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>演练-使用 WCF
 
@@ -158,7 +158,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 
 1. 让我们开始通过配置 IIS Express 以侦听外部请求。 我们可以执行此操作通过 IIS express 在编辑配置文件`[solutiondirectory]\.vs\config\applicationhost.config`，如以下屏幕截图中所示：
 
-    [![](walkthrough-working-with-wcf-images/image05.png "我们可以在此屏幕截图所示执行此操作通过在 solutiondirectory.vsconfigapplicationhost.config，IIS express 编辑配置文件")](walkthrough-working-with-wcf-images/image05.png)
+    [![](walkthrough-working-with-wcf-images/image05.png "我们可以在此屏幕截图所示执行此操作通过在 solutiondirectory.vsconfigapplicationhost.config，IIS express 编辑配置文件")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
 
     找到`site`同名元素`HelloWorldWcfHost`。 其外观应类似于以下 XML 代码段：
@@ -270,7 +270,7 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
 
     以下屏幕截图显示了在设计器的 UI:
 
-    [![](walkthrough-working-with-wcf-images/image09.png "这是此 UI 在设计器中的类似的屏幕快照")](walkthrough-working-with-wcf-images/image09.png)
+    [![](walkthrough-working-with-wcf-images/image09.png "这是此 UI 在设计器中的类似的屏幕快照")](walkthrough-working-with-wcf-images/image09.png#lightbox)
 
 1. 在**解决方案资源管理器**，打开`Resources/values/Strings.xml`并添加以下 XML:
 
@@ -382,7 +382,7 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
 
 1. 运行应用程序，请确保 WCF 服务正在运行，并且两个按钮上单击。 应用程序将 WCF 以异步方式调用，条件是`Endpoint`正确设置字段：
 
-  [![](walkthrough-working-with-wcf-images/image08.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image08.png)
+  [![](walkthrough-working-with-wcf-images/image08.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -428,7 +428,7 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
 
     添加控件后, UI 应类似于下面的屏幕快照：
 
-    [![](walkthrough-working-with-wcf-images/image12.png "添加控件后, UI 应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image12.png)
+    [![](walkthrough-working-with-wcf-images/image12.png "添加控件后, UI 应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image12.png#lightbox)
 
 1. 在**解决方案资源管理器**，打开`ViewController.cs`并添加以下代码：
 
@@ -515,7 +515,7 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
 
 1. 运行应用程序，请确保 WCF 服务正在运行，并且两个按钮上单击。 应用程序将 WCF 以异步方式调用，条件是`Endpoint`正确设置字段：
 
-    [![](walkthrough-working-with-wcf-images/image10.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image10.png)
+    [![](walkthrough-working-with-wcf-images/image10.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image10.png#lightbox)
 
 <a name="Summary" />
 

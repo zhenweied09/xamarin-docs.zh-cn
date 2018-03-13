@@ -1,5 +1,5 @@
 ---
-title: "Android 磨损"
+title: "Android 穿戴设备"
 description: "构建适用于 Android 的 wearable 设备的应用程序。"
 ms.topic: article
 ms.prod: xamarin
@@ -8,15 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1dad5e859efdf69e7003b45724f718b16faffd62
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="android-wear"></a>Android 磨损
-
-## <a name="android-wear"></a>Android 磨损
+# <a name="android-wear"></a>Android 穿戴设备
 
 Android 磨损是 android 的专为 wearable 设备，例如智能观察版本。 本部分包括有关如何安装和配置工具所需的磨损开发，用于创建你的第一个磨损设备和可以引用用于创建你自己穿应用的示例列表的分步演练说明。
 
@@ -41,7 +39,6 @@ Android 磨损是 android 的专为 wearable 设备，例如智能观察版本�
 说明如何将 Android 磨损应用程序部署到 Android 磨损的设备或 Android 仿真程序中配置的损耗。 它还包括调试提示和有关如何设置开发计算机和 Android 设备之间的蓝牙连接的信息。
 
 
-<a name="Samples" />
 
 ## <a name="samples"></a>示例
 
@@ -53,7 +50,7 @@ Android 磨损是 android 的专为 wearable 设备，例如智能观察版本�
           <strong>示例</strong>
       </th>
       <th>
-          <strong>说明</strong>
+          <strong>描述</strong>
       </th>
       <th>
           <strong>屏幕快照</strong>
@@ -137,21 +134,21 @@ GridViewPager 实现的二维导航模式，其中用户刷垂直，然后水平
 <table align="center" border="0" cellpadding="1" cellspacing="1">
     <tr>
         <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
         <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">Android L 和等很多</a>
         <br />
 Android L 开发者预览版引入了大量的新 Api，开发人员能够充分利用，包括材料设计、 通知和新动画，仅举几例。</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# 是我耳在和中我可以看到： Google 玻璃和 Android 磨损</a>
         <br />
 Wearable 计算可能看起来像内容从将来 （或检查器小工具段），但许多人都已今天接纳将来 ！ C# 开发人员知道这和已有的工具和技能能够管控 wearable 设备 （从发展变化 2014)。</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">什么是 Xamarin.Android 中的新增功能</a>
         <br />
         <i>Android L、 Android 磨损、 Android 电视、 Android 自动、 材料设计和将来使用。这意味着什么给您作为 Xamarin 开发人员？</i>从发展 2014年。</td>

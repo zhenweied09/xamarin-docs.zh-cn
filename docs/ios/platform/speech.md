@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 00980c0038ac3ae51d0444e6f71dde9dfef25831
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="speech-recognition"></a>语音识别
 
@@ -33,7 +33,7 @@ _本文提供了新的语音 API，并演示如何在 Xamarin.iOS 应用程序�
 
 语音识别由实现 iOS 应用程序中获取 （在任何使用该 API 支持的语言） 的实时或预先录制音频，并将其传递到语音识别器返回朗读单词的纯文本脚本。
 
-[ ![](speech-images/speech01.png "语音识别的工作原理")](speech-images/speech01.png)
+[![](speech-images/speech01.png "语音识别的工作原理")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>键盘听写
 
@@ -104,13 +104,13 @@ Apple 包含一个可用性 API，用于确定是否可用于在当前时间转�
 1. 双击`Info.plist`文件以打开进行编辑。
 2. 切换到**源**视图： 
 
-    [ ![](speech-images/speech02.png "源视图")](speech-images/speech02.png)
+    [![](speech-images/speech02.png "源视图")](speech-images/speech02.png#lightbox)
 3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
 
-    [ ![](speech-images/speech03.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03.png)
+    [![](speech-images/speech03.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
 4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
 
-    [ ![](speech-images/speech04.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04.png)
+    [![](speech-images/speech04.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 4. 保存对文件所做的更改。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -118,10 +118,10 @@ Apple 包含一个可用性 API，用于确定是否可用于在当前时间转�
 1. 双击`Info.plist`文件以打开进行编辑。
 3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
 
-    [ ![](speech-images/speech03w.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png)
+    [![](speech-images/speech03w.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
 4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
 
-    [ ![](speech-images/speech04w.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04w.png)
+    [![](speech-images/speech04w.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. 保存对文件所做的更改。
 
 -----

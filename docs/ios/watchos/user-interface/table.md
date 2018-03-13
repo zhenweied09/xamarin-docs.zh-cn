@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4887b9a42c5a855353b5a4e422559aafcdc68173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="table-control"></a>Table 控件
 
@@ -24,7 +24,7 @@ WatchOS`WKInterfaceTable`控件比其 iOS 对应的方法要简单得多，但�
 
 拖动**表**到场景的控件。 默认情况下它将类似此 （显示未指定的单行布局）：
 
-[ ![](table-images/add-table-sml.png "添加了一个表")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "添加了一个表")](table-images/add-table.png#lightbox)
 
 为表的名称在**属性**填充的**名称**框中，以便可以在代码中引用。
 
@@ -34,7 +34,7 @@ WatchOS`WKInterfaceTable`控件比其 iOS 对应的方法要简单得多，但�
 
 若要设置**类**行控制器中，选择中的行**文档大纲**类中键入名称和**属性**填充：
 
-[ ![](table-images/add-row-controller-sml.png "在属性键盘输入的类名称")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "在属性键盘输入的类名称")](table-images/add-row-controller.png#lightbox)
 
 设置行的控制器类后，IDE 将在项目中创建相应的 C# 文件。 拖到行上的控件 （如标签），并给予他们名称以便它们可以在代码中引用。
 

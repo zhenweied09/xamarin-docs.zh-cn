@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>报告 bug
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/27/2018
 
 调试器连接到 Xamarin.Mac 应用的整个 TCP，这意味着，默认情况下启用后沙盒处理，它将无法连接到应用程序，因此如果你尝试在不适当的权限启用的情况下运行应用程序，你将收到一个错误*"无法连接到调试器"*。 
 
-[![编辑权利](troubleshooting-images/debug01.png "编辑权利")](troubleshooting-images/debug01-large.png)
+[![编辑权利](troubleshooting-images/debug01.png "编辑权利")](troubleshooting-images/debug01-large.png#lightbox)
 
 **允许传出网络连接 （客户端）**权限是所需的调试器，启用此操作将允许通常调试。 你无法调试没有它，因为我们已更新`CompileEntitlements`目标`msbuild`自动将该权限添加到权利，为仅是沙盒处理以用于调试任何应用版本。 发布版本应使用在权利文件中，不做任何修改指定的权利。
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/27/2018
 
 这可以通过打开 Xamarin.Mac 项目中，转到的选项来解决**Mac 生成** > **国际化**和检查**西部**国际化：
 
-[![编辑的生成选项](troubleshooting-images/issue01.png "编辑的生成选项")](troubleshooting-images/issue01-large.png)
+[![编辑生成选项](troubleshooting-images/issue01.png "编辑生成选项")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>编译 (mm5103) 失败
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 02/27/2018
 
 如果双击**Entitlements.plist**文件，权利编辑器将显示：
 
-[![编辑权利](troubleshooting-images/entitlements02.png "编辑权利")](troubleshooting-images/entitlements02-large.png)
+[![编辑权利](troubleshooting-images/entitlements02.png "编辑权利")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 对于现有 Xamarin.Mac 项目，你将需要手动创建**Entitlements.plist**通过右键单击中的项目文件**解决方案 Pad**并选择**添加**  > **新文件...**.接下来，选择**Xamarin.Mac** > **空属性列表**:
 
@@ -108,7 +108,7 @@ ms.lasthandoff: 02/27/2018
 
 输入`Entitlements`的名称，然后单击**新建**按钮。 如果你的项目以前包含授权文件，你将会提示您将其添加到项目而不是创建新的文件：
 
-[![验证文件的覆盖](troubleshooting-images/entitlements04.png "验证文件的覆盖")](troubleshooting-images/entitlements04-large.png)
+[![验证文件的覆盖](troubleshooting-images/entitlements04.png "验证文件的覆盖")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>联系支持 （企业或企业许可证）
 
@@ -125,13 +125,13 @@ ms.lasthandoff: 02/27/2018
 你的反馈对我们很重要。 如果你发现 Xamarin.Mac 中的任何问题：
 
 - 搜索[问题存储库](https://github.com/xamarin/xamarin-macios/issues) 
-- 切换到 GitHub 问题之前，Xamarin 问题中跟踪上[Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)。 请搜索匹配的问题的存在。
-- 如果找不到匹配的问题，请文件中的一个新问题[问题的 GitHub 存储库](https://github.com/xamarin/xamarin-macios/issues/new)。
+- 切换到 GitHub 问题之前，会在 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi) 中跟踪 Xamarin 问题。 请在其中搜索匹配的问题。
+- 如果找不到匹配的问题，请在 [GitHub 问题存储库](https://github.com/xamarin/xamarin-macios/issues/new)中提交一个新问题。
 
-GitHub 的问题是所有公共的。 不能隐藏注释或附件。 
+GitHub 的问题是完全公开的。 不能隐藏注释或附件。 
 
-请尽可能多的以下内容作为可能包括：                                                                                                                                          
+请尽可能多地包含以下内容：                                                                                                                                          
 
-- 重现该问题的一个简单的示例。 这是**有用**在可能的情况。 
-- 在发生崩溃完整堆栈跟踪。
-- C# 代码周围在发生崩溃。 
+- 一个重现此问题的简单示例。 在可能的情况下，这非常有用。 
+- 故障的完整堆栈跟踪。
+- 故障周围的 C# 代码。 

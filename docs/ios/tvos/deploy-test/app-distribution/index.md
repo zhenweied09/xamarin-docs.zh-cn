@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c0cfe437b03a1f0dea05a506b1dfce62a4658bb4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 3e96e98f90c7f4c849a9f679b2de819ccaabfec0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>应用分发概述
 
@@ -22,7 +22,7 @@ _本文档概述了可用于 Xamarin.tvOS 应用程序的分发技术，并充�
 一旦您 Xamarin.tvOS 的应用程序已开发完毕，软件开发生命周期的下一步是分发给用户，应用程序在下图突出显示部分所示：
 
 
-[![软件开发生命周期概述](images/publishingdiagram.png)](images/publishingdiagram.png)
+[![软件开发生命周期概述](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 
 Apple 提供了以下的方式来分发 tvOS 应用，这受 Xamarin.tvOS:
@@ -70,7 +70,7 @@ In-House 分发（有时称为企业分发）允许 **Apple 开发人员企业�
 
 有关获取设置以及如何内部发布应用程序的详细信息，请参阅[内部分发指南](~/ios/deploy-test/app-distribution/in-house-distribution.md)。 本文档是特定于 iOS 的但同样的技术用于 tvOS 应用。
 
-<a name="Ad-Hoc-Distribution" />
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Ad Hoc 分发
 

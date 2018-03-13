@@ -3,14 +3,15 @@ title: "章 22 的摘要。 动画"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0ee99881a43b625cc8a70fb59e54710705c2d07a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0647e869fcf37a3a1dfdeb6f3dbf1e7d07ad95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-22-animation"></a>章 22 的摘要。 动画
 
@@ -110,7 +111,7 @@ ms.lasthandoff: 02/27/2018
 
 [**RotatingSpokes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes)需要考虑的是`BoxView`分支围绕该屏幕的中心服务器，然后旋转每个辐射本身来创建有趣的模式：
 
-[![轮换分支服务器的三个屏幕截图](images/ch22fg21-small.png "轮换分支服务器")](images/ch22fg21-large.png "轮换分支服务器")
+[![轮换分支服务器的三个屏幕截图](images/ch22fg21-small.png "轮换分支服务器")](images/ch22fg21-large.png#lightbox "轮换分支服务器")
 
 但是，逐渐提高`Rotation`元素的属性可能无法工作长远来看，作为[ **RotationBreakdown** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown)示例演示如何。
 
@@ -124,7 +125,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **XamagonXuzzle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)示例使用`LayoutTo`移动中的磁贴的经典实现显示经过编码的映像，而不是带编号的磁贴的 15-16 拼图：
 
-[![Xamarin Xuzzle 的三个屏幕截图](images/ch22fg26-small.png "Xuzzle 拼图游戏")](images/ch22fg26-large.png "Xuzzle 拼图游戏")
+[![Xamarin Xuzzle 的三个屏幕截图](images/ch22fg26-small.png "Xuzzle 拼图游戏")](images/ch22fg26-large.png#lightbox "Xuzzle 拼图游戏")
 
 ### <a name="your-own-awaitable-animations"></a>等待动画
 

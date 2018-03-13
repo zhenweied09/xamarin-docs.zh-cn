@@ -3,16 +3,16 @@ title: "映射"
 description: "Xamarin.Forms 使用每个平台上本机映射 Api。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 98e6cade952e656046c6c0981a0b73ff0894c9d6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2f0ad800ed1ab3a336f10dd4431e234ac4ff9675
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="map"></a>映射
 
@@ -28,7 +28,7 @@ Xamarin.Forms.Maps 每个平台上使用本机映射 Api。 这为用户提供�
 
 已用于地图控件[MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)如下所示的示例。
 
- [ ![MobileCRM 示例中的映射](map-images/maps-zoom-sml.png "地图控件示例")](map-images/maps-zoom.png "地图控件示例")
+ [![MobileCRM 示例中的映射](map-images/maps-zoom-sml.png "地图控件示例")](map-images/maps-zoom.png#lightbox "地图控件示例")
 
 映射功能可以进一步增强了创建[映射自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)。
 
@@ -103,7 +103,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 如果没有有效的 API 密钥地图控件将显示为灰色的框，在 Android 上。
 
 > [!NOTE]
-> **请注意**： 生成使用用于对上载的任何应用程序的版本进行签名的密钥库文件的另一个密钥，请务必到 Google Play 商店。 用于开发生成的密钥，调试将无法工作，并从 Google Play 下载的应用将破坏了地图显示。 另请记住要重新生成密钥时的应用程序的**包名称**更改。
+> 生成使用用于对上载的任何应用程序的版本进行签名的密钥库文件的另一个密钥，请务必到 Google Play 商店。 用于开发生成的密钥，调试将无法工作，并从 Google Play 下载的应用将破坏了地图显示。 另请记住要重新生成密钥时的应用程序的**包名称**更改。
 
 你还需要通过右键单击 Android 项目，然后选择启用适当的权限**选项 > 生成 > Android 应用程序**和计时以下：
 
@@ -185,7 +185,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![与 zoom 的地图](map-images/maps-zoom-sml.png "地图控件缩放")](map-images/maps-zoom.png "地图控件缩放")
+ [![与 zoom 的地图](map-images/maps-zoom-sml.png "地图控件缩放")](map-images/maps-zoom.png#lightbox "地图控件缩放")
 
 ### <a name="map-pins"></a>映射 Pin
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c4a88f875b4082f85b1c5565de2a24548e7b8874
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="push-notifications-in-ios"></a>在 iOS 中的推送通知
 
@@ -45,37 +45,37 @@ Apple 维护的 APNS 的两种环境：*沙盒*和*生产*环境。 沙盒环境
 
 1.  若要创建证书请转到的 iOS 设置门户 Apple 网站上如以下屏幕截图 （注意在左侧的应用 Id 菜单项） 中所示：
 
-    [ ![](remote-notifications-in-ios-images/image5new.png "IOS 设置门户同类网站上")](remote-notifications-in-ios-images/image5new.png)
+    [![](remote-notifications-in-ios-images/image5new.png "IOS 设置门户同类网站上")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
 2.  接下来，导航到应用 ID 部分，并创建新的应用程序 ID，如下面的屏幕截图中所示：
 
-    [ ![](remote-notifications-in-ios-images/image6new.png "导航到的应用 Id 部分并创建新的应用程序 ID")](remote-notifications-in-ios-images/image6new.png)
+    [![](remote-notifications-in-ios-images/image6new.png "导航到的应用 Id 部分并创建新的应用程序 ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
 3.  当你单击 **+** 按钮，你将能够输入的描述和捆绑标识符，在应用程序 id 中的下一步的屏幕截图所示：
 
-    [ ![](remote-notifications-in-ios-images/image7new.png "输入应用程序 ID 说明和捆绑标识符")](remote-notifications-in-ios-images/image7new.png)
+    [![](remote-notifications-in-ios-images/image7new.png "输入应用程序 ID 说明和捆绑标识符")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
 4. 请务必选择**显式应用 ID**并且不会在结束捆绑标识符`*`。 这将创建适合用于多个应用程序的标识符和推送通知证书必须是单个应用程序。
 
 1. 在应用程序服务下选择**推送通知**:
 
-    [ ![](remote-notifications-in-ios-images/image8new.png "选择推送通知")](remote-notifications-in-ios-images/image8new.png)
+    [![](remote-notifications-in-ios-images/image8new.png "选择推送通知")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
 2. 按**提交**以确认新的应用程序 ID 的注册：
 
-    [ ![](remote-notifications-in-ios-images/image9new.png "确认注册新的应用程序 ID")](remote-notifications-in-ios-images/image9new.png)
+    [![](remote-notifications-in-ios-images/image9new.png "确认注册新的应用程序 ID")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
 3.  接下来，您必须为应用程序 id。 创建证书 在左侧导航窗格中，浏览到**证书 > 所有**和选择`+`按钮，如下面的屏幕截图中所示：
 
-    [ ![](remote-notifications-in-ios-images/image10new.png "为应用程序 ID 创建证书")](remote-notifications-in-ios-images/image8.png)
+    [![](remote-notifications-in-ios-images/image10new.png "为应用程序 ID 创建证书")](remote-notifications-in-ios-images/image8.png#lightbox)
 
 4.  选择是否想要使用的开发或生产证书：
 
-    [ ![](remote-notifications-in-ios-images/image11new.png "选择开发或生产证书")](remote-notifications-in-ios-images/image11new.png)
+    [![](remote-notifications-in-ios-images/image11new.png "选择开发或生产证书")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
 5. 然后选择刚创建的新应用程序 ID:
 
-    [ ![](remote-notifications-in-ios-images/image12new.png "选择刚创建的新应用程序 ID")](remote-notifications-in-ios-images/image12new.png)
+    [![](remote-notifications-in-ios-images/image12new.png "选择刚创建的新应用程序 ID")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
 6.  这将显示说明将指导您完成创建的过程*证书签名请求*使用**Keychain Access**在 mac 上应用程序
 
@@ -85,11 +85,11 @@ Apple 维护的 APNS 的两种环境：*沙盒*和*生产*环境。 沙盒环境
 
 9.  一旦你已创建预配配置文件，打开**Xcode 组织程序**并刷新它。 如果你创建预配配置文件不显示它可能需要从 iOS 设置门户下载配置文件，并手动将其导入。 下面的屏幕快照显示组织者的示例与设置配置文件添加：
 
-    [ ![](remote-notifications-in-ios-images/image13new.png "此屏幕截图与设置配置文件添加显示组织者的示例")](remote-notifications-in-ios-images/image13new.png)
+    [![](remote-notifications-in-ios-images/image13new.png "此屏幕截图与设置配置文件添加显示组织者的示例")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 10.  此时，我们需要用于配置 Xamarin.iOS 项目以使用此新创建的预配配置文件。 这通过**项目选项**对话框下**iOS 捆绑签名**选项卡，如以下屏幕截图中显示：
 
-    [ ![](remote-notifications-in-ios-images/image11.png "配置 Xamarin.iOS 项目以使用此新创建的预配配置文件")](remote-notifications-in-ios-images/image11.png)
+    [![](remote-notifications-in-ios-images/image11.png "配置 Xamarin.iOS 项目以使用此新创建的预配配置文件")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 
 

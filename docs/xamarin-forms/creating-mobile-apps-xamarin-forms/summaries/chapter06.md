@@ -3,14 +3,15 @@ title: "第 6 章的摘要。 按钮单击事件"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 44dbb4d2cdc573e721bb772fdd05d392c90b746a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 972d0d76fd55981ebca70acce69533d98c3fc0b5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>第 6 章的摘要。 按钮单击事件
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad)示例为数字键盘上的所有 10 个数字密钥使用相同的事件处理程序，并区分它们与`StyleId`属性：
 
-[![最简单的小键盘的三个屏幕快照](images/ch06fg04-small.png "计算器")](images/ch06fg04-large.png "计算器")
+[![最简单的小键盘的三个屏幕快照](images/ch06fg04-small.png "计算器")](images/ch06fg04-large.png#lightbox "计算器")
 
 ## <a name="saving-transient-data"></a>保存暂时性数据
 

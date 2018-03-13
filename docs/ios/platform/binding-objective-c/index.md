@@ -3,16 +3,17 @@ title: "绑定 iOS 库"
 description: "如何使 iOS 本机库 （和 CocoaPods） 中的 Xamarin 应用可访问。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3afe1a03299e600502d49b1db039af4c6642e131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb3edb007885d9fe839c2407a2581c9824e109c9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="binding-ios-libraries"></a>绑定 iOS 库
 
@@ -39,7 +40,11 @@ _如何使 iOS 本机库 （和 CocoaPods） 中的 Xamarin 应用可访问。_
 此页提供了创建 iOS 绑定项目使用的开放源代码的分步演练[ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) Objective C 项目作为示例。 **InfColorPicker**库提供了允许用户选择一种颜色基于其 HSB 表示形式，使颜色选择更加友好的用户的可重用的视图控制器。
 目标 Sharpie 将用于协助绑定过程中。
 
+## <a name="xamarin-university-lightning-lecture"></a>Xamarin 大学闪电讲座
 
+> [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
+
+**iOS C/c + + 中绑定由[Xamarin 大学](https://university.xamarin.com/)**
 
 ## <a name="related-links"></a>相关链接
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>快速交互技术 watchOS 3
 
@@ -77,7 +77,7 @@ watchOS 3 将支持四个以下笔势识别器：
 
 对于离散笔势，操作称为时识别出的笔势和状态 (`WKGestureRecognizerState`) 被指定为：
 
-[ ![](quick-interaction-techniques-images/quick01.png "离散笔势状态")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "离散笔势状态")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 按的所有离散手势启动`Possible`状态和转换到任一`Failed`或`Recognized`状态。 当使用离散手势，开发人员通常不会处理直接与状态。 相反，它们依赖仅识别出的笔势后调用的操作。
 
@@ -85,7 +85,7 @@ watchOS 3 将支持四个以下笔势识别器：
 
 连续手势是与离散笔势，操作调用的那多次如识别出的笔势略有不同：
 
-[ ![](quick-interaction-techniques-images/quick02.png "连续笔势状态")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "连续笔势状态")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 同样，连续手势启动时处于`Possible`随多个更新进度的状态，但它们。 此处的开发人员需要考虑识别器状态并更新期间的应用程序的 UI`Changed`阶段最后笔势之前`Recognized`或`Canceled`。
 
@@ -168,7 +168,7 @@ Apple 使其处于由开发人员确定旋转计数如何对应于正在更新�
 
 符号 (`+/-`) 旋转增量的指示用户是否在转数字王冠的方向：
 
-[ ![](quick-interaction-techniques-images/quick03.png "旋转增量的符号指示用户在转数字王冠的方向")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "旋转增量的符号指示用户在转数字王冠的方向")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 如果用户向上滚动，WatchKit 将返回正数的增量可以保持和如果向下滚动，然后负增量将返回，无论何种方向用户穿中的监视。
@@ -189,15 +189,15 @@ Apple 使其处于由开发人员确定旋转计数如何对应于正在更新�
 
 某个用户导航 watchOS 应用中的表视图的标准方法是向滚动到所需的数据块的点击特定的行，以显示详细的视图上，点击后退按钮完成查看详细信息，然后重复该过程的任何其他信息，y 感兴趣从表中：
 
-[ ![](quick-interaction-techniques-images/quick04.png "表和详细信息视图之间移动")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "表和详细信息视图之间移动")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 新 watchOS 3，开发人员可以启用垂直分页其表视图控件上。 启用了此功能，用户可以向上滚动以查找表视图行并点击要查看其详细的信息之前的行。 但是，它们可以现在往下轻扫向上选择下一步的行在表或列表选择上一行 （或使用数字王冠），所有而无需返回到表视图首先：
 
-[ ![](quick-interaction-techniques-images/quick05.png "表和详细信息视图之间移动和轻扫向上和向下移动其他行之间")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "表和详细信息视图之间移动和轻扫向上和向下移动其他行之间")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 若要启用此模式下，在 Xcode 中打开 watchOS 应用的情节提要，以便进行编辑，选择表视图，并检查**垂直详细信息分页**复选框：
 
-[ ![](quick-interaction-techniques-images/quick06.png "检查垂直详细信息分页复选框")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "检查垂直详细信息分页复选框")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 请确保表使用 Segues 显示详细的视图，情节提要保存所做的更改并返回到 Visual Studio for Mac 同步。
 
@@ -313,7 +313,7 @@ Apple 建议寻找组合的所有新的快速交互功能在 watchOS 3 提供丰
 
 具体而言，这会在执行任何类型的网络连接或与其辅助 iPhone 应用程序共享信息 watch 应用时是一个问题。 这常常会导致等待指示器事务开始执行时，快速交互期间不需要。 请参见以下示例：
 
-[ ![](quick-interaction-techniques-images/quick07.png "监视应用程序执行此操作的网络连接并与其辅助 iPhone 应用程序共享信息的关系图")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "监视应用程序执行此操作的网络连接并与其辅助 iPhone 应用程序共享信息的关系图")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. 用户选择要在手表上购买的项。
 2. 用户点击购买按钮。
@@ -325,7 +325,7 @@ Apple 建议寻找组合的所有新的快速交互功能在 watchOS 3 提供丰
 
 使用 Apple 的建议的模型，看看相同快速交互试：
 
-[ ![](quick-interaction-techniques-images/quick08.png "同类建议的模型关系图")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "同类建议的模型关系图")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. 用户选择要在手表上购买的项。
 2. 用户点击购买按钮。

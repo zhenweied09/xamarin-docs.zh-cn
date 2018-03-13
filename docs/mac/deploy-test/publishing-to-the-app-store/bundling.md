@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e138fc1176c646a2e4e9caf94462028dd7c68e9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Mac App Store 程序包
 
@@ -25,11 +25,11 @@ ms.lasthandoff: 02/27/2018
 
 更新代码签名和打包选项前，请将“配置”更改为“发布”。 开发人员请务必使用其公司**标识**，并使用先前签名用程序以在 App Store 中发布时所创建的配置文件。
 
- [![编辑代码签名选项](bundling-images/config02.png "编辑代码签名选项")](bundling-images/config02-large.png)
+ [![编辑代码签名选项](bundling-images/config02.png "编辑代码签名选项")](bundling-images/config02-large.png#lightbox)
 
 确保已在“Mac 版本”设置中选中用于创建安装程序包的选项：
 
-[![编辑生成选项](bundling-images/config03.png "编辑生成选项")](bundling-images/config03-large.png)
+[![编辑生成选项](bundling-images/config03.png "编辑生成选项")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>生成
 

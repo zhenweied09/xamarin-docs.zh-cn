@@ -7,11 +7,11 @@ ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 44df6fce4ec6d667c096da01cfc339ec2afdb077
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>演练： 创建使用反射 API 的应用程序
 
@@ -34,7 +34,7 @@ MTD 反射 API 允许类是用属性修饰该保持联系D 使用自动创建的
 
 让我们看一下示例来演示如何使用反射 API。 在此示例中，我们要生成简单的数据输入屏幕如下所示：
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "在此示例中，我们要生成简单的数据输入屏幕，如下所示")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "在此示例中，我们要生成简单的数据输入屏幕，如下所示")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -119,7 +119,7 @@ window.RootViewController = nav;
 
 现在，当我们运行应用程序，该标题将显示在`UINavigationController’s`为下面所示的屏幕截图的导航栏：
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "现在当我们运行应用程序，就会 UINavigationControllers 导航栏中显示标题")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "现在当我们运行应用程序，就会 UINavigationControllers 导航栏中显示标题")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 通过包括`UINavigationController`，我们现在可以利用保持联系其他功能D 导航所必需的。 例如，我们可以添加到枚举`Expense`类定义的类别的费用，以及保持联系D 将自动创建选择屏幕。 为了演示，修改`Expense`类，以包含`ExpenseCategory`字段，如下所示：
 
@@ -142,11 +142,11 @@ public class Expense
 
 运行应用程序现在将导致为类别表中的新行所示：
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "运行应用程序现在将会生成为类别表中的新行中所示")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "运行应用程序现在将会生成为类别表中的新行中所示")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 选择该行将导致应用程序导航到新的屏幕行对应于枚举，如下所示：
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "选择行导致应用程序导航到新的屏幕行对应于枚举")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "选择行导致应用程序导航到新的屏幕行对应于枚举")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 

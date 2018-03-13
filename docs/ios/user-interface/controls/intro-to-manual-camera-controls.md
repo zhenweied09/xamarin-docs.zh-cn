@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e5ff4e3732476415ff32e98b8281f3cb6e03e332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manual-camera-controls"></a>手动相机控件
 
@@ -26,7 +26,7 @@ _AVFoundation Framework 使比前所未有的用户才能很棒的照片手动�
 
 是否采用视频或静止的 iOS 设备上使用摄像头的图像，用来捕获这些映像过程是很大程度上相同。 这是 true 的应用程序使用默认的自动相机控件或一种是充分利用新的手动相机控件：
 
- [ ![](intro-to-manual-camera-controls-images/image1.png "AVFoundation 捕获对象概述")](intro-to-manual-camera-controls-images/image1.png)
+ [![](intro-to-manual-camera-controls-images/image1.png "AVFoundation 捕获对象概述")](intro-to-manual-camera-controls-images/image1.png#lightbox)
 
 输入取自`AVCaptureDeviceInput`到`AVCaptureSession`通过`AVCaptureConnection`。 结果是任一输出视为静止图像或视频流。 整个过程由控制`AVCaptureDevice`。
 
@@ -280,11 +280,11 @@ AV 捕获会话用于控制从 iOS 设备的照相机的实时视频录制，并
 
 例如，专业摄影可以减轻实现，该图像的焦点[Bokeh 效果](http://en.wikipedia.org/wiki/Bokeh):
 
-[ ![](intro-to-manual-camera-controls-images/image2.png "Bokeh 效果")](intro-to-manual-camera-controls-images/image2.png)
+[![](intro-to-manual-camera-controls-images/image2.png "Bokeh 效果")](intro-to-manual-camera-controls-images/image2.png#lightbox)
 
 或者，创建[焦点拉取效果](http://www.mediacollege.com/video/camera/focus/pull.html)，如：
 
-[ ![](intro-to-manual-camera-controls-images/image3.png "焦点请求效果")](intro-to-manual-camera-controls-images/image3.png)
+[![](intro-to-manual-camera-controls-images/image3.png "焦点请求效果")](intro-to-manual-camera-controls-images/image3.png#lightbox)
 
 对于科学家或医疗应用程序的编写器，该应用程序可能想要以编程方式移动小视窗的试验。 无论哪种方式的新 API 允许执行最终用户或应用程序采用控制焦点时图像。
 
@@ -292,7 +292,7 @@ AV 捕获会话用于控制从 iOS 设备的照相机的实时视频录制，并
 
 之前讨论的控制焦点 IOS 8 应用程序中的详细信息。 让我们快速了解一下 iOS 的设备中的焦点工作原理：
 
-[ ![](intro-to-manual-camera-controls-images/image4.png "IOS 的设备中的焦点工作原理")](intro-to-manual-camera-controls-images/image4.png)
+[![](intro-to-manual-camera-controls-images/image4.png "IOS 的设备中的焦点工作原理")](intro-to-manual-camera-controls-images/image4.png#lightbox)
 
 浅色进入在 iOS 设备上的相机小视窗和侧重于图像传感器。 相对于传感器焦点 （该图像将显示清晰的区域） 所在的传感器控件从小视窗距离。 距离越远重用功能区是从传感器、 距离对象似乎清晰和越接近，附近对象似乎清晰。
 
@@ -358,7 +358,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 与常规 AV 捕获安装程序代码放情况下，`UIViewController`可以添加到应用程序的情节提要，并配置，如下所示：
 
-[ ![](intro-to-manual-camera-controls-images/image5.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image5.png)
+[![](intro-to-manual-camera-controls-images/image5.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 该视图包含以下主要元素：
 
@@ -491,10 +491,10 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
   
 1. 在自动模式下对照相机，滑块将移动自动相机调整焦点：
 
-    [![](intro-to-manual-camera-controls-images/image6.png "滑块会自动将随着相机调整此示例应用中的焦点")](intro-to-manual-camera-controls-images/image6.png)
+    [![](intro-to-manual-camera-controls-images/image6.png "滑块会自动将随着相机调整此示例应用中的焦点")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. 点击锁定段并拖动位置滑块手动调整的可重用功能区位置：
 
-    [![](intro-to-manual-camera-controls-images/image7.png "手动调整的小视窗位置")](intro-to-manual-camera-controls-images/image7.png)
+    [![](intro-to-manual-camera-controls-images/image7.png "手动调整的小视窗位置")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. 停止应用程序。
 
 
@@ -506,7 +506,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 使用手动公开控件，用户可以执行中不现实亮深色和 moody 的映像：
 
-[ ![](intro-to-manual-camera-controls-images/image8.png "示例显示从不现实亮暴露深色和 moody 映像")](intro-to-manual-camera-controls-images/image8.png)
+[![](intro-to-manual-camera-controls-images/image8.png "示例显示从不现实亮暴露深色和 moody 映像")](intro-to-manual-camera-controls-images/image8.png#lightbox)
 
 同样，这可以使用编程控制，自动为科学型应用程序或通过手动提供的应用程序用户界面的控件。 无论哪种方式，新的 iOS 8 公开 Api 提供的照相机的公开设置的细粒度控制。
 
@@ -514,7 +514,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 之前讨论的控制 IOS 8 应用程序中的公开的详细信息。 让我们快速了解一下公开的工作原理：
 
-[ ![](intro-to-manual-camera-controls-images/image9.png "公开的工作原理")](intro-to-manual-camera-controls-images/image9.png)
+[![](intro-to-manual-camera-controls-images/image9.png "公开的工作原理")](intro-to-manual-camera-controls-images/image9.png#lightbox)
 
 结合使用来控制公开的三个基本元素为：
 
@@ -527,7 +527,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 在学习之前手动曝光的工作原理，这是一个好办法了解如何连续自动公开适用于 iOS 设备。
 
-[ ![](intro-to-manual-camera-controls-images/image10.png "连续自动公开 iOS 的设备中的工作原理")](intro-to-manual-camera-controls-images/image10.png)
+[![](intro-to-manual-camera-controls-images/image10.png "连续自动公开 iOS 的设备中的工作原理")](intro-to-manual-camera-controls-images/image10.png#lightbox)
 
 首先是自动公开块，其计算理想公开的作业和持续进纸计数统计信息。它使用此信息来计算的 ISO 和快门速度，以获取也亮起场景的最佳组合。 此周期称为遍历循环。
 
@@ -535,7 +535,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 接下来，让我们看一下如何锁定的公开适用于 iOS 设备。
 
-[ ![](intro-to-manual-camera-controls-images/image11.png "如何锁定公开适用于 iOS 设备")](intro-to-manual-camera-controls-images/image11.png)
+[![](intro-to-manual-camera-controls-images/image11.png "如何锁定公开适用于 iOS 设备")](intro-to-manual-camera-controls-images/image11.png#lightbox)
 
 同样，你可以尝试计算的最佳 iOS 和持续时间值自动公开块。 但是，在此模式下要从中块已断开计数统计信息引擎。
 
@@ -589,7 +589,7 @@ CaptureDevice.UnlockForConfiguration();
 
 与常规 AV 捕获安装程序代码放情况下，`UIViewController`可以添加到应用程序的情节提要，并配置，如下所示：
 
-[ ![](intro-to-manual-camera-controls-images/image12.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image12.png)
+[![](intro-to-manual-camera-controls-images/image12.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 该视图包含以下主要元素：
 
@@ -791,13 +791,13 @@ CaptureDevice.UnlockForConfiguration();
   
 1. 在自动模式下对照相机，滑块将移动自动相机调整公开：
 
-    [![](intro-to-manual-camera-controls-images/image13.png "滑块将会自动移动，如相机调整公开")](intro-to-manual-camera-controls-images/image13.png)
+    [![](intro-to-manual-camera-controls-images/image13.png "滑块将会自动移动，如相机调整公开")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. 点击锁定段并拖动偏差滑块手动调整自动曝光的偏差：
 
-    [![](intro-to-manual-camera-controls-images/image14.png "手动调整自动曝光的偏差")](intro-to-manual-camera-controls-images/image14.png)
+    [![](intro-to-manual-camera-controls-images/image14.png "手动调整自动曝光的偏差")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. 点击的自定义段并拖动持续时间和 ISO 滑块来手动控制公开：
 
-    [![](intro-to-manual-camera-controls-images/image15.png "将持续时间和 ISO 滑块拖动到手动控件公开")](intro-to-manual-camera-controls-images/image15.png)
+    [![](intro-to-manual-camera-controls-images/image15.png "将持续时间和 ISO 滑块拖动到手动控件公开")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. 停止应用程序。
 
 
@@ -807,7 +807,7 @@ CaptureDevice.UnlockForConfiguration();
 
 白平衡控件允许用户调整的在映像以使其看起来更加逼真 colosr 之间的平衡。 不同的光源具有不同的颜色温度，且必须调整用于捕获图像的相机设置来弥补这些差异。 同样，通过允许用户控制白色平衡它们可以进行自动例程不能以实现艺术效果的专业人员调整。
 
-[ ![](intro-to-manual-camera-controls-images/image16.png "显示手动白平衡调整示例图像")](intro-to-manual-camera-controls-images/image16.png)
+[![](intro-to-manual-camera-controls-images/image16.png "显示手动白平衡调整示例图像")](intro-to-manual-camera-controls-images/image16.png#lightbox)
 
 例如，夏时制具有蓝强制转换，而白帜灯 incandescent 灯具有更暖、 黄色橙色浅色。 （人困惑的是，"冷"颜色具有更高版本的颜色温度比"暖"颜色。 颜色温度是物理的度量值，不感知一个）。
 
@@ -821,7 +821,7 @@ CaptureDevice.UnlockForConfiguration();
 
 中的颜色感知研究[CIE 1931 RGB 颜色空间和 CIE 1931 XYZ 颜色空间](http://en.wikipedia.org/wiki/CIE_1931_color_space)是第一个数学上定义的色彩空间。 它们在中创建国际佣金上照明 (CIE) 1931年。
 
-[ ![](intro-to-manual-camera-controls-images/image17.png "CIE 1931 RGB 颜色空间和 CIE 1931 XYZ 颜色空间")](intro-to-manual-camera-controls-images/image17.png)
+[![](intro-to-manual-camera-controls-images/image17.png "CIE 1931 RGB 颜色空间和 CIE 1931 XYZ 颜色空间")](intro-to-manual-camera-controls-images/image17.png#lightbox)
 
 上面的图表显示我们的所有颜色从深蓝为亮的红色的浅绿色肉眼，可见。 关系图上的任意点可绘制具有 X 和 Y 值，上图中, 所示。
 
@@ -900,7 +900,7 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 
 与常规 AV 捕获安装程序代码放情况下，`UIViewController`可以添加到应用程序的情节提要，并配置，如下所示：
 
-[ ![](intro-to-manual-camera-controls-images/image18.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image18.png)
+[![](intro-to-manual-camera-controls-images/image18.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 该视图包含以下主要元素：
 
@@ -1111,13 +1111,13 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 1. 保存所做的更改的代码并运行应用程序。
 1. 在自动模式下对照相机，滑块将移动自动相机调整白色平衡：
 
-    [![](intro-to-manual-camera-controls-images/image19.png "滑块将会自动移动，如相机调整白色平衡")](intro-to-manual-camera-controls-images/image19.png)
+    [![](intro-to-manual-camera-controls-images/image19.png "滑块将会自动移动，如相机调整白色平衡")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. 点击锁定段并拖动 Temp 和浅色滑块手动调整白色平衡：
 
-    [![](intro-to-manual-camera-controls-images/image20.png "拖动 Temp 和浅色滑块手动调整白色平衡")](intro-to-manual-camera-controls-images/image20.png)
+    [![](intro-to-manual-camera-controls-images/image20.png "拖动 Temp 和浅色滑块手动调整白色平衡")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. 使用了已锁定段仍处于选中状态，将在前面的相机灰色物理卡，然后点击灰色卡按钮以调整白色平衡到灰色世界：
 
-    [![](intro-to-manual-camera-controls-images/image21.png "点击灰色卡按钮以调整白色平衡到灰色 World")](intro-to-manual-camera-controls-images/image21.png)
+    [![](intro-to-manual-camera-controls-images/image21.png "点击灰色卡按钮以调整白色平衡到灰色 World")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. 停止应用程序。
 
 上面的代码说明了如何在自动模式下相机时监视白色平衡设置或者使用滑块来控制白色平衡，在锁定模式下时。
@@ -1128,7 +1128,7 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 
 简言之，括起来捕获是静止图像的各种设置从图片图片时执行的突然增加。
 
-[ ![](intro-to-manual-camera-controls-images/image22.png "括起来捕获的工作原理")](intro-to-manual-camera-controls-images/image22.png)
+[![](intro-to-manual-camera-controls-images/image22.png "括起来捕获的工作原理")](intro-to-manual-camera-controls-images/image22.png#lightbox)
 
 使用 iOS 8 中的括起来捕获，应用程序可以预设的一系列手动相机控件、 发出单个命令和具有当前场景手动预设的每个返回一系列图像。
 
@@ -1187,7 +1187,7 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 
 与常规 AV 捕获安装程序代码放情况下，`UIViewController`可以添加到应用程序的情节提要，并配置，如下所示：
 
-[ ![](intro-to-manual-camera-controls-images/image23.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image23.png)
+[![](intro-to-manual-camera-controls-images/image23.png "可以添加到应用程序情节提要 UIViewController，并将其配置如下所示")](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 该视图包含以下主要元素：
 
@@ -1345,10 +1345,10 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 1. 保存所做的更改的代码并运行应用程序。
 1. 添加边框场景以及点击捕获括号按钮：
 
-    [![](intro-to-manual-camera-controls-images/image24.png "添加边框场景以及为点击捕获括号按钮")](intro-to-manual-camera-controls-images/image24.png)
+    [![](intro-to-manual-camera-controls-images/image24.png "添加边框场景以及为点击捕获括号按钮")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. 轻扫从右到左若要查看执行括起来捕获三个映像：
 
-    [![](intro-to-manual-camera-controls-images/image25.png "轻扫从右到左若要查看三个执行括起来捕获的映像")](intro-to-manual-camera-controls-images/image25.png)
+    [![](intro-to-manual-camera-controls-images/image25.png "轻扫从右到左若要查看三个执行括起来捕获的映像")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. 停止应用程序。
 
 

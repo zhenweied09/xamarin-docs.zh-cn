@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fe1796839524a271760a9beb82895fd6e93c7ad0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-graphics"></a>核心图形
 
@@ -40,6 +40,7 @@ iOS 包括[*核心图形*](https://developer.apple.com/library/prerelease/ios/do
 -  减少应用程序捆绑中的静态图像的需要，可以减少应用程序大小。
 -  图形会变得更具弹性分辨率更改到跨设备。
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>在 UIView 子类中绘制
 
@@ -182,6 +183,8 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
  ![](core-graphics-images/02-dashed-stroke.png "虚线描边中添加此代码之前任何绘制操作结果")
  
 请注意，当在 Xamarin.iOS 中使用统一的 API，数组类型需要`nfloat`，并且还需要显式强制转换为 Math.PI。
+
+<a name="Drawing_Images_and_Text"/>
 
 ## <a name="drawing-images-and-text"></a>绘制图像和文本
 

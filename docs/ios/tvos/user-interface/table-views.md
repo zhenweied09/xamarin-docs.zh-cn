@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 26a73c2536bf4b4959928bfb27958b1a10734bf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af562ac03f2cd5f293f99c7509000499ad5deaa4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-table-views"></a>使用表视图
 
@@ -22,7 +22,7 @@ TvOS，在表视图呈现为滚动 （可选） 可以组织到组或部分的�
 
 表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息：
 
-[ ![](table-views-images/intro01.png "示例表视图")](table-views-images/intro01.png)
+[![](table-views-images/intro01.png "示例表视图")](table-views-images/intro01.png#lightbox)
 
 <a name="About-Table-Views" />
 
@@ -30,7 +30,7 @@ TvOS，在表视图呈现为滚动 （可选） 可以组织到组或部分的�
 
 A`UITableView`作为 （可选） 可以组织到组或部分的信息的分层列表中显示单个列的可滚动的行： 
 
-[ ![](table-views-images/table01.png "选定的项")](table-views-images/table01.png)
+[![](table-views-images/table01.png "选定的项")](table-views-images/table01.png#lightbox)
 
 Apple 具有使用表的以下建议：
 
@@ -72,86 +72,86 @@ Xamarin.tvOS 应用中使用的表视图的最简单方法是创建和修改其�
     
 1. 在适用于 Mac 的 Visual Studio，启动一个新的 tvOS 应用程序项目，然后选择**tvOS** > **应用** > **单视图应用**单击**下一步**按钮： 
 
-    [ ![](table-views-images/table02.png "选择单一视图应用")](table-views-images/table02.png)
+    [![](table-views-images/table02.png "选择单一视图应用")](table-views-images/table02.png#lightbox)
 1. 输入**名称**为应用程序并单击**下一步**: 
 
-    [ ![](table-views-images/table03.png "输入应用程序的名称")](table-views-images/table03.png)
+    [![](table-views-images/table03.png "输入应用程序的名称")](table-views-images/table03.png#lightbox)
 1. 可以调整**项目名称**和**解决方案名称**或者接受默认设置，然后单击**创建**按钮以创建新的解决方案： 
 
-    [ ![](table-views-images/table04.png "项目名称和解决方案名称")](table-views-images/table04.png)
+    [![](table-views-images/table04.png "项目名称和解决方案名称")](table-views-images/table04.png#lightbox)
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
 
-    [ ![](table-views-images/table05.png "Main.storyboard 文件")](table-views-images/table05.png)
+    [![](table-views-images/table05.png "Main.storyboard 文件")](table-views-images/table05.png#lightbox)
 1. 选择并删除**默认视图控制器**: 
 
-    [ ![](table-views-images/table06.png "选择并删除默认视图控制器")](table-views-images/table06.png)
+    [![](table-views-images/table06.png "选择并删除默认视图控制器")](table-views-images/table06.png#lightbox)
 1. 选择**拆分视图控制器**从**工具箱**和将其拖到设计图面。
 1. 默认情况下，你将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和**表视图控制器**中的左侧和**视图控制器**右下方。 这是 Apple 的建议的用法中 tvOS 的表视图： 
 
-    [ ![](table-views-images/table08.png "添加拆分视图")](table-views-images/table08.png)
+    [![](table-views-images/table08.png "添加拆分视图")](table-views-images/table08.png#lightbox)
 1. 你将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便你可以在 C# 中，更高版本访问它代码。 例如，**表视图控制器**: 
 
-    [ ![](table-views-images/table09.png "指定一个类名称")](table-views-images/table09.png)
+    [![](table-views-images/table09.png "指定一个类名称")](table-views-images/table09.png#lightbox)
 1. 确保你创建的自定义类**表视图控制器**、**表视图**和任何**原型单元格**。 适用于 Mac 的 visual Studio 将添加到项目树的自定义类，因为它们创建： 
 
-    [ ![](table-views-images/table10.png "项目树中的自定义类")](table-views-images/table10.png)
+    [![](table-views-images/table10.png "项目树中的自定义类")](table-views-images/table10.png#lightbox)
 1. 接下来，在设计图面中选择表视图，然后根据需要调整它的属性。 如数**原型单元格**和**样式**（纯或分组）： 
 
-    [ ![](table-views-images/table11.png "小组件选项卡")](table-views-images/table11.png)
+    [![](table-views-images/table11.png "小组件选项卡")](table-views-images/table11.png#lightbox)
 1. 每个**原型单元格**，选择它并分配一个唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为你稍后将需要此标识符时你填充表。 例如`AttrCell`: 
 
-    [ ![](table-views-images/table12.png "小组件选项卡")](table-views-images/table12.png)
+    [![](table-views-images/table12.png "小组件选项卡")](table-views-images/table12.png#lightbox)
 1. 你还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**并使用设计图面的布局单元格通过将从其他 UI 小组件中拖动**工具箱**: 
 
-    [ ![](table-views-images/table13.png "单元格的布局")](table-views-images/table13.png)
+    [![](table-views-images/table13.png "单元格的布局")](table-views-images/table13.png#lightbox)
 1. 为分配唯一**名称**中的所有 UI 元素中的原型单元格设计**小组件**选项卡**属性资源管理器**以便你可以访问它们更高版本中的 C# 代码： 
 
-    [ ![](table-views-images/table14.png "指定一个名称")](table-views-images/table14.png)
+    [![](table-views-images/table14.png "指定一个名称")](table-views-images/table14.png#lightbox)
 1. 原型单元格的表视图中的所有重复上述步骤。
 1. 接下来，将自定义类分配给 UI 设计、 布局的详细信息视图和分配唯一的其余部分**名称**查看详细信息中每个 UI 元素，以便你可以访问它们在 C# 中以及。 例如： 
 
-    [ ![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png)
+    [![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png#lightbox)
 1. 将所做的更改保存到情节提要。
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. 在 Visual Studio 中，启动一个新的 tvOS 应用程序项目并选择**tvOS** > **单视图应用**并输入你的应用程序的名称。 单击**好**按钮以创建新的解决方案： 
 
-    [ ![](table-views-images/table02-vs.png "选择单一视图应用")](table-views-images/table02-vs.png)
+    [![](table-views-images/table02-vs.png "选择单一视图应用")](table-views-images/table02-vs.png#lightbox)
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
 
-    [ ![](table-views-images/table05-vs.png "Main.storyboard 文件")](table-views-images/table05-vs.png)
+    [![](table-views-images/table05-vs.png "Main.storyboard 文件")](table-views-images/table05-vs.png#lightbox)
 1. 选择并删除**默认视图控制器**: 
 
-    [ ![](table-views-images/table06-vs.png "选择并删除默认视图控制器")](table-views-images/table06-vs.png)
+    [![](table-views-images/table06-vs.png "选择并删除默认视图控制器")](table-views-images/table06-vs.png#lightbox)
 1. 选择**拆分视图控制器**从**工具箱**和将其拖到设计图面： 
 
-    [ ![](table-views-images/table07-vs.png "拆分视图控制器")](table-views-images/table07-vs.png)
+    [![](table-views-images/table07-vs.png "拆分视图控制器")](table-views-images/table07-vs.png#lightbox)
 1. 默认情况下，你将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和**表视图控制器**中的左侧和**视图控制器**右下方。 这是 Apple 的建议的用法中 tvOS 的表视图： 
 
-    [ ![](table-views-images/table08-vs.png "布局 UI")](table-views-images/table08-vs.png)
+    [![](table-views-images/table08-vs.png "布局 UI")](table-views-images/table08-vs.png#lightbox)
 1. 你将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便你可以在 C# 中，更高版本访问它代码。 例如，**表视图控制器**: 
 
-    [ ![](table-views-images/table09-vs.png "小组件选项卡")](table-views-images/table09-vs.png)
+    [![](table-views-images/table09-vs.png "小组件选项卡")](table-views-images/table09-vs.png#lightbox)
 1. 确保你创建的自定义类**表视图控制器**、**表视图**和任何**原型单元格**。 适用于 Mac 的 visual Studio 将添加到项目树的自定义类，因为它们创建： 
 
-    [ ![](table-views-images/table10-vs.png "项目树中的自定义类")](table-views-images/table10-vs.png)
+    [![](table-views-images/table10-vs.png "项目树中的自定义类")](table-views-images/table10-vs.png#lightbox)
 1. 接下来，在设计图面中选择表视图，然后根据需要调整它的属性。 如数**原型单元格**和**样式**（纯或分组）： 
 
-    [ ![](table-views-images/table11-vs.png "小组件选项卡")](table-views-images/table11-vs.png)
+    [![](table-views-images/table11-vs.png "小组件选项卡")](table-views-images/table11-vs.png#lightbox)
 1. 每个**原型单元格**，选择它并分配一个唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为你稍后将需要此标识符时你填充表。 例如`AttrCell`: 
 
-    [ ![](table-views-images/table12-vs.png "分配一个标识符")](table-views-images/table12-vs.png)
+    [![](table-views-images/table12-vs.png "分配一个标识符")](table-views-images/table12-vs.png#lightbox)
 1. 你还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**并使用设计图面的布局单元格通过将从其他 UI 小组件中拖动**工具箱**: 
 
-    [ ![](table-views-images/table13-vs.png "样式下拉列表")](table-views-images/table13-vs.png)
+    [![](table-views-images/table13-vs.png "样式下拉列表")](table-views-images/table13-vs.png#lightbox)
 1. 为分配唯一**名称**中的所有 UI 元素中的原型单元格设计**小组件**选项卡**属性资源管理器**以便你可以访问它们更高版本中的 C# 代码： 
 
-    [ ![](table-views-images/table14-vs.png "小组件选项卡")](table-views-images/table14-vs.png)
+    [![](table-views-images/table14-vs.png "小组件选项卡")](table-views-images/table14-vs.png#lightbox)
 1. 原型单元格的表视图中的所有重复上述步骤。
 1. 接下来，将自定义类分配给 UI 设计、 布局的详细信息视图和分配唯一的其余部分**名称**查看详细信息中每个 UI 元素，以便你可以访问它们在 C# 中以及。 例如： 
 
-    [ ![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png)
+    [![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png#lightbox)
 1. 将所做的更改保存到情节提要。
     
 -----
@@ -168,13 +168,13 @@ Xamarin.tvOS 应用中使用的表视图的最简单方法是创建和修改其�
 
 若要创建数据模型，用于**引力**，右键单击项目名称中**解决方案 Pad**和选择**添加** > **新文件...**.输入`AttractionInformation`为**名称**单击**新建**按钮： 
 
-[ ![](table-views-images/data01.png "为名称输入 AttractionInformation")](table-views-images/data01.png)
+[![](table-views-images/data01.png "为名称输入 AttractionInformation")](table-views-images/data01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 若要创建数据模型，用于**引力**，右键单击项目名称中**解决方案资源管理器**和选择**添加** > **新项...**.选择**类**并输入`AttractionInformation`为**名称**单击**添加**按钮： 
 
-[ ![](table-views-images/data01-vs.png "选择的类并为名称输入 AttractionInformation")](table-views-images/data01-vs.png)
+[![](table-views-images/data01-vs.png "选择的类并为名称输入 AttractionInformation")](table-views-images/data01-vs.png#lightbox)
 
 -----
 
@@ -216,13 +216,13 @@ namespace tvTable
 
 接下来，右键单击项目名称中**解决方案 Pad**再次选择**添加** > **新文件...**.输入`CityInformation`为**名称**单击**新建**按钮： 
 
-[ ![](table-views-images/data02.png "为名称输入 CityInformation")](table-views-images/data02.png)
+[![](table-views-images/data02.png "为名称输入 CityInformation")](table-views-images/data02.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 接下来，右键单击项目名称中**解决方案资源管理器**再次选择**添加** > **新建项...**.输入`CityInformation`为**名称**单击**添加**按钮： 
 
-[ ![](table-views-images/data02-vs.png "为名称输入 CityInformation")](table-views-images/data02-vs.png)
+[![](table-views-images/data02-vs.png "为名称输入 CityInformation")](table-views-images/data02-vs.png#lightbox)
 
 -----
 
@@ -733,7 +733,7 @@ namespace tvTable
 
 如本文档的开头所述，表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息。 例如: 
 
-[ ![](table-views-images/intro01.png "运行示例应用")](table-views-images/intro01.png)
+[![](table-views-images/intro01.png "运行示例应用")](table-views-images/intro01.png#lightbox)
 
 由于这是中 tvOS 的标准模式，让我们看一下的最后几步将所有内容组合到一起，并进行相互交互左右两侧拆分视图。
 

@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 90a2eb219ae1189e7a48e60cde9761e3e9e93e0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="graphics-and-animation"></a>图形和动画
 
 _Android 支持二维图形和动画提供了非常丰富、 不同的框架。本主题介绍这些框架，并讨论如何在 Xamarin.Android 应用程序中创建自定义图形和动画供使用。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -61,7 +60,6 @@ Android 提供两个不同 API 的创建二维图形。 一个是高级别声明
 请参阅[Google 的可访问性指南](http://developer.android.com/guide/topics/ui/accessibility/)有关如何利用 Android 的可访问性 Api 的详细信息。
 
 
-<a name="2D_Graphics" />
 
 ## <a name="2d-graphics"></a>二维图形
 
@@ -71,7 +69,6 @@ Android 提供两个不同 API 的创建二维图形。 一个是高级别声明
 
 让我们首先看一下可绘制的资源。 它们是更简单，涵盖的最常见的自定义绘制用例。
 
-<a name="Drawable Resources" />
 
 ### <a name="drawable-resources"></a>可绘制资源
 
@@ -153,7 +150,6 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 有关 XML 元素和语法可绘制资源的详细信息，请查阅[Google 文档](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)。
 
-<a name="Using the Canvas Drawing API" />
 
 ### <a name="using-the-canvas-drawing-api"></a>使用画布绘图 API
 
@@ -183,7 +179,6 @@ Canvas canvas = new Canvas(b);
 -   [Canvas.DrawText](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawText/p/System.String/System.Single/System.Single/Android.Graphics.Paint/) &ndash;与指定的彩色画布上绘制的文本。 在位置绘制文本`x,y`。
 
 
-<a name="Drawing with the Canvas API" />
 
 #### <a name="drawing-with-the-canvas-api"></a>绘制带画布 API
 
@@ -218,7 +213,6 @@ public class MyView : View
 
 ![红色绘画和绿色绘制对象与屏幕](graphics-and-animation-images/image3.png)
 
-<a name="Animation" />
 
 ## <a name="animation"></a>动画
 
@@ -232,7 +226,6 @@ public class MyView : View
 
 一般情况下，属性动画，则首选的系统使用，因为它更灵活，提供更多的功能。
 
-<a name="View Animations" />
 
 ### <a name="view-animations"></a>视图动画
 
@@ -319,7 +312,6 @@ myImage.StartAnimation(myAnimation);
 
 现在，我们已基本了解工作方式视图动画，则允许将移到属性动画。
 
-<a name="Property Animations" />
 
 ### <a name="property-animations"></a>属性动画
 
@@ -397,7 +389,6 @@ animator.Start();
 
 正如您可以看到从上面的代码段，`ObjectAnimator`可以减少并简化对象进行动画处理所需的代码。
 
-<a name="Drawable Animations" />
 
 ### <a name="drawable-animations"></a>可绘制动画
 
@@ -442,7 +433,6 @@ protected override void OnCreate(Bundle bundle)
 
 此时，我们已介绍动画 Android 应用程序中提供的 Api 的基础。
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

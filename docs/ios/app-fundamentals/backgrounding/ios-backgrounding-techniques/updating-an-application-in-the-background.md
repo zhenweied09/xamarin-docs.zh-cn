@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d878f922b74ea3e95fd0e1ebce9e7445063a2946
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>更新在后台应用程序
 
@@ -44,7 +44,7 @@ iOS 提供两个位置识别 Api backgrounding 功能：
 
 若要实现背景提取，编辑*Info.plist*并检查**启用后台模式**和**背景提取**复选框：
 
- [ ![](updating-an-application-in-the-background-images/fetch.png "编辑 Info.plist 并选中启用后台模式和背景提取复选框")](updating-an-application-in-the-background-images/fetch.png)
+ [![](updating-an-application-in-the-background-images/fetch.png "编辑 Info.plist 并选中启用后台模式和背景提取复选框")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 接下来，在`AppDelegate`，重写`FinishedLaunching`方法以设置的最小的提取间隔。 在此示例中，我们让决定通常提取新内容的方式的操作系统：
 
@@ -106,7 +106,7 @@ IOS 6 中, 传入的推送通知告诉系统一些有趣的内容发生应用程
 
 若要实现远程通知，编辑*Info.plist*并检查**启用后台模式**和**远程通知**复选框：
 
- [ ![](updating-an-application-in-the-background-images/remote.png "后台模式下设置为启用后台模式和远程通知")](updating-an-application-in-the-background-images/remote.png)
+ [![](updating-an-application-in-the-background-images/remote.png "后台模式下设置为启用后台模式和远程通知")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 接下来，设置`content-available`本身为 1 的推送通知的标志。 这允许应用程序确定在显示警报之前提取新内容：
 
@@ -153,7 +153,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 但是，APNs 将使"直接返回"普通远程通知或保持活动状态的响应旁边的无提示通知。 由于正则通知不限制的速率，它们可以用于将存储上无提示通知从 APNs 推送到设备，如下图所示：
 
- [ ![](updating-an-application-in-the-background-images/silent.png "正则通知可用于将存储的无提示通知从 APNs 推送到设备，，此图所示")](updating-an-application-in-the-background-images/silent.png)
+ [![](updating-an-application-in-the-background-images/silent.png "正则通知可用于将存储的无提示通知从 APNs 推送到设备，，此图所示")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > **请注意**: Apple 鼓励开发人员发送无提示的推送通知，每当应用程序要求，并且让 APNs 计划将其传递。

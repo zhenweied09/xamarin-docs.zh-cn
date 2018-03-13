@@ -5,18 +5,23 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f6e80b21c76089c0f3f7ac655584b7e18400307e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-extensions"></a>iOS 扩展
 
 _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，如在通知中心中，当用户请求自定义键盘，或者当它们照片时编辑。所有扩展与容器应用程序一起安装，并从特定的扩展点，在主机应用程序中激活。_
+
+> [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
+
+**通过在 iOS 中，创建扩展[Xamarin 大学](https://university.xamarin.com/)**
 
 扩展，因为在 iOS 8 中引入了一些专用`UIViewControllers`，提供的标准的上下文内的 iOS 如在**通知中心**，如用户请求执行的自定义键盘类型专用化输入或其他上下文，如编辑的照片，扩展可以提供特殊效果筛选器。
 
@@ -183,7 +188,7 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 
 在下面的演练，你将创建一个示例**今天**计算的日期和年份中剩余的天数的小组件：
 
-[ ![](extensions-images/carpediemscreenshot-sm.png "计算的日期和年份中剩余天数示例今天小组件")](extensions-images/carpediemscreenshot.png)
+[![](extensions-images/carpediemscreenshot-sm.png "计算的日期和年份中剩余天数示例今天小组件")](extensions-images/carpediemscreenshot.png#lightbox)
 
 <a name="Creating-the-Solution" />
 
@@ -193,26 +198,26 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 
 1. 首先，创建新的 iOS，**单视图应用**项目，然后单击**下一步**按钮： 
 
-    [ ![](extensions-images/today01.png "首先，创建新的 iOS、 单个视图应用程序项目并单击下一步按钮")](extensions-images/today01.png)
+    [![](extensions-images/today01.png "首先，创建新的 iOS、 单个视图应用程序项目并单击下一步按钮")](extensions-images/today01.png#lightbox)
 2. 调用项目`TodayContainer`单击**下一步**按钮： 
 
-    [ ![](extensions-images/today02.png "调用项目 TodayContainer 并单击下一步按钮")](extensions-images/today02.png)
+    [![](extensions-images/today02.png "调用项目 TodayContainer 并单击下一步按钮")](extensions-images/today02.png#lightbox)
 3. 验证**项目名称**和**SolutionName**单击**创建**按钮以创建解决方案： 
 
-    [ ![](extensions-images/today03.png "验证项目名称和解决方案名称，单击创建按钮以创建解决方案")](extensions-images/today03.png)
+    [![](extensions-images/today03.png "验证项目名称和解决方案名称，单击创建按钮以创建解决方案")](extensions-images/today03.png#lightbox)
 4. 接下来，在**解决方案资源管理器**，右击该解决方案，并添加一个新**iOS 扩展**项目从**今天扩展**模板： 
 
-    [ ![](extensions-images/today04.png "接下来，在解决方案资源管理器，右击该解决方案并从今天扩展模板添加新的 iOS 扩展项目")](extensions-images/today04.png)
+    [![](extensions-images/today04.png "接下来，在解决方案资源管理器，右击该解决方案并从今天扩展模板添加新的 iOS 扩展项目")](extensions-images/today04.png#lightbox)
 5. 调用项目`DaysRemaining`单击**下一步**按钮： 
 
-    [ ![](extensions-images/today05.png "调用项目 DaysRemaining 并单击下一步按钮")](extensions-images/today05.png)
+    [![](extensions-images/today05.png "调用项目 DaysRemaining 并单击下一步按钮")](extensions-images/today05.png#lightbox)
 6. 查看项目，然后单击**创建**按钮以创建它： 
 
-    [ ![](extensions-images/today06.png "查看项目，然后单击创建按钮来创建它")](extensions-images/today06.png)
+    [![](extensions-images/today06.png "查看项目，然后单击创建按钮来创建它")](extensions-images/today06.png#lightbox)
 
 生成的解决方案现在应具有两个项目，如下所示：
 
-[ ![](extensions-images/today07.png "生成的解决方案现在应有两个项目，如下所示")](extensions-images/today07.png)
+[![](extensions-images/today07.png "生成的解决方案现在应有两个项目，如下所示")](extensions-images/today07.png#lightbox)
 
 <a name="Creating-the-Extension-User-Interface" />
 
@@ -228,10 +233,10 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 
 1. 在**解决方案资源管理器**，双击扩展项目的`Main.storyboard`文件以打开进行编辑： 
 
-    [ ![](extensions-images/today08.png "双击要打开进行编辑的扩展项目 Main.storyboard 文件")](extensions-images/today08.png)
+    [![](extensions-images/today08.png "双击要打开进行编辑的扩展项目 Main.storyboard 文件")](extensions-images/today08.png#lightbox)
 2. 选择模板自动添加到 UI 的标签，并为其提供**名称**`TodayMessage`中**小组件**选项卡**属性资源管理器**: 
 
-    [ ![](extensions-images/today09.png "选择模板自动添加到 UI 的标签，并为其提供属性资源管理器的小组件选项卡中名称 TodayMessage")](extensions-images/today09.png)
+    [![](extensions-images/today09.png "选择模板自动添加到 UI 的标签，并为其提供属性资源管理器的小组件选项卡中名称 TodayMessage")](extensions-images/today09.png#lightbox)
 3. 将所做的更改保存到情节提要。
 
 <a name="Using-Code" />
@@ -242,16 +247,16 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 
 1. 在**解决方案资源管理器**，选择**DaysRemaining**项目中，添加一个新类，称之为`CodeBasedViewController`: 
 
-    [ ![](extensions-images/code01.png "Aelect DaysRemaining 项目中，添加一个新类并调用它 CodeBasedViewController")](extensions-images/code01.png)
+    [![](extensions-images/code01.png "Aelect DaysRemaining 项目中，添加一个新类并调用它 CodeBasedViewController")](extensions-images/code01.png#lightbox)
 2. 同样，**解决方案资源管理器**，双击扩展的`Info.plist`文件以打开进行编辑： 
 
-    [ ![](extensions-images/code02.png "双击扩展的 Info.plist 文件，以便打开进行编辑")](extensions-images/code02.png)
+    [![](extensions-images/code02.png "双击扩展的 Info.plist 文件，以便打开进行编辑")](extensions-images/code02.png#lightbox)
 3. 选择**源视图**（从屏幕底部） 并打开`NSExtension`节点： 
 
-    [ ![](extensions-images/code03.png "选择从屏幕底部的源视图，然后打开 NSExtension 节点")](extensions-images/code03.png)
+    [![](extensions-images/code03.png "选择从屏幕底部的源视图，然后打开 NSExtension 节点")](extensions-images/code03.png#lightbox)
 4. 删除`NSExtensionMainStoryboard`密钥，然后添加`NSPrincipalClass`值`CodeBasedViewController`: 
 
-    [ ![](extensions-images/code04.png "删除 NSExtensionMainStoryboard 密钥并添加值 CodeBasedViewController NSPrincipalClass")](extensions-images/code04.png)
+    [![](extensions-images/code04.png "删除 NSExtensionMainStoryboard 密钥并添加值 CodeBasedViewController NSPrincipalClass")](extensions-images/code04.png#lightbox)
 5. 保存更改。
 
 接下来，编辑`CodeBasedViewController.cs`文件并使其如下所示：
@@ -327,7 +332,7 @@ public override void ViewDidLoad ()
 
 本演练中，容器应用程序只需用作一种方法用来提供并安装扩展，并不提供任何功能。 编辑 TodayContainer`Main.storyboard`文件并添加一些文本定义的扩展函数和如何安装它：
 
-[ ![](extensions-images/today10.png "编辑 TodayContainers Main.storyboard 文件并添加一些定义扩展函数和如何安装它的文本")](extensions-images/today10.png)
+[![](extensions-images/today10.png "编辑 TodayContainers Main.storyboard 文件并添加一些定义扩展函数和如何安装它的文本")](extensions-images/today10.png#lightbox)
 
 将所做的更改保存到情节提要。
 
@@ -337,19 +342,19 @@ public override void ViewDidLoad ()
 
 若要在 iOS 模拟器中测试你的扩展，运行**TodayContainer**应用。 容器的主视图将显示：
 
-[ ![](extensions-images/run01.png "将显示的容器的主视图")](extensions-images/run01.png)
+[![](extensions-images/run01.png "将显示的容器的主视图")](extensions-images/run01.png#lightbox)
 
 接下来，命中**主页**在模拟器中，向下轻扫以打开屏幕的顶部的按钮**通知中心**，选择**今天**选项卡，单击**编辑**按钮：
 
-[ ![](extensions-images/run02.png "命中在模拟器中，从要打开通知中心，选择今天选项卡，单击编辑按钮的屏幕的顶部向下轻扫主页按钮")](extensions-images/run02.png)
+[![](extensions-images/run02.png "命中在模拟器中，从要打开通知中心，选择今天选项卡，单击编辑按钮的屏幕的顶部向下轻扫主页按钮")](extensions-images/run02.png#lightbox)
 
 添加**DaysRemaining**扩展**今天**查看，然后单击**完成**按钮：
 
-[ ![](extensions-images/run03.png "将 DaysRemaining 扩展添加到今日视图，单击完成按钮")](extensions-images/run03.png)
+[![](extensions-images/run03.png "将 DaysRemaining 扩展添加到今日视图，单击完成按钮")](extensions-images/run03.png#lightbox)
 
 新的小组件将添加到**今天**将显示视图和结果：
 
-[ ![](extensions-images/run04.png "新的小组件将添加到今日视图，并将显示结果")](extensions-images/run04.png)
+[![](extensions-images/run04.png "新的小组件将添加到今日视图，并将显示结果")](extensions-images/run04.png#lightbox)
 
 <a name="Communicating-with-the-Host-App" />
 

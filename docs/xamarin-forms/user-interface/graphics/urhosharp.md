@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: 7937e80b13ca7e3ecec1dc179adade666bd90635
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9cbc756c5ba61d764404ffabd347232a25dbdc58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>使用 Xamarin.Forms 中 UrhoSharp
 
@@ -33,7 +33,7 @@ UrhoSharp 可用来呈现在 Xamarin.Forms 应用程序中的图形。
 UrhoSharp.Forms Nuget 包包含所有所需创建 UrhoSharp 对象的对象。 UrhoSharp.Forms nuget 包包含`UrhoSurface`类，该类用于托管 UrhoSharp Xamarin.Forms 中。
 若要开始，右键单击 PCL**包**文件夹，然后选择**添加包...**.输入搜索词**UrhoSharp.Forms**，选择**Xamarin.Forms 的 UrhoSharp**，然后单击**添加包**。
 
-[ ![](urhosharp-images/add-package-sml.png "添加包对话框")](urhosharp-images/add-package.png "添加包对话框")
+[![](urhosharp-images/add-package-sml.png "添加包对话框")](urhosharp-images/add-package.png#lightbox "添加包对话框")
 
 UrhoSharp.Forms NuGet 程序包将添加到项目中：
 

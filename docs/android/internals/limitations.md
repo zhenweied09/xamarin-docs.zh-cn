@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 11a7c9dcbe9481209d2eb90ff9d981f7437a1c99
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b970432d7cd5b6a84b8af72ab616493f3cd36a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="limitations"></a>限制
 
@@ -19,13 +19,11 @@ ms.lasthandoff: 02/27/2018
 
 这些是相比桌面 Mono Xamarin.Android 限制：
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## <a name="limited-dynamic-language-support"></a>有限的动态语言支持
 
  [Android 可调用包装器](~/android/platform/java-integration/android-callable-wrappers.md)需要 Android 运行时需要调用托管的代码的任何时间。 Android 可调用包装器生成在编译时，基于静态分析 IL。 最终结果： 你*无法*用作动态语言 （如 IronPython、 IronRuby 等） 在任何方案中要求 （包括间接子类化），子类化的 Java 类型的位置没有提取这些动态类型的方法在编译时生成必要的 Android 可调用包装器。
 
-<a name="Limited_Java_Generation_Support" />
 
 ## <a name="limited-java-generation-support"></a>有限的 Java 生成支持
 
@@ -88,7 +86,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### <a name="generic-c-classes"></a>泛型 C# 类
 
@@ -150,7 +147,6 @@ class MyIntentService : IntentService {
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## <a name="partial-java-generics-support"></a>部分 Java 泛型支持
 

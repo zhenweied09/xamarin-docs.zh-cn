@@ -1,17 +1,17 @@
 ---
 title: "UrhoSharp Windows 支持"
-description: "Windows 特定的安装程序和功能"
+description: "Windows 特定的安装程序和适用于 UrhoSharp 的功能。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: ec4fec01aa27e522aeec6df09041f14b1c3db080
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0deefe0e00ec96a21317bfa2e8bf4894d5deae47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 支持
 
@@ -27,11 +27,11 @@ _Windows 特定的安装程序和功能_
 
 # <a name="standalone-project"></a>独立项目
 
-## <a name="creating-a-project"></a>创建项目
+### <a name="creating-a-project"></a>创建项目
 
 创建控制台项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
 
-## <a name="configuring-and-launching-urho"></a>配置和启动 Urho
+### <a name="configuring-and-launching-urho"></a>配置和启动 Urho
 
 若要启动你的应用程序，请执行此操作：
 
@@ -39,17 +39,17 @@ _Windows 特定的安装程序和功能_
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
-## <a name="example"></a>示例
+### <a name="example"></a>示例
 
 [完整示例](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-# <a name="integrated-with-wpf"></a>与 WPF 集成
+## <a name="integrated-with-wpf"></a>与 WPF 集成
 
-## <a name="creating-a-project"></a>创建项目
+### <a name="creating-a-project"></a>创建项目
 
 创建 WPF 项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
 
-## <a name="configuring-and-launching-urho-from-wpf"></a>配置和启动从 WPF Urho
+### <a name="configuring-and-launching-urho-from-wpf"></a>配置和启动从 WPF Urho
 
 创建一个子类`Window`和配置你的资产如下：
 
@@ -83,17 +83,17 @@ new MyGame().Run();
     }
 ```
 
-## <a name="example"></a>示例
+### <a name="example"></a>示例
 
 [完整示例](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-# <a name="integrated-with-uwp"></a>与 UWP 集成
+## <a name="integrated-with-uwp"></a>与 UWP 集成
 
-## <a name="creating-a-project"></a>创建项目
+### <a name="creating-a-project"></a>创建项目
 
 创建 UWP 项目引用 Urho NuGet，然后确保找到资产 （这些目录包含的数据目录）。
 
-## <a name="configuring-and-launching-urho-from-uwp"></a>配置和启动从 UWP Urho
+### <a name="configuring-and-launching-urho-from-uwp"></a>配置和启动从 UWP Urho
 
 创建一个子类`Window`和配置你的资产如下：
 
@@ -116,17 +116,17 @@ new MyGame().Run();
     }
 ```
 
-## <a name="example"></a>示例
+### <a name="example"></a>示例
 
 [完整示例](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-# <a name="integrated-with-windowsforms"></a>与 Windows.Forms 集成
+## <a name="integrated-with-windowsforms"></a>与 Windows.Forms 集成
 
-## <a name="creating-a-project"></a>创建项目
+### <a name="creating-a-project"></a>创建项目
 
 创建 Windows.Forms 项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
 
-## <a name="configuring-and-launching-urho-from-windowsforms"></a>配置和启动从 Windows.Forms Urho
+### <a name="configuring-and-launching-urho-from-windowsforms"></a>配置和启动从 Windows.Forms Urho
 
 从你的窗体启动 Urho，请参阅[完整的示例](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
 

@@ -3,16 +3,16 @@ title: RecyclerView
 description: "RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视图组，如 ListView 和 GridView 的更灵活替换。  本指南说明如何使用和自 RecyclerView 定义 Xamarin.Android 应用程序中。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
+ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: ec8b3a4655c8e8d9e492c9f7a1807dd64ecc6ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -23,7 +23,7 @@ _RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视�
 许多应用程序需要显示集合的相同的类型 （例如消息、 联系人、 图像或歌曲）;通常情况下，此集合为太大，无法容纳在屏幕上，因此集合也会出现在一个小型窗口，可以顺利滚动集合中的所有项。
 `RecyclerView` 是 Android 小组件显示为列表或网格中，使用户可以滚动浏览集合中的项的集合。 以下是示例使用的应用程序的屏幕快照`RecyclerView`显示垂直滚动列表中的电子邮件收件箱内容：
 
-[ ![使用 RecyclerView 到列表中的收件箱邮件的示例应用程序](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png)
+[![使用 RecyclerView 到列表中的收件箱邮件的示例应用程序](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` 提供两个极具吸引力的功能：
 

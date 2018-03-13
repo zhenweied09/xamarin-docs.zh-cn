@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 92cacd7ca5ff52a2bfe9060f47332b57d637609e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: ae209f8099925cc160e16cb5365625e48e6c384d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-an-aar"></a>绑定。AAR
 
@@ -35,7 +35,6 @@ _本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步
 > [!IMPORTANT]
 > 绑定项目只能包含一个。AAR 文件。 如果。在其他 AAR 依赖关系。应包含在其自己绑定项目，然后引用 AAR，则这些依赖关系。 请参阅[Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)。
 
-<a name="walkthrough" />
 
 ## <a name="walkthrough"></a>演练
 
@@ -72,12 +71,11 @@ public class TextCounter
 
 此外，此示例应用程序将检索并显示在中打包的图像资源**textanalyzer.aar**:
 
-[ ![Xamarin monkey 映像](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png)
+[![Xamarin monkey 映像](binding-an-aar-images/00-monkey-sml.png)](binding-an-aar-images/00-monkey.png#lightbox)
 
 此映像资源位于**res/drawable/monkey.png**中**textanalyzer.aar**。
 
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>创建绑定库
 
@@ -85,36 +83,35 @@ public class TextCounter
 
 1.  创建新的绑定库项目开头 Android 绑定库模板。 你可以使用适用于 Mac 的 Visual Studio 或 Visual Studio （以下屏幕截图显示 Visual Studio 中，但 Visual Studio for Mac 非常相似）。 将解决方案命名**AarBinding**:
 
-    [ ![创建 AarBindings 项目](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png)
+    [![创建 AarBindings 项目](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
 
 2.  该模板包括**Jar**文件夹，你在其中添加你。AAR(s) 到绑定库项目。 右键单击**Jar**文件夹，然后选择**添加 > 现有项**:
 
-    [ ![将现有项添加](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png)
+    [![添加现有项](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 
 3.  导航到**textanalyzer.aar**前面下载文件，选择它，然后单击**添加**:
 
-    [ ![添加 textanalayzer.aar](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png)
+    [![添加 textanalayzer.aar](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 
 4.  验证**textanalyzer.aar**文件已成功添加到项目：
 
-    [ ![添加了 textanalyzer.aar 文件](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png)
+    [![添加了 textanalyzer.aar 文件](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
 5.  设置的生成操作**textanalyzer.aar**到`LibraryProjectZip`。 在适用于 Mac 的 Visual Studio，右键单击**textanalyzer.aar**设置生成操作。 在 Visual Studio 中，可以设置生成操作**属性**窗格中):
 
-    [ ![将 textanalyzer.aar 生成操作设置为 LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png)
+    [![将 textanalyzer.aar 生成操作设置为 LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
 6.  打开项目属性来配置*目标框架*。 如果。AAR 使用 Android 的任何 Api，将目标框架设置为 API 级别。AAR 要求。 (有关的目标框架设置和常规中的 Android API 级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。)
 
     为你绑定的库设置目标 API 级别。 在此示例中，我们需要任意使用最新的平台 API 级别 （API 级别 23），因为我们**textanalyzer** Android Api 上没有依赖关系：
 
-    [ ![将目标级别设置为 API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png)
+    [![将目标级别设置为 API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
 7.  构建绑定库。 绑定类库项目应能成功生成和生成的输出。在以下位置的 DLL: **AarBinding/bin/Debug/AarBinding.dll**
 
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>使用绑定库
 
@@ -122,29 +119,28 @@ public class TextCounter
 
 1.  我们在与要简化本演练中的绑定库位于同一解决方案中创建此应用程序。 （使用应用程序绑定库也可以驻留在另一种解决方案。）创建一个新的 Xamarin.Android 应用程序： 右键单击解决方案并选择**添加新项目**。 将新项目**命名为 BindingTest**:
 
-    [ ![创建新的命名为 BindingTest 项目](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png)
+    [![创建新的命名为 BindingTest 项目](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
 
 2.  右键单击**引用**节点**命名为 BindingTest**项目，然后选择**添加引用...**:
 
-    [ ![单击添加引用](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png)
+    [![单击添加引用](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
 3.  选择**AarBinding**前面创建的项目，然后单击**确定**:
 
-    [ ![检查 AAR 绑定项目](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png)
+    [![检查 AAR 绑定项目](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
 4.  打开**引用**节点**命名为 BindingTest**项目以便确认**AarBinding**引用不存在：
 
-    [ ![AarBinding 下列出的引用](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png)
+    [![AarBinding 下列出的引用](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
 
 如果你想要查看绑定库项目的内容，你可以双击要打开该文件的引用**对象浏览器**。 你可以查看该映射的内容`Com.Xamarin.Textcounter`命名空间 (从 Java 映射`com.xamarin.textanalyzezr`包)，您可以查看的成员`TextCounter`类：
 
-[ ![查看对象浏览器](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png)
+[![查看对象浏览器](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
 
 上面的屏幕截图突出显示两个`TextAnalyzer`示例应用程序将调用的方法： `NumConsonants` (其包装基础 Java`numConsonants`方法)，和`NumVowels`(其包装基础 Java`numVowels`方法)。
 
 
-<a name="accessing_types" />
 
 ### <a name="accessing-aar-types"></a>访问。AAR 类型
 
@@ -264,12 +260,11 @@ namespace BindingTest
 
 编译和运行**命名为 BindingTest**项目。 应用将启动并显示在左侧的屏幕截图 (`EditText`初始化与一些文本，但你可以点击它以更改它)。 当你点击**计数元音**，toast 显示元音数，在右侧所示：
 
-[ ![从运行命名为 BindingTest 的屏幕截图](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png)
+[![从运行命名为 BindingTest 的屏幕截图](binding-an-aar-images/12-count-vowels.png)](binding-an-aar-images/12-count-vowels.png#lightbox)
 
 请尝试点击**计数的辅音字母**按钮。 此外，你可以修改的文本行并点击这些按钮再次要测试不同元音标记和辅音字母计数。
 
 
-<a name="accessing_resources" />
 
 ### <a name="accessing-aar-resources"></a>访问。AAR 资源
 
@@ -305,13 +300,12 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 编译和运行**命名为 BindingTest**项目。 应用将启动并显示在左侧的屏幕截图&ndash;当点击**计数的辅音字母**，结果将显示在右侧所示：
 
-[ ![命名为 BindingTest 显示辅音计数](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png)
+[![命名为 BindingTest 显示辅音计数](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
 
 祝贺你！ 你已成功绑定 Java 库。AAR ！
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

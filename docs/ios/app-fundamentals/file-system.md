@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a2c3ce9e19340067d77a8bc131b5a247806ecfa1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-file-system"></a>使用文件系统
 
@@ -26,7 +26,7 @@ iOS 还具有一些文件特定于系统的功能： 某些特定目录需要特
 
 本文讨论的功能和限制的 ios 文件系统中的详细信息，并包括的示例应用程序演示如何使用 Xamarin.iOS 来执行一些简单的文件系统操作：
 
- [ ![](file-system-images/05-sampleapp.png "IOS 执行一些简单的文件系统操作的示例")](file-system-images/05-sampleapp.png)
+ [![](file-system-images/05-sampleapp.png "IOS 执行一些简单的文件系统操作的示例")](file-system-images/05-sampleapp.png#lightbox)
 
  <a name="General_File_Access" />
 
@@ -110,7 +110,7 @@ System.IO 命名空间的详细信息，请参阅[MSDN 文档](http://msdn.micro
 
 使用 Json 在 Xamarin.iOS 应用程序中的数据是非常便于使用[Json.NET](http://www.newtonsoft.com/json) for.NET NuGet 程序包的高性能 JSON framework。 只需将 NuGet 包添加到你的应用程序项目： 
 
-[ ![](file-system-images/json01.png "将 NuGet 包添加到应用程序项目")](file-system-images/json01.png)
+[![](file-system-images/json01.png "将 NuGet 包添加到应用程序项目")](file-system-images/json01.png#lightbox)
 
 接下来，添加一个类来充当序列化/反序列化的数据模型 (在这种情况下`Account.cs`):
 
@@ -217,11 +217,11 @@ iOS 使用正斜杠 / 作为路径分隔符 (即不同于 Windows，使用反斜
 
 若要查看示例代码应用程序捆绑包，右键单击该项目在 Visual Studio 中针对 Mac 和选择**打开所在的文件夹**。 然后导航到**bin/Debug/**其中你应该看到应用程序图标 （类似于下面的屏幕截图）。
 
- [ ![](file-system-images/40-bundle.png "导航到 bin/Debug 来查找应用程序图标类似于此屏幕截图")](file-system-images/40-bundle.png)
+ [![](file-system-images/40-bundle.png "导航到 bin/Debug 来查找应用程序图标类似于此屏幕截图")](file-system-images/40-bundle.png#lightbox)
 
 右键单击此图标，然后选择**查看包内容**若要浏览应用程序捆绑包目录的内容。 内容显示一样的正则目录中，内容如下所示：
 
- [ ![](file-system-images/45-bundle.png "应用程序捆绑包的内容")](file-system-images/45-bundle.png)
+ [![](file-system-images/45-bundle.png "应用程序捆绑包的内容")](file-system-images/45-bundle.png#lightbox)
 
 应用程序捆绑包是在测试期间，安装在模拟器或设备上，最后，什么用于包含在应用商店提交到 Apple。
 
@@ -313,7 +313,7 @@ iOS 使用正斜杠 / 作为路径分隔符 (即不同于 Windows，使用反斜
 
 在查找工具窗口中，此屏幕截图中显示的目录结构：
 
- [ ![](file-system-images/08-library-directory.png "此屏幕截图中显示的目录结构中查找工具窗口")](file-system-images/08-library-directory.png)
+ [![](file-system-images/08-library-directory.png "此屏幕截图中显示的目录结构中查找工具窗口")](file-system-images/08-library-directory.png#lightbox)
 
  <a name="Accessing_Other_Directories_Programmatically" />
 
@@ -352,11 +352,11 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 用户可以访问你的应用程序的文档目录中的文件，通过编辑`Info.plist`和创建**应用程序支持 iTunes 共享**(`UIFileSharingEnabled`) 中的条目**源**视图中，为此处所示：
 
- [ ![](file-system-images/09-uifilesharingenabled-plist.png "添加应用程序支持 iTunes 共享属性")](file-system-images/09-uifilesharingenabled-plist.png)
+ [![](file-system-images/09-uifilesharingenabled-plist.png "添加应用程序支持 iTunes 共享属性")](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
 可以在 iTunes 中访问这些文件，当连接设备，并且用户选择`Apps`选项卡。例如，下面的屏幕截图显示所选应用程序通过 iTunes 共享中的文件：
 
- [ ![](file-system-images/10-itunes-file-sharing.png "此屏幕截图中显示所选应用程序通过 iTunes 共享中的文件")](file-system-images/10-itunes-file-sharing.png)
+ [![](file-system-images/10-itunes-file-sharing.png "此屏幕截图中显示所选应用程序通过 iTunes 共享中的文件")](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 用户只能访问通过 iTunes 此目录中的顶级项。 无法查看任何子目录的内容 （尽管它们可以将它们复制到其计算机，或删除它们）。 例如，与 GoodReader，PDF 和 EPUB 文件可与共享应用程序，以使用户可以在其 iOS 设备上读取它们。
 
@@ -364,7 +364,7 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 本文的示例代码在文档文件夹中创建文件和文件夹 (在**SampleCode.cs**)，并使文件共享中**Info.plist**文件。 此屏幕截图显示这些在 iTunes 中显示的方式：
 
- [ ![](file-system-images/15-itunes-file-sharing-example.png "此屏幕快照显示文件在 iTunes 中的显示方式")](file-system-images/15-itunes-file-sharing-example.png)
+ [![](file-system-images/15-itunes-file-sharing-example.png "此屏幕快照显示文件在 iTunes 中的显示方式")](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 请参阅[处理映像](~/ios/app-fundamentals/images-icons/index.md)文章为你创建的有关如何设置图标为应用程序和任何自定义文档类型的信息。
 

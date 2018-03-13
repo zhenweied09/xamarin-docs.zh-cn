@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: d7965c5d4d65dd6bf7aa4128f467acd3e2d39e60
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c383808d443685c1561113e418aed62467f1d5bd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-class"></a>应用程序类
 
@@ -98,7 +98,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 始终检查存在的键然后才能访问它以防止出现意外的错误。
 
 > [!NOTE]
-> **注意：** `Properties`字典只能序列化的存储基元类型。 尝试存储其他类型 (如`List<string>`) 以无提示方式可能会失败。
+> `Properties`字典只能序列化的存储基元类型。 尝试存储其他类型 (如`List<string>`) 以无提示方式可能会失败。
 
 <!-- bugzilla 28657 -->
 
@@ -196,7 +196,7 @@ public class MainActivity :
 ```
 
 > [!NOTE]
-> **注意：**没有更新[ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md)基类可以用于更好地支持 Android 材料设计。
+> 没有更新[ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md)基类可以用于更好地支持 Android 材料设计。
 > 这将在将来成为默认 Android 模板，但您可以按照[这些说明](~/xamarin-forms/platform/android/appcompat.md)更新你的现有 Android 应用。
 
 

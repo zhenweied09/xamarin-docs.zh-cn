@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: acdcdc2b76a995ca324532c6a034b2fdf8e21db5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 安全和隐私功能
 
@@ -76,7 +76,7 @@ Apple 已对安全和隐私 iOS 10 （和更高版本） 中存在多项的增�
 
 需要在 iOS 10 （和更高版本） 上访问 HomeKit 的下面的示例，开发人员将需要添加`NSHomeKitUsageDescription`到应用程序的密钥`Info.plist`文件，并提供应用程序需要访问用户的 HomeKit 数据库为什么字符串声明。 此字符串将显示给运行该应用的用户的第一个时间：
 
-[ ![](security-privacy-images/info01.png "示例 NSHomeKitUsageDescription 警报")](security-privacy-images/info01.png)
+[![](security-privacy-images/info01.png "示例 NSHomeKitUsageDescription 警报")](security-privacy-images/info01.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -87,7 +87,7 @@ Apple 已对安全和隐私 iOS 10 （和更高版本） 中存在多项的增�
 3. 添加以下节点来提供所需的说明： `<string>Allows the app to control HomeKit enabled devices.</string>`
 4. `Info.plist`文件应如下所示： 
 
-    [ ![](security-privacy-images/info02vs.png "Info.plist 文件应如下所示")](security-privacy-images/info02vs.png)
+    [![](security-privacy-images/info02vs.png "Info.plist 文件应如下所示")](security-privacy-images/info02vs.png#lightbox)
 4. 保存对文件所做的更改。
 5. 返回到 Visual Studio 并重新编译的应用程序。
 
@@ -100,10 +100,10 @@ Apple 已对安全和隐私 iOS 10 （和更高版本） 中存在多项的增�
 3. 添加新**条目**到列表。
 4. 从下拉列表中，选择隐私密钥 (如**隐私-HomeKit 使用率描述**): 
 
-    [ ![](security-privacy-images/info02.png "选择隐私密钥")](security-privacy-images/info02.png)
+    [![](security-privacy-images/info02.png "选择隐私密钥")](security-privacy-images/info02.png#lightbox)
 5. 输入应用程序想要访问给定的功能或用户信息的原因的说明： 
 
-    [ ![](security-privacy-images/info03.png "输入的描述")](security-privacy-images/info03.png)
+    [![](security-privacy-images/info03.png "输入的描述")](security-privacy-images/info03.png#lightbox)
 6. 保存对文件所做的更改。
 
 -----

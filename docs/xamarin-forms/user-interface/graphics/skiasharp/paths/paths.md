@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>路径基础知识
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 第一个轮廓包含调用[ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/)使用 X 和 Y 坐标而非`SKPoint`值后, 跟三个调用[ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/)要绘制的三个四条边三角形。 第二个轮廓具有只有两个调用`LineTo`但完成通过调用具有轮廓[ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/)，用于关闭轮廓。 差异非常重要：
 
-[![](paths-images/twotrianglecontours-small.png "三重的两个三角形轮廓页面屏幕截图")](paths-images/twotrianglecontours-large.png "三倍的两个三角形轮廓页面屏幕截图")
+[![](paths-images/twotrianglecontours-small.png "三重的两个三角形轮廓页面屏幕截图")](paths-images/twotrianglecontours-large.png#lightbox "三倍的两个三角形轮廓页面屏幕截图")
 
 如你所见，第一个轮廓显然是一系列的三个连接的直线，但最终不会将连接的开头。 在顶部重叠的两行。 第二个轮廓线将显然关闭，并完成了一个更少`LineTo`调用，因为`Close`方法会自动添加的最后一行以关闭具有轮廓。
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处是三个平台上运行的程序：
 
-[![](paths-images/strokejoins-small.png "三重的描边联接页的屏幕截图")](paths-images/strokejoins-large.png "三重的描边联接页的屏幕截图")
+[![](paths-images/strokejoins-small.png "三重的描边联接页的屏幕截图")](paths-images/strokejoins-large.png#lightbox "三重的描边联接页的屏幕截图")
 
 斜接联接包含，其中行连接是尖角。 当在小角度加入两行时，该斜接联接可以变得相当长。 若要防止过长斜接联接，长度斜接联接的受限制的值[ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/)属性`SKPaint`。 超出了该长度的斜接联接是已被截掉成为凹凸效果联接。
 

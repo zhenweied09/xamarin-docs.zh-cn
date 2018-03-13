@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2088ae055fb18b3b00712f063d2178f759021088
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dynamic-styles"></a>动态样式
 
@@ -81,8 +81,8 @@ public partial class DynamicStylesPage : ContentPage
 
 当`OnButtonClicked`执行事件处理程序，`searchBarStyle`将切换`blueSearchBarStyle`和`greenSearchBarStyle`。 这将导致以下屏幕截图中所示的外观：
 
-[![](dynamic-images/dynamic-style-blue.png "蓝色动态样式示例")](dynamic-images/dynamic-style-blue-large.png "蓝色动态样式示例")
-[![](dynamic-images/dynamic-style-green.png "绿色动态样式示例")](dynamic-images/dynamic-style-green-large.png "绿色动态样式示例")
+[![](dynamic-images/dynamic-style-blue.png "蓝色动态样式示例")](dynamic-images/dynamic-style-blue-large.png#lightbox "蓝色动态样式示例")
+[![](dynamic-images/dynamic-style-green.png "绿色动态样式示例")](dynamic-images/dynamic-style-green-large.png#lightbox "绿色动态样式示例")
 
 下面的代码示例演示 C# 中的等效页：
 
@@ -162,8 +162,8 @@ public class DynamicStylesPageCS : ContentPage
 
 在代码隐藏文件中，构造函数创建[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)具有键项`searchBarStyle`，每个前面的示例演示动态样式。 当`OnButtonClicked`执行事件处理程序，`searchBarStyle`将切换`blueSearchBarStyle`和`greenSearchBarStyle`。 这将导致以下屏幕截图中所示的外观：
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "蓝色动态样式继承示例")](dynamic-images/dynamic-style-inheritance-blue-large.png "蓝色动态样式继承示例")
-[![](dynamic-images/dynamic-style-inheritance-green.png "绿色动态样式继承的示例")](dynamic-images/dynamic-style-inheritance-green-large.png "绿色动态样式继承的示例")
+[![](dynamic-images/dynamic-style-inheritance-blue.png "蓝色动态样式继承示例")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "蓝色动态样式继承示例")
+[![](dynamic-images/dynamic-style-inheritance-green.png "绿色动态样式继承的示例")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "绿色动态样式继承的示例")
 
 下面的代码示例演示 C# 中的等效页：
 

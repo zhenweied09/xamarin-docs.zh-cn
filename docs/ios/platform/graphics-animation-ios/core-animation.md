@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 80fe298f3dd24aac7f84213aee96499dd369d16d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-animation"></a>核心动画
 
@@ -23,12 +23,16 @@ iOS 包括[*核心动画*](https://developer.apple.com/library/ios/documentation
 
 核心动画和核心图形框架可协同工作来创建美观，动画二维图形。 中的事实核心动画可以甚至转换二维图形 3D 空间中的创建了令人惊叹、 电影的体验。 但是，若要创建 true 3D 图形，你需要使用 OpenGL ES 如或游戏从而对 API，如 MonoGame，尽管三维功能超出了本文的范围。
 
+<a name="Using_Core_Animation" />
+
 ## <a name="core-animation"></a>核心动画
 
 iOS 使用核心动画框架来创建视图之间转换，滑动菜单和滚动效果仅举几例等的动画效果。 有两种方法要使用动画：
 
--  [通过 UIKit](#Using_UIKit_Animation)，其中包括基于视图的动画，以及动画的控制器之间的转换。
--   [通过核心动画](#Using_Core_Animation)，哪些层直接，允许进行精细的控制。
+- [通过 UIKit](#Using_UIKit_Animation)，其中包括基于视图的动画，以及动画的控制器之间的转换。
+- [通过核心动画](#Using_Core_Animation)，哪些层直接，允许进行精细的控制。
+
+<a name="Using_UIKit_Animation" />
 
 ## <a name="using-uikit-animation"></a>使用 UIKit 动画
 

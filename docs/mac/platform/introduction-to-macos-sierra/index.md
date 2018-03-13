@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: d81776dcb48d33927ffde4087ceb3f408b38d16f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 036e1ddc95f8eabec3e87c13c25cad972c29a5d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS Sierra 简介
 
@@ -52,7 +52,7 @@ macOS Sierra 包括允许开发人员将合并直接到 iOS 和 macOS 基于 Saf
 
 如 Apple 的 Safari web 浏览器、 页字处理器和许多新的技术来显示统一、 上下文相关的用户界面执行传统的 UI 元素，如浮动面板消失和多个打开的数字 spread 表使用现代 macOS 应用windows。
 
-[ ![下面举例说明选项卡式 Mac 窗口](images/content08.png)](images/content08.png)
+[![下面举例说明选项卡式 Mac 窗口](images/content08.png)](images/content08.png#lightbox)
 
 我们[生成现代 macOS 应用](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md)指南介绍多个提示、 功能和技术开发人员可以使用生成在 Xamarin.Mac 现代 macOS 应用程序。
 

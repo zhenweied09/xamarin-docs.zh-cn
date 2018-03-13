@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0846dc8bdb3ac722838faa4173f5d30233912ecc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>发布到 App Store
 
@@ -32,7 +32,7 @@ _本指南演示如何使用 Visual Studio for Mac 部署 Xamarin.Mac 应用。�
 
 加入 [Mac 开发人员计划](https://developer.apple.com/devcenter/mac/)时，开发人员可选择以个人或公司身份加入，如下方屏幕截图所示：
 
-[![Apple 开发人员门户](images/image1.png "Apple 开发人员门户")](images/image1-large.png)
+[![Apple 开发人员门户](images/image1.png "Apple 开发人员门户")](images/image1-large.png#lightbox)
 
 选择适合自身情况的正确注册类型。
 

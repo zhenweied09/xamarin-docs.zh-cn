@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` 将使用位置和大小视图相对于布局或同级视图的属性。 与不同`AbsoluteLayout`，`RelativeLayout`不包含移动的定位点的概念，并且没有提供用于定位元素相对于底部或右边缘的布局的功能。 `RelativeLayout` 支持在其自己的边界之外的定位元素。
 
-[ ![](relative-layout-images/layouts-sml.png "Xamarin.Forms 布局")](relative-layout-images/layouts.png "Xamarin.Forms 布局")
+[![](relative-layout-images/layouts-sml.png "Xamarin.Forms 布局")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 ## <a name="purpose"></a>目标
 
@@ -76,7 +76,7 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 - 该框的`y`坐标定义为父代、-100 的半高。
 
 > [!NOTE]
-> **请注意**： 由于未定义约束的方法，它是可以在 C# 不是可以指定与 XAML 中进行更复杂的布局。
+> 由于未定义约束的方法，则可以在 C# 不是可以指定与 XAML 中进行更复杂的布局。
 
 这两个上面的示例定义与约束`RelativeToParent` &ndash; ，即其值是相对于父元素。 它还可定义相对于另一个视图的约束。 这允许 （向开发人员） 更直观的布局，并且可以使布局代码意图更容易发现。
 

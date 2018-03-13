@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: 84dfe88e912241eb0024143bca568ae75e5bfa28
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Javadoc 的命名参数
 
 _此文章介绍了如何通过使用生成从 Java 项目的 Javadoc 恢复 Java 绑定项目中的参数名称。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -38,9 +37,8 @@ _此文章介绍了如何通过使用生成从 Java 项目的 Javadoc 恢复 Jav
 
 
 > [!NOTE]
-> **注意：**没有大量 JavaDoc 输出中的变体。 。JAR 绑定工具链不支持每个单个可能排列，因此某些参数可能未正确命名。
+> 没有大量 JavaDoc 输出中的变体。 。JAR 绑定工具链不支持每个单个可能排列，因此某些参数可能未正确命名。
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

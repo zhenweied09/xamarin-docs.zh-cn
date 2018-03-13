@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 8f9294c10f8d3287a2985ede9aadf84ce663c38a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0bc64d0b03aa4f80b19ea098904dc1e2155313f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-app-configuration"></a>Mac 应用配置
 
@@ -32,7 +32,7 @@ _本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
 
 随即显示该应用的可用选项：
 
- [![编辑 Info.plist 文件](app-configuration-images/config01.png "编辑 Info.plist 文件")](app-configuration-images/config01-large.png)
+ [![编辑 Info.plist 文件](app-configuration-images/config01.png "编辑 Info.plist 文件")](app-configuration-images/config01-large.png#lightbox)
 
 运行通过 Xamarin.Mac 创建的 Mac 应用程序具有以下系统要求：
 
@@ -43,7 +43,7 @@ _本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
 
 通过“项目选项”对话框的“Mac 签名”部分，开发人员可对 Xamarin.Mac 应用进行签名，以供测试、自行发布或通过 Apple App Store 发布：
 
-[![Mac 签名编辑器](app-configuration-images/config02.png "Mac 签名窗口")](app-configuration-images/config02-large.png)
+[![Mac 签名编辑器](app-configuration-images/config02.png "Mac 签名窗口")](app-configuration-images/config02-large.png#lightbox)
 
 编译应用时，从此处选择“标识”、“配置文件”和用于对应用进行签名的任何自定义授权。 开发人员可根据需要对用于在其他 Mac 上安装应用的安装程序进行签名。
 
@@ -52,7 +52,7 @@ _本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
 
 成功编译应用后，开发人员可通过“项目选项”对话框的“Mac 生成”部分选择 Xamarin.Mac 应用的体系结构、控制应用支持的 macOS 版本，并根据需要创建安装包：
 
- [![编辑生成设置](app-configuration-images/config03.png "编辑生成设置")](app-configuration-images/config03-large.png)
+ [![编辑生成设置](app-configuration-images/config03.png "编辑生成设置")](app-configuration-images/config03-large.png#lightbox)
 
 
 ## <a name="related-links"></a>相关链接

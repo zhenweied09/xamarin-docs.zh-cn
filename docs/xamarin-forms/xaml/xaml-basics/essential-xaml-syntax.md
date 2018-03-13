@@ -3,16 +3,16 @@ title: "第 2 部分。 基本 XAML 语法"
 description: "XAML 主要设计用于实例化和初始化对象。 但通常情况下，属性必须设置为不能轻松地表示为 XML 字符串的复杂对象，并有时必须在子类上设置一个类定义的属性。 这些两个需求需要属性元素和附加的属性的基本 XAML 语法特征。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f99d4b177f5957b2e5f8c22171fe92799af8505a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>第 2 部分。 基本 XAML 语法
 
@@ -253,7 +253,7 @@ _XAML 主要设计用于实例化和初始化对象。但通常情况下，属�
 
 下面是如下所示在所有三个平台上：
 
-[ ![](essential-xaml-syntax-images/griddemo.png "网格布局")](essential-xaml-syntax-images/griddemo-large.png "网格布局")
+[![](essential-xaml-syntax-images/griddemo.png "网格布局")](essential-xaml-syntax-images/griddemo-large.png#lightbox "网格布局")
 
 仅所用的语法，判断这些`Grid.Row`， `Grid.Column`， `Grid.RowSpan`，和`Grid.ColumnSpan`属性显示为静态字段或属性的`Grid`，但有趣的是，`Grid`未定义任何名为`Row`， `Column`， `RowSpan`，或`ColumnSpan`。
 
@@ -310,7 +310,7 @@ _XAML 主要设计用于实例化和初始化对象。但通常情况下，属�
 
 和其内容如下：
 
-[ ![](essential-xaml-syntax-images/absolutedemo-large.png "绝对布局")](essential-xaml-syntax-images/absolutedemo-large.png "绝对布局")
+[![](essential-xaml-syntax-images/absolutedemo-large.png "绝对布局")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "绝对布局")
 
 有关所示，你可能问题使用 XAML 的经验。 当然，重复和的规律性`LayoutBounds`矩形提供的建议，它可能更好地实现在代码中。
 

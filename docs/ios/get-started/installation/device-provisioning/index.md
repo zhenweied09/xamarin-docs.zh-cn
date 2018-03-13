@@ -8,21 +8,21 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 1a5120f088fca6997eef3a1bc27126b442380cac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b54adc28e318b263052bb6073390556a198cffe7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-provisioning"></a>设备预配
 
-_Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。_
+Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本指南将介绍如何请求开发证书和配置文件，如何使用应用服务，以及如何将应用部署到设备。
 
 开发 Xamarin.iOS 应用程序时，除了将应用部署到模拟器，还必须将其部署到物理设备进行测试。 通过在设备上运行，可以暴露出由于硬件限制（如内存或网络连接）而产生的硬件 Bug 和性能问题。 若要在物理设备上测试，必须*预配*设备，并且就设备测试事件通知 Apple。
 
 下图突出显示部分展示了进行 iOS 设置所需的步骤：
 
-[![](images/provisioningdiagram.png "此图突出显示部分展示了进行 iOS 设置所需的步骤")](images/provisioningdiagram.png)
+[![](images/provisioningdiagram.png "此图突出显示部分展示了进行 iOS 设置所需的步骤")](images/provisioningdiagram.png#lightbox)
 
 接着，下一步是分发应用程序。 有关部署的详细信息，请访问[应用分发](~/ios/deploy-test/app-distribution/index.md)指南。
 

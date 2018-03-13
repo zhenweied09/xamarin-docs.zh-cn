@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>在 macOS 上的辅助功能
 
@@ -30,7 +30,7 @@ AppKit 使用`NSAccessibility`协议来公开帮助使用户界面可访问的 A
 Xamarin.Mac 使用 Xcode 接口生成器编辑情节提要文件。
 可以在中编辑的辅助功能信息**标识检查器**（如下面的屏幕截图中所示），设计图面上选择一个控件是时：
 
-[![在 Xcode 的接口生成器中添加可访问性](accessibility-images/xcode.png "在 Xcode 的接口生成器中添加可访问性")](accessibility-images/xcode-large.png)
+[![在 Xcode 的接口生成器中添加可访问性](accessibility-images/xcode.png "在 Xcode 的接口生成器中添加可访问性")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>代码
 
@@ -80,7 +80,7 @@ macOS 提供**可访问性检查器**帮助测试可访问性功能。 该检查
 
 启用后，该检查器将显示为一个可以移动屏幕的浮动窗口。 下面的屏幕截图显示旁边示例 Mac 应用程序运行该检查器。 该时段内通过在移动光标时，该检查器将显示每个控件的所有可访问属性：
 
-[![可访问性检查器运行的示例](accessibility-images/accessibility-example.png "的辅助功能示例拦截器运行")](accessibility-images/accessibility-example-large.png)
+[![可访问性检查器运行的示例](accessibility-images/accessibility-example.png "的辅助功能示例拦截器运行")](accessibility-images/accessibility-example-large.png#lightbox)
 
 详细信息，请阅读[测试辅助功能有关 OS X 指南](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html)。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a6749ca9d8a793372ec088433780d622f2f05b41
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>搜索和主屏幕小组件增强功能
 
@@ -25,7 +25,7 @@ Apple 引入了对小组件系统以确保小组件显示 10 锁定屏幕新的 
 
 小组件可高度自定义，并且可能包含 UI 元素，例如文本、 图像、 按钮等。此外，开发人员可以进一步自定义其小组件的布局。
 
-[ ![](widgets-images/widgets01.png "示例小组件")](widgets-images/widgets01.png)
+[![](widgets-images/widgets01.png "示例小组件")](widgets-images/widgets01.png#lightbox)
 
 有两个主要位置，用户可以查看并与其交互的应用的小组件：
 

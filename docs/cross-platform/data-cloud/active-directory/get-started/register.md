@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 52d06dc6125f91f98e8f3ee8b4f91ad7b52347a3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 776a60701e01a81856b0a85e7136c57b97cff101
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>步骤 1。 注册应用程序，以便使用 Azure Active Directory
 
@@ -19,11 +19,11 @@ ms.lasthandoff: 02/27/2018
 
 2. 在登录后，请转到**Active Directory** （1） 部分，然后选择想要注册的应用程序 (2) 的目录
 
-  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "部分，然后选择要注册该应用程序的目录")](register-images/01.-active-directory-in-azure-portal.jpg)
+  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "部分，然后选择要注册该应用程序的目录")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. 单击**添加**若要创建新的应用程序，然后选择**添加我的组织正在开发的应用程序**
 
-  [ ![](register-images/02.-add-new-application-sml.jpg "添加我的组织正在开发的应用程序")](register-images/02.-add-new-application.jpg)
+  [ ![](register-images/02.-add-new-application-sml.jpg "添加我的组织正在开发的应用程序")](register-images/02.-add-new-application.jpg#lightbox)
 
 4. 在下一个屏幕上，为你的应用程序指定名称 （例如。 XAM-DEMO)。
   请确保选择**本机客户端应用程序**作为应用程序的类型。

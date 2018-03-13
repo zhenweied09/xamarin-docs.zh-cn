@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e46520122b54fabfe27f73370e2ab736a349f7f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>在 iOS 中的 Backgrounding 简介
 
@@ -27,7 +27,7 @@ iOS 控制后台处理非常紧密，并提供了三种方法来实现：
 
 IOS 应用程序生命周期是应用程序状态和方法将移动它们之间的集合。 应用程序可以基于用户的行为和应用程序的 backgrounding 要求的状态之间转换。 下图所示移动：
 
- [ ![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "应用程序状态和应用程序委托方法的关系图")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png)
+ [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "应用程序状态和应用程序委托方法的关系图")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 -  **未运行**-应用程序尚未尚未启动在设备上。
 -  **运行/主动**-应用程序在屏幕上，并且在前台执行代码。
@@ -52,7 +52,7 @@ IOS 应用程序状态更改，通知应用程序通过事件方法`AppDelegate`
 
 下图说明了如何应用程序状态和生命周期方法组合在一起：
 
- [ ![](introduction-to-backgrounding-in-ios-images/image2.png "此图说明了如何应用程序状态和生命周期方法组合在一起")](introduction-to-backgrounding-in-ios-images/image2.png)
+ [![](introduction-to-backgrounding-in-ios-images/image2.png "此图说明了如何应用程序状态和生命周期方法组合在一起")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## <a name="user-controls-for-backgrounding-in-ios"></a>在 iOS 中 Backgrounding 的用户控件
 
@@ -62,7 +62,7 @@ iOS 7 引入了几个功能，为用户提供更好地控制应用程序的 back
 
 应用程序切换器是一项重要的控制功能在 iOS 7 中引入的。 它由双点击启动**主页**按钮，并显示其进程都处于活动状态的应用程序：
 
- [ ![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "使用应用程序切换器应用之间移动")](introduction-to-backgrounding-in-ios-images/app-switcher-.png)
+ [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "使用应用程序切换器应用之间移动")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 使用应用程序切换器，用户可以滚动浏览所有 backgrounded 和挂起的应用程序的快照。 点击应用程序将启动置于前台。 向上轻扫从后台，正在终止其进程中删除应用程序。 我们将采用详述中应用切换器[iOS 应用程序生命周期演示](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)中下一节。
 
@@ -77,7 +77,7 @@ iOS 7 增加用户对应用程序生命周期的控制通过允许用户选择�
 
 用户可以更改此设置，通过导航到<span class="uiitem">设置 > 常规 > 后台应用程序刷新</span>和编辑所选应用程序的 backgrounding 特权。 如果后台应用程序刷新设置为 off，则将立即挂起进入后台应用程序，并将其禁止，否则任何后台处理：
 
- [ ![](introduction-to-backgrounding-in-ios-images/settings-.png "后台应用程序刷新设置")](introduction-to-backgrounding-in-ios-images/settings-.png)
+ [![](introduction-to-backgrounding-in-ios-images/settings-.png "后台应用程序刷新设置")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
 开发人员可以检查使用的后台刷新应用程序状态`BackgroundRefreshStatus`API。 有关示例，请参阅[检查后台刷新设置配方](https://developer.xamarin.com/recipes/ios/multitasking/check_background_refresh_setting/)。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 015bce612f369797f0540a0cb55f71f420f007a2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>演练-使用后台传输服务和 NSURLSession
 
@@ -20,7 +20,7 @@ _在本演练中，我们使用后台传输服务和 NSURLSession API 可以启�
 
 后台传输可由配置背景`NSURLSession`和排上载或下载任务。 如果任务完成应用程序已 backgrounded、 挂起，或者终止时，iOS 将通过调用完成处理程序中应用程序的通知应用程序*AppDelegate*。 下图演示这一操作中：
 
- [ ![](background-transfer-walkthrough-images/transfer.png "后台传输可由配置后台 NSURLSession 和排上载或下载任务")](background-transfer-walkthrough-images/transfer.png)
+ [![](background-transfer-walkthrough-images/transfer.png "后台传输可由配置后台 NSURLSession 和排上载或下载任务")](background-transfer-walkthrough-images/transfer.png#lightbox)
 
 我们来看这如下所示在代码中。
 

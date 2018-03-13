@@ -3,14 +3,15 @@ title: "第 1 章的摘要。 Xamarin.Forms 如何组合？"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>第 1 章的摘要。 Xamarin.Forms 如何组合？
 
@@ -44,7 +45,7 @@ Xamarin 当前提供工具以面向本机 Mac、 iOS 和 Android Api 使用 C# �
 
 PCL 或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包含调入 PCL 一个小应用程序，存根。 Xamarin.Forms Api 将映射到每个平台上的本机控件，以便每个平台维护其特征的外观和感觉：
 
-[![平台共享的视觉对象的三个屏幕截图](images/ch01fg03-small.png "每个平台上的 Xamarin.Forms 控件")](images/ch01fg03-large.png "Xamarin.Forms 每个平台上的控件")
+[![平台共享的视觉对象的三个屏幕截图](images/ch01fg03-small.png "每个平台上的 Xamarin.Forms 控件")](images/ch01fg03-large.png#lightbox "Xamarin.Forms 每个平台上的控件")
 
 从左到右的屏幕截图显示了 iPhone、 Android 手机和 Windows 10 移动电话。 每个屏幕上的页面包含 Xamarin.Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)用于显示文本， [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)适用于启动操作， [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/)为选择一个开/关的值，和一个[ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/)用于指定连续范围内的值。 这些视图的所有四个是子级[ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)上[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)。
 

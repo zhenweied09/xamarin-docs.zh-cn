@@ -7,18 +7,17 @@ ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c334e78793f90b4f349f87e12e6b0093fe5cacf8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-android-wear"></a>Android 磨损简介
 
 _通过 Google Android 磨损引入，你将不再限制为仅手机和平板电脑时涉及到开发强大的 Android 应用程序。对 Android 磨损 Xamarin.Android 的支持使你在你静电腕带运行 C# 代码 ！本简介提供 Android 磨损的基本概述，描述它的主要功能，并提供了 Android 磨损 2.0 中提供的功能的概述。它列出了一些更受欢迎的 Android 磨损设备，并提供有关其他参考资料的基本 Google Android 磨损文档的链接。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -29,47 +28,40 @@ Android 磨损上的各种设备，包括第一代 Motorola 360、 LG 的 G 监�
 通过我们 Android 4.4W (API 20) 的 Xamarin.Android 5.0 及更高版本支持 Android 磨损支持和一个用于添加其他的 NuGet 程序包磨损特定 UI 控件。 Xamarin.Android 5.0 及更高版本还包括打包磨损应用的功能。 NuGet 包也已可用于 Android 磨损 2.0 稍后在本指南中所述。
 
 
-<a name="basics" />
-
 ## <a name="android-wear-basics"></a>Android 磨损基础知识
 
 Android 磨损具有不同于 Android 的手持应用的用户界面范例。 第一波磨损应用旨在扩展一起提供一些方法，但开头 Android 磨损 2.0 中的手持应用、 磨损应用可以是使用的独立的。 磨损应用部署时，它是与助理手持应用一起打包。 由于大多数磨损应用取决于手持辅助应用程序，它们需要某种方式来与手持应用进行通信。 下列各节介绍这些使用方案，并概述 Android 磨损的基本功能。 
 
 
-<a name="scenarios" />
 
 ### <a name="usage-scenarios"></a>使用方案
 
 Android 磨损的第一个版本是主要侧重扩展使用增强的通知的当前手持应用程序和手持应用和 wearable 应用程序之间同步数据。 因此，这些方案都相对比较简单实现。
 
-<a name="notifications" />
 
 #### <a name="wearable-notifications"></a>Wearable 通知
 
 支持 Android 磨损的最简单方法是利用通知手持设备和 wearable 设备之间的共享性质。 通过使用支持 v4 通知 API 和`WearableExtender`类 (位于[Xamarin Android 支持库](https://www.nuget.org/packages/Xamarin.Android.Support.v4/))，你可以点击到平台，如收件箱样式卡的本机功能或语音的输入。 [RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/)示例还提供代码示例演示如何向 Android 磨损设备发送通知的列表。 
 
 
-<a name="companion" />
 
 #### <a name="companion-applications"></a>助理应用程序
 
 另一种策略是创建一个完整的应用程序在 wearable 设备上本机运行并对使用助理手持应用商店应用。 此方法的一个很好示例是[测验](https://developer.xamarin.com/samples/monodroid/wear/Quiz/)示例应用程序，演示如何创建测验手持设备上运行并在 wearable 设备上要求测验问题。 
 
 
-<a name="ui" />
 
 ### <a name="user-interface"></a>用户界面
 
 磨损的主导航模式是垂直排列的卡的一系列。 每个这些卡可以具有关联的同一行进行分层出的操作。 `GridViewPager`类提供此功能，它遵循相同的适配器概念`ListView`。 通常将关联`GridViewPager`与`FragmentGridPagerAdaptor`(或`GridPagerAdaptor`)，可让你表示每个行和列的单元格作为`Fragment`: 
 
-[ ![带导航](intro-to-wear-images/2d-picker-sml.png "磨损导航")](intro-to-wear-images/2d-picker.png)
+[![带导航](intro-to-wear-images/2d-picker-sml.png "磨损导航")](intro-to-wear-images/2d-picker.png#lightbox)
 
 带还使组成大的操作按钮的使用着色包含其下 （如上面所述） 的小说明文本圆圈，圆圈。  [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)示例演示如何使用`GridViewPager`和`GridPagerAdapter`磨损应用中。
 
 Android 磨损 2.0 将导航抽屉、 操作抽屉和内联操作按钮添加到磨损用户界面中。 有关 Android 磨损 2.0 用户界面元素有关的详细信息，请参阅 Android [Anatomy](https://www.google.com/design/spec-wear/system-overview/anatomy.html)主题。 
 
 
-<a name="comm" />
 
 ### <a name="communications"></a>通信
 
@@ -86,7 +78,6 @@ Android 磨损提供两个不同的通信 Api，以便于 wearable 应用和助�
 [FindMyPhone](https://developer.xamarin.com/samples/monodroid/wear/FindMyPhoneSample/)示例演示如何实现`WearableListenerService`。
 
 
-<a name="deploy" />
 
 ### <a name="deployment"></a>部署
 
@@ -94,7 +85,6 @@ Android 磨损提供两个不同的通信 Api，以便于 wearable 应用和助�
 [使用打包](~/android/wear/deploy-test/packaging.md)说明详细的部署。 
 
 
-<a name="further" />
 
 ## <a name="going-further"></a>继续 
 
@@ -114,34 +104,30 @@ Android 磨损提供两个不同的通信 Api，以便于 wearable 应用和助�
 [创建手表表盘](~/android/wear/platform/creating-a-watchface.md)开发去除下数字监视表面服务后, 跟增强到具有额外功能模拟样式手表表盘的更多代码提供了分步说明和示例代码。 
 
 
-<a name="wear2" />
 
 ## <a name="android-wear-20"></a>Android Wear 2.0
 
 Android 磨损 2.0 引入了大量新特性和功能，如*复杂性*，弯曲布局、 导航和操作抽屉和扩展的通知。 此外，带 2.0 使你可以生成独立手持应用于工作的独立应用。 新*静电腕带手势*功能使你的应用程序与错交互。 以下部分突出显示这些功能，并提供链接，以帮助你开始使用应用程序中使用它们。
 
 
-<a name="install2" />
 
 ### <a name="install-wear-20-packages"></a>安装带 2.0 包
 
 若要生成具有 Xamarin.Android 的磨损 2.0 应用，你必须添加**Xamarin.Android.Wear v2.0**包到你的项目 (单击**浏览选项卡**):
 
-[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "安装 Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png)
+[![Xamarin.Android.Wear v2.0](intro-to-wear-images/wear-nuget-2.0-sml.png "安装 Xamarin.Android.Wear v2.0 NuGet")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 此 NuGet 程序包包含绑定的 Android 支持 Wearable 和磨损 Compat 库。
 
 除了**Xamarin.Android.Wear**，我们建议你安装**Xamarin.GooglePlayServices.Wearable** NuGet: 
 
-[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "安装 Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png)
+[![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "安装 Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-<a name="wear2feat" />
 
 ### <a name="key-features-of-wear-20"></a>磨损 2.0 的主要功能
 
 Android 磨损 2.0 是自 2014 年初始推出到 Android 磨损的最大更新。 下列各节突出显示的 Android 磨损 2.0 中，主要功能并提供链接，以帮助你开始在你的应用程序中使用这些新功能。 
 
-<a name="compl" />
 
 #### <a name="complications"></a>协调的并发数据
 
@@ -152,7 +138,6 @@ Android 磨损 2.0 是自 2014 年初始推出到 Android 磨损的最大更新�
 有关详细信息的并发数据，请参阅 Android[监视表面复杂性](https://developer.android.com/wear/preview/features/complications.html)主题。 
 
 
-<a name="drawers" />
 
 #### <a name="navigation-and-action-drawers"></a>导航和操作抽屉 
 
@@ -163,7 +148,6 @@ Android 磨损 2.0 是自 2014 年初始推出到 Android 磨损的最大更新�
 有关这些两个新的交互式抽屉的详细信息，请参阅 Android[磨损导航和操作](https://developer.android.com/wear/preview/features/ui-nav-actions.html)主题。 
 
 
-<a name="curved" />
 
 #### <a name="curved-layouts"></a>曲线的布局 
 
@@ -174,14 +158,12 @@ Android 磨损 2.0 是自 2014 年初始推出到 Android 磨损的最大更新�
 `WearableRecyclerView` 扩展`RecyclerView`类，以支持曲线的布局和循环滚动笔势。 有关详细信息，请参阅 Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) API 文档。 
 
 
-<a name="standalone" />
 
 #### <a name="standalone-apps"></a>独立应用程序 
 
 Android 磨损 2.0 应用程序可以独立手持应用于工作。 这意味着，例如，智能监视可以继续提供完整功能，即使伴侣手持设备已关闭或远从 wearable 设备。 有关此功能的详细信息，请参阅 Android[独立应用](https://developer.android.com/wear/preview/features/standalone-apps.html)主题。
 
 
-<a name="wrist" />
 
 #### <a name="wrist-gestures"></a>静电腕带手势 
 
@@ -196,7 +178,6 @@ Android 磨损 2.0 应用程序可以独立手持应用于工作。 这意味着
 有许多详细的磨损 2.0 功能，例如内联操作、 智能答复、 远程输入、 扩展的通知和通知新桥接模式。 有关新的磨损 2.0 功能的详细信息，请参阅 Android [API 概述](https://developer.android.com/wear/preview/api-overview.html)。 
 
 
-<a name="devices" />
 
 ## <a name="devices"></a>设备
 
@@ -210,7 +191,6 @@ Android 磨损 2.0 应用程序可以独立手持应用于工作。 这意味着
 * [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
-<a name="reading" />
 
 ## <a name="further-reading"></a>其他阅读材料
 
@@ -222,7 +202,6 @@ Android 磨损 2.0 应用程序可以独立手持应用于工作。 这意味着
 * [Android 磨损 2.0](https://developer.android.com/wear/preview/index.html)
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: d258d993d8452c0c93c53d875d81683a294f80d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc728e5817a7d1d61d7745120bca7f05641ce76f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="global-styles"></a>全局样式
 
@@ -60,7 +60,7 @@ _样式可全局方法将它们添加到应用程序的资源字典。这有助�
 
 这将导致以下屏幕截图中所示的外观：
 
-[![](application-images/application-styles-1.png "全局样式示例")](application-images/application-styles-1-large.png "全局样式示例")
+[![](application-images/application-styles-1.png "全局样式示例")](application-images/application-styles-1-large.png#lightbox "全局样式示例")
 
 有关创建一页中的样式信息[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，请参阅[显式样式](~/xamarin-forms/user-interface/styles/explicit.md)和[隐式样式](~/xamarin-forms/user-interface/styles/implicit.md)。
 
@@ -98,9 +98,9 @@ _样式可全局方法将它们添加到应用程序的资源字典。这有助�
 
 原始`buttonStyle`、 在应用程序级别定义、 通过重写`buttonStyle`页级别定义的实例。 此外，来控制级别重写的页级别样式`buttonStyle`。 因此， [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例将以蓝色文本，显示，如以下屏幕截图中所示：
 
-[![](application-images/application-styles-2.png "重写样式示例")](application-images/application-styles-2-large.png "重写样式示例")
+[![](application-images/application-styles-2.png "重写样式示例")](application-images/application-styles-2-large.png#lightbox "重写样式示例")
 
-## <a name="creating-a-global-style-in-c35"></a>在 c&#35; 中创建全局样式
+## <a name="creating-a-global-style-in-c35"></a>在 C 中创建全局样式&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 可以将实例添加到应用程序的[ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) C# 中通过创建新的集合[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，然后按添加`Style`实例到`ResourceDictionary`，作为下面的代码示例所示：
 

@@ -4,14 +4,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: b6c0e67e3411aa5b7846a1b7bc0de2473a3546fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8c2d68f08fea5b808b627803da9f9ddb7d62eb6c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="started-services-with-xamarinandroid"></a>与 Xamarin.Android 启动的服务
 
@@ -57,6 +57,8 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ![关系图显示生命周期方法将调用的顺序](started-services-images/started-service-01.png "关系图显示生命周期方法将调用的顺序。")
 
+
+<a name="Stopping_the_Service" />
 
 ## <a name="stopping-the-service"></a>停止服务
 

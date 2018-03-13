@@ -6,15 +6,23 @@ ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/26/2017
-ms.openlocfilehash: 7cf627f369b666bb54d0f512dc1361d2a685a057
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/06/2018
+ms.openlocfilehash: c7dc63cbed0dbdc13dfd2d32a0859c0fe7a29196
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinios-analysis-rules"></a>Xamarin.iOS 分析规则
 
+Xamarin.iOS 分析是一套规则，检查你的项目设置以帮助你确定是否有更高/更多优化的设置。
+
+尽可能在早期查找可能的改进和节省开发时间通常运行分析规则。
+
+若要运行规则，在 Visual Studio 中的 Mac 的菜单，选择**项目 > 运行代码分析**。
+
+> [!NOTE]
+> 你当前所选的配置仅运行 Xamarin.iOS 分析。 我们强烈建议运行调试工具**和**发布配置。
 
 ## <a name="a-namexia0001xia0001-disabledlinkerrule"></a><a name="XIA0001"/>XIA0001: DisabledLinkerRule
 
@@ -39,5 +47,10 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="a-namexia0005xia0005-float32rule"></a><a name="XIA0005"/>XIA0005: Float32Rule
 
-- **问题：**不使用 float32 选项 (-aot 选项 =-O = float32) 导致繁重的性能开销，专门上移动，双精度算术是显著降低速度较慢。 请注意，.NET 双精度在内部使用，即使对于 float，因此精度和兼容性，如果可能，请启用此选项会影响。
+- **问题：**不使用 float32 选项 (-aot 选项 =-O = float32) 导致繁重的性能开销，尤其是在移动设备、 双精度算术是显著降低速度较慢。 请注意，.NET 双精度在内部使用，即使对于 float，因此精度和兼容性，如果可能，请启用此选项会影响。
 - **修复：** Double 单击您的 iOS 项目，请转到生成 > iOS 生成并取消选中"执行作为 64 位浮点数的 32 位浮点型的所有操作"。
+
+## <a name="a-namexia0006xia0006-httpclientavoidmanaged"></a><a name="XIA0006"/>XIA0006: HttpClientAvoidManaged
+
+- **问题：**我们建议使用本机 HttpClient 处理程序，而不托管一个用于更好的性能，较小的可执行文件大小，从而轻松地支持较新的标准。
+- **修复：** Double 单击您的 iOS 项目，请转到生成 > iOS 生成和 HttpClient 实现变为 NSUrlSession (iOS 7 +) 或 CFNetwork 若要支持前面 iOS 7 的版本。

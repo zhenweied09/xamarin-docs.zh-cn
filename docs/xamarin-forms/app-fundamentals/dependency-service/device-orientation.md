@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ee91f0ebdc07f03831ae95a4b8ae6f85c3eb549e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d23f29fbfb51473ff5f89f27c0bfd621cfffbce0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-device-orientation"></a>检查设备方向
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/28/2018
 ![](device-orientation-images/orientation-diagram.png "DependencyService 应用程序结构")
 
 > [!NOTE]
-> **注意：**可以检测是否在设备处于纵向或横向朝方向在共享代码中，如所示在 [设备 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). 本文中所述方法使用本机功能以获取有关方向，包括设备是否为倒置的详细信息。
+> 可以检测是否在设备处于纵向或横向朝方向在共享代码中，如所示在 [设备 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation)。 本文中所述方法使用本机功能以获取有关方向，包括设备是否为倒置的详细信息。
 
 <a name="Creating_the_Interface" />
 
@@ -57,7 +57,7 @@ namespace DependencyServiceSample.Abstractions
 此接口在共享代码中对编码将允许 Xamarin.Forms 应用程序访问每个平台上的设备方向 Api。
 
 > [!NOTE]
-> **请注意**： 实现接口的类必须具有无参数构造函数中，若要使用`DependencyService`。
+> 实现接口的类必须具有无参数构造函数中，若要使用`DependencyService`。
 
 <a name="iOS_Implementation" />
 

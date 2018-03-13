@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 523d79adbc5d4f88d4a2670b6422a58fb9256ab2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e40fd215d23e7da6f1356bba17fac84ce91007ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="polylines-and-parametric-equations"></a>折线和参数的等式
 
@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 结果也称为*算术螺旋*因为每个循环之间的偏移量是常量：
 
-[![](polylines-images/archimedeanspiral-small.png "三重的 Archimedean 螺旋页面屏幕截图")](polylines-images/archimedeanspiral-large.png "Archimedean 螺旋页面的三个屏幕截图")
+[![](polylines-images/archimedeanspiral-small.png "三重的 Archimedean 螺旋页面屏幕截图")](polylines-images/archimedeanspiral-large.png#lightbox "Archimedean 螺旋页面的三个屏幕截图")
 
 请注意，`SKPath`中创建`using`块。 这`SKPath`占用的内存量大于`SKPath`意味着的上一个程序中的对象`using`块是更合适，若要释放任何非托管的资源。
 

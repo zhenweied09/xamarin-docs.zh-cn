@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 234bd79754ae7f328d3207757156089441fc588c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0d418786a7364946e4e20100157fa0907b66deeb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-view"></a>Web 视图
 
@@ -96,7 +96,7 @@ protected override void OnCreate (Bundle bundle)
 
 生成并运行应用。 你应看到与下面的屏幕截图所示的简单的 web 页面查看器应用程序：
 
-[![显示 WebView 应用示例](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png)
+[![显示 WebView 应用示例](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 若要处理**回**按钮按键，添加以下 using 语句：
 
@@ -122,7 +122,7 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 
 再次运行该应用程序。 你现在应能够跟随链接并在向后导航页历史记录：
 
-[![后退按钮在操作中的示例屏幕快照](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png)
+[![后退按钮在操作中的示例屏幕快照](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
 *此页的部分是基于工作创建和共享的 Android Open Source Project 的根据条款中所述修改*

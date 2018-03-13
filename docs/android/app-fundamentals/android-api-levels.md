@@ -7,18 +7,17 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 5a8b51f6c63d8632e71d1cddabb0c37758ee02f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 907af0948e9d081f05cc201c49f94629a513c935
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-android-api-levels"></a>了解 Android API 级别
 
 _Xamarin.Android 具有多个 Android API 级别设置，确定与多个版本的 Android 应用程序的兼容性。本指南说明了这些设置的含义、 如何配置它们，以及有何影响它们对你的应用程序在运行时。_
 
-<a name="quick" />
 
 ## <a name="quick-start"></a>快速入门
 
@@ -37,30 +36,30 @@ Xamarin.Android 公开三个 Android API 级别的项目设置：
 通常情况下，所有三个 Xamarin.Android API 级别设置为相同的值。 上**应用程序**页上，设置**使用 Android 版本 （目标框架） 进行编译**到最新稳定的 API 版本 （或最小，具有所有所需的功能的 Android 版本）。
 在以下屏幕截图中，目标框架设置为**Android 7.1 (API 级别 25-Nougat)**:
 
-[![目标 Framework 版本默认为使用 Android 版本的编译](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png)
+[![目标 Framework 版本默认为使用 Android 版本的编译](android-api-levels-images/vs-defaults-sml.png)](android-api-levels-images/vs-defaults.png#lightbox)
 
 上**Android 清单**页上，将最低 Android 版本设置为**使用 SDK 版本进行编译使用**并将目标 Android 版本设置为相同的值 （在下面的示例的目标框架版本屏幕截图中，目标 Android 框架设置为**Android 7.1 (Nougat)**):
 
-[![最小值和目标 Android 版本设置为目标框架版本](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png)
+[![最小值和目标 Android 版本设置为目标框架版本](android-api-levels-images/vs-manifest-defaults-sml.png)](android-api-levels-images/vs-manifest-defaults.png#lightbox)
 
 如果你想要维护向后兼容早期版本的 Android，设置**最低 Android 版本到目标**为所需应用程序以支持最早版本的 Android。 (请注意 API 级别 14，所需的最低 API 级别[Google Play 服务和 Firebase 支持](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html)。)下面的示例配置支持从 API 级别 14 通过 API 级别 25 的 Android 版本：
 
-[![使用 API 级别 25 编译 Nougat，最低 Android 版本设置为 API 级别 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png)
+[![使用 API 级别 25 编译 Nougat，最低 Android 版本设置为 API 级别 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 通常情况下，所有三个 Xamarin.Android API 级别设置为相同的值。 设置**目标框架**到最新稳定的 API 版本 （或最小，具有所有所需的功能的 Android 版本）。 若要设置**目标框架**，导航到**生成 > 常规**中**项目选项**。 在以下屏幕截图中，目标框架设置为**使用最新安装的平台 (8.0)**:
 
-[![默认为使用最新安装平台的目标框架](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png)
+[![默认为使用最新安装平台的目标框架](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
 可以下找到的最小值和目标 Android 版本设置**生成 > Android 应用程序**中**项目选项**。 将最低 Android 版本设置为**自动-使用目标框架版本**并将目标 Android 版本设置为相同的值的目标框架版本。 在以下屏幕截图中，目标 Android 框架设置为**Android 8.0 （API 级别 26）**以匹配上面的目标框架设置：
 
-[![在项目选项中设置的目标和 framework 级别](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png)
+[![在项目选项中设置的目标和 framework 级别](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png#lightbox)
 
 如果你想要维护向后兼容早期版本的 Android，更改**最低 Android 版本**为所需应用程序以支持最早版本的 Android。 请注意 API 级别 14，所需的最低 API 级别[Google Play 服务和 Firebase 支持](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html)。
 例如，下面的配置将作为 API 级别 14 尽早支持 Android 版本：
 
-[ ![最小值和目标版本设置为自动的使用目标框架版本](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png)
+[![最小值和目标版本设置为自动的使用目标框架版本](android-api-levels-images/xs-minimum-sml.png)](android-api-levels-images/xs-minimum.png#lightbox)
 
 -----
 
@@ -68,13 +67,11 @@ Xamarin.Android 公开三个 Android API 级别的项目设置：
 如果你的应用程序支持多个 Android 版本，你的代码必须包含运行时检查以确保你的应用能够适应最低 Android 版本设置 (请参阅[运行时检查 Android 版本](#runtimechecks)下面有关详细信息)。 如果要使用或创建库，请参阅[API 级别和库](#libraries)下面有关最佳实践配置 API 级别库设置。
 
 
-<a name="verslevels" />
 
 ## <a name="android-versions-and-api-levels"></a>Android 版本和 API 级别
 
 每个 Android 版本在 Android 平台的发展和新的 Android 版本发布时，分配有唯一的整数标识符，调用*API 级别*。 因此，每个 Android 版本对应于单个 Android API 级别。 由于用户安装在较旧也为最新版本的 Android 应用，因此必须设计真实的 Android 应用程序可以使用多个 Android API 级别。
 
-<a name="versions" />
 
 ### <a name="android-versions"></a>Android 版本
 
@@ -145,7 +142,6 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 此列表所示，新的 Android 版本的发布频率&ndash;每年有时多个版本。 因此，可能运行你的应用的 Android 设备该领域包括的各种较旧和较新的 Android 版本。 如何保证你的应用程序将太多的不同版本的 Android 上运行一致而可靠地？ Android 的 API 级别可帮助你管理此问题。
 
-<a name="apilevels" />
 
 ### <a name="android-api-levels"></a>Android API 级别
 
@@ -159,13 +155,11 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 这些设置用于确保正确运行应用程序所需的功能在安装时在 Android 设备上可用。 否则，应用程序会阻止该设备上运行。 例如，如果 Android 设备的 API 级别低于最小为你的应用程序指定的 API 级别，在 Android 设备将阻止用户安装您的应用程序。
 
-<a name="settings" />
 
 ## <a name="project-api-level-settings"></a>项目 API 级别设置
 
 以下各节说明如何使用 SDK Manager 来为你要设定为目标的 API 级别跟如何配置的详细说明准备好开发环境*目标框架*，*最小值Android 版本*，和*目标 Android 版本*Xamarin.Android 中的设置。
 
-<a name="sdk" />
 
 ### <a name="android-sdk-platforms"></a>Android SDK 平台
 
@@ -182,7 +176,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 我们建议你始终编译与*最新*可用的目标框架版本。 执行此操作向你提供了有用的警告消息可能由你的代码调用任何弃用的 Api。 使用最新的目标框架版本一点尤其重要，当你使用最新的支持库版本&ndash;每个库要求你的应用能够编译在该支持库的最小的 API 级别或更高版本。 
 
 > [!NOTE]
-> **注意：**从开始年 8 月 2018年，Google 播放控制台将需要新应用目标 API 级别 26 (Android 8.0) 或更高版本。
+> 从开始年 8 月 2018年，Google 播放控制台将需要新应用目标 API 级别 26 (Android 8.0) 或更高版本。
 现有应用程序将需要面向 API 级别 26 或更高版本中年 11 月 2018年开头。 有关详细信息，请参阅[提高应用程序的安全性和性能出现在年的 Google Play 上](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)。
 
 
@@ -190,7 +184,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 若要访问 Visual Studio 中的目标框架设置，打开项目属性中的**解决方案资源管理器**和选择**应用程序**页：
 
-[![应用程序项目属性页](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png)
+[![应用程序项目属性页](android-api-levels-images/vs-target-framework-sml.png)](android-api-levels-images/vs-target-framework.png#lightbox)
 
 目标框架设置通过在下的下拉列表菜单中选择一个 API 级别**使用 Android 版本进行编译**如上所示。
 
@@ -198,7 +192,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 若要访问 Mac 的目标框架设置 Visual Studio 中，右键单击项目名称，然后选择**选项**; 这将打开**项目选项**对话框。 在此对话框中，导航到**生成 > 常规**如下所示：
 
-[![生成项目选项页的常规部分](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png)
+[![生成项目选项页的常规部分](android-api-levels-images/xs-target-framework-sml.png)](android-api-levels-images/xs-target-framework.png#lightbox)
 
 在右侧的下拉列表菜单中选择一个 API 级别的目标框架设置**目标框架**如上所示。
 
@@ -219,7 +213,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 若要访问 Visual Studio 中的最低 Android 版本设置，打开项目属性中的**解决方案资源管理器**和选择**Android 清单**页。 在下的下拉列表菜单**最低 Android 版本**可以为你的应用程序选择最低 Android 版本：
 
-[![目标选项设置为使用 SDK 版本进行编译到的最小 Android](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png)
+[![目标选项设置为使用 SDK 版本进行编译到的最小 Android](android-api-levels-images/vs-minimum-version-sml.png)](android-api-levels-images/vs-minimum-version.png#lightbox)
 
 如果你选择**使用 SDK 版本进行编译使用**，最低 Android 版本将作为目标框架设置相同。
 
@@ -228,7 +222,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 若要访问 Mac 的目标框架设置 Visual Studio 中，右键单击项目名称，然后选择**选项**; 这将打开**项目选项**对话框。 导航到**生成 > Android 应用程序**。
 使用右侧的下拉列表菜单**最低 Android 版本**，你可以为你的应用程序设置最低 Android 版本：
 
-[ ![最低 Android 版本设置为自动的使用目标框架版本](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png)
+[![最低 Android 版本设置为自动的使用目标框架版本](android-api-levels-images/xs-minimum-version-sml.png)](android-api-levels-images/xs-minimum-version.png#lightbox)
 
 如果你选择**自动&ndash;使用目标框架版本**，最低 Android 版本将作为目标框架设置相同。
 
@@ -247,7 +241,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 若要访问 Visual Studio 中的此设置，打开项目属性中的**解决方案资源管理器**和选择**Android 清单**页。 在下的下拉列表菜单**目标 Android 版本**可以为你的应用程序中选择目标 Android 版本：
 
-[![目标 Android 版本设置为使用 SDK 版本进行编译](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png)
+[![目标 Android 版本设置为使用 SDK 版本进行编译](android-api-levels-images/vs-target-version-sml.png)](android-api-levels-images/vs-target-version.png#lightbox)
 
 我们建议您显式设置为最新版本的用于测试你的应用的 Android 目标 Android 版本。 理想情况下，它应设置为最新的 Android SDK 版本&ndash;此选项，可以使用新 Api 之前通过的行为更改的工作。 对于大多数开发人员，我们*不这样做*建议目标 Android 版本设置成**使用 SDK 版本进行编译使用**。
 
@@ -256,7 +250,7 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 若要访问 Mac 的目标框架设置 Visual Studio 中，右键单击项目名称，然后选择**选项**; 这将打开**项目选项**对话框。 导航到**生成 > Android 应用程序**。
 使用右侧的下拉列表菜单**目标 Android 版本**，你可以为你的应用程序设置目标 Android 版本：
 
-[![目标 Android 版本设置为自动的使用目标框架版本](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png)
+[![目标 Android 版本设置为自动的使用目标框架版本](android-api-levels-images/xs-target-version-sml.png)](android-api-levels-images/xs-target-version.png#lightbox)
 
 我们建议您显式设置为最新版本的用于测试你的应用的 Android 目标 Android 版本。 理想情况下，它应设置为最新可用的 Android SDK 版本&ndash;此选项，可以使用新 Api 之前通过的行为更改的工作。 对于大多数开发人员，我们不建议将目标 Android 版本设置为**自动-使用目标框架版本**。
 
@@ -311,14 +305,14 @@ else
 
 当你创建 Xamarin.Android 库项目 （如类库或绑定库） 时，你可以配置仅的目标框架设置&ndash;最低 Android 版本和目标 Android 版本设置将不可用。 这是因为没有任何**Android 清单**页：
 
-[![仅使用 Android 版本选项编译可用](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png)
+[![仅使用 Android 版本选项编译可用](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 当创建 Xamarin.Android 库项目时，没有任何**Android 应用程序**页可在其中配置最低 Android 版本和目标 Android 版本&ndash;最低 Android 版本和目标Android 版本设置不可用。
 这是因为没有任何**生成 > Android 应用程序**页):
 
-[ ![生成没有最小值和目标版本选项常规页](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png)
+[![生成没有最小值和目标版本选项常规页](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 
 -----
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: b169bcc64af15de3d87bfb7f8059b4251f1a3ad9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b1496f4a6a504c8e991f853c92f937015797aa6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>我的 Android Resource.designer.cs 文件不会更新
 
 > [!NOTE]
-> **注意：** Xamarin Studio 5.1.4 及更高版本中已解决此问题。 但是，如果 Visual Studio for Mac 发生问题，请文件[新 bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md)与你的完整版本控制信息和完整生成日志输出。
+> 在 Xamarin Studio 5.1.4 和更高版本中，此问题已得到解决。 但是，如果 Visual Studio for Mac 发生问题，请文件[新 bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md)与你的完整版本控制信息和完整生成日志输出。
 
 在 Xamarin.Studio 5.1 bug 以前通过部分或完全删除.csproj 文件中的 xml 代码损坏.csproj 文件。 这将导致重要组成部分 Android 生成系统 （如更新 Android Resource.designer.cs） 失败。 从稳定 5.1.4 开始发布在年 7 月 15 日，则此 bug 已修复;但在许多情况下的项目文件如下所示手动修复。
 

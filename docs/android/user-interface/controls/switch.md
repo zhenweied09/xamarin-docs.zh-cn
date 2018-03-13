@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 8bfa599ce0a85897ecaf655c1d4da00fe898bc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cf1c4d749eb85a7e0f4c035e10e2e7a40e0c711
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="switch"></a>开关
 
 `Switch`小组件 （如下所示） 允许用户两个状态，例如在之间切换或禁用。 `Switch`默认值为 OFF。 小组件在其 ON 和 OFF 状态如下所示：
 
-[ ![关闭和打开状态中的交换机小组件的屏幕快照](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png)
+[![关闭和打开状态中的交换机小组件的屏幕快照](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
 
-<a name="Creating_a_Switch" />
 
 ## <a name="creating-a-switch"></a>创建交换机
 
@@ -32,9 +31,8 @@ ms.lasthandoff: 02/27/2018
 
 这会创建一个基本的交换机，如下所示：
 
-[ ![在关闭状态中显示交换机的演示应用程序的屏幕截图](switch-images/07-switch.png)](switch-images/07-switch.png)
+[![在关闭状态中显示交换机的演示应用程序的屏幕截图](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
 
-<a name="Changing_Default_Values" />
 
 ## <a name="changing-default-values"></a>更改默认值
 
@@ -48,7 +46,6 @@ ms.lasthandoff: 02/27/2018
         android:textOff="NO" />
 ```
 
- <a name="Providing_a_Title" />
 
 
 ## <a name="providing-a-title"></a>提供一个标题
@@ -66,7 +63,7 @@ ms.lasthandoff: 02/27/2018
 
 此标记产生在运行时的以下屏幕截图：
 
-[![使用文本水平前面交换机小组件的演示应用程序的屏幕截图](switch-images/08-switch.png)](switch-images/08-switch.png)
+[![使用文本水平前面交换机小组件的演示应用程序的屏幕截图](switch-images/08-switch.png)](switch-images/08-switch.png#lightbox)
 
 当`Switch`的值更改，它会发出`CheckedChange`事件。
 例如，下面的代码中我们捕获此事件，并提供`Toast`一条消息的小组件基于`isChecked`值`Switch`，将作为的一部分传递给事件处理程序`CompoundButton.CheckedChangeEventArg`自变量。

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3362744d0d201ef82c846c80b0e1a87426953c85
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>使用 ASP.NET Web 服务 (ASMX)
 
@@ -74,7 +74,7 @@ ASMX 服务提供以下操作：
 有关应用程序中使用的数据模型的详细信息，请参阅[对数据进行建模](~/xamarin-forms/data-cloud/walkthrough.md)。
 
 > [!NOTE]
-> **请注意**： 示例应用程序使用 Xamarin 托管 ASMX 服务，用于提供对 web 服务的只读访问权限。 因此，创建、 更新和删除数据的操作不会更改应用程序中使用的数据。 但是，ASMX 服务的可承载版本位于**TodoASMXService**随附的示例应用程序中的文件夹。 此可承载版本的完整 ASMX 服务允许创建、 更新、 读取，和删除的数据访问权限。
+> 示例应用程序使用 Xamarin 托管 ASMX 服务，用于提供对 web 服务的只读访问权限。 因此，创建、 更新和删除数据的操作不会更改应用程序中使用的数据。 但是，ASMX 服务的可承载版本位于**TodoASMXService**随附的示例应用程序中的文件夹。 此可承载版本的完整 ASMX 服务允许创建、 更新、 读取，和删除的数据访问权限。
 
 A*代理*必须生成能够使用 ASMX 服务，允许应用程序连接到服务。 代理是通过使用以定义的方法和关联的服务配置的服务元数据构造的。 由 web 服务生成 Web 服务描述语言 (WSDL) 文档形式公开此元数据。 将 web 服务的 web 引用添加到特定于平台的项目生成代理。
 

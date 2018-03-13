@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>填充数据的 ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -23,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 
 内置适配器将作为一个参数，获取用于每个行视图资源 ID。 你可以使用内置的资源，如`Android.Resource.Layout`使你无需编写你自己。
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>使用 ListActivity 和基于 ArrayAdapter&lt;字符串&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>处理行单击
 
 通常`ListView`还允许用户接触的行执行某些操作 （如播放一首歌曲，或调用一个联系人，或显示另一个屏幕）。 若要响应用户收尾工作需要有一个方法中实现`ListActivity` &ndash; `OnListItemClick` &ndash;如下所示：
 
-[![SimpleListItem 的屏幕截图](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![SimpleListItem 的屏幕截图](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 现在用户可以按行和`Toast`将会出现警告：
 
-[![屏幕快照的 Toast 当接触的行时显示](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![屏幕快照的 Toast 当接触的行时显示](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>实现 ListAdapter
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>使用自定义适配器
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 由于本示例使用相同的行布局 (`SimpleListItem1`) 生成的应用程序将看起来与前面的示例相同。
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>行视图重复使用
 
@@ -147,13 +141,12 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 某些适配器实现 (如`CursorAdapter`) 没有`GetView`方法，而是它们需要两个不同的方法`NewView`和`BindView`的强制实施行重复使用隔开的职责`GetView`为两个方法。 没有`CursorAdapter`文档后面的示例。
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>启用快速滚动
 
 快速滚动可帮助用户通过提供的其他 '的句柄，它就像直接访问列表的一部分的滚动条来滚动查看较长的列表。 此屏幕截图中显示的快速滚动句柄：
 
-[![通过滚动句柄滚动快速查看的屏幕截图](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![通过滚动句柄滚动快速查看的屏幕截图](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 导致要显示的快速滚动句柄非常简单，只设置`FastScrollEnabled`属性`true`:
 
@@ -161,13 +154,12 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>添加的节索引
 
 部分索引为用户提供更多反馈，它们时的长列表快速滚动&ndash;它显示它们具有滚动到哪个节。 若要使其显示适配器子类必须实现的部分索引`ISectionIndexer`接口可提供具体取决于正在显示的行的索引文本：
 
-[![显示以上部分开头 H H 的屏幕截图](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![显示以上部分开头 H H 的屏幕截图](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 若要实现`ISectionIndexer`需要三个方法添加到适配器：
 

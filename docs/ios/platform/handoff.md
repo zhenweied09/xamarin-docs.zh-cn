@@ -7,11 +7,11 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0b3471f607bbde6560af597b6b901e6fbd1ec0b0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handoff"></a>Handoff
 
@@ -19,7 +19,7 @@ _本文介绍使用在 Xamarin.iOS 应用程序中要传输的 Handoff 在用户
 
 Apple 到另一个设备运行的相同应用程序或另一个应用程序支持的相同活动中 iOS 8 和 OS X Yosemite (10.10) 提供常见的机制，用户可以传输活动在其设备之一上启动引入 Handoff。
 
-[ ![](handoff-images/handoff02.png "下面举例说明执行提交操作")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "下面举例说明执行提交操作")](handoff-images/handoff02.png#lightbox)
 
 本文将采用快速了解一下启用的 Xamarin.iOS 应用程序共享的活动，并涵盖 Handoff 框架在详细信息：
 
@@ -45,7 +45,7 @@ Handoff 将传递的信息，以定义要使用更大的数据包正在同步通
 
 在接收设备上，用户将收到通知活动是可用于延续。 如果用户选择在新的设备上继续活动，指定的应用启动 （如果尚未运行） 和从负载`NSUserActivity`用于重启活动。
 
-[ ![](handoff-images/handoffinteractions.png "继续用户活动的概述")](handoff-images/handoffinteractions.png)
+[![](handoff-images/handoffinteractions.png "继续用户活动的概述")](handoff-images/handoffinteractions.png#lightbox)
 
 只有应用程序共享同一开发人员团队 ID 并响应给定_活动类型_均适合延续。 应用程序定义其下支持的活动类型`NSUserActivityTypes`键其**Info.plist**文件。 鉴于此，继续设备选择应用程序以执行延续任务根据团队 ID，活动类型和 （可选）_活动标题_。
 
@@ -114,21 +114,21 @@ Handoff 将传递的信息，以定义要使用更大的数据包正在同步通
 3. 如果你尚未这样做，请单击**标识符**和创建的应用程序 ID (例如`com.company.appname`)，否则编辑你现有的 id。
 4. 确保**iCloud**给定 id 已检查服务： 
 
-    [ ![](handoff-images/provision01.png "启用给定 ID 的 iCloud 服务")](handoff-images/provision01.png)
+    [![](handoff-images/provision01.png "启用给定 ID 的 iCloud 服务")](handoff-images/provision01.png#lightbox)
 5. 保存更改。
 4. 单击**预配配置文件** > **开发**并创建新的开发为你预配配置文件应用： 
 
-    [ ![](handoff-images/provision02.png "创建新的开发设置应用程序配置文件")](handoff-images/provision02.png)
+    [![](handoff-images/provision02.png "创建新的开发设置应用程序配置文件")](handoff-images/provision02.png#lightbox)
 5. 下载和安装新的预配配置文件或使用 Xcode 下载和安装配置文件。
 6. 编辑你的 Xamarin.iOS 项目选项，并确保你正在使用你刚刚创建的预配配置文件： 
 
-    [ ![](handoff-images/provision03.png "选择刚创建的预配配置文件")](handoff-images/provision03.png)
+    [![](handoff-images/provision03.png "选择刚创建的预配配置文件")](handoff-images/provision03.png#lightbox)
 7. 接下来，编辑你**Info.plist**文件，并确保你正在使用用于创建预配配置文件的应用程序 ID: 
 
-    [ ![](handoff-images/provision04.png "设置应用程序 ID")](handoff-images/provision04.png)
+    [![](handoff-images/provision04.png "设置应用程序 ID")](handoff-images/provision04.png#lightbox)
 8. 滚动到**后台模式**部分，并检查以下各项： 
 
-    [ ![](handoff-images/provision05.png "启用所需的后台模式")](handoff-images/provision05.png)
+    [![](handoff-images/provision05.png "启用所需的后台模式")](handoff-images/provision05.png#lightbox)
 9. 将所做的更改保存到的所有文件。
 
 使用就地这些设置，应用程序现在已准备好访问 Handoff Framework Api。 有关设置的详细信息，请参阅我们[设备资源调配](~/ios/get-started/installation/device-provisioning/index.md)和[设置你的应用](~/ios/get-started/installation/device-provisioning/index.md)指南。
@@ -155,7 +155,7 @@ _活动类型标识符_短字符串添加到`NSUserActivityTypes`的应用程序
 
 若要创建所需的活动类型标识符，以支持此行为，编辑**Info.plist**文件，并切换到**源**视图。 添加`NSUserActivityTypes`密钥，然后创建以下标识符：
 
-[ ![](handoff-images/type01.png "NSUserActivityTypes 键和 plist 编辑器中的所需的标识符")](handoff-images/type01.png)
+[![](handoff-images/type01.png "NSUserActivityTypes 键和 plist 编辑器中的所需的标识符")](handoff-images/type01.png#lightbox)
 
 我们创建四个新的活动类型标识符，一个用于每个示例中的选项卡**MonkeyBrowser**应用。 创建你自己的应用时, 的内容替换`NSUserActivityTypes`阵列特定于活动的活动类型标识符您的应用程序支持。
 
@@ -610,15 +610,15 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 在任何选项卡上，当用户进入某个新的 URL，然后点击**转**按钮，新`NSUserActivity`为该选项卡包含的用户当前浏览的 URL 创建：
 
-[ ![](handoff-images/handoff01.png "示例 Handoff 应用程序")](handoff-images/handoff01.png)
+[![](handoff-images/handoff01.png "示例 Handoff 应用程序")](handoff-images/handoff01.png#lightbox)
 
 如果用户的设备的另一台只有**MonkeyBrowser**安装，应用程序登录到 iCloud 使用相同的用户帐户、 网络和在上面的设备的临近，Handoff 活动将显示在主页上位于相同屏幕 （在左下角）：
 
-[ ![](handoff-images/handoff02.png "在左下角中的主屏幕上显示 Handoff 活动")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "在左下角中的主屏幕上显示 Handoff 活动")](handoff-images/handoff02.png#lightbox)
 
 如果用户向上拖动 Handoff 图标上时，将启动应用程序和用户活动中指定`NSUserActivity`将继续在新的设备上：
 
-[ ![](handoff-images/handoff03.png "用户活动继续在新的设备上")](handoff-images/handoff03.png)
+[![](handoff-images/handoff03.png "用户活动继续在新的设备上")](handoff-images/handoff03.png#lightbox)
 
 当用户活动已成功发送到另一个 Apple 设备，发送的设备的`NSUserActivity`将接收调用`UserActivityWasContinued`方法其`NSUserActivityDelegate`使其知道用户活动已成功传输到另一个设备。
 

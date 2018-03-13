@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: 371ffae8e14a630cb548f4a9ee2bf0bd06f7284c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>响应身份验证回调
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 
 > [!NOTE]
-> **注意：**建议保留回调类相对较轻权重和免费的应用程序特定逻辑。 回调应充当"流量个 cop"Android 应用程序和结果之间指纹扫描程序。
+> 建议保留回调类相对较轻权重和免费的应用程序特定逻辑。 回调应充当"流量个 cop"Android 应用程序和结果之间指纹扫描程序。
 
 ## <a name="a-sample-authentication-callback-handler"></a>示例身份验证回调处理程序
 

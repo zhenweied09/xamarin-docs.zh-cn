@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a636a5ee2b027a2b2889c375f1fef5be67c379b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bafada037f912007201fd5e81b17302b21de3092
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="store-kit-overview-and-retrieving-product-information"></a>存储工具包概述和检索产品信息
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 发生任何事务之前，应用程序必须检索该产品的价格和显示的说明。 然后当用户按**购买**，应用程序管理的确认对话框和 Apple ID 登录名的 StoreKit 向发出请求。 假设然后事务成功，StoreKit 通知应用程序代码中，其必须存储事务结果，且用户提供访问其购买的产品。   
 
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit 通知应用程序代码，从而必须将事务结果存储并为用户提供访问其购买的产品")](store-kit-overview-and-retreiving-product-information-images/image14.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit 通知应用程序代码，从而必须将事务结果存储并为用户提供访问其购买的产品")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>类
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image15.png "必须在应用程序中实现各种 StoreKit 类抽象类之间的关系")](store-kit-overview-and-retreiving-product-information-images/image15.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image15.png "必须在应用程序中实现各种 StoreKit 类抽象类之间的关系")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
    
    
    
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/27/2018
 
 若要测试 StoreKit 代码以链接到测试存储区 （在 iTunes Connect 中创建） 的特殊测试帐户都必须注销的正则 iTunes 测试帐户和登录名。 若要注销当前帐户访问**设置 > iTunes 应用商店和**如下所示：
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image16.png "若要注销的当前帐户访问设置 iTunes 和应用商店")](store-kit-overview-and-retreiving-product-information-images/image16.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image16.png "若要注销的当前帐户访问设置 iTunes 和应用商店")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
  
 然后使用测试帐户登录*StoreKit 在你的应用内进行请求时*:
 
@@ -72,19 +72,19 @@ ms.lasthandoff: 02/27/2018
 
 若要创建在 iTunes Connect 中的测试用户，请单击**用户和角色**在主页上。
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image17.png "若要创建测试用户在 iTunes Connect 单击用户和角色主页上")](store-kit-overview-and-retreiving-product-information-images/image17.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image17.png "若要创建测试用户在 iTunes Connect 单击用户和角色主页上")](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 选择**沙盒测试人员**
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image18.png "选择沙盒测试人员")](store-kit-overview-and-retreiving-product-information-images/image18.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image18.png "选择沙盒测试人员")](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 将显示现有用户的列表。 你可以将新用户添加或删除现有记录。 门户不 （当前） 让你查看或编辑现有测试用户，因此建议你保留的每个测试用户的创建 （尤其是你分配的密码） 的良好记录。 一旦删除测试用户的电子邮件地址不能重复使用另一个测试帐户。  
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image19.png "现有用户的列表")](store-kit-overview-and-retreiving-product-information-images/image19.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image19.png "现有用户的列表")](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
    
  新的测试用户具有类似属性到实际的 Apple ID （如名称、 密码、 机密问题和答案）。 记录在此处输入的所有详细信息。 **选择 iTunes 应用商店**字段将确定哪些货币，并在应用购买的语言将使用时登录以该用户身份。
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image20.png "选择 iTunes 应用商店字段将确定用户的货币和对其应用内购买的语言")](store-kit-overview-and-retreiving-product-information-images/image20.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image20.png "选择 iTunes 应用商店字段将确定用户的货币和对其应用内购买的语言")](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## <a name="retrieving-product-information"></a>检索产品信息
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 02/27/2018
 
 总体的交互如下所示 ( **StoreKit**是内置于 iOS 的与**应用商店**表示 Apple 的服务器):
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image21.png "检索产品信息图")](store-kit-overview-and-retreiving-product-information-images/image21.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image21.png "检索产品信息图")](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### <a name="displaying-product-information-example"></a>显示产品信息示例
 
@@ -110,7 +110,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image23.png "主屏幕将显示从应用商店中检索的信息产品")](store-kit-overview-and-retreiving-product-information-images/image23.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image23.png "主屏幕将显示从应用商店中检索的信息产品")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
    
    
    
@@ -235,7 +235,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 
 此屏幕截图显示了示例应用程序后立即加载 （当没有产品信息可用时）：
 
- [ ![](store-kit-overview-and-retreiving-product-information-images/image24.png "在加载时没有产品的信息后立即示例应用程序")](store-kit-overview-and-retreiving-product-information-images/image24.png)
+ [![](store-kit-overview-and-retreiving-product-information-images/image24.png "在加载时没有产品的信息后立即示例应用程序")](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## <a name="invalid-products"></a>无效的产品
 
@@ -296,7 +296,7 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
    
    
    
- [ ![](store-kit-overview-and-retreiving-product-information-images/image25.png "两个不同 iTunes 测试帐户显示特定结果的语言")](store-kit-overview-and-retreiving-product-information-images/image25.png)   
+ [![](store-kit-overview-and-retreiving-product-information-images/image25.png "两个不同 iTunes 测试帐户显示特定结果的语言")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
    
    
    

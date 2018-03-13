@@ -3,14 +3,15 @@ title: "第 10 章的摘要。 XAML 标记扩展"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 575EAE55-BD4D-470F-A583-3D065FA102E2
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 8ded1dba0e1d4d1a9062d0f75935b3d748a83370
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e9f630fbfc9f7a1d6346b6dd8308504a6806e1a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>第 10 章的摘要。 XAML 标记扩展
 
@@ -57,7 +58,7 @@ XAML 标记扩展是一个类，实现[ `IMarkupExtension` ](https://developer.x
 
 在大多数情况下将使用[ `StaticResource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticResourceExtension/)标记扩展，可从资源字典中，引用项目，如所示： [ **ResourceSharing** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/ResourceSharing)示例. 你可以使用`StaticResourceExtension`元素或`StaticResource`大括号内：
 
-[![三重的资源共享的屏幕截图](images/ch10fg03-small.png "资源共享")](images/ch10fg03-large.png "资源共享")
+[![三重的资源共享的屏幕截图](images/ch10fg03-small.png "资源共享")](images/ch10fg03-large.png#lightbox "资源共享")
 
 不要混淆`x:Static`标记扩展和`StaticResource`标记扩展。
 

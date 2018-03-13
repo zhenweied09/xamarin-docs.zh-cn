@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5a5072d7f07fa7e426a14d3ac841e775d872acff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cb87593b63e28c01beacdea479cc9d6ec4aceb9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="validation"></a>验证
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/28/2018
 
 中的上下文的模型-视图模型的模型 (MVVM) 模式，视图模型或模型通常需要执行数据验证和信号到视图的任何验证错误，以便用户可以更正它们。 EShopOnContainers 移动应用程序执行的查看模型属性的同步客户端验证，并通过突出显示该控件包含无效的数据，并显示错误消息，告知用户将通知用户任何验证错误数据无效的原因。 图 6-1 演示涉及在 eShopOnContainers 移动应用程序中执行验证的类。
 
-[![](validation-images/validation.png "EShopOnContainers 移动应用程序中的验证类")](validation-images/validation-large.png "eShopOnContainers 移动应用程序中的验证类")
+[![](validation-images/validation.png "EShopOnContainers 移动应用程序中的验证类")](validation-images/validation-large.png#lightbox "eShopOnContainers 移动应用程序中的验证类")
 
 **图 6-1**: eShopOnContainers 移动应用程序中的验证类
 

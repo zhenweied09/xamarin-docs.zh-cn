@@ -7,12 +7,12 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6139b5e27e9689da6366a2107acc14a6adcfc928
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 3df6dc72eaed74ad335596d55db8b1295b16f3c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cpu-architectures"></a>CPU 体系结构
 
@@ -32,7 +32,7 @@ _Xamarin.Android 支持多个 CPU 体系结构，包括 32 位和 64 位设备�
 
 在 Visual Studio 中，双击**属性**，在项目下**解决方案资源管理器**和选择**Android 选项**页。 单击**打包**选项卡上，并验证**使用共享运行时**处于禁用状态 （如果关闭此允许你显式选择哪些 ABIs 以支持）。 单击**高级**选项卡并在**高级属性**，检查你想要支持的体系结构：
 
-[ ![选择 armeabi 和 armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![选择 armeabi 和 armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -40,7 +40,7 @@ _Xamarin.Android 支持多个 CPU 体系结构，包括 32 位和 64 位设备�
 
 在适用于 Mac 的 Visual Studio，找到你的项目中**解决方案**填充，单击你的项目旁边的齿轮图标并选择**选项**。 在**项目选项**对话框中，单击**Android 生成**。 单击**常规**选项卡上，并验证**使用共享单声道运行时**处于禁用状态 （如果关闭此允许你显式选择哪些 ABIs 以支持）。 单击**高级**选项卡并在**支持 ABIs**，检查你想要支持的体系结构 ABIs:
 
-[ ![选择 armeabi 和 armeabi v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![选择 armeabi 和 armeabi v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 
@@ -66,7 +66,7 @@ Xamarin.Android 默认为`armeabi-v7a`为**版本**生成。 此设置可以提�
 无需选择**arm64 v8a**或**x86_64**面向 64 位设备; 64 位支持不需要在 64 位硬件上运行你的应用程序。 例如，64 位 ARM 设备 (如[Nexus 9](http://www.google.com/nexus/9/)) 可以运行的应用配置为`armeabi-v7a`。 启用 64 位支持的主要优点是使你的应用以处理更多内存。
 
 > [!NOTE]
-> **注意：**: 64 位运行时支持目前试验性功能。 请记住，64 位运行时是*不*64 位设备上运行你的应用程序所必需。 
+> 64 位运行时支持目前试验性功能。 请记住，64 位运行时是*不*64 位设备上运行你的应用程序所必需。 
 
 ## <a name="additional-information"></a>其他信息
 

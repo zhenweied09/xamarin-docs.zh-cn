@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 941f0e1fbc1fd0fb845664f0d7e3fb11bea43ef3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fe7aa2316abaae33da753e99a6f2eca4870d2d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-an-entry"></a>自定义项
 
@@ -102,7 +102,7 @@ public class MainPage : ContentPage
 1. 添加`ExportRenderer`到自定义呈现器类，以指定，它将用于呈现 Xamarin.Forms 控件属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。
+> 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 

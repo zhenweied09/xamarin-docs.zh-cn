@@ -3,16 +3,16 @@ title: "主动建议"
 description: "这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>主动建议
 
@@ -61,7 +61,7 @@ _这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用
 
 如前所述，`NSUserActivity`可帮助了解哪些用户当前正在使用在屏幕的信息的系统。 `NSUserActivity` 轻量状态缓存机制它们浏览应用程序中捕获用户的活动。 例如，查看餐馆应用程序：
 
-[ ![](proactive-suggestions-images/activity02.png "餐馆应用程序")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "餐馆应用程序")](proactive-suggestions-images/activity02.png#lightbox)
 
 以下的交互：
 
@@ -71,7 +71,7 @@ _这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用
 
 要进一步查看在最后一个屏幕中：
 
-[ ![](proactive-suggestions-images/activity03.png "NSUserActivity 负载")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "NSUserActivity 负载")](proactive-suggestions-images/activity03.png#lightbox)
 
 此处创建应用程序`NSUserActivity`和更高版本重新创建状态的信息填充。 应用程序还包含一些元数据，例如位置的名称和地址。 与此活动中创建，应用可以让 iOS 知道它表示用户的当前状态。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: e3416b0551bafcd7ab87b21eafbe56b733f359a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>在 Windows 上安装 Xamarin.iOS
 
@@ -34,7 +34,7 @@ _本文介绍如何安装 Xamarin.iOS for Visual Studio。其中包含 Visual St
 
 下图简要概述了 Xamarin.iOS 开发工作流：
 
-[![Xamarin.iOS 开发工作流](images/xma2.png)](images/xma2.png)
+[![Xamarin.iOS 开发工作流](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
 >  实际上，为了生成项目，Visual Studio 会启动单独的 MSBuild 进程。 此过程将创建与 Mac 的新连接，这表示当 Visual Studio 生成时，实际上将存在两个从 Windows 到 Mac 的 SSH 连接。 通过[命令行](~/ios/get-started/installation/windows/connecting-to-mac/index.md)生成仅会创建一个 MSBuild 进程。 为使该图简洁，仅用一个箭头表示所有连接。
@@ -44,7 +44,7 @@ _本文介绍如何安装 Xamarin.iOS for Visual Studio。其中包含 Visual St
 Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Windows 计算机上使用 Visual Studio IDE 创建、生成和调试 iOS 应用程序。 它不能单独实现此功能 - 必须使用 Apple 编译器创建 iOS 应用程序，且必须通过 Apple 证书和代码签名工具进行部署。 这意味着，Xamarin.iOS for Visual Studio 安装需要连接到一台联网的 Mac OS X 计算机才能执行这些任务。 配置完成后，Xamarin 的工具将使过程尽可能流畅。
 
 
-<a name="system-requirements">
+<a name="system-requirements"/>
 
 ### <a name="system-requirements"></a>系统要求
 
@@ -72,13 +72,9 @@ Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Wind
 
 **Windows 计算机必须能够通过网络连接到 Mac。**
 
-<a name="appleaccount" />
-
 ### <a name="apple-developer-account"></a>Apple 开发人员帐户
 
 若要将应用程序部署到设备或提交到 App Store，必须具有 Apple 开发人员帐户。 必须先在联网的 Mac 上创建和安装相关的开发人员证书和配置文件，然后 Xamarin.iOS for Visual Studio 才能正常工作。 若要了解获取开发证书和预配设备的步骤，请参阅[设备预配](~/ios/get-started/installation/device-provisioning/index.md)文章。
-
-<a name="features" />
 
 ## <a name="features"></a>功能 
 
@@ -100,6 +96,7 @@ Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Wind
 
 ## <a name="configuring-your-mac"></a>配置 Mac
 
+<a name="installation"/>
 
 ### <a name="installation"></a>安装
 
@@ -148,7 +145,7 @@ Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Wind
 
 Mac 配置后，即可设置 Windows 计算机。
 
-<a name="windowsinstallation">
+<a name="windowsinstallation"/>
 
 ## <a name="windows-installation"></a>Windows 安装
 
@@ -159,7 +156,7 @@ Xamarin 可安装为 Visual Studio 2017 或 2015 的一部分。 若要安装 Vi
 安装过程完成后，仍需再执行几个步骤才可完全恢复正常：
 
 - [将 Visual Studio 连接到 Mac](#connectingtomac) - Visual Studio 必须先连接到 Mac 生成主机，然后才能生成 Xamarin.iOS 项目。
-- [配置 Visual Studio 工具栏](#Visual_Studio_Toolbar_Overview) - 这样一来，可以在 Visual Studio 中轻松访问 Xamarin.iOS 功能。
+- [配置 Visual Studio 工具栏](#toolbar) - 这样一来，可以在 Visual Studio 中轻松访问 Xamarin.iOS 功能。
 
 <a name="connectingtomac" /> 
 
@@ -171,19 +168,19 @@ Xamarin.iOS for Visual Studio 到 Mac 生成主机的连接是通过计算机间
 
 - 浏览到“工具”>“选项”，然后在“Xamarin”下选择“iOS 设置”：
 
-  [![“iOS 设置”屏幕](images/image2.png)](images/image2.png)
+  [![“iOS 设置”屏幕](images/image2.png)](images/image2.png#lightbox)
 
 - 如果 Mac 已正确[配置](#configuration)为允许“远程登录”，则应能够在列表中选择你的 Mac：
 
-  [![“远程主机”对话框](images/xma3.png)](images/xma3.png)
+  [![“远程主机”对话框](images/xma3.png)](images/xma3.png#lightbox)
 
 - 将提示输入 Mac 主机的管理凭据：
 
-  [![登录对话框](images/xma4.png)](images/xma4.png)
+  [![登录对话框](images/xma4.png)](images/xma4.png#lightbox)
 
 - 连接后，计算机名称旁会显示“连接成功”图标：
 
-  [![“远程主机”对话框在计算机名称旁边显示“连接成功”图标](images/image6.png)](images/image6.png)
+  [![“远程主机”对话框在计算机名称旁边显示“连接成功”图标](images/image6.png)](images/image6.png#lightbox)
 
 每次启动 Visual Studio 都需重新连接。
 
@@ -197,7 +194,7 @@ Xamarin.iOS for Visual Studio 到 Mac 生成主机的连接是通过计算机间
 
 若要配置工具栏，请先依次打开“视图”>“工具栏”菜单，再确保已选中“iOS”项。 选择此屏幕截图中所示的菜单项 - 应勾选该项以指示工具栏可见：
 
-[![依次选择“工具栏”>“iOS”](images/image31.png)](images/image31.png)
+[![依次选择“工具栏”>“iOS”](images/image31.png)](images/image31.png#lightbox)
 
 ### <a name="visual-studio-2015"></a>Visual Studio 2015
 
@@ -208,11 +205,11 @@ Xamarin.iOS for Visual Studio 到 Mac 生成主机的连接是通过计算机间
 - 选择“添加或删除按钮”
 - 选择“解决方案平台”
 
-[![选择“解决方案平台”](images/image35.png)](images/image35.png)
+[![选择“解决方案平台”](images/image35.png)](images/image35.png#lightbox)
 
 “标准”和“iOS”工具栏现应如以下屏幕截图所示：
 
-[![“标准”和“iOS”工具栏现在应如此屏幕截图所示](images/image36.png)](images/image36.png)
+[![“标准”和“iOS”工具栏现在应如此屏幕截图所示](images/image36.png)](images/image36.png#lightbox)
 
 工具栏配置完成后，即可开始使用 Xamarin iOS for Visual Studio。
 

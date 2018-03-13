@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e85bc98b5da4c6e529f150c6e7945a8556e2c60f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 887dc3cf710fb75d05d02af179bc218c15d31f97
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-mode"></a>绑定模式
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/27/2018
 
 如你所料，`Slider`从初始初始化为值 1`Opacity`值`Label`。 在左侧的 iOS 屏幕快照所示：
 
-[![反向绑定](binding-mode-images/reversebinding-small.png "反向绑定")](binding-mode-images/reversebinding-large.png "反向绑定")
+[![反向绑定](binding-mode-images/reversebinding-small.png "反向绑定")](binding-mode-images/reversebinding-large.png#lightbox "反向绑定")
 
 但你可能会对感到惊讶，`Slider`仍将有效，如 Android 和 UWP 屏幕截图所示。 这看起来来建议数据绑定更好时起作用`Slider`是绑定目标而不是`Label`因为初始化工作方式与我们所料。
 
@@ -250,7 +250,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 
 当首次运行该程序时， `BoxView`， `Label`，和三个`Slider`元素都设置为从基于初始 ViewModel`Color`时实例化视图模型设置的属性。 在左侧的 iOS 屏幕快照所示：
 
-[![简单颜色选择器](binding-mode-images/simplecolorselector-small.png "简单颜色选择器")](binding-mode-images/simplecolorselector-large.png "简单颜色选择器")
+[![简单颜色选择器](binding-mode-images/simplecolorselector-small.png "简单颜色选择器")](binding-mode-images/simplecolorselector-large.png#lightbox "简单颜色选择器")
 
 在操作滑块，`BoxView`和`Label`相应地，Android 和 UWP 屏幕截图所示更新。
 
@@ -661,7 +661,7 @@ public partial class SampleSettingsPage : ContentPage
 
 当首次运行时，在左侧的 iOS 屏幕快照显示的程序。 中的构造函数`SampleSettingsViewModel`初始化的背景色为白色，并且这是中选定的内容`ListView`:
 
-[![示例设置](binding-mode-images/samplesettings-small.png "示例设置")](binding-mode-images/samplesettings-large.png "示例设置")
+[![示例设置](binding-mode-images/samplesettings-small.png "示例设置")](binding-mode-images/samplesettings-large.png#lightbox "示例设置")
 
 其他两个屏幕快照显示更改的设置。 在试验的这一页，请记得将该程序进入睡眠状态或在设备或正在运行的仿真程序上终止它。 终止程序从 Visual Studio 调试器将不会导致`OnSleep`中重写`App`类调用。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5fab7579be256e478c69b76b5e41b8c1b0568ba6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: 9bebc33affef4a1a25667039dfcdbe345dbd2cd6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="api-design"></a>API 设计
 
@@ -25,7 +25,6 @@ Xamarin.iOS 的核心，没有桥接 Objective C 世界作为使用 C# world 互
 ## <a name="design-principles"></a>设计原则
 
 以下是一些 （这些也适用于 Xamarin.Mac，适用于 OBJECTIVE-C OS X 上的单声道绑定） Xamarin.iOS 绑定我们设计原则：
-
 
 - 请按照 Framework 设计准则
 - 允许开发人员子类 Objective C 类：
@@ -78,15 +77,14 @@ Xamarin.iOS 包含组成程序集的大量*Xamarin.iOS 配置文件*。 [程序�
 
 ### <a name="major-namespaces"></a>主要命名空间 
 
- <a name="MonoTouch.ObjCRuntime" />
+<a name="MonoTouch.ObjCRuntime" />
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
 [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/)命名空间，开发人员可以桥接是世界上之间 C# 和目标。
 这是一种新的绑定，专供 iOS，基于从 Cocoa # 和 Gtk # 的体验。
 
- <a name="MonoTouch.Foundation" />
-
+<a name="MonoTouch.Foundation" />
 
 #### <a name="foundation"></a>Foundation
 
@@ -100,10 +98,7 @@ Xamarin.iOS 包含组成程序集的大量*Xamarin.iOS 配置文件*。 [程序�
 
 - 此处公开各种帮助器 Api，允许开发人员将绑定第三方 OBJECTIVE-C 的 Api，其他 iOS Api 或当前不受 Xamarin.iOS 的 Api。
 
-
 绑定 Api 的详细信息，请参阅[Xamarin.iOS 绑定生成器](~/cross-platform/macios/binding/binding-types-reference.md)部分。
-
- <a name="NSObject" />
 
 
 ##### <a name="nsobject"></a>NSObject
@@ -116,7 +111,6 @@ Mono 将提供的所有对象，垃圾回收而`Foundation.NSObject`实现[Syste
 
 如果你的类型需要执行确定性终止，重写[NSObject.Dispose(bool) 方法](https://developer.xamarin.com/api/type/Foundation.NSObject/%2fM%2fDispose)释放的参数"bool 释放"，如果设置为 true 则意味着，因为正在调用 Dispose 方法和用户在对象上的显式调用的 Dispose （)。 如果值为 false，这意味着，你 （bool 释放） 的 Dispose 方法是从终结器线程上调用终结器。 []()
 
-<a name="Categories" />
 
 ##### <a name="categories"></a>类别
 
@@ -185,20 +179,18 @@ class Rotation_IOS6 {
 }
 ```
 
-<a name="PreserveAttribute" />
 
 ##### <a name="preserveattribute"></a>PreserveAttribute
 
 PreserveAttribute 时处理应用程序以减少其大小的阶段是用于通知 mtouch – Xamarin.iOS 部署工具 – 若要保留为类型或类型的成员的自定义特性。
 
-未以静态方式链接应用程序的每个成员都受制于删除。 因此，此属性用于将成员的未静态引用，但仍由你的应用程序需要的标记。
+每个未被应用程序静态链接的成员都可能被删除。 因此，此属性用于将成员的未静态引用，但仍由你的应用程序需要的标记。
 
-例如，如果动态实例化类型，你可能想要保留你的类型的默认构造函数。 如果使用 XML 序列化时，你可能想要保留你的类型的属性。
+例如，如果你动态实例化类型，则需要保留类型的默认构造函数。 如果你使用 XML 序列化，则需要保留类型的属性。
 
-一种类型，每个成员上或在该类型本身上，你可以应用此属性。 如果你想要保留的整个类型，你可以使用语法 [保留 (AllMembers = true)] 的类型。
+你可以在类型的每个成员上或类型本身应用此属性。 如果你想要保留的整个类型，你可以使用语法 [保留 (AllMembers = true)] 的类型。
 
- <a name="MonoTouch.UIKit" />
-
+<a name="MonoTouch.UIKit" />
 
 #### <a name="uikit"></a>UIKit
 
@@ -206,8 +198,7 @@ PreserveAttribute 时处理应用程序以减少其大小的阶段是用于通�
 
 对常见操作提供了 C# 委托。 请参阅[委托](#Delegates)部分以了解更多信息。
 
- <a name="OpenGLES" />
-
+<a name="OpenGLES" />
 
 #### <a name="opengles"></a>OpenGLES
 
@@ -219,8 +210,6 @@ OpenGLES 2.0 功能是可通过记录的 ES20.GL 类型[此处](https://develope
 
 OpenGLES 3.0 功能是可通过记录的 ES30.GL 类型[此处](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/)类型。
 
- <a name="Binding_Design" />
-
 
 ### <a name="binding-design"></a>绑定设计
 
@@ -230,8 +219,6 @@ Xamarin.iOS 不只是一种绑定到基础 OBJECTIVE-C 的平台。 它所扩展
 
 讨论在接下来的几节不是用户要创建 Xamarin.iOS 应用程序，但将有助于开发人员需要了解如何操作已完成，并创建更复杂的应用程序时将会帮助它们。
 
-
- <a name="Types" />
 
 
 #### <a name="types"></a>类型
@@ -254,16 +241,13 @@ UIView [] GetViews ();
 
 此外，在**经典 API**而不是公开`CGRect`，`CGPoint`和`CGSize`从 CoreGraphics API 中，替换具有`System.Drawing`实现`RectangleF`， `PointF`和`SizeF`开发人员因为它们将保留现有使用 OpenTK 的 OpenGL 代码。 使用新的 64 位时**统一 API**，应使用 CoreGraphics API。
 
- <a name="Inheritance" />
-
+<a name="Inheritance" />
 
 #### <a name="inheritance"></a>继承
 
 Xamarin.iOS API 设计允许开发人员相同的方式，它们将会扩展 C# 类型，在派生类中，使用"替代"关键字，以及使用 C#"base"关键字的基实现链接扩展本机 OBJECTIVE-C 的类型。
 
 此设计允许开发人员使用 OBJECTIVE-C 的选择器作为其开发过程中，一部分避免处理，因为整个 OBJECTIVE-C 的系统已包装在 Xamarin.iOS 库。
-
- <a name="Types_and_Interface_Builder" />
 
 
 #### <a name="types-and-interface-builder"></a>类型和接口生成器
@@ -279,8 +263,7 @@ public partial class void MyView : UIView {
 }
 ```
 
-
- <a name="Delegates" />
+<a name="Delegates" />
 
 
 #### <a name="delegates"></a>委托
@@ -302,15 +285,13 @@ Objective C 世界中，并且你将找到有关 CocoaTouch 联机文档中，�
 
 在 Xamarin.iOS 提供三个互相排斥的机制，以将绑定到这些委托：
 
-1.  [通过事件](#Events)。
-2.  [通过强类型`Delegate`属性](#StrongDelegate)。
-3.  [通过松散类型化`WeakDelegate`属性](#WeakDelegate)。
-
+1.  [通过事件](#Via_Events)。
+2.  [通过强类型`Delegate`属性](#StrongDelegate)
+3.  [通过松散类型化`WeakDelegate`属性](#WeakDelegate)
 
 例如，考虑[UIWebView](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)类。 这将调度到[UIWebViewDelegate](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)实例，该值将赋给[委托](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)属性。
 
- <a name="Via_Events" />
-
+<a name="Via_Events" />
 
 ##### <a name="via-events"></a>通过事件
 
@@ -320,7 +301,6 @@ Objective C 世界中，并且你将找到有关 CocoaTouch 联机文档中，�
 -  [WebViewDidFinishLoad](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:)方法映射到[UIWebView.LoadFinished](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadFinished/)事件。
 -  [WebView:didFailLoadWithError](http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:)方法映射到[UIWebView.LoadError](https://developer.xamarin.com/api/event/UIKit.UIWebView.LoadError/)事件。
 
-
 例如，此简单程序记录时加载 web 查看开始和结束时间：
 
 ```csharp
@@ -329,8 +309,6 @@ var web = new UIWebView (new CGRect (0, 0, 200, 200));
 web.LoadStarted += (o, e) => startTime = DateTime.Now;
 web.LoadFinished += (o, e) => endTime = DateTime.Now;
 ```
-
- <a name="Via_Properties" />
 
 
 ##### <a name="via-properties"></a>通过属性
@@ -353,6 +331,7 @@ void SetupTextField (UITextField tf)
 
 `UITextField`的`ShouldReturn`属性在此情况下将作为参数的委托，以返回 bool 值并确定是否文本字段应执行其他操作正在按下返回按钮。 在我们方法中，我们会返回*true*给调用方，但我们还从屏幕中删除键盘 (发生这种情况是当文本字段调用`ResignFirstResponder`)。
 
+<a name="StrongDelegate"/>
 
 ##### <a name="strongly-typed-via-a-delegate-property"></a>强类型通过委托属性
 
@@ -389,8 +368,9 @@ web.Delegate = new Notifier ();
 
 模式也用于为几个控件按需提供的数据。 例如， [UITableView](https://developer.xamarin.com/api/type/UIKit.UITableView/)控件是一个功能强大的表呈现控件 – 和查找范围和内容的实例由驱动[UITableViewDataSource](https://developer.xamarin.com/api/type/UIKit.UITableView/DataSource)
 
+<a name="WeakDelegate"/>
 
-@### 松散类型化通过 WeakDelegate 属性
+### <a name="loosely-typed-via-the-weakdelegate-property"></a>松散类型化通过 WeakDelegate 属性
 
 除了外的强类型的属性，我们还允许开发人员如果需要以不同方式绑定操作弱类型化的委托。
 强类型化 everywhere`Delegate`属性公开在 Xamarin.iOS 的绑定，相应`WeakDelegate`属性名称还公开。
@@ -423,7 +403,7 @@ web.WeakDelegate = new Notifier ();
 请注意该一次`WeakDelegate`属性已分配，`Delegate`不会使用属性。 此外，如果你想 [导出] 继承基类中实现方法，你必须进行了它的公共方法。
 
 
-## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>映射的 OBJECTIVE-C 的委托将模式与 c&#35;
+## <a name="mapping-of-the-objective-c-delegate-pattern-to-c35"></a>映射到 C 的 OBJECTIVE-C 的委托模式&#35;
 
 当你看到如下所示的 OBJECTIVE-C 的示例：
 
@@ -440,7 +420,7 @@ foo.Delegate = new SomethingDelegate ();
 在 Xamarin.iOS 我们提供了映射到 Objective C 的强类型类委托类。 若要使用它们，你将是子类化，而重写由 Xamarin.iOS 的实现定义的方法。 有关它们如何工作的详细信息，请参阅部分"模型"下面。
 
 
-##### <a name="mapping-delegates-to-c35"></a>将委托映射到 c&#35;
+##### <a name="mapping-delegates-to-c35"></a>将委托映射到 C&#35;
 
 UIKit 在两种形式中通常使用 OBJECTIVE-C 的委托。
 
@@ -575,12 +555,12 @@ public class AppController : UIApplicationDelegate {
 优点是没有无需深入探究 Objective C 标头文件，以了解选择器、 的自变量或对 C# 中，映射的类型，并且，你会得到 intellisense 从 Visual Studio for Mac，以及强类型
 
 
-#### <a name="xib-outlets-and-c35"></a>XIB 插座和 c&#35;
+#### <a name="xib-outlets-and-c35"></a>XIB 插座和 C&#35;
 
 > [!IMPORTANT]
 > 使用 XIB 文件时，本部分将介绍与容器的 IDE 集成。 在时使用 for iOS Xamarin 设计器，这所有替换输入下的一个名称**标识 > 名称**IDE，如下所示的属性部分中：
 >
-> [![](images/designeroutlet.png "在 iOS 设计器中输入的项名称")](images/designeroutlet.png)
+> [![](images/designeroutlet.png "在 iOS 设计器中输入的项名称")](images/designeroutlet.png#lightbox)
 >
 >有关 iOS 设计器的详细信息，请查看[iOS 设计器简介](~/ios/user-interface/designer/introduction.md#how-it-works)文档。
 

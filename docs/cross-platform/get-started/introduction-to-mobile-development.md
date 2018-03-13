@@ -7,28 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f29851f9de410183c6f35d19486e7da8017566a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d3a39070e17729e99614e26e0a8892c6314512af
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-mobile-development"></a>移动开发简介
 
-
 构建移动应用程序可以像打开 IDE、拖放一些内容在一起、快速做些测试，并提交到 App Store 一样简单 - 一个下午即可完成所有操作。 也可以是特别复杂的过程，包括严苛的预先设计，可用性测试，在数以千计的设备上进行 QA 测试，完整的 beta 生命周期，然后通过很多不同的方式进行部署。
-
-本指南是一个生成 Xamarin 移动应用程序的全面入门性研究，其中包括：
-
-1.   [**Xamarin 简介**](#Introduction_to_Xamarin) - Xamarin 平台的功能列表。
-1.   [**Xamarin 的工作原理？**](#How_Does_Xamarin_Work) - 简要概述 Xamarin 如何使 C# 与 iOS 和 Android 一起工作。
-1.   [**开始！**](#Sample_App) - 着手使用 Xamarin.Forms 生成适用于 iOS、Android 或所有平台的 Xamarin 应用。
-
 
 本文档旨在介绍 Xamarin 平台。 若要了解有关生成移动应用程序（从设计到测试）的过程的详细信息，请参阅[移动软件开发生命周期简介](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)文档。
 
 请参看[系统要求](~/cross-platform/get-started/requirements.md#mac)以确认你是否能够安装 Xamarin。
-
 
 ## <a name="introduction-to-xamarin"></a>Xamarin 简介
 

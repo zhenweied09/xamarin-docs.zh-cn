@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>点和短划线
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 在下面的屏幕截图上最左侧, 的 iOS 屏幕显示点线：
 
-[![](dots-images/dotsanddashes-small.png "三重的点和短划线页的屏幕截图")](dots-images/dotsanddashes-large.png "三重的点和短划线页的屏幕截图")
+[![](dots-images/dotsanddashes-small.png "三重的点和短划线页的屏幕截图")](dots-images/dotsanddashes-large.png#lightbox "三重的点和短划线页的屏幕截图")
 
 但是，还应该 Android 屏幕显示使用数组 {10，10} 虚线，但改为直线是实线。 这是怎么回事？ 问题是 Android 屏幕还具有描边上限设置为`Square`。 这将扩展半个描边宽度，从而导致它们填补间隙的所有短划线。
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 当然，你将需要实际运行此程序以查看动画：
 
-[![](dots-images/animatedspiral-small.png "进行动画处理螺旋页面的三个屏幕截图")](dots-images/animatedspiral-large.png "进行动画处理螺旋页面的三个屏幕截图")
+[![](dots-images/animatedspiral-small.png "进行动画处理螺旋页面的三个屏幕截图")](dots-images/animatedspiral-large.png#lightbox "进行动画处理螺旋页面的三个屏幕截图")
 
 现在，你已了解如何绘制线条以及如何定义使用参数化方程的曲线。 若要更高版本发布部分将介绍各种类型的曲线，`SKPath`支持。
 

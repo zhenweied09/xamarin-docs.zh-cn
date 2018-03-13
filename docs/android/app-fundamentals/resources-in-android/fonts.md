@@ -2,20 +2,19 @@
 title: "字体"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA$
+ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 01/30/2018
-ms.openlocfilehash: 3b7c45a50ffb0748b5f63edfd444cb02af3fdc67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fonts"></a>字体
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -60,7 +59,6 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 本指南将首先讨论如何为 Android 的资源，使用字体，然后移动，讨论如何下载在运行时的字体。
 
-<a name="fonts_as_a_resource" />
 
 ## <a name="fonts-as-a-resource"></a>为资源的字体
 
@@ -139,7 +137,6 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
     />
 ```
 
-<a name="programatically_assigning_fonts" />
 
 ### <a name="programmatically-assigning-fonts"></a>以编程方式指定字体
 
@@ -158,7 +155,6 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-<a name="downloading_fonts" />
 
 ## <a name="downloading-fonts"></a>下载字体
 
@@ -202,7 +198,6 @@ Android 8.0 支持两种不同的方式下载字体：
 
 字体定义后，可能需要提供了一些信息_字体证书_涉及在下载。
 
-<a name="font_certificates" />
 
 ### <a name="font-certificates"></a>字体证书
 
@@ -232,7 +227,6 @@ Android 8.0 支持两种不同的方式下载字体：
 
 这些资源中的文件位置，该应用是能够下载字体。
 
-<a name="downloadable_font_resource_declaration" />
 
 ### <a name="declaring-downloadable-fonts-as-resources"></a>为资源声明可下载字体
 
@@ -253,7 +247,6 @@ Android 8.0 支持两种不同的方式下载字体：
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-<a name="programatically_downloading_fonts" />
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>下载与字体 Api 字体
 
@@ -326,10 +319,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     }
 }
 
-
-/// <summary>
-/// EventArg when a font has been downloaded. 
-/// </summary>
 public class FontDownloadEventArg : EventArgs
 {
     public FontDownloadEventArg(Android.Graphics.Typeface typeface)
@@ -360,7 +349,6 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

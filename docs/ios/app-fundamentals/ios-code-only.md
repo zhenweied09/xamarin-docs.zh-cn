@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5e4b0e7bbad94976b23e58d4248cb2ea1a6f2b0f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
 
@@ -24,7 +24,7 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 
 下图显示了窗口、视图、子视图与视图控制器之间的关系，它们向设备屏幕提供了用户界面： 
 
-[ ![](ios-code-only-images/image9.png "此图描述了窗口、 视图、 某些子视图和视图控制器之间的关系")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "此图描述了窗口、 视图、 某些子视图和视图控制器之间的关系")](ios-code-only-images/image9.png#lightbox)
 
 可以使用构造这些视图层次结构[Xamarin 设计器中为 iOS](~/ios/user-interface/designer/index.md)在 Visual Studio 中，但是最好是基本了解如何在代码中完全。 本文将指导完成一些基本的点，才能启动和运行，而仅限代码的用户界面开发。
 
@@ -32,7 +32,7 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 
 下图显示了窗口、视图、子视图与视图控制器之间的关系，它们向设备屏幕提供了用户界面： 
 
-[ ![](ios-code-only-images/image9.png "此图描述了窗口、 视图、 某些子视图和视图控制器之间的关系")](ios-code-only-images/image9.png)
+[![](ios-code-only-images/image9.png "此图描述了窗口、 视图、 某些子视图和视图控制器之间的关系")](ios-code-only-images/image9.png#lightbox)
 
 
 可以使用构造这些视图层次结构[Xamarin 设计器中为 iOS](~/ios/user-interface/designer/index.md)中适用于 Mac 的 Visual Studio，但是最好是基本了解如何在代码中完全。 本文将指导完成一些基本的点，才能启动和运行，而仅限代码的用户界面开发。
@@ -49,13 +49,13 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 首先，使用 iPhone 的 Visual Studio 中创建 iOS 项目**空白项目**模板，如下所示，其中我们将扩展添加控制器和视图。
 
 
-[ ![](ios-code-only-images/blankapp-vs.png "新建项目对话框")](ios-code-only-images/blankapp-vs.png)
+[![](ios-code-only-images/blankapp-vs.png "新建项目对话框")](ios-code-only-images/blankapp-vs.png#lightbox)
 
 
 空项目模板将添加到项目的 4 个文件：
 
 
-[ ![](ios-code-only-images/empty-project.png "项目文件")](ios-code-only-images/empty-project.png)
+[![](ios-code-only-images/empty-project.png "项目文件")](ios-code-only-images/empty-project.png#lightbox)
 
 
 1. **AppDelegate.cs** -包含`UIApplicationDelegate`子类化，请`AppDelegate`，用于处理从 iOS 的应用程序事件。 在中创建应用程序窗口`AppDelegate`的`FinishedLaunching`方法。
@@ -76,16 +76,16 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 
 1. 使用单视图应用模板创建新的 iOS 项目：
     
-    [ ![](ios-code-only-images/single-view-app.png "使用单个视图应用程序模板")](ios-code-only-images/single-view-app.png)
+    [![](ios-code-only-images/single-view-app.png "使用单个视图应用程序模板")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. 删除`Main.Storyboard`和`ViewController.cs`文件。 执行**不**删除`LaunchScreen.Storyboard`。 应删除视图控制器，因为它是在情节提要中创建的视图控制器背后的代码：
 1. 请务必选择**删除**从弹出的对话框：
     
-    [ ![](ios-code-only-images/delete.png "选择删除从弹出的对话框")](ios-code-only-images/delete.png)
+    [![](ios-code-only-images/delete.png "选择删除从弹出的对话框")](ios-code-only-images/delete.png#lightbox)
 
 1. 在 Info.plist，删除内部信息**部署信息 > 主界面**选项：
     
-    [ ![](ios-code-only-images/main-interface.png "删除内的主界面选项的信息")](ios-code-only-images/main-interface.png)
+    [![](ios-code-only-images/main-interface.png "删除内的主界面选项的信息")](ios-code-only-images/main-interface.png#lightbox)
 
 1. 最后，以下代码添加到你`FinishedLaunching`AppDelegate 类中的方法：
         
@@ -176,7 +176,7 @@ public class AppDelegate : UIApplicationDelegate
 
 每个控制器都有关联的视图，可从访问`View`属性。 上面的代码更改视图的`BackgroundColor`属性`UIColor.LightGray`，以便它将是可见的如下所示：
 
- [ ![](ios-code-only-images/image1.png "该视图的背景是可见的浅灰色")](ios-code-only-images/image1.png)
+ [![](ios-code-only-images/image1.png "该视图的背景是可见的浅灰色")](ios-code-only-images/image1.png#lightbox)
 
 我们无法设置任何`UIViewController`作为子类`RootViewController`以这种方式，包括从 UIKit，以及我们编写自己的控制器。 例如，下面的代码添加`UINavigationController`作为`RootViewController`:
 
@@ -214,7 +214,7 @@ public class AppDelegate : UIApplicationDelegate
 
 这将产生嵌套在导航控制器，如下所示的控制器：
 
- [ ![](ios-code-only-images/image2.png "嵌套在导航控制器控制器")](ios-code-only-images/image2.png)
+ [![](ios-code-only-images/image2.png "嵌套在导航控制器控制器")](ios-code-only-images/image2.png#lightbox)
 
 ## <a name="creating-a-view-controller"></a>创建的视图控制器
 
@@ -224,11 +224,11 @@ public class AppDelegate : UIApplicationDelegate
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](ios-code-only-images/customviewcontroller.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/customviewcontroller.png)
+[![](ios-code-only-images/customviewcontroller.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/customviewcontroller.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](ios-code-only-images/new-file.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/new-file.png)
+[![](ios-code-only-images/new-file.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/new-file.png#lightbox)
 
 -----
 
@@ -245,6 +245,8 @@ namespace CodeOnlyDemo
     }
 }
 ```
+
+<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>初始化视图
 
@@ -302,11 +304,11 @@ Window.RootViewController = navController;
 
 现在应用程序加载时，`CustomViewController`加载内导航控制器：
 
- [ ![](ios-code-only-images/customvc.png "CustomViewController 加载内导航控制器")](ios-code-only-images/customvc.png)
+ [![](ios-code-only-images/customvc.png "CustomViewController 加载内导航控制器")](ios-code-only-images/customvc.png#lightbox)
  
 单击此按钮时，将_推送_到导航堆栈新视图控制器：
 
-[ ![](ios-code-only-images/customvca.png "在导航堆栈上推送新视图控制器")](ios-code-only-images/customvca.png)
+[![](ios-code-only-images/customvca.png "在导航堆栈上推送新视图控制器")](ios-code-only-images/customvca.png#lightbox)
 
 ## <a name="building-the-view-hierarchy"></a>生成视图层次结构
 
@@ -352,7 +354,7 @@ class CustomViewController : UIViewController
 
 与应用程序`UITextField`包含如下所示：
 
- [ ![](ios-code-only-images/image4.png "具有包含 UITextField 的应用程序")](ios-code-only-images/image4.png)
+ [![](ios-code-only-images/image4.png "具有包含 UITextField 的应用程序")](ios-code-only-images/image4.png#lightbox)
 
 我们可以添加`UITextField`以类似的方式的密码，仅此时间我们设置`SecureTextEntry`属性设置为 true，如下所示：
 
@@ -380,7 +382,7 @@ public class CustomViewController : UIViewController
 
 设置`SecureTextEntry = true`隐藏中输入的文本`UITextField`用户如下所示：
 
- [ ![](ios-code-only-images/image4a.png "设置 SecureTextEntry true 隐藏用户输入的文本")](ios-code-only-images/image4a.png)
+ [![](ios-code-only-images/image4a.png "设置 SecureTextEntry true 隐藏用户输入的文本")](ios-code-only-images/image4a.png#lightbox)
 
 ### <a name="adding-the-button"></a>添加按钮
 
@@ -403,7 +405,7 @@ View.AddSubview(submitButton);
 
 与此就地，在登录屏幕现在出现如下所示：
 
- [ ![](ios-code-only-images/image5.png "登录屏幕")](ios-code-only-images/image5.png)
+ [![](ios-code-only-images/image5.png "登录屏幕")](ios-code-only-images/image5.png#lightbox)
 
 与不同在以前版本的 iOS、 默认按钮背景是透明的。 更改按钮的`BackgroundColor`属性更改此：
 
@@ -419,7 +421,7 @@ submitButton.Layer.CornerRadius = 5f;
 
 进行这些更改后，视图将如下所示：
 
-[ ![](ios-code-only-images/image6.png "该视图将示例运行")](ios-code-only-images/image6.png)
+[![](ios-code-only-images/image6.png "该视图将示例运行")](ios-code-only-images/image6.png#lightbox)
  
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>将多个视图添加到视图层次结构
 
@@ -452,7 +454,7 @@ submitButton.TouchUpInside += (sender, e) => {
 
 导航如下图所示：
 
-[ ![](ios-code-only-images/navigation.png "在此图说明了导航")](ios-code-only-images/navigation.png)
+[![](ios-code-only-images/navigation.png "在此图说明了导航")](ios-code-only-images/navigation.png#lightbox)
 
 请注意，默认情况下，使用时是导航控制器时，iOS 使应用程序导航栏和后退按钮，可用于向后移动到堆栈。
 
@@ -477,7 +479,7 @@ foreach(var subview in View.Subviews)
 
 如果用户旋转设备为横向，控件是否不相应地调整大小，如下面的屏幕截图所示：
 
- [ ![](ios-code-only-images/image7.png "如果用户旋转设备为横向，控件是否未相应地调整大小")](ios-code-only-images/image7.png)
+ [![](ios-code-only-images/image7.png "如果用户旋转设备为横向，控件是否未相应地调整大小")](ios-code-only-images/image7.png#lightbox)
 
 若要解决此问题的一种方法是通过设置`AutoresizingMask`上每个视图的属性。 在这种情况下，我们希望水平，拉伸的控件，因此我们将设置每个`AutoresizingMask`。 下面的示例为`usernameField`，但相同需要应用于每个视图层次结构中的小工具。
 
@@ -487,7 +489,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 现在我们旋转的设备或模拟器时, 的所有内容拉伸以填充附加空间，如下所示：
 
- [ ![](ios-code-only-images/image8.png "所有控件都拉伸以填充额外的空间")](ios-code-only-images/image8.png)
+ [![](ios-code-only-images/image8.png "所有控件都拉伸以填充额外的空间")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>创建自定义视图
 
@@ -592,7 +594,7 @@ submitButton.TouchUpInside += delegate
 
 现在，我们运行该应用程序后，点击提交按钮时显示的圆圈该新视图：
 
- [ ![](ios-code-only-images/circles.png "显示与某一圆形的新视图")](ios-code-only-images/circles.png)
+ [![](ios-code-only-images/circles.png "显示与某一圆形的新视图")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>创建启动屏幕
 

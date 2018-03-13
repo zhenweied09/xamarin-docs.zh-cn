@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 36d8e27ce06e38e1cf652558bfb5a83f572e4403
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 202df615f1b35504f1fe5c9fd64c9c4b4db77a2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>了解 SiriKit 概念
 
@@ -57,7 +57,7 @@ Siri 和映射管理所有用户的交互，并显示结果使用标准系统接
 
 本部分将显示 SiriKit 如何允许用户与使用 Siri 对应用进行交互的概述。 对于此示例中，我们将使用假 MonkeyChat 应用：
 
-[ ![](understanding-sirikit-images/monkeychat01.png "MonkeyChat 图标")](understanding-sirikit-images/monkeychat01.png)
+[![](understanding-sirikit-images/monkeychat01.png "MonkeyChat 图标")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat 能让用户的朋友自己联系人簿，每个与屏幕名称 （如 Bobo 例如)，并允许用户将文本聊天发送到每个友元，按用户屏幕的名称。
 
@@ -179,7 +179,7 @@ Siri 也进行调整以满足用户的可访问性需求，并将进行交互和
 
 当用户进行时使用 Siri 的口头请求时，这些是 Siri 将遵循的步骤：
 
-[ ![](understanding-sirikit-images/monkeychat02.png "Siri 将遵循的步骤")](understanding-sirikit-images/monkeychat02.png)
+[![](understanding-sirikit-images/monkeychat02.png "Siri 将遵循的步骤")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. 首先，使用 Siri 采用用户的音频**语音**并将其转换成文本。
 2. 接下来，将文本转换为**意向**、 结构化表示形式的用户的请求。
@@ -188,7 +188,7 @@ Siri 也进行调整以满足用户的可访问性需求，并将进行交互和
 
 有应用程序可以拍摄一部分 Siri 与用户的会话中的三个方面：
 
-[ ![](understanding-sirikit-images/monkeychat03.png "应用程序可能需要使用 Siri 用户会话中的一部分三种主要方法")](understanding-sirikit-images/monkeychat03.png)
+[![](understanding-sirikit-images/monkeychat03.png "应用程序可能需要使用 Siri 用户会话中的一部分三种主要方法")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **词汇**-这是应用程序如何告知 Siri 需要知道可以与其进行交互的单词。
 2. **应用程序逻辑**-这些是操作和应用程序需要较长的响应基于给定意向。
@@ -219,7 +219,7 @@ Siri 也进行调整以满足用户的可访问性需求，并将进行交互和
 
 应用程序设置将在会话中的第一个角色是帮助了解用户的语音的 Siri:
 
-[ ![](understanding-sirikit-images/monkeychat04.png "帮助了解用户语音使用 Siri")](understanding-sirikit-images/monkeychat04.png)
+[![](understanding-sirikit-images/monkeychat04.png "帮助了解用户语音使用 Siri")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri 不具有名称"Bobo"在其数据库中，但应用程序未且已通过其词汇 Siri 通过共享此信息。 应用程序还有助于识别 Bobo 是否收件人，因为它指定到 Siri 作为它们的使用 Siri*联系人*。
 
@@ -227,7 +227,7 @@ Siri 知道的详细信息需要可以发送只接收方比消息，因此它将
 
 在上面的示例中，用户已做出响应， *"请自动发送详细香蕉"*，其中使用 Siri 将捆绑到一种结构化**意向**:
 
-[ ![](understanding-sirikit-images/monkeychat05.png "Siri 将捆绑为结构化的意图的用户的响应")](understanding-sirikit-images/monkeychat05.png)
+[![](understanding-sirikit-images/monkeychat05.png "Siri 将捆绑为结构化的意图的用户的响应")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 结构化的意向将包含以下信息：
 
@@ -248,7 +248,7 @@ Siri 将自动生成适当`NSUserActivity`以启动应用程序和拾取用户�
 
 应用程序处理意向，并返回对使用 Siri 的响应后，然后将其提供结果向用户 （通过口头方式和以可视方式）：
 
-[ ![](understanding-sirikit-images/monkeychat06.png "同时通过口头方式直观地向用户显示结果")](understanding-sirikit-images/monkeychat06.png)
+[![](understanding-sirikit-images/monkeychat06.png "同时通过口头方式直观地向用户显示结果")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri 为每个可用于应用的域有几个内置响应用户界面。 但是，由于 MonkeyChat 已提供一个可选的意向 UI 扩展，因此它用于在上面的示例中向用户显示结果的会话。
 
@@ -256,7 +256,7 @@ Siri 为每个可用于应用的域有几个内置响应用户界面。 但是�
 
 有三个应用扩展将需要执行意向在处理时的主要任务：
 
-[ ![](understanding-sirikit-images/monkeychat07.png "意向的生命周期")](understanding-sirikit-images/monkeychat07.png)
+[![](understanding-sirikit-images/monkeychat07.png "意向的生命周期")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. 应用程序必须**解决**事件的每个参数。 因此，应用程序将调用解决多次 （每一次每个参数），并有时多次为同一参数直到应用和用户正在请求上达成一致。
 2. 应用程序必须**确认**它可以处理的请求的意图并使用 Siri 告诉预期的结果。
@@ -329,7 +329,7 @@ Siri 将处理发出所选内容，通过口头方式或通过使用 Siri 用户
 
 意向扩展负责处理应用程序，并使用 Siri 之间的主要交互，如下所示：
 
-[ ![](understanding-sirikit-images/intents01.png "意向扩展")](understanding-sirikit-images/intents01.png)
+[![](understanding-sirikit-images/intents01.png "意向扩展")](understanding-sirikit-images/intents01.png#lightbox)
 
 意向扩展插件可以支持一个或多个方法，它是由开发人员决定客户想要在应用程序中实现 SiriKit。 有关无需处理每个目的，开发人员还可以添加单独的意向扩展。  也就是说，Apple 请求，以便使用 Siri 没有针对应用程序中，打开需要更多的内存和时间来处理多个进程，开发人员，限制的意向扩展名的数量。
 
@@ -355,7 +355,7 @@ Apple 具有专门设计 Siri 执行自然流体对话与用户，因此，应�
 
 意向 UI 扩展提供了机会来使应用程序的 UI 和品牌到 Siri 体验，并使用户感到连接到应用程序。 通过此扩展的品牌以及到该脚本的 visual 和其他信息，可以将应用程序。
 
-[ ![](understanding-sirikit-images/intents02.png "示例意向 UI 扩展输出")](understanding-sirikit-images/intents02.png)
+[![](understanding-sirikit-images/intents02.png "示例意向 UI 扩展输出")](understanding-sirikit-images/intents02.png#lightbox)
 
 将始终返回意向 UI 扩展`UIViewController`和应用程序可以添加任何内容它喜欢内的视图控制器，如超出初始响应的显示其他信息。 意向 UI 还可以使用长时间运行的事件，如多少就越长共享来访问其位置的汽车持续一段时间的状态更新用户。
 

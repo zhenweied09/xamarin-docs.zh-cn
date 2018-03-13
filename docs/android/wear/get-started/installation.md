@@ -7,18 +7,16 @@ ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 5f583fa78674b1b07d362e5171877e4ec3c861a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-and-installation"></a>设置和安装
 
 _本文将指导完成的安装步骤和准备你的计算机和 Android 磨损开发的设备所需的配置详细信息。这篇文章结束时，你将拥有一个有效的 Xamarin.Android 磨损安装集成到 Visual Studio 用于 Mac 和/或 Microsoft Visual Studio 中，而你将准备就绪，若要开始生成首个 Xamarin.Android 磨损应用程序。_
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>惠?
 
@@ -35,9 +33,7 @@ _本文将指导完成的安装步骤和准备你的计算机和 Android 磨损�
 你可以继续使用[JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)如果你是专门为 API 级别 23 开发或更早版本。
 
 > [!IMPORTANT]
-> **注意：** Xamarin.Android 不支持 JDK 9。
-
-<a name="installation" />
+> Xamarin.Android 不支持 JDK 9。
 
 ## <a name="installation"></a>安装
 
@@ -49,7 +45,6 @@ _本文将指导完成的安装步骤和准备你的计算机和 Android 磨损�
 
 以下各节将介绍这些步骤。
 
-<a name="sdktools" />
 
 ### <a name="install-android-sdk-and-tools"></a>安装 Android SDK 和工具 
 

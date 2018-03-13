@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Mac 平台安装程序
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 在开始之前，创建 （或使用现有） Xamarin.Forms 项目。
 你仅可以添加为 mac。 使用 Visual Studio 的 Mac 应用程序
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**通过将 macOS 项目添加到 Xamarin.Forms， [Xamarin 大学](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>添加 Mac 应用程序
 
@@ -92,7 +97,7 @@ ms.lasthandoff: 02/27/2018
 
 9. 双击**Main.storyboard**在 Xcode 中进行编辑。 选择**窗口**和_取消选中_**是初始控制器**复选框 （这是因为上面的代码创建一个窗口）：
 
-  [ ![取消选中在 Xcode 中的是初始控制器复选框](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![取消选中在 Xcode 中的是初始控制器复选框](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   你可以编辑情节提要以删除不需要的项目中的菜单系统。
 

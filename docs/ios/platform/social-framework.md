@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: da096c8575896bc9f522a92b3fb94b81f9e772df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="social-framework"></a>社交 Framework
 
@@ -30,7 +30,7 @@ _社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Face
 
 若要连接到 Twitter 使用社交框架，帐户需要在设备设置中配置，如下所示：
 
- [ ![](social-framework-images/twitter01.png "Twitter 帐户设置")](social-framework-images/twitter01.png)
+ [![](social-framework-images/twitter01.png "Twitter 帐户设置")](social-framework-images/twitter01.png#lightbox)
 
 输入并使用 Twitter 验证帐户后，设备用于访问 Twitter 的社交 Framework 类上的任何应用程序将使用此帐户。
 
@@ -38,7 +38,7 @@ _社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Face
 
 社交 Framework 包括调用的控制器`SLComposeViewController`，提供了用于编辑和发送推文的系统提供视图。 以下屏幕截图显示此视图的一个示例：
 
- [ ![](social-framework-images/twitter02.png "此屏幕截图显示了 SLComposeViewController 的示例")](social-framework-images/twitter02.png)
+ [![](social-framework-images/twitter02.png "此屏幕截图显示了 SLComposeViewController 的示例")](social-framework-images/twitter02.png#lightbox)
 
 若要使用`SLComposeViewController`与 Twitter 的控制器实例必须创建通过调用`FromService`方法替换`SLServiceType.Twitter`如下所示：
 
@@ -284,7 +284,7 @@ request.PerformRequest ((data, response, error) => {
 
 如果成功加载了数据，原始的 JSON 数据将显示 （如下面的示例输出中）：
 
-[ ![](social-framework-images/twitter03.png "下面举例说明原始的 JSON 数据显示")](social-framework-images/twitter03.png)
+[![](social-framework-images/twitter03.png "下面举例说明原始的 JSON 数据显示")](social-framework-images/twitter03.png#lightbox)
 
 在实际应用中，JSON 结果然后无法分析为 normal 和向用户显示的结果。 请参阅[简介 Web 服务](~/cross-platform/data-cloud/web-services/index.md)有关如何分析 JSON 的信息。
 
@@ -294,7 +294,7 @@ request.PerformRequest ((data, response, error) => {
 
 连接到 Facebook 社交 framework 操作几乎与用于 Twitter 上面所示的过程相同。 Facebook 用户帐户必须在设备设置中配置，如下所示：
 
-[ ![](social-framework-images/facebook01.png "Facebook 帐户设置")](social-framework-images/facebook01.png)
+[![](social-framework-images/facebook01.png "Facebook 帐户设置")](social-framework-images/facebook01.png#lightbox)
 
 配置后，在使用社交框架的设备上的任何应用程序将使用此帐户连接到 Facebook。
 
@@ -368,7 +368,7 @@ namespace SocialFrameworkDemo
 
 与 Facebook 一起使用时`SLComposeViewController`显示查找到 Twitter 示例中，显示几乎完全相同的视图**Facebook**为在此情况下标题：
 
-[ ![](social-framework-images/facebook02.png "SLComposeViewController 显示")](social-framework-images/facebook02.png)
+[![](social-framework-images/facebook02.png "SLComposeViewController 显示")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>调用 Facebook Graph API
 

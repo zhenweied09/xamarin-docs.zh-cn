@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 848db0af436ad43e07e68de4d278f641ab83136d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c806eb51be5f585f2c94b438f6ca31a70aaa7551
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough--using-touch-in-ios"></a>演练 – 在 iOS 中使用触摸
 
@@ -24,9 +24,11 @@ ms.lasthandoff: 02/27/2018
 每个部分包含说明从头开始编写代码。
 [启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)已包含完整的情节提要和菜单屏幕：
 
- [ ![](ios-touch-walkthrough-images/image3.png "此示例包含菜单屏幕")](ios-touch-walkthrough-images/image3.png)
+ [![](ios-touch-walkthrough-images/image3.png "此示例包含菜单屏幕")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 按照下面将代码添加到情节提要，并了解有关触控事件可用在 iOS 中的不同类型的说明。 或者，打开[已完成的示例](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)若要查看使用的所有内容。
+
+<a name="Touch_Samples"/>
 
 ## <a name="touch-samples"></a>Touch 示例
 
@@ -35,7 +37,7 @@ ms.lasthandoff: 02/27/2018
 
 1. 打开项目**Touch_Start**。 运行该项目的第一个以确保一切都好了和触摸**Touch 示例**按钮。 （尽管没有任何按钮将起作用），你应看到类似于以下屏幕：
     
-    [![](ios-touch-walkthrough-images/image4.png "使用非工作按钮运行示例应用程序")](ios-touch-walkthrough-images/image4.png)
+    [![](ios-touch-walkthrough-images/image4.png "使用非工作按钮运行示例应用程序")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. 编辑文件**TouchViewController.cs**并将以下两个实例变量添加到类`TouchViewController`:
@@ -166,9 +168,9 @@ ms.lasthandoff: 02/27/2018
 
 1. 此时结束 Touch 示例屏幕。 请注意如何屏幕更改当你进行交互时与每个映像，如下面的屏幕截图中所示：
         
-    [![](ios-touch-walkthrough-images/image4.png "起始的应用程序屏幕")](ios-touch-walkthrough-images/image4.png)
+    [![](ios-touch-walkthrough-images/image4.png "起始的应用程序屏幕")](ios-touch-walkthrough-images/image4.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image5.png "屏幕后用户拖动按钮")](ios-touch-walkthrough-images/image5.png)
+    [![](ios-touch-walkthrough-images/image5.png "屏幕后用户拖动按钮")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
@@ -183,7 +185,7 @@ ms.lasthandoff: 02/27/2018
 
 如果你运行[启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)，然后单击**笔势识别器示例**按钮，你应看到以下屏幕：
 
- [ ![](ios-touch-walkthrough-images/image6.png "单击手势识别器示例按钮会显示此屏幕")](ios-touch-walkthrough-images/image6.png)
+ [![](ios-touch-walkthrough-images/image6.png "单击手势识别器示例按钮会显示此屏幕")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 请按照下列步骤以实现笔势识别器操作：
 
@@ -305,15 +307,17 @@ ms.lasthandoff: 02/27/2018
 1. 运行该应用程序，并使用两个图像进行交互。
 下面的屏幕截图是这些交互的一个示例：
     
-    [![](ios-touch-walkthrough-images/image7.png "此屏幕快照显示拖交互")](ios-touch-walkthrough-images/image7.png)
+    [![](ios-touch-walkthrough-images/image7.png "此屏幕快照显示拖交互")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
+
+<a name="Custom_Gesture_Recognizer"/>
 
 ## <a name="custom-gesture-recognizer"></a>自定义笔势识别器
 
 在本部分中我们将前面几节来生成自定义笔势识别器中应用的概念。 自定义笔势识别器将子类`UIGestureRecognizer`，并将在用户绘制"V"时识别在屏幕上，然后切换位图。 下面的屏幕截图演示了此屏幕：
 
- [ ![](ios-touch-walkthrough-images/image8.png "用户在屏幕上绘制 V 时，将识别应用程序")](ios-touch-walkthrough-images/image8.png)
+ [![](ios-touch-walkthrough-images/image8.png "用户在屏幕上绘制 V 时，将识别应用程序")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 按照这些步骤创建自定义笔势识别器：
 
@@ -490,9 +494,9 @@ ms.lasthandoff: 02/27/2018
 
 1. 运行该应用程序，并尝试在屏幕上绘制"V"。 你应看到图像显示更改，如以下屏幕截图中所示：
     
-    [![](ios-touch-walkthrough-images/image9.png "检查按钮")](ios-touch-walkthrough-images/image9.png)
+    [![](ios-touch-walkthrough-images/image9.png "检查按钮")](ios-touch-walkthrough-images/image9.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image10.png "取消选中的按钮")](ios-touch-walkthrough-images/image10.png)
+    [![](ios-touch-walkthrough-images/image10.png "取消选中的按钮")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 

@@ -4,14 +4,15 @@ description: "了解 SkiaSharp 绘图，包括画布和绘制的基础知识"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 63314efdd29c8da0273459de2d12f7b807968a04
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="drawing-a-simple-circle"></a>绘制一个简单圆圈
 
@@ -139,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处是在 iOS、 Android 和通用 Windows 平台上运行的程序：
 
-[![](circle-images/simplecircle-small.png "三重的简单圆圈页面屏幕截图")](circle-images/simplecircle-large.png "三倍的简单圆圈页面屏幕截图")
+[![](circle-images/simplecircle-small.png "三重的简单圆圈页面屏幕截图")](circle-images/simplecircle-large.png#lightbox "三倍的简单圆圈页面屏幕截图")
 
 在自行运行程序，你可以启用电话或模拟器，若要查看如何重绘图形。 图形需要重绘，每次`PaintSurface`再次调用事件处理程序。
 

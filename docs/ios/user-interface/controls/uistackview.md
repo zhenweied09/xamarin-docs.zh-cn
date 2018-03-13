@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>堆栈视图
 
@@ -25,11 +26,15 @@ _本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件�
 
 附加到堆栈视图的所有子视图的布局受基于如轴、 分发、 对齐和间距的开发人员定义属性：
 
-[ ![](uistackview-images/stacked01.png "堆栈视图布局关系图")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "堆栈视图布局关系图")](uistackview-images/stacked01.png#lightbox)
 
 使用时`UIStackView`在 Xamarin.iOS 应用中，开发人员可以定义在子视图是在情节提要设计器中，iOS 中或通过添加和删除在 C# 代码中的子视图。
 
 本文档由两部分组成： 可帮助的实现你的第一个堆栈查看，然后一些有关它的工作原理的更多技术细节的快速入门。
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView，也可由[Xamarin 大学](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>UIStackView 快速入门
 
@@ -39,11 +44,11 @@ _本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件�
 
 启动新的 Xamarin.iOS 项目和编辑**Main.storyboard**在 Xcode 的接口生成器中的文件。 首先，将单个**垂直堆栈视图**上**视图控制器**:
 
-[ ![](uistackview-images/quick01.png "将视图控制器中单个垂直堆栈视图拖动")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "将视图控制器中单个垂直堆栈视图拖动")](uistackview-images/quick01.png#lightbox)
 
 在**属性检查器**，设置以下选项：
 
-[ ![](uistackview-images/quick02.png "设置堆栈视图选项")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "设置堆栈视图选项")](uistackview-images/quick02.png#lightbox)
 
 其中：
 
@@ -61,17 +66,17 @@ _本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件�
 
 继续到布局加上标签、 ImageView、 两个按钮和水平堆栈视图，使它类似于以下应用程序的接口：
 
-[ ![](uistackview-images/quick03.png "布局堆栈视图用户界面")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "布局堆栈视图用户界面")](uistackview-images/quick03.png#lightbox)
 
 使用以下选项配置水平堆栈视图：
 
-[ ![](uistackview-images/quick04.png "配置水平堆栈视图选项")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "配置水平堆栈视图选项")](uistackview-images/quick04.png#lightbox)
 
 由于我们不希望分级扩展中的图标表示每个"点"时它被添加到水平的堆栈视图中，我们已设置**对齐**到**Center**和**分发**到**同样填充**。
 
 最后，连接以下**Outlet**和**操作**:
 
-[ ![](uistackview-images/quick05.png "堆栈视图插座和操作")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "堆栈视图插座和操作")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>填充从代码 UIStackView
 
@@ -168,7 +173,7 @@ icon.RemoveFromSuperview();
 
 当用户点击**提升评级**按钮，另一个"星型"添加到屏幕 （最多 5）：
 
-[ ![](uistackview-images/intro01.png "运行示例应用程序")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "运行示例应用程序")](uistackview-images/intro01.png#lightbox)
 
 "星号"将自动居中和均等地分发的水平堆栈视图中。 当用户点击**降低评级**按钮，"星型"则会删除 （直到无处于）。
 

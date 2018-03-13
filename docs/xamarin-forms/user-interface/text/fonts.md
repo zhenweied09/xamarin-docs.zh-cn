@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>字体
 
@@ -181,7 +181,7 @@ Xamarin.Forms 控制所有具有该显示文本`Font`可以在 Xaml 中设置的
 
 使用以外的内置字样字体需要一些特定于平台的编码。 此屏幕截图中显示的自定义字体**Lobster**从[Google 的开放源代码字体](https://www.google.com/fonts)呈现在 iOS、 Android 和 Windows Phone 使用 Xamarin.Forms。
 
- [ ![在 iOS 和 Android 的自定义字体](fonts-images/custom-sml.png "自定义字体示例")](fonts-images/custom.png "自定义字体示例")
+ [![在 iOS 和 Android 的自定义字体](fonts-images/custom-sml.png "自定义字体示例")](fonts-images/custom.png#lightbox "自定义字体示例")
 
 每个平台所需的步骤如下所述。 包含与应用程序的自定义字体文件时，请务必验证字体的许可证允许进行分发。
 
@@ -229,7 +229,7 @@ new Label
 > [!NOTE]
 > 请注意，但使用的字体文件名称和字体名称可能不同。 若要发现 Windows 上的字体名称，右键单击.ttf 文件，然后选择**预览**。 然后可从预览窗口中确定的字体名称。
 
-应用程序的常见代码现已完成。 此时，可将特定于平台的电话拨号程序实现为 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
+此时完成了应用程序的常用代码。 此时，可将特定于平台的电话拨号程序实现为 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
 
 ### <a name="xaml"></a>XAML
 

@@ -3,16 +3,16 @@ title: "Windows 平台的详细信息"
 description: "平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。 本文演示如何使用 Windows 平台的详细信息，它们构建于 Xamarin.Forms。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Windows 平台的详细信息
 
@@ -52,7 +52,7 @@ page.On<Windows>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
 结果是，指定的工具栏放置将应用到[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)实例：
 
-[![](windows-images/toolbar-placement.png "工具栏放置特定于平台的")](windows-images/toolbar-placement-large.png "工具栏放置特定于平台的")
+[![](windows-images/toolbar-placement.png "工具栏放置特定于平台的")](windows-images/toolbar-placement-large.png#lightbox "工具栏放置特定于平台的")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ page.On<Windows>().SetCollapseStyle(CollapseStyle.Partial).CollapsedPaneWidth(14
 
 结果是，指定[ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/)应用于[ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)实例，而且还指定的宽度：
 
-[![](windows-images/collapsed-navigation-bar.png "折叠导航栏平台特有")](windows-images/collapsed-navigation-bar-large.png "折叠导航栏特定于平台")
+[![](windows-images/collapsed-navigation-bar.png "折叠导航栏平台特有")](windows-images/collapsed-navigation-bar-large.png#lightbox "折叠导航栏特定于平台")
 
 ## <a name="summary"></a>摘要
 

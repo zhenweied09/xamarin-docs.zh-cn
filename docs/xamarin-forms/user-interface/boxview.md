@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 78ccb117e621b89d85e701b2ea027115f8681dc9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4d50ea5c3db0f5a141f1b48cf0a948c10b63f7f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="boxview"></a>字数
 
@@ -68,7 +68,7 @@ A`BoxView`可以限制于一个维度和另一部分中不受约束。 例如，
 
 下面是结果：
 
-[![基本字数](boxview-images/basicboxview-small.png "基本字数")](boxview-images/basicboxview-large.png "BasicBoxView")
+[![基本字数](boxview-images/basicboxview-small.png "基本字数")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
 如果`VerticalOptions`和`HorizontalOptions`属性会从`BoxView`标记或者被设置为`Fill`，则`BoxView`将成为受页的大小和扩展以适应页面。
 
@@ -113,7 +113,7 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 
 所有遵循的标记都是子级`StackLayout`。 此标记包含几种类型的装饰性`BoxView`元素用于`Label`元素：
 
-[![文本修饰](boxview-images/textdecoration-small.png "文本效果")](boxview-images/textdecoration-large.png "文本效果")
+[![文本修饰](boxview-images/textdecoration-small.png "文本效果")](boxview-images/textdecoration-large.png#lightbox "文本效果")
 
 在页面顶部的时尚标头通过实现`AbsoluteLayout`的子级是四个`BoxView`元素和`Label`，所有这些选项均进行分配的特定位置和大小：
 
@@ -168,7 +168,7 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 
 `BoxView`适用于显示颜色。 此程序使用`ListView`来列出所有的公共静态只读字段的 Xamarin.Forms`Color`结构：
 
-[![ListView 颜色](boxview-images/listviewcolors-small.png "ListView 颜色")](boxview-images/listviewcolors-large.png "ListView 颜色")
+[![ListView 颜色](boxview-images/listviewcolors-small.png "ListView 颜色")](boxview-images/listviewcolors-large.png#lightbox "ListView 颜色")
 
 [ **ListViewColors** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ListViewColors/)程序包括一个名为类`NamedColor`。 静态构造函数使用反射访问的所有字段`Color`结构并创建`NamedColor`为每个对象。 这些模板存储在静态`All`属性：
 
@@ -350,7 +350,7 @@ class LifeCell : BoxView
 
 **GameOfLife**程序还包括`LifeGrid`封装的游戏，逻辑大部分的类和一个`MainPage`处理程序的视觉对象的类。 其中包括描述游戏的规则覆盖。 此处将程序处于操作显示几个 hundred`LifeCell`页上的对象：
 
-[![生命周期的游戏](boxview-images/gameoflife-small.png "生命周期的游戏")](boxview-images/gameoflife-large.png "生命周期的游戏")
+[![生命周期的游戏](boxview-images/gameoflife-small.png "生命周期的游戏")](boxview-images/gameoflife-large.png#lightbox "生命周期的游戏")
 
 <a name="digitalclock" />
 
@@ -358,7 +358,7 @@ class LifeCell : BoxView
 
 [ **DotMatrixClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock/)程序创建 210`BoxView`元素，以模拟传统的 5-7 点矩阵显示的点。 可以读取的时间在纵向或横向模式中，但它大于环境中：
 
-[![Dot-Matrix Clock](boxview-images/dotmatrixclock-small.png "Dot-Matrix Clock")](boxview-images/dotmatrixclock-large.png "Dot-Matrix Clock")
+[![Dot-Matrix Clock](boxview-images/dotmatrixclock-small.png "Dot-Matrix Clock")](boxview-images/dotmatrixclock-large.png#lightbox "Dot-Matrix Clock")
 
 XAML 文件未稍有多个实例化`AbsoluteLayout`用于时钟：
 
@@ -594,7 +594,7 @@ public partial class MainPage : ContentPage
 
 点矩阵时钟可能似乎是一个明显的应用程序的`BoxView`，但`BoxView`元素也是能够意识到是模拟时钟：
 
-[![字数时钟](boxview-images/boxviewclock-small.png "字数时钟")](boxview-images/boxviewclock-large.png "字数时钟")
+[![字数时钟](boxview-images/boxviewclock-small.png "字数时钟")](boxview-images/boxviewclock-large.png#lightbox "字数时钟")
 
 中的所有视觉对象[ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)程序作为的子级的`AbsoluteLayout`。 这些元素将调整大小使用`LayoutBounds`附加属性，并使用`Rotation`属性。 
 

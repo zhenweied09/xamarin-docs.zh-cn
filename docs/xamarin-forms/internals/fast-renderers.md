@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 92a11ebe983840270d3679fd11f5faa0b8222cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956fa919ef9aa994fea92a9a64ca1325819f3ffc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fast-renderers"></a>快速呈现器
 
@@ -40,7 +40,7 @@ Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> **请注意**： 快速呈现器是只适用于应用程序兼容 Android 后端，因此此设置将被忽略前应用 compat 活动。
+> 因此将忽略此设置之前应用 compat 活动，都仅适用于应用程序兼容 Android 后端，快速呈现器。
 
 每个应用程序，取决于布局的复杂性将不同的性能改进。 例如，在当滚动时可能是性能改进的 x2 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)包含数千行的数据，其中每个行中的单元格进行的使用快速呈现器的控件，这会导致明显生成更平滑滚动。
 

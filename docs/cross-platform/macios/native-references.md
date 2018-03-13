@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 29b405c61b745c26c74318243f75e5809ecfdd7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-references"></a>本机引用
 
@@ -78,13 +78,13 @@ _本机引用使你能够将本机框架嵌入到 Xamarin.iOS 或 Xamarin.Mac �
 1. 新建报表或打开现有 Xamarin.iOS、 Xamarin.Mac 或绑定项目。
 2. 在**解决方案资源管理器**，右键单击项目名称并选择**添加** > **添加本机引用**: 
 
-    [ ![](native-references-images/ref01.png "在解决方案资源管理器，右键单击项目名称，然后选择添加本机引用")](native-references-images/ref01.png)
+    [![](native-references-images/ref01.png "在解决方案资源管理器，右键单击项目名称，然后选择添加本机引用")](native-references-images/ref01.png#lightbox)
 3. 从**打开**对话框框中，选择你想要嵌入，然后单击本机框架名称**打开**按钮： 
 
-    [ ![](native-references-images/ref02.png "选择本机框架，嵌入并单击打开按钮的名称")](native-references-images/ref02.png)
+    [![](native-references-images/ref02.png "选择本机框架，嵌入并单击打开按钮的名称")](native-references-images/ref02.png#lightbox)
 4. 框架将添加到项目的树： 
 
-    [ ![](native-references-images/ref03.png "框架将添加到项目树")](native-references-images/ref03.png)
+    [![](native-references-images/ref03.png "框架将添加到项目树")](native-references-images/ref03.png#lightbox)
 
 编译项目后，将应用的捆绑中嵌入本机框架。
 

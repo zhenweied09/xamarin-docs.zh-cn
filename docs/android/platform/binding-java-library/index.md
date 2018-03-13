@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>绑定 Java 库
 
@@ -30,7 +30,7 @@ _Android 社区有许多你可能想在应用程序; 要使用的 Java 库本指
 
 Xamarin.Android 实现的方法是使用绑定*管理可调用包装器*(*MCW*)。 MCW 是托管的代码需要调用 Java 代码时使用的 JNI 桥梁。 托管的可调用包装器还提供支持，子类化 Java 类型和重写 Java 类型上的虚方法。 同样，只要 Android 运行时 （艺术作品） 代码希望调用托管的代码，它会通过已知作为 Android 可调用包装 (ACW) 的另一个 JNI 桥。 这[体系结构](~/android/internals/architecture.md)在下图中所示：
 
-[ ![Android JNI 桥体系结构](images/architecture.png)](images/architecture.png)
+[![Android JNI 桥体系结构](images/architecture.png)](images/architecture.png#lightbox)
 
 绑定库是 Java 类型包含托管可调用包装器的程序集。 例如，下面是 Java 类型， `MyClass`，我们想要在绑定库中包装：
 
@@ -74,7 +74,6 @@ using Com.Company.Package;
 
 * **哪些版本的 JDK 用于编译库？** &ndash; 如果使用不同版本的 JDK 比在使用由 Xamarin.Android 生成 Android 库，可能出现绑定错误。 如果可能，请重新编译使用由您的 Xamarin.Android 的安装的 jdk 的相同版本的 Android 库。
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>生成操作
 
@@ -127,7 +126,6 @@ Xamarin.Android 绑定生成器将更改某些 Java 习语和模式以与.NET �
 -   _内部类_处于 Java_嵌套类_使用 C# 中的实例构造函数。
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>绑定方案
 

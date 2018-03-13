@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>使用堆积视图
 
@@ -23,7 +23,7 @@ _本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
 
 附加到堆栈视图的所有子视图的布局受基于如轴、 分发、 对齐和间距的开发人员定义属性：
 
-[ ![](stacked-views-images/stacked01.png "子视图布局图示")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "子视图布局图示")](stacked-views-images/stacked01.png#lightbox)
 
 使用时`UIStackView`在 Xamarin.tvOS 应用中，开发人员可以定义在子视图是在情节提要设计器中，iOS 中或通过添加和删除在 C# 代码中的子视图。
 
@@ -103,21 +103,21 @@ _本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 设计你想要将添加到堆栈视图的各个元素的布局： 
 
-    [ ![](stacked-views-images/layout01.png "元素的布局示例")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "元素的布局示例")](stacked-views-images/layout01.png#lightbox)
 1. 将任何所需的约束添加到的元素，以确保它们可正确缩放。 该元素已添加到堆栈视图后，此步骤非常重要。
 1. 进行所需的数目的副本 （在此情况下需要四个）： 
 
-    [ ![](stacked-views-images/layout02.png "所需的数目的副本")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "所需的数目的副本")](stacked-views-images/layout02.png#lightbox)
 1. 拖动**堆栈视图**从**工具箱**并将其放在视图上： 
 
-    [ ![](stacked-views-images/layout03.png "堆栈视图")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "堆栈视图")](stacked-views-images/layout03.png#lightbox)
 1. 堆栈视图中，选择在**小组件选项卡**的**属性填充**选择**填充**为**对齐**，**填充同样**为**分发**并输入`25`为**间距**: 
 
-    [ ![](stacked-views-images/layout04.png "小组件选项卡")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "小组件选项卡")](stacked-views-images/layout04.png#lightbox)
 1. 定位堆栈视图屏幕位置你希望它，然后添加约束，以将其保存在所需的位置上。
 1. 选择的单个元素，并将其拖到堆栈视图： 
 
-    [ ![](stacked-views-images/layout05.png "堆栈视图中的各个元素")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "堆栈视图中的各个元素")](stacked-views-images/layout05.png#lightbox)
 1. 将调整布局并将根据上设置的属性的堆栈视图中排列元素。
 1. 分配**名称**中**小组件选项卡**的**属性资源管理器**用于 UI 控件在 C# 代码。
 1. 保存更改。
@@ -127,21 +127,21 @@ _本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 设计你想要将添加到堆栈视图的各个元素的布局： 
 
-    [ ![](stacked-views-images/layout01.png "元素布局示例")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "元素布局示例")](stacked-views-images/layout01.png#lightbox)
 1. 将任何所需的约束添加到的元素，以确保它们可正确缩放。 该元素已添加到堆栈视图后，此步骤非常重要。
 1. 进行所需的数目的副本 （在此情况下需要四个）： 
 
-    [ ![](stacked-views-images/layout02.png "所需的数目的副本")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "所需的数目的副本")](stacked-views-images/layout02.png#lightbox)
 1. 拖动**堆栈视图**从**工具箱**并将其放在视图上： 
 
-    [ ![](stacked-views-images/layout03-vs.png "堆栈视图")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "堆栈视图")](stacked-views-images/layout03-vs.png#lightbox)
 1. 堆栈视图中，选择在**小组件选项卡**的**属性资源管理器**选择**填充**为**对齐**，**填充同样**为**分发**并输入`25`为**间距**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "小组件选项卡")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "小组件选项卡")](stacked-views-images/layout04-vs.png#lightbox)
 1. 定位堆栈视图屏幕位置你希望它，然后添加约束，以将其保存在所需的位置上。
 1. 选择的单个元素，并将其拖到堆栈视图： 
 
-    [ ![](stacked-views-images/layout05-vs.png "堆栈视图中的各个元素")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "堆栈视图中的各个元素")](stacked-views-images/layout05-vs.png#lightbox)
 1. 将调整布局并将根据上设置的属性的堆栈视图中排列元素。
 1. 分配**名称**中**小组件选项卡**的**属性资源管理器**用于 UI 控件在 C# 代码。
 1. 保存更改。
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 当应用运行时，四个元素将均等地分发在我们堆栈视图中：
 
-[ ![](stacked-views-images/layout06.png "当应用运行时，四个元素将均等地分发在我们堆栈视图中")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "当应用运行时，四个元素将均等地分发在我们堆栈视图中")](stacked-views-images/layout06.png#lightbox)
 
 如果玩家人数会降低，未使用的视图隐藏的堆栈视图调整布局，以适合：
 
-[ ![](stacked-views-images/layout07.png "如果玩家人数会降低，未使用的视图隐藏的堆栈视图调整布局，以适合")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "如果玩家人数会降低，未使用的视图隐藏的堆栈视图调整布局，以适合")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 

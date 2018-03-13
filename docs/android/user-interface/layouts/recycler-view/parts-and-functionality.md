@@ -6,12 +6,12 @@ ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b1ddcca25fd83a806e8383a5717462b518b46d0b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 89679f7d825422ab34dd77b31a7a3fde60f36e99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="recyclerview-parts-and-functionality"></a>RecyclerView 部件和功能
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/27/2018
 
 `RecyclerView` 不会为数据源中的每个项分配的项目视图。 相反，它分配只在屏幕上显示的项视图的数量，它会重用当用户滚动这些项布局。 当视图首先滚动不可见时，它将经历如下图中所示的回收过程：
 
-[ ![图示视图回收的六个步骤](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png)
+[![图示视图回收的六个步骤](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
 1.  当视图滚动不可见，并且不会再显示时，它将变为*报废视图*。
 
@@ -75,7 +75,6 @@ ms.lasthandoff: 02/27/2018
 除了项视图重用`RecyclerView`还将使用另一个效率优化： 查看的持有者。 A*视图持有者*是缓存查看引用一个简单的类。 适配器放大项布局文件，每次它还将创建相应的视图持有者。 视图持有人使用`FindViewById`膨胀的项布局文件内获取对视图的引用。 这些引用用于将新数据加载到视图中，每次布局时回收以显示新的数据。
  
 
-<a name="layoutmanager" />
 
 ### <a name="the-layout-manager"></a>布局管理器
 
@@ -96,7 +95,6 @@ ms.lasthandoff: 02/27/2018
 
 有关布局管理器的详细信息，请参阅[RecyclerView.LayoutManager 类引用](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html)。
 
-<a name="viewholder" />
 
 ### <a name="the-view-holder"></a>视图持有者
 
@@ -109,7 +107,6 @@ ms.lasthandoff: 02/27/2018
 详细的示例`ViewHolder`中提供实现[基本 RecyclerView 示例](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)。
 有关详细信息`RecyclerView.ViewHolder`，请参阅[RecyclerView.ViewHolder 类引用](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)。
 
-<a name="adapter" />
 
 ### <a name="the-adapter"></a>适配器
 
@@ -118,7 +115,7 @@ ms.lasthandoff: 02/27/2018
 
 如下图所示适配器如何映射到单个视图中每个行项中的数据源视图持有人通过中的内容`RecyclerView`:
 
-[ ![图示适配器连接到 ViewHolders 的数据源](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png)
+[![图示适配器连接到 ViewHolders 的数据源](parts-and-functionality-images/03-recyclerviewer-adapter-sml.png)](parts-and-functionality-images/03-recyclerviewer-adapter.png#lightbox)
 
 适配器加载每个`RecyclerView`具有特定行项的数据行。 有关行位置*P*，例如，适配器定位位于关联的数据*P*行到此数据在位置中的数据源和副本项*P*中`RecyclerView`集合。
 在上面的绘图中，例如，适配器使用视图持有者查找的引用`ImageView`和`TextView`位于该位置，因此无需重复调用该`FindViewById`这些视图以用户为滚动集合和重复使用视图。
@@ -134,7 +131,6 @@ ms.lasthandoff: 02/27/2018
 布局管理器调用这些方法，它定位中的项时`RecyclerView`。 
 
 
-<a name="datachanges" />
 
 ### <a name="notifying-recyclerview-of-data-changes"></a>通知 RecyclerView 的数据更改
 

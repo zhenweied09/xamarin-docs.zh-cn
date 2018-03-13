@@ -8,15 +8,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/23/2017
-ms.openlocfilehash: f8680cde2e5536495f33d571adea9980020a72fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 02a425c8276524accc088b53c1099e7c2e28d828
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts"></a>选项卡式的布局
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -45,7 +44,6 @@ ms.lasthandoff: 02/27/2018
 `TabHost` API 兼容跨所有版本的 Android，但需要更多工作来使用并与当前不一致时[Android UI 准则](http://developer.android.com/design/index.html)。 开发人员我们建议您不要使用此 API，应 favour Xamarin.Android 应用程序的较新的操作栏。 
 
 
-<a name="Introducing_ActionBarSherlock" />
 
 ## <a name="actionbarsherlock"></a>ActionBarSherlock
 

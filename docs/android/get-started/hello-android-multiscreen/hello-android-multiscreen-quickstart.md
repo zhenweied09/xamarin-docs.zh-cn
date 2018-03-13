@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 4c61a588eafdf0a86f4124d264c41cabef3e7a14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>了解 Android 多屏显示：快速入门
 
@@ -22,7 +22,7 @@ _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第�
 
 在本指南的演练部分中，将向 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 应用程序添加第二个屏幕，用于跟踪使用此应用转换的号码的相关历史记录。 [最终的应用程序](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)将具有第二个屏幕，可显示“已转换”的号码，如右侧屏幕截图所示：
 
-[![示例应用屏幕截图](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![示例应用屏幕截图](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 附随的[深入了解](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)将回顾构建的内容，并讨论体系结构、导航和此过程中遇到的其他 Android 新概念。
 
@@ -44,15 +44,15 @@ _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第�
 
 从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“属性面板”窗格中，将按钮“ID”更改为 `@+id/TranslationHistoryButton` 
 
-[![拖动新按钮](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png)
+[![拖动新按钮](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
 将按钮的 **Text** 属性设为 `@string/translationHistory`。 Android 设计器将按字面意思解读此属性，但用户需要做些更改，使按钮的文本正确显示：
 
-[![设置转换历史记录按钮文本](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png)
+[![设置转换历史记录按钮文本](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string-sml.png)](hello-android-multiscreen-quickstart-images/vs/03-translation-history-string.png#lightbox)
 
 在**解决方案资源管理器**的“资源”文件夹下展开“值”节点，然后双击字符串资源文件 **Strings.xml**：
 
-[![打开 Strings.xml](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png)
+[![打开 Strings.xml](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/04-strings-resources-file.png#lightbox)
 
 向 **Strings.xml** 文件添加 `translationHistory` 字符串名称和值，然后保存该文件：
 
@@ -66,17 +66,17 @@ _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第�
 
 “转换历史记录”按钮文本应会更新以反映新的字符串值：
 
-[![按钮反映新的字符串值](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)
+[![按钮反映新的字符串值](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png)](hello-android-multiscreen-quickstart-images/vs/05-new-string-value.png#lightbox)
 
 在 Design Surface 上选中“转换历史记录”按钮后，在“属性面板”窗格中查找 `enabled` 设置，然后将其值设为 `false` 以禁用此按钮。 这将导致按钮在设计图面上颜色变暗：
 
-[![禁用转换历史记录按钮](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png)
+[![禁用转换历史记录按钮](hello-android-multiscreen-quickstart-images/vs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/vs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>创建第二个活动
 
 再创建一个“活动”以支持第二个屏幕。 在**解决方案资源管理器**中，右键单击 **Phoneword** 项目，然后选择“添加”>“新项...”：
 
-[![添加新文件](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png)
+[![添加新文件](hello-android-multiscreen-quickstart-images/vs/07-add-new-file-sml.png)](hello-android-multiscreen-quickstart-images/vs/07-add-new-file.png#lightbox)
 
 在“添加新项”对话框中，选择“Visual C#”>“活动”，然后将活动文件命名为 TranslationHistoryActivity.cs。
 
@@ -171,7 +171,7 @@ translateButton.Click += (sender, e) =>
 
 向仿真器或设备部署应用程序。 下面的屏幕截图描述了正在运行的 **Phoneword** 应用程序:
 
-[![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -181,16 +181,16 @@ translateButton.Click += (sender, e) =>
 
 从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“Properties Pad”中，将按钮“ID”更改为 `@+id/TranslationHistoryButton` 
 
-[![拖动新按钮](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png)
+[![拖动新按钮](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
 将按钮的 **Text** 属性设为 `@string/translationHistory`。 Android 设计器将按字面意思解读此属性，但用户需要做些更改，使按钮的文本正确显示：
 
-[![设置转换历史记录按钮文本](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png)
+[![设置转换历史记录按钮文本](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
 
 在“Solution Pad”中的“Resources”文件夹下展开“values”节点，然后双击字符串资源文件 Strings.xml：
 
-[![打开的字符串](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png)
+[![打开的字符串](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
 
 
 向 **Strings.xml** 文件添加 `translationHistory` 字符串名称和值，然后保存该文件：
@@ -205,12 +205,12 @@ translateButton.Click += (sender, e) =>
 
 “转换历史记录”按钮文本应会更新以反映新的字符串值：
 
-[![按钮反映新的字符串值](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png)
+[![按钮反映新的字符串值](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
 
 在 Design Surface 上选中“转换历史记录”按钮后，在“Properties Pad”中打开“行为”选项卡，然后双击“已启用”复选框以禁用此按钮。 这将导致按钮在设计图面上颜色变暗：
 
-[![禁用转换历史记录按钮](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png)
+[![禁用转换历史记录按钮](hello-android-multiscreen-quickstart-images/xs/06-enabled-false-sml.png)](hello-android-multiscreen-quickstart-images/xs/06-enabled-false.png#lightbox)
 
 ### <a name="creating-the-second-activity"></a>创建第二个活动
 
@@ -304,7 +304,7 @@ translateButton.Click += (sender, e) =>
 
 向仿真器或设备部署应用程序。 下面的屏幕截图描述了正在运行的 **Phoneword** 应用程序:
 
-[![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png)
+[![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 -----
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: e599c56f732f918d2a9c82255bc01182651d506c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 74b22f31fabf70885eca732ef021232124df71bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 简介
 
@@ -129,10 +129,10 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 [示例 UsingDependencyService 解决方案](https://developer.xamarin.com/samples/UsingDependencyService/)是下面显示了 iOS 和 Android，与上面所述的代码更改突出显示。
 
- [ ![iOS 和 Android 解决方案](introduction-images/solution-sml.png "DependencyService 示例解决方案结构")](introduction-images/solution.png "DependencyService 示例解决方案结构")
+ [![iOS 和 Android 解决方案](introduction-images/solution-sml.png "DependencyService 示例解决方案结构")](introduction-images/solution.png#lightbox "DependencyService 示例解决方案结构")
 
 > [!NOTE]
-> **注意：**你**必须**提供每个平台项目中的实现。 如果不注册任何接口的实现，则`DependencyService`将不能解决`Get<T>()`方法在运行时。
+> 你**必须**提供每个平台项目中的实现。 如果不注册任何接口的实现，则`DependencyService`将不能解决`Get<T>()`方法在运行时。
 
 
 ## <a name="related-links"></a>相关链接

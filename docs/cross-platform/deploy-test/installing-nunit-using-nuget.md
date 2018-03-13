@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9dc50aeec88131a1ce49c7e3357382c019774450
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7f42d6e36638bf5c7e98b9363295e37997ee067
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installing-nunit-264-using-nuget"></a>使用 NuGet 安装 NUnit 2.6.4
 
@@ -43,16 +43,16 @@ _本指南介绍了如何使用 NuGet 将 NUnit 3.0 降级到 NUnit 2.6.4。_
 
 1. **打开程序包管理器** - 右键单击“包”，然后从弹出菜单中选择“添加包”：
 
-    [![](installing-nunit-using-nuget-images/add-packages-xs.png "右键单击“包”，然后从弹出菜单中选择“添加包”")](installing-nunit-using-nuget-images/add-packages-xs.png)
+    [![](installing-nunit-using-nuget-images/add-packages-xs.png "右键单击“包”，然后从弹出菜单中选择“添加包”")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
     
 1. **搜索 `NUnit version:2.6.4`** - Visual Studio for Mac 会卸载 NUnit 3.0（如果必要），然后下载并安装 NUnit 2.6.4。 在“添加包”对话框右上角处的“搜索”字段中，输入文本 `nunit version:2.6.4`。 从搜索结果中选择“NUnit”，然后单击“添加包”按钮：
 
-    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "从搜索结果中选择“NUnit”，然后单击“添加包”按钮")](installing-nunit-using-nuget-images/nunit-search-xs.png)
+    [![](installing-nunit-using-nuget-images/nunit-search-xs.png "从搜索结果中选择“NUnit”，然后单击“添加包”按钮")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
 
 
 可通过在 Solution Pad 中检查 NUnit 包版本号来确认是否安装了 NUnit 2.6.4：
 
-[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "在 Solution Pad 中检查 NUnit 包的版本号")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png)
+[![](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png "在 Solution Pad 中检查 NUnit 包的版本号")](installing-nunit-using-nuget-images/nunit-2-6-4-installed.png#lightbox)
 
 ## <a name="summary"></a>摘要
 
@@ -68,7 +68,7 @@ _本指南介绍了如何使用 NuGet 将 NUnit 3.0 降级到 NUnit 2.6.4。_
 
 1. **启动 NuGet 程序包管理器控制台** -  **选择“工具”>“NuGet 程序包管理器”>“程序包管理器控制台”**：
 
-    [![](installing-nunit-using-nuget-images/package-manager-console.png "启动 NuGet 包管理器控制台 - 选择“工具”>“NuGet 包管理器”>“包管理器控制台”")](installing-nunit-using-nuget-images/package-manager-console.png)
+    [![](installing-nunit-using-nuget-images/package-manager-console.png "启动 NuGet 包管理器控制台 - 选择“工具”>“NuGet 包管理器”>“包管理器控制台”")](installing-nunit-using-nuget-images/package-manager-console.png#lightbox)
     
 1. **验证 NUnit 版本** - 可通过运行命令 `Get-Package -Project <UITEST PROJECT>` 来验证已安装的 NUnit 的版本：
 

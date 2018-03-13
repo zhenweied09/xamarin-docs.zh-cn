@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 142ef16606bbf47de073122791fa2509ed6b6353
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7802988833563469fcc25e03ee1bda2046591681
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="how-content-providers-work"></a>如何在内容提供程序的效果
 
@@ -23,14 +23,12 @@ ms.lasthandoff: 02/27/2018
 
 内容提供程序通常由一个 SQLite 数据库，但 API 意味着，使用代码不需要知道有关基础 SQL 的任何信息。 查询都是通过 Uri 使用常量引用列名称 （以减少对基础数据结构的依赖关系），和`ICursor`返回要使用的代码来循环访问。
 
-<a name="Consuming_a_ContentProvider" />
 
 ## <a name="consuming-a-contentprovider"></a>使用 ContentProvider
 
 `ContentProviders` 公开其功能通过在中注册的 Uri **AndroidManifest.xml**的应用程序将数据发布。 是的约定 Uri 和公开的数据列应在其中可用作为常量，以便可以方便地绑定到数据。 Android 的内置`ContentProviders`都提供方便类具有引用中的数据结构的常量[ `Android.Providers` ](https://developer.xamarin.com/api/namespace/Android.Provider/)命名空间。
 
 
-<a name="Built-In_Providers" />
 
 ### <a name="built-in-providers"></a>内置提供程序
 
@@ -51,13 +49,12 @@ Android 提供对各种系统和用户数据使用访问`ContentProviders`:
 - *语音邮件*&ndash;的语音邮件消息的历史记录。
 
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>类概述
 
 在使用时使用的主类`ContentProvider`如下所示：
 
-[![内容提供程序应用程序和 Consuming 应用程序交互的类图](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png)
+[![内容提供程序应用程序和 Consuming 应用程序交互的类图](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
 在此图中，`ContentProvider`实现查询并注册 URI 的其他应用程序用来查找数据。 `ContentResolver`起到代理的作用`ContentProvider`（查询、 插入、 更新和删除方法）。 `SQLiteOpenHelper`包含使用的数据`ContentProvider`，但不是直接公开给使用应用。
 `CursorAdapter`传递光标返回`ContentResolver`要在中显示`ListView`。 `UriMatcher`是处理查询时就会分析 Uri 的帮助器类。

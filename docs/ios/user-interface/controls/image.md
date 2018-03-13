@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 71f3774c12add26e818b0859cf90c17ab6358538
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 716189fbf1518e9100a78cc5ae64e9e63a24c949
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="displaying-images"></a>显示图像
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 此屏幕快照显示**生成操作**文件时出现的选项，则右键单击：
 
- [ ![](image-images/image30a.png "生成操作菜单")](image-images/image30a.png)
+ [![](image-images/image30a.png "生成操作菜单")](image-images/image30a.png#lightbox)
 
 适用于 Mac 的 visual Studio 通常情况下将选择正确**生成操作**自动，但你应注意的这些设置，尤其是在你的项目中移动文件。
 
@@ -33,15 +33,15 @@ ms.lasthandoff: 02/27/2018
 
 若要将图像文件添加到你的项目中，首先右键单击该项目并选择**添加文件...**
 
- [ ![](image-images/image31a.png "添加文件...菜单")](image-images/image31a.png)
+ [![](image-images/image31a.png "添加文件...菜单")](image-images/image31a.png#lightbox)
 
 选择 （或多个图像） 想要包括在标准文件对话框。 默认值生成操作将在映像**BundleResource** – 不重写此值，除非你有特定原因。
 
- [ ![](image-images/image32a.png "添加文件对话框")](image-images/image32a.png)
+ [![](image-images/image32a.png "添加文件对话框")](image-images/image32a.png#lightbox)
 
 将将映像添加到你的项目，并可用于加载并显示在代码中。 此屏幕截图中显示的图像添加到 iOS 应用程序项目：
 
- [ ![](image-images/image33a.png "在项目中的映像")](image-images/image33a.png)
+ [![](image-images/image33a.png "在项目中的映像")](image-images/image33a.png#lightbox)
 
 ### <a name="what-is-the-resources-directory"></a>什么是资源目录？
 
@@ -61,11 +61,11 @@ Resources 目录是在库项目中，尤其有用，因为代码可以假定这�
 
 若要显示使用设计器的图像，图像视图应用作容器，并可以显示单个映像或图像的动画。 **图像视图**图标从工具箱如下所示：
 
- [ ![](image-images/image35a.png "工具箱中的 ImageView")](image-images/image35.png)
+ [![](image-images/image35a.png "工具箱中的 ImageView")](image-images/image35.png#lightbox)
 
 拖动**图像视图**从**Toobox**到视图控制器上。 然后在 * * 图像视图 > 映像 * * 下拉列表中的将提供你的项目中的所有可用的图像文件的列表。 选择任一这些以将其添加到图像视图。
 
- [ ![](image-images/image36a.png "工具箱中的 ImageView")](image-images/image36.png)
+ [![](image-images/image36a.png "工具箱中的 ImageView")](image-images/image36.png#lightbox)
 
 ### <a name="displaying-the-image-programmatically"></a>以编程方式显示的图像
 

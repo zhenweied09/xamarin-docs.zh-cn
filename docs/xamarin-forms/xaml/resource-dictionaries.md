@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 0c2765551c16be605bc78d9ef32a91fd2c4ead8c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-dictionaries"></a>资源字典
 
@@ -83,10 +83,10 @@ A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.
 
 第一个[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例检索和使用`LabelPageHeadingStyle`在应用程序级别中定义的资源[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，与第二个`Label`实例检索和使用`LabelNormalStyle`控件级别中定义资源`ResourceDictionary`。 同样， [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例检索和使用`NormalTextColor`在应用程序级别中定义的资源`ResourceDictionary`，和`MediumBoldText`控件级别中定义资源`ResourceDictionary`。 这将导致以下屏幕截图中所示的外观：
 
-[![](resource-dictionaries-images/screenshots-sml.png "消耗 ResourceDictionary 资源")](resource-dictionaries-images/screenshots.png "消耗 ResourceDictionary 资源")
+[![](resource-dictionaries-images/screenshots-sml.png "消耗 ResourceDictionary 资源")](resource-dictionaries-images/screenshots.png#lightbox "消耗 ResourceDictionary 资源")
 
 > [!NOTE]
-> **请注意**： 特定于单个页面的资源不应包括在应用程序级别资源字典，这种情况下资源将然后分析在而不是应用程序启动时所需的页。 有关详细信息，请参阅[减少应用程序的资源字典大小](~/xamarin-forms/deploy-test/performance.md)。
+> 特定于单个页面的资源不应包含应用程序级别资源字典中，在这种资源将然后分析在而不是应用程序启动时所需的页。 有关详细信息，请参阅[减少应用程序的资源字典大小](~/xamarin-forms/deploy-test/performance.md)。
 
 ## <a name="overriding-resources"></a>重写资源
 
@@ -118,7 +118,7 @@ A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.
 
 原始`PageBackgroundColor`和`NormalTextColor`情况下，应用程序级别定义重写了`PageBackgroundColor`和`NormalTextColor`页级别定义的实例。 因此，页背景色变为蓝色，并且在页上的文本变为黄色，如以下屏幕截图中所示：
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "重写 ResourceDictionary 资源")](resource-dictionaries-images/overridding-screenshots.png "重写 ResourceDictionary 资源")
+[![](resource-dictionaries-images/overridding-screenshots-sml.png "重写 ResourceDictionary 资源")](resource-dictionaries-images/overridding-screenshots.png#lightbox "重写 ResourceDictionary 资源")
 
 但请注意的后台栏[ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)仍为黄色，因为[ `BarBackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.NavigationPage.BarBackgroundColor/)属性设置为的值`PageBackgroundColor`应用程序中定义的资源级别[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)。
 
@@ -175,7 +175,7 @@ A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.
 1. 已通过合并的资源字典中包含的资源`MergedDictionaries`中列出的顺序集合`MergedDictionaries`属性。
 
 > [!NOTE]
-> **请注意**： 搜索资源字典可以是计算密集型任务，如果应用程序包含多个较大的资源字典。 因此，确保应用程序中的每一页仅使用适用于页上，以避免不必要的搜索的资源字典。
+> 搜索资源字典可以是计算密集型任务，如果应用程序包含多个较大的资源字典。 因此，确保应用程序中的每一页仅使用适用于页上，以避免不必要的搜索的资源字典。
 
 ## <a name="summary"></a>摘要
 

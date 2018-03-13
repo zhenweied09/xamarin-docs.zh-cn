@@ -1,17 +1,17 @@
 ---
 title: "UrhoSharp Android 支持"
-description: "Android 特定安装程序和功能"
+description: "Android 特定的安装程序并 UrhoSharp 的功能。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 5100fd4ac573021e088a88446f5f6559d49c4972
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f99b8d2d9f779bc0cf14d76c110d9769ec49ad53
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-android-support"></a>UrhoSharp Android 支持
 
@@ -21,11 +21,11 @@ _Android 特定安装程序和功能_
 
 在下面的页面中，假定`MyGame`是的一个子类`Application`类。
 
-# <a name="architectures"></a>体系结构
+## <a name="architectures"></a>体系结构
 
 **支持的体系结构**: x86、 armeabi，armeabi v7a
 
-# <a name="create-a-project"></a>创建项目
+## <a name="create-a-project"></a>创建项目
 
 创建 Android 项目，并添加 UrhoSharp NuGet 包。
 
@@ -33,7 +33,7 @@ _Android 特定安装程序和功能_
 
 ![项目设置](android-images/image-3.png "包含资产的资产目录中添加数据")
 
-# <a name="configure-and-launching-urho"></a>配置和启动 Urho
+## <a name="configure-and-launching-urho"></a>配置和启动 Urho
 
 添加 using 语句`Urho`和`Urho.Android`命名空间，并将这段代码用于初始化 Urho，以及启动你的应用程序。
 
@@ -45,7 +45,7 @@ UrhoSurface.RunInActivity<MyGame>();
 
 这将作为内容与游戏打开全屏活动。
 
-# <a name="custom-embedding-of-urho"></a>自定义嵌入的 Urho
+## <a name="custom-embedding-of-urho"></a>自定义嵌入的 Urho
 
 你可以或者使其 Urho 接管整个应用程序屏幕中，并且若要使用它为你的应用程序的一个组件，可以创建`SurfaceView`通过：
 

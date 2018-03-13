@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f1d968dcee0cb9b6cd0cee8fa60be4f4dbb2833
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 600d651eae1f470f17511afaf9bc86c80ffc1a75
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications"></a>通知
 
@@ -99,17 +99,17 @@ OS 决定是否以显示静态或动态视图基于许多因素影响。 你必�
 适用于 Mac 的 visual Studio 将显示其他选项，监视扩展器设置为时**启动项目**。
 右键单击监视扩展项目并选择**运行与 > 自定义参数...**:
     
-[![](notifications-images/runwith-customparams-sml.png "使用自定义属性运行")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "使用自定义属性运行")](notifications-images/runwith-customparams.png#lightbox)
     
 这将打开**执行参数**窗口，其中包含**WatchKit**选项卡。选择**通知**并提供 JSON 负载，然后按**执行**在模拟器中启动监视应用程序：
     
-[![](notifications-images/runwith-execargs-sml.png "选择通知负载默认")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "选择通知负载默认")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 若要编辑的监视扩展中右键单击 Visual Studio 设置测试通知负载**项目属性**。 转到**调试**部分，并从列表中 （它自动列出项目中包含的所有 JSON 文件） 选择通知 JSON 文件。
     
-[![](notifications-images/runwith-execargs-sml-vs.png "选择通知 JSON 文件")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "选择通知 JSON 文件")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 监视扩展时**启动项目**，Visual Studio 将显示其他选项，如下所示。 选择一个**通知**选项用于启动中监视应用**通知**（使用属性窗口中选定的 JSON 文件） 的模式：
     

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: f55620720bb986142a56de7e8602be56280006d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -34,7 +34,7 @@ _iCloud Api 使 iOS 8 应用程序能够将数据存储在 iCloud，用于在用
 
 CloudKit 是到 iCloud 服务器使开发人员可以访问的方法。 它为 iCloud 驱动器和 iCloud 照片库提供了基础。 CloudKit 支持在 Mac OS X 和 Apple iOS 设备上。
 
- [ ![](intro-to-cloudkit-images/image1.png "如何在 Mac OS X 和 Apple iOS 设备上支持 CloudKit")](intro-to-cloudkit-images/image1.png)
+ [![](intro-to-cloudkit-images/image1.png "如何在 Mac OS X 和 Apple iOS 设备上支持 CloudKit")](intro-to-cloudkit-images/image1.png#lightbox)
 
 CloudKit 使用 iCloud 帐户基础结构。 如果没有用户登录到 iCloud 在设备上的帐户，CloudKit 将使用其 ID 来标识用户。 如果没有帐户可用，然后将提供有限的只读访问权限。
 
@@ -55,11 +55,11 @@ Xamarin 应用程序可以利用 CloudKit Framework 之前，必须正确配置�
 1.  用于 Mac 或 Visual Studio，在 Visual Studio 中打开项目。
 2.  在**解决方案资源管理器**，打开**Info.plist**文件，并确保**捆绑标识符**匹配已在中定义的一个**应用程序 ID**创建，因为设置的一部分设置：
  
-    [ ![](intro-to-cloudkit-images/image26a.png "输入的捆绑标识符")](intro-to-cloudkit-images/image26a-orig.png "Info.plist file displaying Bundle Identifier")
+    [![](intro-to-cloudkit-images/image26a.png "输入的捆绑标识符")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3.  向下的滚动到底部**Info.plist**文件，然后选择**启用后台模式**，**位置更新**和**远程通知**:
 
-    [ ![](intro-to-cloudkit-images/image27a.png "选择已启用的后台模式、 位置更新和远程通知")](intro-to-cloudkit-images/image27a-orig.png "Info.plist file displaying background modes")
+    [![](intro-to-cloudkit-images/image27a.png "选择已启用的后台模式、 位置更新和远程通知")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4.  右键单击解决方案并选择中的 iOS 项目**选项**。
 5.  选择**iOS 捆绑签名**，选择**开发人员标识**和**预配配置文件**上述步骤中创建。
 6.  确保**Entitlements.plist**包括**启用 iCloud** ，**键-值存储**和**CloudKit** 。
@@ -95,7 +95,7 @@ Xamarin 应用程序可以利用 CloudKit Framework 之前，必须正确配置�
 
 CloudKit 旨在提供相同的好处，如上面列出，并将它们应用于使用基于云的信息：
 
- [ ![](intro-to-cloudkit-images/image31.png "CloudKit 应用进行通信使用容器")](intro-to-cloudkit-images/image31.png)
+ [![](intro-to-cloudkit-images/image31.png "CloudKit 应用进行通信使用容器")](intro-to-cloudkit-images/image31.png#lightbox)
 
 就像应用程序正在一样的一对多运行在设备上，因此是与 iCloud 一多的应用程序的通信。 每个这些不同的通信接收器称为容器。
 
@@ -117,13 +117,13 @@ iCloud.com.company-name.application-name
 
 CloudKit 的主要功能之一是需要应用程序的数据模型和复制最多 iCloud 服务器该模型。 某些信息适用于创建它的用户、 其他信息是以公共方式使用 （如餐馆评论），用户无法创建的公共数据或它可能是开发人员已发布应用程序的信息。 在任一情况下，受众不只是单个用户，但社区的人员。
 
- [ ![](intro-to-cloudkit-images/image32.png "CloudKit 容器关系图")](intro-to-cloudkit-images/image32.png)
+ [![](intro-to-cloudkit-images/image32.png "CloudKit 容器关系图")](intro-to-cloudkit-images/image32.png#lightbox)
 
 之内一个容器，首先是公共的数据库。 这是其中的所有公共信息存在，共同 mingles。 此外，还有一些应用程序的每个用户的多个单个专用数据库。
 
 当 iOS 设备上运行，应用程序将仅具有对当前登录的 iCloud 用户的信息的访问。 因此应用程序的视图的容器将如下所示：
 
- [ ![](intro-to-cloudkit-images/image33.png "容器应用程序视图")](intro-to-cloudkit-images/image33.png)
+ [![](intro-to-cloudkit-images/image33.png "容器应用程序视图")](intro-to-cloudkit-images/image33.png#lightbox)
 
 它仅可以查看公共数据库和专用数据库与当前登录的 iCloud 用户关联。
 
@@ -186,7 +186,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 容器保存数据库，并且在数据库记录。 记录是与其他 CloudKit 结构化的数据移动的机制：
 
- [ ![](intro-to-cloudkit-images/image34.png "容器包含数据库，以及在数据库内是记录")](intro-to-cloudkit-images/image34.png)
+ [![](intro-to-cloudkit-images/image34.png "容器包含数据库，以及在数据库内是记录")](intro-to-cloudkit-images/image34.png#lightbox)
 
 记录都公开在通过 CloudKit Framework`CKRecord`类，该类包装键-值对。 应用程序中的对象实例是否等效于`CKRecord`CloudKit 中。 此外，每个`CKRecord`拥有一个记录类型，这是相当于对象的类。
 
@@ -227,11 +227,11 @@ await CloudManager.SaveAsync (newRecord);
 
 记录给定数据库内不存在自行 – 在记录区域内一起存在的组的记录。 记录区域可以被想象成表传统的关系数据库中：
 
- [ ![](intro-to-cloudkit-images/image35.png "在记录区域内一起存在的记录的组")](intro-to-cloudkit-images/image35.png)
+ [![](intro-to-cloudkit-images/image35.png "在记录区域内一起存在的记录的组")](intro-to-cloudkit-images/image35.png#lightbox)
 
 可以在给定的记录区域内的多个记录和给定数据库内的多个记录区域。 每个数据库包含默认记录区域：
 
- [ ![](intro-to-cloudkit-images/image36.png "每个数据库包含的默认记录区域和自定义区域")](intro-to-cloudkit-images/image36.png)
+ [![](intro-to-cloudkit-images/image36.png "每个数据库包含的默认记录区域和自定义区域")](intro-to-cloudkit-images/image36.png#lightbox)
 
 这是默认情况下存储记录的位置。 此外，可以创建自定义记录区域。 记录完成在哪些原子提交和更改跟踪的基粒度的区域表示。
 
@@ -258,7 +258,7 @@ var recordID =  new CKRecordID("My Record");
 
 引用提供给定数据库内的相关记录之间的关系：
 
- [ ![](intro-to-cloudkit-images/image37.png "引用提供给定数据库内的相关记录之间的关系")](intro-to-cloudkit-images/image37.png)
+ [![](intro-to-cloudkit-images/image37.png "引用提供给定数据库内的相关记录之间的关系")](intro-to-cloudkit-images/image37.png#lightbox)
 
 在上面的示例中，父项，以便子记录的父记录，该子级则拥有子级。 关系从子记录将转到父记录，并称为*返回引用*。
 
@@ -283,7 +283,7 @@ var reference = new CKReference(newRecord, new CKReferenceAction());
 
 资产允许的大型非结构化的数据将被上载到 iCloud 且与给定的记录关联的文件：
 
- [ ![](intro-to-cloudkit-images/image38.png "资产允许的大型非结构化的数据将被上载到 iCloud 且与给定的记录关联的文件")](intro-to-cloudkit-images/image38.png)
+ [![](intro-to-cloudkit-images/image38.png "资产允许的大型非结构化的数据将被上载到 iCloud 且与给定的记录关联的文件")](intro-to-cloudkit-images/image38.png#lightbox)
 
 在客户端，`CKRecord`创建描述要上载到 iCloud 服务器上的文件。 A`CKAsset`创建了包含文件，并链接到描述该记录。
 
@@ -594,7 +594,7 @@ ThisApp.PublicDatabase.PerformQuery(query, CKRecordZone.DefaultRecordZone().Zone
 
 在实施之前订阅在 C# 代码，让我们订阅的工作原理的快速的概述：
 
- [ ![](intro-to-cloudkit-images/image39.png "订阅如何工作的概述")](intro-to-cloudkit-images/image39.png)
+ [![](intro-to-cloudkit-images/image39.png "订阅如何工作的概述")](intro-to-cloudkit-images/image39.png#lightbox)
 
 上图显示典型订阅过程，如下所示：
 
@@ -697,7 +697,7 @@ CloudKit 向开发人员提供了以下的用户信息：
 
 如上面所述，CloudKit 为提供一种要唯一标识给定的用户的应用程序：
 
- [ ![](intro-to-cloudkit-images/image40.png "唯一地确定给定的用户")](intro-to-cloudkit-images/image40.png)
+ [![](intro-to-cloudkit-images/image40.png "唯一地确定给定的用户")](intro-to-cloudkit-images/image40.png#lightbox)
 
 没有在用户的设备和所有 CloudKit 容器中特定的用户专用数据库上运行的客户端应用程序。 将客户端应用程序链接到这些特定用户之一进行。 这取决于用户登录到设备上本地 iCloud。
 
@@ -732,7 +732,7 @@ CKContainer.DefaultContainer.FetchUserRecordId ((recordID, err) => {
 
 CloudKit 每个用户具有特定的元数据描述了这些功能。 此元数据表示为 CloudKit 记录：
 
- [ ![](intro-to-cloudkit-images/image41.png "CloudKit 每个用户都具有描述了这些功能的特定元数据")](intro-to-cloudkit-images/image41.png)
+ [![](intro-to-cloudkit-images/image41.png "CloudKit 每个用户都具有描述了这些功能的特定元数据")](intro-to-cloudkit-images/image41.png#lightbox)
 
 在专用数据库内寻找存在的特定用户是容器的定义该用户的一个记录。 有公共数据库的容器的每个用户一个内的多个用户记录。 以下方法之一将具有记录 ID 相匹配当前登录用户的记录 id。
 
@@ -768,7 +768,7 @@ CloudKit 是设计，默认情况下，若要保护的当前登录用户的隐�
 
 假设作为中选择允许应用程序用户限制到他们的用户帐户信息的访问，它们可检测到应用程序的其他用户：
 
- [ ![](intro-to-cloudkit-images/image42.png "用户可以向应用程序的其他用户可发现")](intro-to-cloudkit-images/image42.png)
+ [![](intro-to-cloudkit-images/image42.png "用户可以向应用程序的其他用户可发现")](intro-to-cloudkit-images/image42.png#lightbox)
 
 客户端应用程序与之对话容器和容器与之对话的 iCloud 访问用户信息。 用户可以提供电子邮件地址，并且发现可以用于获取返回有关用户的信息。 （可选） 用户 ID，也可以使用要发现关于用户信息。
 
@@ -849,40 +849,40 @@ CloudKit 对于应用程序的记录类型和数据提供单独的开发和生�
 
 1. 在 Visual Studio for Ma，编译的应用程序**版本** > **iOS 设备**: 
 
-    [![](intro-to-cloudkit-images/shipping01.png "编译的应用程序版本")](intro-to-cloudkit-images/shipping01.png)
+    [![](intro-to-cloudkit-images/shipping01.png "编译的应用程序版本")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
 2. 从**生成**菜单上，选择**存档**: 
 
-    [![](intro-to-cloudkit-images/shipping02.png "选择存档")](intro-to-cloudkit-images/shipping02.png)
+    [![](intro-to-cloudkit-images/shipping02.png "选择存档")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
 3. **存档**将创建并显示在 Visual Studio for Mac: 
 
-    [![](intro-to-cloudkit-images/shipping03.png "存档将创建和显示")](intro-to-cloudkit-images/shipping03.png)
+    [![](intro-to-cloudkit-images/shipping03.png "存档将创建和显示")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. 启动 **Xcode**。
 5. 从**窗口**菜单上，选择**组织程序**: 
 
-    [![](intro-to-cloudkit-images/shipping04.png "选择组织程序")](intro-to-cloudkit-images/shipping04.png)
+    [![](intro-to-cloudkit-images/shipping04.png "选择组织程序")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
 6. 选择应用程序的存档，然后单击**导出...**按钮： 
 
-    [![](intro-to-cloudkit-images/shipping05.png "应用程序的存档")](intro-to-cloudkit-images/shipping05.png)
+    [![](intro-to-cloudkit-images/shipping05.png "应用程序的存档")](intro-to-cloudkit-images/shipping05.png#lightbox)
     
 7. 选择用于导出的方法，然后单击**下一步**按钮： 
 
-    [![](intro-to-cloudkit-images/shipping06.png "选择用于导出的方法")](intro-to-cloudkit-images/shipping06.png)
+    [![](intro-to-cloudkit-images/shipping06.png "选择用于导出的方法")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
 8. 选择**开发团队**从该下拉列表并单击**选择**按钮： 
 
-    [![](intro-to-cloudkit-images/shipping07.png "从下拉列表中选择开发团队")](intro-to-cloudkit-images/shipping07.png)
+    [![](intro-to-cloudkit-images/shipping07.png "从下拉列表中选择开发团队")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
 9. 选择**生产**从该下拉列表并单击**下一步**按钮： 
 
-    [![](intro-to-cloudkit-images/shipping08.png "从下拉列表中选择生产")](intro-to-cloudkit-images/shipping08.png)
+    [![](intro-to-cloudkit-images/shipping08.png "从下拉列表中选择生产")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
 10. 查看设置，然后单击**导出**按钮： 
 
-    [![](intro-to-cloudkit-images/shipping09.png "查看设置")](intro-to-cloudkit-images/shipping09.png)
+    [![](intro-to-cloudkit-images/shipping09.png "查看设置")](intro-to-cloudkit-images/shipping09.png#lightbox)
 
 11. 选择用于生成生成的应用程序的位置`.ipa`文件。
 

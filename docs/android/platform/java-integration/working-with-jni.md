@@ -7,18 +7,17 @@ ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: d1c441de089a84c93c251588115abecb19816868
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="working-with-jni"></a>使用 JNI
 
 _Xamarin.Android 允许编写而不是 Java 的 C# 中的 Android 应用。多个程序集附带了 Xamarin.Android 提供 Java 库，包括 Mono.Android.dll 和 Mono.Android.GoogleMaps.dll 的绑定。但是，对于每个可能的 Java 库，不提供了绑定的并且每个 Java 类型和成员，可能不会绑定提供的绑定。若要使用未绑定 Java 类型和成员，可能使用 Java 本机接口 (JNI)。本文将演示如何使用 JNI 与 Java 类型和成员从 Xamarin.Android 应用程序进行交互。_
 
-<a name="_Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -37,14 +36,12 @@ Xamarin.Android 提供`Mono.Android.dll`程序集，其中提供了绑定适用�
 -  如何公开的接口。
 
 
-<a name="_Requirements" />
 
 ## <a name="requirements"></a>惠?
 
 JNI，如通过公开[Android.Runtime.JNIEnv 命名空间](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)，可用于 Xamarin.Android 的每个版本。
 若要绑定 Java 类型和接口，必须使用 Xamarin.Android 4.0 或更高版本。
 
-<a name="_Managed_Callable_Wrappers" />
 
 ## <a name="managed-callable-wrappers"></a>托管的可调用包装器
 
@@ -58,7 +55,6 @@ A**管理可调用包装器**(**MCW**) 是*绑定*Java 类或接口，以便客�
 第一个用途是复杂性的纯粹是复杂性的为了方便而且封装，以便使用者具有一套简单、 托管的类来使用。 这需要使用各种[JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)更高版本在本文中所述的成员。 请记住，管理可调用包装器不需要严格&ndash;JNI 使用为"内联"是完全可以接受并可用于一次性使用未绑定的 Java 成员。 子类分类和接口的实现需要托管可调用包装的使用。
 
 
-<a name="_Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android 可调用包装器
 
@@ -70,7 +66,6 @@ Android 的可调用包装器 (ACW) 所需，每当需要调用托管的代码; 
 Android 可调用包装器生成的**monodroid.exe**程序期间[生成过程](~/android/deploy-test/building-apps/build-process.md)，并且 （直接或间接） 继承的所有类型生成[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)。
 
 
-<a name="_Implementing_Interfaces" />
 
 ### <a name="implementing-interfaces"></a>实现接口
 
@@ -90,7 +85,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="_Implementation_Details" />
 
 ### <a name="implementation-details"></a>实现详细信息
 
@@ -155,7 +149,6 @@ public class HelloAndroid extends android.app.Activity {
 请注意，保留了的基类，并在托管代码中被重写每个方法均提供本机方法声明。
 
 
-<a name="_ExportAttribute_and_ExportFieldAttribute" />
 
 ### <a name="exportattribute-and-exportfieldattribute"></a>ExportAttribute 和 ExportFieldAttribute
 
@@ -176,7 +169,6 @@ public class HelloAndroid extends android.app.Activity {
 
 [ExportAttribute](https://developer.xamarin.com/samples/monodroid/ExportAttribute/)示例项目演示了如何使用这些属性。
 
-<a name="_Troubleshooting_ExportAttribute_and_ExportFieldAttribute" />
 
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>ExportAttribute 和 ExportFieldAttribute 疑难解答
 
@@ -185,7 +177,6 @@ public class HelloAndroid extends android.app.Activity {
 -   在发布版本`MissingMethodException`进行导出方法&ndash;中发布版本，`MissingMethodException`进行导出方法。 （此问题被固定的 Xamarin.Android 的最新版本。）
 
 
-<a name="_ExportParameterAttribute" />
 
 ### <a name="exportparameterattribute"></a>ExportParameterAttribute
 
@@ -200,7 +191,6 @@ public class HelloAndroid extends android.app.Activity {
 
 如果需要为导出方法，这些类型`ExportParameterAttribute`必须用于显式授予相应的参数或返回类型的值。
 
- <a name="_Annotation_Attribute" />
 
 
 ### <a name="annotation-attribute"></a>批注属性
@@ -226,7 +216,6 @@ public class HelloAndroid extends android.app.Activity {
 -   到属性的属性不起作用。 改为使用的属性 getter 或 setter 的属性。
 
 
-<a name="_Class_Binding" />
 
 ## <a name="class-binding"></a>类绑定
 
@@ -245,7 +234,6 @@ public class HelloAndroid extends android.app.Activity {
 -  如果子类分类是必需的需要具有类型[RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)上的类型声明自定义特性[RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/)设置为`true`。
 
 
-<a name="_Declaring_Type_Handle" />
 
 ### <a name="declaring-type-handle"></a>声明类型句柄
 
@@ -257,7 +245,6 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 请参阅[JNI 类型引用](#_JNI_Type_References)部分以了解详细信息有关`CLASS`令牌。
 
-<a name="_Binding_Fields" />
 
 ### <a name="binding-fields"></a>绑定字段
 
@@ -297,7 +284,6 @@ public static System.IO.Stream In
 
 许多[Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/)类型具有`FromJniHandle`方法会将转换 JNI 引用到所需的类型。
 
- <a name="_Method_Binding" />
 
 
 ### <a name="method-binding"></a>方法绑定
@@ -318,8 +304,7 @@ public static System.IO.Stream In
 
 方法绑定是可能不仅仅方法调用。 方法绑定还包括允许的方法 （对于抽象和非 final 方法） 中重写或实现 （为接口方法）。 [支持继承接口](#_Supporting_Inheritance,_Interfaces_1)部分介绍支持虚方法和接口方法的复杂性。
 
- <a name="_Static_Methods" />
-
+<a name="_Static_Methods_1" />
 
 #### <a name="static-methods"></a>静态方法
 
@@ -344,7 +329,6 @@ public static Java.Lang.Runtime GetRuntime ()
 我们将方法句柄存储在静态字段中，注意`id_getRuntime`。 这是一种性能优化，以便方法句柄不需要在每次调用查找。 不需要缓存方法句柄以这种方式。 一旦获得方法句柄， [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/)用于调用方法。 `JNIEnv.CallStaticObjectMethod` 返回`IntPtr`其中包含返回的 Java 实例的句柄。
 [Java.Lang.Object.GetObject&lt;T&gt;（IntPtr，JniHandleOwnership）](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)用于将 Java 句柄转换为强类型化的对象实例。
 
- <a name="_Non-virtual_Instance_Method_Binding" />
 
 
 #### <a name="non-virtual-instance-method-binding"></a>非虚拟实例方法绑定
@@ -368,7 +352,6 @@ public Java.Lang.Class Class {
 这是一种性能优化，以便方法句柄不需要在每次调用查找。 不需要缓存方法句柄以这种方式。 一旦获得方法句柄， [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/)用于调用方法。 `JNIEnv.CallStaticObjectMethod` 返回`IntPtr`其中包含返回的 Java 实例的句柄。
 [Java.Lang.Object.GetObject&lt;T&gt;（IntPtr，JniHandleOwnership）](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)用于将 Java 句柄转换为强类型化的对象实例。
 
-<a name="_Binding_Constructors" />
 
 ### <a name="binding-constructors"></a>绑定的构造函数
 
@@ -444,8 +427,7 @@ public Integer (int value)
 
 [JNIEnv.CreateInstance](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CreateInstance/)方法是帮助器执行`JNIEnv.FindClass`， `JNIEnv.GetMethodID`， `JNIEnv.NewObject`，和`JNIEnv.DeleteGlobalReference`从返回的值上`JNIEnv.FindClass`。 有关详细信息，请参阅下一节。
 
- <a name="_Supporting_Inheritance,_Interfaces" />
-
+<a name="_Supporting_Inheritance,_Interfaces_1" />
 
 ### <a name="supporting-inheritance-interfaces"></a>支持继承，接口
 
@@ -488,7 +470,6 @@ partial class ManagedAdder : Adder {
 
 在这里， `Adder` C# 类型*别名* `Adder` Java 类型。 `[Register]`属性用于指定的 JNI 名称`mono.android.test.Adder`Java 类型和`DoNotGenerateAcw`属性用来抑制 ACW 生成。 这将导致在生成中为 ACW`ManagedAdder`类型，可在正确子类`mono.android.test.Adder`类型。 如果`RegisterAttribute.DoNotGenerateAcw`属性未被使用，则 Xamarin.Android 生成过程将已生成新`mono.android.test.Adder`Java 类型。 这将导致编译错误，作为`mono.android.test.Adder`类型也会出现两次，在两个单独的文件。
 
- <a name="_Binding_Virtual_Methods" />
 
 
 ### <a name="binding-virtual-methods"></a>绑定虚拟方法
@@ -501,7 +482,6 @@ partial class ManagedAdder : Adder {
 
 1.  **方法注册**
 
-<a name="_Method_Binding" />
 
 #### <a name="method-binding"></a>方法绑定
 
@@ -562,7 +542,6 @@ partial class Adder {
 
 当`GetType`不匹配`ThresholdType`，`Adder`子类别 (例如通过`ManagedAdder`)，和`Adder.Add`如果子类调用将仅调用实现`base.Add`。 这是非虚拟调度大小写形式，这正是`ThresholdClass`传入。 `ThresholdClass` 指定的 Java 类将提供要调用的方法的实现。
 
- <a name="_Method_Registration" />
 
 
 #### <a name="method-registration"></a>方法注册
@@ -657,7 +636,6 @@ int>`委托，它是指`n_Add`方法，然后调用[JNINativeWrapper.CreateDeleg
 
 注意： 始终使用`JniHandleOwnership.DoNotTransfer`通过 Java 实例中获取 MCW 时。 将它们视为的本地引用 (并因此调用`JNIEnv.DeleteLocalRef`) 将中断托管-&gt; Java-&gt;管理堆栈转换。
 
- <a name="_Complete_Adder_Binding" />
 
 
 ### <a name="complete-adder-binding"></a>完成 Adder 绑定
@@ -719,7 +697,6 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
- <a name="_Restrictions" />
 
 
 ### <a name="restrictions"></a>限制
@@ -738,7 +715,6 @@ public class Adder : Java.Lang.Object {
 如果该类型必须包含一个实例字段，它可以指`Java.Lang.Object`实例，则字段类型必须是`System.WeakReference`或`GCHandle`。
 
 
- <a name="_Binding_Abstract_Methods" />
 
 ## <a name="binding-abstract-methods"></a>绑定抽象方法
 
@@ -778,7 +754,6 @@ partial class AdderInvoker : Adder {
 
 `Invoker`类型仅时需要获取 JNI 的 Java 创建实例的引用。
 
- <a name="_Binding_Interfaces" />
 
 ## <a name="binding-interfaces"></a>绑定接口
 
@@ -793,7 +768,6 @@ public interface Progress {
 接口绑定具有两个部分： C# 接口定义和接口的调用程序定义。
 
 
-<a name="_Interface_Definition" />
 
 ### <a name="interface-definition"></a>接口定义
 
@@ -828,7 +802,6 @@ public interface IAdderProgress : IJavaObject {
 请注意，在上述我们映射 Java`int[]`参数[JavaArray&lt;int&gt;](https://developer.xamarin.com/api/type/Android.Runtime.JavaArray%601/)。
 没有必要这样做： 我们无法绑定到 C# `int[]`，或`IList<int>`，还是其他内容完全。 选择任何类型，`Invoker`需要能够将其转换为 Java`int[]`调用的类型。
 
-<a name="_Invoker_Definition" />
 
 ### <a name="invoker-definition"></a>调用程序定义
 
@@ -857,7 +830,6 @@ partial class ISortedMapInvoker : Java.Lang.Object, ISortedMap {
 
 调用程序定义具有六个部分： 构造函数中，`Dispose`方法，`ThresholdType`和`ThresholdClass`成员，`GetObject`方法、 接口方法的实现和连接器方法的实现。
 
- <a name="_Constructor" />
 
 
 #### <a name="constructor"></a>构造函数
@@ -879,7 +851,6 @@ partial class IAdderProgressInvoker {
 
 注意：`Handle`属性必须使用在构造函数体内，而不`handle`参数，截止日期 Android v4.0`handle`基构造函数完成执行后参数可能无效。
 
-<a name="_Dispose_Method" />
 
 #### <a name="dispose-method"></a>Dispose 方法
 
@@ -897,7 +868,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_ThresholdType_and_ThresholdClass" />
 
 #### <a name="thresholdtype-and-thresholdclass"></a>ThresholdType 和 ThresholdClass
 
@@ -918,7 +888,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_GetObject_Method" />
 
 #### <a name="getobject-method"></a>GetObject 方法
 
@@ -933,7 +902,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_Interface_Methods" />
 
 #### <a name="interface-methods"></a>接口方法
 
@@ -951,7 +919,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
- <a name="_Connector_Methods" />
 
 
 #### <a name="connector-methods"></a>连接器方法
@@ -986,7 +953,6 @@ int[] _values = (int[]) JNIEnv.GetArray(values, JniHandleOwnership.DoNotTransfer
 
 但是，请注意，`JNIEnv.GetArray`将复制整个数组 Vm，以便为大型数组这可能导致大量添加 GC 压力之间。
 
-<a name="_Complete_Invoker_Definition" />
 
 ### <a name="complete-invoker-definition"></a>完成调用程序定义
 
@@ -1060,7 +1026,6 @@ new JValue (currentSum));
 }
 ```
 
- <a name="_JNI_Object_References" />
 
 
 ## <a name="jni-object-references"></a>JNI 对象引用
@@ -1077,13 +1042,11 @@ Android 仅允许有限的数量的本地引用，以便在任何给定时间，
 
 Android v2.2 (Froyo) 及更高版本，弱全局引用才可用。 可以使用删除弱全局引用[JNIEnv.DeleteWeakGlobalRef](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.DeleteWeakGlobalRef/(System.IntPtr))。
 
-<a name="_Dealing_With_JNI_Local_References" />
 
 ### <a name="dealing-with-jni-local-references"></a>处理 JNI 本地引用
 
 [JNIEnv.GetObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetObjectField/)， [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/)， [JNIEnv.CallObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallObjectMethod/)， [JNIEnv.CallNonvirtualObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualObjectMethod/)和[JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/)方法返回`IntPtr`其中包含一个 Java JNI 本地引用或`IntPtr.Zero`如果 Java 返回`null`。 由于可以在未完成后 （512 个条目），最好是确保引用的本地引用的有限数目会及时删除。 有三种本地引用可得到处理的方法： 显式删除它们，创建`Java.Lang.Object`实例，用于保存，并使用`Java.Lang.Object.GetObject<T>()`创建围绕它们托管可调用包装器。
 
- <a name="_Explicitly_Deleting_Local_References" />
 
 
 ### <a name="explicitly-deleting-local-references"></a>显式删除本地引用
@@ -1100,7 +1063,6 @@ finally {
 }
 ```
 
- <a name="_Wrapping_with_Java.Lang.Object" />
 
 
 ### <a name="wrapping-with-javalangobject"></a>与 Java.Lang.Object 的包装
@@ -1131,7 +1093,6 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 }
 ```
 
- <a name="_Using_Java.Lang.Object.GetObject&lt;T&gt;()" />
 
 
 ### <a name="using-javalangobjectgetobjectlttgt"></a>Using Java.Lang.Object.GetObject&lt;T&gt;()
@@ -1170,13 +1131,12 @@ Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefStrin
 
 ## <a name="instance-fields"></a>实例字段
 
-通过操作字段时*字段 Id*。 字段 Id 获取通过[JNIEnv.GetFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFieldID/)，这需要类字段定义的字段，名称中和[JNI 类型签名](#_JNI_Type_Signatures)的字段。
+通过操作字段时*字段 Id*。 字段 Id 获取通过[JNIEnv.GetFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFieldID/)，这需要类字段定义的字段，名称中和[JNI 类型签名](#JNI_Type_Signatures)的字段。
 
 字段 Id 不需要被释放，并且有效，只要在相应的 Java 类型加载。 （android 不目前不支持类卸载。）
 
 有两个集的操作实例字段的方法： 一台用于读取实例字段，另一个用于编写实例字段。 所有集的方法都需要读取或写入的字段值的字段 ID。
 
-<a name="_Reading_Instance_Field_Values" />
 
 ### <a name="reading-instance-field-values"></a>读取实例字段值
 
@@ -1207,7 +1167,6 @@ Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefStrin
 
 
 
- <a name="_Writing_Instance_Field_Values" />
 
 
 ### <a name="writing-instance-field-values"></a>正在写入实例字段值
@@ -1243,13 +1202,12 @@ JNIEnv.SetField(IntPtr instance, IntPtr fieldID, Type value);
 
 ## <a name="static-fields"></a>静态字段
 
-通过操作的静态字段*字段 Id*。 字段 Id 获取通过[JNIEnv.GetStaticFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFieldID/)，这需要类字段定义的字段，名称中和[JNI 类型签名](#JNI%20Type%20Signatures)的字段。
+通过操作的静态字段*字段 Id*。 字段 Id 获取通过[JNIEnv.GetStaticFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFieldID/)，这需要类字段定义的字段，名称中和[JNI 类型签名](#JNI_Type_Signatures)的字段。
 
 字段 Id 不需要被释放，并且有效，只要在相应的 Java 类型加载。 （android 不目前不支持类卸载。）
 
 有两个集的操作的静态字段的方法： 一台用于读取实例字段，另一个用于编写实例字段。 所有集的方法都需要读取或写入的字段值的字段 ID。
 
-<a name="_Reading_Static_Field_Values" />
 
 ### <a name="reading-static-field-values"></a>读取静态字段值
 
@@ -1278,7 +1236,6 @@ JNIEnv.SetField(IntPtr instance, IntPtr fieldID, Type value);
 -   [JNIEnv.GetStaticDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticDoubleField/) &ndash;读取的值`double`静态字段。
 
 
-<a name="_Writing_Static_Field_Values" />
 
 ### <a name="writing-static-field-values"></a>正在写入静态字段值
 
@@ -1313,7 +1270,7 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 ## <a name="instance-methods"></a>实例方法
 
-通过调用实例方法*方法 Id*。 方法 Id 获取通过[JNIEnv.GetMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetMethodID/)，这要求的类型，该方法定义中的方法的名称和[JNI 类型签名](#_JNI_Type_Signatures)的方法。
+通过调用实例方法*方法 Id*。 方法 Id 获取通过[JNIEnv.GetMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetMethodID/)，这要求的类型，该方法定义中的方法的名称和[JNI 类型签名](#JNI_Type_Signatures)的方法。
 
 方法 Id 不需要被释放，并且有效，只要在相应的 Java 类型加载。 （android 不目前不支持类卸载。）
 
@@ -1323,7 +1280,6 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 在类中声明的任何方法或可以查找任何基类或实现的接口。
 
-<a name="_Virtual_Method_Invocation" />
 
 ### <a name="virtual-method-invocation"></a>虚拟方法调用
 
@@ -1352,7 +1308,6 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 -   [JNIEnv.CallDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallDoubleMethod/) &ndash;调用返回的方法`double`值。
 
 
-<a name="_Non-virtual_Method_Invocation" />
 
 ### <a name="non-virtual-method-invocation"></a>非虚拟方法调用
 
@@ -1381,15 +1336,14 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 -   [JNIEnv.CallNonvirtualDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod/) &ndash;非几乎调用返回的方法`double`值。
 
 
- <a name="_Static_Methods" />
+<a name="_Static_Methods" />
 
 ## <a name="static-methods"></a>静态方法
 
-通过调用静态方法*方法 Id*。 方法 Id 获取通过[JNIEnv.GetStaticMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticMethodID/)，这要求的类型，该方法定义中的方法的名称和[JNI 类型签名](#JNI%20Type%20Signatures)的方法。
+通过调用静态方法*方法 Id*。 方法 Id 获取通过[JNIEnv.GetStaticMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticMethodID/)，这要求的类型，该方法定义中的方法的名称和[JNI 类型签名](#JNI_Type_Signatures)的方法。
 
 方法 Id 不需要被释放，并且有效，只要在相应的 Java 类型加载。 （android 不目前不支持类卸载。）
 
- <a name="_Static_Method_Invocation" />
 
 
 ### <a name="static-method-invocation"></a>静态方法调用
@@ -1419,8 +1373,7 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 -   [JNIEnv.CallStaticDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticDoubleMethod/) &ndash;调用的静态方法，它返回`double`值。
 
 
- <a name="_JNI_Type_Signatures" />
-
+<a name="JNI_Type_Signatures" />
 
 ## <a name="jni-type-signatures"></a>JNI 类型签名
 
@@ -1453,9 +1406,6 @@ long f(int n, String s, int[] array);
 -  **array**
 
 
- <a name="_Built-in_Type_References" />
-
-
 ### <a name="built-in-type-references"></a>内置类型引用
 
 内置类型引用是单个字符，用于引用内置值类型。 映射将如下：
@@ -1471,8 +1421,7 @@ long f(int n, String s, int[] array);
 -  `"V"` 有关`void`方法返回类型。
 
 
- <a name="_Simplified_Type_References" />
-
+<a name="_Simplified_Type_References_1" />
 
 ### <a name="simplified-type-references"></a>简化的类型引用
 
@@ -1486,7 +1435,6 @@ long f(int n, String s, int[] array);
 
 这两个任一将导致 Java 类型[java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html)映射到简化的类型引用`java/lang/Thread$State`。
 
-<a name="_Type_References" />
 
 ### <a name="type-references"></a>类型引用
 
@@ -1528,7 +1476,6 @@ static {};
 `Thread.State` 是 Java 枚举类型，以便我们可以使用的签名`valueOf`方法来确定类型引用是 Ljava/lang/线程$ 状态;。
 
 
-<a name="_Array_Type_References" />
 
 ### <a name="array-type-references"></a>数组类型引用
 
@@ -1537,7 +1484,6 @@ static {};
 
 例如，`int[]`是`"[I"`，`int[][]`是`"[[I"`，和`java.lang.Object[]`是`"[Ljava/lang/Object;"`。
 
-<a name="_Java_Generics_and_Type_Erasure" />
 
 
 ## <a name="java-generics-and-type-erasure"></a>Java 泛型和类型擦除
@@ -1547,7 +1493,6 @@ static {};
 
 通过 JNI 交互时，没有任何泛型类型或成员和非泛型类型或成员之间的区别。 例如，泛型类型[java.lang.Class&lt;T&gt; ](http://developer.android.com/reference/java/lang/Class.html)也是"原始"的泛型类型`java.lang.Class`，这两个具有相同的简化的类型引用， `"java/lang/Class"`。
 
-<a name="Java_Native_Interface_Support" />
 
 ## <a name="java-native-interface-support"></a>Java 本机接口支持
 
@@ -1610,7 +1555,6 @@ Activity mapActivity = Java.Lang.Object.GetObject<Activity>(lrefActivity, JniHan
 
 此外，所有 JNI 函数已被修改的删除`JNIEnv*`存在于每个 JNI 函数的参数。
 
-<a name="_Summary" />
 
 ## <a name="summary"></a>摘要
 

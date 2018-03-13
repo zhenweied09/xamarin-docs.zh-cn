@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: eec352264d918730e68a925f2a1e3796d9125c88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4be12c5530f59dc027672d8db72b966711a531d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>应用分发概述
 
@@ -21,7 +21,7 @@ _本文档概述适用于 Xamarin.iOS 应用程序的分发技巧，并引出有
 Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是将应用分发给用户，如下图中突出显示部分所示：
 
 
-[![](images/publishingdiagram.png "iOS 应用开发完成后，下一步是将应用分发给用户，如此图中突出显示部分所示")](images/publishingdiagram.png)
+[![](images/publishingdiagram.png "iOS 应用开发完成后，下一步是将应用分发给用户，如此图中突出显示部分所示")](images/publishingdiagram.png#lightbox)
 
 
 Apple 提供以下方式分发 iOS 应用程序，它们均受 Xamarin.iOS 支持：
@@ -31,6 +31,8 @@ Apple 提供以下方式分发 iOS 应用程序，它们均受 Xamarin.iOS 支�
 2. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 所有这些情况都要求使用相应的配置文件预配应用程序。 配置文件是一种文件，其中包含了代码签名信息，以及应用程序标识和预期分发机制。 对于非 App Store 分发，该文件还包含可部署应用的设备的相关信息。
+
+<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>App Store 分发
 
@@ -42,12 +44,15 @@ Apple 提供以下方式分发 iOS 应用程序，它们均受 Xamarin.iOS 支�
 
 有关详细信息，请访问 [App Store 分发](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)指南。
 
+<a name="In-House_Distribution"/>
+
 ## <a name="in-house-distribution"></a>In-House 分发
 
 In-House 分发（有时称为企业分发）允许 **Apple 开发人员企业计划**成员在内部向同一组织内的其他成员分发应用。 In-House 分发的优势在于无需 App Store 审核，且没有可安装应用程序的设备数量限制。 但是，值得注意的是，**Apple 开发人员企业计划**成员**没有**权限访问 iTunes Connect，因此许可证持有人负责分发应用。
 
 有关设置以及如何 In-House 分发应用程序的详细信息，请参阅[In-House 分发指南](~/ios/deploy-test/app-distribution/in-house-distribution.md)。
 
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Ad Hoc 分发
 

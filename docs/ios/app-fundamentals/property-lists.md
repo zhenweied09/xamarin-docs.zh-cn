@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d7b4c5a539470a3544d0117251f40fd6bd37f2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-property-lists"></a>使用属性列表
 
@@ -24,7 +24,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 信息属性列表 ( `Info.plist`) 是一个需要的 iOS 文件，提供有关你的应用程序配置到系统的信息。 适用于 Mac 的 visual Studio 的自定义`Info.plist`受选项卡底部的三个面板左下的编辑器窗口的编辑器功能：
 
- [ ![](property-lists-images/tabs.png "在底部的 Info.plist 编辑器选项卡左下的编辑器窗口")](property-lists-images/tabs.png)
+ [![](property-lists-images/tabs.png "在底部的 Info.plist 编辑器选项卡左下的编辑器窗口")](property-lists-images/tabs.png#lightbox)
 
 每个面板控件不同的属性，按如下所述：
 
@@ -57,11 +57,11 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 本部分包含描述应用程序的重要信息。
 **标识符**存储此处必须与输入时，在 iTunes Connect （适用于应用商店应用） 中，还在 iOS 设置门户应用 Id 列表中，开发和分发证书的捆绑标识符。
 
- [ ![](property-lists-images/image24.png "iOS 应用程序目标")](property-lists-images/image24.png)
+ [![](property-lists-images/image24.png "iOS 应用程序目标")](property-lists-images/image24.png#lightbox)
 
 ### <a name="device-deployment"></a>设备部署
 
- [ ![](property-lists-images/deployment.png "设备部署")](property-lists-images/deployment.png)
+ [![](property-lists-images/deployment.png "设备部署")](property-lists-images/deployment.png#lightbox)
 
 设备**部署**信息部分有选择地，具体取决于在所选内容显示**设备**中的下拉列表**应用程序目标**上面一节。 **主界面**下拉列表设置为**MainStoryboard**情节提要驱动应用程序中。 如果用代码完全编写用户界面，则此可以保留为空。
 
@@ -73,7 +73,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 **状态条样式**部分是用于编辑应用程序的一个图形界面`UIStatusBarStyle`:
 
- [ ![](property-lists-images/status.png "状态栏样式")](property-lists-images/status.png)
+ [![](property-lists-images/status.png "状态栏样式")](property-lists-images/status.png#lightbox)
 
  <a name="Icons" />
 
@@ -89,11 +89,11 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 `Info.plist`包含特殊的各节来指定地图集成和 backgrounding 模式。 选择你想要支持的选项将向你为你的应用程序中添加所需的属性。
 
- [ ![](property-lists-images/maps.png "映射集成")](property-lists-images/maps.png)
+ [![](property-lists-images/maps.png "映射集成")](property-lists-images/maps.png#lightbox)
 
 有关使用图的详细信息，请参阅 Xamarin [iOS 地图](~/ios/user-interface/controls/ios-maps/index.md)指南。
 
- [ ![](property-lists-images/bging.png "后台模式")](property-lists-images/bging.png)
+ [![](property-lists-images/bging.png "后台模式")](property-lists-images/bging.png#lightbox)
 
 有关后台模式的详细信息，请参阅 Xamarin [Backgrounding 在 iOS 中](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)指南。
 
@@ -101,7 +101,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 高级面板中控制的文档类型和应用程序支持的 URL 方案。
 
- [ ![](property-lists-images/image34.png "高级的面板")](property-lists-images/image34.png)
+ [![](property-lists-images/image34.png "高级的面板")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
 
@@ -116,7 +116,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 有时应用程序需要支持打开自定义的文件类型。 例如，我们可能想要使用的自定义扩展打开映像文件*.xam*。 若要指定自定义文件类型，我们将创建自定义的实用程序的通用类型标识符-使用`UIExportedTypeDeclarations`密钥。 下面的屏幕截图演示如何创建自定义的实用程序.xam 扩展：
 
- [ ![](property-lists-images/uti.png "UTIs 编辑器")](property-lists-images/uti.png)
+ [![](property-lists-images/uti.png "UTIs 编辑器")](property-lists-images/uti.png#lightbox)
 
 只需为导出的类型 UTIs 指定特定于你的应用，自定义 UTIs*导入类型 UTIs* (`UIImportedTypeDeclarations`密钥) 指定支持但不是由你的应用程序拥有的自定义类型。
 
@@ -126,7 +126,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 （也称为协议） 的 URL 方案名称是 URL 的第一部分。 例如，`http://`和`https://`公共 URL 方案。 你可以创建用于你的应用程序的自定义 URL 方案的选择。 自定义 URL 方案用于通信和其他应用程序使用来回发送数据。 下面的屏幕截图演示如何创建一个新的自定义 URL 方案调用`monkeys://`:
 
- [ ![](property-lists-images/url.png "自定义 Url")](property-lists-images/url.png)
+ [![](property-lists-images/url.png "自定义 Url")](property-lists-images/url.png#lightbox)
 
 
 
@@ -136,15 +136,15 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 **源**选项卡`Info.plist`文件允许添加或编辑自定义值。 适用于 Mac 的 visual Studio 提供最常见的属性的列表：
 
- [ ![](property-lists-images/image31.png "从下拉列表中添加一个新的属性")](property-lists-images/image31.png)
+ [![](property-lists-images/image31.png "从下拉列表中添加一个新的属性")](property-lists-images/image31.png#lightbox)
 
 为已知属性适用于 Mac 的 Visual Studio 将有效的值的列表，如下面的屏幕截图所示：
 
- [ ![](property-lists-images/image32.png "从已知值列表中选择值")](property-lists-images/image32.png)
+ [![](property-lists-images/image32.png "从已知值列表中选择值")](property-lists-images/image32.png#lightbox)
 
 适用于 Mac 的 visual Studio 还将检测属性类型，如所示：
 
- [ ![](property-lists-images/image33.png "可用的属性类型")](property-lists-images/image33.png)
+ [![](property-lists-images/image33.png "可用的属性类型")](property-lists-images/image33.png#lightbox)
 
 查看 Apple 的[应用相关资源](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)可选属性的其他信息的链接。
 

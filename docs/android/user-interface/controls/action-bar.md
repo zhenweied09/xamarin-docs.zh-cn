@@ -7,28 +7,26 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: cdbdf7195daf9add01052df8fc0f0cf4c7a0cb0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64a5ac7e0c448205da66f9790a506ca34a944140
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="actionbar"></a>ActionBar
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
 使用时`TabActivity`，用于创建选项卡图标的代码不起作用针对 Android 4.0 框架运行时。 尽管它功能上操作中的 Android 2.3 之前, 的版本与`TabActivity`类本身 4.0 中已弃用。 创建选项卡式的界面的新方法引入了使用操作栏中，接下来，我们将讨论。
 
-<a name="Action_Bar_Tabs" />
 
 ## <a name="action-bar-tabs"></a>操作栏选项卡
 
 操作栏包括以 Android 4.0 添加选项卡式的接口的支持。
 以下屏幕截图显示此类接口的示例。
 
-[![在仿真程序; 中运行的应用的屏幕快照显示两个选项卡](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png)
+[![在仿真程序; 中运行的应用的屏幕快照显示两个选项卡](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 若要在操作栏中创建选项卡，我们首先需要设置其`NavigationMode`属性以支持选项卡。 在 Android 4 中，`ActionBar`属性是可在活动类，我们可以用来设置上`NavigationMode`如下所示：
 
@@ -84,26 +82,23 @@ this.ActionBar.AddTab (tab);
 
 有关完整示例，请参阅*HelloTabsICS*本文档的示例代码中的项目。
 
-<a name="ShareActionProvider" />
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 `ShareActionProvider`类启用要发生的操作栏从共享操作。 它负责使用的应用程序可以处理共享意向，并且从操作栏更高版本与其保留轻松访问的以前用过应用程序历史记录的列表中创建的操作视图。 这允许应用程序通过在 Android 保持一致的用户体验共享数据。
 
-<a name="Image_Sharing_Example" />
 
 ### <a name="image-sharing-example"></a>图像共享示例
 
 例如，下面是与菜单项操作栏，要共享映像文件的屏幕快照 (摘自[ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)示例)。 当用户点击动作栏上的菜单项时，ShareActionProvider 加载的应用程序能够处理与关联为打算`ShareActionProvider`。 在此示例中，消息处理应用程序具有已以前用于，因此它显示在操作栏上。
 
-[![消息传递操作栏中的应用程序图标的屏幕截图](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png)
+[![消息传递操作栏中的应用程序图标的屏幕截图](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
 当用户单击操作栏中的项上时，消息包含共享的映像启动应用时，如下所示：
 
-[![显示 monkey 图像的消息传递应用的屏幕快照](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png)
+[![显示 monkey 图像的消息传递应用的屏幕快照](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
-<a name="Specifying_the_action_Provider_Class" />
 
 ### <a name="specifying-the-action-provider-class"></a>指定的操作提供程序类
 
@@ -119,7 +114,6 @@ this.ActionBar.AddTab (tab);
 </menu>
 ```
 
-<a name="Inflating_the_Menu" />
 
 ### <a name="inflating-the-menu"></a>Inflating 菜单
 
@@ -137,7 +131,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-<a name="Creating_the_Intent" />
 
 ### <a name="creating-the-intent"></a>创建意图
 

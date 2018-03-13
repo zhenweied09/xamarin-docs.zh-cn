@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>布局
 
-Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。 每个布局控件是下面所述，以及如何处理屏幕方向更改的详细信息：
+Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Xamarin.Forms 布局，也可由[Xamarin 大学](https://university.xamarin.com/)**
+
+每个布局控件是下面所述，以及如何处理屏幕方向更改的详细信息：
 
 * **[StackLayout](stack-layout.md)**  &ndash;用于线性，排列视图水平或垂直。 可以向左或向右的布局的中心对齐 StackLayout 中的视图。
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash;用于按设置坐标排列视图 （&） 在绝对值和比率方面的调整大小。 AbsoluteLayout 可用来进行分层视图，以及它们定位于左、 右或中心。
@@ -35,7 +42,7 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
 
 下图直观显示布局控件：
 
-[ ![](images/layouts-sml.png "Xamarin.Forms 布局")](images/layouts.png "Xamarin.Forms 布局")
+[![](images/layouts-sml.png "Xamarin.Forms 布局")](images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 ## <a name="choosing-the-right-layout"></a>选择右的布局
 

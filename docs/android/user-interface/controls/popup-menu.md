@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>弹出菜单
 
 `PopupMenu`类添加用于显示附加到特定的视图的弹出菜单的支持。 下图显示弹出菜单按钮，从出现突出显示就像它选择了第二个项：
 
- [ ![三个项的包含三个 PopopMenu 示例](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![三个项的包含三个 PopopMenu 示例](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 添加几个新功能`PopupMenu`，使其稍微容易使用，即：
 
@@ -26,9 +26,8 @@ Android 4 添加几个新功能`PopupMenu`，使其稍微容易使用，即：
 
 让我们看看这些改进。 在此示例中，我们具有单个活动包含一个按钮。 当用户单击按钮时，将显示弹出菜单，如下所示：
 
- [ ![在具有按钮和 3 项弹出菜单的仿真程序中运行的应用程序的示例](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![在具有按钮和 3 项弹出菜单的仿真程序中运行的应用程序的示例](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>创建弹出菜单
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 在上面的代码中，在后 inflating 菜单我们只需调用`menu.Show`若要在屏幕上显示。
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>处理菜单事件
 

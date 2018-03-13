@@ -6,11 +6,11 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 57dec129a5f16b004e054a7a3fedd296bad92a3e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3978b046a8ab4d42cbf86bf524452a033b5dbb4d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>开始使用 Xamarin 工作簿 SDK
 
@@ -28,15 +28,15 @@ Xamarin 的工作簿集成是使用的小型库[ `Xamarin.Workbooks.Integrations
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![适用于 Mac 的可移植运行库模板 Visual Studio](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png)
+[![适用于 Mac 的可移植运行库模板 Visual Studio](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![可移植运行库模板 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png)
+[![可移植运行库模板 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
 在 Visual Studio 中，你将需要确保你为可移植库中选择以下的目标平台：
 
-[![可移植运行库平台 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png)
+[![可移植运行库平台 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
@@ -44,11 +44,11 @@ Xamarin 的工作簿集成是使用的小型库[ `Xamarin.Workbooks.Integrations
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png)
+[![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png)
+[![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
 -----
 
@@ -146,11 +146,11 @@ nuget pack MyIntegration.nuspec
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![使用集成的工作簿](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png)
+[![使用集成的工作簿](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![使用集成的工作簿](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png)
+[![使用集成的工作簿](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 

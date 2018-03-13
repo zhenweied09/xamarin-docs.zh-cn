@@ -3,14 +3,15 @@ title: "第 13 章的摘要。 位图"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2e511f2ebf75b065469a9051ee5797ac58c147f3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74e5e47a481d02fe11be4b770b818d2c88b517f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>第 13 章的摘要。 位图
 
@@ -76,7 +77,7 @@ Xamarin.Forms 中的位图有四个不同来源：
 
 [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty)显示 Lewis 卡罗尔的第 7 章*的 Wonderland Alice 的冒险*了通过 John Tenniel 原始的图示：
 
-[![Mad tea 方的三个屏幕截图](images/ch13fg16-small.png "Mad Hatters Tea 方该书的文本")](images/ch13fg16-large.png "Mad Hatters Tea 方该书的文本")
+[![Mad tea 方的三个屏幕截图](images/ch13fg16-small.png "Mad Hatters Tea 方该书的文本")](images/ch13fg16-large.png#lightbox "Mad Hatters Tea 方该书的文本")
 
 ### <a name="browsing-and-waiting"></a>浏览和等待
 

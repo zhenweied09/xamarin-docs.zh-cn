@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e10a34bc5de16c19f48fa1b869daca9670f37804
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay watchOS 上
 
@@ -31,7 +31,7 @@ Apple 具有对 Apple Pay 进行多项增强功能，增加了对应用内付款
 
 ### <a name="supporting-apple-pay-outside-of-uikit"></a>支持外部 UIKit Apple 付费
 
-通过使用[PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller)和[PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate)，应用程序可以支持提供的相同功能[PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller)而无需使用 UIKit。 需要支持 Apple Pay Apple Watch 上 （和以及特定意向） 这个新的 API 时，它是在其他情况下 （例如现有的应用） 可选的。 但是，Apple 提供的建议将移动到新的 API 越早越好广泛 Apple Pay 的支持，在所有开发人员的应用提供的单个基本代码。 有关意向的详细信息和使用 Siri 集成，请参阅我们[简介 SiriKit](/~/ios/platform/sirikit/index.md)文档。
+通过使用[PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller)和[PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate)，应用程序可以支持提供的相同功能[PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller)而无需使用 UIKit。 需要支持 Apple Pay Apple Watch 上 （和以及特定意向） 这个新的 API 时，它是在其他情况下 （例如现有的应用） 可选的。 但是，Apple 提供的建议将移动到新的 API 越早越好广泛 Apple Pay 的支持，在所有开发人员的应用提供的单个基本代码。 有关意向的详细信息和使用 Siri 集成，请参阅我们[简介 SiriKit](~/ios/platform/sirikit/index.md)文档。
 
 ### <a name="presenting-issuer-cards-from-within-apps"></a>演示从应用中的颁发者卡
 

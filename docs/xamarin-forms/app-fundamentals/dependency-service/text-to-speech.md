@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: c5bd753aaa3a9e807a03a9fb05b233cfa39d0dc3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6ac9ca7bae517602c33729134eb0bd48359afbc7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-text-to-speech"></a>实现文本到语音转换
 
@@ -44,7 +44,7 @@ public interface ITextToSpeech
 此接口在共享代码中对编码将允许 Xamarin.Forms 应用程序访问每个平台上的语音 Api。
 
 > [!NOTE]
-> **请注意**： 实现接口的类必须具有无参数构造函数中，若要使用`DependencyService`。
+> 实现接口的类必须具有无参数构造函数中，若要使用`DependencyService`。
 
 <a name="iOS_Implementation" />
 
@@ -84,15 +84,12 @@ namespace DependencyServiceSample.iOS
 
 ## <a name="android-implementation"></a>Android 实现
 
-Android 代码是比 iOS 版本更复杂： 它需要实现的类继承 Android 特定`Java.Lang.Object`并实现`IOnInitListener`以及接口。
-
-Xamarin.Forms 还提供`Forms.Context`对象，它是当前的 Android 上下文的实例。 许多 Android SDK 方法要求执行此操作，正在调用的能力一个很好示例`StartActivity()`。
+Android 代码是比 iOS 版本更复杂： 它需要实现的类继承 Android 特定`Java.Lang.Object`并实现`IOnInitListener`以及接口。 它还需要访问当前公开的 Android 上下文`MainActivity.Instance`属性。
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
 namespace DependencyServiceSample.Droid
 {
-
     public class TextToSpeechImplementation : Java.Lang.Object, ITextToSpeech, TextToSpeech.IOnInitListener
     {
         TextToSpeech speaker;
@@ -103,7 +100,7 @@ namespace DependencyServiceSample.Droid
             toSpeak = text;
             if (speaker == null)
             {
-                speaker = new TextToSpeech(Forms.Context, this);
+                speaker = new TextToSpeech(MainActivity.Instance, this);
             }
             else
             {

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 15f198465c544989b347fe534978956741478ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-compression"></a>布局压缩
 
@@ -60,7 +60,7 @@ Xamarin.Forms 执行使用递归方法调用的两个序列的布局：
 布局压缩，这是适用于 iOS 和 Android 平台上的 Xamarin.Forms 应用程序，旨在平展嵌套的可视化树，这可以提高页面呈现性能中删除指定的布局视图。 传送的性能优势而异的一个页、 正在使用的操作系统的版本和在其运行应用程序的设备的复杂性。 不过，在旧设备上实现的性能提升最大。
 
 > [!NOTE]
-> **请注意**： 虽然本文着重于在 Android 上应用布局压缩的结果，它是同样适用于 iOS。
+> 虽然本文着重于在 Android 上应用布局压缩的结果，它是同样适用于 iOS。
 
 ## <a name="layout-compression"></a>布局压缩
 

@@ -3,14 +3,15 @@ title: "章 25 的摘要。 页类型"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: bbe960357d9180df90a4423d6acfdf3f869d1b77
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 30642709519fc809d30da9a437728112f56a64d6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>章 25 的摘要。 页类型
 
@@ -54,7 +55,7 @@ Windows 8.1 和 Windows Phone 8.1 平台需要位图设置为`Icon`主控页的�
 
 此外将设置 XAML 文件[ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/)属性`MasterDetailPage`到`True`。 这将导致主页后，可以显示在启动;默认情况下显示的详细信息页。 [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs)文件中设置`IsPresented`到`false`时从选择项`ListView`母版页中。 然后显示的详细信息页：
 
-[![三重的学校和详细信息的屏幕截图](images/ch25fg09-small.png "从 MasterDetailPage 的详细信息页")](images/ch25fg09-large.png "从 MasterDetailPage 的详细信息页")
+[![三重的学校和详细信息的屏幕截图](images/ch25fg09-small.png "从 MasterDetailPage 的详细信息页")](images/ch25fg09-large.png#lightbox "从 MasterDetailPage 的详细信息页")
 
 ### <a name="your-own-user-interface"></a>用户界面
 
@@ -98,7 +99,7 @@ Xamarin.Forms 提供用户界面用于 master 和详细信息视图之间切换�
 
 将出现在每个页`TabbedPage`、`Title`属性需要在选项卡中指定的文本，并且 Apple 应用商店要求一个图标，也可用于因此`Icon`为 iOS 设置属性：
 
-[![三重的离散选项卡式颜色的屏幕截图](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png "TabbedPage")
+[![三重的离散选项卡式颜色的屏幕截图](images/ch25fg13-small.png "TabbedPage")](images/ch25fg13-large.png#lightbox "TabbedPage")
 
 [ **StudentNotes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/StudentNotes)示例有列出所有学生的主页。 当点击一名学生时，这会定位到`TabbedPage`派生， [ `StudentNotesDataPage` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/StudentNotes/StudentNotes/StudentNotes/StudentNotesDataPage.xaml)，包含三个`ContentPage`对象在其可视化树中，一种允许该学生输入的一些注意事项。
 

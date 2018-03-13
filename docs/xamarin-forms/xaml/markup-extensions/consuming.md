@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>使用 XAML 标记扩展
 
@@ -137,7 +137,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 下面是在所有三个平台上运行示例：
 
-[![X:static 演示](consuming-images/staticdemo-small.png "X:static 演示")](consuming-images/staticdemo-large.png "X:static 演示")
+[![X:static 演示](consuming-images/staticdemo-small.png "X:static 演示")](consuming-images/staticdemo-large.png#lightbox "X:static 演示")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 同时`x:Reference`表达式使用的缩写的形式`ReferenceExtension`类名称和消除`Name=`表达式的一部分。 在第一个示例中，`x:Reference`中嵌入标记扩展`Binding`标记扩展。 请注意，`Source`和`StringFormat`设置用逗号分隔。 下面是在所有三个平台上运行的程序：
 
-[![X:reference 演示](consuming-images/referencedemo-small.png "X:reference 演示")](consuming-images/referencedemo-large.png "X:reference 演示")
+[![X:reference 演示](consuming-images/referencedemo-small.png "X:reference 演示")](consuming-images/referencedemo-large.png#lightbox "X:reference 演示")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 下面是的打开主页**标记扩展**:
 
-[![Main 页](consuming-images/mainpage-small.png "Main 页")](consuming-images/mainpage-large.png "Main 页")
+[![Main 页](consuming-images/mainpage-small.png "Main 页")](consuming-images/mainpage-large.png#lightbox "Main 页")
 
 每个`CommandParameter`属性设置为`x:Type`引用了一个其他页面的标记扩展。 `Command`属性绑定到名为的属性`NavigateCommand`。 此属性定义中`MainPage`代码隐藏文件：
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 方法时执行`Button`按下创建的自变量的新实例，设置其`VerticalOptions`属性，并将其添加到`StackLayout`。 这三种`Button`元素然后共享页具有动态创建的视图：
 
-[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png "x:Type Demo")
+[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ public partial class TypeDemoPage : ContentPage
 
 `ViewCell`创建一个简单`BoxView`对于每个颜色条目：
 
-[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png "x:Array Demo")
+[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
 
 有几种方法来指定单个`Color`此数组中的项。 你可以使用`x:Static`标记扩展：
 
@@ -449,7 +449,7 @@ public partial class TypeDemoPage : ContentPage
 
 此处是三个平台上运行的程序：
 
-[![X:null 演示](consuming-images/nulldemo-small.png "X:null 演示")](consuming-images/nulldemo-large.png "X:null 演示")
+[![X:null 演示](consuming-images/nulldemo-small.png "X:null 演示")](consuming-images/nulldemo-large.png#lightbox "X:null 演示")
 
 通知该四个的`Label`元素具有 serif 字体，但 center`Label`具有默认 san serif 字体。
 

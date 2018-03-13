@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>简单的动画
 
@@ -130,7 +130,7 @@ await image.TranslateTo (-100, -100, 1000);
 ![](simple-images/translateto.png "转换动画")
 
 > [!NOTE]
-> **请注意**： 如果元素是最初关闭屏幕布局，则在转换到屏幕上，在转换后的元素的输入关闭屏幕的布局保持和用户不能与它交互。 因此，建议应在到达其最终位置，布局视图，然后任何所需执行的转换。
+> 如果元素是最初关闭屏幕布局，则在转换到屏幕上，在转换后的元素的输入的布局保持状态关闭屏幕并且用户不能与它交互。 因此，建议应在到达其最终位置，布局视图，然后任何所需执行的转换。
 
 ### <a name="fading"></a>淡入淡出
 

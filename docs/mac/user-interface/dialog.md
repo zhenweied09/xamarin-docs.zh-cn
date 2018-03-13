@@ -3,16 +3,16 @@ title: "对话框"
 description: "本文介绍如何使用对话框和 Xamarin.Mac 应用程序中的模式窗口。 它介绍如何创建在 Xcode 和接口生成器中，使用标准对话框，并在 C# 代码中的这些控件与之交互模式窗口。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9b65e870fae0074726d0bdd46d9eecbe99240e98
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="dialogs"></a>对话框
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/28/2018
 
 Windows 可以是无模式状态 （例如文本编辑器，可以同时打开多个文档） 中使用或模式 （如应用程序可以继续操作之前必须关闭导出对话框）。
 
-[ ![](dialog-images/dialog03.png "打开的对话框")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "打开的对话框")](dialog-images/dialog03.png#lightbox)
 
 在本文中，我们将介绍使用 Xamarin.Mac 应用程序中的对话框和模式窗口的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -44,25 +44,25 @@ Windows 可以是无模式状态 （例如文本编辑器，可以同时打开�
 
 任何标准`NSWindow`可用作通过以模式方式显示一个自定义对话框：
 
-[ ![](dialog-images/modal01.png "示例模式窗口")](dialog-images/modal01.png)
+[![](dialog-images/modal01.png "示例模式窗口")](dialog-images/modal01.png#lightbox)
 
 ### <a name="document-modal-dialog-sheets"></a>文档模式对话框表
 
 A_表_是一个模式对话框，附加到给定的文档窗口，阻止用户交互的窗口，直到它们关闭对话框。 一张附加到窗口从中它会显现出来，并只有一个工作表可以在任何时候打开窗口。
 
-[ ![](dialog-images/sheet08.png "示例模式表")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "示例模式表")](dialog-images/sheet08.png#lightbox)
 
 ### <a name="preferences-windows"></a>首选项 Windows
 
 首选项窗口是一个无模式对话框，其中包含用户很少更改的应用程序的设置。 首选项 Windows 通常包括一个工具栏，它允许用户切换不同的设置组：
 
-[ ![](dialog-images/dialog02.png "示例首选项窗口")](dialog-images/dialog02.png)
+[![](dialog-images/dialog02.png "示例首选项窗口")](dialog-images/dialog02.png#lightbox)
 
 ### <a name="open-dialog"></a>打开对话框
 
 打开对话框中，向用户提供一致的方法来查找和打开应用程序中的项：
 
-[ ![](dialog-images/dialog03.png "打开对话框")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "打开对话框")](dialog-images/dialog03.png#lightbox)
 
 
 ### <a name="print-and-page-setup-dialogs"></a>打印和页面设置对话框
@@ -71,37 +71,37 @@ macOS 提供标准打印并在它们使用每个应用程序中遇到了安装�
 
 可以为这两个免费浮动的对话框中显示打印对话框：
 
-[ ![](dialog-images/print01.png "打印对话框")](dialog-images/print01.png)
+[![](dialog-images/print01.png "打印对话框")](dialog-images/print01.png#lightbox)
 
 或者，它可以工作表的形式显示：
 
-[ ![](dialog-images/print02.png "打印工作表")](dialog-images/print02.png)
+[![](dialog-images/print02.png "打印工作表")](dialog-images/print02.png#lightbox)
 
 可以为这两个免费浮动的对话框中显示页面设置对话框：
 
-[ ![](dialog-images/print03.png "页面设置对话框")](dialog-images/print03.png)
+[![](dialog-images/print03.png "页面设置对话框")](dialog-images/print03.png#lightbox)
 
 或者，它可以工作表的形式显示：
 
-[ ![](dialog-images/print04.png "页设置表")](dialog-images/print04.png)
+[![](dialog-images/print04.png "页设置表")](dialog-images/print04.png#lightbox)
 
 ### <a name="save-dialogs"></a>保存对话框
 
 保存对话框中，向用户提供一致的方法来保存应用程序中的项。 保存对话框中有两种状态：**最小**（也称为折叠）：
 
-[ ![](dialog-images/save01.png "一个保存对话框")](dialog-images/save01.png)
+[![](dialog-images/save01.png "一个保存对话框")](dialog-images/save01.png#lightbox)
 
 与**扩展**状态：
 
-[ ![](dialog-images/save02.png "展开保存对话框")](dialog-images/save02.png)
+[![](dialog-images/save02.png "展开保存对话框")](dialog-images/save02.png#lightbox)
 
 **最小**保存对话框也会显示工作表的形式：
 
-[ ![](dialog-images/save03.png "保存工作表的最小")](dialog-images/save03.png)
+[![](dialog-images/save03.png "保存工作表的最小")](dialog-images/save03.png#lightbox)
 
 因为可以**扩展**保存对话框：
 
-[ ![](dialog-images/save04.png "展开保存工作表")](dialog-images/save04.png)
+[![](dialog-images/save04.png "展开保存工作表")](dialog-images/save04.png#lightbox)
 
 有关详细信息，请参阅[对话框](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1)Apple 的部分[OS X 人机接口指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -116,20 +116,20 @@ macOS 提供标准打印并在它们使用每个应用程序中遇到了安装�
 1. 在**解决方案资源管理器**，打开`Main.storyboard`在 Xcode 的接口生成器中编辑的文件。
 2. 将一个新**视图控制器**到设计图面：
 
-    [ ![](dialog-images/new01.png "从库中选择的视图控制器")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "从库中选择的视图控制器")](dialog-images/new01.png#lightbox)
 3. 在**标识检查器**，输入`CustomDialogController`为**类名**: 
 
-    [ ![](dialog-images/new02.png "设置的类名称")](dialog-images/new02.png)
+    [![](dialog-images/new02.png "设置的类名称")](dialog-images/new02.png#lightbox)
 4. 切换回 Visual Studio for Mac，允许它与 Xcode 同步并创建`CustomDialogController.h`文件。
 5. 返回到 Xcode 并设计你的接口： 
 
-    [ ![](dialog-images/new03.png "设计在 Xcode 中的 UI")](dialog-images/new03.png)
+    [![](dialog-images/new03.png "设计在 Xcode 中的 UI")](dialog-images/new03.png#lightbox)
 6. 创建**模式 Segue**从你的应用到通过控件拖动的新视图控制器将打开到对话框的窗口的对话框的 UI 元素的主窗口。 分配**标识符** `ModalSegue`: 
 
-    [ ![](dialog-images/new06.png "模式 segue")](dialog-images/new06.png)
+    [![](dialog-images/new06.png "模式 segue")](dialog-images/new06.png#lightbox)
 6. 网络上任何**操作**和**插座**: 
 
-    [ ![](dialog-images/new04.png "配置操作")](dialog-images/new04.png)
+    [![](dialog-images/new04.png "配置操作")](dialog-images/new04.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 请`CustomDialogController.cs`文件外观如下所示：
@@ -249,7 +249,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 我们可以运行我们的应用程序，并显示自定义对话框：
 
-[ ![](dialog-images/new05.png "示例对话框")](dialog-images/new05.png)
+[![](dialog-images/new05.png "示例对话框")](dialog-images/new05.png#lightbox)
 
 有关使用 windows Xamarin.Mac 应用程序中的详细信息，请参阅我们[使用 Windows](~/mac/user-interface/window.md)文档。
 
@@ -264,19 +264,19 @@ A_表_是一个模式对话框，附加到给定的文档窗口，阻止用户�
 1. 在**解决方案资源管理器**，打开`Main.storyboard`在 Xcode 的接口生成器中编辑的文件。
 2. 将一个新**视图控制器**到设计图面：
 
-    [ ![](dialog-images/new01.png "从库中选择的视图控制器")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "从库中选择的视图控制器")](dialog-images/new01.png#lightbox)
 2. 设计用户界面：
 
-    [ ![](dialog-images/sheet01.png "UI 设计")](dialog-images/sheet01.png)
+    [![](dialog-images/sheet01.png "UI 设计")](dialog-images/sheet01.png#lightbox)
 3. 创建**表 Segue**从你的主窗口对新视图控制器： 
 
-    [ ![](dialog-images/sheet02.png "选择表 segue 类型")](dialog-images/sheet02.png)
+    [![](dialog-images/sheet02.png "选择表 segue 类型")](dialog-images/sheet02.png#lightbox)
 4. 在**标识检查器**，视图控制器命名**类** `SheetViewController`: 
 
-    [ ![](dialog-images/sheet03.png "设置的类名称")](dialog-images/sheet03.png)
+    [![](dialog-images/sheet03.png "设置的类名称")](dialog-images/sheet03.png#lightbox)
 5. 定义任何需要**Outlet**和**操作**: 
 
-    [ ![](dialog-images/sheet04.png "定义所需的容器和操作")](dialog-images/sheet04.png)
+    [![](dialog-images/sheet04.png "定义所需的容器和操作")](dialog-images/sheet04.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 同步。
 
 接下来，编辑`SheetViewController.cs`文件并使其如下所示：
@@ -407,7 +407,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 如果我们运行我们的应用程序，打开表，它将附加到窗口中：
 
-[ ![](dialog-images/sheet08.png "示例表")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "示例表")](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog" />
 
@@ -481,36 +481,36 @@ namespace MacWindows
 1. 在**解决方案资源管理器**，打开`Main.storyboard`在 Xcode 的接口生成器中编辑的文件。
 2. 将一个新**窗口控制器**到设计图面：
 
-    [ ![](dialog-images/pref01.png "从库中选择窗口控制器")](dialog-images/pref01.png)
+    [![](dialog-images/pref01.png "从库中选择窗口控制器")](dialog-images/pref01.png#lightbox)
 3. 排列窗口附近**菜单栏**设计器：
 
-    [ ![](dialog-images/pref02.png "添加新的窗口")](dialog-images/pref02.png)
+    [![](dialog-images/pref02.png "添加新的窗口")](dialog-images/pref02.png#lightbox)
 4. 创建附加的视图控制器的副本，因为在首选项视图中将选项卡：
 
-    [ ![](dialog-images/pref03.png "添加所需的视图控制器")](dialog-images/pref03.png)
+    [![](dialog-images/pref03.png "添加所需的视图控制器")](dialog-images/pref03.png#lightbox)
 5. 将一个新**工具栏控制器**从**库**:
 
-    [ ![](dialog-images/pref04.png "从库中选择的工具栏控制器")](dialog-images/pref04.png)
+    [![](dialog-images/pref04.png "从库中选择的工具栏控制器")](dialog-images/pref04.png#lightbox)
 6. 并将其放在设计图面中窗口：
 
-    [ ![](dialog-images/pref05.png "添加新的工具栏控制器")](dialog-images/pref05.png)
+    [![](dialog-images/pref05.png "添加新的工具栏控制器")](dialog-images/pref05.png#lightbox)
 7. 布局工具栏上的设计：
 
-    [ ![](dialog-images/pref06.png "布局工具栏")](dialog-images/pref06.png)
+    [![](dialog-images/pref06.png "布局工具栏")](dialog-images/pref06.png#lightbox)
 8. 控件单击并拖动从各个**工具栏按钮**到上述步骤中创建视图。 选择**自定义**segue 类型：
 
-    [ ![](dialog-images/pref07.png "设置 segue 类型")](dialog-images/pref07.png)
+    [![](dialog-images/pref07.png "设置 segue 类型")](dialog-images/pref07.png#lightbox)
 9. 选择新 Segue 并设置**类**到`ReplaceViewSegue`:
 
-    [ ![](dialog-images/pref08.png "设置 segue 类")](dialog-images/pref08.png)
+    [![](dialog-images/pref08.png "设置 segue 类")](dialog-images/pref08.png#lightbox)
 10. 在**Menubar 设计器**在设计图面上，从应用程序菜单上选择**首选项...**、 单击和拖动到首选项窗口，以创建**显示**segue:
 
-    [ ![](dialog-images/pref09.png "设置 segue 类型")](dialog-images/pref09.png)
+    [![](dialog-images/pref09.png "设置 segue 类型")](dialog-images/pref09.png#lightbox)
 11. 保存所做的更改并返回到 Visual Studio for Mac 同步。
 
 如果我们运行代码并选择**首选项...**从**应用程序菜单**，将显示窗口：
 
-[ ![](dialog-images/pref10.png "示例首选项窗口")](dialog-images/pref10.png)
+[![](dialog-images/pref10.png "示例首选项窗口")](dialog-images/pref10.png#lightbox)
 
 有关使用 Windows 和工具栏的详细信息，请参阅我们[Windows](~/mac/user-interface/window.md)和[工具栏](~/mac/user-interface/toolbar.md)文档。
 
@@ -719,7 +719,7 @@ namespace SourceWriter
 
 接下来，连接到 UI 元素上的首选项窗口和视图上面创建的首选项类。 在接口生成器中，选择首选项的视图控制器，并切换到**标识检查器**，创建控制器的自定义类： 
 
-[ ![](dialog-images/prefs12.png "标识检查器")](dialog-images/prefs12.png)
+[![](dialog-images/prefs12.png "标识检查器")](dialog-images/prefs12.png#lightbox)
 
 切换回 Visual Studio for Mac 以同步所做的更改并打开以进行编辑新创建的类。 使该类如下所示：
 
@@ -758,7 +758,7 @@ namespace SourceWriter
 
 接下来，双击要在接口生成器中重新打开 （并查看刚才上面所做的更改） 的情节提要文件。 拖动到视图中生成的首选项接口所需的任何 UI 控件。 每个控件，切换到**绑定检查器**并将绑定到的各个属性**AppPreference**类：
 
-[ ![](dialog-images/prefs13.png "绑定检查器")](dialog-images/prefs13.png)
+[![](dialog-images/prefs13.png "绑定检查器")](dialog-images/prefs13.png#lightbox)
 
 面板 （查看控制器） 的所有重复上述步骤和所需的首选项属性。
 
@@ -903,7 +903,7 @@ namespace SourceWriter
 
 与所有这些更改后，如果用户编辑应用程序的首选项，并关闭首选项窗口时，所做的更改将应用到所有打开的窗口：
 
-[ ![](dialog-images/prefs14.png "示例首选项窗口")](dialog-images/prefs14.png)
+[![](dialog-images/prefs14.png "示例首选项窗口")](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog" />
 
@@ -954,7 +954,7 @@ if (dlg.RunModal () == 1) {
 
 如果我们运行程序并选择**打开...**项从**文件**显示菜单上，以下： 
 
-[ ![](dialog-images/dialog03.png "打开的对话框")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "打开的对话框")](dialog-images/dialog03.png#lightbox)
 
 <a name="The_Print_and_Page_Setup_Dialogs" />
 
@@ -991,11 +991,11 @@ void ShowDocument (NSObject sender) {
 
 如果我们设置`ShowPrintAsSheet`属性`false`、 运行应用程序并显示打印对话框，请将显示以下：
 
-[ ![](dialog-images/print01.png "打印对话框")](dialog-images/print01.png)
+[![](dialog-images/print01.png "打印对话框")](dialog-images/print01.png#lightbox)
 
 如果设置`ShowPrintAsSheet`属性`true`、 运行应用程序并显示打印对话框，请将显示以下：
 
-[ ![](dialog-images/print02.png "打印工作表")](dialog-images/print02.png)
+[![](dialog-images/print02.png "打印工作表")](dialog-images/print02.png#lightbox)
 
 下面的代码将显示页面布局对话框：
 
@@ -1022,11 +1022,11 @@ void ShowLayout (NSObject sender) {
 
 如果我们设置`ShowPrintAsSheet`属性`false`、 运行应用程序并显示打印布局对话框，请将显示以下：
 
-[ ![](dialog-images/print03.png "页面设置对话框")](dialog-images/print03.png)
+[![](dialog-images/print03.png "页面设置对话框")](dialog-images/print03.png#lightbox)
 
 如果设置`ShowPrintAsSheet`属性`true`、 运行应用程序并显示打印布局对话框，请将显示以下：
 
-[ ![](dialog-images/print04.png "页设置表")](dialog-images/print04.png)
+[![](dialog-images/print04.png "页设置表")](dialog-images/print04.png#lightbox)
 
 有关使用打印和页安装程序对话框的详细信息，请参阅 Apple 的[NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092)， [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080)和[简介打印](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1)文档。
 
@@ -1076,19 +1076,19 @@ void ShowSaveAs (NSObject sender)
 
 如果我们设置`ShowSaveAsSheet`属性`false`，运行该应用程序并选择**另存为...**从**文件**菜单上，将显示以下：
 
-[ ![](dialog-images/save01.png "保存对话框")](dialog-images/save01.png)
+[![](dialog-images/save01.png "保存对话框")](dialog-images/save01.png#lightbox)
 
 用户可以展开该对话框：
 
-[ ![](dialog-images/save02.png "展开保存对话框")](dialog-images/save02.png)
+[![](dialog-images/save02.png "展开保存对话框")](dialog-images/save02.png#lightbox)
 
 如果我们设置`ShowSaveAsSheet`属性`true`，运行该应用程序并选择**另存为...**从**文件**菜单上，将显示以下：
 
-[ ![](dialog-images/save03.png "保存工作表的一个")](dialog-images/save03.png)
+[![](dialog-images/save03.png "保存工作表的一个")](dialog-images/save03.png#lightbox)
 
 用户可以展开该对话框：
 
-[ ![](dialog-images/save04.png "展开保存工作表")](dialog-images/save04.png)
+[![](dialog-images/save04.png "展开保存工作表")](dialog-images/save04.png#lightbox)
 
 有关使用保存对话框的详细信息，请参阅 Apple 的[NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098)文档。
 
@@ -1105,7 +1105,7 @@ void ShowSaveAs (NSObject sender)
 - [菜单](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)
 - [工具栏](~/mac/user-interface/toolbar.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [表简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)
 - [打印简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Printing/osxp_aboutprinting/osxp_aboutprt.html)

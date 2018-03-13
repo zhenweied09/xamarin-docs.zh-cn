@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b0b1db6bf73b03eed99c5ede038d07bb3ccf284
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23aa944b88fe3e743b6b29810c29d1843f2efc29
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="api-design"></a>API 设计
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -23,7 +22,6 @@ ms.lasthandoff: 02/27/2018
 
 存在 Xamarin.Android 的核心是互操作的引擎与 Java 领域这样桥 C# 的环境并允许开发人员访问对 Java Api 通过 C# 或其他.NET 语言。
 
-<a name="Design_Principles" />
 
 ## <a name="design-principles"></a>设计原则
 
@@ -64,7 +62,6 @@ ms.lasthandoff: 02/27/2018
     - 提供一种机制来调用任意 Java 库 ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/))。
 
 
-<a name="Assemblies" />
 
 ## <a name="assemblies"></a>程序集
 
@@ -72,11 +69,9 @@ Xamarin.Android 包含组成程序集的大量*MonoMobile 配置文件*。 [程�
 
 中包含到 Android 平台绑定`Mono.Android.dll`程序集。 此程序集包含使用 Android Api 的整个绑定以及与 Android 运行时 VM 通信。
 
-<a name="Binding_Design" />
 
 ## <a name="binding-design"></a>绑定设计
 
-<a name="Collections" />
 
 ### <a name="collections"></a>集合
 
@@ -112,7 +107,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-<a name="Properties" />
 
 ### <a name="properties"></a>属性
 
@@ -127,7 +121,6 @@ Java 方法被转换为属性，在适当的时候：
 -  属性是*不*生成如果属性类型将是一个数组。
 
 
-<a name="Events_and_Listeners" />
 
 ### <a name="events-and-listeners"></a>事件和侦听器
 
@@ -177,7 +170,6 @@ button.Click += (sender, e) => {
 
 所有的侦听器接口实现[ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)接口，因为绑定，因此侦听器类必须实现此接口的实现详细信息。 这可以通过上的一个子类中实现侦听器接口完成[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)或任何其他包装 Java 对象，如对 Android 活动。
 
-<a name="Runnables" />
 
 ### <a name="runnables"></a>可运行对象
 
@@ -188,7 +180,6 @@ Java 利用[java.lang.Runnable](https://developer.xamarin.com/api/type/Java.Lang
 
 我们留[IRunnable](https://developer.xamarin.com/api/type/Java.Lang.IRunnable/)作为可运行对象直接传递中而不是因为几种类型实现的接口，并因此可以替换它们的位置的重载。
 
-<a name="Inner_Classes" />
 
 ### <a name="inner-classes"></a>内部类
 
@@ -227,7 +218,6 @@ class CubeWallpaper : WallpaperService {
 
 请注意如何`CubeWallpaper.CubeEngine`嵌套在`CubeWallpaper`，`CubeWallpaper`继承自包含的类`WallpaperService.Engine`，和`CubeWallpaper.CubeEngine`具有构造函数采用的声明的类型-`CubeWallpaper`为所有在此情况下-上面指定。
 
-<a name="Interfaces" />
 
 ### <a name="interfaces"></a>接口
 
@@ -254,7 +244,7 @@ Java 接口将转换为两种类型：
 
 
 > [!NOTE]
-> **注意：**从 Xamarin.Android 1.9 开始，Java 接口常量是<em>重复</em>为了简化移植 Java 代码。 这有助于改善依赖于 Java 代码移植[android 提供程序](http://developer.android.com/reference/android/provider/package-summary.html)接口常量。
+> 从开始 Xamarin.Android 1.9，Java 接口常量是<em>重复</em>为了简化移植 Java 代码。 这有助于改善依赖于 Java 代码移植[android 提供程序](http://developer.android.com/reference/android/provider/package-summary.html)接口常量。
 
 除了上述所有类型，有四个进一步的更改：
 
@@ -277,7 +267,6 @@ Java 接口将转换为两种类型：
 
 最后，类型带有*Consts*如后缀*Android.OS.ParcelableConsts*现在已过时，而非新引入 InterfaceConsts 嵌套类型。 它们将在 Xamarin.Android 3.0 中删除。
 
-<a name="Resources" />
 
 ## <a name="resources"></a>资源
 
@@ -323,7 +312,6 @@ public class Resource {
 
 然后，你将使用`Resource.Drawable.icon`引用`drawable/icon.png`文件，或`Resource.Layout.main`引用`layout/main.xml`文件，或`Resource.String.first_string`引用字典文件中的第一个字符串`values/strings.xml`。
 
-<a name="Constants_and_Enumerations" />
 
 ## <a name="constants-and-enumerations"></a>常量和枚举
 

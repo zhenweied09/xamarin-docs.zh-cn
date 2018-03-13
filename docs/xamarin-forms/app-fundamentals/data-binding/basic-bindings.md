@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 500ad02d79cea79f59b1aca91b0312c9a9d6bac3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="basic-bindings"></a>基本绑定
 
@@ -94,7 +94,7 @@ label.SetBinding(RotationProperty, "Value");
 
 在操作`Slider`、`Label`相应地旋转：
 
-[![绑定的 Basice 代码](basic-bindings-images/basiccodebinding-small.png "基本代码绑定")](basic-bindings-images/basiccodebinding-large.png "基本代码绑定")
+[![绑定的 Basice 代码](basic-bindings-images/basiccodebinding-small.png "基本代码绑定")](basic-bindings-images/basiccodebinding-large.png#lightbox "基本代码绑定")
 
 **基本 Xaml 绑定**页等同于**基本代码绑定**之处在于它在 XAML 中定义的整个数据绑定：
 
@@ -190,7 +190,7 @@ public partial class AlternativeCodeBindingPage : ContentPage
 
 运行此程序可能有点令人惊讶：
 
-[![替代代码绑定](basic-bindings-images/alternativecodebinding-small.png "替代代码绑定")](basic-bindings-images/alternativecodebinding-large.png "替代代码绑定")
+[![替代代码绑定](basic-bindings-images/alternativecodebinding-small.png "替代代码绑定")](basic-bindings-images/alternativecodebinding-large.png#lightbox "替代代码绑定")
 
 在左侧的 iOS 屏幕显示屏幕时将首先显示的页的外观。 其中是`Label`？ 
 
@@ -319,7 +319,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 
 `BindingContext`属性`StackLayout`设置为`slider`对象。 此绑定上下文继承两个`Label`和`BoxView`，这两个都没有其`Rotation`属性设置为`Value`属性`Slider`: 
 
-[![绑定上下文继承](basic-bindings-images/bindingcontextinheritance-small.png "绑定上下文继承")](basic-bindings-images/bindingcontextinheritance-large.png "绑定上下文继承")
+[![绑定上下文继承](basic-bindings-images/bindingcontextinheritance-small.png "绑定上下文继承")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "绑定上下文继承")
 
 在[下一篇文章](binding-mode.md)，你将看到如何*绑定模式*可以更改目标和源对象之间的数据流。
 

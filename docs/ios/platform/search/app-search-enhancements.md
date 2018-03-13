@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 95f7ad5069abfe4dff82659c0fbc79eef2125e15
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af124c2ae0390c5321e9dd34158c7b53b33b2c48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-search-enhancements"></a>应用程序搜索增强功能
 
@@ -54,17 +54,15 @@ iOS 10 提供了一种机制来计数到应用的常用深层链接后跟用户�
 
 若要实现此功能，请编辑应用程序的`Info.plist`文件中，添加`CoreSpotlightContinuation`类型的密钥**布尔**并将其值设置为`YES`:
 
-[[ide name="xs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](app-search-enhancements-images/search01.png "编辑 CoreSpotlightContinuation Info.plist 文件中")](app-search-enhancements-images/search01.png)
+[![](app-search-enhancements-images/search01.png "编辑 CoreSpotlightContinuation Info.plist 文件中")](app-search-enhancements-images/search01.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[ide name="vs]]
+[![](app-search-enhancements-images/searchw01.png "编辑 CoreSpotlightContinuation Info.plist 文件中")](app-search-enhancements-images/search01.png#lightbox)
 
-[ ![](app-search-enhancements-images/searchw01.png "编辑 CoreSpotlightContinuation Info.plist 文件中")](app-search-enhancements-images/search01.png)
-
-[[/ide]]
+-----
 
 若要响应用户继续搜索结果 (`NSUserActivity`)，编辑`AppDelegate.cs`文件，并重写`ContinueUserActivity`方法。 例如:
 

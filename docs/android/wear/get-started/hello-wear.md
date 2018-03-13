@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Hello 磨损
 
@@ -30,11 +30,11 @@ _创建第一个 Android 磨损应用并在磨损模拟器或设备上运行它�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![在新项目对话框中创建新的 Android 磨损应用程序](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![在新项目对话框中创建新的 Android 磨损应用程序](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![在新的解决方案对话框创建新的 Android 磨损应用程序](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![在新的解决方案对话框创建新的 Android 磨损应用程序](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ _创建第一个 Android 磨损应用并在磨损模拟器或设备上运行它�
 
 确保**到目标最低 Android**设置为**Android 5.0 （棒糖形）**或更高版本： 
 
-[![将目标框架设置为 Visual Studio 中的 Android 5.0](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![将目标框架设置为 Visual Studio 中的 Android 5.0](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 确保目标框架设置为**Android 5.0 （棒糖形）**或更高版本：
 
-[ ![在设计时将目标框架设置为 Visual Studio 中的 Android 5.0 for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![在设计时将目标框架设置为 Visual Studio 中的 Android 5.0 for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ Android 磨损设备应出现在设备下拉列表中。 请确保选择正确�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![在 Visual Studio 设备菜单中选择磨损 AVD](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![在 Visual Studio 设备菜单中选择磨损 AVD](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![为 Mac 设备菜单在 Visual Studio 中选择磨损 AVD](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![为 Mac 设备菜单在 Visual Studio 中选择磨损 AVD](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Android 磨损设备应出现在设备下拉列表中。 请确保选择正确�
 
 应用程序成功部署后，磨损设备的屏幕应显示类似于以下屏幕：
 
-[![磨损应用程序的初始屏幕](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![磨损应用程序的初始屏幕](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 点击**单击我 ！** 按钮的表面上磨损设备并与每个 tap 计数增量，请参阅：
 
-[![带屏幕截图 3 次单击后的应用程序](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![带屏幕截图 3 次单击后的应用程序](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>后续步骤

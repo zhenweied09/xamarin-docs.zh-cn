@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 0ab1daa9ce76900067f374cda58040354688c7be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e77c5653171ec6c69608858805de28843fc0db56
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="shared-projects"></a>共享的项目
 
@@ -25,20 +25,8 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 如果已使用在过去文件链接来共享代码项目之间，共享项目的工作方式相似但更改进了 IDE 支持。
 
 
-# <a name="requirements"></a>惠?
 
-共享 （请参阅备注） 的 Xamarin Studio 5 和 Visual Studio 2013 Update 2 中添加了支持的项目。
-
-> [!IMPORTANT]
->  Microsoft 发布了此新的项目类型-**共享项目 ([下载 Visual Studio 扩展预览版](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450))** -Visual Studio 2013 Update 2 (2014 年 4 月)。 请参阅 Microsoft 的[Windows Phone 8.1](http://blogs.msdn.com/b/visualstudio/archive/2014/04/08/building-windows-phone-8-1-apps-in-html.aspx)和[Microsoft 应用商店](http://msdn.microsoft.com/en-us/library/windows/apps/dn609832.aspx#CrossPlatform)如何作用于这些平台的更多详细信息的文档。
-
-
-
-
- <a name="Walkthrough" />
-
-
-# <a name="what-is-a-shared-project"></a>什么是共享的项目？
+## <a name="what-is-a-shared-project"></a>什么是共享的项目？
 
 与大多数其他项目类型不同共享的项目没有任何输出 （以 DLL 形式），而是会将代码编译到每个项目中引用它。 在下图阐释了这-从概念上讲共享项目的整个内容是"复制到"每个引用的项目，并且编译，就好像它是它们的一部分。
 
@@ -54,9 +42,7 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 
 
 
-<a name="Xamarin_Studio_Walkthrough" />
-
-# <a name="visual-studio-for-mac-walkthrough"></a>Visual Studio for Mac 演练
+## <a name="visual-studio-for-mac-walkthrough"></a>Visual Studio for Mac 演练
 
 
 此部分将指导完成如何创建和使用共享项目使用 Visual Studio for mac。 请参阅到[共享项目示例](#Shared_Project_Example)有关完整的示例部分。
@@ -109,15 +95,13 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 
 
 
-<a name="Visual_Studio_Walkthrough" />
-
-# <a name="visual-studio-walkthrough"></a>Visual Studio 演练
+## <a name="visual-studio-walkthrough"></a>Visual Studio 演练
 
 
 此部分将指导完成如何创建和使用共享项目使用 Visual Studio。 请参阅到[共享项目示例](#Shared_Project_Example)完整实现的部分。
 
 
-## <a name="creating-a-shared-project"></a>创建共享的项目
+### <a name="creating-a-shared-project"></a>创建共享的项目
 
 
 若要创建一个新的共享项目导航到**文件 > 新解决方案...**和选择的项目和解决方案的名称。
@@ -145,7 +129,7 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 共享项目引用的其他库或应用程序后，可生成解决方案，在代码中查看任何错误。 当由引用共享项目_两个或多个_其他项目中的源代码编辑器，若要查看的项目引用在当前代码文件的顶部左侧出现一个菜单。
 
 
-## <a name="shared-project-properties"></a>共享的项目属性
+### <a name="shared-project-properties"></a>共享的项目属性
 
 
 当你选择一个共享项目存在设置更少比其他项目类型的属性面板中。 由于共享项目未编译 （在其自己） 中，无法设置输出或编译器选项、 项目配置、 程序集签名或自定义命令。 共享项目中的代码有效地从任何正在引用其继承这些值。
@@ -161,10 +145,9 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 
 -----
 
- <a name="Shared_Project_Example" />
+<a name="Shared_Project_Example"/>
 
-
-# <a name="shared-project-example"></a>共享的项目示例
+## <a name="shared-project-example"></a>共享的项目示例
 
 [Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky)使用共享项目，以便包含常用代码的两个 iOS、 Android 和 Windows Phone 应用程序所使用的示例。 同时`SQLite.cs`和`TaskRepository.cs`源代码文件可以利用编译器指令 （如。 `#if __ANDROID__`) 可为每个引用它们的应用程序生成不同的输出。
 
@@ -186,10 +169,9 @@ Windows Phone 项目可以进行导航从 Visual Studio 中适用于 Mac，即�
 
  ![](shared-projects-images/example.png "iOS、 Android、 Windows Phone 示例")
 
- <a name="Summary" />
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>摘要
 
 本文档描述如何共享项目的工作，可以如何创建和适用于 Mac 的 Visual Studio 和 Visual Studio 中使用它们，并引入的简单示例应用程序演示操作中的共享项目。
 

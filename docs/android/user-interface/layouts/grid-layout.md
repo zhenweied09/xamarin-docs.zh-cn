@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 013db64add615e94ef3494f14bc82fc17ec2dca1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8a9735845139da700959caf3639defa6594f307
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridlayout"></a>GridLayout
 
 `GridLayout`是一种新`ViewGroup`子类支持布局中二维网格，类似于 HTML 表中，视图如下所示：
 
- [ ![裁剪 GridLayout 显示四个单元格](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png)
+ [![裁剪 GridLayout 显示四个单元格](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` 适用于平面视图层次结构，其中子视图设置其位置在网格中通过指定的行和列应采用。 这样一来， *GridLayout*能够定位在网格中的视图，而无需任何中间视图提供的表结构，如在 TableLayout 中使用的表行所示。 通过维护平面的层次结构， *GridLayout*能够将更迅速布局其子视图。 让我们看看示例来演示这一概念的实际含义在代码中。
 
-<a name="Creating_a_Grid_Layout" />
 
 ## <a name="creating-a-grid-layout"></a>创建网格布局
 
@@ -51,13 +50,12 @@ ms.lasthandoff: 02/27/2018
 
 以便单元格可以容纳其内容，如下图所示布局会调整行和列大小：
 
- [ ![在左侧小于右侧显示两个单元格的布局的图示](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png)
+ [![在左侧小于右侧显示两个单元格的布局的图示](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 这会导致应用程序中运行时的以下用户界面：
 
- [ ![显示四个单元格的屏幕截图的 GridLayoutDemo 应用](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png)
+ [![显示四个单元格的屏幕截图的 GridLayoutDemo 应用](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
- <a name="Specifying_Orientation" />
 
 
 ## <a name="specifying-orientation"></a>指定方向
@@ -76,13 +74,12 @@ ms.lasthandoff: 02/27/2018
 
 现在，`GridLayout`将定位从顶部到底部的每个列，而不是从左到右中的单元格，如下所示：
 
- [ ![说明如何单元格都将放置在垂直方向的关系图](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png)
+ [![说明如何单元格都将放置在垂直方向的关系图](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 这会导致在运行时的以下用户界面：
 
- [ ![与单元格将放置在垂直方向排列的 GridLayoutDemo 屏幕快照](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png)
+ [![与单元格将放置在垂直方向排列的 GridLayoutDemo 屏幕快照](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
- <a name="Specifying_Explicit_Position" />
 
 
 ### <a name="specifying-explicit-position"></a>指定显式位置
@@ -119,7 +116,6 @@ ms.lasthandoff: 02/27/2018
 </GridLayout>
 ```
 
- <a name="Specifying_spacing" />
 
 
 ### <a name="specifying-spacing"></a>指定的间距
@@ -176,11 +172,10 @@ ms.lasthandoff: 02/27/2018
 
 此 XML 创建中的间距`GridLayout`如下所示：
 
- [ ![演示具有间距更大的单元格 GridLayoutDemo 的屏幕截图](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png)
+ [![演示具有间距更大的单元格 GridLayoutDemo 的屏幕截图](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 使用新的好处`Space`视图是它允许间距，并且不需要我们可以对每个子视图设置属性。
 
- <a name="Spanning_Columns_and_Rows" />
 
 
 ### <a name="spanning-columns-and-rows"></a>跨越行和列
@@ -230,7 +225,7 @@ ms.lasthandoff: 02/27/2018
 
 这将导致的第一列`GridLayout`正在拉伸以适应大小此按钮时，正如我们在这里看到：
 
-[ ![屏幕快照的 GridLayoutDemo 与跨越仅第一列的按钮](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png)
+[![屏幕快照的 GridLayoutDemo 与跨越仅第一列的按钮](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 若要防止拉伸的第一列，我们可以设置按钮以通过设置其 columnspan 如下跨两个列：
 
@@ -245,7 +240,7 @@ ms.lasthandoff: 02/27/2018
 
 执行此操作导致的布局`TextViews`类似于我们更早版本，在添加到底部的按钮的布局`GridLayout`如下所示：
 
- [ ![屏幕快照的 GridLayoutDemo 与跨这两个列的按钮](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png)
+ [![屏幕快照的 GridLayoutDemo 与跨这两个列的按钮](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 
 ## <a name="related-links"></a>相关链接

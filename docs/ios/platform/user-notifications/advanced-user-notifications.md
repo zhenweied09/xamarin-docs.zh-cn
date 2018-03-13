@@ -3,16 +3,16 @@ title: "高级的用户通知"
 description: "本文将新的用户通知框架深入了解一下以及如何充分利用它在 Xamarin.iOS 应用程序中。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4e1ff652-28f0-4566-b383-9d12664401a4
+ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6408f3b45f93413fa814e410f07e7b71179b7338
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="advanced-user-notifications"></a>高级的用户通知
 
@@ -81,7 +81,7 @@ Xamarin.iOS 应用程序具有两种类型的用户能够发送的通知：
 
 看一看以下概述的过程：
 
-[ ![](advanced-user-notifications-images/extension02.png "添加媒体附件进程")](advanced-user-notifications-images/extension02.png)
+[![](advanced-user-notifications-images/extension02.png "添加媒体附件进程")](advanced-user-notifications-images/extension02.png#lightbox)
 
 一旦远程通知将发送到设备 （仅通过 APNs) 中，服务扩展可以然后下载所需的映像，通过所需的任何方式 (如`NSURLSession`) 和它收到映像后，它可以修改的通知和显示的内容它给用户。
 
@@ -157,7 +157,7 @@ namespace MonkeyNotification
 
 当包含自定义用户界面的用户通知呈现给用户时，它将具有以下元素：
 
-[ ![](advanced-user-notifications-images/customui01.png "用户通知与自定义 UI 元素")](advanced-user-notifications-images/customui01.png)
+[![](advanced-user-notifications-images/customui01.png "用户通知与自定义 UI 元素")](advanced-user-notifications-images/customui01.png#lightbox)
 
 如果用户交互 （如通知所示） 了自定义操作时，可以更新用户界面，以便为它们调用某个给定的操作时，发生了什么情况的用户反馈。
 
@@ -171,13 +171,13 @@ namespace MonkeyNotification
 2. 右键单击解决方案名称中**解决方案 Pad**和选择**添加** > **添加新项目**。
 3. 选择**iOS** > **扩展** > **通知内容扩展**单击**下一步**按钮： 
 
-    [ ![](advanced-user-notifications-images/notify01.png "选择通知内容扩展")](advanced-user-notifications-images/notify01.png)
+    [![](advanced-user-notifications-images/notify01.png "选择通知内容扩展")](advanced-user-notifications-images/notify01.png#lightbox)
 4. 输入**名称**扩展和单击**下一步**按钮： 
 
-    [ ![](advanced-user-notifications-images/notify02.png "输入扩展的名称")](advanced-user-notifications-images/notify02.png)
+    [![](advanced-user-notifications-images/notify02.png "输入扩展的名称")](advanced-user-notifications-images/notify02.png#lightbox)
 5. 调整**项目名称**和/或**解决方案名称**如果必需的且单击**创建**按钮： 
 
-    [ ![](advanced-user-notifications-images/notify03.png "调整项目名称和/或解决方案名称")](advanced-user-notifications-images/notify03.png)
+    [![](advanced-user-notifications-images/notify03.png "调整项目名称和/或解决方案名称")](advanced-user-notifications-images/notify03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -185,7 +185,7 @@ namespace MonkeyNotification
 2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **添加新项目**。
 3. 选择**iOS** > **扩展** > **通知内容扩展**: 
 
-    [ ![](advanced-user-notifications-images/notify01w.png "选择通知内容扩展")](advanced-user-notifications-images/notify01w.png)
+    [![](advanced-user-notifications-images/notify01w.png "选择通知内容扩展")](advanced-user-notifications-images/notify01w.png#lightbox)
 4. 输入**名称**扩展和单击**确定**按钮。
 
 -----
@@ -254,7 +254,7 @@ namespace MonkeyChatNotifyExtension
 3. 展开`NSExtension`密钥。
 4. 添加`UNNotificationExtensionCategory`作为类型键**字符串**与扩展所属类别的值 (在此示例中事件邀请): 
 
-    [ ![](advanced-user-notifications-images/customui02.png "添加 UNNotificationExtensionCategory 密钥")](advanced-user-notifications-images/customui02.png)
+    [![](advanced-user-notifications-images/customui02.png "添加 UNNotificationExtensionCategory 密钥")](advanced-user-notifications-images/customui02.png#lightbox)
 5. 保存更改。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -263,7 +263,7 @@ namespace MonkeyChatNotifyExtension
 3. 展开`NSExtension`密钥。
 4. 添加`UNNotificationExtensionCategory`作为类型键**字符串**与扩展所属类别的值 (在此示例中事件邀请): 
 
-    [ ![](advanced-user-notifications-images/customui02w.png "添加 UNNotificationExtensionCategory 密钥")](advanced-user-notifications-images/customui02w.png)
+    [![](advanced-user-notifications-images/customui02w.png "添加 UNNotificationExtensionCategory 密钥")](advanced-user-notifications-images/customui02w.png#lightbox)
 5. 保存更改。
 
 -----
@@ -272,11 +272,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui03.png "通知内容扩展类别")](advanced-user-notifications-images/customui03.png)
+[![](advanced-user-notifications-images/customui03.png "通知内容扩展类别")](advanced-user-notifications-images/customui03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui03w.png "通知内容扩展类别")](advanced-user-notifications-images/customui03w.png)
+[![](advanced-user-notifications-images/customui03w.png "通知内容扩展类别")](advanced-user-notifications-images/customui03w.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui04.png "查找默认信息")](advanced-user-notifications-images/customui04.png)
+[![](advanced-user-notifications-images/customui04.png "查找默认信息")](advanced-user-notifications-images/customui04.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui04w.png "查找默认信息")](advanced-user-notifications-images/customui04w.png)
+[![](advanced-user-notifications-images/customui04w.png "查找默认信息")](advanced-user-notifications-images/customui04w.png#lightbox)
 
 -----
 
@@ -367,11 +367,11 @@ namespace MonkeyChatNotifyExtension
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](advanced-user-notifications-images/customui05.png "UNNotificationExtensionInitialContentSizeRatio 密钥")](advanced-user-notifications-images/customui05.png)
+[![](advanced-user-notifications-images/customui05.png "UNNotificationExtensionInitialContentSizeRatio 密钥")](advanced-user-notifications-images/customui05.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](advanced-user-notifications-images/customui05w.png "UNNotificationExtensionInitialContentSizeRatio 密钥")](advanced-user-notifications-images/customui05w.png)
+[![](advanced-user-notifications-images/customui05w.png "UNNotificationExtensionInitialContentSizeRatio 密钥")](advanced-user-notifications-images/customui05w.png#lightbox)
 
 -----
 

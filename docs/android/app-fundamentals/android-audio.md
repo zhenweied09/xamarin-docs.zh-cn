@@ -7,18 +7,17 @@ ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ea3fd7d73f104f7b9650431a5531fe4399a2630c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 91bd5ae83cd0d59872e11a6b1bdc7b84c751e64f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-audio"></a>Android 音频
 
 _Android OS 为多媒体，包含音频和视频提供广泛支持。本指南重点介绍在 Android 中的音频，并介绍如何播放和记录音频使用内置的音频播放器和记录器类，以及低级别的音频 API。此外将介绍使用其他应用程序，广播的音频事件，从而使开发人员能够生成良好的应用程序。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -44,7 +43,6 @@ Android 为多媒体提供广泛支持。 这篇文章检查使用音频在 Andr
 ![所需的 Android 清单与记录的权限部分\_启用的音频](android-audio-images/image01.png)
 
 
-<a name="Playing_Audio_with_the_MediaPlayer_Class" />
 
 ## <a name="playing-audio-with-the-mediaplayer-class"></a>播放音频与 MediaPlayer 类
 
@@ -52,7 +50,6 @@ Android 为多媒体提供广泛支持。 这篇文章检查使用音频在 Andr
 `MediaPlayer` 通过传入的文件路径，可以播放本地或远程文件。 但是，`MediaPlayer`非常状态区分和调用其方法之一在错误状态将导致异常引发。 务必与交互`MediaPlayer`若要避免错误下面所述的顺序。
 
 
-<a name="Initializing_and_Playing" />
 
 ### <a name="initializing-and-playing"></a>初始化和播放
 
@@ -84,7 +81,6 @@ public void StartPlayer(String  filePath)
 }
 ```
 
-<a name="Suspending_and_Resuming_Playback" />
 
 ### <a name="suspending-and-resuming-playback"></a>挂起和继续执行播放
 
@@ -113,14 +109,12 @@ player.Stop();
 player.Release();
 ```
 
-<a name="Using_the_MediaRecorder_Class_to_Record_Audio" />
 
 
 ## <a name="using-the-mediarecorder-class-to-record-audio"></a>使用记录音频 MediaRecorder 类
 
 到推论`MediaPlayer`Android 中的录制音频为[MediaRecorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)类。 如`MediaPlayer`，它状态区分，并将经历若干状态，可用于访问它可以在那里开始录制的点。 若要录制音频，`RECORD_AUDIO`权限必须设置。 有关说明如何将应用程序设置权限请参阅[使用 AndroidManifest.xml](~/android/platform/android-manifest.md)。
 
-<a name="Initializing_and_Recording" />
 
 ### <a name="initializing-and-recording"></a>初始化和记录
 
@@ -170,7 +164,6 @@ void RecordAudio (String filePath)
 }
 ```
 
-<a name="Stopping_recording" />
 
 ### <a name="stopping-recording"></a>停止录制
 
@@ -180,7 +173,6 @@ void RecordAudio (String filePath)
 recorder.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 
 ### <a name="cleaning-up"></a>清理
@@ -197,18 +189,15 @@ recorder.Reset();
 recorder.Release();
 ```
 
-<a name="Managing_Audio_Notifications" />
 
 ## <a name="managing-audio-notifications"></a>管理音频通知
 
-<a name="The_AudioManager_Class" />
 
 
 ### <a name="the-audiomanager-class"></a>AudioManager 类
 
 [AudioManager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)类提供对音频让知道音频事件发生时的应用程序的通知的访问。 此服务还提供对其他音频的功能，如卷和响铃模式控制访问。 `AudioManager`允许应用程序处理音频通知来控制音频播放。
 
-<a name="Managing_Audio_Focus" />
 
 
 ### <a name="managing-audio-focus"></a>管理音频焦点
@@ -224,7 +213,6 @@ recorder.Release();
 有关 audio 焦点的详细信息，请参阅[管理音频焦点](http://developer.android.com/training/managing-audio/audio-focus.html)。
 
 
-<a name="Registering_the_Callback_for_Audio_Focus" />
 
 #### <a name="registering-the-callback-for-audio-focus"></a>音频焦点注册回调
 
@@ -235,7 +223,6 @@ recorder.Release();
 当应用程序完成后使用的音频的资源时，它将调用`AbandonFocus`方法`AudioManager`，并再次将传递回调中。 这注销回调，并释放的音频的资源，以便其他应用程序可能会收到音频焦点。
 
 
-<a name="Requesting_Audio_Focus" />
 
 #### <a name="requesting-audio-focus"></a>请求的音频焦点
 
@@ -270,13 +257,11 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 }
 ```
 
-<a name="Releasing_Audio_Focus" />
 
 #### <a name="releasing-audio-focus"></a>释放音频焦点
 
 轨道的播放完成后，`AbandonFocus`方法`AudioManager`调用。 这样，另一个应用程序来获取设备的音频资源。 如果用户已注册其自己的侦听器，其他应用程序将接收此音频焦点更改的通知。
 
-<a name="Low_Level_Audio_API" />
 
 ## <a name="low-level-audio-api"></a>低级别的音频 API
 
@@ -289,14 +274,10 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 3.  音频流。
 
 
- <a name="AudioTrack_Class" />
-
-
 ### <a name="audiotrack-class"></a>AudioTrack 类
 
 [AudioTrack](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/)类录制，使用低级别的音频 Api 和低级别等效于`MediaPlayer`类。
 
-<a name="Initializing_and_Playing" />
 
 #### <a name="initializing-and-playing"></a>初始化和播放
 
@@ -339,7 +320,6 @@ void PlayAudioTrack(byte[] audioBuffer)
 }
 ```
 
-<a name="Pausing_and_Stopping_the_Playback" />
 
 #### <a name="pausing-and-stopping-the-playback"></a>暂停和停止播放
 
@@ -355,7 +335,6 @@ audioTrack.Pause();
 audioTrack.Stop();
 ```
 
-<a name="Cleaning_up" />
 
 #### <a name="cleanup"></a>清理
 
@@ -365,13 +344,11 @@ audioTrack.Stop();
 audioTrack.Release();
 ```
 
-<a name="The_AudioRecord_Class" />
 
 ### <a name="the-audiorecord-class"></a>AudioRecord 类
 
 [AudioRecord](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/)类等同于`AudioTrack`录制一侧。 如`AudioTrack`，它使用内存缓冲区直接，来代替文件和 Uri。 它要求`RECORD_AUDIO`在清单中设置权限。
 
-<a name="Initializing_and_Recording" />
 
 #### <a name="initializing-and-recording"></a>初始化和记录
 
@@ -423,7 +400,6 @@ void RecordAudio()
 }
 ```
 
-<a name="Stopping_the_Recording" />
 
 #### <a name="stopping-the-recording"></a>停止录制
 
@@ -433,7 +409,6 @@ void RecordAudio()
 audRecorder.Stop();
 ```
 
-<a name="Clean_Up" />
 
 #### <a name="cleanup"></a>清理
 
@@ -443,7 +418,6 @@ audRecorder.Stop();
 audRecorder.Release();
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

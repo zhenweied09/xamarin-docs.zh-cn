@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: bbf20155fe097f0229aa28c1f0d046cb3ef31a63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-android-assets"></a>使用 Android 资产
 
@@ -20,7 +20,6 @@ _资产_提供一种方法在你的应用程序中包括如文本、 xml、 字�
 添加到项目的资产将显示从你的应用程序使用可以读取的文件系统一样[AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)。
 在此简单演示中我们将向我们项目中，添加文本文件资产读取它使用`AssetManager`，并将其显示在 TextView。
 
-<a name="Add_Asset_to_Project" />
 
 ## <a name="add-asset-to-project"></a>将资产添加到项目
 
@@ -36,13 +35,12 @@ Visual Studio 应该将设置**生成操作**到此文件**AndroidAsset**:
 
 应该将设置适用于 Mac 的 visual Studio**生成操作**到此文件**AndroidAsset**:
 
-[![将生成操作设置为 AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![将生成操作设置为 AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
 选择正确**BuildAction**可确保，将在编译时到 APK 中打包该文件。
 
-<a name="Reading_Assets" />
 
 ## <a name="reading-assets"></a>读取资产
 
@@ -71,7 +69,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>运行应用程序
 

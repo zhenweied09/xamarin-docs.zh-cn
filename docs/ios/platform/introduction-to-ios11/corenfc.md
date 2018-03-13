@@ -4,14 +4,15 @@ description: "使用 iOS 11 读取近距离通信 (NFC) 标记"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-ios
+ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2016
-ms.openlocfilehash: 4975b4008c635ad2355ca2806ba867636dd50201
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 72c19ef09843c137514983b1d7ee7104e3cb32c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="core-nfc"></a>核心 NFC
 
@@ -62,7 +63,7 @@ CoreNFC 中是一个新框架提供对访问权限的 iOS 11_近场通信_(NFC) 
 
 创建一个新**应用程序 ID**并确保**NFC 标记读取**勾选了服务：
 
-[ ![与选择的 NFC 标记读取的开发人员门户新应用程序 ID 页](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png)
+[![与选择的 NFC 标记读取的开发人员门户新应用程序 ID 页](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 然后应为此应用程序 ID，创建新的预配配置文件，然后下载并将其安装在你开发的 mac。
 

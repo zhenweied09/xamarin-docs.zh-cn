@@ -4,14 +4,15 @@ description: "转换矩阵将第三个列创建透视和锥形的效果"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>非仿射转换
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 下面是一些示例映像：
 
-[![](non-affine-images/testperspective-small.png "测试透视页面的三个屏幕截图")](non-affine-images/testperspective-large.png "三倍的测试透视页面屏幕截图")
+[![](non-affine-images/testperspective-small.png "测试透视页面的三个屏幕截图")](non-affine-images/testperspective-large.png#lightbox "三倍的测试透视页面屏幕截图")
 
 在试用滑块，你将找到 0.0066 超出或低于 –0.0066 的值会导致突然成为断开和不相干的图像。 所转换的位图是 300 像素的正方形。 因此范围是从 –150 到 150 位图的坐标相对于其中心转换。 回想一下，z 的值是：
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 下面是一些可能的恶意活动：
 
-[![](non-affine-images/tapertransform-small.png "三重的锥形转换页的屏幕截图")](non-affine-images/tapertransform-large.png "锥形转换页的三个屏幕截图")
+[![](non-affine-images/tapertransform-small.png "三重的锥形转换页的屏幕截图")](non-affine-images/tapertransform-large.png#lightbox "锥形转换页的三个屏幕截图")
 
 另一种通用的非仿射转换是三维旋转下, 一步的文章中所示，[三维旋转](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)。
 
 非仿射转换可以将矩形转换为任何凸四边形。 说明了这一点通过**显示非仿射矩阵**页。 它是非常类似于**显示仿射矩阵**来自页[矩阵转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)文章，只不过它具有第四个`TouchPoint`对象，以操作位图的第四个角：
 
-[![](non-affine-images/shownonaffinematrix-small.png "显示非仿射矩阵页面的三个屏幕截图")](non-affine-images/shownonaffinematrix-large.png "显示非仿射矩阵页面的三个屏幕截图")
+[![](non-affine-images/shownonaffinematrix-small.png "显示非仿射矩阵页面的三个屏幕截图")](non-affine-images/shownonaffinematrix-large.png#lightbox "显示非仿射矩阵页面的三个屏幕截图")
 
 只要未尝试进行内部角度的四个角位图大于 180 度，或使两条边相互交叉，程序已成功计算从使用此方法的转换[ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs)类：
 

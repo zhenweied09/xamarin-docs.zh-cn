@@ -4,14 +4,15 @@ description: "了解如何使用 SkiaSharp 三个不同的方式来定义弧"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 236f5da78022d6f6482ed66ffd439c4cd15766a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 390c8f4634ea38ecb93e3f21175db00fef27b8e4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>绘制一段弧线，三个方法
 
@@ -100,7 +101,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如你所见，开始角度和扫描角度可以执行对负值：
 
-[![](arcs-images/anglearc-small.png "三重的角度弧线页面屏幕截图")](arcs-images/anglearc-large.png "角度弧线页面的三个屏幕截图")
+[![](arcs-images/anglearc-small.png "三重的角度弧线页面屏幕截图")](arcs-images/anglearc-large.png#lightbox "角度弧线页面的三个屏幕截图")
 
 生成一段弧线，此方法是通过算法最简单而且很容易派生描述弧线的参数化公式。了解大小和位置椭圆和开始和扫描角度，开始日期和弧的终结点可以被计算使用简单 trigonometry:
 
@@ -205,11 +206,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 一个新`SKPath`为每个饼图扇区中创建对象。 路径由中心中的一行则`ArcTo`绘制圆弧和另一个行返回的中心结果`Close`调用。 此程序显示"分离型"饼图扇区，从而将它们全部从中心 50 个像素。 该任务需要扫描角度的中点方向向量为每个切片：
 
-[![](arcs-images/explodedpiechart-small.png "分离型饼图页面的三个屏幕截图")](arcs-images/explodedpiechart-large.png "分离型饼图页面的三个屏幕截图")
+[![](arcs-images/explodedpiechart-small.png "分离型饼图页面的三个屏幕截图")](arcs-images/explodedpiechart-large.png#lightbox "分离型饼图页面的三个屏幕截图")
 
 若要查看如下所示没有"膨胀"的情况下，只需注释掉`Translate`调用：
 
-[![](arcs-images/explodedpiechartunexploded-small.png "三重而无需爆炸式增长的分离型饼图页面屏幕截图")](arcs-images/explodedpiechartunexploded-large.png "不爆炸式增长的情况下分离型饼图图表页的三个屏幕快照")
+[![](arcs-images/explodedpiechartunexploded-small.png "三重而无需爆炸式增长的分离型饼图页面屏幕截图")](arcs-images/explodedpiechartunexploded-large.png#lightbox "不爆炸式增长的情况下分离型饼图图表页的三个屏幕快照")
 
 ## <a name="the-tangent-arc"></a>切线弧线
 
@@ -413,7 +414,7 @@ public partial class TangentArcPage : InteractivePage
 
 下面是**正切弧线**页在所有三个平台上运行：
 
-[![](arcs-images/tangentarc-small.png "正切值弧线页面三重屏幕截图")](arcs-images/tangentarc-large.png "三倍的正切值弧线页面屏幕截图")
+[![](arcs-images/tangentarc-small.png "正切值弧线页面三重屏幕截图")](arcs-images/tangentarc-large.png#lightbox "三倍的正切值弧线页面屏幕截图")
 
 在 Windows 移动设备上，三个点是几乎共线，和弧是非常小。
 
@@ -490,7 +491,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处是三个平台上运行的程序：
 
-[![](arcs-images/roundedheptagon-small.png "三重的舍入 Heptagon 页面屏幕截图")](arcs-images/roundedheptagon-large.png "三倍的舍入 Heptagon 页面屏幕截图")
+[![](arcs-images/roundedheptagon-small.png "三重的舍入 Heptagon 页面屏幕截图")](arcs-images/roundedheptagon-large.png#lightbox "三倍的舍入 Heptagon 页面屏幕截图")
 
 ## <a name="the-elliptical-arc"></a>椭圆弧
 
@@ -585,7 +586,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处三个平台上运行它：
 
-[![](arcs-images/ellipticalarc-small.png "三重的椭圆弧页面屏幕截图")](arcs-images/ellipticalarc-large.png "椭圆弧页面的三个屏幕截图")
+[![](arcs-images/ellipticalarc-small.png "三重的椭圆弧页面屏幕截图")](arcs-images/ellipticalarc-large.png#lightbox "椭圆弧页面的三个屏幕截图")
 
 **弧线无穷大**页使用椭圆弧绘制无穷登录。 无穷大登录开始算起具有 100 个单位的隔开 100 个单位的半径的两个圆：
 
@@ -653,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 该代码使用`Bounds`属性`SKPath`来确定的无穷大正弦值扩展到画布的大小的尺寸：
 
-[![](arcs-images/arcinfinity-small.png "三重的弧线无穷大页面屏幕截图")](arcs-images/arcinfinity-large.png "弧线无穷大页面的三个屏幕截图")
+[![](arcs-images/arcinfinity-small.png "三重的弧线无穷大页面屏幕截图")](arcs-images/arcinfinity-large.png#lightbox "弧线无穷大页面的三个屏幕截图")
 
 则结果看起来有点小，这意味着`Bounds`属性`SKPath`大小超过路径的报告。
 
@@ -661,7 +662,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 若要获取更紧密地适应页面，请使用`TightBounds`属性，用于排除的控制点。 下面是在横向模式中运行并使用该程序`TightBounds`属性来获取路径边界：
 
-[![](arcs-images/arcinfinitytightbounds-small.png "三重的紧密边界弧线无穷大页的屏幕截图")](arcs-images/arcinfinitytightbounds-large.png "三重的紧密边界弧线无穷大页的屏幕截图")
+[![](arcs-images/arcinfinitytightbounds-small.png "三重的紧密边界弧线无穷大页的屏幕截图")](arcs-images/arcinfinitytightbounds-large.png#lightbox "三重的紧密边界弧线无穷大页的屏幕截图")
 
 虽然数学上平滑弧和直线之间的连接，但从弧线到直线的变化可能看起来有点突然。 更好的无穷大登录呈现在下一页中。
 

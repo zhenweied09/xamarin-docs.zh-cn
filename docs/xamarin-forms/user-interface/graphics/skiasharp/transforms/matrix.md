@@ -4,14 +4,15 @@ description: "深入了解与通用转换矩阵的 SkiaSharp 转换"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>矩阵转换
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 它显示在画布的左上角中：
 
-[![](matrix-images/pathtransform-small.png "三重的路径转换页的屏幕截图")](matrix-images/pathtransform-large.png "三重的路径转换页的屏幕截图")
+[![](matrix-images/pathtransform-small.png "三重的路径转换页的屏幕截图")](matrix-images/pathtransform-large.png#lightbox "三重的路径转换页的屏幕截图")
 
 此程序的构造函数将矩阵应用到的路径与以下调用：
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 下面的 iOS 屏幕显示位图，首次加载页，而其他两个屏幕将显示它后某些操作时：
 
-[![](matrix-images/showaffinematrix-small.png "显示仿射矩阵页面的三个屏幕截图")](matrix-images/showaffinematrix-large.png "显示仿射矩阵页面的三个屏幕截图")
+[![](matrix-images/showaffinematrix-small.png "显示仿射矩阵页面的三个屏幕截图")](matrix-images/showaffinematrix-large.png#lightbox "显示仿射矩阵页面的三个屏幕截图")
 
 尽管它看起来就像触摸点拖动位图的角，但这是仅这样的错觉。 从触摸点计算的矩阵变换位图，以便与触摸点的边角保持一致。
 

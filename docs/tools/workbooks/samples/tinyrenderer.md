@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 1689736ce3f2a8e20ceaa23edf410d3892038522
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5422d3f0a68f99790617fe534b30389aae2563c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tinyrenderer-workbooks"></a>TinyRenderer 工作簿
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/27/2018
 -    [第 7 课： 卷影映射](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson7.workbook)
 -    [第 8 课： 环境封闭](https://developer.xamarin.com/workbooks/graphics/tiny-renderer/lesson8.workbook)
 
-[ ![](tinyrenderer-images/tinyrenderer-sml.png "线框呈现示例")](tinyrenderer-images/tinyrenderer.png)
+[![](tinyrenderer-images/tinyrenderer-sml.png "线框呈现示例")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 这些工作簿中的 C# 代码基于此开放源代码[c + + 代码](https://github.com/ssloy/tinyrenderer)，并且文本是从此[wiki](https://github.com/ssloy/tinyrenderer/wiki/)。 我们非常感谢，原始工作位于下使我们能够将其转换为一组的工作簿的许可证。
 

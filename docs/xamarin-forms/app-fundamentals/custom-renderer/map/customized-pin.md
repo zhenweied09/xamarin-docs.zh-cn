@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 91afe9b627d9d430fba38b34f915d7e79652a2d3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c0846e959b4a4cfec9417de59125a8665b648a76
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-map-pin"></a>自定义地图 Pin
 
@@ -137,7 +137,7 @@ public MapPage ()
 1. 添加`ExportRenderer`到自定义呈现器类，以指定它将可用于呈现 Xamarin.Forms 自定义映射特性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。
+> 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 

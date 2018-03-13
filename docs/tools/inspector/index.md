@@ -1,5 +1,5 @@
 ---
-title: "Xamarin 检查器"
+title: Xamarin Inspector
 description: "可视化和调试实时的应用"
 ms.topic: article
 ms.prod: xamarin
@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: f5aaada5d613ed4ce7b32a8a2195e7a92c3e8424
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a5fcfadbe04dd329e609d194a0fb3c804f5d84c8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="xamarin-inspector"></a>Xamarin 检查器
+# <a name="xamarin-inspector"></a>Xamarin Inspector
 
 
 Xamarin 的工作簿和检查器将用户的交互式 C# 控制台工具。 与调试的 IDE 中，检查正在运行的应用时调试或诊断帮助为提供的服务的工作流应用程序集成，该检查器。
 
 实时应用程序检查是适用于企业的客户。 让我们知道如果你[遇到任何 bug](~/tools/inspector/install.md#reporting-bugs)。 我们有[论坛](https://forums.xamarin.com/categories/inspector)太 ！
 
-[ ![](images/interactive-1.0.0-bike-inspect-3d-small.png "实时应用程序检查是可用于企业客户")](images/interactive-1.0.0-bike-inspect-3d.png)
+[![](images/interactive-1.0.0-bike-inspect-3d-small.png "实时应用程序检查是可用于企业客户")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[安装和要求](~/tools/inspector/install.md)
 

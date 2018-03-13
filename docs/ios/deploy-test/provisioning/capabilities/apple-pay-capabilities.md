@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 88db45135104f14ca3a4b18e466e95288853a6df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cc2c12ce2826f0b66cdf49a9a4df84d7f67f7713
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-pay-capabilities"></a>Apple Pay 功能
 
@@ -79,8 +79,8 @@ _向应用程序添加功能通常需要其他预配设置。本指南将介绍 
 7.  向下滚动到此展开部分的底部，然后单击“编辑”。
 8.  在列表中向下滚动到 Apple Pay，然后单击“编辑”按钮：  
     
-    
     ![编辑 Apple Pay 应用 ID 详细信息](apple-pay-capabilities-images/image39.png)
+
 9.  选择要用于此应用 ID 的商户 ID，然后单击“继续”：  
     
     ![选择要用于应用 ID 的商户 ID](apple-pay-capabilities-images/image40.png)

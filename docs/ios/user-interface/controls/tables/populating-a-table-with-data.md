@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>填充包含数据的表
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 生成的表类似如下所示：
 
- [ ![](populating-a-table-with-data-images/image3.png "运行示例表")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "运行示例表")](populating-a-table-with-data-images/image3.png#lightbox)
 
 大多数表允许用户接触的行选择它并执行一些其他操作 （如播放一首歌曲，或调用一个联系人，或显示另一个屏幕）。 若要实现此目的，有几个我们需要执行的操作。 首先，让我们创建显示一条消息，当用户单击行上通过添加以下 AlertController`RowSelected`方法：
 
@@ -140,7 +140,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "行所选的警报")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "行所选的警报")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>单元格重用
@@ -220,7 +220,7 @@ public class MyCell : UITableViewCell
 
 索引，从而帮助用户滚动较长的列表，通常，尽管你可以编制索引按字母顺序排列要按任何条件。 **BasicTableIndex**示例从要演示索引的文件加载较多长的项列表。 在索引中的每个项对应于表节。
 
- [ ![](populating-a-table-with-data-images/image5.png "索引显示")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "索引显示")](populating-a-table-with-data-images/image5.png#lightbox)
 
 若要支持 sections 后面的表的数据需要进行分组，因此 BasicTableIndex 示例创建`Dictionary<>`从每个项的第一个字母用作字典键的字符串的数组：
 
@@ -270,7 +270,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 页眉和页脚可以用于以可视方式组表中的行。 所需的数据结构是非常类似于添加索引 –`Dictionary<>`的确非常有效。 除了使用字母表组单元格，此示例将一组由 botanical 类型蔬菜。
 输出如下所示：
 
- [ ![](populating-a-table-with-data-images/image6.png "示例页眉和页脚")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "示例页眉和页脚")](populating-a-table-with-data-images/image6.png#lightbox)
 
 若要显示页眉和页脚`UITableViewSource`子类需要这些附加方法：
 

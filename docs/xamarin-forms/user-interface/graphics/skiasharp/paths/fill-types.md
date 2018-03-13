@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6e8a37816e28120392f550376807e91fb3b5d458
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cee93f082386e78a643b8c07dd48d0196e8ecd6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-path-fill-types"></a>路径的填充类型
 
@@ -164,7 +164,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 通常情况下，路径的填充类型应影响仅填充和不描边，但两个`Inverse`模式影响填充和描边。 对填充，两个`Inverse`类型填充区域 oppositely 以便填充星形以外的区域。 用于描边，这两个`Inverse`类型颜色描边以外的所有内容。 使用这些反填充类型会产生一些奇数副作用，如 iOS 屏幕截图所示：
 
-[![](fill-types-images/fivepointedstar-small.png "三重的 Five-Pointed 星型页面屏幕截图")](fill-types-images/fivepointedstar-large.png "Five-Pointed 星型页面的三个屏幕截图")
+[![](fill-types-images/fivepointedstar-small.png "三重的 Five-Pointed 星型页面屏幕截图")](fill-types-images/fivepointedstar-large.png#lightbox "Five-Pointed 星型页面的三个屏幕截图")
 
 Android 和 Windows 移动屏幕快照显示典型的奇偶和绕效果，但的笔画和填充的顺序也会影响结果。
 
@@ -217,7 +217,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 它是代码的使用最少创建一个有趣图像：
 
-[![](fill-types-images/overlappingcircles-small.png "三重的重叠圆圈页面屏幕截图")](fill-types-images/overlappingcircles-large.png "重叠圆圈页面的三个屏幕截图")
+[![](fill-types-images/overlappingcircles-small.png "三重的重叠圆圈页面屏幕截图")](fill-types-images/overlappingcircles-large.png#lightbox "重叠圆圈页面的三个屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: ea9046c0c546a2f331aefd2332008e10ec6db3c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e3c986b03408dae98a5a79f257029c10909aeabd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>指纹身份验证入门
 
@@ -27,13 +27,13 @@ ms.lasthandoff: 02/27/2018
 
 Android 应用程序必须请求`USE_FINGERPRINT`清单中的权限。 以下屏幕截图显示如何将此权限添加到 Visual Studio 2015 中的应用程序：
 
-[![启用使用\_Android 清单屏幕中的指纹](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png) 
+[![启用使用\_Android 清单屏幕中的指纹](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 Android 应用程序必须请求`USE_FINGERPRINT`清单中的权限。 以下屏幕截图显示如何将此权限添加到 Visual Studio 中的应用程序，适用于 Mac:
 
-[![在 Android 应用程序屏幕中启用 UseFingerprint](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png) 
+[![在 Android 应用程序屏幕中启用 UseFingerprint](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 

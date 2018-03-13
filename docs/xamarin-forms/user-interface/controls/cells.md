@@ -3,94 +3,63 @@ title: "Xamarin.Forms 单元格"
 description: "Xamarin.Forms 单元格可以添加到 Listview 和 TableViews。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 509ecc509754bba544115c140e619f634bd64eae
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0f8886546004702adbdbca7d991c67d5700e453e
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 单元格
 
 _Xamarin.Forms 单元格可以添加到 Listview 和 TableViews。_
 
-<style>.tableimg {最大宽度： 无 ！ 重要;}</style>
+A*单元格*是一个专用的元素，用于在表中的项，描述列表中的每个项的呈现方式。 [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/)类派生自[ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/)，从中[ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/)还派生。 单元格本身不是一个可见元素;它是用于创建可视元素的模板。 
+
+`Cell` 以独占方式与使用[ `ListView` ](views.md#listView)和[ `TableView` ](views.md#tableView)控件。 若要了解如何使用和自定义单元格，请参阅[ `ListView` ](~/xamarin-forms/user-interface/listview/index.md)和[ `TableView` ](~/xamarin-forms/user-interface/tableview.md)文档。
 
 ## <a name="cells"></a>单元格
 
-单元格是一个专用的元素，该元素用于在表中的项，并且描述应如何绘制列表中的每个项。 单元格派生自[ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/)，从它 VisualElement 还派生。 单元格不是可视元素，但是它只描述用于创建可视元素的模板。 [`Cell`](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) 对于所有 Xamarin.Forms 单元格提供基本类和功能。 单元格都设计为要添加到元素[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)或[ `TableView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/)控件。
+Xamarin.Forms 还支持以下的单元格类型：
 
-若要了解如何使用和自定义单元格，请参阅[ListView](~/xamarin-forms/user-interface/listview/index.md)和[TableView](~/xamarin-forms/user-interface/tableview.md)文档。
+<a name="textCell" />
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-<thead>
-    <th>
-      <strong>类型</strong>
-    </th>
-    <th>
-      <strong>说明</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>屏幕快照</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/">EntryCell</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a>与一个标签和单行文本输入字段。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/EntryDemoPage.cs"><img src="cells-images/EntryCell.png" title="EntryCell 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/">SwitchCell</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a>标签，然后打开/关闭开关。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/SwitchCellDemoPage.cs"><img src="cells-images/SwitchCell.png" title="SwitchCell 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/">TextCell</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">Xamarin.Forms.Cell</a>主和辅助文本。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TextCellDemoPage.cs"><img src="cells-images/TextCell.png" title="TextCell 示例" class="tableimg">
-    </a></td>
-  </tr>
-      <tr>
-    <td>
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/">ImageCell</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/">文本单元格</a>还包括映像。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ImageCellDemoPage.cs"><img src="cells-images/ImageCell.png" title="ImageCell 示例" class="tableimg">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
+### <a name="textcell"></a>TextCell
 
+|     |     |
+| --- | --- |
+| A [ `TextCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell)显示一个或两个文本字符串。 设置[ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TextCell.Text/)属性和 （可选） [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TextCell.Detail/)到这些文本字符串的属性。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell) / [指南](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) | [![TextCell 示例](cells-images/TextCell.png "TextCell 示例")](cells-images/TextCell-Large.png#lightbox "TextCell 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
+|     |     |
+
+### <a name="imagecell"></a>ImageCell
+
+|     |     |
+| --- | --- |
+| [ `ImageCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell)显示相同的信息[ `TextCell` ](#textCell)但包括与设置的位图[ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/)属性。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell) / [指南](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell) | [![ImageCell 示例](cells-images/ImageCell.png "ImageCell 示例")](cells-images/ImageCell-Large.png#lightbox "ImageCell 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+|     |     |
+
+### <a name="switchcell"></a>SwitchCell
+
+|     |     |
+| --- | --- |
+| [ `SwitchCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell)包含文本设置[ `Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.SwitchCellText/)属性和打开/关闭开关使用布尔值最初设置[ `On` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SwitchCell.On/)属性。 处理[ `OnChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.SwitchCell.OnChanged/)事件时通知`On`属性更改。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell) / [指南](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![SwitchCell 示例](cells-images/SwitchCell.png "SwitchCell 示例")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+|     |     |
+
+### <a name="entrycell"></a>EntryCell
+
+|     |     |
+| --- | --- |
+| [ `EntryCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell)定义[ `Label` ](https://developer.xamarin.com/api/property/Xamarin.Forms.EntryCell.Label/)属性，用于标识该单元格和单个行中的可编辑文本[ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.EntryCell.Text/)属性。 处理[ `Completed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.EntryCell.Completed/)时用户已完成文本输入通知的事件。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell) / [指南](~/xamarin-forms/user-interface/tableview.md#entrycell) | [![EntryCell 示例](cells-images/EntryCell.png "EntryCell 示例")](cells-images/EntryCell-Large.png#lightbox "EntryCell 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryCellDemoPage.xaml) |
+|     |     |
 
 
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms 库 （示例）](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [Xamarin.Forms FormsGallery 示例](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Xamarin.Forms API 文档](https://developer.xamarin.com/api/namespace/Xamarin.Forms/)
+- [Xamarin.Forms API 文档](https://developer.xamarin.com/api/root/Xamarin.Forms/)

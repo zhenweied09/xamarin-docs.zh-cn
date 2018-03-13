@@ -4,14 +4,15 @@ description: "请参阅如何倾斜转换可以在 SkiaSharp 创建倾斜图形�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: b8bb4db49d3800d694724d6be8fe949b55060c21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-skew-transform"></a>时间差转换
 
@@ -69,7 +70,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 值`xSkew`参数位移适合正值的文本或离开负值的底部。 值`ySkew`向下移动文本的右边，对于正值或负值注册：
 
-[![](skew-images/skewexperiment-small.png "三重的倾斜试验页面屏幕截图")](skew-images/skewexperiment-large.png "倾斜试验页面的三个屏幕截图")
+[![](skew-images/skewexperiment-small.png "三重的倾斜试验页面屏幕截图")](skew-images/skewexperiment-large.png#lightbox "倾斜试验页面的三个屏幕截图")
 
 如果`xSkew`长度的负值`ySkew`，结果是旋转，但也应进行某种程度上缩放以指示显示窗口。
 
@@ -152,7 +153,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 随着角度接近正整数或负 90 度，正切值接近无穷大，但最多大约 80 度左右的角度可用：
 
-[![](skew-images/skewangleexperiment-small.png "三重的倾斜角度试验页面屏幕截图")](skew-images/skewangleexperiment-large.png "三倍的倾斜角度试验页面屏幕截图")
+[![](skew-images/skewangleexperiment-small.png "三重的倾斜角度试验页面屏幕截图")](skew-images/skewangleexperiment-large.png#lightbox "三倍的倾斜角度试验页面屏幕截图")
 
 小的负水平扭曲可作为模拟斜体或倾斜文本**倾斜文本**页说明。 [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs)类演示如何执行：
 
@@ -188,7 +189,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 `TextAlign`属性`SKPaint`设置为`Center`。 而无需任何转换，`DrawText`调用使用的坐标 （0，0） 将在左上角位置与基线的水平居中的文本。 `SkewDegrees`偏差文本水平相对于基线的 20 度。 `Translate`调用将水平居中的文本的基线移到画布的中心：
 
-[![](skew-images/obliquetext-small.png "三重的倾斜文本页的屏幕截图")](skew-images/obliquetext-large.png "三重的倾斜文本页的屏幕截图")
+[![](skew-images/obliquetext-small.png "三重的倾斜文本页的屏幕截图")](skew-images/obliquetext-large.png#lightbox "三重的倾斜文本页的屏幕截图")
 
 **倾斜卷影文本**页演示如何使用 45 度倾斜和垂直缩放的组合，可使倾斜离开文本的文本阴影。 以下是相关的部分`PaintSurface`处理程序：
 
@@ -221,11 +222,11 @@ using (SKPaint textPaint = new SKPaint())
 
 阴影，则显示第一个，然后选择文本：
 
-[![](skew-images/skewshadowtext1-small.png "三重的倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext1-large.png "三重的倾斜卷影文本页的屏幕截图")
+[![](skew-images/skewshadowtext1-small.png "三重的倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext1-large.png#lightbox "三重的倾斜卷影文本页的屏幕截图")
 
 垂直坐标传递给`DrawText`方法指示的位置相对于基线的文本。 这就是用于的倾斜中心相同的垂直坐标。 如果文本字符串包含下行字母，则此方法将无法工作。 例如，替代"古怪"此处"阴影"以及该单词的结果：
 
-[![](skew-images/skewshadowtext2-small.png "三重的下行字母与替换单词倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext2-large.png "三重的下行字母与替换单词倾斜卷影文本页的屏幕截图")
+[![](skew-images/skewshadowtext2-small.png "三重的下行字母与替换单词倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext2-large.png#lightbox "三重的下行字母与替换单词倾斜卷影文本页的屏幕截图")
 
 卷影和文本仍在基线中，对齐，但效果只是看起来有错误。 若要修复此错误，你需要获取文本边界：
 
@@ -245,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 现在阴影扩展这些下行字母的底部：
 
-[![](skew-images/skewshadowtext3-small.png "三重的下行字母的调整倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext3-large.png "三重的下行字母的调整倾斜卷影文本页的屏幕截图")
+[![](skew-images/skewshadowtext3-small.png "三重的下行字母的调整倾斜卷影文本页的屏幕截图")](skew-images/skewshadowtext3-large.png#lightbox "三重的下行字母的调整倾斜卷影文本页的屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

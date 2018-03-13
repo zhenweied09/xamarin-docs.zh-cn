@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 2c01a36eabb15fbe9b975c91328dfa7cfd651896
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>数据绑定和键 / 值编码
 
@@ -24,7 +24,7 @@ _本文介绍如何使用键值对的编码和观察以便用于数据绑定到 
 
 通过使用键 / 值编码和数据绑定技术 Xamarin.Mac 应用程序中，你可以显著缩短您需要编写和维护填充和使用 UI 元素的代码量。 你还可以进一步分离你的备份数据的好处 (_数据模型_) 从你前面结束用户界面 (_模型-视图-控制器_)，从而导致易于维护更灵活的应用程序设计。
 
-[![正在运行的应用程序示例](databinding-images/intro01.png "正在运行的应用程序示例")](databinding-images/intro01-large.png)
+[![正在运行的应用程序示例](databinding-images/intro01.png "正在运行的应用程序示例")](databinding-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍使用键值对的编码和 Xamarin.Mac 应用程序中的数据绑定的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -421,7 +421,7 @@ public bool isManager {
 
 首先，让我们添加一个新**视图控制器**到我们**Main.storyboard**文件位于接口生成器，并将其类`SimpleViewController`: 
 
-[![添加新视图控制器](databinding-images/simple01.png "添加的新视图控制器")](databinding-images/simple01-large.png)
+[![添加新视图控制器](databinding-images/simple01.png "添加的新视图控制器")](databinding-images/simple01-large.png#lightbox)
 
 接下来，将返回到 Visual Studio for Mac，请编辑**SimpleViewController.cs**文件 （即已自动添加到我们的项目） 和公开这样的实例`PersonModel`，我们将数据绑定到窗体。 添加以下代码：
 
@@ -461,27 +461,27 @@ public override void ViewDidLoad ()
 
 现在我们需要创建窗体，双击**Main.storyboard**文件以打开它以在接口生成器中编辑。 布局窗体看起来类似于以下内容：
 
-[![编辑在 Xcode 中的情节提要](databinding-images/simple02.png "编辑在 Xcode 中的情节提要")](databinding-images/simple02-large.png)
+[![编辑在 Xcode 中的情节提要](databinding-images/simple02.png "编辑在 Xcode 中的情节提要")](databinding-images/simple02-large.png#lightbox)
 
 要向数据绑定到窗体`PersonModel`我们通过公开`Person`密钥，执行以下操作：
 
 1. 选择**雇员姓名**文本字段，切换到**绑定检查器**。
 2. 检查**将绑定到**框中，然后选择**简单视图控制器**从下拉列表。 接下来输入`self.Person.Name`为**注册表项路径**: 
 
-    [![输入的密钥路径](databinding-images/simple03.png "输入密钥的路径")](databinding-images/simple03-large.png)
+    [![输入的密钥路径](databinding-images/simple03.png "输入密钥的路径")](databinding-images/simple03-large.png#lightbox)
 3. 选择**职业**文本字段，并检查**将绑定到**框中，然后选择**简单视图控制器**从下拉列表。 接下来输入`self.Person.Occupation`为**注册表项路径**:  
 
-    [![输入的密钥路径](databinding-images/simple04.png "输入密钥的路径")](databinding-images/simple04-large.png)
+    [![输入的密钥路径](databinding-images/simple04.png "输入密钥的路径")](databinding-images/simple04-large.png#lightbox)
 4. 选择**员工是一个管理器**复选框，并检查**将绑定到**框中，然后选择**简单视图控制器**从下拉列表。 接下来输入`self.Person.isManager`为**注册表项路径**:  
 
-    [![输入的密钥路径](databinding-images/simple05.png "输入密钥的路径")](databinding-images/simple05-large.png)
+    [![输入的密钥路径](databinding-images/simple05.png "输入密钥的路径")](databinding-images/simple05-large.png#lightbox)
 5. 选择**管理的员工数**文本字段，并检查**将绑定到**框中，然后选择**简单视图控制器**从下拉列表。 接下来输入`self.Person.NumberOfEmployees`为**注册表项路径**:  
 
-    [![输入的密钥路径](databinding-images/simple06.png "输入密钥的路径")](databinding-images/simple06-large.png)
+    [![输入的密钥路径](databinding-images/simple06.png "输入密钥的路径")](databinding-images/simple06-large.png#lightbox)
 6. 如果员工不是管理器，我们想要隐藏的员工的管理标签数和文本字段。
 7. 选择**管理的员工数**标签，展开**Hidden** turndown 并检查**将绑定到**框中，然后选择**简单视图控制器**从下拉列表。 接下来输入`self.Person.isManager`为**注册表项路径**:  
 
-    [![输入的密钥路径](databinding-images/simple07.png "输入密钥的路径")](databinding-images/simple07-large.png)
+    [![输入的密钥路径](databinding-images/simple07.png "输入密钥的路径")](databinding-images/simple07-large.png#lightbox)
 8. 选择`NSNegateBoolean`从**值转换器**下拉列表中：  
 
     ![选择 NSNegateBoolean 密钥转换](databinding-images/simple08.png "选择 NSNegateBoolean 密钥转换")
@@ -491,11 +491,11 @@ public override void ViewDidLoad ()
 
 如果你运行应用程序，从值`Person`属性将自动填充我们的表单：
 
-[![显示的自动填充窗体](databinding-images/simple09.png "显示自动填充的窗体")](databinding-images/simple09-large.png)
+[![显示的自动填充窗体](databinding-images/simple09.png "显示自动填充的窗体")](databinding-images/simple09-large.png#lightbox)
 
 用户对窗体的任何更改将返回写入到`Person`视图控制器中的属性。 例如，取消选择**员工是一个管理器**更新`Person`实例我们`PersonModel`和**管理的员工数**标签和文本字段隐藏的自动 （通过数据绑定）：
 
-[![隐藏非经理的员工数](databinding-images/simple10.png "隐藏非经理的员工数")](databinding-images/simple10-large.png)
+[![隐藏非经理的员工数](databinding-images/simple10.png "隐藏非经理的员工数")](databinding-images/simple10-large.png#lightbox)
 
 <a name="Table_View_Data_Binding" />
 
@@ -505,7 +505,7 @@ public override void ViewDidLoad ()
 
 首先，让我们添加一个新**视图控制器**到我们**Main.storyboard**文件位于接口生成器，并将其类`TableViewController`:
 
-[![添加新视图控制器](databinding-images/table01.png "添加的新视图控制器")](databinding-images/table01-large.png)
+[![添加新视图控制器](databinding-images/table01.png "添加的新视图控制器")](databinding-images/table01-large.png#lightbox)
 
 接下来，让我们编辑**TableViewController.cs**文件 （即已自动添加到我们的项目） 和公开数组 (`NSArray`) 的`PersonModel`，我们将数据绑定到窗体的类。 添加以下代码：
 
@@ -572,7 +572,7 @@ public override void AwakeFromNib ()
 
 现在我们需要创建我们表视图，双击**Main.storyboard**文件以打开它以在接口生成器中编辑。 布局表看起来类似于以下内容：
 
-[![新的表视图布局](databinding-images/table02.png "布局新的表视图")](databinding-images/table02-large.png)
+[![新的表视图布局](databinding-images/table02.png "布局新的表视图")](databinding-images/table02-large.png#lightbox)
 
 我们需要添加**阵列控制器**若要提供绑定的数据到我们的表，请执行以下操作：
 
@@ -581,7 +581,7 @@ public override void AwakeFromNib ()
     ![从库中选择一个阵列控制器](databinding-images/table03.png "从库中选择一个阵列控制器")
 2. 选择**阵列控制器**中**接口层次结构**并切换到**属性检查器**:  
 
-    [![选择属性检查器](databinding-images/table04.png "选择属性检查器")](databinding-images/table04-large.png)
+    [![选择属性检查器](databinding-images/table04.png "选择属性检查器")](databinding-images/table04-large.png#lightbox)
 3. 输入`PersonModel`为**类名**，单击**加上**按钮，然后添加三个密钥。 对其命名`Name`，`Occupation`和`isManager`:  
 
     ![添加所需的密钥路径](databinding-images/table05.png "添加所需的密钥路径")
@@ -595,22 +595,22 @@ public override void AwakeFromNib ()
 
 1. 选择表视图和**绑定检查器**:  
 
-    [![选择绑定检查器](databinding-images/table07.png "选择绑定检查器")](databinding-images/table07-large.png)
+    [![选择绑定检查器](databinding-images/table07.png "选择绑定检查器")](databinding-images/table07-large.png#lightbox)
 2. 下**表内容**turndown，选择**将绑定到**和**阵列控制器**。 输入`arrangedObjects`为**控制器密钥**字段：  
 
     ![定义控制器密钥](databinding-images/table08.png "定义控制器密钥")
 3. 选择**表视图单元格**下**员工**列。 在**绑定检查器**下**值**turndown，选择**将绑定到**和**表单元格视图**。 输入`objectValue.Name`为**模型的注册表项路径**:  
 
-    [![设置模型项路径](databinding-images/table09.png "设置模型项路径")](databinding-images/table09-large.png)
+    [![设置模型项路径](databinding-images/table09.png "设置模型项路径")](databinding-images/table09-large.png#lightbox)
 4. `objectValue` 为当前`PersonModel`数组由数组控制器中。
 5. 选择**表视图单元格**下**职业**列。 在**绑定检查器**下**值**turndown，选择**将绑定到**和**表单元格视图**。 输入`objectValue.Occupation`为**模型的注册表项路径**:  
 
-    [![设置模型项路径](databinding-images/table10.png "设置模型项路径")](databinding-images/table10-large.png)
+    [![设置模型项路径](databinding-images/table10.png "设置模型项路径")](databinding-images/table10-large.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 如果我们运行应用程序时，将使用我们的数组填充表`PersonModels`:
 
-[![运行应用程序](databinding-images/table11.png "运行应用程序")](databinding-images/table11-large.png)
+[![运行应用程序](databinding-images/table11.png "运行应用程序")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding" />
 
@@ -620,7 +620,7 @@ public override void AwakeFromNib ()
 
 首先，让我们添加一个新**视图控制器**到我们**Main.storyboard**文件位于接口生成器，并将其类`OutlineViewController`: 
 
-[![添加新视图控制器](databinding-images/outline01.png "添加的新视图控制器")](databinding-images/outline01-large.png)
+[![添加新视图控制器](databinding-images/outline01.png "添加的新视图控制器")](databinding-images/outline01-large.png#lightbox)
 
 接下来，让我们编辑**OutlineViewController.cs**文件 （即已自动添加到我们的项目） 和公开数组 (`NSArray`) 的`PersonModel`，我们将数据绑定到窗体的类。 添加以下代码：
 
@@ -690,7 +690,7 @@ public override void AwakeFromNib ()
 
 现在我们需要创建我们大纲视图中，双击**Main.storyboard**文件以打开它以在接口生成器中编辑。 布局表看起来类似于以下内容：
 
-[![创建该大纲视图](databinding-images/outline02.png "创建大纲视图")](databinding-images/outline02-large.png)
+[![创建该大纲视图](databinding-images/outline02.png "创建大纲视图")](databinding-images/outline02-large.png#lightbox)
 
 我们需要添加**树控制器**若要提供给我们大纲绑定的数据，请执行以下操作：
 
@@ -699,7 +699,7 @@ public override void AwakeFromNib ()
     ![从库中选择的树控制器](databinding-images/outline03.png "从库中选择的树控制器")
 2. 选择**树控制器**中**接口层次结构**并切换到**属性检查器**:  
 
-    [![选择属性检查器](databinding-images/outline04.png "选择属性检查器")](databinding-images/outline04-large.png)
+    [![选择属性检查器](databinding-images/outline04.png "选择属性检查器")](databinding-images/outline04-large.png#lightbox)
 3. 输入`PersonModel`为**类名**，单击**加上**按钮，然后添加三个密钥。 对其命名`Name`，`Occupation`和`isManager`:  
 
     ![添加所需的密钥路径](databinding-images/outline05.png "添加所需的密钥路径")
@@ -717,22 +717,22 @@ public override void AwakeFromNib ()
 
 1. 选择该大纲视图并在**绑定检查器**选择：  
 
-    [![选择绑定检查器](databinding-images/outline07.png "选择绑定检查器")](databinding-images/outline07-large.png)
+    [![选择绑定检查器](databinding-images/outline07.png "选择绑定检查器")](databinding-images/outline07-large.png#lightbox)
 2. 下**大纲视图内容**turndown，选择**将绑定到**和**树控制器**。 输入`arrangedObjects`为**控制器密钥**字段：  
 
     ![设置控制器项](databinding-images/outline08.png "设置控制器项")
 3. 选择**表视图单元格**下**员工**列。 在**绑定检查器**下**值**turndown，选择**将绑定到**和**表单元格视图**。 输入`objectValue.Name`为**模型的注册表项路径**:  
 
-    [![输入的模型项路径](databinding-images/outline09.png "输入模型注册表项路径")](databinding-images/outline09-large.png)
+    [![输入的模型项路径](databinding-images/outline09.png "输入模型注册表项路径")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue` 为当前`PersonModel`数组由树控制器中。
 5. 选择**表视图单元格**下**职业**列。 在**绑定检查器**下**值**turndown，选择**将绑定到**和**表单元格视图**。 输入`objectValue.Occupation`为**模型的注册表项路径**:  
 
-    [![输入的模型项路径](databinding-images/outline10.png "输入模型注册表项路径")](databinding-images/outline10-large.png)
+    [![输入的模型项路径](databinding-images/outline10.png "输入模型注册表项路径")](databinding-images/outline10-large.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 如果我们运行应用程序时，将使用我们的数组填充大纲`PersonModels`:
 
-[![运行应用程序](databinding-images/outline11.png "运行应用程序")](databinding-images/outline11-large.png)
+[![运行应用程序](databinding-images/outline11.png "运行应用程序")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>集合视图数据绑定
 
@@ -860,7 +860,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 在你的数据绑定中进行了错误的操作可能会导致_本机崩溃_在非托管代码并导致 Xamarin.Mac 应用程序完全因`SIGABRT`错误：
 
-[![本机崩溃对话框中的示例](databinding-images/debug01.png "本机崩溃对话框中的示例")](databinding-images/debug01-large.png)
+[![本机崩溃对话框中的示例](databinding-images/debug01.png "本机崩溃对话框中的示例")](databinding-images/debug01-large.png#lightbox)
 
 在数据绑定时通常存在的本机损坏的四个主要原因：
 
@@ -873,15 +873,15 @@ For more information on working with Collection Views, please see our [Collectio
 
 让我们在我们的数据绑定中导致本机故障，因此我们可以向展示如何找到并修复此错误。 在接口生成器中，让我们更改我们的绑定中的集合视图示例的第一个标签的`Name`到`Title`:
 
-[![编辑绑定密钥](databinding-images/debug02.png "编辑绑定密钥")](databinding-images/debug02-large.png)
+[![编辑绑定密钥](databinding-images/debug02.png "编辑绑定密钥")](databinding-images/debug02-large.png#lightbox)
 
 让我们保存更改，请切换回 Visual Studio for Mac 与 Xcode 同步并运行我们的应用程序。 集合视图显示时，应用程序将短暂出现崩溃，`SIGABRT`错误 (如中所示**应用程序输出**Visual Studio 中用于 Mac) 因为`PersonModel`不公开具有键的属性`Title`:
 
-[![绑定错误的示例](databinding-images/debug03.png "绑定错误的示例")](databinding-images/debug03-large.png)
+[![绑定错误的示例](databinding-images/debug03.png "绑定错误的示例")](databinding-images/debug03-large.png#lightbox)
 
 如果我们滚动到中的错误的最顶端**应用程序输出**我们可以看到解决此问题的密钥：
 
-[![在错误日志中查找问题](databinding-images/debug04.png "错误日志中查找问题")](databinding-images/debug04-large.png)
+[![在错误日志中查找问题](databinding-images/debug04.png "错误日志中查找问题")](databinding-images/debug04-large.png#lightbox)
 
 此行将告诉我们，密钥`Title`我们要绑定到的对象上不存在。 如果我们更改绑定回`Name`在接口生成器中，保存，同步，重新生成并运行，应用程序将运行按预期不会出现问题。
 

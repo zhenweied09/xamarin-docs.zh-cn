@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e64f1962e35372a6058f4b515efa5a61c1c9e45
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>沙盒处理 Xamarin.Mac 应用
 
@@ -22,7 +22,7 @@ _本文介绍如何沙盒处理用于在应用商店上发布的 Xamarin.Mac 应
 
 在处理时使用 C# 和.NET Xamarin.Mac 应用程序中，可以对沙盒应用程序的相同功能使用 OBJECTIVE-C 或 Swift 打开时一样。
 
-[![正在运行的应用程序示例](sandboxing-images/intro01.png "正在运行的应用程序示例")](sandboxing-images/intro01-large.png)
+[![正在运行的应用程序示例](sandboxing-images/intro01.png "正在运行的应用程序示例")](sandboxing-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍使用沙盒处理 Xamarin.Mac 应用程序及其所有进入沙盒处理的元素中的基础知识： 容器目录、 权利、-确定用户的权限、 权限分离和内核强制。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -70,19 +70,19 @@ _本文介绍如何沙盒处理用于在应用商店上发布的 Xamarin.Mac 应
 1. 针对 Mac 和单击启动 Visual Studio**新解决方案...** 列表中。
 2. 从**新项目**对话框中，选择**Mac** > **应用** > **Cocoa 应用**: 
 
-    [![创建新 Cocoa 应用](sandboxing-images/sample01.png "创建新 Cocoa 应用程序")](sandboxing-images/sample01-large.png)
+    [![创建新 Cocoa 应用](sandboxing-images/sample01.png "创建新 Cocoa 应用程序")](sandboxing-images/sample01-large.png#lightbox)
 3. 单击**下一步**按钮，输入`MacSandbox`为该项目名称并单击**创建**按钮： 
 
-    [![输入应用名称](sandboxing-images/sample02.png "输入应用名称")](sandboxing-images/sample02-large.png)
+    [![输入应用名称](sandboxing-images/sample02.png "输入应用名称")](sandboxing-images/sample02-large.png#lightbox)
 4. 在**解决方案 Pad**，双击**Main.storyboard**文件以进行编辑在 Xcode 中打开它： 
 
-    [![编辑主情节提要](sandboxing-images/sample03.png "编辑主情节提要")](sandboxing-images/sample03-large.png)
+    [![编辑主情节提要](sandboxing-images/sample03.png "编辑主情节提要")](sandboxing-images/sample03-large.png#lightbox)
 5. 拖动**Web 视图**到窗口中，调整其大小以填充内容的区域，并将其设置为增加和减少与窗口： 
 
-    [![添加 web 视图](sandboxing-images/sample04.png "添加 web 视图")](sandboxing-images/sample04-large.png)
+    [![添加 web 视图](sandboxing-images/sample04.png "添加 web 视图")](sandboxing-images/sample04-large.png#lightbox)
 6. 创建名为 web 视图的电源插座`webView`: 
 
-    [![创建一个新插座](sandboxing-images/sample05.png "创建一个新插座")](sandboxing-images/sample05-large.png)
+    [![创建一个新插座](sandboxing-images/sample05.png "创建一个新插座")](sandboxing-images/sample05-large.png#lightbox)
 7. 返回到 Visual Studio 针对 Mac 和双击**ViewController.cs**文件中**解决方案 Pad**以将其打开以进行编辑。
 8. 添加以下 using 语句： `using WebKit;`
 9. 请`ViewDidLoad`方法外观如下所示： 
@@ -99,7 +99,7 @@ public override void AwakeFromNib ()
 
 运行应用程序，并确保 Apple 网站显示在窗口中，如下所示：
 
-[![显示示例应用程序运行](sandboxing-images/sample06.png "显示示例应用程序运行")](sandboxing-images/sample06-large.png)
+[![显示示例应用程序运行](sandboxing-images/sample06.png "显示示例应用程序运行")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -111,34 +111,34 @@ public override void AwakeFromNib ()
 
 1. 登录到 Apple 开发人员门户： 
 
-    [![登录到 Apple 开发人员门户](sandboxing-images/sign01.png "登录到 Apple 开发人员门户")](sandboxing-images/sign01-large.png)
+    [![登录到 Apple 开发人员门户](sandboxing-images/sign01.png "登录到 Apple 开发人员门户")](sandboxing-images/sign01-large.png#lightbox)
 2. 选择**证书、 标识符和配置文件**: 
 
-    [![选择证书、 标识符和配置文件](sandboxing-images/sign02.png "选择证书、 标识符和配置文件")](sandboxing-images/sign02-large.png)
+    [![选择证书、标识符和配置文件](sandboxing-images/sign02.png "选择证书、标识符和配置文件")](sandboxing-images/sign02-large.png#lightbox)
 3. 下**Mac 应用**，选择**标识符**: 
 
-    [![选择标识符](sandboxing-images/sign03.png "选择标识符")](sandboxing-images/sign03-large.png)
+    [![选择标识符](sandboxing-images/sign03.png "选择标识符")](sandboxing-images/sign03-large.png#lightbox)
 4. 创建应用程序的新 ID: 
 
-    [![创建新的应用程序 ID](sandboxing-images/sign04.png "创建新的应用程序 ID")](sandboxing-images/sign04-large.png)
+    [![创建新的应用程序 ID](sandboxing-images/sign04.png "创建新的应用程序 ID")](sandboxing-images/sign04-large.png#lightbox)
 5. 下**预配配置文件**，选择**开发**: 
 
-    [![选择开发](sandboxing-images/sign05.png "选择开发")](sandboxing-images/sign05-large.png)
+    [![选择开发](sandboxing-images/sign05.png "选择开发")](sandboxing-images/sign05-large.png#lightbox)
 6. 创建新的配置文件，然后选择**Mac 应用程序开发**: 
 
-    [![创建新的配置文件](sandboxing-images/sign06.png "创建新的配置文件")](sandboxing-images/sign06-large.png)
+    [![创建新的配置文件](sandboxing-images/sign06.png "创建新的配置文件")](sandboxing-images/sign06-large.png#lightbox)
 7. 选择我们在上面创建的应用程序 ID: 
 
-    [![选择的应用程序 ID](sandboxing-images/sign07.png "选择的应用程序 ID")](sandboxing-images/sign07-large.png)
+    [![选择的应用程序 ID](sandboxing-images/sign07.png "选择的应用程序 ID")](sandboxing-images/sign07-large.png#lightbox)
 8. 选择此配置文件的开发人员： 
 
-    [![添加开发人员](sandboxing-images/sign08.png "添加开发人员")](sandboxing-images/sign08-large.png)
+    [![添加开发人员](sandboxing-images/sign08.png "添加开发人员")](sandboxing-images/sign08-large.png#lightbox)
 9. 选择此配置文件的计算机： 
 
-    [![选择允许的计算机](sandboxing-images/sign09.png "选择允许的计算机")](sandboxing-images/sign09-large.png)
+    [![选择允许的计算机](sandboxing-images/sign09.png "选择允许的计算机")](sandboxing-images/sign09-large.png#lightbox)
 10. 为配置文件提供一个名称： 
 
-    [![为配置文件提供一个名称](sandboxing-images/sign10.png "给提供的名称的配置文件")](sandboxing-images/sign10-large.png)
+    [![为配置文件提供一个名称](sandboxing-images/sign10.png "给提供的名称的配置文件")](sandboxing-images/sign10-large.png#lightbox)
 11. 单击**完成**按钮。
 
 > [!IMPORTANT]
@@ -160,10 +160,10 @@ public override void AwakeFromNib ()
 1. 在**解决方案 Pad**，双击**Info.plist**文件以打开进行编辑。
 2. 确保**捆绑标识符**匹配我们我们在上面创建的应用程序 ID (示例： `com.appracatappra.MacSandbox`): 
 
-    [![编辑的捆绑标识符](sandboxing-images/sign13.png "编辑的捆绑标识符")](sandboxing-images/sign13-large.png)
+    [![编辑的捆绑标识符](sandboxing-images/sign13.png "编辑的捆绑标识符")](sandboxing-images/sign13-large.png#lightbox)
 3. 接下来，双击**Entitlements.plist**文件，并确保我们**iCloud 键-值存储**和**iCloud 容器**所有匹配我们我们在上面创建的应用程序 ID (示例：`com.appracatappra.MacSandbox`): 
 
-    [![编辑 Entitlements.plist 文件](sandboxing-images/sign17.png "编辑 Entitlements.plist 文件")](sandboxing-images/sign17-large.png)
+    [![编辑 Entitlements.plist 文件](sandboxing-images/sign17.png "编辑 Entitlements.plist 文件")](sandboxing-images/sign17-large.png#lightbox)
 3. 保存更改。
 4. 在**解决方案 Pad**，双击要打开以进行编辑其选项的项目文件：  
 
@@ -180,7 +180,7 @@ public override void AwakeFromNib ()
 
 此时应尝试运行该应用程序，并确保所有内容都是签名并正确设置。 如果应用程序仍在运行前面一样，所有内容都很好。 出现故障，可能会出现类似以下对话框中：
 
-[![设置问题对话框示例](sandboxing-images/sign16.png "设置问题对话框示例")](sandboxing-images/sign16-large.png)
+[![设置问题对话框示例](sandboxing-images/sign16.png "设置问题对话框示例")](sandboxing-images/sign16-large.png#lightbox)
 
 以下是最常见的预配和签名问题的原因：
 
@@ -197,12 +197,12 @@ public override void AwakeFromNib ()
 1. 在**解决方案 Pad**，双击**Entitlements.plist**文件以打开进行编辑。
 2. 同时检查**启用的权利**和**启用应用程序沙盒**: 
 
-    [![编辑权利和启用沙盒处理](sandboxing-images/sign17.png "编辑权利和启用沙盒处理")](sandboxing-images/sign17-large.png)
+    [![编辑权利和启用沙盒处理](sandboxing-images/sign17.png "编辑权利和启用沙盒处理")](sandboxing-images/sign17-large.png#lightbox)
 3. 保存更改。
 
 此时，已启用应用程序沙盒，但是你未提供所需的网络访问的 Web 视图。 如果你运行应用程序现在，你会获得一个空白的窗口：
 
-[![被阻止的 web 访问](sandboxing-images/sample08.png "被阻止的 web 访问")](sandboxing-images/sample08-large.png)
+[![被阻止的 web 访问](sandboxing-images/sample08.png "被阻止的 web 访问")](sandboxing-images/sample08-large.png#lightbox)
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>验证应用程序进行沙箱处理
 
@@ -210,25 +210,25 @@ public override void AwakeFromNib ()
 
 1. 在查找工具中，请检查内容`~/Library/Containers/`文件夹-如果应用程序为沙盒解决方案，将有类似应用的捆绑标识符名为的文件夹 (示例： `com.appracatappra.MacSandbox`): 
 
-    [![打开应用的捆绑](sandboxing-images/sample09.png "打开应用的捆绑包")](sandboxing-images/sample09-large.png)
+    [![打开应用的捆绑](sandboxing-images/sample09.png "打开应用的捆绑包")](sandboxing-images/sample09-large.png#lightbox)
 2. 系统将其视为活动监视器在沙盒应用程序：
     - 启动活动监视器 (下`/Applications/Utilities`)。 
     - 选择**视图** > **列**并确保**沙盒**选中菜单项。
     - 确保沙盒列读取`Yes`你的应用程序： 
 
-    [![检查活动监视器中的应用程序](sandboxing-images/sample10.png "检查活动监视器中的应用程序")](sandboxing-images/sample10-large.png)
+    [![检查活动监视器中的应用程序](sandboxing-images/sample10.png "检查活动监视器中的应用程序")](sandboxing-images/sample10-large.png#lightbox)
 3. 检查应用程序二进制沙盒：
     - 启动终端应用程序。
     - 导航到应用程序`bin`目录。
     - 发出此命令： `codesign -dvvv --entitlements :- executable_path` (其中`executable_path`是你的应用程序的路径): 
 
-    [![检查命令行上的应用](sandboxing-images/sample11.png "检查命令行上的应用")](sandboxing-images/sample11-large.png)
+    [![检查命令行上的应用](sandboxing-images/sample11.png "检查命令行上的应用")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>调试沙盒应用程序
 
 调试器连接到 Xamarin.Mac 应用的整个 TCP，这意味着，默认情况下启用后沙盒处理，它将无法连接到应用程序，因此如果你尝试在不适当的权限启用的情况下运行应用程序，你将收到一个错误*"无法连接到调试器"*。 
 
-[![设置所需的选项](sandboxing-images/debug01.png "设置所需的选项")](sandboxing-images/debug01-large.png)
+[![设置所需的选项](sandboxing-images/debug01.png "设置所需的选项")](sandboxing-images/debug01-large.png#lightbox)
 
 **允许传出网络连接 （客户端）**权限是所需的调试器，启用此操作将允许通常调试。 你无法调试没有它，因为我们已更新`CompileEntitlements`目标`msbuild`自动将该权限添加到权利，为仅是沙盒处理以用于调试任何应用版本。 发布版本应使用在权利文件中，不做任何修改指定的权利。
 
@@ -248,7 +248,7 @@ public override void AwakeFromNib ()
 2. 打开**控制台**应用程序 (从`/Applications/Utilties/`)。
 3. 选择**所有消息**侧栏中，然后输入`sandbox`在搜索中： 
 
-    [![在控制台中的沙盒处理问题的一个示例](sandboxing-images/resolve01.png "控制台中的沙盒处理问题的示例")](sandboxing-images/resolve01-large.png)
+    [![在控制台中的沙盒处理问题的一个示例](sandboxing-images/resolve01.png "控制台中的沙盒处理问题的示例")](sandboxing-images/resolve01-large.png#lightbox)
 
 对于我们上面的示例应用程序，您可以看到正在阻止 Kernal`network-outbound`由于应用沙盒，因为我们不已请求该权限的流量。
 
@@ -261,7 +261,7 @@ public override void AwakeFromNib ()
 1. 在**解决方案 Pad**，双击**Entitlements.plist**文件以打开进行编辑。
 2. 下**权利**部分，选中**允许传出网络连接 （客户端）**复选框： 
 
-    [![编辑权利](sandboxing-images/sign17.png "编辑权利")](sandboxing-images/sign17-large.png)
+    [![编辑权利](sandboxing-images/sign17.png "编辑权利")](sandboxing-images/sign17-large.png#lightbox)
 3. 将所做的更改保存到应用程序。
 
 如果我们执行上述操作为我们的示例应用程序，然后生成并运行它，web 内容将立即显示按预期方式。
@@ -284,7 +284,7 @@ public override void AwakeFromNib ()
 
 通过编辑修改应用程序的应用程序沙盒资源其**Entitlements.plist**文件和检查或选择的编辑器下拉框从所需的权限：
 
-[![编辑权利](sandboxing-images/sign17.png "编辑权利")](sandboxing-images/sign17-large.png)
+[![编辑权利](sandboxing-images/sign17.png "编辑权利")](sandboxing-images/sign17-large.png#lightbox)
 
 ### <a name="container-directories-and-file-system-access"></a>容器目录和文件系统访问权限
 

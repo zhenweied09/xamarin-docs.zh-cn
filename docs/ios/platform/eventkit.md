@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: db3662db50d8f3538f16f2af1f9e7880957dc25c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="eventkit"></a>EventKit
 
@@ -30,7 +30,7 @@ EventKit framework 提供了一种访问方法*日历*，*日历事件*，和*�
 
 本指南中的所有任务的配套示例应用中都有：
 
- [ ![](eventkit-images/01.png "配套示例应用程序屏幕")](eventkit-images/01.png)
+ [![](eventkit-images/01.png "配套示例应用程序屏幕")](eventkit-images/01.png#lightbox)
 
 ## <a name="requirements"></a>惠?
 
@@ -148,7 +148,7 @@ App.Current.EventStore.GetCalendars ( EKEntityType.Event );
 
 *EKEventEditViewController*为你执行完成的繁重任务了很多，如果你想要创建或编辑具有同一 UI，使用日历应用程序时，向用户显示的事件：
 
- [ ![](eventkit-images/02.png "使用日历应用程序时，向用户显示 UI")](eventkit-images/02.png)
+ [![](eventkit-images/02.png "使用日历应用程序时，向用户显示 UI")](eventkit-images/02.png#lightbox)
 
 若要使用它，你需要将其声明为一个类级变量，以便它不获取垃圾回收如果它在方法内声明：
 

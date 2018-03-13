@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7e6621dc580e478873ce2db7139b04284bee355c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="advanced-message-app-extensions"></a>高级的消息应用扩展
 
@@ -50,11 +50,11 @@ _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功�
 
 交互式消息提供自定义消息气泡，以及由消息应用扩展。 它们允许用户创建交互式消息内容，此消息输入字段中插入它，并将其发送。
 
-[ ![](advanced-message-app-extensions-images/interactive01.png "创建交互式消息内容")](advanced-message-app-extensions-images/interactive01.png)
+[![](advanced-message-app-extensions-images/interactive01.png "创建交互式消息内容")](advanced-message-app-extensions-images/interactive01.png#lightbox)
 
 接收的用户可以答复交互式消息点击消息历史记录，若要创建消息应用程序扩展加载中其消息气泡。 该扩展将启动的全屏幕并允许用户撰写答复并将其发送回原始的用户。
 
-[ ![](advanced-message-app-extensions-images/interactive02.png "扩展启动全屏幕")](advanced-message-app-extensions-images/interactive02.png)
+[![](advanced-message-app-extensions-images/interactive02.png "扩展启动全屏幕")](advanced-message-app-extensions-images/interactive02.png#lightbox)
 
 
 下面将详细介绍了以下主题：
@@ -68,7 +68,7 @@ _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功�
 
 当用户调用，消息应用扩展将显示在底部的紧凑视图模式中的消息历史记录：
 
-[ ![](advanced-message-app-extensions-images/interactive03.png "消息 API 概述")](advanced-message-app-extensions-images/interactive03.png)
+[![](advanced-message-app-extensions-images/interactive03.png "消息 API 概述")](advanced-message-app-extensions-images/interactive03.png#lightbox)
 
 1. `MSMessageAppViewController`消息应用程序扩展中的对象是向用户显示的扩展视图时调用的主类。
 2. 向为用户显示会话`MSConversation`对象实例。
@@ -80,7 +80,7 @@ _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功�
 
 看一看变为活动状态消息应用扩展的过程：
 
-[ ![](advanced-message-app-extensions-images/interactive04.png "变为活动状态消息应用扩展的过程")](advanced-message-app-extensions-images/interactive04.png)
+[![](advanced-message-app-extensions-images/interactive04.png "变为活动状态消息应用扩展的过程")](advanced-message-app-extensions-images/interactive04.png#lightbox)
 
 1. 扩展是在启动时 （例如从应用抽屉中），消息应用程序将启动的进程。
 2. `DidBecomeActive`方法调用该方法并传递`MSConversation`表示会话中运行消息应用扩展。
@@ -88,7 +88,7 @@ _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功�
 
 接下来，看看变得停用消息应用扩展的过程：
 
-[ ![](advanced-message-app-extensions-images/interactive05.png "在过程变得停用消息应用扩展")](advanced-message-app-extensions-images/interactive05.png)
+[![](advanced-message-app-extensions-images/interactive05.png "在过程变得停用消息应用扩展")](advanced-message-app-extensions-images/interactive05.png#lightbox)
 
 1. 当正在停用消息应用扩展时，`ViewWillDisappear`将首先调用方法。
 2. 则`ViewDidDisappear`将调用方法。
@@ -128,7 +128,7 @@ MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session =
 
 `AccessibilityLabel`屏幕阅读器使用属性来读取到用户的会话的脚本。 `Layout`属性指定如何将显示消息，当前仅`MSMessageTemplateLayout`支持和如下所示：
 
-[ ![](advanced-message-app-extensions-images/interactive06.png "MSMessageTemplateLayout 模板")](advanced-message-app-extensions-images/interactive06.png)
+[![](advanced-message-app-extensions-images/interactive06.png "MSMessageTemplateLayout 模板")](advanced-message-app-extensions-images/interactive06.png#lightbox)
 
 `Image`属性`MSMessageTemplateLayout`主屏幕上 MessageBubble 正文提供内容。 `MediaFileUrl`属性还消息气泡，正文提供内容，但不是支持的内容允许`UIImage`（如在后台将循环的视频文件）。 如果这两个`Image`和`MediaFileUrl`提供了属性，`Image`属性将优先。 `MediaFileUrl`支持 PNG、 JPEG、 GIF 和视频 （采用可以播放媒体播放器框架的任何格式） 的媒体格式。
 
@@ -140,7 +140,7 @@ MSMessage ComposeMessage (IceCream iceCream, string caption, MSSession session =
 
 `Caption`， `SubCaption`，`TrailingCaption`和`TrailingSubcaption`属性进一步描述映像，并将在下图中的某个部分中呈现。 设置所有这些属性设置为`null`将创建一个消息气泡，而无需标题区域：
 
-[ ![](advanced-message-app-extensions-images/interactive07.png "不标题区域的情况下一个消息气泡")](advanced-message-app-extensions-images/interactive07.png)
+[![](advanced-message-app-extensions-images/interactive07.png "不标题区域的情况下一个消息气泡")](advanced-message-app-extensions-images/interactive07.png#lightbox)
 
 最后一个需要注意的事项是，邮件应用将在消息气泡的左上角绘制消息应用程序扩展的图标。
 
@@ -181,7 +181,7 @@ public void SendMessage (MSMessage message)
 
 消息应用扩展可以显示在两种不同的视图模式之一：
 
-[ ![](advanced-message-app-extensions-images/interactive08.png "在两个不同的视图模式中显示一个消息应用程序扩展： 压缩和扩展")](advanced-message-app-extensions-images/interactive08.png)
+[![](advanced-message-app-extensions-images/interactive08.png "在两个不同的视图模式中显示一个消息应用程序扩展： 压缩和扩展")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -这是默认模式消息应用扩展在哪里采用消息视图底部 25%。 在 Compact 模式下，应用程序没有访问键盘、 水平滚动或轻扫笔势识别器。 应用于输入字段的确有权限访问并调用`InsertMessage`立即将向用户显示。
 - **展开**-消息应用扩展填充整个消息视图。 它不到输入字段中，具有访问权限，但确实有权访问键盘、 水平滚动和轻扫笔势识别器。
@@ -384,7 +384,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 有两种消息应用扩展需要处理答复消息时的情况下：
 
-[ ![](advanced-message-app-extensions-images/interactive09.png "中的非活动和活动模式的消息应用扩展")](advanced-message-app-extensions-images/interactive09.png)
+[![](advanced-message-app-extensions-images/interactive09.png "中的非活动和活动模式的消息应用扩展")](advanced-message-app-extensions-images/interactive09.png#lightbox)
 
 - **扩展为非活动**-还有一个在用户可以点击以激活扩展并继续交互式对话消息脚本中的消息应用扩展消息气泡。
 - **扩展处于活动状态**-用户可以点击该消息脚本输入扩展视图模式，并继续从它们中断的交互式过程中的消息应用扩展消息气泡。
@@ -393,7 +393,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 在消息气泡点击该消息脚本中的用户和消息应用扩展处于非活动状态，将发生以下进程：
 
-[ ![](advanced-message-app-extensions-images/interactive10.png "处理非活动状态的消息气泡")](advanced-message-app-extensions-images/interactive10.png)
+[![](advanced-message-app-extensions-images/interactive10.png "处理非活动状态的消息气泡")](advanced-message-app-extensions-images/interactive10.png#lightbox)
 
 1. 用户点击扩展的消息气泡。
 2. 当启动扩展时，消息应用程序将启动的进程。
@@ -406,7 +406,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 在消息气泡点击该消息脚本中的用户，并且消息应用扩展处于活动状态，将发生以下进程：
 
-[ ![](advanced-message-app-extensions-images/interactive11.png "处理活动的消息气泡")](advanced-message-app-extensions-images/interactive11.png)
+[![](advanced-message-app-extensions-images/interactive11.png "处理活动的消息气泡")](advanced-message-app-extensions-images/interactive11.png#lightbox)
 
 1. 用户点击扩展的消息气泡。
 2. 因为消息应用扩展已处于活动状态，`WillTransition`方法`MSMessagesAppViewController`调用以处理从紧凑切换到扩展视图模式。
@@ -457,11 +457,11 @@ namespace MessageExtension
 
 在发送会话中的两个用户之间的不同步骤的交互式会话，过程中部分已完成的消息气泡可以开始打乱消息脚本：
 
-[ ![](advanced-message-app-extensions-images/interactive12.png "部分已完成的消息气泡可以塞满消息脚本")](advanced-message-app-extensions-images/interactive12.png)
+[![](advanced-message-app-extensions-images/interactive12.png "部分已完成的消息气泡可以塞满消息脚本")](advanced-message-app-extensions-images/interactive12.png#lightbox)
 
 相反，消息应用扩展应折叠以前的消息气泡到消息脚本中的简洁注释：
 
-[ ![](advanced-message-app-extensions-images/interactive13.png "折叠消息脚本中以前的消息气泡")](advanced-message-app-extensions-images/interactive13.png)
+[![](advanced-message-app-extensions-images/interactive13.png "折叠消息脚本中以前的消息气泡")](advanced-message-app-extensions-images/interactive13.png#lightbox)
 
 这处理使用`MSSession`折叠的所有现有的步骤。 因此`DidSelectMessage`方法`MSMessagesAppViewController`类无法修改为如下所示：
 
@@ -516,7 +516,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 
 在与三个用户的组对话中看一看以下交互：
 
-[ ![](advanced-message-app-extensions-images/interactive14.png "与三个用户的组对话中的交互")](advanced-message-app-extensions-images/interactive14.png)
+[![](advanced-message-app-extensions-images/interactive14.png "与三个用户的组对话中的交互")](advanced-message-app-extensions-images/interactive14.png#lightbox)
 
 1. 用户 1 会发送一组交互式消息询问用户 2 和用户 3 以选择 burger 列在最。
 2. 用户 2 选择 tomatoes。
@@ -531,7 +531,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 
 若要讨论访问消息的发件人标识符，采用上面给出的组对话的示例：
 
-[ ![](advanced-message-app-extensions-images/interactive15.png "发送标识符的组对话")](advanced-message-app-extensions-images/interactive15.png)
+[![](advanced-message-app-extensions-images/interactive15.png "发送标识符的组对话")](advanced-message-app-extensions-images/interactive15.png#lightbox)
 
 1. 同样，用户 1 会发送一组交互式消息询问用户 2 和用户 3 以选择 burger 列在最。
 2. 用户 3 选取泡菜。

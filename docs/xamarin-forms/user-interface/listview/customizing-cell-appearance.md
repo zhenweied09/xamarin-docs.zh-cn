@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 726c65746b1282223c403b08c54c400ea32a6324
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cell-appearance"></a>单元格的外观
 
@@ -230,7 +230,7 @@ public class CustomCell : ViewCell
 或者，可以 UI 控件绑定到[ `BindableProperty` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)实例，以显示它们的值，因此不再需要重写`OnBindingContextChanged`方法。
 
 > [!NOTE]
-> **请注意**： 在重写`OnBindingContextChanged`，确保基类的`OnBindingContextChanged`方法调用，以便已注册的委托接收`BindingContextChanged`事件。
+> 在重写`OnBindingContextChanged`，确保基类的`OnBindingContextChanged`方法调用，以便已注册的委托接收`BindingContextChanged`事件。
 
 在 XAML 中，绑定到数据的自定义单元格类型可以实现下面的代码示例中所示：
 

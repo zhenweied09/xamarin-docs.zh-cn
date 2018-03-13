@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 4798da42718658096509948bae07e5e5534d5af0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 的 XAML 预览
 
@@ -30,13 +30,13 @@ _请参阅 Xamarin.Forms 布局呈现你进行键入 ！_
 
 **预览**按钮可以通过右键单击某个 XAML 文件，并选择显示在编辑器上**打开 > XAML 查看器**。 然后可显示或隐藏通过按预览窗格**预览**任何 XAML 文档窗口的右上角的按钮：
 
-[ ![适用于 Mac 的 Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-sml.png "适用于 Mac 的 Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list.png "适用于 Mac 的 Visual Studio 中的窗体预览程序")
+[![适用于 Mac 的 Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-sml.png "适用于 Mac 的 Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list.png#lightbox "适用于 Mac 的 Visual Studio 中的窗体预览程序")
 
 ### <a name="visual-studio-on-windows"></a>Windows 版 Visual Studio
 
 使用**视图 > 其他 Windows > Xamarin.Forms 预览程序**Visual Studio 打开预览窗口中的菜单。 使用**窗口 > 新建垂直制表符组**菜单上，将其定位并排显示。
 
-[ ![Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list-vs.png "Visual Studio 中的窗体预览程序")
+[![Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Visual Studio 中的窗体预览程序")
 
 ## <a name="xaml-preview-options"></a>XAML 预览选项
 

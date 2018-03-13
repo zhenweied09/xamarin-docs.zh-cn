@@ -3,16 +3,16 @@ title: "图像"
 description: "本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。 它介绍创建和维护需要创建你的应用程序图标并使用 C# 代码和 Xcode 的接口生成器中的映像的映像。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f12b2af0c9325796db63fcd65af135f54277ece0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="images"></a>图像
 
@@ -34,7 +34,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 
 此外，macOS 提供一组可以在你的应用程序使用的预定义映像。
 
-[![示例运行的应用程序](image-images/intro01.png "示例运行的应用程序")](image-images/intro01-large.png)
+[![示例运行的应用程序](image-images/intro01.png "示例运行的应用程序")](image-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍在 Xamarin.Mac 应用程序中使用图像和图标的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -59,18 +59,18 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
     ![选择 Assets.xcassets](image-images/imageset01.png "选择 Assets.xcassets")
 2. 右键单击**资产列表**和选择**新映像设置**: 
 
-    [![添加新的映像集](image-images/imageset02.png "添加一新映像组")](image-images/imageset02-large.png)
+    [![添加新的映像集](image-images/imageset02.png "添加一新映像组")](image-images/imageset02-large.png#lightbox)
 3. 选择新的映像集，并将显示的编辑器： 
 
-    [![选择新的映像集](image-images/imageset03.png "选择新的映像集")](image-images/imageset03-large.png)
+    [![选择新的映像集](image-images/imageset03.png "选择新的映像集")](image-images/imageset03-large.png#lightbox)
 4. 此处我们可为每个不同设备和所需的分辨率拖动图像中。 
 5. 双击新映像集**名称**中**资产列表**对其进行编辑： 
 
-    [![编辑图像设置名称](image-images/imageset04.png "编辑图像设置名称")](image-images/imageset04-large.png)
+    [![编辑图像设置名称](image-images/imageset04.png "编辑图像设置名称")](image-images/imageset04-large.png#lightbox)
     
 一种特殊**向量**类，如已添加到**映像集**这使我们能够包括_PDF_格式化中改为包括在各个位图文件 casset 矢量图像不同的解决方法。 使用此方法，你提供的单个向量文件 **@1x**  （格式为向量 PDF 文件） 的解析和 **@2x** 和 **@3x** 将在编译时生成文件的版本，并将其包含在应用程序的捆绑包。
 
-[![映像设置编辑器界面](image-images/imageset05.png "映像设置编辑器接口")](image-images/imageset05-large.png)
+[![映像设置编辑器界面](image-images/imageset05.png "映像设置编辑器接口")](image-images/imageset05-large.png#lightbox)
 
 例如，如果你包括`MonkeyIcon.pdf`文件作为资产目录分辨率高达 150px x 150px，以下资产将在编译时包含在最终应用程序捆绑的位图的矢量：
 
@@ -115,7 +115,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
     ![添加文件](image-images/add01.png "添加文件")
 2. 从**添加文件**对话框中，选择映像，将文件添加到项目中，选择`BundleResource`为**替代生成操作**单击**打开**按钮：
 
-    [![选择要添加的文件](image-images/add02.png "选择要添加的文件")](image-images/add02-large.png)
+    [![选择要添加的文件](image-images/add02.png "选择要添加的文件")](image-images/add02-large.png#lightbox)
 3. 如果文件尚不在**资源**文件夹中，将要求你如果你想要**复制**，**移动**或**链接**文件。 选取其每个套件你的需求，通常，将**复制**:
 
     ![选择添加操作](image-images/add04.png "选择添加操作")
@@ -164,13 +164,13 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
      ![在解决方案本图像资源](image-images/ib00.png "解决方案板中的图像资源")
 2. 双击**Main.storyboard**文件以打开它以在接口生成器中编辑： 
 
-     [![编辑主情节提要](image-images/ib01.png "编辑主情节提要")](image-images/ib01-large.png)
+     [![编辑主情节提要](image-images/ib01.png "编辑主情节提要")](image-images/ib01-large.png#lightbox)
 3. 拖动 UI 元素采用到设计图面上的映像 (例如，**图像工具栏项**): 
 
      ![编辑工具栏项](image-images/ib02.png "编辑工具栏项")
 4. 选择的映像添加到**资源**文件夹中的**映像名称**下拉列表中： 
 
-     [![选择是工具栏项的图像](image-images/ib03.png "选择是工具栏项的图像")](image-images/ib03-large.png)
+     [![选择是工具栏项的图像](image-images/ib03.png "选择是工具栏项的图像")](image-images/ib03-large.png#lightbox)
 5. 在设计图面中，将显示所选的映像： 
 
      ![在工具栏编辑器中所显示的图像](image-images/ib04.png "正在工具栏编辑器中显示的图像")
@@ -205,7 +205,7 @@ NSImage image = new NSImage("/Users/KMullins/Documents/photo.jpg")
 
 若要实现此效果，切换_呈现模式_的图像资产到**模板映像**:
 
-[![设置它的模板图像](image-images/templateimage01.png "设置它的模板图像")](image-images/templateimage01-large.png)
+[![设置它的模板图像](image-images/templateimage01.png "设置它的模板图像")](image-images/templateimage01-large.png#lightbox)
 
 从 Xcode 的接口生成器中，将分配到 UI 控件的图像资产：
 
@@ -337,7 +337,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 示例输出：
 
-[![在应用程序显示图像的示例](image-images/tables01.png "举例说明在应用程序显示图像")](image-images/tables01-large.png)
+[![在应用程序显示图像的示例](image-images/tables01.png "举例说明在应用程序显示图像")](image-images/tables01-large.png#lightbox)
 
 有关使用表视图的详细信息，请参阅我们[表视图](~/mac/user-interface/table-view.md)文档。
 
@@ -440,7 +440,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 示例输出：
 
-[![大纲视图中所显示的图像的示例](image-images/outline01.png "的大纲视图中所显示的图像示例")](image-images/outline01-large.png)
+[![大纲视图中所显示的图像的示例](image-images/outline01.png "的大纲视图中所显示的图像示例")](image-images/outline01-large.png#lightbox)
 
 有关使用大纲视图的详细信息，请参阅我们[大纲视图](~/mac/user-interface/outline-view.md)文档。
 
@@ -453,7 +453,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="related-links"></a>相关链接
 
-- [MacImages （示例）](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages（示例）](https://developer.xamarin.com/samples/mac/MacImages/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [表视图](~/mac/user-interface/table-view.md)
 - [大纲视图](~/mac/user-interface/outline-view.md)

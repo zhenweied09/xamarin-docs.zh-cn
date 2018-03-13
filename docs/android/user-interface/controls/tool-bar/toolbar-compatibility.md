@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d4d6e93bf3a755d9b48c9e096de87b4c89f2831f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a17ad79d3f3b537332494fc368c878f2733d5db2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar-compatibility"></a>工具栏兼容性
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -36,7 +35,6 @@ ms.lasthandoff: 02/27/2018
 下列部分中的详细阐述每个步骤。
 
 
-<a name="android_version" />
 
 ## <a name="set-the-minimum-and-target-android-version"></a>设置最小值和目标 Android 版本
 
@@ -44,23 +42,20 @@ ms.lasthandoff: 02/27/2018
 
 目标框架设置为 API 级别 21 级别或更高版本，将最低 Android 版本，此应用程序以支持 Android API 级别的项目设置。 有关设置 Android API 级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 在`ToolbarFun`示例中，最低 Android 版本设置为 KitKat (API 级别 4.4)。 
 
-<a name="install_nuget" />
 
 ## <a name="install-the-appcompat-nuget-package"></a>安装 AppCompat NuGet 包
 
 接下来，添加[Android 支持库 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)到项目的包。 在 Visual Studio 中，右键单击**引用**和选择**管理 NuGet 包...**.单击**浏览**并搜索**Android 支持库 v7 AppCompat**。 选择**Xamarin.Android.Support.v7.AppCompat**单击**安装**: 
 
-[![在管理 NuGet 包中选择的屏幕截图的 V7 Appcompat 包](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png)
+[![在管理 NuGet 包中选择的屏幕截图的 V7 Appcompat 包](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
 安装此 NuGet 时，多个其他 NuGet 包还会安装如果尚不存在 (如**Xamarin.Android.Support.Animated.Vector.Drawable**， **Xamarin.Android.Support.v4**，和**Xamarin.Android.Support.Vector.Drawable**)。 有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。 
 
-<a name="appcompat_theme" />
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>使用 AppCompat 主题和工具栏
 
 AppCompat 库附带了几个`Theme.AppCompat`可在任何版本的 Android 受 AppCompat 库的主题。 `ToolbarFun`示例应用程序主题派生自`Theme.Material.Light.DarkActionBar`，不可用早 Android 版本比棒糖形。 因此，`ToolbarFun`必须进行适配化以便为此主题中，使用对应的 AppCompat `Theme.AppCompat.Light.DarkActionBar`。 此外，因为`Toolbar`是在版本的 Android 上不可用早于棒糖形，我们必须使用 AppCompat 版本`Toolbar`。 因此，必须使用布局`android.support.v7.widget.Toolbar`而不是`Toolbar`。 
 
-<a name="update_layouts" />
 
 ### <a name="update-layouts"></a>更新布局
 
@@ -91,7 +86,6 @@ AppCompat 库附带了几个`Theme.AppCompat`可在任何版本的 Android 受 A
 
 请注意，`?attr`值不再带有前缀`android:`(回想一下，`?`表示法引用当前主题中的资源)。 如果`?android:attr`仍使用 Android 此处，从当前正在运行的平台中，而不是从 AppCompat 库引用属性值。 由于本示例使用`actionBarSize`AppCompat 库中，定义`android:`删除前缀。 同样，`@android:style`更改为`@style`以便`android:theme`属性已设置为一个主题中的 AppCompat 库&ndash;`ThemeOverlay.AppCompat.Dark.ActionBar`此处使用主题而非`ThemeOverlay.Material.Dark.ActionBar`。 
 
-<a name="update_style" />
 
 ### <a name="update-the-style"></a>更新样式
 
@@ -113,7 +107,6 @@ AppCompat 库附带了几个`Theme.AppCompat`可在任何版本的 Android 受 A
 项名称和在此示例中的父主题不再带有前缀`android:`因为我们正在使用 AppCompat 库。 此外，父主题更改为的 AppCompat 版本`Light.DarkActionBar`。 
 
 
-<a name="update_menus" />
 
 ### <a name="update-menus"></a>更新菜单
 
@@ -180,7 +173,6 @@ local:showAsAction="ifRoom"
 
 此命名空间交换机如何提供对支持`showAsAction`Android API 级别 11 之前的版本上的属性？ 自定义特性`showAsAction`和所有及其可能的值包含在应用程序已安装 AppCompat NuGet。 
 
-<a name="subclass" />
 
 ## <a name="subclass-appcompatactivity"></a>子类 AppCompatActivity
 
@@ -208,7 +200,7 @@ SupportActionBar.Title = "My AppCompat Toolbar";
 
 构建该应用并在预棒糖形设备或 Android 仿真程序上运行它。 以下屏幕截图显示的 AppCompat 版本**ToolbarFun** Nexus 4 个正在运行 KitKat (API 19) 上： 
 
-[![KitKat 设备上运行的应用的完整屏幕截图，显示这两个工具栏](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png)
+[![KitKat 设备上运行的应用的完整屏幕截图，显示这两个工具栏](toolbar-compatibility-images/02-running-on-kitkat-sml.png)](toolbar-compatibility-images/02-running-on-kitkat.png#lightbox)
 
 当使用 AppCompat 库时，主题也不必切换基于 Android 版本&ndash;AppCompat 库使它能够提供跨所有支持的 Android 版本的一致的用户体验。 
 

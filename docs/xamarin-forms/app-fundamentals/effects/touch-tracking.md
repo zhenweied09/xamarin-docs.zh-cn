@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 89d3b56a15110d0c106c43ce227f11f86bbdf404
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="invoking-events-from-effects"></a>调用从效果的事件
 
@@ -448,7 +448,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 你可以移动多个`BoxView`元素同时使用不同的手指。
 
-[![](touch-tracking-images/boxviewdragging-small.png "三重的字数拖动页的屏幕截图")](touch-tracking-images/boxviewdragging-large.png "三倍的字数拖动页的屏幕截图")
+[![](touch-tracking-images/boxviewdragging-small.png "三重的字数拖动页的屏幕截图")](touch-tracking-images/boxviewdragging-large.png#lightbox "三倍的字数拖动页的屏幕截图")
 
 ### <a name="subclassing-the-view"></a>子类化视图
 
@@ -511,7 +511,7 @@ class DraggableBoxView : BoxView
 
 **椭圆绘制**页面允许您通过轻扫手指在屏幕上的绘制椭圆形。 根据移动手指的方式，您可以从左上到右下角，或从任何其他角到相反角绘制椭圆。 绘制椭圆是随机的颜色和不透明度。
 
-[![](touch-tracking-images/ellipsedrawing-small.png "三重的椭圆绘图页的屏幕截图")](touch-tracking-images/ellipsedrawing-large.png "三重的椭圆绘图页的屏幕截图")
+[![](touch-tracking-images/ellipsedrawing-small.png "三重的椭圆绘图页的屏幕截图")](touch-tracking-images/ellipsedrawing-large.png#lightbox "三重的椭圆绘图页的屏幕截图")
 
 如果你然后触摸省略号之一，可以将其拖动到另一个位置。 这要求称为"命中测试，"这就需要搜索的特定点的图形对象的方法。 SkiaSharp 省略号不可 Xamarin.Forms 元素，因此它们无法执行其自己`TouchEffect`处理。 `TouchEffect`必须应用于整个`SKCanvasView`对象。
 
@@ -683,7 +683,7 @@ case TouchActionType.Pressed:
 
 其他 SkiaSharp 示例是**手指绘制**页。 可以从两个选择描边颜色和描边宽度`Picker`视图，然后绘制与一个或多个指：
 
-[![](touch-tracking-images/fingerpaint-small.png "三重的手指绘制页的屏幕截图")](touch-tracking-images/fingerpaint-large.png "手指绘制页面的三个屏幕截图")
+[![](touch-tracking-images/fingerpaint-small.png "三重的手指绘制页的屏幕截图")](touch-tracking-images/fingerpaint-large.png#lightbox "手指绘制页面的三个屏幕截图")
 
 此示例还需要一个单独的类来表示在屏幕上绘制每个行：
 
@@ -791,7 +791,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 各种`WhiteKey`和`BlackKey`元素排列在页中的[XAML 文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml)，它看起来最佳电话保存在横向模式中时：
 
-[![](touch-tracking-images/silentkeyboard-small.png "三重的无提示键盘页面屏幕截图")](touch-tracking-images/silentkeyboard-large.png "三倍的无提示键盘页面屏幕截图")
+[![](touch-tracking-images/silentkeyboard-small.png "三重的无提示键盘页面屏幕截图")](touch-tracking-images/silentkeyboard-large.png#lightbox "三倍的无提示键盘页面屏幕截图")
 
 如果你扫描手指跨密钥中，你将看到的颜色的颜色的细微更改将触控事件传输从一个项到另一个。
 

@@ -3,16 +3,16 @@ title: "IOS 10 简介"
 description: "本文介绍的所有新增和更改 Api 和 iOS 10 中可用的功能为 Xamarin.iOS 开发人员。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: FB91DFFE-CF5E-4253-92CB-78A6371259D9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: d5618ad4477cadfe8977faa9616f5ab6201f14ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fbbbeb41ad83d8f673da2b2e7b0efe5645de4075
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-ios-10"></a>IOS 10 简介
 

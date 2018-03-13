@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: edc1dd9f9544d1ab03781e7f3181a78b72f53909
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
 Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这些更改反映出来实时在你的设备上。 在 Xamarin 实时播放器应用程序中运行你的代码 – 无需设置的仿真程序或使用电缆将代码部署 ！
 
-[ ![实时的 Xamarin Player： 代码、 扫描、 测试](images/xamarin-live.png)](images/xamarin-live-sml.png)
+[![实时的 Xamarin Player： 代码、 扫描、 测试](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. 启用*实时的 Xamarin Player*中**首选项**，则可以选择从**设备**列表。
 2. 调试和运行，然后扫描 QRCodeto 对你的设备。
@@ -28,7 +28,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
 配置 IDE 要在 Visual Studio 2017 或 Visual Studio 实时的 Xamarin Player 用于 mac。 实时的 Xamarin Player 支持 Android、 iOS 和 Xamarin.Forms 项目。
 
-## <a name="xamarin-live-player-appplayermd"></a>[Xamarin 实时播放器应用程序](player.md)
+## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 应用](player.md)
 
 使用 Xamarin 实时播放器应用程序。
 

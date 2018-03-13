@@ -3,14 +3,15 @@ title: "第 4 章的摘要。 滚动堆栈"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 59d51c48cee30a242f5e1adcb1c886169334e9b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>第 4 章的摘要。 滚动堆栈
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 02/27/2018
 
 你可以使用多个实例的`StackLayout`组合`BoxView`和几个`Label`实例`Frame`以显示具有特定颜色，并将这些视图中的每个`StackLayout`中`ScrollView`创建具吸引力列表中显示的颜色[ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks)示例：
 
-[![颜色块的三个屏幕截图](images/ch04fg11-small.png "颜色列表")](images/ch04fg11-large.png "列表的颜色")
+[![颜色块的三个屏幕截图](images/ch04fg11-small.png "颜色列表")](images/ch04fg11-large.png#lightbox "列表的颜色")
 
 ## <a name="a-scrollview-in-a-stacklayout"></a>在 StackLayout ScrollView？
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 011b6d184e55c9054a845d4922687b4565221859
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-jar"></a>绑定。JAR
 
@@ -75,7 +75,6 @@ Picasso.With (this)
 
 ```
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>创建绑定库
 
@@ -83,19 +82,19 @@ Picasso.With (this)
 
 首先，创建一个新的绑定类库项目。 在 Visual Studio for Mac 或 Visual Studio 中，创建一个新的解决方案，然后选择*Android 绑定库*模板。 （本演练中的屏幕截图使用 Visual Studio 中，但适用于 Mac 的 Visual Studio 是非常类似。）将解决方案命名**JarBinding**: 
 
-[ ![创建 JarBinding 库项目](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png)
+[![创建 JarBinding 库项目](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
 
 该模板包括**Jar**文件夹，你在其中添加你。JAR(s) 到绑定库项目。 右键单击**Jar**文件夹，然后选择**添加 > 现有项**: 
 
-[ ![将现有项添加](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png)
+[![添加现有项](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
 导航到**高手 2.x.x.jar**前面下载文件，选择它，然后单击**添加**: 
 
-[ ![选择 jar 文件，然后单击添加](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png)
+[![选择 jar 文件，然后单击添加](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
 验证**高手 2.x.x.jar**文件已成功添加到项目： 
 
-[ ![Jar 添加到项目](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png)
+[![Jar 添加到项目](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
 当你创建一个 Java 绑定的类库项目时，你必须指定是否。JAR 是嵌入到绑定库中或单独打包。 若要做到这一点，你指定以下项之一*生成操作*: 
 
@@ -107,19 +106,18 @@ Picasso.With (this)
 
 生成操作设置为**EmbeddedJar**: 
 
-[ ![选择 EmbeddedJar 生成操作](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png)
+[![选择 EmbeddedJar 生成操作](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
 接下来，打开项目属性来配置*目标框架*。 如果。JAR 使用 Android 的任何 Api，将目标框架设置为 API 级别。JAR 要求。 通常情况下，开发人员的。JAR 文件将指示的 API 级别 （或级别） 的。JAR 可与兼容。 (有关的目标框架设置和常规中的 Android API 级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。)
 
 将目标 API 级别设置为绑定库 （在此示例中，我们将使用 API 级别 19）： 
 
-[ ![目标 API 级别设置为 API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png)
+[![目标 API 级别设置为 API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
 最后，生成绑定库。 尽管可能会显示某些警告消息，绑定类库项目应能成功生成和生成的输出。在以下位置的 DLL: **JarBinding/bin/Debug/JarBinding.dll**
     
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>使用绑定库
 
@@ -133,19 +131,19 @@ Picasso.With (this)
 
 首先，创建一个新的 Xamarin.Android 应用程序使用绑定库。 右键单击解决方案并选择**添加新项目**; 将新项目**命名为 BindingTest**。 我们正在与绑定库位于同一解决方案中创建此应用程序，为了简化本演练中;但是，使用应用程序绑定库无法，相反，驻留在另一种解决方案： 
 
-[ ![添加新命名为 BindingTest 项目](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png)
+[![添加新命名为 BindingTest 项目](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
 右键单击**引用**节点**命名为 BindingTest**项目，然后选择**添加引用...**:
 
-[ ![右添加引用](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png)
+[![右添加引用](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
 检查**JarBinding**前面创建的项目，然后单击**确定**:
 
-[ ![选择 JarBinding 项目](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png)
+[![选择 JarBinding 项目](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
 打开**引用**节点**命名为 BindingTest**项目，然后确认**JarBinding**引用不存在： 
 
-[ ![在引用下显示 JarBinding](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png)
+[![在引用下显示 JarBinding](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
 修改**命名为 BindingTest**布局 (**main.axml**)，使其具有单个`ImageView`:
 
@@ -191,11 +189,10 @@ public class MainActivity : Activity
 
 编译和运行**命名为 BindingTest**项目。 应用程序将启动，并小段延迟后 （具体取决于网络条件），它应下载并显示类似于以下屏幕截图的映像：
 
-[ ![屏幕快照的命名为 BindingTest 运行](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png)
+[![屏幕快照的命名为 BindingTest 运行](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 祝贺你！ 你已成功绑定 Java 库。JAR 并在 Xamarin.Android 应用程序中使用它。
  
-<a name="summary" />
  
 ## <a name="summary"></a>摘要
 

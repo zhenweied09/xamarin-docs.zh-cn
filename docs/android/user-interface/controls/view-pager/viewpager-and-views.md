@@ -7,18 +7,17 @@ ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: d81f897fb7af39334cec4ea9f806533f09754079
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="viewpager-with-views"></a>与视图 ViewPager
 
 _ViewPager 是使您可以实现动作导航布局管理器。动作导航允许用户轻扫，左侧和右侧逐句通过数据页。本指南介绍如何实现使用 ViewPager 和 PagerTabStrip，为数据页中使用视图 swipeable UI （后续指南介绍如何用于页面的片段）。_
 
-<a name="overview" />
  
 ## <a name="overview"></a>概述
 
@@ -27,18 +26,16 @@ _ViewPager 是使您可以实现动作导航布局管理器。动作导航允许
 尽管`ViewPager`-基于应用程序通常实现与`Fragment`s，有一些相对简单的用例其中的额外复杂性`Fragment`s 没有必要。 例如，在本演练中所示的基本映像库应用不需要使用`Fragment`s。 因为内容是静态的不同的映像之间来回用户仅刷，实现可以保存更简单通过使用 Android 的标准视图和布局。 
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
 创建一个名为的新的 Android 项目**TreePager** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 接下来，启动 NuGet 包管理器。 (有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough))。 查找和安装**Android 支持库 v4**: 
 
-[![选择在 NuGet 包管理器的屏幕截图的支持 v4 Nuget](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png)
+[![选择在 NuGet 包管理器的屏幕截图的支持 v4 Nuget](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 这还将安装的任何其他包 reaquired **Android 支持库 v4**。
 
 
-<a name="datasource" />
 
 ## <a name="add-an-example-data-source"></a>添加示例数据源
 
@@ -58,7 +55,6 @@ int imageId = treeCatalog[2].imageId;
 因为的实现详细信息`TreeCatalog`不了解相关`ViewPager`、`TreeCatalog`代码未在此处列出。 源代码到`TreeCatalog`位于[TreeCatalog.cs](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/TreePager/TreeCatalog.cs)。 下载此源文件 (或复制并粘贴到一个新的代码**TreeCatalog.cs**文件) 并将其添加到你的项目。 此外，下载并解压缩[图像文件](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true)到你**可资源/绘制**文件夹并将其包括在项目中。 
 
 
-<a name="layout" />
 
 ## <a name="create-a-viewpager-layout"></a>创建 ViewPager 布局
 
@@ -82,8 +78,6 @@ available only from
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
 
-
-<a name="setup" />
 
 ## Set up ViewPager
 
@@ -115,12 +109,10 @@ protected override void OnCreate(Bundle bundle)
 
 当生成和运行此代码时，你应看到类似于以下屏幕截图显示： 
 
-[![显示空 ViewPager 的应用的屏幕快照](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png)
+[![显示空 ViewPager 的应用的屏幕快照](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 此时，`ViewPager`为空，因为它缺少适配器用于访问中的内容**TreeCatalog**。 在下一步的部分中， **PagerAdapter**将创建连接`ViewPager`到**TreeCatalog**。 
 
-
-<a name="adapter" />
 
 ## <a name="create-the-adapter"></a>创建适配器
 
@@ -178,7 +170,6 @@ namespace TreePager
 此代码引出不可或缺`PagerAdapter`实现。 在以下部分中，上述每种方法将被替换的工作代码。 
 
 
-<a name="ctor" />
 
 ### <a name="implement-the-constructor"></a>实现构造函数
 
@@ -198,7 +189,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 此构造函数的用途是存储上下文和`TreeCatalog`实例`TreePagerAdapter`将使用。 
 
 
-<a name="count" />
 
 ### <a name="implement-count"></a>实现计数
 
@@ -214,7 +204,6 @@ public override int Count
 `NumTrees`属性`TreeCatalog`在数据集中返回树 （页数） 数。
 
 
-<a name="instantiateitem" />
 
 ### <a name="implement-instantiateitem"></a>实现 InstantiateItem
 
@@ -247,7 +236,6 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 当`ViewPager`显示在图像`position`，它会显示以下`ImageView`。 最初，`InstantiateItem`调用两次以填充包含视图的前两个页面。 当用户滚动时，它再次调用维护视图后面和前面的当前显示的项。 
 
 
-<a name="destroyitem" />
 
 ### <a name="implement-destroyitem"></a>实现 DestroyItem
 
@@ -272,7 +260,6 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 3.  删除从视图`ViewPager`。 
 
 
-<a name="isviewfromobject" />
 
 ### <a name="implement-isviewfromobject"></a>实现 IsViewFromObject
 
@@ -287,7 +274,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 }
 ```
 
-<a name="addadapter" />
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>将适配器添加到 ViewPager
 
@@ -301,10 +287,9 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 核心实现现已完成&ndash;生成并运行应用程序。 你应看到在左侧的下一步的屏幕截图中所示，屏幕上显示树目录的第一个的图像。 轻扫左以查看详细的树视图，然后右轻扫可树目录中向后移动： 
 
-[![轻扫通过树映像的屏幕截图的 TreePager 应用](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png)
+[![轻扫通过树映像的屏幕截图的 TreePager 应用](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## <a name="add-a-pager-indicator"></a>添加一个页导航指示器
 
@@ -333,10 +318,9 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` 和`PagerTabStrip`设计为协同工作。 当声明`PagerTabStrip`内`ViewPager`布局，`ViewPager`将自动查找`PagerTabStrip`并将其连接到适配器。 当生成和运行应用程序时，你应该会看到空`PagerTabStrip`显示在每个屏幕的顶部： 
 
-[![空 PagerTabStrip 特写屏幕截图](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png)
+[![空 PagerTabStrip 特写屏幕截图](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 
-<a name="title" />
 
 ### <a name="display-a-title"></a>显示标题
 
@@ -351,23 +335,21 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 此代码从树目录中的指定页 （位置） 会检索树标题字符串，将其转换为 Java `String`，并返回到`ViewPager`。 当你运行该应用使用此新方法时，每个页显示的树标题`PagerTabStrip`。 你应看到在未使用下划线屏幕顶部的树名称： 
 
-[![包含文本填充 PagerTabStrip 选项卡页面的屏幕快照](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png)
+[![包含文本填充 PagerTabStrip 选项卡页面的屏幕快照](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 你可以往下轻扫来回才能在目录中查看每个标题树图像。 
 
 
-<a name="pagertitlestrip" />
 
 ### <a name="pagertitlestrip-variation"></a>PagerTitleStrip Variation
 
 `PagerTitleStrip` 非常类似于`PagerTabStrip`只不过`PagerTabStrip`添加当前选定的选项卡的下划线。你可以替换`PagerTabStrip`与`PagerTitleStrip`在上面的布局和运行应用以查看其外观与`PagerTitleStrip`: 
 
-[![用下划线从文本中删除 PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png)
+[![用下划线从文本中删除 PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 请注意将转换时，删除下划线`PagerTitleStrip`。 
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>摘要
 

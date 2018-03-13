@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 42ef3e6c82763831b5114f3de7603bba8f59eac6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c582e0306bdc69570e3f8e8d35c7fa15b30523da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-animations"></a>自定义动画
 
@@ -54,7 +54,7 @@ animation.Commit (this, "SimpleAnimation", 16, 2000, Easing.Linear, (v, c) => im
 总体效果是创建动画可提高[ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/)属性[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)从 1 到 2，时间超过 2 秒 （2000年毫秒），使用[ `Linear`](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.Linear/)缓动函数。 每次动画完成后，其`Scale`属性重置为 1 和动画的重复。
 
 > [!NOTE]
-> **请注意**： 可以通过创建构造运行单独的并发的动画`Animation`每个动画对象，然后再调用`Commit`上每个动画的方法。
+> 可以通过创建构造运行单独的并发的动画`Animation`每个动画对象，然后再调用`Commit`上每个动画的方法。
 
 <a name="child" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b8d8aed397f72df53fdca7e455b8ef723e48e0a3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction"></a>介绍
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/28/2018
 
 此指南重点介绍构建跨平台企业应用使用 Xamarin.Forms，并使用 eShopOnContainers 移动应用程序作为示例。 图 1-2 显示提供前面介绍的功能 eShopOnContainers 移动应用中的页。
 
-[![](introduction-images/screenshots.png "EShopOnContainers 移动应用")](introduction-images/screenshots-large.png "eShopOnContainers 移动应用程序")
+[![](introduction-images/screenshots.png "EShopOnContainers 移动应用")](introduction-images/screenshots-large.png#lightbox "eShopOnContainers 移动应用程序")
 
 **图 1-2**: eShopOnContainers 移动应用程序
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 11/16/2017
-ms.openlocfilehash: 32a058ace69fe5647d3285ac46bc981ddef39a51
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0113cc15bf1de5e0e668b05c2b0288a6ead141b5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>其中设置我的 Android SDK 位置？
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 在 Visual Studio 中，导航到**工具 > 选项 > Xamarin > Android 设置**可以查看和设置为 Android SDK 的位置：
 
-[![在首选项中的示例位置选项卡](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png)
+[![在首选项中的示例位置选项卡](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
 每个路径的默认位置是，如下所示：
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/27/2018
 
 在 Visual Studio for Mac 中，导航到**首选项 > 项目 > SDK 位置 > Android**。 在**Android**页上，单击**位置**选项卡以查看和设置为 SDK 的位置：
 
-[![在首选项中的示例位置选项卡](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png)
+[![在首选项中的示例位置选项卡](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
 每个路径的默认位置是，如下所示：
 
@@ -62,6 +62,6 @@ ms.lasthandoff: 02/27/2018
 
 请注意，NDK 的版本号可能不同。 而不是，如**android ndk r14b**，它可能是早期版本，如**android ndk r10e**。
 
-若要设置为 Android SDK 的位置，输入到 Android SDK 目录的完整路径**Android SDK 的位置**框。 您可以选择的 Android SDK 文件夹中查找工具，按**CTRL + &#8984; + I**要查看文件夹的信息，请单击并拖动右侧的路径**其中：**，复制，然后将其粘贴到**Android SDK位置**框中**位置**选项卡。例如，如果你的 Android SDK 位置位于**~/Library/Developer/Android/Sdk**，清除中的旧路径**Android SDK 的位置**框中，粘贴在此路径中，并单击**确定**.
+若要设置为 Android SDK 的位置，输入到 Android SDK 目录的完整路径**Android SDK 的位置**框。 您可以选择的 Android SDK 文件夹中查找工具，按**CTRL +&#8984;+ I**要查看文件夹的信息，请单击并拖动右侧的路径**其中：**，复制，然后将其粘贴到**Android SDK位置**框中**位置**选项卡。例如，如果你的 Android SDK 位置位于**~/Library/Developer/Android/Sdk**，清除中的旧路径**Android SDK 的位置**框中，粘贴在此路径中，并单击**确定**.
 
 -----

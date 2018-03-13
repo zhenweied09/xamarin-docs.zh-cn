@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>行和描边大写字母
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 每个成员`SKStrokeCap`枚举，该处理程序绘制两个行，另一个使用笔画粗细设置为 50 像素和另一个行位于顶部，使用 2 个像素笔画粗细。 此第二行被用于阐述的几何开始和结束的独立于直线粗细和描边端点的行：
 
-[![](lines-images/strokecaps-small.png "三重的笔划端头页的屏幕截图")](lines-images/strokecaps-large.png "笔划端头页面的三个屏幕截图")
+[![](lines-images/strokecaps-small.png "三重的笔划端头页的屏幕截图")](lines-images/strokecaps-large.png#lightbox "笔划端头页面的三个屏幕截图")
 
 如你所见，`Square`和`Round`笔划端头有效地扩展半个描边宽度在行的开头和结尾的行的长度。 需要以确定呈现的图形对象的维度时，此扩展变得非常重要。
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 屏幕快照显示了各种`Picker`三个平台上的选择：
 
-[![](lines-images/multiplelines-small.png "三重的多个行页的屏幕截图")](lines-images/multiplelines-large.png "三倍的多个行页的屏幕截图")
+[![](lines-images/multiplelines-small.png "三重的多个行页的屏幕截图")](lines-images/multiplelines-large.png#lightbox "三倍的多个行页的屏幕截图")
 
 在左侧显示 iPhone 如何`SKPointMode.Points`枚举成员会导致`DrawPoints`呈现的每个中点`SKPoint`线帽是否为方块数组`Butt`或`Square`。 线帽是否呈现圆圈`Round`。
 

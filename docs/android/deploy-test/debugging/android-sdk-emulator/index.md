@@ -8,23 +8,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d1cb0f6a329604dcac4943eaf39f838bcba38793
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956b9e4e280545c8e11925697fced4b9d4e40693
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-sdk-emulator"></a>Android SDK 仿真器
 
 _本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合使用。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
 可使用各种配置运行 Google Android SDK Android 仿真器来模拟各种设备。 其中的每个配置都创建为虚拟设备。 本指南介绍如何从 Visual Studio 启动仿真器以及如何解决常见问题。
 
-<a name="sections" />
 
 ## <a name="sections"></a>部分
 
@@ -39,7 +37,6 @@ _本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合�
 有关配置 Android SDK Emulator 和创建新的虚拟设备的信息，请参阅 [Android Emulator 设置](~/android/get-started/installation/android-emulator/index.md)。
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

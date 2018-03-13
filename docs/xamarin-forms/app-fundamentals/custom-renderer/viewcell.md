@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 2c65bce7ae468ef07c6d898e3f532aa95580f2ba
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9e980dd428ec0efab8578a25f9191dbc71bbaf6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 
@@ -160,7 +160,7 @@ Xamarin.Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Form
 1. 添加`ExportRenderer`到自定义呈现器类，以指定它将可用于呈现 Xamarin.Forms 自定义单元格特性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 对于大多数 Xamarin.Forms 元素，它是可选的提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)元素。
+> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)元素。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a3c9c76ce173606d206166b2bcfb9760eb5634ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abb8ee30828e5d9856b9fd72cca8adb669959818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>发布到 Apple 电视应用商店
 
@@ -154,12 +154,12 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
     ![](app-store-publishing-images/buildxs01new.png "选择发布配置")
 2. 在“生成”菜单中，选择“存档以供发布”：
 
-    [ ![](app-store-publishing-images/buildxs02new.png "选择“存档以供发布”")](app-store-publishing-images/buildxs02new.png)
+    [![](app-store-publishing-images/buildxs02new.png "选择用于发布的存档")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. 存档创建完成后，将显示“存档”视图：
 
-    [ ![](app-store-publishing-images/buildxs03new.png "存档视图")](app-store-publishing-images/buildxs03new.png)
+    [![](app-store-publishing-images/buildxs03new.png "存档视图")](app-store-publishing-images/buildxs03new.png#lightbox)
 
-#<a name="3-sign-and-distribute-your-app"></a>&#3; # 对签名并分配你的应用程序
+### <a name="sign-and-distribute-your-app"></a>签名和分发应用
 
 每次生成用于存档的应用程序时，都会自动打开“存档视图”，显示所有已存档的项目（按解决方案分组）。 默认情况下，此视图只显示当前打开的解决方案。 若要查看拥有存档的所有解决方案，请单击“显示所有存档”选项。
 
@@ -169,19 +169,19 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 1. 选择**对签名并分配...**，如下所示：
 
-    [ ![](app-store-publishing-images/buildxs04new.png "选择 theSign 和分发...")](app-store-publishing-images/buildxs04new.png)
+    [![](app-store-publishing-images/buildxs04new.png "选择 theSign 和分发...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. 这将打开发布向导。 选择“App Store”分发频道以创建包，再打开应用加载程序：
 
-    [ ![](app-store-publishing-images/distribute01.png "选择应用程序存储的分销渠道")](app-store-publishing-images/distribute01.png)
+    [![](app-store-publishing-images/distribute01.png "选择应用程序存储的分销渠道")](app-store-publishing-images/distribute01.png#lightbox)
 3. 在预配配置文件屏幕上，选择你的签名标识和对应预配配置文件，或使用其他身份重新登录：
 
-    [ ![](app-store-publishing-images/distribute02.png "选择的签名标识和对应预配配置文件")](app-store-publishing-images/distribute02.png)
+    [![](app-store-publishing-images/distribute02.png "选择的签名标识和对应预配配置文件")](app-store-publishing-images/distribute02.png#lightbox)
 4. 验证包的详细信息，再单击“发布”以保存 `.ipa` 包：
 
-    [ ![](app-store-publishing-images/distribute03.png "验证包的详细信息")](app-store-publishing-images/distribute03.png)
+    [![](app-store-publishing-images/distribute03.png "验证包的详细信息")](app-store-publishing-images/distribute03.png#lightbox)
 5. 保存 `.ipa` 后，应用即可通过应用加载程序上传到 iTunes Connect：
 
-    [ ![](app-store-publishing-images/distribute04.png "上载到 iTunes 应用程序加载程序通过连接")](app-store-publishing-images/distribute04.png)
+    [![](app-store-publishing-images/distribute04.png "上载到 iTunes 应用程序加载程序通过连接")](app-store-publishing-images/distribute04.png#lightbox)
 
 创建分发生成并将其存档后，现可将应用程序提交到 iTunes Connect。
 
@@ -196,15 +196,15 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 2. 选择“提交应用”，单击“选择”按钮：
 
-    [ ![](app-store-publishing-images/publishvs01.png "选择“提交应用”")](app-store-publishing-images/publishvs01.png)
+    [![](app-store-publishing-images/publishvs01.png "选择提供你的应用程序")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. 选择前面创建的 zip 或 IPA 文件，单击“确定”按钮。
 4. 应用加载程序将验证文件：
 
-    [ ![](app-store-publishing-images/publishvs02.png "应用程序加载程序验证屏幕")](app-store-publishing-images/publishvs02.png)
+    [![](app-store-publishing-images/publishvs02.png "应用程序加载程序验证屏幕")](app-store-publishing-images/publishvs02.png#lightbox)
 5. 单击“下一步”按钮，将按照 App Store 的要求验证应用：
 
-    [ ![](app-store-publishing-images/publishvs03.png "正在验证针对应用商店应用程序")](app-store-publishing-images/publishvs03.png)
+    [![](app-store-publishing-images/publishvs03.png "正在验证针对应用商店应用程序")](app-store-publishing-images/publishvs03.png#lightbox)
 6. 单击“发送”按钮，将应用程序发送到 Apple 以供审核。
 7. 文件成功上传后，应用程序加载程序将通知你。
 
@@ -214,7 +214,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 如果您重新登录到 iTunes Connect 并从可用的应用的列表中选择你的应用程序，在 iTunes Connect 中的状态现在应显示它是**等待查看**(它可能会暂时在读取**上载收到**它正在处理）：
 
-[ ![](app-store-publishing-images/image21.png "在 iTunes 中的状态连接显示等待评审")](app-store-publishing-images/image21.png)
+[![](app-store-publishing-images/image21.png "在 iTunes 中的状态连接显示等待评审")](app-store-publishing-images/image21.png#lightbox)
 
 <a name="Troubleshooting" />
 
@@ -233,6 +233,6 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 - [使用图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)
 - [为新的 Apple TV 准备你的应用程序提交](https://developer.apple.com/tvos/submit/)
-- [应用商店提交提示](https://developer.apple.com/appstore/resources/submission/tips.html)
+- [App Store 提交提示](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [常见的应用拒绝](https://developer.apple.com/app-store/review/rejections/)
-- [应用商店查看准则](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [App Store 审核指南](https://developer.apple.com/appstore/resources/approval/guidelines.html)

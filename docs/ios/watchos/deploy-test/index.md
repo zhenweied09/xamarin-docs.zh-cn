@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>部署和测试
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/27/2018
 - 在**iOS 开发人员中心**:
   - [应用 Id](#App_IDs)已创建。
   - [应用组](#App_Groups)配置 （如果需要）。
-  - [*分发*预配配置文件](#Provisioning_Profiles)创建。
+  - 分发设置创建配置文件
 
 - 在你的解决方案：
 
@@ -36,6 +36,7 @@ ms.lasthandoff: 02/27/2018
   - [用于测试，将部署到 Apple Watch](~/ios/watchos/deploy-test/device.md)，或
   - [将上载到应用商店](~/ios/watchos/deploy-test/appstore.md)。
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>应用 Id
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/27/2018
 
 对于分发，你只需要创建一个分发预配配置文件的通配符应用 id。
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>应用组
 
@@ -102,8 +103,6 @@ ms.lasthandoff: 02/27/2018
 .![Entitlements.plist 编辑器](images/entitlements-plist-sml.png)
 
 执行**不**启用监视应用程序项目中的权利。 不需要在手表上启用。
-
-
 
 ## <a name="related-links"></a>相关链接
 

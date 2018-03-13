@@ -3,16 +3,16 @@ title: "Hello，Android 多屏幕：深入了解"
 description: "在这个两部分的指南中，会扩展基本 Phoneword 应用程序（在“Hello，Android”指南中创建）以便处理第二个屏幕。 在此过程中，引入了基本 Android 应用程序构建基块。 对 Android 体系结构的更深入了解包括在内，以帮助你更好地了解 Android 应用程序结构和功能。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: a47dea43b1fb1e84a0cd3dffc07b483497edbe09
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello，Android 多屏幕：深入了解
 
@@ -30,7 +30,6 @@ _在这个两部分的指南中，会扩展基本 Phoneword 应用程序（在�
 
 在 [Hello，Android 深入了解](~/android/get-started/hello-android/hello-android-deepdive.md)中，你了解到 Android 应用程序是独有的程序，因为它们缺少单一入口点。 相反，操作系统（或其他应用程序）可启动应用程序的任何一个已注册活动，这进而会启动应用程序的进程。 此 Android 体系结构深入了解通过介绍 Android 应用程序构建基块及其功能，扩展了你对 Android 应用程序的构造原理的了解。
 
-<a name="AndroidApplicationBlocks" />
 
 ### <a name="android-application-blocks"></a>Android 应用程序块
 
@@ -52,7 +51,6 @@ Android 围绕最小特权原则进行设计 &ndash; 应用程序只能访问它
 
 为了进行通信，应用程序块会来回发送异步消息（称为意向）。 意向包含有关接收块的信息，有时还包含一些数据。 从一个应用组件发送的意向会触发某个事件在其他应用组件中发生，从而将两个应用组件绑定在一起并允许它们进行通信。 通过来回发送意向，你可以使块来协调复杂操作（如启动相机应用以进行拍摄和保存、收集位置的信息或从一个屏幕导航到下一个屏幕）。
 
-<a name="AndroidManifestXML" />
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 

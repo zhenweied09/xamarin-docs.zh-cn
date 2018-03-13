@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 396ed31cba336976342a8dfb26f31eeda20cf494
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe76c93afc149553e44b5e8fa29a21767becf5c5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="navigation-bar"></a>导航栏
 
 Android 4 引入名的新系统用户界面功能*导航栏*，它提供在不包含有关的硬件按钮的设备上的导航控件**主页**，**返回**，和**菜单**。
 以下屏幕截图显示导航栏从 Nexus 质数设备：
 
- [ ![Android 导航栏的示例](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png)
+ [![Android 导航栏的示例](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 可以使用几个新标记用于控制导航栏和其控件的可见性以及在 Android 3 中引入的系统栏的可见性。 在中定义的标志`Android.View.View`类，如下所示：
 
@@ -31,7 +31,7 @@ Android 4 引入名的新系统用户界面功能*导航栏*，它提供在不�
 
 下面的示例演示一个简单的应用程序，单击任一按钮更改`SystemUiVisibility`:
 
- [ ![演示可见、 低分析和隐藏 SystemUiVisibility 的屏幕截图](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png)
+ [![演示可见、 低分析和隐藏 SystemUiVisibility 的屏幕截图](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 若要更改的代码`SystemUiVisibility`上设置的属性`TextView`从每个按钮的单击事件处理程序如下所示：
 

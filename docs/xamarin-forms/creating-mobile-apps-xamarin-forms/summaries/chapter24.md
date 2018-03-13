@@ -3,14 +3,15 @@ title: "第 24 章的摘要。 页导航"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>第 24 章的摘要。 页导航
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType)示例演示如何使用`TableView`列出的菜单项。 每个项与`Type`特定的页对象。 选择该项目时，程序将实例化页，并导航到它。
 
-[![三重的视图库类型的屏幕截图](images/ch24fg21-small.png "TableView 列出菜单项")](images/ch24fg21-large.png "TableView 列出菜单项")
+[![三重的视图库类型的屏幕截图](images/ch24fg21-small.png "TableView 列出菜单项")](images/ch24fg21-large.png#lightbox "TableView 列出菜单项")
 
 [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst)示例会稍有不同，则菜单包含的每个页，而不是类型的实例。 这可帮助保留每页中的信息，但所有页面必须实例都化在程序启动。
 

@@ -3,16 +3,16 @@ title: "表视图"
 description: "本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。 它描述了 Xcode 和接口生成器及与其进行交互在代码中创建的表视图。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: dfac551bbb7e6fd9214fe488170455c5916318ae
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4764a4babc9f6b06c7a9299feab1320971b0bf75
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="table-views"></a>表视图
 
@@ -22,7 +22,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 表视图中包含多个行中的信息的一个或多个列的表格格式显示数据。 根据正在创建的表视图的类型，用户可以按列进行排序、 重新组织列、 添加列、 删除列或编辑在表中包含的数据。
 
-[ ![](table-view-images/intro01.png "示例表")](table-view-images/intro01.png)
+[![](table-view-images/intro01.png "示例表")](table-view-images/intro01.png#lightbox)
 
 在本文中，我们将介绍在 Xamarin.Mac 应用程序中使用表视图的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -51,23 +51,23 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 时创建新的 Xamarin.Mac Cocoa 应用程序时，默认情况下将获得标准保留为空，窗口。 在中定义此 windows`.storyboard`自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案资源管理器**，双击`Main.storyboard`文件：
 
-[ ![](table-view-images/edit01.png "选择主情节提要")](table-view-images/edit01.png)
+[![](table-view-images/edit01.png "选择主情节提要")](table-view-images/edit01.png#lightbox)
 
 这将在 Xcode 的接口生成器中打开的窗口设计：
 
-[ ![](table-view-images/edit02.png "编辑在 Xcode 中 UI")](table-view-images/edit02.png)
+[![](table-view-images/edit02.png "编辑在 Xcode 中 UI")](table-view-images/edit02.png#lightbox)
 
 类型`table`到**库 Inspector 的**搜索框以使其更轻松地查找表视图的控件：
 
-[ ![](table-view-images/edit03.png "从库中选择表视图")](table-view-images/edit03.png)
+[![](table-view-images/edit03.png "从库中选择表视图")](table-view-images/edit03.png#lightbox)
 
 将表视图拖到中的视图控制器**界面编辑器**，使其填写的内容区域的视图控制器，并将其设置为其中缩小和随着中的窗口**约束编辑器**:
 
-[ ![](table-view-images/edit04.png "编辑约束")](table-view-images/edit04.png)
+[![](table-view-images/edit04.png "编辑约束")](table-view-images/edit04.png#lightbox)
 
 表中选择视图**接口层次结构**和以下属性位于**属性检查器**:
 
-[ ![](table-view-images/edit05.png "属性检查器")](table-view-images/edit05.png)
+[![](table-view-images/edit05.png "属性检查器")](table-view-images/edit05.png#lightbox)
 
 - **内容模式**-允许你使用任一视图 (`NSView`) 或单元格 (`NSCell`) 若要显示的行和列中的数据。 从开始 macOS 10.7，应使用视图。
 - **浮动对行进行分组**-如果`true`，表视图将绘制分组单元格，就像它们浮动。
@@ -97,7 +97,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 选择中的表列**接口层次结构**和以下属性位于**属性检查器**:
 
-[ ![](table-view-images/edit06.png "属性检查器")](table-view-images/edit06.png)
+[![](table-view-images/edit06.png "属性检查器")](table-view-images/edit06.png#lightbox)
 
 - **标题**-设置列的标题。
 - **对齐**-在单元格内设置文本的对齐方式。
@@ -115,19 +115,19 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 选择一个表格单元格视图 (`NSTableViewCell`) 中**接口层次结构**和以下属性位于**属性检查器**:
 
-[ ![](table-view-images/edit07.png "属性检查器")](table-view-images/edit07.png)
+[![](table-view-images/edit07.png "属性检查器")](table-view-images/edit07.png#lightbox)
 
 这些是所有标准视图的属性。 此外可以调整此列此处行的大小。
 
 选择表视图单元格 (默认情况下，这是`NSTextField`) 中**接口层次结构**和以下属性位于**属性检查器**:
 
-[ ![](table-view-images/edit08.png "属性检查器")](table-view-images/edit08.png)
+[![](table-view-images/edit08.png "属性检查器")](table-view-images/edit08.png#lightbox)
 
 您必须要在此处设置的标准文本字段的所有属性。 默认情况下，标准的文本字段用于显示列中的某个单元格数据。
 
 选择一个表格单元格视图 (`NSTableFieldCell`) 中**接口层次结构**和以下属性位于**属性检查器**:
 
-[ ![](table-view-images/edit09.png "属性检查器")](table-view-images/edit09.png)
+[![](table-view-images/edit09.png "属性检查器")](table-view-images/edit09.png#lightbox)
 
 最重要的设置如下：
 
@@ -141,7 +141,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 选择表单元格视图 (`NSTableFieldCell`) 中的表列底部**接口层次结构**:
 
-[ ![](table-view-images/edit10.png "选择表单元格视图")](table-view-images/edit10.png)
+[![](table-view-images/edit10.png "选择表单元格视图")](table-view-images/edit10.png#lightbox)
 
 这使您可以编辑作为的基础的表单元格视图_模式_为给定的列创建的所有单元格。
 
@@ -155,14 +155,14 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 1. 切换到**助手编辑器中**并确保`ViewController.h`选择文件： 
 
-    [ ![](table-view-images/edit11.png "在助手编辑器")](table-view-images/edit11.png)
+    [![](table-view-images/edit11.png "在助手编辑器")](table-view-images/edit11.png#lightbox)
 2. 选择表视图从**接口层次结构**、 单击和拖动到`ViewController.h`文件。
 3. 创建**Outlet**表视图调用的`ProductTable`: 
 
-    [ ![](table-view-images/edit13.png "配置上的电源插座")](table-view-images/edit13.png)
+    [![](table-view-images/edit13.png "配置上的电源插座")](table-view-images/edit13.png#lightbox)
 4. 创建**Outlet**对于表列也被称为`ProductColumn`和`DetailsColumn`: 
 
-    [ ![](table-view-images/edit14.png "配置上的电源插座")](table-view-images/edit14.png)
+    [![](table-view-images/edit14.png "配置上的电源插座")](table-view-images/edit14.png#lightbox)
 5. 保存更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 接下来，我们将编写的代码显示表的一些数据时运行该应用程序。
@@ -175,7 +175,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 首先，让我们创建一个新`Product`类来保存单个行的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
 
-[ ![](table-view-images/populate01.png "创建一个空的类")](table-view-images/populate01.png)
+[![](table-view-images/populate01.png "创建一个空的类")](table-view-images/populate01.png#lightbox)
 
 请`Product.cs`文件外观如下所示：
 
@@ -333,7 +333,7 @@ public override void AwakeFromNib ()
 
 如果我们运行应用程序时，显示以下信息：
 
-[ ![](table-view-images/populate02.png "运行示例应用程序")](table-view-images/populate02.png)
+[![](table-view-images/populate02.png "运行示例应用程序")](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
@@ -341,11 +341,11 @@ public override void AwakeFromNib ()
 
 让我们允许用户通过单击列标题表中的数据进行排序。 首先，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择`Product`列中，输入`Title`为**排序键**，`compare:`为**选择器**和选择`Ascending`为**顺序**:
 
-[ ![](table-view-images/sort01.png "设置的排序键")](table-view-images/sort01.png)
+[![](table-view-images/sort01.png "设置的排序键")](table-view-images/sort01.png#lightbox)
 
 选择`Details`列中，输入`Description`为**排序键**，`compare:`为**选择器**和选择`Ascending`为**顺序**:
 
-[ ![](table-view-images/sort02.png "设置的排序键")](table-view-images/sort02.png)
+[![](table-view-images/sort02.png "设置的排序键")](table-view-images/sort02.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -395,7 +395,7 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 如果我们运行该应用程序，并单击列标题中，将按该列排序行：
 
-[ ![](table-view-images/sort03.png "运行示例应用程序")](table-view-images/sort03.png)
+[![](table-view-images/sort03.png "运行示例应用程序")](table-view-images/sort03.png#lightbox)
 
 <a name="Row_Selection" />
 
@@ -403,7 +403,7 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 如果你想要允许用户选择单个行中，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 表中选择视图**接口层次结构**并取消选中**多个**中的复选框**属性检查器**:
 
-[ ![](table-view-images/select01.png "属性检查器")](table-view-images/select01.png)
+[![](table-view-images/select01.png "属性检查器")](table-view-images/select01.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -432,7 +432,7 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 如果你想要允许用户选择多个行中，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 表中选择视图**接口层次结构**并检查**多个**中的复选框**属性检查器**:
 
-[ ![](table-view-images/select02.png "属性检查器")](table-view-images/select02.png)
+[![](table-view-images/select02.png "属性检查器")](table-view-images/select02.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -466,7 +466,7 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 
 如果你想要允许用户与所选的表视图键入字符，然后选择第一行具有该字符，则双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 表中选择视图**接口层次结构**并检查**类型选择**中的复选框**属性检查器**:
 
-[ ![](table-view-images/type01.png "设置所选内容类型")](table-view-images/type01.png)
+[![](table-view-images/type01.png "设置所选内容类型")](table-view-images/type01.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -492,7 +492,7 @@ public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRo
 
 如果我们运行该应用程序，键入字符时，选择行时：
 
-[ ![](table-view-images/type02.png "运行示例应用程序")](table-view-images/type02.png)
+[![](table-view-images/type02.png "运行示例应用程序")](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns" />
 
@@ -500,7 +500,7 @@ public override nint GetNextTypeSelectMatch (NSTableView tableView, nint startRo
 
 如果你想要允许用户将对在表视图中的列重新排序，请双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 表中选择视图**接口层次结构**并检查**Reordering**中的复选框**属性检查器**:
 
-[ ![](table-view-images/reorder01.png "属性检查器")](table-view-images/reorder01.png)
+[![](table-view-images/reorder01.png "属性检查器")](table-view-images/reorder01.png#lightbox)
 
 如果我们为提供的值**自动保存**属性并检查**列信息**字段中，我们对表的布局进行任何更改将自动为我们保存和还原应用程序的下一次运行。
 
@@ -519,7 +519,7 @@ public override bool ShouldReorder (NSTableView tableView, nint columnIndex, nin
 
 如果我们运行应用程序时，我们可以通过拖动围绕的列标题来对我们列重新排序：
 
-[ ![](table-view-images/reorder02.png "下面举例说明的重新排序的列")](table-view-images/reorder02.png)
+[![](table-view-images/reorder02.png "下面举例说明的重新排序的列")](table-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
@@ -575,7 +575,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 现在如果我们运行应用程序时，用户可以编辑的单元格的表视图中：
 
-[ ![](table-view-images/editing01.png "下面举例说明编辑单元格")](table-view-images/editing01.png)
+[![](table-view-images/editing01.png "下面举例说明编辑单元格")](table-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Table_Views" />
 
@@ -650,7 +650,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 首先，编辑`Main.storyboard`在 Xcode 的接口生成器中，选择表视图，并增加到的列数三 （3)。 接下来，更改**标题**到新列的`Action`:
 
-[ ![](table-view-images/delete01.png "编辑列名称")](table-view-images/delete01.png)
+[![](table-view-images/delete01.png "编辑列名称")](table-view-images/delete01.png#lightbox)
 
 将所做的更改保存到情节提要，并返回到 Visual Studio for Mac 以同步更改。
 
@@ -897,15 +897,15 @@ case "Action":
 
 与这些更改后，当运行该应用程序的每一行将具有**删除**按钮：
 
-[ ![](table-view-images/delete02.png "使用删除按钮表视图")](table-view-images/delete02.png)
+[![](table-view-images/delete02.png "使用删除按钮表视图")](table-view-images/delete02.png#lightbox)
 
 当用户单击**删除**按钮，将要求他们删除给定的行显示警报：
 
-[ ![](table-view-images/delete03.png "删除行警报")](table-view-images/delete03.png)
+[![](table-view-images/delete03.png "删除行警报")](table-view-images/delete03.png#lightbox)
 
 如果用户选择删除，则删除行，并且将重绘表：
 
-[ ![](table-view-images/delete04.png "表删除行后")](table-view-images/delete04.png)
+[![](table-view-images/delete04.png "表删除行后")](table-view-images/delete04.png#lightbox)
 
 <a name="Data_Binding_Table_Views" />
 
@@ -926,12 +926,12 @@ case "Action":
 ## <a name="related-links"></a>相关链接
 
 - [MacTables （示例）](https://developer.xamarin.com/samples/mac/MacTables/)
-- [MacImages （示例）](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages（示例）](https://developer.xamarin.com/samples/mac/MacImages/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [大纲视图](~/mac/user-interface/outline-view.md)
 - [源列表](~/mac/user-interface/source-list.md)
 - [数据绑定和键值编码](~/mac/app-fundamentals/databinding.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [NSTableView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTableView_Class/index.html#//apple_ref/doc/uid/TP40004125)
 - [NSTableViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSTableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008622)
 - [NSTableViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSTableDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004178)

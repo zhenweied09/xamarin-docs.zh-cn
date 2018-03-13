@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>演练-使用 TabHost 创建选项卡式的 UI
 
 _本文将引导完成在 Xamarin.Android 使用 TabHost API 中创建选项卡式的 UI。_
 
 > [!NOTE]
-> **注意：** `TabHost`是已否决 Google 的旧 API。 若要生成使用的选项卡式应用程序，鼓励开发人员[其中](~/android/user-interface/controls/action-bar.md)。 `ActionBar`在所有版本的 Android 中可用。 它首先 Android 3.0 （API 级别 11） 中引入并返回已移植到 Android 2.2 （API 级别 8） 和 Android 2.3 （API 级别 10） 中[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，可供通过 Xamarin.Android [XamarinAndroid 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
+> `TabHost` 是已否决 Google 的旧 API。 若要生成使用的选项卡式应用程序，鼓励开发人员[其中](~/android/user-interface/controls/action-bar.md)。 `ActionBar`在所有版本的 Android 中可用。 它首先 Android 3.0 （API 级别 11） 中引入并返回已移植到 Android 2.2 （API 级别 8） 和 Android 2.3 （API 级别 10） 中[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，可供通过 Xamarin.Android [XamarinAndroid 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
 
 本文将指导完成使用在 Xamarin.Android 中创建选项卡式的 UI `TabHost` API。 这是 android 的可在所有版本中的较旧 API。 此示例将创建与三个选项卡，在活动中正在封装每个选项卡的逻辑的应用程序。
 下面的屏幕截图是应用的我们将创建程序的一个示例：
 
 ![示例的应用程序与多个选项卡的屏幕截图](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>创建应用程序
 
@@ -61,7 +60,7 @@ _本文将引导完成在 Xamarin.Android 使用 TabHost API 中创建选项卡�
 
 下面的屏幕截图显示了 Xamarin 设计器中的布局：
 
-[![在 Xamarin 设计器中的 TabHost 布局的屏幕截图](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![在 Xamarin 设计器中的 TabHost 布局的屏幕截图](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 TabHost 必须具有其内部的两个子视图：`TabWidget`和`FrameLayout`。 为位置位置`TabWidget`和`FrameLayout`垂直内部`TabHost`、`LinearLayout`使用。 FrameLayout 是每个选项卡的内容的位置，它是空因为`TabHost`会自动嵌入在运行时的每个活动。 有多个创建选项卡式的用户界面的布局时，必须遵守的规则：
 
@@ -203,7 +202,6 @@ protected override void OnCreate(Bundle bundle)
 就这么简单！ 我们已创建的应用程序的不同部分使用户轻松导航选项卡式应用程序。
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

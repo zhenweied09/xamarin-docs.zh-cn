@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 9751b39987819428f93e09d4bfb6bee261604bb5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="attached-behaviors"></a>附加的行为
 
@@ -101,10 +101,10 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 在运行时，行为将根据行为实现响应对与该控件的交互。 以下屏幕截图演示对无效输入进行响应的附加的行为：
 
-[ ![](attached-images/screenshots-sml.png "示例应用程序与附加行为")](attached-images/screenshots.png "示例与附加行为的应用程序")
+[![](attached-images/screenshots-sml.png "示例应用程序与附加行为")](attached-images/screenshots.png#lightbox "示例与附加行为的应用程序")
 
 > [!NOTE]
-> **请注意**： 附加的行为针对特定的控件类型 （或超类可以应用于很多控件） 编写的并且它们仅应添加到兼容的控件。 尝试将行为附加到不兼容的控件将导致未知行为，并且依赖于行为实现。
+> 附加的行为针对特定的控件类型 （或超类可以应用于很多控件） 编写的并且它们仅应添加到兼容的控件。 尝试将行为附加到不兼容的控件将导致未知行为，并且依赖于行为实现。
 
 ### <a name="removing-an-attached-behavior-from-a-control"></a>从控件中删除附加的行为
 

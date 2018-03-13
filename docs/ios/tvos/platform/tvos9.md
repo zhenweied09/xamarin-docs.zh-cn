@@ -3,16 +3,16 @@ title: "TvOS 9 简介"
 description: "本文介绍的所有新增和更改 Api 和 tvOS 9 中可用的功能为 Xamarin.tvOS 开发人员。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c1fafe85fb7f5c30dca0dff6fe3dff5172e0b9aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-tvos-9"></a>TvOS 9 简介
 
@@ -91,7 +91,7 @@ tvOS 应用在 Apple TV 上运行具有以下支持的功能和特性：
 
 所有其他国家/地区将会收到 Apple 电视远程，Siri 按钮替换为与用于搜索的文本输入的默认搜索屏幕将显示一个搜索按钮：
 
-[ ![](tvos9-images/remote02.png "Siri 远程")](tvos9-images/remote02.png)
+[![](tvos9-images/remote02.png "Siri 远程")](tvos9-images/remote02.png#lightbox)
 
 有关详细信息，请参阅我们[Siri 远程和蓝牙控制器](~/ios/tvos/platform/remote-bluetooth.md)文档。
 
@@ -155,7 +155,7 @@ Apple TV 应用具有最大大小为 200 MB，并可以下载使用按需资源�
 
 Apple 电视主页屏幕显示所有应用程序安装并提供用于访问用户首选项的方法：
 
-[ ![](tvos9-images/home01.png "主屏幕")](tvos9-images/home01.png)
+[![](tvos9-images/home01.png "主屏幕")](tvos9-images/home01.png#lightbox)
 
 用户导航上使用 Siri 远程使用焦点以选择应用程序，然后启动它使用触摸手势的应用程序图标的网格。 应用程序图标是你的第一个概率潜在用户留下很好的印象，应传达一眼的应用程序的用途。
 
@@ -169,7 +169,7 @@ Apple 电视主页屏幕显示所有应用程序安装并提供用于访问用�
 
 如果用户具有 Apple 电视主页屏幕上的顶部行上放置 Xamarin.tvOS 应用程序，将显示较大的顶部架图像时由用户选择您的应用程序。 此映像应突出显示你的应用程序的功能，或者提供其内容的直接链接。
 
-[ ![](tvos9-images/topshelf01.png "顶层架子")](tvos9-images/topshelf01.png)
+[![](tvos9-images/topshelf01.png "顶层架子")](tvos9-images/topshelf01.png#lightbox)
 
 也可以作为单个静态提供顶部架映像`.png`或`.lsr`文件，也可以动态创建在运行时作为可获得焦点的项的单个行。
 

@@ -7,18 +7,17 @@ ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/14/2017
-ms.openlocfilehash: 2e54bfc4bea3955dc80a747c4ecce485b78ada1d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="jelly-bean-features"></a>果冻 Bean 功能
 
 _本文档将为 Android 4.1 中引入的开发人员提供新功能的高级别的概述。这些功能包括： 增强型通知，到 Android 无线发送共享大文件，对多媒体、 对等网络发现、 动画、 新的权限更新的更新。_
 
-<a name="Overview" />
 
 
 ## <a name="overview"></a>概述
@@ -31,21 +30,18 @@ Android 4.1 (API 级别 16)，也称为"果冻 Bean"，已在 2012 年 7 月 9 �
 
 最后 Android 4.1 已添加几个新的权限。
 
- <a name="Requirements" />
 
 
 ## <a name="requirements"></a>惠?
 
 若要开发 Xamarin.Android 应用程序使用果冻 Bean 需要 Xamarin.Android 4.2.6 或更高版本和 Android 4.1 (API 级别 16) 安装通过 Android SDK 管理器中下面的屏幕快照所示：
 
-[![在 Android SDK 管理器中选择 Android 4.1](jelly-bean-images/image1.png)](jelly-bean-images/image1.png)
+[![在 Android SDK 管理器中选择 Android 4.1](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
- <a name="What's_New" />
 
 
 ## <a name="whats-new"></a>新增功能
 
- <a name="Animations" />
 
 
 ### <a name="animations"></a>动画
@@ -79,7 +75,6 @@ animator.Start();
 
 作为`TimeAnimator`实例正在运行，它将会调用`ITimeAnimator.ITimeListener`，哪个然后将日志如何长生成器已运行，且多长时间它如已在上次方法调用。
 
- <a name="Application_Stack_Navigation" />
 
 
 ### <a name="application-stack-navigation"></a>应用程序堆栈导航
@@ -98,7 +93,6 @@ Android 4.1 对应用程序堆栈导航 Android 3.0 中引入了改进。 通过
 -   `OnCreateNavigateUpTaskStack` – 如何创建综合的堆栈的完全控制所需时，此方法被重写。
 
 
- <a name="Camera" />
 
 
 ### <a name="camera"></a>照相机
@@ -149,19 +143,16 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
- <a name="Connectivity" />
 
 
 ### <a name="connectivity"></a>连接
 
- <a name="Android_Beam" />
 
 
 #### <a name="android-beam"></a>Android 无线发送
 
 Android 无线数据交换是一种基于 NFC 技术，允许两个 Android 设备相互之间进行通信。 Android 4.1 提供更好地支持的大型文件传输。 使用新的方法时`NfcAdapter.SetBeamPushUris()`Android 将切换备用传输机制 （例如蓝牙） 之间以获得快速的传输速度。
 
- <a name="Network_Services_Discovery" />
 
 
 #### <a name="network-services-discovery"></a>网络服务发现
@@ -173,14 +164,12 @@ Android 4.1 包含新的 API 的多路广播基于 DNS 的服务发现的。
 
 若要发现的网络和实现上的服务`Nsd.DiscoveryListener`传递给`NsdManager.discoverServices()`。
 
- <a name="Network_Usage" />
 
 
 #### <a name="network-usage"></a>网络使用情况
 
 新方法，`ConnectivityManager.IsActiveNetworkMetered`允许检查它是否连接到按流量计费的网络设备。 此方法可以用于帮助管理通过准确地告知用户可能昂贵的费用数据操作的数据使用情况。
 
- <a name="WiFi_Direct_Service_Discovery" />
 
 
 #### <a name="wifi-direct-service-discovery"></a>WiFi Direct 服务发现
@@ -195,14 +184,12 @@ Android 4.1 包含新的 API 的多路广播基于 DNS 的服务发现的。
 -   `SetUpnpServiceResponseListener()` – 此方法用于注册在接收到响应发现请求 Upnp 要调用的回调。
 
 
- <a name="Content_Providers" />
 
 
 ### <a name="content-providers"></a>内容提供商
 
 `ContentResolver`类已收到新方法， `AcquireUnstableContentProvider`。 此方法允许应用程序获取"不稳定"的内容提供程序。 通常情况下，当应用程序获取内容提供程序，并且该内容提供程序发生崩溃，因此将应用程序。 用此方法调用，如果内容提供程序崩溃时将不崩溃应用程序。 相反，`Android.OS.DeadObjectionException`将引发从上的内容提供程序的调用以通知的应用程序的内容提供程序是否已消失。 与从其他应用程序的内容提供程序交互时，"不稳定"的内容提供程序非常有用，它是不太可能错误的代码，从另一个应用程序将会影响另一个应用程序。
 
- <a name="Copy_and_Paste_With_Intents" />
 
 
 ### <a name="copy-and-paste-with-intents"></a>复制和粘贴与意向
@@ -214,14 +201,11 @@ Android 4.1 包含新的 API 的多路广播基于 DNS 的服务发现的。
 -   **Uri** – 这可以是任何 URI，例如 HTTP 书签或内容提供程序的 URI。
 
 
- <a name="Isolated_Services" />
 
 
 ### <a name="isolated-services"></a>隔离的服务
 
 隔离的服务是在其自己的特殊进程下运行和它自己的没有权限的服务。 仅与服务进行通信时启动该服务并通过服务 API 将绑定到它。 可以通过将属性设置声明作为独立服务`IsolatedProcess="true"`中`ServiceAttribute`装饰服务类。
-
- <a name="Media" />
 
 
 ### <a name="media"></a>媒体
@@ -245,7 +229,6 @@ Android 4.1 包含新的 API 的多路广播基于 DNS 的服务发现的。
 -   `MediaRouterActionProvider` 和`MediaRouteButton`– 这些类帮助提供一致的用户界面，用于选择并播放媒体。
 
 
- <a name="Notifications" />
 
 
 ### <a name="notifications"></a>通知
@@ -255,26 +238,25 @@ Android 4.1 允许应用程序更多灵活性和控件的显示通知。 应用�
 -   `Notification.BigPictureStyle` – 这是将生成通知，其中将包含映像的一个帮助器类。 下图显示大图像包含的通知的示例：
 
 
- [ ![BigPictureStyle 通知的示例屏幕快照](jelly-bean-images/image2.png)](jelly-bean-images/image2.png)
+ [![BigPictureStyle 通知的示例屏幕快照](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 -   `Notification.BigTextStyle` – 这是将生成将具有多行文本，如电子邮件通知的帮助器类。 可以在下面的屏幕截图中看到举例说明此新的通知样式：
 
 
- [ ![BigTextStyle 通知的示例屏幕快照](jelly-bean-images/image3.png)](jelly-bean-images/image3.png)
+ [![BigTextStyle 通知的示例屏幕快照](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 -   `Notification.InboxStyle` – 这是将生成包含一个字符串，例如，从电子邮件，代码段的列表的通知，此屏幕截图中所示的帮助器类：
 
 
- [ ![Notification.InboxStyle 通知的示例屏幕快照](jelly-bean-images/image4.png)](jelly-bean-images/image4.png)
+ [![Notification.InboxStyle 通知的示例屏幕快照](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
 它是可以将最多两个操作按钮添加底部的通知消息，通知使用的全角或更大的样式时。
 可以在以下屏幕截图中，操作按钮的可见底部的通知中看到举例说明：
 
- [ ![示例屏幕快照显示一条通知消息的下面的操作按钮](jelly-bean-images/image5.png)](jelly-bean-images/image5.png)
+ [![示例屏幕快照显示一条通知消息的下面的操作按钮](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 `Notification`类已收到允许开发人员指定一个通知的五个优先级级别的新常量。 可以对通知使用设置这些`Priority`属性。
 
- <a name="Permissions" />
 
 
 ### <a name="permissions"></a>权限
@@ -290,7 +272,6 @@ Android 4.1 允许应用程序更多灵活性和控件的显示通知。 应用�
 
 要注意的重要更改`READ_EXTERNAL_STORAGE`– 当前 android 自动授予此权限。 将来版本的 Android 将需要的应用程序请求之前的此权限授予该权限。
 
- <a name="Summary" />
 
 
 ## <a name="summary"></a>摘要

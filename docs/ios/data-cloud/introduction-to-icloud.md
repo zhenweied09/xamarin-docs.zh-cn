@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: 7e02c92f9c1aafeb97da4905c17898b02362c960
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -48,7 +48,7 @@ _Apple 引入在 iOS 5 中的 iCloud 了作为服务以允许应用程序在 App
 
 -   **创建新的应用程序 ID** -若要创建应用程序 ID，请按照中概述的步骤[设置存储技术部分的设备设置指南](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)，并且请务必检查**iCloud**为允许的服务：
 
- [ ![](introduction-to-icloud-images/icloud-sml.png "检查 iCloud 作为允许的服务")](introduction-to-icloud-images/icloud.png)
+ [![](introduction-to-icloud-images/icloud-sml.png "检查 iCloud 作为允许的服务")](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **创建新的预配配置文件**-若要创建预配配置文件，请按照中概述的步骤[设备设置指南](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile)。
 
@@ -83,7 +83,7 @@ _Apple 引入在 iOS 5 中的 iCloud 了作为服务以允许应用程序在 App
 
 
 
- [ ![](introduction-to-icloud-images/icloud-kv-arrows.png "设备之间的消息流")](introduction-to-icloud-images/icloud-kv-arrows.png)
+ [![](introduction-to-icloud-images/icloud-kv-arrows.png "设备之间的消息流")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### <a name="setting-and-retrieving-data"></a>设置和检索数据
 
@@ -151,13 +151,13 @@ iCloud 文档存储设计用于管理向应用程序 （和用户） 非常重�
 
 下图显示其所有如何相互配合。 每个设备已保存在本地存储区 (UbiquityContainer) 和操作系统的 iCloud 后台程序负责发送和接收数据在云中的数据。 所有文件访问权限 UbiquityContainer 必须都通过 FilePresenter/FileCoordinator 以防止并发访问。 `UIDocument`类实现为你的那些; 此示例演示如何使用 UIDocument。
 
- [ ![](introduction-to-icloud-images/icloud-overview.png "文档存储概述")](introduction-to-icloud-images/icloud-overview.png)
+ [![](introduction-to-icloud-images/icloud-overview.png "文档存储概述")](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 ICloudUIDoc 示例实现一个简单`UIDocument`子类，其中包含单个文本字段。 在呈现文本`UITextView`并且编辑由其他设备到 iCloud 会传播包含以红色显示通知消息。 示例代码不处理更高级的 iCloud 功能，如冲突解决方法。
 
 此屏幕截图显示了示例应用程序的后更改文本和按**UpdateChangeCount**文档将通过与其他设备的 iCloud 同步。
 
- [ ![](introduction-to-icloud-images/iclouduidoc.png "此屏幕快照显示后更改文本和按 UpdateChangeCount 的示例应用程序")](introduction-to-icloud-images/iclouduidoc.png)
+ [![](introduction-to-icloud-images/iclouduidoc.png "此屏幕快照显示后更改文本和按 UpdateChangeCount 的示例应用程序")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 有五个部分 iCloudUIDoc 示例：
 
@@ -403,15 +403,15 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 用户可以管理中的 iCloud 文档**文档**"无处不容器"通过设置; 你应用程序之外的目录他们可以查看文件列表和轻扫以删除。 应用程序代码应该能够处理这种情况，用户删除文档的位置。 不存储中的内部应用程序数据**文档**目录。
 
- [ ![](introduction-to-icloud-images/icloudstorage.png "管理 iCloud 文档工作流")](introduction-to-icloud-images/icloudstorage.png)
+ [![](introduction-to-icloud-images/icloudstorage.png "管理 iCloud 文档工作流")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 
 
 在尝试从其设备，以通知他们该应用程序与相关的 iCloud 文档的状态删除 iCloud 启用应用程序时，用户也会收到不同的警告。
 
- [ ![](introduction-to-icloud-images/icloud-delete1.png "当用户尝试从其设备中删除 iCloud 启用应用程序时的示例对话框")](introduction-to-icloud-images/icloud-delete1.png)
+ [![](introduction-to-icloud-images/icloud-delete1.png "当用户尝试从其设备中删除 iCloud 启用应用程序时的示例对话框")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [ ![](introduction-to-icloud-images/icloud-delete2.png "当用户尝试从其设备中删除 iCloud 启用应用程序时的示例对话框")](introduction-to-icloud-images/icloud-delete2.png)
+ [![](introduction-to-icloud-images/icloud-delete2.png "当用户尝试从其设备中删除 iCloud 启用应用程序时的示例对话框")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>iCloud 备份
 

@@ -1,20 +1,21 @@
 ---
-title: "tvOS 简介"
+title: "TvOS 简介"
 description: "本文介绍在构建使用 Xamarin tvOS 应用。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c40472f794be9a21045da4f4477d4104c3ddbdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 7246379fbe5918671de68cd4af10d1ce497e7c4e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="introduction-to-tvos"></a>tvOS 简介
+# <a name="introduction-to-tvos"></a>TvOS 简介
 
 ## <a name="introducing-tvos"></a>引入 tvOS
 
@@ -23,6 +24,10 @@ Apple 已发布的 Apple TV 硬件，Apple TV 4k，第五个运行 tvOS 操作�
 Apple TV 平台是打开开发人员，使他们能够创建丰富、 引人入胜应用并通过 Apple 电视内置应用商店中发布它们。
 
 有关 tvOS 的详细信息，请参阅[入门](~/ios/tvos/get-started/index.md)文档。
+
+> [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
+
+**使用 Xamarin，tvOS 通过[Xamarin 大学](https://university.xamarin.com/)**
 
 ## <a name="documentation"></a>文档
 

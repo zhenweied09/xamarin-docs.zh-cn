@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a5711b5ac8332ac518ba5b639f05de557229af6e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1491e6ec36a9ced9460e083769b2148386d1d518
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-and-mac"></a>iOS 和 Mac
 
@@ -56,7 +56,7 @@ Xamarin 让你通过绑定到你的应用使本机库。 本部分介绍：
 
 为了支持 32 和 64 位代码以透明方式从 C# 和 F #，我们引入了新的数据类型。   在此处了解有关它们的信息。
 
-##  <a name="building-32-and-64-bit-apps32-and-64md"></a>[生成 32 位和 64 位应用程序](32-and-64.md)
+##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[生成 32 位和 64 位应用程序](32-and-64/index.md)
 
 您需要知道要支持 32 和 64 位应用程序。
 

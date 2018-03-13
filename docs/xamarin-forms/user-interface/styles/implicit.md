@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 0600a4ca1f26fd034679619c1427821e9c7a12b8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b96b306c882eb30aaf8c81604afb9b6a547d715b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implicit-styles"></a>隐式样式
 
@@ -51,7 +51,7 @@ _隐式样式是指可供所有控件的同一 TargetType，而无需每个控�
 
 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)定义单个*隐式*样式应用于页的[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)实例。 `Style`用于在一个黄色背景上显示蓝色文本，同时，将其他外观选项。 `Style`添加到页面的[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)而无需指定`x:Key`属性。 因此，`Style`适用于所有`Entry`隐式实例，因为它们匹配[ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/)属性`Style`完全。 但是，`Style`不应用于`CustomEntry`实例，即子类化`Entry`。 这将导致以下屏幕截图中所示的外观：
 
-[![](implicit-images/implicit-styles.png "隐式样式示例")](implicit-images/implicit-styles-large.png "隐式样式示例")
+[![](implicit-images/implicit-styles.png "隐式样式示例")](implicit-images/implicit-styles-large.png#lightbox "隐式样式示例")
 
 此外，第四个[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)重写[ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/)和[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/)属性隐式样式应用到不同`Color`值。
 
@@ -82,7 +82,7 @@ _隐式样式是指可供所有控件的同一 TargetType，而无需每个控�
 
 有关创建应用程序中的样式信息[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，请参阅[全局样式](~/xamarin-forms/user-interface/styles/application.md)。
 
-## <a name="creating-an-implicit-style-in-c35"></a>在 c&#35; 中创建隐式样式
+## <a name="creating-an-implicit-style-in-c35"></a>在 C 中创建隐式样式&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 可以将实例添加到页面的[ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) C# 中通过创建新的集合[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，然后按添加`Style`实例到`ResourceDictionary`中, 所示下面的代码示例：
 

@@ -3,14 +3,15 @@ title: "使用 Xamarin.Forms 创建移动应用的章摘要"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b88d227b272c34dd1c4d22fc707edce4df6dd91f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2cf6033958848f0c1b16e78fbc3a3d18a6b4fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>使用 Xamarin.Forms 创建移动应用的章摘要
 
@@ -26,21 +27,21 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="contents"></a>内容
 
-[第 1 章。Xamarin.Forms 如何组合？](chapter01.md)
+[第 1 章。Xamarin.Forms 可以起到什么作用？](chapter01.md)
 
-[第 2 章。应用程序的剖析](chapter02.md)
+[第 2 章。应用剖析](chapter02.md)
 
-[第 3 章。更深入地成文本](chapter03.md)
+[第 3 章。深入到文本](chapter03.md)
 
 [第 4 章。滚动堆栈](chapter04.md)
 
 [第 5 章。处理大小](chapter05.md)
 
-[第 6 章。按钮单击事件](chapter06.md)
+[第 6 章。按钮单击](chapter06.md)
 
-[第 7 章。与代码的 XAML](chapter07.md)
+[第 7 章。XAML 与代码](chapter07.md)
 
-[第 8 章。代码和协调的 XAML](chapter08.md)
+[第 8 章。协调代码和 XAML](chapter08.md)
 
 [第 9 章。特定于平台的 API 调用](chapter09.md)
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/27/2018
 
 [第 12 章。样式](chapter12.md)
 
-[13 章。Bitmaps](chapter13.md)
+[13 章。位图](chapter13.md)
 
 [14 章。绝对布局](chapter14.md)
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/27/2018
 
 [章 20。异步和文件 I/O](chapter20.md)
 
-[章 21。Transforms](chapter21.md)
+[章 21。转换](chapter21.md)
 
 [章 22。动画](chapter22.md)
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 02/27/2018
 
 [章 27。自定义呈现器](chapter27.md)
 
-[章 28。位置和映射](chapter28.md)
+[章 28。位置和地图](chapter28.md)
 
 
 

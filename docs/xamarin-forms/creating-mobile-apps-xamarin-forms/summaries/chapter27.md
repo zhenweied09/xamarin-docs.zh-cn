@@ -3,14 +3,15 @@ title: "章 27 的摘要。 自定义呈现器"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>章 27 的摘要。 自定义呈现器
 
@@ -66,7 +67,7 @@ Windows 运行时[ `ViewRenderer<TElement, TNativeElement>` ](https://github.com
 
 所有`ViewRenderer`衍生产品包含`ExportRenderer`将相关联的程序集级别属性`HelloView`与特定的类`HelloViewRenderer`类。 这是 Xamarin.Forms 如何定位单个平台项目中的呈现器：
 
-[![三重的 Hello 视图的屏幕截图](images/ch27fg02-small.png "自定义呈现器")](images/ch27fg02-large.png "自定义呈现器")
+[![三重的 Hello 视图的屏幕截图](images/ch27fg02-small.png "自定义呈现器")](images/ch27fg02-large.png#lightbox "自定义呈现器")
 
 ## <a name="renderers-and-properties"></a>呈现器和属性
 
@@ -89,7 +90,7 @@ Windows 运行时[ `ViewRenderer<TElement, TNativeElement>` ](https://github.com
 
 [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo)类显示多个这样的`EllipseView`对象：
 
-[![椭圆演示的三个屏幕截图](images/ch27fg03-small.png "EllipseView 自定义呈现器")](images/ch27fg03-large.png "EllipseView 自定义呈现器")
+[![椭圆演示的三个屏幕截图](images/ch27fg03-small.png "EllipseView 自定义呈现器")](images/ch27fg03-large.png#lightbox "EllipseView 自定义呈现器")
 
 [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall)退回`EllipseView`关闭两边的屏幕。
 

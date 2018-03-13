@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 24d85d7be580f8db8621d91ebbb27c0b7881b4eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lollipop-features"></a>棒糖形功能
 
@@ -54,8 +54,6 @@ Android 5.0 （棒糖形） 引入了一种新的设计语言，*材料设计*�
 你可以继续使用[JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)如果你是专门为 API 级别 23 开发或更早版本。
 
 
-<a name="settingup" />
-
 ## <a name="setting-up-an-android-50-project"></a>设置 Android 5.0 项目
 
 若要创建 Android 5.0 项目时，必须安装最新工具和 SDK 包。 使用以下步骤来设置 Xamarin.Android 项目针对 Android 5.0:
@@ -66,11 +64,11 @@ Android 5.0 （棒糖形） 引入了一种新的设计语言，*材料设计*�
 
 3. 启动 Android SDK 管理器 (在适用于 Mac 的 Visual Studio，使用**工具&gt;打开 Android SDK 管理器&hellip;**) 并安装 Android SDK 工具 23.0.5 或更高版本：
 
-    [![选择在 Android SDK 管理器中的 Android SDK 工具](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png)
+    [![选择在 Android SDK 管理器中的 Android SDK 工具](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
 
    另外，请安装最新的 Android 5.0 SDK 包 (API 21 或更高版本):
 
-    [![安装 Android SDK 管理器中的 Android 5.0 SDK 包](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png)
+    [![安装 Android SDK 管理器中的 Android 5.0 SDK 包](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
    有关使用 Android SDK 管理器的详细信息，请参阅[SDK 管理器](http://developer.android.com/tools/help/sdk-manager.html)。
 
@@ -87,14 +85,9 @@ Android 5.0 （棒糖形） 引入了一种新的设计语言，*材料设计*�
 
 注意： 如果你要更新针对 Android L 预览的现有 Android 项目，则必须更新**目标框架**和**Android 版本**上面所述的值。
 
-
-<a name="changes" />
-
 ## <a name="important-changes"></a>重要的更改
 
 以前已发布的 Android 应用程序可能会受到 Android 5.0 中的更改。 具体而言，Android 5.0 使用新的运行时和显著更改的通知格式。
-
-<a name="runtime" />
 
 ### <a name="android-runtime"></a>Android 运行时
 
@@ -108,7 +101,6 @@ Android 5.0 使用默认运行时，而不是 Dalvik 作为新 Android 运行时
 
 现有应用程序应进行任何修改下艺术作品&ndash;除外利用技术特有之前的 Dalvik 运行的应用程序，这可能不工作下艺术作品。 有关这些更改的详细信息，请参阅[验证应用行为上 Android 运行时 （画）](http://developer.android.com/guide/practices/verifying-apps-art.html)。
 
-<a name="notifchanges" />
 
 ### <a name="notification-changes"></a>通知更改
 
@@ -136,29 +128,26 @@ Android 5.0 中，通知的发生了重大变化：
 
 在 Android 中创建通知的信息，请参阅[本地通知](~/android/app-fundamentals/notifications/local-notifications.md)。 [兼容性](~/android/app-fundamentals/notifications/local-notifications.md#compatibility)这篇文章的部分介绍如何创建通知来向下兼容与早期版本的 Android。
 
-<a name="materialtheme" />
 
 ## <a name="material-theme"></a>材料主题
 
 对 Android UI 的外观和感觉，新的 Android 5.0 材料主题提供了大规模更改。 可视元素现在使用边用图面，以粗体显示的图形、 版式，以及打印基于设计的亮色随身携带。 材料主题的示例以下屏幕截图所示：
 
-[![材料主题主页屏幕、 应用屏幕上，以及设置屏幕的屏幕快照](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png)
+[![材料主题主页屏幕、 应用屏幕上，以及设置屏幕的屏幕快照](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
 
 Android 5.0 那么当使用显示在左边的主屏幕。 Center 屏幕快照是应用列表中，第一个屏幕，在右侧的屏幕截图是**设置**屏幕。 Google[材料设计](https://material.io/guidelines/material-design/introduction.html)规范介绍新材料主题概念背后的基础设计规则。
 
 材料主题包括可以在应用中使用的三个内置风格：`Theme.Material`深色主题 （默认值）、`Theme.Material.Light`主题，和`Theme.Material.Light.DarkActionBar`主题： 
 
-[![屏幕快照的深色、 浅色，和 DarkActionBar 主题](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png)
+[![屏幕快照的深色、 浅色，和 DarkActionBar 主题](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
 有关 Xamarin.Android 应用程序中使用材料主题功能的详细信息，请参阅[材料主题](~/android/user-interface/material-theme.md)。
 
-<a name="animations" />
 
 ## <a name="animations"></a>动画
 
 Android 5.0 提供触摸反馈动画、 活动过渡动画和视图状态过渡动画来使应用程序接口使用更加直观。 此外，可以使用 Android 5.0 应用*显示效果*动画来隐藏或显示视图。 你可以使用*弯曲运动*呈现如何快速配置的设置或缓慢动画。
 
-<a name="touchanim" />
 
 ### <a name="touch-feedback-animations"></a>触摸反馈动画
 
@@ -170,7 +159,6 @@ Android 5.0 提供触摸反馈动画、 活动过渡动画和视图状态过渡�
 
 Touch Android 5.0 中的反馈动画的详细信息，请参阅[自定义 Touch 反馈](http://developer.android.com/training/material/animations.html#Touch)。
 
-<a name="activityanim" />
 
 ### <a name="activity-transition-animations"></a>活动过渡动画
 
@@ -184,7 +172,7 @@ Touch Android 5.0 中的反馈动画的详细信息，请参阅[自定义 Touch 
 
 例如，下面的屏幕截图序列阐释了共享的元素转换：
 
-[![框架中通过共享的元素的转换动画帧屏幕快照](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png)
+[![框架中通过共享的元素的转换动画帧屏幕快照](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
 
 共享的元素 （毛虫的照片） 是一个多个视图中的第一个活动;它放大成为当第一个活动过渡到第二个第二个活动中的唯一视图。
 
@@ -220,7 +208,6 @@ Touch Android 5.0 中的反馈动画的详细信息，请参阅[自定义 Touch 
 
 有关 Android 5.0 中的活动过渡动画有关的详细信息，请参阅[自定义活动转换](http://developer.android.com/training/material/animations.html#Transitions)。
 
-<a name="viewstate" />
 
 ### <a name="view-state-transition-animations"></a>视图状态过渡动画
 
@@ -232,23 +219,21 @@ Android 5.0 使动画的视图状态更改时运行。 你可以通过使用以�
 
 有关详细信息视图状态过渡动画 Android 5.0 中，请参阅[进行动画处理的视图状态更改](http://developer.android.com/training/material/animations.html#ViewState)。
 
-<a name="reveal" />
 
 ### <a name="reveal-effect"></a>显示效果
 
 *显示效果*是该更改半径，以显示或隐藏视图的一个剪辑的圆。 可以通过设置剪辑圆的初始和最终半径来控制此效果。 下面的屏幕截图序列阐释了屏幕的显示效果动画从中心：
 
-[![框架中通过帧的动画显示的屏幕快照](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png)
+[![框架中通过帧的动画显示的屏幕快照](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
 
 下一步序列说明发生从屏幕的左下角显示效果动画：
 
-[![框架中通过的剪辑动画帧屏幕快照](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png)
+[![框架中通过的剪辑动画帧屏幕快照](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
 
 显示可逆转动画;也就是说，剪辑圆圈可以收缩以隐藏视图而扩大以显示该视图。
 
 中的 Android 5.0 显示效果的详细信息，请参阅[使用显示效果](http://developer.android.com/training/material/animations.html#Reveal)。
 
-<a name="curvedmotion" />
 
 ### <a name="curved-motion"></a>曲线的运动
 
@@ -262,7 +247,6 @@ Android 5.0 使动画的视图状态更改时运行。 你可以通过使用以�
 
 你可以使用新`PathInterpolator`类，以指定如何进行运动内插。 `PathInterpolator` 是遍历根据指定的控制点和动画曲线的动画路径插值程序。 有关如何在 Android 5.0 中指定曲线的运动设置的详细信息，请参阅[使用曲线运动](http://developer.android.com/training/material/animations.html#CurvedMotion)。
 
-<a name="viewshadows" />
 
 ## <a name="view-shadows--elevation"></a>视图阴影和提升
 
@@ -270,13 +254,12 @@ Android 5.0 使动画的视图状态更改时运行。 你可以通过使用以�
 
 下面的示例演示一个空进行强制转换的阴影`TextView`控制当与其提升属性设置为 2dp、 4dp 和 6dp，分别：
 
-[![Progessively 更大的视图阴影的屏幕快照](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png)
+[![Progessively 更大的视图阴影的屏幕快照](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
 
 查看卷影设置可以是静态 （如上所示），或它们可在动画进行暂时露出视图的背景显示的视图。 你可以使用`ViewPropertyAnimator`类进行动画处理视图的提升。 视图的提升是其布局的总和`elevation`设置加上`translationZ`属性，可通过设置`ViewPropertyAnimator`方法调用。
 
 有关详细信息视图阴影 Android 5.0 中，请参阅[定义阴影和剪辑视图](http://developer.android.com/training/material/shadows-clipping.html)。
 
-<a name="colorfeatures" />
 
 ## <a name="color-features"></a>颜色功能
 
@@ -286,7 +269,6 @@ Android 5.0 提供用于管理应用程序中的颜色的两项新功能：
 
 -   *突出显示颜色提取*使得可以动态自定义应用的颜色主题，以便与显示的图像的调色板保持协调。
 
-<a name="tinting" />
 
 ### <a name="drawable-tinting"></a>可绘制、 颜色
 
@@ -302,7 +284,6 @@ Android 5.0 布局识别新`tint`可用于设置 drawables 的颜色，而无需
 
 有关详细信息 Android 5.0 中绘制、 颜色，请参阅[可绘制、 颜色](http://developer.android.com/training/material/drawables.html#DrawableTint)。
 
-<a name="colorextract" />
 
 ### <a name="prominent-color-extraction"></a>突出显示颜色提取
 
@@ -322,13 +303,12 @@ Android 5.0 布局识别新`tint`可用于设置 drawables 的颜色，而无需
 
 例如，在下面的屏幕截图，查看应用程序一张照片上显示的映像从提取突出显示颜色，以及使用这些颜色来调整应用程序的配色方案，以匹配图像：
 
-[![绿色、 粉红色，和蓝色主题颜色提取的屏幕快照](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png)
+[![绿色、 粉红色，和蓝色主题颜色提取的屏幕快照](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
 
 在上面的屏幕截图，操作栏设置为提取"活力光"提取"活力深色"到设置颜色和背景颜色。 在上述每个示例中，小型彩色平方和的行是包含在内，以说明从映像中提取的调色板颜色。
 
 有关 Android 5.0 中的颜色提取有关的详细信息，请参阅[提取映像中的突出显示颜色](http://developer.android.com/training/material/drawables.html#ColorExtract)。
 
-<a name="newuiwidgets" />
 
 ## <a name="new-ui-widgets"></a>新 UI 小组件
 
@@ -340,11 +320,10 @@ Android 5.0 引入了两个新的 UI 小组件：
 
 这两个小组件包括内置功能的支持材料主题;例如，`RecyclerView`动画用于添加和删除视图，和`CardView`使用查看阴影，以使显示浮在后台每个卡。 在下面的屏幕截图显示了这些新的小组件的示例：
 
-[![用 RecyclerView 生成的应用的屏幕快照](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![用 RecyclerView 生成的应用的屏幕快照](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 在左侧的屏幕截图是一种`RecyclerView`右侧为在电子邮件应用程序，并屏幕快照中使用上是一种`CardView`在旅行预订应用程序中使用。
 
-<a name="recyclerview" />
 
 ### <a name="recyclerview"></a>RecyclerView
 
@@ -356,27 +335,25 @@ Android 5.0 引入了两个新的 UI 小组件：
 
 以下屏幕截图演示`RecyclerView`包含 100 个项目 (每个项包含`ImageView`和`TextView`):
 
-[![滚动映像 RecyclerView 应用的屏幕快照](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png)
+[![滚动映像 RecyclerView 应用的屏幕快照](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
 
 `RecyclerView` 轻松地处理此大型数据集&ndash;滚动列表以结束从头列表在此示例中的应用程序就仅需几秒。 `RecyclerView` 此外支持动画;事实上，默认情况下启用添加和移除项的动画效果。 当将项添加到`RecyclerView`，它淡在这一序列的屏幕截图中所示：
 
-[![框架中通过帧的中照片项淡入淡出的屏幕截图](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png)
+[![框架中通过帧的中照片项淡入淡出的屏幕截图](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
 
 有关详细信息`RecyclerView`，请参阅[RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)。
 
-<a name="cardview" />
 
 ### <a name="cardview"></a>卡片视图-
 
 `CardView` 是一个简单的视图，可模拟具有圆角的浮点卡。 因为`CardView`具有内置视图阴影，它可以轻松地为你要添加到你的应用的 visual 深度。 以下屏幕截图显示三个面向文本的示例的`CardView`:
 
-[![RecyclerView 使用卡片视图-基于项的应用的示例屏幕快照](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png)
+[![RecyclerView 使用卡片视图-基于项的应用的示例屏幕快照](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 在上面的示例的卡的每个包含`TextView`; 通过设置背景色`cardBackgroundColor`属性。
 
 有关详细信息`CardView`，请参阅[卡片视图-](~/android/user-interface/controls/card-view.md)。
 
-<a name="enhanced" />
 
 ## <a name="enhanced-notifications"></a>增强的通知
 
@@ -389,13 +366,13 @@ Android 5.0 中的通知系统已显著更新具有新的可视化格式和新�
 在 Android 5.0，通知也可以显示在设备锁屏上。
 例如，下面是使用一条通知锁屏示例屏幕快照：
 
-[![在锁定屏幕上显示通知的屏幕截图](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png)
+[![在锁定屏幕上显示通知的屏幕截图](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
 
 用户可以双击锁屏解锁设备，并跳转到的应用程序产生该通知上的通知或轻扫以取消通知。 通知有一个新*可见性*设置确定可以在锁屏上显示多少内容。 用户可以选择是否允许在锁屏通知中显示的敏感内容。
 
 Android 5.0 引入了新的高优先级通知演示文稿格式称为*提醒*。 提醒通知几秒钟滑从屏幕顶部，然后返回到在屏幕顶部的通知明暗度撤回。 提醒通知使系统 UI，以将呈现给用户的重要信息放而不会中断当前运行的活动。 下面的示例阐释了显示在应用程序之上的简单提醒通知：
 
-[![Heads-up 通知的示例](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png)
+[![Heads-up 通知的示例](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
 提醒通知通常用于以下事件：
 
@@ -414,9 +391,8 @@ Android 5.0 引入了新的高优先级通知演示文稿格式称为*提醒*。
 
 有关创建和启动通知的最新的 Android 5.0 功能的详细信息，请参阅[本地通知](~/android/app-fundamentals/notifications/local-notifications.md)。
 
-<a name="newapis" />
 
-## <a name="new-apis"></a>新的 Api
+## <a name="new-apis"></a>新 API
 
 除了前面所述的新外观和功能，Android 5.0 添加新扩展功能的现有多媒体、 存储和无线/连接功能的 Api。 此外，Android 5.0 包含新的 Api，可为新的作业计划程序功能提供支持。
 

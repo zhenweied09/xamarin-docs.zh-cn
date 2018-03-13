@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 593e17096d92d9a9764545149991817fa616e2fc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-alerts"></a>使用警报
 
@@ -21,7 +21,7 @@ _本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示�
 
 如果你需要获取 tvOS 用户注意或询问执行破坏性操作 （如删除的文件） 的权限，你可以提供警报消息使用`UIAlertViewController`:
 
-[ ![](alerts-images/alert01.png "示例 UIAlertViewController")](alerts-images/alert01.png)
+[![](alerts-images/alert01.png "示例 UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
 如果添加到显示一条消息后的，你可以添加按钮和文本字段对警报以允许用户响应操作并提供反馈。
 
@@ -31,7 +31,7 @@ _本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示�
 
 如上面所述，使用警报以获取用户的关注并通知他们你的应用程序或请求反馈的状态。 警报必须存在一个标题，它们可根据需要一条消息和一个或多个按钮或文本字段。
 
-[ ![](alerts-images/alert04.png "示例警报")](alerts-images/alert04.png)
+[![](alerts-images/alert04.png "示例警报")](alerts-images/alert04.png#lightbox)
 
 Apple 具有使用警报的以下建议：
 
@@ -118,11 +118,11 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 
 除了将操作 （按钮） 添加到警报，你可以将文本字段添加到警报后，若要允许用户填写信息，例如用户 Id 和密码：
 
-[ ![](alerts-images/alert02.png "警报中的文本字段")](alerts-images/alert02.png)
+[![](alerts-images/alert02.png "警报中的文本字段")](alerts-images/alert02.png#lightbox)
 
 如果用户选择文本字段，将显示标准 tvOS 键盘，从而使它们可以输入字段的值：
 
-[ ![](alerts-images/alert03.png "输入文本")](alerts-images/alert03.png)
+[![](alerts-images/alert03.png "输入文本")](alerts-images/alert03.png#lightbox)
 
 下面的代码显示确定 / 取消警报与单个文本字段用于输入一个值：
 

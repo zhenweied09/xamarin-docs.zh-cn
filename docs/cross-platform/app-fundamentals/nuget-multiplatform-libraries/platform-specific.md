@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 951de7c134e6882d621b015456d5d40a7cf2b8d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6512387738217259067e7b9ae8076f73b4fbeb07
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>NuGet 为创建新的特定于平台的类库项目
 
@@ -27,11 +27,11 @@ NuGet 可以包含特定于 iOS 和 Android 的代码，以及公用的.NET 代�
 
 2. 选择**多平台库**从**多平台 > 库**部分：
 
-  [ ![](platform-specific-images/mulitplatform-library-sml.png "配置的单个基本代码的多平台库")](platform-specific-images/multiplatform-library.png)
+  [![](platform-specific-images/mulitplatform-library-sml.png "配置的单个基本代码的多平台库")](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. 输入**名称**和**说明**，然后选择**特定于平台**:
 
-  [ ![](platform-specific-images/specific-configure-sml.png "配置适用于 iOS 和 Android 的特定于平台的库")](platform-specific-images/specific-configure.png)
+  [![](platform-specific-images/specific-configure-sml.png "配置适用于 iOS 和 Android 的特定于平台的库")](platform-specific-images/specific-configure.png#lightbox)
 
 4. 完成向导。 以下项目添加到解决方案中：
 
@@ -42,7 +42,7 @@ NuGet 可以包含特定于 iOS 和 Android 的代码，以及公用的.NET 代�
 
 5. 右键单击 NuGet 项目并选择**选项**，然后打开**NuGet 包 > 元数据**部分，然后输入[必需的元数据](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)（为以及任何可选元数据）：
 
-  [ ![](platform-specific-images/specific-metadata-sml.png "输入必需的元数据")](platform-specific-images/specific-metadata.png)
+  [![](platform-specific-images/specific-metadata-sml.png "输入必需的元数据")](platform-specific-images/specific-metadata.png#lightbox)
 
 6. 另外，请在**项目选项**窗口中，打开**引用程序集**部分并选择共享的库将支持通过"诱饵 and 交换机"的 PCL 配置文件：
 

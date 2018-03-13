@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: f3fa2502f55ad7ebf59d015923ff4008103b08bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin 实时播放器安装程序
 
@@ -88,7 +88,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 2. 转到**Visual Studio > 首选项...**和选择**项目 > Xamarin 实时播放器 （预览版）**选项卡。
 3. 刻度**启用实时的 Xamarin Player**:
 
-  [ ![启用 Xamarin 实时播放器中复选框选项窗口](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png)
+  [![启用 Xamarin 实时播放器中复选框选项窗口](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
 2. 创建或打开一个 Xamarin 项目 (或[示例](~/tools/live-player/samples.md))。
 3. 选择**实时播放器**设备列表中。

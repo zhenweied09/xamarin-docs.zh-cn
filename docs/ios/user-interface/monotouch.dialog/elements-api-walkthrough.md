@@ -7,11 +7,11 @@ ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e20015d1872cbaea21dd8b8e5431981e463c33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>演练-创建使用元素 API 的应用程序
 
@@ -19,7 +19,7 @@ _本文基于 MonoTouch 对话框文章简介中提供的信息。它提供的�
 
 在本演练中，我们将使用 MTD 元素 API 创建主 / 从样式的应用程序会显示任务列表。 当用户选择<span class="ui"> + </span>按钮在导航栏中，新行将添加到任务的表。 选择该行将导航到，我们便可以更新任务说明和到期日期，如下所示的详细信息屏幕：
 
- [ ![](elements-api-walkthrough-images/01-task-list-app.png "选择该行将导航到，我们便可以更新任务说明和到期日期的详细信息屏幕")](elements-api-walkthrough-images/01-task-list-app.png)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "选择该行将导航到，我们便可以更新任务说明和到期日期的详细信息屏幕")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
  <a name="Elements_API_Walkthrough" />
 
@@ -72,7 +72,7 @@ public override bool FinishedLaunching (UIApplication app,
 
 上面的代码中创建的实例`RootElement`和将其传递到`DialogViewController`。 `DialogViewController`始终具有`RootElement`在其层次结构的顶部。 在此示例中，`RootElement`创建与字符串"待办事项列表，"它可作为导航控制器的导航栏中的标题。 此时，运行应用程序将显示如下所示的屏幕如下：
 
- [ ![](elements-api-walkthrough-images/02-to-do-list-screen-.png "运行应用程序将显示在此处显示的屏幕")](elements-api-walkthrough-images/02-to-do-list-screen-.png)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "运行应用程序将显示在此处显示的屏幕")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 让我们了解如何使用 MonoTouch.Dialog 的层次结构的`Sections`和`Elements`添加多个屏幕。
 
@@ -148,11 +148,11 @@ public class Task
 
 任务详细信息屏幕自身组成两个部分;以下各节包含单个元素。 第一个元素从创建`EntryElement`为任务提供一个可编辑的行`Description`属性。 选择元素时，会看到进行文本编辑的键盘，如下所示：
 
- [ ![](elements-api-walkthrough-images/03-create-task.png "如所示，选择元素时，显示进行文本编辑的键盘")](elements-api-walkthrough-images/03-create-task.png)
+ [![](elements-api-walkthrough-images/03-create-task.png "如所示，选择元素时，显示进行文本编辑的键盘")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 第二个部分包含`DateElement`，可让我们管理任务的`DueDate`属性。 选择日期将自动加载日期选取器，如所示：
 
- [ ![](elements-api-walkthrough-images/04-date-picker.png "选择日期将自动加载作为日期选取器")](elements-api-walkthrough-images/04-date-picker.png)
+ [![](elements-api-walkthrough-images/04-date-picker.png "选择日期将自动加载作为日期选取器")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 在这两`EntryElement`和`DateElement`情况下 （或者为 MonoTouch.Dialog 中的任意数据输入元素），将自动保留为值的任何更改。 我们可以通过编辑日期，然后导航根屏幕和各种任务详细信息，其中保留的详细信息屏幕中的值之间的来回对此进行演示。
 

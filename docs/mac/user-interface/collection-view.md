@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: d8fa54f23dfea063fa25f6e26e2df2c2ed82101e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>集合视图
 
@@ -22,7 +22,7 @@ _本指南介绍了使用 Xamarin.Mac 应用中的集合视图。它涵盖创建
 
 A`NSCollectionView`显示一个网格的组织使用的子视图`NSCollectionViewLayout`。 在网格中的每个子视图由`NSCollectionViewItem`后者管理中的视图的内容加载`.xib`文件。
 
-[ ![运行示例应用程序](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![运行示例应用程序](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 本文介绍如何使用 Xamarin.Mac 应用中的集合视图的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和本文通篇使用的技术。
 
@@ -821,4 +821,4 @@ public override void ViewDidLoad()
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [数据绑定和键值编码](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

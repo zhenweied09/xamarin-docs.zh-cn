@@ -7,18 +7,17 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 9acb1ad6ab1425edb98b938e8c03edc3704f50ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="splash-screen"></a>初始屏幕
 
 _Android 应用程序需要向一些时间才能启动，尤其是应用程序第一次启动时在设备上。初始屏幕可能会显示开始向上向用户或以指示品牌进度。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -32,10 +31,8 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 
 3.  将新活动添加到的应用程序将用作由在上一步中创建的主题定义初始屏幕。
 
-[![示例 Xamarin 徽标初始屏幕跟应用程序屏幕](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![示例 Xamarin 徽标初始屏幕跟应用程序屏幕](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>惠?
 
@@ -43,7 +40,6 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 
 在中可能找到的所有代码和在本指南中的 XML[初始屏幕](https://developer.xamarin.com/samples/monodroid/SplashScreen)用于本指南的示例项目。
 
-<a name="implement" />
 
 ## <a name="implementing-a-splash-screen"></a>实现的初始屏幕
 
@@ -51,7 +47,6 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 
 作为活动显示经过品牌打造实现初始屏幕可绘制，执行任何初始化，并启动任何任务。 一旦应用程序具有引导，初始屏幕活动启动主活动，并从应用程序后堆栈删除本身。
 
-<a name="drawable" />
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>创建可绘制的初始屏幕
 
@@ -79,7 +74,6 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 
 创建初始屏幕可绘制后下, 一步是创建初始屏幕的主题。
 
-<a name="theme" />
 
 ### <a name="implementing-a-theme"></a>实现一个主题
 
@@ -103,7 +97,6 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 
 **MyTheme.Splash**是非常 spartan&ndash;声明窗口背景，显式中的标题栏删除从窗口中，并声明它是全屏幕。 如果你想要创建模拟你的应用程序的 UI 之前活动放大的第一个布局, 的初始屏幕，则可以使用`windowContentOverlay`而非`windowBackground`样式定义中。 在这种情况下，还必须修改**splash_screen.xml**可绘制，使其显示你的 UI 的仿真。
 
-<a name="activity" />
 
 ### <a name="create-a-splash-activity"></a>创建初始活动
 
@@ -161,7 +154,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

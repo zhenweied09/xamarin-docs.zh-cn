@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7ee2af392a00e045b1992d189a15d7a0ee04b02f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-id"></a>Touch ID
 
@@ -29,7 +29,7 @@ Keychain 是大型数据库提供安全存储密码、 密钥、 证书和说明
 Keychain 是一个专用的数据库，其中每一行称为_Keychain 项_。 每个项由 keychain 属性描述，并由组成加密值。 若要有效地使用密钥链的允许，它非常适合较小的项，或_机密_。
 密钥链中的每一项受用户密码和唯一的设备密码。 Keychain 项应受到保护，即使用户不使用其设备。 这实现的 iOS 中通过仅允许在设备处于解锁状态时可用的项-锁定设备时它们变得不可用。 它们也可以存储在加密的备份。 密钥链的主要功能之一是强制实施访问控制;应用程序有权访问密钥链，其部分，并已将阻止所有其他应用程序。 下图演示应用程序如何与密钥链交互：
 
-[![](touchid-images/image1.png "此图描述了应用程序如何与密钥链交互")](touchid-images/image1.png)
+[![](touchid-images/image1.png "此图描述了应用程序如何与密钥链交互")](touchid-images/image1.png#lightbox)
 
 ### <a name="secure-enclave"></a>安全 Enclave
 
@@ -49,7 +49,7 @@ Keychain 是一个专用的数据库，其中每一行称为_Keychain 项_。 �
 
 访问控制列表是在 iOS 8 描述有关必须发生什么情况以允许进行特定操作的信息中的新密钥链项属性。 这可能是形式显示警报对话框或请求密码。 ACL 允许你设置可访问性和 keychain 项的身份验证。 下图显示了这一新特性如何与密钥链项的其余部分：
 
-[![](touchid-images/image2.png "此图显示了这一新特性如何与密钥链项的其余部分")](touchid-images/image2.png)
+[![](touchid-images/image2.png "此图显示了这一新特性如何与密钥链项的其余部分")](touchid-images/image2.png#lightbox)
 
 截至 iOS 8，现在有了新的用户是否存在策略， `SecAccessControl`，其中强制执行安全 enclave iPhone 5 条和更高版本。 我们可以看到下，只需如何设备配置可以影响策略评估表中：
 
@@ -94,7 +94,7 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 虽然这两项功能提供本地身份验证，它们不提供用于应用程序或用户向远程服务器进行身份验证的机制。
 本地身份验证提供的新标准用户界面，用于身份验证。 对于 Touch ID，这是与如下所示的两个按钮的警报视图。 到取消，另一个用于身份验证 – 密码的回退方法的一个按钮。 此外，还有必须设置的自定义消息。 它是用于向用户 Touch ID 身份验证为何需要解释的好办法。
 
-[![](touchid-images/image12.png "Touch ID 身份验证警报")](touchid-images/image12.png)
+[![](touchid-images/image12.png "Touch ID 身份验证警报")](touchid-images/image12.png#lightbox)
 
 ### <a name="with-keychain-services"></a>使用密钥链服务
 
@@ -116,7 +116,7 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 
 若要执行此操作应用程序将调用内启动安全 Enclave 内部的操作的本地身份验证策略评估。 你可以利用这无需直接查询/访问安全 Enclave 提供到你的应用的身份验证。
 
-[![](touchid-images/image13a.png "使用本地身份验证不使用密钥链服务")](touchid-images/image13a.png)
+[![](touchid-images/image13a.png "使用本地身份验证不使用密钥链服务")](touchid-images/image13a.png#lightbox)
 
 使用本地身份验证在你的应用程序提供一种简单的实现用户验证，例如，若要解锁的个人的目的只是为了眼中设备所有者，例如银行应用程序，或以便帮助家长控制该功能应用程序。 你还可以使用它作为一种方法来扩展已存在的身份验证 – 用户喜欢它们信息是安全的但它们还希望能够进行选择。
 
@@ -150,16 +150,16 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 2.  双击`MainStoryboard.Storyboard`以在 iOS 设计器中打开示例。 此示例中，我们想要将新的屏幕添加到我们的应用程序，将控制身份验证。 这将在当前前处于`MasterViewController`。
 3.  将一个新**视图控制器**从**工具箱**到**设计图面**。 设置为**根视图控制器**通过**按 Ctrl 并拖动**从**导航控制器**:
 
-    [![](touchid-images/image4.png "设置根视图控制器")](touchid-images/image4.png)
+    [![](touchid-images/image4.png "设置根视图控制器")](touchid-images/image4.png#lightbox)
 4.  命名新视图控制器`AuthenticationViewController`。
 5.  接下来，将按钮拖动并将其置于`AuthenticationViewController`。 我们称之为`AuthenticateButton`，并为其提供文本`Add a Chore`。
 6.  创建事件`AuthenticateButton`调用`AuthenticateMe`。
 7.  创建手动从 segue`AuthenticationViewController`通过单击底部的黑色栏和**按 Ctrl 并拖动**在菜单栏上到`MasterViewController`并选择**推送**(或**显示**如果使用大小类）：
 
-    [![](touchid-images/image5.png "将其从栏拖到 MasterViewController 和选择推送或显示")](touchid-images/image6.png)
+    [![](touchid-images/image5.png "将其从栏拖到 MasterViewController 和选择推送或显示")](touchid-images/image6.png#lightbox)
 8.  单击新创建的 segue 并为其提供标识符`AuthenticationSegue`，如下所示：
 
-    [![](touchid-images/image7.png "将 segue 标识符设置为 AuthenticationSegue")](touchid-images/image7.png)
+    [![](touchid-images/image7.png "将 segue 标识符设置为 AuthenticationSegue")](touchid-images/image7.png#lightbox)
 9.  将下列代码添加到 `AuthenticationViewController`：
 
     ```
@@ -191,19 +191,19 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 
 这是你需要实现使用本地身份验证的 Touch ID 身份验证的所有代码。 下图中突出显示的行显示了使用本地身份验证：
 
-[![](touchid-images/image8.png "突出显示的行显示了使用本地身份验证")](touchid-images/image8.png)
+[![](touchid-images/image8.png "突出显示的行显示了使用本地身份验证")](touchid-images/image8.png#lightbox)
 
 首先，我们需要建立设备是否可以接受输入，通过使用 Touch ID 的`CanEvaluatePolicy`并传递在策略中`DeviceOwnerAuthenticationWithBiometrics`。 如果这是 true，则我们可以使用显示 Touch ID UI `EvaluatePolicy`。 有三个部分的信息，我们必须将传递到`EvaluatePolicy`– 策略本身，解释为什么身份验证必需的一个字符串和答复处理程序。 答复处理程序向应用程序告知其应在成功，或不成功，身份验证的情况下执行的操作。 我们来看更详细地答复处理程序：
 
-[![](touchid-images/image9.png "答复处理程序")](touchid-images/image9.png)
+[![](touchid-images/image9.png "答复处理程序")](touchid-images/image9.png#lightbox)
 
 答复处理程序将指定类型的`LAContextReplyHandler`，它将采用的参数成功 –`bool`值，和`NSError`调用`error`。 如果成功，这是我们将实际执行地方它是我们想要进行身份验证 – 的任何这种情况下显示屏幕可让我们将添加新混乱。 请记住的本地身份验证需要注意的问题之一是，它必须是在前台上运行，因此请务必使用`InvokeOnMainThread`:
 
-[![](touchid-images/image10.png "InvokeOnMainThread 用于本地身份验证")](touchid-images/image10.png)
+[![](touchid-images/image10.png "InvokeOnMainThread 用于本地身份验证")](touchid-images/image10.png#lightbox)
 
 最后，身份验证成功后，我们希望转换到`MasterViewController`。 `PerformSegue`方法可以用于执行此操作：
 
-[![](touchid-images/image11.png "调用转换到 MasterViewController PerformSegue 方法")](touchid-images/image11.png)
+[![](touchid-images/image11.png "调用转换到 MasterViewController PerformSegue 方法")](touchid-images/image11.png#lightbox)
 
 ## <a name="summary"></a>摘要
 在本指南中我们讨论在 Keychain 和此在 iOS 中的工作原理。 我们还探讨了 keychain ACL，并在 iOS 中的对此更改。 接下来，我们所花费的本地身份验证框架，它是 iOS 8 中的新增功能，在我们的应用程序中实现 Touch ID 身份验证，然后看一看。

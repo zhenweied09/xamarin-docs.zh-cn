@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3d5b4b0d3e6e9388906efa3bff2db0ea38fa8605
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-controllers"></a>使用导航控制器
 
@@ -20,7 +20,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 
 导航栏可以添加到要显示的标题和可选的导航栏按钮的视图的顶部。 它们通常用于当用户导航从主页上，如表视图、 集合或菜单与子视图显示选定项的详细信息。
 
-[ ![](navigation-bars-images/navbar01.png "示例导航栏")](navigation-bars-images/navbar01.png)
+[![](navigation-bars-images/navbar01.png "示例导航栏")](navigation-bars-images/navbar01.png#lightbox)
 
 添加到的标题 （即会显示在中心），在导航栏可以包含一个或多个导航栏按钮 (`UIBarButtonItem`) 在左侧和右侧栏。
 
@@ -42,16 +42,16 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**导航栏**从**工具箱**并将其放在屏幕顶部的视图： 
 
-    [ ![](navigation-bars-images/navbar02.png "导航栏")](navigation-bars-images/navbar02.png)
+    [![](navigation-bars-images/navbar02.png "导航栏")](navigation-bars-images/navbar02.png#lightbox)
 1. 双击**导航栏**选择到**导航项**。 在**小组件**选项卡**属性填充**，你可以设置**标题**: 
 
-    [ ![](navigation-bars-images/navbar03.png "设置标题")](navigation-bars-images/navbar03.png)
+    [![](navigation-bars-images/navbar03.png "设置标题")](navigation-bars-images/navbar03.png#lightbox)
 1. 接下来，您可以在其中添加一个或多个**栏按钮项**到两端的栏： 
 
-    [ ![](navigation-bars-images/navbar04.png "一个工具栏按钮项")](navigation-bars-images/navbar04.png)
+    [![](navigation-bars-images/navbar04.png "一个工具栏按钮项")](navigation-bars-images/navbar04.png#lightbox)
 1. 最后，网络向上**栏按钮项**于中的操作**事件**选项卡**属性资源管理器**: 
 
-    [ ![](navigation-bars-images/navbar05.png "条形按钮项操作")](navigation-bars-images/navbar05.png)
+    [![](navigation-bars-images/navbar05.png "条形按钮项操作")](navigation-bars-images/navbar05.png#lightbox)
 1. 保存更改。
 
 
@@ -61,16 +61,16 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**导航栏**从**工具箱**并将其放在屏幕顶部的视图： 
 
-    [ ![](navigation-bars-images/navbar02-vs.png "导航栏")](navigation-bars-images/navbar02-vs.png)
+    [![](navigation-bars-images/navbar02-vs.png "导航栏")](navigation-bars-images/navbar02-vs.png#lightbox)
 1. 双击**导航栏**选择到**导航项**。 在**小组件**选项卡**属性资源管理器**，你可以设置**标题**: 
 
-    [ ![](navigation-bars-images/navbar03-vs.png "设置标题")](navigation-bars-images/navbar03-vs.png)
+    [![](navigation-bars-images/navbar03-vs.png "设置标题")](navigation-bars-images/navbar03-vs.png#lightbox)
 1. 接下来，您可以在其中添加一个或多个**栏按钮项**到两端的栏： 
 
-    [ ![](navigation-bars-images/navbar04-vs.png "条形按钮项")](navigation-bars-images/navbar04-vs.png)
+    [![](navigation-bars-images/navbar04-vs.png "条形按钮项")](navigation-bars-images/navbar04-vs.png#lightbox)
 1. 最后，网络向上**栏按钮项**于中的操作**事件**选项卡**属性资源管理器**: 
 
-    [ ![](navigation-bars-images/navbar05-vs.png "条形按钮项操作")](navigation-bars-images/navbar05-vs.png)
+    [![](navigation-bars-images/navbar05-vs.png "条形按钮项操作")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. 保存更改。
 
 

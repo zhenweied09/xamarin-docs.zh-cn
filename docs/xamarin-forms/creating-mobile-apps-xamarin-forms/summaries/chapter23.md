@@ -3,14 +3,15 @@ title: "章 23 的摘要。 触发器和行为"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 72158cac683e46a37d2cbd537cdfd72bea78a336
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>章 23 的摘要。 触发器和行为
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **GenderColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors)示例要求[ **SchoolOfFineArt** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt)库和集的名称的学生为蓝色颜色或粉红色基于`Sex`属性：
 
-[![三重的性别颜色的屏幕截图](images/ch23fg04-small.png "性别颜色")](images/ch23fg04-large.png "性别颜色")
+[![三重的性别颜色的屏幕截图](images/ch23fg04-small.png "性别颜色")](images/ch23fg04-large.png#lightbox "性别颜色")
 
 [ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler)示例集`IsEnabled`属性`Entry`到`False`如果`Length`属性`Text`属性`Entry`等于 0。 请注意，`Text`属性初始化为空字符串; 默认情况下它是`null`，和`DataTrigger`不会正常工作。
 
@@ -170,7 +171,7 @@ A [ `RotateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/
 
 [ **RadioLabels** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels)程序使用其单选按钮的文本字符串。 [ **RadioStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle)示例使用`Style`外观 checked 和 unchecked 按钮之间的差异。 [ **RadioImages** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages)示例为其单选按钮使用装箱的映像：
 
-[![三重的单选映像的屏幕截图](images/ch23fg17-small.png "单选按钮图像")](images/ch23fg17-large.png "单选按钮图像")
+[![三重的单选映像的屏幕截图](images/ch23fg17-small.png "单选按钮图像")](images/ch23fg17-large.png#lightbox "单选按钮图像")
 
 [ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios)示例位于圆圈内部绘制带有圆点的传统显示单选按钮。
 

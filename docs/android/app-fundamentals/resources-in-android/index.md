@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: 2a6013d9bab26f90a6d8afa101298b494f2f90ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6546870d85f7b77e60dff0cb9e6075f982c9cb8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resources"></a>Android 资源
 
 _本文介绍 Android 中的资源 Xamarin.Android 的概念，并将文档如何使用它们。它介绍如何在 Android 应用程序中使用资源以支持应用程序本地化和多个设备，包括不同的屏幕大小和密度。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 

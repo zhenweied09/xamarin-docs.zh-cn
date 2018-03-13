@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: fc44b2a6080832d11c610661244172ad4a6a0716
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-xaml"></a>在 XAML 中的本机视图
 
@@ -51,13 +51,13 @@ _从 iOS、 Android 和通用 Windows 平台的本机视图从 Xamarin.Forms XAM
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         x:Class="NativeViews.NativeViewDemo">
     <StackLayout Margin="20">
         <ios:UILabel Text="Hello World" TextColor="{x:Static ios:UIColor.Red}" View.HorizontalOptions="Start" />
-        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static formsandroid:Forms.Context}" />
+        <androidWidget:TextView Text="Hello World" x:Arguments="{x:Static androidLocal:MainActivity.Instance}" />
         <win:TextBlock Text="Hello World" />
     </StackLayout>
 </ContentPage>
@@ -72,7 +72,7 @@ _从 iOS、 Android 和通用 Windows 平台的本机视图从 Xamarin.Forms XAM
 > [!NOTE]
 > 请注意样式不能用于本机视图，因为样式仅可以由支持的属性为目标`BindableProperty`对象。
 
-Android 小组件构造函数通常需要 Android`Context`对象作为自变量，，这是可通过`Xamarin.Forms.Platform.Android.Forms.Context`对象。 因此，当在 XAML 中，创建一个 Android 构件`Context`通常必须将对象传递给小组件的构造函数使用`x:Arguments`特性与`x:Static`标记扩展。 有关详细信息，请参阅[将自变量传递到本机视图](#passing_arguments)。
+Android 小组件构造函数通常需要 Android`Context`对象，如自变量，，这可通过中的静态属性`MainActivity`类。 因此，当在 XAML 中，创建一个 Android 构件`Context`通常必须将对象传递给小组件的构造函数使用`x:Arguments`特性与`x:Static`标记扩展。 有关详细信息，请参阅[将自变量传递到本机视图](#passing_arguments)。
 
 > [!NOTE]
 > 请注意该命名具有的本机视图`x:Name`不能在可移植类库 (PCL) 项目或共享资产项目 (SAP) 中。 执行此操作将生成的本机类型，这将导致编译错误的变量。 但是，本机视图可以包装在`ContentView`实例，并在代码隐藏文件中，检索，前提是正在使用 SAP。 有关详细信息，请参阅[从代码中引用本机视图](#native_view_code)。
@@ -90,7 +90,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:win="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeSwitch"
@@ -101,7 +101,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
         <ios:UISwitch On="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=ValueChanged}"
             OnTintColor="{x:Static ios:UIColor.Red}"
             ThumbTintColor="{x:Static ios:UIColor.Blue}" />
-        <androidWidget:Switch x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:Switch x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             Checked="{Binding Path=IsSwitchOn, Mode=TwoWay, UpdateSourceEventName=CheckedChange}"
             Text="Enable Entry?" />
         <win:ToggleSwitch Header="Enable Entry?"
@@ -135,7 +135,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:androidGraphics="clr-namespace:Android.Graphics;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winMedia="clr-namespace:Windows.UI.Xaml.Media;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:winText="clr-namespace:Windows.UI.Text;assembly=Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -151,7 +151,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
                 </ios:UIFont>
             </ios:UILabel.Font>
         </ios:UILabel>
-        <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                     Text="Simple Native Color Picker"
                     TextSize="24"
                     View.HorizontalOptions="Center">
@@ -187,7 +187,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
 [ `FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily)构造函数用于设置[ `TextBlock.FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily)到新的属性`FontFamily`通用 Windows 平台 (UWP)。 `FontFamily`的子级的方法自变量指定名称`x:Arguments`属性。
 
 > [!NOTE]
-> **请注意**： 参数必须与所需的构造函数或工厂方法的类型相匹配。
+> 参数必须与所需的构造函数或工厂方法的类型相匹配。
 
 以下屏幕截图显示指定工厂方法和构造函数自变量，在不同的本机视图上设置的字体的结果：
 
@@ -211,7 +211,7 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:androidWidget="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
         xmlns:local="clr-namespace:NativeViewInsideContentView"
@@ -219,20 +219,19 @@ Android 小组件构造函数通常需要 Android`Context`对象作为自变量�
     <StackLayout Margin="20">
         <ContentView x:Name="contentViewTextParent" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
             <ios:UILabel Text="Text in a UILabel" TextColor="{x:Static ios:UIColor.Red}" />
-            <androidWidget:TextView x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:TextView x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Text in a TextView" />
             <winControls:TextBlock Text="Text in a TextBlock" />
         </ContentView>
         <ContentView x:Name="contentViewButtonParent" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
             <ios:UIButton TouchUpInside="OnButtonTap" View.HorizontalOptions="Center" View.VerticalOptions="Center" />
-            <androidWidget:Button x:Arguments="{x:Static formsAndroid:Forms.Context}"
+            <androidWidget:Button x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
                 Text="Scale and Rotate Text"
                 Click="OnButtonTap" />
             <winControls:Button Content="Scale and Rotate Text" />
         </ContentView>
     </StackLayout>
 </ContentPage>
-
 ```
 
 在上面的示例中，每个平台的本机视图作为的子级的[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)控件，与`x:Name`用于检索属性值`ContentView`的代码隐藏文件中：
@@ -297,7 +296,7 @@ IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，
         xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
         xmlns:iosLocal="clr-namespace:SubclassedNativeControls.iOS;assembly=SubclassedNativeControls.iOS;targetPlatform=iOS"
         xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
-        xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+        xmlns:androidLocal="clr-namespace:SimpleColorPicker.Droid;assembly=SimpleColorPicker.Droid;targetPlatform=Android"
         xmlns:androidLocal="clr-namespace:SubclassedNativeControls.Droid;assembly=SubclassedNativeControls.Droid;targetPlatform=Android"
         xmlns:winControls="clr-namespace:Windows.UI.Xaml.Controls;assembly=Windows, Version=255.255.255.255,
             Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime;targetPlatform=Windows"
@@ -311,7 +310,7 @@ IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，
         </StackLayout>
         <iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
             SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />
-        <androidLocal:MySpinner x:Arguments="{x:Static formsAndroid:Forms.Context}"
+        <androidLocal:MySpinner x:Arguments="{x:Static androidLocal:MainActivity.Instance}"
             ItemsSource="{Binding Fruits}"
             SelectedObject="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=ItemSelected}" />
         <winControls:ComboBox ItemsSource="{Binding Fruits}"

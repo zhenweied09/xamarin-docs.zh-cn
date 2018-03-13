@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: adb1042b8f44d3f414e2161e20b7eb3dc0e940a2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c4f8d70625fd8ee0e07832f8bdb3b7e502b5b38f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="carousel-page"></a>传送页
 
@@ -36,7 +36,7 @@ _Xamarin.Forms CarouselPage 是内容的一个页，用户可以将从左到右�
 
 <!--
 > [!NOTE]
-> **Note**: The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
+> The [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
 -->
 
 ## <a name="creating-a-carouselpage"></a>创建 CarouselPage
@@ -49,7 +49,7 @@ _Xamarin.Forms CarouselPage 是内容的一个页，用户可以将从左到右�
 这两种方法，`CarouselPage`将然后显示每个页面反过来将移到下一页上显示的轻扫交互。 此导航体验将觉得自然和为 Windows Phone 用户所熟悉。
 
 > [!NOTE]
-> **请注意**: A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)仅可以使用填充[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例，或`ContentPage`衍生产品。
+> A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)仅可以使用填充[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例，或`ContentPage`衍生产品。
 
 <a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
@@ -142,7 +142,7 @@ public class MainPageCS : CarouselPage
 每个[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)只是显示[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)为具有特定颜色和一个[ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)该颜色。
 
 > [!NOTE]
-> **请注意**: [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`CarouselPage`包含太多的子元素。
+> [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`CarouselPage`包含太多的子元素。
 
 如果[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)嵌入到[ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/)页[ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)、 [ `MasterDetailPage.IsGestureEnabled` ](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/)属性应设置为`false`以防止之间的笔势冲突`CarouselPage`和`MasterDetailPage`。
 
@@ -239,7 +239,7 @@ public class MainPageCS : CarouselPage
 每个[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)只是显示[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)为具有特定颜色和一个[ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)该颜色。
 
 > [!NOTE]
-> **请注意**: [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`CarouselPage`包含太多的子元素。
+> [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`CarouselPage`包含太多的子元素。
 
 如果[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)嵌入到[ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/)页[ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)、 [ `MasterDetailPage.IsGestureEnabled` ](https://developer.xamarin.com/api/field/Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty/)属性应设置为`false`以防止之间的笔势冲突`CarouselPage`和`MasterDetailPage`。
 

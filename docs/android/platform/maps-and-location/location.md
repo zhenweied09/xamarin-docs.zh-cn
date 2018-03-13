@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>位置服务
 
@@ -54,7 +54,7 @@ Android 提供对各种位置技术，如单元格立式位置、 Wi-fi、 和 G
 
 若要设置权限，请展开**属性**文件夹中的**解决方案 Pad**双击**AndroidManifest.xml**。 将列出的权限下**所需的权限**:
 
-[![Android 清单所需的权限设置的屏幕截图](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Android 清单所需的权限设置的屏幕截图](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 设置这些权限任一告诉 Android 应用程序需要从用户的权限才能访问位置提供程序。 设备的运行 API 级别 22 (Android 5.1) 或更低时将要求用户每次安装应用程序授予这些权限。 在运行 API 设备上级别 23 (Android 6.0) 或更高版本，应用程序应执行运行时权限检查前发出位置提供程序的请求。 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  如果用户已禁用所有位置提供程序，`GetBestProvider`将返回`null`。 若要查看此代码在真实设备上的工作方式，请务必启用 GPS、 Wi-fi、 和下的移动电话网络**Google 设置 > 位置 > 模式**此屏幕截图中所示：
 
-[![在 Android 手机上的设置位置模式屏幕](location-images/location-02.png)](location-images/location-02.png)
+[![在 Android 手机上的设置位置模式屏幕](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 下面的屏幕截图演示了如何位置应用程序正在运行使用`GetBestProvider`:
 
-[![GetBestProvider 应用显示、 纬度和提供程序](location-images/location-03.png)](location-images/location-03.png)
+[![GetBestProvider 应用显示、 纬度和提供程序](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 请记住，`GetBestProvider`不会动态更改提供程序。 然而，它将活动生命周期中一次确定最佳的提供程序。 如果提供程序状态发生更改之后已设置，应用程序将需要附加代码`ILocationListener`方法&ndash; `OnProviderEnabled`， `OnProviderDisabled`，和`OnStatusChanged`&ndash;来处理所有与相关的可能性提供程序开关。
 

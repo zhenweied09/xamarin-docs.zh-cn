@@ -4,14 +4,15 @@ description: "从各种源加载位图并显示它们。"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 9045fb2f54407fe8c9071efc5570296bb102f72e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bitmap-basics"></a>位图基础知识
 
@@ -204,7 +205,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 位图拉伸到矩形，这正是 monkey 水平拉伸这些屏幕快照中的尺寸：
 
-[![](bitmaps-images/basicbitmaps-small.png "三重基本位图页的屏幕截图")](bitmaps-images/basicbitmaps-large.png "三个基本位图页的屏幕快照")
+[![](bitmaps-images/basicbitmaps-small.png "三重基本位图页的屏幕截图")](bitmaps-images/basicbitmaps-large.png#lightbox "三个基本位图页的屏幕快照")
 
 第三个图像 （&) #x 2014;如果你运行程序，并从你自己的图片库和 #x 2014; 加载照片上只能查看其此外显示在一个矩形，但矩形的位置和大小调整以保持该位图纵横比。 此计算是稍有更为复杂，因为它需要计算的缩放系数基于位图和目标矩形的大小和使在该区域的矩形内居中：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: a49c442fcce31fb6b853359ddfafc9a43d0a2114
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eaebd8cbae996e9a5792d0a4898fafb72bdded47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>使用 Xamarin.Forms 中 SkiaSharp
 
@@ -22,10 +22,9 @@ SkiaSharp 是二维图形系统 for.NET 和 C# 由 Google 产品中广泛使用�
 
 本指南假定你熟悉 Xamarin.Forms 编程。
 
-## <a name="webinar"></a>网络研讨会
+> [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-[![](images/skiasharpwebinarscreen.png "Xamarin.Forms 网络研讨会的 SkiaSharp")](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)  
-[观看网络研讨会"SkiaSharp 为 Xamarin.Forms"](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
+**Xamarin.Forms 的网络研讨会： SkiaSharp**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp 初步操作
 

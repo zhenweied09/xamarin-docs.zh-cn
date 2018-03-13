@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3a7d89d9b0f383d365b18364e5d902ee0642f395
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c28ddc09b07066de67f5c974cf5c2128726c6932
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>将与 Azure 移动应用程序集成 Azure Active Directory B2C
 
@@ -21,7 +21,7 @@ _Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的�
 ![](~/media/shared/preview.png "此 API 已当前预发行版")
 
 > [!NOTE]
-> **请注意**: [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client)仍为预览版，但适合在生产环境中使用。 但是，那里可能重大更改对 API、 内部缓存格式和库中，这可能会影响你的应用程序的其他机制。
+> [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client)仍为预览版，但适合在生产环境中使用。 但是，那里可能重大更改对 API、 内部缓存格式和库中，这可能会影响你的应用程序的其他机制。
 
 ## <a name="overview"></a>概述
 
@@ -72,7 +72,7 @@ Azure Active Directory B2C 可以用于为 Azure 移动应用管理身份验证�
 
 下面的屏幕截图演示了此配置：
 
-[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/client-flow-config.png "Azure Active Directory B2C Configuration")
+[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/client-flow-config.png#lightbox "Azure Active Directory B2C Configuration")
 
 在 Azure Active Directory B2C 以便答复 URL 设置为相同的自定义 URL 方案，也可配置租户中使用的策略跟`://auth/`。 下面的屏幕截图演示了此配置：
 
@@ -158,7 +158,7 @@ public async Task<bool> LogoutAsync()
 
 下面的屏幕截图演示了此配置：
 
-[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/server-flow-config.png "Azure Active Directory B2C Configuration")
+[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Azure Active Directory B2C Configuration")](azure-ad-b2c-mobile-app-images/server-flow-config.png#lightbox "Azure Active Directory B2C Configuration")
 
 在 Azure Active Directory B2C 租户也可配置，使答复 URL 设置到的 Azure 移动应用程序中，地址中使用的策略跟`/.auth/login/aad/callback`。 下面的屏幕截图演示了此配置：
 

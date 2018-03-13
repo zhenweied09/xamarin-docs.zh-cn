@@ -2,16 +2,16 @@
 title: "实现视频播放器"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e818bc3fa9793f093c10ac2617c5a822d08213d4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a889be5ee31f667117d2c36859e667980f0e6610
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="implementing-a-video-player"></a>实现视频播放器
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 视频播放器需要*传输控件*、 它们用于播放和暂停视频中，按钮和定位栏，显示了通过视频的进度，并允许用户快速跳到不同的位置。 `VideoPlayer` 可以使用传输控件和定位栏提供的平台 （如下所示），也可以提供自定义传输控件和定位栏。 此处是在 iOS、 Android 和通用 Windows 平台下运行的程序：
 
-[![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png "播放 Web 视频")
+[![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png#lightbox "播放 Web 视频")
 
 当然，你可以打开手机上，以进行较大的视图。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 43a1a5ee6a8bd9d53f6fd44be935ae7573db6812
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1fbc12288527c053a24041aa6c49cc1a4abdde55
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="explicit-styles"></a>显式样式
 
@@ -64,7 +64,7 @@ _显式样式是指通过设置其样式属性有选择地应用于这些控件�
 
 [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)定义三个*显式*样式应用于页的[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例。 每个`Style`用于显示文本以不同的颜色，同时，将字体大小和水平和垂直布局选项。 每个`Style`应用于不同`Label`通过设置其[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性使用`StaticResource`标记扩展。 这将导致以下屏幕截图中所示的外观：
 
-[![](explicit-images/explicit-styles.png "显式样式示例")](explicit-images/explicit-styles-large.png "显式样式示例")
+[![](explicit-images/explicit-styles.png "显式样式示例")](explicit-images/explicit-styles-large.png#lightbox "显式样式示例")
 
 此外，最终[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)具有[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)应用于它，但还将重写[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)属性设置为不同`Color`值。
 
@@ -95,7 +95,7 @@ _显式样式是指通过设置其样式属性有选择地应用于这些控件�
 
 有关创建应用程序中的样式信息[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，请参阅[全局样式](~/xamarin-forms/user-interface/styles/application.md)。
 
-## <a name="creating-an-explicit-style-in-c35"></a>在 c&#35; 中创建显式样式
+## <a name="creating-an-explicit-style-in-c35"></a>在 C 中创建显式样式&#35;
 
 [`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 可以将实例添加到页面的[ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) C# 中通过创建新的集合[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，然后按添加`Style`实例到`ResourceDictionary`中, 所示下面的代码示例：
 

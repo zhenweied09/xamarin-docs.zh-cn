@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: dddd1ad4ae70b97f17ba71a7e96b553759e35695
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5fcb41f4f60adc8ca5be761c2b9a7449387a89d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="registering-applications-to-run-in-the-background"></a>注册应用程序在后台运行
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/27/2018
 
 应用程序可以通过设置注册**需要后台模式**中应用程序的属性*Info.plist*。 应用程序可以在多个类别，因为它需要中注册：
 
- [ ![](registering-applications-to-run-in-background-images/bgmodes.png "设置后台模式")](registering-applications-to-run-in-background-images/bgmodes.png)
+ [![](registering-applications-to-run-in-background-images/bgmodes.png "设置后台模式")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 注册用于后台位置更新的应用程序的分步指南，请参阅[后台位置演练](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)。
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/27/2018
 
 另一个属性，可以在设置*Info.plist*是*应用程序并非运行在后台*，或`UIApplicationExitsOnSuspend`属性：
 
- [ ![](registering-applications-to-run-in-background-images/plist.png "禁用后台运行")](registering-applications-to-run-in-background-images/plist.png)
+ [![](registering-applications-to-run-in-background-images/plist.png "禁用后台运行")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 这样将后台应用程序刷新设置设置为 off 在 iOS 7 + 中，但只能在开发人员端中，更改完全相同的效果，并可用 iOS 4 及更高版本。 应用程序将在输入后台后立即挂起，并且将不能执行任何处理。
 

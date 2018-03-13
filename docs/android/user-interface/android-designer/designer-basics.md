@@ -7,18 +7,17 @@ ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: b2ed48ae9df7e950525fdc0cb97181ebe5a44dfb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="designer-basics"></a>设计器的基础知识
 
 _本主题介绍设计器功能，说明如何启动设计器、 描述设计图面上，并详细介绍如何使用属性窗格中编辑小组件属性。_
 
-<a name="Launching_the_Designer" />
 
 ## <a name="launching-the-designer"></a>启动设计器
 
@@ -26,11 +25,11 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Visual Studio 中的设计器屏幕](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png)
+[![Visual Studio 中的设计器屏幕](designer-basics-images/vs/01-open-designer-sml.png)](designer-basics-images/vs/01-open-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![适用于 Mac 的 Visual Studio 中的设计器屏幕](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png)
+[![适用于 Mac 的 Visual Studio 中的设计器屏幕](designer-basics-images/xs/01-open-designer-sml.png)](designer-basics-images/xs/01-open-designer.png#lightbox)
 
 -----
 
@@ -39,20 +38,19 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 同样，通过右键单击添加新的布局**布局**文件夹中的**解决方案资源管理器**并选择**添加 > 新建项 … > Android 布局**:
 
-[![添加新项对话框](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png)
+[![添加新项对话框](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 同样，通过右键单击添加新的布局**布局**文件夹中的**解决方案 Pad**并选择**添加 > 新文件 > Android > 布局**:
 
-[![添加新文件对话框](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png)
+[![添加新文件对话框](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 -----
 
 这将创建一个新的.axml 文件并将其加载到设计图面。
 
 
-<a name="Designer_Features" />
 
 ## <a name="designer-features"></a>设计器的功能
 
@@ -60,11 +58,11 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![设计器窗格的图示](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png)
+[![设计器窗格的图示](designer-basics-images/vs/03-designer-features-sml.png)](designer-basics-images/vs/03-designer-features.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![设计器窗格的图示](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png)
+[![设计器窗格的图示](designer-basics-images/xs/03-designer-features-sml.png)](designer-basics-images/xs/03-designer-features.png#lightbox)
 
 -----
 
@@ -97,7 +95,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 -----
 
 
-<a name="Toolbar" />
 
 ## <a name="toolbar"></a>Toolbar
 
@@ -105,11 +102,11 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![关系图的设计器工具栏](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png)
+[![关系图的设计器工具栏](designer-basics-images/vs/04-toolbar-sml.png)](designer-basics-images/vs/04-toolbar.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![关系图的设计器工具栏](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png)
+[![关系图的设计器工具栏](designer-basics-images/xs/04-toolbar-sml.png)](designer-basics-images/xs/04-toolbar.png#lightbox)
 
 -----
 
@@ -143,7 +140,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 [材料设计功能](~/android/user-interface/android-designer/material-design-features.md)提供的全面概述**主题编辑器**和**材料设计网格**。
 
 
-<a name="Design_Surface" />
 
 ## <a name="design-surface"></a>设计图面
 
@@ -151,17 +147,16 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![在设计图面上的插入行示例](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png)
+[![在设计图面上的插入行示例](designer-basics-images/vs/05-insertion-points-sml.png)](designer-basics-images/vs/05-insertion-points.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![在设计图面上的插入行示例](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png)
+[![在设计图面上的插入行示例](designer-basics-images/xs/05-insertion-points-sml.png)](designer-basics-images/xs/05-insertion-points.png#lightbox)
 
 -----
 
 此外，可以复制小组件： 你可以使用复制和粘贴复制的小组件中，也可以拖动和删除现有的小组件时按<kbd>Ctrl</kbd>密钥。
 
-<a name="Context_Menu_Commands" />
 
 ### <a name="context-menu-commands"></a>上下文菜单命令
 
@@ -169,7 +164,7 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![示例上下文菜单右键单击设计图面时](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png)
+[![示例上下文菜单右键单击设计图面时](designer-basics-images/vs/06-context-menu-sml.png)](designer-basics-images/vs/06-context-menu.png#lightbox)
 
 在此示例中，右键单击`TextView`打开上下文菜单，提供多个选项：
 
@@ -179,7 +174,7 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![示例上下文菜单右键单击设计图面时](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png)
+[![示例上下文菜单右键单击设计图面时](designer-basics-images/xs/06-context-menu-sml.png)](designer-basics-images/xs/06-context-menu.png#lightbox)
 
 在此示例中，右键单击`TextView`打开上下文菜单，提供多个选项：
 
@@ -198,7 +193,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 -   **删除**，**复制**，和**剪切**&ndash;操作适用于右键单击`TextView`。
 
 
-<a name="Zoom_Controls" />
 
 ### <a name="zoom-controls"></a>缩放控件
 
@@ -206,11 +200,11 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![关系图的设计图面缩放控件](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png)
+[![关系图的设计图面缩放控件](designer-basics-images/vs/07-zoom-controls-sml.png)](designer-basics-images/vs/07-zoom-controls.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![关系图的设计图面缩放控件](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png)
+[![关系图的设计图面缩放控件](designer-basics-images/xs/07-zoom-controls-sml.png)](designer-basics-images/xs/07-zoom-controls.png#lightbox)
 
 -----
 
@@ -228,7 +222,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 请注意选的缩放设置不会影响在运行时应用程序的用户界面。
 
-<a name="property_pad" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -238,11 +231,10 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 设计器支持通过小组件属性的编辑**属性填充**。 根据该小组件将在设计器图面上选择的属性填充更改中列出的属性。 当`Button`选择在前面的示例，该属性`Button`显示小组件：
 
-[![属性填充的屏幕截图](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png)
+[![属性填充的屏幕截图](designer-basics-images/xs/08-property-pad-sml.png)](designer-basics-images/xs/08-property-pad.png#lightbox)
 
 -----
 
-<a name="Property_Pad_Sections" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -272,7 +264,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 -----
 
 
-<a name="Default_Values" />
 
 ### <a name="default-values"></a>默认值
 
@@ -287,7 +278,6 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 -----
 
-<a name="Referencing_resources" />
 
 ### <a name="referencing-resources"></a>引用的资源
 
@@ -299,13 +289,13 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 例如，下面的屏幕截图显示可用的资源时单击的文本字段右侧的省略号`Button`中的小组件**属性**窗口：
 
-[![示例资源具有两个资源列出的屏幕快照](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png)
+[![示例资源具有两个资源列出的屏幕快照](designer-basics-images/vs/09-resources-sml.png)](designer-basics-images/vs/09-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 例如，下面的屏幕截图显示可用的资源时单击的文本字段右侧的省略号`Button`中的小组件**属性填充**:
 
-[![示例资源具有两个资源列出的屏幕快照](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png)
+[![示例资源具有两个资源列出的屏幕快照](designer-basics-images/xs/09-resources-sml.png)](designer-basics-images/xs/09-resources.png#lightbox)
 
 -----
 
@@ -313,16 +303,15 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![列出了 ImageView 的图标资源的资源选择器](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png)
+[![列出了 ImageView 的图标资源的资源选择器](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![列出了 ImageView 的图标资源的资源选择器](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png)
+[![列出了 ImageView 的图标资源的资源选择器](designer-basics-images/xs/10-src-resource-sml.png)](designer-basics-images/xs/10-src-resource.png#lightbox)
 
 -----
 
 
-<a name="Boolean_Property_References" />
 
 ### <a name="boolean-property-references"></a>布尔值属性引用
 
@@ -336,25 +325,21 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 *布尔*属性通常显示为处于属性填充的复选框。 当`Boolean`属性支持资源引用、 在属性旁边出现一个小的复选框。 选中的复选框意味着`true`和空框意味着`false`。 如还直接输入值`true`或`false`。 鼠标悬停输入将显示一个小文本字段图标。 如果你想要手动输入此值，可以单击它。
 
-[![设置布尔属性的示例](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png)
+[![设置布尔属性的示例](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
 
-<a name="Grouped_Properties" />
 
 ## <a name="grouped-properties"></a>分组的属性
 
 一些小组件具有组合在一起的多值属性 (如`Padding`，例如)。 中列出了这些属性值**属性填充**单一、 可扩展的行中。 其中一些属性可以进行编辑直接在分组的行中，如`Padding`属性如下所示：
 
-[![Padding 属性的示例设置](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png)
+[![Padding 属性的示例设置](designer-basics-images/xs/13-padding-property-sml.png)](designer-basics-images/xs/13-padding-property.png#lightbox)
 
 -----
 
-<a name="Editing_Properties_Inline" />
 
 ## <a name="editing-properties-inline"></a>编辑属性内联
 
 Android 设计器支持直接编辑的设计图面上的某些属性 （以便您无需搜索属性列表中的这些属性）。 可以直接编辑的属性包括文本、 边距和大小。
-
-<a name="Text" />
 
 ### <a name="text"></a>Text
 
@@ -366,7 +351,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![你好字符串的文本资源](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png)
+[![你好字符串的文本资源](designer-basics-images/xs/14-text-resource-sml.png)](designer-basics-images/xs/14-text-resource.png#lightbox)
 
 -----
 
@@ -378,7 +363,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![Shift + Enter 以自动为新的资源链接文本](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png)
+[![Shift + Enter 以自动为新的资源链接文本](designer-basics-images/xs/15-shift-enter-resource-sml.png)](designer-basics-images/xs/15-shift-enter-resource.png#lightbox)
 
 -----
 
@@ -386,7 +371,6 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 当你键入新的文本字符串中时，你可以按<kbd>Shift</kbd> +
 <kbd>Enter</kbd>将输入的文本自动链接到新的资源。
 
-<a name="Margin" />
 
 ### <a name="margin"></a>边距
 
@@ -400,7 +384,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![在设计器中处理显示边距的屏幕截图](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png)
+[![在设计器中处理显示边距的屏幕截图](designer-basics-images/xs/16-margin-handles-sml.png)](designer-basics-images/xs/16-margin-handles.png#lightbox)
 
 -----
 
@@ -412,12 +396,11 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![标记按钮周围的空间的虚线的示例](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png)
+[![标记按钮周围的空间的虚线的示例](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
 -----
 
 
-<a name="Size" />
 
 ### <a name="size"></a>大小
 
@@ -429,7 +412,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![换行内容和重设大小句柄](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png)
+[![换行内容和重设大小句柄](designer-basics-images/xs/18-wrap-content-sml.png)](designer-basics-images/xs/18-wrap-content.png#lightbox)
 
 -----
 
@@ -443,7 +426,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![匹配父句柄](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png)
+[![匹配父句柄](designer-basics-images/xs/19-match-parent-sml.png)](designer-basics-images/xs/19-match-parent.png#lightbox)
 
 -----
 
@@ -457,7 +440,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![循环的调整大小图柄](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png)
+[![循环的调整大小图柄](designer-basics-images/xs/20-resize-dp-sml.png)](designer-basics-images/xs/20-resize-dp.png#lightbox)
 
 -----
 
@@ -469,12 +452,11 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![没有重设大小句柄](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png)
+[![没有重设大小句柄](designer-basics-images/xs/21-no-resize-handles-sml.png)](designer-basics-images/xs/20-no-resize-handles.png#lightbox)
 
 -----
 
 
-<a name="Outline_View" />
 
 ## <a name="document-outline"></a>文档大纲
 
@@ -487,7 +469,7 @@ Android 设计器支持直接编辑的设计图面上的某些属性 （以便�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![文档大纲](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png)
+[![文档大纲](designer-basics-images/xs/22-outline-view-sml.png)](designer-basics-images/xs/22-outline-view.png#lightbox)
 
 -----
 

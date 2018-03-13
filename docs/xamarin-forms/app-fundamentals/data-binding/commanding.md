@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0bc039385a6b2077c3b5fa5114b35b586a14a150
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-command-interface"></a>命令界面
 
@@ -279,7 +279,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 输入有效的期限之前，在左侧的 iOS 屏幕显示的布局。 Android 和 UWP 屏幕显示**提交**启用已设置了年龄后的按钮：
 
-[![人的项](commanding-images/personentry-small.png "人的项")](commanding-images/personentry-large.png "人的项")
+[![人的项](commanding-images/personentry-small.png "人的项")](commanding-images/personentry-large.png#lightbox "人的项")
 
 程序不具有任何功能可用于编辑现有条目，并不会保存条目的页面离开时。
 
@@ -531,7 +531,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 下面是在操作中的程序：
 
-[![十进制键盘](commanding-images/decimalkeyboard-small.png "十进制键盘")](commanding-images/decimalkeyboard-large.png "十进制键盘")
+[![十进制键盘](commanding-images/decimalkeyboard-small.png "十进制键盘")](commanding-images/decimalkeyboard-large.png#lightbox "十进制键盘")
 
 请注意，所有三个屏幕截图中的十进制点按钮被禁用，因为输入的数已包含小数点。 
 

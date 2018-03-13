@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 670c990fb4f2e4d2a01ada83ea98e8e589b5c473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-icons-and-images"></a>处理图标和图像
 
@@ -67,13 +67,13 @@ Apple 使设计您的应用程序的启动映像的以下建议：
 
 1. 在**解决方案资源管理器**，双击`Assets.xcassets`以将其打开以进行编辑： 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets 文件")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets 文件")](icons-images-images/asset01.png#lightbox)
 2. 在**资产编辑器**，单击`LaunchImages`资产： 
 
-    [ ![](icons-images-images/asset02.png "LaunchImages 资产")](icons-images-images/asset02.png)
+    [![](icons-images-images/asset02.png "LaunchImages 资产")](icons-images-images/asset02.png#lightbox)
 3. 单击**1 x Apple TV**条目和选择启动映像，或有选择地从文件系统拖动的新的映像： 
 
-    [ ![](icons-images-images/asset03.png "选择启动映像")](icons-images-images/asset03.png)
+    [![](icons-images-images/asset03.png "选择启动映像")](icons-images-images/asset03.png#lightbox)
 4. 保存更改。
 
 <a name="Layered-Images" />
@@ -84,7 +84,7 @@ Apple 使设计您的应用程序的启动映像的以下建议：
 
 分层的映像包含从两个 （2） 到五 （5） 单独的合并以形成完成映像的层。 除了背景层中，每个图层使用透明度以及其 Z 顺序来创建这样的深度的错觉。 当用户交互使用分层映像时，较高的 Z 排序层缩放和平重叠的要创建此效果。
 
-[ ![](icons-images-images/layered01.png "分层的映像 Z 排序关系图")](icons-images-images/layered01.png)
+[![](icons-images-images/layered01.png "分层的映像 Z 排序关系图")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > **注意：**分层映像所需的应用程序的图标和都是可选的其他[可获得焦点的项](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection)（如顶部架映像）。 但是，Apple 提供的建议分层映像用于在你的应用程序可能会获得焦点的任何映像。
@@ -109,7 +109,7 @@ Apple 使设计分层映像以下建议：
 
 务必请记住包括_安全区域_到每个层组成分层图像的边框。 因为可以缩放和剪裁视差效果期间单个层，将可以关闭裁剪图层的内容，如果它是层的边缘离得太近：
 
-[ ![](icons-images-images/layered02.png "35 像素宽的边框")](icons-images-images/layered02.png)
+[![](icons-images-images/layered02.png "35 像素宽的边框")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -128,7 +128,7 @@ tvOS 配合分层映像，采用以下格式：
 
 创建 Apple[视差预览程序](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg)预览并创建所需的应用程序图标和可选可获得焦点的项的分层映像。 预览程序显示窗体已完成的分层映像的每一层：
 
-[ ![](icons-images-images/layered03.png "视差预览程序")](icons-images-images/layered03.png)
+[![](icons-images-images/layered03.png "视差预览程序")](icons-images-images/layered03.png#lightbox)
 
 时预览分层的映像，你可以使用鼠标来旋转图像和预览视差效果。 使用 **+**  （加） 和 **-**  （减号） 按钮来添加和删除层。
 
@@ -142,7 +142,7 @@ tvOS 配合分层映像，采用以下格式：
 
 Xamarin.tvOS 应用程序将需要不只一个应用程序图标的 Apple 电视主页屏幕，但还应用商店的图标。 应用程序图标是你的第一个更改以使极佳印象在潜在用户上，应传达一眼的应用程序的用途。
 
-[ ![](icons-images-images/icon01.png "应用程序图标")](icons-images-images/icon01.png)
+[![](icons-images-images/icon01.png "应用程序图标")](icons-images-images/icon01.png#lightbox)
 
 每个应用必须提供一个较小和其应用程序图标的大型版本。 安装应用时，将在 Apple 电视主页屏幕上使用的小图标。 应用商店使用的大型的版本。 大的应用程序图标应模拟的小图标版本的外观和感觉。
 
@@ -202,16 +202,16 @@ Apple 提供用于创建应用程序图标以下建议：
 
 1. 在**解决方案资源管理器**，双击`Assets.xcassets`以将其打开以进行编辑： 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets fileg")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
 2. 在**资产编辑器**，展开`App Icon & Top Shelf Image`资产： 
 
-    [ ![](icons-images-images/asset04.png "展开顶部架图像资产")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "展开顶部架图像资产")](icons-images-images/asset04.png#lightbox)
 3. 接下来，展开`App Icon - Small`资产： 
 
-    [ ![](icons-images-images/asset05.png "展开应用图标-小资产")](icons-images-images/asset05.png)
+    [![](icons-images-images/asset05.png "展开应用图标-小资产")](icons-images-images/asset05.png#lightbox)
 4. 然后展开`Back`资产，然后单击`Contents`条目： 
 
-    [ ![](icons-images-images/asset06.png "然后展开后资产")](icons-images-images/asset06.png)
+    [![](icons-images-images/asset06.png "然后展开后资产")](icons-images-images/asset06.png#lightbox)
 5. 单击**1 x Apple TV 条目**并选择图像文件。
 6. 重复上述步骤为`Front`和`Middle`资产。
 7. 然后重复相同的步骤来定义`App Icon - Large`资产。
@@ -223,7 +223,7 @@ Apple 提供用于创建应用程序图标以下建议：
 
 如果用户具有 Apple 电视主页屏幕上的顶部行上放置 Xamarin.tvOS 应用程序，将显示较大的顶部架图像时由用户选择您的应用程序。 此映像应突出显示你的应用程序的功能，或者提供其内容的直接链接。
 
-[ ![](icons-images-images/topshelf01.png "上架图像示例")](icons-images-images/topshelf01.png)
+[![](icons-images-images/topshelf01.png "上架图像示例")](icons-images-images/topshelf01.png#lightbox)
 
 也可以作为单个静态提供顶部架映像`.png`或`.lsr`文件 (请参阅[创建分层映像](#Creating-Layered-Images)) 或它可以动态创建在运行时作为单个行的焦点的项 (请参阅[动态顶层架子内容](#Dynamic-Top-Shelf-Content)下面)。
 
@@ -253,13 +253,13 @@ Apple 提供用于创建你顶部架映像以下建议：
 
 1. 在**解决方案资源管理器**，双击`Assets.xcassets`以将其打开以进行编辑： 
 
-    [ ![](icons-images-images/asset01.png "Assets.xcassets 文件")](icons-images-images/asset01.png)
+    [![](icons-images-images/asset01.png "Assets.xcassets 文件")](icons-images-images/asset01.png#lightbox)
 2. 在**资产编辑器**，展开`App Icon & Top Shelf Image`资产： 
 
-    [ ![](icons-images-images/asset04.png "展开顶部架图像资产")](icons-images-images/asset04.png)
+    [![](icons-images-images/asset04.png "展开顶部架图像资产")](icons-images-images/asset04.png#lightbox)
 3. 单击`Top Shelf Image`资产： 
 
-    [ ![](icons-images-images/asset07.png "顶部架图像资产")](icons-images-images/asset07.png)
+    [![](icons-images-images/asset07.png "顶部架图像资产")](icons-images-images/asset07.png#lightbox)
 5. 单击**1 x Apple TV 条目**并选择图像文件。
 6. 保存更改。
 
@@ -423,10 +423,10 @@ Apple 提供滚动内嵌标题的以下建议：
 
 1. 在**解决方案资源管理器**，双击`Info.plist`以将其打开以进行编辑： 
 
-    [ ![](icons-images-images/info01.png "Info.plist 文件")](icons-images-images/info01.png)
+    [![](icons-images-images/info01.png "Info.plist 文件")](icons-images-images/info01.png#lightbox)
 2. 在**Info.Plist 编辑器**，选择的资产目录 (在上面配置[设置应用程序图标](#Setting-the-App-Icons)部分) 为**应用图标**: 
 
-    [ ![](icons-images-images/info02.png "Info.Plist 编辑器")](icons-images-images/info02.png)
+    [![](icons-images-images/info02.png "Info.Plist 编辑器")](icons-images-images/info02.png#lightbox)
 3. 接下来，选择资产目录 (在上面配置[设置启动映像](#Setting-the-Launch-Image)部分) 为**启动映像**。
 4. 保存更改。
 

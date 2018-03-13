@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 85413cf223e794ad2fda093601f9221d0261af39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>与 Amazon SimpleDB 服务的用户进行身份验证
 
@@ -61,7 +61,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 `SelectAsync`方法返回包含的项和关联的查询表达式匹配的属性集合的响应。 查询表达式可确保将检索用户的电子邮件地址匹配的项。 有关查询表达式的详细信息，请参阅[使用选择 to Create Amazon SimpleDB Queries](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) Amazon 的网站上。
 
 > [!NOTE]
-> **请注意**： 小心地将其构造的查询表达式时遵循报价的规则。 有关详细信息，请参阅[选择用引号括起来规则](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html)Amazon 的网站上。
+> 小心地将其构造的查询表达式时遵循报价的规则。 有关详细信息，请参阅[选择用引号括起来规则](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html)Amazon 的网站上。
 
 ## <a name="summary"></a>摘要
 

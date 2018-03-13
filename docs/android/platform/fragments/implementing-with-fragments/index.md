@@ -8,23 +8,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ebb53398edba64e255f1a534556836df8734ba6f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-with-fragments"></a>实现使用的碎片
 
 _Android 3.0 引入了片段。片段是自包含的模块化组件，用于帮助解决可能在不同大小的屏幕上运行的写入应用程序的复杂性。本文介绍如何使用片段开发 Xamarin.Android 应用程序，以及如何 3.0 的预 Android 设备上支持片段。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
 在此部分中，我们将演练如何创建的应用程序将显示莎士比亚的起到和从每个所选 play 的引号的列表。 我们的应用程序将利用片段，以便我们可以在一个位置，定义我们的 UI 组件，但然后使用这些不同的外形因素。 例如，以下屏幕截图显示运行在 10"平板电脑，以及在电话上的应用程序：
 
-[![平板电脑和手机上运行的示例应用的屏幕快照](images/intro-screenshot-sml.png)](images/intro-screenshot.png)
+[![平板电脑和手机上运行的示例应用的屏幕快照](images/intro-screenshot-sml.png)](images/intro-screenshot.png#lightbox)
 
 本部分将介绍以下主题：
 
@@ -34,13 +33,11 @@ _Android 3.0 引入了片段。片段是自包含的模块化组件，用于帮�
 
 - **使用 Android 的支持包**&ndash;实现 Android 的支持包，然后给中应用程序，使其能够在较旧版本的 Android 上运行的活动做出少量更改。
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>惠?
 
 本演练需要 Xamarin.Android 4.0 或更高版本。 它还将安装 Android 的支持包，所需的片段文档中所述。
 
-<a name="Introduction" />
 
 ## <a name="introduction"></a>介绍
 

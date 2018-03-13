@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 扩展支持
 
@@ -42,7 +42,7 @@ Xamarin.Mac 2.10 预览版中已添加了多个 macOS 扩展点：
 - 任何未捕获的异常时将崩溃扩展过程中，提供只有少量的中的有用信息**系统日志**。 包装中的让人头痛代码`try/catch`（异常） 阻止，`NSLog`的之前重新引发可能会很有用。
 - **系统日志**可以从访问**控制台**下的应用**应用程序** > **实用工具**:
 
-    [ ![](extensions-images/extension02.png "系统日志")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "系统日志")](extensions-images/extension02.png#lightbox)
 - 如上所述，运行扩展主机应用程序将其注册到系统。 删除与应用程序捆绑包将其取消注册。 
 - 如果注册的应用的扩展的"孤立"版本，使用以下命令 （以便它们可以 deleted) 找到它们： `plugin kit -mv`
 
@@ -65,4 +65,4 @@ Xamarin.Mac 2.10 预览版中已添加了多个 macOS 扩展点：
 
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: de37fd1e014938edcacec187ceeed572e573b379
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8376ce2ccff6732fa0c89d6030b9af36d29c5085
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-nsuseractivity"></a>使用 NSUserActivity 搜索
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 
 为 iOS 9，新`NSUserActivity`可以建立索引 （公开和私有） 和搜索从 Spotlight 搜索和 Safari。 通过将标记`NSUserActivity`作为搜索和添加可建立索引的元数据，可以在 iOS 设备上搜索结果中列出的活动。
 
-[ ![](nsuseractivity-images/apphistory01.png "应用历史记录概述")](nsuseractivity-images/apphistory01.png)
+[![](nsuseractivity-images/apphistory01.png "应用历史记录概述")](nsuseractivity-images/apphistory01.png#lightbox)
 
 如果用户选择从你的应用程序所属活动的搜索结果，将启动应用程序以及活动中说明的`NSUserActivity`将重新启动并向用户显示。
 
@@ -58,7 +58,7 @@ Apple 提供的建议使用活动类型标识符的反向 DNS 样式表示法以
 
 若要创建所需的活动类型标识符，以支持此行为，编辑**Info.plist**文件，并切换到**源**视图。 添加`NSUserActivityTypes`密钥，然后创建标识符采用以下格式：
 
-[ ![](nsuseractivity-images/type01.png "NSUserActivityTypes 键和 plist 编辑器中的所需的标识符")](nsuseractivity-images/type01.png)
+[![](nsuseractivity-images/type01.png "NSUserActivityTypes 键和 plist 编辑器中的所需的标识符")](nsuseractivity-images/type01.png#lightbox)
 
 在上面的示例中，我们创建一个新的活动类型标识符搜索活动 (`com.xamarin.platform`)。 创建你自己的应用时, 的内容替换`NSUserActivityTypes`阵列特定于活动的活动类型标识符您的应用程序支持。
 
@@ -87,7 +87,7 @@ activity.BecomeCurrent();
 
 我们无法添加更多详细信息通过设置`ContentAttributeSet`属性我们`NSUserActivity`，如下所示：
 
-[ ![](nsuseractivity-images/apphistory02.png "添加搜索详细信息概述")](nsuseractivity-images/apphistory02.png)
+[![](nsuseractivity-images/apphistory02.png "添加搜索详细信息概述")](nsuseractivity-images/apphistory02.png#lightbox)
 
 通过使用`ContentAttributeSet`你可以创建吸引最终用户与之交互的丰富的搜索结果。
 
@@ -114,7 +114,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 请注意，这是用于对 Handoff 请求作出响应的相同方法重写。 现在如果用户单击我们 Spotlight 搜索结果中的应用程序中的链接，将置于前台 （或启动如果尚未运行） 我们的应用程序并将显示的内容、 导航或由该链接的功能：
 
-[ ![](nsuseractivity-images/apphistory03.png "从搜索还原以前的状态")](nsuseractivity-images/apphistory03.png)
+[![](nsuseractivity-images/apphistory03.png "从搜索还原以前的状态")](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing" />
 

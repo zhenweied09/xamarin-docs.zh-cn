@@ -7,17 +7,17 @@ ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: c06dab9bf280a2543585d36147c7c3311f6445ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
 _本文介绍如何在 Xamarin.Android 设计器的功能。它介绍了设计器的基础知识，显示如何使用设计器进行布局小组件以可视方式以及如何编辑属性。它还显示如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -37,7 +37,6 @@ Xamarin.Android 支持这两种声明性风格用户界面设计基于在 XML �
 9.  如何使用材料设计工具来生成材料设计符合应用。
 
 
-<a name="Sections" />
 
 ## <a name="sections"></a>部分
 
@@ -52,7 +51,6 @@ Xamarin.Android 支持这两种声明性风格用户界面设计基于在 XML �
  [材料设计功能](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

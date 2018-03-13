@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ad9129e06f43eea69518c4d876edc7cfd462f4e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="localization"></a>本地化
 
@@ -71,7 +71,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 选择有意义的名称，例如**AppResources**按**确定**。
 
-[ ![将资源文件添加](localization-images/resx-new-file-sml.png "新建文件对话框")](localization-images/resx-new-file.png "新建文件对话框")
+[![将资源文件添加](localization-images/resx-new-file-sml.png "新建文件对话框")](localization-images/resx-new-file.png#lightbox "新建文件对话框")
 
 两个文件将添加到项目中：
 
@@ -88,32 +88,32 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 选择**AppResources.resx**文件，并显示**属性**板以查看其中此生成工具是配置。 下面显示的屏幕截图**自定义工具： ResXFileCodeGenerator**。
 
-[[ide name="xs]]
 
-[ ![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 的属性填充")](localization-images/xs-resx-internal.png)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[[/ide]]
+[![](localization-images/vs-resx-internal-sml.png "AppResources.Resx 的属性窗口")](localization-images/vs-resx-internal.png#lightbox)
 
-[[ide name="vs]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](localization-images/vs-resx-internal-sml.png "AppResources.Resx 的属性窗口")](localization-images/vs-resx-internal.png)
+[![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 的属性填充")](localization-images/xs-resx-internal.png#lightbox)
 
-[[/ide]]
+-----
 
 若要使强类型字符串属性`public`，你必须手动将配置更改为**自定义工具： PublicResXFileCodeGenerator**，下面的屏幕截图中所示：
 
 
-[[ide name="xs]]
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](localization-images/xs-resx-public-sml.png "AppResources.Resx 的属性填充")](localization-images/xs-resx-public.png)
+[![](localization-images/vs-resx-public-sml.png "AppResources.Resx 的属性窗口")](localization-images/vs-resx-public.png#lightbox)
 
-[[/ide]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[[ide name="vs]]
+[![](localization-images/xs-resx-internal-sml.png "AppResources.Resx 的属性填充")](localization-images/xs-resx-internal.png#lightbox)
 
-[ ![](localization-images/vs-resx-public-sml.png "AppResources.Resx 的属性窗口")](localization-images/vs-resx-public.png)
 
-[[/ide]]
+[![](localization-images/xs-resx-public-sml.png "AppResources.Resx 的属性填充")](localization-images/xs-resx-public.png#lightbox)
+
+-----
 
 此更改是可选的并且仅需要如果你想要跨不同的程序集引用本地化的字符串 （例如，如果将这些 RESX 文件置于不同的程序集到你的代码）。 本主题的示例离开字符串`internal`因为它们在同一 Xamarin.Forms PCL 程序集使用这些定义。
 
@@ -605,13 +605,13 @@ Windows Phone 8.0 项目必须正确配置为要显示的本地化文本。
 
 右键单击 Windows Phone 项目并选择**属性**。 在**应用程序**选项卡上刻度**支持区域性**了应用程序支持：
 
-[ ![](localization-images/winphone-projectproperties-sml.png "项目属性-支持的区域性")](localization-images/winphone-projectproperties.png "项目属性-支持的区域性")
+[![](localization-images/winphone-projectproperties-sml.png "项目属性-支持的区域性")](localization-images/winphone-projectproperties.png#lightbox "项目属性-支持的区域性")
 
 ##### <a name="wmappmanifestxml"></a>WMAppManifest.xml
 
 展开 Windows Phone 项目中的属性节点并双击**WMAppManifest.xml**文件。 单击**打包**选项卡上和刻度支持的应用程序的所有语言。
 
-[ ![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml-支持的语言")](localization-images/winphone-wmappmanifest.png "WMAppManifest.xml-支持的语言")
+[![](localization-images/winphone-wmappmanifest-sml.png "WMAppManifest.xml-支持的语言")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml-支持的语言")
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 

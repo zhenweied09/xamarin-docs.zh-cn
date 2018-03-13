@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 67caa11b23f5651a6b851c1e9baf16c2adca422a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a077a3dcc47de8416abb0c51b23dc07fc1f1f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="webview"></a>WebView
 
@@ -38,7 +38,8 @@ WebView 附带了对以下类型的内容的支持：
 - HTML 字符串&ndash;WebView 可以显示从内存的 HTML 字符串。
 - 本地文件&ndash;WebView 可以显示上述内容类型的任何嵌入在应用程序。
 
-**请注意**:`WebView`在 Windows 和 Windows Phone 上不支持 Silverlight、 Flash 或任何 ActiveX 控件，即使它们在该平台上支持由 Internet Explorer。
+> [!NOTE]
+> `WebView` 在 Windows 和 Windows Phone 上不支持 Silverlight、 Flash 或任何 ActiveX 控件，即使它们在该平台上支持由 Internet Explorer。
 
 ### <a name="websites"></a>网站
 
@@ -50,14 +51,15 @@ var browser = new WebView {
 };
 ```
 
-**请注意**: Url 必须完全与指定的协议格式 （即它必须具有"http://"或"https://"附加到它）。
+> [!NOTE]
+> Url 必须完全与指定的协议格式 （即它必须具有"http://"或"https://"附加到它）。
 
 #### <a name="ios-and-ats"></a>iOS 和 ATS
 
 自版本 9，iOS 将只允许你的应用程序与默认情况下实现最佳实践安全性的服务器进行通信。 值必须在设置`Info.plist`实现与不安全的服务器通信。
 
 > [!NOTE]
-> **注意：**如果你的应用程序需要连接到不安全的网站，你应始终输入域作为异常使用`NSExceptionDomains`而不是关闭 ATS 完全使用`NSAllowsArbitraryLoads`。 `NSAllowsArbitraryLoads` 仅应在极端紧急情况下使用。
+> 如果你的应用程序需要连接到不安全的网站，你应始终输入域作为异常使用`NSExceptionDomains`而不是关闭 ATS 完全使用`NSAllowsArbitraryLoads`。 `NSAllowsArbitraryLoads` 仅应在极端紧急情况下使用。
 
 下面演示了如何启用特定域 （在此案例 xamarin.com) 跳过 ATS 要求：
 
@@ -221,10 +223,10 @@ namespace WorkingWithWebview.Android {
 }
 ```
 
-在 Android 上，文件中**资产**文件夹还可以通过`Forms.Context.Assets`属性，如下面的代码示例中所示：
+在 Android 上，文件中**资产**文件夹还可以访问通过当前公开的 Android 上下文`MainActivity.Instance`属性：
 
 ```csharp
-var assetManager = Xamarin.Forms.Forms.Context.Assets;
+var assetManager = MainActivity.Instance.Assets;
 using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
   var html = streamReader.ReadToEnd ();
 }

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6ae0439566387e22d939ede83e6b4cb5c1a5a8fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin 实时播放器应用程序
 
@@ -20,9 +20,15 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="get-the-app"></a>获取应用
 
-可通过 iOS App Store 和 Google Play 是实时的 Xamarin Player:
+### <a name="xamarin-live-player-for-android"></a>适用于 Android 的 Xamarin 实时播放器
+实时的 Xamarin Player 用于 Android 从 Google Play:
 
-[ ![从 iOS 应用商店下载](player-images/app-store-badge.svg)](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8) [ ![Google Play 上的可用](player-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[ ![在 Google Play 上提供](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+
+适用于 Android 的设备，而无需 Google Play Xamarin 实时播放机可通过[HockeyApp](https://aka.ms/xlp-hockeyapp)分发。 此外，早期预览版中生成为可以通过启用直接从 Google Play 安装 Android[打开 beta 程序](https://play.google.com/apps/testing/com.xamarin.live)
+
+### <a name="xamarin-live-player-for-ios"></a>Xamarin iOS 的实时播放器
+我们鼓励用户加入[实时的 Xamarin Player 应用_iOS 预览_](https://aka.ms/liveplayeralpha)以享受到通过 TestFlight 的最新改进的快速访问。
 
 
 

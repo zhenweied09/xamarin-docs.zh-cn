@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9ffa3733908affb8a6f3cc5a1ae2e83c5a15f0f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>使用支持包的支持预 Honeycomb Android
 
@@ -21,7 +21,6 @@ ms.lasthandoff: 02/27/2018
 
 ![详细信息活动屏幕快照](supporting-pre-honeycomb-images/01.png)
 
-<a name="Adding_the_Support_Package" />
 
 ## <a name="adding-the-support-package"></a>添加支持包
 
@@ -39,7 +38,6 @@ Android 支持包不会自动添加到 Xamarin.Android 应用程序。 Xamarin �
 ![最低 Android 版本设置的屏幕截图](supporting-pre-honeycomb-images/04.png)
 
 
-<a name="Change_MainActivity_to_derive_from_FragmentActivity" />
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>更改 MainActivity 从 FragmentActivity 派生
 
@@ -57,7 +55,6 @@ public class MainActivity : Android.Support.V4.App.FragmentActivity
 }
 ```
 
-<a name="Change_DetailsActivity_to_derive_from_FragmentActivity" />
 
 ### <a name="change-detailsactivity-to-derive-from-fragmentactivity"></a>更改 DetailsActivity 从 FragmentActivity 派生
 

@@ -3,120 +3,76 @@ title: Xamarin.Forms Pages
 description: "Xamarin.Forms 页表示跨平台移动应用程序屏幕。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
+ms.assetid: 9C8C710F-E312-420B-9324-A7A20CEDB7EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 35822dbbb7d5694e7f1f0a3f35f10df404206af9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f979d2dbb894107d8d606ec1f41de44c294cdd3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms Pages
 
 _Xamarin.Forms 页表示跨平台移动应用程序屏幕。_
 
-<style>.tableimg {最大宽度： 无 ！ 重要;}</style>
+如下所述的所有页类型都派生 Xamarin.Forms [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)类。 这些可视元素占用所有或大多数屏幕。 A`Page`对象所表示`ViewController`在 iOS 中和`Page`在通用 Windows 平台。 在 Android 上，每个页面采用如屏幕`Activity`，但是 Xamarin.Forms 页面是*不*`Activity`对象。
+
+[ ![](pages-images/pages-sml.png "Xamarin.Forms 页类型")](pages-images/pages.png#lightbox "Xamarin.Forms 页类型")
 
 ## <a name="pages"></a>页数
 
-[ `Page` ](http://iosapi.xamarin.com/?link=T%3aXamarin.Forms.Page)类是占用大部分或全部屏幕，并且包含单个子一个可见元素。 A`Xamarin.Forms.Page`表示在 iOS 中的视图控制器或 Windows Phone 中的页。 在 Android 上每个页面将采用类似活动屏幕但是 Xamarin.Forms 页面是*不*活动。
+Xamarin.Forms 还支持以下的页类型：
 
- [ ![](pages-images/pages-sml.png "Xamarin.Forms 页类型")](pages-images/pages.png "Xamarin.Forms 页类型")
+<a name="contentPage" />
 
-<br clear="all" />
+### <a name="contentpage"></a>ContentPage
 
-Xamarin.Forms 支持：
+|     |     | 
+| --- | --- | 
+| [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 是页面的最简单也是最常见类型。 设置[ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentPage.Content/)到单个属性[ `View` ](views.md)对象，它是最常[ `Layout` ](layouts.md)如[ `StackLayout`](layouts.md#stackLayout)， [ `Grid` ](layouts.md#grid)，或[ `ScrollView` ](layouts.md#scrollView)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) | [![内容页示例](pages-images/ContentPage.png "内容页示例")](pages-images/ContentPage-Large.png#lightbox "内容页示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
+|     |     |
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <tr>
-  <thead>
-    <th>
-      <strong>类型</strong>
-    </th>
-    <th>
-      <strong>说明</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>屏幕快照</strong>
-    </th>
-  </thead></tr>
-  <tbody>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">ContentPage</a>
-    </td>
-    <td align="center" valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">内容页</a>显示单个<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">视图</a>，通常类似于容器<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/">StackLayout</a>或<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/">ScrollView</a>。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ContentPageDemoPage.cs"><img src="pages-images/ContentPage.png" title="内容页示例" class="tableimg">
-    </a></td>
-  </tr><tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/">MasterDetailPage</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">页</a>管理的信息的两个窗格。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/MasterDetailPageDemoPage.cs"><img src="pages-images/MasterDetailPage.png" title="MasterDetailPage 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/">NavigationPage</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">页</a>管理导航和其他页面一堆的用户体验。  
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/NavigationPageDemoPage.cs"><img src="pages-images/NavigationPage.png" title="NavigationPage 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/">TabbedPage</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">页</a>这样子级之间的导航页，请使用选项卡。
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TabbedPageDemoPage.cs"><img src="pages-images/TabbedPage.png" title="TabbedPage 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/">TemplatedPage</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">页</a>显示使用控件模板，和类的基类的全屏幕内容<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/">内容页</a>。
-    </td>
-    <td valign="top">
-    <a href="https://github.com/xamarin/xamarin-forms-samples/tree/master/Templates/ControlTemplates/"><img src="pages-images/TemplatedPage.png" title="TemplatedPage 示例" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/">CarouselPage</a>
-    </td>
-    <td valign="top">
-A<a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Page/">页</a>允许子页，如库之间的滑动手势。
-    </td>
-    <td valign="top">
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CarouselPageDemoPage.cs"><img src="pages-images/CarouselPage.png" title="CarouselPage 示例" class="tableimg">
-    </a></td>
-  </tr>
-  </tbody>
-</table>
+### <a name="masterdetailpage"></a>MasterDetailPage
 
+|     |     | 
+| --- | --- | 
+| A [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)管理的信息的两个窗格。 设置[ `Master` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/)到页通常显示为列表或菜单的属性。 设置[ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/)到页上显示母版页中的某个选定的项的属性。 [ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/)属性控制 master 或详细信息页上是否可见。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) / [指南](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/) | [![MasterDetailPage 示例](pages-images/MasterDetailPage.png "MasterDetailPage 示例")](pages-images/MasterDetailPage-Large.png#lightbox "MasterDetailPage 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml)与[代码隐藏](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) |
+|     |     |
 
+### <a name="navigationpage"></a>NavigationPage
+
+|     |     | 
+| --- | --- | 
+| [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)管理在使用基于堆栈的体系结构的其他页面之间导航。 主页上的实例时应用程序中使用页导航，应传递给的构造函数`NavigationPage`对象。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) / [指南](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md) / [示例 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)， [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)，和[3](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)  | [![NavigationPage 示例](pages-images/NavigationPage.png "NavigationPage 示例")](pages-images/NavigationPage-Large.png#lightbox "NavigationPage 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/NavigationPageDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml)与[代码后面 =](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="tabbedpage"></a>TabbedPage
+
+|     |     | 
+| --- | --- | 
+| [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) 派生自抽象[ `MultiPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/)类，并允许使用选项卡页的各子之间的导航。 设置[ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/)属性页或集的集合[ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/)到的数据对象的集合的属性和[ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/)属性设置为[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)描述每个对象的直观表示方式。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) / [指南](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) / [示例 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)和[2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage) | [![TabbedPage 示例](pages-images/TabbedPage.png "TabbedPage 示例")](pages-images/TabbedPage-Large.png#lightbox "TabbedPage 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TabbedPageDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TabbedPageDemoPage.xaml) |
+|     |     |
+
+### <a name="carouselpage"></a>CarouselPage
+
+|     |     | 
+| --- | --- | 
+| [`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) 派生自抽象[ `MultiPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/)类，并允许通过手指轻扫页的各子之间的导航。 设置[ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/)属性的集合[ `ContentPage` ](#contentPage)对象或一组[ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/)到的数据对象的集合的属性和[ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/)属性[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)描述每个对象的直观表示方式。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) / [指南](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [示例 1](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPage/)和[2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPageTemplate/) | [![CarouselPage 示例](pages-images/CarouselPage.png "CarouselPage 示例")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
+|     |     |
+
+### <a name="templatedpage"></a>TemplatedPage
+
+|     |     | 
+| --- | --- | 
+| [`TemplatedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/) 显示使用控件模板，全屏幕内容，而且是类的基类[ `ContentPage` ](#contentPage)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplatedPage/) / [指南](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![TemplatedPage 示例](pages-images/TemplatedPage.png "TemplatedPage 示例")](pages-images/TemplatedPage.png "TemplatedPage 示例") |
+|     |     |
 
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms 库 （示例）](https://developer.xamarin.com/samples/FormsGallery/)
-- [Xamarin.Forms 示例](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
-- [Xamarin.Forms API 文档](http://iosapi.xamarin.com/?link=N%3aXamarin.Forms)
+- [Xamarin.Forms FormsGallery 示例](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms API 文档](https://developer.xamarin.com/api/root/Xamarin.Forms/)

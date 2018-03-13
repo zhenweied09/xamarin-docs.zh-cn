@@ -4,14 +4,15 @@ description: "浏览效果和动画，可以使用 SkiaSharp 旋转变换"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: c87f9a561ac2f7a8c3da1c1e4ab839431073fcb9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 146093e15651316e84947e2bd81eeee3bf55cedb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-rotate-transform"></a>旋转变换
 
@@ -57,7 +58,7 @@ using (SKPaint textPaint = new SKPaint
 
 因为旋转围绕此程序中设置的大多数角度的画布的左上角的文本旋转不在屏幕中：
 
-[![](rotate-images/basicrotate-small.png "三重的基本旋转页的屏幕截图")](rotate-images/basicrotate-large.png "三重的基本旋转页的屏幕截图")
+[![](rotate-images/basicrotate-small.png "三重的基本旋转页的屏幕截图")](rotate-images/basicrotate-large.png#lightbox "三重的基本旋转页的屏幕截图")
 
 非常频繁，你将需要旋转内容以使用这些版本的指定的透视点中心[ `RotateDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateDegrees/p/System.Single/System.Single/System.Single/)和[ `RotateRadians` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.RotateRadians/p/System.Single/System.Single/System.Single/)方法：
 
@@ -85,7 +86,7 @@ using (SKPaint textPaint = new SKPaint
 
 现在在围绕用于决定文本，这是文本的基线的水平居中的位置的点旋转文本：
 
-[![](rotate-images/centeredrotate-small.png "三重的居中旋转页面的屏幕截图")](rotate-images/centeredrotate-large.png "三倍的居中旋转页面的屏幕截图")
+[![](rotate-images/centeredrotate-small.png "三重的居中旋转页面的屏幕截图")](rotate-images/centeredrotate-large.png#lightbox "三倍的居中旋转页面的屏幕截图")
 
 与一样的居中新版`Scale`方法中，为中心的版本`RotateDegrees`调用是一种快捷方式：
 
@@ -139,7 +140,7 @@ canvas.DrawText(Title, 0, 0, textPaint);
 
 通常，有几种方法组合旋转和平移。 **旋转文本**页创建以下显示：
 
-[![](rotate-images/rotatedtext-small.png "三重的旋转文本页的屏幕截图")](rotate-images/rotatedtext-large.png "三倍的旋转文本页的屏幕截图")
+[![](rotate-images/rotatedtext-small.png "三重的旋转文本页的屏幕截图")](rotate-images/rotatedtext-large.png#lightbox "三倍的旋转文本页的屏幕截图")
 
 下面是`PaintSurface`处理程序[ `RotatedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs)类：
 
@@ -363,7 +364,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 而是粗糙手虽然，时钟是当然功能：
 
-[![](rotate-images/uglyanalogclock-small.png "仅使用三重繁琐模拟时钟文本页面的屏幕截图")](rotate-images/uglyanalogclock-large.png "Triple screenshot of the Ugly Analog page")
+[![](rotate-images/uglyanalogclock-small.png "仅使用三重繁琐模拟时钟文本页面的屏幕截图")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 
 ## <a name="related-links"></a>相关链接

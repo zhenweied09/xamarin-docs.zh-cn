@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 44a97114e7d325a1fa196d2c9828855ad1a30c94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ef34b1be5f993a3be819cd4ae1a9dcd5dfc27715
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>从现有的库项目创建 NuGet
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 2. 转到**NuGet 包 > 元数据**部分，然后输入所有[所需的信息](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)中**常规**选项卡：
 
-  [ ![](existing-library-images/existing-metadata-sml.png "输入必需的元数据")](existing-library-images/existing-metadata.png)
+  [![](existing-library-images/existing-metadata-sml.png "输入必需的元数据")](existing-library-images/existing-metadata.png#lightbox)
 
 3. （可选）[添加其他元数据](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)中**详细信息**选项卡。
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/27/2018
 
 5. 若要创建 NuGet 包在_每个_生成或部署，请转到**NuGet 包 > 生成**部分和刻度线**生成项目时创建 NuGet 包**:
 
-    [ ![](existing-library-images/existing-tickbox-sml.png "刻度线创建 NuGet 包")](existing-library-images/existing-tickbox.png)
+    [![](existing-library-images/existing-tickbox-sml.png "刻度线创建 NuGet 包")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > 生成 NuGet 包会显著降低生成过程中。 如果未勾选此框，您仍可以生成 NuGet 包手动随时在项目上下文菜单中 （如上面的步骤 4 所示）。

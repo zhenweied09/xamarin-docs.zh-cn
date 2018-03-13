@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e09ac502298296277d9264bcd18f1ce1cbbf0c55
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 53309be2712f14c79b84c2eabb519b86dd73a404
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-controltemplate"></a>创建 ControlTemplate
 
@@ -100,7 +100,7 @@ void OnButtonClicked (object sender, EventArgs e)
 ![](creating-images/aqua-theme.png "浅绿色控件模板")
 
 > [!NOTE]
-> **请注意**： 上`ContentPage`、`Content`属性可以分配与`ControlTemplate`还可以设置属性。 在这种情况，如果`ControlTemplate`包含`ContentPresenter`实例分配给的内容`Content`属性将由`ContentPresenter`内`ControlTemplate`。
+> 上`ContentPage`、`Content`属性可以分配与`ControlTemplate`还可以设置属性。 在这种情况，如果`ControlTemplate`包含`ContentPresenter`实例分配给的内容`Content`属性将由`ContentPresenter`内`ControlTemplate`。
 
 ### <a name="setting-a-controltemplate-with-a-style"></a>设置使用样式 ControlTemplate
 
@@ -148,7 +148,7 @@ A [ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Con
 
 添加时[ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/)级别的页[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)添加到[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)，，然后`ControlTemplate`实例是否包含在`ResourceDictionary`。
 
-## <a name="creating-a-controltemplate-in-c35"></a>在 c&#35; 中创建 ControlTemplate
+## <a name="creating-a-controltemplate-in-c35"></a>在 C 中创建 ControlTemplate&#35;
 
 若要定义[ `ControlTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/)应用程序级别`class`必须创建表示的`ControlTemplate`。 类应派生自[布局](~/xamarin-forms/user-interface/layouts/index.md)正在用于模板，如下面的代码示例中所示：
 

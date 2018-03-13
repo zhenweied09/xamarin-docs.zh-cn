@@ -3,14 +3,15 @@ title: "第 7 章的摘要。 与代码的 XAML"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1263328a748ac0bacd368da361aeaff57c4cfa20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1104f7576cabfed9988154f3b6a8beb429136fb3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>第 7 章的摘要。 与代码的 XAML
 
@@ -68,7 +69,7 @@ Xamarin.Forms 具有 XAML 编译器，但其使用基于使用的是可选的[ `
 
  如果将多行字符串设置为`Text`属性，行尾字符都转换为空格字符，但时多行字符串中显示的内容为保留的行尾字符`Label`或`Label.Text`标记：
 
- [![共享的文本变体的三个屏幕截图](images/ch07fg03-small.png "格式化文本变体")](images/ch07fg03-large.png "格式化文本变体")
+ [![共享的文本变体的三个屏幕截图](images/ch07fg03-small.png "格式化文本变体")](images/ch07fg03-large.png#lightbox "格式化文本变体")
 
 
 

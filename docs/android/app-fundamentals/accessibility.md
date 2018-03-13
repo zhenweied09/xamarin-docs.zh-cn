@@ -6,12 +6,12 @@ ms.assetid: 157F0899-4E3E-4538-90AF-B59B8A871204
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/31/2018
-ms.openlocfilehash: 0cf1557cea8d5adb3678ba5e424f9f23375e32bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 2dea77b4c52db0c032aba9bde471e76eb36ba3ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-android"></a>在 Android 上的辅助功能
 
@@ -171,14 +171,12 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 将文本存储在单独的文件的好处是可以在应用程序中提供的文件的多个语言翻译。 请参阅[Android 本地化指南](~/android/app-fundamentals/localization.md)若要了解如何将本地化的字符串文件添加到应用程序项目。
 
-<a name="testing" />
 
 ## <a name="testing-accessibility"></a>测试辅助功能
 
 请按照[这些步骤](http://developer.android.com/training/accessibility/testing.html#how-to)启用 TalkBack 和资源管理器通过触摸辅助功能在 Android 设备上的进行测试。
 
 你可能需要安装[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)从 Google Play，如果未出现在**设置 > 可访问性**。
-
 
 
 ## <a name="related-links"></a>相关链接

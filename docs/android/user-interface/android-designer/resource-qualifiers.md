@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: 56fee71f2ed36b682d323bae1225430ff991f140
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>资源限定符和可视化效果选项
 
 _本主题介绍如何定义仅在某些限定符值匹配时将使用的资源。一个简单的示例是一个语言限定的字符串资源。与其他定义要用于其他语言的替代资源，可以将字符串资源定义为默认情况下。可以限定所有资源类型，包括本身的布局。_
 
-<a name="Custom_Device_Configurations" />
 
 ## <a name="custom-device-configurations"></a>自定义设备配置
 
@@ -30,11 +29,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![设备选择器菜单](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png)
+[![设备选择器菜单](resource-qualifiers-images/vs/01-device-selector-sml.png)](resource-qualifiers-images/vs/01-device-selector.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![设备选择器菜单](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png)
+[![设备选择器菜单](resource-qualifiers-images/xs/01-device-selector-sml.png)](resource-qualifiers-images/xs/01-device-selector.png#lightbox)
 
 -----
 
@@ -43,11 +42,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![AVD 管理器](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png)
+[![AVD 管理器](resource-qualifiers-images/vs/02-device-definitions-sml.png)](resource-qualifiers-images/vs/02-device-definitions.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![AVD 管理器](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png)
+[![AVD 管理器](resource-qualifiers-images/xs/02-device-definitions-sml.png)](resource-qualifiers-images/xs/02-device-definitions.png#lightbox)
 
 -----
 
@@ -57,11 +56,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![克隆设备](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png)
+[![克隆设备](resource-qualifiers-images/vs/03-clone-sml.png)](resource-qualifiers-images/vs/03-clone.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![克隆设备](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png)
+[![克隆设备](resource-qualifiers-images/xs/03-clone-sml.png)](resource-qualifiers-images/xs/03-clone.png#lightbox)
 
 -----
 
@@ -70,11 +69,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![自定义设备](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png)
+[![自定义设备](resource-qualifiers-images/vs/04-custom-sml.png)](resource-qualifiers-images/vs/04-custom.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![自定义设备](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png)
+[![自定义设备](resource-qualifiers-images/xs/04-custom-sml.png)](resource-qualifiers-images/xs/04-custom.png#lightbox)
 
 -----
 
@@ -83,11 +82,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![更新的设备定义](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png)
+[![更新的设备定义](resource-qualifiers-images/vs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/vs/05-updated-device-definitions.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![更新的设备定义](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png)
+[![更新的设备定义](resource-qualifiers-images/xs/05-updated-device-definitions-sml.png)](resource-qualifiers-images/xs/05-updated-device-definitions.png#lightbox)
 
 -----
 
@@ -96,11 +95,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![自定义设备将出现在设备列表](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png)
+[![自定义设备将出现在设备列表](resource-qualifiers-images/vs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/vs/06-nexus-5-custom.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![自定义设备将出现在设备列表](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png)
+[![自定义设备将出现在设备列表](resource-qualifiers-images/xs/06-nexus-5-custom-sml.png)](resource-qualifiers-images/xs/06-nexus-5-custom.png#lightbox)
 
 -----
 
@@ -109,16 +108,15 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![在使用自定义设备](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png)
+[![在使用自定义设备](resource-qualifiers-images/vs/07-custom-in-use-sml.png)](resource-qualifiers-images/vs/07-custom-in-use.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![在使用自定义设备](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png)
+[![在使用自定义设备](resource-qualifiers-images/xs/07-custom-in-use-sml.png)](resource-qualifiers-images/xs/07-custom-in-use.png#lightbox)
 
 -----
 
 
-<a name="resource_qualifier_options" />
 
 ## <a name="resource-qualifier-options"></a>资源限定符选项
 
@@ -126,11 +124,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![资源限定符选项](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png)
+[![资源限定符选项](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![资源限定符选项](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png)
+[![资源限定符选项](resource-qualifiers-images/xs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt.png#lightbox)
 
 -----
 
@@ -144,7 +142,6 @@ Android 上会提供各种设备和屏幕分辨率。
 每个这些下拉列表菜单打开新的对话框中，你可以在此处选择并配置的资源限定符 （如下所述）。
 
 
-<a name="Language_and_Region" />
 
 ### <a name="language"></a>语言
 
@@ -152,11 +149,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![添加语言/区域](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png)
+[![添加语言/区域](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![添加语言/区域](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png)
+[![添加语言/区域](resource-qualifiers-images/xs/09-add-language-region-sml.png)](resource-qualifiers-images/xs/09-add-language-region.png#lightbox)
 
 -----
 
@@ -169,7 +166,7 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![语言的列表](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png)
+[![语言的列表](resource-qualifiers-images/xs/10-languages-sml.png)](resource-qualifiers-images/xs/10-languages.png#lightbox)
 
 -----
 
@@ -182,7 +179,7 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![语言和区域选择](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png)
+[![语言和区域选择](resource-qualifiers-images/xs/11-language-region-added-sml.png)](resource-qualifiers-images/xs/11-language-region-added.png#lightbox)
 
 -----
 
@@ -190,7 +187,6 @@ Android 上会提供各种设备和屏幕分辨率。
 请注意是否添加新语言，但在不创建新资源，为它增加了语言将不再显示在下次打开项目。
 
 
-<a name="ui_mode" />
 
 ### <a name="ui-mode"></a>用户界面模式
 
@@ -198,7 +194,7 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![用户界面模式菜单](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png)
+[![用户界面模式菜单](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 此列表下方是夜间模式**不晚上**和**夜间**后, 跟布局方向**从左到右**和**从右到左**（适用于有关信息**从左到右**和**从右到左**选项，请参见[LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/)。
 中的最后一个项**资源限定符选项**对话框是**舍入屏幕**（用于 Android 磨损） 或**不舍入屏幕**(有关轮信息和非轮屏幕，请参阅[布局](https://developer.android.com/training/wearables/ui/layouts.html))。
@@ -206,7 +202,7 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![用户界面模式菜单](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png)
+[![用户界面模式菜单](resource-qualifiers-images/xs/12-ui-mode-sml.png)](resource-qualifiers-images/xs/12-ui-mode.png#lightbox)
 
 此列表下方是夜间模式**不夜间**和**夜间**后, 跟布局方向**从左到右**和**从右到左**。 有关 Android UI 模式的详细信息，请参阅[UiModeManager](https://developer.xamarin.com/api/type/Android.App.UiModeManager/)。
 璝惠**从左到右**和**从右到左**选项，请参见[LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/)。
@@ -215,12 +211,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 中的最后一项**资源限定符选项**对话框是**Round 屏幕**菜单。 此菜单，可以选择**舍入屏幕**（用于 Android 磨损） 或**矩形屏幕**:
 
-[ ![舍入屏幕菜单](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png)
+[![舍入屏幕菜单](resource-qualifiers-images/xs/13-round-screen-sml.png)](resource-qualifiers-images/xs/13-round-screen.png#lightbox)
 
 -----
 
 
-<a name="Action_Bar" />
 
 ## <a name="action-bar-settings"></a>操作栏设置
 
@@ -232,7 +227,7 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![操作栏设置](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png)
+[![操作栏设置](resource-qualifiers-images/xs/13b-action-bar-sml.png)](resource-qualifiers-images/xs/13b-action-bar.png#lightbox)
 
 -----
 
@@ -246,7 +241,6 @@ Android 上会提供各种设备和屏幕分辨率。
 -   **选项卡** &ndash; tab 键导航模式。 而不是静态的标题文本，此模式将显示一系列活动中的导航选项卡。
 
 
-<a name="Themes" />
 
 ## <a name="themes"></a>主题
 
@@ -254,11 +248,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![更多的主题列表](resource-qualifiers-images/vs/15-theme-menu-sml.png "多主题列表")](resource-qualifiers-images/vs/15-theme-menu.png)
+[![更多的主题列表](resource-qualifiers-images/vs/15-theme-menu-sml.png "多主题列表")](resource-qualifiers-images/vs/15-theme-menu.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![更多的主题列表](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png)
+[![更多的主题列表](resource-qualifiers-images/xs/14-theme-menu-sml.png)](resource-qualifiers-images/xs/14-theme-menu.png#lightbox)
 
 -----
 
@@ -271,12 +265,11 @@ Android 上会提供各种设备和屏幕分辨率。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![浅色主题现已推出](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png)
+[![浅色主题现已推出](resource-qualifiers-images/xs/15-light-theme-sml.png)](resource-qualifiers-images/xs/15-light-theme.png#lightbox)
 
 -----
 
 
-<a name="Android_Version" />
 
 ## <a name="android-version"></a>Android 版本
 
@@ -293,7 +286,7 @@ Android**版本**选择器设置用于呈现在设计器的布局的 Android 版
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Android 版本的列表](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png)
+[![Android 版本的列表](resource-qualifiers-images/xs/16-android-version-sml.png)](resource-qualifiers-images/xs/16-android-version.png#lightbox)
 
 可以在下的项目的设置中设置的目标框架版本**项目选项 > 生成 > 常规**部分。 目标框架版本有关的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。
 

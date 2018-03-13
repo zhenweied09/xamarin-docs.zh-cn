@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 8db4a816becca54428b3524f79b6ebc5ff4ec084
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7934738a546a266036573b81e15ef9b2fa28d7b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/27/2018
 Tasky 是用于 iOS、 Android 和 Windows Phone 的简单待办事项列表应用程序。
 它演示如何使用 Xamarin 创建跨平台应用程序的基础知识，并使用一个本地的 SQLite 数据库。
 
- [ ![tasky 列表](images/iphone-list-sml.png)](images/iphone-list.png) [ ![tasky 详细信息](images/iphone-detail-sml.png)](images/iphone-detail.png)
+ [![tasky 列表](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [ ![tasky 列表](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 读取[Tasky 案例研究](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)。
 

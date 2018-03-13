@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fd31413b777e1179e7f4faf6f91f91bc6c41e82b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-segmented-controls"></a>使用分段控件
 
@@ -21,7 +21,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。_
 
 分段控件提供了一套线性元素，其中每个图标或文本，可以包含，用于向用户提供一组相关的选项。
 
-[ ![](segmented-controls-images/segment01.png "示例段控件")](segmented-controls-images/segment01.png)
+[![](segmented-controls-images/segment01.png "示例段控件")](segmented-controls-images/segment01.png#lightbox)
 
 Apple 具有以下建议用于使用分段控件：
 
@@ -57,36 +57,36 @@ Apple 使处理段文本的以下建议：
 
 Xamarin.tvOS 应用中使用的段控件的最简单方法是将它们添加到使用 iOS 设计器的应用程序的 UI。
 
-[[ide name="xs"]]
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**段控件**从**工具箱**并将其放在视图上： 
 
-    [ ![](segmented-controls-images/segment02.png "段控件")](segmented-controls-images/segment02.png)
+    [![](segmented-controls-images/segment02.png "段控件")](segmented-controls-images/segment02.png#lightbox)
 1. 在**小组件选项卡**的**属性填充**，你可以调整段控件的几个属性，如其**样式**和**状态**: 
 
-    [ ![](segmented-controls-images/segment03.png "小组件选项卡")](segmented-controls-images/segment03.png)
+    [![](segmented-controls-images/segment03.png "小组件选项卡")](segmented-controls-images/segment03.png#lightbox)
 1. 使用**段**字段来控制在控制器中的段的数目。
 1. 选择从给定的分段**段下拉列表中**如调整其各个属性**标题**或**映像**并控制给定的分段是否**启用**或**选定**显示控件时。
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](segmented-controls-images/segment04.png "指定一个名称")](segmented-controls-images/segment04.png)
+    [![](segmented-controls-images/segment04.png "指定一个名称")](segmented-controls-images/segment04.png#lightbox)
 1. 保存更改。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
     
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**段控件**从**工具箱**并将其放在视图上： 
 
-    [ ![](segmented-controls-images/segment02-vs.png "段控件")](segmented-controls-images/segment02-vs.png)
+    [![](segmented-controls-images/segment02-vs.png "段控件")](segmented-controls-images/segment02-vs.png#lightbox)
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整段控件的几个属性，如其**样式**和**状态**: 
 
-    [ ![](segmented-controls-images/segment03-vs.png "小组件选项卡")](segmented-controls-images/segment03-vs.png)
+    [![](segmented-controls-images/segment03-vs.png "小组件选项卡")](segmented-controls-images/segment03-vs.png#lightbox)
 1. 使用**段**字段来控制在控制器中的段的数目。
 1. 选择从给定的分段**段下拉列表中**如调整其各个属性**标题**或**映像**并控制给定的分段是否**启用**或**选定**显示控件时。
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](segmented-controls-images/segment04-vs.png "指定一个名称")](segmented-controls-images/segment04-vs.png)
+    [![](segmented-controls-images/segment04-vs.png "指定一个名称")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 保存更改。
     
 -----

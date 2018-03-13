@@ -7,12 +7,12 @@ ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/07/2018
-ms.openlocfilehash: ae6b89e48005ca028db5d13f1a55f237888ae08b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="kitkat-features"></a>KitKat 功能
 
@@ -37,7 +37,7 @@ Android 4.4 (API 级别 19)，也称为"KitKat"，在后期 2013年中发布。 
 
 若要开发使用 KitKat 的 Xamarin.Android 应用程序，你需要*Xamarin.Android 4.11.0*或更高版本和 Android 4.4 (API 级别 19) 安装通过 Android SDK 管理器中，如下面的屏幕截图所示：
 
-[![在 Android SDK 管理器中选择 Android 4.4](kitkat-images/api19.png)](kitkat-images/api19.png)
+[![在 Android SDK 管理器中选择 Android 4.4](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
 <a name="Migrating_Your_App_to_KitKat" />
 
@@ -84,7 +84,7 @@ KitKat 不再允许你设置精确的重复警报。 应用程序使用[ `SetRep
 -  如果你通过访问属性或调用的方法来获取文件或目录路径`Environment`，如[ `GetExternalStorageDirectory` ](https://developer.xamarin.com/api/property/Android.OS.Environment.ExternalStorageDirectory/)或[ `GetExternalStoragePublicDirectory` ](https://developer.xamarin.com/api/member/Android.OS.Environment.GetExternalStoragePublicDirectory/p/System.String/) ，你的应用需要`READ_EXTERNAL_STORAGE`或`WRITE_EXTERNAL_STORAGE`权限。
 
 > [!NOTE]
-> **注意：** `WRITE_EXTERNAL_STORAGE`意味着`READ_EXTERNAL_STORAGE`权限，因此你应只需要将一个权限设置。
+> `WRITE_EXTERNAL_STORAGE` 意味着`READ_EXTERNAL_STORAGE`权限，因此你应只需要将一个权限设置。
 
 ### <a name="sms-consolidation"></a>SMS 合并
 
@@ -147,11 +147,11 @@ public class MainActivity : Activity
 
 下面的屏幕截图显示动画之前应用：
 
-[![在动画开始前的应用屏幕快照](kitkat-images/trans-before.png)](kitkat-images/trans-before.png)
+[![在动画开始前的应用屏幕快照](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 下面的屏幕截图显示的动画结束后的应用：
 
-[![动画完成后，应用屏幕快照](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![动画完成后，应用屏幕快照](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 你可以获取更好地控制与后台，在下一节中介绍的转换。
 
@@ -161,7 +161,7 @@ public class MainActivity : Activity
 
 外壳动态内容的静态用户界面元素称为*容器*或*场景基*。 下面的示例使用 Android 设计器创建`RelativeLayout`调用`container`:
 
-[![使用 Android 设计器创建 RelativeLayout 容器](kitkat-images/container.png)](kitkat-images/container.png)
+[![使用 Android 设计器创建 RelativeLayout 容器](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
 
 示例布局还定义了一个称为按钮`sceneButton`下面`container`。 此按钮将触发转换。
 
@@ -237,22 +237,22 @@ sceneButton.Click += (o, e) => {
 
 下面的屏幕截图演示之前动画场景：
 
-[![应用的动画开始之前的屏幕快照](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![应用的动画开始之前的屏幕快照](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 下面的屏幕截图演示后动画场景：
 
-[![在动画完成后应用的屏幕快照](kitkat-images/scene.png)](kitkat-images/scene.png)
+[![在动画完成后应用的屏幕快照](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
 
 > [!NOTE]
-> **注意：**没有[已知的 bug](https://code.google.com/p/android/issues/detail?id=62450)在 Android 转换会导致场景的库创建使用`GetSceneForLayout`时将用户转到活动的第二个时间中断。 Java 解决方法进行了介绍[此处](http://www.doubleencore.com/2013/11/new-transitions-framework/)。
+> 没有[已知的 bug](https://code.google.com/p/android/issues/detail?id=62450)在 Android 转换会导致场景的库创建使用`GetSceneForLayout`时将用户转到活动的第二个时间中断。 Java 解决方法进行了介绍[此处](http://www.doubleencore.com/2013/11/new-transitions-framework/)。
 
 
 ##### <a name="custom-transitions-in-scenes"></a>场景中的自定义转换
 
 可以在 xml 资源文件中定义自定义转换`transition`目录下`Resources`，如下面的屏幕截图所示：
 
-[![资源/转换目录下的 transition.xml 文件的位置](kitkat-images/resources.png)](kitkat-images/resources.png)
+[![资源/转换目录下的 transition.xml 文件的位置](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
 下面的代码示例定义的 5 秒内将动画处理，并使用的转换[超过插值程序](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
@@ -307,7 +307,7 @@ KitKat 使你更好地控制主题使用可选 transclucent 状态和导航条�
 
 下面的屏幕截图显示了具有半透明的状态和导航栏上方主题：
 
-[![使用半透明的状态和导航条应用程序的示例屏幕快照](kitkat-images/theme.png)](kitkat-images/theme.png)
+[![使用半透明的状态和导航条应用程序的示例屏幕快照](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -338,7 +338,7 @@ StartActivityForResult (intent, save_request_code);
 
 调用`StartActivityForResult`启动 SAF UI 中，用户可以浏览以选择映像：
 
-[![浏览到图像使用的存储访问框架的应用程序的示例屏幕快照](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png)
+[![浏览到图像使用的存储访问框架的应用程序的示例屏幕快照](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 用户已选择一个映像之后,`OnActivityResult`返回`Android.Net.Uri`的所选的文件。 下面的代码示例显示用户的映像选择：
 
@@ -368,7 +368,7 @@ StartActivityForResult (intentCreate, write_request_code);
 
 上面的代码示例加载 SAF UI，让用户更改的文件名称并选择一个目录来容纳新的文件：
 
-[![在下载目录的文件名称将改为 NewDoc 的用户的屏幕截图](kitkat-images/saf-save.png)](kitkat-images/saf-save.png)
+[![在下载目录的文件名称将改为 NewDoc 的用户的屏幕截图](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
 当用户按**保存**，`OnActivityResult`传递`Android.Net.Uri`的新创建的文件，可通过访问`data.Data`。 Uri 可以使用数据进行流处理中，为新文件中：
 
@@ -396,11 +396,11 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 打印内容中 KitKat 简化通过引入[打印服务](https://developer.xamarin.com/api/namespace/Android.PrintServices/)和`PrintManager`。 KitKat 也是第一个的 API 版本，能够充分利用[Google 云打印服务 Api](https://developers.google.com/cloud-print/)使用[Google 云打印应用程序](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint)。
 自动附带 KitKat 的大多数设备下载 Google 云打印应用和[HP 打印服务插件](https://play.google.com/store/apps/details?id=com.hp.android.printservice)当它们首次连接到 WiFi。 用户可以通过导航到检查他或她的设备的打印设置**设置 > 系统 > 打印**:
 
-[![示例的打印设置屏幕的屏幕截图](kitkat-images/printing.png)](kitkat-images/printing.png)
+[![示例的打印设置屏幕的屏幕截图](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 
 > [!NOTE]
-> **注意：** Android 打印 Api 设置要使用 Google 云打印默认情况下，虽然仍让开发人员准备打印内容使用新的 Api，并将其发送到其他应用程序可以处理打印。
+> 虽然打印 Api 设置要使用 Google 云打印默认情况下，Android 仍让开发人员准备打印内容使用新的 Api，并将其发送到其他应用程序可以处理打印。
 
 
 
@@ -410,14 +410,14 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 请注意，加载和打印 web 内容需要 Internet 权限：
 
-[![在应用程序选项中设置 Internet 权限](kitkat-images/internet.png)](kitkat-images/internet.png)
+[![在应用程序选项中设置 Internet 权限](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### <a name="print-menu-item"></a>打印菜单项
 
 打印选项通常会在中显示活动的[选项菜单](http://developer.android.com/guide/topics/ui/menus.html#options-menu)。
 选项菜单允许用户在活动上执行操作。 它是在该屏幕的右上角中，如下所示：
 
-[![在屏幕的右上角中的打印菜单项全都示例屏幕快照](kitkat-images/menu.png)](kitkat-images/menu.png)
+[![在屏幕的右上角中的打印菜单项全都示例屏幕快照](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 可以在定义其他菜单项*菜单*目录下*资源*。 下面的代码定义示例菜单项调用[打印](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -500,9 +500,9 @@ void PrintPage ()
 
 调用`Print`加载打印用户界面，列出了打印作业的选项。 如下面的屏幕截图所示，UI 向用户提供打印或保存为 pdf 格式的 HTML 内容的选项：
 
-[![显示打印菜单 PrintHtmlActivity 的屏幕截图](kitkat-images/print1.png)](kitkat-images/print1.png)
+[![显示打印菜单 PrintHtmlActivity 的屏幕截图](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
 
-[![显示保存为 PDF 菜单 PrintHtmlActivity 的屏幕截图](kitkat-images/print2.png)](kitkat-images/print2.png)
+[![显示保存为 PDF 菜单 PrintHtmlActivity 的屏幕截图](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
 <a name="hardware" />
 
@@ -524,7 +524,7 @@ HCE 需要这两个 HCE 功能和`Nfc`与应用程序的注册权限`AndroidMani
 <uses-feature android:name="android.hardware.nfc.hce" />
 ```
 
-[![在应用程序选项中设置 NFC 权限](kitkat-images/nfc.png)](kitkat-images/nfc.png)
+[![在应用程序选项中设置 NFC 权限](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
 
 若要 HCE 必须能够在后台运行且必须启动当用户进行的 NFC 事务，则即使使用 HCE 的应用程序未运行。 我们可以通过编写为 HCE 代码完成此`Service`。 HCE 服务实现`HostApduService`接口，实现以下方法：
 
@@ -588,7 +588,7 @@ KitKat 还附带了两个新的传感器类型用于跟踪用户的步骤。 这
 
 下面的屏幕截图描绘了操作中的步骤计数器：
 
-[![显示的步骤计数器 SensorsActivity 应用的屏幕快照](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png)
+[![显示的步骤计数器 SensorsActivity 应用的屏幕快照](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
 你可以创建`SensorManager`通过调用`GetSystemService(SensorService)`和强制转换为结果`SensorManager`。 若要使用的步骤计数器，调用`GetDeafultSensor`上`SensorManager`。 你可以注册传感器和单步计数的帮助中的更改侦听[ `ISensorEventListener` ](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)接口，如下面的代码示例所示：
 
@@ -637,11 +637,10 @@ protected override void OnPause()
 
 
 > [!NOTE]
-> **注意：**时用于步骤检测和计数与 KitKat 一起提供的 API，并非所有手机都配备传感器。 你可以检查是否可通过运行访问传感器`PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`，或检查以确保返回的值的`GetDefaultSensor`不`null`。
+> 用于步骤检测和计数与 KitKat 一起提供的 API，而不是所有手机是在都配备传感器。 你可以检查是否可通过运行访问传感器`PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`，或检查以确保返回的值的`GetDefaultSensor`不`null`。
 
 
- <a name="developer_tools" />
-
+<a name="developer_tools" />
 
 ## <a name="developer-tools"></a>开发人员工具
 
@@ -664,7 +663,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 你可以在你设备上找到视频-时将显示在你的库中录制时完成。
 
-<a name="other_kitkat_additions" />
 
 ## <a name="other-kitkat-additions"></a>其他 KitKat 新增功能：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 641f62d5e646607b2ff61db412a5defce63a211d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbars"></a>工具栏
 
@@ -82,17 +82,17 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 2. 选择设计图面上的窗口控制器。
 3. 切换到**标识检查器**并输入"WindowController"作为**类名**: 
 
-    [![设置窗口控制器的自定义类名称](toolbar-images/windowcontroller01.png "设置窗口控制器的自定义类名称")](toolbar-images/windowcontroller01-large.png) 
+    [![设置窗口控制器的自定义类名称](toolbar-images/windowcontroller01.png "设置窗口控制器的自定义类名称")](toolbar-images/windowcontroller01-large.png#lightbox) 
 
 4. 保存所做的更改并返回到 Visual Studio for Mac 同步。
-5. A **WindowController.cs**文件将添加到项目中**解决方案 Pad**适用于 Mac 的 Visual Studio 中： 
+5. 一个 **WindowController.cs** 文件将被添加到Visual Studio for Mac中 **解决方案板** 中的项目中： 
 
     ![在解决方案本选择 WindowController.cs](toolbar-images/windowcontroller02.png "解决方案板中选择 WindowController.cs")
 
 6. 重新打开在 Xcode 的接口生成器情节提要。
 7. **WindowController.h**文件将可供使用： 
 
-    [![WindowController.h 文件](toolbar-images/windowcontroller03.png "WindowController.h 文件")](toolbar-images/windowcontroller03-large.png)
+    [![WindowController.h 文件](toolbar-images/windowcontroller03.png "WindowController.h 文件")](toolbar-images/windowcontroller03-large.png#lightbox)
 
 ## <a name="creating-and-maintaining-toolbars-in-xcode"></a>创建和维护在 Xcode 中的工具栏
 
@@ -188,7 +188,7 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 
 默认情况下，几个 Cocoa UI 元素与标准工具栏项交互。 例如，拖动**文本视图**到应用程序的窗口，并将其以填充内容的区域：
 
-[![将文本视图添加到应用程序](toolbar-images/edit09.png "将文本视图添加到应用程序")](toolbar-images/edit09-large.png)
+[![将文本视图添加到应用程序](toolbar-images/edit09.png "将文本视图添加到应用程序")](toolbar-images/edit09-large.png#lightbox)
 
 保存文档时，返回到 Visual Studio for Mac 可与 Xcode 同步，运行该应用程序、 输入某些文本，选中它，然后单击**颜色**工具栏项。 请注意，文本视图自动配合颜色选取器：
 
@@ -201,7 +201,7 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 1. Visual Studio 中的 Mac 上，用于在**解决方案 Pad**，右键单击**资源**文件夹，然后选择**添加** > **添加文件**.
 2. 从**添加文件**对话框框中，导航到所需图像、 选择它们并单击**打开**按钮： 
 
-    [![选择要添加的映像](toolbar-images/edit11.png "选择要添加的映像")](toolbar-images/edit11-large.png)
+    [![选择要添加的映像](toolbar-images/edit11.png "选择要添加的映像")](toolbar-images/edit11-large.png#lightbox)
 
 3. 选择**复制**，检查**的所有选定文件使用相同的操作**，然后单击**确定**:
 
@@ -225,7 +225,7 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 
 9. 拖动**分隔符工具栏项**从**库检查器**到工具栏的**允许工具栏项**区域： 
 
-    [![分隔符工具栏项添加到允许工具栏项区域](toolbar-images/edit17.png "分隔符工具栏项添加到允许工具栏项区域")](toolbar-images/edit17-large.png)
+    [![分隔符工具栏项添加到允许工具栏项区域](toolbar-images/edit17.png "分隔符工具栏项添加到允许工具栏项区域")](toolbar-images/edit17-large.png#lightbox)
 
 10. 拖动分隔符项和到"回收站"项**默认工具栏项**区域和工具栏的顺序中的项的组从左到右，如下所示 （颜色、 字体、 分隔符、 垃圾桶、 灵活的空间、 打印）： 
 
@@ -244,7 +244,7 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 1. 在**解决方案 Pad**，双击**Main.storyboard**在 Xcode 中打开它。
 2. 确保自定义类"WindowController"已分配到中的主窗口控制器**标识检查器**:
 
-    [![使用标识检查器窗口控制器设置自定义类](toolbar-images/edit20a.png "使用标识检查器窗口控制器设置自定义类")](toolbar-images/edit20a-large.png)
+    [![使用标识检查器窗口控制器设置自定义类](toolbar-images/edit20a.png "使用标识检查器窗口控制器设置自定义类")](toolbar-images/edit20a-large.png#lightbox)
 
 3. 接下来，工具栏中选择项**接口层次结构**: 
 
@@ -253,11 +253,11 @@ Xamarin.Mac 使用适用于 Mac 的 Visual Studio 的开发人员有权访问可
 4. 打开**助手视图**，选择**WindowController.h**文件，并从工具栏项到控件拖动**WindowController.h**文件。
 5. 设置**连接**键入到**操作**，输入"trashDocument"**名称**，然后单击**连接**按钮： 
 
-    [![配置是工具栏项的一项操作](toolbar-images/edit23.png "配置是工具栏项的一项操作")](toolbar-images/edit23-large.png)
+    [![配置是工具栏项的一项操作](toolbar-images/edit23.png "配置是工具栏项的一项操作")](toolbar-images/edit23-large.png#lightbox)
 
 6. 公开**文本视图**作为中调用"documentEditor"上的电源插座**ViewController.h**文件： 
 
-    [![配置为文本视图上的电源插座](toolbar-images/edit24.png "配置为文本视图上的电源插座")](toolbar-images/edit24-large.png)
+    [![配置为文本视图上的电源插座](toolbar-images/edit24.png "配置为文本视图上的电源插座")](toolbar-images/edit24-large.png#lightbox)
 
 7. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 

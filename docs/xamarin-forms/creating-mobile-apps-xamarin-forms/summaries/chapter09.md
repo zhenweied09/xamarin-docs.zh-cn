@@ -3,14 +3,15 @@ title: "第 9 章的摘要。 特定于平台的 API 调用"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 637096d3ebb7fb90321f7f459e0ca9e51572d935
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84650c930445172d27520129123d493253851642
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>第 9 章的摘要。 特定于平台的 API 调用
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 Xamarin.Forms 共享资产项目可以执行不同的代码，为每个平台使用 C# 预处理器指令`#if`， `#elif`，和`endif`。 此进行了演示[ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
 
-[![变量的三个屏幕截图格式化段落](images/ch09fg01-small.png "设备型号和操作系统")](images/ch09fg01-large.png "设备型号和操作系统")
+[![变量的三个屏幕截图格式化段落](images/ch09fg01-small.png "设备型号和操作系统")](images/ch09fg01-large.png#lightbox "设备型号和操作系统")
 
 但是，得到的代码可以是繁琐且难以读取。
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>对 APK 进行手动签名
 
-<a name="signing_legacy" />
 
 生成用于发布的应用程序后，应先对 APK 进行签名，然后再进行分发，以便它能够在 Android 设备上运行。 此过程通常在 IDE 中处理，但某些情况下，需要在命令行中手动对 APK 进行签名。 对 APK 进行签名的步骤如下：
 
@@ -29,7 +28,6 @@ ms.lasthandoff: 02/27/2018
 步骤的顺序至关重要，取决于使用何种工具对 APK 进行签名。 当使用 apksigner 时，务必先使用 zipalign 优化应用程序，然后再通过 apksigner 对其签名。  如需使用 jarsigner 对 APK 进行签名，则需先对 APK 进行签名，然后再运行 zipalign。 
 
 
-<a name="Prerequisites" />
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -38,7 +36,6 @@ ms.lasthandoff: 02/27/2018
 通过早期 Android SDK 生成工具版本生成的应用程序必须使用 jarsigner，如下面的[使用 jarsigner 对 APK 进行签名](#Sign_the_APK_with_jarsigner)中所述。
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>创建专用密钥存储
 
@@ -53,7 +50,6 @@ ms.lasthandoff: 02/27/2018
 若要解决密钥存储丢失造成的问题，只能创建新的密钥存储、使用新密钥对 APK 重新签名，然后提交新版应用程序。 然后，必须从 Google Play 中删除旧版应用程序。 同样，如果新的密钥存储被泄露或公开分发，则可能会分发非官方版本或恶意版本的应用程序。
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>创建新的密钥存储
 
@@ -99,7 +95,6 @@ Re-enter new password:
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>使用 Zipalign 优化 APK
 
@@ -111,7 +106,6 @@ $ keytool -list -keystore xample.keystore
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>对 APK 进行签名
 

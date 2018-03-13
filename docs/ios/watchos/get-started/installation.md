@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: f7e511d7f0a933ab7f29369e5e5f0aa46607c8f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c423c9bf49c735673793f8e61134f7e705816d54
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation"></a>安装
 
@@ -55,19 +55,19 @@ Watch 应用由三个项目组成：
 
 1. 如果你没有现有项目，首先选择**文件 > 新解决方案**和创建的 iOS 应用 (例如，**单视图应用**):
 
-    [ ![](installation-images/cycle8-2-sml.png "选择文件 > 新解决方案和创建的 iOS 应用")](installation-images/cycle8-2.png)
+    [![](installation-images/cycle8-2-sml.png "选择文件 > 新解决方案和创建的 iOS 应用")](installation-images/cycle8-2.png#lightbox)
 
 2. 后创建的 iOS 应用 （或你打算使用你现有的 iOS 应用程序），右击该解决方案并选择**添加 > 添加新项目...**.在**新项目**窗口中选择**watchOS > 应用程序 > WatchKit 应用**:
 
-    [ ![](installation-images/cycle8-6-sml.png "选择 watchOS > 应用程序 > WatchKit 应用")](installation-images/cycle8-6.png)
+    [![](installation-images/cycle8-6-sml.png "选择 watchOS > 应用程序 > WatchKit 应用")](installation-images/cycle8-6.png#lightbox)
 
 3. 下一个屏幕可让你选择的 iOS 应用程序项目应包括 watch 应用：
 
-    [ ![](installation-images/cycle8-7-sml.png "选择的 iOS 应用程序项目应包括 watch 应用")](installation-images/cycle8-7.png)
+    [![](installation-images/cycle8-7-sml.png "选择的 iOS 应用程序项目应包括 watch 应用")](installation-images/cycle8-7.png#lightbox)
 
 4. 最后，选择要保存项目的位置 （和 （可选） 启用源代码管理）：
 
-    [ ![](installation-images/cycle8-8-sml.png "选择要保存项目的位置")](installation-images/cycle8-8.png)
+    [![](installation-images/cycle8-8-sml.png "选择要保存项目的位置")](installation-images/cycle8-8.png#lightbox)
 
 5. 适用于 Mac 的 visual Studio 会自动配置[项目引用和**Info.plist**设置](~/ios/watchos/get-started/project-references.md)为你。
 
@@ -81,11 +81,11 @@ Watch 应用由三个项目组成：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![](installation-images/iosdesigner-sml.png "情节提要设计器中")](installation-images/iosdesigner.png)
+[![](installation-images/iosdesigner-sml.png "情节提要设计器中")](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](installation-images/iosdesigner-sml-vs.png "情节提要设计器中")](installation-images/iosdesigner-vs.png)
+[![](installation-images/iosdesigner-sml-vs.png "情节提要设计器中")](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -152,7 +152,7 @@ Visual Studio 用户还可以使用 Xcode 若要通过切换要直接使用 Mac 
 安装 Xcode 8 （或更高版本） 后，Apple Watch 模拟器是分开 iOS 模拟器 (与不同[Xcode 6](#xcode6)，其中它们显示为*外部显示器*)。
 如果你选择监视应用程序项目，并且将其作为启动项目，将显示模拟器列表*iOS 模拟器*可供选择 （如下所示）。
 
-[ ![](installation-images/xs-xcode8-watchos3-sml.png "选择模拟器类型")](installation-images/xs-xcode8-watchos3.png)
+[![](installation-images/xs-xcode8-watchos3-sml.png "选择模拟器类型")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 当开始调试，*两个*模拟器应启动的 iOS 模拟器*和*Apple Watch 模拟器。 使用**命令 + Shift + H**导航到手表菜单和时钟表盘; 并使用**硬件**菜单设置**强制 Touch 压力**。 使用数字王冠模仿 trackpad 或鼠标上滚动。
 
@@ -195,13 +195,13 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 右键单击监视应用程序项目并选择**运行与 > 自定义配置...**:
 
 
-[![](installation-images/runwith-customparams-sml.png "运行自定义配置")](installation-images/runwith-customparams.png)
+[![](installation-images/runwith-customparams-sml.png "运行自定义配置")](installation-images/runwith-customparams.png#lightbox)
 
 
 这将打开**自定义参数**窗口可以在其中选择**通知**（和提供 JSON 负载），然后按**运行**在模拟器中启动监视应用程序：
 
 
-[![](installation-images/runwith-execargs-sml.png "设置通知和负载")](installation-images/runwith-execargs.png)
+[![](installation-images/runwith-execargs-sml.png "设置通知和负载")](installation-images/runwith-execargs.png#lightbox)
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1cc74fb30e59ecd5f6be3cf3e1c84f60cd5ca0a6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="source-lists"></a>源列表
 
@@ -22,7 +22,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。它介绍创
 
 源列表是操作的用于显示，如在查找工具或 iTunes 侧栏的源的大纲视图的特殊类型。
 
-[ ![](source-list-images/source05.png "示例源列表")](source-list-images/source05.png)
+[![](source-list-images/source05.png "示例源列表")](source-list-images/source05.png#lightbox)
 
 在本文中，我们将介绍使用源列表 Xamarin.Mac 应用程序中的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -50,7 +50,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。它介绍创
 
 首先，让我们创建一个新`SourceListItem`类以保存数据源列表。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`SourceListItem`为**名称**单击**新建**按钮：
 
-[ ![](source-list-images/source01.png "添加空类")](source-list-images/source01.png)
+[![](source-list-images/source01.png "添加空类")](source-list-images/source01.png#lightbox)
 
 请`SourceListItem.cs`文件外观如下所示： 
 
@@ -532,19 +532,19 @@ namespace MacOutlines
 
 现在，让我们设计界面生成器中我们源列表。 双击`Main.storyboard`文件以打开进行编辑接口生成器中并拖动拆分视图从**库检查器**、 将其添加到视图控制器和将其设置为与视图中调整大小**约束编辑器**:
 
-[ ![](source-list-images/source00.png "编辑约束")](source-list-images/source00.png)
+[![](source-list-images/source00.png "编辑约束")](source-list-images/source00.png#lightbox)
 
 接下来，将从源列表拖**库检查器**、 将其添加到左侧的拆分视图和将其设置为与视图中调整大小**约束编辑器**:
 
-[ ![](source-list-images/source02.png "编辑约束")](source-list-images/source02.png)
+[![](source-list-images/source02.png "编辑约束")](source-list-images/source02.png#lightbox)
 
 接下来，切换到**标识视图**，选择源列表中，并更改它的**类**到`SourceListView`:
 
-[ ![](source-list-images/source03.png "设置的类名称")](source-list-images/source03.png)
+[![](source-list-images/source03.png "设置的类名称")](source-list-images/source03.png#lightbox)
 
 最后，创建**Outlet**为名为我们的源列表`SourceList`中`ViewController.h`文件：
 
-[ ![](source-list-images/source04.png "配置上的电源插座")](source-list-images/source04.png)
+[![](source-list-images/source04.png "配置上的电源插座")](source-list-images/source04.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 如果我们运行我们的应用程序时，以下将显示：
 
-[ ![](source-list-images/source05.png "运行示例应用程序")](source-list-images/source05.png)
+[![](source-list-images/source05.png "运行示例应用程序")](source-list-images/source05.png#lightbox)
 
 <a name="Summary" />
 
@@ -628,7 +628,7 @@ public override void DidFinishLaunching (NSNotification notification)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [表视图](~/mac/user-interface/table-view.md)
 - [大纲视图](~/mac/user-interface/outline-view.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [介绍概述视图](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)

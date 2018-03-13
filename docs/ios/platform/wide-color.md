@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>广泛的颜色
 
@@ -38,19 +38,19 @@ Apple 已经进行了与硬件例如 Retina 显示、 新 P3 显示和显示 P3 
 
 颜色空间是在其中颜色可以表示和比较的环境。 它可以是由其颜色组件的强度一至四个维空间。 
 
-[ ![](wide-color-images/color00.png "颜色空间")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "颜色空间")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>颜色通道
 
 也可以作为颜色通道称为颜色组件。 某些熟悉的表示形式将 RGB 空间、 灰色空间、 CMYK 空间或设备独立空格。 
 
-[ ![](wide-color-images/color02.png "颜色组件可以也被称为颜色通道")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "颜色组件可以也被称为颜色通道")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>颜色主节点
 
 颜色主节点提供用于比较和计算颜色坐标系统。 颜色主节点通常位于在最高强度版本可以在颜色通道内生成的给定颜色。
 
-[ ![](wide-color-images/color01.png "颜色主节点提供用于比较和计算颜色坐标系统")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "颜色主节点提供用于比较和计算颜色坐标系统")](wide-color-images/color01.png#lightbox)
 
 对于上面表示 RGB 颜色空间，颜色主副本是 where`1.0`定位坐标 (如`[1.0, 0.0, 0.0]`红色)。
 
@@ -58,7 +58,7 @@ Apple 已经进行了与硬件例如 Retina 显示、 新 P3 显示和显示 P3 
 
 色域是指所有可以为给定颜色空间内各个颜色通道的组合定义的颜色。
 
-[ ![](wide-color-images/color03.png "颜色域示例")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "颜色域示例")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>什么是广泛的颜色
 
@@ -80,7 +80,7 @@ SRGB 颜色空间具有以下属性：
 
 在 2015 中，Apple 发布提供新的显示 P3 颜色空间来处理由 sRGB 颜色空间的问题的新产品 （iMac 和 iPad Pro 9.7"）。
 
-[ ![](wide-color-images/color04.png "新的显示 P3 颜色空间")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "新的显示 P3 颜色空间")](wide-color-images/color04.png#lightbox)
 
 显示 P3 颜色空间具有以下属性：
 
@@ -112,7 +112,7 @@ Apple，根据用户正在移动到其移动平台的工作流。 解决由 sRGB
 
 若要查看之外 0 和 1 的值中扩展范围 sRGB 颜色空间的工作原理，请执行下面的示例中显示 P3 颜色空间的饱和度最大红色的：
 
-[ ![](wide-color-images/color05.png "零，另一个之外的值中扩展范围 sRGB 颜色空间的工作原理")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "零，另一个之外的值中扩展范围 sRGB 颜色空间的工作原理")](wide-color-images/color05.png#lightbox)
 
 在显示 P3 此颜色将表示为`[1.0, 0.0, 0.0]`和中扩展范围 sRGB 会`[1.358, -0.074, -0.012]`。 因为 sRGB 值是完全内显示 P3 包含和显示 P3 值布局"外部"的 sRGB 范围。
 

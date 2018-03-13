@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 83ba2df0c50d37476ae5c06b4234cdc0ad063332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 174d1cf974c39420b932d494d5b28c62d7fd1eb1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -22,7 +22,7 @@ iOS 方面的代码签名和设置可能非常麻烦，因此务必要确保代�
 
 * 大型团队应避免在 Xcode 中使用“修复问题”按钮，如此处所示：
 
-    [![](troubleshooting-images/fixissue.png "“修复问题”对话框")](troubleshooting-images/fixissue.png)
+    [![](troubleshooting-images/fixissue.png "“修复问题”对话框")](troubleshooting-images/fixissue.png#lightbox)
 
     这会创建新的设置配置文件和证书。 在最好的情况下，这会在团队成员每次单击它时创建设置配置文件，从而导致配置文件杂乱无章。 在最坏的情况下，它会吊销公司中其他所有人的证书，从而导致其应用停止工作。
 

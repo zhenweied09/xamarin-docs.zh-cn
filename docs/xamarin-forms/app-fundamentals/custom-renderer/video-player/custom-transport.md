@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>自定义视频传输控件
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 因为`AutoPlay`设置为`false`中**CustomTransport.xaml**文件，你将需要按**播放**按钮时该订阅启用开始视频。 定义按钮，以便上文所述的 Unicode 字符都伴随着其文本等效项。 播放视频时，按钮在每个平台上具有一致的外观：
 
-[![自定义传输播放](custom-transport-images/customtransportplaying-small.png "自定义传输播放")](custom-transport-images/customtransportplaying-large.png "自定义传输播放")
+[![自定义传输播放](custom-transport-images/customtransportplaying-small.png "自定义传输播放")](custom-transport-images/customtransportplaying-large.png#lightbox "自定义传输播放")
 
 但在 Android 和 UWP 上,**播放**时暂停视频非常不同按钮的外观：
 
-[![自定义传输暂停](custom-transport-images/customtransportpaused-small.png "自定义传输暂停")](custom-transport-images/customtransportpaused-large.png "自定义传输暂停")
+[![自定义传输暂停](custom-transport-images/customtransportpaused-small.png "自定义传输暂停")](custom-transport-images/customtransportpaused-large.png#lightbox "自定义传输暂停")
 
 在生产应用程序中，你可能需要使用您自己的位图图像的按钮来完成 visual 一致性。
 

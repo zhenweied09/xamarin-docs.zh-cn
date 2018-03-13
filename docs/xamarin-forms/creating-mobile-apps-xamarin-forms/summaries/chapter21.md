@@ -3,14 +3,15 @@ title: "章 21 的摘要。 转换"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>章 21 的摘要。 转换
 
@@ -49,7 +50,7 @@ Xamarin.Forms 中的缩放是各向同性;统一它影响的宽度和高度。 �
 
 转换属性的一个常见用途是，因而轻微弥补文本的呈现。 此进行了演示[ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets)示例：
 
-[![文本的偏移量的三个屏幕截图](images/ch21fg03-small.png "文本偏移量")](images/ch21fg03-large.png "文本偏移量")
+[![文本的偏移量的三个屏幕截图](images/ch21fg03-small.png "文本偏移量")](images/ch21fg03-large.png#lightbox "文本偏移量")
 
 另一个作用是呈现的多个副本`Label`以类似于三维块，如所示[ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText)示例。
 
@@ -101,7 +102,7 @@ Xamarin.Forms 中的缩放是各向同性;统一它影响的宽度和高度。 �
 
 [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock)使用`BoxView`用于更广泛的图形，包括刻度标记围绕表面的时钟，并从其结束为，旋转的小距离：
 
-[![三重的字数时钟的屏幕截图](images/ch21fg17-small.png "模拟时钟表盘")](images/ch21fg17-large.png "模拟时钟表盘")
+[![三重的字数时钟的屏幕截图](images/ch21fg17-small.png "模拟时钟表盘")](images/ch21fg17-large.png#lightbox "模拟时钟表盘")
 
 此外[ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs)类**Xamarin.FormsBook.Toolkit**会导致第二个指针能够看上去像有点取回之前预先跳转，然后将移到其正确的位置。
 

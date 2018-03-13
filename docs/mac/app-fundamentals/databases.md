@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c3de0150bd34667a9310b796bf98a6bff6c07a67
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="databases"></a>数据库
 
@@ -27,7 +27,7 @@ _本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数�
 1. **直接访问**-通过直接访问一个 SQLite 数据库，我们可以使用从数据库的数据的键 / 值编码并在 Xcode 的接口生成器中创建数据绑定与 UI 元素。 通过使用键 / 值编码和数据绑定技术 Xamarin.Mac 应用程序中，你可以显著缩短您需要编写和维护填充和使用 UI 元素的代码量。 你还可以进一步分离你的备份数据的好处 (_数据模型_) 从你前面结束用户界面 (_模型-视图-控制器_)，从而导致易于维护更灵活的应用程序设计。
 2. **SQLite.NET ORM** -通过使用开放源代码[SQLite.NET](http://www.sqlite.org)对象关系管理器 (ORM)，我们可以极大地降低读取和写入数据从一个 SQLite 数据库所需的代码量。 然后可以使用此数据来填充用户界面项，如表视图。
 
-[![正在运行的应用程序示例](databases-images/intro01.png "正在运行的应用程序示例")](databases-images/intro01-large.png)
+[![正在运行的应用程序示例](databases-images/intro01.png "正在运行的应用程序示例")](databases-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍使用键值对的编码和使用 SQLite 数据库 Xamarin.Mac 应用程序中的数据绑定的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -52,7 +52,7 @@ _本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数�
 1. 在**解决方案 Pad**，右键单击**引用**文件夹，然后选择**编辑引用**。
 2. 选择这两个**Mono.Data.Sqlite**和**System.Data**程序集： 
 
-    [![添加所需的引用](databases-images/reference01.png "添加所需的引用")](databases-images/reference01-large.png)
+    [![添加所需的引用](databases-images/reference01.png "添加所需的引用")](databases-images/reference01-large.png#lightbox)
 3. 单击**确定**按钮以保存所做的更改并添加引用。
 
 ### <a name="modifying-the-data-model"></a>修改数据模型
@@ -1019,7 +1019,7 @@ _conn.Close ();
 
 例如，编辑在接口生成器中，上面的简单绑定示例添加一个组合框和公开它使用名为的电源插座`EmployeeSelector`:
 
-[![公开一个组合框插座](databases-images/combo01.png "公开一个组合框插座")](databases-images/combo01-large.png)
+[![公开一个组合框插座](databases-images/combo01.png "公开一个组合框插座")](databases-images/combo01-large.png#lightbox)
 
 在**属性检查器**，检查**Autocompletes**和**使用数据源**属性：
 
@@ -1924,7 +1924,7 @@ SQLite.NET 会显示为在你的应用程序中包含 NuGet 包。 我们可以�
 1. 在**解决方案 Pad**，右键单击**包**文件夹，然后选择**添加包...**
 2. 输入`SQLite.net`中**搜索框**和选择**sqlite net**条目：
 
-    [![将 SQLite NuGet 程序包添加](databases-images/nuget01.png "添加 SQLite NuGet 包")](databases-images/nuget01-large.png)
+    [![将 SQLite NuGet 程序包添加](databases-images/nuget01.png "添加 SQLite NuGet 包")](databases-images/nuget01-large.png#lightbox)
 3. 单击**添加包**按钮以完成。
 
 ### <a name="creating-the-data-model"></a>创建数据模型
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 作为用法示例，我们将添加到我们的 UI 在 Xcode 的接口生成器中的表视图。 我们将公开 outlet 通过此表视图 (`OccupationTable`) 以便我们可以通过 C# 代码中访问它：
 
-[![公开表视图 outlet](databases-images/table01.png "公开表视图插座")](databases-images/table01-large.png)
+[![公开表视图 outlet](databases-images/table01.png "公开表视图插座")](databases-images/table01-large.png#lightbox)
 
 接下来，我们将添加自定义的类，以填充此表 SQLite.NET 数据库中的数据。
 

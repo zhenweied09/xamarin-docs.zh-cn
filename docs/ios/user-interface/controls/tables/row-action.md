@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: e9d3e2eecd4c03e7b3046e1ad86dd8a0d70a7f73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-row-actions"></a>使用行操作
 
@@ -177,7 +177,7 @@ table.Delegate = tableDelegate;
 
 当在运行上面的代码并在一个表行上, 剩余用户刷**Hi**按钮才会显示而不是**删除**默认情况下显示的按钮：
 
-[ ![](row-action-images/action01.png "正在显示而不是删除按钮 Hi 按钮")](row-action-images/action01.png)
+[![](row-action-images/action01.png "正在显示而不是删除按钮 Hi 按钮")](row-action-images/action01.png#lightbox)
 
 如果用户点击**Hi**按钮，`Hello World!`将写出到 Visual Studio 中的控制台用于 Mac 或 Visual Studio 中调试模式下运行应用程序时。
 

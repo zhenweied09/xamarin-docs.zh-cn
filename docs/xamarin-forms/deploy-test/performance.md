@@ -8,19 +8,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b7b5093f9a564c0711ddc8a711f9b609d44e7dad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a750167cb9e6bde3a4a9abe11c5386497f9a12ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 性能
 
-_可以通过许多方法来提高使用 Xamarin.Forms 应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文介绍并讨论这些方法。_
+_可以通过许多方法来提高使用 Xamarin.Forms 应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文将介绍并讨论这些方法。_
 
-[ ![](performance-images/evolve-jason-perf-sml.png "使用 Xamarin.Forms 优化应用性能")](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+> [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
-[Evolve 2016：使用 Xamarin.Forms 优化应用性能](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+**Evolve 2016：使用 Xamarin.Forms 优化应用性能**
 
 ## <a name="overview"></a>概述
 
@@ -41,7 +41,7 @@ _可以通过许多方法来提高使用 Xamarin.Forms 应用程序的性能。�
 - [使用自定义呈现器模式](#rendererpattern)
 
 > [!NOTE]
->  阅读本文之前，首先应阅读[跨平台性能](~/cross-platform/deploy-test/memory-perf-best-practices.md)，其中讨论了可用于改善使用 Xamarin 平台生成的应用程序的内存使用情况和性能的非平台特定方法。
+>  阅读本文之前，首先应阅读[跨平台性能](~/cross-platform/deploy-test/memory-perf-best-practices.md)，其中讨论了非平台特定方法，可用于改善使用 Xamarin 平台生成的应用程序的内存使用情况和性能。
 
 <a name="xamlc" />
 

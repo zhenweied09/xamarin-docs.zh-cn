@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/16/2017
-ms.openlocfilehash: a95b49fa3f090339773233dada46a14e69c8bb43
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 798bb2b15534a620acbe76080e171af1a548ac25
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台细节
 
@@ -180,10 +180,10 @@ On<iOS>().SetUseSafeArea(true);
 
 结果为页面内容可以位于的区域，则可以对所有 Iphone 安全的屏幕：
 
-[![](ios-images/safe-area-layout.png "安全区域布局指南")](ios-images/safe-area-layout-large.png "安全区域布局指南")
+[![](ios-images/safe-area-layout.png "安全区域布局指南")](ios-images/safe-area-layout-large.png#lightbox "安全区域布局指南")
 
 > [!NOTE]
-> **请注意**： 由 Apple 定义的安全区域使用 Xamarin.Forms 中，来设置[ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/)属性，并且将重写此属性的任何以前已设置的值。
+> 由 Apple 定义的安全区域使用 Xamarin.Forms 中，来设置[ `Page.Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/)属性，并且将重写此属性的任何以前已设置的值。
 
 可以通过检索自定义安全区域其[ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/)值与`Page.SafeAreaInsets`方法从[ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.iOSSpecific/)命名空间。 然后可以作为修改它所需和重新分配给`Padding`页构造函数中的属性或[ `OnAppearing` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnAppearing()/)重写：
 
@@ -385,7 +385,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 结果是，指定`UpdateMode`应用于[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)，它可以控制项选择发生时：
 
-[![](ios-images/picker-updatemode.png "选取器 UpdateMode 特定于平台的")](ios-images/picker-updatemode-large.png "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "选取器 UpdateMode 特定于平台的")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
 
 <a name="set_status_bar_visibility" />
 
@@ -468,7 +468,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 结果是， [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/)可以禁用延迟接收内容收尾工作，因此，在这种情况下[ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/)接收笔势而不是[ `Detail`](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/)页[ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView 延迟内容涉及特定于平台的")](ios-images/scrollview-delay-content-touches-large.png "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView 延迟内容涉及特定于平台的")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
 ## <a name="summary"></a>摘要
 

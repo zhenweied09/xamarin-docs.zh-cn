@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: c28296af43f0091443eda0364fc0c28a938a7760
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2fb3133833dbaa0b174c4611d204f6c8ceb42a2b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridview"></a>GridView
 
@@ -145,11 +145,10 @@ public class ImageAdapter : BaseAdapter
 
 运行该应用程序。 网格布局应如下所示：
 
-[![示例屏幕快照显示 15 图像的 GridView](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png)
+[![示例屏幕快照显示 15 图像的 GridView](grid-view-images/helloviews4.png)](grid-view-images/helloviews4.png#lightbox)
 
 尝试试验的行为[ `GridView` ](https://developer.xamarin.com/api/type/Android.Widget.GridView/)和[ `ImageView` ](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)通过调整它们的属性的元素。 例如，而不是使用[ `LayoutParams` ](https://developer.xamarin.com/api/property/Android.Views.View.LayoutParameters/)请尝试使用[ `SetAdjustViewBounds()` ](https://developer.xamarin.com/api/member/Android.Widget.ImageView.SetAdjustViewBounds/)。
 
-<a name="References" />
 
 ## <a name="references"></a>参考资料
 

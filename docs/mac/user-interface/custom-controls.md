@@ -3,16 +3,16 @@ title: "创建自定义控件"
 description: "本文介绍如何创建自定义控件和在接口生成器中使用它们。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f3d6301bc2c0237a268669fff437801bfb2657d1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-custom-controls"></a>创建自定义控件
 
@@ -22,7 +22,7 @@ _本文介绍如何创建自定义控件和在接口生成器中使用它们。_
 
 尽管 macOS 提供了丰富的内置用户控件，则表明可能存在你需要创建自定义控件提供功能不提供现成可用，或以匹配 （如游戏的接口） 的自定义用户界面主题的时间。
 
-[ ![](custom-controls-images/intro01.png "自定义 UI 控件的示例")](custom-controls-images/intro01.png)
+[![](custom-controls-images/intro01.png "自定义 UI 控件的示例")](custom-controls-images/intro01.png#lightbox)
 
 在本文中，我们将介绍在 Xamarin.Mac 应用程序中创建可重用的自定义用户界面控件的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -50,7 +50,7 @@ _本文介绍如何创建自定义控件和在接口生成器中使用它们。_
 
 在适用于 Mac 的 Visual Studio，打开你想要创建的自定义用户界面控件 （或创建一个新） Xamarin.Mac 项目。 添加新类，并调用它`NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom01.png "添加新类")](custom-controls-images/custom01.png)
+[![](custom-controls-images/custom01.png "添加新类")](custom-controls-images/custom01.png#lightbox)
 
 接下来，编辑`NSFlipSwitch.cs`类并使其如下所示：
 
@@ -336,19 +336,19 @@ if (this.Action !=null)
 
 若要添加使用接口生成器的控件，首先执行干净的生成的 Xamarin.Mac 项目，然后双击`Main.storyboard`文件以在接口生成器中将其打开，以进行编辑：
 
-[ ![](custom-controls-images/custom02.png "编辑在 Xcode 中的情节提要")](custom-controls-images/custom02.png)
+[![](custom-controls-images/custom02.png "编辑在 Xcode 中的情节提要")](custom-controls-images/custom02.png#lightbox)
 
 接下来，拖动`Custom View`在用户界面设计：
 
-[ ![](custom-controls-images/custom03.png "从库中选择的自定义视图")](custom-controls-images/custom03.png)
+[![](custom-controls-images/custom03.png "从库中选择的自定义视图")](custom-controls-images/custom03.png#lightbox)
 
 使用自定义视图仍处于选中状态，切换到**标识检查器**和更改视图的**类**到`NSFlipSwitch`:
 
-[ ![](custom-controls-images/custom04.png "设置视图的类")](custom-controls-images/custom04.png)
+[![](custom-controls-images/custom04.png "设置视图的类")](custom-controls-images/custom04.png#lightbox)
 
 切换到**助手编辑器中**并创建**Outlet**为自定义控件 (同时确保绑定在`ViewControler.h`文件而不`.m`文件):
 
-[ ![](custom-controls-images/custom05.png "配置新插座")](custom-controls-images/custom05.png)
+[![](custom-controls-images/custom05.png "配置新插座")](custom-controls-images/custom05.png#lightbox)
 
 保存所做的更改，返回到 Visual Studio for Mac 并允许更改同步。编辑`ViewController.cs`文件并进行`ViewDidLoad`方法外观如下所示：
 
@@ -369,7 +369,7 @@ public override void ViewDidLoad ()
 
 或者，我们无法返回到接口生成器，并定义**操作**在控件上：
 
-[ ![](custom-controls-images/custom06.png "配置新的操作")](custom-controls-images/custom06.png)
+[![](custom-controls-images/custom06.png "配置新的操作")](custom-controls-images/custom06.png#lightbox)
 
 同样，编辑`ViewController.cs`文件并添加以下方法：
 
@@ -394,5 +394,5 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 - [MacCustomControl （示例）](https://developer.xamarin.com/samples/mac/MacCustomControl/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [数据绑定和键值编码](~/mac/app-fundamentals/databinding.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [处理鼠标事件](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/EventOverview/HandlingMouseEvents/HandlingMouseEvents.html)

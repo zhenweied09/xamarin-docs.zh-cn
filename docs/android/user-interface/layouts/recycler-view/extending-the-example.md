@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: de4683ca660224aa3cf17398ac649086b7e4ad88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6c0f2b92b34ce4d446e51b0aafa56f6283701dd1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="extending-the-recyclerview-example"></a>扩展 RecyclerView 示例
 
 
 基本应用程序中所述[基本 RecyclerView 示例](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)实际上并未执行其他操作&ndash;它只需滚动，并显示照片项，以便浏览的固定的列表。 在实际应用程序，用户希望能够通过点击中显示的项与应用程序进行交互。 此外，可以更改基础数据源 （或应用程序通过更改），以及显示的内容必须保持与这些更改相一致。 在以下部分中，你将了解如何处理项单击事件和更新`RecyclerView`当基础数据源发生更改。
 
-<a name="itemclick" />
 
 ### <a name="handling-item-click-events"></a>处理项单击事件
 
@@ -91,7 +90,7 @@ PhotoViewHolder vh = new PhotoViewHolder (itemView, OnClick);
 
 现在当生成和运行示例照片查看应用，点击在显示照片将导致显示报表的照片已接触 toast:
 
-[ ![点击照片卡时，将显示的示例 Toast](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png)
+[![点击照片卡时，将显示的示例 Toast](extending-the-example-images/01-photo-selected-sml.png)](extending-the-example-images/01-photo-selected.png#lightbox)
 
 此示例演示用于实现事件处理程序替换的只是一种方法`RecyclerView`。 无法在此处使用的另一种方法是将事件放在视图持有者并让订阅这些事件的适配器。 如果示例照片应用程序提供编辑功能的照片，单独的事件所需`ImageView`和`TextView`在每个`CardView`： 涉及`TextView`将会启动`EditView`使用户可以编辑的对话框标题和上的收尾工作`ImageView`将会启动允许用户裁剪或旋转照片的照片修饰工具。 根据你的应用程序的需求，则必须设计用于处理和响应触控事件的最佳做法。
 
@@ -159,7 +158,7 @@ randomPickBtn.Click += delegate
 
 现在，当**随机选取**点击按钮，`RecyclerView`更新显示器以显示，照片进一步向下集合中已换用与集合中第一张照片：
 
-[ ![交换之后, 的第二个屏幕快照前的第一个屏幕截图](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png)
+[![交换之后, 的第二个屏幕快照前的第一个屏幕截图](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 当然，`NotifyDataSetChanged`无法调用而不是进行两次调用`NotifyItemChanged`，但这样做因此将强制`RecyclerView`刷新整个集合，即使更改了集合中的只有两个项。 调用`NotifyItemChanged`显著比调用效率更高`NotifyDataSetChanged`。
 

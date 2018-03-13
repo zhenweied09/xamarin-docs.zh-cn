@@ -3,16 +3,16 @@ title: "在 Android 应用程序链接"
 description: "本指南将讨论如何 Android 6.0 支持应用程序的链接，该技术允许移动应用以响应在网站上的 Url。 它将讨论什么应用链接是一种、 如何实现应用程序链接，在 Android 6.0 应用程序，以及如何配置网站以向移动应用程序域授予权限。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>在 Android 应用程序链接
 
@@ -84,7 +84,7 @@ Android 将验证由针对网站上的数字资产文件的意向筛选器之前
 应用程序链接的 android 6.0 需要 Android 验证在对 uri 设置的默认处理程序的应用程序前应用程序和网站之间的关联。 首次安装应用程序时，将发生此验证。 *数字资产链接*文件是由相关 webdomain(s) 承载的 JSON 文件。
 
 > [!NOTE]
-> **注意：** `android:autoVerify`属性必须设置意向的筛选器&ndash;否则 Android 将不会执行验证。
+> `android:autoVerify`属性必须设置意向的筛选器&ndash;否则 Android 将不会执行验证。
 
 该文件位于域中的位置的网络管理员通过**https://domain/.well-known/assetlinks.json**。
 

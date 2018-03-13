@@ -4,14 +4,15 @@ description: "对特定区域，并创建区域使用剪辑图形路径"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: b1c5b64725a163e15f07d2aecaea4e56b7ecec2e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>使用路径和区域的剪辑
 
@@ -98,7 +99,7 @@ canvas.ClipPath(keyholePath);
 
 `PaintSurface`处理程序会通过调用转换将重置`ResetMatrix`和绘制位图，以将扩展到屏幕的最大高度。 此代码假定将位图是方形，这是此特定的位图。 仅在由剪切路径定义的区域中呈现位图：
 
-[![](clipping-images/monkeythroughkeyhole-small.png "通过锁眼页 Monkey 的三个屏幕截图")](clipping-images/monkeythroughkeyhole-large.png "通过锁眼页 Monkey 的三个屏幕截图")
+[![](clipping-images/monkeythroughkeyhole-small.png "通过锁眼页 Monkey 的三个屏幕截图")](clipping-images/monkeythroughkeyhole-large.png#lightbox "通过锁眼页 Monkey 的三个屏幕截图")
 
 剪切路径是进行转换生效时`ClipPath`方法被调用，并且不到转换生效时图形 （如位图） 将显示一个对象。 剪切路径是使用保存的画布状态的一部分`Save`方法和还原与`Restore`方法。
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 剩下的是这些四个圆圈的交集：
 
-[![](clipping-images//fourcircleintersectclip-small.png "三重的四个圆相交剪辑页的屏幕截图")](clipping-images/fourcircleintersectclip-large.png "三倍的四个圆相交剪辑页面屏幕截图")
+[![](clipping-images//fourcircleintersectclip-small.png "三重的四个圆相交剪辑页的屏幕截图")](clipping-images/fourcircleintersectclip-large.png#lightbox "三倍的四个圆相交剪辑页面屏幕截图")
 
 [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/)枚举具有只有两个成员：
 
@@ -175,13 +176,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如果替换包含四个`SKClipOperation.Intersect`中的自变量`FourCircleIntersectClipPage`类，该类具有`SKClipOperation.Difference`，你将看到以下：
 
-[![](clipping-images//fourcircledifferenceclip-small.png "三重的差值运算的四个圆相交剪辑页的屏幕截图")](clipping-images/fourcircledifferenceclip-large.png "三重的差值运算的四个圆相交剪辑页的屏幕截图")
+[![](clipping-images//fourcircledifferenceclip-small.png "三重的差值运算的四个圆相交剪辑页的屏幕截图")](clipping-images/fourcircledifferenceclip-large.png#lightbox "三重的差值运算的四个圆相交剪辑页的屏幕截图")
 
 已从剪辑区域删除四个重叠圆圈。
 
 **剪辑操作**页演示使用刚刚圆圈一对这两个操作之间的差异。 在左侧的第一个圆圈将添加到与默认剪辑操作的剪辑区域`Intersect`，而第二个圆右侧将添加到剪辑区域与剪辑操作由文本标签指示：
 
-[![](clipping-images//clipoperations-small.png "三重的剪辑操作页面的屏幕截图")](clipping-images/clipoperations-large.png "三倍的剪辑操作页面的屏幕截图")
+[![](clipping-images//clipoperations-small.png "三重的剪辑操作页面的屏幕截图")](clipping-images/clipoperations-large.png#lightbox "三倍的剪辑操作页面的屏幕截图")
 
 [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs)类定义了两个`SKPaint`对象，以作为字段，，然后将屏幕分成两个矩形区域。 这些区域是电话是否处于纵向或横向朝模式而异。 `DisplayClipOp`类然后显示的文本和调用`ClipPath`的两个圆路径来演示每个剪辑操作：
 
@@ -282,7 +283,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 下面的屏幕截图显示六个区域操作所基于的剪辑区域。 左的 circle 是区域的`Op`调用方法和右圆圈是传递到的区域`Op`方法：
 
-[![](clipping-images//regionoperations-small.png "三重的区域操作页面的屏幕截图")](clipping-images/regionoperations-large.png "三倍的区域操作页面的屏幕截图")
+[![](clipping-images//regionoperations-small.png "三重的区域操作页面的屏幕截图")](clipping-images/regionoperations-large.png#lightbox "三倍的区域操作页面的屏幕截图")
 
 这些所有可能的匹配项的组合这些两个圆？ 考虑为它们的本身中所示的三个组件组合生成的图像`Difference`， `Intersect`，和`ReverseDifference`操作。 第三个次幂，两个或八个，组合的总数目。 缺少两个是原始的区域 (这将导致从不调用`Op`根本) 和完全空白区域。
 
@@ -423,7 +424,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `DrawRegion`调用填充橙色，区域时`DrawPath`调用中比较的蓝色描边的原始路径：
 
-[![](clipping-images//regionpaint-small.png "三重的区域绘制页的屏幕截图")](clipping-images/regionpaint-large.png "区域绘制页面的三个屏幕截图")
+[![](clipping-images//regionpaint-small.png "三重的区域绘制页的屏幕截图")](clipping-images/regionpaint-large.png#lightbox "区域绘制页面的三个屏幕截图")
 
 区域是离散的坐标的一系列操作。
 
@@ -509,7 +510,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 它实际上看上去不像四个-叶与苜蓿，但它是不可能很难会不经剪辑呈现的图像：
 
-[![](clipping-images//fourleafclover-small.png "三重的四个-叶与苜蓿页面屏幕截图")](clipping-images/fourleafclover-large.png "三倍的四个-叶与苜蓿页面屏幕截图")
+[![](clipping-images//fourleafclover-small.png "三重的四个-叶与苜蓿页面屏幕截图")](clipping-images/fourleafclover-large.png#lightbox "三倍的四个-叶与苜蓿页面屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

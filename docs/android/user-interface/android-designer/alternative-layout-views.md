@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: f6884260315f8846720370c558f7435d2c5a9d91
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c2df60a79ea3b5a0ff226cfaade0440db13fd5ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternative-layout-views"></a>替代的版式视图
 
 _本主题说明如何布局可以进行版本管理使用的资源限定符。例如，可以有仅使用该设备时在横向模式中的布局的版本和仅适用于纵向模式的布局版本。_
 
-<a name="creating_alternative_layouts" />
 
 ## <a name="creating-alternative-layouts"></a>创建其他布局
 
@@ -26,11 +25,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![备用布局视图窗格中](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "备用布局视图窗格中")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png)
+[![备用布局视图窗格中](alternative-layout-views-images/vs/01-alt-layout-view-pane-sml.png "备用布局视图窗格中")](alternative-layout-views-images/vs/01-alt-layout-view-pane.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![备用布局视图窗格中](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png)
+[![备用布局视图窗格中](alternative-layout-views-images/xs/01-alt-layout-view-pane-sml.png)](alternative-layout-views-images/xs/01-alt-layout-view-pane.png#lightbox)
 
 -----
 
@@ -38,11 +37,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![创建布局变体](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "创建布局变体")](alternative-layout-views-images/vs/02-create-layout-variation.png)
+[![创建布局变体](alternative-layout-views-images/vs/02-create-layout-variation-sml.png "创建布局变体")](alternative-layout-views-images/vs/02-create-layout-variation.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![创建布局变体](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png)
+[![创建布局变体](alternative-layout-views-images/xs/02-create-layout-variation-sml.png)](alternative-layout-views-images/xs/02-create-layout-variation.png#lightbox)
 
 -----
 
@@ -51,11 +50,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![大型上关于领土变体](alternative-layout-views-images/vs/03-large-land-sml.png "大上关于领土变体")](alternative-layout-views-images/vs/03-large-land.png)
+[![大型上关于领土变体](alternative-layout-views-images/vs/03-large-land-sml.png "大上关于领土变体")](alternative-layout-views-images/vs/03-large-land.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![大型上关于领土变体](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png)
+[![大型上关于领土变体](alternative-layout-views-images/xs/03-large-land-sml.png)](alternative-layout-views-images/xs/03-large-land.png#lightbox)
 
 -----
 
@@ -64,16 +63,15 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![加载的布局指示器](alternative-layout-views-images/vs/04-new-layout-sml.png "加载的布局指示器")](alternative-layout-views-images/vs/04-new-layout.png)
+[![加载的布局指示器](alternative-layout-views-images/vs/04-new-layout-sml.png "加载的布局指示器")](alternative-layout-views-images/vs/04-new-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![加载的布局指示器](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png)
+[![加载的布局指示器](alternative-layout-views-images/xs/04-new-layout-sml.png)](alternative-layout-views-images/xs/04-new-layout.png#lightbox)
 
 -----
 
 
-<a name="editing_alternative_layouts" />
 
 ## <a name="editing-alternative-layouts"></a>编辑其他布局
 
@@ -83,11 +81,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![多编辑图标](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "多编辑图标")](alternative-layout-views-images/vs/05-multi-layout-icon.png)
+[![多编辑图标](alternative-layout-views-images/vs/05-multi-layout-icon-sml.png "多编辑图标")](alternative-layout-views-images/vs/05-multi-layout-icon.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![多编辑图标](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png)
+[![多编辑图标](alternative-layout-views-images/xs/05-multi-layout-icon-sml.png)](alternative-layout-views-images/xs/05-multi-layout-icon.png#lightbox)
 
 -----
 
@@ -96,11 +94,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![取消链接所有布局](alternative-layout-views-images/vs/06-multi-linked-sml.png "取消都链接所有布局")](alternative-layout-views-images/vs/06-multi-linked.png)
+[![取消链接所有布局](alternative-layout-views-images/vs/06-multi-linked-sml.png "取消都链接所有布局")](alternative-layout-views-images/vs/06-multi-linked.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![取消链接所有布局](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png)
+[![取消链接所有布局](alternative-layout-views-images/xs/06a-linked-sml.png)](alternative-layout-views-images/xs/06a-linked.png#lightbox)
 
 -----
 
@@ -109,11 +107,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![取消链接中间布局](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "取消链接中间布局")](alternative-layout-views-images/vs/07-unlink-middle-layout.png)
+[![取消链接中间布局](alternative-layout-views-images/vs/07-unlink-middle-layout-sml.png "取消链接中间布局")](alternative-layout-views-images/vs/07-unlink-middle-layout.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![取消链接中间布局](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png)
+[![取消链接中间布局](alternative-layout-views-images/xs/06b-multi-linked-sml.png)](alternative-layout-views-images/xs/06b-multi-linked.png#lightbox)
  
 -----
  
@@ -121,7 +119,6 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 在此示例中，进行更改为**默认**或**长**布局将传播到其他布局而不适用于**大型上关于领土**布局。 
 
 
-<a name="multi_edit_example" />
 
 ### <a name="multi-edit-example"></a>多编辑示例 
 
@@ -129,11 +126,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![添加 TextView](alternative-layout-views-images/vs/08-add-textview-sml.png "添加 TextView")](alternative-layout-views-images/vs/08-add-textview.png)
+[![添加 TextView](alternative-layout-views-images/vs/08-add-textview-sml.png "添加 TextView")](alternative-layout-views-images/vs/08-add-textview.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![添加 TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png)
+[![添加 TextView](alternative-layout-views-images/xs/07-add-textview-sml.png)](alternative-layout-views-images/xs/07-add-textview.png#lightbox)
  
 -----
  
@@ -142,11 +139,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![横向 TextView](alternative-layout-views-images/vs/09-landscape-textview-sml.png "横向 TextView")](alternative-layout-views-images/vs/09-landscape-textview.png)
+[![横向 TextView](alternative-layout-views-images/vs/09-landscape-textview-sml.png "横向 TextView")](alternative-layout-views-images/vs/09-landscape-textview.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![横向 TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png)
+[![横向 TextView](alternative-layout-views-images/xs/08-landscape-textview-sml.png)](alternative-layout-views-images/xs/08-landscape-textview.png#lightbox)
  
 -----
  
@@ -154,7 +151,6 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 但如果你想要进行本地到只有一种布局更改 （即，您不希望更改传播到任何其他布局）？ 若要执行此操作，必须取消链接你想要更改之前对其进行修改，如下所述的布局。 
 
 
-<a name="making_local_changes" />
 
 ### <a name="making-local-changes"></a>进行本地更改 
 
@@ -162,11 +158,11 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![本地更改](alternative-layout-views-images/vs/10-local-change-sml.png "本地更改")](alternative-layout-views-images/vs/10-local-change.png)
+[![本地更改](alternative-layout-views-images/vs/10-local-change-sml.png "本地更改")](alternative-layout-views-images/vs/10-local-change.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![本地更改](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png)
+[![本地更改](alternative-layout-views-images/xs/09-local-change-sml.png)](alternative-layout-views-images/xs/09-local-change.png#lightbox)
  
 -----
  
@@ -174,7 +170,6 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 当你单击**默认**布局，以查看它，`TextView`仍将文本字符串设置为`Portrait`。 
 
 
-<a name="handling_conflicts" />
 
 ## <a name="handling-conflicts"></a>处理冲突 
 
@@ -182,22 +177,21 @@ _本主题说明如何布局可以进行版本管理使用的资源限定符。�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![冲突更改](alternative-layout-views-images/vs/11-conflicting-change-sml.png "冲突更改")](alternative-layout-views-images/vs/11-conflicting-change.png)
+[![冲突更改](alternative-layout-views-images/vs/11-conflicting-change-sml.png "冲突更改")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![冲突的更改](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png)
+[![冲突的更改](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
  
 -----
  
 
 A*冲突框*显示右侧的小组件以解释冲突： 
 
-[ ![冲突警告](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png)
+[![冲突警告](alternative-layout-views-images/xs/11-warning-sml.png)](alternative-layout-views-images/xs/11-warning.png#lightbox)
 
 冲突框中显示的已更改的属性的列表，并列出它们的值。 单击**忽略冲突**属性更改仅适用于此小组件。 单击**应用**适用于此小组件以及有关对应项小组件中链接的属性更改**默认**布局。 如果应用所有属性更改，将自动丢弃冲突。 
 
-<a name="view_group_conflicts" />
 
 ### <a name="view-group-conflicts"></a>查看组冲突 
 
@@ -205,11 +199,11 @@ A*冲突框*显示右侧的小组件以解释冲突：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![查看组冲突](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "查看组冲突")](alternative-layout-views-images/vs/12-view-group-conflict.png)
+[![查看组冲突](alternative-layout-views-images/vs/12-view-group-conflict-sml.png "查看组冲突")](alternative-layout-views-images/vs/12-view-group-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![视图组冲突](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png)
+[![视图组冲突](alternative-layout-views-images/xs/12-view-group-conflict-sml.png)](alternative-layout-views-images/xs/12-view-group-conflict.png#lightbox)
  
 -----
  
@@ -220,11 +214,11 @@ A*冲突框*显示右侧的小组件以解释冲突：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![复选框冲突](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "复选框冲突")](alternative-layout-views-images/vs/13-checkbox-conflict.png)
+[![复选框冲突](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "复选框冲突")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![复选框冲突](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png)
+[![复选框冲突](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
 -----
  
@@ -233,18 +227,18 @@ A*冲突框*显示右侧的小组件以解释冲突：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Alt 布局冲突](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt 布局冲突")](alternative-layout-views-images/vs/14-alt-layout-conflict.png)
+[![Alt 布局冲突](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "Alt 布局冲突")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![Alt 布局冲突](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png)
+[![Alt 布局冲突](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  
 -----
  
 
 此外，冲突框中显示以下消息：
 
-[ ![冲突消息](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png)
+[![冲突消息](alternative-layout-views-images/xs/15-conflict-message-sml.png)](alternative-layout-views-images/xs/15-conflict-message.png#lightbox)
 
 添加`CheckBox`导致冲突，因为**大型上关于领土**布局有更改`LinearLayout`包含它。 但是，在这种情况下冲突框中显示为刚插入到该小组件时，才**默认**布局 ( `CheckBox`)。
 
@@ -252,11 +246,11 @@ A*冲突框*显示右侧的小组件以解释冲突：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![解析组冲突](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "解析组冲突")](alternative-layout-views-images/vs/15-resolved-group-conflict.png)
+[![解析组冲突](alternative-layout-views-images/vs/15-resolved-group-conflict-sml.png "解析组冲突")](alternative-layout-views-images/vs/15-resolved-group-conflict.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![解析组冲突](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png)
+[![解析组冲突](alternative-layout-views-images/xs/16-resolved-group-conflict-sml.png)](alternative-layout-views-images/xs/16-resolved-group-conflict.png#lightbox)
  
 -----
  
@@ -264,7 +258,6 @@ A*冲突框*显示右侧的小组件以解释冲突：
 与前面的示例中所示`Button`、`CheckBox`没有红色更改标记，因为仅`LinearLayout`具有中应用的更改**大型上关于领土**布局。
 
 
-<a name="Conflict_Persistence" />
 
 ### <a name="conflict-persistence"></a>冲突持久性
 

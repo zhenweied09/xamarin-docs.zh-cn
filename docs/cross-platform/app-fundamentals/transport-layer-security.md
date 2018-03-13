@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/10/2017
-ms.openlocfilehash: 5237ed35116e5f8983df579d0ab68363996fb06f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0f205c5ab2c65f0e2a99f912f3961f12a4f2b7a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transport-layer-security-tls"></a>传输层安全性 (TLS)
 
@@ -41,12 +41,12 @@ TLS 1.2 支持现已在提供:
 
 这些设置可在**项目选项 > Android 选项**，然后单击**高级**按钮： 
 
-[![在 Visual Studio 中配置 HttpClient 和 TLS](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png)
+[![在 Visual Studio 中配置 HttpClient 和 TLS](transport-layer-security-images/properties-vs-sml.png)](transport-layer-security-images/properties-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 这些设置可在**项目属性 > 生成选项 > 高级**选项卡：
 
-[![在 Xamarin Studio 和 Visual Studio 中配置 HttpClient 和 TLS，适用于 Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png)
+[![在 Xamarin Studio 和 Visual Studio 中配置 HttpClient 和 TLS，适用于 Mac](transport-layer-security-images/properties-xs-sml.png)](transport-layer-security-images/properties-xs.png#lightbox)
 
 -----
 
@@ -79,7 +79,7 @@ Xamarin 开发人员始终都可以在其代码中使用的本机网络类，但
 >
 > 建议使用本机选项。
 
-# <a name="platform-specific-details"></a>特定于平台的详细信息
+## <a name="platform-specific-details"></a>特定于平台的详细信息
 
 上述摘要说明 HttpClient 和 SSL/TLS 实现 Xamarin 项目中的项目级别设置。 HttpClient 实现也可以设置动态在代码中，并在 iOS 上有两个本机选项可供选择。
 
@@ -87,7 +87,7 @@ Xamarin 开发人员始终都可以在其代码中使用的本机网络类，但
 - [**iOS 和 Mac**](~/cross-platform/macios/http-stack.md)
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>摘要
 
 只要有可能，应用程序应使用传输层安全 (TLS) 1.2。
 新应用现在默认为此配置，但你可能需要更新现有应用程序根据本文中的说明中的设置。

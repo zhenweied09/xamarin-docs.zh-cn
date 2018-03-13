@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3b862f03a81364594f33d82ebf02d75440d7bc4c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5d64c7c1dbc502acd3876c2442f9bae1c46eeb74
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>使用 Azure Active Directory B2C 的用户进行身份验证
 
@@ -21,7 +21,7 @@ _Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的�
 ![](~/media/shared/preview.png "此 API 已当前预发行版")
 
 > [!NOTE]
-> **请注意**: [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client)仍为预览版，但适合在生产环境中使用。 但是，那里可能重大更改对 API、 内部缓存格式和库中，这可能会影响你的应用程序的其他机制。
+> [Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client)仍为预览版，但适合在生产环境中使用。 但是，那里可能重大更改对 API、 内部缓存格式和库中，这可能会影响你的应用程序的其他机制。
 
 ## <a name="overview"></a>概述
 
@@ -38,12 +38,12 @@ Azure Active Directory B2C 是标识管理服务面向使用者的应用程序�
 1. 使用[Microsoft 身份验证库](https://www.nuget.org/packages/Microsoft.Identity.Client)(MSAL) 移动应用程序与 Azure Active Directory B2C 租户中启动的身份验证工作流中。
 
 > [!NOTE]
-> **请注意**： 将 Azure Active Directory B2C 标识管理集成到移动应用程序，以及 MSAL 还可用来将 Azure Active Directory 标识管理集成到移动应用程序。 这可以通过向 Azure Active Directory 在注册的移动应用程序来实现[应用程序注册门户](https://apps.dev.microsoft.com/)。 注册过程将分配**应用程序 ID**唯一标识你的应用程序，应使用 MSAL 时指定。 有关详细信息，请参阅[如何注册应用程序与 v2.0 终结点](/azure/active-directory/develop/active-directory-v2-app-registration/)，和[进行身份验证你移动应用程序使用 Microsoft 身份验证库](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/)Xamarin 博客上。
+> 将 Azure Active Directory B2C 标识管理集成到移动应用程序，以及 MSAL 还可将 Azure Active Directory 标识管理集成到移动应用程序。 这可以通过向 Azure Active Directory 在注册的移动应用程序来实现[应用程序注册门户](https://apps.dev.microsoft.com/)。 注册过程将分配**应用程序 ID**唯一标识你的应用程序，应使用 MSAL 时指定。 有关详细信息，请参阅[如何注册应用程序与 v2.0 终结点](/azure/active-directory/develop/active-directory-v2-app-registration/)，和[进行身份验证你移动应用程序使用 Microsoft 身份验证库](https://blog.xamarin.com/authenticate-mobile-apps-using-microsoft-authentication-library/)Xamarin 博客上。
 
 MSAL 使用设备的 web 浏览器来执行身份验证。 这提高了应用程序的可用性，因为用户仅需要在登录后每台设备，提高转换率的登录和授权流应用程序中。 设备浏览器还提供了改进的安全性。 用户完成身份验证过程后，控件将从 web 浏览器选项卡，返回到应用程序。这被通过从身份验证过程中，然后检测并处理自定义的 URL，它发送后返回的重定向 URL 注册自定义的 URL 方案。 有关选择自定义的 URL 方案的详细信息，请参阅[选择本机应用程序重定向 URI](/azure/active-directory-b2c/active-directory-b2c-app-registration#choosing-a-native-app-redirect-uri/)。
 
 > [!NOTE]
-> **请注意**： 向操作系统注册自定义的 URL 方案和处理方案的机制是特定于每个平台。
+> 向操作系统注册自定义的 URL 方案和处理方案的机制是特定于每个平台。
 
 每个请求发送到 Azure Active Directory B2C 租户指定*策略*。 策略描述了使用者标识体验，如注册，或在登录。 例如，注册策略可让 Azure Active Directory B2C 租户通过以下设置来配置的行为：
 
@@ -127,7 +127,7 @@ namespace TodoAzure.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
             LoadApplication(new App());
-            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
+            App.UiParent = new UIParent(this);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

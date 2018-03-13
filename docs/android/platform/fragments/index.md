@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 0486b9e4371a1bcab02921da42bcb929f00a782f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fragments"></a>片段
 
@@ -28,13 +28,13 @@ _Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的�
 
 例如下, 图显示了单个应用程序如何使用跨不同设备的外形因素的片段。
 
-[![如何在平板电脑和手机使用片段的关系图](images/00.png)](images/00.png)
+[![如何在平板电脑和手机使用片段的关系图](images/00.png)](images/00.png#lightbox)
 
 *片段 A*包含列表，而*片段 B*包含该列表中选定的项的详细信息。 当平板电脑上运行应用程序时，它可以在同一个活动上显示两个片段。 当同一个应用程序运行 （使用其较小的屏幕大小） 手持设备上时，两个单独的活动中托管片段。 片段 A 和片段 B 上都相同这两种外形因素，但将其托管的活动不同。
 
 为了帮助协调和管理所有这些片段的活动，Android，引入了新的类称为*FragmentManager*。 每个活动具有自己的实例`FragmentManager`用于添加、 删除和查找承载片段。 下图说明了片段和活动之间的关系：
 
-[![图示活动、 片段管理器中和片段之间的关系](images/01.png)](images/01.png)
+[![图示活动、 片段管理器中和片段之间的关系](images/01.png)](images/01.png#lightbox)
 
 在某些方面，片段可以认为是作为复合控件或迷你活动。 它们捆绑到可重用由在活动中的开发人员然后可单独使用的模块的部分 UI 向上。 片段不必查看层次结构，就像活动-但与不同的是一项活动，它可以共享跨屏幕。 视图与不同片段，片段具有其自己的生命周期;视图不希望这样做。
 
@@ -51,11 +51,11 @@ _Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的�
 
 片段位于 Android SDK 开头 API 级别 11 (Android 3.0)，如下面的屏幕截图中所示：
 
-[![选择在 Android SDK 管理器中的 API 级别](images/02.png)](images/02.png)
+[![选择在 Android SDK 管理器中的 API 级别](images/02.png)](images/02.png#lightbox)
 
 片段是位于 Xamarin.Android 4.0 和更高版本。 Xamarin.Android 应用程序必须至少为目标 API 级别 11 (Android 3.0) 或更高版本才能使用片段。 可能的项目选项中设置目标框架，如下所示：
 
-[![在项目选项中设置的目标框架 API 级别](images/03.png)](images/03.png)
+[![在项目选项中设置的目标框架 API 级别](images/03.png)](images/03.png#lightbox)
 
 很可能要在较旧版本的 Android 通过使用 Android 的支持包和 Xamarin.Android 4.2 或更高版本中使用片段。 在本部分文档中的更详细地介绍了如何执行此操作。
 

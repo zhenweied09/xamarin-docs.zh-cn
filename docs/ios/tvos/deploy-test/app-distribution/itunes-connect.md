@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5db53bef0f62937f7be0a5e5fb6f64f1bf3ca007
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>在 iTunes Connect 中配置你 tvOS 应用
 
@@ -39,11 +39,11 @@ _本文提供了 iOS 配置你的应用在 iTunes Connect tvOS 特定配置中�
 
 所有完成上述步骤中，打开你的应用，iTunes Connect 记录并选择添加 tvOS 支持使用左下侧栏：
 
-[ ![](itunes-connect-images/connect01.png "添加使用左下侧栏 tvOS 支持")](itunes-connect-images/connect01.png)
+[![](itunes-connect-images/connect01.png "添加使用左下侧栏 tvOS 支持")](itunes-connect-images/connect01.png#lightbox)
 
 TvOS 的特定信息屏幕然后将可供给定 iTunes Connect 记录：
 
-[ ![](itunes-connect-images/connect02.png "TvOS 的特定信息屏幕")](itunes-connect-images/connect02.png)
+[![](itunes-connect-images/connect02.png "TvOS 的特定信息屏幕")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -51,7 +51,7 @@ TvOS 的特定信息屏幕然后将可供给定 iTunes Connect 记录：
 
 从左侧栏中，选择**1.0 准备提交**tvOS 应用部分下：
 
-[ ![](itunes-connect-images/connect03.png "tvOS 版本信息")](itunes-connect-images/connect03.png)
+[![](itunes-connect-images/connect03.png "tvOS 版本信息")](itunes-connect-images/connect03.png#lightbox)
 
 在此屏幕上提供以下信息：
 
@@ -63,7 +63,7 @@ TvOS 的特定信息屏幕然后将可供给定 iTunes Connect 记录：
 
 输入所需的信息后, 单击**保存**中以保存所做的更改屏幕的右上角的按钮：
 
-[ ![](itunes-connect-images/connect04.png "tvOS 准备好进行提交的版本信息")](itunes-connect-images/connect04.png)
+[![](itunes-connect-images/connect04.png "tvOS 准备好进行提交的版本信息")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -71,7 +71,7 @@ TvOS 的特定信息屏幕然后将可供给定 iTunes Connect 记录：
 
 终于准备好你 Xamarin.tvOS 将应用提交到 Apple 电视应用商店，供查看时，返回到应用程序的 iTunes Connect 记录并单击**提交供其评审**屏幕的右上角的按钮：
 
-[ ![](itunes-connect-images/connect05.png "提交供审阅")](itunes-connect-images/connect05.png)
+[![](itunes-connect-images/connect05.png "提交供审阅")](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

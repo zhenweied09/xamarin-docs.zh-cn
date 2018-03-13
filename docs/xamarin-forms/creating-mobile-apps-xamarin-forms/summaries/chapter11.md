@@ -3,14 +3,15 @@ title: "第 11 章的摘要。 可绑定的基础结构"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3e3cfb55f7b96751979d14b489e892bc07817780
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>第 11 章的摘要。 可绑定的基础结构
 
@@ -22,7 +23,7 @@ Xamarin.Forms 定义名为增强的属性定义*可绑定属性*包装[ `Bindabl
 
 [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy)示例使用反射显示 Xamarin.Forms 类层次结构，并演示所扮演的重要角色`BindableObject`此层次结构中。 `BindableObject` 派生自`Object`并且到父类[ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/)从中[ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/)派生。 这是到父类[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)和[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)，即到父类[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/):
 
-[![共享的类层次结构的三个屏幕快照](images/ch11fg01-small.png "类层次结构共享")](images/ch11fg01-large.png "类层次结构共享")
+[![共享的类层次结构的三个屏幕快照](images/ch11fg01-small.png "类层次结构共享")](images/ch11fg01-large.png#lightbox "类层次结构共享")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>到 BindableObject 和 BindableProperty 扫视
 

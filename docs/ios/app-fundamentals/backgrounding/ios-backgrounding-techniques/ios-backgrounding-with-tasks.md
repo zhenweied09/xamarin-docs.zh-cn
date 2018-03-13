@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0be4e7f1d8719fdd174d51399178eb1bc000c4b3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 任务
 
@@ -114,11 +114,11 @@ Task.Factory.StartNew( () => {
 
 回想一下，预 iOS 7 中，在后台运行的任务了 600 秒才能完成。 此限制的原因之一是任务的，在后台运行的任务将保留设备唤醒状态的持续时间内：
 
- [ ![](ios-backgrounding-with-tasks-images/ios6.png "保持处于唤醒状态预 iOS 7 的应用程序的任务的关系图")](ios-backgrounding-with-tasks-images/ios6.png)
+ [![](ios-backgrounding-with-tasks-images/ios6.png "保持处于唤醒状态预 iOS 7 的应用程序的任务的关系图")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
 iOS 7 后台处理较长的电池使用时间进行了优化。 在 iOS 7，backgrounding 成为机会： 而不是保留设备唤醒状态的情况下，任务时，尊重设备进入睡眠状态，并改为其在中执行处理区块时设备唤醒以处理电话呼叫、 通知、 传入电子邮件和其他常见中断。 下图提供深入了解如何任务可能会被破坏向上：
 
- [ ![](ios-backgrounding-with-tasks-images/ios7.png "关系图被分成区块后 iOS 7 的任务")](ios-backgrounding-with-tasks-images/ios7.png)
+ [![](ios-backgrounding-with-tasks-images/ios7.png "关系图被分成区块后 iOS 7 的任务")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
 因为任务运行时不会再连续，执行网络传输的任务必须以不同方式处理在 iOS 7。 开发人员建议使用`NSURlSession`API 以处理网络传输。 下一部分是后台传输的概述。
 

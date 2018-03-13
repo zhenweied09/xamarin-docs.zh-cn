@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 
@@ -151,7 +151,7 @@ public partial class HybridWebViewPage : ContentPage
 1. 添加`ExportRenderer`到自定义呈现器类，以指定，它将用于呈现 Xamarin.Forms 自定义控件属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 对于大多数 Xamarin.Forms 元素，它是可选的提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)元素。
+> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)元素。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 
@@ -316,7 +316,7 @@ namespace CustomRenderer.iOS
   - 释放资源。
 
 > [!NOTE]
-> **请注意**: `WKWebView` iOS 8 及更高版本中才支持类。
+> `WKWebView` IOS 8 及更高版本中才支持类。
 
 ### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 类必须派生自`Java.Lang.Object`，并向 JavaScript 公开的方法必须使用修饰`[JavascriptInterface]`和`[Export]`属性。 因此，当`invokeCSharpAction`注入到 web 页和执行的 JavaScript 功能，它将调用`JSBridge.InvokeAction`方法，因为正在使用修饰`[JavascriptInterface]`和`[Export("invokeAction")]`属性。 反过来，`InvokeAction`方法调用`HybridWebView.InvokeAction`方法，其将调用已注册的操作，以显示弹出窗口。
 
 > [!NOTE]
-> **请注意**： 项目使用`[Export]`属性必须包括对引用`Mono.Android.Export`，或将导致编译器错误。
+> 项目使用`[Export]`属性必须包括对引用`Mono.Android.Export`，或将导致编译器错误。
 
 请注意，`JSBridge`类维护`WeakReference`到`HybridWebViewRenderer`类。 这是为了避免创建两个类之间的循环引用。 有关详细信息请参阅[弱引用](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx)MSDN 上。
 

@@ -3,16 +3,16 @@ title: "tvOS 内部机制"
 description: "Xamarin.tvOS 共享作为我们 Xamarin.iOS 产品，相同 dna 的解码，因此，我们已生成我们的 iOS 产品的高级的文档都几乎完全相同，到我们 tvOS 的产品。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 6adba454ac153186c05715f4baa3261212e7b18b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: fee2843840f7f6dac461cd4e3426fb8b296b30bf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tvos-internals"></a>tvOS 内部机制
 

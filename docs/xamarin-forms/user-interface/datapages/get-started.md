@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 79ce4a1393b2affade3422f73e1c3d4680d199df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e65207e987dbdab8bf2fe5f48f0b0a500dd27bc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-datapages"></a>Getting Started with DataPages
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/28/2018
 
 若要开始构建使用 DataPages 预览版简单的数据驱动器页上，按照以下步骤。 在预览中的硬编码样式 （"事件"） 生成此演示使用了仅适用于特定的 JSON 格式，在代码中。
 
-[ ![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png "DataPages 示例应用程序")
+[![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png#lightbox "DataPages 示例应用程序")
 
 ## <a name="1-add-nuget-packages"></a>1.添加 NuGet 包
 
@@ -134,7 +134,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 上述步骤应导致工作数据页：
 
-[ ![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png "DataPages 示例应用程序")
+[![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png#lightbox "DataPages 示例应用程序")
 
 这样做的原因的预建的样式**"事件"**浅色主题 Nuget 包中存在并且具有与数据源 （如匹配的样式定义 "标题"、"映像"、"演示器"）。
 
@@ -163,7 +163,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 通过提供`DataTemplate`此代码可替代`StyleClass`，而是使用的默认布局`ListItemControl`。
 
-[ ![](get-started-images/custom-sml.png "DataPages 示例应用程序")](get-started-images/custom.png "DataPages 示例应用程序")
+[![](get-started-images/custom-sml.png "DataPages 示例应用程序")](get-started-images/custom.png#lightbox "DataPages 示例应用程序")
 
 开发人员喜欢到使用 XAML 的 C# 可以创建数据源绑定太 (请记住包括`using Xamarin.Forms.Pages;`语句):
 

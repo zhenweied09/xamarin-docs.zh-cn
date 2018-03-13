@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 3de0e09b15b704db5e67fbbee6ba9bac86f58557
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="async-support-overview"></a>异步支持概述
 
@@ -28,7 +28,7 @@ Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以�
 
 示例应用程序发出简单异步 web 请求 （而不阻塞主线程），然后用已下载的 html 和字符计数更新 UI。
 
- [ ![](async-images/AsyncAwait_427x368.png "该示例应用程序而不会阻止主线程发出简单异步 web 请求，然后用下载的 html 和字符计数更新 UI")](async-images/AsyncAwait.png)
+ [![](async-images/AsyncAwait_427x368.png "该示例应用程序而不会阻止主线程发出简单异步 web 请求，然后用下载的 html 和字符计数更新 UI")](async-images/AsyncAwait.png#lightbox)
 
 Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以适合移动应用的.NET 4.5 版本的移动友好版本升级 API 配置文件。
 

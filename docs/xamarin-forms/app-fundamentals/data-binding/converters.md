@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: aaa4c93eda9edb0eb5d568b3470c02352bdb7467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: df6a0afe18b6929f8e03ce4d9bf35198034508bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-value-converters"></a>绑定值转换器
 
@@ -95,7 +95,7 @@ public class IntToBoolConverter : IValueConverter
 
 **启用按钮**页演示一个常见需要时`Button`执行基于用户键入的文本操作`Entry`视图。 如果执行任何操作已键入到`Entry`、`Button`应禁用。 每个`Button`包含数据绑定中的其`IsEnabled`属性。 数据绑定源是`Length`属性`Text`的相应属性`Entry`。 如果该`Length`属性不是 0，值转换器返回`true`和`Button`启用：
 
-[![启用按钮](converters-images/enablebuttons-small.png "启用按钮")](converters-images/enablebuttons-large.png "启用按钮")
+[![启用按钮](converters-images/enablebuttons-small.png "启用按钮")](converters-images/enablebuttons-large.png#lightbox "启用按钮")
 
 请注意，`Text`的每个`Entry`初始化为空字符串。 `Text`属性是`null`默认情况下，数据绑定将不起作用在这种情况下。
 
@@ -236,7 +236,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 
 在过去的三个`Switch`和`Label`对，泛型自变量设置为`Style`，和整个`Style`对象提供的值`TrueObject`和`FalseObject`。 这些重写的隐式样式`Label`设置资源字典中，因此该样式中的属性显式分配给`Label`。 切换`Switch`导致相应`Label`以反映此更改：
 
-[![切换指示器](converters-images/switchindicators-small.png "切换指示器")](converters-images/switchindicators-large.png "切换指示器")
+[![切换指示器](converters-images/switchindicators-small.png "切换指示器")](converters-images/switchindicators-large.png#lightbox "切换指示器")
 
 还有可能要使用[ `Triggers` ](~/xamarin-forms/app-fundamentals/triggers.md)基于其他视图的用户界面中实现类似的更改。
 
@@ -460,7 +460,7 @@ binding.ConverterParameter = 255;
 
 下面是结果：
 
-[![RGB 颜色选择器](converters-images/rgbcolorselector-small.png "RGB 颜色选择器")](converters-images/rgbcolorselector-large.png "RGB 颜色选择器")
+[![RGB 颜色选择器](converters-images/rgbcolorselector-small.png "RGB 颜色选择器")](converters-images/rgbcolorselector-large.png#lightbox "RGB 颜色选择器")
 
 
 ## <a name="related-links"></a>相关链接

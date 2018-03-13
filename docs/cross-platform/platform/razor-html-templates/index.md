@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 7e4d1cab532a5c81da1dfc47df33aa0628c7f6c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c69b8e71cac5d9f0385728ca75a5f311cb24fc0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>使用 Razor 模板生成 HTML 视图
 
@@ -34,7 +34,7 @@ Xamarin iOS 和 Android 上提供对基础平台 Api 的完全访问权限，因
 
 在中 Xamarin.iOS UIWebView 控件中显示 HTML 还采用代码只需几的行：
 
-```
+```csharp
 var webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
 string contentDirectoryPath = Path.Combine (NSBundle.MainBundle.BundlePath, "Content/");
@@ -48,7 +48,7 @@ webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 
 中的代码只需几行完成使用 Xamarin.Android 的 WebView 控件中显示 HTML:
 
-```
+```csharp
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
 var html = "<html><h1>Hello</h1><p>World</p></html>";
@@ -61,19 +61,19 @@ webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8"
 
 在这两个平台上是一个参数，指定的 HTML 页的基目录。 这是用于解析相对引用到的资源，如图像和 CSS 文件的设备的文件系统上的位置。 例如，如标记
 
-
-    <link rel="stylesheet" href="style.css" />
-    <img src="monkey.jpg" />
-    <script type="text/javascript" src="jscript.js">
-
+```html
+<link rel="stylesheet" href="style.css" />
+<img src="monkey.jpg" />
+<script type="text/javascript" src="jscript.js">
+```
 
 这些文件，请参阅： **style.css**， **monkey.jpg**和**jscript.js**。 基目录设置告知 web 视图，这些文件所在的位置以便它们可以是加载到页面中。
 
 #### <a name="ios"></a>iOS
 
-在 iOS 替换为以下的 C# # 代码中呈现的模板输出：
+在 iOS 替换为以下的 C# 代码中呈现的模板输出：
 
-```
+```csharp
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
@@ -89,7 +89,7 @@ webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 
 Android 还需要时在 web 视图中显示 html 字符串作为参数传递的基目录。
 
-```
+```csharp
 webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 ```
 
@@ -101,30 +101,30 @@ webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8"
 
  ![Android 项目的生成操作： AndroidAsset](images/image4_250x71.png)
 
-### <a name="calling-c-from-html-and-javascript"></a>从 HTML 和 Javascript 调用 C# #
+### <a name="calling-c-from-html-and-javascript"></a>从 HTML 和 Javascript 调用 C#
 
 当 html 页加载到 web 视图时，它将处理的链接和窗体那样从服务器加载页面。 这意味着，如果用户单击的链接，或提交表单时 web 视图将尝试导航到指定的目标。
 
 如果链接是指向外部服务器 （例如 google.com) 然后 web 视图将尝试加载外部网站 （假定没有 internet 连接）。
 
-```
+```html
 <a href="http://google.com/">Google</a>
 ```
 
 如果链接是相对然后 web 视图将尝试从基目录中加载该内容。 显然，内容存储在设备上的应用，也不不需要此功能，任何网络连接。
 
-```
+```html
 <a href="somepage.html">Local content</a>
 ```
 
 窗体操作按照相同的规则。
 
-```
+```html
 <form method="get" action="http://google.com/"></form>
 <form method="get" action="somepage.html"></form>
 ```
 
-如果您不想要承载客户端; 上的 web 服务器但是，可以使用相同的服务器通信技术今天的响应式设计模式中使用 HTTP GET，通过调用服务，还可以通过发出 Javascript 以异步方式处理响应 （或调用 Javascript 已托管在 web 视图中）。 这使您可以轻松地将数据从 HTML 传递回 C# # 处理然后显示在 HTML 页结果返回代码。
+如果您不想要承载客户端; 上的 web 服务器但是，可以使用相同的服务器通信技术今天的响应式设计模式中使用 HTTP GET，通过调用服务，还可以通过发出 Javascript 以异步方式处理响应 （或调用 Javascript 已托管在 web 视图中）。 这使您可以轻松地将数据从 HTML 传递回处理然后显示结果返回 HTML 页的 C# 代码。
 
 IOS 和 Android 提供用于应用程序代码以截获这些导航事件，以便应用程序代码可以响应 （如果需要） 的机制。 此功能至关重要构建混合应用程序，因为它允许与 web 视图进行交互的本机代码。
 
@@ -132,7 +132,7 @@ IOS 和 Android 提供用于应用程序代码以截获这些导航事件，以�
 
 可以重写在 iOS 中的 web 视图上的 ShouldStartLoad 事件，以允许应用程序代码来处理 （如链接单击） 的导航请求。 方法参数提供的所有信息
 
-```
+```csharp
 bool HandleShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNavigationType navigationType) {
     // return true if handled in code
     // return false to let the web view follow the link
@@ -141,7 +141,7 @@ bool HandleShouldStartLoad (UIWebView webView, NSUrlRequest request, UIWebViewNa
 
 然后将分配事件处理程序：
 
-```
+```csharp
 webView.ShouldStartLoad += HandleShouldStartLoad;
 ```
 
@@ -149,7 +149,7 @@ webView.ShouldStartLoad += HandleShouldStartLoad;
 
 在 Android 上只需子类 WebViewClient 然后实现代码以对导航请求做出响应。
 
-```
+```csharp
 class HybridWebViewClient : WebViewClient {
     public override bool ShouldOverrideUrlLoading (WebView webView, string url) {
         // return true if handled in code
@@ -160,19 +160,19 @@ class HybridWebViewClient : WebViewClient {
 
 然后将客户端上的 web 视图：
 
-```
+```csharp
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
 ### <a name="calling-javascript-from-c"></a>从 C# 中调用 Javascript
 
-除了告诉 web 视图，以便加载新的 HTML 页，C# # 代码还可以运行 Javascript 内当前显示的页面。 可以使用 C# # 字符串创建整个 Javascript 代码块，并将其执行，或者您就可以完成对已通过的页上提供的 Javascript 方法调用`script`标记。
+除了告诉 web 视图，以便加载新的 HTML 页，C# 代码还可以运行 Javascript 内当前显示的页面。 可以使用 C# 字符串创建整个 Javascript 代码块，并将其执行，或者您就可以完成对已通过的页上提供的 Javascript 方法调用`script`标记。
 
 #### <a name="android"></a>Android
 
 创建 Javascript 代码来执行，然后它前面加"javascript:"，并指示要加载该字符串的 web 视图：
 
-```
+```csharp
 var js = "alert('test');";
 webView.LoadUrl ("javascript:" + js);
 ```
@@ -181,7 +181,7 @@ webView.LoadUrl ("javascript:" + js);
 
 iOS web 视图提供专门要调用 Javascript 的方法：
 
-```
+```csharp
 var js = "alert('test');";
 webView.EvaluateJavascript (js);
 ```
@@ -192,8 +192,8 @@ webView.EvaluateJavascript (js);
 
 -  能够从在代码中，生成的字符串加载 HTML
 -  能够引用本地文件 （CSS、 Javascript、 图像或其他 HTML 文件）
--  拦截在 C# # 代码中，导航请求
--  能够从 C# # 代码中调用 Javascript。
+-  拦截在 C# 代码中，导航请求
+-  能够从 C# 代码中调用 Javascript。
 
 
 下一节介绍 Razor，可以轻松地创建 HTML 中以使用混合应用程序。
@@ -202,7 +202,7 @@ webView.EvaluateJavascript (js);
 
 Razor 是中引入了 ASP.NET MVC，最初以在服务器上运行，并生成 HTML 到 web 浏览器提供一个模板化引擎。
 
-Razor 模板化引擎扩展与 C# # 的标准 HTML 语法，使得可以 express 布局，还可以轻松地将 CSS 样式表和 Javascript 的合并。 模板可以引用一个模型类，这可以是任何自定义的类型和可以直接从模板访问其属性。 其主要优点之一是能够轻松地混合使用 HTML 和 C# # 语法。
+Razor 模板化引擎扩展使用 C# 的标准 HTML 语法，使得可以 express 布局，还可以轻松地将 CSS 样式表和 Javascript 的合并。 模板可以引用一个模型类，这可以是任何自定义的类型和可以直接从模板访问其属性。 其主要优点之一是能够轻松地混合使用 HTML 和 C# 语法。
 
 Razor 模板并不局限于服务器端使用，它们还可以包含 Xamarin 应用程序。 使用 Razor 模板以及能够以编程方式使用 web 视图使复杂的跨平台混合应用程序可以使用 Xamarin 生成。
 
@@ -214,7 +214,7 @@ Razor 模板文件具有**.cshtml**文件扩展名。 它们都可添加到 Xama
 
 简单的 Razor 模板 ( **RazorView.cshtml**) 如下所示。
 
-```
+```html
 @model string
 <html>
     <body>
@@ -225,18 +225,18 @@ Razor 模板文件具有**.cshtml**文件扩展名。 它们都可添加到 Xama
 
 请注意与常规的 HTML 文件的以下差异：
 
--  `@`符号在 Razor 模板中具有特殊含义 – 它表示以下表达式是 C# # 要进行求值。
+-  `@`符号在 Razor 模板中具有特殊含义 – 它表示以下表达式是 C# 要进行求值。
 - `@model` 指令始终显示为 Razor 模板文件的第一行。
 -  `@model`指令应跟一个类型。 在此示例中的简单字符串被传递给模板，但这可能是任何自定义类。
 -  当`@Model`引用在整个模板，它提供对生成 （在本示例，它将是一个字符串） 时传递给模板对象的引用。
 -  IDE 将自动生成分部类模板 (与文件**.cshtml**扩展)。 你可以查看此代码，但不是应进行编辑。
- ![RazorView.cshtml](images/image6_125x34.png)分部类名为 RazorView 以匹配.cshtml 模板文件的名称。 它是用于 C# # 代码中的模板引用此名称。
+ ![RazorView.cshtml](images/image6_125x34.png)分部类名为 RazorView 以匹配.cshtml 模板文件的名称。 它是用于 C# 代码中的模板引用此名称。
 - `@using` 语句还可包含在 Razor 模板包含其他命名空间的顶部。
 
 
-然后可以使用下面的 C# # 代码生成最终的 HTML 输出。 请注意，我们指定为字符串"Hello World"这将合并到的呈现的模板输出的模型。
+然后可以使用下面的 C# 代码生成最终的 HTML 输出。 请注意，我们指定为字符串"Hello World"这将合并到的呈现的模板输出的模型。
 
-```
+```csharp
 var template = new RazorView () { Model = "Hello World" };
 var page = template.GenerateString ();
 ```
@@ -249,7 +249,7 @@ var page = template.GenerateString ();
 
 在本节中我们将介绍一些基本的 Razor 语法来帮助你开始使用它。 此部分中的示例填充以下类的数据，并将其使用 Razor 显示：
 
-```
+```csharp
 public class Monkey {
     public string Name { get; set; }
     public DateTime Birthday { get; set; }
@@ -259,7 +259,7 @@ public class Monkey {
 
 所有示例都使用以下数据初始化代码
 
-```
+```csharp
 var animal = new Monkey {
     Name = "Rupert",
     Birthday=new DateTime(2011, 04, 01),
@@ -272,7 +272,7 @@ var animal = new Monkey {
 
 具有属性的类模型时，它们轻松引用 Razor 模板中此示例模板中所示：
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -284,7 +284,7 @@ var animal = new Monkey {
 
 这可以呈现为字符串使用以下代码：
 
-```
+```csharp
 var template = new RazorView () { Model = animal };
 var page = template.GenerateString ();
 ```
@@ -293,11 +293,11 @@ var page = template.GenerateString ();
 
  ![Rupert](images/image8_516x160.png)
 
-#### <a name="c-statements"></a>C# # 语句
+#### <a name="c-statements"></a>C# 语句
 
-更复杂的 C# # 可以包括在模板中，如模型属性更新和年龄在此示例中的计算：
+更复杂的 C# 可以包括在模板中，如模型属性更新和年龄在此示例中的计算：
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -312,15 +312,15 @@ var page = template.GenerateString ();
 </html>
 ```
 
-你可以通过括起的代码与编写复杂的单行 C# # 表达式 （如格式年龄） `@()`。
+你可以通过括起的代码与编写复杂的单行 C# 表达式 （如格式年龄） `@()`。
 
-多个 C# # 语句可以编写通过括起它们与`@{}`。
+多个 C# 语句可以编写通过括起它们与`@{}`。
 
 #### <a name="if-else-statements"></a>如果其他语句
 
 可以使用表示代码分支`@if`此模板的示例中所示。
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -341,7 +341,7 @@ var page = template.GenerateString ();
 
 循环结构，比如`foreach`还可添加。 `@`循环变量上，可以使用前缀 (`@food`在这种情况下) 在 HTML 呈现它。
 
-```
+```html
 @model Monkey
 <html>
     <body>
@@ -372,9 +372,9 @@ var page = template.GenerateString ();
 
 本部分说明如何使用自己的 mac。 使用 Visual Studio 中的解决方案模板的混合应用程序的生成 有三个模板的可用**文件 > 新建 > 解决方案...**窗口：
 
--  Android > 应用程序 > Android WebView 应用程序
--  iOS > 应用程序 > WebView 应用程序
-- ASP.NET MVC Project
+- **Android > 应用程序 > Android WebView 应用程序**
+- **iOS > 应用程序 > WebView 应用程序**
+- **ASP.NET MVC 项目**
 
 
 
@@ -382,7 +382,7 @@ var page = template.GenerateString ();
 
  ![创建 iPhone 和 Android 的解决方案](images/image13_1139x959.png)
 
-请注意，你可以轻松添加**.cshtml** Razor 模板*任何*现有 Xamarin 项目，它不需要使用这些解决方案模板。 iOS 项目不需要以使用这两个; Razor 情节提要只需将 UIWebView 控件添加到任何视图以编程方式，并可以导致 Razor 模板整个 C# # 代码中。
+请注意，你可以轻松添加**.cshtml** Razor 模板*任何*现有 Xamarin 项目，它不需要使用这些解决方案模板。 iOS 项目不需要以使用这两个; Razor 情节提要只需将 UIWebView 控件添加到任何视图以编程方式，并可以导致 Razor 模板整个 C# 代码中。
 
 在用于 iPhone 和 Android 项目的默认模板解决方案内容如下所示：
 
@@ -406,7 +406,7 @@ var page = template.GenerateString ();
 
 模板项目包括要演示如何在混合应用中包含静态内容的最小的样式表。 CSS 样式表引用模板与此相似：
 
-```
+```html
 <link rel="stylesheet" href="style.css" />
 ```
 
@@ -414,7 +414,7 @@ var page = template.GenerateString ();
 
 ### <a name="razor-cshtml-templates"></a>Razor cshtml 模板
 
-该模板包含 Razor **.cshtml**具有预编写的代码以帮助通信 HTML/Javascript 和 C# 之间的数据的文件。 这将允许您生成复杂的混合应用程序不只是显示只读数据从模型中，但还接受 HTML 中的用户输入并将其传递回用于处理或存储的 C# # 代码。
+该模板包含 Razor **.cshtml**具有预编写的代码以帮助通信 HTML/Javascript 和 C# 之间的数据的文件。 这将允许您生成复杂的混合应用程序不只是显示只读数据从模型中，但还接受 HTML 中的用户输入并将其传递回处理或存储的 C# 代码。
 
 #### <a name="rendering-the-template"></a>呈现模板
 
@@ -422,23 +422,23 @@ var page = template.GenerateString ();
 
  ![Razor 流程图](images/image12_700x421.png)
 
-#### <a name="calling-c-code-from-the-template"></a>从模板调用的 C# # 代码
+#### <a name="calling-c-code-from-the-template"></a>从模板调用 C# 代码
 
-从回调到 C# # 的呈现的 web 视图中的通信，可以设置 web 视图中的 URL，然后截获中 C# # 的请求进行处理而不必重新加载 web 视图的本机请求的过程。
+从回调到 C# 的呈现的 web 视图中的通信，可以设置对于 web 视图中，URL，然后截获请求在 C# 中进行处理而不必重新加载 web 视图的本机请求的过程。
 
 中如何处理 RazorView 的按钮，可以看到示例。 该按钮具有以下 HTML:
 
-```
+```html
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
 `InvokeCSharpWithFormValues` Javascript 函数将读取的所有值从 HTML 窗体和集`location.href`web 视图：
 
-```
+```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
 ```
 
-这尝试导航到与自定义方案，我们已组成 URL web 视图 (`hybrid:`)
+这尝试导航到与自定义方案 （如 URL web 视图 `hybrid:`)
 
 ```
 hybrid:UpdateLabel?textbox=SomeValue&UpdateLabel=Click
@@ -448,31 +448,31 @@ hybrid:UpdateLabel?textbox=SomeValue&UpdateLabel=Click
 
 这些两个导航拦截器的内部结构实质上是相同的。
 
-首先，我们检查 URL web 视图尝试加载，并且如果它不会开始我们自己的自定义方案 (`hybrid:`)，我们允许作为普通导航发生。
+首先，请检查 URL web 视图尝试加载，并且如果它不会开始自定义方案 (`hybrid:`)，允许作为普通导航发生。
 
-有关我们自己自定义的 URL 方案，我们将所有字符都方案之间的 URL 中和"？" 作为要处理 （在此情况下，"UpdateLabel"） 的方法名称。 查询字符串中的所有内容将被视为方法调用的参数：
+对自定义 URL 架构，方案之间的 URL 中的所有内容和"？" 是用于处理 （在此情况下，"UpdateLabel"） 的方法名称。 查询字符串中的所有内容将被视为方法调用的参数：
 
-```
+```csharp
 var resources = url.Substring(scheme.Length).Split('?');
 var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-UpdateLabel 在此示例中未在文本框中参数最少的字符串操作 (预先计算"C# # 显示"字符串到)，然后到 web 视图返回调用。
+`UpdateLabel` 在此示例中，执行最少量的字符串操作 （将"C# 指出"的字符串） 的文本框中参数，然后调用到 web 视图的返回。
 
-在我们 URL 处理结束时，我们将中止导航，以便 web 视图不会尝试完成导航到我们的自定义 URL。
+在处理 URL 后, 方法中止导航，以便 web 视图不会尝试完成导航到自定义 URL。
 
 #### <a name="manipulating-the-template-from-c"></a>操作从 C# 模板
 
-从 C# # 与呈现的 HTML web 视图通信可通过调用 web 视图中的 Javascript。 在 iOS 上这通过调用`EvaluateJavascript`UIWebView 上：
+从 C# 与呈现的 HTML web 视图通信可通过调用 web 视图中的 Javascript。 在 iOS 上这通过调用`EvaluateJavascript`UIWebView 上：
 
-```
+```csharp
 webView.EvaluateJavascript (js);
 ```
 
 在 Android 上，Javascript 可在 web 视图中由调用加载为 URL 使用 Javascript `"javascript:"` URL 方案：
 
-```
+```csharp
 webView.LoadUrl ("javascript:" + js);
 ```
 

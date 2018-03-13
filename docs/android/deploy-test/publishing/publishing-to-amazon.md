@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6b4958c6a82b824f19cc041b124e79034eba4c86
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9bae3c56c5f6c445618f41d877c3188a86167be1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>发布到 Amazon 应用商店
 
 通过 Amazon 移动应用分发程序，移动应用开发人员可在 Amazon 上发布应用程序。 本部分简要介绍用于 Android 的 Amazon 应用商店。 
 
-[![“Amazon 应用商店”屏幕](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png)
+[![“Amazon 应用商店”屏幕](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon 不限制 APK 的大小。 但是，如果 APK 大于 30 MB，则会使用 FTP 进行分发，而不是 Amazon 移动应用分发门户。
 
-<a name="Submitting_Apps:_Binary_Info" />
 
 ## <a name="submitting-apps-binary-info"></a>提交应用：二进制信息
 
@@ -34,7 +33,6 @@ Amazon 不限制 APK 的大小。 但是，如果 APK 大于 30 MB，则会使�
 -  可能提供 5 个视频的更新内容。
 
 
-<a name="Approval_Process" />
 
 ## <a name="approval-process"></a>审批过程
 

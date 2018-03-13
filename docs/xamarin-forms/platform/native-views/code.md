@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 55864073aecb48176d650da6edefad24c3248767
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0c4014ecda0501e9309a17901c439444e4b48e86
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-views-in-c"></a>在 C# 中的本机视图
 
@@ -24,7 +24,7 @@ _从 iOS、 Android 和 UWP 本机视图可以从使用 C# 创建 Xamarin.Forms 
 
 以下屏幕截图演示特定于平台的视图具有已添加到 Xamarin.Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
 
-[![](code-images/screenshots-sml.png "包含特定于平台的视图的 StackLayout")](code-images/screenshots.png "StackLayout 包含特定于平台的视图")
+[![](code-images/screenshots-sml.png "包含特定于平台的视图的 StackLayout")](code-images/screenshots.png#lightbox "StackLayout 包含特定于平台的视图")
 
 将特定于平台的视图添加到 Xamarin.Forms 布局的能力被通过每个平台上的两个扩展方法：
 
@@ -64,7 +64,7 @@ contentView.Content = uiLabel.ToView();
 下面的代码示例演示如何添加`TextView`到[ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)和[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
 
 ```csharp
-var textView = new TextView (Forms.Context) { Text = originalText, TextSize = 14 };
+var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
 stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
@@ -188,7 +188,7 @@ public class CustomControl : TextView
 此视图的实例添加到[ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)，如下面的代码示例所示：
 
 ```csharp
-var customControl = new CustomControl (Forms.Context) {
+var customControl = new CustomControl (MainActivity.Instance) {
   Text = "This control has incorrect sizing - it doesn't occupy the available width of the device.",
   TextSize = 14
 };

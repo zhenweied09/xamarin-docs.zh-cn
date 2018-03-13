@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: afbd2d8f25cdf51c7c7c33f72f10e3b5ce8762ef
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 29686b29a18fe409a1f778d54266cbeedea40eda
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="local-databases"></a>本地数据库
 
@@ -24,7 +24,7 @@ Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.o
 
 随附[示例应用程序](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)是一个简单的 Todo 列表应用程序。 以下屏幕截图显示示例每个平台上的显示方式：
 
-[ ![Xamarin.Forms 数据库示例屏幕快照](databases-images/todo-list-sml.png "TodoList 第一页屏幕截图")](databases-images/todo-list.png "TodoList 第一页屏幕截图") [ ![Xamarin.Forms 数据库示例屏幕快照](databases-images/todo-detail-sml.png "TodoList 第二个页屏幕截图")](databases-images/todo-detail.png "TodoList 第二个页屏幕快照")
+[![Xamarin.Forms 数据库示例屏幕快照](databases-images/todo-list-sml.png "TodoList 第一页屏幕截图")](databases-images/todo-list.png#lightbox "TodoList 第一页屏幕截图") [ ![Xamarin.Forms 数据库示例屏幕快照](databases-images/todo-list-sml.png "TodoList 第一页屏幕截图")](databases-images/todo-list.png#lightbox "TodoList 第一页屏幕快照")
 
 <a name="Using_SQLite_with_PCL" />
 

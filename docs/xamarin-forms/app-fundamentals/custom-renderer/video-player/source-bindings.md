@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d0842a54f725e5a9504668f977ba06648a96ee6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 209b301c44da9bbb52ad8bf7fe867811a9b7617f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-video-sources-to-the-player"></a>绑定到播放器的视频源
 
@@ -72,7 +72,7 @@ namespace VideoPlayerDemos
 
 在首次加载页时未选定任何项`ListView`，因此您必须选择一个用于开始播放视频：
 
-[![选择 Web 视频](source-bindings-images/selectwebvideo-small.png "选择 Web 视频")](source-bindings-images/selectwebvideo-large.png "选择 Web 视频")
+[![选择 Web 视频](source-bindings-images/selectwebvideo-small.png "选择 Web 视频")](source-bindings-images/selectwebvideo-large.png#lightbox "选择 Web 视频")
 
 `Source`属性`VideoPlayer`由可绑定的属性，这意味着，它可以是数据绑定的目标。 说明了这一点通过**将绑定到 VideoPlayer**页。 中的标记**BindToVideoPlayer.xaml**由封装的视频和相应的标题的以下类支持文件`VideoSource`对象：
 

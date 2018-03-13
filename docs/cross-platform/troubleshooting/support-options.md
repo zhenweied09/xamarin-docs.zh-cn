@@ -6,17 +6,13 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 165313fb0150c2d9832566d5bc32842722b0a039
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>可用于 Xamarin 哪些支持选项？
-
-## <a name="overview"></a>概述
-- [支持选项摘要](#Summary_of_Support_Options)
-- [详细的建议](#Detailed_Recommendations)
 
 ## <a name="summary-of-support-options"></a>支持选项摘要
 
@@ -46,6 +42,8 @@ ms.lasthandoff: 02/27/2018
 </table>
 
 Xamarin 支持团队可帮助监视其中每个选项。  我们鼓励所有用户提供其仔细问题和报表，以便充分利用和帮助增长桩 Xamarin 开发人员社区。  有关可疑瑕疵品，一定要提交 bug 报告何时可能以确保问题正式的 Xamarin 工程团队中进行跟踪。
+
+<a name="Visual_Studio_email_support_incidents_for_Xamarin_topics"/>
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Visual Studio 电子邮件事件支持的 Xamarin 主题
 
@@ -95,7 +93,7 @@ Xamarin 是[现在的 Visual Studio 订阅组成部分](https://blog.xamarin.com
 
 有关已知的问题和可能的解决方法的社区讨论，你可以在相应的预览论坛中发布问题：
 
--   [实时的 Xamarin Player](https://forums.xamarin.com/categories/live-player)
+-   [Xamarin Live Player](https://forums.xamarin.com/categories/live-player)
 -   为 Android、 iOS 和 macOS Sdk 的新版本的 SDK 绑定预览版，查找相应的预览版发行公告在[Xamarin.Android](http://forums.xamarin.com/categories/android)， [Xamarin.iOS](http://forums.xamarin.com/categories/ios)，或[Xamarin.Mac](http://forums.xamarin.com/categories/mac)论坛。
 -   对于其他预览功能中的相应版本通告的浏览[预发行版和测试版](http://forums.xamarin.com/categories/xamarin-prerelease)论坛。  或者，如果没有任何匹配的公告，随意引发你在该论坛中其自己线程中的问题。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7da0f52816d4efc102e830411589e0ac38a73574
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="message-app-extension-basics"></a>消息应用扩展基础知识
 
@@ -121,13 +121,13 @@ Apple 提供的建议测试针对各种不同 （如空白、 黑色、 红色�
 2. 打开消息应用程序将扩展添加到解决方案。 
 3. 选择**iOS** > **扩展** > **iMessage 扩展**单击**下一步**按钮： 
 
-    [ ![](intro-to-message-app-extensions-images/message01.png "选择 iMessage 扩展")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01.png "选择 iMessage 扩展")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. 输入**扩展名**单击**下一步**按钮： 
 
-    [ ![](intro-to-message-app-extensions-images/message02.png "输入扩展名称")](intro-to-message-app-extensions-images/message02.png)
+    [![](intro-to-message-app-extensions-images/message02.png "输入扩展名称")](intro-to-message-app-extensions-images/message02.png#lightbox)
 5. 单击**创建**按钮以生成扩展： 
 
-    [ ![](intro-to-message-app-extensions-images/message03.png "单击创建按钮")](intro-to-message-app-extensions-images/message03.png)
+    [![](intro-to-message-app-extensions-images/message03.png "单击创建按钮")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -135,7 +135,7 @@ Apple 提供的建议测试针对各种不同 （如空白、 黑色、 红色�
 2. 打开消息应用程序将扩展添加到解决方案。 
 3. 选择**iOS** > **扩展** > **iMessage 扩展**单击**下一步**按钮： 
 
-    [ ![](intro-to-message-app-extensions-images/message01w.png "选择 iMessage 扩展")](intro-to-message-app-extensions-images/message01.png)
+    [![](intro-to-message-app-extensions-images/message01w.png "选择 iMessage 扩展")](intro-to-message-app-extensions-images/message01.png#lightbox)
 4. 输入**扩展名**单击**确定**按钮
 
 -----
@@ -159,7 +159,7 @@ Apple 提供的建议测试针对各种不同 （如空白、 黑色、 红色�
 1. 在**解决方案 Pad**，右键单击扩展的项目名称，然后选择**添加** > **新文件...**  >  **iOS |Apple Watch** > **接口控制器**。
 2. 输入`StickerBrowserViewController`为**名称**单击**新建**按钮： 
 
-    [ ![](intro-to-message-app-extensions-images/browser01.png "为名称输入 StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01.png "为名称输入 StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. 打开`StickerBrowserViewController.cs`文件进行编辑。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -167,7 +167,7 @@ Apple 提供的建议测试针对各种不同 （如空白、 黑色、 红色�
 1. 在**解决方案资源管理器**，右键单击扩展的项目名称，然后选择**添加** > **新文件...**  >  **iOS |Apple Watch** > **接口控制器**。
 2. 输入`StickerBrowserViewController`为**名称**单击**新建**按钮： 
 
-    [ ![](intro-to-message-app-extensions-images/browser01w.png "为名称输入 StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.png)
+    [![](intro-to-message-app-extensions-images/browser01w.png "为名称输入 StickerBrowserViewController")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. 打开`StickerBrowserViewController.cs`文件进行编辑。
 
 -----

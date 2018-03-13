@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>Toolbar
 
 _工具栏是一种操作栏组件，它提供更大的灵活性比默认操作栏： 可以在应用程序中任意位置放置，可以更改其大小，并且它可以使用不同于应用程序的主题配色方案。此外，每个应用程序屏幕可以有多个工具栏。_
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>概述
 
@@ -27,7 +25,7 @@ _工具栏是一种操作栏组件，它提供更大的灵活性比默认操作�
 
 `Toolbar`可以将小组件 （在 Android 5.0 棒糖形中引入） 看作操作栏接口的泛化&ndash;它旨在替换操作栏。 `Toolbar`可以使用应用的布局中中的任意位置，并且它可操作栏比得多自定义。 下面的屏幕截图演示的自定义`Toolbar`在本指南中创建的示例： 
 
-[![与编辑，工具栏的示例屏幕快照保存和溢出菜单项](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![与编辑，工具栏的示例屏幕快照保存和溢出菜单项](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 有一些重要差异`Toolbar`和操作栏： 
 
@@ -72,7 +70,6 @@ Google[材料设计准则](https://material.google.com/)建议利用类元素，
 -   使用**Android 支持库 v7 AppCompat**库 (称为*AppCompat*本指南的其余部分中) 来部署`Toolbar`在早期版本的 Android。 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>惠?
 

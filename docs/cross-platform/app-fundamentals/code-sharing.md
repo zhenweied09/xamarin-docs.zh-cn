@@ -8,17 +8,15 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 044dc0f3c0b5a86944fc852cdd97f8affcb8e874
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e7289d92043bdbe9e4ec55776835530f8ccec526
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
 _本文档会比较的跨平台项目间共享代码的不同方法： 共享项目、 可移植类库和.NET 标准，包括的优点和各自的优缺点。_
-
-## <a name="overview"></a>概述
 
 有三个用于跨平台应用程序间共享代码的替代方法：
 
@@ -34,9 +32,9 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
 <a name="Shared_Projects" />
 
-# <a name="shared-projects"></a>共享的项目
+## <a name="shared-projects"></a>共享的项目
 
-共享代码文件的最简单方法是使用共享项目 （Xamarin Studio 5 和 Visual Studio 2013 Update 2 中引入）。 共享项目[此处详细地讨论](~/cross-platform/app-fundamentals/shared-projects.md)。
+共享代码文件的最简单方法是使用[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
 
 此屏幕快照显示 （用于 Android、 iOS 和 Windows Phone），包含三个应用程序项目的解决方案文件与**共享**包含常见 C# 源代码文件的项目：
 
@@ -47,7 +45,7 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
  ![](code-sharing-images/sharedassetproject.png "共享项目关系图")
 
 
-## <a name="example"></a>示例
+### <a name="example"></a>示例
 
 支持 iOS、 Android 和 Windows Phone 的跨平台应用程序将需要为每个平台的应用程序项目。 通用代码驻留在共享项目中。
 
@@ -62,7 +60,7 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 在这种方式中的三个应用程序项目共享相同的源代码 （C# 中的文件共享）。 共享代码的任何编辑将在所有三个项目之间共享。
 
 
-## <a name="benefits"></a>优点
+### <a name="benefits"></a>优点
 
 -  可以在多个项目间共享代码。
 -  可以根据使用 （如编译器指令的平台分支共享的代码 使用`#if __ANDROID__`、 中所述[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)文档)。
@@ -70,7 +68,7 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
 
 
-## <a name="disadvantages"></a>缺点
+### <a name="disadvantages"></a>缺点
 
 -  与大多数其他项目类型，共享项目产生没有输出的程序集。 在编译期间，这些文件进行视为引用的项目的一部分并编译为该程序集。 如果你想要共享作为程序集代码可移植类库或标准.NET 则更好的解决方案。
 -  影响内 'inactive' 编译器指令的代码的重构不会更新代码。
@@ -78,14 +76,14 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
  <a name="Shared_Remarks" />
 
-## <a name="remarks"></a>备注
+### <a name="remarks"></a>备注
 
 应用程序开发人员编写的代码，仅适用于其应用中共享 （和不将其分发给其他开发人员） 很好的解决方案。
 
  <a name="Portable_Class_Libraries" />
 
 
-# <a name="portable-class-libraries"></a>可移植类库
+## <a name="portable-class-libraries"></a>可移植类库
 
 
 可移植类库是[此处详细地讨论](~/cross-platform/app-fundamentals/pcl.md)。
@@ -93,19 +91,19 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
  ![](code-sharing-images/portableclasslibrary.png "可移植库关系图")
 
 
-## <a name="benefits"></a>优点
+### <a name="benefits"></a>优点
 
 -  可以在多个项目间共享代码。
 -  重构操作将始终更新所有受影响的引用。
 
 
-## <a name="disadvantages"></a>缺点
+### <a name="disadvantages"></a>缺点
 
 -  不能使用编译器指令。
 -  只有.NET framework 的子集可用于，由选择的配置文件 (请参阅[简介 PCL](~/cross-platform/app-fundamentals/pcl.md)有关详细信息)。
 
 
-## <a name="remarks"></a>备注
+### <a name="remarks"></a>备注
 
 如果你打算与其他开发人员共享生成的程序集，一个不错的解决方案。
 
@@ -113,29 +111,29 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
 <a name="Net_Standard" />
 
-# <a name="net-standard-libraries"></a>.NET 标准库
+## <a name="net-standard-libraries"></a>.NET 标准库
 
 .NET 标准是[此处详细地讨论](~/cross-platform/app-fundamentals/net-standard.md)。
 
 ![](code-sharing-images/netstandard.png ".NET 标准关系图")
 
-## <a name="benefits"></a>优点
+### <a name="benefits"></a>优点
 
 -  可以在多个项目间共享代码。
 -  重构操作将始终更新所有受影响的引用。
 -  更大的外围应用的.NET 基类库 (BCL) 是比 PCL 配置文件可用。
 
-## <a name="disadvantages"></a>缺点
+### <a name="disadvantages"></a>缺点
 
  -  不能使用编译器指令。
 
-## <a name="remarks"></a>备注
+### <a name="remarks"></a>备注
 
 .NET 标准是类似于 PCL 中，但有更简单的模型平台支持和更多的 BCL 的类。
 
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>摘要
 
 将你面向的平台推动代码共享你选择的策略。 选择最适合你的项目的方法。
 
@@ -151,4 +149,3 @@ PCL 或.NET 标准是用于构建可共享代码库 （特别在 NuGet 上发布
 - [案例研究：Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Tasky 示例 (github)](https://github.com/xamarin/mobile-samples/tree/master/Tasky)
 - [Tasky 示例使用 PCL (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)
-- [共享 Visual Studio 2013 项目引用管理器](http://visualstudiogallery.msdn.microsoft.com/315c13a7-2787-4f57-bdf7-adae6ed54450)

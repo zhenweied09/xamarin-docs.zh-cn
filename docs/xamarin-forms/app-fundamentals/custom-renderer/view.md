@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>实现视图
 
@@ -115,7 +115,7 @@ public class MainPageCS : ContentPage
 1. 添加`ExportRenderer`到自定义呈现器类，以指定，它将用于呈现 Xamarin.Forms 自定义控件属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 对于大多数 Xamarin.Forms 元素，它是可选的提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)元素。
+> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)元素。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 假设`Control`属性是`null`，新`CaptureElement`实例化和`InitializeAsync`调用方法时，它使用`MediaCapture`API 提供相机的预览流。 `SetNativeControl`然后调用方法来分配对引用`CaptureElement`到实例`Control`属性。 `CaptureElement`控件公开`Tapped`处理的事件，`OnCameraPreviewTapped`方法来停止和启动视频预览时它点击。 `Tapped`自定义呈现器是附加到一个新的 Xamarin.Forms 元素，且取消订阅只有元素呈现器附加到更改时订阅事件。
 
 > [!NOTE]
-> **请注意**： 必须停止并处理提供对相机沿一个 Windows Phone 或 UWP 应用程序的访问的对象。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)对于 Windows 运行时应用程序，和[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)UWP 应用程序。
+> 务必停止和释放的对象，它提供对 Windows Phone 或 UWP 应用程序中的照相机的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)对于 Windows 运行时应用程序，和[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)UWP 应用程序。
 
 ## <a name="summary"></a>摘要
 

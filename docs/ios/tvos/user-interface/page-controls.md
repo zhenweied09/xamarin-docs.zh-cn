@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4da50dac901628b9baf10a07650d232a977a653
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77eac8179f9e368e767bb4b586ccaa3f93e40a3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-page-control"></a>使用页控件
 
@@ -20,7 +20,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的页控件。_
 
 有时你可能需要 Xamarin.tvOS 应用程序中显示一系列的网页或图像。 页面控件旨在清楚地显示用户位于超出最大页数的页。 页控件将显示一系列针对在深色，oval 调整背景的点。 当前页将显示实心的点，其他所有页都显示为空心点。 如果有过多，无法放入其背景区域的页控件将剪切的外部的大多数点。
 
-[ ![](page-controls-images/page01.png "示例页控件")](page-controls-images/page01.png)
+[![](page-controls-images/page01.png "示例页控件")](page-controls-images/page01.png#lightbox)
 
 设计为向只对用户提供反馈的非交互式元素中的页控件。 你将需要添加其他控件以更改 （如手势或按钮） 的当前页码。
 
@@ -41,14 +41,14 @@ Xamarin.tvOS 应用中使用的页面控件的最简单方法是将它们添加�
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**页控件**从**工具箱**并将其放在视图上： 
 
-    [ ![](page-controls-images/page02.png "页面控件")](page-controls-images/page02.png)
+    [![](page-controls-images/page02.png "页面控件")](page-controls-images/page02.png#lightbox)
 1. 在**小组件选项卡**的**属性填充**，你可以调整页控件的几个属性，如其**当前页**和**# 页**: 
 
-    [ ![](page-controls-images/page03.png "小组件选项卡")](page-controls-images/page03.png)
+    [![](page-controls-images/page03.png "小组件选项卡")](page-controls-images/page03.png#lightbox)
 1. 接下来，将控件或笔势添加到视图以向后移动和向前移动页的集合。
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](page-controls-images/page04.png "命名该控件")](page-controls-images/page04.png)
+    [![](page-controls-images/page04.png "命名该控件")](page-controls-images/page04.png#lightbox)
 1. 保存更改。
     
 
@@ -58,14 +58,14 @@ Xamarin.tvOS 应用中使用的页面控件的最简单方法是将它们添加�
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**页控件**从**工具箱**并将其放在视图上： 
 
-    [ ![](page-controls-images/page02-vs.png "页面控件")](page-controls-images/page02-vs.png)
+    [![](page-controls-images/page02-vs.png "页面控件")](page-controls-images/page02-vs.png#lightbox)
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整页控件的几个属性，如其**当前页**和**# 页**: 
 
-    [ ![](page-controls-images/page03-vs.png "小组件选项卡")](page-controls-images/page03-vs.png)
+    [![](page-controls-images/page03-vs.png "小组件选项卡")](page-controls-images/page03-vs.png#lightbox)
 1. 接下来，将控件或笔势添加到视图以向后移动和向前移动页的集合。
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](page-controls-images/page04-vs.png "命名该控件")](page-controls-images/page04-vs.png)
+    [![](page-controls-images/page04-vs.png "命名该控件")](page-controls-images/page04-vs.png#lightbox)
 1. 保存更改。
     
 

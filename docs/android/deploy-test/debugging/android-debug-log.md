@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 99b9ed9e3c71766f483f7b00996137aae7a247d1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 26ac42e4b7acbe19dee746130fc335fdf18ffc46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-debug-log"></a>Android 调试日志
 
@@ -36,7 +36,6 @@ Visual Studio 新的“设备日志”工具窗口可以显示 Android 和 iOS �
 此工具窗口提供：一个日志条目表、一个用于选择设备的组合框、一种清除日志条目的方法、一个搜索框，以及播放/停止/暂停按钮。 
 
 
-<a name="Accessing_from_the_Command_Line" />
 
 ## <a name="accessing-from-the-command-line"></a>从命令行访问
 
@@ -52,7 +51,6 @@ $ adb logcat
 
 运行 **adb** 即可找到更多命令。
 
-<a name="Writing_to_the_Debug_Log" />
 
 
 ## <a name="writing-to-the-debug-log"></a>写入调试日志
@@ -75,7 +73,6 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-<a name="Interesting_Messages" />
 
 ## <a name="interesting-messages"></a>兴趣消息
 

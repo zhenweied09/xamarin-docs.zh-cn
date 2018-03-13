@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: eb7189226e4f5d7eb2b55bf61728e65db44ba57b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 737c55aea087094ceb5e6070261d0a3d724e8a01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>创建 XAML 标记扩展
 
@@ -117,7 +117,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 
 请注意，当`HslColorExtension`XML 的标记，四个属性被设置为属性，但当出现大括号之间时，由不带引号的逗号分隔的四个属性。 默认值`H`， `S`，和`L`为 0 和的默认值`A`为 1，因此可以省略这些属性，如果你希望它们设置为默认值。 最后一个示例演示的示例，亮度是 0，它通常会导致黑色，但 alpha 通道为 0.5，因此它是半双工透明的将显示灰色页上的白色背景：
 
-[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png "HSL Color Demo")
+[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>用于访问位图标记扩展
 
@@ -180,7 +180,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 
 下面是在所有三个平台上运行的程序：
 
-[![图像资源演示](creating-images/imageresourcedemo-small.png "图像资源演示")](creating-images/imageresourcedemo-large.png "图像资源演示")
+[![图像资源演示](creating-images/imageresourcedemo-small.png "图像资源演示")](creating-images/imageresourcedemo-large.png#lightbox "图像资源演示")
 
 ## <a name="service-providers"></a>服务提供商
 

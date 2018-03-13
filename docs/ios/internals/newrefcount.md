@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd4aff683b0cfb797147d32f282be1aab4c30667
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-reference-counting-system"></a>新引用计数系统
 
@@ -36,7 +36,7 @@ Xamarin.iOS 7.2.1 和上面功能增强我们新引用计数系统的预览。
 
 若要启用此新引用计数系统，请检查**使用引用计数扩展**复选框位于**高级**项目的选项卡**iOS 生成选项**如下所示： 
 
-[ ![](newrefcount-images/image1.png "启用新的引用计数系统")](newrefcount-images/image1.png)
+[![](newrefcount-images/image1.png "启用新的引用计数系统")](newrefcount-images/image1.png#lightbox)
 
 请注意，这些选项中，已删除较新版本的 Visual Studio for mac。
 

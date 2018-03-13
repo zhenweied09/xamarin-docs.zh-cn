@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>情节提要简介
 
@@ -20,7 +20,7 @@ _本文提供与使用 Xamarin.Mac 应用中的情节提要的介绍。它涵盖
 
 情节提要允许你开发用户界面的 Xamarin.Mac 应用不仅包括窗口定义和控件，但还包含不同的窗口之间的链接 (通过 segue) 和视图状态。
 
-[ ![](images/intro01.png "示例在 Xcode 中的 UI")](images/intro01.png)
+[![](images/intro01.png "示例在 Xcode 中的 UI")](images/intro01.png#lightbox)
 
 本文将提供使用情节提要定义 Xamarin.Mac 应用的用户界面的说明。
 
@@ -36,11 +36,11 @@ _本文提供与使用 Xamarin.Mac 应用中的情节提要的介绍。它涵盖
 
 如上面所述，情节提要定义所有分解为功能概述给定应用程序的 UI 其_查看控制器_。 在 Xcode 的接口生成器中，每个这些控制器居住在自己_场景_。
 
-[ ![](images/intro02.png "示例视图控制器")](images/intro02.png)
+[![](images/intro02.png "示例视图控制器")](images/intro02.png#lightbox)
 
 每个场景表示给定的视图和视图控制器对一组连接在 UI 中，因此显示它们之间的关系的每个场景的行 （称为 Segues）。 某些 Segues 定义如何一个视图控制器包含一个或多个子视图或视图控制器。 其他 Segues 定义 （如显示种 popover 或对话框中） 的视图控制器之间的转换。 
 
-[ ![](images/intro03.png "示例 segue")](images/intro03.png)
+[![](images/intro03.png "示例 segue")](images/intro03.png#lightbox)
 
 最重要需要注意的事项是每个 Segue 表示某种形式的应用程序的 UI 的给定元素之间的数据的流。
 
@@ -50,7 +50,7 @@ _本文提供与使用 Xamarin.Mac 应用中的情节提要的介绍。它涵盖
 
 查看控制器定义给定的 Mac 应用中的信息的视图和数据模型，它提供该信息之间的关系。 情节提要中的每个顶级场景表示 Xamarin.Mac 应用代码中的一个视图控制器。
 
-[ ![](images/intro04.png "示例落后视图控制器")](images/intro04.png)
+[![](images/intro04.png "示例落后视图控制器")](images/intro04.png#lightbox)
 
 这种方式，每个视图控制器是自包含的可重用的配对的信息的可视表示形式 （视图） 和为控制该信息和呈现的逻辑。
 
@@ -115,8 +115,8 @@ SourceWriter 代码已经完全注释，且在可用时，提供了相关链接�
 
 ## <a name="related-links"></a>相关链接
 
-- [Hello，Mac （示例）](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello，Mac（示例）](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [使用 Windows](~/mac/user-interface/window.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

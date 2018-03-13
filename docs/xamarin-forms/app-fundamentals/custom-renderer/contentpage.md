@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f1f420641691e700894687fef8ea3bd44fd60ff2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-contentpage"></a>自定义内容页
 
@@ -99,7 +99,7 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 1. 添加`ExportRenderer`到页呈现器类，以指定它将可用于呈现 Xamarin.Forms 页属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 它是可选若要提供每个平台项目中的页呈现器。 如果未注册页呈现器，则将使用页面的默认呈现器。
+> 它是可选若要提供每个平台项目中的页呈现器。 如果未注册页呈现器，则将使用页面的默认呈现器。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 
@@ -248,7 +248,7 @@ namespace CustomRenderer.WinPhone81
 实现派生自的自定义呈现器时`PageRenderer`对 Windows 运行时，`ArrangeOverride`方法还应实现，来排列这些页控件，因为基呈现器不知道如何处理它们。 否则，结果空白页。 因此，在此示例`ArrangeOverride`方法调用`Arrange`方法`Page`实例。
 
 > [!NOTE]
-> **请注意**： 必须停止并处理提供对 Windows Phone 8.1 WinRT 应用程序中的照相机的访问的对象。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅`CleanUpCaptureResourcesAsync`方法中的 Windows Phone 项目中的示例解决方案，和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)。
+> 务必停止和释放的对象，它提供对 Windows Phone 8.1 WinRT 应用程序中的照相机的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅`CleanUpCaptureResourcesAsync`方法中的 Windows Phone 项目中的示例解决方案，和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)。
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>在 UWP 上创建页呈现器
 
@@ -297,7 +297,7 @@ namespace CustomRenderer.UWP
 实现派生自的自定义呈现器时`PageRenderer`上 UWP，`ArrangeOverride`方法还应实现，来排列这些页控件，因为基呈现器不知道如何处理它们。 否则，结果空白页。 因此，在此示例`ArrangeOverride`方法调用`Arrange`方法`Page`实例。
 
 > [!NOTE]
-> **请注意**： 必须停止并处理提供对相机沿 UWP 应用程序的访问的对象。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)。
+> 务必停止和释放的对象，它提供对相机沿 UWP 应用程序的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)。
 
 ## <a name="summary"></a>摘要
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>交互式工作簿
 
@@ -30,7 +30,7 @@ _使用工作簿包含 C# 代码进行试验，创建实时文档教学、 培�
 
 提供编辑窗口的代码的代码完成、 语法着色、 内联实时诊断和多行语句支持。
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "编辑窗口的代码提供了代码完成、 语法着色、 内联实时诊断和多行语句支持")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "编辑窗口的代码提供了代码完成、 语法着色、 内联实时诊断和多行语句支持")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin 工作簿保存为`.workbook`文件，它是具有顶部一些元数据的 CommonMark 文件 (请参阅[工作簿文件类型](#Workbooks_Files_Types)有关详细信息可以保存工作簿的方式)。
 

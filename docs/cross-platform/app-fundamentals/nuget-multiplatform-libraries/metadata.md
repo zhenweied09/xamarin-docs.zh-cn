@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8afce6021c2816f354e26ccecd7d0c40ceb2a9bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: babbe0344130dc0ce38023eabe7479d2b464276b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing-nuget-metadata"></a>编辑 NuGet 元数据
 
@@ -26,7 +26,7 @@ _使用项目选项编辑的多平台的库的 NuGet 元数据_
 
 **常规**选项卡上包含四个字段，必须输入生成 NuGet 包：
 
-[ ![](metadata-images/metadata-general-sml.png "NuGet 包所需元数据窗口")](metadata-images/metadata-general.png)
+[![](metadata-images/metadata-general-sml.png "NuGet 包所需元数据窗口")](metadata-images/metadata-general.png#lightbox)
 
 - **ID** – Nuget.org （或将分发包的任何位置） 中应该是唯一的包标识符。 遵循此[指南](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)并且仅使用在 URL 中有效的字符 (没有空格，并避免大部分特殊字符)。
 - **版本**– 选择版本号与一致[NuGet 的版本控制规则](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions)。
@@ -45,7 +45,7 @@ _使用项目选项编辑的多平台的库的 NuGet 元数据_
 
 **详细信息**选项卡包含可选字段，要包括在 NuGet 包清单文件中。
 
-[ ![](metadata-images/metadata-detail-sml.png "NuGet 包的可选元数据窗口")](metadata-images/metadata-detail.png)
+[![](metadata-images/metadata-detail-sml.png "NuGet 包的可选元数据窗口")](metadata-images/metadata-detail.png#lightbox)
 
 请参阅[可选元素引用](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements)有关必需和可选字段的详细信息。
 

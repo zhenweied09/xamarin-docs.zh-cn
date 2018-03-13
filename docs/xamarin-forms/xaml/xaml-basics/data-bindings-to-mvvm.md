@@ -3,16 +3,16 @@ title: "第 5 部分。 从数据绑定到 MVVM"
 description: "记住，模型-视图-视图模型 (MVVM) 体系结构模式就是使用 XAML。 模式强制执行三个软件层之间的分隔-XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的媒介调用视图模型。 视图和视图模型，以及经常连接通过在 XAML 文件中定义的数据绑定中。 为视图 BindingContext 通常是 ViewModel 的实例。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: b16aa2456cdae7a08f8f9ee8adbc32c124e78e18
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 207bf7649d588f973b400cb452d9d8b246955cdb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>第 5 部分。 从数据绑定到 MVVM
 
@@ -59,7 +59,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 当然，大的问题是，日期和时间设置了后第一次生成页面时，以及永远不会更改：
 
-[ ![](data-bindings-to-mvvm-images/oneshotdatetime.png "视图显示日期和时间")](data-bindings-to-mvvm-images/oneshotdatetime-large.png "视图显示日期和时间")
+[![](data-bindings-to-mvvm-images/oneshotdatetime.png "视图显示日期和时间")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "视图显示日期和时间")
 
 XAML 文件可以显示时钟始终会显示当前时间，但它需要一些代码以帮助解决问题。当考虑 MVVM、 模型和视图模型是完全用代码编写的类。 通常，视图不引用通过数据绑定在视图模型中定义的属性的 XAML 文件。
 
@@ -142,7 +142,7 @@ namespace XamlSamples
 
 `Binding`上的标记扩展`Text`属性`Label`格式`DateTime`属性。 下面是显示：
 
-[ ![](data-bindings-to-mvvm-images/clock.png "视图显示日期和时间通过 ViewModel")](data-bindings-to-mvvm-images/clock-large.png "视图显示日期和时间通过视图模型")
+[![](data-bindings-to-mvvm-images/clock.png "视图显示日期和时间通过 ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "视图显示日期和时间通过视图模型")
 
 还有可能访问各个属性`DateTime`ViewModel 用句点分隔各个属性的属性：
 
@@ -292,7 +292,7 @@ namespace XamlSamples
 
 在每个绑定`Label`是默认设置`OneWay`。 它只需显示的值。 但在每个绑定`Slider`是`TwoWay`。 这允许`Slider`从 ViewModel 初始化。 请注意，`Color`属性设置为`Blue`ViewModel 实例化时。 但在更改`Slider`还需要在 ViewModel，然后计算一种新颜色中设置属性的新值。
 
-[ ![](data-bindings-to-mvvm-images/hslcolorscroll.png "使用双向数据绑定的 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png "MVVM 使用双向数据绑定")
+[![](data-bindings-to-mvvm-images/hslcolorscroll.png "使用双向数据绑定的 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM 使用双向数据绑定")
 
 ## <a name="commanding-with-viewmodels"></a>与 Viewmodel 命令
 
@@ -553,7 +553,7 @@ namespace XamlSamples
 
 `Command`属性的第一个`Button`出现在此标记绑定到`DeleteCharCommand`; rest 绑定到`AddCharCommand`与`CommandParameter`显示的字符，它是相同`Button`表面。 下面是在操作中的程序：
 
-[ ![](data-bindings-to-mvvm-images/keypad.png "使用 MVVM 和命令的计算器")](data-bindings-to-mvvm-images/keypad-large.png "计算器使用 MVVM 和命令")
+[![](data-bindings-to-mvvm-images/keypad.png "使用 MVVM 和命令的计算器")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "计算器使用 MVVM 和命令")
 
 ### <a name="invoking-asynchronous-methods"></a>调用异步方法
 
@@ -678,7 +678,7 @@ XAML 文件中的为`MainPage`定义`ListBox`其`ItemsSource`属性设置为，`
 
 页可滚动列表所示：
 
-[ ![](data-bindings-to-mvvm-images/mainpage.png "可滚动的页列表")](data-bindings-to-mvvm-images/mainpage-large.png "的页的可滚动列表")
+[![](data-bindings-to-mvvm-images/mainpage.png "可滚动的页列表")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "的页的可滚动列表")
 
 当用户选择某个项时触发的代码隐藏文件中的处理程序。 处理程序集`SelectedItem`属性`ListBox`回`null`，实例化所选的页面，然后导航到它：
 
@@ -695,6 +695,12 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
     }
 }
 ```
+
+## <a name="video"></a>视频
+
+> [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
+
+**可以轻松地 Xamarin.Forms 和 Prism Xamarin 发展 2016年: MVVM**
 
 ## <a name="summary"></a>摘要
 

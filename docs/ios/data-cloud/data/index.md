@@ -3,16 +3,16 @@ title: "iOS 数据访问"
 description: "大多数应用程序具有一些要求将数据保存在本地设备上。 除非是非常小的数据量，这通常需要一个数据库和数据层应用程序管理数据库的访问权限中。 iOS SQLite 数据库引擎\"内置\"，由 Xamarin 的平台简化访问存储和检索数据。 本文档演示如何访问 SQLite 数据库。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
+ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 9ca929f584ec2b0d98300e7645707131df89969f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6dba862055cc266b2af1eaf87418fe7ebf5830c5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-data-access"></a>iOS 数据访问
 

@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>应用程序索引和深层链接
 
 _应用程序索引允许将否则忘记后几个使用能够通过在搜索结果中显示相关的应用程序。深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。本文演示如何使用应用程序索引和深层链接使 Xamarin.Forms 应用程序内容可供搜索 iOS 和 Android 设备上。_
 
-## <a name="overview"></a>概述
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**深层链接 Xamarin.Forms 和 Azure，通过[Xamarin 大学](https://university.xamarin.com/)**
+
 
 Xamarin.Forms 应用程序索引和深层链接提供一个用于 API 为应用程序索引用户浏览应用程序的发布元数据。 在 Spotlight 搜索，在 Google 搜索中，或在 web 搜索，则可以为搜索创建索引的内容。 点击搜索结果包含深层链接将激发的事件可以由应用程序，并且通常用于导航到从深层链接引用的页。
 
@@ -31,7 +35,7 @@ Xamarin.Forms 应用程序索引和深层链接提供一个用于 API 为应用�
 有关使用 SQLite 数据库的详细信息，请参阅[处理本地数据库](~/xamarin-forms/app-fundamentals/databases.md)。
 
 > [!NOTE]
-> **请注意**: Xamarin.Forms 应用程序索引和深层链接功能仅适用于 iOS 和 Android 平台，而且分别需要 iOS 9 和 API 23。
+> Xamarin.Forms 应用程序索引和深层链接功能仅适用于 iOS 和 Android 平台，而且需要 iOS 9 和 API 23 分别。
 
 ## <a name="setup"></a>安装
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 这将添加[ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/)实例与应用程序的[ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/)集合。
 
 > [!NOTE]
-> **请注意**:`RegisterLink`方法还可以用于更新编制索引的页的内容。
+> `RegisterLink`方法还可以用于更新编制索引的页的内容。
 
 一次[ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/)实例已注册为索引，它可以出现在搜索结果。 以下屏幕截图显示创建索引在 iOS 平台上的搜索结果中显示的内容：
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 这将删除[ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/)从应用程序的实例[ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/)集合。
 
 > [!NOTE]
-> **请注意**： 在 Android 上，不能从搜索结果中删除索引的内容。
+> 在 Android 上不能从搜索结果中删除索引的内容。
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 - `shouldAddToPublicIndex` –`string`任一`true`或`false`控制是否将创建索引的内容添加到 Apple 的公有云索引，然后向尚未在其 iOS 设备安装应用程序的用户。 但是，只是因为内容已经设置为公共的索引，它并不意味着，它将自动添加到 Apple 的公有云索引。 有关详细信息，请参阅[公共搜索索引](~/ios/platform/search/nsuseractivity.md)。 请注意，此键应设置为`false`添加到个人数据时[ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/)集合。
 
 > [!NOTE]
-> **请注意**:`KeyValues`集合不在 Android 平台上使用。
+> `KeyValues`集合不在 Android 平台上使用。
 
 Handoff 有关的详细信息，请参阅[简介 Handoff](~/ios/platform/handoff.md)。
 

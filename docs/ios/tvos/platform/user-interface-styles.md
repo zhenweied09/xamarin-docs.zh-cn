@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 55a9e56585521a0a7b89a7b881dfecd4e1c14b08
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-user-interface-styles"></a>新的用户界面样式
 
@@ -29,11 +29,11 @@ tvOS 10 现在支持深色和浅色用户界面主题，所有生成在 UIKit �
 
 用户可以通过转到切换此主题**设置** > **常规** > **外观**和之间切换**Light**和**深色**:
 
-[ ![](user-interface-styles-images/theme01.png "设置应用程序")](user-interface-styles-images/theme01.png)
+[![](user-interface-styles-images/theme01.png "设置应用程序")](user-interface-styles-images/theme01.png#lightbox)
 
 当**深色**选择主题后，所有的用户界面元素将切换到上暗色背景的浅文本：
 
-[ ![](user-interface-styles-images/theme02.png "深色主题")](user-interface-styles-images/theme02.png)
+[![](user-interface-styles-images/theme02.png "深色主题")](user-interface-styles-images/theme02.png#lightbox)
 
 用户将无法在任何时候切换主题，并因此基于当前的活动，Apple TV 所在的位置或一天的时间可能会执行。
 
@@ -51,10 +51,10 @@ Light UI 主题是默认主题，并用任何现有的 tvOS 应用将仍采用�
 2. 选择**源**视图 （从编辑器底部）。
 3. 添加新的密钥，并调用它`UIUserInterfaceStyle`: 
 
-    [ ![](user-interface-styles-images/theme03.png "UIUserInterfaceStyle 密钥")](user-interface-styles-images/theme03.png)
+    [![](user-interface-styles-images/theme03.png "UIUserInterfaceStyle 密钥")](user-interface-styles-images/theme03.png#lightbox)
 4. 将类型设置为保留`String`和输入的值为`Automatic`: 
 
-    [ ![](user-interface-styles-images/theme04.png "输入自动")](user-interface-styles-images/theme04.png)
+    [![](user-interface-styles-images/theme04.png "输入自动")](user-interface-styles-images/theme04.png#lightbox)
 5. 保存对文件所做的更改。
 
 有三个可能值`UIUserInterfaceStyle`密钥：
@@ -173,13 +173,13 @@ TvOS 10，可以设置应用的情节提要响应特征集合，并且许多 UI 
 
 1. 右键单击情节提要文件**解决方案资源管理器**和选择**打开** > **Xcode 接口生成器**: 
 
-    [ ![](user-interface-styles-images/theme05.png "使用 Xcode 接口生成器打开")](user-interface-styles-images/theme05.png) 
+    [![](user-interface-styles-images/theme05.png "使用 Xcode 接口生成器打开")](user-interface-styles-images/theme05.png#lightbox) 
 2. 若要启用特征集合支持，请切换到**文件检查器**并检查**使用特征变体**中的属性**接口生成器文档**部分： 
 
-    [ ![](user-interface-styles-images/theme06.png "启用特征集合支持")](user-interface-styles-images/theme06.png)
+    [![](user-interface-styles-images/theme06.png "启用特征集合支持")](user-interface-styles-images/theme06.png#lightbox)
 3. 确认使用特征变体的更改： 
 
-    [ ![](user-interface-styles-images/theme07.png "使用特征变体警报")](user-interface-styles-images/theme07.png)
+    [![](user-interface-styles-images/theme07.png "使用特征变体警报")](user-interface-styles-images/theme07.png#lightbox)
 4. 将所做的更改保存到情节提要文件。
 
 在编辑 tvOS 情节提要界面生成器中的时，Apple 添加了以下功能：
@@ -188,20 +188,20 @@ TvOS 10，可以设置应用的情节提要响应特征集合，并且许多 UI 
     
     * 现在有多个属性 **+** 旁边这可通过单击添加 UI 主题特定版本： 
 
-        [ ![](user-interface-styles-images/theme08.png "添加 UI 主题特定版本")](user-interface-styles-images/theme08.png) 
+        [![](user-interface-styles-images/theme08.png "添加 UI 主题特定版本")](user-interface-styles-images/theme08.png#lightbox) 
     
     * 开发人员可以指定一个新属性，或单击**x**按钮将其删除： 
 
-        [ ![](user-interface-styles-images/theme09.png "指定新属性，或单击 x 按钮以将其删除")](user-interface-styles-images/theme09.png)
+        [![](user-interface-styles-images/theme09.png "指定新属性，或单击 x 按钮以将其删除")](user-interface-styles-images/theme09.png#lightbox)
 * 开发人员可以预览 Light 或深色主题中从接口生成器中的 UI 设计：
     
     * 设计图面的底部允许开发人员切换当前 UI 主题： 
 
-        [ ![](user-interface-styles-images/theme10.png "底部的设计图面")](user-interface-styles-images/theme10.png)
+        [![](user-interface-styles-images/theme10.png "底部的设计图面")](user-interface-styles-images/theme10.png#lightbox)
         
     * 新的主题将显示在界面生成器，将显示任何特征集合特定调整： 
 
-        [ ![](user-interface-styles-images/theme11.png "显示在界面生成器主题")](user-interface-styles-images/theme11.png)
+        [![](user-interface-styles-images/theme11.png "显示在界面生成器主题")](user-interface-styles-images/theme11.png#lightbox)
 
 此外，tvOS 模拟器现在具有键盘快捷方式，使开发人员能够快速调试 tvOS 应用时在浅色和深色主题之间切换。 使用**命令 Shift D**键盘序列浅色和深色之间切换。
 

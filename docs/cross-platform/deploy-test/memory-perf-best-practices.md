@@ -8,35 +8,18 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 56d868f64de009d01930ec34ee2cb436276006ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cross-platform-performance"></a>跨平台性能
 
-_可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文介绍并讨论这些方法。_
+_可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文将介绍并讨论这些方法。_
 
 应用程序性能差表现在许多方面。 这会造成应用程序看起来无响应，导致滚动缓慢，还可降低电池寿命。 但是，优化性能不止需要实现高效的代码。 还必须考虑用户对应用程序性能的体验。 例如，确保操作执行不会妨碍用户执行其他活动，这有助于改进用户的体验。
 
-可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能和感知性能。 它们包括：
-
-- [使用 Profiler](#profiler)
-- [释放 IDisposable 资源](#idisposable)
-- [取消订阅事件](#events)
-- [使用弱引用来阻止不变对象](#weakreferences)
-- [延迟创建对象的开销](#lazy)
-- [实现异步操作](#async)
-- [使用 SGen 垃圾回收器](#sgen)
-- [缩减应用程序大小](#linker)
-- [优化图像资源](#optimizeimages)
-- [缩短应用程序激活期限](#activationperiod)
-- [减少 Web 服务通信](#webservicecommunication)
-
-此免费 [Xamarin University 视频](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)还包含有关设计 Xamarin 应用的有用提示。
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "有关如何避免常见问题的免费 Xamarin University 视频")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 

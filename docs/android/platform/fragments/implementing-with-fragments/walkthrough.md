@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 7441fbe1fc686dc4fa5cb67cbfc5ae6353f32c93
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5c058f173f64efe4a5c777872e9ea67120115f0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough"></a>演练
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 创建一个名为的新的 Xamarin.Android 项目**FragmentSample**。 **最低 Android**版本应设置到 Android 3.1 或更高版本，如下面的图像中所示：
 
-[![最低 Android 版本设置](walkthrough-images/00.png)](walkthrough-images/00.png)
+[![最低 Android 版本设置](walkthrough-images/00.png)](walkthrough-images/00.png#lightbox)
 
 
 ## <a name="2-create-the-mainactivity"></a>2.创建 MainActivity
@@ -47,7 +47,7 @@ public class MainActivity : Activity
 
 两个不同的屏幕大小需要两个不同的布局文件。 因此，让我们创建一个新的文件夹，**资源/布局大型**，并创建新的布局，调用**activity_main.axml**。 我们还将重命名默认布局文件作为**Resources/Layout/activity_main.axml**。 这些更改后的布局文件夹应类似于下面的屏幕快照：
 
-[![在 IDE 中的布局文件夹的屏幕截图](walkthrough-images/01.png)](walkthrough-images/01.png)
+[![在 IDE 中的布局文件夹的屏幕截图](walkthrough-images/01.png)](walkthrough-images/01.png#lightbox)
 
 
 所有设备将加载和使用中的布局文件**资源/布局**。
@@ -92,7 +92,7 @@ Android 3.2 引入了指定屏幕布局的新方法。 这些新限定符指定�
 
 `TitlesFragment` 将显示各种起到的标题，因此，让我们添加到项目的新片段调用`TitlesFragment`:
 
-[![将新片段添加到 TitlesFragment 项目](walkthrough-images/02.png)](walkthrough-images/02.png)
+[![将新片段添加到 TitlesFragment 项目](walkthrough-images/02.png)](walkthrough-images/02.png#lightbox)
 
 后`TitlesFragment`已添加，我们必须更改类，以便它继承自`Android.App.ListFragment`。 `ListFragment` 是专用的片段类型，包括列表功能。
 `TitlesFragment` 此外将重写`OnActivityCreated`（另一种片段生命周期方法），并提供`Adapter`，`ListFragment`将用于填充列表：
@@ -162,7 +162,6 @@ private void ShowDetails(int playId)
 
 代码从该设备将确定如何格式化并显示从所选 play 引号。 对于平板电脑，`_isDualPane`标志将设置为`true`，并因此将旁边显示引号`TitlesFragment`。 如果所选的 play`id`尚未显示，然后新`DetailsFragment`时创建，并加载到`FrameLayout`活动上。 对于不具有大型显示其他设备&ndash;手机，例如&ndash;`isDualPane`将设置为`false`使新`DetailsActivity`将启动。
 
-<a name="5. Create_the_DetailsActivity" />
 
 ## <a name="5-create-the-detailsactivity"></a>5.创建 DetailsActivity
 
@@ -187,7 +186,6 @@ public class DetailsActivity : Activity
 
 请注意，没有布局文件加载为`DetailsActivity`。 相反，`DetailsFragment`将会加载到活动的根视图。 此根视图具有特殊 ID `Android.Resource.Id.Content`。 一个新`DetailFragment`已创建并随后添加到此根视图内`FragmentTransaction`，它由活动的创建`FragmentManager`。
 
-<a name="6. Create_the_DetailsFragment" />
 
 ## <a name="6-create-the-detailsfragment"></a>6.创建 DetailsFragment
 

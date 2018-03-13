@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>演练： 使用 JSON 元素创建的用户界面
 
@@ -22,7 +22,7 @@ _MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生�
 
 保持联系D 支持使用 JSON 时元素 API 中可用的功能的完整范围。 例如，下面的屏幕截图中的应用程序是完全声明使用 JSON:
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全声明使用 JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ](json-element-walkthrough-images/02-load-from-file-details.png "例如，此屏幕截图中的应用程序完全使用声明JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全声明使用 JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全使用声明JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 让我们重新访问中的示例[元素 API 演练](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)教程中，显示如何添加使用 JSON 任务详细信息屏幕。
 
@@ -30,7 +30,7 @@ _MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生�
 
 本演练的示例允许要创建的任务。 在第一个屏幕上选择一项任务时，详细信息屏幕显示所示：
 
- [ ![](json-element-walkthrough-images/03-task-list.png "如所示的第一个屏幕上选择一项任务时，显示详细信息屏幕")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "如所示的第一个屏幕上选择一项任务时，显示详细信息屏幕")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>创建 JSON
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 在运行时，检索和分析保持联系的文件当用户导航到第二个视图中，如下面的屏幕截图中所示的 D:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "将检索文件，然后将其保持联系的分析D 当用户导航到第二个视图")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "将检索文件，然后将其保持联系的分析D 当用户导航到第二个视图")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>体系结构
 
@@ -22,13 +22,12 @@ ms.lasthandoff: 02/27/2018
 
 在 Android 上，大部分如音频、 图形、 OpenGL 和电话服务的系统功能不可用直接向本机应用程序，它们才会通过驻留在其中一个 Android 运行时 Java Api 公开[Java](https://developer.xamarin.com/api/namespace/Java.Lang/)。 *命名空间或[Android](https://developer.xamarin.com/api/namespace/Android/)。 * 命名空间。 体系结构是大致如下：
 
-[![内核上方和下方.NET/Java + 绑定 Mono 和艺术作品的图示](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![内核上方和下方.NET/Java + 绑定 Mono 和艺术作品的图示](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin.Android 开发人员访问操作系统通过他们所熟悉的.NET api 调用 （用于低级别的访问权限） 或使用 Java api 公开的桥梁 Android 命名空间中公开的类中的各种功能Android 运行时。
 
 Android 类如何与 Android 运行时类进行通信的详细信息请参阅[API 设计](~/android/internals/api-design.md)文档。
 
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>应用程序包
 
@@ -44,7 +43,6 @@ Android 应用程序包是包含 ZIP 容器*.apk*文件扩展名。 Xamarin.Andr
 Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Android 来调入托管代码。
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android 可调用包装器
 
@@ -67,7 +65,6 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 当释放的托管可调用包装器，如果实例无意中共享线程，作为释放实例之间将影响任何其他线程的引用，因此必须小心谨慎。 为了最大的安全，仅`Dispose()`的已分配通过实例`new`*或*从方法的您*知道*始终分配新的实例和可能不缓存的实例导致线程间共享的意外实例。
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>管理可调用包装器子类
 
@@ -76,7 +73,6 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 如管理可调用包装器，管理可调用包装器子类还包含全局引用，可通过访问[Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)属性。 就像与托管的可调用包装器，通过调用全局引用可以显式释放操作[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)。
 与托管的可调用包装器，不同*格外注意*应在这种情况下，作为释放之前拍摄*dispose （)*运算结果的实例将中断 Java 实例之间的映射 (的实例Android 可调用包装器） 和托管的实例。
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Java 激活
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 仅*dispose （)*的管理可调用包装器子类，当你知道将不再，使用的 Java 对象或子类不包含实例数据时和*（IntPtr，JniHandleOwnership）*提供了构造函数。
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>应用程序启动
 

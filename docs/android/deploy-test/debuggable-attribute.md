@@ -2,20 +2,19 @@
 title: "可调试属性"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
+ms.assetid: 1ABF90F1-6A70-45AE-9271-D90DC42807D0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: db09ebe29b6c404bac892fd76389faf0b9e03d5b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 65037029d01d499421fd825f72347ae1bebd9966
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="debuggable-attribute"></a>可调试属性
 
-<a name="Overview" />
 
 
 若要进行调试，Android 需支持 Java 调试线协议 (JDWP)。 这是一种允许 ADB 等工具与 JVM 通信的技术。 尽管在开发期间 JDWP 非常重要，仍应在发布应用程序之前将其禁用。

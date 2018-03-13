@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a16f72e6aaee93aa313aff0aba23887b51acf701
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>使用 Azure Cosmos DB 文档数据库的用户进行身份验证
 
@@ -81,7 +81,7 @@ _Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务
 
     下面的屏幕截图演示了此配置：
 
-    [![](authentication-images/azure-web-app-settings.png "App Service Web 应用设置")](authentication-images/azure-web-app-settings-large.png "App Service Web 应用设置")
+    [![](authentication-images/azure-web-app-settings.png "App Service Web 应用设置")](authentication-images/azure-web-app-settings-large.png#lightbox "App Service Web 应用设置")
 
 1. 将资源令牌 broker 解决方案发布到 Azure App Service web 应用。
 
@@ -117,7 +117,7 @@ _Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务
 
   下面的屏幕截图演示了此配置：
 
-  [![](authentication-images/app-service-authentication-settings.png "App Service Web 应用程序身份验证设置")](authentication-images/app-service-authentication-settings-large.png "App Service Web 应用程序身份验证设置")
+  [![](authentication-images/app-service-authentication-settings.png "App Service Web 应用程序身份验证设置")](authentication-images/app-service-authentication-settings-large.png#lightbox "App Service Web 应用程序身份验证设置")
 
 App Service web 应用还应配置为与 Facebook 应用程序启用的身份验证流通信。 这可以通过选择 Facebook 标识提供程序，并输入**应用程序 ID**和**应用程序密钥**从 Facebook 开发人员中心上的 Facebook 应用程序设置的值。 有关详细信息，请参阅[到你的应用程序添加 Facebook 信息](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)。
 

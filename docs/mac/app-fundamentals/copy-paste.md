@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 115f3340c5678c0ead06cf773e193fbdc4ba3d07
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="copy-and-paste"></a>复制和粘贴
 
@@ -27,7 +27,7 @@ _本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程
 1. **标准数据类型**-由于粘贴板操作通常会执行两个不相关的应用之间，既不应用已知道的其他支持的数据类型。 若要最大化共享的可能性，请粘贴板可容纳多个表示形式 （使用一组标准的常见数据类型） 的给定项，这允许使用应用程序选取最适合其需求的版本。
 2. **自定义数据**-若要支持的复制和粘贴你 Xamarin.Mac 可以定义将由粘贴板处理的自定义数据类型中的复杂数据。 例如，向量绘制应用程序，它允许用户复制和粘贴由多个数据类型和点组成的复杂形状。
 
-[![正在运行的应用的示例](copy-paste-images/intro01.png "正在运行的应用的示例")](copy-paste-images/intro01-large.png)
+[![正在运行的应用的示例](copy-paste-images/intro01.png "正在运行的应用的示例")](copy-paste-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍使用粘贴板 Xamarin.Mac 应用程序以支持复制和粘贴操作中的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -50,14 +50,14 @@ _本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程
 1. 针对 Mac 和单击启动 Visual Studio**新项目...**链接。
 2. 选择**Mac** > **应用** > **Cocoa 应用**，然后单击**下一步**按钮： 
 
-    [![创建一个新 Cocoa 应用程序项目](copy-paste-images/sample01.png "创建一个新 Cocoa 应用程序项目")](copy-paste-images/sample01-large.png)
+    [![创建一个新 Cocoa 应用程序项目](copy-paste-images/sample01.png "创建一个新 Cocoa 应用程序项目")](copy-paste-images/sample01-large.png#lightbox)
 3. 输入`MacCopyPaste`为**项目名称**并保留为默认值的其他所有内容。 单击下一步: 
 
-    [![设置项目的名称](copy-paste-images/sample01a.png "设置项目的名称")](copy-paste-images/sample01a-large.png)
+    [![设置项目的名称](copy-paste-images/sample01a.png "设置项目的名称")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. 单击**创建**按钮： 
 
-    [![确认新的项目设置](copy-paste-images/sample02.png "确认新的项目设置")](copy-paste-images/sample02-large.png)
+    [![确认新的项目设置](copy-paste-images/sample02.png "确认新的项目设置")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>添加 NSDocument
 
@@ -265,7 +265,7 @@ public void PasteImage(NSObject sender) {
 
 双击**Main.storyboard**文件以在 Xcode 中打开它。 接下来，也添加一个工具栏和映像，并将其配置如下：
 
-[![编辑工具栏](copy-paste-images/sample04.png "编辑工具栏")](copy-paste-images/sample04-large.png)
+[![编辑工具栏](copy-paste-images/sample04.png "编辑工具栏")](copy-paste-images/sample04-large.png#lightbox)
 
 添加复制和粘贴**图像工具栏项**到工具栏的左边。 我们将使用这三个快捷方式复制和粘贴从编辑菜单。 接下来，添加了四个**映像工具栏项**工具栏的右侧。 我们将使用它们来填充也具有一些默认图像的图像。
 
@@ -273,7 +273,7 @@ public void PasteImage(NSObject sender) {
 
 接下来，让我们也公开以下插座和我们工具栏项和图像的操作：
 
-[![创建 outlet 和操作](copy-paste-images/sample05.png "创建 outlet 和操作")](copy-paste-images/sample05-large.png)
+[![创建 outlet 和操作](copy-paste-images/sample05.png "创建 outlet 和操作")](copy-paste-images/sample05-large.png#lightbox)
 
 有关使用容器和操作的详细信息，请参阅[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)一部分我们[Hello，Mac](~/mac/get-started/hello-mac.md)文档。
 

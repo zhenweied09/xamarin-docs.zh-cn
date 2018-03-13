@@ -4,14 +4,15 @@ description: "创建响应的触摸和 Xamarin.Forms 元素的 SkiaSharp 图形"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: c4db5c77113e80e5c73b800f7214ea70c6e325a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c938e5ef836904c42f3349c66d48a9b13cb335ca
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>将与 Xamarin.Forms 集成
 
@@ -234,7 +235,7 @@ public partial class ColorExplorePage : ContentPage
 
 但感受两个模型的最佳方法是尝试使用它们自己：
 
-[![](integration-images/colorexplore-large.png "三重的颜色浏览页面的屏幕截图")](integration-images/colorexplore-small.png "三重的颜色浏览页面的屏幕截图")
+[![](integration-images/colorexplore-large.png "三重的颜色浏览页面的屏幕截图")](integration-images/colorexplore-small.png#lightbox "三重的颜色浏览页面的屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

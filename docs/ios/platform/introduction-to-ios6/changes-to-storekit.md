@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: cbaa389e4a115be2face2b72db6108c836676dc7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec83bc0f62ee195884cef2f59ba701fcbf15c1da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="changes-to-storekit"></a>对 StoreKit 更改
 
@@ -36,7 +36,7 @@ _iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes �
 在 iOS 中新的应用内购买功能允许用户查看产品信息和购买或下载从你的应用程序中的产品。
 以前的应用程序都触发 iTunes、 应用商店或 iBookstore 可能会导致用户离开原始应用程序。 此新功能它们完成时，会自动将用户返回到你的应用。
 
- [ ![](changes-to-storekit-images/image1.png "在购买之后自动返回到应用程序")](changes-to-storekit-images/image1.png)
+ [![](changes-to-storekit-images/image1.png "在购买之后自动返回到应用程序")](changes-to-storekit-images/image1.png#lightbox)
 
 有大量方案这可能会很有用，包括 （但不是限于）：
 
@@ -92,7 +92,7 @@ void Buy (int productId)
 
 运行 – 完全内发生下载或购买时，则应用程序类似如下所示`SKStoreProductViewController`:
 
- [ ![](changes-to-storekit-images/image2.png "应用程序如下所示，运行时")](changes-to-storekit-images/image2.png)
+ [![](changes-to-storekit-images/image2.png "应用程序如下所示，运行时")](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>支持较早的操作系统
 
@@ -130,7 +130,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 对于你发布的应用程序，它很容易地找到**Apple ID**在 iTunes Connect 中：
 
- [ ![](changes-to-storekit-images/image3.png "在 iTunes Connect 中查找 Apple ID")](changes-to-storekit-images/image3.png)
+ [![](changes-to-storekit-images/image3.png "在 iTunes Connect 中查找 Apple ID")](changes-to-storekit-images/image3.png#lightbox)
 
  <a name="Search_API" />
 
@@ -194,11 +194,11 @@ Apple ID 为**496963922**。
 
 在 iOS 6 Apple 提供的服务器传递产品变体： 他们将托管其服务器上的内容文件。 这使得生成服务器传递产品，因为你无需运行单独的服务器，并存储工具包提供你以前必须自己编写的后台下载功能要简单得多。 若要利用 Apple 的承载，启用内容承载新的应用内购买产品的并修改你的应用商店工具包代码以充分利用它。 然后再使用 Xcode 生成并上载到 Apple 的服务器查看和版本的产品内容文件。
 
- [ ![](changes-to-storekit-images/image4.png "生成和传递过程")](changes-to-storekit-images/image4.png)
+ [![](changes-to-storekit-images/image4.png "生成和传递过程")](changes-to-storekit-images/image4.png#lightbox)
 
 使用应用商店提供的应用内购买*托管内容*需要以下设置和配置：
 
--   **iTunes Connect** – 你*必须*提供你的银行和税务信息向 Apple 以便它们可以汇款替你收集中涉及的金额。 然后，你可以配置要销售，并将沙盒用户帐户设置为测试购买产品。  *你还必须配置承载的内容**为你想要存储在 Apple 这些非耗材产品* *。*  
+-   **iTunes Connect** – 你*必须*提供你的银行和税务信息向 Apple 以便它们可以汇款替你收集中涉及的金额。 然后，你可以配置要销售，并将沙盒用户帐户设置为测试购买产品。  *你还必须配置承载的内容**为你想要存储在 Apple 这些非耗材产品* *。* 
 -   **iOS 设置门户**– 创建捆绑标识符并启用你的应用的应用商店访问的支持的应用内购买任何应用程序一样。 
 -   **存储工具包**– 将代码添加到显示产品、 购买产品和还原的事务的应用程序。  *在 iOS 6 中存储工具包还将管理的产品内容，在后台，进度更新和下载。* 
 -   **自定义代码**– 若要将跟踪客户的购买情况和提供的产品或它们已购买的服务。 利用新的 iOS 6 存储工具包类，如`SKDownload`检索 apple 承载的内容。 
@@ -213,7 +213,7 @@ Apple ID 为**496963922**。
 
 在安装之前，安装期间和之后购买，应用程序如下所示：
 
- [ ![](changes-to-storekit-images/image5.png "应用程序如下所示，在安装之前，安装期间和之后购买")](changes-to-storekit-images/image5.png)
+ [![](changes-to-storekit-images/image5.png "应用程序如下所示，在安装之前，安装期间和之后购买")](changes-to-storekit-images/image5.png#lightbox)
 
 下载并复制到应用程序的文档目录中的文本文件和图像。 请参阅[使用文件系统文档](~/ios/app-fundamentals/file-system.md)有关可用于应用程序存储的不同目录的详细信息。
 
@@ -221,19 +221,19 @@ Apple ID 为**496963922**。
 
 创建将使用 Apple 的新产品的内容时请务必选择承载**非耗材**产品类型。 其他产品类型不支持内容承载。 此外，你不应启用的内容承载*现有*销售; 仅打开内容承载新的产品的产品。
 
- [ ![](changes-to-storekit-images/image6.png "选择非耗材产品类型")](changes-to-storekit-images/image6.png)
+ [![](changes-to-storekit-images/image6.png "选择非耗材产品类型")](changes-to-storekit-images/image6.png#lightbox)
 
 输入**产品 ID**。 这将需要更高版本时创建此产品的内容。
 
- [ ![](changes-to-storekit-images/image7.png "输入产品 ID")](changes-to-storekit-images/image7.png)
+ [![](changes-to-storekit-images/image7.png "输入产品 ID")](changes-to-storekit-images/image7.png#lightbox)
 
 内容 hosting 详细信息部分中设置。 在应用内购买正常生效之前只需取消选中"第内容与 Apple 主机"复选框如果你想要取消 （即使你已上载一些测试内容）。 但是不能删除后，在应用内购买已进入实时内容承载。
 
- [ ![](changes-to-storekit-images/image8.png "承载 apple 的内容")](changes-to-storekit-images/image8.png)
+ [![](changes-to-storekit-images/image8.png "承载 apple 的内容")](changes-to-storekit-images/image8.png#lightbox)
 
 一旦你已启用承载内容，将输入产品**等待上载**状态和显示此消息：
 
- [ ![](changes-to-storekit-images/image9.png "产品将等待输入上载状态并显示此消息")](changes-to-storekit-images/image9.png)
+ [![](changes-to-storekit-images/image9.png "产品将等待输入上载状态并显示此消息")](changes-to-storekit-images/image9.png#lightbox)
 
 内容现在必须使用 Xcode 创建并上载使用存档工具。 下一节中提供了有关创建内容包的说明**创建。PKG 文件**。
 
@@ -262,17 +262,17 @@ Apple ID 为**496963922**。
 
 通过选择启动**文件 > 新建项目**从菜单中，并选择**应用内购买内容**:
 
- [ ![](changes-to-storekit-images/image10.png "选择应用内购买内容")](changes-to-storekit-images/image10.png)
+ [![](changes-to-storekit-images/image10.png "选择应用内购买内容")](changes-to-storekit-images/image10.png#lightbox)
 
 输入**产品名称**和**公司标识符**以便**捆绑标识符**匹配**产品 ID**在 iTunes 中输入此产品的连接。
 
- [ ![](changes-to-storekit-images/image11.png "输入的名称和标识符")](changes-to-storekit-images/image11.png)
+ [![](changes-to-storekit-images/image11.png "输入的名称和标识符")](changes-to-storekit-images/image11.png#lightbox)
 
 现在将具有一个空**应用内购买内容**项目。 你可以右键单击和**添加文件...** 或拖到**项目导航器**。 确保**ContentVersion**是否正确 （它应开始 1.0，但如果你以后选择将更新你的内容，请记住以将其递增）。
 
 此屏幕截图显示了包含在项目和主窗口中的可见 plist 条目中的内容文件的 Xcode:
 
- [ ![](changes-to-storekit-images/image12.png "此屏幕截图显示 Xcode 使用在项目和主窗口中的可见 plist 条目中包含的内容文件")](changes-to-storekit-images/image12.png)
+ [![](changes-to-storekit-images/image12.png "此屏幕截图显示 Xcode 使用在项目和主窗口中的可见 plist 条目中包含的内容文件")](changes-to-storekit-images/image12.png#lightbox)
 
 已添加你的所有内容文件后可保存此项目和编辑它再次更高版本，或开始上载过程。
 
@@ -284,15 +284,15 @@ Apple ID 为**496963922**。
 
 如下所示的内容的包将出现在存档。 请注意的存档类型和图标显示这是**应用内购买内容存档**。 单击**验证...** 检查有错误我们内容包在不实际 preforming 上载。
 
- [ ![](changes-to-storekit-images/image14.png "验证包")](changes-to-storekit-images/image14.png)
+ [![](changes-to-storekit-images/image14.png "验证包")](changes-to-storekit-images/image14.png#lightbox)
 
 与你 iTunes Connect 凭据的登录名：
 
- [ ![](changes-to-storekit-images/image15.png "使用你 iTunes Connect 凭据登录")](changes-to-storekit-images/image15.png)
+ [![](changes-to-storekit-images/image15.png "使用你 iTunes Connect 凭据登录")](changes-to-storekit-images/image15.png#lightbox)
 
 选择要将此内容与关联的正确的应用程序和应用内购买：
 
- [ ![](changes-to-storekit-images/image16.png "选择要将此内容与关联的正确的应用程序和应用内购买")](changes-to-storekit-images/image16.png)
+ [![](changes-to-storekit-images/image16.png "选择要将此内容与关联的正确的应用程序和应用内购买")](changes-to-storekit-images/image16.png#lightbox)
 
 你应看到如下消息：
 
@@ -300,7 +300,7 @@ Apple ID 为**496963922**。
 
 现在通过类似的过程，但单击**分布...** 将实际上载内容。
 
- [ ![](changes-to-storekit-images/image18.png "分发应用程序")](changes-to-storekit-images/image18.png)
+ [![](changes-to-storekit-images/image18.png "分发应用程序")](changes-to-storekit-images/image18.png#lightbox)
 
 选择要上载内容的第一个选项：
 
@@ -308,23 +308,23 @@ Apple ID 为**496963922**。
 
 再次登录：
 
- [ ![](changes-to-storekit-images/image15.png "登录名")](changes-to-storekit-images/image15.png)
+ [![](changes-to-storekit-images/image15.png "登录名")](changes-to-storekit-images/image15.png#lightbox)
 
 选择要上载到的内容的正确的应用程序和应用内购买记录：
 
- [ ![](changes-to-storekit-images/image20.png "选择应用程序和应用内购买记录")](changes-to-storekit-images/image20.png)
+ [![](changes-to-storekit-images/image20.png "选择应用程序和应用内购买记录")](changes-to-storekit-images/image20.png#lightbox)
 
 上载你的文件时等待：
 
- [ ![](changes-to-storekit-images/image21.png "将内容加载对话框")](changes-to-storekit-images/image21.png)
+ [![](changes-to-storekit-images/image21.png "将内容加载对话框")](changes-to-storekit-images/image21.png#lightbox)
 
 上载完成后，将显示一条消息，告知内容的已提交到应用商店。
 
- [ ![](changes-to-storekit-images/image22.png "示例成功上载消息")](changes-to-storekit-images/image22.png)
+ [![](changes-to-storekit-images/image22.png "示例成功上载消息")](changes-to-storekit-images/image22.png#lightbox)
 
 一旦这样做了，当您返回到产品页面上 iTunes Connect 它将显示包的详细信息，并处于**已准备好提交**状态。 此状态产品时，你可以开始在沙盒环境中测试。 不需要 '提交' 在沙盒中用于测试的产品。
 
- [ ![](changes-to-storekit-images/image23.png "iTunes Connect 它将显示包的详细信息，并处于到提交状态已准备")](changes-to-storekit-images/image23.png)
+ [![](changes-to-storekit-images/image23.png "iTunes Connect 它将显示包的详细信息，并处于到提交状态已准备")](changes-to-storekit-images/image23.png#lightbox)
 
 它可能需要一些时间 （如。 几分钟） 之间上载存档和 iTunes 正在更新的连接状态。 您可以单独，提交供其评审产品，或者与应用程序二进制文件一起提交它。 仅 Apple 正式已审批内容后将它会在生产应用商店购买你的应用程序中可用。
 
@@ -332,7 +332,7 @@ Apple ID 为**496963922**。
 
 使用 Xcode 和存档工具创建并上载托管的内容包意味着，你永远不会看到包本身的内容。 文件和目录中为示例应用程序创建的包如下所示，使用`plist`根和中的产品文件中的文件`Contents`子目录：
 
- [ ![](changes-to-storekit-images/image24.png "根和内容子目录中的产品文件中的 plist 文件")](changes-to-storekit-images/image24.png)
+ [![](changes-to-storekit-images/image24.png "根和内容子目录中的产品文件中的 plist 文件")](changes-to-storekit-images/image24.png#lightbox)
 
 请注意包的目录结构 (尤其是中的文件的位置`Contents`子目录) 因为你将需要了解此信息来从设备上的包中提取文件。
 
@@ -352,7 +352,7 @@ Apple ID 为**496963922**。
 
 事件发生时具有承载的内容的产品的顺序购买和下载此图所示：
 
- [ ![](changes-to-storekit-images/image25.png "事件发生时具有承载的内容的产品的顺序购买和下载")](changes-to-storekit-images/image25.png)
+ [![](changes-to-storekit-images/image25.png "事件发生时具有承载的内容的产品的顺序购买和下载")](changes-to-storekit-images/image25.png#lightbox)
 
 1.  可以在 iTunes Connect 与所承载的内容启用中创建新产品。 实际在 Xcode 中单独构造 （如只需为拖动到的文件夹的文件），然后存档和内容上载到 iTunes （无需进行编码，则需要）。 每个产品然后提交以供审核，此后，它可供购买。 示例代码中这些产品 Id 是硬编码，但承载 apple 的内容是如果你远程服务器上存储的可用产品列表，以便它可以进行更新时提交新产品和内容分发到 iTunes Connect 更灵活。 
 1.  当用户购买产品时，事务将置于付款队列中等待处理。 
@@ -392,7 +392,7 @@ Apple ID 为**496963922**。
 
 中的示例代码的类之间的交互 （特定于托管内容购买的代码显示为绿色） 此图所示：
 
- [ ![](changes-to-storekit-images/image26.png "托管内容购买显示为在此关系图的绿色")](changes-to-storekit-images/image26.png)
+ [![](changes-to-storekit-images/image26.png "托管内容购买显示为在此关系图的绿色")](changes-to-storekit-images/image26.png#lightbox)
 
 本部分的其余部分中显示了具有已使用这些类的示例代码：
 

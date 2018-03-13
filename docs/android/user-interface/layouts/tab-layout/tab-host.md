@@ -3,27 +3,26 @@ title: "带 TabHost 的选项卡布局"
 description: "本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.Android 应用程序中创建选项卡式的布局。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
+ms.assetid: 77B890A4-27A6-41DF-81BA-22C6116A8FB2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: ff61ca0a2bca466da3e33c93a17944915328b70c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e27557c65d2b3049457640a3492d090c5fa26a43
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tab-layout-with-tabhost"></a>带 TabHost 的选项卡布局
 
 _本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.Android 应用程序中创建选项卡式的布局。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
 > [!NOTE]
-> **注意：** `TabHost`是已否决 Google 的旧 API。 若要生成使用的选项卡式应用程序，鼓励开发人员[其中](~/android/user-interface/controls/action-bar.md)。 `ActionBar`在所有版本的 Android 中可用。 它首先 Android 3.0 （API 级别 11） 中引入并返回已移植到 Android 2.2 （API 级别 8） 和 Android 2.3 （API 级别 10） 中[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，可供通过 Xamarin.Android [XamarinAndroid 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
+> `TabHost` 是已否决 Google 的旧 API。 若要生成使用的选项卡式应用程序，鼓励开发人员[其中](~/android/user-interface/controls/action-bar.md)。 `ActionBar`在所有版本的 Android 中可用。 它首先 Android 3.0 （API 级别 11） 中引入并返回已移植到 Android 2.2 （API 级别 8） 和 Android 2.3 （API 级别 10） 中[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，可供通过 Xamarin.Android [XamarinAndroid 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
 
 `TabHost`是创建选项卡式的用户 interfacesIt 是适合于 Xamarin.Android 应用程序必须支持 Android 2.2 和 Android 2.3 并且不能使用旧的、 原始 API **ActionBarSherlock**。
 以下五个组件是与涉及到`TabHost`API:
@@ -44,7 +43,6 @@ _本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.And
 
 选项卡内容可能是活动或视图。 视图是相对较轻量和简单，但是可能会导致大量的不相关的代码 co habitating 活动中。 这将导致不佳的问题和难以维护的臃肿的类分离。 与此相反，活动需要系统资源，但允许通过其自己的不同类中封装每个选项卡的逻辑实现更加模块化方法。
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

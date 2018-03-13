@@ -7,18 +7,17 @@ ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 9b200bd335ea65bf46de00d2dc7382b7f838716b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="viewpager-with-fragments"></a>使用片段 ViewPager
 
 _ViewPager 是使您可以实现动作导航布局管理器。动作导航允许用户轻扫，左侧和右侧逐句通过数据页。本指南说明如何实现使用 ViewPager，用作数据页片段 swipeable UI。_
 
-<a name="overview" />
  
 ## <a name="overview"></a>概述
 
@@ -27,14 +26,12 @@ _ViewPager 是使您可以实现动作导航布局管理器。动作导航允许
 本指南不涵盖的片段的基础知识&ndash;如果你尚不熟悉在 Xamarin.Android 的片段，请参阅[片段](~/android/platform/fragments/index.md)来帮助你开始使用片段。 
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
 创建一个名为的新的 Android 项目**FlashCardPager**。 接下来，启动 NuGet 包管理器 (有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough))。 查找和安装**Xamarin.Android.Support.v4**包中所述[Viewpager 和视图](~/android/user-interface/controls/view-pager/viewpager-and-views.md)。 
 
 
-<a name="datasource" />
 
 ## <a name="add-an-example-data-source"></a>添加示例数据源
 
@@ -61,7 +58,6 @@ string answer = flashCardDeck[3].Answer;
 下载此源文件 (或复制并粘贴到一个新的代码**FlashCardDeck.cs**文件) 并将其添加到你的项目。
 
 
-<a name="layout" />
 
 ## <a name="create-a-viewpager-layout"></a>创建 ViewPager 布局
 
@@ -80,8 +76,6 @@ string answer = flashCardDeck[3].Answer;
 
 此 XML 定义`ViewPager`占用整个屏幕。 请注意，你必须使用完全限定名称**android.support.v4.view.ViewPager**因为`ViewPager`打包在支持库中。 `ViewPager` 则仅可从[Android 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/); 不可用 Android SDK 中。
 
-
-<a name="setup" />
 
 ## <a name="set-up-viewpager"></a>设置 ViewPager
 
@@ -120,14 +114,13 @@ protected override void OnCreate(Bundle bundle)
 
 当生成和运行此代码时，你应看到类似于以下屏幕截图显示： 
 
-[![使用空 ViewPager 的屏幕截图的 FlashCardPager 应用程序](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png)
+[![使用空 ViewPager 的屏幕截图的 FlashCardPager 应用程序](viewpager-and-fragments-images/01-initial-screen-sml.png)](viewpager-and-fragments-images/01-initial-screen.png#lightbox)
 
 此时，`ViewPager`填充因为它缺少的段的使用是空`ViewPager`，并且它用于从中的数据创建这些片段缺乏适配器**FlashCardDeck**。 
 
 在以下部分中，`FlashCardFragment`是创建要实现的每个 flash 卡的功能和`FragmentPagerAdapter`将创建连接`ViewPager`到片段中的数据创建`FlashCardDeck`。 
 
 
-<a name="fragment" />
 
 ## <a name="create-the-fragment"></a>创建片段
 
@@ -135,7 +128,6 @@ protected override void OnCreate(Bundle bundle)
 `FlashCardFragment`视图将包含的`TextView`显示 flash 卡问题文本。 此视图将实现的事件处理程序使用`Toast`以在用户点击 flash 卡问题时显示答案。 
 
 
-<a name="layout" />
 
 ### <a name="create-the-flashcardfragment-layout"></a>创建 FlashCardFragment 布局
 
@@ -163,7 +155,6 @@ protected override void OnCreate(Bundle bundle)
 此布局定义单个 flash 卡片段;每个片段组成`TextView`显示数学问题使用大型 (100sp) 字体。 此文本垂直和水平居中，flash 卡上。 
 
 
-<a name="fcfclass" />
 
 ### <a name="create-the-initial-flashcardfragment-class"></a>创建初始 FlashCardFragment 类
 
@@ -205,7 +196,6 @@ namespace FlashCardPager
 通过调用显式放大片段的视图`inflater.Inflate`。 `container`自变量是视图的父级和`false`标志指示 inflater 以避免将膨胀的视图添加到视图的父 (将添加时`ViewPager`调用的适配器的`GetItem`更高版本在此方法演练）。 
 
 
-<a name="state" />
 
 ### <a name="add-state-code-to-flashcardfragment"></a>将状态代码添加到 FlashCardFragment
 
@@ -251,8 +241,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 `answer`不在这里，使用变量，但它将在事件处理程序代码添加到此文件时更高版本使用。 
 
 
-<a name="adapter" />
-
 ## <a name="create-the-adapter"></a>创建适配器
 
 `ViewPager` 使用位于之间的适配器控制器对象`ViewPager`和数据源 (请参阅的插图中 ViewPager[适配器](~/android/user-interface/controls/view-pager/index.md#adapter)文章)。 若要访问此数据，`ViewPager`要求你提供自定义适配器派生自`PagerAdapter`。 由于此示例使用片段，它使用`FragmentPagerAdapter` &ndash; `FragmentPagerAdapter`派生自`PagerAdapter`。 
@@ -297,7 +285,6 @@ namespace FlashCardPager
 此代码引出不可或缺`FragmentPagerAdapter`实现。 在以下部分中，上述每种方法将被替换的工作代码。 构造函数的用途是将传递到的片段管理器`FlashCardDeckAdapter`的基类构造函数。 
 
 
-<a name="ctor" />
 
 ### <a name="implement-the-adapter-constructor"></a>实现适配器构造函数
 
@@ -316,7 +303,6 @@ this.flashCardDeck = flashCards;
 此行代码将存储`FlashCardDeck`实例`FlashCardDeckAdapter`将使用。 
 
 
-<a name="count" />
 
 ### <a name="implement-count"></a>实现计数
 
@@ -333,7 +319,6 @@ public override int Count
 `NumCards`属性`FlashCardDeck`在数据集中返回 flash 卡 （的片段数） 的数目。 
 
 
-<a name="getitem" />
 
 ### <a name="implement-getitem"></a>实现 GetItem
 
@@ -361,7 +346,6 @@ public override Android.Support.V4.App.Fragment GetItem(int position)
 当`ViewPager`呈现`Fragment`在`position`，它显示`TextBox`包含驻留在的数学问题字符串`position`在 flash 卡片组。 
 
 
-<a name="addadapter" />
 
 ## <a name="add-the-adapter-to-the-viewpager"></a>将适配器添加到 ViewPager
 
@@ -378,10 +362,9 @@ viewPager.Adapter = adapter;
 核心实现现已完成&ndash;生成并运行应用程序。
 你应看到在左侧的下一步的屏幕截图中所示，屏幕上显示的第一个图像的 flash 卡片组。 轻扫有待，请参阅详细 flash 卡，然后右轻扫可向后移动到 flash 卡片组：
 
-[![而无需页导航指示器的 FlashCardPager 应用的示例屏幕快照](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png)
+[![而无需页导航指示器的 FlashCardPager 应用的示例屏幕快照](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png#lightbox)
 
 
-<a name="pagetabstrip" />
 
 ## <a name="add-a-pager-indicator"></a>添加一个页导航指示器
 
@@ -409,10 +392,9 @@ viewPager.Adapter = adapter;
 
 当生成和运行应用程序时，你应该会看到空`PagerTabStrip`显示在每个 flash 卡的顶部： 
 
-[![不包含文本的 PagerTabStrip 特写](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png)
+[![不包含文本的 PagerTabStrip 特写](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png#lightbox)
 
 
-<a name="title" />
 
 ### <a name="display-a-title"></a>显示标题
 
@@ -427,12 +409,11 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 此代码将转换为问题数的 flash 卡片组中的位置。 生成的字符串转换为 Java`String`返回到`ViewPager`。 当你运行该应用使用此新方法时，每个页将显示中的问题号`PagerTabStrip`: 
 
-[![屏幕快照的 FlashCardPager 与每个页面顶部显示的问题数量](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png)
+[![屏幕快照的 FlashCardPager 与每个页面顶部显示的问题数量](viewpager-and-fragments-images/04-pagetabstrip-sml.png)](viewpager-and-fragments-images/04-pagetabstrip.png#lightbox)
 
 你可以反复刷以查看显示在每个 flash 卡的顶部 flash 卡片组中的问题数量。 
 
 
-<a name="userinput" />
 
 ## <a name="handle-user-input"></a>处理用户输入
 
@@ -450,12 +431,11 @@ questionBox.Click += delegate
 
 这`Click`事件处理程序中将显示当用户点击 Toast 显示答案`TextBox`。 `answer`时传递给捆绑从中读取状态信息的更早版本初始化变量`OnCreateView`。 生成并运行应用，然后点击上每个 flash 卡以查看问题的回答的问题文本： 
 
-[![屏幕快照的 FlashCardPager 应用 Toast 时分流数学问题](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png)
+[![屏幕快照的 FlashCardPager 应用 Toast 时分流数学问题](viewpager-and-fragments-images/05-answer-sml.png)](viewpager-and-fragments-images/05-answer.png#lightbox)
 
 **FlashCardPager**本演练使用`MainActivity`派生自`FragmentActivity`，但也可以派生`MainActivity`从`AppCompatActivity`（其中还提供对支持管理片段）。 若要查看`AppCompatActivity`示例中，请参阅[FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface%5CFlashCardPager/)示例库中。 
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

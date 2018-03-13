@@ -3,16 +3,16 @@ title: "第 1 部分。 Getting Started with XAML"
 description: "在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。 XAML 文件始终与程序关联的标记中提供的代码的支持的 C# 代码文件。 在一起，这两个文件参与包含子视图和属性初始化的新类定义。 在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 8e02dbd8687fc10582874710db7ca6848f546751
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 Getting Started with XAML
 
@@ -195,7 +195,7 @@ namespace XamlSamples
 
 在编译和运行此程序`Label`元素出现在页的中心中，如 XAML 所示。 从左到右的三个平台是 iOS、 Android 和 Windows 10 移动版：
 
-[![](get-started-with-xaml-images/xamlsamples.png "默认 Xamarin.Forms 显示")](get-started-with-xaml-images/xamlsamples-large.png "默认 Xamarin.Forms 显示")
+[![](get-started-with-xaml-images/xamlsamples.png "默认 Xamarin.Forms 显示")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "默认 Xamarin.Forms 显示")
 
 对于更有趣的视觉对象，你需要的全部是多个有趣的 XAML。
 
@@ -354,7 +354,7 @@ public MainPage()
 
 设置`Content`页属性替换的设置`Content`XAML 文件中的属性。 在编译和部署此程序的新版本，在屏幕上会出现一个按钮。 按其导航到`HelloXamlPage`。 下面是结果页上 iPhone、 Android 和 Windows 10 移动版设备：
 
-[ ![](get-started-with-xaml-images/helloxaml1.png "旋转标签文本")](get-started-with-xaml-images/helloxaml1-large.png "旋转标签文本")
+[![](get-started-with-xaml-images/helloxaml1.png "旋转标签文本")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "旋转标签文本")
 
 你可以向后定位到`MainPage`使用**< 回**iOS，在页面顶部或底部的电话在 Android 上，使用向左箭头键或在 Windows 10 移动版上的页面的底部使用向左的箭头上的按钮。
 
@@ -364,7 +364,7 @@ public MainPage()
 
 下面是如下所示：
 
-[ ![](get-started-with-xaml-images/helloxaml2.png "轮换使用 Unicode 字符的标签文本")](get-started-with-xaml-images/helloxaml2-large.png "旋转使用 Unicode 字符的标签文本")
+[![](get-started-with-xaml-images/helloxaml2.png "轮换使用 Unicode 字符的标签文本")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "旋转使用 Unicode 字符的标签文本")
 
 ## <a name="xaml-and-code-interactions"></a>XAML 和代码交互
 
@@ -392,7 +392,7 @@ public MainPage()
 
 此 XAML 文件的语法完整，而以下是如下所示：
 
-[ ![](get-started-with-xaml-images/xamlpluscode1.png "页面上的多个控件")](get-started-with-xaml-images/xamlpluscode1-large.png "页面上的多个控件")
+[![](get-started-with-xaml-images/xamlpluscode1.png "页面上的多个控件")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "页面上的多个控件")
 
 但是，很可能要考虑此程序要功能不足之处。 可能是`Slider`应导致`Label`若要显示的当前值和`Button`可能用于执行某些在程序中的操作。
 
@@ -483,7 +483,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 当你首次运行该程序，`Label`不显示`Slider`值因为`ValueChanged`尚未尚未触发事件。 但的任何操作`Slider`导致要显示的值：
 
-[ ![](get-started-with-xaml-images/xamlpluscode2.png "显示的滑块值")](get-started-with-xaml-images/xamlpluscode2-large.png "显示的滑块值")
+[![](get-started-with-xaml-images/xamlpluscode2.png "显示的滑块值")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "显示的滑块值")
 
 现在为`Button`。 让我们模拟响应`Clicked`通过显示与警报的事件`Text`的按钮。 事件处理程序可以安全地强制转换`sender`参数`Button`，然后访问其属性：
 

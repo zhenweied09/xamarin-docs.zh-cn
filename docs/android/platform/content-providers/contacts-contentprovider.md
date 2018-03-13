@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 677d672b3f00d4c3f3505ab2adf977f16fca4de5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 730cc1f815641d79350784790e3b33b743d1aebe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-contacts-contentprovider"></a>使用联系人 ContentProvider
 
@@ -40,7 +40,6 @@ ms.lasthandoff: 02/27/2018
 -  **SortOrder** &ndash;要作为排序依据的列。
 
 
-<a name="Creating_Inputs_for_a_Query" />
 
 ## <a name="creating-inputs-for-a-query"></a>为查询创建输入
 
@@ -60,14 +59,12 @@ string[] projection = {
 对于此示例， `selection`，`selectionArgs`和`sortOrder`将被忽略，将其设置为`null`。
 
 
-<a name="Creating_a_Cursor_from_a_Content_Provider_Uri" />
 
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>创建内容提供程序 Uri 中的游标
 
 参数对象具有创建后，它们可在以下三种方法之一：
 
 
-<a name="Using_a_Managed_Query" />
 
 ### <a name="using-a-managed-query"></a>使用托管的查询
 
@@ -80,7 +77,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 此游标将由 Android 托管，因此不需要关闭它。
 
 
-<a name="Using_ContentResolver" />
 
 ### <a name="using-contentresolver"></a>使用 ContentResolver
 
@@ -100,7 +96,6 @@ cursor.Close();
 或者，可以调用`StartManagingCursor()`和`StopManagingCursor()`管理光标。 托管的游标自动停用并重新查询活动将停止和重新启动时。
 
 
-<a name="Using_CursorLoader" />
 
 ### <a name="using-cursorloader"></a>使用 CursorLoader
 
@@ -116,7 +111,6 @@ var cursor = (ICursor)loader.LoadInBackground();
 此外可以使用早期的 Android 版本`CursorLoader`类通过[v4 支持库](http://developer.android.com/tools/support-library/index.html)。
 
 
-<a name="Displaying_the_Cursor_Data_with_a_Custom_Adapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>显示光标数据与自定义适配器
 
@@ -189,13 +183,12 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 
 （如果存在），会显示该图像在设备上的图像文件使用的 Uri。 应用程序如下所示：
 
-[![在 ListView; 中显示联系人的应用的屏幕快照一项左侧显示的图像](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png)
+[![在 ListView; 中显示联系人的应用的屏幕快照一项左侧显示的图像](contacts-contentprovider-images/contactsprovider.png)](contacts-contentprovider-images/contactsprovider.png#lightbox)
 
 使用类似的代码模式，你的应用程序可以访问各种系统数据包括用户的照片、 视频和音乐。
 某些数据类型需要特殊的权限，若要在项目的请求**AndroidManifest.xml**。
 
 
-<a name="Displaying_the_Cursor_Data_with_a_SimpleCursorAdapter" />
 
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>显示具有 SimpleCursorAdapter 的光标数据
 

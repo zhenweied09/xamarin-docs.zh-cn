@@ -4,14 +4,15 @@ description: "定义使用的可缩放的向量图形格式的文本字符串的
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>SVG 路径数据
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 路径填充画布，看起来更合理在横向模式中查看时：
 
-[![](path-data-images/pathdatahello-small.png "路径数据 Hello 页面的三个屏幕截图")](path-data-images/pathdatahello-large.png "路径数据 Hello 页面的三个屏幕截图")
+[![](path-data-images/pathdatahello-small.png "路径数据 Hello 页面的三个屏幕截图")](path-data-images/pathdatahello-large.png#lightbox "路径数据 Hello 页面的三个屏幕截图")
 
 **路径数据 Cat**页是类似。 路径和绘制对象定义为字段在[ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs)类：
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 下面是在所有三个平台上运行的程序：
 
-[![](path-data-images/pathdatacat-small.png "三重的路径数据 Cat 页面屏幕截图")](path-data-images/pathdatacat-large.png "路径数据 Cat 页面的三个屏幕截图")
+[![](path-data-images/pathdatacat-small.png "三重的路径数据 Cat 页面屏幕截图")](path-data-images/pathdatacat-large.png#lightbox "路径数据 Cat 页面的三个屏幕截图")
 
 通常，当`SKPath`对象定义为字段，必须在构造函数或另一种方法定义的路径的轮廓。 当使用 SVG 路径数据，但是，你已了解可以完全在字段定义指定的路径。
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 特殊的内容是使用进行第二个指针，但是。 因为在更新时钟每隔 16 毫秒，`Millisecond`属性`DateTime`值可能被用于第二个手动动画扫描，而不是一个在离散跳转中移动从第二个为第二个。 但此代码不允许是平滑的移动。 相反，它使用 Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/)和[ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/)动画的缓动函数的一种不同的移动。 这些缓动函数会导致第二个指针在的 jerkier 的方式 （&） #x 2014; 中移动只能回滚一个小之前它将移动，并且然后略有这遗憾的过度解决其目标，效果无法重现这些静态的屏幕截图中：
 
-[![](path-data-images/prettyanalogclock-small.png "三重的非常模拟时钟页面屏幕截图")](path-data-images/prettyanalogclock-large.png "非常模拟时钟页面的三个屏幕截图")
+[![](path-data-images/prettyanalogclock-small.png "三重的非常模拟时钟页面屏幕截图")](path-data-images/prettyanalogclock-large.png#lightbox "非常模拟时钟页面的三个屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

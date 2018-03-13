@@ -7,18 +7,17 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 91e27fcaef0ef1b262eceecd4d3c71bac34e328d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 绑定元数据
 
 _在 Xamarin.Android 的 C# 代码是提取的低级别的详细信息，指定在 Java 本机接口 (JNI) 的一种机制的绑定通过调用 Java 库。Xamarin.Android 提供工具生成这些绑定。此工具允许开发人员控件如何通过使用元数据，允许如修改命名空间以及成员重命名过程创建一个绑定。本文档讨论元数据的工作原理、 总结了属性的元数据支持，并说明如何通过修改此元数据来纠正绑定问题。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -74,7 +73,6 @@ Xamarin.Android **Java 绑定库**尝试自动执行必要的绑定有时称为�
 
 允许将移以讨论**Metadata.xml**中更多详细信息。
 
-<a name="Metadata.xml_Transform_File" />
 
 ## <a name="metadataxml-transform-file"></a>Metadata.xml 转换文件
 
@@ -114,7 +112,6 @@ Xamarin.Android **Java 绑定库**尝试自动执行必要的绑定有时称为�
 -   `parameter` &ndash; 标识一种方法的参数。 例如 `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### <a name="adding-types"></a>添加类型
 
@@ -129,7 +126,6 @@ Xamarin.Android **Java 绑定库**尝试自动执行必要的绑定有时称为�
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### <a name="removing-types"></a>删除类型
 
@@ -138,8 +134,6 @@ Xamarin.Android **Java 绑定库**尝试自动执行必要的绑定有时称为�
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
-
-<a name="Renaming_Members" />
 
 ### <a name="renaming-members"></a>重命名的成员
 
@@ -169,6 +163,8 @@ public class NewName : Java.Lang.Object { ... }
     name="managedName">NewName</attr>
 ```
 
+<a name="Renaming_EventArg_Wrapper_Classes" />
+
 #### <a name="renaming-eventarg-wrapper-classes"></a>重命名`EventArg`包装类
 
 如果 Xamarin.Android 绑定生成器标识`onXXX`setter 方法_侦听器类型_，C# 事件和`EventArgs`将生成子类以支持.NET flavoured API 基于 Java 的侦听器模式。 作为示例，请考虑下面的 Java 类和方法：
@@ -193,7 +189,6 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## <a name="supported-attributes"></a>受支持的属性
 
@@ -341,7 +336,6 @@ NavigationManager.2DSignNextManueverEventArgs
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

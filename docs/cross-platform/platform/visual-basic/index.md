@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: c8f66ac8532d6926fe8280b5687135dc3df53289
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="portable-visual-basicnet"></a>可移植 Visual Basic.NET
 
@@ -24,7 +24,8 @@ Xamarin iOS 和 Android 项目本质上不支持 Visual Basic;但是开发人员
 
 若要创建和编译 Visual Basic 可移植类库必须在 Windows (Visual Studio 2012 或更高版本) 上使用 Visual Studio。
 
-> ℹ️ **注意：** Visual Basic 库只能创建和编译使用 Visual Studio。 Xamarin.iOS 和 Xamarin.Android 不支持 Visual Basic 语言。
+> [!NOTE]
+> Visual Basic 库只能创建和编译使用 Visual Studio。 Xamarin.iOS 和 Xamarin.Android 不支持 Visual Basic 语言。
 >
 > 如果你在 Visual Studio 中的单独工作可以从 Xamarin.iOS 和 Xamarin.Android 项目中引用 Visual Basic 项目。
 >
@@ -44,15 +45,15 @@ Xamarin iOS 和 Android 项目本质上不支持 Visual Basic;但是开发人员
 
 1.  在**新项目**屏幕上，选择**Visual Basic > 类库 （可移植）**选项：
 
-  [ ![](images/image1-sml.png "创建新的 Visual Basic 可移植库")](images/image1.png)
+    [![](images/image1-sml.png "创建新的 Visual Basic 可移植库")](images/image1.png#lightbox)
 
 1.  Visual Studio 将立即替换为以下提示**添加可移植类库**对话框，以便可以配置该配置文件。 刻度的平台，你需要支持，并按**确定**。
 
-  [ ![](images/image2-sml.png "通过选择平台选择 PCL 配置文件")](images/image2.png)
+    [![](images/image2-sml.png "通过选择平台选择 PCL 配置文件")](images/image2.png#lightbox)
 
 1.  Visual Basic PCL 项目中将显示中所示**解决方案资源管理器**如下所示：
 
-  [ ![](images/image3-sml.png "空的 Visual Studio PCL 项目")](images/image3.png)
+    [![](images/image3-sml.png "空的 Visual Studio PCL 项目")](images/image3.png#lightbox)
 
 
 PCL 现已为要添加的 Visual Basic 代码。 PCL 项目可以引用由其他项目 （应用程序项目，库项目和甚至其他 PCL 项目）。
@@ -61,7 +62,7 @@ PCL 现已为要添加的 Visual Basic 代码。 PCL 项目可以引用由其他
 
 PCL 配置文件 （即控件 PCL 适用于哪些平台） 都可以查看和更改通过右键单击项目并选择**属性 > 库 > 更改...**.出现的对话框中此屏幕截图所示：
 
- [ ![](images/image4-sml.png "在项目属性中编辑 PCL 配置文件")](images/image4.png)
+ [![](images/image4-sml.png "在项目属性中编辑 PCL 配置文件")](images/image4.png#lightbox)
 
 如果代码已添加到 PCL 后更改配置文件，，则可能库将无法再编译，如果该代码引用不是新选择的配置文件的一部分的功能。
 

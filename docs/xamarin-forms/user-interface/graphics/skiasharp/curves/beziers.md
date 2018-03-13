@@ -4,14 +4,15 @@ description: "探讨如何使用 SkiaSharp 呈现三次方、 二次、 和圆�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 8fdebd00b0b33c184337eacd0836dd81a19f161b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>三种类型的贝塞尔曲线
 
@@ -88,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处所有三个平台上运行它：
 
-[![](beziers-images/beziercurve-small.png "三重的贝塞尔曲线页面屏幕截图")](beziers-images/beziercurve-large.png "三倍的贝塞尔曲线页面屏幕截图")
+[![](beziers-images/beziercurve-small.png "三重的贝塞尔曲线页面屏幕截图")](beziers-images/beziercurve-large.png#lightbox "三倍的贝塞尔曲线页面屏幕截图")
 
 数学上，曲线是三次方多项式。 曲线相交最多三个点在一条直线。 在开始点，曲线始终是第一个控制点的切线，并在相同的方向，一条直线从一开始点。 在终结点，曲线始终是终结点的切线，并在相同的方向，一条直线从第二个管理点。
 
@@ -206,7 +207,7 @@ float Magnitude(SKPoint v)
 
 此处是在使用三个不同的角度的三个平台上运行的程序：
 
-[![](beziers-images/beziercirculararc-small.png "三重的贝塞尔圆弧页面屏幕截图")](beziers-images/beziercirculararc-large.png "贝塞尔圆弧页面的三个屏幕截图")
+[![](beziers-images/beziercirculararc-small.png "三重的贝塞尔圆弧页面屏幕截图")](beziers-images/beziercirculararc-large.png#lightbox "贝塞尔圆弧页面的三个屏幕截图")
 
 在 Windows Mobile 屏幕上，仔细查看，你将看到贝塞尔曲线值得注意的是偏离一个半圆，当角度为 180 度，但是 iOS 屏幕显示它看起来以适应季度圆圈正常时角度为 90 度。
 
@@ -288,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 基于 sinusoidally 振荡的值在插入点`t`。 内插的点然后用于构造一系列四个连接的贝塞尔曲线。 下面是动画显示为正方形的圆圈，圆圈进度的三个平台上运行：
 
-[![](beziers-images/squaringthecircle-small.png "Squaring 的三个屏幕截图圆圈页")](beziers-images/squaringthecircle-large.png "Squaring 的三个屏幕截图圆圈页")
+[![](beziers-images/squaringthecircle-small.png "Squaring 的三个屏幕截图圆圈页")](beziers-images/squaringthecircle-large.png#lightbox "Squaring 的三个屏幕截图圆圈页")
 
 此类动画就不可能而无需通过算法灵活，可以呈现为圆弧和直线的曲线。
 
@@ -337,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 下面是在所有三个平台上的无穷大登录：
 
-[![](beziers-images/bezierinfinity-small.png "三重的贝塞尔无穷大页面屏幕截图")](beziers-images/bezierinfinity-large.png "贝塞尔无穷大页面的三个屏幕截图")
+[![](beziers-images/bezierinfinity-small.png "三重的贝塞尔无穷大页面屏幕截图")](beziers-images/bezierinfinity-large.png#lightbox "贝塞尔无穷大页面的三个屏幕截图")
 
 它是模型更流畅的中心呈现的无穷大号**弧线无穷大**来自页[**绘制一段弧线，三个方法**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)文章。
 
@@ -400,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 并在所有三个平台上运行此处：
 
-[![](beziers-images/quadraticcurve-small.png "三重的二次曲线页面屏幕截图")](beziers-images/quadraticcurve-large.png "二次曲线页面的三个屏幕截图")
+[![](beziers-images/quadraticcurve-small.png "三重的二次曲线页面屏幕截图")](beziers-images/quadraticcurve-large.png#lightbox "二次曲线页面的三个屏幕截图")
 
 虚线是曲线的起始点和终结点处的切线，和满足在控点。
 
@@ -478,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 此处所有三个平台上运行它：
 
-[![](beziers-images/coniccurve-small.png "三重的圆锥曲线页面屏幕截图")](beziers-images/coniccurve-large.png "圆锥曲线页面的三个屏幕截图")
+[![](beziers-images/coniccurve-small.png "三重的圆锥曲线页面屏幕截图")](beziers-images/coniccurve-large.png#lightbox "圆锥曲线页面的三个屏幕截图")
 
 如你所见的控制点看上去已拉入更多曲线权重更高版本时。 当权重为零时，曲线将成为一条直线的起始点从终结点。
 
@@ -542,7 +543,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如你所见，没有任何 visual 区别之间`ConicTo`以红色显示的路径和基础圆圈显示的引用：
 
-[![](beziers-images/coniccirculararc-small.png "三重的圆锥圆弧页面屏幕截图")](beziers-images/coniccirculararc-large.png "圆锥圆弧页面的三个屏幕截图")
+[![](beziers-images/coniccirculararc-small.png "三重的圆锥圆弧页面屏幕截图")](beziers-images/coniccirculararc-large.png#lightbox "圆锥圆弧页面的三个屏幕截图")
 
 但设置为 180 度，以及将其数学故障的角度。
 

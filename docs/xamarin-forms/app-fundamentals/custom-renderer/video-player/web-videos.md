@@ -2,16 +2,16 @@
 title: "播放 Web 视频"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
+ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 2e44d32f199d5c85bbae242d9168a43e028c73d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a5a98df4346c8720ae25fae4f27b5294993111c4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="playing-a-web-video"></a>播放 Web 视频
 
@@ -462,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 
 `VideoSourceConverter`类将字符串转换为`UriVideoSource`。 导航到**播放 Web 视频**页上，视频开始加载和播放下载足够数量的数据并将其缓冲的启动。 视频是约 10 分钟的长度：
 
-[![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png "播放 Web 视频")
+[![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png#lightbox "播放 Web 视频")
 
 在每个三个平台上的传输控件淡出如果这些选项不会用，但可以还原以查看通过点击视频。
 

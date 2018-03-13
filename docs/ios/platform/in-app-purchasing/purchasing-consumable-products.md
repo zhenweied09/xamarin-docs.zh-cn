@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7366a4ce5cbb6a3026a7445a03f03b45d89d9210
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e5875249d7a84412b1c30580c3a8038cb53892f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="purchasing-consumable-products"></a>购买耗材
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 02/27/2018
 
 本文档附带的示例代码演示了内置产品 – 的产品 Id 是硬编码到应用程序，因为它们紧密耦合付款之后解锁功能的代码。 在购买过程可以可视化如下：   
    
-[ ![购买过程可视化效果](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![购买过程可视化效果](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  基本工作流是：   
    
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![每个购买将多个 monkey 信用额度添加到用户平衡](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![每个购买将多个 monkey 信用额度添加到用户平衡](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/27/2018
    
    
    
- [ ![自定义类，StoreKit 和应用商店之间的交互](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![自定义类，StoreKit 和应用商店之间的交互](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -214,7 +214,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 当用户购买多个数量时，StoreKit 确认警报将反映的数量、 单价和它们将会付费，总价格，如下面的屏幕截图中所示：
 
-[ ![确认购买](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![确认购买](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>处理网络中断
 
@@ -328,7 +328,7 @@ public bool CanMakePayments()
    
    
    
- [ ![使用 iOS 限制功能禁用应用内购买](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![使用 iOS 限制功能禁用应用内购买](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -352,7 +352,7 @@ if (iap.CanMakePayments()) {
    
    
    
- [ ![功能是在应用内购买限制按钮被禁用，在购买时，则应用程序类似如下所示](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![功能是在应用内购买限制按钮被禁用，在购买时，则应用程序类似如下所示](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -361,7 +361,7 @@ if (iap.CanMakePayments()) {
    
    
    
- [ ![不允许应用内购买](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![不允许应用内购买](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

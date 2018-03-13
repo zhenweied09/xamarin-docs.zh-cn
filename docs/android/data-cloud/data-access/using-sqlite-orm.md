@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: b1eb886685597e671dccf70063c34e102ce2cac9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b9523d76c04dae97b74744fbe2bd6bc7022c3194
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-sqlitenet"></a>使用 SQLite.NET
 
@@ -21,7 +21,7 @@ Xamarin 建议 SQLite.NET 库是非常基本的 ORM，你可以轻松地存储�
 
 若要包含 SQLite.NET 库的 Xamarin 应用中，添加[SQLite.net PCL NuGet 包](https://www.nuget.org/packages/sqlite-net-pcl/)项目使用**SQLite net PCL** NuGet 包：
 
-[ ![SQLite.NET NuGet 包](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png)
+[![SQLite.NET NuGet 包](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png#lightbox)
 
 可用的 SQLite.NET 库之后，请按照以下三个步骤，若要使用它来访问数据库操作：
 
@@ -185,7 +185,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!NOTE]
-> **注意：**时编写 SQL 语句，直接在表和您的数据库，其中已从您的类和属性生成的列的名称上创建依赖关系。 如果在代码中更改这些名称必须记得更新任何手动编写的 SQL 语句。
+> 直接编写 SQL 语句时你创建的表和您的数据库，其中已从您的类和属性生成的列的名称的依赖项。 如果在代码中更改这些名称必须记得更新任何手动编写的 SQL 语句。
 
 ### <a name="deleting-an-object"></a>删除对象
 

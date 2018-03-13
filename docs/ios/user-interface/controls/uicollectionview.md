@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 716555c2456663cb2be24498348240c571849c24
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>集合视图
 
@@ -36,7 +36,7 @@ iOS 提供一个名为的布局类`UICollectionViewFlowLayout`允许基于行的
 
 单元格是表示数据集，其中要呈现的集合视图中的单个项的对象。 是的一个实例，每个单元格`UICollectionViewCell`类，该类由三个不同的视图下, 图中所示：
 
- [ ![](uicollectionview-images/01-uicollectionviewcell.png "每个单元格组成三个不同的视图，如下所示")](uicollectionview-images/01-uicollectionviewcell.png)
+ [![](uicollectionview-images/01-uicollectionviewcell.png "每个单元格组成三个不同的视图，如下所示")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
 `UICollectionViewCell`类为每个这些视图具有以下属性：
 
@@ -47,7 +47,7 @@ iOS 提供一个名为的布局类`UICollectionViewFlowLayout`允许基于行的
 
 通过设置`ContentView`使其小于`BackgroundView`和`SelectedBackgroundView`、`BackgroundView`可用于以可视方式帧内容，while`SelectedBackgroundView`时，将显示选择了单元格，如下所示：
 
- [ ![](uicollectionview-images/02-cells.png "不同的单元格元素")](uicollectionview-images/02-cells.png)
+ [![](uicollectionview-images/02-cells.png "不同的单元格元素")](uicollectionview-images/02-cells.png#lightbox)
 
 上面的屏幕截图中的单元格创建通过继承`UICollectionViewCell`和设置`ContentView`，`SelectedBackgroundView`和`BackgroundView`属性，分别，如下面的代码中所示：
 
@@ -92,7 +92,7 @@ public class AnimalCell : UICollectionViewCell
 
 例如，补充视图无法使用提供的标头，特定的部分中下, 图中所示：
 
- [ ![](uicollectionview-images/02a-supplementary-view.png "补充视图用于呈现的标头，特定的部分中，如下所示")](uicollectionview-images/02a-supplementary-view.png)
+ [![](uicollectionview-images/02a-supplementary-view.png "补充视图用于呈现的标头，特定的部分中，如下所示")](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
 若要使用补充的视图，它首先需要在注册`ViewDidLoad`方法：
 
@@ -122,7 +122,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 修饰视图是纯粹 visual 视图，可以显示在`UICollectionView`。 与不同的单元格和补充视图，它们不是数据驱动。 它们始终会在布局的子类创建，并且随后可以更改作为内容的布局。 例如，无法使用修饰视图来提供中的内容滚动的后台视图`UICollectionView`，如下所示：
 
- [ ![](uicollectionview-images/02c-decoration-view.png "包含一个红色背景修饰视图")](uicollectionview-images/02c-decoration-view.png)
+ [![](uicollectionview-images/02c-decoration-view.png "包含一个红色背景修饰视图")](uicollectionview-images/02c-decoration-view.png#lightbox)
 
  以下代码段更改为样本中的红色背景`CircleLayout`类：
 
@@ -153,7 +153,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 与`UITableView`、`UICollectionView`类将仅调用其数据源才能获取屏幕上显示的项的单元格。
 滚动到屏幕之外的单元格都将置于对队列的重复使用，如以下图像所示：
 
- [ ![](uicollectionview-images/03-cell-reuse.png "滚动到屏幕之外的单元格都将置于到队列，重复使用某个如下所示")](uicollectionview-images/03-cell-reuse.png)
+ [![](uicollectionview-images/03-cell-reuse.png "滚动到屏幕之外的单元格都将置于到队列，重复使用某个如下所示")](uicollectionview-images/03-cell-reuse.png#lightbox)
 
 单元格重用已得到简化了`UICollectionView`和`UITableView`。 不再需要创建直接在数据源中的单元格，如果单元格注册与系统不重复使用队列中出现。 如果进行调用以取消排队重用队列中的单元格时，单元格不可用，iOS 将创建它自动基于类型或已注册的 nib。
 相同的技术也是适用于补充的视图。
@@ -207,7 +207,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
 当上一个单元格按下，单元格转换为突出显示状态，直到未选择用户将其手指提起从单元格。 这实际上选择之前允许的单元格的外观临时更改。 在选择，该单元格时`SelectedBackgroundView`显示。 下图显示突出显示的状态，只需选择发生之前：
 
- [ ![](uicollectionview-images/04-cell-highlight.png "此图显示突出显示的状态之前所选内容时发生")](uicollectionview-images/04-cell-highlight.png)
+ [![](uicollectionview-images/04-cell-highlight.png "此图显示突出显示的状态之前所选内容时发生")](uicollectionview-images/04-cell-highlight.png#lightbox)
 
 若要实现突出显示，`ItemHighlighted`和`ItemUnhighlighted`方法`UICollectionViewDelegate`可用。 例如，下面的代码将应用的黄色背景`ContentView`当突出显示该单元格时，和白色背景时未选中此选项，如在上图中所示：
 
@@ -257,7 +257,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 长按单元格时，下面的屏幕截图显示菜单：
 
- [ ![](uicollectionview-images/04a-menu.png "长按单元格时，此屏幕截图中显示菜单")](uicollectionview-images/04a-menu.png)
+ [![](uicollectionview-images/04a-menu.png "长按单元格时，此屏幕截图中显示菜单")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
 
@@ -303,7 +303,7 @@ simpleCollectionViewController = new SimpleCollectionViewController (layout);
 
 这是在网格中的布局内容需要的。 此外，方向发生更改时，`UICollectionViewFlowLayout`处理重新排列内容相应地，如下所示：
 
- [ ![](uicollectionview-images/05-layout-orientation.png "方向更改的示例")](uicollectionview-images/05-layout-orientation.png)
+ [![](uicollectionview-images/05-layout-orientation.png "方向更改的示例")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
 
@@ -319,7 +319,7 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 这会导致间距周围的部分如下所示：
 
- [ ![](uicollectionview-images/06-sectioninset.png "如下所示，在该节周围间距")](uicollectionview-images/06-sectioninset.png)
+ [![](uicollectionview-images/06-sectioninset.png "如下所示，在该节周围间距")](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
@@ -328,7 +328,7 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 在版本到使用`UICollectionViewFlowLayout`直接，它可以还子类化来进一步自定义沿行的内容的布局。 例如，这可以用于创建不支持单元格换到网格中，但改为使用水平滚动效果，创建单个行的布局，如下所示：
 
- [ ![](uicollectionview-images/07-line-layout.png "使用水平滚动影响单个行")](uicollectionview-images/07-line-layout.png)
+ [![](uicollectionview-images/07-line-layout.png "使用水平滚动影响单个行")](uicollectionview-images/07-line-layout.png#lightbox)
 
 若要实现这通过子类化`UICollectionViewFlowLayout`需要：
 
@@ -423,7 +423,7 @@ namespace SimpleCollectionView
 
 例如，相同的内容无法循环布局中看到如下所示：
 
- [ ![](uicollectionview-images/08-circle-layout.png "循环的自定义如下所示的布局")](uicollectionview-images/08-circle-layout.png)
+ [![](uicollectionview-images/08-circle-layout.png "循环的自定义如下所示的布局")](uicollectionview-images/08-circle-layout.png#lightbox)
 
 有关布局的强大件事就是从类似网格布局中，更改为水平滚动布局中，和随后到此循环布局需要只允许布局类提供给`UICollectionView`更改。 在中为 nothing `UICollectionView`，其委托或数据在所有源代码更改。
 
@@ -435,7 +435,7 @@ namespace SimpleCollectionView
 
 使用这些新方法，你可以轻松地实现拖动集合视图中重新排序，并可以选择自定义期间重新排序过程的任何阶段的项外观。
 
-[ ![](uicollectionview-images/intro01.png "重新排序过程的示例")](uicollectionview-images/intro01.png)
+[![](uicollectionview-images/intro01.png "重新排序过程的示例")](uicollectionview-images/intro01.png#lightbox)
 
 在本文中，我们来看看在 Xamarin.iOS 应用程序以及一些其他 iOS 9 对集合视图控件所做的更改中实现拖到重新排序：
 
@@ -468,7 +468,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 作为一个快速示例，启动新的 Xamarin.iOS 项目并编辑**Main.storyboard**文件。 拖动`UICollectionViewController`拖到设计图面：
 
-[ ![](uicollectionview-images/quick01.png "添加 UICollectionViewController")](uicollectionview-images/quick01.png)
+[![](uicollectionview-images/quick01.png "添加 UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
 
 选择 （它可能是最简单的方法文档大纲中执行此操作） 的集合视图。 在属性 Pad 布局选项卡中，设置以下大小，如下面的屏幕截图中所示：
 
@@ -478,28 +478,28 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 - **最小间距**： 单元格 – 8 |行 – 8
 - **部分内边距**： 顶部 – 16 |底部 – 16 |左 – 16 |右 – 16
 
-[ ![](uicollectionview-images/quick04.png "设置集合视图大小")](uicollectionview-images/quick04.png)
+[![](uicollectionview-images/quick04.png "设置集合视图大小")](uicollectionview-images/quick04.png#lightbox)
 
 接下来，编辑单元格的默认值：
     - 更改为蓝色其背景色
     - 添加一个标签来充当单元格的标题
     - 将重用标识符设置为**单元格**
 
-[ ![](uicollectionview-images/quick02.png "编辑默认单元格")](uicollectionview-images/quick02.png)
+[![](uicollectionview-images/quick02.png "编辑默认单元格")](uicollectionview-images/quick02.png#lightbox)
 
 添加约束以保留的单元格内居中，因为它在改变大小的标签：
 
 在**属性填充**为_CollectionViewCell_并设置**类**到`TextCollectionViewCell`:
 
-[ ![](uicollectionview-images/quick05.png "将类设置为 TextCollectionViewCell")](uicollectionview-images/quick05.png)
+[![](uicollectionview-images/quick05.png "将类设置为 TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
 设置**集合可重用视图**到`Cell`:
 
-[ ![](uicollectionview-images/quick06.png "设置为单元格的集合可重用视图")](uicollectionview-images/quick06.png)
+[![](uicollectionview-images/quick06.png "设置为单元格的集合可重用视图")](uicollectionview-images/quick06.png#lightbox)
 
 最后，选择标签并将其命名`TextLabel`:
 
-[ ![](uicollectionview-images/quick07.png "名称标签 TextLabel")](uicollectionview-images/quick07.png)
+[![](uicollectionview-images/quick07.png "名称标签 TextLabel")](uicollectionview-images/quick07.png#lightbox)
 
 编辑`TextCollectionViewCell`类，并添加以下属性。:
 
@@ -695,7 +695,7 @@ namespace CollectionView
 如果用户从列表中选择一个项，并将其拖动到新位置，因为它们开移动的项其他项将自动动画。
 当用户将项放置到新位置时，它将只讨论到该位置。 例如:
 
-[ ![](uicollectionview-images/intro01.png "下面举例说明将项拖动到新位置")](uicollectionview-images/intro01.png)
+[![](uicollectionview-images/intro01.png "下面举例说明将项拖动到新位置")](uicollectionview-images/intro01.png#lightbox)
 
 <a name="Using-a-Custom-Gesture-Recognizer" />
 
@@ -1205,7 +1205,7 @@ public override void AwakeFromNib ()
 
 如果我们试运行 Xamarin.iOS 应用程序时，集合视图现在外观如下所示：
 
-[ ![](uicollectionview-images/custom01.png "集合视图将现在如下所示")](uicollectionview-images/custom01.png)
+[![](uicollectionview-images/custom01.png "集合视图将现在如下所示")](uicollectionview-images/custom01.png#lightbox)
 
 我们可以仍拖-到-对项目重新排序为之前，但现在是调整大小以适应其新位置时将丢弃这些值将更改的项。
 

@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>在 Android 中按
 
@@ -33,7 +33,7 @@ Android 创建包含有关与屏幕的用户的物理交互的数据的对象得
 
 
 > [!NOTE]
-> **注意：**并非所有的 Android 设备支持触摸屏。 
+> 并非所有的 Android 设备支持触摸屏。 
 
 Google Play 将以下标记添加到清单文件到仅显示你的应用是启用了触摸那些设备将导致：
 
@@ -90,11 +90,11 @@ public override bool OnTouchEvent(MotionEvent e)
 
 自 Android 1.6，Android SDK 附带了仿真程序调用手势生成器上预安装的应用程序。 此应用程序允许开发人员创建可以嵌入在应用程序的预定义的笔势。 下面的屏幕快照显示手势生成器的示例：
 
-[![屏幕快照的手势生成器使用示例笔势](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![屏幕快照的手势生成器使用示例笔势](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Google Play，可以找到调用笔势工具此应用程序的改进的版本。 笔势工具非常类似手势生成器，只不过它允许你创建它们后测试手势。 此下一步的屏幕截图显示手势生成器：
 
-[![屏幕快照的笔势工具使用示例笔势](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![屏幕快照的笔势工具使用示例笔势](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 笔势工具少量的可用于创建自定义特定动作，因为它允许创建它们后要测试笔势，并可轻松地通过 Google Play。
 

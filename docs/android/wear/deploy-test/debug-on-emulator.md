@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1ad3c193261bf22b7ee344aa1ccabb226533b907
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>调试的仿真程序上的 Android 磨损
 
@@ -28,14 +28,14 @@ _这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应�
 
 当创建磨损虚拟设备时，选择 Android 磨损设备配置文件 (如**Android 磨损正方形**)。 为提高性能，使用磨损**x86** CPU/ABI 在此示例中所示：
 
-[![示例磨损虚拟设备的配置](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![示例磨损虚拟设备的配置](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## <a name="launch-the-wear-virtual-device"></a>启动磨损虚拟设备 
 
 创建 Android 磨损虚拟设备后，你可以选择它从在 IDE 中的设备下拉列表菜单开始调试之前。 如果你的虚拟设备不可用的设备下拉列表中，验证你的项目是否 Android*磨损*应用程序项目 （不 Android 应用程序项目） 和，其目标 API 级别设置为相同的 API 级别与虚拟设备。 例如:
 
-[ ![在 Visual Studio 设备菜单中选择磨损 AVD](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![在 Visual Studio 设备菜单中选择磨损 AVD](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Android 仿真程序启动后，则 Xamarin.Android 将磨损应用部署到仿真程序。 仿真器会使用配置的虚拟设备映像运行此应用。
 

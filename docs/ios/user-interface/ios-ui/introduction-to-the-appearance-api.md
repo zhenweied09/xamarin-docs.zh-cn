@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6d2a454665691c028fe8307940a5662a98ab9c98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="appearance-api"></a>外观 API
 
@@ -32,7 +32,7 @@ iOS 允许你自定义许多 UIKit 控件可使你想要应用到你的应用程
 
 外观示例应用程序演示了这三种方法，这些屏幕截图中所示：
 
- [ ![](introduction-to-the-appearance-api-images/appearance01.png "外观示例应用程序演示这三种方法")](introduction-to-the-appearance-api-images/appearance01.png)
+ [![](introduction-to-the-appearance-api-images/appearance01.png "外观示例应用程序演示这三种方法")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 截至 iOS 8，外观代理已扩展到 TraitCollections。
  `AppearanceForTraitCollection` 可以用于在特定特征集上设置的默认外观。 你可以阅读有关此信息[简介情节提要](~/ios/user-interface/storyboards/unified-storyboards.md)指南。
@@ -87,11 +87,11 @@ sg1.TintColor = UIColor.Magenta;
 
 或者，在设计器的属性小键盘设置值： 
 
-[ ![](introduction-to-the-appearance-api-images/propertiespadtint.png "属性填充浅色")](introduction-to-the-appearance-api-images/propertiespadtint.png)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "属性填充浅色")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 下图阐释了这将在名为 sg1 控件上设置色调。
 
- [ ![](introduction-to-the-appearance-api-images/image53.png "设置单个控件浅色")](introduction-to-the-appearance-api-images/image53.png)
+ [![](introduction-to-the-appearance-api-images/image53.png "设置单个控件浅色")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 若要以这种方式设置很多控件，将为完全效率不高，因此我们可以改为设置静态`Appearance`在该类本身的属性。 下面的代码所示：
 
@@ -101,7 +101,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 下图现在说明了设置为洋红色的外观的两个分段的控件：
 
- [ ![](introduction-to-the-appearance-api-images/image54.png "设置外观控件浅色")](introduction-to-the-appearance-api-images/image54.png)
+ [![](introduction-to-the-appearance-api-images/image54.png "设置外观控件浅色")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` 属性应设置尽早在应用程序生命周期，如在 AppDelegate 中的`FinishedLaunching`事件，或在 ViewController 才会显示受影响的控件。
 

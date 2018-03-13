@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a10dcbbdcd7792cb7c54c883566911264b6d81e6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="document-picker"></a>文档选取器
 
@@ -54,7 +54,7 @@ _文档选取器视图控制器授予用户对应用程序的沙箱以外的文�
 
 因为从多个不同的位置，可以修改文件，必须使用协调，以防止数据丢失。
 
- [ ![](document-picker-images/image1.png "使用文件协调")](document-picker-images/image1.png)
+ [![](document-picker-images/image1.png "使用文件协调")](document-picker-images/image1.png#lightbox)
 
 让我们看看上图中：
 
@@ -193,7 +193,7 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 
 在 iOS 8 之前`NSMetadataQuery`如速度太慢于拾取本地文件更改： 删除、 创建和重命名。
 
- [ ![](document-picker-images/image2.png "NSMetadataQuery 本地文件更改概述")](document-picker-images/image2.png)
+ [![](document-picker-images/image2.png "NSMetadataQuery 本地文件更改概述")](document-picker-images/image2.png#lightbox)
 
 在上面的图中：
 
@@ -208,7 +208,7 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 
 在 iOS 8，`NSMetadataQuery`可以更轻松地直接使用一种称为进行拼结的新功能：
 
- [ ![](document-picker-images/image3.png "新功能的 NSMetadataQuery 调用进行拼结")](document-picker-images/image3.png)
+ [![](document-picker-images/image3.png "新功能的 NSMetadataQuery 调用进行拼结")](document-picker-images/image3.png#lightbox)
 
 使用了上图中进行拼结：
 
@@ -824,7 +824,7 @@ public AppDelegate ThisApp {
 
 ### <a name="existing-behavior"></a>现有行为
 
- [ ![](document-picker-images/image31.png "现有行为概述")](document-picker-images/image31.png)
+ [![](document-picker-images/image31.png "现有行为概述")](document-picker-images/image31.png#lightbox)
 
 让我们看一看访问 iOS 8 之前的外部文档：
 
@@ -839,7 +839,7 @@ public AppDelegate ThisApp {
 
 在 iOS 8 中，应用程序是能够轻松地访问在其自己的应用程序容器之外的文档：
 
- [ ![](document-picker-images/image32.png "发现在应用程序的容器之外的文档")](document-picker-images/image32.png)
+ [![](document-picker-images/image32.png "发现在应用程序的容器之外的文档")](document-picker-images/image32.png#lightbox)
 
 使用新 iCloud 文档选取器 ( `UIDocumentPickerViewController`)，iOS 应用程序能够直接发现和访问该应用程序容器以外。 `UIDocumentPickerViewController`提供一种机制，用户可以授予访问权限和编辑这些权限通过发现文档。
 
@@ -910,16 +910,16 @@ if (presentationPopover!=null) {
 
 1.  用户启动应用程序，并且显示主接口：   
  
-    [ ![](document-picker-images/image33.png "显示的主接口")](document-picker-images/image33.png)
+    [![](document-picker-images/image33.png "显示的主接口")](document-picker-images/image33.png#lightbox)
 1.  用户点击**操作**屏幕顶部的按钮并要求选择**文档提供程序**从可用提供程序的列表：   
  
-    [ ![](document-picker-images/image34.png "从可用提供程序列表中选择文档提供程序")](document-picker-images/image34.png)
+    [![](document-picker-images/image34.png "从可用提供程序列表中选择文档提供程序")](document-picker-images/image34.png#lightbox)
 1.  **文档选取器视图控制器**显示所选**文档提供程序**:   
  
-    [ ![](document-picker-images/image35.png "将显示的文档选取器视图控制器")](document-picker-images/image35.png)
+    [![](document-picker-images/image35.png "将显示的文档选取器视图控制器")](document-picker-images/image35.png#lightbox)
 1.  用户点击**文档文件夹**以显示其内容：   
  
-    [ ![](document-picker-images/image36.png "文档文件夹内容")](document-picker-images/image36.png)
+    [![](document-picker-images/image36.png "文档文件夹内容")](document-picker-images/image36.png#lightbox)
 1.  用户选择**文档**和**文档选取器**已关闭。
 1.  主界面将重新显示，**文档**是从外部容器并显示其内容加载。
 
@@ -930,7 +930,7 @@ if (presentationPopover!=null) {
 
 如上所述之前 iOS 8，, 应用程序仅可以访问属于其应用程序容器的文档。 在 iOS 8 应用程序可以访问文档，从外部源：
 
- [ ![](document-picker-images/image37.png "管理外部文档概述")](document-picker-images/image37.png)
+ [![](document-picker-images/image37.png "管理外部文档概述")](document-picker-images/image37.png#lightbox)
 
 当用户选择从外部源的文档时，引用文档是写入到指向原始文档的应用程序容器中。
 
@@ -1021,10 +1021,10 @@ if (Bookmark != null) {
 
 1.  **打开模式**– 在此模式下，当用户选择和外部的文档，文档选取器将创建一个安全作用域书签在应用程序容器中。   
  
-    [ ![](document-picker-images/image37.png "安全作用域的应用程序容器中的书签")](document-picker-images/image37.png)
+    [![](document-picker-images/image37.png "安全作用域的应用程序容器中的书签")](document-picker-images/image37.png#lightbox)
 1.  **导入模式**– 在此模式下，当用户选择和外部的文档、 文档选取器将不创建书签，但相反，将文件复制到临时位置并提供对此位置上的文档的应用程序访问权限：   
  
-    [ ![](document-picker-images/image38.png "文档选取器将将文件复制到临时位置，并提供将应用程序访问此位置上的文档")](document-picker-images/image38.png)   
+    [![](document-picker-images/image38.png "文档选取器将将文件复制到临时位置，并提供将应用程序访问此位置上的文档")](document-picker-images/image38.png#lightbox)   
  一旦应用程序终止出于任何原因，清空临时位置，并删除该文件。 如果应用程序需要维护对文件的访问，它应制作副本，并将其放在其应用程序容器中。
 
 
@@ -1069,7 +1069,7 @@ IOS 8，与 Apple 想要能够访问其基于云的文档，无论其中它们�
 
 使用文档提供程序扩展时下, 图说明了典型的数据流：
 
- [ ![](document-picker-images/image39.png "此关系图说明了典型的数据流时使用文档提供程序扩展")](document-picker-images/image39.png)
+ [![](document-picker-images/image39.png "此关系图说明了典型的数据流时使用文档提供程序扩展")](document-picker-images/image39.png#lightbox)
 
 执行以下过程：
 
@@ -1095,7 +1095,7 @@ IOS 8，与 Apple 想要能够访问其基于云的文档，无论其中它们�
 
 使用书签和文档提供程序扩展时下, 图说明了数据流：
 
- [ ![](document-picker-images/image40.png "使用书签和文档提供程序扩展时，此关系图说明了数据流")](document-picker-images/image40.png)
+ [![](document-picker-images/image40.png "使用书签和文档提供程序扩展时，此关系图说明了数据流")](document-picker-images/image40.png#lightbox)
 
 执行以下过程：
 

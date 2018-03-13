@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: c8f6832f618c37b3593f28c8efaeb87e4df5df03
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resource-basics"></a>Android 资源基础知识
 
@@ -39,7 +39,6 @@ ms.lasthandoff: 02/27/2018
 
 -  **Resource.designer.cs** &ndash;此文件是自动生成并由 Xamarin.Android 和保留唯一维护 ID 分配给每个资源。 这是非常类似和与 Android 应用程序用 Java 编写者必须 R.java 文件目的相同。 它将自动创建的 Xamarin.Android 工具，并将不时地重新生成。
 
-<a name="Creating_and_Accessing_Resources" />
 
 ## <a name="creating-and-accessing-resources"></a>创建和访问资源
 
@@ -62,7 +61,6 @@ ms.lasthandoff: 02/27/2018
 
 资源已添加到项目后，有两种方法在应用程序中使用它们&ndash;以编程方式 （在代码） 或从 XML 文件。
 
-<a name="Referencing_Resources_Programmatically" />
 
 ## <a name="referencing-resources-programmatically"></a>以编程方式引用的资源
 
@@ -108,7 +106,6 @@ public partial class Resource
 
 -  **资源名称**&ndash;这是第 （不含扩展名） 的资源的文件名或某个 XML 元素中的资源使用 android: name 属性的值。
 
-<a name="Referencing_Resources_from_XML" />
 
 ## <a name="referencing-resources-from-xml"></a>从 XML 中引用的资源
 

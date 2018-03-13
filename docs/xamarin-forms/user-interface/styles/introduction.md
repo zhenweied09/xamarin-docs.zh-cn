@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6b4d63637eae7c1719f3f6e525327d416ddff59d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-styles"></a>简介样式
 
@@ -84,7 +84,7 @@ public class NoStylesPageCS : ContentPage
 
 每个[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例具有相同的属性值，用于控制显示的文本的外观`Label`。 这将导致以下屏幕截图中所示的外观：
 
-[![](introduction-images/no-styles.png "标签不带样式的外观")](introduction-images/no-styles-large.png "标签不带样式的外观")
+[![](introduction-images/no-styles.png "标签不带样式的外观")](introduction-images/no-styles-large.png#lightbox "标签不带样式的外观")
 
 设置每个控件的外观可能非常重复，而且容易出错。 相反，一种样式可以创建定义的外观，然后应用于所需的控件。
 

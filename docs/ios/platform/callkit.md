@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c78396ce55c776c615f3b3027a97b5a334c0b7f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="callkit"></a>CallKit
 
@@ -52,11 +52,11 @@ CallKit 提供附加功能 MonkeyCall，允许其 VOIP 调用与其他类型的�
 
 在 iOS 10，Apple 已在实际应用以便于系统用户界面通过 CallKit 已知上调用 CarPlay，例如，采用 CallKit 中的所有系统服务。 在由于 MonkeyCall 采用 CallKit 出，下面的示例，它对系统中与这些内置的系统服务相同的方式已知并获取所有相同的功能：
 
-[ ![](callkit-images/callkit01.png "CallKit 服务堆栈")](callkit-images/callkit01.png)
+[![](callkit-images/callkit01.png "CallKit 服务堆栈")](callkit-images/callkit01.png#lightbox)
 
 要进一步查看在上面的关系图中的 MonkeyCall 应用程序。 该应用包含所有它的代码以使用其自己的网络通信，并包含其自身用户界面。 它链接 CallKit 与系统进行通信：
 
-[ ![](callkit-images/callkit02.png "MonkeyCall 应用程序体系结构")](callkit-images/callkit02.png)
+[![](callkit-images/callkit02.png "MonkeyCall 应用程序体系结构")](callkit-images/callkit02.png#lightbox)
 
 该应用使用的 CallKit 中有两个主要接口：
 
@@ -75,7 +75,7 @@ CallKit 提供附加功能 MonkeyCall，允许其 VOIP 调用与其他类型的�
 
 当应用程序想要与系统通信时，它使用`CXCallUpdate`类，并当系统需要与应用程序进行通信时，它使用`CXAction`类：
 
-[ ![](callkit-images/callkit03.png "与通过 CXProvider 系统通信")](callkit-images/callkit03.png)
+[![](callkit-images/callkit03.png "与通过 CXProvider 系统通信")](callkit-images/callkit03.png#lightbox)
 
 ### <a name="the-cxcallcontroller"></a>CXCallController
 
@@ -89,7 +89,7 @@ CallKit 提供附加功能 MonkeyCall，允许其 VOIP 调用与其他类型的�
 
 当应用程序想要通信到系统的本地用户操作时，它使用`CXTransaction`类：
 
-[ ![](callkit-images/callkit04.png "向使用 CXCallController 系统报告")](callkit-images/callkit04.png)
+[![](callkit-images/callkit04.png "向使用 CXCallController 系统报告")](callkit-images/callkit04.png#lightbox)
 
 ## <a name="implementing-callkit"></a>实现 CallKit
 
@@ -748,7 +748,7 @@ namespace MonkeyCall
 
 当远程用户已开始 VOIP 会话使用本地用户时，发生以下情况：
 
-[ ![](callkit-images/callkit05.png "远程用户已开始 VOIP 对话")](callkit-images/callkit05.png)
+[![](callkit-images/callkit05.png "远程用户已开始 VOIP 对话")](callkit-images/callkit05.png#lightbox)
 
 1. 应用程序会从其通信网络获取一条通知，有传入的 VOIP 呼叫。
 2. 应用程序使用`CXProvider`发送`CXCallUpdate`到系统通知其调用。
@@ -783,7 +783,7 @@ public void ReportIncomingCall (NSUuid uuid, string handle)
 
 如果用户想要传入的 VOIP 呼叫应答，发生以下情况：
 
-[ ![](callkit-images/callkit06.png "用户接听电话的 VOIP 呼叫")](callkit-images/callkit06.png)
+[![](callkit-images/callkit06.png "用户接听电话的 VOIP 呼叫")](callkit-images/callkit06.png#lightbox)
 
 1. 系统 UI 通知系统用户想要应答 VOIP 呼叫。
 2. 系统会将发送`CXAnswerCallAction`到应用程序的`CXProvider`通知它应答意图。
@@ -824,7 +824,7 @@ public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallA
 
 如果用户想要终止从在应用程序的 UI 中进行的调用，将发生以下情况：
 
-[ ![](callkit-images/callkit07.png "用户终止从在应用程序的 UI 中进行的调用")](callkit-images/callkit07.png)
+[![](callkit-images/callkit07.png "用户终止从在应用程序的 UI 中进行的调用")](callkit-images/callkit07.png#lightbox)
 
 1. 应用程序创建`CXEndCallAction`，获取打包为`CXTransaction`发送到系统，告知调用正在终止。
 2. 系统验证结束调用意向，并将发送`CXEndCallAction`回到此应用程序通过`CXProvider`。
@@ -874,7 +874,7 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 
 如果用户点击 （在 Phone 应用程序） 最近列表中的条目，例如，这调用属于应用程序中，它将发送_启动调用意向_系统：
 
-[ ![](callkit-images/callkit08.png "接收开始调用意向")](callkit-images/callkit08.png)
+[![](callkit-images/callkit08.png "接收开始调用意向")](callkit-images/callkit08.png#lightbox)
 
 1. 该应用会创建_启动调用操作_基于启动调用目的收到来自系统。 
 2. 应用将使用`CXCallController`从系统请求启动调用操作。
@@ -1119,7 +1119,7 @@ CallKit 用于处理实时 VOIP 呼叫期间将需要 iOS 10 VOIP 应用的音�
 
 在典型的 VOIP 的生命周期期间使用 CallKit 调，应用程序将需要配置 CallKit 将提供的音频流。 看一看下面的示例：
 
-[ ![](callkit-images/callkit09.png "开始调用操作序列")](callkit-images/callkit09.png)
+[![](callkit-images/callkit09.png "开始调用操作序列")](callkit-images/callkit09.png#lightbox)
 
 1. 由应用程序以应答传入呼叫接收启动调用操作。
 2. 此操作完成的应用程序之前，它提供的配置将需要为其`AVAudioSession`。
@@ -1140,13 +1140,13 @@ CallKit 用于处理实时 VOIP 呼叫期间将需要 iOS 10 VOIP 应用的音�
 2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **添加新项目**。
 3. 选择**iOS** > **扩展** > **调用目录扩展**单击**下一步**按钮： 
 
-    [ ![](callkit-images/calldir01.png "创建新的调用目录扩展")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01.png "创建新的调用目录扩展")](callkit-images/calldir01.png#lightbox)
 4. 输入**名称**扩展和单击**下一步**按钮： 
 
-    [ ![](callkit-images/calldir02.png "输入扩展的名称")](callkit-images/calldir02.png)
+    [![](callkit-images/calldir02.png "输入扩展的名称")](callkit-images/calldir02.png#lightbox)
 5. 调整**项目名称**和/或**解决方案名称**如果必需的且单击**创建**按钮： 
 
-    [ ![](callkit-images/calldir03.png "创建项目")](callkit-images/calldir03.png) 
+    [![](callkit-images/calldir03.png "创建项目")](callkit-images/calldir03.png#lightbox) 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -1154,7 +1154,7 @@ CallKit 用于处理实时 VOIP 呼叫期间将需要 iOS 10 VOIP 应用的音�
 2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **添加新项目**。
 3. 选择**iOS** > **扩展** > **调用目录扩展**单击**下一步**按钮： 
 
-    [ ![](callkit-images/calldir01w.png "创建新的调用目录扩展")](callkit-images/calldir01.png)
+    [![](callkit-images/calldir01w.png "创建新的调用目录扩展")](callkit-images/calldir01.png#lightbox)
 4. 输入**名称**扩展和单击**确定**按钮
 
 -----

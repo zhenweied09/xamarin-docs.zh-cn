@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>应用程序图标
 
@@ -32,13 +32,13 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **应用程序图标**-每个 iOS 应用程序必须定义应用程序图标。 用户将点击此图标在 iOS 主页屏幕中以启动应用程序。 此外，此图标使用 Game Center 有可能的话。 示例: 
 
-    [ ![](app-icons-images/000.png "应用程序图标")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "应用程序图标")](app-icons-images/000-full.png#lightbox)
 - **聚光灯图标**-每当用户在 Spotlight 搜索时，输入应用的名称将显示此图标。 示例: 
 
-    [ ![](app-icons-images/000a.png "Spotlight 图标")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "Spotlight 图标")](app-icons-images/000a-full.png#lightbox)
 - **设置图标**-如果用户输入**设置**应用在其 iOS 设备，此图标上的将显示在末尾**设置**应用程序的列表。 示例: 
 
-    [ ![](app-icons-images/000b.png "设置图标")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "设置图标")](app-icons-images/000b-full.png#lightbox)
 
 以下图像资产大小和分辨率将需要支持所有面向 iOS 5 通过 iOS 9 （或更高版本） Xamarin.iOS 应用程序所需的图标类型：
 
@@ -251,5 +251,5 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 ## <a name="related-links"></a>相关链接
 
 - [使用图像 （示例）](https://developer.xamarin.com/samples/WorkingWithImages/)
-- [Hello iPhone](~/ios/get-started/hello-ios/index.md)
+- [Hello，iPhone](~/ios/get-started/hello-ios/index.md)
 - [自定义图标和映像创建指南](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

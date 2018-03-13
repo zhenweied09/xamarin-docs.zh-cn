@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>使用核心 Spotlight 搜索
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 此信息将显示在搜索结果如下：
 
-[ ![](corespotlight-images/corespotlight01.png "核心 Spotlight 搜索结果概述")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "核心 Spotlight 搜索结果概述")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>还原的项目
 
@@ -80,7 +80,7 @@ public override bool ContinueUserActivity (UIApplication application,
 可能时使用核心 Spotlight 我们创建索引项需要修改，例如标题或缩略图的更改为所需的时间。 若要进行此更改，我们使用相同的方法使用最初创建索引。
 我们创建一个新`CSSearchableItem`使用相同的 ID，因为用于创建该项目，将附加新`CSSearchableItemAttributeSet`包含已修改的属性：
 
-[ ![](corespotlight-images/corespotlight02.png "更新项概述")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "更新项概述")](corespotlight-images/corespotlight02.png#lightbox)
 
 当此项写入可搜索的索引时，使用新信息更新现有项目。
 

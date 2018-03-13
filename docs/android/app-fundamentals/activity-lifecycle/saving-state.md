@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>演练-保存活动状态
 
@@ -22,7 +22,7 @@ _我们已介绍的理论基础活动的生命周期指南; 中保存状态现�
 
 让我们打开**ActivityLifecycle_Start**项目 (在[ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)示例)，生成它，并运行它。 这是一个非常简单的项目具有两个活动，以演示活动生命周期和如何调用各种的生命周期方法。 当启动应用程序的屏幕`MainActivity`显示： 
 
-[ ![活动 A 屏幕](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![活动 A 屏幕](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>查看状态转换
 
@@ -48,7 +48,7 @@ _我们已介绍的理论基础活动的生命周期指南; 中保存状态现�
 
 因此，*活动 B*已启动并显示代替了*活动 A*: 
 
-[ ![活动 B 屏幕](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![活动 B 屏幕](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 当我们单击**回**按钮，*活动 B*销毁和*活动 A*恢复： 
 
@@ -62,7 +62,7 @@ _我们已介绍的理论基础活动的生命周期指南; 中保存状态现�
 ```
 ### <a name="adding-a-click-counter"></a>添加单击计数器
 
-接下来，我们将更改应用程序，以便我们具有计数和显示的单击的次数的按钮。 首先，让我们添加`_counter`实例变量`MainActivity`: 
+接下来，我们将更改应用程序，以便我们具有计数和显示的单击的次数的按钮。 首先，让我们添加`_counter`实例变量`MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 当我们生成并再次运行该应用，一个新按钮，则会出现，递增和显示的值`_counter`上每次单击：
 
-[![添加触摸计数](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![添加触摸计数](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 但当我们在旋转设备连接到横向模式，便会丢失此次数：
 
-[ ![轮换为横向回零设置计数](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![轮换为横向回零设置计数](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 检查应用程序输出，我们看到*活动 A*已暂停、 停止、 销毁、 重新创建、 重新启动，然后从纵向为横向模式在轮换恢复： 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 生成并再次运行应用程序，然后单击几次的第二个按钮。 当我们在旋转设备连接到横向模式时，将被保留计数 ！
 
-[ ![轮换屏幕显示的四个保留的计数](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![轮换屏幕显示的四个保留的计数](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 让我们看看输出窗口以查看发生了什么情况：

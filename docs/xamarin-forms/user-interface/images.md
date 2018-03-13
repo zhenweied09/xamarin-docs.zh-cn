@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: cddf3c58020b534abdc1541d967a9a7f5a4d891a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="images"></a>图像
 
@@ -79,7 +79,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 以下屏幕截图显示本地图像显示在每个平台上的结果：
 
-[ ![本地 ImageSource](images-images/local-sml.png "示例应用程序显示本地图像")](images-images/local.png "示例应用程序显示本地图像")
+[![本地 ImageSource](images-images/local-sml.png "示例应用程序显示本地图像")](images-images/local.png#lightbox "示例应用程序显示本地图像")
 
 为更大的灵活性`Device.RuntimePlatform`属性可用来选择一个不同的图像文件或路径部分或所有平台上，此代码示例中所示：
 
@@ -98,11 +98,11 @@ IOS 和 Android 平台包括针对不同的图像分辨率，其中操作系统�
 
 因为 iOS 9 管理映像的首选的方式是拖动到相应的资产目录映像集所需的每个分辨率的图像。 有关详细信息，请参阅[将映像添加到的资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
-在 iOS 9 之前, retina 映像的版本无法放入**资源**文件夹的两个和第三次决策 **@2x** 或 **@3x** 上文件扩展名 （如之前的文件名的后缀 **myimage@2x.png**). 但是，使用 iOS 应用程序中的映像的此方法已被否决通过 Apple。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
+在 iOS 9 之前, retina 映像的版本无法放入**资源**文件夹的两个和第三次决策** @2x **或** @3x **上文件扩展名 （如之前的文件名的后缀 **myimage@2x.png**). 但是，使用 iOS 应用程序中的映像的此方法已被否决通过 Apple。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
 Android 备用分辨率图像应置于[专门名为目录](http://developer.android.com/guide/practices/screens_support.html)在 Android 项目中，如下面的屏幕截图中所示：
 
-[![Android 的多个高分辨率图像位置](images-images/xs-highdpisolution-sml.png "Android 多个高分辨率图像位置")](images-images/xs-highdpisolution.png "Android 多个高分辨率图像位置")
+[![Android 的多个高分辨率图像位置](images-images/xs-highdpisolution-sml.png "Android 多个高分辨率图像位置")](images-images/xs-highdpisolution.png#lightbox "Android 多个高分辨率图像位置")
 
 ### <a name="additional-controls-that-display-images"></a>显示图像的其他控件
 
@@ -159,7 +159,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 
 以下屏幕快照显示的每个平台上显示的嵌入的图像的结果：
 
-[ ![ResourceImageSource](images-images/resource-sml.png "示例应用程序显示的嵌入的图像")](images-images/resource.png "示例应用程序显示的嵌入的图像")
+[![ResourceImageSource](images-images/resource-sml.png "示例应用程序显示的嵌入的图像")](images-images/resource.png#lightbox "示例应用程序显示的嵌入的图像")
 
 <a name="Embedded_Images_in_Xaml" />
 
@@ -261,7 +261,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 以下屏幕快照显示的每个平台上显示的远程图像的结果：
 
-[![下载 ImageSource](images-images/download-sml.png "示例应用程序显示已下载的映像")](images-images/download.png "示例应用程序显示已下载的映像")
+[![下载 ImageSource](images-images/download-sml.png "示例应用程序显示已下载的映像")](images-images/download.png#lightbox "示例应用程序显示已下载的映像")
 
 <a name="Image_Caching" />
 

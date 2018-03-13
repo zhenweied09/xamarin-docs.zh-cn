@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: 66b956eddc48699c6fd61e9cb52a7fbc3fa70a51
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9fac4a233cecd9332602047bc83830d145b5fb08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-custom-contentprovider"></a>创建自定义 ContentProvider
 
@@ -28,7 +28,6 @@ _上一节演示了如何使用从内置 ContentProvider 实现的数据。本�
 
 在适用于 Android 的 Mono，内容提供程序类应该`[ContentProvider]`特性以指定的 Uri （或 Uri），它应添加到**AndroidManifest.xml**。
 
-<a name="Mime_Type" />
 
 ### <a name="mime-type"></a>Mime 类型
 
@@ -40,7 +39,6 @@ MIME 类型的典型格式由两部分组成。 Android`ContentProviders`这两�
 
 MIME 类型的第二部分是特定于你的应用程序，且应使用反向 DNS 标准，但是有`vnd.`前缀。 示例代码使用`vnd.com.xamarin.sample.Vegetables`。
 
-<a name="Data_Model_Metadata" />
 
 ### <a name="data-model-metadata"></a>数据模型元数据
 
@@ -50,7 +48,6 @@ MIME 类型的第二部分是特定于你的应用程序，且应使用反向 DN
 
 在前面的示例`android.provider.ContactsContract`类公开的联系人数据的元数据。 为我们的自定义`ContentProvider`我们将只公开在该类本身的常量。
 
-<a name="Implementation" />
 
 ## <a name="implementation"></a>实现
 
@@ -64,7 +61,6 @@ MIME 类型的第二部分是特定于你的应用程序，且应使用反向 DN
 
 如前面所述，`ContentProviders`可以从应用程序而非其中定义使用。 在此示例中使用的数据在同一应用程序，但请记住，其他应用程序也可以访问它，只要他们知道的 Uri 和有关架构 （这通常会公开为常量值） 的信息。
 
-<a name="Create_a_database" />
 
 ## <a name="create-a-database"></a>创建数据库
 
@@ -98,13 +94,11 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 数据库实现本身不需要任何特殊的注意事项，以通过公开`ContentProvider`，但是如果你想要将绑定`ContentProvider's`数据到`ListView`然后控制一个名为的唯一整数列`_id`必须属于结果集。 请参阅[Listview 和适配器](~/android/user-interface/layouts/list-view/index.md)上使用的更多详细信息的文档`ListView`控件。
 
-<a name="Create_the_ContentProvider" />
 
 ## <a name="create-the-contentprovider"></a>创建 ContentProvider
 
 本部分的其余部分提供分步说明有关如何**SimpleContentProvider/VegetableProvider.cs**示例类生成。
 
-<a name="Initialize_the_Database" />
 
 ### <a name="initialize-the-database"></a>初始化数据库
 
@@ -124,7 +118,6 @@ public class VegetableProvider : ContentProvider
 
 其余代码将窗体允许的数据发现和查询的实际内容提供程序实现。
 
-<a name="Add_Metadata_for_Consumers" />
 
 
 ## <a name="add-metadata-for-consumers"></a>添加使用者的元数据
@@ -165,7 +158,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-<a name="Implement_the_URI_Parsing_Helper" />
 
 ## <a name="implement-the-uri-parsing-helper"></a>实现分析帮助程序的 URI
 
@@ -195,7 +187,6 @@ static UriMatcher BuildUriMatcher()
 
 此代码是所有专用于`ContentProvider`类。 请参阅[Google UriMatcher 文档](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)有关进一步信息。
 
-<a name="Implement_the_QueryMethod" />
 
 ## <a name="implement-the-querymethod"></a>实现 QueryMethod
 
@@ -241,7 +232,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-<a name="Implement_the_Other_Overrides" />
 
 ## <a name="implement-the-other-overrides"></a>实现其他替代
 
@@ -264,13 +254,11 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 
 完成基本`ContentProvider`实现。 一旦已安装应用程序，它公开的数据可同时对应用程序中，但也知道的 Uri 来引用它的任何其他应用程序。
 
-<a name="Access_the_ContentProvider" />
 
 ## <a name="access-the-contentprovider"></a>访问 ContentProvider
 
 一次`VegetableProvider`已实现，对其进行访问完成与本文档的开头的联系人提供程序相同的方式： 获取使用指定的 Uri 的游标，然后使用适配器访问的数据。
 
-<a name="Bind_a_ListView_to_a_ContentProvider" />
 
 ## <a name="bind-a-listview-to-a-contentprovider"></a>绑定到 ContentProvider 的 ListView
 
@@ -296,10 +284,9 @@ listView.Adapter = adapter;
 
 生成的应用程序如下所示：
 
-[![列出蔬菜、 水果、 花 Buds、 Legumes、 灯泡、 Tubers 的应用的屏幕快照](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png)
+[![列出蔬菜、 水果、 花 Buds、 Legumes、 灯泡、 Tubers 的应用的屏幕快照](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
 
 
-<a name="Retrieve_a_Single_Item_from_a_ContentProvider" />
 
 ## <a name="retrieve-a-single-item-from-a-contentprovider"></a>从 ContentProvider 检索单个项
 

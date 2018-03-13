@@ -7,18 +7,17 @@ ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: b8f643c8158c5a3a849a3d8ee3dd8d0e7e30addf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cardview"></a>卡片视图-
 
 _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容的 UI 组件。本指南说明如何使用和自卡片视图-Xamarin.Android 应用程序中定义同时保持向后兼容早期版本的 Android。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -59,7 +58,6 @@ _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容
 若要了解如何配置 Android 5.0 应用程序项目，请参阅[设置 Android 5.0 项目](~/android/platform/lollipop.md)。
 有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
 
-<a name="basic" />
 
 ## <a name="introducing-cardview"></a>引入卡片视图-
 
@@ -94,11 +92,10 @@ _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容
 
 此布局的示例创建一个默认`CardView`与单个行的文本，如下面的屏幕快照中所示：
 
-[![屏幕快照的卡片视图-具有白色背景和文本行](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png)
+[![屏幕快照的卡片视图-具有白色背景和文本行](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 在此示例中，应用样式设置为 light 材料主题 (`Theme.Material.Light`) 以便`CardView`阴影和边缘是更轻松地查看。 有关主题 Android 5.0 的应用的详细信息，请参阅[材料主题](~/android/user-interface/material-theme.md)。 在下一步的部分中，我们将了解如何自定义`CardView`应用程序。
 
-<a name="customizing" />
 
 ## <a name="customizing-cardview"></a>自定义卡片视图-
 
@@ -159,30 +156,28 @@ _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容
 
 当此布局示例用于在照片查看应用中，显示图像`CardView`具有照片快照的外观，如下面的屏幕截图中所示：
 
-[![使用图像和标题下图中的卡片视图-](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png)
+[![使用图像和标题下图中的卡片视图-](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 此屏幕截图取自[RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)示例应用，使用`RecyclerView`小组件显示的滚动列表`CardView`用于查看照片的映像。 有关详细信息`RecyclerView`，请参阅[RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)指南。
 
 请注意，`CardView`可以在其内容区域中显示多个子视图。 例如，在上面的照片，查看应用程序示例，内容区域组成的`ListView`包含`ImageView`和`TextView`。 尽管`CardView`实例通常垂直排列，也可以水平排列它们 (请参阅[创建自定义视图样式](~/android/user-interface/material-theme.md#customview)示例屏幕快照)。
 
-<a name="layout" />
 
 ### <a name="cardview-layout-options"></a>卡片视图-布局选项
 
 `CardView` 通过设置会影响其填充、 提升、 圆角半径和背景色的一个或多个特性，可以自定义布局：
 
-[![关系图的卡片视图-属性](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png)
+[![关系图的卡片视图-属性](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 每个属性还可以更改动态通过调用对应的`CardView`方法 (有关详细信息`CardView`方法，请参阅[卡片视图-类引用](https://developer.android.com/reference/android/support/v7/widget/CardView.html))。
 请注意 （除外背景色） 这些属性接受维度值，该值是跟单元的十进制数。 例如，`11.5dp`指定 11.5 密度无关的像素。
 
-<a name="padding" />
 
 #### <a name="padding"></a>填充
 `
 CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局 XML 中设置这些或可以在代码中调用类似方法：
 
-[![关系图的卡片视图-填充属性](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png)
+[![关系图的卡片视图-填充属性](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 填充属性，如下所示进行了说明：
 
@@ -200,13 +195,12 @@ CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局
 例如，如果`contentPadding`在照片查看应用中，充分增加了`CardView`将裁剪图像和在卡上显示的文本。
 
 
-<a name="elevation" />
 
 #### <a name="elevation"></a>提升
 
 `CardView` 提供两个提升属性来控制其提升，因此，其阴影的大小：
 
-[![卡片视图-提升属性的关系图](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png)
+[![卡片视图-提升属性的关系图](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 提升属性，如下所示进行了说明：
 
@@ -217,13 +211,12 @@ CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局
 较大的值的`cardElevation`增加卷影大小，以使`CardView`像是在 float 上面后台更高版本。 `cardElevation`属性也确定重叠视图的绘制顺序; 也就是，则`CardView`将另一个重叠的视图设置较高提升和更高版本设置较低提升任何重叠视图下绘制。
 `cardMaxElevation`设置对于你的应用程序动态更改提升时很有用&ndash;它会阻止卷影扩展过去使用此设置定义的限制。
 
-<a name="radius" />
 
 #### <a name="corner-radius-and-background-color"></a>圆角半径和背景色
 
 `CardView` 提供可用于控制其圆角半径和它的背景色的属性。 这两个属性可以用来更改的整体样式`CardView`:
 
-[![周围的卡片视图-角和背景颜色属性的关系图](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png)
+[![周围的卡片视图-角和背景颜色属性的关系图](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 这些属性进行了说明，如下所示：
 
@@ -233,8 +226,6 @@ CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局
 
 在此图中，`cardCornerRadius`设置为更舍入 10dp 和`cardBackgroundColor`设置为`"#FFFFCC"`（浅黄色）。
 
-
-<a name="compatibility" />
 
 ## <a name="compatibility"></a>兼容性
 
@@ -255,7 +246,6 @@ CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局
 
 有关维护与早期版本的 Android 的兼容性的详细信息，请参阅[维护兼容性](https://developer.android.com/training/material/compatibility.html)。
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

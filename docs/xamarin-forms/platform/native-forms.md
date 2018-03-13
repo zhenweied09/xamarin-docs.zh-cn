@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 89636b874f8dbc8f66280dcc1ed99d0f832ff312
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-forms"></a>本机窗体
 
@@ -31,7 +31,7 @@ _本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和
 必须通过调用初始化 Xamarin.Forms`Forms.Init`方法之前本机项目可以构造[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页。 选择何时执行此操作主要取决于你的应用程序流中最方便时 – 它无法在应用程序启动时，或之前执行`ContentPage`-构造派生的页面。 在本文中和随附的示例应用程序，`Forms.Init`方法调用在应用程序启动。
 
 > [!NOTE]
-> **请注意**: **NativeForms**示例应用程序解决方案不包含任何 Xamarin.Forms 项目。 相反，它包含的 Xamarin.iOS 项目、 Xamarin.Android 项目中和 UWP 项目。 每个项目是使用本机窗体使用的本机项目[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页。 但是，没有的理由为何无法使用本机项目`ContentPage`-派生自 PCL、.NET 标准库时或共享项目的页。
+> **NativeForms**示例应用程序解决方案不包含任何 Xamarin.Forms 项目。 相反，它包含的 Xamarin.iOS 项目、 Xamarin.Android 项目中和 UWP 项目。 每个项目是使用本机窗体使用的本机项目[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页。 但是，没有的理由为何无法使用本机项目`ContentPage`-派生自 PCL、.NET 标准库时或共享项目的页。
 
 当使用本机窗体，Xamarin.Forms 功能如[ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/)， [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/)，和数据绑定引擎，所有仍工作。
 
@@ -85,7 +85,7 @@ public class AppDelegate : UIApplicationDelegate
 
 一次`FinishedLaunching`方法已执行，Xamarin.Forms 中定义的 UI`PhonewordPage`将显示类，如下面的屏幕截图中所示：
 
-[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png "iOS PhonewordPage")
+[![](native-forms-images/ios-phonewordpage.png "iOS PhonewordPage")](native-forms-images/ios-phonewordpage-large.png#lightbox "iOS PhonewordPage")
 
 用户界面时，例如通过点击交互[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)，将导致在中的事件处理程序`PhonewordPage`隐藏代码执行。 例如，当用户点击**调用历史记录**执行按钮，以下事件处理程序：
 
@@ -109,7 +109,7 @@ public void NavigateToCallHistoryPage()
 
 `NavigateToCallHistoryPage`方法将转换 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页`UIViewController`与`CreateViewController`扩展方法，并设置`Title`属性`UIViewController`。 `UIViewController`然后被推送到`UINavigationController`通过`PushViewController`方法。 因此，Xamarin.Forms 中定义的 UI`CallHistoryPage`将显示类，如下面的屏幕截图中所示：
 
-[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png "iOS CallHistoryPage")
+[![](native-forms-images/ios-callhistorypage.png "iOS CallHistoryPage")](native-forms-images/ios-callhistorypage-large.png#lightbox "iOS CallHistoryPage")
 
 时`CallHistoryPage`点击背面的显示会弹出箭头`UIViewController`为`CallHistoryPage`类`UINavigationController`，返回到用户`UIViewController`为`PhonewordPage`类。
 
@@ -157,11 +157,11 @@ public class MainActivity : AppCompatActivity
 有关片段的详细信息，请参阅[片段](~/android/platform/fragments/index.md)。
 
 > [!NOTE]
-> **请注意**： 除了`CreateFragment`扩展方法，Xamarin.Forms 还包括`CreateSupportFragment`方法。 `CreateFragment`方法创建`Android.App.Fragment`，可以使用的应用程序面向 API 11 和更高版本。 `CreateSupportFragment`方法创建`Android.Support.V4.App.Fragment`，可以使用面向 11 之前的 API 版本的应用程序中。
+> 除了`CreateFragment`扩展方法，Xamarin.Forms 还包括`CreateSupportFragment`方法。 `CreateFragment`方法创建`Android.App.Fragment`，可以使用的应用程序面向 API 11 和更高版本。 `CreateSupportFragment`方法创建`Android.Support.V4.App.Fragment`，可以使用面向 11 之前的 API 版本的应用程序中。
 
 一次`OnCreate`方法已执行，Xamarin.Forms 中定义的 UI`PhonewordPage`将显示类，如下面的屏幕截图中所示：
 
-[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png "Android PhonewordPage")
+[![](native-forms-images/android-phonewordpage.png "Android PhonewordPage")](native-forms-images/android-phonewordpage-large.png#lightbox "Android PhonewordPage")
 
 用户界面时，例如通过点击交互[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)，将导致在中的事件处理程序`PhonewordPage`隐藏代码执行。 例如，当用户点击**调用历史记录**执行按钮，以下事件处理程序：
 
@@ -188,7 +188,7 @@ public void NavigateToCallHistoryPage()
 
 `NavigateToCallHistoryPage`方法将转换 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页`Fragment`与`CreateFragment`扩展方法，并将添加`Fragment`到片段后退堆栈。 因此，Xamarin.Forms 中定义的 UI`CallHistoryPage`将显示，如下面的屏幕截图中所示：
 
-[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png "Android CallHistoryPage")
+[![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
 当`CallHistoryPage`点击背面的显示弹出箭头将`Fragment`为`CallHistoryPage`从片段后退堆栈，返回到用户`Fragment`为`PhonewordPage`类。
 
@@ -271,7 +271,7 @@ public sealed partial class MainPage : Page
 
 一次`MainPage`构造函数已执行，Xamarin.Forms 中定义的 UI`PhonewordPage`将显示类，如下面的屏幕截图中所示：
 
-[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png "UWP PhonewordPage")
+[![](native-forms-images/uwp-phonewordpage.png "UWP PhonewordPage")](native-forms-images/uwp-phonewordpage-large.png#lightbox "UWP PhonewordPage")
 
 用户界面时，例如通过点击交互[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)，将导致在中的事件处理程序`PhonewordPage`隐藏代码执行。 例如，当用户点击**调用历史记录**执行按钮，以下事件处理程序：
 
@@ -293,7 +293,7 @@ public void NavigateToCallHistoryPage()
 
 使用通常执行 UWP 中的导航`Frame.Navigate`方法，后者采用`Page`自变量。 Xamarin.Forms 定义`Frame.Navigate`采用的扩展方法[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页实例。 因此，当`NavigateToCallHistoryPage`执行方法时，Xamarin.Forms 中定义 UI`CallHistoryPage`将显示，如下面的屏幕截图中所示：
 
-[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png "UWP CallHistoryPage")
+[![](native-forms-images/uwp-callhistorypage.png "UWP CallHistoryPage")](native-forms-images/uwp-callhistorypage-large.png#lightbox "UWP CallHistoryPage")
 
 当`CallHistoryPage`点击背面的显示会弹出箭头`FrameworkElement`为`CallHistoryPage`从应用内后退堆栈，返回到用户`FrameworkElement`为`PhonewordPage`类。
 

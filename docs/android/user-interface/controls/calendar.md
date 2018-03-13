@@ -7,27 +7,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8075473464472c5a830f62ebfc91c00ad54d1b98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b744f4c8582aa9295645b2bdc22e6fddf2bedc3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="calendar"></a>Calendar
 
-<a name="Calendar_API" />
 
 ## <a name="calendar-api"></a>日历 API
 
 一组新的日历 Android 4 中引入的 Api 支持设计为读取或写入到日历提供程序的数据应用程序。 这些 Api 支持丰富的日历数据，包括能够读取和写入事件、 与会者和提醒交互选项。 通过应用程序中使用的日历提供程序，通过 API 添加的数据将出现在随 Android 4 提供内置的日历应用。
 
-<a name="Adding_Permissions" />
 
 ## <a name="adding-permissions"></a>添加权限
 
 在使用你的应用程序中的新日历 Api，你需要执行操作的第一个操作是将适当的权限添加到 Android 清单。 你需要添加的权限`android.permisson.READ_CALENDAR`和`android.permission.WRITE_CALENDAR`，具体取决于是否你读取和/或写入日历数据。
 
-<a name="Using_the_Calendar_Contract" />
 
 ## <a name="using-the-calendar-contract"></a>使用日历协定
 
@@ -35,7 +32,6 @@ ms.lasthandoff: 02/27/2018
 
 让我们看一个示例，它使用日历 API。 在此示例中，我们将查看如何枚举日历和其事件，以及如何将新事件添加到日历。
 
-<a name="Listing_Calendars" />
 
 ## <a name="listing-calendars"></a>列出日历
 
@@ -122,10 +118,9 @@ ListAdapter = adapter;
 
 下面是屏幕快照显示中显示的日历信息包含最终结果， `ListView`:
 
-[![CalendarDemo 运行在模拟器中，显示两个日历项](calendar-images/11-calendar.png)](calendar-images/11-calendar.png)
+[![CalendarDemo 运行在模拟器中，显示两个日历项](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
 
 
-<a name="Listing_Calendar_Events" />
 
 ## <a name="listing-calendar-events"></a>列表日历事件
 
@@ -221,10 +216,9 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 此时将显示的事件的列表，如下所示：
 
-[![显示三个日历事件的示例应用程序的屏幕截图](calendar-images/12-events.png)](calendar-images/12-events.png)
+[![显示三个日历事件的示例应用程序的屏幕截图](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
 
-<a name="Adding_a_Calendar_Event" />
 
 ## <a name="adding-a-calendar-event"></a>添加一个日历事件
 
@@ -280,11 +274,11 @@ long GetDateTimeMS (int yr, int month, int day, int hr, int min)
 
 如果我们 UI 中的事件列表中添加一个按钮并运行上面的代码中的按钮单击事件处理程序，添加到日历事件并将其更新我们的列表中，如下所示：
 
-[![使用日历事件后面跟着添加示例事件按钮的示例应用程序的屏幕截图](calendar-images/13.png)](calendar-images/13.png)
+[![使用日历事件后面跟着添加示例事件按钮的示例应用程序的屏幕截图](calendar-images/13.png)](calendar-images/13.png#lightbox)
 
 如果我们打开日历应用，我们将看到事件将被写入存在以及：
 
-[![显示所选的日历事件的日历应用的屏幕快照](calendar-images/14.png)](calendar-images/14.png)
+[![显示所选的日历事件的日历应用的屏幕快照](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 如你所见，Android 将允许功能强大且易于访问，以检索和保存日历数据，允许将日历功能无缝集成的应用程序。
 

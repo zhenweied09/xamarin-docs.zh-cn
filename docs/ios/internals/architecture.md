@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: bf9d292acf43bbbe3e4ba76b5a264a11288b7225
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732f60a413077bc15018679fe8f8bc0a18227246
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-architecture"></a>iOS 体系结构
 
@@ -20,7 +20,7 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 
 下图显示了这种体系结构的基本概述：
 
-[ ![](architecture-images/ios-arch-small.png "此图显示了继续操作的时间 (AOT) 编译体系结构的基本概述")](architecture-images/ios-arch.png)
+[ ![](architecture-images/ios-arch-small.png "此图显示了继续操作的时间 (AOT) 编译体系结构的基本概述")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>本机和托管代码： 说明
 
@@ -36,7 +36,7 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 但是，没有对 iOS 设置 apple，不允许在设备上动态生成的代码执行的安全限制。
 若要确保我们遵守这些安全协议，Xamarin.iOS 改为使用继续操作的时间 (AOT) 编译器编译托管的代码。 这将生成的本机 iOS 二进制，（可选） 使用 LLVM 优化的设备，可以部署到 Apple 的基于 ARM 的处理器。 这如何相互配合粗略示意图如下图所示：
 
-[ ![](architecture-images/aot.png "这如何相互配合粗略示意图")](architecture-images/aot-large.png)
+[![](architecture-images/aot.png "这如何相互配合粗略示意图")](architecture-images/aot-large.png#lightbox)
 
 使用 AOT 具有数限制，详见[限制](~/ios/internals/limitations.md)指南。 它还提供了大量改进通过 JIT 通过减少启动时间，以及各种性能优化
 
@@ -101,7 +101,7 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 
 - **静态注册机构**– 静态注册机构生成 Objective C 代码生成，也不能是然后编译到静态库链接到可执行文件期间。 这使得更快启动，但在生成期间所用时间。 这是默认情况下使用为设备版本。 静态注册机构还可与 iOS 模拟器通过传递`--registrar:static`作为`mtouch`属性在你的项目的生成选项中，如下所示：
 
-    [ ![](architecture-images/image1.png "设置其他 mtouch 自变量")](architecture-images/image1.png)
+    [![](architecture-images/image1.png "设置其他 mtouch 自变量")](architecture-images/image1.png#lightbox)
 
 有关详细信息 iOS Xamarin.iOS 由使用的类型注册系统的详细信息，请参阅[类型注册机构](~/ios/internals/registrar.md)指南。
 
@@ -179,7 +179,7 @@ public interface UIToolbar : UIBarPositioning {
 ## <a name="related-links"></a>相关链接
 
 - [限制](~/ios/internals/limitations.md)
-- [绑定 Objective C](~/cross-platform/macios/binding/overview.md)
-- [OBJECTIVE-C 的选择器](~/ios/internals/objective-c-selectors.md)
+- [绑定 Objective-C](~/cross-platform/macios/binding/overview.md)
+- [Objective-C 的选择器](~/ios/internals/objective-c-selectors.md)
 - [类型注册机构](~/ios/internals/registrar.md)
-- [Linker](~/ios/deploy-test/linker.md)
+- [链接器](~/ios/deploy-test/linker.md)

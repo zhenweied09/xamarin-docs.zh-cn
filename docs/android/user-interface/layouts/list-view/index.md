@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 70a7abb186c102fb803c0ab6fa38c7b2d8222292
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="listview"></a>ListView
 
 _ListView 是重要的 Android 应用程序; UI 组件它用于无处不在从短菜单选项的列表到冗长的联系人或 internet 收藏夹列表。它提供一种简单的方法，以提供滚动列表中可以使用内置样式格式化或全面地自定义的行。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -30,10 +29,9 @@ _ListView 是重要的 Android 应用程序; UI 组件它用于无处不在从�
 
 
 > [!NOTE]
-> **请注意**:`RecyclerView`小组件是的更高级并更灵活版本`ListView`。 因为`RecyclerView`旨在作为的后继`ListView`(和`GridView`)，我们建议你使用`RecyclerView`而非`ListView`新的应用程序开发。 有关详细信息，请参阅[RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)。
+> `RecyclerView`小组件是的更高级并更灵活版本`ListView`。 因为`RecyclerView`旨在作为的后继`ListView`(和`GridView`)，我们建议你使用`RecyclerView`而非`ListView`新的应用程序开发。 有关详细信息，请参阅[RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)。
 
 
-<a name="tutorial" />
 
 ## <a name="listview-tutorial"></a>ListView 教程
 
@@ -147,7 +145,7 @@ static readonly string[] countries = new String[] {
 
 运行该应用程序。 你可以向下滚动列表中，或键入以筛选，然后单击要看到一条消息的项。 将显示如下所示的内容：
 
-[ ![与国家/地区名称的 ListView 示例屏幕截图](images/helloviews6.png)](images/helloviews6.png)
+[![与国家/地区名称的 ListView 示例屏幕截图](images/helloviews6.png)](images/helloviews6.png#lightbox)
 
 请注意，使用硬编码字符串数组不是最佳的设计做法。 一个用于在为简单起见，本教程演示[ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/)小组件。 更好的做法是引用一个字符串数组，包含所定义的外部资源，如`string-array`项目中的资源**Resources/Values/Strings.xml**文件。 例如:
 
@@ -173,7 +171,6 @@ string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
 
-<a name="going_further" />
 
 ## <a name="going-further-with-listview"></a>继续与 ListView
 
@@ -200,7 +197,6 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 -   [使用 ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
 -   [ListView 和活动生命周期](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

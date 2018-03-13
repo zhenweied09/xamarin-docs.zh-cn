@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>创建一个片段
 
@@ -28,7 +28,7 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 
 > [!NOTE]
-> **注意：**片段子类必须具有公共的默认无参数构造函数。
+> 片段子类必须具有公共的默认无参数构造函数。
 
 ## <a name="adding-a-fragment-to-an-activity"></a>将片段添加到活动
 
@@ -108,7 +108,7 @@ Android 不允许在包名称; 大写字符尝试放大量视图，如果包名�
 片段具有其自己生命周期，一定程度上独立的但仍受[托管活动的生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)。
 例如，当活动停留时，所有其关联的片段都已暂停。 下图概述了片段的生命周期。
 
-[![流示意图片段生命周期](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![流示意图片段生命周期](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>片段创建生命周期方法
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 下面的屏幕显示此菜单的外观：
 
-[![我行程应用显示菜单项的示例屏幕快照](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![我行程应用显示菜单项的示例屏幕快照](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

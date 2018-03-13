@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>使用 Android 清单
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml**作为生成过程中，并在中找到的 XML 的一部分生成**Properties/AndroidManifest.xml**合并在一起生成从自定义特性的 XML。 生成合并**AndroidManifest.xml**驻留在**obj**子目录; 例如，它驻留在**obj/Debug/android/AndroidManifest.xml**为调试版本. 合并过程很简单： 它使用在代码中的自定义特性来生成 XML 元素和*插入*到这些元素**AndroidManifest.xml**。 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>基本知识
 
@@ -60,7 +58,6 @@ namespace Demo
 `[Activity]`特性没有任何影响`abstract`类型;`abstract`类型将被忽略。
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>活动名称
 
@@ -83,7 +80,6 @@ public class MyActivity : Activity
 
 *请注意*： 应使用`Name`仅出于向后兼容性原因，这种情况下重命名的属性可能会降低在运行时的类型查找。 如果你有需要基于小写的命名空间的活动的默认类型名称和类名称，请参阅的旧代码[Android 可调用包装命名](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming)维护兼容性的提示和技巧。 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>活动标题栏
 
@@ -104,7 +100,6 @@ public class MyActivity : Activity
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>可以从应用程序选择器
 
@@ -130,7 +125,6 @@ public class MyActivity : Activity
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>活动图标
 
@@ -155,7 +149,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>权限
 
@@ -178,11 +171,9 @@ public class MyActivity : Activity
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>高级的功能
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>意向的操作和功能
 
@@ -214,7 +205,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>应用程序元素
 
@@ -243,7 +233,6 @@ Android 清单还提供了有助于您声明为整个应用程序的属性。 �
 有许多应用程序级特性，它们可以在配置`<application>`元素; 有关这些设置的详细信息，请参阅[公共属性](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties)部分[ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>自定义特性列表
 

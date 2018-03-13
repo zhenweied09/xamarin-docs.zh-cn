@@ -2,27 +2,29 @@
 title: "使用 SQLite.NET"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
+ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: d18fe5960a44153626fbf0bda30e3485faf5b9fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="using-sqlitenet"></a>使用 SQLite.NET
 
 Xamarin 建议 SQLite.NET 库是基本 ORM，你可以存储和检索 iOS 设备上的本地 SQLite 数据库中的对象。
 ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"对象"，而无需编写 SQL 语句。
 
-## <a name="using-sqlitenet"></a>使用 SQLite.NET
+<a name="Usage"/>
+
+## <a name="usage"></a>用法
 
 添加[SQLite.net PCL NuGet 包](https://www.nuget.org/packages/sqlite-net-pcl/)，到你的项目-它支持各种包括 iOS、 Android 和 Windows 的平台。
 
-  [ ![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png)
+  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png#lightbox)
 
 可用的 SQLite.NET 库之后，请按照以下三个步骤，若要使用它来访问数据库操作：
 
@@ -68,7 +70,7 @@ ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"�
 using SQLite; // from the github SQLite.cs class
 ```
 
-这要求你已添加到项目，突出显示部分的 SQLite[此处](#Using_SQLite.NET)。 请注意，通过将属性添加到类定义的 SQLite 数据库表 (`Stock`类) 而不是 CREATE TABLE 命令。
+这要求你已添加到项目，突出显示部分的 SQLite[此处](#Usage)。 请注意，通过将属性添加到类定义的 SQLite 数据库表 (`Stock`类) 而不是 CREATE TABLE 命令。
 
 ```csharp
 [Table("Items")]

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 6a24ff05ae2a2c2368650c368cc408f0219ce21e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5457cb3a80208311bac66a0232afd9cb4dc02c87
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms 多屏显示快速入门
 
 本快速入门演示了如何通过添加第二个屏幕来扩展 Phoneword 应用程序，以跟踪应用程序的呼叫历史记录。 最终的应用程序如下所示：
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword 应用程序")](quickstart-images/intro-app-examples.png "Phoneword Application")
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword 应用程序")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
 扩展 Phoneword 应用程序，如下所示：
 

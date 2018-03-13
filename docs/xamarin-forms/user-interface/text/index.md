@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: c276352bc0ef1478c5145089277183b774bd9bff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 55d13589e4241e9f4e29aea9a55346a8f514f208
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="text"></a>Text
 
@@ -26,6 +26,8 @@ Xamarin.Forms 具有三个用于处理文本的主视图：
 
 可以使用内置或自定义更改文本外观[样式](#Styles)和某些控件支持自定义[字体](#Fonts)。
 
+<a name="Label" />
+
 ## <a name="labellabelmd"></a>[标签](label.md)
 
 `Label`视图用于显示文本。 它可以显示多行文本或单个文本行。 `Label` 可以向多个内联中使用的格式设置选项显示文本。 标签视图可以包装或截断的文本，当它不能放在一行上。
@@ -35,6 +37,8 @@ Xamarin.Forms 具有三个用于处理文本的主视图：
 请参阅[标签](label.md)文章更多详细信息。
 
 有关自定义标签中使用的字体的信息，请参阅[字体](fonts.md)。
+
+<a name="Entry" />
 
 ## <a name="entryentrymd"></a>[项](entry.md)
 
@@ -46,6 +50,8 @@ Xamarin.Forms 具有三个用于处理文本的主视图：
 
 请注意，与不同`Label`，`Entry`不能具有自定义字体设置。
 
+<a name="Editor" />
+
 ## <a name="editoreditormd"></a>[编辑器](editor.md)
 
 `Editor` 用来接受多行文本输入。 `Editor` 可以具有自定义的背景色，但文本颜色和字体不能进行更改。
@@ -54,9 +60,13 @@ Xamarin.Forms 具有三个用于处理文本的主视图：
 
 请参阅[编辑器](editor.md)文章了解详细信息。
 
+<a name="Fonts" />
+
 ## <a name="fontsfontsmd"></a>[字体](fonts.md)
 
 `Label`控件支持不同的字体设置每个平台或你的应用程序中包含的自定义字体上使用内置的字体。 请参阅[字体](fonts.md)文章更多详细信息。
+
+<a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[样式](styles.md)
 

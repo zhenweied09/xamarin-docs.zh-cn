@@ -8,23 +8,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: b199e4370e93712211db125e427fb61da39cb296
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-the-android-designer"></a>使用 Android 设计器
 
 _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用户界面小颜色浏览器应用程序;此用户界面是完全在设计器中创建的。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
 使用 XML 文件或以编程方式编写代码，可以以声明方式创建 android 用户界面。 Xamarin.Android 设计器允许开发人员创建和修改声明性布局以可视方式，而无需处理手动编辑 XML 文件的内容麻烦。 设计器还提供实时的反馈，让开发人员而无需重新部署到设备或仿真程序的应用程序评估 UI 更改。 这可以极大地加快 Android UI 开发。 在本文中，我们提供的演练，演示如何使用 Xamarin.Android 设计器可以直观地创建用户界面。
 
-<a name="Walkthrough" />
 
 ## <a name="walkthrough"></a>演练
 
@@ -32,7 +30,6 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 让我们进入正题！
 
-<a name="Creating_a_New_Project" />
 
 ### <a name="creating-a-new-project"></a>创建新项目
 
@@ -42,13 +39,13 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 启动 Visual Studio，然后单击**新项目...**然后选择**Visual C\# > Android > 空白应用 (Android)**模板：
 
-[ ![Android 的空白应用程序](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png)
+[![Android 的空白应用程序](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 针对 Mac 和单击启动 Visual Studio**新解决方案...**.选择**Android 应用**模板，然后单击**下一步**:
 
-[ ![Android 的空白应用程序](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png)
+[![Android 的空白应用程序](designer-walkthrough-images/xs/01-android-app-sml.png)](designer-walkthrough-images/xs/01-android-app.png#lightbox)
 
 -----
 
@@ -56,20 +53,19 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 命名新应用程序**DesignerWalkthrough**单击**确定**。
 
-[ ![名称应用程序](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png)
+[![名称应用程序](designer-walkthrough-images/vs/02-name-app-sml.png)](designer-walkthrough-images/vs/02-name-app.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 命名新应用程序**DesignerWalkthrough**。 下**目标平台**，选择**最新和最大**单击**下一步**:
 
-[ ![名称应用程序](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png)
+[![名称应用程序](designer-walkthrough-images/xs/02-designer-walkthrough-sml.png)](designer-walkthrough-images/xs/02-designer-walkthrough.png#lightbox)
 
 在下一步的对话框屏幕中，单击**创建**。
 
 -----
 
 
-<a name="Adding_a_Layout" />
 
 ### <a name="adding-a-layout"></a>添加布局
 
@@ -79,38 +75,37 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 在 Visual Studio 中，右键单击**资源/布局**中**解决方案资源管理器**和选择**添加 > 新建项...**.在**添加新项**对话框中，选择**Android 布局**。 命名该文件**ListItem.axml**单击**添加**:
 
-[ ![新的布局](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png)
+[![新的布局](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
 
 新**ListItem**设计器中显示布局：
 
-[ ![设计器视图](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png)
+[![设计器视图](designer-walkthrough-images/vs/04-designer-view-sml.png)](designer-walkthrough-images/vs/04-designer-view.png#lightbox)
 
 单击**源**要查看此布局的 XML 源的设计器底部的选项卡：
 
-[ ![设计器的 XML](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png)
+[![设计器的 XML](designer-walkthrough-images/vs/05-designer-xml-sml.png)](designer-walkthrough-images/vs/05-designer-xml.png#lightbox)
 
 从**视图**菜单上，单击**其他 Windows > 文档大纲**以打开**文档大纲**。 **文档大纲**演示布局当前包含单个**LinearLayout**小组件：
 
-[ ![文档大纲](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png)
+[![文档大纲](designer-walkthrough-images/vs/06-document-outline-sml.png)](designer-walkthrough-images/vs/06-document-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 在适用于 Mac 的 Visual Studio，右键单击**资源/布局**中**解决方案**填充和选择**添加 > 新文件...**.在**新文件**对话框中，选择**Android > 布局**。 命名该文件**ListItem**单击**新建**:
 
-[ ![新的布局](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png)
+[![新的布局](designer-walkthrough-images/xs/03-new-layout-sml.png)](designer-walkthrough-images/xs/03-new-layout.png#lightbox)
 
 新**ListItem**设计器中显示布局：
 
-[ ![设计器视图](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png)
+[![设计器视图](designer-walkthrough-images/xs/04-designer-view-sml.png)](designer-walkthrough-images/xs/04-designer-view.png#lightbox)
 
 单击**源**要查看此布局的 XML 源的设计器底部的选项卡。 当你单击**文档大纲**选项卡在右侧，它显示布局当前包含单个**LinearLayout**小组件：
 
-[ ![设计器的 XML](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png)
+[![设计器的 XML](designer-walkthrough-images/xs/05-designer-xml-sml.png)](designer-walkthrough-images/xs/05-designer-xml.png#lightbox)
 
 -----
 
 
-<a name="Creating_the_List_Item_User_Interface" />
 
 ### <a name="creating-the-list-item-user-interface"></a>创建列表项的用户界面
 
@@ -120,11 +115,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![找到 ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png)
+[![找到 ImageView](designer-walkthrough-images/vs/07-locate-imageview-sml.png)](designer-walkthrough-images/vs/07-locate-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![找到 ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png)
+[![找到 ImageView](designer-walkthrough-images/xs/06-locate-imageview-sml.png)](designer-walkthrough-images/xs/06-locate-imageview.png#lightbox)
 
 -----
 
@@ -132,11 +127,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![ImageView 搜索](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png)
+[![ImageView 搜索](designer-walkthrough-images/vs/08-imageview-search-sml.png)](designer-walkthrough-images/vs/08-imageview-search.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![ImageView 搜索](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png)
+[![ImageView 搜索](designer-walkthrough-images/xs/07-imageview-search-sml.png)](designer-walkthrough-images/xs/07-imageview-search.png#lightbox)
 
 -----
 
@@ -144,11 +139,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![在画布上 ImageView](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png)
+[![在画布上 ImageView](designer-walkthrough-images/vs/09-imageview-on-canvas-sml.png)](designer-walkthrough-images/vs/09-imageview-on-canvas.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![在画布上 ImageView](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png)
+[![在画布上 ImageView](designer-walkthrough-images/xs/08-imageview-on-canvas-sml.png)](designer-walkthrough-images/xs/08-imageview-on-canvas.png#lightbox)
 
 -----
 
@@ -158,11 +153,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![蓝色边框](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png)
+[![蓝色边框](designer-walkthrough-images/vs/10-blue-outline-sml.png)](designer-walkthrough-images/vs/10-blue-outline.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![蓝色边框](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png)
+[![蓝色边框](designer-walkthrough-images/xs/10-blue-outline-sml.png)](designer-walkthrough-images/xs/10-blue-outline.png#lightbox)
 
 -----
 
@@ -170,11 +165,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![选择 ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png)
+[![选择 ImageView](designer-walkthrough-images/vs/11-select-imageview-sml.png)](designer-walkthrough-images/vs/11-select-imageview.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![选择 ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png)
+[![选择 ImageView](designer-walkthrough-images/xs/11-select-imageview-sml.png)](designer-walkthrough-images/xs/11-select-imageview.png#lightbox)
 
 -----
 
@@ -182,11 +177,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![绿色突出显示](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png)
+[![绿色突出显示](designer-walkthrough-images/vs/12-green-highlight-sml.png)](designer-walkthrough-images/vs/12-green-highlight.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![绿色突出显示](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png)
+[![绿色突出显示](designer-walkthrough-images/xs/12-green-highlight-sml.png)](designer-walkthrough-images/xs/12-green-highlight.png#lightbox)
 
 -----
 
@@ -194,11 +189,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![添加小文本小组件](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png)
+[![添加小文本小组件](designer-walkthrough-images/vs/13-add-small-text-sml.png)](designer-walkthrough-images/vs/13-add-small-text.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![添加小文本小组件](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png)
+[![添加小文本小组件](designer-walkthrough-images/xs/13-add-small-text-sml.png)](designer-walkthrough-images/xs/13-add-small-text.png#lightbox)
 
 -----
 
@@ -206,18 +201,17 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![设计器布局](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png)
+[![设计器布局](designer-walkthrough-images/vs/14-raw-layout-sml.png)](designer-walkthrough-images/vs/14-raw-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![设计器布局](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png)
+[![设计器布局](designer-walkthrough-images/xs/14-raw-layout-sml.png)](designer-walkthrough-images/xs/14-raw-layout.png#lightbox)
 
 -----
 
 如果两个`textView`小组件不是内部`linearLayout1`，你可以拖到`linearLayout1`中**文档大纲**并将它们放置，所以，如上面的屏幕快照中所示出现 (下缩进`linearLayout1`)。
 
 
-<a name="Arranging_The_User_Interface" />
 
 ### <a name="arranging-the-user-interface"></a>排列的用户界面
 
@@ -241,13 +235,13 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 3.  向下滚动到**分组**和更改`Width`将设置为`wrap_content`:
 
-[ ![设置包装内容](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png)
+[![设置包装内容](designer-walkthrough-images/xs/15-wrap-content-sml.png)](designer-walkthrough-images/xs/15-wrap-content.png#lightbox)
 
 -----
 
 若要更改的另一种方法`Width`设置方法是单击右侧的小组件以切换到其宽度设置上的三角形`wrap_content`:
 
-[ ![拖动以调整宽度](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png)
+[![拖动以调整宽度](designer-walkthrough-images/xs/16-width-arrow-sml.png)](designer-walkthrough-images/xs/16-width-arrow.png#lightbox)
 
 再次单击此三角形返回`Width`将设置为`match_parent`。
 
@@ -255,11 +249,11 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![选择根 LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png)
+[![选择根 LinearLayout](designer-walkthrough-images/vs/16-root-linearlayout-sml.png)](designer-walkthrough-images/vs/16-root-linearlayout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![选择根 LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png)
+[![选择根 LinearLayout](designer-walkthrough-images/xs/17-root-linearlayout-sml.png)](designer-walkthrough-images/xs/17-root-linearlayout.png#lightbox)
 
 -----
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -272,7 +266,7 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 与根`LinearLayout`选择，返回到**属性**选项卡，单击**小组件**。 更改`Orientation`将设置为`horizontal`:
 
-[ ![选择水平方向](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png)
+[![选择水平方向](designer-walkthrough-images/xs/18-horizontal-orientation-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation.png#lightbox)
 
 -----
 
@@ -280,15 +274,14 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![设计器布局](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png)
+[![设计器布局](designer-walkthrough-images/vs/18-designer-layout-sml.png)](designer-walkthrough-images/vs/18-designer-layout.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![设计器布局](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png)
+[![设计器布局](designer-walkthrough-images/xs/19-designer-layout-sml.png)](designer-walkthrough-images/xs/19-designer-layout.png#lightbox)
 
 -----
 
-<a name="Modifying_the_Spacing" />
 
 ### <a name="modifying-the-spacing"></a>修改间距
 
@@ -296,13 +289,13 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 接下来，我们将修改在用户界面提供小组件之间的更多空间的填充和边距设置。 选择`ImageView`，单击**按分类顺序**中的搜索图标**属性**窗口和向下的滚动到**布局**部分。 更改`Min Height`到`70dp`、`Min Width`到`50dp`，和`padding`到`10dp`。 这适用填充的四条边`ImageView`和垂直 elongates:
 
-[ ![设置填充](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png)
+[![设置填充](designer-walkthrough-images/vs/19-padding-widths-sml.png)](designer-walkthrough-images/vs/19-padding-widths.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 接下来，我们将修改在用户界面提供小组件之间的更多空间的填充和边距设置。 选择`ImageView`单击**布局**下**属性**。 更改`Padding`到`10dp`、`Min Width`到`50dp`，和`Min Height`到`70dp`。 这适用填充的四条边`ImageView`和垂直 elongates:
 
-[ ![设置填充](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png)
+[![设置填充](designer-walkthrough-images/xs/20-padding-widths-sml.png)](designer-walkthrough-images/xs/20-padding-widths.png#lightbox)
 
 -----
 
@@ -311,13 +304,13 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 下、 左、 右，和可以通过输入值插入单独设置上边距设置`paddingBottom`， `paddingLeft`， `paddingRight`，和`paddingTop`字段，分别。
 例如，设置`paddingLeft`字段`5dp`和`paddingBottom`， `paddingRight`，和`paddingTop`字段设置为`10dp`:
 
-[ ![自定义填充设置](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png)
+[![自定义填充设置](designer-walkthrough-images/vs/20-custom-padding-sml.png)](designer-walkthrough-images/vs/20-custom-padding.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 上、 右、 下、 和左边距设置可以单独设置通过输入值插入`Top`， `Right`， `Bottom`，和`Left`分别填充字段。 例如，设置`Left`填充到值`5dp`和`Top`， `Right`，和`Bottom`填充到值`10dp`。 请注意，`Padding`设置更改为这些值的以逗号分隔列表：
 
-[ ![自定义填充设置](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png)
+[![自定义填充设置](designer-walkthrough-images/xs/21-custom-padding-sml.png)](designer-walkthrough-images/xs/21-custom-padding.png#lightbox)
 
 -----
 
@@ -325,18 +318,17 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 接下来，调整的位置`LinearLayout`小工具，它包含两个`TextView`小组件。 在**文档大纲**，选择`linearLayout1`。 在**属性**窗口中，滚动到**布局的分组**部分。 设置`layout_marginBottom`， `layout_marginLeft`， `layout_marginRight`，和`layout_marginTop`到`5dp`， `5dp`， `0dp`，和`5dp`分别：
 
-[ ![设置页边距](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png)
+[![设置页边距](designer-walkthrough-images/vs/21-margins-sml.png)](designer-walkthrough-images/vs/21-margins.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 接下来，调整的位置`LinearLayout`小工具，它包含两个`TextView`小组件。 在**文档大纲**，选择`linearLayout1`。 在**属性**窗格中，选择**布局**选项卡。向下滚动到**分组**部分，然后设置`Left`， `Top`， `Right`，和`Bottom`到距`5dp`， `5dp`， `0dp`，和`5dp`分别：
 
-[ ![设置页边距](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png)
+[![设置页边距](designer-walkthrough-images/xs/22-margins-sml.png)](designer-walkthrough-images/xs/22-margins.png#lightbox)
 
 -----
 
 
-<a name="Removing_the_Default_Image" />
 
 ### <a name="removing-the-default-image"></a>删除的默认映像
 
@@ -360,11 +352,10 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 3.  清除`Src`设置，以便它将为空：
 
-[ ![清除 ImageView src 设置](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png)
+[![清除 ImageView src 设置](designer-walkthrough-images/xs/23-clear-src-sml.png)](designer-walkthrough-images/xs/23-clear-src.png#lightbox)
 
 -----
 
-<a name="Adding_a_ListView" />
 
 ### <a name="adding-a-listview-container"></a>添加 ListView 容器
 
@@ -377,7 +368,7 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![新的 ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png)
+[![新的 ListView](designer-walkthrough-images/xs/24-new-listview-sml.png)](designer-walkthrough-images/xs/24-new-listview.png#lightbox)
 
 -----
 
@@ -390,14 +381,13 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![将 id 重命名为 myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png)
+[![将 id 重命名为 myListView](designer-walkthrough-images/xs/25-change-id-sml.png)](designer-walkthrough-images/xs/25-change-id.png#lightbox)
 
 -----
 
 此时，我们用户界面，可供使用。
 
 
-<a name="Running_the_Application" />
 
 ### <a name="running-the-application"></a>运行应用程序
 
@@ -490,10 +480,9 @@ namespace DesignerWalkthrough
 
 生成并运行应用程序。 下面的屏幕截图是在设备上运行时如何显示该应用程序的一个示例：
 
-[ ![最终屏幕快照](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png)
+[![最终屏幕快照](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

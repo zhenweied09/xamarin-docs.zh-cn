@@ -6,11 +6,11 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f1e5917d18a7450b9f39e53447fb120fb66e2212
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 617b02899e04b5417e352555e91aee966428cb9c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="systemdata"></a>System.Data
 
@@ -33,7 +33,7 @@ Xamarin.iOS 8.10 增加了对支持[System.Data](https://developer.xamarin.com/a
 
 首先，右键单击**引用**节点，然后选择**编辑引用...**然后选择`System.Data`和`Mono.Data.Sqlite`:
 
-[ ![](system.data-images/edit-references-sml.png "添加新引用")](system.data-images/edit-references.png)
+[![](system.data-images/edit-references-sml.png "添加新引用")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>代码示例
 

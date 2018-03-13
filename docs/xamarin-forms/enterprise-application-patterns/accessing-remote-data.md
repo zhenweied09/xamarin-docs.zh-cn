@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a219a5ed4045bff639f29fd49ef5288139140135
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0eec51a6c95894482a57bfe3bb1f95aec2045af4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessing-remote-data"></a>访问远程数据
 
@@ -52,7 +52,7 @@ EShopOnContainers 移动应用程序使用`HttpClient`类，以通过 HTTP，使
 
 图 10-1 显示了用于显示由目录微服务构成从读取目录数据的类的交互`CatalogView`。
 
-[![](accessing-remote-data-images/catalogdata.png "从目录微服务检索数据")](accessing-remote-data-images/catalogdata-large.png "目录微服务构成从检索数据")
+[![](accessing-remote-data-images/catalogdata.png "从目录微服务检索数据")](accessing-remote-data-images/catalogdata-large.png#lightbox "目录微服务构成从检索数据")
 
 **图 10-1**： 目录微服务构成从检索数据
 
@@ -157,7 +157,7 @@ public async Task<IActionResult> Items(
 
 图 10-2 显示的类，用于发送所显示的购物篮数据交互`BasketView`，到篮微服务。
 
-[![](accessing-remote-data-images/basketdata.png "将数据发送到篮 microservice")](accessing-remote-data-images/basketdata-large.png "将数据发送到篮微服务")
+[![](accessing-remote-data-images/basketdata.png "将数据发送到篮 microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "将数据发送到篮微服务")
 
 **图 10-2**： 将数据发送到篮微服务
 

@@ -4,14 +4,15 @@ description: "使用非仿射转换轮换在三维空间中的 2D 对象。"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="3d-rotations"></a>三维旋转
 
@@ -27,7 +28,7 @@ _使用非仿射转换轮换在三维空间中的 2D 对象。_
 
 三维坐标系添加 Z.从概念上讲调用的第三个轴，Z 轴是直角到屏幕。 三个数字用指示在三维空间中的坐标点: （x，y，z）。 在以三维形式在本文中，增加 X 值中使用的坐标系统是向右和增加的 Y 值均停运，两个维度中一样。 增加正 Z 值产生的屏幕。 来源是左上角，二维图形中一样。 可以将屏幕视为直角于此平面 Z 轴 XY 平面。
 
-这称为左侧的坐标系统。 如果你点正 X 方向左手食指协调 （右侧），并增加 Y 方向中间手指协调 （向下），然后你的增大 Z 坐标 &#x2014; 方向的滚动块点在屏幕中，将扩展出。
+这称为左侧的坐标系统。 如果点的 X 坐标 （右侧），正方向左手食指和中间手指的增大 Y 方向协调 （向下），然后将拇指中点增加 Z 坐标的方向-从扩展出是必需的。
 
 在三维图形中，转换都按 4-4 矩阵。 以下是 4-4 标识矩阵：
 
@@ -109,7 +110,7 @@ X 值保持不变时受到此转换。 绕 Y 轴旋转会保留条目保持不�
 |    0       0     0  1  |
 </pre>
 
-坐标系统的左右手使用习惯所隐含的旋转方向。 这是左手系统，因此，如果点越来越多的值的特定轴 &#x2014; 你左侧的滚动块绕 X 轴旋转的右侧围绕 Y 轴并面向使用者绕 Z 轴和 &#x2014; 旋转的轮换的向下然后你其他指的曲线指示的方向旋转为正的角度。
+坐标系统的左右手使用习惯所隐含的旋转方向。 这是左手系统，因此，如果点左手越来越多的值对于特定的轴的 thumb-绕 X 轴旋转的右侧围绕 Y 轴并面向使用者绕 Z 轴旋转的轮换的向下-然后的曲线则其他手指指示正角度的旋转的方向。
 
 `SKMatrix44` 已通用化静态[ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/)和[ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/)方法，您可以指定发生围绕其旋转的轴：
 
@@ -408,7 +409,7 @@ public partial class Rotation3DPage : ContentPage
 
 使用第四个滑块进行试验，你会注意到不同的深度设置不移动进一步离开查看器中，该对象，但改为 alter 透视影响的程度：
 
-[![](3d-rotation-images/rotation3d-small.png "三重的旋转 3D 页的屏幕截图")](3d-rotation-images/rotation3d-large.png "旋转 3D 页面的三个屏幕截图")
+[![](3d-rotation-images/rotation3d-small.png "三重的旋转 3D 页的屏幕截图")](3d-rotation-images/rotation3d-large.png#lightbox "旋转 3D 页面的三个屏幕截图")
 
 **进行动画处理旋转三维**还使用`SKMatrix44`要进行动画处理在三维空间中的文本字符串。 `textPaint`对象设置为一个字段的构造函数中使用以确定文本的边界：
 
@@ -442,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing`替代定义三个 Xamarin.Forms`Animation`对象要进行动画处理`xRotationDegrees`， `yRotationDegrees`，和`zRotationDegrees`字段以不同的速率。 请注意，这些动画的段设置为质数和 &#x2014; 5 秒、 7 秒、 11 秒和 &#x2014; 因此总体组合仅重复每个 385 秒或超过 10 分钟：
+`OnAppearing`替代定义三个 Xamarin.Forms`Animation`对象要进行动画处理`xRotationDegrees`， `yRotationDegrees`，和`zRotationDegrees`字段以不同的速率。 请注意，这些动画的段设置为优化数字-5 秒，7 秒和 11 秒 — 因此总体组合仅重复每个 385 秒或超过 10 分钟：
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -532,7 +533,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 此三维旋转是用了几种二维转换将旋转中心的移到该屏幕的中心和缩放的文本字符串的大小，以便它在屏幕的宽度相同括起来：
 
-[![](3d-rotation-images/animatedrotation3d-small.png "三重的动画旋转 3D 页的屏幕截图")](3d-rotation-images/animatedrotation3d-large.png "三重的动画旋转 3D 页的屏幕截图")
+[![](3d-rotation-images/animatedrotation3d-small.png "三重的动画旋转 3D 页的屏幕截图")](3d-rotation-images/animatedrotation3d-large.png#lightbox "三重的动画旋转 3D 页的屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

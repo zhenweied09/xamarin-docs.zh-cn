@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b5d3a03324e73b06bd3defe7e6610163c3d1b26d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-progress-indicators"></a>使用进度指示器
 
@@ -21,7 +21,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的进度指示器�
 
 可能有 Xamarin.tvOS 应用需要加载新内容或执行时间较长的处理操作的时间。 在这些时段内你应呈现活动指示器或进度栏让用户知道应用程序仍在运行并为它们提供某些指明正在运行的任务的长度。
 
-[ ![](progress-indicators-images/intro01.png "示例进度指示器")](progress-indicators-images/intro01.png)
+[![](progress-indicators-images/intro01.png "示例进度指示器")](progress-indicators-images/intro01.png#lightbox)
 
 <a name="About-Activity-Indicators" />
 
@@ -57,19 +57,19 @@ Apple 具有以下建议用于使用进度栏：
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**活动指示器**从**工具箱**并将其放在视图上： 
 
-    [ ![](progress-indicators-images/activity01.png "活动指示器")](progress-indicators-images/activity01.png)
+    [![](progress-indicators-images/activity01.png "活动指示器")](progress-indicators-images/activity01.png#lightbox)
 1. 在**小组件选项卡**的**属性填充**，你可以调整活动指示器的几个属性，如其**样式**和**行为**: 
 
-    [ ![](progress-indicators-images/activity02.png "小组件选项卡 ")](progress-indicators-images/activity02.png)
+    [![](progress-indicators-images/activity02.png "小组件选项卡 ")](progress-indicators-images/activity02.png#lightbox)
 1. 拖动**进度视图**从**工具箱**并将其放在视图上： 
 
-    [ ![](progress-indicators-images/activity03.png "进度视图")](progress-indicators-images/activity03.png)
+    [![](progress-indicators-images/activity03.png "进度视图")](progress-indicators-images/activity03.png#lightbox)
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整进度视图中的几个属性，如其**样式**和**进度**（完成百分比）： 
 
-    [ ![](progress-indicators-images/activity04.png "小组件选项卡")](progress-indicators-images/activity04.png)
+    [![](progress-indicators-images/activity04.png "小组件选项卡")](progress-indicators-images/activity04.png#lightbox)
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](progress-indicators-images/activity05.png "指定一个名称")](progress-indicators-images/activity05.png)
+    [![](progress-indicators-images/activity05.png "指定一个名称")](progress-indicators-images/activity05.png#lightbox)
 1. 保存更改。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -77,19 +77,19 @@ Apple 具有以下建议用于使用进度栏：
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**活动指示器**从**工具箱**并将其放在视图上： 
 
-    [ ![](progress-indicators-images/activity01-vs.png "活动指示器")](progress-indicators-images/activity01-vs.png)
+    [![](progress-indicators-images/activity01-vs.png "活动指示器")](progress-indicators-images/activity01-vs.png#lightbox)
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整活动指示器的几个属性，如其**样式**和**行为**: 
 
-    [ ![](progress-indicators-images/activity02-vs.png "小组件选项卡")](progress-indicators-images/activity02-vs.png)
+    [![](progress-indicators-images/activity02-vs.png "小组件选项卡")](progress-indicators-images/activity02-vs.png#lightbox)
 1. 拖动**进度视图**从**工具箱**并将其放在视图上： 
 
-    [ ![](progress-indicators-images/activity03-vs.png "进度视图")](progress-indicators-images/activity03-vs.png)
+    [![](progress-indicators-images/activity03-vs.png "进度视图")](progress-indicators-images/activity03-vs.png#lightbox)
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整进度视图中的几个属性，如其**样式**和**进度**（完成百分比）： 
 
-    [ ![](progress-indicators-images/activity04-vs.png "小组件选项卡")](progress-indicators-images/activity04-vs.png)
+    [![](progress-indicators-images/activity04-vs.png "小组件选项卡")](progress-indicators-images/activity04-vs.png#lightbox)
 1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
 
-    [ ![](progress-indicators-images/activity05-vs.png "指定一个名称")](progress-indicators-images/activity05-vs.png)
+    [![](progress-indicators-images/activity05-vs.png "指定一个名称")](progress-indicators-images/activity05-vs.png#lightbox)
 1. 保存更改。
 
 -----

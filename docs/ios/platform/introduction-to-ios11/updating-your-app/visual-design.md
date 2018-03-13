@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>可视设计更新
 
@@ -51,7 +51,7 @@ iOS 11 变得更轻松地搜索控制器将直接添加到导航栏。 一旦你
 NavigationItem.SearchController = searchController;
 ```
 
-[![大型导航标题与搜索栏](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![大型导航标题与搜索栏](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 根据你的应用程序的功能，你可能或可能不希望在用户滚动浏览列表时隐藏搜索栏。 你可以对此进行调整使用`HidesSearchBarWhenScrolling`属性。
 
@@ -75,7 +75,7 @@ iOS 7[引入](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen)`topLayo
 
 安全区域是思考一下你的应用程序以及如何约束将添加的视图超级视图之间的可见空间的新方法。 例如，考虑下面的图像：
 
-[![安全区域 vs 顶部和底部布局指南](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![安全区域 vs 顶部和底部布局指南](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 以前，如果你添加一个视图，希望它在上面的绿色区域中均可见，你将对其进行约束到_底部_的`TopLayoutGuide`和_顶部_的`BottomLayoutGuide`。 在 iOS 11 中，你将改为对其进行约束到_顶部_和_底部_的安全区域。 下面是一个示例：
 

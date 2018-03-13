@@ -3,21 +3,21 @@ title: "其他 iOS 9 框架更改"
 description: "这篇文章介绍了其他的次要更改或增强现有框架 ios 9 功能。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 82c6c2451deafb8a4314254a8138804d927c9bbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>其他 iOS 9 框架更改
 
 _这篇文章介绍了其他的次要更改或增强现有框架 ios 9 功能。_
 
-[ ![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png)
+[![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png#lightbox)
 
 除了对 iOS 的主要更改，Apple 已在 iOS 9 中进行修改和对多个现有框架的改进。
 

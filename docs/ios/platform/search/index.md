@@ -7,11 +7,11 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2d802a96fcc8dad1d610b99a1cddffdc4398da38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-search-apis"></a>新的搜索 Api
 
@@ -21,7 +21,7 @@ _本文介绍如何使用 iOS 9 提供的新应用程序搜索 Api 以允许用�
 
 此外，新的搜索 Api 更加轻松地集成应用程序而无需在前一搜索实现体验中的搜索。 因此，Apple 声明它通常用几个小时，使 iOS 9 应用的内容普遍可供搜索，使用应用程序的搜索。
 
-[ ![](images/intro01.png "下面举例说明普遍可搜索使用应用程序搜索的 iOS 9 应用内容")](images/intro01.png)
+[![](images/intro01.png "下面举例说明普遍可搜索使用应用程序搜索的 iOS 9 应用内容")](images/intro01.png#lightbox)
 
 应用程序搜索由组成三个单独的 Api:
 

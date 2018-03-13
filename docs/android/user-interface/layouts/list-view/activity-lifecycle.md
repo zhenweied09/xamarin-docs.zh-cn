@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 009e8fa78e0e9405cf264054ad79dcdf91e6d7c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8ee113a321dbc84cf12a7ef4bb5084c5307115b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-and-the-activity-lifecycle"></a>ListView 和活动的生命周期
 
@@ -24,7 +24,6 @@ ms.lasthandoff: 02/27/2018
 
 如果适配器使用的资源，如内存或托管的光标，请记得释放这些资源在其中它们已实例化 （如在互补方法 中创建的对象`OnStart`可以中释放`OnStop`)。
 
-<a name="Configuration_Changes" />
 
 ## <a name="configuration-changes"></a>配置更改
 

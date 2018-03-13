@@ -3,16 +3,16 @@ title: "在 iOS 中的用户界面"
 description: "介绍如何使用在 Xamarin.iOS 应用程序中的 iOS 用户界面。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
+ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 831ddfff7e05c391472b280095564f90528369ff
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f456b54180d50cfc4b6b98ed8f3d4118c8397b37
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-interface-in-ios"></a>在 iOS 中的用户界面
 

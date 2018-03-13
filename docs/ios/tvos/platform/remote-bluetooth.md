@@ -3,16 +3,16 @@ title: "Siri 远程和蓝牙控制器"
 description: "本文介绍如何在你 Xamarin.tvOS 应用中支持新的 Siri 远程和蓝牙游戏控制器。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5d74479e995c5c6ba6f6fd9fd23fbca78718ee31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri 远程和蓝牙控制器
 
@@ -23,7 +23,7 @@ Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中�
 
 如果你的应用程序是一个游戏，你可以根据需要生成的第三方，所做的支持 iOS (MFI)[蓝牙游戏控制器](#Bluetooth-Game-Controllers)中你的应用程序。
 
-[ ![](remote-bluetooth-images/intro01.png "蓝牙远程和游戏控制器")](remote-bluetooth-images/intro01.png)
+[![](remote-bluetooth-images/intro01.png "蓝牙远程和游戏控制器")](remote-bluetooth-images/intro01.png#lightbox)
 
 本指南介绍了[Siri 远程](#The-Siri-Remote)， [Touch 面手势](#Touch-Surface-Gestures)和[Siri 远程按钮](#Siri-Remote-Buttons)并演示如何使用这些通过[手势和情节提要](#Gestures-and-Storyboards)，[笔势和代码](#Gestures-and-Code)和[低级别事件处理](#Low-Level-Event-Handling)。 最后，还会讨论[使用游戏控制器](#Working-with-Game-Controllers)Xamarin.tvOS 应用中。
 
@@ -35,7 +35,7 @@ Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中�
 
 您作为 tvOS 应用程序开发人员的挑战是创建一个快速、 易于使用和极具视觉表现力的用户界面，利用 Siri 远程触摸面、 加速计、 陀螺和按钮。
 
-[ ![](remote-bluetooth-images/remote01.png "Siri 远程")](remote-bluetooth-images/remote01.png)
+[![](remote-bluetooth-images/remote01.png "Siri 远程")](remote-bluetooth-images/remote01.png#lightbox)
 
 Siri 远程具有以下功能和 tvOS 应用中的预期的用法：
 
@@ -128,14 +128,14 @@ Touch 图面上的笔势，除了你的应用程序可以响应用户单击 Touc
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑接口设计器。
 2. 拖动**点击手势识别器**从**库**并将其放在视图上： 
 
-    [ ![](remote-bluetooth-images/storyboard01.png "点击手势识别器")](remote-bluetooth-images/storyboard01.png)
+    [![](remote-bluetooth-images/storyboard01.png "点击手势识别器")](remote-bluetooth-images/storyboard01.png#lightbox)
 3. 检查**选择**中**按钮**部分**属性检查器**: 
 
-    [ ![](remote-bluetooth-images/storyboard02.png "检查选择")](remote-bluetooth-images/storyboard02.png)
+    [![](remote-bluetooth-images/storyboard02.png "检查选择")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **选择**意味着手势将响应用户单击**Touch 面**上使用 Siri 远程。 你还可以选择响应**菜单**，**播放/暂停**，**向上**，**下**，**左**和**右**按钮。
 5. 接下来，连接**操作**从**点击手势识别器**和调用它`TouchSurfaceClicked`: 
 
-    [ ![](remote-bluetooth-images/storyboard03.png "从 Tap 笔势识别器的操作")](remote-bluetooth-images/storyboard03.png)
+    [![](remote-bluetooth-images/storyboard03.png "从 Tap 笔势识别器的操作")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for mac。
 
 编辑视图控制器 (示例`FirstViewController.cs`) 文件，并添加以下代码以处理正在触发的笔势：
@@ -314,7 +314,7 @@ namespace tvRemote
 
 除了标准 Siri 远程 Apple TV、 第三方、 做为 iOS 附带可以与 Apple TV 配对 (MFI) 蓝牙游戏控制器，并且用于控制 Xamarin.tvOS 应用程序中。
 
-[ ![](remote-bluetooth-images/game01.png "蓝牙游戏控制器")](remote-bluetooth-images/game01.png)
+[![](remote-bluetooth-images/game01.png "蓝牙游戏控制器")](remote-bluetooth-images/game01.png#lightbox)
 
 游戏控制器可以用于提高玩游戏并提供了在游戏中的高质量的意义。 它们还可以用于控制标准 Apple TV 接口，以便使用无需远程和控制器之间切换。
 
@@ -425,7 +425,7 @@ Apple 有几个如果 Xamarin.tvOS 应用支持游戏控制器，必须满足的
 
 若要启用游戏控制器支持 Xamarin.tvOS 应用程序中的，双击`Info.plist`文件中**解决方案资源管理器**以将其打开以进行编辑：
 
-[ ![](remote-bluetooth-images/game02.png "Info.plist 编辑器")](remote-bluetooth-images/game02.png)
+[![](remote-bluetooth-images/game02.png "Info.plist 编辑器")](remote-bluetooth-images/game02.png#lightbox)
 
 下**游戏控制器**部分中，通过选中**启用游戏控制器**，然后检查所有应用程序将支持的游戏控制器类型。
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 294d28c57978218986d62d1ee6579e8d283b8f72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -29,12 +29,12 @@ ms.lasthandoff: 02/27/2018
 
 通过先创建一个可移植类库项目，可以在 Xamarin Studio 6.2 中创建.NET 标准库项目：
 
-[ ![](net-standard-images/xs01-sml.png "创建一个新的可移植类库项目")](net-standard-images/xs01.png)
+[![](net-standard-images/xs01-sml.png "创建一个新的可移植类库项目")](net-standard-images/xs01.png#lightbox)
 
 一旦创建项目后，右键单击，然后打开**项目选项**窗口。
 在**常规**部分可以转换为标准.NET 项目，并将其设置为使用中的特定版本**平台**下拉列表框：
 
-[ ![](net-standard-images/xs02-sml.png "将转换为.NET 标准通常选项")](net-standard-images/xs02.png)
+[![](net-standard-images/xs02-sml.png "将转换为.NET 标准通常选项")](net-standard-images/xs02.png#lightbox)
 
 然后，你可以[创建 NuGet 包](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md)以与其他开发人员共享库。
 

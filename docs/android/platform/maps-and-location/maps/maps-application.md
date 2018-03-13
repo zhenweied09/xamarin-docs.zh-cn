@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>映射应用程序
 
 使用在 Xamarin.Android 的地图的最简单方法是利用内置地图应用程序如下所示：
 
-[![内置的 Google 映射应用的示例屏幕快照](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![内置的 Google 映射应用的示例屏幕快照](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 当使用地图应用程序时，该映射不会应用程序的一部分。 相反，你的应用程序将启动映射应用程序，并加载外部的映射。 下一节讨论如何使用 Xamarin.Android 启动与上述的地图。
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>创建意图
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 此代码是所有所需启动上面的屏幕快照中所示的映射。 除了指定纬度和经度，地图的 URI 方案支持几个其他选项。
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>异地 URI 方案
 
@@ -52,10 +50,9 @@ StartActivity (mapIntent);
 
 执行查询 （即街道的地址或搜索条款） 的 uri 的版本使用 Google 的 geocoder 服务检索然后显示在地图的位置。 例如，URI`geo:0,0?q=coop+Cambridge`导致映射如下所示：
 
-[![显示与搜索词的 Google 映射的示例屏幕截图](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![显示与搜索词的 Google 映射的示例屏幕截图](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 有关地域 URI 方案的详细信息，请参阅[在地图上显示位置](http://developer.android.com/guide/components/intents-common.html#Maps)。
 
@@ -64,7 +61,7 @@ StartActivity (mapIntent);
 
 除了异地方案中，Android 还支持从为打算加载街道视图。 从 Xamarin.Android 启动街道视图应用程序的示例所示：
 
-[![街道视图的示例屏幕快照](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![街道视图的示例屏幕快照](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 若要启动的街道视图，只需使用`google.streetview`URI 方案中，如下面的代码中所示：
 

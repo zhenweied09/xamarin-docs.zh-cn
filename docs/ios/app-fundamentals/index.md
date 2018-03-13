@@ -3,27 +3,27 @@ title: "应用程序基础知识"
 description: "应用程序的核心概念"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 9cace37a9e762a49a90963591931793d30d05453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f6c0bb75327f0c14d314a0e7ad9d114fd17c2a57
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>应用程序基础知识
 
 本部分提供的指南，在某些更常见的操作任务或开发人员需要时应注意的开发 Xamarin.iOS (以前称为 MonoTouch) 应用程序的概念。
 
-## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[应用程序传输安全](~/ios/app-fundamentals/ats.md)
+## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[应用传输安全性](~/ios/app-fundamentals/ats.md)
 
 本文将介绍应用程序传输安全性 iOS 9 应用程序和这意味着你的 Xamarin.iOS 项目强制实施的安全更改，它将覆盖 ATS 配置选项，以及它将介绍如何选择退出的 ATS，如果需要。 因为默认情况下启用了 ATS，任何不安全的 internet 连接将引发 iOS 9 应用中的异常，（除非已显式允许它）。
 
 
-## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)
+## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[后台处理](~/ios/app-fundamentals/backgrounding/index.md)
 
 后台处理或 backgrounding 是让应用程序在前台运行另一个应用程序时在后台执行任务的过程。 该指南可作为后台处理 iOS 中的简介。
 
@@ -56,7 +56,7 @@ Xamarin.iOS 可以使用相同的 System.IO 类以便与文件和目录中你将
 
 `NSUserDefaults`类提供一种 iOS 应用和扩展，以编程方式与整个系统的默认系统交互。 通过使用默认系统，用户可以配置应用的行为或样式以满足他们的首选项 （基于应用程序的设计）。 例如，若要提供皇室度量值的度量值的 vs 中的数据或选择一个给定的用户界面主题。
 
-## <a name="touchiosapp-fundamentalstouchindexmd"></a>[触摸](~/ios/app-fundamentals/touch/index.md)
+## <a name="touchiosapp-fundamentalstouchindexmd"></a>[触控](~/ios/app-fundamentals/touch/index.md)
 
 许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测 – 可以使用手势以及。 例如，捏合缩放手势是很常见的示例 – 挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南将检查触控和手势在 iOS 中。
 

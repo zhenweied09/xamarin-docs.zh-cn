@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 18c53ed6428eff911420c696d45b341d8e0fa5c1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1bf481e4999365f4afc52cb9dda83c6e627950e1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>自定义 ListView 的外观
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
 正在显示的行的布局被规定的 ListView 的外观。 若要更改的外观`ListView`，使用不同的行布局。
 
-<a name="Built-in_Row_Views" />
 
 ## <a name="built-in-row-views"></a>内置行视图
 
@@ -53,11 +51,11 @@ ms.lasthandoff: 02/27/2018
 
 每个内置的行视图有与之关联的内置的样式。 这些屏幕截图显示每个视图的显示方式：
 
-[![TestListItem、 SimpleSelectableListItem、 SimpleListitem1 和 SimpleListItem2 的屏幕快照](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![TestListItem、 SimpleSelectableListItem、 SimpleListitem1 和 SimpleListItem2 的屏幕快照](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![SimpleListItemActivated1、 SimpleListItemActivated2、 SimpleListItemChecked 和 SimpleListItemMultipleChecked 的屏幕快照](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![SimpleListItemActivated1、 SimpleListItemActivated2、 SimpleListItemChecked 和 SimpleListItemMultipleChecked 的屏幕快照](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![SimpleListItemSingleChoice、 TwoLineListItem、 ActivityListItem 和 SimpleExpandableListItem 的屏幕快照](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![SimpleListItemSingleChoice、 TwoLineListItem、 ActivityListItem 和 SimpleExpandableListItem 的屏幕快照](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 **BuiltInViews/HomeScreenAdapter.cs**示例文件 (在**BuiltInViews**解决方案) 包含用于生成不可展开的列表项屏幕的代码。 在中设置视图`GetView`方法如下：
 
@@ -88,7 +86,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 然后可以通过引用标准设置的属性的组视图和子视图`Text1`和`Text2`控制标识符，如上所示。 SimpleExpandableListItem 屏幕快照 （如上所示） 提供了一个行组视图 (SimpleExpandableListItem1) 和两个行子视图 (SimpleExpandableListItem2) 的一个示例。 或者，可以为两行 (SimpleExpandableListItem2) 配置的组视图，可以为一个行 (SimpleExpandableListItem1) 配置的子视图或这两组视图而子视图可以具有相同数量的行。 
 
 
-<a name="Accessories" />
 
 ## <a name="accessories"></a>附件
 
@@ -102,7 +99,7 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 
 在下面的屏幕，在其各自的顺序，前面提到的附件图所示：
 
-[![屏幕快照的 SimpleListItemChecked、 SimpleListItemSingleChoice 和 SimpleListItemMultipleChoice 附件](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![屏幕快照的 SimpleListItemChecked、 SimpleListItemSingleChoice 和 SimpleListItemMultipleChoice 附件](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 若要显示这些附件传递之一将必需的布局资源 ID 与适配器然后手动设置所需的行的选择状态。 以下代码行将演示如何创建并分配`Adapter`使用这些布局之一：
 
@@ -112,7 +109,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 `ListView`本身支持不同的选择模式，而不考虑显示访问器。 若要避免混淆，请使用`Single`选择模式与`Checked`和`SingleChoice`附件和`Multiple`模式`MultipleChoice`样式。 选择模式受`ChoiceMode`属性`ListView`。
 
-<a name="Handling_API_Level" />
 
 ### <a name="handling-api-level"></a>处理 API 级别
 
@@ -137,7 +133,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### <a name="selecting-items-programmatically"></a>以编程方式选择项
 
@@ -165,7 +160,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## <a name="creating-custom-row-layouts"></a>创建自定义行布局
 
@@ -188,7 +182,6 @@ Console.WriteLine();
 
 这些更改下面详细介绍，使用创建活动的视图和自定义行视图，然后涵盖对要呈现的适配器和活动进行修改会启动。
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>将 ListView 添加到的活动布局
 
@@ -220,7 +213,6 @@ Console.WriteLine();
 
 使用的好处`Activity`有一个自定义布局 (而不是`ListActivity`) 在于能够将其他控件添加到屏幕中，如标题`TextView`在此示例中。
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### <a name="creating-a-custom-row-layout"></a>创建自定义行布局
 
@@ -267,7 +259,6 @@ Console.WriteLine();
 
 虽然自定义的行布局可以包含许多不同的控件，复杂的设计可能会影响滚动性能以及使用图像 （尤其在他们有要通过网络加载）。 有关寻址滚动性能问题，请参阅 Google 的文章，了解详细信息。
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### <a name="referencing-a-custom-row-view"></a>引用自定义行视图
 
@@ -309,7 +300,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>引用在活动的自定义 ListView
 
@@ -343,10 +333,9 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 随即出现的屏幕如下所示：
 
-[![生成 CustomRowView 的屏幕截图](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![生成 CustomRowView 的屏幕截图](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### <a name="customizing-the-row-selector-color"></a>自定义的行选择器颜色
 
@@ -386,10 +375,9 @@ android:background="@drawable/CustomSelector"
 
 所选的行和相应`Toast`消息现在如下所示：
 
-[![橙色，并显示所选行的名称的 Toast 消息中选定的行](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![橙色，并显示所选行的名称的 Toast 消息中选定的行](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>阻止闪烁上自定义布局
 

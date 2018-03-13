@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/31/2018
-ms.openlocfilehash: 3046d779239076098a8b2fb74fc87e2f211074e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2445e49005175f62e4d7cd8aadccb5f596177bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-designer-basics"></a>iOS 设计器基础知识
 
@@ -38,15 +38,15 @@ IOS 设计器允许开发人员能够以可视方式设计应用程序的用户�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![在 iOS 设计器中的视图控制器](introduction-images/1-storyboardwithviewcontroller-vsmac.png "iOS 设计器中的视图控制器")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png)
+[![在 iOS 设计器中的视图控制器](introduction-images/1-storyboardwithviewcontroller-vsmac.png "iOS 设计器中的视图控制器")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
 
-[![为视图控制器代码](introduction-images/2-viewcontrollercode-vsmac.png "的视图控制器的代码")](introduction-images/2-viewcontrollercode-vsmac-large.png)
+[![为视图控制器代码](introduction-images/2-viewcontrollercode-vsmac.png "的视图控制器的代码")](introduction-images/2-viewcontrollercode-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![在 iOS 设计器中的视图控制器](introduction-images/1-storyboardwithviewcontroller-vs.png "iOS 设计器中的视图控制器")](introduction-images/1-storyboardwithviewcontroller-vs-large.png)
+[![在 iOS 设计器中的视图控制器](introduction-images/1-storyboardwithviewcontroller-vs.png "iOS 设计器中的视图控制器")](introduction-images/1-storyboardwithviewcontroller-vs-large.png#lightbox)
 
-[![为视图控制器代码](introduction-images/2-viewcontrollercode-vs.png "的视图控制器的代码")](introduction-images/2-viewcontrollercode-vs-large.png)
+[![为视图控制器代码](introduction-images/2-viewcontrollercode-vs.png "的视图控制器的代码")](introduction-images/2-viewcontrollercode-vs-large.png#lightbox)
 
 -----
 
@@ -54,11 +54,11 @@ IOS 设计器允许开发人员能够以可视方式设计应用程序的用户�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![包含一个按钮的视图控制器](introduction-images/3-viewcontrollerwithbutton-vsmac.png "包含一个按钮的视图控制器")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png)
+[![包含一个按钮的视图控制器](introduction-images/3-viewcontrollerwithbutton-vsmac.png "包含一个按钮的视图控制器")](introduction-images/3-viewcontrollerwithbutton-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![包含一个按钮的视图控制器](introduction-images/3-viewcontrollerwithbutton-vs.png "包含一个按钮的视图控制器")](introduction-images/3-viewcontrollerwithbutton-vs-large.png)
+[![包含一个按钮的视图控制器](introduction-images/3-viewcontrollerwithbutton-vs.png "包含一个按钮的视图控制器")](introduction-images/3-viewcontrollerwithbutton-vs-large.png#lightbox)
 
 -----
 
@@ -68,13 +68,13 @@ IOS 设计器允许开发人员能够以可视方式设计应用程序的用户�
 
 为了访问和操作代码中的按钮，它必须具有唯一标识符。 通过选择按钮，打开提供的唯一标识符**属性填充**，并设置其**名称**字段到一个值，如"提交"按钮：
 
-[![设置按钮的名称属性填充中](introduction-images/4-settingbuttonname-vsmac.png "属性板中设置按钮的名称")](introduction-images/4-settingbuttonname-vsmac-large.png)
+[![设置按钮的名称属性填充中](introduction-images/4-settingbuttonname-vsmac.png "属性板中设置按钮的名称")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 为了访问和操作代码中的按钮，它必须具有唯一标识符。 通过选择按钮，打开提供的唯一标识符**属性窗口**，并设置其**名称**字段到一个值，如"提交"按钮：
 
-[![在属性窗口中设置按钮的名称](introduction-images/4-settingbuttonname-vs.png "属性窗口中设置按钮的名称")](introduction-images/4-settingbuttonname-vs-large.png)
+[![在属性窗口中设置按钮的名称](introduction-images/4-settingbuttonname-vs.png "属性窗口中设置按钮的名称")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
 -----
 
@@ -84,13 +84,13 @@ IOS 设计器允许开发人员能够以可视方式设计应用程序的用户�
 
 在**解决方案 Pad**、 导航至**ViewController.cs**和单击泄露指示器显示视图控制器`ViewController`类定义跨度两个文件，其中每个包含[分部类](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)定义：
 
-[![这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png)
+[![这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 在**解决方案资源管理器**、 导航至**ViewController.cs**和单击泄露指示器显示视图控制器`ViewController`类定义跨两个文件，每个其中包含[分部类](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)定义：
 
-[![这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png)
+[![这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "这两个文件组成 ViewController 类： ViewController.cs 和 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
@@ -125,11 +125,11 @@ namespace Designer
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![IntelliSense 识别的提交按钮引用](introduction-images/6-submitbuttonintellisense-vsmac.png "识别的提交按钮引用的 IntelliSense")](introduction-images/6-submitbuttonintellisense-vsmac-large.png)
+[![IntelliSense 识别的提交按钮引用](introduction-images/6-submitbuttonintellisense-vsmac.png "识别的提交按钮引用的 IntelliSense")](introduction-images/6-submitbuttonintellisense-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![IntelliSense 识别的提交按钮引用](introduction-images/6-submitbuttonintellisense-vs.png "识别的提交按钮引用的 IntelliSense")](introduction-images/6-submitbuttonintellisense-vs-large.png)
+[![IntelliSense 识别的提交按钮引用](introduction-images/6-submitbuttonintellisense-vs.png "识别的提交按钮引用的 IntelliSense")](introduction-images/6-submitbuttonintellisense-vs-large.png#lightbox)
 
 -----
 
@@ -147,13 +147,13 @@ namespace Designer
 
 使用 Visual Studio 创建的 Mac 的 Xamarin.iOS 项目包括情节提要。 若要查看情节提要的内容，请双击中的.storyboard 文件**解决方案 Pad**:
 
-[![在 iOS 设计器中打开情节提要](introduction-images/7-storyboardopen-vsmac.png "iOS 设计器中打开情节提要")](introduction-images/7-storyboardopen-vsmac-large.png)
+[![在 iOS 设计器中打开情节提要](introduction-images/7-storyboardopen-vsmac.png "iOS 设计器中打开情节提要")](introduction-images/7-storyboardopen-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 使用 Visual Studio 2015 或自 2017 年 1 创建的大多数 Xamarin.iOS 项目包括情节提要。 若要查看情节提要的内容，请双击中的.storyboard 文件**解决方案资源管理器**:
 
-[![在 iOS 设计器中打开情节提要](introduction-images/7-storyboardopen-vs.png "iOS 设计器中打开情节提要")](introduction-images/7-storyboardopen-vs-large.png)
+[![在 iOS 设计器中打开情节提要](introduction-images/7-storyboardopen-vs.png "iOS 设计器中打开情节提要")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 
 -----
 
@@ -165,7 +165,7 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![设计器的 ios 部分](introduction-images/8-sixpartsofiosdesigner-vsmac.png "iOS 设计器的部分")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png)
+[![设计器的 ios 部分](introduction-images/8-sixpartsofiosdesigner-vsmac.png "iOS 设计器的部分")](introduction-images/8-sixpartsofiosdesigner-vsmac-large.png#lightbox)
 
 1. **设计图面**– iOS 设计器的主要工作区。 它显示在文档区域，使用户界面的直观地构建。
 2. **约束工具栏**– 允许编辑模式和约束编辑模式，两种不同方式来在用户界面中定位元素的帧之间切换。
@@ -176,7 +176,7 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![设计器的 ios 部分](introduction-images/8-sixpartsofiosdesigner-vs.png "iOS 设计器的部分")](introduction-images/8-sixpartsofiosdesigner-vs-large.png)
+[![设计器的 ios 部分](introduction-images/8-sixpartsofiosdesigner-vs.png "iOS 设计器的部分")](introduction-images/8-sixpartsofiosdesigner-vs-large.png#lightbox)
 
 1. **设计图面**– iOS 设计器的主要工作区。 它显示在文档区域，使用户界面的直观地构建。
 2. **约束工具栏**– 允许编辑模式和约束编辑模式，两种不同方式来在用户界面中定位元素的帧之间切换。
@@ -211,7 +211,7 @@ IOS 设计器具有六个主要部分：
 
 上下文菜单是设计图面上，在可用**文档大纲**。 此菜单提供了命令，为所选的控件和其父级，在使用中的嵌套层次结构视图时非常有用：
 
-[![在设计图面上的上下文菜单](introduction-images/10-contextmenudesignsurface-vsmac.png "设计图面上的上下文菜单")](introduction-images/10-contextmenudesignsurface-vsmac-large.png)
+[![在设计图面上的上下文菜单](introduction-images/10-contextmenudesignsurface-vsmac.png "设计图面上的上下文菜单")](introduction-images/10-contextmenudesignsurface-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -221,11 +221,11 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
  
-[![约束工具栏](introduction-images/11-constraintstoolbar-vsmac.png "约束工具栏")](introduction-images/11-constraintstoolbar-vsmac-large.png)
+[![约束工具栏](introduction-images/11-constraintstoolbar-vsmac.png "约束工具栏")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![约束工具栏](introduction-images/11-constraintstoolbar-vs.png "约束工具栏")](introduction-images/11-constraintstoolbar-vs-large.png)
+[![约束工具栏](introduction-images/11-constraintstoolbar-vs.png "约束工具栏")](introduction-images/11-constraintstoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -272,11 +272,11 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![底部工具栏上，用于选择的设备和方向设计图面的](introduction-images/13-bottomtoolbar-vsmac.png "底部工具栏上，用于选择设备和设计图面的的方向")](introduction-images/13-bottomtoolbar-vsmac-large.png)
+[![底部工具栏上，用于选择的设备和方向设计图面的](introduction-images/13-bottomtoolbar-vsmac.png "底部工具栏上，用于选择设备和设计图面的的方向")](introduction-images/13-bottomtoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![底部工具栏上，用于选择的设备和方向设计图面的](introduction-images/13-bottomtoolbar-vs.png "底部工具栏上，用于选择设备和设计图面的的方向")](introduction-images/13-bottomtoolbar-vs-large.png)
+[![底部工具栏上，用于选择的设备和方向设计图面的](introduction-images/13-bottomtoolbar-vs.png "底部工具栏上，用于选择设备和设计图面的的方向")](introduction-images/13-bottomtoolbar-vs-large.png#lightbox)
 
 -----
 
@@ -286,11 +286,11 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![底部工具栏上，展开以显示设备和方向](introduction-images/14-bottomtoolbarexpanded-vsmac.png "底部工具栏上，展开以显示设备和方向")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png)
+[![底部工具栏上，展开以显示设备和方向](introduction-images/14-bottomtoolbarexpanded-vsmac.png "底部工具栏上，展开以显示设备和方向")](introduction-images/14-bottomtoolbarexpanded-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![底部工具栏上，展开以显示设备和方向](introduction-images/14-bottomtoolbarexpanded-vs.png "底部工具栏上，展开以显示设备和方向")](introduction-images/14-bottomtoolbarexpanded-vs-large.png)
+[![底部工具栏上，展开以显示设备和方向](introduction-images/14-bottomtoolbarexpanded-vs.png "底部工具栏上，展开以显示设备和方向")](introduction-images/14-bottomtoolbarexpanded-vs-large.png#lightbox)
 
 -----
 
@@ -303,11 +303,11 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![正在改变接口大小类使用底部工具栏](introduction-images/15-edittraitsbutton-vsmac.png "底部工具栏上正由改变接口大小类")](introduction-images/15-edittraitsbutton-vsmac-large.png)
+[![正在改变接口大小类使用底部工具栏](introduction-images/15-edittraitsbutton-vsmac.png "底部工具栏上正由改变接口大小类")](introduction-images/15-edittraitsbutton-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![正在改变接口大小类使用底部工具栏](introduction-images/15-edittraitsbutton-vs.png "底部工具栏上正由改变接口大小类")](introduction-images/15-edittraitsbutton-vs-large.png)
+[![正在改变接口大小类使用底部工具栏](introduction-images/15-edittraitsbutton-vs.png "底部工具栏上正由改变接口大小类")](introduction-images/15-edittraitsbutton-vs-large.png#lightbox)
 
 -----
 
@@ -340,7 +340,7 @@ IOS 设计器具有六个主要部分：
 
 使用**属性填充**编辑标识、 视觉样式、 可访问性和控件行为。 下面的屏幕截图演示**属性填充**按钮的选项：
 
-[![按钮属性填充](introduction-images/17-buttonpropertiespad-vsmac.png "按钮的属性填充")](introduction-images/17-buttonpropertiespad-vsmac-large.png)
+[![按钮属性填充](introduction-images/17-buttonpropertiespad-vsmac.png "按钮的属性填充")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
 #### <a name="properties-pad-sections"></a>属性填充部分
 
 **属性填充**包含三个部分：
@@ -351,7 +351,7 @@ IOS 设计器具有六个主要部分：
 
 使用**属性窗口**编辑标识、 视觉样式、 可访问性和控件行为。 下面的屏幕截图演示**属性窗口**按钮的选项：
 
-[![属性窗口按钮](introduction-images/17-buttonpropertieswindow-vs.png "按钮的属性窗口")](introduction-images/17-buttonpropertieswindow-vs-large.png)
+[![属性窗口按钮](introduction-images/17-buttonpropertieswindow-vs.png "按钮的属性窗口")](introduction-images/17-buttonpropertieswindow-vs-large.png#lightbox)
 
 #### <a name="properties-window-sections"></a>属性窗口部分
 
@@ -369,9 +369,9 @@ IOS 设计器具有六个主要部分：
 
 可视化编辑设计图面上，除了 iOS 设计器还支持在编辑属性**属性填充**。 可用的属性更改基于所选的控件，如下面的屏幕截图所示：
 
-[![按钮属性](introduction-images/18a-buttonpropertiespad-vsmac.png "按钮属性")](introduction-images/18a-buttonpropertiespad-vsmac-large.png)
+[![按钮属性](introduction-images/18a-buttonpropertiespad-vsmac.png "按钮属性")](introduction-images/18a-buttonpropertiespad-vsmac-large.png#lightbox)
 
-[![查看控制器属性](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "查看控制器属性")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png)
+[![查看控制器属性](introduction-images/18b-viewcontrollerpropertiespad-vsmac.png "查看控制器属性")](introduction-images/18b-viewcontrollerpropertiespad-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -379,9 +379,9 @@ IOS 设计器具有六个主要部分：
 
 可视化编辑设计图面上，除了 iOS 设计器还支持在编辑属性**属性窗口**。 可用的属性更改基于所选的控件，如下面的屏幕截图所示：
 
-[![按钮属性](introduction-images/18a-buttonpropertieswindow-vs.png "按钮属性")](introduction-images/18a-buttonpropertieswindow-vs-large.png)
+[![按钮属性](introduction-images/18a-buttonpropertieswindow-vs.png "按钮属性")](introduction-images/18a-buttonpropertieswindow-vs-large.png#lightbox)
 
-[![查看控制器属性](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "查看控制器属性")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png)
+[![查看控制器属性](introduction-images/18b-viewcontrollerpropertieswindow-vs.png "查看控制器属性")](introduction-images/18b-viewcontrollerpropertieswindow-vs-large.png#lightbox)
 
 -----
 
@@ -406,13 +406,13 @@ IOS 设计器具有六个主要部分：
 
 若要指定自定义事件处理程序的各种事件，请使用**事件**选项卡**属性填充**。 例如，在下面的屏幕截图`HandleClick`方法可处理按钮的**Touch 内**事件：
 
-[![属性填充，与为按钮设置一个事件处理程序](introduction-images/19-buttonpropertiespadevents-vsmac.png "属性填充，与为按钮设置一个事件处理程序")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png)
+[![属性填充，与为按钮设置一个事件处理程序](introduction-images/19-buttonpropertiespadevents-vsmac.png "属性填充，与为按钮设置一个事件处理程序")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 若要指定自定义事件处理程序的各种事件，请使用**事件**选项卡**属性窗口**。 例如，在下面的屏幕截图`HandleClick`方法可处理按钮的**Touch 内**事件：
 
-[![属性窗口与按钮设置一个事件处理程序](introduction-images/19-buttonpropertieswindowevents-vs.png "属性窗口中，并为一个按钮设置事件处理程序")](introduction-images/19-buttonpropertieswindowevents-vs-large.png)
+[![属性窗口与按钮设置一个事件处理程序](introduction-images/19-buttonpropertieswindowevents-vs.png "属性窗口中，并为一个按钮设置事件处理程序")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
@@ -420,13 +420,13 @@ IOS 设计器具有六个主要部分：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![无法识别的选择器异常](introduction-images/20-unrecognizedselector-vsmac.png "无法识别的选择器异常")](introduction-images/20-unrecognizedselector-vsmac-large.png)
+[![无法识别的选择器异常](introduction-images/20-unrecognizedselector-vsmac.png "无法识别的选择器异常")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
 请注意，事件处理程序之后已在中指定**属性填充**，iOS 设计器将立即打开相应的代码文件，并提供要插入方法声明。 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![无法识别的选择器异常](introduction-images/20-unrecognizedselector-vs.png "无法识别的选择器异常")](introduction-images/20-unrecognizedselector-vs-large.png)
+[![无法识别的选择器异常](introduction-images/20-unrecognizedselector-vs.png "无法识别的选择器异常")](introduction-images/20-unrecognizedselector-vs-large.png#lightbox)
 
 -----
 
@@ -438,11 +438,11 @@ IOS 设计器还可以以大纲显示控件的接口的层次的结构。 大纲
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![文档大纲](introduction-images/21-buttonoutlineview-vsmac.png "文档大纲")](introduction-images/21-buttonoutlineview-vsmac-large.png)
+[![文档大纲](introduction-images/21-buttonoutlineview-vsmac.png "文档大纲")](introduction-images/21-buttonoutlineview-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![文档大纲](introduction-images/21-buttonoutlineview-vs.png "文档大纲")](introduction-images/21-buttonoutlineview-vs-large.png)
+[![文档大纲](introduction-images/21-buttonoutlineview-vs.png "文档大纲")](introduction-images/21-buttonoutlineview-vs-large.png#lightbox)
 
 -----
 
@@ -454,7 +454,7 @@ IOS 设计器还可以以大纲显示控件的接口的层次的结构。 大纲
 
 它是可以互换使用 iOS 设计器和 Xcode 接口生成器。 若要在 Xcode 接口生成器中打开情节提要或.xib 文件，右键单击该文件并选择**打开 > Xcode 接口生成器**，如下面的屏幕截图所示：
 
-[![在 Xcode 接口生成器中打开情节提要](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "在 Xcode 接口生成器中打开情节提要")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png)
+[![在 Xcode 接口生成器中打开情节提要](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "在 Xcode 接口生成器中打开情节提要")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
 
 在 Xcode 接口生成器中进行编辑后, 保存该文件，并返回到 Visual Studio for mac。 所做的更改将同步到 Xamarin.iOS 项目。
 

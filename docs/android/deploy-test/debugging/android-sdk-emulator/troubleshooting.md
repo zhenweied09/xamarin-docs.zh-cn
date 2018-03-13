@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 51cc7a4700e8cb3ece556b0ada841d70d5f2bb8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 486df3bbee3f8af511140e2d287f9f95571c7b3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-sdk-emulator-troubleshooting"></a>Android SDK 仿真器故障排除
 
@@ -83,7 +83,7 @@ SERVICE_NAME: intelhaxm
 
 如果不希望看到性能警告，可将其禁用。 在 Visual Studio 中，依次单击“工具”>“选项”>“Xamarin”>“Android 设置”然后禁用“如果不支持 AVD 加速(HAXM)，则发出警告”选项：
 
-[![禁用 AVD 加速警告](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png)
+[![禁用 AVD 加速警告](troubleshooting-images/win/06-disable-perf-warnings-sml.png)](troubleshooting-images/win/06-disable-perf-warnings.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -110,13 +110,11 @@ SERVICE_NAME: intelhaxm
 
 -----
 
-<a name="solutions" />
 
 ## <a name="solutions-to-common-problems"></a>常见问题解决方案
 
 通过对计算机进行配置更改或安装其他软件，可解决许多常见的 Android SDK 仿真器问题。 以下各部分介绍这些问题并提供解决方案。
 
-<a name="deployment" />
 
 ### <a name="deployment-issues"></a>部署问题
 
@@ -142,7 +140,6 @@ SERVICE_NAME: intelhaxm
 5. 如果仿真器不在此列表中，请启动“Android SDK 管理器”，应用所有更新，再尝试重启仿真器。
 
 
-<a name="haxm-issues" />
 
 ### <a name="haxm-issues"></a>HAXM 问题
 
@@ -162,7 +159,6 @@ HAXM 可能与其他使用虚拟化的技术（如 Hyper-V、Windows Device Guar
 
 - **防病毒软件** &ndash; 如果运行的防病毒软件（如 Avast）使用硬件协助虚拟化，请禁用或卸载此软件，再重启并重试运行 Android SDK 仿真器。
 
-<a name="bios" />
 
 #### <a name="incorrect-bios-settings"></a>BIOS 设置不正确
 

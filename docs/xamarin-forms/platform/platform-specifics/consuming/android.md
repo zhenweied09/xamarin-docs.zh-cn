@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: e26fcb81bb99e5a49d16731777171b4efa4163c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-specifics"></a>Android 平台的详细信息
 
@@ -54,7 +54,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 结果为软键盘输入的输入的控件具有焦点时，可以设置运行模式的区域：
 
-[![](android-images/pan-resize.png "运行模式平台特有的软键盘")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "运行模式平台特有的软键盘")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -98,7 +98,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 结果是通过中的数据该快速滚动[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)可以启用、 其更改滚动块的大小：
 
-[![](android-images/fastscroll.png "ListView FastScroll 特定于平台的")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll 特定于平台的")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -244,7 +244,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 结果是， [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/)和[ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/)和页面事件不会在应用程序暂停激发事件并分别恢复，如果软键盘已显示时应用程序已暂停，它也会显示应用程序恢复时：
 
-[![](android-images/keyboard-on-resume.png "生命周期事件特定于平台的")](android-images/keyboard-on-resume-large.png "生命周期事件特定于平台的")
+[![](android-images/keyboard-on-resume.png "生命周期事件特定于平台的")](android-images/keyboard-on-resume-large.png#lightbox "生命周期事件特定于平台的")
 
 ## <a name="summary"></a>摘要
 

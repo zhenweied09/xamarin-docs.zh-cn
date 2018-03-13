@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 2acaef5fd42b867e88fb9b81d401ea752480124a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 81d4aec3153a4cb7bbb0f3577c5a67acd430f279
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-performance"></a>ListView 性能
 
@@ -45,7 +45,7 @@ public enum ListViewCachingStrategy
 ```
 
 > [!NOTE]
-> **请注意**: 通用 Windows 平台 (UWP) 将忽略[ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/)缓存策略，因为它始终使用缓存来提高性能。 因此，默认情况下其行为就像[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)应用缓存策略。
+> 通用 Windows 平台 (UWP) 将忽略[ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/)缓存策略，因为它始终使用缓存来提高性能。 因此，默认情况下其行为就像[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)应用缓存策略。
 
 ### <a name="retainelement"></a>RetainElement
 
@@ -101,14 +101,14 @@ public class CustomCell : ViewCell
 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)选择[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)、 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略不会缓存`DataTemplate`s。 相反，`DataTemplate`选择列表中的数据的每个数据项。
 
 > [!NOTE]
-> **请注意**: [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略具有先决条件，Xamarin.Forms 2.4 中引入，当[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)需要选择[ `DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)每个`DataTemplate`必须返回相同[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)类型。 例如，给定[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)与`DataTemplateSelector`，可以返回`MyDataTemplateA`(其中`MyDataTemplateA`返回`ViewCell`类型的`MyViewCellA`)，或`MyDataTemplateB`(其中`MyDataTemplateB`返回`ViewCell`类型的`MyViewCellB`)，当`MyDataTemplateA`返回它必须返回`MyViewCellA`，否则将引发异常。
+> [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略具有先决条件，Xamarin.Forms 2.4 中引入，当[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)需要选择[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)每个`DataTemplate`必须返回相同[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)类型。 例如，给定[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)与`DataTemplateSelector`，可以返回`MyDataTemplateA`(其中`MyDataTemplateA`返回`ViewCell`类型的`MyViewCellA`)，或`MyDataTemplateB`(其中`MyDataTemplateB`返回`ViewCell`类型的`MyViewCellB`)，当`MyDataTemplateA`返回它必须返回`MyViewCellA`，否则将引发异常。
 
 ### <a name="recycleelementanddatatemplate"></a>RecycleElementAndDataTemplate
 
 [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/)缓存策略上生成[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)通过此外确保当缓存策略[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[`DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)选择[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)， `DataTemplate`s 缓存的列表中项的类型。 因此， `DataTemplate`s 每个项类型，而不是每个项实例一次选择一次。
 
 > [!NOTE]
-> **请注意**: [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/)缓存策略具有先决条件， `DataTemplate`s 返回[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)必须使用[ `DataTemplate`](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/)构造函数采用`Type`。
+> [ `RecycleElementAndDataTemplate` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElementAndDataTemplate/)缓存策略具有先决条件， `DataTemplate`s 返回[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)必须使用[ `DataTemplate` ](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/)构造函数采用`Type`。
 
 ### <a name="setting-the-caching-strategy"></a>设置缓存策略
 

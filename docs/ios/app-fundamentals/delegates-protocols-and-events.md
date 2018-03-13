@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5df7c2bbc7be1089795c94b6f639bd4556b49366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="events-protocols-and-delegates"></a>事件、 协议和委托
 
@@ -32,7 +32,7 @@ Xamarin.iOS 使用控件公开大多数用户交互的事件。
 
 为了说明协议和委托，我们将构建的简单的映射应用程序向映射添加批注，如下所示：
 
- [ ![](delegates-protocols-and-events-images/01-map.png "向映射添加批注一个简单的映射应用程序的示例")](delegates-protocols-and-events-images/01-map.png) [ ![ ](delegates-protocols-and-events-images/04-annotation-with-callout.png "示例批注添加到图")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/01-map.png "向映射添加批注一个简单的映射应用程序的示例")](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ](delegates-protocols-and-events-images/04-annotation-with-callout.png "示例批注添加到图")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 有关此应用程序之前, 让我们开始吧看下 UIKit.NET 事件。
 
@@ -59,15 +59,15 @@ aButton.TouchUpInside += delegate {
 
 前面的代码是有线连接上 UIViewContoller 的 ViewDidLoad 方法中。 AButton 变量引用一个按钮，可以添加 iOS 设计器中或使用代码。 下图显示了该按钮，因为在 iOS 设计器中，来自附带本文的示例中添加：
 
- [ ![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "在 iOS 设计器中添加按钮")](delegates-protocols-and-events-images/02-interface-builder-outlet.png)
+ [![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "在 iOS 设计器中添加按钮")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 Xamarin.iOS 还支持连接到发生与控件交互的代码的目标操作样式。 若要创建用于 Hello 按钮的目标操作，双击它在 iOS 设计器中。 将显示 UIViewController 的代码隐藏文件，并且开发人员将需要选择一个位置来插入连接的方法：
 
- [ ![](delegates-protocols-and-events-images/03-interface-builder-action.png "UIViewControllers 代码隐藏文件")](delegates-protocols-and-events-images/03-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/03-interface-builder-action.png "UIViewControllers 代码隐藏文件")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 选择位置后，新的方法是创建和有线向上到控件。 在下面的示例中，将消息写入到控制台这是单击该按钮：
 
- [ ![](delegates-protocols-and-events-images/05-interface-builder-action.png "单击该按钮时，将向控制台写入一条消息")](delegates-protocols-and-events-images/05-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/05-interface-builder-action.png "单击该按钮时，将向控制台写入一条消息")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 有关 iOS 目标操作模式的更多详细信息，请参阅的目标操作部分"[适用于 iOS 的核心应用程序能力](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)"在 Apple 的 iOS 开发人员库中。
 
@@ -170,7 +170,7 @@ Apple 使用整个 iOS 协议定义协定的类采用，而抽象化从调用方
 
 这种方式，`MKAnnotation`协议用于提供附带批注的相关数据。 从中采用的对象的数据生成本身的批注的实际视图`MKAnnotation`协议。 例如，当用户点击在批注上 （如下面的屏幕截图中所示） 时出现的标注的文本来自`Title`的类中实现协议的属性：
 
- [ ![](delegates-protocols-and-events-images/04-annotation-with-callout.png "当用户点击在批注上的标注的示例文本")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "当用户点击在批注上的标注的示例文本")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 在下一步的部分中，协议深入了解，所述 Xamarin.iOS 会将协议绑定到抽象类。 有关`MKAnnotation`协议，名为绑定的 C# 类`MKAnnotation`以模拟该协议，和它的名称为的一个子类`NSObject`，CocoaTouch 根基类。 协议要求 getter 和 setter 的坐标; 实现但是，标题和副标题是可选的。 因此，在`MKAnnotation`类，`Coordinate`属性是*抽象*，要求在实现和`Title`和`Subtitle`属性标记*虚拟*使其可选的如下所示：
 

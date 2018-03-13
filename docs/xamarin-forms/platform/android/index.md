@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Android 平台功能
 
@@ -28,14 +28,14 @@ Xamarin.Forms 还具有可选`FormsAppCompatActivity`使用**AppCompat**由 Andr
 
 下面是**Todo**示例使用默认`FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Todo 示例应用程序而无需 AppCompat")](images/before-appcompat.png "没有 AppCompat Todo 示例应用程序")
+[![](images/before-appcompat-sml.png "Todo 示例应用程序而无需 AppCompat")](images/before-appcompat.png#lightbox "没有 AppCompat Todo 示例应用程序")
 
 这在升级项目以使用后是相同的代码和`FormsAppCompatActivity`（和添加其他主题的信息）：
 
-[ ![](images/post-appcompat-sml.png "Todo 示例应用程序使用 AppCompat 和主题")](images/post-appcompat.png "Todo 示例应用程序使用 AppCompat 和主题")
+[![](images/post-appcompat-sml.png "Todo 示例应用程序使用 AppCompat 和主题")](images/post-appcompat.png#lightbox "Todo 示例应用程序使用 AppCompat 和主题")
 
 > [!NOTE]
-> **请注意**： 使用时`FormsAppCompatActivity`、[某些 Android 自定义呈现器的基本类](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)都有所不同。
+> 使用时`FormsAppCompatActivity`、[某些 Android 自定义呈现器的基本类](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)都有所不同。
 
 
 ## <a name="related-links"></a>相关链接

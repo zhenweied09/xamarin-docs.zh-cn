@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 7bab512ef11f8e0f553a00f0240d82f860fe2676
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 461430ba27b5d6008338019e5feaebed7b09d4cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="margin-and-padding"></a>边距和填充
 
@@ -27,7 +27,7 @@ _边距和填充属性控制布局时的行为元素呈现用户界面中。这�
 
 下图阐释了这两个概念：
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "边距和填充概念")](margin-and-padding-images/margins-and-padding.png "边距和填充概念")
+[![](margin-and-padding-images/margins-and-padding-sml.png "边距和填充概念")](margin-and-padding-images/margins-and-padding.png#lightbox "边距和填充概念")
 
 请注意， [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)值相加。 因此，如果两个相邻元素指定边距为 20 像素，元素之间的距离将是 40 个像素。 此外，边距和填充是累加式的同时应用时，即元素与任何内容之间的距离将是边距和填充。
 
@@ -63,7 +63,7 @@ var stackLayout = new StackLayout {
 ```
 
 > [!NOTE]
-> **请注意**:`Thickness`值可以是负数，这通常裁剪或拉伸过度内容。
+> `Thickness` 通常裁剪或拉伸过度内容，值可以是负数。
 
 ## <a name="summary"></a>摘要
 

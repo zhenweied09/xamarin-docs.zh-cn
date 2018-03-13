@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: ac4644f65486d70fcbb7da1a03574fb238348313
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="target-framework"></a>目标 Framework
 
@@ -40,13 +40,13 @@ _本文介绍如何为 Xamarin.Mac，可用的目标框架 （基类库） 以�
 
 若要更改到 Xamarin.Mac 项目的目标框架类型，请执行以下操作：
 
-1. Xamarin.Mac 项目在 Visual Studio 中打开的 mac。
-2. 在**解决方案资源管理器**，双击要打开的项目文件**项目选项**对话框。
+1. 在 Visual Studio for Mac 中打开 Xamarin.Mac 项目。
+2. 在“解决方案资源管理器”中，双击项目文件打开“项目选项”对话框。
 3. 从**常规**选项卡上，选择的一种**目标框架**适合应用程序的需求：
 
-  [![使用项目选项窗口选择的目标框架](target-framework-images/select-target-full.png "使用项目选项窗口选择的目标框架")](target-framework-images/select-target-full-large.png)
+  [![使用项目选项窗口选择的目标框架](target-framework-images/select-target-full.png "使用项目选项窗口选择的目标框架")](target-framework-images/select-target-full-large.png#lightbox)
 
-4. 单击**确定**按钮以保存所做的更改。
+4. 单击“确定”按钮保存更改。
 
 你应**清理**然后**重新生成**Xamarin.Mac 项目后切换目标 Framework 类型。
 

@@ -3,16 +3,16 @@ title: ".xib 文件"
 description: "本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamarin.Mac 应用程序的用户界面中创建的.xib 文件的工作。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xib-files"></a>.xib 文件
 
@@ -23,27 +23,27 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 ## <a name="overview"></a>概述
 
-在使用 C# 和.NET Xamarin.Mac 应用程序中，有权访问相同的用户界面元素和工具的开发人员*Objective-C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
+在使用 C# 和.NET Xamarin.Mac 应用程序中，有权访问相同的用户界面元素和工具的开发人员*Objective C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
 
 .Xib 文件是 macOS 用于在 Xcode 的接口生成器中以图形方式定义应用程序的用户界面元素 （如菜单、 Windows、 视图、 标签、 文本字段中） 创建和维护。
 
-[![正在运行的应用程序示例](xib-images/intro01.png "正在运行的应用程序示例")](xib-images/intro01-large.png)
+[![正在运行的应用程序示例](xib-images/intro01.png "正在运行的应用程序示例")](xib-images/intro01-large.png#lightbox)
 
 在本文中，我们将介绍使用 Xamarin.Mac 应用程序中的.xib 文件的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章首先，因为它涉及关键概念以及我们将在本文中使用的技术。
 
-你可能想要看一看[公开 C# 类 / Objective-C 的方法](~/mac/internals/how-it-works.md)部分[Xamarin.Mac 内部](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`属性用于连接你的 C# 类 Objective-C 的对象和 UI 元素。
+你可能想要看一看[公开 C# 类 / Objective C 的方法](~/mac/internals/how-it-works.md)部分[Xamarin.Mac 内部](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`属性用于连接你的 C# 类 OBJECTIVE-C 的对象和 UI 元素。
 
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 和 Interface Builder 简介
 
-作为 Xcode 的一部分，Apple 已创建一个名为接口生成器中，可用于在设计器中以可视方式创建你的用户界面工具。 与接口生成器，使你可以使用 Objective-C 的用户执行的相同工具创建你的 UI，Xamarin.Mac fluently 集成。
+作为 Xcode 的一部分，Apple 已创建一个名为接口生成器中，可用于在设计器中以可视方式创建你的用户界面工具。 与接口生成器，使你可以使用 OBJECTIVE-C 的用户执行的相同工具创建你的 UI，Xamarin.Mac fluently 集成。
 
 
 ### <a name="components-of-xcode"></a>Xcode 组件
 
 当您从Visual Studio for Mac在Xcode中打开.xib文件时，它将在左侧打开一个 **Project Navigator**，中间的 **Interface Hierarchy** 和 **Interface Editor** 以及右侧的 **Properties＆Utilities** 部分：
 
-[![Xcode UI 中的各组成部分](xib-images/xcode03.png "Xcode UI 的组件")](xib-images/xcode03-large.png)
+[![Xcode UI 中的各组成部分](xib-images/xcode03.png "Xcode UI 的组件")](xib-images/xcode03-large.png#lightbox)
 
 让我们了解在每个 Xcode 部分功能以及如何将使用它们创建界面 Xamarin.Mac 应用程序。
 
@@ -75,7 +75,7 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 “属性”部分内具有 8 个不同的检查器选项卡，如下所示：
 
-[![所有检查器概述](xib-images/xcode05.png "的所有检查器概述")](xib-images/xcode05-large.png)
+[![所有检查器概述](xib-images/xcode05.png "的所有检查器概述")](xib-images/xcode05-large.png#lightbox)
 
 由左至右，这些选项卡依次为：
 
@@ -123,17 +123,17 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 10. 在**解决方案 Pad**，双击**Info.plist**文件以打开进行编辑。
 11. 选择`MainMenu`从**主界面**下拉列表中：
 
-    [![设置主菜单](xib-images/setup05.png "设置主菜单")](xib-images/setup05-large.png)
+    [![设置主菜单](xib-images/setup05.png "设置主菜单")](xib-images/setup05-large.png#lightbox)
 12. 在**解决方案 Pad**，双击**MainMenu.xib**文件以打开它以在 Xcode 的接口生成器中编辑。
 13. 在**库检查器**，类型`object`搜索字段中将一个新**对象**拖到设计图面：
 
-    [![编辑主菜单](xib-images/setup06.png "编辑主菜单")](xib-images/setup06-large.png)
+    [![编辑主菜单](xib-images/setup06.png "编辑主菜单")](xib-images/setup06-large.png#lightbox)
 14. 在**标识检查器**，输入`AppDelegate`为**类**:
 
-    [![选择应用程序委托](xib-images/setup07.png "选择应用程序委托")](xib-images/setup07-large.png)
+    [![选择应用程序委托](xib-images/setup07.png "选择应用程序委托")](xib-images/setup07-large.png#lightbox)
 15. 选择**文件的所有者**从**接口层次结构**，切换到**连接检查器**拖动线条，将从委托到`AppDelegate` **对象**刚添加到项目：
 
-    [![连接应用程序委托](xib-images/setup08.png "连接应用程序委托")](xib-images/setup08-large.png)
+    [![连接应用程序委托](xib-images/setup08.png "连接应用程序委托")](xib-images/setup08-large.png#lightbox)
 16. 保存更改并返回到 Visual Studio for Mac。
 
 所有这些更改就地，编辑**AppDelegate.cs**文件并使其如下所示：
@@ -168,13 +168,13 @@ namespace MacXib
 }
 ```
 
-现在在.xib 中定义应用程序的主窗口 (OS **X*- **我**接口**B**uilder) 添加一个窗口时，会自动包括在项目中的文件控制器。 若要编辑您的 windows 设计、 在**解决方案 Pad**，双击**MainWindow.xib**文件：
+现在在中定义应用程序的主窗口**.xib**添加窗口控制器时，会自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案 Pad**，双击**MainWindow.xib**文件：
 
 ![选择 MainWindow.xib 文件](xib-images/edit01.png "选择 MainWindow.xib 文件")
 
 这将在 Xcode 的接口生成器中打开的窗口设计：
 
-[![编辑 MainWindow.xib](xib-images/edit02.png "编辑 MainWindow.xib")](xib-images/edit02-large.png)
+[![编辑 MainWindow.xib](xib-images/edit02.png "编辑 MainWindow.xib")](xib-images/edit02-large.png#lightbox)
 
 
 ### <a name="standard-window-workflow"></a>标准窗口工作流
@@ -205,22 +205,22 @@ namespace MacXib
 
 1. 在 Xcode 中，从“库”部分拖动“Push Button”：
 
-    [![从库中选择按钮](xib-images/xcode07.png "从库中选择按钮")](xib-images/xcode07-large.png)
+    [![从库中选择按钮](xib-images/xcode07.png "从库中选择按钮")](xib-images/xcode07-large.png#lightbox)
 2. 删除按钮拖动到**窗口**中**界面编辑器**:
 
-    [![向窗口中添加一个按钮](xib-images/xcode08.png "到窗口中添加按钮")](xib-images/xcode08-large.png)
+    [![向窗口中添加一个按钮](xib-images/xcode08.png "到窗口中添加按钮")](xib-images/xcode08-large.png#lightbox)
 3. 单击“属性检查器”中的 **Title** 属性，将此按钮的标题更改为 `Click Me`：
 
     ![设置按钮的特性](xib-images/xcode09.png "设置按钮属性")
 4. 从“库”部分拖动“标签”：
 
-    [![在库中选择标签](xib-images/xcode10.png "在库中选择一个标签")](xib-images/xcode10-large.png)
+    [![在库中选择标签](xib-images/xcode10.png "在库中选择一个标签")](xib-images/xcode10-large.png#lightbox)
 5. 将此标签拖放到“界面编辑器”中此按钮旁的“窗口”中：
 
-    [![将标签添加到窗口](xib-images/xcode11.png "向窗口中添加标签")](xib-images/xcode11-large.png)
+    [![将标签添加到窗口](xib-images/xcode11.png "向窗口中添加标签")](xib-images/xcode11-large.png#lightbox)
 6. 按住此标签上的右控点，将其拖动至靠近窗口边缘的位置：
 
-    [![调整大小标签](xib-images/xcode12.png "调整大小标签")](xib-images/xcode12-large.png)
+    [![调整大小标签](xib-images/xcode12.png "调整大小标签")](xib-images/xcode12-large.png#lightbox)
 7. 仍在中选择的标签**界面编辑器**，切换到**大小检查器**:
 
     ![选择大小检查器](xib-images/xcode13.png "选择大小检查器")
@@ -256,7 +256,7 @@ namespace MacXib
 2. 选择`NSWindowController`在设计图面中。
 3. 切换到**标识检查器**查看，并输入`WindowController`作为**类名**:
 
-    [![编辑的类名称](xib-images/windowcontroller01.png "编辑的类名称")](xib-images/windowcontroller01-large.png)
+    [![编辑的类名称](xib-images/windowcontroller01.png "编辑的类名称")](xib-images/windowcontroller01-large.png#lightbox)
 4. 保存所做的更改并返回到 Visual Studio for Mac 同步。
 5. 一个 **WindowController.cs** 文件将被添加到Visual Studio for Mac中 **解决方案板** 中的项目中：
 
@@ -264,7 +264,7 @@ namespace MacXib
 6. 重新打开在 Xcode 的接口生成器情节提要。
 7. **WindowController.h**文件将可供使用：
 
-    [![在 Xcode 中匹配的.h 文件](xib-images/windowcontroller03.png "在 Xcode 中匹配的.h 文件")](xib-images/windowcontroller03-large.png)
+    [![在 Xcode 中匹配的.h 文件](xib-images/windowcontroller03.png "在 Xcode 中匹配的.h 文件")](xib-images/windowcontroller03-large.png#lightbox)
 
 
 ### <a name="outlets-and-actions"></a>容器和操作
@@ -276,9 +276,9 @@ namespace MacXib
 
 在 Xcode 中，容器和操作添加在通过的代码中直接*控件拖动*。 更具体地说，这意味着，若要创建 outlet 或操作的你选择你想要添加电源插座或操作，请按住的控件元素**控件**按钮在键盘上，并将该控件拖到你的代码的直接。
 
-对于 Xamarin.Mac 开发人员而言，这意味着，你将拖动到对应的 Objective-C 的存根 （stub） 文件到想要创建 outlet 或操作的 C# 文件。 Visual Studio for Mac创建了一个名为 **MainWindow.h** 的文件，作为使用Interface Builder生成的Shim Xcode项目的一部分：
+对于 Xamarin.Mac 开发人员而言，这意味着，你将拖动到对应的 OBJECTIVE-C 的存根 （stub） 文件到想要创建 outlet 或操作的 C# 文件。 Visual Studio for Mac创建了一个名为 **MainWindow.h** 的文件，作为使用Interface Builder生成的Shim Xcode项目的一部分：
 
-[![在 Xcode 中的.h 文件的示例](xib-images/xcode16.png "在 Xcode 中的.h 文件的示例")](xib-images/xcode16-large.png)
+[![在 Xcode 中的.h 文件的示例](xib-images/xcode16.png "在 Xcode 中的.h 文件的示例")](xib-images/xcode16-large.png#lightbox)
 
 此存根 （stub）.h 文件镜像**MainWindow.designer.cs** ，它将自动添加到新的 Xamarin.Mac 项目`NSWindow`创建。 此文件可用于同步接口生成器所做的更改，且将在其中我们创建你的容器和操作，以便 UI 元素公开给 C# 代码。
 
@@ -291,22 +291,22 @@ namespace MacXib
 
 1. 在 Xcode 中屏幕右上角，单击“双圆”按钮，打开“助手编辑器”：
 
-    [![选择助手编辑器中](xib-images/outlet01.png "选择助手编辑器")](xib-images/outlet01-large.png)
+    [![选择助手编辑器中](xib-images/outlet01.png "选择助手编辑器")](xib-images/outlet01-large.png#lightbox)
 2. 此时 Xcode 会切换为拆分视图模式，“界面编辑器”位于一边，“代码编辑器”位于另一边。
 3. 请注意，已自动选取 Xcode **MainWindowController.m**文件中**代码编辑器**，这是不正确。 如果你从上插座和操作哪些上面我们讨论请记住，我们需要将**MainWindow.h**选。
 4. 在顶部**代码编辑器**单击**自动链接**和选择**MainWindow.h**文件：
 
-    [![选择正确的.h 文件](xib-images/outlet02.png "选择正确的.h 文件")](xib-images/outlet02-large.png)
+    [![选择正确的.h 文件](xib-images/outlet02.png "选择正确的.h 文件")](xib-images/outlet02-large.png#lightbox)
 5. 此时 Xcode 应选择了正确的文件：
 
-    [![选择的正确文件](xib-images/outlet03.png "选择正确的文件")](xib-images/outlet03-large.png)
+    [![选择的正确文件](xib-images/outlet03.png "选择正确的文件")](xib-images/outlet03-large.png#lightbox)
 6. **最后一步非常重要！** 如果你没有选择正确的文件，你将无法创建的容器和操作也会公开给 C# 中的错误类 ！
 7. 在**界面编辑器**，按住**控件**键键盘上，单击并拖动到代码编辑器上面创建的标签正下方`@interface MainWindow : NSWindow { }`代码：
 
-    [![拖动来创建一个新插座](xib-images/outlet04.png "拖动来创建一个新插座")](xib-images/outlet04-large.png)
+    [![拖动来创建一个新插座](xib-images/outlet04.png "拖动来创建一个新插座")](xib-images/outlet04-large.png#lightbox)
 8. 会显示一个对话框。 保留**连接**将设置到插座并输入`ClickedLabel`为**名称**:
 
-    [![设置电源插座属性](xib-images/outlet05.png "设置 Outlet 属性")](xib-images/outlet05-large.png)
+    [![设置电源插座属性](xib-images/outlet05.png "设置 Outlet 属性")](xib-images/outlet05-large.png#lightbox)
 9. 单击**连接**按钮以创建 outlet:
 
     ![已完成的 Outlet](xib-images/outlet06.png "已完成的插座")
@@ -322,13 +322,13 @@ namespace MacXib
 1. 请确保我们仍位于**助手编辑器中**和**MainWindow.h**文件会显示在**代码编辑器**。
 2. 在**界面编辑器**，按住**控件**键键盘上，单击并拖动到代码编辑器上面创建的按钮正下方`@property (assign) IBOutlet NSTextField *ClickedLabel;`代码：
 
-    [![若要创建操作的拖动](xib-images/action01.png "拖动创建操作")](xib-images/action01-large.png)
+    [![若要创建操作的拖动](xib-images/action01.png "拖动创建操作")](xib-images/action01-large.png#lightbox)
 3. 更改**连接**类型设置为操作：
 
-    [![选择操作类型](xib-images/action02.png "选择操作类型")](xib-images/action02-large.png)
+    [![选择操作类型](xib-images/action02.png "选择操作类型")](xib-images/action02-large.png#lightbox)
 4. 输入 `ClickedButton` 作为**名称**：
 
-    [![配置操作](xib-images/action03.png "配置操作")](xib-images/action03-large.png)
+    [![配置操作](xib-images/action03.png "配置操作")](xib-images/action03-large.png#lightbox)
 5. 单击**连接**按钮以创建操作：
 
     ![已完成的操作](xib-images/action04.png "已完成的操作")
@@ -341,7 +341,7 @@ namespace MacXib
 
 与你创建的用户界面公开给通过插座和操作代码及其 UI 元素，你就可以编写代码以将你的程序融入生活。 例如，打开**了构成**文件进行编辑，通过双击它在**解决方案 Pad**:
 
-[![了构成文件](xib-images/code01.png "了构成文件")](xib-images/code01-large.png)
+[![了构成文件](xib-images/code01.png "了构成文件")](xib-images/code01-large.png#lightbox)
 
 并添加以下代码到`MainWindow`类以使用上述步骤中创建的示例插座：
 
@@ -407,7 +407,7 @@ void OpenDialog (NSObject sender)
 
 如果你选择**MainWindow.designer.cs**中**解决方案 Pad**你将能够看到如何我们 outlet，操作具有已有线了我们的 C# 代码中：
 
-[![使用 Xcode 同步更改](xib-images/sync01.png "与 Xcode 同步更改")](xib-images/sync01-large.png)
+[![使用 Xcode 同步更改](xib-images/sync01.png "与 Xcode 同步更改")](xib-images/sync01-large.png#lightbox)
 
 请注意如何在这两个定义**MainWindow.designer.cs**文件：
 
@@ -447,10 +447,10 @@ partial void ClickedButton (Foundation.NSObject sender);
 3. 对“名称”输入 `PreferencesWindow`，然后单击“新建”按钮。
 4. 双击**PreferencesWindow.xib**文件以打开它以在接口生成器中编辑：
 
-    [![编辑在 Xcode 中的窗口](xib-images/new02.png "编辑在 Xcode 中的窗口")](xib-images/new02-large.png)
+    [![编辑在 Xcode 中的窗口](xib-images/new02.png "编辑在 Xcode 中的窗口")](xib-images/new02-large.png#lightbox)
 5. 设计你的接口：
 
-    [![设计 windows 布局](xib-images/new03.png "设计窗口布局")](xib-images/new03-large.png)
+    [![设计 windows 布局](xib-images/new03.png "设计窗口布局")](xib-images/new03-large.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 以下代码添加到**AppDelegate.cs**以显示新窗口：
@@ -488,7 +488,7 @@ void ShowPreferences (NSObject sender)
 3. 对“名称”输入 `SubviewTable`，然后单击“新建”按钮。
 4. 双击**SubviewTable.xib**文件以打开以便进行接口生成器中编辑和设计用户界面：
 
-    [![设计在 Xcode 中的新视图](xib-images/view02.png "设计在 Xcode 中的新视图")](xib-images/view02-large.png)
+    [![设计在 Xcode 中的新视图](xib-images/view02.png "设计在 Xcode 中的新视图")](xib-images/view02-large.png#lightbox)
 5. 连接的任何所需的操作和 outlet。
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -529,7 +529,7 @@ public enum SubviewType
 
 编辑的窗口中将使用该视图并显示它的.xib 文件。 添加**自定义视图**作为容器的视图后加载到内存的 C# 代码和调用它到插座公开`ViewContainer`:
 
-[![创建所需的电源插座](xib-images/view03.png "创建所需的电源插座")](xib-images/view03-large.png)
+[![创建所需的电源插座](xib-images/view03.png "创建所需的电源插座")](xib-images/view03-large.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
@@ -577,7 +577,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 这将创建新视图的视图控制器，要显示的新实例，设置其类型 （按照指定的枚举添加到项目中） 并使用`DisplaySubview`方法添加到窗口的类，以实际显示的视图。 例如:
 
-[![运行示例应用程序](xib-images/view04.png "运行示例应用程序")](xib-images/view04-large.png)
+[![运行示例应用程序](xib-images/view04.png "运行示例应用程序")](xib-images/view04-large.png#lightbox)
 
 有关使用 Windows Xamarin.Mac 应用程序中的详细信息，请参阅我们[Windows](~/mac/user-interface/window.md)和[对话框](~/mac/user-interface/dialog.md)文档。
 
@@ -589,7 +589,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 ## <a name="related-links"></a>相关链接
 
-- [MacImages （示例）](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages（示例）](https://developer.xamarin.com/samples/mac/MacImages/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [菜单](~/mac/user-interface/menu.md)

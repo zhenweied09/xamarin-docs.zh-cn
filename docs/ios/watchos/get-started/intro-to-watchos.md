@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 简介
 
@@ -29,11 +29,11 @@ WatchOS 应用程序解决方案具有 3 个项目：
 
 在 watchOS 1 应用中，在扩展代码在 iPhone 上运行 – Apple Watch 实际上是外部显示。 watchOS 2 和 3 应用完全在 Apple Watch 上运行。 这种差异下图所示：
 
-[ ![](intro-to-watchos-images/arch-sml.png "此图显示了 watchOS 1 和 watchOS 2 （和更高版本） 之间的差异")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "此图显示了 watchOS 1 和 watchOS 2 （和更高版本） 之间的差异")](intro-to-watchos-images/arch.png#lightbox)
 
 无论 watchOS 哪个版本为目标，在 Visual Studio 中的 Mac 的解决方案板的完整解决方案将如下所示：
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "解决方案填充")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "解决方案填充")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 *父应用*在 watchOS 解决方案是正则 iOS 应用程序。 这是可见的解决方案中的唯一项目**手机上**。 此应用程序的使用情况下会包括教程、 管理屏幕和中间层筛选，cacheing，等等。但是，它是用户可以安装和运行而不监视应用程序/扩展**曾经**打开父应用程序，因此如果你需要对父应用针对一次性初始化或管理，运行需要进行编程你监视要告知用户的应用程序/扩展的。
 
@@ -139,4 +139,4 @@ Apple Watch 具有两种字体大小： 38 mm 和 42 mm，同时使用 5:4 显�
 - [第一个 Watch 应用视频](http://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple 的开发的监视包指南](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Apple 的 WatchKit 提示](https://developer.apple.com/watchkit/tips/)
-- [简介 watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)
+- [watchOS 3 简介](~/ios/watchos/platform/introduction-to-watchos3/index.md)

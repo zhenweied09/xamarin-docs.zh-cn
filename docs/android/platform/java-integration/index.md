@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Java 集成概述
 
 _Java 生态系统包括多样化和巨大的组件集合。许多这些组件可用来减少开发 Android 应用程序所花费的时间。本文档将介绍并提供了几种开发人员可以使用这些现有的 Java 组件来提高其 Xamarin.Android 应用程序开发体验的高级概述。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -41,7 +40,6 @@ _Java 生态系统包括多样化和巨大的组件集合。许多这些组件�
 第三个方法是通过从根本上不同于前面的两种： 移植对 C# 通过 Java 代码。 将代码移植从一种语言到另一个可能是一个非常费力的过程，但可以减少的工具的帮助的工作量称为*锐化*。 强化是开源工具，它是 Java-到-C# 转换器。 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>使用 iOS 设计器中的表
 
@@ -40,7 +40,7 @@ A`UITableView`内容通常用原型用于显示数据的列表其中原型单元
 
 StoryboardTable 示例包含的简单的主-从应用程序使用情节提要中的两种类型的 UITableView。 本部分的其余部分介绍如何构建完成后将如下所示的小待办事项列表示例：
 
- [ ![示例屏幕](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![示例屏幕](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 将用情节提要，生成用户界面，以及两个屏幕将使用 UITableView。 主屏幕使用*原型内容*到布局行和详细信息屏幕使用*静态内容*创建使用自定义单元格布局的数据输入窗体。
 
@@ -48,7 +48,7 @@ StoryboardTable 示例包含的简单的主-从应用程序使用情节提要中
 
 Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … > 单个视图 App(C#)**，并调用它_StoryboardTables_。
 
- [ ![创建新项目对话框](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![创建新项目对话框](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 解决方案将使用某些 C# 文件打开和`Main.storyboard`已创建的文件。 双击`Main.storyboard`文件以在 iOS 设计器中打开它。
 
@@ -75,24 +75,24 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 2.  拖动**导航控制器**和**表视图控制器**到从工具箱情节提要。 
 3.  从根视图控制器创建 segue，到第二个刚添加的表视图控制器。 若要创建 segue，控件 + 拖动*从详细信息单元*到新添加的 UITableViewController。 选择的选项**显示*** 下**Segue 选择**。 
 4.  选择新 segue 你创建并将其提供给此 segue 在代码中引用的标识符。 单击 segue 并输入`TaskSegue`为**标识符**中**属性填充**，如下所示：    
-  [ ![命名 segue 属性面板中](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![命名 segue 属性面板中](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. 接下来，配置两个表视图，通过选择它们并使用属性填充。 请务必选择视图，而不是视图控制器 – 你可以使用文档大纲来帮助进行选择。
 
 6.  更改根视图控制器成为**内容： 动态原型**(设计图面上的视图将标记为**原型内容**):
 
-    [ ![将内容属性设置为动态原型](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![将内容属性设置为动态原型](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  更改新**UITableViewController**要**内容： 静态单元格**。 
 
 
 8. 新 UITableViewController 必须具有其类名和设置的标识符。 选择的视图控制器和类型_TaskDetailViewController_为**类**中**属性填充**– 这将创建一个新`TaskDetailViewController.cs`解决方案中的文件填充。 输入**StoryboardID**作为_详细信息_，如在下面的示例所示。 这将在稍后用于加载此视图在 C# 代码：  
 
-    [ ![设置情节提要 ID。](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![设置情节提要 ID。](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. 情节提要设计图面现在应如下所示 （根视图控制器导航项标题已更改为"烦琐板"）：
 
-    [ ![设计图面](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![设计图面](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 
 首先，选择主视图控制器中的原型单元格并设置**标识符**作为_taskcell_，如下所示。 这将用于以后在代码中检索此 UITableViewCell 的实例：
 
- [ ![设置单元格标识符](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![设置单元格标识符](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 接下来，你将需要创建将添加新任务的按钮，如下所示：
 
-[ ![工具栏按钮导航栏中的项](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![工具栏按钮导航栏中的项](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 请执行以下操作： 
 
@@ -123,7 +123,7 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 
 详细信息视图需要很多工作。 表视图单元格需要拖放到视图，然后填充具有标签、 文本视图和按钮。 下面的屏幕截图显示了具有两个部分的完成的 UI。 一个部分包含三个单元格、 三个标签，两个文本字段和一个开关，而第二个部分具有一个具有两个按钮的单元格：
 
- [ ![详细信息视图布局](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![详细信息视图布局](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 若要生成完整的布局的步骤如下：
 
@@ -137,7 +137,7 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 选择顶部的部分并在列表视图**属性 > 表视图部分**更改**行**到_3_，如下所示：
 
 
- [ ![设置为包括三行的顶部](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![设置为包括三行的顶部](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 打开每个单元格**属性填充**和设置：
 
@@ -152,7 +152,7 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 -  **设置后台**:_清除颜色_。
 -  将两个按钮拖到单元格并相应地设置其标题 (即_保存_和_删除_)，如下所示：
 
-   [ ![下半部分中设置两个按钮](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![下半部分中设置两个按钮](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 此时你还可能想要在你的单元格和控件，以确保自适应布局上设置约束。
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 情节提要示例-完成的应用程序如下所示完成该操作：
 
-[ ![完成的应用程序](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![完成的应用程序](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 此示例演示：
 

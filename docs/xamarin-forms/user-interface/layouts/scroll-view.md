@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: c305075d37a25bfe828f16d4e69955437a591f9a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 包含布局和为用户提供了滚动屏幕外。 `ScrollView` 此外用于允许视图以显示键盘时自动移动到屏幕的可见部分。
 
-[ ![](scroll-view-images/layouts-sml.png "Xamarin.Forms 布局")](scroll-view-images/layouts.png "Xamarin.Forms 布局")
+[![](scroll-view-images/layouts-sml.png "Xamarin.Forms 布局")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 本文介绍：
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="usage"></a>用法
 
 > [!NOTE]
-> **请注意**: `ScrollView`s 不应进行嵌套。 此外， `ScrollView`s 应嵌套深度不能与 like 提供滚动，其他控件`ListView`和`WebView`。
+> `ScrollView`不应嵌套 s。 此外， `ScrollView`s 应嵌套深度不能与 like 提供滚动，其他控件`ListView`和`WebView`。
 
 `ScrollView` 公开`Content`属性可以设置为单一视图或布局。 请看以下示例的一种布局有非常大的字数后, 跟`Entry`:
 

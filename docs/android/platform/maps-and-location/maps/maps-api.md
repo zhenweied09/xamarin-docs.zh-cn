@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: eddd723c07919db4749c63c5b4f1d05e9be81022
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="maps-api"></a>地图 API
 
@@ -25,7 +25,6 @@ ms.lasthandoff: 02/27/2018
 现在已弃用 Google 地图 Android API v1，与 Google 地图 Android API v2 属于[Google Play 服务](http://developer.android.com/google/play-services/index.html)。
 因此，它是符合某些必需的必备项之前可以在 Xamarin.Android 应用程序中使用 Google 地图 Android API。
 
-<a name="Configuring_Maps_API_Prerequisites" />
 
 ## <a name="google-maps-api-prerequisites"></a>Google 映射 API 先决条件
 
@@ -37,7 +36,6 @@ ms.lasthandoff: 02/27/2018
 -  指定所需的权限
 
 
-<a name="Google_APIs_Add-On" />
 
 ### <a name="install-the-google-play-services-sdk"></a>安装 Google Play 服务 SDK
 
@@ -53,9 +51,8 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 ![Google Play 服务会出现在其他功能中 Android SDK 管理器下](maps-api-images/image01.png)
 
 > [!NOTE]
-> **注意：** APK 是许可的产品，可能不是 Google Play 服务呈现在所有设备上。 如果未安装，然后 Google 映射不会在该设备。
+> Google Play services APK 是不能出现在所有设备上的许可的产品。 如果未安装，然后 Google 映射不会在该设备。
 
-<a name="Binding_Google_Play_Services" />
 
 #### <a name="binding-google-play-services"></a>绑定 Google Play Services
 
@@ -68,7 +65,6 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 -  **手动将绑定的 Google Play 服务客户端库**-这是更复杂的方法，是 Xamarin.Android 4.4 或 Xamarin.Android 4.6 绑定 Google Play Services SDK 的唯一方法。
    手动绑定 Google Play 服务客户端库不在本文档的范围，但可能在中找到举例说明如何执行此操作[地图和位置演示 v3 示例](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3)Github 上。
 
-<a name="Adding_the_Google_Play_Services_Component" />
 
 #### <a name="adding-the-google-play-services-map-package"></a>添加 Google Play 服务映射包
 
@@ -78,7 +74,7 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 
 这将打开**NuGet 包管理器**。 单击**浏览**并输入**Xamarin Google Play 服务映射**搜索字段中。 选择**Xamarin.GooglePlayServices.Maps**单击**安装**。 (如果以前已安装此包，请单击**更新**。):
 
-[![与选择的 Xamarin.GooglePlayServices.Maps 包的 NuGet 包管理器](maps-api-images/image03-sml.png)](maps-api-images/image03.png)
+[![与选择的 Xamarin.GooglePlayServices.Maps 包的 NuGet 包管理器](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 请注意以下依赖项包还会安装：
 
@@ -87,7 +83,6 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 -   **Xamarin.GooglePlayServices.Tasks**
 
 
-<a name="Creating_an_Emulator_with_Google_APIs" />
 
 ### <a name="create-an-emulator-with-google-apis"></a>使用 Google Api 创建一个仿真程序
 
@@ -96,14 +91,12 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 ![使用 API 级别 19 为配置的 AVD android 模拟器管理器](maps-api-images/image04.png)
 
 
-<a name="apikey" />
 
 ### <a name="obtain-a-google-maps-api-key"></a>获取一个 Google 地图 API 密钥
 
 最后一步是获取 Google 地图 API 密钥 （请注意你无法重用从旧 Google 地图 v1 API 密钥）。 有关如何获取和 API 密钥用于 Xamarin.Android 的信息，请参阅[获取 Google 地图 API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)。
  
 
-<a name="Specify_Permissions" />
 
 ### <a name="specify-the-required-permissions"></a>指定所需的权限
 
@@ -167,7 +160,6 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 </manifest>
 ```
 
-<a name="The_GoogleMap" />
 
 ## <a name="the-googlemap-class"></a>GoogleMap 类
 
@@ -190,13 +182,12 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 
 每个这些容器公开`Map`返回的实例的属性`GoogleMap`。 首选项应授予给[MapFragment](http://developer.android.com/reference/com/google/android/gms/maps/MapFragment.html)类作为一种更简单的 API，减少了开发人员必须手动实现的量样板文件代码。
 
-<a name="Adding_GoogleMap_To_An_Activity" />
 
 ### <a name="adding-a-mapfragment-to-an-activity"></a>将 MapFragment 添加到活动
 
 下面的屏幕截图是一种非常简单`MapFragment`:
 
-[![显示的映射片段的设备的屏幕截图](maps-api-images/image05-sml.png)](maps-api-images/image05.png)
+[![显示的映射片段的设备的屏幕截图](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
 与其他片段类相似，有两种方法地将其添加`MapFragment`为活动：
 
@@ -255,7 +246,6 @@ public void OnMapReady (GoogleMap map)
 作为示例，了解如何使用此结果时`OnResume`是调用，它可以检查以查看是否`_map`为非 null。 如果`_map`设置为`GoogleMap`对象，`OnResume`可以对其添加标记并将其相机移到指定的经度和纬度调用方法。 有关完整的代码示例，请参阅[SimpleMapDemo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3/SimpleMapDemo)。
 
 
-<a name="Map_Types" />
 
 ### <a name="map-types"></a>映射类型
 
@@ -274,7 +264,7 @@ public void OnMapReady (GoogleMap map)
 
 下图显示三个不同类型的地图，从左到右 （正常、 混合，地形）：
 
-[![三个映射示例屏幕快照： Normal、 混合和地形](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png)
+[![三个映射示例屏幕快照： Normal、 混合和地形](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 `GoogleMap.MapType`属性用于设置或更改显示哪种类型的映射。 下面的代码段演示如何显示附属映射。
 
@@ -287,7 +277,6 @@ if (_map != null) {
 }
 ```
 
-<a name="GoogleMap_Properties" />
 
 ### <a name="googlemap-properties"></a>GoogleMap 属性
 
@@ -317,7 +306,6 @@ if (_map != null) {
 }
 ```
 
-<a name="Interacting_with_the_Map" />
 
 ## <a name="interacting-with-the-map"></a>与地图进行交互
 
@@ -363,9 +351,8 @@ if (_map != null) {
 
 在上面的代码段，在地图上的特定位置由[LatLng](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/LatLng)类。 缩放级别设置为 18。 影响是北部顺时针旋转的指南针测量。 倾斜属性控制的视角，并且指定从垂直角度为 25 度。 以下屏幕快照显示`GoogleMap`后执行前面的代码：
 
-[![显示指定的位置并且用倾斜映射示例 Google 视角。](maps-api-images/image06-sml.png)](maps-api-images/image06.png)
+[![显示指定的位置并且用倾斜映射示例 Google 视角。](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
-<a name="Adding_Overlays_to_a_Map" />
 
 ### <a name="drawing-on-the-map"></a>在地图上绘制
 
@@ -377,13 +364,11 @@ Android 的地图 API 提供 API 的绘制地图上的以下各项：
 
 -  **线条、 多边形和圆形**-这些是允许活动在向地图添加形状的 Api。
 
-<a name="markers" />
 
 #### <a name="markers"></a>标记
 
 地图 API 提供[标记](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker)类封装所有有关在地图上的单个位置的数据。 默认情况下，它们使用 Google 地图提供的标准图标。 很可能以自定义标记的外观并响应用户单击。
 
-<a name="AddingAMarker" />
 
 ##### <a name="adding-a-marker"></a>添加标记
 
@@ -403,9 +388,8 @@ if (_map != null) {
 
 标记的标题将显示在*信息窗口*当用户点击在标记上。 下面的屏幕截图显示了此标记的外观：
 
-[![将 Google 映射示例使用一个标记和 Vimy Ridge 信息窗口](maps-api-images/image07-sml.png)](maps-api-images/image07.png)
+[![将 Google 映射示例使用一个标记和 Vimy Ridge 信息窗口](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
-<a name="Customizing_A_Marker" />
 
 ##### <a name="customizing-a-marker"></a>自定义标记
 
@@ -437,7 +421,6 @@ if (_map != null)
 }
 ```
 
-<a name="Info_Windows" />
 
 #### <a name="info-windows"></a>信息 Windows
 
@@ -455,13 +438,11 @@ if (_map != null)
 
 ![墨尔本、 包括图标和填充的示例标记 windows。 右侧窗口具有圆角。](maps-api-images/marker-infowindows.png)
 
-<a name="Adding_an_overlay" />
 
 #### <a name="ground-overlays"></a>接地叠加
 
 与标记，用于标识在地图上的特定位置时，不同[GroundOverlay](http://developer.android.com/reference/com/google/android/gms/maps/model/GroundOverlay.html)是用于标识位置或在地图上的区域的集合的映像。
 
-<a name="AddingAGroundOverlay" />
 
 ##### <a name="adding-a-groundoverlay"></a>添加 GroundOverlay
 
@@ -477,9 +458,8 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 
 下面的屏幕截图显示地图上的此覆盖：
 
-[![使用北极熊均图像映射示例](maps-api-images/image09-sml.png)](maps-api-images/image09.png)
+[![使用北极熊均图像映射示例](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
-<a name="Lines_Circles_and_Polygons" />
 
 #### <a name="lines-circles-and-polygons"></a>线条、 圆形和多边形
 
@@ -492,7 +472,6 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 -  **圆**-这将在地图上绘制圆形。
 
 
-<a name="Polylines" />
 
 ##### <a name="polylines"></a>折线
 
@@ -508,7 +487,6 @@ rectOptions.Add(new LatLng(37.35, -122.0)); // close the polyline - this makes a
 myMap.AddPolyline(rectOptions);
 ```
 
-<a name="Polygons" />
 
 ##### <a name="polygons"></a>多边形
 
@@ -527,7 +505,6 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 myMap.AddPolygon(rectOptions);
 ```
 
-<a name="Circles" />
 
 ##### <a name="circles"></a>圆形
 
@@ -541,7 +518,6 @@ circleOptions.InvokeRadius (1000);
 _map.AddCircle (CircleOptions);
 ```
 
-<a name="RespondingToClicks" />
 
 ## <a name="responding-to-events"></a>对事件作出响应
 
@@ -555,7 +531,6 @@ _map.AddCircle (CircleOptions);
 
 将下面更详细地讨论每个事件。
 
-<a name="Marker_Click_Events" />
 
 ### <a name="marker-click-events"></a>单击事件标记
 
@@ -584,7 +559,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 }
 ```
 
-<a name="Marker_Drag_Events" />
 
 ### <a name="marker-drag-events"></a>标记拖动事件
 
@@ -602,7 +576,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 
 每个`EventArgs`包含名为的单个属性`P0`到引用`Marker`对象拖动到。
 
-<a name="Info_Window_Click_Events" />
 
 ### <a name="info-window-click-events"></a>信息窗口中单击事件
 

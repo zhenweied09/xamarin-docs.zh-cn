@@ -3,16 +3,16 @@ title: "iOS 游戏 Api"
 description: "本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形和音频功能提供的新游戏增强功能。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6c735c68ee61032d8dfe3a74e6858bc058c6fa47
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-gaming-apis"></a>iOS 游戏 Api
 
@@ -21,7 +21,7 @@ _本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形
 Apple 已在 iOS 9 中的 Api 游戏，它可以更轻松地在 Xamarin.iOS 应用程序中实现游戏图形和音频的多项技术改进。
 其中包括轻松地通过高级框架和借助的 iOS 设备的 GPU 提高的速度和图形功能强大的开发。
 
-[ ![](images/flocking01.png "下面举例说明运行群的应用程序")](images/flocking01.png)
+[![](images/flocking01.png "下面举例说明运行群的应用程序")](images/flocking01.png#lightbox)
 
 这包括 GameplayKit、 ReplayKit、 模型 I/O、 MetalKit 和金属性能着色器以及金属、 SceneKit 和 SpriteKit 的新的增强功能。
 
@@ -56,7 +56,7 @@ Pathfinding 是游戏的查找其方面游戏板的 AI 元素的能力。
 
 下面的代码图，请考虑：
 
-[ ![](images/gkpathfindpath.png "Pathfinding 映射示例")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "Pathfinding 映射示例")](images/gkpathfindpath.png#lightbox)
 
 使用 pathfinding 此 C# 代码可以确定通过映射的一种方法：
 
@@ -367,7 +367,7 @@ public override void ViewWillLayoutSubviews ()
 
 运行时，有些动画_"Boids"_将 flock 围绕我们手指 tap:
 
-[ ![](images/flocking01.png "稍有动画的 Boids 将 flock 围绕手指分流")](images/flocking01.png)
+[![](images/flocking01.png "稍有动画的 Boids 将 flock 围绕手指分流")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>其他 Apple 示例
 

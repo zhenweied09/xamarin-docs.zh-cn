@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 7eea7231ec4300a368e4612cbed2ba4ebc044a26
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 807ae6554d029120ad28f8fb8cc6c57ba3b58c8c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="annotations-and-overlays--walkthrough"></a>批注和覆盖层 – 演练
 
 我们将在本演练中生成应用程序如下所示：
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "示例 MapKit 应用")](ios-maps-walkthrough-images/00-map-overlay.png)
+ [![](ios-maps-walkthrough-images/00-map-overlay.png "示例 MapKit 应用")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
  
 你可以查找中的已完成的代码**MapsWalkthroughComplete**文件夹内的[映射演示示例](https://developer.xamarin.com/samples/monotouch/MapDemo/)。
 
@@ -279,7 +279,7 @@ ms.lasthandoff: 02/27/2018
 
 运行该应用程序。 我们现在有交互式的地图使用自定义批注和一个覆盖区 ！ 在批注上点击并显示 Austin 的映像，如下所示：
 
- [![](ios-maps-walkthrough-images/01-map-image.png "在批注上点击和显示 Austin 的图像")](ios-maps-walkthrough-images/01-map-image.png)
+ [![](ios-maps-walkthrough-images/01-map-image.png "在批注上点击和显示 Austin 的图像")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## <a name="summary"></a>摘要
 

@@ -4,14 +4,15 @@ description: "发现如何进行动画处理 SkiaSharp 图形"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: c91cb064ea3973294c3a9dd8e07f3c4b0627fe34
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="basic-animation"></a>基本动画
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 该方法计算基于的显示区域中，大小的最大半径和最小半径基于最大的半径。 `scale`值进行动画处理介于 0 和 1 之间，并返回到 0，因此该方法使用该值来计算`xRadius`和`yRadius`的范围之间`minRadius`和`maxRadius`。 这些值用于绘制和填充椭圆：
 
-[![](animation-images/pulsatingellipse-small.png "三重的脉动椭圆页面屏幕截图")](animation-images/pulsatingellipse-large.png "脉动椭圆页面的三个屏幕截图")
+[![](animation-images/pulsatingellipse-small.png "三重的脉动椭圆页面屏幕截图")](animation-images/pulsatingellipse-large.png#lightbox "脉动椭圆页面的三个屏幕截图")
 
 请注意，`SKPaint`中创建对象`using`块。 如许多 SkiaSharp 类`SKPaint`派生自`SKObject`，它派生自`SKNativeObject`，该类实现[ `IDisposable` ](https://developer.xamarin.com/api/type/System.IDisposable/)接口。 `SKPaint` 重写`Dispose`方法来释放非托管的资源。
 
@@ -244,7 +245,7 @@ public class ExpandingCirclesPage : ContentPage
 
 结果是图像看起来相同在`t`等于 0 时`t`等于 1，且圆圈似乎继续永久展开：
 
-[![](animation-images/expandingcircles-small.png "展开圆圈页面的三个屏幕截图")](animation-images/expandingcircles-large.png "展开圆圈页面的三个屏幕截图")
+[![](animation-images/expandingcircles-small.png "展开圆圈页面的三个屏幕截图")](animation-images/expandingcircles-large.png#lightbox "展开圆圈页面的三个屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: b529d0090595cc8a3020f37606d5dc3db5f0db74
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9402132b528d705455c183bb70e5bc9a270a8d05
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>获取 Google 地图 API 密钥
 
@@ -23,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 2.  在 Google Api 控制台中创建一个项目。
 3.  获取 API 密钥。
 
-<a name="Step_1_-_Obtaining_your_Signing_Key_Fingerprint" />
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>获取签名密钥指纹
 
@@ -106,7 +105,6 @@ Certificate fingerprints:
 
 你将使用 sha-1 指纹 (列出后**SHA1**) 在本指南后面。
 
-<a name="Step_2_-Create_an_API_project" />
 
 ## <a name="creating-an-api-project"></a>创建 API 项目
 
@@ -114,25 +112,24 @@ Certificate fingerprints:
 
 1. 在浏览器中，导航到[Google 开发人员控制台](https://console.developers.google.com/)： 单击**创建项目**:
 
-   [![Google 开发人员控制台创建项目按钮](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png)
+   [![Google 开发人员控制台创建项目按钮](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
 2. 在**新项目**对话框中，输入项目名称。
    对话框将制造取决于你的项目名称，一个唯一项目 ID，如本示例中所示：
 
-   [![新项目命名为 XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png)
+   [![新项目命名为 XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
 3. 单击“创建”按钮。 在一分钟后操作，将创建项目并且你将转到**API Manager**页。 在**库**部分中，单击**Google 地图 Android API**:
 
-   [![单击库部分中的 Google 地图 Android API](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png)
+   [![单击库部分中的 Google 地图 Android API](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
 4. 在顶部**Google 地图 Android API**页上，单击**启用**若要打开此项目的服务：
 
-   [![单击仪表板部分中的启用按钮](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png)
+   [![单击仪表板部分中的启用按钮](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
 
 在此时创建 API 项目和 Google 地图 Android API v2 已添加到它。 但是，不能使用此 API 在你的项目中，直到为它创建凭据。 接下来我们将探讨如何创建 API 密钥和白名单 Xamarin.Android 应用程序，以便其有权使用此密钥。
 
-<a name="Obtaining_the_API_Key" />
 
 ## <a name="obtaining-the-api-key"></a>获取 API 密钥
 
@@ -140,38 +137,37 @@ Certificate fingerprints:
 
 1. 在**Google 地图 Android API**显示的页 (单击后**启用**上一步中)，单击**转到凭据**按钮：
 
-   [![此 API 已启用消息](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png)
+   [![此 API 已启用消息](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. 在**凭据**页上，单击**我需要什么凭据？**按钮：
 
-   [![将凭据添加到你的项目对话框](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png)
+   [![将凭据添加到你的项目对话框](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. 单击此按钮之后，将生成 API 密钥。 接下来是必要限制此密钥，从而使你的应用可以使用此密钥调用 Api。 单击**限制密钥**:
 
-   [![单击凭据页上的限制的密钥](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png)
+   [![单击凭据页上的限制的密钥](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
 4. 更改**名称**字段从**API 密钥 1**到将帮助你记住该密钥用于的名称 (**XamarinMapsDemoKey**此示例中使用)。 接下来，单击**Android 应用**单选按钮：
 
-   [![选择凭据页上的 Android 应用](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png)
+   [![选择凭据页上的 Android 应用](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
 5. 若要添加的 sha-1 指纹，请单击**+ 添加包名称和指纹**:
 
-   [![单击添加包名称和指纹](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png)
+   [![单击添加包名称和指纹](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
 6. 输入你的应用包名称并且输入 sha-1 证书指纹 (通过获取`keytool`本指南中前面所述)。 在下面的示例中，包名称`XamarinMapsDemo`是输入后, 跟从获取 sha-1 证书指纹**debug.keystore**:
 
-   [![输入的包名称是 com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png)
+   [![输入的包名称是 com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
 7. 请注意，为了使你 APK 来访问 Google 地图，你必须包括 sha-1 指纹并打包你用于登录你 APK 每个密钥库 （调试和发布） 的名称。 例如，如果一台计算机用于调试和用于生成为发布 APK 的另一台计算机，则应包含从第一台计算机的调试密钥库的 sha-1 证书指纹和从的版本密钥库的 sha-1 证书指纹第二台计算机。 单击**+ 添加包名称和指纹**添加另一个的指纹和包名称，如本示例中所示：
 
-   [![添加另一个指纹创建另一个 sha-1 证书](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png)
+   [![添加另一个指纹创建另一个 sha-1 证书](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
 8. 单击“保存”按钮保存更改。 接下来，你将返回到的 API 密钥的列表。 如果你有必须提前创建其他 API 密钥，它们还将此处列出。 在此示例中，只有一个 （在前面的步骤中创建） 的 API 密钥被列出：
 
-   [![在 API 密钥列表中显示 XamarinMapsDemoKey](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png)
+   [![在 API 密钥列表中显示 XamarinMapsDemoKey](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
 
-<a name="Adding_the_Key" />
 
 ## <a name="adding-the-key-to-your-project"></a>将项添加到你的项目
 

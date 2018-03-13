@@ -3,14 +3,15 @@ title: "章 12 的摘要。 样式"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 168ad0bc2f59f0afd5b457dba38ae39cfa148c89
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9563bc811250038e8932067280a8e5292a379077
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-12-styles"></a>章 12 的摘要。 样式
 
@@ -30,7 +31,7 @@ A`Style`要求其[ `TargetType` ](https://developer.xamarin.com/api/property/Xam
 
 [ **BasicStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle)程序演示基本语法，并演示如何引用`Style`与`StaticResource`标记扩展：
 
-[![三重屏幕快照的基本样式](images/ch12fg01-small.png "基本样式")](images/ch12fg01-large.png "基本样式")
+[![三重屏幕快照的基本样式](images/ch12fg01-small.png "基本样式")](images/ch12fg01-large.png#lightbox "基本样式")
 
 `Style`对象和在中创建任何对象`Style`对象作为`Value`设置引用的所有视图之间共享`Style`。 `Style`不能包含任何内容不能共享，如`View`派生。
 

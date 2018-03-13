@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>字符串格式设置
 
@@ -121,7 +121,7 @@ XAML 文件中的下一部分是`StackLayout`与`BindingContext`设置为`x:Stat
 
 下面是在所有三个平台上运行的程序：
 
-[![字符串格式设置](string-formatting-images/stringformatting-small.png "字符串格式设置")](string-formatting-images/stringformatting-large.png "字符串格式设置")
+[![字符串格式设置](string-formatting-images/stringformatting-small.png "字符串格式设置")](string-formatting-images/stringformatting-large.png#lightbox "字符串格式设置")
 
 ## <a name="viewmodels-and-string-formatting"></a>Viewmodel 和字符串格式设置
 
@@ -174,7 +174,7 @@ XAML 文件中的下一部分是`StackLayout`与`BindingContext`设置为`x:Stat
 
 现在有三对`Slider`和`Label`绑定到相同的元素的源中的属性`HslColorViewModel`对象。 唯一的区别是`Label`具有`StringFormat`属性，以显示每个`Slider`值。
 
-[![更好地颜色选择器](string-formatting-images/bettercolorselector-small.png "更好地颜色选择器")](string-formatting-images/bettercolorselector-large.png "更好地颜色选择器")
+[![更好地颜色选择器](string-formatting-images/bettercolorselector-small.png "更好地颜色选择器")](string-formatting-images/bettercolorselector-large.png#lightbox "更好地颜色选择器")
 
 你可能想知道如何无法传统两位数的十六进制格式显示 RGB （红色、 绿色、 蓝色） 值。 这些整数值不是直接从可用`Color`结构。 一种解决方案是计算整数值的视图模型中的颜色组件并将它们作为属性公开。 无法然后格式化它们使用`X2`格式规范。
 

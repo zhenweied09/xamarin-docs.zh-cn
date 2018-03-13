@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 035956f5c39a77c625a6f4cb92cbfa67a42f2402
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e7a61dcf2cf2fabf575e30ef402121db3bea7912
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-user-interface-objects"></a>创建用户界面对象
 
@@ -42,17 +42,17 @@ using UIKit;
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
- [ ![](creating-ui-objects-images/image2b.png "工具箱填充")](creating-ui-objects-images/image2b.png)
+ [![](creating-ui-objects-images/image2b.png "工具箱填充")](creating-ui-objects-images/image2b.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
- [ ![](creating-ui-objects-images/image2b-vs.png "工具箱 Pad-Visual Stuio")](creating-ui-objects-images/image2b.png)
+ [![](creating-ui-objects-images/image2b-vs.png "工具箱 Pad-Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
  
 -----
 
 当在设计图面上选择了一个控件**属性填充**将显示该控件的属性。 **小组件 > 标识 > 名称**字段，在下面的屏幕截图中填充，并用作*Outlet*名称。 这是如何引用 C# 中的控件：
 
- [ ![](creating-ui-objects-images/image3b.png "属性小组件填充")](creating-ui-objects-images/image3b.png)
+ [![](creating-ui-objects-images/image3b.png "属性小组件填充")](creating-ui-objects-images/image3b.png#lightbox)
 
 有关更深入了解使用 iOS 设计器，请参阅[iOS 设计器简介](~/ios/user-interface/designer/introduction.md)指南。
 
@@ -64,27 +64,27 @@ using UIKit;
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
- [ ![](creating-ui-objects-images/imagexcode.png "情节提要上下文菜单-Xcode")](creating-ui-objects-images/imagexcode.png)
+ [![](creating-ui-objects-images/imagexcode.png "情节提要上下文菜单-Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](creating-ui-objects-images/imagexcode-vs.png "情节提要上下文菜单-Xcode")](creating-ui-objects-images/imagexcode-vs.png)
+[![](creating-ui-objects-images/imagexcode-vs.png "情节提要上下文菜单-Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 控件可以拖动到设计图面从上**对象库**下面所示：
 
- [ ![](creating-ui-objects-images/image5a.png "Xcode 对象库")](creating-ui-objects-images/image5a.png)
+ [![](creating-ui-objects-images/image5a.png "Xcode 对象库")](creating-ui-objects-images/image5a.png#lightbox)
 
 当您设计你的 UI 使用接口生成器必须创建**Outlet**为你想要在 C# 中引用的每个控件。 这可通过打开**助手编辑器中**使用中心**编辑器**Xcode 工具栏按钮的按钮：
 
- [ ![](creating-ui-objects-images/image6a.png "助手编辑器按钮")](creating-ui-objects-images/image6a.png)
+ [![](creating-ui-objects-images/image6a.png "助手编辑器按钮")](creating-ui-objects-images/image6a.png#lightbox)
 
 单击用户界面对象;然后**控件拖**到.h 文件。 到 * * 控件拖 * *，按住 control 密钥，然后单击并按住通过用户界面对象，您正在为创建 outlet （或操作）。 保留按住 Control 密钥，拖动到标头文件时。 完成下面拖动`@interface`定义。 下面的屏幕截图中所示，标题插入电源插座或 Outlet 集合应显示一条蓝线。
 
 当你释放单击系统将提示你提供 Outlet，将用于在代码中创建可以引用一个 C# 属性的名称：
 
- [ ![](creating-ui-objects-images/image8a.png "创建 outlet")](creating-ui-objects-images/image8a.png)
+ [![](creating-ui-objects-images/image8a.png "创建 outlet")](creating-ui-objects-images/image8a.png#lightbox)
 
 有关如何 Xcode 的接口生成器与集成 Visual Studio for Mac 的详细信息，请参阅[Xib 代码生成](~/ios/internals/xib-code-generation.md#generated)文档。
 
@@ -118,7 +118,7 @@ public override void ViewDidLoad () {
 
 查看控制器添加到设计图面时，将在项目中创建两个相应的 C# 文件。 在此示例中，`ControlsViewController.cs`和`ControlsViewController.designer.cs`自动创建：
 
- [ ![](creating-ui-objects-images/image9b.png "ViewController 分部类")](creating-ui-objects-images/image9b.png)
+ [![](creating-ui-objects-images/image9b.png "ViewController 分部类")](creating-ui-objects-images/image9b.png#lightbox)
 
 `MainViewController.cs`文件用于在*代码*。 这就是`View`生命周期方法，如`ViewDidLoad`和`ViewWillAppear`实现和你可在其中添加你自己的属性、 字段和方法。
 

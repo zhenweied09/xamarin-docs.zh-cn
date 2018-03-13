@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 0240dd5e381694a31ba9ebb12dd166ca0ef54750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -223,7 +223,7 @@ _Objective C 引发异常。名称： NSInternalInconsistencyException 原因：
 - 中勾选了 SiriKit **Entitlements.plist**。
 - **Entitlements.plist**中配置**项目选项 > 生成 > iOS 捆绑签名**。
 
-  [![显示权利正确设置的项目选项](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png)
+  [![显示权利正确设置的项目选项](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - （适用于设备部署）应用程序 ID 已启用的 SiriKit 和预配配置文件下载。
 

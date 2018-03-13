@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>演练-在 Android 中使用触摸
 
 让我们了解如何以从上一节中运行的应用程序使用的概念。 我们将创建具有四个活动的应用程序。 第一个活动将菜单或切换面板以便将启动要演示各种 Api 的其他活动。 以下屏幕截图显示主活动：
 
-[![示例屏幕截图 Touch 我按钮](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![示例屏幕截图 Touch 我按钮](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 第一个活动，Touch 示例中，将显示如何使用针对接触视图的事件处理程序。 笔势识别器活动将演示如何创建子类`Android.View.Views`和处理事件，以及演示如何处理捏合手势。 第三个和最后一个活动，**自定义笔势**，将展示了如何使用自定义特定动作。 若要使操作更轻松地遵循和吸收，我们将分解本演练为节，并将重点放在其中一个活动的每个部分。
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 -   打开项目**TouchWalkthrough\_启动**。 **MainActivity**是所有组转&ndash;都由我们要在活动中实现的触摸行为。 如果你运行应用程序并单击**Touch 示例**，应启动的以下活动：
 
-    [![与 Touch 开始显示的活动的屏幕截图](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![与 Touch 开始显示的活动的屏幕截图](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   现在，我们已确认活动开始，打开文件**TouchActivity.cs**和添加的处理程序`Touch`事件`ImageView`:
 
@@ -63,11 +63,11 @@ ms.lasthandoff: 02/27/2018
 
 每次用户收尾工作`ImageView`、`Touch`将引发事件和我们的处理程序将显示消息**Touch 开始**在屏幕上，如下面的屏幕截图中所示：
 
-[![与 Touch 开始的活动的屏幕截图](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![与 Touch 开始的活动的屏幕截图](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 只要接触用户`ImageView`， **Touch 开始**将显示在`TextView`。 当用户不再处理`ImageView`，消息**Touch 结束**将显示在`TextView`，如以下屏幕截图中所示：
 
-[![与 Touch 结束的活动的屏幕截图](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![与 Touch 结束的活动的屏幕截图](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>笔势识别器活动
@@ -234,11 +234,11 @@ ms.lasthandoff: 02/27/2018
 -   现在运行应用程序，并启动笔势识别器活动。
     在启动时的屏幕应类似下面的屏幕截图：
 
-    [![笔势识别器使用 Android 的图标启动屏幕](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![笔势识别器使用 Android 的图标启动屏幕](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   现在 touch 图标，并将其拖动在屏幕。 请尝试捏合缩放手势。 在某一时刻屏幕可能类似于下面的屏幕快照：
 
-    [![在屏幕的手势移动图标](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![在屏幕的手势移动图标](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 此时，你应授予自己 pat 背面： 您只需具有在 Android 应用程序中实现捏合缩放 ！ 快速休息，并允许将上移至在本演练中的第三个和最后一个活动&ndash;使用自定义特定动作。
 
@@ -341,17 +341,17 @@ ms.lasthandoff: 02/27/2018
 
 -   运行应用程序和自定义笔势识别器活动启动。 其外观应类似于下面的屏幕快照：
 
-    [![屏幕截图检查我映像](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![屏幕截图检查我映像](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     现在，在屏幕上，绘制一个复选标记和显示位图应如下所示，在下一步的屏幕截图所示：
 
-    [![绘制复选标记](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![识别复选标记](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![绘制复选标记](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![识别复选标记](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     最后，在屏幕上绘制 scribble。 复选框应将更改回其原始映像，这些屏幕截图所示：
 
-    [![在屏幕上 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![显示原始图像](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![在屏幕上 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![显示原始图像](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 你已经了解如何将触控和手势中使用 Xamarin.Android 的 Android 应用程序进行集成。
 

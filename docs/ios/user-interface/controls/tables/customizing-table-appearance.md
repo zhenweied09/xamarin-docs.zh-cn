@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>自定义表的外观
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/27/2018
 
 这些屏幕截图显示了每种样式的显示方式：
 
- [ ![](customizing-table-appearance-images/image7.png "这些屏幕快照显示的每种样式的显示方式")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "这些屏幕快照显示的每种样式的显示方式")](customizing-table-appearance-images/image7.png#lightbox)
 
 示例**CellDefaultTable**包含用于生成这些屏幕的代码。 在中设置的单元格样式`UITableViewCell`构造函数，如下：
 
@@ -60,7 +60,7 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 这是它们的外观：
 
- [ ![](customizing-table-appearance-images/image8.png "示例附件")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "示例附件")](customizing-table-appearance-images/image8.png#lightbox)
 
 以显示一个可以设置这些附件`Accessory`中的属性`GetCell`方法：
 
@@ -119,7 +119,7 @@ TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 
 CellCustomTable 示例实现`UITableViewCell`子类，该定义的自定义布局的子类`UILabel`s 和`UIImage`具有不同的字体和颜色。 生成的单元格如下所示：
 
- [ ![](customizing-table-appearance-images/image9.png "自定义单元格的布局")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "自定义单元格的布局")](customizing-table-appearance-images/image9.png#lightbox)
 
 自定义单元格类包含只有三个方法：
 

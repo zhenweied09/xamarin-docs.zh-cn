@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Android 本地化
 
@@ -81,7 +81,7 @@ Android 应用程序管理资源文件夹中的大多数内容，例如：
 ![多个区域性标识符可资源/绘制和资源中的值文件夹的屏幕截图](localization-images/resources.png)
 
 > [!NOTE]
-> **注意：**指定顶层的语言，如时`es`仅两个字符是必需的; 但目录名称格式指定完整的区域设置时, 需要短划线和小写**r**分隔两个部件，例如**pt rBR**或**中文 rCN**。 比较而言，在代码中，这包含下划线 （如返回值。 `pt_BR`）格式模式中出现的位置生成。 这两个不同的值.NET`CultureInfo`类使用，其中有一个短划线仅 （如。 `pt-BR`）格式模式中出现的位置生成。 致力于跨 Xamarin 平台时，请保持记住这些差异。
+> 指定顶层的语言，如时`es`仅两个字符是必需的; 但目录名称格式指定完整的区域设置时, 需要短划线和小写**r**来分隔两个部分，例如**pt rBR**或**中文 rCN**。 比较而言，在代码中，这包含下划线 （如返回值。 `pt_BR`）格式模式中出现的位置生成。 这两个不同的值.NET`CultureInfo`类使用，其中有一个短划线仅 （如。 `pt-BR`）格式模式中出现的位置生成。 致力于跨 Xamarin 平台时，请保持记住这些差异。
 
 #### <a name="stringsxml-file-format"></a>Strings.xml 文件格式
 
@@ -164,13 +164,13 @@ Android 字符串资源，您也可以创建*数量字符串*这使翻译人员�
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Android 4.2 和更高版本提供对 RTL 布局，在详细信息中所述完全
 
 以下屏幕快照显示[本地化**Tasky**示例](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)以阿拉伯数字表示：
 
-[![以阿拉伯数字表示 Tasky 应用的屏幕快照](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![以阿拉伯数字表示 Tasky 应用的屏幕快照](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 下一步的屏幕截图显示[本地化**Tasky**示例](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)希伯来语中：
 
-[![在使用希伯来语 Tasky 应用的屏幕快照](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![在使用希伯来语 Tasky 应用的屏幕快照](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 使用本地化 RTL 文本**Strings.xml** LTR 文本的方式相同的文件。
-
-<a name="testing" />
 
 ## <a name="testing"></a>正在测试
 

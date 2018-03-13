@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: eed12c84b9952ef5c3dd27847071f05392bc16c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-to-the-app-store"></a>将部署到应用商店
 
@@ -62,6 +62,8 @@ ms.lasthandoff: 02/27/2018
 **预配配置文件**列表将显示所有匹配的配置文件-您应看到已创建此下拉列表中的匹配配置文件。
 
 ![](appstore-images/options-selectprofile-sml.png "IOS 捆绑签名对话框")
+
+<a name="iTunes_Connect"/>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
@@ -123,7 +125,7 @@ Xcode 将自动显示存档在 Visual Studio 中创建的 mac。
 
 5. 请访问 iTunes Connect 试以查看上载的二进制文件。 转到应用程序配置页上，选择**预发行版**从顶部菜单中，若要查看**生成**列表：
 
-  [ ![](appstore-images/itc-prerelease-sml.png "在 iTunes Connect 中应用配置页")](appstore-images/itc-prerelease.png)
+  [![](appstore-images/itc-prerelease-sml.png "在 iTunes Connect 中应用配置页")](appstore-images/itc-prerelease.png#lightbox)
 
 然后可以在提交以供审核应用**版本**页。 请参阅[iOS 应用程序分发概述](~/ios/deploy-test/app-distribution/index.md)有关详细信息。
 

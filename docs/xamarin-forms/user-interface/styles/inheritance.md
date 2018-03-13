@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 482358b0ccbedf926cd9182065a1eb8f4c12683c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e57f19d1eb66e22badb418d4584f5654904c7ade
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="style-inheritance"></a>样式继承
 
@@ -62,10 +62,10 @@ _样式可以继承其他样式来减少重复并启用重用。_
 
 `baseStyle`目标[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)实例，并设置[ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/)和[ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/)属性。 `baseStyle`不直接在任何控件上设置。 相反，`labelStyle`和`buttonStyle`从它继承，设置其他可绑定属性值。 `labelStyle`和`buttonStyle`然后应用于[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例和[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例，通过设置其[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性。 这将导致以下屏幕截图中所示的外观：
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
+[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> **请注意**： 隐式样式可以派生自显式样式，但不能从隐式样式派生显式样式。
+> 隐式样式可以派生自显式样式，但不能从隐式样式派生显式样式。
 
 ### <a name="respecting-the-inheritance-chain"></a>遵从继承链
 
@@ -106,7 +106,7 @@ _样式可以继承其他样式来减少重复并启用重用。_
 
 在此示例中，`labelStyle`和`buttonStyle`是控件级别的资源，而`baseStyle`是一个页级别资源。 但是，尽管`labelStyle`和`buttonStyle`继承`baseStyle`，不可能`baseStyle`要从其继承`labelStyle`或`buttonStyle`，因为视图层次结构中其各自的位置。
 
-## <a name="style-inheritance-in-c35"></a>使用 c&#35; 样式继承
+## <a name="style-inheritance-in-c35"></a>在 C 中的样式继承&#35;
 
 等效的 C# 页上，其中[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)实例分配给[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)所需的控件的属性下面的代码示例中所示：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d18cf055bb206099eecea0d9f417af571f3819e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-orientation"></a>设备方向
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
 当使用 Xamarin.Forms，控制设备方向的受支持的方法是为每个单独的项目中使用的设置。
 
 > [!NOTE]
-> **请注意**: As of Xamarin.Forms 1.5.0 是一个 bug，这会阻止自定义呈现器基于尝试控制方向失败。 请参阅[此讨论](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)此详细信息的 Xamarin 论坛中讨论。
+> Xamarin.Forms 1.5.0 是一个 bug，这会阻止，截至自定义呈现器基于尝试控制方向失败。 请参阅[此讨论](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)此详细信息的 Xamarin 论坛中讨论。
 
 ### <a name="ios"></a>iOS
 
@@ -123,7 +123,7 @@ SupportedOrientations = SupportedPageOrientation.Landscape; // landscape only
 Xamarin.Forms 不提供任何本机事件通知您的应用程序的方向在共享代码中的更改。 但是，`SizeChanged`事件`Page`时，会激发的宽度或高度`Page`更改。 时的宽度`Page`大于高度，在设备处于横向模式。 有关详细信息，请参阅[显示基于屏幕方向的映像](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)。
 
 > [!NOTE]
-> **请注意**： 均使用现有的免费 NuGet 程序包在共享代码中接收的方向更改的通知。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
+> 没有用于在共享代码中接收通知的方向更改现有的免费 NuGet 包。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
 
 或者，也可以重写[ `OnSizeAllocated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/)方法`Page`，插入任何布局更改存在逻辑。 `OnSizeAllocated`调用方法时`Page`分配新的大小，这种情况发生的 whenver 将设备旋转。 请注意的基实现`OnSizeAllocated`执行重要布局功能，因此务必要在重写中调用基实现：
 
@@ -176,7 +176,7 @@ protected override void OnSizeAllocated(double width, double height)
 上述规则也适用时通常实现接口针对多个屏幕大小和被视为最佳做法。 此指南的余下部分将介绍使用 Xamarin.Forms 中的每个主布局的响应式布局的具体示例。
 
 > [!NOTE]
-> **请注意**： 为清楚起见，以下部分演示如何实现使用的一种类型的响应式布局`Layout`一次。 在实践中，它通常会更简单混合`Layout`s 以实现使用简单得多或最直观的所需的布局`Layout`每个组件。
+> 为清楚起见，以下部分演示如何实现使用的一种类型的响应式布局`Layout`一次。 在实践中，它通常会更简单混合`Layout`s 以实现使用简单得多或最直观的所需的布局`Layout`每个组件。
 
 ### <a name="stacklayout"></a>StackLayout
 

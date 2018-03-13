@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83e01bba82713b55a0a69858c2a83aa243f71588
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 70703797792a2f667a2eb20cbc45d1736e5e6b9d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-views"></a>Web 视图
 
@@ -40,7 +40,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 这将产生以下 web 视图：
 
-[ ![](uiwebview-images/webview.png "ScalesPagesToFit 的效果")](uiwebview-images/webview.png)
+[![](uiwebview-images/webview.png "ScalesPagesToFit 的效果")](uiwebview-images/webview.png#lightbox)
 
 有关详细信息使用`UIWebView`，请参阅以下配方：
 
@@ -68,7 +68,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 这将产生以下 web 视图：
 
-[ ![](uiwebview-images/wkwebview.png "示例 web 视图不 ScalesPagesToFit")](uiwebview-images/wkwebview.png)
+[![](uiwebview-images/wkwebview.png "示例 web 视图不 ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
 
 务必请注意，`WKWebView`是易于使用的功能的命名空间，因此将需要添加以下 using 指令到你的类的顶部。
 
@@ -98,7 +98,7 @@ PresentViewController(sfViewController, true, null);
 
 这将产生以下 web 视图：
 
-[ ![](uiwebview-images/sfsafariviewcontroller.png "与 SFSafariViewController 示例 web 视图")](uiwebview-images/sfsafariviewcontroller.png)
+[![](uiwebview-images/sfsafariviewcontroller.png "与 SFSafariViewController 示例 web 视图")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -113,7 +113,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 这将产生以下 web 视图：
 
-[ ![](uiwebview-images/safari.png "在 Safari 中显示的网页")](uiwebview-images/safari.png)
+[![](uiwebview-images/safari.png "在 Safari 中显示的网页")](uiwebview-images/safari.png#lightbox)
 
 导航离开 Safari 你的应用的用户通常应当始终避免。 大多数用户将不期望导航外部应用程序，因此如果导航离开你的应用程序时，用户可能永远不会返回它，实质上终止用户参与策略。
 

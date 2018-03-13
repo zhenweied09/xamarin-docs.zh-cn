@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/30/2018
-ms.openlocfilehash: 4728b50446033c02d33ccf8273f1dc2e50d66906
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8642a1c96ee525fbd6950616fbc6da0ad0e2337
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>演练-在 Xamarin.Android 中使用本地通知
 
 _本演练演示如何在 Xamarin.Android 应用程序中使用本地通知。它演示了创建和发布本地通知的基础知识。当用户单击通知区域中的通知时，它会启动第二个活动。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -26,16 +25,14 @@ _本演练演示如何在 Xamarin.Android 应用程序中使用本地通知。�
 
 以下屏幕快照说明了此应用程序的一些示例：
 
-[![与通知的示例屏幕快照](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png)
+[![与通知的示例屏幕快照](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 
-<a name="walkthrough" />
 
 ## <a name="walkthrough"></a>演练
 
 若要开始，让我们来创建新的 Android 项目使用**Android 应用**模板。 让我们调用此项目**LocalNotifications**。 (如果你不熟悉创建 Xamarin.Android 项目，请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)。)
 
-<a name="add-v4-support" />
 
 ### <a name="add-the-androidsupportv4app-component"></a>添加 Android.Support.V4.App 组件
 
@@ -53,7 +50,6 @@ using Android.Support.V4.App;
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-<a name="define-id" />
 
 ### <a name="define-the-notification-id"></a>定义通知 ID
 
@@ -63,7 +59,6 @@ using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 private static readonly int ButtonClickNotificationId = 1000;
 ```
 
-<a name="add-code" />
 
 ### <a name="add-code-to-generate-the-notification"></a>添加代码以生成通知
 
@@ -117,7 +112,6 @@ private void ButtonOnClick (object sender, EventArgs eventArgs)
 button.Click += ButtonOnClick;
 ```
 
-<a name="second-activity" />
 
 ### <a name="create-a-second-activity"></a>创建第二个活动
 
@@ -174,36 +168,33 @@ namespace LocalNotifications
 </LinearLayout>
 ```
 
-<a name="add-icon" />
 
 ### <a name="add-a-notification-icon"></a>添加通知图标
 
 最后，让我们添加小图标将出现在通知区域中，启动我们通知时。 你可以复制[此图标](local-notifications-walkthrough-images/ic-stat-button-click.png)到你的项目或创建你自己的自定义图标。 我们将名称的图标文件**ic\_stat\_按钮\_click.png**和将其复制到**可资源/绘制**文件夹。 请记住使用**添加 > 现有项...**要包含在你的项目中的此图标文件。
 
-<a name="run-app" />
 
 ### <a name="run-the-application"></a>运行应用程序
 
 让我们生成并运行应用程序。 你应该会看到与第一个活动，类似于以下屏幕截图：
 
-[ ![第一个活动屏幕快照](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png)
+[![第一个活动屏幕快照](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
 当你单击按钮时，您应该注意到在通知区域中显示的小图标通知：
 
-[ ![将显示通知图标](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png)
+[![将显示通知图标](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
 如果你向下轻扫，并公开通知抽屉，你应该会看到通知：
 
-[ ![通知消息](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png)
+[![通知消息](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
 在单击通知时，它应该会消失，并且应该启动我们其他活动&ndash;查找类似于下面的屏幕快照：
 
-[ ![第二个活动屏幕快照](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png)
+[![第二个活动屏幕快照](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
 祝贺你！ 此时已完成 Android 本地通知演练，您必须可以引用的工作示例。 有很多通知的详细信息比我们已经演示了在这里，因此如果你想详细信息，看一看[通知 Google 文档](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)和 Android[通知](http://developer.android.com/design/patterns/notifications.html)设计指南。
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

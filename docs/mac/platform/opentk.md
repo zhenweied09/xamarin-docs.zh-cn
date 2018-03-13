@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4af76a37e5fd42ff1d6344f60642425c73e9d733
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f5383465f7bc5c4529eebefca02718c83a653e9f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-opentk"></a>OpenTK 简介
 
 OpenTK （打开工具包） 是一个高级的、 低级别 C# 库，使用 OpenGL 和 OpenCL OpenAL 更加轻松。 OpenTK 可以用于游戏、 科学应用程序或其他需要 3D 图形的项目、 音频或计算功能。 本文提供了对使用 OpenTK Xamarin.Mac 应用中的简短介绍。
 
-[ ![](opentk-images/intro01.png "运行示例应用程序")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "运行示例应用程序")](opentk-images/intro01.png#lightbox)
 
 在本文中，我们将介绍 OpenTK Xamarin.Mac 应用程序中的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -54,11 +54,11 @@ OpenTK 可以用于游戏、 科学应用程序或其他需要 3D 图形的项�
 
 适用于 Mac 启动 Visual Studio 并创建新的 Xamarin.Mac 解决方案。 选择**Mac** > **应用** > **常规** > **Cocoa 应用**:
 
-[ ![](opentk-images/sample01.png "添加新 Cocoa 应用程序")](opentk-images/sample01.png)
+[![](opentk-images/sample01.png "添加新 Cocoa 应用程序")](opentk-images/sample01.png#lightbox)
 
 输入`MacOpenTK`为**项目名称**:
 
-[ ![](opentk-images/sample02.png "设置项目名称")](opentk-images/sample02.png)
+[![](opentk-images/sample02.png "设置项目名称")](opentk-images/sample02.png#lightbox)
 
 单击**创建**按钮以生成新项目。
 
@@ -70,7 +70,7 @@ OpenTK 可以用于游戏、 科学应用程序或其他需要 3D 图形的项�
 
 通过选中`OpenTK`单击**确定**按钮：
 
-[ ![](opentk-images/sample03.png "编辑项目引用")](opentk-images/sample03.png)
+[![](opentk-images/sample03.png "编辑项目引用")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
@@ -296,7 +296,7 @@ Game.Run(60.0);
 
 让我们运行我们的应用程序并查看输出：
 
-[ ![](opentk-images/intro01.png "一个示例应用程序输出")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "一个示例应用程序输出")](opentk-images/intro01.png#lightbox)
 
 如果我们调整我们窗口，游戏视图也将驻留和将大小调整和更新实时以及三角形。
 
@@ -329,5 +329,5 @@ Game.Run(60.0);
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [使用 Windows](~/mac/user-interface/window.md)
 - [打开工具包](http://www.opentk.com)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

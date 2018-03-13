@@ -4,14 +4,15 @@ description: "XAML 标记扩展构成允许将属性设置为对象或从其他�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 7aea7b1536efc952378c6a1df63640af191f1ebe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
@@ -298,7 +299,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 
 屏幕截图验证一致样式和平台相关样式：
 
-[ ![](xaml-markup-extensions-images/sharedresources.png "风格的控件")](xaml-markup-extensions-images/sharedresources-large.png "风格的控件")
+[![](xaml-markup-extensions-images/sharedresources.png "风格的控件")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "风格的控件")
 
 尽管它是最常见的定义`Resources`集合顶部的页上，请记住，`Resources`属性定义由`VisualElement`，并且你可以提供`Resources`上页面上的其他元素的集合。 例如，尝试将添加到一个`StackLayout`在此示例中：
 
@@ -436,7 +437,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 所产生的大小`BoxView`相对于屏幕是与平台相关：
 
- [ ![](xaml-markup-extensions-images/staticconstants.png "使用 X:static 标记扩展的控件")](xaml-markup-extensions-images/staticconstants-large.png "控件使用 X:static 标记扩展")
+ [![](xaml-markup-extensions-images/staticconstants.png "使用 X:static 标记扩展的控件")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "控件使用 X:static 标记扩展")
 
 ## <a name="other-standard-markup-extensions"></a>其他标准的标记扩展
 
@@ -552,7 +553,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 下面是运行的程序：
 
-[ ![](xaml-markup-extensions-images/relativelayout.png "使用约束的相对布局")](xaml-markup-extensions-images/relativelayout-large.png "相对布局使用约束")
+[![](xaml-markup-extensions-images/relativelayout.png "使用约束的相对布局")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "相对布局使用约束")
 
 ## <a name="summary"></a>摘要
 

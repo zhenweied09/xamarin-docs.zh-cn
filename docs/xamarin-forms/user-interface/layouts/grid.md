@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>Grid
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 为行和列排列视图的支持。 可以设置行和列具有按比例大小或绝对大小。 `Grid`布局不应与传统的表相混淆，不应显示表格数据。 `Grid` 没有行、 列或单元格格式的概念。 与 HTML 表不同`Grid`纯粹旨在用于对内容进行布局。
 
-[ ![](grid-images/layouts-sml.png "Xamarin.Forms 布局")](grid-images/layouts.png "Xamarin.Forms 布局")
+[![](grid-images/layouts-sml.png "Xamarin.Forms 布局")](grid-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 本文将介绍：
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/28/2018
 - **绝对**&ndash;调整列和具有特定的固定高度和宽度的值的行的大小。 指定为值和`GridUnitType.Absolute`C# 中以及`#`在 XAML 中，与`#`正在所需的值。
 
 > [!NOTE]
-> **请注意**： 列的宽度值被设置为 '*' Xamarin.Forms 中默认情况下，从而保证列将填充可用空间。
+> 列的宽度值被设置为 '*' Xamarin.Forms 中默认情况下，从而保证列将填充可用空间。
 
 请考虑的应用程序需要三个行和两个列。 底部行需要完全 200px、 高和最上面一行需要两次高度都是中间的行。 左侧的列必须是宽度不足以适合内容和右侧列需要填充剩余的空间。
 

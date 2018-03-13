@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 82151599b92094b816f4763c533ed7746db37920
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>使用导航和焦点
 
@@ -21,7 +21,7 @@ _本文介绍如何焦点以及如何使用它为在 Xamarin.tvOS 应用内部�
 
 本文介绍的概念[焦点](#Focus-and-Selection)以及如何使用它来处理[导航](#Navigation)Xamarin.tvOS 应用程序的用户界面中。 我们将检查内置 tvOS 导航控件如何使用焦点、 高亮和选择提供 Xamarin.tvOS 应用程序的用户界面导航。
 
-[ ![](navigation-focus-images/intro01.png "tvOS 应用用户界面导航")](navigation-focus-images/intro01.png)
+[![](navigation-focus-images/intro01.png "tvOS 应用用户界面导航")](navigation-focus-images/intro01.png#lightbox)
 
 接下来，我们来看看如何与使用焦点[视差](#Focus-and-Parallax)和*分层映像*可为当前的导航状态提供视觉线索，向最终用户。
 
@@ -35,7 +35,7 @@ Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中�
 
 成功 tvOS 应用平稳支持应用程序的用途以及它提供而不会调用注意导航本身的数据结构的方式实现导航。 设计你导航，使它而无需占据用户界面或绘制焦点离开内容和应用程序用户体验的外观自然和熟悉程度。
 
-[ ![](navigation-focus-images/nav01.png "TvOS 设置应用程序")](navigation-focus-images/nav01.png)
+[![](navigation-focus-images/nav01.png "TvOS 设置应用程序")](navigation-focus-images/nav01.png#lightbox)
 
 虽然通常使用 Apple TV，用户将转到堆积的一组屏幕，每个提供一组给定的内容。 反过来，每个新的屏幕可能会导致使用如的标准 UI 控件的内容的一个或多个子屏幕[按钮](~/ios/tvos/user-interface/buttons.md)，[选项卡条](~/ios/tvos/user-interface/tab-bars.md)，表，[集合视图](~/ios/tvos/user-interface/collection-views.md)或[拆分视图](~/ios/tvos/user-interface/split-views.md)。
 
@@ -58,7 +58,7 @@ Apple 提供的建议设计应用程序 tvOS 导航时记住以下：
 
 在 Apple TV，图像、 按钮或其他 UI 元素被视为可_焦点_时当前导航的目标。
 
-[ ![](navigation-focus-images/focus01.png "焦点和选择示例")](navigation-focus-images/focus01.png)
+[![](navigation-focus-images/focus01.png "焦点和选择示例")](navigation-focus-images/focus01.png#lightbox)
 
 与不同，在用户与设备的触摸屏上的元素的直接交互其中的 iOS 设备在同一房间使用 Siri 远程与从 tvOS 元素进行交互的用户。 若要显示和处理这种用户交互，Apple TV 使用_焦点_基于模型。
 
@@ -138,7 +138,7 @@ playButton.PreferredFocusedView = true;
 
 执行示例的以下 UI 布局：
 
- [ ![](navigation-focus-images/guide01.png "使用焦点指南示例")](navigation-focus-images/guide01.png)
+ [![](navigation-focus-images/guide01.png "使用焦点指南示例")](navigation-focus-images/guide01.png#lightbox)
  
 因为**详细信息**按钮不在上水平和垂直网格与**购买**按钮将用户都无法访问。 但是，这可以轻松地使用更正_焦点指南_向焦点引擎提供移动提示。 
 
@@ -170,7 +170,7 @@ public override void ViewDidLoad ()
 
 接下来，相对于调整焦点参考线的顶部、 左、 宽度和高度锚**详细信息**和**购买**按钮，以将其置于它们之间。 请参阅：
 
-[ ![](navigation-focus-images/guide02.png "示例焦点指南")](navigation-focus-images/guide02.png)
+[![](navigation-focus-images/guide02.png "示例焦点指南")](navigation-focus-images/guide02.png#lightbox)
 
 它也是特别注意的正在激活新的约束，因为它们通过设置创建其`Active`属性`true`:
 

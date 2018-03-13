@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: f7e949902e2f960a9aa68c600514b7fefc8ae30d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9d774870a541630d8c6519f9dfeaeb21cacb98e8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="master-detail-page"></a>主-详细信息页
 
@@ -22,7 +22,7 @@ _Xamarin.Forms MasterDetailPage 是信息的管理两个相关页 – 主控页�
 
 母版页通常显示项的列表，如以下屏幕截图中所示：
 
-[![](master-detail-page-images/masterpage-components.png "Master 页组件")](master-detail-page-images/masterpage-components-large.png "Master 页组件")
+[![](master-detail-page-images/masterpage-components.png "Master 页组件")](master-detail-page-images/masterpage-components-large.png#lightbox "Master 页组件")
 
 项的列表的位置是在每个平台上完全相同，并选择某一项将导航到相应的详细信息页。 此外，主控页还提供了导航栏包含可用于导航到的活动的详细信息页的按钮：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 992e6583d64f078c0cd693765a1512c3e41a620a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7edf0c8e563dad25693d184d3a44a3e66466126
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-information-and-enumeration"></a>路径信息和枚举
 
@@ -110,7 +110,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `Length`的新创建的属性`SKPathMeasure`对象获取路径的长度。 这除以`baseTextWidth`值 （这是基于文本大小为 10 的文本的宽度） 和再乘以 10 基的文本大小。 结果为新的文本大小显示沿该路径的文本：
 
-[![](information-images/pathlength-small.png "三重的路径长度页面屏幕截图")](information-images/pathlength-large.png "三倍的路径长度页面屏幕截图")
+[![](information-images/pathlength-small.png "三重的路径长度页面屏幕截图")](information-images/pathlength-large.png#lightbox "三倍的路径长度页面屏幕截图")
 
 因为贝塞尔曲线变得更长或较短，你可以查看更改的文本大小。
 
@@ -136,7 +136,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 **脚踏车半管道**页进行动画处理似乎沿三次方贝塞尔曲线来回写脚踏车上一个简图：
 
-[![](information-images/unicyclehalfpipe-small.png "三重的脚踏车半管道页的屏幕截图")](information-images/unicyclehalfpipe-large.png "脚踏车半管道页面的三个屏幕截图")
+[![](information-images/unicyclehalfpipe-small.png "三重的脚踏车半管道页的屏幕截图")](information-images/unicyclehalfpipe-large.png#lightbox "脚踏车半管道页面的三个屏幕截图")
 
 `SKPaint`用于描边半管道和脚踏车对象定义中的一个字段为[ `UnicycleHalfPipePage` ]()类。 此外定义是`SKPath`脚踏车对象：
 
@@ -425,7 +425,7 @@ static class PathExtensions
 
 **GlobularText**示例使用此扩展方法看似将文字环绕半球包装在 3D 效果：
 
-[![](information-images/globulartext-small.png "三重的 Globular 文本页的屏幕截图")](information-images/globulartext-large.png "Globular 文本页面的三个屏幕截图")
+[![](information-images/globulartext-small.png "三重的 Globular 文本页的屏幕截图")](information-images/globulartext-large.png#lightbox "Globular 文本页面的三个屏幕截图")
 
 [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs)类构造函数执行此转换。 它将创建`SKPaint`对象的文本，然后，获取`SKPath`对象`GetTextPath`方法。 这是传递给的路径`CloneWithTransform`以及转换函数的扩展方法： 
 

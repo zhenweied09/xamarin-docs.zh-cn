@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>在监视设备上测试
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/27/2018
 
 监视并没有什么区别-你现在需要将应用部署到它之前添加你的 Apple Watch 设备。 发现监视的 UDID 使用**Xcode** (**Windows > 设备**列表)。 连接配对的 phone 时也会显示监视的信息：
 
-[ ![](device-images/xcode-devices-sml.png "配对的监视信息")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "配对的监视信息")](device-images/xcode-devices.png#lightbox)
 
 当您知道手表的 UDID，将其添加到开发人员中心中的设备列表：
 
@@ -99,12 +99,12 @@ ms.lasthandoff: 02/27/2018
 
 到*暂时*要解决此问题，禁用**增量生成**的监视扩展中**项目选项 > 生成 > watchOS 生成**窗口：
 
-[ ![](device-images/disable-incremental-sml.png "增量生成复选框")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "增量生成复选框")](device-images/disable-incremental.png#lightbox)
 
 将在其后增量生成可以重新启用以利用更快的生成时间的未来版本中解决此问题。
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a>&#3; watch 应用无法启动时在设备上进行调试
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>监视应用程序无法启动时在设备上进行调试
 
 当尝试调试在物理设备上，仅将图标与加载微调 watch 应用出现 （和最终超时）。 这将在将来的版本; 中解决一种解决方法是运行生成的发布 （将不允许调试）。
 

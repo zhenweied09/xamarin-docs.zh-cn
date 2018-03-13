@@ -2,16 +2,16 @@
 title: "Apple 帐户管理"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
+ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 0cf7456cec2e934516e15ac6cbc57109e6b57a79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="apple-account-management"></a>Apple 帐户管理
 
@@ -44,7 +44,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 - 确保你具有的最新 fastlane 工具[https://download.fastlane.tools](https://download.fastlane.tools)。
 - 在开始之前，请确保接受中的任何用户许可协议[开发人员门户](https://developer.apple.com/account/)。
 
-# <a name="adding-an-apple-developer-account"></a>添加 Apple 开发人员帐户
+## <a name="adding-an-apple-developer-account"></a>添加 Apple 开发人员帐户
 
 1. 若要打开帐户管理对话框，请转到**Visual Studio > 首选项 > Apple 开发人员帐户**:
 
@@ -68,8 +68,11 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
     ![](apple-account-management-images/image6.png)
 
-<a name="managing">
+
+<a name="managing"/>
     
+
+
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>管理的签名标识和预配配置文件
 
 团队详细信息对话框中显示签名标识，按类型的列表。 **状态**列建议您证书是否： 
@@ -84,7 +87,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
   ![](apple-account-management-images/image7.png)
 
-### <a name="create-a-signing-identities"></a>创建签名标识
+## <a name="create-a-signing-identities"></a>创建签名标识
 
 若要创建新的签名标识，选择**创建新证书**下拉列表按钮，然后选择你需要的类型。 如果您具有正确权限新的签名标识将显示几秒钟后。
 
@@ -92,7 +95,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
 ![](apple-account-management-images/image8.png)
 
-### <a name="download-provisioning-profiles"></a>下载预配配置文件
+## <a name="download-provisioning-profiles"></a>下载预配配置文件
 
 团队详细信息对话框还显示连接到你的开发人员帐户的所有预配配置文件的列表。 你可以通过按所有预配配置文件下载到本地计算机**下载所有配置文件**按钮
 
@@ -102,29 +105,28 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
 有关将应用程序部署到设备的信息，请参阅[设备资源调配](~/ios/get-started/installation/device-provisioning/index.md)指南。
 
-
 ## <a name="troubleshooting"></a>疑难解答
 
-#### <a name="view-details-dialog-is-empty"></a>视图的详细信息对话框为空
+### <a name="view-details-dialog-is-empty"></a>视图的详细信息对话框为空
 
 这当前是一个已知的问题，与 bug 相关[#53906](https://bugzilla.xamarin.com/show_bug.cgi?id=53906)。 请确保 Mac 使用 Visual Studio 的最新稳定版本
 
-#### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>如果你遇到的问题在你的帐户登录，请尝试以下操作：
+### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>如果你遇到的问题在你的帐户登录，请尝试以下操作：
 
 * 打开 keychain 应用程序，然后在类别下选择*密码*。 搜索`deliver.`，并删除所有条目。
 
-#### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"添加帐户时出错。 请使用特定于应用程序密码登录"
+### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"添加帐户时出错。 请使用特定于应用程序密码登录"
 
 这是因为在你的帐户上启用 2 因素身份验证。 请确保 Mac 使用 Visual Studio 的最新稳定版本
 
-#### <a name="failed-to-create-new-certificate"></a>无法创建新证书
+### <a name="failed-to-create-new-certificate"></a>无法创建新证书
 "你已达到为此类型的证书限制"
 
 ![](apple-account-management-images/image10.png)
 
 已生成证书允许的最大数目。 若要解决此问题，浏览到[Apple 开发人员中心](https://developer.apple.com/account/ios/certificate/distribution)和撤消生产证书之一。
 
-#### <a name="known-issues"></a>已知问题：
+## <a name="known-issues"></a>已知问题
 
 * 有时查看详细信息对话框可能需要花大量时间来提取签名标识和配置文件。
 * 通常焦点可能不会返回到 Visual Studio for Mac 后输入你的详细信息，导致你的帐户无法添加。 如果出现这种情况，请再次尝试该过程。

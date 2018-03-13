@@ -3,16 +3,16 @@ title: "应用程序传输安全"
 description: "应用程序传输安全性 (ATS) 强制实施 internet 资源 （如应用程序的后端服务器） 和你的应用程序之间的安全连接。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: 60858e05e222725f05eb67bd7aaa4e56d2ff3880
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-transport-security"></a>应用程序传输安全
 
@@ -69,7 +69,7 @@ ATS 将强制执行所有 internet 连接的以下要求：
 
 因为 ATS 启用在 iOS 9 和 OS X El Capitan，默认情况下，如果你的 Xamarin.iOS 应用程序或任何库或正在使用的服务建立连接到 internet，你将需要采取某项操作，或你的连接将导致引发异常。
 
-对于现有应用程序，Apple 建议你支持`HTTPS`协议越早越好。 如果你是无法，因为你正在连接的第三方不支持的 web 服务`HTTPS`或如果支持`HTTPS`是不现实，你可以选择退出的 ATS。 请参阅[Opting 打卡的 ATS](#Opting-Out-of-ATS)下面部分以了解更多详细信息。
+对于现有应用程序，Apple 建议你支持`HTTPS`协议越早越好。 如果你是无法，因为你正在连接的第三方不支持的 web 服务`HTTPS`或如果支持`HTTPS`是不现实，你可以选择退出的 ATS。 请参阅[Opting 打卡的 ATS](#optout)下面部分以了解更多详细信息。
 
 对于新的 Xamarin.iOS 应用程序，应使用`HTTPS`以独占方式与 internet 资源通信时。 同样，可能有 （例如使用第三方 web 服务） 的情况下这不是可能，其中你将需要选择退出的 ATS。
 
@@ -144,7 +144,7 @@ NSUrlSession 基于处理程序基于本机`NSUrlSession`API。
 
 由于默认情况下，在生成适用于 iOS 9 和 OS X 10.11 (El Capitan) 使用的所有连接的应用程序中启用了 ATS `NSURLConnection`，`CFURL`或`NSURLSession`都将遵循 ATS 安全要求。 如果你的连接不满足这些要求，则会失败并出现异常。
 
-此外提供了 Apple [TLSTool 示例应用程序](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2)可以编译 （或 （可选） 将转换为 Xamarin 和 C#），用于诊断 ATS/TLS 问题。 请参阅[Opting 打卡的 ATS](#Opting-Out_of_ATS)节如何解决此问题的信息。
+此外提供了 Apple [TLSTool 示例应用程序](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2)可以编译 （或 （可选） 将转换为 Xamarin 和 C#），用于诊断 ATS/TLS 问题。 请参阅[Opting 打卡的 ATS](#optout)节如何解决此问题的信息。
 
 
 <a name="config" />
@@ -215,7 +215,7 @@ NSAppTransportSecurity
 
 在适用于 Mac 的 Visual Studio，双击`Info.plist`文件中**解决方案资源管理器**，切换到**源**查看和添加上述密钥：
 
-[ ![](ats-images/ats01.png "Info.plist 文件的源视图")](ats-images/ats01.png)
+[![](ats-images/ats01.png "Info.plist 文件的源视图")](ats-images/ats01.png#lightbox)
 
 
 如果你的应用需要加载和显示来自不安全站点的 web 内容时，将以下代码添加到应用程序的**Info.plist**文件，以便网页时的其余部分仍启用 Apple 传输安全 (ATS) 保护正确加载应用程序：
@@ -240,7 +240,7 @@ NSAppTransportSecurity
 
 在适用于 Mac 的 Visual Studio，双击`Info.plist`文件中**解决方案资源管理器**，切换到**源**查看和添加上述密钥：
 
-[ ![](ats-images/ats02.png "Info.plist 文件的源视图")](ats-images/ats02.png)
+[![](ats-images/ats02.png "Info.plist 文件的源视图")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > **注意：**如果你的应用程序需要连接到不安全的网站，您应该**始终**异常使用输入域`NSExceptionDomains`而不是关闭 ATS 完全使用`NSAllowsArbitraryLoads`。 `NSAllowsArbitraryLoads` 仅应在极端紧急情况下使用。

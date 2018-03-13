@@ -3,16 +3,16 @@ title: Windows
 description: "本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。 它介绍创建 windows 以及在 Xcode 和接口生成器中，从情节提要和.xib 文件加载它们和以编程方式使用它们的面板。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: bcf95bf481d58f21e4adce6039c3eb02ce24b938
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -29,7 +29,7 @@ Windows 可以是无模式状态 （例如文本编辑器，可以同时打开�
 
 面板是一种特殊的窗口 (基的一个子类`NSWindow`类)，，通常提供提供的辅助功能应用程序，如文本格式检查器和系统颜色选取器之类的实用程序窗口中。
 
-[ ![](window-images/intro01.png "编辑在 Xcode 中的窗口")](window-images/intro01.png)
+[![](window-images/intro01.png "编辑在 Xcode 中的窗口")](window-images/intro01.png#lightbox)
 
 在本文中，我们将介绍使用 Xamarin.Mac 应用程序中的 Windows 和面板的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
 
@@ -96,7 +96,7 @@ Apple 提供的建议以下准则：
 
 面板是一个辅助窗口，其中包含控件和影响的活动文档或选择 （如系统的颜色选取器中） 的选项：
 
-[ ![](window-images/panel01.png "颜色面板")](window-images/panel01.png)
+[![](window-images/panel01.png "颜色面板")](window-images/panel01.png#lightbox)
 
 面板可以是_应用特定_或_系统级_。 特定于应用程序面板 float 通过应用程序的文档窗口的顶部，并在应用程序是在后台时消失。 系统级面板 (如**字体**面板)，float 位于无论应用程序的所有打开窗口之上。 
 
@@ -112,7 +112,7 @@ Apple 提供的建议以下准则：
 
 大多数现代 macOS 应用程序提供辅助控件和选项会影响的活动文档或所选内容为_检查器_属于主窗口 (如**页**应用所示)，而不是使用面板 Windows:
 
-[ ![](window-images/panel02.png "示例检查器")](window-images/panel02.png)
+[![](window-images/panel02.png "示例检查器")](window-images/panel02.png#lightbox)
 
 有关详细信息，请参阅[面板](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1)Apple 的部分[OS X 人机接口指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)和我们[MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/)示例应用程序的完整实现**检查器界面**Xamarin.Mac 应用中。
 
@@ -122,11 +122,11 @@ Apple 提供的建议以下准则：
 
 时创建新的 Xamarin.Mac Cocoa 应用程序时，默认情况下将获得标准保留为空，窗口。 在中定义此 windows`.storyboard`自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案资源管理器**，双击`Main.storyboard`文件：
 
-[ ![](window-images/edit01.png "选择主情节提要")](window-images/edit01.png)
+[![](window-images/edit01.png "选择主情节提要")](window-images/edit01.png#lightbox)
 
 这将在 Xcode 的接口生成器中打开的窗口设计：
 
-[ ![](window-images/edit02.png "编辑在 Xcode 中 UI")](window-images/edit02.png)
+[![](window-images/edit02.png "编辑在 Xcode 中 UI")](window-images/edit02.png#lightbox)
 
 在**属性检查器**，有几个可用于定义和控制您的窗口的属性：
 
@@ -160,7 +160,7 @@ Apple 提供的建议以下准则：
 
 若要设置你的窗口的初始位置并控制它的大小，切换到**大小检查器**:
 
-[ ![](window-images/edit07.png "默认大小和位置")](window-images/edit07.png)
+[![](window-images/edit07.png "默认大小和位置")](window-images/edit07.png#lightbox)
 
 从此处你可以设置窗口的初始大小，使其最小和最大大小，屏幕上设置的初始位置并控制窗口周围的边框。
 
@@ -176,15 +176,15 @@ Apple 提供的建议以下准则：
 2. 选择`NSWindowController`在设计图面中。
 3. 切换到**标识检查器**查看，并输入`WindowController`作为**类名**: 
 
-    [ ![](window-images/windowcontroller01.png "设置的类名称")](window-images/windowcontroller01.png)
+    [![](window-images/windowcontroller01.png "设置的类名称")](window-images/windowcontroller01.png#lightbox)
 4. 保存所做的更改并返回到 Visual Studio for Mac 同步。
 5. A`WindowController.cs`文件将添加到项目中**解决方案资源管理器**适用于 Mac 的 Visual Studio 中： 
 
-    [ ![](window-images/windowcontroller02.png "选择 windows 控制器")](window-images/windowcontroller02.png)
+    [![](window-images/windowcontroller02.png "选择 windows 控制器")](window-images/windowcontroller02.png#lightbox)
 6. 重新打开在 Xcode 的接口生成器情节提要。
 7. `WindowController.h`文件将可供使用： 
 
-    [ ![](window-images/windowcontroller03.png "编辑 WindowController.h 文件")](window-images/windowcontroller03.png)
+    [![](window-images/windowcontroller03.png "编辑 WindowController.h 文件")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
@@ -194,21 +194,21 @@ Apple 提供的建议以下准则：
 
 例如，让我们来拖动从工具栏**库检查器**到中的窗口**界面编辑器**:
 
-[ ![](window-images/edit03.png "从库中选择一个工具栏")](window-images/edit03.png)
+[![](window-images/edit03.png "从库中选择一个工具栏")](window-images/edit03.png#lightbox)
 
 接下来，在中拖动**文本视图**并调整其以填充工具栏下方区域大小：
 
-[ ![](window-images/edit04.png "添加文本视图")](window-images/edit04.png)
+[![](window-images/edit04.png "添加文本视图")](window-images/edit04.png#lightbox)
 
 由于我们希望**文本视图**若要收缩和增长随窗口的大小的更改时，让我们切换到**约束编辑器**并添加以下约束：
 
-[ ![](window-images/edit05.png "编辑约束")](window-images/edit05.png)
+[![](window-images/edit05.png "编辑约束")](window-images/edit05.png#lightbox)
 
 通过单击为**红色我-无线数据交换内容**在编辑器的顶端和单击**添加 4 约束**，我们将指示文本视图粘在给定 X 和 Y 坐标和扩大或收缩水平和垂直作为调整窗口大小时。
 
 最后，让我们公开**文本视图**编写的代码使用**Outlet** (同时确保选择`ViewController.h`文件):
 
-[ ![](window-images/edit06.png "配置上的电源插座")](window-images/edit06.png)
+[![](window-images/edit06.png "配置上的电源插座")](window-images/edit06.png#lightbox)
 
 保存所做的更改并切换回 Visual Studio for Mac 与 Xcode 同步。
 
@@ -237,17 +237,17 @@ Apple 提供的建议以下准则：
 
 默认情况下，新的 Xamarin.Mac 应用程序将自动显示中定义的窗口`MainWindow.xib`文件已启动：
 
-[ ![](window-images/display01.png "运行示例窗口")](window-images/display01.png)
+[![](window-images/display01.png "运行示例窗口")](window-images/display01.png#lightbox)
 
 由于我们已修改该窗口上面的设计，它现在包括默认工具栏和**文本视图**控件。 以下主题中`Info.plist`文件负责显示此窗口：
 
-[ ![](window-images/display00.png "编辑 Info.plist")](window-images/display00.png)
+[![](window-images/display00.png "编辑 Info.plist")](window-images/display00.png#lightbox)
 
 **主界面**下拉列表中用于选择将用作为主应用程序 UI 的情节提要 (在这种情况下`Main.storyboard`)。
 
 视图控制器自动添加到项目中以控制 （以及其主视图） 显示该主窗口。 在中定义`ViewController.cs`文件并附加到**文件的所有者**中在接口生成器**标识检查器**:
 
-[ ![](window-images/display02.png "设置文件的所有者")](window-images/display02.png)
+[![](window-images/display02.png "设置文件的所有者")](window-images/display02.png#lightbox)
 
 对于我们的窗口中，我们想要其具有的标题，`untitled`它首次打开时因此让我们替代`ViewWillAppear`中的方法`ViewController.cs`以如下所示：
 
@@ -313,11 +313,11 @@ MyWindow.Close();
 
 在 macOS，Apple 提供了一种方法通知用户，窗口中的内容 (`NSWindow`) 已由用户修改，并需要保存。 如果该窗口包含将修改的内容，将显示在它的一个小的黑色点**关闭**小组件：
 
-[ ![](window-images/close01.png "具有已修改的标记的窗口")](window-images/close01.png)
+[![](window-images/close01.png "具有已修改的标记的窗口")](window-images/close01.png#lightbox)
 
 如果用户尝试关闭窗口或退出窗口的内容的 Mac 应用程序时有未保存更改，你应呈现[对话框](~/mac/user-interface/dialog.md)或[模式表](~/mac/user-interface/dialog.md)和允许用户保存他们的更改第一个：
 
-[ ![](window-images/close02.png "保存工作表关闭窗口时显示的一个")](window-images/close02.png)
+[![](window-images/close02.png "保存工作表关闭窗口时显示的一个")](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>将标记为已修改的窗口
 
@@ -485,11 +485,11 @@ void NewDocument (NSObject sender) {
 
 此代码创建我们窗口控制器的新版本，加载新窗口，使它 Main 和密钥窗口中，并将其设置标题。 现在，如果我们运行我们的应用程序，并选择**新建**从**文件**菜单将打开一个新的编辑器窗口，并将其显示：
 
-[ ![](window-images/display04.png "已添加新的未命名的窗口")](window-images/display04.png)
+[![](window-images/display04.png "已添加新的未命名的窗口")](window-images/display04.png#lightbox)
 
 如果我们打开**Windows**菜单上，你可以看到应用程序自动跟踪和处理我们打开的窗口：
 
-[ ![](window-images/display05.png "Widows 菜单")](window-images/display05.png)
+[![](window-images/display05.png "Widows 菜单")](window-images/display05.png#lightbox)
 
 有关使用 Xamarin.Mac 应用程序中的菜单的详细信息，请参阅我们[与菜单一起使用](~/mac/user-interface/menu.md)文档。
 
@@ -559,7 +559,7 @@ SetFrame (frame, true);
 
 若要监视大小更改，请首先确保你已在 Xcode 的接口生成器窗口控制器分配的自定义类。 例如，`MasterWindowController`在下面的示例：
 
-[ ![](window-images/resize01.png "标识检查器")](window-images/resize01.png)
+[![](window-images/resize01.png "标识检查器")](window-images/resize01.png#lightbox)
 
 接下来，编辑自定义窗口控制器类和监视器`DidResize`控制器的窗口接收通知的实时大小的更改上的事件。 例如:
 
@@ -643,11 +643,11 @@ public override void AwakeFromNib ()
 
 我们还监视`WillClose`窗口和检查的状态的事件`DocumentEdited`属性。 如果它是`true`我们需要使用户能够将所做的更改保存到文件。 如果我们运行我们的应用程序，并输入一些文本，将显示该点：
 
-[ ![](window-images/file01.png "更改的窗口")](window-images/file01.png)
+[![](window-images/file01.png "更改的窗口")](window-images/file01.png#lightbox)
 
 如果我们尝试关闭窗口，我们将获取警报：
 
-[ ![](window-images/file02.png "显示保存对话框")](window-images/file02.png)
+[![](window-images/file02.png "显示保存对话框")](window-images/file02.png#lightbox)
 
 如果我们要从文件加载文档我们可以将该窗口的标题设置为文件的名称使用`window.SetTitleWithRepresentedFilename (Path.GetFileName(path));`方法 (假设`path`是一个字符串，表示所打开的文件)。 此外，我们可以设置的文件使用的 URL`window.RepresentedUrl = url;`方法。
 
@@ -690,11 +690,11 @@ void OpenDialog (NSObject sender)
 
 现在我们运行我们的应用程序时，如果选择**打开...**从**文件**菜单中，选择从文本文件**打开**对话框框中，并将其打开：
 
-[ ![](window-images/file03.png "打开的对话框")](window-images/file03.png)
+[![](window-images/file03.png "打开的对话框")](window-images/file03.png#lightbox)
 
 将显示该文件并将使用该文件的图标设置标题：
 
-[ ![](window-images/file04.png "加载文件的内容")](window-images/file04.png)
+[![](window-images/file04.png "加载文件的内容")](window-images/file04.png#lightbox)
 
 <a name="Adding_a_New_Window_to_a_Project" />
 
@@ -707,22 +707,22 @@ void OpenDialog (NSObject sender)
 1. 在**解决方案资源管理器**，双击`Main.storyboard`文件以打开它以在 Xcode 的接口生成器中编辑。
 2. 将一个新**窗口控制器**从**库**拖放到**设计图面**:
 
-    [ ![](window-images/new01.png "在库中选择新的窗口控制器")](window-images/new01.png)
+    [![](window-images/new01.png "在库中选择新的窗口控制器")](window-images/new01.png#lightbox)
 3. 在**标识检查器**，输入`PreferencesWindow`为**情节提要 ID**: 
 
-    [ ![](window-images/new02.png "设置情节提要 ID。")](window-images/new02.png)
+    [![](window-images/new02.png "设置情节提要 ID。")](window-images/new02.png#lightbox)
 5. 设计你的接口： 
 
-    [ ![](window-images/new03.png "设计用户界面")](window-images/new03.png)
+    [![](window-images/new03.png "设计用户界面")](window-images/new03.png#lightbox)
 6. 打开应用程序菜单 (`MacWindows`)，选择**首选项...**，单击并拖动到新的窗口： 
 
-    [ ![](window-images/new05.png "创建 segue")](window-images/new05.png)
+    [![](window-images/new05.png "创建 segue")](window-images/new05.png#lightbox)
 7. 选择**显示**从弹出菜单中。
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 如果我们运行代码并选择**首选项...**从**应用程序菜单**，将显示窗口：
 
-[ ![](window-images/new04.png "示例首选项菜单")](window-images/new04.png)
+[![](window-images/new04.png "示例首选项菜单")](window-images/new04.png#lightbox)
 
 <a name="Working_with_Panels" />
 
@@ -742,7 +742,7 @@ void OpenDialog (NSObject sender)
 
 在**属性检查器**，可以使用特定于面板的以下选项：
 
-[ ![](window-images/panel03.png "属性检查器")](window-images/panel03.png)
+[![](window-images/panel03.png "属性检查器")](window-images/panel03.png#lightbox)
 
 - **样式**-，可以调整从面板的样式： 正则面板 （如下所示的标准窗口）、 实用工具面板 （具有较小的标题栏），HUD 面板 (是半透明并且标题栏背景的一部分)。
 - **非正在激活**-确定中面板成为密钥窗口。
@@ -754,20 +754,20 @@ void OpenDialog (NSObject sender)
 1. 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**.
 2. 在新的文件对话框中，选择**Xamarin.Mac** > **Cocoa 窗口与控制器**:
 
-    [ ![](window-images/panels00.png "添加新的窗口控制器")](window-images/panels00.png)
+    [![](window-images/panels00.png "添加新的窗口控制器")](window-images/panels00.png#lightbox)
 3. 对“名称”输入 `DocumentPanel`，然后单击“新建”按钮。
 4. 双击`DocumentPanel.xib`文件以打开它以在接口生成器中编辑： 
 
-    [ ![](window-images/new02.png "编辑 pannel")](window-images/new02.png)
+    [![](window-images/new02.png "编辑 pannel")](window-images/new02.png#lightbox)
 5. 删除现有窗口并将从面板拖**库检查器**中**界面编辑器**: 
 
-    [ ![](window-images/panels01.png "删除现有窗口")](window-images/panels01.png)
+    [![](window-images/panels01.png "删除现有窗口")](window-images/panels01.png#lightbox)
 6. 最多挂钩面板 **文件的所有者*-**窗口*- **Outlet**: 
 
-    [ ![](window-images/panels02.png "拖动到面板连接")](window-images/panels02.png)
+    [![](window-images/panels02.png "拖动到面板连接")](window-images/panels02.png#lightbox)
 7. 切换到**标识检查器**和设置面板的类为`DocumentPanel`: 
 
-    [ ![](window-images/panels03.png "设置面板的类")](window-images/panels03.png)
+    [![](window-images/panels03.png "设置面板的类")](window-images/panels03.png#lightbox)
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 7. 编辑`DocumentPanel.cs`文件并将类定义更改为以下： 
 
@@ -788,7 +788,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 如果我们运行我们的应用程序时，面板将显示：
 
-[ ![](window-images/panels04.png "正在运行的应用中的面板")](window-images/panels04.png)
+[![](window-images/panels04.png "正在运行的应用中的面板")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > 面板 Windows 已被否决通过 Apple 和应替换为**检查器**。 有关创建的完整示例**检查器**在 Xamarin.Mac 应用中，请参阅我们[MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/)示例应用程序。
@@ -805,5 +805,5 @@ public override void DidFinishLaunching (NSNotification notification)
 - [MacInspector （示例）](https://developer.xamarin.com/samples/mac/MacInspector/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [使用菜单](~/mac/user-interface/menu.md)
-- [OS X 用户界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

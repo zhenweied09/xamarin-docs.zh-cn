@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/14/2016
-ms.openlocfilehash: 88f9a86173756738d44f099b13177489226fa0e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 732fd9808ded4bf97e99e7ab0e6ab63b989452d1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-watch"></a>Hello 监视
 
@@ -150,7 +150,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 1. 按**调试**按钮以触发生成和模拟器启动。
 
-    [ ![](hello-watch-images/readytodebug-sml.png "Visual Studio 界面元素")](hello-watch-images/readytodebug.png)
+    [![](hello-watch-images/readytodebug-sml.png "Visual Studio 界面元素")](hello-watch-images/readytodebug.png#lightbox)
 
 当模拟器启动时，按按钮以递增标签。
 祝贺你，您就可以得到 Watch 应用 ！

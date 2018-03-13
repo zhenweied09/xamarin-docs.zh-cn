@@ -6,11 +6,11 @@ ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4a83afca753d1131e3486004443f9c4a895f6fbc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging-integrations"></a>调试集成
 
@@ -43,11 +43,11 @@ defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
 
 然后重新启动 Xamarin 的工作簿。 一旦您这样做，你应看到**检查元素**出现在你右键单击上下文菜单中，和新**开发人员**窗格中将可在工作簿首选项中。 此选项可以选择你是否想在启动时打开的开发人员工具：
 
-[![开发人员窗格](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png)
+[![开发人员窗格](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
 对此首选项以及是只重新启动的-你将需要重新启动以使其生效新工作簿上的工作簿客户端。 激活通过上下文菜单或首选项的开发人员工具将显示熟悉的 Safari UI:
 
-[![Safari 开发人员工具](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png)
+[![Safari 开发人员工具](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
 有关使用 Safari 开发人员工具的信息，请参阅[WebKit 检查器文档][webkit-docs]。
 
@@ -61,6 +61,6 @@ C:\Windows\System32\F12\F12Chooser.exe
 
 运行 f12 键选择器，你应会看到为列表中的工作簿客户端面提供支持的嵌入的实例。 选择它，然后从 Internet 资源管理器的调试工具不会显示，熟悉 F12 附加到客户端：
 
-[![F12 工具](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png)
+[![F12 工具](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

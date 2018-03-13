@@ -3,14 +3,15 @@ title: "章 26 的摘要。 自定义布局"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: dbddaaf2f4a5ad9d7161013f2ae11466b953e20c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>章 26 的摘要。 自定义布局
 
@@ -98,9 +99,9 @@ Xamarin.Forms 包括多个类派生自[ `Layout<View>` ](https://developer.xamar
 每个类都派生自`Layout`或`Layout<T>`必须重写`OnSizeRequest`或`OnMeasure`。 这是其中布局类将确定其自身的大小，它通过调用获取及其子级的大小通常基于`GetSizeRequest`或`Measure`子级上。 之前和之后调用`OnSizeRequest`或`OnMeasure`，`GetSizeRequest`或`Measure`进行调整基于以下属性：
 
 - [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)类型的`double`，影响`Request`属性 `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)类型的`double`，影响`Request`属性 `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/)类型的`double`，影响`Minimum`属性 `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/)类型的`double`，影响`Minimum`属性 `SizeRequest`
+- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) 类型的`double`，影响`Request`属性 `SizeRequest`
+- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) 类型的`double`，影响`Minimum`属性 `SizeRequest`
+- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) 类型的`double`，影响`Minimum`属性 `SizeRequest`
 
 ### <a name="infinite-constraints"></a>无限约束
 
@@ -159,7 +160,7 @@ Xamarin.Forms 包括多个类派生自[ `Layout<View>` ](https://developer.xamar
 
 [ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid)示例演示如何`UniformGridLayout`:
 
-[![三重的照片网格的屏幕截图](images/ch26fg08-small.png "统一的网格布局")](images/ch26fg08-large.png "统一的网格布局")
+[![三重的照片网格的屏幕截图](images/ch26fg08-small.png "统一的网格布局")](images/ch26fg08-large.png#lightbox "统一的网格布局")
 
 ### <a name="overlapping-children"></a>重叠的子级
 
@@ -174,7 +175,7 @@ A`Layout<T>`派生可以重叠及其子级。 但是，在其顺序呈现子级`
 
 [ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs)类[ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)库定义了一个附加的属性，以指示呈现顺序，因此允许之一其若要在其他之上显示的子级。 [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile)示例演示这一操作：
 
-[![学生卡文件网格的三个屏幕截图](images/ch26fg10-small.png "重叠布局子级")](images/ch26fg10-large.png "重叠布局子级")
+[![学生卡文件网格的三个屏幕截图](images/ch26fg10-small.png "重叠布局子级")](images/ch26fg10-large.png#lightbox "重叠布局子级")
 
 ### <a name="more-attached-bindable-properties"></a>连接可绑定属性
 

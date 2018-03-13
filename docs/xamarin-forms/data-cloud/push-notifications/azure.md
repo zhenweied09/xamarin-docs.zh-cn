@@ -5,32 +5,35 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: cccbe64f69b926ced77403bcf85540ef1060dbac
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>从 Azure 移动应用程序发送推送通知
 
 _Azure 通知中心提供可缩放的推送基础结构用于发送移动推送通知从任意后端向任何移动平台，同时无后端不必与不同的平台通知系统通信的复杂性。此文章介绍了如何使用 Azure 通知中心将推送通知从 Azure Mobile Apps 实例发送到 Xamarin.Forms 应用程序。_
 
-## <a name="overview"></a>概述
+> [!VIDEO https://youtube.com/embed/le2lDY22xwM]
+
+**Azure 通过推送通知中心与 Xamarin.Forms， [Xamarin 大学](https://university.xamarin.com/)**
 
 推送通知使用以提供信息，例如一条消息，包括从后端系统上的移动设备的应用程序，以提高应用程序关注度和使用率。 可以发送通知在任何时候，即使用户不活跃地使用目标应用程序。
 
 后端系统将推送通知发送到移动设备通过平台通知系统 (PNS) 下, 图中所示：
 
-[![](azure-images/pns.png "平台通知系统")](azure-images/pns-large.png "平台通知系统")
+[![](azure-images/pns.png "平台通知系统")](azure-images/pns-large.png#lightbox "平台通知系统")
 
 若要发送推送通知后, 端系统，请联系特定于平台的 PNS 将通知发送到客户端应用程序实例。 这会大大提高的复杂性的后端时跨平台推送通知是必需的因为后端必须使用每个特定于平台的 PNS API 和协议。
 
 Azure 通知中心消除这种复杂性由提取的详细信息的不同平台通知系统，允许跨平台通知的发送一次的 API 调用，如下面的关系图中所示：
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 若要发送推送通知后, 端系统仅联系人 Azure 通知中心，这反过来使用不同平台通知系统进行通信，从而减小的后端复杂性代码该发送推送通知。
 
@@ -44,7 +47,7 @@ Azure 移动应用都使用通知中心的推送通知的内置支持。 从 Azu
 
 示例应用程序演示其数据存储在 Azure Mobile Apps 实例 todo 列表应用程序。 每次新项添加到 Azure Mobile Apps 实例中，一条推送通知发送到 Xamarin.Forms 应用程序。 以下屏幕快照显示的每个平台显示已接收的推送通知：
 
-[![](azure-images/screenshots.png "示例应用程序接收推送通知")](azure-images/screenshots-large.png "示例应用程序接收推送通知")
+[![](azure-images/screenshots.png "示例应用程序接收推送通知")](azure-images/screenshots-large.png#lightbox "示例应用程序接收推送通知")
 
 有关 Azure 通知中心的详细信息，请参阅[Azure 通知中心](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/)和[向 Xamarin.Forms 应用添加推送通知](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/)。
 
@@ -118,7 +121,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 当通过 APNS 注册的 iOS 应用程序时，它必须指定想要接收的推送通知的类型。 `RegisterUserNotificationSettings`方法注册的应用程序可以接收，通知的类型与`RegisterForRemoteNotifications`注册从 APNS 中接收推送通知的方法。
 
 > [!NOTE]
-> **请注意**： 未能调用`RegisterUserNotificationSettings`方法将导致应用程序以无提示方式接收的推送通知。
+> 未能调用`RegisterUserNotificationSettings`方法将导致应用程序以无提示方式接收的推送通知。
 
 <a name="ios_registration_response" />
 
@@ -146,7 +149,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 此方法创建简单的通知消息模板为 JSON，并注册设备以接收从通知中心发送模板通知。
 
 > [!NOTE]
-> **请注意**:`FailedToRegisterForRemoteNotifications`应实现重写用于处理无网络连接等情况。 这是重要的因为用户可能会启动时应用程序脱机。
+> `FailedToRegisterForRemoteNotifications`应实现重写用于处理无网络连接等情况。 这是重要的因为用户可能会启动时应用程序脱机。
 
 <a name="ios_process_incoming" />
 
@@ -177,7 +180,7 @@ public override void DidReceiveRemoteNotification(
 `userInfo`字典包含`aps`键，其值是`alert`利用剩余的通知数据的字典。 检索此字典时，与`string`在对话框中显示的通知消息。
 
 > [!NOTE]
-> **请注意**： 如果应用程序未运行在一条推送通知到达时，将启动应用程序但`DidReceiveRemoteNotification`方法不会处理通知。 相反，获取通知负载并做出相应响应从`WillFinishLaunching`或`FinishedLaunching`重写。
+> 如果应用程序未运行在一条推送通知到达时，将启动应用程序但`DidReceiveRemoteNotification`方法不会处理通知。 相反，获取通知负载并做出相应响应从`WillFinishLaunching`或`FinishedLaunching`重写。
 
 有关 APNS 的详细信息，请参阅[在 iOS 中的推送通知](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md)。
 
@@ -330,7 +333,7 @@ public class FirebaseNotificationService : FirebaseMessagingService
         intent.AddFlags(ActivityFlags.ClearTop);
         var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-        var notificationBuilder = new Notification.Builder(this)
+        var notificationBuilder = new NotificationCompat.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
             .SetContentTitle("New Todo Item")
             .SetContentText(messageBody)

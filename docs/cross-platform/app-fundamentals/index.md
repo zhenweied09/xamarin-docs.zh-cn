@@ -3,22 +3,22 @@ title: "应用程序基础知识"
 description: "应用程序的核心概念"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 9e4e7705e1ca29b6abf716a48ae3fa0e7c1a19ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c5b823370e5b65fbcf9ba366cb89c05e003b1a89
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>应用程序基础知识
 
 本部分提供的指南上的一些较常见的操作任务或开发人员需要时应注意的开发移动应用程序的概念。
 
-##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[构建跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 通过选择 Xamarin，并保留记住几件事，设计和开发您的移动应用程序时，可以实现跨移动平台共享的巨大代码、 缩短上市时间、 利用现有 talent，满足客户需求对于移动访问，并减少跨平台复杂性。&nbsp;本文档概述了实现这些优势实用程序和工作效率应用程序的重要原则。
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/27/2018
 
 可移植类库项目，可以生成和分发包含共享的代码以在多个平台上运行的程序集。 若要创建可移植类库 （或"PCL"） 第一次选择哪些平台为目标，然后编写代码针对.NET Framework 中定义这些平台的配置文件提供一子组。 本文档介绍如何创建和 Xamarin 中使用 Pcl。
 
-##  <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[共享的项目](~/cross-platform/app-fundamentals/shared-projects.md)
+##  <a name="shared-projectscross-platformapp-fundamentalsshared-projectsmd"></a>[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)
 
 共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。 该代码编译为每个引用的项目的一部分，并可以包括编译器指令来帮助整合共享的代码库中的特定于平台的功能。 本文讨论了共享项目的工作原理以及如何创建和使用它们与 Xamarin 项目。
 

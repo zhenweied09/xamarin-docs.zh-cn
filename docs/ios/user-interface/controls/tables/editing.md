@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>编辑
 
 通过重写中的方法启用表的编辑功能`UITableViewSource`子类。 最简单的编辑行为是可以使用单个方法重写实现轻扫删除手势。
 可以通过编辑模式中的表实现更复杂的编辑 （包括移动行）。
 
-本指南的关注：
-
-- [轻扫以删除](#Swipe_to_Delete)
-- [编辑模式](#Edit_Mode)
-- [行插入编辑样式](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>轻扫删除
 
 轻扫以删除功能是在用户期望的 iOS 中的自然笔势。 
 
- [ ![](editing-images/image10.png "轻扫到删除的示例")](editing-images/image10.png)
+ [![](editing-images/image10.png "轻扫到删除的示例")](editing-images/image10.png#lightbox)
 
 有三个方法重写，会影响要显示的轻扫笔势**删除**单元中的按钮：
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 对于本例`UITableViewSource`已更新为使用`List<TableItem>`（而不字符串数组） 为数据源，因为它支持添加和删除项集合中。
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>编辑模式
 
 当表处于编辑模式时用户在每个行，这将显示删除按钮时接触上看到红色停止小组件。 表还显示一个句柄图标，以指示可以拖动行进行更改的顺序。
 **TableEditMode**示例实现这些功能，如所示。
 
- [ ![](editing-images/image11.png "TableEditMode 示例实现这些功能，如所示")](editing-images/image11.png)
+ [![](editing-images/image11.png "TableEditMode 示例实现这些功能，如所示")](editing-images/image11.png#lightbox)
 
 上有多种不同方法`UITableViewSource`影响表的编辑模式行为：
 
@@ -136,13 +127,12 @@ table.SetEditing (true, true);
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>行插入编辑样式
 
 从表中的行插入是一种常见用户界面 – 标准 iOS 应用中的主要示例是**编辑联系人**屏幕。 此屏幕截图中显示的行插入功能的工作原理 – 在编辑模式下没有附加行 （单击） 时将其他行插入到数据。 编辑完成时，临时**（添加新）**该行将被移除。
 
- [ ![](editing-images/image12.png "编辑完成后，新添加的临时删除行")](editing-images/image12.png)
+ [![](editing-images/image12.png "编辑完成后，新添加的临时删除行")](editing-images/image12.png#lightbox)
 
 上有多种不同方法`UITableViewSource`影响表的编辑模式行为。 这些方法具有在示例代码中实现了，如下所示：
 

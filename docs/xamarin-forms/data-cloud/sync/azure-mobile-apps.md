@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b7756c63901d3b4fbfea70587b3fdf8e5cf9df72
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>使用 Azure 移动应用程序中同步脱机数据
 
@@ -133,7 +133,7 @@ public async Task SyncAsync()
 请求由执行`IMobileServiceSyncTable.PullAsync`对单个表的方法。 第一个参数`PullAsync`方法是仅在移动设备使用的查询名称。 提供在 Azure 移动客户端 SDK 执行名称结果的非 null 查询*增量同步*，其中每次请求操作返回的结果，最新`updatedAt`从结果的时间戳存储在局部变量系统表。 将后续请求操作然后只能检索记录后该时间戳。 或者，*完全同步*可以通过传递`null`作为查询名称，这会导致正在检索每个请求操作上的所有记录。 任何同步操作后，接收到的数据插入到本地存储中。
 
 > [!NOTE]
-> **请注意**： 如果针对具有挂起的本地更新的表执行请求，则请求第一次将在同步上下文上执行推送。 这将减少已排入队列的更改和新数据从 Azure Mobile Apps 实例之间的冲突。
+> 如果针对具有挂起的本地更新的表执行请求，则请求将先执行推送对同步上下文。 这将减少已排入队列的更改和新数据从 Azure Mobile Apps 实例之间的冲突。
 
 `SyncAsync`方法还包含用于处理冲突，这两个本地存储区中和在 Azure Mobile Apps 实例中更改同一记录时的基本实现。 在本地存储区和在 Azure Mobile Apps 实例中，数据已被更新冲突时`SyncAsync`方法将更新存储在 Azure Mobile Apps 实例中的数据从本地存储中的数据。 当任何其他冲突发生时，`SyncAsync`方法会放弃本地更改。 这将处理方案本地更改所在的 Azure Mobile Apps 实例从已删除的数据。
 
@@ -150,7 +150,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 调用`PurgeAsync`还会触发推送操作。 因此，本地标记为已完成的任何项将从本地存储区中删除之前发送到 Azure Mobile Apps 实例中。 但是，如果有与 Azure Mobile Apps 实例同步挂起的操作，则清除将引发`InvalidOperationException`除非`force`参数设置为`true`。 使用替代策略是检查`IMobileServiceSyncContext.PendingOperations`属性，它返回挂起的操作尚未已推送到 Azure Mobile Apps 实例，并仅执行清除，如果属性为零的数。
 
 > [!NOTE]
-> **请注意**： 调用`PurgeAsync`与`force`参数设置为`true`将丢失任何挂起的更改。
+> 调用`PurgeAsync`与`force`参数设置为`true`将丢失任何挂起的更改。
 
 ## <a name="initiating-synchronization"></a>启动同步
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 544aad278b9bc66120e188eec54fa68be71dc625
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 52d300ac583ec2313d3169c7b2adb73c15ebe4fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboardxib-less-user-interface-design"></a>.storyboard/.xib-less 用户界面设计
 
@@ -25,7 +25,7 @@ _本文介绍如何直接从 C# 代码，而无需.storyboard 文件、.xib 文�
 
 此外可以直接在 C# 代码中创建部分或全部 Xamarin.Mac 应用程序的 UI。 在本文中，我们将介绍在 C# 代码中创建用户界面和用户界面元素的基础知识。
 
-[![Visual Studio for Mac 代码编辑器](xibless-ui-images/intro01.png "Visual Studio for Mac 代码编辑器")](xibless-ui-images/intro01-large.png)
+[![Visual Studio for Mac 代码编辑器](xibless-ui-images/intro01.png "Visual Studio for Mac 代码编辑器")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 

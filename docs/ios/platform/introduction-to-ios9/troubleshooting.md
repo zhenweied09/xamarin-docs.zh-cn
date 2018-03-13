@@ -3,16 +3,16 @@ title: "疑难解答"
 description: "本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
+ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ea274ca198a4ca76a87198b02b6229e0e1c88b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -32,7 +32,7 @@ iOS Xcode 7 功能的设计器支持针对即将到来的周期 6 功能版本�
 
 在 Xcode 中，选择**Xcode**菜单然后**首选项...**  > **下载**:
 
-[ ![](troubleshooting-images/ios8.png "iOS 8 模拟器下载")](troubleshooting-images/ios8.png)
+[![](troubleshooting-images/ios8.png "iOS 8 模拟器下载")](troubleshooting-images/ios8.png#lightbox)
 
 单击**检查和立即安装**按钮以重新安装 iOS 8 模拟器。
 
@@ -139,26 +139,26 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 当尝试在实际 iOS 硬件上运行你的 Xamarin.iOS 应用程序的 iOS 9 版本，你可能会收到一条消息指出在设备上开发人员帐户不受信任。 例如:
 
-[ ![](troubleshooting-images/untrusted01.png "不受信任的企业开发人员警报")](troubleshooting-images/untrusted01.png)
+[![](troubleshooting-images/untrusted01.png "不受信任的企业开发人员警报")](troubleshooting-images/untrusted01.png#lightbox)
 
 若要解决此问题，请执行以下操作：
 
 1. 在开发 mac。 上启动 Xcode （最新的 beta 版本）
 2. 选择**设备**从**窗口**菜单打开设备窗口： 
 
-    [ ![](troubleshooting-images/untrusted02.png "设备窗口")](troubleshooting-images/untrusted02.png)
+    [![](troubleshooting-images/untrusted02.png "设备窗口")](troubleshooting-images/untrusted02.png#lightbox)
 3. 下**设备**端面板中，选择你的设备，右键单击并选择**显示预配配置文件...**: 
 
-    [ ![](troubleshooting-images/untrusted03.png "SShow 预配配置文件")](troubleshooting-images/untrusted03.png)
+    [![](troubleshooting-images/untrusted03.png "SShow 预配配置文件")](troubleshooting-images/untrusted03.png#lightbox)
 4. 选择当前在该设备，然后单击每个预配配置文件 **-** 按钮以将其删除： 
 
-    [ ![](troubleshooting-images/untrusted04.png "删除预配配置文件")](troubleshooting-images/untrusted04.png)
+    [![](troubleshooting-images/untrusted04.png "删除预配配置文件")](troubleshooting-images/untrusted04.png#lightbox)
 5. 从**Xcode**菜单上，选择**首选项...**和**帐户**: 
 
-    [ ![](troubleshooting-images/untrusted05.png "Xcode 帐户首选项")](troubleshooting-images/untrusted05.png)
+    [![](troubleshooting-images/untrusted05.png "Xcode 帐户首选项")](troubleshooting-images/untrusted05.png#lightbox)
 6. 单击**查看详细信息...**按钮，然后单击**下载所有**按钮： 
 
-    [ ![](troubleshooting-images/untrusted06.png "下载所有配置文件")](troubleshooting-images/untrusted06.png)
+    [![](troubleshooting-images/untrusted06.png "下载所有配置文件")](troubleshooting-images/untrusted06.png#lightbox)
 7. 更新完成列表后，单击**完成**按钮，然后关闭首选项窗口。
 8. 删除的 Xamarin.iOS 应用程序已尝试从 iOS 设备进行测试的现有版本。
 9. 返回到 Visual Studio for Mac，执行一个干净的生成并尝试在设备上重新运行该应用程序。

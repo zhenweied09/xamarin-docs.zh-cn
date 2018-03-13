@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 004f7c815a1629310ba4c0f4c6f4219581a12366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-watch-face"></a>创建手表表盘
 
@@ -22,11 +22,11 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 在本演练中，创建一个基本的监视表面服务来演示创建自定义的 Android 带手表表盘的 essentials。 初始监视表面服务显示显示的当前时间以小时和分钟的简单数字监视： 
 
-[![数字手表表盘](creating-a-watchface-images/01-initial-face.png "示例的初始数字手表表盘的屏幕截图")](creating-a-watchface-images/01-initial-face.png)
+[![数字手表表盘](creating-a-watchface-images/01-initial-face.png "示例的初始数字手表表盘的屏幕截图")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 开发和测试此数字手表表盘后，会将它升级到更复杂，这与三个之手的模拟手表表盘添加更多代码： 
 
-[ ![模拟手表表盘](creating-a-watchface-images/02-example-watchface.png "的最终模拟手表表盘示例屏幕截图")](creating-a-watchface-images/02-example-watchface.png)
+[![模拟手表表盘](creating-a-watchface-images/02-example-watchface.png "的最终模拟手表表盘示例屏幕截图")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 观看表面服务捆绑在一起，但作为磨损应用程序的一部分安装。 在以下示例中，`MainActivity`包含没有什么比磨损应用模板中的代码，以便可以打包监视表面服务，并将其部署到智能监视应用程序的一部分。 实际上，此应用程序将充当纯粹获取监视表面服务加载到磨损设备 （或仿真程序） 的工具用于调试和测试。 
 
@@ -47,11 +47,11 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![新建项目对话框](creating-a-watchface-images/03-wear-project-vs-sml.png "选择磨损的应用程序中新项目对话框")](creating-a-watchface-images/03-wear-project-vs.png)
+[![新建项目对话框](creating-a-watchface-images/03-wear-project-vs-sml.png "选择磨损的应用程序中新项目对话框")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![新建项目对话框](creating-a-watchface-images/03-wear-project-xs-sml.png "选择磨损的应用程序中新项目对话框")](creating-a-watchface-images/03-wear-project-xs.png)
+[![新建项目对话框](creating-a-watchface-images/03-wear-project-xs-sml.png "选择磨损的应用程序中新项目对话框")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![包名称设置](creating-a-watchface-images/04-package-name-vs.png "将包名称设置为 com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png)
+[![包名称设置](creating-a-watchface-images/04-package-name-vs.png "将包名称设置为 com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![包名称设置](creating-a-watchface-images/04-package-name-xs.png "将包名称设置为 com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png)
+[![包名称设置](creating-a-watchface-images/04-package-name-xs.png "将包名称设置为 com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -72,13 +72,13 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 此外，向下滚动并启用**INTERNET**和**WAKE_LOCK**权限： 
 
-[ ![所需的权限](creating-a-watchface-images/05-required-permissions-vs.png "启用 INTERNET 和 WAKE_LOCK 权限")](creating-a-watchface-images/05-required-permissions-vs.png)
+[![所需的权限](creating-a-watchface-images/05-required-permissions-vs.png "启用 INTERNET 和 WAKE_LOCK 权限")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 将最低 Android 版本设置为**Android 5.1 （API 级别 22）**。 此外，可以启用**Internet**和**WakeLock**权限：
 
-[ ![所需的权限](creating-a-watchface-images/05-required-permissions-xs.png "启用 Internet 和 WakeLock 权限")](creating-a-watchface-images/05-required-permissions-xs.png)
+[![所需的权限](creating-a-watchface-images/05-required-permissions-xs.png "启用 Internet 和 WakeLock 权限")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -91,24 +91,24 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 启动 NuGet 包管理器 (在 Visual Studio 中，右键单击**引用**中**解决方案资源管理器**和选择**管理 NuGet 包...**).项目更新为最新稳定版本**Xamarin.Android.Wear**: 
 
-[ ![NuGet 包管理器添加](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "添加 Xamarin.Android.Wear 包")](creating-a-watchface-images/06-add-wear-pkg-vs.png)
+[![NuGet 包管理器添加](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "添加 Xamarin.Android.Wear 包")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 接下来，如果**Xamarin.Android.Support.v13**是安装，将其卸载：
 
-[ ![NuGet 包管理器删除](creating-a-watchface-images/07-uninstall-v13-sml.png "删除 Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png)
+[![NuGet 包管理器删除](creating-a-watchface-images/07-uninstall-v13-sml.png "删除 Xamarin.Support.v13")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 启动 NuGet 包管理器 (在适用于 Mac 的 Visual Studio，右键单击**包**中**解决方案窗格**和选择**添加包...**).项目更新为最新稳定版本**Xamarin.Android.Wear**: 
 
-[ ![NuGet 包管理器添加](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "添加 Xamarin.Android.Wear 包")](creating-a-watchface-images/06-add-wear-pkg-xs.png)
+[![NuGet 包管理器添加](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "添加 Xamarin.Android.Wear 包")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
 生成并在磨损设备或仿真器上运行应用程序 (有关如何执行此操作的详细信息，请参阅[入门](~/android/wear/get-started/index.md)指南)。 你应看到以下应用程序屏幕磨损设备上：
 
-[ ![应用屏幕快照](creating-a-watchface-images/08-app-screen.png "磨损设备上的应用程序屏幕")](creating-a-watchface-images/08-app-screen.png)
+[![应用屏幕快照](creating-a-watchface-images/08-app-screen.png "磨损设备上的应用程序屏幕")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 此时，基本磨损应用程序没有监视表面功能因为尚未提供监视表面服务实现。 将下一步添加此服务。 
 
@@ -117,7 +117,7 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 Android 磨损实现观看通过表面`CanvasWatchFaceService`类。 `CanvasWatchFaceService` 派生自`WatchFaceService`，其自身派生自`WallpaperService`下图中所示： 
 
-[ ![继承关系图](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService 继承关系图")](creating-a-watchface-images/09-inheritance-diagram.png)
+[![继承关系图](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService 继承关系图")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` 包括嵌套`CanvasWatchFaceService.Engine`; 它实例化`CanvasWatchFaceService.Engine`执行的绘制手表表盘的实际工作的对象。 `CanvasWatchFaceService.Engine` 派生自`WallpaperService.Engine`上图中所示。 
 
@@ -317,11 +317,11 @@ public override void OnTimeTick()
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![生成操作](creating-a-watchface-images/10-android-resource-vs.png "组生成到 AndroidResource 的操作")](creating-a-watchface-images/10-android-resource-vs.png)
+[![生成操作](creating-a-watchface-images/10-android-resource-vs.png "组生成到 AndroidResource 的操作")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![生成操作](creating-a-watchface-images/10-android-resource-xs.png "组生成到 AndroidResource 的操作")](creating-a-watchface-images/10-android-resource-xs.png)
+[![生成操作](creating-a-watchface-images/10-android-resource-xs.png "组生成到 AndroidResource 的操作")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -342,13 +342,13 @@ public override void OnTimeTick()
 
 4.  选择**Xamarin 示例**观看表面 （显示在右侧）： 
 
-    [ ![Watchface 选取器](creating-a-watchface-images/11-watchface-picker.png "轻扫以找到 Xamarin 示例手表表盘")](creating-a-watchface-images/11-watchface-picker.png)
+    [![Watchface 选取器](creating-a-watchface-images/11-watchface-picker.png "轻扫以找到 Xamarin 示例手表表盘")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5.  点击**Xamarin 示例**观看表面以将其选中。 
 
 这将更改手表表盘的磨损设备使用到目前为止实现的自定义监视表面服务： 
 
-[ ![数字手表表盘](creating-a-watchface-images/12-digital-watchface.png "磨损设备上运行的自定义数字监视")](creating-a-watchface-images/12-digital-watchface.png)
+[![数字手表表盘](creating-a-watchface-images/12-digital-watchface.png "磨损设备上运行的自定义数字监视")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 这是相对较粗糙手表表盘，因为应用程序实现是因此最小 (例如，它不包括监视表面背景并且不调用`Paint`消除锯齿方法，以改善外观)。 但是，它实现所需创建自定义手表表盘单纯的功能。 
 
@@ -476,7 +476,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 生成并再次将应用部署到磨损设备。 选择监视字体选择器为之前从手表表盘。 在监视选取器中的预览将显示在左侧，并在右侧显示新的手表表盘：
 
-[ ![模拟手表表盘](creating-a-watchface-images/13-analog-watchface.png "改进模拟表面中选取器和设备上")](creating-a-watchface-images/13-analog-watchface.png)
+[![模拟手表表盘](creating-a-watchface-images/13-analog-watchface.png "改进模拟表面中选取器和设备上")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 在此屏幕截图，第二个指针移动每秒一次。 磨损设备上运行此代码时，第二个指针将监视进入环境模式消失。
 

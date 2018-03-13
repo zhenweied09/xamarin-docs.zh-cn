@@ -7,18 +7,17 @@ ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 84ef87f5ed84fcd0a9aa2504c52a0fec17404e1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting-bindings"></a>故障排除的绑定
 
 _本文总结了生成绑定，以及可能的原因和建议的方法可以解决它们时可能发生的多种常见错误。_
 
-<a name="OVERVIEW" />
 
 ## <a name="overview"></a>概述
 
@@ -38,7 +37,6 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 它可以证明反编译 Android 库并检查的类型和 Xamarin.Android 尝试绑定的方法很有帮助。 这一点在本指南中的更高版本上的更多详细信息。
 
-<a name="DECOMPILING_AN_ANDROID_LIBRARY" />
 
 ## <a name="decompiling-an-android-library"></a>反编译 Android 库
 
@@ -59,9 +57,8 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 - **`import` 语句未引用库**&ndash;标识未引用的库，并将这些依赖项添加到的项目的 Xamarin.Android 绑定**生成操作**的**ReferenceJar**或**EmbedddedReferenceJar**。
 
 > [!NOTE]
-> **注意：**反编译 Java 库可能禁止或受合法限制的约束根据当地的法律或 Java 库已发布在其下的许可证。 如有必要，请在尝试反编译 Java 库和检查源代码之前登记合法 professional 的服务。
+> 反编译 Java 库可能禁止或受合法限制的约束根据当地的法律或 Java 库已发布在其下的许可证。 如有必要，请在尝试反编译 Java 库和检查源代码之前登记合法 professional 的服务。
 
-<a name="INSPECTING_API_XML" />
 
 ## <a name="inspect-apixml"></a>检查 API。XML
 
@@ -71,19 +68,16 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 此文件提供的所有 Java Api 列表 Xamarin.Android 正在绑定。 此文件的内容可以帮助确定缺少的任何类型或方法，重复的绑定。 尽管检查此文件是单调乏味并且耗时，但它可以提供在内容可能会导致任何绑定问题的线索。 例如， **api.xml**属性返回不适合的类型，或有两个类型该共享相同的托管名称可能会显示。
 
-<a name="KNOWN_ISSUES" />
 
 ## <a name="known-issues"></a>已知问题
 
 本部分将列出的一些常见的错误消息或症状，我尝试绑定 Android 库时发生。
 
-<a name="PROBLEM_JAVA_VERSION_MISMATCH" />
 
 ### <a name="problem-java-version-mismatch"></a>问题： Java 版本不匹配
 
 有时不会生成类型或者因为您正在使用或者较新的或较旧版本的 Java 相比库用编译，可能发生意外的故障。 重新编译你的 Xamarin.Android 项目使用的 jdk 的相同版本的 Android 库。
 
-<a name="PROBLEM_AT_LEAST_ONE_JAVA_LIBRARY_IS_REQUIRED" />
 
 ### <a name="problem-at-least-one-java-library-is-required"></a>至少一个 Java 库是必需的问题：
 
@@ -93,7 +87,6 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 请确保生成操作设置为`EmbeddedJar`。 因为有多个生成操作。JAR 文件 (如`InputJar`， `EmbeddedJar`，`ReferenceJar`和`EmbeddedReferenceJar`)，绑定生成器无法自动猜测默认情况下使用哪一个。 有关生成操作的详细信息，请参阅[生成操作](~/android/platform/binding-java-library/index.md)。
 
-<a name="PROBLEM_BINDING_TOOLS_CANNOT_LOAD_THE_JAR_LIBRARY" />
 
 ### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>问题： 绑定工具无法加载。JAR 库
 
@@ -104,7 +97,6 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 一些。使用代码 （通过如 Proguard 的工具） 的模糊处理的 JAR 库无法加载的 Java 工具。 由于我们的工具都会使用 Java 反射和工程库 ASM 字节代码，这些依赖的工具可以拒绝的经过模糊处理的库，虽然可能将传递 Android 运行时工具。 此解决方法是以手动绑定而不是使用绑定生成器这些库。
 
 
-<a name="PROBLEM_MISSING_C_TYPES_IN_GENERATED_OUTPUT_" />
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>问题： 缺少 C# 中生成的输出类型。
 
@@ -253,8 +245,6 @@ return type of 'Java.Lang.Object'
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
-
-<a name=summary />
 
 ## <a name="summary"></a>摘要
 

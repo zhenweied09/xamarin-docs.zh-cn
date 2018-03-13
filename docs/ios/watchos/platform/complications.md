@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: a13de7fbb4b6e1f9fa2853ce599f3a038a5e4040
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: affe58d9276bd0b687089fb42a14ca964c570c9c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="complications"></a>协调的并发数据
 
@@ -24,7 +24,7 @@ _watchOS 允许开发人员编写自定义监视表面复杂因素_
 
 首先阅读[Apple 的文档](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html)以确定你的应用程序是否适用于一个问题。 有 5`CLKComplicationFamily`类型的显示可供选择：
 
-[ ![](complications-images/all-complications-sml.png "可用的 5 CLKComplicationFamily 类型： 循环小、 模块化小、 模块化大型、 实用小、 最有效大型")](complications-images/all-complications.png)
+[![](complications-images/all-complications-sml.png "可用的 5 CLKComplicationFamily 类型： 循环小、 模块化小、 模块化大型、 实用小、 最有效大型")](complications-images/all-complications.png#lightbox)
 
 只是一种样式，或者所有五个，具体取决于要显示的数据，可以实现应用。
 你还可以支持时程一样在用户打开数字王冠过去和/或将来的某个时间提供值。
@@ -83,7 +83,7 @@ public class ComplicationController : CLKComplicationDataSource
 
 监视扩展**Info.plist**文件应指定的名称`CLKComplicationDataSource`并且您要支持的复杂性系列：
 
-[ ![](complications-images/complications-config-sml.png "复杂性系列类型")](complications-images/complications-config.png)
+[![](complications-images/complications-config-sml.png "复杂性系列类型")](complications-images/complications-config.png#lightbox)
 
 **数据源类**条目列表将显示类名该子类`CLKComplicationDataSource`子类，其中包含复杂性逻辑。
 

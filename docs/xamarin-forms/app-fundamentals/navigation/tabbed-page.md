@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 97ca114f1160168c7fd9439e31dc475bc37b0467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2ec783b6963fc4ae14166ebf1e56bf8a802ba8b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-page"></a>选项卡式的页面
 
@@ -97,7 +97,7 @@ public class MainPageCS : TabbedPage
 [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)填入两个子[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)对象。 第一个子级是[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例，，第二个选项卡是[ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)包含`ContentPage`实例。
 
 > [!NOTE]
-> **请注意**: [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`TabbedPage`包含太多的子元素。
+> [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)不支持 UI 虚拟化。 因此，性能可能会影响如果`TabbedPage`包含太多的子元素。
 
 下面的屏幕截图演示`TodayPage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例，而会显示在*今天*选项卡：
 

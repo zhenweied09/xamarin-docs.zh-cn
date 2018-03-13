@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: d2298cf3edcadcc8a4d781e3e121852886fbf1d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="garbage-collection"></a>垃圾回收
 
@@ -21,7 +21,7 @@ Xamarin.Android 使用 Mono 的[简单代的垃圾回收器](http://www.mono-pro
 -   （收集 Gen1 和大型对象空间堆） 的主要集合。 
 
 > [!NOTE]
-> **注意：**通过显式集合没有[GC。Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)集合是*按需*、 根据堆分配。 *这不是引用计数系统*; 对象*只要没有任何未完成的引用将不会收集*，或当作用域已退出。 GC 将次要堆新分配的内存不足时运行。 如果不存在分配，则将无法运行。
+> 通过显式集合没有[GC。Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)集合是*按需*、 根据堆分配。 *这不是引用计数系统*; 对象*只要没有任何未完成的引用将不会收集*，或当作用域已退出。 GC 将次要堆新分配的内存不足时运行。 如果不存在分配，则将无法运行。
 
 
 次要集合比较便宜而频繁，并且用于收集最近分配和死对象。 在分配的对象的每个几 MB 后执行次要的集合。 次要集合可能手动执行通过调用[GC。收集 (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
@@ -29,7 +29,6 @@ Xamarin.Android 使用 Mono 的[简单代的垃圾回收器](http://www.mono-pro
 主要的集合成本高昂且不太频繁，并且用于回收所有死对象。 主要的集合执行后 （在调整大小的堆） 之前的当前的堆大小耗尽内存。 主要的集合可能手动执行通过调用[GC。收集 （）](https://developer.xamarin.com/api/member/System.GC.Collect/)或通过调用[GC。收集 (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32)具有自变量[GC。MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/)。 
 
 
-<a name="Cross-VM_Object_Collections" />
 
 ## <a name="cross-vm-object-collections"></a>跨 VM 对象集合
 
@@ -67,7 +66,6 @@ Android 运行时集合运行正常，但需要注意： JNI 全局引用被作�
 
 所有这是一个对等对象的实例将实时，只要它通过以下任一方式引用的最终结果托管代码 (例如存储在`static`变量) 或所引用的 Java 代码。 此外，本机对等方的生存期将扩展超出否则它们将实时，直至本机的对等和托管等变为可回收本机的对等不会可回收。
 
-<a name="Object_Cycles" />
 
 ## <a name="object-cycles"></a>对象循环
 
@@ -77,7 +75,6 @@ Android 运行时集合运行正常，但需要注意： JNI 全局引用被作�
 
 若要缩短对象生存期[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)应被调用。 这将会手动"断开"上的对象通过释放的全局引用，从而允许要更快地收集的对象的两个 Vm 之间的连接。 
 
-<a name="Automatic_Collections" />
 
 ## <a name="automatic-collections"></a>自动集合
 
@@ -135,7 +132,6 @@ MONO_GC_PARAMS=bridge-implementation=tarjan
 有多种方法来帮助以减少内存使用和收集时间的 GC。
 
 
-<a name="Disposing_of_Peer_instances" />
 
 ### <a name="disposing-of-peer-instances"></a>释放的对等实例
 
@@ -148,7 +144,7 @@ GC 具有不完整的视图的过程和可能不会运行时内存较低的因�
 
 
 > [!NOTE]
-> **注意：**你必须是*极*释放时请小心`Java.Lang.Object`子类实例。
+> 你必须是*极*释放时请小心`Java.Lang.Object`子类实例。
 
 为了尽量减少内存损坏的可能性，遵循以下指导原则调用时`Dispose()`。
 
@@ -243,7 +239,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-<a name="Reduce_Referenced_Instances" />
 
 ### <a name="reduce-referenced-instances"></a>减少引用的实例
 
@@ -316,7 +311,6 @@ class BetterActivity : Activity {
 }
 ```
 
-<a name="Minor_Collections" />
 
 ## <a name="minor-collections"></a>次要集合
 
@@ -329,7 +323,6 @@ class BetterActivity : Activity {
 -  若要刷新/同步应用程序数据的网络请求的组。
 
 
-<a name="Major_Collections" />
 
 ## <a name="major-collections"></a>主要的集合
 
@@ -344,14 +337,12 @@ class BetterActivity : Activity {
 -   中被重写[Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/)方法。 
 
 
-<a name="Diagnostics" />
 
 ## <a name="diagnostics"></a>诊断
 
 若要跟踪创建和销毁全局引用时，你可以设置[debug.mono.log](~/android/troubleshooting/index.md)系统属性以包含[ *gref* ](~/android/troubleshooting/index.md)和/或[ *gc*](~/android/troubleshooting/index.md)。 
 
 
-<a name="Configuration" />
 
 ## <a name="configuration"></a>配置
 

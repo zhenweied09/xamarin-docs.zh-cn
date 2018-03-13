@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 10c473656947dfea8bf832ae5a5704897ef4ce63
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 60973068b56ea4160c3e5ae53d387b063c601afe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="datapages"></a>DataPages
 
@@ -26,7 +26,7 @@ DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预�
 
 若要查看发展变化 //build 主题演示的工作原理，请查看[入门指南](get-started.md)。
 
-[ ![](images/demo-sml.png "DataPages 示例应用程序")](images/demo.png "DataPages 示例应用程序")
+[![](images/demo-sml.png "DataPages 示例应用程序")](images/demo.png#lightbox "DataPages 示例应用程序")
 
 ## <a name="introduction"></a>介绍
 

@@ -8,21 +8,18 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 52b53618e23a47884bee6cb821d85b15d759968c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 48b8d1cf8e6242fde632bceec5d482f53037a954
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>更新现有 Xamarin.Forms 应用
 
 _请按照下列步骤以更新现有 Xamarin.Forms 应用程序使用统一的 API 并更新到版本 1.3.1_
 
-
 > [!IMPORTANT]
 > 因为 Xamarin.Forms 1.3.1 是支持统一 API 的第一个版本，则应更新整个解决方案在迁移到统一的 iOS 应用程序在同一时间使用最新版本。 这意味着，除了更新统一支持的 iOS 项目，你还需要在编辑代码_所有_解决方案中的项目。
-
-
 
 在两个步骤中执行更新：
 
@@ -44,12 +41,11 @@ _请按照下列步骤以更新现有 Xamarin.Forms 应用程序使用统一的 
 
     5. 更新`MainPage`Windows Phone 项目中。
 
-
-# <a name="1-ios-app-unified-migration"></a>1.iOS 应用 （统一迁移）
+## <a name="1-ios-app-unified-migration"></a>1.iOS 应用 （统一迁移）
 
 在迁移过程中的需要升级到版本 1.3，支持统一 API 的 Xamarin.Forms。 为了使要创建的正确的程序集引用，我们首先需要更新 iOS 项目以使用统一的 API。
 
-## <a name="migration-tool"></a>迁移工具
+### <a name="migration-tool"></a>迁移工具
 
 单击 iOS 项目，以便选择它，然后选择**项目 > 迁移到 Xamarin.iOS 统一 API...**并同意出现的警告消息。
 
@@ -64,12 +60,11 @@ _请按照下列步骤以更新现有 Xamarin.Forms 应用程序使用统一的 
 
 **干净**和**生成**项目以确保没有要修复的其他错误。 任何进一步的操作应该不始终要求。 中的更详细地说明了这些步骤[统一 API 文档](~/cross-platform/macios/unified/updating-ios-apps.md)。
 
-## <a name="update-native-ios-apis-if-required"></a>更新本机 iOS Api （如果需要）
+### <a name="update-native-ios-apis-if-required"></a>更新本机 iOS Api （如果需要）
 
 如果你已添加其他 iOS 本机代码 （如自定义呈现器或依赖关系服务） 可能需要执行其他手动代码修补程序。 重新编译应用程序，并参考[更新现有 iOS 应用说明](~/cross-platform/macios/unified/updating-ios-apps.md)有关其他信息可能需要的更改。 [这些提示](~/cross-platform/macios/unified/updating-tips.md)也将帮助确定所需的更改。
 
-
-# <a name="2-xamarinforms-131-update"></a>2.Xamarin.Forms 1.3.1 更新
+## <a name="2-xamarinforms-131-update"></a>2.Xamarin.Forms 1.3.1 更新
 
 一旦 iOS 应用程序已更新为统一 API，解决方案的其余部分将需要更新到 Xamarin.Forms 1.3.1 版。 这包括：
 
@@ -78,22 +73,18 @@ _请按照下列步骤以更新现有 Xamarin.Forms 应用程序使用统一的 
 
 下面说明了这些步骤：
 
-
-## <a name="21-update-nuget-in-all-projects"></a>2.1 更新所有项目中的 NuGet
+### <a name="21-update-nuget-in-all-projects"></a>2.1 更新所有项目中的 NuGet
 
 更新为 1.3.1 的 Xamarin.Forms NuGet 包管理器使用的解决方案中的所有项目的预发行： PCL 中 （如果存在），iOS、 Android 和 Windows Phone。 建议你**删除并重新添加**更新为版本 1.3 的 Xamarin.Forms NuGet 包。
 
 **注意：** Xamarin.Forms 版本 1.3.1 功能当前处于*预发行版*。 这意味着您必须选择**预发行版**选项在 NuGet 中通过 （为刻度的框在 Visual Studio for Mac） 或 Visual Studio 中的下拉列表列表以查看最新的预发行版本。
 
-
 > [!IMPORTANT]
 > 如果使用 Visual Studio，请确保安装最新版本的 NuGet 包管理器。 较旧版本的 NuGet Visual Studio 中将不会正确安装 Xamarin.Forms 1.3.1 的统一版本。 转到**工具 > 扩展和更新...** ，然后单击**已安装**列表来检查是否**for Visual Studio 的 NuGet 包管理器**至少为版本 2.8.5。 如果它之前，请单击**更新**下载最新版本的列表。
 
-
-
 一旦你已经升级到 Xamarin.Forms 1.3.1 的 NuGet 包，在每个要升级到新的项目中进行以下更改`Xamarin.Forms.Application`类。
 
-## <a name="22-portable-class-library-or-shared-project"></a>2.2 可移植类库 （或共享的项目）
+### <a name="22-portable-class-library-or-shared-project"></a>2.2 可移植类库 （或共享的项目）
 
 更改**App.cs**文件，以便：
 
@@ -116,15 +107,12 @@ public class App : Application // superclass new in 1.3
 
 `App`类然后传递到新`LoadApplication`在每个应用程序项目中，如下所述的方法：
 
-
-## <a name="23-ios-app"></a>2.3 iOS 应用程序
-
+### <a name="23-ios-app"></a>2.3 iOS 应用程序
 
 更改**AppDelegate.cs**文件，以便：
 
  - 类继承自`FormsApplicationDelegate`(而不是`UIApplicationDelegate`以前)。
  - `LoadApplication` 使用的新实例调用`App`。
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -142,8 +130,7 @@ public partial class AppDelegate :
 }
 ```
 
-
-## <a name="23-android-app"></a>2.3 android 应用程序
+### <a name="23-android-app"></a>2.3 android 应用程序
 
 更改**MainActivity.cs**文件，以便：
 
@@ -167,8 +154,7 @@ public class MainActivity :
 }
 ```
 
-
-## <a name="24-windows-phone-app"></a>2.4 Windows Phone 应用
+### <a name="24-windows-phone-app"></a>2.4 Windows Phone 应用
 
 我们需要更新**MainPage**的 XAML 和代码隐藏。
 
@@ -186,7 +172,6 @@ public class MainActivity :
     ...>
 </winPhone:FormsApplicationPage>
 ```
-
 
 更改**MainPage.xaml.cs**文件，以便：
 
@@ -207,7 +192,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
  }
 ```
 
-## <a name="troubleshooting"></a>疑难解答
+### <a name="troubleshooting"></a>疑难解答
 
 有时，你将看到类似于在更新的 Xamarin.Forms NuGet 包后错误。 NuGet 更新程序不会完全删除对从较旧版本的引用时发生你**csproj**文件。
 
@@ -226,16 +211,15 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 删除这些旧引用后，该项目应成功生成。
 
-# <a name="considerations"></a>注意事项
+## <a name="considerations"></a>注意事项
 
 将现有 Xamarin.Forms 项目从经典 API 转换为新的统一 API，如果该应用程序依赖于一个或多个组件或 NuGet 包时，应考虑以下注意事项。
 
-## <a name="components"></a>组件数
+### <a name="components"></a>组件数
 
 已包括你的应用程序中的任何组件还需要更新到统一 API 或您尝试编译时，您将看到冲突。 对于任何包括的组件，使用来自支持统一 API Xamarin 组件应用商店中的新版本替换当前版本和执行干净的生成。 尚未转换由作者，任何组件将显示在组件应用商店中的唯一警告一个 32 位。
 
-
-## <a name="nuget-support"></a>NuGet 支持
+### <a name="nuget-support"></a>NuGet 支持
 
 我们提供到 NuGet 要使用的统一 API 支持的更改，而没有新版本的 NuGet，因此我们正在评估如何获取 NuGet 能够识别新的 Api。
 
@@ -244,19 +228,15 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 > [!IMPORTANT]
 > **注意：**如果窗体中有错误_"错误 3 不能在同一 Xamarin.iOS 项目中包含 monotouch.dll 和 Xamarin.iOS.dll-Xamarin.iOS.dll 显式引用，而 monotouch.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
 
+## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>启用 64 位版本的 Xamarin.iOS 应用程序
 
+有关 Xamarin.iOS 移动应用程序已转换为统一 API，开发人员仍需要启用应用程序的选项为 64 位计算机应用程序的构建。 请参阅**启用 64 位版本的 Xamarin.iOS 应用程序**的[32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md#enable-64)启用 64 位的详细说明的文档生成。
 
-
-# <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>启用 64 位版本的 Xamarin.iOS 应用程序
-
-有关 Xamarin.iOS 移动应用程序已转换为统一 API，开发人员仍需要启用应用程序的选项为 64 位计算机应用程序的构建。 请参阅**启用 64 位版本的 Xamarin.iOS 应用程序**的[32/64 位平台注意事项](~/cross-platform/macios/32-and-64.md#enable-64)启用 64 位的详细说明的文档生成。
-
-# <a name="summary"></a>摘要
+## <a name="summary"></a>摘要
 
 Xamarin.Forms 应用程序现在应该更新到版本 1.3.1 和 iOS 应用程序迁移到统一 API （这在 iOS 平台上支持 64 位体系结构）。
 
 如上所述，如果 Xamarin.Forms 应用程序包括本机代码，例如自定义呈现器或依赖关系服务然后这些可能还需要更新以使用新类型[中统一 API 引入](~/cross-platform/macios/index.md)。
-
 
 ## <a name="related-links"></a>相关链接
 

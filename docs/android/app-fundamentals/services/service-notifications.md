@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a5309b46b67a79225611aafb546b35e73d891b38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3c06fca9c6d8c3cd91889007bd1879149771622b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="service-notifications"></a>服务通知
 
@@ -48,7 +48,7 @@ public class MyService: Service
 
 此屏幕截图是显示通知的示例：
 
-[![在状态栏中显示的通知图标](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png)
+[![在状态栏中显示的通知图标](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 当用户幻灯片向下的顶部的通知屏幕时，将显示完整的通知：
 

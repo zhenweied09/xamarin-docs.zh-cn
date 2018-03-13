@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 8b1715c8e7c3e9bb296577acd3d09a0f22488250
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authentication-and-authorization"></a>身份验证和授权
 
@@ -48,7 +48,7 @@ EShopOnContainers 移动应用与标识微，它使用 IdentityServer 4 执行�
 -   访问具有 IdentityServer 的资源通过移动应用程序请求*访问*令牌中，它允许对 API 资源的访问。 客户端请求访问令牌，并将它们转发给 API。 访问令牌包含有关客户端和用户信息 （如果存在）。 Api 然后使用该信息来授予对其数据的访问权限。
 
 > [!NOTE]
-> **请注意**： 客户端必须先注册与 IdentityServer，然后它可以请求令牌。
+> 客户端必须先向 IdentityServer 注册，然后它可以请求令牌。
 
 ### <a name="adding-identityserver-to-a-web-application"></a>将 IdentityServer 添加到 Web 应用程序
 

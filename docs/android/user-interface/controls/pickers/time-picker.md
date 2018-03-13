@@ -8,18 +8,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 4b3299ad138b5cd74ce77cac1da49d21a833fe1a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 93a2effd42432d13767dad05a47548aebc9a0b93
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="time-picker"></a>时间选取器
 
 若要提供用户选择的时间的方法，可以使用[TimePicker](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/)。 Android 应用通常使用`TimePicker`与[TimePickerDialog](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog/)选择时间值&ndash;这有助于确保跨设备和应用程序一致的接口。 `TimePicker` 允许用户选择一天的时间在 24 小时或 12 小时制 AM/PM 模式下。
 `TimePickerDialog` 是一个帮助器类，封装`TimePicker`在对话框中。
 
-[![示例的操作中的时间选取器对话框的屏幕截图](time-picker-images/01-example-screen-sml.png)](time-picker-images/01-example-screen.png)
+[![示例的操作中的时间选取器对话框的屏幕截图](time-picker-images/01-example-screen-sml.png)](time-picker-images/01-example-screen.png#lightbox)
 
 ## <a name="overview"></a>概述
 
@@ -36,11 +36,11 @@ ms.lasthandoff: 02/27/2018
 
 本示例将扩展`DialogFragment`; 的子类实现`DialogFragment`(调用`TimePickerFragment`下面) 承载并显示`TimePickerDialog`。 当第一次启动示例应用程序时，它会显示**选取时间**上面按钮`TextView`将用于显示所选的时间：
 
-[![初始示例应用程序屏幕](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png)
+[![初始示例应用程序屏幕](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png#lightbox)
 
 当你单击**选取时间**按钮，示例应用程序启动`TimePickerDialog`此屏幕截图中所示：
 
-[![应用显示的默认时间选取器对话框的屏幕截图](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png)
+[![应用显示的默认时间选取器对话框的屏幕截图](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
 
 在`TimePickerDialog`，选择一个时间，然后单击**确定**按钮原因`TimePickerDialog`来调用的方法[IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/)。
 此接口由宿主实现`DialogFragment`(`TimePickerFragment`、 下面所述)。 单击**取消**按钮会导致片段并以可撤消的对话框。
@@ -56,7 +56,6 @@ ms.lasthandoff: 02/27/2018
 此示例将使用第三个方法，此操作需要活动提供`Action<DateTime>`处理程序`DialogFragment`。
 
 
-<a name="start" />
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
@@ -123,13 +122,12 @@ namespace TimePickerDemo
 
 当生成和运行此示例中时，你应看到类似于下面的屏幕快照的初始屏幕：
 
-[![初始应用程序屏幕](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png)
+[![初始应用程序屏幕](time-picker-images/02-initial-app-screen-sml.png)](time-picker-images/02-initial-app-screen.png#lightbox)
 
 单击**选取时间**按钮不执行任何操作因为`DialogFragment`具有尚未实现以显示`TimePicker`。
 下一步是创建此`DialogFragment`。
 
 
-<a name="extend_dialogfragment" />
 
 ## <a name="extending-dialogfragment"></a>扩展 DialogFragment
 
@@ -169,7 +167,6 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
 
 这`TimePickerFragment`类是分解为较小的部分，并在下一部分中所述。
 
-<a name="details" />
 
 ### <a name="dialogfragment-implementation"></a>DialogFragment 实现
 
@@ -230,7 +227,6 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
     ```
 
 
-<a name="time_picker_fragment" />
 
 ## <a name="displaying-the-timepickerfragment"></a>显示 TimePickerFragment
 
@@ -262,17 +258,16 @@ timeSelectButton.Click += TimeSelectOnClick;
 当**选取时间**单击按钮时，`TimeSelectOnClick`将调用以显示`TimePicker`对话框向用户的片段。
 
 
-<a name="try-it" />
 
 ## <a name="try-it"></a>尝试一下！
 
 生成并运行应用。 当你单击**选取时间**按钮，`TimePickerDialog`显示在默认的时间格式的活动 （在此示例中为 12 小时 AM/PM 模式下）：
 
-[![AM/PM 模式下显示时间对话框](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png)
+[![AM/PM 模式下显示时间对话框](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
    
 当你单击**确定**中`TimePicker`对话框中，该处理程序更新活动的`TextView`与选择的时间，然后退出：
 
-[![A/M 时间显示在活动 TextView](time-picker-images/04-after-time-dialog-sml.png)](time-picker-images/04-after-time-dialog.png)
+[![A/M 时间显示在活动 TextView](time-picker-images/04-after-time-dialog-sml.png)](time-picker-images/04-after-time-dialog.png#lightbox)
 
 接下来，添加以下代码的行`OnCreateDialog`后立即`is24HourFormat`声明和初始化：
 
@@ -282,12 +277,11 @@ is24HourFormat = true;
 
 此更改强制标志传递给`TimePickerDialog`构造函数要`true`因此该 24 小时模式下使用而不是托管活动的时间格式。 生成并再次运行该应用，请单击**选取时间**按钮，`TimePicker`对话框现在将显示在 24 小时格式：
 
-[![采用 24 小时格式 TimePicker 对话框](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png)
+[![采用 24 小时格式 TimePicker 对话框](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
 因为该处理程序调用[DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx)要打印的活动的时间`TextView`，时间仍打印默认 12 小时 AM/PM 格式。
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

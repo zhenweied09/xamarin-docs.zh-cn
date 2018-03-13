@@ -1,17 +1,17 @@
 ---
 title: "UrhoSharp iOS 和 tvOS 的支持"
-description: "iOS 和 tvOS 特定安装程序和功能"
+description: "iOS 和 tvOS 的特定设置以及 UrhoSharp 的功能。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 9cf779b23ed830c07af0100152a44d6c3c4e317b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 465fed25f360f29ad0b63146add8de939fa8924e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-ios-and-tvos-support"></a>UrhoSharp iOS 和 tvOS 的支持
 
@@ -21,17 +21,17 @@ _iOS 和 tvOS 特定安装程序和功能_
 
 在下面的页面中，假定`MyGame`是的 sublcass`Application`类。
 
-# <a name="ios-and-tvos"></a>iOS 和 tvOS
+## <a name="ios-and-tvos"></a>iOS 和 tvOS
 
 **支持的体系结构：** armv7，arm64，i386
 
-# <a name="creating-a-project"></a>创建项目
+## <a name="creating-a-project"></a>创建项目
 
 创建 iOS 项目，然后将数据添加到资源目录，并确保所有文件都具有**BundleResource**作为**生成操作**。
 
 ![项目设置](ios-images/image-4.png "的数据添加到的资源目录")
 
-# <a name="configuring-and-launching-urho"></a>配置和启动 Urho
+## <a name="configuring-and-launching-urho"></a>配置和启动 Urho
 
 添加 using 语句`Urho`和`Urho.iOS`命名空间，并将这段代码用于初始化 Urho，以及启动你的应用程序：
 
@@ -57,7 +57,7 @@ async void LaunchGame()
 
 务必禁用 PNG 优化，因为默认 iOS PNG 优化器将生成 Urho 不可以正确当前使用的映像
 
-# <a name="custom-embedding-of-urho"></a>自定义嵌入的 Urho
+## <a name="custom-embedding-of-urho"></a>自定义嵌入的 Urho
 
 你可以或者使其 Urho 接管整个应用程序屏幕中，并且若要使用它为你的应用程序的一个组件，可以创建`UrhoSurface`即`UIView`，可以在现有应用程序中嵌入。
 

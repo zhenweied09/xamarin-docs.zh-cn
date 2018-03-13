@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 91d5612991c2297418cf7003c499c1a1bbfc7558
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="replacing-the-action-bar"></a>替换操作栏
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -36,16 +35,14 @@ ms.lasthandoff: 02/27/2018
 以下各节介绍此过程的详细信息。 创建简单的应用程序和其操作栏替换为使用自定义`Toolbar`。 
 
 
-<a name="start_project" />
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
 创建一个名为的新的 Android 项目**ToolbarFun** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 创建此项目后，将目标和最小值 Android API 级别设置为**Android 5.0 (API 级别 21-棒糖形)**。 有关设置 Android 版本级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 当生成和运行应用程序时，它显示的默认操作栏，此屏幕截图中所示： 
 
-[![默认操作栏的屏幕截图](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
+[![默认操作栏的屏幕截图](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
 
-<a name="custom_theme" />
 
 ## <a name="create-a-custom-theme"></a>创建自定义主题
 
@@ -89,7 +86,6 @@ Olive-green`colorPrimary`设置用于工具栏的背景色：
 有关将自定义主题应用到应用程序的详细信息，请参阅[使用自定义主题](~/android/user-interface/material-theme.md#customtheme)。 
 
 
-<a name="toolbar_layout" />
 
 ## <a name="define-a-toolbar-layout"></a>定义工具栏布局
 
@@ -127,7 +123,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 使用此设置，以便菜单项的更深的背景色与之相反。
 
 
-<a name="include_layout" />
 
 ## <a name="include-the-toolbar-layout"></a>包括工具栏布局
 
@@ -153,7 +148,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 此布局包括`Toolbar`中定义**toolbar.xml**并使用`RelativeLayout`指定`Toolbar`要放置在 （上面按钮） 的用户界面的最顶部。 
 
 
-<a name="activate_toolbar" />
 
 ## <a name="find-and-activate-the-toolbar"></a>查找并激活工具栏
 
@@ -173,12 +167,11 @@ ActionBar.Title = "My Toolbar";
 
 此代码将查找`Toolbar`和调用`SetActionBar`以便`Toolbar`将不执行默认操作栏特征。 工具栏的标题更改为**我工具栏**。 此代码示例中所示`ToolBar`可以作为一个操作栏直接引用。 编译和运行此应用程序&ndash;的自定义`Toolbar`代替默认操作栏显示： 
 
-[![绿色配色方案的自定义工具栏的屏幕截图](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png)
+[![绿色配色方案的自定义工具栏的屏幕截图](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png#lightbox)
 
 请注意，`Toolbar`独立于风格`Theme.Material.Light.DarkActionBar`应用于应用程序的其余部分的主题。 
 
 
-<a name="main_menus" />
  
 ## <a name="add-menu-items"></a>添加菜单项 
 
@@ -197,13 +190,11 @@ ActionBar.Title = "My Toolbar";
 下列各节演示此过程的详细信息，通过添加**编辑**和**保存**的自定义菜单项`Toolbar`。 
 
 
-<a name="menu_icons" />
 
 ### <a name="install-menu-icons"></a>安装菜单图标
 
 继续`ToolbarFun`示例应用程序，将菜单图标添加到应用程序项目。 下载[工具栏 icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true)并将其解压缩。 所提取的内容复制*mipmap-*到项目文件夹*mipmap-*下的文件夹**ToolbarFun/资源**和在项目中包含每个添加的图标文件。
 
-<a name="menu_resource" />
 
 ### <a name="define-a-menu-resource"></a>定义菜单资源
 
@@ -239,7 +230,6 @@ ActionBar.Title = "My Toolbar";
 
 `showAsAction`属性**编辑**和**保存**菜单项设置为`ifRoom`&ndash;此设置会导致这些菜单项显示在`Toolbar`是否存在才会显示这些的足够空间。 **首选项**菜单项集`showAsAction`到`never`&ndash;这将导致**首选项**菜单才会显示在*溢出*菜单 （三个垂直点）。 
 
-<a name="on_create_options_menu" />
 
 ### <a name="implement-oncreateoptionsmenu"></a>实现 OnCreateOptionsMenu
 
@@ -256,7 +246,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 Android 调用`OnCreateOptionsMenu`方法，以便应用可指定活动的菜单资源。 在此方法， **top_menus.xml**资源被放大到传入`menu`。 此代码会导致新**编辑**，**保存**，和**首选项**菜单项显示在`Toolbar`。 
 
 
-<a name="on_options_item_selected" />
 
 ### <a name="implement-onoptionsitemselected"></a>实现 OnOptionsItemSelected
 
@@ -275,15 +264,15 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 
 生成并运行`ToolbarFun`若要查看在工具栏中的新菜单项。 `Toolbar`现在显示三个菜单图标中此屏幕截图中所示： 
 
-[![保存、 的关系图的编辑，演示位置和溢出菜单项](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png)
+[![保存、 的关系图的编辑，演示位置和溢出菜单项](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
 当用户点击**编辑**菜单项，toast 显示，则指示`OnOptionsItemSelected`调用了方法： 
 
-[![显示时编辑项点击 Toast 的屏幕截图](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png)
+[![显示时编辑项点击 Toast 的屏幕截图](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
 当用户点击溢出菜单中，**首选项**显示菜单项。 通常情况下，不太常见操作应放置在溢出菜单&ndash;此示例使用的溢出菜单**首选项**因为不频繁使用它作为**编辑**和**保存**: 
 
-[![出现在溢出菜单的屏幕截图的首选项菜单项](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png)
+[![出现在溢出菜单的屏幕截图的首选项菜单项](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 有关 Android 菜单的详细信息，请参阅 Android 开发人员[菜单](https://developer.android.com/guide/topics/ui/menus.html)主题。 
  

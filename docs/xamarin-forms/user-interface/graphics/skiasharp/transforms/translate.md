@@ -4,14 +4,15 @@ description: "了解如何使用转换变换移动 SkiaSharp 图形"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 491c82406dafceb876ddbb4a0a7204447b95f57d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-translate-transform"></a>转换变换
 
@@ -68,7 +69,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 连续矩形渗透沿页：
 
-[![](translate-images/accumulatedtranslate-small.png "三重的累积转换页的屏幕截图")](translate-images/accumulatedtranslate-large.png "三重的累积转换页的屏幕截图")
+[![](translate-images/accumulatedtranslate-small.png "三重的累积转换页的屏幕截图")](translate-images/accumulatedtranslate-large.png#lightbox "三重的累积转换页的屏幕截图")
 
 如果累积的转换因素是`dx`和`dy`，并且在绘制函数中指定的点是 (`x`， `y`)，然后在点呈现图形对象 (`x'`， `y'`)，其中：
 
@@ -125,7 +126,7 @@ using (SKPaint textPaint = new SKPaint())
 
 中的三个示例中，每个`Translate`显示要偏离通过给定的位置的文本将为调用`x`和`y`变量。 然后在另一种颜色，而不转换影响再次显示文本：
 
-[![](translate-images/translatetexteffects-small.png "三重的翻译文本效果页面屏幕截图")](translate-images/translatetexteffects-large.png "翻译文本效果页面的三个屏幕截图")
+[![](translate-images/translatetexteffects-small.png "三重的翻译文本效果页面屏幕截图")](translate-images/translatetexteffects-large.png#lightbox "翻译文本效果页面的三个屏幕截图")
 
 每三个示例显示了不同的绝对值`Translate`调用：
 
@@ -209,7 +210,7 @@ public class HendecagramArrayPage : ContentPage
 
 下面是结果：
 
-[![](translate-images/hendecagramarray-small.png "三重的 Hendecagram 数组页面屏幕截图")](translate-images/hendecagramarray-large.png "Hendecagram 数组页面的三个屏幕截图")
+[![](translate-images/hendecagramarray-small.png "三重的 Hendecagram 数组页面屏幕截图")](translate-images/hendecagramarray-large.png#lightbox "Hendecagram 数组页面的三个屏幕截图")
 
 动画通常涉及到转换。 **Hendecagram 动画**页移动 11 星的圆圈，圆圈中。 [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs)类开头某些字段并且重写的`OnAppearing`和`OnDisappearing`启动和停止 Xamarin.Forms 计时器方法：
 
@@ -294,7 +295,7 @@ public class HendecagramAnimationPage : ContentPage
 
 `PaintSurface`处理程序调用`Translate`方法两次，首先要转换为画布的中心，然后转换为圆的中心周长 （0，0）。 圆的半径设置可以同时仍保护范围内的页上的星形尽可能大：
 
-[![](translate-images/hendecagramanimation-small.png "三重的 Hendecagram 动画页面屏幕截图")](translate-images/hendecagramanimation-large.png "Hendecagram 动画页面的三个屏幕截图")
+[![](translate-images/hendecagramanimation-small.png "三重的 Hendecagram 动画页面屏幕截图")](translate-images/hendecagramanimation-large.png#lightbox "Hendecagram 动画页面的三个屏幕截图")
 
 请注意在星型维护相同的方向，如围绕页的中心。 它不能将根本旋转。 这是旋转变换的作业。
 

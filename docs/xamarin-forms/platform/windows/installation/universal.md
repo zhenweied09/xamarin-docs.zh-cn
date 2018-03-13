@@ -3,16 +3,16 @@ title: "添加通用 Windows 平台 (UWP) 应用"
 description: "此文章介绍了如何将 UWP 应用项目添加到 Xamarin.Forms 解决方案，Visual Studio 中创建的 mac。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: ADF99B78-F1BC-48DF-9128-01B93C4411C1
+ms.assetid: 34AAA045-64B8-4FDE-BB49-3FF0B4FFA17C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: a3746165db83b5b8adba9adb862f9ea09f7069b9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 36865dac6bd2ad13b9d3e286ab18a035c1edb3d8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>添加通用 Windows 平台 (UWP) 应用
 
@@ -38,7 +38,7 @@ UWP 是可用在 Xamarin.Forms 2.1 及更高版本，并且 Xamarin.Forms.Maps �
 
  4 . 请确保将生成新的 UWP 项目**生成 > Configuration Manager**窗口 （可能不会发生了此默认情况下）。 刻度**生成**和**部署**通用项目框：
 
-  [ ![](universal-images/configuration-sml.png "配置管理器窗口")](universal-images/configuration.png "配置管理器窗口")
+  [![](universal-images/configuration-sml.png "配置管理器窗口")](universal-images/configuration.png#lightbox "配置管理器窗口")
 
  5 . 右键单击项目并选择**添加 > 引用**并创建 Xamarin.Forms 应用程序项目中 （PCL、.NET 标准或共享项目） 的引用。
 

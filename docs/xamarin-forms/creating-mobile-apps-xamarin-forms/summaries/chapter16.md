@@ -3,14 +3,15 @@ title: "章 16 的摘要。 数据绑定"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 954d5d9e270db156f5ef2577706c667e05ab544c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf08874f66c9ab21cd0ede642c8c94821b6c5a2a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>章 16 的摘要。 数据绑定
 
@@ -95,7 +96,7 @@ ms.lasthandoff: 02/27/2018
 
 [ **ReverseBinding** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ReverseBinding)示例会将绑定设置上`Value`属性`Slider`引用`FontSize`每个属性`Label`。 这似乎是向后，但它可更好地在初始化字词`Slider`元素因为`Value`属性`Slider`具有`DefaultBindingMode`的`TwoWay`。
 
-[![三重的反向绑定的屏幕截图](images/ch16fg06-small.png "反向绑定")](images/ch16fg06-large.png "反向绑定")
+[![三重的反向绑定的屏幕截图](images/ch16fg06-small.png "反向绑定")](images/ch16fg06-large.png#lightbox "反向绑定")
 
 这是类似于绑定 MVVM 中的定义方式，你将使用此类型的绑定频繁。
 

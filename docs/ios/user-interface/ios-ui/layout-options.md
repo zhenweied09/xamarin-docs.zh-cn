@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1e3139eb4c94264c91307f6f8a69b183f3bf7fa6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4917eafff020bb0e2d14a27d3c1a44d1d4087d7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-options"></a>布局选项
 
@@ -25,11 +25,11 @@ ms.lasthandoff: 02/27/2018
 
 当用户调整大小时的窗口，如将设备旋转时和方向更改，系统将自动调整根据其自动调整大小规则该窗口中的视图。 可以设置这些规则在 C# 中使用`AutoresizingMask`属性`UIView`或**属性填充**的 ios 设计器中，如下所示：
 
- [ ![](layout-options-images/image41.png "Visual Studio for Mac 设计器")](layout-options-images/image41.png)
+ [![](layout-options-images/image41.png "Visual Studio for Mac 设计器")](layout-options-images/image41.png#lightbox)
 
 选择一个控件时，这将允许你手动指定的位置和尺寸控件，以及选择**自动调整大小**行为。 如下面的屏幕截图中所示，我们可以使用 springs 和 struts 调整控件中为它的父定义所选的视图的关系：
 
- [ ![](layout-options-images/image42.png "Visual Studio for Mac 设计器")](layout-options-images/image42.png)
+ [![](layout-options-images/image42.png "Visual Studio for Mac 设计器")](layout-options-images/image42.png#lightbox)
 
 调整*spring*将导致要调整大小的视图基于的宽度或高度的其父视图。 调整*strut*将使视图保持常量本身和其父视图，请在该特定的边缘之间的距离。
 
@@ -43,7 +43,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 
 若要测试的自动调整大小设置，启用不同**支持设备方向**中项目的选项：
 
- [ ![](layout-options-images/image43a.png "自动调整大小设置")](layout-options-images/image43a.png)
+ [![](layout-options-images/image43a.png "自动调整大小设置")](layout-options-images/image43a.png#lightbox)
 
 后面的代码中，我们可以使用下面的代码，这会导致水平调整大小的两个文本框控件：
 
@@ -56,11 +56,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 我们还可以调整使用设计器的控件。 选择 struts，如下面表现出将导致要保持而不会被剪裁关闭视图底部的右对齐的图像：
 
- [ ![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png)
+ [![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png#lightbox)
 
 这些屏幕截图显示如何控件调整大小或位置本身转动屏幕时：
 
- [ ![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png)
+ [![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png#lightbox)
 
 请注意，文本视图和文本字段同时拉伸以使保持不变的保留，并且由于右键边距，`FlexibleWidth`设置。 映像包含的边缘和左边距灵活，这意味着它保留底部和右边距 – 转动屏幕时视图中保留该映像。 复杂布局通常需要每个可见控件上这些设置使用户界面保持一致并防止控件重叠时视图的边界更改 （由于旋转或其他调整大小的事件） 的组合。
 

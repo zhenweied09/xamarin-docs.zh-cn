@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>自定义呈现器简介
 
@@ -52,7 +52,7 @@ public class MyEntry : Entry
 `local`命名空间前缀可以是任何内容。 但是，`namespace`和`assembly`值必须匹配自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
 
 > [!NOTE]
-> **请注意**： 定义`xmlns`比要简单得在 Pcl 中共享的项目。 PCL 会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 Windows Phone 项目都具有其自己*程序集名称*不可能如何编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
+> 定义`xmlns`比要简单得在 Pcl 中共享的项目。 PCL 会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 Windows Phone 项目都具有其自己*程序集名称*不可能如何编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
 
 `MyEntry`自定义控件然后呈现在每个平台，具有灰色背景，如以下屏幕截图中所示：
 
@@ -69,7 +69,7 @@ public class MyEntry : Entry
 1. 添加`ExportRenderer`到自定义呈现器类，以指定，它将用于呈现 Xamarin.Forms 控件属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 对于大多数 Xamarin.Forms 元素，它是可选的提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)或[ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)元素。
+> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)或[ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)元素。
 
 这一系列中的主题将提供演示和不同的 Xamarin.Forms 元素在此过程中的说明。
 

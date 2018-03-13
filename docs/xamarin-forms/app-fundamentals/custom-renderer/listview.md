@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 722bedd039a53d1244972ac9f0b98d87cc5d386a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: eb4cf0285585351db5c45dc34a382236e6805c99
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listview"></a>自定义 ListView
 
@@ -149,7 +149,7 @@ public class MainPageCS : ContentPage
 1. 添加`ExportRenderer`到自定义呈现器类，以指定，它将用于呈现 Xamarin.Forms 自定义控件属性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
 
 > [!NOTE]
-> **请注意**： 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用该单元格的基类的默认呈现器。
+> 它是可选若要提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用该单元格的基类的默认呈现器。
 
 下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
 
@@ -461,7 +461,7 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
   base.OnElementPropertyChanged (sender, e);
 
   if (e.PropertyName == NativeListView.ItemsProperty.PropertyName) {
-    Control.Adapter = new NativeAndroidListViewAdapter (Forms.Context as Android.App.Activity, Element as NativeListView);
+    Control.Adapter = new NativeAndroidListViewAdapter (_context as Android.App.Activity, Element as NativeListView);
   }
 }
 ```

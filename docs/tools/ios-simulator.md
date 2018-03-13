@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 707ba5874c939fbd25f4e25a7cefd3dc5fc75131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>进行远程处理的 iOS 模拟器 （用于 Windows)
 
 _完全在 Windows 上的 Visual Studio 的测试和调试 iOS 应用_
 
-[ ![](ios-simulator-images/hero-sml.png "iOS 模拟器在 Windows 上运行")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "iOS 模拟器在 Windows 上运行")](ios-simulator-images/hero.png#lightbox)
 
 ## <a name="download-and-install"></a>下载并安装
 
@@ -36,7 +36,7 @@ _完全在 Windows 上的 Visual Studio 的测试和调试 iOS 应用_
 
 你可以禁用从远程 iOS 模拟器**工具 > 选项 > Xamarin > iOS 设置**通过取消选中框**到 Windows 的远程模拟器**此处所示：
 
-[ ![](ios-simulator-images/options-sml.png "复选框可使用模拟器")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "复选框可使用模拟器")](ios-simulator-images/options.png#lightbox)
 
 IOS 模拟器随后将打开连接的 Mac 计算机上。 选中此选项以启用远程 iOS 模拟器。
 
@@ -54,14 +54,14 @@ IOS 模拟器随后将打开连接的 Mac 计算机上。 选中此选项以启�
 - [**设置**](#settings) – 配置的键盘和位置。
  - 其他[**选项**](#options) – 各种模拟器选项可用如旋转、 动摇，或调用在模拟器中的其他状态。 当模糊显示一些选项时，可以从显示在工具栏中，或通过在窗口中右键单击省略号图标访问它们。
 
-    [ ![](ios-simulator-images/maps-app-sml.png "iOS 模拟器映射示例")](ios-simulator-images/maps-app.png)
+    [![](ios-simulator-images/maps-app-sml.png "iOS 模拟器映射示例")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### <a name="settings"></a>设置
 
 "齿轮"图标打开**设置**窗口：
 
-[ ![](ios-simulator-images/settings-sml.png "iOS 模拟器设置")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "iOS 模拟器设置")](ios-simulator-images/settings.png#lightbox)
 
 这允许您启用硬件键盘在模拟器中，并选择哪些位置报告给设备 （包括静态位置或其他移动位置选项）。
 
@@ -71,7 +71,7 @@ IOS 模拟器随后将打开连接的 Mac 计算机上。 选中此选项以启�
 
 右键单击在模拟器窗口以查看在模拟器中，例如旋转触发动摇手势，并重新启动模拟器中可用的所有选项的任意位置：
 
-[ ![](ios-simulator-images/more-sml.png "iOS 模拟器其他设置")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "iOS 模拟器其他设置")](ios-simulator-images/more.png#lightbox)
 
 ### <a name="touchscreen-support"></a>触摸屏支持
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 742780ad87672bd8a3e2bb3cb66ca582a680d44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icon"></a>应用程序图标
 
@@ -122,7 +122,7 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
     ![编辑 AppIcons.appiconset](app-icon-images/intro01.png "编辑 AppIcons.appiconset")
 2. 对于每个所需的图标大小，单击图标并选择上面创建的相应图像文件： 
 
-    [![选择图标图像](app-icon-images/intro02.png "选择图标图像")](app-icon-images/intro02-large.png)
+    [![选择图标图像](app-icon-images/intro02.png "选择图标图像")](app-icon-images/intro02-large.png#lightbox)
 3. 保存更改。
 
 
@@ -135,7 +135,7 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 1. 在“Solution Pad”中双击 **Info.plist** 打开“项目选项”。
 2. 在“Mac OS X 应用程序目标”部分，单击“应用图标”选择 `AppIcons.appiconset` 文件： 
 
-    [![设置图标集](app-icon-images/icon01.png "设置图标集")](app-icon-images/icon01-large.png)
+    [![设置图标集](app-icon-images/icon01.png "设置图标集")](app-icon-images/icon01-large.png#lightbox)
 3. 保存更改。
 
 运行应用时，将在停靠中显示新图标：

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>使用 Web 标记搜索
 
@@ -20,12 +20,12 @@ ms.lasthandoff: 02/27/2018
 
 如果 iOS 应用程序已支持移动的深层链接并在你的网站呈现中你的应用，Apple 的内容的深层链接_Applebot_ web 爬网程序将此内容编制索引并自动将其添加到其云索引：
 
-[ ![](web-markup-images/webmarkup01.png "云索引概述")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "云索引概述")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple 将呈现在 Spotlight 搜索和 Safari 搜索结果中的这些结果。
 如果用户点击其中一种结果 （并且它们具有您安装的应用程序） 则它们将执行你的应用程序中的内容：
 
-[ ![](web-markup-images/webmarkup02.png "从搜索结果中的网站链接的深度")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "从搜索结果中的网站链接的深度")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>启用 Web 内容索引
 
@@ -154,7 +154,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 下面显示从您的网站向最终用户提供丰富的搜索结果的元数据示例：
 
-[ ![](web-markup-images/deeplink01.png "大范围搜索通过结构化数据标记的结果")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "大范围搜索通过结构化数据标记的结果")](web-markup-images/deeplink01.png#lightbox)
 
 Apple 当前支持以下架构类型从 schema.org:
 

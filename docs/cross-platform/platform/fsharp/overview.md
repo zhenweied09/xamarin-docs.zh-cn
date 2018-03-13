@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 676bd443d2f45c6ed502c2f94feec3599b068341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74911f583a2e28a99ceb7c087a8542d0a8cab71d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="getting-started-with-ff35"></a>Getting Started with FF &#35;
+# <a name="getting-started-with-f35"></a>Getting Started with F&#35;
 
 ## <a name="requirements"></a>惠?
 
@@ -22,30 +22,30 @@ F # 是默认包含在 Visual Studio for mac。
 
 在 Windows 上，你必须独立 F # 编译器上安装工具，每个说明[FSharp.org 站点](http://fsharp.org/use/windows/)。
 
-## <a name="creating-an-f35-project"></a>创建 F &#35;项目
+## <a name="creating-an-f35-project"></a>创建 F&#35;项目
 
 创建一个新的 F # 应用程序相同完成**新项目**用于 C# 的窗口。
 
 在适用于 Mac 的 Visual Studio 选择**文件 > 新解决方案**。 在**新项目**对话框中，选择项目模板。 使用模板右侧的下拉列表选择你想要使用的语言：
 
- [ ![](overview-images/choosefsharp.png "使用模板右侧的下拉列表来选择你想要使用的语言")](overview-images/choosefsharp.png)
+ [![](overview-images/choosefsharp.png "使用模板右侧的下拉列表来选择你想要使用的语言")](overview-images/choosefsharp.png#lightbox)
 
 选择你的项目类型，然后单击**下一步**进行命名和创建它。
 
 
 现在你就可以开始创建一些出色的 F # 应用程序 ！
 
-## <a name="learning-to-use-f35"></a>学习使用 F &#35;
+## <a name="learning-to-use-f35"></a>学习使用 F&#35;
 
 也可以从创建 F # 教程**新解决方案**对话框在 Visual Studio for mac。 导航到**其他 >.NET > F # 教程**，详见下图所示：
 
- [ ![](overview-images/fsharptutorial.png "导航到其他 /.NET / F # 教程")](overview-images/fsharptutorial.png)
+ [![](overview-images/fsharptutorial.png "导航到其他 /.NET / F # 教程")](overview-images/fsharptutorial.png#lightbox)
 
 这将打开一个新的交互式解决方案。 探索是可用于访问与语言的基础知识的手柄的好方法。
 
- [ ![](overview-images/newtutorial-sml.png "探索是可用于访问与语言的基础知识的手柄的好方法")](overview-images/newtutorial.png)
+ [![](overview-images/newtutorial-sml.png "探索是可用于访问与语言的基础知识的手柄的好方法")](overview-images/newtutorial.png#lightbox)
 
-签出[示例列表的](/guides/cross-platform/fsharp/samples/)若要查看 F # 中操作。
+签出[示例列表的](~/cross-platform/platform/fsharp/samples.md)若要查看 F # 中操作。
 
 ## <a name="references"></a>参考资料
 

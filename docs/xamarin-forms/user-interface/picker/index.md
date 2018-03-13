@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: edc724eb73b314c0accd3e8775b9b26b6eac16d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc1aaffe4e31b596d57b5de30c87217ffba3772e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="picker"></a>选取器
 
@@ -20,11 +20,11 @@ _选取器视图是用于从数据的列表中选择文本项的控件。_
 
 A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)显示的项，用户可以从中选择的短列表。 但是， [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)首次显示时不显示任何数据。 相反，值其[ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/)属性显示为在 iOS 和 Android 平台上的占位符：
 
-[![](images/picker-initial.png "初始选取器显示")](images/picker-initial-large.png "初始选取器显示")
+[![](images/picker-initial.png "初始选取器显示")](images/picker-initial-large.png#lightbox "初始选取器显示")
 
 当[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)显示提升焦点，其数据和用户可以选择的项：
 
-[![](images/picker-selection.png "选取器中选择项")](images/picker-selection-large.png "选取器中选择项")
+[![](images/picker-selection.png "选取器中选择项")](images/picker-selection-large.png#lightbox "选取器中选择项")
 
 以下所选内容，所选的项显示通过[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/):
 

@@ -4,14 +4,15 @@ description: "请参阅如何确定要将文本与 SkiaSharp 图形集成的呈�
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a8cfac8911b1a8a13a4b6f149d02cd2f2c78453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-text-and-graphics"></a>将文本和图形集成
 
@@ -113,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 接下来，该方法的其余部分很简单。 它将创建另一个`SKPaint`对象的边框和调用`DrawRoundRect`两次。 第二个调用使用放大另一个 10 个像素的矩形。 第一次调用指定一个角半径为 20 个像素;第二个具有圆角半径 30 个像素，因此它们看起来要并行：
 
- [![](text-images/framedtext-small.png "确定框架，文本页面的三个屏幕截图")](text-images/framedtext-large.png "确定框架，文本页面的三个屏幕截图")
+ [![](text-images/framedtext-small.png "确定框架，文本页面的三个屏幕截图")](text-images/framedtext-large.png#lightbox "确定框架，文本页面的三个屏幕截图")
 
 你可以启用你的手机或侧向模拟器，若要查看的文本和大小的增加的帧。
 
@@ -121,7 +122,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 文本本身得多都可以被视为一个图形选项。 一种简单的选择是显示的文本字符而不是普通实心的显示大纲：
 
-[![](text-images/outlinedtext-small.png "仅使用三重概述文本页的屏幕截图")](text-images/outlinedtext-large.png "三倍的所述的文本页的屏幕截图")
+[![](text-images/outlinedtext-small.png "仅使用三重概述文本页的屏幕截图")](text-images/outlinedtext-large.png#lightbox "三倍的所述的文本页的屏幕截图")
 
 只需通过更改正常完成此操作`Style`属性`SKPaint`对象从其默认设置`SKPaintStyle.Fill`到`SKPaintStyle.Stroke`以及通过指定描边宽度。 `PaintSurface`处理程序**概述文本**页显示它的工作原理：
 

@@ -4,18 +4,17 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3C440714-43E3-4D31-946F-CA59DAB303E8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: d20b2aa7df17f2000e2de9cb67f091c52989719b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+author: topgenorth
+ms.author: toopge
+ms.date: 03/09/2018
+ms.openlocfilehash: 39ee7f826d4c775ead679a09ce56a7c0f92b60ed
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="permissions-in-xamarinandroid"></a>在 Xamarin.Android 的权限
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -42,7 +41,7 @@ Android 应用程序必须检查在运行时以查看它们是否具有访问受
 
 检查和请求权限的整个工作流称为_运行时权限_检查，并可总结在下图中： 
 
-[ ![运行时权限检查流程图](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png)
+[![运行时权限检查流程图](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权限。 这些向后移植 Api 将自动检查设备上的 Android 版本，因此不需要执行 API 级别检查每个时间。  
 
@@ -50,7 +49,7 @@ Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权�
 
 
 > [!NOTE]
-> **注意：**可能硬件的权限可能会影响应用程序通过 Google Play 的筛选方式。 例如，如果应用照相机的所需的权限，然后 Google Play 将不显示应用程序中不具有安装了摄像头的设备上的 Google Play 商店。
+> 很可能硬件的权限可能会影响应用程序通过 Google Play 的筛选方式。 例如，如果应用照相机的所需的权限，然后 Google Play 将不显示应用程序中不具有安装了摄像头的设备上的 Google Play 商店。
 
 
 <a name="requirements" />
@@ -59,7 +58,6 @@ Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权�
 
 强烈建议 Xamarin.Android 项目包括[Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet 包。 与旧版本的 Android，提供一个常见的特定 Api 不断接口而无需为此包将向后移植权限检查 Android 运行应用程序的版本。
 
-<a name="requesting_permissions" />
 
 ## <a name="requesting-system-permissions"></a>请求的系统权限
 
@@ -68,9 +66,8 @@ Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权�
 面向 Android 6.0 或更高版本无法假定，因为用户授予在过去，在某个时间点的权限，权限将有效的下一步的时间的应用。 面向 Android 6.0 的应用必须始终执行运行时权限检查。 面向 Android 5.1 或更低的应用不需要执行运行时权限检查。
 
 > [!NOTE]
-> **注意：**应用程序应仅请求他们所需的权限。
+> 应用程序只应请求他们所需的权限。
 
-<a name="declaring_permissions_in_the_manifest" />
 
 ### <a name="declaring-permissions-in-the-manifest"></a>声明在清单中的权限
 
@@ -87,15 +84,15 @@ Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权�
 
 1. 双击**属性**中**解决方案资源管理器**和选择**Android 清单**属性窗口中的选项卡：
 
-    [![在 Android 清单选项卡中的所需的权限](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png)
+    [![在 Android 清单选项卡中的所需的权限](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. 如果应用程序尚不包含 AndroidManifest.xml，单击**否 AndroidManifest.xml 找到。单击此项可添加一个**如下所示：
 
-    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png)
+    [![No AndroidManifest.xml message](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. 选择你的应用程序需要任何权限**所需的权限**列出并保存：
 
-    [![选择权限示例相机](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png)
+    [![选择权限示例相机](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -103,15 +100,15 @@ Android 支持库 backports 的一些新 Api 对较旧版本的 Android 的权�
 
 1. 双击中的项目**解决方案 Pad**和选择**选项 > 生成 > Android 应用程序**:
 
-    [![所示的所需的权限部分](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png)
+    [![所示的所需的权限部分](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. 单击**添加 Android 清单**按钮如果项目不具有**AndroidManifest.xml**:
 
-    [![项目的 Android 清单是缺少](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png)
+    [![项目的 Android 清单是缺少](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. 选择你的应用程序需要任何权限**所需的权限**列表，然后单击**确定**:
 
-    [![选择权限示例相机](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png)
+    [![选择权限示例相机](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
@@ -119,7 +116,6 @@ Xamarin.Android 会自动添加某些权限在生成时到调试版本。 这将
 
 对于面向 Android 5.1 （API 级别 22） 或更低版本的应用程序，没有任何详细需要进行。 将运行于 Android 6.0 （API 23 等级 23） 或更高版本的应用程序应继续执行到下一节的执行权限检查的运行的时。 
 
-<a name="run_time_permission_checks" />
 
 ### <a name="runtime-permission-checks-in-android-60"></a>在 Android 6.0 中的运行时权限检查
 
@@ -213,7 +209,6 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

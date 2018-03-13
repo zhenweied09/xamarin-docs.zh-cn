@@ -6,11 +6,12 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: 01a45f02d340effe69d1cb0cff7f0d8e5ca7bef6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: bfbd95d33e442d31e94bd8c6ed888741f88d1188
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="linking-on-android"></a>在 Android 上链接
 
@@ -52,7 +53,6 @@ Xamarin.Android 应用程序使用链接器缩减应用程序大小。 链接器
 
 链接导致程序包的大小是 1.2.0 中原始（未链接）程序包大小的 30%，是 4.0.1 中未链接程序包大小的 18%。
 
- <a name="Control" />
 
 
 ## <a name="control"></a>控件
@@ -77,7 +77,6 @@ public class MyActivity {
 }
 ```
 
-<a name="Linker_Behavior" />
 
 ### <a name="linker-behavior"></a>链接器行为
 
@@ -115,11 +114,10 @@ E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (Int
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
 
-<a name="PreserveAttribute" />
 
 ### <a name="preserving-code"></a>保留代码
 
-链接器有时会删除你想要保留的代码。 例如：
+链接器有时会删除你想要保留的代码。 例如:
 
 -   你可能拥有通过 `System.Reflection.MemberInfo.Invoke` 动态调用的代码。
 
@@ -177,7 +175,6 @@ namespace Android.Runtime
 ```
 
 
-<a name="falseflag" />
 
 ### <a name="falseflag"></a>falseflag
 
@@ -202,7 +199,6 @@ class MyActivity {
 ```
 
 
-<a name="linkskip" />
 
 ### <a name="linkskip"></a>linkskip
 
@@ -214,7 +210,6 @@ class MyActivity {
 </PropertyGroup>
 ```
 
-<a name="LinkDescription" />
 
 ### <a name="linkdescription"></a>LinkDescription
 
@@ -223,7 +218,6 @@ class MyActivity {
 。 要保留需要保留的 `internal` 或 `private` 成员，可能需要自定义链接器配置文件。
 
 
-<a name="Custom_Attributes" />
 
 ### <a name="custom-attributes"></a>自定义特性
 

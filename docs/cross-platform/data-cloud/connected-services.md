@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cc2deb11d544bc4e933e690d6089eb001a186c79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c9ae8d65a2bfdd035cccb6b911448ea047f8c40
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="connected-services-walkthrough"></a>连接的服务演练
 
@@ -24,22 +24,22 @@ ms.lasthandoff: 02/27/2018
 1.  通过双击上启动**连接服务**解决方案，将显示中的节点**服务库**。
   这是此应用程序类型的所有可用服务的列表。 选择一项服务 (如**移动后的端使用 Azure App Service**) 通过单击它。
 
-  [ ![](connected-services-images/image001-sml.png "适用于 Mac 连接 Visual Studio 中的服务节点")](connected-services-images/image001.png)
+  [![](connected-services-images/image001-sml.png "适用于 Mac 连接 Visual Studio 中的服务节点")](connected-services-images/image001.png#lightbox)
 
 2. 服务详细信息页提供服务和依赖项，以安装了的描述。
   单击**添加**按钮添加到应用程序的依赖项：
 
-  [ ![](connected-services-images/image002-sml.png "使用 Azure 移动后端")](connected-services-images/image002.png)
+  [![](connected-services-images/image002-sml.png "使用 Azure 移动后端")](connected-services-images/image002.png#lightbox)
 
 3. 依赖项需要添加到 PCL 和特定于平台的项目才能起作用。
   选择复选框以将服务添加到 （直接或间接） 引用它的每个项目：
 
-  [ ![](connected-services-images/image003-sml.png "检查应引用该服务的所有项目")](connected-services-images/image003.png)
+  [![](connected-services-images/image003-sml.png "检查应引用该服务的所有项目")](connected-services-images/image003.png#lightbox)
 
 4. 选择**接受**上**许可证接受**对话框用于 NuGet 包。
   可能有两个对话框，以便接受，一个 MobileClient 和依赖项，而另一个 sqlitestore，这是进行脱机数据同步的要求：
 
-  [ ![](connected-services-images/image004-sml.png "接受许可协议")](connected-services-images/image004.png)
+  [![](connected-services-images/image004-sml.png "接受许可协议")](connected-services-images/image004.png#lightbox)
 
   ![](connected-services-images/image005.png "许可证接受窗口")
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/27/2018
 
 6. 从列表中选择应用程序服务。 这将填充的模板代码`MobileServiceClient`替换在 Azure 上的应用程序服务的相应 URL 的对象：
 
-  [ ![](connected-services-images/image006-sml.png "从列表中选择应用程序服务")](connected-services-images/image006.png)
+  [![](connected-services-images/image006-sml.png "从列表中选择应用程序服务")](connected-services-images/image006.png#lightbox)
 
   如果不没有列出任何服务，请单击**新建**按钮 （请参阅步骤 9。）
 
@@ -59,12 +59,12 @@ ms.lasthandoff: 02/27/2018
 
 8. 请按照中的文档**后续步骤**添加数据、 脱机同步、 身份验证，并将通知推送到你的应用程序：
 
-  [ ![](connected-services-images/image008-sml.png "查看下一步的步骤说明")](connected-services-images/image008.png)
+  [![](connected-services-images/image008-sml.png "查看下一步的步骤说明")](connected-services-images/image008.png#lightbox)
 
 10. 如果你没有任何现有的应用程序服务，可以创建从 Visual Studio 中的新服务的 mac。
   单击**新建**按钮在左下角的服务列表以打开**新 App Service**对话框：
 
-  [ ![](connected-services-images/image009-sml.png "Mac 的 Visual Studio 中创建新的应用程序服务")](connected-services-images/image009.png)
+  [![](connected-services-images/image009-sml.png "Mac 的 Visual Studio 中创建新的应用程序服务")](connected-services-images/image009.png#lightbox)
 
 新的服务需要以下参数：
 

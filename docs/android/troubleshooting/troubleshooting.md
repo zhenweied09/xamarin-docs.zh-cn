@@ -6,16 +6,15 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ce62e844a9ec76217947c0f0f5ed5e9a81336c7e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting-tips"></a>疑难解答指南
 
-<a name="Getting_Diagnostic_Information" />
 
 ## <a name="getting-diagnostic-information"></a>获取诊断信息
 
@@ -27,20 +26,19 @@ Xamarin.Android 具有几位数来跟踪各种 bug 时的外观。
 3.  Android 调试日志输出。
 
 
- <a name="Diagnostic_MSBuild_Output" />
-
+<a name="Diagnostic_MSBuild_Output" />
 
 ## <a name="diagnostic-msbuild-output"></a>诊断 MSBuild 输出
 
 诊断 MSBuild 可以包含与包生成相关的其他信息，并可能包含某些包部署信息。
 
-若要启用 Visual Studio 中的诊断 MSBuild 输出：
+若要在 Visual Studio 中启用诊断 MSBuild 输出：
 
 1.  单击**工具 > 选项...**
 2.  在左侧树视图中，选择**项目和解决方案 > 生成并运行**
 3.  在右侧面板中，将 MSBuild 生成输出详细级别下拉列表设置为诊断
 4.  单击“确定” 
-5.  清除并重新生成你的包。
+5.  清除并重新生成包。
 6.  在输出面板内可见诊断输出。
 
 
@@ -50,12 +48,11 @@ Xamarin.Android 具有几位数来跟踪各种 bug 时的外观。
 2.  在左侧树视图中，选择**项目 > 生成**
 3.  在右侧面板中，设置日志记录详细程度下拉列表为诊断
 4.  单击“确定” 
-5.  适用于 Mac 重新启动 Visual Studio
-6.  清除并重新生成你的包。
+5.  重启 Visual Studio for Mac
+6.  清除并重新生成包。
 7.  诊断输出中是可见的错误填充 (**视图 > 填充 > 错误**)，通过单击生成输出按钮。
 
 
- <a name="Device_Deployment_Logs" />
 
 
 ## <a name="device-deployment-logs"></a>设备部署日志
@@ -74,7 +71,6 @@ Xamarin.Android 具有几位数来跟踪各种 bug 时的外观。
 -  在 OS X 上，日志文件写入到`$HOME/Library/Logs/XamarinStudio-{VERSION}`。
 
 
- <a name="Android_Debug_Log_Output" />
 
 
 ## <a name="android-debug-log-output"></a>Android 调试日志输出
@@ -88,7 +84,6 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 系统属性进程在启动期间，读取和之前启动应用程序或应用程序必须重新启动后更改的系统属性，因此就必须进行设置。
 
-<a name="Xamarin.Android_System_Properties" />
 
 
 ### <a name="xamarinandroid-system-properties"></a>Xamarin.Android 系统属性
@@ -130,7 +125,6 @@ Xamarin.Android 支持以下系统属性：
 
 请选择与你的 Visual Studio 2017 安装相对应的正确 System.ValueTuple NuGet。
 
-<a name="GC_Messages" />
 
 ## <a name="gc-messages"></a>GC 消息
 
@@ -162,7 +156,6 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 
  *一般情况下*的值越大`num_hash_entries`，则所用的时间，`bridge`需要集合，且更大`total`将收集所用的时间。
 
- <a name="Global_Reference_Messages" />
 
 
 ## <a name="global-reference-messages"></a>全局参考消息
@@ -254,14 +247,12 @@ Android 4.0，但是，已移动的收集器，并不再为出对 Android 运行
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` -弱引用计数
 
- <a name="Offline_Activation" />
 
 
 ## <a name="offline-activation"></a>脱机激活
 
 如果你不能激活 Xamarin.Android 在 Windows 上，或无法在 Mac OS X 上安装 Xamarin.Android 的完整版本，请参阅[脱机激活](~/android/get-started/installation/index.md)页。
 
- <a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
 
 
 ## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>无法从试用帐户升级到 Indie/企业
@@ -275,7 +266,6 @@ Android 4.0，但是，已移动的收集器，并不再为出对 Android 运行
 
 这应让你启动并运行。 如果继续遇到问题，你可能希望尝试[脱机激活](~/android/get-started/installation/index.md)以完成激活你的工作站。
 
- <a name="Receiving_'Activation_Incomplete'_Error_Message" />
 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>接收激活不完整的错误消息
@@ -285,7 +275,6 @@ Android 4.0，但是，已移动的收集器，并不再为出对 Android 运行
 -  日志位置： **%localappdata%\\Xamarin\\日志**
 
 
- <a name="Receiving_'Error_Retrieving_Update_Information'_Error_Message" />
 
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>收到错误检索更新信息错误消息
@@ -315,14 +304,12 @@ Android 4.0，但是，已移动的收集器，并不再为出对 Android 运行
 如果此错误消息继续出现，请发送电子邮件 **contact@xamarin.com** 。
 
 
- <a name="Android_Debug_Logs" />
 
 
 ## <a name="android-debug-logs"></a>Android 调试日志
 
 [Android 调试日志](~/android/deploy-test/debugging/android-debug-log.md)可能提供有关您会看到任何运行时错误的其他上下文。
 
- <a name="Floating-Point_performance_is_terrible!" />
 
 
 ## <a name="floating-point-performance-is-terrible"></a>浮点性能为可怕 ！
@@ -339,7 +326,6 @@ Xamarin.Android 支持多个设备 ABIs: *armeabi*， *armeabi v7a*，和*x86*�
 
 如果你的应用需要不错的浮点性能 （例如游戏），则应启用*armeabi v7a* ABI。 你可能想要仅支持*armeabi v7a*运行时，尽管这意味着，仅支持较旧设备*armeabi*将无法运行你的应用。
 
- <a name="Could_not_locate_Android_SDK" />
 
 
 ## <a name="could-not-locate-android-sdk"></a>找不到 Android SDK
@@ -347,9 +333,8 @@ Xamarin.Android 支持多个设备 ABIs: *armeabi*， *armeabi v7a*，和*x86*�
 Google Android SDK for windows 提供了 2 下载。
 如果你选择.exe 安装程序，它将编写告诉 Xamarin.Android 安装位置的注册表项。 如果你选择的.zip 文件，并将其解压缩自己，Xamarin.Android 不知道在何处查找 SDK。 你可以判断 Xamarin.Android 其中 SDK 是 Visual Studio 中通过转到**工具 > 选项 > Xamarin > Android 设置**:
 
-[![在 Xamarin Android 设置中的 android SDK 位置](troubleshooting-images/01a.png)]()
+[![在 Xamarin Android 设置中的 android SDK 位置](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
 
-<a name="IDE_does_not_display_target_device" />
 
 
 ## <a name="ide-does-not-display-target-device"></a>IDE 不会显示目标设备
@@ -393,7 +378,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 确保使用正确的模拟器名称中，即[时配置模拟器使用的名称](~/android/get-started/installation/windows.md#device)。
 
-<a name="INSTALL_FAILED_INVALID_APK_when_installing_a_package" />
 
 ## <a name="installfailedinvalidapk-when-installing-a-package"></a>安装\_失败\_无效\_APK 安装程序包时
 
@@ -410,7 +394,6 @@ Android 包名称*必须*包含句点 (*。*)。 编辑你的包名称，使其�
     -   更改包名称字段包含 '。
 
 
-<a name="INSTALL_FAILED_MISSING_SHARED_LIBRARY_when_installing_a_package" />
 
 
 ## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>安装\_失败\_缺少\_共享\_库安装程序包时
@@ -424,7 +407,6 @@ Android 包指定的共享的库所必需`<uses-library/>`元素。 如果*必�
 
 例如，添加的程序集引用*Mono.Android.GoogleMaps.dll*将隐式添加`<uses-library/>`Google 地图共享库。
 
-<a name="INSTALL_FAILED_UPDATE_INCOMPATIBLE_when_installing_a_package" />
 
 
 ## <a name="installfailedupdateincompatible-when-installing-a-package"></a>安装\_失败\_更新\_不兼容时安装的包
@@ -450,7 +432,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 若要解决此错误，完全删除应用程序从你的设备在重新安装之前。
 
-<a name="INSTALL_FAILED_UID_CHANGED_when_installing_a_package" />
 
 ## <a name="installfaileduidchanged-when-installing-a-package"></a>安装\_失败\_UID\_时安装的包更改
 
@@ -475,7 +456,6 @@ $ adb uninstall @PACKAGE_NAME@
 **不要使用** `adb uninstall -k`，因为这将*保留*应用程序数据，并因此保留在目标设备上的冲突 UID。
 
 
-<a name="Release_apps_fail_to_launch_on_device" />
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>发布应用程序无法在设备上启动
 
@@ -603,7 +583,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [这将在未来版本中修复](https://bugzilla.xamarin.com/show_bug.cgi?id=5401)。
 
-<a name="Unexpected_NullReferenceExceptions" />
 
 ## <a name="unexpected-nullreferenceexceptions"></a>意外的 NullReferenceExceptions
 
@@ -635,7 +614,6 @@ E/mono    ( 4176): at Android.Util.Log.Info (string,string)
 E/dalvikvm(  123): VM aborting
 ```
 
-<a name="Abort_due_to_Global_Reference_Exhaustion" />
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>由于全局引用用尽而导致中止
 
@@ -726,7 +704,6 @@ E/dalvikvm(  602): VM aborting
 
 你可以启用[GREF 日志记录](~/android/troubleshooting/index.md)若要查看何时创建 GREFs，以及多少存在。
 
-<a name="Abort_due_to_JNI_type_mismatch" />
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>由于 JNI 类型不匹配而中止
 

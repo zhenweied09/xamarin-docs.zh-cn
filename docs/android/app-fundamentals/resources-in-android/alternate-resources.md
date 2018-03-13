@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>备用资源
 
@@ -142,7 +142,7 @@ Android 确定基的资源通过循环访问规则的以下测试：
 
 这些规则也图下列流程图中所示：
 
-[![资源流程图](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![资源流程图](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 当系统寻找密度特定资源，但找不到它们时，它将尝试查找其他密度特定资源并缩放它们。 Android 一定不能使用默认资源。
 例如，当寻找低密度资源和它不可用，Android 可能对默认或中等密度资源选择高密度的资源版本。 它这样做是因为高密度资源可以按比例缩小按 0.5，这将导致比缩小需要 0.75 因素的中型密度资源更少的可见性问题的系数。
@@ -196,4 +196,4 @@ Android 确定基的资源通过循环访问规则的以下测试：
 此过程中，由于 Android 将可绘制在中使用资源的资源目录`drawable-en-port-ldpi`设备。
 
 > [!NOTE]
-> **注意：**的屏幕大小限定符提供到此选择过程的一个例外。 很可能适用于 Android，若要选择为比当前设备提供较小屏幕所设计的资源。 例如，大屏幕设备可能使用的资源提供正常大小屏幕。 但是此反之不成立： 同一个大屏幕设备将不使用 xlarge 屏幕提供的资源。 如果 Android 找不到与给定的屏幕大小匹配的资源集，该应用程序将崩溃。
+> 屏幕大小限定符提供到此选择过程的一个例外。 很可能适用于 Android，若要选择为比当前设备提供较小屏幕所设计的资源。 例如，大屏幕设备可能使用的资源提供正常大小屏幕。 但是此反之不成立： 同一个大屏幕设备将不使用 xlarge 屏幕提供的资源。 如果 Android 找不到与给定的屏幕大小匹配的资源集，该应用程序将崩溃。

@@ -3,14 +3,15 @@ title: "第 15 章的摘要。 交互式接口"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e6c61f9a6ba66db2b9a5c7b217c7da952607e709
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 37bbbf2b89048db175ddc1b3b1a24cea92b898a7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>第 15 章的摘要。 交互式接口
 
@@ -105,7 +106,7 @@ Xamarin.Forms 包含 20 可实例化的类派生自`View`但不是`Layout`。 �
 
 [ **RgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/RgbSliders)程序包含三种`Slider`允许你以交互方式选择通过指定其 RGB 值的一种颜色的元素：
 
-[![R G B 滑块的三个屏幕截图](images/ch15fg03-small.png "RGB 滑块")](images/ch15fg03-large.png "RGB 滑块")
+[![R G B 滑块的三个屏幕截图](images/ch15fg03-small.png "RGB 滑块")](images/ch15fg03-large.png#lightbox "RGB 滑块")
 
 [ **TextFade** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/TextFade)示例使用两个`Slider`移动两个元素`Label`跨元素`AbsoluteLayout`和淡入淡出到另一个。
 

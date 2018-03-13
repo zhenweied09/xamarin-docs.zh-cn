@@ -4,14 +4,15 @@ description: "发现 SkiaSharp 缩放变换的缩放到各种大小的对象"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>缩放变换
 
@@ -103,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如你所见，所有内容后绘制`Scale`按比例调用增加：
 
-[![](scale-images/basicscale-small.png "三重的基本缩放页的屏幕截图")](scale-images/basicscale-large.png "三重的基本缩放页的屏幕截图")
+[![](scale-images/basicscale-small.png "三重的基本缩放页的屏幕截图")](scale-images/basicscale-large.png#lightbox "三重的基本缩放页的屏幕截图")
 
 文本，虚线，在这一行中，角和之间的画布的左侧，从上边缘和圆角的矩形的 10 个像素边距舍入短划线的长度的宽度都受到相同的比例因子。
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 定位圆角矩形的左上角`margin`画布的左侧的像素为单位和`margin`像素。 最后两个自变量`Scale`方法设置为这些值加上的宽度和高度的文本，也是圆角矩形的宽度和高度。 这意味着所有缩放是相对于该矩形的中心：
 
-[![](scale-images/centeredscale-small.png "三重的居中比例页的屏幕截图")](scale-images/centeredscale-large.png "三重的居中比例页的屏幕截图")
+[![](scale-images/centeredscale-small.png "三重的居中比例页的屏幕截图")](scale-images/centeredscale-large.png#lightbox "三重的居中比例页的屏幕截图")
 
 `Slider`在此程序中的元素具有的范围 （&） #x 2013; 10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 Windows 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 `pathBounds`获取此代码的顶部附近和随后用于更高版本的宽度和高度在画布矩形`Scale`调用。 通过呈现时，单独的调用将缩放路径的坐标`DrawPath`调用但星形将居中在画布的右上角。 它需要向下和向左移动。 这是个作业的`Translate`调用。 这两种属性`pathBounds`是大约-100，因此转换因素是约 100。 因为`Translate`后，将调用`Scale`调用，以便它们将在星型的中心移动到画布的中心，这些值有效地缩放比例因子，通过：
 
-[![](scale-images/anisotropicscaling-small.png "三重的各向异性缩放页的屏幕截图")](scale-images/anisotropicscaling-large.png "各向异性缩放页的三个屏幕截图")
+[![](scale-images/anisotropicscaling-small.png "三重的各向异性缩放页的屏幕截图")](scale-images/anisotropicscaling-large.png#lightbox "各向异性缩放页的三个屏幕截图")
 
 你可以考虑的另一种方法`Scale`和`Translate`调用是在反向序列中确定的效果：`Translate`调用将转移路径，使之成为完全可见但面向画布的左上角。 `Scale`方法然后使该星级相对于窗口左上角更大。
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 它是类似的逻辑，且文本将扩展到基于文本的边界矩形从返回的页大小`MeasureText`（这是略大于实际文本）：
 
-[![](scale-images/anisotropictext-small.png "三重各向异性测试页的屏幕截图")](scale-images/anisotropictext-large.png "各向异性测试页的三个屏幕快照")
+[![](scale-images/anisotropictext-small.png "三重各向异性测试页的屏幕截图")](scale-images/anisotropictext-large.png#lightbox "各向异性测试页的三个屏幕快照")
 
 如果你需要保留纵横比的图形对象，你将需要使用各向同性缩放。 **各向同性缩放**页演示这一为 11 星。 从概念上讲，在使用各向同性缩放比例页的中心显示图形对象的步骤如下：
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 代码十次还将显示在星型，10%和渐进式将颜色更改从红色为蓝色，减少的缩放每次挑选：
 
-[![](scale-images/isotropicscaling-small.png "三重的各向同性缩放页的屏幕截图")](scale-images/isotropicscaling-large.png "三倍的各向同性缩放页的屏幕截图")
+[![](scale-images/isotropicscaling-small.png "三重的各向同性缩放页的屏幕截图")](scale-images/isotropicscaling-large.png#lightbox "三倍的各向同性缩放页的屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

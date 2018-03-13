@@ -3,14 +3,15 @@ title: "第 5 章： 的摘要。 处理大小"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 4454150b4caad86eb063ab7fcf8a721cbab9b5ec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>第 5 章： 的摘要。 处理大小
 
@@ -62,7 +63,7 @@ Windows 运行时还建立了表示接近 160 独立于设备的单位为一英�
 
 [ **EstimatedFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EstimatedFontSize)示例演示这种方法。 此程序已写入之前[ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)属性已可用，因此它使用[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)与[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)设置以模拟边距。
 
-[![估计的字体大小的三个屏幕截图](images/ch05fg07-small.png "文本适应可用大小")](images/ch05fg07-large.png "文本适应可用大小")
+[![估计的字体大小的三个屏幕截图](images/ch05fg07-small.png "文本适应可用大小")](images/ch05fg07-large.png#lightbox "文本适应可用大小")
 
 ## <a name="a-fit-to-size-clock"></a>调整大小时钟
 

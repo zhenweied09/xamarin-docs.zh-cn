@@ -7,12 +7,12 @@ ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ccd55d4d7f1aea55110e109bed1fbd4ebc90b93f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="activity-lifecycle"></a>活动生命周期
 
@@ -44,7 +44,7 @@ Android 活动生命周期包括在活动类公开的方法，以提供一个资
 
 Android OS 仲裁基于其状态的活动。 这有助于识别不再使用，允许操作系统回收内存和资源的活动的 Android。 下图说明了活动可能在其生存期内要经历的状态：
 
-[ ![活动状态图](images/image1-sml.png)](images/image1.png)
+[![活动状态图](images/image1-sml.png)](images/image1.png#lightbox)
 
 这些状态可分为 4 个主要组，如下所示：
 
@@ -69,7 +69,7 @@ Android OS 仲裁基于其状态的活动。 这有助于识别不再使用，�
 
 Android SDK，并通过扩展的 Xamarin.Android framework 所提供的用于管理应用程序内的活动状态的一个功能强大的模型。 当活动的状态将更改时，该活动将通知操作系统，在活动上调用特定方法。 下图说明了与活动生命周期关系中的这些方法：
 
-[ ![活动生命周期流程图](images/image2-sml.png)](images/image2.png)
+[![活动生命周期流程图](images/image2-sml.png)](images/image2.png#lightbox)
 
 作为开发人员，你可以通过重写这些方法在活动中的处理状态更改。 请务必注意，但是，所有的生命周期方法在 UI 线程上调用，并且将阻止执行的 UI 工作，如隐藏当前的活动中，下一步部分操作系统显示一个新活动，等等。在这种情况下，这些方法中的代码应尽可能简单使感到很好地执行应用程序。 应在后台线程上执行任何长时间运行的任务。
 
@@ -205,7 +205,7 @@ public void OnPause()
 
 许多 Android 设备没有两个不同的按钮:"上一步"按钮和"主页"按钮。 可以在为 Android 4.0.3 下面的屏幕截图中看到举例说明：
 
-[ ![上一页和主页按钮](images/image4-sml.png)](images/image4.png)
+[![上一页和主页按钮](images/image4-sml.png)](images/image4.png#lightbox)
 
 即使它们看起来具有相同的效果将应用程序放在后台，没有两个按钮，之间略有不同。 当用户单击后退按钮时，它们在告诉 Android 与活动完成。 Android 将销毁活动。 与此相反，当用户单击主页按钮活动只是放入后台&ndash;Android 将终止活动。
 
@@ -225,7 +225,6 @@ public void OnPause()
 
 本指南介绍前两个选项。
 
- <a name="Bundle_State" />
 
 
 ### <a name="bundle-state"></a>捆绑包状态
@@ -241,7 +240,7 @@ public void OnPause()
 
 下图说明了如何使用这些方法：
 
-[ ![捆绑包状态流程图](images/image3-sml.png)](images/image3.png)
+[![捆绑包状态流程图](images/image3-sml.png)](images/image3.png#lightbox)
 
 #### <a name="onsaveinstancestate"></a>OnSaveInstanceState
 
@@ -276,7 +275,7 @@ protected override void OnCreate (Bundle bundle)
 
 上面的代码递增整数名为`c`名为的按钮时`incrementCounter`显示中的结果的单击`TextView`名为`output`。 发生配置更改-例如，当将设备旋转-上面的代码都将丢失的值`c`因为`bundle`将`null`下, 图中所示：
 
-[ ![显示不会显示以前的值](images/07-sml.png)](images/07.png)
+[![显示不会显示以前的值](images/07-sml.png)](images/07.png#lightbox)
 
 若要保留的值`c`在此示例中，活动可以重写`OnSaveInstanceState`，保存为捆绑中的值，如下所示：
 
@@ -295,10 +294,9 @@ c = bundle.GetInt ("counter", -1);
 ```
 
 > [!NOTE]
-> **注意：**很重要始终调用基实现的`OnSaveInstanceState`以便查看层次结构的状态也可能保存。
+> 它是对始终很重要的调用的基实现`OnSaveInstanceState`以便查看层次结构的状态也可能保存。
 
 
-<a name="View_State" />
 
 ##### <a name="view-state"></a>视图状态
 
@@ -312,7 +310,7 @@ c = bundle.GetInt ("counter", -1);
 
 由于`EditText`控件具有`id`分配，当用户输入一些数据，并旋转设备时，数据仍显示，如下所示：
 
-[ ![在横向模式中保留数据](images/08-sml.png)](images/08.png)
+[![在横向模式中保留数据](images/08-sml.png)](images/08.png#lightbox)
 
 #### <a name="onrestoreinstancestate"></a>OnRestoreInstanceState
 
@@ -334,8 +332,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 有关的保存状态使用示例`Bundle`，请参阅[演练-保存活动状态](saving-state.md)。
 
 
-<a name="Bundle_Limitations" />
-
 #### <a name="bundle-limitations"></a>捆绑限制
 
 尽管`OnSaveInstanceState`更加轻松地保存暂时性数据，它具有一些限制：
@@ -348,7 +344,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 
 捆绑包状态是适用于不使用的内存多的简单数据，而*非配置实例数据*用于更复杂的数据或将占用大量资源，若要检索的数据，例如，由于 web 服务调用或一项复杂数据库查询。 根据需要在对象中获取保存非配置实例数据。 下一节介绍`OnRetainNonConfigurationInstance`作为保留通过配置更改的更复杂数据类型的一种方法。
 
-<a name="Persisting_Complex_Data" />
 
 ### <a name="persisting-complex-data"></a>将复杂数据永久保存
 
@@ -407,7 +402,7 @@ public class NonConfigInstanceActivity : ListActivity
 
 此代码从格式化为 JSON web 中检索结果，分析它们，然后在列表中，显示的结果，如下面的屏幕截图中所示：
 
-[ ![在屏幕上显示的结果](images/06-sml.png)](images/06.png)
+[![在屏幕上显示的结果](images/06-sml.png)](images/06.png#lightbox)
 
 配置发生更改时-例如，当设备旋转的代码将重复该过程。 若要重用最初检索的结果并不会导致不必要的冗余网络调用，我们可以使用`OnRetainNonconfigurationInstance`来保存结果，如下所示：
 

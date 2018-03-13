@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 14abb7a4b85b493bb0ab96a982d989fad783fabd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>使用其中的选项卡式的布局
 
 _本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程序中创建选项卡式的用户界面。_
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
@@ -27,7 +26,6 @@ _本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程
 请注意，`Toolbar`是你应使用而不是一个更高版本和更通用操作栏组件`ActionBar`(`Toolbar`旨在替换`ActionBar`)。 有关详细信息，请参阅[工具栏](~/android/user-interface/controls/tool-bar/index.md)。 
 
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>惠?
 
@@ -36,7 +34,6 @@ _本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程
 一些操作栏 Api 返回移植到 API 级别 7 (Android 2.1)，但不可通过[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，这将提供给 Xamarin.Android 应用程序通过[Xamarin Android 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
 
 
-<a name="Introducing_tabs_in_the_ActionBar" />
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>引入操作栏中的选项卡
 
@@ -63,7 +60,6 @@ Xamarin.Android 包装`ActionBar.ITabListener`上的事件与`ActionBar.Tab`类�
 -  TabUnselected
 
 
-<a name="Adding_Tabs_to_the_ActionBar" />
 
 ### <a name="adding-tabs-to-the-actionbar"></a>向其中添加选项卡
 
@@ -111,7 +107,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-<a name="Event_Handlers_vs_ActionBar.ITabListener" />
 
 #### <a name="event-handlers-vs-actionbaritablistener"></a>事件处理程序与 ActionBar.ITabListener
 
@@ -120,7 +115,6 @@ protected override void OnCreate(Bundle bundle)
 许多选项卡上，在处理时共享之间操作栏选项卡的常见功能，也可以在内存和性能，以创建一个自定义类，实现方面更加高效`ActionBar.ITabListener`，和共享的类的单个实例。 这会减少 GREF 的 Xamarin.Android 应用程序正在使用的数量。 
 
 
-<a name="Backwards_Compatibility_for_Older_Devices" />
 
 ### <a name="backwards-compatibility-for-older-devices"></a>向后兼容性较旧的设备
 
@@ -177,7 +171,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

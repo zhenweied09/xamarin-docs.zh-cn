@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9073d64c43c6817b45dca02b870fcfe093ebf46d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="building-modern-macos-apps"></a>生成现代 macOS 应用
 
@@ -24,7 +24,7 @@ _本文介绍几个提示、 功能和技术开发人员可以使用生成在 Xa
 
 现代的外观将包括现代的窗口和工具栏外观例如，如下所示的示例应用程序：
 
-[ ![](modern-cocoa-apps-images/content08.png "下面举例说明现代的 Mac 应用程序 UI")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "下面举例说明现代的 Mac 应用程序 UI")](modern-cocoa-apps-images/content08.png#lightbox)
 
 <a name="Enabling-Full-Sized-Content-Views" />
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 此功能也在 Xcode 的接口生成器通过选择窗口并检查启用**完整大小的内容视图**:
 
-[ ![](modern-cocoa-apps-images/content01.png "编辑在 Xcode 的接口生成器主要情节提要")](modern-cocoa-apps-images/content01.png)
+[![](modern-cocoa-apps-images/content01.png "编辑在 Xcode 的接口生成器主要情节提要")](modern-cocoa-apps-images/content01.png#lightbox)
 
 当使用完整的大小内容视图，开发人员可能需要偏移下的标题和工具栏区域的内容，以便特定内容 （如标签） 不滑动下它们。
 
@@ -145,11 +145,11 @@ topConstraint.Active = true;
 
 正常 macOS 窗口包含到窗口的上边缘的标题栏会在运行一个标准。 如果该窗口还包括一个工具条，则它将显示此标题栏区域下：
 
-[ ![](modern-cocoa-apps-images/content02.png "一个标准的 Mac 工具栏")](modern-cocoa-apps-images/content02.png)
+[![](modern-cocoa-apps-images/content02.png "一个标准的 Mac 工具栏")](modern-cocoa-apps-images/content02.png#lightbox)
 
 当使用简化的工具栏，标题区消失，工具栏移到标题栏的位置时，以串联的窗口关闭、 最小化和最大化按钮：
 
-[ ![](modern-cocoa-apps-images/content03.png "简化的 Mac 工具栏")](modern-cocoa-apps-images/content03.png)
+[![](modern-cocoa-apps-images/content03.png "简化的 Mac 工具栏")](modern-cocoa-apps-images/content03.png#lightbox)
 
 简化工具栏通过重写`ViewWillAppear`方法`NSViewController`和使其看起来类似于以下：
 
@@ -171,7 +171,7 @@ public override void ViewWillAppear ()
 
 根据应用程序的设计，开发人员可能还想要补充恰好标题/工具栏区域，以提供上下文相关控件添加到用户的活动上基于它们的下方显示的附件视图控制器的区域是标题栏当前参与：
 
-[ ![](modern-cocoa-apps-images/content04.png "示例附件视图控制器")](modern-cocoa-apps-images/content04.png)
+[![](modern-cocoa-apps-images/content04.png "示例附件视图控制器")](modern-cocoa-apps-images/content04.png#lightbox)
 
 将自动模糊附件视图控制器，并为其无需开发人员干预系统调整大小。
 
@@ -180,13 +180,13 @@ public override void ViewWillAppear ()
 1. 在“解决方案资源管理器”中，双击 `Main.storyboard` 文件，将其打开进行编辑。
 2. 拖动**自定义视图控制器**到窗口的层次结构中： 
 
-    [ ![](modern-cocoa-apps-images/content05.png "添加新的自定义视图控制器")](modern-cocoa-apps-images/content05.png)
+    [![](modern-cocoa-apps-images/content05.png "添加新的自定义视图控制器")](modern-cocoa-apps-images/content05.png#lightbox)
 3. 布局附件视图 UI: 
 
-    [ ![](modern-cocoa-apps-images/content06.png "设计新视图")](modern-cocoa-apps-images/content06.png)
+    [![](modern-cocoa-apps-images/content06.png "设计新视图")](modern-cocoa-apps-images/content06.png#lightbox)
 4. 公开附件视图作为**Outlet**和任何其他**操作**或**插座**有关其 UI: 
 
-    [ ![](modern-cocoa-apps-images/content07.png "添加所需的电源插座")](modern-cocoa-apps-images/content07.png)
+    [![](modern-cocoa-apps-images/content07.png "添加所需的电源插座")](modern-cocoa-apps-images/content07.png#lightbox)
 5. 保存更改。
 6. 返回到 Visual Studio for Mac 以同步更改。
 
@@ -248,7 +248,7 @@ accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
 
 此外，macOS 系统可能将附件视图控制器添加到应用程序的窗口中。 例如，若要创建多个应用程序的 Windows 将合并到一个虚拟窗口选项卡式窗口：
 
-[ ![](modern-cocoa-apps-images/content08.png "下面举例说明选项卡式 Mac 窗口")](modern-cocoa-apps-images/content08.png)
+[![](modern-cocoa-apps-images/content08.png "下面举例说明选项卡式 Mac 窗口")](modern-cocoa-apps-images/content08.png#lightbox)
 
 通常情况下，开发人员将需要采取有限的操作使用其 Xamarin.Mac 应用中的选项卡式窗口，系统将自动按以下方式处理它们：
 
@@ -430,7 +430,7 @@ Apple 提供的此外，建议使用而不添加新的层支持视图`CALayer`�
 
 可以通过设置启用层备份`WantsLayer`的`NSView`到`true`在 Xcode 的接口生成器的内部或**视图效果检查器**通过检查**核心动画层**:
 
-[ ![](modern-cocoa-apps-images/content09.png "该视图效果检查器")](modern-cocoa-apps-images/content09.png)
+[![](modern-cocoa-apps-images/content09.png "该视图效果检查器")](modern-cocoa-apps-images/content09.png#lightbox)
 
 <a name="Redrawing-Views-with-Layers" />
 
@@ -792,7 +792,7 @@ Apple 提供建议执行以下操作：
 
 Apple 提供 Xcode 的接口生成器中的一些功能，开发人员可用于在设计或编辑应用程序的 UI 时支持的本地化。 **文本方向**部分**属性检查器**允许开发人员提供有关如何使用和更新在选择基于文本的视图方向的提示 (如`NSTextField`):
 
-[ ![](modern-cocoa-apps-images/content10.png "文本方向选项")](modern-cocoa-apps-images/content10.png)
+[![](modern-cocoa-apps-images/content10.png "文本方向选项")](modern-cocoa-apps-images/content10.png#lightbox)
 
 有三个可能值**文本方向**:
 
@@ -851,7 +851,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 现代 macOS 应用可以采用非常适用于映像创建、 编辑或演示文稿应用新深色接口外观：
 
-[ ![](modern-cocoa-apps-images/content11.png "下面举例说明深色 Mac 窗口 UI")](modern-cocoa-apps-images/content11.png)
+[![](modern-cocoa-apps-images/content11.png "下面举例说明深色 Mac 窗口 UI")](modern-cocoa-apps-images/content11.png#lightbox)
 
 这可以通过添加一行代码之前显示窗口。 例如:
 
@@ -898,7 +898,7 @@ Apple 具有使用系统出现的以下建议：
 
 控制器允许开发人员可以将元素收集到一组组合以及 Segues 抽象删除典型"粘附代码"移动整个查看层次结构需要：
 
-[ ![](modern-cocoa-apps-images/content12.png "编辑 Xcode 的接口生成器中的用户界面")](modern-cocoa-apps-images/content12.png)
+[![](modern-cocoa-apps-images/content12.png "编辑 Xcode 的接口生成器中的用户界面")](modern-cocoa-apps-images/content12.png#lightbox)
 
 有关详细信息，请参阅我们[简介情节提要](~/mac/platform/storyboards/index.md)文档。
 

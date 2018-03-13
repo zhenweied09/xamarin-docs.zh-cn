@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 66cc67b38d70992fe815732407317fab3dc52528
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-3d-touch"></a>3D Touch 简介
 
 _本文介绍如何使用新应用程序中的 iPhone 6s 和 iPhone 6s Plus 3D Touch 笔势。_
 
-[ ![](3d-touch-images/info01.png "3D Touch 的示例启用的应用")](3d-touch-images/info01.png)
+[![](3d-touch-images/info01.png "3D Touch 的示例启用的应用")](3d-touch-images/info01.png#lightbox)
 
 本文将提供并介绍了如何使用新的 3D Touch Api 将压力敏感手势添加到你的 Xamarin.iOS 应用运行新的 iPhone 上 6s 和 iPhone 6s Plus 设备。
 
@@ -29,7 +29,7 @@ _本文介绍如何使用新应用程序中的 iPhone 6s 和 iPhone 6s Plus 3D T
 - [压力敏感度](#Pressure-Sensitivity)-现在可以硬测量应用程序或用户轻接触屏幕并采取利用该信息。
   例如，绘制应用可以进行行之更宽或更薄根据用户硬触摸屏幕。
 - [查看和 Pop](#Peek-and-Pop) -您的应用程序现在可以让用户使用其数据进行交互而无需导航超出其当前上下文。 通过按硬屏幕屏幕上，它们可以查看他们感兴趣 （如预览一条消息） 的项。 通过按更难，它们可以弹出到项。
-- [快速操作](#Quick-Action)-认为的快速之类的操作的上下文菜单，可以将弹出型时用户右键单击桌面应用程序中的项。
+- [快速操作](#Quick-Actions)-认为的快速之类的操作的上下文菜单，可以将弹出型时用户右键单击桌面应用程序中的项。
   使用快速操作，你可以添加快捷方式函数中你的应用程序直接从主页屏幕上的应用图标。
 - [在模拟器中测试 3D Touch](#Testing-3D-Touch-in-the-Simulator) -与正确的 Mac 硬件，你可以在 iOS 模拟器中测试 3D Touch 启用应用程序。
 
@@ -39,7 +39,7 @@ _本文介绍如何使用新应用程序中的 iPhone 6s 和 iPhone 6s Plus 3D T
 
 如前所述，使用新属性[UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/)类可以测量的用户是否将应用于 iOS 设备的屏幕的压力，还可以在你的用户界面中使用此信息。 例如，使画笔笔画更半透明或不透明基于压力的量。
 
-[ ![](3d-touch-images/pressure01.png "呈现为多半透明或不透明画笔笔画基于压力量")](3d-touch-images/pressure01.png)
+[![](3d-touch-images/pressure01.png "呈现为多半透明或不透明画笔笔画基于压力量")](3d-touch-images/pressure01.png#lightbox)
 
 由于 3D Touch，如果在 iOS 9 （或更高版本） 上运行你的应用和 iOS 设备是否可以支持 3D Touch，压力中的更改将导致`TouchesMoved`引发事件。
 
@@ -80,7 +80,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 例如，如果你的应用程序显示的消息表，用户可以按硬上一个项可以预览中覆盖区上查看其内容 (它是 Apple 指作为*查看*)。
 
-[ ![](3d-touch-images/peekandpop01.png "下面举例说明扫视内容")](3d-touch-images/peekandpop01.png)
+[![](3d-touch-images/peekandpop01.png "下面举例说明扫视内容")](3d-touch-images/peekandpop01.png#lightbox)
 
 如果用户按下更难，他们将输入正则消息视图 (这称为*弹出*-到视图的 ping)。
 
@@ -208,9 +208,8 @@ public override void ViewDidLoad ()
 
 如上面所述，你可以快速操作将类似，可以将弹出型时用户右键单击桌面应用程序中的项的上下文菜单。 你应使用快速操作提供的最常见的函数或你的应用程序的功能的快捷方式。
 
-[ ![](3d-touch-images/quickactions01.png "下面举例说明的快速操作菜单")](3d-touch-images/quickactions01.png)
+[![](3d-touch-images/quickactions01.png "下面举例说明的快速操作菜单")](3d-touch-images/quickactions01.png#lightbox)
 
-<a name="Defining-Static-Quick-Actions" />
 
 ### <a name="defining-static-quick-actions"></a>定义静态快速操作
 
@@ -287,7 +286,6 @@ public override void ViewDidLoad ()
 
 
 
-<a name="Identifying-Quick-Action-Items" />
 
 ### <a name="identifying-quick-action-items"></a>标识快速操作项
 
@@ -389,7 +387,6 @@ public override void PerformActionForShortcutItem (UIApplication application, UI
 
 最后，如果你的应用程序已经在运行，`PerformActionForShortcutItem`将调用方法来处理快速操作项，因此我们需要重写此方法并调用我们`HandleShortcutItem`方法以及此处。
 
-<a name="Creating-Dynamic-Quick-Action-Items" />
 
 ### <a name="creating-dynamic-quick-action-items"></a>创建动态快速操作项
 
@@ -442,7 +439,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 若要启用此功能，请在支持 3D Touch 的模拟的 iPhone 硬件运行任何应用程序 (iPhone 6s 和更高版本)。 接下来，选择**硬件**在 iOS 模拟器和启用菜单**3D touch 的使用 Trackpad Force**菜单项：
 
-[ ![](3d-touch-images/simulator01.png "选择 iOS 模拟器中的硬件菜单并启用 3D touch 菜单项使用 Trackpad Force")](3d-touch-images/simulator01.png)
+[![](3d-touch-images/simulator01.png "选择 iOS 模拟器中的硬件菜单并启用 3D touch 菜单项使用 Trackpad Force")](3d-touch-images/simulator01.png#lightbox)
 
 使用此活动的功能，你可以按更难 Mac 的 trackpad 上启用 3D Touch 就像在真实 iPhone 硬件上。
 
