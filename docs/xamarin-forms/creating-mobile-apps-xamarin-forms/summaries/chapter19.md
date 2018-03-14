@@ -3,14 +3,15 @@ title: "第 19 章的摘要。 集合视图"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 37afa3a54fd20745a65312fb5a24d958c8ec405f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: 73b3ec3e60a8fca5c48f515eab2cbb8359618dbb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>第 19 章的摘要。 集合视图
 
@@ -97,7 +98,7 @@ Xamarin.Forms 定义保留集合并显示其元素的三个视图：
 
 在 XAML 中就可以设置[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)到`DataTemplate`然后定义自定义可视化树作为[ `View` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ViewCell.View/)属性`ViewCell`。 (`View`作为内容属性的`ViewCell`因此`ViewCell.View`无需使用标记。)[ **CustomNamedColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/CustomNamedColorList)示例演示了这个方法：
 
-[![三重的自定义名为颜色列表的屏幕截图](images/ch19fg11-small.png "自定义名为颜色列表")](images/ch19fg11-large.png "自定义名为颜色列表")
+[![三重的自定义名为颜色列表的屏幕截图](images/ch19fg11-small.png "自定义名为颜色列表")](images/ch19fg11-large.png#lightbox "自定义名为颜色列表")
 
 获取适合所有平台大小可能会很棘手。 [ `RowHeight` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RowHeight/)属性很有用，但在某些情况下，你将需要采用[ `HasUnevenRows` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.HasUnevenRows/)属性，这是效率较低，但强制`ListView`调整行的大小。 对于 iOS 和 Android，你必须使用这两个属性之一来获取正确的行大小调整。
 
@@ -127,7 +128,7 @@ Xamarin.Forms 定义保留集合并显示其元素的三个视图：
 
 [ **StudentList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/StudentList)程序使用`ImageCell`以显示学生和在其图像`ListView`:
 
-[![三重的学生列表的屏幕截图](images/ch19fg18-small.png "学生列表")](images/ch19fg18-large.png "学生列表")
+[![三重的学生列表的屏幕截图](images/ch19fg18-small.png "学生列表")](images/ch19fg18-large.png#lightbox "学生列表")
 
 [ **ListViewHeader** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ListViewHeader)示例添加[ `Header` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.Header/)属性，但该只出现在 Android 上。
 

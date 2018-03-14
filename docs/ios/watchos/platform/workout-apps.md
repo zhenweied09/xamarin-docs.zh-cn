@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f375f58215fbef13298e31b03b969c9388d2bfa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="workout-apps"></a>测验应用
 
@@ -29,7 +29,7 @@ _本文介绍如何增强功能 Apple 已针对锻炼应用 watchOS 3 以及如�
 
 设计良好的适用性或锻炼应用程序可帮助用户图表来访问其适用性目标其活动。 通过使用 Apple Watch，适用性和锻炼应用能够即时访问的核心速率卡路里刻录和活动检测。
 
-[ ![](workout-apps-images/workout01.png "适用性和锻炼应用示例")](workout-apps-images/workout01.png)
+[![](workout-apps-images/workout01.png "适用性和锻炼应用示例")](workout-apps-images/workout01.png#lightbox)
 
 到 watchOS 3，新_后台运行_提供锻炼相关应用程序能够在 Apple Watch 上在后台运行，并获取对 HealthKit 数据访问。
 
@@ -60,20 +60,20 @@ _本文介绍如何增强功能 Apple 已针对锻炼应用 watchOS 3 以及如�
 1. 在**解决方案资源管理器**，双击监视扩展助理 iPhone 应用`Info.plist`文件以打开进行编辑。
 2. 切换到**源**视图： 
 
-    [ ![](workout-apps-images/plist01.png "源视图")](workout-apps-images/plist01.png)
+    [![](workout-apps-images/plist01.png "源视图")](workout-apps-images/plist01.png#lightbox)
 3. 添加名为的新键`WKBackgroundModes`并设置**类型**到`Array`: 
 
-    [ ![](workout-apps-images/plist02.png "添加调用 WKBackgroundModes 的新键")](workout-apps-images/plist02.png)
+    [![](workout-apps-images/plist02.png "添加调用 WKBackgroundModes 的新键")](workout-apps-images/plist02.png#lightbox)
 4. 将新项添加到该数组**类型**的`String`和的值`workout-processing`: 
 
-    [ ![](workout-apps-images/plist03.png "将新项添加到具有字符串类型和值的锻炼处理数组")](workout-apps-images/plist03.png)
+    [![](workout-apps-images/plist03.png "将新项添加到具有字符串类型和值的锻炼处理数组")](workout-apps-images/plist03.png#lightbox)
 5. 保存对文件所做的更改。
 
 ## <a name="starting-a-workout-session"></a>启动测验会话
 
 有三个主要步骤开始测验会话：
 
-[ ![](workout-apps-images/workout02.png "启动测验会话三个主要步骤")](workout-apps-images/workout02.png)
+[![](workout-apps-images/workout02.png "启动测验会话三个主要步骤")](workout-apps-images/workout02.png#lightbox)
 
 1. 应用程序必须请求授权 HealthKit 中访问数据。
 2. 正在启动的锻炼类型创建锻炼配置对象。
@@ -97,7 +97,7 @@ _本文介绍如何增强功能 Apple 已针对锻炼应用 watchOS 3 以及如�
 1. 在“解决方案资源管理器”中，双击 `Entitlements.plist` 文件，将其打开进行编辑。
 2. 滚动到底部并检查**启用 HealthKit**: 
 
-    [ ![](workout-apps-images/auth01.png "检查启用 HealthKit")](workout-apps-images/auth01.png)
+    [![](workout-apps-images/auth01.png "检查启用 HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. 保存对文件所做的更改。
 4. 按照中的说明[显式应用 ID 和预配配置文件](~/ios/platform/healthkit.md)和[关联的应用程序 ID 和预配配置文件与你的 Xamarin.iOS 应用程序](~/ios/platform/healthkit.md)的部分[简介HealthKit](~/ios/platform/healthkit.md)文章以正确配置应用。
 5. 最后，使用中的说明[编程运行状况工具包](~/ios/platform/healthkit.md)和[从用户请求权限](~/ios/platform/healthkit.md)的部分[简介 HealthKit](~/ios/platform/healthkit.md)文章请求到若要访问用户的 HealthKit 数据存储的授权。
@@ -273,7 +273,7 @@ private void StartOutdoorRun ()
 
 如果应用程序启动此锻炼会话和用户切换回其手表表盘，将面临的上方显示小绿色"running man"图标：
 
-[ ![](workout-apps-images/workout03.png "如上所示面临的一个小绿色运行 man 图标")](workout-apps-images/workout03.png)
+[![](workout-apps-images/workout03.png "如上所示面临的一个小绿色运行 man 图标")](workout-apps-images/workout03.png#lightbox)
 
 如果用户点击此图标，它们将被带回应用程序。
 
@@ -281,7 +281,7 @@ private void StartOutdoorRun ()
 
 配置并开始测验会话后，将需要应用程序来收集有关会话 （如用户的核心速率） 的数据和控制会话的状态：
 
-[ ![](workout-apps-images/workout04.png "数据收集和控制关系图")](workout-apps-images/workout04.png)
+[![](workout-apps-images/workout04.png "数据收集和控制关系图")](workout-apps-images/workout04.png#lightbox)
 
 1. **观察示例**-应用程序将需要从将得到处理并向用户显示的 HealthKit 中检索信息。
 2. **观察事件**-应用程序将需要通过 HealthKit 或从 （例如暂停测验的用户） 的应用程序的 UI 生成的事件做出响应。
@@ -502,7 +502,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 需要执行以下步骤以结束并保存锻炼会话：
 
-[ ![](workout-apps-images/workout05.png "结束和保存锻炼会话关系图")](workout-apps-images/workout05.png)
+[![](workout-apps-images/workout05.png "结束和保存锻炼会话关系图")](workout-apps-images/workout05.png#lightbox)
 
 1. 首先，应用程序将需要结束锻炼会话。
 2. 测验会话保存到 HealthKit。
@@ -642,7 +642,7 @@ private void SaveWorkoutSamples (HKWorkout workout)
 
 看一看此过程的工作原理：
 
-[ ![](workout-apps-images/workout06.png "iPhone 和 Apple Watch 通信关系图")](workout-apps-images/workout06.png)
+[![](workout-apps-images/workout06.png "iPhone 和 Apple Watch 通信关系图")](workout-apps-images/workout06.png#lightbox)
 
 1. IPhone 应用创建`HKWorkoutConfiguration`对象和设置的锻炼类型和位置。
 2. `HKWorkoutConfiguration`对象发送应用程序的 Apple Watch 版本，并且，如果尚未运行，它由操作系统中启动。

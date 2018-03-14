@@ -7,12 +7,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4e5bf2b24845fa008c6f97a6d55e18a51bc82164
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知 Firebase 云消息传送
 
@@ -22,7 +22,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 在本演练中，基本应用程序中调用**FCMClient**将创建来阐释 FCM 消息传递的 essentials。 **FCMClient**检查是否存在的 Google Play 服务、 从 FCM 收到注册令牌、 显示从 Firebase 控制台中，发送的远程通知和订阅的主题消息：
 
-[![应用的示例屏幕快照](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png)
+[![应用的示例屏幕快照](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png#lightbox)
 
 将介绍下列主题领域：
 
@@ -56,7 +56,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 在下面的示例中，包名称设置为`com.xamarin.fcmexample`: 
 
-[![设置包名称](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png)
+[![设置包名称](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png#lightbox)
 
 尽管你更新**Android 清单**，另请检查以确保`Internet`启用权限。 
 
@@ -68,7 +68,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 在下面的示例中，包名称设置为`com.xamarin.fcmexample`: 
 
-[![设置包名称](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png)
+[![设置包名称](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png#lightbox)
 
 尽管你更新**Android 清单**，另请检查以确保`INTERNET`启用权限 (下**所需的权限**)。 
 
@@ -88,7 +88,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 3.  安装到此包**FCMClient**项目： 
 
-    [ ![安装 Google Play 服务基](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png)
+    [![安装 Google Play 服务基](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -98,7 +98,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 3.  安装到此包**FCMClient**项目： 
 
-    [ ![安装 Google Play 服务基](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png)
+    [![安装 Google Play 服务基](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png#lightbox)
 
 -----
 
@@ -125,7 +125,7 @@ using Android.Gms.Common;
 
 3.  安装到此包**FCMClient**项目： 
 
-    [ ![安装 Xamarin Firebase 消息传送](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png)
+    [![安装 Xamarin Firebase 消息传送](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -135,7 +135,7 @@ using Android.Gms.Common;
 
 3.  安装到此包**FCMClient**项目： 
 
-    [ ![安装 Xamarin Firebase 消息传送](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png)
+    [![安装 Xamarin Firebase 消息传送](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
 -----
  
@@ -166,7 +166,7 @@ using Android.Util;
 
 4.  在**属性**窗格中，设置**生成操作**到**GoogleServicesJson** (如果**GoogleServicesJson**未显示生成操作，保存并关闭解决方案，然后重新打开它）：
 
-    [![将生成操作设置为 GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png)
+    [![将生成操作设置为 GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -178,7 +178,7 @@ using Android.Util;
 
 4.  设置**生成操作**到**GoogleServicesJson**: 
 
-    [![将生成操作设置为 GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png)
+    [![将生成操作设置为 GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png#lightbox)
  
 -----
  
@@ -254,7 +254,7 @@ protected override void OnCreate (Bundle bundle)
 
 `IsPlayServicesAvailable` 在的末尾调用`OnCreate`以便 Google Play 服务检查运行每个时间启动应用。 如果你的应用程序`OnResume`方法，则应调用`IsPlayServicesAvailable`从`OnResume`以及。 完全重新生成并运行应用程序。 如果所有已正确配置，你应看到类似于以下屏幕截图的屏幕： 
 
-[![应用指示 Google Play 服务不可用](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png)
+[![应用指示 Google Play 服务不可用](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png#lightbox)
 
 如果没有获得此结果，请验证你的设备上是否安装了 Google Play 服务 APK (有关详细信息，请参阅[设置 Google Play 服务](https://developers.google.com/android/guides/setup))。 还要验证你已添加**Xamarin.Google.Play.Services.Base**包到你**FCMClient**项目如前面所述。
 
@@ -365,7 +365,7 @@ void SendRegistrationToAppServer (string token)
 
 现在，接收方服务位于的位置，可以编写客户端应用程序代码，若要利用这些服务。 在以下部分中，一个按钮添加到 UI 以日志注册令牌 (也称为*实例 ID 令牌*)，并更多代码添加到`MainActivity`查看`Intent`当从启动应用程序时的信息通知： 
 
-[![日志令牌按钮添加到应用程序屏幕](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![日志令牌按钮添加到应用程序屏幕](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 ### <a name="log-tokens"></a>日志令牌
 
@@ -419,11 +419,11 @@ if (Intent.Extras != null)
 
 生成并运行**FCMClient**应用。 **日志令牌**显示按钮：
 
-[![显示日志令牌按钮](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![显示日志令牌按钮](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 点击**日志令牌**按钮。 IDE 输出窗口中，应显示如下所示的一条消息： 
 
-[![显示在输出窗口中的实例 ID 令牌](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png)
+[![显示在输出窗口中的实例 ID 令牌](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png#lightbox)
 
 使用标记一长串**令牌**是实例 ID 令牌，然后将其粘贴到 Firebase 控制台&ndash;选择并将此字符串复制到剪贴板。 如果看不到一个实例 ID 令牌，将以下行添加到顶部`OnCreate`方法来验证是否**google services.json**已正确分析：
 
@@ -437,34 +437,34 @@ Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
 
 登录到[Firebase 控制台](https://console.firebase.google.com)，选择你的项目，单击**通知**，然后单击**发送第一条消息**: 
 
-[![发送你的第一条消息按钮](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png)
+[![发送你的第一条消息按钮](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png#lightbox)
 
 上**Compose 消息**页上，输入消息文本并选择**单个设备**。 从 IDE 输出窗口复制的实例 ID 标记并将其粘贴到**FCM 注册令牌**Firebase 控制台字段： 
 
-[![撰写消息对话框](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png)
+[![撰写消息对话框](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png#lightbox)
 
 在 Android 设备 （或仿真程序），后台应用程序通过点击 Android**概述**按钮和触摸主屏幕。 设备已准备好，单击**发送消息**Firebase 控制台中： 
 
-[![发送消息按钮](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png)
+[![发送消息按钮](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png#lightbox)
 
 当**查看消息**显示对话框，请单击**发送**。
 通知图标应出现在通知区域中的设备 （或仿真程序）： 
 
-[![显示通知图标](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png)
+[![显示通知图标](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png#lightbox)
 
 打开通知图标以查看该消息。 通知消息应为完全什么已键入**消息正文**Firebase 控制台字段： 
 
-[![在设备上显示通知消息](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png)
+[![在设备上显示通知消息](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png#lightbox)
 
 点击通知图标以返回到**FCMClient**应用。 `Intent`发送到的其他功能**FCMClient** IDE 输出窗口中列出： 
 
-[![意向附加程序列出了来自键、 消息 ID 和折叠密钥](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png)
+[![意向附加程序列出了来自键、 消息 ID 和折叠密钥](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png#lightbox)
 
 在此示例中，**从**键设置为应用程序的 Firebase 项目编号 (在此示例中， `41590732`)，和**collapse_key**设置为其包名称 (**com.xamarin.fcmexample**)。 如果你不会收到一条消息，请尝试删除**FCMClient**上的设备 （或仿真程序） 的应用并重复执行上述步骤。 
 
 
 > [!NOTE]
-> **注意：** FCM 如果强制关闭应用程序，将停止传递通知。 Android 可阻止后台服务广播无意中或不必要地启动停止的应用程序的组件。 (有关此行为的详细信息，请参阅[启动停止的应用程序上的控件](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)。)出于此原因，它而需要手动卸载该应用每次运行它，并停止调试会话从&ndash;这将强制 FCM，生成新的令牌，以便将继续接收消息。
+> 如果强制关闭应用程序，FCM 将停止传递通知。 Android 可阻止后台服务广播无意中或不必要地启动停止的应用程序的组件。 (有关此行为的详细信息，请参阅[启动停止的应用程序上的控件](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)。)出于此原因，它而需要手动卸载该应用每次运行它，并停止调试会话从&ndash;这将强制 FCM，生成新的令牌，以便将继续接收消息。
 
 ### <a name="add-a-custom-default-notification-icon"></a>添加自定义默认通知图标
 
@@ -515,11 +515,11 @@ subscribeButton.Click += delegate {
 
 卸载应用程序，重新生成，并再次运行。 单击**订阅通知**按钮：
 
-[![订阅通知按钮](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png)
+[![订阅通知按钮](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png#lightbox)
 
 如果成功订阅了应用程序后，你应看到**主题同步成功**在 IDE 中输出窗口： 
 
-[![输出窗口显示主题成功的同步消息](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png)
+[![输出窗口显示主题成功的同步消息](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png#lightbox)
 
 使用以下步骤来发送主题消息：
 
@@ -529,7 +529,7 @@ subscribeButton.Click += delegate {
 
 3.  在**主题**下拉菜单，选择内置的主题，**新闻**: 
 
-    [ ![选择新闻主题](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png)
+    [![选择新闻主题](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png#lightbox)
 
 4.  在 Android 设备 （或仿真程序），后台应用程序通过点击 Android**概述**按钮和触摸主屏幕。 
 
@@ -537,11 +537,11 @@ subscribeButton.Click += delegate {
 
 6.  检查 IDE 输出窗口以查看**/主题/新闻**日志输出中： 
 
-    [ ![显示从 /topic/news 的消息](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png)
+    [![显示从 /topic/news 的消息](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 
 如果此消息出现在输出窗口，通知图标应也出现在 Android 设备上的通知区域中。 打开通知图标以查看该主题消息： 
 
-[![主题消息显示为一条通知](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png)
+[![主题消息显示为一条通知](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png#lightbox)
 
 如果你不会收到一条消息，请尝试删除**FCMClient**上的设备 （或仿真程序） 的应用并重复执行上述步骤。 
 
@@ -593,7 +593,7 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 ```
 
 > [!NOTE]
-> **注意：**如果在中设置断点`FirebaseMessagingService`、 你调试会话可能或不一定会由于 FCM 将消息的传送点击这些断点。
+> 如果在中设置断点`FirebaseMessagingService`、 你调试会话可能或不一定会由于 FCM 将消息的传送点击这些断点。
  
 
 ### <a name="send-another-message"></a>发送另一条消息
@@ -608,13 +608,13 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 
 4.  确保应用正在运行在前台，然后单击**发送消息**Firebase 控制台中： 
 
-    [ ![从控制台发送另一条消息](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png)
+    [![从控制台发送另一条消息](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png#lightbox)
 
 5.  当**查看消息**显示对话框，请单击**发送**。
 
 6.  传入的消息记录到 IDE 输出窗口中：
 
-    [ ![消息正文打印到输出窗口](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png)
+    [![消息正文打印到输出窗口](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
 
 
 ### <a name="add-a-local-notifications-sender"></a>添加本地通知发件人
@@ -675,15 +675,15 @@ SendNotification(message.GetNotification().Body, message.Data);
 
 4.  确保应用正在运行在前台，然后单击**发送消息**Firebase 控制台中： 
 
-    [ ![发送前景消息](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png)
+    [![发送前景消息](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png#lightbox)
 
 此时，在新的通知中还打包在输出窗口中记录的消息&ndash;在前台运行应用程序时，通知栏中会出现通知图标： 
 
-[![前景消息的通知图标](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png)
+[![前景消息的通知图标](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png#lightbox)
 
 当你打开通知时，你应看到从 Firebase 控制台通知 GUI 发送最后一条消息： 
 
-[![带有前景图标所示的前景通知](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png)
+[![带有前景图标所示的前景通知](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
  
 ## <a name="troubleshooting"></a>疑难解答

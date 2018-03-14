@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 作业调度程序
 
@@ -138,7 +138,7 @@ Job myJob = dispatcher.NewJobBuilder()
 * A`Job`的_生存期_（多长时间它将安排运行） 是仅在设备重启之前&ndash;设备重启后`Job`都将丢失。
 * A`Job`不定期&ndash;它将仅运行一次。
 * A`Job`将按计划运行越早越好。
-* 默认重试策略`Job`是使用_指数退让_(在下面的部分中的更详细讨论[设置 RetryStrategy](#Setting_a_RestryStrategy))
+* 默认重试策略`Job`是使用_指数退让_(在下面的部分中的更详细讨论[设置 RetryStrategy](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>计划 `Job`
 
@@ -164,12 +164,14 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 它是可以自定义作业。 作业可以自定义的示例包括：
 
-* [将参数传递到作业](#Passing_Parameters_to_a_Job) &ndash; A`Job`可能需要其他值以执行其工作，例如下载文件。
+* [将参数传递给作业](#Passing_Parameters_to_a_Job) &ndash; A`Job`可能需要其他值以执行其工作，例如下载文件。
 * [设置约束](#Setting_Constraints)&ndash;可能有必要仅在满足某些条件时运行的作业。 例如，仅运行`Job`设备正在充电时。 
 * [指定何时`Job`应运行](#Setting_Job_Triggers) &ndash; Firebase 作业调度程序，应用程序可以指定作业应何时运行的时间。  
 * [声明对于失败的作业重试策略](#Setting_a_RetryStrategy) &ndash; A_重试策略_提供指南`FirebaseJobDispatcher`上应如何处理`Jobs`，无法完成。 
 
 每个这些主题将讨论多下列部分中。
+
+<a name="Passing_Parameters_to_a_Job" />
 
 #### <a name="passing-parameters-to-a-job"></a>将参数传递到作业
 
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>设置约束
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>设置作业触发器
 
 `JobTrigger`提供有关作业应何时开始操作系统指南。 A`JobTrigger`具有_执行窗口_，它定义的时间计划的时间`Job`应运行。 执行窗口具有_启动窗口_值和_结束窗口_值。 启动窗口是运行作业之前，设备应等待的秒数和结束窗口值是在运行前等待的秒的最大数量`Job`。 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 默认值`JobTrigger`的值表示作业`Trigger.Now`，它指定计划后，尽快运行作业...
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>设置 RetryStrategy
 

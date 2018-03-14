@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: bd6d47f98435cc68ecf4156423526c31dbac09da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c923208b7ca4d41914504b4b0aa0687db1d49f01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="inspecting-live-applications"></a>检查实时应用程序
 
@@ -27,11 +27,11 @@ ms.lasthandoff: 02/27/2018
 
 
 
-[ ![](inspect-images/mac-heres-the-button.png "单击 IDE 工具栏中的检查按钮")](inspect-images/mac-heres-the-button.png)
+[![](inspect-images/mac-heres-the-button.png "单击 IDE 工具栏中的检查按钮")](inspect-images/mac-heres-the-button.png#lightbox)
 
 将打开一个新的 Xamarin 检查器客户端窗口，使用全新的 REPL 提示符。
 
-[ ![](inspect-images/inspector-0.7.0-map-inspect-small.png "将打开一个新的 Xamarin 检查器客户端窗口，使用全新的 REPL 提示符")](inspect-images/inspector-0.7.0-map-inspect.png)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "将打开一个新的 Xamarin 检查器客户端窗口，使用全新的 REPL 提示符")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
 此窗口出现后，必须交互式 C# 提示可用于执行和 C# 语句和表达式进行求。 这独特之处在于，在目标进程的上下文中计算代码。 在这种情况下，我们展示根据显示的 iOS 应用程序运行的代码。
 
