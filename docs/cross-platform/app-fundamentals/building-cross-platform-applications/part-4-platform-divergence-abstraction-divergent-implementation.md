@@ -8,10 +8,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: 21cd08ad2eb9c78ba1bcd6b31400a38266c65e51
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>第 4 部分 — 处理多个平台
 
@@ -145,9 +145,9 @@ ms.lasthandoff: 03/09/2018
 有大量的可用提供跨平台功能的第三方库：
 
 -   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **Vernacular** （用于本地化）- [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** （针对的 XNA 游戏）- [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
--   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics)和其前提[https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
+-   **Vernacular** （用于本地化）-  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
+-   **MonoGame** （针对的 XNA 游戏）-  [http://monogame.codeplex.com/](http://monogame.codeplex.com/)
+-   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics)和其前提 [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
 
 
  <a name="Divergent_Implementation" />
