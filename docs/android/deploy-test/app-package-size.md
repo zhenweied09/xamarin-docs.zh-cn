@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0fff4de7420bceda8c15ae33b03886eb6b332aeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-package-size"></a>应用程序包大小
 
@@ -28,13 +28,13 @@ Xamarin.Android 可使用各种机制来最大程度地减小包的大小，同�
 
 若要提供完全包含的应用程序，包必须包含应用程序、关联库、内容、Mono 运行时以及所需的基类库 (BCL) 程序集。 例如，如果我们使用默认的“Hello World”模板，则完整的包生成内容将如下所示：
 
-[ ![链接器之前的包大小](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![链接器之前的包大小](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15.8 MB - 比我们所需的下载大小要大。 问题在于 BCL 库，因为它们包含 mscorlib、系统和 Mono.Android，以此提供大量的必需组件来运行应用程序。 但是，它们还在应用程序中提供了可能不使用的功能，因此最好将这些组件排除在外。
 
 当我们构建用于分发的应用程序时，会执行一个称为“链接”的过程来检查应用，并移除不直接使用的任何代码。 此过程类似于[垃圾回收](~/android/internals/garbage-collection.md)为堆分配内存提供的功能。 但是，与在对象上操作不同，链接将在代码上运行。 例如，System.dll 中有一个完整的命名空间，用于发送和接收电子邮件，但是，如果应用程序不使用此功能，那么该代码只会浪费空间。 在 Hello World 应用程序上运行链接器之后，现在我们的包如下所示：
 
-[ ![链接器之后的包大小](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![链接器之后的包大小](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 正如我们所看到的，这会移除大量未使用的 BCL。 请注意，BCL 的最终大小要取决于实际使用的应用程序。 例如，如果我们查看一个名为 ApiDemo 的更大的示例应用程序，会看到 BCL 组件的大小增加了，因为 ApiDemo 使用的 BCL 数量要大于 Hello，World：
 
@@ -51,7 +51,7 @@ Android 在复制和安装包方面相对较慢，因此，我们希望包大小
 
 第一次在设备上进行调试时，我们复制了两个较大的包：共享运行时和共享平台。 共享运行时包含 Mono 运行时和 BCL，而共享平台包含 Android API 级别的特定程序集：
 
-[ ![共享运行时包大小](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![共享运行时包大小](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 复制这些核心组件只进行一次，因为这需要相当多的时间，但允许任何后续运行的应用程序在调试模式下使用它们。 最后，我们将复制小而快速的实际应用程序：
 

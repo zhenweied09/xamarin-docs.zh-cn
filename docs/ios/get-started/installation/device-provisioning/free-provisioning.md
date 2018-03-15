@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: baf1ae7d4cc533af0db482e8d7c31fc3c8b4edbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4e93696f8eef44030ffacbdbaa8ebcd860a402f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="free-provisioning"></a>免费预配
 
@@ -43,29 +43,29 @@ _随着 Apple Xcode 7 的发布，为所有 iOS 和 Mac 开发人员带来了重
 2. 打开 Xcode 并浏览到“Xcode”>“首选项”。
 3. 在“帐户”下，使用 **+** 按钮添加现有 Apple ID。 它应类似于下面的屏幕截图：
 
-  [ ![](free-provisioning-images/launchapp1.png "Xcode 首选项帐户")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Xcode 首选项帐户")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. 插入想要部署到的 iOS 设备，并在 Xcode 中创建新的单视图空 iOS 项目。 将“团队”下拉菜单设置为刚添加的 Apple ID。 它应该是类似于 `your name (Personal Team - your Apple ID)` 的格式：
 
-  [ ![](free-provisioning-images/launchapp2.png "创建签名标识")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "创建签名标识")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. 在“常规”>“标识”部分，确保捆绑标识符完全匹配 Xamarin.iOS 应用捆绑标识符，并确保部署目标匹配或低于连接的 iOS 设备。 由于 Xcode 只通过显式应用程序 ID 创建配置文件，因此这一步非常重要：
 
-  [![](free-provisioning-images/launchapp5.png "使用显式应用 ID 创建预配配置文件")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "使用显式应用 ID 创建预配配置文件")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. 在“签名”部分，选择“自动管理签名”并从下拉列表中选择团队：
 
-  [![](free-provisioning-images/launchapp6.png "选择“自动管理签名”，并从下拉列表中选择团队")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "选择“自动管理签名”，并从下拉列表中选择团队")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. 上一步将自动生成预配配置文件和签名标识。 可通过单击预配配置文件旁的信息图标查看该文件：
 
-  [![](free-provisioning-images/launchapp7.png "查看预配配置文件")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "查看预配配置文件")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. 若要在 Xcode 中测试，通过单击运行按钮将空应用程序部署到设备。
 
 9. 返回到 IDE，插入同一台设备，右键单击 Xamarin.iOS 项目名称，打开“项目选项”对话框。 浏览到“iOS 捆绑签名”部分，并显式设置签名标识和配置文件：
 
-  [![](free-provisioning-images/launchapp8.png "设置签名标识和预配配置文件")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "设置签名标识和预配配置文件")](free-provisioning-images/launchapp8.png#lightbox)
 
 如果不能在 IDE 中看到签名标识或正确的配置文件，可能需要重启它。
 

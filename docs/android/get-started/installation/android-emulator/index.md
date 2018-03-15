@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 854ca06abc8be2f55f3e95a8ac3bd87c78af19cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55f5cf22718713fdcf11c49e0993f47c2f5a6f1d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-setup"></a>Android 仿真器设置
 
@@ -25,7 +25,7 @@ _本部分介绍如何准备好 Android SDK 仿真器以测试应用。其中介
 
 
 > [!NOTE]
-> 注意：自 Android SDK 工具版本 26.0.1 和更高版本开始，Google 已删除了对现有 AVD/SDK 管理器的支持，以支持其新的 CLI（命令行接口）工具。 由于此弃用更改，因此现在将 Xamarin SDK/设备管理器用于 Android 工具 26.0.1 和更高版本，而不使用 Google SDK/仿真器管理器。 （有关 Xamarin SDK 管理器的详细信息，请参阅 [Android SDK 安装](~/android/get-started/installation/android-sdk.md)）。
+> 自 Android SDK 工具版本 26.0.1 和更高版本开始，Google 已删除了对现有 AVD/SDK 管理器的支持，以支持其新的 CLI（命令行接口）工具。 由于此弃用更改，因此现在将 Xamarin SDK/设备管理器用于 Android 工具 26.0.1 和更高版本，而不使用 Google SDK/仿真器管理器。 （有关 Xamarin SDK 管理器的详细信息，请参阅 [Android SDK 安装](~/android/get-started/installation/android-sdk.md)）。
 
 
 ## <a name="sections"></a>部分

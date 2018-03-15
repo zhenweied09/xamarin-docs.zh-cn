@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b752ebdd1a98d5258cc27b2221d33e07fa04aa46
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-build-mechanics"></a>iOS 生成机制
 
@@ -33,8 +33,8 @@ ms.lasthandoff: 02/27/2018
 
 1. 单击“Visual Studio for Mac”>“首选项…”
 2. 在左侧树视图中，选择“项目”>“生成”
-3. 在右侧面板中，将“日志详细级别”下拉列表设置为“诊断”：[ ![](ios-build-mechanics-images/image2.png "设置日志详细级别")](ios-build-mechanics-images/image2.png)
-4. 单击“确定”
+3. 在右侧面板中，将“日志详细级别”下拉列表设置为“诊断”：[![](ios-build-mechanics-images/image2.png "设置日志详细级别")](ios-build-mechanics-images/image2.png#lightbox)
+4. 单击“确定” 
 5. 重启 Visual Studio for Mac
 6. 清除并重新生成包
 7. 通过单击“生成输出”按钮，查看“Errors Pad”中的诊断输出（“视图”>“板”>“错误”）
@@ -46,8 +46,8 @@ ms.lasthandoff: 02/27/2018
 
 1. 单击“工具”>“选项…”
 2. 在左侧树视图中，选择“项目和解决方案”>“生成并运行”
-3. 在右侧面板中，将“MSBuild 生成输出详细级别”下拉列表设置为到“诊断”：[ ![ ](ios-build-mechanics-images/image2-vs.png "设置 MSBuild 生成输出详细级别")](ios-build-mechanics-images/image2-vs.png)
-4. 单击“确定”
+3. 在右侧面板中，将“MSBuild 生成输出详细级别”下拉列表设置为“诊断”：[![](ios-build-mechanics-images/image2-vs.png "设置 MSBuild 生成输出详细级别")](ios-build-mechanics-images/image2-vs.png#lightbox)
+4. 单击“确定” 
 5. 清除并重新生成包。
 6. 诊断输出将显示在“输出”面板中。
 
@@ -101,7 +101,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
 
 下面的屏幕截图演示了如何在 iOS 选项中设置模拟器的这些选项：
 
-[ ![](ios-build-mechanics-images/image3.png "设置选项")](ios-build-mechanics-images/image3.png)
+[![](ios-build-mechanics-images/image3.png "设置选项")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>设备技巧
 
@@ -155,7 +155,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
 
 下面的屏幕截图演示了如何在 iOS 选项中设置模拟器的这些选项：
 
-[ ![](ios-build-mechanics-images/image4.png "设置选项")](ios-build-mechanics-images/image4.png)
+[![](ios-build-mechanics-images/image4.png "设置选项")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>使用链接器
 

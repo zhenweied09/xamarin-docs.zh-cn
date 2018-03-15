@@ -7,11 +7,11 @@ ms.assetid: 9F3C86A3-403E-4025-99CA-99FCA86DC828
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7e26c11f71b446baf89ca11effe30bc1e041f951
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 275cce891801cd542d202960efc3da668fa8f07b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarin-for-objective-c-developers"></a>面向 Objective-C 开发人员的 Xamarin
 
@@ -21,7 +21,7 @@ Xamarin 针对 iOS 为开发人员提供了一个途径，用于将他们的非�
 
 此外，Xamarin 允许你通过已知的绑定技术来利用现有的 Objective-C 资产。 只需在 Objective-C 中创建一个静态库并通过绑定将其公开给 C#，如下图所示：
 
- [![](images/01-bindings.png "Objective-C 中的静态库通过绑定公开给 C#")](images/01-bindings.png)
+ [![](images/01-bindings.png "Objective-C 中的静态库通过绑定公开给 C#")](images/01-bindings.png#lightbox)
 
 这并不需要限制为非 UI 代码。 绑定还可以公开在 Objective-C 中开发的用户界面代码。
 

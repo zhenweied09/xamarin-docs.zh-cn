@@ -3,16 +3,16 @@ title: "手动预配"
 description: "Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
+ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 46d2f9f9f1a22ef13e994c91255f0fb29c52ca5d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ad3bd55ae0abc44b0c9757bd79c2711eddf171d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="manual-provisioning"></a>手动预配
 
@@ -38,37 +38,37 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 
 1. 登录[开发人员门户中的证书、标识符和描述文件部分](https://developer.apple.com/account/overview.action)，从“iOS 应用”列选择“证书”部分。 然后，按“+”以创建新证书：
 
-    [ ![](manual-provisioning-images/cert-plus.png "单击“+”创建新证书")](manual-provisioning-images/cert-plus.png)
+    [![](manual-provisioning-images/cert-plus.png "单击“+”创建新证书")](manual-provisioning-images/cert-plus.png#lightbox)
 
 2. 对于证书类型，选择“iOS 应用开发”选项，然后单击“继续”。 此屏幕可能会根据帐户特权有所不同：
 
-    [ ![](manual-provisioning-images/cert-first.png "对于证书类型，选择“iOS 应用开发”选项")](manual-provisioning-images/cert-first.png)
+    [![](manual-provisioning-images/cert-first.png "对于证书类型，选择“iOS 应用开发”选项")](manual-provisioning-images/cert-first.png#lightbox)
 
 3. 请求“证书签名请求”，上传该请求以手动生成证书。 若要执行此操作，在 Mac 上启动 **Keychain Access**。 导航到主菜单，选择“证书助手”和“向证书颁发机构申请证书...”，如下所示：
 
-      [ ![](manual-provisioning-images/key-first.png "请求“证书签名请求”")](manual-provisioning-images/key-first.png)
+      [![](manual-provisioning-images/key-first.png "请求“证书签名请求”")](manual-provisioning-images/key-first.png#lightbox)
 
 4. 填写你的信息，并选择“保存到磁盘”选项：
 
-    [ ![](manual-provisioning-images/key-second.png "填写信息")](manual-provisioning-images/key-second.png)
+    [![](manual-provisioning-images/key-second.png "填写信息")](manual-provisioning-images/key-second.png#lightbox)
 
 5. 在易于找到的位置保存 CSR：
 
-    [ ![](manual-provisioning-images/cert-third.png "保存 CSR")](manual-provisioning-images/cert-third.png)
+    [![](manual-provisioning-images/cert-third.png "保存 CSR")](manual-provisioning-images/cert-third.png#lightbox)
 
 6. 返回设置门户，将证书上传到门户并提交：
 
-    [ ![](manual-provisioning-images/cert-second.png "将证书上传到门户")](manual-provisioning-images/cert-second.png)
+    [![](manual-provisioning-images/cert-second.png "将证书上传到门户")](manual-provisioning-images/cert-second.png#lightbox)
 
     如果没有管理员权限，证书必须由管理员或团队代理批准。
 
 7. 证书经过批准后，从设置门户下载此证书：
 
-    [ ![](manual-provisioning-images/status-dev.png "从预配门户下载证书")](manual-provisioning-images/status-dev.png)
+    [![](manual-provisioning-images/status-dev.png "从预配门户下载证书")](manual-provisioning-images/status-dev.png#lightbox)
 
 8. 双击下载的证书，启动 Keychain Access 并打开“我的证书”面板，显示新证书和关联私钥：
 
-    [ ![](manual-provisioning-images/keychain.png "Keychain Access 中的证书")](manual-provisioning-images/keychain.png)
+    [![](manual-provisioning-images/keychain.png "Keychain Access 中的证书")](manual-provisioning-images/keychain.png#lightbox)
 
 <a name="keypairs" />
 
@@ -103,34 +103,34 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 2. 使用提供的 USB 电缆连接要设置到 Mac 的设备。
 2. 从“Windows”菜单中选择“设备”：
 
-  [ ![](manual-provisioning-images/add01.png "从 Windows 菜单选择“设备”")](manual-provisioning-images/add01.png)
+  [![](manual-provisioning-images/add01.png "从 Windows 菜单选择“设备”")](manual-provisioning-images/add01.png#lightbox)
 
 3. 从“设备”窗口左侧的“设备”列表选择所需的 iOS 设备。
 4. 突出显示“标识符”字符串并将其复制到剪贴板：
 
-  [ ![](manual-provisioning-images/add02.png "突出显示“标识符”字符串")](manual-provisioning-images/add02.png)
+  [![](manual-provisioning-images/add02.png "突出显示“标识符”字符串")](manual-provisioning-images/add02.png#lightbox)
 
 5. 在 Safari 中，导航到 [Apple 开发者中心](https://developer.apple.com/membercenter/index.action)并登录。
 6. 单击“证书、标识符和描述文件”链接：
 
-  [ ![](manual-provisioning-images/add03.png "单击“证书、标识符和配置文件”链接")](manual-provisioning-images/add03.png)
+  [![](manual-provisioning-images/add03.png "单击“证书、标识符和配置文件”链接")](manual-provisioning-images/add03.png#lightbox)
 
 7. 单击“设备”链接：
 
-  [ ![](manual-provisioning-images/add04.png "单击“设备”链接")](manual-provisioning-images/add04.png)
+  [![](manual-provisioning-images/add04.png "单击“设备”链接")](manual-provisioning-images/add04.png#lightbox)
 
 8. 单击“+”按钮：
 
-  [ ![](manual-provisioning-images/add05.png "单击“+”按钮")](manual-provisioning-images/add05.png)
+  [![](manual-provisioning-images/add05.png "单击“+”按钮")](manual-provisioning-images/add05.png#lightbox)
 
 9. 为新设备提供名称并将前面复制的设备“标识符”粘贴到“UUID”字段：
 
-  [ ![](manual-provisioning-images/add06.png "为新设备和设备标识符提供名称")](manual-provisioning-images/add06.png)
+  [![](manual-provisioning-images/add06.png "为新设备和设备标识符提供名称")](manual-provisioning-images/add06.png#lightbox)
 
 10. 单击“继续”按钮。
 11. 最后，检查信息并单击“注册”按钮：
 
-  [ ![](manual-provisioning-images/add07.png "查看信息")](manual-provisioning-images/add07.png)
+  [![](manual-provisioning-images/add07.png "查看信息")](manual-provisioning-images/add07.png#lightbox)
 
 对将用于测试或调试 Xamarin.iOS 应用程序的任何 iOS 设备重复上述步骤。
 
@@ -150,10 +150,10 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 1. 在[开发者门户](https://developer.apple.com/account/overview.action)中找到Apple 开发者中心的*证书、标识符和描述文件*部分。 在“标识符”下选择“应用 ID”。
 2. 单击“+”按钮，并提供“名称”：
 
-    [ ![](manual-provisioning-images/appid05a.png "提供名称")](manual-provisioning-images/appid05a.png)
+    [![](manual-provisioning-images/appid05a.png "提供名称")](manual-provisioning-images/appid05a.png#lightbox)
 3. 应预设应用前缀。 为应用后缀选择“通配符应用 ID”。 以 `com.[DomainName].*` 格式输入捆绑 ID：
 
-  [ ![](manual-provisioning-images/appid05b.png "输入捆绑 ID")](manual-provisioning-images/appid05b.png)
+  [![](manual-provisioning-images/appid05b.png "输入捆绑 ID")](manual-provisioning-images/appid05b.png#lightbox)
 
 3. 单击“继续”按钮，按照屏幕上的说明创建新的应用程序 ID。
 
@@ -167,25 +167,25 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 2. 在右上角单击“+”按钮，以创建新的配置文件。
 3. 在“开发”部分中，选中“iOS 应用开发”旁边的单选按钮，再按“继续”：
 
-    [ ![](manual-provisioning-images/provisioning-profile01.png "选择要创建的配置文件类型")](manual-provisioning-images/provisioning-profile01.png)
+    [![](manual-provisioning-images/provisioning-profile01.png "选择要创建的配置文件类型")](manual-provisioning-images/provisioning-profile01.png#lightbox)
 4. 在下拉菜单中，选择要使用的应用 ID：
 
-    [ ![](manual-provisioning-images/provisioning-profile02.png "选择要使用的应用 ID")](manual-provisioning-images/provisioning-profile02.png)
+    [![](manual-provisioning-images/provisioning-profile02.png "选择要使用的应用 ID")](manual-provisioning-images/provisioning-profile02.png#lightbox)
 5. 选择要在预配配置文件中添加的一个或多个证书，再按“继续”：
 
-    [ ![](manual-provisioning-images/provisioning-profile03.png "选择要包含在预配配置文件中的证书")](manual-provisioning-images/provisioning-profile03.png)
+    [![](manual-provisioning-images/provisioning-profile03.png "选择要包含在预配配置文件中的证书")](manual-provisioning-images/provisioning-profile03.png#lightbox)
 6. 选择将安装应用的所有设备。
 
-    [ ![](manual-provisioning-images/provisioning-profile04.png "选择将安装应用的所有设备")](manual-provisioning-images/provisioning-profile04.png)
+    [![](manual-provisioning-images/provisioning-profile04.png "选择将安装应用的所有设备")](manual-provisioning-images/provisioning-profile04.png#lightbox)
 7. 为预配配置文件提供可识别名称，再按“继续”创建配置文件：
 
-    [ ![](manual-provisioning-images/provisioning-profile05.png "提供有可识别名称的预配配置文件")](manual-provisioning-images/provisioning-profile05.png)
+    [![](manual-provisioning-images/provisioning-profile05.png "提供有可识别名称的预配配置文件")](manual-provisioning-images/provisioning-profile05.png#lightbox)
 8. 按“下载”，将预配配置文件下载到 Mac 中：
 
-    [ ![](manual-provisioning-images/provisioning-profile06.png "下载预配配置文件")](manual-provisioning-images/provisioning-profile06.png)
+    [![](manual-provisioning-images/provisioning-profile06.png "下载预配配置文件")](manual-provisioning-images/provisioning-profile06.png#lightbox)
 9. 双击文件，在 Xcode 中安装配置文件。 请注意，除非打开，否则 Xcode 可能不会显示任何可见提示来说明它已安装配置文件。 可访问“Xcode”>“偏好设置”>“帐户”进行验证。 选择你的 Apple ID，然后单击“查看详细信息...”。此时，应列出新的预配配置文件，如下所示：
 
-      [ ![](manual-provisioning-images/provisioning-profile07.png "在 Xcode 中查看配置文件")](manual-provisioning-images/provisioning-profile07.png)
+      [![](manual-provisioning-images/provisioning-profile07.png "在 Xcode 中查看配置文件")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 成功创建配置文件后，可能需要刷新 Xcode，以便所有开发证书都可用于 Visual Studio for Mac 和 Visual Studio。
 
@@ -199,7 +199,7 @@ Apple Developer 门户中已创建的证书和配置文件可能不会自动显�
 2.   启动 Xcode。
 3.   选择“Xcode 菜单”>“偏好设置...”
 4.   单击“帐户”选项卡。
-5.   选择一个团队，然后单击“下载手动配置文件”按钮：[![](manual-provisioning-images/selectteam1.png "下载手动配置文件")](manual-provisioning-images/selectteam1.png)
+5.   选择一个团队，然后单击“下载手动配置文件”按钮：[![](manual-provisioning-images/selectteam1.png "下载手动配置文件")](manual-provisioning-images/selectteam1.png#lightbox)
 
 6.   退出 Xcode。
 7.  启动 Visual Studio for Mac 或 Visual Studio。

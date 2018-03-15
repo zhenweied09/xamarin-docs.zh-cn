@@ -2,16 +2,16 @@
 title: "Fastlane for iOS – Sigh"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d80a0ab5583231f95241fb8d4f6e339e44a84ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2c6ac298ca2040bb2d3619be080fb1387fbfd3a0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--sigh"></a>Fastlane for iOS – Sigh
 
@@ -61,7 +61,7 @@ Sigh 提供终端界面，你可以通过此界面创建和续订预配配置文
 
 其中，`com.company.appname` 是应用的捆绑 ID，在 Xamarin.iOS 应用程序的 Info.plist 文件中可找到此捆绑 ID，如下所示：
 
-[ ![](sigh-images/fastlane-image5.png "Xamarin.iOS 应用程序的 Info.plist 文件")](sigh-images/fastlane-image5.png)
+[![](sigh-images/fastlane-image5.png "Xamarin.iOS 应用程序的 Info.plist 文件")](sigh-images/fastlane-image5.png#lightbox)
 
 唯一的应用程序 ID 必须是反向 DNS 样式字符串。 创建此 ID 后，请记录下来，因为稍后在本指南中使用 sigh 时需要使用它。
 
@@ -108,7 +108,7 @@ fastlane 提示时，请输入你的 Apple ID 用户名。 如果首次使用 fa
 
 如果 Apple ID 关联多个团队，此处将显示这些团队。 选择你想要使用的团队所对应的数字：
 
-[ ![](sigh-images/fastlane-image2.png "选择想要使用的团队")](sigh-images/fastlane-image2.png)
+[![](sigh-images/fastlane-image2.png "选择想要使用的团队")](sigh-images/fastlane-image2.png#lightbox)
 
 通过使用以下方式也可以将团队 ID 传递到 CLI：
 
@@ -124,7 +124,7 @@ fastlane sigh -l 2TU993NY9J
 
 如果浏览开发人员中心，则可以查看新创建的预配配置文件，如下所示：
 
-[ ![](sigh-images/fastlane-image10.png "查看新创建的预配配置文件")](sigh-images/fastlane-image10.png)
+[![](sigh-images/fastlane-image10.png "查看新创建的预配配置文件")](sigh-images/fastlane-image10.png#lightbox)
 
 默认情况下，sigh 将在当前文件夹中存储预配配置文件。 若要更改输出目录，请编辑 `output_path`，或执行以下操作：
 
@@ -140,19 +140,19 @@ fastlane sigh -o "~/Library/MobileDevice/Provisioning Profiles"
 
 - 若要下载所有预配配置文件，请使用：
 
-    ````bash
+    ```bash
     fastlane sigh download_all
     ```
 
-- To use a specific signing identity for your provisioning profile use:
+- 若要将特定签名标识用于预配配置文件，请使用：
 
     ```bash
     fastlane sigh -c "Amy cert"
     ```
     
-    Where `Amy cert` is the Code Signing Identity name.
+    其中，`Amy cert` 是代码签名标识名。
 
 
-## Related Links
+## <a name="related-links"></a>相关链接
 
 - [fastlane - sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)

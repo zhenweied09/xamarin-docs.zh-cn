@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/20/2017
-ms.openlocfilehash: f1e7e36dfa1bfe122084f0525d83f06760ca1fe0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4ed2df994ace7f6de5ade78577e759bb811565c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="google-licensing-services"></a>Google 授权服务
 
@@ -26,7 +26,7 @@ Google 授权安全可靠，每个响应均使用 RSA 键对进行签名，且�
 
 采用了 Google 授权的应用程序将请求使用设备上 Google Play 托管的服务。 然后，Google Play 将此请求发送到 Google 授权服务器，后者使用许可状态进行响应： 
 
-[![服务器授权工作流示意图](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png)
+[![服务器授权工作流示意图](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 上图描述了此工作流： 
 
@@ -36,7 +36,6 @@ Google 授权安全可靠，每个响应均使用 RSA 键对进行签名，且�
 
 Google 授权服务还是 APK 扩展文件的关键组件（将在本文档后面讨论）。 APK 扩展文件利用 Google 授权服务获取要下载的扩展文件的 URL。
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>惠?
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 66992aabdb98c83e52ab555dafa65ae8ac7fb47b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e958b4e48767e0c2246b9f237c681fbc362f6b00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Xamarin.iOS for Visual Studio 简介
 
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/27/2018
 
 可通过 Visual Studio 工具栏上的图标连接 Mac 生成主机（前提是已打开 iOS 应用程序）：
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "转到 Mac 图标")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "“连接到 Mac”图标")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
 
 也可通过在 Visual Studio 中浏览到“工具”>“选项”并选择“Xamarin”>“iOS 设置”：
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS 选项")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png)
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS 选项")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
 
 可通过单击“查找 Xamarin Mac 代理”按钮更改 Mac 生成主机。 以下屏幕显示更新 Mac 生成主机：
 
-  [ ![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "“Xamarin Mac Agent”对话框")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "“Xamarin Mac Agent”对话框")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Visual Studio 工具栏概述
@@ -75,7 +75,7 @@ Xamarin iOS for Visual Studio 将项添加到标准工具栏和新的 iOS 工具
 
 与 Xamarin iOS 开发相关的控件用红线圈出：
 
- [ ![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "与 Xamarin iOS 开发相关的控件已用红线圈出")](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")
+ [![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "与 Xamarin iOS 开发相关的控件已用红线圈出")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
 -  **开始** - 开始在选定平台上调试或运行应用。 Mac 必须已连接（可查看 iOS 工具栏中的状态指示器）。
 -  **解决方案配置** - 允许选择要使用的配置（例如，调试和发布）。
@@ -86,7 +86,7 @@ Xamarin iOS for Visual Studio 将项添加到标准工具栏和新的 iOS 工具
 
 iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示：
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS 工具栏")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS 工具栏")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 下面解释每个项：
 
@@ -105,25 +105,25 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 
 以下屏幕截图显示可用的输出窗口，这些窗口可能因项目类型而有所不同：
 
-[ ![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "可用输出窗口")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "可用输出窗口")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** - 此项包含仅与 Xamarin 相关的信息，如与 Mac 的连接情况和激活状态。
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "仅与 Xamarin 相关的信息，如与 Mac 的连接情况和激活状态")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "仅与 Xamarin 相关的信息，如与 Mac 的连接情况和激活状态")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Xamarin 诊断** - 此窗格显示 Xamarin 项目的更多详细信息，如与 Android 的交互。
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "有关 Xamarin 项目的详细信息")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "有关 Xamarin 项目的详细信息")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 仍可以在“输出”视图中选择其他默认 Visual Studio 输出窗格（如“调试”和“生成”），以便调试输出和 MSBuild 输出：
 
 -  **调试**
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "调试输出")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "调试输出")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **生成**与**生成顺序**
 
-    [ ![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild 输出")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png)
+    [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild 输出")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 
 ## <a name="ios-project-properties"></a>iOS 项目属性

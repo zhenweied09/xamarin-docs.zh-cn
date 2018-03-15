@@ -7,18 +7,17 @@ ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 50666708bde2f2e7a61c30c6c9b383541e7ae9d5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 10744d7c4fbcc5a8935a1fe1e60b6c96ec828815
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="proguard"></a>ProGuard
 
 _ProGuard 是一个 Java 类文件压缩器、优化器、混淆器和预验证器。它会检测和删除未使用的代码，分析和优化字节码，然后模糊处理类和类成员。本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。同时提供了几个 ProGuard 配置示例。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -38,13 +37,12 @@ ProGuard 使用以下步骤处理输入 APK：
 上述每个步骤均*可选*。 Xamarin.Android ProGuard 要使用其中的部分步骤，详见下一节。 
 
 
-<a name="xa_proguard" />
 
 ## <a name="proguard-in-xamarinandroid"></a>Xamarin.Android 中的 ProGuard
 
 Xamarin.Android ProGuard 配置不会模糊处理 APK。 事实上，无法通过 ProGuard 进行模糊处理（即使使用自定义配置文件）。 因此，Xamarin.Android 的 ProGuard 只执行**压缩**和**优化**步骤： 
 
-[![收缩和优化步骤](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png)
+[![收缩和优化步骤](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
 
 使用 ProGuard 前，必须知道其在 `Xamarin.Android` 生成过程中的工作原理。 此过程使用两个独立的步骤： 
 
@@ -55,7 +53,6 @@ Xamarin.Android ProGuard 配置不会模糊处理 APK。 事实上，无法通�
 接下来将说明上述各步骤。
 
 
-<a name="linker" />
 
 ### <a name="linker-step"></a>链接器步骤
 
@@ -70,21 +67,18 @@ Xamarin.Android 链接器使用应用程序的静态分析来确定以下内容�
 将始终在 ProGuard 步骤前运行链接器。 因此，链接器可剥因此，链接器可剥离想要 ProGuard 在其上运行的程序集/类型/成员。 （若要详细了解 Xamarin.Android 中的链接，请参阅[在 Android 上链接](~/android/deploy-test/linker.md)。）
 
 
-<a name="proguard_step" />
 
 ### <a name="proguard-step"></a>ProGuard 步骤
 
 链接器步骤成功完成后，运行 ProGuard 删除未使用的 Java 字节码。 此步骤用于优化 APK。 
 
 
-<a name="using" />
 
 ## <a name="using-proguard"></a>使用 ProGuard
 
 必须先启用 ProGuard，才可在应用项目中使用它。 接下来，可让 Xamarin.Android 生成过程使用默认的 ProGuard 配置文件，也可自行创建自定义配置文件供 ProGuard 使用。 
 
 
-<a name="enabling" />
 
 ### <a name="enabling-proguard"></a>启用 ProGuard
 
@@ -92,22 +86,21 @@ Xamarin.Android 链接器使用应用程序的静态分析来确定以下内容�
 
 1.  确保项目设置为“发布”配置（这很重要，因为必须先运行链接器才能运行 ProGuard）： 
 
-    [![选择发布配置](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png)
+    [![选择发布配置](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
 2.  在“属性”>“Android 选项”的“包装”选项卡下，选中“启用 ProGuard”选项来启用 ProGuard： 
 
-    [![已选中“启用 ProGuard 选项”](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png)
+    [![已选中“启用 ProGuard 选项”](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
 
 对于大多数 Xamarin.Android 应用，Xamarin.Android 提供的默认 ProGuard 配置文件足以删除所有（仅）未使用的代码。 若要查看默认 ProGuard 配置，请打开 **obj\\Release\\proguard\\proguard_xamarin.cfg** 处的文件。 下一节将介绍如何创建自定义 ProGuard 配置文件。 
 
 
-<a name="customizing" />
 
 ### <a name="customizing-proguard"></a>自定义 ProGuard
 
 或者，可添加自定义 ProGuard 配置文件，实现对 ProGuard 工具的更多掌控。 例如，你可能想就要保留的类显式通知 ProGuard。 为此，请新建 **.cfg** 文件，并在**解决方案资源管理器**的“属性”窗格中应用 `ProGuardConfiguration` 生成操作： 
 
-[![已选中“ProguardConfiguration 生成操作”](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png)
+[![已选中“ProguardConfiguration 生成操作”](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png#lightbox)
 
 请记住，该配置文件不会替换 Xamarin.Android proguard_xamarin.cfg 文件，因为 ProGuard 将使用这两者。 
 
@@ -156,8 +149,6 @@ Xamarin.Android 链接器使用应用程序的静态分析来确定以下内容�
 还可使用 `[Register]` 注释来注册自己的名称，并使用这些名称来自定义 ProGuard 规则。 可为 Adapter、View、BroadcastReceiver、Service、ContentProvider、Activity 和 Fragment 注册名称。 有关使用 `[Register]` 自定义属性的详细信息，请参阅[使用 JNI](~/android/platform/java-integration/working-with-jni.md)。
 
 
-<a name="options" />
-
 ### <a name="proguard-options"></a>ProGuard 选项
 
 ProGuard 提供了许多选项，可配置实现更精细的操作控制。 [ProGuard 手册](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/introduction.html)提供了 ProGuard 用法的完整参考文档。 
@@ -196,7 +187,6 @@ Xamarin.Android *忽略*以下选项：
 -    [预验证选项](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
 
-<a name="nougat" />
 
 ## <a name="proguard-and-android-nougat"></a>ProGuard 和 Android Nougat
 
@@ -207,7 +197,6 @@ Xamarin.Android *忽略*以下选项：
 可在 [SourceForge 页面](https://sourceforge.net/projects/proguard/files/)找到所有版本的 ProGuard。 
 
 
-<a name="examples" />
 
 ## <a name="example-proguard-configurations"></a>ProGuard 配置示例
 
@@ -272,7 +261,6 @@ Xamarin.Android *忽略*以下选项：
     public static <fields>;
     }
 
-<a name="build" />
 
 ## <a name="proguard-and-the-xamarinandroid-build-process"></a>ProGuard 和 Xamarin.Android 生成过程
 
@@ -325,12 +313,7 @@ ProGuard 任务位于 **Xamarin.Android.Build.Tasks.dll** 程序集中。 它是
 C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sdk\tools\proguard\lib\proguard.jar -include obj\Release\proguard\proguard_xamarin.cfg -include obj\Release\proguard\proguard_project_references.cfg -include obj\Release\proguard\proguard_project_primary.cfg "-injars 'obj\Release\proguard\__proguard_input__.jar';'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.0\mono.android.jar'" "-libraryjars 'C:\Android\android-sdk\platforms\android-25\android.jar'" -outjars "obj\Release\proguard\__proguard_output__.jar" -optimizations !code/allocation/variable
 ```
 
-
-<a name="troubleshoot" />
-
 ## <a name="troubleshooting"></a>疑难解答
-
-<a name="files" />
 
 ### <a name="file-issues"></a>文件问题
 
@@ -351,13 +334,10 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sd
 -----
 
 
-<a name="other" />
-
 ### <a name="other-issues"></a>其他问题
 
 ProGuard [疑难解答](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/troubleshooting.html)页面讨论了使用 ProGuard 时可能遇到的常见问题（及解决方案）。
 
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

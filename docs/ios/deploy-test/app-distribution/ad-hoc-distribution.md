@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 423240949daf45d8d179a3ca9f89677f490cc24d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ad-hoc-distribution"></a>Ad-Hoc 分发
 
@@ -39,7 +39,7 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 下一部分将介绍如何创建分发证书和分发配置文件。
 
 > [!NOTE]
->  注意：只有团队代理和管理员可创建分发证书和配置文件。
+>  注意：只有团队代理和管理员可创建分发证书和预配配置文件。
 
 <a name="createcertificate" />
 
@@ -51,15 +51,15 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 3. 单击“+”按钮创建新证书。
 4. 根据你的计划成员身份，在“生产”标题下，选择“In-House 和 Ad Hoc”或“App Store 和 Ad Hoc”：
 
-  [ ![](ad-hoc-distribution-images/cert-first-small.png "选择“内部”和“临时”，或“App Store”和“临时”")](ad-hoc-distribution-images/cert-first-large.png)
+  [![](ad-hoc-distribution-images/cert-first-small.png "选择“内部”和“临时”，或“App Store”和“临时”")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. 单击“继续”，并按说明通过密钥链访问创建证书签名请求：
 
-  [ ![](ad-hoc-distribution-images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](ad-hoc-distribution-images/createcertmanually02.png)
+  [![](ad-hoc-distribution-images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. 在按照指示创建 CSR 后，单击“继续”，并将 CSR 上传到 Member Center：
 
-  [ ![](ad-hoc-distribution-images/createcertmanually03.png "将 CSR 上传到 Member Center")](ad-hoc-distribution-images/createcertmanually03.png)
+  [![](ad-hoc-distribution-images/createcertmanually03.png "将 CSR 上传到 Member Center")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. 单击“生成”创建证书。
 8. 最后，下载完成的证书，双击该文件进行安装。
@@ -67,9 +67,9 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 
 或者，可通过 Xcode 中的”首选项”对话框请求证书。 为此，请执行以下步骤：
 
-1.   选择团队，然后单击“管理证书...”：[ ![](ad-hoc-distribution-images/selectteam.png "选择团队")](ad-hoc-distribution-images/selectteam.png)
+1.   选择团队，然后单击“管理证书...”：[![](ad-hoc-distribution-images/selectteam.png "选择团队")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   接下来，单击加号“(+)”按钮，然后选择“iOS App Store”：[ ![](ad-hoc-distribution-images/selectcert.png "选择 iOS App Store")](ad-hoc-distribution-images/selectcert.png)
+2.   接下来，单击加号“(+)”按钮，然后选择“iOS App Store”：[![](ad-hoc-distribution-images/selectcert.png "选择 iOS App Store")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,23 +91,23 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 
 拥有创建分发配置文件所需的必要组件后，请按照下面的步骤进行创建：
 
-1. 返回 Apple 预配门户，选择“预配”>“分发”：[ ![](ad-hoc-distribution-images/distribute01.png "选择“预配”>“分发”")](ad-hoc-distribution-images/distribute01.png)
+1. 返回 Apple 预配门户，选择“预配”>“分发”：[![](ad-hoc-distribution-images/distribute01.png "选择“预配”>“分发”")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. 单击“+”按钮，选择要创建为“临时”的分发配置文件的类型：
 
-    [ ![](ad-hoc-distribution-images/distribute02.png "创建临时分发类型")](ad-hoc-distribution-images/distribute02.png)
+    [![](ad-hoc-distribution-images/distribute02.png "创建临时分发类型")](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. 单击“继续”按钮，然后在下拉列表中选择要为其创建分发配置文件的应用程序 ID：
 
-    [ ![](ad-hoc-distribution-images/distribute03.png "从下拉列表中选择应用 ID")](ad-hoc-distribution-images/distribute03.png)
+    [![](ad-hoc-distribution-images/distribute03.png "从下拉列表选择“App ID”")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. 单击“继续”按钮，然后选择签名应用程序时所需的分发证书：
 
-    [ ![](ad-hoc-distribution-images/distribute04.png "选择对应用程序签名时所需的分发证书")](ad-hoc-distribution-images/distribute04.png)
+    [![](ad-hoc-distribution-images/distribute04.png "选择签名应用程序时所需的分发证书")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 6. 单击“继续”按钮，为新的分发配置文件输入“名称”：
 
-    [ ![](ad-hoc-distribution-images/distribute06.png "输入新分发配置文件的名称")](ad-hoc-distribution-images/distribute06.png)
+    [![](ad-hoc-distribution-images/distribute06.png "输入新的分发配置文件的名称")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 7. 单击“生成”按钮，创建新的配置文件并完成该过程。
 
@@ -184,6 +184,6 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 ## <a name="related-links"></a>相关链接
 
 - [App Store 分发](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
-- [In-House 分发](~/ios/deploy-test/app-distribution/in-house-distribution.md)
+- [内部分发](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [iTunesMetadata.plist 文件](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [IPA 支持](~/ios/deploy-test/app-distribution/ipa-support.md)

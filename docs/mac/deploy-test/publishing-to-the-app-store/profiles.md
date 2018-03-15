@@ -8,56 +8,56 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4bb6f0c219fc973d3d2e458445c76fd7611681ec
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: dab923f6150bdf005e9468add6d26d4fdb691a93
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="provisioning-profiles"></a>预配配置文件
 
 配置文件允许开发人员将多个 macOS（以前称为 Mac OS X）特定功能（例如 iCloud 和推送通知）合并到 Xamarin.Mac 应用中。 开发人员必须为开发的每个应用程序创建、下载和安装 Mac 配置文件才能使用这些功能。
 
-[ ![](profiles-images/certif13.png "Apple 预配门户")](profiles-images/certif13.png)
+[![](profiles-images/certif13.png "Apple 预配门户")](profiles-images/certif13.png#lightbox)
 
 <a name="Development_Provisioning_Profile" />
 
-## <a name="development-provisioning-profile"></a>开发预配配置文件
+## <a name="development-provisioning-profile"></a>开发配置文件
 
-通过开发预配配置文件，可在配置文件中设置的特定计算机上测试面向 Mac App Store 的应用。 这在使用 iCloud 和推送通知等 macOS 功能时尤其适用。
+通过开发配置文件，可在配置文件中设置的特定计算机上测试面向 Mac App Store 的应用。 这在使用 iCloud 和推送通知等 macOS 功能时尤其适用。
 
 > [!NOTE]
-> 开发人员必须先创建 Mac 开发证书，然后才能创建开发预配配置文件。 填写如屏幕截图中所示的详细信息，生成可用于创建版本的**开发预配配置文件**。 “证书”框中必须存在可供选择的有效 Mac 开发证书，并且至少注册一个用于测试的系统。
+> 开发人员必须先创建 Mac 开发证书，然后才能创建开发预配配置文件。 填写如屏幕截图中所示的详细信息，生成可用于创建版本的**开发配置文件**。 “证书”框中必须存在可供选择的有效 Mac 开发证书，并且至少注册一个用于测试的系统。
 
 请执行以下操作：
 
 1. 选择要创建的配置文件的类型，然后单击“继续”按钮： 
 
-     [ ![](profiles-images/certif14.png "选择配置文件类型")](profiles-images/certif14.png)
+     [![](profiles-images/certif14.png "选择配置文件类型")](profiles-images/certif14.png#lightbox)
 2. 选择要对其创建配置文件的应用程序的 ID，然后单击“继续”按钮： 
 
-     [ ![](profiles-images/certif15.png "选择应用 ID")](profiles-images/certif15.png)
+     [![](profiles-images/certif15.png "选择应用 ID")](profiles-images/certif15.png#lightbox)
 3. 选择用于签名配置文件的开发者 ID，然后单击“继续”： 
 
-     [ ![](profiles-images/certif16.png "选择开发人员 ID")](profiles-images/certif16.png)
+     [![](profiles-images/certif16.png "选择开发人员 ID")](profiles-images/certif16.png#lightbox)
 4. 选择可使用此配置文件的计算机，然后单击“继续”： 
 
-     [ ![](profiles-images/certif17.png "选择允许的计算机")](profiles-images/certif17.png)
+     [![](profiles-images/certif17.png "选择允许的计算机")](profiles-images/certif17.png#lightbox)
 5. 现在，输入“配置文件名称”，然后单击“生成”按钮： 
 
-     [ ![](profiles-images/certif18.png "生成配置文件")](profiles-images/certif18.png)
+     [![](profiles-images/certif18.png "生成配置文件")](profiles-images/certif18.png#lightbox)
 6. 单击“下载”按钮下载新的配置文件： 
 
-     [ ![](profiles-images/certif19.png "下载配置文件")](profiles-images/certif19.png)
+     [![](profiles-images/certif19.png "下载配置文件")](profiles-images/certif19.png#lightbox)
 7. 将开发配置文件安装在 Mac“系统偏好设置”应用程序的“配置文件首选项”窗格中： 
 
-     [ ![](profiles-images/certif20.png "安装配置文件")](profiles-images/certif20.png)
+     [![](profiles-images/certif20.png "安装配置文件")](profiles-images/certif20.png#lightbox)
 8. “配置文件首选项”窗格中会显示所有已安装的配置文件： 
 
-     [ ![](profiles-images/image47.png "显示所有已安装的配置文件")](profiles-images/image47.png)
+     [![](profiles-images/image47.png "显示所有已安装的配置文件")](profiles-images/image47.png#lightbox)
 9. 还会在**开发者证书实用程序**中显示此配置文件，以便需要再次下载： 
 
-     [ ![](profiles-images/image48.png "开发人员证书实用工具")](profiles-images/image48.png)
+     [![](profiles-images/image48.png "开发人员证书实用工具")](profiles-images/image48.png#lightbox)
 
 每个新应用都需创建新的开发配置文件，添加新的测试计算机时也需创建。
 
@@ -71,25 +71,25 @@ ms.lasthandoff: 02/28/2018
 
 1. 选择要创建的配置文件类型，然后单击“继续”按钮： 
 
-    [ ![](profiles-images/certif21.png "选择配置文件的类型")](profiles-images/certif21.png)
+    [![](profiles-images/certif21.png "选择配置文件的类型")](profiles-images/certif21.png#lightbox)
 2. 选择要对其创建配置文件的应用的 ID，然后单击“继续”按钮： 
 
-    [ ![](profiles-images/certif15.png "选择应用 ID")](profiles-images/certif15.png)
+    [![](profiles-images/certif15.png "选择应用 ID")](profiles-images/certif15.png#lightbox)
 3. 选择对配置文件签名的公司 ID，然后单击“继续”按钮： 
 
-    [ ![](profiles-images/certif23.png "选择公司 ID")](profiles-images/certif23.png)
+    [![](profiles-images/certif23.png "选择公司 ID")](profiles-images/certif23.png#lightbox)
 4. 输入“配置文件名称”，然后单击“生成”按钮： 
 
-    [ ![](profiles-images/certif24.png "生成配置文件")](profiles-images/certif24.png)
+    [![](profiles-images/certif24.png "生成配置文件")](profiles-images/certif24.png#lightbox)
 5. 单击“下载”获取配置文件（扩展名 `.provisionprofile`）： 
 
-    [ ![](profiles-images/certif25.png "下载配置文件")](profiles-images/certif25.png)
+    [![](profiles-images/certif25.png "下载配置文件")](profiles-images/certif25.png#lightbox)
 6. 将其拖入 **Xcode 管理器**或双击进行安装。 Xcode 管理器中随后会显示该配置文件： 
 
-    [ ![](profiles-images/image51.png "安装配置文件")](profiles-images/image51.png)
+    [![](profiles-images/image51.png "安装配置文件")](profiles-images/image51.png#lightbox)
 7. 列表中也会显示该配置文件： 
 
-    [ ![](profiles-images/certif26.png "显示已安装的配置文件")](profiles-images/certif26.png)
+    [![](profiles-images/certif26.png "显示已安装的配置文件")](profiles-images/certif26.png#lightbox)
 
 
 如果开发人员更改了应用 ID 所用的功能（例如 启用 iCloud 或推送通知），则需为该应用 ID 重新创建配置文件。

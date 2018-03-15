@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello，iOS 深入了解
 
@@ -86,7 +86,7 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 在 [Hello，iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) 演练中，你创建了一个名为 **Phoneword** 的解决方案，并将一个 iOS 项目 (**Phoneword_iOS**) 置于其内部。 项目内的项包括：
 
 -  **引用** - 包含生成和运行应用程序所需的程序集。 展开该目录可查看对 .NET 程序集（如 [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx)、System.Core 和 [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx)）的引用以及对 Xamarin 的 Xamarin.iOS 程序集的引用。
--  包 - Packages 目录包含现成的 NuGet 包。
+-  包 - 包目录包含现成的 NuGet 包。
 -  Resources - Resources 文件夹存储其他媒体。
 -  **Main.cs** – 此项包含应用程序的主入口点。 若要启动应用程序，应传入主应用程序类 `AppDelegate` 的名称。
 -  **AppDelegate.cs** – 此文件包含主应用程序类，负责创建窗口、生成用户界面以及侦听来自操作系统的事件。
@@ -102,7 +102,7 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 
 此部分会研究下图中所示的关系：
 
-[![](hello-ios-deepdive-images/image32.png "此图说明体系结构和应用基础知识的关系")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "此图说明体系结构和应用基础知识的关系")](hello-ios-deepdive-images/image32.png#lightbox)
 
 让我们从头开始，来了解应用程序启动时会发生的情况。
 
@@ -197,7 +197,7 @@ Storyboard 是包含应用屏幕的可视化设计以及屏幕切换效果和关
 
 场景左侧是一个具有标志图标的灰色箭头，如下面的屏幕截图所示：
 
- [![ ](hello-ios-deepdive-images/image37.png "包含标记图标的灰色箭头")](hello-ios-deepdive-images/image37.png)
+ [![ ](hello-ios-deepdive-images/image37.png "包含标记图标的灰色箭头")](hello-ios-deepdive-images/image37.png#lightbox)
 
 该灰色箭头表示情节提要转换，称为 Segue（发音为“seg-way”）。 由于此 Segue 没有源，因此它称为无源 Segue。 无源 Segue 指向其视图在应用程序启动时加载到应用程序窗口的第一个场景。 场景及其中的视图会是用户在应用加载时看到的第一个内容。
 
@@ -243,7 +243,7 @@ Storyboard 是包含应用屏幕的可视化设计以及屏幕切换效果和关
 
 _内容视图层次结构_ 是由单个视图控制器管理的视图和子视图的堆栈，如下图所示：
 
- [![](hello-ios-deepdive-images/image41.png "内容视图层次结构")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "内容视图层次结构")](hello-ios-deepdive-images/image41.png#lightbox)
 
 我们可以通过在“属性板”的“视图”部分中暂时将根视图的背景色更改为黄色，使 `ViewController` 的内容视图层次结构可以更方便地进行查看，如下面的屏幕截图所示：
 
@@ -259,7 +259,7 @@ _内容视图层次结构_ 是由单个视图控制器管理的视图和子视�
 
 下图显示了窗口、视图、子视图与视图控制器之间的关系，它们向设备屏幕提供了用户界面：
 
- [ ![](hello-ios-deepdive-images/image43.png "窗口、视图、子视图和视图控制器之间的关系")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "窗口、视图、子视图和视图控制器之间的关系")](hello-ios-deepdive-images/image43.png#lightbox)
 
 在下一部分中，讨论如何在代码中使用视图，并学习使用视图控制器和视图生命周期为用户交互进行编程。
 
@@ -331,7 +331,7 @@ public partial class ViewController : UIViewController
 现在已对视图和视图控制器有了更深入的了解，我们来探讨一下其工作原理。
 在 `Phoneword_iOS` 项目中，向内容视图层次结构添加一个名为 `TranslateButton` 的按钮：
 
- [ ![](hello-ios-deepdive-images/image1.png "名为 TranslateButton 的按钮添加到内容视图层次结构")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "名为 TranslateButton 的按钮添加到内容视图层次结构")](hello-ios-deepdive-images/image1.png#lightbox)
 
 在“属性板”中将“名称”分配给“按钮”控件时，iOS 设计器会自动将它映射到 **ViewController.designer.cs** 中的控件，从而使 `TranslateButton` 在 `ViewController` 类中可用。 控件会首先在视图生命周期的 `ViewDidLoad` 阶段中可用，因此此生命周期方法用于响应用户的触摸：
 
@@ -432,7 +432,7 @@ iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针
 
 应用会部署到 iOS 设备：
 
-[ ![](hello-ios-deepdive-images/image1.png "应用将部署到 iOS 设备并运行")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "应用将部署到 iOS 设备并运行")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>生成自定义图标和启动图像
 

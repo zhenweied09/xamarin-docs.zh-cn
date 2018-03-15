@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6327c00253036f5ede8bf1934f56e6d4bb8f0ecd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-device-for-development"></a>设置设备进行开发
 
@@ -28,13 +28,11 @@ _本文介绍如何设置 Android 设备并将其连接到计算机，使设备�
 
 上述每个步骤将在以下部分中详细介绍。
 
-<a name="EnableDebugging" />
 
 ## <a name="enable-debugging-on-the-device"></a>在设备上启用调试
 
 可使用 Android 设备测试 Android 应用程序。 但是，必须先正确配置设备，才能开始调试。 所涉及的步骤略有不同，具体取决于设备上运行的 Android 版本。
 
-<a name="EnableDebuggingAndroid4" />
 
 ### <a name="android-40-to-android-41"></a>Android 4.0 到 Android 4.1
 
@@ -46,23 +44,21 @@ _本文介绍如何设置 Android 设备并将其连接到计算机，使设备�
 
 此屏幕截图显示运行 Android 4.0.3 的设备上的“开发人员选项”屏幕：
 
-[![开发人员选项](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![开发人员选项](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
-<a name="EnableDebuggingAndroid42" />
 
 ### <a name="android-42-and-higher"></a>Android 4.2 及更高版本
 
 从 Android 4.2 及更高版本开始，默认情况下，“开发人员选项”是隐藏的。 若要启用，请转到“设置”>“关于手机”，然后点击七次“内部版本号”项以显示“开发人员选项”选项卡：
 
-[![内部版本号项](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![内部版本号项](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 “开发人员选项”选项卡可用后，请在“设置”>“系统”下将其打开，以显示开发人员设置：
 
-[![开发人员设置屏幕](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![开发人员设置屏幕](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 从此处可启用开发人员选项，例如 USB 调试和保持唤醒状态模式。
 
-<a name="USB_Debugging" />
 
 ## <a name="install-usb-drivers"></a>安装 USB 驱动程序
 
@@ -71,13 +67,12 @@ _本文介绍如何设置 Android 设备并将其连接到计算机，使设备�
 可能需要先安装一些额外的驱动程序，Windows 计算机才能识别通过 USB 连接的 Android 设备。
 
 > [!NOTE]
-> 注意：这些是设置 Google Nexus 设备的步骤，将作为参考提供。 适用于特定设备的步骤可能有所不同，但遵循的模式是类似的。 如果遇到问题，请在 Internet 上搜索你的设备。
+> 这些是设置 Google Nexus 设备的步骤，将作为参考提供。 适用于特定设备的步骤可能有所不同，但遵循的模式是类似的。 如果遇到问题，请在 Internet 上搜索你的设备。
 
 在 **[Android SDK install path]\tools** 目录中，运行 **android.bat** 应用程序。 默认情况下，Xamarin.Android 安装程序会将 Android SDK 放置在 Windows 计算机上的以下位置中：
 
     C:\Users\[username]\AppData\Local\Android\android-sdk
 
-<a name="Download_the_USB_Drivers" />
 
 ### <a name="download-the-usb-drivers"></a>下载 USB 驱动程序
 
@@ -86,7 +81,7 @@ Google Nexus 设备（Galaxy Nexus 除外）需要 Google USB 驱动程序。 Ga
 
 通过启动 Android SDK 管理器并展开“附加程序”文件夹，安装 **Google USB 驱动程序**包，如下面的屏幕截图所示：
 
-[![选择的 Google USB 驱动程序包](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![选择的 Google USB 驱动程序包](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 选中“Google USB 驱动程序”框，然后单击“安装”按钮。
 驱动程序文件将下载到以下位置：
@@ -98,7 +93,6 @@ Xamarin.Android 安装的默认路径为：
     C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
 
 
-<a name="Installing_the_USB_Driver" />
 
 ### <a name="installing-the-usb-driver"></a>安装 USB 驱动程序
 
@@ -122,7 +116,6 @@ USB 驱动程序下载完成后，请将其安装。
 
 8.  单击“下一步”安装驱动程序。
 
-<a name="Windows_8" />
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>在 Windows 8 中安装未经验证的驱动程序
 
@@ -140,7 +133,6 @@ USB 驱动程序下载完成后，请将其安装。
 4.  **安装设备驱动程序** - 安装设备驱动程序，如上所述。
 
 
-<a name="ConnectDevice" />
 
 ## <a name="connect-the-device-to-the-computer"></a>将设备连接到计算机
 
@@ -150,7 +142,6 @@ USB 驱动程序下载完成后，请将其安装。
 
 -   **WiFi** - 可以通过 WiFi 将 Android 设备连接到计算机，无需使用 USB 线。 使用此技术需要一些操作，但在没有 USB 线或没有用于设备的足够长的 USB 线的情况，此技术会有帮助。 下一部分中将介绍如何通过 WiFi 连接。
 
-<a name="Debug_over_WiFi" />
 
 ### <a name="connecting-over-wifi"></a>通过 WiFi 连接
 
@@ -186,7 +177,6 @@ USB 驱动程序下载完成后，请将其安装。
 
     adb devices
 
-<a name="Summary" />
 
 ## <a name="summary"></a>摘要
 

@@ -3,16 +3,16 @@ title: "Fastlane for iOS 介绍"
 description: "本指南介绍了可用于对 iOS 应用程序进行代码签名的各种 fastlane 工具"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 084be16b55650f607d71f6eb3baf86b6f968aa35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Fastlane for iOS 介绍
 
@@ -87,12 +87,12 @@ Fastlane 是一个开源项目，旨在简化 iOS 和 Android 应用混乱冗长
 
 Fastlane 是一个非常活跃的开放源代码项目，会定期推出新版本。 当新版本的 Fastlane 可用时，将建议你运行 fastlane 命令的时间：
 
-[ ![](images/fastlane-image0.png "快速更新提示")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "快速更新提示")](images/fastlane-image0.png#lightbox)
 
 
 若要更新为新版本的 fastlane，请从[此处](https://download.fastlane.tools)下载最新的包并双击安装包来运行它：
 
-[ ![](images/fastlane-image0a.png "运行安装包")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "运行安装包")](images/fastlane-image0a.png#lightbox)
 
 
 ## <a name="contents"></a>内容
@@ -111,7 +111,7 @@ Cert 和 Sigh 负责在本地计算机上创建和管理签名证书和预配配
 
 若要设置 Xamarin.iOS 应用程序的代码签名选项，请右键单击项目名称，选择“项目选项”>“生成”>“iOS 捆绑签名”显式设置签名标识和设预配配置文件，如下所示：
 
-[ ![](images/fastlane-image11.png "显式设置签名标识和预配配置文件")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "显式设置签名标识和预配配置文件")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>相关链接
 

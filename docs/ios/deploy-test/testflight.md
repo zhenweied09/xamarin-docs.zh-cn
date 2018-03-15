@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8de7b91e5854e5c660788cdca055860b2ba0139e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: adc08009de308598041adb79dc02bf83bcf4a2f2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-testflight"></a>使用 TestFlight
 
@@ -43,7 +43,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 [在 Xcode 中验证内部版本](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)时，可确认分发配置文件中是否包含 Beta 权利，如下所示：
 
-[ ![](testflight-images/validate-build.png "将应用提交到 Apple")](testflight-images/validate-build.png)
+[![](testflight-images/validate-build.png "将应用提交到 Apple")](testflight-images/validate-build.png#lightbox)
 
 
 ## <a name="testflight-workflow"></a>TestFlight 工作流
@@ -66,7 +66,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 1.  使用 Apple 开发人员凭据登录到 [iTunes Connect 门户](https://itunesconnect.apple.com/)。
 2.  选择“我的应用”：
 
-    [ ![](testflight-images/my-apps.png "选择“我的应用”")](testflight-images/my-apps.png)
+    [![](testflight-images/my-apps.png "选择“我的应用”")](testflight-images/my-apps.png#lightbox)
 
 
 3.  在“我的应用”屏幕上，单击屏幕左上角的“+”按钮以添加新的应用。 若拥有 Mac 和 iOS 开发人员帐户，则系统将提示你在此处选择新的应用类型。
@@ -81,8 +81,8 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 该窗体需反映与应用的 Info.plist 文件中完全相同的信息，如下所示：
 
-[ ![](testflight-images/infoplist.png "应用的 Info.plist")](testflight-images/infoplist.png)
-[ ![](testflight-images/newiosapp.png "iTunes Connect 上的窗体")](testflight-images/newiosapp.png)
+[![](testflight-images/infoplist.png "应用的 Info.plist")](testflight-images/infoplist.png#lightbox)
+[![](testflight-images/newiosapp.png "iTunes Connect 上的窗体")](testflight-images/newiosapp.png#lightbox)
 
 -  **名称** - 设置应用程序包时使用的描述性名称。 它必须与 `Info.plist` 中的“应用程序名称”条目完全匹配。
 -  **主要语言** - 应用中使用的基本语言。 这通常是你所说的语言。
@@ -104,7 +104,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
  若要在 Visual Studio for Mac 中生成二进制文件，将需要使用存档功能。 右键单击项目，然后选择“存档以供发布”，如下所示：
 
- [ ![](testflight-images/new-archive.png "选择“存档以供发布”")](testflight-images/new-archive.png)
+ [![](testflight-images/new-archive.png "选择“存档以发布”")](testflight-images/new-archive.png#lightbox)
 
 
  有关详细信息，请参阅[生成可分发文件](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)指南。
@@ -113,11 +113,11 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
  创建存档将自动打开“存档视图”，显示已存档的所有项目（按解决方案分组）。 若要对应用进行签名并准备好进行分发，请选择“签名和分发...”，如下所示：
 
-[ ![](testflight-images/archive-view.png "创建存档将自动打开“存档视图”")](testflight-images/archive-view.png)
+[![](testflight-images/archive-view.png "创建存档将自动打开“存档视图”")](testflight-images/archive-view.png#lightbox)
 
  这将打开发布向导。 选择“App Store”分发渠道以创建一个包，然后打开“应用程序加载程序”。 在“配置文件”屏幕上，选择你的签名标识和配置文件，或使用其他标识重新签名。 验证包的详细信息，然后单击“发布”保存 `.ipa`
 
-[ ![](testflight-images/group.png "选择签名标识和配置文件，或使用其他标识重新签名。")](testflight-images/group.png)
+[![](testflight-images/group.png "选择签名标识和配置文件，或使用其他标识重新签名")](testflight-images/group.png#lightbox)
 
  有关这些步骤的详细信息，请参阅[将应用提交到 Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 部分。
 
@@ -156,11 +156,11 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 若要开始使用 TestFlight，请浏览到应用的“预发行”选项卡。 会显示 3 个选项卡，内附内部版本、内部测试员和外部测试员的列表，如下所示：
 
-[ ![](testflight-images/app-uploaded.png "“生成”、“内部测试员”和“外部测试员”选项卡")](testflight-images/app-uploaded.png)
+[![](testflight-images/app-uploaded.png "“生成”、“内部测试员”和“外部测试员”选项卡")](testflight-images/app-uploaded.png#lightbox)
 
 若要将元数据添加到应用，请单击内部版本号，然后单击 TestFlight：
 
-[ ![](testflight-images/metadata.png "添加元数据")](testflight-images/metadata.png)
+[![](testflight-images/metadata.png "添加元数据")](testflight-images/metadata.png#lightbox)
 
 在“测试信息”下，可为测试员提供有关应用的重要信息，例如：
 
@@ -178,11 +178,11 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 准备好开始测试应用后，打开适合你的版本的“TestFlight Beta 版测试”开关：
 
-[ ![](testflight-images/turn-on-testing.png "打开 TestFlight Beta 测试开关")](testflight-images/turn-on-testing.png)
+[![](testflight-images/turn-on-testing.png "打开 TestFlight Beta 测试开关")](testflight-images/turn-on-testing.png#lightbox)
 
 从打开 TestFlight Beta 开关的日期起，每个内部版本可活动 **60 天**。 “测试信息”页上显示了每个版本的剩余天数：
 
-[ ![](testflight-images/daysleft.png "“测试信息”页")](testflight-images/daysleft.png)
+[![](testflight-images/daysleft.png "“测试信息”页")](testflight-images/daysleft.png#lightbox)
 
 可随时关闭测试。
 
@@ -198,25 +198,25 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 若要添加测试员，请浏览到 iTunes Connect 主屏幕上的“用户和角色”：
 
-[ ![](testflight-images/users-and-roles.png "iTunes Connect 主屏幕上的用户和角色")](testflight-images/users-and-roles.png)
+[![](testflight-images/users-and-roles.png "iTunes Connect 主屏幕上的用户和角色")](testflight-images/users-and-roles.png#lightbox)
 
 现有 iTunes Connect 用户将在列表中显示。 若要选择他们，请单击其姓名、打开“内部测试员”开关，然后单击“保存”：
 
-[ ![](testflight-images/internal-tester.png "打开“内部测试员”开关")](testflight-images/internal-tester.png)
+[![](testflight-images/internal-tester.png "打开“内部测试员”开关")](testflight-images/internal-tester.png#lightbox)
 
 若要添加列表上未显示的用户，请选择“用户”旁边的“+”按钮，然后提供名字、姓氏和电子邮件地址以创建帐户。 用户将需要确认其电子邮件才可激活该帐户：
 
-[ ![](testflight-images/add-new-user.png "添加用户")](testflight-images/add-new-user.png)
+[![](testflight-images/add-new-user.png "添加用户")](testflight-images/add-new-user.png#lightbox)
 
 如果返回到“我的应用”>“预发行”>“内部测试员”，现在将看到已添加用于进行 TestFlight 内部 Beta 测试的用户：
 
-[ ![](testflight-images/select-users.png "TestFlight 内部 beta 测试添加的用户列表")](testflight-images/select-users.png)
+[![](testflight-images/select-users.png "TestFlight 内部 beta 测试添加的用户列表")](testflight-images/select-users.png#lightbox)
 
 可选择其姓名，然后单击“邀请”按钮邀请这些测试员。 将向其发送一封电子邮件，邀请其测试你的应用。
 
 可在“内部测试员”页的状态列中查看其邀请状态：
 
-[ ![](testflight-images/status-added.png "邀请状态")](testflight-images/status-added.png)
+[![](testflight-images/status-added.png "邀请状态")](testflight-images/status-added.png#lightbox)
 
 
 ### <a name="external-testers"></a>外部测试员
@@ -225,13 +225,13 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 若要提交应用进行审核，请单击内部版本旁边的“提交进行 Beta 版应用审核”文本，如下图所示：
 
-[ ![](testflight-images/beta-app-review.png "提交以供 Beta 版本应用评审")](testflight-images/beta-app-review.png)
+[![](testflight-images/beta-app-review.png "提交以供 Beta 版本应用评审")](testflight-images/beta-app-review.png#lightbox)
 
 为使应用通过审核，必须在“TestFlight Beta 版信息”页上输入必需的全部元数据。
 
 现可开始准备邀请并可通过“外部测试员”选项卡添加最多 2000 个外部测试员，方法是输入其电子邮件、名字和姓氏，如下面的屏幕截图所示。 所输入的电子邮件不需要是其 Apple ID；这只是他们将接收邀请的电子邮件。
 
-[ ![](testflight-images/add-external.png "邀请测试员")](testflight-images/add-external.png)
+[![](testflight-images/add-external.png "邀请测试员")](testflight-images/add-external.png#lightbox)
 
 如果有大量外部测试员，可使用“导入文件”链接导入一个每行采用以下格式的 `CSV` 文件：
 
@@ -243,7 +243,7 @@ first name, last name, email address
 
 输入外部测试员的详细信息后，单击“添加”并确认你拥有邀请他们的用户许可：
 
-[ ![](testflight-images/confirm-consent.png "确认有接受邀请的用户")](testflight-images/confirm-consent.png)
+[![](testflight-images/confirm-consent.png "确认有接受邀请的用户")](testflight-images/confirm-consent.png#lightbox)
 
 仅在成功通过 Beta 应用审核后，才可向外部测试员发送邀请。 此时，内部版本页上“外部”下的文本将更改为“发送邀请”。 单击此处，将邀请发送给所有已添加的测试员。
 
@@ -253,13 +253,13 @@ first name, last name, email address
 
 邀请测试员后，他们将立即收到一封类似于以下屏幕截图中的电子邮件：
 
-[ ![](testflight-images/tester-email.png "邀请电子邮件示例")](testflight-images/tester-email.png)
+[![](testflight-images/tester-email.png "邀请电子邮件示例")](testflight-images/tester-email.png#lightbox)
 
 在其单击“在 TestFlight 中打开”按钮后，你的应用随即会在 TestFlight 应用程序中打开；如果尚未下载它，则将直接转到 App Store 并允许其下载。
 
 你的应用在 TestFlight 中打开后，将显示要测试的内容的详细信息，并提示测试员将你的应用程序安装到其 iOS 8.0（或更高版本）设备上：
 
-[ ![](testflight-images/install-app.png "TestFlight 将显示测试内容的详细信息")](testflight-images/install-app.png)
+[![](testflight-images/install-app.png "TestFlight 将显示测试内容的详细信息")](testflight-images/install-app.png#lightbox)
 
 在设备主屏幕上，应用程序名前会放置一个橙色圆点，表示测试内部版本。
 
@@ -269,7 +269,7 @@ first name, last name, email address
 
 Beta 测试完成后，即可提交应用进行 Apple 的 App Store 审核。 单击“提交进行审核”按钮，即可在 iTunes Connect 中直接完成该过程，如下所示：
 
-[ ![](testflight-images/submit-for-review.png "单击“提交以供评审”按钮")](testflight-images/submit-for-review.png)
+[![](testflight-images/submit-for-review.png "单击“提交以供评审”按钮")](testflight-images/submit-for-review.png#lightbox)
 
 ## <a name="summary"></a>摘要
 

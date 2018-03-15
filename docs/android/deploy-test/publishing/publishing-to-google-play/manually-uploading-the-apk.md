@@ -7,100 +7,93 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: c09dcefb97a5edafcd03394e5ae3146b69a40745
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 37e38ddd84b50709bec147c54cdfa9f79404a39f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-uploading-the-apk"></a>手动上传 APK
 
-<a name="Uploading_the_APK" />
 
 第一次将 APK 提交到 Google Play（或如果使用 Xamarin.Android 的早期版本）时，必须通过 [Google Play 开发者控制台](https://play.google.com/apps/publish)手动上传 APK。 本指南介绍此过程所需的步骤。 
 
-<a name="devconsole" />
 
 ## <a name="google-play-developer-console"></a>Google Play 开发者控制台
 
 已编译 APK 并准备好促销资产后，必须将该应用程序上传到 Google Play。 通过登录到 [Google Play 开发者控制台](https://play.google.com/apps/publish)完成此操作，如图所示。 单击“在 Google Play 上发布 Android 应用”按钮，启动分发应用程序的进程。
 
-[![Google Play 开发人员控制台](manually-uploading-the-apk-images/00-google-play-developer-console-sml.png)](manually-uploading-the-apk-images/00-google-play-developer-console.png)
+[![Google Play 开发者控制台](manually-uploading-the-apk-images/00-google-play-developer-console-sml.png)](manually-uploading-the-apk-images/00-google-play-developer-console.png#lightbox)
 
 如果某个现有应用已注册了 Google Play，请单击“添加新应用程序”按钮：
 
-[![添加新应用程序按钮](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png)
+[![添加新应用程序按钮](manually-uploading-the-apk-images/01-existing-app-sml.png)](manually-uploading-the-apk-images/01-existing-app.png#lightbox)
 
 当显示“添加新应用程序”对话框时，输入应用名称并单击“上传 APK”：
 
-[![上传 APK 按钮](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png)
+[![上传 APK 按钮](manually-uploading-the-apk-images/02-add-new-application-sml.png)](manually-uploading-the-apk-images/02-add-new-application.png#lightbox)
 
 显示如下屏幕时，可发布应用以进行 alpha 测试、Beta 测试或生产。 下面的示例选择了“ALPHA 测试”选项卡。 由于“MyApp”不使用授权服务，因此在本示例中，不需要单击“获取许可证密钥”按钮。 在此处，单击“将第一个 APK 上传到 Alpha”按钮以发布到 Alpha 通道：
 
-[![将第一个 APK 上传到 Alpha 按钮](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png)
+[![将第一个 APK 上传到 Alpha 按钮](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
 
 随即显示“将新 APK 上传到 ALPHA”对话框。 可通过单击“浏览文件”按钮或拖放 APK 来上传 APK： 
 
-[![将新 APK 上传到 Alpha 对话框](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png)
+[![将新 APK 上传到 Alpha 对话框](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
 
 请务必上传已准备好进行发布的待分发 APK。
 下一个对话框指示 APK 上传的进度：
 
-[![上传进度指示](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png)
+[![上传进度指示](manually-uploading-the-apk-images/05-upload-progress-sml.png)](manually-uploading-the-apk-images/05-upload-progress.png#lightbox)
 
 上传 APK 后，可以选择测试方法：
 
-[![“选择测试方法”对话框](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png)
+[![“选择测试方法”对话框](manually-uploading-the-apk-images/06-select-testing-method-sml.png)](manually-uploading-the-apk-images/06-select-testing-method.png#lightbox)
 
 有关应用测试的详细信息，请参阅 Google 的[设置 alpha/beta 测试](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en)指南。
 
 上传 APK 后，会将它保存为草稿。 如下文所述，向 Google Play 提供更多详细信息之后才能将其发布。
 
-<a name="Listing_Details" />
 
 ## <a name="store-listing"></a>应用商店一览
 
 单击“Google Play 开发者控制台”中的“应用商店一览”，输入 Google Play 将向应用程序的潜在用户显示的信息： 
 
-[![“应用商店一览”对话框](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png)
+[![“应用商店一览”对话框](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
 
-<a name="Upload_Assets" />
 
 ### <a name="graphics-assets"></a>图形资产
 
 向下滚动到“应用商店一览”页的“图形资产”部分：
 
-[![“图形资产”部分](manually-uploading-the-apk-images/08-graphic-assets-sml.png)](manually-uploading-the-apk-images/08-graphic-assets.png)
+[![“图形资产”部分](manually-uploading-the-apk-images/08-graphic-assets-sml.png)](manually-uploading-the-apk-images/08-graphic-assets.png#lightbox)
 
 在本部分中上传前面已准备好的所有促销资产。 提供有关必须提供哪些促销资产，以及应以何种格式提供它们的指导。
 
-<a name="categorization" />
 
 ### <a name="categorization"></a>分类
 
 “图形资产”部分之后是“分类”部分，选择应用程序类型和类别：
 
-[![“分类”部分](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png)
+[![“分类”部分](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png#lightbox)
 
 下一部分介绍内容分级。
 
-<a name="contact_details" />
 
 ### <a name="contact-details"></a>联系人详细信息
 
 此页的最后一个部分是“联系人详细信息”。 此部分用于收集有关应用程序的开发者的联系信息：
 
-[![“联系人详细信息”部分](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png)
+[![“联系人详细信息”部分](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 可以在“隐私策略”部分提供应用隐私策略的 URL，如上所示。
 
-<a name="content_rating" />
 
 ## <a name="content-rating"></a>内容分级
 
 单击“Google Play 开发者控制台”中的“内容分级”。 在此页中指定应用的内容分级。 Google Play 要求所有应用程序都指定内容分级。 单击“继续”按钮完成内容分级问卷：
 
-[![“内容分级”部分](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png)
+[![“内容分级”部分](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
 Google Play 上的所有应用程序必须根据 Google Play 分级系统进行分级。 除内容分级以外，所有应用程序还必须遵守 Google 的[开发者内容政策](http://www.android.com/us/developer-content-policy.html)。
 
@@ -118,7 +111,6 @@ Google Play 上的所有应用程序必须根据 Google Play 分级系统进行�
 
 中等成熟度列表中的项的判断具有主观性，这样的话，有可能根据某个准则判断为中等成熟度级别的内容也可能有充分的合理性被判断为高成熟度级别。 
 
-<a name="pricing_and_distribution" />
 
 ## <a name="pricing-amp-distribution"></a>定价和分发
 
@@ -128,40 +120,36 @@ Google Play 不允许将免费应用程序更改为付费应用（但是，可�
 
 在发布付费应用之前，需要有商家帐户。若需要帐户，请单击“设置商家帐户”并按说明进行操作。
 
-[![“报价和分发”对话框](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png)
+[![“报价和分发”对话框](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-<a name="manage_countries" />
 
 ### <a name="manage-countries"></a>管理国家/地区
 
 下一部分，“管理国家/地区”支持对应用可能会分发到哪些国家/地区进行控制：
 
-[![“管理国家/地区”对话框](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png)
+[![“管理国家/地区”对话框](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
-<a name="other_information" />
 
 ### <a name="other-information"></a>其他信息
 
 继续向下滚动来指定应用是否包含广告。 此外，“设备类别”部分提供分发适用于 Android Wear、Android TV 或 Android Auto 的应用的选项（可选）：
 
-[![“包含广告”部分](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png)
+[![“包含广告”部分](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 此部分之后是可以选择的其他选项，如选择“家庭专用”和通过 Google Play for Education 分发应用。
 
-<a name="consent" />
 
 ### <a name="consent"></a>许可
 
 “定价和分发”页面的底部是“许可”部分。
 这是必需的部分，用于声明应用程序满足 [Android 内容准则](http://www.android.com/market/terms/developer-content-policy.html#hl=us)，并确认应用程序受美国出口法律显示：
 
-[![“许可”部分](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png)
+[![“许可”部分](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
 关于发布 Xamarin.Android 应用的信息远远不止本指南中所包含的内容。
 有关在 Google Play 中发布应用的详细信息，请参阅[欢迎使用 Google Play 开发者控制台帮助中心](https://support.google.com/googleplay/android-developer#topic=3450769)。
 
 
-<a name="Google_Play_Filters" />
 
 ## <a name="google-play-filters"></a>Google Play 筛选器
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 快速入门
 
 本演练介绍如何创建一个应用程序，它将字母数字电话号码（由用户输入）转换为数字电话号码，然后呼叫该号码。 最终的应用程序如下所示：
 
-[![](quickstart-images/intro-app-examples-sml.png "Phoneword 应用程序")](quickstart-images/intro-app-examples.png "Phoneword Application")
+[![](quickstart-images/intro-app-examples-sml.png "Phoneword 应用程序")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
 创建 Phoneword 应用程序，如下所示：
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 02/27/2018
         }
 
   > [!NOTE]
-> 注意：尝试在此时构建应用程序将导致稍后要修复的错误。
+  > 尝试在此时构建应用程序将导致稍后要修复的错误。
 
   按 **Ctrl+S**，保存对 **MainPage.xaml.cs** 所做的更改，然后关闭文件。
 
@@ -565,7 +565,7 @@ ms.lasthandoff: 02/27/2018
         }
 
   > [!NOTE]
-> 注意：尝试在此时构建应用程序将导致稍后要修复的错误。
+  > 尝试在此时构建应用程序将导致稍后要修复的错误。
 
   通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **MainPage.xaml.cs** 所做的更改，然后关闭文件。
 

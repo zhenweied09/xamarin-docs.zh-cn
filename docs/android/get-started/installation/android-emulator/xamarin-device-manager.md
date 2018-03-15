@@ -7,12 +7,12 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/25/2018
-ms.openlocfilehash: 20c7c5a9aaaf13cd9f4050254c7234ada78d926d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 447657d6f8509623272f37c48c7aecbdfd4cbaad
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Xamarin Android 设备管理器
 
@@ -20,7 +20,6 @@ _Xamarin Android 设备管理器当前提供了预览版，取代了 Google 的�
 
 ![当前提供预览版](~/media/shared/preview.png)
 
-<a name="overview" />
  
 ## <a name="overview"></a>概述
 
@@ -34,16 +33,16 @@ _Xamarin Android 设备管理器当前提供了预览版，取代了 Google 的�
 
 本指南说明如何在 Windows 上（或[针对 Mac](?tabs=vsmac)）安装和使用用于 Visual Studio 的 Xamarin Android 设备管理器：
 
-[![“设备”选项卡中 Xamarin Android 设备管理器的屏幕截图](xamarin-device-manager-images/win/01-devices-dialog-sml.png)](xamarin-device-manager-images/win/01-devices-dialog.png)
+[![“设备”选项卡中 Xamarin Android 设备管理器的屏幕截图](xamarin-device-manager-images/win/01-devices-dialog-sml.png)](xamarin-device-manager-images/win/01-devices-dialog.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 本指南说明如何安装和使用用于 Visual Studio for Mac（或[适用于 Windows](?tabs=vswin)）的 Xamarin Android 设备管理器。
 
-[![“设备”选项卡中 Xamarin Android 设备管理器的屏幕截图](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png)
+[![“设备”选项卡中 Xamarin Android 设备管理器的屏幕截图](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png#lightbox)
 
 > [!NOTE]
-> **注**意：本指南仅适用于 Visual Studio for Mac。
+> 本指南仅适用于 Visual Studio for Mac。
 Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 -----
@@ -52,9 +51,6 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 每台 AVD 是模拟物理 Android 设备的仿真器配置。 这样可以在模拟不同物理 Android 设备的多种配置中运行和测试应用。 Xamarin Android 设备管理器取代了 Google 的独立 AVD 管理器（已弃用）。
 
 本指南介绍如何安装和开始使用 Android 设备管理器。 你将了解如何创建、复制、自定义和启动设备管理器。 本指南还介绍了如何配置每台虚拟设备的属性（例如 API 级别、CPU、内存和分辨率）以启用/禁用模拟传感器（例如加速计、GPS、方向和光传感器）和配置该虚拟设备使用的硬件加速的类型。
-
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>惠?
 
@@ -99,11 +95,10 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 2. 双击“AndroidDevices.pkg”，然后按照安装说明进行操作： 
 
-    [![Xamarin Android 设备管理器安装向导](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png)
+    [![Xamarin Android 设备管理器安装向导](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png#lightbox)
 
 -----
 
-<a name="dev-manager" /> 
  
 ## <a name="launching-the-device-manager"></a>启动设备管理器
 
@@ -111,7 +106,7 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 在 Visual Studio 15.6 Preview 3 和更高版本中，可以从“工具”菜单启动 Xamarin Android 设备管理器。 如果使用 Visual Studio 15.6 Preview 3 或更高版本，则通过单击“工具”>“Android 仿真器管理器”启动设备管理器：
 
-[![从“工具”菜单启动](xamarin-device-manager-images/win/04-tools-menu-sml.png)](xamarin-device-manager-images/win/04-tools-menu.png)
+[![从“工具”菜单启动](xamarin-device-manager-images/win/04-tools-menu-sml.png)](xamarin-device-manager-images/win/04-tools-menu.png#lightbox)
 
 如果使用早期版本的 Visual Studio，则必须从 Windows“开始”菜单启动 Xamarin Android 设备管理器。
 
@@ -125,11 +120,11 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 在 Visual Studio for Mac 7.6 Preview 3（目前处于 alpha 通道中）或更高版本中，可以通过选择“工具”>“仿真程序管理器”启动 Xamarin Android 设备管理器：
 
-[![从“工具”菜单启动](xamarin-device-manager-images/mac/16-tools-menu-sml.png)](xamarin-device-manager-images/mac/16-tools-menu.png)
+[![从“工具”菜单启动](xamarin-device-manager-images/mac/16-tools-menu-sml.png)](xamarin-device-manager-images/mac/16-tools-menu.png#lightbox)
 
 如果使用早期版本的 Visual Studio for Mac，则必须独立启动 Xamarin Android 设备管理器。 在“Applications”文件夹中找到“Android Devices”，然后双击它以启动：
 
-[![Finder 中 Xamarin Android 设备管理器的位置](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png)
+[![Finder 中 Xamarin Android 设备管理器的位置](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png#lightbox)
 
 
 -----
@@ -151,17 +146,16 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![安装 Android SDK Tools 26.0](xamarin-device-manager-images/win/03-sdk-tools-sml.png)](xamarin-device-manager-images/win/03-sdk-tools.png)
+[![安装 Android SDK Tools 26.0](xamarin-device-manager-images/win/03-sdk-tools-sml.png)](xamarin-device-manager-images/win/03-sdk-tools.png#lightbox)
 
 安装这些包后，可以关闭 SDK 管理器并重新启动 Android 设备管理器。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![安装 Android SDK Tools 26.0](xamarin-device-manager-images/mac/03-sdk-tools-sml.png)](xamarin-device-manager-images/mac/03-sdk-tools.png)
+[![安装 Android SDK Tools 26.0](xamarin-device-manager-images/mac/03-sdk-tools-sml.png)](xamarin-device-manager-images/mac/03-sdk-tools.png#lightbox)
 
 -----
 
-<a name="devices" />
  
 ## <a name="main-screen"></a>主屏幕
 
@@ -169,13 +163,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 首次启动 Android 设备管理器时，它会展现一个显示所有当前已配置的虚拟设备的屏幕。 对于每台设备，将显示“名称”、“操作系统”（Android API 级别）、CPU、“内存”大小以及屏幕分辨率：
 
-[![已安装设备及其参数的列表](xamarin-device-manager-images/win/05-installed-list-sml.png)](xamarin-device-manager-images/win/05-installed-list.png)
+[![已安装设备及其参数的列表](xamarin-device-manager-images/win/05-installed-list-sml.png)](xamarin-device-manager-images/win/05-installed-list.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 首次启动 Android 设备管理器时，它会展现一个显示所有当前已配置的虚拟设备的屏幕。 对于每台设备，将显示“名称”、“系统映像”（Android API 级别）、CPU、“内存”大小以及屏幕分辨率：
 
-[![已安装设备及其参数的列表](xamarin-device-manager-images/mac/05-devices-list-sml.png)](xamarin-device-manager-images/mac/05-devices-list.png)
+[![已安装设备及其参数的列表](xamarin-device-manager-images/mac/05-devices-list-sml.png)](xamarin-device-manager-images/mac/05-devices-list.png#lightbox)
 
 -----
 
@@ -183,13 +177,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 单击列表中的设备时，“启动”按钮将出现在右侧。 可以单击“启动”按钮以通过此虚拟设备启动仿真器：
 
-[![设备的“启动”按钮图像](xamarin-device-manager-images/win/06-start-button-sml.png)](xamarin-device-manager-images/win/06-start-button.png)
+[![设备的“启动”按钮图像](xamarin-device-manager-images/win/06-start-button-sml.png)](xamarin-device-manager-images/win/06-start-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 单击“播放”按钮以通过所选的虚拟设备启动仿真器：
  
-[![设备的“启动”按钮图像](xamarin-device-manager-images/mac/06-start-button-sml.png)](xamarin-device-manager-images/mac/06-start-button.png)
+[![设备的“启动”按钮图像](xamarin-device-manager-images/mac/06-start-button-sml.png)](xamarin-device-manager-images/mac/06-start-button.png#lightbox)
  
 -----
 
@@ -197,17 +191,16 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 通过所选虚拟设备启动仿真器后，“启动”按钮将更改为可用于终止运行仿真器的“停止”按钮：
 
-[![正在运行的设备的“停止”按钮](xamarin-device-manager-images/win/07-stop-button-sml.png)](xamarin-device-manager-images/win/07-stop-button.png)
+[![正在运行的设备的“停止”按钮](xamarin-device-manager-images/win/07-stop-button-sml.png)](xamarin-device-manager-images/win/07-stop-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 通过所选虚拟设备启动仿真器后，“播放”按钮将更改为可用于终止运行仿真器的“停止”按钮：
  
-[![正在运行的设备的“停止”按钮](xamarin-device-manager-images/mac/07-stop-button-sml.png)](xamarin-device-manager-images/mac/07-stop-button.png)
+[![正在运行的设备的“停止”按钮](xamarin-device-manager-images/mac/07-stop-button-sml.png)](xamarin-device-manager-images/mac/07-stop-button.png#lightbox)
  
 -----
 
-<a name="device-new" />
  
 ### <a name="new-device"></a>新设备
 
@@ -215,13 +208,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 若要创建新设备，请单击“新建”按钮（位于屏幕的右上方区域）：
 
-[![用于创建新设备的“新建”按钮](xamarin-device-manager-images/win/08-new-button-sml.png)](xamarin-device-manager-images/win/08-new-button.png)
+[![用于创建新设备的“新建”按钮](xamarin-device-manager-images/win/08-new-button-sml.png)](xamarin-device-manager-images/win/08-new-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 若要创建新设备，请单击“新建设备”按钮（位于屏幕的右上方区域）：
  
-[![用于创建新设备的“新建”按钮](xamarin-device-manager-images/mac/08-new-button-sml.png)](xamarin-device-manager-images/mac/08-new-button.png)
+[![用于创建新设备的“新建”按钮](xamarin-device-manager-images/mac/08-new-button-sml.png)](xamarin-device-manager-images/mac/08-new-button.png#lightbox)
  
 -----
 
@@ -229,27 +222,27 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 单击“新建”以启动“新建设备”屏幕：
 
-[![设备管理器的“新建设备”屏幕](xamarin-device-manager-images/win/09-new-device-editor-sml.png)](xamarin-device-manager-images/win/09-new-device-editor.png)
+[![设备管理器的“新建设备”屏幕](xamarin-device-manager-images/win/09-new-device-editor-sml.png)](xamarin-device-manager-images/win/09-new-device-editor.png#lightbox)
 
 若要在“新建设备”中配置新设备，请使用以下步骤：
 
 1. 通过单击“设备”下拉菜单以选择要仿真的物理设备：
 
-    [![“设备”下拉菜单](xamarin-device-manager-images/win/10-device-menu-sml.png)](xamarin-device-manager-images/win/10-device-menu.png)
+    [![“设备”下拉菜单](xamarin-device-manager-images/win/10-device-menu-sml.png)](xamarin-device-manager-images/win/10-device-menu.png#lightbox)
 
 2. 通过单击“系统映像”下拉菜单以选择要与此虚拟设备一起使用的系统映像。 此菜单在“已安装”下列出已安装的系统映像。 “下载”部分列出当前开发计算机上不可用但可以进行自动安装的系统映像：
 
-    [![“系统映像”下拉菜单](xamarin-device-manager-images/win/11-system-image-menu-sml.png)](xamarin-device-manager-images/win/11-system-image-menu.png)
+    [![“系统映像”下拉菜单](xamarin-device-manager-images/win/11-system-image-menu-sml.png)](xamarin-device-manager-images/win/11-system-image-menu.png#lightbox)
 
 3. 为设备提供新名称。 在下面的示例中，新设备名为“Nexus 5 API 25”：
 
-    [![为新设备命名](xamarin-device-manager-images/win/12-device-name-sml.png)](xamarin-device-manager-images/win/12-device-name.png)
+    [![为新设备命名](xamarin-device-manager-images/win/12-device-name-sml.png)](xamarin-device-manager-images/win/12-device-name.png#lightbox)
 
 4. 编辑需要修改的任何属性。 若要对属性进行更改，请参阅本指南后面的[配置文件属性](#properties)部分。
 
 5. 添加需要显式设置的任何其他属性。 尽管“新建设备”屏幕只列出了最常修改的属性，但你可以单击“添加属性”下拉菜单（位于左下角）以添加其他的属性。 在下面的示例中，正在添加 `hw.lcd.backlight` 属性：
 
-    [![“添加属性”下拉菜单](xamarin-device-manager-images/win/13-add-property-menu-sml.png)](xamarin-device-manager-images/win/13-add-property-menu.png)
+    [![“添加属性”下拉菜单](xamarin-device-manager-images/win/13-add-property-menu-sml.png)](xamarin-device-manager-images/win/13-add-property-menu.png#lightbox)
 
 6. 单击“创建”按钮（位于右下角）以创建新设备：
 
@@ -261,37 +254,37 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 8. 在创建设备时，Android 设备管理器会将新设备添加到已安装虚拟设备的列表，并会显示“正在创建”的进度指示器：
 
-    [![创建进度指示器](xamarin-device-manager-images/win/16-creating-the-device-sml.png)](xamarin-device-manager-images/win/16-creating-the-device.png)
+    [![创建进度指示器](xamarin-device-manager-images/win/16-creating-the-device-sml.png)](xamarin-device-manager-images/win/16-creating-the-device.png#lightbox)
 
 9. 创建过程完成后，新设备会显示在已安装虚拟设备的列表中，并且会显示可以启动的“启动”按钮：
 
-   [![可以启动的新创建的设备](xamarin-device-manager-images/win/17-created-device-sml.png)](xamarin-device-manager-images/win/17-created-device.png)
+   [![可以启动的新创建的设备](xamarin-device-manager-images/win/17-created-device-sml.png)](xamarin-device-manager-images/win/17-created-device.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 单击“新建设备”以启动“新建设备”屏幕：
 
-[![设备管理器的“新建设备”屏幕](xamarin-device-manager-images/mac/09-new-device-editor-sml.png)](xamarin-device-manager-images/mac/09-new-device-editor.png)
+[![设备管理器的“新建设备”屏幕](xamarin-device-manager-images/mac/09-new-device-editor-sml.png)](xamarin-device-manager-images/mac/09-new-device-editor.png#lightbox)
 
 使用以下步骤在“新建设备”屏幕中配置新设备：
 
 1. 通过单击“设备”下拉菜单以选择要仿真的物理设备：
 
-    [![“设备”下拉菜单](xamarin-device-manager-images/mac/10-device-menu-sml.png)](xamarin-device-manager-images/mac/10-device-menu.png)
+    [![“设备”下拉菜单](xamarin-device-manager-images/mac/10-device-menu-sml.png)](xamarin-device-manager-images/mac/10-device-menu.png#lightbox)
 
 2. 通过单击“系统映像”下拉菜单以选择要与此虚拟设备一起使用的系统映像。 此菜单在“已安装”下列出已安装的系统映像。 “下载”部分（如有显示）列出当前开发计算机上不可用但可以进行自动安装的系统映像：
 
-    [![“系统映像”下拉菜单](xamarin-device-manager-images/mac/11-system-image-menu-sml.png)](xamarin-device-manager-images/mac/11-system-image-menu.png)
+    [![“系统映像”下拉菜单](xamarin-device-manager-images/mac/11-system-image-menu-sml.png)](xamarin-device-manager-images/mac/11-system-image-menu.png#lightbox)
 
 3. 为设备提供新名称。 在下面的示例中，新设备名为“Nexus 5X API 25”：
 
-    [![为新设备命名](xamarin-device-manager-images/mac/12-device-name-sml.png)](xamarin-device-manager-images/mac/12-device-name.png)
+    [![为新设备命名](xamarin-device-manager-images/mac/12-device-name-sml.png)](xamarin-device-manager-images/mac/12-device-name.png#lightbox)
 
 4. 编辑需要修改的任何属性。 若要对属性进行更改，请参阅本指南后面的[配置文件属性](#properties)部分。
 
 5. 添加需要显式设置的任何其他属性。 尽管“新建设备”屏幕只列出了最常修改的属性，但你可以单击“添加属性”下拉菜单（位于左下角）以添加其他的属性：
 
-    [![“添加属性”下拉菜单](xamarin-device-manager-images/mac/13-add-property-menu-sml.png)](xamarin-device-manager-images/mac/13-add-property-menu.png)
+    [![“添加属性”下拉菜单](xamarin-device-manager-images/mac/13-add-property-menu-sml.png)](xamarin-device-manager-images/mac/13-add-property-menu.png#lightbox)
 
 6. 也可以单击“自定义”为设备定义新属性：
 
@@ -305,11 +298,11 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 9. 在创建设备时，Android 设备管理器会将新设备添加到设备列表，并会显示“正在创建”的进度指示器：
 
-    [![创建进度指示器](xamarin-device-manager-images/mac/17-creating-the-device-sml.png)](xamarin-device-manager-images/mac/17-creating-the-device.png)
+    [![创建进度指示器](xamarin-device-manager-images/mac/17-creating-the-device-sml.png)](xamarin-device-manager-images/mac/17-creating-the-device.png#lightbox)
 
 10. 创建过程完成后，新设备会显示在设备列表中，并且会显示可以启动的“播放”按钮：
 
-   [![可以启动的新创建的设备](xamarin-device-manager-images/mac/18-created-device-sml.png)](xamarin-device-manager-images/mac/18-created-device.png)
+   [![可以启动的新创建的设备](xamarin-device-manager-images/mac/18-created-device-sml.png)](xamarin-device-manager-images/mac/18-created-device.png#lightbox)
 
 -----
 
@@ -322,13 +315,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 若要编辑现有的虚拟设备，请选择设备并单击“编辑”按钮（位于屏幕的右上方）：
 
-[![用于修改新设备的“编辑”按钮](xamarin-device-manager-images/win/19-edit-button-sml.png)](xamarin-device-manager-images/win/19-edit-button.png)
+[![用于修改新设备的“编辑”按钮](xamarin-device-manager-images/win/19-edit-button-sml.png)](xamarin-device-manager-images/win/19-edit-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 若要编辑现有的虚拟设备，请选择“其他选项”下拉菜单（齿轮图标），然后选择“编辑”：
  
-[![用于修改新设备的“编辑”菜单选项](xamarin-device-manager-images/mac/19-edit-button-sml.png)](xamarin-device-manager-images/mac/19-edit-button.png)
+[![用于修改新设备的“编辑”菜单选项](xamarin-device-manager-images/mac/19-edit-button-sml.png)](xamarin-device-manager-images/mac/19-edit-button.png#lightbox)
  
 -----
 
@@ -336,11 +329,11 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![“设备编辑器”屏幕](xamarin-device-manager-images/win/20-device-editor-sml.png)](xamarin-device-manager-images/win/20-device-editor.png)
+[![“设备编辑器”屏幕](xamarin-device-manager-images/win/20-device-editor-sml.png)](xamarin-device-manager-images/win/20-device-editor.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
  
-[![“设备编辑器”屏幕](xamarin-device-manager-images/mac/20-device-editor-sml.png)](xamarin-device-manager-images/mac/20-device-editor.png)
+[![“设备编辑器”屏幕](xamarin-device-manager-images/mac/20-device-editor-sml.png)](xamarin-device-manager-images/mac/20-device-editor.png#lightbox)
  
 -----
 
@@ -350,13 +343,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 例如，在下面的屏幕截图中，`hw.lcd.density` 属性正从“420”更改为“240”：
 
-[![设备编辑示例](xamarin-device-manager-images/win/21-device-editing-sml.png)](xamarin-device-manager-images/win/21-device-editing.png)
+[![设备编辑示例](xamarin-device-manager-images/win/21-device-editing-sml.png)](xamarin-device-manager-images/win/21-device-editing.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 例如，在下面的屏幕截图中，`hw.lcd.density` 属性正从“320”更改为“240”并且 `hw.ramSize` 已更改为“768”：
  
-[![设备编辑示例](xamarin-device-manager-images/mac/21-device-editing-sml.png)](xamarin-device-manager-images/mac/21-device-editing.png)
+[![设备编辑示例](xamarin-device-manager-images/mac/21-device-editing-sml.png)](xamarin-device-manager-images/mac/21-device-editing.png#lightbox)
  
 -----
 
@@ -364,7 +357,6 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 有关更改虚拟设备属性的详细信息，请参阅本指南后面的[配置文件属性](#properties)部分。
 
 
-<a name="addopt" />
  
 ### <a name="additional-options"></a>附加选项
 
@@ -372,13 +364,13 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 右上方的“&hellip;”菜单中提供适用于设备的附加选项：
 
-[![附加选项菜单的位置](xamarin-device-manager-images/win/22-overflow-menu-sml.png)](xamarin-device-manager-images/win/22-overflow-menu.png)
+[![附加选项菜单的位置](xamarin-device-manager-images/win/22-overflow-menu-sml.png)](xamarin-device-manager-images/win/22-overflow-menu.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 “播放”按钮左侧的下拉菜单中提供适用于设备的附加选项：
 
-[![附加选项菜单的位置](xamarin-device-manager-images/mac/22-overflow-menu-sml.png)](xamarin-device-manager-images/mac/22-overflow-menu.png)
+[![附加选项菜单的位置](xamarin-device-manager-images/mac/22-overflow-menu-sml.png)](xamarin-device-manager-images/mac/22-overflow-menu.png#lightbox)
 
 -----
 
@@ -388,11 +380,11 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 -   **复制和编辑** &ndash; 复制当前所选的设备，并会在“新建设备”屏幕中使用不同的唯一名称打开。 例如，选择“VisualStudio_android-23_x86_phone”，然后单击“复制和编辑”将计数器追加到名称中：
 
-    [![“复制和编辑”屏幕](xamarin-device-manager-images/win/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/win/23-dupe-and-edit.png)
+    [![“复制和编辑”屏幕](xamarin-device-manager-images/win/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/win/23-dupe-and-edit.png#lightbox)
 
 -   **在资源管理器中展现** &ndash; 在包含用于虚拟设备的文件的文件夹中打开“Windows 资源管理器”窗口。 例如，选择“Nexus 5X API 25”并单击“在资源管理器中展现”以打开一个窗口，如下所示：
 
-    [![单击“在资源管理器中展现”的结果](xamarin-device-manager-images/win/24-reveal-in-explorer-sml.png)](xamarin-device-manager-images/win/24-reveal-in-explorer.png)
+    [![单击“在资源管理器中展现”的结果](xamarin-device-manager-images/win/24-reveal-in-explorer-sml.png)](xamarin-device-manager-images/win/24-reveal-in-explorer.png#lightbox)
 
 -   **恢复出厂设置**  &ndash; 将所选设备重置为其默认设置，擦除任何用户在此设备运行时对其内部状态进行的更改。 此更改不会影响在创建和编辑期间对虚拟设备做出的修改。 将出现提醒此重置无法被撤消的一个对话框。 单击“擦除用户数据”以确认重置。
 
@@ -408,11 +400,11 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 -   **复制和编辑** &ndash; 复制当前所选的设备，并会在“新建设备”屏幕中使用不同的唯一名称打开。
     例如，选择“Nexus 5X API 25”，然后单击“复制和编辑”将计数器追加到名称中：
 
-    [![“复制和编辑”屏幕](xamarin-device-manager-images/mac/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/mac/23-dupe-and-edit.png)
+    [![“复制和编辑”屏幕](xamarin-device-manager-images/mac/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/mac/23-dupe-and-edit.png#lightbox)
 
 -   **在查找器中展现** &ndash; 在包含用于虚拟设备的文件的文件夹中打开 macOS Finder 窗口。 例如，选择“Nexus 5X API 25”并单击“在查找器中展现”以打开一个窗口，如下所示：
 
-    [![单击“在资源管理器中展现”的结果](xamarin-device-manager-images/mac/24-reveal-in-finder-sml.png)](xamarin-device-manager-images/mac/24-reveal-in-finder.png)
+    [![单击“在资源管理器中展现”的结果](xamarin-device-manager-images/mac/24-reveal-in-finder-sml.png)](xamarin-device-manager-images/mac/24-reveal-in-finder.png#lightbox)
 
 -   **恢复出厂设置**  &ndash; 将所选设备重置为其默认设置，擦除任何用户在此设备运行时对其内部状态进行的更改。 此更改不会影响在创建和编辑期间对虚拟设备做出的修改。 将出现提醒此重置无法被撤消的一个对话框。 单击“擦除用户数据”以确认重置。
 
@@ -497,7 +489,7 @@ C:\\Program Files (x86)\\Android\\android-sdk
 
 2. 双击以打开某个日志文件，并找到“配置文件路径”。 例如:
 
-    [![日志文件中的“配置文件路径”](xamarin-device-manager-images/win/34-config-file-path-sml.png)](xamarin-device-manager-images/win/34-config-file-path.png)
+    [![日志文件中的“配置文件路径”](xamarin-device-manager-images/win/34-config-file-path-sml.png)](xamarin-device-manager-images/win/34-config-file-path.png#lightbox)
 
 3. 导航到此位置，然后双击“user.config”以将其打开。 
 
@@ -528,7 +520,6 @@ Visual Studio for Mac 上的 Xamarin Android 设备管理器暂无已知问题/�
 -----
 
  
-<a name="summary" />
  
 ## <a name="summary"></a>摘要
 

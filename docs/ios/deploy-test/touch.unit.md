@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>单元测试
 
@@ -119,15 +119,15 @@ namespace Fixtures {
 
 通过测试运行程序，可查看已注册的测试，并单独选择可执行的测试。
 
-[ ![](touch.unit-images/02.png "已注册测试的列表")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "已注册测试的列表")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "单个文本")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "单个文本")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "运行结果")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "运行结果")](touch.unit-images/04.png#lightbox)
 
 从嵌套视图中选择测试装置可运行单个测试装置，或选择“全部运行”运行所有测试。 如果运行默认测试，则应包含三个测试（一个通过、一个失败，一个已忽略）。 报表如下所示，你可以直接向下钻取失败测试并找出有关失败的详细信息：
 
-[ ![](touch.unit-images/05.png "示例报表")](touch.unit-images/05.png) [ ![ ](touch.unit-images/06.png "示例报表")](touch.unit-images/06.png) [ ![ ](touch.unit-images/07.png "示例报表")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "示例报表")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "示例报表")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "示例报表")](touch.unit-images/05.png#lightbox)
 
 还可在 IDE 中查看“应用程序输出”窗口，以查看正执行的测试及其当前状态。
 

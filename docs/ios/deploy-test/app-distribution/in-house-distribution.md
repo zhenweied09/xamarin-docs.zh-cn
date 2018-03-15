@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>In-House 分发
 
@@ -56,15 +56,15 @@ Apple Developer Enterprise Program 证书将持续 3 年，配置文件将在 1 
 3. 单击“+”按钮创建新证书。
 4. 在“生产”标题下，选择“In-House 和 Ad Hoc”：
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "选择“内部”和“临时”")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "选择“内部”和“临时”")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. 单击“继续”，并按说明通过密钥链访问创建证书签名请求：
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. 按指示创建 CSR 后，单击“继续”并将 CSR 上传到 Member Center：
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "将 CSR 上传到 Member Center")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "将 CSR 上传到 Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. 单击“生成”创建证书。
 8. 下载已完成的证书，并双击该文件进行安装。
@@ -74,15 +74,15 @@ Apple Developer Enterprise Program 证书将持续 3 年，配置文件将在 1 
 
 1. 选择团队，再单击“查看详细信息”：
 
-    [ ![](in-house-distribution-images/selectteam.png "选择团队")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "选择团队")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. 然后，单击“iOS 分发证书”旁边的“创建”按钮：
 
-   [ ![](in-house-distribution-images/selectcert.png "创建“iOS 分发证书”")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "创建“iOS 分发证书”")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   接下来，单击加号 (+) 按钮，然后选择“iOS App Store”：
 
-   [ ![](in-house-distribution-images/selectcert.png "选择“iOS App Store”")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "选择“iOS App Store”")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Apple Developer Enterprise Program 证书将持续 3 年，配置文件将在 1 
 
 1. 返回 Apple 预配门户，选择“预配” > “分发”：
 
-   [![](in-house-distribution-images/distribute01.png "选择“预配”>“分发”")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "选择“预配”>“分发”")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. 单击“+”按钮，选择要创建为“In-House”的分发配置文件类型：
 
-   [![](in-house-distribution-images/distribute02.png "创建内部分发配置文件")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "创建内部分发配置文件")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. 单击“继续”按钮，然后在下拉列表中选择要为其创建分发配置文件的应用程序 ID：
 
-   [![](in-house-distribution-images/distribute03.png "从下拉列表选择“App ID”")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "从下拉列表选择“App ID”")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. 单击“继续”按钮，然后选择签名应用程序时所需的分发证书：
 
-   [![](in-house-distribution-images/distribute04.png "选择签名应用程序时所需的分发证书")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "选择签名应用程序时所需的分发证书")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. 单击“继续”按钮，为新的分发配置文件输入“名称”：
 
-   [![](in-house-distribution-images/distribute06.png "输入新的分发配置文件的名称")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "输入新的分发配置文件的名称")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. 单击“生成”按钮，创建新的配置文件并完成该过程。
 

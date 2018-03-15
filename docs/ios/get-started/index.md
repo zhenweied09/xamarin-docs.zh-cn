@@ -3,16 +3,17 @@ title: "iOS 入门"
 description: "从 Hello World 到 Hello App Store"
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
+ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/23/2016
-ms.openlocfilehash: 1c59a67a87087a821339e98bcdcc004a342e311a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01e4d2e42f61145f220545c832bcbaf1d8a994f1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="getting-started-with-ios"></a>iOS 入门
 
@@ -45,3 +46,9 @@ Xcode 的最新版可通过 [iOS 开发人员中心](https://developer.apple.com
 ##  <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[面向 Objective-C 开发人员的 Xamarin](objective-c-developers/index.md)
 
 为 Objective-C 开发人员提供过渡到 Xamarin 平台的信息。
+
+## <a name="xamarin-university-video"></a>Xamarin University 视频
+
+> [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
+
+通过 [Xamarin University](https://university.xamarin.com) 使用 Xamarin for Visual Studio 生成第一个 iOS 应用

@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
+ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/25/2017
-ms.openlocfilehash: 974388ad3ad125fb059a0c71252f53e140e056cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c07ab37bc88b52bbff0ddc0fb7bf1faa4d97bb2a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-series"></a>入门系列
 
@@ -35,3 +36,9 @@ ms.lasthandoff: 02/27/2018
 ##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[面向 Java 开发人员的 Xamarin](~/android/get-started/java-developers.md)
 
 本文介绍面向 Java 开发人员的 C# 编程，主要侧重于 Java 开发人员在学习 Xamarin.Android 应用开发时会遇到的 C# 语言功能。
+
+## <a name="xamarin-university-video"></a>Xamarin University 视频
+
+> [!VIDEO https://youtube.com/embed/rkNikCa5D48]
+
+通过 [Xamarin University](https://university.xamarin.com) 使用 Xamarin for Visual Studio 生成第一个 Android 应用

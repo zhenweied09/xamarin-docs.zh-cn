@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: fec57fbeb201d55e887969c5a50baf6a76c10e17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e09bb1150c3cc53104b41b75a2c3d4d2db4e5ff
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="publishing-independently"></a>独立发布
 
 可在不使用任何现有 Android 应用商店的情况下发布应用程序。 本部分将介绍其他发布方法和 Xamarin.Android 的许可级别。
 
-<a name="Xamarin_Licensing" />
 
 ## <a name="xamarin-licensing"></a>Xamarin 许可
 
@@ -31,36 +30,32 @@ ms.lasthandoff: 02/27/2018
 
 若要下载社区版或深入了解如何购买 Professional 版和 Enterprise 版，请访问 [visualstudio.com](https://www.visualstudio.com/xamarin/)。
 
-<a name="Allow_Installation_from_Unknown_Sources" />
 
 ## <a name="allow-installation-from-unknown-sources"></a>允许来自未知源的安装
 
 默认情况下，Android 仅允许用户下载和安装来自 Google Play 的应用程序。 若要允许来自非应用商店的安装，用户必须先在设备上启用未知源设置，才可尝试安装应用程序。 可通过“设置”>“安全”找到此设置，如下图所示：
 
-[![安全设置屏幕](publishing-independently-images/settings.png)](publishing-independently-images/settings.png)
+[![安全设置屏幕](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
 
 > [!IMPORTANT]
-> 注意：无论是否启用此设置，某些网络提供商可能都会阻止安装来自未知源的应用程序。
+> 无论是否启用此设置，某些网络提供商可能都会阻止安装来自未知源的应用程序。
 
 
-<a name="Publishing_by_E-Mail" />
 
 ## <a name="publishing-by-e-mail"></a>通过电子邮件发布
 
 若要向用户分发应用程序，一种简单快捷的方式是将发布 APK 附加到电子邮件。 用户在 Android 设备上打开电子邮件时，Android 将识别 APK 附件并显示“安装”按钮，如下图所示：
 
-[![附件安装按钮](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png)
+[![附件安装按钮](publishing-independently-images/publishing-via-email.png)](publishing-independently-images/publishing-via-email.png#lightbox)
 
 尽管通过电子邮件进行分发非常简单，但其在防止盗版或未授权分发方面提供的保护较少。 因此，最好在很少用户接收该应用程序且其肯定不会分发应用程序的情况下采用此方式。
 
-<a name="Publishing_by_Web" />
 
 ## <a name="publishing-by-web"></a>通过 Web 发布
 
 可通过 Web 服务器分发应用程序。 为此，需将应用程序上传到 Web 服务器，然后向用户提供下载链接。 Android 设备浏览到链接并下载应用程序时，该程序将在下载完成后自动安装。
 
-<a name="Manually_Installing_an_APK" />
 
 ## <a name="manually-installing-an-apk"></a>手动安装 APK
 

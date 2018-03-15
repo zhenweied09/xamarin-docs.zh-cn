@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bc53a8230b66b88319f729d7effe8ed75f0176b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf2f62929df63d08add76b7fb6de404d2780b2b3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="building-abi-specific-apks"></a>构建特定于 ABI 的 APK
 
@@ -42,7 +42,6 @@ _本文讨论如何构建一个使用 Xamarin.Android 以单个 ABI 为目标的
 本指南最后将演示如何使用 [Rake](http://martinfowler.com/articles/rake.html) 编写这些步骤的脚本。
 
 
-<a name="Setting_android_versionCode" />
 
 ### <a name="creating-the-version-code-for-the-apk"></a>为 APK 创建版本代码
 
@@ -67,7 +66,7 @@ Google 为使用七位数版本代码的版本代码推荐了一种特定算法�
 
 下图说明了上面列表中描述的每个代码的位置：
 
-[![八位数版本代码格式的图示，用颜色编码](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png)
+[![八位数版本代码格式的图示，用颜色编码](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
 
 Google Play 确保根据 `versionCode` 和 APK 配置将正确的 APK 发送到设备。 将具有最高版本代码的 APK 发送到设备。 例如，应用程序可能有三个 APK，其版本代码如下：
@@ -88,7 +87,6 @@ Google Play 确保根据 `versionCode` 和 APK 配置将正确的 APK 发送到�
 手动维护这些版本代码可能会对开发人员带来沉重的负担。 计算正确的 `android:versionCode` 然后构建 APK 的过程应该是自动执行的。
 本文末尾的演练将举例介绍如何执行此操作。
 
-<a name="CreatingAndroidManifest" />
 
 ### <a name="create-a-temporary-androidmanifestxml"></a>创建临时的 AndroidManifest.XML
 
@@ -123,7 +121,6 @@ Google Play 确保根据 `versionCode` 和 APK 配置将正确的 APK 发送到�
 -   `<CS_PROJ FILE>` &ndash; 这是 Xamarin.Android 项目的 `.csproj` 文件路径。
 
 
-<a name="SignAndZipAlign" />
 
 ### <a name="sign-and-zipalign-the-apk"></a>为 APK 签名并使用 Zipalign 为其优化
 
@@ -139,7 +136,6 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTO
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-<a name="Automating_APK_Creation_With_Rake" />
 
 ## <a name="automating-apk-creation-with-rake"></a>通过 Rake 自动创建 APK
 
@@ -174,11 +170,11 @@ $ rake build
 
 rake 任务完成后，将有三个包含文件 `xamarin.helloworld.apk` 的 `bin` 文件夹。 下一个屏幕截图显示了每个文件夹及其内容：
 
-[![包含 xamarin.helloworld.apk 的平台特定文件夹的位置](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png)
+[![包含 xamarin.helloworld.apk 的平台特定文件夹的位置](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 
 > [!NOTE]
-> 注意：本指南中概述的构建过程可以在许多不同的构建系统之一中实现。 尽管我们没有预先编写的示例，但 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 或 [Fake](http://fsharp.github.io/FAKE/) 应该也适用。
+> 本指南中概述的构建过程可以在许多不同的构建系统之一中实现。 尽管我们没有预先编写的示例，但 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 或 [Fake](http://fsharp.github.io/FAKE/) 应该也适用。
 
 
 ## <a name="summary"></a>摘要

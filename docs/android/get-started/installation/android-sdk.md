@@ -7,12 +7,12 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/24/2018
-ms.openlocfilehash: 66ed0965f1ed01be129f22996e50bdea89a95287
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 585bcac193d6824bc7c96092c14e40fd7971b0e2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-sdk-setup"></a>Android SDK 安装
 
@@ -30,7 +30,7 @@ _Visual Studio 包含一个取代 Google 的独立 SDK 管理器的 Android SDK 
 本指南说明如何安装和使用用于 Visual Studio for Mac（或[适用于 Windows](?tabs=vswin)）的 Xamarin Android SDK 管理器。
 
 > [!NOTE]
-> 注意：本指南仅适用于 Visual Studio 2017 和 Visual Studio for Mac。  
+> 本指南仅适用于 Visual Studio 2017 和 Visual Studio for Mac。  
 
 -----
 
@@ -38,8 +38,6 @@ Xamarin Android SDK 管理器可帮助你下载开发 Xamarin.Android 应用所�
 它取代了已被弃用的 Google 的独立 SDK 管理器。
 
 为什么要使用 Xamarin Android SDK 管理器，而不使用 Android SDK 中包含的 SDK 管理器？ 在 Android SDK Tools 包的 25.2.3 版本中，Google 引入了一个新的工具来维护 Android SDK。 此新工具 **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)** 是一个命令行实用工具，取代了用于 Android SDK 的独立 UI 管理器。 因此，如果更新到 SDK Tools 版本 26.0.1（Android 8.0 所需）或更高版本，并且想继续通过 UI 接口管理 Android SDK，则必须使用 Xamarin Android SDK 管理器。
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>惠?
 
@@ -64,10 +62,8 @@ Xamarin Android SDK 管理器还需要 Java 开发工具包（此工具包自动
 Xamarin.Android 使用[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，这是在为 API 级别 24 或更高级别进行开发时所必需的（JDK 8 还支持低于 24 的 API 级别）。 如果专门为 API 级别 23 或更低级别进行开发，可以继续使用 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)。
 
 > [!IMPORTANT]
-> 注意：Xamarin.Android 不支持 JDK 9。
+> Xamarin.Android 不支持 JDK 9。
 
-
-<a name="installation" />
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -86,7 +82,6 @@ Xamarin.Android 使用[JDK 8](http://www.oracle.com/technetwork/java/javase/down
  
 -----
 
-<a name="sdk-manager" /> 
  
 ## <a name="sdk-manager"></a>SDK 管理器 
 
@@ -94,11 +89,11 @@ Xamarin.Android 使用[JDK 8](http://www.oracle.com/technetwork/java/javase/down
 
 若要在 Visual Studio 中启动 SDK 管理器，请单击“工具”>“Android”>“Android SDK 管理器”：
 
-[![“Android SDK 管理器”菜单项的位置](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png)
+[![“Android SDK 管理器”菜单项的位置](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 “Xamarin Android SDK 管理器”会在“Android SDK 和工具”屏幕中打开。 此屏幕上有两个选项卡 &ndash;“平台”和“工具”：
 
-[![“平台”选项卡中打开的 Android SDK 管理器的屏幕截图](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png)
+[![“平台”选项卡中打开的 Android SDK 管理器的屏幕截图](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 下面的部分将对“Android SDK 和工具”屏幕进行更详细的介绍。
 
@@ -117,7 +112,6 @@ Xamarin.Android 使用[JDK 8](http://www.oracle.com/technetwork/java/javase/down
 -----
 
 
-<a name="sdkmanager-locations" /> 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -151,7 +145,6 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 -----
 
-<a name="sdkmanager-tools" /> 
 
 ### <a name="tools-tab"></a>“工具”选项卡
 
@@ -162,7 +155,7 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 例如，若要下载 Google Android Emulator 包，请单击“Android Emulator”旁的复选标记，然后单击“应用更改”按钮：
 
-[![从“工具”选项卡中安装 Android Emulator](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png)
+[![从“工具”选项卡中安装 Android Emulator](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -188,7 +181,6 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 如果接受这些条款和条件，请单击“接受”。 在窗口底部，有一个进度栏会指示下载和安装进度。 安装完成后，“工具”选项卡将显示已安装所选的工具和附加程序。
 
 
-<a name="xvs-platforms" /> 
 
 ### <a name="platforms-tab"></a>“平台”选项卡
 
@@ -196,7 +188,7 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![“平台”窗格的屏幕截图](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png)
+[![“平台”窗格的屏幕截图](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -224,7 +216,7 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![将 Android 7.1 Nougat 组件添加到 Android SDK 的示例](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png)
+[![将 Android 7.1 Nougat 组件添加到 Android SDK 的示例](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -236,7 +228,7 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![添加某些 Android 7.1 组件的示例](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png)
+[![添加某些 Android 7.1 组件的示例](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -270,7 +262,6 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 现在可以针对最新、最高的 Android API 级别开发你的应用了！
 
 
-<a name="summary" />
  
 ## <a name="summary"></a>摘要
 

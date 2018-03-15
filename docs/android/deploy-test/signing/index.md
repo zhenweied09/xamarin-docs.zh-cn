@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/26/2018
-ms.openlocfilehash: 20a28d475e58a58a98abe21203e9841b7824fe48
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 56d6eea891de3aef8efbe1a971ce3af96ffd8fab
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="signing-the-android-application-package"></a>对 Android 应用程序包进行签名
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/27/2018
 
 在[存档以便进行发布](~/android/deploy-test/release-prep/index.md#archive)中，“分发渠道”对话框提供了两种分发选择。 选择“即席”：
 
-[![“分发通道”对话框](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png)
+[![“分发通道”对话框](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/27/2018
 
 在[存档以便进行发布](~/android/deploy-test/release-prep/index.md#archive)中，“签名和分发...”对话框向我们提供了两种分发选择。 选择“即席”，然后单击“下一步”：
 
-[![“签名和分发”对话框](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png)
+[![“签名和分发”对话框](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -46,15 +46,15 @@ ms.lasthandoff: 02/27/2018
 
 可以通过单击“导入”按钮，然后前进到[对 APK 进行签名](#signapkvs)，来使用现有证书。 否则，单击“+”按钮创建新证书：
 
-[![临时签名标识](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png)
+[![临时签名标识](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 会显示“创建 Android 密钥存储”对话框；使用此对话框可创建可以用于对 Android 应用程序进行签名的新签名证书。 输入所需信息（具有红色边框），如此对话框中所示：
 
-[![“创建 Android 密钥存储”对话框](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png)
+[![“创建 Android 密钥存储”对话框](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
 下面的示例说明必须提供的信息的种类。 单击“创建”以创建新证书：
 
-[![创建新的证书](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png)
+[![创建新的证书](images/vs/04-key-store-example-vs-sml.png)](images/vs/04-key-store-example-vs.png#lightbox)
 
 生成的密钥存储位于以下位置：
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/27/2018
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> 注意：请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Windows）丢失，将无法使用与以前版本相同的证书对应用签名。
+> 请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Windows）丢失，将无法使用与以前版本相同的证书对应用签名。
 
 有关密钥存储的详细信息，请参阅[查找密钥存储的 MD5 或 SHA1 签名](~/android/deploy-test/signing/keystore-signature.md)。
 
@@ -73,11 +73,11 @@ ms.lasthandoff: 02/27/2018
 
 单击“即席”之后，Visual Studio for Mac 会打开“Android 签名标识”对话框，如下一个屏幕截图所示。 若要发布 .APK，必须首先使用签名密钥（也称为证书）对它进行签名。 如果证书已存在，则单击“导入现有密钥”按钮以导入它，然后前进到[对 APK 进行签名](#signapkxs)。否则，单击“创建新密钥”按钮以创建新证书： 
 
-[![“Android 签名标识”对话框](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png)
+[![“Android 签名标识”对话框](images/xs/02-android-signing-identity-sml.png)](images/xs/02-android-signing-identity.png#lightbox)
 
 “创建新证书”对话框用于创建可以用于对 Android 应用程序进行签名的新签名证书。 输入所需信息之后，单击“确定”：
 
-[![“新建证书”对话框](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png)
+[![“新建证书”对话框](images/xs/03-create-new-certificate-sml.png)](images/xs/03-create-new-certificate.png#lightbox)
 
 生成的密钥存储位于以下位置：
 
@@ -89,14 +89,13 @@ ms.lasthandoff: 02/27/2018
 
 
 > [!NOTE]
-> 注意：请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Mac）丢失，将无法使用与以前版本相同的证书对应用签名。
+> 请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Mac）丢失，将无法使用与以前版本相同的证书对应用签名。
 
 有关密钥存储的详细信息，请参阅[查找密钥存储的 MD5 或 SHA1 签名](~/android/deploy-test/signing/keystore-signature.md)。
 
 -----
 
 <a name="signapkvs" />
-<a name="signingxs" />
 
 ## <a name="sign-the-apk"></a>对 APK 进行签名
 
@@ -105,24 +104,24 @@ ms.lasthandoff: 02/27/2018
 单击“创建”时，新密钥存储（包含新证书）会进行保存并在“签名标识”下列出，如下一个屏幕截图所示。 若要在 Google Play 上发布应用，请单击“取消”并转至[发布到 Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)。
 若要即席发布，请选择要用于签名的签名标识并单击“另存为”以发布应用以用于独立分发。 例如，在此屏幕截图中选择了 **chimp** 签名标识（在前面创建）：
 
-[![签名标识示例](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png)
+[![签名标识示例](images/vs/05-save-as-vs-sml.png)](images/vs/05-save-as-vs.png#lightbox)
 
 接下来，**存档管理器**会显示发布进度。 发布过程完成时，“另存为”对话框会打开，要求提供要在其中存储生成的 .APK 文件的位置：
 
-[![“另存为”对话框](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png)
+[![“另存为”对话框](images/vs/06-save-as-dialog-vs-sml.png)](images/vs/06-save-as-dialog-vs.png#lightbox)
 
 导航到所需位置并单击“保存”。 如果密钥密码未知，则“签名密码”对话框会出现，提示输入所选证书的密码：
 
-[![“签名密码”对话框](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png)
+[![“签名密码”对话框](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
 签名过程完成之后，单击“打开文件夹”：
 
-[![“打开文件夹”按钮](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png)
+[![“打开文件夹”按钮](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
 
 这会使 Windows 资源管理器打开包含生成的 APK 文件的文件夹。 此时，Visual Studio 已将 Xamarin.Android 应用程序编译为准备好进行分发的 APK。
 下面的屏幕截图显示准备好进行发布的应用 (**MyApp.MyApp.apk**) 的示例：
 
-[![Windows 资源管理器中显示的 APK](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png)
+[![Windows 资源管理器中显示的 APK](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -130,11 +129,11 @@ ms.lasthandoff: 02/27/2018
 如此处所示，一个新证书已添加到密钥存储中。 若要在 Google Play 上发布应用，请单击“取消”并转至[发布到 Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)。
 否则，单击“下一步”以即席发布应用（对于独立分发），如此示例所示：
 
-[![“签名和分发”对话框](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png)
+[![“签名和分发”对话框](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 “即席发布”对话框会在发布之前提供已签名应用的摘要。 如果此信息正确，则单击“发布”。
 
-[![“临时发布”对话框](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png)
+[![“临时发布”对话框](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
 “输出 APK 文件”对话框会将 APK 保存到指定路径。 单击“保存” 。
 
@@ -146,18 +145,17 @@ ms.lasthandoff: 02/27/2018
 
 APK 会使用证书进行签名并保存到指定位置。 单击“在查找器中展现”：
 
-[![“发布成功”对话框](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png)
+[![“发布成功”对话框](images/xs/08-app-is-ready-sml.png)](images/xs/08-app-is-ready.png#lightbox)
 
 这会将查找器打开到已签名 APK 文件的位置：
 
-[![查找器中显示的 APK](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png)
+[![查找器中显示的 APK](images/xs/09-show-in-finder-sml.png)](images/xs/09-show-in-finder.png#lightbox)
 
 APK 已准备好从查找器进行复制并发送到其最终目标。 最好在分发之前将 APK 安装在 Android 设备上并进行试用。 有关发布“临时”APK 的详细信息，请参阅[独立发布](~/android/deploy-test/publishing/publishing-independently.md)。
 
 -----
 
 
-<a name="nextsteps" />
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: e19949c3a2efa4a5ddb17393d58c4430662254eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-store-distribution"></a>App Store 分发
 
@@ -48,13 +48,13 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 3. 单击“+”按钮创建新证书。
 4. 在“生产”标题下，选择“App Store 和临时”：
 
-    [ ![](images/createcertmanually01.png "选择“App Store”和“临时”")](images/createcertmanually01.png)
+    [![](images/createcertmanually01.png "选择“App Store”和“临时”")](images/createcertmanually01.png#lightbox)
 5. 单击“继续”，再按照说明操作，通过密钥链访问创建证书签名请求：
 
-    [ ![](images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](images/createcertmanually02.png)
+    [![](images/createcertmanually02.png "通过 Keychain Access 创建证书签名请求")](images/createcertmanually02.png#lightbox)
 6. 在按照指示创建 CSR 后，单击“继续”，再将 CSR 上传到 Member Center：
 
-    [ ![](images/createcertmanually03.png "将 CSR 上传到 Member Center")](images/createcertmanually03.png)
+    [![](images/createcertmanually03.png "将 CSR 上传到 Member Center")](images/createcertmanually03.png#lightbox)
 
 7. 单击“生成”创建证书。
 8. 最后，**下载**完成的证书，双击该文件进行安装。
@@ -62,11 +62,11 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 
 或者，可通过 Xcode 中的”首选项”对话框请求证书。 为此，请执行以下步骤：
 
-1.   选择团队，然后单击“管理证书...”：[![](images/selectteam.png "选择团队并查看详细信息")](images/selectteam.png)
+1.   选择团队，然后单击“管理证书...”：[![](images/selectteam.png "选择团队并查看详细信息")](images/selectteam.png#lightbox)
 
-2.   然后，单击“iOS 分发证书”旁的“创建”按钮：[![](images/selectcert.png "创建 iOS 分发证书")](images/selectcert.png)
+2.   然后，单击“iOS 分发证书”旁的“创建”按钮：[![](images/selectcert.png "创建 iOS 分发证书")](images/selectcert.png#lightbox)
 
-3.   系统将根据你的团队特权生成签名标识（如下所示），或者可能需要等待团队代理或管理员批准：[![](images/generated.png "将生成签名标识和并显示对话框")](images/generated.png)
+3.   系统将根据你的团队特权生成签名标识（如下所示），或者可能需要等待团队代理或管理员批准：[![](images/generated.png "将生成签名标识并显示对话框")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -95,27 +95,27 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 
 1. 返回 Apple 预配门户，选择“预配” > “分发”：
 
-    [ ![](images/distribute01.png "选择“预配”>“分发”")](images/distribute01.png)
+    [![](images/distribute01.png "选择“预配”>“分发”")](images/distribute01.png#lightbox)
 
 2. 单击“+”按钮，选择要创建为“App Store”的分发配置文件的类型：
 
-    [ ![](images/distribute02.png "创建“App Store”分发配置文件")](images/distribute02.png)
+    [![](images/distribute02.png "创建“App Store”分发配置文件")](images/distribute02.png#lightbox)
 
 3. 单击“继续”按钮，然后在下拉列表中选择要为其创建分发配置文件的应用程序 ID：
 
-    [ ![](images/distribute03.png "从下拉列表中选择应用 ID")](images/distribute03.png)
+    [![](images/distribute03.png "从下拉列表选择“App ID”")](images/distribute03.png#lightbox)
 
 4. 单击“继续”按钮，再选择对应用进行签名所需的证书：
 
-    [ ![](images/distribute04.png "选择签名应用程序所需的证书")](images/distribute04.png)
+    [![](images/distribute04.png "选择签名应用程序所需的证书")](images/distribute04.png#lightbox)
 
 5. 单击“继续”按钮，选择允许运行 Xamarin.iOS 应用的 .iOS 设备：
 
-    [ ![](images/distribute05.png "选择允许运行应用的 iOS 设备")](images/distribute05.png)
+    [![](images/distribute05.png "选择允许运行应用的 iOS 设备")](images/distribute05.png#lightbox)
 
 6. 单击“继续”按钮，为新的分发配置文件输入“名称”：
 
-    [ ![](images/distribute06.png "输入新分发配置文件的名称")](images/distribute06.png)
+    [![](images/distribute06.png "输入新的分发配置文件的名称")](images/distribute06.png#lightbox)
 
 7. 单击“生成”按钮，创建新的配置文件并完成该过程。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: fbf18bad2dbe227575f4d820a121eab6e91655a0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="connection-troubleshooting"></a>连接疑难解答
 
@@ -45,15 +45,15 @@ ms.lasthandoff: 02/27/2018
 
 2. 确保在 Mac 上启用“远程登录”。 为“仅这些用户”设置访问权限，并确保 Mac 用户包含在列表或组中：
 
-    [ ![](troubleshooting-images/troubleshooting-image1.png "为“仅这些用户”设置访问权限")](troubleshooting-images/troubleshooting-image1.png)
+    [![](troubleshooting-images/troubleshooting-image1.png "为“仅这些用户”设置访问权限")](troubleshooting-images/troubleshooting-image1.png#lightbox)
 
 3. 检查防火墙是否允许通过端口 22（用于 SSH 的默认端口）进行传入连接：
 
-    [ ![](troubleshooting-images/troubleshooting-image2.png "检查防火墙是否允许通过端口 22 的传入连接")](troubleshooting-images/troubleshooting-image2.png)
+    [![](troubleshooting-images/troubleshooting-image2.png "检查防火墙是否允许通过端口 22 的传入连接")](troubleshooting-images/troubleshooting-image2.png#lightbox)
 
     如果禁用了“自动允许已签名的软件接收传入连接”，则 OS X 会在配对过程中提供一个对话框，询问是否允许 `mono-sgen` 或 `mono-sgen32` 接收传入连接。 请务必在该对话框中单击“允许”：
 
-    [ ![](troubleshooting-images/troubleshooting-image4a.png "在此对话框上单击“允许”")](troubleshooting-images/troubleshooting-image4a.png)
+    [![](troubleshooting-images/troubleshooting-image4a.png "在此对话框上单击“允许”")](troubleshooting-images/troubleshooting-image4a.png#lightbox)
 
 4. 确认已登录到该 Mac 上的用户帐户，并且具有活动 GUI 会话。
 
@@ -63,12 +63,12 @@ ms.lasthandoff: 02/27/2018
 
     例如，在下面的屏幕截图中，帐户名称是“amyb”，而不是“Amy Burns”：
 
-    [ ![](troubleshooting-images/troubleshooting-image5a.png "从终端应用获取帐户名称")](troubleshooting-images/troubleshooting-image5a.png)
+    [![](troubleshooting-images/troubleshooting-image5a.png "从终端应用获取帐户名称")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
 
 
 6. 检查用于 Mac 的 IP 地址是否正确。 可以在 Mac 上依次转到“系统偏好设置”>“共享”>“远程登录”下，查找 IP 地址。
 
-    [ ![](troubleshooting-images/troubleshooting-image17.png "“系统首选项”应用中的 IP 地址")](troubleshooting-images/troubleshooting-image17.png)
+    [![](troubleshooting-images/troubleshooting-image17.png "“系统首选项”应用中的 IP 地址")](troubleshooting-images/troubleshooting-image17.png#lightbox)
 
 7. 确认了 Mac 的 IP 地址之后，尝试在 Windows 上的 `cmd.exe` 中对该地址执行 `ping` 操作：
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/27/2018
 
         ssh amyb@10.1.8.95
 
-<a name="stepnine">
+<a name="stepnine" />
 
 9. 如果**步骤 8 成功**，则可以尝试通过连接运行简单命令（如 `ls`）：
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 02/27/2018
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – 如果在“系统首选项”&gt;“用户”&amp;“组”中，Mac 用户的“高级选项”上下文菜单内的“登录 shell”设置为 **/bin/bash** 以外的值，则 Xamarin 4.1 上可能出现此问题。 （自 Xamarin 4.2 起，此方案转而会导致“无法连接”错误消息。）**解决方法**：将“登录 shell”更改回原始默认值 **/bin/bash**。
 
-<a name="tryagain">
+<a name="tryagain" />
 
 ### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>“无法连接到 MacBuildHost.local。 请重试。”
 
@@ -153,7 +153,7 @@ ms.lasthandoff: 02/27/2018
 
     1. 通过在终端命令提示中运行 `ls /etc/ssh/sshd_config` 和 `ls /etc/sshd_config` 来确认 **sshd\_config** 文件的位置。 对于所有其余步骤，请务必使用_不_ 返回“No such file or directory”的位置。
 
-        [ ![](troubleshooting-images/troubleshooting-image18.png "在终端中运行“ls /etc/ssh/sshd_config”和“ls /etc/sshd_config”")](troubleshooting-images/troubleshooting-image18.png)
+        [![](troubleshooting-images/troubleshooting-image18.png "在终端中运行“ls /etc/ssh/sshd_config”和“ls /etc/sshd_config”")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
     3. 在终端中运行 `cp /etc/ssh/sshd_config "$HOME/Desktop/"` 以将文件复制到桌面。
 
@@ -171,7 +171,7 @@ ms.lasthandoff: 02/27/2018
 
     9. 在“系统首选项”&gt;“共享”&gt;“远程登录”下禁用并重新启用“远程登录”以重新启动 SSH 服务器。
 
-<a name="clearing">
+<a name="clearing" />
 
 ### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>在 Mac 上清除代理、IDB、生成和设计器代理
 
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/27/2018
 
 2. 在按住 Control 的同时单击 **XMA** 文件夹并选择“移动到回收站”：
 
-    [ ![](troubleshooting-images/troubleshooting-image8.png "将 XMA 文件夹移至“回收站”")](troubleshooting-images/troubleshooting-image8.png)
+    [![](troubleshooting-images/troubleshooting-image8.png "将 XMA 文件夹移至“回收站”")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Windows 上有一个缓存，可帮助进行清除。 在 Windows 上以管理员身份打开命令提示符：
 
@@ -221,7 +221,7 @@ ms.lasthandoff: 02/27/2018
 2. 单击“显示输出来源”下拉菜单。
 3. 选择“Xamarin”。
 
-[ ![](troubleshooting-images/troubleshooting-image11.png "在“输出”选项卡中选择“Xamarin”")](troubleshooting-images/troubleshooting-image11.png)
+[![](troubleshooting-images/troubleshooting-image11.png "在“输出”选项卡中选择“Xamarin”")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
 ### <a name="log-files"></a>日志文件
 
@@ -236,18 +236,18 @@ ms.lasthandoff: 02/27/2018
 
 3. Visual Studio 遇到连接错误之后，会从“帮助”>“Xamarin”>“压缩日志”收集日志：
 
-    [ ![](troubleshooting-images/troubleshooting-image12.png "从“帮助”>“Xamarin”>“压缩日志”收集日志")](troubleshooting-images/troubleshooting-image12.png)
+    [![](troubleshooting-images/troubleshooting-image12.png "从“帮助”>“Xamarin”>“压缩日志”收集日志")](troubleshooting-images/troubleshooting-image12.png#lightbox)
 
 4. 打开 .zip 文件时，你会看到类似于以下示例的文件的列表。 对于连接错误，最重要的文件是 **\*Ide.log** 和 **\*Ide.svclog** 文件。 这两个文件以两种略有不同的格式包含相同消息。 **.svclog** 是 XML，在要浏览消息时非常有用。 **.log** 是纯文本，在你要使用命令行工具筛选消息时非常有用。
 
 
     若要浏览所有消息，请选择并打开 **.svclog** 文件：
 
-    [ ![](troubleshooting-images/troubleshooting-image13.png "选择 svclog 文件")](troubleshooting-images/troubleshooting-image13.png)
+    [![](troubleshooting-images/troubleshooting-image13.png "选择 svclog 文件")](troubleshooting-images/troubleshooting-image13.png#lightbox)
 
 5. **.svclog** 文件会在 **Microsoft Service Trace Viewer** 中打开。 可以按线程浏览消息以查看相关消息组。 若要按线程进行浏览，请首先选择“图表”选项卡，单击“布局模式”下拉菜单，然后选择“线程”：
 
-    [ ![](troubleshooting-images/troubleshooting-image14.png "单击“布局模式”下拉菜单并选择“线程”")](troubleshooting-images/troubleshooting-image14.png)
+    [![](troubleshooting-images/troubleshooting-image14.png "单击“布局模式”下拉菜单并选择“线程”")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
 <a name="verboselogs" />
 
@@ -307,7 +307,7 @@ error : Building from a network share path is not supported at the moment. Pleas
 
 在 Mac 上启动 Xcode，并确保你的 Apple 开发人员帐户已登录并且你的 iOS 开发配置文件已下载：
 
-[ ![](troubleshooting-images/troubleshooting-image7.png "确保登录 Apple 开发者帐户并且下载 iOS 开发配置文件")](troubleshooting-images/troubleshooting-image7.png)
+[![](troubleshooting-images/troubleshooting-image7.png "确保登录 Apple 开发者帐户并且下载 iOS 开发配置文件")](troubleshooting-images/troubleshooting-image7.png#lightbox)
 
 ### <a name="a-socket-operation-was-attempted-to-an-unreachable-network"></a>“向一个无法连接的网络尝试了一个套接字操作”
 
@@ -323,7 +323,7 @@ error : Building from a network share path is not supported at the moment. Pleas
 
 这会清除 Visual Studio MEF 组件缓存以修复与缓存损坏有关的问题。
 
-<a name="errors">
+<a name="errors" />
 
 ### <a name="errors-due-to-existing-build-host-processes-on-the-mac"></a>由于 Mac 上的现有生成主机进程而导致的错误
 
@@ -333,7 +333,7 @@ error : Building from a network share path is not supported at the moment. Pleas
 ps -A | grep mono
 ```
 
-[ ![](troubleshooting-images/troubleshooting-image10.png "在 Mac 上的终端中运行命令")](troubleshooting-images/troubleshooting-image10.png)
+[![](troubleshooting-images/troubleshooting-image10.png "在 Mac 上的终端中运行命令")](troubleshooting-images/troubleshooting-image10.png#lightbox)
 
 若要终止现有过程，请使用以下命令：
 
@@ -353,7 +353,7 @@ killall mono
 
 2. 在按住 Control 的同时单击 **mtbs** 文件夹并选择“移动到回收站”：
 
-    [ ![](troubleshooting-images/troubleshooting-image9.png "将 mtbs 文件夹移至“回收站”")](troubleshooting-images/troubleshooting-image9.png)
+    [![](troubleshooting-images/troubleshooting-image9.png "将 mtbs 文件夹移至“回收站”")](troubleshooting-images/troubleshooting-image9.png#lightbox)
 
 
 ## <a name="related-links"></a>相关链接

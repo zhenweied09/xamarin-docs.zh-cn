@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2995d9126617a767013ed1f5cb808f22ce0fd2da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89768d2562814091f0e5894c4af2edd67d68cb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="running-the-android-sdk-emulator"></a>运行 Android SDK 仿真器
 
@@ -32,13 +32,13 @@ Visual Studio 包含预配置虚拟设备，可以在“设备”下拉菜单中
 
 -   **VisualStudio\_android-23\_x86\_tablet** 
 
-[![虚拟设备](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png)
+[![虚拟设备](running-the-emulator-images/win/01-virtual-devices-sml.png)](running-the-emulator-images/win/01-virtual-devices.png#lightbox)
 
 通常都会选择使用“VisualStudio\_android-23\_x86\_phone”虚拟设备来测试和调试手机应用。 如果这些预配置虚拟设备中有一个能够满足需求（即与应用的目标 API 级别一致），请跳转到[启动仿真器](#launching)，开始在仿真器中运行应用。 （如果尚不熟悉 Android API 级别，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。）
 
 如果 Xamarin.Android 项目使用的目标框架级别与可用虚拟设备都不兼容，不可用的虚拟设备会在下拉菜单中的“不支持的设备”下列出。 例如，以下项目的目标框架设为“Android 7.1 Nougat (API 25)”，这与默认提供的“Android 6.0”虚拟设备不兼容：
 
-[![不兼容的虚拟设备](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png)
+[![不兼容的虚拟设备](running-the-emulator-images/win/02-incompatible-level-sml.png)](running-the-emulator-images/win/02-incompatible-level.png#lightbox)
 
 可以单击“更改最低 Android 目标”，更改项目的最低 Android 版本，使其与可用虚拟设备的 API 级别一致。 也可以使用“Android 仿真器管理器”，新建支持目标 API 级别的虚拟设备，如后面的[配置虚拟设备](#virtualdevice)中所述。 必须先安装新 API 级别对应的系统映像（下一部分将介绍具体操作方法），然后才能为虚拟设备配置此 API 级别。
 
@@ -50,7 +50,7 @@ Visual Studio for Mac 包含预配置虚拟设备，可在“设备”下拉菜�
 
 -   Android\_ARMv7a
 
-[![虚拟设备](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png)
+[![虚拟设备](running-the-emulator-images/mac/01-virtual-devices-sml.png)](running-the-emulator-images/mac/01-virtual-devices.png#lightbox)
 
 通常会选择使用“Android\_Accelerated\_x86”虚拟设备来测试和调试手机应用。 如果此预配置虚拟设备满足需求（即与应用的目标 API 级别一致），请跳转到[启动仿真器](#launching)，开始在仿真器中运行应用。 （如果尚不熟悉 Android API 级别，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。）
 
@@ -73,11 +73,11 @@ Visual Studio for Mac 包含预配置虚拟设备，可在“设备”下拉菜�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![“调试”和“发布”模式以及“播放”按钮](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png)
+[![“调试”和“发布”模式以及“播放”按钮](running-the-emulator-images/win/17-debug-release-sml.png)](running-the-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![“调试”和“发布”模式以及“播放”按钮](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png)
+[![“调试”和“发布”模式以及“播放”按钮](running-the-emulator-images/mac/16-debug-release-sml.png)](running-the-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 

@@ -6,23 +6,20 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 68ddb9baa008ec8222b4399a5ab25330fda2afd1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 51caebb86cb72b11ced70522fc253e608f5ccab0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="build-process"></a>生成过程
 
-<a name="Overview" />
 
 ## <a name="overview"></a>概述
 
 Xamarin.Android 生成过程负责将所有内容集合在一起：[生成 `Resource.designer.cs`](~/android/internals/api-design.md)，支持 `AndroidAsset`、`AndroidResource` 和其他[生成操作](#Build_Actions)，生成 [Android 可调用的包装器](~/android/platform/java-integration/android-callable-wrappers.md)，以及生成 `.apk` 以在 Android 设备上执行。
 
-<a name="App_Packaging" />
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>应用程序包
 
@@ -34,7 +31,6 @@ Xamarin.Android 生成过程负责将所有内容集合在一起：[生成 `Reso
 
 并非巧合的是，这些版本与生成程序包的 MSBuild `Configuration` 相匹配。
 
-<a name="Shared_Runtime" />
 
 ### <a name="shared-runtime"></a>共享运行时
 
@@ -53,7 +49,6 @@ Xamarin.Android 生成过程负责将所有内容集合在一起：[生成 `Reso
 快速部署在默认情况下处于启用状态，可以通过将 `$(EmbedAssembliesIntoApk)` 属性设置为 `True` 在调试版本中禁用。
 
 
-<a name="MSBuild_Projects" />
 
 ## <a name="msbuild-projects"></a>MSBuild 项目
 
@@ -81,7 +76,6 @@ Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和
 
 -   UpdateAndroidResources &ndash; 更新 `Resource.designer.cs` 文件。 将新的资源添加到项目中时，这个目标通常由 IDE 调用。
 
-<a name="Build_Properties" />
 
 ## <a name="build-properties"></a>生成属性
 
@@ -116,7 +110,6 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
-<a name="App_Packaging" />
 
 ### <a name="packaging-properties"></a>打包属性
 
@@ -146,7 +139,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     该属性默认为 `False`。
 
--   AndroidFastDeploymentType &ndash; `:`（冒号）分隔的值列表，[`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) MSBuild 属性为 `False` 时可用于控制部署到目标设备上的[快速部署目录](#Fast_Deployment)的类型。 如果资源是快速部署的，则不会嵌入到生成的 `.apk` 中，这样做可以加快部署时间。 （部署的速度越快，`.apk` 需要重建的频率越低，安装过程可能会更快。）有效值包括：
+-   AndroidFastDeploymentType &ndash; `:`（冒号）分隔的值列表，`$(EmbedAssembliesIntoApk)` MSBuild 属性为 `False` 时可用于控制部署到目标设备上的[快速部署目录](#Fast_Deployment)的类型。 如果资源是快速部署的，则不会嵌入到生成的 `.apk` 中，这样做可以加快部署时间。 （部署的速度越快，`.apk` 需要重建的频率越低，安装过程可能会更快。）有效值包括：
 
     - `Assemblies`：部署应用程序程序集。
 
@@ -158,7 +151,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidApplicationJavaClass &ndash; 类继承自 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/) 时，用于替代 `android.app.Application` 的完整 Java 类名称。
 
-    该属性通常由其他属性设置，例如 [`$(AndroidEnableMultiDex)`](#AndroidEnableMultiDex) MSBuild 属性。
+    该属性通常由其他属性设置，例如 `$(AndroidEnableMultiDex)` MSBuild 属性。
 
     已在 Xamarin.Android 6.1 中添加。
 
@@ -285,7 +278,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   MonoSymbolArchive &ndash; 一个布尔属性，用于控制是否创建 `.mSYM` 项目供以后与 `mono-symbolicate` 一起使用，从版本堆栈跟踪中提取真实&ldquo;&rdquo;文件名和行号信息。
 
-    对于已启用调试符号的&ldquo;发行&rdquo;应用，默认情况下为 True：[`$(EmbedAssembliesIntoApk)`](#EmbedAssembliesIntoApk) 为 True，`$(DebugSymbols)` 为 True 且 `$(Optimize)` 为 True。
+    对于已启用调试符号的&ldquo;发行&rdquo;应用，默认情况下为 True：`$(EmbedAssembliesIntoApk)` 为 True，`$(DebugSymbols)` 为 True 且 `$(Optimize)` 为 True。
 
     已在 Xamarin.Android 7.1 中添加。
 
@@ -312,13 +305,11 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     -   versionCode &ndash; 直接使用 `Properties\AndroidManifest.xml` 中的版本代码。
 
-    可以使用 [AndroidVersionCodeProperties](#AndroidVersionCodeProperties) 属性定义自定义项目。
+    你可以使用（下文中定义的）`AndroidVersionCodeProperties` 属性定义自定义项。
 
     已在 Xamarin.Android 7.2 中添加。
 
--   AndroidVersionCodeProperties &ndash; 一个字符串属性，它允许开发人员定义要与 [AndroidVersionCodePattern](#AndroidVersionCodePattern) 一起使用的自定义项。
-    它们采用 `key=value` 对的形式。 `value` 中的所有项都应是整数值。 例如：`screen=23;target=$(_SupportedApiLevel)`。
-    正如你所看到的，你可以使用字符串中现有或自定义的 MSBuild 属性。
+-   AndroidVersionCodeProperties &ndash; 一个字符串属性，它允许开发人员定义要与 `AndroidVersionCodePattern` 一起使用的自定义项。 它们采用 `key=value` 对的形式。 `value` 中的所有项都应是整数值。 例如：`screen=23;target=$(_SupportedApiLevel)`。 正如你所看到的，你可以使用字符串中现有或自定义的 MSBuild 属性。
 
     已在 Xamarin.Android 7.2 中添加。
 
@@ -365,8 +356,6 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     默认值将会在未来版本中更改。
 
 
-<a name="Resgen" />
-<a name="Resource_Properties" />
 
 ### <a name="resource-properties"></a>资源属性
 
@@ -385,7 +374,6 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     “实验”。 已在 Xamarin.Android 7.0 中添加。
 
 
-<a name="Signing" />
 <a name="Signing_Properties" />
 
 ### <a name="signing-properties"></a>签名属性
@@ -446,21 +434,16 @@ Enter key password for keystore.alias
 生成操作为 `AndroidEnvironment` 的文件用于[在过程启动期间初始化环境变量和系统属性](~/android/deploy-test/environment.md)。
 `AndroidEnvironment` 生成操作可能会应用于多个文件，并且它们将以特定顺序进行评估（因此，不要在多个文件中指定相同的环境变量或系统属性）。
 
-<a name="Java_Interop_Support" />
-<a name="AndroidJavaSource" />
 
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 生成操作为 `AndroidJavaSource` 的文件是 Java 源代码，将包含在最终的 Android 程序包中。
 
-<a name="AndroidJavaLibrary" />
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 生成操作为 `AndroidJavaLibrary` 的文件是 Java 归档（`.jar` 文件），它将包含在最终的 Android 程序包中。
 
-<a name="Resources" />
-<a name="AndroidResource" />
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -499,8 +482,6 @@ LogicalName &ndash; 显式指定资源路径。 允许使用 &ldquo;aliasing&rdq
 </ItemGroup>
 ```
 
-<a name="Native_Library_Support" />
-<a name="AndroidNativeLibrary" />
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -546,7 +527,6 @@ Abi &ndash; 指定本机库的 ABI。
 除非 `$(EnableProguard)` MSBuild 属性为 `True`，否则这些文件将被忽略。
 
 
-<a name="Target_Definitions" />
 
 ## <a name="target-definitions"></a>目标定义
 

@@ -31,7 +31,7 @@
 ## [平台功能](platform/index.md)
 ### [macOS Sierra 简介](platform/introduction-to-macos-sierra/index.md)
 #### [生成新式 macOS 应用](platform/introduction-to-macos-sierra/modern-cocoa-apps.md)
-#### [其他 iOS 10 框架更改](platform/introduction-to-macos-sierra/additional-framework-changes.md)
+#### [其他 macOS Sierra Framework 更改](platform/introduction-to-macos-sierra/additional-framework-changes.md)
 #### [疑难解答](platform/introduction-to-macos-sierra/troubleshooting.md)
 ### [绑定 Mac 库](platform/binding.md)
 ### [OpenTK 简介](platform/opentk.md)

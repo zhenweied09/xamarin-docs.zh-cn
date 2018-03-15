@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ee98e19ce59b8a61040941d9851b8fbf965c3b17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 Xamarin.Android 4.10 通过使用 `_Gdb` MSBuild 目标引入了对使用 `gdb` 的部分支持。 
 
 > [!NOTE]
-> 注意：`gdb` 支持要求安装 Android NDK。
+> `gdb` 支持要求安装 Android NDK。
 
 有三种使用 `gdb` 的方法：
 
@@ -59,7 +59,7 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 
 
 > [!NOTE]
-> 注意：`gdb-symbols` 目录的内容绑定到你部署到的 Android 目标，如果你更改目标，则不会自动替换。 （请注意这个 bug。）如果你更改 Android 目标设备，则需要手动删除此目录。
+> `gdb-symbols` 目录的内容绑定到你部署到的 Android 目标，如果你更改目标，则不会自动替换。 （请注意这个 bug。）如果你更改 Android 目标设备，则需要手动删除此目录。
 
 最后，复制生成的 `gdb` 命令并在你的 shell 中执行它：
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9ba8fc1a82e932c01b8a07b49d9ae11ad1ceb81c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 环境
 
@@ -42,7 +42,6 @@ Android 系统属性是针对目标设备上的所有进程而设置的。
 
 Xamarin.Android 支持 `XA_HTTP_CLIENT_HANDLER_TYPE` 变量，可通过 `adb shell setprop debug.mono.env` 或 `$(AndroidEnvironment)` 生成操作进行设置。
 
-<a name="XA_HTTP_CLIENT_HANDLER_TYPE" />
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
@@ -148,7 +147,7 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 ```
 
 > [!NOTE]
-> 注意：基础 Android 设备必须支持 TLS 1.2。
+> 基础 Android 设备必须支持 TLS 1.2。
 Android 5.0 及更高版本支持 TLS 1.2
 
 

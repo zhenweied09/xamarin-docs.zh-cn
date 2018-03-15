@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ca3afa892176a11c4688b4f4d8d34e59d1758585
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging"></a>调试
 
@@ -34,11 +34,11 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1.png "设置断点")](debugging-in-xamarin-ios-images/debugging1.png)
+[![](debugging-in-xamarin-ios-images/debugging1.png "设置断点")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging1a.png "设置断点")](debugging-in-xamarin-ios-images/debugging1a.png)
+[![](debugging-in-xamarin-ios-images/debugging1a.png "设置断点")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
 -----
 
@@ -46,13 +46,13 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/image0a.png "断点板")](debugging-in-xamarin-ios-images/image0a.png)
+[![](debugging-in-xamarin-ios-images/image0a.png "断点板")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  如果“Breakpoints pad”未自动显示，可以依次选择“视图”>“调试窗口”>“断点”调出它
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/image0.png "断点板")](debugging-in-xamarin-ios-images/image0.png)
+[![](debugging-in-xamarin-ios-images/image0.png "断点板")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  如果“Breakpoints pad”未自动显示，可以依次选择择“调试”>“窗口”>“断点”调出它
  
@@ -62,13 +62,13 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7.png "在模拟器上调试")](debugging-in-xamarin-ios-images/debugging7.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7a.png "在物理设备上调试")](debugging-in-xamarin-ios-images/debugging7a.png)
+[![](debugging-in-xamarin-ios-images/debugging7.png "在模拟器上调试")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "在物理设备上调试")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7c.png "在模拟器上调试")](debugging-in-xamarin-ios-images/debugging7c.png)
-[ ![](debugging-in-xamarin-ios-images/debugging7d.png "在物理设备上调试")](debugging-in-xamarin-ios-images/debugging7d.png)
+[![](debugging-in-xamarin-ios-images/debugging7c.png "在模拟器上调试")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "在物理设备上调试")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
@@ -77,11 +77,11 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7b.png "选择目标设备")](debugging-in-xamarin-ios-images/debugging7b.png)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "选择目标设备")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![](debugging-in-xamarin-ios-images/debugging7e.png "选择目标设备")](debugging-in-xamarin-ios-images/debugging7e.png)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "选择目标设备")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
@@ -91,11 +91,11 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 命中断点时，代码会以黄色突出显示：
 
-[ ![](debugging-in-xamarin-ios-images/image2.png "代码会以黄色突出显示")](debugging-in-xamarin-ios-images/image2.png)
+[![](debugging-in-xamarin-ios-images/image2.png "代码会以黄色突出显示")](debugging-in-xamarin-ios-images/image2.png#lightbox)
 
 此时，可使用调试工具（如检查对象的值）获取代码中所发生情况的相关详细信息：
 
-[ ![](debugging-in-xamarin-ios-images/image3.png "显示颜色值")](debugging-in-xamarin-ios-images/image3.png)
+[![](debugging-in-xamarin-ios-images/image3.png "显示颜色值")](debugging-in-xamarin-ios-images/image3.png#lightbox)
 
 ## <a name="conditional-breakpoints"></a>条件断点
 
@@ -108,26 +108,26 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 - 若要添加新的条件断点，请右键单击编辑器边缘（即要设置断点的代码行号左侧），再选择“新建断点”：
 
-    [ ![](debugging-in-xamarin-ios-images/image4.png "选择“新建断点”")](debugging-in-xamarin-ios-images/image4.png)
+    [![](debugging-in-xamarin-ios-images/image4.png "选择“新建断点”")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - 若要向现有断点添加条件，请右键单击该断点并选择“断点属性”，或如下图所示在“断点”面板中选择“属性”按钮：
 
-    [ ![](debugging-in-xamarin-ios-images/image5.png "断点板")](debugging-in-xamarin-ios-images/image5.png)
+    [![](debugging-in-xamarin-ios-images/image5.png "断点板")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 然后可输入想要断点发生的条件：
 
-[ ![](debugging-in-xamarin-ios-images/image6.png "输入断点发生的条件")](debugging-in-xamarin-ios-images/image6.png)
+[![](debugging-in-xamarin-ios-images/image6.png "输入断点发生的条件")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 若要在 Visual Studio 2015 中设置条件断点，请先[设置常规断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)。 右键单击断点，以显示其上下文菜单：
 
- [ ![](debugging-in-xamarin-ios-images/image4vs.png "断点上下文菜单")](debugging-in-xamarin-ios-images/image4vs.png)
+ [![](debugging-in-xamarin-ios-images/image4vs.png "断点上下文菜单")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
 选择“条件...”显示“断点设置”菜单：
 
- [ ![](debugging-in-xamarin-ios-images/image6vs.png "“断点设置”菜单")](debugging-in-xamarin-ios-images/image6vs.png)
+ [![](debugging-in-xamarin-ios-images/image6vs.png "“断点设置”菜单")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
 可在此处输入想要断点发生的条件
 
@@ -143,7 +143,7 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 在 Visual Studio for Mac 中，它们将显示如下：
 
- [ ![](debugging-in-xamarin-ios-images/image7.png "开发者可通过调试工具控制程序执行")](debugging-in-xamarin-ios-images/image7.png)
+ [![](debugging-in-xamarin-ios-images/image7.png "开发者可通过调试工具控制程序执行")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
 这些是：
 
@@ -156,7 +156,7 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 在 Visual Studio 中，它们如下所示：
 
-[ ![](debugging-in-xamarin-ios-images/image7vs.png "开发者可通过调试工具控制程序执行")](debugging-in-xamarin-ios-images/image7vs.png)
+[![](debugging-in-xamarin-ios-images/image7vs.png "开发者可通过调试工具控制程序执行")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
 这些是：
 
@@ -224,13 +224,13 @@ Xamarin.iOS 随附用于 Mono 类库的源代码，可使用此代码在调试�
 
 若要启用此功能，请确保在“Visual Studio for Mac”>“首选项”>“调试程序”菜单下已取消选择“仅调试项目代码；不单步执行框架代码”选项，如下图所示：
 
-[ ![](debugging-in-xamarin-ios-images/debugging6.png "调试 Mono 的类库")](debugging-in-xamarin-ios-images/debugging6.png)
+[![](debugging-in-xamarin-ios-images/debugging6.png "调试 Mono 的类库")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 若要在 Visual Studio 中调试类库，必须在“调试”>“选项”菜单下禁用“仅我的代码”。 在“调试”>“常规”节点中，取消选中“启用‘仅我的代码’”复选框：
 
-[ ![](debugging-in-xamarin-ios-images/debugging6vs.png "调试 Mono 的类库")](debugging-in-xamarin-ios-images/debugging6vs.png)
+[![](debugging-in-xamarin-ios-images/debugging6vs.png "调试 Mono 的类库")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

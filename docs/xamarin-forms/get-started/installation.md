@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/19/2017
-ms.openlocfilehash: 2eaf4c6180b51a827d8182d87ee2db0fd1726c8d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fd6214f34c313db0d7a59291b73c5b29a9cc3592
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 要求
 
@@ -86,29 +86,18 @@ _Xamarin.Forms 平台和开发系统要求。_
 
 ## <a name="windows-system-requirements"></a>Windows 系统要求
 
-任何支持 Xamarin 开发的 Windows 安装上都可生成适用于 iOS 和 Android 的 Xamarin.Forms 应用。 这要求 Visual Studio 2013 Update 2 或更高版本在 Windows 7 或更高版本上运行。 iOS 开发需要使用联网的 Mac。
-
-以下类型的 Windows 应用还有其他要求：
+任何支持 Xamarin 开发的 Windows 安装上都可生成适用于 iOS 和 Android 的 Xamarin.Forms 应用。 这要求 Visual Studio 2015 或更高版本在 Windows 7 或更高版本上运行。 iOS 开发需要使用联网的 Mac。
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
 为 UWP 开发 Xamarin.Forms 应用需要：
 
-* Windows 10
+* Windows 10（建议使用 Fall Creators Update）
 
-* Visual Studio 2015 或更高版本
+* 建议使用 Visual Studio 2017
 
-* [通用 Windows 开发人员工具](https://dev.windows.com/downloads/windows-10-sdk)
+* [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
 UWP 项目包含在 Visual Studio 2015 和 Visual Studio 2017 中所创建的 Xamarin.Forms 解决方案中。
 还可以在现有的 Xamarin.Forms 解决方案中[添加通用 Windows 平台 (UWP) 应用](~/xamarin-forms/platform/windows/installation/universal.md)。
 
-
-
-### <a name="windows-81-and-windows-phone-81-winrt"></a>Windows 8.1 和 Windows Phone 8.1 WinRT
-
-为 Windows 8.1 和 Windows Phone 8.1 WinRT 开发 Xamarin.Forms 应用需要：
-
-* Windows 8.1
-
-* Visual Studio 2013 Update 2 或更高版本

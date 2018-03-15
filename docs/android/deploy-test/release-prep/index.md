@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f36a29b00e0393ac0a2d65e7ebe7d290bbdb89a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="preparing-an-application-for-release"></a>做好应用程序发布准备
 
-<a name="Compile_the_Application_for_Release" />
 
 应用程序经编码和测试后，必须准备一个包进行分发。 准备此包的第一个任务是生成供发布的应用程序，其中主要涉及到设置应用程序的一些属性。
 
@@ -53,13 +52,13 @@ ms.lasthandoff: 02/27/2018
 
 在 Visual Studio 2015 及更高版本中，可通过项目“属性”的“Android 清单”部分指定应用程序图标，如以下屏幕截图所示：
 
-[![设置应用程序图标](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png)
+[![设置应用程序图标](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 在 Visual Studio for Mac 中，还可通过“项目选项”的“Android 应用程序”部分指定应用程序图标，如下面的屏幕截图所示：
 
-[![设置应用程序图标](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png)
+[![设置应用程序图标](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
 
@@ -77,13 +76,13 @@ ms.lasthandoff: 02/27/2018
 
 在 Visual Studio 中，可在项目“属性”的“Android 清单”部分设置这些值，如以下屏幕截图所示：
 
-[![设置版本号](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png)
+[![设置版本号](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 可通过“项目选项”的“生成”>“Android 应用程序”部分设置这些值，如以下屏幕截图所示：
 
-[![设置版本号](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png)
+[![设置版本号](images/xs/02-versioning-sml.png)](images/xs/02-versioning.png#lightbox)
 
 -----
 
@@ -93,7 +92,6 @@ ms.lasthandoff: 02/27/2018
 
 可通过结合使用 Xamarin.Android 链接器（删除不必要的托管代码）和 Android SDK 中的 ProGuard 工具（删除未使用的 Java 字节码）缩小 Xamarin.Android APK。 生成过程首先使用 Xamarin.Android 链接器以托管代码 (C#) 级别优化应用，然后使用 ProGuard（如已启用）以 Java 字节码级别优化 APK。
 
-<a name="Configure_the_Linker" />
 
 ### <a name="configure-the-linker"></a>配置链接器
 
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/27/2018
 
 通过项目“属性”的“Android 选项”部分设置链接器选项：
 
-[![链接器选项](images/vs/03-linking-sml.png)](images/vs/03-linking.png)
+[![链接器选项](images/vs/03-linking-sml.png)](images/vs/03-linking.png#lightbox)
 
 “链接”下拉菜单提供以下选项，用于控制链接器：
 
@@ -122,7 +120,7 @@ ms.lasthandoff: 02/27/2018
 
 通过“项目选项”的“Android 生成”部分中的“链接器”选项卡设置链接器选项，如以下屏幕截图所示：
 
-[![链接器选项](images/xs/03-linking-sml.png)](images/xs/03-linking.png)
+[![链接器选项](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
 控制链接器的选项如下所示：
 
@@ -136,7 +134,6 @@ ms.lasthandoff: 02/27/2018
 
 链接可能产生一些意外的副作用，因此必须在物理设备上的发布模式下重新测试应用程序。
 
-<a name="proguard" />
 
 ### <a name="proguard"></a>ProGuard
 
@@ -148,11 +145,11 @@ ProGuard 不是 Xamarin.Android 链接器的替代工具。 Xamarin.Android 链�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![ProGuard 生成操作](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png)
+[![ProGuard 生成操作](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-[![ProGuard 生成操作](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png)
+[![ProGuard 生成操作](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
 -----
 
@@ -228,7 +225,6 @@ Dotfuscator CE 随附在 Visual Studio 中，但是仅 Visual Studio 2015 Update
 
 “AOT 编译”选项要求使用 Enterprise 或更高版本的许可证。 仅在项目配置为发布模式时，才可使用“AOT 编译”，并且该选项默认处于禁用状态。 有关 AOT 编译的详细信息，请参阅 [AOT](http://www.mono-project.com/docs/advanced/aot/)。
 
-<a name="llvm" />
 
 #### <a name="llvm-optimizing-compiler"></a>LLVM 优化编译器
 
@@ -246,31 +242,28 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 可在项目“属性”的“Android 选项”部分设置打包属性，如以下屏幕截图所示：
 
-[![打包属性](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png)
+[![打包属性](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 可在“项目选项”中设置打包属性，如下面的屏幕截图所示：
 
-[![打包属性](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png)
+[![打包属性](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
 其中许多属性（例如“使用共享运行时”和“使用快速部署”）专用于调试模式。 但是，在发布模式下配置应用程序时，还需要进行其他设置，这些设置用于确定如何[针对大小和执行速度优化应用](#shrink_apk)、如何[防止篡改应用](#protect_app)，以及如何打包应用以支持不同的体系结构和大小限制。
 
-<a name="Specify_Supported_Architectures" />
 
 ### <a name="specify-supported-architectures"></a>指定支持的体系结构
 
 准备 Xamarin.Android 应用进行发布时，必须指定支持的 CPU 体系结构。 单个 APK 可包含计算机代码，以支持多个不同的体系结构。 请参阅 [CPU 体系结构](~/android/app-fundamentals/cpu-architectures.md)，深入了解如何支持多个 CPU 体系结构。
 
-<a name="multiabi" />
 
 ### <a name="generate-one-package-apk-per-selected-abi"></a>每个选定 ABI 生成一个包 (.APK)
 
 启用此选项后，会为每个支持的 ABI（在“高级”选项卡上进行选择，如 [CPU 体系结构](~/android/app-fundamentals/cpu-architectures.md)中所述）分别创建一个 APK，而不是为所有支持的 ABI 创建单个大型 APK。 仅在项目配置为用于发布模式时，才可使用此选项，并且其默认处于禁用状态。
 
-<a name="multidex" />
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -305,30 +298,30 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 若要开始发布过程，请在**解决方案资源管理器**中右键单击项目，然后选择“存档...”上下文菜单项：
 
-[![存档应用](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png)
+[![存档应用](images/vs/07-archive-for-publishing-sml.png)](images/vs/07-archive-for-publishing.png#lightbox)
 
 选择“存档...”选项将启动**存档管理器**并开始应用程序包的存档过程，如以下屏幕截图所示：
 
-[![存档管理器](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png)
+[![存档管理器](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 另一种创建存档的方法是：在**解决方案资源管理器**中，右键单击“解决方案”，然后选择“全部存档...”，这会生成解决方案并存档可生成存档的所有 Xamarin 项目：
 
-[![全部存档](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png)
+[![全部存档](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
 
 “存档”和“全部存档”均会自动启动**存档管理器**。 若要直接启动**存档管理器**，请单击“工具”>“存档管理器...”菜单项：
 
-[![启动存档管理器](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png)
+[![启动存档管理器](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 右键单击“解决方案”节点并选择“查看存档”可随时查看该解决方案的存档：
 
-[![查看存档](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png)
+[![查看存档](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png#lightbox)
 
 ### <a name="the-archive-manager"></a>存档管理器
 
 **存档管理器**由“解决方案列表”窗格、“存档列表”和“详细信息面板”组成：
 
-[![“存档管理器”窗格](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png)
+[![“存档管理器”窗格](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 “解决方案列表”将显示所有解决方案，其中至少有一个项目已存档。 “解决方案列表”包括以下各部分：
 
@@ -348,11 +341,11 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 准备好发布存档版应用程序后，请在“存档管理器”中选择该存档，然后单击“分发...”按钮：
 
-[![“分发”按钮](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png)
+[![“分发”按钮](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
 “分发通道”对话框包括以下方面的信息：应用、分发工作流进度指示以及分发渠道选项。 首次运行时，提供两个选项：
 
-[![选择分发通道](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png)
+[![选择分发通道](images/vs/14-distribution-channel-sml.png)](images/vs/14-distribution-channel.png#lightbox)
 
 可选择以下分发通道之一：
 
@@ -364,15 +357,15 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 若要开始发布过程，请选择“生成”>“存档以供发布”：
 
-[![存档以供发布](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png)
+[![存档以供发布](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
 “存档以供发布”选项可生成项目，并将其捆绑到存档文件中。 “全部存档”菜单选项可存档解决方案中的所有可存档项目。 生成和捆绑操作完成后，这两个选项会自动打开“存档管理器”：
 
-[![“存档”视图](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png)
+[![“存档”视图](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
 在此示例中，**存档管理器**仅列出一个已存档应用程序，即 **MyApp**。 请注意，注释字段允许一条简短注释随存档文件一起保存。 若要发布存档版的 Xamarin.Android 应用程序，请在“存档管理器”中选择该应用，然后单击“签名和分发”（如上所示）。 出现的“签名和分发”对话框提供两个选择：
 
-[![签名和分发](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png)
+[![签名和分发](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
 
 可从此处选择分发渠道：

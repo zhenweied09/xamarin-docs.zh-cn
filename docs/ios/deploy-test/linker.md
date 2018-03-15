@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: c4ad69890b7f50478e44d59cd37e7b6ac96a87ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee5da1b2c5d4c8fbf405c7f28ed280a3286a025
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="linking-on-ios"></a>在 iOS 上链接
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/27/2018
 
 可以通过“项目选项”中的链接器行为下拉菜单自定义链接过程。 若要访问此下拉菜单，请双击 iOS 项目，并浏览至“iOS 生成”>“链接器选项”，如下所示：
 
-[ ![](linker-images/image1.png "链接器选项")](linker-images/image1.png)
+[![](linker-images/image1.png "链接器选项")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 84db17ede0019e1134b65edaca85ef2401fb3bc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>发布到 App Store
 
@@ -133,7 +133,7 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 4. 链接可通过去除无用的方法、属性、类等，减少应用程序的可分发文件的总大小，在大多数情况下，应保留为默认值“仅链接 SDK 程序集”。 在某些情况下，例如使用某些特定的第三方库时，可能会强制你将此值设置为“不链接”，以防止所需的元素被删除。 有关详细信息，请参阅 [iOS 生成机制](~/ios/deploy-test/ios-build-mechanics.md)指南。
 5. 应选中“优化适用于 iOS 的 PNG 图像文件”复选框，因为这有助于进一步减少应用程序的可交付文件大小。
 6. _不_应启用调试，因为这将使生成增加不必要的大小。
-8. 对于 iOS 11，你将需要选择一个支持 ARM64 的设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64.md)文档中的**启用 Xamarin.iOS 应用的 64 位生成**部分。
+8. 对于 iOS 11，你将需要选择一个支持 ARM64 的设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md)文档中的**启用 Xamarin.iOS 应用的 64 位生成**部分。
 9. 也可选择使用 **LLVM** 编译器，它可创建更小更快的代码，但这需要更长的编译时间。
 10. 根据应用程序的需要，可能需要调整使用的**垃圾回收**的类型以及**国际化**的设置。
 11. 保存对生成配置所做的更改。
@@ -157,7 +157,7 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 
     ![](publishing-to-the-app-store-images/configurevs02.png "“高级”选项卡")
 
-8. 如果 Xamarin.iOS 应用程序面向 iOS 8 和 64 位 iOS 设备，需要选择支持 **ARM64** 的一种设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64.md)文档中的**启用 Xamarin.iOS 应用的 64 位生成**部分。
+8. 如果 Xamarin.iOS 应用程序面向 iOS 8 和 64 位 iOS 设备，需要选择支持 **ARM64** 的一种设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md)文档中的**启用 Xamarin.iOS 应用的 64 位生成**部分。
 9. 也可选择使用 **LLVM** 编译器，它可创建更小更快的代码，但这需要更长的编译时间。
 10. 根据应用程序的需要，可能需要调整使用的**垃圾回收**的类型以及**国际化**的设置。
 11. 保存对生成配置所做的更改。
@@ -351,16 +351,16 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 
 1. 选择“提交应用”，单击“选择”按钮：
 
-    [ ![](publishing-to-the-app-store-images/publishvs01.png "选择“提交应用”")](publishing-to-the-app-store-images/publishvs01.png)
+    [![](publishing-to-the-app-store-images/publishvs01.png "选择“提交应用”")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. 选择前面创建的 zip 或 IPA 文件，单击“确定”按钮。
 
 3. 应用加载程序将验证文件：
 
-    [ ![](publishing-to-the-app-store-images/publishvs02.png "“验证”屏幕")](publishing-to-the-app-store-images/publishvs02.png)
+    [![](publishing-to-the-app-store-images/publishvs02.png "“验证”屏幕")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. 单击“下一步”按钮，将按照 App Store 的要求验证应用：
 
-    [ ![](publishing-to-the-app-store-images/publishvs03.png "对 App Store 进行验证")](publishing-to-the-app-store-images/publishvs03.png)
+    [![](publishing-to-the-app-store-images/publishvs03.png "对 App Store 进行验证")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. 单击“发送”按钮，将应用程序发送到 Apple 以供审核。
 6. 文件成功上传后，应用程序加载程序将通知你。
 
@@ -368,7 +368,7 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 
 如果重新登录到 iTunes Connect，并从可用应用列表中选择你的应用程序，iTunes Connect 中的状态应显示为“等待审核”（处理过程中，可能暂时显示为“收到上传”）：
 
-[ ![](publishing-to-the-app-store-images/image21.png "现在 iTunes Connect 中的状态应显示为“等待审核”")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "现在 iTunes Connect 中的状态应显示为“等待审核”")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## <a name="summary"></a>摘要
 

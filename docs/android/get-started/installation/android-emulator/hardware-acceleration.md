@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/22/2017
-ms.openlocfilehash: 53dc85cab94bdf692e088d7c6eea6916d283ba84
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7560900ace62a737ac765bcfe93f759f8985aca2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android 仿真器硬件加速
 
 因为如果不进行硬件加速，Android SDK 仿真器的运行速度会过于缓慢，所以推荐使用 Intel 的 HAXM（硬件加速执行管理器）大幅提升 Android SDK 仿真器的性能。
 
-<a name="haxm-overview" />
 
 ## <a name="haxm-overview"></a>HAXM 概述
 
@@ -27,9 +26,8 @@ HAXM 是硬件协助虚拟化引擎（虚拟机监控程序），使用 Intel �
 Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟设备（如[配置和使用](~/android/deploy-test/debugging/android-sdk-emulator/index.md)中所述）后，该虚拟设备将使用 HAXM 来执行硬件加速。 首次使用 Android SDK 仿真器前，最好先验证 HAXM 是否已安装，且能否用于 Android SDK 仿真器。
 
 > [!NOTE]
-> 注意：无法在虚拟机上运行 HAXM。
+> 无法在虚拟机上运行 HAXM。
 
-<a name="verify-haxm" />
 
 ## <a name="verifying-haxm-installation"></a>验证 HAXM 安装
 
@@ -39,7 +37,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 1. 依次单击“工具”>“Android”>“Android 仿真器管理器”，启动 Android 仿真器管理器：
 
-    [![“Android 仿真器管理器”菜单项位置](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png)
+    [![“Android 仿真器管理器”菜单项位置](hardware-acceleration-images/win/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/win/01-avd-manager-menu-item.png#lightbox)
 
 2. 如果看到类似下面所示的“性能警告”对话框，则表示计算机上尚未安装或未正确配置 HAXM：
 
@@ -65,7 +63,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 1. 依次单击“工具”>“Google 仿真器管理器”，启动 Android 仿真器管理器：
 
-    [![“Android 仿真器管理器”菜单项位置](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png)
+    [![“Android 仿真器管理器”菜单项位置](hardware-acceleration-images/mac/01-avd-manager-menu-item-sml.png)](hardware-acceleration-images/mac/01-avd-manager-menu-item.png#lightbox)
 
 2. 如果看到类似下面所示的“性能警告”对话框，则表示计算机上尚未安装或未正确配置 HAXM：
 
@@ -75,7 +73,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 3. 选择 x86 映像（例如，Android\_Accelerated\_x86），单击“开始”，然后单击“启动”：
 
-    [使用默认的虚拟设备映像启动 Android SDK 仿真器![](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png)
+    [使用默认的虚拟设备映像启动 Android SDK 仿真器![](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. 在仿真器启动时，观察“正在启动 Android 仿真器”对话框窗口。 如果已安装 HAXM，则会看到内容为“HAX 正在运行，且仿真器在快速虚拟模式下运行”的消息，如下面的屏幕截图所示：
 
@@ -147,7 +145,7 @@ Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-
 
 2. 在“系统摘要”中，检查是否有“基于 Device Guard 虚拟化的安全性”；若有，检查是否处于“正在运行”状态：
 
-   [![Device Guard 存在且正在运行](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png)
+   [![Device Guard 存在且正在运行](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
 
 如果已启用 Device Guard，请按照下列步骤操作，禁用 Device Guard：
 
@@ -157,7 +155,7 @@ Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-
 
 3. 在“本地组策略编辑器”中，依次转到“计算机配置”>“管理模板”>“系统”>“Device Guard”：
 
-   [![“本地组策略编辑器”中的“Device Guard”](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png)
+   [![“本地组策略编辑器”中的“Device Guard”](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
 
 4. 将“打开基于虚拟化的安全性”更改为“已禁用”（如上所示），再退出“本地组策略编辑器”。
 
@@ -190,6 +188,6 @@ Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-
 
 2. 运行 HAXM 安装程序。 接受安装程序对话框中的默认值：
 
-   [![“Intel 硬件加速执行管理器安装程序”窗口](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png)
+   [![“Intel 硬件加速执行管理器安装程序”窗口](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----

@@ -7,18 +7,17 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 10cfb790fca30b67faaa8f7720a358ec34c25663
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7cf21e75c9ae2f3c27b07cb20f1044779b42b06b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-installation"></a>Windows 安装
 
 _本指南介绍了在 Windows 上安装 Xamarin.Android for Visual Studio 的步骤，并介绍了如何配置 Xamarin.Android 来生成你的第一个 Xamarin.Android 应用程序。_
 
-<a name="overview" />
 
 ## <a name="overview"></a>概述
 
@@ -39,7 +38,6 @@ _本指南介绍了在 Windows 上安装 Xamarin.Android for Visual Studio 的�
 
 有关安装与 Windows 上的 Visual Studio 配合使用的 Xamarin 的详细信息，请参阅 [Windows 安装](~/cross-platform/get-started/installation/windows.md)指南。
 
-<a name="configuration" />
 
 ## <a name="configuration"></a>配置
 
@@ -52,16 +50,15 @@ Xamarin.Android 使用 Java 开发工具包 (JDK) 和 Android SDK 生成应用�
 Xamarin.Android 使用[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，这是在为 API 级别 24 或更高级别进行开发时所必需的（JDK 8 还支持低于 24 的 API 级别）。 如果专门为 API 级别 23 或更低级别进行开发，可以继续使用 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)。
 
 > [!IMPORTANT]
-> **注意：**Xamarin.Android 不支持 JDK 9。
+> Xamarin.Android 不支持 JDK 9。
 
-<a name="sdk_manager" />
 
 ### <a name="android-sdk-manager"></a>Android SDK 管理器
 
 Android 使用多个 Android API 级别设置来确定应用在各种版本的 Android 中的兼容性（有关 Android API 级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)）。
 根据要面向的 Android API 级别，可能需要下载和安装其他 Android SDK 组件。 此外，可能需要安装 Android SDK 中提供的可选工具和仿真器映像。 为此，请使用 Android SDK 管理器。 可单击“工具”>“Android”>“Android SDK 管理器”，启动“Android SDK管理器”：
 
-[![如何启动 Android SDK 管理器](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png)
+[![如何启动 Android SDK 管理器](windows-images/08-sdk-manager-sml.png)](windows-images/08-sdk-manager.png#lightbox)
 
 默认情况下，Visual Studio 会安装 Google Android SDK 管理器：
 
@@ -71,7 +68,6 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 
 有关使用 Xamarin Android SDK 管理器的详细信息，请参阅 [Android SDK 安装](~/android/get-started/installation/android-sdk.md)。
 
-<a name="emulator" />
 
 ### <a name="android-emulator"></a>Android 仿真器
 
@@ -94,8 +90,6 @@ Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器）
 如果有用于测试的 Android 物理设备，现在可设置设备用于开发。 通过查看[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)配置 Android 设备进行开发，然后将其连接到计算机以运行和调试 Xamarin.Android 应用程序。
 
 
-<a name="create_app" />
-
 ## <a name="create-an-application"></a>创建应用程序
 
 安装 Xamarin.Android 后，可启动 Visual Studio 创建一个新项目。 单击“文件”>“新建”>“项目”，开始创建应用：
@@ -104,12 +98,10 @@ Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器）
 
 在“新建项目”对话框中的“模板”下，选择“Android”，然后单击右窗格中的“空白应用(Android)”。 输入应用名称（在下面的屏幕截图中，应用称为 MyApp），然后单击“确定”：
 
-[![新建项目对话框的屏幕截图，创建一个空白 Android 应用](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png)
+[![新建项目对话框的屏幕截图，创建一个空白 Android 应用](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
 
 就这么简单！ 现在即可使用 Xamarin.Android 创建 Android 应用程序！
 
-
-<a name="summary" />
 
 ## <a name="summary"></a>摘要
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 8e36548e0d9926a28c133f8f1dc688fcbfa9f78e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>了解 iOS 多屏显示详述
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/27/2018
 
 在[了解 iOS](~/ios/get-started/hello-ios/index.md) 教程中，介绍了 iOS 应用程序只有一个窗口，且视图控制器负责将其内容视图层次结构加载到窗口中。 如下图所示，在第二个 Phoneword 演练中，我们向应用程序添加了第二个屏幕，并在两个屏幕间传递了一些数据（一份电话号码列表）：
 
- [ ![](hello-ios-multiscreen-deepdive-images/08.png "此图描述了在两个屏幕之间传递数据的过程")](hello-ios-multiscreen-deepdive-images/08.png)
+ [![](hello-ios-multiscreen-deepdive-images/08.png "此图描述了在两个屏幕之间传递数据的过程")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
 本例中，在第一个屏幕中收集数据，然后从第一个视图控制器传递到第二个，由第二个屏幕显示。 屏幕、视图控制器和数据的该分布方式遵循模型-视图-控制器 (MVC) 模式。 在后面几节中，我们将讨论该模式的优势及其组件，并探讨如何将其应用到 Phoneword 应用程序中。
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/27/2018
 
 “模型-视图-控制器”是一种设计模式，一种可重用的体系结构解决方案，用于处理代码中的常见问题或用例。 MVC 是应用程序的体系结构，具有图形用户界面 (GUI)。 它将向应用程序中的对象分配以下三种角色之一：模型（数据或应用程序逻辑）、视图（用户界面）和控制器（代码后置）。 下图描述 MVC 模式的 3 个部分与用户之间的关系：
 
- [ ![](hello-ios-multiscreen-deepdive-images/00.png "此图描述 MVC 模式的 3 个部分与用户之间的关系")](hello-ios-multiscreen-deepdive-images/00.png)
+ [![](hello-ios-multiscreen-deepdive-images/00.png "此图描述 MVC 模式的 3 个部分与用户之间的关系")](hello-ios-multiscreen-deepdive-images/00.png#lightbox)
 
 MVC 模式很有用，因为它在 GUI 应用程序的不同部件之间实现逻辑分离，简化了代码和视图的重复使用。 让我们直接进入，更详细地分别查看这三种角色。
 
@@ -71,23 +71,23 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 
 导航控制器在 iOS 应用程序中很常见，为主要的 iOS 应用程序（如**设置**应用）提供导航，如以下屏幕截图所示：
 
- [ ![](hello-ios-multiscreen-deepdive-images/01.png "导航控制器提供 iOS 应用程序（例如此处所示的设置应用）的导航")](hello-ios-multiscreen-deepdive-images/01.png)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "导航控制器提供 iOS 应用程序（例如此处所示的设置应用）的导航")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 导航控制器有 3 大主要功能：
 
 -  **提供用于向前导航的 Hook** – 导航控制器在内容视图层次结构推送到导航堆栈的情况下使用分层导航手法。 可将导航堆栈视为一叠扑克牌，只有最上面的牌可见，如下图所示：  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/02.png "此图描述了作为卡堆栈的导航")](hello-ios-multiscreen-deepdive-images/02.png)
+    [![](hello-ios-multiscreen-deepdive-images/02.png "此图描述了作为卡堆栈的导航")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
 
 -  **选择性提供后退按钮** - 将新项目推送到导航堆栈时，标题栏可自动显示后退按钮，允许用户向后导航。 按后退按钮弹出导航堆栈中的当前视图控制器，并将先前的内容视图层次结构加载到窗口中：  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/03.png "此图描述了从堆栈中“弹出”卡的过程")](hello-ios-multiscreen-deepdive-images/03.png)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "此图描述了从堆栈中“弹出”卡的过程")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **提供标题栏** – **导航控制器**的顶部称为标题栏。 它负责显示视图控制器标题，如下图所示：  
 
-    [ ![](hello-ios-multiscreen-deepdive-images/04.png "标题栏负责显示“视图控制器”标题")](hello-ios-multiscreen-deepdive-images/04.png)
+    [![](hello-ios-multiscreen-deepdive-images/04.png "标题栏负责显示“视图控制器”标题")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
 
 
@@ -97,11 +97,11 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 **导航控制器**不会管理内容视图层次结构，因此本身没有要显示的内容。
 相反，**导航控制器**与根视图控制器进行配对：
 
- [ ![](hello-ios-multiscreen-deepdive-images/05.png "导航控制器与根视图控制器进行配对")](hello-ios-multiscreen-deepdive-images/05.png)
+ [![](hello-ios-multiscreen-deepdive-images/05.png "导航控制器与根视图控制器进行配对")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
 根视图控制器是指**导航控制器**堆栈中的第一个视图控制器，而且根视图控制器的内容视图层次结构是指要加载到窗口的第一个内容视图层次结构。 如果要在导航控制器堆栈上放置整个应用程序，可将无源的 Segue 迁移到**导航控制器**，然后将第一个屏幕的视图控制器设为根视图控制器，操作方式与在 Phoneword 应用中执行的一样：
 
- [ ![](hello-ios-multiscreen-deepdive-images/06.png "Sourceless Segue 将第一个屏幕视图控制器设置为根视图控制器")](hello-ios-multiscreen-deepdive-images/06.png)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "Sourceless Segue 将第一个屏幕视图控制器设置为根视图控制器")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>其他导航选项
 
@@ -115,7 +115,7 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 
 使用“显示”操作向情节提要添加 Segue 时，指示 iOS 将第二个视图控制器推送到导航控制器的堆栈：
 
- [ ![](hello-ios-multiscreen-deepdive-images/09.png "设置下拉列表中的 segue 类型")](hello-ios-multiscreen-deepdive-images/09.png)
+ [![](hello-ios-multiscreen-deepdive-images/09.png "设置下拉列表中的 segue 类型")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
 将 Segue 添加到情节提要即可创建屏幕之间的简单转换。 如果要传递视图控制器之间的数据，必须重写 `PrepareForSegue` 方法并自行处理数据：
 

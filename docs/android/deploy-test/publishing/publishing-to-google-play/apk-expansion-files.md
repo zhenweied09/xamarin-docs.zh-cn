@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d118eb5e9f875c5480105d1596ef1318112fb53e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3431791d51858df2013634e1594ee960a10728da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apk-expansion-files"></a>APK 扩展文件
 
@@ -33,7 +33,6 @@ ms.lasthandoff: 02/27/2018
 上传 APK 的同时必须上传相应扩展文件。
 Google Play 不允许向现有 APK 上传扩展文件或者不允许上传现有 APK。 如果有必要更新扩展文件，则必须上传新的 APK，同时更新 `versionCode`。
 
-<a name="Expansion_File_Storage" />
 
 ## <a name="expansion-file-storage"></a>扩展文件存储
 
@@ -51,7 +50,6 @@ Google Play 不允许向现有 APK 上传扩展文件或者不允许上传现有
 
 从扩展文件提取文件的另一方法是直接从扩展文件读取资产或资源。 扩展文件只是可通过合适的 `ContentProvider` 进行使用的 zip 文件。 [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) 包含的程序集 [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip) 中包括了一个允许对某些媒体文件直接进行文件访问的 `ContentProvider`。 如果将媒体文件打包为 zip 文件，媒体播放调用可能直接使用 zip 中的文件而无需解压缩 zip 文件。 添加到 zip 文件时不应压缩媒体文件。 
 
-<a name="FileName_Format" />
 
 ### <a name="filename-format"></a>文件名格式
 
@@ -68,13 +66,12 @@ Google Play 不允许向现有 APK 上传扩展文件或者不允许上传现有
 
 例如，如果 APK 版本是 21，包名称是 `mono.samples.helloworld`，则主扩展文件应命名为 main.21.mono.samples.helloworld。
 
-<a name="Download_Process" />
 
 ## <a name="download-process"></a>下载过程
 
 从 Google Play 安装应用程序时，扩展文件会随 APK 一并下载和保存。 在某些情况下可能有所例外，或者扩展文件可能会被删除。 为处理这种情况，应用需检查扩展文件是否存在，然后根据需要进行下载。 下方流程图显示了此过程的推荐流程：
 
-[![APK 扩展流程图](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![APK 扩展流程图](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 应用程序启动时，应检查当前设备上是否存在合适的扩展文件。 如果不存在，则应用程序必须在 Google Play 的[应用程序授权](http://developer.android.com/google/play/licensing/index.html)中作出请求。 使用许可验证库 (LVL) 执行该检查，并且免费或许可应用程序都必须执行该检查。 LVL 主要由付费应用程序用于实施许可证限制。 但是，Google 已扩展 LVL，使其也可用于扩展库。 免费应用程序必须执行 LVL 检查，但可以忽略许可证限制。 LVL 请求负责提供以下有关应用程序所需扩展文件的信息： 
 
@@ -92,7 +89,6 @@ Google Play 不允许向现有 APK 上传扩展文件或者不允许上传现有
 -  下载期间出现的错误可轻松进行处理和恢复。
 
 
-<a name="Architectural_Overview" />
 
 ## <a name="architectural-overview"></a>体系结构概述
 
