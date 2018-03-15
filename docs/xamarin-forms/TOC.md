@@ -266,7 +266,7 @@
 #### [为何 Visual Studio XAML 设计器对 Xamarin.Forms XAML 文件不起作用？](troubleshooting/questions/forms-xaml-designer.md)
 #### [Android 生成错误：“LinkAssemblies”任务意外失败](troubleshooting/questions/android-linkassemblies-error.md)
 #### [为何 Xamarin.Forms.Maps Android 项目失败，且随附“COMPILETODALVIK：意外顶级错误”？](troubleshooting/questions/maps-compiletodalvik-error.md)
-## [发行说明](https://developer.xamarin.com/releases/mac/)
+## [发行说明](https://developer.xamarin.com/releases/xamarin-forms/)
 ## [示例](samples/index.yml)
 ## [使用 Xamarin.Forms 书籍创建移动应用](creating-mobile-apps-xamarin-forms/index.md)
 ## [企业应用程序模式电子书](enterprise-application-patterns/index.md)
