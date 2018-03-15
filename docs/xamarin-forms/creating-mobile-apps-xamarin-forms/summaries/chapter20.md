@@ -7,11 +7,11 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 86ae56fc2baac3eab0fbf375c5f67f7b2327721a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0ac316bc2cef04a80958c047427845dbdcc4137f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>章 20 的摘要。 异步和文件 I/O
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/12/2018
 
 ### <a name="good-news-and-bad-news"></a>好消息和错误新闻
 
-通过 Xamarin.Forms 支持应用程序本地存储区和 #x 2014; 支持的所有平台专用于应用程序的存储。
+通过 Xamarin.Forms 支持应用程序本地存储区支持的所有平台&mdash;是私有的应用程序的存储。
 
 Xamarin.iOS 和 Xamarin.Android 库包括 Xamarin 明确针对这两个平台的.NET 的版本。 其中包括类从`System.IO`可用于在这两个平台中执行与应用程序本地存储的文件 I/O。
 
@@ -117,7 +117,7 @@ Xamarin.iOS 和 Xamarin.Android 库包括 Xamarin 明确针对这两个平台的
 
 ### <a name="keeping-it-in-the-background"></a>将其保存在后台
 
-对多个异步方法 （&） #x 2014; 进行调用的库中的方法如`WriteFileAsync`和`ReadFileASync`Windows 运行时中的方法[ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs)类 （&) #x 2014; 可以通过某种程度上更高效使用[ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/)方法避免切换回用户界面线程。
+对多个异步方法进行调用的库中的方法&mdash;如`WriteFileAsync`和`ReadFileASync`Windows 运行时中的方法[ `FileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/FileHelper.cs)类&mdash;可以进行某种程度上更高效，因为使用[ `ConfigureAwait` ](https://developer.xamarin.com/api/member/System.Threading.Tasks.Task%3CTResult%3E.ConfigureAwait/p/System.Boolean/)方法可避免切换回用户界面线程。
 
 ### <a name="dont-block-the-ui-thread"></a>避免阻塞 UI 线程 ！
 

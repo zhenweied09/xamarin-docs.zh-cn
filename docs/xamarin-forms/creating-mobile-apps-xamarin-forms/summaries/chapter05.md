@@ -7,11 +7,11 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1df1751c55c6a031bf9f26d774b739f4ca83fa91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0c61727e90a03d618a7423e5b865a7fcc9e0b399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>第 5 章： 的摘要。 处理大小
 
@@ -42,7 +42,7 @@ Windows 运行时还建立了表示接近 160 独立于设备的单位为一英�
 - 160 单位为一英寸，等效于
 - 64 单位为厘米
 
-只读[ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/)和[ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/)属性定义`VisualElement`具有"模拟"的值 （&） #x 2013; 默认值 1。 仅在大小并在布局中容纳了元素时，才将这些属性可以反映设备无关的单位中的元素的实际大小。 此大小包括任何`Padding`的元素上设置但不是`Margin`。
+只读[ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/)和[ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/)属性定义`VisualElement`具有"模拟"的值的默认&ndash;1。 仅在大小并在布局中容纳了元素时，才将这些属性可以反映设备无关的单位中的元素的实际大小。 此大小包括任何`Padding`的元素上设置但不是`Margin`。
 
 可视元素，将引发[ `SizeChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.VisualElement.SizeChanged/)事件时其`Width`或`Height`已更改。 [ **WhatSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/WhatSize)示例使用此事件来显示的程序的屏幕大小。
 
@@ -75,7 +75,7 @@ Windows 运行时还建立了表示接近 160 独立于设备的单位为一英�
 
 ## <a name="empirically-fitting-text"></a>根据经验调整文本
 
-另一种方法适合于由矩形的文本是根据经验计算呈现的文本大小并对其进行调整，向上或向下。 簿调用中的程序[ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/)上以获取元素的所需的大小的可视元素。 方法已被否决，并应改为调用程序 [`Measure`] (/ api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/)。
+另一种方法适合于由矩形的文本是根据经验计算呈现的文本大小并对其进行调整，向上或向下。 簿调用中的程序[ `GetSizeRequest` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.GetSizeRequest/p/System.Double/System.Double/)上以获取元素的所需的大小的可视元素。 方法已被否决，并应改为调用程序[ `Measure` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualElement.Measure/p/System.Double/System.Double/Xamarin.Forms.MeasureFlags/)。
 
 有关`Label`，第一个参数应是 （要允许包装） 的容器的宽度，同时第二个参数应设置到`Double.PositiveInfinity`以使不受约束的高度。 [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize)示例演示这种方法。
 

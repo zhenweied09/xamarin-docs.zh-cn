@@ -1,5 +1,6 @@
 ---
-title: "安装和要求"
+title: "检查器安装和要求"
+description: "如何下载、 安装和使用 Xamarin 检查器。"
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
@@ -7,35 +8,28 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: a587935e35882ed1dc68817fbbe1ae3e91200f29
-ms.sourcegitcommit: 0bdcd00b64d581d4c5179bc39ded4018c9374229
+ms.openlocfilehash: a2e6f254c77ac099b5700543db5763b8bbb44fef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>安装和要求
-
-<script> var inspectorOnLoad = 函数 （） {var primaryTextBase ="Xamarin 工作簿和检查器"; var secondaryTextBase ="或下载适用于"; var inspectorDownloadUrlMac ="https://dl.xamarin.com/interactive/XamarinInteractive.pkg"; varinspectorDownloadUrlWin ="https://dl.xamarin.com/interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary; var aWin = aSecondary; var macTextBase = primaryTextBase; var winTextBase = secondaryTextBase;
-
-  if (/win/i.test(navigator.platform.toLowerCase())) { aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase; }
-
-  aMac.href = inspectorDownloadUrlMac; aMac.text = macTextBase + " Mac"; aWin.href = inspectorDownloadUrlWin; aWin.text = winTextBase + " Windows"; };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="inspector-installation-and-requirements"></a>检查器安装和要求
 
 ## <a name="download-and-installation"></a>下载和安装
 
-<ol>
-  <li>下载并安装<a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin 工作簿 （&) 适用于 Mac 的检查器</a>(<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">或适用于 Windows 的下载</a>)。
-  </li>
-  <li><a href="~/tools/inspector/inspect.md"> 检查你自己的应用 ！</a>
-    </li>
-</ol>
+
+# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+
+1. 下载并安装[Xamarin 工作簿和检查器的 Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi)。
+2. [检查你自己的应用 ！](~/tools/inspector/inspect.md)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. 下载并安装[Xamarin 工作簿 （&) 适用于 Mac 的检查器](https://dl.xamarin.com/interactive/XamarinInteractive.pkg)。
+2. [检查你自己的应用 ！](~/tools/inspector/inspect.md)
+
+-----
 
 ## <a name="requirements"></a>惠?
 
@@ -57,43 +51,13 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 ### <a name="supported-app-platforms"></a>支持的应用程序平台
 
-<table>
-<thead>
-  <tr>
-    <th>应用程序平台</th>
-    <th>IDE 支持</th>
-    <th>说明</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac （统一）</td>
-    <td>仅支持在 Mac 上</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS （统一）</td>
-    <td>支持 XS 和 Visual Studio 中</td>
-    <td>检查在 Windows 中的 iOS 应用需要检查器还在 Mac 生成主机上安装相同的版本。</td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>支持 XS 和 Visual Studio 中</td>
-    <td>
-      <ul>
-        <li>必须为目标 Android > = 4.0.3</li>
-        <li>必须启用 fastdev</li>
-        <li>必须使用 Google、 Visual Studio 或 Xamarin Android 仿真程序。 Android 7 仿真程序可能不允许在此时间的检查。</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>仅支持在 Windows 上的 Visual Studio 中</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|应用程序平台|IDE 支持|说明|
+|--- |--- |--- |
+|Mac （统一）|仅支持在 Mac 上|
+|iOS （统一）|支持 XS 和 Visual Studio 中|检查在 Windows 中的 iOS 应用需要检查器还在 Mac 生成主机上安装相同的版本。|
+|Android|支持 XS 和 Visual Studio 中|必须为目标 Android > = 4.0.3，替换**fastdev**启用。<br />必须使用 Google、 Visual Studio 或 Xamarin Android 仿真程序。 Android 7 仿真程序可能不允许在此时间的检查。|
+|WPF|仅支持在 Windows 上的 Visual Studio 中|
+
 
 <a name="reporting-bugs" />
 
@@ -101,7 +65,7 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 应直接通过 Visual Studio 报告的 bug:
 
-- **帮助 → 发送反馈 → 报告问题**
+- **帮助 > 发送反馈 > 报告问题**
 
 请包括所有的以下信息：
 
@@ -111,12 +75,12 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 Visual Studio For Mac
 
-- **有关 Visual Studio → 显示详细信息 → 副本信息的 visual Studio →**
+- **Visual Studio > 有关 Visual Studio > 显示详细信息 > 复制信息**
 - 将粘贴到 bug 报表
 
 Xamarin Studio
 
-- **有关 Xamarin Studio → 显示 Xamarin Studio → 详细说明 → 复制信息**
+- **Xamarin Studio > 有关 Xamarin Studio > 显示详细信息 > 复制信息**
 - 将粘贴到 bug 报表
 
 Visual Studio
@@ -135,7 +99,7 @@ Visual Studio
 
 1.4.x 还提供了从主菜单中查找程序 (macOS) 或资源管理器 (Windows) 直接选择日志文件的能力：
 
-- **帮助 → 显示日志文件**
+- **帮助 > 显示日志文件**
 
 Visual Studio For Mac
 
@@ -148,11 +112,11 @@ Xamarin Studio
 Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
-- Visual Studio 的内容`Output`窗格中，也可能提供有用的信息。
+- Visual Studio 的内容**输出**窗格中，也可能提供有用的信息。
 
 ### <a name="project-settings"></a>项目设置
 
-如果可以将附加`.csproj`对于想要检查的项目，它将非常有用。 这是比询问有关单个设置。
+如果可以将附加**.csproj**对于想要检查的项目，它将非常有用。 这是比询问有关单个设置。
 
 此外请确认你在调试配置中。
 
@@ -177,13 +141,13 @@ Visual Studio
 
 #### <a name="visual-studio-installer"></a>Visual Studio 安装程序
 
-如果你有 Visual Studio 2017，打开"Visual Studio 安装程序"，并在"各个组件"查找"Xamarin 工作簿"。 如果选中，取消选中它，然后单击"修改"卸载。
+如果你有 Visual Studio 2017，打开**Visual Studio Installer**，查看**各个组件**为**Xamarin 工作簿**。 如果选中，取消选中它，然后单击"修改"卸载。
 
 #### <a name="system-uninstall"></a>系统卸载
 
 如果您自己安装的工作簿和检查器使用下载的安装程序，它将需要通过卸载**应用和功能**Windows 10 上或通过系统设置页**添加/删除程序**较旧版本的 Windows 上的控制面板中。
 
-> **启动-> 设置-> 系统-> 应用程序和功能**
+> **启动 > 设置 > 系统 > 应用程序和功能**
 
 ![](install-images/windows-remove.png "Xamarin 工作簿和应用程序和功能中列出的检查器")
 

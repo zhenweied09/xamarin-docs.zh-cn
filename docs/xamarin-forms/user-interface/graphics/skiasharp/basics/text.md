@@ -8,11 +8,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1d174e441cd46255d62283521e7db2802b49072f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="integrating-text-and-graphics"></a>将文本和图形集成
 
@@ -61,13 +61,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 `Left`和`Top`属性`SKRect`结构指示呈现文本的左上角的坐标，如果通过显示的文本`DrawText`调用并为 0 的 X 和 Y 位置。 例如，当 iPhone 7 模拟器上运行此程序`TextSize`分配后首次调用的计算结果的值 90.6254 `MeasureText`。 `SKRect`从第二次调用获取值`MeasureText`具有以下属性值：
 
 - `Left` = 6
-- `Top` = &#x2013;68
+- `Top` = &ndash;68
 - `Width` = 664.8214
 - `Height` = 88;
 
-请记住的 X 和 Y 坐标你传递给`DrawText`方法指定的基线在文本左侧。 `Top`值指明文本扩展该基线和 （减去从 88 68 it） 上方 68 像素基线下方的 20 像素。 `Left` 6 的值指示文本以 6 个像素中的 X 值右侧`DrawText`调用。 这使得正常的内部字符间距。 如果你想要显示的左上角紧紧插入显示文本，将传递这些假负`Left`和`Top`值的 X 和 Y 坐标的`DrawText`，而在此示例中和 #x 2013; 6 和 68。
+请记住的 X 和 Y 坐标你传递给`DrawText`方法指定的基线在文本左侧。 `Top`值指明文本扩展该基线和 （减去从 88 68 it） 上方 68 像素基线下方的 20 像素。 `Left` 6 的值指示文本以 6 个像素中的 X 值右侧`DrawText`调用。 这使得正常的内部字符间距。 如果你想要显示的左上角紧紧插入显示文本，将传递这些假负`Left`和`Top`值的 X 和 Y 坐标的`DrawText`，在此示例中， &ndash;6 和 68。
 
-`SKRect`结构定义多个方便的属性和方法，其中一些的其余部分中使用`PaintSurface`处理程序。 `MidX`和`MidY`值指示中心的矩形的坐标。 (在 iPhone 7 示例中，这些值是 338.4107 和 & #x 2013年; 24。)下面的代码使用这些值进行最简单的坐标计算中心上显示的文本：
+`SKRect`结构定义多个方便的属性和方法，其中一些的其余部分中使用`PaintSurface`处理程序。 `MidX`和`MidY`值指示中心的矩形的坐标。 (在 iPhone 7 示例中，这些值是 338.4107 和&ndash;24。)下面的代码使用这些值进行最简单的坐标计算中心上显示的文本：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>可移植类库简介
 
@@ -39,94 +39,13 @@ _本文介绍可移植类库 (PCL) 项目，并将指导完成创建和使用针
 
 下表显示了一些因.NET 平台而异的功能。 若要编写保证能运行，在特定的设备平台上的 PCL 程序集你只需选择你创建项目时需要的支持。
 
-<table border="1" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-功能 </td>
-      <td>
-.NET Framework </td>
-      <td>
-UWP 应用 </td>
-      <td>
-Silverlight </td>
-      <td>
-Windows Phone </td>
-      <td>
-Xamarin </td>
-    </tr>
-    <tr>
-      <td>
-核心 </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-LINQ </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-IQueryable </td>
-       <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-7.5 + </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-序列化 </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-    </tr>
-    <tr>
-      <td>
-数据注释 </td>
-      <td>
-4.0.3 + </td>
-      <td>
-Y </td>
-      <td>
-Y </td>
-      <td>
-      </td>
-      <td>
-Y </td>
-    </tr>
-  </tbody>
-</table>
+|功能|.NET Framework|UWP 应用|Silverlight|Windows Phone|Xamarin|
+|---|---|---|---|---|---|
+|核心|Y|Y|Y|Y|Y|
+|LINQ|Y|Y|Y|Y|Y|
+|IQueryable|Y|Y|Y|7.5 +|Y|
+|序列化|Y|Y|Y|Y|Y|
+|数据注释|4.0.3 +|Y|Y||Y|
 
 Xamarin 列反映 Xamarin.iOS 和 Xamarin.Android 支持随 Visual Studio 一起提供的所有配置文件，并仅将有限你选择支持的其他平台的你创建的所有库中的功能可用性的情况。
 

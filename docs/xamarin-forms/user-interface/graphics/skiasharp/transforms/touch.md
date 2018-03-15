@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="touch-manipulations"></a>触摸操作
 
@@ -193,7 +193,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-如果`HitTest`方法返回`true`& #x 2014年; 表示为指具有接触由位图 & #x 2014; 占用的区域中，屏幕然后 touch ID 添加到`TouchIds`集合。 上方的手指从屏幕提起之前，此 ID 表示该手指触摸事件序列。 如果多个手指触摸位图，则`touchIds`集合包含针对每个手指触摸 ID。
+如果`HitTest`方法返回`true`&mdash;这意味着为指具有接触位图占用的区域中，屏幕&mdash;则 touch ID 添加到`TouchIds`集合。 上方的手指从屏幕提起之前，此 ID 表示该手指触摸事件序列。 如果多个手指触摸位图，则`touchIds`集合包含针对每个手指触摸 ID。
 
 `TouchAction`处理程序还会调用`ProcessTouchEvent`类`TouchManipulationBitmap`。 这就是某些 （而非全部） 的真实触摸进行处理。
 
@@ -404,7 +404,7 @@ class TouchManipulationManager
 
 每当旋转已选中，这两种一个手指和两个手指操作方法首先处理旋转。 如果检测到任何旋转，则会有效地删除的旋转分量。 其余被解释为平移和缩放。
 
-下面是`OneFingerManipulate`方法。 如果尚未启用一个手指旋转，则逻辑是简单和 #x 2014;它只需使用的上一个点和新的点来构造一个向量，名为`delta`精确对应转换。 与启用的一个手指旋转，该方法使用角度从透视点 （位图的中心） 到上一个点和新的点来构造旋转矩阵：
+下面是`OneFingerManipulate`方法。 如果尚未启用一个手指旋转，则逻辑很简单&mdash;它只需使用的上一个点和新的点来构造一个向量，名为`delta`精确对应转换。 与启用的一个手指旋转，该方法使用角度从透视点 （位图的中心） 到上一个点和新的点来构造旋转矩阵：
 
 ```csharp
 class TouchManipulationManager

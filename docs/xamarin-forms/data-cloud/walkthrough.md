@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 6625edc1f661e5f9769de82ec48367e9f900e567
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understanding-the-sample"></a>了解示例
 
@@ -38,47 +38,19 @@ _本主题提供的 Xamarin.Forms 示例应用程序演示如何与另一个 web
 
 对于每个示例应用程序 PCL 项目中包含的三个主要文件夹：
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>用途</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>Data</strong></td>
-                        <td>包含的类和接口可用于管理数据项目，并与 web 服务通信。 在最低限度上，这包括<code>TodoItemManager</code>类，该类通过中的属性公开<code>App</code>类来调用 web 服务操作。</td>
-        </tr>
-        <tr>
-            <td><strong>模型</strong></td>
-                        <td>包含应用程序的数据模型类。 在最低限度上，这包括<code>TodoItem</code>类，该类建模的数据应用程序使用单个项。 该文件夹还可以包含用于对用户数据的任何其他类。</td>
-        </tr>
-        <tr>
-            <td><strong>视图</strong></td>
-                        <td>包含应用程序的页。 这通常包括<code>TodoListPage</code>和<code>TodoItemPage</code>类和任何其他类，用于身份验证目的。</td>
-                </tr>
-    </tbody>
-</table>
+|文件夹|目标|
+|--- |--- |
+|数据|包含的类和接口可用于管理数据项目，并与 web 服务通信。 在最低限度上，这包括`TodoItemManager`类，该类通过中的属性公开`App`类来调用 web 服务操作。|
+|模型|包含应用程序的数据模型类。 在最低限度上，这包括`TodoItem`类，该类建模的数据应用程序使用单个项。 该文件夹还可以包含用于对用户数据的任何其他类。|
+|视图|包含应用程序的页。 这通常包括`TodoListPage`和`TodoItemPage`类和任何其他类，用于身份验证目的。|
 
 PCL 项目中的每个应用程序还包含一个重要的文件数：
 
-<table>
-    <thead>
-      <tr><td><strong>文件</strong></td><td><strong>用途</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td><code>Constants</code>类，该类指定任何应用程序用于与 web 服务通信的常数。 这些常量要求更新以访问您的个人的后端服务提供程序上创建。
-        </tr>
-        <tr>
-            <td><strong>ITextToSpeech.cs</strong></td>
-            <td><code>ITextToSpeech</code>接口，它可以指定<code>Speak</code>方法必须由任何实现类。</td>
-        </tr>
-        <tr>
-          <td><strong>Todo.cs</strong></td>
-          <td><code>App</code>负责实例化的这两个将显示的每个平台上的应用程序的第一页的类和<code>TodoItemManager</code>用于调用 web 服务操作的类。</td>
-        </tr>
-    </tbody>
-</table>
+|文件|目标|
+|--- |--- |
+|Constants.cs|`Constants`类，该类指定任何应用程序用于与 web 服务通信的常数。 这些常量要求更新以访问您的个人的后端服务提供程序上创建。|
+|ITextToSpeech.cs|`ITextToSpeech`接口，它可以指定`Speak`方法必须由任何实现类。|
+|Todo.cs|`App`负责实例化的这两个将显示的每个平台上的应用程序的第一页的类和`TodoItemManager`用于调用 web 服务操作的类。|
 
 ### <a name="viewing-pages"></a>查看页
 

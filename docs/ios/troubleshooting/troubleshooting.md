@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/0201
-ms.openlocfilehash: c5f6e6ef61e3705920770d317e4d5f680d4c8fbe
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 95d4bfd78ee77f9afafce61f52b7874299df543d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -207,7 +207,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 
 
-请附加 XS 日志， **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和 * * 组件-{TIMESTAMP}.log * * (在较旧版本的 XS /MonoDevelop，只需发送**~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**)。
+请附加 XS 日志， **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**(在较旧版本的 XS/MonoDevelop，只是将发送**~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**)。
 
  **注意： 在 XS 2.2 最终已解决以上问题**
 
@@ -225,7 +225,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 请确保您退出 iPhone 模拟器，然后重试安装。
 
-<a name="trampolines"/>
+<a name="trampolines" />
 
 ## <a name="ran-out-of-trampolines-of-type-0"></a>用尽了 trampolines 类型 0
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xib-files"></a>.xib 文件
 
@@ -67,7 +67,7 @@ _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamar
 
 #### <a name="properties--utilities"></a>属性和实用程序
 
-**属性和实用程序**部分 devided 为两个主要部分，我们将使用的**属性**（也称为检查器） 和**库**:
+**属性和实用程序**部分分为两个主要部分，我们将使用的**属性**（也称为检查器） 和**库**:
 
 ![属性检查器](xib-images/xcode04.png "属性检查器")
 
@@ -375,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 此代码将附加到你在 Xcode 和接口生成器中创建并将用户单击按钮时调用的操作。
 
-一些 UI 元素自动具有内置的操作，例如，默认的菜单栏中的项如**打开...**菜单项 (`openDocument:`)。 在**解决方案 Pad**，双击`AppDelegate.CS`文件以打开进行编辑，并添加下面的代码下面`DidFinishLaunching`方法：
+一些 UI 元素自动具有内置的操作，例如，默认的菜单栏中的项如**打开...**菜单项 (`openDocument:`)。 在**解决方案 Pad**，双击**AppDelegate.cs**文件以打开进行编辑，并添加下面的代码下面`DidFinishLaunching`方法：
 
 ```csharp
 [Export ("openDocument:")]

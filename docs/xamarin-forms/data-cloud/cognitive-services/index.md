@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 650f8dceebb088b3601c21c1f5373fc4ae8c76dc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>添加智能与认知服务
 
@@ -52,51 +52,20 @@ _Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加
 
 示例应用程序的可移植类库 (PCL) 项目包含五个主要文件夹：
 
-<table>
-    <thead>
-        <tr><td><strong>Folder</strong></td><td><strong>用途</strong></td></tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>模型</strong></td>
-            <td>包含应用程序的数据模型类。 这包括<code>TodoItem</code>类，该类建模的数据应用程序使用单个项。 该文件夹还包括用于从不同 Microsoft 认知服务 Api 返回的模型 JSON 响应的类。</td>
-        </tr>
-        <tr>
-            <td><strong>存储库</strong></td>
-                        <td>包含<code>ITodoItemRepository</code>接口和<code>TodoItemRepository</code>用于执行数据库操作的类。</td>
-        </tr>
-        <tr>
-            <td><strong>服务</strong></td>
-                        <td>包含的接口和用于访问不同 Microsoft 认知服务 Api，并使用的接口的类<code>DependencyService</code>类用来定位在平台项目中实现的接口的类。</td>
-        </tr>
-        <tr>
-            <td><strong>Utils</strong></td>
-            <td>包含<code>Timer</code>类，该类由<code>AuthenticationService</code>类若要续订一个 JWT 访问令牌每隔 9 分钟。</td>
-        </tr>
-        <tr>
-            <td><strong>视图</strong></td>
-            <td>包含应用程序的页。</td>
-        </tr>
-    </tbody>
-</table>
+|文件夹|目标|
+|--- |--- |
+|模型|包含应用程序的数据模型类。 这包括`TodoItem`类，该类建模的数据应用程序使用单个项。 该文件夹还包括用于从不同 Microsoft 认知服务 Api 返回的模型 JSON 响应的类。|
+|存储库|包含`ITodoItemRepository`接口和`TodoItemRepository`用于执行数据库操作的类。|
+|服务|包含的接口和用于访问不同 Microsoft 认知服务 Api，并使用的接口的类`DependencyService`类用来定位在平台项目中实现的接口的类。|
+|Utils|包含`Timer`类，该类由`AuthenticationService`类若要续订一个 JWT 访问令牌每隔 9 分钟。|
+|视图|包含应用程序的页。|
 
 PCL 项目中还包含一些重要的文件：
 
-<table>
-    <thead>
-      <tr><td><strong>文件</strong></td><td><strong>用途</strong></td></tr>
-    <thead>
-    <tbody>
-        <tr>
-            <td><strong>Constants.cs</strong></td>
-            <td><code>Constants</code>类，从而为 Microsoft 认知服务 Api 调用中指定的 API 密钥和终结点。 API 密钥常量需要更新访问不同的认知服务 Api。
-        </tr>
-        <tr>
-          <td><strong>App.xaml.cs</strong></td>
-          <td><code>App</code>类负责实例化的这两个将显示的每个平台上的应用程序的第一页和<code>TodoManager</code>用于调用数据库操作的类。</td>
-        </tr>
-    </tbody>
-</table>
+|文件|目标|
+|--- |--- |
+|Constants.cs|`Constants`类，从而为 Microsoft 认知服务 Api 调用中指定的 API 密钥和终结点。 API 密钥常量需要更新访问不同的认知服务 Api。|
+|App.xaml.cs|`App`类负责实例化的这两个将显示的每个平台上的应用程序的第一页和`TodoManager`用于调用数据库操作的类。|
 
 ### <a name="nuget-packages"></a>NuGet 包
 

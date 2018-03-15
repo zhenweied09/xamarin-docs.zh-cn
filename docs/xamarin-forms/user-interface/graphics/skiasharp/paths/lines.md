@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 341d850709ff27f4dc397cee3bb2fc5f73c0ec3c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lines-and-stroke-caps"></a>行和描边大写字母
 
@@ -30,7 +30,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 
 默认情况下，`StrokeWidth`属性的新实例化`SKPaint`对象是 0，它具有相同的效果的值为 1 中呈现在粗细的线一个像素。 它显示非常细小手机，等的高分辨率设备上的因此你可能需要设置`StrokeWidth`到更大的值。 但一旦开始绘制相当多的粗细的线，引发另一个问题： 应启动并且这些密集行尾的呈现方式？
 
-调用的开始和结束的行的外观*线帽*或在 Skia，*描边端点*。 在此上下文中的"cap"一词是指一种 hat 和 #x 2014;内容位于行的末尾。 你设置[ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/)属性`SKPaint`对象的以下成员之一[ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/)枚举：
+调用的开始和结束的行的外观*线帽*或在 Skia，*描边端点*。 在此上下文中的"cap"一词是指一种 hat&mdash;位于行末尾的内容。 你设置[ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/)属性`SKPaint`对象的以下成员之一[ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/)枚举：
 
 - [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) （默认值）
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)

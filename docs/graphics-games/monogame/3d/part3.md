@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 861d47d001c10c14a0294536c6122cafb33a93ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e930004a91133f391f68221473f212b7caaf1b07
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="3d-coordinates-in-monogame"></a>在 MonoGame 3D 坐标
 
@@ -47,7 +47,7 @@ _了解 3D 坐标系统是开发 3D 游戏中的一个重要步骤。MonoGame �
 
 我们开始移动围绕我们机器人之前，我们将创建`Robot`类包含用于绘制和移动逻辑。 游戏开发人员参考的逻辑和数据作为此封装*实体*。
 
-添加新的空类文件与**MonoGame3D**可移植类库 (不特定于平台的 ModelAndVerts.Android)。 命名 it ** 机器人 **，然后单击**新建**:
+添加新的空类文件与**MonoGame3D**可移植类库 (不特定于平台的 ModelAndVerts.Android)。 将其命名为**机器人**单击**新建**:
 
 ![](part3-images/image3.png "将其命名为机器人并单击新建")
 

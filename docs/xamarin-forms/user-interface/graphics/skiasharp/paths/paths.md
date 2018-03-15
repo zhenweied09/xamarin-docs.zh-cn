@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="path-basics"></a>路径基础知识
 
@@ -115,7 +115,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - `AddPath` 若要将另一路径添加到当前路径
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) 若要按相反的顺序添加另一个路径
 
-请记住，`SKPath`对象定义仅的几何图形 （&） #x 2014; 一系列点和连接。 仅当`SKPath`与结合`SKPaint`对象是呈现特定颜色、 描边宽度等使用的路径。 此外，请记住，`SKPaint`对象传递给`DrawPath`方法定义的整条路径的特征。 如果你想要绘制内容需要多个颜色，必须为每种颜色来使用一个单独的路径。
+请记住，`SKPath`对象定义仅几何图形&mdash;一系列点和连接。 仅当`SKPath`与结合`SKPaint`对象是呈现特定颜色、 描边宽度等使用的路径。 此外，请记住，`SKPaint`对象传递给`DrawPath`方法定义的整条路径的特征。 如果你想要绘制内容需要多个颜色，必须为每种颜色来使用一个单独的路径。
 
 就像由描边端点定义的开始和结束的行的外观，通过定义两行之间的连接的外观*描边联接*。 通过设置指定此[ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/)属性`SKPaint`指向成员的[ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/)枚举：
 

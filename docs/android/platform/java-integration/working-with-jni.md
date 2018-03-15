@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="working-with-jni"></a>使用 JNI
 
@@ -154,7 +154,7 @@ public class HelloAndroid extends android.app.Activity {
 
 通常情况下，Xamarin.Android 自动生成包含 ACW; 的 Java 代码类派生自一个 Java 类并重写现有 Java 方法时，这一代取决于类和方法名称。 但是，在某些情况下，代码生成是不合适，按如下所述：
 
--   Android 支持操作中布局的 xml 属性，例如名称[android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML 属性。 如果指定，膨胀的视图实例将尝试查找 Java 方法。
+-   Android 支持的操作名称中的布局的 XML 属性，例如[android: onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/) XML 属性。 当指定了该值时，膨胀的视图实例将尝试查找 Java 方法。
 
 -   [Java.io.Serializable](http://developer.android.com/reference/java/io/Serializable.html)接口需要`readObject`和`writeObject`方法。 由于它们不是此接口的成员，我们相应的托管的实现未公开到 Java 代码的这些方法。
 

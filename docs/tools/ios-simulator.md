@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>进行远程处理的 iOS 模拟器 （用于 Windows)
 
@@ -52,7 +52,7 @@ IOS 模拟器随后将打开连接的 Mac 计算机上。 选中此选项以启�
 - **锁定**– 锁定的模拟器 （你可以往下轻扫以解锁）。
 - **屏幕快照**– 将模拟器的屏幕快照保存到磁盘。
 - [**设置**](#settings) – 配置的键盘和位置。
- - 其他[**选项**](#options) – 各种模拟器选项可用如旋转、 动摇，或调用在模拟器中的其他状态。 当模糊显示一些选项时，可以从显示在工具栏中，或通过在窗口中右键单击省略号图标访问它们。
+- 其他[**选项**](#options) – 各种模拟器选项可用如旋转、 动摇，或调用在模拟器中的其他状态。 当模糊显示一些选项时，可以从显示在工具栏中，或通过在窗口中右键单击省略号图标访问它们。
 
     [![](ios-simulator-images/maps-app-sml.png "iOS 模拟器映射示例")](ios-simulator-images/maps-app.png#lightbox)
 

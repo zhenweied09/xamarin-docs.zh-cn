@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab22881f383e00a67fda8d3e8ffc5d9a4f7f993e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -25,20 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-## <a name="xamarin-studio"></a>Xamarin Studio
-
-通过先创建一个可移植类库项目，可以在 Xamarin Studio 6.2 中创建.NET 标准库项目：
-
-[![](net-standard-images/xs01-sml.png "创建一个新的可移植类库项目")](net-standard-images/xs01.png#lightbox)
-
-一旦创建项目后，右键单击，然后打开**项目选项**窗口。
-在**常规**部分可以转换为标准.NET 项目，并将其设置为使用中的特定版本**平台**下拉列表框：
-
-[![](net-standard-images/xs02-sml.png "将转换为.NET 标准通常选项")](net-standard-images/xs02.png#lightbox)
-
-然后，你可以[创建 NuGet 包](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md)以与其他开发人员共享库。
-
-## <a name="visual-studio-for-mac-walkthrough"></a>Visual Studio for Mac 演练
+## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 本部分演练如何创建和使用的 mac。 使用 Visual Studio.NET 标准库 请参阅完整的实现中.NET 标准库示例部分。
 
@@ -68,7 +55,7 @@ ms.lasthandoff: 03/09/2018
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-## <a name="visual-studio-windows-walkthrough"></a>Visual Studio (Windows) 演练
+## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
 此部分将指导完成如何创建和使用使用 Visual Studio.NET 标准库。 请参阅完整的实现中.NET 标准库示例部分。
 
@@ -104,7 +91,3 @@ ms.lasthandoff: 03/09/2018
 
 -----
 
-
-## <a name="related-links"></a>相关链接
-
-- [发行说明](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#.NET_Standard_Support)

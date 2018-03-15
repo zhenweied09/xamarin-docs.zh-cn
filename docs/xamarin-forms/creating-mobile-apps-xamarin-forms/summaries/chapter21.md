@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>章 21 的摘要。 转换
 
@@ -19,9 +19,9 @@ Xamarin.Forms 视图中的位置和大小由其父站点，通常是该屏幕上
 
 Xamarin.Forms 支持三种基本类型的转换：
 
-- *转换*& #x 2014; 水平或垂直移动元素
-- *缩放*& #x 2014年; 更改元素的大小
-- *旋转*& #x 2014; 打开周围的点或轴元素
+- *转换*&mdash;水平或垂直移动元素
+- *缩放*&mdash;更改元素的大小
+- *旋转*&mdash;打开周围的点或轴元素
 
 Xamarin.Forms 中的缩放是各向同性;统一它影响的宽度和高度。 同时在屏幕的和二维面上在三维空间中支持旋转。 没有任何时间差 （或巨大） 转换，并且未通用化的矩阵转换。
 

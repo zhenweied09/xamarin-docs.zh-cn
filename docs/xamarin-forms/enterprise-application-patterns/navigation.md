@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a37773b666e015277d2fecc103066e82b6f7f108
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ec91a7c100f294437bb1498fcd56a35f5b19c399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="navigation"></a>导航
 
@@ -51,36 +51,13 @@ public interface INavigationService
 
 此接口指定实现的类必须提供以下方法：
 
-<table>
-<thead>
-<tr class="header">
-<th>方法</th>
-<th>目标</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>InitializeAsync</code></td>
-<td>当启动应用程序时，请执行导航到两个页面之一。</td>
-</tr>
-<tr class="even">
-<td><code>NavigateToAsync<T></code></td>
-<td>执行分层导航到指定页。</td>
-</tr>
-<tr class="odd">
-<td><code>NavigateToAsync<T>(parameter)</code></td>
-<td>执行指定的页上，将参数传递到层次结构导航。</td>
-</tr>
-<tr class="even">
-<td><code>RemoveLastFromBackStackAsync</code></td>
-<td>从导航堆栈中删除前一页。</td>
-</tr>
-<tr class="odd">
-<td><code>RemoveBackStackAsync</code></td>
-<td>从导航堆栈中删除所有的前一页。</td>
-</tr>
-</tbody>
-</table>
+|方法|目标|
+|--- |--- |
+|`InitializeAsync`|当启动应用程序时，请执行导航到两个页面之一。|
+|`NavigateToAsync`|执行分层导航到指定页。|
+|`NavigateToAsync(parameter)`|执行指定的页上，将参数传递到层次结构导航。|
+|`RemoveLastFromBackStackAsync`|从导航堆栈中删除前一页。|
+|`RemoveBackStackAsync`|从导航堆栈中删除所有的前一页。|
 
 此外，`INavigationService`接口指定实现的类必须提供`PreviousPageViewModel`属性。 此属性返回与前一页导航堆栈中关联的视图模型类型。
 

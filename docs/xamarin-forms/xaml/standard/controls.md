@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 3f30a77975a9f42380ecf7efd73426763ec83ef0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b044cb849f9a8e591a8db5907211a55f77d6e45f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xaml-standard-preview-controls"></a>XAML 标准 （预览） 控件
 
@@ -24,36 +24,34 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="controls"></a>控件
 
-<table style="width:300px">
-  <tr><th>Xamarin.Forms</th><th>XAML 标准</th></tr>
-  <tr><td>Frame</td><td>Border</td></tr>
-  <tr><td>选取器</td><td>组合框</td></tr>
-  <tr><td>ActivityIndicator</td><td>ProgressRing</td></tr>
-  <tr><td>StackLayout</td><td>StackPanel</td></tr>
-  <tr><td>Label</td><td>TextBlock</td></tr>
-  <tr><td>条目</td><td>文本框</td></tr>
-  <tr><td>开关</td><td>ToggleSwitch</td></tr>
-  <tr><td>ContentView</td><td>用户控件</td></tr>
-</table>
+|Xamarin.Forms|XAML 标准|
+|--- |--- |
+|Frame|Border|
+|选取器|组合框|
+|ActivityIndicator|ProgressRing|
+|StackLayout|StackPanel|
+|Label|TextBlock|
+|条目|文本框|
+|开关|ToggleSwitch|
+|ContentView|用户控件|
+
 
 ## <a name="properties-and-enumerations"></a>属性和枚举
 
-<table>
-  <tr><th>Xamarin.Forms<br/>具有更新的属性的控件</th><th>Xamarin.Forms<br/>属性或枚举</th><th>XAML 标准<br/>等效</th></tr>
-  <tr><td>按钮、 条目、 标签、 包含 DatePicker、 编辑器、 SearchBar、 TimePicker</td><td>TextColor</td><td>Foreground</td></tr>
-  <tr><td>VisualElement</td><td>BackgroundColor</td><td><i>后台 *</i></td></tr>
-  <tr><td>选取器按钮</td><td>BorderColor, OutlineColor</td><td>BorderBrush</td></tr>
-  <tr><td>Button</td><td>BorderWidth</td><td>BorderThickness</td></tr>
-  <tr><td>ProgressBar</td><td>进度</td><td>“值”</td></tr>
-  <tr><td>按钮、 条目、 标签、 编辑器、 SearchBar、 范围、 字体</td><td>FontAttributes<br/>粗体、 斜体、 无</td><td>FontStyle<br/>斜体正常</td></tr>
-  <tr><td>按钮、 条目、 标签、 编辑器、 SearchBar、 范围、 字体</td><td>FontAttributes</td><td><i>FontWeights *</i><br/>加粗、 正常</td></tr>
-  <tr><td>InputView</td><td>键盘<br/>默认情况下，Url、 数字、 电话、 文本、 聊天、 电子邮件</td><td><i>InputScopeNameValue *</i><br/>默认情况下，Url、 数字、 TelephoneNumber、 文本、 聊天、 EmailNameOrAddress</td></tr>
-  <tr><td>StackPanel</td><td>StackOrientation</td><td><i>方向 *</i></td></tr>
-</table>
+|Xamarin.FormsControls 与更新的属性|Xamarin.FormsProperty 或枚举|XAML StandardEquivalent|
+|--- |--- |--- |
+|按钮、 条目、 标签、 包含 DatePicker、 编辑器、 SearchBar、 TimePicker|TextColor|Foreground|
+|VisualElement|BackgroundColor|后台 *|
+|选取器按钮|BorderColor, OutlineColor|BorderBrush|
+|Button|BorderWidth|BorderThickness|
+|ProgressBar|进度|“值”|
+|按钮、 条目、 标签、 编辑器、 SearchBar、 范围、 字体|FontAttributesBold、 倾斜无|FontStyleItalic, Normal|
+|按钮、 条目、 标签、 编辑器、 SearchBar、 范围、 字体|FontAttributes|FontWeights * 设置为粗体，正常|
+|InputView|KeyboardDefault、 Url、 数字、 电话、 文本、 聊天，电子邮件|InputScopeNameValue * 默认、 Url、 数字、 TelephoneNumber、 文本、 聊天、 EmailNameOrAddress|
+|StackPanel|StackOrientation|方向 *|
 
 > [!IMPORTANT]
 > 项标记为 * 不全在当前的预览版
-
 
 ## <a name="related-links"></a>相关链接
 

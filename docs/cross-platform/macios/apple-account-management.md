@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: 465ba4822a1004100160703f1607d99199f28a16
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="apple-account-management"></a>Apple 帐户管理
 
@@ -41,7 +41,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
 - 确保已连接到 internet。 这是因为 fastlane 直接与 Apple 开发人员门户进行通信。
 - 确保你具有[fastlane 工具安装](~/ios/deploy-test/provisioning/fastlane/index.md#Installation)。
-- 确保你具有的最新 fastlane 工具[https://download.fastlane.tools](https://download.fastlane.tools)。
+- 确保你具有的最新 fastlane 工具[ https://download.fastlane.tools ](https://download.fastlane.tools)。
 - 在开始之前，请确保接受中的任何用户许可协议[开发人员门户](https://developer.apple.com/account/)。
 
 ## <a name="adding-an-apple-developer-account"></a>添加 Apple 开发人员帐户
@@ -69,8 +69,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
     ![](apple-account-management-images/image6.png)
 
 
-<a name="managing"/>
-    
+<a name="managing" />
 
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>管理的签名标识和预配配置文件

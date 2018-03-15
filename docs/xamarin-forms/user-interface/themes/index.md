@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: a62d6c0cb9b6c41ebf3f2a6e4bd350f9ace986f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 12741b4756d26f4090613127d143380e1c4fb55a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="themes"></a>主题
 
@@ -111,7 +111,7 @@ Xamarin.Forms 主题发展变化 2016年已宣布，也可作为客户尝试并�
 
 ## <a name="troubleshooting"></a>疑难解答
 
-<a name="loadtheme"/>
+<a name="loadtheme" />
 
 ### <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>无法加载文件或程序集 Xamarin.Forms.Theme.Light 或其依赖项之一
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>使用 ASP.NET Web 服务 (ASMX)
 
@@ -39,37 +39,12 @@ SOAP 可以对许多传输协议，包括 HTTP、 SMTP、 TCP 和 UDP 进行操�
 
 ASMX 服务提供以下操作：
 
-<table>
-  <thead>
-    <tr>
-      <th>操作</th>
-      <th>描述</th>
-      <th>参数</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>获取待办事项的列表</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>创建新的待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>更新待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>删除待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|操作|描述|参数|
+|--- |--- |--- |
+|GetTodoItems|获取待办事项的列表|
+|CreateTodoItem|创建新的待办事项|XML 序列化 TodoItem|
+|EditTodoItem|更新待办事项|XML 序列化 TodoItem|
+|DeleteTodoItem|删除待办事项|XML 序列化 TodoItem|
 
 有关应用程序中使用的数据模型的详细信息，请参阅[对数据进行建模](~/xamarin-forms/data-cloud/walkthrough.md)。
 

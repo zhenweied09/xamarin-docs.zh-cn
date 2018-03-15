@@ -7,11 +7,11 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1d246ea65e88bde07c3d527c18b7850aa09e08b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>第 1 章的摘要。 Xamarin.Forms 如何组合？
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 03/12/2018
 
 此问题是常见的在针对移动平台。 当前，存在两个主要的移动平台、 Iphone 和 Ipad 运行 iOS 操作系统，并在各种手机和平板电脑运行 Android 操作系统的 Apple 系列。 另一个重要的平台是 Microsoft 的通用 Windows 平台 (UWP)，它允许单个程序以面向 Windows 10 和 Windows 10 移动版。
 
-想要面向这些三个平台的软件供应商必须处理不同的用户界面范例、 三个不同的开发环境、 三个不同的编程接口，并 （& a) #x 2014年; 可能是最困难 （& a) #x 2014年; 三个不同编程语言： OBJECTIVE-C 的 iPhone 和 iPad，对于 Android，Java 和用于 Windows 的 C#。
+想要面向这些三个平台的软件供应商必须处理不同的用户界面范例、 三个不同的开发环境、 三个不同的编程接口，和&mdash;可能是最困难&mdash;这三种不同的编程语言： OBJECTIVE-C 的 iPhone 和 iPad，对于 Android，Java 和用于 Windows 的 C#。
 
 ## <a name="the-c-and-net-solution"></a>C# 和.NET 解决方案
 

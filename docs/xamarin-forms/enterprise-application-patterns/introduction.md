@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d5d5de21c4f397f203b4da5ea86e1f9a0e4714e9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction"></a>介绍
 
@@ -118,48 +118,16 @@ EShopOnContainers 移动应用程序执行以下 Xamarin.Forms 功能：
 
 EShopOnContainers 移动应用程序解决方案将源代码和其他资源组织到项目中。 所有项目使用文件夹组织为类别的源代码和其他资源。 下表概述了构成 eShopOnContainers 移动应用程序的项目：
 
-<table>
-<thead>
-<tr class="header">
-<th>项目</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>eShopOnContainers.Core</td>
-<td>此项目是可移植类库 (PCL) 项目包含共享的代码和共享的 UI。</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.Droid</td>
-<td>此项目包含 Android 的特定代码并且 Android 应用程序的入口点。</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.iOS</td>
-<td>此项目保存特定代码的 iOS 并且 iOS 应用程序的入口点。</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UWP</td>
-<td>此项目保存通用 Windows 平台 (UWP) 的特定代码，并且是 Windows 应用程序的入口点。</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Droid</td>
-<td>此项目是 eShopOnContainers.UnitTests 项目 Android 测试运行程序。</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.TestRunner.iOS</td>
-<td>此项目是 eShopOnContainers.UnitTests 项目 iOS 测试运行程序。</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Windows</td>
-<td>此项目是 eShopOnContainers.UnitTests 项目通用 Windows 平台测试运行程序。</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UnitTests</td>
-<td>此项目包含 eShopOnContainers.Core 项目的单元测试。</td>
-</tr>
-</tbody>
-</table>
+|项目|描述|
+|--- |--- |
+|eShopOnContainers.Core|此项目是可移植类库 (PCL) 项目包含共享的代码和共享的 UI。|
+|eShopOnContainers.Droid|此项目包含 Android 的特定代码并且 Android 应用程序的入口点。|
+|eShopOnContainers.iOS|此项目保存特定代码的 iOS 并且 iOS 应用程序的入口点。|
+|eShopOnContainers.UWP|此项目保存通用 Windows 平台 (UWP) 的特定代码，并且是 Windows 应用程序的入口点。|
+|eShopOnContainers.TestRunner.Droid|此项目是 eShopOnContainers.UnitTests 项目 Android 测试运行程序。|
+|eShopOnContainers.TestRunner.iOS|此项目是 eShopOnContainers.UnitTests 项目 iOS 测试运行程序。|
+|eShopOnContainers.TestRunner.Windows|此项目是 eShopOnContainers.UnitTests 项目通用 Windows 平台测试运行程序。|
+|eShopOnContainers.UnitTests|此项目包含 eShopOnContainers.Core 项目的单元测试。|
 
 可以在包含很少或没有修改任何 Xamarin.Forms 应用中重复使用从 eShopOnContainers 移动应用程序类。
 
@@ -167,76 +135,23 @@ EShopOnContainers 移动应用程序解决方案将源代码和其他资源组�
 
 EShopOnContainers.Core PCL 项目中包含的以下文件夹：
 
-<table>
-<thead>
-<tr class="header">
-<th>文件夹</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>动画</td>
-<td>包含可启用动画在 XAML 中使用的类。</td>
-</tr>
-<tr class="even">
-<td>行为</td>
-<td>包含公开要查看类的行为。</td>
-</tr>
-<tr class="odd">
-<td>控件</td>
-<td>包含应用使用的自定义控件。</td>
-</tr>
-<tr class="even">
-<td>转换器</td>
-<td>包含将自定义逻辑应用于绑定的值转换器。</td>
-</tr>
-<tr class="odd">
-<td>效果</td>
-<td>包含<code>EntryLineColorEffect</code>类，该类用于更改特定的边框颜色<code>Entry</code>控件。</td>
-</tr>
-<tr class="even">
-<td>异常</td>
-<td>包含自定义<code>ServiceAuthenticationException</code>。</td>
-</tr>
-<tr class="odd">
-<td>扩展</td>
-<td>包含用于扩展方法<code>VisualElement</code>和<code>IEnumerable<T> </code>类。</td>
-</tr>
-<tr class="even">
-<td>帮助器</td>
-<td>包含用于应用程序的帮助器类。</td>
-</tr>
-<tr class="odd">
-<td>模型</td>
-<td>包含应用程序的模型类。</td>
-</tr>
-<tr class="even">
-<td>属性</td>
-<td>包含<code>AssemblyInfo.cs</code>，.NET 程序集元数据文件。</td>
-</tr>
-<tr class="odd">
-<td>服务</td>
-<td>包含接口和实现提供给应用程序的服务的类。</td>
-</tr>
-<tr class="even">
-<td>触发器</td>
-<td>包含<code>BeginAnimation</code>触发器，这将用于调用 XAML 中的动画。</td>
-</tr>
-<tr class="odd">
-<td>验证</td>
-<td>包含所涉及的验证数据输入的类。</td>
-</tr>
-<tr class="even">
-<td>ViewModels</td>
-<td>包含被公开到页的应用程序逻辑。</td>
-</tr>
-<tr class="odd">
-<td>视图</td>
-<td>包含应用程序的页。</td>
-</tr>
-</tbody>
-</table>
+|文件夹|描述|
+|--- |--- |
+|动画|包含可启用动画在 XAML 中使用的类。|
+|行为|包含公开要查看类的行为。|
+|控件|包含应用使用的自定义控件。|
+|转换器|包含将自定义逻辑应用于绑定的值转换器。|
+|效果|包含`EntryLineColorEffect`类，该类用于更改特定的边框颜色`Entry`控件。|
+|异常|包含自定义`ServiceAuthenticationException`。|
+|扩展|包含用于扩展方法`VisualElement`和`IEnumerable`类。|
+|帮助器|包含用于应用程序的帮助器类。|
+|模型|包含应用程序的模型类。|
+|属性|包含`AssemblyInfo.cs`，.NET 程序集元数据文件。|
+|服务|包含接口和实现提供给应用程序的服务的类。|
+|触发器|包含`BeginAnimation`触发器，这将用于调用 XAML 中的动画。|
+|验证|包含所涉及的验证数据输入的类。|
+|ViewModels|包含被公开到页的应用程序逻辑。|
+|视图|包含应用程序的页。|
 
 ##### <a name="platform-projects"></a>平台项目
 

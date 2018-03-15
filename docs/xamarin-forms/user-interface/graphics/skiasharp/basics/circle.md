@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>绘制一个简单圆圈
 
@@ -146,7 +146,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `SKPaint`对象是略高于图形绘制属性的集合。 这些对象是非常轻量。 你可以重复使用`SKPaint`对象，如此程序执行，或者可以创建多个`SKPaint`绘制属性的各种组合的对象。 你可以创建和初始化这些对象之外`PaintSurface`事件处理程序，也可以将其保存为字段页类中。
 
-尽管圆的轮廓的宽度指定为 25 像素和 #x 2014;或四分之一圆形和 #x 2014; 的半径它看起来越窄，并且没有充分的理由： 的行的半角是否被遮盖用蓝色圆圈。 自变量`DrawCircle`方法定义一个圆形的抽象几何坐标。 蓝色内部大小调整为该维度与最近的像素，但 25 个像素宽大纲跨越几何圆圈和 #x 2014;在内部和外部的下半部分上的一半。
+尽管圆的轮廓的宽度指定为 25 像素&mdash;或四分之一的圆的半径&mdash;它看起来越窄，并且没有充分的理由： 的行的半角是否被遮盖用蓝色圆圈。 自变量`DrawCircle`方法定义一个圆形的抽象几何坐标。 蓝色内部大小调整为该维度与最近的像素，但 25 个像素宽大纲跨越几何圆圈&mdash;一半内部和外部的下半部分上。
 
 中的下一步示例[集成与 xamarin.forms 结合](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md)文章演示这一操作以可视方式。
 

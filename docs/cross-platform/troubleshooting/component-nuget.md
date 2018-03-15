@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: f3dbfb52d4fbcb4dd65f695a862f6b041d2b22c0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4de4517c960395e5d7d5a8fb2c537576e15fc007
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>更新组件引用到 NuGet
 
@@ -27,6 +27,82 @@ _将组件引用替换为 NuGet 程序包添加到将来证明你的应用。_
 如果你使用的组件未出现具有等效的 NuGet 包，请阅读[不含 NuGet 迁移路径的组件](#require-update)下面一节。
 
 有关更多详细说明中的添加 NuGet 包，请参阅这些页面[Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)或[Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
+
+## <a name="opening-a-project-containing-a-component"></a>打开一个包含组件项目
+
+自 2017 年 11 月，它是在[宣布](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/)将停止使用 Xamarin 组件应用商店。 为了向前移动进行的组件 sunsetting，15.6 版本的 Visual Studio 和适用于 Mac 的 7.4 版本的 Visual Studio 不再支持你的项目中的组件。 
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+如果将项目加载到 Visual Studio 时，将显示以下对话框，以解释，你必须任何组件从你的项目中手动删除：
+
+![警报对话框说明组件已找到你的项目中，并且必须删除](component-nuget-images/component-alert-vs.png)
+
+若要删除你的项目的组件：
+
+1. 打开.csproj 文件。 为此，右键单击项目名称，然后选择**卸载项目**。 
+
+2. 在已卸载的项目上再次右键单击并选择**编辑 {你项目名称}.csproj**。
+
+3. 在文件中找到的任何引用`XamarinComponentReference`。 其外观应类似于下面的示例：
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+4. 删除对引用`XamarinComponentReference`并保存该文件。 在上面的示例中，则可以安全地删除整个`ItemGroup`。
+
+5. 已保存该文件，右键单击项目名称，然后选择**重新加载项目**。
+
+6. 你的解决方案中每个项目重复上述步骤。
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+如果你将项目加载到 Visual Studio for Mac，将显示以下对话框，以解释，你必须任何组件从你的项目中手动删除：
+
+![警报对话框说明组件已找到你的项目中，并且必须删除](component-nuget-images/component-alert.png)
+
+若要删除你的项目的组件：
+
+1. 打开.csproj 文件。 为此，右键单击项目名称，然后选择**工具 > 编辑文件**。
+
+2. 在文件中找到的任何引用`XamarinComponentReference`。 其外观应类似于下面的示例：
+
+    ```xml
+    <ItemGroup>
+      <XamarinComponentReference Include="advancedcolorpicker">
+        <Version>2.0.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="gunmetaltheme">
+        <Version>1.4.1</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+      <XamarinComponentReference Include="signature-pad">
+        <Version>2.2.0</Version>
+        <Visible>False</Visible>
+      </XamarinComponentReference>
+    </ItemGroup>
+    ```
+
+3. 删除对引用`XamarinComponentReference`并保存该文件。 在上面的示例中，则可以安全地删除整个 `ItemGroup`
+
+4. 你的解决方案中每个项目重复上述步骤。 
+
+-----
 
 <a name="contain" />
 

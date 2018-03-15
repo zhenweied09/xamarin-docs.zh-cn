@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>三种类型的贝塞尔曲线
 
@@ -20,7 +20,7 @@ _探讨如何使用 SkiaSharp 呈现三次方、 二次、 和圆锥贝塞尔曲
 
 圣皮埃尔贝塞尔 (1910年 – 1999)，在汽车公司 Renault，汽车正文计算机辅助设计的使用曲线的法语工程师命名贝塞尔曲线。
 
-贝塞尔曲线已知正在适合于交互设计： 它们是有用的行为和 #x 2014;换而言之，没有 singularities 导致曲线变得无限期还是难以操作和 #x 2014;并且它们通常是那样令人满意。 贝塞尔曲线通常定义的基于计算机的字体的字符轮廓：
+贝塞尔曲线已知正在适合于交互设计： 它们是很好地不当&mdash;换而言之，没有导致曲线变得无限期还是庞大的 singularities&mdash;并且它们通常是那样令人满意. 贝塞尔曲线通常定义的基于计算机的字体的字符轮廓：
 
 ![](beziers-images/beziersample.png "示例贝塞尔曲线")
 
@@ -411,7 +411,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="the-conic-bzier-curve"></a>圆锥的贝塞尔曲线
 
-圆锥贝塞尔曲线和 #x 2014;也称为合理二次贝塞尔曲线和 #x 2014;是对的贝塞尔曲线的系列相对较新补充。 二次贝塞尔曲线，如合理的二次贝塞尔曲线涉及起点、 终点和一个控制点。 但也需要合理的二次贝塞尔曲线*权重*值。 它称为*合理*二次，因为参数公式涉及比率。
+圆锥的贝塞尔曲线&mdash;也称为合理的二次贝塞尔曲线&mdash;是相对较新的补充，到的贝塞尔曲线的系列。 二次贝塞尔曲线，如合理的二次贝塞尔曲线涉及起点、 终点和一个控制点。 但也需要合理的二次贝塞尔曲线*权重*值。 它称为*合理*二次，因为参数公式涉及比率。
 
 参数的公式为 X 和 Y 是共享相同的分母的比率。 下面是有关分母的公式*t*范围从 0 到 1 和权重值为*w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t) ²x₀ + 2wt (1-t) x₁ + t²x₂)) ÷ d(t)
 
 y(t) = ((1 – t) ²y₀ + 2wt (1-t) y₁ + t²y₂)) ÷ d(t)
 
-也称为合理二次贝塞尔曲线*conics*因为它们完全可以表示的任何圆锥部分和 #x 2014; 段 hyperbolas、 parabolas、 省略号和圆圈。
+也称为合理二次贝塞尔曲线*conics*因为它们完全可以表示任何圆锥部分段&mdash;hyperbolas、 parabolas、 省略号和圆圈。
 
 若要向路径添加合理的二次贝塞尔曲线，使用[ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/)方法或[ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/)具有单独的重载`x`和`y`坐标：
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: df3692777eaa0791385c9ef3d114fbc8a9ab752e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c489aab66a0aaafeaaeadad0e8b95d451ec1592
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>使用 MonoGame 管道工具
 
@@ -135,7 +135,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 .Spritefont 文件是实际 XML 文件，其中可以编辑在任何文本编辑器中，包括 Visual Studio for mac。 编辑.spritefont 文件中的最常见变量包括`FontName`和`Size`属性：
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>
 
@@ -147,7 +147,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 我们将在任何文本编辑器中打开该文件。 作为我们**arial 36.spritefont**名称所示，我们将其保留`FontName`作为`Arial`但更改`Size`值赋给`36`:
 
 
-```csharp
+```xml
     <!-- Modify this string to change the font that will be imported. -->
     <FontName>Arial</FontName>   
   

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: f8b748ad1b57218d1e8aab11bdc1037cf3cfa14c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 98c38001ea7751c419d4be5b0f68339b06ec656f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-restful-web-service"></a>使用 rest 样式 Web 服务
 
@@ -49,42 +49,12 @@ REST 的简单性已帮助使其用于访问移动应用程序中的 web 服务�
 
 REST 服务使用 ASP.NET Core 编写，并提供以下操作：
 
-<table>
-  <thead>
-    <tr>
-      <th>操作</th>
-      <th>HTTP 方法</th>
-      <th>相对 URI</th>
-      <th>参数</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>获取待办事项的列表</td>
-      <td>GET</td>
-      <td>/api/todoitems/</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>创建新的待办事项</td>
-      <td>发布</td>
-      <td>/api/todoitems/</td>
-      <td>JSON 格式的 <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>更新待办事项</td>
-      <td>PUT</td>
-      <td>/api/todoitems/</td>
-      <td>JSON 格式的 <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>删除待办事项</td>
-      <td>DELETE</td>
-      <td>/api/todoitems/{id}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+|操作|HTTP 方法|相对 URI|参数|
+|--- |--- |--- |--- |
+|获取待办事项的列表|GET|/api/todoitems/|
+|创建新的待办事项|发布|/api/todoitems/|JSON 格式的 TodoItem|
+|更新待办事项|PUT|/api/todoitems/|JSON 格式的 TodoItem|
+|删除待办事项|DELETE|/api/todoitems/{id}|
 
 其中包含 Uri 的大多数包括`TodoItem`路径中的 ID。 例如，若要删除`TodoItem`其 ID 为`6bb8a868-dba1-4f1a-93b7-24ebce87e243`，客户端发送 DELETE 请求到`http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`。 有关示例应用程序中使用的数据模型的详细信息，请参阅[对数据进行建模](~/xamarin-forms/data-cloud/walkthrough.md)。
 

@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>备用资源
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/09/2018
 有关参考下面列出了可能的限定符：
 
 - **MCC 和 mnc 是否** &ndash; [移动国家/地区代码](http://en.wikipedia.org/wiki/List_of_mobile_country_codes)(MCC) 和 （可选）[移动网络代码](http://en.wikipedia.org/wiki/Mobile_Network_Code)（mnc 是否）。 SIM 卡将提供 MCC，而设备连接到的网络将提供 mnc。 虽然可以使用移动国家/地区代码的目标区域设置到，建议方法是使用下面指定的语言限定符。 例如，为德国，目标资源是限定符`mcc262`。 对在美国，T 移动的目标资源限定符是`mcc310-mnc026`。
-  有关移动国家/地区代码和移动网络代码的完整列表请参阅<http://mcclist.com/>。
+  有关移动国家/地区代码和移动网络代码的完整列表请参阅<http://mcc-mnc.com/>。
 
 - **语言**&ndash;两个字母[ISO 639-1 语言代码](http://en.wikipedia.org/wiki/ISO_639-1)和 （可选） 跟两个字母[ISO 3166-alpha 2 区域代码](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)。 
   如果提供了这两个限定符，则由分隔`-r`。 例如，为目标讲法语的区域设置则的限定符`fr`使用。 若要面向加拿大法语的区域设置中，`fr-rCA`将使用。 有关语言代码和地区代码的完整列表，请参阅[的表示形式的名称的语言代码](http://www.loc.gov/standards/iso639-2/php/English_list.php)和[国家/地区名称和代码元素](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm)。

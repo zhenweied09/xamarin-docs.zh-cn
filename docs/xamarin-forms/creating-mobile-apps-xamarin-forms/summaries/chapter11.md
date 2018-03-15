@@ -7,11 +7,11 @@ ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ccae97021e86eb1375f948c5ad126253c6088037
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>第 11 章的摘要。 可绑定的基础结构
 
@@ -47,9 +47,9 @@ Xamarin.Forms 定义名为增强的属性定义*可绑定属性*包装[ `Bindabl
 
 每当一个属性，由可绑定属性更改，支持`BindableObject`激发[ `PropertyChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.PropertyChanged/)标识已更改的属性的事件。 属性设置为相同的值时，不激发此事件。
 
-由可绑定属性，以及某些 Xamarin.Forms 类与 #x 2014; 不支持某些属性如`Span`& #x 2014; 不派生自`BindableObject`。 仅派生自的类`BindableObject`可以支持可绑定属性，因为`BindableObject`定义`SetValue`和`GetValue`方法。
+某些属性不受可绑定属性和一些 Xamarin.Forms 类&mdash;如`Span`&mdash;是非派生自`BindableObject`。 仅派生自的类`BindableObject`可以支持可绑定属性，因为`BindableObject`定义`SetValue`和`GetValue`方法。
 
-因为`Span`不是派生自`BindableObject`，无其属性和 #x 2014年; 如`Text`& #x 2014; 由可绑定属性。 正因如此`DynamicResource`上设置`Text`属性`Span`引发的异常[ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic)示例前一章。 [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode)示例演示如何在代码中设置动态资源[ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/)方法由定义`Element`。 第一个参数是类型的对象`BindableProperty`。
+因为`Span`不是派生自`BindableObject`，其属性&mdash;如`Text`&mdash;由可绑定属性。 正因如此`DynamicResource`上设置`Text`属性`Span`引发的异常[ **DynamicVsStatic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic)示例前一章。 [ **DynamicVsStaticCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode)示例演示如何在代码中设置动态资源[ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/p/Xamarin.Forms.BindableProperty/System.String/)方法由定义`Element`。 第一个参数是类型的对象`BindableProperty`。
 
 同样， [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/)方法由定义`BindableObject`具有类型的第一个参数`BindableProperty`。
 

@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>第 4 章的摘要。 滚动堆栈
 
@@ -67,9 +67,9 @@ ms.lasthandoff: 03/12/2018
 
 对于垂直`StackLayout`、 每个子级是垂直不受约束和获取垂直槽具体取决于子级的高度，在这种情况下`VerticalOptions`设置无关。
 
-如果垂直`StackLayout`本身是不受约束 （& a) #x 2014; 即如果其`VerticalOptions`设置`Start`， `Center`，或`End`，然后的高度`StackLayout`是子级的总高度。
+如果垂直`StackLayout`本身是不受约束&mdash;即如果其`VerticalOptions`设置`Start`， `Center`，或`End`，然后的高度`StackLayout`是子级的总高度。
 
-但是，如果垂直`StackLayout`垂直约束 （& a) #x 2014年; 如果其`VerticalOptions`设置`Fill`& #x 2014; 然后的高度`StackLayout`将其容器，它可能大于使用的总高度的高度子级。 如果是这样，并且如果至少一个子有`VerticalOptions`设置，并`Expands`标志的`true`，然后中的额外空间`StackLayout`具有所有这些子项之间平均分配`Expands`标志的`true`。 子级的总高度然后等于的高度`StackLayout`，和`Alignment`属于`VerticalOptions`设置确定子如何垂直放置在其插槽中。
+但是，如果垂直`StackLayout`垂直约束&mdash;如果其`VerticalOptions`设置`Fill`&mdash;然后的高度`StackLayout`将其容器，它可能大于总的高度及其所有子级的高度。 如果是这样，并且如果至少一个子有`VerticalOptions`设置，并`Expands`标志的`true`，然后中的额外空间`StackLayout`具有所有这些子项之间平均分配`Expands`标志的`true`。 子级的总高度然后等于的高度`StackLayout`，和`Alignment`属于`VerticalOptions`设置确定子如何垂直放置在其插槽中。
 
 此进行了演示[ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo)示例。
 

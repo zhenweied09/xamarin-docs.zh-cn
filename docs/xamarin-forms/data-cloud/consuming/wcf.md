@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>使用 Windows Communication Foundation (WCF) Web 服务
 
@@ -41,37 +41,12 @@ ASP.NET Web 服务 (ASMX) 和 WCF，之间的差异，但是务必了解 WCF 支
 
 WCF 服务提供以下操作：
 
-<table>
-  <thead>
-    <tr>
-      <th>操作</th>
-      <th>描述</th>
-      <th>参数</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>获取待办事项的列表</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>创建新的待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>更新待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>删除待办事项</td>
-      <td>序列化的 XML <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|操作|描述|参数|
+|--- |--- |--- |
+|GetTodoItems|获取待办事项的列表|
+|CreateTodoItem|创建新的待办事项|XML 序列化 TodoItem|
+|EditTodoItem|更新待办事项|XML 序列化 TodoItem|
+|DeleteTodoItem|删除待办事项|XML 序列化 TodoItem|
 
 有关应用程序中使用的数据模型的详细信息，请参阅[对数据进行建模](~/xamarin-forms/data-cloud/walkthrough.md)。
 

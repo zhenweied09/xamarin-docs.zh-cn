@@ -7,11 +7,11 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09f63dd418ea1fb523c028edb02c28c22bfdccd1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4f76b1060ee8a672319683525470aee00e3db001
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>第 17 章的摘要。 控制网格
 
@@ -29,16 +29,16 @@ ms.lasthandoff: 03/12/2018
 
 在 XAML 中， [ `GridLengthTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/)将转换到的简单文本字符串`GridLength`值。 在后台， [ `GridLength`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/)创建`GridLength`值根据数量和类型的值[ `GridUnitType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/)，一个包含三个成员的枚举：
 
-- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) & #x 2014;独立于设备的单位 （在 XAML 中的数字） 中指定的宽度或高度
-- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) & #x 2014;高度或宽度是根据单元格内容 （如在 XAML 中的"自动"） 的自动调整大小
-- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) & #x 2014;按比例分配剩余高度或宽度 (带数字"\*"，调用*星型*，在 XAML 中)
+- [`Absolute`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Absolute/) &mdash; 独立于设备的单位 （在 XAML 中的数字） 中指定的宽度或高度
+- [`Auto`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Auto/) &mdash; 高度或宽度是根据单元格内容 （如在 XAML 中的"自动"） 的自动调整大小
+- [`Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) &mdash; 按比例分配剩余高度或宽度 (带数字"\*"，调用*星型*，在 XAML 中)
 
-每个子`Grid`还必须被分配行和列 （显式或隐式）。 跨越行和列范围都是可选的。 这些被指定使用附加的可绑定的属性和 #x 2014;属性定义的`Grid`但设置的子级`Grid`。 `Grid` 定义四个静态附加可绑定属性：
+每个子`Grid`还必须被分配行和列 （显式或隐式）。 跨越行和列范围都是可选的。 这些指定使用附加的可绑定属性&mdash;属性定义的`Grid`但设置的子级`Grid`。 `Grid` 定义四个静态附加可绑定属性：
 
-- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) & #x 2014;从零开始的行;默认值为 0
-- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) & #x 2014;从零开始的列。默认值为 0
-- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) & #x 2014;数的行子跨越;默认值为 1
-- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) & #x 2014;数的列子跨越;默认值为 1
+- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &mdash; 从零开始的行;默认值为 0
+- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &mdash; 从零开始的列。默认值为 0
+- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &mdash; 数的行子跨越;默认值为 1
+- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &mdash; 数的列子跨越;默认值为 1
 
 在代码中，程序可以使用八个静态方法来设置和获取这些值：
 

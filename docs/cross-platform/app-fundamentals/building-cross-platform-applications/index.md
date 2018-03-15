@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 7934738a546a266036573b81e15ef9b2fa28d7b4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 53c32003cd1a77a3aa5feb0ab26cedeab27789dc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
@@ -22,19 +22,19 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="building-cross-platform-mobile-apps"></a>构建跨平台移动应用程序
 
- [概述](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-0-overview.md)
+ [概述](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
- [第 1 – 了解 Xamarin 移动平台部分](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-1-understanding-the-xamarin-mobile-platform.md)
+ [第 1 – 了解 Xamarin 移动平台部分](~/cross-platform/app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md)
 
- [第 2 部分 – 体系结构](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-2-architecture.md)
+ [第 2 部分 – 体系结构](~/cross-platform/app-fundamentals/building-cross-platform-applications/architecture.md)
 
- [第 3 – 部分设置 Xamarin 跨平台解决方案](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-3-setting-up-a-xamarin-cross-platform-solution.md)
+ [第 3 – 部分设置 Xamarin 跨平台解决方案](~/cross-platform/app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md)
 
- [第 4 – 部分处理多个平台](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-4-platform-divergence-abstraction-divergent-implementation.md)
+ [第 4 – 部分处理多个平台](~/cross-platform/app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md)
 
- [第 5 – 实际的代码共享策略部分](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-5-practical-code-sharing-strategies.md)
+ [第 5 – 实际的代码共享策略部分](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
 
- [第 6 部分 - 测试和应用商店审批](~/cross-platform/app-fundamentals/building-cross-platform-applications/part-6-testing-and-app-store-approvals.md)
+ [第 6 部分 - 测试和应用商店审批](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 

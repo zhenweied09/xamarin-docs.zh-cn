@@ -6,12 +6,12 @@ ms.assetid: 762572F0-173A-D994-0510-8F36BEF3D487
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3d9c747cdf8e43f33b9310ac1156550066b400eb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 5cf5bd38612f0f763e30456b0dd42198a3c0ff06
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="default-resources"></a>默认资源
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/09/2018
 -  **anim** &ndash;描述 XML 文件*之间*动画。 之间动画是文本的一系列的动画说明映像或增长大小的视图对象或示例中，旋转的内容进行转换。 之间动画被限制为仅查看的对象。
 
 -  **颜色**&ndash;描述颜色的状态列表的 XML 文件。 若要了解颜色状态列表，请考虑如按钮 UI 小组件。
-   这可能会增加具有不同的状态，如按下还是禁用状态，并按钮可能处于状态每次更改颜色。 列表用表示状态列表。
+   它可能具有不同的状态，如按下还是禁用状态，并按钮可能处于状态每次更改颜色。 列表用表示状态列表。
 
 -  **可绘制**&ndash;可绘制资源是用于图形可编译到应用程序，然后访问 API 调用或引用的其他 XML 资源的常规概念。
    Drawables 的一些示例是位图文件 （.png、.gif、.jpg）、 特殊可调整大小的位图称为[包含 9 个修补程序](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch)，列出了状态，在 XML 等中定义的泛型形状。

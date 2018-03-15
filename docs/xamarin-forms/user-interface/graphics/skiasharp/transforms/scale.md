@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>缩放变换
 
@@ -44,7 +44,7 @@ Translate 因素的默认值为 0;缩放比例的默认值为 1。
 public void Scale (Single s)
 ```
 
-这称为*各向同性*缩放 & #x 2014年; 中的缩放，它相同两个方向。 各向同性缩放保留对象的长宽比。
+这称为*各向同性*缩放&mdash;缩放，它相同在两个方向。 各向同性缩放保留对象的长宽比。
 
 第二个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/)方法允许你指定的水平和垂直缩放的不同值：
 
@@ -168,7 +168,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "三重的居中比例页的屏幕截图")](scale-images/centeredscale-large.png#lightbox "三重的居中比例页的屏幕截图")
 
-`Slider`在此程序中的元素具有的范围 （&） #x 2013; 10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 Windows 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
+`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 Windows 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
 
 此第四个版本的`Scale`方法是实际的快捷方式。 你可能想要了解通过将其原理`Scale`中此代码替换为以下方法：
 

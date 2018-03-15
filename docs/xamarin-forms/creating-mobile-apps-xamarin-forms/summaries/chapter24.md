@@ -7,11 +7,11 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: db950915decd2bba216c7dcd6031797037a7c8e0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>第 24 章的摘要。 页导航
 
@@ -118,7 +118,7 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="patterns-of-data-transfer"></a>数据传输的模式
 
-它通常是需要共享页与 #x 2014; 之间的数据若要将数据传输到导航页中，和有关页后，可以将数据返回到调用它的页。 有几种方法执行此操作。
+它通常是共享页面之间的数据所需&mdash;来传输数据到导航页中，和有关页后，可以将数据返回到调用它的页。 有几种方法执行此操作。
 
 ### <a name="constructor-arguments"></a>构造函数自变量
 

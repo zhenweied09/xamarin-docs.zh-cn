@@ -8,11 +8,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7d50e5a33020de822f96a8bf2f713a8c5b9d3020
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="svg-path-data"></a>SVG 路径数据
 
@@ -423,7 +423,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-特殊的内容是使用进行第二个指针，但是。 因为在更新时钟每隔 16 毫秒，`Millisecond`属性`DateTime`值可能被用于第二个手动动画扫描，而不是一个在离散跳转中移动从第二个为第二个。 但此代码不允许是平滑的移动。 相反，它使用 Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/)和[ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/)动画的缓动函数的一种不同的移动。 这些缓动函数会导致第二个指针在的 jerkier 的方式 （&） #x 2014; 中移动只能回滚一个小之前它将移动，并且然后略有这遗憾的过度解决其目标，效果无法重现这些静态的屏幕截图中：
+特殊的内容是使用进行第二个指针，但是。 因为在更新时钟每隔 16 毫秒，`Millisecond`属性`DateTime`值可能被用于第二个手动动画扫描，而不是一个在离散跳转中移动从第二个为第二个。 但此代码不允许是平滑的移动。 相反，它使用 Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/)和[ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/)动画的缓动函数的一种不同的移动。 这些缓动函数会导致第二个指针移动方式 jerkier&mdash;只能回滚一个小之前它将移动，并且然后略有这遗憾的过度解决其目标，效果无法重现这些静态的屏幕截图中：
 
 [![](path-data-images/prettyanalogclock-small.png "三重的非常模拟时钟页面屏幕截图")](path-data-images/prettyanalogclock-large.png#lightbox "非常模拟时钟页面的三个屏幕截图")
 

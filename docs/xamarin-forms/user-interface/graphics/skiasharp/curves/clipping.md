@@ -8,11 +8,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e84bce5d4280ded801ed58999a2570d3c6bd327e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>使用路径和区域的剪辑
 
@@ -267,7 +267,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKClipOperation clipOp)
 
 你仍然可以使用`SKRegionOperation`枚举，但它需要定义方面的剪辑区域[ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/)对象。
 
-一个新创建`SKRegion`对象描述的空白区域。 在对象上的第一次调用通常是[ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/)以便区域描述的矩形区域。 参数`SetRect`是`SKRectI`值 & #x 2014年; 的矩形值与整数属性。 然后，你可以调用[ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/)与`SKPath`对象。 这将创建的路径，内部相同但剪辑到的初始的矩形区域的区域。
+一个新创建`SKRegion`对象描述的空白区域。 在对象上的第一次调用通常是[ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/)以便区域描述的矩形区域。 参数`SetRect`是`SKRectI`值&mdash;的矩形值与整数属性。 然后，你可以调用[ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/)与`SKPath`对象。 这将创建的路径，内部相同但剪辑到的初始的矩形区域的区域。
 
 `SKRegionOperation`枚举仅派上用场时调用的一个[ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/)方法重载，例如这个：
 

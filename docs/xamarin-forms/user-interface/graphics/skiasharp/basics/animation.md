@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="basic-animation"></a>基本动画
 
@@ -107,7 +107,7 @@ async Task AnimationLoop()
 
 ```
 
-`while`循环开始通过获取周期时间与`Slider`。 这是以秒为单位，例如，5 时间。 第二个语句计算值为`t`为*时间*。 有关`cycleTime`为 5，`t`增加从 0 到 1 每隔 5 秒。 自变量`Math.Sin`函数中的第二个语句范围从 0 到 2π 每隔 5 秒。 `Math.Sin`函数将返回值范围从 0 到 1 回 0，然后执行到和 #x 2013年; 1 和 0 每隔 5 秒，但其速度更慢更改值时附近 1 或为-1 的值。 值 1 添加的值始终为正数，从而然后它除以 2，因此值范围为 ½ 到 ½ 为介于 0 到 ½，但速度较慢的值时大约 1 和 0 到 1。 这存储在`scale`字段中，与`SKCanvasView`失效。
+`while`循环开始通过获取周期时间与`Slider`。 这是以秒为单位，例如，5 时间。 第二个语句计算值为`t`为*时间*。 有关`cycleTime`为 5，`t`增加从 0 到 1 每隔 5 秒。 自变量`Math.Sin`函数中的第二个语句范围从 0 到 2π 每隔 5 秒。 `Math.Sin`函数将返回值从 0 到 1 后为 0，然后执行到&ndash;1 和 0 每隔 5 秒，但其速度更慢更改值时附近 1 或为-1 的值。 值 1 添加的值始终为正数，从而然后它除以 2，因此值范围为 ½ 到 ½ 为介于 0 到 ½，但速度较慢的值时大约 1 和 0 到 1。 这存储在`scale`字段中，与`SKCanvasView`失效。
 
 `PaintSurface`方法使用此`scale`要计算的椭圆的两个轴值：
 
