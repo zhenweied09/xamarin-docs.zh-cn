@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: 024e73ddfe517f6fe9766607fa17efbd5703234c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2a2b5a1135a4d08c2a89caf0fbf4b2cdb1ac624c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="system-requirements"></a>系统要求
 
@@ -32,7 +32,7 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 
 此表显示了可使用不同开发工具和操作系统组合生成的平台：
 
-[!include[](~/cross-platform/includes/development-environment.html)]
+[!include[](~/cross-platform/includes/development-environment.md)]
 
 
 > [!NOTE]
@@ -44,7 +44,7 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 
 使用 Mac 计算机进行 Xamarin 开发需要以下软件/SDK 版本。 检查操作系统版本，并按照 [Xamarin 安装程序](#install)相关说明操作。
 
-[!include[](~/cross-platform/includes/macos-requirements.html)]
+[!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
 > 注意：可通过 [developer.apple.com](https://developer.apple.com/xcode/download/) 或 Mac App Store 安装（和更新）Xcode。
@@ -53,7 +53,7 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 
 可通过 USB 将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（可直接在开发计算机上测试 Xamarin.Mac 应用；Apple Watch 应用首先部署到配对的 iPhone）。
 
-[!include[](~/cross-platform/includes/macos-testing.html)]
+[!include[](~/cross-platform/includes/macos-testing.md)]
 
 
 <a name="windows" />
@@ -64,7 +64,7 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 检查操作系统版本（请确保使用的不是 Express 版本的 Visual Studio - 如果使用的是该版本，则请考虑更新至 Community 版本）。
 Visual Studio 2015 和 2017 安装程序包括自动安装 Xamarin 的选项。
 
-[!include[](~/cross-platform/includes/windows-requirements.html)]
+[!include[](~/cross-platform/includes/windows-requirements.md)]
 
 
 > [!NOTE]
@@ -78,7 +78,7 @@ Visual Studio 2015 和 2017 安装程序包括自动安装 Xamarin 的选项。
 
 可通过 USB 将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（iOS 设备必须连接到 Mac 计算机，而不是运行 Visual Studio 的计算机）。
 
-[!include[](~/cross-platform/includes/windows-testing.html)]
+[!include[](~/cross-platform/includes/windows-testing.md)]
 
 
 > [!NOTE]

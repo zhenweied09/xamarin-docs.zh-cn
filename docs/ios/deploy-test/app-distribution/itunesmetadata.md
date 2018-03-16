@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 21ae62ee0d43e688e63ca8b7feb6a8aebb227cd5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3bdf00a9e50b2bf66f51c825306c2ba8e6365dd2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-itunesmetadataplist-file"></a>iTunesMetadata.plist 文件
 
@@ -239,7 +239,7 @@ ms.lasthandoff: 02/27/2018
 
 对于 iOS 应用程序，Apple 当前定义以下的类型和类型 ID：
 
-[!include[](~/ios/includes/table-appstore.html)]
+[!include[](~/ios/includes/table-appstore.md)]
 
 有关详细信息，请参阅 Apple 的 [Genre IDs Appendix](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html)（类型 ID 附录）文档。
 
