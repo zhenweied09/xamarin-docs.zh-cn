@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>使用用户默认值
 
-_本文介绍如何使用 NSUserDefault Xamarin iOS 应用程序或扩展中保存默认设置。_
+_本文介绍如何使用 NSUserDefault Xamarin.iOS 应用程序或扩展中保存默认设置。_
 
 
 `NSUserDefaults`类提供一种 iOS 应用和扩展，以编程方式与整个系统的默认系统交互。 通过使用默认系统，用户可以配置应用的行为或样式以满足他们的首选项 （基于应用程序的设计）。 例如，若要提供皇室度量值的度量值的 vs 中的数据或选择一个给定的用户界面主题。
 
-当使用应用组、`NSUserDefaults`还提供给定组中的应用程序 （或扩展） 之间进行通信的方法。
+与应用组一起使用时`NSUserDefaults`还提供给定组中的应用程序 （或扩展） 之间进行通信的方法。
 
 <a name="About-User-Defaults" />
 
@@ -46,7 +46,7 @@ _本文介绍如何使用 NSUserDefault Xamarin iOS 应用程序或扩展中保�
 - 应用的捆绑标识符域。
 - `NSGlobalDomain`包含由所有应用共享的默认值。
 - 为每个用户单独的域的首选语言。
-- `NSRegistationDomain`与一组可通过应用程序以确保搜索始终成功修改的临时默认设置。
+- `NSRegistrationDomain`与一组可通过应用程序以确保搜索始终成功修改的临时默认设置。
 
 若要访问共享的用户默认实例，请使用下面的代码：
 
@@ -61,9 +61,9 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 如前所述，通过使用应用组、`NSUserDefaults`可用于进行应用程序 （或扩展） 之间的通信给定组中。 首先，你将需要确保，应用程序组和所需的应用程序 Id 是否已正确配置中**证书、 标识符和配置文件**节[iOS 开发人员中心](https://developer.apple.com/devcenter/ios/)和已安装在开发环境中。
 
-接下来，你的应用程序和/或扩展的项目将需要为一个有效的应用程序 Id，上面创建的`Entitlements.plist`文件启用和指定的应用程序组，它获取的包含在应用捆绑包。
+接下来，需要有一个有效的应用程序 Id，上面创建的应用程序和/或扩展项目和`Entitlements.plist`文件具有要包括在启用和指定的应用程序组与应用程序捆绑包。
 
-与就地此 all，可以使用下面的代码访问的共享的应用程序组用户的默认值：
+与就地此 all，共享应用程序组用户默认设置可以访问使用下面的代码：
 
 ```csharp
 // Get App Group User Defaults

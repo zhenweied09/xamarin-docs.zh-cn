@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: c5bafe12c2cf8c5f8d75757b22223c708ae248dc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef4de2d544f3bcfb661b29dd90de738ae0442373
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 视图
 
@@ -107,7 +107,7 @@ _Xamarin.Forms 视图是跨平台移动用户界面的构建基块。_
 
 |     |     |
 | --- | --- |
-| [`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) 允许用户与平台日期选取器选择一个日期。 设置与允许的日期范围[ `MinimumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/)和[ `MaximumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/)属性。 [ `Date` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/)属性是所选的日期和[ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/)该属性变化时触发事件。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) | [![包含 DatePicker 示例](views-images/DatePicker.png "DatePicker 示例")](views-images/DatePicker-Large.png#lightbox "DatePicker 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/DatePickerDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/DatePickerDemoPage.xaml) |
+| [`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) 允许用户与平台日期选取器选择一个日期。 设置与允许的日期范围[ `MinimumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/)和[ `MaximumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/)属性。 [ `Date` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/)属性是所选的日期和[ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/)该属性变化时触发事件。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) / [指南](~/xamarin-forms/user-interface/datepicker.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker) | [![包含 DatePicker 示例](views-images/DatePicker.png "DatePicker 示例")](views-images/DatePicker-Large.png#lightbox "DatePicker 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/DatePickerDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/DatePickerDemoPage.xaml) |
 |     |     |
 
 ### <a name="timepicker"></a>TimePicker

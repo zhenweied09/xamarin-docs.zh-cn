@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
 
@@ -69,7 +69,7 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 ## <a name="ios-templates"></a>iOS 模板
 
 
-适用于 Mac 的 visual Studio 不提供一个空的模板。 向 Apple 建议作为的主要方式创建 UI 的情节提要支持附带的所有模板。 但是，很可能到完全在代码中创建你的 UI 中。 
+适用于 Mac 的 visual Studio 不提供一个空的模板。 向 Apple 建议作为的主要方式创建 UI 的情节提要支持附带的所有模板。 但是，很可能在代码中完全创建你的 UI。 
 
 下面的步骤将指导你完成删除从应用程序的情节提要： 
 
@@ -316,7 +316,7 @@ Window.RootViewController = navController;
 
 iOS 用户界面由组成查看层次结构。 作为子视图的某些父视图添加了其他视图，例如标签、 按钮、 滑块等。
 
-例如，让我们编辑到`CustomViewController`来创建用户可以在其中输入用户名和密码登录屏幕。 屏幕将包括两个文本字段和一个按钮。
+例如，让我们编辑`CustomViewController`来创建用户可以在其中输入用户名和密码登录屏幕。 屏幕将包括两个文本字段和一个按钮。
 
 ### <a name="adding-the-text-fields"></a>添加文本字段
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>添加按钮的功能
 
-单击按钮时，你的用户应发生某些事件是否对此进行警报，或者导航至另一个屏幕。 
+单击按钮时，你的用户会认为发生某些事件。 例如，会显示一个警告，或导航执行到另一个屏幕。 
 
 让我们添加一些代码要推送到导航堆栈的第二个的视图控制器。
 
@@ -497,7 +497,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 ### <a name="inheriting-from-uiview"></a>从 UIView 继承
 
-我们需要做的第一件事是创建自定义视图的类。 我们将执行这使用**类**添加空类名为 Visual Studio 中的模板`CircleView`。 基类应设置为`UIView`，后者回想一下处于`UIKit`命名空间。 我们还需要`System.Drawing`以及命名空间。 其他各种`System.*`命名空间将不会在此示例中使用，因此请尝试删除它们。
+我们需要做的第一件事是创建自定义视图的类。 我们将执行这使用**类**添加空类名为 Visual Studio 中的模板`CircleView`。 基类应设置为`UIView`，我们撤回它处于`UIKit`命名空间。 我们还需要`System.Drawing`以及命名空间。 其他各种`System.*`命名空间将不会在此示例中使用，因此请尝试删除它们。
 
 类应如下所示：
 

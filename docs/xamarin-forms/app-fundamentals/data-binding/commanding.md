@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0456742ca30257670375e3ae781dcdc49707e2ce
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="the-command-interface"></a>命令界面
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 
 若要允许之间的数据绑定`Button`和 ViewModel，`Button`定义两个属性：
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) 类型 [`ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/)
+- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) 类型 <xref:System.Windows.Input.ICommand>
 - [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) 类型 `Object`
 
 若要使用命令接口，您定义数据绑定面向`Command`属性`Button`其中源是中的类型视图模型的属性`ICommand`。 视图模型包含与该关联代码`ICommand`时单击该按钮时执行的属性。 你可以设置`CommandParameter`到任意数据来区分多个按钮，如果它们是所有绑定到同一`ICommand`视图模型中的属性。
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="the-icommand-interface"></a>ICommand 接口
 
-[ `ICommand` ](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/)接口不属于 Xamarin.Forms。 在中改为定义[ `System.Windows.Input` ](https://developer.xamarin.com/api/namespace/System.Windows.Input/)命名空间，它包括两个方法和一个事件：
+<xref:System.Windows.Input.ICommand>接口不属于 Xamarin.Forms。 在中改为定义[System.Windows.Input](xref:System.Windows.Input)命名空间，它包括两个方法和一个事件：
 
 ```csharp
 public interface ICommand

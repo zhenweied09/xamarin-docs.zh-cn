@@ -6,12 +6,12 @@ ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: da6815a073d93379c8564f3ff91023deb20b0d55
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: c5e7cb864fc37a5365992fdff12a5be43dcccdd5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="gallery"></a>库
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/09/2018
 
 启动一个名为的新项目*HelloGallery*。
 
-![新的 Android 项目，在新的解决方案对话框的屏幕截图](gallery-images/hellogallery1.png)
+[![新的 Android 项目，在新的解决方案对话框的屏幕截图](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
 查找你想要使用，某些照片或[下载这些示例图片](http://developer.android.com/shareables/sample_images.zip)。
 将图像文件添加到项目的**资源/Drawable**目录。 在**属性**窗口中，为每个设置生成操作**AndroidResource**。

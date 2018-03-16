@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin 实时播放器安装程序
 
@@ -68,7 +68,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
   如果没有设备配对，QR 代码将显示的说明来对设备：
 
-    ![对设备窗口](install-images/manage-empty-windows.png)
+  ![对设备窗口](install-images/manage-empty-windows.png)
 
   如果设备不能用于配对，则会出现错误。
 
@@ -111,11 +111,11 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
   如果设备没有配对，QR 代码将显示包含有关如何对设备的说明：
 
-    ![对设备窗口](install-images/manage-empty.png)
+  ![对设备窗口](install-images/manage-empty.png)
 
   如果设备不能用于配对，将出现错误：
 
-    ![无法连接到设备错误消息](install-images/error-cannot-connect.png)
+  ![无法连接到设备错误消息](install-images/error-cannot-connect.png)
 
 
 -----

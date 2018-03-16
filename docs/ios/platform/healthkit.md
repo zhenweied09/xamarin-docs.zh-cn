@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4f85f208c12561b6db9800d963e2d7bf32c2a4d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -67,7 +67,7 @@ Xamarin iOS 8 应用程序可以使用 HealthKit API 之前，它必须正确配
 
 创建显式**应用程序 ID**且相应**预配配置文件**Apple 的中完成[iOS 开发人员中心](https://developer.apple.com/devcenter/ios/index.action)。 
 
-你当前**应用 Id**中列出[证书、 标识符和配置文件](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action)的开发人员中心的部分。 通常情况下，此列表将显示为**ID**值`*`，以指示，**应用程序 ID*- **名称**可以用于任意数量的后缀。 此类*通配符应用 Id*不能使用运行状况工具包。
+你当前**应用 Id**中列出[证书、 标识符和配置文件](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action)的开发人员中心的部分。 通常情况下，此列表将显示为**ID**值`*`，以指示，**应用程序 ID** - **名称**可以用于任意数量的后缀。 此类*通配符应用 Id*不能使用运行状况工具包。
  
 若要创建显式**应用程序 ID**，单击 **+** 中右上方以使你转到按钮**注册 iOS 应用程序 ID**页：
 

@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>片段
 
@@ -53,9 +53,9 @@ _Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的�
 
 [![选择在 Android SDK 管理器中的 API 级别](images/02.png)](images/02.png#lightbox)
 
-片段是位于 Xamarin.Android 4.0 和更高版本。 Xamarin.Android 应用程序必须至少为目标 API 级别 11 (Android 3.0) 或更高版本才能使用片段。 可能的项目选项中设置目标框架，如下所示：
+片段是位于 Xamarin.Android 4.0 和更高版本。 Xamarin.Android 应用程序必须至少为目标 API 级别 11 (Android 3.0) 或更高版本才能使用片段。 可能在项目属性如下所示设置目标框架：
 
-[![在项目选项中设置的目标框架 API 级别](images/03.png)](images/03.png#lightbox)
+[![在项目选项中设置的目标框架 API 级别](images/03-sml.png)](images/03.png#lightbox)
 
 很可能要在较旧版本的 Android 通过使用 Android 的支持包和 Xamarin.Android 4.2 或更高版本中使用片段。 在本部分文档中的更详细地介绍了如何执行此操作。
 

@@ -6,38 +6,33 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>使用支持包的支持预 Honeycomb Android
 
 *Android 支持包*包含回端口一些新 API 的库&ndash;如片段&ndash;与旧版本的 Android。 因此通过添加 Android 的支持包，我们可以运行我们的应用程序 Android 2.3 设备上的以下屏幕所示：
 
-![片段演练屏幕快照](supporting-pre-honeycomb-images/00.png)
-
-![详细信息活动屏幕快照](supporting-pre-honeycomb-images/01.png)
-
+[![片段演练和详细信息活动的屏幕截图](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## <a name="adding-the-support-package"></a>添加支持包
 
 Android 支持包不会自动添加到 Xamarin.Android 应用程序。 Xamarin 提供[Android 支持库 v4 NuGet 包](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)来简化支持库添加到 Xamarin.Android 应用程序。
 若要将支持包包含在应用程序包括你 Xamarin.Android [Android 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)组件入 Xamarin.Android 项目中，如下面的屏幕截图中所示：
 
-![添加 Android 支持库 v4 包](supporting-pre-honeycomb-images/02.png)
+[![添加 Android 支持库 v4 包](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 已添加包后，更改为 Android 2.2 或更高的目标框架：
 
-![更改目标框架 API 级别的屏幕截图](supporting-pre-honeycomb-images/03.png)
+[![更改目标框架 API 级别的屏幕截图](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 此外，确保最低 Android 版本面向相同的 API 级别：
 
-![最低 Android 版本设置的屏幕截图](supporting-pre-honeycomb-images/04.png)
-
-
+[![最低 Android 版本设置的屏幕截图](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>更改 MainActivity 从 FragmentActivity 派生
 

@@ -6,21 +6,20 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 8be599f5b6541ef738ffa47a01374fd7f90044a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 693ada611dc24d3bb22de7c51efe378939a732ad
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="threading"></a>线程
 
-Xamarin.iOS 运行时访问的开发人员对.NET 线程处理 Api，请同时显式使用的线程 ( `System.Threading.Thread, System.Threading.ThreadPool`)、 隐式时使用异步委托模式或 BeginXXX 方法，以及完整范围的 Api 支持任务并行库。
+Xamarin.iOS 运行时可使开发人员访问.NET 线程处理 Api，同时使用线程时显式 (`System.Threading.Thread, System.Threading.ThreadPool`) 和隐式时使用异步委托模式或 BeginXXX 方法，以及完整范围的 Api 支持任务并行库。
 
 
 
-Xamarin 强烈建议你使用[任务并行库](http://msdn.microsoft.com/en-us/library/dd460717.aspx)
-
- (TPL) 生成应用程序出于几个原因:-默认 TPL 计划程序会将委托给该线程池，这反过来会动态增长的需要发生过程，同时可避免线程过多的结束位置的方案的线程数的任务执行争用 CPU 时间。 
+Xamarin 强烈建议你使用[任务并行库](http://msdn.microsoft.com/en-us/library/dd460717.aspx)(TPL) 生成应用程序，原因有多种：
+-  默认 TPL 计划程序会将委托任务执行的线程池，反过来会动态增长进程发生，同时可避免线程过多 CPU 时间争用结束的其中一个方案所需的线程数。 
 -  很容易地考虑 TPL 任务方面的操作。 您可以轻松地对其进行处理、 它们安排、 序列化其执行或启动许多具有一套丰富的 Api 的并行。 
 -  它是使用新 C# 异步语言扩展进行编程的基础。 
 
@@ -41,7 +40,6 @@ MyThreadedRoutine ()
 {  
     var result = DoComputation ();  
 
-    //
     // we want to update an object that is managed by the main
     // thread; To do so, we need to ensure that we only access
     // this from the main thread:

@@ -6,12 +6,12 @@ ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 05443bb341b2355c9e7a72f46b70214fb169e598
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/15/2018
+ms.openlocfilehash: db277f20e63a59690ffaa8a8544ff9540578d3f5
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="garbage-collection"></a>垃圾回收
 
@@ -21,12 +21,12 @@ Xamarin.Android 使用 Mono 的[简单代的垃圾回收器](http://www.mono-pro
 -   （收集 Gen1 和大型对象空间堆） 的主要集合。 
 
 > [!NOTE]
-> 通过显式集合没有[GC。Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)集合是*按需*、 根据堆分配。 *这不是引用计数系统*; 对象*只要没有任何未完成的引用将不会收集*，或当作用域已退出。 GC 将次要堆新分配的内存不足时运行。 如果不存在分配，则将无法运行。
+> 通过显式集合没有[GC。Collect()](xref:System.GC.Collect)集合是*按需*、 根据堆分配。 *这不是引用计数系统*; 对象*只要没有任何未完成的引用将不会收集*，或当作用域已退出。 GC 将次要堆新分配的内存不足时运行。 如果不存在分配，则将无法运行。
 
 
-次要集合比较便宜而频繁，并且用于收集最近分配和死对象。 在分配的对象的每个几 MB 后执行次要的集合。 次要集合可能手动执行通过调用[GC。收集 (0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32/) 
+次要集合比较便宜而频繁，并且用于收集最近分配和死对象。 在分配的对象的每个几 MB 后执行次要的集合。 次要集合可能手动执行通过调用[GC。收集 (0)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 
-主要的集合成本高昂且不太频繁，并且用于回收所有死对象。 主要的集合执行后 （在调整大小的堆） 之前的当前的堆大小耗尽内存。 主要的集合可能手动执行通过调用[GC。收集 （）](https://developer.xamarin.com/api/member/System.GC.Collect/)或通过调用[GC。收集 (int)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32)具有自变量[GC。MaxGeneration](https://developer.xamarin.com/api/property/System.GC.MaxGeneration/)。 
+主要的集合成本高昂且不太频繁，并且用于回收所有死对象。 主要的集合执行后 （在调整大小的堆） 之前的当前的堆大小耗尽内存。 主要的集合可能手动执行通过调用[GC。收集 （）](xref:System.GC.Collect)或通过调用[GC。收集 (int)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_)具有自变量[GC。MaxGeneration](xref:System.GC.MaxGeneration)。 
 
 
 
@@ -34,7 +34,7 @@ Xamarin.Android 使用 Mono 的[简单代的垃圾回收器](http://www.mono-pro
 
 有三个类别的对象类型。
 
--   **托管对象**： 类型执行此操作*不*继承[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) ，例如[System.String](https://developer.xamarin.com/api/type/System.String/)。 
+-   **托管对象**： 类型执行此操作*不*继承[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) ，例如[System.String](xref:System.String)。 
     这些通常收集的 GC。 
 
 -   **Java 对象**: Java 类型进行了 Android 运行时 VM 中存在但不是能用于 Mono VM。 这些无聊，并且不会进一步讨论。 这些通常收集的 Android 运行时 VM。 
@@ -71,7 +71,7 @@ Android 运行时集合运行正常，但需要注意： JNI 全局引用被作�
 
 对等对象是中的 Android 运行时和 Mono VM 的逻辑上存在。 例如， [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)托管的对等实例将具有相应[android.app.Activity](http://developer.android.com/reference/android/app/Activity.html)框架对等 Java 实例。 继承的所有对象[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)需要具有这两个 Vm 中的表示形式。 
 
-具有这两个 Vm 中表示形式的所有对象都将都有进行了扩展，相比有仅在一个单独的 VM 内的对象的生存期 (如[ `System.Collections.Generic.List<int>` ](https://developer.xamarin.com/api/type/System.Collections.Generic.List%601/))。 调用[GC。收集](https://developer.xamarin.com/api/member/System.GC.Collect/)一定不会收集这些对象，如 Xamarin.Android GC 需要确保它在收集前不引用由任一 VM 的对象。 
+具有这两个 Vm 中表示形式的所有对象都将都有进行了扩展，相比有仅在一个单独的 VM 内的对象的生存期 (如[ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601))。 调用[GC。收集](xref:System.GC.Collect)一定不会收集这些对象，如 Xamarin.Android GC 需要确保它在收集前不引用由任一 VM 的对象。 
 
 若要缩短对象生存期[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)应被调用。 这将会手动"断开"上的对象通过释放的全局引用，从而允许要更快地收集的对象的两个 Vm 之间的连接。 
 
@@ -140,7 +140,7 @@ GC 具有不完整的视图的过程和可能不会运行时内存较低的因�
 例如，实例[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)类型或派生的类型是至少 20 字节的大小 (有更改恕不另行通知等，等等。)。 
 [托管可调用包装器](~/android/internals/architecture.md)不要添加其他实例成员，因此如果你具有[Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/)实例引用的内存的 10 MB blob Xamarin.Android 的 GC 不会知道&ndash;GC将看到 20 字节对象，将无法确定它链接到 Android 保持 10 MB 的内存处于活动状态的运行时分配的对象。 
 
-它是经常需要帮助 GC。 遗憾的是， *GC。AddMemoryPressure()*和*GC。RemoveMemoryPressure()*不支持，因此，如果你*知道*你只需释放大型 Java 分配的对象关系图可能需要手动调用[GC。Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)到提示符 GC 释放 Java 端内存，也可以显式释放*Java.Lang.Object*子类，重大托管可调用包装器和 Java 实例之间的映射。 有关示例，请参阅[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)。 
+它是经常需要帮助 GC。 遗憾的是， *GC。AddMemoryPressure()*和*GC。RemoveMemoryPressure()*不支持，因此，如果你*知道*你只需释放大型 Java 分配的对象关系图可能需要手动调用[GC。Collect()](xref:System.GC.Collect)到提示符 GC 释放 Java 端内存，也可以显式释放*Java.Lang.Object*子类，重大托管可调用包装器和 Java 实例之间的映射。 有关示例，请参阅[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)。 
 
 
 > [!NOTE]
@@ -314,7 +314,7 @@ class BetterActivity : Activity {
 
 ## <a name="minor-collections"></a>次要集合
 
-次要集合可能手动执行通过调用[GC。Collect(0)](https://developer.xamarin.com/api/member/System.GC.Collect/p/System.Int32)。 次要集合是 （相比于主要的集合） 比较便宜，但不要具有明显固定成本，因此你不想要触发过于频繁，并且应具有几毫秒的暂停时间。 
+次要集合可能手动执行通过调用[GC。Collect(0)](xref:System.GC.Collect)。 次要集合是 （相比于主要的集合） 比较便宜，但不要具有明显固定成本，因此你不想要触发过于频繁，并且应具有几毫秒的暂停时间。 
 
 如果你的应用程序具有即相同的操作需要进行反复的"任务周期"，帐户可以是手动继续执行次要集合，建议你，一旦任务周期已结束。 示例工作周期包括： 
 
@@ -326,7 +326,7 @@ class BetterActivity : Activity {
 
 ## <a name="major-collections"></a>主要的集合
 
-主要的集合可能手动执行通过调用[GC。Collect()](https://developer.xamarin.com/api/member/System.GC.Collect/)或`GC.Collect(GC.MaxGeneration)`。 
+主要的集合可能手动执行通过调用[GC。Collect()](xref:System.GC.Collect)或`GC.Collect(GC.MaxGeneration)`。 
 
 应进行很少，并且它们可以有第二个的暂停时间在 Android 样式设备上收集 512 MB 堆时。 
 

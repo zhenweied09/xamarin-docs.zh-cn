@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>提供向后与 Android 支持包的兼容性
 
@@ -25,13 +25,13 @@ ms.lasthandoff: 03/12/2018
 
 Android 支持包不会自动添加到 Xamarin.Android 应用程序。 Xamarin 提供[Android 支持库 v4 NuGet 包](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)来简化支持库添加到 Xamarin.Android 应用程序。若要将支持包包含在应用程序包括你 Xamarin.Android [Android 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)组件入 Xamarin.Android 项目中，如下面的屏幕截图中所示： 
 
-[![添加到项目的屏幕截图 Android 支持库 v4 包](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
+[![添加到项目的屏幕截图 Android 支持库 v4 包](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 在执行这些步骤后，就可以使用在早期版本的 Android 片段。 片段 Api 将在这些早期版本中，有以下例外工作相同现在： 
 
 -   **更改最低 Android 版本**&ndash;应用程序不再需要面向 Android 3.0 或更高版本，如下所示： 
 
-    [![最低 Android 屏幕快照设置应用程序属性下的目标](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
+    [![在 Android 清单下设置的最小 Android 屏幕截图目标](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **扩展 FragmentActivity** &ndash;托管片段的活动必须现在继承自`Android.Support.V4.App.FragmentActivity`，而不是从`Android.App.Activity`。 
 
