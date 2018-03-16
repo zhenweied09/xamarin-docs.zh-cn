@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/14/2018
+ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resolving-library-installation-errors"></a>解决库安装错误
 
@@ -104,7 +104,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    如果**m2repository**存档中不会显示此表中，你可以创建通过预先计算的下载 URL **https://dl-ssl.google.com/android/repository/**的名称**m2repository**下载。 例如，使用**https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip**下载**android\_m2repository\_r10.zip**.
+    如果**m2repository**存档中不会显示此表中，你可以创建通过预先计算的下载 URL  **https://dl-ssl.google.com/android/repository/** 的名称**m2repository**下载。 例如，使用 **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip**下载**android\_m2repository\_r10.zip**。
 
 2.  将该文件重命名为上述表中所示的下载 URL 的相应 MD5 哈希。 例如，如果你下载**android\_m2repository\_r25.zip**，将其命名为**0B3F1796C97C707339FB13AE8507AF50.zip**。 如果下载的文件的下载 URL 的 MD5 哈希表中未显示，则可以使用[联机 MD5 生成器](http://www.webconfs.com/online-md5-generator.php)将 URL 转换为一个 MD5 哈希字符串。 
 
@@ -160,6 +160,8 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
     [![文件复制到 23.1.1.0/embedded 文件夹中的示例](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  验证通过将复制所有文件。 **嵌入**目录现在应包含文件如**.jar**， **.aar**，和**.pom**。
+
+9.  解压缩提取任何**.aar**文件。 在 Windows 上，追加**.zip**扩展**.aar**文件，右键单击它，然后选择**全部提取...**，然后删除**.zip**扩展。 在 macOS 上, 解压缩**.aar**文件使用**解压缩**命令在终端中 (例如，**解压缩 file.aar**)。
 
 此时，你已手动安装缺少的组件和你的项目应顺利生成且未发生错误。 如果没有，请验证你已下载**m2repository** **.zip**存档完全与在错误消息中，版本相对应的版本，并验证已安装在其内容更正位置，如上述步骤中所述。 
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d1c4c46b62b95d70dd2832c96ffd2686163990a5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="binding-objective-c-libraries"></a>绑定 Objective C 库
 
@@ -1514,6 +1514,6 @@ class Demo {
 
 从历史上看我们需要将协议复制到每个实现，但在这些情况下现在我们可以获得`MKShape`类继承自`MKOverlay`协议，它会自动生成所需的所有方法。
 
-### <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关的链接
 
 - [绑定示例](https://developer.xamarin.com/samples/BindingSample/)
