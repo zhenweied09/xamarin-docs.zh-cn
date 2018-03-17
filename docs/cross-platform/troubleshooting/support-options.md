@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>可用于 Xamarin 哪些支持选项？
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 按所示[Xamarin 支持页](https://www.xamarin.com/support)，有几个选项。  以下是一些快速的初始建议[由堆栈溢出激发](http://stackoverflow.com/help/product-support)如何选择最佳选项：
 
-<table>
-    <tr>
-        <td>"此错误意味着什么？" 或者"如何实现...？"</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">堆栈溢出</a>下<em>xamarin</em>标记</td>
-    </tr>
-    <tr>
-        <td>我认为此问题由 Xamarin 源代码中有缺陷。</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>我有观点，功能请求或新的文档请求。</td>
-        <td><a href="https://xamarin.uservoice.com">Xamarin UserVoice 页</a></td>
-    </tr>
-    <tr>
-        <td>哪些资源、 框架或工具其他用户建议用于...？ （和其他开放式讨论）</td>
-        <td><a href="https://forums.xamarin.com/">Xamarin 论坛</a></td>
-    </tr>
-    <tr>
-        <td>授权，或定价，我有订阅，关于的问题。</td>
-        <td>电子邮件或调用上使用的联系人信息<a href="https://www.xamarin.com/faq">常见问题</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"此错误意味着什么？" 或者"如何实现...？"|[堆栈溢出](http://stackoverflow.com/questions/ask?tags=xamarin)下*xamarin*标记|
+|我认为此问题由 Xamarin 源代码中有缺陷。|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|我有观点，功能请求或新的文档请求。|[Xamarin UserVoice 页](https://xamarin.uservoice.com)|
+|哪些资源、 框架或工具其他用户建议用于...？ （和其他开放式讨论）|[Xamarin 论坛](https://forums.xamarin.com)|
+|授权，或定价，我有订阅，关于的问题。|电子邮件或调用上使用的联系人信息[常见问题](https://www.xamarin.com/faq)|
 
 Xamarin 支持团队可帮助监视其中每个选项。  我们鼓励所有用户提供其仔细问题和报表，以便充分利用和帮助增长桩 Xamarin 开发人员社区。  有关可疑瑕疵品，一定要提交 bug 报告何时可能以确保问题正式的 Xamarin 工程团队中进行跟踪。
 

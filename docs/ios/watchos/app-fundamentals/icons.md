@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 98cd780a29abdbeaab02483e4b6ed01a218f88e5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons"></a>使用图标
 
@@ -21,48 +21,12 @@ Apple Watch 解决方案需要图标的两个的集：
 
 ## <a name="apple-watch-icons"></a>Apple Watch 图标
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-    <tr>
-      <td valign="top">
-        <b>iOS 应用程序图标</b>
-      </td>
-      <td valign="top">
-显示在 iPhone 上，启动的父应用程序 </td>
-      <td>
-        <img src="icons-images/icon-ios.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" rowspan="3">
-        <b>监视应用程序图标</b>
-      </td>
-      <td valign="top">
-Apple Watch 主屏幕上显示 </td>
-      <td>
-        <img src="icons-images/icon-home.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-将出现在监视通知 </td>
-      <td>
-        <img src="icons-images/notification-icon.png" class="tableimg" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-将出现在<a href="~/ios/watchos/app-fundamentals/settings.md">iOS Apple Watch 应用</a>
-      </td>
-      <td>
-        <a href="icons-images/watch-app.png">
-          <img src="icons-images/watch-app-sml.png" class="tableimg">
-        </a>
-      </td>
-    </tr>
-    <tbody>
-</table>
-
-
+| | | |
+|-|-|-|
+|iOS 应用程序图标|显示在 iPhone 上，启动的父应用程序|![](icons-images/icon-ios.png)|
+|监视应用程序图标|Apple Watch 主屏幕上显示|![](icons-images/icon-home.png)|
+||将出现在监视通知|![](icons-images/notification-icon.png)|
+||将出现在[iOS Apple Watch 应用](~/ios/watchos/app-fundamentals/settings.md)|![](icons-images/watch-app-sml.png)|
 
 ## <a name="configuring-your-solution"></a>配置你的解决方案
 

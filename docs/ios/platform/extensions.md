@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 017f3c1b5fc14bf22a5ad85d1017bc8125b04038
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="ios-extensions"></a>iOS 扩展
 
@@ -44,63 +44,14 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 
 ## <a name="extension-points"></a>扩展点
 
-有多种类型的 8 （和更高版本） 可以在 iOS 中创建的扩展：
-
-<table>
-<colgroup>
-<col />
-<col />
-<col />
-</colgroup>
-
-<thead>
-<tr>
-    <th >类型</th>
-    <th >描述</th>
-    <th >扩展点</th>
-    <th >主机应用程序</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td >操作</td>
-    <td >专用的编辑器或特定媒体类型的查看器</td>
-    <td ><code>com.apple.ui-services</code></td>
-    <td >任意</td>
-</tr>
-<tr>
-    <td >文档提供程序</td>
-    <td >允许应用程序以使用远程文档存储区</td>
-    <td ><code>com.apple.fileprovider-ui</code></td>
-    <td >使用应用<a href="https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/">UIDocumentPickerViewController</a></td>
-</tr>
-<tr>
-    <td >键盘</td>
-    <td >备用键盘</td>
-    <td ><code>com.apple.keyboard-service</code></td>
-    <td >任意</td>
-</tr>
-<tr>
-    <td >照片编辑</td>
-    <td >照片操作和编辑</td>
-    <td ><code>com.apple.photo-editing</code></td>
-    <td >Photos.app 编辑器</td>
-</tr>
-<tr>
-    <td >共享</td>
-    <td >共享数据，与社交网络，消息传送服务，等等。</td>
-    <td ><code>com.apple.share-services</code></td>
-    <td >任意</td>
-</tr>
-<tr>
-    <td >今天</td>
-    <td >显示在今天屏幕或通知中心上的"小组件"</td>
-    <td ><code>com.apple.widget-extensions</code></td>
-    <td >今天和通知中心</td>
-</tr>
-</tbody>
-</table>
+|类型|描述|扩展点|主机应用程序|
+|--- |--- |--- |--- |
+|操作|专用的编辑器或特定媒体类型的查看器|`com.apple.ui-services`|任意|
+|文档提供程序|允许应用程序以使用远程文档存储区|`com.apple.fileprovider-ui`|使用应用[UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|键盘|备用键盘|`com.apple.keyboard-service`|任意|
+|照片编辑|照片操作和编辑|`com.apple.photo-editing`|Photos.app 编辑器|
+|共享|共享数据，与社交网络，消息传送服务，等等。|`com.apple.share-services`|任意|
+|今天|显示在今天屏幕或通知中心上的"小组件"|`com.apple.widget-extensions`|今天和通知中心|
 
 [其他扩展点](~/ios/platform/introduction-to-ios10/index.md#app-extensions)iOS 10 中已添加。
 
@@ -561,7 +512,7 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档已覆盖扩展，它们是什么，扩展点以及由 iOS 规定扩展上的已知的限制的类型。 它讨论创建、 分发、 安装和运行扩展和扩展生命周期。 它提供的演练创建一个简单的**今天**小组件显示两种方式创建小组件的 UI 使用情节提要或代码。 它介绍了如何在 iOS 模拟器中测试扩展。 最后，它简要讨论与主机应用程序和几个预防措施和开发扩展时应考虑的事项通信。 
 

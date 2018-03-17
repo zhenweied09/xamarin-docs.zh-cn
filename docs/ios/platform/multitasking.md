@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 39c699b10280218223b6f6022d419f77aba875dc
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="multitasking-for-ipad"></a>适用于 iPad 的多任务
 
@@ -251,7 +251,7 @@ Xamarin.iOS 应用程序选择退出的任一滑出将在面板中或在拆分�
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了为确保 Xamarin.iOS 应用程序将运行并在 iOS 9 的新多任务能力 iPad 中的正确行为所需的步骤。 此外，则覆盖选择加入扩展的应用程序，它不是适合的多任务。
 
@@ -260,7 +260,7 @@ Xamarin.iOS 应用程序选择退出的任一滑出将在面板中或在拆分�
 ## <a name="related-links"></a>相关链接
 
 - [iOS 9 示例](https://developer.xamarin.com/samples/ios/iOS9/)
-- [执行多任务 （示例）](http://developer.xamarin.comhttps://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
+- [执行多任务 （示例）](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
 - [统一的情节提要简介](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [为开发人员的 iOS 9](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

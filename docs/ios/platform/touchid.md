@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>Touch ID
 
@@ -39,11 +39,8 @@ Keychain 是一个专用的数据库，其中每一行称为_Keychain 项_。 �
 
 第一次你的应用程序应查询到密钥链，以查看密码是否存在。 如果不存在，你可能需要提示输入密码，以便用户不一直在要求。 如果需要更新密码，提示用户输入新密码，并将在更新后的值传递给密钥链。
 
-
-> ℹ️ **请注意**： 包含从数据库接收任何密码，它并不只是最佳做法，但预期任何密钥将保留在内存中。 如有必要，长和绝对不要不将其分配给全局变量，只应保留密钥 ！
-
-
-
+> [!NOTE]
+> 使用机密从密钥链中检索后，应从内存中清除对数据的所有引用。 永远不会将其分配给全局变量。
 
 ## <a name="keychain-acl-and-touch-id"></a>Keychain ACL 和 Touch ID
 
@@ -53,32 +50,11 @@ Keychain 是一个专用的数据库，其中每一行称为_Keychain 项_。 �
 
 截至 iOS 8，现在有了新的用户是否存在策略， `SecAccessControl`，其中强制执行安全 enclave iPhone 5 条和更高版本。 我们可以看到下，只需如何设备配置可以影响策略评估表中：
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>设备配置</td>
-    <td>策略评估</td>
-    <td>备份机制，</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>而无需密码的设备</td>
-    <td>没有访问权限</td>
-    <td>无</td>
-</tr>
-<tr>
-    <td>使用密码的设备</td>
-    <td>需要密码</td>
-    <td>无</td>
-</tr>
-<tr>
-    <td>Touch id 的设备</td>
-    <td>首选 Touch ID</td>
-    <td>允许密码</td>
-</tr>
-</tbody>
-</table>
+|设备配置|策略评估|备份机制，|
+|--- |--- |--- |
+|而无需密码的设备|没有访问权限|无|
+|使用密码的设备|需要密码|无|
+|Touch id 的设备|首选 Touch ID|允许密码|
 
 在安全 Enclave 内的所有操作可以相互都信任。 这意味着我们可以使用 Touch ID 身份验证结果授权 Keychain 项解密。 安全 Enclave 还能保持保持失败的 Touch ID 匹配，在其中情况下用户将必须还原为使用该密码的计数器。
 IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设备中的过程。 在下一部分中，我们将探讨这。
@@ -205,7 +181,7 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 
 [![](touchid-images/image11.png "调用转换到 MasterViewController PerformSegue 方法")](touchid-images/image11.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 在本指南中我们讨论在 Keychain 和此在 iOS 中的工作原理。 我们还探讨了 keychain ACL，并在 iOS 中的对此更改。 接下来，我们所花费的本地身份验证框架，它是 iOS 8 中的新增功能，在我们的应用程序中实现 Touch ID 身份验证，然后看一看。
 
 ## <a name="related-links"></a>相关链接

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 2c48ae5386fda63aed43c24c09c10cfb87b93637
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -22,7 +22,7 @@ _iCloud Api 使 iOS 8 应用程序能够将数据存储在 iCloud，用于在用
 
 开发人员可以专注于其客户端应用程序，并让 iCloud 时无需编写服务器端应用程序逻辑。 CloudKit 提供身份验证、 专用和公用数据库和结构化的数据和资产存储服务。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需完成这篇文章中提供的步骤：
 
@@ -147,40 +147,12 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 以下是数据库类型之间的差异：
 
-<table cellpadding="1" cellspacing="1" border="1" width="100%">
-<thead>
-<tr>
-<td></td>
-<td>公共数据库</td>
-<td>专用数据库</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据类型</td>
-<td>共享的数据</td>
-<td>当前用户的数据</td>
-</tr>
-
-<tr>
-<td>配额</td>
-<td>在开发人员配额中考虑的</td>
-<td>在用户的配额中考虑的</td>
-</tr>
-
-<tr>
-<td>默认权限</td>
-<td>可读的 world</td>
-<td>用户可读</td>
-</tr>
-
-<tr>
-<td>编辑权限</td>
-<td>通过记录类级别的 iCloud 仪表板角色</td>
-<td>不可用</td>
-</tr>
-</tbody>
-</table>
+||公共数据库|专用数据库|
+|---|--- |--- |
+|**数据类型**|共享的数据|当前用户的数据|
+|**配额**|在开发人员配额中考虑的|在用户的配额中考虑的|
+|**默认权限**|可读的 world|用户可读|
+|**编辑权限**|通过记录类级别的 iCloud 仪表板角色|不可用|
 
 ### <a name="records"></a>记录
 
@@ -904,7 +876,7 @@ CloudKit 对于应用程序的记录类型和数据提供单独的开发和生�
 
 保留这些用例就记住、 开发人员应选取正确的 iCloud 技术提供当前的所需应用程序功能，并为未来的增长提供良好的可伸缩性。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖 CloudKit API 的快速介绍。 它说明了如何设置和配置用于 CloudKit Xamarin iOS 应用程序。 它已覆盖 CloudKit 方便 API 的功能。 它具有显示如何设计 CloudKit 启用应用程序使用查询和订阅的可伸缩性。 并且，它具有最后显示由 CloudKit 公开的应用程序的用户帐户信息。
 

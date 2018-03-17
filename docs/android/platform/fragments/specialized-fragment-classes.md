@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: f962f4619352dbaaed8c8ffcf5d8c8305cb6ad62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7ddb4b7d4867813311448258bb4fb177ae4cd175
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="specialized-fragment-classes"></a>专用的片段类
 
@@ -191,8 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-为了帮助管理首选项，该片段 API 提供了`PreferenceFragment`子类。 `PreferenceFragment`类似于[PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/
-) &ndash;它将在片段中显示的首选项设置为用户层次结构。 当用户交互具有首选项时，它们将自动保存到[SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html)。
+为了帮助管理首选项，该片段 API 提供了`PreferenceFragment`子类。 `PreferenceFragment`类似于[PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash;它将在片段中显示的首选项设置为用户层次结构。 当用户交互具有首选项时，它们将自动保存到[SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html)。
 在 Android 3.0 或更高版本的应用程序，使用`PreferenceFragment`处理应用程序中的首选项。 下图显示的示例`PreferenceFragment`:
 
 [![使用内联、 对话框中，和启动首选项的示例 PreferencesFragment](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

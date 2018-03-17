@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>处理图标和图像
 
@@ -40,17 +40,9 @@ _本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。_
 
 启动映像不是有机会广告或艺术表达式，它们存在仅仅是为了给出您的应用程序快速启动，并已准备的印象使用。
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>启动映像</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|启动映像的大小|说明|
+|---|---|
+|1920x1080px|仅非分层.png 文件|
 
 Apple 使设计您的应用程序的启动映像的以下建议：
 
@@ -146,39 +138,15 @@ Xamarin.tvOS 应用程序将需要不只一个应用程序图标的 Apple 电视
 
 每个应用必须提供一个较小和其应用程序图标的大型版本。 安装应用时，将在 Apple 电视主页屏幕上使用的小图标。 应用商店使用的大型的版本。 大的应用程序图标应模拟的小图标版本的外观和感觉。
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>小图标</b></td>
-    <td colspan="2"><b>大图标</b></td>
-</tr>
-<tr>
-    <td><b>实际大小</b></td>
-    <td>400px x 240px</td>
-    <td><b>Size</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>安全区域大小</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>失去焦点的大小</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>已设定焦点的大小</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|小图标||大图标||
+|---|---|---|---|
+|实际大小|400x240px|大小|1280x768px|
+|安全区域大小|370x222px|||
+|失去焦点的大小|300x180px|||
+|已设定焦点的大小|370x222px|||
 
 > [!IMPORTANT]
-> **注意：**必须作为提供您的应用程序图标**分层映像**。 请参阅[分层映像](#Layered-Images)上面部分以了解更多详细信息。
+> 必须作为提供您的应用程序图标**分层映像**。 请参阅[分层映像](#Layered-Images)上面部分以了解更多详细信息。
 
 
 
@@ -227,17 +195,9 @@ Apple 提供用于创建应用程序图标以下建议：
 
 也可以作为单个静态提供顶部架映像`.png`或`.lsr`文件 (请参阅[创建分层映像](#Creating-Layered-Images)) 或它可以动态创建在运行时作为单个行的焦点的项 (请参阅[动态顶层架子内容](#Dynamic-Top-Shelf-Content)下面)。
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>顶层架子映像</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|顶层架子图像大小|说明|
+|---|---|
+|1920x720px|静态.png 或分层的.lsr 文件|
 
 Apple 提供用于创建你顶部架映像以下建议：
 
@@ -279,38 +239,12 @@ Apple 提供用于创建你顶部架映像以下建议：
 
 将需要以下内容的大小：
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>海报 (2:3)</b></td>
-    <td><b>正方形 (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>实际大小</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>安全区域大小</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>失去焦点的大小</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>已设定焦点的大小</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||海报 (2:3)|正方形 (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|实际大小|404x608px|608x608px|908x512px|
+|安全区域大小|380x570px|570x570px|852x479px|
+|失去焦点的大小|333x500px|500x500px|782x440px|
+|已设定焦点的大小|380x570px|570x570px|852x479px|
 
 Apple 提供的内容剖切行以下建议：
 
@@ -325,27 +259,14 @@ Apple 提供的内容剖切行以下建议：
 
 除了自动滚动，用户可以控制横幅，并且在使用 Siri 远程任一方向上滚动。 进行一个较小，循环笔势上使用 Siri 远程时焦点的标题是将激活该横幅视差效果。
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>横幅图像 （额外宽型）</b></td>
-</tr>
-<tr>
-    <td><b>实际大小</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>安全区域大小</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>失去焦点的大小</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>已设定焦点的大小</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**横幅图像 （额外宽型）**
+
+|   |   |
+|---|---|
+|实际大小|1940x624px|
+|安全区域大小|1740x620px|
+|失去焦点的大小|1740x560px|
+|已设定焦点的大小|1740x620px|
 
 滚动内嵌横幅可以是作为提供一个静态`.png`或分层`.lsr`文件。
 
@@ -366,44 +287,13 @@ Apple 提供滚动内嵌标题的以下建议：
 - **仪表板图稿**-一个可选图像可以是提供，将出现在游戏中心内的应用程序的仪表板的顶部。 这些映像可以非可获得焦点。
 - **排行榜图稿**-您必须提供之间一 （1） 到三 （3） 16:9 纵横比图像为你的应用支持每个 leaderboard。 这些可能是静态`.png`或分层`.lsr`文件。 排行榜作品的焦点。
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>成就图标</b></td>
-    <td><b>仪表板图稿</b></td>
-    <td><b>排行榜图稿</b></td>
-</tr>
-<tr>
-    <td><b>可见的大小</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>n/a</td>
-</tr>
-<tr>
-    <td><b>实际大小</b></td>
-    <td>320px x 320px</td>
-    <td>n/a</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>安全区域大小</b></td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>失去焦点的大小</b></td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>已设定焦点的大小</b></td>
-    <td>n/a</td>
-    <td>n/a</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||成就图标|仪表板图稿|排行榜图稿|
+|---|---|---|---|
+|可见的大小|200x200px|923x150px|n/a|
+|实际大小|320x320px|n/a|659x371px|
+|安全区域大小|n/a|n/a|618x348px|
+|失去焦点的大小|n/a|n/a|548x309px|
+|已设定焦点的大小|n/a|n/a|618x348px|
 
 有关使用 Game Center 的详细信息，请参阅 Apple 的[游戏中心编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)。
 
@@ -432,7 +322,7 @@ Apple 提供滚动内嵌标题的以下建议：
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖所有图像类型和大小在 Xamarin.tvOS 应用中使用。 首先，则覆盖启动映像、 分层映像、 应用程序图标，顶部架映像和游戏中心映像。 然后，则覆盖使用 Xamarin.tvOS 应用程序中的映像。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: ce51511c58d7d0f5a14e487b57897bfa0e0b20b3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25a10fdcfc612d85875ba684fced3f188400b71e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="graphics-and-animation"></a>图形和动画
 
@@ -170,7 +170,7 @@ Canvas canvas = new Canvas(b);
 
 另一种方法来获取`Canvas`对象是通过[OnDraw](https://developer.xamarin.com/api/member/Android.Views.View.OnDraw/)提供的回调方法[视图](https://developer.xamarin.com/api/type/Android.Views.View/)基类。 Android 时它决定视图需要绘制本身，并且将传入调用此方法`Canvas`要使用的视图的对象。
 
-画布类公开的方法以编程方式提供的绘图说明进行操作。 例如:
+画布类公开的方法以编程方式提供的绘图说明进行操作。 例如：
 
 -   [Canvas.DrawPaint](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawPaint/p/Android.Graphics.Paint/) &ndash;用指定的绘制填充整个画布的位图。
 
@@ -434,7 +434,7 @@ protected override void OnCreate(Bundle bundle)
 此时，我们已介绍动画 Android 应用程序中提供的 Api 的基础。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入大量的新概念和 API 来帮助将某些图形添加到 Android 应用程序。 首先它讨论各种二维图形 API 的并演示如何 Android 允许应用程序直接向使用画布对象屏幕绘制。 我们还了解了一些允许图形要以声明方式创建使用 XML 文件的备用技术。 然后我们发往讨论的旧和新 API 的 Android 中创建动画。
 
@@ -445,7 +445,7 @@ protected override void OnCreate(Bundle bundle)
 - [动画演示 （示例）](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
 - [动画和图形](http://developer.android.com/guide/topics/graphics/index.html)
 - [使用动画将您的移动应用融入生活](http://youtu.be/ikSk_ILg3d0)
-- [AnimationDrawable](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
-- [画布](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
-- [对象生成器](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
-- [值生成器](https://developer.xamarin.comhttps://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
+- [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
+- [画布](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
+- [对象生成器](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
+- [值生成器](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)

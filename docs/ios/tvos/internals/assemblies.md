@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 0a435e80173ca3ccb76dba0719ec2eea6eb72611
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 509d4f465956d56e8efa5b69153764f5ae0949a9
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="assemblies"></a>程序集
 
@@ -19,232 +19,28 @@ ms.lasthandoff: 02/27/2018
 
 这是通过 Xamarin 支持为 Xamarin.tvOS 应用程序的程序集的列表。下面列出的这些详细信息列表。  一些值得注意的遗漏包括`System.EnterpriseServices`，ASP.NET 堆栈和 Windows.Forms。
 
-<table align="center" border="1" cellpadding="1" cellspacing="1" width="90%">
-      <tbody>
-        <tr>
-          <td>
-            <strong>程序集</strong>
-          </td>
-          <td>
-            <strong>添加</strong>
-          </td>
-          <td>
-            <strong>API 兼容性</strong>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-Mono.CompilerServices.SymbolWriter.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td valign="top">
-编译器编写器。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-Mono.Data.Sqlite.dll </td>
-          <td align="center" valign="top">
-1.2 </td>
-          <td>
-SQLite; 的 ADO.NET 提供程序请参阅&nbsp;<a href="~/ios/data-cloud/system.data.md">限制</a>。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-Mono.Data.Tds.dll </td>
-          <td align="center" valign="top">
-1.2 </td>
-          <td>
-TDS 协议支持;用于&nbsp;<a href="https://developer.xamarin.com/api/namespace/System.Data.SqlClient/" target="_blank">System.Data.SqlClient</a>&nbsp;内支持&nbsp;<a href="~/ios/data-cloud/system.data.md">System.Data</a>。
-          </td>
-        </tr>
-        <tr>
-          <td>
-Mono.Security.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-加密 Api。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-monotouch.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-此程序集包含&nbsp;<a href="https://developer.xamarin.com/api/root/ios-unified/" target="_blank">C# 绑定到 CocoaTouch API</a>。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-mscorlib.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-OpenTK.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-OpenGL/OpenAL 对象面向 Api，&nbsp;<a href="https://developer.xamarin.com/api/namespace/OpenGLES/" target="_blank">扩展，使其提供 iPhone 设备支持</a>。
-          </td>
-        </tr>
-        <tr>
-          <td align="left" valign="top">
-System.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <p><a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>，加上以下命名空间中的类型：</p>
-    
-            <ul>
-              <li>System.Collections.Specialized</li>
-              <li>System.ComponentModel</li>
-              <li>System.ComponentModel.Design</li>
-              <li>System.Diagnostics</li>
-              <li>System.IO.Compression</li>
-              <li>System.Net</li>
-              <li>System.Net.Cache</li>
-              <li>System.Net.Mail</li>
-              <li>System.Net.Mime</li>
-              <li>System.Net.NetworkInformation</li>
-              <li>System.Net.Security</li>
-              <li>System.Net.Sockets</li>
-              <li>System.Security.Authentication</li>
-              <li>System.Security.Cryptography</li>
-              <li>System.Timers</li>
-            </ul>
-    
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Core.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Data.dll </td>
-          <td align="center" valign="top">
-1.2 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx" target="_blank">.NET 3.5</a>&nbsp;，&nbsp;<a href="~/ios/data-cloud/system.data.md">某些删除了功能</a>。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Data.Service.Client.dll </td>
-          <td align="center" valign="top">
-3.x </td>
-          <td>
-完整的 oData 客户端。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Drawing </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <p>System.Drawing API-仅经典 API。</p>
-            <p><i>System.Drawing 不支持在统一 API Xamarin.Mac.NET 4.5 或移动的框架。</i></p>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Json.dll </td>
-          <td align="center" valign="top">
-1.1 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Runtime.Serialization.dll </td>
-          <td align="center" valign="top">
-?
-          </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.ServiceModel.dll </td>
-          <td align="center" valign="top">
-1.1 </td>
-          <td>
-            <a href="http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services" target="_blank">WCF</a>&nbsp;作为存在在堆栈&nbsp;<a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.ServiceModel.Web.dll </td>
-          <td align="center" valign="top">
-?
-          </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/cc838194(VS.95).aspx" target="_blank">Silverlight</a>，加上以下命名空间中的类型： <p>&nbsp;</p>
-    
-            <ul>
-              <li>系统</li>
-              <li>System.ServiceModel.Channels</li>
-              <li>System.ServiceModel.Description</li>
-              <li>System.ServiceModel.Web</li>
-            </ul>
-    
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Transactions.dll </td>
-          <td align="center" valign="top">
-1.2 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx" target="_blank">.NET 3.5</a>; 的一部分&nbsp;<a href="~/ios/data-cloud/system.data.md">System.Data</a>&nbsp;支持。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Web.Services </td>
-          <td align="center" valign="top">
-1.1 </td>
-          <td>
-            <a href="http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services" target="_blank">基本 Web 服务</a>&nbsp;从.NET 3.5 配置文件中的删除了服务器功能。
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Xml.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx" target="_blank">.NET 3.5</a>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">
-System.Xml.Linq.dll </td>
-          <td align="center" valign="top">
-1.0 </td>
-          <td>
-            <a href="http://msdn.microsoft.com/en-us/library/ms229335.aspx" target="_blank">.NET 3.5</a><br>
-            <br>
-&nbsp; </td>
-        </tr>
-      </tbody>
-    </table>
+|Assembly|已添加|API 兼容性|
+|---|---|---|
+|Mono.CompilerServices.SymbolWriter.dll|1.0|编译器编写器。|
+|Mono.Data.Sqlite.dll|1.2|SQLite; 的 ADO.NET 提供程序请参阅[限制](~/ios/data-cloud/system.data.md)。|
+|Mono.Data.Tds.dll|1.2|TDS 协议支持;用于[System.Data.SqlClient](https://developer.xamarin.com/api/namespace/System.Data.SqlClient/)内支持[System.Data](~/ios/data-cloud/system.data.md)。|
+|Mono.Security.dll|1.0|加密 Api。|
+|monotouch.dll|1.0|此程序集包含[C# 绑定到 CocoaTouch API](https://developer.xamarin.com/api/root/ios-unified/)。|
+|mscorlib.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|OpenTK.dll|1.0|OpenGL/OpenAL 对象面向 Api，[扩展，使其提供 iPhone 设备支持](https://developer.xamarin.com/api/namespace/OpenGLES/)。|
+|System.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)，加上以下命名空间中的类型： <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System.ComponentModel.Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System.Net.Cache</li> <li>System.Net.Mail</li> <li>System.Net.Mime</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System.Timers</li></ul>|
+|System.Core.dll|1.0|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Data.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)，[某些删除了功能](~/ios/data-cloud/system.data.md)。|
+|System.Data.Service.Client.dll|3.x|完整的 oData 客户端。|
+|System.Drawing|1.0|System.Drawing API-仅经典 API。<br />_System.Drawing 不支持在统一 API Xamarin.Mac.NET 4.5 或移动的框架。_|
+|System.Json.dll|1.1|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.Runtime.Serialization.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.dll|1.1|[WCF](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services)作为存在在堆栈[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|System.ServiceModel.Web.dll|?|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)，加上以下命名空间中的类型： <ul><li>系统</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); 的一部分[System.Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data)支持。|
+|System.Web.Services|1.1|[基本 Web 服务](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/introduction_to_web_services)从.NET 3.5 配置文件中的删除了服务器功能。|
+|System.Xml.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|
 
 <a name="Summary" />
 

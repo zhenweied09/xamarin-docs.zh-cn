@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 8674a8b846573c27e54660ae3bc065e07561f411
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-objective-c-libraries"></a>绑定 Objective C 库
 
@@ -528,7 +528,7 @@ public void AppendWorkers(params Worker[] workers)
 
 通常这些字段包含必须引用的字符串或整数值。 它们通常用于为字符串，其中表示特定通知和作为字典中的键。
 
-若要绑定字段，将属性添加到接口定义文件中，和修饰的属性[[Field]](~/cross-platform/macios/binding/binding-types-reference.md)属性。 此属性采用一个参数： 到查找符号的 C 名称。 例如:
+若要绑定字段，将属性添加到接口定义文件中，和修饰的属性[[Field]](~/cross-platform/macios/binding/binding-types-reference.md)属性。 此属性采用一个参数： 到查找符号的 C 名称。 例如：
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -636,7 +636,7 @@ interface MyType {
 
 （在返回值） 的方法、 参数和属性与可修饰[[BindAs]](~/cross-platform/macios/binding/binding-types-reference.md)。 唯一限制是，您的成员**必须不**内`[Protocol]`或`[Model]`接口。
 
-例如:
+例如：
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -655,7 +655,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [[BindAs]](~/cross-platform/macios/binding/binding-types-reference.md)还支持数组`NSNumber``NSValue`和`NSString`（枚举）。
 
-例如:
+例如：
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -684,7 +684,7 @@ Xamarin.iOS 绑定生成器提供的开发人员将通知绑定的支持。 若�
 
 此特性可用于无需不执行任何负载的通知的自变量也可以指定`System.Type`引用另一个接口在 API 定义中，通常与以"EventArgs"结尾的名称。 生成器会变为接口类子类`EventArgs`并且将包括所有列出的属性。 `[Export]`属性应使用 EventArgs 类中，若要列出用于查找要提取值的 OBJECTIVE-C 的字典键的名称。
 
-例如:
+例如：
 
 ```csharp
 interface MyClass {
@@ -1021,155 +1021,31 @@ interface XyzPanel {
 
 下表显示应映射中的 OBJECTIVE-C 和 CocoaTouch world 向 Xamarin.iOS 领域的类型的方式：
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-      <caption> 类型映射 </caption>
-      <tbody>
-        <tr>
-          <td>
-Objective C 类型名称 </td>
-          <td>
-Xamarin.iOS 统一 API 类型 </td>
-        </tr>
-        <tr>
-          <td>
-BOOL GLboolean </td>
-          <td>
-bool </td>
-        </tr>
-        <tr>
-          <td>
-NSInteger </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSUInteger </td>
-          <td>
-nuint </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval / NSTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-NSString (<a href="~/ios/internals/api-design/nsstring.md">详细上绑定 NSString</a>) </td>
-          <td>
-字符串 </td>
-        </tr>
-        <tr>
-          <td>
-char * </td>
-          <td>
-            <a href="~/cross-platform/macios/binding/binding-types-reference.md#plainstring"> [PlainString]</a> string </td>
-        </tr>
-        <tr>
-          <td>
-CGRect </td>
-          <td>
-CGRect </td>
-        </tr>
-        <tr>
-          <td>
-CGPoint </td>
-          <td>
-CGPoint </td>
-        </tr>
-        <tr>
-          <td>
-CGSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-CGFloat GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-CoreFoundation 类型 （CF *） </td>
-          <td>
-CoreFoundation.CF* </td>
-        </tr>
-        <tr>
-          <td>
-GLint </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-GLfloat </td>
-          <td>
-nfloat </td>
-        </tr>
-        <tr>
-          <td>
-基础类型 （NS *） </td>
-          <td>
-Foundation.NS* </td>
-        </tr>
-        <tr>
-          <td>
-id </td>
-          <td>
-Foundation.NSObject </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSSize </td>
-          <td>
-CGSize </td>
-        </tr>
-        <tr>
-          <td>
-NSTextAlignment </td>
-          <td>
-UITextAlignment </td>
-        </tr>
-        <tr>
-          <td>
-SEL </td>
-          <td>
-ObjCRuntime.Selector </td>
-        </tr>
-        <tr>
-          <td>
-dispatch_queue_t </td>
-          <td>
-CoreFoundation.DispatchQueue </td>
-        </tr>
-        <tr>
-          <td>
-CFTimeInterval </td>
-          <td>
-double </td>
-        </tr>
-        <tr>
-          <td>
-CFIndex </td>
-          <td>
-nint </td>
-        </tr>
-        <tr>
-          <td>
-NSGlyph </td>
-          <td>
-nuint </td>
-        </tr>
-      </tbody>
-    </table>
+|Objective C 类型名称|Xamarin.iOS 统一 API 类型|
+|---|---|
+|`BOOL`, `GLboolean`|`bool`|
+|`NSInteger`|`nint`|
+|`NSUInteger`|`nuint`|
+|`CFTimeInterval` / `NSTimeInterval`|`double`|
+|`NSString` ([绑定将详细介绍`NSString` ](~/ios/internals/api-design/nsstring.md))|`string`|
+|`char *`|`string` (另请参阅： [PlainString 属性](~/cross-platform/macios/binding/binding-types-reference.md#plainstring))|
+|`CGRect`|`CGRect`|
+|`CGPoint`|`CGPoint`|
+|`CGSize`|`CGSize`|
+|`CGFloat`, `GLfloat`|`nfloat`|
+|CoreFoundation 类型 (`CF*`)|`CoreFoundation.CF*`|
+|`GLint`|`nint`|
+|`GLfloat`|`nfloat`|
+|基础类型 (`NS*`)|`Foundation.NS*`|
+|`id`|`Foundation`.`NSObject`|
+|`NSGlyph`|`nint`|
+|`NSSize`|`CGSize`|
+|`NSTextAlignment`|`UITextAlignment`|
+|`SEL`|`ObjCRuntime.Selector`|
+|`dispatch_queue_t`|`CoreFoundation.DispatchQueue`|
+|`CFTimeInterval`|`double`|
+|`CFIndex`|`nint`|
+|`NSGlyph`|`nuint`|
 
  <a name="Arrays" />
 
@@ -1450,7 +1326,7 @@ DefaultValue 将进行硬编码返回值，而`[DefaultValueFromArgument]`用于
 
 上面的示例将链接`libMyLibrary.a`，`libSystemLibrary.dylib`和`CFNetwork`到最终的可执行文件的 framework 库。
 
-你可以利用程序集级别或者`LinkWithAttribute`，，您可以将它们嵌入在协定文件 (如`AssemblyInfo.cs`)。 当你使用`LinkWithAttribute`，你将需要你在作为所做的绑定过程中，这将与你的应用程序中嵌入的本机库时可用的本机库。 例如:
+你可以利用程序集级别或者`LinkWithAttribute`，，您可以将它们嵌入在协定文件 (如`AssemblyInfo.cs`)。 当你使用`LinkWithAttribute`，你将需要你在作为所做的绑定过程中，这将与你的应用程序中嵌入的本机库时可用的本机库。 例如：
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

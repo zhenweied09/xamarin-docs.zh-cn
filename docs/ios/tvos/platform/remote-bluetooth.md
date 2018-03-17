@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cef717a727b3b018b9eec3e8a402ae4f927f7cb8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca3dd71c3da316e467d8c388efbbded3d9778bf0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="siri-remote-and-bluetooth-controllers"></a>Siri 远程和蓝牙控制器
 
@@ -39,43 +39,14 @@ Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中�
 
 Siri 远程具有以下功能和 tvOS 应用中的预期的用法：
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>功能</b></td>
-    <td><b>常规应用使用情况</b></td>
-    <td><b>游戏的应用使用情况</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>触摸面</b><br/>轻扫，若要导航，请按以选择并按住对于上下文菜单。</td>
-    <td valign="top"><b>点击/轻扫：</b><br/>UI 可获得焦点的项之间导航。<br/><br/><b>单击所示：</b><br/>激活所选 （焦点） 项。</td>
-    <td valign="top"><b>点击/轻扫：</b><br/>依赖于游戏设计和可用作通过边缘上的点击 D 填充。<br/><br/><b>单击所示：</b><br/>执行主按钮功能。</td>
-</tr>
-<tr>
-    <td valign="top"><b>菜单</b><br/>按下以返回到之前的屏幕或菜单。</td>
-    <td valign="top">返回到上一屏幕并从主应用程序屏幕退出到 Apple 电视主页屏幕。</td>
-    <td valign="top">暂停和继续玩游戏，将返回到上一屏幕并退出到 Apple 电视主页屏幕从主应用程序屏幕。</td>
-</tr>
-<tr>
-    <td valign="top"><b>Siri/Search</b><br/>在使用 Siri 国家/地区，请按住语音控件，在所有其他国家/地区，显示搜索屏幕。</td>
-    <td valign="top">n/a</td>
-    <td valign="top">n/a</td>
-</tr>
-<tr>
-    <td valign="top"><b>播放/暂停</b><br/>播放和暂停媒体或提供应用程序中的辅助函数。</td>
-    <td valign="top">启动媒体播放和暂停/继续播放。</td>
-    <td valign="top">执行辅助按钮的功能或跳过简介视频 (如果存在)。</td>
-</tr>
-<tr>
-    <td valign="top"><b>主文件夹</b><br/>按以返回到主页屏幕中，双击要显示运行中的应用，请按住进入睡眠状态的设备。</td>
-    <td valign="top">n/a</td>
-    <td valign="top">n/a</td>
-</tr>
-<tr>
-    <td valign="top"><b>卷</b><br/>控件附加音频/视频设备卷。</td>
-    <td valign="top">n/a</td>
-    <td valign="top">n/a</td>
-</tr>
-</table>
+|功能|常规应用使用情况|游戏的应用使用情况|
+|---|---|---|
+|**触摸面**<br />轻扫，若要导航，请按以选择并按住对于上下文菜单。|**点击/轻扫**<br />UI 可获得焦点的项之间导航。<br /><br />**Click**<br />激活所选 （焦点） 项。|**点击/轻扫**<br />依赖于游戏设计和可用作通过边缘上的点击 D 填充。<br /><br />**Click**<br />执行主按钮功能。|
+|**菜单**<br />按下以返回到之前的屏幕或菜单。|返回到上一屏幕并从主应用程序屏幕退出到 Apple 电视主页屏幕。|暂停和继续玩游戏，将返回到上一屏幕并退出到 Apple 电视主页屏幕从主应用程序屏幕。|
+|**Siri/Search**<br />在使用 Siri 国家/地区，请按住语音控件，在所有其他国家/地区，显示搜索屏幕。|n/a|n/a|
+|**播放/暂停**<br />播放和暂停媒体或提供应用程序中的辅助函数。|启动媒体播放和暂停/继续播放。|执行辅助按钮的功能或跳过简介视频 (如果存在)。|
+|**主文件夹**<br />按以返回到主页屏幕中，双击要显示运行中的应用，请按住进入睡眠状态的设备。|n/a|n/a|
+|**卷**<br />控件附加音频/视频设备卷。|n/a|n/a|
 
 <a name="Touch-Surface-Gestures" />
 
@@ -83,18 +54,10 @@ Siri 远程具有以下功能和 tvOS 应用中的预期的用法：
 
 Siri 远程数据库的 Touch 面是能够检测到各种可响应 Xamarin.tvOS 应用程序中的单指手势：
 
-<table width="100%">
-<tr>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture01.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture02.png"></td>
-    <td valign="top" width="30%"><img src="remote-bluetooth-images/Gesture03.png"></td>
-</tr>
-<tr>
-    <td valign="top"><b>轻扫：</b><br/>在屏幕上的 UI 元素之间移动选择 （焦点） （向上、 下左、 右）。 轻扫可用来快速使用惯性的内容的大型列表中滚动。</td>
-    <td valign="top"><b>单击所示：</b><br/>激活所选的 （焦点） 项或像游戏中的主按钮。 单击并按住可以激活上下文菜单或辅助函数。</td>
-    <td valign="top"><b>点击：</b><br/>轻轻点击 Touch 曲面上边缘的作用类似方向按钮在 D-板、 将焦点移向上、 下、 左或右根据点击的区域。 具体取决于应用程序中，可以使用以显示隐藏的控件。</td>
-</tr>
-</table>
+|轻扫|单击|点击|
+|---|---|---|
+|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|在屏幕上的 UI 元素之间移动选择 （焦点） （向上、 下左、 右）。 轻扫可用来快速使用惯性的内容的大型列表中滚动。|激活所选的 （焦点） 项或像游戏中的主按钮。 单击并按住可以激活上下文菜单或辅助函数。|轻轻点击 Touch 曲面上边缘的作用类似方向按钮在 D-板、 将焦点移向上、 下、 左或右根据点击的区域。 具体取决于应用程序中，可以使用以显示隐藏的控件。|
 
 Apple 提供用于使用 Touch 面手势以下建议：
 
@@ -112,7 +75,7 @@ Touch 图面上的笔势，除了你的应用程序可以响应用户单击 Touc
 此外，菜单按钮按下可以使用来检测笔势识别器标准`UIKit`元素。 如果截获按下的菜单按钮，你将负责关闭当前视图和视图控制器，并返回到前一个。
 
 > [!IMPORTANT]
-> **注意：**应该**始终**为播放/暂停按钮在远程数据库上指定函数。 具有非功能性按钮可使查找中断向最终用户应用。 如果你没有此按钮的有效函数，将分配与主按钮 （Touch 面单击） 相同的功能。
+> 你应**始终**为播放/暂停按钮在远程数据库上指定函数。 具有非功能性按钮可使查找中断向最终用户应用。 如果你没有此按钮的有效函数，将分配与主按钮 （Touch 面单击） 相同的功能。
 
 
 
@@ -319,77 +282,24 @@ namespace tvRemote
 游戏控制器可以用于提高玩游戏并提供了在游戏中的高质量的意义。 它们还可以用于控制标准 Apple TV 接口，以便使用无需远程和控制器之间切换。
 
 > [!IMPORTANT]
-> **注意：**蓝牙游戏控制器最终用户可能会使可选购买，您的应用程序不能强制用户在购买一个。 如果你的应用程序支持游戏控制器，它还必须支持 Siri 远程，以便游戏已由 Apple TV 的所有用户使用。
-
+> 蓝牙游戏控制器最终用户可能会使可选购买，您的应用程序不能强制用户在购买一个。 如果你的应用程序支持游戏控制器，它还必须支持 Siri 远程，以便游戏已由 Apple TV 的所有用户使用。
 
 游戏控制器具有以下功能和 tvOS 应用中的预期的用法：
-<table width="100%" border="1px">
-<tr>
-    <td><b>功能</b></td>
-    <td><b>常规应用使用情况</b></td>
-    <td><b>游戏的应用使用情况</b></td>
-</tr>
-<tr>
-    <td valign="top"><b>D-Pad</b></td>
-    <td valign="top">将导航到 UI 元素 （更改焦点）。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>A</b></td>
-    <td valign="top">激活所选的 （焦点） 项。</td>
-    <td valign="top">执行主按钮的功能，并确认对话框操作。</td>
-</tr>
-<tr>
-    <td valign="top"><b>B</b></td>
-    <td valign="top">返回到之前的屏幕或退出到主页屏幕中，如果应用程序的主屏幕上。</td>
-    <td valign="top">执行辅助按钮的功能或返回到之前的屏幕。</td>
-</tr>
-<tr>
-    <td valign="top"><b>X</b></td>
-    <td valign="top">启动媒体播放或暂停/继续播放。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>Y</b></td>
-    <td valign="top">n/a</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>菜单</b></td>
-    <td valign="top">返回到之前的屏幕或退出到主页屏幕中，如果应用程序的主屏幕上。</td>
-    <td valign="top">暂停/恢复玩游戏，将返回到之前的屏幕或主页屏幕的退出如果应用程序的主屏幕。</td>
-</tr>
-<tr>
-    <td valign="top"><b>左即时权限提升按钮</b></td>
-    <td valign="top">导航左侧。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>左的触发器</b></td>
-    <td valign="top">导航左侧。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>右即时权限提升按钮</b></td>
-    <td valign="top">导航右。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>正确的触发器</b></td>
-    <td valign="top">导航右</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>左的摇杆</b></td>
-    <td valign="top">将导航到 UI 元素 （更改焦点）。</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-<tr>
-    <td valign="top"><b>右摇杆</b></td>
-    <td valign="top">n/a</td>
-    <td valign="top">依赖于游戏。</td>
-</tr>
-</table>
+
+|功能|常规应用使用情况|游戏的应用使用情况|
+|---|---|---|
+|**D-Pad**|将导航到 UI 元素 （更改焦点）。|依赖于游戏。|
+|**A**|激活所选的 （焦点） 项。|执行主按钮的功能，并确认对话框操作。|
+|**B**|返回到之前的屏幕或退出到主页屏幕中，如果应用程序的主屏幕上。|执行辅助按钮的功能或返回到之前的屏幕。|
+|**X**|启动媒体播放或暂停/继续播放。|依赖于游戏。|
+|**Y**|n/a|依赖于游戏。|
+|**菜单**|返回到之前的屏幕或退出到主页屏幕中，如果应用程序的主屏幕上。|暂停/恢复玩游戏，将返回到之前的屏幕或主页屏幕的退出如果应用程序的主屏幕。|
+|**左即时权限提升按钮**|导航左侧。|依赖于游戏。|
+|**左的触发器**|导航左侧。|依赖于游戏。|
+|**右即时权限提升按钮**|导航右。|依赖于游戏。|
+|**正确的触发器**|导航右|依赖于游戏。|
+|**左的摇杆**|将导航到 UI 元素 （更改焦点）。|依赖于游戏。|
+|**右摇杆**|n/a|依赖于游戏。|
 
 Apple 提供了用于游戏控制器以下建议：
 
@@ -457,7 +367,7 @@ Apple 有几个如果 Xamarin.tvOS 应用支持游戏控制器，必须满足的
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖新 Siri 远程附带 Apple TV、 Touch 面手势和 Siri 远程按钮。 接下来，则覆盖使用手势和情节提要、 手势和代码和低级别事件。 最后，如果讨论使用游戏控制器。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>情节提要简介
 
@@ -25,7 +25,7 @@ _情节提要是外观的可视表示形式和应用程序流。Xamarin 引入�
 情节提要可以创建、 打开和编辑使用 Xamarin iOS 设计器。 本指南也将演练如何使用设计器同时使用 C# 程序导航创建情节提要。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 情节提要可以用于 iOS 适用于 Mac 的 Visual Studio 中的设计器或 Visual Studio 2015 和 2017年安装 Xamarin 工作负荷。
 
@@ -84,32 +84,12 @@ A *Segue*，或*Segue 对象*，在 iOS 开发中使用来表示场景之间的�
 
 [![](images/adaptivesegue.png "自适应 Segue 的下拉列表中")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Segue</th>
-            <th>描述</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>显示</td>
-            <td>这是非常类似于推送 segue，但它会考虑屏幕的内容。 </td>
-        </tr>
-        <tr>
-            <td>显示详细信息</td>
-            <td>如果应用显示 （例如，在 iPAd 上的拆分视图控制器） 的 master 和详细信息视图，内容将替换详细信息视图。 如果应用显示只有主<strong>或</strong>详细信息，内容将替换视图控制器堆栈的顶部。</td>
-        </tr>
-        <tr>
-            <td>展示</td>
-            <td>这类似于模式 segue，并允许针对选择的演示文稿和转换样式。</td>
-        </tr>
-        <tr>
-            <td>Popover 演示文稿</td>
-            <td>此显示内容，并且 popover</td>
-        </tr>
-    </tbody>
-</table>
+|Segue|描述|
+|--- |--- |
+|显示|这是非常类似于推送 segue，但它会考虑屏幕的内容。|
+|显示详细信息|如果应用显示 （例如，在 iPad 上的拆分视图控制器） 的 master 和详细信息视图，内容将替换详细信息视图。 如果应用显示仅 master 或详细信息，内容将替换视图控制器堆栈的顶部。|
+|展示|这类似于模式 segue，并允许针对选择的演示文稿和转换样式。|
+|Popover 演示文稿|此显示内容，并且 popover|
 
 ### <a name="transferring-data-with-segues"></a>传输数据与 Segue
 
@@ -504,7 +484,7 @@ public partial class MainViewController : UIViewController
 
 当在应用正在运行且用户单击的场景从创建 Segue 在 UI 元素上给定**情节提要 ID**将显示在相同的情节提要情节提要引用中指定。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍的情节提要和如何它们将是有益的开发中的 iOS 应用程序的概念。 它讨论场景、 查看控制器、 视图和视图层次结构和场景是如何与不同类型 Segues 配合相链接。  它还探讨了实例化的视图控制器手动从情节提要，并创建条件 Segues。
 

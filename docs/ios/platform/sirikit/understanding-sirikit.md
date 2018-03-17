@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 202df615f1b35504f1fe5c9fd64c9c4b4db77a2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 67635b6a04579246467184cdff8d9f277b36ecc4
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>了解 SiriKit 概念
 
@@ -65,108 +65,33 @@ MonkeyChat 能让用户的朋友自己联系人簿，每个与屏幕名称 （�
 
 例如，如果用户想要将消息发送到其友元 Bobo，它们可能具有 Siri 的以下会话：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"你好 Siri，MonkeyChat 消息的发送"</td>
-</tr>
-<tr>
-    <td>"向其？"</td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"Bobo"</td>
-</tr>
-<tr>
-    <td>"你想什么说到 Bobo？"</td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"请自动发送详细香蕉"</td>
-</tr>
-</table>
+_用户： 你好 Siri，发送 MonkeyChat 消息。_<br />
+_Siri： 向其？_<br />
+_用户： Bobo。_<br />
+_Siri： 你想什么说到 Bobo？_<br />
+_用户： 请自动发送详细香蕉。_<br />
 
 其他人可能会使与不同对话的同一请求：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"将消息发送到上 MonkeyChat Bobo"</td>
-</tr>
-<tr>
-    <td>"你想什么说到 Bobo？"</td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"请自动发送详细香蕉"</td>
-</tr>
-</table>
+_用户： 向 Bobo MonkeyChat 上发送消息。_<br />
+_Siri： 你想什么说到 Bobo？_<br />
+_用户： 请自动发送详细香蕉。_<br />
 
 和其他用户可能会使甚至更短的请求：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"请 MonkeyChat Bobo 发送的多个香蕉"</td>
-</tr>
-<tr>
-    <td>好了，发送消息请对"发送详细香蕉上 Monkeychat Bobo"</td>
-    <td></td>
-</tr>
-</table>
+_用户： MonkeyChat Bobo 请发送详细香蕉。_<br />
+_Siri： 好了，发送消息请详细香蕉向发送 Bobo Monkeychat 上。_<br />
 
 或甚至以不同语言中发出相同请求：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"MonkeyChat Bobo s'il vous plaît envoyer 加上 de bananes"</td>
-</tr>
-<tr>
-    <td>"Oui、 envoi 消息 s'il vous plaît envoyer 加 de bananes à Bobo sur Monkeychat"</td>
-    <td></td>
-</tr>
-</table>
+_用户： MonkeyChat Bobo s'il vous plaît envoyer 加上 de bananes。_<br />
+_Siri: Oui、 envoi 消息 s'il vous plaît envoyer 加 de bananes à Bobo sur Monkeychat。_<br />
 
 尚未另一个用户可能非常详细其对话中：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"你好 Siri，可以将请我优先而是启动 MonkeyChat 应用程序来发送消息文本请自动发送详细香蕉"</td>
-</tr>
-<tr>
-    <td>"向其？"</td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"我最佳 pal Bobo"</td>
-</tr>
-</table>
+_用户： 你好 Siri，可以将请我优先而是启动 MonkeyChat 应用程序来发送消息文本请自动发送详细香蕉。_<br />
+_Siri： 向其？_<br />
+_用户： 我最佳 pal Bobo。_<br />
 
 此外，有 Siri 可能响应请求，某些基于如何发出请求的多种方法：
 
@@ -198,24 +123,9 @@ Siri 也进行调整以满足用户的可访问性需求，并将进行交互和
 
 根据上述信息，检查以下会话将如何与 MonkeyChat 应用进行交互：
 
-<table width="100%" border="1px">
-<tr>
-    <td width="50%"><b>Siri</b></td>
-    <td width="50%"><b>User</b></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"你好 Siri，发送一条消息到上 MonkeyChat Bobo"</td>
-</tr>
-<tr>
-    <td>"你想什么说到 Bobo？"</td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>"请自动发送详细香蕉"</td>
-</tr>
-</table>
+_用户： 你好 Siri，发送一条消息到 Bobo MonkeyChat 上。_<br />
+_Siri： 你想什么说到 Bobo？_<br />
+_用户： 请自动发送详细香蕉。_<br />
 
 应用程序设置将在会话中的第一个角色是帮助了解用户的语音的 Siri:
 
@@ -493,7 +403,7 @@ SiriKit 是不可或缺的组成部分 iOS 并使用较大的意向框架添加�
 
 当使用单个值的问题，无法确定应用程序，处理这种情况的首选的方法是具有 Siri 要求用户确认。 例如， *"您的意思 Bobo 出色？"*，其中他们可以使用一个简单的是或否答案回复。
 
-如果有多个可能的选项可能是正确的单个值的情况下，消除歧义将是首选的处理方法。 在此情况下使用 Siri 可以提示用户与最多十个可能的选项可供选择。 例如:
+如果有多个可能的选项可能是正确的单个值的情况下，消除歧义将是首选的处理方法。 在此情况下使用 Siri 可以提示用户与最多十个可能的选项可供选择。 例如：
 
 ```csharp
 Who do you want to send the message to?
@@ -548,7 +458,7 @@ Siri 具有每个域和它所知道的操作的几个内置的用户界面。 �
 
 尽可能具有对话与使用 Siri （代表的应用程序） 是流体、 自然和"认为身"。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖使用 SiriKit 所必需的显示它可以与 Xamarin.iOS 应用程序，以提供的 iOS 设备上使用 Siri 和映射的应用程序的用户可以访问的服务进行交互的关键概念。
 

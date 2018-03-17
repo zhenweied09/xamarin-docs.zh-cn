@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>通过 Xamarin 使用 Jenkins
 
@@ -34,7 +34,7 @@ _本指南演示如何设置为持续集成服务器 Jenkins 和自动执行编�
 
 本指南将指导如何设置 Jenkins 服务器涵盖的每个这些点。 它的结束时，我们应具有非常了解如何设置和配置 Jenkins 为我们 Xamarin 移动项目创建 IPA 和 APK 的。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 理想的生成服务器是专用于生成和可能测试应用程序的唯一目的的独立计算机。 专用的计算机可确保可能要求的其他角色 （例如，web 服务器） 的项目不会污染生成。 例如，如果生成服务器还充当 web 服务器时，web 服务器可能需要一些常见的库的冲突版本。 由于此冲突的 web 服务器可能无法正常运行或 Jenkins 可能创建生成部署到用户时不起作用。
 
@@ -343,40 +343,14 @@ Jenkins 将检索到一个名为的特殊文件夹的完整源代码*工作区*�
 
 这两种命令需要可能不同项目到项目的命令行参数。 此外，某些这些命令行参数是时不应出现在控制台输出中生成运行的密码。 我们将在环境变量中存储的某些这些命令行参数。 下表所述所需的签名和/或 zip 对齐的环境变量：
 
-<table>
-    <thead>
-        <tr>
-            <td>环境变量</td>
-            <td>描述</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>这是进行签名 APK 密钥库的路径</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>将用于签署 APK 密钥库中的键。</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>通过创建 APK `xbuild`。</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>签名的 APK 由`jarsigner`。</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>这是 zip 对齐由生成的 APK `zipalign`。</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>这是用于访问有关个人文件都按照密钥库的内容的密码。</td>
-        </tr>
-    </tbody>
-</table>
+|环境变量|描述|
+|--- |--- |
+|KEYSTORE_FILE|这是进行签名 APK 密钥库的路径|
+|KEYSTORE_ALIAS|将用于签署 APK 密钥库中的键。|
+|INPUT_APK|通过创建 APK `xbuild`。|
+|SIGNED_APK|签名的 APK 由`jarsigner`。|
+|FINAL_APK|这是 zip 对齐由生成的 APK `zipalign`。|
+|STORE_PASS|这是用于访问有关个人文件都按照密钥库的内容的密码。|
 
 如所述的要求部分中，可以使用 EnvInject 插件在生成过程中设置这些环境变量。 作业均应具有新的生成步骤添加基于 Inject 环境变量中的下一步的屏幕截图所示：
 
@@ -415,7 +389,7 @@ Jenkins 将检索到一个名为的特殊文件夹的完整源代码*工作区*�
 自动的测试可以提交到测试云使用 shell 命令。 有关 Xamarin 测试云中的测试运行设置的详细信息，我们制定了指南针对使用[Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)或[Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南中我们引入 Jenkins 为 Mac OS X 上的生成服务器，并将其配置为编译和准备 Xamarin 移动应用程序版本。 我们以及多个插件以支持生成过程的 Mac OS X 计算机上安装 Jenkins。 我们创建并配置的作业，将从 TFS 或 Git、 拉取代码，然后将该代码编译到版本准备应用程序。 我们还解决了两种不同的方式来计划应运行作业。
 

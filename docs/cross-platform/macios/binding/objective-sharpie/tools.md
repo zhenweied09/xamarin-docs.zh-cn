@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 0d6e953a6a45b78d470c7ff73e1d6faa7444a683
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4985d67f74d54644cbc033d6c76148f88d741ee1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tools--commands"></a>工具和命令
 
@@ -53,19 +53,14 @@ Available Tools:
 
 目标 Sharpie 提供了以下工具：
 
-<table>
-  <thead>
-    <tr><td>工具</td><td>描述</td>
-  </thead>
-  <tbody>
-    <tr><td><b>xcode</b></td><td>提供有关当前的 Xcode 安装和版本的 iOS 和 Mac Sdk 所提供的信息。 我们将使用此信息更高版本时我们生成我们的绑定。</td></tr>
-    <tr><td><b>pod</b></td><td>搜索、 配置、 安装 （在本地目录），并将绑定 Objective C <a href="https://cocoapods.org">CocoaPod</a> master 规范存储库中可用的库。 此工具会评估已安装的 CocoaPod 自动推导出正确的输入要传递给<code>bind</code>下面的工具。 <em><strong>3.0 中新增功能 ！</strong></em></td></tr>
-    <tr><td><b>bind</b></td><td>分析标头文件 (<code>*.h</code>) 到 Objective C 库中<a href="~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md">初始<i>ApiDefinition.cs</i>和<i>StructsAndEnums.cs</i>文件</a>。</td></tr>
-    <tr><td><b>update</b></td><td>检查目标 Sharpie 的较新版本和下载并启动安装程序，如果有的话。</td></tr>
-    <tr><td><b>verify-docs</b></td><td>显示有关详细的信息<code>[Verify]</code>属性。</td></tr>
-    <tr><td><b>docs</b></td><td>导航到在默认 web 浏览器中的此文档。</td></tr>
-  </tbody>
-</table>
+|工具|描述|
+|--- |--- |
+|**xcode**|提供有关当前的 Xcode 安装和版本的 iOS 和 Mac Sdk 所提供的信息。 我们将使用此信息更高版本时我们生成我们的绑定。|
+|**pod**|搜索、 配置、 安装 （在本地目录），并将绑定 Objective C [CocoaPod](https://cocoapods.org/) master 规范存储库中可用的库。 此工具会评估已安装的 CocoaPod 自动推导出正确的输入要传递给`bind`下面的工具。 3.0 中新增功能 ！|
+|**bind**|分析标头文件 (`*.h`) 到初始 Objective C 库中[ApiDefinition.cs 和 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md)文件。|
+|**update**|检查目标 Sharpie 的较新版本和下载并启动安装程序，如果有的话。|
+|**verify-docs**|显示有关详细的信息`[Verify]`属性。|
+|**docs**|导航到在默认 web 浏览器中的此文档。|
 
 若要获得关于特定目标 Sharpie 工具帮助，请输入工具的名称和`-help`选项。 例如，`sharpie xcode -help`将返回以下输出：
 

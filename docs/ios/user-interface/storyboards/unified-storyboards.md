@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>统一的情节提要
 
@@ -116,63 +116,23 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 
 以下是开发人员可能会看到在 iPhone 的典型特征集合：
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>属性</td>
-    <td>“值”</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>压缩</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>规则</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>电话</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|属性|值|
+|--- |--- |
+|`HorizontalSizeClass`|压缩|
+|`VerticalSizeClass`|规则|
+|`UserInterfaceIdom`|电话|
+|`DisplayScale`|2.0|
 
 设置了上述将表示的完全限定特征集合，因为它具有所有其特征属性的值。
 
 还有可能有一个缺少它的一些值的特征集合 (它是 Apple 指作为*未指定*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>属性</td>
-    <td>“值”</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>压缩</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{未指定}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{未指定}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{未指定}</td>
-</tr>
-</tbody>
-</table>
+|属性|值|
+|--- |--- |
+|`HorizontalSizeClass`|压缩|
+|`VerticalSizeClass`|未指定|
+|`UserInterfaceIdom`|未指定|
+|`DisplayScale`|未指定|
 
 通常情况下，但是，当开发人员请求其特征集合特征环境，它将返回的完全限定的集合在上面的示例所示。
 
@@ -216,7 +176,6 @@ Apple 已添加到 iOS 8 名的新类`UIImageAsset`以便开发人员更多控�
 
 如前所述，如果任何特征的一个特征集合中未指定，在另一个指定，则值将设置为指定的版本。 但是，如果没有指定的给定值的多个版本，值从上一个特征集合将使用的值。
 
-
 ## <a name="adaptive-view-controllers"></a>自适应的视图控制器
 
 本部分将介绍如何 iOS 视图和视图控制器已采用的特征和大小类自动为开发人员应用程序中更自适应的概念的详细信息。
@@ -259,58 +218,11 @@ A`UIView`设置为拆分视图控制器的父级和`SetOverrideTraitCollection`�
 
 iOS 8 提供开发人员可以使用下表中所示参与特征更改的多个回调：
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Phase</td>
-    <td>回调</td>
-    <td>描述</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>安装</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>特征集合获取设置为其新值之前，获取特征更改开头调用此方法。</li>
-        <li>特性集合的值更改时，但任何动画发生之前，获取调用该方法。</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>动画</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>获取传递给此方法转换处理协调器具有<code>AnimateAlongside</code>允许开发人员添加将执行以及默认动画的动画的属性。</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>清理</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>提供要转换发生后包括自己清理代码的开发人员的方法。</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Phase|回调|描述|
+|--- |--- |--- |
+|安装|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>特征集合获取设置为其新值之前，获取特征更改开头调用此方法。</li><li>特性集合的值更改时，但任何动画发生之前，获取调用该方法。</li></ul>|
+|动画|`WillTransitionToTraitCollection`|获取传递给此方法转换处理协调器具有`AnimateAlongside`允许开发人员添加将执行以及默认动画的动画的属性。|
+|清理|`WillTransitionToTraitCollection`|提供要转换发生后包括自己清理代码的开发人员的方法。|
 
 `WillTransitionToTraitCollection`方法非常适合进行查看控制器以及特征集合更改动画处理。 `WillTransitionToTraitCollection`方法仅可在上找到视图控制器 ( `UIViewController`) 而不是在其他特征环境，如`UIViews`。
 
@@ -354,7 +266,7 @@ iOS 8 提供开发人员可以使用下表中所示参与特征更改的多个�
 
  [![](unified-storyboards-images/gettargetforaction.png "新的 GetTargetForAction 方法")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-此方法指导的层次结构链，直到找到正确的容器视图控制器。 例如:
+此方法指导的层次结构链，直到找到正确的容器视图控制器。 例如：
 
 1.  如果`ShowViewController`方法被调用时，实现此方法的链中的第一个视图控制器是导航控制器中，因此它被用作新视图的父级。
 1.  如果`ShowDetailViewController`方法已改为调用时，拆分视图控制器是第一个的视图控制器，来实现，因此它使用与父项。
@@ -390,7 +302,7 @@ iOS 8 提供开发人员可以使用下表中所示参与特征更改的多个�
 
  [![](unified-storyboards-images/rotation.png "拆分视图控制器将显示这两个母版和详细信息视图如下所示")](unified-storyboards-images/rotation.png#lightbox)
 
-这通过重写实现`UpdateConstraintsForTraitCollection`的值基于方法的视图控制器和调整约束`VerticalSizeClass`。 例如:
+这通过重写实现`UpdateConstraintsForTraitCollection`的值基于方法的视图控制器和调整约束`VerticalSizeClass`。 例如：
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -446,7 +358,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>添加过渡动画
 
-当应用程序将从自适应照片中的拆分视图控制器折叠状态为展开时，动画将添加到默认动画通过重写`WillTransitionToTraitCollection`视图控制器的方法。 例如:
+当应用程序将从自适应照片中的拆分视图控制器折叠状态为展开时，动画将添加到默认动画通过重写`WillTransitionToTraitCollection`视图控制器的方法。 例如：
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -848,7 +760,7 @@ IOS 设计器将确认开发人员想要转换的情节提要即可使用大小�
 
 若要查看的动态的启动屏幕 Xamarin 中实现，查看[动态启动屏幕](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)示例 iOS 8 应用程序附加到此文档。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文所花费的快速了解一下大小类以及它们如何影响 iPhone 和 iPad 设备中的布局。 它讨论特征、 特征环境和特征集合如何与大小类来创建统一接口工作。 此操作耗时简要看自适应查看控制器和如何与大小类统一接口内的工作方式。 在从 C# 代码在 Xamarin iOS 8 应用程序内完全实现大小类和统一接口，它看起来。
 

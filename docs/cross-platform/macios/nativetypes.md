@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: b78ade19efed92ab3b2d8ba790f2d7334472bab4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09858bd7902b44bbedd96f1be9c9c827131ee16f
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="native-types"></a>本机类型
 
@@ -27,28 +27,11 @@ ms.lasthandoff: 02/27/2018
 
 下表显示我们的数据类型以与匹配这一新 32/64 位领域中所做的更改：
 
-<table>
-        <tr>
-            <th>本机类型</th>
-            <th>32 位后备类型</th> 
-            <th>64 位后备类型</th>
-        </tr>
-        <tr>
-            <td><code>System.nint</code></td>
-        <td><code>System.Int32</code> (<code>int</code>)</td>
-        <td><code>System.Int64</code> (<code>long</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nuint</code></td>
-        <td><code>System.UInt32</code> (<code>uint</code>)</td>
-        <td><code>System.UInt64</code> (<code>ulong</code>)</td>
-        </tr>
-        <tr>
-            <td><code>System.nfloat</code></td>
-        <td><code>System.Single</code> (<code>float</code>)</td>
-        <td><code>System.Double</code> (<code>double</code>)</td>
-        </tr>
-    </table>
+|本机类型|32 位后备类型|64 位后备类型|
+|--- |--- |--- |
+|`System.nint`|`System.Int32` (`int`)|`System.Int64` (`long`)|
+|`System.nuint`|`System.UInt32` (`uint`)|`System.UInt64` (`ulong`)|
+|`System.nfloat`|`System.Single` (`float`)|`System.Double` (`double`)|
 
 我们选择允许 C# 代码看起来更多或更少看起来会今天的相同方式这些名称。
 
@@ -76,32 +59,15 @@ ms.lasthandoff: 02/27/2018
 
 在迁移到**统一**，你将需要的实例替换`System.Drawing`与其`CoreGraphics`对应的下表中所示：
 
-<table>
-        <tr>
-            <th>System.Drawing 中的旧类型</th>
-            <th>新的数据类型 CoreGraphics</th> 
-            <th>描述</th>
-        </tr>
-        <tr>
-        <td><code>RectangleF</code></td>
-        <td><code>CGRect</code></td>
-        <td>浮点的保留点矩形信息。  </td>
-        </tr>
-        <tr>
-        <td><code>SizeF</code></td>
-        <td><code>CGSize</code></td>
-        <td>浮点的保留点大小信息 （宽度、 高度）</td>
-        </tr>
-        <tr>
-        <td><code>PointF</code></td>
-        <td><code>CGPoint</code></td>
-        <td>保存浮点型、 点信息 (X，Y)</td>
-        </tr>
-    </table>
+|System.Drawing 中的旧类型|新的数据类型 CoreGraphics|描述|
+|--- |--- |--- |
+|`RectangleF`|`CGRect`|浮点的保留点矩形信息。|
+|`SizeF`|`CGSize`|浮点的保留点大小信息 （宽度、 高度）|
+|`PointF`|`CGPoint`|保存浮点型、 点信息 (X，Y)|
 
 旧的数据类型使用浮动存储的数据结构中，元素而新的另一个使用`System.nfloat`。
 
 ## <a name="related-links"></a>相关链接
 
 - [使用跨平台应用中的本机类型](~/cross-platform/macios/native-types-cross-platform.md)
-- [经典 vs 统一的 API 差异](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [经典 vs 统一的 API 差异](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

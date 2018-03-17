@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>以编程方式布局约束
 
@@ -51,7 +51,7 @@ _本指南介绍使用 iOS 自动布局约束在 C# 代码中而不是在 iOS �
 - **ConstraintGreaterThanOrEqualTo** -定义的关系其中`first attribute >= second attribute + [constant]`利用 （可选） 提供`constant`偏移值。
 - **ConstraintLessThanOrEqualTo** -定义的关系其中`first attribute <= second attribute + [constant]`利用 （可选） 提供`constant`偏移值。
 
-例如:
+例如：
 
 ```csharp
 // Get the parent view's layout
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 其中的 C# 代码的部分对应的等式的给定部分，如下所示：
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>公式</b></td><td><b>代码</b></td>
-</tr>
-<tr>
-<td width="50%">第 1 项</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">属性 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">关系</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">乘数</td><td>默认值为 1.0，因此未指定</td>
-</tr>
-<tr>
-<td width="50%">项 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">属性 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">返回的常量</td><td>10.0</td>
-</tr>
-</table>
+|公式|代码|
+|---|---|
+|第 1 项|PurpleView|
+|属性 1|LeadingAnchor|
+|关系|ConstraintEqualTo|
+|乘数|默认值为 1.0，因此未指定|
+|项 2|OrangeView|
+|属性 2|TrailingAnchor|
+|返回的常量|10.0|
 
 除了提供仅解决给定的布局约束公式所需的参数，每个布局定位点方法强制执行传递给它们的参数的类型安全性。 因此水平约束，如定位`LeadingAnchor`或`TrailingAnchor`只能使用与其他水平定位点类型和乘数仅提供给大小限制。
 
@@ -112,7 +95,7 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 ### <a name="layout-constraints"></a>布局约束
 
-您可以通过直接构造手动添加自动布局约束`NSLayoutConstraint`在 C# 代码。 与使用布局定位点，您必须指定每个参数的值，即使它将具有所定义的约束没有影响。 因此，你将得到生成大量难以阅读，样板文件代码。 例如:
+您可以通过直接构造手动添加自动布局约束`NSLayoutConstraint`在 C# 代码。 与使用布局定位点，您必须指定每个参数的值，即使它将具有所定义的约束没有影响。 因此，你将得到生成大量难以阅读，样板文件代码。 例如：
 
 ```csharp
 //// Pin the leading edge of the view to the margin
@@ -172,7 +155,7 @@ NSLayoutConstraint.ActivateConstraints (constraints);
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南提供了创建和使用 C# 中的自动数据布局约束而不 iOS 设计器中以图形方式创建。 首先，它看使用布局锚 (`NSLayoutAnchor`) 来处理自动布局。 接下来，它说明了如何使用布局约束 (`NSLayoutConstraint`)。 最后，它提供用于自动布局的可视格式语言。
 

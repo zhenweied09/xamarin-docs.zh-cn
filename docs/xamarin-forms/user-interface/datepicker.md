@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>使用包含 DatePicker
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-当`DateTime`中的值指定在 XAML 中，XAML 分析器使用`DateTime.Parse`方法替换`CultureInfo.InvariantCulture`参数，以将字符串转换为`DateTime`值。 必须在精确的格式指定日期： 两位数的月份、 两位数日和四位数年份由斜杠分隔：
+当`DateTime`值指定在 XAML 中，XAML 分析器使用`DateTime.Parse`方法替换`CultureInfo.InvariantCulture`参数，以将字符串转换为`DateTime`值。 必须在精确的格式指定日期： 两位数的月份、 两位数日和四位数年份由斜杠分隔：
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -78,7 +78,7 @@ DatePicker datePicker = new DatePicker
             ··· />
 ```
 
-但是，这不是建议在一起。 具体取决于的设置`Format`属性，选择日期可能需要不同的显示宽度。 例如，"D"格式字符串会导致`DateTime`若要显示日期的长格式和"星期三，年 9 月 12，2018"中，需要更大的显示宽度比"星期五，5 月 4，2018"。 根据所用平台，这种差异可能会导致`DateTime`视图，以更改宽度在布局中，或显示被截断。
+但是，这不是建议在一起。 具体取决于的设置`Format`属性，选择日期可能需要不同的显示宽度。 例如，"D"格式字符串会导致`DateTime`若要显示日期的长格式和"星期三，年 9 月 12，2018"中，需要更大的显示宽度比"星期五，5 月 4，2018。" 根据所用平台，这种差异可能会导致`DateTime`视图，以更改宽度在布局中，或显示被截断。
 
 > [!TIP]
 > 最好是使用默认`HorizontalOptions`设置`Fill`与`DatePicker`，而不是使用宽度为`Auto`时将`DatePicker`中`Grid`单元格。
@@ -139,7 +139,7 @@ DatePicker datePicker = new DatePicker
 </ContentPage>
 ```
 
-每个`DatePicker`分配`Format`长日期格式的"D"属性。 此外请注意，`endDatePicker`对象绑定中有一个面向其`MinimumDate`属性。 绑定源是所选`Date`属性`startDatePicker`对象。 这可确保的结束日期始终更高版本或等于开始日期。 除了这两个`DatePicker`对象，`Switch`标记为"Include 总共这两个天"。 
+每个`DatePicker`分配`Format`长日期格式的"D"属性。 此外请注意，`endDatePicker`对象绑定中有一个面向其`MinimumDate`属性。 绑定源是所选`Date`属性`startDatePicker`对象。 这可确保的结束日期始终更高版本或等于开始日期。 除了这两个`DatePicker`对象，`Switch`标记为"总共包括这两个天"。 
 
 这两个`DatePicker`视图具有处理程序附加到`DateSelected`事件，和`Switch`具有一个处理程序附加到其`Toggled`事件。 这些事件处理程序中的代码隐藏文件和触发新计算的两个日期之间的天数：
 
@@ -184,7 +184,7 @@ public partial class MainPage : ContentPage
 
 [![日期结果之间的天数](datepicker-images/DaysBetweenDatesResult.png "日期结果之间的天数")](datepicker-images/DaysBetweenDatesResult-Large.png#lightbox "日期结果之间的天数")
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [DaysBetweenDates 示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
 - [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)

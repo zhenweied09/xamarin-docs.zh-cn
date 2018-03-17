@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>演练-使用 WCF
 
@@ -27,7 +27,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 
 <a name="Requirements" />
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本演练假定你已具备一定的创建和使用 WCF 服务。
 
@@ -394,37 +394,12 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
 1. 在`HelloWorld.iOS`项目中，添加对引用`HelloWorldServiceProxy`项目中和的引用来`System.ServiceModel`命名空间。
 1. 在**解决方案资源管理器**，双击`Main.storyboard`以在 iOS 设计器中打开该文件。 然后，添加以下`UIButton`和`UITextView`控件：
 
-    <table>
-        <thead>
-            <tr>
-                <td></td>
-                <td>name</td>
-                <td>标题</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>sayHelloWorldButton</code></td>
-                <td>说出"Hello，World"</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>sayHelloWorldText</code></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><code>UIButton</code></td>
-                <td><code>getHelloWorldDataButton</code></td>
-                <td>获取"Hello，World"数据</td>
-            </tr>
-            <tr>
-                <td><code>UITextView</code></td>
-                <td><code>getHelloWorldDataText</code></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+    ||名称|标题|
+    |--- |--- |--- |
+    |`UIButton`|`sayHelloWorldButton`|说出"Hello，World"|
+    |`UITextView`|`sayHelloWorldText`||
+    |`UIButton`|`getHelloWorldDataButton`|获取"Hello，World"数据|
+    |`UITextView`|`getHelloWorldDataText`||
 
     添加控件后, UI 应类似于下面的屏幕快照：
 
@@ -519,7 +494,7 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本教程介绍如何使用 Xamarin.Android 和 Xamarin.iOS 的移动应用程序中的 WCF 服务使用。 它介绍了如何创建 WCF 服务，并且说明了如何配置 Windows 10 和 IIS Express 以接受来自远程设备的连接。 然后，介绍了如何生成 WCF 代理客户端，并演示如何在 Xamarin.Android 和 Xamarin.iOS 应用程序中使用客户端代理。
 

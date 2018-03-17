@@ -8,11 +8,11 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b54e5258c76892620947d0a7ce673b4ff61f09f3
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="matrix-transforms"></a>矩阵转换
 
@@ -410,7 +410,7 @@ public class PathTransformPage : ContentPage
 transformedPath.Transform(matrix);
 ```
 
-路径*不*保留此矩阵作为属性。 相反，它适用于所有路径的坐标转换。 如果`Transform`称为同样，同样，应用转换，则可以返回的唯一方法是通过应用撤消转换的另一个矩阵。 幸运的是，`SKMatrix`结构定义[ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix@/)获取矩阵的方法可反转给定的矩阵：
+路径*不*保留此矩阵作为属性。 相反，它适用于所有路径的坐标转换。 如果`Transform`称为同样，同样，应用转换，则可以返回的唯一方法是通过应用撤消转换的另一个矩阵。 幸运的是，`SKMatrix`结构定义[ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/)获取矩阵的方法可反转给定的矩阵：
 
 ```csharp
 SKMatrix inverse;

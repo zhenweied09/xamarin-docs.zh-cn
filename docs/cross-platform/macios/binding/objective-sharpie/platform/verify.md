@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: cda523cd9d762c3a3c1570e2abd0acb8a264d5dd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10fb2e2824a05954e19f9b483884061b217be683
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="verify-attributes"></a>验证属性
 
@@ -29,32 +29,12 @@ ms.lasthandoff: 02/27/2018
 
 提供给特性的提示参数可以是交叉引用与下面的文档。 对于任何生成的文档`[Verify]`绑定完成后，将在控制台上也提供属性。
 
-<table>
-  <thead>
-  <tr>
-    <th>验证提示</th>
-    <th>描述</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>InferredFromPreceedingTypedef</td>
-    <td>此声明的名称已由从通用约定推断立即前面<code>typedef</code>原始本机源代码中。 验证推断的名称正确，因为此约定是不明确。</td>
-  </tr>
-  <tr>
-    <td>ConstantsInterfaceAssociation</td>
-    <td>没有可靠一点方法来确定哪个 Objective C 接口与外部变量声明可能是关联。 这些实例绑定为<code>[Field]</code>到附近-通过具体接口以生成更直观的 API，可能消除常量部分接口中的属性完全接口。</td>
-  </tr>
-  <tr>
-    <td>MethodToProperty</td>
-    <td>Objective C 方法被绑定为由于如不采用任何参数和返回值 （非 void 返回） 的约定的 C# 属性。 通常类似这样的方法应绑定为属性，做法是，不用去涉猎 API，但有时会的误报和绑定实际应是一种方法。</td>
-  </tr>
-  <tr>
-    <td>StronglyTypedNSArray</td>
-    <td>一个本机<code>NSArray*</code>被绑定为<code>NSObject[]</code>。 它可以更强类型化数组基于期望通过 API 文档 （例如标头文件中的注释） 设置的绑定中或通过检查通过测试的数组内容。 例如，NSArray * 包含仅 NSNumber * instancescan 可绑定为<code>NSNumber[]</code>而不是<code>NSObject[]</code>。</td>
-  </tr>
-  </tbody>
-</table>
+|验证提示|描述|
+|---|---|
+|InferredFromPreceedingTypedef|此声明的名称已由从通用约定推断立即前面`typedef`原始本机源代码中。 验证推断的名称正确，因为此约定是不明确。|
+|ConstantsInterfaceAssociation|没有可靠一点方法来确定哪个 Objective C 接口与外部变量声明可能是关联。 这些实例绑定为`[Field]`到附近-通过具体接口以生成更直观的 API，可能消除常量部分接口中的属性完全接口。|
+|MethodToProperty|Objective C 方法被绑定为由于如不采用任何参数和返回值 （非 void 返回） 的约定的 C# 属性。 通常类似这样的方法应绑定为属性，做法是，不用去涉猎 API，但有时会的误报和绑定实际应是一种方法。|
+|StronglyTypedNSArray|一个本机`NSArray*`被绑定为`NSObject[]`。 它可以更强类型化数组基于期望通过 API 文档 （例如标头文件中的注释） 设置的绑定中或通过检查通过测试的数组内容。 例如，NSArray * 包含仅 NSNumber * instancescan 可绑定为`NSNumber[]`而不是`NSObject[]`。|
 
 你可以快速接收有关提示使用文档`sharpie verify-docs`工具，例如：
 

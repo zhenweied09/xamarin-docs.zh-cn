@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 0717b8484c6094bb1d9589c44df37745d9e21900
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f7a7b565372970cc487b664ed7415cf876e290b6
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="watchos-user-interface"></a>watchOS 用户界面
 
@@ -21,212 +21,23 @@ ms.lasthandoff: 03/09/2018
 
 所有控件的编程名称的前面带`WKInterface`（如。 `WKInterfaceLabel`, `WKInterfaceButton`).
 
-
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-      <th>
-        <strong>控件</strong>
-      </th>
-      <th>
-        <strong>描述</strong>
-      </th>
-      <th>
-        <strong>屏幕快照</strong>
-      </th>
-    </thead>
-    <tbody>
-    <tr>
-      <td valign="top">
-Label </td>
-      <td valign="top">
-使用<code>SetText</code>和其他属性，以控制标签控件中文本的外观。 <code>NSAttributedString</code> 此外支持。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/label.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Button </td>
-      <td valign="top">
-创建并在情节提要中设置属性。 <kbd>Ctrl + 拖动</kbd>添加<code>Action</code>以实现单击时的处理。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/button.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-开关 </td>
-      <td valign="top">
-使用<code>SetOn</code>控制交换机状态。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SwitchDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/switch.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Slider </td>
-      <td valign="top">
-可能会出现许多不同的样式。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SliderDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/slider.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-图像 </td>
-      <td valign="top">
-使用<code>myImage.SetImage("MyWatchImage")</code>以加载图像上监视，或<code>WKInterfaceDevice.CurrentDevice.AddCachedImage</code>缓存它们为在手表上重复使用。
-        <br />
-        <a href="~/ios/watchos/user-interface/image.md">图像控件文档</a>
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/image.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Separator </td>
-      <td valign="top">
-使用分隔符来帮助创建具吸引力监视 Ui。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/separator.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-映射 </td>
-      <td valign="top">
-地图图像静态显示受监视，但你可以控制其外观，包括添加 pin 的许多方面。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/map.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Movie & InlineMove </td>
-      <td valign="top">
-电影可以保持打开状态在他们自己或内联 <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/movie.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-Group </td>
-      <td valign="top">
-使用组来帮助创建具吸引力监视 Ui。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/group.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-表 </td>
-      <td valign="top">
-在 iOS 上的表的简化的版本。
-实现<code>DidSelectRow</code>以响应用户选择 （或使用 segue）。
-        <br />
-        <a href="~/ios/watchos/user-interface/table.md">表控件文档</a>
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TableDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/table.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-设备 </td>
-      <td valign="top">
-        <code>WKInterfaceDevice.CurrentDevice</code> 包括属性，如<code>ScreenBounds</code>， <code>ScreenScale</code>，和<code>PreferredContentSizeCategory</code>。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/device.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="~/ios/watchos/user-interface/menu.md">菜单</a>
-      </td>
-      <td valign="top">
-在情节提要中定义的强制按菜单并在代码中实现的每个按钮的操作。
-        <br />
-        <a href="~/ios/watchos/user-interface/menu.md">菜单控件 (强制 Touch) 文档</a>
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/controller.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-文本输入 </td>
-      <td valign="top">
-使用<code>PresentTextInputController</code>和<code>WKTextInputMode</code>枚举。
-        <br />
-        <a href="~/ios/watchos/user-interface/text-input.md">文本输入文档</a>
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/textinput.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-数字王冠 </td>
-      <td valign="top">
-数字王冠可以用于驱动器选取器，或它的旋转可以在代码中进行跟踪。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/digital-crown.png" class="tableimg">
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-笔势 </td>
-      <td valign="top">
-有四种类型的笔势识别可以添加到一个场景： Tap、 轻扫、 平移和 LongPress。
-        <br />
-        <a href="https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs">目录代码</a>
-      </td>
-      <td>
-        <img src="Images/gestures.png" class="tableimg">
-      </td>
-    </tr>
-    </tbody>
-</table>
-
+|控件|描述|屏幕快照|
+|---|---|---|
+|Label|使用`SetText`和其他属性，以控制标签控件中文本的外观。 `NSAttributedString` 此外支持。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/LabelDetailController.cs)|![](Images/label.png)|
+|Button|创建并在情节提要中设置属性。 Ctrl + 拖动添加`Action`以实现单击时的处理。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ButtonDetailController.cs)|![](Images/button.png)|
+|开关|使用`SetOn`控制交换机状态。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SwitchDetailController.cs)|![](Images/switch.png)|
+|Slider|可能会出现许多不同的样式。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SliderDetailController.cs)|![](Images/slider.png)|
+|图像|使用`myImage.SetImage("MyWatchImage")`以加载图像上监视，或`WKInterfaceDevice.CurrentDevice.AddCachedImage`缓存它们为在手表上重复使用。<br />[图像控件文档](~/ios/watchos/user-interface/image.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs)|![](Images/image.png)|
+|Separator|使用分隔符来帮助创建具吸引力监视 Ui。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![](Images/separator.png)| 
+|映射|地图图像静态显示受监视，但你可以控制其外观，包括添加 pin 的许多方面。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![](Images/map.png)|
+|Movie & InlineMove|电影可以保持打开状态在他们自己或内联<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
+|Group|使用组来帮助创建具吸引力监视 Ui。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![](Images/group.png)|
+|表|在 iOS 上的表的简化的版本。 实现`DidSelectRow`以响应用户选择 （或使用 segue）。<br />[表控件文档](~/ios/watchos/user-interface/table.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![](Images/table.png)|
+|设备|`WKInterfaceDevice.CurrentDevice` 包括属性，如`ScreenBounds`， `ScreenScale`，和`PreferredContentSizeCategory`。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![](Images/device.png)|
+|[菜单](~/ios/watchos/user-interface/menu.md)|在情节提要中定义的强制按菜单并在代码中实现的每个按钮的操作。<br />[菜单控件 (强制 Touch) 文档](~/ios/watchos/user-interface/menu.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
+|文本输入|使用`PresentTextInputController`和`WKTextInputMode`枚举。<br />[文本输入文档](~/ios/watchos/user-interface/text-input.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
+|数字王冠|数字王冠可以用于驱动器选取器，或它的旋转可以在代码中进行跟踪。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
+|笔势|有四种类型的笔势识别可以添加到一个场景： Tap、 轻扫、 平移和 LongPress。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
 
 ## <a name="related-links"></a>相关链接

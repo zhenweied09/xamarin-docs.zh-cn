@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 6042ab9aa861a08da421140857459b02a78f7c70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 568650a850b9db1fa22deef55eebb6a437e7e0b7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="binding-types-reference-guide"></a>绑定类型参考指南
 
@@ -114,7 +114,7 @@ public delegate bool UIScrollViewCondition (UIScrollView scrollView);
 
 支持的绑定生成器的生成的事件和属性链接类，如`UIScrollView`与其`UIScrollViewDelegate`（我们称这些模型类），这通过批注你`BaseType`定义替换`Events`和`Delegates`（如下所述） 的参数。 除了批注`BaseType`利用这些参数就需要通知的几个更多组件的生成器。
 
-需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`EventArgs`模型类中在方法声明上的属性。 例如:
+需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`EventArgs`模型类中在方法声明上的属性。 例如：
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -324,7 +324,7 @@ interface FooObject {
 
 此属性应用于类时它只会产生静态类，一个不是派生自`NSObject`因此`[BaseType]`忽略属性。 静态类用于承载 C 你想要公开的公共变量。
 
-例如:
+例如：
 
 ```csharp
 [Static]
@@ -498,7 +498,7 @@ public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 
 需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`EventArgs`属性中的方法声明你`Model`类。
 
-例如:
+例如：
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -785,7 +785,7 @@ interface NSUrlSession {
 
 （在返回值） 的方法、 参数和属性与可修饰`BindAs`。 唯一限制是，您的成员**必须不**内`[Protocol]`或`[Model]`接口。
 
-例如:
+例如：
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -894,7 +894,7 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 对方法或属性使用时，绑定属性的效果是生成调用指定的选择器的方法。 但结果生成的方法不用修饰`[Export]`属性，这意味着，它不能参与方法重写。 这通常与结合使用`Target`实现 OBJECTIVE-C 的扩展方法的属性。
 
-例如:
+例如：
 
 ```csharp
 public interface UIView {
@@ -906,7 +906,7 @@ public interface UIView {
 如果用中 getter 或 setter，`Bind`属性用于更改默认值生成属性的 getter 和 setter OBJECTIVE-C 的选择器名称时由代码生成器推断。 默认情况下标记名称"fooBar"，具有的属性时生成器也会生成 getter"fooBar"导出和"setFooBar:"为 setter。 在少数情况下，Objective C 不遵循此约定，通常将 getter 名称为"isFooBar"的更改。
 将使用此属性以通知此生成器。
 
-例如:
+例如：
 
 ```csharp
 // Default behavior
@@ -1004,7 +1004,7 @@ Task<string> UploadAsync (string file);
 
 由于`Dispose`方法自动生成的`bmac-native`和`btouch-native`工具，你需要使用`Dispose`属性将在生成的某些代码注入`Dispose`方法实现。
 
-例如:
+例如：
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1090,7 +1090,7 @@ interface CameraEffects {
 
 当设计绑定，通常会隐藏方法或使用此属性的属性，并提供不同的名称，为方法或属性，然后对您的 C# 互补的支持文件，将添加公开的强类型包装器基础功能。
 
-例如:
+例如：
 
 ```csharp
 [Internal]
@@ -1140,7 +1140,7 @@ public NSObject this [NSObject idx] {
 
 此特性可用于无需不执行任何负载的通知的自变量也可以指定`System.Type`引用另一个接口在 API 定义中，通常与以"EventArgs"结尾的名称。 生成器会变为接口类子类`EventArgs`并且将包括所有列出的属性。 `[Export]`属性应在`EventArgs`类列出用于查找要提取值的 OBJECTIVE-C 的字典键的名称。
 
-例如:
+例如：
 
 ```csharp
 interface MyClass {
@@ -1252,7 +1252,7 @@ interface MyClass {
 
 如果引用类型没有此特性，绑定工具将生成然后再将它传递到 Objective C 所赋的值的检查，并且将生成的检查，将引发`ArgumentNullException`如果分配的值为 null。
 
-例如:
+例如：
 
 ```csharp
 // In properties
@@ -1440,7 +1440,7 @@ demo.Delegate = new MyDelegate ();
 ```
 
 
-另一个用途`Wrap`属性是支持的方法的强类型版本。   例如:
+另一个用途`Wrap`属性是支持的方法的强类型版本。   例如：
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1935,7 +1935,7 @@ interface MyBinding {
 
 此属性采用一个参数，其中包含用于访问上字典的元素的键的类的名称。   默认情况下具有该属性的接口中的每个属性将查找带有后缀"密钥"的名称的指定类型中的成员。
 
-例如:
+例如：
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]
@@ -1987,70 +1987,20 @@ interface MyColoringKeys {
 
 中支持以下数据类型`StrongDictionary`定义：
 
-<table border="1" cellpadding="1" cellspacing="1" width="80%">
-<tbody>
-  <tr>
-    <td>C# 接口类型</td>
-    <td>NSDictionary 存储类型</td>
-  </tr>
-  <tr>
-    <td>bool</td>
-    <td>存储在 NSNumber 的布尔值</td>
-  </tr>
-  <tr>
-    <td>枚举值</td>
-    <td>存储在 NSNumber 的整数</td>
-  </tr>
-  <tr>
-    <td>int</td>
-    <td>32 位整数存储在 NSNumber</td>
-  </tr>
-  <tr>
-    <td>uint</td>
-    <td>存储在 NSNumber 的 32 位无符号的整数</td>
-  </tr>
-  <tr>
-    <td>nint</td>
-    <td>存储在 NSNumber NSInteger</td>
-  </tr>
-  <tr>
-    <td>nuint</td>
-    <td>存储在 NSNumber NSUInteger</td>
-  </tr>
-  <tr>
-    <td>long</td>
-    <td>64 位整数存储在 NSNumber</td>
-  </tr>
-  <tr>
-    <td>float</td>
-    <td>32 位整数存储为 NSNumber</td>
-  </tr>
-  <tr>
-    <td>double</td>
-    <td>64 位整数存储为 NSNumber</td>
-  </tr>
-  <tr>
-    <td>NSObject 和子类</td>
-    <td>NSObject</td>
-  </tr>
-  <tr>
-    <td>NSDictionary</td>
-    <td>NSDictionary</td>
-  </tr>
-  <tr>
-    <td>字符串</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>NSString</td>
-    <td>NSString</td>
-  </tr>
-  <tr>
-    <td>C# 的 NSObject 数组</td>
-    <td>NSArray</td>
-  </tr>
-  <tr>
-    <td>C# 的枚举数组</td>
-    <td>值包含 NSNumbers 的 NSArray</td>
-  </tr>
-</tbody>
+|C# 接口类型|`NSDictionary` 存储类型|
+|---|---|
+|`bool`|`Boolean` 存储在 `NSNumber`|
+|枚举值|整数存储在 `NSNumber`|
+|`int`|32 位整数存储在 `NSNumber`|
+|`uint`|存储在 32 位无符号的整数 `NSNumber`|
+|`nint`|`NSInteger` 存储在 `NSNumber`|
+|`nuint`|`NSUInteger` 存储在 `NSNumber`|
+|`long`|64 位整数存储在 `NSNumber`|
+|`float`|32 位整数存储为 `NSNumber`|
+|`double`|64 位整数存储为 `NSNumber`|
+|`NSObject` 和子类|`NSObject`|
+|`NSDictionary`|`NSDictionary`|
+|`string`|`NSString`|
+|`NSString`|`NSString`|
+|C#`Array`的 `NSObject`|`NSArray`|
+|C#`Array`的枚举|`NSArray` 包含`NSNumber`值|

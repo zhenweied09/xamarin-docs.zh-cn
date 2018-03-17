@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Objective C 的支持
 
@@ -74,7 +74,7 @@ ObjC 生成具有数据类型值得注意几个、 特殊功能。
 
 ### <a name="subscripting"></a>下标
 
-托管索引的属性转换为对象下标。 例如:
+托管索引的属性转换为对象下标。 例如：
 
 ```csharp
     public bool this[int index] {
@@ -201,13 +201,11 @@ ObjC 不支持运算符重载一样 C#，因此运算符转换为类选择器：
 
 从转换时`DateTime`到`NSDate`的日期时间`Kind`属性考虑在内。
 
-<table>
-<tr><th> 类型         </th><th> 结果                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Utc          </td><td> 使用所提供的 DateTime 对象按原样执行转换。                                  </td></tr>
-<tr><td> 本地        </td><td> 调用`ToUniversalTime ()`中提供的 DateTime 对象用于转换。 </td></tr>
-<tr><td> 未指定  </td><td> 所提供的 DateTime 对象被假定为 UTC，因此相同的行为类型 = = Utc。                </td></tr>
-</table>
+|类型|结果                                                                                            |
+|---|---|
+|Utc|使用提供执行的转换`DateTime`对象原样。|
+|本地|调用`ToUniversalTime()`在提供`DateTime`对象用于转换。|
+|未指定|提供`DateTime`对象被假定为 UTC，因此相同的行为类型 = = Utc。|
 
 转换是通过使用以下公式：
 

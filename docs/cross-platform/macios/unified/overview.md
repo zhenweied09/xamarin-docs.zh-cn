@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 21245d741ff025cb8c2a680642ec0226369540cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2f55edb27f33becca8d354f9a7bb65932b4fd924
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-api-overview"></a>统一的 API 概述
 
@@ -67,36 +67,14 @@ _新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支�
 
 统一的 API 中删除不推荐使用的方法，并且有少数情况下存在拼写错误时所处的 API 名称它们绑定到原始 MonoTouch 和 MonoMac 命名空间经典 Api 中的位置。 这些实例中新的统一 Api 已经得到更正，并且将需要更新组件、 iOS 和 Mac 应用程序中。 下面是可能会遇到的最常见事件列表：
 
-<table width="100%" border="1">
-<tr>
-    <th>经典 API 方法名称</th>
-    <th>统一的 API 方法名称</th>
-</tr>
-<tr>
-    <td>UINavigationController.PushViewControllerAnimated()</td>
-    <td>UINavigationController.PushViewController()</td>
-</tr>
-<tr>
-    <td>UINavigationController.PopViewControllerAnimated()</td>
-    <td>UINavigationController.PopViewController()</td>
-</tr>
-<tr>
-    <td>CGContext.SetRGBFillColor()</td>
-    <td>CGContext.SetFillColor()</td>
-</tr>
-<tr>
-    <td>NetworkReachability.SetCallback()</td>
-    <td>NetworkReachability.SetNotification()</td>
-</tr>
-<tr>
-    <td>CGContext.SetShadowWithColor</td>
-    <td>CGContext.SetShadow</td>
-</tr>
-<tr>
-    <td>UIView.StringSize</td>
-    <td>UIKit.UIStringDrawing.StringSize</td>
-</tr>
-</table>
+|经典 API 方法名称|统一的 API 方法名称|
+|--- |--- |
+|`UINavigationController.PushViewControllerAnimated()`|`UINavigationController.PushViewController()`|
+|`UINavigationController.PopViewControllerAnimated()`|`UINavigationController.PopViewController()`|
+|`CGContext.SetRGBFillColor()`|`CGContext.SetFillColor()`|
+|`NetworkReachability.SetCallback()`|`NetworkReachability.SetNotification()`|
+|`CGContext.SetShadowWithColor`|`CGContext.SetShadow`|
+|`UIView.StringSize`|`UIKit.UIStringDrawing.StringSize`|
 
 有关从经典切换到统一 API 时的更改的完整列表，请参阅我们[经典 (monotouch.dll) vs 统一 (Xamarin.iOS.dll) API 差异](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)文档。
 
@@ -133,7 +111,7 @@ _新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支�
 
 ## <a name="arrays-and-systemcollectionsgeneric"></a>数组和 System.Collections.Generic
 
-因为 C# 索引器需要一种`int`，你将需要显式强制转换`nint`值复制到`int`访问集合或数组中的元素。 例如:
+因为 C# 索引器需要一种`int`，你将需要显式强制转换`nint`值复制到`int`访问集合或数组中的元素。 例如：
 
 ```csharp
 public List<string> Names = new List<string>();
