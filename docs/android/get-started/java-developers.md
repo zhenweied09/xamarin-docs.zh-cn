@@ -7,12 +7,12 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xamarin-for-java-developers"></a>面向 Java 开发人员的 Xamarin
 
@@ -433,342 +433,48 @@ async void downloadAsync(object sender, System.EventArgs e)
 
 Java 中使用的很多语言关键字也在 C# 中使用。 还有大量的 Java 关键字在 C# 中具有以不同方式命名的等效对应项，如下表所示：
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>Java</strong>
-    </th>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>描述</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <code>boolean</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx">bool</a>
-      </td>
-      <td valign="top">
-用于声明布尔值 <code>true</code> 和 <code>false</code>。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>extends</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-先于要从中继承的类和接口。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>implements</code>
-      </td>
-      <td valign="top">
-        <code>:</code>
-      </td>
-      <td valign="top">
-先于要从中继承的类和接口。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>import</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx">using</a>
-      </td>
-      <td valign="top">
-从命名空间导入类型，还可用于创建命名空间别名。
-      </td>
-    </tr>
-    <tr>
-      <td valign="final">
-        <code>final</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/88c54tsw.aspx">sealed</a>
-      </td>
-      <td valign="top">
-防止类派生；防止方法和属性在派生类中被重写。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>instanceof</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/scekt9xw.aspx">is</a>
-      </td>
-      <td valign="top">
-评估对象与给定类型是否兼容。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>native</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/e59b22c5.aspx">extern</a>
-      </td>
-      <td valign="top">
-声明外部实现的方法。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>package</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx">namespace</a>
-      </td>
-      <td valign="top">
-声明一组相关对象的作用域。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>T...</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/w5zay9db.aspx">params T[]</a>
-      </td>
-      <td valign="top">
-指定采用可变数目的参数的方法参数。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <code>super</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx">base</a>
-      </td>
-      <td valign="top">
-用于从派生类中访问父类的成员。
-      </td>
-    </tr>
-    <tr>
-      <td valign="synchronized">
-        <code>synchronized</code>
-      </td>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx">lock</a>
-      </td>
-      <td valign="top">
-使用锁获取和发布包装代码的关键部分。
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Java|C#|描述|
+|---|---|---|
+|`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|用于声明布尔值 true 和 false。|
+|`extends`|`:`|先于要从中继承的类和接口。|
+|`implements`|`:`|先于要从中继承的类和接口。|
+|`import`|[using](https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx)|从命名空间导入类型，还可用于创建命名空间别名。|
+|`final`|[sealed](https://msdn.microsoft.com/en-us/library/88c54tsw.aspx)|防止类派生；防止方法和属性在派生类中被重写。|
+|`instanceof`|[is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx)|评估对象与给定类型是否兼容。|
+|`native`|[extern](https://msdn.microsoft.com/en-us/library/e59b22c5.aspx)|声明外部实现的方法。|
+|`package`|[namespace](https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx)|声明一组相关对象的作用域。|
+|`T...`|[params T](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)|指定采用可变数目的参数的方法参数。|
+|`super`|[base](https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx)|用于从派生类中访问父类的成员。|
+|`synchronized`|[lock](https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx)|使用锁获取和发布包装代码的关键部分。|
 
 
 此外，还有很多关键字是 C# 所特有的，且在 Java 中没有对应项。 Xamarin.Android 代码通常使用下面的 C# 关键字（读取 Xamarin.Android [示例代码](https://developer.xamarin.com/samples/android/all/)时，可使用此表作为参考）:
 
-
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-  <thead>
-    <th>
-        <strong>C#</strong>
-    </th>
-    <th>
-        <strong>描述</strong>
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx">as</a>
-      </td>
-      <td valign="top">
-在兼容的引用类型或可以为 null 的类型之间执行转换。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156513.aspx">Async</a>
-      </td>
-      <td valign="top">
-指定方法或 lambda 表达式为异步。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/hh156528.aspx">Await</a>
-      </td>
-      <td valign="top">
-挂起方法执行，直到任务完成。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/5bdb6693.aspx">byte</a>
-      </td>
-      <td valign="top">
-无符号的 8 位整数类型。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/900fyy8e.aspx">delegate</a>
-      </td>
-      <td valign="top">
-用于封装方法或匿名方法。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/sbbt4032.aspx">enum</a>
-      </td>
-      <td valign="top">
-声明枚举，这是一组命名的常数。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/8627sbea.aspx">event</a>
-      </td>
-      <td valign="top">
-声明发布者类中的一个事件。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/f58wzh21.aspx">fixed</a>
-      </td>
-      <td valign="top">
-防止变量被重定位。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-get </td>
-      <td valign="top">
-定义检索属性值的访问器方法。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/dd469484.aspx">in</a>
-      </td>
-      <td valign="top">
-使一个参数接受泛型接口中派生程度更小的类型。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx">对象</a>
-      </td>
-      <td valign="top">
-.NET Framework 中 <code>Object</code> 类型的别名。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx">out</a>
-      </td>
-      <td valign="top">
-参数修饰符或泛型类型参数声明。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx">override</a>
-      </td>
-      <td valign="top">
-扩展或修改继承成员的实现。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/6b0scde8.aspx">partial</a>
-      </td>
-      <td valign="top">
-声明要拆分为多个文件的定义，或者将一个方法定义从其实现中分离出来。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx">readonly</a>
-      </td>
-      <td valign="top">
-声明只能在声明时分配或由类构造函数分配的类成员。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/14akc2c7.aspx">ref</a>
-      </td>
-      <td valign="top">
-通过引用（而非值）来传递参数。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ms228368.aspx">set</a>
-      </td>
-      <td valign="top">
-定义设置属性值的访问器方法。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/362314fe.aspx">string</a>
-      </td>
-      <td valign="top">
-.NET Framework 中 <code>String</code> 类型的别名。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/ah19swz4.aspx">结构</a>
-      </td>
-      <td valign="top">
-封装一组相关变量的值类型。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/58918ffs.aspx">typeof</a>
-      </td>
-      <td valign="top">
-获取对象类型。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/bb383973.aspx">var</a>
-      </td>
-      <td valign="top">
-声明一个隐式类型局部变量。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx">value</a>
-      </td>
-      <td valign="top">
-引用客户端代码想要分配到属性的值。
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <a href="https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx">virtual</a>
-      </td>
-      <td valign="top">
-允许在派生类中重写方法。
-      </td>
-    </tr>
-  </tbody>
-</table>
+|C#|描述|
+|---|---|
+|[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|在兼容的引用类型或可以为 null 的类型之间执行转换。|
+|[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|指定方法或 lambda 表达式为异步。|
+|[await](https://msdn.microsoft.com/en-us/library/hh156528.aspx)|挂起方法执行，直到任务完成。|
+|[byte](https://msdn.microsoft.com/en-us/library/5bdb6693.aspx)|无符号的 8 位整数类型。|
+|[delegate](https://msdn.microsoft.com/en-us/library/900fyy8e.aspx)|用于封装方法或匿名方法。|
+|[enum](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)|声明枚举，这是一组命名的常数。|
+|[event](https://msdn.microsoft.com/en-us/library/8627sbea.aspx)|声明发布者类中的一个事件。|
+|[fixed](https://msdn.microsoft.com/en-us/library/f58wzh21.aspx)|防止变量被重定位。|
+|`get`|定义检索属性值的访问器方法。|
+|[in](https://msdn.microsoft.com/en-us/library/dd469484.aspx)|使一个参数接受泛型接口中派生程度更小的类型。|
+|[object](https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx)|.NET Framework 中 Object 类型的别名。|
+|[out](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx)|参数修饰符或泛型类型参数声明。|
+|[override](https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx)|扩展或修改继承成员的实现。|
+|[partial](https://msdn.microsoft.com/en-us/library/6b0scde8.aspx)|声明要拆分为多个文件的定义，或者将一个方法定义从其实现中分离出来。|
+|[readonly](https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx)|声明只能在声明时分配或由类构造函数分配的类成员。|
+|[ref](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx)|通过引用（而非值）来传递参数。|
+|[set](https://msdn.microsoft.com/en-us/library/ms228368.aspx)|定义设置属性值的访问器方法。|
+|[string](https://msdn.microsoft.com/en-us/library/362314fe.aspx)|.NET Framework 中 String 类型的别名。|
+|[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|封装一组相关变量的值类型。|
+|[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|获取对象类型。|
+|[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|声明一个隐式类型局部变量。|
+|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|引用客户端代码想要分配到属性的值。|
+|[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|允许在派生类中重写方法。|
 
 
 <a name="interop" />

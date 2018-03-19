@@ -5,18 +5,18 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>自动预配
 
-_Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。_
+Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。_
 
 ## <a name="requirements"></a>惠?
 
@@ -34,23 +34,15 @@ _Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 
 1. 在 Visual Studio for Mac 中打开 iOS 项目。
 
-2. 打开 Info.plist 文件：
+2. 打开 Info.plist 文件。
 
-    ![Info.plist 文件](automatic-provisioning-images/image1.png)
-
-3. 在“签名”部分中，从“团队”下拉列表选择团队：
+3. 在“签名”部分中，选择“自动设置”：
 
     ![团队选择器下拉列表](automatic-provisioning-images/image2.png)
 
-4. 选择“自动管理签名”复选框，如下所示。 这会开始自动签名进程，其中 Visual Studio for Mac 将尝试生成应用 ID、预配配置文件和签名标识，并将这些项目设为用于签名。 选中复选框时，会禁用用于选择签名标识的手动控件。
+4. 从“团队”下拉列表中选择团队。
 
-    ![自动管理团队选项](automatic-provisioning-images/image3.png)
-
-5. 将弹出以下对话框，通知用户项目文件将修改为使用新生成证书和预配配置文件：
-
-    ![通知将修改项目文件的对话框](automatic-provisioning-images/image4.png)
-
-6. 几秒种后，将创建并显示签名证书和预配配置文件：
+6. 几秒后，便会创建签名证书和设置配置文件：
 
     ![成功创建证书和配置文件](automatic-provisioning-images/image5.png)
 

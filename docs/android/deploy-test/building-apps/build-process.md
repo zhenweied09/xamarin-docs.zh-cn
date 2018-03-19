@@ -6,12 +6,12 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 51caebb86cb72b11ced70522fc253e608f5ccab0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/14/2018
+ms.openlocfilehash: 1f3f9316aec4ebfa0bb0868dd341abbfaa613cbc
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="build-process"></a>生成过程
 
@@ -23,40 +23,37 @@ Xamarin.Android 生成过程负责将所有内容集合在一起：[生成 `Reso
 
 ## <a name="application-packages"></a>应用程序包
 
-在广义上说，Xamarin.Android 生成系统可以生成两种类型的 Android 应用程序包（`.apk` 文件）：
+在广义上说，Xamarin.Android 生成系统可以生成两种类型的 Android 应用程序包（`.apk` 文件）： 
 
--   发行版本，完全是自包含的，不需要额外的程序包来执行。 这些是提供给应用商店的程序包。
+-   发行版本，完全是自包含的，不需要额外的程序包来执行。 这些是提供给应用商店的程序包。 
 
--   调试版本则不是。
+-   调试版本则不是。 
 
 并非巧合的是，这些版本与生成程序包的 MSBuild `Configuration` 相匹配。
-
 
 ### <a name="shared-runtime"></a>共享运行时
 
 “共享运行时”是一对额外的 Android 程序包，它们提供基类库（`mscorlib.dll` 等）和 Android 绑定库（`Mono.Android.dll` 等）。 调试版本依赖共享运行时替代在 Android 应用程序包中包含基类库和绑定程序集，从而使调试程序包更小。
 
-通过将 `$(AndroidUseSharedRuntime)` 属性设置为 `False`，可以在调试版本中禁用共享运行时。
+通过将 `$(AndroidUseSharedRuntime)` 属性设置为 `False`，可以在调试版本中禁用共享运行时。 
 
 <a name="Fast_Deployment" />
 
 ### <a name="fast-deployment"></a>快速部署
 
-“快速部署”与共享运行时协同工作，进一步缩小 Android 应用程序包的大小。 可以通过不在程序包内捆绑应用的程序集来完成此操作。 而是通过 `adb push` 将它们复制到目标上。 此进程加快了生成/部署/调试周期，因为如果只更改了程序集，则不会重新安装该程序包。 相反，只有更新的程序集才会重新同步到目标设备。
+“快速部署”与共享运行时协同工作，进一步缩小 Android 应用程序包的大小。 可以通过不在程序包内捆绑应用的程序集来完成此操作。 而是通过 `adb push` 将它们复制到目标上。 此进程加快了生成/部署/调试周期，因为如果只更改了程序集，则不会重新安装该程序包。 相反，只有更新的程序集才会重新同步到目标设备。 
 
-已知快速部署在阻止 `adb` 同步到目录 `/data/data/@PACKAGE_NAME@/files/.__override__` 的设备上会失败。
+已知快速部署在阻止 `adb` 同步到目录 `/data/data/@PACKAGE_NAME@/files/.__override__` 的设备上会失败。 
 
 快速部署在默认情况下处于启用状态，可以通过将 `$(EmbedAssembliesIntoApk)` 属性设置为 `True` 在调试版本中禁用。
-
 
 
 ## <a name="msbuild-projects"></a>MSBuild 项目
 
 Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和 Visual Studio 使用的项目文件格式。
-通常，用户不需要手工编辑 MSBuild 文件 &ndash; IDE 将创建功能齐全的项目并使用所做的全部更改进行更新，根据需要自动调用生成目标。
+通常，用户不需要手工编辑 MSBuild 文件 &ndash; IDE 将创建功能齐全的项目并使用所做的全部更改进行更新，根据需要自动调用生成目标。 
 
-高级用户可能希望执行 IDE 的 GUI 不支持的功能，因此，可以通过直接编辑项目文件来自定义生成过程。
-本页仅记录 Xamarin.Android 特定的功能和自定义 &ndash; 可以使用正常的 MSBuild 项目、属性和目标执行更多的操作。
+高级用户可能希望执行 IDE 的 GUI 不支持的功能，因此，可以通过直接编辑项目文件来自定义生成过程。 本页仅记录 Xamarin.Android 特定的功能和自定义 &ndash; 可以使用正常的 MSBuild 项目、属性和目标执行更多的操作。 
 
 <a name="Build_Targets" />
 
@@ -79,13 +76,13 @@ Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和
 
 ## <a name="build-properties"></a>生成属性
 
-MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx)中的 MyApp.csproj。
+MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx)中的 MyApp.csproj。 
 
 -   配置 &ndash; 指定要使用的生成配置，例如“调试”或“发行”。 配置属性用于确定其他属性（确定目标行为）的默认值。 其他配置可能会在 IDE 中创建。
 
     默认情况下，`Debug` 配置将导致 `Install` 和 `SignAndroidPackage` 目标创建更小的 Android 程序包，这需要提供其他文件和包进行操作。
 
-    默认 `Release` 配置将导致 `Install` 和 `SignAndroidPackage` 目标创建独立的 Android 软件包，并且可以在不安装任何其他程序包或文件的情况下使用。
+    默认 `Release` 配置会导致 `Install` 和 `SignAndroidPackage` 目标创建独立的 Android 包，无需安装其他任何包或文件，即可使用此包。
 
 -   DebugSymbols &ndash; 确定 Android 程序包是否为*可调试*以及 `$(DebugType)` 属性的布尔值。 可调试包包含调试符号，将 `//application/@android:debuggable` 属性设置为 `true`，并自动添加 `INTERNET` 权限，以便调试器可以附加到该过程。 如果 `DebugSymbols` 是 `True`，并且 `DebugType` 是空字符串或 `Full`，则应用程序是可调试的。
 
@@ -106,7 +103,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     ```bash
     # Install package onto emulator via -e
-    # Use `/Library/Frameworks/Mono.framework/Commands/xbuild` on OS X
+    # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
     MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
     ```
 
@@ -116,6 +113,12 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 打包属性控制如何创建 Android 包，由 `Install` 和 `SignAndroidPackage` 目标使用。
 打包发布应用程序时，[签名属性](#Signing_Properties)也是相关的。
 
+
+-   **AndroidApkSigningAlgorithm** &ndash; 字符串值，用于指定对 `jarsigner -sigalg` 使用的签名算法。
+
+    默认值为 `md5withRSA`。
+
+    在 Xamarin.Android 8.2 中新增。
 
 -   AndroidApplication &ndash; 一个布尔值，指示项目是用于 Android 应用程序 (`True`) 还是用于 Android 库项目（`False` 或不存在）。
 
@@ -139,6 +142,27 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     该属性默认为 `False`。
 
+-   **AndroidErrorOnCustomJavaObject** &ndash; 布尔属性，用于确定类型能否实现 `Android.Runtime.IJavaObject`
+    ，而无需同时继承自 `Java.Lang.Object` 或 `Java.Lang.Throwable`：
+
+    ```csharp
+    class BadType : IJavaObject {
+        public IntPtr Handle {
+            get {return IntPtr.Zero;}
+        }
+
+        public void Dispose()
+        {
+        }
+    }
+    ```
+
+    若为 True，这些类型生成 XA4212 错误；否则，生成 XA4212 警告。
+
+    Xamarin.Android 8.1 现已开始支持此属性。
+
+    该属性默认为 `True`。
+
 -   AndroidFastDeploymentType &ndash; `:`（冒号）分隔的值列表，`$(EmbedAssembliesIntoApk)` MSBuild 属性为 `False` 时可用于控制部署到目标设备上的[快速部署目录](#Fast_Deployment)的类型。 如果资源是快速部署的，则不会嵌入到生成的 `.apk` 中，这样做可以加快部署时间。 （部署的速度越快，`.apk` 需要重建的频率越低，安装过程可能会更快。）有效值包括：
 
     - `Assemblies`：部署应用程序程序集。
@@ -151,27 +175,41 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidApplicationJavaClass &ndash; 类继承自 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/) 时，用于替代 `android.app.Application` 的完整 Java 类名称。
 
-    该属性通常由其他属性设置，例如 `$(AndroidEnableMultiDex)` MSBuild 属性。
+    此属性通常由其他属性（如 `$(AndroidEnableMultiDex)` MSBuild 属性）设置。
 
     已在 Xamarin.Android 6.1 中添加。
 
--   AndroidHttpClientHandlerType &ndash; 允许设置 [`XA_HTTP_CLIENT_HANDLER_TYPE` 环境变量](~/android/deploy-test/environment.md)的值。
-    该值不会替代显式指定的 `XA_HTTP_CLIENT_HANDLER_TYPE` 值。 在 [`@(AndroidEnvironment)`](#AndroidEnvironment) 文件中指定的 `XA_HTTP_CLIENT_HANDLER_TYPE` 环境变量值优先。
+-   **AndroidHttpClientHandlerType** &ndash; 控制 `System.Net.Http.HttpClient` 默认构造函数使用的默认 `System.Net.Http.HttpMessageHandler` 实现。 值是 `HttpMessageHandler` 子类的程序集限定类型名称，适用于 [`System.Type.GetType(string)`](/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_)。
+
+    默认值为 `System.Net.Http.HttpClientHandler, System.Net.Http`。
+
+    这可能会被重写为包含 `Xamarin.Android.Net.AndroidClientHandler`，后者使用 Android Java API 执行网络请求。 这样，如果基础 Android 版本支持 TLS 1.2，就可以访问 TLS 1.2 URL。  
+    只有 Android 5.0 及更高版本通过 Java 可靠提供 TLS 1.2 支持。
+
+    注意：如果低于 5.0 的 Android 版本必须提供 TLS 1.2 支持，或必须对 `System.Net.WebClient` 和相关 API 提供 TLS 1.2 支持，应使用 `$(AndroidTlsProvider)`。
+
+    注意：通过设置 [`XA_HTTP_CLIENT_HANDLER_TYPE` 环境变量](~/android/deploy-test/environment.md)，可以支持此属性。
+    在生成操作为 `@(AndroidEnvironment)` 的文件中，发现的 `$XA_HTTP_CLIENT_HANDLER_TYPE` 值的优先级更高。
 
     已在 Xamarin.Android 6.1 中添加。
 
--   AndroidTlsProvider &ndash; 一个字符串值，指定应用程序中应使用哪个 TLS 提供程序。 可能的值是：有效值包括：
+-   AndroidTlsProvider &ndash; 一个字符串值，指定应用程序中应使用哪个 TLS 提供程序。 可能的值有：
 
     - `btls`：使用 [Boring SSL](https://boringssl.googlesource.com/boringssl) 与 [HttpWebRequest](https://msdn.microsoft.com/en-us/library/system.net.httpwebrequest.aspx) 进行 TLS 通信。
-      这允许使用 TLS 1.2。
+      这样，可以对所有 Android 版本使用 TLS 1.2。
 
     - `legacy`：使用历史托管 SSL 实施进行网络交互。 这不支持 TLS 1.2。
 
-    - `default`，或取消设置/空字符串：在 Xamarin.Android 7.1 中，这相当于 `legacy`。
+    - `default`：允许 Mono 选择默认 TLS 提供程序。
+      这相当于 `legacy`，即使在 Xamarin.Android 7.3 中，也不例外。  
+      注意：此值不太可能会出现在 `.csproj` 值中，因为 IDE“Default”值会导致 `$(AndroidTlsProvider)` 属性遭删除。
+
+    - 取消设置/空字符串：在 Xamarin.Android 7.1 中，这相当于 `legacy`。  
+      在 Xamarin.Android 7.3 中，这相当于 `btls`。
 
     默认值为空字符串。
 
-    “实验”。 已在 Xamarin.Android 7.1 中添加。
+    已在 Xamarin.Android 7.1 中添加。
 
 -   AndroidLinkMode &ndash; 指定应在 Android 包中包含的程序集上执行[链接](~/android/deploy-test/linker.md)的类型。 仅在 Android 应用程序项目中使用。 默认值是 SdkOnly。 有效值为：
 
@@ -199,7 +237,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     在生成期间，将合并任何其他必要的值以生成实际的 `AndroidManifest.xml`。
     `$(AndroidManifest)` 必须在 `/manifest/@package` 属性中包含程序包名称。
 
--   AndroidSdkBuildToolsVersion &ndash; Android SDK 生成工具包提供 aapt 和 zipalign 工具等。 可以同时安装多个不同版本的生成工具包。 选择用于打包的生成工具包是通过检查并使用“首选”生成工具版本（如果存在的话）来完成的；如果“首选”版本不存在，则使用版本最高的已安装生成工具包。
+-   AndroidSdkBuildToolsVersion &ndash; Android SDK 生成工具包提供 aapt 和 zipalign 工具等。 可以同时安装多个不同版本的生成工具包。 若要选择用于打包的生成工具包，请检查是否有“首选”生成工具版本。如果有，请使用它；如果没有“首选”版本，请使用版本最高的已安装生成工具包。
 
     `$(AndroidSdkBuildToolsVersion)` MSBuild 属性包含首选的生成工具版本。 如果（例如）在先前的 aapt 版本已知可用时最新的 aapt 崩溃，则 Xamarin.Android 生成系统在 `Xamarin.Android.Common.targets` 中提供默认值，并且可以在你的项目文件中替代该默认值以选择备用的生成工具版本。
 
@@ -272,6 +310,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     -   西部：包括西部编码，例如*西欧(Mac)* \[macintosh, CP10000\]、*冰岛语(Mac)* \[x-mac-icelandic, CP10079\]、*中欧(Windows)* \[iso-8859-2, CP1250\]、*西欧(Windows)* \[iso-8859-1, CP1252\]、*希腊语(Windows)* \[iso-8859-7, CP1253\]、*中欧(ISO)* \[iso-8859-2, CP28592\]、*拉丁语 3 (ISO)* \[iso-8859-3, CP28593\]、*希腊语(ISO)* \[iso-8859-7, CP28597\]、*拉丁语 9 (ISO)* \[iso-8859-15, CP28605\]、*OEM 美国* \[CP437\]、*西欧(DOS)* \[CP850\]、*葡萄牙语(DOS)* \[CP860\]、*冰岛语(DOS)* \[CP861\]、*加拿大法语(DOS)* \[CP863\] 以及*北欧文(DOS)* \[CP865\]。
 
+
     ```xml
     <MandroidI18n>West</MandroidI18n>
     ```
@@ -284,14 +323,14 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidVersionCodePattern &ndash; 允许开发人员在清单中自定义 `versionCode` 的字符串属性。
     有关决定 `versionCode` 的信息，请参阅[为 APK 创建版本代码](~/android/deploy-test/building-apps/abi-specific-apks.md)。
-
+    
     例如，如果 `abi`是 `armeabi`，清单中的 `versionCode` 为 `123`，则当 `$(AndroidCreatePackagePerAbi)` 为 True 时，`{abi}{versionCode}` 将生成 `1123` 的 versionCode，否则将生成值 123。
     如果 `abi` 是 `x86_64`，则清单中的 `versionCode` 是 `44`。 当 `$(AndroidCreatePackagePerAbi)` 为 True 时，这将生成 `544`，否则会生成值 `44`。
 
     如果我们包含左填充格式字符串 `{abi}{versionCode:0000}`，则会生成 `50044`，因为我们用 `0` 在左边填充 `versionCode`。 或者，可以使用与上例相同的小数填充，例如 `{abi}{versionCode:D4}`。
 
     由于值必须是整数，因此只支持 0 和 Dx 填充格式字符串。
-
+    
     预定义的键项
 
     -   abi &ndash; 插入应用程序的目标 abi
@@ -303,9 +342,11 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     -   minSDK &ndash; 如果没有定义，则插入 `AndroidManifest.xml` 或 `11` 中支持的最小 SDK 值。
 
-    -   versionCode &ndash; 直接使用 `Properties\AndroidManifest.xml` 中的版本代码。
+    -   versionCode &ndash; 直接使用 `Properties\AndroidManifest.xml` 中的版本代码。 
 
-    你可以使用（下文中定义的）`AndroidVersionCodeProperties` 属性定义自定义项。
+    你可以使用（下文中定义的）`$(AndroidVersionCodeProperties)` 属性定义自定义项。
+
+    默认情况下，值设置为 `{abi}{versionCode:D6}`。 如果开发人员要保留旧行为，可以将 `$(AndroidUseLegacyVersionCode)` 属性设置为 `true`，从而重写默认值
 
     已在 Xamarin.Android 7.2 中添加。
 
@@ -313,6 +354,21 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     已在 Xamarin.Android 7.2 中添加。
 
+-   **AndroidUseLegacyVersionCode** &ndash; 布尔属性，允许开发人员将 versionCode 计算还原到先前的 Xamarin.Android 8.2 旧行为。 这只能适用于在 Google Play 商店中已发布应用程序的开发人员。 强烈建议使用新 `$(AndroidVersionCodePattern)` 属性。
+
+    在 Xamarin.Android 8.2 中新增。
+
+-  **AndroidUseManagedDesignTimeResourceGenerator** &ndash; 布尔属性，用于将设计时生成切换为使用受管理资源分析程序，而不是 `aapt`。
+
+    在 Xamarin.Android 8.1 中新增。
+
+-  **AndroidUseApkSigner** &ndash; 布尔属性，允许开发人员使用 `apksigner` 工具，而不是 `jarsigner`。
+
+    在 Xamarin.Android 8.2 中新增。
+
+-  **AndroidApkSignerAdditionalArguments** &ndash; 字符串属性，允许开发人员向 `apksigner` 工具提供其他参数。
+
+    在 Xamarin.Android 8.2 中新增。
 
 ### <a name="binding-project-build-properties"></a>绑定项目生成属性
 
@@ -320,7 +376,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidClassParser &ndash; 一个字符串属性，用于控制如何分析 `.jar` 文件。 可能的值包括：
 
-    - class-parse：使用 `class-parse.exe` 直接解析 Java 字节码，无需 JVM 的帮助。 此值处于试验阶段。
+    - class-parse：使用 `class-parse.exe` 直接解析 Java 字节码，无需 JVM 的帮助。 此值处于试验阶段。 
 
 
     - jar2xml：使用 `jar2xml.jar` 以使用 Java 反射从 `.jar` 文件中提取类型和成员。
@@ -356,10 +412,9 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     默认值将会在未来版本中更改。
 
 
-
 ### <a name="resource-properties"></a>资源属性
 
-资源属性控制 `Resource.designer.cs` 文件的生成，该文件提供对 Android 资源的访问。
+资源属性控制 `Resource.designer.cs` 文件的生成，该文件提供对 Android 资源的访问。 
 
 -   AndroidResgenExtraArgs &ndash; 指定处理 Android 资产和资源时传递给 aapt 命令的附加命令行选项。
 
@@ -384,13 +439,13 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidKeyStore &ndash; 一个布尔值，指示是否应使用自定义签名信息。 默认值是 `False`，这意味着将使用默认的调试签名密钥来对包进行签名。
 
--   AndroidSigningKeyAlias &ndash; 指定密钥存储中密钥的别名。 这是创建密钥存储时使用的 keytool -alias 值。
+-   AndroidSigningKeyAlias &ndash; 指定密钥存储中密钥的别名。 这是创建密钥存储时使用的 keytool -alias 值。 
 
 -   AndroidSigningKeyPass &ndash; 指定密钥存储文件中密钥的密码。 这是在 `keytool` 要求“输入 $(AndroidSigningKeyAlias) 的密匙密码”时输入的值。
 
 -   AndroidSigningKeyStore &ndash; 指定由 `keytool` 创建的密钥存储文件的文件名。 这对应于提供给 keytool -keystore 选项的值。
 
--   AndroidSigningStorePass &ndash; 指定 `$(AndroidSigningKeyStore)` 的密码。 这是在创建密钥存储文件并要求“输入密钥存储密码:”时为 `keytool` 提供的值。
+-   AndroidSigningStorePass &ndash; 指定 `$(AndroidSigningKeyStore)` 的密码。 这是在创建密钥存储文件并要求“输入密钥存储密码:”时为 `keytool` 提供的值。 
 
 例如，请考虑以下 `keytool` 调用：
 
@@ -421,11 +476,15 @@ Enter key password for keystore.alias
 </PropertyGroup>
 ```
 
+-   **AndroidDebugKeyAlgorithm** &ndash; 指定要用于 `debug.keystore` 的默认算法。 默认为 `RSA`。
+
+-   **AndroidDebugKeyValidity** &ndash; 指定要用于 `debug.keystore` 的默认有效期。 默认值为 `10950`、`30 * 365` 或 `30 years`。
+
 <a name="Build_Actions" />
 
 ## <a name="build-actions"></a>生成操作
 
-生成操作将[应用于项目中的文件](http://msdn.microsoft.com/en-us/library/bb629388.aspx)，并控制文件的处理方式。
+生成操作将[应用于项目中的文件](http://msdn.microsoft.com/en-us/library/bb629388.aspx)，并控制文件的处理方式。 
 
 <a name="AndroidEnvironment" />
 
@@ -492,10 +551,10 @@ LogicalName &ndash; 显式指定资源路径。 允许使用 &ldquo;aliasing&rdq
 1.  路径“探查”。
 2.  使用 `Abi` 项目属性。
 
-通过路径探查，本机库的父目录名称用于指定库的目标 ABI。 因此，如果将 `lib/armeabi/libfoo.so` 添加到版本中，则 ABI 将被“探查”为 `armeabi`。
+通过路径探查，本机库的父目录名称用于指定库的目标 ABI。 因此，如果将 `lib/armeabi/libfoo.so` 添加到版本中，则 ABI 将被“探查”为 `armeabi`。 
 
 
-### <a name="item-attribute-name"></a>项属性名称
+#### <a name="item-attribute-name"></a>项属性名称
 
 Abi &ndash; 指定本机库的 ABI。
 
@@ -506,6 +565,13 @@ Abi &ndash; 指定本机库的 ABI。
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
+
+
+### <a name="androidaarlibrary"></a>AndroidAarLibrary
+
+生成操作 `AndroidAarLibrary` 应用于直接引用 .aar 文件。 Xamarin 组件最常使用此生成操作。 也就是说，要添加对 .aar 文件的引用，它们是 Google Play 和其他服务正常运行所必需。
+
+包含此生成操作的文件的处理方式类似于库项目中嵌入的资源。 .aar 会被提取到中间目录。 然后，任何资产、资源和 .jar 文件都会被添加到相应项组中。  
 
 ### <a name="content"></a>内容
 
@@ -527,7 +593,6 @@ Abi &ndash; 指定本机库的 ABI。
 除非 `$(EnableProguard)` MSBuild 属性为 `True`，否则这些文件将被忽略。
 
 
-
 ## <a name="target-definitions"></a>目标定义
 
 生成过程的 Xamarin.Android 特定部分在 `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets` 中定义，但生成该程序集时也需要使用正常的语言特定目标，如 Microsoft.CSharp.targets。
@@ -542,7 +607,7 @@ Abi &ndash; 指定本机库的 ABI。
 </PropertyGroup>
 ```
 
-可以通过导入 Xamarin.Android.CSharp.targets 包含在 C# 的所有这些目标和属性：
+可以通过导入 Xamarin.Android.CSharp.targets 包含在 C# 的所有这些目标和属性： 
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

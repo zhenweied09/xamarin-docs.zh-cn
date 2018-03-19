@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 26a543cc096d96346cd4503bf4fa2382f8ca9b78
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-device-for-development"></a>设置设备进行开发
 
@@ -119,8 +119,7 @@ USB 驱动程序下载完成后，请将其安装。
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>在 Windows 8 中安装未经验证的驱动程序
 
-在 Windows 中安装未经验证的驱动程序可能需要额外的步骤
-8. 以下步骤介绍如何安装 Galaxy Nexus 的驱动程序：
+若要在 Windows 8 中安装未经验证的驱动程序，可能需要执行额外步骤。 以下步骤介绍如何安装 Galaxy Nexus 的驱动程序：
 
 1.  **访问 Windows 8 高级启动选项** - 此步骤包括重启计算机以访问高级启动选项。 通过使用以下命令，启动命令行提示符和重启计算机：
 

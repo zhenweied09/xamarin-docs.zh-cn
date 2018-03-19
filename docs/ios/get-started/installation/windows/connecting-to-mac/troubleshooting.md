@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="connection-troubleshooting"></a>连接疑难解答
 
@@ -240,7 +240,6 @@ ms.lasthandoff: 03/12/2018
 
 4. 打开 .zip 文件时，你会看到类似于以下示例的文件的列表。 对于连接错误，最重要的文件是 **\*Ide.log** 和 **\*Ide.svclog** 文件。 这两个文件以两种略有不同的格式包含相同消息。 **.svclog** 是 XML，在要浏览消息时非常有用。 **.log** 是纯文本，在你要使用命令行工具筛选消息时非常有用。
 
-
     若要浏览所有消息，请选择并打开 **.svclog** 文件：
 
     [![](troubleshooting-images/troubleshooting-image13.png "选择 svclog 文件")](troubleshooting-images/troubleshooting-image13.png#lightbox)
@@ -319,7 +318,7 @@ error : Building from a network share path is not supported at the moment. Pleas
 
 相关 bug [#40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781)。
 
-当 Visual Studio 未能刷新 MEF 组件缓存时，可能会发生此问题。 如果是这种情况，则安装此 Visual Studio 扩展可能会有所帮助：[https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
+当 Visual Studio 未能刷新 MEF 组件缓存时，可能会发生此问题。 如果是这种情况，安装此 Visual Studio 扩展可能会有所帮助：[https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 
 这会清除 Visual Studio MEF 组件缓存以修复与缓存损坏有关的问题。
 

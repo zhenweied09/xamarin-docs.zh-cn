@@ -6,12 +6,12 @@ ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: bfbd95d33e442d31e94bd8c6ed888741f88d1188
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/13/2018
+ms.openlocfilehash: 971c663a93a837e40e82aa63e24ce4935c44c85a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="linking-on-android"></a>在 Android 上链接
 
@@ -19,37 +19,10 @@ Xamarin.Android 应用程序使用链接器缩减应用程序大小。 链接器
 
 例如，[Hello，Android](https://developer.xamarin.com/samples/HelloM4A/) 示例：
 
-<table border="0" cellpadding="1" cellspacing="1">
-  <tbody>
-    <tr>
-      <td>
-        <strong></strong>
-      配置</td>
-      <td>
-        <strong></strong>
-      1.2.0 大小</td>
-      <td>
-        <strong></strong>
-      4.0.1 大小</td>
-    </tr>
-    <tr>
-      <td>
-在不链接的情况下进行发布： </td>
-      <td>
-14.0 MB </td>
-      <td>
-16.0 MB </td>
-    </tr>
-    <tr>
-      <td>
-在链接的情况下进行发布： </td>
-      <td>
-4.2 MB </td>
-      <td>
-2.9 MB </td>
-    </tr>
-  </tbody>
-</table>
+|配置|1.2.0 大小|4.0.1 大小|
+|---|---|---|
+|在不链接的情况下进行发布：|14.0 MB|16.0 MB|
+|在链接的情况下进行发布：|4.2 MB|2.9 MB|
 
 链接导致程序包的大小是 1.2.0 中原始（未链接）程序包大小的 30%，是 4.0.1 中未链接程序包大小的 18%。
 

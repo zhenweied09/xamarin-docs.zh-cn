@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 2ad3bd55ae0abc44b0c9757bd79c2711eddf171d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manual-provisioning"></a>手动预配
 
@@ -236,7 +236,8 @@ Apple 提供一系列精选的特殊应用服务（亦称为“功能”），�
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-请务必在“项目选项”>“iOS 绑定签名”下将“团队”选择器设置为“无”。
+> [!IMPORTANT]
+> 开始之前，请务必先选择 Info.plist 中的“手动设置”。
 
 1. 在 Mac 上插入设备。
 2. 在项目的“Info.plist”中，确保捆绑标识符与应用 ID 匹配（除非应用 ID 是通配符）：

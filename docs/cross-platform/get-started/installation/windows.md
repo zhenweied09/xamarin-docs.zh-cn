@@ -7,15 +7,15 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: bffc6bb1bc6537745fe9603906b5938fc3c34fe1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b15c9b05a4e476353322c6d29e94267313460bfe
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="installing-xamarin-in-visual-studio-on-windows"></a>在 Visual Studio on Windows 中安装 Xamarin
 
-现在，所有版本的 Visual Studio 中都免费附带 Xamarin，并且不需要单独的许可证，可使用 Visual Studio 安装程序下载和安装 Xamarin 工具。
+Xamarin 可以免费使用，所有版本的 Visual Studio 都有随附。
 
 <a name="requirements" />
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 1. Windows 7 或更高版本。
 
-2. Visual Studio 2015 或 2017（Community、Professional 或 Enterprise）。
+2. Visual Studio 2017（Community、Professional 或 Enterprise）。
 
 3. Xamarin for Visual Studio。
 
@@ -74,27 +74,6 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 有关下载和安装 Visual Studio 2017 的详细信息，请参阅[安装 Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio)。
 
-
-<a name="vs2015" />
-
-### <a name="adding-xamarin-to-visual-studio-2015"></a>将 Xamarin 添加到 Visual Studio 2015
-
-若要将 Xamarin.Android 添加到 Visual Studio 2015 的现有安装中，请执行以下步骤：
-
-1. 右键单击 Windows“开始”按钮并选择“程序和功能”。
-
-2. 右键单击“Microsoft Visual Studio”，然后单击“更改”。
-
-3. 出现 Visual Studio 安装程序对话框时，请单击“修改”按钮。
-
-4. 在“功能”选项卡中，向下滚动到“跨平台移动开发”。 单击“C#/.NET (Xamarin)”旁边的复选框：
-
-    ![将 C#/.NET Xamarin 添加到 Visual Studio 2015](windows-images/06-add-xamarin.png)
-
-5. 单击“更新”按钮将 Xamarin 添加到 Visual Studio。
-
-
-<a name="verifying" />
 
 ### <a name="verifying-installation"></a>验证安装
 

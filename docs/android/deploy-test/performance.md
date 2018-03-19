@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 性能
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 当用户滚动时，[`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) 调用 `GetView` 重写以请求显示新视图，（如果有）它会在 `convertView` 参数中传递一个未使用的视图。 如果此值为 `null`，则代码将创建一个新的 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/) 实例，否则可以重置和重复使用 `convertView` 属性。
 
-有关详细信息，请参阅[用数据填充 ListView](~/android/user-interface/layouts/list-view/populating.md) 中的[重复使用行视图](~/android/user-interface/layouts/list-view/populating.md)。
+有关详细信息，请参阅[用数据填充 ListView](~/android/user-interface/layouts/list-view/populating.md) 中的[重复使用行视图](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use)。
 
 <a name="removeeventhandlers" />
 
@@ -225,7 +225,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 ## <a name="optimize-image-resources"></a>优化图像资源
 
-图像是应用程序使用的一些最昂贵的资源，通常以高分辨率捕获。 因此，当显示图像时，请按设备屏幕所需的分辨率显示。 如果图像的分辨率比屏幕高，则应降低。
+图像是应用程序使用的一些最昂贵的资源，通常以高分辨率捕获。 因此，显示图像时，请采用设备屏幕所必需的分辨率显示它。 如果图像的分辨率比屏幕高，则应降低。
 
 有关详细信息，请参阅[跨平台性能](~/cross-platform/deploy-test/memory-perf-best-practices.md)指南中的[优化图像资源](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)。
 
