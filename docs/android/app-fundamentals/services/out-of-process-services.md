@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 0f018aa666f08792a1693a79e22da150f82712f6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>远程进程中运行 Android 服务
 
@@ -58,7 +58,7 @@ _通常情况下，Android 应用程序中的所有组件将相同的进程中�
 > [!IMPORTANT]
 > [Bugzilla 51940-具有隔离的进程和自定义应用程序类的服务不能正确解析重载](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)Xamarin.Android 服务将不会启动正常的报表时`IsolatedProcess`设置为`true`。 本指南供参考。 Xamarin.Android 应用程序仍应能够与用 Java 编写的进程外服务进行通信。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南假定你熟悉创建服务。
 
@@ -472,7 +472,7 @@ if (clientMessenger!= null)
 
 [![从显示如何查找应用程序授予的权限的 Android 设备的屏幕截图](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南是有关如何在远程进程中运行 Android 的服务的高级的讨论。 本地和远程服务之间的差异介绍过的方法，以及为什么远程服务可以是对稳定性和性能的 Android 应用程序帮助的一些原因。 说明如何实现远程服务和客户端可以在与服务进行通信后, 指南发往提供一种方法来限制访问的服务仅从授权客户端。
 

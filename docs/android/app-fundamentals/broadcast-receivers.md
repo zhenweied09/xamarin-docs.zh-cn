@@ -7,12 +7,12 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: b2da136ddfa6aab4121ba21d0e6f83b2390ba10b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 67b150650c21c781b7081de4e1f3b095c0ea560f
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>在 Xamarin.Android 的广播接收方
 
@@ -23,14 +23,14 @@ _本部分讨论如何使用广播的接收方。_
 
 A_广播的接收方_是一种 Android 组件，它允许应用程序响应消息 (Android [ `Intent` ](https://developer.xamarin.com/api/type/Android.Content.Intent/)) 的广播 Android 操作系统或应用程序。 广播按照_发布-订阅_模型&ndash;导致广播发布和接收感兴趣事件这些组件的事件。 
 
-Android 标识广播的两个的类别：
+Android 标识两种类型的广播：
 
-* **正常的广播**&ndash;正常广播将路由到所有已注册广播接收方在不确定的顺序。 每个接收方将收到意图未定义的顺序。 
-* **广播排序**&ndash;有序的广播将一次一个地传送到已注册。 收到目的时，广播的接收方可以修改意图，或者它可以终止广播。
+* **显式广播**&ndash;这些类型的广播目标特定的应用程序。 显式广播的最常见用途是为启动一个活动。 下面举例说明时应用程序需要拨打电话号码; 显式广播它将调度面向 Android 和电话号码沿传递内需上的 Phone 应用程序意向。 Android 然后将路由到 Phone 应用程序的意图。
+* **隐式 broadcase** &ndash;这些广播调度到设备上的所有应用。 隐式广播的一个示例是`ACTION_POWER_CONNECTED`意图。 此方法会被发布 Android 检测到在设备上的电池正在充电每次。 Android 将路由到已注册了此事件的所有应用此目的。
 
-广播的接收方的一个子类`BroadcastReceiver`该类，而且它必须重写[ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/)方法。 将执行 android`OnReceive`上的主线程，因此此方法应设计为可快速执行。 在生成中的线程时应小心`OnReceive`因为 Android 可能会终止进程，在方法结束时。 如果广播的接收方必须执行长时间运行的工作，则建议计划_作业_使用`JobScheduler`或_Firebase 作业调度程序_。 将单独指南中讨论计划与某一工作的工作。
+广播的接收方的一个子类`BroadcastReceiver`类型和它必须重写[ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/)方法。 将执行 android`OnReceive`上的主线程，因此此方法应设计为可快速执行。 在生成中的线程时应小心`OnReceive`因为 Android 可能会终止进程，在方法结束时。 如果广播的接收方必须执行长时间运行的工作，则建议计划_作业_使用`JobScheduler`或_Firebase 作业调度程序_。 将单独指南中讨论计划与某一工作的工作。
 
-_意向的筛选器_用于注册广播的接收方，以便 Android 可以正确地将路由消息。 可以在运行时指定的意向的筛选器 (这有时称为_上下文注册接收方_或_动态注册_)，或者在 Android 清单 (可以静态定义_清单注册接收方_)。 Xamarin.Android 提供的 C# 特性， `IntentFilterAttribute`，，将静态注册意向的筛选器 （这将在本指南后面的更详细地讨论）。 
+_意向的筛选器_用于注册广播的接收方，以便 Android 可以正确地将路由消息。 可以在运行时指定的意向的筛选器 (这有时称为_上下文注册接收方_或_动态注册_)，或者在 Android 清单 (可以静态定义_清单注册接收方_)。 Xamarin.Android 提供的 C# 特性， `IntentFilterAttribute`，，将静态注册意向的筛选器 （这将在本指南后面的更详细地讨论）。 从 Android 8.0 开始，不能为应用程序以静态方式注册隐式广播。
 
 清单注册接收方和上下文注册接收方之间的主要差别在于，上下文注册接收方将仅响应广播时应用程序正在运行，而清单注册的接收方可以响应广播即使应用程序可能未运行也是如此。  
 
@@ -68,7 +68,7 @@ public class SampleReceiver : BroadcastReceiver
 
 `OnReceive`方法接收到的引用`Intent`，已调度到广播的接收方。 这样就可以将值传递到广播的接收方的意图发件人。
 
-### <a name="statically-registering-a-broadcast-receiver-with-an-intent-filter"></a>广播的接收方以静态方式注册意向的筛选器
+### <a name="statically-registering-a-broadcast-receiver-with-an-intent-filter"></a>广播的接收方以静态方式注册意向筛选器
 
 当`BroadcastReceiver`用修饰[ `IntentFilterAttribute` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)，Xamarin.Android 将添加所需`<intent-filter>`元素添加 Android 清单在编译时。 下面的代码段是广播的接收方将在设备已完成启动 （如果用户授予了适当的 Android 权限） 时运行的示例：
 
@@ -98,9 +98,11 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
+面向 Android 8.0 （API 级别 26） 应用程序，或更高版本可能不以静态方式进行注册隐式广播。 显式广播可能仍静态注册应用。 没有不受此限制的隐式广播的小的列表。 这些异常中所述[隐式广播异常](https://developer.android.com/guide/components/broadcast-exceptions.html)Android 文档中的指南。 对于有兴趣隐式广播的应用必须执行因此动态使用`RegisterReceiver`方法。 这在下一部分介绍。  
+
 ### <a name="context-registering-a-broadcast-receiver"></a>上下文注册广播的接收方 
 
-通过调用执行的接收方的上下文注册`RegisterReceiver`方法和广播的接收方必须通过调用注销`UnregisterReceiver`方法。 若要防止泄漏资源，务必注销接收方时不再与上下文无关。 例如，服务可能广播想要通知的活动，即可向用户显示的更新。 当活动启动时，它将注册这些意向。 当活动移到后台并且不再对用户可见，它应注销接收方，因为用于显示更新的 UI 不再可见。 下面的代码段演示了如何注册和注销广播接收方在一个活动的上下文中：
+上下文注册 （也称为动态注册） 的接收方执行通过调用`RegisterReceiver`方法和广播的接收方必须通过调用注销`UnregisterReceiver`方法。 若要防止泄漏资源，务必取消注册已不再相关的上下文 （活动或服务） 的接收方。 例如，服务可能广播想要通知的活动，即可向用户显示的更新。 当活动启动时，它将注册这些意向。 当活动移到后台并且不再对用户可见，它应注销接收方，因为用于显示更新的 UI 不再可见。 下面的代码段演示了如何注册和注销广播接收方在一个活动的上下文中：
 
 ```csharp
 [Activity(Label = "MainActivity", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -136,19 +138,10 @@ public class MainActivity: Activity
 
 ## <a name="publishing-a-broadcast"></a>发布广播
 
-通过将封装发布广播_操作_中为打算和调度其与两个 Api 的其中之一： 
+广播可能会发布到创建目的对象和调度它与设备上安装的所有应用`SendBroadcast`或`SendOrderedBroadcast`方法。  
 
-1. **[`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))** &ndash; 使用发布的意向`LocalBroadcastManager`通过该应用程序; 将仅收到它们不路由到其他应用程序。 这应该是安全的首选方法，因为它提供额外级别了通过保留在当前的应用程序意向和因为一切内容都进程内不会产生与进行进程间调用关联的开销。 此代码段演示如何活动可能调度目的使用`LocalBroadcastManager`:
-
-   ```csharp
-   Intent message = new Intent("com.xamarin.example.TEST");
-   // If desired, pass some values to the broadcast receiver.
-   intent.PutExtra("key", "value");
-   Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-   ```
-
-2. **[`Context.SendBroadcast`](https://developer.xamarin.com/api/member/Android.Content.Context.SendBroadcast/p/Android.Content.Intent/) 方法**&ndash;有多个实现此方法。
-   这些方法将传播到整个系统的意图。 这提供了极大的灵活性，但意味着其他应用程序可能注册以接收应用程序。 这可能会带来潜在的安全风险。 应用程序可能需要实现添加安全性，以确保未经授权的访问意图。 此代码片段演示了如何调度使用之一为打算`SendBroadcast`方法：
+1. **Context.SendBroadcast 方法**&ndash;有多个实现此方法。
+   这些方法将传播到整个系统的意图。 广播的接收方将在不确定的顺序接收意图。 这提供了极大的灵活性，但意味着可能对于其他应用程序以注册和接收意图会。 这可能会带来潜在的安全风险。 应用程序可能需要实现添加安全性以防止未经授权的访问。 一个可能的解决方案是使用`LocalBroadcastManager`这仅将分发中的应用程序的专用空间的消息。 此代码片段演示了如何调度使用之一为打算`SendBroadcast`方法：
 
    ```csharp
    Intent message = new Intent("com.xamarin.example.TEST");
@@ -156,20 +149,30 @@ public class MainActivity: Activity
    intent.PutExtra("key", "value");
    SendBroadcast(intent);
    ```
-        
-> [!NOTE]
-> LocalBroadcastManager 是可通过[Xamarin 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) NuGet 包。 
 
-此代码段是另一个示例通过使用发送广播`Intent.SetAction`的方法来确定操作：
+    此代码段是另一个示例通过使用发送广播`Intent.SetAction`的方法来确定操作：
+    
+    ```csharp 
+    Intent intent = new Intent();
+    intent.SetAction("com.xamarin.example.TEST");
+    intent.PutExtra("key", "value");
+    SendBroadcast(intent);
+    ```
+   
+2. **Context.SendOrderedBroadcast** &ndash;这是方法非常类似于`Context.SendBroadcast`，二者的区别在于，其目的将已发布的次一个地对接收方，recievers 已注册的顺序。
+   
+### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-```csharp 
-Intent intent = new Intent();
-intent.SetAction("com.xamarin.example.TEST");
+[Xamarin 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)提供调用一个帮助器类[ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html)。 `LocalBroadcastManager`适用于不希望发送或从设备上的其他应用接收广播的应用。 `LocalBroadcastManager`仅发布应用程序的上下文中的消息。 在设备上的其他应用无法接收的消息的发布与`LocalBroadcastManager`。 
+
+此代码段演示如何调度目的使用`LocalBroadcastManager`:
+
+```csharp
+Intent message = new Intent("com.xamarin.example.TEST");
+// If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
-SendBroadcast(intent);
-```
-
-
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
+``` 
 
 ## <a name="related-links"></a>相关链接
 

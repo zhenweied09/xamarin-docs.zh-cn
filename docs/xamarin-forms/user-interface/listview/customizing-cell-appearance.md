@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 551a0de8cd4965815c67a795fb5723d4261a173c
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="cell-appearance"></a>单元格的外观
 
@@ -73,11 +73,9 @@ TextCells 呈现为本机控件在运行时，因此性能是非常好向自定�
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>自定义单元格
-当内置的单元格未提供必需的布局时，自定义单元格实现必需的布局。 例如，你可能想要向单元格显示两个标签都有相等的权重。 A`LabelCell`将不足因为`LabelCell`具有较小的一个标签。
+当内置的单元格未提供必需的布局时，自定义单元格实现必需的布局。 例如，你可能想要向单元格显示两个标签都有相等的权重。 A`LabelCell`将不足因为`LabelCell`具有较小的一个标签。 大多数的单元格自定义项添加其他只读数据 （如其他标签、 图像或其他显示信息）。
 
 所有自定义单元格必须派生自[ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)，类型使用内置的单元格的所有相同的基类。
-
-大多数的单元格自定义项添加其他只读数据 （如其他标签、 图像或其他显示信息）。 如果添加按钮或其他可以已设定焦点的控件，该单元格本身可能不是可在 Android 上单击。 提供了一种方法，来克服此限制，请参阅下文。
 
 Xamarin.Forms 2 引入一个新[缓存行为](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)上`ListView`控件可对其进行设置，以提高某些类型的自定义单元格的滚动性能。
 
@@ -261,30 +259,6 @@ var listView = new ListView {
 ```
 
 在 iOS 和 Android，如果[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)回收元素和自定义单元格使用自定义呈现器，自定义呈现器必须正确实施属性更改通知。 当单元格会重复使用其属性值将发生更改，当绑定上下文更新到的一个可用的单元格中，与`PropertyChanged`引发的事件。 有关详细信息，请参阅[自定义 ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)。 有关单元格回收的详细信息，请参阅[缓存策略](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)。
-
-### <a name="enabling-row-selection-on-android"></a>启用在 Android 上的行选择
-
-要允许行选择的单元格还包括如输入元素的按钮，一个简单[ `custom renderer` ](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)是必需的。 在常见的代码中，创建一个子类`Button`，以便可在平台项目中添加自定义呈现器：
-
-```csharp
-public class ListButton : Button { }
-```
-
-适用于 Android 的呈现器实现只需设置`Focusable`这样的行以及主机可单击的按钮可选择的属性。 此代码添加到 Android 应用程序项目：
-
-```csharp
-[assembly: ExportRenderer (typeof (ListButton), typeof (ListButtonRenderer))]
-// ...
-public class ListButtonRenderer : ButtonRenderer {
-    protected override void OnElementChanged (ElementChangedEventArgs<ListButton> e) {
-        base.OnElementChanged (e);
-        Control.Focusable = false;
-    }
-}
-```
-
-如上所述，仅 Android 需要`ButtonRenderer`实现。 iOS 和 Windows Phone 平台都允许而无需实现自定义呈现器单击按钮。
-
 
 ## <a name="related-links"></a>相关链接
 

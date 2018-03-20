@@ -7,12 +7,12 @@ ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 5dc1fb0fb02014e123b3a161394155bde725f288
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="creating-android-services"></a>创建 Android 服务
 
@@ -43,7 +43,7 @@ Android 应用程序由组成的至少一个以下四个主要组件：_活动_�
 
 有四种不同类型的 Android 服务：
 
-* **绑定服务** &ndash; A_绑定服务_是具有某些其他组件 （通常活动） 绑定到它的服务。 绑定的服务提供一个接口，用于绑定的组件和服务以进行相互交互。 后没有任何绑定到的服务的多个客户端，Android 将关闭该服务。
+* **绑定服务** &ndash; A_绑定服务_是具有某些其他组件 （通常活动） 绑定到它的服务。 绑定的服务提供一个接口，用于绑定的组件和服务以进行相互交互。 后没有任何绑定到的服务的多个客户端，Android 将关闭该服务。 
 
 * **`IntentService`** &ndash;  _`IntentService`_ 是一个专门的子类的`Service`类，用于简化服务创建和使用情况。 `IntentService`旨在处理各个自治调用。 与一个服务，它可以同时处理多个调用，不同`IntentService`很像_工作队列处理器_&ndash;工作将会排队和`IntentService`在单个辅助线程上一次处理一个每个作业。 通常情况下，`IntentService`未绑定到活动或片段。 
 
@@ -57,4 +57,26 @@ Android 应用程序由组成的至少一个以下四个主要组件：_活动_�
 
 也可以在同一设备上在它自己的进程中运行服务，这有时称为_远程服务_或_进程外服务_。 这确实需要更多工作来创建，但可用于应用程序需要共享功能与其他应用程序，并可以在某些情况下，提高应用程序的用户体验。 
 
-所有这些服务都有其自己的特征和行为，并因此将其自己指南中的更详细地介绍。
+### <a name="background-execution-limits-in-android-80"></a>在 Android 8.0 中的后台执行限制
+
+启动 Android 8.0 （API 级别 26），在 Android 应用程序不再能够在后台自由地运行。 当在前台，应用可以启动并运行不受限制的服务。 当应用程序移动到后台时，Android 将一定的时间启动并使用服务授予应用程序。 当该时间过后时，应用程序可以不再启动任何服务，启动任何服务将被终止。 在此点是不能对应用程序以执行任何工作。 Android 考虑应用程序是在前台，如果满足以下条件之一：
+
+* 没有可见的活动 （启动或暂停）。
+* 应用程序已开始前景服务。
+* 另一个应用程序在前台，并使用从应用程序，否则将在后台的组件。 此示例是如果应用程序 A，这是在前台，绑定到由提供的服务应用程序。 应用程序 B 然后还应该考虑在前台，但在后台正在终止 android。
+
+在某些情况下，其中，即使应用是在后台，Android 将唤醒应用程序和允许应用程序执行一些操作，几分钟，放宽这些限制：
+* 高优先级 Firebase 云消息由应用程序接收。
+* 应用程序接收广播如 
+* 应用程序收到执行`PendingIntent`响应通知。
+
+现有的 Xamarin.Android 应用程序可能需要更改它们如何执行后台工作以避免 Android 8.0，可能会出现任何问题。 下面是一些实际 alterantives 到 Android 服务：
+
+* **计划在后台使用 Android 作业计划程序中运行的工作或[Firebase 作业调度程序](~/android/platform/firebase-job-dispatcher.md)** &ndash;这两个库提供一个框架，用于应用程序分离到在后台工作_作业_，离散的工作单元。 可以在运行作业时，应用程序然后可以有关计划的操作系统以及某些条件的作业。
+* **在前台启动该服务**&ndash;前景服务可用于应用程序时必须执行某些任务在后台，用户可能需要定期与该任务进行交互。 前景服务将显示永久通知，以便用户可以知道应用正在运行后台任务，且还提供了一种方法来监视或与该任务进行交互。 此示例将向用户播放播客或可能下载播客段，以便它可以更高版本喜欢的播客应用。 
+* **使用高优先级 Firebase 云消息 (FCM)** &ndash;时 Android 接收应用程序的高优先级 FCM，它将允许该应用程序以短时间内，在后台运行服务。 这将是具有后台服务轮询在后台应用程序的良好替代方法。 
+* **为应用程序时进入前台工作推迟**&ndash;如果以前的解决方案不可行的则应用必须开发其自己的方法以暂停和继续工作时应用程序转入前台。
+
+## <a name="related-links"></a>相关链接
+
+* [Android Oreo 后台执行限制](https://www.youtube.com/watch?v=Pumf_4yjTMc)

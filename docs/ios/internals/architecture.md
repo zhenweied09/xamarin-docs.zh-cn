@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 732f60a413077bc15018679fe8f8bc0a18227246
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c54ea9a2f63853066413f2db9713882441399744
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="ios-architecture"></a>iOS 体系结构
 
@@ -61,30 +61,28 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 
 **C# （托管代码）**
 
-```
-
+```csharp
  class MyViewController : UIViewController{
     [Export ("myFunc")]
     public void MyFunc ()
     {
     }
  }
-
-
 ```
 
 **Objective-C:**
 
-```csharp
+```objectivec
 @interface MyViewController : UIViewController { }
 
     -(void)myFunc;
-@end @implementation
+@end
 
-    MyViewController {}
+@implementation MyViewController {}
+
     -(void) myFunc
     {
-    /* code to call the managed MyViewController.MyFunc method */
+        /* code to call the managed MyViewController.MyFunc method */
     }
 @end
 
@@ -172,7 +170,7 @@ public interface UIToolbar : UIBarPositioning {
 
 有关更多详细信息链接器以及如何使用它，请参阅[链接器](~/ios/deploy-test/linker.md)指南。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍了 AOT 编译 Xamarin.iOS 应用程序和浏览的 Xamarin.iOS 以及它与 Objective C 深度中的关系。
 

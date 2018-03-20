@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 作业调度程序
 
@@ -27,7 +27,7 @@ _本指南讨论使用从 Google Firebase 作业调度程序库的后台工作�
 Android 已经提供了几个 Api，以帮助在后台中执行工作，但是这些都是一个全面的解决方案：
 
 * **[意向服务](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash;意向服务则非常适合用于执行工作，但它们不提供任何方法来计划作业。
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash;这些 Api 只允许计划的、 但不提供任何方法来实际执行工作的工作。 此外，AlarmManager 仅允许基于时间约束，这意味着在某个时间或经过一段时间后引发警报。 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash;这些 Api 只允许计划的、 但不提供任何方法来实际执行工作的工作。 此外，AlarmManager 仅允许基于时间约束，这意味着在某个时间或经过一段时间后引发警报。 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule 是一种很好的 API，适用于操作系统可用于计划作业。 但是，它才可用于这些目标 API 级别 21 的 Android 应用程序或更高版本。 
 * **[广播接收方](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; Android 应用程序可以设置广播接收方在响应系统宽事件或方法中执行工作。 但是，广播的接收方未提供任何控制作业应何时运行。 在 Android 操作系统中的更改也将限制时广播的接收方将起作用，或者它们可以响应的工作的类型。 
 * **Google 云消息网络管理器**&ndash;这是，重要性存在争议，长时间智能地计划背景的最佳方式工作。 但是，由于已弃用 GCMNetworkManager。 
@@ -56,7 +56,7 @@ Firebase 作业调度程序是从 Google 提供 fluent API 来简化计划后台
 
 本指南将讨论如何将 Firebase 作业调度程序添加到 Xamarin.Android 应用程序并使用它来计划后台工作。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Firebase 作业调度程序需要 Android API 级别 9 或更高版本。 Firebase 作业调度程序库依赖于某些组件由 Google Play 服务;设备必须安装的 Google Play 服务。
 
@@ -281,7 +281,7 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 * `FirebaseJobDispatcher.CancelResultUnknownError` &ndash; 某个错误导致无法被取消的作业。
 * `FirebaseJobDispatcher.CancelResult.NoDriverAvailable` &ndash; `FirebaseJobDispatcher`无法取消作业，因为没有有效`IDriver`可用。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论如何使用 Firebase 作业调度程序以智能方式在后台中执行工作。 它讨论如何封装为执行的工作`JobService`和如何`FirebaseJobDispatcher`来计划该作业，指定与条件`JobTrigger`和如何与处理故障`RetryStrategy`。
 

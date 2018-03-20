@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 50f99c48d0f53bd6a2dfaf42284137ce1e424b30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 747c158460b23b91e4c2986d212802528cdd3979
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="an-introduction-to-skiasharp"></a>SkiaSharp 简介
 
@@ -20,7 +20,7 @@ _这提供了 SkiaSharp 背后的概念的简要介绍_
 
 SkiaSharp 提供丰富且功能强大二维图形 API 可用于呈现到二维缓冲区。  你可以使用这些实现自定义用户界面元素和可以合并到你的应用程序的二维图形。  SkiaSharp 是对的.NET 绑定[Skia](https://skia.org)库和继承的功能和此库的能力。
 
-库是跨平台目前只有[NuGet 包](https://www.nuget.org/packages/SkiaSharp)，到你的项目可以通过将 NuGet 引用添加。
+库是跨平台目前只有[NuGet 包](https://www.nuget.org/packages/SkiaSharp)，您可以通过添加 NuGet 引用将它添加到你的项目。
 
 若要绘制，你的代码将创建`SkCanvas`该主题描述了将执行绘制操作的图面。
 
