@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
 ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>处理 CocosSharp 中的多个解决方案
 
@@ -313,7 +313,7 @@ backgroundSprite  = new CCSprite ("background");
 ```
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本文介绍如何创建游戏它而不考虑设备分辨率正确显示。 显示使用的示例不同`CCSceneResolutionPolicy`用于调整大小根据设备分辨率游戏的值。 它还提供的一个示例`DefaultTexelToContentSizeRatio`可用来容纳多个内容集而无需单独调整大小的可视元素。
 
