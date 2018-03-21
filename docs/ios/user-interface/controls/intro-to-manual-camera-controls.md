@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7111c1716ef3a8869f8b2401a7653d9e9941977b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e44635c9dfbe9fa069272f50d035476bd1aa6b9
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="manual-camera-controls"></a>手动相机控件
 
@@ -47,7 +47,7 @@ iOS 8 提供扩展和增强功能到现有 iOS Api 来提供此图像上方的�
 
 简言之，括起来捕获是静止图像的各种设置从图片图片时执行的突然增加。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下被需完成这篇文章中提供的步骤：
 
@@ -370,7 +370,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 执行以下操作来手动焦点控件的在线向上的视图控制器：
 
 
- 1. 添加以下 using 语句：
+1. 添加以下 using 语句：
 
     ```csharp
     using System;
@@ -387,7 +387,7 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     using System.Timers;
     ```  
   
- 1. 添加以下私有变量：
+1. 添加以下私有变量：
 
     ```csharp
     #region Private Variables
@@ -1354,7 +1354,7 @@ Apple 使用术语灰色 World 来指代内置 iOS 8 的灰色卡支持。 它�
 
 上面的代码说明了如何配置并在 iOS 8 中其执行自动泄露括起来捕获。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章中我们有涵盖新的手动相机控件提供的 iOS 8 的简介，并涵盖它们执行的操作以及它们如何工作的基础知识。 我们已授予手动焦点，手动公开和手动白平衡的示例。 最后，我们赋给采用括起来捕获使用前面所述的手动相机控件示例
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 绑定元数据
 
@@ -275,7 +275,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="sender"></a>sender
 
-指定的一种方法的参数应为`sender`方法映射到事件的参数。 该值可以为`true`或`false`。 例如:
+指定的一种方法的参数应为`sender`方法映射到事件的参数。 该值可以为`true`或`false`。 例如：
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -313,7 +313,7 @@ NavigationManager.2DSignNextManueverEventArgs
 </mapping>
 ```
 
-此处我们执行了的 Java 类`SKRealReachSettings`和定义调用的 C# 枚举`SKRealReachSettings`命名空间中`Skobbler.Ngx.Map.RealReach`。 `field`条目定义的 Java 常数的名称 (示例`UNIT\_SECOND`)，枚举条目的名称 (示例`Second`)，并且这两个实体所表示的整数值 (示例`0`)。 
+此处我们执行了的 Java 类`SKRealReachSettings`和定义调用的 C# 枚举`SKMeasurementUnit`命名空间中`Skobbler.Ngx.Map.RealReach`。 `field`条目定义的 Java 常数的名称 (示例`UNIT_SECOND`)，枚举条目的名称 (示例`Second`)，并且这两个实体所表示的整数值 (示例`0`)。 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>定义使用 EnumMethods.xml 的 Getter/Setter 方法
 
@@ -328,7 +328,7 @@ NavigationManager.2DSignNextManueverEventArgs
 </mapping>
 ```
 
-第一个`method`行映射的返回值的 Java`getMeasurementUnit`方法`SKRealReachSettings`枚举。 第二个`method`行映射的第一个参数`setMeasurementUnit`到相同的枚举。
+第一个`method`行映射的返回值的 Java`getMeasurementUnit`方法`SKMeasurementUnit`枚举。 第二个`method`行映射的第一个参数`setMeasurementUnit`到相同的枚举。
 
 所有这些更改后，你可以使用以下代码在 Xamarin.Android 中设置`MeasurementUnit`: 
 
@@ -337,7 +337,7 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文讨论了如何 Xamarin.Android 使用元数据转换中的 API 定义*Google* *AOSP 格式*。 涵盖还可能有的更改后使用*Metadata.xml*它会检查重命名成员时遇到的限制，它提供的受支持的 XML 属性，描述应在何时使用每个属性的列表。
 

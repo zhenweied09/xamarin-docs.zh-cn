@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9bebc33affef4a1a25667039dfcdbe345dbd2cd6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="api-design"></a>API 设计
 
@@ -92,7 +92,7 @@ Xamarin.iOS 包含组成程序集的大量*Xamarin.iOS 配置文件*。 [程序�
 
 在 C# 中从目标 C.类的层次结构的 Xamarin.iOS 镜像 例如，Objective C 基类[NSObject](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)不能从 C# 通过[Foundation.NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)。
 
-虽然此命名空间提供的基础的 OBJECTIVE-C 的基础类型的绑定，但在少数情况下我们已映射的基础类型到.NET 类型。 例如:
+虽然此命名空间提供的基础的 OBJECTIVE-C 的基础类型的绑定，但在少数情况下我们已映射的基础类型到.NET 类型。 例如：
 
 - 而不是处理[NSString](http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html)和[NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html)，运行时公开这些 C# 项目称为[字符串](https://developer.xamarin.com/api/type/System.String/)s 的强类型[数组](https://developer.xamarin.com/api/type/System.Array/)整个 sAPI。
 
@@ -375,7 +375,7 @@ web.Delegate = new Notifier ();
 除了外的强类型的属性，我们还允许开发人员如果需要以不同方式绑定操作弱类型化的委托。
 强类型化 everywhere`Delegate`属性公开在 Xamarin.iOS 的绑定，相应`WeakDelegate`属性名称还公开。
 
-使用时`WeakDelegate`，你将负责正确修饰类 using[导出](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/)特性来指定选择器。 例如:
+使用时`WeakDelegate`，你将负责正确修饰类 using[导出](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/)特性来指定选择器。 例如：
 
 ```csharp
 class Notifier : NSObject  {
@@ -494,6 +494,7 @@ C# 名称的方法并不重要;所有重要的是传递给 [导出] 特性的字
 
 在使用此样式编程，请确保 C# 参数与匹配的运行时引擎将传递的实际类型。
 
+<a name="Models" />
 
 #### <a name="models"></a>模型
 
@@ -619,13 +620,13 @@ UITextField UserName {
 
 Objective C 编程的核心概念是选择器。 通常将出现在要求您传递一个选择器，或需要你的代码以响应选择器的 Api。
 
-在 C# 中创建新的选择器是非常简单 – 只需创建的新实例`ObjCRuntime.Selector`类并在需要它的 API 中的任何位置使用结果。 例如:
+在 C# 中创建新的选择器是非常简单 – 只需创建的新实例`ObjCRuntime.Selector`类并在需要它的 API 中的任何位置使用结果。 例如：
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-对于 C# 方法响应的选择器调用，则它必须继承自`NSObject`必须以使用选择器名称修饰类型和 C# 方法`[Export]`属性。 例如:
+对于 C# 方法响应的选择器调用，则它必须继承自`NSObject`必须以使用选择器名称修饰类型和 C# 方法`[Export]`属性。 例如：
 
 ```csharp
 public class MyMath : NSObject {

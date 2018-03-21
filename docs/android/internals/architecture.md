@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9834da444032622cc3547e7c99ca3de0e41bb603
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="architecture"></a>体系结构
 
@@ -33,7 +33,7 @@ Android 类如何与 Android 运行时类进行通信的详细信息请参阅[AP
 
 Android 应用程序包是包含 ZIP 容器*.apk*文件扩展名。 Xamarin.Android 应用程序包具有相同的结构和布局正常 Android 包，添加了以下内容：
 
--   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成*.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这允许更快的应用程序启动时，作为程序集不需要在执行之前提取。 - *注意：*之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成*.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这就允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：*之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *不能指望*版本中生成。 为不同的文件系统条目不存在，并且它们没有可用的位置。
 
 

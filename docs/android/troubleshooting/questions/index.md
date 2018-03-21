@@ -6,12 +6,12 @@ ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 22ddf61d3636962273716d8d5c48857e0004bb42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 69a5c905367f9e6dbd38acb664ad21b9dbe63efc
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 
@@ -68,6 +68,11 @@ Xamarin.Android 需要 JDK 8，而不是 JDK 9。 本文列出了一些常见的
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[更智能的 Xamarin Android 支持 v4 / v13 NuGet 包](android-support-v4v13-libraries.md)
 
 `Support-v4` 和`Support-v13`不能使用一起在相同的应用中，即，它们是互相排斥。 这是因为`Support-v13`实际包含的所有类型和实现`Support-v4`。 如果您尝试并同时在同一项目引用将会遇到重复的类型错误。
+
+### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[如何解决 PathTooLongException 错误？](path-too-long-exception.md)
+
+此文章介绍了如何解决**PathTooLongException**生成 Xamarin.Android 项目时可能发生的错误。
+
 
 
 ## <a name="deprecated"></a>不推荐使用

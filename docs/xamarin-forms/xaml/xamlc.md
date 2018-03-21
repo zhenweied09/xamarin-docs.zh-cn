@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/21/2016
-ms.openlocfilehash: c6fb404919621e1b22217b4461597ae07a5624c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3ce0fd2b83599fca7f38c161bbd2137254b75bd5
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xaml-compilation"></a>XAML 编译
 
@@ -56,7 +56,7 @@ public class HomePage : ContentPage
 在此示例中，进行编译时检查的 XAML`HomePage`将执行类和错误报告作为编译过程的一部分。
 
 > [!NOTE]
-> `XamlCompilation`属性和`XamlCompilationOptions`枚举驻留在`Xamarin.Forms.Xaml0`命名空间，必须导入以使用它们。
+> `XamlCompilation`属性和`XamlCompilationOptions`枚举驻留在`Xamarin.Forms.Xaml`命名空间，必须导入以使用它们。
 
 
 ## <a name="related-links"></a>相关链接

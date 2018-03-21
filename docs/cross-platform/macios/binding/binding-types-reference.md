@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 568650a850b9db1fa22deef55eebb6a437e7e0b7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0d58a8ab15a7b2d598aa8fd45a9b4d0c3d9e440b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="binding-types-reference-guide"></a>绑定类型参考指南
 
@@ -30,7 +30,7 @@ interface MyType [: Protocol1, Protocol2] {
 }
 ```
 
-你具有的协定定义的每个接口`[BaseType]`声明生成对象的基类型的属性。 在上面的声明中`MyType`将绑定到 Objective C 类型调用生成类的 C# 类型**MyType**。
+你具有的协定定义的每个接口[ `[BaseType]` ](#BaseTypeAttribute)声明生成对象的基类型的属性。 在上面的声明中`MyType`将绑定到 Objective C 类型调用生成类的 C# 类型`MyType`。
 
 如果在类型名称后指定任何类型 (上面的示例中`Protocol1`和`Protocol2`) 使用接口继承语法的内容这些接口将内联如果它们过的协定的一部分`MyType`。
 是一种类型采用一种协议的 Xamarin.iOS 曲面的方式内联所有的方法和已转换的类型本身的协议中声明的属性。
@@ -51,12 +51,12 @@ interface UITextField : UITextInput {
 }
 ```
 
-你可以通过将其他特性应用于接口，以及配置 BaseType 属性控制代码生成的许多其他的方面。
+你可以通过将其他特性应用于接口，以及配置控制的代码生成的许多其他方面[ `[BaseType]` ](#BaseTypeAttribute)属性。
 
 
 ### <a name="generating-events"></a>生成事件
 
-Xamarin.iOS 和 Xamarin.Mac API 设计的一个功能是，我们将 OBJECTIVE-C 的委托类映射为 C# 事件和回调。 用户可以选择在按实例逐一是否采用 Objective C 编程模式，通过将分配给属性，例如**委托**实现的各种方法的类的实例，Objective C运行时将调用，或通过选择 C# 的样式事件和属性。
+Xamarin.iOS 和 Xamarin.Mac API 设计的一个功能是，我们将 OBJECTIVE-C 的委托类映射为 C# 事件和回调。 用户可以选择在按实例逐一是否采用 Objective C 编程模式，通过将分配给属性，例如`Delegate`实现 Objective C 运行时将调用的各种方法的类或实例选择 C# 的样式事件和属性。
 
 让我们看到如何使用 OBJECTIVE-C 的模型的一个示例：
 
@@ -86,7 +86,7 @@ class MyScrollViewDelegate : UIScrollViewDelegate {
 }
 ```
 
-在上述示例中，你可以看到，我们已选择覆盖两种方法，一个通知，滚动事件已位，并且第二个，是应返回一个布尔值，指示 scrollView 是否它应该滚动到顶部的回调或不是。
+在上述示例中，你可以看到，我们已选择覆盖两种方法，一个通知，滚动事件已位，并且第二个，是应返回布尔值指示回调`scrollView`是否应该滚动到排名靠前的或不。
 
 C# 模型允许你的库的用户来侦听通知使用 C# 事件语法或属性语法挂接都应该返回值的回调。
 
@@ -110,11 +110,11 @@ void Setup ()
 public delegate bool UIScrollViewCondition (UIScrollView scrollView);
 ```
 
-它将返回一个布尔值，在这种情况下 lambda 语法使我们可以仅返回的值从`MakeDecision`函数。
+它将返回`bool`值，在这种情况下 lambda 语法使我们可以仅返回的值从`MakeDecision`函数。
 
-支持的绑定生成器的生成的事件和属性链接类，如`UIScrollView`与其`UIScrollViewDelegate`（我们称这些模型类），这通过批注你`BaseType`定义替换`Events`和`Delegates`（如下所述） 的参数。 除了批注`BaseType`利用这些参数就需要通知的几个更多组件的生成器。
+支持的绑定生成器的生成的事件和属性链接类，如`UIScrollView`与其`UIScrollViewDelegate`（我们称这些模型类），这通过批注你[ `[BaseType]` ](#BaseTypeAttribute)定义替换`Events`和`Delegates`（如下所述） 的参数。 除了批注[ `[BaseType]` ](#BaseTypeAttribute)利用这些参数就需要通知的几个更多组件的生成器。
 
-需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`EventArgs`模型类中在方法声明上的属性。 例如：
+需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须为生成提供你想要的名称`EventArgs`的类。 这通过完成[ `[EventArgs]` ](#EventArgsAttribute)模型类中在方法声明上的属性。 例如：
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -135,7 +135,7 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-然后，它公开 UIImagePickerController 类中的以下：
+然后，它公开中的以下`UIImagePickerController`类：
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
@@ -154,8 +154,9 @@ public interface UIScrollViewDelegate {
 
 上述操作将创建`UIScrollViewCondition`委托具有签名的已显示更高版本，并且如果用户不提供实现，则返回值将为 true。
 
-除了`DefaultValue`属性中，你还可以使用`DefaultValueFromArgument`指示在调用中返回指定的参数的值的生成器或`NoDefaultValue`指示生成器没有默认值的参数。
+除了[ `[DefaultValue]` ](#DefaultValueAttribute)属性中，你还可以使用[ `[DefaultValueFromArgument]` ](#DefaultValueFromArgumentAttribute)将定向以返回调用或指定参数的值的生成器的属性[ `[NoDefaultValue]` ](#NoDefaultValueAttribute)指示生成器没有默认值的参数。
 
+<a name="BaseTypeAttribute" />
 
 ### <a name="basetypeattribute"></a>BaseTypeAttribute
 
@@ -186,13 +187,13 @@ interface NSUrlConnection {
 }
 ```
 
-用作生成的值指定了指定的名称`[Register]`在绑定中的属性。 如果`Name`未指定，则该类型的短名称用作的值`Register`中生成的输出属性。
+指定的名称用作值生成`[Register]`在绑定中的属性。 如果`Name`未指定，则该类型的短名称用作的值`[Register]`中生成的输出属性。
 
 #### <a name="basetypeevents-and-basetypedelegates"></a>BaseType.Events 和 BaseType.Delegates
 
-这些属性用于驱动的 C# 生成的设置事件中生成的类的样式。 它们用于将具有其 Objective C 委托类的给定的类的链接。 你将会遇到许多情况下，其中一个类用于委托类发送通知和事件。 例如`BarcodeScanner`者必须随`BardodeScannerDelegate`类。 `BarcodeScanner`类通常具有一个"委托"属性，您可以分配的实例`BarcodeScannerDelegate`以，而此工作原理，你可能想要向你的用户公开的 C#-如样式事件接口，并在这些情况下，你将使用`Events`和`Delegates`属性`BaseType`属性。
+这些属性用于驱动的 C# 生成的设置事件中生成的类的样式。 它们用于将具有其 Objective C 委托类的给定的类的链接。 你将会遇到许多情况下，其中一个类用于委托类发送通知和事件。 例如`BarcodeScanner`者必须随`BardodeScannerDelegate`类。 `BarcodeScanner`类通常具有`Delegate`分配的实例的属性`BarcodeScannerDelegate`以，而此工作原理，你可能想要向你的用户公开的 C#-如样式事件接口，并在这些情况下将使用`Events`和`Delegates`属性[ `[BaseType]` ](#BaseTypeAttribute)属性。
 
-这些属性始终在一起设置和必须具有相同数量的元素以及保持同步。`Delegates`数组包含一个字符串，对于你想要自动换行，每个弱类型的委托和事件数组包含你想要与之关联的每个类型的一种类型。
+这些属性始终在一起设置和必须具有相同数量的元素以及保持同步。`Delegates`数组包含一个字符串，对于你想要自动换行，每个弱类型的委托和`Events`数组包含你想要与之关联的每个类型的一种类型。
 
 ```csharp
 [BaseType (typeof (NSObject),
@@ -210,7 +211,7 @@ public interface UIAccelerometerDelegate {
 
 #### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
 
-如果创建此类的新实例时，将此特性的应用，该对象的实例将保留围绕到引用的方法`KeepRefUntil`已调用。 这是提高您的 api，可用性，当你不想让用户保持对对象的引用，以使用你的代码时很有用。 此属性的值是中的方法的名称`Delegate`类，因此你必须使用此事件与结合使用和`Delegates`以及属性。
+如果创建此类的新实例时，将此特性的应用，该对象的实例将保留围绕到引用的方法`KeepRefUntil`已调用。 这是提高您的 api，可用性，当你不想让用户保持对对象的引用，以使用你的代码时很有用。 此属性的值是中的方法的名称`Delegate`类，因此你必须与结合使用这`Events`和`Delegates`以及属性。
 
 下面的示例演示如何通过使用此`UIActionSheet`Xamarin.iOS 中：
 
@@ -243,6 +244,7 @@ public interface UIActionSheetDelegate {
 
 当此属性应用于接口定义它将标记为私有的默认构造函数。 这意味着，可以仍实例化此类的对象内部从您扩展的文件，但它只是不是用户可在类的访问。
 
+<a name="CategoryAttribute" />
 
 ### <a name="categoryattribute"></a>CategoryAttribute
 
@@ -258,9 +260,9 @@ public interface UIActionSheetDelegate {
 @end
 ```
 
-上面的示例中如果在上找到库将会扩展的实例`UIView`方法`makeBackgroundRed`。
+上面的示例中找到在将扩展的实例使用库`UIView`方法`makeBackgroundRed`。
 
-若要将这些绑定，可以使用`[Category]`接口定义的属性。   使用时`Category`特性的含义`[BaseType]`属性将更改从用于指定要扩展，为要扩展的类型的基类。
+若要将这些绑定，可以使用[ `[Category]` ](#CategoryAttribute)接口定义的属性。   使用时[ `[Category]` ](#CategoryAttribute)特性的含义[ `[BaseType]` ](#BaseTypeAttribute)属性将更改从用于指定要扩展，为要扩展的类型的基类。
 
 下面演示如何`UIView`扩展都是绑定，转变为 C# 扩展方法：
 
@@ -273,7 +275,7 @@ interface MyUIViewExtension {
 }
 ```
 
-上述操作将创建`MyUIViewExtension`包含的类`MakeBackgroundRed`扩展方法。   对任何这意味着你现在可以调用"MakeBackgroundRed"`UIView`子类化，请向您提供相同的功能，你会收到一个目标 C
+上述操作将创建`MyUIViewExtension`包含的类`MakeBackgroundRed`扩展方法。   这意味着，现在可以调用`MakeBackgroundRed`上任何`UIView`子类化，请向您提供相同的功能，你会收到一个目标 C
 
 在某些情况下，你将找到**静态**类别内的成员如在下面的示例：
 
@@ -317,12 +319,13 @@ interface FooObject {
 }
 ```
 
-我们将发出警告 (BI1117)，每当我们找到`[Static]`成员内部`[Category]`定义。 如果你确实想要`[Static]`成员内的你`[Category]`定义可以通过使用抑制警告`[Category (allowStaticMembers: true)]`或的修饰您的成员或`[Category]`接口定义与`[Internal]`。
+我们将发出警告 (BI1117)，每当我们找到[ `[Static]` ](#StaticAttribute)成员内部[ `[Category]` ](#CategoryAttribute)定义。 如果你确实想要[ `[Static]` ](#StaticAttribute)成员内的你[ `[Category]` ](#CategoryAttribute)定义可以通过使用抑制警告`[Category (allowStaticMembers: true)]`或的修饰你成员或[`[Category]` ](#CategoryAttribute)接口定义与[ `[Internal]` ](#InternalAttribute)。
 
+<a name="StaticAttribute_Class" />
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-此属性应用于类时它只会产生静态类，一个不是派生自`NSObject`因此`[BaseType]`忽略属性。 静态类用于承载 C 你想要公开的公共变量。
+此属性应用于类时它只会产生静态类，一个不是派生自`NSObject`，因此[ `[BaseType]` ](#BaseTypeAttribute)忽略属性。 静态类用于承载 C 你想要公开的公共变量。
 
 例如：
 
@@ -341,8 +344,7 @@ public partial class CBAdvertisement  {
 }
 ```
 
-
-## <a name="protocol-definitionsmodel"></a>协议定义/模型
+## <a name="protocolmodel-definitions"></a>协议/模型定义
 
 模型通常用于通过协议的实现。
 它们不同，因为运行时将仅向注册 Objective C 实际上已被覆盖的方法。
@@ -350,12 +352,13 @@ public partial class CBAdvertisement  {
 
 这通常意味着当子类已标记为与类`ModelAttribute`，不应调用基方法。   调用该方法将引发异常，你应该在你子类重写任何方法上实现的整个行为。
 
+<a name="AbstractAttribute" />
 
 ### <a name="abstractattribute"></a>AbstractAttribute
 
-默认情况下，是一种协议的一部分的成员不是必需的。 这允许用户创建的一个子类`Model`只需从 C# 中的类派生，并仅将他们所关心的方法重写的对象。 有时 OBJECTIVE-C 的协定要求用户提供此方法的实现 (那些被标记为@required指令 Objective C 中)。 在这些情况下，您应标记使用这些方法`Abstract`属性。
+默认情况下，是一种协议的一部分的成员不是必需的。 这允许用户创建的一个子类`Model`只需从 C# 中的类派生，并仅将他们所关心的方法重写的对象。 有时 OBJECTIVE-C 的协定要求用户提供此方法的实现 (那些被标记为`@required`指令 Objective C 中)。 在这些情况下，您应标记使用这些方法`[Abstract]`属性。
 
-`Abstract`特性可以应用于方法或属性，并导致生成器标记为"抽象"和类的生成的成员是抽象类。
+`[Abstract]`特性可以应用于方法或属性，并导致生成器生成的成员标记为抽象类和类是抽象类。
 
 以下是取自 Xamarin.iOS:
 
@@ -402,7 +405,7 @@ var camera = new Camera ();
 camera.ShouldUploadToServer = (camera, action) => return SomeDecision ();
 ```
 
-另请参阅： [NoDefaultValueAttribute](#NoDefaultValueAttribute)， [DefaultValueFromArgumentAttribute](#DefaultValueFromArgumentAttribute)。
+另请参阅： [ `[NoDefaultValue]` ](#NoDefaultValueAttribute)， [ `[DefaultValueFromArgument]` ](#DefaultValueFromArgumentAttribute)。
 
 <a name="DefaultValueFromArgumentAttribute" />
 
@@ -432,7 +435,7 @@ public interface NSAnimationDelegate {
 
 在上面的事例如果的用户`NSAnimation`类选择了要使用的任何 C# 事件/属性，并且未设置`NSAnimation.ComputeAnimationCurve`到方法或 lambda，返回值将为进度参数中传递的值。
 
-另请参阅： [NoDefaultValueAttribute](#NoDefaultValueAttribute)， [DefaultValueAttribute](#DefaultValueAttribute)
+另请参阅： [ `[NoDefaultValue]` ](#NoDefaultValueAttribute)， [`[DefaultValue]`](#DefaultValueAttribute)
 
 ### <a name="ignoredindelegateattribute"></a>IgnoredInDelegateAttribute
 
@@ -494,9 +497,11 @@ public interface NSAnimationDelegate {
 public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 ```
 
+<a name="EventArgsAttribute" />
+
 ### <a name="eventargsattribute"></a>EventArgsAttribute
 
-需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`EventArgs`属性中的方法声明你`Model`类。
+需要多个参数的事件 （在 Objective C 约定为委托类中的第一个参数是发件人对象的实例） 必须提供您要用于生成 EventArgs 该类是的名称。 这通过完成`[EventArgs]`属性中的方法声明你`Model`类。
 
 例如：
 
@@ -519,7 +524,7 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 }
 ```
 
-然后，它公开 UIImagePickerController 类中的以下：
+然后，它公开中的以下`UIImagePickerController`类：
 
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
@@ -528,7 +533,7 @@ public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImag
 
 ### <a name="eventnameattribute"></a>EventNameAttribute
 
-此属性用于允许若要更改的事件或在类中生成的属性名称的生成器。 有时很有用时的名称`Model`类方法适合模型类，但将看起来很奇怪原始类中的事件或属性。
+此属性用于允许若要更改的事件或在类中生成的属性名称的生成器。 有时很有用时模型类方法的名称对模型类中，有意义，但将看起来很奇怪原始类中的事件或属性。
 
 例如，`UIWebView`使用从以下位`UIWebViewDelegate`:
 
@@ -544,10 +549,11 @@ var webView = new UIWebView (...);
 webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 ```
 
+<a name="ModelAttribute" />
 
 ### <a name="modelattribute"></a>ModelAttribute
 
-当你将`Model`属性设置为您的协定 API，运行时中的类型定义将生成将仅到类中方法呈现调用，如果用户已覆盖类中的方法的特殊代码。 此属性通常应用于包装 Objective C 委托类的所有 Api。
+当你将`[Model]`属性设置为您的协定 API，运行时中的类型定义将生成将仅到类中方法呈现调用，如果用户已覆盖类中的方法的特殊代码。 此属性通常应用于包装 Objective C 委托类的所有 Api。
 
 <a name="NoDefaultValueAttribute" />
 
@@ -555,7 +561,7 @@ webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 
 指定对模型的方法不提供默认返回值。
 
-这适用于 OBJECTIVE-C 的运行时通过"false"响应到 Objective C 运行时请求，以确定是否此类中实现的指定选择器。
+这适用于 OBJECTIVE-C 的运行时通过响应`false`到 Objective C 运行时请求，以确定是否此类中实现的指定选择器。
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -566,13 +572,15 @@ interface CameraDelegate {
 }
 ```
 
-另请参阅： [DefaultValueAttribute](#DefaultValueAttribute)和[DefaultValueAttribute](#DefaultValueAttribute)。
+另请参阅： [ `[DefaultValue]` ](#DefaultValueAttribute)， [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
+
+<a name="ProtocolAttribute" />
 
 ## <a name="protocols"></a>协议
 
 Objective C 协议概念中 C# 实际上不存在。 协议则类似于 C# 接口，但它们的区别在于采用它的类必须实现不是所有的方法和在协议中声明的属性。 相反的一些方法和属性是可选的。
 
-某些协议通常用作模型类，应使用模型属性绑定的那些。
+某些协议通常用作模型类，应使用绑定那些[ `[Model]` ](#ModelAttribute)属性。
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -589,7 +597,7 @@ interface MyProtocol {
 }
 ```
 
-已合并开头 MonoTouch 7.0 新增和改进的协议绑定功能。  包含任意定义`[Protocol]`属性将实际生成大大地提高你使用这些协议的方法的三个支持类：
+已合并开头 Xamarin.iOS 7.0 新增和改进的协议绑定功能。  包含任意定义`[Protocol]`属性将实际生成大大地提高你使用这些协议的方法的三个支持类：
 
 ```csharp
 // Full method implementation, contains all methods
@@ -673,7 +681,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 
 ### <a name="protocol-inlining"></a>内联的协议
 
-尽管绑定已声明为采用一种协议的现有 Objective C 类型时，你需要把内联协议直接。 若要执行此操作，只是将声明你协议不含任何接口`[BaseType]`属性，并列出为你的接口的基接口的列表中的协议。
+尽管绑定已声明为采用一种协议的现有 Objective C 类型时，你需要把内联协议直接。 若要执行此操作，只是将声明你协议不含任何接口[ `[BaseType]` ](#BaseTypeAttribute)属性，并列出为你的接口的基接口的列表中的协议。
 
 示例:
 
@@ -712,9 +720,9 @@ public interface GLKBaseEffect {
 
 ### <a name="appearanceattribute"></a>AppearanceAttribute
 
-`Appearance`属性仅限于 iOS5 引入外观 manager 了。
+`[Appearance]`特性被限制到 iOS 5，其中引入的外观管理器。
 
-`Appearance`特性可以应用于任何方法或属性参与`UIAppearance`framework。 当此属性应用于方法或类中的属性时，它将直接绑定生成器能创建一个强类型外观类，用于设置样式的此类的所有实例或与特定条件匹配的实例。
+`[Appearance]`特性可以应用于任何方法或属性参与`UIAppearance`framework。 当此属性应用于方法或类中的属性时，它将直接绑定生成器能创建一个强类型外观类，用于设置样式的此类的所有实例或与特定条件匹配的实例。
 
 示例:
 
@@ -747,7 +755,7 @@ public partial class UIToolbar {
 
 ### <a name="autoreleaseattribute-xamarinios-54"></a>AutoReleaseAttribute (Xamarin.iOS 5.4)
 
-使用`AutoReleaseAttribute`方法和属性来包装方法调用到中的方法上`NSAutoReleasePool`。
+使用`[AutoReleaseAttribute]`方法和属性来包装方法调用到中的方法上`NSAutoReleasePool`。
 
 Objective C 中有一些方法，返回值添加到默认`NSAutoReleasePool`。 默认情况下，这些将转到你的线程`NSAutoReleasePool`，但由于 Xamarin.iOS 还保留了对对象的引用，只要托管的对象存在，可能不想要保留的额外的引用`NSAutoReleasePool`这仅获取耗尽你的线程之前返回控制转移到下一个线程，或你返回到主循环。
 
@@ -755,7 +763,7 @@ Objective C 中有一些方法，返回值添加到默认`NSAutoReleasePool`。 
 
 ### <a name="forcedtypeattribute"></a>ForcedTypeAttribute
 
-`ForcedTypeAttribute`用于强制在创建托管类型，即使返回的非托管的对象与绑定定义中所述的类型不匹配。
+`[ForcedTypeAttribute]`用于强制在创建托管类型，即使返回的非托管的对象与绑定定义中所述的类型不匹配。
 
 标头中所述的类型与本机方法的返回的类型不匹配时，这是很有用，例如需要从以下 Objective C 定义`NSURLSession`:
 
@@ -763,7 +771,7 @@ Objective C 中有一些方法，返回值添加到默认`NSAutoReleasePool`。 
 
 明确指出它将返回`NSURLSessionDownloadTask`实例，但尚未它**返回** `NSURLSessionTask`，这是超类并因此不转换为`NSURLSessionDownloadTask`。 由于我们是类型安全上下文中`InvalidCastException`将发生这种情况。
 
-若要符合标头说明和避免`InvalidCastException`、`ForcedTypeAttribute`使用。
+若要符合标头说明和避免`InvalidCastException`、`[ForcedTypeAttribute]`使用。
 
 ```csharp
 [BaseType (typeof (NSObject), Name="NSURLSession")]
@@ -775,15 +783,17 @@ interface NSUrlSession {
 }
 ```
 
-`ForcedTypeAttribute`还接受一个名为的布尔值`Owns`即`false`默认情况下`[ForcedType (owns: true)]`。 拥有参数用于按照[所有权策略](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html)为**核心 Foundation**对象。
+`[ForcedTypeAttribute]`还接受一个名为的布尔值`Owns`即`false`默认情况下`[ForcedType (owns: true)]`。 拥有参数用于按照[所有权策略](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html)为**核心 Foundation**对象。
 
-`ForcedTypeAttribute`仅适用于`parameters`，`properties`和`return value`。
+`[ForcedTypeAttribute]`仅适用于参数、 属性和返回值。
+
+<a name="BindAsAttribute" />
 
 ### <a name="bindasattribute"></a>BindAsAttribute
 
-`BindAsAttribute`允许绑定`NSNumber`，`NSValue`和`NSString`（枚举） 到更准确的 C# 类型。 该属性可以用于创建更好且更准确，通过本机 API 的.NET API。
+`[BindAsAttribute]`允许绑定`NSNumber`，`NSValue`和`NSString`（枚举） 到更准确的 C# 类型。 该属性可以用于创建更好且更准确，通过本机 API 的.NET API。
 
-（在返回值） 的方法、 参数和属性与可修饰`BindAs`。 唯一限制是，您的成员**必须不**内`[Protocol]`或`[Model]`接口。
+（在返回值） 的方法、 参数和属性与可修饰`BindAs`。 唯一限制是，您的成员**必须不**内`[Protocol]`或[ `[Model]` ](#ModelAttribute)接口。
 
 例如：
 
@@ -852,7 +862,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 #### <a name="nsstring"></a>NSString
 
-`[BindAs]` 适用于与 conjuntion[枚举作为后盾 NSString 常量](#enum-attributes)因此你可以创建更好的.NET API，例如：
+[`[BindAs]`](#BindAsAttribute) 适用于与 conjuntion[枚举作为后盾 NSString 常量](#enum-attributes)因此你可以创建更好的.NET API，例如：
 
 ```csharp
 [BindAs (typeof (CAScroll))]
@@ -867,11 +877,11 @@ NSString SupportedScrollMode { get; set; }
 CAScroll SupportedScrollMode { get; set; }
 ```
 
-我们将处理`enum`  <->  `NSString`转换才提供的枚举类型到`[BindAs]`是[NSString 常量作为后盾](#enum-attributes)。
+我们将处理`enum`  <->  `NSString`转换才提供的枚举类型到[ `[BindAs]` ](#BindAsAttribute)是[NSString 常量作为后盾](#enum-attributes)。
 
 #### <a name="arrays"></a>数组
 
-`[BindAs]` 此外支持数组的任何支持的类型，你可以作为示例的以下 API 定义：
+[`[BindAs]`](#BindAsAttribute) 此外支持数组的任何支持的类型，你可以作为示例的以下 API 定义：
 
 ```csharp
 [return: BindAs (typeof (CAScroll []))]
@@ -888,11 +898,13 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 `rects`参数将封装到`NSArray`包含`NSValue`每个`CGRect`，因而您将收到的数组`CAScroll?`其使用返回的值创建`NSArray`包含`NSStrings`。
 
+<a name="BindAttribute" />
+
 ### <a name="bindattribute"></a>BindAttribute
 
-`Bind`特性有两个用途一个当应用于方法或属性声明中，并当应用于单个 getter 或 setter 的属性中的另一个。
+`[Bind]`特性有两个用途一个当应用于方法或属性声明中，并当应用于单个 getter 或 setter 的属性中的另一个。
 
-对方法或属性使用时，绑定属性的效果是生成调用指定的选择器的方法。 但结果生成的方法不用修饰`[Export]`属性，这意味着，它不能参与方法重写。 这通常与结合使用`Target`实现 OBJECTIVE-C 的扩展方法的属性。
+当用于方法或属性、 影响`[Bind]`特性将生成调用指定的选择器的方法。 但结果生成的方法不用修饰[ `[Export]` ](#ExportAttribute)属性，这意味着，它不能参与方法重写。 这通常与结合使用`[Target]`实现 OBJECTIVE-C 的扩展方法的属性。
 
 例如：
 
@@ -903,7 +915,7 @@ public interface UIView {
 }
 ```
 
-如果用中 getter 或 setter，`Bind`属性用于更改默认值生成属性的 getter 和 setter OBJECTIVE-C 的选择器名称时由代码生成器推断。 默认情况下标记名称"fooBar"，具有的属性时生成器也会生成 getter"fooBar"导出和"setFooBar:"为 setter。 在少数情况下，Objective C 不遵循此约定，通常将 getter 名称为"isFooBar"的更改。
+如果用中 getter 或 setter，`[Bind]`属性用于更改默认值生成属性的 getter 和 setter OBJECTIVE-C 的选择器名称时由代码生成器推断。 默认情况下，标记具有名称的属性时`fooBar`，生成器将生成`fooBar`导出的 getter 和`setFooBar:`setter。 在少数情况下，Objective C 未遵循此约定，它们通常更改要 getter 名称`isFooBar`。
 将使用此属性以通知此生成器。
 
 例如：
@@ -918,6 +930,7 @@ bool Active { get; set; }
 bool Visible { [Bind ("isVisible")] get; set; }
 ```
 
+<a name="AsyncAttribute" />
 
 ### <a name="asyncattribute"></a>AsyncAttribute
 
@@ -925,7 +938,7 @@ bool Visible { [Bind ("isVisible")] get; set; }
 
 此特性可以应用于其最后一个自变量作为完成处理程序的方法。
 
-你可以使用`[Async]`其最后一个自变量为回调的方法的属性。  如果你将此应用于方法时，绑定生成器将生成了后缀，该方法的版本`Async`。  如果回调不带任何参数，返回值将为`Task`，如果回调采用参数，则结果将为任务&lt;T&gt;。
+你可以使用`[Async]`其最后一个自变量为回调的方法的属性。  如果你将此应用于方法时，绑定生成器将生成了后缀，该方法的版本`Async`。  如果回调不带任何参数，返回值将为`Task`，如果回调采用参数，则结果将为`Task<T>`。
 
 ```csharp
 [Export ("upload:complete:")]
@@ -949,7 +962,7 @@ delegate void OnComplete (string [] files, nint byteCount);
 void LoadFiles (string file, OnComplete complete)
 ```
 
-以下将生成此异步方法，其中`FileLoading`包含要访问"文件"和"byteCount"属性：
+以下将生成此异步方法，其中`FileLoading`包含属性同时访问`files`和`byteCount`:
 
 ```csharp
 Task<FileLoading> LoadFile (string file);
@@ -988,7 +1001,7 @@ Task<string> UploadAsync (string file);
 此特性应用于字符串参数或字符串属性和指示不使用对此参数，封送处理的零复制字符串的代码生成器，并改为从 C# 字符串创建的新 NSString 实例。
 此属性仅需要对字符串，如果指示生成器将使用零复制字符串封送处理使用`--zero-copy`命令行选项或设置程序集级别属性`ZeroCopyStringsAttribute`。
 
-这对于在属性声明中 OBJECTIVE-C 到的位置的情况下为"保留"分配"的属性，而不是"复制"属性。 这些通常发生在第三方库已错误地"优化"由开发人员。 一般情况下，"保留"或"分配"`NSString`属性不正确自`NSMutableString`或用户派生类`NSString`可能会更改的库代码，只有细微的重大应用程序的不知情的情况下字符串的内容。 通常这种情况由于过早优化。
+这是在 OBJECTIVE-C 要在其中声明该属性的情况下必需`retain`或`assign`属性而不是`copy`属性。 这些通常发生在第三方库已错误地"优化"由开发人员。 一般情况下，`retain`或`assign``NSString`属性不正确自`NSMutableString`或用户派生类`NSString`可能会更改的库代码，稍重大的不知情的情况下字符串的内容应用程序。 通常这种情况由于过早优化。
 
 下面两个此类属性显示在目标 c:
 
@@ -1000,9 +1013,9 @@ Task<string> UploadAsync (string file);
 
 ### <a name="disposeattribute"></a>DisposeAttribute
 
-当你将`DisposeAttribute`为类，提供代码片段将添加到`Dispose()`类的方法实现。
+当你将`[DisposeAttribute]`为类，提供代码片段将添加到`Dispose()`类的方法实现。
 
-由于`Dispose`方法自动生成的`bmac-native`和`btouch-native`工具，你需要使用`Dispose`属性将在生成的某些代码注入`Dispose`方法实现。
+由于`Dispose`方法自动生成的`bmac-native`和`btouch-native`工具，你需要使用`[Dispose]`属性将在生成的某些代码注入`Dispose`方法实现。
 
 例如：
 
@@ -1013,10 +1026,11 @@ interface DatabaseConnection {
 }
 ```
 
+<a name="ExportAttribute" />
 
 ### <a name="exportattribute"></a>ExportAttribute
 
-`Export`属性用于标记的方法或属性将公开为 Objective C 运行时。 此属性绑定工具和实际的 Xamarin.iOS 和 Xamarin.Mac 运行时之间共享。 对于方法，参数被传递到生成的代码中，原义属性、 getter 和 setter 的导出将生成基于与基声明的 (请参阅的部分`BindAttribute`有关如何更改绑定工具的行为的信息)。
+`[Export]`属性用于标记的方法或属性将公开为 Objective C 运行时。 此属性绑定工具和实际的 Xamarin.iOS 和 Xamarin.Mac 运行时之间共享。 对于方法，参数被传递到生成的代码中，原义属性、 getter 和 setter 的导出将生成基于与基声明的 (请参阅的部分[ `[BindAttribute]` ](#BindAttribute)有关如何更改的信息绑定工具的行为）。
 
 语法：
 
@@ -1035,11 +1049,11 @@ public class ExportAttribute : Attribute {
 }
 ```
 
-[选择器](http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/Chapters/ocSelectors.html)，它表示对方法或属性的要绑定的基础 OBJECTIVE-C 的名称。
-
+[选择器](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html)表示基础 OBJECTIVE-C 的方法或属性被绑定的名称。
 
 #### <a name="exportattributeargumentsemantic"></a>ExportAttribute.ArgumentSemantic
 
+<a name="FieldAttribute" />
 
 ### <a name="fieldattribute"></a>FieldAttribute
 
@@ -1056,7 +1070,7 @@ public class FieldAttribute : Attribute {
 }
 ```
 
-`symbolName`是 C 符号将其与链接。 默认情况下这将加载从库从命名空间中推断出其名称定义该类型。 如果这不是其中查找符号的库，则应传递`libraryName`参数。 如果你正在链接静态库，请使用"__Internal"作为`libraryName`参数。
+`symbolName`是 C 符号将其与链接。 默认情况下这将加载从库从命名空间中推断出其名称定义该类型。 如果这不是其中查找符号的库，则应传递`libraryName`参数。 如果你正在链接静态库，请使用`__Internal`作为`libraryName`参数。
 
 生成的属性始终是静态的。
 
@@ -1084,9 +1098,11 @@ interface CameraEffects {
 }
 ```
 
+<a name="InternalAttribute" />
+
 ### <a name="internalattribute"></a>InternalAttribute
 
-`Internal`特性可以应用于方法或属性，它起使用"内部"C# 关键字在生成的程序集代码仅可以访问标记生成的代码。 这是通常用于隐藏太低级别的 Api 或提供一个并非最佳的公共 API，你想要提高时或不支持由生成器的 api 并需要某些手工编码。
+`[Internal]`特性可以应用于方法或属性，它起标记生成的代码与`internal`C# 关键字在生成的程序集代码仅可以访问。 这是通常用于隐藏太低级别的 Api 或提供一个并非最佳的公共 API，你想要提高时或不支持由生成器的 api 并需要某些手工编码。
 
 当设计绑定，通常会隐藏方法或使用此属性的属性，并提供不同的名称，为方法或属性，然后对您的 C# 互补的支持文件，将添加公开的强类型包装器基础功能。
 
@@ -1094,7 +1110,7 @@ interface CameraEffects {
 
 ```csharp
 [Internal]
-[Export ("setValue:forKey:");
+[Export ("setValue:forKey:")]
 void _SetValueForKey (NSObject value, NSObject key);
 
 [Internal]
@@ -1115,13 +1131,15 @@ public NSObject this [NSObject idx] {
 }
 ```
 
+<a name="IsThreadStaticAttribute" />
+
 ### <a name="isthreadstaticattribute"></a>IsThreadStaticAttribute
 
 此属性标记为要使用.NET 进行批注的属性支持字段`[ThreadStatic]`属性。 这是该字段是一个线程静态变量的情况下很有用。
 
 ### <a name="marshalnativeexceptions-xamarinios-606"></a>MarshalNativeExceptions (Xamarin.iOS 6.0.6)
 
-此属性将使方法支持本机 (ObjectiveC) 异常。
+此属性将使方法支持本机 (OBJECTIVE-C) 异常。
 而不是调用`objc_msgSend`直接，将调用经过自定义 trampoline 捕获 ObjectiveC 异常并将它们封送到托管异常。
 
 当前只有几`objc_msgSend`支持签名 (您将了解到签名不受支持，如果使用此绑定的应用程序的本机链接失败且缺少 monotouch_*_objc_msgSend*符号)，但的详细信息可以是在请求中添加了。
@@ -1129,16 +1147,17 @@ public NSObject this [NSObject idx] {
 
 ### <a name="newattribute"></a>NewAttribute
 
-此特性应用于方法和属性能够生成声明的前面的"new"关键字的生成器。
+此特性应用于方法和属性，以拥有生成器生成`new`关键字声明的前面。
 
 它用于避免编译器警告时相同的方法或属性名称在基类中已存在的子类中引入。
 
+<a name="NotificationAttribute" />
 
 ### <a name="notificationattribute"></a>NotificationAttribute
 
 你可以将此特性应用于字段具有生成器生成强类型的帮助器 Notifications 类中。
 
-此特性可用于无需不执行任何负载的通知的自变量也可以指定`System.Type`引用另一个接口在 API 定义中，通常与以"EventArgs"结尾的名称。 生成器会变为接口类子类`EventArgs`并且将包括所有列出的属性。 `[Export]`属性应在`EventArgs`类列出用于查找要提取值的 OBJECTIVE-C 的字典键的名称。
+此特性可用于无需不执行任何负载的通知的自变量也可以指定`System.Type`引用另一个接口在 API 定义中，通常与以"EventArgs"结尾的名称。 生成器会变为接口类子类`EventArgs`并且将包括所有列出的属性。 [ `[Export]` ](#ExportAttribute)属性应在`EventArgs`类列出用于查找要提取值的 OBJECTIVE-C 的字典键的名称。
 
 例如：
 
@@ -1207,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-上述将生成`MyScreenChangedEventArgs`类，该类具有`ScreenX`和`ScreenY`将提取中的数据的属性[NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/)字典使用键**ScreenXKey**和**ScreenYKey**分别并应用正确的转换。 `[ProbePresence]`属性为生成器用来探测如果此键设置`UserInfo`，而不是尝试提取的值。 这适用于的情况下，项的状态 （通常为布尔值） 的值。
+上述将生成`MyScreenChangedEventArgs`类，该类具有`ScreenX`和`ScreenY`将提取中的数据的属性[NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/)字典使用键`ScreenXKey`和`ScreenYKey`分别并应用正确的转换。 `[ProbePresence]`属性为生成器用来探测如果此键设置`UserInfo`，而不是尝试提取的值。 这适用于的情况下，项的状态 （通常为布尔值） 的值。
 
 此选项，可以编写如下代码：
 
@@ -1217,11 +1236,11 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 });
 ```
 
-在某些情况下，没有任何字典上传递的值相关联的常量。  Apple 有时使用公共符号常量和有时使用字符串常量。  默认情况下`[Export]`中你提供属性`EventArgs`类将使用指定的名称作为公共符号要查找在运行时。  如果这不是这种情况，并改为它应为字符串常量查找然后传递`ArgumentSemantic.Assign`到导出的属性的值。
+在某些情况下，没有任何字典上传递的值相关联的常量。  Apple 有时使用公共符号常量和有时使用字符串常量。  默认情况下[ `[Export]` ](#ExportAttribute)中你提供属性`EventArgs`类将使用指定的名称作为公共符号要查找在运行时。  如果这不是这种情况，并改为它应为字符串常量查找然后传递`ArgumentSemantic.Assign`到导出的属性的值。
 
 **Xamarin.iOS 8.4 中的新增功能**
 
-有时，通知便可生命不带任何参数，因此使用`[Notification]`没有自变量是可接受。  但有时，将引入对通知的参数。  若要支持这种情况下，可以多次应用该属性。
+有时，通知便可生命不带任何参数，因此使用[ `[Notification]` ](#NotificationAttribute)没有自变量是可接受。  但有时，将引入对通知的参数。  若要支持这种情况下，可以多次应用该属性。
 
 如果你在开发一个绑定，并且你想要避免破坏现有的用户代码，则将打开从现有通知：
 
@@ -1244,13 +1263,15 @@ interface MyClass {
 }
 ```
 
+<a name="NullAllowedAttribute" />
+
 ### <a name="nullallowedattribute"></a>NullAllowedAttribute
 
-当这应用于属性它标记为允许值 null 分配给它的属性。 此操作才有效对于引用类型。
+这应用于属性时它可以标记为允许值的属性`null`要分配给它。 此操作才有效对于引用类型。
 
-这应用到方法签名中的参数时，它指示指定的参数可以为 null，并且不检查应传递 null 值。
+当此应用于它指示指定的参数可以为 null，并且不检查，应执行用于传递方法签名中的参数`null`值。
 
-如果引用类型没有此特性，绑定工具将生成然后再将它传递到 Objective C 所赋的值的检查，并且将生成的检查，将引发`ArgumentNullException`如果分配的值为 null。
+如果引用类型没有此特性，绑定工具将生成然后再将它传递到 Objective C 所赋的值的检查，并且将生成的检查，将引发`ArgumentNullException`分配的值是否`null`。
 
 例如：
 
@@ -1264,16 +1285,15 @@ UIImage IconFile { get; set; }
 void SetImage ([NullAllowed] UIImage image, State forState);
 ```
 
-<a name="OverrideAttribute"/>
+<a name="OverrideAttribute" />
 
 ### <a name="overrideattribute"></a>OverrideAttribute
 
-使用此属性可指示绑定生成器，应将此特定方法的绑定标记与"替代"关键字。
-
+使用此属性可指示绑定生成器，应将此特定方法的绑定标记与`override`关键字。
 
 ### <a name="presnippetattribute"></a>PreSnippetAttribute
 
-你可以使用此属性将一些代码以验证输入的参数后、 但在到 Objective C 的代码调用之前插入
+你可以使用此属性将一些代码以验证输入的参数后、 但在到目标。 该代码调用之前插入
 
 示例:
 
@@ -1282,7 +1302,6 @@ void SetImage ([NullAllowed] UIImage image, State forState);
 [PreSnippet ("var old = ViewController;")]
 void Demo ();
 ```
-
 
 ### <a name="prologuesnippetattribute"></a>PrologueSnippetAttribute
 
@@ -1295,7 +1314,6 @@ void Demo ();
 [Prologue ("Trace.Entry ();")]
 void Demo ();
 ```
-
 
 ### <a name="postgetattribute"></a>PostGetAttribute
 
@@ -1322,7 +1340,6 @@ public interface NSOperation {
 
 在这种情况下，`Dependencies`属性将添加或删除从的依赖关系后调用`NSOperation`加载对象，确保我们具有表示实际的关系图的对象，防止内存泄漏以及内存损坏。
 
-
 ### <a name="postsnippetattribute"></a>PostSnippetAttribute
 
 你可以使用此属性将某些 C# 源代码要插入后的代码调用，其基础的 OBJECTIVE-C 的方法
@@ -1335,11 +1352,9 @@ public interface NSOperation {
 void Demo ();
 ```
 
-
 ### <a name="proxyattribute"></a>ProxyAttribute
 
 此属性是应用于返回值标记为正在代理对象。 不从用户绑定区别在于某些 Objective C Api 返回的代理对象。 此属性的效果是标记为对象`DirectBinding`对象。 对于中 Xamarin.Mac 方案，你可以看到[讨论此 bug](https://bugzilla.novell.com/show_bug.cgi?id=670844)。
-
 
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
@@ -1353,7 +1368,7 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-如果"doAdd"的值为 true，则将参数添加到`__mt_{0}_var List<NSObject>;`。 其中`{0}`将替换为给定`listName`。 你必须在对 API 互为补充分部类中声明此支持字段。
+如果值`doAdd`为 true，则将参数添加到`__mt_{0}_var List<NSObject>;`。 其中`{0}`将替换为给定`listName`。 你必须在对 API 互为补充分部类中声明此支持字段。
 
 有关示例请参阅[foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs)和[NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
@@ -1376,22 +1391,24 @@ NSObject GetAndRetainObject ();
 
 指示标记为已密封生成的方法的生成器。 如果未指定此属性，默认值是生成的虚拟方法 （虚拟方法、 一个抽象方法或重写，具体取决于如何使用其他属性）。
 
+<a name="StaticAttribute" />
 
 ### <a name="staticattribute"></a>StaticAttribute
 
-当`Static`特性应用到方法或属性这将生成的静态方法或属性。 如果未指定此属性，然后生成器生成的实例方法或属性。
+当`[Static]`属性应用于方法或属性时，这将生成的静态方法或属性。 如果未指定此属性，然后生成器生成的实例方法或属性。
 
 
 ### <a name="transientattribute"></a>TransientAttribute
 
-使用此属性与标志属性，即是暂时的其值由暂时 iOS 但不是长期存在的对象。 当此属性应用于一个属性时，生成器将不创建此属性，这意味着托管的类不会保留对对象的引用的支持字段。
+使用此属性与标志属性，即是暂时的其值由暂时 iOS 而不是长生存期对象。 当此属性应用于一个属性时，生成器将不创建此属性，这意味着托管的类不会保留对对象的引用的支持字段。
 
+<a name="WrapAttribute" />
 
 ### <a name="wrapattribute"></a>WrapAttribute
 
-在设计中 Xamarin.iOS/Xamarin.Mac 的绑定，`Wrap`属性用于包装具有强类型对象的弱类型对象。 这派上用场主要使用 OBJECTIVE-C 的"委派"的对象通常声明为类型的`id`或`NSObject`。 使用 Xamarin.iOS 和 Xamarin.Mac 的约定是公开为类型这些委托或数据源`NSObject`和使用的约定"Weak"+ 公开的方法的名称命名。 从 Objective C 的"id 委托"属性将公开为`NSObject WeakDelegate { get; set; }`API 协定文件中的属性。
+在设计中 Xamarin.iOS/Xamarin.Mac 的绑定，`[Wrap]`属性用于包装具有强类型对象的弱类型对象。 这派上用场主要使用 OBJECTIVE-C 的委托对象通常声明为类型的`id`或`NSObject`。 使用 Xamarin.iOS 和 Xamarin.Mac 的约定是公开为类型这些委托或数据源`NSObject`和使用的约定"Weak"+ 公开的方法的名称命名。 `id delegate`从 Objective C 的属性将公开为`NSObject WeakDelegate { get; set; }`API 协定文件中的属性。
 
-但是通常分配给此委托的值的强类型，因此我们外围的强类型并应用`Wrap`属性，这意味着，用户可以选择使用弱类型，它们需要一些精细控制，或者如果他们需要采用低级别 tric对其工作大多数情况下，k，也可以使用强类型属性。
+但是通常分配给此委托的值的强类型，因此我们外围的强类型并应用`[Wrap]`属性，这意味着，用户可以选择使用弱类型，它们需要一些精细控制，或者如果他们需要采用低级别 tric对其工作大多数情况下，k，也可以使用强类型属性。
 
 示例:
 
@@ -1427,7 +1444,7 @@ var demo = new Demo ();
 demo.WeakDelegate = new SomeObject ();
 ```
 
-这是如何使用强类型版本，请注意，并且用户采用 C# 类型系统的优点，并使用替代关键字来声明其意图，他不需要手动用户用修饰的方法和`Export`，因为我们这样做了用户的绑定中的工作：
+这是如何使用强类型版本，请注意，并且用户采用 C# 类型系统的优点，并使用替代关键字来声明其意图，他不需要手动用户用修饰的方法和`[Export]`，因为我们这样做了用户的绑定中的工作：
 
 ```csharp
 // This is the strong case,
@@ -1439,8 +1456,7 @@ var strongDemo = new Demo ();
 demo.Delegate = new MyDelegate ();
 ```
 
-
-另一个用途`Wrap`属性是支持的方法的强类型版本。   例如：
+另一个用途`[Wrap]`属性是支持的方法的强类型版本。  例如：
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1468,7 +1484,7 @@ interface FooExplorer {
 
 ## <a name="parameter-attributes"></a>Parameter 特性
 
-本部分介绍你可以将应用于方法定义中的参数的属性以及`NullAttribute`适用于作为一个整体的属性。
+本部分介绍你可以将应用于方法定义中的参数的属性以及`[NullAttribute]`适用于作为一个整体的属性。
 
 <a name="BlockCallback" />
 
@@ -1492,7 +1508,9 @@ typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 
 这通常用于在目标 c： 中定义如下的回调
 
-    typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
+```objc
+typedef returnType (*SomeTypeDefinition) (int parameter1, NSString *parameter2);
+```
 
 另请参阅： [BlockCallback](#BlockCallback)。
 
@@ -1502,13 +1520,17 @@ typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 
 例如，以下定义：
 
-    [Export ("loadFiles:")]
-    void LoadFiles ([Params]NSUrl [] files);
+```csharp
+[Export ("loadFiles:")]
+void LoadFiles ([Params]NSUrl [] files);
+```
 
 允许编写以下代码：
 
-    foo.LoadFiles (new NSUrl (url));
-    foo.LoadFiles (new NSUrl (url1), new NSUrl (url2), new NSUrl (url3));
+```csharp
+foo.LoadFiles (new NSUrl (url));
+foo.LoadFiles (new NSUrl (url1), new NSUrl (url2), new NSUrl (url3));
+```
 
 这有额外的优势，它不需要用户创建的传递元素数组。
 
@@ -1538,10 +1560,9 @@ void SetText (string theText);
 void LogMessage ([PlainString] string theText);
 ```
 
-
 ### <a name="retainattribute"></a>RetainAttribute
 
-指示要保持对指定的参数的引用的生成器。 生成器将为此字段提供的后备存储，或者你可以指定一个名称 ( `WrapName`) 来存储位置处的值。 这可用于保存对托管对象到 Objective C 作为参数传递，并且当您知道 Objective C 将只保留对象的此副本的引用。 例如，如 API`SetDisplay (SomeObject)`将使用此属性，因为它是可能 SetDisplay 一次可以仅显示一个对象。 如果你需要能够跟踪多个对象 （例如，对于一个类似于堆栈的 API) 将使用`RetainList`属性。
+指示要保持对指定的参数的引用的生成器。 生成器将为此字段提供的后备存储，或者你可以指定一个名称 ( `WrapName`) 来存储位置处的值。 这可用于保存对托管对象到 Objective C 作为参数传递，并且当您知道 Objective C 将只保留对象的此副本的引用。 例如，如 API`SetDisplay (SomeObject)`将使用此属性，因为它是可能 SetDisplay 一次可以仅显示一个对象。 如果你需要能够跟踪多个对象 （例如，对于一个类似于堆栈的 API) 将使用`[RetainList]`属性。
 
 语法：
 
@@ -1566,14 +1587,14 @@ public class RetainListAttribute: Attribute {
 }
 ```
 
-如果"doAdd"的值为 true，则将参数添加到`__mt_{0}_var List<NSObject>`。 其中`{0}`将替换为给定`listName`。 你必须在对 API 互为补充分部类中声明此支持字段。
+如果值`doAdd`为 true，则将参数添加到`__mt_{0}_var List<NSObject>`。 其中`{0}`将替换为给定`listName`。 你必须在对 API 互为补充分部类中声明此支持字段。
 
 有关示例请参阅[foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs)和[NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
 
 
 ### <a name="transientattribute"></a>TransientAttribute
 
-此特性应用于参数，并从 Objective C 转换为 C# 时才使用。  这些转换各种 Objective C NSObjects 期间参数进行包装到托管对象的表示形式。
+此特性应用于参数，并从 Objective C 转换为 C# 时才使用。  在这些转换各种 OBJECTIVE-C`NSObject`参数进行包装到托管对象的表示形式。
 
 运行时将采用对本机对象的引用，并保留引用，直到最后一个托管的引用的对象是消失，并且 GC 具有可能运行。
 
@@ -1587,6 +1608,8 @@ public class RetainListAttribute: Attribute {
 
 
 ## <a name="property-attributes"></a>属性特性
+
+<a name="NotImplementedAttribute" />
 
 ### <a name="notimplementedattribute"></a>NotImplementedAttribute
 
@@ -1621,7 +1644,7 @@ interface MyMutableString {
 }
 ```
 
-<a name="enum-attributes"/>
+<a name="enum-attributes" />
 
 ## <a name="enum-attributes"></a>Enum 特性
 
@@ -1714,8 +1737,9 @@ Call (NSRunLoopModeExtensions.GetValue (constant)); // will return 1000
 
 ## <a name="global-attributes"></a>全局特性
 
-全局特性可以应用使用`[assembly:]`特性修饰符，如`LinkWithAttribute`，也可以使用任何位置，如`Lion`和`Since`属性。
+全局特性可以应用使用`[assembly:]`特性修饰符，如[ `[LinkWithAttribute]` ](#LinkWithAttribute) ，也可以使用任何位置，如[ `[Lion]` ](#SinceAndLionAttributes)和[ `[Since]`](#SinceAndLionAttributes)属性。
 
+<a name="LinkWithAttribute" />
 
 ### <a name="linkwithattribute"></a>LinkWithAttribute
 
@@ -1757,20 +1781,19 @@ public class LinkWithAttribute : Attribute {
 [assembly: LinkWith ("libCorePlot-CocoaTouch.a", LinkTarget.ArmV7 | LinkTarget.ArmV7s | LinkTarget.Simulator, Frameworks = "CoreGraphics QuartzCore", ForceLoad = true)]
 ```
 
-当你使用`LinkWith`属性，指定`libraryName`嵌入到生成的程序集，允许用户将包含的非托管的依赖关系以及正确使用所需的命令行标志的单个 DLL从 Xamarin.iOS 的库。
+当你使用`[LinkWith]`属性，指定`libraryName`嵌入到生成的程序集，允许用户将包含的非托管的依赖关系以及正确使用所需的命令行标志的单个 DLL从 Xamarin.iOS 的库。
 
 还有可能不提供`libraryName`，在这种情况下`LinkWith`属性可以用于仅指定其他链接器标志：
 
- ``` csharp
+``` csharp
 [assembly: LinkWith (LinkerFlags = "-lsqlite3")]
- ```
-
+```
 
 #### <a name="linkwithattribute-constructors"></a>LinkWithAttribute 构造函数
 
 这些构造函数，可以指定要与链接和嵌入到你生成程序集，支持此库支持的目标和所需与库链接任何可选库标志的库。
 
-请注意，LinkTarget 自变量由 Xamarin.iOS 推断不需要设置。
+请注意，`LinkTarget`自变量推断的 Xamarin.iOS，而不需要设置。
 
 示例：
 
@@ -1788,21 +1811,17 @@ public class LinkWithAttribute : Attribute {
 [assembly: LinkWith ("libDemo.a", LinkTarget.Thumb | LinkTarget.Simulator, SmartLink = true, ForceLoad = true, IsCxx = true);
 ```
 
-
 #### <a name="linkwithattributeforceload"></a>LinkWithAttribute.ForceLoad
 
 `ForceLoad`属性用于决定是否`-force_load`链接标志用于链接本机库。 现在，这始终应为 true。
-
 
 #### <a name="linkwithattributeframeworks"></a>LinkWithAttribute.Frameworks
 
 要绑定的库如果任何框架上具有硬要求 (以外`Foundation`和`UIKit`)，应设置`Frameworks`属性设置为包含所需的平台框架的用空格分隔列表的字符串。 例如，如果你正在绑定库需要`CoreGraphics`和`CoreText`，则会将设置`Frameworks`属性`"CoreGraphics CoreText"`。
 
-
 #### <a name="linkwithattributeiscxx"></a>LinkWithAttribute.IsCxx
 
 设置此属性设置为 true，如果需要进行编译而不默认情况下，这是一个 C 编译器中使用 c + + 编译器生成的可执行文件。 如果你正在绑定的库在 c + + 编写的请使用此选项。
-
 
 #### <a name="linkwithattributelibraryname"></a>LinkWithAttribute.LibraryName
 
@@ -1810,13 +1829,11 @@ public class LinkWithAttribute : Attribute {
 
 早期版本的 Xamarin.iOS 检查`LinkTarget`属性来确定平台你的库支持，但这是现在自动检测和`LinkTarget`忽略属性。
 
-
 #### <a name="linkwithattributelinkerflags"></a>LinkWithAttribute.LinkerFlags
 
 `LinkerFlags`字符串都提供了一种绑定作者指定任何其他链接器标志时本机库链接到应用程序所需的方法。
 
 例如，如果本机库需要 libxml2 和 zlib，你将设置`LinkerFlags`字符串以`"-lxml2 -lz"`。
-
 
 #### <a name="linkwithattributelinktarget"></a>LinkWithAttribute.LinkTarget
 
@@ -1826,11 +1843,9 @@ public class LinkWithAttribute : Attribute {
 
 设置此属性设置为 true，如果要链接的库需要的 GCC 异常处理的库 (gcc_eh)
 
-
 #### <a name="linkwithattributesmartlink"></a>LinkWithAttribute.SmartLink
 
 `SmartLink`属性应设置为 true，以让 Xamarin.iOS 确定是否`ForceLoad`是否为必需。
-
 
 #### <a name="linkwithattributeweakframeworks"></a>LinkWithAttribute.WeakFrameworks
 
@@ -1840,9 +1855,11 @@ public class LinkWithAttribute : Attribute {
 
 最适合弱链接将`Frameworks`喜欢帐户， `CoreBluetooth`， `CoreImage`， `GLKit`，`NewsstandKit`和`Twitter`因为它们仅在 iOS 5 中可用。
 
+<a name="SinceAndLionAttributes" />
+
 ### <a name="sinceattribute-ios-and-lionattribute-macos"></a>SinceAttribute (iOS) 和 LionAttribute (macOS)
 
-你使用`Since`属性设为 Api 标志为拥有及时引入某个特定点。 特性应仅用于标记类型和方法可能导致运行时问题，如果基础的类、 方法或属性不可用。
+你使用`[Since]`属性设为 Api 标志为拥有及时引入某个特定点。 特性应仅用于标记类型和方法可能导致运行时问题，如果基础的类、 方法或属性不可用。
 
 语法：
 
@@ -1880,8 +1897,7 @@ public interface UITableViewController {
     bool ClearsSelectionOnViewWillAppear { get; set; }
 ```
 
-`Lion`方式相同但类型中引入了 Lion 应用特性。 若要使用的原因`Lion`与在 iOS 中使用的更具体版本号是主要 OS X 版本会很少发生而很容易地由通过其版本号比其 codename 记住操作系统非常频繁，修订该 iOS
-
+`[Lion]`方式相同但类型中引入了 Lion 应用特性。 若要使用的原因`[Lion]`与在 iOS 中使用的更具体版本号是主要 OS X 版本会很少发生而很容易地由通过其版本号比其 codename 记住操作系统非常频繁，修订该 iOS
 
 ### <a name="adviceattribute"></a>AdviceAttribute
 
@@ -1895,7 +1911,7 @@ public interface UITableViewController {
 
 此属性指示生成器，此特定的库的绑定 (如果适用于`[assembly:]`) 或类型应使用快速的零复制字符串封送处理。 此属性等效于传递的命令行选项`--zero-copy`到生成器。
 
-生成器在零副本用作字符串时，作为 OBJECTIVE-C 的使用而不会产生的新创建的字符串的相同的 C# 字符串有效地使用`NSString`对象和避免将数据从 C# 字符串复制到 Objective C 字符串。 使用零复制字符串的唯一的缺点是，你必须确保具有的任何字符串属性，则在包装碰巧会被标记为"保留"或"复制"`DisableZeroCopy`属性设置。 这是需要因为零复制字符串的句柄在堆栈上分配且它是在函数返回时无效。
+生成器在零副本用作字符串时，作为 OBJECTIVE-C 的使用而不会产生的新创建的字符串的相同的 C# 字符串有效地使用`NSString`对象和避免将数据从 C# 字符串复制到 Objective C 字符串。 使用零复制字符串的唯一的缺点是，你必须确保任何字符串属性，则在包装碰巧被标记为`retain`或`copy`具有`[DisableZeroCopy]`属性设置。 这是需要因为零复制字符串的句柄在堆栈上分配且它是在函数返回时无效。
 
 示例:
 
@@ -1918,7 +1934,9 @@ interface MyBinding {
 
 你还可以应用程序集级别的属性和它将应用于所有类型的程序集：
 
-    [assembly:ZeroCopyStrings]
+```csharp
+[assembly:ZeroCopyStrings]
+```
 
 ## <a name="strongly-typed-dictionaries"></a>强类型的字典
 
@@ -1926,6 +1944,7 @@ interface MyBinding {
 
 虽然始终已经可以使用[DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/)数据类型以及手动 API，它现在是很简单，若要这样做。  有关详细信息，请参阅[提供强类型](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types)。
 
+<a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 

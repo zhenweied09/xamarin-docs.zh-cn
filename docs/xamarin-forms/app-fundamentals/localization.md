@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="localization"></a>本地化
 
@@ -21,22 +21,6 @@ _可以使用.NET 资源文件本地化 Xamarin.Forms 应用。_
 ## <a name="overview"></a>概述
 
 本地化.NET 应用程序使用的内置机制[RESX 文件](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx)和中的类`System.Resources`和`System.Globalization`命名空间。 包含已翻译的字符串的 RESX 文件都嵌入到 Xamarin.Forms 程序集，以及一个编译器生成的类，提供对翻译强类型访问。 然后可以在代码中检索的翻译文本。
-
-本文档包含以下各节：
-
-**全球化 Xamarin.Forms 代码**
-
-* 添加和 Xamarin.Forms PCL 应用中使用字符串资源。
-* 启用在每个应用的本机语言检测。
-
-**本地化 XAML**
-
-* 本地化使用 XAML `IMarkupExtension`。
-* 启用本机应用中的标记扩展。
-
-**本地化特定于平台的元素**
-
-* 本地化图像和本机应用中的应用名称。
 
 ### <a name="sample-code"></a>代码示例
 
@@ -651,15 +635,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-    // You exclude the 'Extension' suffix when using in Xaml markup
-    [ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
         const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-                                                                                                                  , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
+
+        public string Text { get; set; }
 
         public TranslateExtension()
         {
@@ -669,24 +655,21 @@ namespace UsingResxLocalization
             }
         }
 
-        public string Text { get; set; }
-
-        public object ProvideValue (IServiceProvider serviceProvider)
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (Text == null)
-                return "";
+                return string.Empty;
 
             var translation = ResMgr.Value.GetString(Text, ci);
-
             if (translation == null)
             {
-                #if DEBUG
+#if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
-                #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-                #endif
+#else
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
             }
             return translation;
         }
@@ -699,7 +682,7 @@ namespace UsingResxLocalization
 * 此类命名`TranslateExtension`，而是通过约定我们可以指就**翻译**我们标记中。
 * 此类应实现`IMarkupExtension`，所需为其 Xamarin.Forms 工作。
 * `"UsingResxLocalization.Resx.AppResources"` 是我们 RESX 资源的资源标识符。 它包含我们默认命名空间、 资源文件所在的文件夹和默认的 RESX 文件名。
-* `ResourceManager`类创建使用`typeof(TranslateExtension)`来确定要加载资源的当前程序集。
+* `ResourceManager`类创建使用`IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`来确定当前的程序集加载资源，并缓存在静态中`ResMgr`字段。 它创建为`Lazy`类型，以便其创建将推迟，直到它首先用`ProvideValue`方法。
 * `ci` 使用依赖项服务从本机操作系统中获取用户的选择的语言。
 * `GetString` 是从资源文件中检索实际的已翻译的字符串的方法。 在 Windows Phone 8.1 和通用 Windows 平台上，`ci`将为 null 因为`ILocalize`接口未实现在这些平台上。 这是等效于调用`GetString`仅带第一个参数的方法。 相反，资源框架会自动识别区域设置，并将从相应的 RESX 文件中检索已翻译的字符串。
 * 错误处理已包含在内，以帮助调试缺少的资源通过引发异常 (在`DEBUG`仅限模式)。
@@ -907,7 +890,7 @@ Windows Phone 8.1 和通用 Windows 平台都具有简化的映像和应用程�
 
 请参阅 Microsoft 的文档以[Windows 8.1 应用商店应用： 本地化描述你的应用到用户的信息](https://msdn.microsoft.com/library/windows/apps/hh454044.aspx)和[从应用程序清单中加载字符串](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323.aspx#loading_strings_from_the_app_manifest.)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 可以使用 RESX 文件和.NET 全球化类本地化 Xamarin.Forms 应用程序。 除了特定于平台的代码来检测用户希望哪种语言的少量，大部分本地化工作集中在通用代码。
 

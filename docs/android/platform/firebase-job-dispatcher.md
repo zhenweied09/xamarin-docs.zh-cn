@@ -8,33 +8,32 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/19/2018
-ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: fbcb0190f609efc4396429a7961c2d49ab82576f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 作业调度程序
 
 _本指南讨论使用从 Google Firebase 作业调度程序库的后台工作。_
 
-## <a name="firebase-job-dispatcher-overview"></a>Firebase 作业调度程序概述
+## <a name="overview"></a>概述
 
 若要使 Android 应用程序保持响应状态，向用户的最佳方式之一是确保，在后台执行复杂或长时间运行的工作。 但是，很重要，后台工作不会产生负面影响用户的体验与该设备。 
 
-例如，后台作业可能会轮询网站的更改特定的数据集查询每隔几分钟。 这看起来良性的但是它无法在设备上产生灾难性影响。 应用程序将结束唤醒设备、 从而 CPU 提升到更高版本的电源状态、 开机无线电、 进行网络请求，然后处理结果。 因为设备将不立即关闭电源，并返回到低能耗空闲状态，它获取更糟。 不佳计划的后台工作可能会无意中保持的状态具有不必要的和过度 power 要求设备。 实际上，（轮询网站） 此了无害活动将导致设备在相对较短的时间内不可用。
+例如，后台作业可能分钟轮询一次网站每三个或四个查询的特定的数据集的更改。 但是，它将带来灾难性影响电池使用时间，这看起来无害。 应用程序将重复唤醒设备，将 CPU 提升到更高版本的电源状态、 无线电接通电源，使网络请求，然后处理结果。 因为设备将不立即关闭电源，并返回到低能耗空闲状态，它获取更糟。 不佳计划的后台工作可能会无意中保持的状态具有不必要的和过度 power 要求设备。 此看似无害的活动 （轮询网站） 将导致设备在相对较短的时间内不可用。
 
-Android 已经提供了几个 Api，以帮助在后台中执行工作，但是这些都是一个全面的解决方案：
+Android 提供以下 Api 来帮助与在后台中执行工作，但本身它们不能满足需求的智能作业计划。 
 
 * **[意向服务](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash;意向服务则非常适合用于执行工作，但它们不提供任何方法来计划作业。
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash;这些 Api 只允许计划的、 但不提供任何方法来实际执行工作的工作。 此外，AlarmManager 仅允许基于时间约束，这意味着在某个时间或经过一段时间后引发警报。 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash;这些 Api 只允许安排延续任务，但不提供任何方法来实际执行工作的工作。 此外，AlarmManager 仅允许基于时间约束，这意味着在某个时间或经过一段时间后引发警报。 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule 是一种很好的 API，适用于操作系统可用于计划作业。 但是，它才可用于这些目标 API 级别 21 的 Android 应用程序或更高版本。 
-* **[广播接收方](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; Android 应用程序可以设置广播接收方在响应系统宽事件或方法中执行工作。 但是，广播的接收方未提供任何控制作业应何时运行。 在 Android 操作系统中的更改也将限制时广播的接收方将起作用，或者它们可以响应的工作的类型。 
-* **Google 云消息网络管理器**&ndash;这是，重要性存在争议，长时间智能地计划背景的最佳方式工作。 但是，由于已弃用 GCMNetworkManager。 
+* **[广播接收方](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; Android 应用程序可以设置广播接收方在对系统级事件或意向响应中执行工作。 但是，广播的接收方未提供任何控制作业应何时运行。 在 Android 操作系统中的更改也将限制时广播的接收方将起作用，或者它们可以响应的工作的类型。 
 
-有两个有效地执行后台工作的重要功能 (有时称为_后台作业_或_作业_):
+有两个有效地执行后台工作的关键功能 (有时称为_后台作业_或_作业_):
 
-1. **智能地计划工作**&ndash;很重要，应用程序执行时在后台工作，则它会以作为好公民。 理想情况下，应用程序不应要求，运行作业。 相反，应用程序应指定必须满足的中，可以在运行，然后计划，该作业时，它们共同以满足条件时运行的条件。 这使 Android 智能地执行工作。 例如，网络请求可能批处理运行在同一时间，以便与网络相关的开销最大使用全部。
+1. **智能地计划工作**&ndash;很重要，应用程序执行时在后台工作，则它会以作为好公民。 理想情况下，应用程序不应要求，运行作业。 相反，应用程序应指定作业可以运行，以及然后计划满足条件时运行该工作时必须满足的条件。 这使 Android 智能地执行工作。 例如，网络请求可能批处理运行在同一时间，以便与网络相关的开销最大使用全部。
 2. **封装工作**&ndash;代码来执行后台工作应封装在可以运行独立于用户界面，将相对较容易重新计划如果未能完成工作的离散组件由于某种原因。
 
 Firebase 作业调度程序是从 Google 提供 fluent API 来简化计划后台工作的库。 它旨在将替换为 Google 云管理器。 Firebase 作业调度程序包括以下 Api:
@@ -66,7 +65,7 @@ Firebase 作业调度程序需要 Android API 级别 9 或更高版本。 Fireba
 
 在添加 Firebase 作业调度程序库之后, 创建`JobService`类，然后安排其运行的实例`FirebaseJobDispatcher`。
 
-### <a name="creating-a-jobservice"></a>创建 `JobService`
+### <a name="creating-a-jobservice"></a>创建 JobService
 
 扩展的类型，必须完成通过 Firebase 作业调度程序库执行的所有工作`Firebase.JobDispatcher.JobService`抽象类。 创建`JobService`非常类似于创建`Service`与 Android 框架： 
 
@@ -74,7 +73,7 @@ Firebase 作业调度程序需要 Android API 级别 9 或更高版本。 Fireba
 2. 修饰与子类`ServiceAttribute`。 尽管不是严格要求，建议显式设置`Name`参数，以帮助进行调试`JobService`。 
 3. 添加`IntentFilter`声明`JobService`中**AndroidManifest.xml**。 这将帮助您找到和调用的 Firebase 作业调度程序库`JobService`。
 
-下面的代码是最简单的示例`JobService`应用程序：
+下面的代码是最简单的示例`JobService`对于应用程序，使用 TPL 以异步方式执行某项操作：
 
 ```csharp
 [Service(Name = "com.xamarin.fjdtestapp.DemoJob")]
@@ -85,11 +84,14 @@ public class DemoJob : JobService
 
     public override bool OnStartJob(IJobParameters jobParameters)
     {
-        Log.Debug(TAG, "DemoJob::OnStartJob");
-        // Note: This runs on the main thread. Anything that takes longer than 16 milliseconds
-         // should be run on a seperate thread.
-        
-        return false; // return false because there is no more work to do.
+        Task.Run(() =>
+        {
+            // Work is happening asynchronously (code omitted)
+                       
+        });
+
+        // Return true because of the asynchronous work
+        return true;  
     }
 
     public override bool OnStopJob(IJobParameters jobParameters)
@@ -101,7 +103,7 @@ public class DemoJob : JobService
 }
 ```
 
-### <a name="creating-a-firebasejobdispatcher"></a>创建 `FirebaseJobDispatcher`
+### <a name="creating-a-firebasejobdispatcher"></a>创建 FirebaseJobDispatcher
 
 可以计划任何工作之前，有必要创建`Firebase.JobDispatcher.FirebaseJobDispatcher`对象。 `FirebaseJobDispatcher`负责计划`JobService`。 下面的代码段是一种方法创建的实例`FirebaseJobDispatcher`: 
  
@@ -121,7 +123,7 @@ FirebaseJobDispatcher dispatcher = context.CreateJobDispatcher();
 
 一次`FirebaseJobDispatcher`已实例化，它是可以创建`Job`和运行中的代码`JobService`类。 `Job`由创建`Job.Builder`对象，并将在下一部分中讨论。
 
-### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>创建`Firebase.JobDispatcher.Job`与 `Job.Builder`
+### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>使用 Job.Builder 创建 Firebase.JobDispatcher.Job
 
 `Firebase.JobDispatcher.Job`类负责封装元数据运行所需`JobService`。 A`Job`包含信息，如之前必须满足作业运行，如果任何约束`Job`重复进行的或将导致作业要运行任何触发器。  裸机最少`Job`必须具有_标记_(标识到作业的唯一字符串`FirebaseJobDispatcher`) 和类型`JobService`应运行。 Firebase 作业调度程序将实例化`JobService`时的时间来运行作业。  A`Job`使用的实例创建`Firebase.JobDispatcher.Job.JobBuilder`类。 
 
@@ -140,7 +142,7 @@ Job myJob = dispatcher.NewJobBuilder()
 * A`Job`将按计划运行越早越好。
 * 默认重试策略`Job`是使用_指数退让_(在下面的部分中的更详细讨论[设置 RetryStrategy](#Setting_a_RetryStrategy))
 
-### <a name="scheduling-a-job"></a>计划 `Job`
+### <a name="scheduling-a-job"></a>计划作业
 
 在创建后`Job`，它需要与计划`FirebaseJobDispatcher`运行之前。 有两种方法来计划`Job`:
 
@@ -173,7 +175,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-parameters-to-a-job"></a>将参数传递到作业
+#### <a name="passing-jarameters-to-a-job"></a>将 jarameters 传递给作业
 
 参数传递给一个作业通过创建`Bundle`连同传递`Job.Builder.SetExtras`方法：
 
@@ -219,8 +221,6 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 <a name="Setting_Job_Triggers" />
-
-#### <a name="setting-job-triggers"></a>设置作业触发器
 
 `JobTrigger`提供有关作业应何时开始操作系统指南。 A`JobTrigger`具有_执行窗口_，它定义的时间计划的时间`Job`应运行。 执行窗口具有_启动窗口_值和_结束窗口_值。 启动窗口是运行作业之前，设备应等待的秒数和结束窗口值是在运行前等待的秒的最大数量`Job`。 
 
@@ -283,7 +283,7 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 
 ## <a name="summary"></a>总结
 
-本指南讨论如何使用 Firebase 作业调度程序以智能方式在后台中执行工作。 它讨论如何封装为执行的工作`JobService`和如何`FirebaseJobDispatcher`来计划该作业，指定与条件`JobTrigger`和如何与处理故障`RetryStrategy`。
+本指南讨论如何使用 Firebase 作业调度程序以智能方式在后台中执行工作。 它讨论如何封装为执行的工作`JobService`以及如何使用`FirebaseJobDispatcher`来计划该作业，指定与条件`JobTrigger`和如何与处理故障`RetryStrategy`。
 
 
 ## <a name="related-links"></a>相关链接

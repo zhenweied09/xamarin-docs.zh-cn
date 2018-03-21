@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ee39851070be2f302125162400d2214c732faeec
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>演练-使用 WCF
 
@@ -40,10 +40,11 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 1. 启动 Visual Studio 2017，并创建新项目。
 1. 在**新项目**对话框中，选择**WCF > WCF 服务库**模板，并将解决方案命名解决方案`HelloWorldService`:
 
-  ![](walkthrough-working-with-wcf-images/new-wcf-service.png "创建新的 WCF 服务库")
+    ![](walkthrough-working-with-wcf-images/new-wcf-service.png "创建新的 WCF 服务库")
 
 1. 在**解决方案资源管理器**，添加一个名为的新类`HelloWorldData`到项目：
 
+    ```csharp
         using System.Runtime.Serialization;
 
         namespace HelloWorldService
@@ -64,10 +65,13 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
                 }
             }
         }
+    ```
+
 
 1. 在**解决方案资源管理器**，重命名`IService1.cs`到`IHelloWorldService.cs`，并将重命名`Service1.cs`到`HelloWorldService.cs`。
 1. 在**解决方案资源管理器**，打开`IHelloWorldService.cs`，将代码替换为以下代码：
 
+    ```csharp
         using System.ServiceModel;
 
         namespace HelloWorldService
@@ -82,11 +86,13 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
                 HelloWorldData GetHelloData(HelloWorldData helloWorldData);
             }
         }
-
+    ```
+  
     此服务提供两种方法 – 其中一个采用字符串参数，另一个使用.NET 对象。
 
 1. 在**解决方案资源管理器**，打开`HelloWorldService.cs`，将代码替换为以下代码：
 
+    ```csharp
         using System;
 
         namespace HelloWorldService
@@ -110,9 +116,11 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
                 }
             }
         }
+    ```
 
 1. 在**解决方案资源管理器**，打开`App.config`，更新`name`属性`<service>`节点，`contract`属性`<endpoint>`节点，和`baseAddress`属性`<add>`节点：
 
+    ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <configuration>
             ...
@@ -133,17 +141,18 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
             </services>
             ...
         </configuration>
+    ```
 
 1. 生成并运行 WCF 服务。 WCF 测试客户端将承载该服务：
 
-  ![](walkthrough-working-with-wcf-images/hosted-wcf-service.png "在测试客户端中运行的 WCF 服务")
+    ![](walkthrough-working-with-wcf-images/hosted-wcf-service.png "在测试客户端中运行的 WCF 服务")
 
 1. 运行 WCF 测试客户端，启动浏览器并导航到的 WCF 服务终结点：
 
-  ![](walkthrough-working-with-wcf-images/wcf-service-browser.png "WCF 服务浏览器信息页")
+    ![](walkthrough-working-with-wcf-images/wcf-service-browser.png "WCF 服务浏览器信息页")
 
 > [!IMPORTANT]
-> **注意：**下一节，才有必要，如果你需要接受远程连接 Windows 10 工作站上的。 如果你有另一种平台上部署 WCF 服务，则可以忽略该节。
+> 以下部分才有必要，如果你需要接受远程连接 Windows 10 工作站上。 如果你有另一种平台上部署 WCF 服务，则可以忽略该节。
 
 <a name="Allow_Remote_Access_to_IIS_Express" />
 
@@ -154,7 +163,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 1.  **接受远程连接配置 IIS Express** -此步骤包括编辑的 IIS Express，以接受特定端口上的远程连接配置文件，然后设置 IIS Express，以接受的传入流量的规则。
 1.  **将异常添加到 Windows 防火墙**-你必须打开通过远程应用程序可以使用与 WCF 服务进行通信的 Windows 防火墙的端口。
 
-你将需要知道你的工作站的 IP 地址。 此示例的目的，我们将假定我们的工作站具有 192.168.1.143 的 IP 地址。
+    你将需要知道你的工作站的 IP 地址。 此示例的目的，我们将假定我们的工作站具有 192.168.1.143 的 IP 地址。
 
 1. 让我们开始通过配置 IIS Express 以侦听外部请求。 我们可以执行此操作通过 IIS express 在编辑配置文件`[solutiondirectory]\.vs\config\applicationhost.config`，如以下屏幕截图中所示：
 
@@ -163,6 +172,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 
     找到`site`同名元素`HelloWorldWcfHost`。 其外观应类似于以下 XML 代码段：
 
+    ```xml
         <site name="HelloWorldWcfHost" id="2">
             <application path="/" applicationPool="Clr4IntegratedAppPool">
                 <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
@@ -171,13 +181,17 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
                 <binding protocol="http" bindingInformation="*:8733:localhost" />
             </bindings>
         </site>
-
+    ```
+ 
     我们将需要添加另一个`binding`以打开端口 8734 到外部流量。 添加以下 XML 到`bindings`元素，将替换为你自己的 IP 地址的 IP 地址：
 
-        <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
-
+    ```xml
+    <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
+    ```
+    
     这会将配置 IIS Express，以接受来自任何远程 IP 地址的端口 8734 上的计算机的外部 IP 地址的 HTTP 流量。 上面的代码段假定运行 IIS Express 的计算机的 IP 地址是 192.168.1.143。 后所做的更改，`bindings`元素应如下所示：
 
+    ```xml
         <site name="HelloWorldWcfHost" id="2">
             <application path="/" applicationPool="Clr4IntegratedAppPool">
                 <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
@@ -187,6 +201,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
                 <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
             </bindings>
         </site>
+    ```
 
 1. 接下来，我们需要配置 IIS Express 接受端口 8734 上的传入连接。 启动管理命令提示符，并运行此命令：
 
@@ -215,7 +230,7 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 1. 生成`HelloWorldServiceProxy`项目。
 
 > [!NOTE]
-> **请注意**： 创建 Visual Studio 2017 中使用 Microsoft WCF Web 服务引用提供程序的代理的替代方法是使用 ServiceModel 元数据实用工具 (svcutil.exe)。 有关详细信息，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)。
+> 创建在 Visual Studio 2017 中使用 Microsoft WCF Web 服务引用提供程序的代理的替代方法是使用 ServiceModel 元数据实用工具 (svcutil.exe)。 有关详细信息，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)。
 
 <a name="Creating_a_Xamarin_Android_Application" />
 
@@ -227,6 +242,7 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
 1. 在`HelloWorld.Android`项目中，添加对引用`HelloWorldServiceProxy`项目中和的引用来`System.ServiceModel`命名空间。
 1. 在**解决方案资源管理器**，打开`Resources/layout/main.axml`并将现有的 XML 替换为以下 XML:
 
+    ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
@@ -267,18 +283,22 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
                         android:id="@+id/getHelloWorldDataTextView" />
             </LinearLayout>
         </LinearLayout>
-
+    ```
+    
     以下屏幕截图显示了在设计器的 UI:
 
     [![](walkthrough-working-with-wcf-images/image09.png "这是此 UI 在设计器中的类似的屏幕快照")](walkthrough-working-with-wcf-images/image09.png#lightbox)
-
+    
 1. 在**解决方案资源管理器**，打开`Resources/values/Strings.xml`并添加以下 XML:
 
-        <string name="say_hello_world">Say Hello World</string>
-        <string name="get_hello_world_data">Get Hello World data</string>
-
+    ```xml
+    <string name="say_hello_world">Say Hello World</string>
+    <string name="get_hello_world_data">Get Hello World data</string>
+    ```
+    
 1. 在**解决方案资源管理器**，打开`MainActivity.cs`和替换为以下代码替换现有代码：
 
+    ```csharp
         [Activity(Label = "HelloWorld.Android", MainLauncher = true)]
         public class MainActivity : Activity
         {
@@ -291,11 +311,13 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
             TextView _sayHelloWorldTextView;
             ...
         }
+    ```
 
     替换`<insert_WCF_service_endpoint_here>`与 WCF 终结点的地址。
 
 1. 在`MainActivity.cs`，修改`OnCreate`方法，以便它包含以下代码：
 
+    ```csharp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(bundle);
@@ -314,11 +336,13 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
             _sayHelloWorldButton.Click += SayHelloWorldButtonOnClick;
             _sayHelloWorldTextView = FindViewById<TextView>(Resource.Id.sayHelloWorldTextView);
         }
-
+    ```
+    
     上面的代码中初始化类的实例变量和电线事件处理程序。
 
 1. 在`MainActivity.cs`，通过添加以下两种方法来实例化客户端代理类：
 
+    ```csharp
         void InitializeHelloWorldServiceClient()
         {
             BasicHttpBinding binding = CreateBasicHttpBinding();
@@ -340,11 +364,13 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
             binding.ReceiveTimeout = timeout;
             return binding;
         }
-
+    ```
+    
     上面的代码实例化和初始化`HelloWorldServiceClient`对象。
 
 1. 在`MainActivity.cs`，甚至为添加处理程序中的两个按钮`Activity`:
 
+    ```csharp
         async void GetHelloWorldDataButtonOnClick(object sender, EventArgs e)
         {
             var data = new HelloWorldData
@@ -379,10 +405,11 @@ WCF 服务代理可供 Xamarin.Android 应用程序，如下所示：
                 Console.WriteLine(ex.Message);
             }
         }
-
+    ```
+  
 1. 运行应用程序，请确保 WCF 服务正在运行，并且两个按钮上单击。 应用程序将 WCF 以异步方式调用，条件是`Endpoint`正确设置字段：
 
-  [![](walkthrough-working-with-wcf-images/image08.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image08.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image08.png "在 30 秒内响应应接收从每个 WCF 方法和我们的应用程序应类似于此屏幕截图")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -407,17 +434,20 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
 
 1. 在**解决方案资源管理器**，打开`ViewController.cs`并添加以下代码：
 
+    ```xml
         public partial class ViewController : UIViewController
         {
             static readonly EndpointAddress Endpoint = new EndpointAddress("<insert_WCF_service_endpoint_here>");
             HelloWorldServiceClient _client;
             ...
         }
-
+    ```
+  
     替换`<insert_WCF_service_endpoint_here>`与 WCF 终结点的地址。
 
 1. 在`ViewController.cs`，更新`ViewDidLoad`方法，以便它如下所示：
 
+    ```csharp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -426,9 +456,11 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
             getHelloWorldDataButton.TouchUpInside += GetHelloWorldDataButton_TouchUpInside;
             sayHelloWorldButton.TouchUpInside += SayHelloWorldButton_TouchUpInside;
         }
-
+    ```
+  
 1. 在`ViewController.cs`，添加`InitializeHelloWorldServiceClient`和`CreateBasicHttpBinding`方法：
 
+    ```csharp
         void InitializeHelloWorldServiceClient()
         {
             BasicHttpBinding binding = CreateBasicHttpBinding();
@@ -450,9 +482,11 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
             binding.ReceiveTimeout = timeout;
             return binding;
         }
-
+    ```
+  
 1. 在`ViewController.cs`，添加事件处理程序`TouchUpInside`对两个事件`UIButton`实例：
 
+    ```csharp
         async void GetHelloWorldDataButton_TouchUpInside(object sender, EventArgs e)
         {
             getHelloWorldDataText.Text = "Waiting for WCF...";
@@ -487,6 +521,7 @@ WCF 服务代理可供 Xamarin.iOS 应用程序，如下所示：
                 Console.WriteLine(ex.Message);
             }
         }
+    ```
 
 1. 运行应用程序，请确保 WCF 服务正在运行，并且两个按钮上单击。 应用程序将 WCF 以异步方式调用，条件是`Endpoint`正确设置字段：
 
