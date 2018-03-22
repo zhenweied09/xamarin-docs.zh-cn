@@ -6,11 +6,11 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 617b02899e04b5417e352555e91aee966428cb9c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 145a0692ed9761944eec4c7ece1f098a584f2d54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="systemdata"></a>System.Data
 
@@ -107,7 +107,7 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> **警告：**上面的代码示例中所述，它是在 SQL 命令中嵌入字符串，因为它使你的代码容易受到的做法不妥[SQL 注入](http://en.wikipedia.org/wiki/SQL_injection)。
+> 如上面的代码示例中所述，它是在 SQL 命令中嵌入字符串，因为它使你的代码容易受到的做法不妥[SQL 注入](http://en.wikipedia.org/wiki/SQL_injection)。
 
 
 ### <a name="using-command-parameters"></a>使用命令参数

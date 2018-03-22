@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="deploying-to-the-app-store"></a>将部署到应用商店
 
 > [!IMPORTANT]
->  请务必查看[Apple 的监视工具包提交指南](https://developer.apple.com/app-store/watch/)，请参阅和[故障排除](#Troubleshooting)部分以了解可能会有任何问题。
+> 请务必查看[Apple 的监视工具包提交指南](https://developer.apple.com/app-store/watch/)，请参阅和[故障排除](#Troubleshooting)部分以了解可能会有任何问题。
 
 - 确保其中有：
   - [**分发预配配置文件**](#provisioning)创建你的项目。
@@ -177,7 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 确保你有 Visual Studio 的最新版本的 Mac 上，并且你**AppIcons.appiconset**包含一组完整的映像。 如果你仍看到此错误，查看的源**Contents.json**以确定它是否包含所有所需的映像的条目。 或者，你可确保你在使用 Xamarin 最新版本后, 删除并重新创建**AppIcons.appiconset**。
 
 > [!IMPORTANT]
-> 注意： 是已知的 bug，在 Visual Studio 中的 Mac 的监视图标支持： 期望 88 x 88 像素图像 **29x29@3x** 映像 （它应是 87 x 87 像素为单位）。
+> 是一个已知的 bug，在 Visual Studio 中的 Mac 的监视图标支持： 期望 88 x 88 像素图像 **29x29@3x** 映像 （它应是 87 x 87 像素为单位）。
 
 
 无法为 Mac-编辑在 Xcode 中的图像资产解决此问题在 Visual Studio 中，或手动编辑**Contents.json**文件 (以匹配[此示例](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132))。
@@ -196,7 +196,7 @@ The app may have been built or signed with non-compliant or pre-release tools.
 Ensure you are using the latest version of Xcode and Xamarin's tools.
 -->
 > [!IMPORTANT]
-> 注意： 必须**存档**Visual Studio for Mac 并切换到 Xcode 6.2 + 验证并将上载到 iTunes Connect 中的应用。
+> 你必须**存档**Visual Studio for Mac 并切换到 Xcode 6.2 + 验证并将上载到 iTunes Connect 中的应用。
 
 
 使用稳定 Xamarin 通道和 Xcode 6.2 +。

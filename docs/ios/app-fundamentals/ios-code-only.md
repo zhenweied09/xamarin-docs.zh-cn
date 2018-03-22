@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
 
@@ -620,7 +620,7 @@ Apple 建议的.xib 或情节提要文件适用于面向 iOS 8 的应用程序�
 - [管理与情节提要的启动屏幕](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **注意：**截至 iOS 9，Apple 建议情节提要应用作创建启动屏幕的主要方法。
+> 截至 iOS 9，Apple 建议情节提要应用作创建启动屏幕的主要方法。
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>创建启动映像的预 iOS 8 的应用程序
 
@@ -629,11 +629,11 @@ Apple 建议的.xib 或情节提要文件适用于面向 iOS 8 的应用程序�
 可以将设置此静态图像，在 Info.plist 文件中，或在你的应用程序 （适用于 iOS 7) 资产目录。 你将需要为你的应用程序可能运行在每个设备大小 （320 x 480、 640 x 960、 640 x 1136） 提供单独的图像。 在启动屏幕尺寸上的详细信息，请查看[启动屏幕图像](~/ios/app-fundamentals/images-icons/launch-screens.md)指南。
 
 > [!IMPORTANT]
-> **注意：**如果你的应用程序没有启动屏幕，你可能注意到，无法完全适合屏幕。 如果出现这种情况，你应确保至少，包含名为 640 x 1136 映像`Default-568@2x.png`到你 Info.plist。 
+> 如果你的应用程序没有启动屏幕，你可能注意到，无法完全适合屏幕。 如果出现这种情况，你应确保至少，包含名为 640 x 1136 映像`Default-568@2x.png`到你 Info.plist。 
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

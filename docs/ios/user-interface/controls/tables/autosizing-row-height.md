@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b35905d14086dcfc0cb749c8e4cc7de1608dd5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-sizing-row-height"></a>自动调整行高
 
@@ -21,7 +21,7 @@ iOS 11 添加了要自动展开的行的功能。 标头、 页脚和单元格�
 
 ## <a name="cell-layout-in-the-ios-designer"></a>在 iOS 设计器中的单元格布局
 
-打开你想要在 iOS 设计器中中的行的自动调整大小的表视图情节提要选择单元格的*原型*和设计的单元格的布局。 例如:
+打开你想要在 iOS 设计器中中的行的自动调整大小的表视图情节提要选择单元格的*原型*和设计的单元格的布局。 例如：
 
 [![](autosizing-row-height-images/table01.png "该单元格的原型设计")](autosizing-row-height-images/table01.png#lightbox)
 
@@ -46,13 +46,13 @@ iOS 11 添加了要自动展开的行的功能。 标头、 页脚和单元格�
 对于本示例中， `GrowCell`。 我们在填充表时，我们将更高版本使用此值。
 
 > [!IMPORTANT]
-> **注意：**如果表中包含多个单元格类型 (**原型**)，你需要确保每个类型都有其自己唯一`Identifier`自动行调整大小，工作的。
+> 如果表中包含多个单元格类型 (**原型**)，你需要确保每个类型都有其自己唯一`Identifier`自动行调整大小，工作的。
 
-对于我们的单元格原型的每个元素，分配**名称**以将其公开给 C# 代码。 例如:
+对于我们的单元格原型的每个元素，分配**名称**以将其公开给 C# 代码。 例如：
 
 [![](autosizing-row-height-images/table05.png "将分配一个名称以将其公开给 C# 代码")](autosizing-row-height-images/table05.png#lightbox)
 
-接下来，添加的自定义类`UITableViewController`、`UITableView`和`UITableCell`（原型）。 例如: 
+接下来，添加的自定义类`UITableViewController`、`UITableView`和`UITableCell`（原型）。 例如： 
 
 [![](autosizing-row-height-images/table06.png "UITableViewController、 UITableView 和 UITableCell 添加自定义类")](autosizing-row-height-images/table06.png#lightbox)
 
@@ -64,7 +64,7 @@ iOS 11 添加了要自动展开的行的功能。 标头、 页脚和单元格�
 
 ## <a name="enabling-auto-resizing-height"></a>启用自动调整大小的高度
 
-在我们的表视图的数据源 (`UITableViewDatasource`) 或源 (`UITableViewSource`)，当我们取消排队的单元格，我们需要使用`Identifier`我们在设计器中定义。 例如:
+在我们的表视图的数据源 (`UITableViewDatasource`) 或源 (`UITableViewSource`)，当我们取消排队的单元格，我们需要使用`Identifier`我们在设计器中定义。 例如：
 
 ```csharp
 public string CellID {
@@ -86,7 +86,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-默认情况下，将为自动调整大小行高度设置表视图。 若要确保此操作，请`RowHeight`属性应设置为`UITableView.AutomaticDimension`。 我们还需要设置`EstimatedRowHeight`属性中的我们`UITableViewController`。 例如:
+默认情况下，将为自动调整大小行高度设置表视图。 若要确保此操作，请`RowHeight`属性应设置为`UITableView.AutomaticDimension`。 我们还需要设置`EstimatedRowHeight`属性中的我们`UITableViewController`。 例如：
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -104,7 +104,7 @@ public override void ViewWillAppear (bool animated)
 
 此估计值不一定是准确的只需粗略的估算值的平均的表视图中的每个行的高度。
 
-使用此代码中的位置，当应用运行时，每一行将收缩并增长根据单元格原型中的最后一个标签的高度。 例如:
+使用此代码中的位置，当应用运行时，每一行将收缩并增长根据单元格原型中的最后一个标签的高度。 例如：
 
 [![](autosizing-row-height-images/table07.png "运行示例表")](autosizing-row-height-images/table07.png#lightbox)
 

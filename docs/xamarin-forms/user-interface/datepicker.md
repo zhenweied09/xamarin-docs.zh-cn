@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ad214b3986d039de40f8ed46b300e8d3cfd06328
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-datepicker"></a>使用包含 DatePicker
 
@@ -78,7 +78,7 @@ DatePicker datePicker = new DatePicker
             ··· />
 ```
 
-但是，这不是建议在一起。 具体取决于的设置`Format`属性，选择日期可能需要不同的显示宽度。 例如，"D"格式字符串会导致`DateTime`若要显示日期的长格式和"星期三，年 9 月 12，2018"中，需要更大的显示宽度比"星期五，5 月 4，2018。" 根据所用平台，这种差异可能会导致`DateTime`视图，以更改宽度在布局中，或显示被截断。
+但是，这不是建议在一起。 具体取决于的设置`Format`属性，选择日期可能需要不同的显示宽度。 例如，"D"格式字符串会导致`DateTime`若要显示日期的长格式和"星期三，年 9 月 12，2018"中，需要更大的显示宽度比"星期五，5 月 4，2018"。 根据所用平台，这种差异可能会导致`DateTime`视图，以更改宽度在布局中，或显示被截断。
 
 > [!TIP]
 > 最好是使用默认`HorizontalOptions`设置`Fill`与`DatePicker`，而不是使用宽度为`Auto`时将`DatePicker`中`Grid`单元格。

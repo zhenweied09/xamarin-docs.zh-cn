@@ -6,11 +6,11 @@ ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2664fbf7dc28591ac9f4e0271382b427b5293900
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a311bace159a450dc27e15baa8ef1c260a90c36e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Xamarin 的工作簿中的表示形式
 
@@ -64,7 +64,7 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> 注意： 生成的 Api`ISerializableObject`对象直接无需由处理`RepresentationProvider`。 如果你想要显示的对象是**不** `ISerializableObject`，你将想要处理包装在您`RepresentationProvider`。
+> 生成的 Api`ISerializableObject`对象直接无需由处理`RepresentationProvider`。 如果你想要显示的对象是**不** `ISerializableObject`，你将想要处理包装在您`RepresentationProvider`。
 
 ### <a name="rendering-a-representation"></a>呈现表示形式
 
@@ -87,7 +87,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 在这里，`PersonRenderer`实现`Renderer`接口。 请参阅[typings] [ typings]有关详细信息。
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
-[xir-color]: /api/type/Xamarin.Interactive.Representations.Color/
-[repman]: /api/type/Xamarin.Interactive.Representations.IRepresentationManager/
-[repp]: /api/type/Xamarin.Interactive.Representations.RepresentationProvider/
-[serobj]: /api/type/Xamarin.Interactive.Serialization.ISerializableObject/
+[xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
+[repman]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/
+[repp]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.RepresentationProvider/
+[serobj]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Serialization.ISerializableObject/

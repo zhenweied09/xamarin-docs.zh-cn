@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c55ba4fb90181aaa1aa8ec52e2fcb3e2b2cc76d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="table-control"></a>Table 控件
 
@@ -51,7 +51,8 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> **请注意**： 表行起来似乎都是在 iOS 中没有被虚拟化。 尝试限制 （Apple 建议小于 20） 的行数。
+> 像它们是在 iOS 中，表行没有被虚拟化。 尝试限制 （Apple 建议小于 20） 的行数。
+
 创建行后, 需要填充每个单元格 (如`GetCell`像在 iOS 中)。 此代码段从[WatchTables 示例](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)更新每个行中的标签
 
 ```csharp
@@ -62,7 +63,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> **注意：**使用`SetNumberOfRows`，然后循环访问使用`GetRowController`导致要发送到手表的整个表。 后续视图的表中，如果你需要添加或删除特定行使用`InsertRowsAt`和`RemoveRowsAt`以提高性能。
+> 使用`SetNumberOfRows`，然后循环访问使用`GetRowController`导致要发送到手表的整个表。 后续视图的表中，如果你需要添加或删除特定行使用`InsertRowsAt`和`RemoveRowsAt`以提高性能。
 
 
 ## <a name="respond-to-taps"></a>响应分流
@@ -148,7 +149,7 @@ watchOS 3 引入表的新功能： 能够滚动查看详细信息页与每个行
 ![](table-images/table-scroll-sml.png "垂直的详细信息分页示例") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> **警告：**此功能目前仅提供通过编辑在 Xcode 接口生成器情节提要。
+> 此功能目前只可通过编辑在 Xcode 接口生成器情节提要。
 
 若要启用此功能，请选择`WKInterfaceTable`设计图面上，刻度上**垂直详细信息分页**选项：
 

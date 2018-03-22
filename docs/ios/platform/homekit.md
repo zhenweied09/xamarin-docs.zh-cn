@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ea51dc2c7dadc5cc430df990c9ce79eac6e941da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -77,7 +77,7 @@ HomeKit 组织成主页集合的给定位置中的所有自动化设备。 此�
 使用就地这些设置，应用程序现在已准备好访问 HomeKit Framework Api。 有关设置的详细信息，请参阅我们[设备资源调配](~/ios/get-started/installation/device-provisioning/index.md)和[设置你的应用](~/ios/get-started/installation/device-provisioning/index.md)指南。
 
 > [!IMPORTANT]
-> **注意：**测试 HomeKit 启用应用的开发需要已正确设置的实际的 iOS 设备。 无法从 iOS 模拟器测试 HomeKit。
+> 测试 HomeKit 启用应用的开发需要已正确设置的实际的 iOS 设备。 无法从 iOS 模拟器测试 HomeKit。
 
 ## <a name="the-homekit-accessory-simulator"></a>HomeKit 附件模拟器
 
@@ -143,7 +143,7 @@ Apple 提供 HomeKit 附件模拟器作为单独的下载从 Xcode，因此将�
 6. 保存对文件所做的更改。
 
 > [!IMPORTANT]
-> **注意：**设置失败`NSHomeKitUsageDescription`中的键`Info.plist`文件将导致应用程序_以静默方式失败_（正在关闭系统在运行时） 而无需 iOS 10 （或更高版本） 中运行时的错误。
+> 设置失败`NSHomeKitUsageDescription`中的键`Info.plist`文件将导致应用程序_以静默方式失败_（正在关闭系统在运行时） 而无需 iOS 10 （或更高版本） 中运行时的错误。
 
 ## <a name="connecting-to-homekit"></a>连接到 HomeKit
 
@@ -265,7 +265,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 你还应监视主页管理器的`DidAddHome`和`DidRemoveHome`应用程序的用户界面所需的事件和更新。
 
 > [!IMPORTANT]
-> **注意：** `AlertView.PresentOKAlert`在上面的示例代码中使用的方法是在 HomeKitIntro 发出的应用程序使用 iOS 警报更轻松的帮助程序类。
+> `AlertView.PresentOKAlert`在上面的示例代码中使用的方法是在 HomeKitIntro 发出的应用程序使用 iOS 警报更轻松的帮助程序类。
 
 
 ## <a name="finding-new-accessories"></a>查找新附件
@@ -275,7 +275,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 调用`StartSearchingForNewAccessories`方法以启动寻找新附件和`StopSearchingForNewAccessories`方法完成后。
 
 > [!IMPORTANT]
-> **注意：** `StartSearchingForNewAccessories`应保持不运行较长时间的时间，因为它将产生负面影响的电池使用时间和的 iOS 设备的性能。 Apple 提供的建议调用`StopSearchingForNewAccessories`后的分钟或仅搜索时查找附件 UI 呈现给用户。
+> `StartSearchingForNewAccessories` 应保持不运行较长时间的时间，因为它将产生负面影响的电池使用时间和的 iOS 设备的性能。 Apple 提供的建议调用`StopSearchingForNewAccessories`后的分钟或仅搜索时查找附件 UI 呈现给用户。
 
 `DidFindNewAccessory`时发现新附件，并且它们将添加到将调用事件`DiscoveredAccessories`附件浏览器中的列表。
 
@@ -285,7 +285,7 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 
 [![](homekit-images/accessory01.png "查找新附件")](homekit-images/accessory01.png#lightbox)
 
-调用`AddAccessory`方法将所选的附件添加到的主服务器的集合。 例如:
+调用`AddAccessory`方法将所选的附件添加到的主服务器的集合。 例如：
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +318,7 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 
 对于此示例中，我们将保留操作简单和工作与家庭的附件直接，而不是将它们组织成聊天室或区域。
 
-`HMHome`对象包含可以在向用户显示的分配附件的列表及其`Accessories`属性。 例如:
+`HMHome`对象包含可以在向用户显示的分配附件的列表及其`Accessories`属性。 例如：
 
 [![](homekit-images/accessory04.png "示例附件")](homekit-images/accessory04.png#lightbox)
 
@@ -426,7 +426,7 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
  - 制造商
  - 模型
  - MotionDetected
- - name
+ - 名称
  - ObstructionDetected
  - OccupancyDetected
  - OutletInUse
@@ -702,7 +702,7 @@ Apple 已发布了以下更改和添加到 HomeKit ios 9:
 
 有关 HomeKit 在 iOS 9 中的新功能的详细信息，请参阅 Apple 的[HomeKit 索引](https://developer.apple.com/homekit/)和[What's New in HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210)视频。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章中引入了 Apple 的 HomeKit 主自动化框架。 它介绍了如何设置和配置测试设备使用 HomeKit 附件模拟器以及如何创建简单的 Xamarin.iOS 应用程序发现，与通信并控制使用 HomeKit 家庭自动化设备。
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>更新在后台应用程序
 
@@ -79,7 +79,7 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 使用背景提取应用程序可以进行调用以从后台更新 UI。 当用户打开应用程序时，则 UI 将最新并显示新内容。 这也将更新应用程序的应用程序切换器快照，以便用户可以看到该应用程序时有新内容。
 
 > [!IMPORTANT]
-> **请注意**： 一次`PerformFetch`是调用，则应用程序必须大约 30 秒开始下载新内容，并调用完成处理程序块。 如果这所用时间过长，则将终止应用程序。 请考虑使用背景提取与_后台传输服务_下载媒体文件或其他大型文件时。
+> 一次`PerformFetch`是调用，则应用程序必须大约 30 秒开始下载新内容，并调用完成处理程序块。 如果这所用时间过长，则将终止应用程序。 请考虑使用背景提取与_后台传输服务_下载媒体文件或其他大型文件时。
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 远程通知应该用于对应用程序的功能至关重要的内容不太频繁更新。 有关远程通知的详细信息，请参阅 Xamarin[在 iOS 中的推送通知](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md)指南。
 
 > [!IMPORTANT]
-> **请注意**： 因为远程通知中的更新机制基于背景提取、 应用程序必须下载新的内容启动并在接收通知，30 秒内调用完成处理程序块或 iOS 将终止应用程序。 请考虑配对远程通知_后台传输服务_下载媒体文件或其他大型文件在后台时。
+> 由于远程通知中的更新机制基于后台提取，因此应用程序必须下载新的内容启动并在接收通知，30 秒内调用完成处理程序块或 iOS 将终止应用程序。 请考虑配对远程通知_后台传输服务_下载媒体文件或其他大型文件在后台时。
 
 
 ### <a name="silent-remote-notifications"></a>无提示的远程通知
@@ -156,7 +156,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
  [![](updating-an-application-in-the-background-images/silent.png "正则通知可用于将存储的无提示通知从 APNs 推送到设备，，此图所示")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **请注意**: Apple 鼓励开发人员发送无提示的推送通知，每当应用程序要求，并且让 APNs 计划将其传递。
+> Apple 鼓励开发人员发送无提示的推送通知，每当应用程序要求，并让计划将其传递的 APNs。
 
 
 在此部分中，我们已介绍了各种选项刷新内容在后台运行后台需要类别不适合的任务。 现在，让我们看到某些操作中的这些 Api。

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 128ec8d19dc25dc2231521756ee0f00690e0d134
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="core-graphics"></a>核心图形
 
@@ -228,7 +228,7 @@ public override void Draw (CGRect rect)
  ![](core-graphics-images/04-upright-monkey.png "示例显示图像直立")
 
 > [!IMPORTANT]
->  **注意：**的图形上下文更改适用于所有后续的绘制操作。 因此，在 CTM 转换后，它将会影响任何其他绘图。 例如，如果 CTM 转换后绘制三角形，，它会可以正面朝下显示。
+> 更改的图形上下文适用于所有后续的绘制操作。 因此，在 CTM 转换后，它将会影响任何其他绘图。 例如，如果 CTM 转换后绘制三角形，，它会可以正面朝下显示。
 
 ### <a name="adding-text-to-the-image"></a>将文本添加到映像
 
@@ -423,7 +423,7 @@ UIGraphics.EndPDFContent ();
 生成的文本绘制到 PDF，然后将其包含在`NSData`可以被保存，上载、 通过电子邮件发送，等等。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中我们讨论过的图形功能通过提供*核心图形*framework。 我们已了解如何使用核心图形的上下文中绘制几何图形、 图像和 Pdf`UIView,`并与支持内存的图形上下文。
 

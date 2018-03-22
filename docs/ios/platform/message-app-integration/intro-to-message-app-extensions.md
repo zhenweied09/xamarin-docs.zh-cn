@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 083920aba3c8dc83b157b591e194c43935dcc566
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="message-app-extension-basics"></a>消息应用扩展基础知识
 
@@ -37,7 +37,7 @@ _本文演示如何在 Xamarin.iOS 解决方案与邮件应用集成并向用户
 
 此外新在 iOS 10，Apple 添加了内联应用归属这样用户就可以轻松地发现应用程序。 例如，如果一个用户将内容发送到另一个，从第二个用户不具有的应用安装 （如例如标签） 发送的应用的名称被列在下面的消息历史记录中的内容。 如果用户点击应用程序的名称，我们打开消息应用商店和存储区中选择的应用程序。
 
-消息应用扩展是类似于现有 iOS 应用，开发人员是熟悉创建，并且它们将有权访问所有标准框架和一个标准的 iOS 应用的功能。 例如:
+消息应用扩展是类似于现有 iOS 应用，开发人员是熟悉创建，并且它们将有权访问所有标准框架和一个标准的 iOS 应用的功能。 例如：
 
 - 他们有权应用内购买。
 - 它们有权访问 Apple Pay。
@@ -87,7 +87,7 @@ _本文演示如何在 Xamarin.iOS 解决方案与邮件应用集成并向用户
 - 映像不能小于 100 x 100 点或更大，它 206 x 206 指向。
 
 > [!IMPORTANT]
-> **注意：**不干胶标签映像应始终提供在`@3x`300 x 300 到 618 x 618 像素范围内的解决方法。 系统将自动生成`@2x`和`@1x`在根据需要运行时的版本。
+> 不干胶标签映像应始终提供在`@3x`300 x 300 到 618 x 618 像素范围内的解决方法。 系统将自动生成`@2x`和`@1x`在根据需要运行时的版本。
 
 Apple 提供的建议测试针对各种不同 （如空白、 黑色、 红色、 黄色和多颜色） 的彩色的背景和超过照片不干胶标签图像资产，以确保它们在所有可能的情况下显示最佳。
 
@@ -703,7 +703,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 }
 ``` 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖与集成的 Xamarin.iOS 解决方案中包括消息应用扩展**消息**应用程序和向用户存在新功能。 它涵盖使用扩展发送文本、 标签、 媒体文件和交互式消息。
 

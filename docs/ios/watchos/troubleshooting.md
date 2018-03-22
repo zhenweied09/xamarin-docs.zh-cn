@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 故障排除
 
@@ -33,13 +33,6 @@ ms.lasthandoff: 03/09/2018
 ### <a name="general"></a>常规
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-    in the current release. You should create an **Archive** in Visual Studio for Mac
-    and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-    is not currently supported (but will be a future release). Refer to the
-    [deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - 适用于 Mac 的 Visual Studio 的早期版本不正确地显示之一**AppleCompanionSettings**图标为 88 x 88 像素; 这会导致**缺少图标错误**如果你尝试将提交到应用程序存储区。
     此图标应为 87 x 87 像素 (29 单位 **@3x**  Retina 屏幕)。 无法为 Mac-编辑在 Xcode 中的图像资产解决此问题在 Visual Studio 中，或手动编辑**Contents.json**文件 (以匹配[此示例](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132))。
@@ -47,14 +40,6 @@ ms.lasthandoff: 03/09/2018
 - 如果监视扩展项目**Info.plist > WKApp 捆绑 ID**不[正确设置](~/ios/watchos/get-started/project-references.md)以匹配 Watch 应用**捆绑 ID**，调试器将无法进行连接和视觉适用于 Mac 的 studio 将等待消息*"正在等待调试器连接"*。
 
 - 中支持调试**通知**模式但无法保证其准确性。 重试有时会起作用。 确认 Watch 应用**Info.plist** `WKCompanionAppBundleIdentifier`设置为相匹配的 iOS 父/容器应用的捆绑标识符 (即。 在 iPhone 运行的一个)。
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-    be an issue with the iOS Simulator hanging when trying to
-    install an app that has changed. Xcode release notes (beta 4)
-    includes a similar known issue:
-    If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - iOS 设计器不显示为快速或通知接口控制器的入口点箭头。
 
@@ -69,15 +54,6 @@ ms.lasthandoff: 03/09/2018
 ### <a name="visual-studio"></a>Visual Studio
 
 IOS 设计器支持监视工具包*需要*解决方案以正确配置。 如果未设置项目引用 (请参阅[如何设置引用](~/ios/watchos/get-started/project-references.md)) 然后设计图面将无法正常工作。
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-    starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-    and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-    Visual Studio for Mac and Xcode on your Mac Build Host.
-    -->
 
 <a name="noalpha" />
 
@@ -109,11 +85,10 @@ with an alpha channel. Icons should not have an alpha channel.
 ## <a name="manually-adding-interface-controller-files"></a>手动将接口控制器文件添加
 
 > [!IMPORTANT]
-> Xamarin 的监视包支持包括设计监视情节提要的 iOS 设计器中 （在 Visual Studio for Mac 和 Visual Studio） 中，不需要下面所述的步骤。 只需为接口控制器的类名称在 Visual Studio for Mac 属性填充和 C# 代码文件将自动创建。
+> Xamarin 的 WatchKit 支持包括设计监视情节提要的 iOS 设计器中 （在 Visual Studio for Mac 和 Visual Studio） 中，不需要下面所述的步骤。 只需为接口控制器的类名称在 Visual Studio for Mac 属性填充和 C# 代码文件将自动创建。
 
 
 *如果*正在使用 Xcode 接口生成器，请按照这些步骤创建您监视的应用程序的新接口控制器并启用与 Xcode 同步，以使容器和操作均在 C# 中可用：
-
 
 1. 打开 watch 应用**Interface.storyboard**中**Xcode 接口生成器**。
     
@@ -256,7 +231,7 @@ with an alpha channel. Icons should not have an alpha channel.
 主应用捆绑包的完整路径*的 iOS 应用程序包含的监视应用程序和扩展*。
 
 > [!NOTE]
-> *注意：*你需要提供指向*iPhone 应用程序.app 文件*，即一个，将部署到 iOS 模拟器和包含的监视扩展和 watch 应用。
+> 你需要提供指向*iPhone 应用程序.app 文件*，即一个，将部署到 iOS 模拟器和包含的监视扩展和 watch 应用。
 
 示例:
 

@@ -6,11 +6,11 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: eb188abb3e757f6f66af7758ced311ae1236d3ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 530abec733ec1d842559bf9c898217a8e45465aa
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>在 Android 上的故障排除 Xamarin 工作簿
 
@@ -25,7 +25,8 @@ ms.lasthandoff: 02/27/2018
 
 请阅读[我们的文档上设置 Android 仿真程序][ android-emu]如果你不熟悉此过程。
 
-**注意：** 1.1 和更早版本的工作簿将重试 （和失败 ！） 到它们是否可用，使用 ARM 仿真程序。 若要解决此问题，启动 x86 仿真程序之前打开或创建一个 Android 工作簿所选。 工作簿将始终希望连接到正在运行的仿真程序中，只要它可兼容。
+> [!NOTE]
+> 工作簿 1.1 和更早版本将重试 （和失败 ！） 到使用 ARM 仿真程序它们是否可用。 若要解决此问题，启动 x86 仿真程序之前打开或创建一个 Android 工作簿所选。 工作簿将始终希望连接到正在运行的仿真程序中，只要它可兼容。
 
 ## <a name="workbooks-wont-load"></a>不会加载工作簿
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 02/27/2018
 
 首先，请查看仿真程序通过在仿真程序的 web 浏览器中测试的任何网站具有完全工作网络访问权限。
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-internet"></a>Visual Studio Android 仿真程序无法连接到 internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Visual Studio Android 仿真程序无法连接到 internet
 
 如果仿真程序不具有网络访问权限，你可能需要按照以下步骤来修复你的 HYPER-V 网络交换机。 如果你经常 Wi-fi 网络之间进行切换你可能需要定期重复此操作：
 

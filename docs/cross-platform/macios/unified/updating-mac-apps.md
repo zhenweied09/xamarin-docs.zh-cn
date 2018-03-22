@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 35665731fb0b8b669a850c06929dd951589e6bf6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 46118b5879589c963898ab7f60c61bd8e38f3900
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-existing-mac-apps"></a>更新现有的 Mac 应用程序
 
@@ -32,7 +32,7 @@ Xamarin 提供了为适用于 Mac 的 Visual Studio 和 Visual Studio 自动执�
 
 ## <a name="automated-updating"></a>自动更新
 
-后已修复警告，用于 Mac 或 Visual Studio 在 Visual Studio 中选择一个现有的 Mac 项目并选择**迁移到 Xamarin.Mac 统一 API**从**项目**菜单。 例如:
+后已修复警告，用于 Mac 或 Visual Studio 在 Visual Studio 中选择一个现有的 Mac 项目并选择**迁移到 Xamarin.Mac 统一 API**从**项目**菜单。 例如：
 
 ![](updating-mac-apps-images/beta-tool1.png "从项目菜单中选择迁移到 Xamarin.Mac 统一 API")
 
@@ -116,7 +116,7 @@ Xamarin 提供了为适用于 Mac 的 Visual Studio 和 Visual Studio 自动执�
 到那时，就像组件，你将需要切换有支持统一 Api 的版本到项目中包含任何 NuGet 包之后执行一个干净的生成。
 
 > [!IMPORTANT]
-> **注意：**如果窗体中有错误_"错误 3 不能在同一 Xamarin.Mac 项目中包含 monomac.dll 和 Xamarin.Mac.dll-Xamarin.Mac.dll 显式引用，而 monomac.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
+> 如果窗体中有错误_"错误 3 不能在同一 Xamarin.Mac 项目中包含 monomac.dll 和 Xamarin.Mac.dll-Xamarin.Mac.dll 显式引用，而 monomac.dll 引用的 xxx，版本 = 0.0.000，区域性 =neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
 
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Xamarin.Mac 应用启用 64 位版本
 

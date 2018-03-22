@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c72d0dd89593002dbb6ea8ac9369666b811f3a73
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -79,7 +79,7 @@ Section
 
 你将需要确保静态任何第三方 (`.a`) 正在使用的库生成对 tvOS 库 （而不是 iOS 库） 和它们还包括 bitcode 信息。
 
-应用程序或库，包括有效 bitcode 程序`size`将大于 1。 在某些情况下，库可以具有 bitcode 标记中，但不包含有效 bitcode 其中。 例如:
+应用程序或库，包括有效 bitcode 程序`size`将大于 1。 在某些情况下，库可以具有 bitcode 标记中，但不包含有效 bitcode 其中。 例如：
 
 **无效的 Bitcode**
 
@@ -173,7 +173,7 @@ _无效捆绑 – GameController framework 使用的 Apple TV 应用必须在应
 ```
 
 > [!IMPORTANT]
-> **注意：**蓝牙游戏控制器最终用户可能会使可选购买，您的应用程序不能强制用户在购买一个。 如果你的应用程序支持游戏控制器，它还必须支持 Siri 远程，以便游戏已由 Apple TV 的所有用户使用。
+> 蓝牙游戏控制器最终用户可能会使可选购买，您的应用程序不能强制用户在购买一个。 如果你的应用程序支持游戏控制器，它还必须支持 Siri 远程，以便游戏已由 Apple TV 的所有用户使用。
 
 有关详细信息，请参阅我们[使用游戏控制器](~/ios/tvos/platform/remote-bluetooth.md#Working-with-Game-Controllers)一部分我们[Siri 远程和蓝牙控制器](~/ios/tvos/platform/remote-bluetooth.md)文档。
 

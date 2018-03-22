@@ -7,12 +7,12 @@ ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/21/2018
+ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -56,10 +56,10 @@ _ListView 是重要的 Android 应用程序; UI 组件它用于无处不在从�
 
 此文件定义将被放入每个项的布局[ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/)。
 
-打开`HelloListView.cs`并使扩展的类[ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (而不是[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
+打开`MainActivity.cs`和修改类，以扩展[ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (而不是[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
 
 ```csharp
-public class HelloListView : ListActivity
+public class MainActivity : ListActivity
 {
 ```
 
@@ -74,9 +74,9 @@ protected override void OnCreate (Bundle bundle)
 
     ListView.TextFilterEnabled = true;
 
-    ListView.ItemClick += delegate (object sender, ItemEventArgs args) {
-        // When clicked, show a toast with the TextView text
-        Toast.MakeText (Application, ((TextView)args.View).Text, ToastLength.Short).Show ();
+    ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+    {
+        Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Short).Show();
     };
 }
 ```
@@ -93,7 +93,12 @@ protected override void OnCreate (Bundle bundle)
 你可以使用而不是定义你自己布局文件平台提供的列表项设计[ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/)。
 例如，尝试使用`Android.Resource.Layout.SimpleListItem1`而不是`Resource.Layout.list_item`。
 
-后[ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))方法，添加的字符串数组：
+添加以下`using`语句：
+
+```csharp
+using System;
+```
+接下来，将下面的字符串数组添加为成员`MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -145,22 +150,23 @@ static readonly string[] countries = new String[] {
 
 运行该应用程序。 你可以向下滚动列表中，或键入以筛选，然后单击要看到一条消息的项。 将显示如下所示的内容：
 
-[![与国家/地区名称的 ListView 示例屏幕截图](images/helloviews6.png)](images/helloviews6.png#lightbox)
+[![与国家/地区名称的 ListView 示例屏幕截图](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
-请注意，使用硬编码字符串数组不是最佳的设计做法。 一个用于在为简单起见，本教程演示[ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/)小组件。 更好的做法是引用一个字符串数组，包含所定义的外部资源，如`string-array`项目中的资源**Resources/Values/Strings.xml**文件。 例如:
+请注意，使用硬编码字符串数组不是最佳的设计做法。 一个用于在为简单起见，本教程演示[ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/)小组件。 更好的做法是引用一个字符串数组，包含所定义的外部资源，如`string-array`项目中的资源**Resources/Values/Strings.xml**文件。 例如：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="countries_array">
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-    </string-array>
+  <string name="app_name">HelloListView</string>
+  <string-array name="countries_array">
+    <item>Bahrain</item>
+    <item>Bangladesh</item>
+    <item>Barbados</item>
+    <item>Belarus</item>
+    <item>Belgium</item>
+    <item>Belize</item>
+    <item>Benin</item>
+  </string-array>
 </resources>
 ```
 
@@ -170,6 +176,9 @@ static readonly string[] countries = new String[] {
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+运行该应用程序。 将显示如下所示的内容：
+
+[![示例的屏幕截图 ListView 的名称的较小列表](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 
 ## <a name="going-further-with-listview"></a>继续与 ListView
@@ -198,7 +207,7 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 -   [ListView 和活动生命周期](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这组主题引入`ListView`并提供如何使用内置的功能的一些示例`ListActivity`。 它讨论的自定义实现`ListView`允许彩色布局，并使用 SQLite 数据库，并简要接触到了活动生命周期的相关性你`ListView`实现。
 

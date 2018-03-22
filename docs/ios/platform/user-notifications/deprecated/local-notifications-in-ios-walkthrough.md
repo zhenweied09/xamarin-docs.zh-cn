@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 72a66fae7a1d4554643c1b52796256cc0b3dbd31
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 846b292aed73a4980f4ce711ecefe4382fa7a321
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>演练-在 Xamarin.iOS 中使用本地通知
 
 _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地通知。它将演示创建和发布将弹出警报时接收的应用程序的通知的基础知识。_
 
 > [!IMPORTANT]
-> **注意：**此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
+> 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
 
 ## <a name="walkthrough"></a>演练
 
@@ -118,7 +118,7 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
 
     ![](local-notifications-in-ios-walkthrough-images/image0.png "确认能够发送通知") ![ ](local-notifications-in-ios-walkthrough-images/image1.png "添加通知按钮") ![ ](local-notifications-in-ios-walkthrough-images/image2.png "通知警报对话框")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练演示了如何使用各种 API 创建和发布在 iOS 中的通知。 它还演示了如何使用以向用户提供一些应用程序特定反馈的徽章更新应用程序图标。
 

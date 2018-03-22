@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0f59e8f5e732a45f7e6148a08de80fffc56dbb26
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-controllers"></a>使用导航控制器
 
@@ -25,7 +25,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 添加到的标题 （即会显示在中心），在导航栏可以包含一个或多个导航栏按钮 (`UIBarButtonItem`) 在左侧和右侧栏。
 
 > [!IMPORTANT]
-> **注意：**导航栏是完全透明的默认值。 应格外小心以确保导航栏的内容对其下的内容保持可读。 例如，在表视图或集合中的内容滚动时它的下方。
+> 导航栏是默认情况下完全透明的。 应格外小心以确保导航栏的内容对其下的内容保持可读。 例如，在表视图或集合中的内容滚动时它的下方。
 
 
 
@@ -77,7 +77,7 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 -----
 
 > [!IMPORTANT]
-> **注意：**时可以将事件分配如`TouchUpInside`到 UI 元素 （例如 UIButton) iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action`事件时创建用户界面元素的对 tvOS 的事件处理程序。
+> 尽管可以将事件分配如`TouchUpInside`到 UI 元素 （例如 UIButton) iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action`事件时创建用户界面元素的对 tvOS 的事件处理程序。
 
 
 
@@ -139,7 +139,7 @@ namespace MySingleView
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和使用在 Xamarin.tvOS 应用内的导航栏。
 

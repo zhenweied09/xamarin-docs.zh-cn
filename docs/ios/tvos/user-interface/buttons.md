@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5da834e7e77fb8ab080c124bd09653bc840be3b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-buttons"></a>使用按钮
 
@@ -130,7 +130,7 @@ namespace tvRemote
 只要按钮的`Enabled`属性是`true`和不受另一个控件或视图，则它可进行使用 Siri 远程处于焦点项。 如果用户选择按钮并单击 Touch 图面，`ButtonPressed`将执行上面定义的操作。
 
 > [!IMPORTANT]
-> **注意：**虽然可能如分配操作，但`TouchUpInside`到`UIButton`iOS 时创建的设计器中**事件处理程序**，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 你应始终使用默认值**操作类型**创建时**操作**tvOS 用户界面元素。
+> 虽然可能如分配操作，但`TouchUpInside`到`UIButton`iOS 时创建的设计器中**事件处理程序**，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 你应始终使用默认值**操作类型**创建时**操作**tvOS 用户界面元素。
 
 
 
@@ -141,7 +141,7 @@ namespace tvRemote
 
 ## <a name="buttons-and-code"></a>按钮和代码
 
-（可选）`UIButton`可以在 C# 代码中创建并添加到 tvOS 应用的视图。 例如:
+（可选）`UIButton`可以在 C# 代码中创建并添加到 tvOS 应用的视图。 例如：
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -169,7 +169,7 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-然后，设置按钮的标题。 `UIButtons` 不同于大多数`UIKit`控件，都具有一种状态，因此你根本不能更改的标题，则必须更改它的给定`UIControlState`。 例如:
+然后，设置按钮的标题。 `UIButtons` 不同于大多数`UIKit`控件，都具有一种状态，因此你根本不能更改的标题，则必须更改它的给定`UIControlState`。 例如：
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -191,7 +191,7 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> **注意：**虽然可能如分配操作，但`TouchUpInside`到`UIButton`，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 始终应使用事件如**AllEvents**或**PrimaryActionTriggered**。
+> 虽然可能如分配操作，但`TouchUpInside`到`UIButton`，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 始终应使用事件如**AllEvents**或**PrimaryActionTriggered**。
 
 
 
@@ -206,19 +206,19 @@ tvOS 提供的几个属性`UIButton`可用来提供其标题并设置样式与�
 
 ### <a name="button-titles"></a>按钮标题
 
-正如我们所看到的更高版本，`UIButtons`不同于大多数`UIKit`控件，都具有一种状态，因此你根本不能更改的标题，则必须更改它的给定`UIControlState`。 例如:
+正如我们所看到的更高版本，`UIButtons`不同于大多数`UIKit`控件，都具有一种状态，因此你根本不能更改的标题，则必须更改它的给定`UIControlState`。 例如：
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-您可以设置标题颜色按钮使用`SetTitleColor`方法。 例如:
+您可以设置标题颜色按钮使用`SetTitleColor`方法。 例如：
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-并可以调整标题的卷影使用`SetTitleShadowColor`。 例如:
+并可以调整标题的卷影使用`SetTitleShadowColor`。 例如：
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -230,7 +230,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-此外，你可以为按钮的标题使用特性化的文本。 例如:
+此外，你可以为按钮的标题使用特性化的文本。 例如：
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -262,7 +262,7 @@ button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和使用 Xamarin.tvOS 应用内的按钮。 它介绍了如何使用 iOS 设计器中的按钮以及如何在 C# 代码中创建按钮。 最后，它还介绍了如何修改按钮的标题和更改其样式和外观。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2282a340811d9932f9df3a1343b22ffc35247e54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="workout-apps"></a>测验应用
 
@@ -472,7 +472,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 当应用程序收到运动暂停事件时，它应停止收集数据，直到用户将恢复运动，收到运动恢复事件。 应用程序应用程序不应暂停的锻炼会话中对运动暂停事件作出响应。
 
 > [!IMPORTANT]
-> **注意：** RunningWorkout 活动类型仅支持的运动暂停和运动恢复事件 (`HKWorkoutActivityType.Running`)。
+> RunningWorkout 活动类型仅支持的运动暂停和运动恢复事件 (`HKWorkoutActivityType.Running`)。
 
 同样，可以通过重写处理这些事件`DidGenerateEvent`方法`HKWorkoutSessionDelegate`:
 
@@ -649,7 +649,7 @@ private void SaveWorkoutSamples (HKWorkout workout)
 3. 在测验配置中使用传递，watchOS 3 应用程序将启动新的锻炼会话 (`HKWorkoutSession`)。
 
 > [!IMPORTANT]
-> **注意：**使父 iPhone 应用程序，以在 Apple Watch 上启动测验，watchOS 3 应用程序必须具有启用的后台运行。 请参阅[启用后台运行](#Enabling-Background-Running)上面有关详细信息。
+> 为了使父 iPhone 应用程序，以在 Apple Watch 上启动测验，watchOS 3 应用程序必须具有后台运行启用。 请参阅[启用后台运行](#Enabling-Background-Running)上面有关详细信息。
 
 此过程是直接 watchOS 3 应用程序以开始测验会话的过程非常相似。 在 iPhone 上使用下面的代码：
 
@@ -764,7 +764,7 @@ public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutC
 3. **watchOS 3 `OutdoorRunDelegate.cs`**  -自定义`HKWorkoutSessionDelegate`来为锻炼处理事件。
 
 > [!IMPORTANT]
-> **注意：**下列部分中所示的代码仅包含实现提供给 watchOS 3 中的锻炼应用新的增强功能所需的部分。 所有支持的代码，并且要显示和更新 UI 的代码不包含，但可以轻松创建按照其他 watchOS 文档。<p/>
+> 下列部分中所示的代码仅包括实现提供给 watchOS 3 中的锻炼应用新的增强功能所需的部分。 所有支持的代码，并且要显示和更新 UI 的代码不包含，但可以轻松创建按照其他 watchOS 文档。<p/>
 
 
 
@@ -1254,7 +1254,7 @@ Apple 提供的建议使用下列最佳方案设计和实现中 watchOS 3 和 iO
 - 允许应用从其他源 （如其他第三方应用程序） 中其历史数据视图中显示测验。
 - 确保应用程序不显示删除锻炼历史数据中。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖增强功能 Apple 已针对锻炼应用 watchOS 3 以及如何在 Xamarin 实现它们。
 

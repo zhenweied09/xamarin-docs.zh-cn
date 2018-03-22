@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7b3a7a2347ed93aff5cddc6f15e25028c61a53d8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>使用选项卡栏控制器
 
@@ -113,7 +113,7 @@ Apple 具有用于处理选项卡条以下建议：
 -----
 
 > [!IMPORTANT]
-> **注意：**时可以将事件分配如`TouchUpInside`到 UI 元素 (如`UIButton`) 在 iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action `事件时创建用户界面元素的对 tvOS 的事件处理程序。
+> 尽管可以将事件分配如`TouchUpInside`到 UI 元素 (如`UIButton`) 在 iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action `事件时创建用户界面元素的对 tvOS 的事件处理程序。
 
 有关使用情节提要的详细信息，请参阅我们[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)。 
 
@@ -143,7 +143,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。
 

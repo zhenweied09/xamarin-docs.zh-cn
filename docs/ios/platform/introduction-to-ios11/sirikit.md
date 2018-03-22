@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 此类必须继承自`INExtension`，因为示例转到处理列表和说明意向，它还会实现`IINNotebookDomainHandling`。
 
 > [!NOTE]
-> **有关命名注意：**没有约定在接口的.NET 以带有大写字母作为前缀`I`，其中从 iOS SDK 绑定协议时 Xamarin 遵循。
->
-> Xamarin 还会保留从 iOS 的类型名称，Apple 将前两个字符用在类型名称以反映具有类型属于 framework。
->
-> 有关`Intents`框架中，将类型前缀为`IN*`（如。 `INExtension`) 但它们是_不_接口。
-> 它还会依照，协议 （就在 C# 中的接口） 结束，两个`I`s，如`IINAddTasksIntentHandling`。
+> - 接口的.NET 带有大写字母前缀中没有约定`I`，其中从 iOS SDK 绑定协议时 Xamarin 遵循。
+> - Xamarin 还会保留从 iOS 的类型名称，Apple 将前两个字符用在类型名称以反映具有类型属于 framework。
+> - 有关`Intents`框架中，将类型前缀为`IN*`（如。 `INExtension`) 但它们是_不_接口。
+> - 它还会依照，协议 （就在 C# 中的接口） 结束，两个`I`s，如`IINAddTasksIntentHandling`。
 
 #### <a name="handling-intents"></a>处理颜色
 

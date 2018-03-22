@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a5dbd65cc32ed63c0fa6f8abe3a13ffee4e9df63
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="enhanced-user-notifications"></a>增强型的用户通知
 
@@ -276,7 +276,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>处理前景应用程序通知
 
-新到 iOS 10，应用程序可以通知以不同方式处理在前台，并且在触发通知。 通过提供`UNUserNotificationCenterDelegate`和实现`UserNotificationCenter`方法，该应用程序可以接管负责显示通知。 例如:
+新到 iOS 10，应用程序可以通知以不同方式处理在前台，并且在触发通知。 通过提供`UNUserNotificationCenterDelegate`和实现`UserNotificationCenter`方法，该应用程序可以接管负责显示通知。 例如：
 
 ```csharp
 using System;
@@ -433,7 +433,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 创建并使用系统注册后的一组自定义操作和类别，可以从本地或远程通知向他们显示。
 
-对于远程通知设置`category`上面创建的类别之一匹配的远程通知负载中。 例如:
+对于远程通知设置`category`上面创建的类别之一匹配的远程通知负载中。 例如：
 
 ```csharp
 {
@@ -444,7 +444,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-对于本地通知设置`CategoryIdentifier`属性`UNMutableNotificationContent`对象。 例如:
+对于本地通知设置`CategoryIdentifier`属性`UNMutableNotificationContent`对象。 例如：
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -460,7 +460,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>处理取消操作
 
-如上面所述，关闭操作在用户关闭通知可以发送到应用。 由于这不是标准的操作，将需要时将创建类别设置选项。 例如:
+如上面所述，关闭操作在用户关闭通知可以发送到应用。 由于这不是标准的操作，将需要时将创建类别设置选项。 例如：
 
 ```csharp
 var categoryID = "message";
@@ -473,7 +473,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>处理操作响应
 
-当用户交互时使用的自定义操作和上面创建的类别时，应用程序需要以完成请求的任务。 这可通过提供`UNUserNotificationCenterDelegate`和实现`UserNotificationCenter`方法。 例如:
+当用户交互时使用的自定义操作和上面创建的类别时，应用程序需要以完成请求的任务。 这可通过提供`UNUserNotificationCenterDelegate`和实现`UserNotificationCenter`方法。 例如：
 
 ```csharp
 using System;
@@ -558,9 +558,9 @@ namespace MonkeyNotification
 -----
 
 > [!IMPORTANT]
-> 注意： 服务扩展的捆绑标识符应与匹配的主应用捆绑标识符`.appnameserviceextension`追加到末尾。 例如，如果主应用程序具有的捆绑标识符`com.xamarin.monkeynotify`，服务扩展应具有的捆绑标识符`com.xamarin.monkeynotify.monkeynotifyserviceextension`。 这应会自动设置时将扩展添加到解决方案。 
+> 服务扩展的捆绑标识符应与使用主应用程序的捆绑标识符匹配`.appnameserviceextension`追加到末尾。 例如，如果主应用程序具有的捆绑标识符`com.xamarin.monkeynotify`，服务扩展应具有的捆绑标识符`com.xamarin.monkeynotify.monkeynotifyserviceextension`。 这应会自动设置时将扩展添加到解决方案。 
 
-在需要进行修改，以提供所需的功能的通知服务扩展中没有一个主类。 例如:
+在需要进行修改，以提供所需的功能的通知服务扩展中没有一个主类。 例如：
 
 ```csharp
 using System;
@@ -615,7 +615,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>触发一个服务扩展
 
-扩展名为服务创建和传递与该应用程序，可以通过修改远程发送到设备的通知负载触发它。 例如:
+扩展名为服务创建和传递与该应用程序，可以通过修改远程发送到设备的通知负载触发它。 例如：
 
 ```csharp
 {
@@ -660,7 +660,7 @@ namespace myApp {
 
 此代码解密从加密的内容`encrypted-content`密钥，创建一个新`UNMutableNotificationContent`，设置`Body`属性解密的内容并使用`contentHandler`以向用户显示通知。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖所有用户通知已通过 iOS 10 得到了增强的方式。 它提供新的用户通知框架以及如何在 Xamarin.iOS 应用程序或应用扩展使用它。
 

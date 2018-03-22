@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 1fea2e2f7210e282fa1e27ad3a1203da2216791e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c636e706e702afa23c36a3d6c618f3e02c2582f1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-live-player"></a>Xamarin Live Player
 
@@ -20,8 +20,8 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
 [![实时的 Xamarin Player： 代码、 扫描、 测试](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. 启用*实时的 Xamarin Player*中**首选项**，则可以选择从**设备**列表。
-2. 调试和运行，然后扫描 QRCodeto 对你的设备。
+1. 启用*实时的 Xamarin Player*中**首选项**，然后选择你的设备从**设备**列表。
+2. 调试和运行，然后扫描 QR 代码以对你的设备。
 3. 应用程序在你的手机或平板电脑上运行权限。
 
 ## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin 实时播放器安装程序](install.md)

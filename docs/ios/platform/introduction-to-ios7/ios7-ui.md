@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 用户界面概述
 
@@ -173,7 +173,7 @@ public override void ViewDidLayoutSubviews ()
 该视图已添加到层次结构，因此尝试读取后，动态生成的偏移量值`TopLayoutGuide`和`BottomLayoutGuide`中值`ViewDidLoad`将返回 0。 该视图加载之后-例如，在计算值`ViewDidLayoutSubviews`。
 
 > [!IMPORTANT]
-> **请注意**:`TopLayoutGuide`和`BottomLayoutGuide`为了支持新的安全区域布局 iOS 11 中已弃用。 Apple 具有所述，使用安全区域是与 iOS 版本早于 iOS 11 兼容。 有关详细信息，请参阅[更新应用程序以 iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen)指南。
+> `TopLayoutGuide` 和`BottomLayoutGuide`为了支持新的安全区域布局 iOS 11 中已弃用。 Apple 具有所述，使用安全区域是与 iOS 版本早于 iOS 11 兼容。 有关详细信息，请参阅[更新应用程序以 iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen)指南。
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,14 +252,14 @@ public override bool PrefersStatusBarHidden ()
 色调颜色可以应用于图像以及当`RenderingMode`设置为`UIImageRenderingMode.AlwaysTemplate`。
 
 > [!IMPORTANT]
-> 注意： 色调颜色不能通过设置`UIAppearance`。
+> 无法使用设置色调颜色`UIAppearance`。
 
 
 ### <a name="dynamic-type"></a>动态类型
 
 在 iOS 7 中，用户可以指定系统设置中的文本大小。 使用动态类型、 字体将进行动态调整以显示良好而不考虑大小。 `UIFont.PreferredFontForTextStyle` 应该用于获取的用户控制的大小进行了优化的字体。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何对用户界面元素在 iOS 7 中的更改。 它检查多个 UIKit，突出显示这两个 visual 更改中的视图和控件所做的更改以及将更改为相关的 Api。 最后，它引入了新的 Api 来使用全屏显示内容、 新的色调颜色支持和动态类型。
 

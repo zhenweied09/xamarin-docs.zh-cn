@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: ad057f55ed69174bef55c0364e5e7ea30bae2789
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7e9d8768969affdbaf1172c59eaa5fc1e64460e8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="device-styles"></a>设备样式
 
@@ -46,7 +46,7 @@ _Xamarin.Forms 包括六个动态样式，称为设备样式，Device.Styles 类
             <Label Text="Title style"
               Style="{DynamicResource TitleStyle}" />
             <Label Text="Subtitle text style"
-              Style="{DynamicResource SubtitleTextStyle}" />
+              Style="{DynamicResource SubtitleStyle}" />
             <Label Text="Body style"
               Style="{DynamicResource BodyStyle}" />
             <Label Text="Caption style"
@@ -121,7 +121,7 @@ public class DeviceStylesPageCS : ContentPage
 
 ![](device-images/maximum-size.png "每个平台上的可访问的大型设备样式")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 包括六个*动态*样式，称为*设备*样式，在[ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)类。 所有六个样式只能应用于[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例。
 

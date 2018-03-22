@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 1ca537ef47f48886483e99bb33b0d524d16593f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39da41b7fb5118a16f2b2953f8fcb0a5b72aa819
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="displaying-an-image"></a>显示图像
 
@@ -95,7 +95,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> **请注意**： 如果分配给一个映像集的映像未显示正确，请确保与使用正确的 filename`FromBundle`方法 (**映像设置**而不是父级**资产目录**名称)。 对于 PNG 图像，`.png`扩展，则可以省略。 有关其他映像的格式，此扩展是必需 （如。 `PurpleMonkey.jpg`）格式模式中出现的位置生成。
+> 如果分配给一个映像集的映像未显示正确，请确保与使用正确的 filename`FromBundle`方法 (**映像设置**而不是父级**资产目录**名称)。 对于 PNG 图像，`.png`扩展，则可以省略。 有关其他映像的格式，此扩展是必需 （如。 `PurpleMonkey.jpg`）格式模式中出现的位置生成。
 
 <a name="Using-Vector-Images-in-Asset-Catalogs" />
 
@@ -231,7 +231,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage");
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-对于任何其他映像格式，包括名称的扩展。 例如:
+对于任何其他映像格式，包括名称的扩展。 例如：
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");

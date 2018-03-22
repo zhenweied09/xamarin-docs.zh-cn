@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>与 iOS 的 Xamarin 设计器的自动数据布局
 
@@ -22,7 +22,7 @@ _本指南介绍 iOS 自动布局和新约束工作流 iOS Xamarin 设计器中�
 
 在本指南中，我们引入约束以及如何在 Xamarin iOS 设计器中使用它们。 本指南不涉及以编程方式使用约束。 有关以编程方式使用自动布局的信息，请参阅[Apple 文档](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html)。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Xamarin 设计器中为 iOS 是适用于 Visual Studio 2015 和自 2017 年中的 Mac 在 Windows 上的 Visual Studio 中提供。
 
@@ -88,7 +88,7 @@ IOS 设计器工具提供用于操作设计图面上的元素的控件的两种�
 在其他两个按钮，请注意三个虚线绿色线条。 绿色几行指明*拖放区域*，或向其我们可以将限制其他元素的属性。 在上面的屏幕截图，其他两个按钮提供 3 垂直拖放区域 (*底部*， *centerY*，*顶部*) 若要将限制我们的按钮。 在视图的顶部绿色虚线意味着视图控制器提供顶部的视图，约束和实心绿色的复选框则表示视图控制器提供下面顶部布局指南的约束。
 
 > [!IMPORTANT]
-> **请注意**： 布局参考线是特殊类型的约束的目标，使我们能够创建顶部和底部考虑系统条，如状态栏或工具栏是否存在的约束。 主要用途之一是具有 iOS 6 和 iOS 7 之间兼容的应用程序，因为最新版本具有状态栏下方延伸的容器视图。 有关顶级布局指南的详细信息，请参阅[Apple 文档](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)。
+> 布局参考线是特殊类型的约束的目标，使我们能够创建顶部和底部考虑系统条，如状态栏或工具栏存在的约束。 主要用途之一是具有 iOS 6 和 iOS 7 之间兼容的应用程序，因为最新版本具有状态栏下方延伸的容器视图。 有关顶级布局指南的详细信息，请参阅[Apple 文档](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)。
 
 
 
@@ -203,7 +203,7 @@ ViewInfoHeight.Constant = 0;
 
 ### <a name="animating-constraint-changes"></a>约束更改进行动画处理
 
-除了修改约束属性，可以使用核心动画更改视图的约束进行动画处理。 例如:
+除了修改约束属性，可以使用核心动画更改视图的约束进行动画处理。 例如：
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -217,7 +217,7 @@ UIView.CommitAnimations();
 
 此处的关键调用`LayoutIfNeeded`父视图在动画块内部的方法。 这将告知视图后，若要绘制的动画的位置或大小更改每个"框架"。 没有此行，视图会快速跳到最终版本而无需进行动画处理。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南引入 iOS 自动 （或"自适应"） 布局和约束以的设计图面上的元素之间的关系的数学表示形式的概念。 它描述如何在使用 iOS 设计器中启用自动数据布局**约束工具栏**，和编辑单独在设计图面上的约束。 接下来，它解释如何三个常见的约束问题进行疑难解答。 最后，它还介绍了如何修改在代码中的约束。
 

@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 任务
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 注册过程对具有唯一标识符，任务`taskID`，然后将其包装在匹配中和`BeginBackgroundTask`和`EndBackgroundTask`调用。 若要生成标识符，我们使调用`BeginBackgroundTask`方法`UIApplication`对象，以及然后启动长时间运行的任务，通常新线程上。 在任务完成后，我们调用`EndBackgroundTask`并传入相同的标识符。 这是重要的因为 iOS 将终止应用程序，如果`BeginBackgroundTask`调用时，没有匹配`EndBackgroundTask`。
 
 > [!IMPORTANT]
-> **请注意**： 背景安全任务可以运行在主线程或后台线程，具体取决于应用程序的需求上。
+> 后台安全任务可以运行在主线程或后台线程，具体取决于应用程序的需求上。
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>在 DidEnterBackground 过程中执行任务
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 首先，我们重写`DidEnterBackground`中的方法`AppDelegate`，其中我们注册通过我们任务`BeginBackgroundTask`正如我们在前面的示例做。 接下来，我们生成新线程和执行我们长时间运行的任务。 请注意，`EndBackgroundTask`现在从进行调用内长时间运行的任务，因为`DidEnterBackground`方法将具有已返回。
 
 > [!IMPORTANT]
-> **请注意**: iOS 使用[监视程序机制](http://developer.apple.com/library/ios/qa/qa1693/_index.html)以确保应用程序的 UI 保持响应性。 应用程序花费太多时间`DidEnterBackground`将变得不响应用户界面中。 手动启动任务在后台运行允许`DidEnterBackground`返回及时，使 UI 保持响应状态，并阻止监视器终止应用程序中。
+> iOS 使用[监视程序机制](http://developer.apple.com/library/ios/qa/qa1693/_index.html)以确保应用程序的 UI 保持响应性。 应用程序花费太多时间`DidEnterBackground`将变得不响应用户界面中。 手动启动任务在后台运行允许`DidEnterBackground`返回及时，使 UI 保持响应状态，并阻止监视器终止应用程序中。
 
 
 ## <a name="handling-background-task-time-limits"></a>处理后台任务时间限制
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **请注意**： 避免进行调用来更新 UI。 iOS 6 符合代码中的背景，如 iOS 6 不支持背景 UI 更新和将终止应用程序。
+> 避免进行调用来更新 UI。 iOS 6 符合代码中的背景，如 iOS 6 不支持背景 UI 更新和将终止应用程序。
 
 
 `NSURLSession` API 包括一套丰富的功能来处理身份验证、 管理失败的传输和报告客户端-但不是服务器端的错误。 它有助于在任务中中断 iOS 7，在运行时引入的桥，并还提供对传输大型文件快速且可靠地支持。 下一节介绍了此第二个功能。

@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 8e90bc3974247066a714cb44b6648a83cdb58cf5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="push-notifications-in-ios"></a>在 iOS 中的推送通知
 
 _本部分将介绍在 iOS 中的推送通知。它引入了 Apple 推送通知网关服务和它到 iOS 应用程序的发布通知中所扮演的角色。它将说明如何创建启用推送通知和讨论所需的安全证书。最后本部分将讨论某些应用程序服务器必须执行能够跟踪客户端移动设备的管理任务。_
 
 > [!IMPORTANT]
-> **注意：**此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
+> 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
 
 推送通知应保持简短，并且只包含足够的数据用于通知移动应用程序，它应更新，请联系服务器应用程序。 例如，当新的电子邮件到达时，服务器应用程序将仅通知的移动应用程序收到了新的电子邮件。 通知将不会包含新的电子邮件本身。 移动应用程序便可检索新的电子邮件从服务器时适合
 
@@ -30,7 +30,7 @@ _本部分将介绍在 iOS 中的推送通知。它引入了 Apple 推送通知�
 
 Apple 维护的 APNS 的两种环境：*沙盒*和*生产*环境。 沙盒环境主要用于测试的开发阶段和可以在找到`gateway.sandbox.push.apple.com`TCP 端口 2195年。 生产环境并表示用于应用程序已部署并且可以位于`gateway.push.apple.com`TCP 端口 2195年。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 推送通知必须遵守规定的 APNS 的体系结构的以下规则：
 
@@ -177,7 +177,7 @@ APNS 用于提供*反馈服务*-通过创建以发送推送通知，并将备份
 >
 > 停止将推送通知，直到设备与更高版本的时间戳与你的提供程序注册令牌。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本部分介绍针对在 iOS 中的推送通知的关键概念。 它所述的 Apple 推送通知网关服务 (APNS) 的角色。 它然后涵盖创建和使用对 APNS 至关重要的安全证书。 本文档讨论如何使用应用程序服务器已完成的最后*反馈服务*停止跟踪过期的设备令牌。
 

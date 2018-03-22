@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 34f2e249c5474997b2e2e179285f455c425739cf
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="wide-color"></a>广泛的颜色
 
@@ -191,7 +191,7 @@ Apple 具有的文件格式和在应用程序的广泛的颜色映像内容中�
 - 将图像资产导出为具有嵌入的"显示 P3"ICC 配置文件的 16 位 PNG 文件。
 
 > [!IMPORTANT]
-> **注意：**使用**保存用于 Web**或**导出资产**功能位于编辑软件的最常用映像_不将_适合广泛的颜色图像自这些功能尚未更新以尚未支持所需的文件格式规范。
+> 使用**保存用于 Web**或**导出资产**功能位于编辑软件的最常用映像_不将_适合广泛的颜色映像，因为这些功能尚未更新以尚未支持所需的文件格式规范。
 
 ### <a name="supporting-wide-color-with-asset-catalogs"></a>支持广泛的颜色与资产目录
 
@@ -330,7 +330,7 @@ public UIImage DrawWideColorImage ()
 
 ### <a name="drawing-wide-color-in-macos"></a>在 macOS 中绘制广泛的颜色
 
-`NSImage`类已得到扩展在 macOS Sierra 以支持广泛的颜色的图像的绘制。 例如:
+`NSImage`类已得到扩展在 macOS Sierra 以支持广泛的颜色的图像的绘制。 例如：
 
 ```csharp
 var size = CGSize(250,250);
@@ -354,7 +354,7 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 
 ### <a name="rendering-on-screen-in-ios"></a>在 iOS 中屏幕上呈现
 
-当应用程序需要在屏幕上在 iOS 中广泛的颜色呈现图像时，重写`Draw`方法`UIView`照常问题。 例如:
+当应用程序需要在屏幕上在 iOS 中广泛的颜色呈现图像时，重写`Draw`方法`UIView`照常问题。 例如：
 
 ```csharp
 using System;
@@ -396,7 +396,7 @@ namespace MonkeyTalk
 
 ### <a name="rendering-on-screen-in-macos"></a>在 macOS 屏幕上呈现
 
-当应用程序需要在屏幕上在 macOS 广泛的颜色呈现图像时，重写`DrawRect`方法`NSView`照常问题。 例如:
+当应用程序需要在屏幕上在 macOS 广泛的颜色呈现图像时，重写`DrawRect`方法`NSView`照常问题。 例如：
 
 ```csharp
 using System;
@@ -431,7 +431,7 @@ namespace MonkeyTalkMac
 - SixtyfourBitRgb
 - TwentyfourBitRgb
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖广泛的颜色以及它可能是实现并且在 Xamarin.iOS 或 Xamarin.Mac 应用中使用的方式。
 

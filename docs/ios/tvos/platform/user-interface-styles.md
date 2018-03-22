@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>新的用户界面样式
 
@@ -101,7 +101,7 @@ Light UI 主题是默认主题，并用任何现有的 tvOS 应用将仍采用�
 - TvOS 应用可以通过重写处理特征集合更改`TraitCollectionDidChange`方法`UIView`或`UIViewController`类。
 
 > [!IMPORTANT]
-> **注意：** Xamarin.tvOS 早期预览版中对 tvOS 10 不完全支持`UIUserInterfaceStyle`为`UITraitCollection`尚未。 将从未来版本中添加完整支持。
+> 无法完全支持 Xamarin.tvOS 早期预览版中对 tvOS 10`UIUserInterfaceStyle`为`UITraitCollection`尚未。 将从未来版本中添加完整支持。
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **注意：**遗憾的是，不完全支持对 tvOS 10 Xamarin.tvOS 预览`UIUserInterfaceStyle`为`UITraitCollection`，因此这种类型的自定义尚不可用。 将从未来版本中添加完整支持。
+> 遗憾的是，不完全支持对 tvOS 10 Xamarin.tvOS 预览`UIUserInterfaceStyle`为`UITraitCollection`，因此这种类型的自定义尚不可用。 将从未来版本中添加完整支持。
 
 <a name="Responding-to-Theme-Changes-Directly" />
 
@@ -132,7 +132,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 在开发人员需要的 UI 元素的外观的更深入地控制基于所选的用户界面主题，它们可以重写`TraitCollectionDidChange`方法`UIView`或`UIViewController`类。
 
-例如:
+例如：
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -150,7 +150,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 根据 tvOS 应用程序的设计，可能有的时间开发人员需要重写给定的用户界面元素的特征集合，并将其始终使用特定的用户界面主题。
 
-这可以使用`SetOverrideTraitCollection`方法`UIViewController`类。 例如:
+这可以使用`SetOverrideTraitCollection`方法`UIViewController`类。 例如：
 
 ```csharp
 // Create new trait and configure it
@@ -207,7 +207,7 @@ TvOS 10，可以设置应用的情节提要响应特征集合，并且许多 UI 
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖光和深色 UI 主题该 Apple 已添加到 tvOS 10 以及如何实现它们 Xamarin.tvOS 应用中。
 

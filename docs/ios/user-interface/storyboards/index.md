@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 85c05145ce2490468ac5d5fb9b8524853d46a9e3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-storyboards"></a>情节提要简介
 
@@ -60,7 +60,7 @@ A *Segue*，或*Segue 对象*，在 iOS 开发中使用来表示场景之间的�
 [![](images/16new.png "使用大小类操作 Segue 下拉列表中")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> **注意：** ctrl 键并单击使用 VMWare 为你的 Windows 虚拟机，如果映射为_右键单击_默认情况下的鼠标按钮。 若要创建 Segue，编辑你键盘的首选项通过**首选项** > **键盘和鼠标** > **鼠标快捷方式**并将重新映射你**辅助按钮**如下所示：
+> 如果使用 VMWare 为你的 Windows 虚拟机，按住 Ctrl 并单击映射为_右键单击_默认情况下的鼠标按钮。 若要创建 Segue，编辑你键盘的首选项通过**首选项** > **键盘和鼠标** > **鼠标快捷方式**并将重新映射你**辅助按钮**如下所示：
 > 
 > [![](images/image22.png "键盘和鼠标首选项设置")](images/image22.png#lightbox)
 > 

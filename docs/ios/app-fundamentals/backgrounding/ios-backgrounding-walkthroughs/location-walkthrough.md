@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b10894d6b18d78d682825000726c5ef2cbe5ba6b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-location"></a>演练-使用背景位置
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 03/12/2018
     - `AllowsBackgroundLocationUpdates` – 这是一个布尔值属性，可以设置为允许应用以接收位置更新时挂起的 iOS 9 中引入。
 
     > [!IMPORTANT]
-    > **警告**: iOS 8 （和更高版本） 还要求将项记入**Info.plist**文件以向用户授权请求的一部分。
+    > iOS 8 （和更高版本） 还要求将项记入**Info.plist**文件以向用户授权请求的一部分。
 
 1. 添加的键`NSLocationAlwaysUsageDescription`或`NSLocationWhenInUseUsageDescription`与将中的警报的请求位置数据的访问权限的用户显示的字符串。
 

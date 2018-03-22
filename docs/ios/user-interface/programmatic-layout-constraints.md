@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 774d6e6ecdb081650c6f008b1ac83c397f788d5b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="programmatic-layout-constraints"></a>以编程方式布局约束
 
@@ -43,7 +43,7 @@ _本指南介绍使用 iOS 自动布局约束在 C# 代码中而不是在 iOS �
 通过使用`NSLayoutAnchor`类，你具有 fluent 界面来创建基于受约束的用户界面项的定位点属性的约束。 例如，视图控制器的顶部和底部布局指导公开`TopAnchor`，`BottomAnchor`和`HeightAnchor`定位属性，而一个视图显示边缘、 中心、 大小和基线的属性。
 
 > [!IMPORTANT]
-> **注意：**定位点属性的标准集，除了 iOS 视图还包括`LayoutMarginsGuides`和`ReadableContentGuide`属性。 这些属性公开`UILayoutGuide`对象以便使用与视图的边距和可读内容指南分别。
+> 定位点属性的标准集，除了 iOS 视图还包括`LayoutMarginsGuides`和`ReadableContentGuide`属性。 这些属性公开`UILayoutGuide`对象以便使用与视图的边距和可读内容指南分别。
 
 布局定位点提供几种方法轻松读取、 compact 格式创建约束：
 

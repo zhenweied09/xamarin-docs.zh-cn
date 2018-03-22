@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="background-tasks"></a>后台任务
 
@@ -56,7 +56,7 @@ _使用新的后台任务 watchOS 3 以确保监视应用程序始终具有最�
 
 Apple 建议此任务的最有效地利用 （因为它是此类限制的应用到资源） 通过在按住放到它上面，直到应用程序已完成更新本身的过程。
 
-系统提供了这些任务通过调用新`HandleBackgroundTasks`方法`WKExtensionDelegate`委托。 例如:
+系统提供了这些任务通过调用新`HandleBackgroundTasks`方法`WKExtensionDelegate`委托。 例如：
 
 ```csharp
 using System;
@@ -143,7 +143,7 @@ watchOS 3 引入了应用程序可用于更新用户需要后如打开应用程�
 当应用程序将标记`WKSnapshotRefreshBackgroundTask`完成后，系统会自动使应用程序的 UI 的快照。
 
 > [!IMPORTANT]
-> **注意：**务必始终排定` WKSnapshotRefreshBackgroundTask`后应用程序接收到新的数据，并更新其用户界面或用户将无法看到已修改的信息。
+> 务必要始终排定` WKSnapshotRefreshBackgroundTask`后应用程序接收到新的数据，并更新其用户界面或用户将无法看到已修改的信息。
 
 
 
@@ -630,7 +630,7 @@ private void UpdateComplication ()
 最后一个用户运行的应用程序将被视为_最近使用过_应用并将占用中停靠的最后一个槽。 从这里，存在用户可以选择将其固定永久停靠。 像任何其他收藏应用程序用户具有已固定到停靠，将被视为最近使用过。
 
 > [!IMPORTANT]
-> **注意：**仅已添加到主页屏幕的应用将不会获得任何定期计划。 若要接收定期计划和背景更新，应用程序_必须_添加到停靠。
+> 该任务仅添加到主页屏幕的应用将不会获得任何定期计划。 若要接收定期计划和背景更新，应用程序_必须_添加到停靠。
 
 如本文前面所述，快照是在 watchOS 3 中非常重要，因为它们充当应用程序的预览和启动映像。 如果用户结算上的应用中停靠，它将展开到全屏显示、 输入前台并开始运行，因此它是命令性是最新的快照。
 
@@ -699,7 +699,7 @@ Apple 具有以下建议：
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖 Apple 已 watchOS 以及如何使用它们来跟踪 watch 应用最新的增强功能。 首先，涵盖的所有新后台任务 Apple 都增加 watchOS 3 中。 然后，则覆盖背景 API 生命周期和如何在 Xamarin watchOS 应用程序中实施后台任务。 最后，它涵盖如何计划的工作原理，并提供的一些最佳做法。
 

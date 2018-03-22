@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 69c4b25e17c31d57701f99e84f6f686c65dc7028
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="interactive-workbooks"></a>交互式工作簿
 
@@ -32,7 +32,7 @@ _使用工作簿包含 C# 代码进行试验，创建实时文档教学、 培�
 
 [ ![](workbook-images/inspector-0.6.0-repl-small.png "编辑窗口的代码提供了代码完成、 语法着色、 内联实时诊断和多行语句支持")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin 工作簿保存为`.workbook`文件，它是具有顶部一些元数据的 CommonMark 文件 (请参阅[工作簿文件类型](#Workbooks_Files_Types)有关详细信息可以保存工作簿的方式)。
+Xamarin 工作簿保存为`.workbook`文件，它是具有顶部一些元数据的 CommonMark 文件 (请参阅[工作簿文件类型](#workbooks-files-types)有关详细信息可以保存工作簿的方式)。
 
 ### <a name="nuget-package-support"></a>NuGet 包支持
 
@@ -132,7 +132,7 @@ Xamarin 工作簿保存为`.workbook`文件，它是具有顶部一些元数据�
 如果纯文本`.workbook`引用资源从其相同的目录的文件将在工作簿 0.99.3 中打开或更高版本，它保存时，它将转换为`.workbook`包。 这是在 Mac 和 Windows 上 true。
 
 > [!NOTE]
-> **注意：** Windows 用户将打开`package.workbook\index.workbook`文件直接，但包将行为 mac 上相同
+> Windows 用户将打开`package.workbook\index.workbook`文件直接，但包将行为 mac 上相同
 
 ### <a name="archives"></a>存档
 

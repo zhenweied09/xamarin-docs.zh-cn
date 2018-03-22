@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>使用堆积视图
 
@@ -76,7 +76,7 @@ _本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
 * 第一个和最后一个基线，水平堆栈视图将使用其最高的子视图。 如果最高的视图也是堆栈视图，它将作为基线来使用最高子视图。
 
 > [!IMPORTANT]
-> **注意：**基线对齐在基线将计算到错误的位置不能在拉伸或压缩子视图大小。 对于基线对齐方式，请确保子视图的**高度**匹配内部函数的内容视图的**高度**。
+> 基线对齐无效拉伸或压缩子视图大小基线将计算到错误的位置。 对于基线对齐方式，请确保子视图的**高度**匹配内部函数的内容视图的**高度**。
 
 
 
@@ -149,11 +149,11 @@ _本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
 -----
 
 > [!IMPORTANT]
-> **注意：**注意： 尽管很可能如赋值操作`TouchUpInside`到 UI 元素 (如`UIButton`) 中的 iOS 设计器创建事件处理程序时，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触摸事件。 你应始终使用默认值`Action Type`针对 tvOS 用户界面元素创建操作时。
+> 虽然可能如分配操作，但`TouchUpInside`到 UI 元素 (如`UIButton`) 中的 iOS 设计器创建事件处理程序时，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 你应始终使用默认值`Action Type`针对 tvOS 用户界面元素创建操作时。
 
 有关使用情节提要的详细信息，请参阅我们[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)。
 
-对于本示例中，我们已公开 Outlet，段控件的操作，并为每个"播放器卡"上的电源插座。 在代码中，我们隐藏和显示基于当前的段的播放器。 例如:
+对于本示例中，我们已公开 Outlet，段控件的操作，并为每个"播放器卡"上的电源插座。 在代码中，我们隐藏和显示基于当前的段的播放器。 例如：
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -309,7 +309,7 @@ UIView.Animate(0.25, ()=>{
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和在 Xamarin.tvOS 应用内部使用堆积视图。
 

@@ -8,22 +8,20 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 76f35819b00302f4a586643798afbd27416d3997
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a77dcc8ae1c698e1f1ef40757ab03558f329719
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>手动为 Xamarin 创建 NuGet 包
 
 _此页包含可帮助生成面向 Xamarin 平台的 NuGet 包的一些提示。_
 
 > [!NOTE]
-> Xamarin Studio 6.2 （和 Visual Studio for Mac） 包括以下功能_自动_从 PCL、.NET 标准或共享项目中生成 NuGet 包。
-> 请参阅[代码共享的多平台库](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)更多详细信息的指南。
+> Xamarin Studio 6.2 （和 Visual Studio for Mac） 包括以下功能_自动_从 PCL、.NET 标准或共享项目中生成 NuGet 包。 请参阅[代码共享的多平台库](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)更多详细信息的指南。
 
 ## <a name="nuget-package-xamarin-profiles"></a>NuGet 包 Xamarin 配置文件
-
 
 NuGet 网站[支持多个.NET Framework 版本和配置文件](https://docs.nuget.org/create/enforced-package-conventions)讨论如何支持不同的 Microsoft 框架和配置文件，但不包括使用 Xamarin 的目标框架名称。
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2018
-ms.openlocfilehash: 2b29826f1a7acc6bb8dcd0594c69a5cb7ff6db42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b161519bb6fecd31d54690af7c44772c0752f1f6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="using-sqlitenet"></a>使用 SQLite.NET
 
@@ -167,7 +167,7 @@ foreach (var s in stocksStartingWithA) {
 ```
 
 > [!IMPORTANT]
-> **请注意**： 时编写 SQL 语句，直接在表和您的数据库，其中已从您的类和属性生成的列的名称上创建依赖关系。 如果在代码中更改这些名称必须记得更新任何手动编写的 SQL 语句。
+> 直接编写 SQL 语句时你创建的表和您的数据库，其中已从您的类和属性生成的列的名称的依赖项。 如果在代码中更改这些名称必须记得更新任何手动编写的 SQL 语句。
 
 ### <a name="deleting-an-object"></a>删除对象
 

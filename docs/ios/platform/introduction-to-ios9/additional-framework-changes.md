@@ -7,11 +7,11 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5053d8d0cf9c1c3e6d3282ee8d6e42448e733c2c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>其他 iOS 9 框架更改
 
@@ -53,7 +53,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 新_CloudKit Web 服务_framework 提供了一个 JavaScript 库 (CloudKit JS)，可以纳入你的网站以提供对相同 CloudKit 基于数据和作为你的 Xamarin.iOS 应用程序内容的访问。
 
 > [!IMPORTANT]
-> **注意：**可以访问、 显示或更新使用 CloudKit JS CloudKit 数据库中的内容之前，你必须具有以前定义该数据库的架构。
+> 你可以访问、 显示或更新使用 CloudKit JS CloudKit 数据库中的内容之前，你必须具有以前定义该数据库的架构。
 
 
 
@@ -100,7 +100,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>对作出反应到低能耗模式
 
-使用`LowPowerModeEnabled`属性[NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/)类以确定是否已在应用程序运行在 iOS 设备上启用低功耗模式。 例如:
+使用`LowPowerModeEnabled`属性[NSProcessInfo](https://developer.xamarin.com/api/type/Foundation.NSProcessInfo/)类以确定是否已在应用程序运行在 iOS 设备上启用低功耗模式。 例如：
 
 ```csharp
 // Is the device in low power mode?

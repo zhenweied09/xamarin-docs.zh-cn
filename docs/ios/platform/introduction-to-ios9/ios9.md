@@ -7,18 +7,18 @@ ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfdf0c73226eec472eb671d5543f5ce124919ab8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3f52ef88224e65f12502c9fbf82e240233890a82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 兼容性
 
 _即使你不打算直接向您的应用程序中添加 iOS 9 功能，应重新生成你的应用的 Xamarin 的最新版本。_
 
 > [!IMPORTANT]
-> **注意：**此页上的此信息适用于已尚未提交的 iOS 9 兼容性的更新与已中面向 iOS 8 或更早版本，应用商店应用的客户。 如果你已在使用的最新版本的 Xcode 7 和 Xamarin.iOS 9-为你的应用程序开发，请访问[简介 iOS 9](~/ios/platform/introduction-to-ios9/index.md)。
+> 此页上的信息适用于已在应用商店应用的客户面向 iOS 8 或更早版本，具有不已提交的用户更新为 iOS 9 兼容性。 如果你已在使用的最新版本的 Xcode 7 和 Xamarin.iOS 9-为你的应用程序开发，请访问[简介 iOS 9](~/ios/platform/introduction-to-ios9/index.md)。
 
 如果出现第一个 iOS 9 测试版，我们使用较旧版本的显示为正在无法在 iOS 9 上启动的较旧的应用的 Xamarin 标识两个问题。
 

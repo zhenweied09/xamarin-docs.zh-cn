@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-user-notifications"></a>高级的用户通知
 
@@ -67,7 +67,7 @@ Xamarin.iOS 应用程序具有两种类型的用户能够发送的通知：
 
 但是，由于参与发送大小甚至的小图像，将其连接到远程的通知负载会变得不切实际。 若要处理这种情况下，开发人员可以使用新服务中的扩展 iOS 10 从另一个源 （如 CloudKit 数据存储库） 下载映像并将其连接到通知的内容之前向用户显示。
 
-为要由服务扩展修改远程通知，及其负载必须标记可变。 例如:
+为要由服务扩展修改远程通知，及其负载必须标记可变。 例如：
 
 ```csharp
 {
@@ -145,7 +145,7 @@ namespace MonkeyNotification
 在 iOS 10 中的通知支持的映像的媒体附件 (静态和 Gif)，音频或视频和系统将自动显示正确的自定义 UI 为每个这些类型的附件时向用户显示通知。
 
 > [!NOTE]
-> **注意：**应格外小心地优化这两个的媒体大小和运行应用程序的服务时，它将采用可从远程服务器下载媒体 （或者本地通知装配媒体），并作为系统的时间有一定严格限制到这两扩展。 例如，考虑发送按比例缩小版本的映像或视频的通知中显示的小剪辑。
+> 应格外小心地优化这两个的媒体大小和它将采用可从远程服务器下载媒体 （或者本地通知装配媒体），并作为系统的时间有一定严格限制同时运行应用程序的服务扩展时。 例如，考虑发送按比例缩小版本的映像或视频的通知中显示的小剪辑。
 
 ## <a name="creating-custom-user-interfaces"></a>创建自定义用户界面
 
@@ -268,7 +268,7 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-通知内容扩展类别 (`UNNotificationExtensionCategory`) 使用使用用于注册通知操作的类别值相同。 在其中应用将使用同一 UI 的多个类别的情况下，切换`UNNotificationExtensionCategory`为类型**数组**并提供所有所需的类别。 例如:
+通知内容扩展类别 (`UNNotificationExtensionCategory`) 使用使用用于注册通知操作的类别值相同。 在其中应用将使用同一 UI 的多个类别的情况下，切换`UNNotificationExtensionCategory`为类型**数组**并提供所有所需的类别。 例如：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -299,9 +299,9 @@ namespace MonkeyChatNotifyExtension
 若要设计通知内容扩展的自定义用户界面，双击`MainInterface.storyboard`文件以打开进行编辑设计器中，iOS 中拖动中生成所需的接口所需的元素 (如`UILabels`和`UIImageViews`)。
 
 > [!NOTE]
-> **注意：**通知 UI 却_不_通知内容扩展中支持交互式控件如文本字段或按钮。 尽管它们都可以添加到情节提要，用户将不能与它们进行交互。 若要添加到自定义通知 UI 的用户交互，请改为使用自定义操作。
+> 通知 UI 却_不_通知内容扩展中支持交互式控件如文本字段或按钮。 尽管它们都可以添加到情节提要，用户将不能与它们进行交互。 若要添加到自定义通知 UI 的用户交互，请改为使用自定义操作。
 
-一旦 UI 布局并向 C# 代码公开所需的控件，打开`NotificationViewController.cs`以进行编辑和修改`DidReceiveNotification`方法来填充 UI，当用户展开通知。 例如:
+一旦 UI 布局并向 C# 代码公开所需的控件，打开`NotificationViewController.cs`以进行编辑和修改`DidReceiveNotification`方法来填充 UI，当用户展开通知。 例如：
 
 ```csharp
 using System;
@@ -363,7 +363,7 @@ namespace MonkeyChatNotifyExtension
 
 因为在调用内容扩展，通知内容区域之前已运行系统通知将启动完整大小，而进行动画处理到时向用户显示请求的大小。
 
-若要消除此效果，编辑`Info.plist`扩展并设置文件`UNNotificationExtensionInitialContentSizeRatio`键`NSExtensionAttributes`键以键入**数**与表示所需的比率的值。 例如:
+若要消除此效果，编辑`Info.plist`扩展并设置文件`UNNotificationExtensionInitialContentSizeRatio`键`NSExtensionAttributes`键以键入**数**与表示所需的比率的值。 例如：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -457,7 +457,7 @@ namespace MonkeyChatNotifyExtension
 
 通知内容扩展还可以在用户调用了一个自定义操作时更新它们的 UI，例如显示为已接受时的日期用户点击**接受**自定义操作按钮。 此外，通知内容扩展可告诉系统延迟的通知 UI 开除，以便关闭通知之前，用户可以看到这些文件的操作的效果。
 
-这可通过实现的第二个版本`DidReceiveNotification`包括完成处理程序的方法。 例如:
+这可通过实现的第二个版本`DidReceiveNotification`包括完成处理程序的方法。 例如：
 
 ```csharp
 using System;
@@ -531,7 +531,7 @@ namespace myApp {
 }
 ```
 
-通过添加`Server.PostEventResponse`处理程序`DidReceiveNotification`通知内容扩展，该扩展方法*必须*处理所有自定义操作。 扩展还可以通过更改转发到包含应用程序的自定义操作`UNNotificationContentExtensionResponseOption`。 例如:
+通过添加`Server.PostEventResponse`处理程序`DidReceiveNotification`通知内容扩展，该扩展方法*必须*处理所有自定义操作。 扩展还可以通过更改转发到包含应用程序的自定义操作`UNNotificationContentExtensionResponseOption`。 例如：
 
 ```csharp
 // Close Notification
@@ -542,7 +542,7 @@ completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwar
 
 根据应用程序和通知的设计，可能要求用户输入 （如答复消息） 通知文本的次数。 通知内容扩展有权访问的内置文本输入操作，只需像标准通知一样。
 
-例如:
+例如：
 
 ```csharp
 using System;
@@ -732,7 +732,7 @@ Server.PostEventResponse += (response) {
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已在 Xamarin.iOS 应用程序中使用新的用户通知框架高级的看。 它涵盖媒体将附件添加到本地和远程通知，则覆盖使用新的用户通知 UI 创建自定义通知 Ui。
 

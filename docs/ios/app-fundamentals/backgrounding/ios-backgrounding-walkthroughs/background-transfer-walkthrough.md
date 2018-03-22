@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>演练-使用后台传输服务和 NSURLSession
 
@@ -97,7 +97,7 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 会话委托 API 提供广泛的工具包的任务进行交互。 有关会话的完整列表委托方法，请参阅`NSUrlSessionDelegate`API 文档。
 
 > [!IMPORTANT]
-> **请注意**： 背景会话将会启动后台线程，以便以更新 UI 的任何调用必须显式运行在 UI 线程上通过调用`InvokeOnMainThread`以免 iOS 终止应用程序。 
+> 后台会话将会启动后台线程，以便以更新 UI 的任何调用必须显式运行在 UI 线程上通过调用`InvokeOnMainThread`以免 iOS 终止应用程序。 
 
 
 ## <a name="handling-transfer-completion"></a>处理传输完成

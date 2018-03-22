@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 48b8d1cf8e6242fde632bceec5d482f53037a954
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2f14510e5968ebe24bd297365416fa8aa5a0c59
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>更新现有 Xamarin.Forms 应用
 
@@ -196,7 +196,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 有时，你将看到类似于在更新的 Xamarin.Forms NuGet 包后错误。 NuGet 更新程序不会完全删除对从较旧版本的引用时发生你**csproj**文件。
 
->你\_PROJECT.csproj： 错误： 此项目引用在此计算机缺少的 NuGet 程序包。 启用 NuGet 程序包还原下载它们。  有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。 缺少的文件是.../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets。 (你\_项目)
+>你\_PROJECT.csproj： 错误： 此项目引用在此计算机缺少的 NuGet 程序包。 启用 NuGet 程序包还原下载它们。  有关详细信息，请参阅http://go.microsoft.com/fwlink/?LinkID=322105。 缺少的文件是.../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets。 (你\_项目)
 
 若要修复这些错误，请打开**csproj**文件在文本编辑器中，并查找`<Target`引用较旧版本的 Xamarin.Forms，如下面所示的元素的元素。 你应该先手动删除此整个元素**csproj**文件并保存所做的更改。
 
@@ -226,13 +226,13 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 到那时，就像组件，你将需要切换有支持统一 Api 的版本到项目中包含任何 NuGet 包之后执行一个干净的生成。
 
 > [!IMPORTANT]
-> **注意：**如果窗体中有错误_"错误 3 不能在同一 Xamarin.iOS 项目中包含 monotouch.dll 和 Xamarin.iOS.dll-Xamarin.iOS.dll 显式引用，而 monotouch.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
+> 如果窗体中有错误_"错误 3 不能在同一 Xamarin.iOS 项目中包含 monotouch.dll 和 Xamarin.iOS.dll-Xamarin.iOS.dll 显式引用，而 monotouch.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>启用 64 位版本的 Xamarin.iOS 应用程序
 
 有关 Xamarin.iOS 移动应用程序已转换为统一 API，开发人员仍需要启用应用程序的选项为 64 位计算机应用程序的构建。 请参阅**启用 64 位版本的 Xamarin.iOS 应用程序**的[32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md#enable-64)启用 64 位的详细说明的文档生成。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 应用程序现在应该更新到版本 1.3.1 和 iOS 应用程序迁移到统一 API （这在 iOS 平台上支持 64 位体系结构）。
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7a190014abd3386a3a675d50ce6a89101d0588a7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="social-framework"></a>社交 Framework
 
@@ -22,7 +22,7 @@ _社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Face
 使用社交框架允许应用程序而无需管理身份验证与社交网络从单个 API 进行交互。 它包括提供用于编写文章，以及允许通过 HTTP 使用每个社交网络 API 的抽象视图控制器的系统。
 
 > [!IMPORTANT]
-> **注意：**连接到各种社交网络的跨平台 API，请参阅[Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin 组件应用商店中为组件。
+> 若要连接到各种社交网络的跨平台 API，请参阅[Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin 组件应用商店中为组件。
 
 ## <a name="connecting-to-twitter"></a>连接到 Twitter
 
@@ -302,7 +302,7 @@ request.PerformRequest ((data, response, error) => {
 
 由于社交 Framework 是一个统一的 API，为访问多个社交网络而设计，代码将保留而不考虑所使用的社交网络几乎完全相同。
 
-例如，`SLComposeViewController`可以使用方式与更早版本，显示仅不同切换到特定 Facebook 的设置和选项的 Twitter 示例完全相同。 例如:
+例如，`SLComposeViewController`可以使用方式与更早版本，显示仅不同切换到特定 Facebook 的设置和选项的 Twitter 示例完全相同。 例如：
 
 ```csharp
 using System;
@@ -470,7 +470,7 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 
 未能设置此选项 （或使用无效的键） 将导致错误或返回任何数据。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何使用社交 Framework 与 Twitter 和 Facebook 进行交互。 它介绍了在设备设置中配置为每个社交网络的帐户的位置。 它还讨论了如何使用`SLComposeViewController`提供发布到社交网络的统一的视图。 此外，它会检查`SLRequest`用于调用每个社交网络 API 的类。
 

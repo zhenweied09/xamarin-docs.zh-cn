@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="speech-recognition"></a>语音识别
 
@@ -105,10 +105,10 @@ Apple 包含一个可用性 API，用于确定是否可用于在当前时间转�
 2. 切换到**源**视图： 
 
     [![](speech-images/speech02.png "源视图")](speech-images/speech02.png#lightbox)
-3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
+3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如： 
 
     [![](speech-images/speech03.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
+4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如： 
 
     [![](speech-images/speech04.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 4. 保存对文件所做的更改。
@@ -116,10 +116,10 @@ Apple 包含一个可用性 API，用于确定是否可用于在当前时间转�
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 双击`Info.plist`文件以打开进行编辑。
-3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
+3. 单击**添加新项**，输入`NSSpeechRecognitionUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如： 
 
     [![](speech-images/speech03w.png "添加 NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如: 
+4. 如果应用程序将处理实时音频脚本，它还将需要麦克风使用说明。 单击**添加新项**，输入`NSMicrophoneUsageDescription`为**属性**，`String`为**类型**和**使用率描述**作为**值**。 例如： 
 
     [![](speech-images/speech04w.png "添加 NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. 保存对文件所做的更改。
@@ -127,7 +127,7 @@ Apple 包含一个可用性 API，用于确定是否可用于在当前时间转�
 -----
 
 > [!IMPORTANT]
-> **注意：**无法向上述任一提供`Info.plist`密钥 (`NSSpeechRecognitionUsageDescription`或`NSMicrophoneUsageDescription`) 可能会导致应用程序在尝试访问语音识别或实时音频麦克风时失败而不发出警告。
+> 无法向上述任一提供`Info.plist`密钥 (`NSSpeechRecognitionUsageDescription`或`NSMicrophoneUsageDescription`) 可能会导致应用程序在尝试访问语音识别或实时音频麦克风时失败而不发出警告。
 
 
 
@@ -186,7 +186,7 @@ namespace MonkeyTalk
 A`SFSpeechRecognizerAuthorizationStatus`结果返回到`RequestAuthorization`可用于采取操作的方法的回调例程基于用户的权限。 
 
 > [!IMPORTANT]
-> **注意：** Apple 提供的建议等待用户已请求此权限之前需要语音识别应用程序在启动某项操作。
+> Apple 提供的建议等待用户已请求此权限之前需要语音识别应用程序在启动某项操作。
 
 ### <a name="recognizing-pre-recorded-speech"></a>识别预记录的语音
 
@@ -243,7 +243,7 @@ A`SFSpeechUrlRecognitionRequest`从创建`NSUrl`上 iOS 设备和它的预录文
 
 ### <a name="recognizing-live-speech"></a>识别实时语音
 
-如果应用想要识别实时语音，过程是非常类似于识别预录制的语音。 例如:
+如果应用想要识别实时语音，过程是非常类似于识别预录制的语音。 例如：
 
 ```csharp
 using System;
@@ -373,7 +373,7 @@ RecognitionTask.Cancel ();
 务必要调用`RecognitionTask.Cancel`如果用户取消的转换以释放内存和设备的处理器。
 
 > [!IMPORTANT]
-> **注意：**无法向提供`NSSpeechRecognitionUsageDescription`或`NSMicrophoneUsageDescription``Info.plist`密钥可能会导致应用程序在尝试访问语音识别或实时音频麦克风时失败而不发出警告 (`var node = AudioEngine.InputNode;`)。 请参阅**提供使用率描述**上面部分以了解详细信息。
+> 无法向提供`NSSpeechRecognitionUsageDescription`或`NSMicrophoneUsageDescription``Info.plist`密钥可能会导致应用程序在尝试访问语音识别或实时音频麦克风时失败而不发出警告 (`var node = AudioEngine.InputNode;`)。 请参阅**提供使用率描述**上面部分以了解详细信息。
 
 ## <a name="speech-recognition-limits"></a>语音识别限制
 
@@ -395,7 +395,7 @@ Apple 提供有关正在透明并在 iOS 应用程序中包括语音识别时尊
 - 不要使用语音识别诸如密码、 运行状况数据或财务信息等敏感用户信息。
 - 显示识别结果_之前_对它们进行操作。 这不仅提供有关应用程序正在执行，但允许用户处理识别错误所做的反馈。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章已提供新的语音 API，并介绍了如何在 Xamarin.iOS 应用程序以支持连续语音识别和理赔 （从实时或录制音频流） 的语音到文本中实现它。 
 

@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 723a9c4a052f7f432ba0f32ec501af3221b2696f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-reference-counting-system"></a>新引用计数系统
 
@@ -46,7 +46,7 @@ Xamarin.iOS 7.2.1 和上面功能增强我们新引用计数系统的预览。
 
     
 > [!IMPORTANT]
-> **注意：**由于 MonoTouch 5.2，但却仅可用于此功能的早期版本已被解决**sgen**作为实验预览。 此新的增强版本现在也是可用于**Boehm**垃圾回收器。
+> 此功能的早期版本已被解决由于 MonoTouch 5.2，但却仅可用于**sgen**作为实验预览。 此新的增强版本现在也是可用于**Boehm**垃圾回收器。
 
 
 从历史上看发生了两种类型的对象由 Xamarin.iOS： 那些通过让额外的内存中状态通常是只是本机对象 （对等对象） 和那些扩展或合并新功能 （派生对象） 的周围的包装器。 以前为可能，我们无法增加具有状态的对等对象 （例如通过添加一个 C# 事件处理程序），但我们让转未引用，然后收集的对象。 这可能导致崩溃更高版本上 (例如如果 Objective C 运行时返回到调用的托管对象)。

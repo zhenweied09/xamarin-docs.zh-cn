@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 357528c559de36329ca4bf12ab2597247a17222d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-transport-security"></a>应用程序传输安全
 
@@ -82,7 +82,7 @@ TLS 级别控制要使用的 web 服务，因此在应用程序的控制之外�
 根据服务器时，您交谈 （尤其是如果它是第三方服务），你可能需要禁用向前保密或选择较低的 TLS 级别。 请参阅[配置 ATS 选项](#Configuring-ATS-Options)下面部分以了解更多详细信息。
 
 > [!IMPORTANT]
-> **注意：**应用传输安全不适用于 Xamarin 应用程序使用**托管 HTTPClient 实现**。 它适用于连接使用 CFNetwork **HTTPClient 实现**或**NSURLSession HTTPClient 实现**仅。
+> 应用程序传输安全不适用于 Xamarin 应用程序使用**托管 HTTPClient 实现**。 它适用于连接使用 CFNetwork **HTTPClient 实现**或**NSURLSession HTTPClient 实现**仅。
 
 ### <a name="setting-the-httpclient-implementation"></a>设置 HTTPClient 实现
 
@@ -138,7 +138,7 @@ NSUrlSession 基于处理程序基于本机`NSUrlSession`API。
 
 时尝试连接到 internet，直接或从 web 视图在 iOS 9 中，可能会在窗体中出现错误：
 
-> 应用程序传输安全已阻止明文形式 HTTP (http://www.-the-blocked-domain.com) 资源负载，因为它是不安全。 可以通过应用的 Info.plist 文件配置临时例外。
+> 应用程序传输安全已阻止明文形式 HTTP (http://www.-the-blocked-domain.com)资源加载，因为它是不安全。 可以通过应用的 Info.plist 文件配置临时例外。
 
 在 iOS9，应用程序传输安全 (ATS) 强制实施 internet 资源 （如应用程序的后端服务器） 和你的应用程序之间的安全连接。 此外，ATS 需要通信使用`HTTPS`协议和高级 API 通信进行加密 TLS 版本 1.2 使用向前保密。
 
@@ -243,7 +243,7 @@ NSAppTransportSecurity
 [![](ats-images/ats02.png "Info.plist 文件的源视图")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> **注意：**如果你的应用程序需要连接到不安全的网站，您应该**始终**异常使用输入域`NSExceptionDomains`而不是关闭 ATS 完全使用`NSAllowsArbitraryLoads`。 `NSAllowsArbitraryLoads` 仅应在极端紧急情况下使用。
+> 如果你的应用程序需要连接到不安全的网站，您应该**始终**异常使用输入域`NSExceptionDomains`而不是关闭 ATS 完全使用`NSAllowsArbitraryLoads`。 `NSAllowsArbitraryLoads` 仅应在极端紧急情况下使用。
 
 
 
@@ -252,7 +252,7 @@ NSAppTransportSecurity
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章已引入应用程序传输安全 (ATS)，并描述它会强制实施与 internet 的安全通信的方式。 首先，我们介绍 ATS 需要在 iOS 9 上运行一个 Xamarin.iOS 应用程序的更改。 然后，我们介绍控制 ATS 功能和选项。 最后，我们介绍了选择退出 ATS Xamarin.iOS 应用程序中。
 

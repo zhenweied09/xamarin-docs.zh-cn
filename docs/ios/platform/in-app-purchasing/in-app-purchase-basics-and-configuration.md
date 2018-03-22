@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 302bb1225067ad401f97ee6bad88b4cd16c6dc95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b622da2d6d9777fc200a091ccf003369b1c2e8d1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="in-app-purchase-basics-and-configuration"></a>应用内购买基础知识和配置
 
@@ -84,7 +84,7 @@ Apple 必须批准每个产品，然后它就会在销售 – 名称、 描述�
 您可以使用你喜欢的任意字符串你**捆绑标识符**（只要它是在你的帐户中唯一的），但是 Apple 建议遵循反向 DNS 格式，而不是使用任何任意字符串。 本文附带的示例应用程序用于 com.xamarin.storekit.testing 捆绑标识符，但同样有效，以使用如 my_store_example 标识符 （即使 Apple 不建议这样做）。
 
 > [!IMPORTANT]
-> **请注意**: Apple 还允许通配符格式星号要添加到末尾**捆绑标识符**，以便单个应用程序 ID 可以使用多个应用程序，但是_-通配符应用 Id 不能用于在 AppPurchase_。 通配符捆绑标识符可能 com.xamarin.* 示例
+> Apple 还允许通配符格式星号要添加到末尾**捆绑标识符**，以便单个应用程序 ID 可以使用多个应用程序，但是_-通配符应用 Id 不能用于 AppPurchase_. 通配符捆绑标识符可能 com.xamarin.* 示例
 
 #### <a name="enabling-app-services"></a>启用应用程序服务
 

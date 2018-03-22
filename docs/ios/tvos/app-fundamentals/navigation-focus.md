@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fe1358d330c2a0fd94016853cedeabe094c394da
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>使用导航和焦点
 
@@ -81,7 +81,7 @@ Apple 具有用于处理焦点和选择以下建议：
 
 ### <a name="working-with-focus"></a>使用焦点
 
-可能存在你想要创建自定义控件可能会成为可获得焦点的项的时间。 如果因此重写`CanBecomeFocused`属性，并返回`true`，否则返回`false`。 例如:
+可能存在你想要创建自定义控件可能会成为可获得焦点的项的时间。 如果因此重写`CanBecomeFocused`属性，并返回`true`，否则返回`false`。 例如：
 
 ```csharp
 public class myView : UIView
@@ -92,7 +92,7 @@ public class myView : UIView
 }
 ```
 
-在任何时候，你可以使用`Focused`属性`UIKit`控件以查看其是否当前项。 如果`true`UI 项当前具有焦点，否则不。 例如:
+在任何时候，你可以使用`Focused`属性`UIKit`控件以查看其是否当前项。 如果`true`UI 项当前具有焦点，否则不。 例如：
 
 ```csharp
 // Is my view in focus?
@@ -102,7 +102,7 @@ if (myView.Focused) {
 }
 ```
 
-尽管通过代码，你不能直接将焦点移到另一个用户界面元素，可以指定哪些用户界面元素首先获得焦点时屏幕加载通过设置其`PreferredFocusedView`属性`true`。 例如:
+尽管通过代码，你不能直接将焦点移到另一个用户界面元素，可以指定哪些用户界面元素首先获得焦点时屏幕加载通过设置其`PreferredFocusedView`属性`true`。 例如：
 
 ```csharp
 // Make the play button the starting focus item
@@ -123,7 +123,7 @@ playButton.PreferredFocusedView = true;
 若要请求，焦点引擎移动焦点回`PreferredFocusedView`UI 元素，调用`SetNeedsUpdateFocus`视图控制器的方法。
 
 > [!IMPORTANT]
-> **注意：**调用`SetNeedsUpdateFocus`仅当针对调用视图控制器包含当前具有焦点的视图不起作用。
+> 调用`SetNeedsUpdateFocus`仅当针对调用视图控制器包含当前具有焦点的视图不起作用。
 
 
 
@@ -208,7 +208,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 首先，此代码 get`NextFocusedView`从`UIFocusUpdateContext`已传入的 (`context`)。 此视图是否`null`，然后不需要任何处理并方法退出。
 
-接下来，`nextFocusableItem`计算。 如果它匹配**详细信息**或**购买**按钮，焦点发送到使用焦点指南相反按钮`PreferredFocusedView`属性。 例如:
+接下来，`nextFocusableItem`计算。 如果它匹配**详细信息**或**购买**按钮，焦点发送到使用焦点指南相反按钮`PreferredFocusedView`属性。 例如：
 
 ```csharp
 // Move from the More Info to Buy button
@@ -226,7 +226,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>使用集合中的焦点
 
-在决定是否的单个项可以焦点中时`UICollectionView`或`UITableView`，你将重写方法`UICollectionViewDelegate`或`UITableViewDelegate`分别。 例如:
+在决定是否的单个项可以焦点中时`UICollectionView`或`UITableView`，你将重写方法`UICollectionViewDelegate`或`UITableViewDelegate`分别。 例如：
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -274,7 +274,7 @@ myImageView.AdjustsImageWhenAncestorFocused = true;
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖焦点以及如何使用它来处理在 Xamarin.tvOS 应用程序的用户界面中进行导航的概念。 它检查内置 tvOS 导航控件如何使用焦点、 高亮和选择提供导航。 接下来，它看起来了如何焦点可以使用与视差和分层映像，可为当前的导航状态提供视觉线索，向最终用户。 最后，它会检查使用焦点，焦点更新集合和启用视差中的焦点。
 

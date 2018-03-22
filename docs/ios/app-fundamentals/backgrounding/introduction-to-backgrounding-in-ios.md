@@ -6,11 +6,11 @@ ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4eed99533ba1aca1bd5ba23078866909330b542
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c0369fe52897a2557a92fd56ebcd816b8427faf7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>在 iOS 中的 Backgrounding 简介
 
@@ -67,7 +67,7 @@ iOS 7 引入了几个功能，为用户提供更好地控制应用程序的 back
 使用应用程序切换器，用户可以滚动浏览所有 backgrounded 和挂起的应用程序的快照。 点击应用程序将启动置于前台。 向上轻扫从后台，正在终止其进程中删除应用程序。 我们将采用详述中应用切换器[iOS 应用程序生命周期演示](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)中下一节。
 
 > [!IMPORTANT]
-> **请注意**: 应用程序切换器不显示 backgrounded 和挂起应用程序之间的差异。
+> 应用程序切换器不显示 backgrounded 和挂起应用程序之间的差异。
 
 
 

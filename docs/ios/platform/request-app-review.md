@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 469a63a990b1adb108284cfb88ee54e05218a8a9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e63f2c47bbcd6da0f0d5370ebfc231d19a10e7d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="request-app-review"></a>查看请求应用程序
 
@@ -57,7 +57,7 @@ namespace iOSTenThree
 ```
 
 > [!NOTE]
-> **注意：**调用`RequestReview()`在未得到充分开发应用程序将始终显示分级以及查看对话框，以便可以测试它。 这不适用于通过 TestFlight，其中将忽略方法调用已分发的应用。
+> 调用`RequestReview()`在未得到充分开发应用程序将始终显示分级以及查看对话框，以便可以测试它。 这不适用于通过 TestFlight，其中将忽略方法调用已分发的应用。
 
 当`RequestReview()`方法调用中的传送应用程序用户在已安装从应用商店，iOS 10 为开发人员处理的整个分级和查看过程。 同样，因为此过程受应用商店策略，则警报可能，或可能不会显示。
 
@@ -65,7 +65,7 @@ namespace iOSTenThree
 
 除了新`RequestReview`方法，开发人员仍可以提供在应用内从应用商店中的应用程序的产品页的深层链接。 通过追加`action=write-review`到产品页 URL 的末尾，页面将打开用户可以自动编写的应用程序查看。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖 RequestReview 方法添加到 iOS 10 以及如何在 Xamarin.iOS 中实现该该 Apple。
 

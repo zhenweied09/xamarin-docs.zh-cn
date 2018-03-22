@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: b2a5402b8d2ac127f6a5f75decbee8567decb905
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="user-interface"></a>用户界面
 
@@ -65,6 +65,10 @@ Xamarin.Forms 提供了一个列表视图控件来显示滚动的行的数据。
 ## <a name="pickerpickerindexmd"></a>[选取器](picker/index.md)
 
 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)视图是用于从数据的列表中选择文本项的控件。
+
+## <a name="sliderslidermd"></a>[滑块](slider.md)
+
+`Slider`允许用户从一个连续范围选择的数字值。
 
 ## <a name="stylesstylesindexmd"></a>[样式](styles/index.md)
 

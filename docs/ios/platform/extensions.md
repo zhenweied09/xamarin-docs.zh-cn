@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6e0eebef2404ce3f117fe897d456f3ef78a8f585
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-extensions"></a>iOS 扩展
 
@@ -131,7 +131,7 @@ _在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，�
 特定类型的扩展可能具有附加要求。 例如，**今天**或**通知中心**扩展的主体类必须实现[INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/)。
 
 > [!IMPORTANT]
-> **注意：**如果启动你的项目使用一个 Visual Studio 提供的适用于 Mac 的扩展模板时，将提供并为你自动通过模板来满足大多数 （如果不是所有） 这些要求。
+> 如果启动你的项目使用一个 Visual Studio 提供的适用于 Mac 的扩展模板时，将提供并为你自动通过模板来满足大多数 （如果不是所有） 这些要求。
 
 <a name="Walkthrough" />
 

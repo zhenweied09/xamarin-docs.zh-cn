@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 53c2c3e3866cb782eea0cc9514c0c35379e48b5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 591f6f53c9e787ee9499b2a1a3cc812f7e72749a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay-on-watchos"></a>Apple Pay watchOS 上
 
@@ -58,8 +58,9 @@ Apple 具有对 Apple Pay 进行多项增强功能，增加了对应用内付款
 3. 设置所需的区域，若要测试的应用程序中。
 4. 使用从测试付款卡之一[Apple 支付指南](https://developer.apple.com/apple-pay/)进行付款。
 
-> ⚠️ **注意：**通过切换 iCloud 帐户，该设备将自动切换到新的测试环境。 但是，Apple 仍**需要**与实际测试的应用程序在生产环境中之前提交到 iTunes 应用商店卡。
+> [!NOTE]
+> 通过切换 iCloud 帐户，该设备将自动切换到新的测试环境。 但是，Apple 仍**需要**与实际测试的应用程序在生产环境中之前提交到 iTunes 应用商店卡。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖增强功能 Apple 已到 Apple Pay watchOS 3 以及如何在 Xamarin.iOS 实现它们。

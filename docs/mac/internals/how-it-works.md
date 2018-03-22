@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: 7329e8ddb5b86adcf6e1efaa805149012be8853c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-xamarinmac-works"></a>Xamarin.Mac 的工作原理
 
@@ -104,12 +104,12 @@ public CustomView () : base (NSObjectFlag.Empty)
 
 ### <a name="enabling-aot-compilation"></a>启用 AOT 编译
 
-在 Xamarin.Mac 中双击启用 AOT**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--aot:[options]`到**其他 mmp 自变量：**字段 (其中`[options]`是一个或多个选项，若要控制 AOT 类型，请参阅下文)。 例如:
+在 Xamarin.Mac 中双击启用 AOT**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--aot:[options]`到**其他 mmp 自变量：**字段 (其中`[options]`是一个或多个选项，若要控制 AOT 类型，请参阅下文)。 例如：
 
 ![向其他 mmp 自变量添加 AOT](how-it-works-images/aot01.png "添加 AOT 到其他 mmp 自变量")
 
 > [!IMPORTANT]
-> 警告 ！ 启用 AOT 编译显著增加生成时，有时是最多达几分钟时间，但它可以提高应用程序启动时间的 20%的平均值。 因此，AOT 编译仅都应上启用**版本**Xamarin.Mac 应用的版本。
+> 启用 AOT 编译显著增加生成时，有时是最多达几分钟时间，但它可以提高应用程序启动时间的 20%的平均值。 因此，AOT 编译仅都应上启用**版本**Xamarin.Mac 应用的版本。
 
 ### <a name="aot-compilation-options"></a>Aot 编译选项
 
@@ -146,7 +146,7 @@ public CustomView () : base (NSObjectFlag.Empty)
 
 ### <a name="enabling-the-partial-static-registrar"></a>启用部分的静态注册机构
 
-部分静态注册机构在 Xamarin.Mac 中启用通过双击**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--registrar:static`到**其他 mmp 自变量：**字段。 例如:
+部分静态注册机构在 Xamarin.Mac 中启用通过双击**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--registrar:static`到**其他 mmp 自变量：**字段。 例如：
 
 ![将部分静态注册机构添加到其他 mmp 参数](how-it-works-images/psr01.png "将部分静态注册机构添加到其他 mmp 自变量")
 
@@ -154,8 +154,8 @@ public CustomView () : base (NSObjectFlag.Empty)
 
 下面是一些更详细的解释的功能的工作方式内部：
 
-- [OBJECTIVE-C 的选择器](~/ios/internals/objective-c-selectors.md)
-- [Registrar](~/ios/internals/registrar.md)
+- [Objective-C 的选择器](~/ios/internals/objective-c-selectors.md)
+- [注册器](~/ios/internals/registrar.md)
 - [对于 iOS 和 OS X 的 Xamarin 统一 API](~/cross-platform/macios/unified/index.md)
 - [Theading 基础知识](~/ios/app-fundamentals/threading.md)
 - [委托、 协议和事件](~/ios/app-fundamentals/delegates-protocols-and-events.md)

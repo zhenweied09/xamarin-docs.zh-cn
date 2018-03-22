@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons-and-images"></a>处理图标和图像
 
@@ -28,7 +28,7 @@ _本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。_
 - [设置 Xamarin.tvOS 项目图像](#Setting-Xamarin.tvOS-Project-Images)-介绍如何设置的启动映像和应用程序图标为 Xamarin.tvOS 应用程序所需的步骤。
 
 > [!IMPORTANT]
-> **注意：** Apple TV 上的所有映像都位于 1 x 分辨率 (`@1x`)，你应_仅_使用此大小的图像。 包括更大，较高分辨率的图形不仅需要时间来下载和使用更多内存和存储，但它们必须在运行时将重新动态缩放，并且将对绘图的性能造成负面影响。
+> Apple TV 上的所有映像都位于 1 x 分辨率 (`@1x`)，你应_仅_使用此大小的图像。 包括更大，较高分辨率的图形不仅需要时间来下载和使用更多内存和存储，但它们必须在运行时将重新动态缩放，并且将对绘图的性能造成负面影响。
 
 <a name="Launch-Image" />
 
@@ -79,7 +79,7 @@ Apple 使设计您的应用程序的启动映像的以下建议：
 [![](icons-images-images/layered01.png "分层的映像 Z 排序关系图")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **注意：**分层映像所需的应用程序的图标和都是可选的其他[可获得焦点的项](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection)（如顶部架映像）。 但是，Apple 提供的建议分层映像用于在你的应用程序可能会获得焦点的任何映像。
+> 分层的映像所需的应用程序的图标和都是可选的其他[可获得焦点的项](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection)（如顶部架映像）。 但是，Apple 提供的建议分层映像用于在你的应用程序可能会获得焦点的任何映像。
 
 
 

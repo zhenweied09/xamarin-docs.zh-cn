@@ -8,68 +8,72 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8c336799a4d46359a78432837101dad43b572aea
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: c333fd18e306c50bbfd41377638470cb45954883
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="api-design"></a>API 设计
 
 除了核心属于 Mono、 基类库[Xamarin.iOS](http://www.xamarin.com/iOS)附带的各种 iOS Api 允许开发人员使用 Mono 创建本机 iOS 应用程序的绑定。
 
-Xamarin.iOS 的核心，没有桥接 Objective C 世界作为使用 C# world 互操作引擎，以及适用于 iOS 的绑定基于 C 的 Api 喜欢 CoreGraphics 和[OpenGLES](#OpenGLES)。
+Xamarin.iOS 的核心，没有桥接 Objective C 世界中，以及适用于 iOS 如 CoreGraphics 基于 C 的 Api 绑定使用 C# world 互操作引擎和[OpenGL ES](#OpenGLES)。
 
-低级别的运行时与 Objective C 代码通信处于[MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime)。 在此，绑定之上[Foundation](#MonoTouch.Foundation)，CoreFoundation 和[UIKit](#MonoTouch.UIKit)提供。
+低级别的运行时与 Objective C 代码通信处于[MonoTouch.ObjCRuntime](#MonoTouch.ObjCRuntime)。 在此，绑定之上[Foundation](#MonoTouch.Foundation)，CoreFoundation，和[UIKit](#MonoTouch.UIKit)提供。
 
 ## <a name="design-principles"></a>设计原则
 
-以下是一些 （这些也适用于 Xamarin.Mac，适用于 OBJECTIVE-C OS X 上的单声道绑定） Xamarin.iOS 绑定我们设计原则：
+以下是一些 （它们也适用于 Xamarin.Mac，macOS 上 Objective c 的 Mono 绑定） 的 Xamarin.iOS 绑定我们设计原则：
 
-- 请按照 Framework 设计准则
+- 请按照[Framework 设计准则](https://docs.microsoft.com/dotnet/standard/design-guidelines)
 - 允许开发人员子类 Objective C 类：
 
   - 从现有类派生
-  - 链接到调用基构造函数
+  - 调用链接到基构造函数
   - 重写方法应处理 C# 重写系统
+  - 子类化都应适用于 C# 标准结构
 
-- 子类应适用于 C# 标准结构
 - 不会公开到 OBJECTIVE-C 的选择器的开发人员
 - 提供一种机制来调用任意 Objective C 库
-- 使常见 OBJECTIVE-C 的任务变得简单，和硬 OBJECTIVE-C 的任务可能
+- 简单和硬 OBJECTIVE-C 的任务可能使 Objective C 的常见任务
 - 为 C# 属性公开 OBJECTIVE-C 的属性
 - 公开一个强类型的 API:
-- 提高类型安全性
-- 最大程度减少运行时错误
-- 获取返回类型上的 IDE intellisense
-- 允许 IDE 弹出文档
+
+  - 提高类型安全性
+  - 最大程度减少运行时错误
+  - 获取返回类型上的 IDE IntelliSense
+  - 允许 IDE 弹出文档
+
 - 鼓励 IDE 中浏览的 api:
+
+  - 例如，不要公开弱类型的数组，如下：
+    
+    ```objc
+    NSArray *getViews
+    ```
+    公开一个强类型，如下：
+    
+    ```csharp
+    NSView [] Views { get; set; }
+    ```
+    
+    这使 Visual Studio for Mac 能够浏览 API 时，不要自动完成功能，使所有`System.Array`返回的值，可执行操作，并允许要参与 LINQ 的返回值。
+
 - 本机 C# 类型：
 
-    - 示例： 而不是公开弱类型化数组如下：
-        ```
-        NSArray *getViews
-        ```
-        我们将它们公开具有强类型，如下：
-    
-        ```
-        NSView [] Views { get; set; }
-        ```
-    
-    这使 Visual Studio for Mac 能够浏览 API 时，不要自动完成，并允许的所有`System.Array`操作上返回值可用并允许要参与 LINQ 的返回值
+  - [`NSString` 将成为 `string`](~/ios/internals/api-design/nsstring.md)
+  - 打开`int`和`uint`参数应已到 C# 枚举和用 C# 枚举的枚举`[Flags]`属性
+  - 而不是以非特定于类型的`NSArray`对象，公开作为强类型化数组的数组。
+  - 有关事件和通知，让用户之间进行选择：
 
-- [NSString 变为字符串](~/ios/internals/api-design/nsstring.md)
-- 打开 int 和 uint 应已枚举作为枚举 C# 和 C# 枚举具有 [标志] 特性的参数
-- 而不是以非特定于类型的 NSArray 对象将公开为强类型化数组的数组。
-- 事件和通知，让用户之间进行选择：
-
-    - 强类型的版本是默认设置
-    - 对于高级用例的弱类型化的版本
+    - 默认情况下强类型版本
+    - 高级的用例是弱类型的版本
 
 - 支持 Objective C 委托模式：
 
     - C# 事件系统
-    - 将 C# 委托 (lambda，匿名方法和 System.Delegate) 对 Objective C Api 公开为"块"
+    - 公开 C# 委托 (lambda、 匿名方法和`System.Delegate`) 对作为块 OBJECTIVE-C 的 Api
 
 ### <a name="assemblies"></a>程序集
 

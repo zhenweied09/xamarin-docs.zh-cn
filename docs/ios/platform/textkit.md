@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 7ae41e99d20f0e8f3cad6b933e415002903a3294
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d3a370c3a8d930c817d38422b249b496532fa33f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="text-kit"></a>文本工具包
 
@@ -143,7 +143,7 @@ public class ExclusionPathView : UITextView
 此代码添加在文本视图使用核心图形上绘制的支持。 由于`UITextView`类现在构建要用于其文本呈现和布局的文本工具包，它可以使用的文本工具包，如设置排除路径的所有功能。
 
 > [!IMPORTANT]
->   注意： 此示例子类`UITextView`添加触摸绘图支持。 子类化`UITextView`无需获取文本工具包的功能。
+> 此示例子类`UITextView`添加触摸绘图支持。 子类化`UITextView`无需获取文本工具包的功能。
 
 
 

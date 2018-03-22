@@ -6,11 +6,11 @@ ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d80ef6bdac7f35b282f6347a0356453a413b39c
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 2961eb4726b9f313d01f8bc075e5ca362d708e92
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons"></a>使用图标
 
@@ -79,7 +79,7 @@ Apple Watch 解决方案需要图标的两个的集：
 你可以验证通过检查的图标是否配置正确[Apple Watch 设置应用程序](~/ios/watchos/app-fundamentals/settings.md)在 iPhone 模拟器中，或生成[通知](~/ios/watchos/platform/notifications.md)并确认图标显示在通知上屏幕。
 
 > [!NOTE]
-> **请注意**： 图标不能具有 alpha 通道 （应用程序将被拒绝应用商店提交过程存在 alpha 通道时）。 你可以检查是否存在 alpha 通道，并将其删除[在 Mac OS X 上使用预览应用](~/ios/watchos/troubleshooting.md#noalpha)。
+> 图标不能具有 alpha 通道 （应用程序将被拒绝应用商店提交过程存在 alpha 通道时）。 你可以检查是否存在 alpha 通道，并将其删除[在 Mac OS X 上使用预览应用](~/ios/watchos/troubleshooting.md#noalpha)。
 
 
 ## <a name="related-links"></a>相关链接

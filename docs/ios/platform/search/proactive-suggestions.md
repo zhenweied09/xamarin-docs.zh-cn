@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e7252aa89e2514653fc730c7221d22cc053d2e24
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>主动建议简介
 
@@ -68,7 +68,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 如果应用程序仅支持共享持续一段时间，以将开始系统建议*"Get 到持续一段时间..."*，如果支持其他类型的路由方向 （如 Walking 或自行车），则系统将使用*"获取路线到..."*
 
 > [!IMPORTANT]
-> **注意：** [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/)应用将会接收的对象可能不包括经度和纬度的信息，并且需要进行地理编码。
+> [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/)应用将会接收的对象可能不包括经度和纬度的信息，并且需要进行地理编码。
 
 ## <a name="implementing-proactive-suggestions"></a>实现主动建议
 
@@ -166,7 +166,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>还原活动
 
-若要响应用户点击搜索结果 (`NSUserActivity`) 对于应用程序中，编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如:
+若要响应用户点击搜索结果 (`NSUserActivity`) 对于应用程序中，编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如：
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -503,7 +503,7 @@ Safari 将提取符合以下架构属性的任何 web 页面上的任何内容�
 - 应用程序可以在应用程序获取主动的建议。
 - 应用程序可以受益于增强自动更正。
 
-新`TextContentType`iOS 10 中的文本字段控件的属性允许开发人员定义的值的用户将在给定字段中输入的语义意图。 例如:
+新`TextContentType`iOS 10 中的文本字段控件的属性允许开发人员定义的值的用户将在给定字段中输入的语义意图。 例如：
 
 ```csharp
 var textField = new UITextField();
@@ -532,7 +532,7 @@ textField.TextContentType = UITextContentType.FullStreetAddress;
 - 若要处理启动应用程序与 MapKit`MKDirectionsRequest`对象。
 - 若要使 iOS 能够了解如何在适当的时间，建议向用户应用程序基于用户参与度。
 
-如果应用程序启动时 MapKit`MKDirectionsRequest`对象，它应自动启动提供的用户说明进行操作的请求的位置，或提供的用户界面可轻松地让用户开始获取说明。 例如:
+如果应用程序启动时 MapKit`MKDirectionsRequest`对象，它应自动启动提供的用户说明进行操作的请求的位置，或提供的用户界面可轻松地让用户开始获取说明。 例如：
 
 
 ```csharp
@@ -679,7 +679,7 @@ namespace MonkeyPlayer
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已涉及主动建议，并介绍了开发人员可以如何使用它们驱动器流量传送到 Xamarin.iOS 应用程序。 它涵盖实现主动建议的步骤，并显示使用准则。
 

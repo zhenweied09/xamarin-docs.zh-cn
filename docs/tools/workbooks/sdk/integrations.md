@@ -6,11 +6,11 @@ ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2e9f1282ec567e894f4e0841ae42f791d8a77d3f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e51aa9ab9d4d63d16b3a68d24084c872d831975
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="external-integrations"></a>外部的集成
 
@@ -55,6 +55,6 @@ class AgentIntegration : IAgentIntegration
 集成程序集实际上是应用程序或感兴趣的 SDK 和会话之间的桥梁。 它可以提供有意义的工作簿或实时的上下文中专门检查会话，或提供任何公共 Api 以及只需执行"在后台"任务，例如生成对象的新 Api[表示形式之间实现](~/tools/workbooks/sdk/representations.md)。
 
 > [!NOTE]
-> 注意： 可以使用常用标记必须是公共的但不应通过 IntelliSense 显示 Api`[EditorBrowsable (EditorBrowsableState.Never)]`属性。
+> 这必须是公共的但不是应通过 IntelliSense 显示 Api 可标记为常规`[EditorBrowsable (EditorBrowsableState.Never)]`属性。
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

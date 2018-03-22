@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>适用于 iPad 的多任务
 
@@ -33,7 +33,7 @@ iOS 9 增加了对在特定 iPad 硬件上同时运行两个应用程序的多�
 - [自定义硬件键盘快捷方式](#Custom-Hardware-Keyboard-Shortcuts)
 - [资源管理](#Resource-Management-Considerations)
 
-作为应用程序开发人员还可以[选择退出的多任务](#Opting-Out-of-Multitasking)，包括[禁用 PIP 视频播放](#Disabling-PIP-Video-Playback)。
+作为应用程序开发人员还可以[选择退出多任务](#Opting-Out-of-Multitasking)，包括[禁用 PIP 视频播放](#Disabling-PIP-Video-Playback)。
 
 本文将介绍确保你的 Xamarin.iOS 应用程序在多任务的环境中正常运行，或如何选择退出多任务，如果这不是一个好适合您的应用程序所需的步骤。
 
@@ -205,7 +205,7 @@ public void NewEntry() {
 
 即使对于应用程序已在使用 iOS 8 的设计指南和最佳实践，有效的资源管理可能仍是问题。 在 iOS 9 中，应用程序不再需要内存、 CPU 或其他系统资源的独占的使用。
 
-因此，您必须调整你的 Xamarin.iOS 应用程序，以有效地使用系统资源或它面向在内存不足情况下终止。 这同样适用的应用的选择退出的多任务，自第二个应用程序可能仍在运行滑动通过面板中或图片图片窗口需要额外的资源或导致刷新速率低于每秒 60 帧。
+因此，您必须调整你的 Xamarin.iOS 应用程序，以有效地使用系统资源或它面向在内存不足情况下终止。 这同样适用的应用的选择退出多任务，自第二个应用程序可能仍在运行滑动通过面板中或图片图片窗口需要额外的资源或导致刷新速率低于每秒 60 帧。
 
 请考虑以下的用户操作和及其含义：
 
@@ -223,19 +223,16 @@ public void NewEntry() {
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>选择向外的多任务
+## <a name="opting-out-of-multitasking"></a>选择退出多任务
 
 虽然 Apple 提供的建议所有 iOS 9 应用都支持多任务，可能存在极特殊原因需要应用程序不太如游戏或需要全屏正常工作的相机应用。
 
-Xamarin.iOS 应用程序选择退出的任一滑出将在面板中或在拆分视图模式下运行，编辑项目的**Info.plist**文件，然后检查**需要全屏**:
+对于你参加任一滑出将在面板中或在拆分视图模式下运行的 Xamarin.iOS 应用程序，编辑项目的**Info.plist**文件，然后检查**需要全屏**:
 
-[![](multitasking-images/fullscreen01.png "选择向外的多任务")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "选择退出多任务")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **注意：**时 Opting 外的多任务可防止你的应用程序在滑出或拆分视图中正在运行，与其**不**防止另一个应用程序显示以及从运行滑出或图片视频中的图片中你应用程序。
-
-
-
+> 时选择退出多任务可以防止你的应用程序在滑出或拆分视图中正在运行，它不会阻止另一个应用程序显示以及你的应用程序从运行在滑出或图片视频中的图片。
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -243,7 +240,7 @@ Xamarin.iOS 应用程序选择退出的任一滑出将在面板中或在拆分�
 
 在大多数情况下，你的应用程序应允许用户以用于播放它图片浮动窗口中的图片中显示任何视频内容。 但是，可能有情况下，这可能不所需的如游戏剪切的场景视频。
 
-若要选择退出的 PIP 视频播放，请执行以下操作应用程序中：
+若要选择退出 PIP 视频播放，请执行以下操作应用程序中：
 
  - 如果你使用`AVPlayerViewController`若要显示视频，请设置`AllowsPictureInPicturePlayback`属性`false`。
  - 如果你使用`AVPlayerLayer`若要显示视频，请不要实例化`AVPictureInPictureController`。

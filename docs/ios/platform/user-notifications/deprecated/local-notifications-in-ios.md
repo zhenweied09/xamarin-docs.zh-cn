@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 2a8ae55f9cc3e2dd4818dec96a35017c76cc9623
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b36d3ba8601d125d0a17173efb12c249224e78
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="notifications-in-xamarinios"></a>在 Xamarin.iOS 的通知
 
 _本部分演示如何在 Xamarin.iOS 中实现本地通知。它将解释 iOS 通知的各种 UI 元素，并讨论 API 的涉及创建和显示一条通知。_
 
 > [!IMPORTANT]
-> **注意：**此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
+> 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
 
 iOS 具有三种方法可以指示用户已收到通知：
 
@@ -78,7 +78,7 @@ notification.SoundName = UILocalNotification.DefaultSoundName;
 每 Apple 人机接口指南中，如果通知播放声音，它都应该还附带锁屏提醒和警报来帮助用户确定应用程序发出警报。 此外，如果声音的长度超过 30 秒，iOS 将播放默认声音相反。
 
 > [!IMPORTANT]
-> **请注意**： 是一个 bug，将激发委托通知两次的 iOS 模拟器中。 在设备上运行应用程序时，不应出现此问题。
+> 将激发委托通知两次 iOS 模拟器是一个 bug。 在设备上运行应用程序时，不应出现此问题。
 
 ## <a name="handling-notifications"></a>处理通知
 
@@ -130,7 +130,7 @@ if(remoteNotification != null)
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本部分介绍了如何创建和发布在 Xamarin.iOS 的通知。 它显示如何应用程序可能响应通知通过重写`ReceivedLocalNotification`方法或`ReceivedRemoteNotification`中的方法`AppDelegate`。
 

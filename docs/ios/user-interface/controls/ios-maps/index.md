@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 540a459be24296c8446c2136773ddde59f9d4dd7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="maps"></a>映射
 
@@ -404,12 +404,12 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
  ![](images/08-search-results.png "从结果选择项目时添加到映射批注")
  
- > [!IMPORTANT]
-> **请注意** `UISearchController` iOS 8 中实现。 如果你想要支持设备早于此操作，则将需要使用`UISearchDisplayController`。
+> [!IMPORTANT]
+> `UISearchController` 已在 iOS 8 中实现。 如果你想要支持设备早于此操作，则将需要使用`UISearchDisplayController`。
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 检查这篇文章*映射**工具包*框架，用于 iOS。 它首先，按照如何看起来`MKMapView`类允许交互式的地图，要包括在应用程序。 然后，它演示了如何使用批注和覆盖层的地图中进一步自定义。 最后，它会检查本地搜索功能已添加到映射工具包 ios 6.1，用于演示如何使用基于位置查询进行的关注点，并将其添加到图。
 

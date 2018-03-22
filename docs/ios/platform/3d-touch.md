@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>3D Touch 简介
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 `MaximumPossibleForce`属性返回的最大可能值`Force`属性[UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/)根据运行应用程序的 iOS 设备。
 
 > [!IMPORTANT]
-> **注意：**压力中的更改将导致`TouchesMoved`事件被引发，即使 X / Y 坐标，未更改。 由于此更改的行为，而您 iOS 应用程序应准备为`TouchesMoved`事件要调用比较频繁，以及 x / Y 坐标与上一相同`TouchesMoved`调用。
+> 压力中的更改将导致`TouchesMoved`事件被引发，即使 X / Y 坐标，未更改。 由于此更改的行为，而您 iOS 应用程序应准备为`TouchesMoved`事件要调用比较频繁，以及 x / Y 坐标与上一相同`TouchesMoved`调用。
 
 
 
@@ -281,7 +281,7 @@ public override void ViewDidLoad ()
 * `UIApplicationShortcutItemType` -是一个字符串值，我们将使用它来标识我们的应用程序中的项。 有关详细信息，请参阅下一节。
 
 > [!IMPORTANT]
-> **注意：**快速操作快捷项目中设置`Info.plist`文件无法访问与`Application.ShortcutItems`属性。 它们仅传入到`HandleShortcutItem`事件处理程序。 
+> 在中设置的快速操作快捷项目`Info.plist`文件无法访问与`Application.ShortcutItems`属性。 它们仅传入到`HandleShortcutItem`事件处理程序。 
 
 
 
@@ -443,7 +443,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 使用此活动的功能，你可以按更难 Mac 的 trackpad 上启用 3D Touch 就像在真实 iPhone 硬件上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入了新 3D Touch 的 Api 可在 iOS 9 iPhone 6s 和 iPhone 6s Plus。 它涉及到应用程序; 的添加压力敏感度使用扫视和 Pop 来快速显示从而无需导航; 当前上下文中应用程序信息以及使用快速操作以提供您的应用程序的快捷方式的最常用的功能。
 

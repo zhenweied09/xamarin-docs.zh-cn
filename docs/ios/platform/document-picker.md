@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="document-picker"></a>文档选取器
 
@@ -21,7 +21,7 @@ _文档选取器视图控制器授予用户对应用程序的沙箱以外的文�
 
 由于保留跨应用和云同步的文档的难度，它们引入了一定数量的必要的复杂性。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需完成这篇文章中提供的步骤：
 
@@ -221,7 +221,7 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 通过使用进行拼结的应用程序不再必须打开数据源来监视本地和基于云的文件更改。 现在应用程序可以依赖于`NSMetadataQuery`直接。
 
 > [!IMPORTANT]
-> **请注意**： 当应用程序正在使用文件协调，如上面的部分中显示拼接才有效。 如果未使用文件协调，Api 将默认为现有的预 iOS 8 行为。
+> 拼接仅适用如果应用程序使用文件协调，如上面的部分中显示。 如果未使用文件协调，Api 将默认为现有的预 iOS 8 行为。
 
 
 
@@ -465,7 +465,7 @@ Apple 的外观，列出应用程序的文档时的最佳用户体验是使用�
 6.  右键单击`Entitlements.plist`中**解决方案资源管理器**以在编辑器中打开它。
 
     > [!IMPORTANT]
-> **请注意**： 在 Visual Studio 中，你可能需要打开权利编辑器通过右键单击它，选择**打开方式...** 并选择属性列表编辑器
+    > Visual Studio 中你可能需要打开权利编辑器通过右键单击它，选择**打开方式...** 并选择属性列表编辑器
 
 7.  检查**启用 iCloud** ， **iCloud 文档**，**键-值存储**和**CloudKit** 。
 8.  确保**容器**应用程序 （如上面创建） 中存在。 示例：`iCloud.com.your-company.AppName`
@@ -793,7 +793,7 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> **请注意**： 上面的代码包含上面的发现和列出文档部分中的代码。 它显示此处整个，它将在实际的应用程序中出现。 为简单起见，此示例适用于一种硬编码的单个文件 (`test.txt`) 仅。
+> 上面的代码包括上面的发现和列出文档部分中的代码。 它显示此处整个，它将在实际的应用程序中出现。 为简单起见，此示例适用于一种硬编码的单个文件 (`test.txt`) 仅。
 
 上面的代码公开多个 iCloud 驱动器快捷方式，使它们更轻松地使用应用程序的其余部分。
 
@@ -902,7 +902,7 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> **请注意**： 开发人员必须调用`StartAccessingSecurityScopedResource`方法`NSUrl`可以访问的外部文档前。 `StopAccessingSecurityScopedResource`必须调用方法以加载文档时，就会立即释放安全锁。
+> 开发人员必须调用`StartAccessingSecurityScopedResource`方法`NSUrl`可以访问的外部文档前。 `StopAccessingSecurityScopedResource`必须调用方法以加载文档时，就会立即释放安全锁。
 
 ### <a name="sample-output"></a>示例输出
 
@@ -1134,9 +1134,9 @@ IOS 8，与 Apple 想要能够访问其基于云的文档，无论其中它们�
 用户的帐户已迁移到 iCloud 驱动器后，只有使用 iCloud 驱动器的设备将能够将更改传播到文档跨这些设备。
 
 > [!IMPORTANT]
-> **请注意**： 开发人员应注意这篇文章中涉及的新功能才可用用户的帐户已迁移到 iCloud 驱动器。 
+> 开发人员应注意这篇文章中涉及的新功能才可用用户的帐户已迁移到 iCloud 驱动器。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖到现有 iCloud Api 支持 iCloud 驱动器和新的文档选取器视图控制器所需的更改。 它已覆盖文件协调和使用基于云的文档时的重要性。 它涵盖启用基于云的 Xamarin.iOS 应用程序中的文档所需的设置并提供使用应用程序的应用程序容器使用文档选取器视图控制器外部的文档的简介。
 

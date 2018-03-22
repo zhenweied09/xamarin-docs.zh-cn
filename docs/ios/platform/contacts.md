@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="contacts-and-contactsui"></a>联系人和 ContactsUI
 
@@ -30,7 +30,7 @@ IOS 9 的引入，与 Apple 已发布两个新的框架，`Contacts`和`Contacts
 [![](contacts-images/add01.png "IOS 设备上一个示例联系表")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> **注意：**现有`AddressBook`和`AddressBookUI`框架使用 ios 8 （和之前） iOS 9 中已弃用，并且应替换为与新`Contacts`和`ContactsUI`尽快针对任何现有 Xamarin.iOS 的框架应用程序。 针对新的框架，应编写新应用。
+> 现有`AddressBook`和`AddressBookUI`框架使用 ios 8 （和之前） iOS 9 中已弃用，并且应替换为与新`Contacts`和`ContactsUI`越早越好的任何现有的 Xamarin.iOS 应用程序的框架。 针对新的框架，应编写新应用。
 
 
 
@@ -111,7 +111,7 @@ else
 }
 ```
 
-如果在 iOS 9 设备上运行此代码，则新联系人将添加到用户的集合。 例如:
+如果在 iOS 9 设备上运行此代码，则新联系人将添加到用户的集合。 例如：
 
 [![](contacts-images/add01.png "新的联系人添加到用户的集合")](contacts-images/add01.png#lightbox)
 
@@ -124,7 +124,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-你将在应用程序的 UI 中显示的属性标签，联系人 framework 具有本地化以及这些字符串的方法。 同样，这基于 iOS 设备运行该应用程序的当前区域设置。 例如:
+你将在应用程序的 UI 中显示的属性标签，联系人 framework 具有本地化以及这些字符串的方法。 同样，这基于 iOS 设备运行该应用程序的当前区域设置。 例如：
 
 ```csharp
 // Localized properties
@@ -144,7 +144,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 ```
 
 > [!IMPORTANT]
-> **注意：**泛型和联系人 framework 不支持复合谓词。
+> 联系人 framework 不支持泛型和复合谓词。
 
 例如，若要限制为仅提取**GivenName**和**FamilyName**的联系人的属性，可以使用下面的代码：
 
@@ -176,7 +176,7 @@ var contacts = store.GetUnifiedContacts(predicate, fetchKeys, out error);
 
 A_部分联系_是仅将某些可用的属性已从联系存储提取的联系人。 如果你尝试访问不以前获取的属性，则将导致异常。
 
-可以轻松地对其进行检查以查看给定的联系人是否通过使用具有所需的属性`IsKeyAvailable`或`AreKeysAvailable`方法`CNContact`实例。 例如:
+可以轻松地对其进行检查以查看给定的联系人是否通过使用具有所需的属性`IsKeyAvailable`或`AreKeysAvailable`方法`CNContact`实例。 例如：
 
 ```csharp
 // Does the contact contain the requested key?
@@ -190,7 +190,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> **注意：** `GetUnifiedContact`和`GetUnifiedContacts`方法`CNContactStore`类_仅_返回部分与限制为请求提供的提取键的属性。
+> `GetUnifiedContact`和`GetUnifiedContacts`方法`CNContactStore`类_仅_返回部分与限制为请求提供的提取键的属性。
 
 ### <a name="unified-contacts"></a>统一的联系人
 
@@ -227,7 +227,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 A`CNSaveRequest`还可用于缓存到单个操作的多个联系人和组更改和批处理到这些修改`CNContactStore`。
 
-若要更新从提取操作获取非可变联系人，你必须首先请求可变副本，然后修改并保存回联系人的存储库。 例如:
+若要更新从提取操作获取非可变联系人，你必须首先请求可变副本，然后修改并保存回联系人的存储库。 例如：
 
 ```csharp
 // Get mutable copy of contact
@@ -281,7 +281,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 在调用之前`CNContactPickerViewController`类，你定义用户可以选择，并定义谓词，用于控制的显示和联系人属性的选择哪些属性。
 
-使用继承自的类的实例`CNContactPickerDelegate`对与选取器的用户交互作出响应。 例如:
+使用继承自的类的实例`CNContactPickerDelegate`对与选取器的用户交互作出响应。 例如：
 
 ```csharp
 using System;
@@ -356,7 +356,7 @@ var view = CNContactViewController.FromContact(contact);
 PresentViewController(view, true, null);
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用 Xamarin.iOS 应用程序中的联系人和联系人 UI 框架的详细的信息。 首先，它涉及不同类型的联系人 framework 提供的对象以及如何使用它们来创建新模板或访问现有的联系人。 它还检查，请与联系 UI 框架，选择现有联系人并显示联系信息。
 

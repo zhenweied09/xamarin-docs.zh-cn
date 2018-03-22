@@ -7,16 +7,16 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 5d1de42a398affc1b6b6c9b863df5bc86a016c08
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 53e64acd8e64c9a8151b2c55045db4e308f97531
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="getting-started"></a>入门
 
 > [!IMPORTANT]
-> **警告：**目标 Sharpie 是经验丰富的 Xamarin 开发人员提供高级知识 Objective C （以及通过扩展，C） 的工具。 在尝试将绑定 Objective C 库之前应具有纯色了解如何在命令行 （和熟悉的本机库的工作原理） 上生成本机库。
+> 目标 Sharpie 是一个用于与 Objective C （以及通过扩展，C） 的高级知识的经验 Xamarin 开发人员工具。 在尝试将绑定 Objective C 库之前应具有纯色了解如何在命令行 （和熟悉的本机库的工作原理） 上生成本机库。
 
 <a name="installing" />
 

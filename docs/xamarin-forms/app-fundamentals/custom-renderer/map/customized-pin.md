@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c0846e959b4a4cfec9417de59125a8665b648a76
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 312bda44a6b390c6ba486d5a3d60dfe4fb770a2e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="customizing-a-map-pin"></a>自定义地图 Pin
 
@@ -53,12 +53,11 @@ public class CustomMap : Map
 ```csharp
 public class CustomPin : Pin
 {
-  public string Id { get; set; }
   public string Url { get; set; }
 }
 ```
 
-此类定义`CustomPin`为继承的属性[ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/)类，并将添加`Id`，和`Url`属性。
+此类定义`CustomPin`为继承的属性[ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/)类，并将添加`Url`属性。
 
 <a name="Consuming_the_Custom_Map" />
 
@@ -253,14 +252,14 @@ MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotatio
         throw new Exception("Custom pin not found");
     }
 
-    annotationView = mapView.DequeueReusableAnnotation(customPin.Id);
+    annotationView = mapView.DequeueReusableAnnotation(customPin.Id.ToString());
     if (annotationView == null) {
-        annotationView = new CustomMKAnnotationView(annotation, customPin.Id);
+        annotationView = new CustomMKAnnotationView(annotation, customPin.Id.ToString());
         annotationView.Image = UIImage.FromFile("pin.png");
         annotationView.CalloutOffset = new CGPoint(0, 0);
         annotationView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile("monkey.png"));
         annotationView.RightCalloutAccessoryView = UIButton.FromType(UIButtonType.DetailDisclosure);
-        ((CustomMKAnnotationView)annotationView).Id = customPin.Id;
+        ((CustomMKAnnotationView)annotationView).Id = customPin.Id.ToString();
         ((CustomMKAnnotationView)annotationView).Url = customPin.Url;
     }
     annotationView.CanShowCallout = true;
@@ -445,7 +444,7 @@ public Android.Views.View GetInfoContents (Marker marker)
       throw new Exception ("Custom pin not found");
     }
 
-    if (customPin.Id == "Xamarin") {
+    if (customPin.Id.ToString() == "Xamarin") {
       view = inflater.Inflate (Resource.Layout.XamarinMapInfoWindow, null);
     } else {
       view = inflater.Inflate (Resource.Layout.MapInfoWindow, null);
@@ -599,7 +598,7 @@ private void OnMapElementClick(MapControl sender, MapElementClickEventArgs args)
                 throw new Exception("Custom pin not found");
             }
 
-            if (customPin.Id == "Xamarin")
+            if (customPin.Id.ToString() == "Xamarin")
             {
                 if (mapOverlay == null)
                 {
@@ -651,7 +650,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 有关自定义的详细信息`MapControl`实例，请参阅[地图和位置概述](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx)MSDN 上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何创建自定义呈现器`Map`控件，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。 Xamarin.Forms.Maps 提供跨平台抽象显示为用户可使用每个平台上的 Api 以提供快速且熟悉映射体验本机地图的地图。
 
