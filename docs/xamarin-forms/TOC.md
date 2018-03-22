@@ -180,6 +180,7 @@
 ### [选取器](user-interface/picker/index.md)
 #### [设置选取器的 ItemsSource 属性](user-interface/picker/populating-itemssource.md)
 #### [将数据添加到选取器的项集合](user-interface/picker/populating-items.md)
+### [滑块](user-interface/slider.md)
 ### [样式](user-interface/styles/index.md)
 #### [介绍](user-interface/styles/introduction.md)
 #### [显式样式](user-interface/styles/explicit.md)
