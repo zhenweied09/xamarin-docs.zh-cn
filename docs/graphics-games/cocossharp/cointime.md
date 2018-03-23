@@ -1,6 +1,6 @@
 ---
-title: "抛硬币时实现详细信息"
-description: "本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实体，进行动画处理子画面，和实现高效的冲突的实现详细信息。"
+title: 抛硬币时实现详细信息
+description: 本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实体，进行动画处理子画面，和实现高效的冲突的实现详细信息。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b3827d05ae9e563ae04dd4ab1e303577f6c9d82a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="coin-time-implementation-details"></a>抛硬币时实现详细信息
 
@@ -61,10 +61,7 @@ _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实
 1. 单击该磁贴以绘制
 1. 单击或推送和拖动要绘制该磁贴的映射
 
-
     ![](cointime-images/image2.png "单击该磁贴以绘制 1")
-
- 
 
 左上方的 tileset 包含所有抛硬币时间地形。 地形，为纯色，包括**SolidCollision**属性，在屏幕左侧的磁贴属性中所示：
 
@@ -97,15 +94,11 @@ CoinTime 代码查找**EntityType**时加载级别以确定实体应替换为磁
 1. 命名此新.tmx 文件，因此它将继续使用现有级别的级别编号规则如**level8.tmx**
 1. 在 Visual Studio 或适用于 Mac 的 Visual Studio 中，将新的.tmx 文件添加到 Android 级别文件夹。 验证该文件使用**AndroidAsset**生成操作。
 
-
     ![](cointime-images/image8.png "验证该文件使用 AndroidAsset 生成操作")
-
 
 1. 将新的.tmx 文件添加到 iOS 级别文件夹。 请务必将该文件从其原始位置链接并验证它使用**BundleResource**生成操作。
 
-
     ![](cointime-images/image9.png "请务必将该文件从其原始位置链接并验证它使用 BundleResource 生成操作")
-
 
 新级别应在级别选择屏幕中显示为级别 9 (级别文件名启动保持为 0，但级别按钮以数字 1 开头):
 
@@ -569,7 +562,7 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本指南介绍抛硬币时间的实现详细信息。 抛硬币时间创建为完整的游戏，但也可以轻松地修改和扩展的项目。 添加新的级别，以及创建新的实体来进一步了解如何实现抛硬币时间鼓励花费时间修改为级别，将读取器。
 

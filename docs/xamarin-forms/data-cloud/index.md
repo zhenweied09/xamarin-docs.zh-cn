@@ -1,18 +1,18 @@
 ---
-title: "数据和云服务"
-description: "本指南将说明如何执行此操作和 Xamarin.Forms 应用程序可以使用 web 服务使用各种技术，实现。"
+title: 数据和云服务
+description: 本指南将说明如何执行此操作和 Xamarin.Forms 应用程序可以使用 web 服务使用各种技术，实现。
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: "0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß"
+ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 28007ee702c66f3b819430b544465d3470d571d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54313c3e8808ee9e563d6b55e3bf034c543a48e5
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data--cloud-services"></a>数据和云服务
 
@@ -50,7 +50,7 @@ _本指南将说明如何执行此操作和 Xamarin.Forms 应用程序可以使�
 
 ## <a name="storing-data-in-a-document-databasecosmosdbindexmd"></a>[在文档数据库中存储数据](cosmosdb/index.md)
 
-本指南演示如何使用 Microsoft Azure DocumentDB 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。 Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。
+本指南演示如何使用 Azure Cosmos DB 标准.NET 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。 Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。
 
 ## <a name="adding-intelligence-with-cognitive-servicescognitive-servicesindexmd"></a>[通过认知服务添加智能](cognitive-services/index.md)
 

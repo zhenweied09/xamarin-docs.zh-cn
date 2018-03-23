@@ -1,6 +1,6 @@
 ---
-title: "使用 Azure 搜索中搜索数据"
-description: "Azure 搜索是云服务，提供了索引和查询上载的数据的功能。 这将删除基础结构要求和传统上与应用程序中实现搜索功能关联的搜索算法复杂性。 本文演示如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。"
+title: 使用 Azure 搜索中搜索数据
+description: Azure 搜索是云服务，提供了索引和查询上载的数据的功能。 这将删除基础结构要求和传统上与应用程序中实现搜索功能关联的搜索算法复杂性。 本文演示如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bf6b9f8aaa07e934a1e707b85ecaa24e4f3d99bf
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="searching-data-with-azure-search"></a>使用 Azure 搜索中搜索数据
 
@@ -119,7 +119,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 定义索引之后, 可以将数据上载到它使用两种模式之一：
 
-- **拉取模型**– 数据定期引入从 Azure DocumentDB、 Azure SQL 数据库、 Azure Blob 存储或 SQL Server 托管 Azure 虚拟机中。
+- **拉取模型**– 数据定期引入从 Azure Cosmos DB、 Azure SQL 数据库、 Azure Blob 存储或 SQL Server 托管 Azure 虚拟机中。
 - **推送模型**– 数据以编程方式发送到索引。 这是采用此文章中的模型。
 
 A`SearchIndexClient`必须创建实例，以将数据导入索引。 这可以通过调用来实现`SearchServiceClient.Indexes.GetClient`方法，如下面的代码示例中所示：
@@ -270,7 +270,7 @@ async Task AzureSuggestions(string text)
 
 请注意，在示例应用程序，`SuggestAsync`用户完成输入的搜索词时，才会调用方法。 但是，它还可支持自动完成搜索查询，通过在每个 keypress 上执行。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。 Azure 搜索是云服务，提供了索引和查询上载的数据的功能。 这将删除基础结构要求和传统上与应用程序中实现搜索功能关联的搜索算法复杂性。
 

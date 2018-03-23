@@ -1,6 +1,6 @@
 ---
-title: "图像"
-description: "可通过 Xamarin.Forms 平台之间共享映像、 它们可以是专门为每个平台中，加载或它们可以为显示下载。"
+title: 图像
+description: 可通过 Xamarin.Forms 平台之间共享映像、 它们可以是专门为每个平台中，加载或它们可以为显示下载。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b2cc302cf45527319bb22a4942290e0b0ac414d7
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="images"></a>图像
 
@@ -24,7 +24,7 @@ _可通过 Xamarin.Forms 平台之间共享映像、 它们可以是专门为每
 
 本文档讨论以下主题：
 
-- [ **本地映像**](#Local_Images) -显示图像随应用程序，包括解决 iOS Retina 或 Android 高 DPI 版本的映像之类的本机解决方法。
+- [ **本地映像**](#Local_Images) -显示图像随应用程序，包括解决 iOS Retina、 Android 或 UWP 高 DPI 版映像之类的本机解决方法。
 - [ **嵌入图像**](#Embedded_Images) -显示图像嵌入作为程序集资源。
 - [ **下载映像**](#Downloading_Images) -下载并显示图像。
 - [ **图标和初始**](#Icons_and_splashscreens) -特定于平台的图标和启动映像。
@@ -94,15 +94,17 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>本机分辨率 （Retina 和高 DPI）
 
-IOS 和 Android 平台包括针对不同的图像分辨率，其中操作系统选择适当的映像在运行时基于设备的功能的支持。 Xamarin.Forms 使用的本机平台的 Api 来加载本地图像，因此如果正确命名和位于项目文件，它会自动支持备用解决方法。
+iOS、 Android、 Windows Phone 和 UWP 包括针对不同的图像分辨率，其中操作系统选择适当的映像在运行时基于设备的功能的支持。 Xamarin.Forms 使用的本机平台的 Api 来加载本地图像，因此如果正确命名和位于项目文件，它会自动支持备用解决方法。
 
 因为 iOS 9 管理映像的首选的方式是拖动到相应的资产目录映像集所需的每个分辨率的图像。 有关详细信息，请参阅[将映像添加到的资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
-在 iOS 9 之前, retina 映像的版本无法放入**资源**文件夹的两个和第三次决策** @2x **或** @3x **上文件扩展名 （如之前的文件名的后缀 **myimage@2x.png**). 但是，使用 iOS 应用程序中的映像的此方法已被否决通过 Apple。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
+在 iOS 9 之前, retina 映像的版本无法放入**资源**文件夹的两个和第三次决策**@2x**或**@3x**上文件扩展名 （如之前的文件名的后缀 **myimage@2x.png**). 但是，使用 iOS 应用程序中的映像的此方法已被否决通过 Apple。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
 Android 备用分辨率图像应置于[专门名为目录](http://developer.android.com/guide/practices/screens_support.html)在 Android 项目中，如下面的屏幕截图中所示：
 
 [![Android 的多个高分辨率图像位置](images-images/xs-highdpisolution-sml.png "Android 多个高分辨率图像位置")](images-images/xs-highdpisolution.png#lightbox "Android 多个高分辨率图像位置")
+
+UWP 和 Windows Phone 图像文件名[为后缀`.scale-xxx`文件扩展名之前](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)，其中`xxx`是应用到的资产，例如缩放的百分比**myimage.scale 200.png**. 然后可以引用映像无法在代码或不带小数位数修饰符的 XAML 中，例如简单**myimage.png**。 该平台将选择基于显示器的当前 DPI 的最接近的适当的资产规模。
 
 ### <a name="additional-controls-that-display-images"></a>显示图像的其他控件
 
@@ -168,7 +170,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 因为没有从没有内置类型转换器`string`到`ResourceImageSource`，这些类型的映像不能以本机方式加载的 XAML。 因此，编写简单的自定义 XAML 标记扩展以加载图像使用**资源 ID**在 XAML 中指定：
 
 ```csharp
-[ContentProperty ("Source")]
+[ContentProperty (nameof(Source))]
 public class ImageResourceExtension : IMarkupExtension
 {
  public string Source { get; set; }
@@ -179,6 +181,7 @@ public class ImageResourceExtension : IMarkupExtension
    {
      return null;
    }
+   
    // Do your translation lookup here, using whatever method you require
    var imageSource = ImageSource.FromResource(Source);
 
@@ -309,7 +312,7 @@ webImage.Source = new UriImageSource
 
 请参阅的文档[iOS 处理映像](~/ios/app-fundamentals/images-icons/index.md)和[初始屏幕](/windows/uwp/launch-resume/splash-screens/)Windows 开发人员中心上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 提供了多种不同的方式，在跨平台应用程序，允许使用跨平台的相同图像或指定的特定于平台的映像中包括图像。 此外会自动缓存的已下载的映像，自动执行常见的编码方案。
 

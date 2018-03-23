@@ -1,6 +1,6 @@
 ---
-title: "使用 Azure Cosmos DB 文档数据库"
-description: "Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。 此文章介绍了如何使用 Microsoft Azure DocumentDB 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。"
+title: 使用 Azure Cosmos DB 文档数据库
+description: Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。 此文章介绍了如何使用 Azure Cosmos DB 标准.NET 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -9,15 +9,15 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 5013b35828cecc2e38600839f306f3c0fc1366b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e2fa5ae12531069e1ad1bc19e110e4dcffe23a02
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>使用 Azure Cosmos DB 文档数据库
 
-_Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。此文章介绍了如何使用 Microsoft Azure DocumentDB 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。_
+_Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。此文章介绍了如何使用 Azure Cosmos DB 标准.NET 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。_
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
@@ -33,23 +33,20 @@ Azure Cosmos DB 文档数据库可能包含零个或多个文档集合。 每个
 
 这篇文章，并随附的示例应用程序，演示 Azure Cosmos DB 文档数据库中存储任务的 Todo 列表应用程序。 有关示例应用程序的详细信息，请参阅[了解示例](~/xamarin-forms/data-cloud/walkthrough.md)。
 
-> [!NOTE]
-> DocumentDB 客户端库目前不符合通用 Windows 平台 (UWP) 应用程序。 但是，可以通过创建中间层 web 服务使用 DocumentDB 客户端库，并调用此服务从 UWP 应用程序从 UWP 应用程序使用 Azure Cosmos DB 文档数据库。
-
 有关 Azure Cosmos DB 的详细信息，请参阅[Azure Cosmos DB 文档](/azure/cosmos-db/)。
 
 ## <a name="setup"></a>安装
 
 将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序的过程如下所示：
 
-1. 创建一个 Cosmos DB 帐户。 有关详细信息，请参阅[创建 Cosmos DB 帐户](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account)。
-1. 添加[DocumentDB 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)Xamarin.Forms 解决方案中项目的平台的 NuGet 包。
+1. 创建一个 Cosmos DB 帐户。 有关详细信息，请参阅[创建 Azure Cosmos DB 帐户](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)。
+1. 添加[Azure Cosmos DB 标准.NET 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)Xamarin.Forms 解决方案中项目的平台的 NuGet 包。
 1. 添加`using`指令`Microsoft.Azure.Documents`， `Microsoft.Azure.Documents.Client`，和`Microsoft.Azure.Documents.Linq`命名空间添加到将访问 Cosmos DB 帐户的类。
 
-执行这些步骤后，可以使用 DocumentDB 客户端库进行配置和执行针对文档数据库的请求。
+执行这些步骤后，可以使用 Azure Cosmos DB 标准.NET 客户端库进行配置和执行针对文档数据库的请求。
 
 > [!NOTE]
-> 可移植类库 (PCL) 项目到平台项目中，和不可以安装 Azure DocumentDB 客户端库。 因此，示例应用程序是一个共享访问项目 (SAP) 以避免代码重复。 但是，`DependencyService`类可以使用 PCL 项目，来调用特定于平台的项目中包含的 Azure DocumentDB 客户端库代码。
+> 可移植类库 (PCL) 项目到平台项目中，和不可以安装 Azure Cosmos DB 标准.NET 客户端库。 因此，示例应用程序是一个共享访问项目 (SAP) 以避免代码重复。 但是，`DependencyService`类可以使用 PCL 项目，来调用特定于平台的项目中包含的 Azure Cosmos DB 标准.NET 客户端库代码。
 
 ## <a name="consuming-the-azure-cosmos-db-account"></a>使用 Azure Cosmos DB 帐户
 
@@ -59,7 +56,7 @@ Azure Cosmos DB 文档数据库可能包含零个或多个文档集合。 每个
 DocumentClient client = new DocumentClient(new Uri(Constants.EndpointUri), Constants.PrimaryKey);
 ```
 
-必须向提供 Cosmos DB Uri 和 primary key`DocumentClient`构造函数。 可以从 Azure 门户获取这些。 有关详细信息，请参阅[连接到 Azure Cosmos DB 帐户](/azure/cosmos-db/documentdb-dotnetcore-get-started#a-idconnectastep-3-connect-to-an-azure-cosmos-db-account)。
+必须向提供 Cosmos DB Uri 和 primary key`DocumentClient`构造函数。 可以从 Azure 门户获取这些。 有关详细信息，请参阅[连接到 Azure Cosmos DB 帐户](/azure/cosmos-db/sql-api-dotnetcore-get-started#Connect)。
 
 ### <a name="creating-a-database"></a>创建数据库
 
@@ -224,14 +221,14 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 
 `DeleteDatabaseAsync`方法指定`Uri`表示要删除的数据库的自变量。 请注意，调用此方法也会删除存储在数据库中，文档集合和文档集合中存储的文档。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
-本文介绍了如何使用 Microsoft Azure DocumentDB 客户端库将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。 Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。
+本文介绍了如何使用 Azure Cosmos DB 标准.NET 客户端库将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。 Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [TodoDocumentDB (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
-- [Cosmos DB 文档](/azure/cosmos-db/)
-- [DocumentDB 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [Todo Azure Cosmos DB （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+- [Azure Cosmos DB 文档](/azure/cosmos-db/)
+- [Azure Cosmos DB 标准.NET 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Azure Cosmos DB API](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

@@ -1,5 +1,5 @@
 ---
-title: "身份验证和授权"
+title: 身份验证和授权
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 5f27c1acefa63ee26184b8997594630e24cb0acc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 16cd5571a8c3b0e179046351e9996e55b040a9de
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authentication-and-authorization"></a>身份验证和授权
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="authentication"></a>身份验证
 
-应用程序需要了解的当前用户身份时，身份验证是必需的。 ASP.NET 核心用于标识用户的主要机制是 ASP.NET 核心标识成员身份系统，它在由开发人员配置了数据存储中存储用户的信息。 尽管可以使用自定义存储或第三方包将标识信息存储在 Azure 存储空间、 DocumentDB、 或其他位置，此数据存储通常情况下，将一个 EntityFramework 存储区。
+应用程序需要了解的当前用户身份时，身份验证是必需的。 ASP.NET 核心用于标识用户的主要机制是 ASP.NET 核心标识成员身份系统，它在由开发人员配置了数据存储中存储用户的信息。 尽管可以使用自定义存储或第三方包将标识信息存储在 Azure 存储、 Azure Cosmos DB 或其他位置，此数据存储通常情况下，将一个 EntityFramework 存储区。
 
 有关身份验证方案，请使用本地用户数据存储区，并且保留之间通过 cookie （就是典型 ASP.NET MVC web 应用程序中） 发出的请求的标识信息，则 ASP.NET 核心标识为合适的解决方案。 但是，cookie 并不总是保持和传输数据的自然方式。 例如，ASP.NET 核心 web 应用程序公开从移动应用程序访问的 RESTful 终结点通常需要使用持有者令牌身份验证，因为无法在此方案中使用 cookie。 但是，持有者令牌可以轻松地检索和包括在从移动应用程序进行 web 请求的 authorization 标头。
 
@@ -469,7 +469,7 @@ httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("
 
 有关如何 eShopOnContainers 移动应用程序发出 web 请求的详细信息，请参阅[访问远程数据](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 有许多方法将身份验证和授权集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序与之通信。 EShopOnContainers 移动应用程序执行身份验证和授权与使用 IdentityServer 4 容器化的标识微服务。 IdentityServer 是用于与 ASP.NET 核心标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
 

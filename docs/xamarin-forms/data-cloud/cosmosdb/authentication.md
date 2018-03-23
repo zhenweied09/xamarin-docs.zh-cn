@@ -1,6 +1,6 @@
 ---
-title: "使用 Azure Cosmos DB 文档数据库的用户进行身份验证"
-description: "Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务器和分区，同时支持无限的存储和吞吐量。 此文章介绍了如何组合使用分区集合，使用访问控制，以便用户只能访问自己在 Xamarin.Forms 应用程序中的文档。"
+title: 使用 Azure Cosmos DB 文档数据库的用户进行身份验证
+description: Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务器和分区，同时支持无限的存储和吞吐量。 此文章介绍了如何组合使用分区集合，使用访问控制，以便用户只能访问自己在 Xamarin.Forms 应用程序中的文档。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 10c4a1e3355263722d170dff0a5e2707eb794818
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8de64d6489b4022e43bcf694f3b13d6f7eaaecbd
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>使用 Azure Cosmos DB 文档数据库的用户进行身份验证
 
@@ -22,12 +22,12 @@ _Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务
 
 创建分区的集合时，必须指定分区键和文档具有相同的分区键将存储在同一分区中。 因此，指定用户的标识用作分区键将导致分区的集合，将仅存储为该用户的文档。 这还可以确保 Azure Cosmos DB 文档数据库会随着用户数和项增加。
 
-任何集合，必须授予访问权限和 DocumentDB API 的访问控制模型定义两种类型的访问构造：
+任何集合，必须授予访问权限和 SQL API 的访问控制模型定义两种类型的访问构造：
 
 - **主密钥**启用在 Cosmos DB 帐户中，所有资源的完全管理访问权限和创建 Cosmos DB 帐户时创建。
 - **资源令牌**捕获的数据库用户和用户对某个特定的 Cosmos DB 资源，例如集合或文档拥有的权限之间的关系。
 
-公开一个主密钥打开都会向可能的恶意或负面使用 Cosmos DB 帐户。 但是，Cosmos DB 资源令牌提供一种允许客户端读取、 写入和删除授予权限根据 Cosmos DB 帐户中的特定资源的安全机制。
+公开一个主密钥打开都会向可能的恶意或负面使用 Cosmos DB 帐户。 但是，Azure Cosmos DB 资源令牌提供一种允许客户端读取、 写入和删除 Azure Cosmos DB 帐户根据授予的权限中的特定资源的安全机制。
 
 向请求典型的方法，生成，并将资源令牌传递到移动应用程序是使用资源令牌代理。 下图显示示例应用程序如何使用资源令牌的代理来管理对文档数据库数据的访问的高级的概述：
 
@@ -44,7 +44,7 @@ _Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务
 > [!NOTE]
 > 在资源令牌过期，后续文档数据库的请求将收到 401 未经授权的异常。 此时，Xamarin.Forms 应用程序应重新建立标识，并请求新的资源令牌。
 
-有关 Cosmos DB 分区的详细信息，请参阅[如何分区和 Azure Cosmos DB 中的小数位数](/azure/cosmos-db/partition-data/)。 有关 Cosmos 数据库访问控制的详细信息，请参阅[保护对 Cosmos DB 数据访问](/azure/cosmos-db/secure-access-to-data/)和[DocumentDB API 中的访问控制](/rest/api/documentdb/access-control-on-documentdb-resources/)。
+有关 Cosmos DB 分区的详细信息，请参阅[如何分区和 Azure Cosmos DB 中的小数位数](/azure/cosmos-db/partition-data/)。 有关 Cosmos 数据库访问控制的详细信息，请参阅[保护对 Cosmos DB 数据访问](/azure/cosmos-db/secure-access-to-data/)和[中 SQL API 的访问控制](/rest/api/documentdb/access-control-on-documentdb-resources/)。
 
 ## <a name="setup"></a>安装
 
@@ -58,11 +58,11 @@ _Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务
 
 <a name="cosmosdb_configuration" />
 
-### <a name="cosmos-db-configuration"></a>Cosmos DB 配置
+### <a name="azure-cosmos-db-configuration"></a>Azure Cosmos DB 配置
 
 用于创建将使用访问控制的 Cosmos DB 帐户的过程如下所示：
 
-1. 创建一个 Cosmos DB 帐户。 有关详细信息，请参阅[创建 Cosmos DB 帐户](/azure/cosmos-db/documentdb-dotnetcore-get-started#step-1-create-a-documentdb-account)。
+1. 创建一个 Cosmos DB 帐户。 有关详细信息，请参阅[创建 Azure Cosmos DB 帐户](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account)。
 1. 在 Cosmos DB 帐户中，创建一个名为的新集合`UserItems`，指定分区键为`/userid`。
 
 <a name="app_service_configuration" />
@@ -262,17 +262,17 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 有关从文档集合中删除文档的详细信息，请参阅[从文档集合中删除文档](~/xamarin-forms/data-cloud/cosmosdb/consuming.md#deleting_document)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何将访问控制与分区集合结合起来，以便用户只能访问自己在 Xamarin.Forms 应用程序中的文档数据库文档。 指定用户的标识用作分区键可确保分区的集合可以仅存储为该用户的文档。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [TodoDocumentDBAuth （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB 身份验证 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 - [使用 Azure Cosmos DB 文档数据库](~/xamarin-forms/data-cloud/cosmosdb/consuming.md)
 - [保护对 Azure Cosmos DB 数据访问](/azure/cosmos-db/secure-access-to-data/)
-- [DocumentDB API 中的访问控制](/rest/api/documentdb/access-control-on-documentdb-resources/)。
+- [SQL API 中的访问控制](/rest/api/documentdb/access-control-on-documentdb-resources/)。
 - [如何分区和 Azure Cosmos DB 中的小数位数](/azure/cosmos-db/partition-data/)
-- [DocumentDB 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
+- [Azure Cosmos DB 客户端库](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](https://msdn.microsoft.com/library/azure/dn948556.aspx)
