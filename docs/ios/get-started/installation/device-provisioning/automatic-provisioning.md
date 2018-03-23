@@ -1,6 +1,6 @@
 ---
-title: "自动预配"
-description: "Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。"
+title: 自动预配
+description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 271d9e3f7ae04f03a132ae2fd0ebf531fe52578c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="automatic-provisioning"></a>自动预配
 
@@ -24,7 +24,7 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 - Xcode 9 或更高版本
 
 > [!IMPORTANT]
->  本指南介绍了如何使用 Visual Studio for Mac 设置 Apple 设备进行部署以及如何部署应用程序。 如需了解此操作的手动步骤或如何在 Windows 上使用 Visual Studio 执行此操作，建议按照[手动预配](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)指南中的详细步骤进行操作。
+> 本指南介绍了如何使用 Visual Studio for Mac 设置 Apple 设备进行部署以及如何部署应用程序。 如需了解此操作的手动步骤或如何在 Windows 上使用 Visual Studio 执行此操作，建议按照[手动预配](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)指南中的详细步骤进行操作。
 
 ## <a name="enabling-automatic-signing"></a>启用自动签名
 

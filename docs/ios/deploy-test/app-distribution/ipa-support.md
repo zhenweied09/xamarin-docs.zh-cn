@@ -1,6 +1,6 @@
 ---
-title: "IPA 支持"
-description: "本文介绍如何创建可通过 Ad Hoc 分发用来部署应用程序的 IPA 文件，用于内部应用程序的测试或 In-House 分发。"
+title: IPA 支持
+description: 本文介绍如何创建可通过 Ad Hoc 分发用来部署应用程序的 IPA 文件，用于内部应用程序的测试或 In-House 分发。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bee3480fc90c2eac5629e336c57daa90adf9c346
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fa0986141a44bbe7100268c629e606a5857e2699
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ipa-support"></a>IPA 支持
 
@@ -151,7 +151,7 @@ ms.lasthandoff: 02/27/2018
     ![](ipa-support-images/imagevs02.png "从“配置”下拉列表选择“临时”")
 
     > [!NOTE]
-> Ad-Hoc 配置可能不适用于较新的 Xamarin.iOS 项目。 如果不可用，请选择“发布”配置。
+    > Ad-Hoc 配置可能不适用于较新的 Xamarin.iOS 项目。 如果不可用，请选择“发布”配置。
 
 3. 如果要包含可选 **iTunesMetadata.plist** 文件，请单击“...”选项，从列表中选择它，然后单击“打开”按钮：
 
@@ -249,7 +249,7 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文涵盖了为非 App Store 版本准备 Xamarin.iOS 应用程序所需的设置。 介绍了如何创建 IPA 包，以及如何在最终用户的 iOS 设备上安装生成的 iOS 应用程序，用于测试或 In-House 分发。
 

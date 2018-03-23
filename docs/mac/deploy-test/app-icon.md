@@ -1,6 +1,6 @@
 ---
-title: "应用程序图标"
-description: "本文介绍如何创建 Xamarin.Mac 应用程序图标所需的图像，将图像捆绑到 .icns 文件以及将该图标包含在 Xamarin.Mac 项目中。"
+title: 应用程序图标
+description: 本文介绍如何创建 Xamarin.Mac 应用程序图标所需的图像，将图像捆绑到 .icns 文件以及将该图标包含在 Xamarin.Mac 项目中。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 28218bcbf6527c818fdf2988375d1c353e9f1d27
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ceeb0d33b00288e2a50dc7f758902c1dbc7ab04a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="application-icon"></a>应用程序图标
 
@@ -61,52 +61,18 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 
 若要确保图标在用户会看到它的所有位置良好呈现，请提供以下所列大小的资源：
 
-<table width="100%" border="1px">
-<tr>
-    <td>Filename</td>
-    <td>大小（像素）</td>
-</tr>
-<tr>
-    <td>icon_512x512@2x.png</td>
-    <td>1024x1024</td>
-</tr>
-<tr>
-    <td>icon_512x512.png</td>
-    <td>512x512</td>
-</tr>
-<tr>
-    <td>icon_256x256@2x.png</td>
-    <td>512x512</td>
-</tr>
-<tr>
-    <td>icon_256x256.png</td>
-    <td>256x256</td>
-</tr>
-<tr>
-    <td>icon_128x128@2x.png</td>
-    <td>256x256</td>
-</tr>
-<tr>
-    <td>icon_128x128.png</td>
-    <td>128x128</td>
-</tr>
-<tr>
-    <td>icon_32x32@2x.png</td>
-    <td>64x64</td>
-</tr>
-<tr>
-    <td>icon_32x32.png</td>
-    <td>32x32</td>
-</tr>
-<tr>
-    <td>icon_16x16@2x.png</td>
-    <td>32x32</td>
-</tr>
-<tr>
-    <td>icon_16x16.png</td>
-    <td>16x16</td>
-</tr>
-</table>
+|Filename|大小（像素）|
+|---|---|
+|icon_512x512@2x.png|1024x1024|
+|icon_512x512.png|512x512|
+|icon_256x256@2x.png|512x512|
+|icon_256x256.png|256x256|
+|icon_128x128@2x.png|256x256|
+|icon_128x128.png|128x128|
+|icon_32x32@2x.png|64x64|
+|icon_32x32.png|32x32|
+|icon_16x16@2x.png|32x32|
+|icon_16x16.png|16x16|
 
 有关详细信息，请参阅 Apple 的 [Provide High-Resolution Versions of All App Graphics Resources](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3)（提供所有应用图形资源的高分辨率版本）文档。
 
@@ -143,7 +109,7 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 ![macOS 停靠中应用图标的示例](app-icon-images/icon04.png "macOS 停靠中应用图标的示例")
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文详细介绍了如何使用创建 macOS 应用图标所需的图像、打包图标以及在 Xamarin.Mac 项目中包含图标。
 

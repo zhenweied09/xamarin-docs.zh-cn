@@ -1,6 +1,6 @@
 ---
-title: "连接疑难解答"
-description: "本指南针对使用新连接管理器时可能会遇到的问题（包括连接和 SSH 问题）提供疑难解答步骤。"
+title: 连接疑难解答
+description: 本指南针对使用新连接管理器时可能会遇到的问题（包括连接和 SSH 问题）提供疑难解答步骤。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>连接疑难解答
 
@@ -72,26 +72,34 @@ ms.lasthandoff: 03/15/2018
 
 7. 确认了 Mac 的 IP 地址之后，尝试在 Windows 上的 `cmd.exe` 中对该地址执行 `ping` 操作：
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     如果 ping 失败，则不可从 Windows 计算机_路由_ 到 Mac。 该问题需要在 2 台计算机之间的局域网配置级别上进行解决。 确保两台计算机位于同一本地网络。
 
 8. 接下来，测试来自 OpenSSH 的 `ssh` 客户端是否可以从 Windows 成功连接到 Mac。 安装此程序的一种方法是安装[适用于 Windows 的 Git](https://git-for-windows.github.io/)。 然后可以启动 **Git Bash** 命令提示，并尝试使用用户名和 IP 地址对 Mac 执行 `ssh` 操作：
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. 如果**步骤 8 成功**，则可以尝试通过连接运行简单命令（如 `ls`）：
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     这应列出 Mac 上的主目录的内容。 如果 `ls` 命令可正常运行，但 Visual Studio 连接仍失败，则可以查看有关特定于 Xamarin 的复杂问题的“[已知问题和限制](#knownissues)”部分。 如果这些内容都与你的问题不符，请[提交新 bug 报告](https://bugzilla.xamarin.com/newbug)并附加“[检查详细日志文件](#verboselogs)”下所述的日志。
 
 10. 如果**步骤 8 失败**，则可以在 Mac 上的终端中运行以下命令，以查看 SSH 服务器是否接受_任何_ 连接：
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. 如果步骤 8 失败，但**步骤 10 成功**，则问题很可能是由于网络配置而无法从 Windows 访问 Mac 生成主机上的端口 22。 可能配置问题包括：
 
     - OS X 防火墙设置禁止连接。 请务必仔细检查步骤 3。
@@ -161,8 +169,10 @@ ms.lasthandoff: 03/15/2018
 
     5. 在文件末尾添加以下行：
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. 删除显示 `UseDNS yes` 的所有行以确保新设置生效。
 
     7. 保存该文件。
@@ -179,16 +189,20 @@ ms.lasthandoff: 03/15/2018
 
 1. 在 Mac 上的终端中运行以下命令：
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. 在按住 Control 的同时单击 **XMA** 文件夹并选择“移动到回收站”：
 
     [![](troubleshooting-images/troubleshooting-image8.png "将 XMA 文件夹移至“回收站”")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. Windows 上有一个缓存，可帮助进行清除。 在 Windows 上以管理员身份打开命令提示符：
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>警告消息
 
 此部分讨论可能会出现在“输出”窗口和日志中，不过通常可以忽略的几个消息。
@@ -230,7 +244,7 @@ ms.lasthandoff: 03/15/2018
 1. 启动 Visual Studio。
 
     > [!IMPORTANT]
->  请注意，**s**.svclog 默认为不启用。 若要进行访问，需要启动具有[版本日志](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs)指南中所述的详细日志的 Visual Studio。 有关详细信息，请参阅博客文章：[Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/)（使用活动日志对扩展进行故障排除）。
+    > 请注意，**s**.svclog 默认为不启用。 若要进行访问，需要启动具有[版本日志](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs)指南中所述的详细日志的 Visual Studio。 有关详细信息，请参阅博客文章：[Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/)（使用活动日志对扩展进行故障排除）。
 
 2. 尝试连接到生成主机。
 
@@ -272,7 +286,7 @@ ms.lasthandoff: 03/15/2018
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 如果这些详细日志文件未提供足够线索来直接解决该问题，请[提交新 bug 报告](https://bugzilla.xamarin.com/newbug)并附加来自步骤 5 的 .zip 文件和来自步骤 6 的 .log 文件。
 

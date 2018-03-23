@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms 深度解析"
+title: Xamarin.Forms 深度解析
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -7,33 +7,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 3259e9b2bc9be52e8c19acce2dd031ad9046019b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ea02b4329d5a27e47a89f21b475bb5f6d9dea175
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 深度解析
 
 在 [Xamarin.Forms 快速入门](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)中，生成了 Phoneword 应用程序。 本文对已生成的内容进行回顾，以深入了解有关 Xamarin.Forms 应用程序工作原理的基础知识。
-
-探讨了以下主题：
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- Visual Studio 简介 - Visual Studio 以及创建新 Xamarin.Forms 应用程序的简介。
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-- Visual Studio for Mac 简介 - Visual Studio for Mac 以及创建新 Xamarin.Forms 应用程序的简介。
-
------
-
-- Xamarin.Forms 应用程序剖析 - Xamarin.Forms 应用程序基本部分的教程。
-- 体系结构和应用程序基础知识 - 每个平台启动应用程序的方式。
-- 用户界面 (UI) - 创建 Xamarin.Forms 的用户界面。
-- Phoneword 中引入的其他概念 - 简单介绍 Phoneword 应用程序使用的其他概念。
-- 测试和部署 - 完成应用程序，并提供有关测试、部署、生成图稿等方面的建议。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -52,6 +34,14 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 - Phoneword.iOS - 此项目包含 iOS 特定代码，是 iOS 应用程序的入口点。
 - Phoneword.UWP - 此项目包含通用 Windows 平台特定代码，是 UWP 应用程序的入口点。
 
+## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 应用程序剖析
+
+以下屏幕截图显示 Visual Studio 中 Phoneword .NET Standard 库项目的内容：
+
+![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 项目内容")
+
+项目具有包含 NuGet 和 SDK 节点的依赖项节点。 NuGet 节点包含已添加至项目的 Xamarin.Forms NuGet 包，SDK 节点包含可引用一组完整的 NuGet 包（此包用于定义 .NET Standard）的 `NETStandard.Library` 元包。
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Visual Studio for Mac 简介
@@ -68,19 +58,7 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 - Phoneword.Droid - 此项目包含 Android 特定代码，是 Android 应用程序的入口点。
 - Phoneword.iOS - 此项目包含 iOS 特定代码，是 iOS 应用程序的入口点。
 
------
-
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 应用程序剖析
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-以下屏幕截图显示 Visual Studio 中 Phoneword .NET Standard 库项目的内容：
-
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 项目内容")
-
-项目具有包含 NuGet 和 SDK 节点的依赖项节点。 NuGet 节点包含已添加至项目的 Xamarin.Forms NuGet 包，SDK 节点包含可引用一组完整的 NuGet 包（此包用于定义 .NET Standard）的 `NETStandard.Library` 元包。
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 以下屏幕截图显示 Visual Studio for Mac 中 Phoneword PCL 项目的内容：
 
@@ -202,8 +180,6 @@ namespace Phoneword.Droid
 
 ## <a name="universal-windows-platform"></a>通用 Windows 平台
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 在通用 Windows 平台 (UWP) 应用程序中，可从 `App` 类调用初始化 Xamarin.Forms 框架的 `Init` 方法：
 
 ```csharp
@@ -230,13 +206,11 @@ namespace Phoneword.UWP
     }
 }
 ```
+
 可通过 `LoadApplication` 方法加载 Xamarin.Forms 应用程序。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-通用 Windows 平台 (UWP) 应用可以使用 Xamarin.Forms 生成，但只能在 Windows 上使用 Visual Studio。
-
------
+> [!NOTE]
+> 通用 Windows 平台 (UWP) 应用可以使用 Xamarin.Forms 生成，但只能在 Windows 上使用 Visual Studio。
 
 ## <a name="user-interface"></a>用户界面
 
@@ -302,43 +276,52 @@ void OnTranslate(object sender, EventArgs e)
 
 - 启用和禁用按钮。 通过更改 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 的 [`IsEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/) 属性，可将其打开或关闭。 例如，以下代码示例禁用 `callButton`：
 
-        callButton.IsEnabled = false;
+    ```csharp
+    callButton.IsEnabled = false;
+    ```
 
 - 显示警报对话框。 用户按呼叫**按钮**时，Phoneword 应用程序会显示“警报”对话框，其中包含发出或取消呼叫的选项。 [`DisplayAlert`](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert/p/System.String/System.String/System.String/System.String/) 方法用于创建该对话框，如以下代码示例所示：
 
-        await this.DisplayAlert (
-                "Dial a Number",
-                "Would you like to call " + translatedNumber + "?",
-                "Yes",
-                "No");
+    ```csharp
+    await this.DisplayAlert (
+            "Dial a Number",
+            "Would you like to call " + translatedNumber + "?",
+            "Yes",
+            "No");
+    ```
 
 - 通过 [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 类访问本机功能。 Phoneword 应用程序使用 `DependencyService` 类将 `IDialer` 接口解析到特定于平台的电话拨号实现中，如以下 Phoneword 项目中的代码示例所示：
 
-        async void OnCall (object sender, EventArgs e)
-        {
-            ...
-            var dialer = DependencyService.Get<IDialer> ();
-            ...
-        }
+    ```csharp
+    async void OnCall (object sender, EventArgs e)
+    {
+        ...
+        var dialer = DependencyService.Get<IDialer> ();
+        ...
+    }
+    ```
 
   有关 [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 类的详细信息，请参阅[通过 DependencyService 访问本机功能](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
 
 - 通过 URL 发出电话呼叫。 Phoneword 应用程序使用 `OpenURL` 启动系统电话应用。 URL 包含 `tel:` 前缀，后跟要呼叫的电话号码，如以下 iOS 项目中的代码示例所示：
 
-        return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```csharp
+    return UIApplication.SharedApplication.OpenUrl (new NSUrl ("tel:" + number));
+    ```
 
 - 调整平台布局。 使用 [`Device`](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) 类，开发人员能够根据每个平台自定义应用程序布局和功能，如以下代码示例所示（此示例使用不同平台上的另一个 [`Padding`](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) 值正确显示每一页）：
 
-        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                     ...>
-            <ContentPage.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20, 40, 20, 20" />
-                    <On Platform="Android, WinPhone, Windows" Value="20" />
-                </OnPlatform>
-            </ContentPage.Padding>
-            ...
-        </ContentPage>
+    ```xaml
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" ... >
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        ...
+    </ContentPage>
+    ```
 
   有关平台调整的详细信息，请参阅[设备类](~/xamarin-forms/platform/device.md)。
 
@@ -348,7 +331,7 @@ Visual Studio for Mac 和 Visual Studio 均提供许多用于测试和部署应�
 
 模拟器是开始部署和测试应用程序的有利位置，其提供用于测试应用程序的有用功能。 但是，用户不会在模拟器中使用最终应用程序，因此应尽早并经常在实际设备上测试应用程序。 有关 iOS 设备预配的详细信息，请参阅[设备预配](~/ios/get-started/installation/device-provisioning/index.md)。 有关 Android 设备预配的详细信息，请参阅[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了使用 Xamarin.Forms 开发应用程序的基础知识。 涵盖的主题包括：Xamarin.Forms 应用程序剖析、体系结构和应用程序基础知识以及用户界面。
 

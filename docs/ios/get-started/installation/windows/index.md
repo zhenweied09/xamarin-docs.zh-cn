@@ -1,6 +1,6 @@
 ---
-title: "在 Windows 上安装 Xamarin.iOS"
-description: "本文章介绍如何安装 Xamarin.iOS for Visual Studio。 其中包含 Visual Studio 适用的 Xamarin 扩展的安装过程，并探讨了如何连接到 Mac 上安装的 Apple SDK。"
+title: 在 Windows 上安装 Xamarin.iOS
+description: 本文章介绍如何安装 Xamarin.iOS for Visual Studio。 其中包含 Visual Studio 适用的 Xamarin 扩展的安装过程，并探讨了如何连接到 Mac 上安装的 Apple SDK。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08bf8b2b7c56983c43cf1ae080ab112e81851fbb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>在 Windows 上安装 Xamarin.iOS
 
@@ -37,7 +37,7 @@ _本文介绍如何安装 Xamarin.iOS for Visual Studio。其中包含 Visual St
 [![Xamarin.iOS 开发工作流](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  实际上，为了生成项目，Visual Studio 会启动单独的 MSBuild 进程。 此过程将创建与 Mac 的新连接，这表示当 Visual Studio 生成时，实际上将存在两个从 Windows 到 Mac 的 SSH 连接。 通过[命令行](~/ios/get-started/installation/windows/connecting-to-mac/index.md)生成仅会创建一个 MSBuild 进程。 为使该图简洁，仅用一个箭头表示所有连接。
+> 实际上，为了生成项目，Visual Studio 会启动单独的 MSBuild 进程。 此过程将创建与 Mac 的新连接，这表示当 Visual Studio 生成时，实际上将存在两个从 Windows 到 Mac 的 SSH 连接。 通过[命令行](~/ios/get-started/installation/windows/connecting-to-mac/index.md)生成仅会创建一个 MSBuild 进程。 为使该图简洁，仅用一个箭头表示所有连接。
 
 ## <a name="requirements"></a>惠?
 
@@ -105,7 +105,7 @@ Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Wind
 安装软件后，请按照后续各部分中的步骤在 macOS 上配置 Xamarin.iOS，以实现其与 Xamarin for Visual Studio 的连接。
 
 > [!IMPORTANT]
->  Windows 计算机必须使用与其连接的 Mac 相同的 Xamarin.iOS 版本。 为了确保满足此要求，必须符合以下条件：
+> Windows 计算机必须使用与其连接的 Mac 相同的 Xamarin.iOS 版本。 为了确保满足此要求，必须符合以下条件：
 >
 > - **Visual Studio 2015 及更低版本**：确保位于与 Visual Studio for Mac 相同的[更新通道](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)上。
 >
@@ -213,7 +213,7 @@ Xamarin.iOS for Visual Studio 到 Mac 生成主机的连接是通过计算机间
 
 工具栏配置完成后，即可开始使用 Xamarin iOS for Visual Studio。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文提供了安装、配置和使用 Xamarin iOS for Visual Studio 的分步指南。
 
