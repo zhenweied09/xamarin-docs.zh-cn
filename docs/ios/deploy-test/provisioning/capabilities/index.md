@@ -1,6 +1,6 @@
 ---
-title: "使用功能"
-description: "向应用程序添加功能通常需要其他预配设置。 本指南将介绍所有功能所需的设置。"
+title: 使用功能
+description: 向应用程序添加功能通常需要其他预配设置。 本指南将介绍所有功能所需的设置。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c038aba3989046e6df062e97ae7f777ae6238ade
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ffc694e2f513d61cf32e94d8dc3bae17c887521b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-capabilities"></a>使用功能
 
@@ -58,7 +58,7 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> 注意：并非所有功能都可在 Visual Studio for Mac 中添加和管理。 以下列表包含受支持的功能：
+> 并非所有功能都可在 Visual Studio for Mac 中添加和管理。 以下列表包含受支持的功能：
 >
 >* HealthKit 
 >* HomeKit 
@@ -198,7 +198,7 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
     ![Visual Studio for Mac 项目选项](images/image16.png)
 
 > [!IMPORTANT]
-> 注意：可能还需要在 Entitlement.plist 文件中设置授权密钥，在 Info.plist 文件中设置隐私密钥。 有关这些权利的详细信息，请参阅[使用权利](~/ios/deploy-test/provisioning/entitlements.md)指南。
+> 此外，可能还需要在 Entitlement.plist 文件中设置授权密钥，在 Info.plist 文件中设置隐私密钥。 有关这些权利的详细信息，请参阅[使用权利](~/ios/deploy-test/provisioning/entitlements.md)指南。
 
 <a name="nextsteps" />
 
@@ -220,10 +220,10 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
 -   确保已安装配置文件和应用 ID，且应用的“Info.plist”（在 Xamarin 项目中）正在使用上述配置的某个应用 ID。
 -   确保应用的 **Entitlements.plist** 文件（在 Xamarin 项目中）启用了正确的服务。
 -   确保 info.plist 中设置了正确的隐私密钥
--   在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 **注意：**对“调试”和“iOS 模拟器”生成来说，这不是默认设置。
+-   在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。
 
 <a name="summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南解释了功能（或应用服务），并介绍了如何在 Apple 开发人员中心的 Visual Studio 中启用这些功能。 此外，本指南还详细介绍了如何设置更为复杂的服务（例如 Wallet、iCloud、Apple Pay 和应用组）。 最后，本指南还介绍了设置的后续步骤以及简单的故障排除选项。

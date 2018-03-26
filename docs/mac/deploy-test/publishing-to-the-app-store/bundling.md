@@ -1,6 +1,6 @@
 ---
-title: "Mac App Store 捆绑"
-description: "本指南介绍将要发布的 Xamarin.Mac 应用捆绑到 Mac App Store。"
+title: Mac App Store 捆绑
+description: 本指南介绍将要发布的 Xamarin.Mac 应用捆绑到 Mac App Store。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3f94b448539b2e4073c7d8a1092df066e484dfc
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Mac App Store 程序包
 
 本部分简单介绍如何使用 Visual Studio for Mac 构建要发布到 Mac App Store 的应用程序。 根据附加功能（例如 iCloud 访问和推送通知），可能需要安装本文未提及的其他组件。
 
 > [!NOTE]
->  注意：开始本部分之前，开发人员必须创建生产预配配置文件才能针对 Mac App Store 进行构建。 请参阅本文档前面的说明，了解如何创建所需的预配配置文件。
+> 开始本部分之前，开发人员必须创建生产预配配置文件才能针对 Mac App Store 进行构建。 请参阅本文档前面的说明，了解如何创建所需的预配配置文件。
 
 ## <a name="code-signing-options"></a>代码签名选项
 

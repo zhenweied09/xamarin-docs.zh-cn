@@ -1,6 +1,6 @@
 ---
-title: "卸载 Xamarin"
-description: "从计算机上卸载 Xamarin 产品"
+title: 卸载 Xamarin
+description: 从计算机上卸载 Xamarin 产品
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 9b7738736995835ebb6da68d32bdfbec868e73cc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="uninstalling-xamarin"></a>卸载 Xamarin
 
@@ -69,13 +69,14 @@ rm -rf ~/Library/XamarinStudio-*
 Mono 是 Microsoft .NET Framework 的开放源代码实现，可供所有 Xamarin 产品（Xamarin.iOS、Xamarin.Android 和 Xamarin.Mac）使用以在 C# 中开发这些平台。
 
 > [!IMPORTANT]
-> 注意：Xamarin 外的其他应用程序也使用 Mono，例如 Unity。 卸载 Mono 前，请确保 Mono 上没有其他依赖项。
+> Xamarin 外的其他应用程序也使用 Mono，例如 Unity。 卸载 Mono 前，请确保 Mono 上没有其他依赖项。
 
 若要从计算机删除 Mono Framework，请在终端运行以下命令：
 
 ```bash
 sudo rm -rf /Library/Frameworks/Mono.framework
 sudo pkgutil --forget com.xamarin.mono-MDK.pkg
+sudo rm /etc/paths.d/mono-commands
 ```
 
 <a name="uninstallandroid" />
@@ -257,7 +258,7 @@ rm -rf ~/Library/Preferences/Xamarin/
 [![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "完全卸载 Visual Studio")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
-> 警告：如果并行 (SxS) 安装了两个（或多个）Visual Studio 的实例（如发行版和预览版），则卸载一个实例可能删除另一个 Visual Studio 实例中的一些 Xamarin 功能，包括：
+> 如果并行 (SxS) 安装了两个（或多个）Visual Studio 的实例（如发行版和预览版），则卸载一个实例可能会删除另一个 Visual Studio 实例中的一些 Xamarin 功能，包括：
 >
 > - Xamarin Profiler
 > - Xamarin Workbooks/Inspector
@@ -278,7 +279,7 @@ rm -rf ~/Library/Preferences/Xamarin/
 
 若要从计算机完全卸载 Xamarin，首先请删除 Visual Studio for Mac，然后按照[卸载 Xamarin Studio](#uninstallxamarinstudio) 部分列出的步骤执行操作。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何通过使用终端命令从 Mac 完全卸载 Xamarin，以及如何通过“程序和功能”选项（适用于 Visual Studio 2015 及更早版本）和使用 **Visual Studio 安装程序**（适用于 Visual Studio 2017）从 Windows 计算机卸载 Xamarin。
 

@@ -1,6 +1,6 @@
 ---
-title: "Fastlane for iOS 介绍"
-description: "本指南介绍了可用于对 iOS 应用程序进行代码签名的各种 fastlane 工具"
+title: Fastlane for iOS 介绍
+description: 本指南介绍了可用于对 iOS 应用程序进行代码签名的各种 fastlane 工具
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4bba92180e77accaa42b70843fb5dbf12c94d632
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Fastlane for iOS 介绍
 
@@ -44,10 +44,10 @@ Fastlane 是一个开源项目，旨在简化 iOS 和 Android 应用混乱冗长
     error: command line tools are already installed, use "Software Update" to install updates
     ```
 
-2. 从 [https://download.fastlane.tools](https://download.fastlane.tools) 下载 fastlane 工具。 
+2. 从 [https://download.fastlane.tools](https://download.fastlane.tools) 下载 Fastlane 工具。 
 
     > [!NOTE]
-> 可以使用 `brew cask install fastlane` 从 Homebrew 安装 fastlane 工具，也可以使用 `sudo gem install fastlane –NV` 通过 Rubygems（2.0 或更高版本）安装。 但是，使用安全程序可以确保提供正确的依赖项。 
+    > 可以使用 `brew cask install fastlane` 从 Homebrew 安装 fastlane 工具，也可以使用 `sudo gem install fastlane –NV` 通过 Rubygems（2.0 或更高版本）安装。 但是，使用安全程序可以确保提供正确的依赖项。 
 
 3. 通过解压缩文件安装 fastlane，然后双击 `install` 可执行文件。 如果收到错误通知“无法打开文件，因为它来自无法识别的开发人员”，请按“确定”，然后执行以下操作：
     - 按住 Ctrl 并单击 `install` 可执行文件。 此时，将显示以下对话框：

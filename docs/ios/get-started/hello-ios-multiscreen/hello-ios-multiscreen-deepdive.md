@@ -1,6 +1,6 @@
 ---
-title: "Hello，iOS 多屏显示"
-description: "在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。"
+title: Hello，iOS 多屏显示
+description: 在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0c21fbd86fc9069d52f5f5935f66500e9477ca02
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>了解 iOS 多屏显示详述
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/09/2018
 MVC 模式很有用，因为它在 GUI 应用程序的不同部件之间实现逻辑分离，简化了代码和视图的重复使用。 让我们直接进入，更详细地分别查看这三种角色。
 
 > [!NOTE]
-> **注意**：MVC 模式类同于 ASP.NET 网页或 WPF 应用程序的结构。 在这些示例中，“视图”是一种组件，实际负责描述 UI，并响应 ASP.NET 中的 ASPX (HTML) 网页或 WPF 应用中的 XAML。 “控制器”是负责管理“视图”的组件，它对应于 ASP.NET 或 WPF 中的代码后置。
+> MVC 模式有些类同于 ASP.NET 网页或 WPF 应用程序的结构。 在这些示例中，“视图”是一种组件，实际负责描述 UI，并响应 ASP.NET 中的 ASPX (HTML) 网页或 WPF 应用中的 XAML。 “控制器”是负责管理“视图”的组件，它对应于 ASP.NET 或 WPF 中的代码后置。
 
 
 ### <a name="model"></a>模型
@@ -52,7 +52,7 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 在某些情况下，MVC 的“模型”部分可能为空。 例如，可能会选择向应用添加一些静态页面，用于解释电话转换器的工作原理、其构建原因以及如何联系我们以报告 bug。 这些应用屏幕仍将使用“视图”和“控制器”进行创建，但其不包含任何真实的“模型”数据。
 
 > [!NOTE]
-> **注意**：在某些宣传资料中，MVC 模式的“模型”部分可指代整个应用程序后端，而不仅仅是 UI 上显示的数据。 在本指南中，我们使用该模型的新型解释，但区别并不特别重要。
+> 在某些宣传资料中，MVC 模式的“模型”部分可指代整个应用程序后端，而不仅仅是 UI 上显示的数据。 在本指南中，我们使用该模型的新型解释，但区别并不特别重要。
 
 
 ### <a name="view"></a>视图
@@ -202,7 +202,7 @@ Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概
 -   **情节提要 ID** – 通过设置情节提要 ID，可在 Objective-C 中创建“视图控制器”类，其中包含情节提要中视图控制器的代码后置。 情节提要 ID 用于查找 Objective-C 类并在情节提要中执行视图控制器的实例化。 有关情节提要 ID 的详细信息，请参阅[情节提要简介](~/ios/user-interface/storyboards/index.md)指南。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 祝贺，你完成了首个多屏显示的 iOS 应用程序！
 

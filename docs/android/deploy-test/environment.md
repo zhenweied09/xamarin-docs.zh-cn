@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Android 环境"
+title: Xamarin.Android 环境
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ee612d4a8982a6ae505b4d329b9abbc84624a1e0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 66f4dcf14cd179795e9a23bccabe4289d74c7c5b
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 环境
 
@@ -36,7 +36,7 @@ Android 系统属性是针对目标设备上的所有进程而设置的。
 
 如果密钥以大写字母开头，密钥将被视为一个环境变量，且 setenv(3) 用于在进程启动过程中将环境变量设置为指定值。
 
-如果密钥以小写字母开头，则密钥会被视为 Android 系统属性，且值为默认值：首先从 Android 系统属性服务器查找控制 Xamarin.Android 执行行为的 Android 系统属性，如果未指定任何值，则使用环境文件中指定的值。 这是为了允许 `adb shell setprop` 用于重写来自环境文件的值，以进行诊断。
+如果密钥以小写字母开头，则密钥会被视为 Android 系统属性，且值为默认值：首先从 Android 系统属性存储查找控制 Xamarin.Android 执行行为的 Android 系统属性，如果未指定任何值，则使用环境文件中指定的值。 这是为了允许 `adb shell setprop` 用于重写来自环境文件的值，以进行诊断。
 
 ## <a name="xamarinandroid-environment-variables"></a>Xamarin.Android 环境变量
 
@@ -45,9 +45,9 @@ Xamarin.Android 支持 `XA_HTTP_CLIENT_HANDLER_TYPE` 变量，可通过 `adb she
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-程序集限定类型必须继承自 [HttpMessageHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpmessagehandler(v=vs.118).aspx)，并从[`HttpClient()`默认构造函数](https://msdn.microsoft.com/en-us/library/hh138077(v=vs.118).aspx)进行构造。
+程序集限定类型必须继承自 [HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1)，并从[`HttpClient()`默认构造函数](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor)进行构造。
 
-在 Xamarin.Android 6.1 中，默认情况下不会设置此环境变量，且会使用 [HttpClientHandler](https://msdn.microsoft.com/en-us/library/system.net.http.httpclienthandler(v=vs.118).aspx)。
+在 Xamarin.Android 6.1 中，默认情况下不会设置此环境变量，且会使用 [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)。
 
 或者，可指定值 `Xamarin.Android.Net.AndroidClientHandler`，以将 [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/) 用于网络访问，如果 Android 支持，则可能允许使用 TLS 1.2。
 
@@ -122,7 +122,7 @@ debug.mono.max_grefc` 一起使用，因为当此值在 **environment.txt** 文�
 `debug.mono.trace` 系统属性将启用跟踪。
 它等效于 `mono --trace` 选项，并使用与之相同的值。 （请参阅 [mono(1)](http://docs.go-mono.com/?link=man%3amono(1)) 手册页了解详细信息。）
 
-一般情况下， *不使用* 。 使用跟踪将发送垃圾邮件 `adb logcat` 输出，严重减慢程序行为，并更改程序行为（直至并包括添加其他错误情况）。
+一般情况下，*不使用*。 使用跟踪将发送垃圾邮件 `adb logcat` 输出，严重减慢程序行为，并更改程序行为（直至并包括添加其他错误情况）。
 
 但是有些时候，它允许执行某些进一步研究...
 

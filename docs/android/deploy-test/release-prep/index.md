@@ -1,17 +1,17 @@
 ---
-title: "做好应用程序发布准备"
+title: 做好应用程序发布准备
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e440d5ab9f822277a8c0948a9795b9a030fa268c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/21/2018
+ms.openlocfilehash: baaa40bc89a1ca6728189563c8350f9c9f011762
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="preparing-an-application-for-release"></a>做好应用程序发布准备
 
@@ -40,13 +40,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="specify-the-application-icon"></a>指定应用程序图标
 
-强烈建议每个 Xamarin.Android 应用程序都指定一个应用程序图标。 某些应用程序商城将不允许发布没有图标的 Android 应用程序。
-
-`Application` 特性的 `Icon` 属性用于指定 Xamarin.Android 项目的应用程序图标。 此属性可在文件 **Properties\AssemblyInfo.cs** 中声明，如以下示例代码段中所示：
-
-```csharp
-[assembly: Application(Icon = "@drawable/icon")]
-```
+强烈建议每个 Xamarin.Android 应用程序都指定一个应用程序图标。 某些应用程序商城将不允许发布没有图标的 Android 应用程序。 `Application` 特性的 `Icon` 属性用于指定 Xamarin.Android 项目的应用程序图标。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -61,6 +55,15 @@ ms.lasthandoff: 03/09/2018
 [![设置应用程序图标](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
+
+在这些示例中，`@drawable/icon` 指位于 Resources/drawable/icon.png（请注意，.png 扩展名不包含在资源名称中）中的一个图标文件。 另外，此属性也可在文件 Properties\AssemblyInfo.cs 中声明，如以下示例代码片段所示：
+
+```csharp
+[assembly: Application(Icon = "@drawable/icon")]
+```
+
+通常情况下，`using Android.App` 在 **AssemblyInfo.cs**（`Application` 属性的命名空间为 `Android.App`）顶部声明；不过，可能需要添加此 `using` 语句（如果尚不存在）。
+
 
 <a name="Versioning" />
 

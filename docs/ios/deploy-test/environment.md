@@ -1,16 +1,16 @@
 ---
-title: "环境"
+title: 环境
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7489c2fe38e8433811c5f298296baebacf1c0727
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c46d3aa151d4a596ca3da881a3c4e5e38bb41cbd
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="environment"></a>环境
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="permanent-environment-variables"></a>永久环境变量
 
-通过将 mtouch 打包工具指定为额外参数，设置永久环境变量。 这些环境变量被编译为可执行文件，即使不从 Xamarin Studio 中启动应用也会设置。
+通过将 mtouch 打包工具指定为额外参数，设置永久环境变量。 这些环境变量被编译为可执行文件，即使应用不从 Visual Studio for Mac 中启动也会设置它们。
 
 ## <a name="example"></a>示例
 

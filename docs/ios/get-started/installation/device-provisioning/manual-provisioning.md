@@ -1,6 +1,6 @@
 ---
-title: "手动预配"
-description: "Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。"
+title: 手动预配
+description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: ecda5823636a1b2d7e31a39e29f1d46cdf7118b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-provisioning"></a>手动预配
 
@@ -85,7 +85,7 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 -----
 
 > [!WARNING]
-> 注意：丢失证书和关联密钥会很麻烦，因为需要撤销现有证书并重新设置任何关联的设备，包括为临时部署注册的设备。 成功设置开发证书后，导出备份副本并将其存储在安全位置。 有关如何执行此操作的详细信息，请参阅 Apple 文档中[维护证书](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)指南的“导出与导入证书和配置文件”部分。
+> 丢失证书和关联密的钥会很麻烦，因为需要撤销现有证书并重新设置任何关联的设备，包括为临时部署注册的设备。 成功设置开发证书后，导出备份副本并将其存储在安全位置。 有关如何执行此操作的详细信息，请参阅 Apple 文档中[维护证书](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html)指南的“导出与导入证书和配置文件”部分。
 
 <a name="provisioning" />
 
@@ -209,12 +209,12 @@ Visual Studio for Mac 或 Visual Studio 将有新的证书或预配配置文件�
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> 注意：可能需要停止和重启 Visual Studio for Mac，才能看到任何新的或修改的证书或由 Xcode 更新的配置文件。
+> 可能需要停止和重启 Visual Studio for Mac，才能看到任何新的或修改的证书或由 Xcode 更新的配置文件。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 > [!IMPORTANT]
-> 注意：可能需要停止和重启 Visual Studio，才能看到任何新的或修改的证书或由 Xcode 更新的配置文件。
+> 可能需要停止和重启 Visual Studio，才能看到任何新的或修改的证书或由 Xcode 更新的配置文件。
 
 -----
 
@@ -270,7 +270,7 @@ Apple 提供一系列精选的特殊应用服务（亦称为“功能”），�
 
 -----
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍了针对 Xamarin.iOS 设置开发环境所需的步骤。 探讨了如何使用关于开发人员、开发团队、可运行应用的设备和单个应用 ID 的信息对应用程序进行代码签名。
 

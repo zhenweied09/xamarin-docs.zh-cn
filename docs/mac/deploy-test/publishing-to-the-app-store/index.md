@@ -1,6 +1,6 @@
 ---
-title: "发布到 App Store"
-description: "本指南演示如何使用 Visual Studio for Mac 部署 Xamarin.Mac 应用。 其中介绍如何设置 Mac 开发人员帐户、演示代码签名证书的创建过程，以及说明如何使用这些证书来生成可直接分发或通过 Mac App Store 分发的 Mac 应用。"
+title: 发布到 App Store
+description: 本指南演示如何使用 Visual Studio for Mac 部署 Xamarin.Mac 应用。 其中介绍如何设置 Mac 开发人员帐户、演示代码签名证书的创建过程，以及说明如何使用这些证书来生成可直接分发或通过 Mac App Store 分发的 Mac 应用。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4c7b0913d43d9db3b5414c831864dae8d0b4d61
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>发布到 App Store
 
@@ -37,7 +37,7 @@ _本指南演示如何使用 Visual Studio for Mac 部署 Xamarin.Mac 应用。�
 选择适合自身情况的正确注册类型。
 
 > [!NOTE]
-> 注意：此处所作的选择会影响到配置开发人员帐户时一些屏幕出现的方式。 本文档中的说明和屏幕截图适用于**个人**开发人员帐户。 在**公司**开发人员帐户中，部分选项仅**团队管理员**用户可用。
+> 此处所作的选择会影响到在配置开发人员帐户时一些屏幕出现的方式。 本文档中的说明和屏幕截图适用于**个人**开发人员帐户。 在**公司**开发人员帐户中，部分选项仅**团队管理员**用户可用。
 
 
 ### <a name="certificates-and-identifiersmacdeploy-testpublishing-to-the-app-storecertificates-identifiersmd"></a>[证书和标识符](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)

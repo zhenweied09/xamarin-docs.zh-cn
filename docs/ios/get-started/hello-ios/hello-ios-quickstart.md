@@ -1,6 +1,6 @@
 ---
-title: "Hello，iOS"
-description: "在此由两部分构成的指南中，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。"
+title: Hello，iOS
+description: 在此由两部分构成的指南中，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 快速入门
 
@@ -90,7 +90,7 @@ Xamarin.iOS 适用于以下设置：
   ![](hello-ios-quickstart-images/image8new.png "将“标签”拖动到中心区域的设计图面上")
 
   > [!NOTE]
-> 注意：可以通过导航到“视图”>“板”，随时打开“Properties Pad”或“工具箱”。
+  > 可以通过导航到“视图”>“面板”，随时打开“Properties Pad”或“工具箱”。
 
 9. 抓取拖动控件的图柄（控件周围的圆圈）并使标签更宽：
 
@@ -268,9 +268,8 @@ Xamarin.iOS 适用于以下设置：
 
   ![](hello-ios-quickstart-images/image27new.png "按“启动”")
 
-
   > [!NOTE]
-> 注意：目前，Apple 可能要求拥有开发证书或签名标识才能为设备或模拟器生成代码。 请按照[设备预配指南](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)中的步骤执行此设置。
+  > 目前，Apple 可能要求拥有开发证书或签名标识才能为设备或模拟器生成代码。 请按照[设备预配指南](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)中的步骤执行此设置。
 
 28. 这会在 iOS 模拟器中启动应用程序：
 
@@ -289,7 +288,7 @@ Xamarin.iOS 适用于以下设置：
 **请注意**：本演练在 Windows 10 虚拟机上使用 Visual Studio Enterprise 2017。 你的设置可以与此不同，只要满足以上要求即可，但是请注意，一些屏幕截图可能因你的设置而异。
 
 > [!NOTE]
-> 继续此演练前，必须已从 Visual Studio 连接到你的 Mac。 这是因为 Xamarin.iOS 依赖于 Apple 的工具生成并启动 iOS 设计器和应用程序。 若要获取设置，请执行[连接到 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 指南中的步骤。
+> 继续此演练前，必须已从 Visual Studio 连接到 Mac。 这是因为 Xamarin.iOS 依赖于 Apple 的工具生成并启动 iOS 设计器和应用程序。 若要获取设置，请执行[连接到 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 指南中的步骤。
 
 1. 从“开始”菜单启动 Visual Studio：
 
@@ -333,7 +332,7 @@ Xamarin.iOS 适用于以下设置：
   ![](hello-ios-quickstart-images/vs-image10.png "将“标签”的“文本”属性更改为“Enter a Phoneword”")
 
   > [!NOTE]
-> 注意：可以通过导航到“视图”菜单，随时打开“属性”或“工具箱”。
+  > 可以通过导航到“视图”菜单，随时打开“属性”或“工具箱”。
 
 
 9. 在工具箱内搜索“文本字段”，将一个“文本字段”从“工具箱”拖动到设计图面上，并将它放置在“标签”下方。 调整宽度，直到“文本字段”的宽度与“标签”相同：
@@ -377,7 +376,7 @@ Xamarin.iOS 适用于以下设置：
   ![](hello-ios-quickstart-images/vs-image19.png "添加名为“PhoneTranslator”的新类")
 
   > [!IMPORTANT]
-> 请确保选择在图标中包含 C# 的“类”模板。 否则，可能无法引用此新类。
+  > 请确保选择在图标中包含 C# 的“类”模板。 否则，可能无法引用此新类。
 
 
 17. 这会创建新 C# 类。 删除所有模板代码并替换为以下代码：

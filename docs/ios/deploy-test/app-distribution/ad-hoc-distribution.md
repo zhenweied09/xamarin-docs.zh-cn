@@ -1,6 +1,6 @@
 ---
-title: "Ad-Hoc 分发"
-description: "本文档概述了 Ad-Hoc 分发技术，此技术主要用于通过大范围用户来测试 Xamarin.iOS 应用程序。"
+title: Ad-Hoc 分发
+description: 本文档概述了 Ad-Hoc 分发技术，此技术主要用于通过大范围用户来测试 Xamarin.iOS 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ad-hoc-distribution"></a>Ad-Hoc 分发
 
@@ -39,7 +39,7 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 下一部分将介绍如何创建分发证书和分发配置文件。
 
 > [!NOTE]
->  注意：只有团队代理和管理员可创建分发证书和预配配置文件。
+> 只有团队代理和管理员可创建分发证书和预配配置文件。
 
 <a name="createcertificate" />
 
@@ -176,7 +176,7 @@ Ad Hoc 分发需要应用程序使用包含代码签名信息的 Ad Hoc 配置�
 
 若要深入了解如何创建 IPA，请参阅 [IPA 支持指南](~/ios/deploy-test/app-distribution/ipa-support.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了 Ad Hoc 分发机制，它用于测试 Xamarin.iOS 应用程序。
 

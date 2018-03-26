@@ -1,6 +1,6 @@
 ---
-title: "在 iTunes Connect 中配置应用"
-description: "本文介绍在 iTunes Connect 中设置和维护 Xamarin.iOS 应用程序使其可在 App Store 上分发所需的步骤。"
+title: 在 iTunes Connect 中配置应用
+description: 本文介绍在 iTunes Connect 中设置和维护 Xamarin.iOS 应用程序使其可在 App Store 上分发所需的步骤。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: dc21b21e28de155aa7a0e7b5cf9734e752cce9a2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>在 iTunes Connect 中配置应用
 
@@ -198,7 +198,7 @@ Apple 要求开发人员提供其网站的链接，用于支持用户可能遇�
 ### <a name="app-icon"></a>应用图标
 
 > [!IMPORTANT]
->  注意：无法再通过 iTunes Connect 提交应用图标。 它们必须通过项目的 Assets.xcassets 文件中的 AppIcon 映像集提交。 有关详细信息，请参阅[应用商店图标](~/ios/app-fundamentals/images-icons/app-store-icon.md)指南。
+>  无法再通过 iTunes Connect 提交应用图标。 它们必须通过项目的 Assets.xcassets 文件中的 AppIcon 映像集提交。 有关详细信息，请参阅[应用商店图标](~/ios/app-fundamentals/images-icons/app-store-icon.md)指南。
 
 应用图标是面向用户的应用程序的门脸，必须易记且在小尺寸下也能正常显示。 易记的图标是干净、简单且具有高度辨识度的。
 
@@ -351,7 +351,7 @@ Apple 允许提供应用程序的版权信息，并要求提供发布应用程�
 
 [![](itunesconnect-images/reviews01.png "查看应用程序评论")](itunesconnect-images/reviews01.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何使用 iTunes Connect 准备 Xamarin.iOS 应用程序，进而发布到 App Store，以及如何维护在 App Store 中显示的应用程序的所有信息。
 

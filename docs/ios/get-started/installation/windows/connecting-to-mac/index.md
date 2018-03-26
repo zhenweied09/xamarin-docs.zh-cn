@@ -1,6 +1,6 @@
 ---
-title: "连接到 Mac"
-description: "Xamarin.iOS for Visual Studio 允许开发者使用 Visual Studio IDE 在 Windows 计算机上创建、生成和调试 iOS 应用程序。 本指南介绍了 Xamarin.iOS for Visual Studio 提供的功能，以及如何连接到 Mac 生成主机。"
+title: 连接到 Mac
+description: Xamarin.iOS for Visual Studio 允许开发者使用 Visual Studio IDE 在 Windows 计算机上创建、生成和调试 iOS 应用程序。 本指南介绍了 Xamarin.iOS for Visual Studio 提供的功能，以及如何连接到 Mac 生成主机。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4f7b55fa859473e84298151bc08878bc2161192
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connecting-to-the-mac"></a>连接到 Mac
 
@@ -39,7 +39,7 @@ Visual Studio 通过 SSH 连接到 Mac，这有几个优点，包括：
 [![iOS 开发工作流](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  实际上，为了生成项目，Visual Studio 会启动单独的 MSBuild 进程。 此过程将创建与 Mac 的新连接，这表示当 Visual Studio 生成时，实际上将存在两个从 Windows 到 Mac 的 SSH 连接。 通过[命令行](#commandline)生成仅会创建一个 MSBuild 进程。 为使该图简洁，仅用一个箭头表示所有连接。
+> 实际上，为了生成项目，Visual Studio 会启动单独的 MSBuild 进程。 此过程将创建与 Mac 的新连接，这表示当 Visual Studio 生成时，实际上将存在两个从 Windows 到 Mac 的 SSH 连接。 通过[命令行](#commandline)生成仅会创建一个 MSBuild 进程。 为使该图简洁，仅用一个箭头表示所有连接。
 
 ## <a name="requirements"></a>惠?
 
@@ -53,7 +53,7 @@ Xamarin.iOS for Visual Studio 可实现强大功能：让开发人员能在 Wind
 #### <a name="compatibility"></a>兼容性
 
 > [!IMPORTANT]
->  Windows 计算机必须使用与其连接的 Mac 相同的 Xamarin.iOS 版本。 为了确保满足此要求，必须符合以下条件：                                                    
+> Windows 计算机必须使用与其连接的 Mac 相同的 Xamarin.iOS 版本。 为了确保满足此要求，必须符合以下条件：                                                    
 >                                                                                                                 
 > - **Visual Studio 2015 及更低版本**：确保位于与 Visual Studio for Mac 相同的[更新通道](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/)上。
 >                                                                                                                 
@@ -113,7 +113,7 @@ Visual Studio 将在 Mac 上启动和停止代理，因此用户无需运行其�
 代理将使用这些凭据创建到 Mac 的新 SSH 连接。 如果成功，将创建 SSH 密钥，并将其在该 Mac 上的 `authorized_keys` 文件中[注册](#commandline)。 在后续连接上，代理将使用用户名和密钥文件连接到最近连接的已知生成主机。
 
 > [!NOTE]
->  注意：输入凭据时，必须使用“用户名”，而不是“全名”。  可通过在终端中使用 `whoami` 命令找到它。  例如，在下面的屏幕截图中，帐户名称是“amyb”，而不是“Amy Burns”：
+> 输入凭据时，必须使用“用户名”，而不是“全名”。  可通过在终端中使用 `whoami` 命令找到它。  例如，在下面的屏幕截图中，帐户名称是“amyb”，而不是“Amy Burns”：
 >
 > ![在终端应用中查找用户名](images/image5.png)
 
@@ -179,7 +179,7 @@ Visual Studio 将在 Mac 上启动和停止代理，因此用户无需运行其�
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>总结
 
 本文介绍了 Visual Studio 与 iOS 生成之间的连接以及 Mac 上的设计器工具，可允许使用 Visual Studio 生成 Xamarin.iOS 应用。
 

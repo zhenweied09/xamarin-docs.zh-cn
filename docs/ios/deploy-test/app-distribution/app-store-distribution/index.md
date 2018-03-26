@@ -1,6 +1,6 @@
 ---
-title: "App Store 分发"
-description: "本文档介绍 Apple 的 App Store 分发的要求。"
+title: App Store 分发
+description: 本文档介绍 Apple 的 App Store 分发的要求。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25c4cb980f77880ae690916ec45be3cd12a3cf10
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-store-distribution"></a>App Store 分发
 
@@ -37,7 +37,7 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 可选择与用于开发配置文件相同的**应用程序 ID** 和**设备**，但是如果还没有，则需要创建一个分发证书，以在将应用提交到 App Store 时，确认你的组织。 下面的部分将介绍创建分发证书的步骤。
 
 > [!NOTE]
->  注意：只有团队代理和管理员可创建分发证书和预配配置文件。
+> 只有团队代理和管理员可创建分发证书和预配配置文件。
 
 <a name="creatingcertificate" />
 
@@ -194,7 +194,7 @@ Xamarin.iOS 应用程序需要在 iTunes Connect 中进行恰当安装并配置�
 
 [!include[](~/ios/includes/copy-app-bundle-to-windows.md)]
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了一些关键组件，用于准备 Xamarin.iOS 应用程序以在 App Store 中分发。
 

@@ -1,18 +1,18 @@
 ---
-title: "Xamarin Android 设备管理器"
-description: "Xamarin Android 设备管理器（当前提供预览版）取代了 Google 的旧版设备管理器。 本指南说明如何使用 Xamarin Android 设备管理器创建和配置对 Android 设备进行仿真的 Android 虚拟设备 (AVD)。 可以使用这些虚拟设备运行和测试应用，而不需要依赖物理设备。"
+title: Xamarin Android 设备管理器
+description: Xamarin Android 设备管理器（当前提供预览版）取代了 Google 的旧版设备管理器。 本指南说明如何使用 Xamarin Android 设备管理器创建和配置对 Android 设备进行仿真的 Android 虚拟设备 (AVD)。 可以使用这些虚拟设备运行和测试应用，而不需要依赖物理设备。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/13/2018
-ms.openlocfilehash: c38a0a7f6897cd90f81c92348280539b33524b9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 03/20/2018
+ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Xamarin Android 设备管理器
 
@@ -308,7 +308,8 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 
 <a name="device-edit" />
- 
+
+
 ### <a name="edit-device"></a>编辑设备
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -415,6 +416,7 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 <a name="properties" />
  
+
 ## <a name="profile-properties"></a>配置文件属性
 
 “新建设备”和“设备编辑”屏幕在第一列中列出了虚拟设备的属性，第二列中为每个属性相应的值。 当选择某个属性时，有关该属性的详细描述会显示在右侧。 可以修改其“硬件配置文件属性”和“AVD 属性”。
@@ -467,9 +469,9 @@ Xamarin Studio 与 Xamarin Android 设备管理器不兼容。
 
 ## <a name="troubleshooting"></a>疑难解答
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 以下介绍了常见的 Xamarin Android 设备管理器问题和解决方法：
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 ### <a name="android-sdk-in-non-standard-location"></a>Android SDK 位于非标准位置
 
@@ -501,19 +503,64 @@ C:\\Program Files (x86)\\Android\\android-sdk
 
 对“user.config”进行更改后，应该能够启动 Xamarin Android 设备管理器。
 
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>快照禁用 Android Oreo 上的 WiFi
+
+如果 AVD 配置为使用模拟 Wi-Fi 访问的 Android Oreo，那么在快照之后重启 AVD 可能会导致 Wi-Fi 访问被禁用。
+
+若要解决此问题：
+
+1. 在 Xamarin 设备管理器中选择 AVD。
+
+2. 在其他选项菜单中，单击“在资源管理器中展现”。
+
+3. 导航到“快照”>“default_boot”。
+
+4. 删除 snapshot.pb 文件：
+
+    [![Snapshot.pb 文件的位置](xamarin-device-manager-images/win/36-delete-snapshot-sml.png)](xamarin-device-manager-images/win/36-delete-snapshot.png#lightbox)
+
+5. 重启 AVD。 
+
+进行这些更改后，AVD 将在允许 Wi-Fi 重新工作的状态下重新启动。
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>快照禁用 Android Oreo 上的 WiFi
+
+如果 AVD 配置为使用模拟 Wi-Fi 访问的 Android Oreo，那么在快照之后重启 AVD 可能会导致 Wi-Fi 访问被禁用。
+
+若要解决此问题：
+
+1. 在 Xamarin 设备管理器中选择 AVD。
+
+2. 在其他选项菜单中，单击“在查找器中展现”。
+
+3. 导航到“快照”>“default_boot”。
+
+4. 删除 snapshot.pb 文件：
+
+    [![Snapshot.pb 文件的位置](xamarin-device-manager-images/mac/36-delete-snapshot-sml.png)](xamarin-device-manager-images/mac/36-delete-snapshot.png#lightbox)
+
+5. 重启 AVD。 
+
+进行这些更改后，AVD 将在允许 Wi-Fi 重新工作的状态下重新启动。
+
+-----
+
+
 ### <a name="generating-a-bug-report"></a>生成 Bug 报表
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 如果发现 Xamarin Android 设备管理器出现问题，但无法使用上述故障排除提示解决此问题，请右键单击标题栏并选择“生成 Bug 报告”，将 bug 报告归档：
 
 ![归档 bug 报告的菜单项的位置](xamarin-device-manager-images/win/35-bug-report.png)
 
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-Visual Studio for Mac 上的 Xamarin Android 设备管理器暂无已知问题/解决办法。 
-
-### <a name="generating-a-bug-report"></a>生成 Bug 报表
-
-如果发现问题，请单击“帮助”>“生成 Bug 报告”，将 bug 报告归档：
+如果发现 Xamarin Android 设备管理器出现问题，但无法使用上述故障排除提示进行解决，请单击“帮助”>“生成 Bug 报告”，提交一个 bug 报告：
 
 ![归档 bug 报告的菜单项的位置](xamarin-device-manager-images/mac/35-bug-report.png)
 
@@ -521,7 +568,7 @@ Visual Studio for Mac 上的 Xamarin Android 设备管理器暂无已知问题/�
 
  
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍 Visual Studio for Mac 和适用于 Visual Studio 的 Xamarin 中提供的 Xamarin Android 设备管理器。 其中介绍了启动和停止 Android 仿真器、选择要运行的 Android 虚拟设备 (AVD)、创建新的虚拟设备以及如何编辑虚拟设备等基本功能。 还说明了如何编辑配置文件硬件属性以进一步自定义。
 

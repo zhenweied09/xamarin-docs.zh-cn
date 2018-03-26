@@ -1,6 +1,6 @@
 ---
-title: "系统要求"
-description: "使用 Xamarin 的先决条件"
+title: 系统要求
+description: 使用 Xamarin 的先决条件
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: 2a2b5a1135a4d08c2a89caf0fbf4b2cdb1ac624c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4a53053ebef88bf831b7749fa82f3444ecc26723
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="system-requirements"></a>系统要求
 
@@ -47,7 +47,7 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
 > [!NOTE]
-> 注意：可通过 [developer.apple.com](https://developer.apple.com/xcode/download/) 或 Mac App Store 安装（和更新）Xcode。
+> 可通过 [developer.apple.com](https://developer.apple.com/xcode/download/) 或 Mac App Store 安装（和更新）Xcode。
 
 ### <a name="testing--debugging-on-macos"></a>macOS 上的测试和调试
 

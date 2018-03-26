@@ -1,6 +1,6 @@
 ---
-title: "调试"
-description: "可以使用 Visual Studio for Mac 或 Visual Studio 中的内置调试程序调试 Xamarin.iOS 应用程序。"
+title: 调试
+description: 可以使用 Visual Studio for Mac 或 Visual Studio 中的内置调试程序调试 Xamarin.iOS 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a449d692a2761f59135930d40ad3708d6ef2e9b9
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="debugging"></a>调试
 
@@ -22,7 +22,7 @@ _可以使用 Visual Studio for Mac 或 Visual Studio 中的内置调试程序�
 
 
 > [!NOTE]
-> **重要提示：**以“调试”模式编译应用程序时，Xamarin.iOS 会生成较慢且大得多的应用程序，因为每行代码都必须检测到。 发布之前，请确保创建一个“发布”版本。
+> 在“调试”模式下编译应用时，Xamarin.iOS 生成的应用不仅速度慢，而且还很大，因为必须检测所有代码行。 发布之前，请确保创建一个“发布”版本。
 
 Xamarin.iOS 调试器集成到了 IDE 中，它允许开发人员在模拟器或设备上调试使用 Xamarin.iOS 支持的任何托管语言生成的 Xamarin.iOS 应用程序。
 

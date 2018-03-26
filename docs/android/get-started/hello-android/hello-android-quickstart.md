@@ -1,6 +1,6 @@
 ---
-title: "Hello，Android：快速入门"
-description: "在由两部分构成的本指南中，你将生成第一个 Xamarin.Android 应用程序（使用 Visual Studio 或 Visual Studio for Mac），并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会向你介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。"
+title: Hello，Android：快速入门
+description: 在由两部分构成的本指南中，你将生成第一个 Xamarin.Android 应用程序（使用 Visual Studio 或 Visual Studio for Mac），并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会向你介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 58197ae9f7c05ab9a838555ba5ab496550a16bce
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello，Android：快速入门
 
@@ -536,5 +536,5 @@ namespace Phoneword
 
 ## <a name="related-links"></a>相关链接
 
-- [Xamarin Andrid 应用图标 (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
+- [Xamarin Android 应用图标 (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword（示例）](https://developer.xamarin.com/samples/monodroid/Phoneword)

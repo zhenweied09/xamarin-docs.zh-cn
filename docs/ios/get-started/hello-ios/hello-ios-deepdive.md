@@ -1,6 +1,6 @@
 ---
-title: "Hello，iOS：深入了解"
-description: "这个两部分的指南介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。"
+title: Hello，iOS：深入了解
+description: 这个两部分的指南介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello，iOS 深入了解
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 `ViewController` 现在会推动情节提要中与此视图控制器关联的内容视图层次结构的交互。 接下来，你会通过引入一个称为视图生命周期的进程，来了解视图控制器在管理视图方面的角色。
 
 > [!NOTE]
-> 注意：对于不需要用户交互的仅可视化屏幕，可以在“Properties Pad”中将“类”属性留空。 这会将视图控制器的支持类设置为 `UIViewController` 的默认实现（这适合于不打算添加自定义代码的情况）。
+> 对于不需要用户交互的仅可视化屏幕，可以在“Properties Pad”中将“Class”属性留空。 这会将视图控制器的支持类设置为 `UIViewController` 的默认实现（这适合于不打算添加自定义代码的情况）。
 
 ### <a name="view-lifecycle"></a>视图生命周期
 
@@ -416,7 +416,7 @@ iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针
 设备会花费时间进行设置并需要 Apple 开发人员帐户。 [设备预配](~/ios/get-started/installation/device-provisioning/index.md)指南提供了有关使设备准备好进行开发的详尽说明。
 
 > [!NOTE]
-> 注意：目前，Apple 要求拥有开发证书或签名标识才能为设备或模拟器生成代码。 请按照[设备预配指南](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)中的步骤执行此设置。
+> 目前，Apple 要求拥有开发证书或签名标识才能为设备或模拟器生成代码。 请按照[设备预配指南](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)中的步骤执行此设置。
 
 设置了设备之后，便可以通过将它插入，在生成工具栏中将目标更改为 iOS 设备，以及按“启动”（“播放”）来部署到它，如下面的屏幕截图所示：
 
@@ -455,7 +455,7 @@ iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针
 
 有关图标和启动图像大小和要求的详细信息，请参阅[使用图像指南](~/ios/app-fundamentals/images-icons/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 祝贺你！ 你现在已充分了解了 Xamarin.iOS 应用程序的组件以及用于创建它们的工具。
 在[入门系列中的下一个教程](~/ios/get-started/hello-ios-multiscreen/index.md)中，你会扩展应用程序以处理多个屏幕。 在此过程中，你会实现导航控制器，了解情节提要 Segue，以及在扩展应用程序以处理多个屏幕时引入模型、视图、控制器 (MVC) 模式。

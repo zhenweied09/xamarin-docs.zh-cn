@@ -1,6 +1,6 @@
 ---
-title: "发布到 App Store"
-description: "本文介绍如何配置、生成和发布 Xamarin.iOS 应用程序，以通过 App Store 进行分发。 本文包含分布指南，其中涵盖如何准备用于分发的应用程序、如何使用 Apple 的工具提交应用程序以供审核，以及最后如何将应用程序发布到 App Store。"
+title: 发布到 App Store
+description: 本文介绍如何配置、生成和发布 Xamarin.iOS 应用程序，以通过 App Store 进行分发。 本文包含分布指南，其中涵盖如何准备用于分发的应用程序、如何使用 Apple 的工具提交应用程序以供审核，以及最后如何将应用程序发布到 App Store。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ef8fafb923dcad936ce0a049e715cdd163ea7222
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publishing-to-the-app-store"></a>发布到 App Store
 
@@ -185,7 +185,7 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 
 
 > [!NOTE]
-> 注意：尽管旧的 App Store 和 Ad Hoc 配置现在已从所有 Visual Studio for Mac 模板项目中删除，但仍可找到包括这些配置的旧项目。 如果出现这种情况，可继续使用上面列表的步骤 1 中的“App Store | 设备”配置。
+> 尽管旧的 App Store 和临时配置现在已从所有 Visual Studio for Mac 模板项目中删除，但仍可找到包括这些配置的旧项目。 如果出现这种情况，可继续使用上面列表的步骤 1 中的“App Store | 设备”配置。
 
 ### <a name="sign-and-distribute-your-app"></a>签名和分发应用
 
@@ -309,7 +309,7 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 ## <a name="submitting-your-app-to-apple"></a>将应用提交到 Apple
 
 > [!NOTE]
-> 注意：Apple 最近更改了 iOS 应用程序的验证流程，并可能拒绝 IPA 中包含 `iTunesMetadata.plist` 的应用。 如果遇到错误 `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`，[此处](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)介绍的解决方法应能解决此问题。
+> Apple 最近更改了 iOS 应用程序的验证流程，并可能拒绝 IPA 中包含 `iTunesMetadata.plist` 的应用。 如果遇到错误 `ERROR: ERROR ITMS-90047: "Disallowed paths ( "iTunesMetadata.plist" ) found at: Payload/iPhoneApp1.app"`，[此处](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)介绍的解决方法应能解决此问题。
 
 分发生成完成后，即可将 iOS 应用程序提交到 Apple 以供审核，然后在 App Store 上发布。
 
@@ -370,7 +370,7 @@ xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/B
 
 [![](publishing-to-the-app-store-images/image21.png "现在 iTunes Connect 中的状态应显示为“等待审核”")](publishing-to-the-app-store-images/image21.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文提供配置、生成和提交用于 App Store 发布的应用程序的分布指导。 首先，介绍创建并安装分发配置文件所需的步骤。 然后，介绍如何使用 Visual Studio 和 Visual Studio for Mac 创建分发生成。 最后，介绍如何使用 iTunes Connect 和工具，将应用程序提交到 App Store。
 
