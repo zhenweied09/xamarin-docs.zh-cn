@@ -1,5 +1,5 @@
 ---
-title: "绑定 Objective C 库"
+title: 绑定 Objective C 库
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 29b846453396d37adc689fe49e80299e8f35bbe2
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 3b1894555c27e368fc80cc4ebaa1f6b40446e2aa
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-objective-c-libraries"></a>绑定 Objective C 库
 
 当使用 Xamarin.iOS 或 Xamarin.Mac，可能会出现你想要使用第三方 Objective C 库的情况。 在这些情况下，你可以使用 Xamarin 绑定项目创建 C# 绑定到本机的 OBJECTIVE-C 的库。 项目使用相同的工具，我们使用向 C# 使 iOS 和 Mac Api。
 
-本文档介绍如何将绑定 OBJECTIVE-C 的 Api，如果你正在绑定仅 C Api，则应为此，使用标准.NET 机制[P/Invoke framework](http://mono-project.com/Dllimport)。
+本文档介绍如何将绑定 OBJECTIVE-C 的 Api，如果你正在绑定仅 C Api，则应为此，使用标准.NET 机制[P/Invoke framework](http://www.mono-project.com/docs/advanced/pinvoke/)。
 如何以静态方式链接 C 库的详细信息位于[链接本机库](~/ios/platform/native-interop.md)页。
 
 请参阅我们助理[绑定类型参考指南](~/cross-platform/macios/binding/binding-types-reference.md)。

@@ -1,18 +1,18 @@
 ---
-title: "第 3 部分。 XAML 标记扩展"
-description: "XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。 XAML 标记扩展是对于共享对象，并引用在应用程序，使用常量尤为重要，但它们在数据绑定中找到其最大的实用程序。"
+title: 第 3 部分。 XAML 标记扩展
+description: XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。 XAML 标记扩展是对于共享对象，并引用在应用程序，使用常量尤为重要，但它们在数据绑定中找到其最大的实用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 3/27/2018
+ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
@@ -45,7 +45,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do that!"
                 HorizontalOptions="Center"
@@ -53,7 +53,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do the other thing!"
                 HorizontalOptions="Center"
@@ -61,7 +61,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
     </StackLayout>
 </ContentPage>
@@ -103,7 +103,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-现在对象和各种类型的值可以添加到资源字典。 这些类型必须是可实例化。 它们不能是抽象类，例如。 这些类型还必须具有公共无参数构造函数。 每个项，要求使用指定的字典项`x:Key`属性。 例如:
+现在对象和各种类型的值可以添加到资源字典。 这些类型必须是可实例化。 它们不能是抽象类，例如。 这些类型还必须具有公共无参数构造函数。 每个项，要求使用指定的字典项`x:Key`属性。 例如：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,7 +136,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
         BorderWidth="3"
         Rotation="-15"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 `StaticResource`标记扩展始终用大括号分隔，并包含字典键。
@@ -192,7 +192,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
         BorderWidth="{StaticResource borderWidth}"
         Rotation="{StaticResource rotationAngle}"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 资源类型的`Color`，你可以使用直接将这些类型的属性的分配时，你使用的相同的字符串表示形式。 创建资源时调用的类型转换器。 下面是类型的资源`Color`:
@@ -201,14 +201,10 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 <Color x:Key="textColor">Red</Color>
 ```
 
-`FontSize`属性显示的一个小问题。 属性定义的类型为`double`。 当将属性设置为的成员`NamedSize`如枚举`Large`、`FontSizeConverter`类在后台以将其转换为平台相关值使用的工作原理`Device.GetNamedSized`方法。
-
-但是，不能定义字体大小作为资源`double`并将值设置为"大型"。 在 XAML 分析器处理资源时，它不知道的值将用作字体大小。 
-
-解决方法是定义为资源`string`使用`x:String`类型：
+通常情况下，程序集`FontSize`属性的成员`NamedSize`如枚举`Large`。 `FontSizeConverter`类在后台以将其转换为平台相关值使用的工作原理`Device.GetNamedSized`方法。 但是，在定义的字体大小资源时，它更有意义用于数字值，显示此处`x:Double`类型：
 
 ```xaml
-<x:String x:Key="fontSize">Large</x:String>
+<x:Double x:Key="fontSize">24</x:Double>
 ```
 
 现在所有属性除外`Text`由资源设置定义：
@@ -275,7 +271,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
                 BorderWidth="{StaticResource borderWidth}"
                 Rotation="{StaticResource rotationAngle}"
                 TextColor="{StaticResource textColor}"
-                FontSize"{StaticResource fontSize}" />
+                FontSize="{StaticResource fontSize}" />
 
         <Button Text="Do that!"
                 HorizontalOptions="{StaticResource horzOptions}"
@@ -555,7 +551,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 [![](xaml-markup-extensions-images/relativelayout.png "使用约束的相对布局")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "相对布局使用约束")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 此处显示的 XAML 标记扩展的 XAML 文件提供了重要的支持。 但是而言最有价值的 XAML 标记扩展的或许是`Binding`，此内容进行介绍在下一部分中的这一系列，[第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 

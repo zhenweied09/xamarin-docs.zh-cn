@@ -1,6 +1,6 @@
 ---
-title: "拼写检查使用必应拼写检查 API"
-description: "必应拼写检查执行上下文的拼写检查的文本，提供有关拼写错误的单词的内联建议。 此文章介绍了如何使用必应拼写检查 REST API 来更正 Xamarin.Forms 应用程序中的拼写错误。"
+title: 拼写检查使用必应拼写检查 API
+description: 必应拼写检查执行上下文的拼写检查的文本，提供有关拼写错误的单词的内联建议。 此文章介绍了如何使用必应拼写检查 REST API 来更正 Xamarin.Forms 应用程序中的拼写错误。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: ad2bdf27323fd7d7e108a25387cd6aea6d442098
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 420eea4622d9c90c3587899fb24e707524990b19
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>拼写检查使用必应拼写检查 API
 
@@ -25,19 +25,19 @@ _必应拼写检查执行上下文的拼写检查的文本，提供有关拼写�
 - `Spell` 无任何大小写更改更正短文本 （最多 9 个字）。
 - `Proof` 更正长文本，提供的大小写更正和基本标点，并取消主动更正。
 
-若要使用必应拼写检查 API，必须获取 API 密钥。 这可以在获取[入门免费](https://www.microsoft.com/cognitive-services/sign-up?ReturnUrl=/cognitive-services/subscriptions?productId=%2fproducts%2fBing.Speech.Preview)microsoft.com 上。
+若要使用必应拼写检查 API，必须获取 API 密钥。 这可以在获取[重认知服务](https://azure.microsoft.com/try/cognitive-services/)
 
-必应拼写检查 API 支持的语言的列表，请参阅[语言支持](https://www.microsoft.com/cognitive-services/Bing-Spell-check-API/documentation#language-support)microsoft.com 上。有关必应拼写检查 API 的详细信息，请参阅[必应拼写检查 API](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation) microsoft.com 上。
+必应拼写检查 API 支持的语言的列表，请参阅[支持的语言](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/)。 有关必应拼写检查 API 的详细信息，请参阅[必应拼写检查文档](/azure/cognitive-services/bing-spell-check/)。
 
 ## <a name="authentication"></a>身份验证
 
 每个请求都会到必应拼写检查 API 需要 API 密钥应指定的值为`Ocp-Apim-Subscription-Key`标头。 下面的代码示例演示如何添加到 API 密钥`Ocp-Apim-Subscription-Key`请求标头：
 
 ```csharp
-using (var httpClient = new HttpClient())
+public BingSpellCheckService()
 {
-  httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
-  ...
+    httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", Constants.BingSpellCheckApiKey);
 }
 ```
 
@@ -45,27 +45,25 @@ using (var httpClient = new HttpClient())
 
 ## <a name="performing-spell-checking"></a>执行拼写检查
 
-拼写检查功能可以通过在 GET 或 POST 请求`SpellCheck`API 在`https://api.cognitive.microsoft.com/bing/v5.0/SpellCheck`。 在发出 GET 请求时，要进行拼写检查的文本作为查询参数发送。 在发出 POST 请求，请求正文中发送的文本来进行拼写检查。 GET 请求仅限于拼写检查 1500年个字符，因为查询参数字符串长度限制。 因此，除非短字符串正在拼写检查也通常会发出 POST 请求。
+拼写检查功能可以通过在 GET 或 POST 请求`SpellCheck`API 在`https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck`。 在发出 GET 请求时，要进行拼写检查的文本作为查询参数发送。 在发出 POST 请求，请求正文中发送的文本来进行拼写检查。 GET 请求仅限于拼写检查 1500年个字符，因为查询参数字符串长度限制。 因此，仅除非短字符串正在拼写检查时，通常应进行 POST 请求。
 
 在示例应用程序，`SpellCheckTextAsync`方法调用拼写检查过程：
 
 ```csharp
 public async Task<SpellCheckResult> SpellCheckTextAsync(string text)
 {
-  string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
-  var response = await SendRequestAsync(requestUri, Constants.BingSpellCheckApiKey);
-  var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
-  return spellCheckResults;
+    string requestUri = GenerateRequestUri(Constants.BingSpellCheckEndpoint, text, SpellCheckMode.Spell);
+    var response = await SendRequestAsync(requestUri);
+    var spellCheckResults = JsonConvert.DeserializeObject<SpellCheckResult>(response);
+    return spellCheckResults;
 }
 ```
 
 `SpellCheckTextAsync`方法生成请求 URI，并随后发送到请求`SpellCheck`API，它返回包含结果的 JSON 响应。 JSON 响应进行反序列化，返回到调用方法以显示结果。
 
-有关必应拼写检查 REST API 的详细信息，请参阅[拼写检查 API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) microsoft.com 上。
-
 ### <a name="configuring-spell-checking"></a>配置拼写检查
 
-可以通过指定 HTTP 查询参数配置拼写检查过程。 没有强制和可选参数，必须设置为 GET 请求的强制性参数显示为以下方法：
+可以通过指定 HTTP 查询参数配置拼写检查过程：
 
 ```csharp
 string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode mode)
@@ -79,59 +77,56 @@ string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode
 
 此方法设置拼写检查，且拼写检查模式的文本。
 
-有关必需和可选参数的详细信息，请参阅[拼写检查 API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) microsoft.com 上。
+有关必应拼写检查 REST API 的详细信息，请参阅[拼写检查 API v7 参考](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)。
 
 ### <a name="sending-the-request"></a>发送请求
 
 `SendRequestAsync`方法向必应拼写检查 REST API 发出 GET 请求，并返回响应：
 
 ```csharp
-async Task<string> SendRequestAsync(string url, string apiKey)
+async Task<string> SendRequestAsync(string url)
 {
-  using (var httpClient = new HttpClient())
-  {
-    httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apiKey);
     var response = await httpClient.GetAsync(url);
     return await response.Content.ReadAsStringAsync();
-  }
 }
 ```
 
 此方法可通过将 API 密钥添加的值为生成 GET 请求`Ocp-Apim-Subscription-Key`标头。 然后将 GET 请求发送到`SpellCheck`API，使用请求 URL 指定的文本要转换和拼写检查模式。 然后将对响应进行读取，并将其返回到调用方法。
 
-`SpellCheck` API 将在响应中，提供该请求是有效的表示请求成功，请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 有关可能的错误响应的列表，请参阅在响应[拼写检查 API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358) microsoft.com 上。
+`SpellCheck` API 将在响应中，提供该请求是有效的表示请求成功，请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 响应对象的列表，请参阅[响应对象](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects)。
 
 ### <a name="processing-the-response"></a>处理响应
 
 以 JSON 格式返回 API 响应。 以下 JSON 数据显示拼写错误的文本的响应消息`Go shappin tommorow`:
 
-```csharp
-{
-  "_type": "SpellCheck",
-  "flaggedTokens": [
-    {
-      "offset": 3,
-      "token": "shappin",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "shopping",
-          "score": 1
-        }
-      ]
-    },
-    {
-      "offset": 11,
-      "token": "tommorow",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "tomorrow",
-          "score": 1
-        }
-      ]
-    }
-  ]
+```json
+{  
+   "_type":"SpellCheck",
+   "flaggedTokens":[  
+      {  
+         "offset":3,
+         "token":"shappin",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"shopping",
+               "score":1
+            }
+         ]
+      },
+      {  
+         "offset":11,
+         "token":"tommorow",
+         "type":"UnknownToken",
+         "suggestions":[  
+            {  
+               "suggestion":"tomorrow",
+               "score":1
+            }
+         ]
+      }
+   ],
+   "correctionType":"High"
 }
 ```
 
@@ -158,15 +153,13 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 ![](spell-check-images/after-spell-check.png "拼写检查后")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何使用必应拼写检查 REST API 更正 Xamarin.Forms 应用程序中的拼写错误。 必应拼写检查执行上下文的拼写检查的文本，提供有关拼写错误的单词的内联建议。
 
-
-
 ## <a name="related-links"></a>相关链接
 
-- [必应拼写检查文档](https://www.microsoft.com/cognitive-services/bing-spell-check-api/documentation)
+- [必应拼写检查文档](/azure/cognitive-services/bing-spell-check/)
 - [使用 rest 样式 Web 服务](~/xamarin-forms/data-cloud/consuming/rest.md)
 - [Todo 认知服务 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [必应拼写检查 API](https://dev.cognitive.microsoft.com/docs/services/56e73033cf5ff80c2008c679/operations/57855119bca1df1c647bc358)
+- [必应拼写检查 API v7 参考](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

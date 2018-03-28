@@ -1,5 +1,5 @@
 ---
-title: "引用本机库"
+title: 引用本机库
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
@@ -7,15 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 9299d2b37825298d3defa18a9f5137e11b29f6ce
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 99e565c2268bec6d80c4976e604333cbd2f160a3
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="referencing-native-libraries"></a>引用本机库
 
-Xamarin.iOS 支持本机 C 库和 Objective C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 有关执行相同的 Objective C 库的信息，请参阅我们[绑定 Objective C 类型](~/ios/platform/binding-objective-c/index.md)文档。
+Xamarin.iOS 支持本机 C 库和 Objective-C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 有关执行相同的 Objective C 库的信息，请参阅我们[绑定 Objective C 类型](~/ios/platform/binding-objective-c/index.md)文档。
 
 <a name="building_native" />
 
@@ -105,7 +105,7 @@ lipo -info /full/path/to/libraryname.a
 
 <a name="Accessing_C_Methods_from_C#" />
 
-## <a name="accessing-c-methods-from-c35"></a>从 c&#35; 访问 C 方法
+## <a name="accessing-c-methods-from-c35"></a>从 C 中访问 C 方法&#35;
 
 有两种类型的本机库可在 iOS 上：
 
@@ -114,7 +114,7 @@ lipo -info /full/path/to/libraryname.a
 -  该应用程序附带的静态库。
 
 
-若要访问的那些之一中定义的方法，你可以使用[Mono 的 P/Invoke 功能](http://www.mono-project.com/Interop_with_Native_Libraries)它是你将在.NET 中，这是大致相同技术：
+若要访问的那些之一中定义的方法，你可以使用[Mono 的 P/Invoke 功能](http://www.mono-project.com/docs/advanced/pinvoke/)它是你将在.NET 中，这是大致相同技术：
 
 -  确定你想要调用的 C 函数
 -  确定其签名

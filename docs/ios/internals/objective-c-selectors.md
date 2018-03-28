@@ -1,22 +1,22 @@
 ---
-title: "OBJECTIVE-C 的选择器"
+title: OBJECTIVE-C 的选择器
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 3fa01d8f28dc1c86f9d4a8ee4d9fc0a9cdb8ee9c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b7f64288695ecc0f9f57ec670c4e9ff2e44804c
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="objective-c-selectors"></a>OBJECTIVE-C 的选择器
 
 Objective C 语言基于*选择器*。 选择器是一条消息，可以发送到对象或*类*。 [Xamarin.iOS](~/ios/internals/api-design/index.md)图实例于实例方法的选择器和类选择器与静态方法。
 
-与普通 C 函数 （和与 c + + 成员函数一样），你不能直接调用选择器使用[P/Invoke](http://www.mono-project.com/Dllimport)。
+与普通 C 函数 （和与 c + + 成员函数一样），你不能直接调用选择器使用[P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)。
 (*留出*： 理论上你可以使用 P/Invoke，对于非虚拟的 c + + 成员函数，但你将需要担心名称重整每个编译器，这是更好地忽略的困难很多。)相反，选择器发送到一个 Objective C 类或实例使用[`objc_msgSend`函数](http://developer.apple.com/mac/library/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_msgSend)。
 
 你可能会发现[于 OBJECTIVE-C 的消息传递本帮助指南](http://developer.apple.com/iphone/library/documentation/cocoa/conceptual/ObjCRuntimeGuide/Articles/ocrtHowMessagingWorks.html)有用。

@@ -1,6 +1,6 @@
 ---
-title: "对 Android SDK 工具的更改"
-description: "对 Android SDK 如何管理已安装的 API 级别和 AVDs 的更改。"
+title: 对 Android SDK 工具的更改
+description: 对 Android SDK 如何管理已安装的 API 级别和 AVDs 的更改。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 69e9f08870a01c056951700978d07277af5edfa8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a16aa3704d9e0a63cfabde4b620452e7e2a5bf57
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>对 Android SDK 工具的更改
 
@@ -20,7 +20,7 @@ _对 Android SDK 如何管理已安装的 API 级别和 AVDs 的更改。_
 
 ## <a name="changes-to--android-sdk-tooling"></a>对 Android SDK 工具的更改
 
-在现代版本的 Android SDK 工具，Google 已删除现有 AVD 和 SDK 管理器采用新_命令行界面_(CLI) 工具。 前者**android**删除程序和适用于 Mac 和 Xamarin for Visual Studio 的较旧版本的 Visual Studio 中的 GUI （图形用户界面） 管理器将不再起作用之后版本的 Android SDK 工具。
+在现代版本的 Android SDK 工具，Google 已删除现有 AVD 和 SDK 管理器采用新 CLI （命令行界面） 工具。 前者**android**程序已被删除以及适用于 Mac 和 Xamarin for Visual Studio 的较旧版本的 Visual Studio 中的 GUI （图形用户界面） 管理器将不再起作用过去版本 25.2.5 的 Android SDK 工具。
 
 
 ![Visual Studio 中的 android IDE 菜单](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -50,7 +50,7 @@ Android SDK 工具的命令行接口现在进行以下程序：
 
 **中添加：** Android SDK 工具 25.3.0 (2017 年 3 月) 和更高版本。
 
-没有一个名为的新程序**avdmanager**中**工具/bin** Android sdk 的文件夹。 此工具用于 Google Android 仿真程序的维护 AVD 的。 有关使用此工具的详细信息，请参阅[avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)。
+没有一个名为的新程序**avdmanager**中**工具/bin** Android sdk 的文件夹。 此工具用于维护 AVDs 的 Google Android 仿真程序。 有关使用此工具的详细信息，请参阅[avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)。
 
 ### <a name="downgrading"></a>降级
 
@@ -65,6 +65,6 @@ Android SDK 工具的命令行接口现在进行以下程序：
 
 - [Android SDK 安装](~/android/get-started/installation/android-sdk.md)
 - [了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)
-- [SDK 工具发行说明 (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [SDK Tools 发行说明 (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

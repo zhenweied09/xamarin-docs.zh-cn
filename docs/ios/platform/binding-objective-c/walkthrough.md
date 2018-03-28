@@ -1,6 +1,6 @@
 ---
-title: "演练： 将绑定 iOS Objective C 库"
-description: "本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS 绑定的演练。 它涵盖主题，如编译静态 Objective C 库、 将绑定，以及在 Xamarin.iOS 应用程序中使用绑定。"
+title: 演练： 将绑定 iOS Objective C 库
+description: 本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS 绑定的演练。 它涵盖主题，如编译静态 Objective C 库、 将绑定，以及在 Xamarin.iOS 应用程序中使用绑定。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e4619f5b1d3f888b2557cf894aaa83106504766f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 44ed651413d66866f131a294158525440278b291
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>演练： 将绑定 iOS Objective C 库
 
@@ -41,7 +41,7 @@ _本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS
 
 示例应用程序将演示如何使用强委托 InfColorPicker API 与 C# 代码之间的通信。 我们已了解如何使用强委托后，我们将介绍如何使用弱委托来执行相同的任务。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本文假定你已具备一定安装了 Xcode 和 Objective C 语言，并且你已阅读我们[绑定 OBJECTIVE-C](~/cross-platform/macios/binding/index.md)文档。 此外，以下是完成提供的步骤是必需的：
 
@@ -159,7 +159,7 @@ _本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS
 
     [![](walkthrough-images/image16b.png "展开链接二进制文件到库部分")](walkthrough-images/image16b.png#lightbox)
 
-13. 使用 **+** 按钮以打开对话框让你上面列出的所需的帧框架添加：
+13. 使用**+**按钮以打开对话框让你上面列出的所需的帧框架添加：
 
     [![](walkthrough-images/image16c.png "上面列出的所需的帧框架添加")](walkthrough-images/image16c.png#lightbox)
 
@@ -183,7 +183,7 @@ Fat 库是`.a`文件包含所有支持的体系结构。
 
 虽然这三个步骤是相当简单，并且它可能需要在将来重复这些步骤在 Objective C 库接收更新，或如果我们需要 bug 修复。 如果你决定自动执行这些步骤，它将简化未来的维护和支持 iOS 绑定项目。
 
-有许多工具可用于自动执行此类任务-一个 shell 脚本， [rake](http://rake.rubyforge.org/)， [xbuild](http://www.mono-project.com/Microsoft.Build)，和[使](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)。 当我们安装 Xcode 命令行工具时，我们也会安装生成，因此，它是将用于本演练的生成系统。 下面是**生成文件**可用于创建将在 iOS 设备和任何库的模拟器运行的多体系结构共享的库：
+有许多工具可用于自动执行此类任务-一个 shell 脚本， [rake](http://rake.rubyforge.org/)， [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/)，和[使](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)。 当我们安装 Xcode 命令行工具时，我们也会安装生成，因此，它是将用于本演练的生成系统。 下面是**生成文件**可用于创建将在 iOS 设备和任何库的模拟器运行的多体系结构共享的库：
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -725,7 +725,7 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 运行该应用程序。 它应现在的行为完全相同它以前，但它使用弱委托而不强的委托。 此时您已成功完成本演练。 你应该已经了解如何创建和使用 Xamarin.iOS 绑定项目。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已指导完成创建和使用 Xamarin.iOS 绑定项目的过程。 首先，我们讨论了如何将现有的 Objective C 库编译为静态库。 然后，我们介绍如何创建 Xamarin.iOS 绑定项目，以及如何使用目标 Sharpie 生成 Objective C 库的 API 定义。 我们讨论了如何更新并对生成的 API 定义，以使它们适合公共使用进行调整。 Xamarin.iOS 绑定项目已完成后，我们在上移动到使用该绑定在 Xamarin.iOS 应用程序，以在使用强委托和弱的委托。
 

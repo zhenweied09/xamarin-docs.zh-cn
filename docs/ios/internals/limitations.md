@@ -1,16 +1,16 @@
 ---
-title: "限制"
+title: 限制
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b099e8ddd6acc3e8cc4ce94580313a39a0c686
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c099797f0687f198ed220c1bd366bd93ab6c6e99
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="limitations"></a>限制
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 与传统 Mono/.NET 中，而不是由 JIT 编译器正在编译按需提前静态编译 iPhone 上的代码。
 
-Mono 的[完整 AOT](http://www.mono-project.com/AOT#Full_AOT)技术具有泛型方面的一些限制，因为在编译时提前确定不是每个可能的泛型实例化，将造成这些错误。 这不是正则.NET 或 Mono 运行时的问题，因为时间编译器中使用只在运行时始终编译代码。 但这会带来的静态的编译器，例如 Xamarin.iOS 一个难题。
+Mono 的[完整 AOT](http://www.mono-project.com/docs/advanced/aot/#full-aot)技术具有泛型方面的一些限制，因为在编译时提前确定不是每个可能的泛型实例化，将造成这些错误。 这不是正则.NET 或 Mono 运行时的问题，因为时间编译器中使用只在运行时始终编译代码。 但这会带来的静态的编译器，例如 Xamarin.iOS 一个难题。
 
 一些开发人员遇到的常见问题包括：
 
@@ -117,13 +117,10 @@ System.Reflection 缺乏。 **发出**意味着没有取决于运行时代码生
 
 在 Mono 中这些桥由实时编译器。 当使用预的时间编译器所需 iPhone 此时有两个重要的限制：
 
--  您必须标记所有回叫方法与[MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/MonoPInvokeCallbackAttribute/) 
+-  您必须标记所有回叫方法与[MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
 -  方法必须是静态方法，则不支持的实例方法。 
-
-
  
- <a name="No_Remoting" />
-
+<a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>没有远程处理
 

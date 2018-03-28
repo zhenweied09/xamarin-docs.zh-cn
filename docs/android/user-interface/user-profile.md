@@ -1,84 +1,98 @@
 ---
-title: "用户配置文件"
+title: 用户配置文件
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/21/2017
-ms.openlocfilehash: cf8230c5832104fd17b14532f1d32822a1fc0097
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/22/2018
+ms.openlocfilehash: 1407266f987b36b72e32a82c8f6f43b4a734af5d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-profile"></a>用户配置文件
 
-Android 已支持的枚举联系人`ContactsContract`自 API 级别 5 提供程序。 例如，向列表联系人非常简单，只使用`ContactContracts.Contacts`类，如下面的代码中所示：
+Android 已支持的枚举联系人[ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)自 API 级别 5 提供程序。 例如，列出联系人非常简单，只使用[ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/)类，如下面的代码示例中所示：
 
 ```csharp
+// Get the URI for the user's contacts:
 var uri = ContactsContract.Contacts.ContentUri;
-           
+
+// Setup the "projection" (columns we want) for only the ID and display name:
 string[] projection = {
-    ContactsContract.Contacts.InterfaceConsts.Id,
+    ContactsContract.Contacts.InterfaceConsts.Id, 
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
-           
-var cursor = ManagedQuery (uri, projection, null, null, null);
-           
-if (cursor.MoveToFirst ()) {
-    do {
-        Console.WriteLine ("Contact ID: {0}, Contact Name: {1}",
-            cursor.GetString (cursor.GetColumnIndex (projection [0])),
-            cursor.GetString (cursor.GetColumnIndex (projection [1])));
-                   
-    } while (cursor.MoveToNext());
+
+// Use a CursorLoader to retrieve the user's contacts data:
+CursorLoader loader = new CursorLoader(this, uri, projection, null, null, null);
+ICursor cursor = (ICursor)loader.LoadInBackground();
+
+// Print the contact data to the console if reading back succeeds:
+if (cursor != null)
+{
+    if (cursor.MoveToFirst())
+    {
+        do
+        {
+            Console.WriteLine("Contact ID: {0}, Contact Name: {1}",
+                               cursor.GetString(cursor.GetColumnIndex(projection[0])),
+                               cursor.GetString(cursor.GetColumnIndex(projection[1])));
+        } while (cursor.MoveToNext());
+    }
 }
 ```
 
-Android 4 (API 级别 14 中)，新`ContactsContact.Profile`类是可通过 ContactsContract 提供程序。 `ContactsContact.Profile`允许访问个人的配置文件的设备，其中包括如设备所有者的姓名和电话号码的联系人数据的所有者。
+Android 4 (API 级别 14 中)，从开始[ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/)类是可通过`ContactsContract`提供程序。 `ContactsContact.Profile`允许访问个人的配置文件的设备，其中包括如设备所有者的姓名和电话号码的联系人数据的所有者。
 
 
 ## <a name="required-permissions"></a>所需权限
 
-若要读取和写入联系人数据，应用程序必须请求`Read_Contacts`和`Write_Contacts`权限，分别。 此外，若要阅读和编辑用户配置文件，应用程序必须请求`Read_Profile`和`Write_Profile`权限。
+若要读取和写入联系人数据，应用程序必须请求`READ_CONTACTS`和`WRITE_CONTACTS`权限，分别。
+此外，若要阅读和编辑用户配置文件，应用程序必须请求`READ_PROFILE`和`WRITE_PROFILE`权限。
 
 
 ## <a name="updating-profile-data"></a>正在更新配置文件数据
 
-设置这些权限后，应用程序可以使用正常的 Android 技术与用户配置文件的数据进行交互。 例如，若要更新的配置文件的显示名称，我们将调用`ContentResolver.Update`与`Uri`通过检索`ContactsContract.Profile.ContentRawContactsUri`属性，如下所示：
+设置这些权限后，应用程序可以使用正常的 Android 技术与用户配置文件的数据进行交互。 例如，若要更新的配置文件的显示名称，调用[ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update)与`Uri`通过检索[ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/)属性，如下所示下面：
 
 ```csharp
 var values = new ContentValues ();
-          
-values.Put (ContactsContract.Contacts.InterfaceConsts.DisplayName,
-    "John Doe");
-           
-ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri,
-    values, null, null);
-```
+values.Put (ContactsContract.Contacts.InterfaceConsts.DisplayName, "John Doe");
 
+// Update the user profile with the name "John Doe":
+ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, null, null);
+```
 
 ## <a name="reading-profile-data"></a>读取配置文件数据
 
-发出到查询`ContactsContact.Profile.ContentUri`读回配置文件数据。 例如，下面的代码将读取用户配置文件的显示名称：
+发出到查询[ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/)读回配置文件数据。 例如，下面的代码将读取用户配置文件的显示名称：
 
 ```csharp
+// Read the profile
+var uri = ContactsContract.Profile.ContentUri;
+
+// Setup the "projection" (column we want) for only the display name:
 string[] projection = {
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
-           
-var cursor = ManagedQuery (uri, projection, null, null, null);
 
-if (cursor.MoveToFirst ()) {
-    Console.WriteLine(
-        cursor.GetString (cursor.GetColumnIndex (projection [0])));
+// Use a CursorLoader to retrieve the data:
+CursorLoader loader = new CursorLoader(this, uri, projection, null, null, null);
+ICursor cursor = (ICursor)loader.LoadInBackground();
+if (cursor != null)
+{
+    if (cursor.MoveToFirst ())
+    {
+        Console.WriteLine(cursor.GetString (cursor.GetColumnIndex (projection [0])));
+    }
 }
 ```
 
+## <a name="navigating-to-the-user-profile"></a>导航到的用户配置文件
 
-## <a name="navigating-to-the-people-app"></a>导航到人员应用
-
-最后，导航到新的人员应用程序附带了 Android 4 的用户配置文件，只需创建与为打算`ActionView`操作和`ContactsContract.Profile.ContentUri`，并将其传递到`StartActivity`方法如下：
+最后，导航到的用户配置文件，可创建与为打算`ActionView`操作和`ContactsContract.Profile.ContentUri`然后将其传递到`StartActivity`方法如下：
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
@@ -86,11 +100,11 @@ var intent = new Intent (Intent.ActionView,
 StartActivity (intent);
 ```
 
-在运行上面的代码，如下面的屏幕截图中所示都对用户配置文件，将加载人员应用：
+当运行上面的代码，用户配置文件将显示以下屏幕截图中所示：
 
-[![显示的 John Doe 用户配置文件的屏幕截图的人员应用](user-profile-images/15-people-app.png)](user-profile-images/15-people-app.png#lightbox)
+[![显示的 John Doe 用户配置文件的配置文件的屏幕截图](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-使用用户配置文件现在是类似于与 Android 中的其他数据进行交互，并且提供的额外级别的设备的个性化。
+使用用户配置文件类似于与 Android 中的其他数据进行交互，它提供的额外级别的设备的个性化。
 
 
 

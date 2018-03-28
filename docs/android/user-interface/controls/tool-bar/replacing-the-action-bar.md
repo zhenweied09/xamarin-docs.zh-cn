@@ -1,20 +1,19 @@
 ---
-title: "替换操作栏"
+title: 替换操作栏
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/27/2018
+ms.openlocfilehash: f02f77eb45086d1d568b367b28163a4773dcd80d
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="replacing-the-action-bar"></a>替换操作栏
-
 
 ## <a name="overview"></a>概述
 
@@ -38,7 +37,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
-创建一个名为的新的 Android 项目**ToolbarFun** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 创建此项目后，将目标和最小值 Android API 级别设置为**Android 5.0 (API 级别 21-棒糖形)**。 有关设置 Android 版本级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 当生成和运行应用程序时，它显示的默认操作栏，此屏幕截图中所示： 
+创建一个名为的新的 Android 项目**ToolbarFun** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 创建此项目后，将目标和最小值 Android API 级别设置为**Android 5.0 (API 级别 21-棒糖形)**或更高版本。 有关设置 Android 版本级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 当生成和运行应用程序时，它显示的默认操作栏，此屏幕截图中所示：
 
 [![默认操作栏的屏幕截图](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -76,6 +75,8 @@ Olive-green`colorPrimary`设置用于工具栏的背景色：
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
+
+## <a name="apply-the-custom-theme"></a>应用自定义主题
 
 编辑**Properties/AndroidManifest.xml**并添加以下`android:theme`属性设为`<application>`元素，以便该应用使用`MyTheme`自定义主题： 
 
@@ -136,12 +137,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <Button
-        android:id="@+id/MyButton"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
 </RelativeLayout>
 ```
 
@@ -171,6 +166,7 @@ ActionBar.Title = "My Toolbar";
 
 请注意，`Toolbar`独立于风格`Theme.Material.Light.DarkActionBar`应用于应用程序的其余部分的主题。 
 
+如果在运行应用程序时出现异常，请参阅[故障排除](#troubleshooting)下面一节。
 
  
 ## <a name="add-menu-items"></a>添加菜单项 
@@ -193,7 +189,7 @@ ActionBar.Title = "My Toolbar";
 
 ### <a name="install-menu-icons"></a>安装菜单图标
 
-继续`ToolbarFun`示例应用程序，将菜单图标添加到应用程序项目。 下载[工具栏 icons.zip](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true)并将其解压缩。 所提取的内容复制*mipmap-*到项目文件夹*mipmap-*下的文件夹**ToolbarFun/资源**和在项目中包含每个添加的图标文件。
+继续`ToolbarFun`示例应用程序，将菜单图标添加到应用程序项目。 下载[工具栏图标](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)所提取的内容复制并解压缩， *mipmap-*到项目文件夹*mipmap-*下的文件夹**ToolbarFun /资源**和在项目中包含每个添加的图标文件。
 
 
 ### <a name="define-a-menu-resource"></a>定义菜单资源
@@ -277,6 +273,19 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 有关 Android 菜单的详细信息，请参阅 Android 开发人员[菜单](https://developer.android.com/guide/topics/ui/menus.html)主题。 
  
 
+## <a name="troubleshooting"></a>疑难解答
+
+以下提示可以帮助调试在操作栏替换工具栏时可能发生的问题。
+
+### <a name="activity-already-has-an-action-bar"></a>活动已具有一个操作栏
+
+如果应用程序未正确配置为使用自定义主题中所述[应用自定义主题](#apply-the-custom-theme)，运行应用程序时可能出现以下异常：
+
+![不使用自定义主题时可能产生的错误](replacing-the-action-bar-images/03-theme-not-defined.png)
+
+此外，错误消息如以下可生成： _Java.Lang.IllegalStateException： 此活动已提供的窗口装饰操作栏。_ 
+
+若要更正此错误，请确认`android:theme`属性的自定义主题添加到`<application>`(在**Properties/AndroidManifest.xml**) 中所述[应用自定义主题](#apply-the-custom-theme). 此外，可能会导致此错误如果`Toolbar`布局或自定义主题未正确配置。
 
 
 ## <a name="related-links"></a>相关链接

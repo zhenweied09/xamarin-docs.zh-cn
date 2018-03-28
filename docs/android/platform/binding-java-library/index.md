@@ -1,6 +1,6 @@
 ---
-title: "绑定 Java 库"
-description: "Android 社区有许多你可能想在应用程序; 要使用的 Java 库本指南说明如何通过创建绑定库将 Java 库合并到 Xamarin.Android 应用程序。"
+title: 绑定 Java 库
+description: Android 社区有许多你可能想在应用程序; 要使用的 Java 库本指南说明如何通过创建绑定库将 Java 库合并到 Xamarin.Android 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 47e32a68b7b10a2d02ee41a9abf234be6f002f7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-a-java-library"></a>绑定 Java 库
 
@@ -145,5 +145,5 @@ Xamarin.Android 绑定生成器将更改某些 Java 习语和模式以与.NET �
 ## <a name="related-links"></a>相关链接
 
 - [使用 JNI](~/android/platform/java-integration/working-with-jni.md)
-- [GAPI 元数据](http://www.mono-project.com/GAPI#Metadata)
+- [GAPI 元数据](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [使用本机库](~/android/platform/native-libraries.md)

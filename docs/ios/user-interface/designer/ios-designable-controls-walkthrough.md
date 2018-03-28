@@ -1,6 +1,6 @@
 ---
-title: "演练-与 Xamarin 设计器使用 iOS 自定义控件"
-description: "本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。 它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。 此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。"
+title: 演练-与 Xamarin 设计器使用 iOS 自定义控件
+description: 本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。 它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。 此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>演练-与 Xamarin 设计器使用 iOS 自定义控件
 
 _本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。_
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Xamarin 设计器中为 iOS 是针对 Mac 和 Visual Studio 2015 和 2017 Windows 上的 Visual Studio 中提供。
 
@@ -32,15 +32,11 @@ Xamarin 设计器中为 iOS 是针对 Mac 和 Visual Studio 2015 和 2017 Window
 
 1. 创建新的解决方案从**iOS > 应用程序 > 单视图应用程序 > C#**模板，将其命名为`ScratchTicket`，并继续完成新项目向导：
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "创建新的解决方案")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. 创建名为的新的空类文件`ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "创建一个新的 ScratchTicketView 类")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. 添加以下代码`ScratchTicketView`类：
 
@@ -275,7 +271,7 @@ public override void Draw(CGRect rect)
 
  [![](ios-designable-controls-walkthrough-images/11-customproperty.png "编辑设计时属性")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中我们演练如何创建一个自定义控件，以及使用 iOS 设计器的 iOS 应用程序中使用它。 我们已了解如何创建和生成的控件，以使其可用的应用程序在设计器的**工具箱**。 此外，我们介绍了如何实现控件，以便它能在设计时和运行时，正确呈现，以及如何公开设计器中的自定义控件属性。
 

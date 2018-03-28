@@ -1,6 +1,6 @@
 ---
-title: "添加智能与认知服务"
-description: "Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加功能，如面部识别、 语音识别和语言理解，使其应用程序更智能的服务。 本文提供的示例应用程序演示如何调用的一些 Microsoft 认知服务 Api 的简介。"
+title: 添加智能与认知服务
+description: Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加功能，如面部识别、 语音识别和语言理解，使其应用程序更智能的服务。 本文提供的示例应用程序演示如何调用的一些 Microsoft 认知服务 Api 的简介。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: c309fb6936296dc181e499c91770ab8891121e9c
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: fd67629b9e8d0057ccf3b95b9e84ff1d16acbd7b
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>添加智能与认知服务
 
@@ -23,12 +23,12 @@ _Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加
 随附的示例是 todo 列表应用程序提供了以下功能：
 
 - 查看任务的列表。
-- 添加和编辑通过软键盘，或语音识别使用必应语音 API 中执行的任务。 有关执行语音识别的详细信息，请参阅[语音识别使用必应语音 API](speech-recognition.md)。
+- 添加和编辑通过软键盘，或使用 Microsoft 语音 API 的语音识别中执行的任务。 有关执行语音识别的详细信息，请参阅[语音识别使用 Microsoft 语音 API](speech-recognition.md)。
 - 拼写检查任务使用必应拼写检查 API。 有关详细信息，请参阅[拼写检查使用必应拼写检查 API](spell-check.md)。
 - 将转换为德语使用转换器 API 从英语的任务。 有关详细信息，请参阅[文本转换使用转换器 API](text-translation.md)。
 - 删除任务。
 - 设置任务的状态设置为完成。
-- 速率表情识别，使用表情 API 的应用程序。 有关详细信息，请参阅[表情识别使用表情 API](emotion-recognition.md)。
+- 速率表情识别，使用表面 API 的应用程序。 有关详细信息，请参阅[表情识别使用表面 API](emotion-recognition.md)。
 
 任务存储在本地的 SQLite 数据库。 有关使用本地的 SQLite 数据库的详细信息，请参阅[处理本地数据库](~/xamarin-forms/app-fundamentals/databases.md)。
 
@@ -36,7 +36,7 @@ _Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加
 
 ![](images/sample-application-1.png "TodoListPage")
 
-可以通过单击创建新项 *+* 按钮，导航到`TodoItemPage`。 此页还可以通过选择一项任务导航：
+可以通过单击创建新项*+*按钮，导航到`TodoItemPage`。 此页还可以通过选择一项任务导航：
 
 ![](images/sample-application-2.png "TodoItemPage")
 
@@ -46,7 +46,7 @@ _Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加
 
 ![](images/sample-application-3.png "RateAppPage")
 
-`RateAppPage`允许用户来执行其字面，提交到与正在显示返回表情表情 API 的照片。
+`RateAppPage`允许用户来执行其字面，显示返回表情与提交到表面 API 的照片。
 
 ## <a name="understanding-the-application-anatomy"></a>了解应用程序剖析
 
@@ -73,7 +73,7 @@ PCL 项目中还包含一些重要的文件：
 
 - `Microsoft.Net.Http` – 提供`HttpClient`通过 HTTP 发出请求的类。
 - `Newtonsoft.Json` –.NET 提供的 JSON 框架。
-- `Microsoft.ProjectOxford.Emotion` – 用于访问表情 API 的客户端库。
+- `Microsoft.ProjectOxford.Face` – 用于访问表面 API 的客户端库。
 - `PCLStorage` – 提供了一套跨平台本地文件 IO Api。
 - `sqlite-net-pcl` – 提供 SQLite 数据库存储。
 - `Xam.Plugin.Media` – 提供跨平台照片拍摄和 Api。
@@ -117,11 +117,10 @@ public class TodoItem
 
 示例应用程序将调用以下 Microsoft 认知服务：
 
-- 必应语音 API。 有关详细信息，请参阅[语音识别使用必应语音 API](speech-recognition.md)。
+- Microsoft 语音 API。 有关详细信息，请参阅[语音识别使用 Microsoft 语音 API](speech-recognition.md)。
 - 必应拼写检查 API。 有关详细信息，请参阅[拼写检查使用必应拼写检查 API](spell-check.md)。
 - 将转换 API。 有关详细信息，请参阅[文本转换使用转换器 API](text-translation.md)。
-- 表情 API。 有关详细信息，请参阅[表情识别使用表情 API](emotion-recognition.md)。
-
+- 表面 API。 有关详细信息，请参阅[表情识别使用表面 API](emotion-recognition.md)。
 
 ## <a name="related-links"></a>相关链接
 
