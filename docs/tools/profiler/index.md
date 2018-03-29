@@ -1,6 +1,6 @@
 ---
 title: Xamarin Profiler
-description: "本指南介绍了 Xamarin 探查器的主要功能。 它查找在探查器、 分析和时应使用它们，和的标准工作流分析 Xamarin 应用程序。"
+description: 本指南介绍了 Xamarin 探查器的主要功能。 它查找在探查器、 分析和时应使用它们，和的标准工作流分析 Xamarin 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: e5c17c53c154eb4da4ec76e567c1c73695de7e35
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c44541c56d7b1a00a704cfc66812d5537ec83c4
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -48,7 +48,7 @@ Xamarin 探查器具有大量检测可用于分析-分配、 周期和时间探�
 ## <a name="download-and-install"></a>下载并安装
 
 > [!NOTE]
-> **注意：**你将需要 Visual Studio Enterprise 订阅者能够解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
+> **注意：**你将需要[Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/)订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
 
 Xamarin 探查器是独立的应用程序，并且已集成使用适用于 Mac 的 Visual Studio 和 Visual Studio，若要启用分析从 IDE 内。
 
@@ -60,10 +60,6 @@ Xamarin 探查器是独立的应用程序，并且已集成使用适用于 Mac �
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 下载完成后，启动安装程序将 Xamarin 探查器添加到你的系统。
-
-中的 Xamarin 的所有发行版本提供了 IDE 集成。
-但是， [Visual Studio Enterprise](https://www.xamarin.com/compare-visual-studio)才能进行分析。
-
 
 
 ## <a name="profilers-and-profiling"></a>探查器和分析
@@ -377,7 +373,7 @@ SGen 它分配的应用程序分成三个堆的对象是代 GC-Nursery、 主要
 
 有关内存管理的详细信息，请参阅[内存和性能最佳实践](~/cross-platform/deploy-test/memory-perf-best-practices.md)指南。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本指南中我们看上去哪些分析及如何都很有好处向开发人员。 然后，我们引入了 Xamarin 探查器，提供的某些历史记录和到其工作原理的信息。 最后，我们在观看的 Xamarin 探查器，功能和解决分配以及时间探查器检测。
 

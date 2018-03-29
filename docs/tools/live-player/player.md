@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 实时播放器应用程序"
-description: "编辑和实时 iOS 或 Android 设备上测试应用"
+title: Xamarin 实时播放器应用程序
+description: 编辑和实时 iOS 或 Android 设备上测试应用
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d666bb9a7749845265d50b86e46ef78e2036cb69
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin 实时播放器应用程序
 
@@ -20,17 +20,19 @@ ms.lasthandoff: 03/12/2018
 
 ## <a name="get-the-app"></a>获取应用
 
-### <a name="xamarin-live-player-for-android"></a>适用于 Android 的 Xamarin 实时播放器
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 实时的 Xamarin Player 用于 Android 从 Google Play:
 
 [ ![在 Google Play 上提供](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 适用于 Android 的设备，而无需 Google Play Xamarin 实时播放机可通过[HockeyApp](https://aka.ms/xlp-hockeyapp)分发。 此外，早期预览版中生成为可以通过启用直接从 Google Play 安装 Android[打开 beta 程序](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Xamarin iOS 的实时播放器
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 我们鼓励用户加入[实时的 Xamarin Player 应用_iOS 预览_](https://aka.ms/liveplayeralpha)以享受到通过 TestFlight 的最新改进的快速访问。
 
-
+-----
 
 ## <a name="using-the-app"></a>使用应用程序
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 03/12/2018
 
 ![IOS 条形码扫描程序的屏幕截图](player-images/scan-iphone-sml.png) ![Android 条形码扫描程序的屏幕截图](player-images/scan-android-sml.png)
 
-如果连接成功，则代码应几乎立即 （如计算器示例中） 在设备上运行：
+如果成功连接，则应立即运行代码在设备上几乎 (如[计算器示例](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
 ![在设备上运行的示例计算器应用程序](player-images/basic-calculator-iphone-sml.png)
 
@@ -52,7 +54,7 @@ ms.lasthandoff: 03/12/2018
 
 按信息按钮**(i)**底部的应用程序以显示**选项**菜单：
 
-![选项菜单的屏幕截图](player-images/options.png)
+[ ![选项菜单的屏幕截图](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>日志
 
@@ -64,13 +66,13 @@ ms.lasthandoff: 03/12/2018
 * 版本信息。
 * 发送反馈。
 
-![设置的屏幕截图](player-images/settings.png)
+[ ![设置的屏幕截图](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>管理设备
 
 若要首次连接设备，请按照中的说明[要求和安装程序](~/tools/live-player/install.md)。 你可以对多个设备 （如 iOS 和 Android），并通过 IDE 管理它们。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 在 Visual Studio 中，选择**工具 > 实时的 Xamarin Player > 管理的设备...**
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 03/12/2018
 
 从设备列表，你也可以访问此窗口。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 在适用于 Mac 的 Visual Studio，选择**工具 > (实时的 Xamarin Player) 管理的设备...**
 

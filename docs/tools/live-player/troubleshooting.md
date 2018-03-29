@@ -1,6 +1,6 @@
 ---
-title: "疑难解答"
-description: "使用 Xamarin 实时播放器，以及如何修复它们的已知的问题。"
+title: 疑难解答
+description: 使用 Xamarin 实时播放器，以及如何修复它们的已知的问题。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: d7c5bedb03d7c869be65e3c704bac58a9cdfcbbd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ab075cad0c3f3456ed23f3eb175dcdb3aa493510
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/27/2018
 
 运行 Xamarin 实时播放器的移动设备不在与运行 IDE 的计算机位于同一网络上时发生。 请查看以下内容：
 
-- 确认的设备和计算机均在同一 WiFi 网络上。
+- 确认的设备和计算机均在同一 Wi-fi 网络上。
   - 如果计算机也连接到有线网络，请尝试拔掉电源有线的连接。
 - 网络可能紧密保护 （例如，某些公司网络）、 阻止通过实时的 Xamarin Player 所需的端口。
 - 关闭 Xamarin 实时播放器应用程序并重新启动它。
@@ -35,12 +35,92 @@ ms.lasthandoff: 02/27/2018
 
 **"IOException： 无法从传输连接中读取数据： 非阻止套接字上的操作将阻塞"**
 
-如果运行实时的 Xamarin Player 的移动设备不在与运行 IDE; 的计算机位于同一网络上，通常会遇到此错误这通常发生在连接到以前成功配对的设备。
+如果运行实时的 Xamarin Player 的移动设备不在与运行 Visual Studio; 的计算机位于同一网络上，通常会遇到此错误这通常发生在连接到以前成功配对的设备。
 
-* 检查的设备和计算机均在同一 WiFi 网络上。
+* 检查的设备和计算机均在同一 Wi-fi 网络上。
 * 网络可能紧密保护 （例如，某些公司网络）、 阻止通过实时的 Xamarin Player 所需的端口。 以下的端口所需的 Xamarin 实时播放器：
   * 37847 – 内部网络访问权限 
   * 8090 – 外部的网络访问权限
+
+## <a name="manually-configure-device"></a>手动配置设备
+
+如果你无法通过 Wi-fi 连接到你的设备可以尝试手动配置你的设备配置文件中，通过，通过执行以下步骤：
+
+**步骤 1： 打开配置文件**
+
+前往应用程序数据文件夹：
+
+* Windows: **%userprofile%\AppData\Roaming**
+* macOS: **~/Users/$USER/.config**
+
+在此文件夹中，你将找到**PlayerDeviceList.xml**如果它不存在你需要创建一个。
+
+**步骤 2： 获取 IP 地址**
+
+在实时的 Xamarin Player 应用中，转到**有关 > 连接测试 > 启动连接测试**。
+
+记下的 IP 地址，你将需要配置你的设备时列出的 IP 地址。
+
+**步骤 3： 获取配对代码**
+
+在实时的 Xamarin Player tap 内部**对**或**再次对**，然后按**手动输入**。 数值代码将显示，你将需要更新配置文件。
+
+**步骤 4： 生成 GUID**
+
+转到：https://www.guidgenerator.com/online-guid-generator.aspx并生成新的 guid，并确保大写上。
+
+
+**步骤 5： 配置设备**
+
+打开**PlayerDeviceList.xml**如 Visual Studio 或 Visual Studio 代码编辑器中。 你需要在此文件中手动配置你的设备。 默认情况下，该文件应包含以下空`Devices`XML 元素：
+
+```xml
+<DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Devices>
+
+</Devices>
+</DeviceList>
+```
+
+**添加 iOS 设备：**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>iPhone Player</Name>
+<Platform>iOS</Platform>
+<AndroidApiLevel>0</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+
+**添加 Android 设备：**
+
+```xml
+<PlayerDevice>
+<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
+<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
+<Name>Android Player</Name>
+<Platform>Android</Platform>
+<AndroidApiLevel>24</AndroidApiLevel>
+<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
+<HostEndPoint />
+<NeedsAppInstall>false</NeedsAppInstall>
+<IsSimulator>false</IsSimulator>
+<SimulatorIdentifier />
+<LastConnectTimeUtc>2018-01-08T20:34:42.2332328Z</LastConnectTimeUtc>
+</PlayerDevice>
+```
+
+**关闭并重新打开 Visual Studio。** 在列表中应显示你的设备。
+
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>在 IDE 中的"无法找到类型或命名空间"消息
 

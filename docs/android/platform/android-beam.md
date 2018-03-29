@@ -1,5 +1,5 @@
 ---
-title: "Android 无线发送"
+title: Android 无线发送
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Android 无线发送
 
-Android 无线数据交换是一项新近距离通信 (NFC) 技术，允许应用程序共享信息在近距离的 NFC Android 4。
+Android 无线数据交换是使应用程序可以通过在近距离的 NFC 共享信息的 Android 4.0 中引入的近距离通信 (NFC) 技术。
 
 [![图示共享信息的近距离的两个设备](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

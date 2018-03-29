@@ -1,6 +1,6 @@
 ---
-title: "资源字典"
-description: "XAML 资源是可以多次使用的对象定义。 ResourceDictionary 允许定义在一个位置，并在 Xamarin.Forms 应用程序中重新使用的资源。 此文章介绍了如何创建和使用 ResourceDictionary，以及如何合并资源字典。"
+title: 资源字典
+description: XAML 资源是可以多次使用的对象定义。 ResourceDictionary 允许定义在一个位置，并在 Xamarin.Forms 应用程序中重新使用的资源。 此文章介绍了如何创建和使用 ResourceDictionary，以及如何合并资源字典。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/17/2017
-ms.openlocfilehash: 9602e4d99e8f5c004fe75ab724bb3746aca46003
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aa3ae9fed67b6cd7521e5c59edcb54f05cc6b7c5
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="resource-dictionaries"></a>资源字典
 
@@ -53,7 +53,7 @@ A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.
 
 这[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)定义三个[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/)资源和[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)资源。 有关创建 XAML`App`类，请参阅[App 类](~/xamarin-forms/app-fundamentals/application-class.md)。
 
-每个资源具有使用指定的密钥`x:Key`属性，其在提供描述性密钥`ResourceDictionary`。 密钥用于检索从资源[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)通过`StaticResource`标记扩展，如下面的 XAML 代码示例演示在控件中定义的其他资源级别中所示`ResourceDictionary`:
+每个资源都有一个使用指定的密钥`x:Key`属性，其在提供描述性密钥`ResourceDictionary`。 密钥用于检索从资源[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)通过`StaticResource`标记扩展，如下面的 XAML 代码示例演示在控件中定义的其他资源级别中所示`ResourceDictionary`:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -177,7 +177,7 @@ A [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.
 > [!NOTE]
 > 搜索资源字典可以是计算密集型任务，如果应用程序包含多个较大的资源字典。 因此，确保应用程序中的每一页仅使用适用于页上，以避免不必要的搜索的资源字典。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何创建和使用[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，以及如何合并资源字典。 A`ResourceDictionary`允许定义在一个位置，并在 Xamarin.Forms 应用程序中重新使用的资源。
 

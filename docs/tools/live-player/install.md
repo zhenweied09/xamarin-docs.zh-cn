@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 实时播放器安装程序"
-description: "编辑和实时 iOS 或 Android 设备上测试应用"
+title: Xamarin 实时播放器安装程序
+description: 编辑和实时 iOS 或 Android 设备上测试应用
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 05d6a679f318406d1ee5c6893ae4d01452a79723
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin 实时播放器安装程序
 
@@ -22,25 +22,28 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
 ## <a name="1-get-the-app"></a>1.获取应用
 
-### <a name="xamarin-live-player-for-android"></a>适用于 Android 的 Xamarin 实时播放器
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
 实时的 Xamarin Player 用于 Android 从 Google Play:
 
 [ ![在 Google Play 上提供](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 适用于 Android 的设备，而无需 Google Play Xamarin 实时播放机可通过[HockeyApp](https://aka.ms/xlp-hockeyapp)分发。 此外，早期预览版中生成为可以通过启用直接从 Google Play 安装 Android[打开 beta 程序](https://play.google.com/apps/testing/com.xamarin.live)
 
-### <a name="xamarin-live-player-for-ios"></a>Xamarin iOS 的实时播放器
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
 我们鼓励用户加入[实时的 Xamarin Player 应用_iOS 预览_](https://aka.ms/liveplayeralpha)以享受到通过 TestFlight 的最新改进的快速访问。
 
+-----
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="2-get-visual-studio-2017-preview-on-windows-or-for-mactabsvsmac"></a>2.在 Windows 上获取 Visual Studio 自 2017 年 1 Preview (或[适用于 Mac](?tabs=vsmac))
+## <a name="2-get-visual-studio-2017"></a>2.Get Visual Studio 2017
 
 实时的 Xamarin Player 需要：
 
-- Visual Studio 2017 [15.4](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/#visualstudio2017)或更高版本。
-- Visual Studio 计算机和相同的 WiFi 网络上的设备
+- Visual Studio 2017 15.4年或更高版本。
+- Visual Studio 计算机和相同的 WiFi 网络上的设备。
 
 ## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3.第一次使用实时的 Xamarin Player
 
@@ -72,9 +75,9 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
   如果设备不能用于配对，则会出现错误。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-## <a name="2-get-visual-studio-for-mac-or-for-windowstabsvswin"></a>2.获取适用于 Mac 的 Visual Studio (或[适用于 Windows](?tabs=vswin))
+## <a name="2-get-visual-studio-for-mac"></a>2.获取 Visual Studio for Mac
 
 实时的 Xamarin Player 需要：
 
@@ -120,7 +123,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
 -----
 
-如果遇到任何问题，请参阅[限制和故障排除](~/tools/live-player/troubleshooting.md)。
+如果遇到任何问题或无法连接，请参阅[限制和故障排除](~/tools/live-player/troubleshooting.md)。
 
 
 ## <a name="related-links"></a>相关链接

@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 实时播放器示例"
-description: "以下是一些示例，以便与 Xamarin 实时播放器试用"
+title: Xamarin 实时播放器示例
+description: 以下是一些示例，以便与 Xamarin 实时播放器试用。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
@@ -8,32 +8,34 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 6f4ccfb70e3e8e4db0bfb692e63208b5fc89ffac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0e624568a86b08522d68b923b2d60a86144870da
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-samples"></a>Xamarin 实时播放器示例
 
-_以下是一些示例，以便与 Xamarin 实时播放器试用_
-
-## <a name="xamarinforms"></a>Xamarin.Forms
+## <a name="get-started-with-xamarinforms"></a>要开始使用 Xamarin.Forms
 
 请访问[示例库](https://developer.xamarin.com/samples/xamarin-live-player/all/)为 Xamarin.Forms 示例采用了实时的 Xamarin Player。
 
-<a name="colorcontrol"/>
+## <a name="featured-samples"></a>特色的示例
 
-## <a name="color-control-ios"></a>颜色控件 (iOS)
+### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[基本计算器](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-基于此[配方](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image/)，颜色控件示例，可以在 iPhone 上拍摄一张照片并调整颜色级别：
+此 Xamarin.Forms 应用提供可以在 Android 或 iOS 设备使用一个简单计算器。
 
-![颜色控件示例应用屏幕快照](samples-images/color-control-sml.png)
+![基本计算器示例屏幕快照](samples-images/basic-calculator-sml.png)
 
-[下载示例](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
+### <a name="bugsweeperhttpsdeveloperxamarincomsamplesmobileliveplayerbugsweeperlp"></a>[BugSweeper](https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/)
+
+这是一个焕然一新的熟悉游戏。 10 个 bug 隐藏在磁贴的一个 9 x 9 网格中。 若要获胜，必须找到并标记所有 10 个 bug。
+
+![在 Android 上 BugSweeper 应用](samples-images/bugsweeper-sml.png)
+
 
 
 ## <a name="related-links"></a>相关链接
 
-- [颜色控件 (iOS) （示例）](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
-- [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Xamarin.Forms 实时播放器示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)

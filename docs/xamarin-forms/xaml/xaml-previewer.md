@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms 的 XAML 预览"
-description: "请参阅 Xamarin.Forms 布局呈现你进行键入 ！"
+title: Xamarin.Forms 的 XAML 预览
+description: 请参阅 Xamarin.Forms 布局呈现你进行键入 ！
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7a9c4fed92cb4ed8c8c12e97129bc8379037acb
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 的 XAML 预览
 
 _请参阅 Xamarin.Forms 布局呈现你进行键入 ！_
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 项目需要 XAML 预览程序，工作的最新 Xamarin.Forms NuGet 包。 预览 Android 应用程序需要[JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 
@@ -26,17 +26,19 @@ _请参阅 Xamarin.Forms 布局呈现你进行键入 ！_
 
 ## <a name="getting-started"></a>入门
 
-### <a name="visual-studio-for-mac-on-mac"></a>Visual Studio for Mac 上的 Mac
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+使用**视图 > 其他 Windows > Xamarin.Forms 预览程序**Visual Studio 打开预览窗口中的菜单。 使用**窗口 > 新建垂直制表符组**菜单上，将其定位并排显示。
+
+[![Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Visual Studio 中的窗体预览程序")
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 **预览**按钮可以通过右键单击某个 XAML 文件，并选择显示在编辑器上**打开 > XAML 查看器**。 然后可显示或隐藏通过按预览窗格**预览**任何 XAML 文档窗口的右上角的按钮：
 
 [![适用于 Mac 的 Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-sml.png "适用于 Mac 的 Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list.png#lightbox "适用于 Mac 的 Visual Studio 中的窗体预览程序")
 
-### <a name="visual-studio-on-windows"></a>Windows 版 Visual Studio
-
-使用**视图 > 其他 Windows > Xamarin.Forms 预览程序**Visual Studio 打开预览窗口中的菜单。 使用**窗口 > 新建垂直制表符组**菜单上，将其定位并排显示。
-
-[![Visual Studio 中的 ListView 控件预览](xaml-previewer-images/xamlp-list-vs-sml.png "Visual Studio 中的窗体预览程序")](xaml-previewer-images/xamlp-list-vs.png#lightbox "Visual Studio 中的窗体预览程序")
+-----
 
 ## <a name="xaml-preview-options"></a>XAML 预览选项
 

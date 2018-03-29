@@ -4,14 +4,10 @@
 
 # <a name="part-6---testing-and-app-store-approvals"></a>第 6-部分测试和应用商店审批
 
-<a name="Testing" />
-
 
 ## <a name="testing"></a>正在测试
 
 许多应用程序 （甚至上的 Android 应用，某些存储） 将需要通过审批过程，然后在发布;使测试是很关键，以确保你的应用程序达到市场 （更不用说与您的客户成功）。 测试可以采用许多形式，从开发人员级单元测试，以管理跨各种硬件的测试。
-
- <a name="Test_on_All_Platforms" />
 
 
 ### <a name="test-on-all-platforms"></a>在所有平台上进行测试
@@ -22,16 +18,12 @@
 
 你还应在任意数量的不同的物理硬件设备，因为你可以进行测试。
 
- <a name="Devices_in_cloud" />
-
 
 #### <a name="devices-in-cloud"></a>在云中的设备
 
 移动电话和平板电脑生态系统在不断增加所有的时间，使其无法在不断增长的可用设备数上进行测试。 若要解决此问题大量服务，请提供远程控制许多不同的设备，以便应用程序可以安装和测试而无需直接投入大量硬件的功能。
 
 [应用中心测试](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)提供一种简单的方法来测试 iOS 和 Android 应用程序在数百个不同设备上的。
-
- <a name="Test_Management" />
 
 
 ### <a name="test-management"></a>测试管理
@@ -44,10 +36,8 @@
 
 有大量的服务可以帮助解决这些问题中，通过提供基础结构，这内置到应用程序以收集和报告使用情况和错误，并还简化设置过程以帮助注册并管理测试人员和他们的设备.
 
-[Xamarin Insights 预览](http://xamarin.com/insights)为此问题，提供崩溃报告和复杂应用程序使用情况信息的第二部分提供了解决方案。
+[Visual Studio 应用中心](/appcenter/)为这些问题，并提供测试版本分发、 崩溃报告和复杂的应用程序使用情况信息提供了解决方案。
 
-
- <a name="Test_Automation" />
 
 
 ### <a name="test-automation"></a>测试自动化
@@ -55,12 +45,10 @@
 Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)可以用于创建测试脚本，以便可以本地运行或上载到的自动化的用户界面[应用 Center 测试](https://docs.microsoft.com/appcenter/test-cloud/)。
 
 
- <a name="Unit_Testing" />
 
 
 ## <a name="unit-testing"></a>单元测试
 
- <a name="Touch.Unit" />
 
 
 #### <a name="touchunit"></a>Touch.Unit
@@ -69,29 +57,13 @@ Xamarin.iOS 包括调用 Touch.Unit 按照编写测试 JUnit/NUnit 样式的单�
 
 请参阅我们[使用 Xamarin.iOS 进行单元测试](~/ios/deploy-test/touch.unit.md)有关编写的测试，运行 Touch.Unit 的详细信息的文档。
 
- <a name="Andr.Unit" />
 
 
 #### <a name="andrunit"></a>Andr.Unit
 
 没有适用于 Android 调用 Andr.Unit Touch.Unit 开放源代码等效项。 你可以下载它从[github](https://github.com/spouliot/Andr.Unit)和上阅读有关该工具[@spouliot的博客](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)。
 
- <a name="Windows_Phone" />
 
-
-#### <a name="windows-phone"></a>Windows Phone
-
-下面是一些链接，以帮助安装程序进行单元测试 Windows Phone:
-
--   [http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/](http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/)
--   [http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/](http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/)
--   [http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7](http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7)
--   [http://mobile.dzone.com/articles/unit-testing-your-windows](http://mobile.dzone.com/articles/unit-testing-your-windows)
-
-
-&nbsp;
-
- <a name="App_Store_Approvals" />
 
 
 ## <a name="app-store-approvals"></a>应用商店审批
@@ -100,7 +72,6 @@ Apple 和 Microsoft 操作平台上的唯一存储： 应用商店和 Marketplac
 
 等待要审阅的应用可以是大的压力-商业压力通常意味着与在"目标"发布日期之前的错误很少距的应用程序提交以供审核。 过程本身可能需要最多两周，不一定是透明： 有限的反馈上没有你的应用程序的进度直到最后被拒绝或批准它。 尤其是它的发生一次和周之间原始的启动日期传递和最后批准应用程序时拒绝可能意味着缺少的机会，市场营销窗口。
 
- <a name="Be_prepared" />
 
 
 ### <a name="be-prepared"></a>准备
@@ -117,7 +88,6 @@ Google Play 注册仅需几分钟，如果你的应用程序可用，而进程�
 
 本部分的其余部分讨论你应当考虑以确保你的应用程序批准而无需任何短暂的操作。
 
- <a name="Quality" />
 
 
 ### <a name="quality"></a>质量
@@ -127,8 +97,6 @@ Google Play 注册仅需几分钟，如果你的应用程序可用，而进程�
 崩溃是拒绝的常见原因。 如果它是很容易会导致应用出现故障，它具有保证被拒绝。 大多数开发人员未提交的假定条件下，它们将崩溃，但它们通常实现其应用。 提交它，将精力集中不只是在确保一切正常，但还你处理常见的移动的错误情况，例如网络问题和资源约束，如内存或存储空间之前，应彻底测试你的应用程序。 使用模拟器和物理设备测试-无论程度代码在模拟器中运行，只有设备可以演示应用程序的实际性能。 使用任意多个不同的设备，因为你可以查找，并登记 beta 测试人员的团队，如果你可以-第三方服务可帮助管理 beta 分布和反馈。
 
 所有的移动操作系统将终止不足够快的速度启动应用程序。 允许的时间长度而异，但在一般情况下应用的目标应是进行中几秒钟后处于响应状态，并使用后台任务来完成任何工作将花较长时间。 应用程序花费太长时间才能加载或不足够的响应能力中经常使用的是将被拒绝。 在后台，内容发生的情况或应用程序将显示已损坏，同样，被拒绝时，始终提供用户反馈。
-
- <a name="Check_Your_Edge_Cases" />
 
 
 ### <a name="check-your-edge-cases"></a>检查边缘情况
@@ -143,7 +111,6 @@ Google Play 注册仅需几分钟，如果你的应用程序可用，而进程�
 -   **硬件而异**– 请记住，在你打算支持的最旧、 最慢硬件上进行测试。 有可能影响你的应用的两个方面： 性能，这可能是在较旧的设备和硬件功能，如相机、 麦克风、 GPS、 陀螺或其他可选组件的支持上不可用。 应用程序应会降低正常 （和不崩溃） 时组件是不可用。
 
 
- <a name="Guidelines_are_more_than_just_a_‘guide’" />
 
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>准则是远不止指南 》
@@ -158,7 +125,6 @@ Windows 开发人员应同样小心;一个常见错误失败以完全支持硬�
 
 鼓励你的设计器，阅读并按照每个平台的设计准则。
 
- <a name="Implementing_Platform-Specific_Features" />
 
 
 ### <a name="implementing-platform-specific-features"></a>实现特定于平台的功能
@@ -171,7 +137,6 @@ Windows 开发人员应同样小心;一个常见错误失败以完全支持硬�
 -   **映射**– 将叠加和其他功能添加到移动映射，但是请注意不影响地图信用额度信息 （如 iOS5 的 Google 徽标） 因为这样会导致拒绝的做法越来越普遍。
 
 
- <a name="Manage_Your_Metadata" />
 
 
 ### <a name="manage-your-metadata"></a>管理你的元数据
@@ -185,7 +150,6 @@ Windows 开发人员应同样小心;一个常见错误失败以完全支持硬�
 
 将放到开发和测试应用程序的元数据到尽可能多工作量。 获取应用程序拒绝的元数据中的次要侵权行为，因此值得花时间使其正确。
 
- <a name="App_Stores:_Not_For_Everyone" />
 
 
 ### <a name="app-stores-not-for-everyone"></a>应用商店： 不适用于所有人
@@ -198,8 +162,6 @@ Android 提供最大的灵活性，在这一点: （只要该设备的配置允�
 Apple 在 iOS Developer Enterprise Program，也不能绕过应用商店审批过程，公司可以分配给他们的员工的内部应用中注册的开发人员提供一个内部部署选项。
 遗憾的是此许可证不能解决需 extranet 类似的应用程序分发到客户或供应商的其他已关闭组。 [企业版 （和临时） 部署](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-
- <a name="App_Store_Summary" />
 
 
 ### <a name="app-store-summary"></a>应用商店摘要

@@ -1,6 +1,6 @@
 ---
-title: "在 XAML 中的传递自变量"
-description: "本文演示如何使用可用于将参数传递到非默认构造函数，以调用工厂方法，并指定泛型自变量的类型的 XAML 属性。"
+title: 在 XAML 中的传递自变量
+description: 本文演示如何使用可用于将参数传递到非默认构造函数，以调用工厂方法，并指定泛型自变量的类型的 XAML 属性。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: a30dd9b33466ac6907322f8c6b586c012452a44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>在 XAML 中的传递自变量
 
@@ -135,7 +135,7 @@ _本文演示如何使用可用于将参数传递到非默认构造函数，以�
 </BoxView>
 ```
 
-中的元素数`x:Arguments`标记，以及这些元素的类型必须匹配调用工厂方法的自变量。 [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/)工厂方法需要四个[ `Int32` ](https://developer.xamarin.com/api/type/System.Int32/)参数，这表示红、 绿、 蓝方和 alpha 值，分别范围从 0 到 255 之间。 [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/)工厂方法需要四个[ `Double` ](https://developer.xamarin.com/api/type/System.Double/)参数，这表示色调、 饱和度、 亮度和 alpha 值，分别范围从 0 到 1。 [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/)工厂方法需要[ `String` ](https://developer.xamarin.com/api/type/System.String/)表示十六进制 (A) 代表 RGB 颜色。
+中的元素数`x:Arguments`标记，以及这些元素的类型必须匹配调用工厂方法的自变量。 [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/)工厂方法需要四个[ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32)参数，这表示红、 绿、 蓝方和 alpha 值，分别范围从 0 到 255 之间。 [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/)工厂方法需要四个[ `Double` ](https://docs.microsoft.com/dotnet/api/system.double)参数，这表示色调、 饱和度、 亮度和 alpha 值，分别范围从 0 到 1。 [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/)工厂方法需要[ `String` ](https://docs.microsoft.com/dotnet/api/system.string)表示十六进制 (A) 代表 RGB 颜色。
 
 以下屏幕截图显示每个调用的结果[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/)工厂方法与指定的参数值：
 
@@ -163,7 +163,7 @@ _本文演示如何使用可用于将参数传递到非默认构造函数，以�
 
 [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/)类是一个泛型类，必须要实例化的`x:TypeArguments`匹配的目标类型属性。 在[ `On` ](https://developer.xamarin.com/api/type/Xamarin.Forms.On/)类， [ `Platform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/)属性可以接受单个`string`值或以逗号分隔的多个`string`值。 在此示例中， [ `StackLayout.Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)属性设置为特定于平台的[ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了使用的 XAML 特性，可以用于将自变量传递给非默认构造函数，以调用工厂方法，并指定泛型自变量的类型。
 
