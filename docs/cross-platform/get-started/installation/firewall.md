@@ -1,6 +1,6 @@
 ---
-title: "Xamarin 防火墙配置说明"
-description: "一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin 的平台适合你的公司。"
+title: Xamarin 防火墙配置说明
+description: 一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin 的平台适合你的公司。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: de68c1a8ceec381faf1b867c708e04030d39c73a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c6e850594e23d650dbe67126143ce7d58fcaa82
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Xamarin 防火墙配置说明
 
@@ -56,17 +56,10 @@ _一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin �
 -  download.visualstudio.microsoft.com
 -  dl.xamarin.com
 
-### <a name="xamarin-insights"></a>Xamarin Insights
-
-需要添加以下地址，确保活动可到达 Xamarin Insights 服务器：
-
-* https://xaapi.xamarin.com
-
-
 ## <a name="xamarin-mac-agent"></a>Xamarin Mac 代理
 
 若要使用 Xamarin Mac 代理将 Visual Studio 连接到 Mac 生成主机， 需要打开 SSH 端口。 该端口默认为**端口 22**。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍了需要加入允许列表以使 Xamarin 产品能够在计算机上正常安装和更新的终结点。

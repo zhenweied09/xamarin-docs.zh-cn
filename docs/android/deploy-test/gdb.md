@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` 不起作用
 
-从 `libmonosgen-2.0.so` 导出 `mono_pmip` 函数（用于[获取托管堆栈帧](http://www.mono-project.com/Debugging#Debugging_with_GDB)），`_Gdb` 目标目前不会下拉。 （未来版本会修复此问题。）
+从 `libmonosgen-2.0.so` 导出 `mono_pmip` 函数（用于[获取托管堆栈帧](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)），`_Gdb` 目标目前不会下拉。 （未来版本会修复此问题。）
 
 要启用位于 `libmonosgen-2.0.so` 中的调用功能，请将其从目标设备复制到 `gdb-symbols` 目录中：
 

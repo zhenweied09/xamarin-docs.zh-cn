@@ -1,6 +1,6 @@
 ---
 title: Windows
-description: "本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。 它介绍创建 windows 以及在 Xcode 和接口生成器中，从情节提要和.xib 文件加载它们和以编程方式使用它们的面板。"
+description: 本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。 它介绍创建 windows 以及在 Xcode 和接口生成器中，从情节提要和.xib 文件加载它们和以编程方式使用它们的面板。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -20,7 +20,7 @@ _本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。它
 
 在使用 C# 和.NET Xamarin.Mac 应用程序中，有权访问相同的窗口和面板，开发人员使用*Objective C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护您的 Windows 和面板 （或根据需要在 C# 代码中直接创建它们）。
 
-根据它的用途，Xamarin.Mac 应用程序可以提供一个或多个窗口在屏幕上进行管理并协调它显示，并且可以配合工作的信息。 Windows 的主要功能是：
+根据其用途，Xamarin.Mac 应用程序可以提供一个或多个窗口在屏幕上进行管理并协调它显示，并且可以配合工作的信息。 窗口的主要功能是：
 
 1. 若要提供的视图和控件中的某个区域可以放置和管理。
 2. 若要接受和响应事件以响应用户交互使用键盘和鼠标。
@@ -278,7 +278,7 @@ public override void ViewWillAppear ()
 
 如果应用程序实施`NSWindow`的`WillClose`事件，将会引发之前窗口已关闭。 如果事件返回`false`，则将不会关闭窗口。 如果不具有窗口**关闭**按钮，或者无法关闭出于任何原因，操作系统将发出警报的声音。
 
-例如:
+例如：
 
 ```csharp
 MyWindow.PerformClose(this);
@@ -299,7 +299,7 @@ MyWindow.PerformClose(this);
 1. 它不会尝试引发`WillClose`事件。
 2. 它不模拟用户单击**关闭**通过暂时突出显示按钮的按钮。
 
-例如:
+例如：
 
 ```csharp
 MyWindow.Close();
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>在关闭窗口之前保存更改
 
-若要监视用户关闭窗口，并允许其将事先保存修改的内容，你将需要创建的一个子类`NSWindowDelegate`，并重写其`WindowShouldClose`方法。 例如:
+若要监视用户关闭窗口，并允许其将事先保存修改的内容，你将需要创建的一个子类`NSWindowDelegate`，并重写其`WindowShouldClose`方法。 例如：
 
 ```csharp
 using System;
@@ -511,7 +511,7 @@ var window = NSApplication.SharedApplication.KeyWindow;
 
 有时可能需要访问所有 Xamarin.Mac 应用当前已经打开的窗口。 例如，若要查看用户想要打开的文件是否是已在正在退出的窗口中打开。
 
-`NSApplication.SharedApplication`维护`Windows`包含你的应用程序在所有打开的窗口的数组的属性。 你可以循环访问要访问所有应用程序的当前 windows 此数组。 例如:
+`NSApplication.SharedApplication`维护`Windows`包含你的应用程序在所有打开的窗口的数组的属性。 你可以循环访问要访问所有应用程序的当前 windows 此数组。 例如：
 
 ```csharp
 // Is the file already open?
@@ -561,7 +561,7 @@ SetFrame (frame, true);
 
 [![](window-images/resize01.png "标识检查器")](window-images/resize01.png#lightbox)
 
-接下来，编辑自定义窗口控制器类和监视器`DidResize`控制器的窗口接收通知的实时大小的更改上的事件。 例如:
+接下来，编辑自定义窗口控制器类和监视器`DidResize`控制器的窗口接收通知的实时大小的更改上的事件。 例如：
 
 ```csharp
 public override void WindowDidLoad ()
@@ -795,7 +795,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用 Xamarin.Mac 应用程序中的 Windows 和面板的详细的信息。 我们看到不同的类型，并使用的 Windows 和面板、 如何创建和维护 Windows 和 Xcode 的接口生成器中的面板和如何使用 C# 代码中的 Windows 和面板。
 

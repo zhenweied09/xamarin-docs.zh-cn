@@ -11,7 +11,7 @@
 ### [适用于 Windows 的 iOS 模拟器](tools/ios-simulator.md)
 ### [.NET 嵌入](tools/dotnet-embedding/index.md)
 ### [Xamarin Inspector](tools/inspector/index.md)
-### [Xamarin Live Player](tools/live-player/index.md)
+### [适用于 Xamarin.Forms 的 Live Player](tools/live-player/index.md)
 ### [Xamarin Profiler](tools/profiler/index.md)
 ### [Xamarin Workbooks](tools/workbooks/index.md)
 ## [图形和游戏](graphics-games/index.yml)

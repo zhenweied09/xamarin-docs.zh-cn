@@ -1,6 +1,6 @@
 ---
-title: "了解 Android 多屏显示：快速入门"
-description: "本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第二个屏幕的情况。 与此同时，介绍了基础的 Android 应用程序构建基块，便于更深入探讨 Android 体系结构。"
+title: 了解 Android 多屏显示：快速入门
+description: 本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第二个屏幕的情况。 与此同时，介绍了基础的 Android 应用程序构建基块，便于更深入探讨 Android 体系结构。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 159bd2435a1d2b5252e0fd1b9d525cdf6cfa7207
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2913508159787f6d369f5e55f879addfc1b2ba4f
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>了解 Android 多屏显示：快速入门
 
@@ -126,7 +126,7 @@ public class MainActivity : Activity
 }
 ```
 
-在 `MainActivity` 类中，添加以下代码以注册“转换历史记录”按钮（将此行放在 `translationHistory` 声明后）：
+在 `MainActivity` 类中，添加以下代码以注册“转换历史记录”按钮（将此行放在 `translateButton` 声明后）：
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);
