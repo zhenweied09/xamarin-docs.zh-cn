@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "Xamarin 文档"
-description: "Xamarin 允许你使用 .NET 代码和特定于平台的用户界面生成适用于 Android、iOS 和 macOS 的本机应用。 Xamarin.Forms 允许你使用采用 C# 或 XAML 编写的共享 UI 代码生成本机应用。"
+hide_bc: true
+title: Xamarin 文档
+description: Xamarin 允许你使用 .NET 代码和特定于平台的用户界面生成适用于 Android、iOS 和 macOS 的本机应用。 Xamarin.Forms 允许你使用采用 C# 或 XAML 编写的共享 UI 代码生成本机应用。
 featureFlags:
 - clicktale
 ms.openlocfilehash: d73b8165fc1a71fbfe3202f694c4653788ccfb28
