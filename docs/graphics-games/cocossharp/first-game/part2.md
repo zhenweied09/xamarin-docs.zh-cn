@@ -1,6 +1,6 @@
 ---
-title: "实现弹跳游戏"
-description: "本演练演示如何将游戏逻辑和内容添加到一个空的模板来创建调用 BouncingGame 完整游戏。"
+title: 实现弹跳游戏
+description: 本演练演示如何将游戏逻辑和内容添加到一个空的模板来创建调用 BouncingGame 完整游戏。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 584ae03a3a773ae7e16fa7a24b9dbfa6c5056342
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="implementing-the-bouncing-game"></a>实现弹跳游戏
 
@@ -442,7 +442,7 @@ if (doesBallOverlapPaddle && isMovingDownward)
 ![](part2-images/image1.png "运行游戏并查看，它将显示这增大如球退回从刀片中移出的分数")
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练提供图形、 物理，与使用 CocosSharp 的输入创建跨平台游戏。 它是 CocosSharp 游戏开发入门的第一步。 我们介绍了一些 CocosSharp、 如何构造可视化树，从而正确地呈现对象以及如何实现每个帧游戏逻辑中的最常见类。
 

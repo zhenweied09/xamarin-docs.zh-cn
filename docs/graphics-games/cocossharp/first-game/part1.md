@@ -1,6 +1,6 @@
 ---
-title: "创建多平台 CocosSharp 项目"
-description: "本演练演示如何创建新的多平台 CocosSharp 解决方案。 本演练的结果是 Visual Studio for Mac 解决方案包括三个项目： 一个可移植类库项目、 一个特定于 Android 的项目和一个特定于 iOS 的项目。 生成的项目将显示一个空的黑色屏幕时执行。"
+title: 创建多平台 CocosSharp 项目
+description: 本演练演示如何创建新的多平台 CocosSharp 解决方案。 本演练的结果是 Visual Studio for Mac 解决方案包括三个项目： 一个可移植类库项目、 一个特定于 Android 的项目和一个特定于 iOS 的项目。 生成的项目将显示一个空的黑色屏幕时执行。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37C97693-B0A8-4064-97B6-A6FAB5BA4FB7
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 2906035ce9bd44d111b89ccfe7443896775315b7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="creating-a-multi-platform-cocossharp-project"></a>创建多平台 CocosSharp 项目
 
@@ -53,6 +53,6 @@ CocosSharp 二维游戏引擎允许代码和要在多个平台之间共享内容
  - 该代码将添加几个搜索路径。 搜索路径还允许内容要加载没有目录前缀。 例如，由于`"Sounds"`路径添加搜索路径，则目录中的文件为`"Content/Sounds/mysound.xnb"`只是无法加载为`"mysound.xnb"`。 搜索路径是类似于`using`语句在代码中 – 它们可以降低代码中，但它们还可能会导致多义性。
  - 代码构造了`GameLayer`实例。 `GameLayer` 是`CCLayer`-继承其中我们将添加所有我们游戏逻辑的类。 更大的游戏可能需要多个`CCLayer`实例或甚至多个`CCScene`实例 (其中可以包含多个`CCLayer`实例)，但我们将只讨论单个`CCLayer`为此游戏。
 
-#  <a name="summary"></a>摘要
+#  <a name="summary"></a>总结
 
 本演练介绍如何创建跨平台 CocosSharp 项目使用 Visual Studio for mac。 结果是空的屏幕，其中可以用作任何游戏项目的起始点。
