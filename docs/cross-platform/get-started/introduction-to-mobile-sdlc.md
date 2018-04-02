@@ -1,6 +1,6 @@
 ---
-title: "移动软件开发生命周期简介"
-description: "本文讨论了有关移动应用程序的软件开发生命周期以及生成移动项目时的一些注意事项。 对于希望直接开始生成应用的开发人员，可先跳过此指南，稍后再进行阅读，以更完整地理解移动开发。"
+title: 移动软件开发生命周期简介
+description: 本文讨论了有关移动应用程序的软件开发生命周期以及生成移动项目时的一些注意事项。 对于希望直接开始生成应用的开发人员，可先跳过此指南，稍后再进行阅读，以更完整地理解移动开发。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 7a344ce211a025176c2b40540ce8337802dd347b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 144e71677ad5477c7e1cfb5211cc5860995642bb
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>移动软件开发生命周期简介
 
@@ -25,7 +25,7 @@ _本文讨论了有关移动应用程序的软件开发生命周期，并讨论�
 1.   **过程** – 软件开发的过程称为软件开发生命周期 (SDLC)。 我们将介绍与移动应用程序开发相关的所有 SDLC 阶段，包括：灵感、设计、开发、稳定、部署和维护。
 1.   **注意事项** – 生成移动应用程序时有一些注意事项，尤其是与传统 Web 或桌面应用程序相比。 我们将介绍这些注意事项以及它们会如何影响移动开发。
 
-本文档旨在面向初学者和有经验的应用程序开发人员这类人员，回答有关移动应用开发的基本问题。 它采用相当全面的方法来介绍在整个软件开发生命周期 (SDLC) 过程中会遇到的大多数概念。 但是，本文档可能并不适合每个人，如果你渴望立刻开始生成应用程序，则我们建议向前跳转到[移动开发简介](~/cross-platform/get-started/introduction-to-mobile-development.md)、[Hello，Android](~/android/get-started/hello-android/index.md) 或 [Hello，iPhone](~/ios/get-started/hello-ios/index.md) 教程，然后在以后返回到本文档。
+本文档旨在面向初学者和有经验的应用程序开发人员这类人员，回答有关移动应用开发的基本问题。 它采用相当全面的方法来介绍在整个软件开发生命周期 (SDLC) 过程中会遇到的大多数概念。 但是，本文档可能并不适合每个人，如果你渴望立刻开始生成应用程序，建议向前跳转到[移动开发简介](~/cross-platform/get-started/introduction-to-mobile-development.md)指南，然后在以后返回到本文档。
 
 ## <a name="mobile-development-sdlc"></a>移动开发 SDLC
 
@@ -73,19 +73,17 @@ _本文讨论了有关移动应用程序的软件开发生命周期，并讨论�
 
 #### <a name="ux-design"></a>UX 设计
 
-UX 通常使用诸如 [Balsamiq](http://www.balsamiq.com/)、[Mockingbird](https://gomockingbird.com/)、[Visio](http://office.microsoft.com/en-us/visio/) 或只是普通的笔和纸等工具，通过线框或原型来实现。 通过 UX 原型可以设计 UX，而不必担心实际 UI 设计：
+UX 通常通过线框或模型使用众多[设计工具包](https://docs.microsoft.com/windows/uwp/design/downloads/)之一来实现。 通过 UX 原型可以设计 UX，而不必担心实际 UI 设计：
 
  [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX 通常通过线框或模型使用 Balsamiq 等工具来实现")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
-创建 UX 原型时，需要考虑应用所面向的各种平台的界面指南，这十分重要。 应用应在每种平台上都“轻松自如”。 每种平台的正式设计指南有：
+创建 UX 原型时，需要考虑应用所面向的各种平台的界面指南，这一点十分重要。 应用应在每种平台上都“轻松自如”。 每种平台的正式设计指南有：
 
-1.   **Apple** -  [人体学接口指南](http://developer.apple.com/library/ios/#DOCUMENTATION/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
+1.   **Apple** -  [人体学接口指南](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1.   **Android** –  [设计指南](http://developer.android.com/design/index.html)
-1.   **Windows Phone** –  [为 Windows Phone 设计库](http://msdn.microsoft.com/en-US/library/windowsphone/design/fa00461b-abe1-41d1-be87-0b0fe3d3389d(v=vs.105).aspx)
+1.   **UWP** - [UWP 设计基础知识](https://docs.microsoft.com/windows/uwp/design/basics/)
 
-例如，每个应用都提供一种工具以用于在应用程序中的各部分之间进行切换。 iOS 使用屏幕底部的选项卡栏，Android 使用屏幕顶部的选项卡栏，而 Windows Phone 使用全景视图：
-
- ![](introduction-to-mobile-sdlc-images/38.png "每个应用都提供一种工具以用于在应用程序中的各部分之间进行切换")
+例如，每个应用都提供一种工具以用于在应用程序中的各部分之间进行切换。 iOS 使用屏幕底部的选项卡栏，Android 使用屏幕顶部的选项卡栏，而 UWP 则使用[透视或选项卡](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot)视图。
 
 此外，硬件本身也会决定 UX 决策。 例如，iOS 设备没有物理返回按钮，因此引入了导航控制器工具：
 
@@ -104,15 +102,6 @@ UX 通常使用诸如 [Balsamiq](http://www.balsamiq.com/)、[Mockingbird](https
 与 UX 一样，务必要了解每种平台都具有自己的设计语言，因此设计良好的应用程序在每种平台上的外观可能仍有所不同：
 
  [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "设计良好的应用程序在每种平台上的外观可能仍有所不同")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
-
-若要获得好的 UI 设计灵感，请查看以下一些站点：
-
-1.   [pttrns.com](http://pttrns.com) –（仅限 iOS）
-1.   [androidpttrns.com](http://androidpttrns.com) -（仅限 Android）
-1.   [lovelyui.com](http://lovelyui.com) –（iOS、Android 和 Windows Phone）
-1.   [mobiledesignpatterngallery.com](http://mobiledesignpatterngallery.com) –（iOS、Android 和 Windows Phone）
-
-此外，可以在诸如 [Behance.com](http://behance.com) 和 [Dribbble.com](http://dribbble.com) 等站点上查看图形设计人员的组合。可以在其中找到来自世界各地的设计人员，他们经常位于汇率有利的地区，因此良好的图形设计不一定需要花费很多成本。
 
 ### <a name="development"></a>开发
 
@@ -135,12 +124,7 @@ UX 通常使用诸如 [Balsamiq](http://www.balsamiq.com/)、[Mockingbird](https
 
 对于早期测试和部署到相对较少的设备，通常直接从开发计算机进行部署便足够了。 但是，随着受众的扩大，这可能会很快便十分麻烦。 因此，有许多测试部署选项，使你可以邀请人们加入测试池、通过 Web 发布生成以及提供可以进行用户反馈的工具，从而大大降低此过程的难度。
 
-一些最常见的选项如下所示：
-
-1.   **Testflight** – 这是一种 iOS 产品，使你可以分发应用以便进行测试，以及接收来自客户的崩溃报告和使用情况信息。 这包含在 iTunes Connect 中，如果你具有 Apple Developer Enterprise 成员资格，则不可用。
-2.   **LaunchPad (launchpadapp.com)** – 此服务针对 Android 而设计，非常类似于 TestFlight。
-3.   **Vessel (vessel.io)** – 一种面向 iOS 和 Android 的服务，使你可以监视使用情况、跟踪客户甚至是从应用内部进行 A/B 测试。
-4.  **hockeyapp.com** - 提供适用于 iOS、Android 和 Windows Phone 的测试服务。
+对于测试和部署，可以使用 [App Center](https://appcenter.ms/) 持续生成、测试、发布和监视应用。
 
 ### <a name="distribution"></a>分布
 
@@ -170,9 +154,9 @@ Android 使用此信息来帮助在 Android OS 内运行的应用程序和组件
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="windows"></a>Windows 
+#### <a name="uwp"></a>UWP 
 
-Windows 应用程序通过 Microsoft 应用商店分发给用户。 开发人员提交其应用进行审批，此后它们会出现在应用商店中。
+UWP 应用程序通过 Microsoft Store 分发给用户。 开发人员提交其应用进行审批，此后它们会出现在应用商店中。 有关发布 Windows 应用的详细信息，请参阅 UWP 的[发布](https://docs.microsoft.com/windows/uwp/publish/)文档。
 
 ## <a name="mobile-development-considerations"></a>移动开发注意事项
 
@@ -237,9 +221,9 @@ Android 中的多任务具有两个组成部分；第一个是活动生命周期
 Android 中的多任务的第二个组成部分是服务的使用。
 服务是长时间运行的进程，独立于应用程序存在，用于在应用程序处于后台时执行进程。 有关详细信息，请参阅[创建服务](~/android/app-fundamentals/services/index.md)指南。
 
-#### <a name="many-devices-amp-many-form-factors"></a>许多设备和许多外形规格
+#### <a name="many-devices-and-many-form-factors"></a>许多设备和许多外形规格
 
-与 iOS（其设备数量较少）甚至是 Windows Phone（仅在满足一组最低平台要求的已批准设备上运行）不同，Google 没有对可以运行 Android OS 的设备施加任何限制。 这种开放模式导致产品环境包含大量具有截然不同的硬件、屏幕分辨率和比率、设备特性和功能的不同设备。
+Google 不会可以运行 Android OS 的设备强制实施任何限制。 这种开放模式导致产品环境包含大量具有截然不同的硬件、屏幕分辨率和比率、设备特性和功能的不同设备。
 
 由于 Android 设备极其分散，因此大多数人选择最受欢迎的 5 或 6 种设备进行设计和测试，并优先考虑这些设备。
 
@@ -252,27 +236,19 @@ Android OS 中的应用程序全都采用具有有限权限的不同独立标识
 
 #### <a name="multitasking"></a>多任务
 
-Windows Phone 中的多任务也具有两个部分：页面和应用程序的生命周期以及后台进程。 应用程序中的每个屏幕都是 Page 类的实例，它具有与设为活动或非活动状态关联的事件（具有用于处理非活动状态或“逻辑删除”的特殊规则）。 
+UWP 中的多任务具有两个部分：页面和应用程序的生命周期以及后台进程。 应用程序中的每个屏幕都是 Page 类的实例，它具有与设为活动或非活动状态关联的事件（具有用于处理非活动状态或“逻辑删除”的特殊规则）。 
 
 第二个部分是为处理任务提供后台代理，即使在应用程序不在前台运行时。 
 
 #### <a name="device-capabilities"></a>设备功能
 
-虽然 Windows Phone 硬件由于 Microsoft 提供的严格准则而同类程度非常高，但是仍存在可选组件，因此需要在编码时进行特殊考虑。 可选硬件功能包括摄像头、指南针和陀螺仪。 还有一类需要特殊考虑的特殊低内存 (256MB)，或是开发人员可以选择退出低内存支持。
-
-#### <a name="database"></a>数据库
-
-iOS 和 Android 包含 SQLite 数据库引擎，可实现也可以跨平台工作的复杂数据存储。 Windows Phone 7 不包含数据库，不过 Windows Phone 7.1 和 8 包含[本地数据库引擎](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202860(v=vs.105).aspx)，只能使用 [LINQ to SQL](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202872(v=vs.105).aspx) 进行查询，并且不支持 Transact-SQL 查询。 提供了一个 [SQLite 的开放源代码支持](http://code.google.com/p/csharp-sqlite/)，可以添加到 Windows Phone 应用程序以提供熟悉的 Transact-SQL 支持和跨平台兼容性。
+虽然 UWP 硬件同构程度非常高，但是仍存在可选组件，因此需要在编码时进行特殊考虑。 可选硬件功能包括摄像头、指南针和陀螺仪。 还有一类需要特殊考虑的特殊低内存 (256MB)，或是开发人员可以选择退出低内存支持。
 
 #### <a name="security-considerations"></a>安全注意事项
 
-Windows Phone 应用程序使用一组受限的权限来运行，这组权限使它们相互独立并限制它们可以执行的操作。
-网络访问必须通过特定 API 来执行，应用程序间的通信只能通过受控机制来进行。 对文件系统的访问也会受到限制；独立存储 API 可提供键/值对存储，以及以受控方式创建文件和文件夹的能力（有关详细信息，请参阅[独立存储概述](http://msdn.microsoft.com/en-us/library/ff402541(v=vs.92).aspx)）。
+有关 UWP 中的重要安全注意事项的信息，请参阅[安全](https://docs.microsoft.com/windows/uwp/security/)文档。
 
-应用程序对硬件和操作系统功能的访问通过其清单文件（类似于 Android）中列出的功能进行控制。
-清单必须声明应用程序所需的功能，以便用户可以查看并同意这些权限，并且使操作系统允许访问 API。 应用程序必须请求对联系人或约会数据、摄像头、位置、媒体库等功能的访问权限。 有关其他信息，请参阅 Microsoft 的[应用程序清单文件](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff769509(v=vs.92).aspx)文档。
-
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南提供了 SDLC 简介，因为它与移动开发相关。 它介绍了有关构建移动应用程序的一般注意事项，并讨论了一些特定于平台的注意事项（包括设计、测试和部署）。
 

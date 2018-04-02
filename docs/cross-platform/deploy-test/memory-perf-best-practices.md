@@ -1,6 +1,6 @@
 ---
-title: "跨平台性能"
-description: "可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。"
+title: 跨平台性能
+description: 可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="cross-platform-performance"></a>跨平台性能
 
@@ -291,7 +291,7 @@ SGen 启动垃圾回收时，将在回收内存的同时停止应用程序的线
 
 ## <a name="reduce-the-size-of-the-application"></a>缩减应用程序大小
 
-为了解应用程序可执行文件大小的来源，务必要了解每个平台上的编译流程：
+务必了解每个平台上的编译流程，才能了解应用程序可执行文件大小的来源：
 
 - iOS 应用程序预先 (AOT) 编译为 ARM 汇编语言。 其中包括 .NET Framework，并且仅在启用了适当的链接器选项时才去除未使用的类。
 - Android 应用程序编译为中间语言 (IL)，并打包了 MonoVM 和实时 (JIT) 编译。 仅在启用了适当的链接器选项时才去除未使用的框架类。
@@ -372,7 +372,7 @@ SGen 启动垃圾回收时，将在回收内存的同时停止应用程序的线
 
 检索自 Web 服务的数据应在本地缓存，同时利用已缓存数据而不是反复从 Web 服务检索。 但是，采用此方法时，还应实现合适的缓存策略以便更新本地缓存中的数据（如果数据在 Web 服务中发生更改）。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍和讨论了用于提高使用 Xamarin 平台所生成应用程序的性能的方法。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。
 

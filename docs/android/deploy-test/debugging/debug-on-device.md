@@ -1,6 +1,6 @@
 ---
-title: "在设备上进行调试"
-description: "本文介绍如何在物理 Android 设备上调试 Xamarin.Android 应用程序。"
+title: 在设备上进行调试
+description: 本文介绍如何在物理 Android 设备上调试 Xamarin.Android 应用程序。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d340c3da220deacdb5606547a084e55d80c817e7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: df6d2b246d4f0298ff31228b5db82084a55a8dd4
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="debug-on-device"></a>在设备上进行调试
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="debug-on-device-overview"></a>在设备上进行调试概述
 
-可在 Android 设备上使用 Visual Studio for Mac 或 Visual Studio 调试 Xamarin.Android。 在设备上执行调试之前，必须[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)并将其连接到电脑或 Mac。
+可在 Android 设备上使用 Visual Studio for Mac 或 Visual Studio 调试 Xamarin.Android 应用。 在设备上执行调试之前，必须[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)并将其连接到电脑或 Mac。
 
 
 ## <a name="debug-application"></a>调试应用程序
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/09/2018
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档介绍了如何通过设置断点和选择目标设备来调试 Xamarin.Android 应用程序。
 

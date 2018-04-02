@@ -1,5 +1,5 @@
 ---
-title: "多进程调试"
+title: 多进程调试
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 9454c65298dbb5417f91765f541d22ae1d6137d7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7bc230b43d0b50746a6076ffb2633e7fad0283d9
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="multi-process-debugging"></a>多进程调试
 
@@ -122,7 +122,7 @@ ms.lasthandoff: 02/27/2018
 
 **MultipleProjects** 解决方案配置现在将显示在“调试工具栏”中，使开发人员可以同时调试两个项目。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍在 Visual Studio for Mac 中调试多个进程的相关内容。 它涵盖了为支持多进程调试对 IDE 所做的一些更改，并介绍了一些相关的行为。
 

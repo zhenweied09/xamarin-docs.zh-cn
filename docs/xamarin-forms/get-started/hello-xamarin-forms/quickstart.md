@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 5ee36d63e2751eb5d09ee526755d62dda4ef537e
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7c90b5bcca5a6b8d2a4b52c166ae6884646a61d2
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 快速入门
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/21/2018
 
     ![](quickstart-images/vs/new-solution.png "新建项目")
 
-3. 在“新建项目”对话框中，单击“跨平台”，选择“跨平台应用(Xamarin.Forms)”模板，将“名称”和“解决方案”名称设为 `Phoneword`，为项目选择合适的位置，然后单击“确定”按钮：
+3. 在“新建项目”对话框中，单击“跨平台”，选择“移动应用(Xamarin.Forms)”模板，将“名称”和“解决方案”名称设为 `Phoneword`，为项目选择合适的位置，然后单击“确定”按钮：
 
     ![](quickstart-images/vs/new-project.png "跨平台项目模板")
 
