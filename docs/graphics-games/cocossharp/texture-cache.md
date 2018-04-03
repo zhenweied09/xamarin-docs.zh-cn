@@ -1,6 +1,6 @@
 ---
-title: "使用 CCTextureCache 的纹理缓存"
-description: "CocosSharp 的 CCTextureCache 类提供了一种标准的方式来组织，缓存中，和卸载内容。 它是非常适合大型游戏完全读入 RAM，简化的分组和释放的纹理的过程可能容纳不下。"
+title: 使用 CCTextureCache 的纹理缓存
+description: CocosSharp 的 CCTextureCache 类提供了一种标准的方式来组织，缓存中，和卸载内容。 它是非常适合大型游戏完全读入 RAM，简化的分组和释放的纹理的过程可能容纳不下。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 365e343a55a208b63f4dc52999e8857b5f0ec1f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 350a454bc94c796b34cfeeb319481919b18d334f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="texture-caching-using-cctexturecache"></a>使用 CCTextureCache 的纹理缓存
+# <a name="texture-caching-using-cctexturecache"></a>纹理缓存使用 CCTextureCache
 
 _CocosSharp 的 CCTextureCache 类提供了一种标准的方式来组织，缓存中，和卸载内容。它是非常适合大型游戏完全读入 RAM，简化的分组和释放的纹理的过程可能容纳不下。_
 
@@ -29,7 +29,7 @@ _CocosSharp 的 CCTextureCache 类提供了一种标准的方式来组织，缓�
  - 释放纹理
 
 
-# <a name="why-texture-caching-matters"></a>为什么纹理缓存问题
+## <a name="why-texture-caching-matters"></a>为什么纹理缓存问题
 
 纹理加载会耗时的操作，纹理需要占用大量的 RAM 在运行时，纹理缓存是游戏开发中的一个重要注意事项。
 
@@ -38,7 +38,7 @@ _CocosSharp 的 CCTextureCache 类提供了一种标准的方式来组织，缓�
 如上所述，纹理还会占用大量的运行时内存。 例如背景图像的大小调整为 iPhone 6 (1344 x 750) 的分辨率将占用 4 兆字节为单位的 RAM – 即使 PNG 文件是仅几千字节的大小。 纹理缓存提供了一种共享在应用内的纹理引用方法以及不同的游戏状态之间转换时卸载所有内容的简单办法。
 
 
-# <a name="texture-lifespan"></a>纹理使用期限
+## <a name="texture-lifespan"></a>纹理使用期限
 
 CocosSharp 纹理可能保存在内存中的整个长度的应用的执行，或者它们可能短生存期。 若要最小化内存使用情况应用应释放纹理时不再需要的类型。 当然，这意味着纹理可能释放和重新加载，更高版本时，这可以增加加载时间或在加载期间的性能会降低。 
 
@@ -58,7 +58,7 @@ CocosSharp 纹理可能保存在内存中的整个长度的应用的执行，或
 上面所示的图表指示纹理内存使用量可以减少通过卸载，但这可能需要其他的加载次数，如果玩家决定重播级别。 此外值得注意的是，加载和永远不会卸载 UITexture 和 MainCharacter 纹理。 这意味着，这些纹理所必需的所有级别，因此它们始终保留在内存中。 
 
 
-# <a name="using-sharedtexturecache"></a>使用 SharedTextureCache
+## <a name="using-sharedtexturecache"></a>使用 SharedTextureCache
 
 CocosSharp 自动缓存纹理时加载它们通过`CCSprite`构造函数。 例如以下代码仅创建一个纹理实例：
 
@@ -84,7 +84,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` 检查是否参数文件 (在这种情况下`star.png`) 已加载。 如果是这样，则返回的缓存的实例。 如果从文件系统中，然后不加载它并对纹理的引用的内部存储后续`AddImage`调用。 换而言之`star.png`映像仅加载一次，并且在后续调用需要没有更多的磁盘访问或其他纹理内存。
 
 
-# <a name="lazy-loading-vs-pre-loading-with-addimage"></a>延迟加载 vs。使用 AddImage 预加载
+## <a name="lazy-loading-vs-pre-loading-with-addimage"></a>延迟加载与使用 AddImage 预加载
 
 `AddImage` 允许编写相同的代码是否请求的纹理是否已加载。 将不加载内容，这意味着，直到需要它时;但是，这也会导致在运行时由于加载的内容不可预测的性能问题。
 
@@ -114,12 +114,12 @@ void PreLoadImages()
 此预加载可能导致浪费内存，且可能会增加启动时间。 例如，玩家可能永远不会实际获取电由`powerup3.png`纹理，因此将不必要地加载。 当然，这可能是必要的成本要支付以避免潜在 pop 中玩游戏，因此如果它将 RAM 中容纳不下，通常最好的办法预加载内容。
 
 
-# <a name="disposing-textures"></a>释放纹理
+## <a name="disposing-textures"></a>释放纹理
 
 如果游戏不需要为最小规格的设备上可用，则纹理不需要释放更多的纹理内存。 另一方面，较大游戏可能需要释放纹理内存，以便腾出空间供新内容。 例如游戏可能会使用大量的内存存储环境的纹理。 如果仅在特定级别中使用环境则它应卸载级别结束时。
 
 
-## <a name="disposing-a-single-texture"></a>释放单个纹理
+### <a name="disposing-a-single-texture"></a>释放单个纹理
 
 删除单个纹理首先需要调用`Dispose`方法，然后手动删除从`CCTextureCache`。
 
@@ -187,11 +187,11 @@ Dispose 方法将释放所有内部纹理，清除这些纹理占用的内存。
 
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南演示如何使用`CCTextureCache`类平衡内存使用情况和运行时性能。 `CCTexturCache.SharedTextureCache` 可以显式或隐式地使用来加载并缓存应用程序的整个生命周期的纹理，而`CCTextureCache`实例可以用于卸载纹理以减少内存使用量。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [https://github.com/mono/CocosSharp](https://github.com/mono/CocosSharp)
 - [/api/type/CocosSharp.CCTextureCache/](https://developer.xamarin.com/api/type/CocosSharp.CCTextureCache/)

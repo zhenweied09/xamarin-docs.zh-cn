@@ -1,6 +1,6 @@
 ---
-title: "Fruity 回退游戏的详细信息"
-description: "本指南介绍 Fruity 回退游戏中，其中介绍了常见 CocosSharp 和游戏开发概念，如物理、 内容管理、 游戏状态和游戏的设计。"
+title: Fruity 回退游戏的详细信息
+description: 本指南介绍 Fruity 回退游戏中，其中介绍了常见 CocosSharp 和游戏开发概念，如物理、 内容管理、 游戏状态和游戏的设计。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 307fdec697f2b94ddfdfe0c380e02fd69e197132
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="fruity-falls-game-details"></a>Fruity 回退游戏的详细信息
 
@@ -22,7 +22,7 @@ Fruity 回退是简单的、 基于物理的游戏的玩家为彩色不同存储
 
 ![](fruity-falls-images/image1.png "游戏的目标是尽可能获得尽可能多的点，而不让水果的生长放到错误中，结束游戏")
 
-Fruity 回退扩展中介绍的概念[BouncingGame 指南](~/graphics-games/cocossharp/first-game/index.md)通过添加以下：
+Fruity 回退扩展中介绍的概念[BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)通过添加以下：
 
  - 内容中的 Png 窗体
  - 高级的物理
@@ -32,20 +32,20 @@ Fruity 回退扩展中介绍的概念[BouncingGame 指南](~/graphics-games/coco
  - 代码组织使用游戏实体
  - 游戏设计侧重于有趣和重播值
 
-虽然 BouncingGame 侧重于介绍了核心 CocosSharp 概念，Fruity 回退将演示如何以使其在一起完成的游戏产品。 由于本指南引用 BouncingGame，因此读取器应首先熟悉[BouncingGame 指南](~/graphics-games/cocossharp/first-game/index.md)之前阅读此指南。
+虽然[BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)侧重于介绍了核心 CocosSharp 概念，Fruity 回退演示如何以使其在一起完成的游戏产品。 由于本指南引用 BouncingGame，因此读取器应首先熟悉[BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)之前阅读此指南。
 
 此指南介绍了如何实现和 Fruity 回退的设计，以提供见解，从而帮助你做出你自己的游戏。 它涵盖以下主题：
 
 
-- [GameController 类](#GameController_Class)
-- [游戏实体](#Game_Entities)
-- [水果的生长图形](#Fruit_Graphics)
-- [物理](#Physics)
-- [游戏的内容](#Game_Content)
-- [GameCoefficients](#GameCoefficients)
+- [GameController 类](#gamecontroller-class)
+- [游戏实体](#game-entities)
+- [水果的生长图形](#fruit-graphics)
+- [物理](#physics)
+- [游戏内容](#game-content)
+- [GameCoefficients](#gamecoefficients)
 
 
-# <a name="gamecontroller-class"></a>GameController 类
+## <a name="gamecontroller-class"></a>GameController 类
 
 Fruity 位于 PCL 项目中包括`GameController`类负责实例化游戏和的场景之间移动。 此类的 iOS 和 Android 的项目使用，以消除重复代码。
 
@@ -79,7 +79,7 @@ GameView.DesignResolution = new CCSizeI (width, height);
 最后，`GameController`类提供一个静态方法，它可以由任何调用`CCGameScene`转换为另一种`CCScene`。 此方法用于之间移动`TitleScene`和`GameScene`。
 
 
-# <a name="game-entities"></a>游戏实体
+## <a name="game-entities"></a>游戏实体
 
 Fruity 回退使用实体模式大部分游戏的对象。 在找不到此模式的详细的说明[CocosSharp 中的实体指导](~/graphics-games/cocossharp/entities.md)。
 
@@ -107,7 +107,7 @@ public Fruit ()
 ```
 
 
-## <a name="fruit-graphics"></a>水果的生长图形
+### <a name="fruit-graphics"></a>水果的生长图形
 
 `CreateFruitGraphic`方法创建`CCSprite`实例，并将其添加到`Fruit`。 `IsAntialiased`属性设置为 false，以使具有像素化外观的游戏。 此值设置为 false 上所有`CCSprite`和`CCLabel`整个游戏的实例：
 
@@ -179,7 +179,7 @@ if (GameCoefficients.ShowCollisionAreas)
 ![](fruity-falls-images/image4.png "ExtraPointsLabel 颜色调整以保证对比度的水果的生长图像，且其 PositionY 值调整到中心上水果 CCSprite CCLabel")
 
 
-## <a name="collision"></a>冲突
+### <a name="collision"></a>冲突
 
 Fruity 回退实现几何图形文件夹中使用对象的自定义冲突解决方案：
 
@@ -218,17 +218,17 @@ private void CreateCollision()
 }
 ```
 
-涵盖冲突逻辑[本指南后面](#Collision)。
+涵盖冲突逻辑[本指南后面](#collision)。
 
 
-# <a name="physics"></a>物理
+## <a name="physics"></a>物理
 
 在 Fruity 回退物理可以分为两个类别： 移动和冲突。 
 
 
-## <a name="movement-using-velocity-and-acceleration"></a>移动使用速度和加速
+### <a name="movement-using-velocity-and-acceleration"></a>移动使用速度和加速
 
-Fruity 回退使用`Velocity`和`Acceleration`值来控制其实体，类似于移动[BouncingGame](~/graphics-games/cocossharp/first-game/index.md)。 实体在一个名为方法中实现其移动逻辑`Activity`，其每帧一次调用。 例如，我们可以看到的实现中的移动`Fruit`类的`Activity`方法：
+Fruity 回退使用`Velocity`和`Acceleration`值来控制其实体，类似于移动[BouncingGame](~/graphics-games/cocossharp/bouncing-game.md)。 实体在一个名为方法中实现其移动逻辑`Activity`，其每帧一次调用。 例如，我们可以看到的实现中的移动`Fruit`类的`Activity`方法：
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -274,7 +274,7 @@ public void HandleInput(CCPoint touchPoint)
 }
 ```
 
-## <a name="collision"></a>冲突
+### <a name="collision"></a>冲突
 
 Fruity 回退实现水果的生长和其他 collidable 对象之间的不完全现实冲突如`Paddle`和`GameScene.Splitter`。 为了帮助调试冲突，Fruity 回退冲突区域可以让用户看到通过更改`GameCoefficients.ShowDebugInfo`中`GameCoefficients.cs`文件：
 
@@ -330,7 +330,8 @@ private void PerformCollision()
 }
 ```
 
-### <a name="fruitvsborders"></a>FruitVsBorders
+#### <a name="fruitvsborders"></a>FruitVsBorders
+
 `FruitVsBorders` 冲突的冲突，而不是依赖于另一个类中包含的逻辑执行自己的逻辑。 存在这种差异是因为水果的生长和屏幕的边框之间冲突不是完全实心 – 可能水果的生长小心刀片移动推送关闭屏幕边缘。 显示与刀片，命中条件在屏幕将反弹水果的生长，但如果玩家渐变推送水果的生长会移动超过的边缘和关闭屏幕：
 
 
@@ -352,7 +353,8 @@ private void FruitVsBorders(Fruit fruit)
 }
 ```
 
-### <a name="fruitvsbins"></a>FruitVsBins
+#### <a name="fruitvsbins"></a>FruitVsBins
+
 `FruitVsBins`方法负责检查是否任何水果的生长已降到两个箱之一。如果是这样，然后玩家获得点 （如果水果的生长/bin 颜色匹配） 或游戏就会结束 （如果颜色不匹配）：
 
 
@@ -380,7 +382,8 @@ private void FruitVsBins(Fruit fruit)
 }
 ```
 
-### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle 和 FruitPolygonCollision
+#### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle 和 FruitPolygonCollision
+
 与刀片和与拆分 （分隔两个箱的区域） 水果的生长水果的生长冲突都依赖`FruitPolygonCollision`方法。 此方法具有三个部分：
 
 1. 测试是否对象发生冲突
@@ -419,7 +422,7 @@ Fruity 回退冲突响应是单侧 – 调整仅水果的生长的速度和位�
  
 
 
-# <a name="game-content"></a>游戏的内容
+## <a name="game-content"></a>游戏内容
 
 在 Fruity 回退画立即将游戏与 BouncingGame 区分开来。 虽然游戏设计类似，播放器将立即看到这两个游戏的显示方式存在差异。 游戏玩家通常决定是否由其视觉对象玩游戏。 因此，它是非常重要的开发人员投入资源进行具有视觉冲击力游戏。
 
@@ -432,7 +435,7 @@ Fruity 回退冲突响应是单侧 – 调整仅水果的生长的速度和位�
  - 能够创建无资源密集型动画的简单视觉效果
 
 
-## <a name="content-location"></a>内容位置
+### <a name="content-location"></a>内容位置
 
 Fruity 回退包括其所有的内容在 Android 项目中的映像文件夹中：
 
@@ -445,9 +448,9 @@ Fruity 回退包括其所有的内容在 Android 项目中的映像文件夹中�
 值得注意的内容未包含在**Ld**或**Hd**文件夹，它是默认 CocosSharp 模板的一部分。 **Ld**和**Hd**文件夹旨在用于提供两个集的内容 — — 一个用于较低分辨率设备，如手机和一个用于更高分辨率设备，例如平板电脑的游戏。 Fruity 回退画有意创建具有像素化美观，因此它不需要针对不同屏幕大小提供内容。 因此， **Ld**和**Hd**文件夹已完全删除从项目。
 
 
-## <a name="gamescene-layering"></a>GameScene 分层
+### <a name="gamescene-layering"></a>GameScene 分层
 
-如之前在本指南中所述，GameScene 负责所有游戏对象实例化、 定位和间对象逻辑 （例如冲突）。 所有对象都添加到其中一个四个`CCLayer`实例：
+本指南中，在前面部分中所述`GameScene`负责所有游戏对象实例化、 定位和间对象逻辑 （例如冲突）。 所有对象都添加到其中一个四个`CCLayer`实例：
 
 
 ```csharp
@@ -488,7 +491,7 @@ private void CreateBackground()
 ```
 
 
-## <a name="vine-entity"></a>藤蔓式实体
+### <a name="vine-entity"></a>藤蔓式实体
 
 `Vine`实体唯一用于内容-它具有不会影响上玩游戏。 它构成二十`CCSprite`实例，以确保藤蔓式始终到达屏幕顶部的试用版和错误由所选数字：
 
@@ -557,7 +560,7 @@ public void Activity(float frameTimeInSeconds)
 请注意，返回到通过藤蔓式添加少量的旋转`vineAngle`系数。 可以更改此值以调整 vines 旋转的量。
 
 
-# <a name="gamecoefficients"></a>GameCoefficients
+## <a name="gamecoefficients"></a>GameCoefficients
 
 每个很好的游戏是迭代的产品，因此 Fruity 回退包括一个名为类`GameCoefficients`它控制如何播放游戏。 此类包含在整个控件物理布局，生成，或评分到游戏表现力变量。
 
@@ -606,11 +609,11 @@ public static class GameCoefficients
 ```
 
 
-# <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结束语
 
 本指南介绍了 Fruity 回退游戏。 它介绍概念包括内容、 物理和游戏状态管理。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [CocosSharp API 文档](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [已完成的项目 （示例）](https://developer.xamarin.com/samples/mobile/FruityFalls/)

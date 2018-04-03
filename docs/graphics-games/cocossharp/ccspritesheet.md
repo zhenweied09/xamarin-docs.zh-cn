@@ -1,6 +1,6 @@
 ---
-title: "提高与 CCSpriteSheet 的帧速率"
-description: "CCSpriteSheet 提供用于组合并使用一个纹理中的许多图像文件的功能。 减少纹理数可以提高游戏的加载时间和帧速率。"
+title: 提高与 CCSpriteSheet 的帧速率
+description: CCSpriteSheet 提供用于组合并使用一个纹理中的许多图像文件的功能。 减少纹理数可以提高游戏的加载时间和帧速率。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1334030-750C-4C60-8B84-1A8A54B0D00E
@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: ec8a641fbd15f826e92ada62f65b17dd46b369e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2bb5b98b5c93fb625ce645692d8a3ccb3d143b
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="improving-framerate-with-ccspritesheet"></a>提高与 CCSpriteSheet 的帧速率
+# <a name="improving-frame-rate-with-ccspritesheet"></a>提高与 CCSpriteSheet 的帧速率
 
 _CCSpriteSheet 提供用于组合并使用一个纹理中的许多图像文件的功能。减少纹理数可以提高游戏的加载时间和帧速率。_
 
 很多游戏需要优化努力顺利进行与移动的硬件上的加载速度快。 `CCSpriteSheet`类可帮助您解决 CocosSharp 游戏所遇到的许多常见性能问题。 本指南介绍常见性能问题和如何解决它们使用`CCSpriteSheet`类。
 
 
-# <a name="what-is-a-sprite-sheet"></a>什么是画面表？
+## <a name="what-is-a-sprite-sheet"></a>什么是画面表？
 
 A*画面表*，这可以也被称为*纹理地貌和城市等*，是用于将多个映像合并到一个文件的映像。 这可以提高运行时性能，以及内容的加载时间。
 
@@ -30,7 +30,7 @@ A*画面表*，这可以也被称为*纹理地貌和城市等*，是用于将多
 ![](ccspritesheet-images/image1.png "各映像可以是任意大小，并且生成的画面表不需要完全填充")
 
 
-## <a name="render-states"></a>呈现器状态
+### <a name="render-states"></a>呈现状态
 
 视觉 CocosSharp 对象 (如`CCSprite`) 需要顶点缓冲区创建传统的图形 API 呈现代码 MonoGame 或 OpenGL，例如通过简化呈现代码 (中所述[绘制与 3D 图形中 MonoGame 顶点](~/graphics-games/monogame/3d/part2.md)指南)。 尽管其简易性，而 CocosSharp 并不能排除设置的成本*呈现状态*，它们的纹理或其他呈现相关的状态，必须切换呈现代码的次数。
 
@@ -62,7 +62,7 @@ CocosSharp 将序列中呈现的四个星号：
 
 当然，理想情况下是具有单个呈现状态，尽管具有多个映像。 CocosSharp 游戏可以完成此操作通过将所有图像都合并为单个文件，然后加载该文件 (以及其伴随**.plist**文件) 到`CCSpriteSheet`。 使用`CCSpriteSheet`类变得更重要的游戏其中有大量的映像，或具有非常复杂布局。 
 
-## <a name="load-times"></a>加载时间
+### <a name="load-times"></a>加载时间
 
 将多个映像合并为一个文件还提高了多种原因的游戏的加载时间：
 
@@ -70,7 +70,7 @@ CocosSharp 将序列中呈现的四个星号：
  - 加载少选一些文件意味着开销更少每个文件，如分析.png 标头
  - 加载较少的文件需要小于查找时，这将基于磁盘的媒体如 Dvd 和传统的计算机的硬盘驱动器的重要
 
-# <a name="using-ccspritesheet-in-code"></a>在代码中使用 CCSpriteSheet
+## <a name="using-ccspritesheet-in-code"></a>在代码中使用 CCSpriteSheet
 
 若要创建`CCSpriteSheet`实例，该代码必须提供的映像和文件用于定义要用于每个帧的图像的区域。 可以为加载映像**.png**或**.xnb**文件 (如果使用[内容的管道](~/graphics-games/cocossharp/content-pipeline/index.md))。 定义帧的文件是**.plist**可以手动创建的文件或*TexturePacker* （其下面，我们将讨论）。
 
@@ -110,7 +110,7 @@ CCSprite sprite = new CCSprite (frame);
 由于`CCSprite`构造函数可以采用`CCSpriteFrame`，代码永远不会有参数调查的详细信息`CCSpriteFrame`，如哪些纹理，它使用，或主画面表中的图像的区域。
 
 
-#  <a name="creating-a-sprite-sheet-plist"></a>创建画面表.plist
+## <a name="creating-a-sprite-sheet-plist"></a>创建画面表.plist
 
 .Plist 文件是一个基于 xml 的文件，其中可创建和进行手动编辑。 同样，编辑程序的映像可以用于将多个文件合并到一个更大的文件。 创建和维护画面表可以非常耗时，因为我们将了解在 TexturePacker 程序可以导出 CocosSharp 格式文件。 TexturePacker 提供免费和的"Pro"的版本，并且可用于 Windows 和 Mac OS。 通过使用免费版本，可以遵循本指南的其余部分。 
 
@@ -124,13 +124,13 @@ CCSprite sprite = new CCSprite (frame);
 
 若要导出的画面表，请单击**发布画面表**按钮，然后选择画面表的位置。 TexturePacker 将保存.plist 文件和图像文件。
 
-若要使用生成的文件，请向 CocosSharp 项目添加的.png 和.plist。 有关将文件添加到 CocosSharp 项目的信息，请参阅[实现 BouncingGame 指南](~/graphics-games/cocossharp/first-game/part2.md)。 一旦将文件添加，它们可以是加载到`CCSpriteSheet`如上面的代码中前面所示：
+若要使用生成的文件，请向 CocosSharp 项目添加的.png 和.plist。 有关将文件添加到 CocosSharp 项目的信息，请参阅[BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)。 一旦将文件添加，它们可以是加载到`CCSpriteSheet`如上面的代码中前面所示：
 
 ```csharp
 CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png"); 
 ```
 
-## <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>维护 TexturePacker 画面表注意事项
+### <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>维护 TexturePacker 画面表注意事项
 
 随着开发游戏，艺术家可能添加、 删除或修改艺术作品。 任何更改都需要更新的画面表。 以下注意事项可以轻松地画面表维护：
 
@@ -144,11 +144,11 @@ CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png");
 
     ![](ccspritesheet-images/image10.png "若要包括文件夹路径，单击 Data 节中显示高级，请检查前置文件夹名称")
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍如何创建和使用`CCSpriteSheet`类。 它还介绍如何构造文件可以加载到`CCSpriteSheet`实例使用 TexturePacker 程序。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [CCSpriteSheet](https://developer.xamarin.com/api/type/CocosSharp.CCSpriteSheet/)
 - [完整演示 （示例）](https://developer.xamarin.com/samples/mobile/SpriteSheetDemo/)

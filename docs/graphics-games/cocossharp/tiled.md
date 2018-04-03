@@ -1,6 +1,6 @@
 ---
-title: "使用与 CocosSharp 平铺"
-description: "平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成熟应用程序的映射的游戏。 CocosSharp 提供平铺的本机文件格式的内置集成。"
+title: 使用与 CocosSharp 平铺
+description: 平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成熟应用程序的映射的游戏。 CocosSharp 提供平铺的本机文件格式的内置集成。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 5a469a372a9299712be7aef46c51f3d644946535
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>使用与 CocosSharp 平铺
 
@@ -30,7 +30,7 @@ _平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成�
 ![](tiled-images/image1.png "按照本指南中的步骤创建演示应用程序")
 
 
-# <a name="the-purpose-of-tile-maps"></a>磁贴地图的用途
+## <a name="the-purpose-of-tile-maps"></a>磁贴地图的用途
 
 磁贴映射已存在的游戏开发几十年来，但仍通常用于在二维游戏中其效率和 esthetics。 平铺图是效率的能够实现通过其使用磁贴集 – 使用磁贴映射的源映像极高级别。 磁贴组是合并成一个文件的映像的集合。 虽然磁贴设置引用在磁贴映射中使用的图像，但包含多个较小的图像文件也称为画面表或画面映射游戏开发中。 我们可以可视化向磁贴集中，我们将使用在我们的演示程序中添加一个网格，使用磁贴设置：
 
@@ -43,7 +43,7 @@ _平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成�
 ![](tiled-images/image4.png "此图显示了可能的排列方式使用相同的磁贴组")
 
 
-# <a name="working-with-tmx-files"></a>使用.tmx 文件
+## <a name="working-with-tmx-files"></a>使用.tmx 文件
 
 .Tmx 文件格式是由平铺应用程序，可创建一个 XML 文件[平铺网站上免费下载](http://www.mapeditor.org/)。 .Tmx 文件格式存储的信息适用于磁贴映射。 通常游戏将具有一个.tmx 文件为每个级别或单独的区域。
 
@@ -80,7 +80,7 @@ public class GameLayer : CCLayer
 ![](tiled-images/image6.png "如果运行游戏时，磁贴映射显示在屏幕的左下角")
 
 
-# <a name="considerations-for-rendering-pixel-art"></a>呈现像素艺术作品的注意事项
+## <a name="considerations-for-rendering-pixel-art"></a>呈现像素艺术作品的注意事项
 
 像素画，视频游戏开发的上下文中是指二维 visual 画通常创建通过手形，并且通常低分辨率。 像素艺术作品严格，则可以是时间密集型若要创建，因此像素艺术作品磁贴集通常包括低分标率磁贴，如 16 或 32 个像素宽度和高度。 如果未在运行时比例进行调整，像素图片是通常太小，大多数现代手机和平板电脑。
 
@@ -161,7 +161,7 @@ protected override void AddedToScene ()
 ![](tiled-images/image8.png "现在磁贴映射将不会出现模糊")
 
 
-# <a name="using-tile-properties-at-runtime"></a>在运行时使用磁贴属性
+## <a name="using-tile-properties-at-runtime"></a>在运行时使用磁贴属性
 
 到目前为止我们有`CCTileMap`将.tmx 文件加载和显示它，但我们没有任何办法与其进行交互。 具体而言，某些磁贴 （如我们宝藏胸部） 需要具有自定义逻辑。 我们将逐步了解如何检测自定义磁贴属性和各种方法对这些属性在运行时一次标识做出响应。
 
@@ -175,7 +175,7 @@ protected override void AddedToScene ()
 
 ![](tiled-images/image10.png "如果未出现宝藏胸部属性，在宝藏胸部上右键单击并选择磁贴属性")
 
-平铺的属性实现具有一个名称和值。 若要添加某个属性，请单击 **+** 按钮，输入名称**IsTreasure**，单击**确定**，然后输入值**true**: 
+平铺的属性实现具有一个名称和值。 若要添加某个属性，请单击**+**按钮，输入名称**IsTreasure**，单击**确定**，然后输入值**true**: 
 
 ![](tiled-images/image11.png "若要添加一个属性，单击按钮，输入名称 IsTreasure，单击确定，然后输入值 true")
 
@@ -273,11 +273,11 @@ public class GameLayer : CCLayer
 换而言之，宝藏胸部将受益于正在实体，而不是由中的简单磁贴`CCTileMap`。 有关游戏的实体的详细信息，请参阅[CocosSharp 中的实体指导](~/graphics-games/cocossharp/entities.md)。
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练介绍如何加载到 CocosSharp 应用程序创建的平铺的.tmx 文件。 它演示如何修改应用解决方法要考虑较低分辨率像素画，以及如何查找其属性以执行自定义逻辑，如创建实体实例磁贴。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [平铺的网站](http://www.mapeditor.org/)
 - [内容 zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Tiled.zip?raw=true)

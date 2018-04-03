@@ -1,17 +1,17 @@
 ---
-title: "性能和与 CCRenderTexture 的视觉效果"
-description: "CCRenderTexture 使开发人员能够通过减少绘图调用，提高的 CocosSharp 游戏，性能和可用于创建视觉效果。 本指南附带 CCRenderTexture 示例提供如何有效地使用此类的实际操作示例。"
+title: 性能和与 CCRenderTexture 的视觉效果
+description: CCRenderTexture 使开发人员能够通过减少绘图调用，提高的 CocosSharp 游戏，性能和可用于创建视觉效果。 本指南附带 CCRenderTexture 示例提供如何有效地使用此类的实际操作示例。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 8283c299d0e6529ef4cf8c285ec47b4d42fc682a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>性能和与 CCRenderTexture 的视觉效果
 
@@ -24,7 +24,7 @@ _CCRenderTexture 使开发人员能够通过减少绘图调用，提高的 Cocos
 ![](ccrendertexture-images/image1.png "本指南引用 CCRenderTexture 示例项目")
 
 
-# <a name="card--a-typical-entity"></a>卡 – 典型实体
+## <a name="card--a-typical-entity"></a>卡 – 典型实体
 
 之前着眼于如何使用`CCRenderTexture`对象，我们将首先熟悉自己与`Card`实体，我们将使用在此项目整个来浏览`CCRenderTexture`类。 `Card`类是一个典型的实体，遵循模式中所述在实体[实体指南](~/graphics-games/cocossharp/entities.md)。 卡类具有的所有可视化组件 (的实例`CCSprite`和`CCLabel`) 作为字段列出：
 
@@ -65,7 +65,7 @@ protected override void AddedToScene ()
 - 某些视觉效果，如透明度，不能准确地说，实现，我们将更高版本浏览
 
 
-## <a name="card-draw-calls"></a>卡绘图调用
+### <a name="card-draw-calls"></a>卡绘图调用
 
 我们的代码是完全可能找到的内容的简化*可收集纸牌游戏*(CCG) 如"幻:: 收集"或"Hearthstone"。 我们的游戏中仅一次显示三个卡，并将一小部分可能单位 （蓝色、 绿色和橙色）。 与此相反，完整游戏可能必须超过 20 卡屏幕上在给定时间，并且播放器可能有数百个卡可供选择时创建其的卡片组。 即使我们游戏不当前会受到性能问题，可能会与类似实现完整游戏。
 
@@ -76,7 +76,7 @@ CocosSharp 提供了通过公开绘图调用的呈现性能某些了解执行每
 请注意，尽管在屏幕上具有三个卡，我们有十九日绘图调用 （每个卡结果在六个绘图调用，更多个显示性能信息帐户的文本）。 绘图调用对游戏的性能具有显著的影响，因此 CocosSharp 提供多种方式可减少它们。 一种方法中所述[CCSpriteSheet 指南](~/graphics-games/cocossharp/ccspritesheet.md)。 另一种方法是使用`CCRenderTexture`以减小下一次调用，每个实体，因为我们将查看本指南中。
 
 
-## <a name="card-transparency"></a>卡透明度
+### <a name="card-transparency"></a>卡透明度
 
 我们`Card`实体包含`Opacity`属性控制透明度，如下面的代码段中所示：
 
@@ -143,7 +143,7 @@ protected override void AddedToScene ()
 使用`CCRenderTexture`允许我们使整个卡透明而不会影响呈现的卡内的单独组件正如我们将看到在本指南后面。
 
 
-# <a name="using-ccrendertexture"></a>使用 CCRenderTexture
+## <a name="using-ccrendertexture"></a>使用 CCRenderTexture
 
 现在，我们已标识单独呈现每个组件的问题，我们将打开到呈现`CCRenderTexture`和比较行为。
 
@@ -159,7 +159,7 @@ protected override void AddedToScene ()
 ```
 
 
-## <a name="card-draw-calls"></a>卡绘图调用
+### <a name="card-draw-calls"></a>卡绘图调用
 
 如果我们现在运行游戏时，我们将看到从十九至 4 小时减少绘图调用 （每个卡减少从 6 到一个）：
 
@@ -168,7 +168,7 @@ protected override void AddedToScene ()
 如前所述，这种类型的缩减可以对在屏幕上的多个 visual 实体的游戏有显著的影响。
 
 
-## <a name="card-transparency"></a>卡透明度
+### <a name="card-transparency"></a>卡透明度
 
 一次`useRenderTextures`设置为`true`，透明卡将以不同的方式呈现：
 
@@ -181,7 +181,7 @@ protected override void AddedToScene ()
 最明显的差异是在机器人画面 （而不是 light 深色和饱和） 和的详细信息文本 （而不是浅灰色的黑色）。
 
 
-# <a name="ccrendertexture-details"></a>CCRenderTexture 详细信息
+## <a name="ccrendertexture-details"></a>CCRenderTexture 详细信息
 
 现在，我们已了解使用的好处`CCRenderTexture`，让我们看看如何在中使用`Card`实体。
 
@@ -256,7 +256,7 @@ private void SwitchToRenderTexture()
 下列各节浏览`SwitchToRenderTexture`方法。 
 
 
-## <a name="ccrendertexture-size"></a>CCRenderTexture 大小
+### <a name="ccrendertexture-size"></a>CCRenderTexture 大小
 
 CCRenderTexture 构造函数需要两个集的维度。 第一个控件的大小`CCRenderTexture`时，对其绘制和第二个指定的像素宽度和高度其内容。 `Card`实体实例化其`CCRenderTexture`使用背景[ContentSize](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/)。 我们的游戏中具有`DesignResolution`512 通过 384 中所示的`ViewController.LoadGame`在 iOS 上和`MainActivity.LoadGame`在 Android 上：
 
@@ -293,7 +293,7 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "若要比较，可以更改要与背景匹配的 pixelResolution 值。ContentSize 而无需正在加倍并比较结果")
 
 
-## <a name="rendering-to-a-ccrendertexture"></a>呈现为 CCRenderTexture
+### <a name="rendering-to-a-ccrendertexture"></a>呈现为 CCRenderTexture
 
 通常情况下，视觉对象中 CocosSharp 不显式会呈现。 相反，将视觉对象添加到`CCLayer`的一部分`CCScene`。 CocosSharp 自动呈现`CCScene`和无需呈现代码调用每个帧中的其可视层次结构。 
 
@@ -355,7 +355,7 @@ foreach (var component in visualComponents)
 this.AddChild(renderTexture.Sprite);
 ```
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南涵盖`CCRenderTexture`类通过`Card`这被用在可回收纸牌游戏的实体。 它说明了如何使用`CCRenderTexture`类来提高帧速率和正确实现实体级透明度。
 

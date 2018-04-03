@@ -1,6 +1,6 @@
 ---
-title: "将与 Xamarin.Forms 集成"
-description: "创建响应的触摸和 Xamarin.Forms 元素的 SkiaSharp 图形"
+title: 将与 Xamarin.Forms 集成
+description: 创建响应的触摸和 Xamarin.Forms 元素的 SkiaSharp 图形
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: aa6011c783228848212c633c1c8059c402fdaa3f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3edc71977820ca618447e02caa032cf908e1aae4
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>将与 Xamarin.Forms 集成
 
@@ -23,7 +23,7 @@ SkiaSharp 图形可以多种方式 Xamarin.Forms 的其余部分集成。 你可
 ![](integration-images/integrationexample.png "选择具有滑块的颜色")
 
 创建交互式 SkiaSharp 图形 Xamarin.Forms 中的另一种方法是通过触摸屏输入。
-中的第二页[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)程序有权**点击切换填充**。 一个简单的圆形两种方法，它可绘制&mdash;填充而无需具有填充&mdash;通过点击切换。 [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)类演示如何改变 SkiaSharp 图形，以响应用户输入。
+中的第二页[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序有权**点击切换填充**。 一个简单的圆形两种方法，它可绘制&mdash;填充而无需具有填充&mdash;通过点击切换。 [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)类演示如何改变 SkiaSharp 图形，以响应用户输入。
 
 有关此页上，`SKCanvasView`中实例化类[TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml)文件，还将设置 Xamarin.Forms [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)视图：
 
@@ -241,4 +241,4 @@ public partial class ColorExplorePage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,6 +1,6 @@
 ---
-title: "绘制一个简单圆圈"
-description: "了解 SkiaSharp 绘图，包括画布和绘制的基础知识"
+title: 绘制一个简单圆圈
+description: 了解 SkiaSharp 绘图，包括画布和绘制的基础知识
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 402470c3a27ba4327afa6e77336d60748abad436
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="drawing-a-simple-circle"></a>绘制一个简单圆圈
 
@@ -20,7 +20,7 @@ _了解 SkiaSharp 绘图，包括画布和绘制的基础知识_
 
 本文介绍在使用 SkiaSharp，包括创建 Xamarin.Forms 中绘制图形的概念`SKCanvasView`对象以承载图形，处理`PaintSurface`事件，以及如何使用`SKPaint`对象来指定颜色和其他绘制属性。
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)程序包含所有这一系列的 SkiaSharp 文章的示例代码。 第一页有权**简单圆圈**并调用页类[ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)。 此代码演示如何在一个半径为 100 个像素页的中心绘制一个圆。 轮廓的圆为红色，，圆的内部是蓝色的。
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序包含所有这一系列的 SkiaSharp 文章的示例代码。 第一页有权**简单圆圈**并调用页类[ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)。 此代码演示如何在一个半径为 100 个像素页的中心绘制一个圆。 轮廓的圆为红色，，圆的内部是蓝色的。
 
 ![](circle-images/circleexample.png "用红色蓝色圆圈")
 
@@ -154,4 +154,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

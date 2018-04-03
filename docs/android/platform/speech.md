@@ -1,18 +1,18 @@
 ---
-title: "Android 语音"
-description: "本文介绍如何使用非常强大 Android.Speech 命名空间的基础知识。 自推出以来已能够识别语音并将其输出以文本形式 Android。 它是一个相对简单的过程。 文本到语音，但是，对于过程是更为复杂，因为不仅不语音引擎必须考虑到帐户，但还语言可用且已安装从文本到语音转换 (TTS) 系统。"
+title: Android 语音
+description: 本文介绍如何使用非常强大 Android.Speech 命名空间的基础知识。 自推出以来已能够识别语音并将其输出以文本形式 Android。 它是一个相对简单的过程。 文本到语音，但是，对于过程是更为复杂，因为不仅不语音引擎必须考虑到帐户，但还语言可用且已安装从文本到语音转换 (TTS) 系统。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.date: 04/02/2018
+ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="android-speech"></a>Android 语音
 
@@ -28,7 +28,7 @@ Google 提供开发人员使用一组 Android.Speech 命名空间中丰富的 Ap
 
 在设施还有适用于语音为，可以在基于使用的硬件的限制。 不太可能设备成功解释说到它在每个语言中可用的所有内容。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 有本指南中，你的设备具有麦克风和扬声器以外没有特殊要求。
 
@@ -158,15 +158,21 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
+此代码调用[TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/)来测试给定区域设置的语言包是否已在设备上存在。 此方法返回[LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/)，指示是否可传递的区域设置的语言。 如果`LanguageAvailableResult`指示的语言是`NotSupported`，则没有可用 （即使对于下载） 的语音程序包针对该语言。 如果`LanguageAvailableResult`设置为`MissingData`，则可能如下所述在步骤 4 中下载新的语言包。
+
 ### <a name="step-3---setting-the-speed-and-pitch"></a>步骤 3-设置速度和音调变化
 
 Android 允许用户通过更改 alter 语音的声音`SpeechRate`和`Pitch`（的速度和语音的语气速度）。 此范围为 0 到 1，与"正常"语音正在为 1。
 
 ### <a name="step-4---testing-and-loading-new-languages"></a>步骤 4-测试和加载新语言
 
-执行此操作使用`Intent`结果被解释在`OnActivityResult`。 与使用的语音到文本示例不同`RecognizerIntent`作为`PutExtra`参数`Intent`，意图使用安装`Action`。
+使用下载的新语言执行`Intent`。 此方法的结果导致[OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/)要调用的方法。 与语音到文本的示例不同 (后者使用[RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/)作为`PutExtra`参数`Intent`)，测试和加载`Intent`是`Action`-基于：
 
-它是可以从 Google 使用下面的代码中安装新的语言。 结果`Activity`检查以确定是否需要语言和如果是，在系统提示您输入下载发生之后安装语言。
+-   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash;从平台中启动活动`TextToSpeech`引擎以验证正确安装和在设备上的语言资源的可用性。
+
+-   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/) &ndash;启动提示用户下载需要的语言的活动。
+
+下面的代码示例演示如何使用这些操作以测试语言资源，并下载新的语言：
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -183,6 +189,19 @@ protected override void OnActivityResult(int req, Result res, Intent data)
     }
 }
 ```
+
+`TextToSpeech.Engine.ActionCheckTtsData` 语言资源的可用性测试。 `OnActivityResult` 此测试完成时调用。 如果需要下载，语言资源`OnActivityResult`激发一次`TextToSpeech.Engine.ActionInstallTtsData`操作启动的活动，允许用户下载需要的语言。 请注意此`OnActivityResult`实现不会检查`Result`因为在此简化的示例中，确定已进行了语言包需要下载的代码。
+
+`TextToSpeech.Engine.ActionInstallTtsData`操作原因**Google TTS 语音数据**活动以选择要下载的语言显示给用户：
+
+![Google TTS 语音数据活动](speech-images/01-google-tts-voice-data.png)
+
+例如，用户可能会选取法语，然后单击下载图标以下载法语语音数据：
+
+![下载法语语言的示例](speech-images/02-selecting-french.png)
+
+在下载完成后，此数据的安装将自动发生。
+
 
 ### <a name="step-5---the-ioninitlistener"></a>步骤 5-IOnInitListener
 
@@ -203,7 +222,7 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本指南中我们讨论过将文本到语音转换和语音转换为文本和如何将其包含在你自己的应用程序中的可能方法的基础知识。 虽然它们并未涵盖每个特定用例，你应该已经基本了解如何解释语音、 如何安装新的语言，以及如何增加你的应用程序的 inclusivity。
 

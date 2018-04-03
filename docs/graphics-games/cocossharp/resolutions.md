@@ -1,6 +1,6 @@
 ---
-title: "处理 CocosSharp 中的多个解决方案"
-description: "本指南演示如何使用 CocosSharp 开发在不同的解决方案中的设备正确显示的游戏。"
+title: 处理 CocosSharp 中的多个解决方案
+description: 本指南演示如何使用 CocosSharp 开发在不同的解决方案中的设备正确显示的游戏。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 772b0d6408a5ba438c5eb0be04a9b549e29b40f9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>处理 CocosSharp 中的多个解决方案
 
@@ -32,7 +32,7 @@ CocosSharp 的默认解析行为是与中的游戏坐标匹配物理像素。 �
 本文档介绍如何使用 CocosSharp 来修复上述表中所示的问题。 也就是说，我们将介绍如何进行呈现的第一行 – 无论屏幕分辨率中所示的任何设备。
 
 
-# <a name="working-with-setdesignresolutionsize"></a>使用 SetDesignResolutionSize
+## <a name="working-with-setdesignresolutionsize"></a>使用 SetDesignResolutionSize
 
 `CCScene`类通常用作根容器的所有视觉对象，但它还提供一个静态方法`SetDesignResolutionSize`用于指定所有场景的默认大小。 换而言之`SetDesignResolutionSize`方法允许开发人员可以开发游戏，它将硬件解决方案中的各种上正确显示。 CocosSharp 项目模板使用此方法以将默认项目大小设置为 1024 x 768，如下面的代码中所示：
 
@@ -77,7 +77,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-# <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
+## <a name="ccsceneresolutionpolicy"></a>CCSceneResolutionPolicy
 
 `SetDesignResolutionSize` 让我们来指定如何在游戏窗口调整到所需的分辨率。 以下部分演示 500 x 500 映像具有不同的显示方式`CCSceneResolutonPolicy`值传递给`SetDesignResolutionSize`方法。 通过提供了以下值`CCSceneResolutionPolicy`枚举：
 
@@ -93,7 +93,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ![](resolutions-images/image4.png "所有的屏幕快照的分辨率 iPhone 4s 960 x 640 横向生成和使用此图像")
 
 
-## <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
+### <a name="ccsceneresolutionpolicyshowall"></a>CCSceneResolutionPolicy.ShowAll
 
 `ShowAll` 指定整个游戏解析屏幕上，将可以看到，但可能会显示*会造成宽屏*（黑色条） 来调整不同的纵横比。 通常使用此策略，因为它可保证将没有任何失真屏幕上显示的整个游戏视图。
 
@@ -109,7 +109,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.ShowAll
 ![](resolutions-images/image5.png "会造成宽屏是左侧和右侧的映像，来应对正在宽于所需的分辨率物理纵横比对可见")
 
 
-## <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
+### <a name="ccsceneresolutionpolicyexactfit"></a>CCSceneResolutionPolicy.ExactFit
 
 `ExactFit` 指定整个游戏解析将不会造成宽屏与屏幕上可见。 可视区域可能会扭曲 （可能未维护纵横比） 根据硬件纵横比。
 
@@ -125,7 +125,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.ExactFi
 ![](resolutions-images/image6.png "不会造成宽屏可见，但由于设备分辨率是矩形失真游戏视图")
 
 
-## <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
+### <a name="ccsceneresolutionpolicyfixedwidth"></a>CCSceneResolutionPolicy.FixedWidth
 
 `FixedWidth` 指定视图的宽度将匹配传递给的宽度值`SetDesignResolutionSize`，但可查看高度可能会发生的物理设备纵横比。 传递给的高度值`SetDesignResolutionSize`被忽略，因为它将计算在运行时基于物理设备的纵横比。 这意味着，可能小于所需的高度 （这会导致游戏视图正在屏幕之外的部分） 或计算所得的高度可能会大于 （这会导致多个要显示的游戏视图） 的所需高度计算所得的高度。 因为这可能会导致多个显示游戏，那么它可能会出现就像发生会造成宽屏;但是，将额外的空间不一定会有任何视觉对象出现黑色。 
 
@@ -141,7 +141,7 @@ IPhone 4s 有 3:2，纵横比，因此计算所得的高度为大约 333 单位�
 ![](resolutions-images/image7.png "IPhone 4s 有 3:2，纵横比，因此计算所得的高度为大约 333 单位")
 
 
-## <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
+### <a name="ccsceneresolutionpolicyfixedheight"></a>CCSceneResolutionPolicy.FixedHeight
 
 从概念上讲，`FixedHeight`行为方式类似于`FixedWidth`– 游戏将遵循在传递给的高度值`SetDesignResolutionSize,`，但将计算在运行时基于物理分辨率的宽度。 如上所述，这意味着，显示的宽度是小于或大于所需的宽度，从而导致的游戏正在一部分关闭屏幕或多个正在显示，分别游戏。
 
@@ -157,7 +157,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.FixedHe
 ![](resolutions-images/image8.png "此策略保留 0 的 X 值左对齐，因此额外的分辨率屏幕右侧可查看")
 
 
-## <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
+### <a name="ccsceneresolutionpolicynoborder"></a>CCSceneResolutionPolicy.NoBorder
 
 `NoBorder` 尝试显示具有不会造成宽屏的应用程序，同时保持原始纵横比 （无扭曲）。 如果请求的解析纵横比匹配设备的物理纵横比，将发生没有剪辑。 如果不匹配纵横比，然后剪辑将发生。
 
@@ -173,7 +173,7 @@ CCScene.SetDesignResolutionSize (500.0f, 500.0f, CCSceneResolutionPolicy.FixedHe
 ![](resolutions-images/image9.png "此屏幕截图显示剪切，显示所有 500 像素的显示宽度时显示的顶部和底部组成部分")
 
 
-## <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
+### <a name="ccsceneresolutionpolicycustom"></a>CCSceneResolutionPolicy.Custom
 
 `Custom` 使每个`CCScene`指定相对于中指定的分辨率自己自定义视区`SetDesignResolutionSize`。
 
@@ -207,7 +207,7 @@ scene.Viewport = new CCViewport (rectangle);
 ![](resolutions-images/image10.png "上面的代码导致此屏幕截图")
 
 
-# <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
+## <a name="defaulttexeltocontentsizeratio"></a>DefaultTexelToContentSizeRatio
 
 `DefaultTexelToContentSizeRatio`简化了具有更高分辨率屏幕设备上使用更高分辨率纹理。 具体而言，此属性使游戏的进行而无需使用更高分辨率资产更改的大小或定位的可视元素。 
 
@@ -249,7 +249,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-## <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio Example
+### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio example
 
 若要查看如何`DefaultTexelToContentSizeRatio`影响视觉对象的大小元素，请考虑上面显示的代码：
 
@@ -278,7 +278,7 @@ CCSprite.DefaultTexelToContentSizeRatio = 2;
 ![](resolutions-images/image12.png "现在如果我们运行游戏 1000 x 1000 纹理将完全可见")
 
 
-## <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio Details
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
 
 `DefaultTexelToContentSizeRatio`属性是`static,`这意味着应用程序中的所有子画面将共享相同的值。 对不同的解决方法进行的资产与游戏的典型方法是包含一组完整的资产的每个解决方法类别。 默认情况下，CocosSharp Visual Studio for Mac 模板提供**ld**和**hd**资产，可用于支持两个集的纹理的游戏的文件夹。 使用内容的示例内容文件夹可能如下所示：
 
@@ -313,11 +313,11 @@ backgroundSprite  = new CCSprite ("background");
 ```
 
 
-# <a name="summary"></a>总结
+## <a name="summary"></a>总结
 
 本文介绍如何创建游戏它而不考虑设备分辨率正确显示。 显示使用的示例不同`CCSceneResolutionPolicy`用于调整大小根据设备分辨率游戏的值。 它还提供的一个示例`DefaultTexelToContentSizeRatio`可用来容纳多个内容集而无需单独调整大小的可视元素。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
-- [CocosSharp 简介](~/graphics-games/cocossharp/first-game/index.md)
+- [CocosSharp 简介](~/graphics-games/cocossharp/index.md)
 - [CocosSharp API 文档](https://developer.xamarin.com/api/namespace/CocosSharp/)

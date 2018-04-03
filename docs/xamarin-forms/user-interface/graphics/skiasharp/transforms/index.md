@@ -1,6 +1,6 @@
 ---
-title: "SkiaSharp 转换"
-description: "了解用于显示 SkiaSharp 图形的转换"
+title: SkiaSharp 转换
+description: 了解用于显示 SkiaSharp 图形的转换
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 10b23975fab8aa87019b9d0fed42decdc6adddfb
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 668488ab7efae66f1777e9ae6ded1f725833fe16
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 转换
 
@@ -49,7 +49,7 @@ SkiaSharp 转换是相对于窗口左上角`SKCanvas`相对于窗口左上角的
 
 非常大的区别是 SKiaSharp 转换是*方法*Xamarin.Forms 转换时*属性*。 这是超出的语法差异语义的区别： SkiaSharp 转换 Xamarin.Forms 转换设置状态时执行操作。 SkiaSharp 转换应用于随后绘制的图形对象，但不适用于应用转换之前绘制的图形对象。 与此相反，Xamarin.Forms 转换适用于以前呈现元素的属性设置时，就会立即。 调用这些方法; 是累积 SkiaSharp 转换将属性设置与另一个值，将替换 Xamarin.Forms 转换。
 
-本部分中的所有示例程序都显示在标题下**转换**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)程序，然后在[**转换**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms)的解决方案的文件夹。
+本部分中的所有示例程序都显示在标题下**转换**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，然后在[**转换**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms)的解决方案的文件夹。
 
 ## <a name="the-translate-transformtranslatemd"></a>[翻译转换](translate.md)
 
@@ -87,4 +87,4 @@ SkiaSharp 转换是相对于窗口左上角`SKCanvas`相对于窗口左上角的
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

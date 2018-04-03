@@ -1,6 +1,6 @@
 ---
-title: "像素和设备无关的单位"
-description: "浏览 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异"
+title: 像素和设备无关的单位
+description: 浏览 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e07377584996694aa8597af79317957c51050ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1698c18eafdce0585daa81c9462ee038c15586bd
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>像素和设备无关的单位
 
@@ -26,7 +26,7 @@ _浏览 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异_
 
 这些圆圈*是*Xamarin.Forms 大小很小。 默认情况下，SkiaSharp 绘制以像素为单位时 Xamarin.Forms 基坐标和大小均由基础平台的独立于设备的单元上。(在找不到 Xamarin.Forms 坐标系统的详细信息[第 5 章。处理大小](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md)书籍的*具有 Xamarin.Forms 创建移动应用*。)
 
-中的页[ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)程序标题为**面大小**使用 SkiaSharp 文本输出以显示三个不同的源的显示界面的大小：
+中的页[ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序标题为**面大小**使用 SkiaSharp 文本输出以显示三个不同的源的显示界面的大小：
 
 - 正常 Xamarin.Forms [ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/)和[ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/)属性`SKCanvasView`对象。
 - [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/)属性`SKCanvasView`对象。
@@ -165,4 +165,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

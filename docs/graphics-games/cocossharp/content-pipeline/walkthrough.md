@@ -1,6 +1,6 @@
 ---
-title: "使用 MonoGame 管道工具"
-description: "MonoGame 管道工具用于创建和管理 MonoGame 内容项目。 内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。"
+title: 使用 MonoGame PipelineTool
+description: MonoGame 管道工具用于创建和管理 MonoGame 内容项目。 内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 5c489aab66a0aaafeaaeadad0e8b95d451ec1592
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 37505b166488230be9d0e0690e415852506664f1
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>使用 MonoGame 管道工具
 
 _MonoGame 管道工具用于创建和管理 MonoGame 内容项目。内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。_
 
-MonoGame 管道工具提供用于将转换到的内容文件的简单易用的环境**.xnb**在 CocosSharp 和 MonoGame 应用程序中使用的文件。 有关内容的管道和它们为何有用游戏开发中的信息，请参阅[对内容管道本简介](~/graphics-games/cocossharp/content-pipeline/introduction.md)
+MonoGame 管道工具提供用于将转换到的内容文件的简单易用的环境**.xnb**在 CocosSharp 和 MonoGame 应用程序中使用的文件。 有关内容的管道和它们为何有用游戏开发中的信息，请参阅[对内容的管道本简介](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
 本演练中将包括下列各项：
 
@@ -35,14 +35,14 @@ MonoGame 管道工具提供用于将转换到的内容文件的简单易用的�
 ![](walkthrough-images/image1.png "完成的应用程序将显示单个子画面显示从.xnb 文件纹理")
 
 
-# <a name="monogame-pipeline-platform-discussion"></a>MonoGame 管道平台讨论
+## <a name="monogame-pipeline-tool-discussion"></a>MonoGame 管道工具讨论
 
 在 Windows、 OS X 和 Linux，MonoGame 管道工具才可用。 本演练将在 Windows 上，运行该工具，但它可以后接 Mac 和 Linux 上以及。 获取在最大或 Linux 上设置该工具的信息，请参阅[本页](http://www.monogame.net/2015/01/09/monogame-pipeline-tool-available-for-macos-and-linux/)。
 
 MonoGame 管道工具是能够创建内容，为 iOS 应用程序甚至时在 Windows 上运行，因此开发人员使用[Xamarin Mac 代理](~/ios/get-started/installation/windows/connecting-to-mac/index.md)将能够继续在 Windows 上开发。
 
 
-# <a name="installing-the-monogame-pipeline-tool"></a>安装 MonoGame 管道工具
+## <a name="installing-the-monogame-pipeline-tool"></a>安装 MonoGame 管道工具
 
 首先，我们将安装 MonoGame，其中包括 MonoGame 内容管道。 请注意，MonoGame 内容管道是单独的下载 for mac。 上找不到所有 MonoGame 安装程序[MonoGame 下载页](http://www.monogame.net/downloads/)。 我们将下载 MonoGame for Visual Studio，但一旦安装开发人员可以使用 MonoGame Visual Studio 中为 Mac 太：
 
@@ -59,16 +59,16 @@ MonoGame 管道工具是能够创建内容，为 iOS 应用程序甚至时在 Wi
 MonoGame 管道工具运行后，我们可以开始，让我们游戏和内容的项目。
 
 
-# <a name="creating-an-empty-cocossharp-project"></a>创建一个空的 CocosSharp 项目
+## <a name="creating-an-empty-cocossharp-project"></a>创建一个空的 CocosSharp 项目
 
-下一步是创建 CocosSharp 项目。 很重要，我们 CocosSharp 首先创建项目，以便我们可以创建 CocosSharp 项目的文件夹结构中保存我们内容项目。 有关如何创建新项目的信息，请参阅[BouncingGame 指南](~/graphics-games/cocossharp/first-game/part1.md)。 在本指南中，我们将创建一个名为 BouncingGame，项目，但任何现有的 CocosSharp 项目可以正常工作。 如果你有想要将内容添加到现有 CocosSharp 项目，随意而不是 BouncingGame 项目中使用该项目。
+下一步是创建 CocosSharp 项目。 很重要，我们 CocosSharp 首先创建项目，以便我们可以创建 CocosSharp 项目的文件夹结构中保存我们内容项目。 若要了解 CocosSharp 项目的结构，看一看[BouncingGame](~/graphics-games/cocossharp/bouncing-game.md)，它将在本指南中使用。 但是，如果你拥有想要将内容添加到现有 CocosSharp 项目，随意而不是 BouncingGame 使用该项目。
 
 一旦创建项目后，我们将运行它以验证它生成和我们具有所有内容正确设置：
 
 ![](walkthrough-images/image5.png "一旦创建项目后，运行以确认生成过程中，并且，所有内容正确设置")
 
 
-# <a name="creating-a-content-project"></a>创建内容的项目
+## <a name="creating-a-content-project"></a>创建内容的项目
 
 现在，我们已游戏项目，我们可以创建 MonoGame 管道项目。 为此，请在 MonoGame 管道工具选择**文件 > 新建...**并导航到你的项目的内容文件夹。 对于 Android，文件夹位于 **[项目 root]\BouncingGame.Android\Assets\Content\**。 对于 iOS，文件夹位于 **[项目 root]\BouncingGame.iOS\Content\**。
 
@@ -83,31 +83,31 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 让我们看看其中一些内容项目的最重要选项。
 
 
-## <a name="output-folder"></a>输出文件夹
+### <a name="output-folder"></a>输出文件夹
 
 这是 （相对于内容项目本身） 的文件夹位置输出**.xnb**将保存文件。 若要为简单起见，我们将使用相同的文件夹以保存我们的输入和输出文件。 换而言之，我们将更改**输出文件夹**要 **。\** :
 
 ![](walkthrough-images/image10.png "")
 
 
-## <a name="platform"></a>平台
+### <a name="platform"></a>平台
 
 这定义内容的目标平台。 请注意，这是**Windows**默认情况下，因此我们将需要将其更改为我们的目标平台即**Android** （或如果按照 iOS 项目以及 iOS）。
 
 ![](walkthrough-images/image11.png "请注意这是 Windows，默认情况下，因此将其更改为目标平台，这是 Android 或 iOS，如果以下以及 iOS 项目")
 
 
-# <a name="processing-files-in-the-monogame-pipelinetool"></a>处理 MonoGame PipelineTool 中的文件
+## <a name="processing-files-in-the-monogame-pipeline-tool"></a>处理 MonoGame 管道工具中的文件
 
 接下来，我们将添加到内容我们**ContentProject**。 对于此项目，我们会将文件添加到该项目的根，但更大型的项目通常将组织文件夹中的其内容。
 
 我们将向我们的项目中添加两个文件：
 
  - A **.png**文件该文件将用于绘制动画层。 此文件可以[此处下载](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true)。
- - A **.spritefont**将用于在屏幕上绘制文本的文件。 ContentPipeline 工具支持创建新.spritefont 文件，因此没有要下载的文件。
+ - A **.spritefont**将用于在屏幕上绘制文本的文件。 内容的管道工具支持创建新.spritefont 文件，因此没有要下载的文件。
 
 
-## <a name="adding-a-png-file"></a>添加.png 文件
+### <a name="adding-a-png-file"></a>添加.png 文件
 
 若要添加**.png**文件到项目中，我们将首先将其复制到与管道项目中，具有相同的目录**.mgcb**扩展。
 
@@ -122,7 +122,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 ![](walkthrough-images/image14.png "验证生成正常通过检查新的 ball.xnb 文件的内容文件夹")
 
 
-## <a name="adding-a-spritefont-file"></a>添加.spritefont 文件
+### <a name="adding-a-spritefont-file"></a>添加.spritefont 文件
 
 我们可以创建通过 MonoGame 管道工具.spritefont 文件。 CocosSharp 需要字体处于**字体**文件夹中和 CocosSharp 模板自动自动创建 Fonts 文件夹。 我们可以通过选择此文件夹添加到 MonoGame 管道工具**编辑 > 添加 > 现有文件夹...**.浏览到**内容**文件夹，然后选择**字体**文件夹，然后单击**确定**:
 
@@ -156,19 +156,19 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
     <Size>36</Size>
 ```
  
-# <a name="using-files-at-runtime"></a>使用运行时的文件
+## <a name="using-files-at-runtime"></a>使用运行时的文件
 
 .Xnb 文件现在构建，并准备好在我们的项目中使用。 我们将添加文件到 Visual Studio for Mac 然后我们将添加代码，以便我们`GameScene.cs`加载这些文件并将它们显示的文件。
 
 
-## <a name="adding-xnb-files-to-visual-studio-for-mac"></a>将.xnb 文件添加到 Visual Studio 中，适用于 Mac
+### <a name="adding-xnb-files-to-visual-studio-for-mac"></a>将.xnb 文件添加到 Visual Studio 中，适用于 Mac
 
 首先我们将向我们的项目中添加文件。 在适用于 Mac 的 Visual Studio，我们将展开**BouncingGame.Android**项目中，展开**资产**文件夹中，右键单击**内容**文件夹，并选择**添加 > 添加文件...**首先，我们将选择**ball.xnb**我们之前生成，并单击**打开**。 然后重复上述步骤，但将添加**arial 36.xnb**文件。 我们将选择**使文件保持其当前子目录中**如果适用于 Mac 的 Visual Studio 会要求如何将文件添加边界选项。 一次完成这两个文件应该是我们的项目的一部分：
 
 ![](walkthrough-images/image20.png "一次完成这两个文件应为项目的一部分")
 
 
-## <a name="adding-gamescenecs"></a>添加 GameScene.cs
+### <a name="adding-gamescenecs"></a>添加**GameScene.cs**
 
 我们将创建一个名为类`GameScene,`其中将包含我们动画层和文本的对象。 若要执行此操作，右键单击**BouncingGame** (不 BouncingGame.Android) 项目，然后选择**添加 > 新文件...**.选择**常规**类别中，选择**空类**选项，，然后输入名称**GameScene**。
 
@@ -214,7 +214,7 @@ namespace BouncingGame
 } 
 ```
 
-我们将不会讨论上面的代码由于中介绍了使用 CocosSharp 视觉对象，如 CCSprite 和 CCLabelTtf [CocosSharp 简介指南](~/graphics-games/cocossharp/first-game/index.md)。
+我们将不会讨论上面的代码由于中介绍了使用 CocosSharp 视觉对象，如 CCSprite 和 CCLabelTtf [BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)。
 
 我们还需要添加代码以加载我们新创建`GameScene`。 若要这样做我们将打开`GameAppDelegate.cs`文件 (位于**BouncingGame** PCL) 和修改`ApplicationDidFinishLaunching`方法，以便它如下所示：
 
@@ -236,11 +236,11 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ![](walkthrough-images/image1.png "运行时，游戏将如下所示")
 
 
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练演示了如何使用 MonoGame 管道工具来创建从输入的.png 文件.xnb 文件，以及如何从新创建.sprintefont 文件创建新的.xnb 文件。 此外讨论了如何构建 CocosSharp 项目以使用.xnb 文件以及如何加载这些文件在运行时。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [MonoGame 下载](http://www.monogame.net/downloads/)
 - [MonoGame 管道文档](http://www.monogame.net/documentation/?page=Pipeline)

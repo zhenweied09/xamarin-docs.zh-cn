@@ -53,6 +53,7 @@
 #### [上传到 Mac App Store](deploy-test/publishing-to-the-app-store/uploading.md)
 ## [高级概念和内部机制](internals/index.md)
 ### [AOT](internals/aot.md)
+### [可用程序集](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)
 ### [Mac 体系结构](internals/architecture.md)
 ### [Xamarin.Mac 的工作原理](internals/how-it-works.md)
 ### [框架](internals/frameworks.md)

@@ -1,6 +1,6 @@
 ---
-title: "使用 Xamarin.Forms 中 CocosSharp"
-description: "CocosSharp 可以用于将精确形状、 图像和文本呈现添加到用于高级可视化效果的应用程序"
+title: 使用 Xamarin.Forms 中 CocosSharp
+description: CocosSharp 可以用于将精确形状、 图像和文本呈现添加到用于高级可视化效果的应用程序
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 395defa300da7b8f68746162d877a4fdb17ded9e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83852b6b2d7324ae6aaf6b1dbf86a6ef7f9ac509
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>使用 Xamarin.Forms 中 CocosSharp
 
@@ -197,7 +197,7 @@ void HandleViewCreated (object sender, EventArgs e)
 
 ![](cocossharp-images/image4.png "典型 CocosSharp 层次结构")
 
-只有一个`CCScene`一次可以处于活动状态。 大多数游戏使用多个`CCLayer`到排序内容，但我们的应用程序的实例使用只有一个。 同样，大多数游戏使用多个视觉对象，但我们将只能有一个我们的应用程序。 更详细讨论在找不到可视层次结构 CocosSharp[会传来传去游戏演练](~/graphics-games/cocossharp/first-game/index.md)。
+只有一个`CCScene`一次可以处于活动状态。 大多数游戏使用多个`CCLayer`到排序内容，但我们的应用程序的实例使用只有一个。 同样，大多数游戏使用多个视觉对象，但我们将只能有一个我们的应用程序。 更详细讨论在找不到可视层次结构 CocosSharp [BouncingGame 演练](~/graphics-games/cocossharp/bouncing-game.md)。
 
 最初`GameScene`类将几乎是空-我们只需将创建它以满足中的引用`HomePage`。 将新类添加到名为你 PCL `GameScene`。 它应从继承`CCScene`类，如下所示：
 
@@ -341,7 +341,7 @@ void CreateBottomHalf(Grid grid)
 
 ![](cocossharp-images/image8.png "与移动圆 GameScene")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南演示如何将 CocosSharp 添加到现有 Xamarin.Forms 项目，如何创建 Xamarin.Forms 和 CocosSharp，之间的交互，并讨论各种注意事项时在 CocosSharp 中创建布局。
 

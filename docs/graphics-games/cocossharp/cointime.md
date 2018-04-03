@@ -1,5 +1,5 @@
 ---
-title: 抛硬币时实现详细信息
+title: 抛硬币时游戏的详细信息
 description: 本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实体，进行动画处理子画面，和实现高效的冲突的实现详细信息。
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 8c33b74af80a14df1626ab39ba8c055a81259194
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="coin-time-implementation-details"></a>抛硬币时实现详细信息
+# <a name="coin-time-game-details"></a>抛硬币时游戏的详细信息
 
 _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实体，进行动画处理子画面，和实现高效的冲突的实现详细信息。_
 
@@ -24,27 +24,27 @@ _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实
 
 本指南讨论抛硬币时间，涵盖以下主题中的实现详细信息：
 
-- [使用 TMX 文件](#Working_with_TMX_Files)
-- [级别加载](#Level_Loading)
-- [添加新实体](#Adding_New_Entities)
-- [动画的实体](#Animated_Entities)
+- [使用 tmx 文件](#working-with-tmx-files)
+- [级别加载](#level-loading)
+- [添加新实体](#adding-new-entities)
+- [动画的实体](#animated-entities)
 
 
-# <a name="content-in-coin-time"></a>抛硬币时间中的内容
+## <a name="content-in-coin-time"></a>抛硬币时间中的内容
 
 抛硬币时间是表示完整的 CocosSharp 项目可能整理方式的示例项目。 抛硬币时间的结构旨在简化的添加和维护的内容。 它使用**.tmx**创建的文件[平铺](http://www.mapeditor.org)级别和 XML 文件来定义动画。 修改或添加新内容，可以通过最小的工作量。 
 
 尽管此方法使得抛硬币时间的有效于学习和试验项目，它还反映如何专业游戏进行。 本指南介绍了某些所需简化添加和修改内容的方法。
 
 
-# <a name="working-with-tmx-files"></a>使用 TMX 文件
+## <a name="working-with-tmx-files"></a>使用 tmx 文件
 
 使用.tmx 文件格式，此输出通过定义抛硬币的时间级别[平铺](http://www.mapeditor.org)磁贴映射表编辑器。 使用平铺的详细讨论，请参阅[使用平铺科科斯尖锐指南](~/graphics-games/cocossharp/tiled.md)。 
 
 在中包含其自己.tmx 文件中定义每个级别**CoinTime/资产/内容/级别**文件夹。 所有抛硬币时间级别共享一个 tileset 文件，在中定义**mastersheet.tsx**文件。 此文件定义为每个图块，如该磁贴是否具有实体冲突或是否磁贴应替换为实体实例的自定义属性。 Mastersheet.tsx 文件允许属性来定义一次并在所有级别上使用。 
 
 
-## <a name="editing-a-tile-map"></a>编辑磁贴映射
+### <a name="editing-a-tile-map"></a>编辑磁贴映射
 
 若要编辑的磁贴映射，请通过双击.tmx 文件或通过打开通过平铺中的文件菜单中平铺打开.tmx 文件。 抛硬币级别磁贴图包含三个层的时间： 
 
@@ -54,7 +54,8 @@ _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实
 
 我们将更高版本浏览，级别加载代码需要在所有抛硬币时间级别这些三个层。
 
-### <a name="editing-terrain"></a>编辑地形
+#### <a name="editing-terrain"></a>编辑地形
+
 可以通过单击在放置磁贴**mastersheet** tileset，然后单击该磁贴映射。 例如，若要绘制新地形级别中：
 
 1. 选择地形层
@@ -67,7 +68,8 @@ _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实
 
 ![](cointime-images/image3.png "地形，为纯色，包括 SolidCollision 属性中，在屏幕左侧的磁贴属性中所示")
 
-### <a name="editing-entities"></a>编辑实体
+#### <a name="editing-entities"></a>编辑实体
+
 可以添加或删除从级别 – 一样地形实体。 **Mastersheet** tileset 有放置有关便中途水平的所有实体，因此它们可能不是可见而无需向右滚动：
 
 ![](cointime-images/image4.png "Mastersheet tileset 有放置有关便中途水平的所有实体，因此它们可能不是可见而无需向右滚动")
@@ -85,7 +87,7 @@ CoinTime 代码查找**EntityType**时加载级别以确定实体应替换为磁
 ![](cointime-images/image7.png "修改并保存该文件后，所做的更改将自动显示是否生成和运行项目")
 
 
-## <a name="adding-new-levels"></a>添加新的级别
+### <a name="adding-new-levels"></a>添加新的级别
 
 将级别添加到抛硬币时间的过程需要更改任何代码和仅少量小对项目的更改。 若要添加一个新级别：
 
@@ -105,7 +107,7 @@ CoinTime 代码查找**EntityType**时加载级别以确定实体应替换为磁
 ![](cointime-images/image10.png "新级别应在级别选择屏幕中显示为级别 9 级别的文件名称开始保持为 0，但级别按钮以数字 1 开头")
 
 
-# <a name="level-loading"></a>级别加载
+## <a name="level-loading"></a>级别加载
 
 如前面所示，更高级别的需要在代码中的任何更改 – 游戏，如果它们都正确命名并添加到自动检测是否级别**级别**文件夹具有正确的生成操作 (**BundleResource**或**AndroidAsset**)。
 
@@ -201,7 +203,7 @@ private void GoToLevel(int levelNumber)
 接下来我们将看一看中调用方法`GoToLevel`。
 
 
-## <a name="loadlevel"></a>LoadLevel
+### <a name="loadlevel"></a>LoadLevel
 
 `LoadLevel`方法负责加载.tmx 文件并将其添加到`GameScene`。 此方法不会创建任何交互的对象，例如冲突或实体 – 它只需创建的视觉对象的级别，也称为*环境*。
 
@@ -227,7 +229,7 @@ private void LoadLevel(int levelNumber)
 目前，CocosSharp 不允许重新排序的层不删除并重新将它们添加到其父`CCScene`(即`GameScene`在这种情况下)，因此该方法的最后几行所需重新排序图层。
 
 
-## <a name="createcollision"></a>CreateCollision
+### <a name="createcollision"></a>CreateCollision
 
 `CreateCollision`方法构造`LevelCollision`实例用于执行*实体冲突*之间播放器和环境。
 
@@ -245,7 +247,7 @@ private void CreateCollision()
 可以使用任何其他代码 – 仅修改平铺文件添加抛硬币时间中的冲突。 
 
 
-## <a name="processtileproperties"></a>ProcessTileProperties
+### <a name="processtileproperties"></a>ProcessTileProperties
 
 一旦加载一个级别并创建此冲突，`ProcessTileProperties`调用以执行基于磁贴属性的逻辑。 抛硬币时间包括`PropertyLocation`用于定义属性和这些属性与磁贴的坐标的结构：
 
@@ -343,7 +345,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# <a name="adding-new-entities"></a>添加新实体
+## <a name="adding-new-entities"></a>添加新实体
 
 抛硬币时间将用于其游戏对象的实体模式 (这一点在[CocosSharp 中的实体指导](~/graphics-games/cocossharp/entities.md))。 所有实体都继承自`CCNode`，这意味着它们都可添加作为的子级`gameplayLayer`。
 
@@ -352,19 +354,19 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 现有的代码提供了多种实体类型作为如何创建新的实体的示例。 以下步骤可以用于创建新实体：
 
 
-## <a name="1---define-a-new-class-using-the-entity-pattern"></a>1-定义一个新的类使用的实体模式
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1-定义一个新的类使用的实体模式
 
 创建实体的唯一要求是创建一个类继承自`CCNode`。 大多数实体都有一些视觉对象，如`CCSprite`，其应被添加为其构造函数中的实体的子级。
 
-CoinTime 提供`AnimatedSpriteEntity`简化的动画实体创建的类。 将在将更详细地介绍动画[进行动画处理实体部分](#Animated_Entities)。
+CoinTime 提供`AnimatedSpriteEntity`简化的动画实体创建的类。 将在将更详细地介绍动画[进行动画处理实体部分](#animated-entities)。
 
 
-## <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2-添加新条目 TryCreateEntity switch 语句
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2-添加新条目 TryCreateEntity switch 语句
 
 新的实体的实例应在实例化`TryCreateEntity`。 如果实体要求每个帧逻辑，如冲突、 AI 或读取输入，则`GameScene`需要保持对对象的引用。 如果需要多个实例 (如`Coin`或`Enemy`实例)，然后新`List`应添加到`GameScene`类。
 
 
-## <a name="3--modify-tile-properties-for-the-new-entity"></a>3 – 修改新的实体的磁贴属性
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3 – 修改新的实体的磁贴属性
 
 一旦代码支持创建新的实体，新的实体将需要添加到 tileset。 可以通过打开任何级别编辑 tileset`.tmx`文件。 
 
@@ -389,7 +391,7 @@ Tileset 应覆盖现有**mastersheet.tsx** tileset:
 ![](cointime-images/image15.png "他 tileset 应覆盖现有的 mastersheet.tsx tileset")
 
 
-# <a name="entity-tile-removal"></a>实体磁贴删除
+## <a name="entity-tile-removal"></a>实体磁贴删除
 
 当磁贴映射加载到一个游戏时，单个的磁贴将是静态对象。 由于实体需要自定义行为，如移动，抛硬币时代码中创建实体时删除磁贴。
 
@@ -453,7 +455,7 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="entity-offsets"></a>实体偏移量
+## <a name="entity-offsets"></a>实体偏移量
 
 从磁贴创建实体位于通过协调使用磁贴的中心的实体的中心。 更大的实体，如`Door`，使用其他属性和逻辑来正确放置。 
 
@@ -493,12 +495,12 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="animated-entities"></a>动画的实体
+## <a name="animated-entities"></a>动画的实体
 
 抛硬币时间包括多个动画的实体。 `Player`和`Enemy`实体播放审核动画和`Door`实体所收集所有硬币后充当打开动画。
 
 
-## <a name="achx-files"></a>.achx 文件
+### <a name="achx-files"></a>.achx 文件
 
 .Achx 文件中定义了抛硬币时间动画。 每个动画定义之间`AnimationChain`标记，如以下中定义的动画中所示**propanimations.achx**:
 
@@ -533,7 +535,7 @@ private void ProcessTileProperties()
 按抛硬币时间忽略的.achx 文件中的所有其他 AnimationChain 属性。
 
 
-## <a name="animatedspriteentity"></a>AnimatedSpriteEntity
+### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
 动画逻辑包含在`AnimatedSpriteEntity`类，该类用作基类的类，有关在中使用大多数实体`GameScene`。 它提供以下功能：
 
@@ -562,10 +564,10 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>总结
+## <a name="summary"></a>总结
 
 本指南介绍抛硬币时间的实现详细信息。 抛硬币时间创建为完整的游戏，但也可以轻松地修改和扩展的项目。 添加新的级别，以及创建新的实体来进一步了解如何实现抛硬币时间鼓励花费时间修改为级别，将读取器。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [游戏项目 （示例）](https://developer.xamarin.com/samples/mobile/CoinTime/)

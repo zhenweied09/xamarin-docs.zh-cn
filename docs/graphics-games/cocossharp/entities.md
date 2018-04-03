@@ -1,6 +1,6 @@
 ---
-title: "CocosSharp 中的实体"
-description: "实体模式是一种强大的方法来组织游戏代码。 它可以改善可读性，使代码更易于维护，并可利用内置的父/子功能。"
+title: CocosSharp 中的实体
+description: 实体模式是一种强大的方法来组织游戏代码。 它可以改善可读性，使代码更易于维护，并可利用内置的父/子功能。
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: fe722ce75f0322ab60bb6fd967ff2c498b2e7b20
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bb4af0f76f6b266cad4eb969d987a346b7396aa9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="entities-in-cocossharp"></a>CocosSharp 中的实体
 
@@ -34,7 +34,7 @@ _实体模式是一种强大的方法来组织游戏代码。它可以改善可�
 ![](entities-images/image1.png "完成的游戏将如下所示")
 
 
-# <a name="introduction-to-game-entities"></a>介绍游戏实体
+## <a name="introduction-to-game-entities"></a>介绍游戏实体
 
 游戏实体是用于定义需要呈现、 冲突、 物理或人工智能逻辑的对象类。 幸运的是，游戏的基本代码中存在的实体通常与匹配游戏中的概念性对象。 在这种情况，识别需要游戏中的实体，可以更轻松地实现。 
 
@@ -51,7 +51,7 @@ _实体模式是一种强大的方法来组织游戏代码。它可以改善可�
 这些实体将它们自己的类在游戏中，并且每个实例需要很少或没有安装超出了实例化。
 
 
-# <a name="general-vs-specific-entity-types"></a>常规 vs。特定实体类型
+## <a name="general-vs-specific-entity-types"></a>与特定实体类型的常规
 
 游戏开发人员使用实体系统所面临的第一个问题之一是配合使用来通用化其实体多少。 即使它们在几个特征上存在差异，最特定的实现将定义用于每种类型的实体，类。 更多常规系统将将的实体组组合到一个类，并允许进行自定义的实例。
 
@@ -84,7 +84,7 @@ _实体模式是一种强大的方法来组织游戏代码。它可以改善可�
 为简单起见，我们将使用特定的基于类的方法与一个装运和项目符号实体出于本教程。
 
 
-# <a name="project-setup"></a>项目设置
+## <a name="project-setup"></a>项目设置
 
 我们开始实现我们实体之前，我们需要创建一个项目。 我们将使用 CocosSharp 项目模板来简化项目创建。 [检查此文章](http://forums.xamarin.com/discussion/26822/cocossharp-project-templates-for-xamarin-studio)有关从 Visual Studio for Mac 模板创建 CocosSharp 项目信息。 本指南的其余部分将使用的项目名称**EntityProject**。
 
@@ -110,14 +110,14 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 有关处理 CocosSharp 解决方法的详细信息，请参阅我们[CocosSharp 中处理多个解决方案指南](~/graphics-games/cocossharp/resolutions.md)。
 
 
-# <a name="adding-content-to-the-project"></a>将内容添加到项目
+## <a name="adding-content-to-the-project"></a>将内容添加到项目
 
 一旦创建我们的项目后，我们将添加中包含的文件[此内容的 zip 文件](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true)。 若要执行此操作，下载的 zip 文件，并将其解压缩。 请同时添加**ship.png**和**bullet.png**到**内容**文件夹。 **内容**文件夹将为内部**资产**文件夹在 Android 上，并且将在 iOS 上项目的根目录。 添加后，我们应看到这两个文件中的**内容**文件夹：
 
 ![](entities-images/image2.png "内容文件夹中添加后，应为这两个文件")
 
 
-# <a name="creating-the-ship-entity"></a>创建发货实体
+## <a name="creating-the-ship-entity"></a>创建发货实体
 
 `Ship`类将为我们的游戏中的第一个实体。 若要添加`Ship`类中，首先创建一个名为文件夹**实体**项目根级别。 添加新类中的**实体**名为的文件夹`Ship`:
 
@@ -179,16 +179,16 @@ public class GameLayer : CCLayer
 ![](entities-images/image4.png "当运行游戏时，将显示发货实体")
 
 
-## <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>为什么继承而不是 CCSprite CCNode？
+### <a name="why-inherit-from-ccnode-instead-of-ccsprite"></a>为什么继承而不是 CCSprite CCNode？
 
 此时我们`Ship`类是简单包装器`CCSprite`实例。 由于`CCSprite`也继承自`CCNode`，我们无法直接从已继承`CCSprite`，这将减少中的代码`Ship.cs`。 此外，直接从继承`CCSprite`可以减少内存中对象数目，可以通过使依赖关系树更小提高性能。
 
 这些好处，尽管我们继承自`CCNode`以隐藏某些`CCSprite`每个实例中的属性。 例如，`Texture`属性不应修改外部`Ship`类，并从继承`CCNode`使我们可以隐藏此属性。 我们实体的公共成员变得尤为重要，随着游戏就会增加大以及其他开发人员添加到组中。
 
 
-# <a name="adding-input-to-the-ship"></a>添加到发货的输入
+## <a name="adding-input-to-the-ship"></a>添加到发货的输入
 
-现在，我们随附了已在屏幕上可见，我们会添加输入。 我们方法将类似于而采取的做法[CocosSharp 指南简介](~/graphics-games/cocossharp/first-game/part2.md)，只不过我们将放置的代码中的移动`Ship`类而不是中包含的`CCLayer`或`CCScene`.
+现在，我们随附了已在屏幕上可见，我们会添加输入。 我们方法将类似于而采取的做法[BouncingGame 指南](~/graphics-games/cocossharp/bouncing-game.md)，只不过我们将放置的代码中的移动`Ship`类而不是中包含的`CCLayer`或`CCScene`。
 
 将代码添加到`Ship`以支持将其移动到任何位置用户触摸屏幕：
 
@@ -230,7 +230,7 @@ public class Ship : CCNode
 许多投篮机会控制在全身向上游戏实现最大速度，与传统基于控制器的移动。 也就是说，我们将只需实现即时移动使我们更短的代码。
 
 
-# <a name="creating-the-bullet-entity"></a>创建项目符号实体
+## <a name="creating-the-bullet-entity"></a>创建项目符号实体
 
 我们简单游戏中的第二个实体是用于显示项目符号的实体。 就像`Ship`实体，`Bullet`实体将包含`CCSprite`以使其显示在屏幕上。 移动的逻辑不同之处在于它不依赖于移动; 的用户输入相反，`Bullet`实例将使用速度属性的直线中移动。
 
@@ -288,7 +288,7 @@ namespace EntityProject
 `Schedule`方法允许添加委托，调用每个帧。 在这种情况下我们正在将添加`ApplyVelocity`方法，以便我们项目符号将根据其速度值移动。 `Schedule`方法采用`Action<float>`，其中 float 参数指定的时间 （以秒为单位） 自上一帧，我们使用来实现基于时间的移动。 以来值以秒为单位，然后我们速度值表示中的移动*每秒像素*。
 
 
-# <a name="adding-bullets-to-gamelayer"></a>将项目符号添加到 GameLayer
+## <a name="adding-bullets-to-gamelayer"></a>将项目符号添加到 GameLayer
 
 我们添加任何之前`Bullet`到我们的游戏中的实例，我们将生成一个容器，专门`List<Bullet>`。 修改`GameLayer`使其包含的项目符号列表：
 
@@ -422,14 +422,14 @@ void HandleBulletCreated(Bullet newBullet)
 ![](entities-images/image1.png "运行游戏和解决在装运中的项目符号实例")
 
 
-# <a name="why-gamelayer-has-ship-and-bullets-members"></a>为什么 GameLayer 包含发货和项目符号成员
+## <a name="why-gamelayer-has-ship-and-bullets-members"></a>为什么 GameLayer 包含发货和项目符号成员
 
 我们`GameLayer`类定义两个字段来保存到我们实体实例的引用 (`ship`和`bullets`)，但不与它们执行任何操作。 此外，实体负责如移动和解决其自己的行为。 因此为什么未，我们添加`ship`和`bullets`字段设置为`GameLayer`？
 
 我们添加这些成员的原因是因为完整游戏实现需要中的逻辑`GameLayer`用于不同的实体之间的交互。 例如，可能会进一步建立此游戏以包括敌人玩家被破坏。 这些敌人将包含在`List`中`GameLayer`，和测试的逻辑是否`Bullet`实例与冲突将在中执行敌人`GameLayer`以及。 换而言之，`GameLayer`是根*所有者*所有实体的实例，也是如此负责实体实例之间的交互。
 
 
-# <a name="bullet-destruction-considerations"></a>项目符号析构注意事项
+## <a name="bullet-destruction-considerations"></a>项目符号析构注意事项
 
 我们的游戏中当前缺少代码销毁`Bullet`实例。 每个`Bullet`实例具有逻辑移动在屏幕上，但我们尚未添加任何代码即可销毁任何屏幕`Bullet`实例。
 
@@ -437,12 +437,11 @@ void HandleBulletCreated(Bullet newBullet)
 
 最简单的解决方案是展开的工厂类，以支持析构的责任。 可以在工厂可以通知被销毁，而可以由其他对象，如处理的实体实例的`GameLayer`从其列表中删除实体实例。 
 
-
-# <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南演示如何通过继承创建 CocosSharp 实体`CCNode`类。 这些实体是自包含的对象，处理创建他们自己的视觉对象和自定义逻辑。 此指南从属于根实体容器 （冲突和其他实体交互逻辑） 的代码指定所属实体 （移动和创建的其他实体） 内的代码。
 
-## <a name="related-links"></a>相关链接
+## <a name="related-links"></a>相关的链接
 
 - [CocosSharp API 文档](https://developer.xamarin.com/api/namespace/CocosSharp/)
 - [内容 zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Entities.zip?raw=true)

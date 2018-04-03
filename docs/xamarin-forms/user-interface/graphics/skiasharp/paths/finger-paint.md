@@ -1,6 +1,6 @@
 ---
-title: "手指绘制"
-description: "使用您的手指在画布上绘制。"
+title: 手指绘制
+description: 使用您的手指在画布上绘制。
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: b4213d71c2eca6c2552ac674a0203d7a2cc36e1b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dacb9f399ad044d2d5e9c960bce398092766020c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="finger-painting"></a>手指绘制
 
@@ -24,7 +24,7 @@ _使用您的手指在画布上绘制。_
 
 Xamarin.Forms 中的触摸支持不允许在屏幕上，跟踪各个指，以便在已开发 Xamarin.Forms 触摸跟踪效果以提供其他触摸支持。 文章中介绍了这种效果[**将事件调用从效果**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)。 示例程序[**触摸跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)将包括使用 SkiaSharp，包括 finger-painting 程序的两个页。
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)解决方案包括此触摸跟踪事件。 可移植类库项目包括`TouchEffect`类，`TouchActionType`枚举，`TouchActionEventHandler`委托，委托和`TouchActionEventArgs`类。 每个平台项目包括`TouchEffect`该平台类; iOS 项目还包含`TouchRecognizer`类。
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括此触摸跟踪事件。 可移植类库项目包括`TouchEffect`类，`TouchActionType`枚举，`TouchActionEventHandler`委托，委托和`TouchActionEventArgs`类。 每个平台项目包括`TouchEffect`该平台类; iOS 项目还包含`TouchRecognizer`类。
 
 **手指绘制**页面**SkiaSharpFormsDemos**是手指绘制的简化的实现。 不允许选择颜色或描边宽度，则具有清除画布上，没有办法，而且当然你无法保存你的图片。
 
@@ -169,6 +169,6 @@ public partial class FingerPaintPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [触摸跟踪效果演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [调用从效果的事件](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
