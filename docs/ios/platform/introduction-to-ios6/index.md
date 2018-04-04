@@ -1,18 +1,17 @@
 ---
-title: "IOS 6 简介"
-description: "iOS 6 包括多种用于开发应用，这 Xamarin.iOS 6 将向 C# 开发人员提供的新技术。"
-ms.topic: article
+title: IOS 6 简介
+description: iOS 6 包括多种用于开发应用，这 Xamarin.iOS 6 将向 C# 开发人员提供的新技术。
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-6"></a>IOS 6 简介
 
