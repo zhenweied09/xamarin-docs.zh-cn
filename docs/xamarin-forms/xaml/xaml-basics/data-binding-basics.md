@@ -1,18 +1,17 @@
 ---
-title: "第 4 部分。 数据绑定基础知识"
-description: "数据绑定都允许这两个对象链接，以便其中一个中的更改导致更改另一部分中的属性。 这是一个非常有价值的工具，并可以完全在代码中定义数据绑定，而 XAML 提供快捷方式和方便起见。 因此，Xamarin.Forms 中最重要的标记扩展之一绑定。"
-ms.topic: article
+title: 第 4 部分。 数据绑定基础知识
+description: 数据绑定都允许这两个对象链接，以便其中一个中的更改导致更改另一部分中的属性。 这是一个非常有价值的工具，并可以完全在代码中定义数据绑定，而 XAML 提供快捷方式和方便起见。 因此，Xamarin.Forms 中最重要的标记扩展之一绑定。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2aa6fd2f54c09921621a12af9401a6f84ae37ffa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
 
@@ -392,7 +391,7 @@ namespace XamlSamples
 
 如果在运行时，更改项本身的属性，则集合中的项应实现`INotifyPropertyChanged`对使用的属性值的接口和信号更改`PropertyChanged`事件。 说明了这一点在下一部分中的这一系列，[第 5 部分。从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 数据绑定提供了用于链接在一页内的两个对象之间或视觉对象之间的属性和基础数据的强大机制。 但是，当应用程序开始使用数据源，常用的应用程序体系结构模式开始作为有用范例中显现出来。 这一点在[第 5 部分。从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)。
 

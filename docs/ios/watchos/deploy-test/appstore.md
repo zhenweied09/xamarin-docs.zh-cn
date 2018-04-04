@@ -1,18 +1,17 @@
 ---
-title: "将部署到应用商店"
-description: "将监视应用部署到应用商店"
-ms.topic: article
+title: 将部署到应用商店
+description: 将监视应用部署到应用商店
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploying-to-the-app-store"></a>将部署到应用商店
 
@@ -177,7 +176,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 确保你有 Visual Studio 的最新版本的 Mac 上，并且你**AppIcons.appiconset**包含一组完整的映像。 如果你仍看到此错误，查看的源**Contents.json**以确定它是否包含所有所需的映像的条目。 或者，你可确保你在使用 Xamarin 最新版本后, 删除并重新创建**AppIcons.appiconset**。
 
 > [!IMPORTANT]
-> 是一个已知的 bug，在 Visual Studio 中的 Mac 的监视图标支持： 期望 88 x 88 像素图像 **29x29@3x** 映像 （它应是 87 x 87 像素为单位）。
+> 是一个已知的 bug，在 Visual Studio 中的 Mac 的监视图标支持： 期望 88 x 88 像素图像**29x29@3x**映像 （它应是 87 x 87 像素为单位）。
 
 
 无法为 Mac-编辑在 Xcode 中的图像资产解决此问题在 Visual Studio 中，或手动编辑**Contents.json**文件 (以匹配[此示例](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132))。

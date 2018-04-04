@@ -1,18 +1,17 @@
 ---
-title: "使用表视图"
-description: "本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。"
-ms.topic: article
+title: 使用表视图
+description: 本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: af562ac03f2cd5f293f99c7509000499ad5deaa4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-table-views"></a>使用表视图
 
@@ -731,7 +730,7 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>将它放在所有一起
 
-如本文档的开头所述，表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息。 例如: 
+如本文档的开头所述，表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息。 例如： 
 
 [![](table-views-images/intro01.png "运行示例应用")](table-views-images/intro01.png#lightbox)
 
@@ -949,7 +948,7 @@ namespace tvTable
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和表视图在 Xamarin.tvOS 应用内部使用。 并提供了使用表视图内拆分视图，即 tvOS 应用中的表视图的典型用法的示例。
 

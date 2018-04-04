@@ -1,18 +1,17 @@
 ---
-title: "使用 Azure Active Directory B2C 的用户进行身份验证"
-description: "Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的云标识管理解决方案。 本文演示如何使用 Microsoft 身份验证库和 Azure Active Directory B2C 将使用者标识管理集成到移动应用程序。"
-ms.topic: article
+title: 使用 Azure Active Directory B2C 的用户进行身份验证
+description: Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的云标识管理解决方案。 本文演示如何使用 Microsoft 身份验证库和 Azure Active Directory B2C 将使用者标识管理集成到移动应用程序。
 ms.prod: xamarin
 ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 5d64c7c1dbc502acd3876c2442f9bae1c46eeb74
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>使用 Azure Active Directory B2C 的用户进行身份验证
 
@@ -231,7 +230,7 @@ public async Task<bool> LogoutAsync()
 
 这将清除从本地缓存的所有身份验证令牌。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Microsoft 身份验证库 (MSAL) 和 Azure Active Directory B2C 来将使用者标识管理集成到移动应用程序。 Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的云标识管理解决方案。
 

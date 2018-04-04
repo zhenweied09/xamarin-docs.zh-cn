@@ -1,18 +1,17 @@
 ---
-title: "第 1 – 创建跨平台 MonoGame 部分"
-description: "本演练演示如何创建用于 iOS 和 Android 使用 MonoGame 的新项目。 结果是 Visual Studio for Mac 与一个跨平台共享的代码项目，以及为每个平台的一个项目的解决方案。 此项目将显示一个空的蓝色屏幕时执行。"
-ms.topic: article
+title: 第 1 – 创建跨平台 MonoGame 部分
+description: 本演练演示如何创建用于 iOS 和 Android 使用 MonoGame 的新项目。 结果是 Visual Studio for Mac 与一个跨平台共享的代码项目，以及为每个平台的一个项目的解决方案。 此项目将显示一个空的蓝色屏幕时执行。
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0d1352b4129dc1cf8be42e813787b9b73f80cd3e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0cd12f23f8cb269b2a41a08bf641db08e18fb82b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>第 1 – 创建跨平台 MonoGame 部分
 
@@ -71,7 +70,7 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练介绍如何创建跨平台 MonoGame 项目使用 Visual Studio for mac。 此操作的结果是一个空的蓝色屏幕。 此项目可以用作任务的起始点的任何 iOS 和 Android 游戏。
 

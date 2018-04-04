@@ -1,18 +1,17 @@
 ---
-title: "创建 MonoGame UWP 项目"
-description: "MonoGame 可用来创建游戏和应用适用于通用 Windows 平台，面向多个设备使用一个基本代码和一组内容。"
-ms.topic: article
+title: 创建 MonoGame UWP 项目
+description: MonoGame 可用来创建游戏和应用适用于通用 Windows 平台，面向多个设备使用一个基本代码和一组内容。
 ms.prod: xamarin
 ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: d8f805d8a3fcadd9c2a6758f1dc5592c03fe3ed4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: efee4847397db0e89a8d10211e13d61ce13824fb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>创建 MonoGame UWP 项目
 
@@ -23,7 +22,7 @@ _MonoGame 可用来创建游戏和应用适用于通用 Windows 平台，面向�
 本演练将创建一个空的项目，其中显示了*藏蓝色*背景 （XNA 应用程序的传统的背景色）。
 
 
-# <a name="requirements"></a>惠?
+# <a name="requirements"></a>要求
 
 开发 MonoGame UWP 应用需要：
 
@@ -121,6 +120,6 @@ MonoGame 项目中的内容可以直接从文件或通过引用[MonoGame 内容�
 有关详细信息使用`Texture2D`，请参阅[MonoGame 指南简介](~/graphics-games/monogame/introduction/index.md)。
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本指南介绍如何在加载文件时创建新的 UWP 项目和 UWP 特定注意事项。 开发人员感兴趣创建完整的 UWP 游戏可以阅读更多有关中 MonoGame [MonoGame 指南简介](~/graphics-games/monogame/introduction/index.md)。

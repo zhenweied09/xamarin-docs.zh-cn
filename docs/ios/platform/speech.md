@@ -1,18 +1,17 @@
 ---
-title: "语音识别"
-description: "本文提供了新的语音 API，并演示如何在 Xamarin.iOS 应用程序以支持连续语音识别和理赔 （从实时或录制音频流） 的语音到文本中实现它。"
-ms.topic: article
+title: 语音识别
+description: 本文提供了新的语音 API，并演示如何在 Xamarin.iOS 应用程序以支持连续语音识别和理赔 （从实时或录制音频流） 的语音到文本中实现它。
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: fa010f57d163cabe544176608cff2eb6efe872ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="speech-recognition"></a>语音识别
 

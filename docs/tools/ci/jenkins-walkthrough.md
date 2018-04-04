@@ -1,18 +1,17 @@
 ---
-title: "通过 Xamarin 使用 Jenkins"
-description: "本指南演示如何设置为持续集成服务器 Jenkins 和自动执行编译使用 Xamarin 创建的移动应用程序。 它描述如何在 OS X 上安装 Jenkins、 配置和设置来编译 Xamarin.iOS 和 Xamarin.Android 应用程序时更改会提交到源代码管理系统的作业。"
-ms.topic: article
+title: 通过 Xamarin 使用 Jenkins
+description: 本指南演示如何设置为持续集成服务器 Jenkins 和自动执行编译使用 Xamarin 创建的移动应用程序。 它描述如何在 OS X 上安装 Jenkins、 配置和设置来编译 Xamarin.iOS 和 Xamarin.Android 应用程序时更改会提交到源代码管理系统的作业。
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>通过 Xamarin 使用 Jenkins
 
@@ -103,7 +102,7 @@ Jenkins 运行后，你可能想要将其设置为登录名项，以便它将开
 
 ### <a name="installing-plugins"></a>安装插件
 
-完成 Jenkins.App 安装程序后，它将启动 Jenkins 并启动 web 浏览器中的使用 URL http://localhost:8080/，如下面的屏幕截图中所示：
+完成 Jenkins.App 安装程序后，它将启动 Jenkins 并启动 web 浏览器中的使用 URL http://localhost:8080，下面的屏幕截图中所示：
 
  [![](jenkins-walkthrough-images/image10.png "8080，此屏幕截图中所示")](jenkins-walkthrough-images/image10.png#lightbox)
 

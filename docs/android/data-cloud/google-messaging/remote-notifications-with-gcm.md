@@ -1,18 +1,17 @@
 ---
-title: "使用 Google Cloud Messaging 的远程通知"
-description: "本演练提供在 Xamarin.Android 应用程序中如何使用 Google Cloud Messaging 实现远程通知 （也称为推送通知） 的分步说明。 描述你必须实现的通信使用 Google Cloud Messaging (GCM) 的各种类，它还说明了如何在 Android 的 GCM，访问清单中设置权限以及它演示了端到端消息中，并且示例测试程序。"
-ms.topic: article
+title: 使用 Google Cloud Messaging 的远程通知
+description: 本演练提供在 Xamarin.Android 应用程序中如何使用 Google Cloud Messaging 实现远程通知 （也称为推送通知） 的分步说明。 描述你必须实现的通信使用 Google Cloud Messaging (GCM) 的各种类，它还说明了如何在 Android 的 GCM，访问清单中设置权限以及它演示了端到端消息中，并且示例测试程序。
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>使用 Google Cloud Messaging 的远程通知
 
@@ -401,7 +400,7 @@ namespace ClientApp
 
 #### <a name="test-registration-with-gcm"></a>测试注册到 GCM
 
-让我们完全重新生成并运行应用程序。 如果你已成功从 GCM 收到的注册令牌，注册令牌应显示在输出窗口中。 例如: 
+让我们完全重新生成并运行应用程序。 如果你已成功从 GCM 收到的注册令牌，注册令牌应显示在输出窗口中。 例如： 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2
@@ -656,7 +655,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 请注意强制停止应用程序时，将不再接收 GCM 消息。 若要强制停止后恢复通知，必须在应用中进行手动重新启动。 有关此 Android 策略的详细信息，请参阅[启动停止的应用程序上的控件](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)，这[堆栈溢出文章](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)。 
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练详细 Xamarin.Android 应用程序中实现远程通知的步骤。 它描述如何安装其他包所需的 GCM 通信，并且它说明了如何配置应用程序访问权限的 GCM 服务器。 它提供用于说明如何检查存在的 Google Play 服务、 如何实现注册意向服务和实例 ID 侦听器服务，协商使用 GCM 注册令牌，以及如何实现 GCM 侦听器的示例代码接收和处理远程通知消息的服务。 最后，我们实现的命令行测试程序，将测试通知发送到 GCM 通过我们的客户端应用程序。 
 

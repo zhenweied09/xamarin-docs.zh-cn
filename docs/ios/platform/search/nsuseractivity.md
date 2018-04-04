@@ -1,17 +1,16 @@
 ---
-title: "使用 NSUserActivity 搜索"
-ms.topic: article
+title: 使用 NSUserActivity 搜索
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8376ce2ccff6732fa0c89d6030b9af36d29c5085
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 803fcce359bbe27ea19901afa766f5b7f4692e0c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-nsuseractivity"></a>使用 NSUserActivity 搜索
 
@@ -95,7 +94,7 @@ activity.BecomeCurrent();
 
 ## <a name="responding-to-an-activity"></a>响应的活动
 
-若要响应用户点击搜索结果 (`NSUserActivity`) 对于我们的应用程序编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如:
+若要响应用户点击搜索结果 (`NSUserActivity`) 对于我们的应用程序编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如：
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

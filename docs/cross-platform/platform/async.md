@@ -1,18 +1,17 @@
 ---
-title: "异步概述"
-description: "C# 语言 – 版本 5 – 最新版本引入了两个新的关键字表示异步操作： async 和 await。 这些关键字，可以编写在另一个线程中使用任务并行库执行长时间运行操作 （如网络访问权限） 的简单代码并轻松地访问在完成的结果。 Xamarin.iOS 和 Xamarin.Android 的最新版本支持 async 和 await-本文档提供了说明和 xamarin 中使用的新语法的示例。"
-ms.topic: article
+title: 异步概述
+description: C# 语言 – 版本 5 – 最新版本引入了两个新的关键字表示异步操作： async 和 await。 这些关键字，可以编写在另一个线程中使用任务并行库执行长时间运行操作 （如网络访问权限） 的简单代码并轻松地访问在完成的结果。 Xamarin.iOS 和 Xamarin.Android 的最新版本支持 async 和 await-本文档提供了说明和 xamarin 中使用的新语法的示例。
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="async-support-overview"></a>异步支持概述
 
@@ -32,7 +31,7 @@ Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以�
 
 Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以适合移动应用的.NET 4.5 版本的移动友好版本升级 API 配置文件。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 C# 5 功能需要包含在 Xamarin.iOS 6.4 和 Xamarin.Android 4.8 的 Mono 3.0。 系统将提示您将 Mono、 Xamarin.iOS、 Xamarin.Android 和升级 Xamarin.Mac 若要利用它。
 
@@ -187,7 +186,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 -  在异步方法完成并返回时，继续执行`await`这意味着整数结果都会返回并重然后呈现在 UI 小组件中。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 使用 async 和 await 极大地简化了生成而不会阻止主线程长时间运行的操作在后台线程上所需的代码。 它们还使其可以轻松地完成任务后访问结果。
 

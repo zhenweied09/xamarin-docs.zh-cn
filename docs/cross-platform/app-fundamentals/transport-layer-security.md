@@ -1,18 +1,17 @@
 ---
-title: "传输层安全性 (TLS)"
-description: "为 Android、 iOS 和 Mac 上的 Xamarin 项目启用 TLS 1.2"
-ms.topic: article
+title: 传输层安全性 (TLS)
+description: 为 Android、 iOS 和 Mac 上的 Xamarin 项目启用 TLS 1.2
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/10/2017
-ms.openlocfilehash: b0f205c5ab2c65f0e2a99f912f3961f12a4f2b7a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8b2d0288248f2468e6976ad4f7c46255690116c0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transport-layer-security-tls"></a>传输层安全性 (TLS)
 
@@ -87,7 +86,7 @@ Xamarin 开发人员始终都可以在其代码中使用的本机网络类，但
 - [**iOS 和 Mac**](~/cross-platform/macios/http-stack.md)
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 只要有可能，应用程序应使用传输层安全 (TLS) 1.2。
 新应用现在默认为此配置，但你可能需要更新现有应用程序根据本文中的说明中的设置。

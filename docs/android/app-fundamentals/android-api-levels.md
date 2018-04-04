@@ -1,18 +1,17 @@
 ---
-title: "了解 Android API 级别"
-description: "Xamarin.Android 具有多个 Android API 级别设置，确定与多个版本的 Android 应用程序的兼容性。 本指南说明了这些设置的含义、 如何配置它们，以及有何影响它们对你的应用程序在运行时。"
-ms.topic: article
+title: 了解 Android API 级别
+description: Xamarin.Android 具有多个 Android API 级别设置，确定与多个版本的 Android 应用程序的兼容性。 本指南说明了这些设置的含义、 如何配置它们，以及有何影响它们对你的应用程序在运行时。
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 907af0948e9d081f05cc201c49f94629a513c935
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-android-api-levels"></a>了解 Android API 级别
 
@@ -282,7 +281,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 
 在此示例中，我们的应用程序的目标框架设置为**Android 5.0 (API 级别 21)**并且其最低 Android 版本设置为**Android 4.1 (API 级别 16)**。 因为`SetCategory`位于 API 级别`Android.OS.BuildVersionCodes.Lollipop`和更高版本，此代码示例将调用`SetCategory`仅当有实际可用&ndash;它将*不*尝试调用`SetCategory`时 API级别是 16、 17、 18、 19 或 20。 仅的范围内通知未排序正确 （因为它们不按类型进行分类），但仍然发布通知来警告用户，在这些较早的 Android 版本上有所减少的功能。 我们的应用仍然正常工作，但其功能会稍微降低。
 
-一般情况下，生成版本检查可帮助你决定在运行时之间执行某项操作与旧的方法的新方法的代码。 例如:
+一般情况下，生成版本检查可帮助你决定在运行时之间执行某项操作与旧的方法的新方法的代码。 例如：
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
@@ -325,7 +324,7 @@ else
 这些最佳做法建议以帮助防止这种情况下尝试调用不是在运行时 （这可能导致应用崩溃） 可用的 API 库。 如果你是库开发人员，你应尽可能限制你的小型和获得广泛认可的总的 API 图面区域一部分的 API 调用的使用情况。 因此，这样做有助于确保可以更宽的范围的 Android 版本间安全地使用你的库。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍如何使用 Android API 级别来管理跨不同版本的 Android 应用程序兼容性。 它提供的详细的步骤用于配置 Xamarin.Android*目标框架*，*最低 Android 版本*，和*目标 Android 版本*项目设置。 它提供有关使用 Android SDK 管理器安装 SDK 包的说明包括示例说明了如何编写代码来处理不同的 API 级别，在运行时，并且说明了如何管理时，创建或使用 Android 库的 API 级别。 它还提供了 API 级别与 Android 版本数字 （如 Android 4.4)、 Android 版本名称 （例如 Kitkat) 和 Xamarin.Android 生成版本代码的完整列表。
 

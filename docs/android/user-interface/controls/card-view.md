@@ -1,18 +1,17 @@
 ---
-title: "卡片视图-"
-description: "卡片视图-小组件是类似于卡的视图中显示文本和图像的内容的 UI 组件。 本指南说明如何使用和自卡片视图-Xamarin.Android 应用程序中定义同时保持向后兼容早期版本的 Android。"
-ms.topic: article
+title: 卡片视图-
+description: 卡片视图-小组件是类似于卡的视图中显示文本和图像的内容的 UI 组件。 本指南说明如何使用和自卡片视图-Xamarin.Android 应用程序中定义同时保持向后兼容早期版本的 Android。
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 46eec10bbabec74719affabce1e8033a083680be
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 21e2a2e8ef04936664344cb4fb758bc2af3b4d05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cardview"></a>卡片视图-
 
@@ -29,7 +28,7 @@ _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容
 
 <a name="requirements" />
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下需要使用新的 Android 5.0 和更高版本的功能 (包括`CardView`) 基于 Xamarin 的应用中：
 
@@ -247,7 +246,7 @@ CardView` 提供了五个填充特性来定位于卡片的内容。 你的布局
 有关维护与早期版本的 Android 的兼容性的详细信息，请参阅[维护兼容性](https://developer.android.com/training/material/compatibility.html)。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南引入新`CardView`Android 5.0 （棒糖形） 中包含的小组件。 它演示了默认值`CardView`外观并且说明了如何自定义`CardView`通过更改其提升，角圆度，内容填充和背景色。 它列出`CardView`布局属性 （与引用关系图），并且说明了如何使用`CardView`早于 Android 5.0 棒糖形 Android 设备上。 有关详细信息`CardView`，请参阅[卡片视图-类引用](https://developer.android.com/reference/android/support/v7/widget/CardView.html)。
 

@@ -1,18 +1,17 @@
 ---
-title: ".NET 嵌入"
-description: ".NET 嵌入允许你现有的.NET 代码 (C#、 F # 中，和其他人） 使用从其他编程语言"
-ms.topic: article
+title: .NET 嵌入
+description: '.NET 嵌入允许你现有的.NET 代码 (C#、 F # 中，和其他人） 使用从其他编程语言'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 29c34ede0b59620b8951109f8571a08a960182d1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f5e778ef9ba31c1a9e880b9fc66c2e48ddb2420c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="net-embedding"></a>.NET 嵌入
 

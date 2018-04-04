@@ -1,18 +1,17 @@
 ---
 title: MessagingCenter
-description: "Xamarin.Forms 包括一个简单的消息传送服务发送和接收消息。"
-ms.topic: article
+description: Xamarin.Forms 包括一个简单的消息传送服务发送和接收消息。
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: ede78d4a041f8619ff97b3da802efb18943ef8ae
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e8145847f3c91683aa7433208d70198998cda87f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="messagingcenter"></a>MessagingCenter
 
@@ -104,7 +103,7 @@ MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 MessagingCenter 是一种简单的方法，以减少耦合，尤其是之间查看模型。 它可以用于发送和接收简单消息或两个类之间传递自变量。 类应取消订阅它们不再想要接收的消息。
 

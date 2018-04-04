@@ -1,18 +1,17 @@
 ---
 title: Xamarin Profiler
 description: 本指南介绍了 Xamarin 探查器的主要功能。 它查找在探查器、 分析和时应使用它们，和的标准工作流分析 Xamarin 应用程序。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 7c44541c56d7b1a00a704cfc66812d5537ec83c4
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 3408d4e1ca50651536b9d04f64156efac4fdd0ed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 

@@ -1,18 +1,17 @@
 ---
-title: "菜单"
-description: "本文介绍如何使用 Xamarin.Mac 应用程序中的菜单。 它介绍创建和维护菜单和菜单项在 Xcode 和接口生成器和以编程方式使用它们。"
-ms.topic: article
+title: 菜单
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的菜单。 它介绍创建和维护菜单和菜单项在 Xcode 和接口生成器和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="menus"></a>菜单
 
@@ -226,7 +225,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 即使你的应用不使用`NSDocuments`，仍使用`NSDocumentController`维护**最近打开**通过发送菜单`NSUrl`到文件的位置`NoteNewRecentDocumentURL`方法`SharedDocumentController`。
 
-接下来，您需要重写`OpenFile`要打开用户从选择的任何文件的应用程序委托的方法**最近打开**菜单。 例如:
+接下来，您需要重写`OpenFile`要打开用户从选择的任何文件的应用程序委托的方法**最近打开**菜单。 例如：
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -425,7 +424,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 就像内置**第一个响应方**预有线进入标准菜单项的操作，你可以创建新的自定义操作并将它们连接到接口生成器中的菜单项。
 
-首先，您的应用程序窗口控制器之一上定义的自定义操作。 例如:
+首先，您的应用程序窗口控制器之一上定义的自定义操作。 例如：
 
 ```csharp
 [Action("defineKeyword:")]
@@ -439,7 +438,7 @@ public void defineKeyword (NSObject sender) {
 
 ![属性检查器](menu-images/action01.png "属性检查器")
 
-单击 **+** 底部的按钮**属性检查器**添加新的自定义操作：
+单击**+**底部的按钮**属性检查器**添加新的自定义操作：
 
 ![添加新操作](menu-images/action02.png "添加新的操作")
 
@@ -1068,7 +1067,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 你可以创建和使用的下拉列表中为弹出按钮完全相同的方式。 而不是将附加到现有操作，你可以创建你自己的自定义操作，只需像我们在我们上下文菜单[上下文菜单](#Contextual_Menus)部分。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用菜单和菜单项在 Xamarin.Mac 应用程序的详细的信息。 首先我们检查应用程序的菜单栏，然后我们看创建上下文菜单，接下来，我们探讨了状态栏菜单并自定义停靠菜单。 最后，我们介绍弹出菜单和下拉列表。
 

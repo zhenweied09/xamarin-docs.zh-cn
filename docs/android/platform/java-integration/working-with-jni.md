@@ -1,18 +1,17 @@
 ---
-title: "使用 JNI"
-description: "Xamarin.Android 允许编写而不是 Java 的 C# 中的 Android 应用。 多个程序集附带了 Xamarin.Android 提供 Java 库，包括 Mono.Android.dll 和 Mono.Android.GoogleMaps.dll 的绑定。 但是，对于每个可能的 Java 库，不提供了绑定的并且每个 Java 类型和成员，可能不会绑定提供的绑定。 若要使用未绑定 Java 类型和成员，可能使用 Java 本机接口 (JNI)。 本文将演示如何使用 JNI 与 Java 类型和成员从 Xamarin.Android 应用程序进行交互。"
-ms.topic: article
+title: 使用 JNI
+description: Xamarin.Android 允许编写而不是 Java 的 C# 中的 Android 应用。 多个程序集附带了 Xamarin.Android 提供 Java 库，包括 Mono.Android.dll 和 Mono.Android.GoogleMaps.dll 的绑定。 但是，对于每个可能的 Java 库，不提供了绑定的并且每个 Java 类型和成员，可能不会绑定提供的绑定。 若要使用未绑定 Java 类型和成员，可能使用 Java 本机接口 (JNI)。 本文将演示如何使用 JNI 与 Java 类型和成员从 Xamarin.Android 应用程序进行交互。
 ms.prod: xamarin
 ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: f14d456cba66142c51e0755cdfd3c6795bd1cf73
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 4b5874a0f0e4289201f68299e2e37660cabc9ecf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-jni"></a>使用 JNI
 
@@ -37,7 +36,7 @@ Xamarin.Android 提供`Mono.Android.dll`程序集，其中提供了绑定适用�
 
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 JNI，如通过公开[Android.Runtime.JNIEnv 命名空间](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)，可用于 Xamarin.Android 的每个版本。
 若要绑定 Java 类型和接口，必须使用 Xamarin.Android 4.0 或更高版本。
@@ -72,7 +71,7 @@ Android 可调用包装器生成的**monodroid.exe**程序期间[生成过程](~
 有时你可能需要实现的 Android 接口 (如[Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/))。
 
 所有 Android 类和接口扩展[Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)接口： 因此，所有 Android 类型必须实现`IJavaObject`。
-Xamarin.Android 利用这一事实&ndash;它使用`IJavaObject`为给定的托管类型与 Java 代理 （Android 可调用包装） 提供 Android。 因为**monodroid.exe**仅查找`Java.Lang.Object`子类 (这必须实现`IJavaObject`)、 生成子类`Java.Lang.Object`为我们提供了一种方法在托管代码中实现接口。 例如:
+Xamarin.Android 利用这一事实&ndash;它使用`IJavaObject`为给定的托管类型与 Java 代理 （Android 可调用包装） 提供 Android。 因为**monodroid.exe**仅查找`Java.Lang.Object`子类 (这必须实现`IJavaObject`)、 生成子类`Java.Lang.Object`为我们提供了一种方法在托管代码中实现接口。 例如：
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -1443,7 +1442,7 @@ long f(int n, String s, int[] array);
 与数组类型引用和 JNI 签名使用类型引用。
 
 若要获取的类型引用的其他方法是通过读取的输出`'javap -s -classpath android.jar fully.qualified.Java.Name'`。
-具体取决于类型涉及，你可以使用构造函数声明或方法返回类型来确定 JNI 名称。 例如:
+具体取决于类型涉及，你可以使用构造函数声明或方法返回类型来确定 JNI 名称。 例如：
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State
@@ -1556,7 +1555,7 @@ Activity mapActivity = Java.Lang.Object.GetObject<Activity>(lrefActivity, JniHan
 此外，所有 JNI 函数已被修改的删除`JNIEnv*`存在于每个 JNI 函数的参数。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 直接处理 JNI 是应当不惜任何代价避免可怕体验。 遗憾的是，它并不总是不如;适用于 Android 命中具有 Mono 未绑定的 Java 用例时，本指南提供的一些帮助的希望。
 

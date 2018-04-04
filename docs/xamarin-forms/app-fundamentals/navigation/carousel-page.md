@@ -1,18 +1,17 @@
 ---
-title: "传送页"
-description: "Xamarin.Forms CarouselPage 是内容的一个页，用户可以将从左到右轻扫网页，如库间导航。 本文演示如何使用 CarouselPage 若要浏览的页的集合。"
-ms.topic: article
+title: 传送页
+description: Xamarin.Forms CarouselPage 是内容的一个页，用户可以将从左到右轻扫网页，如库间导航。 本文演示如何使用 CarouselPage 若要浏览的页的集合。
 ms.prod: xamarin
 ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c4f8d70625fd8ee0e07832f8bdb3b7e502b5b38f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d55d8c8d98828097c842cc383037db88097b963d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="carousel-page"></a>传送页
 
@@ -245,7 +244,7 @@ public class MainPageCS : CarouselPage
 
 有关详细信息[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)，请参阅[章 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) Charles Petzold Xamarin.Forms 书籍。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)若要浏览的页的集合。 `CarouselPage`是一个页，用户可以将从左到右轻扫浏览页面的内容，如库，并提供自然和为 Windows Phone 用户所熟悉的外观导航体验。
 

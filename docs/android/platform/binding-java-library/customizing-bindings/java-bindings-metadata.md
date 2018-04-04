@@ -1,18 +1,17 @@
 ---
-title: "Java 绑定元数据"
-description: "在 Xamarin.Android 的 C# 代码是提取的低级别的详细信息，指定在 Java 本机接口 (JNI) 的一种机制的绑定通过调用 Java 库。 Xamarin.Android 提供工具生成这些绑定。 此工具允许开发人员控件如何通过使用元数据，允许如修改命名空间以及成员重命名过程创建一个绑定。 本文档讨论元数据的工作原理、 总结了属性的元数据支持，并说明如何通过修改此元数据来纠正绑定问题。"
-ms.topic: article
+title: Java 绑定元数据
+description: 在 Xamarin.Android 的 C# 代码是提取的低级别的详细信息，指定在 Java 本机接口 (JNI) 的一种机制的绑定通过调用 Java 库。 Xamarin.Android 提供工具生成这些绑定。 此工具允许开发人员控件如何通过使用元数据，允许如修改命名空间以及成员重命名过程创建一个绑定。 本文档讨论元数据的工作原理、 总结了属性的元数据支持，并说明如何通过修改此元数据来纠正绑定问题。
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Java 绑定元数据
 
@@ -246,7 +245,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>模糊处理
 
-对 Java 库进行模糊处理的工具可能会影响 Xamarin.Android 绑定生成器，并且能够生成 C# 包装类。 经过模糊处理的类的特征包括: * class 名称中包含 **$** ，即**$.class** * 类名称完全泄露小写字符，即**a.class**
+对 Java 库进行模糊处理的工具可能会影响 Xamarin.Android 绑定生成器，并且能够生成 C# 包装类。 经过模糊处理的类的特征包括: * class 名称中包含**$**，即**$.class** * 类名称完全泄露小写字符，即**a.class**
 
 此代码段演示如何生成一个"未经过模糊处理"的 C# 类型：
 

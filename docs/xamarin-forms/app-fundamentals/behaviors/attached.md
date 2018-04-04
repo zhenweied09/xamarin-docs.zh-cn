@@ -1,18 +1,17 @@
 ---
-title: "附加的行为"
-description: "附加的行为是具有一个或多个附加属性的静态类。 本文演示如何创建和使用附加的行为。"
-ms.topic: article
+title: 附加的行为
+description: 附加的行为是具有一个或多个附加属性的静态类。 本文演示如何创建和使用附加的行为。
 ms.prod: xamarin
 ms.assetid: ECEE6AEC-44FA-4AF7-BAD0-88C6EE48422E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: af891ad1ff1389d5a48c6c47ba1914b8d4dfc20f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="attached-behaviors"></a>附加的行为
 
@@ -123,7 +122,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, false);
 
 在运行时，`OnAttachBehaviorChanged`方法将时执行的值`AttachBehavior`附加的属性设置为`false`。 `OnAttachBehaviorChanged`方法将然后取消注册的事件处理程序[ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/)事件，确保不执行行为，因为与该控件交互用户。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何创建和使用附加的行为。 附加的行为是`static`具有一个或多个附加属性的类。
 

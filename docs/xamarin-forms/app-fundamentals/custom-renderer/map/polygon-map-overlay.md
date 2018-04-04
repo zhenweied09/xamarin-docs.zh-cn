@@ -1,18 +1,17 @@
 ---
-title: "突出显示在地图上区域"
-description: "本文介绍了如何添加一个代码图，以突出显示在地图上的区域的多边形覆盖。 多边形是闭合的形状并具有其内部填写。"
-ms.topic: article
+title: 突出显示在地图上区域
+description: 本文介绍了如何添加一个代码图，以突出显示在地图上的区域的多边形覆盖。 多边形是闭合的形状并具有其内部填写。
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 6c116565842537f24d92a6d100ab1636f25c2e12
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d87237015b9e3d896766894d552c650047137146
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-region-on-a-map"></a>突出显示在地图上区域
 
@@ -31,7 +30,7 @@ _本文介绍了如何添加一个代码图，以突出显示在地图上的区�
 1. [自定义](#Customizing_the_Map)通过每个平台上创建地图自定义呈现器映射。
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅[ `Maps Control` ](~/xamarin-forms/user-interface/map.md)。
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)。
 
 有关自定义地图使用自定义呈现器的信息，请参阅[自定义地图 Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
 
@@ -299,7 +298,7 @@ namespace MapOverlay.UWP
 - 多边形创建方法是实例化`MapPolygon`对象。 `MapPolygon`类用于在地图上显示多点形状，通过设置其`Path`属性`Geopath`对象，其中包含形状的坐标。
 - 将其添加到代码图上呈现多边形`MapControl.MapElements`集合。 请注意，多边形将自动关闭通过绘制一条连接的第一个和最后一个点线。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何向地图中，以突出显示的地图区域添加多边形覆盖。 多边形是闭合的形状并具有其内部填写。
 

@@ -1,17 +1,16 @@
 ---
-title: "依赖关系注入"
-ms.topic: article
+title: 依赖关系注入
 ms.prod: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 538bb3f67a0612a93b8c3eb7f9de557ad6f321e3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8db8e5b756fe770bdf292ec03c28eb5ed54acf9e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dependency-injection"></a>依赖关系注入
 
@@ -190,7 +189,7 @@ builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstanc
 
 Autofac 包括其他实例作用域。 有关详细信息，请参阅[实例范围](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html)readthedocs.io 上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 依赖关系注入可以实现的具体类型来自依赖于这些类型的代码分离。 它通常使用实现或扩展这些类型的具体类型并包含一系列的注册和接口和抽象类型之间的映射的容器。
 

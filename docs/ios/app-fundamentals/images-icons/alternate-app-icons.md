@@ -1,18 +1,17 @@
 ---
-title: "备用的应用程序图标"
-description: "本文介绍如何在 Xamarin.iOS 中使用备用的应用程序图标。"
-ms.topic: article
+title: 备用的应用程序图标
+description: 本文介绍如何在 Xamarin.iOS 中使用备用的应用程序图标。
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: ff24a1411a7ddf2ca78c7997f1dc37744013ece4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8d9f27d58a881878aabeda4326805eec726c247c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alternate-app-icons"></a>备用的应用程序图标
 
@@ -111,7 +110,7 @@ Apple iOS 10.3，允许管理图标将其应用到添加了几项增强功能：
 
 在使用 Xamarin.iOS 项目中包含图标的图像和**Info.plist**文件正确配置，开发人员可以使用许多新功能添加到 iOS 10.3 之一以控制应用程序的图标。
 
-`SupportsAlternateIcons`属性`UIApplication`类允许开发人员可以查看应用程序是否支持备用图标。 例如:
+`SupportsAlternateIcons`属性`UIApplication`类允许开发人员可以查看应用程序是否支持备用图标。 例如：
 
 ```csharp
 // Can the app select a different icon?
@@ -119,14 +118,14 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-`ApplicationIconBadgeNumber`属性`UIApplication`类允许开发人员在获取或设置当前的应用程序图标的徽章数 Springboard。 默认值为零 (0)。 例如:
+`ApplicationIconBadgeNumber`属性`UIApplication`类允许开发人员在获取或设置当前的应用程序图标的徽章数 Springboard。 默认值为零 (0)。 例如：
 
 ```csharp
 // Set the badge number to 1
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-`AlternateIconName`属性`UIApplication`类允许开发人员可以获取当前所选备用的应用程序图标的名称，或者返回`null`如果应用程序使用主图标。 例如:
+`AlternateIconName`属性`UIApplication`类允许开发人员可以获取当前所选备用的应用程序图标的名称，或者返回`null`如果应用程序使用主图标。 例如：
 
 ```csharp
 // Get the name of the currently selected alternate
@@ -138,7 +137,7 @@ if (name != null ) {
 }
 ```
 
-`SetAlternameIconName`属性`UIApplication`类允许开发人员更改的应用程序图标。 传递的图标以选择的名称或`null`以返回到主图标。 例如:
+`SetAlternameIconName`属性`UIApplication`类允许开发人员更改的应用程序图标。 传递的图标以选择的名称或`null`以返回到主图标。 例如：
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)
@@ -166,7 +165,7 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖向 Xamarin.iOS 项目添加备用的应用程序图标并在应用程序内部使用它们。
 

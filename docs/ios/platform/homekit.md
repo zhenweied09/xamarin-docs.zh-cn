@@ -1,18 +1,17 @@
 ---
 title: HomeKit
-description: "HomeKit 是 Apple 的框架，用于控制主自动化设备。 本文介绍 HomeKit，并介绍 HomeKit 附件模拟器和编写简单的 Xamarin.iOS 应用程序来与这些附件中的配置测试附件。"
-ms.topic: article
+description: HomeKit 是 Apple 的框架，用于控制主自动化设备。 本文介绍 HomeKit，并介绍 HomeKit 附件模拟器和编写简单的 Xamarin.iOS 应用程序来与这些附件中的配置测试附件。
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 5699465330a4d2a5b983ec7661f80c1ed4f14bde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -104,7 +103,7 @@ Apple 提供 HomeKit 附件模拟器作为单独的下载从 Xcode，因此将�
 1. 从应用程序文件夹中，启动 HomeKit 附件模拟器： 
 
     [![](homekit-images/simulator02.png "HomeKit 附件模拟器")](homekit-images/simulator02.png#lightbox)
-2. 单击 **+** 按钮，然后选择**新附件...**: 
+2. 单击**+**按钮，然后选择**新附件...**: 
 
     [![](homekit-images/simulator03.png "添加一个新附件")](homekit-images/simulator03.png#lightbox)
 3. 填写有关新附件的信息并单击**完成**按钮： 

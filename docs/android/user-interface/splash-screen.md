@@ -1,18 +1,17 @@
 ---
-title: "初始屏幕"
-description: "Android 应用程序需要向一些时间才能启动，尤其是应用程序第一次启动时在设备上。 初始屏幕可能会显示开始向上向用户或以指示品牌进度。"
-ms.topic: article
+title: 初始屏幕
+description: Android 应用程序需要向一些时间才能启动，尤其是应用程序第一次启动时在设备上。 初始屏幕可能会显示开始向上向用户或以指示品牌进度。
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="splash-screen"></a>初始屏幕
 
@@ -34,7 +33,7 @@ Android 应用程序需要花费一些时间来启动，特别是在首次运行
 [![示例 Xamarin 徽标初始屏幕跟应用程序屏幕](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南假定该应用程序面向 Android API 级别 15 (Android 4.0.3) 或更高版本。 应用程序还必须具有**Xamarin.Android.Support.v4**和**Xamarin.Android.Support.v7.AppCompat** NuGet 包添加到项目。
 
@@ -155,7 +154,7 @@ public class MainActivity : AppCompatActivity
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论一种方法在 Xamarin.Android 应用程序中; 实现的初始屏幕也就是说，将自定义主题应用于启动活动。
 

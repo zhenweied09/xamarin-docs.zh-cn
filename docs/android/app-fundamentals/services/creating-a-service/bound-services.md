@@ -1,18 +1,17 @@
 ---
-title: "在 Xamarin.Android 中绑定服务"
-description: "绑定的服务是提供一个客户端 （如 Android 的活动） 可以与进行交互的客户端-服务器接口的 Android 服务。 本指南将讨论与创建绑定的服务以及如何在 Xamarin.Android 应用程序中使用它所涉及的关键组件。"
-ms.topic: article
+title: 在 Xamarin.Android 中绑定服务
+description: 绑定的服务是提供一个客户端 （如 Android 的活动） 可以与进行交互的客户端-服务器接口的 Android 服务。 本指南将讨论与创建绑定的服务以及如何在 Xamarin.Android 应用程序中使用它所涉及的关键组件。
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 04307eab1bc8dc28fa69315809e254c920fb6d56
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>在 Xamarin.Android 中绑定服务
 
@@ -34,7 +33,7 @@ _绑定的服务是提供一个客户端 （如 Android 的活动） 可以与�
 
 ![显示每个服务组件之间的关系的关系图](bound-services-images/bound-services-02.png "关系图显示每个服务组件之间的关系。")
 
-本指南将讨论如何扩展`Service`类以实现绑定的服务。 它还将介绍实现`IServiceConnection`和扩展`Binder`允许客户端与服务进行通信。 示例应用程序附带本指南中，其中包含一个名为的单个 Xamarin.Android 项目与解决方案 **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)**  。 这是一个非常基本的应用程序，其演示了如何实现服务以及如何将活动绑定到它。 绑定的服务具有只有一个方法具有非常简单的 API `GetFormattedTimestamp`，这将返回一个字符串，告知用户，当服务已开始时，多长时间运行。 该应用还让用户手动取消绑定和绑定到服务。
+本指南将讨论如何扩展`Service`类以实现绑定的服务。 它还将介绍实现`IServiceConnection`和扩展`Binder`允许客户端与服务进行通信。 示例应用程序附带本指南中，其中包含一个名为的单个 Xamarin.Android 项目与解决方案**[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** 。 这是一个非常基本的应用程序，其演示了如何实现服务以及如何将活动绑定到它。 绑定的服务具有只有一个方法具有非常简单的 API `GetFormattedTimestamp`，这将返回一个字符串，告知用户，当服务已开始时，多长时间运行。 该应用还让用户手动取消绑定和绑定到服务。
 
 [![在 Android 手机上运行的应用程序的屏幕截图](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 

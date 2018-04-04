@@ -1,18 +1,17 @@
 ---
-title: "Android 平台的详细信息"
-description: "平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。 本文演示如何使用 Android 平台的详细信息，它们构建于 Xamarin.Forms。"
-ms.topic: article
+title: Android 平台的详细信息
+description: 平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。 本文演示如何使用 Android 平台的详细信息，它们构建于 Xamarin.Forms。
 ms.prod: xamarin
 ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-platform-specifics"></a>Android 平台的详细信息
 
@@ -246,7 +245,7 @@ Xamarin.Forms.Application.Current.On<Android>()
 
 [![](android-images/keyboard-on-resume.png "生命周期事件特定于平台的")](android-images/keyboard-on-resume-large.png#lightbox "生命周期事件特定于平台的")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Android 平台的详细信息，它们构建于 Xamarin.Forms。 平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。
 

@@ -1,18 +1,17 @@
 ---
-title: "使用 Razor 模板生成 HTML 视图"
+title: 使用 Razor 模板生成 HTML 视图
 description: " 使用全屏网页呈现 HTML 可能是一种简单而有效的方法来呈现复杂格式设置，以跨平台的方式，尤其是如果你已有的 HTML、 Javascript 和 CSS 从网站项目。"
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5c69b8e71cac5d9f0385728ca75a5f311cb24fc0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>使用 Razor 模板生成 HTML 视图
 
@@ -186,7 +185,7 @@ var js = "alert('test');";
 webView.EvaluateJavascript (js);
 ```
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>总结
 
 本部分中引入了在 Android 和 iOS，让我们构建使用 Xamarin，混合应用程序上的 web 视图控件的功能包括：
 
@@ -510,7 +509,7 @@ HTML 可以大幅提高原型制作的显示几种 web 最好在例如多格式�
 
  ![RazorNativeTodo](images/BothNative_700x290.png)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文讲述了一些可用的 web 视图控件的功能在 iOS 和 Android 中有助于构建混合应用程序。
 

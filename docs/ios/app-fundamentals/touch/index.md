@@ -1,18 +1,17 @@
 ---
-title: "触摸"
-description: "许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测 – 可以使用手势以及。 例如，捏合缩放手势是很常见的示例 – 挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南将检查触控和手势在 iOS 中。"
-ms.topic: article
+title: 触摸
+description: 许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测 – 可以使用手势以及。 例如，捏合缩放手势是很常见的示例 – 挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南将检查触控和手势在 iOS 中。
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: b0e1cf8b1cb18982fe319fef7c524aeb70be4a9b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="touch"></a>触摸
 

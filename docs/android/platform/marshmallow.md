@@ -1,18 +1,17 @@
 ---
-title: "Marshmallow 功能"
-description: "本文可帮助你开始使用 Xamarin.Android 开发 Android 6.0 Marshmallow 的应用中使用。"
-ms.topic: article
+title: Marshmallow 功能
+description: 本文可帮助你开始使用 Xamarin.Android 开发 Android 6.0 Marshmallow 的应用中使用。
 ms.prod: xamarin
 ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c9ff9eb0b8d013485f0437d470ec49f1c1795d7a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2150e18a377d61a2e79fabfc845f57cfab8a5c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="marshmallow-features"></a>Marshmallow 功能
 
@@ -56,7 +55,7 @@ Xamarin.Android 支持 Android Marshmallow，包括：
 
 此外，与 Android Marshmallow 已发布了许多核心 Android 库更新并且这些更新为 Android Marshmallow 和早期版本的 Android 提供新功能。 此文章介绍了如何开始构建使用 Android Marshmallow 应用并且它提供在 Android 6.0 中突出显示的新功能的概述。 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需基于 Xamarin 的应用中使用新的 Android Marshmallow 功能： 
 
@@ -274,7 +273,7 @@ Xamarin 提供的示例应用程序演示 Xamarin.Android 上的新 Android 设�
 -   [Android Wearable 库](https://www.nuget.org/packages/Xamarin.Android.Wear)&ndash;此 NuGet 包括 Google Play 服务绑定。 Wearable 库的最新版本对 Android 磨损平台提供了新功能 （包括用于自定义的应用程序更易于导航）。 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入 Android Marshmallow 并且说明了如何安装和 Marshmallow 上配置的最新的工具和 Xamarin.Android 开发的包。 它还提供用于 Xamarin.Android 开发了最令人兴奋的新 Android Marshmallow 功能的概述。
 

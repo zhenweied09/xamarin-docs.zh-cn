@@ -1,18 +1,17 @@
 ---
-title: "iOS 设计器基础知识"
-description: "本指南介绍了 Xamarin 设计器中为 iOS。 它演示了如何使用 iOS 设计器直观地控件进行布局、 如何访问这些控件在代码中，以及如何编辑属性。"
-ms.topic: article
+title: iOS 设计器基础知识
+description: 本指南介绍了 Xamarin 设计器中为 iOS。 它演示了如何使用 iOS 设计器直观地控件进行布局、 如何访问这些控件在代码中，以及如何编辑属性。
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/31/2018
-ms.openlocfilehash: a2445e49005175f62e4d7cd8aadccb5f596177bf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7e36a402619813214e821f3060e053d76c99cfb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-designer-basics"></a>iOS 设计器基础知识
 
@@ -20,7 +19,7 @@ _本指南介绍了 Xamarin 设计器中为 iOS。它演示了如何使用 iOS �
 
 Xamarin 设计器中为 iOS 是类似于 Xcode 的接口生成器的可视界面设计器和 Android 的设计器。 一些其许多功能包括与 Visual Studio for Mac 和 Visual Studio 2015 和自 2017 年、 拖放编辑、 设置事件处理程序的接口和的功能来呈现自定义控件的无缝集成。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 IOS 设计器是适用于 Mac 的 Visual Studio 中，在 Visual Studio 2015 和 2017年可用，在 Windows 上。 在 Visual Studio 2015 或自 2017 年 1 中，iOS 设计器必须连接到已正确配置的 Mac 生成主机，但 Xcode 需要未运行。
 
@@ -478,7 +477,7 @@ IOS 设计器支持创建、 编辑和管理.xib 文件。 这些是该表示单
 
 这和其他 iOS 设计器相关指南是指用于生成用户界面，由于大多数 Xamarin.iOS 新项目模板提供情节提要，默认情况下，将情节提要用作标准的方法。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南提供对 iOS 设计器中，用于描述它的功能并将以大纲方式显示的工具，它提供用于设计精美用户界面的介绍。
 

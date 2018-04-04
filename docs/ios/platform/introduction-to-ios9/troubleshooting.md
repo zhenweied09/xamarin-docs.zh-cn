@@ -1,18 +1,17 @@
 ---
-title: "疑难解答"
-description: "本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示。"
-ms.topic: article
+title: 疑难解答
+description: 本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示。
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 
@@ -137,7 +136,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 ## <a name="untrusted-enterprise-developer"></a>不受信任的企业开发人员
 
-当尝试在实际 iOS 硬件上运行你的 Xamarin.iOS 应用程序的 iOS 9 版本，你可能会收到一条消息指出在设备上开发人员帐户不受信任。 例如:
+当尝试在实际 iOS 硬件上运行你的 Xamarin.iOS 应用程序的 iOS 9 版本，你可能会收到一条消息指出在设备上开发人员帐户不受信任。 例如：
 
 [![](troubleshooting-images/untrusted01.png "不受信任的企业开发人员警报")](troubleshooting-images/untrusted01.png#lightbox)
 
@@ -150,7 +149,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 3. 下**设备**端面板中，选择你的设备，右键单击并选择**显示预配配置文件...**: 
 
     [![](troubleshooting-images/untrusted03.png "SShow 预配配置文件")](troubleshooting-images/untrusted03.png#lightbox)
-4. 选择当前在该设备，然后单击每个预配配置文件 **-** 按钮以将其删除： 
+4. 选择当前在该设备，然后单击每个预配配置文件**-**按钮以将其删除： 
 
     [![](troubleshooting-images/untrusted04.png "删除预配配置文件")](troubleshooting-images/untrusted04.png#lightbox)
 5. 从**Xcode**菜单上，选择**首选项...**和**帐户**: 

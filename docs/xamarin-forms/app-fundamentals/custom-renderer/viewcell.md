@@ -1,18 +1,17 @@
 ---
-title: "自定义 ViewCell"
-description: "Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。 本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。 这将停止从正在 Xamarin.Forms 布局计算在 ListView 滚动过程中重复调用。"
-ms.topic: article
+title: 自定义 ViewCell
+description: Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。 本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。 这将停止从正在 Xamarin.Forms 布局计算在 ListView 滚动过程中重复调用。
 ms.prod: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 9e980dd428ec0efab8578a25f9191dbc71bbaf6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 
@@ -567,7 +566,7 @@ namespace CustomRenderer.WinPhone81
 
 `DataTemplate`指定用来显示该单元格，及其布局和外观的内容的控件。 两个`TextBlock`控件和`Image`控件用于显示通过数据绑定的单元格的内容。 此外，实例`ConcatImageExtensionConverter`用于串联`.jpg`文件扩展名为每个图像文件名称。 这样可确保`Image`控件可以加载并呈现图像时`Source`属性设置。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建自定义呈现器[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 内承载[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件。 这将停止被反复调用期间的 Xamarin.Forms 布局计算`ListView`滚动。
 

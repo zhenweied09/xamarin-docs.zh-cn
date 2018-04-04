@@ -1,18 +1,17 @@
 ---
-title: "本机窗体"
-description: "本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 本机项目可以使用直接添加到项目中，或从可移植类库 (PCL)、.NET 标准库时或共享项目的内容页派生的页。 此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。"
-ms.topic: article
+title: 本机窗体
+description: 本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 本机项目可以使用直接添加到项目中，或从可移植类库 (PCL)、.NET 标准库时或共享项目的内容页派生的页。 此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-forms"></a>本机窗体
 
@@ -348,7 +347,7 @@ void OnNavigated(object sender, NavigationEventArgs e)
 
 在 UWP 上后退导航支持的详细信息，请参阅[导航历史记录和向后导航适用于 UWP 应用](/windows/uwp/design/basics/navigation-history-and-backwards-navigation/)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本机窗体允许 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页将使用的本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 可以使用本机项目`ContentPage`-派生直接添加到项目中，或从 PCL、.NET 标准库时或共享项目的页面。 本文介绍了如何使用`ContentPage`-派生直接添加到本机项目，以及如何在它们之间导航的页。
 

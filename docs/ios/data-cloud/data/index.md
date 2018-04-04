@@ -1,18 +1,17 @@
 ---
-title: "iOS 数据访问"
-description: "大多数应用程序具有一些要求将数据保存在本地设备上。 除非是非常小的数据量，这通常需要一个数据库和数据层应用程序管理数据库的访问权限中。 iOS SQLite 数据库引擎\"内置\"，由 Xamarin 的平台简化访问存储和检索数据。 本文档演示如何访问 SQLite 数据库。"
-ms.topic: article
+title: iOS 数据访问
+description: 大多数应用程序具有一些要求将数据保存在本地设备上。 除非是非常小的数据量，这通常需要一个数据库和数据层应用程序管理数据库的访问权限中。 iOS SQLite 数据库引擎"内置"，由 Xamarin 的平台简化访问存储和检索数据。 本文档演示如何访问 SQLite 数据库。
 ms.prod: xamarin
 ms.assetid: 3AEDFD8D-FB10-4CEF-BE04-CCD14E95F02C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 6dba862055cc266b2af1eaf87418fe7ebf5830c5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 47f2567d81f61568aad639330dc5133856e31936
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-data-access"></a>iOS 数据访问
 
@@ -43,7 +42,7 @@ Xamarin.iOS 支持数据库访问 Api，如：
 -  [在应用中使用数据](using-data-in-an-app.md)
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这一章讨论中使用 SQLite 作为数据库引擎的 Xamarin.iOS 的数据访问。 可以使用 ADO.NET 语法"直接"访问该数据库或可以包括 SQLite.NET ORM 和用 C# 执行数据操作。
 

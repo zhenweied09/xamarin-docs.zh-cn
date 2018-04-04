@@ -1,18 +1,17 @@
 ---
 title: CallKit
-description: "本文介绍如何新 CallKit API，Apple 在 iOS 10 以及如何在 Xamarin.iOS VOIP 的应用程序中实现它中发布。"
-ms.topic: article
+description: 本文介绍如何新 CallKit API，Apple 在 iOS 10 以及如何在 Xamarin.iOS VOIP 的应用程序中实现它中发布。
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: cf519cb964bf852c74249c874b9a934d4a6cf5c3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 67c761aa6656b571f16632dd1a076ff11737a424
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="callkit"></a>CallKit
 
@@ -1261,7 +1260,7 @@ namespace MonkeyCallDirExtension
 若要通知的已知 VOIP 应用程序的联系号码联系应用程序到，使用`AddIdentificationEntry`方法`CXCallDirectoryExtensionContext`类并提供了数和标识标签。 同样，为方法提供的数字_必须_是按数字升序排序。 为获得最佳性能和内存使用情况时有许多电话号码，请考虑仅在给定时间加载的数字子集并使用 autorelease 池释放在每个批的数字加载过程中分配的对象。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖新 CallKit API，Apple 在 iOS 10 以及如何在 Xamarin.iOS VOIP 的应用程序中实现它中发布。 它介绍了如何 CallKit 允许应用将集成到 iOS 系统、 如何提供内置应用 （如电话） 功能奇偶校验和方式，它会增加整个位置锁和主页屏幕，例如通过使用 Siri 交互和通过中的 iOS 应用的可见性联系人应用中。
 

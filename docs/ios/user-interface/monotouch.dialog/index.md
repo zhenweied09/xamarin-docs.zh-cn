@@ -1,17 +1,16 @@
 ---
-title: "MonoTouch.Dialog 简介"
-description: "MonoTouch.Dialog （保持联系D） 工具包是必不可少的框架，用于快速应用程序 UI 中 Xamarin.iOS 的开发。 保持联系D 可以快速、 轻松地定义复杂的应用程序使用的声明性方法，而不是内容的导航控制器、 表等麻烦的 UI。此外，保持联系D 具有灵活的一组 Api，开发人员提供一个完整的控件或将消息的方法，以及其他功能，例如加载请求刷新背景图像，请搜索支持和 JSON 数据通过动态 UI 生成。 本指南介绍使用保持联系的不同方式D，然后深层深入高级用法。"
-ms.topic: article
+title: MonoTouch.Dialog 简介
+description: MonoTouch.Dialog （保持联系D） 工具包是必不可少的框架，用于快速应用程序 UI 中 Xamarin.iOS 的开发。 保持联系D 可以快速、 轻松地定义复杂的应用程序使用的声明性方法，而不是内容的导航控制器、 表等麻烦的 UI。此外，保持联系D 具有灵活的一组 Api，开发人员提供一个完整的控件或将消息的方法，以及其他功能，例如加载请求刷新背景图像，请搜索支持和 JSON 数据通过动态 UI 生成。 本指南介绍使用保持联系的不同方式D，然后深层深入高级用法。
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>MonoTouch.Dialog 简介
 
@@ -114,7 +113,7 @@ A *RootElement*是进入 DVC 的项的顶级容器。 它包含部分，然后�
 
  [![](images/image4.png "与包含详细信息屏幕右侧，餐后甜点，与所选 desert 的值一起的标题单元格左侧此屏幕截图显示了一个表")](images/image4.png#lightbox) [ ![ ](images/image5.png "这与包含详细信息屏幕右侧，餐后甜点，与所选 desert 的值一起的标题单元格左侧以下屏幕截图显示了一个表")](images/image5.png#lightbox)
 
-根元素可以还可用于在部分内触发正在加载新的嵌套的配置页，如上所示。 在此模式下使用时提供的标题在节内在呈现时使用，并还用作标题子页。 例如:
+根元素可以还可用于在部分内触发正在加载新的嵌套的配置页，如上所示。 在此模式下使用时提供的标题在节内在呈现时使用，并还用作标题子页。 例如：
 
 ```csharp
 var root = new RootElement ("Meals") {
@@ -578,7 +577,7 @@ public override Source CreateSizingSource (bool unevenRows)
 
 如何通知用户是错误的特定于应用程序。 无法弹出`UIAlertView`或显示提示。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了大量的 MonoTouch.Dialog 有关的信息。 它讨论如何的基础知识保持联系D 配合使用和涵盖各种组件构成了保持联系D。 它还介绍了多种不同的元素和表的自定义项受保持联系D 和讨论如何保持联系D 可以用自定义元素扩展。 此外，它所述中保持联系的 JSON 支持允许从 JSON 动态创建元素的 D。
 

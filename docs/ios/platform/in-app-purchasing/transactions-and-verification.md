@@ -1,17 +1,16 @@
 ---
-title: "事务和验证"
-ms.topic: article
+title: 事务和验证
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="transactions-and-verification"></a>事务和验证
 
@@ -212,7 +211,7 @@ Base64 编码的事务回执数据 （不管是在步骤 #5 或 6）。
 }
 ```
 
-HTTP POST 到 JSON [https://buy.itunes.apple.com/verifyReceipt](https://buy.itunes.apple.com/verifyReceipt)用于生产或[https://sandbox.itunes.apple.com/verifyReceipt](https://sandbox.itunes.apple.com/verifyReceipt)用于测试。   
+HTTP POST 到 JSON [ https://buy.itunes.apple.com/verifyReceipt ](https://buy.itunes.apple.com/verifyReceipt)用于生产或[ https://sandbox.itunes.apple.com/verifyReceipt ](https://sandbox.itunes.apple.com/verifyReceipt)用于测试。   
    
  JSON 响应将包含以下项：
 

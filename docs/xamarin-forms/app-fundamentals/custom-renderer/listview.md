@@ -1,18 +1,17 @@
 ---
-title: "自定义 ListView"
-description: "Xamarin.Forms ListView 是作为垂直列表中显示的数据集合的视图。 本文演示如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控件的性能。"
-ms.topic: article
+title: 自定义 ListView
+description: Xamarin.Forms ListView 是作为垂直列表中显示的数据集合的视图。 本文演示如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控件的性能。
 ms.prod: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: eb4cf0285585351db5c45dc34a382236e6805c99
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-listview"></a>自定义 ListView
 
@@ -558,7 +557,7 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 
 该方法重新填充本机`ListView`控件的已更改的数据，提供的可绑定`NativeListView.Items`属性已更改。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控件的性能。
 

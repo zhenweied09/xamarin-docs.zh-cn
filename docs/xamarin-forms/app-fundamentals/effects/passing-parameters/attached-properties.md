@@ -1,18 +1,17 @@
 ---
-title: "传递效果参数作为附加的属性"
-description: "附加的属性可用来定义响应运行时属性更改的效果参数。 本文演示如何使用附加的属性将参数传递给起作用，以及更改在运行时参数。"
-ms.topic: article
+title: 传递效果参数作为附加的属性
+description: 附加的属性可用来定义响应运行时属性更改的效果参数。 本文演示如何使用附加的属性将参数传递给起作用，以及更改在运行时参数。
 ms.prod: xamarin
 ms.assetid: DFCDCB9F-17DD-4117-BD53-B4FB206BB387
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02929c49d9757f0814208d5f4fce7d258a689bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>传递效果参数作为附加的属性
 
@@ -427,7 +426,7 @@ public class LabelShadowEffect : PlatformEffect
 
 `OnElementPropertyChanged`方法将更新的颜色或阴影，偏移量提供的相应`ShadowEffect`附加的属性值已更改。 更改的属性应始终会进行检查，如可以多次调用此重写。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了使用附加的属性将参数传递给起作用，以及更改在运行时参数。 附加的属性可用来定义响应运行时属性更改的效果参数。
 

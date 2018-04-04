@@ -1,18 +1,17 @@
 ---
-title: "IOS 7 简介"
-description: "本文介绍如何在 iOS 7，包括视图控制器转换，UIView 动画，UIKit Dynamics 和文本工具包的增强功能中引入的主要新 Api。 它还介绍了一些更改其用户界面和新的增强多任务功能。"
-ms.topic: article
+title: IOS 7 简介
+description: 本文介绍如何在 iOS 7，包括视图控制器转换，UIView 动画，UIKit Dynamics 和文本工具包的增强功能中引入的主要新 Api。 它还介绍了一些更改其用户界面和新的增强多任务功能。
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a7bebc2b73ecb564028a92340c726bd5c1f1c54b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ae82eba78f099f675d21bf53a250923630a0ff6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-7"></a>IOS 7 简介
 
@@ -237,7 +236,7 @@ iOS 7 更改何时以及如何执行后台工作。 完成任务在 iOS 7 中的
 
 有关新的多任务功能的详细信息，请参阅 Xamarin iOS 部分[Backgrounding 指南](~/ios/app-fundamentals/backgrounding/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍几个主要新添加的内容到 iOS。 首先，它演示如何将自定义转换添加到视图控制器。 然后，它演示如何使用在集合视图中，同时从内的导航控制器，以及以交互方式集合视图之间的转换。 接下来，它引入了对 UIView 动画，显示应用程序如何使用 UIKit 的以前需要执行针对核心动画直接编程的操作所做的几项增强功能。 最后，新 UIKit Dynamics API，这将向 UIKit 提供物理引擎，是与文本工具包框架中当前可用的多格式文本支持一起引入的。
 

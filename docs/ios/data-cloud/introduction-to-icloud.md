@@ -1,18 +1,17 @@
 ---
 title: iCloud
-description: "Apple 引入在 iOS 5 中的 iCloud 了作为服务以允许应用程序在 Apple 的服务器上存储数据并让它在由同一个人 （通过其 Apple ID) 的所有设备上同步。 它还具有一个备份的组件，其中你的设备上的数据是备份到 Apple 的服务器。 本文档介绍如何使用某些 iCloud apple 提供 Api 来存储和从其服务器，但 C# 示例用于存储较小的键 / 值数据对以及用于存储文档中检索数据。 它还介绍了如何 iCloud 备份可能会影响你的应用程序的设计。"
-ms.topic: article
+description: Apple 引入在 iOS 5 中的 iCloud 了作为服务以允许应用程序在 Apple 的服务器上存储数据并让它在由同一个人 （通过其 Apple ID) 的所有设备上同步。 它还具有一个备份的组件，其中你的设备上的数据是备份到 Apple 的服务器。 本文档介绍如何使用某些 iCloud apple 提供 Api 来存储和从其服务器，但 C# 示例用于存储较小的键 / 值数据对以及用于存储文档中检索数据。 它还介绍了如何 iCloud 备份可能会影响你的应用程序的设计。
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -32,7 +31,7 @@ _Apple 引入在 iOS 5 中的 iCloud 了作为服务以允许应用程序在 App
 
 本文档讨论的前两个类型的键 / 值对和 UIDocument 子类-以及如何在 Xamarin.iOS 中使用这些功能。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 - Xamarin.iOS 最新稳定版本
 - Xcode 8 或更高版本
@@ -422,7 +421,7 @@ Apple 提供[iOS 数据存储准则](http://developer.apple.com/icloud/documenta
 
 存储大量类似的数据的应用程序应要么将其存储在一个备份 （如不是用户目录 缓存或 tmp） 或使用`NSFileManager.SetSkipBackupAttribute`要应用于这些文件的一个标志，以便 iCloud 备份操作过程中忽略它们。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入了新的 iCloud 功能包含在 iOS 5。 它会检查配置项目以使用 iCloud 所必需的然后提供如何实现 iCloud 功能的示例的步骤。
 

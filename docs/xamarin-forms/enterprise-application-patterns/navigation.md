@@ -1,17 +1,16 @@
 ---
-title: "导航"
-ms.topic: article
+title: 导航
 ms.prod: xamarin
 ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ec91a7c100f294437bb1498fcd56a35f5b19c399
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: aa2e2858e3bb8e435ec3f38bb3d5b249eaa6cba4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="navigation"></a>导航
 
@@ -299,7 +298,7 @@ private async Task NavigateAsync(string url)
 
 应用程序可能需要与用户交互在导航操作中，以便用户可以确认或取消导航。 这可能是有必要，例如，当用户尝试在之前已完全完成数据进入页导航。 在此情况下，应用程序应提供通知，它允许用户导航离开页面，或者它发生之前取消导航操作。 这可以通过在视图模型类中使用来自通知的响应来控制调用导航。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 包括页面导航、 从用户界面时，用户的交互或从该应用程序自身，由于进行了逻辑驱动的内部状态更改时，通常会对支持。 但是，导航非常复杂，无法使用 MVVM 模式应用程序中实现。
 

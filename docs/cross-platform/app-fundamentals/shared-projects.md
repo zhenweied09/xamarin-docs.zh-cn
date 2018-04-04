@@ -1,18 +1,17 @@
 ---
-title: "共享的项目"
-description: "共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。 该代码编译为每个引用的项目的一部分，并可以包含有助于将特定于平台的功能合并到基本共享的代码的编译器指令。"
-ms.topic: article
+title: 共享的项目
+description: 共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。 该代码编译为每个引用的项目的一部分，并可以包含有助于将特定于平台的功能合并到基本共享的代码的编译器指令。
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e77c5653171ec6c69608858805de28843fc0db56
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7d5a25c3c6f2889bde0ff4aeaf85053bcc796fb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="shared-projects"></a>共享的项目
 
@@ -171,7 +170,7 @@ Windows Phone 项目可以进行导航从 Visual Studio 中适用于 Mac，即�
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档描述如何共享项目的工作，可以如何创建和适用于 Mac 的 Visual Studio 和 Visual Studio 中使用它们，并引入的简单示例应用程序演示操作中的共享项目。
 

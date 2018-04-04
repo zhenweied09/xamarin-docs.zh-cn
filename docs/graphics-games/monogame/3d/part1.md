@@ -1,18 +1,17 @@
 ---
-title: "使用模型类"
-description: "模型类极大地简化了呈现复杂三维对象相比呈现 3D 图形的传统方法时。 从内容文件，允许进行简单集成的不包含自定义代码的内容创建模型对象。"
-ms.topic: article
+title: 使用模型类
+description: 模型类极大地简化了呈现复杂三维对象相比呈现 3D 图形的传统方法时。 从内容文件，允许进行简单集成的不包含自定义代码的内容创建模型对象。
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: dd0f97f450d131bcbddff43ffc778b91bff6b12e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 871e4b1ad058dd97635dab228522620850b229b7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-model-class"></a>使用模型类
 
@@ -270,7 +269,7 @@ void DrawModel(Vector3 modelPosition)
 ![](part1-images/image1.png "这会导致机器人所绘制六倍的模型")
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练介绍了 MonoGame 的`Model`类。 它涵盖了将.fbx 文件转换为.xnb，这可以反过来加载到`Model`类。 它还演示如何修改`BasicEffect`实例可能会影响`Model`绘制。
 

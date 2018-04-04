@@ -1,18 +1,17 @@
 ---
-title: "手动相机控件"
-description: "AVFoundation Framework 使比前所未有的用户才能很棒的照片手动相机上的控制，从而更容易。 使用此框架，应用程序可能需要对相机焦点、 白色平衡和公开设置的直接控制。 应用程序也可以使用括在括号中的公开捕获自动捕获映像具有不同的曝光度设置。 本文需要快速了解一下使用简单 iOS 8 移动应用程序中的手动相机控件。"
-ms.topic: article
+title: 手动相机控件
+description: AVFoundation Framework 使比前所未有的用户才能很棒的照片手动相机上的控制，从而更容易。 使用此框架，应用程序可能需要对相机焦点、 白色平衡和公开设置的直接控制。 应用程序也可以使用括在括号中的公开捕获自动捕获映像具有不同的曝光度设置。 本文需要快速了解一下使用简单 iOS 8 移动应用程序中的手动相机控件。
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f11305fcbf8a5b9bf6552fa31ecfa1c0e8e7a68f
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8545dce1b9232e396c4c9e71ad5f20649eef2417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="manual-camera-controls"></a>手动相机控件
 

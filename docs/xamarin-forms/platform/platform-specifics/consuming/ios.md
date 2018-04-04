@@ -1,18 +1,17 @@
 ---
-title: "iOS 平台细节"
-description: "平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。 本文演示如何使用 iOS 平台的细节，它们构建于 Xamarin.Forms。"
-ms.topic: article
+title: iOS 平台细节
+description: 平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。 本文演示如何使用 iOS 平台的细节，它们构建于 Xamarin.Forms。
 ms.prod: xamarin
 ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/16/2017
-ms.openlocfilehash: 798bb2b15534a620acbe76080e171af1a548ac25
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7826962cd3bf9595a63841e3f2d9fb377d1a0574
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台细节
 
@@ -470,7 +469,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 [![](ios-images/scrollview-delay-content-touches.png "ScrollView 延迟内容涉及特定于平台的")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 iOS 平台的细节，它们构建于 Xamarin.Forms。 平台细节，可以使用提供功能，仅在特定平台上，而无需实现自定义呈现器或效应。
 

@@ -1,18 +1,17 @@
 ---
-title: "使用拆分视图控制器"
-description: "本文介绍如何设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。"
-ms.topic: article
+title: 使用拆分视图控制器
+description: 本文介绍如何设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-split-view-controllers"></a>使用拆分视图控制器
 
@@ -103,7 +102,7 @@ Apple 具有以下建议用于使用拆分视图控制器：
 
 ### <a name="accessing-master-and-detail"></a>访问 Master 和详细信息
 
-如果你需要以编程方式访问 Master 和详细信息视图控制器，请使用`ViewControllers `拆分视图控制器的属性。 例如:
+如果你需要以编程方式访问 Master 和详细信息视图控制器，请使用`ViewControllers `拆分视图控制器的属性。 例如：
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -125,7 +124,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-在拆分视图控制器，重写`ViewDidLoad`方法和关系的两个视图在一起。 例如:
+在拆分视图控制器，重写`ViewDidLoad`方法和关系的两个视图在一起。 例如：
 
 ```csharp
 public override void ViewDidLoad ()
@@ -149,7 +148,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>显示和隐藏母版
 
-（可选） 你可以显示和隐藏母版视图控制器使用`PreferredDisplayMode`拆分视图控制器的属性。 例如:
+（可选） 你可以显示和隐藏母版视图控制器使用`PreferredDisplayMode`拆分视图控制器的属性。 例如：
 
 ```csharp
 // Show hide split view
@@ -171,7 +170,7 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。
 

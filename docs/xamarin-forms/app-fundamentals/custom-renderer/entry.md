@@ -1,18 +1,17 @@
 ---
-title: "自定义项"
-description: "Xamarin.Forms 进入控制允许单个行要编辑的文本。 本文演示如何创建自定义呈现器对于条目控件，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。"
-ms.topic: article
+title: 自定义项
+description: Xamarin.Forms 进入控制允许单个行要编辑的文本。 本文演示如何创建自定义呈现器对于条目控件，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0fe7aa2316abaae33da753e99a6f2eca4870d2d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-an-entry"></a>自定义项
 
@@ -204,7 +203,7 @@ namespace CustomRenderer.WinPhone81
 
 调用基类的`OnElementChanged`方法实例化`TextBox`具有对分配给的呈现器控件的引用控件`Control`属性。 背景色设置为青色通过创建`SolidColorBrush`实例。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建 Xamarin.Forms 自定义控件呈现器[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)控件，使开发人员能够重写默认本机呈现了其自己的特定于平台的呈现。 自定义呈现器提供强大的自定义 Xamarin.Forms 控件的外观的方法。 它们可以用于小样式更改或复杂的特定于平台的布局和行为自定义项。
 

@@ -1,18 +1,17 @@
 ---
-title: "添加捏合手势识别器"
-description: "捏合手势用于执行交互式缩放，并与 PinchGestureRecognizer 类实现。 捏合手势的一个常见方案是映像的执行交互式缩放比例为捏合位置。 这通过缩放内容的视区中，来实现，这篇文章中所示。"
-ms.topic: article
+title: 添加捏合手势识别器
+description: 捏合手势用于执行交互式缩放，并与 PinchGestureRecognizer 类实现。 捏合手势的一个常见方案是映像的执行交互式缩放比例为捏合位置。 这通过缩放内容的视区中，来实现，这篇文章中所示。
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 38e46af1d928a3d4e5dc33e2a46fe04cd169ed60
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f8f81418cf5284b288f29fd2363b6b8f2d9d5fdd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>添加捏合手势识别器
 
@@ -162,7 +161,7 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 
 此方法将更新基于用户的捏合手势已包装的用户界面元素的缩放的级别。 这通过使用的值来实现[ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale/)， [ `ScaleOrigin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin/)和[ `Status` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Status/)属性[ `PinchGestureUpdatedEventArgs`](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureUpdatedEventArgs/)要计算的比例因子捏合手势原点应用实例。 已包装的用户元素然后放大捏合手势原点通过设置其[ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)， [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)，和[ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/)为计算的值的属性。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 捏合手势用于执行交互式缩放并实现与[ `PinchGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/)类。
 

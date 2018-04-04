@@ -1,24 +1,23 @@
 ---
-title: "用户界面"
-description: "创建用户界面的 Xamarin.Android 应用程序"
-ms.topic: article
+title: 用户界面
+description: 创建用户界面的 Xamarin.Android 应用程序
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 40d02def5c0aae3334ae59cec78f6d22a1d5d772
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>用户界面
 
 以下各节介绍各种工具和用于组成 Xamarin.Android 应用中的用户界面的构建基块。
 
-## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android 设计器](~/android/user-interface/android-designer/index.md)
+## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
 本部分说明如何使用 Android 设计器直观地布局控件和编辑属性。 它还说明了如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。
 

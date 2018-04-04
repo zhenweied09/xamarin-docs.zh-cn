@@ -1,7 +1,6 @@
 ---
-title: "Oreo 功能"
-description: "如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的应用。"
-ms.topic: article
+title: Oreo 功能
+description: 如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的应用。
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
@@ -9,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 03be7b624ffa9dd8774f291b96be27499cccab2b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="oreo-features"></a>Oreo 功能
 
@@ -26,7 +25,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
 本文旨在帮助你开始开发 Android 8.0 Oreo Xamarin.Android 应用中。 它还说明了如何安装所需更新、 配置 SDK，并为测试中创建的仿真程序 （或设备）。 它还提供指向示例应用演示如何在 Xamarin.Android 应用程序中使用 Android Oreo 功能 Android 8.0 Oreo 中的新功能的概述。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下被需要使用 Android Oreo 功能基于 Xamarin 的应用中：
 
@@ -358,7 +357,7 @@ Android Oreo 包括各种系统和现有应用的功能造成的影响的 API �
 **使用 C# 的 android 8.0 Oreo 开发**
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入 Android Oreo 并且说明了如何安装和在 Android Oreo 上配置的最新的工具和 Xamarin.Android 开发的包。 它提供了 Android Oreo 中可用的关键功能的概述，链接到示例源代码几项新功能。 它包含 API 文档的链接和 Android 开发人员主题来帮助你开始创建应用程序 Android Oreo 中。 它也突出显示可能会影响现有应用的最重要的 Android Oreo 行为更改。
 

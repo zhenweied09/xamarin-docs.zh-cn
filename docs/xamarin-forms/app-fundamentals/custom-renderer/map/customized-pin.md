@@ -1,18 +1,17 @@
 ---
-title: "自定义地图 Pin"
-description: "本文演示如何创建自定义呈现器地图控件，每个平台上将显示自定义的 pin 与 pin 数据的自定义的视图的本机映射。"
-ms.topic: article
+title: 自定义地图 Pin
+description: 本文演示如何创建自定义呈现器地图控件，每个平台上将显示自定义的 pin 与 pin 数据的自定义的视图的本机映射。
 ms.prod: xamarin
 ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 312bda44a6b390c6ba486d5a3d60dfe4fb770a2e
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-map-pin"></a>自定义地图 Pin
 
@@ -33,7 +32,7 @@ Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的
 每个项将现在讨论反过来，若要实现`CustomMap`具有自定义的 pin 和固定数据的自定义的视图的本机映射显示每个平台的呈现器。
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅[ `Maps Control` ](~/xamarin-forms/user-interface/map.md)。
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)。
 
 <a name="Creating_the_Custom_Map" />
 

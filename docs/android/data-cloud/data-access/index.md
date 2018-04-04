@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Android 数据访问"
-description: "大多数应用程序具有一些要求将数据保存在本地设备上。 除非是非常小的数据量，这通常需要一个数据库和数据层应用程序管理数据库的访问权限中。  Android 有内置 SQLite 数据库引擎和 Xamarin 的平台由简化访问存储和检索数据。 本文档演示如何以跨平台方式访问的 SQLite 数据库。"
-ms.topic: article
+title: Xamarin.Android 数据访问
+description: 大多数应用程序具有一些要求将数据保存在本地设备上。 除非是非常小的数据量，这通常需要一个数据库和数据层应用程序管理数据库的访问权限中。  Android 有内置 SQLite 数据库引擎和 Xamarin 的平台由简化访问存储和检索数据。 本文档演示如何以跨平台方式访问的 SQLite 数据库。
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 301c4330afe6ff7808ca7b09f6cc5260517aae43
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 508a8f54723bfdd30b1c8ea8d4b6c1d422ae24e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-data-access"></a>Xamarin.Android 数据访问
 

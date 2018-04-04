@@ -1,18 +1,17 @@
 ---
-title: "将数据添加到了选取器的项集合"
-description: "选取器视图是用于从数据的列表中选择文本项的控件。 此文章介绍了如何通过将其添加到项集合填充了选取器数据以及如何响应用户的项选择。"
-ms.topic: article
+title: 将数据添加到了选取器的项集合
+description: 选取器视图是用于从数据的列表中选择文本项的控件。 此文章介绍了如何通过将其添加到项集合填充了选取器数据以及如何响应用户的项选择。
 ms.prod: xamarin
 ms.assetid: 3C840F64-A430-457D-A4B2-3D7AF46F9DBE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 3468e38d8ef46dfef870a05bf72d93c28195dae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 63a72861895f79d2d0154297f88610ddb8bb8beb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>将数据添加到了选取器的项集合
 
@@ -78,7 +77,7 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 > [!NOTE]
 > A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)可对其进行初始化，以通过设置显示的特定项[ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/)属性。 但是，`SelectedIndex`属性必须设置初始化后[ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/)集合。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)视图是用于从数据的列表中选择文本项的控件。 本文介绍了如何填充`Picker`通过将其添加到的数据与[ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/)集合，以及如何响应用户的项选择。 这是使用的过程`Picker`Xamarin.Forms 2.3.4 之前。
 

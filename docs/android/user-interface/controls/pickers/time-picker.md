@@ -1,18 +1,17 @@
 ---
-title: "时间选取器"
-description: "选择使用 TimePickerDialog 和 DialogFragment 时间"
-ms.topic: article
+title: 时间选取器
+description: 选择使用 TimePickerDialog 和 DialogFragment 时间
 ms.prod: xamarin
 ms.assetid: EB4E8206-E8AD-9F04-AC1C-82AC9364A9DD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 93a2effd42432d13767dad05a47548aebc9a0b93
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c4261e3dccaccc4c88afe9c1033fb16b730fea6e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="time-picker"></a>时间选取器
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 03/09/2018
 
 本指南演示如何使用`TimePickerDialog`、 在已包装`DialogFragment`。 示例应用程序将显示`TimePickerDialog`为模式对话框当用户单击活动上的按钮。 当时间由用户设置时，对话框退出和处理程序更新`TextView`与所选的时间活动屏幕上。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南的示例应用程序面向 Android 4.1 （API 级别
 16) 或更高版本，但可以用于 Android 3.0 （API 级别为 11 或更高版本）。 它是 android 的可以支持较旧版本项目和一些代码更改 Android 支持库 v4 添加。
@@ -283,7 +282,7 @@ is24HourFormat = true;
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何显示`TimePicker`为弹出窗口模式对话框从 Android 活动的小组件。 它提供一个示例`DialogFragment`实现对其进行讨论`IOnTimeSetListener`接口。 此示例还演示了如何`DialogFragment`可与主机活动来显示选定的时间交互。
 

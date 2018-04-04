@@ -1,18 +1,17 @@
 ---
-title: "使用 Xamarin 的连续集成简介"
-description: "持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。 本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。"
-ms.topic: article
+title: 使用 Xamarin 的连续集成简介
+description: 持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。 本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 2a8849a75f3c26a83a030700878a3195fde7515f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 017691ece68f979eea1627c0442f49018d5742fb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>使用 Xamarin 的连续集成简介
 
@@ -122,6 +121,6 @@ Visual Studio 2015 和 Visual Studio for Mac 提供本机支持 git;对于旧版
 > **注意： Jenkins 是[不支持 Xamarin](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md)。**
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 持续集成的概念以及它给软件开发团队带来的优势，引入了此文档。 版本控制的重要性以及角色和职责的生成服务器所讨论。 该文档然后发往讨论一些可以用于源代码管理和生成服务器的工具。 我们还引入了应用 Center 测试，可帮助开发人员通过运行自动的测试，将证明的质量和其应用程序的功能来发布强大的应用程序。 提交应用和测试应用程序 Center 找不到的文档的更详细[此处](https://docs.microsoft.com/en-us/appcenter/test-cloud)。 最后，以帮助了解我们如何所有这些工具和组件组合在一起，概述组织可能建立持续集成的多个不同的 CI 环境。 通过 Xamarin 项目使用 Visual Studio Team Services 和 Team Foundation Server 的详细信息，请参阅[配置 TFVC](https://docs.microsoft.com/vsts/tfvc/overview) ，这[持续集成简介](https://docs.microsoft.com/en-us/vsts/build-release/actions/ci-cd-part-1)。 同样，如果你使用 Jenkins，请参阅[使用 Xamarin 使用 Jenkins](~/tools/ci/jenkins-walkthrough.md)有关设置持续集成的详细信息。

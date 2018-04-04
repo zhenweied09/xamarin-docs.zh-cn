@@ -1,18 +1,17 @@
 ---
-title: "实现使用的碎片"
-description: "Android 3.0 引入了片段。 片段是自包含的模块化组件，用于帮助解决可能在不同大小的屏幕上运行的写入应用程序的复杂性。 本文介绍如何使用片段开发 Xamarin.Android 应用程序，以及如何 3.0 的预 Android 设备上支持片段。"
-ms.topic: article
+title: 实现使用的碎片
+description: Android 3.0 引入了片段。 片段是自包含的模块化组件，用于帮助解决可能在不同大小的屏幕上运行的写入应用程序的复杂性。 本文介绍如何使用片段开发 Xamarin.Android 应用程序，以及如何 3.0 的预 Android 设备上支持片段。
 ms.prod: xamarin
 ms.assetid: A71E9D87-CB69-10AB-CE51-357A05C76BCD
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2ed67eac51f6edcfda16caf73e4667c49124082c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 81f1f992de450ee62c4c1d2e80da858b024be594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-with-fragments"></a>实现使用的碎片
 
@@ -34,7 +33,7 @@ _Android 3.0 引入了片段。片段是自包含的模块化组件，用于帮�
 - **使用 Android 的支持包**&ndash;实现 Android 的支持包，然后给中应用程序，使其能够在较旧版本的 Android 上运行的活动做出少量更改。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本演练需要 Xamarin.Android 4.0 或更高版本。 它还将安装 Android 的支持包，所需的片段文档中所述。
 

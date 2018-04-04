@@ -1,18 +1,17 @@
 ---
-title: "带 TabHost 的选项卡布局"
-description: "本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.Android 应用程序中创建选项卡式的布局。"
-ms.topic: article
+title: 带 TabHost 的选项卡布局
+description: 本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.Android 应用程序中创建选项卡式的布局。
 ms.prod: xamarin
 ms.assetid: 77B890A4-27A6-41DF-81BA-22C6116A8FB2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: e27557c65d2b3049457640a3492d090c5fa26a43
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ae5b9020e08575bcd453703f3df14f63b288d2f5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tab-layout-with-tabhost"></a>带 TabHost 的选项卡布局
 
@@ -44,7 +43,7 @@ _本文将提供的高级别概述 TabHost，较旧的 API 用来在 Xamarin.And
 选项卡内容可能是活动或视图。 视图是相对较轻量和简单，但是可能会导致大量的不相关的代码 co habitating 活动中。 这将导致不佳的问题和难以维护的臃肿的类分离。 与此相反，活动需要系统资源，但允许通过其自己的不同类中封装每个选项卡的逻辑实现更加模块化方法。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文所述的较旧的高级别组件`TabHost`适用于 Android 和所有它们如何一起相关的 API。
 

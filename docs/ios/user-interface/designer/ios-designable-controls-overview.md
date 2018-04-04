@@ -1,18 +1,17 @@
 ---
-title: "IOS 的 Xamarin 设计器中的自定义控件"
-description: "Xamarin 设计器中为 iOS 支持呈现自定义控件在你的项目中创建或从外部源，如 Xamarin 组件应用商店中引用。"
-ms.topic: article
+title: IOS 的 Xamarin 设计器中的自定义控件
+description: Xamarin 设计器中为 iOS 支持呈现自定义控件在你的项目中创建或从外部源，如 Xamarin 组件应用商店中引用。
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 83ec11ab6a17717dd9556122745afc8d87959186
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 113fab2fd0d1a055d566606885cefbafe3185529
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>IOS 的 Xamarin 设计器中的自定义控件
 
@@ -20,7 +19,7 @@ _Xamarin 设计器中为 iOS 支持呈现自定义控件在你的项目中创建
 
 Xamarin 设计器中为 iOS 是可视化应用程序的用户界面的强大工具，并提供所见即所得编辑大多数 iOS 视图和视图控制器的支持。 你的应用程序也可能包含扩展的内置于 iOS 的自定义控件。 如果这些自定义控件编写与记住的一些准则，它们可以还呈现 ios 设计器中，提供甚至更丰富的编辑体验。 本文档将介绍这些准则。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 将设计图面上呈现的控件，可满足以下要求：
 
@@ -187,6 +186,6 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
 当发生故障的控件是修复或删除从设计图面时，将恢复完整呈现。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入的创建和 iOS 设计器中的自定义控件的应用程序。 首先，它描述为设计图面上呈现和公开这样的属性面板中的自定义属性，控件必须满足的要求。 它然后看背后的初始化的控件并将以下属性的代码。 最后，它描述会发生什么情况时引发的异常以及如何解决此问题。

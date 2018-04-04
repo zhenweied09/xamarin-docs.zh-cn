@@ -1,18 +1,18 @@
 ---
-title: "解决库安装错误"
-description: "在某些情况下，可能会安装 Android 支持库时收到错误。 本指南提供了一些常见的错误的解决方法。"
-ms.topic: article
+title: 解决库安装错误
+description: 在某些情况下，可能会安装 Android 支持库时收到错误。 本指南提供了一些常见的错误的解决方法。
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolving-library-installation-errors"></a>解决库安装错误
 
@@ -104,7 +104,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    如果**m2repository**存档中不会显示此表中，你可以创建通过预先计算的下载 URL  **https://dl-ssl.google.com/android/repository/** 的名称**m2repository**下载。 例如，使用 **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip**下载**android\_m2repository\_r10.zip**。
+    如果**m2repository**存档中不会显示此表中，你可以创建通过预先计算的下载 URL **https://dl-ssl.google.com/android/repository/**的名称**m2repository**下载。 例如，使用 **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip**下载**android\_m2repository\_r10.zip**。
 
 2.  将该文件重命名为上述表中所示的下载 URL 的相应 MD5 哈希。 例如，如果你下载**android\_m2repository\_r25.zip**，将其命名为**0B3F1796C97C707339FB13AE8507AF50.zip**。 如果下载的文件的下载 URL 的 MD5 哈希表中未显示，则可以使用[联机 MD5 生成器](http://www.webconfs.com/online-md5-generator.php)将 URL 转换为一个 MD5 哈希字符串。 
 
@@ -167,6 +167,6 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 
 
-## <a name="summary"></a>摘要 
+## <a name="summary"></a>总结 
 
 本文介绍了如何从期间自动下载和安装的依赖项库可以进行的常见错误中恢复。 它描述如何删除有问题的库，作为一种方式重新下载并重新安装库重新生成项目。 它描述了如何下载库并将其在安装**快速**文件夹。 它还描述了用于手动下载并安装所需的文件作为一种方式，若要解决无法通过自动方式解决的问题的更多地涉及的过程。 

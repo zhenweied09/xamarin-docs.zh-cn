@@ -1,18 +1,17 @@
 ---
-title: "Android 本地化"
-description: "本文档介绍了 Android SDK 以及如何使用 Xamarin 访问它们的本地化功能。"
-ms.topic: article
+title: Android 本地化
+description: 本文档介绍了 Android SDK 以及如何使用 Xamarin 访问它们的本地化功能。
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6924cc9989c8ab1ca66472b628cdab677e546a3e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-localization"></a>Android 本地化
 
@@ -255,7 +254,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 **提示：**使图标中的注释和的菜单项的位置，以便你可以还原到原始设置的语言。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何本地化使用内置资源处理的 Android 应用程序的基础知识。 你可以为 iOS、 Android 和 （包括 Xamarin.Forms) 的跨平台应用中了解更多有关 i18n 和 L10n[本跨平台指南](~/cross-platform/app-fundamentals/localization.md)。
 

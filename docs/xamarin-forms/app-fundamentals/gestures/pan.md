@@ -1,18 +1,17 @@
 ---
-title: "添加平移笔势识别器"
-description: "平移手势用于检测拖动并与 PanGestureRecognizer 类实现。 平移笔势的一个常见方案是水平和垂直拖动图像，以便它在小于图像大小视区中显示时，可以查看所有的映像包内容。 这通过在视区内，映像移动来实现，这篇文章中所示。"
-ms.topic: article
+title: 添加平移笔势识别器
+description: 平移手势用于检测拖动并与 PanGestureRecognizer 类实现。 平移笔势的一个常见方案是水平和垂直拖动图像，以便它在小于图像大小视区中显示时，可以查看所有的映像包内容。 这通过在视区内，映像移动来实现，这篇文章中所示。
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 4da42a92c83dcc1ec0b0ba2528de672e3fcf3be3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ed38f7ace9e11b009aae768cda2d4af0f36c337e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>添加平移笔势识别器
 
@@ -149,7 +148,7 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 > [!NOTE]
 > 显示高分辨率图像会大大增加应用的内存需求量。 因此，它们应仅创建在应用程序不再需要它们时，就会立即应释放和所需时。 有关详细信息，请参阅[优化图像资源](~/xamarin-forms/deploy-test/performance.md#optimizeimages)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 平移笔势用于检测拖动和使用实施[ `PanGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/)类。
 

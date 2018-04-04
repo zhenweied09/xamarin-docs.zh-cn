@@ -1,18 +1,17 @@
 ---
-title: "Getting Started with Android 磨损"
-description: "本部分中的指南介绍 Android 磨损，描述如何安装和配置计算机以磨损开发，并提供步骤以帮助你创建并运行你的第一个 Android 磨损应用。"
-ms.topic: article
+title: Getting Started with Android 磨损
+description: 本部分中的指南介绍 Android 磨损，描述如何安装和配置计算机以磨损开发，并提供步骤以帮助你创建并运行你的第一个 Android 磨损应用。
 ms.prod: xamarin
 ms.assetid: 8B9DC98A-773F-4E06-84A7-BA8208C4E864
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/18/2017
-ms.openlocfilehash: b2085343d1b6f94544d73614f5732b0ecf2f9b59
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0b022225dd670ca6da09abbca6b3db75a55f38b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-android-wear"></a>Getting Started with Android 磨损
 

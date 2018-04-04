@@ -1,18 +1,17 @@
 ---
 title: Android Designer
-description: "本文介绍如何在 Xamarin.Android 设计器的功能。 它介绍了设计器的基础知识，显示如何使用设计器进行布局小组件以可视方式以及如何编辑属性。 它还显示如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。"
-ms.topic: article
+description: 本文介绍如何在 Xamarin.Android 设计器的功能。 它介绍了设计器的基础知识，显示如何使用设计器进行布局小组件以可视方式以及如何编辑属性。 它还显示如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
@@ -52,7 +51,7 @@ Xamarin.Android 支持这两种声明性风格用户界面设计基于在 XML �
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文讨论了 Xamarin.Android 设计器的功能集。 它介绍了如何开始使用设计器中，并且说明了其各个部分。 它介绍如何加载了布局，以及如何添加和修改小组件，均使用**属性填充**和设计器图面上的内联。 它还说明了如何使用各种资源和设备配置。 最后，它会检查如何使用设计器开发专为替代视图，例如横向和纵向、 的用户界面，以及如何解决可能出现此类视图之间的冲突。 
 

@@ -1,18 +1,17 @@
 ---
-title: "外观 API"
-description: "iOS 使你能够应用的可视属性设置在静态类级别而不是在单个对象，以便更改适用于该控件在应用程序中的所有实例。"
-ms.topic: article
+title: 外观 API
+description: iOS 使你能够应用的可视属性设置在静态类级别而不是在单个对象，以便更改适用于该控件在应用程序中的所有实例。
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="appearance-api"></a>外观 API
 

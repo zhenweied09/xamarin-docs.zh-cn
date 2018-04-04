@@ -1,16 +1,16 @@
 ---
-title: "通过 Xamarin 为什么不支持 Jenkins？"
-ms.topic: article
+title: 通过 Xamarin 为什么不支持 Jenkins？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 8129229a821edd2ef4f251679ee46bca7b74c8f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8112f9bfc8975b12e3c300c0c981d21749173f7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-isnt-jenkins-supported-by-xamarin"></a>通过 Xamarin 为什么不支持 Jenkins？
 
@@ -50,7 +50,7 @@ Jenkins 是开放源代码 CI 套件;由于这许多问题而直接引起 Jenkin
 
 > 错误： 初学者 Xamarin.iOS 版本不支持在 Xamarin Studio 之外的生成 
 
-此方案的最常见原因是 Jenkins 使用通过不与 Xamarin 许可证关联的用户帐户登录。 此操作，请解决的最简单的方法是安装 Jenkins 作为直接通过用户帐户应用。 下面介绍过程和一些其他注意事项： [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+此方案的最常见原因是 Jenkins 使用通过不与 Xamarin 许可证关联的用户帐户登录。 此操作，请解决的最简单的方法是安装 Jenkins 作为直接通过用户帐户应用。 下面介绍该进程和一些其他注意事项： [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
 
 另一种可能是你 Xamarin 许可证信息已损坏由于某种原因，你可以使用[Xamarin 许可证重新同步指南](~/cross-platform/troubleshooting/legacy-licenses/resync-licenses.md)以对此情况进行疑难解答。
 

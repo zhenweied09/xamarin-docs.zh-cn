@@ -1,18 +1,17 @@
 ---
-title: "创建手表表盘"
-description: "本指南说明如何实现自定义监视表面服务的 Android 损耗。 用于构建去除数字监视表面服务后, 跟更多代码以创建模拟样式手表表盘下提供了分步说明。"
-ms.topic: article
+title: 创建手表表盘
+description: 本指南说明如何实现自定义监视表面服务的 Android 损耗。 用于构建去除数字监视表面服务后, 跟更多代码以创建模拟样式手表表盘下提供了分步说明。
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c02755cc3ff5b46a5a97b6c14185794d8ad538d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-watch-face"></a>创建手表表盘
 
@@ -30,7 +29,7 @@ _本指南说明如何实现自定义监视表面服务的 Android 损耗。用�
 
 观看表面服务捆绑在一起，但作为磨损应用程序的一部分安装。 在以下示例中，`MainActivity`包含没有什么比磨损应用模板中的代码，以便可以打包监视表面服务，并将其部署到智能监视应用程序的一部分。 实际上，此应用程序将充当纯粹获取监视表面服务加载到磨损设备 （或仿真程序） 的工具用于调试和测试。 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要实现监视表面服务，需要满足以下条件：
 
@@ -481,7 +480,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 在此屏幕截图，第二个指针移动每秒一次。 磨损设备上运行此代码时，第二个指针将监视进入环境模式消失。
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在此演练中，自定义的 Android 磨损 watchface 已实现和测试。 `CanvasWatchFaceService`和`CanvasWatchFaceService.Engine`引入类，并且引擎类的基本方法已执行来创建简单的数字手表表盘。 此实现使用多个功能，以创建模拟监视表面，已更新和其他方法在实现以处理更改可见性、 环境模式和设备属性方面的差异。 最后，时区广播接收方已实现，以便监视自动更新何时跨越时区的时间。 
 

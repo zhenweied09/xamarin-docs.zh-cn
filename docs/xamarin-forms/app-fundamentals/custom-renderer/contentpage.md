@@ -1,18 +1,17 @@
 ---
-title: "自定义内容页"
-description: "内容页是一个显示的单个视图，且占用大部分屏幕的可见元素。 本文演示如何创建自定义呈现器内容页页中，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。"
-ms.topic: article
+title: 自定义内容页
+description: 内容页是一个显示的单个视图，且占用大部分屏幕的可见元素。 本文演示如何创建自定义呈现器内容页页中，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。
 ms.prod: xamarin
 ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 58f5a64f85dbe5a6889e6ff598c14fdfd9b0a5df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-a-contentpage"></a>自定义内容页
 
@@ -299,7 +298,7 @@ namespace CustomRenderer.UWP
 > [!NOTE]
 > 务必停止和释放的对象，它提供对相机沿 UWP 应用程序的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建自定义呈现器[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)页上，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。 A`ContentPage`是一种显示单个视图，且占用大部分屏幕的可视元素。
 

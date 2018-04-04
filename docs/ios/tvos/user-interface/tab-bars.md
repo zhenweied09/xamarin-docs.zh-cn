@@ -1,18 +1,17 @@
 ---
-title: "使用选项卡栏控制器"
-description: "本文介绍如何设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。"
-ms.topic: article
+title: 使用选项卡栏控制器
+description: 本文介绍如何设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7b3a7a2347ed93aff5cddc6f15e25028c61a53d8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>使用选项卡栏控制器
 

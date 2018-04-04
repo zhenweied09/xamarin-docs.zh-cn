@@ -1,18 +1,17 @@
 ---
-title: "自定义绑定"
-description: "你可以通过编辑控制绑定过程的元数据自定义 Xamarin.Android 绑定。 这些手动修改往往有必要来解决生成错误状态，供你调整所获得的 API，以便与 C# 更加一致 /.NET。 这些指南介绍了此元数据的结构、 如何修改的元数据，以及如何使用 JavaDoc 恢复方法参数的名称。"
-ms.topic: article
+title: 自定义绑定
+description: 你可以通过编辑控制绑定过程的元数据自定义 Xamarin.Android 绑定。 这些手动修改往往有必要来解决生成错误状态，供你调整所获得的 API，以便与 C# 更加一致 /.NET。 这些指南介绍了此元数据的结构、 如何修改的元数据，以及如何使用 JavaDoc 恢复方法参数的名称。
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb4f3b24be2072cb8b33893899a23951ace63607
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-bindings"></a>自定义绑定
 

@@ -1,18 +1,17 @@
 ---
-title: "创建平台细节"
-description: "供应商可以使用效果创建其自己的平台特定信息。 一种效果提供与特定的功能，则通过特定于平台的公开。 结果是完成的 XAML，并通过 fluent 代码 API 可以更轻松地消耗的效果。 本文演示如何公开通过特定于平台的效果。"
-ms.topic: article
+title: 创建平台细节
+description: 供应商可以使用效果创建其自己的平台特定信息。 一种效果提供与特定的功能，则通过特定于平台的公开。 结果是完成的 XAML，并通过 fluent 代码 API 可以更轻松地消耗的效果。 本文演示如何公开通过特定于平台的效果。
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 7cdc67f8ea1038226bb6ef8c8add8c03e9635e6a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6283e22d75d9e52ad3e2f300617818c98d887481
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-platform-specifics"></a>创建平台细节
 
@@ -265,7 +264,7 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 有关使用平台特定信息的详细信息，请参阅[使用平台特定信息](~/xamarin-forms/platform/platform-specifics/consuming/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何公开通过特定于平台的效果。 结果是完成的 XAML，并通过 fluent 代码 API 可以更轻松地消耗的效果。
 

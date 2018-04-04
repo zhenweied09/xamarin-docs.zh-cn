@@ -1,17 +1,16 @@
 ---
-title: "使用 Android 清单"
-ms.topic: article
+title: 使用 Android 清单
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 18817063900437baa625d8572f0ae28fec77be1e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-the-android-manifest"></a>使用 Android 清单
 
@@ -84,7 +83,7 @@ public class MyActivity : Activity
 ### <a name="activity-title-bar"></a>活动标题栏
 
 默认情况下，Android，该应用程序的标题栏运行时。 用于此目的的值是[ `/manifest/application/activity/@android:label` ](http://developer.android.com/guide/topics/manifest/activity-element.html#label)。 在大多数情况下，此值将与您的类名称不同。 若要指定你的应用标签的标题栏上，使用[ `Label` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/)属性。
-例如: 
+例如： 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -103,7 +102,7 @@ public class MyActivity : Activity
 
 ### <a name="launchable-from-application-chooser"></a>可以从应用程序选择器
 
-默认情况下，你的活动将不会显示在 Android 的应用程序启动器屏幕中。 这是因为将可能有许多活动在你的应用程序，并且你不希望为每个的图标。 若要指定的一列应为可以从应用程序启动程序，使用[ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/)属性。 例如: 
+默认情况下，你的活动将不会显示在 Android 的应用程序启动器屏幕中。 这是因为将可能有许多活动在你的应用程序，并且你不希望为每个的图标。 若要指定的一列应为可以从应用程序启动程序，使用[ `MainLauncher` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/)属性。 例如： 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -128,7 +127,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>活动图标
 
-默认情况下，你的活动指定为由系统提供的默认启动程序图标。 若要使用自定义图标，首先添加你**.png**到**可资源/绘制**，设置为其生成操作**AndroidResource**，然后使用[ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/)属性来指定要使用的图标。 例如: 
+默认情况下，你的活动指定为由系统提供的默认启动程序图标。 若要使用自定义图标，首先添加你**.png**到**可资源/绘制**，设置为其生成操作**AndroidResource**，然后使用[ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/)属性来指定要使用的图标。 例如： 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -177,7 +176,7 @@ public class MyActivity : Activity
 
 ### <a name="intent-actions-and-features"></a>意向的操作和功能
 
-Android 清单提供为你用于描述活动的功能的方法。 这是通过[意向](http://developer.android.com/guide/topics/manifest/intent-filter-element.html)和[ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)自定义属性。 你可以指定哪些操作适用于你使用的活动[ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/)构造函数，并且是与相应的类别[ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/)属性。 至少一个活动必须提供 （这是活动提供构造函数中的原因）。 `[IntentFilter]` 可以是提供多次，并且每次使用会导致单独`<intent-filter/>`中的元素`<activity/>`。 例如:
+Android 清单提供为你用于描述活动的功能的方法。 这是通过[意向](http://developer.android.com/guide/topics/manifest/intent-filter-element.html)和[ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)自定义属性。 你可以指定哪些操作适用于你使用的活动[ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/)构造函数，并且是与相应的类别[ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/)属性。 至少一个活动必须提供 （这是活动提供构造函数中的原因）。 `[IntentFilter]` 可以是提供多次，并且每次使用会导致单独`<intent-filter/>`中的元素`<activity/>`。 例如：
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

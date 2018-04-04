@@ -1,18 +1,17 @@
 ---
 title: EventKit
-description: "本指南提供有关如何访问和处理日历、 CalendarEvents 和提醒存储的数据在日历数据库中，通过 EventKit 公开的概述。 它涉及主要的类以及在 EventKit 编程以及大量与 EventKit framework 关联的常见任务中的角色。"
-ms.topic: article
+description: 本指南提供有关如何访问和处理日历、 CalendarEvents 和提醒存储的数据在日历数据库中，通过 EventKit 公开的概述。 它涉及主要的类以及在 EventKit 编程以及大量与 EventKit framework 关联的常见任务中的角色。
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="eventkit"></a>EventKit
 
@@ -32,7 +31,7 @@ EventKit framework 提供了一种访问方法*日历*，*日历事件*，和*�
 
  [![](eventkit-images/01.png "配套示例应用程序屏幕")](eventkit-images/01.png#lightbox)
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 在 iOS 4.0 中引入了 EventKit 但 iOS 6.0 中引入了对提醒数据的访问。 在这种情况下，为常规 EventKit 开发，你将需要至少目标版本 4.0 和提醒的 6.0。
 
@@ -375,7 +374,7 @@ App.Current.EventStore.FetchReminders (
         } );
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档提供 EventKit framework 中，这两个重要片段和大量最常见的任务的概述。 但是，EventKit framework 非常大且功能强大，并且包含尚未引入了在这里，如的功能： 批处理更新，配置警报，重复执行配置上的事件、 注册和侦听日历数据库上的更改设置 GeoFences 和的详细信息。  有关详细信息，请参阅 Apple 的[日历和提醒编程指南](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)。
 

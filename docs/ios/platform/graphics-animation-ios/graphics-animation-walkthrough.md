@@ -1,18 +1,17 @@
 ---
-title: "演练-使用 CoreGraphics 和 CoreAnimation"
-description: "本文逐步演示如何创建使用核心图形和核心动画的应用程序。 它显示在响应用户触摸屏幕上绘制的方式，以及如何进行动画处理要沿路径移动的图像。"
-ms.topic: article
+title: 演练-使用 CoreGraphics 和 CoreAnimation
+description: 本文逐步演示如何创建使用核心图形和核心动画的应用程序。 它显示在响应用户触摸屏幕上绘制的方式，以及如何进行动画处理要沿路径移动的图像。
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c62601ff446c114e97e9d4c2ded3727d08220095
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-and-animating-along-a-path"></a>绘制和沿路径进行动画处理
 
@@ -176,7 +175,7 @@ ms.lasthandoff: 02/27/2018
 
 ![](graphics-animation-walkthrough-images/00-final-app.png "与图像层添加和旅行沿绘制路径")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，我们会单步遍历的示例，绑定在一起的图形和动画的概念。 首先，我们介绍了如何使用核心图形绘制的路径`UIView`以响应用户触摸屏输入。 然后，我们介绍了如何使用核心动画来使沿该路径移动图像。
 

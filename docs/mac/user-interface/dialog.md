@@ -1,18 +1,17 @@
 ---
-title: "对话框"
-description: "本文介绍如何使用对话框和 Xamarin.Mac 应用程序中的模式窗口。 它介绍如何创建在 Xcode 和接口生成器中，使用标准对话框，并在 C# 代码中的这些控件与之交互模式窗口。"
-ms.topic: article
+title: 对话框
+description: 本文介绍如何使用对话框和 Xamarin.Mac 应用程序中的模式窗口。 它介绍如何创建在 Xcode 和接口生成器中，使用标准对话框，并在 C# 代码中的这些控件与之交互模式窗口。
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dialogs"></a>对话框
 
@@ -1094,7 +1093,7 @@ void ShowSaveAs (NSObject sender)
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用模式窗口、 表和 Xamarin.Mac 应用程序中的标准系统对话框的详细的信息。 我们已了解了不同类型和模式窗口、 表和对话框，使用方式来创建和维护模式窗口和在 Xcode 中的表的接口生成器以及如何使用模式窗口，表和对话框中 C# 代码。
 

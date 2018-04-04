@@ -1,18 +1,17 @@
 ---
-title: "用户界面"
-description: "使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的接口生成器和 UX 设计原则。"
-ms.topic: article
+title: 用户界面
+description: 使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的接口生成器和 UX 设计原则。
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c77cc6f9954c5fb7d1a303748efc5c3182a0c138
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a30bd02a9545717175daf1381730afce6b72218d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>用户界面
 

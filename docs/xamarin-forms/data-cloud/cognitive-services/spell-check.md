@@ -1,18 +1,17 @@
 ---
 title: 拼写检查使用必应拼写检查 API
 description: 必应拼写检查执行上下文的拼写检查的文本，提供有关拼写错误的单词的内联建议。 此文章介绍了如何使用必应拼写检查 REST API 来更正 Xamarin.Forms 应用程序中的拼写错误。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 420eea4622d9c90c3587899fb24e707524990b19
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 41bd79b22aa193dd5303847997bc07e8e8d12e58
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>拼写检查使用必应拼写检查 API
 

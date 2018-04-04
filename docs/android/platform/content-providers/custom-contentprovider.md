@@ -1,18 +1,17 @@
 ---
-title: "创建自定义 ContentProvider"
-description: "上一节演示了如何使用从内置 ContentProvider 实现的数据。 本部分将介绍如何生成自定义 ContentProvider 并随后使用其数据。"
-ms.topic: article
+title: 创建自定义 ContentProvider
+description: 上一节演示了如何使用从内置 ContentProvider 实现的数据。 本部分将介绍如何生成自定义 ContentProvider 并随后使用其数据。
 ms.prod: xamarin
 ms.assetid: 36742B59-607E-070E-5D0E-B9C18917D3F4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: 9fac4a233cecd9332602047bc83830d145b5fb08
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 95d38fae1614bbb12ddafaeca60d50e63404ea95
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-custom-contentprovider"></a>创建自定义 ContentProvider
 

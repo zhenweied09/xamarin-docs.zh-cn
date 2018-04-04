@@ -1,18 +1,17 @@
 ---
-title: "在 Xamarin iOS 和 Android 的 visual Basic.NET"
-description: "X 此演练演示如何生成本机的 Xamarin.iOS 和 Xamarin.Android 应用程序利用以 Visual Basic.NET 编写的业务逻辑。"
-ms.topic: article
+title: 在 Xamarin iOS 和 Android 的 visual Basic.NET
+description: X 此演练演示如何生成本机的 Xamarin.iOS 和 Xamarin.Android 应用程序利用以 Visual Basic.NET 编写的业务逻辑。
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 95817c2ec22c4c27f0f4a933db54105614e54030
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c922102d20eb103eb265d8a7bcb418e5187296a5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>在 Xamarin iOS 和 Android 的 visual Basic.NET
 
@@ -329,7 +328,7 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 如果更改到 Visual Studio 中的 Visual Basic 项目记住若要生成项目，请在源代码管理中存储生成的程序集 DLL，然后拉取到你的 Mac 的源控件从该新 DLL，以便适用于 Mac 的 Visual Studio 将生成包含最新功能。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何使用 Visual Basic 代码中使用 Visual Studio 和可移植类库的 Xamarin 应用程序。 即使 Xamarin 不直接支持 Visual Basic，将 Visual Basic 编译成 PCL 允许使用要包括在 iOS 和 Android 应用的 Visual Basic 编写的代码。
 

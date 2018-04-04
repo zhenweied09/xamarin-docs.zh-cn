@@ -1,18 +1,17 @@
 ---
-title: "演练-在 Xamarin.Android 中使用本地通知"
-description: "本演练演示如何在 Xamarin.Android 应用程序中使用本地通知。 它演示了创建和发布本地通知的基础知识。 当用户单击通知区域中的通知时，它会启动第二个活动。"
-ms.topic: article
+title: 演练-在 Xamarin.Android 中使用本地通知
+description: 本演练演示如何在 Xamarin.Android 应用程序中使用本地通知。 它演示了创建和发布本地通知的基础知识。 当用户单击通知区域中的通知时，它会启动第二个活动。
 ms.prod: xamarin
 ms.assetid: D8C6C9E2-3282-49D1-A2F6-78A4F3306E29
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/30/2018
-ms.openlocfilehash: b8642a1c96ee525fbd6950616fbc6da0ad0e2337
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a2ca3755e3201263584447ba47ec36d2096386da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>演练-在 Xamarin.Android 中使用本地通知
 
@@ -196,7 +195,7 @@ namespace LocalNotifications
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本演练中，我们使用`NotificationCompat.Builder`创建和显示通知。 我们已了解如何启动作为一种方法对通知，与用户交互作出响应的第二个活动的基本示例，我们从第一个活动中演示的数据传输到第二个活动。
 

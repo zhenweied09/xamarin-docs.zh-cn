@@ -1,18 +1,17 @@
 ---
-title: "多点触控手指跟踪"
-description: "本文档演示如何从多个指跟踪触控事件"
-ms.topic: article
+title: 多点触控手指跟踪
+description: 本文档演示如何从多个指跟踪触控事件
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: a9e3842611aab86d23a2b0c2a832efce18c22465
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 178bd0a68166f033293b2d807fea449355c1c584
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>多点触控手指跟踪
 

@@ -1,17 +1,16 @@
 ---
-title: "通信之间松散耦合的组件"
-ms.topic: article
+title: 通信之间松散耦合的组件
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e05cd0ec7d03a033e24dcbfb8124cfc2ccfa438e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 01669573f215c5a13bb918c9f9ba80aa5ca528c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>通信之间松散耦合的组件
 
@@ -119,7 +118,7 @@ MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.A
 
 在此示例中， [ `Unsubscribe` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Unsubscribe%7BTSender,TArgs%7D/p/System.Object/System.String/)方法语法反映订阅接收时指定的类型自变量`AddProduct`消息。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/)类实现发布-订阅模式，允许基于消息的是很不方便链接对象和类型引用的组件之间的通信。 此机制允许发布服务器和订阅服务器进行通信而无到对方，有助于降低组件，同时还允许独立开发和测试的组件之间的依赖关系的引用。
 

@@ -1,18 +1,17 @@
 ---
-title: "ControlTemplate 绑定"
-description: "模板绑定都允许对数据的控件模板中的控件绑定到公共属性启用的控件模板来轻松地更改中的控件上的属性值。 本文演示如何使用模板绑定从控件模板执行数据绑定。"
-ms.topic: article
+title: ControlTemplate 绑定
+description: 模板绑定都允许对数据的控件模板中的控件绑定到公共属性启用的控件模板来轻松地更改中的控件上的属性值。 本文演示如何使用模板绑定从控件模板执行数据绑定。
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 5b330c448a135cbcf8fc2745debc48924e29c103
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b306c79aea9bd2192aa73eddcf95790a9b24353
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-from-a-controltemplate"></a>ControlTemplate 绑定
 
@@ -68,7 +67,7 @@ public string FooterText {
 
 ![](template-binding-images/teal-theme.png "使用模板绑定的青色控件模板")
 
-## <a name="creating-a-templatebinding-in-c35"></a>在 c&#35; 中创建 TemplateBinding
+## <a name="creating-a-templatebinding-in-c35"></a>在 C 中创建 TemplateBinding&#35;
 
 在 C# 中， [ `TemplateBinding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplateBinding/)通过创建`TemplateBinding`构造函数，如下面的代码示例中所示：
 
@@ -158,7 +157,7 @@ public class HomePageCS : ContentPage
 
 有关数据绑定到 Viewmodel 的详细信息，请参阅[从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 演示使用模板绑定进行数据绑定控件模板从这篇文章。 模板绑定都允许对数据的控件模板中的控件绑定到公共属性启用的控件模板来轻松地更改中的控件上的属性值。
 

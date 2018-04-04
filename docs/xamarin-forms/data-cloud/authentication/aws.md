@@ -1,18 +1,17 @@
 ---
-title: "与 Amazon SimpleDB 服务的用户进行身份验证"
-description: "Amazon SimpleDB 不提供其自己的基于资源的权限的系统。 相反，身份验证标识提供程序是针对可以用于确保用户只能 SimpleDB 域中有权访问他们自己的数据。 此文章介绍了如何限制对其自己 SimpleDB 数据的用户的访问权限。"
-ms.topic: article
+title: 与 Amazon SimpleDB 服务的用户进行身份验证
+description: Amazon SimpleDB 不提供其自己的基于资源的权限的系统。 相反，身份验证标识提供程序是针对可以用于确保用户只能 SimpleDB 域中有权访问他们自己的数据。 此文章介绍了如何限制对其自己 SimpleDB 数据的用户的访问权限。
 ms.prod: xamarin
 ms.assetid: 797C91A5-9720-4DAC-89D8-5C85996584C8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 592e957e0c64e7189d6f01f1ba0f23da074c4bec
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>与 Amazon SimpleDB 服务的用户进行身份验证
 
@@ -63,7 +62,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 > [!NOTE]
 > 小心地将其构造的查询表达式时遵循报价的规则。 有关详细信息，请参阅[选择用引号括起来规则](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html)Amazon 的网站上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何限制对其自己的 SimpleDB 数据的用户的访问。 Amazon SimpleDB 不提供其自己的基于资源的权限的系统。 相反，身份验证标识提供程序是针对可以用于确保用户有权访问他们自己的数据 SimpleDB 域中。
 

@@ -1,18 +1,17 @@
 ---
-title: "案例研究： Tasky"
-description: "本文档介绍如何将生成跨平台应用程序的原则应用 Tasky 可移植的示例应用程序中。 它涉及移动应用程序设计、 编写供重复使用的常见代码和实施面向 iOS、 Android 和 Windows Phone 平台的特定于平台的项目。"
-ms.topic: article
+title: 案例研究： Tasky
+description: 本文档介绍如何将生成跨平台应用程序的原则应用 Tasky 可移植的示例应用程序中。 它涉及移动应用程序设计、 编写供重复使用的常见代码和实施面向 iOS、 Android 和 Windows Phone 平台的特定于平台的项目。
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5b16fe1d6dab776af31e0aff97a00065517550ec
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="case-study-tasky"></a>案例研究： Tasky
 
@@ -28,7 +27,7 @@ _本文档介绍如何将生成跨平台应用程序的原则应用 Tasky 可移
 
  <a name="Requirements" />
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 设计应用程序的第一步是确定所需的功能。 这些类型可以是高级目标或详细的用例。 Tasky 具有简单的功能要求：
 
@@ -502,7 +501,7 @@ Windows Phone 应用程序使用标准的布局，填充而不是在顶部导航
 
  <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档提供了如何已分层的应用程序设计的原则应用于一个简单的应用程序，为了实现代码重用三个移动平台的详细的说明： iOS、 Android 和 Windows Phone。
 

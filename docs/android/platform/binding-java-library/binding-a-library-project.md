@@ -1,18 +1,17 @@
 ---
-title: "绑定 Eclipse 库项目"
-description: "本演练说明了如何使用 Xamarin.Android 项目模板将绑定一个 Eclipse Android 库项目。"
-ms.topic: article
+title: 绑定 Eclipse 库项目
+description: 本演练说明了如何使用 Xamarin.Android 项目模板将绑定一个 Eclipse Android 库项目。
 ms.prod: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7b1314c12bf97a2fa21911c747e3066858116a5f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1c3c33f1b958aff5818b26e4408e60f449b46f41
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-an-eclipse-library-project"></a>绑定 Eclipse 库项目
 
@@ -56,7 +55,7 @@ Android 库项目不同于常规的 Android 项目，具有因为它们不会编
 > 目前不支持在其他 Ide 编译 Android 库项目。 相同的目录结构或中的文件，可能不会创建其他 Ide **bin** Eclipse 的文件夹。 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，我们将遍历通过将绑定 Android 库项目的过程。 我们构建 Android 库项目在 Eclipse 中，然后我们创建了从一个 zip 文件**bin**和**res** Android 库项目文件夹中。 接下来，我们可以使用此 zip 创建 Xamarin.Android Java 绑定项目。 
 

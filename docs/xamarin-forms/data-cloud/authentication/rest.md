@@ -1,18 +1,17 @@
 ---
-title: "对 RESTful Web 服务进行身份验证"
-description: "HTTP 支持使用多个身份验证机制来控制对资源的访问。 基本身份验证提供对资源的访问权限仅这些客户端具有正确的凭据。 本文演示如何使用基本身份验证来保护对 RESTful web 服务资源的访问。"
-ms.topic: article
+title: 对 RESTful Web 服务进行身份验证
+description: HTTP 支持使用多个身份验证机制来控制对资源的访问。 基本身份验证提供对资源的访问权限仅这些客户端具有正确的凭据。 本文演示如何使用基本身份验证来保护对 RESTful web 服务资源的访问。
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 7aea74f95e8738cc415eaac3a5ac4f86b069d0f7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3160fcced190f74fcfb44c6259451e00995de0fa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-a-restful-web-service"></a>对 RESTful Web 服务进行身份验证
 
@@ -88,7 +87,7 @@ public class RestService : IRestService
 > [!NOTE]
 > 基本身份验证不适合管理登出。因此，注销的标准的基本身份验证方法是以结束会话。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何将基本身份验证添加到发出的 Xamarin.Forms 应用程序使用的 web 请求`HttpClient`类。 基本身份验证提供对资源的访问权限仅这些客户端具有正确的凭据。 有关如何使用信息[Xamarin.Auth](https://www.nuget.org/packages/Xamarin.Auth/)来管理在 Xamarin.Forms 应用程序的身份验证过程，以便用户可以共享一个后端，同时仅有权访问其数据，请参阅[进行身份验证的用户使用标识提供程序](~/xamarin-forms/data-cloud/authentication/oauth.md)。
 

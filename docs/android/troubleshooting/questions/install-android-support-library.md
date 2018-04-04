@@ -1,17 +1,17 @@
 ---
-title: "如何手动安装所需的 Xamarin.Android.Support 包 Android 支持库？"
-ms.topic: article
+title: 如何手动安装所需的 Xamarin.Android.Support 包 Android 支持库？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 26dd7e23352bf0911c2a7268518ddebf6626596a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e760a87cbd1e0220ed5cf3a350d3539ffe29650e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>如何手动安装所需的 Xamarin.Android.Support 包 Android 支持库？
 
@@ -52,7 +52,7 @@ $url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zi
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-复制**android\_m2repository.zip**到**%LOCALAPPDATA%\\Xamarin\\快速\\**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如:
+复制**android\_m2repository.zip**到**%LOCALAPPDATA%\\Xamarin\\快速\\**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
 
 **%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
@@ -104,7 +104,7 @@ csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2rep
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-复制**android\_m2repository.zip**到**$HOME/.local/share/Xamarin/zips/**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如:
+复制**android\_m2repository.zip**到**$HOME/.local/share/Xamarin/zips/**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 

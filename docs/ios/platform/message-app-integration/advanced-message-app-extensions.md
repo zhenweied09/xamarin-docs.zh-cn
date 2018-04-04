@@ -1,18 +1,17 @@
 ---
-title: "高级的消息应用扩展"
-description: "这篇文章演示用于使用与邮件应用集成并向用户呈现的新功能的 Xamarin.iOS 解决方案中的消息应用程序扩展的高级的技术。"
-ms.topic: article
+title: 高级的消息应用扩展
+description: 这篇文章演示用于使用与邮件应用集成并向用户呈现的新功能的 Xamarin.iOS 解决方案中的消息应用程序扩展的高级的技术。
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: fcfd1fd2ec9271bb5e8d9e09b43b7dc4cf3b3f12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-message-app-extensions"></a>高级的消息应用扩展
 
@@ -38,7 +37,7 @@ _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功�
 
 此外新在 iOS 10，Apple 添加了内联应用归属这样用户就可以轻松地发现应用程序。 例如，如果一个用户将内容发送到另一个，从第二个用户不具有的应用安装 （如例如标签） 发送的应用的名称被列在下面的消息历史记录中的内容。 如果用户点击应用程序的名称，我们打开消息应用商店和存储区中选择的应用程序。
 
-消息应用扩展是类似于现有 iOS 应用，开发人员很熟悉创建，并且它们将有权访问所有标准框架和一个标准的 iOS 应用的功能。 例如:
+消息应用扩展是类似于现有 iOS 应用，开发人员很熟悉创建，并且它们将有权访问所有标准框架和一个标准的 iOS 应用的功能。 例如：
 
 - 他们有权应用内购买。
 - 它们有权访问 Apple Pay。
@@ -419,7 +418,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 在任一情况下，当用户点击消息气泡，属于消息应用扩展，它将需要访问`MSMessage`，点击的使用`SelectedMessage`属性`MSConversation`。
 
-例如:
+例如：
 
 ```csharp
 using System;
@@ -547,7 +546,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 - 当扩展接收来自用户的一条消息时，它可以跟踪的发件人标识符。 如果它收到具有相同的发件人标识符的另一条消息，该扩展知道它是从同一个用户。
 - 它们可以用于帮助识别特定用户会话中。
 
-发件人标识符可在任何文本字段的`MSMessageTemplateLayout`前缀美元符号 (`$`)。 例如:
+发件人标识符可在任何文本字段的`MSMessageTemplateLayout`前缀美元符号 (`$`)。 例如：
 
 ```csharp
 // Pass along the sender identifier
@@ -602,7 +601,7 @@ WatchOS，在邮件应用可切换到附加的 iOS 设备，用户可以撰写�
 - 提供的模板布局，一个将映像。
 - 中提供另一个将成为 URL `MSMessage`。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了用于处理消息的应用程序扩展与集成的 Xamarin.iOS 解决方案中的高级的技术**消息**应用程序和向用户存在新功能。
 

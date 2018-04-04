@@ -1,18 +1,17 @@
 ---
-title: "在 MonoGame 中绘制具有顶点的 3D 图形"
-description: "MonoGame 支持使用顶点的数组来定义一个三维对象上的每个点基础的呈现方式。 用户可以利用顶点数组来创建动态几何图形、 实现特殊效果，并提高通过剔除其呈现的效率。"
-ms.topic: article
+title: 在 MonoGame 中绘制具有顶点的 3D 图形
+description: MonoGame 支持使用顶点的数组来定义一个三维对象上的每个点基础的呈现方式。 用户可以利用顶点数组来创建动态几何图形、 实现特殊效果，并提高通过剔除其呈现的效率。
 ms.prod: xamarin
 ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 1b139e460a4841f2174df166bf50bb276802d8d3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>在 MonoGame 中绘制具有顶点的 3D 图形
 
@@ -489,7 +488,7 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 ![](part2-images/image3.png "此代码将导致此视图")
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练演示了如何使用顶点数组来执行自定义呈现。 在这种情况下，我们通过结合使用纹理我们基于顶点的呈现创建棋盘格的 floor 和`BasicEffect`，但提供的代码此处充当为任何三维呈现的基础。 我们还介绍了，可以与模型相同的场景中混合基于顶点呈现。
 

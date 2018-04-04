@@ -1,18 +1,17 @@
 ---
-title: "使用 Web 标记搜索"
-description: "添加可以链接回你的应用程序的基于 web 的搜索结果。"
-ms.topic: article
+title: 使用 Web 标记搜索
+description: 添加可以链接回你的应用程序的基于 web 的搜索结果。
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-web-markup"></a>使用 Web 标记搜索
 
@@ -63,7 +62,7 @@ Apple 将呈现在 Spotlight 搜索和 Safari 搜索结果中的这些结果。
 
 ## <a name="using-twitter-cards"></a>使用 Twitter 卡
 
-你可以提供深层链接应用程序的内容使用 Twitter 卡。 例如:
+你可以提供深层链接应用程序的内容使用 Twitter 卡。 例如：
 
 ```xml
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -75,7 +74,7 @@ Apple 将呈现在 Spotlight 搜索和 Safari 搜索结果中的这些结果。
 
 ## <a name="using-facebook-app-links"></a>使用 Facebook 应用程序链接
 
-你可以提供深层链接使用 Facebook 应用程序链接的应用程序的内容。 例如:
+你可以提供深层链接使用 Facebook 应用程序链接的应用程序的内容。 例如：
 
 ```xml
 <meta property="al:ios:app_name" content="AppName">
@@ -87,7 +86,7 @@ Apple 将呈现在 Spotlight 搜索和 Safari 搜索结果中的这些结果。
 
 ## <a name="opening-deep-links"></a>打开深层链接
 
-你需要添加对打开，并在你的 Xamarin.iOS 应用程序中显示的深层链接的支持。 编辑**AppDelegate.cs**文件，并重写`OpenURL`方法来处理自定义的 URL 格式。 例如:
+你需要添加对打开，并在你的 Xamarin.iOS 应用程序中显示的深层链接的支持。 编辑**AppDelegate.cs**文件，并重写`OpenURL`方法来处理自定义的 URL 格式。 例如：
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -121,7 +120,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 丰富结果更加融入，并可以帮助提高在云中你排名基于搜索索引通过诱使更多用户能够与它们进行交互。
 
-提供结构化数据标记的一个选项是通过使用开放图谱。 例如:
+提供结构化数据标记的一个选项是通过使用开放图谱。 例如：
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -131,7 +130,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 有关详细信息，请参阅[开放图谱](http://ogp.me)网站。
 
-结构化数据标记的另一种常见格式是 schema.org 的 Microdata 格式。 例如:
+结构化数据标记的另一种常见格式是 schema.org 的 Microdata 格式。 例如：
 
 ```xml
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">

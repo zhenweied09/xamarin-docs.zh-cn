@@ -1,18 +1,17 @@
 ---
-title: "选取器"
-description: "本指南介绍了设计和选取器在 Xamarin.iOS 应用程序中使用。"
-ms.topic: article
+title: 选取器
+description: 本指南介绍了设计和选取器在 Xamarin.iOS 应用程序中使用。
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: b92bdc365cae524cee1f586b293c4638225c6178
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="picker"></a>选取器
 
@@ -188,7 +187,7 @@ datePickerView.MinimumDate = minDate;
 datePickerView.MaximumDate = NSDate.Now;
 ```
 
-或者，你可以使用.NET 控件设置最小和最大日期范围。 例如:
+或者，你可以使用.NET 控件设置最小和最大日期范围。 例如：
 
 ```csharp
 DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -205,7 +204,7 @@ datePickerView.MinuteInterval = 10;
 
 #### <a name="time"></a>时间
 
-时模式显示使用小时和分钟的选择器和可选 AM 或 PM 指定内容的时间。 设置与`UIDatePickerMode.Time`属性。 例如:
+时模式显示使用小时和分钟的选择器和可选 AM 或 PM 指定内容的时间。 设置与`UIDatePickerMode.Time`属性。 例如：
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Time;
@@ -219,7 +218,7 @@ datePickerView.Mode = UIDatePickerMode.Time;
 
 #### <a name="date"></a>日期
 
-日期模式显示带有月、 日和年选择器的日期。 设置与`UIDatePickerMode.Date`属性。 例如:
+日期模式显示带有月、 日和年选择器的日期。 设置与`UIDatePickerMode.Date`属性。 例如：
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.Date;
@@ -240,7 +239,7 @@ datePickerView.Locale = NSLocale.FromLocaleIdentifier("en_GB");
 
 #### <a name="date-and-time"></a>日期和时间
 
-日期和时间模式显示日期的时间以小时和分钟和可选的 AM 或 PM 代码 dependings shortend 视图上，如果使用 12 或 24 小时时钟制。 设置与`UIDatePickerMode.DateAndTime`属性。 例如:
+日期和时间模式显示日期的时间以小时和分钟和可选的 AM 或 PM 代码 dependings shortend 视图上，如果使用 12 或 24 小时时钟制。 设置与`UIDatePickerMode.DateAndTime`属性。 例如：
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.DateAndTime;
@@ -254,7 +253,7 @@ datePickerView.Mode = UIDatePickerMode.DateAndTime;
 
 #### <a name="countdown-timer"></a>倒计时计时器
 
-倒计时计时器模式显示小时和分钟值。 设置与`UIDatePickerMode.CountDownTimer`属性。 例如:
+倒计时计时器模式显示小时和分钟值。 设置与`UIDatePickerMode.CountDownTimer`属性。 例如：
 
 ```csharp
 datePickerView.Mode = UIDatePickerMode.CountDownTimer;

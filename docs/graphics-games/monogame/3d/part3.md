@@ -1,18 +1,17 @@
 ---
-title: "在 MonoGame 3D 坐标"
-description: "了解 3D 坐标系统是开发 3D 游戏中的一个重要步骤。 MonoGame 提供多种定位、 定向，和缩放在三维空间中的对象类。"
-ms.topic: article
+title: 在 MonoGame 3D 坐标
+description: 了解 3D 坐标系统是开发 3D 游戏中的一个重要步骤。 MonoGame 提供多种定位、 定向，和缩放在三维空间中的对象类。
 ms.prod: xamarin
 ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: e930004a91133f391f68221473f212b7caaf1b07
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 0273b4f13c91fd766530ff7c0976096de3239dc5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="3d-coordinates-in-monogame"></a>在 MonoGame 3D 坐标
 
@@ -749,7 +748,7 @@ public void Update(GameTime gameTime)
 如果用户第三个处理 center 的屏幕，然后相机将向前移动。 这通过获取的向前向量，其最初定义为指向负的 Y 轴，然后使用创建的矩阵的旋转首先实现`Matrix.CreateRotationZ`和`angle`值。 最后`forwardVector`应用于`position`使用`unitsPerSecond`系数。
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练介绍如何将移动和旋转`Models`在以三维形式空间使用`Matrices`和`BasicEffect.World`属性。 这种形式的移动为 3D 游戏移动对象提供了基础。 本演练还介绍了如何实现`Camera`用于查看从任何位置以及角度世界的实体。
 

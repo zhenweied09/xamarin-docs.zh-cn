@@ -1,18 +1,17 @@
 ---
-title: "与视图 ViewPager"
-description: "ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南介绍如何实现使用 ViewPager 和 PagerTabStrip，为数据页中使用视图 swipeable UI （后续指南介绍如何用于页面的片段）。"
-ms.topic: article
+title: 与视图 ViewPager
+description: ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南介绍如何实现使用 ViewPager 和 PagerTabStrip，为数据页中使用视图 swipeable UI （后续指南介绍如何用于页面的片段）。
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39251f7cf6bc287b76b7921278853158bdb14d66
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-views"></a>与视图 ViewPager
 
@@ -351,7 +350,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练提供如何生成一个基本的分步示例`ViewPager`-基于应用程序，而无需使用`Fragment`s。 它提供包含图像和标题字符串的示例数据源`ViewPager`布局，以显示的图像和`PagerAdapter`连接的子类`ViewPager`到数据源。 若要帮助用户可以浏览数据集，说明已包含用于解释如何添加`PagerTabStrip`或`PagerTitleStrip`要使映像标题显示在每一页的顶部。 
 

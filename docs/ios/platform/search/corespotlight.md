@@ -1,17 +1,16 @@
 ---
-title: "使用核心 Spotlight 搜索"
-ms.topic: article
+title: 使用核心 Spotlight 搜索
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d38d90ce460c7a93f8412baf372778443eb9d9e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-with-core-spotlight"></a>使用核心 Spotlight 搜索
 
@@ -50,7 +49,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 ## <a name="restoring-an-item"></a>还原的项目
 
-当用户点击对某项添加到你的应用，通过核心 Spotlight 的搜索结果`AppDelegate`方法`ContinueUserActivity`称为 (此方法还用于`NSUserActivity`)。 例如:
+当用户点击对某项添加到你的应用，通过核心 Spotlight 的搜索结果`AppDelegate`方法`ContinueUserActivity`称为 (此方法还用于`NSUserActivity`)。 例如：
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application,
@@ -100,7 +99,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-接下来，你可以通过其域名删除一组索引项。 例如:
+接下来，你可以通过其域名删除一组索引项。 例如：
 
 ```csharp
 // Delete by Domain Name

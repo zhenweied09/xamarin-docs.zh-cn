@@ -1,18 +1,17 @@
 ---
-title: "处理旋转"
-description: "本主题介绍如何处理在 Xamarin.Android 设备方向更改。 它介绍如何使用 Android 资源系统自动加载资源的特定设备方向以及如何以编程方式处理方向更改。"
-ms.topic: article
+title: 处理旋转
+description: 本主题介绍如何处理在 Xamarin.Android 设备方向更改。 它介绍如何使用 Android 资源系统自动加载资源的特定设备方向以及如何以编程方式处理方向更改。
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: c31dbfeea3134de95f3275a7fa79c508a94d6a91
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1cdc7928c45b99cdd8c8149b3ae9b06e790deeca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handling-rotation"></a>处理旋转
 
@@ -298,7 +297,7 @@ public class CodeLayoutActivity : Activity
 有关 Android 中的保留状态的详细信息，请参阅[活动的生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)指南。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何使用 Android 的内置功能来处理旋转。 首先，它还介绍了如何使用 Android 资源系统创建感知应用程序的方向。 然后，它提供如何在代码中添加控件，以及如何手动处理方向更改。
 

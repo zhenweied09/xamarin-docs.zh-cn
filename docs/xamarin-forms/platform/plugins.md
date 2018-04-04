@@ -1,18 +1,17 @@
 ---
-title: "插件"
-description: "轻松地将本机功能添加到 Xamarin.Forms 应用"
-ms.topic: article
+title: 插件
+description: 轻松地将本机功能添加到 Xamarin.Forms 应用
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: ad338e655c1aeb475122c837ca5c805e491f84bc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="plugins"></a>插件
 
@@ -35,7 +34,7 @@ Xamarin 社区创建许多跨平台插件与 Xamarin.Forms-兼容的大型集合
 
 例如，下面的插件列表是所有的开放源代码，并且它们对应中的示例[ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md)部分：
 
-- **文本到语音转换**通过 James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech)和[NuGet  ](https://www.nuget.org/packages/Xam.Plugin.Battery)
+- **文本到语音转换**通过 James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech)和[NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
 - **电池状态**通过 James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)和[NuGet](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech/)
 
 这些 Github 项目可以提供很好的起点用于创建你自己跨平台的插件，这些指令一样[为 Xamarin 创建插件](https://github.com/xamarin/plugins#create-a-plugin-for-xamarin)。

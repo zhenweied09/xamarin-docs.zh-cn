@@ -1,18 +1,17 @@
 ---
-title: "棒糖形功能"
-description: "本文章提供了 Android 5.0 （棒糖形） 中引入的新功能的高级别概述。 这些功能包括一个新的用户界面样式，它调用材料主题，以及新的支持功能，例如动画、 视图阴影和可绘制、 颜色。 Android 5.0 还包括增强的通知、 两个新的 UI 小组件、 新的作业计划程序和少量的新的 Api 来提高存储、 网络、 连接和多媒体功能。"
-ms.topic: article
+title: 棒糖形功能
+description: 本文章提供了 Android 5.0 （棒糖形） 中引入的新功能的高级别概述。 这些功能包括一个新的用户界面样式，它调用材料主题，以及新的支持功能，例如动画、 视图阴影和可绘制、 颜色。 Android 5.0 还包括增强的通知、 两个新的 UI 小组件、 新的作业计划程序和少量的新的 Api 来提高存储、 网络、 连接和多媒体功能。
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>棒糖形功能
 
@@ -41,7 +40,7 @@ Android 5.0 （棒糖形） 引入了一种新的设计语言，*材料设计*�
 -   **新的 Api** &ndash; Android 5.0 添加新的 Api 的多个网络支持，改进蓝牙连接、 更简单的存储管理和更灵活地控制多媒体播放器和照相机设备。 新作业计划功能是可用于运行任务以异步方式在计划的时间。 此功能有助于改善电池寿命，例如，计划任务能够发生在设备接通电源时以及收费。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需基于 Xamarin 的应用中使用新的 Android 5.0 功能：
 
@@ -466,7 +465,7 @@ Android 5.0 引入了新`JobScheduler`API，可帮助用户通过计划某些任
 
 有关新的作业计划 Android 5.0 中的 Api 的详细信息，请参阅[计划作业](http://developer.android.com/preview/api-overview.html#JobScheduler)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文章 Xamarin.Android 应用程序开发人员提供 Android 5.0 中的重要新增功能的概述：
 

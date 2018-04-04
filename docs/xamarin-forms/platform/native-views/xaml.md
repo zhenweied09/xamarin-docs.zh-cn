@@ -1,18 +1,17 @@
 ---
-title: "在 XAML 中的本机视图"
-description: "从 iOS、 Android 和通用 Windows 平台的本机视图从 Xamarin.Forms XAML 文件，可以直接引用。 可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。 本文演示如何使用 Xamarin.Forms XAML 文件中的本机视图。"
-ms.topic: article
+title: 在 XAML 中的本机视图
+description: 从 iOS、 Android 和通用 Windows 平台的本机视图从 Xamarin.Forms XAML 文件，可以直接引用。 可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。 本文演示如何使用 Xamarin.Forms XAML 文件中的本机视图。
 ms.prod: xamarin
 ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: f4345e107a32c3a583c246fe5dbe24590960c870
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-views-in-xaml"></a>在 XAML 中的本机视图
 
@@ -481,7 +480,7 @@ class MySpinner : Spinner
 
 `MySpinner`类会公开`ItemsSource`和`SelectedObject`属性，和一个`ItemSelected`事件。 显示的项`MySpinner`类提供的[ `Adapter` ](https://developer.xamarin.com/api/type/Android.Widget.Adapter/)与视图，关联和项填充到`Adapter`时`ItemsSource`首先设置属性。 每当中的选定的项`MySpinner`类更改，`OnBindableSpinnerItemSelected`事件处理程序更新`SelectedObject`属性。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Xamarin.Forms XAML 文件中的本机视图。 可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。
 

@@ -1,18 +1,17 @@
 ---
-title: "布局压缩"
-description: "布局压缩的可视化树中中删除指定的布局，以尝试提升页呈现性能。 此文章介绍了如何启用布局压缩和可以带来的好处。"
-ms.topic: article
+title: 布局压缩
+description: 布局压缩的可视化树中中删除指定的布局，以尝试提升页呈现性能。 此文章介绍了如何启用布局压缩和可以带来的好处。
 ms.prod: xamarin
 ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9c698d539ab671ee2a033ae5943a46e0cc870f76
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="layout-compression"></a>布局压缩
 
@@ -112,7 +111,7 @@ Facebook 按钮，可以在三个布局类上启用布局压缩：
 
 示例应用程序包含页从实际的应用程序中提取。 如果没有布局压缩和快速的呈现器，页生成 130 视图在 Android 上的嵌套的视图层次结构。 启用快速呈现器和适当的布局类上的布局压缩可以嵌套的视图层次结构减少到 70 视图，46%的减少。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 布局压缩的可视化树中中删除指定的布局，以尝试提升页呈现性能。 这带来的性能优势因页面复杂性、要使用的操作系统版本以及运行应用的设备而异。 不过，在旧设备上实现的性能提升最大。
 

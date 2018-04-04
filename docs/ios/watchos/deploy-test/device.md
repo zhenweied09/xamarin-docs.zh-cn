@@ -1,18 +1,17 @@
 ---
-title: "在监视设备上测试"
-description: "部署应用程序在 Apple Watch 上进行测试"
-ms.topic: article
+title: 在监视设备上测试
+description: 部署应用程序在 Apple Watch 上进行测试
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>在监视设备上测试
 
@@ -26,7 +25,7 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="devices"></a>设备
 
-测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心上注册的设备。 设备列表如下所示 (单击加号 **+** 来添加新设备):
+测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心上注册的设备。 设备列表如下所示 (单击加号**+**来添加新设备):
 
 ![](device-images/devices-sml.png "设备列表如下所示")
 

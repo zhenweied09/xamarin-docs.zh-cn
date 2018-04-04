@@ -1,18 +1,17 @@
 ---
-title: "播放声音与 AVAudioPlayer"
-description: "这篇文章演示如何使用一个帮助器类来控制播放的声音使用 AVAudioPlayer。"
-ms.topic: article
+title: 播放声音与 AVAudioPlayer
+description: 这篇文章演示如何使用一个帮助器类来控制播放的声音使用 AVAudioPlayer。
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 59b91c22060fbbc0d1855db59f234048d4673110
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c50aea9c4c35e91c2baa98c94db2fd7c61136d69
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="playing-sound-with-avaudioplayer"></a>播放声音与 AVAudioPlayer
 

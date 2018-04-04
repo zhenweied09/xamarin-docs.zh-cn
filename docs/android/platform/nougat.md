@@ -1,18 +1,17 @@
 ---
-title: "Nougat 功能"
-description: "如何开始使用 Xamarin.Android 来开发 Android Nougat 的应用。"
-ms.topic: article
+title: Nougat 功能
+description: 如何开始使用 Xamarin.Android 来开发 Android Nougat 的应用。
 ms.prod: xamarin
 ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: c666b7d5b680eab3c990950569868eacdb6f30af
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="nougat-features"></a>Nougat 功能
 
@@ -43,7 +42,7 @@ Android Nougat 提供给 Xamarin.Android 开发人员感兴趣的许多新功能
 此文章介绍了如何开始构建使用 Android Nougat 尝试的新功能，计划迁移或功能的工作，以面向新的 Android Nougat 平台的应用程序。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需基于 Xamarin 的应用中使用新的 Android Nougat 功能：
 
@@ -150,7 +149,7 @@ Android Nougat 引入了大量新特性和功能，如多窗口支持、 通知�
 
 [![在纵向与横向多窗口模式下运行的示例应用](nougat-images/multi-window-mode.png)](nougat-images/multi-window-mode.png#lightbox)
 
-你可以配置如何对 Xamarin.Android 应用程序的活动支持多窗口模式下运行。 例如，你可以配置在多窗口模式下设置的最小大小的默认高度和宽度的您的应用程序的属性。 你可以使用新`Activity.IsInMultiWindowMode`属性来确定你的活动是否在多窗口模式下运行。 例如:
+你可以配置如何对 Xamarin.Android 应用程序的活动支持多窗口模式下运行。 例如，你可以配置在多窗口模式下设置的最小大小的默认高度和宽度的您的应用程序的属性。 你可以使用新`Activity.IsInMultiWindowMode`属性来确定你的活动是否在多窗口模式下运行。 例如：
 
 ```csharp
 if (!IsInMultiWindowMode) {
@@ -264,7 +263,7 @@ Android Nougat 使你可以使用系统通知标头、 操作和可扩展的布�
 -   [直接启动](https://developer.xamarin.com/samples/monodroid/android-n/DirectBoot/)演示如何将数据存储在设备加密的存储，这是始终引导设备同时之前和之后输入任何用户 credentials(PIN/Pattern/Password) 时才可用。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入 Android Nougat 并且说明了如何安装和在 Android Nougat 上配置的最新的工具和 Xamarin.Android 开发的包。 它还提供指向示例源代码，以帮助你开始在创建应用程序 Android Nougat Android Nougat 中可用的关键功能的概述。
 

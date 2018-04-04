@@ -1,17 +1,17 @@
 ---
-title: "它可能连接到 Android 仿真程序在 Mac 上从运行 Windows VM？"
-ms.topic: article
+title: 它可能连接到 Android 仿真程序在 Mac 上从运行 Windows VM？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2f0ef027d8a2d40ccf85e35d5a85eba4cd7c7ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>它可能连接到 Android 仿真程序在 Mac 上从运行 Windows VM？
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/27/2018
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    奇数端口是用于连接到`adb`。 另请参阅[http://developer.android.com/tools/devices/emulator.html#emulatornetworking](http://developer.android.com/tools/devices/emulator.html#emulatornetworking)。
+    奇数端口是用于连接到`adb`。 另请参阅[ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking)。
 
 4.  _选项 1_： 使用[ `nc` ](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)转发入站的 TCP 数据包外部端口上接收 5555 （或你喜欢的任何其他端口） 上的环回接口奇数端口 (**127.0.0.1 5555**在此示例中)，将转发出站数据包重新另一种方法：
 
@@ -92,13 +92,13 @@ ms.lasthandoff: 02/27/2018
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>另一种方法使用`adb -H`尚不支持
 
-从理论上讲，另一种方法是使用`adb`的内置功能，以连接到`adb`在远程计算机上运行的服务器 (请参阅例如[http://stackoverflow.com/a/18551325](http://stackoverflow.com/a/18551325))。
+从理论上讲，另一种方法是使用`adb`的内置功能，以连接到`adb`在远程计算机上运行的服务器 (请参阅例如[ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325))。
 但 Xamarin.Android IDE 扩展当前不提供某种方法来配置该选项。
 
 ## <a name="contact-information"></a>联系信息
 
 本文档讨论自 2016 年 3 月日起的当前行为。 本文档中所述的技术不为 Xamarin，稳定的测试套件的一部分，因此它可能会在将来中断。
 
-如果你注意到，则方法将不再起作用，或者如果你注意到文档中的任何其他错误，请尝试将添加到以下论坛线程上的讨论： [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm)。
+如果你注意到，则方法将不再起作用，或者如果你注意到文档中的任何其他错误，请尝试将添加到以下论坛线程上的讨论： [ http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm ](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm)。
 谢谢!
 

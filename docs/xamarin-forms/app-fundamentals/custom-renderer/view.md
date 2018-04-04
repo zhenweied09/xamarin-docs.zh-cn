@@ -1,18 +1,17 @@
 ---
-title: "实现视图"
-description: "Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。 本文演示如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。"
-ms.topic: article
+title: 实现视图
+description: Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。 本文演示如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-a-view"></a>实现视图
 
@@ -320,7 +319,7 @@ namespace CustomRenderer.WinPhone81
 > [!NOTE]
 > 务必停止和释放的对象，它提供对 Windows Phone 或 UWP 应用程序中的照相机的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)对于 Windows 运行时应用程序，和[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)UWP 应用程序。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。 Xamarin.Forms 自定义用户界面控件应派生自[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)类，该类用于放置布局和在屏幕上的控件。
 

@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-标题:"一部分 6-测试和应用商店审批"ms.topic: article ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin 跨平台作者： asb3993 ms.author: amburns ms.date: 03/23/2017年
+标题:"一部分 6-测试和应用商店审批"ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin 跨平台作者： asb3993 ms.author: amburns ms.date: 03/23/2017年
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>第 6-部分测试和应用商店审批

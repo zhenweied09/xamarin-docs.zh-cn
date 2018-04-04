@@ -1,18 +1,17 @@
 ---
 title: RecyclerView
-description: "RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视图组，如 ListView 和 GridView 的更灵活替换。  本指南说明如何使用和自 RecyclerView 定义 Xamarin.Android 应用程序中。"
-ms.topic: article
+description: RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视图组，如 ListView 和 GridView 的更灵活替换。  本指南说明如何使用和自 RecyclerView 定义 Xamarin.Android 应用程序中。
 ms.prod: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 187339244d53c154cc22672a3d2ceba7e0a75bcf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -34,7 +33,7 @@ _RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视�
 本指南说明如何使用`RecyclerView`在 Xamarin.Android 应用程序中; 它还说明了如何添加`RecyclerView`包到你的 Xamarin.Android 项目，并描述如何`RecyclerView`典型的应用程序中的函数。 提供了真实代码示例来演示如何集成`RecyclerView`到你的应用程序、 如何实现项视图，请单击，以及如何刷新`RecyclerView`其基础数据的更改时。 本指南假定你熟悉 Xamarin.Android 开发。
 
 
-### <a name="requirements"></a>惠?
+### <a name="requirements"></a>要求
 
 尽管`RecyclerView`是通常与 Android 5.0 棒糖形相关联，它作为提供支持库&ndash;`RecyclerView`作用于应用该目标 API 级别 (Android 2.1) 7 及更高版本。 使用所需的以下`RecyclerView`基于 Xamarin 的应用程序中：
 
@@ -77,7 +76,7 @@ _RecyclerView 用于显示集合; 是一组视图它被旨在作为较旧的视�
 本主题将额外的代码添加到示例应用程序中提供[基本 RecyclerView 示例](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)来演示如何处理项单击事件并更新`RecyclerView`当基础数据源发生更改。
 
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>总结
 
 本指南引入 Android`RecyclerView`小组件; 它解释如何添加`RecyclerView`如何支持到 Xamarin.Android 项目中，库`RecyclerView`回收视图，如何它会强制实施的持有者的视图模式为提高效率，以及如何各种帮助程序类构成`RecyclerView`协作显示集合。 它提供示例代码，以演示如何`RecyclerView`集成到应用程序，它解释如何定制`RecyclerView`的布局策略通过插入不同的布局管理器和它所述如何处理项单击事件并通知`RecyclerView`的数据源更改。
 

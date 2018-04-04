@@ -1,18 +1,17 @@
 ---
-title: "可重用 EffectBehavior"
-description: "行为是将效果添加到控件中，删除的样板影响处理从代码隐藏文件的代码很有用的方法。 本文演示如何使用 Xamarin.Forms 行为添加到控件的效果。"
-ms.topic: article
+title: 可重用 EffectBehavior
+description: 行为是将效果添加到控件中，删除的样板影响处理从代码隐藏文件的代码很有用的方法。 本文演示如何使用 Xamarin.Forms 行为添加到控件的效果。
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 698e2baef26a985fa40c2943cd25aefae55381f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1612d1e87f0e05c859babd93fd03ac9a5736b47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="reusable-effectbehavior"></a>可重用 EffectBehavior
 
@@ -156,14 +155,14 @@ label.Behaviors.Add (new EffectBehavior {
 
 使用此行为来添加和移除效果从控件的优点是，可以从代码隐藏文件中删除的样板影响处理代码。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了使用行为来向控件添加效果。 `EffectBehavior`类是添加的可重用 Xamarin.Forms 自定义行为[ `Effect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)控制何时行为附加到控件，并删除实例`Effect`实例时的行为是从控件中分离。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [效果](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [影响行为 （示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 - [Behavior](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
 - [行为<T>](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/)

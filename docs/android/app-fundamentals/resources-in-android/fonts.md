@@ -1,17 +1,16 @@
 ---
-title: "字体"
-ms.topic: article
+title: 字体
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 7cde19a153585a6f9739aa02f3ea69dc4f09be58
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d4ad9dde4004440985ff247d2f986ede385f981f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fonts"></a>字体
 
@@ -350,7 +349,7 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论 Android 8.0 以支持可下载的字体和字体作为资源中的新 Api。 它讨论如何将现有字体嵌入 APK，以及如何在布局中使用它们。 它还讨论了如何 Android 8.0 支持从字体提供程序，下载字体以编程方式或通过声明资源文件中的字体元的数据。 
 

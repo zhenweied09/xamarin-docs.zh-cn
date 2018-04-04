@@ -1,18 +1,17 @@
 ---
-title: "Android 音频"
-description: "Android OS 为多媒体，包含音频和视频提供广泛支持。 本指南重点介绍在 Android 中的音频，并介绍如何播放和记录音频使用内置的音频播放器和记录器类，以及低级别的音频 API。 此外将介绍使用其他应用程序，广播的音频事件，从而使开发人员能够生成良好的应用程序。"
-ms.topic: article
+title: Android 音频
+description: Android OS 为多媒体，包含音频和视频提供广泛支持。 本指南重点介绍在 Android 中的音频，并介绍如何播放和记录音频使用内置的音频播放器和记录器类，以及低级别的音频 API。 此外将介绍使用其他应用程序，广播的音频事件，从而使开发人员能够生成良好的应用程序。
 ms.prod: xamarin
 ms.assetid: 646ED563-C34E-256D-4B56-29EE99881C27
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 91bd5ae83cd0d59872e11a6b1bdc7b84c751e64f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: aff0d67549707129bfc85246318c33c522e4f1f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-audio"></a>Android 音频
 
@@ -34,7 +33,7 @@ Android 为多媒体提供广泛支持。 这篇文章检查使用音频在 Andr
 4.  **使用低级别音频**&ndash;播放音频使用`AudioTrack`通过直接写入内存缓冲区的类。 录制音频使用`AudioRecord`类，并直接从内存缓冲区中读取。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南需要 Android 2.0 （API 级别 5） 或更高版本。 请注意，必须在设备上完成调试在 Android 上的音频。
 
@@ -419,7 +418,7 @@ audRecorder.Release();
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Android OS 提供用于播放、 记录和管理音频功能强大的框架。 本文介绍如何播放和记录音频，使用的高级`MediaPlayer`和`MediaRecorder`类。 接下来，它探讨了如何使用音频通知共享之间不同的应用程序设备的音频资源。 最后，它处理如何播放和记录音频，使用低级别 Api，该接口直接与内存缓冲区。
 

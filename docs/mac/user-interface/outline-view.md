@@ -1,18 +1,17 @@
 ---
-title: "大纲视图"
-description: "本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。 它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。"
-ms.topic: article
+title: 大纲视图
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。 它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: dbbd10af046c0a8421e06e675364f92405b2317f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 82cb3afadf7615fdd92476371e9ab80cd1228b02
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="outline-views"></a>大纲视图
 
@@ -604,7 +603,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 ## <a name="using-images-in-outline-views"></a>在大纲视图中使用图像
 
-若要包含图像，作为一部分中的单元格`NSOutlineView`，你将需要更改该大纲视图返回数据的方式`NSTableViewDelegate's``GetView`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如:
+若要包含图像，作为一部分中的单元格`NSOutlineView`，你将需要更改该大纲视图返回数据的方式`NSTableViewDelegate's``GetView`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如：
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -682,7 +681,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用 Xamarin.Mac 应用程序中的大纲视图的详细的信息。 我们看到不同的类型，并使用的大纲视图、 如何创建和维护在 Xcode 的接口生成器中的大纲视图以及如何在 C# 代码中使用大纲视图。
 

@@ -1,18 +1,17 @@
 ---
-title: "创建效果"
-description: "效果简化控件的自定义项。 本文演示如何创建出当控件获得焦点时，更改输入控件的背景色的效果。"
-ms.topic: article
+title: 创建效果
+description: 效果简化控件的自定义项。 本文演示如何创建出当控件获得焦点时，更改输入控件的背景色的效果。
 ms.prod: xamarin
 ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 3a66ec9f935159e4854a12584a6c9f70ab805abb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 773636cf879439477a6f71e44f13ae66b8f10ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-an-effect"></a>创建效果
 
@@ -249,7 +248,7 @@ public HomePageCS ()
 
 [ `Effect.Resolve` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.Resolve/p/System.String/)返回[ `Effect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)即指定的名称解析组名称的串联 (使用指定[ `ResolutionGroupName` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResolutionGroupNameAttribute/)效果类中的属性)，并使用指定的唯一 ID [ `ExportEffect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ExportEffectAttribute/)效果类中的属性。 如果平台不提供效果，`Effect.Resolve`方法将返回一个非`null`值。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何创建更改的背景色的效果[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)控件时控件获得焦点。
 

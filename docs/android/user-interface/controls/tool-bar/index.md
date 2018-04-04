@@ -1,18 +1,17 @@
 ---
 title: Toolbar
-description: "工具栏是一种操作栏组件，它提供更大的灵活性比默认操作栏： 可以在应用程序中任意位置放置，可以更改其大小，并且它可以使用不同于应用程序的主题配色方案。 此外，每个应用程序屏幕可以有多个工具栏。"
-ms.topic: article
+description: 工具栏是一种操作栏组件，它提供更大的灵活性比默认操作栏： 可以在应用程序中任意位置放置，可以更改其大小，并且它可以使用不同于应用程序的主题配色方案。 此外，每个应用程序屏幕可以有多个工具栏。
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08fa00b539bd5baca4f5d61b04419a76a4a72ab1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="toolbar"></a>Toolbar
 
@@ -71,7 +70,7 @@ Google[材料设计准则](https://material.google.com/)建议利用类元素，
 
  
  
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 `Toolbar` 在 Android 5.0 棒糖形 (API 21) 上并且更高版本才可用。 当面向 Android 早于 Android 5.0 释放时，使用[Android 支持库 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)，该属性提供向后兼容`Toolbar`支持 NuGet 程序包中。 
 [工具栏兼容性](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md)说明如何使用此库。 

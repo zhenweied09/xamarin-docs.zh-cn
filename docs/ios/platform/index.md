@@ -1,45 +1,44 @@
 ---
-title: "平台功能"
-description: "本部分中的文档涵盖特定于 iOS 的功能。"
-ms.topic: article
+title: 平台功能
+description: 本部分中的文档涵盖特定于 iOS 的功能。
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 88ddd7c74fd800c71e63c03f6a8492ecfcc28f9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>平台功能
 
-##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[IOS 11 简介](~/ios/platform/introduction-to-ios11/index.md)
+##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[iOS 11 简介](~/ios/platform/introduction-to-ios11/index.md)
 
 如何安装和开始使用 Xcode 9 beta 和 Xamarin 的 iOS 11 支持预览。
 
 
-##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[IOS 10 简介](~/ios/platform/introduction-to-ios10/index.md)
+##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[iOS 10 简介](~/ios/platform/introduction-to-ios10/index.md)
 
 Apple 的 iOS 10 包括几个新的 Api 和服务，您可以使用新特性和功能开发应用程序。 与 iOS 10，应用都具有新的性能，如扩展图、 消息、 Phone 和使用 Siri。 本部分说明来利用 Xamarin.iOS 应用程序中的这些功能的演示。
 
 
-##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[IOS 9 简介](~/ios/platform/introduction-to-ios9/index.md)
+##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[iOS 9 简介](~/ios/platform/introduction-to-ios9/index.md)
 
 此节定义从 iOS 8 和如何在 Xamarin.iOS 应用程序中使用这些功能升级时，在 iOS 9 中所做的更改。
 
 
-##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[IOS 8 简介](~/ios/platform/introduction-to-ios8.md)
+##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[iOS 8 简介](~/ios/platform/introduction-to-ios8.md)
 
 Apple 的 iOS 8 从 iOS 7，对操作系统进行大量的更改。 在这里，我们显示以及如何使用它们。
 
-##  <a name="introduction-to-ios-7iosplatformintroduction-to-ios7indexmd"></a>[IOS 7 简介](~/ios/platform/introduction-to-ios7/index.md)
+##  <a name="introduction-to-ios-7iosplatformintroduction-to-ios7indexmd"></a>[iOS 7 简介](~/ios/platform/introduction-to-ios7/index.md)
 
 有关 iOS 7 中引入的主要新 Api，包括视图控制器转换，UIView 动画、 UIKit Dynamics 和文本工具包的增强功能。
 
-##  <a name="introduction-to-ios-6iosplatformintroduction-to-ios6indexmd"></a>[IOS 6 简介](~/ios/platform/introduction-to-ios6/index.md)
+##  <a name="introduction-to-ios-6iosplatformintroduction-to-ios6indexmd"></a>[iOS 6 简介](~/ios/platform/introduction-to-ios6/index.md)
 
 IOS 6，包括集合视图、 传递工具包、 事件工具包和社交 Framework 中引入的功能的说明。
 
@@ -71,7 +70,7 @@ iOS 具有两个日历相关的应用程序内置： 日历应用程序中，和
 
 扩展，因为在 iOS 8 中引入了一些专用`UIViewControllers`，提供的标准的上下文内的 iOS 如在**通知中心**，如用户请求执行的自定义键盘类型专用化输入或其他上下文，如编辑的照片，扩展可以提供特殊效果筛选器。
 
-##  <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[图形和动画在 iOS 中](~/ios/platform/graphics-animation-ios/index.md)
+##  <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[iOS 中的图形和动画](~/ios/platform/graphics-animation-ios/index.md)
 
 图形和动画在 iOS 中的介绍了在如 CoreImage、 核心图形和核心动画 iOS 中的核心图形概念。
 
@@ -91,11 +90,11 @@ Apple iOS 8 以进行发现以及与用户的主页中的主自动化设备通�
 
 iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 由与 Apple 的服务器的通信的 iOS 进行金融交易用户通过其 Apple id。 没有用户界面组件 – StoreKit Api 是主要关心检索产品信息和执行事务。 实现应用内购买的应用程序必须构建其自己的用户界面，并跟踪已购买的项替换为用于向用户提供的必需的产品或服务的自定义代码。
 
-##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[iOS 游戏 Api](~/ios/platform/gaming/index.md)
+##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[iOS 游戏 API](~/ios/platform/gaming/index.md)
 
 Apple 已在 iOS 9 中的 Api 游戏，它可以更轻松地在 Xamarin.iOS 应用程序中实现游戏图形和音频的多项技术改进。 其中包括轻松地通过高级框架和借助的 iOS 设备的 GPU 提高的速度和图形功能强大的开发。
 
-##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[消息应用程序集成](~/ios/platform/message-app-integration/index.md)
+##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[消息应用集成](~/ios/platform/message-app-integration/index.md)
 
 新与消息应用扩展集成到 iOS 10、**消息**应用并显示向用户的新功能。 扩展可以发送文本、 标签、 媒体文件和交互式消息。
 
@@ -113,11 +112,11 @@ iOS 9 增加了对在特定 iPad 硬件上同时运行两个应用程序的多�
 
 照片工具包是一个新的框架，允许应用程序查询系统图像库和创建自定义用户界面查看和修改其内容。 它包括了多个类表示图像和视频资产，以及资产，例如专辑和文件夹的集合。
 
-##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[查看请求应用程序](~/ios/platform/request-app-review.md)
+##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[请求应用评审](~/ios/platform/request-app-review.md)
 
 新到 iOS 10.3`RequestReview()`方法允许 iOS 应用程序要求用户进行评估或对其进行评审。 当用户在已安装从应用商店传送应用程序中调用此方法时，iOS 10 将处理整个分级和开发人员查看过程。 因为此过程受应用商店策略，则警报可能或可能不会显示。
 
-##  <a name="search-apisiosplatformsearchindexmd"></a>[搜索 Api](~/ios/platform/search/index.md)
+##  <a name="search-apisiosplatformsearchindexmd"></a>[搜索 API](~/ios/platform/search/index.md)
 
 搜索已在 iOS 9，以提供了全新的方法，以访问信息和功能在 Xamarin.iOS 应用程序中扩展。 使用新的应用程序搜索 Api，应用程序内容成为可搜索访问 Spotlight 和 Safari 搜索结果，Handoff 和 Siri 提醒和建议。 这样用户就可以快速访问活动和深层应用中的信息。
 
@@ -151,15 +150,15 @@ iOS 10 和 macOS Sierra 增强了对扩展范围像素格式和整个系统包�
 
 
 
-##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[绑定 Objective C](binding-objective-c/index.md)
+##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[绑定 Objective-C](binding-objective-c/index.md)
 
 当运行 iOS，你可能会遇到你想要使用第三方 Objective C 库的情况。 在这些情况下，你可以使用 MonoTouch 的绑定项目创建 C# 绑定到本机的 OBJECTIVE-C 的库。 项目使用相同的工具，我们使用 iOS Api 使向 C#。&nbsp;本文档介绍如何将绑定 OBJECTIVE-C 的 Api。
 
 ##  <a name="referencing-native-librariesnative-interopmd"></a>[引用本机库](native-interop.md)
 
-Xamarin.iOS 支持本机 C 库和 Objective C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 
+Xamarin.iOS 支持本机 C 库和 Objective-C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 
 
-## <a name="embedded-frameworksembedded-frameworksmd"></a>[嵌入的框架](embedded-frameworks.md)
+## <a name="embedded-frameworksembedded-frameworksmd"></a>[嵌入式框架](embedded-frameworks.md)
 
 说明如何在 Xamarin.iOS 应用程序中嵌入 Objective C 用户框架。
 

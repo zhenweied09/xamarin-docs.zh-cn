@@ -1,18 +1,17 @@
 ---
-title: "Java 集成概述"
-description: "Java 生态系统包括多样化和巨大的组件集合。 许多这些组件可用来减少开发 Android 应用程序所花费的时间。 本文档将介绍并提供了几种开发人员可以使用这些现有的 Java 组件来提高其 Xamarin.Android 应用程序开发体验的高级概述。"
-ms.topic: article
+title: Java 集成概述
+description: Java 生态系统包括多样化和巨大的组件集合。 许多这些组件可用来减少开发 Android 应用程序所花费的时间。 本文档将介绍并提供了几种开发人员可以使用这些现有的 Java 组件来提高其 Xamarin.Android 应用程序开发体验的高级概述。
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dbaf17479ae077fced425df5ac31bdbbc4e06b64
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-integration-overview"></a>Java 集成概述
 
@@ -41,7 +40,7 @@ _Java 生态系统包括多样化和巨大的组件集合。许多这些组件�
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档提供一些不同的方式，可以在 Xamarin.Android 应用程序中重用通过 Java 库的高级的概述。 它引入了绑定的概念和管理可调用包装器，并探讨了用于 Java 将代码移植到 C# 选项。 
 

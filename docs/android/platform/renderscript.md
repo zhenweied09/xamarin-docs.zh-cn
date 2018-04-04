@@ -1,18 +1,17 @@
 ---
-title: "Renderscript 简介"
-description: "本指南介绍 Renderscript，并说明如何使用该目标 API 级别 17 或更高版本的内部函数 Renderscript 中的 API 的 Xamarin.Android 应用程序。"
-ms.topic: article
+title: Renderscript 简介
+description: 本指南介绍 Renderscript，并说明如何使用该目标 API 级别 17 或更高版本的内部函数 Renderscript 中的 API 的 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 552c1db347d9bc37724691247648fa0e938baa88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9e21a51c409c5444f137a63eb2c6fadfef03cbe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 简介
 
@@ -70,7 +69,7 @@ Renderscript 引擎将执行运行时检查以确保每次分配中的元素与�
 
 这两种类型，仅`StringIntrinsic`Xamarin.Android 支持。 本指南将讨论如何在 Xamarin.Android 应用程序中使用内部函数的脚本。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南适用于 Xamarin.Android 应用该目标 API 级别 17 或更高版本。 使用_用户脚本_本指南中未涉及。
 
@@ -146,7 +145,7 @@ blurScript.ForEach(outputAllocation);
 
 你可能想要签出[使与 Renderscript 图像模糊](https://developer.xamarin.com/recipes/android/other_ux/drawing/blur_an_image_with_renderscript/)原因之一，它是如何在 Xamarin.Android 中使用的内部函数的脚本的完整示例。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南引入 Renderscript 以及如何在 Xamarin.Android 应用程序中使用它。 它简要讨论 Renderscript 是什么及其工作原理在 Android 应用程序。 它介绍一些 Renderscript 和之间的差异中的关键组件_用户脚本_和_内部脚本_。 最后，本指南讨论中使用的内部函数的脚本在 Xamarin.Android 应用程序中的步骤。
 

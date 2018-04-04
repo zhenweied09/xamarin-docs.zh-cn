@@ -1,18 +1,17 @@
 ---
 title: ScrollView
-description: "使用 ScrollView 呈现无法适合只在一个屏幕并释放空间用于键盘的内容的布局。"
-ms.topic: article
+description: 使用 ScrollView 呈现无法适合只在一个屏幕并释放空间用于键盘的内容的布局。
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 13f3d5c02b8451bcd52b355fb89f7931f50a0d39
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="scrollview"></a>ScrollView
 

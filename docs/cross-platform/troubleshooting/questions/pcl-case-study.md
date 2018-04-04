@@ -1,20 +1,20 @@
 ---
-title: "PCL 案例研究： 如何解析为 Microsoft TPL 数据流 NuGet 包与 System.Diagnostics.Tracing 相关的问题？"
-ms.topic: article
+title: PCL 案例研究： 如何解析为 Microsoft TPL 数据流 NuGet 包与 System.Diagnostics.Tracing 相关的问题？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: c1d8bab1af8082d74f447cd51422a7eedb7c18c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04814b78fd035005aabd8b9229d36bbda17ba140
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>PCL 案例研究： 如何解析为 Microsoft TPL 数据流 NuGet 包与 System.Diagnostics.Tracing 相关的问题？
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.iOS 和 Xamarin.Android 未实现 100%的作为引用它们允许每个 PCL 配置文件。 Xamarin 项目为 Visual Studio 中用于 Mac、 Visual Studio 和 NuGet 包管理器的实际方便起见，允许使用多个配置文件仅具有_不完整_实现。 例如，Xamarin.iOS 和 Xamarin.Android 都不当前包括"System.Diagnostics.Tracing"PCL 中的类型的完整实现命名空间。 此限制将尝试使用默认值时导致的错误的 3 层`portable-net45+win8+wpa81`Microsoft TPL 数据流 NuGet 包的版本。
 
@@ -90,7 +90,7 @@ Xamarin.iOS 和 Xamarin.Android 未实现 100%的作为引用它们允许每个 
 
 **\[1\] "引用程序集"的位置**
 
-Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\System.Diagnostics.Tracing.dll`
+Windows：`C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\System.Diagnostics.Tracing.dll`
 
 Mac (Mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-frameworks/.NETPortable/v4.5/System.Diagnostics.Tracing.dll`
 
@@ -107,7 +107,7 @@ Mac (Mono): <code>/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4
 
 1. 复制`System.Diagnostics.Tracing.dll`外观程序集到应用程序项目文件夹从以下位置之一：
 
-    Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
+    Windows：`C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
 
     Mac (Mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
 

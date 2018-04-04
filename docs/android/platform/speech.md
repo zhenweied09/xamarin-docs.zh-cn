@@ -1,18 +1,17 @@
 ---
 title: Android 语音
 description: 本文介绍如何使用非常强大 Android.Speech 命名空间的基础知识。 自推出以来已能够识别语音并将其输出以文本形式 Android。 它是一个相对简单的过程。 文本到语音，但是，对于过程是更为复杂，因为不仅不语音引擎必须考虑到帐户，但还语言可用且已安装从文本到语音转换 (TTS) 系统。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/02/2018
-ms.openlocfilehash: acc64fee37e1a6046991355389a09a29e1889993
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: bdaa9bf09485c06551a2df15a2e3a4b410a53e75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-speech"></a>Android 语音
 

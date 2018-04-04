@@ -1,18 +1,17 @@
 ---
-title: "iOS 游戏 Api"
-description: "本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形和音频功能提供的新游戏增强功能。"
-ms.topic: article
+title: iOS 游戏 Api
+description: 本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形和音频功能提供的新游戏增强功能。
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 34d3d6980819510a3390e2c30069818d6dfd721f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-gaming-apis"></a>iOS 游戏 Api
 
@@ -464,7 +463,7 @@ Apple 已添加了以下新功能到 SpriteKit ios 9:
 
 有关详细信息，请参阅我们[SpriteKit 文档](~/ios/platform/introduction-to-ios8.md#spritekit)Apple 的[SpriteKit Framework 参考](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041)及其[DemoBots： 构建跨平台游戏与 SpriteKit 和GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)示例应用程序。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖新游戏功能该 iOS 9 提供有关 Xamarin.iOS 应用程序。
 它引入 GameplayKit 和模型 I/O;裸机; 主要增强功能和 SceneKit 和 SpriteKit 的新功能。

@@ -1,18 +1,17 @@
 ---
-title: "颜色"
-description: "Xamarin.Forms 提供了灵活的跨平台颜色类别。"
-ms.topic: article
+title: 颜色
+description: Xamarin.Forms 提供了灵活的跨平台颜色类别。
 ms.prod: xamarin
 ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 9c40d99d80766c5d32a76e424e902bd1b7d141ba
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8d6276a96d591363c88be4ff7edd8a9d039fb29d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="colors"></a>颜色
 
@@ -99,7 +98,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 <Label Text="Tiny Alpha plus RGB" BackgroundColor="#C0F0" />
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms`Color`类用于创建平台感知颜色的引用。 它可在共享的代码和 XAML。
 

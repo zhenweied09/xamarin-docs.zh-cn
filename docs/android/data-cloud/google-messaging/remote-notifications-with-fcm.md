@@ -1,18 +1,17 @@
 ---
-title: "远程通知 Firebase 云消息传送"
-description: "本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud Messaging 实现远程通知 （也称为推送通知） 的分步说明。 它演示如何实现所需的通信使用 Firebase 云消息传送 (FCM)，提供如何配置用于访问 FCM，Android 清单的示例，演示如何使用 Firebase 下游消息传递的各种类控制台。"
-ms.topic: article
+title: 远程通知 Firebase 云消息传送
+description: 本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud Messaging 实现远程通知 （也称为推送通知） 的分步说明。 它演示如何实现所需的通信使用 Firebase 云消息传送 (FCM)，提供如何配置用于访问 FCM，Android 清单的示例，演示如何使用 Firebase 下游消息传递的各种类控制台。
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知 Firebase 云消息传送
 
@@ -34,7 +33,7 @@ _本演练提供在 Xamarin.Android 应用程序中如何使用 Firebase Cloud M
 
 在本演练中，你将以增量方式将功能添加到**FCMClient**和上一个设备或仿真程序以了解它如何与 FCM 交互运行它。 你将使用日志记录，若要了解实时应用事务与 FCM 服务器，并将观察如何从输入到 Firebase 控制台通知 GUI 的 FCM 消息生成的通知。 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 你可以继续执行本演练之前，必须获取所需的凭据以使用 Google 的 FCM 服务器;中介绍了此过程[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)。 具体而言，你必须下载**google services.json**要用于此演练的示例代码文件。 如果你尚未创建一个项目在 Firebase 控制台 (如果尚未下载或**google services.json**文件)，请参阅[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)。 
 
@@ -702,7 +701,7 @@ Make sure to call FirebaseApp.initializeApp(Context) first.
 这是一个可通过清除解决方案和重新生成项目解决的已知的问题 (**生成 > 清理解决方案**，**生成 > 重新生成解决方案**)。 有关详细信息，请参阅此[论坛讨论](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process)。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练详细 Xamarin.Android 应用程序中实现 Firebase Cloud Messaging 远程通知的步骤。 它描述如何安装所需的包所需的 FCM 通信，并且它说明了如何配置用于访问 FCM 服务器 Android 清单。 它提供演示如何以检查存在的 Google Play 服务的示例代码。 它演示了如何实现与 FCM 协商适用于注册令牌，实例 ID 侦听器服务，并且它说明了如何此代码将创建后台通知时 backgrounded 应用程序。 它解释主题消息，并且它提供用于接收和应用程序运行在前台时显示远程通知消息侦听器服务的示例实现。 
 

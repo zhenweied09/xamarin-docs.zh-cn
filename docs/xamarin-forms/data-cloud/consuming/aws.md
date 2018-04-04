@@ -1,18 +1,17 @@
 ---
-title: "使用 Amazon SimpleDB 服务"
-description: "Amazon SimpleDB 是 web 服务，提供的功能来存储和查询在 Amazon 的云中的数据。 此文章介绍了如何使用 AWS SDK for.NET 来查询、 创建、 替换和删除 SimpleDB 服务中存储的数据。"
-ms.topic: article
+title: 使用 Amazon SimpleDB 服务
+description: Amazon SimpleDB 是 web 服务，提供的功能来存储和查询在 Amazon 的云中的数据。 此文章介绍了如何使用 AWS SDK for.NET 来查询、 创建、 替换和删除 SimpleDB 服务中存储的数据。
 ms.prod: xamarin
 ms.assetid: 823819AA-15F9-4144-B355-78A10AD37513
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5604477ff182711a63ba2b0e6bbcbbcc082a76ed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1602319dbf5a5d00ac5de75f2d438b9aea692699
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-amazon-simpledb-service"></a>使用 Amazon SimpleDB 服务
 
@@ -189,7 +188,7 @@ public async Task DeleteTodoItemAsync (TodoItem todoItem)
 
 `DeleteAttributesAsync`方法接受`DeleteAttributesRequest`作为参数的实例。  `DeleteAttributesRequest`实例指定了该项目，从与要删除的特性`List`的`Attribute`实例要删除生成的`ToSimpleDBAttributes`方法。 提供，删除的项的所有特性，都删除的项目。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何使用 AWS SDK for.NET 来查询、 创建和替换，并删除 SimpleDB 服务中存储的数据。 此 SDK 提供`CognitoAWSCredentials`和`AmazonSimpleDBClient`Xamarin.Forms 应用程序用于访问 SimpleDB 服务的类。
 

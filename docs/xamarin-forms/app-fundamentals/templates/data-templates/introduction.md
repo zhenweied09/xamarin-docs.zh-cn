@@ -1,18 +1,17 @@
 ---
-title: "介绍"
-description: "Xamarin.Forms 数据模板提供受支持的控件上定义数据的表示形式的功能。 本文介绍数据模板，检查它们是所必需的原因。"
-ms.topic: article
+title: 介绍
+description: Xamarin.Forms 数据模板提供受支持的控件上定义数据的表示形式的功能。 本文介绍数据模板，检查它们是所必需的原因。
 ms.prod: xamarin
 ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: e7c1a8b233538b7ad40a18e44747bef672210516
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b71e1cb5f45a580aaf04c267028af1740cb560e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>介绍
 

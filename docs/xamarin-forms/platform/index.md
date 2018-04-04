@@ -1,18 +1,17 @@
 ---
-title: "平台功能"
-description: "利用使用 Xamarin.Forms 的特定于平台的功能"
-ms.topic: article
+title: 平台功能
+description: 利用使用 Xamarin.Forms 的特定于平台的功能
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>平台功能
 
@@ -26,7 +25,7 @@ Xamarin.Forms 是可扩展的并允许你使用的特定于平台的功能合并
 
 应用程序索引允许将否则忘记后几个使用能够通过在搜索结果中显示相关的应用程序。 深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。
 
-## <a name="device-classdevicemd"></a>[设备类](device.md)
+## <a name="device-classdevicemd"></a>[设备分类](device.md)
 
 如何使用`Device`类，以在共享的代码和用户界面 （包括使用 XAML） 中创建特定于平台的行为。 此外介绍了`BeginInvokeOnMainThread`在修改 UI 控件从后台线程时，这非常重要。
 

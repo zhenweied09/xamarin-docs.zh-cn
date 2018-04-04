@@ -1,18 +1,17 @@
 ---
-title: "检查器安装和要求"
-description: "如何下载、 安装和使用 Xamarin 检查器。"
-ms.topic: article
+title: 检查器安装和要求
+description: 如何下载、 安装和使用 Xamarin 检查器。
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: d93481a865be1ee9272c7ce7969bdb6ebd6b5536
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 93f42eef8d76074f6b672bc5a663e8f8f1d2ef80
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>检查器安装和要求
 
@@ -31,7 +30,7 @@ ms.lasthandoff: 03/16/2018
 
 -----
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 ### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -95,7 +94,7 @@ Visual Studio
 检查器客户端
 
 - Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Windows：`%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 1.4.x 还提供了从主菜单中查找程序 (macOS) 或资源管理器 (Windows) 直接选择日志文件的能力：
 

@@ -1,18 +1,17 @@
 ---
-title: "简单的动画"
-description: "ViewExtensions 类提供可用于构造简单动画的扩展方法。 本文演示如何创建和取消使用 ViewExtensions 类的动画。"
-ms.topic: article
+title: 简单的动画
+description: ViewExtensions 类提供可用于构造简单动画的扩展方法。 本文演示如何创建和取消使用 ViewExtensions 类的动画。
 ms.prod: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0d2cc30f9bc1ae5602394b8ca2d8e75517a01b54
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="simple-animations"></a>简单的动画
 
@@ -221,7 +220,7 @@ ViewExtensions.CancelAnimations (image);
 
 此操作将立即取消所有当前运行的动画[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)实例。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文说明了创建和取消使用动画[ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)类。 此类提供扩展方法，可用于构造旋转、 缩放、 平移和淡入淡出的简单动画[ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/)实例。
 

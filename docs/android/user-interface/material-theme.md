@@ -1,18 +1,17 @@
 ---
-title: "材料主题"
-description: "主题如何使用材料主题对 Xamarin.Android 应用程序"
-ms.topic: article
+title: 材料主题
+description: 主题如何使用材料主题对 Xamarin.Android 应用程序
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 479abf7fef695be156d4447592bc59dceabe3f03
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a3b5f908330833a38aad9e329835a4a437fc29f0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-theme"></a>材料主题
 
@@ -37,7 +36,7 @@ Android 提供三个材料主题风格：
 因为仅在 Android 5.0 和更高版本支持材料主题，则不能使用它 （或派生自材料主题的自定义主题） 主题到你的应用程序在早期版本的 Android 上运行。 但是，你可以配置你的应用以在 Android 5.0 设备上使用材料主题和正常故障回复到更早版本的主题在较旧版本的 Android 上运行时 (请参阅[兼容性](#compatibility)本文了解详细信息的部分)。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需基于 Xamarin 的应用中使用新的 Android 5.0 材料主题功能：
 
@@ -73,7 +72,7 @@ Android 提供三个材料主题风格：
 </application>
 ```
 
-或者，可以将应用程序设置`Theme`属性中**AssemblyInfo.cs** (或**Properties.cs**)。 例如:
+或者，可以将应用程序设置`Theme`属性中**AssemblyInfo.cs** (或**Properties.cs**)。 例如：
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -204,7 +203,7 @@ Android 5.0 还使你可以设置单个视图的样式。 在创建后**colors.x
 </style>
 ```
 
--   在布局中，设置`style`该视图，以匹配您在上一步中选择的自定义样式名称的属性。 例如:
+-   在布局中，设置`style`该视图，以匹配您在上一步中选择的自定义样式名称的属性。 例如：
 
 ```xml
 <android.support.v7.widget.CardView
@@ -225,7 +224,7 @@ Android 5.0 还使你可以设置单个视图的样式。 在创建后**colors.x
 
 若要设置你的应用样式，使它在 Android 5.0 上使用材料主题，但会自动恢复到较旧的 Android 版本上的向下兼容类型，使用以下步骤：
 
--   定义中的自定义主题**Resources/values-v21/styles.xml**派生的材料主题样式。 例如:
+-   定义中的自定义主题**Resources/values-v21/styles.xml**派生的材料主题样式。 例如：
 
 ```xml
 <resources>
@@ -235,7 +234,7 @@ Android 5.0 还使你可以设置单个视图的样式。 在创建后**colors.x
 </resources>
 ```
 
--   定义中的自定义主题**Resources/values/styles.xml** ，派生自一个较旧的主题，但按上面所述使用相同的主题名称。 例如:
+-   定义中的自定义主题**Resources/values/styles.xml** ，派生自一个较旧的主题，但按上面所述使用相同的主题名称。 例如：
 
 ```xml
 <resources>
@@ -246,7 +245,7 @@ Android 5.0 还使你可以设置单个视图的样式。 在创建后**colors.x
 ```
 
 -   在**AndroidManifest.xml**，请使用自定义主题名称配置你的应用程序。 
-    例如:
+    例如：
 
 ```xml
 <application android:label="MyApp" 
@@ -266,7 +265,7 @@ Android 5.0 还使你可以设置单个视图的样式。 在创建后**colors.x
 
 有关主题较旧的 Android 版本的兼容性的详细信息，请参阅[备用资源](~/android/app-fundamentals/resources-in-android/alternate-resources.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入了 Android 5.0 （棒糖形） 中包含新材料主题用户界面样式。 它所述的三个内置材料主题功能可用于设置应用样式、 它解释如何创建自定义主题于品牌你的应用，和它提供到主题的一个示例是单个的视图。 最后，本文还介绍了如何在应用中使用材料主题，同时保持与旧版本的 Android 的向下兼容性。
 

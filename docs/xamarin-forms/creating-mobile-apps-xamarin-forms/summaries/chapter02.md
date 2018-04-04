@@ -1,23 +1,22 @@
 ---
-title: "第 2 章的摘要。 应用程序的剖析"
-ms.topic: article
+title: 第 2 章的摘要。 应用程序的剖析
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: f1569911eb47f28ea6aee2313d01e07c801746df
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c206b124349614db7249609707bd22e8a4efe6d8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用程序的剖析
 
 在 Xamarin.Forms 应用中，占用的空间在屏幕上的对象称为*可视元素*、 通过封装[ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/)类。 可视元素可以拆分为对应这些类的三个类别：
 
-- [Page](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
+- [页](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
 - [布局](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)
 - [视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
 

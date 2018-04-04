@@ -1,18 +1,17 @@
 ---
-title: "构建跨平台应用程序"
-description: "摘要以及六个部件，本部分讨论如何使用 Xamarin 开发平台-了解如何 Xamarin 的工作设计移动应用程序，然后测试并将部署到各种应用程序存储从生成应用程序。"
-ms.topic: article
+title: 构建跨平台应用程序
+description: 摘要以及六个部件，本部分讨论如何使用 Xamarin 开发平台-了解如何 Xamarin 的工作设计移动应用程序，然后测试并将部署到各种应用程序存储从生成应用程序。
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: 53c32003cd1a77a3aa5feb0ab26cedeab27789dc
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: b9d167d8874ecfde9094bacc26cff3e7d1b10bab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
@@ -56,7 +55,7 @@ Tasky 是用于 iOS、 Android 和 Windows Phone 的简单待办事项列表应�
 读取[Tasky 案例研究](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本部分介绍了 Xamarin 的应用程序开发工具，并讨论了如何生成面向多个移动平台的应用程序。
 

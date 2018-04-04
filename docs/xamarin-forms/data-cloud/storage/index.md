@@ -1,18 +1,17 @@
 ---
-title: "在云中存储文件"
-description: "Azure 存储是一种可扩展的云存储解决方案，可以用于存储非结构化和结构化数据。"
-ms.topic: article
+title: 在云中存储文件
+description: Azure 存储是一种可扩展的云存储解决方案，可以用于存储非结构化和结构化数据。
 ms.prod: xamarin
 ms.assetid: 2C0EDFCE-6DB4-4BF6-B978-E64614AC9DB6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 62057a9c00d2d35cb085421f6f021b20247e64b0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3e44fcc2dfadf6c06e78df956615087a4468d5d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storing-files-in-the-cloud"></a>在云中存储文件
 

@@ -1,18 +1,17 @@
 ---
-title: "疑难解答"
-description: "本文提供使用 iOS 11 Xamarin.iOS 应用程序中的多个故障排除提示。"
-ms.topic: article
+title: 疑难解答
+description: 本文提供使用 iOS 11 Xamarin.iOS 应用程序中的多个故障排除提示。
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 4d1aaa2e6750ee8d51da5c45612c79ef4c9c6b32
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 181f0a1c66d05e0adf2b682f2df971f5d7d67dfb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 

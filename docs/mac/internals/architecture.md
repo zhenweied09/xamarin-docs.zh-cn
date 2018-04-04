@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Mac 体系结构"
-description: "本指南浏览到 OBJECTIVE-C 的较低级别 Xamarin.Mac 和及其之间的关系。 它还说明了概念，如编译、 选择器、 注册机构、 应用程序启动和生成器。"
-ms.topic: article
+title: Xamarin.Mac 体系结构
+description: 本指南浏览到 OBJECTIVE-C 的较低级别 Xamarin.Mac 和及其之间的关系。 它还说明了概念，如编译、 选择器、 注册机构、 应用程序启动和生成器。
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 5e32a06499d68c58bedbe88b24dc40b6c86ee8d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d6d7557fed5ea0ca0719dcbddbda316340645320
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.Mac 体系结构
 
@@ -32,7 +31,7 @@ Xamarin.Mac 应用程序运行在单声道执行环境中，并使用 Xamarin �
 
 本机代码是将在特定平台 （例如，Objective C 或甚至 AOT 编译代码，在 ARM 芯片上） 本机运行的代码。 本指南介绍了如何在托管的代码编译为本机代码，并说明如何 Xamarin.Mac 应用程序配合使用，充分利用通过绑定，使用 Apple 的 Mac Api 时也有权访问。NET 的 BCL 和复杂的语言，如 C#。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是通过 Xamarin.Mac 开发 macOS 应用程序所需的条件：
 
@@ -151,6 +150,6 @@ Xamarin.Mac.dll 创建后，使用 packager `mmp`，将绑定的所有组件在�
 
 有关更多详细信息链接器以及如何使用它，请参阅 iOS[链接器](~/ios/deploy-test/linker.md)指南。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论过 Xamarin.Mac 应用和浏览的 Xamarin.Mac 和到目标 c。 其关系的编译

@@ -1,18 +1,17 @@
 ---
-title: "IOS 8 简介"
-description: "IOS 8，Apple 提供了大量新的框架和 Api 让开发人员高兴地对。 本指南中我们将介绍这些新的 Api，并请参阅 iOS 8 开发人员和用户如何使受益。"
-ms.topic: article
+title: IOS 8 简介
+description: IOS 8，Apple 提供了大量新的框架和 Api 让开发人员高兴地对。 本指南中我们将介绍这些新的 Api，并请参阅 iOS 8 开发人员和用户如何使受益。
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 8a4fabd5cc63434950f4646336b06676f6eb915b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2f57547356adcbafd01851bc54e42a14454ccd6a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-8"></a>IOS 8 简介
 
@@ -26,7 +25,7 @@ iOS 7 直观地从哪些用户和开发人员必须希望，直接从第一个 i
 
 也有几个 iOS 8，详细本文档末尾中已弃用的 Api。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 在 Visual Studio 中为 Mac 创建 iOS 8 应用程序需要以下：
 
@@ -161,7 +160,7 @@ iOS 8 包括一个新易于使用的机制来创建用户界面-统一情节提�
 
 - **[UISearchDisplayController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UISearchDisplayController_Class/index.html#//apple_ref/occ/cl/UISearchDisplayController)**  – 这已被取代 UISearchController iOS8 中。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 在本文中我们讨论一些 apple 在 iOS 8 中引入的新功能。
 
 

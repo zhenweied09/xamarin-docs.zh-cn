@@ -1,18 +1,17 @@
 ---
-title: "调试的仿真程序上的 Android 磨损"
-description: "这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应用程序。"
-ms.topic: article
+title: 调试的仿真程序上的 Android 磨损
+description: 这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应用程序。
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>调试的仿真程序上的 Android 磨损
 
@@ -33,7 +32,7 @@ _这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应�
 
 ## <a name="launch-the-wear-virtual-device"></a>启动磨损虚拟设备 
 
-创建 Android 磨损虚拟设备后，你可以选择它从在 IDE 中的设备下拉列表菜单开始调试之前。 如果你的虚拟设备不可用的设备下拉列表中，验证你的项目是否 Android*磨损*应用程序项目 （不 Android 应用程序项目） 和，其目标 API 级别设置为相同的 API 级别与虚拟设备。 例如:
+创建 Android 磨损虚拟设备后，你可以选择它从在 IDE 中的设备下拉列表菜单开始调试之前。 如果你的虚拟设备不可用的设备下拉列表中，验证你的项目是否 Android*磨损*应用程序项目 （不 Android 应用程序项目） 和，其目标 API 级别设置为相同的 API 级别与虚拟设备。 例如：
 
 [![在 Visual Studio 设备菜单中选择磨损 AVD](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
@@ -46,6 +45,6 @@ Android 仿真程序启动后，则 Xamarin.Android 将磨损应用部署到仿�
 可以一直运行仿真器；无需关闭仿真器并在每次运行应用时重启。
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
  
 本指南介绍如何配置于磨损开发的 Android SDK 仿真程序和启动调试的磨损虚拟设备。

@@ -1,18 +1,17 @@
 ---
-title: "绑定。AAR"
-description: "本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步说明。AAR 文件。"
-ms.topic: article
+title: 绑定。AAR
+description: 本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步说明。AAR 文件。
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: ae209f8099925cc160e16cb5365625e48e6c384d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-an-aar"></a>绑定。AAR
 
@@ -276,7 +275,7 @@ Xamarin 工具合并**R**中的数据。到你的应用的 AAR**资源**类。 �
 <ImageView android:src="@drawable/image" ... />
 ```
 
-你也可以访问驻留在的资源布局。AAR。 若要执行此操作，请使用**Resource.Layout**中打包的布局的名称。AAR。 例如:
+你也可以访问驻留在的资源布局。AAR。 若要执行此操作，请使用**Resource.Layout**中打包的布局的名称。AAR。 例如：
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
@@ -307,7 +306,7 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本演练中，我们将创建用于绑定库。AAR 文件，将绑定库添加到最小化测试应用，并运行应用程序来验证我们 C# 代码可以调用驻留在的 Java 代码。AAR 文件。
 此外，我们扩展应用程序访问和显示驻留在图像资源。AAR 文件。

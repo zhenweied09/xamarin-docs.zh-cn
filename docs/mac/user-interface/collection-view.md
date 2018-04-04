@@ -1,18 +1,17 @@
 ---
-title: "集合视图"
-description: "本指南介绍了使用 Xamarin.Mac 应用中的集合视图。 它涵盖创建和维护 Xcode 和接口生成器中的集合视图和以编程方式使用它们。"
-ms.topic: article
+title: 集合视图
+description: 本指南介绍了使用 Xamarin.Mac 应用中的集合视图。 它涵盖创建和维护 Xcode 和接口生成器中的集合视图和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f391a9df8a0d4012637c503bc95c6de2185dd2f9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>集合视图
 
@@ -811,7 +810,7 @@ public override void ViewDidLoad()
 
 <a name="Summary"/>
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解在 Xamarin.Mac 应用程序中使用集合视图的详细的信息。 首先，它看起来在通过使用键 / 值编码 (KVC) 和键 / 值观察 (KVO) 公开到 Objective C 的 C# 类。 接下来，它说明了如何使用 KVO 符合类和数据将其绑定到在 Xcode 的接口生成器中的集合视图。 最后，它还介绍了如何在 C# 代码中与集合视图进行交互。
 

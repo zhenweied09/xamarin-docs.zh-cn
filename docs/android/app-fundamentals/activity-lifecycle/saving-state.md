@@ -1,18 +1,17 @@
 ---
-title: "演练-保存活动状态"
-description: "我们已介绍的理论基础活动的生命周期指南; 中保存状态现在，让我们演练一下示例。"
-ms.topic: article
+title: 演练-保存活动状态
+description: 我们已介绍的理论基础活动的生命周期指南; 中保存状态现在，让我们演练一下示例。
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e282eeb8732bd5294da4ec4e3fe337e81107c8f3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>演练-保存活动状态
 
@@ -172,7 +171,7 @@ if (bundle != null)
 之前[OnStop](https://developer.xamarin.com/api/member/Android.App.Activity.OnStop/)调用方法，我们新`OnSaveInstanceState`调用了方法，以保存`_counter`中的值`Bundle`。 Android 传递此`Bundle`回我们调用时我们`OnCreate`方法，并且我们曾经使用它来还原`_counter`到我们的地方开始的值。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本演练中，我们使用了我们的活动的生命周期的知识来保留状态数据。 
 

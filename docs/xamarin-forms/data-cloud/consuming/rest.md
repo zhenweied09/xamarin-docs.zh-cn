@@ -1,18 +1,17 @@
 ---
-title: "使用 rest 样式 Web 服务"
-description: "将 web 服务集成到应用程序是一个常用方案。 本文演示如何使用 rest 样式 web 服务从 Xamarin.Forms 应用程序。"
-ms.topic: article
+title: 使用 rest 样式 Web 服务
+description: 将 web 服务集成到应用程序是一个常用方案。 本文演示如何使用 rest 样式 web 服务从 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 98c38001ea7751c419d4be5b0f68339b06ec656f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 48b81c5beb1643501c69e5de1ea4f4197d587001
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-a-restful-web-service"></a>使用 rest 样式 Web 服务
 
@@ -209,7 +208,7 @@ REST 服务发送的 HTTP 状态代码`HttpResponseMessage.IsSuccessStatusCode`�
 - **400 （错误请求）** – 服务器不理解此请求。
 - **404 （未找到）** – 服务器上不存在请求的资源。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章学习了如何使用 rest 样式 web 服务从 Xamarin.Forms 应用程序，使用`HttpClient`类。 REST 的简单性已帮助使其用于访问移动应用程序中的 web 服务的主要方法。
 

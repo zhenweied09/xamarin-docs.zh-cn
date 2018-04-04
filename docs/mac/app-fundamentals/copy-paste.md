@@ -1,18 +1,17 @@
 ---
-title: "复制和粘贴"
-description: "本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程序。 它演示如何使用可以在多个应用以及如何支持给定应用内的自定义数据之间共享的标准数据类型。"
-ms.topic: article
+title: 复制和粘贴
+description: 本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程序。 它演示如何使用可以在多个应用以及如何支持给定应用内的自定义数据之间共享的标准数据类型。
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="copy-and-paste"></a>复制和粘贴
 
@@ -541,7 +540,7 @@ void PasteImage (NSObject sender)
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-从这里，我们调用`ImageDocument`该窗口来处理复制和粘贴操作的类实例。 例如: 
+从这里，我们调用`ImageDocument`该窗口来处理复制和粘贴操作的类实例。 例如： 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -703,7 +702,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 通过第一个访问粘贴板、 清除任何现有内容和写入多个表示形式之间实现所需的粘贴的数据执行复制操作。
 
-例如:
+例如：
 
 ```csharp
 // Get the standard pasteboard
@@ -937,7 +936,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-类还必须向 Objective C 公开使用`Register`指令和它必须公开任何必需的属性或方法使用`Export`。 例如:
+类还必须向 Objective C 公开使用`Register`指令和它必须公开任何必需的属性或方法使用`Export`。 例如：
 
 ```csharp
 [Export("name")]
@@ -1272,7 +1271,7 @@ if (ok) {
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用 Xamarin.Mac 应用程序以支持复制和粘贴操作中粘贴板的详细的信息。 首先，它引入了一个简单的示例，以帮助你熟悉标准选操作。 接下来，此操作耗时了解粘贴板以及如何读取和写入数据，从它的详细的信息。 最后，它看起来在使用自定义数据类型来支持复制和粘贴在应用内的复杂数据类型。
 

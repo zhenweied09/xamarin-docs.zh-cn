@@ -1,18 +1,17 @@
 ---
-title: "在 iTunes Connect 中配置你 tvOS 应用"
-description: "本文提供了 iOS 配置你的应用在 iTunes Connect tvOS 特定配置中的补充指南。"
-ms.topic: article
+title: 在 iTunes Connect 中配置你 tvOS 应用
+description: 本文提供了 iOS 配置你的应用在 iTunes Connect tvOS 特定配置中的补充指南。
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b6fad9eadbff272f86f9e426e3f6eb5d48847127
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d082a980572349da1b7e6155b3aa4de41512796f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>在 iTunes Connect 中配置你 tvOS 应用
 
@@ -75,7 +74,7 @@ TvOS 的特定信息屏幕然后将可供给定 iTunes Connect 记录：
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文提供在 iTunes Connect 中所需发布到 Apple 电视 App Store tvOS 应用 tvOS 特定设置的概述。
 

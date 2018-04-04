@@ -1,18 +1,17 @@
 ---
 title: 动画处理与 CCAction
 description: CCAction 类简化了添加动画到 CocosSharp 游戏。 若要实现功能或添加波兰语，则可以使用这些动画。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74DBD02A-6F10-4104-A61B-08CB49B733FB
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 7e64789f4e86dbcd47fc760fd9d4d7fb61c76121
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 21d7cd17d7d08f05e044f648fc09b71b7a837065
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="animating-with-ccaction"></a>动画处理与 CCAction
 

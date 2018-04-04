@@ -1,18 +1,17 @@
 ---
-title: "介绍"
-description: "Xamarin.Forms 控件模板提供轻松主题和重新主题的功能在运行时的应用程序页。 本文介绍控件模板。"
-ms.topic: article
+title: 介绍
+description: Xamarin.Forms 控件模板提供轻松主题和重新主题的功能在运行时的应用程序页。 本文介绍控件模板。
 ms.prod: xamarin
 ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: c3973b94168706e047ee5c312a8823503c9b0fd8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 744419cbc457ffb6dab6b46d690151c08ca35d42
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>介绍
 

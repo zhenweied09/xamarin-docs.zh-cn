@@ -1,18 +1,17 @@
 ---
-title: "绑定。JAR"
-description: "本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步说明。JAR 文件。"
-ms.topic: article
+title: 绑定。JAR
+description: 本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步说明。JAR 文件。
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-a-jar"></a>绑定。JAR
 
@@ -194,7 +193,7 @@ public class MainActivity : Activity
 祝贺你！ 你已成功绑定 Java 库。JAR 并在 Xamarin.Android 应用程序中使用它。
  
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本演练中，我们将创建第三方绑定库。JAR 文件，向最小化测试应用程序，添加绑定库，然后运行应用程序来验证我们 C# 代码可以调用驻留在的 Java 代码。JAR 文件。 
 

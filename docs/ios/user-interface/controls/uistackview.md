@@ -1,7 +1,6 @@
 ---
-title: "堆栈视图"
-description: "本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件管理一组的子视图中水平或垂直排列的堆栈。"
-ms.topic: article
+title: 堆栈视图
+description: 本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件管理一组的子视图中水平或垂直排列的堆栈。
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: aec1c4ceb562f528d6bcef7e4de0f2708952d2a5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="stack-view"></a>堆栈视图
 

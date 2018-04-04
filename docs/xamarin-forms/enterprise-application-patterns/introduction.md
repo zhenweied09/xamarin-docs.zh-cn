@@ -1,17 +1,16 @@
 ---
-title: "介绍"
-ms.topic: article
+title: 介绍
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: d5d5de21c4f397f203b4da5ea86e1f9a0e4714e9
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: a4f1f6ba820221be7553405f570911d3dc66a657
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>介绍
 
@@ -157,7 +156,7 @@ EShopOnContainers.Core PCL 项目中包含的以下文件夹：
 
 平台项目包含效果实现、 自定义呈现器实现中和其他特定于平台的资源。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin 的跨平台移动应用开发工具和平台提供全面的解决方案 B2E、 B2B 和 B2C 移动客户端应用程序，从而能够在所有目标平台 （iOS、 Android 和 Windows） 并帮助降低间共享代码总拥有成本。 应用可以共享其用户界面和应用程序逻辑代码，同时保留本机平台外观和感觉。
 

@@ -1,18 +1,17 @@
 ---
-title: "工具栏"
-description: "本指南介绍了使用 Xamarin.Mac 应用程序中的工具栏。 它涵盖创建和维护工具栏中 Xcode 和接口生成器中，将其公开到代码中，并以编程方式使用它们。"
-ms.topic: article
+title: 工具栏
+description: 本指南介绍了使用 Xamarin.Mac 应用程序中的工具栏。 它涵盖创建和维护工具栏中 Xcode 和接口生成器中，将其公开到代码中，并以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 92b90f8d4655ea89b67e81f3235b6fd9b6d92833
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 729c5c69d80c52047585d1026d7c675f3267f34e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="toolbars"></a>工具栏
 
@@ -354,7 +353,7 @@ public override void AwakeFromNib ()
 
 ![与非活动垃圾桶项工具栏](toolbar-images/custom03.png "与处于非活动状态的垃圾桶项工具栏")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用工具栏和 Xamarin.Mac 应用程序中的工具栏项的详细的信息。 它介绍如何创建和维护在 Xcode 的接口生成器中的工具栏、 如何某些 UI 控件自动与工具栏项工作、 如何在 C# 代码中，工具栏使用和如何启用和禁用工具栏项。
 

@@ -1,17 +1,16 @@
 ---
-title: "演练： 使用 JSON 元素创建的用户界面"
-description: "MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生成的支持。 在本教程中，我们将演练如何使用 JSONElement 从 JSON 包含与应用程序，或从远程 Url 加载创建用户界面。"
-ms.topic: article
+title: 演练： 使用 JSON 元素创建的用户界面
+description: MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生成的支持。 在本教程中，我们将演练如何使用 JSONElement 从 JSON 包含与应用程序，或从远程 Url 加载创建用户界面。
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 322857295383d17da03507bdd5ac78753f8c0619
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>演练： 使用 JSON 元素创建的用户界面
 
@@ -171,7 +170,7 @@ _rootElement = new RootElement ("Json Example"){
  <a name="Summary" />
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何创建使用接口保持联系从 JSON D。 它介绍了如何加载包含在文件与应用程序以及从远程 Url 中的 JSON。 它还介绍了如何访问在运行时在 JSON 中所述的元素。
 

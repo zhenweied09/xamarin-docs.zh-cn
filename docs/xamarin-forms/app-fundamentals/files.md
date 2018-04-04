@@ -1,18 +1,17 @@
 ---
-title: "文件"
-description: "使用嵌入的资源或针对本机文件系统 Api 编写，可以完成处理与 xamarin.forms 结合的文件。"
-ms.topic: article
+title: 文件
+description: 使用嵌入的资源或针对本机文件系统 Api 编写，可以完成处理与 xamarin.forms 结合的文件。
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: c6d10025ccc038ba160fe3c09f6ce92e97d916d2
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 8315f1a0056c6a6f084ebfe2c29f0c0c2bb30330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="files"></a>文件
 
@@ -241,7 +240,7 @@ namespace WindowsApp
 基于 PCL Xamarin.Forms 项目还可以充分利用[PCLStorage NuGet](http://www.nuget.org/packages/pclstorage) ([代码&amp;文档](https://pclstorage.codeplex.com/)) 来帮助实施方式跨平台的文件操作。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档介绍了用于加载嵌入的资源和保存和加载设备上的文本的某些简单文件操作。 开发人员可以实现自己的本机文件 Api 使用`DependencyService`，使其很复杂，需要处理其文件操作要求。
 

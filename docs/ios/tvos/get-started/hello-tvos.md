@@ -1,18 +1,17 @@
 ---
-title: "Hello，tvOS 快速入门指南"
-description: "本指南将指导完成创建第一个 Xamarin.tvOS 应用和其开发工具链。 它还引入了 Xamarin 设计器中，公开到代码中，UI 控件，并演示如何生成、 运行和测试 Xamarin.tvOS 应用程序。"
-ms.topic: article
+title: Hello，tvOS 快速入门指南
+description: 本指南将指导完成创建第一个 Xamarin.tvOS 应用和其开发工具链。 它还引入了 Xamarin 设计器中，公开到代码中，UI 控件，并演示如何生成、 运行和测试 Xamarin.tvOS 应用程序。
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0adf6e326dd29db15b6bd90626f424b803dc0bc9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello，tvOS 快速入门指南
 
@@ -253,7 +252,7 @@ namespace HellotvOS
 
 若要开始创建你的 UI，让我们双击`Main.storyboard`文件中**解决方案资源管理器**以将其打开以进行编辑 iOS 设计器中：
 
-[![](hello-tvos-images/designer01.png "在解决方案资源管理器 Main.storyboard 文件")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "解决方案资源管理器中的 Main.storyboard 文件")](hello-tvos-images/designer01.png#lightbox)
 
 这应启动设计器，并如下所示：
 
@@ -486,7 +485,7 @@ partial void Clicked (UIButton sender)
 
 如果你运行使用 Xamarin.tvOS 遇到问题，请参阅我们[故障排除](~/ios/tvos/troubleshooting.md)文档上的列表的已知问题和解决方案。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文章提供了通过创建一个简单 Hello，tvOS 应用开发的 Mac 的使用 Visual Studio 对 tvOS 的应用程序的快速入门。 它涵盖 tvOS 设备资源调配，接口创建、 编码 tvOS 和 tvOS 模拟器上测试的基础知识。
 

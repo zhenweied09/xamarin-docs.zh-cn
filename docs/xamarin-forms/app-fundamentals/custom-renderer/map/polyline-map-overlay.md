@@ -1,18 +1,17 @@
 ---
-title: "突出显示在地图上的路由"
-description: "此文章介绍了如何在向地图添加折线覆盖。 折线覆盖是一系列连接的线条通常用于上一个代码图，显示一个路由或窗体具有必需的任何形状的段。"
-ms.topic: article
+title: 突出显示在地图上的路由
+description: 此文章介绍了如何在向地图添加折线覆盖。 折线覆盖是一系列连接的线条通常用于上一个代码图，显示一个路由或窗体具有必需的任何形状的段。
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c7becef16009596148b4de28e4e8f6892cb44fe1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f781a472a63d97c8859aff36b28e0fd4fa0c7756
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-route-on-a-map"></a>突出显示在地图上的路由
 
@@ -31,7 +30,7 @@ _此文章介绍了如何在向地图添加折线覆盖。折线覆盖是一系�
 1. [自定义](#Customizing_the_Map)通过每个平台上创建地图自定义呈现器映射。
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅[ `Maps Control` ](~/xamarin-forms/user-interface/map.md)。
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) 必须初始化，并在使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)。
 
 有关自定义地图使用自定义呈现器的信息，请参阅[自定义地图 Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
 
@@ -295,7 +294,7 @@ namespace MapOverlay.UWP
 - 折线创建方法是实例化`MapPolyline`对象。 `MapPolygon`类用于在地图上显示一条线，通过设置其`Path`属性`Geopath`包含的行坐标的对象。
 - 将其添加到代码图上呈现折线`MapControl.MapElements`集合。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何将折线覆盖添加到一个图，以在一个代码图，显示一个路由或窗体具有必需的任何形状。
 

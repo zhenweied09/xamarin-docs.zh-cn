@@ -1,17 +1,17 @@
 ---
-title: "可以到较新的 NuGet 包更新 Xamarin.Forms 默认模板？"
-ms.topic: article
+title: 可以到较新的 NuGet 包更新 Xamarin.Forms 默认模板？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 160FBE13-26EB-4B4F-9248-A5CBE58FDD7F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: c626e8b4a01a55fac5d2c07f0c511241056c2774
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: fce595d7722dcd053f6fc9dcad84dc9a921e55b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>可以到较新的 NuGet 包更新 Xamarin.Forms 默认模板？
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
 
     示例： `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4.  更改主要的"name"元素[多项目模板文件](http://msdn.microsoft.com/library/ms185308.aspx)(`Xamarin.Forms.PCL.vstemplate`) 以确保其唯一性。 例如:
+4.  更改主要的"name"元素[多项目模板文件](http://msdn.microsoft.com/library/ms185308.aspx)(`Xamarin.Forms.PCL.vstemplate`) 以确保其唯一性。 例如：
     > <Name>空白应用 （Xamarin.Forms 可移植）-2.1.0.6529</Name>
 
 5.  重新压缩整个模板文件夹。 请确保要匹配的原始文件结构`.zip`文件。 `Xamarin.Forms.PCL.vstemplate`文件应在顶部`.zip`文件，不在任何文件夹内的。
@@ -41,5 +41,5 @@ ms.lasthandoff: 02/28/2018
 
 7.  将新的压缩向上模板文件夹复制到新的"移动应用程序"目录。
 
-8.  下载与步骤 3 中的版本匹配的 NuGet 程序包。 例如， [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (另请参阅[http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file))，并将其复制到Xamarin Visual Studio 扩展文件夹的相应的子文件夹：
+8.  下载与步骤 3 中的版本匹配的 NuGet 程序包。 例如， [ http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529 ](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (另请参阅[ http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file ](http://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file))，并将其复制到相应的子文件夹的 Xamarin Visual Studio 扩展文件夹：
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

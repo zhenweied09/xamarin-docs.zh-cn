@@ -1,18 +1,17 @@
 ---
-title: "使用其中的选项卡式的布局"
-description: "本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程序中创建选项卡式的用户界面。"
-ms.topic: article
+title: 使用其中的选项卡式的布局
+description: 本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程序中创建选项卡式的用户界面。
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5956cd13708f4e7e73926fc01e6142d9cf4a8edb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>使用其中的选项卡式的布局
 
@@ -27,7 +26,7 @@ _本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程
 
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 任何 Xamarin.Android 应用程序面向 API 级别 11 (Android 3.0) 或更高版本作为本机 Android Api 的一部分中有权访问其中 Api。 
 
@@ -172,7 +171,7 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本指南中我们将讨论如何在使用其中 Xamarin.Android 中创建选项卡式的用户界面。 我们介绍了如何向其中添加选项卡和活动与通过选项卡事件的交互方式`ActionBar.ITabListener`接口。 我们还了解了 Android 支持库 v7 AppCompat 包 backports 操作栏与旧版本的 Android 的选项卡。 
 

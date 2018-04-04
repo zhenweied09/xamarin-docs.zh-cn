@@ -1,18 +1,17 @@
 ---
-title: "增强型的用户通知"
-description: "本文涵盖所有用户通知已得到增强的 iOS 10 和如何在 Xamarin.iOS 应用程序中使用它们的方式。"
-ms.topic: article
+title: 增强型的用户通知
+description: 本文涵盖所有用户通知已得到增强的 iOS 10 和如何在 Xamarin.iOS 应用程序中使用它们的方式。
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enhanced-user-notifications"></a>增强型的用户通知
 
@@ -169,7 +168,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 2. 切换到**源**视图： 
 
     [![](enhanced-user-notifications-images/setup01.png "源视图")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. 单击 **+** 按钮以添加新键。
+3. 单击**+**按钮以添加新键。
 4. 输入`aps-environment`为**属性**，保留**类型**作为`String`并输入任一`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02.png "Ap 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -178,7 +177,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 双击`Entitlements.plist`文件中**解决方案资源管理器**以将其打开以进行编辑。
-3. 单击 **+** 按钮以添加新键。
+3. 单击**+**按钮以添加新键。
 4. 输入`aps-environment`为**属性**，保留**类型**作为`String`并输入任一`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Ap 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)

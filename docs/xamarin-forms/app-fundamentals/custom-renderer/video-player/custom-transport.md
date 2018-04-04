@@ -1,17 +1,16 @@
 ---
-title: "自定义视频传输控件"
-ms.topic: article
+title: 自定义视频传输控件
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5463a91dba5840ebe655aa1509d9f98e73643d26
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-video-transport-controls"></a>自定义视频传输控件
 
@@ -521,19 +520,19 @@ namespace FormsVideoLibrary.UWP
 
 使用 Unicode 字符符号**播放**，**暂停**，和**停止**映像会产生问题。 [杂项技术](https://unicode-table.com/en/blocks/miscellaneous-technical/)部分 Unicode 标准定义了三个看似适用于此目的的符号字符。 这些是：
 
-- 0x23F5 （黑色中等规模右指三角形） 或 & #x23F5;有关**播放**
-- 0x23F8 （双竖线） 或 & #x23F8;有关**暂停**
-- 0x23F9 （黑色方框） 或 & #x23F9;有关**停止**
+- 0x23F5 （黑色中等规模右指三角形） 或&#x23F5;为**播放**
+- 0x23F8 （双竖线） 或&#x23F8;为**暂停**
+- 0x23F9 （黑色方框） 或&#x23F9;为**停止**
 
 而不考虑如何在浏览器中显示这些符号 （和不同的浏览器处理这些不同的方式），它们未一致地显示在 Xamarin.Forms 所支持的平台。 IOS 和 UWP 设备上**暂停**和**停止**字符具有图形的外观，与 3D 背景为蓝色和白色的前景色。 这不是在 Android 上，符号是只需蓝色这种情况。 但是，对于 0x23F5 码位**播放**不具有相同的外观，在 UWP，和它甚至不支持在 iOS 和 Android。
 
 为此，0x23F5 码位不能用于**播放**。 好的替代项：
 
-- 0x25B6 （黑色的右指三角形） 或 & #x25B6;有关**播放**
+- 0x25B6 （黑色的右指三角形） 或&#x25B6;为**播放**
 
 这支持的所有三个平台，只不过它是类似的 3D 外观不于纯黑色三角形**暂停**和**停止**。 一种可能性是按照 0x25B6 码位，变体的代码：
 
-- 0x25B6 跟 0xFE0F （变量 16） 或 & #x25B6; & #xFE0F;有关**播放**
+- 0x25B6 跟 0xFE0F （变量 16） 或&#x25B6;&#xFE0F;为**播放**
 
 这是为使用在下面显示的标记。 在 iOS 中，它提供**播放**符号作为相同的 3D 外观**暂停**和**停止**按钮，但该变体在 Android 和 UWP 上不起作用。
 

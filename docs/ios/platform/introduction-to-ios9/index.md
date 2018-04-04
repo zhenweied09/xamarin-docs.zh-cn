@@ -1,18 +1,17 @@
 ---
-title: "IOS 9 简介"
-description: "本文介绍的所有新增和更改 Api 和 iOS 9 中可用的功能为 Xamarin.iOS 开发人员。"
-ms.topic: article
+title: IOS 9 简介
+description: 本文介绍的所有新增和更改 Api 和 iOS 9 中可用的功能为 Xamarin.iOS 开发人员。
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5b26989603695cfb309fba5a5318f7ef4d2460e2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10ed9154b92e6f13dd71f83cf4fed47585dc795f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-9"></a>IOS 9 简介
 

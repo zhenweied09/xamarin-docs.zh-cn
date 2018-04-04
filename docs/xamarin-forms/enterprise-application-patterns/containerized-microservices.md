@@ -1,17 +1,16 @@
 ---
-title: "容器化微服务"
-ms.topic: article
+title: 容器化微服务
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3ecbd5a301a64417ab5fb27bd8632b6d9790a7ac
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 461a1310ff430c16e49fa0ed6037a77b1302f769
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="containerized-microservices"></a>容器化微服务
 
@@ -143,7 +142,7 @@ EShopOnContainers 事件总线，使用 RabbitMQ，实现提供了一到多异�
 
 有关事件总线实现的信息，请参阅[.NET 微服务： 为容器化.NET 应用程序的体系结构](https://aka.ms/microservicesebook)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 微服务提供一种方法应用程序开发和部署适用于现代云应用程序的灵活性、 缩放和可靠性要求。 微服务的主要优势之一是，它们可以是向外扩展的独立，这意味着需要更多的处理断电或网络带宽，以支持需，不进行不必要地缩放的区域，可以扩展的特定功能区域没有遇到提高的需求，应用程序。
 

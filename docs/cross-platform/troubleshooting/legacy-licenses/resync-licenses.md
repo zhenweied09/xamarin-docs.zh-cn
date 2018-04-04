@@ -1,16 +1,16 @@
 ---
-title: "如何手动同步 Xamarin 许可证"
-ms.topic: article
+title: 如何手动同步 Xamarin 许可证
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: D0BD93E9-3A1F-4E5B-8EE8-36ADC33DCFE4
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 2413b6b7563a6ed1e17a8db61d2d61ddc85e71ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b06a1a7d525c91d7c3973b2b02d3d2835ce482f9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-do-i-manually-resynchronize-xamarin-licenses"></a>如何手动同步 Xamarin 许可证
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/27/2018
 
 4.  如果你看到的成对的重复的计算机名称，使用**停用**要移除的下拉列表菜单项_同时_在对成员：
     
-    ![许可证-> 停用上 https://store.xamarin.com/account/my/subscription/computers](resync-licenses-images/deactivate.png "使用停用下拉列表菜单项来删除对这两个成员")
+    ![许可证-> 停用上https://store.xamarin.com/account/my/subscription/computers ](resync-licenses-images/deactivate.png "使用停用下拉列表菜单项来删除对这两个成员")
 
 5.  删除任何剩余磁盘上仍然存在的许可证文件的副本。
     -   Windows

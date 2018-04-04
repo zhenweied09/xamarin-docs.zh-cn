@@ -1,18 +1,17 @@
 ---
-title: "果冻 Bean 功能"
-description: "本文档将为 Android 4.1 中引入的开发人员提供新功能的高级别的概述。 这些功能包括： 增强型通知，到 Android 无线发送共享大文件，对多媒体、 对等网络发现、 动画、 新的权限更新的更新。"
-ms.topic: article
+title: 果冻 Bean 功能
+description: 本文档将为 Android 4.1 中引入的开发人员提供新功能的高级别的概述。 这些功能包括： 增强型通知，到 Android 无线发送共享大文件，对多媒体、 对等网络发现、 动画、 新的权限更新的更新。
 ms.prod: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1d8068ccfc8d0f159a88704370261ec5f20d8b7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="jelly-bean-features"></a>果冻 Bean 功能
 
@@ -32,7 +31,7 @@ Android 4.1 (API 级别 16)，也称为"果冻 Bean"，已在 2012 年 7 月 9 �
 
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要开发 Xamarin.Android 应用程序使用果冻 Bean 需要 Xamarin.Android 4.2.6 或更高版本和 Android 4.1 (API 级别 16) 安装通过 Android SDK 管理器中下面的屏幕快照所示：
 
@@ -274,7 +273,7 @@ Android 4.1 允许应用程序更多灵活性和控件的显示通知。 应用�
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入了一些新的 API 的 Android 4.1 (API 级别 16) 中可用。 它突出显示的一些动画和进行动画处理的活动，启动的更改，并引入了用于使用协议，如 Bonjour 或 UPnP 其他设备的网络发现的新 API。 API 的其他更改，重点讲解了，如能够剪切和粘贴数据意向，通过使用独立的服务或"不稳定的"内容提供商的能力。
 

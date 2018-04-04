@@ -1,31 +1,30 @@
 ---
-title: "Xamarin.Forms XAML 基础知识"
-description: "开始使用移动设备的跨平台标记"
-ms.topic: article
+title: Xamarin.Forms XAML 基础知识
+description: 开始使用移动设备的跨平台标记
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a3f3dbbe0f12cfa7cc1fc6606ec8bd48a96e407c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 基础知识
 
-XAML-可扩展的应用程序标记语言-允许开发人员在 Xamarin.Forms 应用程序使用的标记，而不是代码中定义的用户界面。 XAML 永远不需要在 Xamarin.Forms 程序中，但通常会更简洁的和比等效代码更为直观连贯的可能非常有用。 XAML 是非常适用于常用的 MVVM （模型-视图-视图模型） 应用程序体系结构： XAML 定义的视图，通过基于 XAML 的数据绑定链接到 ViewModel 代码。
+XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Forms 应用程序中使用标记（而不是代码）来定义用户界面。 XAML 永远不需要在 Xamarin.Forms 程序中，但通常会更简洁的和比等效代码更为直观连贯的可能非常有用。 XAML 是非常适用于常用的 MVVM （模型-视图-视图模型） 应用程序体系结构： XAML 定义的视图，通过基于 XAML 的数据绑定链接到 ViewModel 代码。
 
 ## <a name="xaml-basics-contents"></a>XAML 基础知识内容
 
 * [概述](#Overview)
-* [第 1 部分。Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
-* [第 2 部分。基本 XAML 语法](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
-* [第 3 部分。XAML 标记扩展](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-* [第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
-* [第 5 部分。从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
+* [第 1 部分：XAML 入门](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
+* [第 2 部分：基本 XAML 语法](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+* [第 3 部分：XAML 标记扩展](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+* [第 4 部分：数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
+* [第 5 部分：从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
 除了这些 XAML 基础知识文章中，你可以下载书籍的章节[具有 Xamarin.Forms 创建移动应用](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
@@ -97,7 +96,7 @@ XAML 基本上是 XML，但 XAML 具有一些独特的语法功能。 最重要�
 
 这些功能*不*XML 扩展。 XAML 是完全合法的 XML。 但这些 XAML 语法功能使用 XML 以唯一方式。 它们详细讨论中的文章，其中介绍了如何使用 XAML 实现 MVVM 以此结束。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本文假定你熟悉 Xamarin.Forms 工作。 读取[Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)强烈建议。
 

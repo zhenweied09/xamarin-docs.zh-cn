@@ -1,18 +1,17 @@
 ---
-title: "在用户界面元素上设置可访问性值"
-description: "Xamarin.Forms 允许可访问性值在用户界面元素上设置通过使用 AutomationProperties 类，后者又设置本机可访问性值的附加的属性。 本文介绍如何使用 AutomationProperties 类，以便屏幕读取器可在页上的元素进行通信。"
-ms.topic: article
+title: 在用户界面元素上设置可访问性值
+description: Xamarin.Forms 允许可访问性值在用户界面元素上设置通过使用 AutomationProperties 类，后者又设置本机可访问性值的附加的属性。 本文介绍如何使用 AutomationProperties 类，以便屏幕读取器可在页上的元素进行通信。
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 4aeeea7f946a121b12741d2da217daf531935849
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cf9071684061b584e1cb75cfd50b33212f42bf79
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-accessibility-values-on-user-interface-elements"></a>在用户界面元素上设置可访问性值
 
@@ -139,7 +138,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 > [!NOTE]
 > 请注意， [ `SetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/)方法还可以用于设置`AutomationProperties.IsInAccessibleTree`附加属性 – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何设置可访问性值对用户界面元素在 Xamarin.Forms 应用程序中使用从的附加的属性`AutomationProperties`类。 这些附加属性设置本机可访问性值，以便屏幕读取器可在页上的元素进行通信。
 

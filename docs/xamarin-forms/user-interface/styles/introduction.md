@@ -1,18 +1,17 @@
 ---
-title: "简介样式"
-description: "样式允许可视化元素，以自定义的外观。 样式为特定类型定义，并且包含有关该类型可用的属性的值。"
-ms.topic: article
+title: 简介样式
+description: 样式允许可视化元素，以自定义的外观。 样式为特定类型定义，并且包含有关该类型可用的属性的值。
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ce5a7976f5bac68ca01b30a8d437aa83b8360580
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 453c4d6edafd6493272f8ca0435fcc86e2f3b2f7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-styles"></a>简介样式
 
@@ -135,7 +134,7 @@ public class NoStylesPageCS : ContentPage
 >
 > 低于 Xamarin.Forms 2.2 [ `StyleId` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.StyleId/)属性用于标识用于在 UI 测试中，以及主题引擎，如 Pixate 中标识的应用程序中各个元素。 但是，引入了 Xamarin.Forms 2.2 [ `AutomationId` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.AutomationId/)属性，已取代[ `StyleId` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.StyleId/)属性。 有关详细信息，请参阅[自动执行 Xamarin.Forms 测试与 Xamarin.UITest 以及测试云](~/xamarin-forms/deploy-test/uitest-and-test-cloud.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 应用程序通常包含多个具有相同的外观的控件。 设置每个控件的外观可能非常重复，而且容易出错。 相反，样式可以创建自定义控件外观的分组和可用的控件类型的设置属性。
 

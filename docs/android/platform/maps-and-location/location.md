@@ -1,18 +1,17 @@
 ---
-title: "位置服务"
-description: "本指南介绍位置感知 Android 应用程序中，并演示如何以获取使用用于 Google 位置服务 API 的 Android 位置服务 API，以及可用的融合的位置提供程序的用户的位置。"
-ms.topic: article
+title: 位置服务
+description: 本指南介绍位置感知 Android 应用程序中，并演示如何以获取使用用于 Google 位置服务 API 的 Android 位置服务 API，以及可用的融合的位置提供程序的用户的位置。
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="location-services"></a>位置服务
 
@@ -342,7 +341,7 @@ else
 
 请记住，`GetBestProvider`不会动态更改提供程序。 然而，它将活动生命周期中一次确定最佳的提供程序。 如果提供程序状态发生更改之后已设置，应用程序将需要附加代码`ILocationListener`方法&ndash; `OnProviderEnabled`， `OnProviderDisabled`，和`OnStatusChanged`&ndash;来处理所有与相关的可能性提供程序开关。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南涵盖获取使用 Android 位置服务和融合的位置提供程序从 Google 位置服务 API 的用户的位置。
 

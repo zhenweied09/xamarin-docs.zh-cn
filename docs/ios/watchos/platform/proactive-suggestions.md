@@ -1,18 +1,17 @@
 ---
-title: "主动建议"
-description: "这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。"
-ms.topic: article
+title: 主动建议
+description: 这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="proactive-suggestions"></a>主动建议
 
@@ -132,7 +131,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>还原活动
 
-若要响应用户点击搜索结果 (`NSUserActivity`) 对于应用程序中，编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如:
+若要响应用户点击搜索结果 (`NSUserActivity`) 对于应用程序中，编辑**AppDelegate.cs**文件，并重写`ContinueUserActivity`方法。 例如：
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -297,7 +296,7 @@ attributes.SupportsNavigation = true;
 - 若要处理启动应用程序与 MapKit`MKDirectionsRequest`对象。
 - 使 watchOS 能够了解如何建议应用程序中基于用户参与度。
 
-如果应用程序启动时 MapKit`MKDirectionsRequest`对象，它应自动启动提供的用户说明进行操作的请求的位置，或提供的用户界面可轻松地让用户开始获取说明。 例如:
+如果应用程序启动时 MapKit`MKDirectionsRequest`对象，它应自动启动提供的用户说明进行操作的请求的位置，或提供的用户界面可轻松地让用户开始获取说明。 例如：
 
 
 ```csharp
@@ -358,7 +357,7 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已涉及主动建议，并介绍了如何开发人员可以使用它们将驱动器流量发送到一个 Xamarin.iOS 应用程序 watchOS。 它涵盖实现主动建议的步骤，并显示使用准则。
 

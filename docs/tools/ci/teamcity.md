@@ -1,18 +1,17 @@
 ---
-title: "使用 Xamarin 团队城市"
-description: "本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提交到 Xamarin 测试云所涉及的步骤。"
-ms.topic: article
+title: 使用 Xamarin 团队城市
+description: 本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提交到 Xamarin 测试云所涉及的步骤。
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: caff1fb834ade35e68eb19683e87788a4aa70740
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>使用 Xamarin 团队城市
 
@@ -40,7 +39,7 @@ _本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提
 
 - **创建 TeamCity 项目**– 前面三个步骤完成后，我们必须创建 TeamCity 项目将包含的所有元数据检索的源代码、 编译项目，并提交到 Xamarin 测试云测试需要。
 
-# <a name="requirements"></a>惠?
+# <a name="requirements"></a>要求
 
 体验[Xamarin 测试云](https://developer.xamarin.com/guides/testcloud)是必需的。
 
@@ -201,7 +200,7 @@ $ test-cloud submit /path/to/APK <test-cloud-team-api-key> --devices <ANDROID_DE
 
 8. 完成生成后，检查生成日志，并查看是否存在任何问题或需要关注与生成的警告。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍如何使用 TeamCity 构建 Xamarin 移动应用程序，然后将它们提交到测试云。 我们讨论了创建自动执行生成过程生成脚本。 生成脚本负责编译应用程序，将提交到测试云，并等待返回的结果
 

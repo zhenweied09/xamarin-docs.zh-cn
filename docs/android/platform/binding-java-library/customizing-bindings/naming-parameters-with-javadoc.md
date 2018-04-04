@@ -1,18 +1,17 @@
 ---
-title: "Javadoc 的命名参数"
-description: "此文章介绍了如何通过使用生成从 Java 项目的 Javadoc 恢复 Java 绑定项目中的参数名称。"
-ms.topic: article
+title: Javadoc 的命名参数
+description: 此文章介绍了如何通过使用生成从 Java 项目的 Javadoc 恢复 Java 绑定项目中的参数名称。
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7517e46c5b66123dc4e12fb5562c59f569f249aa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Javadoc 的命名参数
 
@@ -40,7 +39,7 @@ _此文章介绍了如何通过使用生成从 Java 项目的 Javadoc 恢复 Jav
 > 没有大量 JavaDoc 输出中的变体。 。JAR 绑定工具链不支持每个单个可能排列，因此某些参数可能未正确命名。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何在 Java 绑定项目中使用 Javadoc 提供含义的参数名称用于绑定的 Api。 
 

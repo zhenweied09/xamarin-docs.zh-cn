@@ -1,18 +1,17 @@
 ---
-title: "显示弹出窗口"
-description: "Xamarin.Forms 提供了两个高类似 pop 的用户界面元素 – 警报和操作表。 本文演示如何使用 Api 中的警报和操作表，来询问简单的问题的用户并指导用户完成任务。"
-ms.topic: article
+title: 显示弹出窗口
+description: Xamarin.Forms 提供了两个高类似 pop 的用户界面元素 – 警报和操作表。 本文演示如何使用 Api 中的警报和操作表，来询问简单的问题的用户并指导用户完成任务。
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="displaying-pop-ups"></a>显示弹出窗口
 
@@ -72,7 +71,7 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 [![DisplayActionSheet](pop-ups-images/action2-sml.png "与破坏按钮的操作表对话框")](pop-ups-images/action2.png#lightbox "与破坏按钮的操作表对话框")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了使用 Api 中的警报和操作表，来询问简单的问题的用户并指导用户完成任务。 Xamarin.Forms 有两种方法[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)与通过一个弹出窗口的用户进行交互的类： [ `DisplayAlert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)/)和[ `DisplayActionSheet` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])/)，并且它们是同时呈现的每个平台上的相应本机控件。
 

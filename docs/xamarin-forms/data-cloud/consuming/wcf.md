@@ -1,18 +1,17 @@
 ---
-title: "使用 Windows Communication Foundation (WCF) Web 服务"
-description: "WCF 是 Microsoft 的统一的框架，用于构建面向服务的应用程序。 它允许开发人员生成安全、 可靠、 事务处理，且可互操作的分布式应用程序。 本文演示如何使用从 Xamarin.Forms 应用程序的 WCF 简单对象访问协议 (SOAP) 服务。"
-ms.topic: article
+title: 使用 Windows Communication Foundation (WCF) Web 服务
+description: WCF 是 Microsoft 的统一的框架，用于构建面向服务的应用程序。 它允许开发人员生成安全、 可靠、 事务处理，且可互操作的分布式应用程序。 本文演示如何使用从 Xamarin.Forms 应用程序的 WCF 简单对象访问协议 (SOAP) 服务。
 ms.prod: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>使用 Windows Communication Foundation (WCF) Web 服务
 
@@ -218,7 +217,7 @@ public async Task DeleteTodoItemAsync (string id)
 
 Web 服务引发`FaultException`未能找到或删除`TodoItem`，这由应用程序。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Xamarin.Forms 应用程序从 WCF SOAP 服务。 一般情况下，Xamarin 平台支持相同的客户端将一部分附带 Silverlight 运行时的 WCF。 这包括 WCF 的最常见的编码和协议实现 — 通过 HTTP 文本编码 SOAP 消息传输协议使用`BasicHttpBinding`类。 此外，WCF 支持需要仅在一个用于生成代理的 Windows 环境中可用的工具的用法。
 

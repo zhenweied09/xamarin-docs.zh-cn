@@ -1,18 +1,17 @@
 ---
-title: "本地化"
-description: "可以使用.NET 资源文件本地化 Xamarin.Forms 应用。"
-ms.topic: article
+title: 本地化
+description: 可以使用.NET 资源文件本地化 Xamarin.Forms 应用。
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="localization"></a>本地化
 
@@ -760,7 +759,7 @@ iOS 使用名为本地化 Projects 命名标准或**.lproj**目录，用于包�
 
 ![](localization-images/ios-resources.png "iOS 本地化项目目录")
 
-每个语言目录包含一份**flag.png**、 针对该语言本地化。 如果提供没有图像，则操作系统将默认为默认语言目录中的图像。 有关完整 Retina 支持，还应提供 **@2x** 和 **@3x** 的每个图像的副本。
+每个语言目录包含一份**flag.png**、 针对该语言本地化。 如果提供没有图像，则操作系统将默认为默认语言目录中的图像。 有关完整 Retina 支持，还应提供**@2x**和**@3x**的每个图像的副本。
 
 #### <a name="app-name"></a>应用程序名称
 

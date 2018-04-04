@@ -1,18 +1,17 @@
 ---
-title: "在代码中创建 iOS 用户界面"
-description: "Xamarin.iOS 提供两种方法创建用户界面为你的应用 – 与 Xamarin 设计器或在代码的 iOS。 本文介绍如何在代码中完全创建 iOS 用户界面。 它演示如何从项目模板可通过从 UIKit 创建视图的层次结构生成控制器中的应用程序屏幕启动。 然后介绍了如何创建可在控制器中加载的自定义视图。"
-ms.topic: article
+title: 在代码中创建 iOS 用户界面
+description: Xamarin.iOS 提供两种方法创建用户界面为你的应用 – 与 Xamarin 设计器或在代码的 iOS。 本文介绍如何在代码中完全创建 iOS 用户界面。 它演示如何从项目模板可通过从 UIKit 创建视图的层次结构生成控制器中的应用程序屏幕启动。 然后介绍了如何创建可在控制器中加载的自定义视图。
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
 

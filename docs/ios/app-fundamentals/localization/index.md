@@ -1,18 +1,17 @@
 ---
-title: "iOS 本地化"
-description: "本文档介绍 iOS SDK 的本地化功能以及如何使用 Xamarin 访问它们。"
-ms.topic: article
+title: iOS 本地化
+description: 本文档介绍 iOS SDK 的本地化功能以及如何使用 Xamarin 访问它们。
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: cc7643d89b4a45b6f6fb87bb027edb1c339a20ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-localization"></a>iOS 本地化
 
@@ -348,7 +347,7 @@ someControl.Text = localizedString;
 
 遵循上的 Apple 的常见问题[应用存储本地化](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization)输入你的应用已在销售每个国家/地区的翻译。 请注意您的应用程序还包含本地化才会显示翻译其警告**.lproj**目录的语言。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何本地化 iOS 应用程序使用的内置资源处理和情节提要功能的基础知识。
 

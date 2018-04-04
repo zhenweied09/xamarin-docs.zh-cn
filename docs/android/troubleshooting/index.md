@@ -1,18 +1,18 @@
 ---
-title: "疑难解答"
-description: "本部分中的文档涵盖特定于使用 Android 进行故障排除的功能。"
-ms.topic: article
+title: 疑难解答
+description: 本部分中的文档涵盖特定于使用 Android 进行故障排除的功能。
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 54583AB3-FE6D-4357-B4FC-CBC48B7EDEE4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 437f0296c232ef569beb6b77d3a1d14e2a06be29
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77a77dbaef5bb794070cd60e73e42724c7321af3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting"></a>疑难解答
 

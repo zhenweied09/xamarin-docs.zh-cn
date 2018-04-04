@@ -1,18 +1,17 @@
 ---
 title: 使用与 CocosSharp 平铺
 description: 平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成熟应用程序的映射的游戏。 CocosSharp 提供平铺的本机文件格式的内置集成。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a356ddc0412eb1dce1b35e060e6c9127525de804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>使用与 CocosSharp 平铺
 

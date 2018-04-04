@@ -1,18 +1,17 @@
 ---
-title: "使用属性列表"
-description: "本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) 编辑器了用于处理 Info.plist 和 Entitlements.plist。 它阐释设置图标和从 iOS 应用程序的启动映像在 Visual Studio for mac。"
-ms.topic: article
+title: 使用属性列表
+description: 本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) 编辑器了用于处理 Info.plist 和 Entitlements.plist。 它阐释设置图标和从 iOS 应用程序的启动映像在 Visual Studio for mac。
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6ee7a606243f5d21d827546b528ca5d9d3f0281
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-property-lists"></a>使用属性列表
 
@@ -150,7 +149,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
  <a name="Entitlements" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了使用图形和高级.plist 编辑器编辑常见应用程序配置中指定图标和启动映像。 它还引入了`Entitlements.plist`用于添加和管理应用程序功能。
 

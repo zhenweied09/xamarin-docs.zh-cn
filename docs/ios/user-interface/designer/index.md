@@ -1,18 +1,17 @@
 ---
-title: "iOS 设计器"
-description: "Xamarin 设计器中为 iOS 是可视化设计器中的适用于 iOS 情节提要和接口生成器格式适用于 Mac 和 Visual Studio 与 Visual Studio 完全集成。 IOS 设计器，以便可以在适用于 Mac 的 Visual Studio 或 Visual Studio 除了 Xcode 的接口生成器中编辑文件维护与情节提要 and.xib 格式，完全兼容。 此外，适用于 iOS 的 Xamarin 设计器支持高级的功能，如在编辑器中的设计时呈现的自定义控件。"
-ms.topic: article
+title: iOS 设计器
+description: Xamarin 设计器中为 iOS 是可视化设计器中的适用于 iOS 情节提要和接口生成器格式适用于 Mac 和 Visual Studio 与 Visual Studio 完全集成。 IOS 设计器，以便可以在适用于 Mac 的 Visual Studio 或 Visual Studio 除了 Xcode 的接口生成器中编辑文件维护与情节提要 and.xib 格式，完全兼容。 此外，适用于 iOS 的 Xamarin 设计器支持高级的功能，如在编辑器中的设计时呈现的自定义控件。
 ms.prod: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 884811e4035aabd831f851015db098a0243a2388
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 98d11b54ace70d4c4a82b2caebbe97cff02e0544
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-designer"></a>iOS 设计器
 

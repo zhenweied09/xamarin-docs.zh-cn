@@ -1,18 +1,17 @@
 ---
-title: "缓动函数"
-description: "Xamarin.Forms 中包括允许你指定的传输函数，用于控制如何动画加快或减慢，因为它们正在运行一个缓动类。 本文演示如何使用预定义的缓动函数，以及如何创建自定义缓动函数。"
-ms.topic: article
+title: 缓动函数
+description: Xamarin.Forms 中包括允许你指定的传输函数，用于控制如何动画加快或减慢，因为它们正在运行一个缓动类。 本文演示如何使用预定义的缓动函数，以及如何创建自定义缓动函数。
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: a57fd6e45d744d0e527c811649ce5299ebcd34d5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9171b885bdf5958b6969719301a1d7dad51d95b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="easing-functions"></a>缓动函数
 
@@ -101,7 +100,7 @@ await image.TranslateTo (0, 200, 2000, new Easing (t => 1 - Math.Cos (10 * Math.
 
 自定义缓动函数指定的 lambda 函数参数为[ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/)构造函数，并使用`Math.Cos`方法来创建阻碍通过慢速放置效果`Math.Exp`方法。 因此， [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)实例会转换，以便看起来似乎是放到其最终的放置位置。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示如何使用预定义的缓动函数，以及如何创建自定义缓动函数。 Xamarin.Forms 包括[ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/)类，该类允许你指定传输函数，用于控制如何动画加快或减慢，因为它们正在运行。
 

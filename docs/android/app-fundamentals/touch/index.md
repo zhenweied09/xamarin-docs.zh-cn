@@ -1,18 +1,17 @@
 ---
-title: "触摸"
-description: "许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测-可以使用手势以及。 例如，捏合缩放手势是一个非常常见的例子挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南检查触摸，并在 Android 笔势。"
-ms.topic: article
+title: 触摸
+description: 许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测-可以使用手势以及。 例如，捏合缩放手势是一个非常常见的例子挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南检查触摸，并在 Android 笔势。
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 791dd25796e1f9ba4d73b99dea0fd043431f0218
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d6c6d7fd02511ede84b7cfa75575d755f11bab99
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="touch"></a>触摸
 
@@ -36,7 +35,7 @@ Android 使用`MotionEvent`对象封装触摸数据和要侦听的收尾工作�
 -  [演练： 在 Android 中使用触摸](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
 -  [多点触控跟踪](touch-tracking.md)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本指南中，我们将探讨在 Android 中的触控。 对于这两个操作系统，我们学习了如何启用触摸以及如何响应触控事件。 接下来，我们所了解的有关笔势和某些笔势识别器，Android 和 iOS 提供来处理某些更常见的方案。 我们探讨了如何创建自定义笔势和应用程序中实现它们。 演练演示的概念和 Api 了为每个操作系统在操作，您还了解到如何跟踪各个指。
 

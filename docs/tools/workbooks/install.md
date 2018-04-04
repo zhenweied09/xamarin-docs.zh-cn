@@ -1,17 +1,16 @@
 ---
-title: "工作簿安装和要求"
-description: "如何下载、 安装和使用 Xamarin 的工作簿。"
-ms.topic: article
+title: 工作簿安装和要求
+description: 如何下载、 安装和使用 Xamarin 的工作簿。
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bf3d675224a1e1696d4ce526fa42260d2102aa7d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>工作簿安装和要求
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 
 -----
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 #### <a name="supported-operating-systems"></a>Supported Operating Systems
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 03/16/2018
 始终附加工作簿客户端日志文件：
 
 - Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
+- Windows：`%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 1.4.x 还提供了从主菜单中查找程序 (macOS) 或资源管理器 (Windows) 直接选择日志文件的能力：
 
@@ -70,7 +69,7 @@ ms.lasthandoff: 03/16/2018
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>为工作簿 1.3 及更早版本的日志路径：
 
 - Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Windows：`%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 ### <a name="platform-version-information"></a>平台版本信息
 

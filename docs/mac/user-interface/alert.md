@@ -1,18 +1,17 @@
 ---
-title: "警报"
-description: "本文介绍如何使用 Xamarin.Mac 应用程序中的警报。 它介绍创建和显示 C# 代码中的警报以及对用户交互作出响应。"
-ms.topic: article
+title: 警报
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的警报。 它介绍创建和显示 C# 代码中的警报以及对用户交互作出响应。
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8901bb57ace4f05e8c26fdc43dfe8c476927903a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alerts"></a>警报
 
@@ -264,7 +263,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已详细的介绍了在使用 Xamarin.Mac 应用程序中的警报。 我们已了解了不同类型和警报、 如何创建和自定义警报和如何在 C# 代码中使用的警报的使用。
 

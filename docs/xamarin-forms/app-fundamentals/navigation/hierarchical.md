@@ -1,18 +1,17 @@
 ---
-title: "分层导航"
-description: "NavigationPage 类提供能够向前和向后，根据需要浏览页中，用户所在的层次结构导航体验。 类实现作为后进先出 (LIFO) 堆栈 Page 对象中的导航。 本文演示如何使用 NavigationPage 类来执行导航堆栈中的页。"
-ms.topic: article
+title: 分层导航
+description: NavigationPage 类提供能够向前和向后，根据需要浏览页中，用户所在的层次结构导航体验。 类实现作为后进先出 (LIFO) 堆栈 Page 对象中的导航。 本文演示如何使用 NavigationPage 类来执行导航堆栈中的页。
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 95fc958beb71cba8f4d575eaa96d0612aa458966
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hierarchical-navigation"></a>分层导航
 
@@ -312,7 +311,7 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 假设用户的凭据是否正确，`MainPage`实例插入到当前页之前导航堆栈。 [ `PopAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/)方法然后删除导航堆栈中，从当前页与`MainPage`成为活动页面上的实例。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用[ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)类来执行导航堆栈中的页。 此类提供能够向前和向后，根据需要浏览页中，用户所在的层次结构导航体验。 此类将导航实现为 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 对象的后进先出 (LIFO) 堆栈。
 

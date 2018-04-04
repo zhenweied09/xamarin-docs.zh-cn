@@ -1,16 +1,15 @@
 ---
-title: "调试集成"
-ms.topic: article
+title: 调试集成
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: eaf391c399aa80de0174189ec68a2cca70125895
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debugging-integrations"></a>调试集成
 
@@ -23,7 +22,7 @@ ms.lasthandoff: 03/09/2018
 客户端日志位于在 macOS 和 Windows 上的以下位置：
 
 - Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Windows：`%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
 
 需要注意的一点是，当加载通过常用的集成`#r`在开发过程中的机制，集成程序集将会拾取作为_依赖_工作簿和绝对路径是否与它一起打包未使用。 这可能导致更改才会显示不传播，就像重新生成集成未执行任何操作。
 

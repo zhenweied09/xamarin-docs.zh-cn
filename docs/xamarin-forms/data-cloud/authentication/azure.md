@@ -1,18 +1,17 @@
 ---
-title: "使用 Azure 移动应用程序的用户进行身份验证"
-description: "Azure Mobile Apps 使用各种外部标识提供程序来支持进行身份验证和授权应用程序用户，包括 Facebook、 Google、 Microsoft、 Twitter 和 Azure Active Directory。 可以在表上设置权限，以限制对仅限于经过身份验证的用户访问。 此文章介绍了如何使用 Azure 移动应用管理 Xamarin.Forms 应用程序中的身份验证过程。"
-ms.topic: article
+title: 使用 Azure 移动应用程序的用户进行身份验证
+description: Azure Mobile Apps 使用各种外部标识提供程序来支持进行身份验证和授权应用程序用户，包括 Facebook、 Google、 Microsoft、 Twitter 和 Azure Active Directory。 可以在表上设置权限，以限制对仅限于经过身份验证的用户访问。 此文章介绍了如何使用 Azure 移动应用管理 Xamarin.Forms 应用程序中的身份验证过程。
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 823dcdfdaca79045a407b62ec7e75079ee25d72f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5f5c69601c11a3c0d25bc804c60883841b0fb30d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="authenticating-users-with-azure-mobile-apps"></a>使用 Azure 移动应用程序的用户进行身份验证
 
@@ -179,7 +178,7 @@ public async Task<bool> LogoutAsync()
 
 当`IAuthenticate.LogoutAsync`调用方法，通过标识提供程序设置任何 cookie 都被清除，之前`MobileServiceClient.LogoutAsync`调用方法来取消对与标识提供程序登录的用户进行身份验证。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何使用 Azure 移动应用管理 Xamarin.Forms 应用程序中的身份验证过程。 Azure Mobile Apps 使用各种外部标识提供程序来支持进行身份验证和授权应用程序用户，包括 Facebook、 Google、 Microsoft、 Twitter 和 Azure Active Directory。 `MobileServiceClient` Xamarin.Forms 应用程序使用类来控制对 Azure Mobile Apps 实例访问。
 

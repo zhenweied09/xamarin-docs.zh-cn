@@ -1,17 +1,16 @@
 ---
-title: "第 15 章的摘要。 交互式接口"
-ms.topic: article
+title: 第 15 章的摘要。 交互式接口
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 09b999771ec500409e40dc2aef671045bf9f5565
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>第 15 章的摘要。 交互式接口
 
@@ -91,7 +90,7 @@ Xamarin.Forms 包含 20 可实例化的类派生自`View`但不是`Layout`。 �
 
 - [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) 类型的`double`、 初始化为 1
 
-您可以看到，`Stepper`包含两个按钮标记为 **&ndash;** 和 **+** 。 按 **&ndash;** 减少`Value`通过`Increment`到最小`Minimum`。 按 **+** 增加`Value`通过`Increment`到最大`Maximum`。
+您可以看到，`Stepper`包含两个按钮标记为**&ndash;**和**+**。 按**&ndash;**减少`Value`通过`Increment`到最小`Minimum`。 按**+**增加`Value`通过`Increment`到最大`Maximum`。
 
 说明了这一点通过[ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo)示例。
 

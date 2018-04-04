@@ -1,18 +1,17 @@
 ---
-title: "事件、 协议和委托"
-description: "本文提供了用于接收回调并填充数据的用户界面控件的密钥 iOS 技术。 这些技术是事件、 协议和委托。 本文说明了每个都，以及如何从 C# 使用每个。 它演示了 Xamarin.iOS 如何使用 iOS 控件来公开熟悉.NET 事件，以及如何 Xamarin.iOS 提供对等协议和委托 Objective C 概念的支持 （OBJECTIVE-C 的委托不应与 C# 委托相混淆）。 本文还提供了示例，演示如何使用 – 同时用作的 OBJECTIVE-C 的委托和非委托方案中的基础协议。"
-ms.topic: article
+title: 事件、 协议和委托
+description: 本文提供了用于接收回调并填充数据的用户界面控件的密钥 iOS 技术。 这些技术是事件、 协议和委托。 本文说明了每个都，以及如何从 C# 使用每个。 它演示了 Xamarin.iOS 如何使用 iOS 控件来公开熟悉.NET 事件，以及如何 Xamarin.iOS 提供对等协议和委托 Objective C 概念的支持 （OBJECTIVE-C 的委托不应与 C# 委托相混淆）。 本文还提供了示例，演示如何使用 – 同时用作的 OBJECTIVE-C 的委托和非委托方案中的基础协议。
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="events-protocols-and-delegates"></a>事件、 协议和委托
 
@@ -419,7 +418,7 @@ map.DidSelectAnnotationView += (s,e) => {
  <a name="Summary" />
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何在 Xamarin.iOS 中使用事件、 协议和委托。 我们已了解如何 Xamarin.iOS 公开控件的正常.NET 样式事件。
 接下来我们所了解的有关 OBJECTIVE-C 的协议，包括如何，它们是不同于 C# 接口和 Xamarin.iOS 如何使用它们。 最后，我们探讨了 Xamarin.iOS 角度 OBJECTIVE-C 的委托。 我们已了解如何 Xamarin.iOS 同时支持强和弱类型化的委托，以及如何将绑定.NET 事件委托方法。

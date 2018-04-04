@@ -1,24 +1,23 @@
 ---
-title: "设置和安装"
-description: "本文将指导完成的安装步骤和准备你的计算机和 Android 磨损开发的设备所需的配置详细信息。 这篇文章结束时，你将拥有一个有效的 Xamarin.Android 磨损安装集成到 Visual Studio 用于 Mac 和/或 Microsoft Visual Studio 中，而你将准备就绪，若要开始生成首个 Xamarin.Android 磨损应用程序。"
-ms.topic: article
+title: 设置和安装
+description: 本文将指导完成的安装步骤和准备你的计算机和 Android 磨损开发的设备所需的配置详细信息。 这篇文章结束时，你将拥有一个有效的 Xamarin.Android 磨损安装集成到 Visual Studio 用于 Mac 和/或 Microsoft Visual Studio 中，而你将准备就绪，若要开始生成首个 Xamarin.Android 磨损应用程序。
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 012f563dcdaa70e33d641a4d8fb52df1622c260a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 86ed62075f5c39eaf7b0e348020f4a9361764727
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setup-and-installation"></a>设置和安装
 
 _本文将指导完成的安装步骤和准备你的计算机和 Android 磨损开发的设备所需的配置详细信息。这篇文章结束时，你将拥有一个有效的 Xamarin.Android 磨损安装集成到 Visual Studio 用于 Mac 和/或 Microsoft Visual Studio 中，而你将准备就绪，若要开始生成首个 Xamarin.Android 磨损应用程序。_
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 创建基于 Xamarin Android 磨损应用需要以下：
 

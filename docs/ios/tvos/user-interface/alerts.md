@@ -1,18 +1,17 @@
 ---
-title: "使用警报"
-description: "本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示一条警告消息。"
-ms.topic: article
+title: 使用警报
+description: 本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示一条警告消息。
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-alerts"></a>使用警报
 
@@ -161,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-`AddTextField`方法将新的文本字段添加到的警报，然后，你可以配置通过设置属性，例如占位符文本 （空字段时，将出现的文本）、 默认文本值和键盘的类型。 例如:
+`AddTextField`方法将新的文本字段添加到的警报，然后，你可以配置通过设置属性，例如占位符文本 （空字段时，将出现的文本）、 默认文本值和键盘的类型。 例如：
 
 ```csharp
 // Initialize field
@@ -193,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>警报视图控制器帮助器类
 
-因为显示简单、 公共类型的警报使用`UIAlertViewController`可能会导致大量的重复代码，可以使用一个帮助器类来减少重复的代码量。 例如:
+因为显示简单、 公共类型的警报使用`UIAlertViewController`可能会导致大量的重复代码，可以使用一个帮助器类来减少重复的代码量。 例如：
 
 ```csharp
 using System;
@@ -365,7 +364,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了使用`UIAlertController`向 Xamarin.tvOS 中的用户显示一条警告消息。 首先，它还介绍了如何显示简单的警告，同时添加按钮。 接下来，它还介绍了如何将文本字段添加到警报。 最后，它说明了如何使用一个帮助器类以减少所需以显示警报的重复代码。
 

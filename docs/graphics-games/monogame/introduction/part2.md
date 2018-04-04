@@ -1,18 +1,17 @@
 ---
-title: "第 2 – 实现 WalkingGame 部分"
-description: "本演练演示如何添加游戏逻辑和内容分发到一个空的 MonoGame 项目创建与移动动画画面一个演示触控输入。"
-ms.topic: article
+title: 第 2 – 实现 WalkingGame 部分
+description: 本演练演示如何添加游戏逻辑和内容分发到一个空的 MonoGame 项目创建与移动动画画面一个演示触控输入。
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 2bc8f5448e249a801edfc88726f3dfb5d24b158d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89f5148dacfb229750839e4554199f78c8d15126
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>第 2 – 实现 WalkingGame 部分
 
@@ -770,7 +769,7 @@ public void Update(GameTime gameTime)
 ![](part2-images/image7.gif "此代码的结果是字符将正确进行动画处理时遍历，以及然后面临着它已遍历停止时的最后一个方向")
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本演练演示了如何使用 MonoGame 创建跨平台游戏与子画面、 移动对象、 输入的检测和动画。 它介绍如何创建通用动画类。 它还介绍了如何创建用于组织代码逻辑字符实体。
 

@@ -1,18 +1,17 @@
 ---
-title: "显式样式"
-description: "显式样式是指通过设置其样式属性有选择地应用于这些控件。"
-ms.topic: article
+title: 显式样式
+description: 显式样式是指通过设置其样式属性有选择地应用于这些控件。
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 1fbc12288527c053a24041aa6c49cc1a4abdde55
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 53f87fe9dfbf8284055d28fd87bab7bad02c1fd8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="explicit-styles"></a>显式样式
 
@@ -179,7 +178,7 @@ public class ExplicitStylesPageCS : ContentPage
 
 构造函数定义三个*显式*样式应用于页的[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例。 每个`Style`用于显示文本以不同的颜色，同时，将字体大小和水平和垂直布局选项。 每个`Style`应用于不同`Label`通过设置其[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性。 此外，最终`Label`具有`Style`应用于它，但还将重写`TextColor`为另一种属性`Color`值。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 A [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)进行*显式*提供其声明，从而`x:Key`属性，然后在然后有选择地将它应用到控件通过设置其[ `Style`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性。
 

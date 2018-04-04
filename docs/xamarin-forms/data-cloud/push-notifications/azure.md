@@ -1,7 +1,6 @@
 ---
-title: "从 Azure 移动应用程序发送推送通知"
-description: "Azure 通知中心提供可缩放的推送基础结构用于发送移动推送通知从任意后端向任何移动平台，同时无后端不必与不同的平台通知系统通信的复杂性。 此文章介绍了如何使用 Azure 通知中心将推送通知从 Azure Mobile Apps 实例发送到 Xamarin.Forms 应用程序。"
-ms.topic: article
+title: 从 Azure 移动应用程序发送推送通知
+description: Azure 通知中心提供可缩放的推送基础结构用于发送移动推送通知从任意后端向任何移动平台，同时无后端不必与不同的平台通知系统通信的复杂性。 此文章介绍了如何使用 Azure 通知中心将推送通知从 Azure Mobile Apps 实例发送到 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cff0b85514d2e5995d09735d6ad99b7909bfacb4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>从 Azure 移动应用程序发送推送通知
 
@@ -410,7 +409,7 @@ protected override async void OnLaunched(LaunchActivatedEventArgs e)
 
 收到推送通知时它将自动显示为*toast* – 一个无模式窗口，其中包含的消息。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用 Azure 通知中心将推送通知从 Azure Mobile Apps 实例发送到 Xamarin.Forms 应用程序。 Azure 通知中心提供可缩放的推送基础结构用于发送移动推送通知从任意后端向任何移动平台，同时无后端不必与不同的平台通知系统通信的复杂性。
 

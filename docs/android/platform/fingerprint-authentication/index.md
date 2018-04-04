@@ -1,18 +1,17 @@
 ---
-title: "指纹身份验证"
-description: "本指南介绍如何添加指纹身份验证，在 Android 6.0 中，引入到 Xamarin.Android 应用程序。"
-ms.topic: article
+title: 指纹身份验证
+description: 本指南介绍如何添加指纹身份验证，在 Android 6.0 中，引入到 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 79f5f81e11f62359c3b951500d4ab5cbd63fb507
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b28b16dfd92ef3a31201ef2e86681a425a58ab8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fingerprint-authentication"></a>指纹身份验证
 
@@ -46,7 +45,7 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 
 本指南将讨论如何使用`FingerprintManager`Api 来增强指纹身份验证的 Android 应用程序。 它将介绍如何实例化并创建`CryptoObject`来帮助保护指纹扫描程序的结果。 我们将查看如何应用程序应子类`FingerprintManager.AuthenticationCallback`并响应来自指纹扫描程序的反馈。 最后，我们将了解如何注册 Android 设备或仿真程序上的使用指纹以及如何使用**adb**以模拟指纹扫描。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 指纹身份验证需要 Android 6.0 （API 级别 23） 或更高版本和使用指纹扫描程序的设备。 
 

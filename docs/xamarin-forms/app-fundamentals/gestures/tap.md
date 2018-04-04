@@ -1,18 +1,17 @@
 ---
-title: "添加点击手势笔势识别器"
-description: "点击动作用于 tap 检测，并与 TapGestureRecognizer 类实现。"
-ms.topic: article
+title: 添加点击手势笔势识别器
+description: 点击动作用于 tap 检测，并与 TapGestureRecognizer 类实现。
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: d767b50d98b88e6b97a07caffcc103c70cfda428
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c015ce4b24a1e00b4369a8e98d1381b570557a9c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-tap-gesture-gesture-recognizer"></a>添加点击手势笔势识别器
 
@@ -114,7 +113,7 @@ public class TapViewModel : INotifyPropertyChanged
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 点击动作用于 tap 检测并实现与[ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)类。 可指定的点击数来识别双击 (或三次点击，或多个点击) 行为。
 

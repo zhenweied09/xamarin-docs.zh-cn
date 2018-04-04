@@ -1,17 +1,16 @@
 ---
-title: "提供向后与 Android 支持包的兼容性"
-ms.topic: article
+title: 提供向后与 Android 支持包的兼容性
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 07aec6f5fb66d4efcc114f92f0fb85d5b5b99c6f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>提供向后与 Android 支持包的兼容性
 
@@ -37,7 +36,7 @@ Android 支持包不会自动添加到 Xamarin.Android 应用程序。 Xamarin �
 
 -   **更新命名空间**&ndash;继承的类`Android.App.Fragment`必须现在继承自`Android.Support.V4.App.Fragment`。 删除使用语句" `using Android.App;` "顶部的源代码文件，并将其替换为" `using Android.Support.V4.App` "。 
 
--   **使用 SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity`公开`SupportingFragmentManager`属性，必须用于获取对引用`FragmentManager`。 例如: 
+-   **使用 SupportFragmentManager** &ndash; `Android.Support.V4.App.FragmentActivity`公开`SupportingFragmentManager`属性，必须用于获取对引用`FragmentManager`。 例如： 
 
 ```csharp
 FragmentTransaction fragmentTx = this.SupportingFragmentManager.BeginTransaction();

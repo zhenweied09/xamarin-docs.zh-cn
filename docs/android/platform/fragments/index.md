@@ -1,18 +1,17 @@
 ---
-title: "片段"
-description: "Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的许多不同的屏幕大小支持更灵活的设计。 本文将介绍如何使用片段开发 Xamarin.Android 应用程序，以及如何在预 Android 3.0 (API 级别 11) 设备上支持片段。"
-ms.topic: article
+title: 片段
+description: Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的许多不同的屏幕大小支持更灵活的设计。 本文将介绍如何使用片段开发 Xamarin.Android 应用程序，以及如何在预 Android 3.0 (API 级别 11) 设备上支持片段。
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 08c2edb3acc15518c7d5a69f227fb9ef819887be
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fragments"></a>片段
 
@@ -47,7 +46,7 @@ _Android 3.0 引入了片段，显示如何在手机和平板电脑上找到的�
 -   **Android 支持包**– 如何为使用允许库片段用于在较旧版本的 Android。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 片段位于 Android SDK 开头 API 级别 11 (Android 3.0)，如下面的屏幕截图中所示：
 

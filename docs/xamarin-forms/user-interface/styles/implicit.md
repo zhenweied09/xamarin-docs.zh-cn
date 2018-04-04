@@ -1,18 +1,17 @@
 ---
-title: "隐式样式"
-description: "隐式样式是指可供所有控件的同一 TargetType，而无需每个控件，以引用样式。"
-ms.topic: article
+title: 隐式样式
+description: 隐式样式是指可供所有控件的同一 TargetType，而无需每个控件，以引用样式。
 ms.prod: xamarin
 ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: b96b306c882eb30aaf8c81604afb9b6a547d715b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d9c9f8816ea45ac122829739ad5134cc740263df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implicit-styles"></a>隐式样式
 
@@ -117,7 +116,7 @@ public class ImplicitStylesPageCS : ContentPage
 
 构造函数定义单个*隐式*样式应用于页的[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)实例。 `Style`用于在一个黄色背景上显示蓝色文本，同时，将其他外观选项。 `Style`添加到页面的[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)而无需指定`key`字符串。 因此，`Style`适用于所有`Entry`隐式实例，因为它们匹配[ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/)属性`Style`完全。 但是，`Style`不应用于`CustomEntry`实例，即子类化`Entry`。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 *隐式*样式是指由所有可视元素相同[ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/)，而无需每个控件，以引用样式。 A`Style`进行*隐式*通过不指定`x:Key`属性。 相反，`x:Key`属性将自动成为的值[ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/)属性。
 

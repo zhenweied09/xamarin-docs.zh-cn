@@ -1,18 +1,17 @@
 ---
-title: "创建 DataTemplateSelector"
-description: "DataTemplateSelector 可用来选择 DataTemplate 在运行时基于的数据绑定属性的值。 这使多个 DataTemplates 要应用到相同类型的对象，自定义的特定对象的外观。 本文演示如何创建和使用 DataTemplateSelector。"
-ms.topic: article
+title: 创建 DataTemplateSelector
+description: DataTemplateSelector 可用来选择 DataTemplate 在运行时基于的数据绑定属性的值。 这使多个 DataTemplates 要应用到相同类型的对象，自定义的特定对象的外观。 本文演示如何创建和使用 DataTemplateSelector。
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 3fa2eb8ecac2015dc896a617a60d7c976411231a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d87b9f3cf47e3b3efa42ad53cfba91bac1d07d4f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-datatemplateselector"></a>创建 DataTemplateSelector
 
@@ -128,7 +127,7 @@ public class HomePageCS : ContentPage
 
 `PersonDataTemplateSelector`实例集其`ValidTemplate`和`InvalidTemplate`属性设置为相应[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)创建的实例`SetupDataTemplates`方法。 在运行时， [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)调用`PersonDataTemplateSelector.OnSelectTemplate`方法为每个具有将数据对象作为传递的调用的基础集合中的项`item`参数。 `DataTemplate`返回方法然后应用于该对象。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何创建和使用[ `DataTemplateSelector` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplateSelector/)。 A`DataTemplateSelector`可用来选择[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)在运行时基于的数据绑定属性的值。 这使多个`DataTemplate`实例应用于相同类型的对象，自定义的特定对象的外观。
 

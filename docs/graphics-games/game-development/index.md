@@ -1,18 +1,17 @@
 ---
-title: "游戏开发使用 Xamarin 简介"
-description: "游戏开发的性质可能相差很从其他类型的应用的开发。 本文是具有可以用于 Xamarin.iOS 和 Xamarin.Android 的技术的游戏开发的简介。 它使用 Xamarin.iOS 和 Xamarin.Android 提供如何进行游戏的高级别讨论以及技术可供使用的采样。"
-ms.topic: article
+title: 游戏开发使用 Xamarin 简介
+description: 游戏开发的性质可能相差很从其他类型的应用的开发。 本文是具有可以用于 Xamarin.iOS 和 Xamarin.Android 的技术的游戏开发的简介。 它使用 Xamarin.iOS 和 Xamarin.Android 提供如何进行游戏的高级别讨论以及技术可供使用的采样。
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9d1ce2da87d6f169efb5431f734695f6876cf3f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>游戏开发使用 Xamarin 简介
 
@@ -97,8 +96,8 @@ _游戏开发的性质可能相差很从其他类型的应用的开发。本文�
 游戏开发过程中涉及的个人引入了新的角色和标题。 大多数游戏开发人员不能满足广泛的所需释放完整的游戏，因此存在大量的专业技能。 请记住，这不开发 – 更常见的一些区域的完整列表。
 
 - **程序员**– 大多数人阅读这篇文章都属于此类别。 程序员游戏开发中的角色是类似于在非游戏应用程序的程序员的角色。 其职责包括编写逻辑控制流的游戏，开发的上下文中的常见任务的给定的项目，添加和显示内容，以及 – 当然 – 修复 bug 的系统。
-- **二维艺术家**– 二维艺术家负责创建*二维资产*。 这些包括游戏的 GUI、 粒子、 环境和字符图像文件。 如果你正在开发的游戏三维，则二维艺术家可能不能负责环境和字符。 你可以找到免费为在你的游戏的艺术作品[http://opengameart.org/](http://opengameart.org/) 。
-- **3D 艺术家**– 3D 艺术家负责创建*三维资产*。 其中包括用于环境、 字符和属性 （设备、 工厂和其他非动画对象） 的三维模型。 一些团队了解 3D 专业人员和三维动画制作人员，具体取决于团队的大小之间的区别。 你可以找到免费为在你的游戏的 3D 画[http://opengameart.org/](http://opengameart.org/) 。
+- **二维艺术家**– 二维艺术家负责创建*二维资产*。 这些包括游戏的 GUI、 粒子、 环境和字符图像文件。 如果你正在开发的游戏三维，则二维艺术家可能不能负责环境和字符。 你可以找到免费为在你的游戏的艺术作品[ http://opengameart.org/ ](http://opengameart.org/) 。
+- **3D 艺术家**– 3D 艺术家负责创建*三维资产*。 其中包括用于环境、 字符和属性 （设备、 工厂和其他非动画对象） 的三维模型。 一些团队了解 3D 专业人员和三维动画制作人员，具体取决于团队的大小之间的区别。 你可以找到免费为在你的游戏的 3D 画[ http://opengameart.org/ ](http://opengameart.org/) 。
 - **游戏设计器**– 游戏的设计器负责定义如何播放游戏。 这可能包括高级决策例如的设置的游戏、 游戏，和如何播放器进程游戏中的总体目标。 定义对于移动或级别的麻烦，系数和设计级别布局，则也可以非常详细的决定，例如输入映射到操作中涉及游戏的设计器。 请记住，术语*设计器*可能引用游戏的设计器或可视化的设计器中，具体取决于上下文。
 - **声音设计器**– 声音的设计器负责游戏的音频资产。 一些团队可能区分个人负责创建声音效果和作曲者，而较小的团队可能有一个人负责所有音频。
 
@@ -171,12 +170,12 @@ UrhoSharp 是一个跨平台高级 3D 和 2D 引擎，可用来创建动画 3D �
 
 上面突出显示的技术是仅一个可用的技术的示例。 其他值得注意的技术包括：
 
-- **动画层工具包**– Xamarin 提供了对 Apple 的画面工具包游戏框架，它使你可以访问所有本机 API 的功能的支持。 由于动画层工具包是由 Apple 创建技术，它提供了与 iOS 生态系统的其余部分的深度集成。 当然，画面工具包是不可跨平台，因此它无法在 Android 上使用。 使用动画层工具包的详细信息，请参阅此文章： [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **动画层工具包**– Xamarin 提供了对 Apple 的画面工具包游戏框架，它使你可以访问所有本机 API 的功能的支持。 由于动画层工具包是由 Apple 创建技术，它提供了与 iOS 生态系统的其余部分的深度集成。 当然，画面工具包是不可跨平台，因此它无法在 Android 上使用。 使用动画层工具包的详细信息，请参阅此文章：  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
 - **场景工具包**– Xamarin 还提供对 Apple 的场景工具包框架，它简化了到 iOS 应用程序中实现 3D 图形的支持。 场景工具包也是 Apple，因此它具有的集成和特定于平台的注意事项上述画面工具包提供的技术。 场景工具包的详细信息，请参阅此文章： [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK （它代表打开工具包） 提供低级别的 OpenGL 访问，iOS、 Apple 和 Mac 硬件。 OpenTK 的详细信息，请参阅在主页： [http://www.opentk.com/](http://www.opentk.com/)
+- **OpenTK –** OpenTK （它代表打开工具包） 提供低级别的 OpenGL 访问，iOS、 Apple 和 Mac 硬件。 OpenTK 的详细信息，请参阅在主页上：  [http://www.opentk.com/](http://www.opentk.com/)
 
 
-# <a name="summary"></a>摘要
+# <a name="summary"></a>总结
 
 本文介绍游戏开发的主要概念，并提供有关如何开始进行第一个游戏的信息。 完成这篇文章后下, 一步的步骤是选择您的技术，并开始通过我们系列教程在前面的相应章节中链接的工作。
 

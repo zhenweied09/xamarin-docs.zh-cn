@@ -1,18 +1,17 @@
 ---
-title: "情节提要简介"
-description: "情节提要是外观的可视表示形式和应用程序流。 Xamarin 引入了一个设计器，以允许 Xamarin.iOS 应用程序充分利用情节提要，以便您可以直观地设计你的应用程序屏幕和访问视图中，控制器和 segue 使用 C# 的获得更多控制。"
-ms.topic: article
+title: 情节提要简介
+description: 情节提要是外观的可视表示形式和应用程序流。 Xamarin 引入了一个设计器，以允许 Xamarin.iOS 应用程序充分利用情节提要，以便您可以直观地设计你的应用程序屏幕和访问视图中，控制器和 segue 使用 C# 的获得更多控制。
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 85c05145ce2490468ac5d5fb9b8524853d46a9e3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-storyboards"></a>情节提要简介
 

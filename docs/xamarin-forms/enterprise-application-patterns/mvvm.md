@@ -1,17 +1,16 @@
 ---
 title: MVVM
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ac8cf026fba8cac565ad622dcba24834a2ea8098
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -357,7 +356,7 @@ public class EventToCommandBehavior : BindableBehavior<View>
 
 有关各种行为的详细信息，请参阅[行为](~/xamarin-forms/app-fundamentals/behaviors/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 模型-视图-视图模型 (MVVM) 模式可帮助完全分隔其用户界面 (UI) 中的应用程序的业务和演示文稿逻辑。 维护应用程序逻辑和 UI 之间完全分离有助于解决许多开发问题，并且可以使应用程序更轻松地测试、 维护和发展。 它还将大大提高代码重用的机会，并允许开发人员和开发其相应部分的应用程序时，UI 设计器能够更轻松地进行协作。
 

@@ -1,18 +1,17 @@
 ---
-title: "Android 磨损简介"
-description: "通过 Google Android 磨损引入，你将不再限制为仅手机和平板电脑时涉及到开发强大的 Android 应用程序。 对 Android 磨损 Xamarin.Android 的支持使你在你静电腕带运行 C# 代码 ！ 本简介提供 Android 磨损的基本概述，描述它的主要功能，并提供了 Android 磨损 2.0 中提供的功能的概述。 它列出了一些更受欢迎的 Android 磨损设备，并提供有关其他参考资料的基本 Google Android 磨损文档的链接。"
-ms.topic: article
+title: Android 磨损简介
+description: 通过 Google Android 磨损引入，你将不再限制为仅手机和平板电脑时涉及到开发强大的 Android 应用程序。 对 Android 磨损 Xamarin.Android 的支持使你在你静电腕带运行 C# 代码 ！ 本简介提供 Android 磨损的基本概述，描述它的主要功能，并提供了 Android 磨损 2.0 中提供的功能的概述。 它列出了一些更受欢迎的 Android 磨损设备，并提供有关其他参考资料的基本 Google Android 磨损文档的链接。
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ab166bb71c23d456cb70d35a2794717110642fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-android-wear"></a>Android 磨损简介
 
@@ -203,7 +202,7 @@ Android 磨损 2.0 应用程序可以独立手持应用于工作。 这意味着
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本简介提供 Android 磨损的概述。 它概述 Android 磨损的基本功能，并包含在 Android 磨损 2.0 中引入的功能的概述。 它提供基本的读取，可帮助开发人员入门 Xamarin.Android 磨损开发的链接，它列出一些当前市场上的 Android 磨损设备的示例。
 

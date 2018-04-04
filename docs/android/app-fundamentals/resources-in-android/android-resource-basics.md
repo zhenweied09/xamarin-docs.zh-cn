@@ -1,17 +1,16 @@
 ---
-title: "Android 资源基础知识"
-ms.topic: article
+title: Android 资源基础知识
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6be1001e5d3455a94e677f1bb5dc52ca574b873
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resource-basics"></a>Android 资源基础知识
 
@@ -136,7 +135,7 @@ XML 文件中的资源通过以下特殊语法：
 </LinearLayout>
 ```
 
-此示例具有[ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview)需要可绘制资源名称为**标志**。 `ImageView`具有其`src`属性设置为 **@drawable/flag** 。 当活动开始时，Android 看在目录内**资源/Drawable**的名为的文件**flag.png** (文件扩展名可能是另一个图像格式，如**flag.jpg**)加载此文件，并将其显示在`ImageView`。
+此示例具有[ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview)需要可绘制资源名称为**标志**。 `ImageView`具有其`src`属性设置为**@drawable/flag**。 当活动开始时，Android 看在目录内**资源/Drawable**的名为的文件**flag.png** (文件扩展名可能是另一个图像格式，如**flag.jpg**)加载此文件，并将其显示在`ImageView`。
 当运行此应用程序时，它将看起来如下图所示：
 
 ![本地化的 ImageView](android-resource-basics-images/03-localized-screenshot.png)

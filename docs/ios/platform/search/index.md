@@ -1,17 +1,16 @@
 ---
-title: "新的搜索 Api"
-description: "本文介绍如何使用 iOS 9 提供的新应用程序搜索 Api 以允许用户搜索信息和内部 Xamarin.iOS 应用程序的功能。"
-ms.topic: article
+title: 新的搜索 Api
+description: 本文介绍如何使用 iOS 9 提供的新应用程序搜索 Api 以允许用户搜索信息和内部 Xamarin.iOS 应用程序的功能。
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="new-search-apis"></a>新的搜索 Api
 
@@ -85,7 +84,7 @@ iOS 10 通过允许系统以主动有用的信息自动向用户显示在适当�
 
 若要了解详细信息，请参阅我们[主动建议](~/ios/platform/search/proactive-suggestions.md)指南。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖新搜索 API 功能该 iOS 9 提供有关 Xamarin.iOS 应用程序。 它涵盖[NSUserActivity](nsuseractivity.md)，[核心 Spotlight](corespotlight.md)和[Web 标记](web-markup.md)索引内容的方法。 它已完成，但应在何时使用给定的搜索方法和类型的内容应该是什么的短讨论编制索引。
 

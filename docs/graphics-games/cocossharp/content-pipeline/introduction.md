@@ -1,18 +1,17 @@
 ---
 title: 内容的管道简介
 description: 内容的管道有应用程序或应用程序的组成部分，用于将文件转换为可以由游戏项目加载的格式。 MonoGame 内容管道是将转换为 CocosSharp 和 MonoGame 项目文件的特定内容的管道实现。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 40628B5F-FAF7-4FA7-A929-6C3FEA83F8EC
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 7394ae5ddacb20a10e603fa50376799b82d2a3dc
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 2c3619fac771bd7962f6940a24d7c1ff81173d75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-content-pipelines"></a>内容的管道简介
 

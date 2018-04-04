@@ -1,18 +1,17 @@
 ---
-title: "在 iOS 中的推送通知"
-description: "本部分将介绍在 iOS 中的推送通知。 它引入了 Apple 推送通知网关服务和它到 iOS 应用程序的发布通知中所扮演的角色。 它将说明如何创建启用推送通知和讨论所需的安全证书。 最后本部分将讨论某些应用程序服务器必须执行能够跟踪客户端移动设备的管理任务。"
-ms.topic: article
+title: 在 iOS 中的推送通知
+description: 本部分将介绍在 iOS 中的推送通知。 它引入了 Apple 推送通知网关服务和它到 iOS 应用程序的发布通知中所扮演的角色。 它将说明如何创建启用推送通知和讨论所需的安全证书。 最后本部分将讨论某些应用程序服务器必须执行能够跟踪客户端移动设备的管理任务。
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="push-notifications-in-ios"></a>在 iOS 中的推送通知
 
@@ -51,7 +50,7 @@ Apple 维护的 APNS 的两种环境：*沙盒*和*生产*环境。 沙盒环境
 
     [![](remote-notifications-in-ios-images/image6new.png "导航到的应用 Id 部分并创建新的应用程序 ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  当你单击 **+** 按钮，你将能够输入的描述和捆绑标识符，在应用程序 id 中的下一步的屏幕截图所示：
+3.  当你单击**+**按钮，你将能够输入的描述和捆绑标识符，在应用程序 id 中的下一步的屏幕截图所示：
 
     [![](remote-notifications-in-ios-images/image7new.png "输入应用程序 ID 说明和捆绑标识符")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

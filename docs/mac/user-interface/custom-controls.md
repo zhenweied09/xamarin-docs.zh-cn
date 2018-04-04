@@ -1,18 +1,17 @@
 ---
-title: "创建自定义控件"
-description: "本文介绍如何创建自定义控件和在接口生成器中使用它们。"
-ms.topic: article
+title: 创建自定义控件
+description: 本文介绍如何创建自定义控件和在接口生成器中使用它们。
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3ea88810384dfe8b1a08080953db19caddf25d6a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-custom-controls"></a>创建自定义控件
 
@@ -185,7 +184,7 @@ private void Initialize() {
 }
 ```
 
-从每个控件的构造函数来确保已正确配置该控件获取调用此方法。 例如:
+从每个控件的构造函数来确保已正确配置该控件获取调用此方法。 例如：
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)
@@ -385,7 +384,7 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解 Xamarin.Mac 应用程序中创建可重用的自定义用户界面控件的详细的信息。 我们已了解如何绘制自定义控件 UI 中，两种主要方法响应鼠标和用户输入以及如何将公开新的控件于 Xcode 的接口生成器中的操作。
 

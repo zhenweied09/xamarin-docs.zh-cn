@@ -1,18 +1,17 @@
 ---
-title: "图像"
-description: "本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。 它介绍创建和维护需要创建你的应用程序图标并使用 C# 代码和 Xcode 的接口生成器中的映像的映像。"
-ms.topic: article
+title: 图像
+description: 本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。 它介绍创建和维护需要创建你的应用程序图标并使用 C# 代码和 Xcode 的接口生成器中的映像的映像。
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images"></a>图像
 
@@ -46,7 +45,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 - **[已弃用] 的主要项目树**-映像可以直接添加到项目树。 当调用映像存储在代码中的主项目树中，将指定没有文件夹位置。 例如：`NSImage image = NSImage.ImageNamed("tags.png");`。 
 - **[已弃用] 的资源文件夹**-这两个特殊**资源**映像 （或任何其他图像或文件开发人员将成为应用程序的一部分的任何文件的捆绑如图标、 启动屏幕或常规文件夹是想要添加）。 调用存储在映像时**资源**代码中的文件夹，就像映像存储在主项目树中，指定没有文件夹位置。 例如：`NSImage.ImageNamed("tags.png")`。
 - **自定义文件夹或子文件夹 [不推荐使用]** -开发人员可以将自定义文件夹添加到项目源树和存储存在的映像。 若要进一步的帮助组织项目的子文件夹中，可以嵌套其中添加文件的位置。 例如，如果开发人员添加`Card`与项目的子文件夹的文件夹`Hearts`到该文件夹，然后将映像存储**Jack.png**中`Hearts`文件夹，`NSImage.ImageNamed("Card/Hearts/Jack.png")`将加载在映像运行时。
-- **资产目录映像集 [首选]** -在 OS X El Capitan 中，添加**资产目录映像集**包含所有版本或图像的表示形式，支持各种设备并缩放因素需要你应用程序。 而不是依靠图像资产文件名 (**@1x**，  **@2x** )。
+- **资产目录映像集 [首选]** -在 OS X El Capitan 中，添加**资产目录映像集**包含所有版本或图像的表示形式，支持各种设备并缩放因素需要你应用程序。 而不是依靠图像资产文件名 (**@1x**， **@2x**)。
 
 <a name="asset-catalogs" />
 
@@ -68,7 +67,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 
     [![编辑图像设置名称](image-images/imageset04.png "编辑图像设置名称")](image-images/imageset04-large.png#lightbox)
     
-一种特殊**向量**类，如已添加到**映像集**这使我们能够包括_PDF_格式化中改为包括在各个位图文件 casset 矢量图像不同的解决方法。 使用此方法，你提供的单个向量文件 **@1x**  （格式为向量 PDF 文件） 的解析和 **@2x** 和 **@3x** 将在编译时生成文件的版本，并将其包含在应用程序的捆绑包。
+一种特殊**向量**类，如已添加到**映像集**这使我们能够包括_PDF_格式化中改为包括在各个位图文件 casset 矢量图像不同的解决方法。 使用此方法，你提供的单个向量文件**@1x** （格式为向量 PDF 文件） 的解析和**@2x**和**@3x**将在编译时生成文件的版本，并将其包含在应用程序的捆绑包。
 
 [![映像设置编辑器界面](image-images/imageset05.png "映像设置编辑器接口")](image-images/imageset05-large.png#lightbox)
 
@@ -142,7 +141,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 在创建映像的标准和高分辨率版本时，它们包含在 Xamarin.Mac 项目中时请遵循此映像对此命名约定：
 
 - **标准解析**  - **ImageName.filename 扩展**(示例： **tags.png**)
-- **高分辨率**  -   **ImageName@2x.filename-extension**  (示例：  **tags@2x.png** )
+- **高分辨率**  -  **ImageName@2x.filename-extension** (示例： **tags@2x.png**)
 
 在添加到项目，它们将显示，如下所示：
 
@@ -150,7 +149,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 
 当映像分配到接口生成器中的 UI 元素时你只需将选取中的文件_ImageName_**。**_文件扩展名_格式 (示例： **tags.png**)。 相同的 C# 代码中使用的映像，将选取中的文件_ImageName_**。**_文件扩展名_格式。
 
-你 Xamarin.Mac 应用程序在 Mac 上，运行时_ImageName_**。**_文件扩展名_格式的映像将使用标准的分辨率显示 **ImageName@2x.filename-extension** 映像将自动选取 Retina 显示基本 Mac。
+你 Xamarin.Mac 应用程序在 Mac 上，运行时_ImageName_**。**_文件扩展名_格式的映像将使用标准的分辨率显示**ImageName@2x.filename-extension**映像将自动选取 Retina 显示基本 Mac。
 
 
 ## <a name="using-images-in-interface-builder"></a>在接口生成器中使用图像
@@ -176,7 +175,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
      ![在工具栏编辑器中所显示的图像](image-images/ib04.png "正在工具栏编辑器中显示的图像")
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-上面的步骤适用于任何允许其映像属性中设置的 UI 元素**属性检查器**。 同样，如果你已包含 **@2x** 的图像文件，它将自动使用版本上 Retina 显示屏基于 Mac。
+上面的步骤适用于任何允许其映像属性中设置的 UI 元素**属性检查器**。 同样，如果你已包含**@2x**的图像文件，它将自动使用版本上 Retina 显示屏基于 Mac。
 
 > [!IMPORTANT]
 > 如果图像不可用于**映像名称**下拉列表中，关闭.storyboard 项目在 Xcode 中的，并重新打开它从 Visual Studio for mac。 如果映像仍不可用，确保其**生成操作**是`BundleResource`和图像添加到**资源**文件夹。
@@ -189,7 +188,7 @@ _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-上述代码使用静态`ImageNamed("...")`方法`NSImage`类来加载到内存中从给定的图像**资源**文件夹中，如果找不到映像，`null`将返回。 如果有包含喜欢在接口生成器中，指定图像 **@2x** 的图像文件，它将自动使用版本上 Retina 显示屏基于 Mac。
+上述代码使用静态`ImageNamed("...")`方法`NSImage`类来加载到内存中从给定的图像**资源**文件夹中，如果找不到映像，`null`将返回。 如果有包含喜欢在接口生成器中，指定图像**@2x**的图像文件，它将自动使用版本上 Retina 显示屏基于 Mac。
 
 若要加载在应用程序的捆绑 （从 Mac 文件系统） 之外的图像，请使用下面的代码：
 
@@ -247,7 +246,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>表视图中使用图像
 
-若要包含图像，作为一部分中的单元格`NSTableView`，你将需要更改表视图返回数据的方式`NSTableViewDelegate's``GetViewForItem`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如:
+若要包含图像，作为一部分中的单元格`NSTableView`，你将需要更改表视图返回数据的方式`NSTableViewDelegate's``GetViewForItem`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如：
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -345,7 +344,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>大纲视图中使用图像
 
-若要包含图像，作为一部分中的单元格`NSOutlineView`，你将需要更改该大纲视图返回数据的方式`NSTableViewDelegate's``GetView`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如:
+若要包含图像，作为一部分中的单元格`NSOutlineView`，你将需要更改该大纲视图返回数据的方式`NSTableViewDelegate's``GetView`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如：
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -445,7 +444,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 有关使用大纲视图的详细信息，请参阅我们[大纲视图](~/mac/user-interface/outline-view.md)文档。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已详细的介绍了的 Xamarin.Mac 应用程序中使用图像和图标。 我们看到不同的类型，并使用的图像、 如何在 Xcode 的接口生成器中使用的图像和图标和如何在 C# 代码中使用的图像和图标。
 

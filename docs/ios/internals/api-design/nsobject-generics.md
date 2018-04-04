@@ -1,17 +1,16 @@
 ---
-title: "泛型的 NSObject 的子类"
-ms.topic: article
+title: 泛型的 NSObject 的子类
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 76c35cfb993bade324b25f86e75db7eb028a7399
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="generic-subclasses-of-nsobject"></a>泛型的 NSObject 的子类
 
@@ -118,7 +117,7 @@ class Generic<T> : NSObject where T : NSObject
 
 这是因为 Objective C 的泛型类型，没有概念，它不能指定要创建的确切的泛型类型，会发生情况。
 
-通过创建泛型类型的一个专门的子类，可以解决此问题。   例如:
+通过创建泛型类型的一个专门的子类，可以解决此问题。   例如：
     
 ```
 class Generic<T> : NSObject where T : NSObject

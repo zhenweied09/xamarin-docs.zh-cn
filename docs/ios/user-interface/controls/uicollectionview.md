@@ -1,18 +1,17 @@
 ---
-title: "集合视图"
-description: "集合视图允许使用任意布局显示内容。 它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。"
-ms.topic: article
+title: 集合视图
+description: 集合视图允许使用任意布局显示内容。 它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>集合视图
 
@@ -140,7 +139,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>“数据源”
 
-与其他部分 iOS，如`UITableView`和`MKMapView`，`UICollectionView`获取从其数据*数据源*，这会在通过 Xamarin.iOS 中公开 **`UICollectionViewDataSource`** 类。 此类负责提供到内容`UICollectionView`如：
+与其他部分 iOS，如`UITableView`和`MKMapView`，`UICollectionView`获取从其数据*数据源*，这会在通过 Xamarin.iOS 中公开**`UICollectionViewDataSource`**类。 此类负责提供到内容`UICollectionView`如：
 
 -  **单元格**– 从返回`GetCell`方法。
 -  **补充视图**– 从返回`GetViewForSupplementaryElement`方法。
@@ -453,7 +452,7 @@ namespace SimpleCollectionView
 
 在 iOS 9 中，添加到集合视图重新排序的最快方法是使用`UICollectionViewController`。
 集合视图控制器现在具有`InstallsStandardGestureForInteractiveMovement`属性，它将添加一个标准*笔势识别器*支持拖动对集合中的项重新排序。
-由于默认值是`true`，只需实现`MoveItem`方法`UICollectionViewDataSource`类，以支持拖到重新排序。 例如:
+由于默认值是`true`，只需实现`MoveItem`方法`UICollectionViewDataSource`类，以支持拖到重新排序。 例如：
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -693,7 +692,7 @@ namespace CollectionView
 
 保存到 UI 所做的更改并运行应用程序。
 如果用户从列表中选择一个项，并将其拖动到新位置，因为它们开移动的项其他项将自动动画。
-当用户将项放置到新位置时，它将只讨论到该位置。 例如:
+当用户将项放置到新位置时，它将只讨论到该位置。 例如：
 
 [![](uicollectionview-images/intro01.png "下面举例说明将项拖动到新位置")](uicollectionview-images/intro01.png#lightbox)
 
@@ -701,7 +700,7 @@ namespace CollectionView
 
 ### <a name="using-a-custom-gesture-recognizer"></a>使用自定义笔势识别器
 
-在您无法使用的情况下`UICollectionViewController`，并且必须使用正则表达式`UIViewController`，或者如果你想要使更好地控制拖放笔势，你可以创建你自己的自定义笔势识别器并将其添加到集合视图中，加载视图时。 例如:
+在您无法使用的情况下`UICollectionViewController`，并且必须使用正则表达式`UIViewController`，或者如果你想要使更好地控制拖放笔势，你可以创建你自己的自定义笔势识别器并将其添加到集合视图中，加载视图时。 例如：
 
 ```csharp
 public override void ViewDidLoad ()
@@ -1290,7 +1289,7 @@ public override void AwakeFromNib ()
  - `GetTargetIndexPathForMove` – 返回`indexPath`将拖到重新排序操作期间移动的项。
  - `MoveItem` – 在列表中移动给定项的顺序。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已涉及到在 iOS 9 中的集合视图的更改，并描述如何在 Xamarin.iOS 中实现它们。
 它涵盖实现简单拖到重新排序操作中的集合视图中;自定义笔势识别器使用重新拖到排序;以及字段拖到重新排序如何影响自定义集合视图布局。

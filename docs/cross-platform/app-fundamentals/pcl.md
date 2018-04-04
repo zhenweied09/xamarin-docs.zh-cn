@@ -1,18 +1,17 @@
 ---
-title: "可移植类库简介"
-description: "本文介绍可移植类库 (PCL) 项目，并将指导完成创建和使用针对 Mac 和 Visual Studio 的 Visual Studio 中的 PCL 项目。"
-ms.topic: article
+title: 可移植类库简介
+description: 本文介绍可移植类库 (PCL) 项目，并将指导完成创建和使用针对 Mac 和 Visual Studio 的 Visual Studio 中的 PCL 项目。
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 5dd77232dc992880b18393c740b54c7784e4d049
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: feef0a4083d2455cc189ddab6ed22762c044d848
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>可移植类库简介
 
@@ -417,7 +416,7 @@ public static Result Close(Sqlite3.sqlite3 db)
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 
 本文简要讨论可移植类库的优缺点，演示了如何创建和使用从 Pcl 在 Visual Studio 中针对 Mac 和 Visual Studio;和最后引入显示 PCL 中操作的完整示例应用程序 – TaskyPortable –。

@@ -1,18 +1,17 @@
 ---
-title: "突出显示在地图上的圆形区域"
-description: "此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。"
-ms.topic: article
+title: 突出显示在地图上的圆形区域
+description: 此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0eef31c5b9a93154b1038ffa63ee560bd738fe6b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a70c8fdca457e386a1490ca974e1a1ea5da2f6db
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>突出显示在地图上的圆形区域
 
@@ -303,7 +302,7 @@ namespace MapOverlay.UWP
 - 通过实例化创建圆`MapPolygon`对象。 `MapPolygon`类用于在地图上显示多点形状，通过设置其`Path`属性`Geopath`对象，其中包含形状的坐标。
 - 将其添加到代码图上呈现多边形`MapControl.MapElements`集合。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。
 

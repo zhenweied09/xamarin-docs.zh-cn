@@ -1,18 +1,17 @@
 ---
-title: "联系人和 ContactsUI"
-description: "本文介绍如何使用新的联系人和联系人 UI 在 Xamarin.iOS 应用程序中的框架。 这些框架替换现有的通讯簿和 iOS 的早期版本中使用的地址簿 UI。"
-ms.topic: article
+title: 联系人和 ContactsUI
+description: 本文介绍如何使用新的联系人和联系人 UI 在 Xamarin.iOS 应用程序中的框架。 这些框架替换现有的通讯簿和 iOS 的早期版本中使用的地址簿 UI。
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 4d963bbefce2b4564c3f352be5768df77b45b34d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="contacts-and-contactsui"></a>联系人和 ContactsUI
 

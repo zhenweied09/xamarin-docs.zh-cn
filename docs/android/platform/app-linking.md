@@ -1,18 +1,17 @@
 ---
-title: "在 Android 应用程序链接"
-description: "本指南将讨论如何 Android 6.0 支持应用程序的链接，该技术允许移动应用以响应在网站上的 Url。 它将讨论什么应用链接是一种、 如何实现应用程序链接，在 Android 6.0 应用程序，以及如何配置网站以向移动应用程序域授予权限。"
-ms.topic: article
+title: 在 Android 应用程序链接
+description: 本指南将讨论如何 Android 6.0 支持应用程序的链接，该技术允许移动应用以响应在网站上的 Url。 它将讨论什么应用链接是一种、 如何实现应用程序链接，在 Android 6.0 应用程序，以及如何配置网站以向移动应用程序域授予权限。
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2ef6b8044387d759e26d05c1468caaad7efb9bdc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-linking-in-android"></a>在 Android 应用程序链接
 
@@ -36,7 +35,7 @@ Android 处理通过应用链接*意向系统*&ndash;移动浏览器时在移动
 
 本指南将讨论如何配置 Android 6.0 应用程序以及如何创建和发布该数字资产链接文件，以支持 Android 6.0 中的应用程序链接。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南需要 Xamarin.Android 6.1 和面向 Android 6.0 （API 级别 23） 的应用程序或更高版本。
 
@@ -177,7 +176,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     * **`Domain`** &ndash; 应用程序将处理其 web 链接域 （由空格分隔）
     * **`Status`** &ndash; 这是应用程序的当前链接处理状态。 值为**始终**意味着应用程序具有`android:autoVerify=true`声明，并且已通过系统验证。 它后跟表示 Android 系统的记录的首选项的十六进制数字。
 
-    例如:
+    例如：
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -188,7 +187,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     Status: always : 200000002
     ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论如何将应用链接在 Android 6.0 中的工作。 它然后介绍如何配置 Android 6.0 应用程序支持和响应的应用程序的链接。 它还讨论了如何测试应用程序将 Android 应用程序中的链接。
 

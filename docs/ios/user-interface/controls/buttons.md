@@ -1,18 +1,17 @@
 ---
-title: "按钮"
-description: "UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。 本部分介绍使用按钮在 iOS 中的不同选项。"
-ms.topic: article
+title: 按钮
+description: UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。 本部分介绍使用按钮在 iOS 中的不同选项。
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: ab7a77c44412bd22427e17a696eb43278ff7dd94
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c2c33103c005a5ed567b1c4703846f887d824ac4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="buttons"></a>按钮
 
@@ -52,7 +51,7 @@ UIButtonType 应指定为以下项之一：
 myButton.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-若要更改按钮中的文本，请使用`SetTitle`按钮，这就需要你设置的文本字符串的属性和`UIControlStyle`。 例如:
+若要更改按钮中的文本，请使用`SetTitle`按钮，这就需要你设置的文本字符串的属性和`UIControlStyle`。 例如：
 
 ```csharp
 myButton.SetTitle("Hello, World!", UIControlState.Normal);
@@ -91,7 +90,7 @@ button.SetTitleColor (UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-此外，你可以为按钮的标题使用特性化的文本。 例如:
+此外，你可以为按钮的标题使用特性化的文本。 例如：
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);

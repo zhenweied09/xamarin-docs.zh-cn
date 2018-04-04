@@ -1,18 +1,17 @@
 ---
-title: "迁移到统一的 API 绑定"
-description: "本文介绍如何更新现有 Xamarin 绑定项目以支持统一 Api Xamarin.IOS 和 Xamarin.Mac 应用程序所需的步骤。"
-ms.topic: article
+title: 迁移到统一的 API 绑定
+description: 本文介绍如何更新现有 Xamarin 绑定项目以支持统一 Api Xamarin.IOS 和 Xamarin.Mac 应用程序所需的步骤。
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2a04dc047674b67b8f21571ed9e7890ddf773f64
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25641671992a125e97bf7feff84b754423527da6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>迁移到统一的 API 绑定
 
@@ -24,7 +23,7 @@ _本文介绍如何更新现有 Xamarin 绑定项目以支持统一 Api Xamarin.
 
 此外，任何 Xamarin 绑定项目还必须支持新的统一的 Api，要包括在一个 64 位 Xamarin.iOS 或 Xamarin.Mac 项目。 本文将介绍更新现有绑定项目以使用统一 API 所需的步骤。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是所需完成这篇文章中提供的步骤：
 
@@ -207,7 +206,7 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 
 所有这些更改后，你可以生成新的 64 位版本的 api，就像 32 位版本。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章中我们已经演示了对现有的 Xamarin 绑定项目以支持新的统一的 Api 和 64 位设备所需要的更改并需要的步骤来生成 API 的新的 64 位兼容版本。
 

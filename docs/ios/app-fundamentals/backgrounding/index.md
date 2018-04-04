@@ -1,17 +1,16 @@
 ---
 title: Backgrounding
-description: "后台处理或 backgrounding 是让应用程序在前台运行另一个应用程序时在后台执行任务的过程。 该指南可作为后台处理 iOS 中的简介。"
-ms.topic: article
+description: 后台处理或 backgrounding 是让应用程序在前台运行另一个应用程序时在后台执行任务的过程。 该指南可作为后台处理 iOS 中的简介。
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2bba7c0908fb78ca199cc654adad645afaf47a02
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backgrounding"></a>Backgrounding
 
@@ -25,13 +24,13 @@ Backgrounding 在移动应用程序是从根本上不同于在桌面上的多任
 
 ## <a name="contents"></a>内容
 
-1.  [在 iOS 中的 Backgrounding 简介](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1.  [iOS 中的后台处理简介](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
 1.  [应用程序生命周期演示](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
-1.  [iOS Backgrounding 技术](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [演练： 在 iOS 中 Backgrounding](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
-1.  [iOS Backgrounding 指南](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
+1.  [iOS 后台处理技术](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
+1.  [演练：iOS 中的后台处理](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1.  [iOS 后台处理指南](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本指南中，我们引入了执行后台处理在 iOS 中的不同方法。 我们涵盖 iOS 应用程序状态和检查 backgrounding 在 iOS 应用程序生命周期中的扮演的角色。 此外，我们已了解如何，我们无法注册各个任务或整个应用程序在 iOS 中的背景中进行操作。 最后，我们强化我们了解在 iOS 上 backgrounding 通过构建的应用程序在后台中执行更新。
 

@@ -1,18 +1,17 @@
 ---
-title: "边距和填充"
-description: "边距和填充属性控制布局时的行为元素呈现用户界面中。 这篇文章演示了两个属性，以及如何设置它们之间的差别。"
-ms.topic: article
+title: 边距和填充
+description: 边距和填充属性控制布局时的行为元素呈现用户界面中。 这篇文章演示了两个属性，以及如何设置它们之间的差别。
 ms.prod: xamarin
 ms.assetid: BEB096BB-51DF-410F-B0F1-D235287B0F4A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 461430ba27b5d6008338019e5feaebed7b09d4cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 545468d3b02f9651c45fcaebe159351aafea6432
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="margin-and-padding"></a>边距和填充
 
@@ -65,7 +64,7 @@ var stackLayout = new StackLayout {
 > [!NOTE]
 > `Thickness` 通常裁剪或拉伸过度内容，值可以是负数。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示之间的差异[ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)和[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)属性，以及如何设置它们。 元素呈现用户界面中时，控件布局行为的属性。
 

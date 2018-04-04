@@ -1,18 +1,17 @@
 ---
-title: "创建自定义布局"
-description: "Xamarin.Forms 定义四个布局类 – StackLayout、 AbsoluteLayout、 RelativeLayout，和网格中，而每个不同的方式排列其子。 但是，有时很必要组织使用不是由 Xamarin.Forms 的布局的页面内容。 本文介绍如何编写一个自定义布局的类，并演示了跨页上，水平排列其子，然后将包装对其他行的后续子级的显示方向区分 WrapLayout 类。"
-ms.topic: article
+title: 创建自定义布局
+description: Xamarin.Forms 定义四个布局类 – StackLayout、 AbsoluteLayout、 RelativeLayout，和网格中，而每个不同的方式排列其子。 但是，有时很必要组织使用不是由 Xamarin.Forms 的布局的页面内容。 本文介绍如何编写一个自定义布局的类，并演示了跨页上，水平排列其子，然后将包装对其他行的后续子级的显示方向区分 WrapLayout 类。
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 4c7bf5f2c867faef7d9baf8d511393dbe2d129a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0728ac110fcf86f44a5ccb5ddd80b00af1b8d62
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-custom-layout"></a>创建自定义布局
 
@@ -414,7 +413,7 @@ async Task<ImageList> GetImageListAsync()
 
 每个行中的列数取决于照片大小、 屏幕宽度和每个独立于设备的单位的像素数。 [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素以异步方式加载的照片，并因此`WrapLayout`类将接收到的频繁调用其[ `LayoutChildren` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Layout.LayoutChildren/p/System.Double/System.Double/System.Double/System.Double/)方法以及每个`Image`在元素收到新的大小基于加载的照片。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何编写一个自定义布局的类，并演示方向区分`WrapLayout`跨页上，水平排列其子，然后将包装对其他行的后续子级的显示的类。
 

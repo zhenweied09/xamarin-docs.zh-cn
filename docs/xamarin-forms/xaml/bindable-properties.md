@@ -1,18 +1,17 @@
 ---
-title: "可绑定属性"
-description: "Xamarin.Forms 中的公共语言运行时 (CLR) 属性的功能扩展可绑定属性。 可绑定属性是属性的一种特殊类型，其中通过 Xamarin.Forms 属性系统跟踪属性的值。 本文介绍可绑定属性，并演示如何创建和使用它们。"
-ms.topic: article
+title: 可绑定属性
+description: Xamarin.Forms 中的公共语言运行时 (CLR) 属性的功能扩展可绑定属性。 可绑定属性是属性的一种特殊类型，其中通过 Xamarin.Forms 属性系统跟踪属性的值。 本文介绍可绑定属性，并演示如何创建和使用它们。
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: ab8c4cfd92a048efb87f7508e53fc024a9c46405
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 7e1d3c82036ef703014ae548a6719937e89d22f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bindable-properties"></a>可绑定属性
 
@@ -216,7 +215,7 @@ public static readonly BindableProperty SizeProperty =
 
 `defaultValueCreator`参数设置为`Func`，它调用[ `Device.GetNamedSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/)方法以返回`double`表示字体上所用的命名的大小[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)本机平台上。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文提供可绑定属性的简介，并演示了如何创建和使用它们。 可绑定属性是属性的一种特殊类型，其中通过 Xamarin.Forms 属性系统跟踪属性的值。
 

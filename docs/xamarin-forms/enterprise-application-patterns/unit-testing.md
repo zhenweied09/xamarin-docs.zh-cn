@@ -1,17 +1,16 @@
 ---
-title: "单元测试"
-ms.topic: article
+title: 单元测试
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 0842ce24139da5d963e2c528b440e6592d5910f8
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unit-testing"></a>单元测试
 
@@ -216,7 +215,7 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 
 此单元测试，检查验证失败时`Surname`属性`MockViewModel`没有任何数据，与`Value`， `IsValid`，和`Errors`每个属性`ValidatableObject<T>`是否正确设置了实例。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 单元测试采用小的一项应用程序中，通常的方法，将它隔离的其余代码，从并验证其行为与预期相同。 其目标是检查每个功能单元执行按预期方式运行，以便不将整个应用中传播错误。
 

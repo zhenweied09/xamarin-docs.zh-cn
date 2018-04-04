@@ -1,18 +1,17 @@
 ---
-title: "处理图标和图像"
-description: "本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。"
-ms.topic: article
+title: 处理图标和图像
+description: 本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-icons-and-images"></a>处理图标和图像
 
@@ -122,7 +121,7 @@ tvOS 配合分层映像，采用以下格式：
 
 [![](icons-images-images/layered03.png "视差预览程序")](icons-images-images/layered03.png#lightbox)
 
-时预览分层的映像，你可以使用鼠标来旋转图像和预览视差效果。 使用 **+**  （加） 和 **-**  （减号） 按钮来添加和删除层。
+时预览分层的映像，你可以使用鼠标来旋转图像和预览视差效果。 使用**+** （加） 和**-** （减号） 按钮来添加和删除层。
 
 创建新的分层映像时，它可以是采用 LSR 格式导出并且包含在您的应用程序捆绑包。
 

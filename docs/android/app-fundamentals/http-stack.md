@@ -1,18 +1,17 @@
 ---
-title: "HttpClient 堆栈和适用于 Android 的 SSL/TLS 实现选择器"
-description: "HttpClient 堆栈和 SSL/TLS 实现选择器确定将由您的 Xamarin.Android 应用程序的 HttpClient 和 SSL/TLS 实现。"
-ms.topic: article
+title: HttpClient 堆栈和适用于 Android 的 SSL/TLS 实现选择器
+description: HttpClient 堆栈和 SSL/TLS 实现选择器确定将由您的 Xamarin.Android 应用程序的 HttpClient 和 SSL/TLS 实现。
 ms.prod: xamarin
 ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/09/2018
-ms.openlocfilehash: 5c63bda11a57c0f27efa1db6f0455b25f7da531b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2bc9b2a454b306f0794ef3704daa7e0fe6d04ef8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 堆栈和适用于 Android 的 SSL/TLS 实现选择器
 
@@ -133,7 +132,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 -----
 
-例如:
+例如：
 
 ```csharp
 var client = new HttpClient();
@@ -159,7 +158,7 @@ var client = new HttpClient();
 
 有两个与 Xamarin.Android 中的 TLS 的使用相关的环境变量：
 
--   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 此环境变量声明默认`HttpMessageHandler`应用程序将使用。 例如:
+-   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 此环境变量声明默认`HttpMessageHandler`应用程序将使用。 例如：
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler

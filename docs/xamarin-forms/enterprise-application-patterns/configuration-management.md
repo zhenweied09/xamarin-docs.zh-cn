@@ -1,17 +1,16 @@
 ---
-title: "配置管理"
-ms.topic: article
+title: 配置管理
 ms.prod: xamarin
 ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: da6ae39f58235dd11d53f3e8396349f38fbdf9d9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9318f86077c9cdb98e073e4816dae4fdabbfe568
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configuration-management"></a>配置管理
 
@@ -178,7 +177,7 @@ public override Task InitializeAsync(object navigationData)
 
 此机制可确保用户导航到 SettingsView，每当用户设置都从特定于平台的存储中检索并显示通过数据绑定。 然后，如果用户更改的设置值，数据绑定来确保它们立即保存回特定于平台的存储。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 设置允许分离数据，用于配置从代码中，应用程序中的行为允许更改而不重新生成应用程序的行为。 应用设置是应用程序创建和管理的数据和用户设置均影响应用的行为，并且不需要频繁重新调整的应用程序的可自定义设置。
 

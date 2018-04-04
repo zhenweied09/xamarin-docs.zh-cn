@@ -1,18 +1,17 @@
 ---
 title: 将与 Xamarin.Forms 集成
 description: 创建响应的触摸和 Xamarin.Forms 元素的 SkiaSharp 图形
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 3edc71977820ca618447e02caa032cf908e1aae4
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 67c4330d8e446a407dec7792fe5f40cdd9d23c22
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>将与 Xamarin.Forms 集成
 

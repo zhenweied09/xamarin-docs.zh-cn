@@ -1,18 +1,17 @@
 ---
-title: "材料设计功能"
-description: "本主题介绍便于开发人员创建材料设计符合布局的设计器功能。 本部分介绍，并说明如何使用材料网格、 材料颜色调色板、 排字刻度和主题编辑器。"
-ms.topic: article
+title: 材料设计功能
+description: 本主题介绍便于开发人员创建材料设计符合布局的设计器功能。 本部分介绍，并说明如何使用材料网格、 材料颜色调色板、 排字刻度和主题编辑器。
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a764efe7f2cadd8c777f8427c0220e45eec662c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-design-features"></a>材料设计功能
 
@@ -335,7 +334,7 @@ Xamarin.Android 设计器包括功能，使你更轻松地创建材料设计符�
 由于当前所选主题是项目主题，没有任何对话框以更新所选的主题，或以指定新位置。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本主题所述 Xamarin.Android 设计器中可用的材料设计功能。 它介绍如何启用和配置材料设计网格、 如何使用材料设计调色板编辑颜色属性，以及如何使用排字缩放选择器来配置文本属性。 它还演示了如何使用主题编辑器来创建符合材料设计准则的新自定义主题。 有关材料设计 Xamarin.Android 支持的详细信息，请参阅[材料主题](~/android/user-interface/material-theme.md)。
 

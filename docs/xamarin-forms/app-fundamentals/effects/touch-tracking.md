@@ -1,18 +1,17 @@
 ---
-title: "调用从效果的事件"
-description: "一种效果可以定义和调用的事件，信号基础本机视图中的更改。 这篇文章演示如何实现低级别的多点触控手指跟踪，以及如何生成指示触摸活动的事件。"
-ms.topic: article
+title: 调用从效果的事件
+description: 一种效果可以定义和调用的事件，信号基础本机视图中的更改。 这篇文章演示如何实现低级别的多点触控手指跟踪，以及如何生成指示触摸活动的事件。
 ms.prod: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 0fd037e62bcdb1b2be4c93dc0d32ca76f4e1ba8e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="invoking-events-from-effects"></a>调用从效果的事件
 
@@ -795,7 +794,7 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 如果你扫描手指跨密钥中，你将看到的颜色的颜色的细微更改将触控事件传输从一个项到另一个。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何调用事件起作用，以及如何编写和使用实现低级别的多点触控处理效果。
 

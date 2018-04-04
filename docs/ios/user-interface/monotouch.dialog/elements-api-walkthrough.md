@@ -1,17 +1,16 @@
 ---
-title: "演练-创建使用元素 API 的应用程序"
-description: "本文基于 MonoTouch 对话框文章简介中提供的信息。 它提供的演练，演示如何使用 MonoTouch.Dialog (MTD） 元素 API 若要快速开始构建保持联系的应用程序D。"
-ms.topic: article
+title: 演练-创建使用元素 API 的应用程序
+description: 本文基于 MonoTouch 对话框文章简介中提供的信息。 它提供的演练，演示如何使用 MonoTouch.Dialog (MTD） 元素 API 若要快速开始构建保持联系的应用程序D。
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4fbf744c6f967d09e0033212024c2e2398fb768
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>演练-创建使用元素 API 的应用程序
 
@@ -159,7 +158,7 @@ public class Task
  <a name="Summary" />
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍的演练，介绍了如何使用 MonoTouch.Dialog 元素 API。 它涵盖使用保持联系创建多屏幕应用程序的基本步骤D，包括如何使用`DialogViewController`以及如何添加元素和节创建屏幕。 此外，它说明了如何使用保持联系结合 D `UINavigationController`。
 

@@ -1,16 +1,15 @@
 ---
 title: MonoTouch.Dialog Json Markup
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 843e66a7979fc1aaa86371a3406c89af3f9ba967
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
 
@@ -295,7 +294,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
 
 ### <a name="ontap-and-onaccessorytap"></a>ontap 和 onaccessorytap
 
-这些属性必须指向采用对象作为参数的应用程序中的静态方法名称。 当你创建层次结构使用的 JsonDialog.FromFile 或 JsonDialog.FromJson 方法您可以传递一个可选对象值。 此对象值然后传递到你的方法。 你可以使用这要传递给你静态方法的一些背景信息。 例如:
+这些属性必须指向采用对象作为参数的应用程序中的静态方法名称。 当你创建层次结构使用的 JsonDialog.FromFile 或 JsonDialog.FromJson 方法您可以传递一个可选对象值。 此对象值然后传递到你的方法。 你可以使用这要传递给你静态方法的一些背景信息。 例如：
 
 ```csharp
 class Foo {
@@ -360,7 +359,7 @@ class Foo {
 
 ## <a name="boolean-elements"></a>布尔元素
 
-布尔元素应将类型设置为`"bool"`，可以包含`"caption"`以显示与`"value"`设置为 true 或 false。 如果`"on"`和`"off"`属性被设置，它们被假定为映像。 映像是解决相对于应用程序中的当前工作目录。 如果你想要引用相对于捆绑的文件，则可以使用`"~"`作为快捷方式来表示应用程序捆绑包目录。 例如`"~/favorite.png"`将捆绑文件中包含 favorite.png。 例如:
+布尔元素应将类型设置为`"bool"`，可以包含`"caption"`以显示与`"value"`设置为 true 或 false。 如果`"on"`和`"off"`属性被设置，它们被假定为映像。 映像是解决相对于应用程序中的当前工作目录。 如果你想要引用相对于捆绑的文件，则可以使用`"~"`作为快捷方式来表示应用程序捆绑包目录。 例如`"~/favorite.png"`将捆绑文件中包含 favorite.png。 例如：
 
 ```csharp
 { 

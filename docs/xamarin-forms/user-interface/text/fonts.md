@@ -1,18 +1,17 @@
 ---
-title: "字体"
-description: "Xamarin.Forms 中的设置字体"
-ms.topic: article
+title: 字体
+description: Xamarin.Forms 中的设置字体
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fonts"></a>字体
 
@@ -249,7 +248,7 @@ new Label
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Xamarin.Forms 提供了简单的默认设置，以便你可以调整大小可轻松地为所有支持的平台的文本。 它还允许你指定字体和大小&ndash;甚至以不同方式为每个平台&ndash;当需要进行更细化的控制时。 `FormattedString`类可以用于构造字符串包含使用不同的字体规格`Span`类。
 

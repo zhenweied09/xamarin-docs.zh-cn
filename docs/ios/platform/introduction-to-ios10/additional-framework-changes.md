@@ -1,18 +1,17 @@
 ---
-title: "其他 iOS 10 框架更改"
-description: "本文介绍了其他的次要更改或适用于 iOS 10 现有框架的增强功能。"
-ms.topic: article
+title: 其他 iOS 10 框架更改
+description: 本文介绍了其他的次要更改或适用于 iOS 10 现有框架的增强功能。
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: fef543291f0743f8ebfa799b67fca2c8243be9bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 33852ef62bd00368ef6544d07e60dd6de4c3b7d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>其他 iOS 10 框架更改
 

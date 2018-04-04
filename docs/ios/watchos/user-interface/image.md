@@ -1,17 +1,16 @@
 ---
-title: "图像控件"
-ms.topic: article
+title: 图像控件
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4184d7babc396a6b6179e6876dced34b773474b4
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="image-control"></a>图像控件
 
@@ -21,7 +20,7 @@ watchOS 提供[ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/Watc
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 使用资产目录映像将映像添加到监视工具包应用程序。
-仅 **@2x** 版本是必需的因为所有观看具有 Retina 显示的设备。
+仅**@2x**版本是必需的因为所有观看具有 Retina 显示的设备。
 
 ![](image-images/asset-universal-sml.png "只有 2 x 版本是必需的因为所有观看具有 Retina 显示的设备")
 

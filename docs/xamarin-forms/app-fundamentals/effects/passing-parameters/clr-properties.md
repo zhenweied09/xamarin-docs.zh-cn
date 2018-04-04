@@ -1,18 +1,17 @@
 ---
-title: "传递效果参数作为公共语言运行时属性"
-description: "公共语言运行时 (CLR) 属性可用来定义不响应运行时属性更改的效果参数。 本文演示如何使用 CLR 属性将参数传递给效果。"
-ms.topic: article
+title: 传递效果参数作为公共语言运行时属性
+description: 公共语言运行时 (CLR) 属性可用来定义不响应运行时属性更改的效果参数。 本文演示如何使用 CLR 属性将参数传递给效果。
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: afe30ae87aa2e465013eb7fef3089cf701d98da6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78d14b9764ab0c7cafb9f09fa1c8acea3f45afde
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>传递效果参数作为公共语言运行时属性
 
@@ -232,7 +231,7 @@ namespace EffectsDemo.WinPhone81
 
 Windows 运行时和通用 Windows 平台未提供投影效果，因此`LabelShadowEffect`实现这两个平台上的模拟一个通过添加第二个偏移量[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)落后于主`Label`. `OnAttached`方法检索`ShadowEffect`实例时，创建新`Label`，和上设置某些布局属性`Label`。 然后，它创建卷影通过设置[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)， [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)，和[ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)属性控制的颜色和位置`Label`. `shadowLabel`会插入落后于主偏移量`Label`。 此功能包装在`try` / `catch`阻止以防效果附加到控件不具有`Control.Layer`属性。 没有实现由`OnDetached`方法因为不是必需的任何清理。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了使用 CLR 属性将参数传递给效果。 可以使用 CLR 属性定义不响应运行时属性更改的效果参数。
 

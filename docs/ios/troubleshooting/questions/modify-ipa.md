@@ -1,16 +1,16 @@
 ---
-title: "可以将文件添加到或删除从 IPA 文件后生成 Visual Studio 中的文件？"
-ms.topic: article
+title: 可以将文件添加到或删除从 IPA 文件后生成 Visual Studio 中的文件？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>可以将文件添加到或删除从 IPA 文件后生成 Visual Studio 中的文件？
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 和应用商店验证过程将报告类似的错误消息：
 
-> 错误 ITMS-90035:"无效的签名。 密封的资源已丢失或无效。 在路径 [iPhoneApp1.app/iPhoneApp1] 二进制文件包含无效签名。 请确保您已经注册你的应用程序与分发证书、 不是临时证书或开发证书。 验证在目标级别 （它们将替代在项目级别的任何值） 在 Xcode 中的代码签名设置正确。 此外，请确保在 Xcode 中，不模拟器目标使用版本目标生成要上载的捆绑包。 如果不能确定你的代码签名设置正确无误，在 Xcode 中选择"清除所有"、 删除在查找工具中，"生成"目录和重新生成你的发布目标。 有关详细信息，请参阅[https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> 错误 ITMS-90035:"无效的签名。 密封的资源已丢失或无效。 在路径 [iPhoneApp1.app/iPhoneApp1] 二进制文件包含无效签名。 请确保您已经注册你的应用程序与分发证书、 不是临时证书或开发证书。 验证在目标级别 （它们将替代在项目级别的任何值） 在 Xcode 中的代码签名设置正确。 此外，请确保在 Xcode 中，不模拟器目标使用版本目标生成要上载的捆绑包。 如果不能确定你的代码签名设置正确无误，在 Xcode 中选择"清除所有"、 删除在查找工具中，"生成"目录和重新生成你的发布目标。 有关详细信息，请参阅[ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

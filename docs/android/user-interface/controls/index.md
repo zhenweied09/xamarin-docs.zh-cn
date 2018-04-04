@@ -1,18 +1,17 @@
 ---
-title: "控件"
-description: "用于创建 Xamarin.Android 用户界面的构建基块"
-ms.topic: article
+title: 控件
+description: 用于创建 Xamarin.Android 用户界面的构建基块
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 25afd284fc88df4f23aaa3dfa1f47a3dc4fee551
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="controls"></a>控件
 
@@ -90,14 +89,14 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 ![示例弹出菜单](images/popup-menu.png)
 
 
-## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[Spinner](~/android/user-interface/controls/spinner.md)
+## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[旋转图标](~/android/user-interface/controls/spinner.md)
 
 `Spinner` 是一个快速地从一组中选择一个值的 UI 元素。 它是 simmilar 到下拉列表。 
 
 ![示例微调框](images/spinner.png)
 
 
-## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[交换机](~/android/user-interface/controls/switch.md)
+## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[切换](~/android/user-interface/controls/switch.md)
 
 `Switch` 是一个允许用户两个状态，例如在之间切换或禁用的 UI 元素。 `Switch`默认值为 OFF。
 

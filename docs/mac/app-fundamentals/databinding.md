@@ -1,18 +1,17 @@
 ---
-title: "数据绑定和键 / 值编码"
-description: "本文介绍如何使用键值对的编码和观察以便用于数据绑定到 Xcode 的接口生成器中的 UI 元素的键 / 值。"
-ms.topic: article
+title: 数据绑定和键 / 值编码
+description: 本文介绍如何使用键值对的编码和观察以便用于数据绑定到 Xcode 的接口生成器中的 UI 元素的键 / 值。
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>数据绑定和键 / 值编码
 
@@ -70,7 +69,7 @@ namespace MacDatabinding
 
 首先，`[Register("PersonModel")]`属性注册类并将它暴露给目标。 然后，需要从继承类`NSObject`(或继承自的子类`NSObject`)，这将添加多个基类允许为 KVC 符合的方法。 接下来，`[Export("Name")]`属性公开`Name`属性并定义更高版本将用于通过 KVC 和 KVO 技术访问属性的密钥值。 
 
-最后，若要能够将键 / 值观察到更改为该属性的值，访问器必须将包装对在其值更改`WillChangeValue`和`DidChangeValue`方法调用 (指定与相同的密钥`Export`属性)。  例如:
+最后，若要能够将键 / 值观察到更改为该属性的值，访问器必须将包装对在其值更改`WillChangeValue`和`DidChangeValue`方法调用 (指定与相同的密钥`Export`属性)。  例如：
 
 ```csharp
 set {
@@ -159,7 +158,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 ### <a name="observing-value-changes"></a>遵循值的更改
 
-使用键 / 值观察 (KVO)，可以将观察者附加到 KVC 符合类的特定密钥和随时通知 （使用 KVC 技术或直接访问 C# 代码中的给定的属性） 修改该注册表项的值。 例如:
+使用键 / 值观察 (KVO)，可以将观察者附加到 KVC 符合类的特定密钥和随时通知 （使用 KVC 技术或直接访问 C# 代码中的给定的属性） 修改该注册表项的值。 例如：
 
 ```csharp
 // Watch for the name value changing
@@ -885,7 +884,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 此行将告诉我们，密钥`Title`我们要绑定到的对象上不存在。 如果我们更改绑定回`Name`在接口生成器中，保存，同步，重新生成并运行，应用程序将运行按预期不会出现问题。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用数据绑定和在 Xamarin.Mac 应用程序中键 / 值对编码的详细的信息。 首先，它看起来在通过使用键 / 值编码 (KVC) 和键 / 值观察 (KVO) 公开到 Objective C 的 C# 类。 接下来，它说明了如何使用 KVO 符合类和数据将其绑定到 Xcode 的接口生成器中的 UI 元素。 最后，它显示复杂数据绑定使用**阵列控制器**和**树控制器**。
 

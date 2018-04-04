@@ -1,18 +1,18 @@
 ---
-title: "更新组件引用到 NuGet"
-description: "将组件引用替换为 NuGet 程序包添加到将来证明你的应用。"
-ms.topic: article
+title: 更新组件引用到 NuGet
+description: 将组件引用替换为 NuGet 程序包添加到将来证明你的应用。
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 4de4517c960395e5d7d5a8fb2c537576e15fc007
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: a76adab41e9f7de5abb391e69a5b27783e0c3a63
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>更新组件引用到 NuGet
 

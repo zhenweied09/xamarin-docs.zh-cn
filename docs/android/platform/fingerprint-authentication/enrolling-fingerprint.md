@@ -1,18 +1,17 @@
 ---
-title: "注册指纹"
-description: "如何设置了锁屏和注册 Android 设备或仿真程序上的使用指纹。"
-ms.topic: article
+title: 注册指纹
+description: 如何设置了锁屏和注册 Android 设备或仿真程序上的使用指纹。
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 20e6d693f2a3eba54afaf1d3c7054ad75d7a7610
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4faee5decb102d17d9a270b96cef4a12fc9dbef4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enrolling-a-fingerprint"></a>注册指纹
 
@@ -20,7 +19,7 @@ ms.lasthandoff: 03/09/2018
 
 才可能发生 Android 应用程序以利用指纹身份验证，如果已使用指纹身份验证配置该设备。 本指南将讨论如何注册 Android 设备或仿真程序上的使用指纹。 仿真程序没有实际的硬件执行指纹扫描速度，但是可以模拟指纹扫描 Android 调试桥接 （如下所述） 的帮助。  本指南将讨论如何启用 Android 设备上的屏幕锁定并注册用于身份验证的指纹。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要注册指纹，必须具有一个 Android 设备或仿真程序运行 API 级别 23 (Android 6.0)。
 
@@ -69,7 +68,7 @@ $ adb -e emu finger touch 1
 
 ![屏幕显示指纹添加 ！](enrolling-fingerprint-images/testing-06.png)
 
-## <a name="summary"></a>摘要 
+## <a name="summary"></a>总结 
 
 本指南介绍如何设置了锁屏和注册 Android 设备上或在 Android 仿真程序中的指纹。 
 

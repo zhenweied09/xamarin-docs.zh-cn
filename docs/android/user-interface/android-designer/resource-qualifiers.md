@@ -1,18 +1,17 @@
 ---
-title: "资源限定符和可视化效果选项"
-description: "本主题介绍如何定义仅在某些限定符值匹配时将使用的资源。 一个简单的示例是一个语言限定的字符串资源。 与其他定义要用于其他语言的替代资源，可以将字符串资源定义为默认情况下。 可以限定所有资源类型，包括本身的布局。"
-ms.topic: article
+title: 资源限定符和可视化效果选项
+description: 本主题介绍如何定义仅在某些限定符值匹配时将使用的资源。 一个简单的示例是一个语言限定的字符串资源。 与其他定义要用于其他语言的替代资源，可以将字符串资源定义为默认情况下。 可以限定所有资源类型，包括本身的布局。
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc9eb145b6d9ed7bd441d625f533c5cbbd87fccd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>资源限定符和可视化效果选项
 

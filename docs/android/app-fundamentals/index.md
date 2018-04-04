@@ -1,18 +1,17 @@
 ---
-title: "应用程序基础知识"
-description: "应用程序的核心概念"
-ms.topic: article
+title: 应用程序基础知识
+description: 应用程序的核心概念
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>应用程序基础知识
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 02/27/2018
 
 
 
-##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[活动的生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)
+##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[活动生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)
 
 活动是的 Android 应用程序的基本构建基块，并且可以存在于多个不同状态。 活动生命周期开头实例化和析构，结尾，并且在此期间包括许多的状态。 当活动更改状态时，会调用相应的生命周期事件方法，以便通知即将发生的状态更改的活动，并使其能够执行的代码以适应所做的更改。 本文分析的活动的生命周期，并解释了负责该活动具有这些状态更改的功能良好的可靠应用程序的一部分的每一阶段。
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 02/27/2018
 
 本文介绍如何 Android 服务，允许在后台进行工作的 Android 组件。 它说明服务适合的不同方案，并同时包括这两者并提供用于远程过程调用的接口执行长时间运行后台任务以及演示如何实现它们。
 
-## <a name="broadcast-receiversandroidapp-fundamentalsbroadcast-receiversmd"></a>[广播的接收方](~/android/app-fundamentals/broadcast-receivers.md)
+## <a name="broadcast-receiversandroidapp-fundamentalsbroadcast-receiversmd"></a>[广播接收器](~/android/app-fundamentals/broadcast-receivers.md)
 
 本指南介绍如何创建和使用广播接收方，响应系统级广播，在 Xamarin.Android 的 Android 组件。
 
@@ -90,7 +89,7 @@ Android OS 为多媒体，包含音频和视频提供广泛支持。 本指南�
 
 
 
-##  <a name="touchandroidapp-fundamentalstouchindexmd"></a>[触摸](~/android/app-fundamentals/touch/index.md)
+##  <a name="touchandroidapp-fundamentalstouchindexmd"></a>[触控](~/android/app-fundamentals/touch/index.md)
 
 本部分介绍的概念和详细信息实现触摸手势在 Android 上。 触摸 Api 是引入并且说明了跟笔势识别器浏览。
 

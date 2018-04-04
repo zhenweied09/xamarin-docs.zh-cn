@@ -1,24 +1,23 @@
 ---
-title: ".NET 嵌入错误"
-ms.topic: article
+title: .NET 嵌入错误
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx： 绑定错误消息
 
-例如 参数、 环境
+例如， 参数、 环境
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
-<h3><a name="EM0000"/>EM0000： 意外的错误-请填写 https://github.com/mono/Embeddinator-4000/issues 在一个 bug 报告</h3>
+<h3><a name="EM0000"/>EM0000： 意外的错误-请填写在一个 bug 报告 https://github.com/mono/Embeddinator-4000/issues</h3>
 
 出现意外的错误条件。 请[记录相应的问题](https://github.com/mono/Embeddinator-4000/issues)利用尽可能多的信息可能，其中包括：
 
@@ -68,7 +67,7 @@ ms.lasthandoff: 02/27/2018
 
 该工具不能合并错误消息中提及的框架，因为它们之间没有公共文件。
 
-这可能表示 Embeddinator-4000; 中的 bug在一个 bug 报告，请记录[https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
+这可能表示 Embeddinator-4000; 中的 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
 
 <h3><a name="EM0011"/>EM0011: 程序集`X`不存在。</h3>
 
@@ -100,11 +99,11 @@ ms.lasthandoff: 02/27/2018
 
 提供的命令行选项的语法`A`无法分析工具。 很可能不正确，请与文档或正确的语法的帮助。
 
-<h3><a name="EM0099"/>EM0099： 内部错误 *。 请文件与测试用例 (https://github.com/mono/Embeddinator-4000/issues) 一个 bug 报告。</h3>
+<h3><a name="EM0099"/>EM0099： 内部错误 *。 请文件与测试用例的一个 bug 报告 (https://github.com/mono/Embeddinator-4000/issues)。</h3>
 
 在 Embeddinator 4000 内部一致性检查失败时，将报告此错误消息。
 
-这表示 Embeddinator-4000; 中的存在 bug在一个 bug 报告，请记录[https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
+这表示 Embeddinator-4000; 中的存在 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
 
 
 <!-- 1xxx: code processing -->
@@ -141,7 +140,7 @@ ms.lasthandoff: 02/27/2018
 
 <h3><a name="EM1021"/>构造函数`C`具有默认值为其生成任何包装。</h3>
 
-这是**警告**，构造函数的默认参数`C`不生成任何额外的代码。 最常见原因是现有方法已具有相同的签名。 例如 .net 中，可能能够：
+这是**警告**，构造函数的默认参数`C`不生成任何额外的代码。 最常见原因是现有方法已具有相同的签名。 例如， .net 中，可能能够：
 
 ```
 public class MyType {
@@ -173,7 +172,7 @@ public class MyType {
 
 <h3><a name="EM1032"/>方法`M`具有默认值为其生成任何包装。</h3>
 
-这是**警告**的方法的默认参数`M`不生成任何额外的代码。 最常见原因是现有方法已具有相同的签名。 例如 .net 中，可能能够：
+这是**警告**的方法的默认参数`M`不生成任何额外的代码。 最常见原因是现有方法已具有相同的签名。 例如， .net 中，可能能够：
 
 ```
 public class MyType {

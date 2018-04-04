@@ -1,18 +1,17 @@
 ---
-title: "冰激凌德桑威奇功能"
-description: "本文介绍一些可供使用 Android 4 API-冰激凌三明治的应用程序开发人员的新功能。 它介绍几种新的用户界面技术，然后检查的各种 Android 4 提供的数据应用程序之间和设备之间共享的新功能。"
-ms.topic: article
+title: 冰激凌德桑威奇功能
+description: 本文介绍一些可供使用 Android 4 API-冰激凌三明治的应用程序开发人员的新功能。 它介绍几种新的用户界面技术，然后检查的各种 Android 4 提供的数据应用程序之间和设备之间共享的新功能。
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: c2e7f9fabd462faf813299021d5f84ef0a62f790
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c5412629f6dcd31fb0a82634ef530569eef459a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ice-cream-sandwich-features"></a>冰激凌德桑威奇功能
 
@@ -55,7 +54,7 @@ Android 4 包括让我们跨设备和应用程序间共享数据的几种新技�
 
 ICS 尚不支持开发与 x86 仿真程序。 x86 仿真程序仅支持 Android 2.3.3，API 级别 10。 请参阅[配置 x86 仿真程序](~/android/get-started/installation/android-emulator/index.md)有关详细信息。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了各种现适用于 Android 4 的新技术。 我们回顾了新的用户界面功能如*GridLayout*， *PopupMenu*，和*交换机*小组件。 我们还了解了一些用于控制系统用户界面，以及如何才能使用新的支持*TextureView*。 然后，我们讨论了多种新共享技术。 我们如何涵盖*Android 无线发送*让我们使用的设备之间共享信息*NFC*，讨论新*日历 API*，还介绍了如何使用内置的和*ShareActionProvider*。
 最后，我们探讨了如何使用*ContactsContract*访问用户配置文件数据提供程序。

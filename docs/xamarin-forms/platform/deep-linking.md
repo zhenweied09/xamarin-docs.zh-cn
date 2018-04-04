@@ -1,7 +1,6 @@
 ---
-title: "应用程序索引和深层链接"
-description: "应用程序索引允许将否则忘记后几个使用能够通过在搜索结果中显示相关的应用程序。 深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。 本文演示如何使用应用程序索引和深层链接使 Xamarin.Forms 应用程序内容可供搜索 iOS 和 Android 设备上。"
-ms.topic: article
+title: 应用程序索引和深层链接
+description: 应用程序索引允许将否则忘记后几个使用能够通过在搜索结果中显示相关的应用程序。 深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。 本文演示如何使用应用程序索引和深层链接使 Xamarin.Forms 应用程序内容可供搜索 iOS 和 Android 设备上。
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d302e24ee74290eecd3dd9ad3f81921d6654cc10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>应用程序索引和深层链接
 
@@ -219,7 +218,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 
 Handoff 有关的详细信息，请参阅[简介 Handoff](~/ios/platform/handoff.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示如何使用应用程序索引以及深层链接使 Xamarin.Forms 应用程序内容可供搜索 iOS 和 Android 设备上。 应用程序索引允许应用程序保持关联由在几个使用后将否则有关忘记的搜索结果中显示。
 

@@ -1,18 +1,17 @@
 ---
-title: "标准控件"
-description: "本文介绍如何使用标准的 AppKit 控件，如按钮、 标签、 文本字段、 复选框，并分段 Xamarin.Mac 应用程序中的控件。 它介绍将其添加到接口生成器的接口以及在代码中与它们进行交互。"
-ms.topic: article
+title: 标准控件
+description: 本文介绍如何使用标准的 AppKit 控件，如按钮、 标签、 文本字段、 复选框，并分段 Xamarin.Mac 应用程序中的控件。 它介绍将其添加到接口生成器的接口以及在代码中与它们进行交互。
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e887026b4f87d2e1bf8c7647a7845765ce8b886c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="standard-controls"></a>标准控件
 
@@ -93,7 +92,7 @@ macOS （以前称为 Mac OS X） 提供一组标准的用户界面控件通过 
 
 [![](standard-controls-images/edit04.png "设置约束")](standard-controls-images/edit04.png#lightbox)
 
-使用**红色我-无线数据交换内容**外周围**Autoresizing**到框中_棍棒_控件与 (x，y) 给定位置。 例如: 
+使用**红色我-无线数据交换内容**外周围**Autoresizing**到框中_棍棒_控件与 (x，y) 给定位置。 例如： 
 
 [![](standard-controls-images/edit05.png "编辑约束")](standard-controls-images/edit05.png#lightbox)
 
@@ -280,7 +279,7 @@ ButtonOutlet.Activated += (sender, e) => {
 };
 ```
 
-对于通过系统都已公开的按钮**操作**、`public partial`与在 Xcode 中选择的名称与自动为你创建方法。 若要响应**操作**，完成类中的分部方法，**操作**在中定义。 例如:
+对于通过系统都已公开的按钮**操作**、`public partial`与在 Xcode 中选择的名称与自动为你创建方法。 若要响应**操作**，完成类中的分部方法，**操作**在中定义。 例如：
 
 ```csharp
 partial void ButtonAction (Foundation.NSObject sender) {
@@ -289,7 +288,7 @@ partial void ButtonAction (Foundation.NSObject sender) {
 }
 ```
 
-对于具有状态的按钮 (如**上**和**关闭**)，可以检查状态，或将其设置与`State`依据属性`NSCellStateValue`枚举。 例如:
+对于具有状态的按钮 (如**上**和**关闭**)，可以检查状态，或将其设置与`State`依据属性`NSCellStateValue`枚举。 例如：
 
 ```csharp
 DisclosureButton.Activated += (sender, e) => {
@@ -326,7 +325,7 @@ AppKit 提供几种类型的复选框和单选按钮组可在你的用户界面�
 [![](standard-controls-images/buttons02.png "下面举例说明可用的复选框类型")](standard-controls-images/buttons02.png#lightbox)
 
 
-复选框和单选按钮 (通过公开**Outlet**) 具有状态 (如**上**和**关闭**)，可以检查状态，或将其设置与`State`依据属性`NSCellStateValue`枚举。 例如:
+复选框和单选按钮 (通过公开**Outlet**) 具有状态 (如**上**和**关闭**)，可以检查状态，或将其设置与`State`依据属性`NSCellStateValue`枚举。 例如：
 
 ```csharp
 AdjustTime.Activated += (sender, e) => {
@@ -483,7 +482,7 @@ AppKit 提供几种类型的可在你的用户界面设计的所选内容控件�
 
 [![](standard-controls-images/select01.png "示例选择控件")](standard-controls-images/select01.png#lightbox)
 
-有两种方法来跟踪在所选内容控件通过公开其作为具有用户交互时**操作**。 例如:
+有两种方法来跟踪在所选内容控件通过公开其作为具有用户交互时**操作**。 例如：
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -491,7 +490,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-或者通过附加**委托**到`Activated`事件。 例如:
+或者通过附加**委托**到`Activated`事件。 例如：
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -499,7 +498,7 @@ TickedSlider.Activated += (sender, e) => {
 };
 ```
 
-若要设置或读取的选择控件的值，使用`IntValue`属性。 例如:
+若要设置或读取的选择控件的值，使用`IntValue`属性。 例如：
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
@@ -528,7 +527,7 @@ AppKit 提供几种类型的可在你的用户界面设计的指示器控件。 
 
 [![](standard-controls-images/level01.png "示例指示器控件")](standard-controls-images/level01.png#lightbox)
 
-有两种方法来跟踪在指示器控件具有用户交互，通过将其作为公开时**操作**或**Outlet**和附加**委托**到`Activated`事件。 例如:
+有两种方法来跟踪在指示器控件具有用户交互，通过将其作为公开时**操作**或**Outlet**和附加**委托**到`Activated`事件。 例如：
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -536,13 +535,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-若要读取或设置指示符控件的值，使用`DoubleValue`属性。 例如:
+若要读取或设置指示符控件的值，使用`DoubleValue`属性。 例如：
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-显示时，不确定和异步进度指示器应进行动画处理。 使用`StartAnimation`方法以在显示时启动动画。 例如:
+显示时，不确定和异步进度指示器应进行动画处理。 使用`StartAnimation`方法以在显示时启动动画。 例如：
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -565,13 +564,13 @@ AppKit 提供几种类型的可在你的用户界面设计的文本控件。 有
 - **EditingBegan** -当用户选择该字段进行编辑时触发。
 - **EditingEnded** -当用户按 Enter 键字段中的，或离开字段。
 
-使用`StringValue`属性来读取或设置字段的值。 例如:
+使用`StringValue`属性来读取或设置字段的值。 例如：
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
 ```
 
-对于显示或编辑数字值的字段，你可以使用`IntValue`属性。 例如:
+对于显示或编辑数字值的字段，你可以使用`IntValue`属性。 例如：
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
@@ -641,7 +640,7 @@ Popover 是暂时性的 UI 元素，它提供与特定控件或屏幕区域直�
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用如按钮、 标签、 文本字段、 复选框和分段控件 Xamarin.Mac 应用程序中的标准 AppKit 控件的详细的信息。 它介绍将它们添加到 Xcode 的接口生成器中用户界面设计、 将其公开到通过插座和操作的代码以及使用 C# 代码中的 AppKit 控件。
 

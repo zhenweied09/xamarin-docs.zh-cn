@@ -1,18 +1,17 @@
 ---
-title: "选项卡条和选项卡栏控制器"
-description: "使用 UITabBarController 类生成 iOS 应用程序使用 tab 键导航用户界面。 在本文中我们将演练如何设置的选项卡式应用程序包含若干个控制器和视图。 然后，我们将查看如何加载 UITabBarController 时它不是根控制器，如在登录屏幕后。"
-ms.topic: article
+title: 选项卡条和选项卡栏控制器
+description: 使用 UITabBarController 类生成 iOS 应用程序使用 tab 键导航用户界面。 在本文中我们将演练如何设置的选项卡式应用程序包含若干个控制器和视图。 然后，我们将查看如何加载 UITabBarController 时它不是根控制器，如在登录屏幕后。
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 702a5986c9249eec38868895f55ef6f63b534b9b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tab-bars-and-tab-bar-controllers"></a>选项卡条和选项卡栏控制器
 
@@ -366,7 +365,7 @@ public override void ViewDidLoad ()
 
 [![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)-->
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何使用`UITabBarController`应用程序中。 我们在遍历如何载入每个选项卡上的控制器，以及如何在选项卡上设置属性，此类的标题、 映像和徽章。 我们然后检查，使用情节提要，如何加载`UITabBarController`在运行时不时`RootViewController`的窗口。
 

@@ -1,18 +1,17 @@
 ---
-title: "共享代码选项"
-description: "本文档会比较的跨平台项目间共享代码的不同方法： 共享项目、 可移植类库和.NET 标准，包括的优点和各自的优缺点。"
-ms.topic: article
+title: 共享代码选项
+description: 本文档会比较的跨平台项目间共享代码的不同方法： 共享项目、 可移植类库和.NET 标准，包括的优点和各自的优缺点。
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e7289d92043bdbe9e4ec55776835530f8ccec526
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
@@ -133,7 +132,7 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 将你面向的平台推动代码共享你选择的策略。 选择最适合你的项目的方法。
 

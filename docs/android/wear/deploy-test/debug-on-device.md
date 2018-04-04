@@ -1,18 +1,17 @@
 ---
-title: "在磨损设备上进行调试"
-description: "本文介绍如何调试磨损设备上的 Xamarin.Android 磨损应用程序。"
-ms.topic: article
+title: 在磨损设备上进行调试
+description: 本文介绍如何调试磨损设备上的 Xamarin.Android 磨损应用程序。
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: c12764610d0fd9834914b8114818b2ccd7d7def0
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3f3143dcda4017bbabfbd34a58a40665beea6f75
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debug-on-a-wear-device"></a>在磨损设备上进行调试
 
@@ -147,6 +146,6 @@ Android 磨损应用打包使用 Google Play 上的分发的助理 Android 手�
 4.  运行和调试磨损应用在设备上。
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何将从 Visual Studio 中通过蓝牙、 磨损调试 Android 磨损设备配置以及如何调试磨损应用包含助理 phone 应用。 它还提供用于调试通过蓝牙的磨损应用了常见的调试提示。

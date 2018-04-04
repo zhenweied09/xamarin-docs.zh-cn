@@ -1,18 +1,17 @@
 ---
-title: "动态样式"
-description: "样式，不要响应属性更改和应用程序的持续时间内保持不变。 例如，分配到可视元素，如果其中一个 Setter 实例修改、 删除或添加的新 Setter 实例的一种样式后, 所做的更改不会应用到的可视元素。 但是，应用程序可以响应在运行时动态的样式更改通过使用动态资源。"
-ms.topic: article
+title: 动态样式
+description: 样式，不要响应属性更改和应用程序的持续时间内保持不变。 例如，分配到可视元素，如果其中一个 Setter 实例修改、 删除或添加的新 Setter 实例的一种样式后, 所做的更改不会应用到的可视元素。 但是，应用程序可以响应在运行时动态的样式更改通过使用动态资源。
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c484bdc90ec039a8d70209deabbe283cf7100610
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="dynamic-styles"></a>动态样式
 
@@ -207,7 +206,7 @@ public class DynamicStylesInheritancePageCS : ContentPage
 
 `tealSearchBarStyle`直接分配[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性[ `SearchBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/)实例。 这`Style`设置某些其他属性，并使用[ `BaseResourceKey` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/)属性来引用`searchBarStyle`。 [ `SetDynamicResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Element.SetDynamicResource/)方法并不是必需此处因为`tealSearchBarStyle`不会改变，除`Style`它派生自。 因此，`tealSearchBarStyle`维护的链接`searchBarStyle`和基样式更改时更改。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 样式，不要响应属性更改和应用程序的持续时间内保持不变。 但是，应用程序可以响应在运行时动态的样式更改通过使用动态资源。 此外，*动态*样式可以使用派生自[ `BaseResourceKey` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/)属性。
 

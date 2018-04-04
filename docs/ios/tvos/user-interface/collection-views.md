@@ -1,18 +1,17 @@
 ---
-title: "使用集合视图"
-description: "本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。"
-ms.topic: article
+title: 使用集合视图
+description: 本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-collection-views"></a>使用集合视图
 
@@ -61,7 +60,7 @@ _本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。_
 - `DequeueReusableCell` -创建或返回 （在应用程序的情节提要中指定） 的给定类型的单元格。
 - `DequeueReusableSupplementaryView` -创建或返回 （在应用程序的情节提要中指定） 的给定类型的补充视图。
 
-在调用这些方法之一之前, 必须注册类，情节提要或`.xib`文件用于创建与集合视图的单元格的视图。 例如:
+在调用这些方法之一之前, 必须注册类，情节提要或`.xib`文件用于创建与集合视图的单元格的视图。 例如：
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -104,7 +103,7 @@ public CityCollectionView (IntPtr handle) : base (handle)
 1. 将图像视图、 标签和一个按钮添加到现有视图，并将它们配置为如下所示： 
 
     [![](collection-views-images/collection02.png "示例布局")](collection-views-images/collection02.png#lightbox)
-1. 分配**名称**图像视图和中的标签**小组件选项卡**的**属性资源管理器**。 例如: 
+1. 分配**名称**图像视图和中的标签**小组件选项卡**的**属性资源管理器**。 例如： 
 
     [![](collection-views-images/collection03.png "设置名")](collection-views-images/collection03.png#lightbox)
 1. 接下来，拖动到情节提要的集合视图控制器： 
@@ -144,7 +143,7 @@ public CityCollectionView (IntPtr handle) : base (handle)
 1. 将图像视图、 标签和一个按钮添加到现有视图，并将它们配置为如下所示： 
 
     [![](collection-views-images/collection02vs.png "配置的布局")](collection-views-images/collection02vs.png#lightbox)
-1. 分配**名称**图像视图和中的标签**小组件选项卡**的**属性资源管理器**。 例如: 
+1. 分配**名称**图像视图和中的标签**小组件选项卡**的**属性资源管理器**。 例如： 
 
     [![](collection-views-images/collection03vs.png "属性资源管理器")](collection-views-images/collection03vs.png#lightbox)
 1. 接下来，拖动到情节提要的集合视图控制器： 
@@ -829,7 +828,7 @@ public override void ViewWillAppear (bool animated)
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和集合视图在 Xamarin.tvOS 应用内部使用。 首先，它讨论的所有元素构成集合视图。 接下来，它还介绍了如何设计和实现使用情节提要集合视图。 最后，为将提供有关创建自定义布局和项重新排序的信息的链接。
 

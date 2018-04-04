@@ -1,18 +1,17 @@
 ---
-title: "可扩展应用程序标记语言 (XAML)"
-description: "XAML 是一种声明性的标记语言，可以用于定义用户界面。 在单独的代码隐藏文件中定义的运行时行为的过程中使用 XAML 语法中，XML 文件中定义的用户界面。"
-ms.topic: article
+title: 可扩展应用程序标记语言 (XAML)
+description: XAML 是一种声明性的标记语言，可以用于定义用户界面。 在单独的代码隐藏文件中定义的运行时行为的过程中使用 XAML 语法中，XML 文件中定义的用户界面。
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/24/2016
-ms.openlocfilehash: a6e31fa9da7a5764d9a7fd04aa73d7d246143384
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extensible-application-markup-language-xaml"></a>可扩展应用程序标记语言 (XAML)
 

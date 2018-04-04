@@ -1,18 +1,17 @@
 ---
-title: "使用跨平台应用中的本机类型"
-description: "本文介绍如何使用新的 iOS 统一 API 本机类型 （nint、 nuint、 nfloat） 在跨平台应用程序代码与非 iOS 设备，例如 Android 或 Windows Phone 操作系统的共享位置。"
-ms.topic: article
+title: 使用跨平台应用中的本机类型
+description: 本文介绍如何使用新的 iOS 统一 API 本机类型 （nint、 nuint、 nfloat） 在跨平台应用程序代码与非 iOS 设备，例如 Android 或 Windows Phone 操作系统的共享位置。
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 2e177afa9124095f00edacbeb71512d5cd9bb219
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>使用跨平台应用中的本机类型
 
@@ -59,7 +58,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 #### <a name="using-duplicate-methods"></a>使用重复的方法
 
-需要执行的操作，在上面给出的矩形数据转换的库的示例。 如果库只包含一个或两个非常简单的方法，你可以选择为 Xamarin.iOS 和 Xamarin.Android 创建重复的这些方法的版本。 例如:
+需要执行的操作，在上面给出的矩形数据转换的库的示例。 如果库只包含一个或两个非常简单的方法，你可以选择为 Xamarin.iOS 和 Xamarin.Android 创建重复的这些方法的版本。 例如：
 
 ```csharp
 using System;
@@ -104,7 +103,7 @@ namespace NativeShared
 
 #### <a name="using-method-overloads"></a>使用方法重载
 
-在这种情况下，解决方案可能需要创建使用 32 位数据类型，以便它们现在采用的方法的重载版本`CGRect`为参数和/或返回值，该将值转换为`RectangleF`(知道该转换从`nfloat`到`float`有损转换)，并调用执行实际工作的例程的原始版本。 例如:
+在这种情况下，解决方案可能需要创建使用 32 位数据类型，以便它们现在采用的方法的重载版本`CGRect`为参数和/或返回值，该将值转换为`RectangleF`(知道该转换从`nfloat`到`float`有损转换)，并调用执行实际工作的例程的原始版本。 例如：
 
 ```csharp
 using System;
@@ -241,7 +240,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 有关更多详细信息，请参阅我们[更新现有 Xamarin.Forms 应用](http://developer.xamarin.com/guides/cross-platform/macios/updating-xamarin-forms-apps/)文档。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章中我们将有，请参阅，当我们应该使用统一 API 应用程序和其含义跨平台中的本机数据类型。 我们已提供几种解决方案，可在新的本机数据类型必须使用跨平台库中的情况。 并且，我们已了解 Xamarin.Forms 跨平台应用程序中受支持的统一的 Api 的快速指南。
 
@@ -249,7 +248,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 ## <a name="related-links"></a>相关链接
 
-- [统一的 API](~/cross-platform/macios/unified/index.md)
+- [Unified API](~/cross-platform/macios/unified/index.md)
 - [本机类型](~/cross-platform/macios/nativetypes.md)
 - [共享代码选项](~/cross-platform/app-fundamentals/code-sharing.md)
 - [共享的代码示例](https://developer.xamarin.com/samples/mobile/SharingCode/)

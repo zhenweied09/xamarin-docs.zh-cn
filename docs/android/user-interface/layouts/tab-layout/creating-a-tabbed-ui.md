@@ -1,18 +1,17 @@
 ---
-title: "演练-使用 TabHost 创建选项卡式的 UI"
-description: "本文将引导完成在 Xamarin.Android 使用 TabHost API 中创建选项卡式的 UI。"
-ms.topic: article
+title: 演练-使用 TabHost 创建选项卡式的 UI
+description: 本文将引导完成在 Xamarin.Android 使用 TabHost API 中创建选项卡式的 UI。
 ms.prod: xamarin
 ms.assetid: AD6E2173-974E-477C-940F-0CAB5E53326D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ca9a3f3d31707205cdcd4e0d8e74fa303ccba047
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>演练-使用 TabHost 创建选项卡式的 UI
 
@@ -203,7 +202,7 @@ protected override void OnCreate(Bundle bundle)
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这一章讨论选项卡式的布局，并指导你完成创建选项卡式应用程序的过程。 本演练演示了如何使用`TabActivity`放大量布局文件该承载`TabHost`和`TabWidget`。 `TabHost`的集合，然后填充`TabHost.TabSpec`对象将由使用`TabHost`在运行时实例化将在每个选项卡中使用的活动。
 

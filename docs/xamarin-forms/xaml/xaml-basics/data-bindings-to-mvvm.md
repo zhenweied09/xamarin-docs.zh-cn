@@ -1,18 +1,17 @@
 ---
-title: "第 5 部分。 从数据绑定到 MVVM"
-description: "记住，模型-视图-视图模型 (MVVM) 体系结构模式就是使用 XAML。 模式强制执行三个软件层之间的分隔-XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的媒介调用视图模型。 视图和视图模型，以及经常连接通过在 XAML 文件中定义的数据绑定中。 为视图 BindingContext 通常是 ViewModel 的实例。"
-ms.topic: article
+title: 第 5 部分。 从数据绑定到 MVVM
+description: 记住，模型-视图-视图模型 (MVVM) 体系结构模式就是使用 XAML。 模式强制执行三个软件层之间的分隔-XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的媒介调用视图模型。 视图和视图模型，以及经常连接通过在 XAML 文件中定义的数据绑定中。 为视图 BindingContext 通常是 ViewModel 的实例。
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 207bf7649d588f973b400cb452d9d8b246955cdb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>第 5 部分。 从数据绑定到 MVVM
 
@@ -702,7 +701,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 **可以轻松地 Xamarin.Forms 和 Prism Xamarin 发展 2016年: MVVM**
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 XAML 是一个强大的工具，用于定义在 Xamarin.Forms 应用程序，特别是在数据绑定中的用户界面和使用 MVVM。 结果是在代码中的所有后台支持用户界面表示干净、 简洁，并且可能非常有用。
 

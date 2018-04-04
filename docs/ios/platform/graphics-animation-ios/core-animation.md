@@ -1,18 +1,17 @@
 ---
-title: "核心动画"
-description: "本文将讨论的核心动画框架中，显示它如何使高性能、 流体动画中 UIKit，以及如何才能将其直接较低级别动画控件。"
-ms.topic: article
+title: 核心动画
+description: 本文将讨论的核心动画框架中，显示它如何使高性能、 流体动画中 UIKit，以及如何才能将其直接较低级别动画控件。
 ms.prod: xamarin
 ms.assetid: D4744147-FACB-415B-8155-3A6B3C35E527
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b89b93a90e13072e36140b79081b90dcde1cdb05
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="core-animation"></a>核心动画
 
@@ -234,7 +233,7 @@ public override void ViewDidAppear (bool animated)
 
  ![](core-animation-images/12-explicit-animation.png "此屏幕快照显示包含通过指定路径的映像动画处理的图层")
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中我们讨论过的动画功能，通过提供*核心动画*框架。 我们检查核心动画，显示它为 UIKit 中的动画提供支持，又如何可以直接为较低级别动画控件使用它。
 

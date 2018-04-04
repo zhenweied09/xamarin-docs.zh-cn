@@ -1,18 +1,17 @@
 ---
-title: "使用片段 ViewPager"
-description: "ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南说明如何实现使用 ViewPager，用作数据页片段 swipeable UI。"
-ms.topic: article
+title: 使用片段 ViewPager
+description: ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南说明如何实现使用 ViewPager，用作数据页片段 swipeable UI。
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83b9123b24b39e2d7bda392d05c6595f5fc3af0d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-fragments"></a>使用片段 ViewPager
 
@@ -437,7 +436,7 @@ questionBox.Click += delegate
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本演练提供如何生成一个基本的分步示例`ViewPager`-基于应用程序使用`Fragment`s。 它提供的示例数据源包含 flash 卡问题和答案，`ViewPager`布局，以显示 flash 卡中，和一个`FragmentPagerAdapter`连接的子类`ViewPager`到数据源。 若要帮助用户可以浏览 flash 卡，说明已包含用于解释如何添加`PagerTabStrip`显示每个页顶部的问题数。 最后，添加事件处理代码是为了在用户点击对 flash 卡问题时显示答案。 
 

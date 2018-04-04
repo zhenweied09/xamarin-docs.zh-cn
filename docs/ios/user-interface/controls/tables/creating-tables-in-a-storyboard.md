@@ -1,18 +1,17 @@
 ---
-title: "使用 iOS 设计器中的表"
-description: "前面的部分中我们探讨了开发使用表。 在中，第五个和最后一个部分，我们将聚合到目前为止我们已了解并创建使用情节提要的基本任务列表应用程序。"
-ms.topic: article
+title: 使用 iOS 设计器中的表
+description: 前面的部分中我们探讨了开发使用表。 在中，第五个和最后一个部分，我们将聚合到目前为止我们已了解并创建使用情节提要的基本任务列表应用程序。
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>使用 iOS 设计器中的表
 
@@ -115,7 +114,7 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 请执行以下操作： 
 
 -  拖动**栏按钮项**从工具箱拖到_右侧导航栏的_。
--  在**属性填充**下**栏按钮项**选择**标识符： 添加**(以使其 *+* 递增按钮)。 
+-  在**属性填充**下**栏按钮项**选择**标识符： 添加**(以使其*+*递增按钮)。 
 -  请为其提供一个名称，以便标识它，可以同时在代码中在更高版本的阶段。 请注意，你将需要为根视图控制器提供一个类名称 (例如**ItemViewController**) 以允许你设置栏按钮项的名称。
 
 

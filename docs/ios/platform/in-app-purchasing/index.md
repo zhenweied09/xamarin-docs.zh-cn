@@ -1,17 +1,16 @@
 ---
-title: "应用内购买"
-description: "iOS 应用程序可以销售数字产品和服务使用应用商店工具包 Api。 创建和管理在 iTunes Connect 门户产品。 Apple 管理事务处理和批准所有产品，然后他们可以销售，并收取每个事务 （当前 30%) 的费用。 Apple 要求你使用的应用程序，任何数字销售应用内购买，但不能将其用于销售的商品物理或非数字服务。 应用程序提供数字产品和服务的备用支付选项很可能被拒绝。 本文档介绍如何配置应用程序使用应用商店工具包，并提供的最常见的应用内购买情况的 Xamarin.iOS 示例。"
-ms.topic: article
+title: 应用内购买
+description: iOS 应用程序可以销售数字产品和服务使用应用商店工具包 Api。 创建和管理在 iTunes Connect 门户产品。 Apple 管理事务处理和批准所有产品，然后他们可以销售，并收取每个事务 （当前 30%) 的费用。 Apple 要求你使用的应用程序，任何数字销售应用内购买，但不能将其用于销售的商品物理或非数字服务。 应用程序提供数字产品和服务的备用支付选项很可能被拒绝。 本文档介绍如何配置应用程序使用应用商店工具包，并提供的最常见的应用内购买情况的 Xamarin.iOS 示例。
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: af8eb556215679bab2da8f54e8231f7d7d3ed418
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="in-app-purchasing"></a>应用内购买
 
@@ -32,7 +31,7 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 本文档说明如何完成所有这些步骤，以提供使用 Xamarin.iOS 的应用内购买。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要支持的应用内购买必须使用 Xamarin.iOS 5.0 或更高版本，使用 Xcode 7 和更高版本。
 
@@ -51,7 +50,7 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
  * [订阅和报告](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章了引入的应用内购买的概念、 概述如何配置应用程序以充分利用它，并且不提供使用 Xamarin.iOS 的示例。 已覆盖：
 
@@ -72,6 +71,6 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 - [应用内购买技术说明](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [您的第一个应用商店提交](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 - [应用程序存储资源中心](https://developer.apple.com/appstore/index.html)
-- [应用商店提交提示](https://developer.apple.com/appstore/resources/submission/tips.html)
-- [应用商店查看准则](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [App Store 提交提示](https://developer.apple.com/appstore/resources/submission/tips.html)
+- [App Store 审核指南](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [管理你的应用程序](https://developer.apple.com/appstore/resources/managing/index.html)

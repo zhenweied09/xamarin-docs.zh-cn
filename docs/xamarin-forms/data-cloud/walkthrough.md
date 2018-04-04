@@ -1,18 +1,17 @@
 ---
-title: "了解示例"
-description: "本主题提供的 Xamarin.Forms 示例应用程序演示如何与另一个 web 服务进行通信的演练。 而每个 web 服务使用单独的示例应用程序，它们都功能上相似，共享通用类。"
-ms.topic: article
+title: 了解示例
+description: 本主题提供的 Xamarin.Forms 示例应用程序演示如何与另一个 web 服务进行通信的演练。 而每个 web 服务使用单独的示例应用程序，它们都功能上相似，共享通用类。
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>了解示例
 
@@ -56,7 +55,7 @@ PCL 项目中的每个应用程序还包含一个重要的文件数：
 
 大多数示例应用程序包含至少两个页：
 
-- **TodoListPage** – 此页显示的列表`TodoItem`实例和对勾图标如果`TodoItem.Done`属性是`true`。 单击项导航到`TodoItemPage`。 此外，通过单击创建新项 *+* 符号。
+- **TodoListPage** – 此页显示的列表`TodoItem`实例和对勾图标如果`TodoItem.Done`属性是`true`。 单击项导航到`TodoItemPage`。 此外，通过单击创建新项*+*符号。
 - **TodoItemPage** – 此页显示所选的详细信息`TodoItem`，并允许编辑、 保存、 删除和读出。
 
 此外，某些示例应用程序包含用于管理用户身份验证过程的其他页。
@@ -103,7 +102,7 @@ void OnSpeakActivated (object sender, EventArgs e)
 
 此方法只需调用`Speak`由特定于平台的实现的方法`Speech`类。 每个`Speech`类实现`ITextToSpeech`接口，并特定于平台的启动代码创建的实例`Speech`类可以通过访问`App.Speech`属性。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本主题提供用于演示如何与另一个 web 服务进行通信的 Xamarin.Forms 示例应用程序的演练。 而每个 web 服务使用单独的示例应用程序，它们都基于相同的用户界面和业务逻辑上文所述-仅 web 服务数据存储机制是不同。
 

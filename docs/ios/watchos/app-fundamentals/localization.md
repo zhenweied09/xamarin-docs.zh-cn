@@ -1,17 +1,16 @@
 ---
-title: "使用本地化"
-description: "调整 watchOS 面向多个语言版本的应用"
-ms.topic: article
+title: 使用本地化
+description: 调整 watchOS 面向多个语言版本的应用
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>使用本地化
 
@@ -86,13 +85,13 @@ iOS 和监视操作系统自动将使用用户的语言选择加载正确的字�
 
 #### <a name="storyboard-images"></a>情节提要图像
 
-示例解决方案还包括 **gradient@2x.png** 每个语言文件夹中的映像。 此映像可以是不同的每种语言 （如。 它可能嵌入文本，需要转换时，或使用本地化插图）。
+示例解决方案还包括**gradient@2x.png**每个语言文件夹中的映像。 此映像可以是不同的每种语言 （如。 它可能嵌入文本，需要转换时，或使用本地化插图）。
 
 只需设置图像的**映像**将根据用户所选的语言 watch 上呈现情节提要和正确的图像中的属性。
 
 ![](localization-images/storyboard-image.png "在情节提要中设置映像映像属性")
 
-注意： 由于所有 Apple 观察都具有 Retina 显示，仅 **@2x** 的映像的版本是必需的。 不需要指定 **@2x** 在情节提要。
+注意： 由于所有 Apple 观察都具有 Retina 显示，仅**@2x**的映像的版本是必需的。 不需要指定**@2x**在情节提要。
 
 ### <a name="watch-extension"></a>监视扩展
 
@@ -130,7 +129,7 @@ displayText.SetText (localizedDisplay);
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. 你可以将映像从扩展中移动到监视使用`FromBundle`，则应用将自动选择的用户的语言选择了正确的图像。 示例解决方案中没有映像 **language@2x.png** 用每个语言文件夹，并显示在`DetailController`使用下面的代码：
+2. 你可以将映像从扩展中移动到监视使用`FromBundle`，则应用将自动选择的用户的语言选择了正确的图像。 示例解决方案中没有映像**language@2x.png**用每个语言文件夹，并显示在`DetailController`使用下面的代码：
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ displayText.SetText (localizedDisplay);
   }
   ```
 
-  请注意，不需要指定 **@2x** 时引用图像的文件名。
+  请注意，不需要指定**@2x**时引用图像的文件名。
 
 第二种方法也是适用如果从远程服务器以在监视; 上的呈现下载映像但是在这种情况下你应该确保你下载的映像已正确本地化根据用户的首选项。
 

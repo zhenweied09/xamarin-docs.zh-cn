@@ -1,18 +1,17 @@
 ---
-title: "使用 Android 设计器"
-description: "本主题是 Xamarin.Android 设计器的演练。 它演示了如何创建用户界面小颜色浏览器应用程序;此用户界面是完全在设计器中创建的。"
-ms.topic: article
+title: 使用 Android 设计器
+description: 本主题是 Xamarin.Android 设计器的演练。 它演示了如何创建用户界面小颜色浏览器应用程序;此用户界面是完全在设计器中创建的。
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: c9ec0d3bc9c3278f097b925ccb755323df950c62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-android-designer"></a>使用 Android 设计器
 
@@ -484,7 +483,7 @@ namespace DesignerWalkthrough
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，我们在遍历如何在适用于 Mac 的 Visual Studio 中使用 Xamarin.Android 设计器用于创建用户界面。 接下来，我们演示了如何在列表中创建单个项的界面。
 与此同时，我们介绍了如何添加小组件以及如何直观地布局，以及如何将资源分配以及如何设置这些小组件的各种属性。 总之，我们可以说明我们在设计器中创建的接口中的示例应用程序的运行方式。

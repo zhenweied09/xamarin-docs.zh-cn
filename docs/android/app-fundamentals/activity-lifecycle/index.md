@@ -1,18 +1,17 @@
 ---
-title: "活动生命周期"
-description: "活动是的 Android 应用程序的基本构建基块，并且可以存在于多个不同状态。 活动生命周期开头实例化和析构，结尾，并且在此期间包括许多的状态。 当活动更改状态时，会调用相应的生命周期事件方法，以便通知即将发生的状态更改的活动，并使其能够执行的代码以适应所做的更改。 本文分析的活动的生命周期，并解释了负责该活动具有这些状态更改的功能良好的可靠应用程序的一部分的每一阶段。"
-ms.topic: article
+title: 活动生命周期
+description: 活动是的 Android 应用程序的基本构建基块，并且可以存在于多个不同状态。 活动生命周期开头实例化和析构，结尾，并且在此期间包括许多的状态。 当活动更改状态时，会调用相应的生命周期事件方法，以便通知即将发生的状态更改的活动，并使其能够执行的代码以适应所做的更改。 本文分析的活动的生命周期，并解释了负责该活动具有这些状态更改的功能良好的可靠应用程序的一部分的每一阶段。
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f35f3e59d8b669795ade3d370894e45866cea1ff
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="activity-lifecycle"></a>活动生命周期
 
@@ -480,7 +479,7 @@ public override Java.Lang.Object OnRetainNonConfigurationInstance ()
 
 在本部分中，我们已了解如何保留与简单状态数据`Bundle`，而且将保留更复杂的数据类型与`OnRetainNonConfigurationInstance`。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Android 活动生命周期提供功能强大的框架，用于应用程序内的活动的状态管理，但它可能会很棘手，若要了解和实施。 本章介绍了活动可能要通过在其生存期内，以及与这些状态关联的生命周期方法过程的不同状态。 接下来，指南提供有关哪种逻辑应在每种方法中执行。
 

@@ -1,18 +1,17 @@
 ---
-title: "使用进度指示器"
-description: "本文介绍如何设计和使用在 Xamarin.tvOS 应用内的进度指示器。"
-ms.topic: article
+title: 使用进度指示器
+description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的进度指示器。
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c021550e17cf8206d59102856a11c72000ad06aa
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 96fc3ea0aa802f62bd697b34f7bd504eb445a4f6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-progress-indicators"></a>使用进度指示器
 
@@ -67,7 +66,7 @@ Apple 具有以下建议用于使用进度栏：
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整进度视图中的几个属性，如其**样式**和**进度**（完成百分比）： 
 
     [![](progress-indicators-images/activity04.png "小组件选项卡")](progress-indicators-images/activity04.png#lightbox)
-1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
+1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如： 
 
     [![](progress-indicators-images/activity05.png "指定一个名称")](progress-indicators-images/activity05.png#lightbox)
 1. 保存更改。
@@ -87,7 +86,7 @@ Apple 具有以下建议用于使用进度栏：
 1. 在**小组件选项卡**的**属性资源管理器**，你可以调整进度视图中的几个属性，如其**样式**和**进度**（完成百分比）： 
 
     [![](progress-indicators-images/activity04-vs.png "小组件选项卡")](progress-indicators-images/activity04-vs.png#lightbox)
-1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
+1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如： 
 
     [![](progress-indicators-images/activity05-vs.png "指定一个名称")](progress-indicators-images/activity05-vs.png#lightbox)
 1. 保存更改。
@@ -126,7 +125,7 @@ ActivityIndicator.StopAnimating();
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和使用在 Xamarin.tvOS 应用内的进度指示器。
 

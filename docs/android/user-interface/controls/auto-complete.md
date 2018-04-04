@@ -1,17 +1,16 @@
 ---
-title: "自动完成"
-ms.topic: article
+title: 自动完成
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 333264e65e814ad73eabeb7be55abb320400a59a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="auto-complete"></a>自动完成
 
@@ -160,7 +159,7 @@ static string[] COUNTRIES = new string[] {
 
 ## <a name="more-information"></a>详细信息
 
-请注意，使用硬编码字符串数组并不是推荐的设计做法，因为应用程序代码应该关注行为，不内容。 应用程序内容 （如字符串） 应从代码以简化对内容进行修改并促进本地化的内容将外部化。 硬编码字符串在本教程中仅用于更加简单，并关注[ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)小组件。 相反，你的应用程序应声明 XML 文件中此类的字符串数组。 这可通过`<string-array>`项目中的资源`res/values/strings.xml`文件。 例如:
+请注意，使用硬编码字符串数组并不是推荐的设计做法，因为应用程序代码应该关注行为，不内容。 应用程序内容 （如字符串） 应从代码以简化对内容进行修改并促进本地化的内容将外部化。 硬编码字符串在本教程中仅用于更加简单，并关注[ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)小组件。 相反，你的应用程序应声明 XML 文件中此类的字符串数组。 这可通过`<string-array>`项目中的资源`res/values/strings.xml`文件。 例如：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

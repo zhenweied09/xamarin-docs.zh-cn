@@ -1,18 +1,17 @@
 ---
 title: ViewPager
-description: "ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南说明如何实现动作导航 ViewPager，与使用和不使用片段。 它还描述如何添加使用 PagerTitleStrip 和 PagerTabStrip 页指示器。"
-ms.topic: article
+description: ViewPager 是使您可以实现动作导航布局管理器。 动作导航允许用户轻扫，左侧和右侧逐句通过数据页。 本指南说明如何实现动作导航 ViewPager，与使用和不使用片段。 它还描述如何添加使用 PagerTitleStrip 和 PagerTabStrip 页指示器。
 ms.prod: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e2f93eea970a15df03b00cc962ca7482624973d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bd687175048bb6a19dde21e66619667511a76796
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -37,7 +36,7 @@ _ViewPager 是使您可以实现动作导航布局管理器。动作导航允许
 -   在[使用片段 Viewpager](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)，略显复杂[FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/)开发出应用来演示如何使用`ViewPager`与`Fragment`以生成显示为数学问题的应用程序flash 卡，并响应用户输入。 
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要使用`ViewPager`在应用程序项目中，你必须安装[Android 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)包。 有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。 
 

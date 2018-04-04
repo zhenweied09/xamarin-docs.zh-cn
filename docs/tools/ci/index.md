@@ -1,18 +1,17 @@
 ---
-title: "使用 Xamarin 的连续集成简介"
-description: "持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。 本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。"
-ms.topic: article
+title: 使用 Xamarin 的连续集成简介
+description: 持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。 本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/04/2017
-ms.openlocfilehash: c28389479148829ee87eeda307915aacf7007b21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b5bccfa38a9f382789585284765183efa42b6a3d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>使用 Xamarin 的连续集成简介
 

@@ -1,18 +1,17 @@
 ---
-title: ".xib 文件"
-description: "本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamarin.Mac 应用程序的用户界面中创建的.xib 文件的工作。"
-ms.topic: article
+title: .xib 文件
+description: 本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamarin.Mac 应用程序的用户界面中创建的.xib 文件的工作。
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: c1f575f5d3d5f0fbe82d5e0d08103b9261944602
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xib-files"></a>.xib 文件
 
@@ -575,14 +574,14 @@ private void DisplaySubview(NSViewController controller, SubviewType type) {
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-这将创建新视图的视图控制器，要显示的新实例，设置其类型 （按照指定的枚举添加到项目中） 并使用`DisplaySubview`方法添加到窗口的类，以实际显示的视图。 例如:
+这将创建新视图的视图控制器，要显示的新实例，设置其类型 （按照指定的枚举添加到项目中） 并使用`DisplaySubview`方法添加到窗口的类，以实际显示的视图。 例如：
 
 [![运行示例应用程序](xib-images/view04.png "运行示例应用程序")](xib-images/view04-large.png#lightbox)
 
 有关使用 Windows Xamarin.Mac 应用程序中的详细信息，请参阅我们[Windows](~/mac/user-interface/window.md)和[对话框](~/mac/user-interface/dialog.md)文档。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已详细的介绍了在使用 Xamarin.Mac 应用程序中的.xib 文件。 我们已了解了不同类型和用法的.xib 文件以创建应用程序的用户界面，如何创建和维护.xib 文件在 Xcode 的界面生成器以及如何使用 C# 代码中的.xib 文件。
 

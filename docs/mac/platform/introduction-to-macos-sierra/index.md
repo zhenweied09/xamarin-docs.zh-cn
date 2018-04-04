@@ -1,18 +1,17 @@
 ---
-title: "MacOS Sierra 简介"
-description: "本文介绍的所有新增和更改 Api 和 macOS Sierra 中可用的功能为 Xamarin.Mac 开发人员。"
-ms.topic: article
+title: MacOS Sierra 简介
+description: 本文介绍的所有新增和更改 Api 和 macOS Sierra 中可用的功能为 Xamarin.Mac 开发人员。
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 161a5be643ccf5f96b04413cec5956264af6ce60
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS Sierra 简介
 

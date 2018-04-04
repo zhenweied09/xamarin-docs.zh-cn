@@ -1,17 +1,16 @@
 ---
-title: "使用 UrhoSharp"
-description: "UrhoSharp 引擎概述"
-ms.topic: article
+title: 使用 UrhoSharp
+description: UrhoSharp 引擎概述
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: cd30f17d631216a3ea119a262aca6d294394a77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cdb32c0fe9aa1a267bda5768b9026667723d694c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-urhosharp"></a>使用 UrhoSharp
 
@@ -218,7 +217,7 @@ await cloud.RunActionAsync (
 在你[ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/)子类，你应该在引入的异步方法，准备你的组件行为和驱动器有关它的功能。
 然后将调用此方法使用 C#`await`关键字的程序，另一部分中任一你`Application.Start`方法或响应中你的应用程序的用户或情景点。
 
-例如:
+例如：
 
 ```csharp
 class Robot : Component {
@@ -497,7 +496,7 @@ healthBar.SetTexture(ResourceCache.GetTexture2D("Textures/HealthBarBorder.png"))
 
 Urho3D 将尝试使用现有的文件格式，只要有可能，并定义自定义文件格式如模型的绝对必要时仅 (*.mdl) 和用于动画 (*.ani)。 对于这些类型的资产，Urho 提供的转换器- [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html)这可以使用多种常用的 3D 格式，如 fbx、 dae、 3ds，和 obj，等等。
 
-此外还有方便外接程序 Blender [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) ，可以将导出格式，适用于 Urho3D Blender 资产。
+此外还有方便外接程序 Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) ，可以将导出格式，适用于 Urho3D Blender 资产。
 
 ## <a name="background-loading-of-resources"></a>资源的后台加载
 
@@ -529,7 +528,7 @@ soundSource.AutoRemove = true;
 
 # <a name="particles"></a>粒子
 
-粒子提供一种简单的方法来向你的应用程序中添加一些简单和成本较低的影响。  你可以使用粒子 PEX 格式存储在使用像这样的工具[http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/)。
+粒子提供一种简单的方法来向你的应用程序中添加一些简单和成本较低的影响。  你可以使用粒子 PEX 格式存储在使用像这样的工具[ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/)。
 
 粒子是可以添加到节点的组件。  你需要调用该节点的`CreateComponent<ParticleEmitter2D>`方法来创建粒子，然后通过将影响属性设置为二维效果中配置粒子加载从资源缓存。
 

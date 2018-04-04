@@ -1,18 +1,17 @@
 ---
-title: "创建 DataTemplate"
-description: "数据模板可以内联，创建的 ResourceDictionary 中或从自定义的类型或相应 Xamarin.Forms 单元格类型。 本文探讨了每种技术。"
-ms.topic: article
+title: 创建 DataTemplate
+description: 数据模板可以内联，创建的 ResourceDictionary 中或从自定义的类型或相应 Xamarin.Forms 单元格类型。 本文探讨了每种技术。
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 5721aee95e39b56e9732129774a03f08e0db6cc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cd4266fb8e7d68a9f93bd169ca70c6a0f516a357
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-datatemplate"></a>创建 DataTemplate
 
@@ -283,7 +282,7 @@ public class WithDataTemplatePageCS : ContentPage
 
 [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)添加到[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)使用[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ResourceDictionary.Add/p/System.String/System.Object/)方法，它指定`Key`用于的字符串引用`DataTemplate`检索它时。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何从自定义类型，或在创建数据模板，内联， [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)。 如果没有无需重复使用在其他位置的数据模板，则应使用内联模板。 或者，可以通过定义它作为自定义类型，或控制级别页级或应用程序级别资源重复使用数据模板。
 

@@ -1,18 +1,17 @@
 ---
-title: "创建 ControlTemplate"
-description: "可以在应用程序级别或页级别定义控件模板。 本文演示如何创建和使用控件模板。"
-ms.topic: article
+title: 创建 ControlTemplate
+description: 可以在应用程序级别或页级别定义控件模板。 本文演示如何创建和使用控件模板。
 ms.prod: xamarin
 ms.assetid: A9AEB052-FBF5-4589-9BD4-6D6F62BED7F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 53309be2712f14c79b84c2eabb519b86dd73a404
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e8a0695969609a4b0bbeb38896adae9a7c16ed07
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-controltemplate"></a>创建 ControlTemplate
 
@@ -206,7 +205,7 @@ public class HomePageCS : ContentPage
 
 [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/)属性设置为[ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)定义上显示的内容[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)。 此内容将显示的[ `ContentPresenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/)中包含`TealTemplate`。 所述的相同机制以前用于更改运行时在主题`AquaTheme`。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何创建和使用控件模板。 可以在应用程序级别或页级别定义控件模板。
 

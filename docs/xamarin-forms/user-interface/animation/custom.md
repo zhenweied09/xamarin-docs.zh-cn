@@ -1,18 +1,17 @@
 ---
-title: "自定义动画"
-description: "动画类是所有 Xamarin.Forms 动画，创建一个或多个动画对象 ViewExtensions 类中的扩展方法使用构建基块。 本文演示如何使用动画类来创建和取消动画，请同步多个动画，以及创建不由现有动画方法进行动画处理的属性进行动画处理的自定义动画。"
-ms.topic: article
+title: 自定义动画
+description: 动画类是所有 Xamarin.Forms 动画，创建一个或多个动画对象 ViewExtensions 类中的扩展方法使用构建基块。 本文演示如何使用动画类来创建和取消动画，请同步多个动画，以及创建不由现有动画方法进行动画处理的属性进行动画处理的自定义动画。
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: c582e0306bdc69570e3f8e8d35c7fa15b30523da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 302aa784baad9afb703f88dcfba56b68fd3c9105
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-animations"></a>自定义动画
 
@@ -175,7 +174,7 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 
 在此代码示例中，`ColorTo`方法进行动画处理[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)和[ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/)属性[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)， `BackgroundColor`属性页上，与[ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/)属性[ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章演示了如何使用[ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/)类创建和取消动画、 同步多个动画，然后创建不由现有动画进行动画处理的属性进行动画处理的自定义动画方法。 `Animation`类是所有 Xamarin.Forms 动画构建基块。
 

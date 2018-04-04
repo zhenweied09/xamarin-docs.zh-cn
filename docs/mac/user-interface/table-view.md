@@ -1,18 +1,17 @@
 ---
-title: "表视图"
-description: "本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。 它描述了 Xcode 和接口生成器及与其进行交互在代码中创建的表视图。"
-ms.topic: article
+title: 表视图
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。 它描述了 Xcode 和接口生成器及与其进行交互在代码中创建的表视图。
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4764a4babc9f6b06c7a9299feab1320971b0bf75
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="table-views"></a>表视图
 
@@ -581,7 +580,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 ## <a name="using-images-in-table-views"></a>在表视图中使用图像
 
-若要包含图像，作为一部分中的单元格`NSTableView`，你将需要更改表视图返回数据的方式`NSTableViewDelegate's``GetViewForItem`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如:
+若要包含图像，作为一部分中的单元格`NSTableView`，你将需要更改表视图返回数据的方式`NSTableViewDelegate's``GetViewForItem`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如：
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -919,7 +918,7 @@ case "Action":
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解在 Xamarin.Mac 应用程序中使用表视图的详细的信息。 我们看到不同的类型，并使用的表视图，如何创建和维护在 Xcode 的接口生成器中的表视图和如何在 C# 代码中使用表视图。
 

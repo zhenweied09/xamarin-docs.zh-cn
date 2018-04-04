@@ -1,18 +1,17 @@
 ---
-title: "ARKit 简介"
-description: "适用于 iOS 11 的增强的现实"
-ms.topic: article
+title: ARKit 简介
+description: 适用于 iOS 11 的增强的现实
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 1655d426a0181c88479eef2bdea909eb5935e642
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f48cdd48e63131fe234fef1bb60b555724dd8a92
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-arkit"></a>ARKit 简介
 
@@ -104,7 +103,7 @@ ship.Position = new SCNVector3(2f, -2f, -9f);
 SceneView.Session.Pause();
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 上面的代码生成的一个简单的 ARKit 应用程序。 更复杂的示例预期托管增强的现实会话来实现的视图控制器`IARSCNViewDelegate`，并实现其他方法。
 

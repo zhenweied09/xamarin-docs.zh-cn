@@ -1,17 +1,16 @@
 ---
-title: "图形和动画在 iOS 中"
-description: "应用程序的核心概念"
-ms.topic: article
+title: 图形和动画在 iOS 中
+description: 应用程序的核心概念
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ece988f2ba29ec4656631d993e4c4b99a276b199
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 99c05efa13027aca4935425d2a731613f250ec93
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="graphics-and-animation-in-ios"></a>图形和动画在 iOS 中
 

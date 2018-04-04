@@ -1,7 +1,6 @@
 ---
-title: "iOS 扩展"
-description: "在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，如在通知中心中，当用户请求自定义键盘，或者当它们照片时编辑。 所有扩展与容器应用程序一起安装，并从特定的扩展点，在主机应用程序中激活。"
-ms.topic: article
+title: iOS 扩展
+description: 在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，如在通知中心中，当用户请求自定义键盘，或者当它们照片时编辑。 所有扩展与容器应用程序一起安装，并从特定的扩展点，在主机应用程序中激活。
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ccd83f4b31da555aa9c8ec34501a8656ce0a5032
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-extensions"></a>iOS 扩展
 

@@ -1,18 +1,17 @@
 ---
-title: "日期选取器"
-description: "选择使用 DatePickerDialog 和 DialogFragment 的日历日期"
-ms.topic: article
+title: 日期选取器
+description: 选择使用 DatePickerDialog 和 DialogFragment 的日历日期
 ms.prod: xamarin
 ms.assetid: F2BCD8D4-8957-EA53-C5A8-6BB603ADB47B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: b62af404ce0d3f5dacc479682a3002af49e968d1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 916a9c74fa28b99e799eef80db822e86cfda617d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="date-picker"></a>日期选取器
 
@@ -26,7 +25,7 @@ ms.lasthandoff: 03/12/2018
 
 [![选择日期的屏幕截图按钮跟日期选取器对话框](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南的示例应用程序面向 Android 4.1 （API 级别
 16) 或更高版本，但适用于 Android 3.0 （API 级别为 11 或更高版本）。 它是 android 的可以支持较旧版本项目和一些代码更改 Android 支持库 v4 添加。
@@ -135,7 +134,7 @@ public class MainActivity : Activity
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 此示例讨论如何显示`DatePicker`为弹出窗口模式对话框作为 Android 活动的一部分的小组件。 它提供的示例 DialogFragment 实现对其进行讨论`IOnDateSetListener`接口。 此示例还演示了如何 DialogFragment 可能与主机活动来显示所选的日期进行交互。
 

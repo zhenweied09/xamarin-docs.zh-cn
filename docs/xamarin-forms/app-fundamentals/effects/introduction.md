@@ -1,18 +1,17 @@
 ---
-title: "效果简介"
-description: "效果允许进行自定义，每个平台上的本机控件，通常用于小样式更改。 本文提供效果的简介，概述了效果和自定义呈现器之间的边界，并对 PlatformEffect 类进行描述。"
-ms.topic: article
+title: 效果简介
+description: 效果允许进行自定义，每个平台上的本机控件，通常用于小样式更改。 本文提供效果的简介，概述了效果和自定义呈现器之间的边界，并对 PlatformEffect 类进行描述。
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 037c82aa31c167e44a88619cba91a5be8035d0fa
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 598136f43a23070d8bab04c18106738c9e6b0a52
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-effects"></a>效果简介
 

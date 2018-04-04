@@ -1,18 +1,17 @@
 ---
-title: "应用程序基础知识"
-description: "浏览 Xamarin.Forms 开发的基础知识"
-ms.topic: article
+title: 应用程序基础知识
+description: 浏览 Xamarin.Forms 开发的基础知识
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: afa3bf25b1448d98c49c95a66bd0f4dc55bde39e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>应用程序基础知识
 
@@ -20,7 +19,7 @@ ms.lasthandoff: 02/27/2018
 
 若要将访问功能 （如支持屏幕读取工具） 合并使用 Xamarin.Forms 的提示。
 
-## <a name="app-classapplication-classmd"></a>[应用程序类](application-class.md)
+## <a name="app-classapplication-classmd"></a>[应用类](application-class.md)
 
 `Application`类是 Xamarin.Forms 的起始点 – 每个应用程序需要实现子类`App`若要将初始页。 它还提供了`Properties`集合进行简单的数据存储。 可以在 C# 或 XAML 中定义它。
 
@@ -44,11 +43,11 @@ ms.lasthandoff: 02/27/2018
 
 `DependencyService`提供简单的定位符，以便可以在你的共享代码的代码到接口，还可以提供特定于平台的实现自动解决，从而便于引用 Xamarin.Forms 中的特定于平台的功能。
 
-## <a name="effectseffectsindexmd"></a>[Effects](effects/index.md)
+## <a name="effectseffectsindexmd"></a>[效果](effects/index.md)
 
 效果允许进行自定义，每个平台上的本机控件，通常用于小样式更改。
 
-## <a name="gesturesgesturesindexmd"></a>[Gestures](gestures/index.md)
+## <a name="gesturesgesturesindexmd"></a>[手势](gestures/index.md)
 
 Xamarin.Forms [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)类支持用户界面控件上的 tap、 捏合和平移手势。
 

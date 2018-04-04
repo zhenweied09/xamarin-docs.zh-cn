@@ -1,18 +1,17 @@
 ---
-title: "第 1 部分。 Getting Started with XAML"
-description: "在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。 XAML 文件始终与程序关联的标记中提供的代码的支持的 C# 代码文件。 在一起，这两个文件参与包含子视图和属性初始化的新类定义。 在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。"
-ms.topic: article
+title: 第 1 部分。 Getting Started with XAML
+description: 在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。 XAML 文件始终与程序关联的标记中提供的代码的支持的 C# 代码文件。 在一起，这两个文件参与包含子视图和属性初始化的新类定义。 在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 Getting Started with XAML
 
@@ -521,7 +520,7 @@ public partial class XamlPlusCodePage : ContentPage {
 
 可以随意。 它是你的页面，并且 XAML 是仅用于生成其内容的工具。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 随着此推出，你已了解于类定义，如何提供一个 XAML 文件和代码文件和 XAML 和代码的文件如何交互。 但 XAML 也有其自己唯一的语法功能，使它可以用于以非常灵活的方式。 你可以开始浏览这些中[第 2 部分。基本 XAML 语法](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)。
 

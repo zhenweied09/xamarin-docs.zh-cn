@@ -1,18 +1,17 @@
 ---
-title: "导航"
-description: "Xamarin.Forms 提供了多种不同的页导航体验，根据正在使用的页类型。"
-ms.topic: article
+title: 导航
+description: Xamarin.Forms 提供了多种不同的页导航体验，根据正在使用的页类型。
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 180eed39a1aa7bf352665b9a0198a88c2fcbc5b5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1a184e1ebfd9d87ba82642ebdfc30a8d3f92cce1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="navigation"></a>导航
 

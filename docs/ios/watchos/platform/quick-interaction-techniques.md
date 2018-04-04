@@ -1,18 +1,17 @@
 ---
-title: "快速交互技术 watchOS 3"
-description: "本文介绍如何快速交互技术 Apple 都增加 watchOS 3 以及如何实现它们在 Xamarin.iOS 转换为 Apple Watch 中。"
-ms.topic: article
+title: 快速交互技术 watchOS 3
+description: 本文介绍如何快速交互技术 Apple 都增加 watchOS 3 以及如何实现它们在 Xamarin.iOS 转换为 Apple Watch 中。
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d3c7c6d80a6f23cdadda04d787e28e13b054a9e6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>快速交互技术 watchOS 3
 
@@ -120,7 +119,7 @@ watchOS 3 将支持四个以下笔势识别器：
 
 #### <a name="rotations-per-second"></a>每秒的旋转
 
-当使用物理基于动画，则从数字王冠访问旋转 Per Second 非常有用。 若要访问旋转每秒，使用`CrownSequencer`属性`WKInterfaceController`的监视扩展。 例如:
+当使用物理基于动画，则从数字王冠访问旋转 Per Second 非常有用。 若要访问旋转每秒，使用`CrownSequencer`属性`WKInterfaceController`的监视扩展。 例如：
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +127,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>旋转增量
 
-使用从数字王冠旋转增量的旋转计数。 使用`CrownDidRotate`重写的方法`WKCrownDelegate`访问旋转增量。 例如:
+使用从数字王冠旋转增量的旋转计数。 使用`CrownDidRotate`重写的方法`WKCrownDelegate`访问旋转增量。 例如：
 
 ```csharp
 using System;
@@ -349,7 +348,7 @@ Apple 提供的以下建议：
 - 只要有可能，简化应用程序中的导航。
 - 切勿使用户等待，允许它们进行删除其静电腕带并尽可能快地取消与该应用程序。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了快速交互技术 Apple 都增加 watchOS 3 以及如何实现它们在 Xamarin.iOS 转换为 Apple Watch 中。
 

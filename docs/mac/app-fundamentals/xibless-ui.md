@@ -1,18 +1,17 @@
 ---
-title: ".storyboard/.xib-less 用户界面设计"
-description: "本文介绍如何直接从 C# 代码，而无需.storyboard 文件、.xib 文件或接口生成器创建 Xamarin.Mac 应用程序的用户界面。"
-ms.topic: article
+title: .storyboard/.xib-less 用户界面设计
+description: 本文介绍如何直接从 C# 代码，而无需.storyboard 文件、.xib 文件或接口生成器创建 Xamarin.Mac 应用程序的用户界面。
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52d300ac583ec2313d3169c7b2adb73c15ebe4fb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 66725b02d3e351e74fa79ae5336a7db3a9f2b534
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="storyboardxib-less-user-interface-design"></a>.storyboard/.xib-less 用户界面设计
 
@@ -300,7 +299,7 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>将 UI 元素添加到代码中的窗口
 
-是否在代码中创建或从.storyboard 或.xib 文件加载一个窗口，可能有时间我们想要添加到窗口的代码中的 UI 元素。 例如:
+是否在代码中创建或从.storyboard 或.xib 文件加载一个窗口，可能有时间我们想要添加到窗口的代码中的 UI 元素。 例如：
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -361,7 +360,7 @@ public override void DidFinishLaunching (NSNotification notification)
 上述代码中创建一个状态栏菜单和应用程序启动时显示它。 有关使用菜单的详细信息，请参阅我们[菜单](~/mac/user-interface/menu.md)文档。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解在 C# 代码而不是与.storyboard 或.xib 文件使用 Xcode 的接口生成器中创建 Xamarin.Mac 应用程序的用户界面的详细的信息。
 

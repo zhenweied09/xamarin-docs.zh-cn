@@ -1,18 +1,17 @@
 ---
-title: "对 StoreKit 更改"
-description: "iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes （和应用商店/iBookstore） 功能从您的应用程序和一个新，在应用中的产品购买 Apple 将可下载文件的选项。 本文档说明如何实现使用 Xamarin.iOS 这些功能。"
-ms.topic: article
+title: 对 StoreKit 更改
+description: iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes （和应用商店/iBookstore） 功能从您的应用程序和一个新，在应用中的产品购买 Apple 将可下载文件的选项。 本文档说明如何实现使用 Xamarin.iOS 这些功能。
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ec83bc0f62ee195884cef2f59ba701fcbf15c1da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="changes-to-storekit"></a>对 StoreKit 更改
 
@@ -26,7 +25,7 @@ _iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes �
 
 建议，使用现有的 Xamarin.iOS 一起阅读本文档[应用内购买](~/ios/platform/in-app-purchasing/index.md)文档。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本文档中讨论的应用商店工具包功能需要 iOS 6 和 Xcode 4.5，以及 Xamarin.iOS 6.0。
 
@@ -532,7 +531,7 @@ public void SaveDownload (SKDownload download)
 
 Apple 的 iCloud 备份准则建议从服务器轻松还原的非用户内容应*不*要备份的 （因为它将不必要地使用 iCloud 存储）。 请参阅[使用文件系统](~/ios/app-fundamentals/file-system.md)文档上设置备份属性的更多详细信息。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入了两个存储工具包 iOS6 中的新功能： 购买 iTunes 和从其他内容中你的应用，并利用 Apple 的服务器来托管你自己的应用内购买。 应结合现有阅读本简介[应用内购买文档](~/ios/platform/in-app-purchasing/index.md)完成覆盖率实现存储工具包功能。
 

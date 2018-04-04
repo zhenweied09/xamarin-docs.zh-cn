@@ -1,18 +1,17 @@
 ---
-title: "源列表"
-description: "本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。 它介绍创建和维护 Xcode 和接口生成器中的源列表和 C# 代码中与它们进行交互。"
-ms.topic: article
+title: 源列表
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。 它介绍创建和维护 Xcode 和接口生成器中的源列表和 C# 代码中与它们进行交互。
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1fba2219a10a83043097d1b5ca6fb293de4d6c70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8d3a67768b9e47833d1819c3bf44774a52d2438
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="source-lists"></a>源列表
 
@@ -618,7 +617,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已详细的介绍了在使用源列表 Xamarin.Mac 应用程序中。 我们已了解如何创建和维护在 Xcode 的接口生成器中列出的源以及如何在 C# 代码中使用源列出。
 

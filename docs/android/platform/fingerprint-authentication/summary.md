@@ -1,17 +1,16 @@
 ---
-title: "指纹身份验证指南"
-ms.topic: article
+title: 指纹身份验证指南
 ms.prod: xamarin
 ms.assetid: B40332CC-8123-4150-B47E-996214388842
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 20defea58ec0c09becd5a3cec1961806cb0acc1d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2b66c3660f6d8af9217089a7615784957fcc6ed7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fingerprint-authentication-guidance"></a>指纹身份验证指南
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 02/27/2018
     
 4. **通知用户**&ndash;应用程序应显示某种类型的通知向用户指纹扫描程序处于活动状态和等待触摸或轻扫。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 指纹身份验证是一种很好的方法来允许一个 Xamarin.Android 应用程序来快速验证用户，使用户更轻松地与敏感的功能进行交互，如应用内购买。 本指南讨论的概念和合并 Xamarin.Android 应用程序中的 API 的 Android 6.0 指纹所需的代码。
 

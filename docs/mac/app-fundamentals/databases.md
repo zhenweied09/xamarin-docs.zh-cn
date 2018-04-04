@@ -1,18 +1,17 @@
 ---
-title: "数据库"
-description: "本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数据库和 Xcode 的接口生成器中的 UI 元素之间的数据绑定。 它还介绍如何使用 SQLite.NET ORM 以提供对 SQLite 数据访问。"
-ms.topic: article
+title: 数据库
+description: 本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数据库和 Xcode 的接口生成器中的 UI 元素之间的数据绑定。 它还介绍如何使用 SQLite.NET ORM 以提供对 SQLite 数据访问。
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 39186735749174884646a72871accfa051d2901c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 33c1ab7092669bb1dbd4e7bfae628b58a0bf3726
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="databases"></a>数据库
 
@@ -2216,7 +2215,7 @@ public override void AwakeFromNib ()
 
 首先，我们可访问向我们 SQLite.NET 的数据库，创建和填充它，如果它尚不存在。 接下来，我们创建的新实例的我们自定义的表数据源，传入数据库连接和我们将其附加到表。 最后，我们创建我们自定义的表委托的新实例，在我们的数据源中传入并将其附加到表。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已了解使用数据绑定和键 / 值使用 SQLite 数据库 Xamarin.Mac 应用程序中编写代码的详细的信息。 首先，它看起来在通过使用键 / 值编码 (KVC) 和键 / 值观察 (KVO) 公开到 Objective C 的 C# 类。 接下来，它说明了如何使用 KVO 符合类和数据将其绑定到 Xcode 的接口生成器中的 UI 元素。 文章还介绍了使用通过 SQLite.NET ORM SQLite 数据和在表视图中显示该数据。
 

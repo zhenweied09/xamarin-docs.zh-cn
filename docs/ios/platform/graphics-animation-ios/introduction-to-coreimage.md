@@ -1,18 +1,17 @@
 ---
 title: CoreImage
-description: "CoreImage 是 iOS 5 以提供图像处理和实时视频增强功能引入一个新框架。 本文介绍通过 Xamarin.iOS 示例使用这些功能。"
-ms.topic: article
+description: CoreImage 是 iOS 5 以提供图像处理和实时视频增强功能引入一个新框架。 本文介绍通过 Xamarin.iOS 示例使用这些功能。
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: da9b9230a466c70cd584a00af848ffe87dacbc5b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="coreimage"></a>CoreImage
 
@@ -29,7 +28,7 @@ CoreImage 是中提供了多种内置筛选器和要应用于图像和视频，�
 
 这些示例应帮助你开始将 CoreImage 功能合并到你的 Xamarin.iOS 应用程序。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 你必须使用 Xcode 的最新版本。
 
@@ -218,7 +217,7 @@ foreach (var filter in filters){
 
 列出每个筛选器具有已公开为 Xamarin.iOS 中的类，以便您还可以查看程序集浏览器或使用自动完成在适用于 Mac 的 Visual Studio 或 Visual Studio 中的 Xamarin.iOS.CoreImage API。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文说明了如何使用某些人脸检测和对映像应用筛选器等新 iOS 5 CoreImage framework 功能。 供你使用的框架中有多个不同的映像筛选器。
 

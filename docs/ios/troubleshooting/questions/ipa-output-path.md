@@ -1,17 +1,17 @@
 ---
-title: "可以更改 IPA 文件的输出路径？"
-ms.topic: article
+title: 可以更改 IPA 文件的输出路径？
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F5E5DCC6-F7CC-48E2-89E8-709E9C269502
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2cb5ef615bfd965ce3fbd4efbab7669fe12679a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 06074566b3d3a05e05a1646c70de211f908f3aa9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>可以更改 IPA 文件的输出路径？
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/27/2018
 2. 设置为所需的输出文件夹 DestinationFolder。 像往常一样，你可以使用 MSBuild 属性 （如在此参数，如果你想 $(OutputPath))。
 
 ## <a name="notes"></a>说明
-- `CreateIpaDependsOn`中定义属性`Xamarin.iOS.Common.targets`Xamarin.iOS 的一部分的文件。 其行为下所述*重写 DependsOn 属性*上[https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx)。
+- `CreateIpaDependsOn`中定义属性`Xamarin.iOS.Common.targets`Xamarin.iOS 的一部分的文件。 其行为下所述*重写 DependsOn 属性*上[ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx)。
 
 - 你可以使用**移动**任务而不是**复制**任务如果您的首选。 如果你选择选项，构建在 Windows 上，你将需要使用完全限定的任务名称`<Microsoft.Build.Tasks.Move>`以避免多义性 XamarinVS 与生成任务。
 
@@ -78,6 +78,6 @@ ms.lasthandoff: 02/27/2018
 2. 设置`DestinationFolder`到所需的输出文件夹。 像往常一样，你可以使用 MSBuild 属性 (如`$(OutputPath)`) 如果您希望此自变量中。
 
 ## <a name="notes"></a>说明
-- `CreateIpaDependsOn`中定义属性`Xamarin.iOS.Common.targets`Xamarin.iOS 的一部分的文件。 其行为下所述*重写"DependsOn"属性*上[https://msdn.microsoft.com/en-us/library/ms366724.aspx](https://msdn.microsoft.com/en-us/library/ms366724.aspx)。
+- `CreateIpaDependsOn`中定义属性`Xamarin.iOS.Common.targets`Xamarin.iOS 的一部分的文件。 其行为下所述*重写"DependsOn"属性*上[ https://msdn.microsoft.com/en-us/library/ms366724.aspx ](https://msdn.microsoft.com/en-us/library/ms366724.aspx)。
 
 - 你可以使用**移动**任务而不是**复制**任务如果您的首选。 如果你选择选项，构建在 Windows 上，你将需要使用完全限定的任务名称`<Microsoft.Build.Tasks.Move>`以避免多义性 XamarinVS 与生成任务。

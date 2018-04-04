@@ -1,17 +1,16 @@
 ---
-title: "地图 API"
-ms.topic: article
+title: 地图 API
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fc16178a4068b2dcf22fc19047e0ef403e83633f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps-api"></a>地图 API
 
@@ -207,7 +206,7 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须安装 Google 
 若要以编程方式添加`MapFragment`，你的活动必须实现`IOnMapReadyCallback`接口。 因为的初始化`GoogleMap`对象可能需要一些时间才能完成和 Google Play 通信 API，你必须提供通知您的应用程序的回调时`GoogleMap`准备。
 
 首先，添加`IOnMapReadyCallback`到`Activity`类声明。
-例如:
+例如：
 
 ```csharp
 public class MapWithMarkersActivity : Activity, IOnMapReadyCallback
@@ -232,7 +231,7 @@ if (_mapFragment == null)
 _mapFragment.GetMapAsync(this);
 ```
 
-A`GoogleMap`必须使用获取`GetMapAsync`、 一端的前面的代码示例所示&ndash;这自动初始化地图系统和视图。 (请注意，此方法不使用`await` / `async`语义&ndash; `Async` android 实现行为。)当`GoogleMap`对象已准备就绪时，Android 调用你的应用`OnMapReady`方法 (作为的一部分必须实现该`IOnMapReadyCallback`接口)。 例如:
+A`GoogleMap`必须使用获取`GetMapAsync`、 一端的前面的代码示例所示&ndash;这自动初始化地图系统和视图。 (请注意，此方法不使用`await` / `async`语义&ndash; `Async` android 实现行为。)当`GoogleMap`对象已准备就绪时，Android 调用你的应用`OnMapReady`方法 (作为的一部分必须实现该`IOnMapReadyCallback`接口)。 例如：
 
 ```csharp
 public void OnMapReady (GoogleMap map)

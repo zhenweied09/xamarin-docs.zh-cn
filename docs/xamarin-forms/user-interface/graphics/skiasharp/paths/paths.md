@@ -1,18 +1,17 @@
 ---
 title: 路径基础知识
 description: 浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: e083a9d6a97181b4e726d4553b14671f06157f80
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="path-basics"></a>路径基础知识
 

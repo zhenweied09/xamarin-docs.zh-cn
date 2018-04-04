@@ -1,18 +1,17 @@
 ---
-title: "KitKat 功能"
-description: "Android 4.4 (KitKat) 装具有大量用户和开发人员的功能。 本指南重点介绍了这些功能的几个，并提供代码示例和实现详细信息以帮助你充分利用 KitKat 做出。"
-ms.topic: article
+title: KitKat 功能
+description: Android 4.4 (KitKat) 装具有大量用户和开发人员的功能。 本指南重点介绍了这些功能的几个，并提供代码示例和实现详细信息以帮助你充分利用 KitKat 做出。
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c3eafc8dc18113080dd6c906025556292c43e1c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="kitkat-features"></a>KitKat 功能
 
@@ -33,7 +32,7 @@ Android 4.4 (API 级别 19)，也称为"KitKat"，在后期 2013年中发布。 
 
 本指南提供了为 Xamarin.Android 开发人员迁移现有 Xamarin.Android 应用程序到 KitKat，以及 KitKat 的高级概述的指南。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要开发使用 KitKat 的 Xamarin.Android 应用程序，你需要*Xamarin.Android 4.11.0*或更高版本和 Android 4.4 (API 级别 19) 安装通过 Android SDK 管理器中，如下面的屏幕截图所示：
 
@@ -689,7 +688,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 有关上述 API 更改的详细信息，请参阅 Google [Android 4.4 Api](http://developer.android.com/about/versions/android-4.4.html)概述。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入的一些新 Api 在 Android 4.4 (API 级别 19) 中可用，并转换为 KitKat 的应用程序时涉及的最佳做法。 It 体验轮廓包围的更改影响用户的 Api，包括*转换 framework*和新选项*主题*。 接下来，它引入*存储访问 Framework*和`DocumentsProvider`类，以及新*打印 Api*。 它探讨了*NFC 基于主机的卡仿真*以及如何使用*低功耗传感器*，包括两个新传感器，跟踪用户的步骤。 最后，它演示捕获的应用程序的实时演示*屏幕录制*，并提供的 KitKat API 更改和添加的详细的列表。
 

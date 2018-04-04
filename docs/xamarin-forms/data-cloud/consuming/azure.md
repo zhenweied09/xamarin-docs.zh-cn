@@ -1,18 +1,17 @@
 ---
-title: "使用 Azure 移动应用"
-description: "Azure 移动应用，可以使用可缩放的后端移动身份验证、 脱机同步和推送通知的支持与托管在 Azure App Service 中开发应用。 本文中，这仅适用于使用 Node.js 后端的 Azure Mobile Apps，说明如何查询、 插入、 更新和删除数据存储在 Azure Mobile Apps 实例中的表。"
-ms.topic: article
+title: 使用 Azure 移动应用
+description: Azure 移动应用，可以使用可缩放的后端移动身份验证、 脱机同步和推送通知的支持与托管在 Azure App Service 中开发应用。 本文中，这仅适用于使用 Node.js 后端的 Azure Mobile Apps，说明如何查询、 插入、 更新和删除数据存储在 Azure Mobile Apps 实例中的表。
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5b087700e3a5276e19454a8dafedb508758b7b71
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-azure-mobile-app"></a>使用 Azure 移动应用
 
@@ -112,7 +111,7 @@ public async Task DeleteTaskAsync (TodoItem item)
 
 在发出删除请求时，必须指定 ID，以便 Azure 移动应用程序 sinstance 可以确定要删除的数据。 此 ID 值存储在`TodoItem.ID`属性。 如果在删除请求不包含 ID，没有要删除，以确定数据的 Azure Mobile Apps 实例方法，因此`MobileServiceInvalidOperationException`将引发。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何使用[Azure 移动客户端 SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)来查询、 插入、 更新和删除数据存储在 Azure 移动应用程序实例中的表。 该 SDK 提供`MobileServiceClient`Xamarin.Forms 应用程序用于访问 Azure Mobile Apps 实例的类。
 

@@ -1,18 +1,17 @@
 ---
-title: "第 2 部分。 基本 XAML 语法"
-description: "XAML 主要设计用于实例化和初始化对象。 但通常情况下，属性必须设置为不能轻松地表示为 XML 字符串的复杂对象，并有时必须在子类上设置一个类定义的属性。 这些两个需求需要属性元素和附加的属性的基本 XAML 语法特征。"
-ms.topic: article
+title: 第 2 部分。 基本 XAML 语法
+description: XAML 主要设计用于实例化和初始化对象。 但通常情况下，属性必须设置为不能轻松地表示为 XML 字符串的复杂对象，并有时必须在子类上设置一个类定义的属性。 这些两个需求需要属性元素和附加的属性的基本 XAML 语法特征。
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 776b0d07de947c01761f8e8d8809b24cf7f3c3cb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>第 2 部分。 基本 XAML 语法
 
@@ -521,7 +520,7 @@ if (Device.RuntimePlatform == Device.iOS)
 </ContentPage>
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 与属性元素和附加的属性的基本 XAML 语法大部分已建立了。 但是，有时你需要将属性设置为对象以间接方式，例如，从资源字典。 此方法会在下一部分中，一部分介绍[3。XAML 标记扩展](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)。
 

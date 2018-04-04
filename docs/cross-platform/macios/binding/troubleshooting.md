@@ -1,18 +1,17 @@
 ---
-title: "绑定故障排除"
-description: "本指南介绍了要执行的操作如果你有困难绑定 OBJECTIVE-C 的库。"
-ms.topic: article
+title: 绑定故障排除
+description: 本指南介绍了要执行的操作如果你有困难绑定 OBJECTIVE-C 的库。
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: 2db7fe30f05224f6b74b4d2189606da59946bda0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ea3e3802ec2e0baf0fe8355a41e806bacabc9ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-troubleshooting"></a>绑定故障排除
 
@@ -45,15 +44,15 @@ Xamarin 工作以提供高质量和经过充分测试的绑定 Apple Api，有�
 
 你的反馈对我们很重要。 如果你发现 Xamarin.Mac 中的任何问题：
 
-- 检查[Xamarin.Mac 论坛](https://forums.xamarin.com/categories/mac)
+- 查看 [Xamarin.Mac 论坛](https://forums.xamarin.com/categories/mac)
 - 搜索[问题存储库](https://github.com/xamarin/xamarin-macios/issues) 
-- 切换到 GitHub 问题之前，Xamarin 问题中跟踪上[Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)。 请搜索匹配的问题的存在。
-- 如果找不到匹配的问题，请文件中的一个新问题[问题的 GitHub 存储库](https://github.com/xamarin/xamarin-macios/issues/new)。
+- 切换到 GitHub 问题之前，会在 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi) 中跟踪 Xamarin 问题。 请在其中搜索匹配的问题。
+- 如果找不到匹配的问题，请在 [GitHub 问题存储库](https://github.com/xamarin/xamarin-macios/issues/new)中提交一个新问题。
 
-GitHub 的问题是所有公共的。 不能隐藏注释或附件。 
+GitHub 的问题是完全公开的。 不能隐藏注释或附件。 
 
-请尽可能多的以下内容作为可能包括：
+请尽可能多地包含以下内容：
 
-- 重现该问题的一个简单的示例。 这是**有用**在可能的情况。 
-- 在发生崩溃完整堆栈跟踪。
-- C# 代码周围在发生崩溃。 
+- 一个重现此问题的简单示例。 在可能的情况下，这非常有用。 
+- 故障的完整堆栈跟踪。
+- 故障周围的 C# 代码。 

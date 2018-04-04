@@ -1,18 +1,17 @@
 ---
-title: "使用分段控件"
-description: "本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。"
-ms.topic: article
+title: 使用分段控件
+description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 6561ff70997af05ed4df6b7bfe0ba6345fb44d9d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d4eac932c7fad628a0a65127bceb641f34ea5d79
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-segmented-controls"></a>使用分段控件
 
@@ -68,7 +67,7 @@ Xamarin.tvOS 应用中使用的段控件的最简单方法是将它们添加到�
     [![](segmented-controls-images/segment03.png "小组件选项卡")](segmented-controls-images/segment03.png#lightbox)
 1. 使用**段**字段来控制在控制器中的段的数目。
 1. 选择从给定的分段**段下拉列表中**如调整其各个属性**标题**或**映像**并控制给定的分段是否**启用**或**选定**显示控件时。
-1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
+1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如： 
 
     [![](segmented-controls-images/segment04.png "指定一个名称")](segmented-controls-images/segment04.png#lightbox)
 1. 保存更改。
@@ -84,7 +83,7 @@ Xamarin.tvOS 应用中使用的段控件的最简单方法是将它们添加到�
     [![](segmented-controls-images/segment03-vs.png "小组件选项卡")](segmented-controls-images/segment03-vs.png#lightbox)
 1. 使用**段**字段来控制在控制器中的段的数目。
 1. 选择从给定的分段**段下拉列表中**如调整其各个属性**标题**或**映像**并控制给定的分段是否**启用**或**选定**显示控件时。
-1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如: 
+1. 最后，将分配**名称**到控件，以便可以在 C# 代码中响应它们。 例如： 
 
     [![](segmented-controls-images/segment04-vs.png "指定一个名称")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 保存更改。
@@ -232,7 +231,7 @@ SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlStat
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖设计和使用在 Xamarin.tvOS 应用内的分段控件。
 

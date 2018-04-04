@@ -1,18 +1,17 @@
 ---
 title: HealthKit
-description: "HealthKit 是中的运行状况相关信息提供集中的、 协调，且安全的数据存储的 iOS 8 中引入的框架。 隐私和安全的运行状况信息，并使用运行状况应用，用户的仪表板，可确保操作系统。 用户的权限后，应用程序可以读取和写入各种运行状况信息。"
-ms.topic: article
+description: HealthKit 是中的运行状况相关信息提供集中的、 协调，且安全的数据存储的 iOS 8 中引入的框架。 隐私和安全的运行状况信息，并使用运行状况应用，用户的仪表板，可确保操作系统。 用户的权限后，应用程序可以读取和写入各种运行状况信息。
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -69,14 +68,14 @@ Xamarin iOS 8 应用程序可以使用 HealthKit API 之前，它必须正确配
 
 你当前**应用 Id**中列出[证书、 标识符和配置文件](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action)的开发人员中心的部分。 通常情况下，此列表将显示为**ID**值`*`，以指示，**应用程序 ID** - **名称**可以用于任意数量的后缀。 此类*通配符应用 Id*不能使用运行状况工具包。
  
-若要创建显式**应用程序 ID**，单击 **+** 中右上方以使你转到按钮**注册 iOS 应用程序 ID**页：
+若要创建显式**应用程序 ID**，单击**+**中右上方以使你转到按钮**注册 iOS 应用程序 ID**页：
 
 
 [![](healthkit-images/image02.png "注册 Apple 开发人员门户上的应用程序")](healthkit-images/image02.png#lightbox)
 
 创建应用程序说明之后，更高版本，图中所示，使用**显式应用 ID**节以创建你的应用程序的 ID。 在**应用程序服务**部分，选中**运行状况工具包**中**启用服务**部分。
 
-完成后，按**继续**按钮以注册**应用程序 ID**中你的帐户。 你将回到返回**证书、 标识符和配置文件**页。 单击**预配配置文件**转到你当前的预配配置文件的列表并单击 **+** 你转到右上角的按钮**添加 iOS预配配置文件**页。 选择**iOS 应用程序开发**选项，然后单击**继续**可用于访问**选择应用程序 ID**页。 在此处，选择显式**应用程序 ID**事先指定：
+完成后，按**继续**按钮以注册**应用程序 ID**中你的帐户。 你将回到返回**证书、 标识符和配置文件**页。 单击**预配配置文件**转到你当前的预配配置文件的列表并单击**+**你转到右上角的按钮**添加 iOS预配配置文件**页。 选择**iOS 应用程序开发**选项，然后单击**继续**可用于访问**选择应用程序 ID**页。 在此处，选择显式**应用程序 ID**事先指定：
 
 
 [![](healthkit-images/image03.png "选择显式的应用程序 ID")](healthkit-images/image03.png#lightbox)

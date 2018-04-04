@@ -1,18 +1,17 @@
 ---
-title: "目标 Framework"
-description: "本文介绍如何为 Xamarin.Mac，可用的目标框架 （基类库） 以及 Xamarin.Mac 项目中使用它们的影响。"
-ms.topic: article
+title: 目标 Framework
+description: 本文介绍如何为 Xamarin.Mac，可用的目标框架 （基类库） 以及 Xamarin.Mac 项目中使用它们的影响。
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 053cdd2dbfc7741257e6630e5b11b77b1055428e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="target-framework"></a>目标 Framework
 
@@ -50,7 +49,7 @@ _本文介绍如何为 Xamarin.Mac，可用的目标框架 （基类库） 以�
 
 你应**清理**然后**重新生成**Xamarin.Mac 项目后切换目标 Framework 类型。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文简要介绍了不同类型的目标框架 （基类库），提供给 Xamarin.Mac 应用程序，并且应使用每种类型的框架。
 

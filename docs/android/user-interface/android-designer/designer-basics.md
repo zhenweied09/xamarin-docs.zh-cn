@@ -1,18 +1,17 @@
 ---
-title: "设计器的基础知识"
-description: "本主题介绍设计器功能，说明如何启动设计器、 描述设计图面上，并详细介绍如何使用属性窗格中编辑小组件属性。"
-ms.topic: article
+title: 设计器的基础知识
+description: 本主题介绍设计器功能，说明如何启动设计器、 描述设计图面上，并详细介绍如何使用属性窗格中编辑小组件属性。
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6bac16a8ce9859e819299689489d9aad982c1f7f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="designer-basics"></a>设计器的基础知识
 

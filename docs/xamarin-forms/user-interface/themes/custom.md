@@ -1,17 +1,16 @@
 ---
-title: "创建自定义主题"
-ms.topic: article
+title: 创建自定义主题
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: b981e6a076c8ab35d9c8be43ffd5cdc68b4a59bd
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 647ed1723bcc98b97c03ad824fbae0060854d6a2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-custom-theme"></a>创建自定义主题
 
@@ -254,7 +253,7 @@ namespace ThemesDemo.Droid
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 可以通过定义为每个需要自定义外观的控件的样式创建的自定义主题。 应可由不同区分多个控件的样式`Class`资源字典中的属性，然后通过设置应用`StyleClass`在控件上的属性。
 

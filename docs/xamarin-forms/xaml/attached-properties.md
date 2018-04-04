@@ -1,18 +1,17 @@
 ---
-title: "附加属性"
-description: "附加的属性是可绑定属性，在一个类中定义但附加到其他对象的特殊类型可识别作为特性的 XAML 中包含的类和句点分隔属性名称。 这篇文章提供附加属性的简介，并演示如何创建和使用它们。"
-ms.topic: article
+title: 附加属性
+description: 附加的属性是可绑定属性，在一个类中定义但附加到其他对象的特殊类型可识别作为特性的 XAML 中包含的类和句点分隔属性名称。 这篇文章提供附加属性的简介，并演示如何创建和使用它们。
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: 7112812c843ccbcd6c24ea028deae3c09851b03d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5c903a39e5569c7ffedfff8eb8e6b0bd4071be9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="attached-properties"></a>附加属性
 
@@ -136,7 +135,7 @@ ShadowEffect.SetHasShadow (label, true);
 
 在创建附加的属性时，有了多个可选参数，可设置为启用高级附加的属性的方案。 这包括检测属性更改、 验证属性值和强制属性值。 有关详细信息，请参阅[高级方案](~/xamarin-forms/xaml/bindable-properties.md#advanced)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章提供附加属性的简介，并演示了如何创建和使用它们。 附加的属性是一种特殊类型的可绑定属性，但对其他对象已附加和可识别在 XAML 中的某个类中定义为包含一个类和句点分隔的属性名称的属性。
 

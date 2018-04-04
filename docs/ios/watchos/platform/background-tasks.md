@@ -1,18 +1,17 @@
 ---
-title: "后台任务"
-description: "使用新的后台任务 watchOS 3 以确保监视应用程序始终具有最新的数据和停靠快照。"
-ms.topic: article
+title: 后台任务
+description: 使用新的后台任务 watchOS 3 以确保监视应用程序始终具有最新的数据和停靠快照。
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="background-tasks"></a>后台任务
 

@@ -1,18 +1,17 @@
 ---
 title: PassKit
-description: "钱包是一个系统 iOS 应用，将存储并显示条形码和链接在真实其手机上的客户事务的其他信息。"
-ms.topic: article
+description: 钱包是一个系统 iOS 应用，将存储并显示条形码和链接在真实其手机上的客户事务的其他信息。
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -25,7 +24,7 @@ _钱包是一个系统 iOS 应用，将存储并显示条形码和链接在真�
  [![](passkit-images/image1.png "钱包存储和组织在电话上的所有传递")](passkit-images/image1.png#lightbox)
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本文档中讨论的应用商店工具包功能需要 iOS 6 和 Xcode 4.5，以及 Xamarin.iOS 6.0。
 
@@ -238,7 +237,7 @@ ISO 8859-1 编码是将读取你传递的扫描系统使用的编码的最常见
 
 第一步是设置传递类型 ID 为每个不同_类型_的过程，以支持。 传递的 ID （或传递类型标识符） pass 中创建的唯一标识符。 我们将使用此 ID 将其与你使用的证书的开发人员帐户链接传递。
 
-1. 在[证书、 标识符和配置文件一部分的 iOS 设置门户](https://developer.apple.com/account/overview.action)，导航到**标识符**和选择**传递类型 Id** 。 然后选择 **+** 按钮以创建新的传递类型： [ ![ ](passkit-images/passid.png "创建新的传递类型")](passkit-images/passid.png#lightbox)
+1. 在[证书、 标识符和配置文件一部分的 iOS 设置门户](https://developer.apple.com/account/overview.action)，导航到**标识符**和选择**传递类型 Id** 。 然后选择**+**按钮以创建新的传递类型： [ ![ ](passkit-images/passid.png "创建新的传递类型")](passkit-images/passid.png#lightbox)
 
 2.   提供**说明**（名称） 和**标识符**（唯一字符串） 作为要传递。 请注意，传递的所有类型 Id 必须以字符串都开头`pass.`在此示例中，我们使用`pass.com.xamarin.coupon.banana`: [ ![ ](passkit-images/register.png "提供的说明和标识符")](passkit-images/register.png#lightbox)
 
@@ -605,7 +604,7 @@ noteCenter = NSNotificationCenter.DefaultCenter.AddObserver (PKPassLibrary.DidCh
 
 视图[WWDC 视频： 引入 Passbook，第 2 部分](https://developer.apple.com/videos/wwdc/2012/?include=309#309)从 27:00 分钟，有关详细信息。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章引入传递工具包，所述的某些原因，它为什么很有用，说明必须为完整传递工具包解决方案实现的不同部分。 它所述配置你的 Apple 开发人员帐户，以创建通过，使一个传递手动以及如何从 Xamarin.iOS 应用程序访问传递工具包 Api 的过程所需的步骤。
 

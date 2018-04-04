@@ -1,17 +1,16 @@
 ---
-title: "Apple 帐户管理"
-ms.topic: article
+title: Apple 帐户管理
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/05/2017
-ms.openlocfilehash: c0d328e784b0a12b0df1a6b2bf5b990ffa461da5
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 21af0ef09644f39f9be42788b3d8f4977a2143d3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="apple-account-management"></a>Apple 帐户管理
 
@@ -33,7 +32,7 @@ IOS 捆绑签名工具还可用于执行以下操作：
 
 有关使用这些功能的详细信息，请参阅[设备资源调配](~/ios/get-started/installation/device-provisioning/index.md)指南。
 ️
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual Studio for Windows 上。
 
@@ -50,7 +49,7 @@ Apple 帐户管理位于 Visual Studio for mac。 它不是当前可在 Visual S
 
     ![Apple 开发人员帐户选项](apple-account-management-images/image1.png)
 
-2. 按 **+** 按钮以显示登录对话框中，如下所示： 
+2. 按**+**按钮以显示登录对话框中，如下所示： 
 
     ![fastlane 对话框。](apple-account-management-images/image2.png)
 

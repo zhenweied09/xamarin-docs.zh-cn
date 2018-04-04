@@ -1,18 +1,17 @@
 ---
-title: "呈现器基类，这些类和本机控件"
-description: "Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 本文列出的呈现器和实现每个 Xamarin.Forms 页、 布局、 视图和单元格的本机控件类。"
-ms.topic: article
+title: 呈现器基类，这些类和本机控件
+description: Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 本文列出的呈现器和实现每个 Xamarin.Forms 页、 布局、 视图和单元格的本机控件类。
 ms.prod: xamarin
 ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2016
-ms.openlocfilehash: 06887e6c1a39dd695fdaddb2fade8a463d9d4580
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 9402bd53ab3bfb0b11182eb700aa560e8f962de3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>呈现器基类，这些类和本机控件
 
@@ -99,7 +98,7 @@ _Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创�
 |[`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/)|ImageCellRenderer|与 UIImage UITableViewCell|使用两个 TextViews 和 ImageView LinearLayout|与包含的映像和两个 Textblock 网格的数据模板|
 |[`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|视图|与 ContentPresenter DataTemplate|
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已列出的呈现器和实现每个 Xamarin.Forms 页、 布局、 视图和单元格的本机控件类。 Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。
 

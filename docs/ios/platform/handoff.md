@@ -1,17 +1,16 @@
 ---
 title: Handoff
-description: "本文介绍使用在 Xamarin.iOS 应用程序中要传输的 Handoff 在用户上运行的应用之间的用户活动的其他设备。"
-ms.topic: article
+description: 本文介绍使用在 Xamarin.iOS 应用程序中要传输的 Handoff 在用户上运行的应用之间的用户活动的其他设备。
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bb665c7ffd4241fac14be13ebd8f113d11afd417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="handoff"></a>Handoff
 
@@ -402,13 +401,13 @@ public void PerformHandoff(NSUserActivity activity) {
 }
 ```
 
-`ContinueUserActivity`方法包括`UIApplicationRestorationHandler`，你可以调用文档或响应方基于活动恢复。 你将需要传递`NSArray`或到还原处理程序调用时可还原对象。 例如:
+`ContinueUserActivity`方法包括`UIApplicationRestorationHandler`，你可以调用文档或响应方基于活动恢复。 你将需要传递`NSArray`或到还原处理程序调用时可还原对象。 例如：
 
 ```csharp
 completionHandler (new NSObject[]{Tab4});
 ```
 
-每个对象传递，其`RestoreUserActivityState`将调用方法。 每个对象然后可以使用中的数据`UserInfo`字典，以还原其自己的状态。 例如:
+每个对象传递，其`RestoreUserActivityState`将调用方法。 每个对象然后可以使用中的数据`UserInfo`字典，以还原其自己的状态。 例如：
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -426,7 +425,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 
 由于提交依赖于传输之间松散连接集合 iOS 和 OS X 设备的信息，此传输过程有时可能会失败。 应设计您的应用程序适当地处理这些故障，并通知用户的任何出现的情况。
 
-出现故障，`DidFailToContinueUserActivitiy`方法`AppDelegate`将调用。 例如:
+出现故障，`DidFailToContinueUserActivitiy`方法`AppDelegate`将调用。 例如：
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -452,7 +451,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 
 如果指定的域匹配`WebpageURL`属性的值，Handoff 从该域上的网站下载的已批准的应用程序 Id 的列表。 网站必须提供一个名为的有符号的 JSON 文件中的已批准 Id 的列表**apple 应用程序的站点关联**(例如， `https://company.com/apple-app-site-association`)。
 
-此 JSON 文件包含一个字典，其中窗体中指定的应用程序 Id 的列表`<team identifier>.<bundle identifier>`。 例如:
+此 JSON 文件包含一个字典，其中窗体中指定的应用程序 Id 的列表`<team identifier>.<bundle identifier>`。 例如：
 
 ```csharp
 {
@@ -463,7 +462,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 }
 ```
 
-对 JSON 文件进行签名 (以使其具有正确`Content-Type`的`application/pkcs7-mime`)，使用**终端**应用和`openssl`命令使用的证书和 iOS 的受信任的证书颁发机构颁发的密钥 (请参阅[http://support.apple.com/kb/ht5012](http://support.apple.com/kb/ht5012)有关的列表)。 例如:
+对 JSON 文件进行签名 (以使其具有正确`Content-Type`的`application/pkcs7-mime`)，使用**终端**应用和`openssl`命令使用的证书和 iOS 的受信任的证书颁发机构颁发的密钥 (请参阅[http://support.apple.com/kb/ht5012 ](http://support.apple.com/kb/ht5012)有关的列表)。 例如：
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -476,7 +475,7 @@ cat json.txt | openssl smime -sign -inkey company.com.key
 -outform DER > apple-app-site-association
 ```
 
-`openssl`命令输出签名的 JSON 文件，你将放置在你网站上**apple 应用程序的站点关联**URL。 例如:
+`openssl`命令输出签名的 JSON 文件，你将放置在你网站上**apple 应用程序的站点关联**URL。 例如：
 
 ```csharp
 https://example.com/apple-app-site-association.
@@ -486,7 +485,7 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>在基于文档的应用程序中支持 Handoff
 
-如果如上所述，在 iOS 和 OS X 上基于文档的应用将自动支持 Handoff iCloud 基于文档的应用程序的**Info.plist**文件包含`CFBundleDocumentTypes`键`NSUbiquitousDocumentUserActivityType`。 例如:
+如果如上所述，在 iOS 和 OS X 上基于文档的应用将自动支持 Handoff iCloud 基于文档的应用程序的**Info.plist**文件包含`CFBundleDocumentTypes`键`NSUbiquitousDocumentUserActivityType`。 例如：
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -522,7 +521,7 @@ https://example.com/apple-app-site-association.
 
 这样一种的情况其中继续活动所需信息的量不能高效地传输初始的 Handoff 负载。 在这些情况下，接收应用程序可以建立自身原始应用将数据传输之间的一个或多个流。
 
-原始应用程序将设置`SupportsContinuationStreams`属性`NSUserActivity`到实例`true`。 例如:
+原始应用程序将设置`SupportsContinuationStreams`属性`NSUserActivity`到实例`true`。 例如：
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -541,7 +540,7 @@ UserActivity.AddUserInfoEntries (userInfo);
 UserActivity.BecomeCurrent ();
 ```
 
-然后，接收应用程序可以调用`GetContinuationStreams`方法`NSUserActivity`中其`AppDelegate`建立流。 例如:
+然后，接收应用程序可以调用`GetContinuationStreams`方法`NSUserActivity`中其`AppDelegate`建立流。 例如：
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -622,7 +621,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 当用户活动已成功发送到另一个 Apple 设备，发送的设备的`NSUserActivity`将接收调用`UserActivityWasContinued`方法其`NSUserActivityDelegate`使其知道用户活动已成功传输到另一个设备。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已授予使用继续之间的用户的 Apple 设备的多个用户活动的 Handoff framework 介绍。 接下来，它还介绍了如何启用并在 Xamarin.iOS 应用程序中实现 Handoff。 最后，它讨论的不同类型的可用 Handoff 延续和 Handoff 最佳做法。
 

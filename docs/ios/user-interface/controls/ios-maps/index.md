@@ -1,18 +1,17 @@
 ---
-title: "映射"
-description: "iOS 包括 MapKit 框架，可以轻松地添加将映射到应用程序。 使用地图工具包，则可以将 iOS 应用程序添加支持功能，如平移和缩放、 在地图上显示用户的位置和分层丰富图形的交互式地图。 本文深入的几项映射工具包的功能，显示如何充分利用它们来构建到应用程序的地理功能"
-ms.topic: article
+title: 映射
+description: iOS 包括 MapKit 框架，可以轻松地添加将映射到应用程序。 使用地图工具包，则可以将 iOS 应用程序添加支持功能，如平移和缩放、 在地图上显示用户的位置和分层丰富图形的交互式地图。 本文深入的几项映射工具包的功能，显示如何充分利用它们来构建到应用程序的地理功能
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps"></a>映射
 

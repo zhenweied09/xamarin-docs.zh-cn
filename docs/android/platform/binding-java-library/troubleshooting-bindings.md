@@ -1,18 +1,17 @@
 ---
-title: "故障排除的绑定"
-description: "本文总结了生成绑定，以及可能的原因和建议的方法可以解决它们时可能发生的多种常见错误。"
-ms.topic: article
+title: 故障排除的绑定
+description: 本文总结了生成绑定，以及可能的原因和建议的方法可以解决它们时可能发生的多种常见错误。
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>故障排除的绑定
 
@@ -51,7 +50,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 - **具有模糊处理的特征的类**&ndash;的经过模糊处理的类特性包括：
 
-    - Class 名称中包含 **$** ，即**$.class**
+    - Class 名称中包含**$**，即**$.class**
     - 类名称完全泄露小写字符，即**a.class**      
 
 - **`import` 语句未引用库**&ndash;标识未引用的库，并将这些依赖项添加到的项目的 Xamarin.Android 绑定**生成操作**的**ReferenceJar**或**EmbedddedReferenceJar**。
@@ -114,7 +113,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 -   Java 允许从非公共类，派生公共类，但在.NET 中，这不支持。 由于绑定生成器不会生成绑定非公共类，派生类，如这些不能正确生成。 若要解决此问题，请删除这些派生的类使用中的删除节点的元数据条目**Metadata.xml**，或修复公开的非公共类的元数据。 尽管后一种解决方案将创建绑定，以便将生成 C# 源代码，但不应使用的非公共类。
 
-    例如:
+    例如：
 
     ```xml
     <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
@@ -246,7 +245,7 @@ return type of 'Java.Lang.Object'
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，我们将列出与 Java 绑定相关联的常见故障排除问题，并且说明了如何解决这些问题。
 

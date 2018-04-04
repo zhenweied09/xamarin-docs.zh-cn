@@ -1,18 +1,17 @@
 ---
-title: "设置了选取器的 ItemsSource 属性"
-description: "选取器视图是用于从数据的列表中选择文本项的控件。 此文章介绍了如何通过设置 ItemsSource 属性填充数据选取器以及如何响应用户的项选择。"
-ms.topic: article
+title: 设置了选取器的 ItemsSource 属性
+description: 选取器视图是用于从数据的列表中选择文本项的控件。 此文章介绍了如何通过设置 ItemsSource 属性填充数据选取器以及如何响应用户的项选择。
 ms.prod: xamarin
 ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5e3d20ad213df9fd9331c71c84003c7738bd5a29
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf3940bc1bc0318bad4d785388f9dc9292af80ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>设置了选取器的 ItemsSource 属性
 
@@ -172,7 +171,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 > [!NOTE]
 > 请注意， [ `SelectedItem` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedItem/)和[ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/)属性都支持双向绑定，默认情况下。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)视图是用于从数据的列表中选择文本项的控件。 本文介绍了如何填充`Picker`通过设置数据[ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.ItemsSource/)属性，以及如何响应用户的项选择。 此方法时，Xamarin.Forms 2.3.4 中引入，是与之进行交互的建议的方法`Picker`。
 

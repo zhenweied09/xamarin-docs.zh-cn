@@ -1,18 +1,17 @@
 ---
-title: "本地通知"
-description: "本部分演示如何在 Xamarin.Android 中实现本地通知。 本文档说明 Android 通知的各种 UI 元素，并介绍 API 的涉及创建和显示一条通知。"
-ms.topic: article
+title: 本地通知
+description: 本部分演示如何在 Xamarin.Android 中实现本地通知。 本文档说明 Android 通知的各种 UI 元素，并介绍 API 的涉及创建和显示一条通知。
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 97c8372656f0cbfa5b8f7bb12d15b00feac4b5c3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="local-notifications"></a>本地通知
 
@@ -229,7 +228,7 @@ notification.Defaults |= NotificationDefaults.Vibrate;
 
 ### <a name="updating-a-notification"></a>更新通知
 
-如果你想要更新的通知内容，已发布后，可以重复使用现有`Notification.Builder`对象创建新的通知对象和发布与标识符的最后一个通知此通知。 例如:
+如果你想要更新的通知内容，已发布后，可以重复使用现有`Notification.Builder`对象创建新的通知对象和发布与标识符的最后一个通知此通知。 例如：
 
 ```csharp
 // Update the existing notification builder content:
@@ -446,7 +445,7 @@ string message = Intent.Extras.GetString ("message", "");
 
 要发布到通知通道的通知，执行以下操作：
 
-1.  配置通知使用`Notification.Builder`，并将通道 ID 与传入`SetChannelId`方法。 例如:
+1.  配置通知使用`Notification.Builder`，并将通道 ID 与传入`SetChannelId`方法。 例如：
 
     ```csharp
     Notification.Builder builder = new Notification.Builder (this)
@@ -490,7 +489,7 @@ Android 通知通常显示原始应用程序的图标 （通知左侧）。 但�
 
 请注意，如果以大图标格式显示一条通知的小型应用程序图标显示为旁边大图标的右下角的标记。
 
-若要将图像用作大图标在通知中，你可以调用通知生成器[SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/)方法并传入的图像的位图。 与不同`SetSmallIcon`，`SetLargeIcon`只接受位图。 要转换成位图图像文件，则使用[BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/)类。 例如:
+若要将图像用作大图标在通知中，你可以调用通知生成器[SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/)方法并传入的图像的位图。 与不同`SetSmallIcon`，`SetLargeIcon`只接受位图。 要转换成位图图像文件，则使用[BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/)类。 例如：
 
 ```csharp
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
@@ -512,7 +511,7 @@ builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable
 
 此扩展的布局格式还包括底部的通知的摘要文本。 最大高度*大文本*通知为 256 dp。
 
-若要创建*大文本*通知，您实例化`Notification.Builder`对象，和前面一样，然后实例化并添加[BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/)对象传递给`Notification.Builder`对象。 例如:
+若要创建*大文本*通知，您实例化`Notification.Builder`对象，和前面一样，然后实例化并添加[BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/)对象传递给`Notification.Builder`对象。 例如：
 
 ```csharp
 // Instantiate the Big Text style:
@@ -550,7 +549,7 @@ builder.SetStyle (textStyle);
 
 请注意，当以紧凑显示通知时，它将显示通知文本 (将传递给通知生成器的文本`SetContentText`方法，如前面所示)。 但是，通知将展开以显示图像，它会显示在图像上方的摘要文本。
 
-若要创建*映像*通知，您实例化`Notification.Builder`对象和前面一样，然后创建并插入[BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/)对象插入`Notification.Builder`对象。 例如:
+若要创建*映像*通知，您实例化`Notification.Builder`对象和前面一样，然后创建并插入[BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/)对象插入`Notification.Builder`对象。 例如：
 
 ```csharp
 // Instantiate the Image (Big Picture) style:
@@ -610,7 +609,7 @@ builder.SetStyle (picStyle);
 
 ![展开示例收件箱通知](local-notifications-images/21-inbox-expanded.png)
 
-若要创建*收件箱*通知，您实例化`Notification.Builder`对象，和前面一样，并将添加[InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/)对象传递给`Notification.Builder`。 例如:
+若要创建*收件箱*通知，您实例化`Notification.Builder`对象，和前面一样，并将添加[InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/)对象传递给`Notification.Builder`。 例如：
 
 ```csharp
 // Instantiate the Inbox style:
@@ -661,7 +660,7 @@ Xamarin.Android 定义以下枚举来设置通知优先级：
 
 -   `NotificationPriority.Min` &ndash; 用户通知时，才的背景信息查看通知 （例如，位置或天气信息）。
 
-若要设置通知的优先级，请调用[SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/)方法`Notification.Builder`对象传递中的优先级别。 例如:
+若要设置通知的优先级，请调用[SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/)方法`Notification.Builder`对象传递中的优先级别。 例如：
 
 ```csharp
 builder.SetPriority (NotificationPriority.High);
@@ -738,7 +737,7 @@ builder.SetVisibility (NotificationVisibility.Private);
 
 -   `Notification.CategoryStatus` &ndash; 有关设备的信息。
 
-当对通知进行排序时，通知的优先级优先于其类别设置。 例如，优先级较高的通知将显示为警告即使它属于`Promo`类别。 若要设置通知的类别，你可以调用`SetCategory`方法`Notification.Builder`对象类别设置中传递。 例如:
+当对通知进行排序时，通知的优先级优先于其类别设置。 例如，优先级较高的通知将显示为警告即使它属于`Promo`类别。 若要设置通知的类别，你可以调用`SetCategory`方法`Notification.Builder`对象类别设置中传递。 例如：
 
 ```csharp
 builder.SetCategory (Notification.CategoryCall);
@@ -818,7 +817,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 ```
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何在 Android 中创建本地通知。 它所述的通知剖析、 介绍了如何使用`Notification.Builder`创建通知，如何在大图标的样式通知*大文本*，*映像*和*收件箱*格式、 如何设置优先级、 可见性和类别，如元数据设置的通知以及如何启动从通知的活动。 本文还介绍了这些通知设置如何使用新的提醒，锁屏，和*不打扰*Android 5.0 中引入的功能。 最后，您学习了如何使用`NotificationCompat.Builder`为了保持与早期版本的 Android 的通知兼容性。
 

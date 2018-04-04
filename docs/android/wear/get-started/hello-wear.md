@@ -1,18 +1,17 @@
 ---
-title: "Hello 磨损"
-description: "创建第一个 Android 磨损应用并在磨损模拟器或设备上运行它。 本演练提供有关创建处理按钮单击事件并在磨损设备上显示单击计数器的小 Android 磨损项目的分步说明。 它还说明了如何调试使用磨损仿真程序或磨损设备通过蓝牙连接到 Android 手机的应用。 它还提供有关 Android 磨损的一套调试的提示。"
-ms.topic: article
+title: Hello 磨损
+description: 创建第一个 Android 磨损应用并在磨损模拟器或设备上运行它。 本演练提供有关创建处理按钮单击事件并在磨损设备上显示单击计数器的小 Android 磨损项目的分步说明。 它还说明了如何调试使用磨损仿真程序或磨损设备通过蓝牙连接到 Android 手机的应用。 它还提供有关 Android 磨损的一套调试的提示。
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 742a10ce0042d2bbf6d5690cb7a7a6eca529a57e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-wear"></a>Hello 磨损
 

@@ -1,18 +1,17 @@
 ---
-title: "搜索和主屏幕小组件增强功能"
-description: "本文介绍如何 Apple iOS 10 中的小组件系统对所做的增强功能。"
-ms.topic: article
+title: 搜索和主屏幕小组件增强功能
+description: 本文介绍如何 Apple iOS 10 中的小组件系统对所做的增强功能。
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 7ca863b92d8d7af46f4ce18f5d088347b9ca04ee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="search-and-home-screen-widget-enhancements"></a>搜索和主屏幕小组件增强功能
 
@@ -51,14 +50,14 @@ Apple 引入了对小组件系统以确保小组件显示 10 锁定屏幕新的 
 
 ## <a name="working-with-vibrancy"></a>使用活力
 
-活力可确保小组件的文本保持清晰时小组件的光模糊 （系统所提供的） 的背景上呈现。 在 iOS 10 之前的开发人员将使用[NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect)的小组件的活力。 例如:
+活力可确保小组件的文本保持清晰时小组件的光模糊 （系统所提供的） 的背景上呈现。 在 iOS 10 之前的开发人员将使用[NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect)的小组件的活力。 例如：
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-这已在 iOS 10 否决，并应替换为使用[WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect)或[WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)。 例如:
+这已在 iOS 10 否决，并应替换为使用[WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect)或[WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)。 例如：
 
 ```csharp
 // Get Primary Widget Vibrancy Effect
@@ -189,7 +188,7 @@ public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayM
 
 除了设置为每个状态 （折叠或展开） 请求的大小，它还会更新以匹配新的大小所显示的内容。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 这篇文章具有涵盖 Apple iOS 10 中的小组件系统对所做的增强功能，并显示如何在 Xamarin.iOS 中实现它们。
 

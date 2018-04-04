@@ -1,7 +1,6 @@
 ---
-title: "C# 6 新功能概述"
-description: "最新版本的 C# 语言 – 版本 6 – 一直发展的要具有样本要少、 改进的清楚起见和更多的一致性的语言。 清理器初始化语法，能够使用 await catch/finally 块和 null 条件中？ 运算符将非常有用。"
-ms.topic: article
+title: C# 6 新功能概述
+description: 最新版本的 C# 语言 – 版本 6 – 一直发展的要具有样本要少、 改进的清楚起见和更多的一致性的语言。 清理器初始化语法，能够使用 await catch/finally 块和 null 条件中？ 运算符将非常有用。
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>C# 6 新功能概述
 
@@ -354,7 +353,7 @@ async void SomeMethod()
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 C# 语言一直发展来提高开发人员提高工作效率，同时还将提升好的做法，并支持工具。 本文档已授予在 C# 6 中的新语言功能的概述，并简要演示如何使用它们。
 

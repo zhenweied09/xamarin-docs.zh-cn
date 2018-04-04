@@ -1,18 +1,17 @@
 ---
-title: "图像和图标"
-description: "本部分包括控件和为自定义文档类型提供图标中的各种，其中涵盖使用 Xamarin.iOS 应用程序，例如，使用它们以图标形式中的映像，启动屏幕的文章或包括它们。"
-ms.topic: article
+title: 图像和图标
+description: 本部分包括控件和为自定义文档类型提供图标中的各种，其中涵盖使用 Xamarin.iOS 应用程序，例如，使用它们以图标形式中的映像，启动屏幕的文章或包括它们。
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 904ba5db84101651d10605fadf8e8861db0ddc1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images-and-icons"></a>图像和图标
 
@@ -65,5 +64,5 @@ Apple iOS 10.3，允许管理图标将其应用到添加了几项增强功能：
 ## <a name="related-links"></a>相关链接
 
 - [使用图像 （示例）](https://developer.xamarin.com/samples/WorkingWithImages/)
-- [Hello iPhone](~/ios/get-started/hello-ios/index.md)
+- [Hello，iPhone](~/ios/get-started/hello-ios/index.md)
 - [自定义图标和映像创建指南](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

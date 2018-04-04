@@ -1,18 +1,17 @@
 ---
-title: "生成现代 macOS 应用"
-description: "本文介绍几个提示、 功能和技术开发人员可以使用生成在 Xamarin.Mac 现代 macOS 应用程序。"
-ms.topic: article
+title: 生成现代 macOS 应用
+description: 本文介绍几个提示、 功能和技术开发人员可以使用生成在 Xamarin.Mac 现代 macOS 应用程序。
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 446db5c04849ac6fa320f3fe3b7e22b3d10bf9cf
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4eb4ff4a9e4784d816e2cbe8734e0422573cad92
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-modern-macos-apps"></a>生成现代 macOS 应用
 
@@ -436,7 +435,7 @@ Apple 提供的此外，建议使用而不添加新的层支持视图`CALayer`�
 
 #### <a name="redrawing-views-with-layers"></a>重绘具有层的视图
 
-另一个重要的步骤设置 Xamarin.Mac 应用中使用层支持的视图时`LayerContentsRedrawPolicy`的`NSView`到`OnSetNeedsDisplay`中`NSViewController`。 例如:
+另一个重要的步骤设置 Xamarin.Mac 应用中使用层支持的视图时`LayerContentsRedrawPolicy`的`NSView`到`OnSetNeedsDisplay`中`NSViewController`。 例如：
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +636,7 @@ macOS Sierra 到以前版本的操作系统中可用的现有容器视图控件�
 
 ## <a name="table-view-enhancements"></a>表视图增强功能
 
-开发人员应始终使用新`NSView`如基于容器视图控件版本`NSTableView`。 例如:
+开发人员应始终使用新`NSView`如基于容器视图控件版本`NSTableView`。 例如：
 
 ```csharp
 using System;
@@ -836,7 +835,7 @@ public override void ViewDidLoad ()
 
 其中`Alignment`和`ImagePosition`正在设置基于`UserInterfaceLayoutDirection`的控件。
 
-macOS Sierra 添加多个新的方便构造函数 (通过静态`CreateButton`方法) 采用多个参数 （例如标题、 映像和操作） 并自动将正确镜像。 例如:
+macOS Sierra 添加多个新的方便构造函数 (通过静态`CreateButton`方法) 采用多个参数 （例如标题、 映像和操作） 并自动将正确镜像。 例如：
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -853,7 +852,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 [![](modern-cocoa-apps-images/content11.png "下面举例说明深色 Mac 窗口 UI")](modern-cocoa-apps-images/content11.png#lightbox)
 
-这可以通过添加一行代码之前显示窗口。 例如:
+这可以通过添加一行代码之前显示窗口。 例如：
 
 ```csharp
 using System;
@@ -908,7 +907,7 @@ Apple 具有使用系统出现的以下建议：
 - 避免硬编码的 UI 结构依赖事项，因为这就限制了 UI 灵活性。
 - 使用 C# 接口来提供一般数据相关性。
 
-充当 Segue，源视图控制器可以重写`PrepareForSegue`方法并执行前 Segue （如传递数据） 所需的任何初始化执行，以显示目标视图控制器。 例如:
+充当 Segue，源视图控制器可以重写`PrepareForSegue`方法并执行前 Segue （如传递数据） 所需的任何初始化执行，以显示目标视图控制器。 例如：
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -948,7 +947,7 @@ Apple 在 macOS Sierra 允许开发人员可以充分利用 Mac 平台，如中�
 
 <a name="Summary" />
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文已覆盖多个提示、 功能和技术开发人员可以使用生成在 Xamarin.Mac 现代 macOS 应用程序。
 

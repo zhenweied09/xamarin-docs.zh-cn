@@ -1,24 +1,23 @@
 ---
-title: "可移植 Visual Basic.NET"
-description: "本指南将说明如何使用 Visual Basic 在面向 Xamarin.iOS 和 Xamarin.Android 的解决方案中编写可以使用的可移植类库 (PCL) 项目。"
-ms.topic: article
+title: 可移植 Visual Basic.NET
+description: 本指南将说明如何使用 Visual Basic 在面向 Xamarin.iOS 和 Xamarin.Android 的解决方案中编写可以使用的可移植类库 (PCL) 项目。
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 978d9e569825e20b40e963f590049eaab1d4e752
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6a4ecad0b28dc4b8ba4060966ccefb678c8e6794
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="portable-visual-basicnet"></a>可移植 Visual Basic.NET
 
 Xamarin iOS 和 Android 项目本质上不支持 Visual Basic;但是开发人员可以使用可移植类库，将现有 Visual Basic 代码迁移到 iOS 和 Android，或在 Visual Basic 中编写的应用程序对其逻辑的重要部分。 完全在 Visual Basic 中 （不包括自定义呈现器、 依赖关系服务和 XAML 代码隐藏），可以创建 Xamarin.Forms 应用程序。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 在 Xamarin.Android 4.10.1，Xamarin.iOS 7.0.4 和 Xamarin Studio 4.2，这意味着使用这些工具创建的任何 Xamarin 项目可以集成 Visual Basic PCL 程序集添加可移植类库支持。
 
@@ -67,7 +66,7 @@ PCL 配置文件 （即控件 PCL 适用于哪些平台） 都可以查看和更
 如果代码已添加到 PCL 后更改配置文件，，则可能库将无法再编译，如果该代码引用不是新选择的配置文件的一部分的功能。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示了如何使用 Visual Basic 代码中使用 Visual Studio 和可移植类库的 Xamarin 应用程序。 即使 Xamarin 不直接支持 Visual Basic，将 Visual Basic 编译成 PCL 允许使用要包括在 iOS 和 Android 应用的 Visual Basic 编写的代码。
 

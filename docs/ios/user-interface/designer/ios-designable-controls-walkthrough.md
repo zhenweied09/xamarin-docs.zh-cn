@@ -1,18 +1,17 @@
 ---
 title: 演练-与 Xamarin 设计器使用 iOS 自定义控件
 description: 本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。 它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。 此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 4a7fb6cba82b52f2a3506df7a36b4813a88ff583
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>演练-与 Xamarin 设计器使用 iOS 自定义控件
 

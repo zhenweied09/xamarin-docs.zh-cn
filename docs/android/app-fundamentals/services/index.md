@@ -1,18 +1,17 @@
 ---
-title: "创建 Android 服务"
-description: "本指南讨论 Xamarin.Android 服务，允许进行不活动的用户界面工作的 Android 组件。 服务非常通常用于在后台，如耗时的计算，下载文件，播放音乐中执行任务，依次类推。 它说明服务适合的不同方案，并演示如何实现它们同时执行长时间运行的后台任务以及提供的远程过程调用的接口。"
-ms.topic: article
+title: 创建 Android 服务
+description: 本指南讨论 Xamarin.Android 服务，允许进行不活动的用户界面工作的 Android 组件。 服务非常通常用于在后台，如耗时的计算，下载文件，播放音乐中执行任务，依次类推。 它说明服务适合的不同方案，并演示如何实现它们同时执行长时间运行的后台任务以及提供的远程过程调用的接口。
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-android-services"></a>创建 Android 服务
 
@@ -45,7 +44,7 @@ Android 应用程序由组成的至少一个以下四个主要组件：_活动_�
 
 * **绑定服务** &ndash; A_绑定服务_是具有某些其他组件 （通常活动） 绑定到它的服务。 绑定的服务提供一个接口，用于绑定的组件和服务以进行相互交互。 后没有任何绑定到的服务的多个客户端，Android 将关闭该服务。 
 
-* **`IntentService`** &ndash;  _`IntentService`_ 是一个专门的子类的`Service`类，用于简化服务创建和使用情况。 `IntentService`旨在处理各个自治调用。 与一个服务，它可以同时处理多个调用，不同`IntentService`很像_工作队列处理器_&ndash;工作将会排队和`IntentService`在单个辅助线程上一次处理一个每个作业。 通常情况下，`IntentService`未绑定到活动或片段。 
+* **`IntentService`** &ndash; _`IntentService`_是一个专门的子类的`Service`类，用于简化服务创建和使用情况。 `IntentService`旨在处理各个自治调用。 与一个服务，它可以同时处理多个调用，不同`IntentService`很像_工作队列处理器_&ndash;工作将会排队和`IntentService`在单个辅助线程上一次处理一个每个作业。 通常情况下，`IntentService`未绑定到活动或片段。 
 
 * **已启动服务** &ndash; A_已启动服务_是已通过某些其他 Android 组件 （如活动） 启动，并且直到内容显式告知在后台运行持续进行的服务若要停止的服务。 绑定与服务不同，启动的服务没有任何客户端直接绑定到它。 出于此原因，很重要，以便它们才能正常重新启动根据需要设计启动的服务。
 

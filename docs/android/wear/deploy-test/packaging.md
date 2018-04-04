@@ -1,17 +1,16 @@
 ---
-title: "打包磨损应用"
-ms.topic: article
+title: 打包磨损应用
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: a3eb5cd5b4202db8c58870c2b2c679b47f79d4aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af96c0f8cf862b7a208beb5b91ecbb30598b09d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="packaging-wear-apps"></a>打包磨损应用
 
@@ -48,7 +47,7 @@ Android 磨损应用来打包于 Google Play 上的分发的完整 Android 应�
 -----
 
 
-请注意，你将获得**XA5211**错误如果磨损应用的包名称与手持应用的包名称不匹配。 例如:
+请注意，你将获得**XA5211**错误如果磨损应用的包名称与手持应用的包名称不匹配。 例如：
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -63,7 +62,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 -   验证包名匹配。 
 
--   生成的 XML 并将其添加到手持项目中以将其与磨损应用关联。 例如: 
+-   生成的 XML 并将其添加到手持项目中以将其与磨损应用关联。 例如： 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->

@@ -1,18 +1,17 @@
 ---
-title: "统一的情节提要"
-description: "统一的情节提要使 iOS 开发人员能够使用单个的情节提要，而不是多个情节提要，以涵盖的设备的屏幕大小扩展范围中创建的用户界面。 本文旨在为更深入地概述提供到 Xamarin.iOS 中统一情节提要的操作。"
-ms.topic: article
+title: 统一的情节提要
+description: 统一的情节提要使 iOS 开发人员能够使用单个的情节提要，而不是多个情节提要，以涵盖的设备的屏幕大小扩展范围中创建的用户界面。 本文旨在为更深入地概述提供到 Xamarin.iOS 中统一情节提要的操作。
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-storyboards"></a>统一的情节提要
 
@@ -680,7 +679,7 @@ IOS 设计器将确认开发人员想要转换的情节提要即可使用大小�
 
  [![](unified-storyboards-images/exclude05.png "元素缺少时在 iPhone 模拟器中正在运行的应用")](unified-storyboards-images/exclude05.png#lightbox)
 
-若要从元素中删除为排除用例，只需选择中的元素**设计图面**，滚动到底部**属性资源管理器**单击 **-** 要删除的用例旁边的按钮。
+若要从元素中删除为排除用例，只需选择中的元素**设计图面**，滚动到底部**属性资源管理器**单击**-**要删除的用例旁边的按钮。
 
 若要查看 Unified 情节提要的实现，查看`UnifiedStoryboard`示例 Xamarin iOS 8 应用程序附加到此文档。
 
