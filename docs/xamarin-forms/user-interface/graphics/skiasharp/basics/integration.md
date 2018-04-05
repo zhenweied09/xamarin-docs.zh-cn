@@ -7,11 +7,11 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 67c4330d8e446a407dec7792fe5f40cdd9d23c22
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3ebe153ead2bb62b19ad6b25bf0093e20bf15c04
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>将与 Xamarin.Forms 集成
 
@@ -22,9 +22,9 @@ SkiaSharp 图形可以多种方式 Xamarin.Forms 的其余部分集成。 你可
 ![](integration-images/integrationexample.png "选择具有滑块的颜色")
 
 创建交互式 SkiaSharp 图形 Xamarin.Forms 中的另一种方法是通过触摸屏输入。
-中的第二页[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序有权**点击切换填充**。 一个简单的圆形两种方法，它可绘制&mdash;填充而无需具有填充&mdash;通过点击切换。 [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)类演示如何改变 SkiaSharp 图形，以响应用户输入。
+中的第二页[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序有权**点击切换填充**。 一个简单的圆形两种方法，它可绘制&mdash;填充而无需具有填充&mdash;通过点击切换。 [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)类演示如何改变 SkiaSharp 图形，以响应用户输入。
 
-有关此页上，`SKCanvasView`中实例化类[TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml)文件，还将设置 Xamarin.Forms [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)视图：
+有关此页上，`SKCanvasView`中实例化类[TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml)文件，还将设置 Xamarin.Forms [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)视图：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -99,7 +99,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 在这两种情况下，`h`自变量的范围为 0 到 360。 `s`， `l`，和`v`自变量的范围从 0 到 100。 `a` （字母或不透明度） 自变量的范围为 0 到 255。
 
-[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml)文件创建两个`SKCanvasView`中的对象`StackLayout`与并行`Slider`和`Label`允许用户选择 HSL 的视图和HSV 颜色值：
+[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml)文件创建两个`SKCanvasView`中的对象`StackLayout`与并行`Slider`和`Label`允许用户选择 HSL 的视图和HSV 颜色值：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -181,7 +181,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 这两个`SKCanvasView`元素位于单个单元格`Grid`与`Label`上显示的结果的 RGB 颜色值的顶部放置。
 
-[ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs)代码隐藏文件是相对简单。 共享`ValueChanged`这三个处理程序`Slider`元素只需失效同时`SKCanvasView`元素。 `PaintSurface`处理程序用颜色由清除画布`Slider`元素，并且还设置`Label`坐之上`SKCanvasView`元素：
+[ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs)代码隐藏文件是相对简单。 共享`ValueChanged`这三个处理程序`Slider`元素只需失效同时`SKCanvasView`元素。 `PaintSurface`处理程序用颜色由清除画布`Slider`元素，并且还设置`Label`坐之上`SKCanvasView`元素：
 
 ```csharp
 public partial class ColorExplorePage : ContentPage

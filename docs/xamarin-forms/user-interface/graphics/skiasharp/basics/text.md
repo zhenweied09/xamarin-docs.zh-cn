@@ -7,11 +7,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1e8ad47867fb1821df1e427aa777ead1a7da19a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4ef9f1b634d2ecfa73a94bfd562a68593dfdc575
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="integrating-text-and-graphics"></a>将文本和图形集成
 
@@ -23,7 +23,7 @@ _请参阅如何确定要将文本与 SkiaSharp 图形集成的呈现的文本�
 
 SkiaSharp`Canvas`类也包括方法，用于绘制矩形 ([`DrawRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRect/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)) 以及具有圆角矩形 ([`DrawRoundRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRoundRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPaint/))。 这些方法需要要定义为的矩形`SKRect`值。
 
-**确定框架，文本**页中心上的页和环绕它带有框架的圆角矩形一对构成的短文本字符串。 [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs)类演示如何执行。
+**确定框架，文本**页中心上的页和环绕它带有框架的圆角矩形一对构成的短文本字符串。 [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs)类演示如何执行。
 
 在 SkiaSharp 你使用`SKPaint`类设置文本和字体属性，但你可以还使用它来获取文本的呈现的大小。 以下的开头`PaintSurface`事件处理程序调用两个不同`MeasureText`方法。 第一个[ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/)调用端一个简单`string`自变量和返回文本的像素宽度基于当前的字体特性。 然后程序将计算新`TextSize`属性`SKPaint`对象基于该呈现的宽度，当前`TextSize`属性，并显示区域的宽度。 这为了设置`TextSize`以便要呈现在屏幕的宽度的 90%的文本字符串：
 

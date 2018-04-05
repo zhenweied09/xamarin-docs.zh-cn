@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 274c8e9a79fa3fadff14f1174d86aad04d902b05
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dots-and-dashes"></a>点和短划线
 
@@ -29,7 +29,7 @@ SkiaSharp 可绘制线条，它们不稳定，但改为将由点和短划线组�
 
 但是，`StrokeCap`设置`SKPaint`对象也会影响这些点和短划线。 正如您很快将看到，，在此数组的元素上产生影响。
 
-以点分隔格式和虚线演示上**三点和短划线**页。 [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml)文件实例化两个`Picker`查看时，一个用于允许您选择描边 cap 和第二个选择的短划线数组：
+以点分隔格式和虚线演示上**三点和短划线**页。 [ **DotsAndDashesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml)文件实例化两个`Picker`查看时，一个用于允许您选择描边 cap 和第二个选择的短划线数组：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -92,7 +92,7 @@ SkiaSharp 可绘制线条，它们不稳定，但改为将由点和短划线组�
 
 中的前三个项`dashArrayPicker`假定描边宽度为 10 个像素。 {10，10} 数组为虚线，{30，10} 为虚线，和 {10、 10、 30，10} 是针对点划线行。 （其他三个将讨论很快。）
 
-[ `DotsAndDashesPage`代码隐藏文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs)包含`PaintSurface`事件处理程序和几个用于访问的帮助器例程`Picker`视图：
+[ `DotsAndDashesPage`代码隐藏文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs)包含`PaintSurface`事件处理程序和几个用于访问的帮助器例程`Picker`视图：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -168,7 +168,7 @@ Windows 屏幕显示以点分隔格式，虚线笔画的行的制定一个上限
 
 到目前为止的第二个参数的做出没有提及`SKPathEffect.CreateDash`方法。 此参数的名称为`phase`，它是指在该点划线模式中的行的开头的偏移量。 例如，如果 dash 数组为 {10，10} 和`phase`为 10，然后在行开头间隔而不是一个点。
 
-一个有趣的应用程序`phase`参数处于一种动画效果。 **进行动画处理螺旋**页是类似于**Archimedean 螺旋**页上，只不过[ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs)类进行动画处理`phase`参数。 该页还演示动画另一种方法。 前面的示例[ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs)使用`Task.Delay`方法可控制动画。 此示例改为使用 Xamarin.Forms`Device.Timer`方法：
+一个有趣的应用程序`phase`参数处于一种动画效果。 **进行动画处理螺旋**页是类似于**Archimedean 螺旋**页上，只不过[ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/AnimatedSpiralPage.cs)类进行动画处理`phase`参数。 该页还演示动画另一种方法。 前面的示例[ `PulsatingEllipsePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml.cs)使用`Task.Delay`方法可控制动画。 此示例改为使用 Xamarin.Forms`Device.Timer`方法：
 
 
 ```csharp

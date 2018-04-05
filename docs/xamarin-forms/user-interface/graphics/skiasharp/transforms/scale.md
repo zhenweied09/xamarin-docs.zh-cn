@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 4c2650d4586f210b121c4c72b79e92ce72d135fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-scale-transform"></a>缩放变换
 
@@ -60,7 +60,7 @@ public void Scale (SKPoint size)
 
 第四个`Scale`将很快所述方法。
 
-**基本缩放**页演示`Scale`方法。 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 文件包含两个`Slider`元素，可以选择介于 0 和 10 之间的水平和垂直比例因子。 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs)代码隐藏文件中使用这些值来调用`Scale`显示圆角的矩形用虚线描边和调整大小以适应在左上方的一些文本之前画布角：
+**基本缩放**页演示`Scale`方法。 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 文件包含两个`Slider`元素，可以选择介于 0 和 10 之间的水平和垂直比例因子。 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs)代码隐藏文件中使用这些值来调用`Scale`显示圆角的矩形用虚线描边和调整大小以适应在左上方的一些文本之前画布角：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -120,7 +120,7 @@ public void Scale (Single sx, Single sy, Single px, Single py)
 
 `px`和`py`参数定义一个点，它有时称为*缩放 center*但在 SkiaSharp 文档称为*透视点*。 这是不受缩放画布相对于窗口左上角的点。 相对于该中心会进行所有缩放。
 
-[**居中缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs)页显示此工作原理。 `PaintSurface`处理程序是类似于**基本缩放**程序只不过`margin`计算值以使文本水平居中，这意味着，程序最适合在纵向模式下：
+[**居中缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs)页显示此工作原理。 `PaintSurface`处理程序是类似于**基本缩放**程序只不过`margin`计算值以使文本水平居中，这意味着，程序最适合在纵向模式下：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -216,7 +216,7 @@ canvas.Scale(sx, sy, px, py);
 
 `SKPath`类定义的只读[ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/)返回的属性`SKRect`在路径中定义的坐标的范围。 例如，当`Bounds`从之前创建的 hendecagram 路径获取属性`Left`和`Top`矩形属性是大约-100、`Right`和`Bottom`属性大约 100，与`Width`和`Height`属性是大约 200。 （大部分的实际值都是较少因为用一个半径为 100 圆圈定义星形的点，但仅顶部点不与水平或垂直轴平行。）
 
-此信息的可用性意味着它应当可以派生缩放和平移因素适用于缩放画布的大小的路径。 [**各向异性缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs)页演示这一操作与 11 星。 *各向异性*缩放意味着，它是不相等沿水平方向和垂直方向，这意味着在星型将不会保留其原始的纵横比。 下面是相关的代码中`PaintSurface`处理程序：
+此信息的可用性意味着它应当可以派生缩放和平移因素适用于缩放画布的大小的路径。 [**各向异性缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs)页演示这一操作与 11 星。 *各向异性*缩放意味着，它是不相等沿水平方向和垂直方向，这意味着在星型将不会保留其原始的纵横比。 下面是相关的代码中`PaintSurface`处理程序：
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -261,7 +261,7 @@ pathBounds.Inflate(strokePaint.StrokeWidth / 2,
 
 这会增加`pathBounds`的所有四个边 1.5 单元的矩形。 仅当舍入描边联接时，这是一个合理的解决方案。 斜接联接可能较长且难以进行计算。
 
-你还可以通过以下方式使用了类似的方法以文本作为**各向异性文本**页说明。 以下是相关的部分`PaintSurface`处理程序[ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs)类：
+你还可以通过以下方式使用了类似的方法以文本作为**各向异性文本**页说明。 以下是相关的部分`PaintSurface`处理程序[ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs)类：
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -297,7 +297,7 @@ using (SKPaint textPaint = new SKPaint
 - 缩放基于除以图形对象维度的水平和垂直页尺寸的最小值的对象。
 - 将转换到页的中心的扩展对象的中心。
 
-[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs)显示星形前会按相反的顺序执行以下步骤：
+[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs)显示星形前会按相反的顺序执行以下步骤：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

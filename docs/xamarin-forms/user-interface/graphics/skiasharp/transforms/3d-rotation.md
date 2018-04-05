@@ -7,11 +7,11 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 47daca2ab94f718aeb5ce474c87edce3c3bd77a4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="3d-rotations"></a>三维旋转
 
@@ -221,7 +221,7 @@ X 值时二维对象是否与一个正的角度围绕 Y 轴中，则正旋转 re
 
 使用时`SKMatrix44`，通过将各种乘以执行所有的三维旋转和透视操作`SKMatrix44`值。 然后你可以从通过 4 4 中提取二维的 3 x 3 矩阵矩阵使用[ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/)属性`SKMatrix44`类。 此属性返回熟悉`SKMatrix`值。
 
-**旋转三维**页中，可以在试用三维旋转。 [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml)文件实例化的四个滑块设置绕 X、 Y 和 Z 轴旋转以及设置深度值：
+**旋转三维**页中，可以在试用三维旋转。 [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml)文件实例化的四个滑块设置绕 X、 Y 和 Z 轴旋转以及设置深度值：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -302,7 +302,7 @@ X 值时二维对象是否与一个正的角度围绕 Y 轴中，则正旋转 re
 
 请注意，`depthSlider`使用初始化`Minimum`250 的值。 这意味着此处要轮替的二维对象有限制为由沿原点 250 像素半径定义圆形的 X 和 Y 坐标。 此对象在三维空间中任何旋转始终会小于 250 坐标值。
 
-[ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs)位图为 300 像素正方形中的代码隐藏文件加载：
+[ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs)位图为 300 像素正方形中的代码隐藏文件加载：
 
 ```csharp
 public partial class Rotation3DPage : ContentPage

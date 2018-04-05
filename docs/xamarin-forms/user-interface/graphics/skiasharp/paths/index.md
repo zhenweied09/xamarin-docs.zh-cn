@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f7c0fcc87253b1d5ae9d612c52ef3a32c5790c5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f9941305f165ec04e5fc80e3c41e3150a21a9b7
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 行和路径
 
@@ -21,7 +21,7 @@ _使用 SkiaSharp 绘制行和图形路径_
 
 图形路径是绘制直线和曲线中 SkiaSharp 最通用的方法。 本部分介绍如何使用`SKPath`对象绘制的直线，而是使用小的直线的集合 (称为*折线*) 绘制可以在数学上定义的曲线。 更高版本的部分将讨论各种类型的支持的曲线`SKPath`。
 
-本部分中的所有示例程序都显示在标题下**行和路径**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，然后在[**路径**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Paths)的解决方案的文件夹。
+本部分中的所有示例程序都显示在标题下**行和路径**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，然后在[**路径**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths)的解决方案的文件夹。
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[线和笔划大写字母](lines.md)
 

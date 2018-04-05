@@ -7,11 +7,11 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0bd13cc58d4f15b46edc03eda35f04d7ca866dec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 曲线和路径
 
@@ -19,7 +19,7 @@ _了解如何使用 SkiaSharp 绘制曲线和使用路径功能_
 
 浏览[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/)方法和属性开始在[SkiaSharp 行和路径](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)文章。 此处的文章继续使用的方法来添加到曲线`SKPath`对象，并利用功能强大的路径中的其他功能。 你将看到简洁的文本字符串中，你就可以指定整个路径、 如何使用路径的作用，以及如何深入探究路径内部结构。
 
-本部分中的所有示例程序都显示在标题下**曲线和多路径**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，并在[**曲线**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves)的解决方案的文件夹。
+本部分中的所有示例程序都显示在标题下**曲线和多路径**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，并在[**曲线**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves)的解决方案的文件夹。
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[绘制弧线的三个方法](arcs.md)
 

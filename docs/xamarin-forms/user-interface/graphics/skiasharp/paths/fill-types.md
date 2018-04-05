@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 88b9dacef7a77d5f18908bdcb696e5172ceaa8c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-path-fill-types"></a>路径的填充类型
 
@@ -32,7 +32,7 @@ _发现不同的效果，可以使用 SkiaSharp 路径填充类型_
 
 与许多例程路径，绕算法通常填充路径的所有封闭的的区域。 奇偶算法通常产生更有趣的结果。
 
-典型的示例中所示是五个星， **Five-Pointed 星型**页。 [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml)文件实例化两个`Picker`视图以选中路径填充类型和是否描边或填充路径和 / 或，以及以什么顺序：
+典型的示例中所示是五个星， **Five-Pointed 星型**页。 [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml)文件实例化两个`Picker`视图以选中路径填充类型和是否描边或填充路径和 / 或，以及以什么顺序：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

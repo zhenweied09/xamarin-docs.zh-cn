@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 77005665d163e7f9f62325b94cc5c779a7873f78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c0b793a495278d91429045d7e396917d02c1412e
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="paths-and-text"></a>路径和文本
 
@@ -45,7 +45,7 @@ public SKPath GetTextPath (String text, Single x, Single y)
 
 [![](text-paths-images/clippingtext-small.png "三重的剪辑文本页的屏幕截图")](text-paths-images/clippingtext-large.png#lightbox "三倍的剪切的文本页的屏幕截图")
 
-[ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs)类构造函数加载用于存储作为嵌入资源中的位图**媒体**的解决方案的文件夹：
+[ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs)类构造函数加载用于存储作为嵌入资源中的位图**媒体**的解决方案的文件夹：
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -126,7 +126,7 @@ public class ClippingTextPage : ContentPage
 
 [![](text-paths-images/textpatheffect-small.png "三重的文本路径效果页面屏幕截图")](text-paths-images/textpatheffect-large.png#lightbox "三倍的文本路径效果页面屏幕截图")
 
-大部分中的工作[ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs)类出现在字段和构造函数中。 这两个`SKPaint`对象定义为字段用于两个不同的用途： 第一个 (名为`textPathPaint`) 用于将转换使用 & 符`TextSize`的 50%到 1 D 路径效果的路径。 第二个 (`textPaint`) 用来显示该路径产生效果 & 符的更大版本。 为此，`Style`的此第二个绘制对象设置为`Stroke`，但`StrokeWidth`因为该属性不需要如此，使用 1 D 路径效果时，未设置属性：
+大部分中的工作[ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs)类出现在字段和构造函数中。 这两个`SKPaint`对象定义为字段用于两个不同的用途： 第一个 (名为`textPathPaint`) 用于将转换使用 & 符`TextSize`的 50%到 1 D 路径效果的路径。 第二个 (`textPaint`) 用来显示该路径产生效果 & 符的更大版本。 为此，`Style`的此第二个绘制对象设置为`Stroke`，但`StrokeWidth`因为该属性不需要如此，使用 1 D 路径效果时，未设置属性：
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -213,7 +213,7 @@ public class TextPathEffectPage : ContentPage
 
 你还可以调用`GetFillPath`上从返回的路径`GetTextPath`但首先你可能不完全确定的将看到如下。
 
-**字符大纲轮廓**页说明该方法。 相关的所有代码都都在`PaintSurface`处理程序[ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs)类。
+**字符大纲轮廓**页说明该方法。 相关的所有代码都都在`PaintSurface`处理程序[ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs)类。
 
 构造函数首先创建`SKPaint`对象名为`textPaint`与`TextSize`属性基于页的大小。 这将转换为路径使用`GetTextPath`方法。 坐标自变量`GetTextPath`有效地中心在屏幕上的路径：
 
@@ -287,7 +287,7 @@ public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOf
 
 此方法具有任何工具来提供有关设置的指导`TextSize`属性`SKPaint`进行大小调整，完全以运行从路径的开头到末尾的文本。 有时，你可以了解自己该文本大小。 其他情况下你将需要使用路径测量函数会在将来的文章中所述。
 
-**循环文本**程序使文本换行圆环。 很容易地确定一个圆的周长，因此很容易大小来完全适合的文本。 `PaintSurface`处理程序[ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs)类计算的基于页的大小圆的半径。 该圆将成为`circularPath`:
+**循环文本**程序使文本换行圆环。 很容易地确定一个圆的周长，因此很容易大小来完全适合的文本。 `PaintSurface`处理程序[ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs)类计算的基于页的大小圆的半径。 该圆将成为`circularPath`:
 
 ```csharp
 public class CircularTextPage : ContentPage

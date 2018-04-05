@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 3a828baccda83822237d2564d771bcd89c9099e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-basics"></a>路径基础知识
 
@@ -50,7 +50,7 @@ _浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象_
 
 通过再次调用结束的轮廓`MoveTo`或`RMoveTo`，，从此处开始，新的轮廓线或调用`Close`，用于关闭轮廓。 `Close`方法自动追加一条直线从当前点具有轮廓的第一个点并将路径标记为已关闭，这意味着它将呈现而无需任何笔划端头。
 
-打开和关闭轮廓之间的区别所示**两个三角形轮廓**页上，使用`SKPath`对象具有两个轮廓呈现两个三角形。 第一个轮廓线是打开和关闭第二个。 下面是[ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs)类：
+打开和关闭轮廓之间的区别所示**两个三角形轮廓**页上，使用`SKPath`对象具有两个轮廓呈现两个三角形。 第一个轮廓线是打开和关闭第二个。 下面是[ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs)类：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -122,7 +122,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) 用于圆角联接
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) 已被截关闭联接
 
-**描边联接**页面的显示了这三个描边，则类似的代码的联接**笔划端头**页。 这是`PaintSurface`中的事件处理程序[ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs)类：
+**描边联接**页面的显示了这三个描边，则类似的代码的联接**笔划端头**页。 这是`PaintSurface`中的事件处理程序[ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs)类：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

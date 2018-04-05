@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c9f5f9f20296b1c2443a8addeebd4d12ccaa1ab4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-skew-transform"></a>时间差转换
 
@@ -39,7 +39,7 @@ public void Skew (SKPoint skew)
 
 但是，不太可能，你将使用这些两种方法之一中隔离。
 
-**倾斜试验**页允许您对偏差进行试验的数值 – 10 到 10 之间。 文本字符串在左上角的页上，定位与从两个中获取的偏差值`Slider`元素。 下面是`PaintSurface`中的处理程序[ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs)类：
+**倾斜试验**页允许您对偏差进行试验的数值 – 10 到 10 之间。 文本字符串在左上角的页上，定位与从两个中获取的偏差值`Slider`元素。 下面是`PaintSurface`中的处理程序[ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs)类：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,7 +109,7 @@ y = ySkew ·(x – px) + y
 
 为 100 像素垂直 150 像素 shift 的比率为在此示例中该角度的正切值 56.3 度。
 
-XAML 文件**倾斜角度试验**页是类似于**倾斜角度**只不过页上`Slider`元素介于 – 90 到 90 度。 [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs)代码隐藏文件中心页上的文本，并使用`Translate`设置页的中心倾斜的中心。 Short`SkewDegrees`底部的代码的方法将转换角度，以扭曲值：
+XAML 文件**倾斜角度试验**页是类似于**倾斜角度**只不过页上`Slider`元素介于 – 90 到 90 度。 [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs)代码隐藏文件中心页上的文本，并使用`Translate`设置页的中心倾斜的中心。 Short`SkewDegrees`底部的代码的方法将转换角度，以扭曲值：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -154,7 +154,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 [![](skew-images/skewangleexperiment-small.png "三重的倾斜角度试验页面屏幕截图")](skew-images/skewangleexperiment-large.png#lightbox "三倍的倾斜角度试验页面屏幕截图")
 
-小的负水平扭曲可作为模拟斜体或倾斜文本**倾斜文本**页说明。 [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs)类演示如何执行：
+小的负水平扭曲可作为模拟斜体或倾斜文本**倾斜文本**页说明。 [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs)类演示如何执行：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

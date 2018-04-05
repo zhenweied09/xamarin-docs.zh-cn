@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="fonts"></a>字体
 
@@ -135,7 +135,7 @@ Xamarin.Forms 控制所有具有该显示文本`Font`可以在 Xaml 中设置的
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-若要指定多个`Font`设置，结合到单个字体属性字符串所需的设置。 字体属性字符串的格式应为`"[font-face],[attributes],[size]"`。 参数的顺序很重要，所有参数都是可选的并且多个`attributes`可指定，例如：
+若要指定多个`Font`设置，结合到单个字体属性字符串所需的设置。 字体属性字符串的格式应为`"[font-face],[attributes],[size]"`。 参数的顺序很重要，所有参数都是可选的以及多个`attributes`可指定，例如：
 
 ```xaml
 <Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />

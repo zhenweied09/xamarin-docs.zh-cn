@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: 0068540ec385ab3be56865c7728eb3128154a2ea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43699e77bc8b7365c6d5f7fbf27e19a945e69e22
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="limitations"></a>限制
 
@@ -51,7 +51,7 @@ Xamarin 实时播放器应用程序支持以下设备：
 - 反射对有限的支持 （当前影响某些常用的 NuGets，SQLite 和 Json.NET 等）。 其他 NuGets 可能仍受支持。
 - 某些系统类不能重写 （例如，不能实现子类）。
 - （但是它已配置为常见的操作，如照片库 access） 的实时的 Xamarin Player 应用中不能处理需要设置某些平台功能。
-- 忽略自定义的目标和生成步骤。 例如，工具如 Fody、 Retit、 AutoFac，和 AutoMapper 不能合并。
+- 忽略自定义的目标和生成步骤。 例如，不能合并 Fody、 Refit、 AutoFac 和 AutoMapper 之类的工具。
 - 在 Android 上不支持 F # 项目并在 iOS 上的支持有限
 - 可能不支持使用自定义的泛型类和接口的高级的方案。
 

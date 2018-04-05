@@ -7,11 +7,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 0451653b4ee5c85b9bcf884b6b5609a251cf577c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>使用路径和区域的剪辑
 
@@ -23,7 +23,7 @@ _对特定区域，并创建区域使用剪辑图形路径_
 
 *剪辑区域*是在其中呈现图形屏幕的区域。 不呈现的剪辑区域之外显示的任何内容。 通常定义的剪辑区域[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/)对象但你可以或者定义剪辑区域使用[ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/)对象。 这两种类型的对象首先似乎相关，因为你可以从路径中创建一个区域。 但是，无法创建区域上的路径和它们仍然是非常不同内部： 路径由组成的直线和曲线，一系列，而一个区域定义的一系列水平扫描线。
 
-上面的图像由**通过锁眼 Monkey**页。 [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs)类定义使用 SVG 数据的路径，并使用此构造函数从程序资源加载位图：
+上面的图像由**通过锁眼 Monkey**页。 [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs)类定义使用 SVG 数据的路径，并使用此构造函数从程序资源加载位图：
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -118,7 +118,7 @@ public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.In
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-默认情况下，生成的剪辑区域是现有的剪辑区域的交集和`SKPath`或`SKRect`中指定`ClipPath`或`ClipRect`方法。 此进行了演示**四个圆圈相交剪辑**页。 `PaintSurface`中的处理程序[ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs)类重复使用相同`SKPath`对象以创建四个重叠圆圈，其中每个减少了通过连续调用的剪辑区域`ClipPath`:
+默认情况下，生成的剪辑区域是现有的剪辑区域的交集和`SKPath`或`SKRect`中指定`ClipPath`或`ClipRect`方法。 此进行了演示**四个圆圈相交剪辑**页。 `PaintSurface`中的处理程序[ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs)类重复使用相同`SKPath`对象以创建四个重叠圆圈，其中每个减少了通过连续调用的剪辑区域`ClipPath`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -183,7 +183,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](clipping-images//clipoperations-small.png "三重的剪辑操作页面的屏幕截图")](clipping-images/clipoperations-large.png#lightbox "三倍的剪辑操作页面的屏幕截图")
 
-[ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs)类定义了两个`SKPaint`对象，以作为字段，，然后将屏幕分成两个矩形区域。 这些区域是电话是否处于纵向或横向朝模式而异。 `DisplayClipOp`类然后显示的文本和调用`ClipPath`的两个圆路径来演示每个剪辑操作：
+[ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs)类定义了两个`SKPaint`对象，以作为字段，，然后将屏幕分成两个矩形区域。 这些区域是电话是否处于纵向或横向朝模式而异。 `DisplayClipOp`类然后显示的文本和调用`ClipPath`的两个圆路径来演示每个剪辑操作：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -286,7 +286,7 @@ public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperat
 
 这些所有可能的匹配项的组合这些两个圆？ 考虑为它们的本身中所示的三个组件组合生成的图像`Difference`， `Intersect`，和`ReverseDifference`操作。 第三个次幂，两个或八个，组合的总数目。 缺少两个是原始的区域 (这将导致从不调用`Op`根本) 和完全空白区域。
 
-将更难以用于剪辑因为你需要首先从该路径中，创建一个路径，和区域中，然后合并多个区域的区域。 整体结构**区域操作**页是非常类似于**剪辑操作**但[ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs)类将屏幕分为六个区域和显示要用于此作业的区域所需的额外工作：
+将更难以用于剪辑因为你需要首先从该路径中，创建一个路径，和区域中，然后合并多个区域的区域。 整体结构**区域操作**页是非常类似于**剪辑操作**但[ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs)类将屏幕分为六个区域和显示要用于此作业的区域所需的额外工作：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -370,7 +370,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 但是，当一个区域都会减少到扫描一系列行，这些扫描线基于特定像素维度。 严格地说，区域不是矢量图形对象。 它是更接近于比到的路径的压缩单色位图显示时的性质。 因此，区域不能缩放或旋转而不会丢失保真度，并因此它们不转换用于剪辑区域时。
 
-但是，可以将转换应用到用于绘制的区域。 **区域绘制**程序生动演示区域的内部性质。 [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs)类创建`SKRegion`对象基于`SKPath`的 10 单元 radius 圆。 转换然后展开该圆圈，以适应页面：
+但是，可以将转换应用到用于绘制的区域。 **区域绘制**程序生动演示区域的内部性质。 [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs)类创建`SKRegion`对象基于`SKPath`的 10 单元 radius 圆。 转换然后展开该圆圈，以适应页面：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -427,7 +427,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 区域是离散的坐标的一系列操作。
 
-如果你不需要使用转换的剪辑区域与，可用于区域剪辑，作为**四个-叶与苜蓿**页说明。 [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs)类构造从四个循环区域的复合区域、 为剪辑区域中，设置该复合区域，然后绘制一系列 360 直线从页的中心发出的：
+如果你不需要使用转换的剪辑区域与，可用于区域剪辑，作为**四个-叶与苜蓿**页说明。 [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs)类构造从四个循环区域的复合区域、 为剪辑区域中，设置该复合区域，然后绘制一系列 360 直线从页的中心发出的：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

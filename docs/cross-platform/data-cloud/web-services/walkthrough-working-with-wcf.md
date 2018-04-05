@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 7f6885415e1b5e0c988d13fe331703213b9b8fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b317c4c82ec736c7f4c8306036e43cf04086a82
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>演练-使用 WCF
 
@@ -167,7 +167,6 @@ _本演练介绍如何使用 Xamarin 生成的移动应用程序可以使用 WCF
 1. 让我们开始通过配置 IIS Express 以侦听外部请求。 我们可以执行此操作通过 IIS express 在编辑配置文件`[solutiondirectory]\.vs\config\applicationhost.config`，如以下屏幕截图中所示：
 
     [![](walkthrough-working-with-wcf-images/image05.png "我们可以在此屏幕截图所示执行此操作通过在 solutiondirectory.vsconfigapplicationhost.config，IIS express 编辑配置文件")](walkthrough-working-with-wcf-images/image05.png#lightbox)
-
 
     找到`site`同名元素`HelloWorldWcfHost`。 其外观应类似于以下 XML 代码段：
 

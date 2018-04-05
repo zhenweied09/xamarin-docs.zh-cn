@@ -7,11 +7,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 7ea99612f85a853bcd045b773df0a01f33427a89
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="svg-path-data"></a>SVG 路径数据
 
@@ -147,7 +147,7 @@ T x2 y2 ...
 
 [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/)方法很适用获取 SVG 路径数据从现有`SKPath`对象将传输到另一个程序，或以存储中基于文本的文件格式，如 XML。 (`ToSvgPathData`这篇文章中的代码示例不演示方法。)执行*不*预期`ToSvgPathData`返回完全对应的方法调用，创建路径的字符串。 具体而言，你将发现弧将转换为多个`QuadTo`命令，并且这是其返回的路径数据中的显示方式`ToSvgPathData`。
 
-**路径数据 Hello**页上 spells 出单词"HELLO"使用 SVG 路径数据。 同时`SKPath`和`SKPaint`对象定义为中的字段[ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs)类：
+**路径数据 Hello**页上 spells 出单词"HELLO"使用 SVG 路径数据。 同时`SKPath`和`SKPaint`对象定义为中的字段[ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs)类：
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -218,7 +218,7 @@ public class PathDataHelloPage : ContentPage
 
 [![](path-data-images/pathdatahello-small.png "路径数据 Hello 页面的三个屏幕截图")](path-data-images/pathdatahello-large.png#lightbox "路径数据 Hello 页面的三个屏幕截图")
 
-**路径数据 Cat**页是类似。 路径和绘制对象定义为字段在[ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs)类：
+**路径数据 Cat**页是类似。 路径和绘制对象定义为字段在[ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs)类：
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -291,7 +291,7 @@ public class PathDataCatPage : ContentPage
 
 通常，当`SKPath`对象定义为字段，必须在构造函数或另一种方法定义的路径的轮廓。 当使用 SVG 路径数据，但是，你已了解可以完全在字段定义指定的路径。
 
-早期版本**繁琐模拟时钟**示例[**旋转转换**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)文章显示为简单的线条的时钟指针。 **非常模拟时钟**下面的程序会将替换与这些行`SKPath`对象定义中的字段为[ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs)类和`SKPaint`对象：
+早期版本**繁琐模拟时钟**示例[**旋转转换**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)文章显示为简单的线条的时钟指针。 **非常模拟时钟**下面的程序会将替换与这些行`SKPath`对象定义中的字段为[ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs)类和`SKPaint`对象：
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage

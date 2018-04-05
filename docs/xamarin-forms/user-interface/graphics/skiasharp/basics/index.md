@@ -7,11 +7,11 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a6a1787b6bdb54f66aa5214bdd9193af354cebb1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d602a03d7ac5943e45fd502981b39aefc4e8bc06
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 绘制基础知识
 
@@ -19,7 +19,7 @@ _了解 SkiaSharp 图形概念以及坐标的基础知识_
 
 SkiaSharp NuGet 包添加到 Xamarin.Forms 应用程序后，你可以开始使用 SkiaSharp 图形。 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括演示 SkiaSharp 渐进式更高级的课程中的编程技术的多个页面。
 
-本部分中的所有示例程序都显示在标题下**SkiaSharp 基础知识**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，并在[**基础知识**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics)的解决方案的文件夹。
+本部分中的所有示例程序都显示在标题下**SkiaSharp 基础知识**的主页中[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序，并在[**基础知识**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics)的解决方案的文件夹。
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[绘制一个简单的圆圈](circle.md)
 

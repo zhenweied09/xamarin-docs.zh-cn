@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: dd9694a05632cd5f37cb583d15bc93311a49cfdc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>像素和设备无关的单位
 
@@ -31,7 +31,7 @@ _浏览 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异_
 - [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/)属性`SKCanvasView`对象。
 - [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/)属性`SKImageInfo`值，该值是与一致`Width`和`Height`在两个前面的页中使用的属性。
 
-[ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs)类演示如何显示这些值。 构造函数将保存`SKCanvasView`作为字段，以便它可以在中访问的对象`PaintSurface`事件处理程序：
+[ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs)类演示如何显示这些值。 构造函数将保存`SKCanvasView`作为字段，以便它可以在中访问的对象`PaintSurface`事件处理程序：
 
 ```csharp
 SKCanvasView canvasView;
@@ -114,7 +114,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
 ```
 
-是否可以绘制填充显示图面的椭圆？ **椭圆填充**页演示如何。 `PaintSurface`中的事件处理程序[ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs)类减去从半描边宽度`xRadius`和`yRadius`以适应整个椭圆的值并将其大纲显示面中：
+是否可以绘制填充显示图面的椭圆？ **椭圆填充**页演示如何。 `PaintSurface`中的事件处理程序[ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs)类减去从半描边宽度`xRadius`和`yRadius`以适应整个椭圆的值并将其大纲显示面中：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
