@@ -7,11 +7,11 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: b86068c2ed5063c25f76e81fdf477550b1437984
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="bitmap-basics"></a>位图基础知识
 
@@ -29,7 +29,7 @@ SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/a
 - 从可执行文件中嵌入的资源
 - 从用户的照片库
 
-三个`SKBitmap`对象这些三个源定义为中的字段[ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs)类：
+三个`SKBitmap`对象这些三个源定义为中的字段[ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs)类：
 
 ```csharp
 public class BasicBitmapsPage : ContentPage

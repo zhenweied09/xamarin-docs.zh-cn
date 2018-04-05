@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 668b1f437b78535bd4cdf3bb3f80154dbf281a02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>绘制一段弧线，三个方法
 
@@ -73,7 +73,7 @@ path.ArcTo (oval, startAngle, sweepAngle, false);
 
 此版本的`ArcTo`绘制一条从当前位置到弧线的开头。这意味着弧线可以某个位置是更大的轮廓线的中间。
 
-**角度弧线**页允许你使用两个滑块来指定开始日期和扫描角度。 XAML 文件实例化两个`Slider`元素和`SKCanvasView`。 `PaintCanvas`中的处理程序[ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs)文件绘制椭圆和弧线使用两个`SKPaint`定义为字段的对象：
+**角度弧线**页允许你使用两个滑块来指定开始日期和扫描角度。 XAML 文件实例化两个`Slider`元素和`SKCanvasView`。 `PaintCanvas`中的处理程序[ **AngleArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AngleArcPage.xaml.cs)文件绘制椭圆和弧线使用两个`SKPaint`定义为字段的对象：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -110,7 +110,7 @@ y = 椭圆。MidY + （椭圆。高度 / 2) * sin(angle)
 
 `angle`值可以是`startAngle`或`startAngle + sweepAngle`。
 
-两个角度来定义一段弧线，使用适合于情况下，如果你知道你想要绘制，例如，以使饼图弧的角度的长度。 **分离型饼图**演示这一页。 [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs)类使用的内部类定义某些虚构的数据和颜色：
+两个角度来定义一段弧线，使用适合于情况下，如果你知道你想要绘制，例如，以使饼图弧的角度的长度。 **分离型饼图**演示这一页。 [ `ExplodedPieChartPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ExplodedPieChartPage.cs)类使用的内部类定义某些虚构的数据和颜色：
 
 ```csharp
 class ChartData
@@ -259,7 +259,7 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 
 可以从第二个切点继续具有轮廓。
 
-**正切弧线**页面允许您尝试使用切线弧。这是派生自的多个页面的第一个[ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/InteractivePage.cs)，后者定义了一些方便`SKPaint`对象，并执行`TouchPoint`处理：
+**正切弧线**页面允许您尝试使用切线弧。这是派生自的多个页面的第一个[ `InteractivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/InteractivePage.cs)，后者定义了一些方便`SKPaint`对象，并执行`TouchPoint`处理：
 
 ```csharp
 public class InteractivePage : ContentPage
@@ -309,7 +309,7 @@ public class InteractivePage : ContentPage
 }
 ```
 
-`TangentArcPage` 类派生自 `InteractivePage`。 中的构造函数[ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs)文件都负责实例化和初始化`touchPoints`数组，并且设置`baseCanvasView`(在`InteractivePage`) 到`SKCanvasView`中实例化对象[ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml)文件：
+`TangentArcPage` 类派生自 `InteractivePage`。 中的构造函数[ **TangentArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml.cs)文件都负责实例化和初始化`touchPoints`数组，并且设置`baseCanvasView`(在`InteractivePage`) 到`SKCanvasView`中实例化对象[ **TangentArcPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TangentArcPage.xaml)文件：
 
 ```csharp
 public partial class TangentArcPage : InteractivePage
@@ -419,7 +419,7 @@ public partial class TangentArcPage : InteractivePage
 
 切线弧线非常适合于创建圆的角，如圆角矩形。 因为`SKPath`已包含`AddRoundedRect`方法，**舍入 Heptagon**页演示如何使用`ArcTo`用于舍入七侧多边形的边角。 （代码通用化任何正则多边形中）。
 
-`PaintSurface`处理程序[ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs)类包含一个`for`循环来计算 heptagon 和第二个来计算从这些七个边指的七个顶点的坐标顶点。 然后，使用这些指构造路径：
+`PaintSurface`处理程序[ `RoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RoundedHeptagonPage.cs)类包含一个`for`循环来计算 heptagon 和第二个来计算从这些七个边指的七个顶点的坐标顶点。 然后，使用这些指构造路径：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -543,7 +543,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 尽管此方法定义一段弧线，听起来复杂上第一次遇到，它是唯一的方法，允许定义一段弧线，与旋转椭圆，且这经常是最简单的方法，当你需要与轮廓线的其他部分集成弧时。
 
-**椭圆弧**页面允许您以交互方式设置的两个点的大小和椭圆旋转角度。 `EllipticalArcPage`类派生自`InteractivePage`，和`PaintSurface`中的处理程序[ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs)代码隐藏文件绘制四个弧：
+**椭圆弧**页面允许您以交互方式设置的两个点的大小和椭圆旋转角度。 `EllipticalArcPage`类派生自`InteractivePage`，和`PaintSurface`中的处理程序[ **EllipticalArcPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/EllipticalArcPage.xaml.cs)代码隐藏文件绘制四个弧：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -613,7 +613,7 @@ y = 112·sin(41.8) = 75
 
 ![](arcs-images/infinitycoordinates.png "两个圆圈，切线和坐标")
 
-`PaintSurface`中的处理程序[ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs)类定位无穷大登录以便 （0，0） 点是否位于页的中心和缩放的屏幕大小的路径：
+`PaintSurface`中的处理程序[ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs)类定位无穷大登录以便 （0，0） 点是否位于页的中心和缩放的屏幕大小的路径：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
