@@ -1,18 +1,17 @@
 ---
 title: 跨平台性能
 description: 可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: e8b597221e806c2338d6f1965d3d151f998a3011
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cross-platform-performance"></a>跨平台性能
 

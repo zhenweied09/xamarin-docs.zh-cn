@@ -1,18 +1,18 @@
 ---
-title: "了解 Android：深度分析"
-description: "本指南由两部分构成，在本指南中，用户将生成第一个 Xamarin.Android 应用程序，并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会向你介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。"
-ms.topic: article
+title: 了解 Android：深度分析
+description: 本指南由两部分构成，在本指南中，用户将生成第一个 Xamarin.Android 应用程序，并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会向你介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: e9e554da80218d2e89ff79c6e89886d707b1ed95
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bae3e7323596cc88f2b76aceeb5a4d1df4ce2d0c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-deep-dive"></a>了解 Android：深度分析
 
@@ -404,7 +404,7 @@ Google Play Services 是一套外接程序库，让 Android 开发人员可以�
 
 -----
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 祝贺你！ 你现在应已充分了解了 Xamarin.Android 应用程序的组件以及创建它们所需的工具。
 

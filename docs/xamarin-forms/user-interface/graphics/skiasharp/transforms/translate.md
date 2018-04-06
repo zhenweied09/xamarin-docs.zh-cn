@@ -7,11 +7,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 573848186a8f389ac18e22ea4c3b7d4fe1503449
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98bf81df3eed951893c6bb717d933cfb61e029d3
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-translate-transform"></a>转换变换
 
@@ -35,7 +35,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-**累积转换**页[ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)示例程序演示了多个调用的`Translate`方法可以累计。 [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs)类显示的相同的矩形的 20 个版本，每个偏移量从以前的矩形正好这样它们对角线将延长。 下面是`PaintSurface`事件处理程序：
+**累积转换**页[ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)示例程序演示了多个调用的`Translate`方法可以累计。 [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs)类显示的相同的矩形的 20 个版本，每个偏移量从以前的矩形正好这样它们对角线将延长。 下面是`PaintSurface`事件处理程序：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -78,7 +78,7 @@ y = y + dy
 
 这些被称为*转换公式*的转换。 默认值`dx`和`dy`新`SKCanvas`均为 0。
 
-通常用于转换变换阴影效果和类似技术，作为**翻译文本效果**页说明。 以下是相关的部分`PaintSurface`中的处理程序[ `TranslateTextEffectsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs)类：
+通常用于转换变换阴影效果和类似技术，作为**翻译文本效果**页说明。 以下是相关的部分`PaintSurface`中的处理程序[ `TranslateTextEffectsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs)类：
 
 ```csharp
 float textSize = 150;
@@ -137,7 +137,7 @@ using (SKPaint textPaint = new SKPaint())
 
 但是，你无需担心从一次调用的执行的转换`PaintSurface`到下一个处理程序。 每次新调用`PaintSurface`提供新`SKCanvas`与默认转换的对象。
 
-另一个常见用途`Translate`转换是呈现的视觉对象已最初创建使用十分方便的绘图区域的坐标。 例如，你可能想要使用的中心点 （0，0） 在指定坐标是模拟时钟。 你可以然后使用转换来显示所需的位置。 此进行了演示 [**Hendecagram 数组**] 页。 [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs)类首先创建`SKPath`11 星的对象。 `HendecagramPath`对象定义为公共、 静态的且只读的因此，它可以从其他演示程序访问。 在静态构造函数中创建它：
+另一个常见用途`Translate`转换是呈现的视觉对象已最初创建使用十分方便的绘图区域的坐标。 例如，你可能想要使用的中心点 （0，0） 在指定坐标是模拟时钟。 你可以然后使用转换来显示所需的位置。 此进行了演示 [**Hendecagram 数组**] 页。 [ `HendecagramArrayPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramPage.cs)类首先创建`SKPath`11 星的对象。 `HendecagramPath`对象定义为公共、 静态的且只读的因此，它可以从其他演示程序访问。 在静态构造函数中创建它：
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -211,7 +211,7 @@ public class HendecagramArrayPage : ContentPage
 
 [![](translate-images/hendecagramarray-small.png "三重的 Hendecagram 数组页面屏幕截图")](translate-images/hendecagramarray-large.png#lightbox "Hendecagram 数组页面的三个屏幕截图")
 
-动画通常涉及到转换。 **Hendecagram 动画**页移动 11 星的圆圈，圆圈中。 [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs)类开头某些字段并且重写的`OnAppearing`和`OnDisappearing`启动和停止 Xamarin.Forms 计时器方法：
+动画通常涉及到转换。 **Hendecagram 动画**页移动 11 星的圆圈，圆圈中。 [ `HendecagramAnimationPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs)类开头某些字段并且重写的`OnAppearing`和`OnDisappearing`启动和停止 Xamarin.Forms 计时器方法：
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage

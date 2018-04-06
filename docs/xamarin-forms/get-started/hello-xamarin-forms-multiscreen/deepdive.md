@@ -1,17 +1,17 @@
 ---
-title: "Xamarin.Forms 多屏显示深度解析"
-ms.topic: article
+title: Xamarin.Forms 多屏显示深度解析
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: e4faa36c-6600-48c0-94c4-b4431103a4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 91be10daaeb508ca193e734d49a21323d70e2055
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4e6dace59c14a0e30ef4cdea2c7dd490d645057
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-multiscreen-deep-dive"></a>Xamarin.Forms 多屏显示深度解析
 
@@ -95,6 +95,6 @@ public partial class App : Application
 
 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 负责在屏幕上显示项的集合。 单个单元格中包含 `ListView` 中的每个项。 若要深入了解如何使用 `ListView` 控件，请参阅 [ListView](~/xamarin-forms/user-interface/listview/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了 Xamarin.Forms 应用程序中的页面导航和数据绑定，并演示了如何在多屏幕跨平台应用程序中使用它们。

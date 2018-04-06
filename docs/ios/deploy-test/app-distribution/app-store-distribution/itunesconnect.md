@@ -1,18 +1,17 @@
 ---
 title: 在 iTunes Connect 中配置应用
 description: 本文介绍在 iTunes Connect 中设置和维护 Xamarin.iOS 应用程序使其可在 App Store 上分发所需的步骤。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: b54313668a2cb87a6cce0b8c519a06247524df81
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>在 iTunes Connect 中配置应用
 

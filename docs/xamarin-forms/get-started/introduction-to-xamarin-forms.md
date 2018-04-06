@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Forms 简介"
-description: "Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。"
-ms.topic: article
+title: Xamarin.Forms 简介
+description: Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: be4b0c907774c33dfcd1818da167acb2dc3b04dd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6428f1658245ec5ecf47e474bc5ffd5d49663bf2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 简介
 
@@ -746,7 +745,7 @@ await Navigation.PopModalAsync();
 
 此外，也可以阅读 Charles Petzold 撰写的 Creating Mobile Apps with Xamarin.Forms（使用 Xamarin.Forms 创建移动应用），了解有关 Xamarin.Forms 的详细信息。 有关详细信息，请参阅[使用 Xamarin.Forms 创建移动应用](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。 Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。
 

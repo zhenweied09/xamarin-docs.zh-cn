@@ -1,18 +1,17 @@
 ---
-title: "使用 TestFlight"
-description: "TestFlight 现在归 Apple 所有，是进行 Xamarin.iOS 应用的 Beta 测试的主要方法。 本文将指导你完成 TestFlight 过程的所有步骤，范围包括从上传应用到使用 iTunes Connect。"
-ms.topic: article
+title: 使用 TestFlight
+description: TestFlight 现在归 Apple 所有，是进行 Xamarin.iOS 应用的 Beta 测试的主要方法。 本文将指导你完成 TestFlight 过程的所有步骤，范围包括从上传应用到使用 iTunes Connect。
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: adc08009de308598041adb79dc02bf83bcf4a2f2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5a6e90aab3aae408d4daace81875e44f075818bd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-testflight"></a>使用 TestFlight
 
@@ -271,7 +270,7 @@ Beta 测试完成后，即可提交应用进行 Apple 的 App Store 审核。 �
 
 [![](testflight-images/submit-for-review.png "单击“提交以供评审”按钮")](testflight-images/submit-for-review.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何通过 iTunes Connect 使用 Apple 的 TestFlight Beta 版测试。 其中阐释了如何将新的内部版本上传到 iTunes Connect，并介绍如何邀请内部和外部 Beta 版测试员来使用我们的应用。
 

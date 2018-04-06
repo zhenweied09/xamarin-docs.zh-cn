@@ -1,17 +1,16 @@
 ---
-title: "发布到 Google Play"
-ms.topic: article
+title: 发布到 Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cc6a5f3fe9ff63081936e5714dfb85058204ef33
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 571b5bb37ee10bb83dceef058613f955a8b7bff9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-google-play"></a>发布到 Google Play
 
@@ -240,7 +239,7 @@ OAuth 客户端的默认名称是 Google Play Android 开发者。 可将其更�
 
 #### <a name="publish"></a>发布
 
-单击“允许”后，浏览器会报告已接收验证码。即将关闭...，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
+单击“允许”后，浏览器会报告已接收验证码。即将关闭..._，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
 
 [![已添加到 Google Play 帐户的帐户](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 

@@ -1,22 +1,21 @@
 ---
-title: "Xamarin.iOS 性能"
-description: "可通过多种方法提高使用 Xamarin.iOS 生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。"
-ms.topic: article
+title: Xamarin.iOS 性能
+description: 可通过多种方法提高使用 Xamarin.iOS 生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/29/2016
-ms.openlocfilehash: 79dbf9001572662e66e7af635ab91c4adf7483d5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3fc6263aa99edb94ae69f1ce8f87835043477392
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 性能
 
-_可通过多种方法提高使用 Xamarin.iOS 生成的应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文介绍并讨论这些方法。_
+_可通过多种方法提高使用 Xamarin.iOS 生成的应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文将介绍并讨论这些方法。_
 
 应用程序性能差表现在许多方面。 这会造成应用程序看起来无响应，导致滚动缓慢，还可降低电池寿命。 但是，优化性能不止需要实现高效的代码。 还必须考虑用户对应用程序性能的体验。 例如，确保操作执行不会妨碍用户执行其他活动，这有助于改进用户的体验。
 
@@ -33,7 +32,7 @@ _可通过多种方法提高使用 Xamarin.iOS 生成的应用程序的性能。
 - [避免代码生成](#avoidcodegeneration)
 
 > [!NOTE]
-> 阅读本文之前，首先应阅读[跨平台性能](~/cross-platform/deploy-test/memory-perf-best-practices.md)，其中讨论了可用于改善使用 Xamarin 平台生成的应用程序的内存使用情况和性能的非平台特定方法。
+> 阅读本文之前，首先应阅读[跨平台性能](~/cross-platform/deploy-test/memory-perf-best-practices.md)，其中讨论了非平台特定方法，可用于改善使用 Xamarin 平台生成的应用程序的内存使用情况和性能。
 
 <a name="avoidcircularreferences" />
 
@@ -253,7 +252,7 @@ class MyTableSource : UITableViewSource
 
 必须避免使用 `System.Reflection.Emit` 或动态语言运行时动态生成代码，因为 iOS 内核会阻止动态代码执行。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍和讨论了用于提高使用 Xamarin.iOS 所生成应用程序的性能的方法。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。
 

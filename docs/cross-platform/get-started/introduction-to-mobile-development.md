@@ -1,17 +1,16 @@
 ---
-title: "移动开发简介"
-ms.topic: article
+title: 移动开发简介
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: d3a39070e17729e99614e26e0a8892c6314512af
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2f3950509134d3f643f0ea63b6725c1b4fe38409
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-mobile-development"></a>移动开发简介
 
@@ -95,7 +94,7 @@ Xamarin 应用程序针对 .NET BCL（称为 Xamarin 移动配置文件）的子
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档只介绍了 Xamarin 平台。 完成生成并运行你第一个应用时，才是真正乐趣的开始。 请参阅[了解 iOS](~/ios/get-started/hello-ios/index.md)、[了解 Android](~/android/get-started/hello-android/index.md) 和 [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)指南开始。
 

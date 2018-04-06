@@ -1,18 +1,17 @@
 ---
-title: "应用程序包大小"
-description: "本文将讨论 Xamarin.Android 应用程序包的组成部分，以及可用于在开发的调试和发布阶段进行高效包部署的相关策略。"
-ms.topic: article
+title: 应用程序包大小
+description: 本文将讨论 Xamarin.Android 应用程序包的组成部分，以及可用于在开发的调试和发布阶段进行高效包部署的相关策略。
 ms.prod: xamarin
 ms.assetid: 8D70CDDD-3D3C-9949-8045-AB8F93D18E74
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: babe45c39f6a69dd9384f3bce8fe28ada31ebfdf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-package-size"></a>应用程序包大小
 
@@ -81,6 +80,6 @@ Android 在复制和安装包方面相对较慢，因此，我们希望包大小
 通过持久长时间首次部署共享运行时和共享平台，每次对应用程序进行更改时，都可以快速轻松地部署新版本，以便拥有一个快速更改/部署/运行周期。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文将探讨 Xamarin.Android 版本和调试配置文件打包的各个方面。 此外，我们还讨论了 Android 平台 Mono 用于在开发的调试和发布阶段进行高效包部署的相关策略。

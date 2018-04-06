@@ -1,17 +1,16 @@
 ---
-title: "面向 Objective-C 开发人员的 C# 入门"
-description: "Xamarin.iOS 允许用 C# 编写的平台无关的代码跨平台共享。 但是，现有 iOS 应用程序可能想要利用已创建的 Objective-C 代码。 本文面向希望转移到 Xamarin 和 C# 语言的 Objective-C 开发人员提供一个快速入门。"
-ms.topic: article
+title: 面向 Objective-C 开发人员的 C# 入门
+description: Xamarin.iOS 允许用 C# 编写的平台无关的代码跨平台共享。 但是，现有 iOS 应用程序可能想要利用已创建的 Objective-C 代码。 本文面向希望转移到 Xamarin 和 C# 语言的 Objective-C 开发人员提供一个快速入门。
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfc91ba92b2ed62e61d7ba99dec03784933295bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 717e131dd4025ea07780f6e52d8171fd15272dac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-primer-for-objective-c-developers"></a>面向 Objective-C 开发人员的 C# 入门
 
@@ -144,6 +143,6 @@ Objective-C 使用块创建闭包，可以在其中创建函数内联，以便�
 
 有关 lambda 表达式的详细信息，请参阅 Microsoft 的 [C# 编程指南](http://msdn.microsoft.com/en-us/library/vstudio/bb397687.aspx)。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，将 Objective-C 和 C# 之间的各种语言特征进行了对比。 在某些情况下，它会调用两种语言之间存在的类似特征，例如块到 lambda 表达式，以及类别到扩展方法。 此外，还对比了两种语言存在的不同之处，例如 C# 中的命名空间和 static 关键字的含义。

@@ -1,18 +1,17 @@
 ---
 title: 发布到 App Store
 description: 本指南演示如何使用 Visual Studio for Mac 部署 Xamarin.Mac 应用。 其中介绍如何设置 Mac 开发人员帐户、演示代码签名证书的创建过程，以及说明如何使用这些证书来生成可直接分发或通过 Mac App Store 分发的 Mac 应用。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e4c7b0913d43d9db3b5414c831864dae8d0b4d61
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3b21dd0adfd96e1190660aa97b2850f968b5473f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-the-app-store"></a>发布到 App Store
 

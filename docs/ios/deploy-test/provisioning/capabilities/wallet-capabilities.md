@@ -1,18 +1,17 @@
 ---
-title: "钱包功能"
-description: "向应用程序添加功能通常需要其他预配设置。 本指南将介绍钱包功能所需的设置。"
-ms.topic: article
+title: 钱包功能
+description: 向应用程序添加功能通常需要其他预配设置。 本指南将介绍钱包功能所需的设置。
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 952fa7dfa93c1dcb45eafe4eec08c73d2a8571eb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f41ba2b693b37f39ea49f62e322932537014a317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="wallet-capabilities"></a>钱包功能
 

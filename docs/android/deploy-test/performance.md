@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.Android 性能"
-description: "可以通过许多方法提高使用 Xamarin.Android 构建的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。"
-ms.topic: article
+title: Xamarin.Android 性能
+description: 可以通过许多方法提高使用 Xamarin.Android 构建的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: a22190adc97cb80f5900dda4a073bdcdf80ef99b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 性能
 
@@ -262,7 +261,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 对话框的操作目的完成后，当使用 [`ProgressDialog`](https://developer.xamarin.com/api/type/Android.App.ProgressDialog/) 类（或任何对话框或警报）而不是调用 [`Hide`](https://developer.xamarin.com/api/member/Android.App.Dialog.Hide()/) 方法时，请调用 [`Dismiss`](https://developer.xamarin.com/api/member/Android.App.Dialog.Dismiss()/) 方法。 否则，该对话框将仍处于活动状态，并由于继续引用活动而导致泄露活动。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍和讨论了提高使用 Xamarin.Android 构建的应用程序的性能的方法。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。
 

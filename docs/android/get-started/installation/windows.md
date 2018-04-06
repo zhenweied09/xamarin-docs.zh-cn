@@ -1,18 +1,17 @@
 ---
-title: "Windows 安装"
-description: "本指南介绍了在 Windows 上安装 Xamarin.Android for Visual Studio 的步骤，并介绍了如何配置 Xamarin.Android 来生成你的第一个 Xamarin.Android 应用程序。"
-ms.topic: article
+title: Windows 安装
+description: 本指南介绍了在 Windows 上安装 Xamarin.Android for Visual Studio 的步骤，并介绍了如何配置 Xamarin.Android 来生成你的第一个 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7cf21e75c9ae2f3c27b07cb20f1044779b42b06b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1cd9a4977aad3f3bd8d8a4e51871698a54f75eb8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="windows-installation"></a>Windows 安装
 
@@ -103,7 +102,7 @@ Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器）
 就这么简单！ 现在即可使用 Xamarin.Android 创建 Android 应用程序！
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了如何在 Windows 上设置和安装 Xamarin.Android 平台、如何（可选）使用自定义 Java JDK 和 Android SDK 安装位置配置 Visual Studio、如何启动 SDK Manager 安装其他 Android SDK 组件、如何设置 Android 设备或仿真器，以及如何开始构建你的第一个应用程序。
 

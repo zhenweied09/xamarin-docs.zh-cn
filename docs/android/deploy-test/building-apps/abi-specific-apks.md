@@ -1,18 +1,17 @@
 ---
-title: "构建特定于 ABI 的 APK"
-description: "本文讨论如何构建一个使用 Xamarin.Android 以单个 ABI 为目标的 APK。"
-ms.topic: article
+title: 构建特定于 ABI 的 APK
+description: 本文讨论如何构建一个使用 Xamarin.Android 以单个 ABI 为目标的 APK。
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: cf2f62929df63d08add76b7fb6de404d2780b2b3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 89a78c8dd1243dcfea9d14bd9758c5403d1d21ef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="building-abi-specific-apks"></a>构建特定于 ABI 的 APK
 
@@ -177,7 +176,7 @@ rake 任务完成后，将有三个包含文件 `xamarin.helloworld.apk` 的 `bi
 > 本指南中概述的构建过程可以在许多不同的构建系统之一中实现。 尽管我们没有预先编写的示例，但 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 或 [Fake](http://fsharp.github.io/FAKE/) 应该也适用。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南提供了一些关于如何创建针对指定 ABI 的 Android APK 的建议。 此外，还讨论了创建 `android:versionCodes` 的一种可能的方案，该方案将识别该 APK 所针对的 CPU 体系结构。 演练包括一个使用 Rake 编写脚本的示例项目。
 

@@ -1,18 +1,18 @@
 ---
 title: 了解 Mac
 description: 本指南演示了创建第一个 Xamarin.Mac 应用的步骤，并介绍了开发工具链，包括 Visual Studio for Mac、Xcode 和 Interface Builder。 还介绍了用于将 UI 控件公开给代码的输出口和操作，并在最后说明了如何生成、运行和测试 Xamarin.Mac 应用程序。
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 635577bbc35d9e80147ecf7e1a59540099f85b9d
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: e5d87d42765480c97da392cf07b6599108895321
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-mac"></a>了解 Mac
 

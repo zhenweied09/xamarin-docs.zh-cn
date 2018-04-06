@@ -1,18 +1,18 @@
 ---
-title: "Hello，iOS 多屏显示"
-description: "在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。"
-ms.topic: article
+title: Hello，iOS 多屏显示
+description: 在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: d4b7439448d5c25aacf991c89a188086c95a44ac
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="helloios-multiscreen-quickstart"></a>了解 iOS 多屏快速入门
 

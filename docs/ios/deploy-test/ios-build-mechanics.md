@@ -1,18 +1,17 @@
 ---
-title: "iOS 生成机制"
-description: "本指南介绍如何对应用进行计时，以及如何使用可用于所有生成配置的更快生成的方法。"
-ms.topic: article
+title: iOS 生成机制
+description: 本指南介绍如何对应用进行计时，以及如何使用可用于所有生成配置的更快生成的方法。
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-build-mechanics"></a>iOS 生成机制
 
@@ -200,7 +199,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
   - 这有助于本机链接器从你链接的库中消除本机代码。 
   - 请注意，动态查找符号不会使用此属性。 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍如何对 iOS 应用程序进行计时，以及要考虑的依赖于项目生成配置和选项的选项。 
 

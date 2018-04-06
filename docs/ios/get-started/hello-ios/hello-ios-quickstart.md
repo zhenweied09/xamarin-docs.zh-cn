@@ -1,18 +1,18 @@
 ---
 title: Hello，iOS
 description: 在此由两部分构成的指南中，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 6a26bb42ee0abcec70d17633152dd12bd200a737
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: e4828f1ae5448a94fa1f52147d1aef3787e95521
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 快速入门
 

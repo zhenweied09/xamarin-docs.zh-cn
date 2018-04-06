@@ -1,18 +1,17 @@
 ---
-title: "部署和测试"
-description: "本部分包含的指南介绍如何测试应用程序、优化应用程序的性能、做好发布准备、使用证书对应用程序进行签名以及将它发布到应用商店"
-ms.topic: article
+title: 部署和测试
+description: 本部分包含的指南介绍如何测试应用程序、优化应用程序的性能、做好发布准备、使用证书对应用程序进行签名以及将它发布到应用商店
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 5ddc2a258ad09de2cdd8214dceb533441812ae54
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7453af3721cbdb6b93d884322cee1cd5115c317
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>部署和测试
 

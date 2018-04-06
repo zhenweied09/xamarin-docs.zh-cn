@@ -1,18 +1,17 @@
 ---
-title: "多核设备和 Xamarin.Android"
-description: "Android 可以在几种不同的计算机体系结构上运行。 本文档讨论可为一个 Xamarin.Android 应用程序部署的不同 CPU 体系结构。 本文还将介绍如何打包 Android 应用程序以支持不同的 CPU 体系结构。 将介绍应用程序二进制接口 (ABI)，并且将提供有关在 Xamarin.Android 应用程序中使用哪些 ABI 的指导。"
-ms.topic: article
+title: 多核设备和 Xamarin.Android
+description: Android 可以在几种不同的计算机体系结构上运行。 本文档讨论可为一个 Xamarin.Android 应用程序部署的不同 CPU 体系结构。 本文还将介绍如何打包 Android 应用程序以支持不同的 CPU 体系结构。 将介绍应用程序二进制接口 (ABI)，并且将提供有关在 Xamarin.Android 应用程序中使用哪些 ABI 的指导。
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ac525805fce99f44ea1efb132fb99f6d3a01f2f3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 0288ba6aa8a3c9eb89208161f60ba831723444c5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>多核设备和 Xamarin.Android
 
@@ -279,7 +278,7 @@ Xamarin.Android 当前不支持 `mips`。
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文档讨论可运行 Android 应用程序的不同 CPU 体系结构。 它介绍了应用程序二进制接口以及 Android 如何使用它来支持不同的 CPU 体系结构。
 然后接着讨论如何在 Xamarin.Android 应用程序中指定 ABI 支持，并强调了在仅适用于 `armeabi` 的 `armeabi-v7a` 设备上使用 Xamarin.Android 应用程序时出现的问题。

@@ -1,18 +1,17 @@
 ---
-title: "使用 Xamarin.UITest 和 App Center 自动执行 Xamarin.Forms 测试"
-description: "Xamarin UITest 组件可以与 Xamarin.Forms 一起使用，以编写可在数百个设备上的云中运行的 UI 测试。"
-ms.topic: article
+title: 使用 Xamarin.UITest 和 App Center 自动执行 Xamarin.Forms 测试
+description: Xamarin UITest 组件可以与 Xamarin.Forms 一起使用，以编写可在数百个设备上的云中运行的 UI 测试。
 ms.prod: xamarin
 ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/31/2016
-ms.openlocfilehash: 78788524c1afdda127762049018ca769926f729e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f671f31dcc0aaf339a7c9f3d6465f4777a8f7f7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="automate-xamarinforms-testing-with-xamarinuitest-and-app-center"></a>使用 Xamarin.UITest 和 App Center 自动执行 Xamarin.Forms 测试
 
@@ -209,7 +208,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 
 将 Xamarin.UITest 添加到 Xamarin.Forms 解决方案后，即可创建 UITest、在本地运行 UITest，并将其提交到 Xamarin Test Cloud。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 使用一种简单机制即可轻松通过 **Xamarin.UITest** 测试 Xamarin.Forms 应用程序，以将 `AutomationId` 公开为测试自动化的唯一视图标识符。 将 UITest 项目添加到 Xamarin.Forms 解决方案后，即可采用用于 Xamarin.Android 或 Xamarin.iOS 应用程序的相同步骤为 Xamarin.Forms 应用程序编写和运行测试。
 

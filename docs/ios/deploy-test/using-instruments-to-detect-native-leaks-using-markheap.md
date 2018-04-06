@@ -1,18 +1,17 @@
 ---
-title: "使用 Instruments 分析 Xamarin.iOS 应用程序"
-description: "如何对设备或模拟器中的 Xamarin.iOS 应用程序使用 Instruments。"
-ms.topic: article
+title: 使用 Instruments 分析 Xamarin.iOS 应用程序
+description: 如何对设备或模拟器中的 Xamarin.iOS 应用程序使用 Instruments。
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a5c44531a8f05529b169390f25b2946133411098
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>使用 Instruments 分析 Xamarin.iOS 应用程序
 
@@ -60,7 +59,7 @@ Xcode Instruments 只能在 Mac 上运行。
 
 [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "使用 Instruments 进行分析的示例")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍了如何启动 Xcode Instruments，以在 Visual Studio for Mac 中监视 iOS 应用。 请转到 [Instruments 演练](~/ios/deploy-test/walkthrough-apples-instrument.md)了解如何使用 Instruments 诊断内存问题的示例。
 

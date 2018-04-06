@@ -1,18 +1,17 @@
 ---
-title: "Android SDK 仿真器"
-description: "本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合使用。"
-ms.topic: article
+title: Android SDK 仿真器
+description: 本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合使用。
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 956b9e4e280545c8e11925697fced4b9d4e40693
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-sdk-emulator"></a>Android SDK 仿真器
 
@@ -38,7 +37,7 @@ _本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合�
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南介绍如何配置 Google Android SDK 仿真器，以便能够运行和测试 Xamarin.Android 应用。 其中简要介绍了预配置的虚拟设备，说明了如何创建自定义 Android 虚拟设备 (AVD)，并提供了从 Visual Studio 将应用程序部署到仿真器的相关步骤。 此外，疑难解答指南还介绍了常见问题和解决方案。
 

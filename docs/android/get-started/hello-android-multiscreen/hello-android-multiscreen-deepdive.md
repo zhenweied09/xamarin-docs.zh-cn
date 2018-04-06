@@ -1,18 +1,18 @@
 ---
-title: "Hello，Android 多屏幕：深入了解"
-description: "在这个两部分的指南中，会扩展基本 Phoneword 应用程序（在“Hello，Android”指南中创建）以便处理第二个屏幕。 在此过程中，引入了基本 Android 应用程序构建基块。 对 Android 体系结构的更深入了解包括在内，以帮助你更好地了解 Android 应用程序结构和功能。"
-ms.topic: article
+title: Hello，Android 多屏幕：深入了解
+description: 在这个两部分的指南中，会扩展基本 Phoneword 应用程序（在“Hello，Android”指南中创建）以便处理第二个屏幕。 在此过程中，引入了基本 Android 应用程序构建基块。 对 Android 体系结构的更深入了解包括在内，以帮助你更好地了解 Android 应用程序结构和功能。
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello，Android 多屏幕：深入了解
 
@@ -110,7 +110,7 @@ Listview 和适配器不在此文档的讨论范围内，但它们在非常全�
 [使用数据填充 ListView](~/android/user-interface/layouts/list-view/populating.md) 专门处理使用内置 `ListActivity` 和 `ArrayAdapter` 类来创建并填充 `ListView`，而无需定义自定义布局（如 Phoneword 示例中所进行的那样）。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 祝贺，你已完成第一个多屏 Android 应用程序！ 本指南介绍了 *Android 应用程序构建基块*和*意向*，并使用它们生成了一个多屏幕 Android 应用程序。 现在，你已具有坚实的基础，可开始开发自己的 Xamarin.Android 应用程序。
 

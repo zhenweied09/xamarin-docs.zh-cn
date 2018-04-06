@@ -1,18 +1,17 @@
 ---
-title: "iTunesMetadata.plist 文件"
-description: "本文介绍了 iTunesMetadata.plist 文件，该文件用于向 iTunes 提供 iOS 应用程序使用 Ad Hoc 分发进行测试或企业部署的相关信息。"
-ms.topic: article
+title: iTunesMetadata.plist 文件
+description: 本文介绍了 iTunesMetadata.plist 文件，该文件用于向 iTunes 提供 iOS 应用程序使用 Ad Hoc 分发进行测试或企业部署的相关信息。
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3bdf00a9e50b2bf66f51c825306c2ba8e6365dd2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 1b1b0c758126acb0c1e7953ea36e5ac871ee20ef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="the-itunesmetadataplist-file"></a>iTunesMetadata.plist 文件
 
@@ -355,7 +354,7 @@ ms.lasthandoff: 03/15/2018
 
 稍后，准备在 IDE 中生成 IPA 时，请选择此 `iTunesMetadata.plist` 文件。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍了 `iTunesMetadata.plist` 文件，该文件可用于就 Ad Hoc 分发的 iOS 应用程序通知 iTunes。 它还介绍了 plist 文件中的标准键，以及如何在 Visual Studio 和 Visual Studio for Mac 中创建和维护该文件。
 

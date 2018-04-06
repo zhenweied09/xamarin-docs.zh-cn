@@ -1,18 +1,17 @@
 ---
-title: "部署和测试"
-description: "此文档链接到讨论图标、性能和发布到 App Store 的指南。"
-ms.topic: article
+title: 部署和测试
+description: 此文档链接到讨论图标、性能和发布到 App Store 的指南。
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/17/2018
-ms.openlocfilehash: 93d6396fff74ce82c4a171e567d864c6ca41da73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e0af30b412a0a4c9d73009dad5d66d7762edbb9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>部署和测试
 

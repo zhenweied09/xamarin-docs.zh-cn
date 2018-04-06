@@ -1,18 +1,17 @@
 ---
-title: "设置设备进行开发"
-description: "本文介绍了如何设置 Android 设备并将其连接到计算机，使设备可用于运行和调试 Xamarin.Android 应用程序。"
-ms.topic: article
+title: 设置设备进行开发
+description: 本文介绍了如何设置 Android 设备并将其连接到计算机，使设备可用于运行和调试 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 26a543cc096d96346cd4503bf4fa2382f8ca9b78
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 16716db67067f07166fa35df7e539cdf3ed1de5e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="set-up-device-for-development"></a>设置设备进行开发
 
@@ -177,7 +176,7 @@ USB 驱动程序下载完成后，请将其安装。
     adb devices
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何通过在设备上启用调试，配置用于开发的 Android 设备。 还介绍了如何使用 USB 或 WiFi 将设备连接到计算机。
 

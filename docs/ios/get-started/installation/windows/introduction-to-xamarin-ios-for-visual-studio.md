@@ -1,18 +1,17 @@
 ---
-title: "Xamarin.iOS for Visual Studio 简介"
-description: "本文介绍如何使用 Visual Studio 生成并测试 Xamarin iOS 应用程序。 它将介绍如何使用 Visual Studio 新建 iOS 项目、生成 iOS 应用程序，然后使用通过网络连接到主机 Apple 编译器和模拟器的 Mac 以及 Xamarin 生成工具链进行编译、测试和调试。"
-ms.topic: article
+title: Xamarin.iOS for Visual Studio 简介
+description: 本文介绍如何使用 Visual Studio 生成并测试 Xamarin iOS 应用程序。 它将介绍如何使用 Visual Studio 新建 iOS 项目、生成 iOS 应用程序，然后使用通过网络连接到主机 Apple 编译器和模拟器的 Mac 以及 Xamarin 生成工具链进行编译、测试和调试。
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e958b4e48767e0c2246b9f237c681fbc362f6b00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Xamarin.iOS for Visual Studio 简介
 
@@ -207,7 +206,7 @@ Visual Studio 新的“设备日志”工具窗口允许显示 Android 和 iOS �
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/image20.png "通过调试检查局部变量")
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文介绍如何使用 Xamarin.iOS for Visual Studio。 列出了可用于从 Visual Studio 中创建、生成和测试 iOS 应用的各种功能，并介绍了如何生成和调试简单的 iOS 应用程序。
 

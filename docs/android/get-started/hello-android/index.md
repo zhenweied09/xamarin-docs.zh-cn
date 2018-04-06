@@ -1,18 +1,18 @@
 ---
-title: "了解 Android"
-description: "在此由两部分构成的指南中，你将使用 Visual Studio for Mac 或 Visual Studio 生成第一个 Xamarin.Android 应用程序，并促进了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。"
-ms.topic: article
+title: 了解 Android
+description: 在此由两部分构成的指南中，你将使用 Visual Studio for Mac 或 Visual Studio 生成第一个 Xamarin.Android 应用程序，并促进了解使用 Xamarin 进行 Android 应用程序开发的基础知识。 在此过程中，会介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: C6474F70-3617-46AD-93E8-BE66878EEC17
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: 8c48238071084c734768296fefe7056fcc55cabf
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6dabed58bedcbcaf1191c16a790e055184c95a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android"></a>了解 Android
 

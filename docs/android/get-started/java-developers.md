@@ -1,18 +1,17 @@
 ---
-title: "面向 Java 开发人员的 Xamarin"
-description: "如果你是 Java 开发人员，则可以在 Xamarin 平台上充分利用你的技能和现有代码，同时获得 C# 的代码重用优势。 你会发现 C# 语法与 Java 语法非常相似，这两种语言提供非常类似的功能。 此外，你会发现 C# 的特有功能，这些功能将帮助你轻松进行开发工作。"
-ms.topic: article
+title: 面向 Java 开发人员的 Xamarin
+description: 如果你是 Java 开发人员，则可以在 Xamarin 平台上充分利用你的技能和现有代码，同时获得 C# 的代码重用优势。 你会发现 C# 语法与 Java 语法非常相似，这两种语言提供非常类似的功能。 此外，你会发现 C# 的特有功能，这些功能将帮助你轻松进行开发工作。
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 7abcaa218c6755a58e6f35e982a1144060df0b3b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 29fc698e6ed1cfe02ce329813342916d5e7a1651
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-for-java-developers"></a>面向 Java 开发人员的 Xamarin
 
@@ -501,7 +500,7 @@ MSDN [C# 编程指南](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)�
 
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文从 Java 开发人员的角度提供有关 Xamarin.Android C# 编程环境的简介。 它指出 C# 和 Java 之间的相似之处，同时解释了它们的实际差异。 它介绍了程序集和命名空间，说明如何导入外部类型，并概述了访问修饰符、泛型、类派生、调用基类方法、方法重写以及事件处理方面的区别。 它介绍了在 Java 中不可用的 C# 功能，例如属性、`async`/`await` 异步编程、lambda、C# 委托和 C# 事件处理系统。 它包含一个涵盖重要 C# 关键字的表格，说明如何与现有的 Java 库进行交互操作，并提供用于进一步研究的相关文档链接。
 

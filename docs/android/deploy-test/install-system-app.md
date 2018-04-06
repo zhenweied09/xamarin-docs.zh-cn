@@ -1,18 +1,17 @@
 ---
-title: "将 Xamarin.Android 安装为系统应用"
-description: "本指南将讨论系统应用和用户应用之间的区别，以及如何将 Xamarin.Android 应用程序作为系统应用程序进行安装。 本指南适用于自定义 Android ROM 映像的作者。 它将说明如何创建自定义 ROM。"
-ms.topic: article
+title: 将 Xamarin.Android 安装为系统应用
+description: 本指南将讨论系统应用和用户应用之间的区别，以及如何将 Xamarin.Android 应用程序作为系统应用程序进行安装。 本指南适用于自定义 Android ROM 映像的作者。 它将说明如何创建自定义 ROM。
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: ad2080c61c9cc7fb376997bc56668b6db135dbae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 94f2108a55cea520782aa5eac959195be09929b5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>将 Xamarin.Android 安装为系统应用
 
@@ -55,7 +54,7 @@ _本指南将讨论系统应用和用户应用之间的区别，以及如何将 
 4. 将 APK 文件复制到 /system/app &ndash; 最后一步是将 APK 文件复制到 ROM 上的 /system/app 文件夹。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南讨论了系统应用和用户应用之间的区别，并介绍了如何将 Xamarin.Android 应用作为系统应用安装。
 

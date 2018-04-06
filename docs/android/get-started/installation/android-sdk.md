@@ -1,18 +1,17 @@
 ---
-title: "Android SDK 安装"
-description: "Visual Studio 包含一个取代 Google 的独立 SDK 管理器的 Android SDK 管理器。 本指南说明如何使用 SDK 管理器下载 Android SDK 工具、平台以及开发 Xamarin.Android 应用所需的其他组件。"
-ms.topic: article
+title: Android SDK 安装
+description: Visual Studio 包含一个取代 Google 的独立 SDK 管理器的 Android SDK 管理器。 本指南说明如何使用 SDK 管理器下载 Android SDK 工具、平台以及开发 Xamarin.Android 应用所需的其他组件。
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 585bcac193d6824bc7c96092c14e40fd7971b0e2
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 45ab1930300ac704da0a1fee25c08d40aa35ac5c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-sdk-setup"></a>Android SDK 安装
 
@@ -263,7 +262,7 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 
  
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

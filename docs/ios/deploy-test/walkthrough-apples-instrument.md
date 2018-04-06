@@ -1,18 +1,17 @@
 ---
-title: "演练 - 使用 Apple Instruments 工具"
-description: "本文介绍如何使用 Apple 的 Instruments 工具诊断通过 Xamarin 生成的 iOS 应用程序的内存问题。 它演示了如何启动 Instruments、拍摄堆快照和分析内存增长情况。 此外，还演示了如何使用 Instruments 显示和确定造成内存问题的确切代码行。"
-ms.topic: article
+title: 演练 - 使用 Apple Instruments 工具
+description: 本文介绍如何使用 Apple 的 Instruments 工具诊断通过 Xamarin 生成的 iOS 应用程序的内存问题。 它演示了如何启动 Instruments、拍摄堆快照和分析内存增长情况。 此外，还演示了如何使用 Instruments 显示和确定造成内存问题的确切代码行。
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 949a2ea4d5838b664e19251e69a32efccc98d496
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0142cf90fbe7eff5beacf58897d5b3672f6ff55b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>演练 - 使用 Apple Instruments 工具
 
@@ -90,7 +89,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 若要了解如何处理 Xamarin.iOS 方面的内存问题，可参考关于 [Xamarin.iOS 垃圾回收](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)该社区博客。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本文演示如何使用 Instruments 诊断内存问题。
 其中介绍了如何从 Visual Studio for Mac 内启动 Instruments，加载内存分配模板，并介绍了如何分步使用快照来确定内存问题。

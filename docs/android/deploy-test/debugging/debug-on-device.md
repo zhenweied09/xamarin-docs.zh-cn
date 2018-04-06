@@ -1,18 +1,17 @@
 ---
 title: 在设备上进行调试
 description: 本文介绍如何在物理 Android 设备上调试 Xamarin.Android 应用程序。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: df6d2b246d4f0298ff31228b5db82084a55a8dd4
-ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
+ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="debug-on-device"></a>在设备上进行调试
 

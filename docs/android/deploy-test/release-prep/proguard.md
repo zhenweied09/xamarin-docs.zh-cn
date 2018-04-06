@@ -1,18 +1,17 @@
 ---
 title: ProGuard
-description: "ProGuard 是一个 Java 类文件压缩器、优化器、混淆器和预验证器。 它会检测和删除未使用的代码，分析和优化字节码，然后模糊处理类和类成员。 本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。 同时提供了几个 ProGuard 配置示例。"
-ms.topic: article
+description: ProGuard 是一个 Java 类文件压缩器、优化器、混淆器和预验证器。 它会检测和删除未使用的代码，分析和优化字节码，然后模糊处理类和类成员。 本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。 同时提供了几个 ProGuard 配置示例。
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 10744d7c4fbcc5a8935a1fe1e60b6c96ec828815
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -339,7 +338,7 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sd
 ProGuard [疑难解答](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/troubleshooting.html)页面讨论了使用 ProGuard 时可能遇到的常见问题（及解决方案）。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南阐释了 ProGuard 在 Xamarin.Android 中的工作原理、如何在应用项目中启用它，以及如何进行配置。 提供了示例 ProGuard 配置，并描述了常见问题的解决方案。 有关 ProGuard 工具和 Android 的详细信息，请参阅[压缩代码和资源](http://developer.android.com/tools/help/proguard.html)。 
 

@@ -1,18 +1,17 @@
 ---
 title: 移动软件开发生命周期简介
 description: 本文讨论了有关移动应用程序的软件开发生命周期以及生成移动项目时的一些注意事项。 对于希望直接开始生成应用的开发人员，可先跳过此指南，稍后再进行阅读，以更完整地理解移动开发。
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 144e71677ad5477c7e1cfb5211cc5860995642bb
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: c49723038870b7b222bdada7823f1571c5d89d9e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>移动软件开发生命周期简介
 

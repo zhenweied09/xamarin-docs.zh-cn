@@ -1,18 +1,17 @@
 ---
-title: "免费预配"
-description: "随着 Apple Xcode 7 的发布，为所有 iOS 和 Mac 开发人员带来了重大改变 - 免费预配。"
-ms.topic: article
+title: 免费预配
+description: 随着 Apple Xcode 7 的发布，为所有 iOS 和 Mac 开发人员带来了重大改变 - 免费预配。
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 03/19/2017
-ms.openlocfilehash: 26ac40360b4e706180f4154f4fddcd9c992ad94b
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 09244ebaefedb991289e5a1f67b59491ee84ed28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="free-provisioning"></a>免费预配
 
@@ -90,7 +89,7 @@ Apple 施加了一些限制，限制什么时候、以什么方式才能使用�
 在[支持的功能](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html#//apple_ref/doc/uid/TP40012582-CH38-SW1)指南中，Apple 对此提供了完整的列表。 若要预配应用，将其用于应用程序服务，请访问[使用功能](~/ios/deploy-test/provisioning/capabilities/index.md)指南。
 
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 本指南探讨了使用免费预配在 iOS 设备上安装应用程序的优点和限制。 还逐步介绍了如何使用免费预配安装 Xamarin.iOS 应用。
 
