@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ec46a5e098ba14925102211a27fcce8c27970e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="touch-id"></a>Touch ID
 
@@ -121,47 +121,46 @@ IOS 8，称为的新 framework_本地身份验证_，支持此身份验证的设
 
 让我们看一下将某些 Touch ID 身份验证添加到我们的应用程序。 在本演练中我们将使用[情节提要表](https://developer.xamarin.com/samples/StoryboardTable/)示例。 我们想要确保仅设备所有者可以将内容添加到此列表中，我们不想允许将项添加的任何人都混乱不堪 ！
 
-1.  下载示例和运行 Visual Studio 中的 mac。
-2.  双击`MainStoryboard.Storyboard`以在 iOS 设计器中打开示例。 此示例中，我们想要将新的屏幕添加到我们的应用程序，将控制身份验证。 这将在当前前处于`MasterViewController`。
-3.  将一个新**视图控制器**从**工具箱**到**设计图面**。 设置为**根视图控制器**通过**按 Ctrl 并拖动**从**导航控制器**:
+1. 下载示例和运行 Visual Studio 中的 mac。
+2. 双击`MainStoryboard.Storyboard`以在 iOS 设计器中打开示例。 此示例中，我们想要将新的屏幕添加到我们的应用程序，将控制身份验证。 这将在当前前处于`MasterViewController`。
+3. 将一个新**视图控制器**从**工具箱**到**设计图面**。 设置为**根视图控制器**通过**按 Ctrl 并拖动**从**导航控制器**:
 
     [![](touchid-images/image4.png "设置根视图控制器")](touchid-images/image4.png#lightbox)
 4.  命名新视图控制器`AuthenticationViewController`。
-5.  接下来，将按钮拖动并将其置于`AuthenticationViewController`。 我们称之为`AuthenticateButton`，并为其提供文本`Add a Chore`。
-6.  创建事件`AuthenticateButton`调用`AuthenticateMe`。
-7.  创建手动从 segue`AuthenticationViewController`通过单击底部的黑色栏和**按 Ctrl 并拖动**在菜单栏上到`MasterViewController`并选择**推送**(或**显示**如果使用大小类）：
+5. 接下来，将按钮拖动并将其置于`AuthenticationViewController`。 我们称之为`AuthenticateButton`，并为其提供文本`Add a Chore`。
+6. 创建事件`AuthenticateButton`调用`AuthenticateMe`。
+7. 创建手动从 segue`AuthenticationViewController`通过单击底部的黑色栏和**按 Ctrl 并拖动**在菜单栏上到`MasterViewController`并选择**推送**(或**显示**如果使用大小类）：
 
     [![](touchid-images/image5.png "将其从栏拖到 MasterViewController 和选择推送或显示")](touchid-images/image6.png#lightbox)
-8.  单击新创建的 segue 并为其提供标识符`AuthenticationSegue`，如下所示：
+8. 单击新创建的 segue 并为其提供标识符`AuthenticationSegue`，如下所示：
 
     [![](touchid-images/image7.png "将 segue 标识符设置为 AuthenticationSegue")](touchid-images/image7.png#lightbox)
-9.  将下列代码添加到 `AuthenticationViewController`：
+9. 将下列代码添加到 `AuthenticationViewController`：
 
-    ```
+    ```csharp
     partial void AuthenticateMe (UIButton sender)
-        {
-            var context = new LAContext();
-            NSError AuthError;
-            var myReason = new NSString("To add a new chore");
+    {
+        var context = new LAContext();
+        NSError AuthError;
+        var myReason = new NSString("To add a new chore");
 
-
-            if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
-                var replyHandler = new LAContextReplyHandler((success, error) => {
-
-                    this.InvokeOnMainThread(()=>{
-                        if(success){
-                            Console.WriteLine("You logged in!");
-                            PerformSegue("AuthenticationSegue", this);
-                        }
-                        else{
-                            //Show fallback mechanism here
-                        }
-                    });
-
+        if (context.CanEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, out AuthError)){
+            var replyHandler = new LAContextReplyHandler((success, error) => {
+                this.InvokeOnMainThread(()=> {
+                    if(success)
+                    {
+                        Console.WriteLine("You logged in!");
+                        PerformSegue("AuthenticationSegue", this);
+                    }
+                    else
+                    {
+                        // Show fallback mechanism here
+                    }
                 });
-                context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
-            };
-        }
+            });
+            context.EvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, myReason, replyHandler);
+        };
+    }
     ```
 
 这是你需要实现使用本地身份验证的 Touch ID 身份验证的所有代码。 下图中突出显示的行显示了使用本地身份验证：

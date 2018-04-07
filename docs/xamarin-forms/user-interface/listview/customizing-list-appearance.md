@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>列表外观
 
@@ -117,14 +117,12 @@ x:Class="DemoListView.GroupingViewPage"
 - 更改`ListView`的`ItemsSource`到分组列表
 
 ### <a name="customizing-grouping"></a>自定义分组
-现在，我们已了解如何实现基本分组在 ListView 中，让我们了解如何自定义组标题的显示。
 
-类似于如何`ListView`具有`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。 这是使用自定义的组标头模板的 ListView 从上面的示例：
+如果在列表中启用了分组，也可以定制组标头。
 
-![](customizing-list-appearance-images/grouping-depth.png "使用自定义 GroupHeaderTemplate 的 ListView")
+类似于如何`ListView`具有`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。 
 
-
-下面介绍了如何完成该设计在 XAML 中：
+自定义 XAML 中的组标头的示例所示：
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
