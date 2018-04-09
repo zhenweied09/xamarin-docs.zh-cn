@@ -6,12 +6,12 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
-ms.openlocfilehash: f074bca7571188b14a36bd4e6c59a6fdf8df9339
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/04/2018
+ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android 仿真器硬件加速
 
@@ -20,13 +20,14 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="haxm-overview"></a>HAXM 概述
 
-HAXM 是硬件协助虚拟化引擎（虚拟机监控程序），使用 Intel 虚拟化技术 (VT) 在主机上加快执行 Android 应用仿真。 通过与 Intel 提供的 Android x86 仿真器映像以及官方 Android SDK 管理器配合使用，HAXM 可以在已启用 VT 的系统上加快执行 Android 仿真。 如果开发计算机的 Intel CPU 具有 VT 功能，可以使用 HAXM 大幅加快 Android SDK 仿真器的运行速度（如果不确定 CPU 是否支持 VT，请参阅[确定处理器是否支持 Intel 虚拟化技术](https://www.intel.com/content/www/us/en/support/processors/000005486.html)）。
+HAXM 是硬件协助虚拟化引擎（虚拟机监控程序），使用 Intel 虚拟化技术 (VT) 在主机上加快执行 Android 应用仿真。 通过与 Intel 提供的 Android x86 仿真器映像以及官方 Android SDK 管理器配合使用，HAXM 可以在已启用 VT 的系统上加快执行 Android 仿真。 
 
-Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟设备（如[配置和使用](~/android/deploy-test/debugging/android-sdk-emulator/index.md)中所述）后，该虚拟设备将使用 HAXM 来执行硬件加速。 首次使用 Android SDK 仿真器前，最好先验证 HAXM 是否已安装，且能否用于 Android SDK 仿真器。
+如果开发计算机的 Intel CPU 具有 VT 功能，可以使用 HAXM 大幅加快 Android SDK 仿真器的运行速度（如果不确定 CPU 是否支持 VT，请参阅[确定处理器是否支持 Intel 虚拟化技术](https://www.intel.com/content/www/us/en/support/processors/000005486.html)）。
 
 > [!NOTE]
-> 无法在虚拟机上运行 HAXM。
+> 不可在另一 VM（例如由 VirtualBox、VMWare 或 Docker 托管的 VM）内运行经过 VM 加速的仿真器。 必须[直接在系统硬件上](https://developer.android.com/studio/run/emulator-acceleration.html#extensions)运行 Google Android 仿真器。
 
+Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟设备（如[配置和使用](~/android/deploy-test/debugging/android-sdk-emulator/index.md)中所述）后，该虚拟设备将使用 HAXM 来执行硬件加速。 首次使用 Android SDK 仿真器前，最好先验证 HAXM 是否已安装，且能否用于 Android SDK 仿真器。
 
 ## <a name="verifying-haxm-installation"></a>验证 HAXM 安装
 
@@ -180,6 +181,11 @@ Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-
 8. 重启计算机后，再次检查，以确保 Hyper-V 已禁用（如前述步骤所述）。
 
 如果 Hyper-V 仍未禁用，域加入计算机的策略可能会阻止禁用 Device Guard 或 Credential Guard。 在这种情况下，可以向域管理员申请豁免，以便能够选择禁用 Credential Guard。 此外，还可以使用未加入域的计算机来使用 HAXM。
+
+## <a name="hardware-acceleration-and-amd-cpus"></a>硬件加速和 AMD CPU
+
+由于 Google Android 仿真器目前[仅在 Linux 上](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies)支持 AMD 硬件加速，因此硬件加速不可用于运行 Windows 的基于 AMD 的计算机。
+
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

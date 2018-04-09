@@ -1,17 +1,16 @@
 ---
-title: "命令行仿真器"
-ms.topic: article
+title: 命令行仿真器
 ms.prod: xamarin
 ms.assetid: E592AA32-5E83-B7E5-1753-12416551B23C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 01ae4e1477ff5a05a5690ef24ed266b73f862748
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b1ca1c2b441a9c9ca26de5668f318312bea156a3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="command-line-emulator"></a>命令行仿真器
 
@@ -36,4 +35,4 @@ emulator.exe -avd NameOfYourEmulator -partition-size 512
 
 需要分区大小的原因是为了让仿真器具有足够的空间，以在仿真器上安装 Xamarin.Android 平台，因为默认情况下仿真器的大小很小。
 
-你可以在这里了解 Android 站点上更多关于额外参数的信息 - [http://developer.android.com/guide/developing/tools/emulator.html](http://developer.android.com/guide/developing/tools/emulator.html)
+有关额外参数的详细信息，可访问此处的 Android 站点 - [http://developer.android.com/guide/developing/tools/emulator.html](http://developer.android.com/guide/developing/tools/emulator.html)

@@ -83,7 +83,6 @@
 ### [HttpClient 堆栈和 SSL/TLS 实现选择器](macios/http-stack.md)
 ## [疑难解答](troubleshooting/index.md)
 ### [常见问题](troubleshooting/questions/index.md)
-#### [是否可以通过 Xamarin 使用 Visual Studio 2017 候选发布版本？](troubleshooting/questions/visualstudio-2017-rc.md)
 #### [如何查看 PCL 中支持的库？](troubleshooting/questions/pcl-support-libraries.md)
 #### [PCL 反射 API](troubleshooting/questions/pcl-reflection.md)
 #### [PCL 案例研究：如何解决与 Microsoft TPL 数据流 NuGet 包的 System.Diagnostics.Tracing 相关的问题？](troubleshooting/questions/pcl-case-study.md)
@@ -96,6 +95,14 @@
 #### [应何时以及如何提交 bug 报告？](troubleshooting/questions/howto-file-bug.md)
 #### [为什么 Xamarin 不支持 Jenkins？](troubleshooting/questions/xamarin-jenkins.md)
 #### [调试器需要哪些项目设置？](troubleshooting/questions/debugger-settings.md)
+
+### Visual Studio 问题
+#### [“部署”复选框在 Configuration Manager 中处于禁用状态](troubleshooting/questions/deploy-checkboxes.md)
+#### [安装完成后缺少 Visual Studio 扩展插件](troubleshooting/questions/missing-vs-extensions.md)
+#### [如何彻底卸载 Xamarin for Visual Studio？](troubleshooting/questions/uninstall-xamarin-vs.md)
+#### [如何收集 Visual Studio 进程的当前调用堆栈？](troubleshooting/questions/vs-callstack.md)
+#### [为什么 Visual Studio 未将引用的库项目包含在生成中？](troubleshooting/questions/vs-config-manager.md)
+
 ### [更新对 NuGet 的组件引用](troubleshooting/component-nuget.md)
 ### [支持选项](troubleshooting/support-options.md)
 ### [旧许可问题](troubleshooting/legacy-licenses/index.md)
