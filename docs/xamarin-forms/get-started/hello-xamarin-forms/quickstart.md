@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: a1adaa20bb649dd51547e3bff74e60e0d5c001af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e8d1064e76c2ccdeb14302d30428cd932444a0f5
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 快速入门
 
@@ -822,7 +822,7 @@ ms.lasthandoff: 04/04/2018
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -843,6 +843,9 @@ ms.lasthandoff: 04/04/2018
     ```
 
     选择“文件”>“保存”（或按 &#8984;+S），保存对 MainActivity.cs 所做的更改，然后关闭文件。
+
+    > [!NOTE]
+    > 示例代码使用 `Theme="@style/MainTheme"`，因为它基于较旧的模板。 如果收到主题名称的编译器错误，可在 **Phoneword/Droid/Resources/values/styles.xml** 中验证正确样式名称。
 
 26. 在“Solution Pad”中，展开“属性”文件夹，然后右键单击“AndroidManifest.xml”文件：
 
