@@ -5,15 +5,14 @@ ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: d4ad9dde4004440985ff247d2f986ede385f981f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/13/2018
+ms.openlocfilehash: 086576ea7d806bb0768fbe4563df7fca99244ccb
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fonts"></a>字体
-
 
 ## <a name="overview"></a>概述
 
@@ -41,7 +40,7 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
             app:fontStyle="normal" 
             app:fontWeight="400" />
 
-</font-family>    
+</font-family>
 ```
 
 只要字体提供给 Android 应用程序中使用正确的方法，它们可以应用到 UI 小组件通过设置[`fontFamily`属性](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily)。 例如，下面的代码段演示如何在 TextView 中显示一种字体：
@@ -49,8 +48,8 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 ```xml
 <TextView
     android:text="The quick brown fox jumped over the lazy dog."
-    android:fontFamily="@font/caveat_bold"
-    app:fontFamily="@font/caveat_bold"
+    android:fontFamily="@font/sourcesanspro_regular"
+    app:fontFamily="@font/sourcesanspro_regular"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
@@ -58,14 +57,12 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 本指南将首先讨论如何为 Android 的资源，使用字体，然后移动，讨论如何下载在运行时的字体。
 
-
 ## <a name="fonts-as-a-resource"></a>为资源的字体
 
 打包到 Android APK 字体可确保，并总是应用程序。 字体文件 (任一。TTF 或。通过将文件复制到中的子目录 OTF 文件） 添加到 Xamarin.Android 应用程序就像任何其他资源，**资源**Xamarin.Android 项目文件夹。 字体资源保留在**字体**子目录的**资源**项目文件夹中的。 
 
-
 > [!NOTE]
->  字体应有**生成操作**的**AndroidResource**或它们不会打包到最终 APK。 应该通过 IDE 自动将设置的生成操作。
+> 字体应有**生成操作**的**AndroidResource**或它们不会打包到最终 APK。 应该通过 IDE 自动将设置的生成操作。
 
 有许多类似的字体文件 （例如，使用不同的权重或样式的相同字体） 时，可能将它们分组到字体系列。
 
@@ -75,7 +72,7 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 字体系列是一套有不同的权重和样式的字体。 例如，可能有不同的字体文件粗体或斜体字体。 由定义的字体系列`font`就会保留在 XML 文件中的元素**资源/字体**目录。 每个字体系列应具有其自己的 XML 文件。
 
-若要创建字体系列，第一次添加到的所有字体**资源/字体**文件夹。 然后在字体系列的字体文件夹中创建新的 XML 文件。 此 XML 文件将包含一个根`font-family`包含一个或多个元素`font`元素。 每个`font`元素声明的字体特性。 
+若要创建字体系列，第一次添加到的所有字体**资源/字体**文件夹。 然后在字体系列的字体文件夹中创建新的 XML 文件。 XML 文件的名称所引用; 字体有没有相关性或关系资源文件可以是任何合法的 Android 资源文件名称。 此 XML 文件将包含一个根`font-family`包含一个或多个元素`font`元素。 每个`font`元素声明的字体特性。
 
 以下 XML 是一种字体系列_源 San Pro_定义多个不同的字体权重的字体。 这将另存为文件中**资源/字体**文件夹名为**sourcesanspro.xml**:
 
@@ -86,7 +83,7 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
     <font android:font="@font/sourcesanspro_regular" 
           android:fontStyle="normal" 
           android:fontWeight="400"
-          app:font="@font/sourcesanspro_" 
+          app:font="@font/sourcesanspro_regular" 
           app:fontStyle="normal" 
           app:fontWeight="400" />
     <font android:font="@font/sourcesanspro_bold" 
@@ -111,15 +108,15 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 `fontWeight`特性都对应于 CSS`font-weight`属性，引用的字体粗细。 这是为 100 900 范围中的值。 以下列表描述常见的字体粗细值和其名称：
 
-* **Thin** &ndash; 100
+* **精简** &ndash; 100
 * **特浅色** &ndash; 200
 * **Light** &ndash; 300
 * **正常** &ndash; 400
 * **中等** &ndash; 500
 * **粗体的 semi** &ndash; 600
-* **Bold** &ndash; 700
+* **加粗** &ndash; 700
 * **特粗体** &ndash; 800
-* **Black** &ndash; 900
+* **黑色** &ndash; 900
 
 一旦定义了字体系列，它可以是以声明方式使用通过设置`fontFamily`， `textStyle`，和`fontWeight`布局文件中的属性。  例如 （正常） 400 权重字体和斜体文本样式，将设置以下 XML 代码段：
 
@@ -135,7 +132,6 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
     android:textStyle="italic"
     />
 ```
-
 
 ### <a name="programmatically-assigning-fonts"></a>以编程方式指定字体
 
@@ -154,14 +150,13 @@ var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceSt
 textView1.Typeface = typeface;
 ```
 
-
 ## <a name="downloading-fonts"></a>下载字体
 
 而不是为应用程序资源的打包字体，Android 可以从远程源下载字体。 这将产生减小 APK 大小的理想效果。 
 
 字体下载的帮助下_字体提供程序_。 这是专用的内容提供程序管理的下载和缓存的设备上的所有应用程序的字体。 Android 8.0 包括字体提供程序以下载中的字体[Google 字体存储库](http://fonts.google.com)。 此默认字体的提供程序向后移植到与 Android 支持库 v26 的 API 级别 14。
- 
- 当应用一种字体提出的请求时，将首先检查字体提供程序字体已在设备上。 否则，它将尝试下载该字体。 如果字体不能下载，然后 Android 将使用默认系统字体。 字体具有下载后，可供在设备上，而不仅仅是应用程序进行初始请求的所有应用程序。
+
+当应用一种字体提出的请求时，将首先检查字体提供程序字体已在设备上。 否则，它将尝试下载该字体。 如果字体不能下载，然后 Android 将使用默认系统字体。 字体具有下载后，可供在设备上，而不仅仅是应用程序进行初始请求的所有应用程序。
 
 当发出请求以下载一种字体时，应用程序不直接查询字体提供程序。 相反，应用将使用的实例[ `FontsContract` ](https://developer.android.com/reference/android/provider/FontsContract.html) API (或[ `FontsContractCompat` ](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html)如果正在使用支持库 26)。  
 
@@ -184,19 +179,18 @@ Android 8.0 支持两种不同的方式下载字体：
              app:fontProviderPackage="com.google.android.gms" 
              app:fontProviderQuery="VT323"
              app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
-    >
+>
 </font-family>
 ```
 
 `font-family`元素包含以下属性，声明 Android 需要下载字体的信息：
- 
+
 1. **fontProviderAuthority** &ndash;字体提供程序的用于请求的权限。
 2. **fontPackage** &ndash;请求使用的字体提供程序的包。 这用于验证提供程序的标识。
 3. **fontQuery** &ndash;这是将帮助定位所请求的字体的字体提供程序的字符串。 字体查询的详细信息是特定于字体提供程序。 [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs)类[可下载字体](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/)示例应用程序提供了一些有关查询格式对于字体 Google 字体打开源集合中。
 4. **fontProviderCerts** &ndash;的集提供程序应使用签名的证书的哈希值列表的资源数组。
 
 字体定义后，可能需要提供了一些信息_字体证书_涉及在下载。
-
 
 ### <a name="font-certificates"></a>字体证书
 
@@ -226,7 +220,6 @@ Android 8.0 支持两种不同的方式下载字体：
 
 这些资源中的文件位置，该应用是能够下载字体。
 
-
 ### <a name="declaring-downloadable-fonts-as-resources"></a>为资源声明可下载字体
 
 通过列出中的可下载字体**AndroidManifest.XML**，应用程序首次启动时，Android 以异步方式将下载该字体。 字体的本身列示在数组资源文件中，类似于此： 
@@ -238,14 +231,13 @@ Android 8.0 支持两种不同的方式下载字体：
         <item>@font/vt323</item>
     </array>
 </resources>
-```        
+```
 
 若要下载这些字体，它们必须在声明**AndroidManifest.XML**通过添加`meta-data`的子级`application`元素。 例如，如果在资源文件中声明的可下载字体**Resources/values/downloadable_fonts.xml**，则此代码段将需要添加到清单： 
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
-
 
 ### <a name="downloading-a-font-with-the-font-apis"></a>下载与字体 Api 字体
 
@@ -269,17 +261,16 @@ FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.googl
 然后才传递`FontRequest`到`FontContractCompat.RequestFont`方法，必须创建的两个对象：
 
 * **`FontsContractCompat.FontRequestCallback`** &ndash; 这是一个抽象类，后者必须扩展。 它是将回调时调用`RequestFont`完成。 一个 Xamarin.Android 应用程序必须子类`FontsContractCompat.FontRequestCallback`，并重写`OnTypefaceRequestFailed`和`OnTypefaceRetrieved`，提供下载失败，或者分别成功执行的操作。
-* **`Handler`** &ndash; 这是`Handler`这将使用`RequestFont`下载上一个线程，字体，如有必要。 字体应**不**在 UI 线程上下载。  
+* **`Handler`** &ndash; 这是`Handler`这将使用`RequestFont`下载上一个线程，字体，如有必要。 字体应**不**在 UI 线程上下载。
 
 此代码片段是以异步方式将一种字体下载 Google 字体打开源集合中的 C# 类的一个示例。 它实现`FontRequestCallback`接口，并引发 C# 事件时`FontRequest`已完成。 
-
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
 {
     // A very simple font query; replace as necessary
     public static readonly String FontToDownload = "Courgette";
-    
+
     Android.OS.Handler Handler = null;
 
     public event EventHandler<FontDownloadEventArg> FontDownloaded = delegate
@@ -305,7 +296,7 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
         base.OnTypefaceRetrieved(typeface);
         FontDownloaded(this, new FontDownloadEventArg(typeface));
     }
-    
+
     Handler GetHandlerThreadHandler()
     {
         if (Handler == null)
@@ -335,9 +326,8 @@ public class FontDownloadEventArg : EventArgs
 }
 ```
 
-
-
 若要使用此帮助器，一个新`FontDownloadHelper`创建，并将其分配一个事件处理程序：  
+
 ```csharp
 var fontHelper = new FontDownloadHelper();
 
@@ -348,11 +338,9 @@ fontHelper.FontDownloaded += (object sender, FontDownloadEventArg e) =>
 fontHelper.DownloadFonts(this); // this is an Android Context instance.
 ```
 
-
 ## <a name="summary"></a>总结
 
-本指南讨论 Android 8.0 以支持可下载的字体和字体作为资源中的新 Api。 它讨论如何将现有字体嵌入 APK，以及如何在布局中使用它们。 它还讨论了如何 Android 8.0 支持从字体提供程序，下载字体以编程方式或通过声明资源文件中的字体元的数据。 
-
+本指南讨论 Android 8.0 以支持可下载的字体和字体作为资源中的新 Api。 它讨论如何将现有字体嵌入 APK，以及如何在布局中使用它们。 它还讨论了如何 Android 8.0 支持从字体提供程序，下载字体以编程方式或通过声明资源文件中的字体元的数据。
 
 ## <a name="related-links"></a>相关链接
 

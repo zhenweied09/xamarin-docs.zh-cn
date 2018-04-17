@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f20042b9599f7b4dde699a125e63c5ce435f6bc5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e67820fa83ddea46f934b4eaedde2c6334f9cc6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data--cloud-services"></a>数据和云服务
 
@@ -25,11 +25,11 @@ _本指南将说明如何执行此操作和 Xamarin.Forms 应用程序可以使�
 
 ## <a name="consuming-web-servicesxamarin-formsdata-cloudconsumingindexmd"></a>[使用 Web 服务](~/xamarin-forms/data-cloud/consuming/index.md)
 
-本指南演示如何与另一个 web 服务以提供通信创建、 读取、 更新和删除 (CRUD) 到 Xamarin.Forms 应用程序的功能。 涵盖的主题包括与通信[ASMX 服务](consuming/asmx.md)， [WCF 服务](consuming/wcf.md)， [REST 服务](consuming/rest.md)， [Azure Mobile Apps](consuming/azure.md)，和[Amazon Web Services](consuming/aws.md)。
+本指南演示如何与另一个 web 服务以提供通信创建、 读取、 更新和删除 (CRUD) 到 Xamarin.Forms 应用程序的功能。 涵盖的主题包括与通信[ASMX 服务](consuming/asmx.md)， [WCF 服务](consuming/wcf.md)， [REST 服务](consuming/rest.md)，和[Azure Mobile Apps](consuming/azure.md)。
 
 ## <a name="authenticating-access-to-web-servicesxamarin-formsdata-cloudauthenticationindexmd"></a>[对 Web 服务的访问进行身份验证](~/xamarin-forms/data-cloud/authentication/index.md)
 
-本指南说明如何将身份验证服务集成到 Xamarin.Forms 应用程序以使用户能够共享一个后端，同时仅有权访问他们自己的数据。 涵盖的主题包括[与 REST 服务中使用基本身份验证](authentication/rest.md)，[使用 Xamarin.Auth 组件对 OAuth 标识提供程序进行身份验证](authentication/oauth.md)，且使用内置身份验证机制提供[Azure Mobile Apps](authentication/azure.md)，和[Amazon Web Services](authentication/aws.md)。
+本指南说明如何将身份验证服务集成到 Xamarin.Forms 应用程序以使用户能够共享一个后端，同时仅有权访问他们自己的数据。 涵盖的主题包括[与 REST 服务中使用基本身份验证](authentication/rest.md)，[使用 Xamarin.Auth 组件对 OAuth 标识提供程序进行身份验证](authentication/oauth.md)，且使用内置身份验证机制提供[Azure Mobile Apps](authentication/azure.md)。
 
 ## <a name="synchronizing-data-with-web-servicessyncindexmd"></a>[将数据与 Web 服务同步](sync/index.md)
 

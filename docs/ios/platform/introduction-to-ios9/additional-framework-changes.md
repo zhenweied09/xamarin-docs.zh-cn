@@ -6,17 +6,17 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5561cccfd0968c309526aae1e5dc90831ca681b4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>其他 iOS 9 框架更改
 
 _这篇文章介绍了其他的次要更改或增强现有框架 ios 9 功能。_
 
-[![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png#lightbox)
+[![](additional-framework-changes-images/ios9-sml.png "iOS 9 徽标")](additional-framework-changes-images/ios9.png#lightbox)
 
 除了对 iOS 的主要更改，Apple 已在 iOS 9 中进行修改和对多个现有框架的改进。
 
@@ -64,6 +64,9 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - [CloudKit JS 引用](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359)-Apple 的 CloudKit JS 文档。
 - [CloudKit Web 服务引用](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240)-Apple 的引用，描述 CloudKit 的 HTTP 接口。
 - [CloudKit 目录： An introduction to CloudKit （Cocoa 和 JavaScript） 简介](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599)-使用 CloudKit 和 CloudKit JS Apple 的示例应用程序。
+
+> [!IMPORTANT]
+> Apple[提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)以帮助开发人员正确地处理欧盟的常规数据保护法规 (GDPR)。
 
 ## <a name="foundation-framework-additions"></a>Foundation Framework 添加件
 

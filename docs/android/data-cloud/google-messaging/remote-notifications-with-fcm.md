@@ -6,12 +6,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: e2f25504b971a0332dc51dc9b017c9c83222ec57
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知 Firebase 云消息传送
 
@@ -427,7 +427,7 @@ if (Intent.Extras != null)
 使用标记一长串**令牌**是实例 ID 令牌，然后将其粘贴到 Firebase 控制台&ndash;选择并将此字符串复制到剪贴板。 如果看不到一个实例 ID 令牌，将以下行添加到顶部`OnCreate`方法来验证是否**google services.json**已正确分析：
 
 ```csharp
-Log.Debug(TAG, "google app id: " + Resource.String.google_app_id);
+Log.Debug(TAG, "google app id: " + GetString(Resource.String.google_app_id));
 ```
 
 `google_app_id`记录到输出窗口的值应与匹配`mobilesdk_app_id`值记录在**google services.json**。 
@@ -683,6 +683,27 @@ SendNotification(message.GetNotification().Body, message.Data);
 当你打开通知时，你应看到从 Firebase 控制台通知 GUI 发送最后一条消息： 
 
 [![带有前景图标所示的前景通知](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
+
+
+## <a name="disconnecting-from-fcm"></a>断开 FCM
+
+若要取消订阅从主题，请调用[UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29)方法[FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging)类。 例如，若要取消订阅_新闻_主题订阅更早版本，**取消订阅**按钮无法添加到替换为以下处理程序代码的布局：
+
+```csharp
+var unSubscribeButton = FindViewById<Button>(Resource.Id.unsubscribeButton);
+unSubscribeButton.Click += delegate {
+    FirebaseMessaging.Instance.UnsubscribeFromTopic("news");
+    Log.Debug(TAG, "Unsubscribed from remote notifications");
+};
+```
+
+若要注销 FCM 一起删除的设备，删除的实例 ID，通过调用[DeleteInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29)方法[FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId)类。 例如：
+
+```csharp
+FirebaseInstanceId.Instance.DeleteInstanceId();
+```
+
+此方法调用将删除的实例 ID 和与它关联的数据。 因此，将停止定期发送到设备的 FCM 数据。
 
  
 ## <a name="troubleshooting"></a>疑难解答

@@ -5,11 +5,12 @@ ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a75d76ad1292955003705a5ddc1d52381addc796
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/09/2018
+ms.openlocfilehash: 8bd4ce464adf316517e2e1f2299006913bc68736
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations"></a>限制
 
@@ -106,6 +107,18 @@ System.Reflection 缺乏。 **发出**意味着没有取决于运行时代码生
 
 但是，整个反射 API，包括 Type.GetType ("someClass") 列出方法，列出提取属性和值的属性，就可以正常工作。
 
+### <a name="using-delegates-to-call-native-functions"></a>使用委托来调用本机函数
+
+若要调用本机函数通过 C# 委托，必须使用以下属性之一修饰该委托的声明：
+
+- [UnmanagedFunctionPointerAttribute](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute/) （首选，因为它是跨平台和与.NET 标准 1.1 + 兼容）
+- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+
+无法向其中一个属性提供将导致运行时错误，例如：
+
+```
+System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
+```
  
  <a name="Reverse_Callbacks" />
 

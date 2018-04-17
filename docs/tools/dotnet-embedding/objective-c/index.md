@@ -6,17 +6,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 74d62121e9c99061c118f3ab85c27328ca950b9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66ba31b1054559516fdbfbeb0421a82f4a0e9fa5
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="objective-c-support"></a>Objective C 的支持
 
 ## <a name="specific-features"></a>特定功能
 
-ObjC 生成具有数据类型值得注意几个、 特殊功能。
+Objective C 的生成具有数据类型值得注意的几个特殊功能。
 
 ### <a name="automatic-reference-counting"></a>自动引用计数
 
@@ -24,76 +24,79 @@ ObjC 生成具有数据类型值得注意几个、 特殊功能。
 
 ### <a name="nsstring-support"></a>NSString 支持
 
-公开的 Api`System.String`类型转换为`NSString`。 这样，内存管理更容易比处理`char*`。
+公开的 Api`System.String`类型转换为`NSString`。 这使内存管理比时处理更容易`char*`。
 
 ### <a name="protocols-support"></a>协议支持
 
-托管的接口转换为 ObjC 协议，其中所有成员都是`@required`。
+托管的接口转换为 OBJECTIVE-C 的协议，其中所有成员都是`@required`。
 
 ### <a name="nsobject-protocol-support"></a>NSObject 协议支持
 
-默认情况下我们假定的默认哈希处理和相等性.net 和 ObjC 运行时是正常且可互换它们共享非常相似的语义。
+默认情况下，假定的默认哈希和相等性.NET 和 Objective C 运行时是可互换，因为它们共享相似的语义。
 
-当托管的类型的重写`Equals(Object)`或`GetHashCode`则这通常意味着的情况下 (.NET) 行为不是最佳的一个。 我们可以假定默认 OBJECTIVE-C 的行为将不是。
+当托管的类型的重写`Equals(Object)`或`GetHashCode`，它通常意味着默认 (.NET) 行为未足够; 这意味着默认 OBJECTIVE-C 的行为是可能足够任一。
 
-在这种情况下生成器的替代[ `isEqual:` ](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418795-isequal?language=objc)方法和[ `hash` ](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418859-hash?language=objc)中定义的属性[`NSObject`协议](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc)。 这样，要 ObjC 代码中以透明方式使用的自定义托管的实现。
+在这种情况下，生成器的替代[ `isEqual:` ](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418795-isequal?language=objc)方法和[ `hash` ](https://developer.apple.com/reference/objectivec/1418956-nsobject/1418859-hash?language=objc)中定义的属性[`NSObject`协议](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc)。 这样，要 Objective C 代码中以透明方式使用的自定义托管的实现。
+
+### <a name="exceptions-support"></a>异常支持
+
+传递`--nativeexception`的自变量作为`objcgen`会将托管的异常转换为 Objective C 异常可以捕获和处理。 
 
 ### <a name="comparison"></a>比较
 
-托管类型实现`IComparable`或者它是泛型版本`IComparable<T>`将生成返回的 ObjC 友好方法`NSComparisonResult`并接受`nil`自变量。 这样生成的 API 更友好 ObjC 开发人员例如
+托管类型实现`IComparable`(或其泛型版本`IComparable<T>`) 将生成返回的 OBJECTIVE-C 友好方法`NSComparisonResult`并接受`nil`自变量。 这使得生成的 API OBJECTIVE-C 的开发人员更友好。 例如：
 
-```csharp
+```objc
 - (NSComparisonResult)compare:(XAMComparableType * _Nullable)other;
 ```
 
 ### <a name="categories"></a>类别
 
-托管的扩展方法将转换为类别。 例如以下扩展方法在`Collection`:
+托管的扩展方法将转换为类别。 例如，以下扩展方法在`Collection`:
 
 ```csharp
-    public static class SomeExtensions {
-
-        public static int CountNonNull (this Collection collection) { ... }
-
-        public static int CountNull (this Collection collection) { ... }
-    }
+public static class SomeExtensions {
+    public static int CountNonNull (this Collection collection) { ... }
+    public static int CountNull (this Collection collection) { ... }
+}
 ```
 
 将创建与此类似的 OBJECTIVE-C 的类别：
 
-```csharp
+```objc
 @interface Collection (SomeExtensions)
 
 - (int)countNonNull;
 - (int)countNull;
+
 @end
 ```
 
-当单个托管类型扩展几种类型，则生成多个 OBJECTIVE-C 的类别。
+当单个托管的类型扩展几种类型时，将生成多个 OBJECTIVE-C 的类别。
 
 ### <a name="subscripting"></a>下标
 
 托管索引的属性转换为对象下标。 例如：
 
 ```csharp
-    public bool this[int index] {
-        get { return c[index]; }
-        set { c[index] = value; }
-    }
+public bool this[int index] {
+    get { return c[index]; }
+    set { c[index] = value; }
+}
 ```
 
 将创建类似于 OBJECTIVE-C 的：
 
-```csharp
+```objc
 - (id)objectAtIndexedSubscript:(int)idx;
 - (void)setObject:(id)obj atIndexedSubscript:(int)idx;
 ```
 
 这可以通过 OBJECTIVE-C 的下标语法来使用：
 
-```csharp
-    if ([intCollection [0] isEqual:@42])
-        intCollection[0] = @13;
+```objc
+if ([intCollection [0] isEqual:@42])
+    intCollection[0] = @13;
 ```
 
 根据你的索引器的类型，在适当的位置，则将生成索引或键控的下标。
@@ -104,11 +107,11 @@ ObjC 生成具有数据类型值得注意几个、 特殊功能。
 
 ### <a name="constructors-vs-initializers"></a>构造函数 vs 初始值设定项
 
-在目标-C 中，你可以调用任意初始值设定项的任何父类继承链中的原型除非它被标记为不可用 (NS_UNAVAILABLE)。
+在目标-C 中，你可以调用任意初始值设定项的任何父类继承链中的原型除非它被标记为不可 (`NS_UNAVAILABLE`)。
 
-在 C# 中必须显式声明的类中的构造函数成员，这意味着不会继承构造函数。
+在 C# 中必须显式声明一个类，这意味着不会继承构造函数内的构造函数成员。
 
-若要公开的 C# API 对 Objective C 的正确表示，我们将添加`NS_UNAVAILABLE`到中不存在子类从父类任何初始值设定项。
+公开到 OBJECTIVE-C 的 C# API 的右表示`NS_UNAVAILABLE`添加到中不存在子类从父类任何初始值设定项。
 
 C# API:
 
@@ -132,7 +135,7 @@ public class SuperUnique : Unique {
 
 Objective C 中加以表示 API:
 
-```objectivec
+```objc
 @interface SuperUnique : Unique
 
 - (instancetype)initWithId:(int)id NS_UNAVAILABLE;
@@ -141,89 +144,106 @@ Objective C 中加以表示 API:
 @end
 ```
 
-在这里我们可以看到`initWithId:`已标记为不可用。
+在这里，`initWithId:`已标记为不可用。
 
 ### <a name="operator"></a>运算符
 
-ObjC 不支持运算符重载一样 C#，因此运算符转换为类选择器：
+Objective C 不支持运算符重载一样 C#，因此运算符转换为类选择器：
 
 ```csharp
-    public static AllOperators operator + (AllOperators c1, AllOperators c2)
-    {
-        return new AllOperators (c1.Value + c2.Value);
-    }
+public static AllOperators operator + (AllOperators c1, AllOperators c2)
+{
+    return new AllOperators (c1.Value + c2.Value);
+}
 ```
 
 更改为
 
-```csharp
+```objc
 + (instancetype)add:(Overloads_AllOperators *)anObjectC1 c2:(Overloads_AllOperators *)anObjectC2;
 ```
 
-但是，某些.NET 语言不支持运算符重载，因此通常以便也包括["友好的"](https://msdn.microsoft.com/en-us/library/ms229032(v=vs.110).aspx)名为除了运算符重载的方法。
+但是，某些.NET 语言不支持运算符重载，因此通常以便也包括["友好的"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads)名为除了运算符重载的方法。
 
-如果运算符版本和"友好的"版本找到，将生成只有友好的版本，因为它们不会生成相同的 objective-c 的名称。
+如果运算符版本和"友好的"版本找到，将生成只有友好的版本，因为它们不会生成相同的 OBJECTIVE-C 的名称。
 
 ```csharp
-    public static AllOperatorsWithFriendly operator + (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
-    {
-        return new AllOperatorsWithFriendly (c1.Value + c2.Value);
-    }
+public static AllOperatorsWithFriendly operator + (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
+{
+    return new AllOperatorsWithFriendly (c1.Value + c2.Value);
+}
 
-    public static AllOperatorsWithFriendly Add (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
-    {
-        return new AllOperatorsWithFriendly (c1.Value + c2.Value);
-    }
+public static AllOperatorsWithFriendly Add (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
+{
+    return new AllOperatorsWithFriendly (c1.Value + c2.Value);
+}
 ```
 
 会成为：
 
-```csharp
+```objc
 + (instancetype)add:(Overloads_AllOperatorsWithFriendly *)anObjectC1 c2:(Overloads_AllOperatorsWithFriendly *)anObjectC2;
 ```
 
 ### <a name="equality-operator"></a>相等运算符
 
-在常规运算符 = = 中作为一个常规运算符设为上述处理 C#。
+在常规运算符`==`在 C# 中会被视为常规运算符如上所示。
 
-但是，如果"友好的"等号运算符找到，则这两个运算符 = = 和运算符 ！ = 将在生成中跳过。
+但是，如果"友好的"等号运算符找到，则这两个运算符`==`和运算符`!=`将在生成中跳过。
 
 ### <a name="datetime-vs-nsdate"></a>DateTime vs NSDate
 
-从[NSDate 的](https://developer.apple.com/reference/foundation/nsdate?language=objc)文档：
+从[ `NSDate` ](https://developer.apple.com/reference/foundation/nsdate?language=objc)文档：
 
-> NSDate 对象将封装在时间，独立于任何特定 calendrical 系统和时区中的单个点。 Date 对象是不可变，表示相对于绝对引用日期的固定时间间隔 (00: 00:00 UTC 上 2001 年 1 月 1)。
+> `NSDate` 对象将封装在时间，独立于任何特定 calendrical 系统和时区中的单个点。 Date 对象是不可变，表示相对于绝对引用日期的固定时间间隔 (00: 00:00 UTC 上 2001 年 1 月 1)。
 
 由于`NSDate`引用日期，它之间的所有转换和`DateTime`UTC，必须完成。
 
 #### <a name="datetime-to-nsdate"></a>从 DateTime 到 NSDate
 
-从转换时`DateTime`到`NSDate`的日期时间`Kind`属性考虑在内。
+从转换时`DateTime`到`NSDate`、`Kind`属性`DateTime`考虑：
 
-|类型|结果                                                                                            |
+|类型|结果|
 |---|---|
-|Utc|使用提供执行的转换`DateTime`对象原样。|
-|本地|调用`ToUniversalTime()`在提供`DateTime`对象用于转换。|
-|未指定|提供`DateTime`对象被假定为 UTC，因此相同的行为类型 = = Utc。|
+|`Utc`|使用提供执行的转换`DateTime`对象原样。|
+|`Local`|调用`ToUniversalTime()`在提供`DateTime`对象用于转换。|
+|`Unspecified`|提供`DateTime`对象被假定为 UTC，因此相同的行为时`Kind`是`Utc`。|
 
-转换是通过使用以下公式：
+转换使用以下公式：
 
-> [!NOTE]
-> **TimeInterval** = DateTimeObjectTicks - NSDateReferenceDateTicks[dt] / [TicksPerSecond](https://msdn.microsoft.com/en-us/library/system.timespan.tickspersecond(v=vs.110).aspx)
+```
+TimeInterval = DateTimeObjectTicks - NSDateReferenceDateTicks / TicksPerSecond
+```
 
-一旦我们有 TimeInterval，我们使用 NSDate 的[dateWithTimeIntervalSinceReferenceDate:](https://developer.apple.com/reference/foundation/nsdate/1591577-datewithtimeintervalsincereferen?language=objc)选择器来创建它。
+在此公式中： 
+
+- `NSDateReferenceDateTicks` 根据进行计算`NSDate`2001 年 1 月 1 引用的 00:00:00 UTC 日期： 
+    ```csharp
+    new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
+    ```
+- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) 上定义 [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
+
+若要创建`NSDate`对象，`TimeInterval`用于`NSDate` [dateWithTimeIntervalSinceReferenceDate:](https://developer.apple.com/reference/foundation/nsdate/1591577-datewithtimeintervalsincereferen?language=objc)选择器。
 
 #### <a name="nsdate-to-datetime"></a>NSDate 为 DateTime
 
-从 NSDate 转到 DateTime 我们假定我们获得 NSDate 即引用日期的实例是**2001 年 1 月 1 上的 00:00:00 UTC**并使用以下公式：
+从转换`NSDate`到`DateTime`使用以下公式：
+
+```
+DateTimeTicks = NSDateTimeIntervalSinceReferenceDate * TicksPerSecond + NSDateReferenceDateTicks
+```
+
+在此公式中： 
+
+- `NSDateReferenceDateTicks` 根据进行计算`NSDate`2001 年 1 月 1 引用的 00:00:00 UTC 日期： 
+    ```csharp
+    new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
+    ```
+- [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) 上定义 [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
+
+后计算`DateTimeTicks`、 `DateTime` [构造函数](https://docs.microsoft.com/dotnet/api/system.datetime.-ctor?#System_DateTime__ctor_System_Int64_System_DateTimeKind_)调用时，设置其`kind`到`DateTimeKind.Utc`。
 
 > [!NOTE]
-> **DateTimeTicks** = NSDateTimeIntervalSinceReferenceDate * [TicksPerSecond](https://msdn.microsoft.com/en-us/library/system.timespan.tickspersecond(v=vs.110).aspx) + NSDateReferenceDateTicks[dt]
+> `NSDate` 可以是`nil`，但`DateTime`是在.NET 中，后者的定义不能为一个结构`null`。 如果你向提供`nil` `NSDate`，它将转换为默认值`DateTime`值，该值映射到`DateTime.MinValue`。
 
-一旦我们计算**DateTimeTicks**我们使用以下的 datetime 数据类型[构造函数](https://msdn.microsoft.com/en-us/library/w0d47c9c(v=vs.110).aspx)设置其`kind`到`DateTimeKind.Utc`。
-
-有必须要注意的一些注意事项，可以为 NSDate `nil` DateTime 是.NET 中的一个结构，但它不能是定义`null`。 如果你向提供`nil`NSDate 我们会将其转换为默认日期时间值映射到`DateTime.MinValue`。
-
-MinValue 和 MaxValue 也是不同的 NSDate 可以支持比 DateTime 的更高和较低的边界，因此，每当您授予更大或更低的值时我们会将其设置为 DateTime 的[MaxValue](https://msdn.microsoft.com/en-us/library/system.datetime.maxvalue(v=vs.110).aspx)或[MinValue](https://msdn.microsoft.com/en-us/library/system.datetime.minvalue(v=vs.110).aspx)分别。
-
-**dt**: NSDate 引用日期**2001 年 1 月 1 上的 00:00:00 UTC** => `new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;`
+`NSDate` 支持更高版本的最大值和低于最小值`DateTime`。 从转换时`NSDate`到`DateTime`，这些更高版本和较低的值更改为`DateTime` [MaxValue](https://docs.microsoft.com/dotnet/api/system.datetime.maxvalue)或[MinValue](https://docs.microsoft.com/dotnet/api/system.datetime.minvalue)分别。

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: df0e188efd2791b03a63c31b715ed1da77079230
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authenticating-access-to-web-services"></a>对 Web 服务的访问进行身份验证
 
@@ -36,11 +36,6 @@ Azure Active Directory B2C 是面向使用者的 web 和移动应用程序的云
 ## <a name="integrating-azure-active-directory-b2c-with-azure-mobile-appsazure-ad-b2c-mobile-appmd"></a>[将 Azure Active Directory B2C 与 Azure 移动应用集成](azure-ad-b2c-mobile-app.md)
 
 Azure Active Directory B2C 可以用于管理的 Azure 移动应用的身份验证工作流。 使用此方法时，标识管理体验在云中，已完全定义，并且可以修改而无需更改你的移动应用程序代码。 本文演示如何使用 Azure Active Directory B2C Xamarin.Forms 中提供身份验证和授权与 Azure Mobile Apps 实例。
-
-## <a name="authenticating-users-with-an-amazon-simpledb-serviceawsmd"></a>[与 Amazon SimpleDB 服务的用户进行身份验证](aws.md)
-
-Amazon SimpleDB 不提供其自己的基于资源的权限的系统。 相反，身份验证标识提供程序是针对可以用于确保用户只能 SimpleDB 域中有权访问他们自己的数据。 此文章介绍了如何限制对其自己 SimpleDB 数据的用户的访问权限。
-
 
 ## <a name="related-links"></a>相关链接
 

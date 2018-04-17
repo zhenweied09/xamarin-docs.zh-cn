@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>平台功能
 
@@ -33,9 +33,17 @@ Xamarin.Forms 是可扩展的并允许你使用的特定于平台的功能合并
 
 可以通过执行某些 iOS 样式**Info.plist**和`UIAppearance`API。 本指南包括有关如何将 iOS 9 功能包含在一个 Xamarin.Forms 解决方案，包括核心 Spotlight 搜索的 iOS 应用的示例。
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin.Forms 现在具有 GTK # 应用程序的预览支持。
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin.Forms 现在具有对 macOS 应用的预览支持。
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms 现在具有 Windows Presentation Foundation (WPF) 应用程序的预览支持。
 
 ## <a name="native-formsnative-formsmd"></a>[本机窗体](native-forms.md)
 
@@ -45,7 +53,7 @@ Xamarin.Forms 现在具有对 macOS 应用的预览支持。
 
 从 iOS、 Android 和通用 Windows 平台的本机视图可以从 Xamarin.Forms 直接引用。 可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。
 
-## <a name="platform-specificsplatform-specificsindexmd"></a>[Platform-Specifics](platform-specifics/index.md)
+## <a name="platform-specificsplatform-specificsindexmd"></a>[平台细节](platform-specifics/index.md)
 
 平台细节，可以使用提供功能，仅在特定平台上，而无需自定义呈现器或效应。
 

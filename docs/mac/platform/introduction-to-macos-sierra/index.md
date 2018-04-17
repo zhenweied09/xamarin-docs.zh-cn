@@ -7,11 +7,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ab373d708d47ad7c3dbbf4507284be04a1f9934
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3b8211e4c38fd37040fab5b35be4709d4b926c91
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-macos-sierra"></a>MacOS Sierra 简介
 
@@ -64,6 +64,9 @@ macOS Sierra 包括允许开发人员将合并直接到 iOS 和 macOS 基于 Saf
 CloudKit 提供用于发送和接受共享记录邀请完成 UI，而且用户必须完成的读/写控制有权访问记录的人员。
 
 有关详细信息，请参阅 Apple 的[CloudKit Framework 参考](https://developer.apple.com/reference/clockkit)和[CloudKit JS Framework 参考](https://developer.apple.com/reference/cloudkitjs)。
+
+> [!IMPORTANT]
+> Apple[提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)以帮助开发人员正确地处理欧盟的常规数据保护法规 (GDPR)。
 
 <a name="Safari-App-Extensions-Support" />
 

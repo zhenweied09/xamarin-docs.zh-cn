@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-and-data-storage"></a>资源和数据存储
 
@@ -55,6 +55,9 @@ _本文介绍如何使用资源和 Xamarin.tvOS 应用中的持久数据存储�
 
 - **iCloud 键-值存储 (KVS)** -有关的信息 (小于 1 MB)，你的应用程序可能需要 （如用户首选项），你可以使用 iCloud KVS 存储小的部分。 iCloud KVS 数据自动同步到云的所有用户的设备运行的相同应用。 有关详细信息请参阅[键-值存储](~/ios/data-cloud/introduction-to-icloud.md)一部分我们[简介 iCloud](~/ios/data-cloud/introduction-to-icloud.md)文档或 Apple 的[为键 / 值数据中 iCloud 设计](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7)文档。
 - **CloudKit** -对于存储的更大信息段 （大于 1 MB），使用 Apple 的 CloudKit 框架。 与 iCloud KVS 存储，可以在你的应用 （以及正在专用于单个用户） 的所有用户之间共享 CloudKit 数据。 窗体的详细信息，请参阅我们[简介 CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)文档或 Apple 的[CloudKit 快速启动](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987)。
+
+> [!IMPORTANT]
+> Apple[提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)以帮助开发人员正确地处理欧盟的常规数据保护法规 (GDPR)。
 
 <a name="On-Demand-Resources" />
 

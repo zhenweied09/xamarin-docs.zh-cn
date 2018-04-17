@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 703441e3fc58beeb33e519f3781387a59c1c1cef
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-sample"></a>了解示例
 
@@ -86,7 +86,7 @@ public class TodoItem
 
 此外，某些示例应用程序包含中的其他方法`TodoItemManager`类，用于管理用户身份验证过程。
 
-而不是直接调用 web 服务操作`TodoItemManager`方法调用注入的依赖类上方法`TodoItemManager`构造函数。 例如，一个示例应用程序插入`SimpleDBStorage`类到`TodoItemManager`构造函数提供调用针对 Amazon 的 SimpleDB 服务操作的实现。
+而不是直接调用 web 服务操作`TodoItemManager`方法调用注入的依赖类上方法`TodoItemManager`构造函数。 例如，一个示例应用程序插入`RestService`类到`TodoItemManager`构造函数，以提供使用 REST Api 访问数据的实现。
 
 ### <a name="translating-text-to-speech"></a>将文本到语音转换
 
@@ -113,4 +113,3 @@ void OnSpeakActivated (object sender, EventArgs e)
 - [WCF 版本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
 - [REST 版本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
 - [Azure 版本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure)
-- [Amazon Web Services 版本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS)
