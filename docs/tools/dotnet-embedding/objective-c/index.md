@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 66ba31b1054559516fdbfbeb0421a82f4a0e9fa5
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 515185ca7be8b6e24c92c9f44eb6dadbaf6d9219
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="objective-c-support"></a>Objective C 的支持
 
@@ -44,7 +44,7 @@ Objective C 的生成具有数据类型值得注意的几个特殊功能。
 
 ### <a name="comparison"></a>比较
 
-托管类型实现`IComparable`(或其泛型版本`IComparable<T>`) 将生成返回的 OBJECTIVE-C 友好方法`NSComparisonResult`并接受`nil`自变量。 这使得生成的 API OBJECTIVE-C 的开发人员更友好。 例如：
+托管类型实现`IComparable`(或其泛型版本`IComparable<T>`) 将生成返回的 OBJECTIVE-C 友好方法`NSComparisonResult`并接受`nil`自变量。 这使得生成的 API OBJECTIVE-C 的开发人员更友好。 例如: 
 
 ```objc
 - (NSComparisonResult)compare:(XAMComparableType * _Nullable)other;
@@ -76,7 +76,7 @@ public static class SomeExtensions {
 
 ### <a name="subscripting"></a>下标
 
-托管索引的属性转换为对象下标。 例如：
+托管索引的属性转换为对象下标。 例如: 
 
 ```csharp
 public bool this[int index] {

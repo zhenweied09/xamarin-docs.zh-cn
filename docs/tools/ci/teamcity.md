@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>使用 Xamarin 团队城市
 
@@ -39,7 +39,7 @@ _本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提
 
 - **创建 TeamCity 项目**– 前面三个步骤完成后，我们必须创建 TeamCity 项目将包含的所有元数据检索的源代码、 编译项目，并提交到 Xamarin 测试云测试需要。
 
-# <a name="requirements"></a>要求
+## <a name="requirements"></a>要求
 
 体验[Xamarin 测试云](https://developer.xamarin.com/guides/testcloud)是必需的。
 
@@ -88,7 +88,6 @@ _本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提
 - [**但是，伪造**](http://fsharp.github.io/FAKE/) – 这是基于在 F # 这样就可以利用现有的.NET 库，如有必要 DSL。
 
 所使用的脚本语言取决于你的首选项和要求。 [TaskyPro Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash)示例包含的使用 Rake 作为示例[生成脚本](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile)。
-
 
 > [!NOTE]
 > 可使用基于 XML 生成系统如 MSBuild 或 NAnt，但这些缺少的表现力和专用于构建软件 DSL 的可维护性。
@@ -166,35 +165,35 @@ $ test-cloud submit /path/to/APK <test-cloud-team-api-key> --devices <ANDROID_DE
 
 1. 通过登录到 TeamCity 通过 web 浏览器启动。 导航到的根项目：
 
-    ![](teamcity-images/image2.png "导航到的根项目")下方根项目中，创建一个新的子项目：
+    ![导航到根项目](teamcity-images/image2.png "导航至根项目")下方根项目中，创建一个新的子项目：
 
-    ![](teamcity-images/image3.png "导航到的根项目在此之下根项目，创建一个新的子项目")
+    ![导航到的根项目在此之下根项目，创建一个新的子项目](teamcity-images/image3.png "导航到根项目在此之下根项目，创建一个新的子项目")
 2. 一旦创建子项目后，添加新的生成配置：
 
-    ![](teamcity-images/image5.png "一旦创建子项目后，添加新的生成配置")
+    ![一旦创建子项目后，添加新的生成配置](teamcity-images/image5.png "一旦创建子项目后，添加新的生成配置")
 3. 将 VCS 项目附加到生成配置。 这是通过版本控制设置屏幕：
 
-    ![](teamcity-images/image6.png "这是通过版本控制设置屏幕")
+    ![这是通过版本控制设置屏幕](teamcity-images/image6.png "这是通过版本控制设置屏幕")
 
     如果不没有创建任何 VCS 项目，你可以选择创建一个从新 VCS 根页所示：
 
-    ![](teamcity-images/image7.png "如果不没有创建任何 VCS 项目，你可以选择创建一个从新 VCS 根页")
+    ![如果不没有创建任何 VCS 项目，你可以选择创建一个新的 VCS 根页从](teamcity-images/image7.png "如果不没有创建任何 VCS 项目，你可以选择创建一个从新 VCS 根页")
 
     一旦附加 VCS 根，TeamCity 将签出该项目，然后重试自动检测生成步骤。 如果你熟悉 TeamCity，你可以选择将检测到的生成步骤之一。 则可以安全地忽略现在将检测到的生成步骤。
 
 4. 接下来，配置生成触发器。 这将生成进行排队时满足特定条件，例如当用户提交到存储库代码。 以下屏幕截图显示如何添加生成触发器：
 
-    ![](teamcity-images/image8.png "此屏幕截图显示如何添加生成触发器")配置生成触发器的示例所示的以下屏幕截图：
+    ![此屏幕截图显示如何添加生成触发器](teamcity-images/image8.png "此屏幕截图显示如何添加生成触发器")配置生成触发器的示例所示的以下屏幕截图：
 
-    ![](teamcity-images/image9.png "配置生成触发器的示例所示此屏幕截图")
+    ![配置生成触发器的示例可在此屏幕截图中查看](teamcity-images/image9.png "配置生成触发器的示例所示此屏幕截图")
 
 5. 上一节，参数化生成脚本中，建议将某些值存储为环境变量。 可以将这些变量添加到通过参数屏幕的生成配置。 将变量添加测试云 API 密钥、 iOS 设备 ID，和 Android 的设备 ID，如下面的屏幕截图中所示：
 
-    ![](teamcity-images/image11.png "将变量添加测试云 API 密钥、 iOS 设备 ID，和 Android 的设备 ID")
+    ![将变量添加测试云 API 密钥、 iOS 设备 ID，和 Android 的设备 ID](teamcity-images/image11.png "将变量添加测试云 API 密钥、 iOS 设备 ID，和 Android 的设备 ID")
 
 6. 最后一步是添加将调用用于编译的应用程序和队列时，测试云应用程序的生成脚本的生成步骤。 下面的屏幕截图演示了使用 Rakefile 来生成应用程序的生成步骤：
 
-    ![](teamcity-images/image12.png "此屏幕截图演示了使用 Rakefile 来生成应用程序的生成步骤")
+    ![此屏幕截图演示了使用 Rakefile 来生成应用程序的生成步骤](teamcity-images/image12.png "此屏幕截图演示了使用 Rakefile 来生成应用程序的生成步骤")
 
 7. 此时，已完成的生成配置。 它是一个好办法触发要确认已正确配置项目的生成。 执行此操作一种好方法是将小型、 无关紧要的更改提交到存储库。 TeamCity 应检测提交并开始执行生成。
 

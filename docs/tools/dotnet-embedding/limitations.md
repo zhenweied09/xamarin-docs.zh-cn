@@ -6,14 +6,13 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 80d2402329020002a43e1f9dd7b518e2ce74747c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8995946966020955a1d9378dea631387ed5f4bd
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-embedding-limitations"></a>.NET 嵌入限制
-
 
 本文档介绍.NET 嵌入 (Embeddinator-4000) 的限制，并尽可能为它们提供解决方法。
 

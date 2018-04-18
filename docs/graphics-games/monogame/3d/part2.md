@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 25a05bcd094011042b3dc33a1b837460d5893be0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4736bedd413663af098bbad522cc56f432e36ea0
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>在 MonoGame 中绘制具有顶点的 3D 图形
 
@@ -29,19 +29,18 @@ _MonoGame 支持使用顶点的数组来定义一个三维对象上的每个点�
 
 本演练将涉及以下主题：
 
- - 创建项目
- - 创建顶点
- - 将绘制代码添加
- - 用纹理的呈现
- - 修改纹理坐标
- - 使用模型的呈现顶点
+- 创建项目
+- 创建顶点
+- 将绘制代码添加
+- 用纹理的呈现
+- 修改纹理坐标
+- 使用模型的呈现顶点
 
 完成的项目将包含其将使用顶点数组绘制棋盘格的层：
 
 ![](part2-images/image3.png "完成的项目将包含棋盘格的层将使用顶点数组绘制")
 
-
-# <a name="creating-a-project"></a>创建项目
+## <a name="creating-a-project"></a>创建项目
 
 首先，我们将下载的项目，它将充当我们的起点。 我们将使用该模型项目[这可在此处找到](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/)。
 
@@ -51,12 +50,11 @@ _MonoGame 支持使用顶点的数组来定义一个三维对象上的每个点�
 
 此项目的结束我们将为我们自己的自定义顶点呈现将与结合使用机器人`Model`，因此我们不会删除机器人呈现代码。 相反，我们只需要清除`Game1.Draw`调用以删除现在 6 机器人的绘制。 若要执行此操作，打开**Game1.cs**文件并找到`Draw`方法。 对其进行修改以便它包含以下代码：
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
-    GraphicsDevice.Clear(Color.CornflowerBlue);
-    base.Draw(gameTime);
+  GraphicsDevice.Clear(Color.CornflowerBlue);
+  base.Draw(gameTime);
 }
 ```
 
@@ -64,36 +62,33 @@ protected override void Draw(GameTime gameTime)
 
 ![](part2-images/image5.png "这将导致显示空蓝屏游戏")
 
-
-# <a name="creating-the-vertices"></a>创建顶点
+## <a name="creating-the-vertices"></a>创建顶点
 
 我们将创建顶点来定义我们几何图形的数组。 在本演练中，我们将创建一个三维平面 （在三维空间中的正方形、 不飞机）。 尽管我们平面具有四个边都与四个角，但它将由两个三角形，其中每个需要三个顶点的构成。 因此，我们将定义总数六个点。
 
 到目前为止我们已经讨论了中的常规的意义上，顶点但 MonoGame 提供一些标准结构可以用于顶点：
 
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
- - `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionNormalTexture`
+- `Microsoft.Xna.Framework.Graphics.VertexPositionTexture`
 
 每个类型的名称指示它包含的组件。 例如，`VertexPositionColor`包含针对位置和颜色值。 让我们看一下每个组件：
 
- - 位置 – 所有顶点类型都包括`Position`组件。 `Position`值定义顶点所在的位置在三维空间 （X、 Y 和 Z） 中。
- - 颜色 – （可选） 可以指定顶点`Color`要执行自定义、 颜色值。
- - 普通 – 法线定义采用面向对象的图面哪种方式。 法线是必需如果呈现具有自方向的照明的对象图面面向的影响多少浅色它接收的。 法线通常指定为*单元向量*– 一个三维向量，其长度为 1。
- - 纹理 – 纹理是指纹理坐标 – 也就是说，对纹理的哪个部分应出现在给定的顶点。 纹理值如果，则需要呈现具有纹理的三维对象。 纹理坐标是规范化的坐标，这意味着，值将介于 0 和 1 之间。 我们将介绍更详细地在本指南后面的纹理坐标。
+- 位置 – 所有顶点类型都包括`Position`组件。 `Position`值定义顶点所在的位置在三维空间 （X、 Y 和 Z） 中。
+- 颜色 – （可选） 可以指定顶点`Color`要执行自定义、 颜色值。
+- 普通 – 法线定义采用面向对象的图面哪种方式。 法线是必需如果呈现具有自方向的照明的对象图面面向的影响多少浅色它接收的。 法线通常指定为*单元向量*– 一个三维向量，其长度为 1。
+- 纹理 – 纹理是指纹理坐标 – 也就是说，对纹理的哪个部分应出现在给定的顶点。 纹理值如果，则需要呈现具有纹理的三维对象。 纹理坐标是规范化的坐标，这意味着，值将介于 0 和 1 之间。 我们将介绍更详细地在本指南后面的纹理坐标。
 
 我们平面将用作层，并且我们将需要执行我们呈现，因此我们将使用时应用纹理`VertexPositionTexture`类型来定义我们顶点。
 
 首先，我们将向我们 Game1 类添加成员：
-
 
 ```csharp
 VertexPositionTexture[] floorVerts; 
 ```
 
 接下来，定义中的我们顶点`Game1.Initialize`。 请注意，本文前面部分中引用的提供的模板不包含`Game1.Initialize`方法，因此我们需要添加整个方法`Game1`:
-
 
 ```csharp
 protected override void Initialize ()
@@ -116,8 +111,7 @@ protected override void Initialize ()
 
 我们需要依赖于我们的关系图来可视化顶点，直到我们完成实现我们呈现代码。
 
-
-# <a name="adding-drawing-code"></a>添加绘图代码
+## <a name="adding-drawing-code"></a>添加绘图代码
 
 现在，我们已为定义我们几何图形的位置，我们可以编写我们呈现代码。
 
@@ -128,11 +122,10 @@ protected override void Initialize ()
 ...
 VertexPositionTexture[] floorVerts;
 // new code:
-BasicEffect effect; 
+BasicEffect effect;
 ```
 
 接下来，修改`Initialize`方法用来定义产生的效果：
-
 
 ```csharp
 protected override void Initialize ()
@@ -150,11 +143,10 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 现在我们可以添加代码以执行绘制：
-
 
 ```csharp
 void DrawGround()
@@ -193,7 +185,7 @@ void DrawGround()
             // The number of triangles to draw
             2);
     }
-} 
+}
 ```
 
 我们将需要调用`DrawGround`中我们`Game1.Draw`:
@@ -215,13 +207,11 @@ protected override void Draw (GameTime gameTime)
 
 让我们看看其中一些在上面的代码的详细信息。
 
-
-## <a name="view-and-projection-properties"></a>视图和投影属性
+### <a name="view-and-projection-properties"></a>视图和投影属性
 
 `View`和`Projection`属性控制如何我们查看场景。 我们将对进行修改此代码更高版本时我们重新添加模型呈现代码。 具体而言，`View`的位置和方向相机、 控制和`Projection`控件*视野*（这可以用于缩放相机）。
 
-
-## <a name="techniques-and-passes"></a>技术和传递
+### <a name="techniques-and-passes"></a>技术和传递
 
 一次我们已分配属性我们可以执行我们效果上的实际呈现。 
 
@@ -229,8 +219,7 @@ protected override void Draw (GameTime gameTime)
 
 需要牢记的重要事项在于`foreach`循环可使的同一个 C# 代码来呈现的基础复杂性无论任何效果`BasicEffect`。
 
-
-## <a name="drawuserprimitives"></a>DrawUserPrimitives
+### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
 `DrawUserPrimitives` 是呈现顶点的位置。 第一个参数告知我们组织我们顶点的方式的方法。 我们有结构化它们，这样每个三角形可以定义由三个有序的顶点，以便我们使用`PrimitiveType.TriangleList`值。
 
@@ -240,15 +229,13 @@ protected override void Draw (GameTime gameTime)
 
 最后，我们指定多少三角形来呈现。 我们顶点数组包含两个三角形，因此通过值为 2。
 
-
-# <a name="rendering-with-a-texture"></a>用纹理的呈现
+## <a name="rendering-with-a-texture"></a>用纹理的呈现
 
 此时我们的应用程序呈现 （透视） 中的白色平面。 接下来我们将添加到我们的项目以在呈现我们平面时使用的纹理。 
 
 若要为简单起见，我们将直接向我们的项目，而不是使用 MonoGame 管道工具添加.png。 若要执行此操作，下载[此.png 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)到你的计算机。 下载完成后，右键单击**内容**文件夹中的解决方案的填充和选择**添加 > 添加文件...** . 如果使用在 Android 上，然后此文件夹将位于**资产**Android 特定于项目中的文件夹。 如果在 iOS 上则此文件夹将 iOS 项目的根目录中。 导航到的位置其中**checkerboard.png**保存和选择此文件。 选择此项可将文件复制到的目录。
 
 接下来，我们将添加代码以创建我们`Texture2D`实例。 首先，添加`Texture2D`作为的成员`Game1`下`BasicEffect`实例：
-
 
 ```csharp
 ...
@@ -274,11 +261,10 @@ protected override void LoadContent()
     {
         checkerboardTexture = Texture2D.FromStream (this.GraphicsDevice, stream);
     }
-} 
+}
 ```
 
 接下来，修改`DrawGround`方法。 必需的唯一修改是将分配`effect.TextureEnabled`到`true`并设置`effect.Texture`到`checkerboardTexture`:
-
 
 ```csharp
 void DrawGround()
@@ -315,7 +301,7 @@ void DrawGround()
             0,
             2);
     }
-} 
+}
 ```
 
 最后，我们需要修改`Game1.Initialize`方法还将分配纹理坐标在我们顶点上：
@@ -353,8 +339,7 @@ protected override void Initialize ()
 
 ![](part2-images/image8.png "平面现在显示呈现为棋盘样式")
 
-
-# <a name="modifying-texture-coordinates"></a>修改纹理坐标
+## <a name="modifying-texture-coordinates"></a>修改纹理坐标
 
 MonoGame 使用规范化为 0 和 1 之间，而不是 0 和纹理的宽度或高度之间的坐标的纹理坐标。 下图可帮助实现规范化的坐标可视化效果：
 
@@ -391,7 +376,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 这会导致重复 20 倍的纹理：
@@ -399,10 +384,9 @@ protected override void Initialize ()
 ![](part2-images/image10.png "这会导致重复 20 倍的纹理")
 
 
-# <a name="rendering-vertices-with-models"></a>使用模型的呈现顶点
+## <a name="rendering-vertices-with-models"></a>使用模型的呈现顶点
 
 现在，我们平面正确呈现时，我们可以重新添加模型以查看所有内容在一起。 首先，我们将重新模型将代码添加到我们`Game1.Draw`（使用修改后的位置） 的方法：
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)
@@ -425,7 +409,6 @@ protected override void Draw(GameTime gameTime)
 
 我们还将创建`Vector3`中`Game1`来代表我们照相机的位置。 我们将添加下的字段我们`checkerboardTexture`声明：
 
-
 ```csharp
 ...
 Texture2D checkerboardTexture;
@@ -434,7 +417,6 @@ Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 接下来，删除本地`cameraPosition`变量从`DrawModel`方法：
-
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -458,7 +440,6 @@ void DrawModel(Vector3 modelPosition)
 
 同样删除本地`cameraPosition`变量从`DrawGround`方法：
 
-
 ```csharp
 void DrawGround()
 {
@@ -478,7 +459,6 @@ void DrawGround()
 
 如果我们修改相机位置 （如通过增加其 X 值，这在此情况下相机向左移动） 我们可以看到值会影响完全和模型：
 
-
 ```csharp
 Vector3 cameraPosition = new Vector3(15, 10, 10);
 ```
@@ -487,8 +467,7 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 ![](part2-images/image3.png "此代码将导致此视图")
 
-
-# <a name="summary"></a>总结
+## <a name="summary"></a>总结
 
 本演练演示了如何使用顶点数组来执行自定义呈现。 在这种情况下，我们通过结合使用纹理我们基于顶点的呈现创建棋盘格的 floor 和`BasicEffect`，但提供的代码此处充当为任何三维呈现的基础。 我们还介绍了，可以与模型相同的场景中混合基于顶点呈现。
 

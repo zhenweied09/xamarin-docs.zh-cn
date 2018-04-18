@@ -7,25 +7,25 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 564d106cc0192e818b87342ae0590e20afe507ae
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp-三维/二维引擎
 
 _UrhoSharp 是一个跨平台高级 3D 和 2D 引擎，可用来创建动画 3D 和二维场景为应用程序使用几何图形、 材料、 灯和照相机。_
 
-![](images/video.gif "示例 UrhoSharp 游戏")
+![示例 UrhoSharp 游戏](images/video.gif)
 
 作为 NuGet 包，可以在 Visual Studio 或 Visual Studio 安装 for Mac 并且可用于面向以下平台的任何分发 UrhoSharp: Android、 MacOS、 iOS、 tvOS 和 Windows。
 
-##  <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[UrhoSharp 简介](~/graphics-games/urhosharp/introduction.md)
+## <a name="an-introduction-to-urhosharpgraphics-gamesurhosharpintroductionmd"></a>[UrhoSharp 简介](~/graphics-games/urhosharp/introduction.md)
 
 本文提供 UrhoSharp 和用于 3D 可视化效果，在简单的三维游戏中使用其功能的高级概述。
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[使用 UrhoSharp](~/graphics-games/urhosharp/using.md)
+## <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[使用 UrhoSharp](~/graphics-games/urhosharp/using.md)
 
 在本文档中，我们将讲解 UrhoSharp 将用于生成游戏或创建你的应用程序一个三维可视化效果的核心概念。
 
@@ -54,7 +54,6 @@ _UrhoSharp 是一个跨平台高级 3D 和 2D 引擎，可用来创建动画 3D 
 所有这些示例运行在 Android、 iOS、 Mac 和 Windows。
 也有大量的 UrhoSharp[工作簿](https://developer.xamarin.com/workbooks/)包括[行星地球](https://developer.xamarin.com/workbooks/graphics/urhosharp/planetearth/planetearth.workbook)和[浏览协调](https://developer.xamarin.com/workbooks/graphics/urhosharp/coordinates/ExploringUrhoCoordinates.workbook)。
 
-
 ## <a name="copyright"></a>Copyright
 
 本文档包含原始内容从 Xamarin Inc，但从 Urho3D 项目的开源文档进行了广泛绘制，包含从 Cocos2D 项目的屏幕快照。
@@ -62,8 +61,6 @@ _UrhoSharp 是一个跨平台高级 3D 和 2D 引擎，可用来创建动画 3D 
 ## <a name="license"></a>许可证
 
 有可用在 UrhoSharp 许可证 [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
-
-
 
 ## <a name="related-links"></a>相关链接
 

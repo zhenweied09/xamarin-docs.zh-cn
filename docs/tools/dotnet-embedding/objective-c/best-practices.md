@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 93dd98dcff772adceb3650ec327cc1a14e4e056b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="embeddinator-4000-best-practices-for-objc"></a>ObjC Embeddinator 4000 最佳实践
 
@@ -18,53 +18,52 @@ ms.lasthandoff: 04/04/2018
 
 本文档的大部分内容也适用于其他支持的语言。 但是所有提供的示例是用 C# 和目标。
 
-
-# <a name="exposing-a-subset-of-the-managed-code"></a>公开的托管代码的子集
+## <a name="exposing-a-subset-of-the-managed-code"></a>公开的托管代码的子集
 
 生成本机库/框架包含 Objective C 代码调用托管 Api 公开的每个。 你外围的多个 API （公开） 然后更大本机_粘附_该库将成为。
 
 它可能是一个创建不同，较小的程序集，以公开仅向本机的开发人员的必需的 Api 的好办法。 该外观还允许你更好地控制可见性，命名错误...检查生成的代码。
 
-
-# <a name="exposing-a-chunkier-api"></a>公开 chunkier API
+## <a name="exposing-a-chunkier-api"></a>公开 chunkier API
 
 没有向转换从本机支付的价格为托管 （和后）。 在这种情况下，它是更好的做法公开_而不是琐碎块式_Api 的本机的开发人员，例如
 
 **聊天式**
-```
+
+```csharp
 public class Person {
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
 }
 ```
 
-```csharp
+```objc
 // this requires 3 calls / transitions to initialize the instance
 Person *p = [[Person alloc] init];
 p.firstName = @"Sebastien";
 p.lastName = @"Pouliot";
 ```
 
-**Chunky**
-```
+**块式**
+
+```csharp
 public class Person {
-    public Person (string firstName, string lastName) {}
+  public Person (string firstName, string lastName) {}
 }
 ```
 
-```csharp
+```objc
 // a single call / transition will perform better
 Person *p = [[Person alloc] initWithFirstName:@"Sebastien" lastName:@"Pouliot"];
 ```
 
 由于的转换数较小的性能将会更好。 它还需要更少的代码生成，因此这将生成较小的本机库以及。
 
-
-# <a name="naming"></a>命名
+## <a name="naming"></a>命名
 
 命名事项是两个最难问题在计算机科学中其他人正在缓存失效和关闭-通过-1 错误之一。 希望.NET 嵌入可以屏蔽你从以外的所有命名。
 
-## <a name="types"></a>类型
+### <a name="types"></a>类型
 
 Objective C 不支持命名空间。 一般情况下，其类型以作为前缀 2 (for Apple) 或 3 （作为第三方） 字符前缀，如`UIView`UIKit 的视图，这表示框架。
 
@@ -72,13 +71,13 @@ Objective C 不支持命名空间。 一般情况下，其类型以作为前缀 
 
 ```csharp
 namespace Xamarin.Xml.Configuration {
-    public class Reader {}
+  public class Reader {}
 }
 ```
 
 将像使用：
 
-```csharp
+```objc
 id reader = [[Xamarin_Xml_Configuration_Reader alloc] init];
 ```
 
@@ -90,11 +89,11 @@ public class XAMXmlConfigReader : Xamarin.Xml.Configuration.Reader {}
 
 使其更多 Objective C 友好若要使用，例如：
 
-```csharp
+```objc
 id reader = [[XAMXmlConfigReader alloc] init];
 ```
 
-## <a name="methods"></a>方法
+### <a name="methods"></a>方法
 
 更好的.NET 名称可能不适合于 OBJECTIVE-C 的 API。
 
@@ -105,7 +104,7 @@ OBJECTIVE-C 的开发人员的角度来看，具有的方法从`Get`前缀意味
 
 此命名规则.NET GC 世界; 具有不匹配具有的.NET 方法`Create`前缀将在.NET 中的相同行为。 但是，对于 OBJECTIVE-C 的开发人员而言，这通常意味着你拥有的返回的实例，即[创建规则](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029)。
 
-# <a name="exceptions"></a>异常
+## <a name="exceptions"></a>异常
 
 它是完全 commont 在.NET 中使用广泛到报告错误的异常。 但是，它们是速度慢且 ObjC 不完全相同。 只要有可能应从 OBJECTIVE-C 的开发人员来隐藏它们。
 
@@ -114,7 +113,7 @@ OBJECTIVE-C 的开发人员的角度来看，具有的方法从`Get`前缀意味
 ```csharp
 public int Parse (string number)
 {
-    return Int32.Parse (number);
+  return Int32.Parse (number);
 }
 ```
 
@@ -123,11 +122,11 @@ public int Parse (string number)
 ```csharp
 public bool TryParse (string number, out int value)
 {
-    return Int32.TryParse (number, out value);
+  return Int32.TryParse (number, out value);
 }
 ```
 
-## <a name="exceptions-inside-init"></a>内的异常 `init*`
+### <a name="exceptions-inside-init"></a>内的异常 `init*`
 
 .NET 中的构造函数必须成功并返回 (_希望_) 有效实例或引发异常。
 
@@ -137,8 +136,8 @@ Objective C 的允许与此相反，`init*`返回`nil`无法创建实例时。 �
 
 ## <a name="operators"></a>运算符
 
-ObjC 不允许运算符重载一样 C#，所以这些转换为类选择器。
+Objective C 不允许运算符重载一样 C#，所以这些转换为类选择器。
 
-["友好的"](https://msdn.microsoft.com/en-us/library/ms229032(v=vs.110).aspx)命名的方法生成优先运算符重载何时找到，并会产生一个更易于使用 API。
+["友好的"](/dotnet/standard/design-guidelines/operator-overloads/)命名的方法生成优先运算符重载何时找到，并会产生一个更易于使用 API。
 
-类将覆盖的运算符 = = 和/或 ！ = 应重写标准的 Equals （对象） 方法。
+将覆盖的运算符的类`==`和/或`!=`应重写标准的 Equals （对象） 方法。

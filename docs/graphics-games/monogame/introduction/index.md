@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 9fb19b86ca303f8be3506d267dd75dc9db6cfca6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>使用 MonoGame 游戏开发简介
 
@@ -27,16 +27,16 @@ MonoGame 是一个跨平台，用于导入资产提供图形、 音频、 游戏
 
 下面显示此演练的结果：
 
-![](images/image1.gif "将在本演练中以生成应用程序")
+![示例游戏字符跟随鼠标的动画](images/image1.gif)
 
-# <a name="monogame-and-xna"></a>Monogame 和 XNA
+## <a name="monogame-and-xna"></a>Monogame 和 XNA
 
 MonoGame 库用于模拟在语法和功能的 Microsoft XNA 库。  所有 MonoGame 对象都存在 Microsoft.Xna 命名空间 – 允许无需修改在 MonoGame 中使用的大多数 XNA 代码下。 
 
 开发人员熟悉 XNA 将已经熟悉 MonoGame 的语法，并寻找 MonoGame 所使用的其他信息的开发人员将能够引用现有的联机 XNA 演练、 API 文档和讨论。
 
 
-# <a name="walkthrough-parts"></a>演练部分
+## <a name="walkthrough-parts"></a>演练部分
 
 - [第 1 – 创建跨平台 MonoGame 项目部分](~/graphics-games/monogame/introduction/part1.md)
 - [第 2 – 实现 WalkingGame 部分](~/graphics-games/monogame/introduction/part2.md)

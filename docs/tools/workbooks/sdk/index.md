@@ -5,17 +5,18 @@ ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: bc8ae0304e5b044cc1a898820d0ac33e33dfec0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 03/30/2017
+ms.openlocfilehash: ad7341776c2f37d4eb6238a26d5b12ee9e340ff7
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>开始使用 Xamarin 工作簿 SDK
 
 本文档提供的快速开发针对 Xamarin 工作簿的集成入门指南。 大部分此会使用稳定的 Xamarin 工作簿，但**在工作簿 1.3 中仅支持加载通过 NuGet 包的集成**，在编写时的 alpha 通道。
 
-# <a name="general-overview"></a>常规概述
+## <a name="general-overview"></a>常规概述
 
 Xamarin 的工作簿集成是使用的小型库[ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] SDK 以与 Xamarin 工作簿和检查器中集成代理以提供增强的体验。
 

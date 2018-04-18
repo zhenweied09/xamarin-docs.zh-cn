@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 5b4e3ab12a74b0f70866dc9f41593bfd5bcec0e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95ac9912f0ff6788a2a633b3f8d3495e286030f1
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>从图片库中选取照片
 
@@ -48,7 +48,7 @@ namespace DependencyServiceSample
 
 ## <a name="ios-implementation"></a>iOS 实现
 
-IOS 实现`IPicturePicker`接口使用[ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/)中所述[**从库中选择一张照片**](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/)配方和[示例代码](https://github.com/xamarin/recipes/tree/master/ios/media/video_and_photos/choose_a_photo_from_the_gallery)。
+IOS 实现`IPicturePicker`接口使用[ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/)中所述[**从库中选择一张照片**](https://developer.xamarin.com/recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery/)配方和[示例代码](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)。
 
 IOS 实现包含在[ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) iOS 项目中的示例代码的类。 若要使此类对可见`DependencyService`管理器中，必须使用标识的类 [`assembly`] 类型的属性`Dependency`，并且必须是公共类并将其显式实现`IPicturePicker`接口：
 
@@ -146,7 +146,7 @@ IOS 应用程序需要访问的手机照片库从用户的权限。 添加到以
 
 ## <a name="android-implementation"></a>Android 实现
 
-Android 实现使用中所述的技术[**选择一个映像**](https://developer.xamarin.com/recipes/android/other_ux/pick_image/)配方和[示例代码](https://github.com/xamarin/recipes/tree/master/android/other_ux/pick_image)。 但是，当用户从图片库选定映像时调用的方法是`OnActivityResult`派生自的类中重写`Activity`。 出于此原因，普通[ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) Android 项目中的类具有已附有字段、 属性和的重写`OnActivityResult`方法：
+Android 实现使用中所述的技术[**选择一个映像**](https://developer.xamarin.com/recipes/android/other_ux/pick_image/)配方和[示例代码](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)。 但是，当用户从图片库选定映像时调用的方法是`OnActivityResult`派生自的类中重写`Activity`。 出于此原因，普通[ `MainActivity` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) Android 项目中的类具有已附有字段、 属性和的重写`OnActivityResult`方法：
 
 ```csharp
 public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

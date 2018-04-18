@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: 0e5a0cbbf5490b0fa0ffaca9be40d8e9357fce5a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b16792a506b131be07c52275e3f40cbb8d5fca94
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="an-introduction-to-skiasharp"></a>SkiaSharp 简介
 
@@ -132,7 +132,7 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-# <a name="more-information"></a>详细信息
+## <a name="more-information"></a>详细信息
 
 有关使用 SkiaSharp 的详细信息可以位于[联机 API 文档](https://developer.xamarin.com/api/namespace/SkiaSharp/)
 
