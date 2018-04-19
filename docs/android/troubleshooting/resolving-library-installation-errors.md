@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a54c69ff708ff7438ef1a8fd14c17e77b5375039
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="resolving-library-installation-errors"></a>解决库安装错误
 
@@ -161,7 +161,8 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 8.  验证通过将复制所有文件。 **嵌入**目录现在应包含文件如**.jar**， **.aar**，和**.pom**。
 
-9.  解压缩提取任何**.aar**文件。 在 Windows 上，追加**.zip**扩展**.aar**文件，右键单击它，然后选择**全部提取...**，然后删除**.zip**扩展。 在 macOS 上, 解压缩**.aar**文件使用**解压缩**命令在终端中 (例如，**解压缩 file.aar**)。
+9.  任何提取的内容解压缩**.aar**文件到**嵌入**目录。 在 Windows 上，追加**.zip**扩展**.aar**文件，打开它，并复制到内容**嵌入**目录。
+    在 macOS 上, 解压缩**.aar**文件使用**解压缩**命令在终端中 (例如，**解压缩 file.aar**)。
 
 此时，你已手动安装缺少的组件和你的项目应顺利生成且未发生错误。 如果没有，请验证你已下载**m2repository** **.zip**存档完全与在错误消息中，版本相对应的版本，并验证已安装在其内容更正位置，如上述步骤中所述。 
 

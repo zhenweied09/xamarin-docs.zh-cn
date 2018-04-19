@@ -1,16 +1,17 @@
 ---
-title: 使用 SQLite.NET
+title: 使用 iOS SQLite.NET
+description: SQLite.NET PCL NuGet 库提供了用于 Xamarin.iOS 应用程序的简单数据访问机制。
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/18/2018
-ms.openlocfilehash: 8d68df2c29afe828482da7c5747b30dc5d30a5de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e7287a4f6b4e3f1203f6181c900c05565d9b5050
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-sqlitenet"></a>使用 SQLite.NET
 
@@ -21,32 +22,47 @@ ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"�
 
 ## <a name="usage"></a>用法
 
-添加[SQLite.net PCL NuGet 包](https://www.nuget.org/packages/sqlite-net-pcl/)，到你的项目-它支持各种包括 iOS、 Android 和 Windows 的平台。
+若要包含 SQLite.NET 库中的 Xamarin 应用，请向项目中添加以下 NuGet 包：
 
-  [![](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png#lightbox)
+- **包名称：** SQLite net PCL
+- **作者：** Frank A.Krueger
+- **Id:** sqlite net pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+[![SQLite.NET NuGet 包](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png#lightbox)
+
+> [!TIP]
+> 有可用的大量不同的 SQLite 包 – 请务必选择正确的订阅 （它可能不搜索中的顶部结果）。
 
 可用的 SQLite.NET 库之后，请按照以下三个步骤，若要使用它来访问数据库操作：
 
-
 1. **添加 using 语句**-将以下语句添加到数据访问是必需的 C# 文件：
 
-        using SQLite;
+    ```csharp
+    using SQLite;
+    ```
 
 1. **创建一个空数据库**-可以通过将文件路径传递 SQLiteConnection 类构造函数创建的数据库引用。 不需要检查如果该文件已存在 – 将自动创建该是否需要，否则将现有数据库文件将会打开。
 
-        var db = new SQLiteConnection (dbPath);
+    ```csharp
+    var db = new SQLiteConnection (dbPath);
+    ```
 
     应根据本文档前面所述的规则确定 dbPath 变量。
 
 1. **将数据保存**-创建 SQLiteConnection 对象，通过调用其方法，例如 CreateTable 和 Insert 如下执行命令的数据库后：
 
-        db.CreateTable<Stock> ();
-        db.Insert (newStock); // after creating the newStock object
+    ```csharp
+    db.CreateTable<Stock> ();
+    db.Insert (newStock); // after creating the newStock object
+    ```
 
 1. **检索数据**-若要检索的对象 （或对象的列表） 使用以下语法：
 
-        var stock = db.Get<Stock>(5); // primary key id of 5
-        var stockList = db.Table<Stock>();
+    ```csharp
+    var stock = db.Get<Stock>(5); // primary key id of 5
+    var stockList = db.Table<Stock>();
+    ```
 
 ## <a name="basic-data-access-sample"></a>基本数据访问示例
 
@@ -54,14 +70,13 @@ ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"�
 
 **iOS**
 
- ![](using-sqlite-orm-images/image2.png "iOS SQLite.NET 示例")
+ [![iOS SQLite.NET 示例](using-sqlite-orm-images/image2-sml.png)](using-sqlite-orm-images/image2-sml.png#lightbox)
 
 下面的代码示例演示使用 SQLite.NET 库封装对基础数据库的访问整个数据库交互。 显示：
 
 1.  创建数据库文件
 1.  创建对象，然后保存它们中插入一些数据
 1.  查询数据
-
 
 你将需要包含这些命名空间：
 
@@ -187,7 +202,6 @@ SQLite 支持三种不同的线程模式：*单线程*，*多线程*，和*序�
 ```csharp
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
-
 
 ## <a name="related-links"></a>相关链接
 

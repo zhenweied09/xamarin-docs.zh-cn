@@ -1,31 +1,37 @@
 ---
-title: 使用 SQLite.NET
+title: 使用与 Android SQLite.NET
+description: SQLite.NET PCL NuGet 库提供了一种简单的数据访问机制有关 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 59ba1ef60b0f63ed98302bf65c4d43c8ae207f22
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: 00a937204147c418ada5570cf8021ebe1e6cfa28
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-sqlitenet"></a>使用 SQLite.NET
 
 Xamarin 建议 SQLite.NET 库是非常基本的 ORM，你可以轻松地存储和检索 Android 设备上的本地 SQLite 数据库中的对象。 ORM 代表对象关系映射&ndash;API，你可以保存并从数据库中检索"对象"，而无需编写 SQL 语句。
 
-## <a name="using-sqlitenet"></a>使用 SQLite.NET
+若要包含 SQLite.NET 库中的 Xamarin 应用，请向项目中添加以下 NuGet 包：
 
-若要包含 SQLite.NET 库的 Xamarin 应用中，添加[SQLite.net PCL NuGet 包](https://www.nuget.org/packages/sqlite-net-pcl/)项目使用**SQLite net PCL** NuGet 包：
+- **包名称：** SQLite net PCL
+- **作者：** Frank A.Krueger
+- **Id:** sqlite net pcl
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![SQLite.NET NuGet 包](using-sqlite-orm-images/image1a-sml.png "SQLite.NET NuGet 包")](using-sqlite-orm-images/image1a.png#lightbox)
 
+> [!TIP]
+> 有可用的大量不同的 SQLite 包 – 请务必选择正确的订阅 （它可能不搜索中的顶部结果）。
+
 可用的 SQLite.NET 库之后，请按照以下三个步骤，若要使用它来访问数据库操作：
 
-
-1.  **添加 using 语句**&ndash;到数据访问是必需的 C# 文件中添加以下语句： 
+1.  **添加 using 语句**&ndash;到数据访问是必需的 C# 文件中添加以下语句：
 
     ```csharp
     using SQLite;
@@ -206,7 +212,7 @@ SQLite 支持三种不同的线程模式：*单线程*，*多线程*，和*序�
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
-SQLite 的 Android 版本具有需要几个步骤的限制。 如果调用`SqliteConnection.SetConfig`生成 SQLite 异常例如`library used incorrectly`，则必须使用以下解决方法： 
+SQLite 的 Android 版本具有需要几个步骤的限制。 如果调用`SqliteConnection.SetConfig`生成 SQLite 异常例如`library used incorrectly`，则必须使用以下解决方法：
 
 1.  链接到本机**libsqlite.so**库以便`sqlite3_shutdown`和`sqlite3_initialize`Api 都提供给应用程序：
 
@@ -228,8 +234,6 @@ SQLite 的 Android 版本具有需要几个步骤的限制。 如果调用`Sqlit
     ```
 
 此解决方法也适用于`Mono.Data.Sqlite`库。 有关 SQLite 和多线程处理的详细信息，请参阅[SQLite 和多个线程](https://www.sqlite.org/threadsafe.html)。 
-
-
 
 ## <a name="related-links"></a>相关链接
 

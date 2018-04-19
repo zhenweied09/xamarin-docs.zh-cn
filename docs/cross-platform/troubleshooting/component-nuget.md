@@ -7,28 +7,21 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.date: 11/22/2017
-ms.openlocfilehash: a76adab41e9f7de5abb391e69a5b27783e0c3a63
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/18/2018
+ms.openlocfilehash: e3adee1b56b833442a8c927672cf903d45d03e84
+ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>更新组件引用到 NuGet
 
-_将组件引用替换为 NuGet 程序包添加到将来证明你的应用。_
+> [!NOTE]
+> Xamarin 组件在 Visual Studio 中，不再受支持，并应替换为 NuGet 包。 按照下面的说明手动从项目中删除组件的引用。
 
-本指南说明如何更新现有的 Xamarin 解决方案，若要更改组件引用到 NuGet 程序包。
+这些说明中的添加 NuGet 包是指[Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)或[Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
 
-- [包含 NuGet 包的组件](#contain)
-- [了 NuGet 替换的组件](#replace)
-
-大多数组件都属于上述类别之一。
-如果你使用的组件未出现具有等效的 NuGet 包，请阅读[不含 NuGet 迁移路径的组件](#require-update)下面一节。
-
-有关更多详细说明中的添加 NuGet 包，请参阅这些页面[Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)或[Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
-
-## <a name="opening-a-project-containing-a-component"></a>打开一个包含组件项目
+## <a name="manually-removing-component-references"></a>手动删除的组件引用
 
 自 2017 年 11 月，它是在[宣布](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/)将停止使用 Xamarin 组件应用商店。 为了向前移动进行的组件 sunsetting，15.6 版本的 Visual Studio 和适用于 Mac 的 7.4 版本的 Visual Studio 不再支持你的项目中的组件。 
 
@@ -40,7 +33,7 @@ _将组件引用替换为 NuGet 程序包添加到将来证明你的应用。_
 
 若要删除你的项目的组件：
 
-1. 打开.csproj 文件。 为此，右键单击项目名称，然后选择**卸载项目**。 
+1. 打开**.csproj**文件。 为此，右键单击项目名称，然后选择**卸载项目**。 
 
 2. 在已卸载的项目上再次右键单击并选择**编辑 {你项目名称}.csproj**。
 
@@ -100,9 +93,21 @@ _将组件引用替换为 NuGet 程序包添加到将来证明你的应用。_
 
 3. 删除对引用`XamarinComponentReference`并保存该文件。 在上面的示例中，则可以安全地删除整个 `ItemGroup`
 
-4. 你的解决方案中每个项目重复上述步骤。 
+4. 你的解决方案中每个项目重复上述步骤。
 
 -----
+
+> [!WARNING]
+> 以下说明只适用于 Visual Studio 早期版本。
+> **组件**节点不再可用在当前版本的 Visual Studio 2017 或 Visual Studio for mac。
+
+以下各节说明如何更新现有的 Xamarin 解决方案，若要更改组件引用到 NuGet 程序包。
+
+- [包含 NuGet 包的组件](#contain)
+- [了 NuGet 替换的组件](#replace)
+
+大多数组件都属于上述类别之一。
+如果你使用的组件未出现具有等效的 NuGet 包，请阅读[不含 NuGet 迁移路径的组件](#require-update)下面一节。
 
 <a name="contain" />
 
@@ -147,14 +152,12 @@ NuGet 包将保留在中列出**包**节点和应用程序将编译并按常规�
 
 _它可能包含 NuGet 依赖关系，但是可以忽略这些警告。_
 
-
 若要确认更换 NuGet 程序包是否存在，请搜索[NuGet.org](https://www.nuget.org/packages)，使用该组件名称，或者由作者。
 
 例如，你可以找到流行**sqlite net pcl**通过搜索包：
 
 - [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – 产品名称。
 - [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – 作者配置文件。
-
 
 ### <a name="updating-the-solution"></a>更新解决方案
 
