@@ -7,19 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/18/2018
-ms.openlocfilehash: 00a937204147c418ada5570cf8021ebe1e6cfa28
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: e8e6e98cb6ada8d8da494e408e8db66ad5038799
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-sqlitenet"></a>使用 SQLite.NET
+# <a name="using-sqlitenet-with-android"></a>使用与 Android SQLite.NET
 
 Xamarin 建议 SQLite.NET 库是非常基本的 ORM，你可以轻松地存储和检索 Android 设备上的本地 SQLite 数据库中的对象。 ORM 代表对象关系映射&ndash;API，你可以保存并从数据库中检索"对象"，而无需编写 SQL 语句。
 
 若要包含 SQLite.NET 库中的 Xamarin 应用，请向项目中添加以下 NuGet 包：
 
-- **包名称：** SQLite net PCL
+- **包名称：** sqlite net pcl
 - **作者：** Frank A.Krueger
 - **Id:** sqlite net pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)

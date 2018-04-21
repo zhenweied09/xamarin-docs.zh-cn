@@ -7,13 +7,13 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/18/2018
-ms.openlocfilehash: e7287a4f6b4e3f1203f6181c900c05565d9b5050
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: e9149fc163d31e0fcbc6ae28ccaa896eeca6dd9b
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-sqlitenet"></a>使用 SQLite.NET
+# <a name="using-sqlitenet-with-ios"></a>使用 iOS SQLite.NET
 
 Xamarin 建议 SQLite.NET 库是基本 ORM，你可以存储和检索 iOS 设备上的本地 SQLite 数据库中的对象。
 ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"对象"，而无需编写 SQL 语句。
@@ -24,7 +24,7 @@ ORM 代表对象关系映射 – API，你可以保存并从数据库中检索"�
 
 若要包含 SQLite.NET 库中的 Xamarin 应用，请向项目中添加以下 NuGet 包：
 
-- **包名称：** SQLite net PCL
+- **包名称：** sqlite net pcl
 - **作者：** Frank A.Krueger
 - **Id:** sqlite net pcl
 - **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)

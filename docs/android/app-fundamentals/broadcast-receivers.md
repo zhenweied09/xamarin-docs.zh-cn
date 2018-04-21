@@ -6,17 +6,16 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/19/2018
-ms.openlocfilehash: 75d42da4ba01aaefded0081da02b8e1651695f46
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/20/2018
+ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>在 Xamarin.Android 的广播接收方
 
 _本部分讨论如何使用广播的接收方。_
-
 
 ## <a name="broadcast-receiver-overview"></a>广播的接收方概述
 
@@ -55,7 +54,7 @@ public class SampleReceiver : BroadcastReceiver
     public override void OnReceive(Context context, Intent intent)
     {
         // Do stuff here.
-        
+
         String value = intent.GetStringExtra("key");
     }
 }
@@ -97,9 +96,9 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-面向 Android 8.0 （API 级别 26） 应用程序，或更高版本可能不以静态方式进行注册隐式广播。 显式广播可能仍静态注册应用。 没有不受此限制的隐式广播的小的列表。 这些异常中所述[隐式广播异常](https://developer.android.com/guide/components/broadcast-exceptions.html)Android 文档中的指南。 对于有兴趣隐式广播的应用必须执行因此动态使用`RegisterReceiver`方法。 这在下一部分介绍。  
+面向 Android 8.0 （API 级别 26） 应用程序，或更高版本可能不以静态方式进行注册隐式广播。 显式广播可能仍静态注册应用。 没有不受此限制的隐式广播的小的列表。 这些异常中所述[隐式广播异常](https://developer.android.com/guide/components/broadcast-exceptions.html)Android 文档中的指南。 对于有兴趣隐式广播的应用必须执行因此动态使用`RegisterReceiver`方法。 这在下一部分介绍。
 
-### <a name="context-registering-a-broadcast-receiver"></a>上下文注册广播的接收方 
+### <a name="context-registering-a-broadcast-receiver"></a>上下文注册广播的接收方
 
 上下文注册 （也称为动态注册） 的接收方执行通过调用`RegisterReceiver`方法和广播的接收方必须通过调用注销`UnregisterReceiver`方法。 若要防止泄漏资源，务必取消注册已不再相关的上下文 （活动或服务） 的接收方。 例如，服务可能广播想要通知的活动，即可向用户显示的更新。 当活动启动时，它将注册这些意向。 当活动移到后台并且不再对用户可见，它应注销接收方，因为用于显示更新的 UI 不再可见。 下面的代码段演示了如何注册和注销广播接收方在一个活动的上下文中：
 
@@ -108,22 +107,22 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 public class MainActivity: Activity 
 {
     MySampleBroadcastReceiver receiver;
-    
+
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
         receiver = new MySampleBroadcastReceiver()
-        
+
         // Code omitted for clarity
     }
-    
+
     protected override OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
-    
+
     protected override OnPause() 
     {
         UnregisterReceiver(receiver);
@@ -150,28 +149,32 @@ public class MainActivity: Activity
    ```
 
     此代码段是另一个示例通过使用发送广播`Intent.SetAction`的方法来确定操作：
-    
+
     ```csharp 
     Intent intent = new Intent();
     intent.SetAction("com.xamarin.example.TEST");
     intent.PutExtra("key", "value");
     SendBroadcast(intent);
     ```
-   
+
 2. **Context.SendOrderedBroadcast** &ndash;这是方法非常类似于`Context.SendBroadcast`，二者的区别在于，其目的将已发布的次一个地对接收方，recievers 已注册的顺序。
-   
+
 ### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-[Xamarin 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)提供调用一个帮助器类[ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html)。 `LocalBroadcastManager`适用于不希望发送或从设备上的其他应用接收广播的应用。 `LocalBroadcastManager`仅发布应用程序的上下文中的消息。 在设备上的其他应用无法接收的消息的发布与`LocalBroadcastManager`。 
+[Xamarin 支持库 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)提供调用一个帮助器类[ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html)。 `LocalBroadcastManager`适用于不希望发送或从设备上的其他应用接收广播的应用。 `LocalBroadcastManager`仅将发布的应用程序，并仅向注册到这些广播接收方的上下文中的消息`LocalBroadcastManager`。 此代码片段是一种注册广播的收件人`LocalBroadcastManager`:
 
-此代码段演示如何调度目的使用`LocalBroadcastManager`:
+```csharp
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this). RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
+```
+
+在设备上的其他应用无法接收的消息的发布与`LocalBroadcastManager`。 此代码段演示如何调度目的使用`LocalBroadcastManager`:
 
 ```csharp
 Intent message = new Intent("com.xamarin.example.TEST");
 // If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
 Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-``` 
+```
 
 ## <a name="related-links"></a>相关链接
 

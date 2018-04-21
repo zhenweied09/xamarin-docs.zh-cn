@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a4bab44cfa260060c990949b45d3f5e6b103d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 错误消息 (mmp)
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 04/04/2018
 
 #### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091： 此版本的 Xamarin.Mac 需要 * SDK (随 Xcode *)。 请升级 Xcode 以获取必需的标头文件或使用动态注册机构或将托管链接器行为设置为链接平台或仅上链接 Framework Sdk （若要尽量避免新的 Api）。
 
-Xamarin.Mac 需要标头文件，从要生成静态注册机构的应用程序的错误消息中指定的 SDK 版本... 若要修复此错误的建议的方法是升级 Xcode 来获取所需的 SDK，这将包括所有必需的标头文件。 如果你有多个版本的 Xcode 安装，或想要在非默认位置使用 Xcode，请确保在 IDE 的首选项中设置正确的 Xcode 位置。
+Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序的错误消息中指定的 SDK 版本。 若要修复此错误的建议的方法是升级 Xcode 来获取所需的 SDK，这将包括所有必需的标头文件。 如果你有多个版本的 Xcode 安装，或想要在非默认位置使用 Xcode，请确保在 IDE 的首选项中设置正确的 Xcode 位置。
 
 一种潜在、 备用解决方案，是启用托管链接器。 这将删除未使用 API 包括，在大多数情况下，新的 API 从中对标头文件进行缺失 （或不完整）。 但是这不会正常如果你的项目使用了较新的 SDK 比你的 Xcode 中引入的 API 提供。
 

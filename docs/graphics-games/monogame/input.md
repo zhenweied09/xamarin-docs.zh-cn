@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: e7ce8320441f6b248b183a8698a4f41c78bf2d64
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: ac87ee44163d53b11c15538f382379aae962cbb2
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame 游戏板引用
 
@@ -25,7 +25,7 @@ _游戏板是用于访问 MonoGame 中的输入的设备的标准的、 跨平�
 
 ## <a name="reading-input-from-gamepad"></a>从游戏板读取输入
 
-`GameController`类提供一种标准化的方法读取输入的任何 MonoGame 平台上。 它是通过两种方法提供的信息：
+`GamePad`类提供一种标准化的方法读取输入的任何 MonoGame 平台上。 它是通过两种方法提供的信息：
 
 - `GetState` – 返回的控制器的按钮、 模拟记忆棒和控制键的当前状态。
 - `GetCapabilities` – 返回的功能信息的硬件，如控制器是否具有某些按钮或支持振动。

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec3cb08b227b268c4c755545e8bc76b9e234d093
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 
@@ -136,7 +136,7 @@ _本文档会比较的跨平台项目间共享代码的不同方法： 共享项
 
 将你面向的平台推动代码共享你选择的策略。 选择最适合你的项目的方法。
 
-PCL 或.NET 标准是用于构建可共享代码库 （特别在 NuGet 上发布） 的很好选择。 共享的项目适用于应用程序开发人员计划在其跨 platforma 应用中使用大量 plaform 特有的功能。
+PCL 或.NET 标准是用于构建可共享代码库 （特别在 NuGet 上发布） 的很好选择。 共享的项目适用于应用程序开发人员计划在其跨平台应用中使用大量 plaform 特有的功能。
 
 
 ## <a name="related-links"></a>相关链接

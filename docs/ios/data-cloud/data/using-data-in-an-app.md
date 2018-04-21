@@ -1,18 +1,18 @@
 ---
-title: 在应用程序中使用数据
+title: 在 iOS 应用程序中使用数据
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 3366b78479712dffee74448dcc51e193cd07564d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eded0918c6994481cdc82fe7662a985ea243b24d
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="using-data-in-an-app"></a>在应用程序中使用数据
+# <a name="using-data-in-an-ios-app"></a>在 iOS 应用程序中使用数据
 
 **DataAccess_Adv**示例显示的工作应用程序允许用户输入和*CRUD* （创建、 读取、 更新和删除） 的数据库功能。 该应用程序包含两个屏幕： 列表和一个数据输入窗体。 所有数据访问代码都是重用在 iOS 和 Android 中而不进行修改。
 
