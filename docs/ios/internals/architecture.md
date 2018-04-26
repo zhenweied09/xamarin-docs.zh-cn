@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 930b52e5b2a532e71594f26af79035db2cc5fb25
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 85dc675a9b18b974f21532298e4d3028bdecd0b7
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ios-architecture"></a>iOS 体系结构
 
@@ -23,14 +23,14 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 
 ## <a name="native-and-managed-code-an-explanation"></a>本机和托管代码： 说明
 
-在开发用于 Xamarin 时条款*本机和托管*通常使用代码。 [托管代码](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/)是由其执行的代码[.NET Framework 公共语言运行时](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx)，或在 Xamarin 的情况下： Mono 运行时。 这是我们所说的中间语言。
+在开发用于 Xamarin 时条款*本机和托管*通常使用代码。 [托管代码](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/)是由其执行的代码[.NET Framework 公共语言运行时](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)，或在 Xamarin 的情况下： Mono 运行时。 这是我们所说的中间语言。
 
 本机代码是将在特定平台 （例如，Objective C 或甚至 AOT 编译代码，在 ARM 芯片上） 本机运行的代码。 本指南介绍了如何 AOT 编译到本机代码，托管的代码，并说明如何 Xamarin.iOS 应用程序配合使用，充分利用 Apple 的 iOS Api 通过使用的绑定，而同时还将访问权限。NET 的 BCL 和复杂的语言，如 C#。
 
 
 ## <a name="aot"></a>AOT
 
-编译任何 Xamarin 平台应用程序时，Mono C# （或 F #） 编译器将运行，并将你 C# 和 F # 代码编译为 Microsoft 中间语言 (MSIL)。 如果你在模拟器中，运行 Xamarin.Android、 Xamarin.Mac 应用程序中或甚至 Xamarin.iOS 应用程序[.NET 公共语言运行时 (CLR)](https://msdn.microsoft.com/en-us/library/8bs2ecf4(v=vs.110).aspx)编译就使用实时 (JIT) 编译器中的 MSIL。 在此编译为本机代码的运行时，这可以在你的应用程序的正确体系结构上运行。
+编译任何 Xamarin 平台应用程序时，Mono C# （或 F #） 编译器将运行，并将你 C# 和 F # 代码编译为 Microsoft 中间语言 (MSIL)。 如果你在模拟器中，运行 Xamarin.Android、 Xamarin.Mac 应用程序中或甚至 Xamarin.iOS 应用程序[.NET 公共语言运行时 (CLR)](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx)编译就使用实时 (JIT) 编译器中的 MSIL。 在此编译为本机代码的运行时，这可以在你的应用程序的正确体系结构上运行。
 
 但是，没有对 iOS 设置 apple，不允许在设备上动态生成的代码执行的安全限制。
 若要确保我们遵守这些安全协议，Xamarin.iOS 改为使用继续操作的时间 (AOT) 编译器编译托管的代码。 这将生成的本机 iOS 二进制，（可选） 使用 LLVM 优化的设备，可以部署到 Apple 的基于 ARM 的处理器。 这如何相互配合粗略示意图如下图所示：
@@ -69,7 +69,7 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
  }
 ```
 
-**Objective-C:**
+**目标 c:**
 
 ```objectivec
 @interface MyViewController : UIViewController { }

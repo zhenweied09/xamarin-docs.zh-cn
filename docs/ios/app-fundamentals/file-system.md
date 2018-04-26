@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>使用文件系统
 
 _Xamarin.iOS 可以使用相同的 System.IO 类以便与文件和目录中你将在任意.NET 应用程序的 iOS。但是，尽管熟悉类和方法中，iOS 上的文件可以创建或访问实现一些限制，并且还提供特殊功能，对于某些目录。本文概述了这些限制和功能，并演示如何在 Xamarin.iOS 应用程序中的文件访问工作原理。_
 
-你可以使用 Xamarin.iOS 和`System.IO`中的类*.NET 基类库 (BCL)*访问 iOS 文件系统。 `File`类，可以创建、 删除和读取文件，和`Directory`类可以创建、 删除或枚举目录的内容。 你还可以使用`Stream`子类，它可以提供更大程度上控制文件操作 （如文件中压缩或位置搜索）。
+你可以使用 Xamarin.iOS 和`System.IO`中的类 *.NET 基类库 (BCL)* 访问 iOS 文件系统。 `File`类，可以创建、 删除和读取文件，和`Directory`类可以创建、 删除或枚举目录的内容。 你还可以使用`Stream`子类，它可以提供更大程度上控制文件操作 （如文件中压缩或位置搜索）。
 
 iOS 有一定的应用程序可以使用文件系统来保留应用程序的数据的安全性并保护用户免受恶意应用执行一些限制。 这些限制属于*应用程序沙盒*– 限制对文件、 首选项、 网络资源、 硬件、 等应用程序的访问的一组规则。应用程序仅限于读取和写入其主目录 （安装位置）; 中的文件它无法访问另一个应用程序的文件。
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-请参阅 MSDN 文档以了解[System.Xml](http://msdn.microsoft.com/en-us/library/system.xml.aspx)有关详细信息的命名空间[序列化](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx)。 你还应查看[Xamarin.iOS 文档](~/ios/deploy-test/linker.md)在链接器 – 通常你将需要添加`[Preserve]`属性设为你想要序列化的类。
+请参阅 MSDN 文档以了解[System.Xml](http://msdn.microsoft.com/library/system.xml.aspx)有关详细信息的命名空间[序列化](http://msdn.microsoft.com/library/system.xml.serialization.aspx)。 你还应查看[Xamarin.iOS 文档](~/ios/deploy-test/linker.md)在链接器 – 通常你将需要添加`[Preserve]`属性设为你想要序列化的类。
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-System.IO 命名空间的详细信息，请参阅[MSDN 文档](http://msdn.microsoft.com/en-us/library/system.io.aspx)。
+System.IO 命名空间的详细信息，请参阅[MSDN 文档](http://msdn.microsoft.com/library/system.io.aspx)。
 
 
 ### <a name="serializing-json"></a>序列化 Json
@@ -214,7 +214,7 @@ iOS 使用正斜杠 / 作为路径分隔符 (即不同于 Windows，使用反斜
 
 当您浏览到你在 Mac OS 中的应用程序捆绑包时，它将显示与不同的图标不是你在其他目录中看到 （和隐藏.app 后缀）;但是，它是只是一个以不同方式显示操作系统的正则的目录。
 
-若要查看示例代码应用程序捆绑包，右键单击该项目在 Visual Studio 中针对 Mac 和选择**打开所在的文件夹**。 然后导航到**bin/Debug/**其中你应该看到应用程序图标 （类似于下面的屏幕截图）。
+若要查看示例代码应用程序捆绑包，右键单击该项目在 Visual Studio 中针对 Mac 和选择**打开所在的文件夹**。 然后导航到**bin/Debug/** 其中你应该看到应用程序图标 （类似于下面的屏幕截图）。
 
  [![](file-system-images/40-bundle.png "导航到 bin/Debug 来查找应用程序图标类似于此屏幕截图")](file-system-images/40-bundle.png#lightbox)
 
@@ -243,8 +243,8 @@ iOS 使用正斜杠 / 作为路径分隔符 (即不同于 Windows，使用反斜
 |文档 /|使用此目录来存储用户文档和应用程序数据文件。<br /><br />此目录的内容可以可供用户通过 iTunes 文件共享 （尽管这默认情况下禁用）。 添加`UIFileSharingEnabled`布尔密钥到 Info.plist 文件，以便允许用户访问这些文件。<br /><br />即使应用程序不会立即启用文件共享，应避免放置应从你在此目录中的用户隐藏的文件 (如数据库文件，除非您想要共享它们)。 只要保持隐藏敏感文件，这些文件没有公开 （和可能移出、 已修改，或已删除通过 iTunes） 如果的未来版本中启用文件共享。<br /><br /> 你可以使用`Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)`方法来获取你的应用程序的文档目录的路径。<br /><br />通过 iTunes 备份此目录的内容。|
 |库 /|库目录是存储不直接由用户，如数据库或其他应用程序生成的文件创建的文件的良好开端。 此目录的内容将永远不会面临用户通过 iTunes。<br /><br />你可以在库; 中创建您自己的子目录但是，已有的某些系统中创建目录此处，你应注意，包括首选项和缓存。<br /><br />通过 iTunes 备份此目录 （除外缓存子目录中） 的内容。 将备份在库中创建的自定义目录。|
 |首选项库 / /|特定于应用程序首选项文件存储在此目录。 不要直接创建这些文件。 请改用`NSUserDefaults`类。<br /><br />通过 iTunes 备份此目录的内容。|
-|Library/Caches/|缓存目录是存储数据文件，可帮助你的应用程序的好时机运行，但如果需要，可以轻松地重新创建。 应用程序应创建和删除这些文件，根据需要可以重新创建这些文件，如有必要。 但是，不会运行该应用程序时，iOS 5 可能还会删除 （在下极低的存储的情况下），这些文件。<br /><br />此目录的内容不通过 iTunes，这意味着它们将不会显示，如果用户将设备还原，备份，它们可能不是安装你的应用程序的更新的版本后存在。<br /><br />例如，以防你的应用程序无法连接到网络，你可能使用的缓存目录来存储数据文件或文件，以提供很好的脱机体验。 应用程序可以保存并在等待网络响应时快速检索此数据，但它不需要进行备份和可以轻松地为恢复或重新创建后还原或版本更新。|
-|tmp/|应用程序可以仅需要在此目录在短时间的临时文件存储。 为了节省空间，应在不再需要时删除文件。 应用程序未运行时，系统也可以从该目录删除文件。<br /><br />此目录的内容不会备份通过 iTunes 所造成。<br /><br />例如，tmp 目录可能用于存储临时文件的下载显示给用户 （如 Twitter 虚拟形象或电子邮件附件），但他们已查看 （并后重新下载，如有必要在将来，无法删除的).|
+|缓存库 / /|缓存目录是存储数据文件，可帮助你的应用程序的好时机运行，但如果需要，可以轻松地重新创建。 应用程序应创建和删除这些文件，根据需要可以重新创建这些文件，如有必要。 但是，不会运行该应用程序时，iOS 5 可能还会删除 （在下极低的存储的情况下），这些文件。<br /><br />此目录的内容不通过 iTunes，这意味着它们将不会显示，如果用户将设备还原，备份，它们可能不是安装你的应用程序的更新的版本后存在。<br /><br />例如，以防你的应用程序无法连接到网络，你可能使用的缓存目录来存储数据文件或文件，以提供很好的脱机体验。 应用程序可以保存并在等待网络响应时快速检索此数据，但它不需要进行备份和可以轻松地为恢复或重新创建后还原或版本更新。|
+|tmp /|应用程序可以仅需要在此目录在短时间的临时文件存储。 为了节省空间，应在不再需要时删除文件。 应用程序未运行时，系统也可以从该目录删除文件。<br /><br />此目录的内容不会备份通过 iTunes 所造成。<br /><br />例如，tmp 目录可能用于存储临时文件的下载显示给用户 （如 Twitter 虚拟形象或电子邮件附件），但他们已查看 （并后重新下载，如有必要在将来，无法删除的).|
 
 在查找工具窗口中，此屏幕截图中显示的目录结构：
 

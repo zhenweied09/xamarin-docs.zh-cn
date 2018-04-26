@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: ee4ee83c07cf01d1324b5f127d4f77ced0df2afe
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: e28823165188d1046142e31490967367d3246422
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>创建 MonoGame UWP 项目
 
@@ -31,9 +31,9 @@ _MonoGame 可用来创建游戏和应用适用于通用 Windows 平台，面向�
 - 设置设备到开发人员模式
 - [Visual Studio 的 MonoGame 3.5](http://www.monogame.net/2016/03/17/monogame-3-5/)或更高版本
 
-有关详细信息，请参阅此[页上设置 Windows 10 UWP 开发](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-set-up)。
+有关详细信息，请参阅此[页上设置 Windows 10 UWP 开发](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up)。
 
-可以在零售 Xbox One 硬件上开发 Xbox One 游戏。 在开发 PC 和 Xbox One 上需要其他软件。 有关配置 Xbox One 游戏开发的信息，请参阅 》 上此页面[设置 Xbox One](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index)。
+可以在零售 Xbox One 硬件上开发 Xbox One 游戏。 在开发 PC 和 Xbox One 上需要其他软件。 有关配置 Xbox One 游戏开发的信息，请参阅 》 上此页面[设置 Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index)。
 
 ## <a name="creating-an-empty-template"></a>创建一个空的模板
 

@@ -6,83 +6,79 @@ ms.assetid: D7ABAFAB-5CA2-443D-B902-2C7F3AD69CE2
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: 2bc9b2a454b306f0794ef3704daa7e0fe6d04ef8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/20/2018
+ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 堆栈和适用于 Android 的 SSL/TLS 实现选择器
 
-_HttpClient 堆栈和 SSL/TLS 实现选择器确定将由您的 Xamarin.Android 应用程序的 HttpClient 和 SSL/TLS 实现。_
+HttpClient 堆栈和 SSL/TLS 实现选择器确定将由您的 Xamarin.Android 应用程序的 HttpClient 和 SSL/TLS 实现。
 
-## <a name="overview"></a>概述
+项目必须引用**System.Net.Http**程序集。
 
-Xamarin.Android 提供两个将控制 Android 应用程序的 TLS 设置的组合框。 一个组合框将确定哪些`HttpMessageHandler`实例化时将使用`HttpClient`对象，而其他标识 web 请求时将使用哪个 TLS 实现。
+> [!WARNING]
+> **年 4 月，2018年**– 由于增强的安全性要求，包括 PCI 法规遵从性，主要云提供程序和 web 服务器应停止支持 TLS 版本早于 1.2。  在以前版本的 Visual Studio 默认使用 TLS 的较旧版本中创建 Xamarin 项目。
+>
+> 为了确保你的应用程序继续使用这些服务器和服务，**应更新与 Xamarin 项目`Android HttpClient`和`Native TLS 1.2`下面所示的设置，然后重新生成和重新部署你的应用**到你用户。
 
-> [!NOTE]
-> 项目必须引用**System.Net.Http**程序集。
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+正在 Xamarin.Android HttpClient 配置**项目选项 > Android 选项**，然后单击**高级选项**按钮。
 
-在 Xamarin.Android 项目的项目选项中找到 HttpClient 堆栈的设置。 单击**Android 选项**选项卡上，然后单击**高级选项**按钮。 这将显示**高级 Android 选项**对话框该对话框具有两个组合框、 HttpClient 实现和 SSL/TLS 实现：
+这些是 TLS 1.2 支持的建议的设置：
 
-
-[![Android 的 visual Studio 选项](http-stack-images/tls07-vs-sml.png)](http-stack-images/tls07-vs.png#lightbox)
-
-## <a name="httpclient-stack-selector"></a>HttpClient 堆栈选择器
-
-此项目选项控制这`HttpMessageHandler`实现将使用每次`HttpClient`实例化对象。 默认情况下，这是托管`HttpClientHandler`。
-
-[![Visual Studio 中的 android HttpClient 实现组合框](http-stack-images/tls04-vs-sml.png)](http-stack-images/tls04-vs.png#lightbox) 
+[![Android 的 visual Studio 选项](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-HttpClient 堆栈的设置项目选项中找到 Xamarin.Android 项目。 单击**生成 > Android 生成**设置，然后单击**常规**选项卡：
+正在 Xamarin.Android HttpClient 配置**项目选项 > 生成 > Android 生成**设置，然后单击**常规**选项卡。
 
-[![Visual Studio for Mac Android 选项](http-stack-images/tls07-xs-sml.png)](http-stack-images/tls07-xs.png#lightbox)
+这些是 TLS 1.2 支持的建议的设置：
 
-## <a name="httpclient-stack-selector"></a>HttpClient 堆栈选择器
-
-此项目选项控制这`HttpMessageHandler`实现将使用每次`HttpClient`实例化对象。 默认情况下，这是托管`HttpClientHandler`。
-
-![适用于 Mac 的 Visual Studio 中的 android HttpClient 实现组合框](http-stack-images/tls04-xs.png )
+[![Visual Studio for Mac Android 选项](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
 
 -----
+
+## <a name="alternative-configuration-options"></a>备用配置选项
+
+### <a name="androidclienthandler"></a>AndroidClientHandler
+
+AndroidClientHandler 是的新处理程序委托给本机 Java/OS 代码，而不是在托管代码中实现的所有内容。
+**这是建议的选项。**
+
+#### <a name="pros"></a>专业人员
+
+- 用于更好的性能和较小的可执行文件大小的本机 API。
+- 支持最新的标准，例如。 TLS 1.2。
+
+#### <a name="cons"></a>Cons
+
+- 需要 Android 5.0 或更高版本。
+- 某些 HttpClient 功能/选项将不可用。
 
 ### <a name="managed-httpclienthandler"></a>托管 (HttpClientHandler)
 
 托管处理程序是随 Xamarin.Android 旧版完全托管的 HttpClient 处理程序。
 
-#### <a name="pros"></a>专业人员：
+#### <a name="pros"></a>专业人员
 
 - 它是最兼容 （功能） 与 MS.NET 和 Xamarin 的较旧版本。
 
-#### <a name="cons"></a>缺点：
+#### <a name="cons"></a>Cons
 
 - 它是未完全集成与操作系统 （如。 限制为 TLS 1.0）。
 - 它是通常要慢得多 （如。 加密） 比本机 API。
 - 它要求更托管的代码，创建更大的应用程序。
 
-### <a name="androidclienthandler"></a>AndroidClientHandler
 
-AndroidClientHandler 是的新处理程序委托给本机 Java/OS 代码，而不是在托管代码中实现的所有内容。
-
-#### <a name="pros"></a>专业人员：
-
-- 用于更好的性能和较小的可执行文件大小的本机 API。
-- 支持最新的标准，例如。 TLS 1.2。
-
-#### <a name="cons"></a>缺点：
-
-- 需要 Android 5.0 或更高版本。
-- 某些 HttpClient 功能/选项将不可用。
 
 ### <a name="choosing-a-handler"></a>选择一个处理程序
 
-选择`AndroidClientHandler`和`HttpClientHandler`取决于你的应用程序的需求。 `AndroidClientHandler` 如果下列所有的应用，则一个不错的选择：
+选择`AndroidClientHandler`和`HttpClientHandler`取决于你的应用程序的需求。 `AndroidClientHandler` 建议的最新的安全支持，例如。
 
 -   你要求 TLS 1.2 + 支持。
 -   你的应用所面向 Android 5.0 (API 21) 或更高版本。
@@ -122,11 +118,11 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 此项目选项控制哪些基础 TLS 库将使用所有 web 请求，同时`HttpClient`和`WebRequest`。 默认情况下，TLS 1.2 处于选定状态：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![Visual Studio 中实现 TLS/SSL 组合框](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![适用于 Mac 的 Visual Studio 中实现 TLS/SSL 组合框](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
@@ -158,13 +154,13 @@ var client = new HttpClient();
 
 有两个与 Xamarin.Android 中的 TLS 的使用相关的环境变量：
 
--   `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 此环境变量声明默认`HttpMessageHandler`应用程序将使用。 例如：
+- `XA_HTTP_CLIENT_HANDLER_TYPE` &ndash; 此环境变量声明默认`HttpMessageHandler`应用程序将使用。 例如：
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
     ```
 
--   `XA_TLS_PROVIDER` &ndash; 此环境变量将声明其中 TLS 库将使用，或者`btls`， `legacy`，或`default`（这是与省略此变量相同）：
+- `XA_TLS_PROVIDER` &ndash; 此环境变量将声明其中 TLS 库将使用，或者`btls`， `legacy`，或`default`（这是与省略此变量相同）：
 
     ```csharp
     XA_TLS_PROVIDER=btls
@@ -172,11 +168,11 @@ var client = new HttpClient();
 
 通过添加设置此环境变量_环境文件_到项目。 环境文件是具有生成操作的 Unix 格式的纯文本文件**AndroidEnvironment**:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Visual Studio 中的 AndroidEnvironment 生成操作的屏幕截图。](http-stack-images/tls03-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![AndroidEnvironment 的屏幕快照生成操作在 Visual Studio for mac。](http-stack-images/tls03-xs.png)
 

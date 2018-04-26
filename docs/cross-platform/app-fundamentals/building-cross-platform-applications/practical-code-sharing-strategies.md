@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: d5f639cffc8ff2d134731374bd72663fec81c6a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6f6b88bf29e94a221b2ef58b3299348eb08d33fa
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>第 5 部分 — 共享策略的实际代码
 
@@ -200,7 +200,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 它是默认的机制用于在 Windows Phone 中 Xamarin.iOS 和 Xamarin.Android 以允许公共文件访问代码，要写入已实现的 (Silverlight) 中的文件访问。 `System.IO.IsolatedStorage`可以跨所有三个平台中引用类[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
 
-请参阅[独立存储概述为 Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402541(v=vs.105).aspx)有关详细信息。
+请参阅[独立存储概述为 Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx)有关详细信息。
 
 独立存储 Api 中均不提供[可移植类库](~/cross-platform/app-fundamentals/pcl.md)。 对于 PCL 一个替代方法是[PCLStorage NuGet](https://pclstorage.codeplex.com/)
 

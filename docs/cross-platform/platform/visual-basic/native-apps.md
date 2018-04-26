@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: c922102d20eb103eb265d8a7bcb418e5187296a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 54231d42383d491678b6152e67c01c5e39a1f958
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>在 Xamarin iOS 和 Android 的 visual Basic.NET
 
@@ -273,7 +273,7 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 
 ### <a name="keeping-the-pcl-output-from-visual-studio"></a>从 Visual Studio 保持 PCL 输出
 
-默认情况下将配置 （包括 TFS 和 Git） 的大多数版本控制系统为忽略**/bin/**不会存储这意味着编译的 PCL 程序集的目录。 这意味着你将需要手动将其复制到运行 Visual Studio for Mac 以添加对它的引用的任何计算机。
+默认情况下将配置 （包括 TFS 和 Git） 的大多数版本控制系统为忽略 **/bin/** 不会存储这意味着编译的 PCL 程序集的目录。 这意味着你将需要手动将其复制到运行 Visual Studio for Mac 以添加对它的引用的任何计算机。
 
 若要确保版本控制系统可以存储 PCL 程序集输出，可以创建将它复制到项目根目录的后期生成脚本。 此生成后步骤有助于确保可以轻松地添加到源代码管理和与其他项目共享程序集。
 
@@ -281,17 +281,17 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 
 1. 右键单击项目并选择**属性 > 生成事件**部分。
 
-2. 添加_后期生成_将输出 DLL 中此项目复制到项目根目录下的脚本 (即之外**/bin/**)。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
+2. 添加_后期生成_将输出 DLL 中此项目复制到项目根目录下的脚本 (即之外 **/bin/**)。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
 
   [![](native-apps-images/image6-vs-sml.png "生成后生成脚本，以便将 VB DLL 复制的事件")](native-apps-images/image6-vs.png#lightbox)
 
 #### <a name="visual-studio-2015"></a>Visual Studio 2015
 
-1.  右键单击项目并选择**属性 > 编译**，然后，确保在左上角梳理框中选择所有配置。 单击**生成事件...**右下角的按钮。
+1.  右键单击项目并选择**属性 > 编译**，然后，确保在左上角梳理框中选择所有配置。 单击**生成事件...** 右下角的按钮。
 
     [![](native-apps-images/image6.png "项目属性编译部分")](native-apps-images/image6.png#lightbox)
 
-1.  添加后期生成脚本，将输出 DLL 中此项目复制到项目根目录下 (即之外**/bin/** )。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
+1.  添加后期生成脚本，将输出 DLL 中此项目复制到项目根目录下 (即之外 **/bin/** )。 根据您的版本控制配置，该 DLL 现在应该能够添加到源代码管理。
 
     [![](native-apps-images/image7.png "生成事件窗口")](native-apps-images/image7.png#lightbox)
 
@@ -316,7 +316,7 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 
     [![](native-apps-images/image10.png "项目编辑引用菜单")](native-apps-images/image10.png#lightbox)
 
-1.  选择**.Net 程序集**选项卡上，并导航到 Visual Basic 项目目录中的输出 DLL。 即使适用于 Mac 的 Visual Studio 无法打开项目，所有文件应都在那里从源代码管理。 单击**添加**然后**确定**将此程序集添加到 iOS 和 Android 应用程序。
+1.  选择 **.Net 程序集**选项卡上，并导航到 Visual Basic 项目目录中的输出 DLL。 即使适用于 Mac 的 Visual Studio 无法打开项目，所有文件应都在那里从源代码管理。 单击**添加**然后**确定**将此程序集添加到 iOS 和 Android 应用程序。
 
     [![](native-apps-images/image11-sml.png "单击添加，然后确定将此程序集添加到 iOS 和 Android 应用程序")](native-apps-images/image11.png#lightbox)
 
@@ -335,4 +335,4 @@ Visual Studio for Mac 的可移植类库的支持意味着它可以引用了 PCL
 ## <a name="related-links"></a>相关链接
 
 - [TaskyPortableVB （示例）](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [使用.NET Framework (Microsoft) 的跨平台开发](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [使用.NET Framework (Microsoft) 的跨平台开发](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

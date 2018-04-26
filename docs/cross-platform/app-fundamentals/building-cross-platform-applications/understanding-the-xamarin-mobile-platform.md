@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 33551a924af1b7ca9c465514c704a0c1445fc2c4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76b0e9ea6e13ed053a53971b6dbe9f65bb436a4e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>第 1 – 了解 Xamarin 移动平台部分
 
@@ -41,7 +41,7 @@ C# 源所做每个平台上非常不同的方式的本机应用到自己的方�
 -   **iOS** – C# 是预时间的 (AOT) 编译为 ARM 程序集语言。 .NET framework 是包括在内，使用去掉在链接以减少应用程序的大小期间未使用的类。 Apple 不允许运行时代码生成在 iOS 中，因此某些语言功能将不可用 (请参阅[Xamarin.iOS 限制](~/ios/internals/limitations.md))。
 -   **Android** – C# 编译到 IL 和与 MonoVM + JIT'ing 一起打包。 在链接过程中去掉 framework 中的未使用的类。 应用程序运行的并行使用 Java/画 （Android 运行时），与通过 JNI 的本机类型进行交互 (请参阅[Xamarin.Android 限制](~/android/internals/limitations.md))。
 -   **Windows** – C# 编译为 IL 执行和由内置的运行时，而不需要 Xamarin 工具。 设计 Windows 应用程序以下 Xamarin 的指南使重新使用 iOS 和 Android 上的代码更简单。
-  请注意，通用 Windows 平台还具有**.NET Native**选项的行为类似于 Xamarin.iOS 的 AOT 编译它。
+  请注意，通用 Windows 平台还具有 **.NET Native**选项的行为类似于 Xamarin.iOS 的 AOT 编译它。
 
 
 链接器文档[Xamarin.iOS](~/ios/deploy-test/linker.md)和[Xamarin.Android](~/android/deploy-test/linker.md)提供了有关这一部分的编译过程的详细信息。
@@ -173,7 +173,7 @@ Windows 应用 （WinForms，WPF 中或 UWP） 都是用 Visual Studio 生成的
 
 -   **iOS** – [Apple 的人机接口指南](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
 -   **Android** – [Google 的用户界面指南](http://developer.android.com/guide/practices/ui_guidelines/index.html)
--   **Windows** –[适用于 Windows 的用户体验设计准则](https://developer.microsoft.com/en-us/windows/design)
+-   **Windows** –[适用于 Windows 的用户体验设计准则](https://developer.microsoft.com/windows/design)
 
 
  <a name="Library_and_Code_Re-use" />

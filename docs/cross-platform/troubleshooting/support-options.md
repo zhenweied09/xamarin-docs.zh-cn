@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d8853da7d35752ef27bb23fce6d0db54540ed39d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 500b4c63131ab850b4b9d7c6a0aec49b313ec426
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>可用于 Xamarin 哪些支持选项？
 
@@ -32,7 +32,7 @@ Xamarin 支持团队可帮助监视其中每个选项。  我们鼓励所有用�
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Visual Studio 电子邮件事件支持的 Xamarin 主题
 
-Xamarin SDK 和 IDE 功能均适合技术支持事件作为的一部分[Visual Studio 的订阅者权益](https://msdn.microsoft.com/subscriptions/bb266240)和[Microsoft 高级支持](https://www.microsoft.com/en-us/microsoftservices/support.aspx)。  这符合如 UWP 和 ASP.NET 的 Visual Studio 中其他开发平台的策略。  Xamarin 事件提交这种方式将分配给 Xamarin 支持团队。  请参阅[Microsoft 支持常见问题](https://support.microsoft.com/gp/offerprophone)有关这些事件的策略的详细信息。
+Xamarin SDK 和 IDE 功能均适合技术支持事件作为的一部分[Visual Studio 的订阅者权益](https://msdn.microsoft.com/subscriptions/bb266240)和[Microsoft 高级支持](https://www.microsoft.com/microsoftservices/support.aspx)。  这符合如 UWP 和 ASP.NET 的 Visual Studio 中其他开发平台的策略。  Xamarin 事件提交这种方式将分配给 Xamarin 支持团队。  请参阅[Microsoft 支持常见问题](https://support.microsoft.com/gp/offerprophone)有关这些事件的策略的详细信息。
 
 Xamarin 测试云，支持事件可以提交通过导航到[测试云登录页](https://testcloud.xamarin.com/login)并打开**支持**链接。
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="app-search-enhancements"></a>应用程序搜索增强功能
 
@@ -107,7 +107,7 @@ Apple 的[应用搜索 API 验证工具](https://search.developer.apple.com/apps
 1. 创建消息应用扩展。
 2. 添加`com.apple.developer.associated-domains`到应用的权利和包括承载共享消息应用扩展的映像的 web 域的列表。 对于每个域中，指定`spotlight-image-search`服务。
 3. 添加`apple-app-site-association`到的映像所在的网站的文件。 此文件包括为字典`spotlight-image-search`服务并包括应用程序的 ID，即团队 ID 或应用程序 ID 前缀后跟捆绑 id。 该文件可以包含最多 500 条路径和模式，将按 Spotlight 建立索引并包括在常用映像搜索中。 有关详细信息，请参阅 Apple 的[创建并上载该关联文件](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW4)文档。
-4. 允许 Applebot 进行爬网在网站上找到。 请参阅 Apple 的[有关 Applebot](https://support.apple.com/en-us/HT204683)文档。
+4. 允许 Applebot 进行爬网在网站上找到。 请参阅 Apple 的[有关 Applebot](https://support.apple.com/HT204683)文档。
 
 请参阅我们[消息应用集成](~/ios/platform/message-app-integration/index.md)更多详细信息的文档。
 

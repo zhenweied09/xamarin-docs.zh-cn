@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: 14ae6bdb3419bac13aebe6b5a9d8346ed5163de5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4a6211ac218d914089bf1d0dbcb9956800dde700
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure 移动应用
 
@@ -19,7 +19,7 @@ _Azure 门户文档的下载示例和代码项目。_
 
 <!--
 NOTE TO AUTHORS: this page is referenced from
-http://azure.microsoft.com/en-us/develop/mobile/xamarin/
+http://azure.microsoft.com/develop/mobile/xamarin/
 as https://developer.xamarin.com/guides/cross-platform/data-cloud/mobile-services/
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
@@ -54,8 +54,8 @@ Validate and modify data    http://go.microsoft.com/fwlink/p/?LinkId=331330
 
 Demonstrates how to add server-side scripts to Azure Mobile Services data tables to implement server-side validation and other functionality.
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+-  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+-  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
 -->
 
 <!--
@@ -63,16 +63,16 @@ Demonstrates how to add server-side scripts to Azure Mobile Services data tables
 
 A quick example of paging large sets of data using Skip() and Take().
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+-  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+-  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
 -->
 
 ## <a name="get-started-with-users"></a>用户入门
 
 对配置和代码使用 Azure 移动服务的登录屏幕中提供完整的说明。 支持的身份验证提供程序包括 Microsoft、 Google、 Facebook 和 Twitter。
 
--  [iOS](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
--  [Android](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
+-  [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
+-  [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
 
 ## <a name="authorize-users-in-scripts"></a>在脚本中的用户授权
@@ -102,12 +102,12 @@ Javascript 后端某些示例代码
 ## <a name="related-links"></a>相关链接
 
 - [GettingStarted （示例）](https://github.com/xamarin/mobile-samples/tree/master/Azure/GettingStarted)
-- [GetStartedWithData (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithData)
+- [GetStartedWithData （示例）](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithData)
 - [GetStartedWithUsers （示例）](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithUsers)
 - [GetStartedWithPush （示例）](https://github.com/xamarin/mobile-samples/tree/master/Azure/GetStartedWithPush)
 - [NotificationHubs （示例）](https://github.com/xamarin/mobile-samples/tree/master/Azure/NotificationHubs)
 - [Azure 的移动客户端](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
-- [Azure Mobile Apps 的学习路径](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/)
+- [Azure Mobile Apps 的学习路径](https://azure.microsoft.com/documentation/learning-paths/appservice-mobileapps/)
 
 <!--
 - [ValidateModifyData (sample)](https://github.com/xamarin/mobile-samples/tree/master/Azure/ValidateModifyData)

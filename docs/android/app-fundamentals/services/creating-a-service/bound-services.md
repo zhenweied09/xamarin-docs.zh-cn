@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>在 Xamarin.Android 中绑定服务
 
@@ -263,7 +263,7 @@ protected override void OnStart ()
 严格地说，不需要客户端若想了解有关`TimestampService`和公开该类具体到客户端程序可以使应用程序更脆弱并且难以维护它的生存期内。 另一种方法是使用公开的接口`GetFormattedTimestamp()`方法，并对通过该服务的代理调用`Binder`（或可能的服务连接类）：  
 
 ```csharp
-public class TimestampBinder : Binder, IGetTimesamp
+public class TimestampBinder : Binder, IGetTimestamp
 {
     TimestampService service;
     public TimestampBinder(TimestampService service)
@@ -294,4 +294,4 @@ string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 - [Android.Content.IServiceConnection](https://developer.xamarin.com/api/type/Android.Content.IServiceConnection/)
 - [Android.OS.Binder](https://developer.xamarin.com/api/type/Android.OS.Binder/)
 - [Android.OS.IBinder](https://developer.xamarin.com/api/type/Android.OS.IBinder)
-- [BoundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/BoundServiceDemo/)
+- [BoundServiceDemo （示例）](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/BoundServiceDemo/)

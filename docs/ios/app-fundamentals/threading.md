@@ -5,11 +5,11 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 6d178231cd45d3b251a26c47abd47bf22b6c2716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="threading"></a>线程
 
@@ -17,7 +17,7 @@ Xamarin.iOS 运行时可使开发人员访问.NET 线程处理 Api，同时使�
 
 
 
-Xamarin 强烈建议你使用[任务并行库](http://msdn.microsoft.com/en-us/library/dd460717.aspx)(TPL) 生成应用程序，原因有多种：
+Xamarin 强烈建议你使用[任务并行库](http://msdn.microsoft.com/library/dd460717.aspx)(TPL) 生成应用程序，原因有多种：
 -  默认 TPL 计划程序会将委托任务执行的线程池，反过来会动态增长进程发生，同时可避免线程过多 CPU 时间争用结束的其中一个方案所需的线程数。 
 -  很容易地考虑 TPL 任务方面的操作。 您可以轻松地对其进行处理、 它们安排、 序列化其执行或启动许多具有一套丰富的 Api 的并行。 
 -  它是使用新 C# 异步语言扩展进行编程的基础。 

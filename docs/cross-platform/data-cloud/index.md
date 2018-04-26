@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -31,7 +31,7 @@ _文档和示例代码下载 azure。_
 没有一套[Azure Mobile Apps 文档](~/cross-platform/data-cloud/mobile-apps.md)，指导您完成的实现过程[Azure 移动客户端](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)。
 Xamarin 还提供了 Azure 消息传送 NuGet 打包以[iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/)和[Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/)来帮助实施跨平台的推送通知。
 
-在上配置你的应用[Azure 应用程序服务门户](https://portal.azure.com/)访问移动应用、 Web Api、 存储和其他更多。 了解有关[应用程序服务有什么不同](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/)并观看中[从 Microsoft 这些视频](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/)。
+在上配置你的应用[Azure 应用程序服务门户](https://portal.azure.com/)访问移动应用、 Web Api、 存储和其他更多。 了解有关[应用程序服务有什么不同](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/)并观看中[从 Microsoft 这些视频](http://azure.microsoft.com/campaigns/azure-march-announcement/)。
 
 ## <a name="active-directory-authentication"></a>Active Directory 身份验证
 
@@ -58,7 +58,7 @@ Microsoft 的 Web API 公开了一个类似于 REST 的接口，可以通过 Xam
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -Azure 移动应用程序。
 
 - [电子商店](https://github.com/dotnet-architecture/eShopOnContainers)– 示例为[体系结构系列](https://www.microsoft.com/net/learn/architecture)的电子书。
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT 示例从生成 2016年。
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT 示例从生成 2016年。
 
 
 ## <a name="related-links"></a>相关链接

@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: f94959062f01a363319494eb510f1a6e42fe36b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="localization"></a>本地化
 
@@ -110,7 +110,7 @@ double.Parse("1,999.99", CultureInfo.InvariantCulture);
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-请参阅[分析数值字符串](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx)和[分析日期和时间字符串](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx)MSDN 文章以获取其他信息。
+请参阅[分析数值字符串](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx)和[分析日期和时间字符串](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx)MSDN 文章以获取其他信息。
 
 <a name="rtl" />
 
@@ -130,7 +130,7 @@ IOS 和 Android 支持从右向左的布局和字体呈现，具有各种内置�
 
 不同语言以不同方式，定义其字母表的排序顺序，即使它们使用相同的字符集。
 
-请参阅[详细信息的字符串比较](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison)中[在.NET Framework 中使用字符串的最佳实践](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx)有关其中语言 (CultureInfo) 会影响排序顺序示例。
+请参阅[详细信息的字符串比较](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison)中[在.NET Framework 中使用字符串的最佳实践](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx)有关其中语言 (CultureInfo) 会影响排序顺序示例。
 
 不太可能在移动平台上的内置数据库功能将支持特定于语言的排序顺序这样，你可能需在你的业务逻辑中实现附加代码。
 
@@ -312,4 +312,4 @@ IOS 和 Android 支持从右向左的布局和字体呈现，具有各种内置�
 
 - [Apple 的本地化概述](https://developer.apple.com/internationalization/)
 - [Android 的本地化清单](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [开发全球通用应用程序 (MSDN) 的最佳实践](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [开发全球通用应用程序 (MSDN) 的最佳实践](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

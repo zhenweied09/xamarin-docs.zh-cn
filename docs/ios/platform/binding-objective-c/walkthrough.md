@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a25aa1043dcaf52406059d3fa184da36dc4875e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>演练： 将绑定 iOS Objective C 库
 
@@ -158,7 +158,7 @@ _本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS
 
     [![](walkthrough-images/image16b.png "展开链接二进制文件到库部分")](walkthrough-images/image16b.png#lightbox)
 
-13. 使用**+**按钮以打开对话框让你上面列出的所需的帧框架添加：
+13. 使用**+** 按钮以打开对话框让你上面列出的所需的帧框架添加：
 
     [![](walkthrough-images/image16c.png "上面列出的所需的帧框架添加")](walkthrough-images/image16c.png#lightbox)
 
@@ -211,7 +211,7 @@ clean:
     -rm -f *.a *.dll
 ```
 
-输入**生成文件**你选择的纯文本编辑器中的命令和更新各部分之间用**您的项目名称-**替换为你的项目的名称。 也很重要，以确保我们将粘贴所述的说明，说明中的选项卡都已被保留。
+输入**生成文件**你选择的纯文本编辑器中的命令和更新各部分之间用**您的项目名称-** 替换为你的项目的名称。 也很重要，以确保我们将粘贴所述的说明，说明中的选项卡都已被保留。
 
 名称保存该文件**生成文件**到我们在上面创建的 InfColorPicker Xcode 静态库相同的位置：
 
@@ -396,7 +396,7 @@ Europa:Resources kmullins$
 为了进行此演练中，我们将使用以下目标 Sharpie 工具：
 
 - **xcode** -该工具会为我们提供有关我们当前的 Xcode 安装和 iOS 和 Mac Api，我们已安装的版本信息。 我们将使用此信息更高版本时我们生成我们的绑定。
-- **将绑定**-我们将使用此工具来分析**.h**到初始 InfColorPicker 项目中的文件**ApiDefinition.cs**和**StructsAndEnums.cs**文件。
+- **将绑定**-我们将使用此工具来分析 **.h**到初始 InfColorPicker 项目中的文件**ApiDefinition.cs**和**StructsAndEnums.cs**文件。
 
 若要获得关于特定目标 Sharpie 工具帮助，请输入工具的名称和`-help`选项。 例如，`sharpie xcode -help`将返回以下输出：
 
@@ -430,7 +430,7 @@ sdk: watchos2.2      arch: armv7
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-其中`[full-path-to-project]`是到目录的完整路径其中**InfColorPicker** Xcode 项目文件将位于我们在计算机上，并通过所述，[iphone-os] 是 iOS 我们已安装的 SDK`sharpie xcode -sdks`命令。 请注意，在此示例中我们已传递 **\*.h**作为参数，其中包括*所有*此目录中的中的标头文件通常你应不这样做，但改为仔细阅读标头文件，以了解顶级**.h**引用所有其他相关的文件，并且只传递给目标 Sharpie 的文件。
+其中`[full-path-to-project]`是到目录的完整路径其中**InfColorPicker** Xcode 项目文件将位于我们在计算机上，并通过所述，[iphone-os] 是 iOS 我们已安装的 SDK`sharpie xcode -sdks`命令。 请注意，在此示例中我们已传递 **\*.h**作为参数，其中包括*所有*此目录中的中的标头文件通常你应不这样做，但改为仔细阅读标头文件，以了解顶级 **.h**引用所有其他相关的文件，并且只传递给目标 Sharpie 的文件。
 
 以下[输出](walkthrough-images/os05.png)将生成在终端中：
 
@@ -536,11 +536,11 @@ Europa:Resources kmullins$
 1. **创建 iPhone 用户界面**-双击**MainStoryboard.storyboard**文件中**InfColorPickerSample**项目以在 iOS 设计器中编辑它。 添加**按钮**到视图并调用它`ChangeColorButton`，如在下面的示例所示：
 
     ![](walkthrough-images/use03.png "将按钮添加到视图")
-1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括**.xib**文件。 Xamarin.iOS 将不包括此**.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加**.xib**到我们的 Xamarin.iOS 项目文件。 选择 Xamarin.iOS 项目，右键单击并选择**添加 > 添加文件**，并添加**.xib**文件中的以下屏幕截图所示：
+1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括 **.xib**文件。 Xamarin.iOS 将不包括此 **.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加 **.xib**到我们的 Xamarin.iOS 项目文件。 选择 Xamarin.iOS 项目，右键单击并选择**添加 > 添加文件**，并添加 **.xib**文件中的以下屏幕截图所示：
 
     ![](walkthrough-images/use04.png "添加 InfColorPickerView.xib")
 
-1. 当系统询问，复制**.xib**到项目的文件。
+1. 当系统询问，复制 **.xib**到项目的文件。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -557,7 +557,7 @@ Europa:Resources kmullins$
 
     ![](walkthrough-images/use03vs.png "创建 iPhone 用户界面")
 
-1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括**.xib**文件。 Xamarin.iOS 将不包括此**.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加**.xib**到我们 Xamarin.iOS 项目文件我们**Mac 生成主机**。 选择 Xamarin.iOS 项目，右键单击并选择**添加** > **现有项...**，并添加**.xib**文件。
+1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括 **.xib**文件。 Xamarin.iOS 将不包括此 **.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加 **.xib**到我们 Xamarin.iOS 项目文件我们**Mac 生成主机**。 选择 Xamarin.iOS 项目，右键单击并选择**添加** > **现有项...**，并添加 **.xib**文件。
 
 
 -----
@@ -735,4 +735,4 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 - [绑定详细信息](~/cross-platform/macios/binding/overview.md)
 - [绑定类型参考指南](~/cross-platform/macios/binding/binding-types-reference.md)
 - [面向 Objective-C 开发人员的 Xamarin](~/ios/get-started/objective-c-developers/index.md)
-- [框架设计指南](http://msdn.microsoft.com/en-us/library/ms229042.aspx)
+- [框架设计指南](http://msdn.microsoft.com/library/ms229042.aspx)

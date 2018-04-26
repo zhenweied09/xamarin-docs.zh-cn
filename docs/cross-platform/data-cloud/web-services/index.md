@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ad18382a7143c7b1cc6bbecb3867c042512eb562
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6de16095d9e1267587a050e8081f87f896f3153e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-web-services"></a>介绍了 Web 服务
 
@@ -22,7 +22,7 @@ _本指南演示如何使用另一个 web 服务技术。涵盖的主题包括�
 本文讨论以下主题：
 
 - [REST 服务](#rest)
-- [ASP.Net Web Services (ASMX)](#asmx)
+- [ASP.Net Web 服务 (ASMX)](#asmx)
 - [WCF 服务](#wcf)
 
 对于使用 Xamarin.Forms 的客户，有使用上述每种技术中的完整示例[Xamarin.Forms Web 服务](~/xamarin-forms/data-cloud/index.md)文档。
@@ -337,7 +337,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 任务并行库 (TPL) 可以简化通过封装在同一个异步操作来使用的 APM begin/end 方法对的过程`Task`对象。 此封装提供的多个重载的`Task.Factory.FromAsync`方法。 此方法创建`Task`执行`TodoService.EndGetTodoItems`方法一次`TodoService.BeginGetTodoItems`方法完成时，与`null`表示没有数据传递到参数`BeginGetTodoItems`委托。 最后，值`TaskCreationOptions`枚举指定应使用的创建和执行的任务的默认行为。
 
-APM 有关的详细信息，请参阅[异步编程模型](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx)和[TPL 和传统.NET Framework 异步编程](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx)MSDN 上。
+APM 有关的详细信息，请参阅[异步编程模型](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx)和[TPL 和传统.NET Framework 异步编程](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx)MSDN 上。
 
 有关使用 ASMX 服务的详细信息，请参阅[使用 ASP.NET Web 服务 (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)。
 
@@ -364,7 +364,7 @@ ASP.NET Web 服务 (ASMX) 和 WCF，之间的差异，但是务必了解 WCF 支
 
 A*代理*必须生成要使用 WCF 服务，它允许应用程序连接到服务。 代理是通过使用以定义的方法和关联的服务配置的服务元数据构造的。 由 web 服务生成 Web 服务描述语言 (WSDL) 文档形式公开此元数据。 可以使用在 Visual Studio 2017 Microsoft WCF Web 服务引用提供程序将 web 服务的服务引用添加到.NET 标准库生成代理。
 
-创建在 Visual Studio 2017 中使用 Microsoft WCF Web 服务引用提供程序的代理的替代方法是使用 ServiceModel 元数据实用工具 (svcutil.exe)。 有关详细信息，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)。
+创建在 Visual Studio 2017 中使用 Microsoft WCF Web 服务引用提供程序的代理的替代方法是使用 ServiceModel 元数据实用工具 (svcutil.exe)。 有关详细信息，请参阅[ServiceModel 元数据实用工具 (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)。
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -416,7 +416,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 任务并行库 (TPL) 可以简化通过封装在同一个异步操作来使用的 APM begin/end 方法对的过程`Task`对象。 此封装提供的多个重载的`Task.Factory.FromAsync`方法。 此方法创建`Task`执行`TodoServiceClient.EndGetTodoItems`方法一次`TodoServiceClient.BeginGetTodoItems`方法完成时，与`null`表示没有数据传递到参数`BeginGetTodoItems`委托。 最后，值`TaskCreationOptions`枚举指定应使用的创建和执行的任务的默认行为。
 
-APM 有关的详细信息，请参阅[异步编程模型](https://msdn.microsoft.com/en-us/library/ms228963(v=vs.110).aspx)和[TPL 和传统.NET Framework 异步编程](https://msdn.microsoft.com/en-us/library/dd997423(v=vs.110).aspx)MSDN 上。
+APM 有关的详细信息，请参阅[异步编程模型](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx)和[TPL 和传统.NET Framework 异步编程](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx)MSDN 上。
 
 有关使用 WCF 服务的详细信息，请参阅[使用 Windows Communication Foundation (WCF) Web 服务](~/xamarin-forms/data-cloud/consuming/wcf.md)。
 
@@ -462,5 +462,5 @@ client.ClientCredentials.UserName.Password = @"mrsnuggles";
 
 - [WebServices 示例](https://developer.xamarin.com/samples/mobile/WebServices/WebServiceSamples/)
 - [Xamarin.Forms 中的 web 服务](~/xamarin-forms/data-cloud/index.md)
-- [ServiceModel 元数据实用工具 (svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
-- [BasicHttpBinding](http://msdn.microsoft.com/en-us/library/system.servicemodel.basichttpbinding.aspx)
+- [ServiceModel 元数据实用工具 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [BasicHttpBinding](http://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

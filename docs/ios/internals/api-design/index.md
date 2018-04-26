@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b7604633a5dfad6134d7b549299194ab6707a865
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="api-design"></a>API 设计
 
@@ -693,7 +693,7 @@ Xamarin.iOS 具有将会负责为你释放资源，它们将不再使用时的�
 
 公开`IDisposable`接口是为开发人员提供帮助中释放可能封装较大的内存块的对象的一种简便方式 (例如，`UIImage`可能如下所示只是一个无害的指针，但无法指向 2 兆字节映像) 和其他重要和有限的资源 （如视频解码缓冲区）。
 
-NSObject 实现 IDisposable 接口以及[.NET 释放模式](http://msdn.microsoft.com/en-us/library/fs2xkftw.aspx)。 这样，开发人员该子类重写释放行为并释放其自己的资源按需 NSObject。 例如，考虑解决多个映像保留此视图控制器：
+NSObject 实现 IDisposable 接口以及[.NET 释放模式](http://msdn.microsoft.com/library/fs2xkftw.aspx)。 这样，开发人员该子类重写释放行为并释放其自己的资源按需 NSObject。 例如，考虑解决多个映像保留此视图控制器：
 
 ```csharp
 class MenuViewController : UIViewController {

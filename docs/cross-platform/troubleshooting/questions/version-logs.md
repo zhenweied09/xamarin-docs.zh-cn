@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdbe480c45e9c0117f1437b1ee632f6ea8f142e0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>在哪里可以找到我的版本信息和日志？
 
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/04/2018
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-参考：[命令行选项](http://msdn.microsoft.com/en-us/library/aa367988.aspx)
+参考：[命令行选项](http://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Visual Studio 启动时，详细日志
 
@@ -111,7 +111,7 @@ msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-参考： [/Log (devenv.exe)](http://msdn.microsoft.com/en-us/library/ms241272.aspx)
+参考： [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Mac 日志
 
@@ -198,7 +198,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />iOS 模拟器登录 （Mac)
 
-*   若要访问系统日志，选择**调试 > 打开系统日志...**在 iOS 模拟器应用。
+*   若要访问系统日志，选择**调试 > 打开系统日志...** 在 iOS 模拟器应用。
 
     ![](https://kb.xamarin.com/customer/portal/attachments/382617 "调试菜单显示打开的系统日志选项")
 

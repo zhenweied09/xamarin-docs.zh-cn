@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6a4ecad0b28dc4b8ba4060966ccefb678c8e6794
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f37ff8a2d07681ba8e4ec3ed6ad7e5bbd85e6502
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="portable-visual-basicnet"></a>可移植 Visual Basic.NET
 
@@ -79,5 +79,5 @@ PCL 配置文件 （即控件 PCL 适用于哪些平台） 都可以查看和更
 ## <a name="related-links"></a>相关链接
 
 - [TaskyPortableVB （示例）](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
-- [XamarinFormsVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
-- [使用.NET Framework (Microsoft) 的跨平台开发](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [XamarinFormsVB （示例）](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
+- [使用.NET Framework (Microsoft) 的跨平台开发](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

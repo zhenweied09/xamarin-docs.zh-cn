@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: f9563768a5a2fba31da3eb343b093c9bfaea3069
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="net-embedding-errors"></a>.NET 嵌入错误
 
@@ -230,7 +230,7 @@ public class MyType {
 
 ### <a name="em1033-method-m-is-not-generated-because-another-method-exposes-the-operator-with-a-friendly-name"></a>EM1033： 方法`M`由于另一种方法公开具有友好名称的运算符，则不会生成。
 
-这是**警告**，该方法`M`由于另一种方法公开具有友好名称的运算符，则不会生成。 (https://msdn.microsoft.com/en-us/library/ms229032(v=vs.110).aspx)
+这是**警告**，该方法`M`由于另一种方法公开具有友好名称的运算符，则不会生成。 (https://msdn.microsoft.com/library/ms229032(v=vs.110).aspx)
 
 <a name="EM1034" />
 

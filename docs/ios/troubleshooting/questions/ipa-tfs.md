@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2139be01b95a0a4287bba43b8a2ebad537ac7a4f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 087a20ea3b573595e6cbd2b40d77de649676391e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>如何将 IPA 输出文件复制到 TFS 放置文件夹？
 
@@ -41,13 +41,13 @@ ms.lasthandoff: 04/04/2018
 
 -   这是上所述的相同常规技术[可以更改 IPA 文件的输出路径？](~/ios/troubleshooting/questions/ipa-output-path.md)。 要设置两个重要事项`$(TF_BUILD_BINARIESDIRECTORY)`作为目标文件夹，并因此将添加额外条件`CopyIpa`才会运行为 TFS 版本。
 
--   有关的说明`TF_BUILD_BINARIESDIRECTORY`请参阅[ https://msdn.microsoft.com/en-us/library/hh850448.aspx ](https://msdn.microsoft.com/en-us/library/hh850448.aspx)。
+-   有关的说明`TF_BUILD_BINARIESDIRECTORY`请参阅[ https://msdn.microsoft.com/library/hh850448.aspx ](https://msdn.microsoft.com/library/hh850448.aspx)。
 
 ## <a name="additional-references"></a>其他参考
 
 - [用于 Xamarin 安装 TFS 的文档](https://docs.microsoft.com/vsts/tfvc/overview)
-- [TFS 生成任务： Xamarin.Android](https://docs.microsoft.com/en-us/vsts/build-release/tasks/build/xamarin-android)
-- [TFS 生成任务： Xamarin.iOS](https://docs.microsoft.com/en-us/vsts/build-release/tasks/build/xamarin-ios)
+- [TFS 生成任务： Xamarin.Android](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-android)
+- [TFS 生成任务： Xamarin.iOS](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>后续步骤
 本文档讨论为 Visual Studio 的 Xamarin 3.11.666 截至的当前行为和 Xamarin.iOS 8.10.3 在 Mac 上的构建的主机。 有关进一步的帮助，请与我们联系，或如果此问题仍然存在即使利用的上述信息，请参阅[哪些支持选项均可用于 Xamarin？](~/cross-platform/troubleshooting/support-options.md)有关联系人选项，建议的信息以及如何如果需要的文件的新 bug。 

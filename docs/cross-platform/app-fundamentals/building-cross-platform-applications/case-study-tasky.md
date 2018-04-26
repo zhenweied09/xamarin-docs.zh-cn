@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f8e663ab2e274bff1ae8b700586d4c6749f04545
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 690edabd53752ff0347fdb232a4bbfcb1ba6e84d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="case-study-tasky"></a>案例研究： Tasky
 
@@ -166,7 +166,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 #### <a name="locking-to-prevent-concurrent-access"></a>锁定以防止并发访问
 
-A[锁](http://msdn.microsoft.com/en-us/library/c5kehkcz(v=vs.100).aspx)内实施`TaskItemDatabase`类以防止并发访问数据库。 这是为了确保已序列化从不同的线程并发访问 （否则 UI 组件可能会尝试以数据库读取后台线程正在更新一次）。 如何实施该锁的示例所示：
+A[锁](http://msdn.microsoft.com/library/c5kehkcz(v=vs.100).aspx)内实施`TaskItemDatabase`类以防止并发访问数据库。 这是为了确保已序列化从不同的线程并发访问 （否则 UI 组件可能会尝试以数据库读取后台线程正在更新一次）。 如何实施该锁的示例所示：
 
 ```csharp
 static object locker = new object ();
@@ -253,7 +253,7 @@ path>/Documents/TaskDB.db3"为 Android 或只是"TaskDB.db3"为 Windows Phone。
 
  <a name="iOS_App" />
 
-## <a name="ios-app"></a>iOS App
+## <a name="ios-app"></a>iOS 应用程序
 
 有只有几种实现 iOS Tasky 使用常见的 PCL 项目来存储和检索数据的应用程序所需的类。 完成 iOS Xamarin.iOS 项目所示：
 
@@ -357,7 +357,7 @@ Tasky 使用`MonoTouch.Dialog`的反射 API，以显示该屏幕中，因此，�
 
  <a name="Android_App" />
 
-## <a name="android-app"></a>Android App
+## <a name="android-app"></a>Android 应用程序
 
 完整的 Xamarin.Android 项目是如下图所示：
 

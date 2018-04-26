@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 638e16a47d30e1d4d61fe9e7d19a0245261e5d7f
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-support-overview"></a>异步支持概述
 
@@ -23,7 +23,7 @@ Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以�
 
 本文档介绍新的异步和 await 关键字，然后将演练一些简单的示例在 Xamarin.iOS 和 Xamarin.Android 中实现异步方法。
 
-有关 C# 5 （包括示例和不同的使用方案的很多） 的新异步功能的更完整讨论，请参阅 MSDN 文档[使用 Async 和 Await 进行异步编程](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)。
+有关 C# 5 （包括示例和不同的使用方案的很多） 的新异步功能的更完整讨论，请参阅 MSDN 文档[使用 Async 和 Await 进行异步编程](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)。
 
 示例应用程序发出简单异步 web 请求 （而不阻塞主线程），然后用已下载的 html 和字符计数更新 UI。
 
@@ -69,7 +69,7 @@ Await 运算符可以应用于在标记为异步方法内的任务。 它会导�
 
 在任务完成后，该方法恢复在代码中的同一点执行。 这包括返回到 try – catch – finally 块的 try 作用域 （如果有的话）。 await 不能在 catch 或 finally 块。
 
-阅读更多有关[await MSDN 上](http://msdn.microsoft.com/en-us/library/vstudio/hh156528.aspx)。
+阅读更多有关[await MSDN 上](http://msdn.microsoft.com/library/vstudio/hh156528.aspx)。
 
 ## <a name="exception-handling"></a>异常处理
 
@@ -85,7 +85,7 @@ Await 运算符可以应用于在标记为异步方法内的任务。 它会导�
 
 然后，该任务取消了自身，并且确认取消。
 
-有关取消的详细信息，请参阅[如何取消异步任务](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx)MSDN 上。
+有关取消的详细信息，请参阅[如何取消异步任务](http://msdn.microsoft.com/library/vstudio/jj155761.aspx)MSDN 上。
 
 ## <a name="example"></a>示例
 
@@ -202,9 +202,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 - [HttpClient (iOS) （示例）](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) （示例）](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [网络研讨会： C# 异步在 iOS 和 Android （视频）](http://xamarin.wistia.com/medias/k27mc627xz)
-- [异步编程使用 Async 和 Await (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)
-- [微调异步应用程序 (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx)
+- [异步编程使用 Async 和 Await (MSDN)](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)
+- [微调异步应用程序 (MSDN)](http://msdn.microsoft.com/library/vstudio/jj155761.aspx)
 - [等待时，UI 和死锁和 ！哦我 ！(MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
 - [在完成 (MSDN) 时处理任务](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
-- [基于任务的异步模式 (TAP)](http://msdn.microsoft.com/en-us/library/hh873175.aspx)
+- [基于任务的异步模式 (TAP)](http://msdn.microsoft.com/library/hh873175.aspx)
 - [在 C# 5 （Eric Lippert 博客） – 有关关键字引入的异步](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

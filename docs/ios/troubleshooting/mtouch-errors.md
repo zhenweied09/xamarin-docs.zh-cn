@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 错误
 
@@ -163,9 +163,9 @@ Mtouch 无法识别的错误消息中所述的命令行自变量。
 
 有几个选项不能同时使用的 mtouch:
 
--  --logdev
+-  -logdev
 -  --installdev
--  --killdev
+-  -killdev
 -  -launchdev
 -  -launchdebug
 -  -launchsim
@@ -631,7 +631,7 @@ Xamarin.iOS 要求标头文件，从要生成你的应用程序的错误消息�
 
 <a name="MT0109" />
 
-### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109： 程序集"{0}"的加载路径不同于所提供的路径不同路径 (提供路径： {1}、 实际路径： {2})。
+### <a name="mt0109-the-assembly-0-was-loaded-from-a-different-path-than-the-provided-path-provided-path-1-actual-path-2"></a>MT0109： 程序集{0}的加载路径不同于所提供的路径不同路径 (提供路径： {1}，实际路径： {2})。
 
 这是警告，该值由应用程序引用的程序集从不同位置加载比请求。
 
@@ -1653,11 +1653,11 @@ Parameter name: instruction
 
 <a name="MT2104" />
 
-### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104： 无法将链接程序集"{0}"，因为它是混合模式。
+### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104： 无法将链接程序集{0}按原样混合模式。
 
 链接器无法处理混合模式程序集。
 
-请参阅https://msdn.microsoft.com/en-us/library/x0w2664k.aspx为混合模式程序集的详细信息。
+请参阅https://msdn.microsoft.com/library/x0w2664k.aspx为混合模式程序集的详细信息。
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: AOT 错误消息
 
@@ -2060,7 +2060,7 @@ Objectice C 类的名称不能包含空格，这意味着`Register`上相应的�
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: 注册机构找到不受支持的结构\*: 结构中的所有字段还必须都是结构 (字段\*与类型 {2} 不是一种结构)。
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: 注册机构找到不受支持的结构\*: 结构中的所有字段还必须都是结构 (字段\*with type{2}不是一种结构)。
 
 注册机构找到具有不受支持的字段的结构。
 
@@ -2444,7 +2444,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 <a name="MT6003" />
 
-### <a name="mt6003-unauthorizedaccessexception-message"></a>MT6003: [UnauthorizedAccessException message]
+### <a name="mt6003-unauthorizedaccessexception-message"></a>MT6003: [UnauthorizedAccessException 消息]
 
 当去除调试从应用程序的符号时，安全出错。
 
@@ -2953,7 +2953,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014： 该方法的返回值为无效 DelegateProxyAttribute *。*: DelegateType 的 ({2}) 处理程序字段为 null。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014： 该方法的返回值为无效 DelegateProxyAttribute *。*: DelegateType ({2}) 处理程序字段为 null。 请提交在 bug http://bugzilla.xamarin.com。
 
 问题的方法的 DelegateProxy 属性无效。
 
@@ -2961,7 +2961,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015： 该方法的返回值为无效 DelegateProxyAttribute *。*: DelegateType 的 ({2}) 处理程序字段不是一个委托，它是 *。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015： 该方法的返回值为无效 DelegateProxyAttribute *。*: DelegateType ({2}) 处理程序字段不是一个委托，它是 *。 请提交在 bug http://bugzilla.xamarin.com。
 
 问题的方法的 DelegateProxy 属性无效。
 
