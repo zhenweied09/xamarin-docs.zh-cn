@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
 ms.openlocfilehash: f851c1ca241be9e3c94a70b1f63135a46575d471
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>添加通用 Windows 平台 (UWP) 应用
 
@@ -25,7 +25,7 @@ UWP 是可用在 Xamarin.Forms 2.1 及更高版本，并且 Xamarin.Forms.Maps �
 
 按照这些说明来添加将在 Windows 10 手机、 平板电脑和台式计算机运行的 UWP 应用：
 
- 1 . 右键单击解决方案并选择**添加 > 新建项目...**并添加**空白应用 (通用 Windows)**项目：
+ 1 . 右键单击解决方案并选择**添加 > 新建项目...** 并添加**空白应用 (通用 Windows)** 项目：
 
   ![](universal-images/add-wu.png "添加新项目对话框")
 
@@ -33,17 +33,17 @@ UWP 是可用在 Xamarin.Forms 2.1 及更高版本，并且 Xamarin.Forms.Maps �
 
   ![](universal-images/target-version.png "新的通用 Windows 平台项目对话框")
 
- 3 . 右键单击 UWP 项目并选择**管理 NuGet 包...**并添加**Xamarin.Forms**包。 确保解决方案中的其他项目也将更新为相同版本的 Xamarin.Forms 包。
+ 3。 右键单击 UWP 项目并选择**管理 NuGet 包...** 并添加**Xamarin.Forms**包。 确保解决方案中的其他项目也将更新为相同版本的 Xamarin.Forms 包。
 
  4 . 请确保将生成新的 UWP 项目**生成 > Configuration Manager**窗口 （可能不会发生了此默认情况下）。 刻度**生成**和**部署**通用项目框：
 
   [![](universal-images/configuration-sml.png "配置管理器窗口")](universal-images/configuration.png#lightbox "配置管理器窗口")
 
- 5 . 右键单击项目并选择**添加 > 引用**并创建 Xamarin.Forms 应用程序项目中 （PCL、.NET 标准或共享项目） 的引用。
+ 5。 右键单击项目并选择**添加 > 引用**并创建 Xamarin.Forms 应用程序项目中 （PCL、.NET 标准或共享项目） 的引用。
 
   ![](universal-images/addref-sml.png "引用管理器对话框")
 
- 6 . 在 UWP 项目中，编辑**App.xaml.cs**包括`Init`方法调用置于`OnLaunched`行 52 解决方法：
+ 6。 在 UWP 项目中，编辑**App.xaml.cs**包括`Init`方法调用置于`OnLaunched`行 52 解决方法：
 
 ```csharp
 // under this line
@@ -52,7 +52,7 @@ rootFrame.NavigationFailed += OnNavigationFailed;
 Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 ```
 
- 7 . 在 UWP 项目中，编辑**MainPage.xaml**通过删除`Grid`中包含`Page`元素。
+ 7。 在 UWP 项目中，编辑**MainPage.xaml**通过删除`Grid`中包含`Page`元素。
 
  8 . 在**MainPage.xaml**，添加新`xmlns`条目`Xamarin.Forms.Platform.UWP`:
 
@@ -60,7 +60,7 @@ Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 ```
 
- 9 . 在**MainPage.xaml**，更改根`<Page`元素`<forms:WindowsPage`:
+ 9。 在**MainPage.xaml**，更改根`<Page`元素`<forms:WindowsPage`:
 
 ```xaml
 <forms:WindowsPage
@@ -70,13 +70,13 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10 . 在 UWP 项目中，编辑**MainPage.xaml.cs**删除`: Page`继承的类名的说明符 (因为它现在将从继承`WindowsPage`由于上一步中所做的更改):
+ 10。 在 UWP 项目中，编辑**MainPage.xaml.cs**删除`: Page`继承的类名的说明符 (因为它现在将从继承`WindowsPage`由于上一步中所做的更改):
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11 . 在**MainPage.xaml.cs**，添加`LoadApplication`调用`MainPage`构造函数以启动 Xamarin.Forms 应用程序：
+ 11。 在**MainPage.xaml.cs**，添加`LoadApplication`调用`MainPage`构造函数以启动 Xamarin.Forms 应用程序：
 
 ```csharp
 // below this existing line
@@ -95,7 +95,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12 . 添加任何本地资源 （如。 图像文件） 所需指定现有平台项目中。
+12。 添加任何本地资源 （如。 图像文件） 所需指定现有平台项目中。
 
 <a name="troubleshooting" />
 
