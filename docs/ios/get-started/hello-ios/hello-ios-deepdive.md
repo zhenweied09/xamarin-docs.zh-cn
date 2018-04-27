@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5ca2918a0348254407fcbfff030def6c36af4988
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello，iOS 深入了解
 
@@ -85,7 +85,7 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 
 在 [Hello，iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md) 演练中，你创建了一个名为 **Phoneword** 的解决方案，并将一个 iOS 项目 (**Phoneword_iOS**) 置于其内部。 项目内的项包括：
 
--  **引用** - 包含生成和运行应用程序所需的程序集。 展开该目录可查看对 .NET 程序集（如 [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx)、System.Core 和 [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx)）的引用以及对 Xamarin 的 Xamarin.iOS 程序集的引用。
+-  **引用** - 包含生成和运行应用程序所需的程序集。 展开该目录可查看对 .NET 程序集（如 [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx)、System.Core 和 [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx)）的引用以及对 Xamarin 的 Xamarin.iOS 程序集的引用。
 -  包 - 包目录包含现成的 NuGet 包。
 -  Resources - Resources 文件夹存储其他媒体。
 -  **Main.cs** – 此项包含应用程序的主入口点。 若要启动应用程序，应传入主应用程序类 `AppDelegate` 的名称。

@@ -2,105 +2,103 @@
 documentType: LandingData
 title: Xamarin.Android
 metadata:
-  description: "Xamarin.Android 为 .NET 开发人员提供了完整的 Android SDK。"
+  description: Xamarin.Android 为 .NET 开发人员提供了完整的 Android SDK。
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 708dbb752e4ba2e5d5ca6dc16b2a48af72f7632b
-  ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+  ms.openlocfilehash: 670b27732bde526db4e28b1b9d5bcff8baff1afd
+  ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 03/15/2018
+  ms.lasthandoff: 04/26/2018
 abstract:
-  description: "Xamarin.Android 为 .NET 开发人员提供了完整的 Android SDK。 在 Visual Studio 中使用 C# 或 F# 生成完全本机的 Android 应用。"
+  description: Xamarin.Android 为 .NET 开发人员提供了完整的 Android SDK。 在 Visual Studio 中使用 C# 或 F# 生成完全本机的 Android 应用。
   menu:
     items:
     - href: ~/android/samples/
-      text: "Android 示例"
+      text: Android 示例
     - href: https://developer.xamarin.com/releases/android/
-      text: "发行说明"
+      text: 发行说明
     - href: https://developers.google.com/
-      text: "Google 开发人员文档"
+      text: Google 开发人员文档
     - href: /visualstudio/
       text: Visual Studio
 sections:
-- title: "开始操作"
+- title: 开始操作
   items:
   - type: paragraph
-    text: "了解如何使用 Xamarin 和 C# 生成首个 Android 应用。"
+    text: 了解如何使用 Xamarin 和 C# 生成首个 Android 应用。
   - type: list
     style: icon48
     items:
     - image:
         src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: "安装"
+      text: 安装
       href: ~/android/get-started/installation/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: "了解 Android"
+      text: 了解 Android
       href: ~/android/get-started/hello-android/hello-android-quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: "多屏幕应用"
+      text: 多屏幕应用
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-- title: "参考线"
+- title: 参考线
   items:
-  - type: grid
-    style: columns
-    className: column50
+  - type: list
+    style: cards
+    className: cardsB
     items:
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/android/get-started/index.md
-        html: "通过 Xamarin.Android 启动和运行的相关教程。 请确保正确安装所有项目，并生成首个 Mac 应用。"
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
-          href: ~/android/get-started/index.md
-        title: "入门"
-      - href: ~/android/user-interface
-        html: "了解适用于Android 的用户界面控件小组件的完整集合。"
-        image:
-          src: ~/media/icons/i_user-interface.svg
-          href: ~/android/user-interface/
-        title: "用户界面"
-      - href: ~/android/deploy-test/
-        html: "有关生成应用并将其部署到 Google Play 的说明，和事先对其进行测试的提示！"
-        image:
-          src: ~/media/icons/i_deploy-test.svg
-          href: ~/android/deploy-test/
-        title: "部署和测试"
-      - href: ~/android/wear/
-        html: "生成适用于Android 穿戴设备的应用。"
-        image:
-          src: ~/media/icons/i_android-wear.svg
-          href: ~/android/wear/
-        title: "Android 穿戴设备"
-    - type: list
-      style: cards
-      className: cardsB
-      items:
-      - href: ~/android/app-fundamentals/
-        html: "生成 Android 应用需要了解的所有内容，例如使用文件、映像、数据库等。"
-        image:
-          src: ~/media/icons/i_app-build.svg
-          href: ~/android/app-fundamentals/
-        title: "应用程序基础知识"
-      - href: ~/android/platform/
-        html: "使用 Android 平台功能，例如指纹身份验证和 Android 8.0 Oreo 中的最新功能。"
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/android/platform/
-        title: "平台功能"
-      - href: ~/android/internals/
-        html: "有关 Xamarin.Android 内部机制的其他信息，以及有关本地化和辅助功能等功能的帮助。"
-        image:
-          src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
-          href: ~/android/internals/
-        title: "高级概念和内部机制"
-- title: "参考"
+    - href: ~/android/get-started/index.md
+      html: 通过 Xamarin.Android 启动和运行的相关教程。 请确保正确安装所有项目，并生成首个 Mac 应用。
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        href: ~/android/get-started/index.md
+      title: 入门
+    - href: ~/android/app-fundamentals/
+      html: 生成 Android 应用需要了解的所有内容，例如使用文件、映像、数据库等。
+      image:
+        src: ~/media/icons/i_app-build.svg
+        href: ~/android/app-fundamentals/
+      title: 应用程序基础知识
+    - href: ~/android/user-interface
+      html: 了解适用于Android 的用户界面控件小组件的完整集合。
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: ~/android/user-interface/
+      title: 用户界面
+    - href: ~/android/platform/
+      html: 使用 Android 平台功能，例如指纹身份验证和 Android 8.0 Oreo 中的最新功能。
+      image:
+        src: ~/media/icons/i_platform.svg
+        href: ~/android/platform/
+      title: 平台功能
+    - href: ~/android/data-cloud/
+      html: 本地和远程数据存储和检索，以及其他基于云的服务。
+      image:
+        src: ~/media/icons/i_data-cloud.svg
+        href: ~/android/data-cloud/
+      title: 数据和云服务
+    - href: ~/android/deploy-test/
+      html: 有关生成应用并将其部署到 Google Play 的说明，和事先对其进行测试的提示！
+      image:
+        src: ~/media/icons/i_deploy-test.svg
+        href: ~/android/deploy-test/
+      title: 部署和测试
+    - href: ~/android/internals/
+      html: 有关 Xamarin.Android 内部机制的其他信息，以及有关本地化和辅助功能等功能的帮助。
+      image:
+        src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+        href: ~/android/internals/
+      title: 高级概念和内部机制
+    - href: ~/android/wear/
+      html: 生成适用于Android 穿戴设备的应用。
+      image:
+        src: ~/media/icons/i_android-wear.svg
+        href: ~/android/wear/
+      title: Android 穿戴设备
+- title: 参考
   items:
   - type: list
     style: cards
@@ -108,10 +106,10 @@ sections:
     items:
     - title: API
       href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
-      html: "<p><a href=\"https://developer.xamarin.com/api/root/MonoAndroid-lib/\">Android API 文档</a></p><p><a href=\"https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1\">基类库</a></p>"
-    - title: "示例"
+      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API 文档</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">基类库</a></p>
+    - title: 示例
       href: https://developer.xamarin.com/samples/android/all/
-      html: "<p><a href=\"https://developer.xamarin.com/samples/android/all/\">Android 示例</a></p>"
-    - title: "工作簿"
+      html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android 示例</a></p>
+    - title: 工作簿
       href: https://developer.xamarin.com/workbooks#android
-      html: "<p><a href=\"https://developer.xamarin.com/workbooks#android\">Android 工作簿</a></p>"
+      html: <p><a href="https://developer.xamarin.com/workbooks#android">Android 工作簿</a></p>
