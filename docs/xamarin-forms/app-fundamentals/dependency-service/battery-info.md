@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 3f098e7f403a4f5e9fd924b8745348197cd4f843
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b437b42c1cb4dd8cbe7612a680032d84e852ff6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="checking-battery-status"></a>检查电池状态
 
@@ -22,7 +22,6 @@ ms.lasthandoff: 04/04/2018
 - **[创建接口](#Creating_the_Interface)** &ndash;了解如何在共享代码中创建接口。
 - **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
 - **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码实现接口。
-- **[Windows Phone 实现](#Windows_Phone_Implementation)** &ndash;了解如何为 Windows Phone 在本机代码中实现接口。
 - **[通用 Windows 平台实现](#UWPImplementation)** &ndash;了解如何在本机代码中的通用 Windows 平台 (UWP) 实现接口。
 - **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现共享代码中。
 
@@ -311,74 +310,6 @@ namespace DependencyServiceSample.Droid
 
 此属性的实现为注册类`IBattery`接口，这意味着`DependencyService.Get<IBattery>`可在共享的代码可以创建它的实例。
 
-<a name="Windows_Phone_Implementation" />
-
-## <a name="windows-phone-implementation"></a>Windows Phone 实现
-
-此实现是更多限制于 Android 和 iOS 版本，因为 Windows Phone power API 提供较少的信息比 Android 和 iOS 等效值。
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-namespace DependencyServiceSample.WinPhone
-{
-  public class BatteryImplementation : IBattery
-  {
-    private int last;
-    private BatteryStatus status = BatteryStatus.Unknown;
-
-    public BatteryImplementation()
-    {
-      last = DefaultBattery.RemainingChargePercent;
-    }
-
-    Windows.Phone.Devices.Power.Battery battery;
-    private Windows.Phone.Devices.Power.Battery DefaultBattery
-    {
-      get { return battery ?? (battery = Windows.Phone.Devices.Power.Battery.GetDefault()); }
-    }
-    public int RemainingChargePercent
-    {
-      get
-      { return DefaultBattery.RemainingChargePercent; }
-    }
-
-    public  BatteryStatus Status
-    {
-      get { return status; }
-    }
-
-    public PowerSource PowerSource
-    {
-      get
-      {
-        if (status == BatteryStatus.Full || status == BatteryStatus.Charging)
-          return PowerSource.Ac;
-
-        return PowerSource.Battery;
-      }
-    }
-  }
-}
-```
-
-添加此`[assembly]`属性上面类 （和外部任何已定义的命名空间），包括任何所需`using`语句。
-
-```csharp
-using System;
-using Windows.ApplicationModel.Core;
-using DependencyServiceSample.WinPhone;
-
-[assembly: Xamarin.Forms.Dependency (typeof (BatteryImplementation))]
-namespace DependencyServiceSample.WinPhone {
-  public class BatteryImplementation : IBattery {
-    ...
-```
-
-此属性的实现为注册类`IBattery`接口，这意味着`DependencyService.Get<IBattery>`可以使用在共享代码中创建它的实例。
-
 <a name="UWPImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>通用 Windows 平台实现
@@ -537,7 +468,7 @@ public MainPage ()
 }
 ```
 
-在 iOS、 Android 或 Windows 平台上运行此应用程序，并按按钮会导致在更新以反映当前设备的电源状态的按钮文本。
+在 iOS 上运行此应用程序，Android 或 UWP 和按下按钮会更新以反映当前设备的电源状态的按钮文本中。
 
 ![](battery-info-images/battery.png "电池状态示例")
 

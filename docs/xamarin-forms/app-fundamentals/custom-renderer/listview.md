@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 9d822444196479dabd19f43f45f289117f64c05e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-listview"></a>自定义 ListView
 
 _Xamarin.Forms ListView 是作为垂直列表中显示的数据集合的视图。本文演示如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控件的性能。_
 
-Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) Xamarin.Forms 应用程序，在 iOS 中呈现`ListViewRenderer`该类进行实例化，这反过来实例化一个本机`UITableView`控件。 在 Android 平台上，`ListViewRenderer`类实例化一个本机`ListView`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`ListViewRenderer`类实例化一个本机`ListView`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) Xamarin.Forms 应用程序，在 iOS 中呈现`ListViewRenderer`该类进行实例化，这反过来实例化一个本机`UITableView`控件。 在 Android 平台上，`ListViewRenderer`类实例化一个本机`ListView`控件。 在通用 Windows 平台 (UWP)，`ListViewRenderer`类实例化一个本机`ListView`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件和相应的本机控件实现它：
 
@@ -467,15 +467,15 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 
 该方法将创建的新实例`NativeAndroidListViewAdapter`于本机提供数据的类`ListView`控件中，提供的可绑定`NativeListView.Items`属性已更改。
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>在 Windows Phone 上创建自定义呈现器和 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了 Windows Phone 和 UWP 的自定义呈现器：
+下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
-[assembly: ExportRenderer (typeof(NativeListView), typeof(NativeWinPhoneListViewRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneListViewRenderer : ListViewRenderer
+    public class NativeUWPListViewRenderer : ListViewRenderer
     {
         ListView listView;
 

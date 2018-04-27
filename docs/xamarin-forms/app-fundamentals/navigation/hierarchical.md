@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>分层导航
 
@@ -47,7 +47,7 @@ _NavigationPage 类提供能够向前和向后，根据需要浏览页中，用�
 
 - 在 iOS 上导航栏位于顶部的页显示标题，并具有*回*返回到以前的页面的按钮。
 - 在 Android 上，导航栏位于顶部显示标题，一个图标，图标的页和*回*返回到以前的页面的按钮。 在中定义的图标`[Activity]`修饰的属性`MainActivity`Android 的特定于平台的项目中的类。
-- 在 Windows Phone 导航栏是页的存在在顶部显示标题。 Windows Phone 缺少*回*按钮导航栏上，因为屏幕上*回*按钮位于屏幕的底部。
+- 在通用 Windows 平台上，导航栏在顶部显示标题的页位于。 
 
 在所有平台的值上[ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/)属性将显示为页面标题。
 

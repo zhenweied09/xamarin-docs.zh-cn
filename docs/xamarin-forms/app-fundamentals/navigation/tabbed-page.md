@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>选项卡式的页面
 
@@ -39,7 +39,6 @@ _Xamarin.Forms TabbedPage 包含的选项卡和更大的详细信息区域，列
     > [!NOTE]
   > 请注意，当在 Android 上使用 AppCompat，每个选项卡也将显示一个图标。 此外， `TabbedPageRenderer` Android AppCompat 具有可重写`SetTabIcon`方法，可以用来加载来自自定义选项卡图标`Drawable`。 此替代使能够上以图标形式使用 SVG 图像`TabbedPage`。
 
-- 在 Windows Phone 上的选项卡列表将显示在该屏幕的顶部和低于以下值的详细信息区域。 如果有过多，无法容纳在一个屏幕上，名称自动转换为小写，和用户选项卡可以滚动选项卡的集合。
 - Windows 平板电脑窗体因素的影响，在选项卡并不总是可见，并且用户需要对轻扫向 （或右键单击，如果它们的附加是鼠标） 若要查看的选项卡的`TabbedPage`（如下所示）。
 
 ![](tabbed-page-images/windows-tabs.png "在 Windows 上的 TabbedPage 选项卡")

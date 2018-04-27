@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 2edd7a982d0307475933a234e7e1fbb8dd8d6a34
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 924aa88d29379c98204fd810c651de56ff757971
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
@@ -221,8 +221,6 @@ Title="RelativeLayout">
 上面的代码将导致以下布局：
 
 ![](relative-layout-images/relative.png "复杂 RelativeLayout")
-
-请注意，由于在按钮的 Windows Phone 的呈现方式不同，一些圆圈已替换为在 Windows Phone 的屏幕快照的 boxviews。
 
 请注意， `RelativeLayouts`s 嵌套的因为在某些情况下嵌套布局可以更方便地比提供相同的布局中的所有元素。 此外请注意，某些元素均`RelativeToView`，因为它允许更轻松、 更直观布局视图之间的关系指导定位时。
 

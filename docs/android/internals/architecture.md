@@ -5,12 +5,12 @@ ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f4be88a1eabb3fa3cca733690a3f097a03516272
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9ce1d790f5dea00ac47d5639ae8424793006445a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="architecture"></a>体系结构
 
@@ -30,13 +30,13 @@ Android 类如何与 Android 运行时类进行通信的详细信息请参阅[AP
 
 ## <a name="application-packages"></a>应用程序包
 
-Android 应用程序包是包含 ZIP 容器*.apk*文件扩展名。 Xamarin.Android 应用程序包具有相同的结构和布局正常 Android 包，添加了以下内容：
+Android 应用程序包是包含 ZIP 容器 *.apk*文件扩展名。 Xamarin.Android 应用程序包具有相同的结构和布局正常 Android 包，添加了以下内容：
 
--   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成*.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这就允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：*之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成 *.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这就允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：*之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *不能指望*版本中生成。 为不同的文件系统条目不存在，并且它们没有可用的位置。
 
 
--   包含单声道运行时本机库内有*.apk* 。 Xamarin.Android 应用程序必须包含本机库所需目标 Android 体系结构，例如*armeabi* ， *armeabi v7a* ， *x86* 。 Xamarin.Android 应用程序无法运行在平台上，除非它包含相应的运行时库。
+-   包含单声道运行时本机库内有 *.apk* 。 Xamarin.Android 应用程序必须包含本机库所需目标 Android 体系结构，例如*armeabi* ， *armeabi v7a* ， *x86* 。 Xamarin.Android 应用程序无法运行在平台上，除非它包含相应的运行时库。
 
 
 Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Android 来调入托管代码。
@@ -70,7 +70,7 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 托管的可调用包装器子类是所有的"有趣"应用程序特定逻辑可能居住在哪里。 其中包括自定义[Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)子类 (如[Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13)默认项目模板中的类型)。 (具体而言，这些是任何*Java.Lang.Object*子类中执行此操作*不*包含[RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)自定义特性或[RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/)是*false*，这是默认设置。)
 
 如管理可调用包装器，管理可调用包装器子类还包含全局引用，可通过访问[Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)属性。 就像与托管的可调用包装器，通过调用全局引用可以显式释放操作[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)。
-与托管的可调用包装器，不同*格外注意*应在这种情况下，作为释放之前拍摄*dispose （)*运算结果的实例将中断 Java 实例之间的映射 (的实例Android 可调用包装器） 和托管的实例。
+与托管的可调用包装器，不同*格外注意*应在这种情况下，作为释放之前拍摄*dispose （)* 运算结果的实例将中断 Java 实例之间的映射 (的实例Android 可调用包装器） 和托管的实例。
 
 
 ### <a name="java-activation"></a>Java 激活
@@ -101,25 +101,21 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 
 4.  *TextView*构造函数时，将调用*monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* 。
 
-5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* invokes *LogTextBox.n_getDefaultMovementMethod()* , which invokes *TextView.n_GetDefaultMovementMethod()* , which invokes [Java.Lang.Object.GetObject&lt;TextView&gt; (handle, JniHandleOwnership.DoNotTransfer)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) .
+5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* 时，将调用*LogTextBox.n_getDefaultMovementMethod()* ，这样就可调用*TextView.n_GetDefaultMovementMethod()* ，这样就可调用[Java.Lang.Object.GetObject&lt;TextView&gt; （处理，JniHandleOwnership.DoNotTransfer）](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) 。
 
-6.  *Java.Lang.Object.GetObject&lt;TextView&gt;（)*检查以确定是否已经存在相应的 C# 实例*处理*。 如果没有，则返回它。 在此方案中，不存在，因此*Object.GetObject&lt;T&gt;（)*必须创建一个。
+6.  *Java.Lang.Object.GetObject&lt;TextView&gt;（)* 检查以确定是否已经存在相应的 C# 实例*处理*。 如果没有，则返回它。 在此方案中，不存在，因此*Object.GetObject&lt;T&gt;（)* 必须创建一个。
 
-7.  *Object.GetObject&lt;T&gt;（)*查找*LogTextBox （IntPtr，JniHandleOwneship）*构造函数，对其进行调用，之间创建映射*处理*和创建的实例，并返回创建的实例。
+7.  *Object.GetObject&lt;T&gt;（)* 查找*LogTextBox （IntPtr，JniHandleOwneship）*构造函数，对其进行调用，之间创建映射*处理*和创建的实例，并返回创建的实例。
 
-8.  *TextView.n_GetDefaultMovementMethod()*时，将调用*LogTextBox.DefaultMovementMethod*属性 getter。
+8.  *TextView.n_GetDefaultMovementMethod()* 时，将调用*LogTextBox.DefaultMovementMethod*属性 getter。
 
 9.  控制权将返回给*android.widget.TextView*构造函数，完成执行。
 
 10. *Monodroid.apidemo.LogTextBox*构造函数执行时，调用*TypeManager.Activate()* 。
 
-11. *LogTextBox (上下文，IAttributeSet，int)*构造函数执行*(7) 中创建的同一个实例*。
+11. *LogTextBox (上下文，IAttributeSet，int)* 构造函数执行 *(7) 中创建的同一个实例*。
 
-12. ...
-
-
-如果 （IntPtr，JniHandleOwnership） 找不到构造函数，则[System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/)将引发。
-
+12. 如果 （IntPtr，JniHandleOwnership） 构造函数无法找到，然后 System.MissingMethodException] (https://developer.xamarin.com/api/type/System.MissingMethodException/)将引发。
 
 <a name="Premature_Dispose_Calls" />
 
@@ -174,13 +170,13 @@ E/mono    ( 2906):   at Java.Lang.Object._GetObject[IJavaObject] (IntPtr handle,
 I/mono-stdout( 2993): [Managed: Value=]
 ```
 
-仅*dispose （)*的管理可调用包装器子类，当你知道将不再，使用的 Java 对象或子类不包含实例数据时和*（IntPtr，JniHandleOwnership）*提供了构造函数。
+仅*dispose （)* 的管理可调用包装器子类，当你知道将不再，使用的 Java 对象或子类不包含实例数据时和*（IntPtr，JniHandleOwnership）*提供了构造函数。
 
 
 
 ## <a name="application-startup"></a>应用程序启动
 
-当活动、 服务中时，等启动时，Android 将首先检查以查看是否已有运行状态以便托管活动/服务/等的进程。如果没有此进程存在，则将创建一个新进程， [AndroidManifest.xml](http://developer.android.com/guide/topics/manifest/manifest-intro.html)是读取和中指定的类型[ /manifest/application/@android:name ](http://developer.android.com/guide/topics/manifest/application-element.html#nm)加载属性并将其实例化。 接下来，指定的所有类型[ /manifest/application/provider/@android:name ](http://developer.android.com/guide/topics/manifest/provider-element.html#nm)属性值进行实例化，并且具有其[ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/)方法调用。 通过将添加到此 Xamarin.Android 挂钩*单声道。MonoRuntimeProvider* *ContentProvider*到生成过程的 AndroidManifest.xml。 *单声道。MonoRuntimeProvider.attachInfo()*方法负责单声道运行时加载到进程。
+当活动、 服务中时，等启动时，Android 将首先检查以查看是否已有运行状态以便托管活动/服务/等的进程。如果没有此进程存在，则将创建一个新进程， [AndroidManifest.xml](http://developer.android.com/guide/topics/manifest/manifest-intro.html)是读取和中指定的类型[ /manifest/application/@android:name ](http://developer.android.com/guide/topics/manifest/application-element.html#nm)加载属性并将其实例化。 接下来，指定的所有类型[ /manifest/application/provider/@android:name ](http://developer.android.com/guide/topics/manifest/provider-element.html#nm)属性值进行实例化，并且具有其[ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/)方法调用。 通过将添加到此 Xamarin.Android 挂钩*单声道。MonoRuntimeProvider* *ContentProvider*到生成过程的 AndroidManifest.xml。 *单声道。MonoRuntimeProvider.attachInfo()* 方法负责单声道运行时加载到进程。
 在此点之前使用 Mono 任何尝试将失败。 (*注意*： 这是为什么类型的子类[Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)需要提供[（IntPtr，JniHandleOwnership） 构造函数](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103)，如应用程序实例创建可以初始化 Mono 之前。）
 
 完成后进程初始化，`AndroidManifest.xml`参考查找以启动活动/服务/等的类名称。 例如， [ /manifest/application/activity/@android:name属性](http://developer.android.com/guide/topics/manifest/activity-element.html#nm)用于确定加载活动的名称。 为活动，此类型必须继承[android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)。

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 
 _Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。这将停止从正在 Xamarin.Forms 布局计算在 ListView 滚动过程中重复调用。_
 
-每个 Xamarin.Forms 单元格有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 应用程序，在 iOS 中呈现`ViewCellRenderer`该类进行实例化，这反过来实例化一个本机`UITableViewCell`控件。 在 Android 平台上，`ViewCellRenderer`类实例化一个本机`View`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`ViewCellRenderer`类实例化一个本机`DataTemplate`。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+每个 Xamarin.Forms 单元格有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 应用程序，在 iOS 中呈现`ViewCellRenderer`该类进行实例化，这反过来实例化一个本机`UITableViewCell`控件。 在 Android 平台上，`ViewCellRenderer`类实例化一个本机`View`控件。 在通用 Windows 平台 (UWP)，`ViewCellRenderer`类实例化一个本机`DataTemplate`。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)和相应的本机控件实现它：
 
@@ -169,7 +169,7 @@ Xamarin.Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Form
 
 ![](viewcell-images/screenshots.png "每个平台上的 NativeCell")
 
-`ViewCellRenderer`类公开用于呈现自定义单元格的特定于平台的方法。 这是`GetCell`方法在 iOS 平台上， `GetCellCore` Android 平台，方法与`GetTemplate`在 Windows Phone 平台上的方法。
+`ViewCellRenderer`类公开用于呈现自定义单元格的特定于平台的方法。 这是`GetCell`方法在 iOS 平台上， `GetCellCore` Android 平台，方法与`GetTemplate`在 UWP 上的方法。
 
 每个自定义呈现器类用修饰`ExportRenderer`与 xamarin.forms 结合注册呈现器的属性。 该属性采用两个参数 – 呈现，Xamarin.Forms 单元格的类型名称和自定义呈现器的类型名称。 `assembly`到属性的前缀指定特性应用于整个程序集。
 
@@ -519,15 +519,15 @@ internal class NativeAndroidCell : LinearLayout, INativeElementView
 
 此布局指定两个`TextView`控件和`ImageView`控件用于显示单元格的内容。 这两个`TextView`控件是垂直方向内`LinearLayout`控件，与正在中包含的所有控件`RelativeLayout`。
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>在 Windows Phone 上创建自定义呈现器和 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了 Windows Phone 和 UWP 的自定义呈现器：
+下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
-[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeWinPhoneCellRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeUWPCellRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneCellRenderer : ViewCellRenderer
+    public class NativeUWPCellRenderer : ViewCellRenderer
     {
         public override Windows.UI.Xaml.DataTemplate GetTemplate(Cell cell)
         {

@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 24d9dd332275fd811c0ff60fc514ae0f84c6ee07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layouts"></a>布局
 
@@ -180,7 +180,7 @@ Xamarin.Forms 和其内置的布局是能够处理更改设备方向。 请考�
 
 ### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[对于平板电脑和桌面应用程序的布局](tablet.md)
 
-iOS、 Android 和 Windows 平台所有支持更大的屏幕大小平板设备 （以及便携式计算机和适用于 Windows 的桌面）。 Xamarin.Forms 能够让你通过检测的设备类型和调整页面布局中，或使用完全不同的页完全适用于较大的屏幕来优化应用程序以较大的屏幕。
+iOS、 Android 和通用 Windows 平台所有上支持更大的屏幕大小平板设备 （以及便携式计算机和适用于 Windows 的桌面）。 Xamarin.Forms 能够让你通过检测的设备类型和调整页面布局中，或使用完全不同的页完全适用于较大的屏幕来优化应用程序以较大的屏幕。
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[创建自定义布局](custom.md)
 

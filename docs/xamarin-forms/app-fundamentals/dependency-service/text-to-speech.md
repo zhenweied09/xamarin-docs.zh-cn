@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 67e392bb3672e54a1e2fe709af9cf5deb3dae5e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9cf700ea798ac316e806c40cb90eedc7ded9fa5
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-text-to-speech"></a>实现文本到语音转换
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 - **[创建接口](#Creating_the_Interface)** &ndash;了解如何在共享代码中创建接口。
 - **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
 - **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码实现接口。
-- **[Windows 实现](#WindowsImplementation)** &ndash;了解如何为 Windows Phone 和通用 Windows 平台 (UWP) 在本机代码中实现接口。
+- **[UWP 实现](#WindowsImplementation)** &ndash;了解如何在本机代码中的通用 Windows 平台 (UWP) 实现接口。
 - **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现共享代码中。
 
 应用程序使用`DependencyService`将具有以下结构：
@@ -122,9 +122,9 @@ namespace DependencyServiceSample.Droid
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone 和通用 Windows 平台实现
+## <a name="universal-windows-platform-implementation"></a>通用 Windows 平台实现
 
-Windows Phone 和通用 Windows 平台具有中的语音 API`Windows.Media.SpeechSynthesis`命名空间。 唯一需要注意是要记住进行计时周期数**麦克风**功能在清单中，否则访问被阻止 Api 的语音。
+通用 Windows 平台都有中的语音 API`Windows.Media.SpeechSynthesis`命名空间。 唯一需要注意是要记住进行计时周期数**麦克风**功能在清单中，否则访问被阻止 Api 的语音。
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -165,7 +165,7 @@ public MainPage ()
 }
 ```
 
-在 iOS、 Android 或 Windows 平台和按按钮将导致对您在每个平台上使用本机语音 SDK 演讲后，应用程序上运行此应用程序。
+在 iOS、 Android 或 UWP 上运行此应用程序和按下按钮将导致对您在每个平台上使用本机语音 SDK 演讲后，应用程序。
 
  ![iOS 和 Android 的文本到语音转换按钮](text-to-speech-images/running.png "文本到语音转换示例")
 

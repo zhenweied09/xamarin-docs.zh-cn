@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 050e37d208c3ba5a330d7ecc6df9d106e14f8bb9
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: e296ca79ee03e7fc61532758219b65946a8d4381
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="map"></a>映射
 
@@ -50,7 +50,7 @@ Xamarin.FormsMaps.Init();
 Xamarin.FormsMaps.Init(this, bundle);
 ```
 
-Windows 运行时 (WinRT) 和通用 Windows 平台 (UWP) 使用以下代码：
+有关通用 Windows 平台 (UWP) 使用以下代码：
 
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
@@ -60,7 +60,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 -  **iOS** -AppDelegate.cs 文件，请在`FinishedLaunching`方法。
 -  **Android** -MainActivity.cs 文件，请在`OnCreate`方法。
--  **WinRT 和 UWP** -MainPage.xaml.cs 文件，请在`MainPage`构造函数。
+-  **UWP** -MainPage.xaml.cs 文件，请在`MainPage`构造函数。
 
 已添加的 NuGet 包并在每个应用程序内调用初始化方法后`Xamarin.Forms.Maps`Api 可以在常见的 PCL 或共享的项目代码中使用。
 
@@ -132,9 +132,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 最后两个是必需的因为应用程序需要网络连接才能下载地图数据。 阅读有关 Android[权限](http://developer.android.com/reference/android/Manifest.permission.html)若要了解详细信息。
 
-### <a name="windows-runtime-and-universal-windows-platform"></a>Windows 运行时和通用 Windows 平台
+### <a name="universal-windows-platform"></a>通用 Windows 平台
 
-若要在 Windows 运行时和通用 Windows 平台上使用地图必须生成的授权令牌。 有关详细信息，请参阅[请求地图身份验证密钥](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx)MSDN 上。
+若要在通用 Windows 平台上使用地图必须生成的授权令牌。 有关详细信息，请参阅[请求地图身份验证密钥](https://msdn.microsoft.com/library/windows/apps/mt219694.aspx)MSDN 上。
 
 然后应中指定的身份验证令牌`FormsMaps.Init("AUTHORIZATION_TOKEN")`方法调用，以便与 Bing 地图应用进行身份验证。
 
@@ -181,7 +181,7 @@ map.MapType == MapType.Street;
 
 上面的代码段中所示，提供`MapSpan`映射构造函数的实例设置的初始视图 （中心点和缩放级别） 的映射时加载它。 `MoveToRegion`映射类方法然后可以用于更改映射的位置或缩放级别。 有两种方法来创建一个新`MapSpan`实例：
 
--  **MapSpan.FromCenterAndRadius()**的静态方法，用于创建从跨度`Position`并指定`Distance`。
+-  **MapSpan.FromCenterAndRadius()** 的静态方法，用于创建从跨度`Position`并指定`Distance`。
 -  **新 MapSpan （)** -使用的构造函数`Position`和的纬度和经度以显示 degress。
 
 
@@ -255,7 +255,7 @@ MyMap.MoveToRegion(
 
 ## <a name="summary"></a>总结
 
-Xamarin.Forms.Maps 是必须添加到 Xamarin.Forms 解决方案中的每个项目的单独 NuGet。 附加初始化代码是必需的作为针对 iOS、 Android、 WinRT、 和 UWP 也一些配置步骤。
+Xamarin.Forms.Maps 是必须添加到 Xamarin.Forms 解决方案中的每个项目的单独 NuGet。 附加初始化代码是必需的为 iOS、 Android 和 UWP 和某些配置步骤。
 
 一次配置映射 API 可以用于呈现带 pin 标记，只需几行代码中的地图。 可以使用进一步增强地图[自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)。
 

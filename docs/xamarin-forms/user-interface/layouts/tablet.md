@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>对于平板电脑和桌面应用程序的布局
 
@@ -18,7 +18,7 @@ Xamarin.Forms 支持在受支持的平台上可用的所有设备类型，因此
 
 * Ipad，
 * Android 平板电脑
-* Windows 平板电脑和台式计算机 （运行 Windows 8.1 或 Windows 10）。
+* Windows 平板电脑和台式计算机 （运行 Windows 10）。
 
 此页简要讨论：
 
@@ -53,12 +53,7 @@ Android 生态系统具有大量的支持的屏幕大小，从最大的平板电
 
 ### <a name="windows-tablets-and-desktops"></a>Windows 平板电脑和桌面
 
-若要支持平板电脑和运行 Windows 的台式计算机，你将需要使用两种支持的项目类型之一：
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  生成专门适用于 Windows 8.1 平板电脑和桌面应用。
-* [Windows UWP 支持](~/xamarin-forms/platform/windows/installation/universal.md)-
-  生成同时 Windows 10 手机、 平板电脑和台式计算机运行的通用应用。
+若要支持平板电脑和运行 Windows 的台式计算机，你将需要使用[Windows UWP 支持](~/xamarin-forms/platform/windows/installation/index.md)，哪些生成 Windows 10 运行的通用应用。
 
 Windows 平板电脑和台式计算机上运行的应用可调整到任意维度此外到正在运行全屏幕。
 

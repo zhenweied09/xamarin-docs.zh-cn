@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>路径效果
 
@@ -414,13 +414,13 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 链或统一的权重分发电缆挂起 catenary 形式。 倒 catenary 的形式建立体系结构受益于平均分布的压力从体系结构的权重。 Catenary 具有看似简单的数学说明：
 
-y = a · cosh(x / a)
+y = ·cosh(x / a)
 
-*Cosh*是双曲余弦值函数。 有关*x*等于 0， *cosh*为零和*y*等于。 这是 catenary 的中心。 如*余弦*函数， *cosh*被认为是*甚至*，这意味着， *cosh(–x)*等于*cosh(x)*，并提高正整数或负自变量的值增加。 这些值描述窗体 catenary 两侧的曲线。
+*Cosh*是双曲余弦值函数。 有关*x*等于 0， *cosh*为零和*y*等于。 这是 catenary 的中心。 如*余弦*函数， *cosh*被认为是*甚至*，这意味着， *cosh(–x)* 等于*cosh(x)*，并提高正整数或负自变量的值增加。 这些值描述窗体 catenary 两侧的曲线。
 
 查找适当的值的以适应电话的页的尺寸为 catenary 不是直接计算。 如果*w*和*h*是的宽度和高度的矩形的最佳值满足以下公式：
 
-cosh(w / 2 / a) = 1 + h / a
+cosh (w/2/a) = 1 + h / a
 
 中的以下方法[ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs)类通过两个表达式左侧和右侧的等号作为引用包含该相等`left`和`right`。 值较小，`left`大于`right`; 对于较大值的，`left`是小于`right`。 `while`循环收缩中上的最佳值:
 
@@ -854,7 +854,7 @@ public class PathTileFillPage : ContentPage
 
 从原始的屏幕截图缩放导致某些失真，特别是在 Android 屏幕上。
 
-请注意，这些磁贴将始终显示整个而且从不会被截断。 除了在 Windows 10 移动版屏幕上，它不是甚至明显所填充的区域是一个圆角的矩形。 如果要进行截断操作的特定区域这些磁贴，使用剪切路径。
+请注意，这些磁贴将始终显示整个而且从不会被截断。 在前两个屏幕快照，它是不甚至明显所填充的区域是一个圆角的矩形。 如果要进行截断操作的特定区域这些磁贴，使用剪切路径。
 
 请尝试使用设置`Style`属性`SKPaint`对象传递给`Stroke`，你会看到所述，而不是填充单个的磁贴。
 
@@ -1414,4 +1414,4 @@ public class DashedHatchLinesPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

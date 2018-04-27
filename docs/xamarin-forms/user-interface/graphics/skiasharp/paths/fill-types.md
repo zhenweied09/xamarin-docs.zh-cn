@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>路径的填充类型
 
@@ -165,7 +165,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](fill-types-images/fivepointedstar-small.png "三重的 Five-Pointed 星型页面屏幕截图")](fill-types-images/fivepointedstar-large.png#lightbox "Five-Pointed 星型页面的三个屏幕截图")
 
-Android 和 Windows 移动屏幕快照显示典型的奇偶和绕效果，但的笔画和填充的顺序也会影响结果。
+Android 和 UWP 屏幕截图显示典型的奇偶和绕效果，但的笔画和填充的顺序也会影响结果。
 
 绕算法是依赖于绘制线条的方向。 通常当你要创建一个路径，你可以控制该方向作为指定从一个点绘制连线，到另一个。 但是，`SKPath`类还定义等方法`AddRect`和`AddCircle`绘制整个轮廓。 若要控制如何绘制这些对象的方法包括类型的参数[ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/)，它具有两个成员：
 
@@ -222,4 +222,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

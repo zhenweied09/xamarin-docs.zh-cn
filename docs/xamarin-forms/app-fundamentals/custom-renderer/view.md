@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>实现视图
 
 _Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。本文演示如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。_
 
-Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) Xamarin.Forms 应用程序在 iOS 中，呈现`ViewRenderer`该类进行实例化，这反过来实例化一个本机`UIView`控件。 在 Android 平台上，`ViewRenderer`类实例化一个本机`View`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`ViewRenderer`类实例化一个本机`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) Xamarin.Forms 应用程序在 iOS 中，呈现`ViewRenderer`该类进行实例化，这反过来实例化一个本机`UIView`控件。 在 Android 平台上，`ViewRenderer`类实例化一个本机`View`控件。 在通用 Windows 平台 (UWP)，`ViewRenderer`类实例化一个本机`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)和相应的本机控件实现它：
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 假设`Control`属性是`null`、`SetNativeControl`调用方法来实例化一个新`CameraPreview`控制并分配给它的引用`Control`属性。 `CameraPreview`控件是使用一个特定于平台的自定义控件`Camera`API 提供相机的预览流。 `CameraPreview`控件然后配置，前提是自定义呈现器附加到新 Xamarin.Forms 元素。 此配置涉及到创建一个新的本机`Camera`对象，以便访问特定硬件相机、 并注册事件处理程序处理`Click`事件。 反过来此处理程序将停止和启动视频预览版，当它点击。 `Click`如果 Xamarin.Forms 元素呈现器附加到更改从订阅的事件，将取消。
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>在 Windows Phone 上创建自定义呈现器和 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了 Windows Phone 和 UWP 的自定义呈现器：
+下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 假设`Control`属性是`null`，新`CaptureElement`实例化和`InitializeAsync`调用方法时，它使用`MediaCapture`API 提供相机的预览流。 `SetNativeControl`然后调用方法来分配对引用`CaptureElement`到实例`Control`属性。 `CaptureElement`控件公开`Tapped`处理的事件，`OnCameraPreviewTapped`方法来停止和启动视频预览时它点击。 `Tapped`自定义呈现器是附加到一个新的 Xamarin.Forms 元素，且取消订阅只有元素呈现器附加到更改时订阅事件。
 
 > [!NOTE]
-> 务必停止和释放的对象，它提供对 Windows Phone 或 UWP 应用程序中的照相机的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)对于 Windows 运行时应用程序，和[显示相机预览](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access)UWP 应用程序。
+> 务必停止和释放的对象，它提供对相机沿 UWP 应用程序的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅[显示相机预览](/windows/uwp/audio-video-camera/simple-camera-preview-access/)。
 
 ## <a name="summary"></a>总结
 

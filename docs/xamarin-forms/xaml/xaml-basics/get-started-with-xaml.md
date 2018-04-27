@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 Getting Started with XAML
 
@@ -29,7 +29,7 @@ _在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。XA
 
 选择的解决方案的位置，为其提供的名称**XamlSamples** （或你希望的任何内容），然后按**确定**。
 
-在下一个屏幕上，选择**空白应用程序**模板， **Xamarin.Forms** UI 技术和**可移植类库 (PCL)**代码共享策略：
+在下一个屏幕上，选择**空白应用程序**模板， **Xamarin.Forms** UI 技术和**可移植类库 (PCL)** 代码共享策略：
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "新建应用程序对话框")
 
@@ -192,7 +192,7 @@ namespace XamlSamples
 
 尽管你通常不需要与生成的代码文件花费多长时间，有时运行时异常会引发代码在生成的文件，因此你应该熟悉它们。
 
-在编译和运行此程序`Label`元素出现在页的中心中，如 XAML 所示。 从左到右的三个平台是 iOS、 Android 和 Windows 10 移动版：
+在编译和运行此程序`Label`元素出现在页的中心中，如 XAML 所示。 从左到右的三个平台是 iOS、 Android 和 UWP:
 
 [![](get-started-with-xaml-images/xamlsamples.png "默认 Xamarin.Forms 显示")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "默认 Xamarin.Forms 显示")
 
@@ -224,7 +224,7 @@ MainPage = new MainPage();
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** PCL 项目，然后调用**项目 > 添加新项**菜单项。 在左侧的**添加新项**对话框中，选择**Visual C#**和**Xamarin.Forms**。 从列表中选择**内容页**(不**内容页 (C#)**，这将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage.xaml**:
+若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** PCL 项目，然后调用**项目 > 添加新项**菜单项。 在左侧的**添加新项**对话框中，选择**Visual C#** 和**Xamarin.Forms**。 从列表中选择**内容页**(不**内容页 (C#)**，这将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.png "添加新项对话框")
 
@@ -351,11 +351,11 @@ public MainPage()
 }
 ```
 
-设置`Content`页属性替换的设置`Content`XAML 文件中的属性。 在编译和部署此程序的新版本，在屏幕上会出现一个按钮。 按其导航到`HelloXamlPage`。 下面是结果页上 iPhone、 Android 和 Windows 10 移动版设备：
+设置`Content`页属性替换的设置`Content`XAML 文件中的属性。 在编译和部署此程序的新版本，在屏幕上会出现一个按钮。 按其导航到`HelloXamlPage`。 下面是在 iPhone、 Android 和 UWP 结果页上：
 
 [![](get-started-with-xaml-images/helloxaml1.png "旋转标签文本")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "旋转标签文本")
 
-你可以向后定位到`MainPage`使用**< 回**iOS，在页面顶部或底部的电话在 Android 上，使用向左箭头键或在 Windows 10 移动版上的页面的底部使用向左的箭头上的按钮。
+你可以向后定位到`MainPage`使用 **< 回**iOS，在页面顶部或底部的电话在 Android 上，使用向左箭头键或在 Windows 10 上的页面的顶部使用向左的箭头上的按钮。
 
 随意尝试不同的方法来呈现 XAML `Label`。 如果你需要在文本中嵌入的任何 Unicode 字符，你可以使用标准的 XML 语法。 例如，若要将问候语放在引号中，使用：
 

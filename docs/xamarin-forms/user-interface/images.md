@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: ddbcb74d34f09c7bb60891148bd50b36bc5094c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e8ad5ba3bdfa61ae1b2f4404016f204a8c1747c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="images"></a>图像
 
@@ -58,7 +58,6 @@ Xamarin.Forms 使用[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.F
 
 - **iOS** -首选方法，以管理和支持映像，因为 iOS 9 是使用**资产目录映像集**，其中应包含的所有所需支持各种设备和规模因素的映像的版本应用程序。 有关详细信息，请参阅[将映像添加到的资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 - **Android** -放置在图像**可资源/绘制**目录**生成操作： AndroidResource**。 此外可以提供的映像的 DPI 于高和较低的版本 (在适当地命名为**资源**如子目录**可绘制 ldpi**，**可绘制 hdpi**，和**可绘制 xhdpi**)。
-- **Windows Phone** -将图像放在应用程序的根目录下使用**生成操作： 内容**。
 - **通用 Windows 平台 (UWP)** -将图像放在应用程序的根目录下使用**生成操作： 内容**。
 
 > [!IMPORTANT]
@@ -93,7 +92,7 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>本机分辨率 （Retina 和高 DPI）
 
-iOS、 Android、 Windows Phone 和 UWP 包括针对不同的图像分辨率，其中操作系统选择适当的映像在运行时基于设备的功能的支持。 Xamarin.Forms 使用的本机平台的 Api 来加载本地图像，因此如果正确命名和位于项目文件，它会自动支持备用解决方法。
+iOS、 Android 和 UWP 包括针对不同的图像分辨率，其中操作系统选择适当的映像在运行时基于设备的功能的支持。 Xamarin.Forms 使用的本机平台的 Api 来加载本地图像，因此如果正确命名和位于项目文件，它会自动支持备用解决方法。
 
 因为 iOS 9 管理映像的首选的方式是拖动到相应的资产目录映像集所需的每个分辨率的图像。 有关详细信息，请参阅[将映像添加到的资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
@@ -103,7 +102,7 @@ Android 备用分辨率图像应置于[专门名为目录](http://developer.andr
 
 [![Android 的多个高分辨率图像位置](images-images/xs-highdpisolution-sml.png "Android 多个高分辨率图像位置")](images-images/xs-highdpisolution.png#lightbox "Android 多个高分辨率图像位置")
 
-UWP 和 Windows Phone 图像文件名[为后缀`.scale-xxx`文件扩展名之前](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)，其中`xxx`是应用到的资产，例如缩放的百分比**myimage.scale 200.png**. 然后可以引用映像无法在代码或不带小数位数修饰符的 XAML 中，例如简单**myimage.png**。 该平台将选择基于显示器的当前 DPI 的最接近的适当的资产规模。
+UWP 图像文件名[为后缀`.scale-xxx`文件扩展名之前](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)，其中`xxx`是应用到的资产，例如缩放的百分比**myimage.scale 200.png**。 然后可以引用映像无法在代码或不带小数位数修饰符的 XAML 中，例如简单**myimage.png**。 该平台将选择基于显示器的当前 DPI 的最接近的适当的资产规模。
 
 ### <a name="additional-controls-that-display-images"></a>显示图像的其他控件
 

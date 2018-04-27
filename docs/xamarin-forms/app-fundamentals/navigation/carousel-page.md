@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d55d8c8d98828097c842cc383037db88097b963d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 035254f87e52801d5ff7419f9ad9d5503f060020
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="carousel-page"></a>传送页
 
@@ -45,7 +45,7 @@ _Xamarin.Forms CarouselPage 是内容的一个页，用户可以将从左到右�
 - [填充](#Populating_a_CarouselPage_with_a_Page_Collection)`CarouselPage`的子集合[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例。
 - [分配](#Populating_a_CarouselPage_with_a_Template)集合与[ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/)属性和分配[ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)到[ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/)属性以返回[`ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)集合中的对象的实例。
 
-这两种方法，`CarouselPage`将然后显示每个页面反过来将移到下一页上显示的轻扫交互。 此导航体验将觉得自然和为 Windows Phone 用户所熟悉。
+这两种方法，`CarouselPage`将然后显示每个页面反过来将移到下一页上显示的轻扫交互。 
 
 > [!NOTE]
 > A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)仅可以使用填充[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)实例，或`ContentPage`衍生产品。
@@ -246,7 +246,7 @@ public class MainPageCS : CarouselPage
 
 ## <a name="summary"></a>总结
 
-这篇文章演示了如何使用[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)若要浏览的页的集合。 `CarouselPage`是一个页，用户可以将从左到右轻扫浏览页面的内容，如库，并提供自然和为 Windows Phone 用户所熟悉的外观导航体验。
+这篇文章演示了如何使用[ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)若要浏览的页的集合。 `CarouselPage`是一个页，用户可以将从左到右轻扫网页的内容，类似于库间导航。
 
 
 ## <a name="related-links"></a>相关链接

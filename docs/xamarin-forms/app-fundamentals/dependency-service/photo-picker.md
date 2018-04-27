@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 95ac9912f0ff6788a2a633b3f8d3495e286030f1
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 6945d64e37bc7e0de930093d8a3f71590026182d
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>从图片库中选取照片
 
@@ -21,7 +21,6 @@ ms.lasthandoff: 04/18/2018
 - **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
 - **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码实现接口。
 - **[通用 Windows 平台实现](#UWP_Implementation)** &ndash;了解如何在本机代码中的通用 Windows 平台 (UWP) 实现接口。
-- **[Windows Phone 实现](#Windows_Phone_Implementation)** &ndash;了解如何为 Windows Phone 8.1 本机代码中实现接口。
 - **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现共享代码中。
 
 <a name="Creating_the_Interface" />
@@ -256,92 +255,6 @@ namespace DependencyServiceSample.UWP
         }
     }
 }
-```
-
-<a name="Windows_Phone_Implementation" />
-
-## <a name="windows-phone-81-implementation"></a>Windows Phone 8.1 实现
-
-Windows Phone 8.1 实现是类似于具有重大影响的一个大的区别除外的 UWP 实现：`PickSingleFileAsync`方法`FileOpenPicker`不可用。 相反，`GetImageStreamAsync`方法必须调用`PickSingleFileAndContinue`。 当此照片库显示给用户，但用户的选择的照片处于有信号状态通过调用此方法返回`OnActivated`方法`App`类。
-
-为此， [ `App` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/WinPhone/App.xaml.cs)由 Windows Phone 8.1 项目中的 Xamarin.Forms 项目模板创建的类附有类型的属性`TaskCompletionSource`和的重写`OnActivated`方法：
-
-```csharp
-namespace DependencyServiceSample.WinPhone
-{
-    public sealed partial class App : Application
-    {
-        ...
-        public TaskCompletionSource<Stream> TaskCompletionSource { set; get; }
-
-        protected async override void OnActivated(IActivatedEventArgs args)
-        {
-            base.OnActivated(args);
-
-            IContinuationActivatedEventArgs continuationArgs = args as IContinuationActivatedEventArgs;
-
-            if (continuationArgs != null &&
-                continuationArgs.Kind == ActivationKind.PickFileContinuation)
-            {
-                FileOpenPickerContinuationEventArgs pickerArgs = args as FileOpenPickerContinuationEventArgs;
-
-                if (pickerArgs.Files.Count > 0)
-                {
-                    // Get the file and a Stream
-                    StorageFile storageFile = pickerArgs.Files[0];
-                    IRandomAccessStreamWithContentType raStream = await storageFile.OpenReadAsync();
-                    Stream stream = raStream.AsStreamForRead();
-
-                    // Set the completion of the Task
-                    TaskCompletionSource.SetResult(stream);
-                }
-                else
-                {
-                    TaskCompletionSource.SetResult(null);
-                }
-            }
-        }
-    }
-}
-```
-
-`OnActivated`可能原因有多种，包括应用程序启动时调用方法。 代码将自身限定于仅这些调用时文件打开选取器已完成，并且然后获取`Stream`对象`StorageFile`。
-
-[ `PicturePickerImplementation` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/WinPhone/PicturePickerImplementation.cs)类包含`GetImageStreamAsync`创建方法`FileOpenPicker`和调用`PickSingleFileAndContainue`:
-
-```csharp
-[assembly: Xamarin.Forms.Dependency(typeof(PicturePickerImplementation))]
-
-namespace DependencyServiceSample.WinPhone
-{
-    public class PicturePickerImplementation : IPicturePicker
-    {
-        public Task<Stream> GetImageStreamAsync()
-        {
-            // Create and initialize the FileOpenPicker
-            FileOpenPicker openPicker = new FileOpenPicker
-            {
-                ViewMode = PickerViewMode.Thumbnail,
-                SuggestedStartLocation = PickerLocationId.PicturesLibrary,
-            };
-
-            openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".jpeg");
-            openPicker.FileTypeFilter.Add(".png");
-
-            // Display the picker for a single file (resumes in OnActivated in App.xaml.cs)
-            openPicker.PickSingleFileAndContinue();
-
-            // Create a TaskCompletionSource stored in App.xaml.cs
-            TaskCompletionSource<Stream> taskCompletionSource = new TaskCompletionSource<Stream>();
-            (Application.Current as App).TaskCompletionSource = taskCompletionSource;
-
-            // Return the Task object
-            return taskCompletionSource.Task;
-        }
-    }
-}
-
 ```
 
 <a name="Implementing_in_Shared_Code" />

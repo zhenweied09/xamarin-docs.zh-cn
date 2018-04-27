@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4adff8a95f9981dbecc44bf177dcd98b7984a3a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 
 _Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。本文演示如何创建用于 HybridWebView 自定义控件，其演示了如何增强特定于平台的 web 控件，若要从 JavaScript 中允许 C# 代码调用自定义呈现器。_
 
-Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) Xamarin.Forms 应用程序在 iOS 中，呈现`ViewRenderer`该类进行实例化，这反过来实例化一个本机`UIView`控件。 在 Android 平台上，`ViewRenderer`类实例化`View`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`ViewRenderer`类实例化一个本机`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+Xamarin.Forms 中的每个视图已随附的呈现器针对每个平台创建的本机控件的实例。 当[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) Xamarin.Forms 应用程序在 iOS 中，呈现`ViewRenderer`该类进行实例化，这反过来实例化一个本机`UIView`控件。 在 Android 平台上，`ViewRenderer`类实例化`View`控件。 在通用 Windows 平台 (UWP)，`ViewRenderer`类实例化一个本机`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)和相应的本机控件实现它：
 
@@ -417,13 +417,13 @@ public class JSBridge : Java.Lang.Object
 > [!IMPORTANT]
 > 确保 Android Oreo 的 Android 清单设置**目标 Android 版本**到**自动**。 否则，运行此代码会导致错误消息"invokeCSharpAction 未定义"。
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>在 Windows Phone 上创建自定义呈现器和 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了 Windows Phone 和 UWP 的自定义呈现器：
+下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Windows.UI.Xaml.Controls.WebView>
     {

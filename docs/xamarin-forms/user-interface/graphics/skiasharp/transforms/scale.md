@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>缩放变换
 
@@ -167,7 +167,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](scale-images/centeredscale-small.png "三重的居中比例页的屏幕截图")](scale-images/centeredscale-large.png#lightbox "三重的居中比例页的屏幕截图")
 
-`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 Windows 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
+`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 UWP 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
 
 此第四个版本的`Scale`方法是实际的快捷方式。 你可能想要了解通过将其原理`Scale`中此代码替换为以下方法：
 
@@ -344,4 +344,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

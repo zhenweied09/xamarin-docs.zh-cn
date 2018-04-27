@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 8d6276a96d591363c88be4ff7edd8a9d039fb29d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71c10e1de8b94b8d9799d144fb603c82c40ca9eb
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="colors"></a>颜色
 
@@ -44,7 +44,7 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-这些颜色显示在下面每个平台。 请注意的最终颜色- `Accent` -为 iOS 和 Android; blue-ish 颜色由 Xamarin.Forms 定义此值。 在 Windows Phone 上`Accent`显示为红色*，因为它是该设备的用户选择强调文字颜色*; 此值更改取决于用户的首选项。
+这些颜色显示在下面每个平台。 请注意的最终颜色- `Accent` -为 iOS 和 Android; blue-ish 颜色由 Xamarin.Forms 定义此值。
 
  [![颜色演示](colors-images/colors-sml.png "颜色演示")](colors-images/colors.png#lightbox "颜色演示")
 
@@ -59,8 +59,6 @@ var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accen
 设置要清除的颜色。
 
 ## <a name="coloraccent"></a>Color.Accent
-
-在 Windows Phone，这是由用户选择补色。 良好的 Windows Phone 应用程序用于其样式的一部分提供本机观感。
 
 在 iOS 和 Android 此实例设置为一种对比颜色在默认背景上可见，但又不是默认文本颜色相同。
 

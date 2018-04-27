@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: d07026fbcc43a43a9f26d85ad15d5a4e3165e2ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 110c608558059ba0f207b4cff343b428125e1784
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -282,11 +282,7 @@ Title="AbsoluteLayout">
 
 ![](absolute-layout-images/abs.png "复杂 AbsoluteLayout")
 
-请注意，由于在按钮的 Windows Phone 的呈现方式不同，一些圆圈已替换为在 Windows Phone 的屏幕快照的 boxviews。
-
 请注意， `AbsoluteLayout`s 嵌套的因为在某些情况下嵌套布局可以更方便地比提供相同的布局中的所有元素。
-
-
 
 ## <a name="related-links"></a>相关链接
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 58f5a64f85dbe5a6889e6ff598c14fdfd9b0a5df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da3025f2616c91488ec70e25836351b08e957494
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-contentpage"></a>自定义内容页
 
 _内容页是一个显示的单个视图，且占用大部分屏幕的可见元素。本文演示如何创建自定义呈现器内容页页中，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。_
 
-Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) Xamarin.Forms 应用程序，在 iOS 中呈现`PageRenderer`该类进行实例化，这反过来实例化一个本机`UIViewController`控件。 在 Android 平台上，`PageRenderer`类实例化`ViewGroup`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`PageRenderer`类实例化`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) Xamarin.Forms 应用程序，在 iOS 中呈现`PageRenderer`该类进行实例化，这反过来实例化一个本机`UIViewController`控件。 在 Android 平台上，`PageRenderer`类实例化`ViewGroup`控件。 在通用 Windows 平台 (UWP)，`PageRenderer`类实例化`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)和相应的本机控件实现它：
 
@@ -197,57 +197,6 @@ namespace CustomRenderer.Droid
 调用基类的`OnElementChanged`方法实例化 Android`ViewGroup`控件，它是一组视图。 前提被呈现器不已附加到现有 Xamarin.Forms 元素，且前提是存在的页实例，呈现的自定义呈现器仅呈现实时的相机流。
 
 然后通过调用一系列使用的方法自定义页面`Camera`API 来提供从相机和之前捕获照片的实时流`AddView`方法调用以添加实时相机流式传输到 UI `ViewGroup`。
-
-### <a name="creating-the-page-renderer-on-windows-phone"></a>在 Windows Phone 上创建页呈现器
-
-下面的代码示例演示 Windows Phone 平台的页呈现器：
-
-```csharp
-[assembly: ExportRenderer (typeof(CameraPage), typeof(CameraPageRenderer))]
-namespace CustomRenderer.WinPhone81
-{
-    public class CameraPageRenderer : PageRenderer
-    {
-        ...
-
-        protected override void OnElementChanged (VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged (e);
-
-            if (e.OldElement != null || Element == null) {
-                return;
-            }
-
-            try {
-                ...
-                var container = ContainerElement as Canvas;
-
-                SetupUserInterface ();
-                SetupEventHandlers ();
-                SetupLiveCameraStream ();
-                container.Children.Add (page);
-            }
-            ...
-        }
-
-        protected override Size ArrangeOverride(Size finalSize)
-        {
-            page.Arrange(new Windows.Foundation.Rect(0, 0, finalSize.Width, finalSize.Height));
-            return finalSize;
-        }
-        ...
-    }
-}
-```
-
-调用基类的`OnElementChanged`方法实例化 Windows Phone`Canvas`页面呈现在其的控件。 前提被呈现器不已附加到现有 Xamarin.Forms 元素，且前提是存在的页实例，呈现的自定义呈现器仅呈现实时的相机流。
-
-在 Windows Phone 平台上，可以通过访问在平台上使用本机页上的类型化的引用`ContainerElement`属性，与`Canvas`控制对类型化的引用`FrameworkElement`。 然后通过调用一系列使用的方法自定义页面`MediaCapture`API 来提供从相机和自定义的页面添加到之前捕获照片的实时流`Canvas`进行显示。
-
-实现派生自的自定义呈现器时`PageRenderer`对 Windows 运行时，`ArrangeOverride`方法还应实现，来排列这些页控件，因为基呈现器不知道如何处理它们。 否则，结果空白页。 因此，在此示例`ArrangeOverride`方法调用`Arrange`方法`Page`实例。
-
-> [!NOTE]
-> 务必停止和释放的对象，它提供对 Windows Phone 8.1 WinRT 应用程序中的照相机的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅`CleanUpCaptureResourcesAsync`方法中的 Windows Phone 项目中的示例解决方案，和[快速入门： 使用 MediaCapture API 捕获视频](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx)。
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>在 UWP 上创建页呈现器
 

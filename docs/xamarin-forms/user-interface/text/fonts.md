@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="fonts"></a>字体
 
@@ -53,7 +53,7 @@ label.FontSize = 24;
 -  **Micro**
 -  **小**
 -  **中等**
--  **Large**
+-  **大型**
 
 
 `NamedSize`枚举可以是任何位置使用`FontSize`可以使用指定`Device.GetNamedSize`方法以将值转换为`double`:
@@ -70,7 +70,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
 -  **无**
 -  **加粗**
--  **Italic**
+-  **斜体**
 
 `FontAttribute`枚举可以使用方法如下 (你可以指定单个属性或`OR`在一起):
 
@@ -166,7 +166,7 @@ Xamarin.Forms 控制所有具有该显示文本`Font`可以在 Xaml 中设置的
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="MarkerFelt-Thin" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>
@@ -178,7 +178,7 @@ Xamarin.Forms 控制所有具有该显示文本`Font`可以在 Xaml 中设置的
 
 ## <a name="using-a-custom-font"></a>使用自定义字体
 
-使用以外的内置字样字体需要一些特定于平台的编码。 此屏幕截图中显示的自定义字体**Lobster**从[Google 的开放源代码字体](https://www.google.com/fonts)呈现在 iOS、 Android 和 Windows Phone 使用 Xamarin.Forms。
+使用以外的内置字样字体需要一些特定于平台的编码。 此屏幕截图中显示的自定义字体**Lobster**从[Google 的开放源代码字体](https://www.google.com/fonts)呈现使用 Xamarin.Forms。
 
  [![在 iOS 和 Android 的自定义字体](fonts-images/custom-sml.png "自定义字体示例")](fonts-images/custom.png#lightbox "自定义字体示例")
 
@@ -215,7 +215,7 @@ new Label
 
 ### <a name="windows"></a>Windows
 
-对于 Windows 平台的 Xamarin.Forms 可以引用按照特定的命名标准添加到项目的自定义字体。 第一次添加字体文件**/Assets/字体/**文件夹中的应用程序项目和组<span class="UIItem">生成操作： 内容</span>。 然后，使用的完整路径和字体文件名，跟哈希 （#） 和<span class="UIItem">字体名称</span>，如以下代码段所示：
+对于 Windows 平台的 Xamarin.Forms 可以引用按照特定的命名标准添加到项目的自定义字体。 第一次添加字体文件 **/Assets/字体/** 文件夹中的应用程序项目和组<span class="UIItem">生成操作： 内容</span>。 然后，使用的完整路径和字体文件名，跟哈希 （#） 和<span class="UIItem">字体名称</span>，如以下代码段所示：
 
 ```csharp
 new Label
@@ -240,7 +240,7 @@ new Label
         <OnPlatform x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Lobster-Regular" />
                 <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
         </OnPlatform>
     </Label.FontFamily>
 </Label>

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: f1f0bb0ce282479a7b185257880244863bb67a60
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="list-appearance"></a>列表外观
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/06/2018
 - 设置`ListView`的`ItemsSource`到该列表。
 - 设置`IsGroupingEnabled`为 true。
 - 设置[ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/)要绑定到正在为组的标题使用的组的属性。
-- [可选]设置[ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/)要绑定到作为组的短名称正在使用的组的属性。 短名称用于跳转列表 （iOS、 Windows Phone 上的磁贴网格上的 rigt 端列）。
+- [可选]设置[ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/)要绑定到作为组的短名称正在使用的组的属性。 短名称用于跳转列表 （在 iOS 上的右侧列）。
 
 首先创建组的类：
 
@@ -120,7 +120,7 @@ x:Class="DemoListView.GroupingViewPage"
 
 如果在列表中启用了分组，也可以定制组标头。
 
-类似于如何`ListView`具有`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。 
+类似于如何`ListView`具有`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。
 
 自定义 XAML 中的组标头的示例所示：
 
@@ -206,7 +206,7 @@ ListView HeaderList = new ListView() {
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>行分隔符
-分隔线显示之间`ListView`默认情况下，在 iOS 和 Android 的元素。 Windows Phone 不支持分隔符，每个行数该平台 UX 准则。 如果你想要隐藏在 iOS 和 Android 的分隔符行，设置`SeparatorVisibility`上你 ListView 的属性。 选项`SeparatorVisibility`是：
+分隔线显示之间`ListView`默认情况下，在 iOS 和 Android 的元素。 如果你想要隐藏在 iOS 和 Android 的分隔符行，设置`SeparatorVisibility`上你 ListView 的属性。 选项`SeparatorVisibility`是：
 
 * **默认**-iOS 和 Android 上显示一条分隔线。
 * **无**-隐藏在所有平台上的分隔符。

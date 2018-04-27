@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-an-entry"></a>自定义项
 
 _Xamarin.Forms 进入控制允许单个行要编辑的文本。本文演示如何创建自定义呈现器对于条目控件，使开发人员能够重写默认本机呈现与自己特定于平台的自定义项。_
 
-Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) Xamarin.Forms 应用程序，在 iOS 中呈现控件`EntryRenderer`实例化类，后者又在实例化一个本机`UITextField`控件。 在 Android 平台上，`EntryRenderer`类实例化`EditText`控件。 在 Windows Phone 和通用 Windows 平台 (UWP) 上`EntryRenderer`类实例化`TextBox`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) Xamarin.Forms 应用程序，在 iOS 中呈现控件`EntryRenderer`实例化类，后者又在实例化一个本机`UITextField`控件。 在 Android 平台上，`EntryRenderer`类实例化`EditText`控件。 在通用 Windows 平台 (UWP)，`EntryRenderer`类实例化`TextBox`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
 下图说明之间的关系[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)控件和相应的本机控件实现它：
 
@@ -178,13 +178,13 @@ namespace CustomRenderer.Android
 
 调用基类的`OnElementChanged`方法实例化 Android`EditText`具有对分配给的呈现器控件的引用控件`Control`属性。 然后，将背景色设置为与浅绿色`Control.SetBackgroundColor`方法。
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>在 Windows Phone 上创建自定义呈现器和 UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了 Windows Phone 和 UWP 的自定义呈现器：
+下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(MyEntry), typeof(MyEntryRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class MyEntryRenderer : EntryRenderer
     {

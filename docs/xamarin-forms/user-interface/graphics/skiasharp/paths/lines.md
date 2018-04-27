@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>行和描边大写字母
 
@@ -235,7 +235,7 @@ T GetPickerItem<T>(Picker picker)
 
 当你改为使用`SKPointMode.Lines`，如在中心中，Android 屏幕上显示`DrawPoints`方法的每个对之间绘制一条`SKPoint`值，在这种情况下使用指定的线帽， `Round`。
 
-Windows 移动设备显示的结果`SKPointMode.Polygon`值。 在数组中，在连续点之间绘制一条线，但如果您非常仔细查看，你将看到未连接这些行。 每个这些单独的行开始和结束的指定的线帽。 如果你选择`Round`上限，行可能看起来连接，但它们实际上未连接。
+UWP 屏幕快照显示的结果`SKPointMode.Polygon`值。 在数组中，在连续点之间绘制一条线，但如果您非常仔细查看，你将看到未连接这些行。 每个这些单独的行开始和结束的指定的线帽。 如果你选择`Round`上限，行可能看起来连接，但它们实际上未连接。
 
 行是否连接或未连接是使用图形路径的一个重要方面。
 
@@ -243,4 +243,4 @@ Windows 移动设备显示的结果`SKPointMode.Polygon`值。 在数组中，�
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

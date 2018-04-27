@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 1e1039f513534885dffe9fef348d567243651e22
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 5c9eed8f48a40bc7feaadd0c644610f691713e9b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="app-class"></a>应用程序类
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/06/2018
 具体取决于哪个模板，你选择，`App`无法在两种方式之一中定义类：
 
 * **C#**，或
-* **XAML & C#**
+* **XAML 和 C#**
 
 若要创建**应用**类使用 XAML，默认值**应用**类必须替换 XAML**应用**类和关联的代码隐藏，如下面的代码示例中所示：
 
@@ -198,70 +198,9 @@ public class MainActivity :
 > 没有更新[ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md)基类可以用于更好地支持 Android 材料设计。
 > 这将在将来成为默认 Android 模板，但您可以按照[这些说明](~/xamarin-forms/platform/android/appcompat.md)更新你的现有 Android 应用。
 
-
-### <a name="windows-phone-project"></a>Windows Phone 项目
-
-Windows Phone （基于 Silverlight 的） 项目中的主页应继承自`FormsApplicationPage`。 这意味着 XAML 和 C# 为`MainPage`引用`FormsApplicationPage`类所示。
-
-XAML 使用自定义的命名空间，以便使根元素反映`FormsApplicationPage`类：
-
-```xaml
-<winPhone:FormsApplicationPage
-   ...
-   xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"
-    ...>
-</winPhone:FormsApplicationPage>
-```
-
-C# 继承自`FormsApplicationPage`类，并调用`LoadApplication`若要创建的你 Xamarin.Forms 实例`App`。 请注意，它是好的做法显式使用应用程序命名空间来限定`App`因为 Windows Phone 应用程序还具有自己`App`与 Xamarin.Forms 无关的类。
-
-```csharp
-public partial class MainPage :
-    global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-
-        global::Xamarin.Forms.Forms.Init();
-        LoadApplication(new YOUR_APP_NAMESPACE.App()); // new in 1.3, use the correct namespace
-    }
- }
-```
-
-### <a name="windows-81-project"></a>Windows 8.1 项目
-
-在主页[（基于 WinRT） 的 Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md)项目应现在继承自`WindowsPage`。 这意味着为 XAML`MainPage`引用`WindowsPage`类所示：
-
-XAML 使用自定义的命名空间，以便使根元素反映`FormsApplicationPage`类：
-
-```xaml
-<forms:WindowsPage
-   ...
-   xmlns:forms="using:Xamarin.Forms.Platform.WinRT"
-   ...>
-</forms:WindowsPage>
-```
-
-必须调用的 C# 代码隐藏的构造`LoadApplication`若要创建的你 Xamarin.Forms 实例`App`。 请注意，它是好的做法显式使用应用程序命名空间来限定`App`因为 UWP 应用程序还具有自己`App`与 Xamarin.Forms 无关的类。
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        LoadApplication(new YOUR_APP_NAMESPACE.App());
-    }
- }
-```
-
-请注意，`Forms.Init()`必须调用**App.xaml.cs**围绕行 65。
-
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>适用于 Windows 10 的通用 Windows 项目 (UWP)
 
-[通用 Windows 项目](~/xamarin-forms/platform/windows/installation/universal.md)Xamarin.Forms 中的支持目前处于预览状态。
+请参阅[安装 Windows 项目](~/xamarin-forms/platform/windows/installation/index.md)有关 Xamarin.Forms 中的 UWP 支持信息。
 
 对 UWP 项目中的主页应继承自`WindowsPage`。 这意味着 XAML 和 C# 为`MainPage`引用`FormsApplicationPage`类所示。
 

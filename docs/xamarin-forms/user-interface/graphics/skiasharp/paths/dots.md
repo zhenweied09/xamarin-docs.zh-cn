@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>点和短划线
 
@@ -164,7 +164,7 @@ float[] GetPickerArray(Picker picker)
 - {30，10} 将成为 {20、 20} 的虚线
 - {10、 10、 30、 10} 变为虚线与虚线行 {0、 20、 20、 20}
 
-Windows 屏幕显示以点分隔格式，虚线笔画的行的制定一个上限`Round`。 `Round`描边端点通常为赋予点和短划线的最佳外观密集的行中。
+UWP 屏幕显示以点分隔格式，虚线笔画的行的制定一个上限`Round`。 `Round`描边端点通常为赋予点和短划线的最佳外观密集的行中。
 
 到目前为止的第二个参数的做出没有提及`SKPathEffect.CreateDash`方法。 此参数的名称为`phase`，它是指在该点划线模式中的行的开头的偏移量。 例如，如果 dash 数组为 {10，10} 和`phase`为 10，然后在行开头间隔而不是一个点。
 
@@ -220,4 +220,4 @@ protected override void OnAppearing()
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

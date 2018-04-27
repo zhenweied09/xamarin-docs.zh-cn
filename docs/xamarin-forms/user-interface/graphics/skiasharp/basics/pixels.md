@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>像素和设备无关的单位
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如你所见，`CanvasSize`属性`SKCanvasView`和`Size`属性`SKImageInfo`值是在报告的像素大小中保持一致。 `Height`和`Width`属性`SKCanvasView`是 Xamarin.Forms 属性，并报告定义平台的独立于设备的单元中的视图的大小。
 
-在左侧的 iOS 7 模拟器具有 2 个像素，每个独立于设备的单位、 中心中 Android Nexus 5 包含 3 个像素，每个单位，并且 Nokia Lumia 925 右侧 2.25 像素，每个单位。 为什么简单 circle 显示有关在 iPhone 上的相同大小的更早版本如下所示和 Windows phone，但会在 Android 手机上小一些。
+IOS 7 模拟器左侧有 2 个像素，每个独立于设备的单位，并在中心 Android Nexus 5 具有每个单位的 3 个像素。 这就是为什么前面所示简单活动圈在不同平台上都有不同的大小。
 
 如果你希望完全在独立于设备的单元工作，你可以做到这一点设置`IgnorePixelScaling`属性`SKCanvasView`到`true`。 但是，您可能不喜欢结果。 SkiaSharp 呈现在较小的设备图面，与设备无关的单位中的视图的大小相等的像素大小上的图形。 （例如，SkiaSharp 应该使用 360 x 512 像素显示图的面上 Nexus 5。）它然后可内扩展，该映像的大小，从而导致明显的位图 jaggies。
 
@@ -164,4 +164,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

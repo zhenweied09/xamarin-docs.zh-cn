@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: df0e113f0c76ea9bde58da7a7ceccd50edd5b227
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="cell-appearance"></a>单元格的外观
 
@@ -62,8 +62,6 @@ TextCells 呈现为本机控件在运行时，因此性能是非常好向自定�
 - `TextColor` &ndash; 文本颜色
 - `DetailColor` &ndash; 详细信息文本的颜色
 - `ImageSource` &ndash; 文本旁边显示的图像
-
-请注意，当面向 Windows Phone 8.1，`ImageCell`不会默认情况下缩放图像。 此外，请注意，Windows Phone 8.1 为默认情况下的主文本中的相同的颜色和字体是唯一的平台的详细信息显示文本。 Windows Phone 8.0 呈现`ImageCell`，如下所示：
 
 ![](customizing-cell-appearance-images/image-cell-default.png "默认 ImageCell 示例")
 

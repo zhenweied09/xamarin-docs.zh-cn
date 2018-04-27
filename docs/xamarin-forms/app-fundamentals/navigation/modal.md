@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 909a04398043a3c2f0c30e4da82d174a6bfaf148
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00d52aa69372ab5ec3073e2355a43521b515ca8b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="modal-pages"></a>模式页
 
@@ -100,7 +100,7 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 
 ### <a name="disabling-the-back-button"></a>禁用后退按钮
 
-在 Android 和 Windows Phone 上，用户可以始终返回到以前的页面按标准*回*在设备上的按钮。 该应用程序的模式的页面要求用户在离开页面之前完成自包含的任务，如果必须禁用*回*按钮。 这可以通过重写实现[ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/)模式页上的方法。 有关详细信息请参阅[章 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) Charles Petzold Xamarin.Forms 书籍。
+在 Android 上，用户可以始终返回到以前的页面按标准*回*在设备上的按钮。 该应用程序的模式的页面要求用户在离开页面之前完成自包含的任务，如果必须禁用*回*按钮。 这可以通过重写实现[ `Page.OnBackButtonPressed` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnBackButtonPressed/)模式页上的方法。 有关详细信息请参阅[章 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) Charles Petzold Xamarin.Forms 书籍。
 
 ### <a name="animating-page-transitions"></a>该页可为进行动画处理
 

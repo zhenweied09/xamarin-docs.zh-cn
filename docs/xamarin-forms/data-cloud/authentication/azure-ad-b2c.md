@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627c6773c099c9cf45f871a9bb73a201bf98271a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>使用 Azure Active Directory B2C 的用户进行身份验证
 
@@ -60,7 +60,7 @@ Microsoft 身份验证库 (MSAL) NuGet 库必须添加到可移植类库 (PCL) �
 
 ### <a name="portable-class-library"></a>可移植类库
 
-MSAL 不支持 Windows Phone 8.1，因此使用 MSAL 的 Pcl 将需要删除此目标。 这可以通过重定目标 Pcl 使用 Profile7 来实现。 有关 PCL的详细信息，请参阅[可移植类库简介](~/cross-platform/app-fundamentals/pcl.md)。
+使用 MSAL 的 Pcl 将需要重定向以使用 Profile7。 有关 PCL的详细信息，请参阅[可移植类库简介](~/cross-platform/app-fundamentals/pcl.md)。
 
 ### <a name="ios"></a>iOS
 

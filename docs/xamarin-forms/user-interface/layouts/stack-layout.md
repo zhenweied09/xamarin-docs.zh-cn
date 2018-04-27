@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 638243958fce34871089b10185f150492dbd2b0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c27f94302037e4e19c9d72131e7137c8a4004d5c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="stacklayout"></a>StackLayout
 
@@ -215,8 +215,6 @@ Title="StackLayouts">
 上面的代码将导致以下布局：
 
 ![](stack-layout-images/stack.png "复杂 StackLayout")
-
-请注意，由于在按钮的 Windows Phone 的呈现方式不同，一些圆圈已替换为在 Windows Phone 的屏幕快照的 boxviews。
 
 请注意， `StackLayouts`s 嵌套的因为在某些情况下嵌套布局可以更方便地比提供相同的布局中的所有元素。 另请注意，因为`StackLayout`不支持重叠项，找到的页面不具有布局激动人心的一些其他布局的页中。
 

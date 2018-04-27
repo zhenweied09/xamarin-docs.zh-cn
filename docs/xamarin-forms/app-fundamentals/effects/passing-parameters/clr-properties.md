@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 78d14b9764ab0c7cafb9f09fa1c8acea3f45afde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c913ea56af423631c48fb9ee6d8dcb95028a4144
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>传递效果参数作为公共语言运行时属性
 
@@ -184,14 +184,14 @@ namespace EffectsDemo.Droid
 
 `OnAttached`方法检索`ShadowEffect`实例，并调用[ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/)方法，用于创建阴影使用指定的属性值。 此功能包装在`try` / `catch`阻止以防效果附加到控件不具有`Control.Layer`属性。 没有实现由`OnDetached`方法因为不是必需的任何清理。
 
-### <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone 和通用 Windows 平台项目
+### <a name="universal-windows-platform-project"></a>通用 Windows 平台项目
 
-下面的代码示例演示`LabelShadowEffect`实现为 Windows Phone 和通用 Windows 平台 (UWP) 项目：
+下面的代码示例演示`LabelShadowEffect`实现通用 Windows 平台 (UWP) 项目：
 
 ```csharp
 [assembly: ResolutionGroupName ("Xamarin")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class LabelShadowEffect : PlatformEffect
     {
@@ -229,7 +229,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-Windows 运行时和通用 Windows 平台未提供投影效果，因此`LabelShadowEffect`实现这两个平台上的模拟一个通过添加第二个偏移量[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)落后于主`Label`. `OnAttached`方法检索`ShadowEffect`实例时，创建新`Label`，和上设置某些布局属性`Label`。 然后，它创建卷影通过设置[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)， [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)，和[ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)属性控制的颜色和位置`Label`. `shadowLabel`会插入落后于主偏移量`Label`。 此功能包装在`try` / `catch`阻止以防效果附加到控件不具有`Control.Layer`属性。 没有实现由`OnDetached`方法因为不是必需的任何清理。
+通用 Windows 平台不提供投影效果，因此`LabelShadowEffect`实现这两个平台上的模拟一个通过添加第二个偏移量[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)落后于主`Label`。 `OnAttached`方法检索`ShadowEffect`实例时，创建新`Label`，和上设置某些布局属性`Label`。 然后，它创建卷影通过设置[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)， [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)，和[ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)属性控制的颜色和位置`Label`. `shadowLabel`会插入落后于主偏移量`Label`。 此功能包装在`try` / `catch`阻止以防效果附加到控件不具有`Control.Layer`属性。 没有实现由`OnDetached`方法因为不是必需的任何清理。
 
 ## <a name="summary"></a>总结
 

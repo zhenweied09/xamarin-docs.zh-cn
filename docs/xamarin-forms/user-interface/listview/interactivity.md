@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 511a7052b07a853279f91211b3e3b1219f125c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview-interactivity"></a>ListView 交互性
 
@@ -53,12 +53,10 @@ SelectionDemoList.ItemSelected += (sender, e) => {
 
 ![](interactivity-images/selection-default.png "与所选内容启用的 ListView")
 
-请注意，在 Windows Phone，某些单元格，包括`SwitchCell`未更新以响应选择其可视状态。
-
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>上下文操作
-通常情况下，用户会想要在中的项上执行操作`ListView`。 例如，考虑在邮件应用中的电子邮件的列表。 在 iOS 上轻扫后删除消息，在 Windows Phone 上你可以长时间按一条消息，然后将其删除：
+通常情况下，用户会想要在中的项上执行操作`ListView`。 例如，考虑在邮件应用中的电子邮件的列表。 在 iOS 上你可以往下轻扫以删除一条消息::
 
 ![](interactivity-images/context-default.png "使用上下文的操作的 ListView")
 
@@ -149,8 +147,6 @@ listView.IsPullToRefreshEnabled = true;
 ![](interactivity-images/refresh-start.png "ListView 下拉以刷新正在进行中")
 
 为用户刷新请求已发布的请求。 这是你在更新列表时用户看到的内容： ![ ] (interactivity-images/refresh-in-progress.png "ListView 拉入到完成刷新")
-
-请注意，Xamarin.Forms 1.4.3，截至请求刷新不支持在 Windows Phone 8.1 上。 在 Windows phone 8 上, 请求刷新不是一个本机平台功能，因此请求刷新的实现提供通过 Xamarin.Forms。 最后，请注意如果列表中的所有元素可以都适合于屏幕 （换而言之，如果垂直滚动不是必需的），该请求刷新将不起在 Windows Phone 上。
 
 ListView 公开可用于对请求刷新事件作出响应的几个事件。
 

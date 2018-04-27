@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 2ddaba4541af52ae119fbf504fdcc66ba357c113
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin 实时播放器应用程序
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 实时的 Xamarin Player 用于 Android 从 Google Play:
 
-[ ![在 Google Play 上提供](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[![在 Google Play 上提供](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 适用于 Android 的设备，而无需 Google Play Xamarin 实时播放机可通过[HockeyApp](https://aka.ms/xlp-hockeyapp)分发。 此外，早期预览版中生成为可以通过启用直接从 Google Play 安装 Android[打开 beta 程序](https://play.google.com/apps/testing/com.xamarin.live)
 
@@ -51,9 +51,9 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="options"></a>选项
 
-按信息按钮**(i)**底部的应用程序以显示**选项**菜单：
+按信息按钮 **(i)** 底部的应用程序以显示**选项**菜单：
 
-[ ![选项菜单的屏幕截图](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![选项菜单的屏幕截图](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>日志
 
@@ -61,11 +61,11 @@ ms.lasthandoff: 04/04/2018
 
 ### <a name="settings"></a>设置
 
-* 切换显示的编译和运行时错误。
-* 版本信息。
-* 发送反馈。
+- 切换显示的编译和运行时错误。
+- 版本信息。
+- 发送反馈。
 
-[ ![设置的屏幕截图](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![设置的屏幕截图](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>管理设备
 
@@ -107,9 +107,8 @@ ms.lasthandoff: 04/04/2018
 
 如果遇到任何问题，请参阅[限制和故障排除](~/tools/live-player/troubleshooting.md)。
 
-
 ## <a name="related-links"></a>相关链接
 
 - [限制](~/tools/live-player/limitations.md)
 - [疑难解答](~/tools/live-player/troubleshooting.md)
-- [Xamarin 实时播放器示例](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Xamarin 实时播放器示例](samples.md)

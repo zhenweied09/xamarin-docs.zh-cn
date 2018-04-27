@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +41,8 @@ ListView 具有大量可用于执行每个平台的本机功能的组件。 下�
 
 - **[单元格](customizing-cell-appearance.md)** &ndash; ListView 中的数据也会出现在单元格。 每个单元格对应于数据行。 没有内置的单元格可供选择，或者你可以定义自己的自定义单元格。 内置和自定义单元可以是在 XAML 或代码中使用或定义。
   - **[内置](customizing-cell-appearance.md#Built_in_Cells)** &ndash;内置的单元格，尤其是 TextCell 和 ImageCell，可能会大幅提高性能，因为它们对应于每个平台上的本机控件。
-    - **[TextCell](customizing-cell-appearance.md#TextCell) ** &ndash;显示的文本，并且可选择带有详细文本的字符串。 详细信息文本呈现为第二行中以强调文字颜色与较小的字体。
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell) ** &ndash;显示带文本的图像。 将显示为与左侧图像 TextCell。
+    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash;显示的文本，并且可选择带有详细文本的字符串。 详细信息文本呈现为第二行中以强调文字颜色与较小的字体。
+    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash;显示带文本的图像。 将显示为与左侧图像 TextCell。
   - **[自定义单元格](customizing-cell-appearance.md#customcells)** &ndash;自定义单元格非常，当你需要提供复杂的数据。 例如，自定义视图，无法用于提供歌曲，包括唱片集和艺术家的列表：
 
 ![](images/image-cell-default.png "与 ImageCells 的 ListView")
@@ -53,7 +53,7 @@ ListView 具有大量可用于执行每个平台的本机功能的组件。 下�
 ListView 支持大量的交互样式，包括：
 
 - **[请求刷新](interactivity.md#Pull_to_Refresh)** &ndash; ListView 支持每个平台上的刷新请求。
-- **[上下文操作](interactivity.md#Context_Actions)** &ndash; ListView 在列表中的各个项上支持拍摄操作。 例如，你可以在 iOS 上实现轻扫到操作或长时间 tap 在 Android 和 Windows Phone 上的操作。
+- **[上下文操作](interactivity.md#Context_Actions)** &ndash; ListView 在列表中的各个项上支持拍摄操作。 例如，你可以在 iOS 上实现轻扫到操作或长时间 tap 在 Android 上的操作。
 - **[选择](interactivity.md#selectiontaps)** &ndash;可以侦听选择和取消点击行时采取操作。
 
 ![](images/context-default.png "使用上下文的操作的 ListView")
@@ -70,5 +70,5 @@ ListView 支持大量的交互样式，包括：
 - [分组 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 - [自定义呈现器视图 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
 - [ListView 交互性 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
-- [iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
-- [Android Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)
+- [iOS 工作簿](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-ios.workbook)
+- [Android 工作簿](https://developer.xamarin.com/workbooks/xamarin-forms/user-interface/listview/ListView1-android.workbook)

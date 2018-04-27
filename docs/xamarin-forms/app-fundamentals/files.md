@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 8315f1a0056c6a6f084ebfe2c29f0c0c2bb30330
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 02bea7e2ec927277a92c0732b25f590b5ae6704b
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="files"></a>文件
 
@@ -99,9 +99,6 @@ var resourcePrefix = "WorkingWithFiles.iOS.";
 #if __ANDROID__
 var resourcePrefix = "WorkingWithFiles.Droid.";
 #endif
-#if WINDOWS_PHONE
-var resourcePrefix = "WorkingWithFiles.WinPhone.";
-#endif
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
@@ -142,7 +139,7 @@ Xamarin.Forms 运行在多个平台上，每个都有其自己的文件系统，
 
  [![保存和加载文本](files-images/saveandload-sml.png "保存和加载在应用程序中的文件")](files-images/saveandload.png#lightbox "保存和加载在应用程序中的文件")
 
-每个平台都有一个略有不同的目录结构和不同的文件系统功能-例如 Xamarin.iOS 和 Xamarin.Android 支持大多数`System.IO`功能，而 Windows Phone 仅支持`IsolatedStorage`和[`Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) Api。
+每个平台都有一个略有不同的目录结构和不同的文件系统功能-例如 Xamarin.iOS 和 Xamarin.Android 支持大多数`System.IO`功能，但通用 Windows 平台仅支持[ `Windows.Storage`](/uwp/api/windows.storage/) Api。
 
 若要获取解决此问题，示例应用程序时，可定义一个接口在 Xamarin.Forms PCL 中用于加载和保存文件。 它提供了一个简单的 API，用于加载和保存文本文件将存储在设备上。
 
@@ -190,9 +187,9 @@ namespace WorkingWithFiles {
 }
 ```
 
-### <a name="universal-windows-platform-uwp-windows-81-and-windows-phone-81"></a>通用 Windows 平台 (UWP)、 Windows 8.1 和 Windows Phone 8.1
+### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-这些平台都具有不同的文件系统 API — [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) –，它是用于保存和加载文件。
+UWP 具有不同的文件系统 API — [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) –，它是用于保存和加载文件。
 `ISaveAndLoad`可以实现接口，如下所示：
 
 ```csharp
@@ -226,7 +223,6 @@ namespace WindowsApp
     }
 }
 ```
-
 
 <a name="Saving_and_Loading_in_Shared_Projects" />
 

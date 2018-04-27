@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2016
-ms.openlocfilehash: 9402bd53ab3bfb0b11182eb700aa560e8f962de3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 513b9b3738b9481444cdad10daa9b11a8441c9dd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>呈现器基类，这些类和本机控件
 
@@ -66,7 +66,7 @@ _Xamarin.Forms 中的每个控件具有随附的呈现器针对每个平台创�
 |视图|呈现器|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ActivityIndicator`](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
-|[`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)|BoxRenderer （iOS 和 Android）、 BoxViewRenderer （Windows Phone 和 WinRT）|UIView|分组||矩形|
+|[`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)|BoxRenderer （iOS 和 Android）、 BoxViewRenderer (UWP)|UIView|分组||矩形|
 |[`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)|ButtonRenderer|UIButton|Button|AppCompatButton|Button|
 |[`CarouselView`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselView/)|CarouselViewRenderer|UIScrollView|RecyclerView||FlipView|
 |[`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)|DatePickerRenderer|UITextField|EditText||DatePicker|

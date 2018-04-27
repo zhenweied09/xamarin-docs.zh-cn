@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>自定义呈现器简介
 
@@ -19,7 +19,7 @@ _自定义呈现器提供了一个功能强大的方法，用于自定义外观�
 
 Xamarin.Forms[页、 布局和控件](~/xamarin-forms/user-interface/controls/index.md)提供通用 API 来描述跨平台移动用户界面。 每个页、 布局和控件呈现都不同，每个平台上使用`Renderer`反过来创建 （对应于 Xamarin.Forms 表示形式） 的本机控件的类对其进行排列在屏幕上，并将添加中指定的行为共享的代码。
 
-开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 对于给定的类型的自定义呈现器可以添加到一个应用程序项目，以自定义控件在一个位置，同时允许在其他平台; 上的默认行为或不同的自定义呈现器可以添加到每个应用程序项目以在 iOS、 Android 和 Windows Phone 上创建不同的外观和感觉。 但是，实现一个自定义呈现器类以执行的简单控件自定义项通常是重型的响应。 效果简化此过程中，并通常用于小样式更改。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 对于给定的类型的自定义呈现器可以添加到一个应用程序项目，以自定义控件在一个位置，同时允许在其他平台; 上的默认行为或不同的自定义呈现器可以添加到每个应用程序项目以在 iOS、 Android 和通用 Windows 平台 (UWP) 上创建不同的外观和感觉。 但是，实现一个自定义呈现器类以执行的简单控件自定义项通常是重型的响应。 效果简化此过程中，并通常用于小样式更改。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>正在检查为何自定义呈现器将需要
 
@@ -51,7 +51,7 @@ public class MyEntry : Entry
 `local`命名空间前缀可以是任何内容。 但是，`namespace`和`assembly`值必须匹配自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
 
 > [!NOTE]
-> 定义`xmlns`比要简单得在 Pcl 中共享的项目。 PCL 会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 Windows Phone 项目都具有其自己*程序集名称*不可能如何编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
+> 定义`xmlns`比要简单得在 Pcl 中共享的项目。 PCL 会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 UWP 项目都具有其自己*程序集名称*它是不可能的编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
 
 `MyEntry`自定义控件然后呈现在每个平台，具有灰色背景，如以下屏幕截图中所示：
 
