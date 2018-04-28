@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 51aad1643709a96c56ccad8187a53f47a65a9dac
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-platform-setup"></a>WPF 平台安装程序
 
@@ -27,7 +27,7 @@ Xamarin.Forms 现在具有预览支持的 Windows Presentation Foundation (WPF)�
 
 1. 在 Visual Studio 2017，右键单击解决方案名称上**解决方案资源管理器**选择**添加 > 新建项目...**.
 
-2. 在**新项目**窗口中的，在左侧选择**Visual C#**和**Windows 经典桌面**。 在项目类型列表中，选择**WPF 应用程序 (.NET Framework)**。 
+2. 在**新项目**窗口中的，在左侧选择**Visual C#** 和**Windows 经典桌面**。 在项目类型列表中，选择**WPF 应用程序 (.NET Framework)**。 
 
 3. 键入与项目的名称**WPF**扩展，例如， **BoxViewClock.WPF**。 单击**浏览**按钮，选择**BoxViewClock**文件夹，然后按**选择文件夹**。 这会将 WPF 项目放在解决方案中其他项目所在的目录中。
 
@@ -57,7 +57,7 @@ Xamarin.Forms 现在具有预览支持的 Windows Presentation Foundation (WPF)�
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
     ```
 
-    现在更改`Window`到标记`wpf:FormsApplcationPage`。 更改`Title`将设置为应用程序，例如，名称**BoxViewClock**。 已完成的 XAML 文件应如下所示：
+    现在更改`Window`到标记`wpf:FormsApplicationPage`。 更改`Title`将设置为应用程序，例如，名称**BoxViewClock**。 已完成的 XAML 文件应如下所示：
 
     ```xaml
     <wpf:FormsApplicationPage x:Class="BoxViewClock.WPF.MainWindow"

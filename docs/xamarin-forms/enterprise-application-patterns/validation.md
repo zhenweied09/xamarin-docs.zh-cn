@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7b1eb1289688b6152e4e854ca0f51d66932c91a1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 80c78d359761c4383f9abf9338a995e3cc486968
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="validation"></a>验证
 
@@ -189,7 +189,7 @@ public bool Validate()
 
 ### <a name="triggering-validation-when-properties-change"></a>在属性发生更改时触发验证
 
-绑定的属性发生更改时，还会自动触发验证。 例如，当在一个双向绑定时`LoginView`设置`UserName`或`Password`触发属性，验证。 下面的代码示例演示如何发生这种情况：
+绑定的属性发生更改时，也可以触发验证。 例如，当在一个双向绑定时`LoginView`设置`UserName`或`Password`触发属性，验证。 下面的代码示例演示如何发生这种情况：
 
 ```xaml
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  

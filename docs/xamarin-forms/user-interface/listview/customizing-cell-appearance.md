@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>单元格的外观
 
@@ -70,7 +70,7 @@ TextCells 呈现为本机控件在运行时，因此性能是非常好向自定�
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>自定义单元格
-当内置的单元格未提供必需的布局时，自定义单元格实现必需的布局。 例如，你可能想要向单元格显示两个标签都有相等的权重。 A`LabelCell`将不足因为`LabelCell`具有较小的一个标签。 大多数的单元格自定义项添加其他只读数据 （如其他标签、 图像或其他显示信息）。
+当内置的单元格未提供必需的布局时，自定义单元格实现必需的布局。 例如，你可能想要向单元格显示两个标签都有相等的权重。 A`TextCell`将不足因为`TextCell`具有较小的一个标签。 大多数的单元格自定义项添加其他只读数据 （如其他标签、 图像或其他显示信息）。
 
 所有自定义单元格必须派生自[ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)，类型使用内置的单元格的所有相同的基类。
 
