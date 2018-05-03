@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f30e49122c343a967a2348c03ce4f06d9452dc76
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aac58546e51525ae22c09218f90addef911669a
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-troubleshooting"></a>连接疑难解答
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/04/2018
 
     - OS X 防火墙设置禁止连接。 请务必仔细检查步骤 3。
 
-        有时 OS X 防火墙的每应用配置也可能会在无效状态下结束，在这种情况下，显示在“系统首选项”中的设置不反映实际行为。 删除配置文件 (**/Library/Preferences/com.apple.alf.plist**) 并重新启动计算机可以帮助还原默认行为。 删除该文件的一种方法是在查找工具中的“转到”&gt;“转到文件夹”下进入**/Library/Preferences**，然后将 **com.apple.alf.plist** 文件移动到回收站。
+        有时 OS X 防火墙的每应用配置也可能会在无效状态下结束，在这种情况下，显示在“系统首选项”中的设置不反映实际行为。 删除配置文件 (**/Library/Preferences/com.apple.alf.plist**) 并重新启动计算机可以帮助还原默认行为。 删除该文件的一种方法是在查找工具中的“转到”&gt;“转到文件夹”下进入 **/Library/Preferences**，然后将 **com.apple.alf.plist** 文件移动到回收站。
 
     - Mac 与 Windows 计算机之间的路由器之一的防火墙设置阻止连接。
 
@@ -114,36 +114,36 @@ ms.lasthandoff: 04/04/2018
 
 <a name="knownissues" />
 
-## <a name="known-issues-and-limitations"></a>已知问题和限制
+### <a name="known-issues-and-limitations"></a>已知问题和限制
 
 > [!NOTE]
 > 仅当你已使用 OpenSSH SSH 客户端，通过你的 Mac 用户名和密码成功连接到 Mac 生成主机（如上面的步骤 8 和 9 所述）时，此部分才适用。
 
-### <a name="invalid-credentials-please-try-again"></a>“凭据无效。 请重试。”
+#### <a name="invalid-credentials-please-try-again"></a>“凭据无效。 请重试。”
 
 已知原因：
 
 - **限制** – 如果名称包含带重音字符，则在尝试使用帐户_全名_ 登录到生成主机时可能会出现此错误。 这是 Xamarin 用于 SSH 连接的 [SSH.NET 库](https://sshnet.codeplex.com/)的一个限制。 **解决方法**：请参阅上面的步骤 5。
 
-### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>“无法使用 SSH 密钥进行身份验证。 请首先尝试使用凭据登录”
+#### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>“无法使用 SSH 密钥进行身份验证。 请首先尝试使用凭据登录”
 
 已知原因：
 
 - **SSH 安全限制** – 此消息通常表示 Mac 上 **$HOME/.ssh/authorized\_keys** 完全限定路径中的文件或目录之一对_其他_ 或_组_ 成员启用了写入权限。 **常用修复方法**：在 Mac 上的终端命令提示中运行 `chmod og-w "$HOME"`。 有关导致该问题的特定文件或目录的详细信息，请在终端中运行 `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"`，然后从桌面打开 **sshd.log** 文件并查找“拒绝身份验证: 所有权或模式错误”。
 
-### <a name="trying-to-connect-never-completes"></a>一直停留在“正在尝试连接...”
+#### <a name="trying-to-connect-never-completes"></a>一直停留在“正在尝试连接...”
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – 如果在“系统首选项”&gt;“用户”&amp;“组”中，Mac 用户的“高级选项”上下文菜单内的“登录 shell”设置为 **/bin/bash** 以外的值，则 Xamarin 4.1 上可能出现此问题。 （自 Xamarin 4.2 起，此方案转而会导致“无法连接”错误消息。）**解决方法**：将“登录 shell”更改回原始默认值 **/bin/bash**。
 
 <a name="tryagain" />
 
-### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>“无法连接到 MacBuildHost.local。 请重试。”
+#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>“无法连接到 MacBuildHost.local。 请重试。”
 
 报告的原因：
 
 - **Bug** - 一些用户在尝试使用 Active Directory 或其他目录服务域用户帐户登录到生成主机时，遇到了此错误消息，并且在日志文件中有更详细的错误”为用户配置 SSH 时发生意外错误...会话操作已超时”。 **解决方法：**改为使用本地用户帐户登录到生成主机。
 
-- **Bug** – 一些用户在尝试通过双击连接对话框中的 Mac 名称来连接到生成主机时遇到了此错误。 **可能的解决办法**：使用 IP 地址[手动添加 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add)。
+- **Bug** – 一些用户在尝试通过双击连接对话框中的 Mac 名称来连接到生成主机时遇到了此错误。 **可能的解决办法**：使用 IP 地址[手动添加 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac)。
 
 - **Bug [#35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** – 一些用户在 Mac 生成主机与 Windows 之间使用无线网络连接时遇到了此错误。 **可能的解决办法**：将两台计算机移动到有线网络连接。
 
@@ -181,7 +181,7 @@ ms.lasthandoff: 04/04/2018
 
 <a name="clearing" />
 
-### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>在 Mac 上清除代理、IDB、生成和设计器代理
+#### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>在 Mac 上清除代理、IDB、生成和设计器代理
 
 如果日志文件对于任何 Mac 代理在“安装”、“上传”或“启动”步骤期间显示问题，则可以尝试删除 **XMA** 缓存文件夹以强制 Visual Studio 重新上传它们。
 
@@ -201,31 +201,31 @@ ms.lasthandoff: 04/04/2018
     del %localappdata%\Temp\Xamarin\XMA
     ```
     
-## <a name="warning-messages"></a>警告消息
+### <a name="warning-messages"></a>警告消息
 
 此部分讨论可能会出现在“输出”窗口和日志中，不过通常可以忽略的几个消息。
 
-### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>“在安装的 Xamarin.iOS … 与本地 Xamarin.iOS 之间存在不匹配”
+#### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>“在安装的 Xamarin.iOS … 与本地 Xamarin.iOS 之间存在不匹配”
 
 只要已确认 Mac 和 Windows 都更新到相同 Xamarin 分发通道，便可以忽略此警告。
 
-### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>“未能执行 'ls /usr/bin/mono': ExitStatus=1”
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>“未能执行 'ls /usr/bin/mono': ExitStatus=1”
 
 只要 Mac 在运行 OS X 10.11 (El Capitan) 或更高版本，便可以忽略此消息。 此消息在 OS X 10.11 上不是什么问题，因为 Xamarin 还会检查 **/usr/local/bin/mono**，这是 `mono` 在 OS X 10.11 上的正确预期位置。
 
-### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>“Bonjour 服务 'MacBuildHost' 未使用其 IP 地址进行响应。”
+#### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>“Bonjour 服务 'MacBuildHost' 未使用其 IP 地址进行响应。”
 
-除非注意到连接对话框不显示 Mac 生成主机的 IP 地址，否则可以忽略此消息。 如果在该对话框中_缺少_ IP 地址，则仍可以[手动添加 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add)。
+除非注意到连接对话框不显示 Mac 生成主机的 IP 地址，否则可以忽略此消息。 如果在该对话框中_缺少_ IP 地址，则仍可以[手动添加 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac)。
 
-### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>“来自 10.1.8.95 的用户无效”和“input\_userauth\_request: 无效用户 a [预身份验证]”
+#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>“来自 10.1.8.95 的用户无效”和“input\_userauth\_request: 无效用户 a [预身份验证]”
 
 如果你查看 **sshd.log** 文件，则可能会注意到此消息。 这些消息是正常连接过程的一部分。 它们的出现原因是 Xamarin 在检索 _SSH 指纹_ 时会暂时使用用户名 **a**。
 
-## <a name="output-window-and-log-files"></a>“输出”窗口和日志文件
+### <a name="output-window-and-log-files"></a>“输出”窗口和日志文件
 
 如果 Visual Studio 在连接到生成主机时遇到错误，则可以在 2 个位置检查其他消息：“输出”窗口和日志文件。
 
-### <a name="output-window"></a>输出窗口
+#### <a name="output-window"></a>输出窗口
 
 “输出”窗口是最佳开始位置。 它显示有关主要连接步骤和错误的消息。 在“输出”窗口中查看 Xamarin 消息：
 
@@ -235,7 +235,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](troubleshooting-images/troubleshooting-image11.png "在“输出”选项卡中选择“Xamarin”")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-### <a name="log-files"></a>日志文件
+#### <a name="log-files"></a>日志文件
 
 如果“输出”窗口未包含足够信息来诊断问题，则日志文件是要查看的下一个位置。 日志文件包含不会出现在“输出”窗口中的其他诊断消息。 查看日志文件：
 
@@ -262,13 +262,13 @@ ms.lasthandoff: 04/04/2018
 
 <a name="verboselogs" />
 
-### <a name="verbose-log-files"></a>详细日志文件
+#### <a name="verbose-log-files"></a>详细日志文件
 
 如果常规日志文件仍未提供足够信息来诊断问题，则要尝试的最后一种方法是启用详细日志记录。 详细日志在 bug 报告中也是首选的。
 
 1. 退出 Visual Studio。
 
-2. 启动[**开发人员命令提示**](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx)。
+2. 启动[**开发人员命令提示**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx)。
 
 3. 在命令提示中运行以下命令，以启动具有详细日志记录的 Visual Studio：
 
@@ -287,6 +287,12 @@ ms.lasthandoff: 04/04/2018
    ```
 
 如果这些详细日志文件未提供足够线索来直接解决该问题，请[提交新 bug 报告](https://bugzilla.xamarin.com/newbug)并附加来自步骤 5 的 .zip 文件和来自步骤 6 的 .log 文件。
+
+## <a name="troubleshooting-automatic-mac-provisioning"></a>自动预配 Mac 疑难解答
+
+### <a name="ide-log-files"></a>IDE 日志文件
+
+如果在使用[自动预配 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning) 的过程中遇到任何问题，请查看存储在 %LOCALAPPDATA%\Xamarin\Logs\15.0 中的 Visual Studio 2017 IDE 日志。
 
 ## <a name="troubleshooting-build-and-deployment-errors"></a>生成和部署错误疑难解答
 
@@ -369,5 +375,5 @@ killall mono
 
 ## <a name="related-links"></a>相关链接
 
-- [连接到 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [使用 XMA 将 Mac 连接到 Visual Studio 环境（视频）](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- [Xamarin Mac 生成代理 - Xamarin University 闪电讲座](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

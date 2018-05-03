@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f3950509134d3f643f0ea63b6725c1b4fe38409
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6be97162d1c371b9215d59ef77a7a5044e04f6b1
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-mobile-development"></a>移动开发简介
 
@@ -42,7 +42,7 @@ Xamarin 是唯一结合了本机平台的所有功能，并自身增加了大量
 
 
 > [!NOTE]
-> 此入门系列重点介绍如何开始生成 iOS 和 Android 应用程序。 Microsoft 在[此处](http://dev.windowsphone.com/en-us/develop)提供用于 Windows Phone 开发的教程。 若要了解有关使用 Xamarin（包括适用于 Windows 的 UWP 应用）进行跨平台开发的详细信息，请参阅[生成跨平台应用程序指南](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)。
+> 此入门系列重点介绍如何开始生成 iOS 和 Android 应用程序。 Microsoft 提供面向平板电脑和台式电脑的[通用 Windows 平台 (UWP) 开发](https://docs.microsoft.com/windows/uwp/develop/)的相关信息。 若要了解有关使用 Xamarin（包括适用于 Windows 的 UWP 应用）进行跨平台开发的详细信息，请参阅[生成跨平台应用程序指南](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)。
 
 
 

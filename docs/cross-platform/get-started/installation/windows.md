@@ -1,26 +1,24 @@
 ---
-title: 在 Visual Studio on Windows 中安装 Xamarin
+title: 在 Visual Studio 2017 中安装 Xamarin
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: 3a2de7154ac0ac00bb18fed65ec29173e7133eb3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0f1c014f316ff4f3eb7341fa9815475175d11937
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="installing-xamarin-in-visual-studio-on-windows"></a>在 Visual Studio on Windows 中安装 Xamarin
-
-Xamarin 可以免费使用，所有版本的 Visual Studio 都有随附。
+# <a name="installing-xamarin-in-visual-studio-2017"></a>在 Visual Studio 2017 中安装 Xamarin
 
 <a name="requirements" />
 
 ## <a name="requirements"></a>惠?
 
-安装 Visual Studio tools for Xamarin 需要以下项：
+在 Visual Studio 2017 中安装 Xamarin 需要以下项：
 
 1. Windows 7 或更高版本。
 
@@ -28,19 +26,16 @@ Xamarin 可以免费使用，所有版本的 Visual Studio 都有随附。
 
 3. Xamarin for Visual Studio。
 
-请注意，由于缺少插件支持，Xamarin 不能与 Visual Studio Express 版配合使用。
-
 有关安装和使用 Xamarin 的先决条件的详细信息，请参阅[系统要求](~/cross-platform/get-started/requirements.md)。
-
 
 <a name="installation" />
 
 ## <a name="installation"></a>安装
 
-Xamarin 可安装为新 Visual Studio 的一部分。
+Xamarin 可安装为新 Visual Studio 2017 的一部分。
 为此，请执行下列步骤：
 
-1. 从 [Visual Studio](https://www.visualstudio.com/vs/) 页面下载 Visual Studio Community、Visual Studio Professional 或 Visual Studio Enterprise（底部有下载链接）。
+1. 从 [Visual Studio](https://www.visualstudio.com/vs/) 页面下载 Visual Studio 2017 Community、Visual Studio Professional 或 Visual Studio Enterprise（底部有下载链接）。
 
 2. 双击下载的程序包以开始安装。
 
@@ -52,24 +47,23 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
     ![列出要安装的 Xamarin 选项的摘要面板](windows-images/02-summary.png)
 
-5. Visual Studio 安装准备就绪后，单击右下角的“安装”按钮：
+5. Visual Studio 2017 安装准备就绪后，单击右下角的“安装”按钮：
 
     ![安装按钮的位置](windows-images/03-click-install.png)
 
-   安装过程可能需要很长时间才能完成，具体取决于要安装的 Visual Studio 版本。 可使用进度栏监视安装过程：
+   安装过程可能需要很长时间才能完成，具体取决于要安装的 Visual Studio 2017 版本。 可使用进度栏监视安装过程：
 
     ![安装过程中进度栏的屏幕截图示例](windows-images/04-progress-bars.png)
 
-6. Visual Studio 安装完成后，单击“启动”按钮以启动 Visual Studio：
+6. Visual Studio 2017 安装完成后，单击“启动”按钮以启动 Visual Studio：
 
     ![启动按钮的位置](windows-images/05-launch.png)
-
 
 <a name="vs2017" />
 
 ### <a name="adding-xamarin-to-visual-studio-2017"></a>将 Xamarin 添加到 Visual Studio 2017
 
-如果已安装 Visual Studio 2017，可通过重新运行 Visual Studio 安装程序修改工作负载来添加 Xamarin（有关详细信息，请参阅[修改 Visual Studio ](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)）。 接下来，按照上面列出的步骤安装 Xamarin。
+如果已安装 Visual Studio 2017，可通过重新运行 Visual Studio 2017 安装程序修改工作负载来添加 Xamarin（有关详细信息，请参阅[修改 Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)）。 接下来，按照上面列出的步骤安装 Xamarin。
 
 有关下载和安装 Visual Studio 2017 的详细信息，请参阅[安装 Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio)。
 
@@ -90,16 +84,15 @@ Xamarin 可安装为新 Visual Studio 的一部分。
 
 ## <a name="next-steps"></a>后续步骤
 
-通过安装 Visual Studio Tools for Xamarin，可开始编写应用代码，但若要构建应用并将其部署到模拟器、仿真器和设备，则需要其他设置。 请访问以下指南，完成安装并开始跨平台应用构建。
+通过在 Visual Studio 2017 上安装 Xamarin，可开始编写应用代码，但若要构建应用并将其部署到模拟器、仿真器和设备，则需要其他设置。 请访问以下指南，完成安装并开始跨平台应用构建。
 
 ### <a name="ios"></a>iOS
 
 有关详细信息，请参阅[在 Windows 上安装 Xamarin.iOS](~/ios/get-started/installation/windows/index.md) 指南。 
 
-1. [在 Mac 上安装 Xamarin.iOS 工具](~/ios/get-started/installation/windows/index.md#installation)
-2. [配置 Mac](~/ios/get-started/installation/windows/index.md#configuration)
-3. [iOS 开发人员设置](~/ios/get-started/installation/windows/index.md#developersetup)（在设备上运行应用程序）。
-4. [将 Visual Studio 连接到 Mac 生成主机](~/ios/get-started/installation/windows/index.md#connectingtomac)
+1. [安装 Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+2. [将 Visual Studio 连接到 Mac 生成主机](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+3. [iOS 开发人员设置](~/ios/get-started/installation/device-provisioning/index.md) - 要求在设备上运行应用程序
 5. [远程 iOS 模拟器](~/tools/ios-simulator.md)
 6. [Xamarin.iOS for Visual Studio 简介](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 

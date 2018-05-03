@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: e4828f1ae5448a94fa1f52147d1aef3787e95521
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 快速入门
 
@@ -288,7 +288,7 @@ Xamarin.iOS 适用于以下设置：
 **请注意**：本演练在 Windows 10 虚拟机上使用 Visual Studio Enterprise 2017。 你的设置可以与此不同，只要满足以上要求即可，但是请注意，一些屏幕截图可能因你的设置而异。
 
 > [!NOTE]
-> 继续此演练前，必须已从 Visual Studio 连接到 Mac。 这是因为 Xamarin.iOS 依赖于 Apple 的工具生成并启动 iOS 设计器和应用程序。 若要获取设置，请执行[连接到 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 指南中的步骤。
+> 继续此演练前，必须已从 Visual Studio 连接到 Mac。 这是因为 Xamarin.iOS 依赖于 Apple 的工具生成并启动 iOS 设计器和应用程序。 若要获取设置，请执行[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南中的步骤。
 
 1. 从“开始”菜单启动 Visual Studio：
 
