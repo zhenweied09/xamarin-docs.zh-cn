@@ -16,6 +16,7 @@
 #### [第 4 部分：数据绑定基础知识](xaml/xaml-basics/data-binding-basics.md)
 #### [第 5 部分：从数据绑定到 MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)
 ### [XAML 编译](xaml/xamlc.md)
+### [实时重载](xaml/live-reload.md)
 ### [XAML 预览程序](xaml/xaml-previewer.md)
 ### [XAML 命名空间](xaml/namespaces.md)
 ### [XAML 标记扩展](xaml/markup-extensions/index.md)
