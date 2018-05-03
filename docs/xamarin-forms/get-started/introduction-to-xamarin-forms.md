@@ -1,27 +1,27 @@
 ---
 title: Xamarin.Forms 简介
-description: Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。
+description: Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS 和通用 Windows 平台之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 6428f1658245ec5ecf47e474bc5ffd5d49663bf2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9f7c9d1b410d9d1d699644148903fdc6cfeec4fd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 简介
 
-_Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。_
+_Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和通用 Windows 平台之间共享的用户界面。使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。_
 
 <a name="Overview" />
 
 ## <a name="overview"></a>概述
 
-Xamarin.Forms 框架让开发人员能够快速创建跨平台用户界面。 它为用户界面提供自己的抽象，用户界面可使用 iOS、Android、Windows 或 Windows Phone 上的本机控件呈现。 这意味着应用程序可以共享大部分用户界面代码，同时保留目标平台的本机外观。
+Xamarin.Forms 框架让开发人员能够快速创建跨平台用户界面。 它为用户界面提供自己的抽象，用户界面可使用 iOS、Android 或通用 Windows 平台 (UWP) 上的本机控件呈现。 这意味着应用程序可以共享大部分用户界面代码，同时保留目标平台的本机外观。
 
 Xamarin.Forms 能让原型应用程序随时间推移迅速演变为复杂应用程序。 由于 Xamarin.Forms 应用程序是本机应用程序，因此没有其他工具包（如浏览器沙盒、API 限制或性能不佳）的限制。 使用 Xamarin.Forms 编写的应用程序能够利用基础平台的任何 API 或功能，包括（但不限于） iOS 上的 CoreMotion、PassKit 和 StoreKit；Android 上的 NFC 和 Google Play Services；以及 Windows 上的磁贴。 此外，创建应用程序时，还可以使用 Xamarin.Forms 创建应用程序用户界面的一部分，使用本机 UI 工具包创建应用程序用户界面的其他部分。
 
@@ -120,39 +120,6 @@ namespace HelloXamarinFormsWorld.Android
 ```
 
 通过调用 `Init` 方法，`OnCreate` 替代初始化 Xamarin.Forms 框架。 这会导致在加载 Xamarin.Forms 应用程序之前，将特定于 Android 的 Xamarin.Forms 实现加载到应用程序。
-
-<a name="Launching_in_Windows_Phone" />
-
-#### <a name="windows-phone-81-winrt"></a>Windows Phone 8.1 (WinRT)
-
-在 Windows 运行时应用程序中，可从 `App` 类调用初始化 Xamarin.Forms 框架的 `Init` 方法：
-
-```csharp
-Xamarin.Forms.Forms.Init (e);
-
-if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-{
-  ...
-}
-```
-
-这会将特定于 Windows Phone 的 Xamarin.Forms 实现加载到应用程序中。 可通过 `MainPage` 类启动 Xamarin.Forms 初始页面，如以下代码示例所示：
-
-```csharp
-public partial class MainPage
-{
-    public MainPage()
-    {
-      this.InitializeComponent();
-      this.NavigationCacheMode = NavigationCacheMode.Required;
-      this.LoadApplication(new HelloXamarinFormsWorld.App());
-    }
-}
-```
-
-可通过 `LoadApplication` 方法加载 Xamarin.Forms 应用程序。
-
-Xamarin.Forms 还支持 Windows 8.1。 有关如何配置此项目类型的信息，请参阅[设置 Windows 项目](~/xamarin-forms/platform/windows/installation/index.md)。
 
 #### <a name="universal-windows-platform"></a>通用 Windows 平台
 
@@ -747,7 +714,7 @@ await Navigation.PopModalAsync();
 
 ## <a name="summary"></a>总结
 
-本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。 Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS、Windows 和 Windows Phone 之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。
+本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。 Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS 和通用 Windows 平台之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。
 
 
 ## <a name="related-links"></a>相关链接

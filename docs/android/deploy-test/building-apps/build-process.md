@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>生成过程
 
@@ -52,7 +52,7 @@ Xamarin.Android 生成过程负责将所有内容集合在一起：[生成 `Reso
 Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和 Visual Studio 使用的项目文件格式。
 通常，用户不需要手工编辑 MSBuild 文件 &ndash; IDE 将创建功能齐全的项目并使用所做的全部更改进行更新，根据需要自动调用生成目标。 
 
-高级用户可能希望执行 IDE 的 GUI 不支持的功能，因此，可以通过直接编辑项目文件来自定义生成过程。 本页仅记录 Xamarin.Android 特定的功能和自定义 &ndash; 可以使用正常的 MSBuild 项目、属性和目标执行更多的操作。 
+高级用户可能希望执行 IDE 的 GUI 不支持的操作，因此，可通过直接编辑项目文件来自定义生成过程。 本页仅记录 Xamarin.Android 特定的功能和自定义 &ndash; 可以使用正常的 MSBuild 项目、属性和目标执行更多的操作。 
 
 <a name="Build_Targets" />
 
@@ -238,7 +238,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidSdkBuildToolsVersion &ndash; Android SDK 生成工具包提供 aapt 和 zipalign 工具等。 可以同时安装多个不同版本的生成工具包。 若要选择用于打包的生成工具包，请检查是否有“首选”生成工具版本。如果有，请使用它；如果没有“首选”版本，请使用版本最高的已安装生成工具包。
 
-    `$(AndroidSdkBuildToolsVersion)` MSBuild 属性包含首选的生成工具版本。 如果（例如）在先前的 aapt 版本已知可用时最新的 aapt 崩溃，则 Xamarin.Android 生成系统在 `Xamarin.Android.Common.targets` 中提供默认值，并且可以在你的项目文件中替代该默认值以选择备用的生成工具版本。
+    `$(AndroidSdkBuildToolsVersion)` MSBuild 属性包含首选的生成工具版本。 如果（例如）已知上一 aapt 版本可用，而此时最新的 aapt 发生崩溃，则 Xamarin.Android 生成系统会在 `Xamarin.Android.Common.targets` 中提供默认值，并且可在项目文件中替代该默认值，选择备用的生成工具版本。
 
 -   AndroidSupportedAbis &ndash; 包含分号 (`;`) 分隔的 ABI 列表的字符串属性，应包含到 `.apk` 中。
 
@@ -264,9 +264,9 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     对于发行版本，该属性应为 `True`，对于调试版本应为 `False`。 如果“快速部署”不支持目标设备，则调试版本中可能必须为 `True`。
 
-    该属性为 `False` 时，则 `$(AndroidFastDeploymentType)` MSBuild 属性还会控制将嵌入到 `.apk` 中的内容，这会影响部署和重新生成时间。
+    该属性为 `False` 时，`$(AndroidFastDeploymentType)` MSBuild 属性还会控制嵌入到 `.apk` 中的内容，这会影响部署和重新生成时间。
 
--   EnableLLVM &ndash; 一个布尔属性，用于确定在将程序集预编译为本地代码时是否使用 LLVM。
+-   **EnableLLVM** &ndash; 一个布尔属性，用于确定在将程序集先编译为本机代码时是否使用 LLVM。
 
     Xamarin.Android 5.1 中增加了对该属性的支持。
 
@@ -326,13 +326,13 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     例如，如果 `abi`是 `armeabi`，清单中的 `versionCode` 为 `123`，则当 `$(AndroidCreatePackagePerAbi)` 为 True 时，`{abi}{versionCode}` 将生成 `1123` 的 versionCode，否则将生成值 123。
     如果 `abi` 是 `x86_64`，则清单中的 `versionCode` 是 `44`。 当 `$(AndroidCreatePackagePerAbi)` 为 True 时，这将生成 `544`，否则会生成值 `44`。
 
-    如果我们包含左填充格式字符串 `{abi}{versionCode:0000}`，则会生成 `50044`，因为我们用 `0` 在左边填充 `versionCode`。 或者，可以使用与上例相同的小数填充，例如 `{abi}{versionCode:D4}`。
+    如果我们包含左填充格式字符串 `{abi}{versionCode:0000}`，则会生成 `50044`，因为我们用 `0` 在左边填充 `versionCode`。 或者，可使用与上例相同的小数填充，例如 `{abi}{versionCode:D4}`。
 
     由于值必须是整数，因此只支持 0 和 Dx 填充格式字符串。
     
     预定义的键项
 
-    -   abi &ndash; 插入应用程序的目标 abi
+    -   **abi** &ndash; 插入应用的目标 abi
         -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
@@ -341,11 +341,11 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     -   minSDK &ndash; 如果没有定义，则插入 `AndroidManifest.xml` 或 `11` 中支持的最小 SDK 值。
 
-    -   versionCode &ndash; 直接使用 `Properties\AndroidManifest.xml` 中的版本代码。 
+    -   **versionCode** &ndash; 直接使用 `Properties\AndroidManifest.xml` 中的版本代码。 
 
     你可以使用（下文中定义的）`$(AndroidVersionCodeProperties)` 属性定义自定义项。
 
-    默认情况下，值设置为 `{abi}{versionCode:D6}`。 如果开发人员要保留旧行为，可以将 `$(AndroidUseLegacyVersionCode)` 属性设置为 `true`，从而重写默认值
+    默认情况下，值设置为 `{abi}{versionCode:D6}`。 如果开发人员要保留旧行为，可将 `$(AndroidUseLegacyVersionCode)` 属性设置为 `true`，从而替代默认值
 
     已在 Xamarin.Android 7.2 中添加。
 
@@ -353,7 +353,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     已在 Xamarin.Android 7.2 中添加。
 
--   **AndroidUseLegacyVersionCode** &ndash; 布尔属性，允许开发人员将 versionCode 计算还原到先前的 Xamarin.Android 8.2 旧行为。 这只能适用于在 Google Play 商店中已发布应用程序的开发人员。 强烈建议使用新 `$(AndroidVersionCodePattern)` 属性。
+-   **AndroidUseLegacyVersionCode** &ndash; 一个布尔属性，允许开发人员将 versionCode 计算还原到先前的 Xamarin.Android 8.2 旧行为。 这只能适用于在 Google Play 商店中已发布应用程序的开发人员。 强烈建议使用新 `$(AndroidVersionCodePattern)` 属性。
 
     在 Xamarin.Android 8.2 中新增。
 
@@ -394,7 +394,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidCodegenTarget &ndash; 控制代码生成目标 ABI 的字符串属性。 可能的值包括：
 
-    - XamarinAndroid：使用自 Mono for Android 1.0 以来的 JNI 绑定 API。 使用 Xamarin.Android 5.0 或更高版本构建的绑定程序集只能在 Xamarin.Android 5.0 或更高版本（API/ABI 附加程序）上运行，但源与先前的产品版本兼容。
+    - XamarinAndroid：使用自 Mono for Android 1.0 以来的 JNI 绑定 API。 使用 Xamarin.Android 5.0 或更高版本生成的绑定程序集只能在 Xamarin.Android 5.0 或更高版本（API/ABI 附加程序）上运行，但源与先前的产品版本兼容。
 
     - XAJavaInterop1：使用 Java.Interop 进行 JNI 调用。 只能通过 Xamarin.Android 6.1 或更高版本构建和执行使用 `XAJavaInterop1` 的绑定程序集。 Xamarin.Android 6.1 和更高版本会将 `Mono.Android.dll` 与此值绑定。
 
@@ -606,7 +606,7 @@ Abi &ndash; 指定本机库的 ABI。
 </PropertyGroup>
 ```
 
-可以通过导入 Xamarin.Android.CSharp.targets 包含在 C# 的所有这些目标和属性： 
+通过导入 Xamarin.Android.CSharp.targets，可在 C# 中包含所有这些目标和属性： 
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

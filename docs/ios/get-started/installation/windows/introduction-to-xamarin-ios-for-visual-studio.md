@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Xamarin.iOS for Visual Studio 简介
 
@@ -37,38 +37,24 @@ ms.lasthandoff: 04/04/2018
 可从众多配置选项中选择最适合开发需求的选项。 以下列出了这些选项：
 
 -  使用 Mac 作为主要的开发计算机，并运行安装了 Visual Studio 的 Windows 虚拟机。 建议使用 VM 软件，如 [Parallels](http://www.parallels.com/products/desktop/) 或 [VMWare](http://www.vmware.com/products/fusion/)。
--  将 Mac 当做生成主机使用。 在这种情况下，只需连接到与 Windows 计算机所处的同一网络上，该计算机已安装[必备](~/cross-platform/get-started/installation/windows.md#installation)工具。
+-  将 Mac 当做生成主机使用。 在这种情况下，需连接到与 Windows 计算机所处的同一网络上，该计算机已安装[必备](~/cross-platform/get-started/installation/windows.md#installation)工具。
 
 
 对于每种情况，都应遵循以下步骤：
 
-- [在 Mac 主机上安装 Xamarin.iOS 工具](https://docs.microsoft.com/visualstudio/mac/installation)
-- [配置 Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [安装 Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [在 Windows 上安装 Xamarin 工具](~/cross-platform/get-started/installation/windows.md)
-
-若要在 Visual Studio 中使用 Xamarin 进行开发，必须至少使用 Visual Studio 2015 Professional 或更高版本。 使用 Visual Studio 的 Express 版本时，Xamarin 将**不起作用**，因为这些版本不支持外接程序。
 
 ## <a name="connecting-to-the-mac"></a>连接到 Mac
 
-可通过 Visual Studio 工具栏上的图标连接 Mac 生成主机（前提是已打开 iOS 应用程序）：
+要将 Visual Studio 连接到 Mac 生成主机，请按照[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南中的说明进行操作。
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "“连接到 Mac”图标")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-也可通过在 Visual Studio 中浏览到“工具”>“选项”并选择“Xamarin”>“iOS 设置”：
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "iOS 选项")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-可通过单击“查找 Xamarin Mac 代理”按钮更改 Mac 生成主机。 以下屏幕显示更新 Mac 生成主机：
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "“Xamarin Mac Agent”对话框")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Visual Studio 工具栏概述
 
 Xamarin iOS for Visual Studio 将项添加到标准工具栏和新的 iOS 工具栏。
 下面介绍了这些工具栏的功能。
-
-
 
 ### <a name="standard-toolbar"></a>标准工具栏
 
@@ -174,7 +160,7 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 
 ### <a name="device-logging"></a>设备日志记录
 
-在 Visual Studio 2015 及更高版本中，统一了 Android 和 iOS 日志面板
+在 Visual Studio 2017 中，统一了 Android 和 iOS 日志面板。
 
 Visual Studio 新的“设备日志”工具窗口允许显示 Android 和 iOS 设备的日志。 执行以下任一命令均可显示此窗口：
 

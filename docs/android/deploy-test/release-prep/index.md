@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 238e224a1dfbc17089c8b6d03e78043f77f3f383
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="preparing-an-application-for-release"></a>做好应用程序发布准备
 
@@ -192,7 +192,7 @@ Android 清单包含 `android:debuggable` 属性，该属性控制是否可以�
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 即使[已禁用调试](#Disable_Debugging)，攻击者仍可能重新打包应用程序，从而添加或删除配置选项或权限。 这可使他们对应用程序进行反向工程、调试或篡改。
-[Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 可用于模糊处理托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码。
+[Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 可用于混淆托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码，对应用是否在根设备上运行进行检测和响应。
 
 Dotfuscator CE 随附在 Visual Studio 中，但是仅 Visual Studio 2015 Update 3（及更高版本）具有用于 Xamarin.Android 的正确版本。 若要使用 Dotfuscator，请单击“工具”>“PreEmptive Protection - Dotfuscator”。
 
@@ -202,7 +202,7 @@ Dotfuscator CE 随附在 Visual Studio 中，但是仅 Visual Studio 2015 Update
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 即使[已禁用调试](#Disable_Debugging)，攻击者仍可能重新打包应用程序，从而添加或删除配置选项或权限。 这可使他们对应用程序进行反向工程、调试或篡改。
-虽然它不支持 Visual Studio for Mac，但可结合使用 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 和 Visual Studio 来模糊处理托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码。
+虽然它不支持 Visual Studio for Mac，但可结合使用 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 和 Visual Studio 来混淆托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码，对应用是否在根设备上运行进行检测和响应。
 
 若要配置 Dotfuscator CE，请参阅 [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)（结合使用 Dotfuscator Community Edition 和 Xamarin）。
 完成配置后，Dotfuscator CE 将自动保护创建的每个生成。
