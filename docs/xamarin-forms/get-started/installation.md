@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/19/2018
-ms.openlocfilehash: d2125c1ddaa3edc3e2ee76d8e03e384efdca42c6
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: ce3f2bcf6acc36239fc431bb7f5edece15d2e139
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 要求
 
@@ -26,7 +26,7 @@ _Xamarin.Forms 平台和开发系统要求。_
 -  iOS 8 或更高版本
 -  Android 4.0.3 (API 15) 或更高版本（[详细信息](#android)）
 -  Windows 10 通用 Windows 平台（[详细信息](#windows10)）
--  Windows 8.1 / Windows Phone 8.1 WinRT（[详细信息](#windows)）
+-  Windows 8.1/Windows Phone 8.1 WinRT（已弃用）
 -  *Windows Phone 8 Silverlight（已弃用）*
 
 假定开发人员熟悉[可移植类库](~/cross-platform/app-fundamentals/pcl.md)和[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
@@ -57,20 +57,11 @@ _Xamarin.Forms 平台和开发系统要求。_
 
 -----
 
-
 <a name="windows10" />
 
 ### <a name="universal-windows-platform"></a>通用 Windows 平台
 
-在 macOS 上创建解决方案时不会添加 Windows 10 UWP 项目。 有关如何向现有解决方案添加这些项目的说明，请参阅[添加通用 Windows 平台 (UWP) 应用](~/xamarin-forms/platform/windows/installation/universal.md)。
-
-
-<a name="windows" />
-
-### <a name="windows-81--windows-phone-81-winrt"></a>Windows 8.1 / Windows Phone 8.1 WinRT
-
-在 macOS 上创建解决方案时不会添加 Windows 8.1 / Windows Phone 8.1 WinRT 项目。 有关如何向现有解决方案添加这些项目的说明，请参阅[添加 Windows Phone 应用](~/xamarin-forms/platform/windows/installation/phone.md)和[添加 Windows 应用](~/xamarin-forms/platform/windows/installation/tablet.md)。
-
+在 macOS 上创建解决方案时不会添加 Windows 10 UWP 项目。 若要了解如何向现有解决方案添加这些项目，请参阅[设置 Windows 项目](~/xamarin-forms/platform/windows/installation/index.md)。
 
 ## <a name="development-system-requirements"></a>开发系统要求
 
@@ -98,5 +89,4 @@ _Xamarin.Forms 平台和开发系统要求。_
 * [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
 UWP 项目包含在 Visual Studio 2015 和 Visual Studio 2017 中所创建的 Xamarin.Forms 解决方案中。
-还可以在现有的 Xamarin.Forms 解决方案中[添加通用 Windows 平台 (UWP) 应用](~/xamarin-forms/platform/windows/installation/universal.md)。
-
+还可以在现有的 Xamarin.Forms 解决方案中[添加通用 Windows 平台 (UWP) 应用](~/xamarin-forms/platform/windows/installation/index.md)。
