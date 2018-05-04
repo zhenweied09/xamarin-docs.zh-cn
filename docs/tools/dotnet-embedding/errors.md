@@ -1,16 +1,16 @@
 ---
-title: .NET 嵌入错误
+title: .NET 嵌入的错误
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 677242ea12f8fd87d82f337eafd96a1743ad806a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-errors"></a>.NET 嵌入错误
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/26/2018
 
 该工具不能合并错误消息中提及的框架，因为它们之间没有公共文件。
 
-这可能表示 Embeddinator-4000; 中的 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
+这可能表示.NET 嵌入; 中的 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
 
 <a name="EM0011" />
 
@@ -142,9 +142,9 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099： 内部错误 *。 请文件与测试用例的一个 bug 报告 (https://github.com/mono/Embeddinator-4000/issues)。
 
-在 Embeddinator 4000 内部一致性检查失败时，将报告此错误消息。
+在.NET 嵌入内部一致性检查失败时，将报告此错误消息。
 
-这表示 Embeddinator-4000; 中的存在 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
+这表示.NET 嵌入; 中的存在 bug在一个 bug 报告，请记录[ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues)与测试用例。
 
 <!-- 1xxx: code processing -->
 
@@ -189,7 +189,7 @@ public class MyType {
 }
 ```
 
-在生成此类情况下仅有两个`init`将创建选择器，这两个调入 mono，但不包装器更高版本会存在。
+在生成此类情况下仅有两个`init`将创建选择器，这两个调入 Mono，但不包装器更高版本会存在。
 
 <a name="EM1030" />
 
@@ -224,7 +224,7 @@ public class MyType {
 }
 ```
 
-在生成此类情况下仅有两个`increment`将创建选择器，这两个调入 mono，但不包装器更高版本会存在。
+在生成此类情况下仅有两个`increment`将创建选择器，这两个调入 Mono，但不包装器更高版本会存在。
 
 <a name="EM1033" />
 
@@ -236,7 +236,7 @@ public class MyType {
 
 ### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034： 扩展方法`M`也不能创建基元类型，因此未生成内某个类别`T`。 生成一个正常的静态方法。
 
-这是**警告**primivite 上的扩展方法类型 (例如`System.Int32`) 找到。 在 ObjC 不可能在基元类型上创建类别。 改为生成器将生成一个正常的静态方法。
+这是**警告**primivite 上的扩展方法类型 (例如`System.Int32`) 找到。 Objective C 中是不可能在基元类型上创建类别。 改为生成器将生成一个正常的静态方法。
 
 <a name="EM1040" />
 
@@ -286,7 +286,7 @@ public class MyType {
 
 这是**警告**面向`E`被视为不受支持的 Xamarin.iOS 和 Xamarin.Mac 用例。 
 
-静态或动态 Embeddinator 库的使用可能需要额外的工作步骤或优化，和应避免在大多数的用例。
+静态或动态嵌入.NET 库的使用可能需要额外的工作步骤或优化，和应避免在大多数的用例。
 
 请考虑删除你`--target`参数或传递`--target=framework`相反。
 

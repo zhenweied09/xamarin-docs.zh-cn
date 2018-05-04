@@ -1,18 +1,18 @@
 ---
-title: ObjC Embeddinator 4000 最佳实践
+title: .NET 嵌入为 Objective C 的最佳做法
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>ObjC Embeddinator 4000 最佳实践
+# <a name="net-embedding-best-practices-for-objective-c"></a>.NET 嵌入 Objective c 的最佳做法
 
 这是草稿和可能不同步与的功能目前支持工具。 我们希望本文档将单独发展并最终根据最终的工具，即我们将建议从长远来看最佳方法-无法立即解决方法。
 
@@ -106,7 +106,7 @@ OBJECTIVE-C 的开发人员的角度来看，具有的方法从`Get`前缀意味
 
 ## <a name="exceptions"></a>异常
 
-它是完全 commont 在.NET 中使用广泛到报告错误的异常。 但是，它们是速度慢且 ObjC 不完全相同。 只要有可能应从 OBJECTIVE-C 的开发人员来隐藏它们。
+是在.NET 中使用广泛报告错误的例外情况非常常见的。 但是，它们是慢速和不很完全相同目标。 只要有可能应从 OBJECTIVE-C 的开发人员来隐藏它们。
 
 例如，.NET`Try`模式将可以更轻松地 Objective C 代码中使用：
 
@@ -138,6 +138,6 @@ Objective C 的允许与此相反，`init*`返回`nil`无法创建实例时。 �
 
 Objective C 不允许运算符重载一样 C#，所以这些转换为类选择器。
 
-["友好的"](/dotnet/standard/design-guidelines/operator-overloads/)命名的方法生成优先运算符重载何时找到，并会产生一个更易于使用 API。
+["友好的"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads)命名的方法生成优先运算符重载何时找到，并会产生一个更易于使用 API。
 
 将覆盖的运算符的类`==`和/或`!=`应重写标准的 Equals （对象） 方法。

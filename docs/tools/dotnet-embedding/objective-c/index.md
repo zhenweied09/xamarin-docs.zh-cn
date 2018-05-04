@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 515185ca7be8b6e24c92c9f44eb6dadbaf6d9219
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 2a4a235dcb885364fdc5add5970e61f46b6e5d08
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objective-c-support"></a>Objective C 的支持
 
@@ -20,7 +20,7 @@ Objective C 的生成具有数据类型值得注意的几个特殊功能。
 
 ### <a name="automatic-reference-counting"></a>自动引用计数
 
-使用的自动引用计数 (ARC) 是**必需**调用生成的绑定。 使用基于 embeddinator 的库项目都必须使用编译`-fobjc-arc`。
+使用的自动引用计数 (ARC) 是**必需**调用生成的绑定。 使用基于.NET 嵌入的库项目都必须使用编译`-fobjc-arc`。
 
 ### <a name="nsstring-support"></a>NSString 支持
 
@@ -44,7 +44,7 @@ Objective C 的生成具有数据类型值得注意的几个特殊功能。
 
 ### <a name="comparison"></a>比较
 
-托管类型实现`IComparable`(或其泛型版本`IComparable<T>`) 将生成返回的 OBJECTIVE-C 友好方法`NSComparisonResult`并接受`nil`自变量。 这使得生成的 API OBJECTIVE-C 的开发人员更友好。 例如: 
+托管类型实现`IComparable`(或其泛型版本`IComparable<T>`) 将生成返回的 OBJECTIVE-C 友好方法`NSComparisonResult`并接受`nil`自变量。 这使得生成的 API OBJECTIVE-C 的开发人员更友好。 例如：
 
 ```objc
 - (NSComparisonResult)compare:(XAMComparableType * _Nullable)other;
@@ -76,7 +76,7 @@ public static class SomeExtensions {
 
 ### <a name="subscripting"></a>下标
 
-托管索引的属性转换为对象下标。 例如: 
+托管索引的属性转换为对象下标。 例如：
 
 ```csharp
 public bool this[int index] {

@@ -1,5 +1,5 @@
 ---
-title: 触摸
+title: 触控和手势 Xamarin.Android 中
 description: 许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测-可以使用手势以及。 例如，捏合缩放手势是一个非常常见的例子挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南检查触摸，并在 Android 笔势。
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d6c6d7fd02511ede84b7cfa75575d755f11bab99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3700f9c73fb58fefcdba7987c9931e385cd52d38
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="touch"></a>触摸
+# <a name="touch-and-gestures-in-xamarinandroid"></a>触控和手势 Xamarin.Android 中
 
 _许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。这种交互并不只限于简单触摸检测-可以使用手势以及。例如，捏合缩放手势是一个非常常见的例子挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南检查触摸，并在 Android 笔势。_
 

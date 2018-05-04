@@ -1,17 +1,17 @@
 ---
-title: 多点触控手指跟踪
+title: 在 Xamarin.Android 中跟踪的多点触控手指
 description: 本主题演示如何从多个指跟踪触控事件
 ms.prod: xamarin
 ms.assetid: 048D51F9-BD6C-4B44-8C53-CCEF276FC5CC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 9c0206de17e0c60803252328ff0398cee0997dbb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 97e848e74a4513c55c0bf50258621c010b347fcd
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>多点触控手指跟踪
 
@@ -86,7 +86,7 @@ public override bool OnTouchEvent(MotionEvent args)
 }
 ```
 
-请注意，重写使用`ActionMasked`中的属性`switch`语句而不是`Action`属性。 原因如下：
+请注意，重写使用`ActionMasked`中的属性`switch`语句而不是`Action`属性。 原因是：
 
 当您处理的多点触控`Action`属性具有的值`MotionEventsAction.Down`的第一个手指触摸屏幕上，然后值`Pointer2Down`和`Pointer3Down`如第二个和第三个指还触摸屏幕。 第四个和第五个手指进行联系，`Action`属性具有甚至不对应于的成员的数值`MotionEventsAction`枚举 ！ 你需要检查在要解释它们的含义的值的位标志的值。
 

@@ -1,5 +1,5 @@
 ---
-title: 控件
+title: Android 控件 （小组件）
 description: 用于创建 Xamarin.Android 用户界面的构建基块
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
@@ -7,14 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28418c3b3fedcd24963008eb3b59ffa782d791f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="controls"></a>控件
-
+# <a name="android-controls-widgets"></a>Android 控件 （小组件）
 
 Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小组件）。 使用 Android 设计器的 Xamarin.Android 应用，或以编程方式通过 XML 布局文件，可以轻松地添加这些控件。 无论选择哪种方法，Xamarin.Android 公开的所有用户界面对象属性和 C# 中的方法。 下列各节介绍最常见的 Android 用户界面控件，并说明如何将它们合并到 Xamarin.Android 应用程序。
 

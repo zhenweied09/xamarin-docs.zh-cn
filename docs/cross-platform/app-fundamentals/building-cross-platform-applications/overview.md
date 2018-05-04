@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b3b15736b5ec750e0b8db078cf428a7f573bc435
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e4a55829e35329a50b2e121311b0102328e6fea9
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cross-platform-applications-overview"></a>构建跨平台应用程序概述
 
@@ -25,7 +25,7 @@ Xamarin 不只是"写入的一次，运行无处不在"平台，因为其优点�
 下面是用于创建跨平台的 Xamarin 应用的关键点的摘要：
 
 -   **使用 C#** -在 C# 中编写你的应用。 可移植到 iOS 和 Android 很容易，使用 Xamarin 和显然在 Windows 应用中使用 C# 中编写的现有代码。
--   **利用 MVC 或 MVVVM 设计模式**-开发使用模型/视图/控制器模式的应用程序的用户界面。 使用模型/视图/控制器方法或模型/视图/视图模型方法将应用程序设计没有"模型"与其余之间形成清晰的隔离。 确定你的应用程序的哪些部分将使用的每个平台 (iOS、 Android、 Windows、 Mac) 的本机用户界面元素，并使用此原则拆分成两个组件的应用程序:"核心"和"用户界面"。
+-   **利用 MVC 或 MVVM 设计模式**-开发使用模型/视图/控制器模式的应用程序的用户界面。 使用模型/视图/控制器方法或模型/视图/视图模型方法将应用程序设计没有"模型"与其余之间形成清晰的隔离。 确定你的应用程序的哪些部分将使用的每个平台 (iOS、 Android、 Windows、 Mac) 的本机用户界面元素，并使用此原则拆分成两个组件的应用程序:"核心"和"用户界面"。
 -   **生成本机 Ui** -每个特定于操作系统的应用程序提供了不同的用户界面层 (版本中实现 C# 的协助的本机 UI 设计工具):
 
 1.  在 iOS 中，使用 UIKit Api 创建本机外观的应用程序，可以选择利用 Xamarin 的 iOS 设计器直观地创建你的 UI。

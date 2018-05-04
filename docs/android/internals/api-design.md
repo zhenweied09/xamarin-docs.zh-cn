@@ -1,18 +1,18 @@
 ---
-title: API 设计
+title: Xamarin.Android API 设计原则
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: a9c0b02457f006f75dc5b6f0a52e68865d620f67
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 611046954e8ef359476d2bd12a69f04041d869f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="api-design"></a>API 设计
+# <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 设计原则
 
 
 ## <a name="overview"></a>概述
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/04/2018
     - 当相应且适用，而不是单方法接口公开 C# 委托 (lambda，匿名方法和 System.Delegate)。
 
     - 提供一种机制来调用任意 Java 库 ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/))。
-
 
 
 ## <a name="assemblies"></a>程序集
@@ -163,7 +162,7 @@ button.Click += (sender, e) => {
 此外，如果侦听器接口方法具有返回类型的**布尔**而不是**void**，然后生成*EventArgs*子类将包含*Handled*属性。 值*Handled*属性用作的返回值*侦听器*方法，并默认为`true`。
 
 例如，Android [View.setOnKeyListener()](https://developer.xamarin.com/api/member/Android.Views.View.SetOnKeyListener/p/Android.Views.View+IOnKeyListener/)方法接受[View.OnKeyListener](https://developer.xamarin.com/api/type/Android.Views.View+IOnKeyListener)接口，与[View.OnKeyListener.onKey （视图、 int、 KeyEvent）](https://developer.xamarin.com/api/member/Android.Views.View+IOnKeyListener.OnKey/p/Android.Views.View/Android.Views.Keycode/Android.Views.KeyEvent/)方法具有返回类型为 boolean 类型。 Xamarin.Android 生成相应[View.KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/)事件，即[EventHandler&lt;View.KeyEventArgs&gt;](https://developer.xamarin.com/api/type/Android.Views.View+KeyEventArgs/)。
-*KeyEventArgs*类反过来具有[View.KeyEventArgs.Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/)属性的返回值中用作*View.OnKeyListener.onKey()*方法。
+*KeyEventArgs*类反过来具有[View.KeyEventArgs.Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/)属性的返回值中用作*View.OnKeyListener.onKey()* 方法。
 
 我们想要添加的其他方法和构造来公开基于委托的连接的重载。 此外，具有多个回调的侦听器需要某些其他检查，以确定是否实现单个回调是合理的因此我们要将这些转换随着对它们进行标识。 如果没有对应的事件，侦听器必须使用 C# 中，但请使任何你认为可能具有委托使用情况与我们关注。 我们还执行某些转换而不使用"侦听器"后缀的接口时很显然，它们可以将受益于委托的替代项。
 
