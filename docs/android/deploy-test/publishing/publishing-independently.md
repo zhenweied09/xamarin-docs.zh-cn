@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6d278f3ae046a31be6e4335119572fb509672a66
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f7ba0620a4639ff62e2d75d7cf8f02fcc01faac5
+ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-independently"></a>独立发布
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/04/2018
 
 -   **Visual Studio Professional** &ndash; 面向独立开发者或小型团队（仅限 Windows）。 此许可证提供标准或云订阅，支持访问其他 Xamarin University 内容，且无使用限制。
 
--   **Visual Studio Enterprise** &ndash; 面向任何规模的团队（仅限 Windows）。 此许可证包括企业功能、标准或云订阅和 25% 的 Xamarin 测试云折扣。
+-   **Visual Studio Enterprise** &ndash; 面向任何规模的团队（仅限 Windows）。 此许可包括企业功能（标准或云订阅）。
 
 若要下载社区版或深入了解如何购买 Professional 版和 Enterprise 版，请访问 [visualstudio.com](https://www.visualstudio.com/xamarin/)。
 

@@ -6,12 +6,12 @@ ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="implementing-sirikit"></a>实现 SiriKit
 
@@ -59,7 +59,7 @@ SiriKit 生成对扩展的但是，在将任何扩展添加到应用程序之前
 
 ### <a name="moving-common-shared-code"></a>移动公共共享的代码 
 
-首先，开发人员可以将共享的公共代码的一些之间移动应用程序和扩展到_共享项目_，_可移植类库 (Pcl)_或_本机库_。
+首先，开发人员可以将共享的公共代码的一些之间移动应用程序和扩展到_共享项目_，_可移植类库 (Pcl)_ 或_本机库_。
 
 扩展需要能够执行的所有应用程序的功能的操作。 示例 MonkeyChat 应用程序，如查找联系人，添加新的联系人和条款中发送消息和检索消息历史记录。
 
@@ -95,7 +95,7 @@ SiriKit 生成对扩展的但是，在将任何扩展添加到应用程序之前
 2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **新项目...**.
 3. 选择**Visual C#** > **共享项目**单击**下一步**按钮： 
 
-    [![](implementing-sirikit-images/prep02w.png "选择类库")](implementing-sirikit-images/prep02w.png#lightbox)
+    [![](implementing-sirikit-images/prep02.w157-sml.png "选择类库")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. 输入`MonkeyChatCommon`为**名称**单击**创建**按钮。
 5. 右键单击**引用**文件夹内的主应用**解决方案资源管理器**和选择**编辑引用...**.检查**MonkeyChatCommon**项目，然后单击**确定**按钮： 
 
@@ -212,14 +212,14 @@ namespace MonkeyChat
 
 1. 在 web 浏览器中，导航到[ http://developer.apple.com ](http://developer.apple.com)和登录到你的帐户。
 2. 单击**证书**，**标识符**和**配置文件**。
-3. 选择**预配配置文件**和选择**应用 Id**，然后单击**+**按钮。
+3. 选择**预配配置文件**和选择**应用 Id**，然后单击**+** 按钮。
 4. 输入**名称**新配置文件。
 5. 输入**捆绑 ID**按照 Apple 的命名建议。
 6. 向下滚动到**应用程序服务**部分中，选择**SiriKit**单击**继续**按钮： 
 
     [![](implementing-sirikit-images/setup03.png "选择 SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. 验证的所有设置，然后**提交**应用 id。
-8. 选择**预配配置文件** > **开发**，单击**+**按钮，选择**Apple ID**，然后单击**继续**。
+8. 选择**预配配置文件** > **开发**，单击**+** 按钮，选择**Apple ID**，然后单击**继续**。
 9. 单击选择**所有**，然后单击**继续**。
 10. 单击**选择所有**试，然后单击**继续**。
 11. 输入**配置文件名称**使用 Apple 的命名建议，然后单击**继续**。
@@ -459,18 +459,18 @@ namespace MonkeyChat
 
 1. 右键单击中的项目名称**解决方案资源管理器**和选择**添加** > **新文件...**  >  **iOS**:
 
-    [![](implementing-sirikit-images/plist01.png "添加的属性列表")](implementing-sirikit-images/plist01.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.png "添加的属性列表")](implementing-sirikit-images/plist01.png#lightbox)
 2. 双击`AppIntentVocabulary.plist`文件中**解决方案资源管理器**以将其打开以进行编辑。
-3. 单击**+**若要添加的键，将设置**名称**到`ParameterVocabularies`和**类型**到`Array`:
+3. 单击**+** 若要添加的键，将设置**名称**到`ParameterVocabularies`和**类型**到`Array`:
 
     [![](implementing-sirikit-images/plist02.png "将名称设置为 ParameterVocabularies 和数组的类型")](implementing-sirikit-images/plist02.png#lightbox)
-4. 展开`ParameterVocabularies`单击**+**按钮，然后设置**类型**到`Dictionary`:
+4. 展开`ParameterVocabularies`单击**+** 按钮，然后设置**类型**到`Dictionary`:
 
     [![](implementing-sirikit-images/plist03.png "将类型设置为字典")](implementing-sirikit-images/plist03.png#lightbox)
-5. 单击**+**若要添加的新键，将设置**名称**到`ParameterNames`和**类型**到`Array`:
+5. 单击**+** 若要添加的新键，将设置**名称**到`ParameterNames`和**类型**到`Array`:
 
     [![](implementing-sirikit-images/plist04.png "将名称设置为 ParameterNames 和数组的类型")](implementing-sirikit-images/plist04.png#lightbox)
-6. 单击**+**若要添加的新键**类型**的`String`和作为其中一个可用的参数名称的值。 例如， `INStartWorkoutIntent.workoutName`:
+6. 单击**+** 若要添加的新键**类型**的`String`和作为其中一个可用的参数名称的值。 例如， `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05.png "INStartWorkoutIntent.workoutName 密钥")](implementing-sirikit-images/plist05.png#lightbox)
 7. 添加`ParameterVocabulary`键，以`ParameterVocabularies`键**类型**的`Array`:
@@ -521,20 +521,21 @@ namespace MonkeyChat
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. 右键单击中的项目名称**解决方案资源管理器**和选择**添加** > **新文件...**  >  **iOS**:
+1. 右键单击中的项目名称**解决方案资源管理器**和选择**添加 > 新建项 … > Apple > 属性列表 > Info.plist**:
 
-    [![](implementing-sirikit-images/plist01w.png "添加新 Info.plist")](implementing-sirikit-images/plist01w.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.w157-sml.png "添加新 Info.plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
+
 2. 双击`AppIntentVocabulary.plist`文件中**解决方案资源管理器**以将其打开以进行编辑。
-3. 单击**+**若要添加的键，将设置**名称**到`ParameterVocabularies`和**类型**到`Array`:
+3. 单击**+** 若要添加的键，将设置**名称**到`ParameterVocabularies`和**类型**到`Array`:
 
     [![](implementing-sirikit-images/plist02w.png "将名称设置为 ParameterVocabularies 和数组的类型")](implementing-sirikit-images/plist02w.png#lightbox)
-4. 展开`ParameterVocabularies`单击**+**按钮，然后设置**类型**到`Dictionary`:
+4. 展开`ParameterVocabularies`单击**+** 按钮，然后设置**类型**到`Dictionary`:
 
     [![](implementing-sirikit-images/plist03w.png "将类型设置为字典")](implementing-sirikit-images/plist03w.png#lightbox)
-5. 单击**+**若要添加的新键，将设置**名称**到`ParameterNames`和**类型**到`Array`:
+5. 单击**+** 若要添加的新键，将设置**名称**到`ParameterNames`和**类型**到`Array`:
 
     [![](implementing-sirikit-images/plist04w.png "将名称设置为 ParameterNames 和数组的类型")](implementing-sirikit-images/plist04w.png#lightbox)
-6. 单击**+**若要添加的新键**类型**的`String`和作为其中一个可用的参数名称的值。 例如， `INStartWorkoutIntent.workoutName`:
+6. 单击**+** 若要添加的新键**类型**的`String`和作为其中一个可用的参数名称的值。 例如， `INStartWorkoutIntent.workoutName`:
 
     [![](implementing-sirikit-images/plist05w.png "INStartWorkoutIntent.workoutName 密钥")](implementing-sirikit-images/plist05w.png#lightbox)
 7. 添加`ParameterVocabulary`键，以`ParameterVocabularies`键**类型**的`Array`:
@@ -625,11 +626,11 @@ namespace MonkeyChat
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 右键单击**解决方案名称**中**解决方案资源管理器**和选择**添加** > **添加新项目...**.
-2. 从对话框中选择**iOS** > **扩展** > **意向扩展**单击**下一步**按钮： 
+2. 从对话框中选择**Visual C# > iOS 扩展 > 意向扩展**单击**下一步**按钮：
 
-    [![](implementing-sirikit-images/intents05w.png "选择想要扩展")](implementing-sirikit-images/intents05w.png#lightbox)
+    [![](implementing-sirikit-images/intents05.w157-sml.png "选择想要扩展")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. 接下来输入**名称**意向扩展和单击**确定**按钮。
-5. 在**解决方案资源管理器**，右键单击**引用**的新创建的意向扩展的文件夹。 请检查 （即上面创建的应用） 的公共共享的代码库项目名称并单击**确定**按钮： 
+1. 在**解决方案资源管理器**，右键单击**引用**新建的意向扩展的文件夹，然后选择**添加 > 引用**。 请检查 （即上面创建的应用） 的公共共享的代码库项目名称并单击**确定**按钮：
 
     [![](implementing-sirikit-images/intents08w.png "选择公共共享的代码库项目的名称")](implementing-sirikit-images/intents08w.png#lightbox)
     

@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>绑定。JAR
 
@@ -81,7 +81,7 @@ Picasso.With (this)
 
 首先，创建一个新的绑定类库项目。 在 Visual Studio for Mac 或 Visual Studio 中，创建一个新的解决方案，然后选择*Android 绑定库*模板。 （本演练中的屏幕截图使用 Visual Studio 中，但适用于 Mac 的 Visual Studio 是非常类似。）将解决方案命名**JarBinding**: 
 
-[![创建 JarBinding 库项目](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![创建 JarBinding 库项目](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 该模板包括**Jar**文件夹，你在其中添加你。JAR(s) 到绑定库项目。 右键单击**Jar**文件夹，然后选择**添加 > 现有项**: 
 
@@ -130,7 +130,7 @@ Picasso.With (this)
 
 首先，创建一个新的 Xamarin.Android 应用程序使用绑定库。 右键单击解决方案并选择**添加新项目**; 将新项目**命名为 BindingTest**。 我们正在与绑定库位于同一解决方案中创建此应用程序，为了简化本演练中;但是，使用应用程序绑定库无法，相反，驻留在另一种解决方案： 
 
-[![添加新命名为 BindingTest 项目](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![添加新命名为 BindingTest 项目](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 右键单击**引用**节点**命名为 BindingTest**项目，然后选择**添加引用...**:
 

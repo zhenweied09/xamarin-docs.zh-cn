@@ -6,12 +6,12 @@ ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 101fb28add97749549de9c44292a1ef99a717dde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 54708a7cfd071f77968991c9fe4e52938697c9bb
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-an-aar"></a>绑定。AAR
 
@@ -20,7 +20,7 @@ _本演练提供有关从 Android 创建 Xamarin.Android Java 绑定库的分步
 
 ## <a name="overview"></a>概述
 
-*Android 存档 (。AAR)*文件是 Android 库的文件格式。
+*Android 存档 (。AAR)* 文件是 Android 库的文件格式。
 一个。AAR 文件。包含以下的 ZIP 存档：
 
 -   已编译的 Java 代码
@@ -82,7 +82,7 @@ public class TextCounter
 
 1.  创建新的绑定库项目开头 Android 绑定库模板。 你可以使用适用于 Mac 的 Visual Studio 或 Visual Studio （以下屏幕截图显示 Visual Studio 中，但 Visual Studio for Mac 非常相似）。 将解决方案命名**AarBinding**:
 
-    [![创建 AarBindings 项目](binding-an-aar-images/01-new-bindings-library-vs-sml.png)](binding-an-aar-images/01-new-bindings-library-vs.png#lightbox)
+    [![创建 AarBindings 项目](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
 2.  该模板包括**Jar**文件夹，你在其中添加你。AAR(s) 到绑定库项目。 右键单击**Jar**文件夹，然后选择**添加 > 现有项**:
 
@@ -118,7 +118,7 @@ public class TextCounter
 
 1.  我们在与要简化本演练中的绑定库位于同一解决方案中创建此应用程序。 （使用应用程序绑定库也可以驻留在另一种解决方案。）创建一个新的 Xamarin.Android 应用程序： 右键单击解决方案并选择**添加新项目**。 将新项目**命名为 BindingTest**:
 
-    [![创建新的命名为 BindingTest 项目](binding-an-aar-images/07-add-new-project-vs-sml.png)](binding-an-aar-images/07-add-new-project-vs.png#lightbox)
+    [![创建新的命名为 BindingTest 项目](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
 2.  右键单击**引用**节点**命名为 BindingTest**项目，然后选择**添加引用...**:
 

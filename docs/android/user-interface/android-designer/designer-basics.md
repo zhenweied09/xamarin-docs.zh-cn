@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6bac16a8ce9859e819299689489d9aad982c1f7f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8201301fc0437ecb79a81f40e865f14dc6af020
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="designer-basics"></a>设计器的基础知识
 
@@ -37,7 +37,7 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 同样，通过右键单击添加新的布局**布局**文件夹中的**解决方案资源管理器**并选择**添加 > 新建项 … > Android 布局**:
 
-[![添加新项对话框](designer-basics-images/vs/02-add-new-layout-sml.png)](designer-basics-images/vs/02-add-new-layout.png#lightbox)
+[![添加新项对话框](designer-basics-images/vs/02-add-new-layout-sml.w157.png)](designer-basics-images/vs/02-add-new-layout.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -280,7 +280,7 @@ _本主题介绍设计器功能，说明如何启动设计器、 描述设计图
 
 ### <a name="referencing-resources"></a>引用的资源
 
-某些属性可以引用的资源的布局以外的文件中定义了**.axml**文件。 此类型的最常见情形是`string`和`drawable`资源。 但是，引用可以还可用于其他资源，如`Boolean`值和维度。
+某些属性可以引用的资源的布局以外的文件中定义了 **.axml**文件。 此类型的最常见情形是`string`和`drawable`资源。 但是，引用可以还可用于其他资源，如`Boolean`值和维度。
 当属性支持资源引用，浏览图标 (一个省略号， &hellip;) 条目旁边的文本属性所示。
 此按钮将打开一个资源选择器，单击时。
 

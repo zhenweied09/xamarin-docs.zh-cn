@@ -6,12 +6,12 @@ ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/29/2018
-ms.openlocfilehash: ea3d4a7f848847d6a9f7341faec47294a4cab3f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/10/2018
+ms.openlocfilehash: 8d1dc410d5336d9c2505a18720cc7f734e838c39
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-android-designer"></a>使用 Android 设计器
 
@@ -36,9 +36,9 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-启动 Visual Studio，然后单击**新项目...**然后选择**Visual C\# > Android > 空白应用 (Android)**模板：
+启动 Visual Studio，然后单击**新项目...** 然后选择**Visual C\# > Android > Android 应用程序 (Xamarin)** 模板：
 
-[![Android 的空白应用程序](designer-walkthrough-images/vs/01-android-app-sml.png)](designer-walkthrough-images/vs/01-android-app.png#lightbox)
+[![Android 的空白应用程序](designer-walkthrough-images/vs/01-android-app-sml.w157.png)](designer-walkthrough-images/vs/01-android-app.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -74,7 +74,7 @@ _本主题是 Xamarin.Android 设计器的演练。它演示了如何创建用�
 
 在 Visual Studio 中，右键单击**资源/布局**中**解决方案资源管理器**和选择**添加 > 新建项...**.在**添加新项**对话框中，选择**Android 布局**。 命名该文件**ListItem.axml**单击**添加**:
 
-[![新的布局](designer-walkthrough-images/vs/03-new-layout-sml.png)](designer-walkthrough-images/vs/03-new-layout.png#lightbox)
+[![新的布局](designer-walkthrough-images/vs/03-new-layout-sml.w157.png)](designer-walkthrough-images/vs/03-new-layout.w157.png#lightbox)
 
 新**ListItem**设计器中显示布局：
 

@@ -6,12 +6,12 @@ ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9958682ce9e356692f451900d7dca0e343b244da
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-user-notifications"></a>高级的用户通知
 
@@ -181,10 +181,10 @@ namespace MonkeyNotification
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 为 mac。 在 Visual Studio 中打开应用程序的解决方案
-2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **添加新项目**。
-3. 选择**iOS** > **扩展** > **通知内容扩展**: 
+2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加 > 新建项目...**.
+3. 选择**Visual C# > iOS 扩展 > 通知内容扩展**:
 
-    [![](advanced-user-notifications-images/notify01w.png "选择通知内容扩展")](advanced-user-notifications-images/notify01w.png#lightbox)
+    [![](advanced-user-notifications-images/notify01.w157-sml.png "选择通知内容扩展")](advanced-user-notifications-images/notify01.w157.png#lightbox)
 4. 输入**名称**扩展和单击**确定**按钮。
 
 -----

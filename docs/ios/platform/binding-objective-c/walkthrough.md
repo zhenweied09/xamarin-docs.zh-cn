@@ -6,12 +6,12 @@ ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 6a43b9ad3c9af0a4118c40fb128f8890ac0ffe40
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/02/2017
+ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>演练： 将绑定 iOS Objective C 库
 
@@ -128,6 +128,7 @@ _本文提供了实际创建的现有 Objective C 库 InfColorPicker Xamarin.iOS
 3. 选择**框架和库**、 **Cocoa Touch 静态库**模板，然后单击**下一步**按钮：
 
     [![](walkthrough-images/image05.png "选择 Cocoa Touch 静态库模板")](walkthrough-images/image05.png#lightbox)
+
 4. 输入`InfColorPicker`为**项目名称**单击**下一步**按钮：
 
     [![](walkthrough-images/image06.png "InfColorPicker 输入项目名称")](walkthrough-images/image06.png#lightbox)
@@ -276,11 +277,11 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. 从**文件**菜单上，选择**新建** > **项目...**:
 
-    ![](walkthrough-images/bind01vs.png "开始一个新项目")
+    ![开始一个新项目](walkthrough-images/bind01vs.png "开始一个新项目")
 
-1. 从新建项目对话框中，选择**iOS** > **绑定库**:
+1. 从新建项目对话框中，选择**Visual C# > iPhone 和 iPad > iOS 绑定库 (Xamarin)**:
 
-    ![](walkthrough-images/bind02vs.png "选择 iOS 绑定库")
+    [![选择 iOS 绑定库](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
 1. 输入"InfColorPickerBinding"作为**名称**单击**确定**按钮以创建解决方案。
 
@@ -289,8 +290,6 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 ![](walkthrough-images/bind03vs.png "在解决方案资源管理器中的解决方案结构")
 
 -----
-
-
 
 - **ApiDefinition.cs** -此文件将包含定义如何将 OBJECTIVE-C 的 API 的包装在 C# 中的协定。
 - **Structs.cs** -此文件将保存的任何结构或枚举值所需的接口和委托。
@@ -332,8 +331,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 -----
 
-
-当.a 文件添加到项目中时，将自动设置 Xamarin.iOS**生成操作**的文件的**ObjcBindingNativeLibrary**，并创建名为特殊文件`libInfColorPickerSDK.linkwith.cs`。
+当 **.a**文件添加到项目中，将自动设置 Xamarin.iOS**生成操作**的文件的**ObjcBindingNativeLibrary**，并创建一个特殊文件调用`libInfColorPickerSDK.linkwith.cs`。
 
 
 此文件包含`LinkWith`告知 Xamarin.iOS 如何句柄的静态库的刚刚添加的属性。 在下面的代码段显示了此文件的内容：
@@ -536,6 +534,7 @@ Europa:Resources kmullins$
 1. **创建 iPhone 用户界面**-双击**MainStoryboard.storyboard**文件中**InfColorPickerSample**项目以在 iOS 设计器中编辑它。 添加**按钮**到视图并调用它`ChangeColorButton`，如在下面的示例所示：
 
     ![](walkthrough-images/use03.png "将按钮添加到视图")
+
 1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括 **.xib**文件。 Xamarin.iOS 将不包括此 **.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加 **.xib**到我们的 Xamarin.iOS 项目文件。 选择 Xamarin.iOS 项目，右键单击并选择**添加 > 添加文件**，并添加 **.xib**文件中的以下屏幕截图所示：
 
     ![](walkthrough-images/use04.png "添加 InfColorPickerView.xib")
@@ -544,10 +543,11 @@ Europa:Resources kmullins$
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
+1. **创建 Xamarin.iOS 项目**-添加一个名为的新的 Xamarin.iOS 项目**InfColorPickerSample**使用**单视图应用**模板：
 
-1. **创建 Xamarin.iOS 项目**-添加一个名为的新的 Xamarin.iOS 项目**InfColorPickerSample**到解决方案中，如下面的屏幕截图中所示：
+    [![iOS 应用 (Xamarin) 项目。](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
-    ![](walkthrough-images/use01vs.png "创建 Xamarin.iOS 项目")
+    [![选择模板](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
 1. **添加到绑定项目引用**-更新**InfColorPickerSample**项目，使其具有对引用**InfColorPickerBinding**项目：
 
@@ -559,10 +559,7 @@ Europa:Resources kmullins$
 
 1. **添加 InfColorPickerView.xib** -InfColorPicker Objective C 库包括 **.xib**文件。 Xamarin.iOS 将不包括此 **.xib**在绑定项目中，这将导致在我们的示例应用程序的运行时错误。 此解决方法是将添加 **.xib**到我们 Xamarin.iOS 项目文件我们**Mac 生成主机**。 选择 Xamarin.iOS 项目，右键单击并选择**添加** > **现有项...**，并添加 **.xib**文件。
 
-
 -----
-
-
 
 接下来，让我们快速了解一下 Objective C 和我们处理这些绑定和 C# 代码中的协议。
 

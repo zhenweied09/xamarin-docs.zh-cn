@@ -6,12 +6,12 @@ ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 8afc15a75b6d34d9b3f094fe2c92f2b6623ee63f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/24/2018
+ms.openlocfilehash: f1f733fa91be7bf76e19896e78809d18494891d3
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="displaying-an-image"></a>显示图像
 
@@ -66,6 +66,7 @@ _本文介绍如何包括 Xamarin.iOS 应用程序并显示该映像，通过使
 1. 打开从资产目录**解决方案资源管理器**，并在左上角，单击**加上**按钮：
 
     ![](displaying-an-image-images/asset5.png "单击加号按钮")
+
 2. 选择**添加映像集**和映像设置编辑器将显示为新的映像集。 从此处，拖动图像中为每个不同设备和所需的解决方法。 (注意： 这些解决方法与在中指定的分辨率[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)文档):
 
     ![](displaying-an-image-images/asset7.png "映像集编辑器")

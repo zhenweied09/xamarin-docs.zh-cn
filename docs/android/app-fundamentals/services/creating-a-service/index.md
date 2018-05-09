@@ -5,12 +5,12 @@ ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/01/2018
-ms.openlocfilehash: d1e0fdb1c4b159b6db283d7b9b3be673b73a0ee0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: 00785ad161f5f05fd70b059bb0a3f1c8d6c31f97
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-service"></a>创建服务
 
@@ -82,8 +82,8 @@ public class DemoService : Service
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **隐式意向**&ndash;这种类型的意向松散标识的操作，应执行，但若要完成该操作的确切服务未知。 可以将隐式意向想象为字母是解决"收件人 Whom It 可能问题..."中。
-    如果没有现有的服务与匹配意图，android 将检查的意图，以及要确定的内容。
+-   **隐式意向**&ndash;这种类型的意向松散标识的用户想要执行，但若要完成该操作的确切服务未知的操作。 可以将隐式意向想象为字母是解决"收件人 Whom It 可能问题..."中。
+    Android 将检查的意图，内容，并确定是否存在现有服务与匹配意图。
 
     _意向的筛选器_用来帮助查找与已注册的服务的隐式意图。 意向的筛选器是添加到一个 XML 元素**AndroidManifest.xml**其中包含必要元数据来帮助查找具有为隐式打算的服务。
 

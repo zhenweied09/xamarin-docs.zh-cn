@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="layouts"></a>布局
 
@@ -28,6 +28,7 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash;用于按设置坐标排列视图 （&） 在绝对值和比率方面的调整大小。 AbsoluteLayout 可用来进行分层视图，以及它们定位于左、 右或中心。
 * **[RelativeLayout](relative-layout.md)**  &ndash;用于排列视图，通过设置相对于其父级的维度和位置的约束。
 * **[网格](grid.md)** &ndash;用于排列在网格中的视图。 根据绝对值或比率，可以指定行和列。
+* **[FlexLayout](flex-layout.md)**  &ndash;用于与包装水平或垂直排列视图。
 * **[ScrollView](scroll-view.md)**  &ndash;用于提供滚动视图不能完全适合屏幕的界限。
 * **[LayoutOptions](layout-options.md)**  &ndash;定义对齐方式和视图中，相对于其父级的扩展。
 * **[输入透明度](#input_transparency)** &ndash;指定元素是否接收输入。
@@ -59,6 +60,23 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
+
+`FlexLayout`类似于`StackLayout`，前者水平或垂直显示子视图：
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+但是，如果没有太多个子级的单个行或列中, 容纳不下`FlexLayout`仍可包装这些视图。 `FlexLayout` 基于 CSS 灵活框布局模块，并具有许多相同的内置选项用于定位和对齐及其子级。
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 

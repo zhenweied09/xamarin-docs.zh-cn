@@ -6,12 +6,12 @@ ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2017
+ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="enhanced-user-notifications"></a>增强型的用户通知
 
@@ -168,7 +168,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 2. 切换到**源**视图： 
 
     [![](enhanced-user-notifications-images/setup01.png "源视图")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. 单击**+**按钮以添加新键。
+3. 单击**+** 按钮以添加新键。
 4. 输入`aps-environment`为**属性**，保留**类型**作为`String`并输入任一`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02.png "Ap 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -177,7 +177,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 双击`Entitlements.plist`文件中**解决方案资源管理器**以将其打开以进行编辑。
-3. 单击**+**按钮以添加新键。
+3. 单击**+** 按钮以添加新键。
 4. 输入`aps-environment`为**属性**，保留**类型**作为`String`并输入任一`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Ap 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -548,10 +548,10 @@ namespace MonkeyNotification
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. 在 Visual Studio 中打开应用程序的解决方案。
-2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加** > **添加新项目**。
-3. 选择**iOS** > **扩展** > **通知服务扩展**: 
+2. 右键单击解决方案名称中**解决方案资源管理器**和选择**添加 > 新建项目...**.
+3. 选择**Visual C# > iOS 扩展 > 通知服务扩展**:
 
-    [![](enhanced-user-notifications-images/extension01w.png "选择通知服务扩展")](enhanced-user-notifications-images/extension01w.png#lightbox)
+    [![](enhanced-user-notifications-images/extension01.w157-sml.png "选择通知服务扩展")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. 输入**名称**扩展和单击**确定**按钮。
 
 -----

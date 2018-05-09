@@ -1,5 +1,5 @@
 ---
-title: Android 入门
+title: 开始使用 Xamarin.Android 开发 Android 应用
 description: 借助 Xamarin.Android，可使用在 Java 中使用的相同 UI 控件来创建本机 Android 应用程序，而且可随时获得一种现代语言 (C#) 的灵活性和优雅、.NET 基类库 (BCL) 的强大功能以及一流 IDE (Visual Studio)。 此系列介绍 Xamarin.Android 开发的基础知识。 借助 Xamarin.Android，可设置、安装并构建你的第一个应用程序。
 ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 ms.custom: xamu-video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/25/2017
-ms.openlocfilehash: 8a9abb7e9a5640994d67c1fb33d15d8405442b6c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: a60331a6c8cd1b65e51a63b221cbdb7182803bd1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-series"></a>入门系列
 

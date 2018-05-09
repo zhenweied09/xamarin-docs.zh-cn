@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 83fb7a03b3426631fcf772bcb3605fea44fd4f2b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-interface"></a>用户界面
 
@@ -51,7 +51,7 @@ DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预�
 
 ## <a name="layoutslayoutsindexmd"></a>[布局](layouts/index.md)
 
-Xamarin.Forms 有用于组织屏幕上内容的多个布局。 `StackLayout``Grid`， `AbsoluteLayout`， `ScrollView`，和`RelativeLayout`每个可用来创建美观、 响应迅速的用户界面。
+Xamarin.Forms 有用于组织屏幕上内容的多个布局。 `StackLayout``Grid`， `FlexLayout`， `AbsoluteLayout`， `ScrollView`，和`RelativeLayout`每个可用来创建美观、 响应迅速的用户界面。
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
@@ -84,6 +84,10 @@ Xamarin.Forms 具有用于提供和接收文本的多个视图。 能够格式�
 ## <a name="themesthemesindexmd"></a>[主题](themes/index.md)
 
 Xamarin.Forms 主题定义用于标准控件特定可视外观。 将主题添加到应用程序的资源字典后，将更改标准控件的外观。
+
+## <a name="visual-state-managervisual-state-managermd"></a>[可视状态管理器](visual-state-manager.md)
+
+视觉状态管理器提供触发代码，包括设备方向或大小中的更改将会进行调整的布局中用户界面中的更改的结构化的方法。
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 

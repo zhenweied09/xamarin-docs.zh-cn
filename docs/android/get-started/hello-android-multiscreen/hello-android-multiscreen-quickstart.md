@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>了解 Android 多屏显示：快速入门
 
@@ -108,10 +108,11 @@ namespace Phoneword
 
 ### <a name="adding-translation-history-code"></a>添加转换历史记录代码
 
-此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表，请向 `MainActivity` 类顶部添加以下 `using` 指令：
+此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表（和稍后使用的“意向”），请将以下 `using` 指令添加到 MainActivity.cs 顶部：
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 然后请创建可使用电话号码填充的空白列表。
@@ -246,10 +247,11 @@ namespace Phoneword
 
 ### <a name="adding-translation-history-code"></a>添加转换历史记录代码
 
-此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表，请向 `MainActivity` 类顶部添加以下 `using` 指令：
+此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表（和稍后使用的“意向”），请将以下 `using` 指令添加到 MainActivity.cs 顶部：
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 然后请创建可使用电话号码填充的空白列表。 `MainActivity` 类将如下所示：

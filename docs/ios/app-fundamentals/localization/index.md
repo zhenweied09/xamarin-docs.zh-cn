@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ios-localization"></a>iOS 本地化
 
@@ -109,7 +109,7 @@ IOS 的以下功能可轻松利用 Xamarin 向用户显示有关提供本地化�
 
 ### <a name="localizedstring-method"></a>LocalizedString 方法
 
-`NSBundle.MainBundle.LocalizedString`方法查找已存储在的本地化文本**.strings**项目中的文件。 按语言中，使用的特殊命名目录中进行组织这些文件**.lproj**后缀。
+`NSBundle.MainBundle.LocalizedString`方法查找已存储在的本地化文本 **.strings**项目中的文件。 按语言中，使用的特殊命名目录中进行组织这些文件 **.lproj**后缀。
 
 #### <a name="strings-file-locations"></a>.strings 文件位置
 
@@ -117,7 +117,7 @@ IOS 的以下功能可轻松利用 Xamarin 向用户显示有关提供本地化�
   它通常位于项目根目录中 (但可以放置在**资源**文件夹)。
 - **<language>.lproj**目录创建时为每个支持的语言，通常**资源**文件夹。
 
-可以有许多不同的**.strings**每个语言目录中的文件：
+可以有许多不同的 **.strings**每个语言目录中的文件：
 
 - **Localizable.strings** – 本地化文本的主列表。
 - **InfoPlist.strings** – 某些特定的密钥允许在此文件中转换等应用程序名称。
@@ -166,14 +166,14 @@ IOS 的以下功能可轻松利用 Xamarin 向用户显示有关提供本地化�
 
 2. 将默认图像文件放置**flag.png**中**Base.lproj** （本机开发语言目录）。
 
-3. （可选） 将放在映像的本地化的版本**.lproj**文件夹的每种语言 （如。 **es.lproj**， **ja.lproj**)。 使用相同的文件名**flag.png**每个语言目录中。
+3. （可选） 将放在映像的本地化的版本 **.lproj**文件夹的每种语言 （如。 **es.lproj**， **ja.lproj**)。 使用相同的文件名**flag.png**每个语言目录中。
 
 如果图像不存在为特定的语言，iOS 将回退到默认的本机语言文件夹，并从那里加载映像。
 
 
 #### <a name="launch-images"></a>启动映像
 
-使用标准命名约定为启动映像 （和 XIB 或对 iPhone 6 型号的情节提要） 时将它们中放置**.lproj**为每种语言的目录。
+使用标准命名约定为启动映像 （和 XIB 或对 iPhone 6 型号的情节提要） 时将它们中放置 **.lproj**为每种语言的目录。
 
 ```console
 Default.png
@@ -184,7 +184,7 @@ LaunchScreen.xib
 
 ### <a name="app-name"></a>应用程序名称
 
-放置**InfoPlist.strings**文件中**.lproj**目录可让你重写从应用程序的某些值**Info.plist**，包括应用程序名称：
+放置**InfoPlist.strings**文件中 **.lproj**目录可让你重写从应用程序的某些值**Info.plist**，包括应用程序名称：
 
 ```console
 "CFBundleDisplayName" = "LeónTodo";
@@ -252,7 +252,7 @@ iOS 提供了大量功能有助于构建 RTL 识别应用程序：
 [![](images/rtl-he-sml.png "希伯来语的本地化")](images/rtl-he.png#lightbox "Hebrew")
 
 iOS 自动反转`UINavigationController`，和其他控件放置在`UIStackView`或与自动布局对齐。
-使用本地化 RTL 文本**.strings** LTR 文本的方式相同的文件。
+使用本地化 RTL 文本 **.strings** LTR 文本的方式相同的文件。
 
 <a name="code"/>
 
@@ -318,7 +318,7 @@ someControl.Text = localizedString;
 
 ![](images/xs-designer-localization-id.png "情节提要本地化的 Xcode 视图")
 
-在使用此值**.strings**文件以将已转换的文本自动分配给每个控件。
+在使用此值 **.strings**文件以将已转换的文本自动分配给每个控件。
 
 ### <a name="mainstoryboardstrings"></a>MainStoryboard.strings
 
@@ -345,7 +345,7 @@ someControl.Text = localizedString;
 
 ## <a name="app-store-listing"></a>应用商店列表
 
-遵循上的 Apple 的常见问题[应用存储本地化](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization)输入你的应用已在销售每个国家/地区的翻译。 请注意您的应用程序还包含本地化才会显示翻译其警告**.lproj**目录的语言。
+遵循上的 Apple 的常见问题[应用存储本地化](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization)输入你的应用已在销售每个国家/地区的翻译。 请注意您的应用程序还包含本地化才会显示翻译其警告 **.lproj**目录的语言。
 
 ## <a name="summary"></a>总结
 
@@ -359,5 +359,5 @@ someControl.Text = localizedString;
 - [Tasky （本地化情节提要） （示例）](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Apple 本地化指南](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [跨平台本地化概述](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization.md)
+- [Xamarin.Forms 本地化](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Android 本地化](~/android/app-fundamentals/localization.md)

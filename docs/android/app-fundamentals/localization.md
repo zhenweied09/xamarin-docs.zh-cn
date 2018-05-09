@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6924cc9989c8ab1ca66472b628cdab677e546a3e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 076cadd16c3953ee4e06193190b59035ad57f2c1
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="android-localization"></a>Android 本地化
 
@@ -184,7 +184,7 @@ var translated = Resources.GetQuantityString (
 
 * 零
 * one
-* two
+* 两个
 * 几个
 * many
 * 其他
@@ -265,5 +265,5 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 - [Tasky （在代码中本地化） （示例）](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Android 本地化资源](http://developer.android.com/guide/topics/resources/localization.html)
 - [跨平台本地化概述](~/cross-platform/app-fundamentals/localization.md)
-- [Xamarin.Forms Localization](~/xamarin-forms/app-fundamentals/localization.md)
+- [Xamarin.Forms 本地化](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [iOS 本地化](~/ios/app-fundamentals/localization/index.md)

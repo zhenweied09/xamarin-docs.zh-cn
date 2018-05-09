@@ -4,14 +4,14 @@ description: 控制源和目标之间的信息流
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>绑定模式
 
@@ -58,6 +58,7 @@ ms.lasthandoff: 04/04/2018
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; 数据源和目标之间将这两种方式
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; 数据源从转到目标
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 从目标转到源数据
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 数据将转从源到目标，但仅当`BindingContext`更改 （新与 Xamarin.Forms 3.0）
 
 每个可绑定属性具有默认绑定模式创建可绑定的属性时，设置以及可从[ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/)属性`BindableProperty`对象。 当该属性是数据绑定目标时，此默认绑定模式将实际上指示的模式。
 
@@ -94,6 +95,15 @@ ms.lasthandoff: 04/04/2018
 - `SelectedItem` 属性 `ListView`
 
 基本原理是上的绑定`SelectedItem`属性应导致绑定源设置。 在本文后面的示例重写该行为。
+
+### <a name="one-time-bindings"></a>一次性绑定
+
+多个属性具有的默认绑定模式`OneTime`。 这些是：
+
+- `IsTextPredictionEnabled` 属性 `Entry`
+- `Text``BackgroundColor`，和`Style`属性`Span`。
+
+绑定模式的属性为目标`OneTime`仅在绑定上下文更改时，才会更新。 对于这些目标属性的绑定，这将简化绑定基础结构，因为不需要监视的源属性中的更改。
 
 ## <a name="viewmodels-and-property-change-notifications"></a>Viewmodel 和属性更改通知
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 当`Color`属性更改、 静态`GetNearestColorName`中的方法`NamedColor`类 (也包括在**DataBindingDemos**解决方案) 获取最接近的命名的颜色并设置`Name`属性。 这`Name`属性具有私有`set`访问器，因此它无法从设置，在类外部。
 
 当视图模型设置用作绑定源时，绑定基础结构将附加的处理程序`PropertyChanged`事件。 这种方式，绑定可以对属性的更改通知，然后再设置从更改后的值的目标属性。
+
+但是，当目标属性 (或`Binding`目标属性上的定义) 具有`BindingMode`的`OneTime`，则没有必要绑定基础结构上附加处理程序`PropertyChanged`事件。 更新目标属性时，才`BindingContext`更改，并不时本身的源属性更改。 
 
 **简单颜色选择器**XAML 文件实例化`HslColorViewModel`中页面的资源字典并初始化`Color`属性。 `BindingContext`属性`Grid`设置为`StaticResource`绑定扩展来引用该资源：
 

@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fec14b0f7328bee1d0866ba02f28202e8d63e8cb
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started"></a>入门
 
@@ -42,6 +42,10 @@ _通过这些实用详细的指南，从零开始学习开发移动应用程序�
 ###  <a name="introduction-to-the-mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[移动软件开发生命周期简介](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 本文讨论了有关移动应用程序的软件开发生命周期以及生成移动项目时的一些注意事项。 对于希望直接开始生成应用的开发人员，可先跳过此指南，稍后再进行阅读，以更完整地理解移动开发。
+
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+
+通过在设计和开发移动应用程序时选择 Xamarin 并了解一些注意事项，可以实现跨移动平台的代码共享，缩短上市时间，利用现有技术，满足用户对移动访问的需求并降低跨平台复杂性。&nbsp;此文档概括了实用和生产力应用程序如何实现这些优势的关键指南。
 
 ###  <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Visual Studio for Mac 介绍](https://docs.microsoft.com/visualstudio/mac/)
 

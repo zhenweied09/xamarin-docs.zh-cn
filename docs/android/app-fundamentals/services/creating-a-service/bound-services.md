@@ -6,12 +6,12 @@ ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/04/2018
+ms.openlocfilehash: f4fe1bd753260f05dedb452655572d290c0781d0
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>在 Xamarin.Android 中绑定服务
 
@@ -42,8 +42,8 @@ _绑定的服务是提供一个客户端 （如 Android 的活动） 可以与�
 有三个组件必须实现使 Android 应用程序使用的绑定的服务：
 
 1. **扩展`Service`类，实现生命周期回调方法**&ndash;此类将包含的代码将执行将请求的服务的工作。 这将在下面更详细地介绍。
-2. **创建一个类用于实现`IServiceConnection`**  &ndash;此对象包含从服务的回调方法，以通知客户端时它已连接到 （或已断开的连接）。 服务连接还将提供对客户端可以使用直接与服务交互的对象的引用。 此引用名为_联编程序_。
-3. **创建一个类用于实现`IBinder`**  &ndash; A_联编程序_实现提供的 API 的客户端使用与服务进行通信。 联编程序可以提供对绑定的服务中，引用允许直接调用方法或联编程序可以提供客户端 API 可封装和隐藏从应用程序绑定的服务。 `IBinder`必须为远程过程调用提供必要的代码。 它不是必需的 （或推荐的） 来实现`IBinder`直接接口。 `IBinder`而不是应用程序应扩展`Binder`这提供了大部分所需的基本功能`IBinder`。
+2. **创建一个类用于实现`IServiceConnection`**  &ndash;此接口提供回调方法将调用 android，以通知客户端服务的连接已更改时，即客户端已连接或断开连接到服务。 服务连接还将提供对客户端可以使用直接与服务交互的对象的引用。 此引用名为_联编程序_。
+3. **创建一个类用于实现`IBinder`**  &ndash; A_联编程序_实现提供的 API 的客户端使用与服务进行通信。 联编程序可以提供对绑定的服务中，引用允许直接调用方法或联编程序可以提供客户端 API 可封装和隐藏从应用程序绑定的服务。 `IBinder`必须为远程过程调用提供必要的代码。 它不是必需的 （或推荐的） 来实现`IBinder`直接接口。 应用程序应改为扩展`Binder`提供了大部分所需的基本功能的类型`IBinder`。
 4. **启动和绑定到服务**&ndash;创建服务连接、 联编程序和服务后 Android 应用程序负责启动该服务并将绑定到它。
 
 将以下各节更详细地讨论每个步骤。

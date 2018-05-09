@@ -6,12 +6,12 @@ ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/18/2017
-ms.openlocfilehash: 7e8460d2c946159a9869322d6d4944d213d3d801
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
 
@@ -33,9 +33,7 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 
 [![](ios-code-only-images/image9.png "此图描述了窗口、 视图、 某些子视图和视图控制器之间的关系")](ios-code-only-images/image9.png#lightbox)
 
-
 可以使用构造这些视图层次结构[Xamarin 设计器中为 iOS](~/ios/user-interface/designer/index.md)中适用于 Mac 的 Visual Studio，但是最好是基本了解如何在代码中完全。 本文将指导完成一些基本的点，才能启动和运行，而仅限代码的用户界面开发。
-
 
 -----
 
@@ -45,16 +43,17 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
 
 ## <a name="ios-blank-project-template"></a>iOS 空白项目模板
 
-首先，使用 iPhone 的 Visual Studio 中创建 iOS 项目**空白项目**模板，如下所示，其中我们将扩展添加控制器和视图。
+首先，创建 iOS 项目，Visual Studio 中使用**文件 > 新建项目 > Visual C# > iPhone 和 iPad > iOS 应用 (Xamarin)** 项目，如下所示：
 
+[![新建项目对话框](ios-code-only-images/blankapp.w157-sml.png)](ios-code-only-images/blankapp.w157.png#lightbox)
 
-[![](ios-code-only-images/blankapp-vs.png "新建项目对话框")](ios-code-only-images/blankapp-vs.png#lightbox)
+然后选择**空白应用程序**项目模板：
 
+[![选择模板对话框](ios-code-only-images/blankapp-2.w157-sml.png)](ios-code-only-images/blankapp-2.w157.png#lightbox)
 
 空项目模板将添加到项目的 4 个文件：
 
-
-[![](ios-code-only-images/empty-project.png "项目文件")](ios-code-only-images/empty-project.png#lightbox)
+[![项目文件](ios-code-only-images/empty-project.w157-sml.png "项目文件")](ios-code-only-images/empty-project.w157.png#lightbox)
 
 
 1. **AppDelegate.cs** -包含`UIApplicationDelegate`子类化，请`AppDelegate`，用于处理从 iOS 的应用程序事件。 在中创建应用程序窗口`AppDelegate`的`FinishedLaunching`方法。
@@ -99,18 +98,12 @@ IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取
             return true;
         }
 
+已添加到代码`FinishedLaunching`上述，步骤 5 中的方法是最短为 iOS 应用程序创建窗口所需的代码。
+
 
 -----
 
-## <a name="creating-a-window"></a>创建的窗口
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-已添加到代码`FinishedLaunching`在步骤 3 更高版本，方法是最短为 iOS 应用程序创建窗口所需的代码。  
-
------
 
 使用生成 iOS 应用程序[MVC 模式](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller)。 从窗口的根视图控制器创建应用程序显示的第一个屏幕。 请参阅[Hello，iOS 多屏显示](~/ios/get-started/hello-ios-multiscreen/index.md)指导的 MVC 的详细信息模式本身。
 
@@ -223,7 +216,7 @@ public class AppDelegate : UIApplicationDelegate
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](ios-code-only-images/customviewcontroller.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/customviewcontroller.png#lightbox)
+[![](ios-code-only-images/customviewcontroller.w157-sml.png "添加一个名为 CustomViewController 的新类")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

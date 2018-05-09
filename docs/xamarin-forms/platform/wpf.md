@@ -4,14 +4,15 @@ description: 现在具有 WPF 平台的预览支持 Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2018
-ms.openlocfilehash: 2e2bbf12cd7b4abab4609349b549fde1bcea09e8
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: 416e33f131c6e1ef144608f98964fd8372f454f8
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wpf-platform-setup"></a>WPF 平台安装程序
 
@@ -20,6 +21,12 @@ ms.lasthandoff: 04/28/2018
 Xamarin.Forms 现在具有预览支持的 Windows Presentation Foundation (WPF)。 本文演示如何将 WPF 项目添加到 Xamarin.Forms 解决方案。
 
 启动、 在 Visual Studio 2017 中, 创建新的 Xamarin.Forms 解决方案或使用现有 Xamarin.Forms 解决方案，例如之前, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)。 仅可针对 Windows 中的 Xamarin.Forms 解决方案的 WPF 应用中。
+
+## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>将 WPF 项目添加到包含 Xamarin.University 的 Xamarin.Forms 应用程序
+
+> [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
+
+**Xamarin.Forms 3.0 WPF 支持，通过[Xamarin 大学](https://university.xamarin.com/)**
 
 ## <a name="adding-a-wpf-app"></a>添加一个 WPF 应用
 
