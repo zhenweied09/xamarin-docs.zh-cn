@@ -3,15 +3,14 @@ title: 使用 Razor 模板生成 HTML 视图
 description: " 使用全屏网页呈现 HTML 可能是一种简单而有效的方法来呈现复杂格式设置，以跨平台的方式，尤其是如果你已有的 HTML、 Javascript 和 CSS 从网站项目。"
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48d7778bf3225401f2819909ae6be320cfa881e3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>使用 Razor 模板生成 HTML 视图
 
@@ -92,7 +91,7 @@ Android 还需要时在 web 视图中显示 html 字符串作为参数传递的�
 webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
 ```
 
-特殊字符串**file:///android_asset/**指的是你的应用，显示此处包含中的 Android Assets 文件夹**style.css**文件。
+特殊字符串**file:///android_asset/** 指的是你的应用，显示此处包含中的 Android Assets 文件夹**style.css**文件。
 
  ![AndroidHybrid 解决方案](images/image3_240x167.png)
 
@@ -207,7 +206,7 @@ Razor 模板并不局限于服务器端使用，它们还可以包含 Xamarin �
 
 ### <a name="razor-template-basics"></a>Razor 模板基础知识
 
-Razor 模板文件具有**.cshtml**文件扩展名。 它们都可添加到 Xamarin 项目的文本模板化一节中从**新文件**对话框：
+Razor 模板文件具有 **.cshtml**文件扩展名。 它们都可添加到 Xamarin 项目的文本模板化一节中从**新文件**对话框：
 
  ![新文件-Razor 模板](images/image5_400x201.png)
 
@@ -228,7 +227,7 @@ Razor 模板文件具有**.cshtml**文件扩展名。 它们都可添加到 Xama
 - `@model` 指令始终显示为 Razor 模板文件的第一行。
 -  `@model`指令应跟一个类型。 在此示例中的简单字符串被传递给模板，但这可能是任何自定义类。
 -  当`@Model`引用在整个模板，它提供对生成 （在本示例，它将是一个字符串） 时传递给模板对象的引用。
--  IDE 将自动生成分部类模板 (与文件**.cshtml**扩展)。 你可以查看此代码，但不是应进行编辑。
+-  IDE 将自动生成分部类模板 (与文件 **.cshtml**扩展)。 你可以查看此代码，但不是应进行编辑。
  ![RazorView.cshtml](images/image6_125x34.png)分部类名为 RazorView 以匹配.cshtml 模板文件的名称。 它是用于 C# 代码中的模板引用此名称。
 - `@using` 语句还可包含在 Razor 模板包含其他命名空间的顶部。
 
@@ -369,7 +368,7 @@ var page = template.GenerateString ();
 
 ## <a name="using-razor-templates-with-xamarin"></a>通过 Xamarin 使用 Razor 模板
 
-本部分说明如何使用自己的 mac。 使用 Visual Studio 中的解决方案模板的混合应用程序的生成 有三个模板的可用**文件 > 新建 > 解决方案...**窗口：
+本部分说明如何使用自己的 mac。 使用 Visual Studio 中的解决方案模板的混合应用程序的生成 有三个模板的可用**文件 > 新建 > 解决方案...** 窗口：
 
 - **Android > 应用程序 > Android WebView 应用程序**
 - **iOS > 应用程序 > WebView 应用程序**
@@ -381,7 +380,7 @@ var page = template.GenerateString ();
 
  ![创建 iPhone 和 Android 的解决方案](images/image13_1139x959.png)
 
-请注意，你可以轻松添加**.cshtml** Razor 模板*任何*现有 Xamarin 项目，它不需要使用这些解决方案模板。 iOS 项目不需要以使用这两个; Razor 情节提要只需将 UIWebView 控件添加到任何视图以编程方式，并可以导致 Razor 模板整个 C# 代码中。
+请注意，你可以轻松添加 **.cshtml** Razor 模板*任何*现有 Xamarin 项目，它不需要使用这些解决方案模板。 iOS 项目不需要以使用这两个; Razor 情节提要只需将 UIWebView 控件添加到任何视图以编程方式，并可以导致 Razor 模板整个 C# 代码中。
 
 在用于 iPhone 和 Android 项目的默认模板解决方案内容如下所示：
 
@@ -495,7 +494,7 @@ HTML 可以大幅提高原型制作的显示几种 web 最好在例如多格式�
 
 这两个示例应用合并 Twitter 共享和演示，使用 Xamarin 混合应用程序仍可以访问的基本功能的所有从 HTML Razor 模板驱动视图的本机平台的文本到语音转换 Api。
 
-**RazorTodo**的应用程序将 HTML Razor 模板用于列表和编辑视图。 这意味着我们可以生成的应用程序几乎完全中共享的可移植类库 (包括数据库和**.cshtml** Razor 模板)。 下面的屏幕截图显示 iOS 和 Android 应用。
+**RazorTodo**的应用程序将 HTML Razor 模板用于列表和编辑视图。 这意味着我们可以生成的应用程序几乎完全中共享的可移植类库 (包括数据库和 **.cshtml** Razor 模板)。 下面的屏幕截图显示 iOS 和 Android 应用。
 
  ![RazorTodo](images/Both_700x290.png)
 

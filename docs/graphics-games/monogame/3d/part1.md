@@ -3,15 +3,14 @@ title: 使用模型类
 description: 模型类极大地简化了呈现复杂三维对象相比呈现 3D 图形的传统方法时。 从内容文件，允许进行简单集成的不包含自定义代码的内容创建模型对象。
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e778df7fa6dd27aee8282154c99faf5ca5791ce
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 01e000b22749acb1b5c3a3203db7f372613cca16
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-the-model-class"></a>使用模型类
 
@@ -48,7 +47,7 @@ MonoGame API 包括`Model`类用于存储数据加载从内容文件，但用于
 
 本指南中我们将跳过使用 MonoGame 管道工具，将使用。此处包括的 XNB 文件。 请注意，。XNB 文件与不同，每个平台，因此请确保正确的一套 XNB 文件用于你正在使用任何平台。
 
-我们将解压缩[Content.zip 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)，以便我们可以使用包含的.xnb 文件，在我们的游戏。 如果使用 Android 项目，右键单击**资产**文件夹中的**WalkingGame.Android**项目。 如果使用 iOS 项目，右键单击**WalkingGame.iOS**项目。 选择**添加-> 添加文件...**和您正在使用平台的文件夹中选择这两个.xnb 文件。
+我们将解压缩[Content.zip 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)，以便我们可以使用包含的.xnb 文件，在我们的游戏。 如果使用 Android 项目，右键单击**资产**文件夹中的**WalkingGame.Android**项目。 如果使用 iOS 项目，右键单击**WalkingGame.iOS**项目。 选择**添加-> 添加文件...** 和您正在使用平台的文件夹中选择这两个.xnb 文件。
 
 现在，两个文件应该是项目的我们的一部分：
 

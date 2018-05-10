@@ -4,15 +4,14 @@ description: 将组件引用替换为 NuGet 程序包添加到将来证明你的
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: e3adee1b56b833442a8c927672cf903d45d03e84
-ms.sourcegitcommit: f52aa66de4d07bc00931ac8af791d4c33ee1ea04
+ms.openlocfilehash: 020a5a2182458e759626b9bdbf45b62b6e13d71a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>更新组件引用到 NuGet
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 04/19/2018
 
 若要删除你的项目的组件：
 
-1. 打开**.csproj**文件。 为此，右键单击项目名称，然后选择**卸载项目**。 
+1. 打开 **.csproj**文件。 为此，右键单击项目名称，然后选择**卸载项目**。 
 
 2. 在已卸载的项目上再次右键单击并选择**编辑 {你项目名称}.csproj**。
 

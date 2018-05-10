@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 04/23/2018
-ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 05/08/2018
+ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -27,8 +27,8 @@ Xamarin 实时重新加载使你能够**更改你的 XAML 和看到这些文件�
 
 ## <a name="requirements"></a>要求
 
-* [Visual Studio 2017 15.7 Preview 4](https://www.visualstudio.com/vs/preview/)或更高版本与**使用.NET 进行移动开发**工作负荷。
-* [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3)或更高版本。
+* [Visual Studio 2017 15.7 版或更高版本](https://www.visualstudio.com/vs/)或更高版本与**使用.NET 进行移动开发**工作负荷。
+* [Xamarin.Forms 3.0.0 或更高版本](https://www.nuget.org/packages/Xamarin.Forms/)或更高版本。
 
 ## <a name="getting-started"></a>入门
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1.从 Visual Studio 应用商店安装 Xamarin 实时重新加载
@@ -45,8 +45,13 @@ Xamarin 实时重新加载使你能够**更改你的 XAML 和看到这些文件�
 
 可以在三个步骤将实时重新加载添加到现有的移动应用程序：
 
-1. 确保所有项目都更新为使用[Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3)或更高版本。
-2. 安装**Xamarin.LiveReload**到你的.NET 标准 2.0 库的 NuGet。 这不需要安装在平台项目中。 确保**包源**设置为**所有**。
+1. 确保所有项目都更新为使用[Xamarin.Forms 3.0.0 或更高版本](https://www.nuget.org/packages/Xamarin.Forms/)或更高版本。
+
+2. 添加**Xamarin.LiveReload** NuGet 包：
+
+    a. **标准.NET** – 安装**Xamarin.LiveReload**到你的.NET 标准 2.0 库的 NuGet。 这不需要安装在平台项目中。 确保**包源**设置为**所有**。
+    
+    b. **共享项目**– 安装**Xamarin.LiveReload** NuGet 到所有平台项目 （如 Android、 iOS、 UWP，等等）。 确保**包源**设置为**所有**。
 
 ![添加 Xamarin 实时重新加载 NuGet 使用 NuGet 包管理器](images/addlivereloadnuget.png)
 
@@ -85,7 +90,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>实时重新加载重新部署哪些更改？ 
 
-实时重新加载仅应用到使用 XAML 做的更改。 如果更改 C# 文件中，将需要重新编译。 重新加载 C# 支持计划为未来版本中。
+实时重新加载仅应用到 XAML 或 CSS 做的更改。 如果更改 C# 文件中，将需要重新编译。 重新加载 C# 支持计划为未来版本中。
 
 ### <a name="what-platforms-are-supported"></a>支持哪些平台？ 
 
@@ -101,7 +106,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 
 ### <a name="does-it-require-debugging-the-app"></a>它是否需要调试应用程序？ 
 
-不是。 事实上，甚至可以在任意数量的设备或模拟器/仿真程序上启动所有受支持的应用程序的目标 （Android、 iOS 和 UWP） 并将它们全部同时更新。 
+否。 事实上，甚至可以在任意数量的设备或模拟器/仿真程序上启动所有受支持的应用程序的目标 （Android、 iOS 和 UWP） 并将它们全部同时更新。 
 
 ## <a name="limitations"></a>限制
 
@@ -111,8 +116,6 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 ## <a name="known-issues"></a>已知问题
 
 * 仅支持在 Visual Studio 中。
-* 仅适用于.NET 标准库。 这将在下一步的预览版本中修复。
-* 不支持 CSS 样式表。 这将在下一步的预览版本中修复。
 * 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，应用程序导航重置。 这将在下一步的预览版本中修复。
 * 调试 UWP 可能导致运行时崩溃时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）**而不是**启动调试 (F5)**。
 
@@ -131,8 +134,6 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 * **XLR003**:*实时重新加载 nuget 包需要安装 Xamarin 实时重新加载 Visual Studio 扩展。*
 
   尝试生成项目引用实时重新加载 nuget 包，但未安装 Visual 扩展。  
-
-
 
 ### <a name="app-doesnt-connect"></a>应用程序不会将连接
 

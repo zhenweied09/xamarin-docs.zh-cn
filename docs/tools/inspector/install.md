@@ -3,15 +3,14 @@ title: 检查器安装和要求
 description: 如何下载、 安装和使用 Xamarin 检查器。
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 93f42eef8d76074f6b672bc5a663e8f8f1d2ef80
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="inspector-installation-and-requirements"></a>检查器安装和要求
 
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="requirements"></a>要求
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>支持的操作系统
 
 - **Mac** -OS X 10.11 或更高版本
 - **Windows** -Windows 7 或更高版本 (通过 Internet Explorer 11 或更高版本和.NET 4.6.1 或更高版本)
@@ -115,7 +114,7 @@ Visual Studio
 
 ### <a name="project-settings"></a>项目设置
 
-如果可以将附加**.csproj**对于想要检查的项目，它将非常有用。 这是比询问有关单个设置。
+如果可以将附加 **.csproj**对于想要检查的项目，它将非常有用。 这是比询问有关单个设置。
 
 此外请确认你在调试配置中。
 

@@ -3,15 +3,14 @@ title: 使用与 CocosSharp 平铺
 description: 平铺是功能强大，灵活，以及用于创建正交和等轴磁贴的成熟应用程序的映射的游戏。 CocosSharp 提供平铺的本机文件格式的内置集成。
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: a356ddc0412eb1dce1b35e060e6c9127525de804
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8a7782097324829b8150b968c5658a864d1fab4a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>使用与 CocosSharp 平铺
 
@@ -174,7 +173,7 @@ protected override void AddedToScene ()
 
 ![](tiled-images/image10.png "如果未出现宝藏胸部属性，在宝藏胸部上右键单击并选择磁贴属性")
 
-平铺的属性实现具有一个名称和值。 若要添加某个属性，请单击**+**按钮，输入名称**IsTreasure**，单击**确定**，然后输入值**true**: 
+平铺的属性实现具有一个名称和值。 若要添加某个属性，请单击**+** 按钮，输入名称**IsTreasure**，单击**确定**，然后输入值**true**: 
 
 ![](tiled-images/image11.png "若要添加一个属性，单击按钮，输入名称 IsTreasure，单击确定，然后输入值 true")
 

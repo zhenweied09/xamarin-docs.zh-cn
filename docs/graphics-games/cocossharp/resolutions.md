@@ -3,15 +3,14 @@ title: 处理 CocosSharp 中的多个解决方案
 description: 本指南演示如何使用 CocosSharp 开发在不同的解决方案中的设备正确显示的游戏。
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4077af2351b8ab3ef718a71cc672add54b6ef05a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 577a3edbd106b6fba298b3ee5999265ef955f9dd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>处理 CocosSharp 中的多个解决方案
 
@@ -25,7 +24,7 @@ CocosSharp 的默认解析行为是与中的游戏坐标匹配物理像素。 �
 | **设备** | **显示分辨率** | **示例屏幕快照** |
 |--- | --- |--- |
 |所需的显示|368 x 240 （带为纵横比的黑色条）| ![368 x 240 （带为纵横比的黑色条）](resolutions-images/image1.png) |
-|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960 x 640](resolutions-images/image2.png) |
 |iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
 
 本文档介绍如何使用 CocosSharp 来修复上述表中所示的问题。 也就是说，我们将介绍如何进行呈现的第一行 – 无论屏幕分辨率中所示的任何设备。
@@ -248,7 +247,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 ```
 
 
-### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio example
+### <a name="defaulttexeltocontentsizeratio-example"></a>DefaultTexelToContentSizeRatio 示例
 
 若要查看如何`DefaultTexelToContentSizeRatio`影响视觉对象的大小元素，请考虑上面显示的代码：
 
@@ -277,7 +276,7 @@ CCSprite.DefaultTexelToContentSizeRatio = 2;
 ![](resolutions-images/image12.png "现在如果我们运行游戏 1000 x 1000 纹理将完全可见")
 
 
-### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
+### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio 详细信息
 
 `DefaultTexelToContentSizeRatio`属性是`static,`这意味着应用程序中的所有子画面将共享相同的值。 对不同的解决方法进行的资产与游戏的典型方法是包含一组完整的资产的每个解决方法类别。 默认情况下，CocosSharp Visual Studio for Mac 模板提供**ld**和**hd**资产，可用于支持两个集的纹理的游戏的文件夹。 使用内容的示例内容文件夹可能如下所示：
 

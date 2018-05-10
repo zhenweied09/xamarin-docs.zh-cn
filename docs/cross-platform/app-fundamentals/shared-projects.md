@@ -3,15 +3,14 @@ title: 共享的项目
 description: 共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。 该代码编译为每个引用的项目的一部分，并可以包含有助于将特定于平台的功能合并到基本共享的代码的编译器指令。
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: a7d5a25c3c6f2889bde0ff4aeaf85053bcc796fb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2910ada16aad2d8cb19cf0ee3a059c7df22b630e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="shared-projects"></a>共享的项目
 
@@ -103,7 +102,7 @@ _共享的项目中，可以编写大量不同的应用程序项目的引用的�
 ### <a name="creating-a-shared-project"></a>创建共享的项目
 
 
-若要创建一个新的共享项目导航到**文件 > 新解决方案...**和选择的项目和解决方案的名称。
+若要创建一个新的共享项目导航到**文件 > 新解决方案...** 和选择的项目和解决方案的名称。
 
 
 ![](shared-projects-images/vs-newsolution.png "新建解决方案")

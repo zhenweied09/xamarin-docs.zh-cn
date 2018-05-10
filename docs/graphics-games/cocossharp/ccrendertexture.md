@@ -3,14 +3,13 @@ title: 性能和与 CCRenderTexture 的视觉效果
 description: CCRenderTexture 使开发人员能够通过减少绘图调用，提高的 CocosSharp 游戏，性能和可用于创建视觉效果。 本指南附带 CCRenderTexture 示例提供如何有效地使用此类的实际操作示例。
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 25eba08c1c72ba6fefd39b949b504f8e6fabe983
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 82d39542b24c6b1669798a0b4e1fb14a81f6b44e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>性能和与 CCRenderTexture 的视觉效果
 

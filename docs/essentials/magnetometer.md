@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 磁力计
 description: 磁力计类允许您监视设备的磁力计传感器指示相对于地球磁字段与设备方向。
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e43834756e6a582bd0fd30a5655da8d087a971b7
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: bb9bd656c809b05c49a27f7b3dab2a64ff7b7e94
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials 磁力计
 

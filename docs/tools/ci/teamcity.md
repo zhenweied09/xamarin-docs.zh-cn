@@ -3,15 +3,14 @@ title: 使用 Xamarin 团队城市
 description: 本指南将讨论使用 TeamCity 编译移动应用程序，然后将它们提交到 Xamarin 测试云所涉及的步骤。
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>使用 Xamarin 团队城市
 

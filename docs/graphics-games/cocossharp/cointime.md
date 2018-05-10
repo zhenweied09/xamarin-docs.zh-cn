@@ -3,15 +3,14 @@ title: 抛硬币时游戏的详细信息
 description: 本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实体，进行动画处理子画面，和实现高效的冲突的实现详细信息。
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 07a43dbf5f3095d1735d57fdbb13499532bfe415
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2687b1c8eca8cfb68660c8a622278aa628459d07
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="coin-time-game-details"></a>抛硬币时游戏的详细信息
 
@@ -31,7 +30,7 @@ _本指南讨论在抛硬币时间游戏中，包括使用磁贴图、 创建实
 
 ## <a name="content-in-coin-time"></a>抛硬币时间中的内容
 
-抛硬币时间是表示完整的 CocosSharp 项目可能整理方式的示例项目。 抛硬币时间的结构旨在简化的添加和维护的内容。 它使用**.tmx**创建的文件[平铺](http://www.mapeditor.org)级别和 XML 文件来定义动画。 修改或添加新内容，可以通过最小的工作量。 
+抛硬币时间是表示完整的 CocosSharp 项目可能整理方式的示例项目。 抛硬币时间的结构旨在简化的添加和维护的内容。 它使用 **.tmx**创建的文件[平铺](http://www.mapeditor.org)级别和 XML 文件来定义动画。 修改或添加新内容，可以通过最小的工作量。 
 
 尽管此方法使得抛硬币时间的有效于学习和试验项目，它还反映如何专业游戏进行。 本指南介绍了某些所需简化添加和修改内容的方法。
 

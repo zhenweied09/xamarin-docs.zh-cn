@@ -3,15 +3,14 @@ title: Xamarin Profiler
 description: 本指南介绍了 Xamarin 探查器的主要功能。 它查找在探查器、 分析和时应使用它们，和的标准工作流分析 Xamarin 应用程序。
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 3408d4e1ca50651536b9d04f64156efac4fdd0ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -180,7 +179,7 @@ Xamarin 探查器向开发人员提供了一种方法从配置文件应用程序
 
 #### <a name="saving-and-loading-profiler-sessions"></a>保存和加载探查器会话
 
-若要保存在任何时间分析会话，请选择**文件 > 另存为...**从探查器菜单栏中。 这将保存在文件_mlpd_格式、 分析数据的特殊的高度压缩的格式。
+若要保存在任何时间分析会话，请选择**文件 > 另存为...** 从探查器菜单栏中。 这将保存在文件_mlpd_格式、 分析数据的特殊的高度压缩的格式。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -196,7 +195,7 @@ Xamarin 探查器向开发人员提供了一种方法从配置文件应用程序
 
 -----
 
-你可以加载*.mlpd*到，打开独立应用程序，探查器的文件选择**选择目标**和加载该文件。
+你可以加载 *.mlpd*到，打开独立应用程序，探查器的文件选择**选择目标**和加载该文件。
 
 有关详细信息，请参阅[生成.mlpd 文件](~/tools/profiler/troubleshooting.md#gen_mlpd)。
 

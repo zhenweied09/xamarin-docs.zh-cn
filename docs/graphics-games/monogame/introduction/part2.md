@@ -3,15 +3,14 @@ title: 第 2 – 实现 WalkingGame 部分
 description: 本演练演示如何添加游戏逻辑和内容分发到一个空的 MonoGame 项目创建与移动动画画面一个演示触控输入。
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: bc4ab2e77bfce9c9ba6043533bcfda5a359d322e
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 87678d9d77f75bccc68a667d3fb0f35b641b937c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>第 2 – 实现 WalkingGame 部分
 
@@ -55,7 +54,7 @@ _本演练演示如何添加游戏逻辑和内容分发到一个空的 MonoGame 
 
 我们需要创建`Texture2D`实例呈现我们画面时可用。 所有游戏内容最终包含在名为的文件夹**内容，**位于特定于平台的项目。 MonoGame 共享项目不能包含内容，因为内容必须使用特定于平台的生成操作。 CocosSharp 开发人员会发现内容的文件夹的熟悉的概念 – 位于 CocosSharp 和 MonoGame 项目中的同一位置。 在 iOS 项目中，并在 Android 项目中的资产文件夹内，可以找到的内容文件夹。
 
-若要添加我们的游戏中的内容，请右键单击**内容**文件夹，然后选择**添加 > 添加文件...**导航到解压缩 content.zip 文件的位置并选择**charactersheet.png**文件。 如果系统询问有关如何将文件添加到文件夹，我们应选择**复制**选项：
+若要添加我们的游戏中的内容，请右键单击**内容**文件夹，然后选择**添加 > 添加文件...** 导航到解压缩 content.zip 文件的位置并选择**charactersheet.png**文件。 如果系统询问有关如何将文件添加到文件夹，我们应选择**复制**选项：
 
 ![](part2-images/image1.png "如果系统询问有关如何将文件添加到文件夹，选择复制选项")
 
@@ -289,7 +288,7 @@ protected override void Draw(GameTime gameTime)
 
 ### <a name="defining-animationframe"></a>定义 AnimationFrame
 
-`AnimationFrame` 将不包含动画与相关的任何逻辑。 我们将使用它只是为了存储数据。 若要添加`AnimationFrame`类、 右键单击或按住 control 键单击上**WalkingGame**共享项目并选择**添加 > 新文件...**输入的名称**AnimationFrame**单击**新建**按钮。 我们将通过修改`AnimationFrame.cs`文件，以便它包含以下代码：
+`AnimationFrame` 将不包含动画与相关的任何逻辑。 我们将使用它只是为了存储数据。 若要添加`AnimationFrame`类、 右键单击或按住 control 键单击上**WalkingGame**共享项目并选择**添加 > 新文件...** 输入的名称**AnimationFrame**单击**新建**按钮。 我们将通过修改`AnimationFrame.cs`文件，以便它包含以下代码：
 
 
 ```csharp

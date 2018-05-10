@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 文本到语音转换
 description: 应用程序文本到语音转换引擎进行沟通后的文本，从设备和可用查询引擎可以支持的语言中利用内置 TextToSpeech 类可实现。
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: e5ee5a324c6e753d389f7e80df106dbf4af1a8ca
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials 文本到语音转换
 

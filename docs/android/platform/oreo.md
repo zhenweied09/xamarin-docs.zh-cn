@@ -8,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="oreo-features"></a>Oreo 功能
 
@@ -43,7 +43,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
 
 1. 更新到最新版本的 Visual Studio。
 
-2. 安装**Android 8.0.0 (API 26)**或更高版本的包和工具通过 SDK 管理器。
+2. 安装**Android 8.0.0 (API 26)** 或更高版本的包和工具通过 SDK 管理器。
 
 3. 创建新的 Xamarin.Android 项目面向 Android Oreo (API 26)。
 
@@ -162,7 +162,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-4.  在提示你时与**你想要创建自定义硬件配置文件 [号]**可以输入**没有**并接受默认硬件配置文件。 如果您回答**是**， **avdmanager**将提示你使用的自定义的硬件配置文件的问题列表。
+4.  在提示你时与**你想要创建自定义硬件配置文件 [号]** 可以输入**没有**并接受默认硬件配置文件。 如果您回答**是**， **avdmanager**将提示你使用的自定义的硬件配置文件的问题列表。
 
 检查完**avdmanager**若要创建你的虚拟设备，它将包含在设备下拉列表中：
 
@@ -182,7 +182,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  在提示你时与**你想要创建自定义硬件配置文件 [号]**可以输入**没有**并接受默认硬件配置文件。 如果您回答**是**， **avdmanager**将提示你使用的自定义的问题列表的硬件配置文件。
+3.  在提示你时与**你想要创建自定义硬件配置文件 [号]** 可以输入**没有**并接受默认硬件配置文件。 如果您回答**是**， **avdmanager**将提示你使用的自定义的问题列表的硬件配置文件。
 
 在使用后**avdmanager**若要创建你的虚拟设备，它将包含在设备下拉列表中：
 
@@ -190,7 +190,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
 
 -----
 
-有关用于测试和调试配置的 Android 仿真程序的详细信息，请参阅[Android SDK 仿真程序](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
+有关用于测试和调试配置的 Android 仿真程序的详细信息，请参阅[Google Android 仿真程序](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
 
 如果你使用如 Nexus 或像素的物理设备，可以通过无线 (OTA) 更新通过自动更新你的设备或下载的系统映像并直接刷新你的设备。 有关手动到 Android Oreo 更新你的设备的详细信息，请参阅[Nexus 和像素设备的出厂映像](https://developers.google.com/android/images)。
 
@@ -229,7 +229,7 @@ Android Oreo 引入了*在 XML 中的字体*，从而使你能够将合并为资
 
 1. 创建**资源/字体**文件夹。
 
-2. 复制你的字体文件 (示例中， **.ttf**和**.otf**文件) 到**资源/字体**。 
+2. 复制你的字体文件 (示例中， **.ttf**和 **.otf**文件) 到**资源/字体**。 
 
 3. 如有必要，重命名每个字体文件，以便符合的 Android 文件命名约定 (即，使用仅小写*a 到 z*， *0-9*，和在文件名中的下划线)。 例如，字体文件`Pacifico-Regular.ttf`无法重命名为类似`pacifico.ttf`。
 

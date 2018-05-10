@@ -3,15 +3,14 @@ title: HttpClient 堆栈和 iOS/macOS 的 SSL/TLS 实现选择器
 description: HttpClient 堆栈和 SSL/TLS 实现选择器确定将由 Xamarin iOS、 tvOS 或 macOS 应用程序的 HttpClient 和 SSL/TLS 实现。
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: a1cf4340a2d9e26490f0e605f47ca43a14ae4c72
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: dcbdb4d20bca9764731b08e551a4d3b8a26a2ab4
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 堆栈和 iOS/macOS 的 SSL/TLS 实现选择器
 

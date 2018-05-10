@@ -3,15 +3,14 @@ title: 使用 MonoGame 游戏开发简介
 description: 此多个部分的演练演示如何创建使用 MonoGame 的简单二维应用程序。  它涵盖了常见的游戏编程概念，如图形中，输入，游戏实体和物理。
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: c94ed2e06ee57b67745b6a02692df2360aeb9754
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 46cc3a7e3bb6c58e04626c9d2cc9437c16ba19f5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>使用 MonoGame 游戏开发简介
 

@@ -3,15 +3,14 @@ title: 统一的 API 概述
 description: 新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支持具有相同的 32 和 64 位应用程序二进制间共享代码。
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c36682ba038c18dfb872e76f338ea1d9881cca10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0bdbf4a41ad5737603fccc7e78bc588a2f3acee3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unified-api-overview"></a>统一的 API 概述
 
@@ -46,8 +45,8 @@ _新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支�
 
 从该点开始，我们的 Api，不会出现两种方式：
 
--  **经典 API:**限制为 32 位 （仅限） 和中公开`monotouch.dll`和`XamMac.dll`程序集。
--  **统一的 API:**支持使用单个 API 中可用的 32 和 64 位开发`Xamarin.iOS.dll`和`Xamarin.Mac.dll`程序集。
+-  **经典 API:** 限制为 32 位 （仅限） 和中公开`monotouch.dll`和`XamMac.dll`程序集。
+-  **统一的 API:** 支持使用单个 API 中可用的 32 和 64 位开发`Xamarin.iOS.dll`和`Xamarin.Mac.dll`程序集。
 
 这意味着，企业开发人员 （不是针对应用商店），你可以继续使用现有的经典 Api，因为我们将保留维护它们永久，或你可以升级到新的 Api。
 
@@ -59,8 +58,8 @@ _新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支�
 
 这使得它更简单，而无需进行条件编译的 Mac 和 iOS 平台之间共享代码，并将降噪在源代码文件的顶部。
 
--  **经典 API:**命名空间使用`MonoTouch.`或`MonoMac.`前缀。
--  **统一的 API:**没有命名空间前缀
+-  **经典 API:** 命名空间使用`MonoTouch.`或`MonoMac.`前缀。
+-  **统一的 API:** 没有命名空间前缀
 
 ### <a name="api-changes"></a>API 更改
 
@@ -104,7 +103,7 @@ _新样式的 API 可以比以往更容易地 Mac 和 iOS 以及从而可以支�
 统一 API 引入了新的平台标识符兼容包的**Xamarin.iOS10**。 现有的 NuGet 包将需要更新以添加对此平台支持统一 API 针对生成的。
 
 > [!IMPORTANT]
-> 如果窗体中有错误_"错误 3 不能在同一 Xamarin.iOS 项目中包含 monotouch.dll 和 Xamarin.iOS.dll-Xamarin.iOS.dll 显式引用，而 monotouch.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
+> 如果窗体中有错误 _"错误 3 不能在同一 Xamarin.iOS 项目中包含 monotouch.dll 和 Xamarin.iOS.dll-Xamarin.iOS.dll 显式引用，而 monotouch.dll 引用的 xxx，版本 = 0.0.000，区域性 = neutral，PublicKeyToken = null'"_ 后转换到统一 Api 应用程序，它通常是因为尚未更新到统一 API 的项目中采用的组件或 NuGet 包。 你将需要删除现有的组件/NuGet，更新到版本支持统一 Api 并执行一个干净的生成。
 
 <a name="deprecated-apis" />
 
@@ -215,7 +214,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 在某些情况下某些常量必须从更改`string`到`NSString`，例如 `UITableViewCell`
 
-**Classic**
+**经典**
 
     public virtual string ReuseIdentifier { get; }
 
@@ -233,7 +232,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 已删除并在统一 Api 上清理这些限制。 大多数更改将如下所示：
 
-**Classic**
+**经典**
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
@@ -245,7 +244,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 它还允许将一些 API，以使其更具体和更易于使用，例如：
 
-**Classic**
+**经典**
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 

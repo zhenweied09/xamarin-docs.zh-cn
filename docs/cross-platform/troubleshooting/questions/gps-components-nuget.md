@@ -3,14 +3,13 @@ title: 将 Google Play Services 组件和 NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: e0ba5ee9417917b834ab060a94f72d1f071b4912
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cfd417f4fc01b07b4334259c45472eb24b73abd8
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unifying-google-play-services-components-and-nuget"></a>将 Google Play Services 组件和 NuGet
 
@@ -58,6 +57,6 @@ Google 实际上仅附带两个.jar 文件 Google Play 服务：
 -   Google Play 服务 (JellyBean)
 -   Google Play 服务 (KitKat)
 
-现有_Google Play 服务 (ICS)_组件/Nuget 已更名为_Google Play 服务_和将保留最新今后。 引用的禁用/Delisted 包之一的所有项目应都更新为使用此一个。
+现有_Google Play 服务 (ICS)_ 组件/Nuget 已更名为_Google Play 服务_和将保留最新今后。 引用的禁用/Delisted 包之一的所有项目应都更新为使用此一个。
 
 已禁用的组件仍然存在，因此应为它们中仍然引用，以避免破坏这些项目可还原。 同样 delisted 的 NuGet 包仍然存在，可以还原。 它们将不会更新今后。

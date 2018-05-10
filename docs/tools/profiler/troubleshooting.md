@@ -3,15 +3,14 @@ title: Xamarin 探查器故障排除
 description: 故障排除 Xamarin 探查器
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 4844c999ceddcee89d4f45f6e41dd4c7f2caf054
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin 探查器故障排除
 
@@ -36,9 +35,9 @@ Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括
 
 ### <a name="generating-mlpd-files"></a>生成.mlpd 文件
 
-**.Mlpd**文件是单声道运行时探查器的压缩的输出。 Xamarin 探查器 GUI 读取从数据**.mlpd**并将其显示为用户。 **.mlpd** ，则可为 Xamarin 调试工具，因为它们可帮助我们诊断的问题探查器可能会遇到与你的数据的工程师文件。
+**.Mlpd**文件是单声道运行时探查器的压缩的输出。 Xamarin 探查器 GUI 读取从数据 **.mlpd**并将其显示为用户。 **.mlpd** ，则可为 Xamarin 调试工具，因为它们可帮助我们诊断的问题探查器可能会遇到与你的数据的工程师文件。
 
-**.Mlpd**为当前会话自动保存在你的 Mac 的`/tmp`目录，并可以确定按时间戳。 如果你启用日志记录，则第一个输出将为的路径**.mlpd**文件。 **.Mlpd**文件通常保存在目录中启动 ~/var/文件夹...
+**.Mlpd**为当前会话自动保存在你的 Mac 的`/tmp`目录，并可以确定按时间戳。 如果你启用日志记录，则第一个输出将为的路径 **.mlpd**文件。 **.Mlpd**文件通常保存在目录中启动 ~/var/文件夹...
 
 **.Mlpd**为当前会话也可以通过选择保存**文件 > 另存为...** 从探查器的菜单：
 

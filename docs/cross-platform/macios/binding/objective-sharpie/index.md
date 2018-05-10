@@ -3,15 +3,14 @@ title: 目标 Sharpie
 description: 本部分提供目标 Sharpie，Xamarin 的命令行工具用于自动执行创建绑定到 Objective C 库的过程的简介
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 4341aa7d2ea0bec88e9c36c1804c5a909fd6fd5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 62e75b3c987e48ea80291d790ef5e70e944725b0
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="objective-sharpie"></a>目标 Sharpie
 

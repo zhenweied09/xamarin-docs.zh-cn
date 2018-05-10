@@ -84,6 +84,7 @@
 #### [将 Xamarin.Mac 统一应用更新为 64 位](~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/mac)
 ### [使用跨平台应用中的本机类型](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/mac)
 ### [HttpClient 堆栈和 SSL/TLS 实现选择器](~/cross-platform/macios/http-stack.md?context=xamarin/mac)
+### [生成优化](~/cross-platform/macios/optimizations.md?context=xamarin/mac)
 ## [高级概念和内部机制](internals/index.md)
 ### [AOT](internals/aot.md)
 ### [可用程序集](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)

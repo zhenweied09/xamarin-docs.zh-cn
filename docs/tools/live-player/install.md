@@ -3,15 +3,14 @@ title: Xamarin 实时播放器安装程序
 description: 编辑和实时 iOS 或 Android 设备上测试应用
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 1c1d8e24ecea2e1606f7f134aaa5ecf619e155c6
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 0f343e253a57de33d7e19e648862e6d11fa5af5f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin 实时播放器安装程序
 
@@ -47,7 +46,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 ## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3.第一次使用实时的 Xamarin Player
 
 1. 打开**Visual Studio 2017**。
-2. 转到**工具 > 选项...**和选择**Xamarin > 其他**选项卡。
+2. 转到**工具 > 选项...** 和选择**Xamarin > 其他**选项卡。
 3. 刻度**启用实时的 Xamarin Player**:
 
   ![启用 Xamarin 实时播放器中复选框选项窗口](install-images/vs2017-options.png)
@@ -87,7 +86,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 ## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3.第一次使用 Xamarin 实时播放机
 
 1. 打开**Visual Studio for Mac**。
-2. 转到**Visual Studio > 首选项...**和选择**项目 > Xamarin 实时播放器 （预览版）**选项卡。
+2. 转到**Visual Studio > 首选项...** 和选择**项目 > Xamarin 实时播放器 （预览版）**选项卡。
 3. 刻度**启用实时的 Xamarin Player**:
 
   [![启用 Xamarin 实时播放器中复选框选项窗口](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
@@ -99,7 +98,7 @@ Xamarin 实时播放机使您对您的应用程序进行实时的编辑并使这
 
   * 如果你已具有配对的设备，它将可作为一个选项。
   * 否则系统将提示你配对的设备在需要时。
-  * 选择**Xamarin 实时播放器设备...**来管理你想要与实时的 Xamarin Player 一起使用的设备。
+  * 选择**Xamarin 实时播放器设备...** 来管理你想要与实时的 Xamarin Player 一起使用的设备。
 
 4. 按**运行**按钮或选择以下任一选项从**运行**或右键单击菜单：
 

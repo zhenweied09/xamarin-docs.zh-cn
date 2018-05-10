@@ -6,11 +6,11 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c206b124349614db7249609707bd22e8a4efe6d8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 81bcc8e2f8627264820a859123e1be1a9f960a92
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用程序的剖析
 
@@ -202,7 +202,7 @@ A`Page`派生占用整个屏幕或几乎整个屏幕。 通常，页的子级是
 
 ## <a name="related-links"></a>相关链接
 
-- [第 2 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
-- [第 2 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [第 2 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [第 2 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
+- [第 2 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+- [第 2 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Getting Started with Xamarin.Forms](~/xamarin-forms/get-started/index.md)

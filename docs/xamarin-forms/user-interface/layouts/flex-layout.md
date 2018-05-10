@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
-ms.date: 05/01/2018
-ms.openlocfilehash: 4aa2ea21c9cf2e9e646465ab7ad4aa0a01de433e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/07/2018
+ms.openlocfilehash: bba5007acb54852b9427c57c26aba6358c4c5771
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
 _使用 FlexLayout 堆叠或包装的子视图的集合。_
 
-Xamarin.Forms [ `FlexLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexLayout/) Xamarin.Forms 版本 3.0 中。 它基于 CSS[灵活框布局模块](http://www.w3.org/TR/css-flexbox-1/)，通常称为_弹性布局_或_弹性框_，因此调用因为它包含许多的灵活选项可用于排列子级在布局。
+Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms 版本 3.0 中。 它基于 CSS[灵活框布局模块](http://www.w3.org/TR/css-flexbox-1/)，通常称为_弹性布局_或_弹性框_，因此调用因为它包含许多的灵活选项可用于排列子级在布局。
 
 `FlexLayout` 类似于 Xamarin.Forms [ `StackLayout` ](~/xamarin-forms/user-interface/layouts/stack-layout.md)在于它可以排列其子水平和垂直堆栈。 但是，`FlexLayout`仍可包装及其子级，如果有太多的单个行或列中, 容纳不下，还提供许多选项方向、 对齐和适应各种屏幕尺寸。
 
@@ -65,11 +65,11 @@ Xamarin.Forms [ `FlexLayout` ](https://developer.xamarin.com/api/type/Xamarin.Fo
 
 三个属性`FlexLayout`中所示**SimpleStackPage.xaml**文件：
 
-- [ `Direction` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/)属性设置为值为[ `FlexDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/)枚举。 默认值为 `Row`。 将属性设置为`Column`导致的子级`FlexLayout`项的单个列中排列。
+- [ `Direction` ](xref:Xamarin.Forms.FlexLayout.Direction)属性设置为值为[ `FlexDirection` ](xref:Xamarin.Forms.FlexDirection)枚举。 默认值为 `Row`。 将属性设置为`Column`导致的子级`FlexLayout`项的单个列中排列。
 
     当中的项`FlexLayout`排列在一列，`FlexLayout`称具有垂直_主轴_和水平_跨轴_。
 
-- [ `AlignItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/)属性属于类型[ `FlexAlignItems` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/)和指定项在横轴上的对齐方式。 `Center`选项将导致每个项可水平居中。
+- [ `AlignItems` ](xref:Xamarin.Forms.FlexLayout.AlignItems)属性属于类型[ `FlexAlignItems` ](xref:Xamarin.Forms.FlexAlignItems)和指定项在横轴上的对齐方式。 `Center`选项将导致每个项可水平居中。
 
     如果你使用`StackLayout`而不是`FlexLayout`对于此任务，您将通过分配居中的所有项`HorizontalOptions`每个项的属性`Center`。 `HorizontalOptions`属性不起作用的子级`FlexLayout`，但这单个`AlignItems`属性来实现相同的目标。 如果需要你可以使用`AlignSelf`附加可绑定属性重写`AlignItems`各项的属性：
 
@@ -81,7 +81,7 @@ Xamarin.Forms [ `FlexLayout` ](https://developer.xamarin.com/api/type/Xamarin.Fo
 
     进行该更改后，此`Label`将位于的左边缘`FlexLayout`时的阅读顺序是从左到右。
 
-- [ `JustifyContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/)属性属于类型[ `FlexJustify` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/)，并指定项主要轴上的排列方式。 `SpaceEvenly`选项分配各个所有项之间均匀地和上方的第一项，和下方的最后一项的所有剩余垂直空间。
+- [ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent)属性属于类型[ `FlexJustify` ](xref:Xamarin.Forms.FlexJustify)，并指定项主要轴上的排列方式。 `SpaceEvenly`选项分配各个所有项之间均匀地和上方的第一项，和下方的最后一项的所有剩余垂直空间。
 
     如果你使用`StackLayout`，你将需要分配`VerticalOptions`每个项的属性`CenterAndExpand`来实现类似的效果。 但`CenterAndExpand`选项将分配比每个项的第一项之前和之后的最后一项之间的两倍于空间。 可模拟`CenterAndExpand`选项`VerticalOptions`通过设置`JustifyContent`属性`FlexLayout`到`SpaceAround`。
 
@@ -112,7 +112,7 @@ Xamarin.Forms [ `FlexLayout` ](https://developer.xamarin.com/api/type/Xamarin.Fo
 
 `Direction`此属性`FlexLayout`未设置，因此它具有的默认设置`Row`，这意味着，子级排列为行，并且主要轴为水平方向。
 
-[ `Wrap` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/)属性是枚举类型[ `FlexWrap` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/)。 如果有太多的项，以适应行上，则此属性设置可能导致要换行到下一行中的项。
+[ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap)属性是枚举类型[ `FlexWrap` ](xref:Xamarin.Forms.FlexWrap)。 如果有太多的项，以适应行上，则此属性设置可能导致要换行到下一行中的项。
 
 请注意，`FlexLayout`是的子级`ScrollView`。 如果有太多的行，以适合在页上，则`ScrollView`具有一个默认`Orientation`属性`Vertical`，并允许垂直滚动。
 
@@ -398,14 +398,14 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-direction-property"></a>方向属性
 
-[ `Direction` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Direction/)属性属于类型[ `FlexDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirection/)，一个包含四个成员的枚举：
+[ `Direction` ](xref:Xamarin.Forms.FlexLayout.Direction)属性属于类型[ `FlexDirection` ](xref:Xamarin.Forms.FlexDirection)，一个包含四个成员的枚举：
 
 - `Column`
 - `ColumnReverse` （或者"列的反向"在 XAML 中）
 - `Row`默认值
 - `RowReverse` （或者"行的反向"在 XAML 中）
 
-在 XAML 中，你可以指定使用的枚举成员名称以小写字母，大写，此属性的值或混合大小写，也可以使用显示在 CSS 指示器相同的括号中的两个其他字符串。 (在中定义的"列反向"和"行反向"字符串[ `FlexDirectionTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexDirectionTypeConverter/) XAML 分析器使用的类。)
+在 XAML 中，你可以指定使用的枚举成员名称以小写字母，大写，此属性的值或混合大小写，也可以使用显示在 CSS 指示器相同的括号中的两个其他字符串。 (在中定义的"列反向"和"行反向"字符串[ `FlexDirectionTypeConverter` ](xref:Xamarin.Forms.FlexDirectionTypeConverter) XAML 分析器使用的类。)
 
 下面是**试验**显示 （从左到右），页`Row`方向，`Column`方向，和`ColumnReverse`方向：
 
@@ -417,7 +417,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-wrap-property"></a>换行属性
 
-[ `Wrap` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Wrap/)属性属于类型[ `FlexWrap` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexWrap/)，一个包含三个成员的枚举：
+[ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap)属性属于类型[ `FlexWrap` ](xref:Xamarin.Forms.FlexWrap)，一个包含三个成员的枚举：
 
 - `NoWrap`默认值
 - `Wrap`
@@ -433,7 +433,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-justifycontent-property"></a>JustifyContent 属性
 
-[ `JustifyContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.JustifyContent/)属性属于类型[ `FlexJustify` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexJustify/)，一个包含六个成员的枚举：
+[ `JustifyContent` ](xref:Xamarin.Forms.FlexLayout.JustifyContent)属性属于类型[ `FlexJustify` ](xref:Xamarin.Forms.FlexJustify)，一个包含六个成员的枚举：
 
 - `Start` （或"弹性启动"在 XAML 中），默认值
 - `Center`
@@ -452,7 +452,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-alignitems-property"></a>AlignItems 属性
 
-[ `AlignItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignItems/)属性属于类型[ `FlexAlignItems` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignItems/)，一个包含四个成员的枚举：
+[ `AlignItems` ](xref:Xamarin.Forms.FlexLayout.AlignItems)属性属于类型[ `FlexAlignItems` ](xref:Xamarin.Forms.FlexAlignItems)，一个包含四个成员的枚举：
 
 - `Stretch`默认值
 - `Center`
@@ -471,7 +471,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-aligncontent-property"></a>AlignContent 属性
 
-[ `AlignContent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignContent/)属性属于类型[ `FlexAlignContent` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/)，一个包含七个成员的枚举：
+[ `AlignContent` ](xref:Xamarin.Forms.FlexLayout.AlignContent)属性属于类型[ `FlexAlignContent` ](xref:Xamarin.Forms.FlexAlignContent)，一个包含七个成员的枚举：
 
 - `Stretch`默认值
 - `Center`
@@ -501,7 +501,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="the-alignself-property"></a>AlignSelf 属性
 
-[ `AlignSelf` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.AlignSelf/)附加可绑定属性属于类型[ `FlexAlignSelf` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlexAlignContent/)，一个包含五个成员的枚举：
+[ `AlignSelf` ](xref:Xamarin.Forms.FlexLayout.AlignSelfProperty)附加可绑定属性属于类型[ `FlexAlignSelf` ](xref:Xamarin.Forms.FlexAlignContent)，一个包含五个成员的枚举：
 
 - `Auto`默认值
 - `Stretch`
@@ -525,15 +525,15 @@ FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
 
 ### <a name="the-order-property"></a>顺序属性
 
-[ `Order` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Order/)属性属于类型`int`。 默认值为 0。
+[ `Order` ](xref:Xamarin.Forms.FlexLayout.OrderProperty)属性属于类型`int`。 默认值为 0。
 
 `Order`属性允许您更改的顺序的子级`FlexLayout`排列。 通常情况下的子级`FlexLayout`排列它们在中出现的顺序相同`Children`集合。 可以通过设置重写此顺序`Order`附加到一个或多个子级上一个非零整数值的可绑定属性。 `FlexLayout`然后排列其子基于的设置`Order`上每个子级，但具有相同的子级的属性`Order`设置排列的顺序，它们会显示在`Children`集合。
 
 ### <a name="the-basis-property"></a>基础属性
 
-[ `Basis` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Basis/)附加可绑定属性指示分配给的子级的空间量`FlexLayout`主要轴上。 通过大小指定`Basis`属性是沿父级主轴大小`FlexLayout`。 换而言之，`Basis`时子级排列在行或高度当列中排列子级时，该值指示的子级的宽度。
+[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty)附加可绑定属性指示分配给的子级的空间量`FlexLayout`主要轴上。 通过大小指定`Basis`属性是沿父级主轴大小`FlexLayout`。 换而言之，`Basis`时子级排列在行或高度当列中排列子级时，该值指示的子级的宽度。
 
-`Basis`属性属于类型[ `FlexBasis` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexBasis/)，一种结构。 可以用独立于设备的单位或大小的百分比指定大小`FlexLayout`。 默认值`Basis`属性是静态属性`FlexBasis.Auto`，这意味着子的请求使用宽度或高度。
+`Basis`属性属于类型[ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis)，一种结构。 可以用独立于设备的单位或大小的百分比指定大小`FlexLayout`。 默认值`Basis`属性是静态属性`FlexBasis.Auto`，这意味着子的请求使用宽度或高度。
 
 在代码中，你可以设置`Basis`属性`Label`名为`label`到 40 设备无关的单位，如下：
 
@@ -581,7 +581,7 @@ FlexLayout.SetBasis(label, new FlexBasis(0.25f, true));
 
 ### <a name="the-grow-property"></a>增长属性
 
-[ `Grow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Grow/)属性属于类型`int`。 默认值为 0，并且值必须大于或等于 0。
+[ `Grow` ](xref:Xamarin.Forms.FlexLayout.GrowProperty)附加可绑定属性属于类型`int`。 默认值为 0，并且值必须大于或等于 0。
 
 `Grow`属性所扮演的角色时`Wrap`属性设置为`NoWrap`和子级的行的总宽度小于的宽度`FlexLayout`，或子级的列具有比短高度`FlexLayout`。 `Grow`属性指示如何分配子级之间的剩余空间。
 
@@ -597,7 +597,7 @@ FlexLayout.SetBasis(label, new FlexBasis(0.25f, true));
 
 ### <a name="the-shrink-property"></a>收缩属性
 
-[ `Shrink` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FlexLayout.Shrink/)属性属于类型`int`。 默认值为 1，并且值必须大于或等于 0。
+[ `Shrink` ](xref:Xamarin.Forms.FlexLayout.ShrinkProperty)附加可绑定属性属于类型`int`。 默认值为 1，并且值必须大于或等于 0。
 
 `Shrink`属性中扮演着角色时`Wrap`属性设置为`NoWrap`和子级的行的聚合宽度大于的宽度`FlexLayout`，或包含一列的子级的聚合高度大于高度`FlexLayout`。 通常`FlexLayout`时将显示这些子级又会限制运行其大小。 `Shrink`属性可以指示哪些子级获得的优先级中显示在其完整大小。
 

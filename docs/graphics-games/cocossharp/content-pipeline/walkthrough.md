@@ -3,21 +3,20 @@ title: 使用 MonoGame PipelineTool
 description: MonoGame 管道工具用于创建和管理 MonoGame 内容项目。 内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 672c57aded149200b32501a6b48165ca88726ee1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>使用 MonoGame 管道工具
 
 _MonoGame 管道工具用于创建和管理 MonoGame 内容项目。内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。_
 
-MonoGame 管道工具提供用于将转换到的内容文件的简单易用的环境**.xnb**在 CocosSharp 和 MonoGame 应用程序中使用的文件。 有关内容的管道和它们为何有用游戏开发中的信息，请参阅[对内容的管道本简介](~/graphics-games/cocossharp/content-pipeline/introduction.md)
+MonoGame 管道工具提供用于将转换到的内容文件的简单易用的环境 **.xnb**在 CocosSharp 和 MonoGame 应用程序中使用的文件。 有关内容的管道和它们为何有用游戏开发中的信息，请参阅[对内容的管道本简介](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
 本演练中将包括下列各项：
 
@@ -27,9 +26,9 @@ MonoGame 管道工具提供用于将转换到的内容文件的简单易用的�
  - 处理 MonoGame 管道工具中的文件
  - 使用运行时的文件
 
-本演练使用 CocosSharp 项目来演示如何**.xnb**可以加载文件，并将其应用程序中使用。 MonoGame 的用户也将无法引用本演练中，如 CocosSharp 和 MonoGame 都使用相同**.xnb**内容文件。
+本演练使用 CocosSharp 项目来演示如何 **.xnb**可以加载文件，并将其应用程序中使用。 MonoGame 的用户也将无法引用本演练中，如 CocosSharp 和 MonoGame 都使用相同 **.xnb**内容文件。
 
-完成的应用程序将显示显示从纹理子单个画面**.xnb**文件和单个标签显示从画面字体**.xnb**文件：
+完成的应用程序将显示显示从纹理子单个画面 **.xnb**文件和单个标签显示从画面字体 **.xnb**文件：
 
 ![](walkthrough-images/image1.png "完成的应用程序将显示单个子画面显示从.xnb 文件纹理")
 
@@ -69,7 +68,7 @@ MonoGame 管道工具运行后，我们可以开始，让我们游戏和内容�
 
 ## <a name="creating-a-content-project"></a>创建内容的项目
 
-现在，我们已游戏项目，我们可以创建 MonoGame 管道项目。 为此，请在 MonoGame 管道工具选择**文件 > 新建...**并导航到你的项目的内容文件夹。 对于 Android，文件夹位于 **[项目 root]\BouncingGame.Android\Assets\Content\**。 对于 iOS，文件夹位于 **[项目 root]\BouncingGame.iOS\Content\**。
+现在，我们已游戏项目，我们可以创建 MonoGame 管道项目。 为此，请在 MonoGame 管道工具选择**文件 > 新建...** 并导航到你的项目的内容文件夹。 对于 Android，文件夹位于 **[项目 root]\BouncingGame.Android\Assets\Content\**。 对于 iOS，文件夹位于 **[项目 root]\BouncingGame.iOS\Content\**。
 
 更改**文件名**到**ContentProject**单击**保存**按钮：
 
@@ -84,7 +83,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 
 ### <a name="output-folder"></a>输出文件夹
 
-这是 （相对于内容项目本身） 的文件夹位置输出**.xnb**将保存文件。 若要为简单起见，我们将使用相同的文件夹以保存我们的输入和输出文件。 换而言之，我们将更改**输出文件夹**要 **。\** :
+这是 （相对于内容项目本身） 的文件夹位置输出 **.xnb**将保存文件。 若要为简单起见，我们将使用相同的文件夹以保存我们的输入和输出文件。 换而言之，我们将更改**输出文件夹**要 **。\** :
 
 ![](walkthrough-images/image10.png "")
 
@@ -108,7 +107,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 
 ### <a name="adding-a-png-file"></a>添加.png 文件
 
-若要添加**.png**文件到项目中，我们将首先将其复制到与管道项目中，具有相同的目录**.mgcb**扩展。
+若要添加 **.png**文件到项目中，我们将首先将其复制到与管道项目中，具有相同的目录 **.mgcb**扩展。
 
 ![](walkthrough-images/image12.png "向项目添加.png 文件")
 
@@ -162,7 +161,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 
 ### <a name="adding-xnb-files-to-visual-studio-for-mac"></a>将.xnb 文件添加到 Visual Studio 中，适用于 Mac
 
-首先我们将向我们的项目中添加文件。 在适用于 Mac 的 Visual Studio，我们将展开**BouncingGame.Android**项目中，展开**资产**文件夹中，右键单击**内容**文件夹，并选择**添加 > 添加文件...**首先，我们将选择**ball.xnb**我们之前生成，并单击**打开**。 然后重复上述步骤，但将添加**arial 36.xnb**文件。 我们将选择**使文件保持其当前子目录中**如果适用于 Mac 的 Visual Studio 会要求如何将文件添加边界选项。 一次完成这两个文件应该是我们的项目的一部分：
+首先我们将向我们的项目中添加文件。 在适用于 Mac 的 Visual Studio，我们将展开**BouncingGame.Android**项目中，展开**资产**文件夹中，右键单击**内容**文件夹，并选择**添加 > 添加文件...** 首先，我们将选择**ball.xnb**我们之前生成，并单击**打开**。 然后重复上述步骤，但将添加**arial 36.xnb**文件。 我们将选择**使文件保持其当前子目录中**如果适用于 Mac 的 Visual Studio 会要求如何将文件添加边界选项。 一次完成这两个文件应该是我们的项目的一部分：
 
 ![](walkthrough-images/image20.png "一次完成这两个文件应为项目的一部分")
 

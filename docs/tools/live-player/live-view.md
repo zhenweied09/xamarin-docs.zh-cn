@@ -4,15 +4,14 @@ title: XAML 实时预览
 description: 在 iOS 或 Android 设备上的实时中测试应用程序代码更改
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 12/21/2017
-ms.openlocfilehash: c96777666d7601412c1d2e3be1c7fe23131fc9d4
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: e485ea596d9c6c7aee378d50ae41d13faa7c0a80
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xaml-live-previewing"></a>XAML 实时预览
 

@@ -3,15 +3,14 @@ title: MonoGame 游戏板引用
 description: 游戏板是用于访问 MonoGame 中的输入的设备的标准的、 跨平台的类。
 ms.prod: xamarin
 ms.assetid: 1F71F3E8-2397-4C6A-8163-6731ECFB7E03
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: ac87ee44163d53b11c15538f382379aae962cbb2
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 0746cc0153e9e00309b7227ff3e8a683cdc46835
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="monogame-gamepad-reference"></a>MonoGame 游戏板引用
 

@@ -2,15 +2,14 @@
 title: 入门
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 139a5102b2f2d8a9d803fd1ac593934aa73e2415
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5f61d0794e1f5a38370f0d840504720043f69590
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="getting-started"></a>入门
 
@@ -51,9 +50,9 @@ ms.lasthandoff: 04/04/2018
 
 如果中则意味着该 clang 误码出期间目标 Sharpie 错误分析期间，其分析阶段尝试构造 AST，并且你需要找出原因。
 
-**NEW!** 版本 3.0 尝试解决某些这种复杂性通过直接支持 Xcode 项目。 如果本机库具有有效的 Xcode 项目，则目标 Sharpie 可以评估指定的目标和配置，以推导的必需输入的标头文件和编译器标志的项目。
+**新增功能！** 版本 3.0 尝试解决某些这种复杂性通过直接支持 Xcode 项目。 如果本机库具有有效的 Xcode 项目，则目标 Sharpie 可以评估指定的目标和配置，以推导的必需输入的标头文件和编译器标志的项目。
 
 没有 Xcode 项目是否可用，你将需要更熟悉项目通过推断出正确的输入标头文件、 标头文件搜索路径和其他必要的编译器标志。 请务必请注意，用于生成本机库的编译器标志必须传递给目标 Sharpie 相同。 这是一个手动程度更高的过程，以及需要知道如何编译 Clang 工具链在命令行上的本机代码执行少量的一个。
 
-**NEW!** 版本 3.0 还引入了一个用于轻松地绑定工具[CocoaPods](https://cocoapods.org)通过`sharpie pod`命令。
+**新增功能！** 版本 3.0 还引入了一个用于轻松地绑定工具[CocoaPods](https://cocoapods.org)通过`sharpie pod`命令。
 如果你感兴趣的库是可用作 CocoaPod，我们建议通过尝试将与目标 Sharpie CocoaPod 绑定 （而不是尝试直接绑定对源） 开始。

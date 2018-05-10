@@ -3,15 +3,14 @@ title: BouncingGame 详细信息
 description: 本演练演示如何实现使用 CocosSharp 简单弹跳球游戏。
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: 2f25841af8cb73a7e0fe02264706404ce59cacfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d12d6fb8ecfcba5e5093b2af4790a51ef8cf8e47
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="bouncinggame-details"></a>BouncingGame 详细信息
 
@@ -96,7 +95,7 @@ namespace BouncingGame
 
 上面的代码中创建单个`CCSprite`并将其作为子级添加`GameLayer`。 `CCSprite`构造函数，我们可以定义要用作字符串的图像文件。 我们的代码告知 CocosSharp 查找名为的文件`paddle`（扩展省略了，这在本指南的后面，我们将讨论）。 任何文件名将查找 CocosSharp`paddle`的根内容文件夹中 (即**内容**) 添加到任何文件夹以及`gameView.ContentManager.SearchPaths`（在上一节中讨论）。
 
-我们将这些文件将直接添加到根**内容**用于 iOS 和 Android 的文件夹。 为此，右键单击或按住 control 键单击上**内容**文件夹中的 iOS 项目并选择**添加** > **添加文件...**导航到其中我们前面解压缩内容，然后选择**paddle.png**。 如果系统询问有关如何将文件添加到文件夹，我们应选择**复制**选项：
+我们将这些文件将直接添加到根**内容**用于 iOS 和 Android 的文件夹。 为此，右键单击或按住 control 键单击上**内容**文件夹中的 iOS 项目并选择**添加** > **添加文件...** 导航到其中我们前面解压缩内容，然后选择**paddle.png**。 如果系统询问有关如何将文件添加到文件夹，我们应选择**复制**选项：
 
 ![将文件添加到文件夹对话框](bouncing-game-images/image2.png "将文件添加到文件夹对话框")
 

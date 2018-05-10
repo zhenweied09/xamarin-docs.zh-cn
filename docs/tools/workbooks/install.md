@@ -3,14 +3,13 @@ title: 工作簿安装和要求
 description: 如何下载、 安装和使用 Xamarin 的工作簿。
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>工作簿安装和要求
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="requirements"></a>要求
 
-#### <a name="supported-operating-systems"></a>Supported Operating Systems
+#### <a name="supported-operating-systems"></a>支持的操作系统
 
 - **Mac** -OS X 10.11 或更高版本
 - **Windows** -Windows 7 或更高版本 (通过 Internet Explorer 11 或更高版本和.NET 4.6.1 或更高版本)
@@ -93,7 +92,7 @@ Visual Studio
 
 ### <a name="samples"></a>示例
 
-如果可以将附加或链接到**.workbooks**文件时遇到问题，可能帮助更快地解决 bug。
+如果可以将附加或链接到 **.workbooks**文件时遇到问题，可能帮助更快地解决 bug。
 
 ### <a name="devices"></a>设备
 

@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms Visual 状态管理器
-description: 使用视觉状态管理器在基于从代码中设置的可视状态的 XAML 元素中进行更改。
+description: 使用视觉状态管理器基于从代码中设置的可视状态的 XAML 元素对进行更改。
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
 ms.technology: xamarin-forms
@@ -8,15 +8,15 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: f511f5c33b947704a42df850d2772c0b26511173
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
-ms.translationtype: HT
+ms.openlocfilehash: 14553bc9484ecc236fb4ceefd687ec7742109758
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual 状态管理器
 
-_使用视觉状态管理器在基于从代码中设置的可视状态的 XAML 元素中进行更改。_
+_使用视觉状态管理器基于从代码中设置的可视状态的 XAML 元素对进行更改。_
 
 可视状态管理器 (VSM) 是在 Xamarin.Forms 3.0 中的新增功能。 VSM 提供的结构化的方法，以从代码对用户界面进行可视更改。 在大多数情况下，在 XAML 中，定义应用程序的用户界面和此 XAML 包括描述视觉状态管理器如何影响用户界面的视觉对象的标记。
 
@@ -24,7 +24,7 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 
 可视状态中收集_可视状态组_。 可视状态组中的所有可视状态是互斥的。 可视状态和可视状态组由简单的文本字符串标识。
 
-在其初始版本中，Xamarin.Florms 视觉状态管理器定义一个可视状态组名"CommonStates"为使用三个可视状态：
+Xamarin.Forms 视觉状态管理器定义一个可视状态组名"CommonStates"为使用三个可视状态：
 
 - "Normal"
 - "已禁用"
@@ -39,9 +39,9 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 
 ## <a name="the-common-states"></a>常见的状态
 
-在其初始版本中，视觉状态管理器，可包括如果视图是正常的或已禁用，或具有输入的焦点，则可以更改视图的可视外观的 XAML 文件中的部分。 这些被称为_常见状态_。
+视觉状态管理器，可包括如果视图是正常的或已禁用，或具有输入的焦点，则可以更改视图的可视外观的 XAML 文件中的部分。 这些被称为_常见状态_。
 
-例如，假设你有`Entry`在页面上的视图。 下面是你希望的可视外观的如何`Entry`更改：
+例如，假设你有`Entry`视图在页面上，并且你希望的可视外观的`Entry`若要更改在通过以下方式：
 
 - `Entry`应有粉红色后台时`Entry`处于禁用状态。
 - `Entry`应通常具有绿色背景。
@@ -71,9 +71,7 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 </Entry>
 ```
 
-这可能看起来有点奇怪。 通常情况下，此类的两个标记之间显示的唯一标记是对于内容或属性的元素，与`VisualStateManager.VisualStateGroups`标记既不是。
-
-这是合法的 XAML 语法，因为[ `VisualStateGroups` ](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty)是由一个附加可绑定属性[ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager)类。 (有关可绑定的附加属性的详细信息，请参阅文章[附加属性](~/xamarin-forms/xaml/attached-properties.md)。)这是如何`VisualStateGroups`属性附加到`Entry`对象。
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) 是由一个附加可绑定属性[ `VisualStateManager` ](xref:Xamarin.Forms.VisualStateManager)类。 (有关可绑定的附加属性的详细信息，请参阅文章[附加属性](~/xamarin-forms/xaml/attached-properties.md)。)这是如何`VisualStateGroups`属性附加到`Entry`对象。
 
 `VisualStateGroups`属性属于类型[ `VisualStateGroupList` ](xref:Xamarin.Forms.VisualStateGroupList)，这是一套[ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup)对象。 在`VisualStateManager.VisualStateGroups`标记，插入一对`VisualStateGroup`标记为要包含的可视状态的每个组：
 
@@ -93,7 +91,9 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 <VisualStateGroup Name="CommonStates">
 ```
 
-`VisualStateGroup`类定义一个名为属性[ `States` ](xref:Xamarin.Forms.VisualStateGroup.States)，这是一套[ `VisualState` ](xref:Xamarin.Forms.VisualState)对象。 `States` 作为内容属性的`VisualStateGroups`，你可以包含`VisualState`之间直接标记`VisualStateGroup`标记。
+你可以使用`x:Name`或`Name`但不是能同时在同一元素。
+
+`VisualStateGroup`类定义一个名为属性[ `States` ](xref:Xamarin.Forms.VisualStateGroup.States)，这是一套[ `VisualState` ](xref:Xamarin.Forms.VisualState)对象。 `States` 是_内容属性_的`VisualStateGroups`，你可以包含`VisualState`之间直接标记`VisualStateGroup`标记。 (内容属性将在本文中讨论[基本 XAML 语法](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties)。)
 
 下一步是要包含在该组中的一对每个可视状态的标记。 这些还可以用标识`x:Name`或`Name`:
 
@@ -254,7 +254,7 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 
 当前的可视状态为"Disabled"因此背景的第二个`Entry`为 iOS 和 Android 的屏幕上粉红色。 UWP 实现`Entry`不允许设置背景颜色时`Entry`处于禁用状态。 
 
-当你输入的内容到第三个`Entry`，第二个`Entry`向"正常"状态和背景的交换机现为浅：
+在输入一些文本到第三个`Entry`，第二个`Entry`向"正常"状态和背景的交换机现为浅：
 
 [![对视图的 VSM： 正常](vsm-images/VsmOnViewNormal.png "VSM 上视图-正常")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
@@ -281,7 +281,7 @@ VSM 引入了的概念_可视状态_。 如 Xamarin.Forms 视图`Button`可以�
 <VisualState x:Name="Normal" />
 ``` 
 
-### <a name="vsm-markup-in-a-style"></a>VSM 标记样式
+### <a name="visual-state-manager-markup-in-a-style"></a>可视状态管理器标记样式
 
 它通常是共享相同的视觉状态管理器标记在两个或多个视图之间所需的。 在这种情况下，你将需要将标记放入`Style`定义。
 
@@ -415,13 +415,13 @@ VSM 标记的其余部分是与之前相同。
 
 ## <a name="defining-your-own-visual-states"></a>定义你自己的可视状态
 
-每个类都派生自`VisualElement`支持三个常见状态"正常"、"已设定焦点，"和"已禁用"。 在内部， [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs)类检测何时启用或已禁用，或已设定焦点或失去焦点，变得越来越，并可在调用静态[ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/)方法如下：
+每个类都派生自`VisualElement`支持三个常见状态"正常"、"已设定焦点，"和"已禁用"。 在内部， [ `VisualElement` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs)类检测何时启用或已禁用，或已设定焦点或失去焦点，变得越来越，并可在调用静态[ `VisualStateManager.GoToState` ](https://developer.xamarin.com/api/member/Xamarin.Forms.VisualStateManager.GoToState/p/Xamarin.Forms.VisualElement/System.String/)方法：
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");
 ```
 
-这是重要的方法中，并且它是将在中找到的唯一视觉状态管理器代码`VisualElement`类。 因为`GoToState`基于每个类 tht 每个对象派生自调用`VisualElement`，您可以使用视觉状态管理器以及任何`VisualElement`对象的这些更改进行响应。
+这是将在中找到的唯一视觉状态管理器代码`VisualElement`类。 因为`GoToState`为基于每个类都派生自每个对象调用`VisualElement`，您可以使用视觉状态管理器以及任何`VisualElement`对象的这些更改进行响应。
 
 有趣的是，可视状态组"CommonStates"的名称未显式引用中`VisualElement`。 组名称不是用于视觉状态管理器的 API 的一部分。 在显示到目前为止，你可以更改为任何其他，值从"CommonStates"组的名称以及该程序仍将起作用的两个示例程序之一。 组名称是仅在该组中的状态的常规说明。 隐式理解任何组中的可视状态是互相排斥： 一个状态，并且只有一个状态是当前在任何时间。
 
@@ -485,9 +485,9 @@ VisualStateManager.GoToState(this, "Focused");
 </ContentPage>
 ```
 
-VSM 标记附加到第二个`Label`(名为`helpLabel`) 和`Button`(名为`submitButton`)。 有两个互相排斥状态，名为"有效"和"无效"。 （你将看到很快设置这些状态的代码隐藏文件）。请注意，每两个"ValidationState"组包含`VisualState`的标记"有效值"和"无效"，尽管它们之一是在每个用例中为空。 
+VSM 标记附加到第二个`Label`(名为`helpLabel`) 和`Button`(名为`submitButton`)。 有两个互相排斥状态，名为"有效"和"无效"。 请注意，每两个"ValidationState"组包含`VisualState`的标记"有效值"和"无效"，尽管它们之一是在每个用例中为空。 
 
-如果`Entry`不包含有效的电话号码，则当前状态是"无效"。 第二个`Label`可见和`Button`处于禁用状态：
+如果`Entry`不包含有效的电话号码，则当前状态是"无效"，因此第二个`Label`可见和`Button`处于禁用状态：
 
 [![VSM 验证： 无效的 State](vsm-images/VsmValidationInvalid.png "VSM 验证-无效")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
@@ -526,19 +526,19 @@ public partial class VsmValidationPage : ContentPage
 
 请注意代码隐藏文件必须执行的每个对象的帐户受影响的页面上，通过这些可视状态，并调用`VisualStateManager.GoToState`为每个这些对象。 在此示例中，它是仅有两个对象 (`Label`和`Button`)，但它可能是几个更多。
 
-你可能想知道： 如果的代码隐藏文件必须引用受这些可视状态的页面上的每个对象，为何无法的代码隐藏文件只需访问对象直接？ 它肯定无法。 但是，通过使用视觉状态管理器，可以控制不同的可视状态完全在 XAML 中，它保存在一个位置的所有用户界面设计做出这些对象的响应。
+你可能想知道： 如果的代码隐藏文件必须引用受这些可视状态的页面上的每个对象，为何无法的代码隐藏文件只需访问对象直接？ 它肯定无法。 但是，使用 VSM 的优点是您可以控制如何将视觉元素应对完全在 XAML，将所有 UI 设计保留在一个位置中的不同状态。 这样就避免了通过直接从代码隐藏访问可视元素的设置可视外观。
 
 它很可能要考虑派生的类从`Entry`并可能定义一个属性，可以设置为外部验证函数。 派生自的类`Entry`然后，可以调用`VisualStateManager.GoToState`方法。 此方案会不错，但仅当`Entry`已受不同的可视状态的唯一对象。 在此示例中，`Label`和`Button`也会受到影响。 没有方法为 VSM 标记附加到`Entry`以 VSM 标记附加到这些其他对象，若要从另一个对象引用可视状态更改控件的网页和没有方法上的其他对象。
 
 <a name="adaptive-layout" />
 
-## <a name="using-the-vsm-for-adaptive-layout"></a>用于自适应布局 VSM
+## <a name="using-the-visual-state-manager-for-adaptive-layout"></a>用于自适应布局视觉状态管理器
 
-到手机上运行的是 Xamarin.Forms 程序通常可以查看纵向或横向朝的纵横比，并在桌面上运行的是 Xamarin.Forms 程序可以调整大小，以采用许多不同的大小和纵横比。 设计良好的应用程序可能会显示其内容以不同方式为这些不同的页或窗口窗体因素。 
+可调整到手机上运行的应用程序通常可在纵向和横向纵横比，在桌面上运行的是 Xamarin.Forms 程序 Xamarin.Forms 采用许多不同的大小和纵横比。 设计良好的应用程序可能会显示其内容以不同方式为这些不同的页或窗口窗体因素。 
 
 此方法有时称为_自适应布局_。 因为自适应布局只是涉及到程序的视觉对象，它将是理想的视觉状态管理器应用。
 
-一个简单的示例是一个显示会影响应用程序的内容的按钮 a 小型集合的程序。 在纵向模式下，这些按钮可能显示在页面顶部的水平行：
+显示会影响应用程序的内容的按钮 a 小型集合的应用程序是一个简单的示例。 在纵向模式下，这些按钮可能显示在页面顶部的水平行：
 
 [![VSM 自适应布局： 纵向](vsm-images/VsmAdaptiveLayoutPortrait.png "VSM 自适应布局-纵向")](vsm-images/VsmAdaptiveLayoutPortrait-Large.png#lightbox)
 
@@ -548,9 +548,9 @@ public partial class VsmValidationPage : ContentPage
 
 从顶部到底部，在通用 Windows 平台、 Android 和 iOS 上运行程序。
 
-这是视觉状态管理器的作业。 **VSM 自适应布局**页面[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)示例定义两个名为"纵向"和"横向"的可视状态与名为"OrientationStates"的组。 （更复杂的方法可能基于多个不同的页或窗口宽度。） 
+**VSM 自适应布局**页面[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)示例定义两个名为"纵向"和"横向"的可视状态与名为"OrientationStates"的组。 （更复杂的方法可能基于多个不同的页或窗口宽度。） 
 
-VSM 标记显示在 XAML 文件中的四个位置中。 `StackLayout`名为`mainStack`包含菜单和内容，这是`Image`元素。 这`StackLayout`应有纵向模式中的垂直方向和水平方向在横向模式中：
+在 XAML 文件中的四个位置发生 VSM 标记。 `StackLayout`名为`mainStack`包含菜单和内容，这是`Image`元素。 这`StackLayout`应有纵向模式中的垂直方向和水平方向在横向模式中：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -663,9 +663,9 @@ VSM 标记显示在 XAML 文件中的四个位置中。 `StackLayout`名为`main
 </ContentPage>
 ```
 
-内部`ScrollView`名为`menuScroll`和`StackLayout`名为`menuStack`实现按钮的菜单。 这些布局的方向是相反的`mainStack`: 菜单应纵向模式中水平和垂直在横向模式中。
+内部`ScrollView`名为`menuScroll`和`StackLayout`名为`menuStack`实现按钮的菜单。 这些布局的方向是相反的`mainStack`。 纵向模式中水平和垂直在横向模式中，应为菜单。
 
-隐式样式的按钮本身是 VSM 标记的第四个块区。 此标记将设置`VerticalOptions`， `HorizontalOptions`，和`Margin`特定于 portait 与横向 orienations 属性。
+VSM 标记的第四个部分是隐式样式的按钮本身。 此标记将设置`VerticalOptions`， `HorizontalOptions`，和`Margin`属性特定于 portait 和布局方向。
 
 代码隐藏文件集`BindingContext`属性`menuStack`实现`Button`命令，并还会将附加的处理程序`SizeChanged`页的事件：
 
@@ -703,7 +703,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 
 `SizeChanged`处理程序调用`VisualStateManager.GoToState`对这两个`StackLayout`和`ScrollView`元素，然后循环访问的子级`menuStack`调用`VisualStateManager.GoToState`为`Button`元素。
 
-首先，它可能看起来就像代码隐藏文件可以更直接通过在 XAML 文件中，设置的元素的属性处理方向更改，但是视觉状态管理器肯定是更结构化的方法。 所有视觉对象将保留在 XAML 文件，其中它们变得更容易检查，维护，并修改。
+这可能看起来就像代码隐藏文件可以更直接通过在 XAML 文件中，设置的元素的属性处理方向更改，但是视觉状态管理器肯定是更结构化的方法。 所有视觉对象将保留在 XAML 文件，其中它们变得更容易检查，维护，并修改。
 
 ## <a name="visual-state-manager-with-xamarinuniversity"></a>与 Xamarin.University 的可视状态管理器
 

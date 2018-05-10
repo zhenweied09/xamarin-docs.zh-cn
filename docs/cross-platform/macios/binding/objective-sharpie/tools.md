@@ -3,15 +3,14 @@ title: 工具和命令
 description: 包括目标 Sharpie 和命令行参数以使用它们的工具的概述。
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 8a307739134fe3b76692fbef5c1dc028af01017d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e333ce7c336d13c8b55326a5d51a64092885dfd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="tools--commands"></a>工具和命令
 
@@ -55,7 +54,7 @@ Available Tools:
 |工具|描述|
 |--- |--- |
 |**xcode**|提供有关当前的 Xcode 安装和版本的 iOS 和 Mac Sdk 所提供的信息。 我们将使用此信息更高版本时我们生成我们的绑定。|
-|**pod**|搜索、 配置、 安装 （在本地目录），并将绑定 Objective C [CocoaPod](https://cocoapods.org/) master 规范存储库中可用的库。 此工具会评估已安装的 CocoaPod 自动推导出正确的输入要传递给`bind`下面的工具。 3.0 中新增功能 ！|
+|**Pod**|搜索、 配置、 安装 （在本地目录），并将绑定 Objective C [CocoaPod](https://cocoapods.org/) master 规范存储库中可用的库。 此工具会评估已安装的 CocoaPod 自动推导出正确的输入要传递给`bind`下面的工具。 3.0 中新增功能 ！|
 |**bind**|分析标头文件 (`*.h`) 到初始 Objective C 库中[ApiDefinition.cs 和 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md)文件。|
 |**update**|检查目标 Sharpie 的较新版本和下载并启动安装程序，如果有的话。|
 |**verify-docs**|显示有关详细的信息`[Verify]`属性。|

@@ -3,15 +3,14 @@ title: Xamarin 实时播放器应用程序
 description: 编辑和实时 iOS 或 Android 设备上测试应用
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2e2a3e80c121688f9a8bfff0afe4184f19fc6619
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin 实时播放器应用程序
 

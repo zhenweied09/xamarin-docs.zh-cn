@@ -3,15 +3,14 @@ title: 32/64 位平台注意事项
 description: 当目标为你的应用程序的 32 位和 64 位体系结构时的注意事项
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
-ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 06e65b8a639345af65c6e5d3bbe57d8bb3feffa1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 位平台注意事项
 
@@ -79,7 +78,7 @@ ARM64 支持 iOS 8 iPhone 6 或其他 64 位设备上所需和提交新的或更
 面向 32 位和 64 位体系结构会显著增加应用程序的大小。 但是，因此这样做将允许较新的设备，同时仍支持较旧的设备运行优化的代码。
 
 > [!IMPORTANT]
-> 如果提交到 iTunes 应用商店，iOS 应用程序时收到以下消息_"警告 ITMS 9000： 缺少 64 位支持。开始于 2015 年 2 月 1 日，新的 iOS 应用上载到应用商店必须包括 64 位支持，并且可以生成使用 iOS 8 SDK，包含在 Xcode 6 或更高版本。若要启用 64 位在项目中，我们建议使用 Xcode 生成设置的"标准体系结构"的默认值生成一个单一的二进制文件，使用 32 位和 64 位代码。"_ 你需要切换到的某个可用的支持的体系结构**ARM64**组合 （如上所示）、 重新编译和重新提交。
+> 如果提交到 iTunes 应用商店，iOS 应用程序时收到以下消息 _"警告 ITMS 9000： 缺少 64 位支持。开始于 2015 年 2 月 1 日，新的 iOS 应用上载到应用商店必须包括 64 位支持，并且可以生成使用 iOS 8 SDK，包含在 Xcode 6 或更高版本。若要启用 64 位在项目中，我们建议使用 Xcode 生成设置的"标准体系结构"的默认值生成一个单一的二进制文件，使用 32 位和 64 位代码。"_ 你需要切换到的某个可用的支持的体系结构**ARM64**组合 （如上所示）、 重新编译和重新提交。
 
 ## <a name="mac"></a>Mac
 

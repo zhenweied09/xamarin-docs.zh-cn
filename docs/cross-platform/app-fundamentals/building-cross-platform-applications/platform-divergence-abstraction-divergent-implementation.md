@@ -2,15 +2,14 @@
 title: 第 4 部分 — 处理多个平台
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8de540e736bee32c9ee98476bcdc3c5b1100f0f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0988eef07ead9b2cbb6a447ac54f80bcb80e66bf
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>第 4 部分 — 处理多个平台
 
@@ -215,7 +214,7 @@ Xamarin.iOS 定义`__IOS__`可以用于检测 iOS 设备。
 
 ##### <a name="mac"></a>Mac
 
-当前没有 Xamarin.Mac，为内置符号，但你可以添加自己的 Mac 在应用程序项目**选项 > 生成 > 编译器**中**定义符号**框中，或编辑**.csproj**文件并添加存在 (例如`__MAC__`)
+当前没有 Xamarin.Mac，为内置符号，但你可以添加自己的 Mac 在应用程序项目**选项 > 生成 > 编译器**中**定义符号**框中，或编辑 **.csproj**文件并添加存在 (例如`__MAC__`)
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>

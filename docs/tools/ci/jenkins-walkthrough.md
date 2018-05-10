@@ -3,15 +3,14 @@ title: 通过 Xamarin 使用 Jenkins
 description: 本指南演示如何设置为持续集成服务器 Jenkins 和自动执行编译使用 Xamarin 创建的移动应用程序。 它描述如何在 OS X 上安装 Jenkins、 配置和设置来编译 Xamarin.iOS 和 Xamarin.Android 应用程序时更改会提交到源代码管理系统的作业。
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: f183eb487b49d60c896bef9c90c711cd3da846b7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1052507bfbf06e264f9e9da89be1e0f35fa70ce1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>通过 Xamarin 使用 Jenkins
 
@@ -126,18 +125,18 @@ Jenkins 没有任何额外的插件的情况下支持 Git。
 
  [![](jenkins-walkthrough-images/image13.png "可以通过选择 Jenkins 找到全局设置为插件 / 管理 Jenkins / 配置系统从左上另一方面角")](jenkins-walkthrough-images/image13.png#lightbox)
 
-当选择此菜单选项时，你将转至**配置系统 [Jenkins]**页。 此页包含部分配置 Jenkins 本身以及设置某些全局插件值。  下面的屏幕截图演示了此页的示例：
+当选择此菜单选项时，你将转至**配置系统 [Jenkins]** 页。 此页包含部分配置 Jenkins 本身以及设置某些全局插件值。  下面的屏幕截图演示了此页的示例：
 
  [![](jenkins-walkthrough-images/image14.png "此屏幕截图演示了此页的示例")](jenkins-walkthrough-images/image14.png#lightbox)
 
 
 #### <a name="configuring-the-msbuild-plugin"></a>配置 MSBuild 插件
 
-MSBuild 插件必须配置为使用**/Library/Frameworks/Mono.framework/Commands/xbuild**来为 Mac 解决方案和项目文件进行编译时 Visual Studio。 向下滚动**配置系统 [Jenkins]**直到页上**添加 MSBuild**按钮将出现，如下面的屏幕截图中所示：
+MSBuild 插件必须配置为使用 **/Library/Frameworks/Mono.framework/Commands/xbuild**来为 Mac 解决方案和项目文件进行编译时 Visual Studio。 向下滚动**配置系统 [Jenkins]** 直到页上**添加 MSBuild**按钮将出现，如下面的屏幕截图中所示：
 
  [![](jenkins-walkthrough-images/image15.png "向下滚动配置系统 Jenkins 页之前将添加 MSBuild 按钮显示")](jenkins-walkthrough-images/image15.png#lightbox)
 
-单击此按钮，并填写**名称**和**路径**到**MSBuild**上出现的表单中的字段。 名称你**MSBuild**安装应为有意义的名称，同时**MSBuild 路径**应为路径`xbuild`，这通常是**/Library/框架 /Mono.framework/Commands/xbuild**。 我们通过单击保存或在页面底部的应用按钮保存所做的更改后，Jenkins 将能够使用`xbuild`来编译你的解决方案。
+单击此按钮，并填写**名称**和**路径**到**MSBuild**上出现的表单中的字段。 名称你**MSBuild**安装应为有意义的名称，同时**MSBuild 路径**应为路径`xbuild`，这通常是 **/Library/框架 /Mono.framework/Commands/xbuild**。 我们通过单击保存或在页面底部的应用按钮保存所做的更改后，Jenkins 将能够使用`xbuild`来编译你的解决方案。
 
 #### <a name="configuring-the-tfs-plugin"></a>配置 TFS 插件
 
@@ -145,7 +144,7 @@ MSBuild 插件必须配置为使用**/Library/Frameworks/Mono.framework/Commands
 
 为了使与 TFS 服务器进行交互的 OS X 工作站，Team Explorer Everywhere 必须安装在工作站上。 Team Explorer Everywhere 是一套从包括跨平台命令行客户端用于访问 TFS 的 Microsoft 工具。 Team Explorer Everywhere 可以从 Microsoft 下载并安装在三个步骤：
 
-1. 将存档文件提取到用户帐户可以访问的目录。 例如，可能会将文件提取到**~/tee**。
+1. 将存档文件提取到用户帐户可以访问的目录。 例如，可能会将文件提取到 **~/tee**。
 2. 配置命令行程序或系统路径，以包括保存了在上述步骤中解压缩的文件的文件夹。 例如，应用于对象的
 
         echo export PATH~/tee/:$PATH' >> ~/.bash_profile
@@ -157,7 +156,7 @@ MSBuild 插件必须配置为使用**/Library/Frameworks/Mono.framework/Commands
 
         Available commands and their options:
 
-安装 TFS 的命令行客户端后，必须使用的完整路径配置 Jenkins`tf`命令行客户端。 向下滚动**配置系统 [Jenkins]**页直到找到 Team Foundation Server 部分中，如下面的屏幕截图中所示：
+安装 TFS 的命令行客户端后，必须使用的完整路径配置 Jenkins`tf`命令行客户端。 向下滚动**配置系统 [Jenkins]** 页直到找到 Team Foundation Server 部分中，如下面的屏幕截图中所示：
 
  [![](jenkins-walkthrough-images/image17.png "向配置系统 Jenkins 页下滚动直到找到 Team Foundation Server 部分")](jenkins-walkthrough-images/image17.png#lightbox)
 
@@ -193,7 +192,7 @@ MSBuild 插件必须配置为使用**/Library/Frameworks/Mono.framework/Commands
 1. 停止 Jenkins。 如果你使用的 Jenkins.app，你可以执行此操作通过右键单击中停靠、 的 Jenkins.App 图标并从弹出菜单中选择退出：
 
     ![](jenkins-walkthrough-images/image19.png "在停靠，并从弹出菜单中选择退出应用程序图标")
-2. 打开文件**~/.jenkins/config.xml**在文本编辑器中。
+2. 打开文件 **~/.jenkins/config.xml**在文本编辑器中。
 3. 更改的值`<usesecurity></usesecurity>`元素从`true`到`false`。
 4. 删除`<authorizationstrategy></authorizationstrategy>`和`<securityrealm></securityrealm>`文件中的元素。
 5. 重新启动 Jenkins。
@@ -207,7 +206,7 @@ MSBuild 插件必须配置为使用**/Library/Frameworks/Mono.framework/Commands
 
 ![](jenkins-walkthrough-images/image22.png "通过选择右上角菜单中的 Jenkins 新作业创建作业")
 
-这将显示**新作业 [Jenkins]**页。 输入此作业的名称并选择**生成自由格式的软件项目**单选按钮。 下面的屏幕截图显示了此示例：
+这将显示**新作业 [Jenkins]** 页。 输入此作业的名称并选择**生成自由格式的软件项目**单选按钮。 下面的屏幕截图显示了此示例：
 
 ![](jenkins-walkthrough-images/image23.png "输入此作业的名称并选择一个生成自由格式的软件项目单选按钮")
 
@@ -326,7 +325,7 @@ Jenkins 将检索到一个名为的特殊文件夹的完整源代码*工作区*�
 ![](jenkins-walkthrough-images/image37.png "一旦生成步骤添加到项目中，填写显示的窗体字段")
 
 
-此生成步骤将执行`xbuild`中**$WORKSPACE**文件夹。 MSBuild 生成文件设置为**Xamarin.Android.csproj**文件。 **命令行自变量**指定发布版本的目标**PackageForAndroid**。 此步骤的产品将 APK，在以下位置：
+此生成步骤将执行`xbuild`中 **$WORKSPACE**文件夹。 MSBuild 生成文件设置为**Xamarin.Android.csproj**文件。 **命令行自变量**指定发布版本的目标**PackageForAndroid**。 此步骤的产品将 APK，在以下位置：
 
     $WORKSPACE/[PROJECT NAME]/bin/Release
 

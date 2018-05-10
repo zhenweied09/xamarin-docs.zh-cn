@@ -3,15 +3,14 @@ title: 使用跨平台应用中的本机类型
 description: 本文介绍如何使用新的 iOS 统一 API 本机类型 （nint、 nuint、 nfloat） 在跨平台应用程序代码与非 iOS 设备，例如 Android 或 Windows Phone 操作系统的共享位置。
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: 0b32cb68174183fd094f72a7ab20f7ed52b278ee
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb6979691eeef6dd7436d74fdfd501c747d9b3c6
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>使用跨平台应用中的本机类型
 
