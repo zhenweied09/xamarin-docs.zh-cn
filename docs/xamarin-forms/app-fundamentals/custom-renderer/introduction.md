@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: b394c64fe6e2bfb9e5e7ee0e00d8c0366d6bd93e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>自定义呈现器简介
 
@@ -51,7 +51,7 @@ public class MyEntry : Entry
 `local`命名空间前缀可以是任何内容。 但是，`namespace`和`assembly`值必须匹配自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
 
 > [!NOTE]
-> 定义`xmlns`比要简单得在 Pcl 中共享的项目。 PCL 会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 UWP 项目都具有其自己*程序集名称*它是不可能的编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
+> 定义`xmlns`比要简单得在标准.NET 类库项目中共享的项目。 标准.NET 库会编译成程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 在使用共享项目时，所有共享的资产 （其中包括 XAML） 编译为每个引用的项目中，这意味着，如果，iOS、 Android 和 UWP 项目都具有其自己*程序集名称*它是不可能的编写`xmlns`声明因为值需要对每个应用程序不同。 对于共享项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
 
 `MyEntry`自定义控件然后呈现在每个平台，具有灰色背景，如以下屏幕截图中所示：
 
@@ -74,7 +74,7 @@ public class MyEntry : Entry
 
 ## <a name="troubleshooting"></a>疑难解答
 
-如果已添加到解决方案 (即不 PCL Mac/Visual Studio Xamarin.Forms 应用程序项目模板的 Visual Studio 创建) 的 PCL 项目中包含自定义控件，，在尝试访问自定义控件时，可能会在 iOS 中发生异常。 如果出现此问题，可以通过创建从自定义控件的引用来解决该`AppDelegate`类：
+如果自定义控件包含在.NET 标准库项目已添加到解决方案 （即不.NET 标准库由 Visual Studio for Mac/Visual Studio Xamarin.Forms 应用程序项目模板创建），异常可能会出现在 iOS 中时尝试访问自定义控件。 如果出现此问题，可以通过创建从自定义控件的引用来解决该`AppDelegate`类：
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

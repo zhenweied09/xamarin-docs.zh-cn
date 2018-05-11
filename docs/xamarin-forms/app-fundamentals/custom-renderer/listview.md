@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 0d1afc2c14b19bbd03244affed494405776a3c99
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-listview"></a>自定义 ListView
 
@@ -59,13 +59,13 @@ public class NativeListView : ListView
 }
 ```
 
-`NativeListView`在可移植类库 (PCL) 项目中创建并定义自定义控件的 API。 此控件可公开`Items`属性用于填充`ListView`数据，并可通过绑定到的数据显示目的。 它还公开`ItemSelected`每当特定于平台的本机列表控件中选择项将激发的事件。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+`NativeListView` .NET 标准的类库项目中创建并定义自定义控件的 API。 此控件可公开`Items`属性用于填充`ListView`数据，并可通过绑定到的数据显示目的。 它还公开`ItemSelected`每当特定于平台的本机列表控件中选择项将激发的事件。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>使用自定义控件
 
-`NativeListView`自定义控件可以引用 Xaml 中 PCL 项目中通过声明其位置的命名空间并在控件上使用的命名空间前缀。 下面的代码示例演示如何`NativeListView`自定义控件可供 XAML 页：
+`NativeListView`自定义控件可以引用 Xaml 中的标准.NET 库项目中通过声明其位置的命名空间并在控件上使用的命名空间前缀。 下面的代码示例演示如何`NativeListView`自定义控件可供 XAML 页：
 
 ```xaml
 <ContentPage ...

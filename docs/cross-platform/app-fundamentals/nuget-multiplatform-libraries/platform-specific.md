@@ -2,15 +2,14 @@
 title: NuGet 为创建新的特定于平台的类库项目
 ms.prod: xamarin
 ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 0f244e614a40e444139d51a9466ccc7225a7fe68
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 901dbe032d62047668f265e8c7f79593b3fbfcce
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>NuGet 为创建新的特定于平台的类库项目
 
@@ -50,7 +49,7 @@ NuGet 可以包含特定于 iOS 和 Android 的代码，以及公用的.NET 代�
   > [!NOTE]
 > "诱饵 and 交换机"意味着 PCL 程序集将仅包含由 （它不能包含特定于平台的代码） 的库公开的 API。 NuGet 添加到 Xamarin 项目，将根据 PCL 中，编译共享的库，但特定于平台的程序集包含实际使用的 iOS 或 Android 项目的代码。
 
-7. 右键单击项目并选择**创建 NuGet 包**（或生成或部署解决方案） 和**.nupkg** NuGet 包文件将保存在**/bin/**文件夹 (调试或发布，具体取决于配置） 时。
+7. 右键单击项目并选择**创建 NuGet 包**（或生成或部署解决方案） 和 **.nupkg** NuGet 包文件将保存在 **/bin/** 文件夹 (调试或发布，具体取决于配置） 时。
 
   ![](platform-specific-images/create-nuget-package.png "NuGet 包文件将保存在 bin 文件夹中调试或发布，具体取决于配置")
 

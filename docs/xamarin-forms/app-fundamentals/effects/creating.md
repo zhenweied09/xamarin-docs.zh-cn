@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 12b8906dd4562e58dede181e773e4046b8434214
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-an-effect"></a>创建效果
 
@@ -188,7 +188,7 @@ namespace EffectsDemo.UWP
 
 ## <a name="consuming-the-effect"></a>使用效果
 
-使用从 Xamarin.Forms 可移植类库 (PCL) 或共享库项目的效果的过程如下所示：
+使用从 Xamarin.Forms.NET 标准库或共享库项目的效果的过程如下所示：
 
 1. 声明一个将自定义的效果。
 1. 通过将其添加到控件的将影响附加到控件[ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/)集合。
@@ -209,7 +209,7 @@ namespace EffectsDemo.UWP
 </Entry>
 ```
 
-`FocusEffect`在 PCL 中的类在 XAML 中，支持效果消耗，下面的代码示例所示：
+`FocusEffect` .NET 标准库中的类在 XAML 中，支持效果消耗，下面的代码示例所示：
 
 ```csharp
 public class FocusEffect : RoutingEffect

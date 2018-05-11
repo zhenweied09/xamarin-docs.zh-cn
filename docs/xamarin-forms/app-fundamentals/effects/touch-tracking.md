@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoking-events-from-effects"></a>调用从效果的事件
 
@@ -49,7 +49,7 @@ UWP 方法经证明是对于某些类型的应用程序，例如，音乐键盘�
 
 ## <a name="the-touch-tracking-effect-api"></a>触摸跟踪效果 API
 
-[ **Touch 跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)示例包含的类 （和枚举） 实现低级别的触摸跟踪。 这些类型属于命名空间`TouchTracking`并且单词的开头`Touch`。 **TouchTrackingEffectDemos**可移植类库项目包括`TouchActionType`触控事件的类型的枚举：
+[ **Touch 跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)示例包含的类 （和枚举） 实现低级别的触摸跟踪。 这些类型属于命名空间`TouchTracking`并且单词的开头`Touch`。 **TouchTrackingEffectDemos** .NET 标准库项目包括`TouchActionType`触控事件的类型的枚举：
 
 ```csharp
 public enum TouchActionType
@@ -65,7 +65,7 @@ public enum TouchActionType
 
 所有平台还都包含指示已取消触摸事件的事件。
 
-`TouchEffect`在 PCL 中的类派生自`RoutingEffect`并定义名为事件`TouchAction`和一个名为方法`OnTouchAction`，它调用`TouchAction`事件：
+`TouchEffect` .NET 标准库中的类派生自`RoutingEffect`并定义名为事件`TouchAction`和一个名为方法`OnTouchAction`，它调用`TouchAction`事件：
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -87,7 +87,7 @@ public class TouchEffect : RoutingEffect
 
 另请注意`Capture`属性。 若要捕获触控事件，应用程序必须设置此属性为`true`之前`Pressed`事件。 否则，触控事件的行为类似于通用 Windows 平台中。
 
-`TouchActionEventArgs`在 PCL 中的类包含附带的每个事件的所有信息：
+`TouchActionEventArgs` .NET 标准库中的类包含附带的每个事件的所有信息：
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -112,7 +112,7 @@ public class TouchActionEventArgs : EventArgs
 
 应用程序可以使用`Id`跟踪各个指的属性。 请注意`IsInContact`属性。 此属性始终是`true`为`Pressed`事件和`false`为`Released`事件。 它也是始终`true`为`Moved`iOS 和 Android 上的事件。 `IsInContact`属性可能`false`为`Moved`当在桌面上运行程序并没有一个按钮的情况下移动鼠标指针在通用 Windows 平台上的事件按下。
 
-你可以使用`TouchEffect`自己的应用程序，通过在解决方案的 PCL 项目中，包括该文件并添加到实例中的类`Effects`任何 Xamarin.Forms 元素的集合。 附加到处理程序`TouchAction`获取触控事件的事件。
+你可以使用`TouchEffect`自己的应用程序，通过在解决方案的标准.NET 库项目中，包括该文件并添加到实例中的类`Effects`任何 Xamarin.Forms 元素的集合。 附加到处理程序`TouchAction`获取触控事件的事件。
 
 若要使用`TouchEffect`在自己的应用程序，还需要包括在平台实现**TouchTrackingEffectDemos**解决方案。
 
@@ -151,7 +151,7 @@ public class TouchEffect : PlatformEffect
         // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
         frameworkElement = Control == null ? Container : Control;
 
-        // Get access to the TouchEffect class in the PCL
+        // Get access to the TouchEffect class in the .NET Standard library
         effect = (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
@@ -203,7 +203,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` 此外将检查的值`Capture`中的 PCL 和调用中的影响类属性`CapturePointer`若是`true`。
+`OnPointerPressed` 此外将检查的值`Capture`中的标准.NET 库和调用中的影响类属性`CapturePointer`若是`true`。
 
  其他 UWP 事件处理程序是甚至更简单：
 
@@ -267,7 +267,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
             idToEffectDictionary.Add(id, this);
 
-            capture = pclTouchEffect.Capture;
+            capture = libTouchEffect.Capture;
             break;
 
 ```
@@ -278,7 +278,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
 {
     // Get the method to call for firing events
-    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
     // Get the location of the pointer within the view
     touchEffect.view.GetLocationOnScreen(twoIntArray);

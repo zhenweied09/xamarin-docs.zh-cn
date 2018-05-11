@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 6945d64e37bc7e0de930093d8a3f71590026182d
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: e552a0bf76572d50eb0d4618af69fc1179979f97
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>从图片库中选取照片
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="creating-the-interface"></a>创建界面
 
-首先，创建一个接口，表示所需的功能的共享代码中。 对于照片选择应用程序，只是一种方法是必需的。 这定义在[ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs)的示例代码可移植类库中的接口：
+首先，创建一个接口，表示所需的功能的共享代码中。 对于照片选择应用程序，只是一种方法是必需的。 这定义在[ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) .NET 标准库的示例代码中的接口：
 
 ```csharp
 namespace DependencyServiceSample
@@ -261,7 +261,7 @@ namespace DependencyServiceSample.UWP
 
 ## <a name="implementing-in-shared-code"></a>在共享代码中实现
 
-现在，为每个平台实现了接口，常见的可移植类库中的应用程序可以充分利用它。
+现在，为每个平台实现了接口，.NET 标准库中的应用程序可以充分利用它。
 
 [ `App` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/DependencyServiceSample.cs)类创建`Button`选取照片：
 

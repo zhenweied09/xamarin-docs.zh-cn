@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: cf0e7cab0c879f8fb286c87b2aaadab2dc1453f8
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="localization"></a>本地化
 
@@ -32,7 +32,7 @@ _可以使用.NET 资源文件本地化 Xamarin.Forms 应用。_
 
 TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/)但是由于生成系统的限制的资源文件不会获得**。 designer.cs**生成这违反能够访问的文件在代码中强类型的已翻译的字符串。
 
-此文档的其余部分都与使用 Xamarin.Forms PCL 模板项目。
+此文档的其余部分都与使用 Xamarin.Forms.NET 标准库模板的项目。
 
 ## <a name="globalizing-xamarinforms-code"></a>全球化 Xamarin.Forms 代码
 
@@ -46,7 +46,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 ### <a name="adding-resources"></a>将资源添加
 
-全球化 Xamarin.Forms PCL 应用程序的第一步添加可用于将使用的所有文本都存储在应用程序的 RESX 资源文件。 我们需要添加包含默认的文本，RESX 文件，然后添加我们想要支持每种语言的其他 RESX 文件。
+全球化 Xamarin.Forms.NET 标准库应用程序的第一步添加可用于将使用的所有文本都存储在应用程序的 RESX 资源文件。 我们需要添加包含默认的文本，RESX 文件，然后添加我们想要支持每种语言的其他 RESX 文件。
 
 #### <a name="base-language-resource"></a>基本语言资源
 
@@ -98,7 +98,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 -----
 
-此更改是可选的并且仅需要如果你想要跨不同的程序集引用本地化的字符串 （例如，如果将这些 RESX 文件置于不同的程序集到你的代码）。 本主题的示例离开字符串`internal`因为它们在同一 Xamarin.Forms PCL 程序集使用这些定义。
+此更改是可选的并且仅需要如果你想要跨不同的程序集引用本地化的字符串 （例如，如果将这些 RESX 文件置于不同的程序集到你的代码）。 本主题的示例离开字符串`internal`因为它们在同一 Xamarin.Forms.NET 标准库程序集使用这些定义。
 
 你只需以在基的 RESX 文件上设置自定义工具; 如上所示不需要设置*任何*以下各节所述的特定于语言的 RESX 文件上的生成工具。
 
@@ -559,7 +559,7 @@ namespace UsingResxLocalization.Android
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-展开可移植类库 (PCL) 项目中的属性节点并双击**AssemblyInfo.cs**文件。 将以下行添加到要将非特定语言资源程序集语言设置为英语的文件：
+展开.NET 标准库项目中的属性节点并双击**AssemblyInfo.cs**文件。 将以下行添加到要将非特定语言资源程序集语言设置为英语的文件：
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]

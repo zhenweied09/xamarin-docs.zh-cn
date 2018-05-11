@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>自定义项
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-`MyEntry`控件在可移植类库 (PCL) 项目中创建，只需[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)控件。 自定义控件将执行在自定义呈现器，因此没有其他的实现需要在`MyEntry`控件。
+`MyEntry`控件创建在.NET 标准的类库项目中，只需[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)控件。 自定义控件将执行在自定义呈现器，因此没有其他的实现需要在`MyEntry`控件。
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>使用自定义控件
 
-`MyEntry`控件可以引用 XAML 中 PCL 项目中通过声明其位置的命名空间和控制元素上使用的命名空间前缀。 下面的代码示例演示如何`MyEntry`控件可供 XAML 页：
+`MyEntry`控件可以引用 XAML 中的标准.NET 库项目中通过声明其位置的命名空间和控制元素上使用的命名空间前缀。 下面的代码示例演示如何`MyEntry`控件可供 XAML 页：
 
 ```xaml
 <ContentPage ...

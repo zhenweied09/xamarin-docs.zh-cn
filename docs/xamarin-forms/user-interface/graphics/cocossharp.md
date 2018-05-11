@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/03/2016
-ms.openlocfilehash: 5fcc3405780e0c5e8a0e8d32caf35abf59808c8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7ce541134e6db9a26699f96ab3114ced2ad22244
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>使用 Xamarin.Forms 中 CocosSharp
 
@@ -53,13 +53,13 @@ Xamarin.Forms 基于本机、 特定于平台的 UI 系统。 例如， [ `Butto
 ## <a name="adding-the-cocossharp-nuget-packages"></a>添加 CocosSharp Nuget 包
 
 在使用之前 CocosSharp，开发人员需要少量添加内容到其 Xamarin.Forms 项目。
-本指南假定 Xamarin.Forms 项目与 iOS、 Android 和 PCL 项目。
-所有代码将用 PCL 项目中;但是，库必须添加到 iOS 和 Android 项目。
+本指南假定具有 iOS、 Android 和.NET 标准的 Xamarin.Forms 项目类库项目。
+所有代码都将写入标准.NET 类库项目中; 中但是，库必须添加到 iOS 和 Android 项目。
 
 CocosSharp Nuget 包包含所有所需创建 CocosSharp 对象的对象。
 CocosSharp.Forms nuget 包包含`CocosSharpView`类，该类用于托管 CocosSharp Xamarin.Forms 中。
 添加**CocosSharp.Forms** NuGet 和**CocosSharp**将也会自动添加。
-若要执行此操作，右键单击 PCL<span class="UIItem">包</span>文件夹，然后选择<span class="UIItem">添加包...</span>.输入搜索词<span class="UIItem">CocosSharp.Forms</span>，选择<span class="UIItem">Xamarin.Forms 的 CocosSharp</span>，然后单击<span class="UIItem">添加包</span>。
+若要执行此操作，右键单击<span class="UIItem">包</span>文件夹中的标准.NET 类库项目和选择<span class="UIItem">添加包...</span>.输入搜索词<span class="UIItem">CocosSharp.Forms</span>，选择<span class="UIItem">Xamarin.Forms 的 CocosSharp</span>，然后单击<span class="UIItem">添加包</span>。
 
 ![](cocossharp-images/image1.png "添加包对话框")
 
@@ -198,7 +198,7 @@ void HandleViewCreated (object sender, EventArgs e)
 
 只有一个`CCScene`一次可以处于活动状态。 大多数游戏使用多个`CCLayer`到排序内容，但我们的应用程序的实例使用只有一个。 同样，大多数游戏使用多个视觉对象，但我们将只能有一个我们的应用程序。 更详细讨论在找不到可视层次结构 CocosSharp [BouncingGame 演练](~/graphics-games/cocossharp/bouncing-game.md)。
 
-最初`GameScene`类将几乎是空-我们只需将创建它以满足中的引用`HomePage`。 将新类添加到名为你 PCL `GameScene`。 它应从继承`CCScene`类，如下所示：
+最初`GameScene`类将几乎是空-我们只需将创建它以满足中的引用`HomePage`。 将新类添加到名为.NET 标准库项目`GameScene`。 它应从继承`CCScene`类，如下所示：
 
 
 ```csharp
@@ -222,7 +222,7 @@ GameScene gameScene;
 
 现在，我们可以编译我们的项目，并运行它以查看 CocosSharp 运行。 我们尚未添加任何内容到我们`GameScene,`因此我们的页面的上半是黑色 – CocosSharp 场景的默认颜色：
 
-![](cocossharp-images/image5.png "Blank GameScene")
+![](cocossharp-images/image5.png "空白 GameScene")
 
 <a name="4" />
 

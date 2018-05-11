@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d06c3f95f55edb4870279bfc7d5326be4af4b3bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="getting-started-with-datapages"></a>Getting Started with DataPages
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="1-add-nuget-packages"></a>1.添加 NuGet 包
 
-将这些 Nuget 包添加到你的 Xamarin.Forms PCL 和应用程序项目：
+向 Xamarin.Forms.NET 标准库和应用程序项目中添加这些 Nuget 包：
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
@@ -135,7 +135,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 [![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png#lightbox "DataPages 示例应用程序")
 
-这样做的原因的预建的样式**"事件"**浅色主题 Nuget 包中存在并且具有与数据源 （如匹配的样式定义 "标题"、"映像"、"演示器"）。
+这样做的原因的预建的样式 **"事件"** 浅色主题 Nuget 包中存在并且具有与数据源 （如匹配的样式定义 "标题"、"映像"、"演示器"）。
 
 "事件"`StyleClass`旨在显示`ListDataPage`具有自定义控件`CardView`控制，它是在中定义的 Xamarin.Forms.Pages。 `CardView`控件具有三个属性： `ImageSource`， `Text`，和`Detail`。 主题是硬编码将绑定数据源的三个字段 （来自 JSON 文件中） 以显示这些属性。
 

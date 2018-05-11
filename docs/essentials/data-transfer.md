@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 数据传输
 description: DataTransfer 类可让应用程序共享数据，例如向其他应用程序在设备上的文本和 web 链接。
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6c6521c9bacd7b3e9da67165d2d271f5a40e4d7a
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
+ms.openlocfilehash: baec3bdd89cb98d7595a524b6b9c4263ca18aa41
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials 数据传输
 

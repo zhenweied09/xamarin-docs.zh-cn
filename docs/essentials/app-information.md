@@ -2,15 +2,14 @@
 title: Xamarin.Essentials 应用程序信息
 description: AppInfo 类提供有关你的应用程序信息。
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 5b235fdeb666c3f8f2c1b52a9691c931724ce2b8
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
+ms.openlocfilehash: 32e3eb8fab719540e4c9ffec4e57f5510c10e3f5
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials 应用程序信息
 

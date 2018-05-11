@@ -6,12 +6,12 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e254aa14f5889cee6b5bee452f5275fd579eb8fc
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: 9bb368ca72909489ca267794035a4c4d0883f109
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 深度解析
 
@@ -54,7 +54,7 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 这些项目如下：
 
-- Phoneword - 此项目是可移植类库 (PCL) 项目，其中包含所有共享代码和共享 UI。
+- Phoneword - 此项目是 .NET Standard 库项目，其中包含所有共享代码和共享 UI。
 - Phoneword.Droid - 此项目包含 Android 特定代码，是 Android 应用程序的入口点。
 - Phoneword.iOS - 此项目包含 iOS 特定代码，是 iOS 应用程序的入口点。
 
@@ -94,7 +94,7 @@ Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方式。 共享代码通常位于可移植类库 (PCL) 中，平台特定应用程序使用此共享代码。 下图概要演示了 Phoneword 应用程序的这种关系：
+Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方式。 共享代码通常位于 .NET Standard 库中，平台特定应用程序将使用此共享代码。 下图概要演示了 Phoneword 应用程序的这种关系：
 
 ![](deepdive-images/xs/architecture.png "Phoneword 体系结构")
 

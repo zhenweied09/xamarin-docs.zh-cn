@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4ae3b42c5c926749310da6e36b6f4e9754d398c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3807ac6a91d3bf650922a01d9111dc34513d62b3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>创建 XAML 标记扩展
 
@@ -116,7 +116,7 @@ public class HslColorExtension : IMarkupExtension<Color>
 
 请注意，当`HslColorExtension`XML 的标记，四个属性被设置为属性，但当出现大括号之间时，由不带引号的逗号分隔的四个属性。 默认值`H`， `S`，和`L`为 0 和的默认值`A`为 1，因此可以省略这些属性，如果你希望它们设置为默认值。 最后一个示例演示的示例，亮度是 0，它通常会导致黑色，但 alpha 通道为 0.5，因此它是半双工透明的将显示灰色页上的白色背景：
 
-[![HSL Color Demo](creating-images/hslcolordemo-small.png "HSL Color Demo")](creating-images/hslcolordemo-large.png#lightbox "HSL Color Demo")
+[![HSL 颜色演示](creating-images/hslcolordemo-small.png "HSL 颜色演示")](creating-images/hslcolordemo-large.png#lightbox "HSL 颜色演示")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>用于访问位图标记扩展
 
@@ -151,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` 如果 XAML 文件需要访问图像文件存储为可移植类库项目中嵌入的资源，非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法需要一个完全限定的资源名，它包含程序集名称、 文件夹的名称，以及用句点分隔的文件名。 `ImageResourceExtension`不需要的程序集名称部分因为它获取使用反射的程序集名称，并且将添加到前`Source`属性。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着此 XAML 的资源扩展不能是外部的库的一部分，除非的映像也是在库中的程序集进行调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded_images)访问位图存储为嵌入的资源的详细信息的文章。) 
+`ImageResourceExtension` 如果 XAML 文件需要访问图像文件存储为在.NET 标准的类库项目中嵌入的资源，非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法需要一个完全限定的资源名，它包含程序集名称、 文件夹的名称，以及用句点分隔的文件名。 `ImageResourceExtension`不需要的程序集名称部分因为它获取使用反射的程序集名称，并且将添加到前`Source`属性。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着此 XAML 的资源扩展不能是外部的库的一部分，除非的映像也是在库中的程序集进行调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded_images)访问位图存储为嵌入的资源的详细信息的文章。) 
 
 尽管`ImageResourceExtension`需要`Source`要设置属性`Source`属性在属性中指定为类的内容的属性。 这意味着，`Source=`在大括号中的表达式的一部分，则可以省略。 在**映像资源演示**页上，`Image`元素提取的文件夹名称以及用句点分隔的文件名使用的两个映像：
 

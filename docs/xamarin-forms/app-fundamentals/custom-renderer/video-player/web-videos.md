@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8326c142207e90f9b7d4bced7effd88ec88d8fa8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 322ae03fc813d180a6678f63b04488a17705523d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="playing-a-web-video"></a>播放 Web 视频
 
@@ -120,7 +120,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-处理类型的对象`ResourceVideoSource`文章中介绍了[加载应用程序资源视频](loading-resources.md)。 `VideoPlayer`类具有任何工具加载存储为可移植类库中的资源的视频文件。
+处理类型的对象`ResourceVideoSource`文章中介绍了[加载应用程序资源视频](loading-resources.md)。 `VideoPlayer`类具有任何工具加载为.NET 标准库中的资源存储的视频文件。
 
 `FileVideoSource`类用于从设备的视频库访问视频文件。 单个属性的类型也是`string`:
 

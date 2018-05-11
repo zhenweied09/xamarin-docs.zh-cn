@@ -7,11 +7,11 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 95c023d702d165b7a8a0ba392b2f87af58bfae07
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 6180eb61e7850b7739c5514461796fb0aacbc4ff
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="finger-painting"></a>手指绘制
 
@@ -23,7 +23,7 @@ _使用您的手指在画布上绘制。_
 
 Xamarin.Forms 中的触摸支持不允许在屏幕上，跟踪各个指，以便在已开发 Xamarin.Forms 触摸跟踪效果以提供其他触摸支持。 文章中介绍了这种效果[**将事件调用从效果**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)。 示例程序[**触摸跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)将包括使用 SkiaSharp，包括 finger-painting 程序的两个页。
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括此触摸跟踪事件。 可移植类库项目包括`TouchEffect`类，`TouchActionType`枚举，`TouchActionEventHandler`委托，委托和`TouchActionEventArgs`类。 每个平台项目包括`TouchEffect`该平台类; iOS 项目还包含`TouchRecognizer`类。
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括此触摸跟踪事件。 标准.NET 库项目包括`TouchEffect`类，`TouchActionType`枚举，`TouchActionEventHandler`委托，委托和`TouchActionEventArgs`类。 每个平台项目包括`TouchEffect`该平台类; iOS 项目还包含`TouchRecognizer`类。
 
 **手指绘制**页面**SkiaSharpFormsDemos**是手指绘制的简化的实现。 不允许选择颜色或描边宽度，则具有清除画布上，没有办法，而且当然你无法保存你的图片。
 
@@ -168,6 +168,6 @@ public partial class FingerPaintPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [触摸跟踪效果演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [调用从效果的事件](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

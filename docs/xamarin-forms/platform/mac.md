@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: de08e686fc07595b75016b9266f57b12831e9822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0985fb533969a331ceee62f490bae600de9f189c
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mac-platform-setup"></a>Mac 平台安装程序
 
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/04/2018
 
   ![显示如何添加 Cocoa 应用的动画的说明](mac-images/add-macos-proj.gif)
 
-5. 在 Mac 项目中，右键单击**包 > 添加包...**添加[Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet。 你还应更新到此版本的其他项目。
+5. 在 Mac 项目中，右键单击**包 > 添加包...** 添加[Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet。 你还应更新到此版本的其他项目。
 
-6. 在 Mac 项目中，右键单击**引用**并添加对 Xamarin.Forms 项目 （共享项目或 PCL） 的引用。
+6. 在 Mac 项目中，右键单击**引用**并添加对 Xamarin.Forms 项目 （共享项目或标准.NET 类库项目） 的引用。
 
   ![添加对 Xamarin.Forms 共享的代码项目的引用](mac-images/references-sml.png)
 

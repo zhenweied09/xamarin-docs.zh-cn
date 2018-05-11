@@ -5,12 +5,12 @@ ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/02/2018
-ms.openlocfilehash: ae4d5b0b8cd384a11d130bc9258894e1cf4cfa36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/09/2018
+ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>演练-在 Android 中使用触摸
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/04/2018
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
     {
         string message;
-        switch (touchEventArgs.Event.Action & MotionEventArgs.Mask)
+        switch (touchEventArgs.Event.Action & MotionEventActions.Mask)
         {
             case MotionEventActions.Down:
             case MotionEventActions.Move:
@@ -344,13 +344,11 @@ ms.lasthandoff: 04/04/2018
 
     现在，在屏幕上，绘制一个复选标记和显示位图应如下所示，在下一步的屏幕截图所示：
 
-    [![绘制复选标记](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
-    [![识别复选标记](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![识别绘制复选标记，复选标记](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
     最后，在屏幕上绘制 scribble。 复选框应将更改回其原始映像，这些屏幕截图所示：
 
-    [![在屏幕上 scribble](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
-    [![显示原始图像](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
+    [![显示在屏幕上，原始图像的 scribble](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 你已经了解如何将触控和手势中使用 Xamarin.Android 的 Android 应用程序进行集成。
 

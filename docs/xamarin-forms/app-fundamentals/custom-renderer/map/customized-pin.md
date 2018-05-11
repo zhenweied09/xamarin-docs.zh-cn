@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 04d3d99a5d85dd77c93e9b926e8952cc3d8a771e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-map-pin"></a>自定义地图 Pin
 
@@ -47,7 +47,7 @@ public class CustomMap : Map
 }
 ```
 
-`CustomMap`控制在可移植类库 (PCL) 项目中创建和定义用于自定义地图的 API。 自定义地图公开`CustomPins`表示的集合的属性`CustomPin`都将由每个平台上本机地图控件呈现的对象。 `CustomPin`类下面的代码示例中所示：
+`CustomMap`控制标准.NET 类库项目中创建和定义用于自定义地图的 API。 自定义地图公开`CustomPins`表示的集合的属性`CustomPin`都将由每个平台上本机地图控件呈现的对象。 `CustomPin`类下面的代码示例中所示：
 
 ```csharp
 public class CustomPin : Pin
@@ -62,7 +62,7 @@ public class CustomPin : Pin
 
 ## <a name="consuming-the-custom-map"></a>使用自定义地图
 
-`CustomMap`控件可以引用 XAML 中 PCL 项目中通过声明其位置的命名空间和自定义地图控件上使用的命名空间前缀。 下面的代码示例演示如何`CustomMap`控件可供 XAML 页：
+`CustomMap`控件可以引用 XAML 中的标准.NET 库项目中通过声明其位置的命名空间和自定义地图控件上使用的命名空间前缀。 下面的代码示例演示如何`CustomMap`控件可供 XAML 页：
 
 ```xaml
 <ContentPage ...
@@ -322,7 +322,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-此方法打开 web 浏览器并导航到存储中的地址`CustomMKAnnotationView.Url`属性。 请注意，在创建时已定义地址`CustomPin`PCL 项目中的集合。
+此方法打开 web 浏览器并导航到存储中的地址`CustomMKAnnotationView.Url`属性。 请注意，在创建时已定义地址`CustomPin`.NET 标准的类库项目中的集合。
 
 <a name="Deselecting_the_Annotation" />
 
@@ -499,7 +499,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-此方法打开 web 浏览器并导航到存储中的地址`Url`属性检索到`CustomPin`实例`Marker`。 请注意，在创建时已定义地址`CustomPin`PCL 项目中的集合。
+此方法打开 web 浏览器并导航到存储中的地址`Url`属性检索到`CustomPin`实例`Marker`。 请注意，在创建时已定义地址`CustomPin`.NET 标准的类库项目中的集合。
 
 有关自定义的详细信息`MapView`实例，请参阅[地图 API](~/android/platform/maps-and-location/maps/maps-api.md)。
 
@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-此方法打开 web 浏览器并导航到存储中的地址`Url`属性`CustomPin`实例。 请注意，在创建时已定义地址`CustomPin`PCL 项目中的集合。
+此方法打开 web 浏览器并导航到存储中的地址`Url`属性`CustomPin`实例。 请注意，在创建时已定义地址`CustomPin`.NET 标准的类库项目中的集合。
 
 有关自定义的详细信息`MapControl`实例，请参阅[地图和位置概述](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx)MSDN 上。
 

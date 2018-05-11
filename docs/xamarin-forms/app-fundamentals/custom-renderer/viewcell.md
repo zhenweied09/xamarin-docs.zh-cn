@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-`NativeCell`类将在可移植类库 (PCL) 项目中创建并定义自定义单元格的 API。 自定义单元格公开`Name`， `Category`，和`ImageFilename`可以显示通过数据绑定的属性。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+`NativeCell`类将创建在.NET 标准的类库项目中，并定义自定义单元格的 API。 自定义单元格公开`Name`， `Category`，和`ImageFilename`可以显示通过数据绑定的属性。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>使用自定义单元格
 
-`NativeCell`自定义单元格可以引用 Xaml 中 PCL 项目中通过声明其位置的命名空间和自定义单元格元素上使用的命名空间前缀。 下面的代码示例演示如何`NativeCell`自定义单元格可供 XAML 页：
+`NativeCell`自定义单元格可以引用 Xaml 中的标准.NET 库项目中通过声明其位置的命名空间和自定义单元格元素上使用的命名空间前缀。 下面的代码示例演示如何`NativeCell`自定义单元格可供 XAML 页：
 
 ```xaml
 <ContentPage ...

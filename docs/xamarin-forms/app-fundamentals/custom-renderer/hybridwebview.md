@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-`HybridWebView`自定义控件在可移植类库 (PCL) 项目中创建并定义控件以下 API:
+`HybridWebView`自定义控件在标准.NET 类库项目中创建并定义控件以下 API:
 
 - A`Uri`属性，指定要加载的网页的地址。
 - A`RegisterAction`方法是否注册`Action`与该控件。 将从 JavaScript 中通过引用的 HTML 文件包含调用的已注册的操作`Uri`属性。
@@ -85,7 +85,7 @@ public class HybridWebView : View
 
 ## <a name="consuming-the-hybridwebview"></a>使用 HybridWebView
 
-`HybridWebView`自定义控件可以引用 XAML 中 PCL 项目中通过声明其位置的命名空间和自定义控件上使用的命名空间前缀。 下面的代码示例演示如何`HybridWebView`自定义控件可供 XAML 页：
+`HybridWebView`自定义控件可以引用 XAML 中的标准.NET 库项目中通过声明其位置的命名空间和自定义控件上使用的命名空间前缀。 下面的代码示例演示如何`HybridWebView`自定义控件可供 XAML 页：
 
 ```xaml
 <ContentPage ...

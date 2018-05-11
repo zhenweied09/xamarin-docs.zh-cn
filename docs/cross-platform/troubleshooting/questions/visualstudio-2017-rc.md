@@ -4,15 +4,14 @@ title: 可以通过 Xamarin 使用 Visual Studio 自 2017 年 1 候选发布版�
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8E752F36-F73A-4EFC-9F82-4E18FDE1C9E2
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: cfad562bfbfbc3985efa6252aa8eb9b6559fcc41
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 4c93653793c7c8cce0d2257107097c89f73fc726
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="can-i-use-visual-studio-2017-release-candidate-with-xamarin"></a>可以通过 Xamarin 使用 Visual Studio 自 2017 年 1 候选发布版本？
 
@@ -31,7 +30,7 @@ ms.lasthandoff: 04/06/2018
 
 * 选择**Xamarin**作为新的一部分的组件**Visual Studio 安装程序**
 
-  [![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 2017 RC Installer Screen")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
+  [![](visualstudio-2017-rc-images/install1-sml.png "Visual Studio 自 2017 年 1 RC 安装程序屏幕")](visualstudio-2017-rc-images/install1-orig.png#lightbox)
 
 这将安装 Xamarin.iOS 和 Xamarin.Android 开发的 Visual Studio 扩展。
 

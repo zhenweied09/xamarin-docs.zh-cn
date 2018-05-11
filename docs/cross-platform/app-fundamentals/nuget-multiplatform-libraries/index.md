@@ -3,15 +3,14 @@ title: NuGet 项目 (Nugetizer 3000)
 description: 自动创建 NuGet 程序包，以在使用 Nugetizer 3000 的平台间共享代码 ！
 ms.prod: xamarin
 ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2017
-ms.openlocfilehash: 2ef8bfc15aaa2e66683c38584f05b94d20a2a9c3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 60c78385d0ffd2fbbdd7af5a4ef4af63e30feb9f
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="nuget-projects-nugetizer-3000"></a>NuGet 项目 (Nugetizer 3000)
 
@@ -56,7 +55,7 @@ _自动创建 NuGet 程序包，以在使用 Nugetizer 3000 的平台间共享�
 
 阅读更多有关[手动为 Xamarin 创建 NuGets](~/cross-platform/app-fundamentals/nuget-manual.md)和如何[应用中包含 NuGet 包](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
 
-Microsoft 的[NuGet 文档](https://docs.microsoft.com/nuget/)上包含更多详细的信息**.nupkg**格式和使用 Visual Studio 中的 NuGet 包。
+Microsoft 的[NuGet 文档](https://docs.microsoft.com/nuget/)上包含更多详细的信息 **.nupkg**格式和使用 Visual Studio 中的 NuGet 包。
 
 NuGet 包项目的设计讨论 （也称为 NuGetizer 3000) 位于[NuGet GitHub 存储库](https://github.com/NuGet/Home/wiki/NuGetizer-3000)。
 

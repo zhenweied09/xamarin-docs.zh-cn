@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-a-custom-theme"></a>创建自定义主题
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/16/2018
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-pcl-or-shared-project"></a>PCL 或共享项目中的 C# 代码
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>标准.NET 类库项目或共享项目中的 C# 代码
 
 用于创建轮角代码`BoxView`使用[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
 使用应用的圆角半径`BindableProperty`并通过应用实现[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。 影响需要特定于平台的代码中[iOS](#ios)和[Android](#android)项目 （下面显示）。

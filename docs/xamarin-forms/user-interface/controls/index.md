@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: a9fb90794ec74c46019fd2b4f41d90a2635909cd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb6620e160af4c2c844fa694649c95abdac123f9
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="controls-reference"></a>控件引用
 
 _用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。_
 
-Xamarin.Forms 应用程序的可视界面将构造的对象映射到每个目标平台的本机控件。 这样，特定于平台的应用程序适用于 iOS、 Android 和通用 Windows 平台，若要使用 Xamarin.Forms 代码中包含[可移植类库](~/cross-platform/app-fundamentals/pcl.md)、 [.NET 标准库](~/cross-platform/app-fundamentals/net-standard.md)，或[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
+Xamarin.Forms 应用程序的可视界面将构造的对象映射到每个目标平台的本机控件。 这样，特定于平台的应用程序适用于 iOS、 Android 和通用 Windows 平台，若要使用 Xamarin.Forms 代码中包含[.NET 标准库](~/cross-platform/app-fundamentals/net-standard.md)或[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
 
 用于创建 Xamarin.Forms 应用程序的用户界面的四个主控制组显示在以下四个文章中：
 
-- [**Pages**](pages.md)
+- [**页**](pages.md)
 - [**布局**](layouts.md)
-- [**Views**](views.md)
-- [**Cells**](cells.md)
+- [**视图**](views.md)
+- [**单元格**](cells.md)
 
 Xamarin.Forms 页通常占用整个屏幕。 此页通常包含一种布局，其中包含视图和可能是其他布局。 单元格都使用门户中的专用的组件[ `TableView` ](views.md#tableView)和[ `ListView` ](views.md#listView)。
 

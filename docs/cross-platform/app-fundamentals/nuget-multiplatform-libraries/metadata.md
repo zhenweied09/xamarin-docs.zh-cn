@@ -3,15 +3,14 @@ title: 编辑 NuGet 元数据
 description: 使用项目选项编辑的多平台的库的 NuGet 元数据
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d30f564d54b96d358d37059f9dababaf8f3314e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: dc2bd64339aa3deacd640cc982af5ee52d76ff07
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="editing-nuget-metadata"></a>编辑 NuGet 元数据
 

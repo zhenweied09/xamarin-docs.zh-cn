@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 41bd79b22aa193dd5303847997bc07e8e8d12e58
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 259be743a706c9316e2e275ff305a0fe5ad97906
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>拼写检查使用必应拼写检查 API
 
@@ -90,7 +90,7 @@ async Task<string> SendRequestAsync(string url)
 }
 ```
 
-此方法可通过将 API 密钥添加的值为生成 GET 请求`Ocp-Apim-Subscription-Key`标头。 然后将 GET 请求发送到`SpellCheck`API，使用请求 URL 指定的文本要转换和拼写检查模式。 然后将对响应进行读取，并将其返回到调用方法。
+此方法可发送 GET 请求到`SpellCheck`API，使用请求 URL 指定的文本要转换和拼写检查模式。 然后将对响应进行读取，并将其返回到调用方法。
 
 `SpellCheck` API 将在响应中，提供该请求是有效的表示请求成功，请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 响应对象的列表，请参阅[响应对象](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects)。
 

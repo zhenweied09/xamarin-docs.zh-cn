@@ -1,25 +1,27 @@
 ---
 title: 第 1 部分。 Getting Started with XAML
-description: 在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。 XAML 文件始终与程序关联的标记中提供的代码的支持的 C# 代码文件。 在一起，这两个文件参与包含子视图和属性初始化的新类定义。 在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。
+description: 在 Xamarin.Forms 应用中，XAML 主要用于定义 visual 页和一同使用的代码隐藏文件的内容。
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 04/10/2018
-ms.openlocfilehash: bc535160816ad186baaa5e802eceb6ae40347d75
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/10/2018
+ms.openlocfilehash: 5883564841a4ef0e19518dd3b12ee00fe35ed778
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 Getting Started with XAML
 
-_在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。XAML 文件始终与程序关联的标记中提供的代码的支持的 C# 代码文件。在一起，这两个文件参与包含子视图和属性初始化的新类定义。在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。_
+_在 Xamarin.Forms 应用中，XAML 主要用于定义 visual 页和一同使用 C# 隐藏代码文件的内容。_
+
+代码隐藏文件提供的标记的代码的支持。 在一起，这两个文件参与包含子视图和属性初始化的新类定义。 在 XAML 文件中，类和属性引用与 XML 元素和属性，并建立标记和代码之间的链接。
 
 ## <a name="creating-the-solution"></a>创建解决方案
 
-若要开始编辑你的第一个 XAML 文件，使用 Visual Studio 或 Visual Studio for Mac，以创建新的 Xamarin.Forms 解决方案。 （选择对应于你的环境的此页顶部的选项卡。）
+若要开始编辑你的第一个 XAML 文件，使用 Visual Studio 或 Visual Studio for Mac，以创建新的 Xamarin.Forms 解决方案。 （选择下面对应于你的环境的选项卡。）
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -29,13 +31,13 @@ _在 Xamarin.Forms 应用中，XAML 主要用于定义页的可视化内容。XA
 
 选择的解决方案的位置，为其提供的名称**XamlSamples** （或你希望的任何内容），然后按**确定**。
 
-在下一个屏幕上，选择**空白应用程序**模板， **Xamarin.Forms** UI 技术和**可移植类库 (PCL)** 代码共享策略：
+在下一个屏幕上，选择**空白应用程序**模板和 **.NET 标准**代码共享策略：
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "新建应用程序对话框")
 
 Press **OK**. 
 
-在解决方案中创建四个项目： **XamlSamples**可移植类库 (PCL)、 **XamlSamples.Android**， **XamlSamples.iOS**，和通用 Windows平台解决方案**XamlSamples.UWP**。
+在解决方案中创建四个项目： **XamlSamples** .NET 标准库， **XamlSamples.Android**， **XamlSamples.iOS**，和通用 Windows 平台解决方案， **XamlSamples.UWP**。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -45,7 +47,7 @@ Press **OK**.
 
 按**下一步**。
 
-在下一步的对话框中，为项目指定名称的**XamlSamples** （或你希望的任何内容）。 请确保**使用可移植类库**单选按钮处于选中状态，并且**使用 XAML 的用户界面文件**选中：
+在下一步的对话框中，为项目指定名称的**XamlSamples** （或你希望的任何内容）。 请确保**使用.NET 标准**单选按钮处于选中状态：
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "新建项目对话框 2")
 
@@ -57,17 +59,17 @@ Press **OK**.
 
 按**创建**
 
-在解决方案中创建三个项目： **XamlSamples**可移植类库 (PCL)、 **XamlSamples.Android**，和**XamlSamples.iOS**。 
+在解决方案中创建三个项目： **XamlSamples** .NET 标准库， **XamlSamples.Android**，和**XamlSamples.iOS**。 
 
 -----
 
 在创建后**XamlSamples**解决方案，你可能想要通过为解决方案启动项目，选择各种平台项目中测试你的开发环境，并且通过创建构建和部署简单的应用程序在 phone 仿真程序或实际设备上的项目模板中。
 
-除非你需要编写特定于平台的代码，共享**XamlSamples** PCL 项目是其中你将会花几乎所有编程时间。 这些文章不将该项目外风险。
+除非你需要编写特定于平台的代码，共享**XamlSamples** .NET 标准库项目是其中你将会花几乎所有编程时间。 这些文章不将该项目外风险。
 
 ### <a name="anatomy-of-a-xaml-file"></a>XAML 文件的剖析
 
-在**XamlSamples**可移植类库是成对的文件具有以下名称：
+在**XamlSamples** .NET 标准库是一对具有以下名称的文件：
 
 - **App.xaml**，XAML 文件中; 和
 - **App.xaml.cs**，C#*代码隐藏*与 XAML 文件相关联的文件。
@@ -76,12 +78,10 @@ Press **OK**.
 
 同时**App.xaml**和**App.xaml.cs**贡献名为的类`App`派生自`Application`。 与 XAML 文件的大多数其他类派生自的类参与`ContentPage`; 这些文件使用 XAML 定义整个页面的可视化内容。 这是中的其他两个文件的 true **XamlSamples**项目：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 - **MainPage.xaml**，XAML 文件中; 和
 - **MainPage.xaml.cs**，C# 代码隐藏文件。
 
-**MainPage.xaml**文件如下所示：
+**MainPage.xaml** （尽管可能稍有不同的格式设置），则文件类似如下所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -89,56 +89,27 @@ Press **OK**.
              xmlns:local="clr-namespace:XamlSamples"
              x:Class="XamlSamples.MainPage">
 
-    <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin Forms!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+    </StackLayout>
 
 </ContentPage>
 ```
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-- **XamlSamplesPage.xaml**，XAML 文件中; 和
-- **XamlSamplesPage.xaml.cs**，C# 代码隐藏文件。
-
-**XamlSamplesPage.xaml**文件如下所示：
-
-```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:XamlSamples" 
-             x:Class="XamlSamples.XamlSamplesPage">
-
-    <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
-</ContentPage>
-```
-
------
 
 两个 XML 命名空间 ( `xmlns`) 声明将引用 Uri，看似 Xamarin 的 web 站点上的第一个和第二个 on Microsoft 的。 你不必费神检查到哪个这些 Uri 点。 无需进行任何存在。 它们是只需通过 Xamarin 和 Microsoft，拥有的 Uri 和它们基本上函数与版本标识符。
 
 第一个 XML 命名空间声明意味着在没有任何前缀的 XAML 文件内定义的标记例如指中 Xamarin.Forms，这类`ContentPage`。 第二个命名空间声明定义的前缀`x`。 这使用多个元素和属性是固有的 XAML 本身的支持和 XAML 的其他实现。 但是，这些元素和特性都是略有不同，具体取决于嵌入在 URI 中的年份。 Xamarin.Forms 支持 2009 XAML 规范中，但它不是所有。
 
-`local`命名空间声明允许你从 PCL 项目中访问其他类。
+`local`命名空间声明，可从.NET 标准库项目中访问其他类。
 
 在该第一个标记，末尾`x`前缀用于一个名为特性`Class`。 因为这一点的用法`x`前缀是几乎通用的 XAML 命名空间，XAML 特性，如`Class`几乎总是称为`x:Class`。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
 `x:Class`特性指定完全限定的.NET 类名称：`MainPage`类`XamlSamples`命名空间。 这意味着此 XAML 文件定义一个名为的新类`MainPage`中`XamlSamples`派生自的命名空间`ContentPage`— 在其中标记`x:Class`特性随即显示。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-`x:Class`特性指定完全限定的.NET 类名称：`XamlSamplesPage`类`XamlSamples`命名空间。 这意味着此 XAML 文件定义一个名为的新类`XamlSamplesPage`中`XamlSamples`派生自的命名空间`ContentPage`— 在其中标记`x:Class`特性随即显示。
-
------
-
 `x:Class`属性只能出现在一个 XAML 文件以定义派生的 C# 类的根元素。 这是唯一的新 XAML 文件中定义的类。 所有其他 XAML 文件中显示的内容格式而是只需从现有类实例化且已初始化。
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 **MainPage.xaml.cs**文件如下所示 (除了未使用`using`指令):
 
@@ -161,34 +132,7 @@ namespace XamlSamples
 
 Visual Studio 在生成项目时分析 XAML 文件生成的 C# 代码文件。 如果你查看**XamlSamples\XamlSamples\obj\Debug**目录中，你将找到名为的文件**XamlSamples.MainPage.xaml.g.cs**。 G 代表生成。 这是其他分部类定义`MainPage`，它包含的定义`InitializeComponent`从调用的方法`MainPage`构造函数。 这些两个部分`MainPage`类定义然后可在一起编译。 具体取决于是否或不编译的 XAML，可执行文件中嵌入的 XAML 文件或二进制形式的 XAML 文件。
 
-在运行时，代码中特定平台项目调用`LoadApplication`方法，并向它传递的新实例`App`在 PCL 中的类。 `App`类构造函数实例化`MainPage`。 该类的构造函数调用`InitializeComponent`，后者随后调用`LoadFromXaml`从 PCL 中提取的 XAML 文件 （或其已编译的二进制文件） 的方法。 `LoadFromXaml` 初始化在 XAML 文件中定义的所有对象、 将它们连接在一起父-子关系中，将附加到在 XAML 文件中设置的事件的代码中定义的事件处理程序和作为页面的内容设置对象的结果树。
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-**XamlSamplesPage.xaml.cs**文件如下所示：
-
-```csharp
-using Xamarin.Forms;
-
-namespace XamlSamples
-{
-    public partial class XamlSamplesPage : ContentPage
-    {
-        public XamlSamplesPage()
-        {
-            InitializeComponent();
-        }
-    }
-}
-```
-
-`XamlSamplesPage`类派生自`ContentPage`，但请注意`partial`类定义。 存在提供的应为另一个 C# 文件与另一个分部类定义建议`XamlSamplesPage`，但其中是它？ 那是什么和`InitializeComponent`方法？
-
-适用于 Mac 的 Visual Studio 在生成项目时分析 XAML 文件生成的 C# 代码文件。 如果你查看**XamlSamples\XamlSamples\obj\Debug**目录中，你将找到名为的文件**XamlSamples.XamlSamplesPage.xaml.g.cs**。 G 代表生成。 这是其他分部类定义`XamlSamplesPage`，它包含的定义`InitializeComponent`从调用的方法`XamlSamplesPage`构造函数。  这些两个部分`XamlSamplesPage`类定义然后可在一起编译。 具体取决于是否或不编译的 XAML，可执行文件中嵌入的 XAML 文件或二进制形式的 XAML 文件。
-
-在运行时，代码中特定平台项目调用`LoadApplication`方法，并向它传递的新实例`App`在 PCL 中的类。 `App`类构造函数实例化`XamlSamplesPage`。 该类的构造函数调用`InitializeComponent`，后者随后调用`LoadFromXaml`从 PCL 中提取的 XAML 文件 （或其已编译的二进制文件） 的方法。 `LoadFromXaml` 初始化在 XAML 文件中定义的所有对象、 将它们连接在一起父-子关系中，将附加到在 XAML 文件中设置的事件的代码中定义的事件处理程序和作为页面的内容设置对象的结果树。
-
------
+在运行时，代码中特定平台项目调用`LoadApplication`方法，并向它传递的新实例`App`.NET 标准库中的类。 `App`类构造函数实例化`MainPage`。 该类的构造函数调用`InitializeComponent`，后者随后调用`LoadFromXaml`从.NET 标准库中提取的 XAML 文件 （或其已编译的二进制文件） 的方法。 `LoadFromXaml` 初始化在 XAML 文件中定义的所有对象、 将它们连接在一起父-子关系中，将附加到在 XAML 文件中设置的事件的代码中定义的事件处理程序和作为页面的内容设置对象的结果树。
 
 尽管你通常不需要与生成的代码文件花费多长时间，有时运行时异常会引发代码在生成的文件，因此你应该熟悉它们。
 
@@ -198,39 +142,17 @@ namespace XamlSamples
 
 对于更有趣的视觉对象，你需要的全部是多个有趣的 XAML。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-## <a name="preliminaries"></a>初步操作
-
-若要使文件名称在 Visual Studio 中适用于 Mac 与在 Windows 下运行的 Visual Studio 创建的文件一致，重命名**XamlSamplesPage.xaml**到**MainPage.xaml**，和**XamlSamplesPage.xaml.cs**到**MainPage.xaml.cs**。 在**XamlSamplesPage.xaml**文件中，更改`XamlSamplesPage`到`MainPage`。 在**XamlSamplesPage.xaml.cs**文件中，将两个匹配项的`XamlSamplesPage`到`MainPage`。 在**App.xaml.cs**文件中，将该语句更改
-
-```csharp
-MainPage = new XamlSamplesPage();
-```
-
-更改为：
-
-```csharp
-MainPage = new MainPage();
-```
-
------
-
-程序仍将编译并在继续之前部署的测试。
-
 ## <a name="adding-new-xaml-pages"></a>添加新的 XAML 页面
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** PCL 项目，然后调用**项目 > 添加新项**菜单项。 在左侧的**添加新项**对话框中，选择**Visual C#** 和**Xamarin.Forms**。 从列表中选择**内容页**(不**内容页 (C#)**，这将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage.xaml**:
+若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** .NET 标准库项目，然后调用**项目 > 添加新项**菜单项。 在左侧的**添加新项**对话框中，选择**Visual C#** 和**Xamarin.Forms**。 从列表中选择**内容页**(不**内容页 (C#)**，这将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "添加新项对话框")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** PCL 项目，然后调用**文件 > 新建文件**菜单项。 在左侧的**新文件**对话框中，选择**窗体**左侧，和**窗体内容页 Xaml** (不**窗体内容页**，后者将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage**:
+若要添加其他基于 XAML 的`ContentPage`类到你的项目，选择**XamlSamples** .NET 标准库项目，然后调用**文件 > 新建文件**菜单项。 在左侧的**新文件**对话框中，选择**窗体**左侧，和**窗体内容页 Xaml** (不**窗体内容页**，后者将创建一个仅限代码的页中，或**内容视图**，这不是页)。 例如，为页面提供一个名称， **HelloXamlPage**:
 
 ![](get-started-with-xaml-images/mac/newfiledialog.png "新建文件对话框")
 

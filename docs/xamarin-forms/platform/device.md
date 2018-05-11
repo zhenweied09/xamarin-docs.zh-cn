@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>设备类
 
@@ -155,7 +155,7 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-`Device`类还具有`StartTimer`方法，提供了简单的方法来触发时间相关的任务 （包括 Pcl） 的 Xamarin.Forms 通用代码在正常运行。 传递`TimeSpan`以设置间隔并返回`true`需要运行的计时器或`false`当前调用后将其停止。
+`Device`类还具有`StartTimer`方法，提供了简单的方法来触发时间相关的任务在 Xamarin.Forms 常见代码，包括.NET 标准库正常运行。 传递`TimeSpan`以设置间隔并返回`true`需要运行的计时器或`false`当前调用后将其停止。
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Device.BeginInvokeOnMainThread ( () => {
 
 ## <a name="summary"></a>总结
 
-Xamarin.Forms`Device`类允许细粒度的控制功能和布局上的每个平台基础-甚至共同点代码 （PCL 或共享项目）。
+Xamarin.Forms`Device`类允许细粒度的控制功能和布局上的每个平台基础-甚至共同点代码 （.NET 标准库项目或共享项目）。
 
 
 ## <a name="related-links"></a>相关链接

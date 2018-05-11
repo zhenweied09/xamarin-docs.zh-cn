@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-你将需要其他的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义新的前缀。 若要访问类 PCL 中，共享的应用程序的本地如`AppConstants`，XAML 程序员通常使用前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，是在 C# 中显示的名称`namespace`定义中或在`using`指令：
+你将需要其他的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义新的前缀。 若要访问类本地共享应用程序标准.NET 库，如`AppConstants`，XAML 程序员通常使用前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，是在 C# 中显示的名称`namespace`定义中或在`using`指令：
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-此外可以在 PCL 中引用任何程序集中定义.NET 命名空间的 XML 命名空间的声明。 例如，下面是`sys`前缀标准.NET`System`命名空间，该对话框位于**mscorlib**程序集，其中一次尤为"的 Microsoft 常见对象运行时库，"，但现在意味着"多语言标准常见对象运行时库。" 由于这是另一个程序集，你还必须指定程序集名称，在这种情况下**mscorlib**:
+此外可以在.NET 标准库引用任何程序集中定义.NET 命名空间的 XML 命名空间的声明。 例如，下面是`sys`前缀标准.NET`System`命名空间，该对话框位于**mscorlib**程序集，其中一次尤为"的 Microsoft 常见对象运行时库，"，但现在意味着"多语言标准常见对象运行时库。" 由于这是另一个程序集，你还必须指定程序集名称，在这种情况下**mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

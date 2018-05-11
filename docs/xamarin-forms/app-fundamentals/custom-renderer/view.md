@@ -6,12 +6,12 @@ ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 05/10/2018
+ms.openlocfilehash: 757cd9c0b3b8414b5a8c01af0cf4ffc9b9b8afc4
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-view"></a>实现视图
 
@@ -268,45 +268,50 @@ namespace CustomRenderer.Droid
 下面的代码示例显示了适用于 UWP 的自定义呈现器：
 
 ```csharp
-[assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
+[assembly: ExportRenderer(typeof(CameraPreview), typeof(CameraPreviewRenderer))]
 namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
-        MediaCapture mediaCapture;
-        CaptureElement captureElement;
-        CameraOptions cameraOptions;
-        Application app;
-        bool isPreviewing = false;
+        ...
+        CaptureElement _captureElement;
+        bool _isPreviewing;
 
-        protected override void OnElementChanged (ElementChangedEventArgs<CameraPreview> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<CameraPreview> e)
         {
-            base.OnElementChanged (e);
+            base.OnElementChanged(e);
 
-            if (Control == null) {
+            if (Control == null)
+            {
                 ...
-                captureElement = new CaptureElement ();
-                captureElement.Stretch = Stretch.UniformToFill;
+                _captureElement = new CaptureElement();
+                _captureElement.Stretch = Stretch.UniformToFill;
 
-                InitializeAsync ();
-                SetNativeControl (captureElement);
+                SetupCamera();
+                SetNativeControl(_captureElement);
             }
-            if (e.OldElement != null) {
+            if (e.OldElement != null)
+            {
                 // Unsubscribe
                 Tapped -= OnCameraPreviewTapped;
+                ...
             }
-            if (e.NewElement != null) {
+            if (e.NewElement != null)
+            {
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }
         }
 
-        async void OnCameraPreviewTapped (object sender, TappedRoutedEventArgs e)
+        async void OnCameraPreviewTapped(object sender, TappedRoutedEventArgs e)
         {
-            if (isPreviewing) {
-                await StopPreviewAsync ();
-            } else {
-                await StartPreviewAsync ();
+            if (_isPreviewing)
+            {
+                await StopPreviewAsync();
+            }
+            else
+            {
+                await StartPreviewAsync();
             }
         }
         ...
@@ -314,7 +319,7 @@ namespace CustomRenderer.UWP
 }
 ```
 
-假设`Control`属性是`null`，新`CaptureElement`实例化和`InitializeAsync`调用方法时，它使用`MediaCapture`API 提供相机的预览流。 `SetNativeControl`然后调用方法来分配对引用`CaptureElement`到实例`Control`属性。 `CaptureElement`控件公开`Tapped`处理的事件，`OnCameraPreviewTapped`方法来停止和启动视频预览时它点击。 `Tapped`自定义呈现器是附加到一个新的 Xamarin.Forms 元素，且取消订阅只有元素呈现器附加到更改时订阅事件。
+假设`Control`属性是`null`，新`CaptureElement`实例化和`SetupCamera`调用方法时，它使用`MediaCapture`API 提供相机的预览流。 `SetNativeControl`然后调用方法来分配对引用`CaptureElement`到实例`Control`属性。 `CaptureElement`控件公开`Tapped`处理的事件，`OnCameraPreviewTapped`方法来停止和启动视频预览时它点击。 `Tapped`自定义呈现器是附加到一个新的 Xamarin.Forms 元素，且取消订阅只有元素呈现器附加到更改时订阅事件。
 
 > [!NOTE]
 > 务必停止和释放的对象，它提供对相机沿 UWP 应用程序的访问。 如果不这样做可能会干扰其他应用程序尝试访问设备的照相机。 有关详细信息，请参阅[显示相机预览](/windows/uwp/audio-video-camera/simple-camera-preview-access/)。

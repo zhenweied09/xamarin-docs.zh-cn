@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 24e7f29e42607d4a2c957cf85dad15f659d3618e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-xaml"></a>在 XAML 中的本机视图
 
@@ -74,7 +74,7 @@ _从 iOS、 Android 和通用 Windows 平台的本机视图从 Xamarin.Forms XAM
 Android 小组件构造函数通常需要 Android`Context`对象，如自变量，，这可通过中的静态属性`MainActivity`类。 因此，当在 XAML 中，创建一个 Android 构件`Context`通常必须将对象传递给小组件的构造函数使用`x:Arguments`特性与`x:Static`标记扩展。 有关详细信息，请参阅[将自变量传递到本机视图](#passing_arguments)。
 
 > [!NOTE]
-> 请注意该命名具有的本机视图`x:Name`不能在可移植类库 (PCL) 项目或共享资产项目 (SAP) 中。 执行此操作将生成的本机类型，这将导致编译错误的变量。 但是，本机视图可以包装在`ContentView`实例，并在代码隐藏文件中，检索，前提是正在使用 SAP。 有关详细信息，请参阅[从代码中引用本机视图](#native_view_code)。
+> 请注意该命名具有的本机视图`x:Name`不能在标准.NET 类库项目或共享资产项目 (SAP) 中。 执行此操作将生成的本机类型，这将导致编译错误的变量。 但是，本机视图可以包装在`ContentView`实例，并在代码隐藏文件中，检索，前提是正在使用 SAP。 有关详细信息，请参阅[从代码中引用本机视图](#native_view_code)。
 
 <a name="native_bindings" />
 
@@ -285,7 +285,7 @@ IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，
 
 ## <a name="subclassing-native-views"></a>子类化本机视图
 
-许多 iOS 和 Android 的本机视图不适合用于在 XAML 中实例化，因为它们使用方法，而不是属性，设置控件的。 此问题的解决方案是到子类中定义多个 XAML 友好 API，将使用属性来安装程序控件，并使用独立于平台的事件的包装的本机视图。 已包装的本机视图可以然后放置在共享资产项目 (SAP) 和加上条件编译指令，或放入特定于平台的项目并从 XAML 引用可移植类库 (PCL) 项目中。
+许多 iOS 和 Android 的本机视图不适合用于在 XAML 中实例化，因为它们使用方法，而不是属性，设置控件的。 此问题的解决方案是到子类中定义多个 XAML 友好 API，将使用属性来安装程序控件，并使用独立于平台的事件的包装的本机视图。 已包装的本机视图可以然后放置在共享资产项目 (SAP) 和加上条件编译指令，或放入特定于平台的项目并从 XAML 引用.NET 标准库项目中。
 
 下面的代码示例演示使用 Xamarin.Forms 页子类化本机视图：
 

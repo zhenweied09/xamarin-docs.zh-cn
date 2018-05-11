@@ -2,15 +2,14 @@
 title: 从现有的库项目创建 NuGet
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 36de23c2a6db817805cafae282d227cc5ef15cc4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 466ec405d4951de2d47d075c748cbc20ac5074e6
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>从现有的库项目创建 NuGet
 
@@ -24,7 +23,7 @@ ms.lasthandoff: 04/04/2018
 
 3. （可选）[添加其他元数据](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)中**详细信息**选项卡。
 
-4. 元数据配置后，你可以右键单击该项目并选择**创建 NuGet 包**和**.nupkg** NuGet 包文件将保存在**/bin/**文件夹 （调试或发布，取决于配置）。
+4. 元数据配置后，你可以右键单击该项目并选择**创建 NuGet 包**和 **.nupkg** NuGet 包文件将保存在 **/bin/** 文件夹 （调试或发布，取决于配置）。
 
   ![](existing-library-images/create-nuget-package.png "从右键单击菜单中选择创建 NuGet 包")
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 7b859dd58551675c121c5600ba9c691e4280a03b
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-effects"></a>效果简介
 
@@ -21,7 +21,7 @@ Xamarin.Forms[页、 布局和控件](~/xamarin-forms/user-interface/controls/in
 
 开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 但是，实现一个自定义呈现器类以执行的简单控件自定义项通常是重型的响应。 效果简化此过程中，允许更轻松地自定义每个平台上的本机控件。
 
-子类化在特定于平台的项目中创建效果`PlatformEffect`供控件，然后效果将其附加到 Xamarin.Forms 可移植类库 (PCL) 或共享库项目中的相应控件。
+子类化在特定于平台的项目中创建效果`PlatformEffect`供控件，然后效果将其附加到 Xamarin.Forms.NET 标准库或共享库项目中的相应控件。
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>为什么要通过自定义呈现器使用效果？
 

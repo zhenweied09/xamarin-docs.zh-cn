@@ -3,15 +3,14 @@ title: 构建跨平台应用程序
 description: 摘要以及六个部件，本部分讨论如何使用 Xamarin 开发平台-了解如何 Xamarin 的工作设计移动应用程序，然后测试并将部署到各种应用程序存储从生成应用程序。
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: b9d167d8874ecfde9094bacc26cff3e7d1b10bab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sharing-code-options"></a>共享代码选项
 

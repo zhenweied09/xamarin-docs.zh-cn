@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: 95c5f482e1bf3e55fa4c6fef18b1dbe6274f33e8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-databases"></a>本地数据库
 
@@ -19,7 +19,7 @@ _Xamarin.Forms 支持使用 SQLite 数据库引擎，这样就可以用于加载
 
 ## <a name="overview"></a>概述
 
-Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/)包以合并到的数据库操作通过引用共享代码`SQLite`到 nuget 提供的类。 可以在 Xamarin.Forms 解决方案的可移植类库 (PCL) 项目，将路径返回到与数据库存储位置的特定于平台的项目中定义数据库操作。
+Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/)包以合并到的数据库操作通过引用共享代码`SQLite`到 nuget 提供的类。 可以将路径返回到与数据库存储位置的特定于平台的项目与 Xamarin.Forms 解决方案，.NET 标准库项目中定义数据库操作。
 
 随附[示例应用程序](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)是一个简单的 Todo 列表应用程序。 以下屏幕截图显示示例每个平台上的显示方式：
 

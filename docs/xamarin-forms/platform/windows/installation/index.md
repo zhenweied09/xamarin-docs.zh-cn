@@ -7,39 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b6ea988aa8c058fe5a92a17e9b72f81e0ccb12db
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-windows-projects"></a>安装 Windows 项目
 
 _将新的 Windows 项目添加到现有 Xamarin.Forms 解决方案_
 
 较旧的 Xamarin.Forms 解决方案 （或在 macOS 上创建的那些类型），它们将通用 Windows 平台 (UWP) 应用程序项目没有。 因此，你将需要手动添加 UWP 项目生成 Windows 10 (UWP) 应用程序。
-
-<a name="pcl" />
-
-## <a name="update-the-pcl-profile"></a>更新 PCL 配置文件
-
-如果你现有的 Xamarin.Forms 应用程序使用可移植类库 (PCL) 模板，则必须更新其配置文件。
-
-1. **右键单击 > 属性**（你的现有设置可能不同）
-
-  ![](images/targets.png "PCL 目标")
-
-2. 单击**更改...** 按钮
-
-3. 确保**Windows 8**和**Windows Phone 8.1**会选择的选项 (和**Windows Phone Silveright**是*取消选择*):
-
-  ![](images/pcl.png "PCL 目标选项")
-
-4. 按**确定**并保存所做的更改。
-
-这相当于**配置文件 111**如果你要在 Visual Studio 中配置你 PCL，适用于 Mac 使用下拉列表。
-
-  ![](images/pcl-xs.png "PCL 配置文件 111")
 
 ## <a name="add-a-universal-windows-platform-app"></a>添加通用 Windows 平台应用
 
@@ -65,7 +43,7 @@ UWP 是可用在 Xamarin.Forms 2.1 及更高版本，并且 Xamarin.Forms.Maps �
 
   [![](universal-images/configuration-sml.png "配置管理器窗口")](universal-images/configuration.png#lightbox "配置管理器窗口")
 
- 5。 右键单击项目并选择**添加 > 引用**并创建 Xamarin.Forms 应用程序项目中 （PCL、.NET 标准或共享项目） 的引用。
+ 5。 右键单击项目并选择**添加 > 引用**并创建 Xamarin.Forms 应用程序项目中 （.NET 标准或共享项目） 的引用。
 
   ![](universal-images/addref-sml.png "引用管理器对话框")
 

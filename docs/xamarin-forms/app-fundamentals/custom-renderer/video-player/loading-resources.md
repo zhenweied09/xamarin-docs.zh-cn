@@ -6,15 +6,15 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: a9dbf77b85fe7f39c152d4dfb33bdd44c72dca40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="loading-application-resource-videos"></a>加载应用程序资源视频
 
-有关自定义呈现器`VideoPlayer`视图是能够播放应用程序资源作为单个平台项目中嵌入的视频文件。 但是，当前版本的`VideoPlayer`不能访问可移植类库中嵌入的资源。
+有关自定义呈现器`VideoPlayer`视图是能够播放应用程序资源作为单个平台项目中嵌入的视频文件。 但是，当前版本的`VideoPlayer`无法访问标准.NET 库中嵌入的资源。
 
 若要加载这些资源，创建的实例`ResourceVideoSource`通过设置`Path`到文件名 （或的文件夹和文件名） 的资源的属性。 或者，可以调用静态`VideoSource.FromResource`方法可以引用该资源。 然后，设置`ResourceVideoSource`对象传递给`Source`属性`VideoPlayer`。 
 

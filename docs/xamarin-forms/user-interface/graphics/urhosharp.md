@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: 8421355e0630a637589cb4f08c2fec4ea9cdab24
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1a982078f7a3fb2ba462cd7d6f1420b1d27618f7
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>使用 Xamarin.Forms 中 UrhoSharp
 
@@ -27,10 +27,10 @@ UrhoSharp 可用来呈现在 Xamarin.Forms 应用程序中的图形。
 
 ## <a name="adding-the-urhosharp-nuget-packages"></a>添加 UrhoSharp Nuget 包
 
-在使用之前 UrhoSharp，开发人员需要将 UrhoSharp Nuget 包添加到其解决方案。 本指南假定 Xamarin.Forms 项目与 iOS、 Android 和 PCL 项目。 所有代码将用 PCL 项目中;但 UrhoSharp Nuget 必须添加到 iOS 和 Android 的项目过。
+在使用之前 UrhoSharp，开发人员需要将 UrhoSharp Nuget 包添加到其解决方案。 本指南假定具有 iOS、 Android 和.NET 标准的 Xamarin.Forms 项目类库项目。 所有代码都将写入标准.NET 类库项目中; 中但 UrhoSharp Nuget 必须添加到 iOS 和 Android 的项目过。
 
 UrhoSharp.Forms Nuget 包包含所有所需创建 UrhoSharp 对象的对象。 UrhoSharp.Forms nuget 包包含`UrhoSurface`类，该类用于托管 UrhoSharp Xamarin.Forms 中。
-若要开始，右键单击 PCL**包**文件夹，然后选择**添加包...**.输入搜索词**UrhoSharp.Forms**，选择**Xamarin.Forms 的 UrhoSharp**，然后单击**添加包**。
+若要开始，右键单击**包**文件夹中的标准.NET 类库项目和选择**添加包...**.输入搜索词**UrhoSharp.Forms**，选择**Xamarin.Forms 的 UrhoSharp**，然后单击**添加包**。
 
 [![](urhosharp-images/add-package-sml.png "添加包对话框")](urhosharp-images/add-package.png#lightbox "添加包对话框")
 

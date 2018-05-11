@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: eb3d66630613225c9b2becaa20f73a82f409ce7e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0f58a4a53d41c23e993f8b8b89b3fca44e0733d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accessing-the-devices-video-library"></a>访问设备的视频库
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 
 其中每三个平台都包含一种功能，允许用户从设备的映像库中选择的照片或视频。 播放视频设备的映像库中的第一步生成时，将调用每个平台上的映像选取器的依赖项服务。 如下所述的依赖项服务是非常类似于中定义一个[**从图片库中选取照片**](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)文章，只不过视频选取器返回文件名而不是`Stream`对象。
 
-PCL 项目中定义名为一个接口`IVideoPicker`依赖项服务：
+标准.NET 类库项目定义一个名为的接口`IVideoPicker`依赖项服务：
 
 ```csharp
 namespace FormsVideoLibrary

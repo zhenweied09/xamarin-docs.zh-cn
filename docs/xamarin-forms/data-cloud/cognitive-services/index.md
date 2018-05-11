@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 2600b52b6e044ca9a3a8387bcf719dd1632c406d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 86253e42db7da2da6eb8b03e2d4a4b3c943b7e17
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>添加智能与认知服务
 
@@ -35,7 +35,7 @@ _Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加
 
 ![](images/sample-application-1.png "TodoListPage")
 
-可以通过单击创建新项*+*按钮，导航到`TodoItemPage`。 此页还可以通过选择一项任务导航：
+可以通过单击创建新项*+* 按钮，导航到`TodoItemPage`。 此页还可以通过选择一项任务导航：
 
 ![](images/sample-application-2.png "TodoItemPage")
 
@@ -70,9 +70,7 @@ PCL 项目中还包含一些重要的文件：
 
 示例应用程序使用以下 NuGet 包：
 
-- `Microsoft.Net.Http` – 提供`HttpClient`通过 HTTP 发出请求的类。
 - `Newtonsoft.Json` –.NET 提供的 JSON 框架。
-- `Microsoft.ProjectOxford.Face` – 用于访问表面 API 的客户端库。
 - `PCLStorage` – 提供了一套跨平台本地文件 IO Api。
 - `sqlite-net-pcl` – 提供 SQLite 数据库存储。
 - `Xam.Plugin.Media` – 提供跨平台照片拍摄和 Api。
