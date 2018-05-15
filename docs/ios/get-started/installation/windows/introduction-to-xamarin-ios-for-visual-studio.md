@@ -6,12 +6,12 @@ ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/19/2017
-ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2018
+ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Xamarin.iOS for Visual Studio 简介
 
@@ -48,8 +48,6 @@ ms.lasthandoff: 04/23/2018
 ## <a name="connecting-to-the-mac"></a>连接到 Mac
 
 要将 Visual Studio 连接到 Mac 生成主机，请按照[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南中的说明进行操作。
-
-
 
 ## <a name="visual-studio-toolbar-overview"></a>Visual Studio 工具栏概述
 
@@ -136,14 +134,17 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>为 iOS 应用程序创建新的项目
 
-在 Visual Studio 中创建新的 iOS 项目同创建其他项目类型一样。 选择“文件”>“新建项目”会打开如下所示的对话框，描述创建新的 iOS 项目的一些可用模板：
+在 Visual Studio 中创建新的 iOS 项目同创建其他项目类型一样。 选择“文件”>“新建项目”会打开如下所示的对话框，描述创建新的 iOS 项目的一些可用项目类型：
 
+![创建新项目](introduction-to-xamarin-ios-for-visual-studio-images/newproject.w157.png)
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/newproject.png "新建项目")
+选择“iOS 应用(Xamarin)”会显示如下所示的模板，用于创建新的 Xamarin.iOS 应用程序：
+
+![选择 iOS 应用的模板](introduction-to-xamarin-ios-for-visual-studio-images/newproject-2.w157.png)
 
 可以在 Visual Studio 中使用 iOS 设计器编辑情节提要和 .xib 文件。 若要创建情节提要，请选择某个情节提要模板。 这会在“解决方案资源管理器”中生成 **Main.storyboard** 文件，如以下屏幕截图所示：
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.png "解决方案资源管理器中的 Main.storyboard 文件")
+![解决方案资源管理器中的 Main.storyboard 文件](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.w157.png)
 
 若要开始创建或编辑情节提要，请双击 `Main.storyboard` 将其在 iOS 设计器中打开：
 

@@ -6,12 +6,12 @@ ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 07/15/2017
-ms.openlocfilehash: e04ebd041c64d474fafe12c387f558e740773c98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-provisioning"></a>设备预配
 
@@ -47,23 +47,14 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本�
 
 <a name="Provisioning_Profile" />
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
 ## <a name="provisioning-your-device"></a>预配设备
 
-使用 Visual Studio for Mac 预配 iOS 设备有两种方法：
+预配 iOS 设备有两种方法：
 
-* **自动（推荐）** – 选择 Info.plist 文件中的“自动管理签名”选项，让 Visual Studio for Mac 自动创建和管理签名标识、应用 ID 和预配配置文件。  有关如何自动管理预配的信息，请参阅[自动预配](automatic-provisioning.md)指南。 这是预配 iOS 设备的推荐方法。
+* **自动（推荐）**- 选择项目中的“自动预配”方案，让 Visual Studio 自动创建和管理签名标识、应用 ID 和预配配置文件。 有关如何自动管理预配的信息，请参阅[自动预配](automatic-provisioning.md)指南。 这是预配 iOS 设备的推荐方法。
 
 * **手动** – 可以通过 Apple 开发人员门户创建和管理签名标识、应用 ID 和预配配置文件，如[手动预配](manual-provisioning.md)指南中所述。 然后对这些项目进行管理，如 [Apple 帐户管理](~/cross-platform/macios/apple-account-management.md)指南中所述。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-## <a name="provisioning-your-device"></a>预配设备
-
-有关如何设置 Apple 设备用于部署以及如何使用 Visual Studio on Windows 部署应用程序的步骤，建议按照[手动预配](manual-provisioning.md)指南中的详细步骤操作。
-
------
 
 <a name="appservices" />
 
@@ -74,9 +65,6 @@ Apple 提供一系列精选的特殊应用服务（亦称为“功能”），�
 * 创建具备所需应用服务的应用 ID。
 * 创建含有此应用 ID 的新[配置文件](#Provisioning_Profile)。
 * 在 Xamarin.iOS 项目中设置权利
-
-> [!NOTE]
-> 目前，在 Visual Studio for Mac 中创建预配配置文件时无需考虑项目中所选的帐户权利 (Entitlements.plist)。 IDE 的未来版本中将提供此功能。 如果需要使用应用服务，建议按照[手动预配](manual-provisioning.md)指南中的说明进行操作。
 
 ## <a name="related-links"></a>相关链接
 

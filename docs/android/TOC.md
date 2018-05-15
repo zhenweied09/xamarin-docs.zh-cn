@@ -220,7 +220,7 @@
 #### [生成特定于 ABI 的 APK](deploy-test/building-apps/abi-specific-apks.md)
 ### [命令行仿真器](deploy-test/command-line-emulator.md)
 ### [调试](deploy-test/debugging/index.md)
-#### [Android SDK 仿真器](deploy-test/debugging/android-sdk-emulator/index.md)
+#### [Google Android Emulator](deploy-test/debugging/android-sdk-emulator/index.md)
 ##### [运行仿真器](deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 ##### [疑难解答](deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 #### [Visual Studio Android Emulator](deploy-test/debugging/visual-studio-android-emulator.md)

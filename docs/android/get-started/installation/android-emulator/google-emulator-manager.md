@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: a399aa1c314f1e93377a7831b430e563d9fd1b13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c42ebdca44e47e29ac74a263f0d11d4d4c120586
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="google-emulator-manager"></a>Google 仿真器管理器
 
-验证硬件加速已启用后（如 [Android 仿真器硬件加速](~/android/get-started/installation/android-emulator/hardware-acceleration.md)中所述），下一步是创建用于测试和调试应用的虚拟设备。 可以使用旧版 Google 仿真器管理器（也称为 Android 虚拟设备 (AVD) 管理器）创建虚拟设备以供 Android SDK 仿真器使用。
+验证硬件加速已启用后（如 [Android 仿真器硬件加速](~/android/get-started/installation/android-emulator/hardware-acceleration.md)中所述），下一步是创建用于测试和调试应用的虚拟设备。 可以使用旧版 Google 仿真器管理器（也称为 Android 虚拟设备 (AVD) 管理器）创建虚拟设备以供 Google Android Emulator 使用。
 
 > [!NOTE]
 > 如果你面向的是 Android 8.0 Oreo，则必须使用 [Xamarin Android 设备管理器](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)来创建和配置虚拟设备。

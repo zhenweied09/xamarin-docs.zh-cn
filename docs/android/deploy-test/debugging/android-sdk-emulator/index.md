@@ -1,21 +1,21 @@
 ---
-title: Android SDK 仿真器
-description: 本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合使用。
+title: Google Android Emulator
+description: 本指南介绍如何将 Google Android Emulator 与 Visual Studio 配合使用。
 ms.prod: xamarin
 ms.assetid: 8913bb90-1340-409d-b7bb-71a06914923a
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: bdae9f2189f91a6768419fd930a4ad5ce4b6e0ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aca71284c7d51936ce2addf143edb9980d9536fc
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="android-sdk-emulator"></a>Android SDK 仿真器
+# <a name="google-android-emulator"></a>Google Android Emulator
 
-_本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合使用。_
+本指南介绍如何将 Google Android Emulator 与 Visual Studio 配合使用。
 
 
 ## <a name="overview"></a>概述
@@ -27,13 +27,13 @@ _本指南介绍如何将 Google Android SDK 仿真器与 Visual Studio 配合�
 
 ### <a name="running-the-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorrunning-the-emulatormd"></a>[运行仿真器](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md)
 
-如何从 Visual Studio 启动 Android SDK 仿真器。
+如何从 Visual Studio 启动 Google Android Emulator。
 
 ### <a name="troubleshootingandroiddeploy-testdebuggingandroid-sdk-emulatortroubleshootingmd"></a>[疑难解答](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md)
 
-如何确定和解决常见的 Android SDK 仿真器问题。
+如何识别和解决常见的 Google Android Emulator 问题。
 
-有关配置 Android SDK Emulator 和创建新的虚拟设备的信息，请参阅 [Android Emulator 设置](~/android/get-started/installation/android-emulator/index.md)。
+有关配置 Google Android Emulator 和创建新的虚拟设备的信息，请参阅 [Android Emulator 设置](~/android/get-started/installation/android-emulator/index.md)。
 
 
 

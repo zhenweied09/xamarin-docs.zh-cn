@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7faf4ef090815ea799209e76816113f06889bd21
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello，Android：快速入门
 
@@ -64,10 +64,10 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 
 启动 Visual Studio。  单击“文件”>“新建”>“项目”以创建新项目。
 
-在“新建项目”对话框中，单击“空白应用(Android)”模板。
+在“新建项目”对话框中，单击“Android 应用”模板。
 将新项目命名为 `Phoneword`。 单击“确定”以创建新项目：
 
-[![新项目为 Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png#lightbox)
+[![新项目为 Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>创建布局
 
@@ -112,9 +112,9 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 
 [![添加新项](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
-在“添加新项”对话框中，选择“Visual C#”>“代码”，然后将新代码文件命名为 **PhoneTranslator.cs**：
+在“添加新项”对话框中，选择“Visual C#”>“代码”>“代码文件”，然后将新代码文件命名为“PhoneTranslator.cs”：
 
-[![添加 PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png#lightbox)
+[![添加 PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
 
 这将创建新的空 C# 类。 在此文件中插入以下代码：
 
@@ -185,10 +185,11 @@ namespace Core
 (Resource.Layout.Main)` 调用下添加该按钮代码。 首先，修改模板代码，使 `OnCreate` 方法与以下内容相似：
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {
@@ -419,10 +420,13 @@ namespace Core
 首先将事件处理程序添加到“转换”按钮。 在 `MainActivity` 类中找到 `OnCreate` 方法。 在 `OnCreate` 中的 `base.OnCreate(bundle)` 和 `SetContentView (Resource.Layout.Main)` 调用下添加按钮代码。 删除模板按钮处理代码，以便 `OnCreate` 方法如下所示：
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {

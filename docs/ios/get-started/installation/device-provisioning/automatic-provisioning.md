@@ -1,35 +1,46 @@
 ---
 title: 自动预配
-description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。
+description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南介绍如何使用自动签名请求开发证书和配置文件。
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 11/17/2017
-ms.openlocfilehash: 01818d2870c7cf59a0f15385dbb3565f07400ff0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-provisioning"></a>自动预配
 
-Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本指南介绍使用 Visual Studio for Mac 中的自动签名请求开发证书和配置文件。_
+Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本指南介绍如何使用自动签名请求开发证书和配置文件。_
 
 ## <a name="requirements"></a>惠?
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 - Visual Studio for Mac 7.3 或更高版本
 - Xcode 9 或更高版本
 
-> [!IMPORTANT]
-> 本指南介绍了如何使用 Visual Studio for Mac 设置 Apple 设备进行部署以及如何部署应用程序。 如需了解此操作的手动步骤或如何在 Windows 上使用 Visual Studio 执行此操作，建议按照[手动预配](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)指南中的详细步骤进行操作。
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+- Visual Studio 2017 版本 15.7（或更高版本）
+
+必须与具备以下条件的 Mac 生成主机配对：
+
+- Xcode 9 或更高版本
+
+-----
 
 ## <a name="enabling-automatic-signing"></a>启用自动签名
 
-开始自动签名进程前，应确保 Apple ID 已添加到 Visual Studio for Mac，如 [Apple 帐户管理](~/cross-platform/macios/apple-account-management.md)指南所述。 一旦添加了 Apple ID，便可以使用任意相关联的团队。 此操作可以指定团队的证书、配置文件和其他 ID。 团队 ID 还可用于创建预配配置文件中包含的应用 ID 的前缀。 Apple 可以通过此团队 ID 验证你的身份是否和你所述一致。
+开始自动签名进程前，应确保 Apple ID 已添加到 Visual Studio 中，如 [Apple 帐户管理](~/cross-platform/macios/apple-account-management.md)指南所述。 一旦添加了 Apple ID，便可以使用任意相关联的团队。 此操作可以指定团队的证书、配置文件和其他 ID。 团队 ID 还可用于创建预配配置文件中包含的应用 ID 的前缀。 Apple 可以通过此团队 ID 验证你的身份是否和你所述一致。
 
 若要自动签名应用以在 iOS 设备上开发，请执行以下操作：
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 1. 在 Visual Studio for Mac 中打开 iOS 项目。
 
@@ -46,6 +57,26 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
     ![成功创建证书和配置文件](automatic-provisioning-images/image5.png)
 
     如果自动签名失败，则“自动签名板”将显示错误的原因。
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+1. 按照[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南所述，将 Visual Studio 2017 与 Mac 配对。
+
+2. 通过选择“项目”>“预配属性...”打开“预配选项”
+
+3. 选择“自动预配”方案：
+
+    ![自动方案的选择](automatic-provisioning-images/prov4.png)
+
+4. 从“团队”组合框中选择团队，然后开始自动签名进程。
+
+    ![团队选择](automatic-provisioning-images/prov3.png)
+
+4. 这将启动自动签名进程。 然后，Visual Studio 尝试生成应用 ID、预配配置文件和签名标识来将这些项目用于签名。 可在生成输出中查看生成进程：
+
+    ![显示项目生成的生成输出](automatic-provisioning-images/prov5.png)
+
+-----
 
 ## <a name="triggering-automatic-provisioning"></a>触发自动预配
 

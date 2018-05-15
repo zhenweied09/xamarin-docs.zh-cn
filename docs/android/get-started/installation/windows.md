@@ -6,12 +6,12 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 1cd9a4977aad3f3bd8d8a4e51871698a54f75eb8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/04/2018
+ms.openlocfilehash: b1cf87ed8c5614a113a03232547a6753da26bc2d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="windows-installation"></a>Windows 安装
 
@@ -67,20 +67,25 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 
 有关使用 Xamarin Android SDK 管理器的详细信息，请参阅 [Android SDK 安装](~/android/get-started/installation/android-sdk.md)。
 
+### <a name="google-android-emulator"></a>Google Android Emulator
 
-### <a name="android-emulator"></a>Android 仿真器
+[Google Android Emulator](https://developer.android.com/studio/run/emulator) 工具可有效地开发和测试 Xamarin.Android 应用。 例如，平板电脑等物理设备在部署时可能不可用，或开发人员可能想在提交代码前在计算机上运行某些集成测试。
 
-如果没有用于测试的 Android 物理设备，可使用 Android 仿真器来测试应用。 有关 Google Android 仿真器的详细信息，请参阅 [Android SDK 仿真器](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
+在计算机上模拟 Android 设备包括以下部分：
 
-Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器），其可能与其他仿真器使用的虚拟化技术相冲突。 有 3 种主要的虚拟化技术：
+* **Google Android Emulator** &ndash; 它是基于 [QEMU](https://www.qemu.org/) 的仿真器，用于创建在开发人员的工作站上运行的虚拟化设备。
+* **仿真器映像** &ndash; 仿真器映像是旨在进行虚拟化的硬件和操作系统的模板或规范。 例如，一个仿真器映像可以确定运行安装 Google Play Services 的 Android 7.0 的 Nexus 5X 的硬件要求。 另一个仿真器映像可以指定运行 Android 6.0 的 10 英寸平板电脑。
+* **Android 虚拟设备 (AVD)** &ndash; Android 虚拟设备是从仿真器映像创建的 Android 仿真设备。 运行和测试 Android 应用时，Xamarin.Android 将启动 Android Emulator，启动特定 AVD，安装 APK，然后运行应用。
 
--   Hyper-V（适用于 Android 的 Visual Studio 仿真器和 Windows Phone 仿真器使用） 
+在基于 x86 的计算机上进行开发时，可以通过使用针对 x86 体系结构进行优化的特殊仿真器映像以及以下两项虚拟化技术之一显著提高性能：
 
--   VirtualBox（Genymotion 使用）
+1. Microsoft Hyper-V &ndash; 可用于运行 Windows 10 4 月更新的计算机。
+2. Intel 硬件加速执行管理器 (HAXM) &ndash; 可用于运行 OS X、macOS 或较旧 Windows 版本的 x86 计算机。
 
--   Intel HAXM（Google Android SDK 仿真器使用） 
+有关 Google Android Emulator、Hyper-V 和 HAXM 的详细信息，请参阅 [Android Emulator 硬件加速](~/android/get-started/installation/android-emulator/hardware-acceleration.md)指南。
 
-因为开发计算机的 CPU 一次仅支持一种虚拟化技术，因此最好只在开发计算机上采用一种技术。
+> [!NOTE]
+> 在较旧版本的 Windows 上，HAXM 与 Hyper-V 不兼容。 在此情况下，需要[禁用 Hyper-V](/xamarin/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md?tabs=vswin#disabling-hyper-v) 或使用不具有 x86 优化的较慢的仿真器映像。
 
 <a name="device" />
 
@@ -95,9 +100,9 @@ Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器）
 
 ![如何创建新项目](windows-images/10-new-project.png)
 
-在“新建项目”对话框中的“模板”下，选择“Android”，然后单击右窗格中的“空白应用(Android)”。 输入应用名称（在下面的屏幕截图中，应用称为 MyApp），然后单击“确定”：
+在“新建项目”对话框中的“模板”下，选择“Android”，然后单击右窗格中的“Android 应用”。 输入应用名称（在下面的屏幕截图中，应用称为 MyApp），然后单击“确定”：
 
-[![新建项目对话框的屏幕截图，创建一个空白 Android 应用](windows-images/11-first-app-sml.png)](windows-images/11-first-app.png#lightbox)
+[![新建项目对话框的屏幕截图，创建一个空白 Android 应用](windows-images/11-first-app-sml.w157.png)](windows-images/11-first-app.w157.png#lightbox)
 
 就这么简单！ 现在即可使用 Xamarin.Android 创建 Android 应用程序！
 
@@ -115,5 +120,6 @@ Google Android 仿真器使用的是 Intel HAXM（硬件加速执行管理器）
 - [安装 Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [系统要求](~/cross-platform/get-started/requirements.md)
 - [Android SDK 安装](~/android/get-started/installation/android-sdk.md)
-- [Android SDK 仿真器](~/android/get-started/installation/android-emulator/index.md)
+- [Google Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 - [设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)
+- [在 Android Emulator 上运行应用](https://developer.android.com/studio/run/emulator#Requirements)

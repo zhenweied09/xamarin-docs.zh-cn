@@ -1,21 +1,21 @@
 ---
-title: 运行 Android SDK 仿真器
-description: 如何使用 Android SDK 仿真器调试应用
+title: 运行 Google Android Emulator
+description: 如何使用 Google Android Emulator 调试应用
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e290b24c0d7a98b1abaf647fe76e56867042645
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="running-the-android-sdk-emulator"></a>运行 Android SDK 仿真器
+# <a name="running-the-google-android-emulator"></a>运行 Google Android Emulator
 
-本指南介绍如何在 Android SDK 仿真器中启动虚拟设备以调试和测试应用。
+本指南介绍如何在 Google Android Emulator 中启动虚拟设备以调试和测试应用。
 
 ## <a name="using-a-pre-configured-virtual-device"></a>使用预配置的虚拟设备
 
@@ -80,13 +80,13 @@ Visual Studio for Mac 包含预配置虚拟设备，可在“设备”下拉菜�
 
 -----
 
-在 Android 仿真器启动后，Xamarin.Android 会将应用部署到仿真器。 仿真器会使用配置的虚拟设备映像运行此应用。 下面的示例屏幕截图展示了 Android SDK 仿真器（仿真器正在运行名为“MyApp”的空白应用）：
+在 Android 仿真器启动后，Xamarin.Android 会将应用部署到仿真器。 仿真器会使用配置的虚拟设备映像运行此应用。 下面的示例屏幕截图展示了 Google Android Emulator（仿真器正在运行名为“MyApp”的空白应用）：
 
 ![运行空白应用的仿真器](running-the-emulator-images/emulator-running.png)
 
 可以一直运行仿真器；无需关闭仿真器并在每次运行应用时重启。 当 Xamarin.Android 应用首次在仿真器中运行时，将会先安装面向目标 API 级别的 Xamarin.Android 共享运行时，再安装应用。 运行时安装过程可能需要一段时间，请耐心等待。 仅当首次向仿真器部署 Xamarin.Android 应用时，才会安装运行时 &ndash; 后续部署速度更快，因为仅将应用复制到仿真器。
 
-若要深入了解如何使用 Android SDK 仿真器，请参阅以下 Android 开发者主题：
+若要深入了解如何使用 Google Android Emulator，请参阅以下 Android 开发人员主题：
 
 -   [屏幕导航](https://developer.android.com/studio/run/emulator.html#navigate)
 

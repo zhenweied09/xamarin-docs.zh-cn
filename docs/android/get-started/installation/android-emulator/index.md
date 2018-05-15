@@ -1,21 +1,21 @@
 ---
 title: Android 仿真器设置
-description: 本部分介绍如何准备好 Android SDK 仿真器以测试应用。 其中介绍了如何加速仿真器以获得最佳性能，并且演示了如何使用仿真器管理器创建和自定义虚拟设备。
+description: 本部分介绍如何准备好 Google Android Emulator 以测试应用。 其中介绍了如何加速仿真器以获得最佳性能，并且演示了如何使用仿真器管理器创建和自定义虚拟设备。
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 3c29d6b6c94abe7cc8a59486c338c0c634870d3e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 215e298068b7a3a23b2e469e923f172c8303bbcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="android-emulator-setup"></a>Android 仿真器设置
 
-_本部分介绍如何准备好 Android SDK 仿真器以测试应用。其中介绍了如何加速仿真器以获得最佳性能，并且演示了如何使用仿真器管理器创建和自定义虚拟设备。_
+_本部分介绍如何准备好 Google Android Emulator 以测试应用。其中介绍了如何加速仿真器以获得最佳性能，并且演示了如何使用仿真器管理器创建和自定义虚拟设备。_
 
 
 ## <a name="overview"></a>概述
@@ -31,14 +31,14 @@ _本部分介绍如何准备好 Android SDK 仿真器以测试应用。其中介
 
 ### <a name="hardware-accelerationandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[硬件加速](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-如何准备计算机以获得 Android SDK 仿真器的最佳性能。 由于在没有硬件加速的情况下 Android SDK 仿真器的运行可能会极度缓慢，因此，建议在使用 Android SDK 仿真器之前在开发计算机上启用硬件加速。
+如何准备计算机以获得 Google Android Emulator 的最佳性能。 由于在没有硬件加速的情况下 Google Android Emulator 的运行可能会极度缓慢，因此，建议在使用 Google Android Emulator 之前在计算机上启用硬件加速。
 
 ### <a name="xamarin-android-device-managerandroidget-startedinstallationandroid-emulatorxamarin-device-managermd"></a>[Xamarin Android 设备管理器](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
 
-如何使用 Xamarin Android 设备管理器创建和自定义 Android SDK 仿真器虚拟设备。 **Xamarin Android 设备管理器**（当前提供预览版）用于取代旧版 Google 仿真器管理器。 如果你面向的是 Android Oreo 8.0 或更高版本，则必须使用 Xamarin Android 设备管理器，而不是 Google 仿真器管理器。
+如何使用 Xamarin Android Device Manager 创建和自定义 Google Android Emulator 虚拟设备。 **Xamarin Android 设备管理器**（当前提供预览版）用于取代旧版 Google 仿真器管理器。 如果你面向的是 Android Oreo 8.0 或更高版本，则必须使用 Xamarin Android 设备管理器，而不是 Google 仿真器管理器。
 
 ### <a name="google-emulator-managerandroidget-startedinstallationandroid-emulatorgoogle-emulator-managermd"></a>[Google 仿真器管理器](~/android/get-started/installation/android-emulator/google-emulator-manager.md)
 
-如何使用旧版 Google 仿真器管理器创建和自定义 Android SDK 仿真器虚拟设备。 可以通过保留 Android SDK Tools 版本 25.2.5 或更低版本以继续运行具有原始 Google 仿真器管理器的 Google Android 仿真器。
+如何使用旧版 Google 仿真器管理器创建和自定义 Google Android Emulator 虚拟设备。 可以通过保留 Android SDK Tools 版本 25.2.5 或更低版本以继续运行具有原始 Google 仿真器管理器的 Google Android 仿真器。
 
-配置 Android SDK 仿真器后，有关如何启动仿真器以及如何使用它测试并调试应用的信息，请参阅 [Android SDK Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
+配置 Android SDK 仿真器后，有关如何启动仿真器以及如何使用它测试并调试应用的信息，请参阅 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。

@@ -1,5 +1,5 @@
 ---
-title: Hello，iOS
+title: Hello.iOS 快速入门
 description: 在此由两部分构成的指南中，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
 ms.topic: quickstart
 ms.prod: xamarin
@@ -7,19 +7,18 @@ ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2017
+ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="helloios-quickstart"></a>Hello.iOS 快速入门
 
 本指南介绍如何创建一个应用程序，它将用户输入的字母数字电话号码转换为数字电话号码，然后呼叫该号码。 最终应用程序如下所示：
 
  [![](hello-ios-quickstart-images/image1.png "Hello.iOS 快速入门应用")](hello-ios-quickstart-images/image1.png#lightbox)
-
 
 <a name="Requirements" />
 
@@ -42,7 +41,7 @@ Xamarin.iOS 适用于以下设置：
 
 Xamarin.iOS 适用于以下设置：
 
--  Windows 7 或更高版本上的最新版本 Visual Studio 2015 或 2017 Professional 或更高版本，与符合以上规范的 Mac 生成主机相配合。
+-  Windows 7 或更高版本上的最新版本 Visual Studio 2017 Community、Visual Studio Professional 或 Visual Studio Enterprise，与符合以上规范的 Mac 生成主机相配合。
 
 [Xamarin.iOS Windows 安装指南](~/ios/get-started/installation/windows/index.md)提供了分步安装说明。
 
@@ -63,7 +62,6 @@ Xamarin.iOS 适用于以下设置：
 在“启动屏幕”中，单击“新项目...”以创建新的 Xamarin.iOS 解决方案：
 
 ![](hello-ios-quickstart-images/image3new.png "iOS 解决方案")
-
 
 2. 从“新建解决方案”对话框中，选择“iOS”>“应用”>“单视图应用程序”模板，确保选择了 C#。 单击“下一步”：
 
@@ -294,51 +292,42 @@ Xamarin.iOS 适用于以下设置：
 
   ![](hello-ios-quickstart-images/image001-.png "“启动”屏幕")
 
-  在“新建解决方案”下的搜索框中输入“单一视图应用”，然后选择“单一视图应用(iPhone)”以创建新的 Xamarin.iOS 解决方案：
+  通过选择“文件”>“新建”>“项目...”>“Visual C#”>“iPhone 和 iPad”>“iOS 应用(Xamarin)”，创建新的 Xamarin.iOS 解决方案：
 
-  ![](hello-ios-quickstart-images/image002-.png "添加“单一视图应用”")
+  ![选择“iOS 应用(Xamarin)”项目类型](hello-ios-quickstart-images/image002.w157.png "Select iOS App (Xamarin) project type")
 
+  在接下来出现的对话框中，选择“单视图应用”模板，然后按“确定”创建项目：
 
-2. 将项目和解决方案命名为 `Phoneword`，如下所示：
+  ![选择“单视图”项目模板](hello-ios-quickstart-images/image002-2.w157.png "Select Single View project template")
 
-  ![](hello-ios-quickstart-images/vs-image3.png "将项目命名为 PhonewordiOS，并将新的解决方案命名为 Phoneword")
-
-
-3. 按“确定”以创建新项目
-
-4. 确认工具栏中的 Xamarin Mac 代理图标为绿色。
+1. 确认工具栏中的 Xamarin Mac 代理图标为绿色。
 
     ![确认工具栏中的 Xamarin Mac Agent 图标是否为绿色](hello-ios-quickstart-images/vs-image4.png)
 
     如果不是，则意味着没有连接到 Mac 生成主机，请按照[配置指南](~/ios/get-started/installation/windows/connecting-to-mac/index.md)中的步骤进行连接。
 
-
-5. 通过在“解决方案资源管理器”中双击 iOS 设计器中的 **Main.storyboard** 文件来打开它：
+1. 通过在“解决方案资源管理器”中双击 iOS 设计器中的 **Main.storyboard** 文件来打开它：
 
   ![](hello-ios-quickstart-images/vs-image7.png "iOS 设计器")
 
-6. 打开“工具箱”选项卡，向搜索栏中输入“标签”并将一个“标签”拖动到设计图面上（中央区域）：
+1. 打开“工具箱”选项卡，向搜索栏中输入“标签”并将一个“标签”拖动到设计图面上（中央区域）：
 
   ![](hello-ios-quickstart-images/vs-image8.png "将“标签”拖动到中心区域的设计图面上")
 
-
-7. 接下来，抓取“拖动控件”的图柄，并拉宽标签：
+1. 接下来，抓取“拖动控件”的图柄，并拉宽标签：
 
   ![](hello-ios-quickstart-images/vs-image9.png "增加标签宽度")
 
-
-8. 在设计图面上选择了“标签”的情况下，使用“属性窗口”将“标签”的“文本”属性更改为“Enter a Phoneword:”
+1. 在设计图面上选择了“标签”的情况下，使用“属性窗口”将“标签”的“文本”属性更改为“Enter a Phoneword:”
 
   ![](hello-ios-quickstart-images/vs-image10.png "将“标签”的“文本”属性更改为“Enter a Phoneword”")
 
   > [!NOTE]
   > 可以通过导航到“视图”菜单，随时打开“属性”或“工具箱”。
 
-
-9. 在工具箱内搜索“文本字段”，将一个“文本字段”从“工具箱”拖动到设计图面上，并将它放置在“标签”下方。 调整宽度，直到“文本字段”的宽度与“标签”相同：
+1. 在工具箱内搜索“文本字段”，将一个“文本字段”从“工具箱”拖动到设计图面上，并将它放置在“标签”下方。 调整宽度，直到“文本字段”的宽度与“标签”相同：
 
   ![](hello-ios-quickstart-images/vs-image12.png "调整宽度以便“文本字段”的宽度与“标签”相同")
-
 
 10. 在设计图面上选择了“文本字段”的情况下，在“属性”的“标识”部分中将“文本字段”的“名称”属性更改为 `PhoneNumberText`，并将“文本”属性更改为“1-855-XAMARIN”：
 
@@ -371,9 +360,9 @@ Xamarin.iOS 适用于以下设置：
   ![](hello-ios-quickstart-images/vs-image18.png "添加一些代码以将电话号码从字母数字转换为数字")
 
 
-16. 在“新建文件”对话框中，选择 “Apple”>“类”，将新文件命名为 `PhoneTranslator`：
+16. 在“添加新项”对话框（右键单击项目，选择“添加”>“新建项...”）中，选择“Apple”>“类”，然后将新文件命名为 `PhoneTranslator`：
 
-  ![](hello-ios-quickstart-images/vs-image19.png "添加名为“PhoneTranslator”的新类")
+  ![](hello-ios-quickstart-images/vs-image19.w157.png "添加名为“PhoneTranslator”的新类")
 
   > [!IMPORTANT]
   > 请确保选择在图标中包含 C# 的“类”模板。 否则，可能无法引用此新类。

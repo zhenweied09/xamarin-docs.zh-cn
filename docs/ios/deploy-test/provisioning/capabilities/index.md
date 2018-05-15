@@ -4,14 +4,14 @@ description: 向应用程序添加功能通常需要其他预配设置。 本指
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: ff918ac104e7eab4f2e8c0d0be46df240138c97c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: asb3993
+ms.author: amburns
+ms.date: 05/06/2018
+ms.openlocfilehash: e6fc3d38fef7c7c3204d1413911ddfa9a486c67c
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="working-with-capabilities"></a>使用功能
 
@@ -44,20 +44,18 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 * NFC 标记读取
 
 
-可通过 Visual Studio for Mac 或在 Apple 开发人员门户中手动启动这些功能。 Wallet、Apple Pay 和 iCloud 等某些功能需要应用 ID 的其他配置。
+可通过 Visual Studio for Mac 和 Visual Studio 2017 或在 Apple 开发人员门户中手动启动这些功能。 Wallet、Apple Pay 和 iCloud 等某些功能需要应用 ID 的其他配置。
 
-本指南介绍如何通过 Visual Studio for Mac 和手动使用开发人员中心在应用程序中启用每个应用服务，包括可能需要的任何其他设置。 
+本指南介绍如何通过 Visual Studio 自动启用和手动使用开发人员中心在应用程序中启用每个应用服务，包括可能需要的任何其他设置。 
 
 ## <a name="adding-app-services"></a>添加应用服务
 
-若要使用这些功能，应用必须具有一个有效的预配配置文件，其中包含启用了正确服务的应用 ID。 可在 Visual Studio for Mac 中自动或在 Apple 开发人员中心手动创建此预配配置文件。
+若要使用这些功能，应用必须具有一个有效的预配配置文件，其中包含启用了正确服务的应用 ID。 可在 Visual Studio for Mac 和 Visual Studio 2017 中自动或在 Apple 开发人员中心手动创建此预配配置文件。
 
-本部分介绍如何使用 Visual Studio for Mac 的自动预配或开发人员中心来启用大多数功能。 Wallet、iCloud、Apple Pay 和应用组等功能需要其他设置。 在接下来的指南中将详细介绍这些内容。
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+本节介绍如何使用 Visual Studio 的自动预配或开发人员中心来启用大多数功能。 Wallet、iCloud、Apple Pay 和应用组等功能需要其他设置。 在接下来的指南中将详细介绍这些内容。
 
 > [!IMPORTANT]
-> 并非所有功能都可在 Visual Studio for Mac 中添加和管理。 以下列表包含受支持的功能：
+> 并非所有功能都可通过自动预配进行添加和管理。 以下列表包含受支持的功能：
 >
 >* HealthKit 
 >* HomeKit 
@@ -72,10 +70,13 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 >
 >当前不支持推送通知、Game Center、应用内购买、映射、Keychain 共享、关联域和数据保护功能。 若要添加这些功能，请使用手动预配并遵循[开发人员中心](#devcenter)部分中的步骤。
 
+## <a name="using-the-ide"></a>使用 IDE
 
-功能添加到 Visual Studio for Mac 中的“Entitlements.plist”。 若要添加功能，请执行以下步骤：
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-1. 打开 iOS 应用程序的“Info.plist”文件，并确保已选中“自动管理签名”。 如果需要帮助，请遵循[自动预配](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)指南中的步骤：
+功能添加到 Visual Studio for Mac 中的“Entitlements.plist”。 若要添加功能，请使用以下步骤：
+
+1. 打开 iOS 应用程序的“Info.plist”文件，从组合框选择“自动预配”方案和“团队”。 如果需要帮助，请遵循[自动预配](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)指南中的步骤：
 
     ![自动管理签名选项](images/manage-signing.png)
 
@@ -93,39 +94,29 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-由于 Visual Studio 2017 中暂不支持自动预配，你必须使用[开发人员中心](#devcenter)创建具有正确应用程序服务的应用 ID。
+功能随即添加到“Entitlements.plist”。 若要在 Visual Studio 2017 中添加功能，请使用以下步骤：
+
+1. 按照[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南所述，将 Visual Studio 2017 与 Mac 配对。
+
+2. 通过选择“项目”>“预配属性...”打开“预配选项”
+
+3. 从组合框选择“自动预配”方案和“团队”。 如果需要帮助，请遵循[自动预配](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md)指南中的步骤：
+
+    ![自动管理签名选项](images/manage-signing-vs.png)
+
+4. 打开“Entitlements.plist”文件并选择需要添加的功能。 保存该文件。
+
+    保存“Entitlement.plist”会实现两项操作：
+
+    * 将该功能添加到应用 ID
+    * 将权利键/值对添加到 Entitlements.plist 文件。
 
 -----
 
-<!--
-<a name="xcode" />
-
-## Xcode
-
-Xamarin developers can also use Xcode to quickly create a provisioning profile with a suitable App ID. This process, described below, can be used for any app service in the list:
-
-1.  Open Xcode and create a ‘dummy’ project. Give the dummy project the same name as your Xamarin.iOS project. The bundle identifier should be identical to the bundle identifier of your Xamarin.iOS project:
-
-    ![Xcode Create Project](images/image1.png)
-
-2.  Ensure **Automatically manage signing** is selected:
-
-    ![Automatically manage signing selection](images/image2.png)
-
-3.  Once the app has been created, go to the tab named **Capabilities**:
-
-    ![Xcode Capabilities tab](images/image3.png)
-
-4.  Browse to the capability that you wish to add, and move the switch to the **ON** position.
-5.  This will create a provisioning profile with an App ID that contains the capability and adds the entitlement to the profile.
-6.  In Visual Studio for Mac / Visual Studio, browse to **Project Options > Bundle Signing** and set the provisioning profile to the one that was just created in Xcode:
-
-    ![Visual Studio for Mac Project Options](images/image4.png)
--->
 
 <a name="devcenter" />
 
-## <a name="developer-center"></a>开发人员中心
+## <a name="using-the-developer-center"></a>使用开发人员中心
 
 使用开发人员中心需要两步：创建应用 ID，然后使用此应用 ID 创建一个预配配置文件。 下面详细介绍了这些步骤。
 
@@ -190,7 +181,7 @@ Xamarin developers can also use Xcode to quickly create a provisioning profile w
 
 8.  按“下载”按钮进行下载，然后在“查找器”中双击此文件以安装此预配配置文件。
 
-9. 如果正在使用 Visual Studio for Mac，请确保在 Info.plist 文件中取消选择“自动管理签名”选项
+9. 如果使用 Visual Studio，请确保选中“手动预配”选项。
 
 10. 在 Visual Studio for Mac / Visual Studio 中，浏览到“项目选项”>“捆绑包签名”，并将预配配置文件设置为刚才创建的预配配置文件：
 

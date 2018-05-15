@@ -1,37 +1,96 @@
 ---
 title: Android 仿真器硬件加速
-description: 如何准备计算机以获得 Android SDK 仿真器的最佳性能
+description: 如何准备计算机以获得 Google Android Emulator 的最佳性能
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
-ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.date: 05/10/2018
+ms.openlocfilehash: b5c20eb9f40bb4c4981d6b60b9fd4bc75fd29336
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Android 仿真器硬件加速
 
-因为如果不进行硬件加速，Android SDK 仿真器的运行速度会过于缓慢，所以推荐使用 Intel 的 HAXM（硬件加速执行管理器）大幅提升 Android SDK 仿真器的性能。
+若没有硬件加速，Google Android Emulator 会特别慢。 可以显著提高 Google Android Emulator 的性能，方法是使用面向 x86 硬件的特殊仿真器硬件映像以及以下两项虚拟化技术之一：
 
+1. **Microsoft Hyper-V 和虚拟机监控程序平台** &ndash; Hyper-V 是可用于 Windows 10 的虚拟化组件，支持在物理主机上运行虚拟化的计算机系统。 建议对加速的 Google Android Emulator 映像使用此虚拟化技术。 若要了解有关 Hyper-V 的详细信息，请咨询 [Windows 10 上的 Hyper-V 指南](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/)。
+2. **Intel 硬件加速执行管理器 (HAXM)** &ndash; 这是用于运行 Intel CPU 的计算机的虚拟化引擎。 建议无法使用 Hyper-V 的开发人员使用此虚拟化引擎。
+
+如[配置和使用](~/android/deploy-test/debugging/android-sdk-emulator/index.md)中所述，Android SDK 管理器将自动使用硬件加速，当它可用时，将专门为基于 x86 的虚拟设备运行仿真器映像。
+
+## <a name="hyper-v-overview"></a>Hyper-V 概述
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+![](~/media/shared/preview.png)
+
+> [!NOTE]
+> Hyper-V 支持当前处于预览状态。
+
+强烈建议使用 Windows 10（2018 年 4 月更新）的开发人员使用 Microsoft Hyper-V。 Visual Studio Tools for Xamarin 便于开发人员在无法使用 Android 设备的情况下测试和调试 Xamarin.Android 应用程序。
+
+若要开始使用 Hyper-V 和 Google Android Emulator，请执行以下操作：
+
+1. **更新至 Windows 10 2018 年 4 月更新（内部版本 1803）**&ndash; 若要确认正在运行的 Windows 版本，请在 Cortana 搜索栏中单击，然后键入“关于”。 在搜索结果中选择“关于你的电脑”。 在“关于”对话框中向下滚动，直到“Windows 规范”部分。 版本应至少为 1803：
+
+    [![Windows 规范](hardware-acceleration-images/win/12-about-windows.w10-sml.png)](hardware-acceleration-images/win/12-about-windows.w10.png#lightbox)
+
+2. **启用 Hyper-V 和 Windows 虚拟机监控程序平台** &ndash; 在 Cortana 搜索栏中，键入“打开或关闭 Windows 功能”。
+   在“Windows 功能”对话框中向下滚动，确保启用了“Windows 虚拟机监控程序平台”。
+
+    [![启用了 Hyper-V 和 Windows 虚拟机监控程序平台](hardware-acceleration-images/win/13-windows-features.w10-sml.png)](hardware-acceleration-images/win/13-windows-features.w10.png#lightbox)
+
+    启用 Hyper-V 和 Windows 虚拟机监控程序平台后可能需要重启 Windows。
+
+3. **安装 [Visual Studio 15.8 预览版 1](https://aka.ms/hyperv-emulator-dl)** &ndash; 此 Visual Studio 版本通过 Hyper-V 支持提供用于开始使用 Google Android Emulator 的 IDE 支持。
+
+4. **安装 Google Android Emulator 包 27.2.7 或更高版本** &ndash; 若要安装此包，请在 Visual Studio 中导航到“工具”>“Android”>“Android SDK 管理器”。 选择“工具”选项卡，确保 Android Emulator 组件的版本至少为 27.2.7。
+
+    [![“Android SDK 和工具”对话框](hardware-acceleration-images/win/14-sdk-manager.w158-sml.png)](hardware-acceleration-images/win/14-sdk-manager.w158.png#lightbox)
+
+5. 如果 Android Emulator 的版本低于 27.3.1，请应用“已知问题”（下一节）中介绍的其他变通方法。
+
+
+### <a name="known-issues"></a>已知问题
+
+-   如果仿真器的版本介于 27.2.7 和 27.3.1 之间，使用 Hyper-V 时需要使用以下变通方法：
+    1.  在 C:\\Users\\username\\.android 文件夹中，创建名为“advancedFeatures.ini”的文件（如果不存在）。
+    2.  将以下行添加到“advancedFeatures.ini”：
+        ```
+        WindowsHypervisorPlatform = on
+        ```
+
+-   使用某些 Intel 和基于 AMD 的处理器时，性能可能会降低。
+
+-   部署时，Android 应用程序可能花费异常长的时间才能加载完成。
+
+-   MMIO 访问错误可能会间歇性地阻止启动 Android Emulator。 重启仿真器应能够解决此问题。
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+Hyper-V 支持要求使用 Windows 10。 请参阅 [Hyper-V 要求](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v#check-requirements)获取详细信息。
+
+-----
 
 ## <a name="haxm-overview"></a>HAXM 概述
 
 HAXM 是硬件协助虚拟化引擎（虚拟机监控程序），使用 Intel 虚拟化技术 (VT) 在主机上加快执行 Android 应用仿真。 通过与 Intel 提供的 Android x86 仿真器映像以及官方 Android SDK 管理器配合使用，HAXM 可以在已启用 VT 的系统上加快执行 Android 仿真。 
 
-如果开发计算机的 Intel CPU 具有 VT 功能，可以使用 HAXM 大幅加快 Android SDK 仿真器的运行速度（如果不确定 CPU 是否支持 VT，请参阅[确定处理器是否支持 Intel 虚拟化技术](https://www.intel.com/content/www/us/en/support/processors/000005486.html)）。
+如果开发计算机的 Intel CPU 具有 VT 功能，可以使用 HAXM 大幅加快 Google Android Emulator 的运行速度（如果不确定 CPU 是否支持 VT，请参阅[确定处理器是否支持 Intel 虚拟化技术](https://www.intel.com/content/www/us/en/support/processors/000005486.html)）。
 
 > [!NOTE]
 > 不可在另一 VM（例如由 VirtualBox、VMWare 或 Docker 托管的 VM）内运行经过 VM 加速的仿真器。 必须[直接在系统硬件上](https://developer.android.com/studio/run/emulator-acceleration.html#extensions)运行 Google Android 仿真器。
 
-Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟设备（如[配置和使用](~/android/deploy-test/debugging/android-sdk-emulator/index.md)中所述）后，该虚拟设备将使用 HAXM 来执行硬件加速。 首次使用 Android SDK 仿真器前，最好先验证 HAXM 是否已安装，且能否用于 Android SDK 仿真器。
+首次使用 Google Android Emulator 前，最好先验证 HAXM 是否已安装并能用于 Google Android Emulator。
 
-## <a name="verifying-haxm-installation"></a>验证 HAXM 安装
+### <a name="verifying-haxm-installation"></a>验证 HAXM 安装
 
-可以在仿真器启动时查看“正在启动 Android 仿真器”窗口，从而确定 HAXM 是否可用。 若要启动 Android SDK 仿真器，请执行以下操作：
+可以在仿真器启动时查看“正在启动 Android 仿真器”窗口，从而确定 HAXM 是否可用。 若要启动 Google Android Emulator，请执行以下操作：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -47,7 +106,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 3. 选择 x86 映像（例如，“VisualStudio\_android-23\_x86\_phone”），再依次单击“开始”和“启动”：
 
-    ![使用默认的虚拟设备映像启动 Android SDK 仿真器](hardware-acceleration-images/win/02-start-default-avd.png)
+    ![使用默认的虚拟设备映像启动 Google Android Emulator](hardware-acceleration-images/win/02-start-default-avd.png)
 
 4. 在仿真器启动时，观察“正在启动 Android 仿真器”对话框窗口。 如果已安装 HAXM，则会看到内容为“HAX 正在运行，且仿真器在快速虚拟模式下运行”的消息，如下面的屏幕截图所示：
 
@@ -73,7 +132,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 3. 选择 x86 映像（例如，Android\_Accelerated\_x86），单击“开始”，然后单击“启动”：
 
-    [使用默认的虚拟设备映像启动 Android SDK 仿真器![](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
+    [![使用默认的虚拟设备映像启动 Google Android Emulator](hardware-acceleration-images/mac/02-start-default-avd-sml.png)](hardware-acceleration-images/mac/02-start-default-avd.png#lightbox)
 
 3. 在仿真器启动时，观察“正在启动 Android 仿真器”对话框窗口。 如果已安装 HAXM，则会看到内容为“HAX 正在运行，且仿真器在快速虚拟模式下运行”的消息，如下面的屏幕截图所示：
 
@@ -86,7 +145,7 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
 <a name="install-haxm" />
 
-## <a name="installing-haxm"></a>安装 HAXM
+### <a name="installing-haxm"></a>安装 HAXM
 
 如果仿真器未启动，可能需要手动安装 HAXM。 可以从 [Intel 硬件加速执行管理器](https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager)网页下载适用于 Windows 和 macOS 的 HAXM 安装包。 若要手动下载并安装 HAXM，请按照下列步骤操作：
 
@@ -104,84 +163,6 @@ Android SDK 仿真器会自动使用可用的 HAXM。 选择基于 x86 的虚拟
 
    ![“Intel 硬件加速执行管理器安装程序”窗口](hardware-acceleration-images/win/05-haxm-installer.png)
 
-如果看到以下错误对话框（“此计算机不支持 Intel 虚拟化技术(VT-x)，或正在被 Hyper-V 独占使用”），必须先禁用 Hyper-V，然后才能安装 HAXM：
-
-![由于出现 Hyper-V 冲突，无法安装 HAXM](hardware-acceleration-images/win/06-cant-install-haxm.png)
-
-下一部分将介绍如何禁用 Hyper-V。
-
-<a name="disable-hyperv" />
-
-## <a name="disabling-hyper-v"></a>禁用 Hyper-V
-
-如果使用已启用 Hyper-V 的 Windows，必须首先将它禁用并重启计算机才能安装和使用 HAXM。 可以按照下列步骤操作，在“控制面板”中禁用 Hyper-V：
-
-1. 在 Windows 搜索框中输入“程序”，再单击“程序和功能”搜索结果。
-
-2. 在“控制面板”的“程序和功能”对话框中，单击“打开或关闭 Windows 功能”：
-
-    ![打开或关闭 Windows 功能](hardware-acceleration-images/win/07-turn-windows-features.png)
-
-3. 取消选中“Hyper-V”，再重启计算机：
-
-    ![在“Windows 功能”对话框中禁用 Hyper-V](hardware-acceleration-images/win/08-uncheck-hyper-v.png)
-
-也可以使用下列 Powershell cmdlet 禁用 Hyper-V：
-
-`Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
-
-Intel HAXM 和 Microsoft Hyper-V 不能同时处于活动状态。 遗憾的是，目前尚没有办法在不重启计算机的情况下在 Hyper-V 和 HAXM 之间切换。 若要使用 [Visual Studio Android 仿真器](~/android/deploy-test/debugging/visual-studio-android-emulator.md)（依赖 Hyper-V），如果不重启，将无法使用 Android SDK 仿真器。 同时使用 Hyper-V 和 HAXM 的一种方法是创建多重引导安装程序，如[不创建虚拟机监控程序启动项](https://blogs.msdn.microsoft.com/virtual_pc_guy/2008/04/14/creating-a-no-hypervisor-boot-entry/)中所述。
-
-在某些情况下，如果启用了 Device Guard 和 Credential Guard，按照前述步骤操作将无法成功禁用 Hyper-V。 如果无法禁用 Hyper-V（或似乎已禁用，但仍无法安装 HAXM），请按照下一部分中的步骤操作，禁用 Device Guard 和 Credential Guard。
-
-<a name="disable-devguard" />
-
-## <a name="disabling-device-guard"></a>禁用 Device Guard
-
-Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-V。 对于由负责组织配置和控制的域加入计算机而言，这通常都是一个需要解决的问题。
-在 Windows 10 上，请按照下列步骤操作，检查 Device Guard 是否在运行：
-
-1. 在“Windows Search”中，键入“系统信息”，启动“系统信息”应用。
-
-2. 在“系统摘要”中，检查是否有“基于 Device Guard 虚拟化的安全性”；若有，检查是否处于“正在运行”状态：
-
-   [![Device Guard 存在且正在运行](hardware-acceleration-images/win/09-device-guard-sml.png)](hardware-acceleration-images/win/09-device-guard.png#lightbox)
-
-如果已启用 Device Guard，请按照下列步骤操作，禁用 Device Guard：
-
-1. 确保已按照上一部分所述禁用“Hyper-V”（在“打开或关闭 Windows 功能”下）。
-
-2. 在 Windows 搜索框中，键入“gpedit”，再选择“编辑组策略”搜索结果。 这会启动“本地组策略编辑器”。
-
-3. 在“本地组策略编辑器”中，依次转到“计算机配置”>“管理模板”>“系统”>“Device Guard”：
-
-   [![“本地组策略编辑器”中的“Device Guard”](hardware-acceleration-images/win/10-group-policy-editor-sml.png)](hardware-acceleration-images/win/10-group-policy-editor.png#lightbox)
-
-4. 将“打开基于虚拟化的安全性”更改为“已禁用”（如上所示），再退出“本地组策略编辑器”。
-
-5. 在 Windows 搜索框中，键入“cmd”。 右键单击搜索结果中的“命令提示符”，再选择“以管理员身份运行”。
-
-6. 将以下命令复制并粘贴到命令提示符窗口（如果正在使用驱动器 Z:，请改为选择未使用的驱动器号）：
-
-        mountvol Z: /s
-        copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
-        bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
-        bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
-        mountvol Z: /d
-
-7. 重新启动计算机。 在启动屏幕上，应该会看到以下提示：
-
-   **是否要禁用 Credential Guard?**
-
-   按下指示的键，以根据提示禁用 Credential Guard。
-
-8. 重启计算机后，再次检查，以确保 Hyper-V 已禁用（如前述步骤所述）。
-
-如果 Hyper-V 仍未禁用，域加入计算机的策略可能会阻止禁用 Device Guard 或 Credential Guard。 在这种情况下，可以向域管理员申请豁免，以便能够选择禁用 Credential Guard。 此外，还可以使用未加入域的计算机来使用 HAXM。
-
 ## <a name="hardware-acceleration-and-amd-cpus"></a>硬件加速和 AMD CPU
 
 由于 Google Android 仿真器目前[仅在 Linux 上](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies)支持 AMD 硬件加速，因此硬件加速不可用于运行 Windows 的基于 AMD 的计算机。
@@ -196,3 +177,8 @@ Device Guard 和 Credential Guard 可阻止在 Windows 计算机上禁用 Hyper-
    [![“Intel 硬件加速执行管理器安装程序”窗口](hardware-acceleration-images/mac/05-haxm-installer-sml.png)](hardware-acceleration-images/win/05-haxm-installer.png#lightbox)
 
 -----
+
+
+## <a name="related-links"></a>相关链接
+
+* [在 Android Emulator 上运行应用](https://developer.android.com/studio/run/emulator)
