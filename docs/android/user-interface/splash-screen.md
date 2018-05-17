@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/11/2018
-ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
-ms.translationtype: HT
+ms.date: 05/14/2018
+ms.openlocfilehash: 6200a04bb4d82174d36a48beab7c63709ac39187
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="splash-screen"></a>初始屏幕
 
@@ -159,7 +159,7 @@ public class MainActivity : AppCompatActivity
 
 若要添加横向模式的初始屏幕，请使用以下步骤：
 
-1. 在**可资源/绘制**文件夹中，添加你想要使用的初始屏幕图像的布局版本。 在此示例中， **splash_logo_land.png**是在上面的示例 （它使用黑色信而不是蓝色） 中使用的徽标的横向版本。
+1. 在**可资源/绘制**文件夹中，添加你想要使用的初始屏幕图像的布局版本。 在此示例中， **splash_logo_land.png**是在上面的示例 （它使用白色信而不是蓝色） 中使用的徽标的横向版本。
 
 2. 在**可资源/绘制**文件夹中，创建的布局版本`layer-list`可绘制的前面定义 (例如， **splash_screen_land.xml**)。 在此文件中，设置初始屏幕图像的布局版本的位图路径。 在下面的示例中， **splash_screen_land.xml**使用**splash_logo_land.png**:
 
@@ -176,7 +176,6 @@ public class MainActivity : AppCompatActivity
             android:gravity="center"/>
       </item>
     </layer-list>
-
     ```
 
 3.  创建**上关于领土资源/值**文件夹，如果它尚不存在。
@@ -201,7 +200,7 @@ public class MainActivity : AppCompatActivity
     </resources>
     ```
 
-6.  修改**值-上关于领土/colors.xml**配置你想要使用的初始屏幕的布局版的颜色。 在此示例中，初始背景色更改为黄色表示横向模式：
+6.  修改**值-上关于领土/colors.xml**配置你想要使用的初始屏幕的布局版的颜色。 在此示例中，初始背景色更改为蓝色横向模式：
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +209,7 @@ public class MainActivity : AppCompatActivity
       <color name="primaryDark">#1976D2</color>
       <color name="accent">#FFC107</color>
       <color name="window_background">#F5F5F5</color>
-      <color name="splash_background">#FFFF00</color>
+      <color name="splash_background">#3498DB</color>
     </resources>
     ```
 
