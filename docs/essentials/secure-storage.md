@@ -5,17 +5,39 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: 24d1e29ba0203aaafc3e21533478f6c505cc09b3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials 安全存储
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 
 **SecureStorage**类可帮助安全地存储简单的键/值对。
+
+## <a name="getting-started"></a>入门
+
+访问**SecureStorage**功能，以下特定于平台的安装程序是必需的：
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+不需要其他的安装程序。
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+IOS 模拟器上进行开发时, 启用**Keychain**授权并添加应用程序的捆绑标识符的 keychain 访问组。
+
+打开**Entitlements.plist**中的 iOS 项目和查找**Keychain**授权，然后启用它。 这会自动将作为一个组中添加应用程序的标识符。
+
+在项目属性中，在**iOS 捆绑签名**设置**自定义授权**到**Entitlements.plist**。
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+不需要其他的安装程序。
+
+-----
 
 ## <a name="using-secure-storage"></a>使用安全存储
 
@@ -75,5 +97,5 @@ Encryped 值存储在`ApplicationData.Current.LocalSettings`，在名为容器�
 
 ## <a name="api"></a>API
 
-- [SecureStorage 源代码](https://github.com/xamarin/Essentials/tree/master/Essentials/SecureStorage)
+- [SecureStorage 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API 文档](xref:Xamarin.Essentials.SecureStorage)

@@ -7,22 +7,26 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 020a5a2182458e759626b9bdbf45b62b6e13d71a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 31660ff1255878dbae15bda601da8e628aabd459
+ms.sourcegitcommit: c5bb1045b2f4607dafe3101ad1ea6ade23e44342
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="updating-component-references-to-nuget"></a>更新组件引用到 NuGet
 
-> [!NOTE]
+> [!IMPORTANT]
+> 截至 2018 5 月 15，停止使用组件应用商店 (此闭包最初[宣布](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/)在 2017 年 11 月)。
+>
 > Xamarin 组件在 Visual Studio 中，不再受支持，并应替换为 NuGet 包。 按照下面的说明手动从项目中删除组件的引用。
 
 这些说明中的添加 NuGet 包是指[Windows](https://docs.microsoft.com/nuget/quickstart/use-a-package)或[Mac](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。
 
+常用 Xamarin 列表[插件和库](https://github.com/xamarin/XamarinComponents/blob/master/README.md)可用于帮助查找组件都作为 NuGet 包不可用的替代方法。
+
 ## <a name="manually-removing-component-references"></a>手动删除的组件引用
 
-自 2017 年 11 月，它是在[宣布](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/)将停止使用 Xamarin 组件应用商店。 为了向前移动进行的组件 sunsetting，15.6 版本的 Visual Studio 和适用于 Mac 的 7.4 版本的 Visual Studio 不再支持你的项目中的组件。 
+15.6 版本的 Visual Studio 和适用于 Mac 的 7.4 版本的 Visual Studio 项目中不再支持组件。 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -199,6 +203,6 @@ NuGet 程序包将添加到你的项目，以及任何依赖关系。
 
 
 ## <a name="related-links"></a>相关链接
-
+- [常用 Xamarin 插件和库的列表](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [安装和使用 NuGet 包 (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [包括 NuGet 包 (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

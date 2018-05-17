@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [选项卡式布局](user-interface/layouts/tab-layout/index.md)
 ##### [使用 ActionBar 的导航选项卡](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [TabHost 概述](user-interface/layouts/tab-layout/tab-host.md)
-##### [使用 TabHost 创建选项卡式 UI](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [控件](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [自动完成](user-interface/controls/auto-complete.md)

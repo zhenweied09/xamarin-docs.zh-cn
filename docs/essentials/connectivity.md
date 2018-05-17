@@ -5,11 +5,11 @@ ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: fd757bec32d2854d2c9693812dece05ef11e2f80
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d2184f1e9817b473eac1d0b69a7637bc862de4cf
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials 连接
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/09/2018
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：**区域并检查**访问网络状态**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**访问网络状态**权限。 这将自动更新**AndroidManifest.xml**文件。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -113,5 +113,5 @@ public class ConnectivityTest
 
 ## <a name="api"></a>API
 
-* [连接源代码](https://github.com/xamarin/Essentials/tree/master/Essentials/Connectivity)
+* [连接源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
 * [连接 API 文档](xref:Xamarin.Essentials.Connectivity)

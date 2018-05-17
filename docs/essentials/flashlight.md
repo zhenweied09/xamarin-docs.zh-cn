@@ -5,11 +5,11 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f187fa404df09e387ed870f524239d3baabfdd3f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 0fe07f60502b27322db9486f3382b8f67d50945b
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials 手电筒
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/09/2018
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：**区域并检查**手电筒**和**相机**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**手电筒**和**相机**权限。 这将自动更新**AndroidManifest.xml**文件。
 
 通过添加这些权限[Google Play 将自动筛选出设备](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)而无需特定硬件。 可以通过将以下内容添加到你在 Android 项目的 AssemblyInfo.cs 文件获取解决此：
 
@@ -119,5 +119,5 @@ catch (Exception ex)
 
 ## <a name="api"></a>API
 
-- [手电筒源代码](https://github.com/xamarin/Essentials/tree/master/Essentials/Flashlight)
+- [手电筒源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
 - [手电筒 API 文档](xref:Xamarin.Essentials.Flashlight)

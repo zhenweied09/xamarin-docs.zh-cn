@@ -5,17 +5,17 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2fcb97eafda15a73e2b7e5441f1d6c94f75af0ce
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b2c9ed50c48aee6343a20ddb28c49e1bd05d2153
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials 文本到语音转换
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 
-**TextToSpeech**类可实现一个应用程序利用内置文本到语音转换引擎进行沟通后的文本，从设备和可用查询引擎可以支持的语言。
+**TextToSpeech**类可让应用程序文本到语音转换引擎进行沟通后的文本，从设备和可用查询引擎可以支持的语言中利用内置。
 
 ## <a name="using-text-to-speech"></a>使用文本到语音转换
 
@@ -45,7 +45,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-此方法采用可选 CancellationToken 停止 utterance 一个它的起始位置。 
+此方法采用可选 CancellationToken 开始后停止 utterance。 
 ```csharp
 CancellationTokenSource cts;
 public async Task SpeakNowDefaultSettings()
@@ -115,7 +115,7 @@ public async Task SpeakNow()
 
 ### <a name="speech-locales"></a>语音区域设置
 
-每个平台提供区域设置进行沟通中多个语言和重音符号后的文本。 每个平台都有不同代码和指定此操作，请的方式，这正是 Essentials 提供了跨平台`Locale`类和一种方法来查询它们与`GetLocalesAsync`。
+每个平台提供区域设置进行沟通中多个语言和重音符号后的文本。 每个平台都有不同的代码和指定此操作，请的方式，这正是 Essentials 提供了跨平台`Locale`类和一种方法来查询它们与`GetLocalesAsync`。
 
 ```csharp
 public async Task SpeakNow()
@@ -143,5 +143,5 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [TextToSpeech 源代码](https://github.com/xamarin/Essentials/tree/master/Essentials/TextToSpeech)
+- [TextToSpeech 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [TextToSpeech API 文档](xref:Xamarin.Essentials.TextToSpeech)

@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>初始屏幕
 
@@ -152,6 +152,74 @@ public class MainActivity : AppCompatActivity
     // Code omitted for brevity
 }
 ```
+
+## <a name="landscape-mode"></a>横向模式
+
+在前面的步骤中实现的初始屏幕将正确显示，在纵向与横向模式下。 但是，在某些情况下是所需的纵向和横向模式的单独的初始屏幕 （例如，如果初始图像是全屏幕）。
+
+若要添加横向模式的初始屏幕，请使用以下步骤：
+
+1. 在**可资源/绘制**文件夹中，添加你想要使用的初始屏幕图像的布局版本。 在此示例中， **splash_logo_land.png**是在上面的示例 （它使用黑色信而不是蓝色） 中使用的徽标的横向版本。
+
+2. 在**可资源/绘制**文件夹中，创建的布局版本`layer-list`可绘制的前面定义 (例如， **splash_screen_land.xml**)。 在此文件中，设置初始屏幕图像的布局版本的位图路径。 在下面的示例中， **splash_screen_land.xml**使用**splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  创建**上关于领土资源/值**文件夹，如果它尚不存在。
+
+4.  将文件添加**colors.xml**和**style.xml**到**值上关于领土**(这些可复制并修改现有**values/colors.xml**和**values/style.xml**文件)。
+
+5.  修改**值-上关于领土/style.xml** ，使其使用的可绘制的横向版本`windowBackground`。 在此示例中， **splash_screen_land.xml**使用：
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  修改**值-上关于领土/colors.xml**配置你想要使用的初始屏幕的布局版的颜色。 在此示例中，初始背景色更改为黄色表示横向模式：
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  生成并再次运行该应用。 旋转设备以横向模式时仍显示初始屏幕。 初始屏幕更改为横向版本：
+
+    [![为横向模式的初始屏幕的旋转](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+请注意，使用横向模式初始屏幕不始终提供无缝体验。 默认情况下，Android 启动纵向模式下应用，并转换它以横向模式，即使该设备已在横向模式中。 结果是，如果设备处于横向模式时，启动应用程序，该设备将简要显示纵向初始屏幕，然后进行动画处理到横向初始屏幕纵向从旋转。 遗憾的是，发生此初始纵向横向转换，即使`ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`初始活动的标志中指定。 若要解决此限制的最佳方式是在纵向与横向模式下正确创建单个初始屏幕图像呈现。
 
 
 ## <a name="summary"></a>总结

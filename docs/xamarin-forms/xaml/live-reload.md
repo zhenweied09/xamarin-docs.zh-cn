@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/08/2018
-ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/11/2018
+ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -53,7 +53,7 @@ Xamarin 实时重新加载使你能够**更改你的 XAML 和看到这些文件�
     
     b. **共享项目**– 安装**Xamarin.LiveReload** NuGet 到所有平台项目 （如 Android、 iOS、 UWP，等等）。 确保**包源**设置为**所有**。
 
-![添加 Xamarin 实时重新加载 NuGet 使用 NuGet 包管理器](images/addlivereloadnuget.png)
+    [![添加 Xamarin 实时重新加载 NuGet 使用 NuGet 包管理器](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
 3. 添加`LiveReload.Init();`到中的构造函数`Application`类，如下面的代码段中所示：
 
@@ -106,7 +106,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 
 ### <a name="does-it-require-debugging-the-app"></a>它是否需要调试应用程序？ 
 
-否。 事实上，甚至可以在任意数量的设备或模拟器/仿真程序上启动所有受支持的应用程序的目标 （Android、 iOS 和 UWP） 并将它们全部同时更新。 
+不是。 事实上，甚至可以在任意数量的设备或模拟器/仿真程序上启动所有受支持的应用程序的目标 （Android、 iOS 和 UWP） 并将它们全部同时更新。 
 
 ## <a name="limitations"></a>限制
 
@@ -117,7 +117,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 
 * 仅支持在 Visual Studio 中。
 * 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，应用程序导航重置。 这将在下一步的预览版本中修复。
-* 调试 UWP 可能导致运行时崩溃时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）**而不是**启动调试 (F5)**。
+* 调试 UWP 可能导致运行时崩溃时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）** 而不是**启动调试 (F5)**。
 
 ## <a name="troubleshooting"></a>疑难解答
 
