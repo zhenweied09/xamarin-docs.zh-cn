@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>CPU 体系结构
 
@@ -29,7 +29,7 @@ _Xamarin.Android 支持多个 CPU 体系结构，包括 32 位和 64 位设备�
 
 通常情况下，你明确选择一种体系结构 （或体系结构） 在你的应用程序配置为**版本**。 在你的应用程序配置为**调试**、**使用共享运行时**和**使用快速部署**启用的选项，从而禁用显式体系结构选择。
 
-在 Visual Studio 中，双击**属性**，在项目下**解决方案资源管理器**和选择**Android 选项**页。 单击**打包**选项卡上，并验证**使用共享运行时**处于禁用状态 （如果关闭此允许你显式选择哪些 ABIs 以支持）。 单击**高级**选项卡并在**高级属性**，检查你想要支持的体系结构：
+在 Visual Studio 中，右键单击你的项目下**解决方案资源管理器**和选择**属性**。 下**Android 选项**页上，确保**打包属性**部分，并验证**使用共享运行时**处于禁用状态 （如果关闭此可以为显式选择以支持哪些 ABIs）。 单击**高级**按钮并在**支持的体系结构**，检查你想要支持的体系结构：
 
 [![选择 armeabi 和 armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
