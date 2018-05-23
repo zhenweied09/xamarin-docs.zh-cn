@@ -58,7 +58,7 @@ _本文提供使用 tvOS 10 Xamarin.tvOS 应用中的多个故障排除提示。
 
 ## <a name="cloudkit"></a>CloudKit
 
-长时间运行的操作将返回_"你无权保存文件。"_ 错误。
+长时间运行的操作将返回 _"你无权保存文件。"_ 错误。
 
 <a name="CoreImage" />
 

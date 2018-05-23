@@ -35,7 +35,7 @@ ms.lasthandoff: 05/09/2018
 
     -   “未正确加载'XamarinShellPackage'包”
 
-    -   “无法打开项目文件...。 缺少项目子类型”
+    -   “无法打开项目文件... 缺少项目子类型”
 
     -   “对象引用未设置为某个对象的实例。  在 Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize() 上”
 

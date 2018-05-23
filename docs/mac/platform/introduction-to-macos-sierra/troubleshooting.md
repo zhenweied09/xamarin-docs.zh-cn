@@ -65,7 +65,7 @@ _本文提供使用 macOS Sierra Xamarin.Mac 应用中的多个故障排除提�
 
 ## <a name="cloudkit"></a>CloudKit
 
-长时间运行的操作将返回_"你无权保存文件。"_ 错误。
+长时间运行的操作将返回 _"你无权保存文件。"_ 错误。
 
 <a name="CoreImage" />
 

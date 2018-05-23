@@ -420,7 +420,7 @@ I/RegistrationIntentService( 1934): GCM Registration Token: f8LdveCvXig:APA91bFI
 
 #### <a name="add-a-notification-icon"></a>添加通知图标
 
-让我们首先添加小图标将出现在通知区域中，启动我们通知时。 你可以复制[此图标](remote-notifications-with-gcm-images/ic-stat-ic-notification.png)到你的项目或创建你自己的自定义图标。 我们将名称的图标文件**ic_stat_button_click.png**和将其复制到**可资源/绘制**文件夹。 请记住使用**添加 > 现有项...**要包含在你的项目中的此图标文件。
+让我们首先添加小图标将出现在通知区域中，启动我们通知时。 你可以复制[此图标](remote-notifications-with-gcm-images/ic-stat-ic-notification.png)到你的项目或创建你自己的自定义图标。 我们将名称的图标文件**ic_stat_button_click.png**和将其复制到**可资源/绘制**文件夹。 请记住使用**添加 > 现有项...** 要包含在你的项目中的此图标文件。
 
 
 #### <a name="implement-a-gcm-listener-service"></a>实现 GCM 侦听器服务

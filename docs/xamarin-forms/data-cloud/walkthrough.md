@@ -55,7 +55,7 @@ PCL 项目中的每个应用程序还包含一个重要的文件数：
 
 大多数示例应用程序包含至少两个页：
 
-- **TodoListPage** – 此页显示的列表`TodoItem`实例和对勾图标如果`TodoItem.Done`属性是`true`。 单击项导航到`TodoItemPage`。 此外，通过单击创建新项*+*符号。
+- **TodoListPage** – 此页显示的列表`TodoItem`实例和对勾图标如果`TodoItem.Done`属性是`true`。 单击项导航到`TodoItemPage`。 此外，通过单击创建新项*+* 符号。
 - **TodoItemPage** – 此页显示所选的详细信息`TodoItem`，并允许编辑、 保存、 删除和读出。
 
 此外，某些示例应用程序包含用于管理用户身份验证过程的其他页。

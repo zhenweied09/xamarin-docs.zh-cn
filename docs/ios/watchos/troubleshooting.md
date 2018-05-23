@@ -37,7 +37,7 @@ ms.lasthandoff: 04/04/2018
 - 适用于 Mac 的 Visual Studio 的早期版本不正确地显示之一**AppleCompanionSettings**图标为 88 x 88 像素; 这会导致**缺少图标错误**如果你尝试将提交到应用程序存储区。
     此图标应为 87 x 87 像素 (29 单位**@3x** Retina 屏幕)。 无法为 Mac-编辑在 Xcode 中的图像资产解决此问题在 Visual Studio 中，或手动编辑**Contents.json**文件 (以匹配[此示例](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132))。
 
-- 如果监视扩展项目**Info.plist > WKApp 捆绑 ID**不[正确设置](~/ios/watchos/get-started/project-references.md)以匹配 Watch 应用**捆绑 ID**，调试器将无法进行连接和视觉适用于 Mac 的 studio 将等待消息*"正在等待调试器连接"*。
+- 如果监视扩展项目**Info.plist > WKApp 捆绑 ID**不[正确设置](~/ios/watchos/get-started/project-references.md)以匹配 Watch 应用**捆绑 ID**，调试器将无法进行连接和视觉适用于 Mac 的 studio 将等待消息 *"正在等待调试器连接"*。
 
 - 中支持调试**通知**模式但无法保证其准确性。 重试有时会起作用。 确认 Watch 应用**Info.plist** `WKCompanionAppBundleIdentifier`设置为相匹配的 iOS 父/容器应用的捆绑标识符 (即。 在 iPhone 运行的一个)。
 
@@ -98,7 +98,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-1.png "InterfaceController")
 
-3. 你可以现在将控件拖到接口控制器 （如。 标签和按钮） 但不是能创建插座或操作，因为没有任何**.h**标头文件。 以下步骤将导致所需**.h**要创建标头文件。
+3. 你可以现在将控件拖到接口控制器 （如。 标签和按钮） 但不是能创建插座或操作，因为没有任何 **.h**标头文件。 以下步骤将导致所需 **.h**要创建标头文件。
 
     ![](troubleshooting-images/add-2.png "布局中的按钮")
 
@@ -165,7 +165,7 @@ with an alpha channel. Icons should not have an alpha channel.
     ![](troubleshooting-images/add-6.png "在接口生成器中打开情节提要")
 
 8. 选择你新接口控制器并为其提供更高版本，例如定义类名。 `MyInterfaceController`。
-如果一切已运行正常，它应显示在中自动**类：**下拉列表中，您可以从那里选择它。
+如果一切已运行正常，它应显示在中自动**类：** 下拉列表中，您可以从那里选择它。
 
     ![](troubleshooting-images/add-4.png "设置自定义类")
 
@@ -173,11 +173,11 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-7.png "助手编辑器工具栏项")
 
-    当焦点在代码窗格中，确保你正在查看**.h**标头文件，并且如果痕迹导航栏中右键单击并选择正确的文件 (**MyInterfaceController.h**)
+    当焦点在代码窗格中，确保你正在查看 **.h**标头文件，并且如果痕迹导航栏中右键单击并选择正确的文件 (**MyInterfaceController.h**)
 
     ![](troubleshooting-images/add-8.png "选择 MyInterfaceController")
 
-10. 你现在可以创建 outlet 和操作**Ctrl + 拖动**从到情节提要**.h**标头文件。
+10. 你现在可以创建 outlet 和操作**Ctrl + 拖动**从到情节提要 **.h**标头文件。
 
     ![](troubleshooting-images/add-9.png "创建 outlet 和操作")
 
@@ -185,7 +185,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-a.png "Outlet，操作对话框")
 
-11. 一旦情节提要更改将保存并关闭 Xcode，返回到 Visual Studio for mac。 它将检测标头文件更改并自动将代码添加到**。 designer.cs**文件：
+11. 一旦情节提要更改将保存并关闭 Xcode，返回到 Visual Studio for mac。 它将检测标头文件更改并自动将代码添加到 **。 designer.cs**文件：
 
 
         [Register ("MyInterfaceController")]

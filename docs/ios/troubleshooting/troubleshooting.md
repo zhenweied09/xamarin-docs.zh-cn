@@ -45,7 +45,7 @@ ms.lasthandoff: 04/04/2018
 成员可能已删除链接器，并因此在运行时程序集中不存在。  有几个解决方案：
 
 -  添加[[保留]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute)属性成员。  这将阻止链接器中将其删除。
--  在调用时[mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) ，使用**-nolink**或**-linksdkonly**选项。 -    **-nolink**禁用所有链接。
+-  在调用时[mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) ，使用 **-nolink**或 **-linksdkonly**选项。 -    **-nolink**禁用所有链接。
 -    **-linksdkonly**只能将链接提供 Xamarin.iOS 的程序集，如*monotouch.dll*或 xamarin.ios.dll。
 
 请注意，以便生成可执行文件是较小; 链接程序集因此，禁用链接可能会导致更大的可执行文件不是需要的。
@@ -149,7 +149,7 @@ public Bar (IntPtr handle) : base (handle) { }
 
 确保使用最新版本的 Visual Studio 针对 Mac 和 Xamarin.iOS
 
-如果问题仍然存在，请[提交 bug](http://monodevelop.com/Developers#Reporting_Bugs)、 附加**~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**日志文件。
+如果问题仍然存在，请[提交 bug](http://monodevelop.com/Developers#Reporting_Bugs)、 附加 **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**日志文件。
 
 如果所有其他方法均失败，则可以尝试删除的代码完成缓存，以便重新生成它：
 
@@ -207,7 +207,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 
 
-请附加 XS 日志， **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**(在较旧版本的 XS/MonoDevelop，只是将发送**~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**)。
+请附加 XS 日志， **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**(在较旧版本的 XS/MonoDevelop，只是将发送 **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**)。
 
  **注意： 在 XS 2.2 最终已解决以上问题**
 
@@ -386,7 +386,7 @@ Visual Studio for Mac iPhone 项目生成选项包括在生成应用程序将使
 ```
 ...then 模拟器应用程序目录中可能有一个 （或多个） 过时的程序集。 由于 Apple iOS 模拟器中添加并更新文件，但永远不会删除它们，则可能存在这样的程序集。 如果发生这种情况然后最简单的解决方案是从模拟器菜单中选择"重置和内容和设置..."。   
 
-**警告：**这将从模拟器删除所有文件、 应用程序和数据。   下一次执行应用程序，适用于 Mac 的 Visual Studio 会将其部署到模拟器，将有任何旧的、 陈旧的程序集，使在发生崩溃。
+**警告：** 这将从模拟器删除所有文件、 应用程序和数据。   下一次执行应用程序，适用于 Mac 的 Visual Studio 会将其部署到模拟器，将有任何旧的、 陈旧的程序集，使在发生崩溃。
 
 ## <a name="simulator-hangs-during-application-installation"></a>在应用程序安装过程中的模拟器挂起。
 

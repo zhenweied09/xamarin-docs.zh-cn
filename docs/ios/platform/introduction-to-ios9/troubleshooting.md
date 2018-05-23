@@ -19,7 +19,7 @@ _本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示
 
 ## <a name="there-was-a-problem-parsing-the-xml"></a>时分析 XML 出现问题
 
-Xamarin iOS 设计器尚不支持 Xcode 7 功能。 情节提要将无法在与设计器中加载_"时出现问题分析 XML"_时尝试使用新的 iOS 9 (Xcode 7) StackView 之类的设计器元素。
+Xamarin iOS 设计器尚不支持 Xcode 7 功能。 情节提要将无法在与设计器中加载 _"时出现问题分析 XML"_ 时尝试使用新的 iOS 9 (Xcode 7) StackView 之类的设计器元素。
 
 iOS Xcode 7 功能的设计器支持针对即将到来的周期 6 功能版本。 周期 6 的预览版本当前位于 Alpha 通道，并具有有限的新 Xcode 7 功能的支持。
 
@@ -89,9 +89,9 @@ Temporary exceptions can be configured via your app's Info.plist file.
 
 ## <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView 是在构造函数中的 Null
 
-**原因：**在 iOS 9`initWithFrame:`构造函数现在是必需的由于在为 iOS 9 中的行为更改[UICollectionView 的文档所述](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)。 如果注册指定的标识符的类，并且必须创建新的单元格，该单元格现在通过调用初始化其`initWithFrame:`方法。
+**原因：** 在 iOS 9`initWithFrame:`构造函数现在是必需的由于在为 iOS 9 中的行为更改[UICollectionView 的文档所述](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)。 如果注册指定的标识符的类，并且必须创建新的单元格，该单元格现在通过调用初始化其`initWithFrame:`方法。
 
-**修复：**添加`initWithFrame:`此类构造函数：
+**修复：** 添加`initWithFrame:`此类构造函数：
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -109,7 +109,7 @@ public YourCellClassName (CGRect frame) : base (frame)
 
 **原因：** `initWithCoder:`构造函数是从接口生成器 Xib 文件加载视图时调用。 如果此构造函数不会导出非托管的代码无法调用它的我们托管的版本。 以前 （如。 在 iOS 8) 中`IntPtr`已调用构造函数来初始化视图。
 
-**修复：**创建和导出`initWithCoder:`此类构造函数：
+**修复：** 创建和导出`initWithCoder:`此类构造函数：
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -130,9 +130,9 @@ Dyld Error Message:
 Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**原因：**这是一个 bug Apple 的本机链接器中，这种情况发生时它们公开私有 framework （JavaScriptCore 被公开在 iOS 7，之前它是一个专用的框架），并且应用程序的部署目标的 iOS 版本时框架是私有的。 在这种情况下 Apple 的链接器将链接与专用而不是公共的版本的 framework 版本。
+**原因：** 这是一个 bug Apple 的本机链接器中，这种情况发生时它们公开私有 framework （JavaScriptCore 被公开在 iOS 7，之前它是一个专用的框架），并且应用程序的部署目标的 iOS 版本时框架是私有的。 在这种情况下 Apple 的链接器将链接与专用而不是公共的版本的 framework 版本。
 
-**修复：**这将针对 iOS 9，但没有简单的解决方法，你可以在此期间应用自己： 只需面向更高版本 iOS 版本在你的项目 （在这种情况下，你可以尝试 iOS 7）。 其他框架可能出现类似问题，例如 WebKit framework 被公开在 iOS 8 中 （和因此面向 iOS 7 将导致此错误; 应为目标 iOS 8 以在应用中使用 WebKit）。
+**修复：** 这将针对 iOS 9，但没有简单的解决方法，你可以在此期间应用自己： 只需面向更高版本 iOS 版本在你的项目 （在这种情况下，你可以尝试 iOS 7）。 其他框架可能出现类似问题，例如 WebKit framework 被公开在 iOS 8 中 （和因此面向 iOS 7 将导致此错误; 应为目标 iOS 8 以在应用中使用 WebKit）。
 
 ## <a name="untrusted-enterprise-developer"></a>不受信任的企业开发人员
 
@@ -149,13 +149,13 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 3. 下**设备**端面板中，选择你的设备，右键单击并选择**显示预配配置文件...**: 
 
     [![](troubleshooting-images/untrusted03.png "SShow 预配配置文件")](troubleshooting-images/untrusted03.png#lightbox)
-4. 选择当前在该设备，然后单击每个预配配置文件**-**按钮以将其删除： 
+4. 选择当前在该设备，然后单击每个预配配置文件**-** 按钮以将其删除： 
 
     [![](troubleshooting-images/untrusted04.png "删除预配配置文件")](troubleshooting-images/untrusted04.png#lightbox)
-5. 从**Xcode**菜单上，选择**首选项...**和**帐户**: 
+5. 从**Xcode**菜单上，选择**首选项...** 和**帐户**: 
 
     [![](troubleshooting-images/untrusted05.png "Xcode 帐户首选项")](troubleshooting-images/untrusted05.png#lightbox)
-6. 单击**查看详细信息...**按钮，然后单击**下载所有**按钮： 
+6. 单击**查看详细信息...** 按钮，然后单击**下载所有**按钮： 
 
     [![](troubleshooting-images/untrusted06.png "下载所有配置文件")](troubleshooting-images/untrusted06.png#lightbox)
 7. 更新完成列表后，单击**完成**按钮，然后关闭首选项窗口。
@@ -168,7 +168,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 iOS 9 现在强制执行的启动屏幕要求，以便不再可以重用同一个启动映像以支持不同的接口的方向。 请参阅 Apple 的[UILanchImage 引用](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW28)有关详细信息。
 
-或者，可以使用情节提要文件以提供您的应用程序启动屏幕而不是使用一套**.png**图像文件。 这是现在 Apple 的首选方法，可以显示启动屏幕。 请参阅我们[简介统一情节提要](~/ios/user-interface/storyboards/unified-storyboards.md)指南以获取详细信息。
+或者，可以使用情节提要文件以提供您的应用程序启动屏幕而不是使用一套 **.png**图像文件。 这是现在 Apple 的首选方法，可以显示启动屏幕。 请参阅我们[简介统一情节提要](~/ios/user-interface/storyboards/unified-storyboards.md)指南以获取详细信息。
 
 最后，你的应用程序必须为其启动屏幕使用情节提要文件，并支持所有四个接口方向 （纵向、 倒置纵向、 横向左右横向） 才会考虑让滑动通过面板中或在拆分视图模式下运行。 若要了解有关 iOS 9 的新多任务功能的详细信息，请参阅我们[适用于 iPad 的多任务](~/ios/platform/multitasking.md)指南。
 

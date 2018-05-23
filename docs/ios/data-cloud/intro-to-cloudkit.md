@@ -838,7 +838,7 @@ CloudKit 对于应用程序的记录类型和数据提供单独的开发和生�
 
     [![](intro-to-cloudkit-images/shipping04.png "选择组织程序")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
-6. 选择应用程序的存档，然后单击**导出...**按钮： 
+6. 选择应用程序的存档，然后单击**导出...** 按钮： 
 
     [![](intro-to-cloudkit-images/shipping05.png "应用程序的存档")](intro-to-cloudkit-images/shipping05.png#lightbox)
     
@@ -860,7 +860,7 @@ CloudKit 对于应用程序的记录类型和数据提供单独的开发和生�
 
 11. 选择用于生成生成的应用程序的位置`.ipa`文件。
 
-此过程是用于提交直接到 iTunes Connect 应用程序类似，只需单击**提交...**而不是在管理器窗口中选择存档后...导出的按钮。
+此过程是用于提交直接到 iTunes Connect 应用程序类似，只需单击**提交...** 而不是在管理器窗口中选择存档后...导出的按钮。
 
 ## <a name="when-to-use-cloudkit"></a>何时使用 CloudKit
 

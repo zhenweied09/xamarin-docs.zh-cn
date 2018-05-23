@@ -39,7 +39,7 @@ _本文介绍了解使用 Xamarin 的 tvOS 支持时，你可能会遇到的问�
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>无效的可执行文件的可执行文件不包含 bitcode
 
-当尝试 Xamarin.tvOS 将应用提交到 Apple 电视应用商店，你可能会收到一条错误消息的形式_"无效的可执行文件的可执行文件不包含 bitcode"_。
+当尝试 Xamarin.tvOS 将应用提交到 Apple 电视应用商店，你可能会收到一条错误消息的形式 _"无效的可执行文件的可执行文件不包含 bitcode"_。
 
 若要解决此问题，请执行以下操作：
 
