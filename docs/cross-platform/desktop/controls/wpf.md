@@ -4,11 +4,11 @@ title: WPF 与。Xamarin.Forms： 相似之处和差异
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 21ffca65ee72308d1340a1db43471228b2adbe91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 与。Xamarin.Forms： 相似之处和差异
 
@@ -33,7 +33,7 @@ XAML 中，用作 WPF 和 Xamarin.Forms 的声明性的标记语言。 大多数
 
 - Xamarin.Forms 支持[XAML 2009 规范](/dotnet/framework/xaml-services/xaml-2009-language-features/); 这样会更容易，如定义数据`string`s， `int`s 等也为定义的泛型类型，传递给构造函数的自变量。
 
-- 没有当前方法 dyanmically 加载 XAML 像 WPF 与那样`XamlReader`。 你可以使用相同的基本功能[NuGet 包](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/)尽管。
+- 当前没有方法来动态加载 XAML，像 WPF 与那样`XamlReader`。 你可以使用相同的基本功能[NuGet 包](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/)尽管。
 
 ### <a name="markup-extensions"></a>标记扩展
 

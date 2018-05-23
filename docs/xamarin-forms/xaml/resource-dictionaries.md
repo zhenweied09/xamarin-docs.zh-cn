@@ -6,12 +6,12 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 05/07/2018
-ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.date: 05/21/2018
+ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="resource-dictionaries"></a>资源字典
 
@@ -30,12 +30,12 @@ A [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)是 Xamarin.For
 资源定义中[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)即然后设置为以下项之一`Resources`属性：
 
 - [ `Resources` ](xref:Xamarin.Forms.Application.Resources)任何派生自的类的属性 [`Application`](xref:Xamarin.Forms.Application)
-- [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources)任何派生自的类的属性[VisualElement](xref:Xamarin.Forms.Application)
+- [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources)任何派生自的类的属性 [`VisualElement`](xref:Xamarin.Forms.Application)
 
 Xamarin.Forms 程序包含只有一个派生自的类`Application`但通常使用派生自的许多类`VisualElement`，包括页、 布局和控件。 任何这些对象可以具有其`Resources`属性设置为`ResourceDictionary`。 选择在何处放置特定`ResourceDictionary`其中，可以用资源的影响：
 
 - 中的资源`ResourceDictionary`如附加到视图`Button`或`Label`只能应用于该特定的对象，因此这不是非常有用。
-- 中的资源`ResourceDictionary`附加到的布局如`StackLayout`或`Grid`可应用于布局和该布局的所有子级。 
+- 中的资源`ResourceDictionary`附加到的布局如`StackLayout`或`Grid`可应用于布局和该布局的所有子级。
 - 中的资源`ResourceDictionary`定义的页级别可向页以及所有子项。
 - 中的资源`ResourceDictionary`定义的应用程序可以在整个应用程序应用级别。
 
@@ -187,7 +187,7 @@ Xamarin.Forms 从 3.0 开始，显式`ResourceDictionary`标记不是必需的�
         <local:MyResourceDictionary />
     </ContentPage.Resources>
     ...
-</ContentPage>  
+</ContentPage>
 ```
 
 实例`MyResourceDictionary`设置为`Resources`属性`ContentPage`对象。
@@ -258,7 +258,7 @@ Xamarin.Forms 从 3.0 开始，显式`ResourceDictionary`标记不是必需的�
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>Xamarin.Forms 3.0 中的合并字典
 
-以 Xamarin.Forms 3.0，合并进程开头`ResourceDictionaries`变得某种程度上更容易且更灵活。 `MergedDictionaries`属性元素标记不再需要。 相反，你将添加到资源字典另一个`ResourceDictionary`与新的标记[ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source)属性设置为与资源的 XAML 文件的文件名：
+以 Xamarin.Forms 3.0，合并进程开头[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)实例已变得某种程度上更容易且更灵活。 `MergedDictionaries`属性元素标记不再需要。 相反，你将添加到资源字典另一个`ResourceDictionary`与新的标记[ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source)属性设置为与资源的 XAML 文件的文件名：
 
 ```xaml
 <ContentPage ...>
@@ -294,7 +294,7 @@ Xamarin.Forms 从 3.0 开始，显式`ResourceDictionary`标记不是必需的�
 </ContentPage>
 ```
 
-此新语法未_不_实例化`MyResourceDictionary`类。 相反，它引用的 XAML 文件。 原因代码隐藏文件 (**MyResourceDictionary.xaml.cs**) 不再需要。 您还可以删除`x:Class`从根标记的属性**MyResourceDictionary.xaml**文件。 
+此新语法未_不_实例化`MyResourceDictionary`类。 相反，它引用的 XAML 文件。 原因代码隐藏文件 (**MyResourceDictionary.xaml.cs**) 不再需要。 您还可以删除`x:Class`从根标记的属性**MyResourceDictionary.xaml**文件。
 
 ## <a name="summary"></a>总结
 

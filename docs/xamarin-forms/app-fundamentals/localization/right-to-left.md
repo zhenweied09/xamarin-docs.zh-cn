@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 3201c3161d66163cabffdb36465356192bdd3843
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 92ca58374292c829df4098274abae870b355a7b0
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="right-to-left-localization"></a>从右到左本地化
 
@@ -24,7 +24,7 @@ _从右到左本地化将从右到左排列方向对支持添加到 Xamarin.Form
 流方向是人眼扫描的页上的 UI 元素的方向。 某些语言，如阿拉伯语和希伯莱语，需要用户界面元素的布局中从右到左排列方向。 这可以通过设置来实现[ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。 此属性获取或设置的方向在任何父元素来控制其布局，并且应设置为其中一个的用户界面元素流[ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection)枚举值：
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 设置[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性[ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft)在元素上通常设置的对齐方式到右、 右到左的阅读顺序和控件的布局，可以从流从右到左：
@@ -105,7 +105,7 @@ this.FlowDirection = Device.FlowDirection;
 </Resources>
 ```
 
-此外，UWP 需要在.NET 标准库中显式定义应用程序的默认区域性。 这可以通过设置来实现`NeutralResourcesLanguage`属性中`AssemblyInfo.cs`，或在另一个类的默认区域性：
+此外，UWP 需要.NET 标准库中显式定义应用程序的默认区域性。 这可以通过设置来实现`NeutralResourcesLanguage`属性中`AssemblyInfo.cs`，或在另一个类的默认区域性：
 
 ```csharp
 using System.Resources;
@@ -149,6 +149,6 @@ Xamarin.Forms 右到左本地化目前具有许多限制：
 
 **Xamarin.Forms 3.0 右到左支持，通过[Xamarin 大学](https://university.xamarin.com/)**
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [TodoLocalizedRTL 示例应用程序](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)

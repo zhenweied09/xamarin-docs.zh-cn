@@ -6,11 +6,11 @@ ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: b5301e499a3b85087f19449f8a25b107b8ec1e4b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms 的 Xamarin 实时 Player
 
@@ -22,7 +22,7 @@ Xamarin 实时播放器旨在如入门开发人员，其获得快速可视化在
 
 [![实时的 Xamarin Player： 代码、 扫描、 测试](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-1. 下载应用程序流动[实时的 Xamarin Player 安装](install.md)说明。
+1. 按照下载应用[实时的 Xamarin Player 安装](install.md)说明。
 2. 启用*实时的 Xamarin Player*中**首选项**，然后选择你的设备从**设备**列表。
 2. 管理实时播放器设备扫描 QR 代码以对您的设备与 Visual Studio。
 3. 应用程序在你的手机或平板电脑上运行权限。

@@ -6,14 +6,16 @@ ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/13/2017
-ms.openlocfilehash: 517e21f2decd0dabbd03d752f13831a891ad7138
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/21/2018
+ms.openlocfilehash: 79e61db4c27a2d29b4ee0a9d39f2d25ea5d93303
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="advanced-concepts-and-internals"></a>高级的概念和内部机制
+
+_本部分包含这些主题介绍体系结构、 API 设计以及 Xamarin.Android 的限制。此外，它包括这些主题介绍其垃圾回收实现和 Xamarin.Android 中可用的程序集。因为 Xamarin.Android[开放源代码](https://github.com/xamarin/xamarin-android)，还有可能可以通过检查其源代码理解 Xamarin.Android 的内部工作情况。_
 
 
 ##  <a name="architectureandroidinternalsarchitecturemd"></a>[体系结构](~/android/internals/architecture.md)

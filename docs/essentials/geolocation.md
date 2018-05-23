@@ -5,13 +5,13 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ead498113f432e766fbd77ae2f01bc67c2273b60
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: bf0fa7d2caf7c8857bc1272f4471def04100383f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials 地理编码
+# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials 地理位置
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/12/2018
 
 ## <a name="getting-started"></a>入门
 
-访问**地理位置**功能以下平台特定的安装程序是必需的。
+访问**地理位置**功能，以下特定于平台的安装程序是必需的：
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/12/2018
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹并添加以下内的**清单**节点。
+打开**AndroidManifest.xml**文件下**属性**文件夹并添加以下内的**清单**节点：
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,11 +47,11 @@ ms.lasthandoff: 05/12/2018
 <uses-feature android:name="android.hardware.location.network" android:required="false" />
 ```
 
-或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**ACCESS_COARSE_LOCATION**和**ACCESS_FINE_LOCATION**权限。 这将自动更新**AndroidManifest.xml**文件。
+或者右键单击上的 Android 项目，然后打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**ACCESS_COARSE_LOCATION**和**ACCESS_FINE_LOCATION**权限。 这将自动更新**AndroidManifest.xml**文件。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-你的应用需要拥有密钥你**Info.plist**为 NSLocationWhenInUseUsageDescription 才能访问设备的位置。
+你的应用**Info.plist**必须包含`NSLocationWhenInUseUsageDescription`密钥才能访问设备的位置。
 
 打开 plist 编辑器并添加**隐私-位置时在使用使用说明**属性，并填写要显示的用户的一个值。
 
@@ -104,7 +104,7 @@ catch (Exception ex)
 }
 ```
 
-若要查询当前设备[位置](xref:Xamarin.Essentials.Location)坐标`GetLocationAsync`可用。 建议在完整传递`GeolocationRequest`和`CancellationToken`由于它可能需要一些时间，以获取设备的位置。
+若要查询当前设备[位置](xref:Xamarin.Essentials.Location)坐标，`GetLocationAsync`可用。 最好是在完整传递`GeolocationRequest`和`CancellationToken`由于它可能需要一些时间，以获取设备的位置。
 
 ```csharp
 try
@@ -133,7 +133,7 @@ catch (Exception ex)
 
 ## <a name="geolocation-accuracy"></a>地理位置准确性
 
-下表概述了每个平台的准确性
+下表概述了每个平台的准确性：
 
 ### <a name="lowest"></a>最低
 

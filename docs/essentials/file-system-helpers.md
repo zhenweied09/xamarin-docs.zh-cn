@@ -5,11 +5,11 @@ ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 871d164df982d1d170e8ba5bffd3bd6600a4cdda
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 14aabc319fefdbad86f29a9d27ce39b59da35e3e
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials 文件系统帮助器
 
@@ -31,7 +31,7 @@ using Xamarin.Essentials;
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-若要获取的任何文件都不用户数据文件的应用程序的顶级 diredctory。 随操作系统一起同步 framework 备份这些文件。 请参阅下面的平台实现细节。
+若要获取的任何文件都不用户数据文件的应用程序的顶级目录。 随操作系统一起同步 framework 备份这些文件。 请参阅下面的平台实现细节。
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
@@ -54,7 +54,7 @@ var mainDir = FileSystem.AppDataDirectory;
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - **CacheDirectory** – 返回[CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir)的当前上下文。
-- **AppDataDirectory** – 返回[FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir)的当前上下文和是否使用备份[Autu 备份](https://developer.android.com/guide/topics/data/autobackup.html)启动上 API 23 及更高版本。
+- **AppDataDirectory** – 返回[FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir)的当前上下文和是否使用备份[自动备份](https://developer.android.com/guide/topics/data/autobackup.html)启动上 API 23 及更高版本。
 
 添加到任何文件**资产**文件夹中的 Android 项目，然后将标记为生成操作**AndroidAsset**以将它与`OpenAppPackageFileAsync`。
 

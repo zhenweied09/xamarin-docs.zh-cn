@@ -6,11 +6,11 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -24,33 +24,12 @@ Xamarin 探查器具有大量检测可用于分析-分配、 周期和时间探�
 
 本指南检查常见分析方案，并作为一种工具来帮助分析并优化 iOS 和 Android 应用程序引入探查器。
 
-## <a name="contents"></a>内容
-
-- [下载并安装](#Download_and_Install)
-- [探查器和分析](#Profilers_and_Profiling)
-- [Xamarin Profiler](#Xamarin_Profiler)
-- [探查器支持](#Profiler_Support)
-- [探查器基础知识](#Profiler_Basics)
-    - [允许在你的应用程序中进行分析](#Allowing_Profiling_in_your_App)
-    - [启动探查器](#Launching_the_Profiler)
-        - [从 Visual Studio 启动 mac](#Launching_from_Xamarin_Studio)
-        - [从 Visual Studio 启动](#Launching_from_Visual_Studio)
-        - [保存和加载探查器会话](#Saving_and_Loading_Profiler_Sessions)
-        - [探查器功能和检测](#Profiler_Features)
-    - [分配](#Allocations)
-    - [时间探查器](#Time_Profiler)
-    - [周期](#Cycles)
-- [分析应用程序](#Profiling_Applications)
-- [摘要](#Summary)
-
 ## <a name="download-and-install"></a>下载并安装
 
 > [!NOTE]
-> **注意：**你将需要[Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/)订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
+> 你将需要[Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/)订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
 
 Xamarin 探查器是独立的应用程序，并且已集成使用适用于 Mac 的 Visual Studio 和 Visual Studio，若要启用分析从 IDE 内。
-
-### <a name="download"></a>下载
 
 下载你的平台的安装程序包：
 
@@ -58,7 +37,6 @@ Xamarin 探查器是独立的应用程序，并且已集成使用适用于 Mac �
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 下载完成后，启动安装程序将 Xamarin 探查器添加到你的系统。
-
 
 ## <a name="profilers-and-profiling"></a>探查器和分析
 
@@ -199,7 +177,6 @@ Xamarin 探查器向开发人员提供了一种方法从配置文件应用程序
 
 有关详细信息，请参阅[生成.mlpd 文件](~/tools/profiler/troubleshooting.md#gen_mlpd)。
 
-
 ## <a name="profiler-features"></a>探查器功能
 
 Xamarin 探查器的定义如下所示的五个部分组成：
@@ -298,7 +275,6 @@ Xamarin 探查器的定义如下所示的五个部分组成：
 
 -----
 
-
 - **调用关系树**– 显示所用的时间每种方法中：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
@@ -340,24 +316,7 @@ Xamarin 探查器的定义如下所示的五个部分组成：
 
 -----
 
-
 选择**更新**以继续。
-
-<!---
-## Profiling Android Applications
-
-
-Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
-
-You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
-
-
-## Profiling iOS Applications
-
-### Profiling tvOS
-
-## Profiling Mac Applications
--->
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>SGen 垃圾回收器和分析
 
@@ -374,7 +333,6 @@ SGen 它分配的应用程序分成三个堆的对象是代 GC-Nursery、 主要
 ## <a name="summary"></a>总结
 
 在本指南中我们看上去哪些分析及如何都很有好处向开发人员。 然后，我们引入了 Xamarin 探查器，提供的某些历史记录和到其工作原理的信息。 最后，我们在观看的 Xamarin 探查器，功能和解决分配以及时间探查器检测。
-
 
 ## <a name="related-links"></a>相关链接
 
