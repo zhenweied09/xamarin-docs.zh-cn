@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -63,8 +63,10 @@ public partial class App : Application
     public App ()
     {
         // Initialize Live Reload.
+        #if DEBUG
         LiveReload.Init();
-    
+        #endif
+        
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -134,6 +136,10 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 * **XLR003**:*实时重新加载 nuget 包需要安装 Xamarin 实时重新加载 Visual Studio 扩展。*
 
   尝试生成项目引用实时重新加载 nuget 包，但未安装 Visual 扩展。  
+
+* *加载程序集时出现异常： System.IO.FileNotFoundException： 无法加载程序集 Xamarin.Live.Reload，Version = 0.3.27.0，区域性 = neutral，PublicKeyToken =。*
+
+  应使用主机项目`PackageReference`而不是 `packages.config`
 
 ### <a name="app-doesnt-connect"></a>应用程序不会将连接
 
