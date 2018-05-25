@@ -6,12 +6,12 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/04/2018
-ms.openlocfilehash: b1cf87ed8c5614a113a03232547a6753da26bc2d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/17/2018
+ms.openlocfilehash: ca88159e8bcbcd4665e29b4ad8df9ffe00cfec67
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="windows-installation"></a>Windows 安装
 
@@ -85,7 +85,8 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 有关 Google Android Emulator、Hyper-V 和 HAXM 的详细信息，请参阅 [Android Emulator 硬件加速](~/android/get-started/installation/android-emulator/hardware-acceleration.md)指南。
 
 > [!NOTE]
-> 在较旧版本的 Windows 上，HAXM 与 Hyper-V 不兼容。 在此情况下，需要[禁用 Hyper-V](/xamarin/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md?tabs=vswin#disabling-hyper-v) 或使用不具有 x86 优化的较慢的仿真器映像。
+> 在较旧版本的 Windows 上，HAXM 与 Hyper-V 不兼容。 在此情况下，需要[禁用 Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) 或使用不具有 x86 优化的较慢的仿真器映像。
+
 
 <a name="device" />
 
