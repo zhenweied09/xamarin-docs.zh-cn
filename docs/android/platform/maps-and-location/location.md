@@ -6,12 +6,12 @@ ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/22/2018
+ms.openlocfilehash: b509f6892b27afa053a6ee913826d913d7ad54a8
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="location-services"></a>位置服务
 
@@ -83,9 +83,15 @@ else
  
 融合的位置提供程序 API 提供了各种其他工具来让位置识别应用程序，包括地理围栏和活动监视。 在此部分中，我们将重点介绍的基础知识的设置`LocationClient`，建立提供程序，以及获取用户的位置。
 
-融合的位置提供程序的一部分[Google Play 服务](http://developer.android.com/google/play-services/index.html)。 必须安装 Google Play 服务包，并将其正确配置，在融合的位置提供程序 API 使应用程序工作，并且设备必须具有 Google Play 服务 APK 安装。
+融合的位置提供程序的一部分[Google Play 服务](http://developer.android.com/google/play-services/index.html)。
+必须安装 Google Play 服务包，并将其正确配置，在融合的位置提供程序 API 使应用程序工作，并且设备必须具有 Google Play 服务 APK 安装。
 
-在之前 Xamarin.Android 应用程序可以使用融合的位置提供程序，它必须添加**Xamarin.GooglePlayServices.Maps**到项目。
+在之前 Xamarin.Android 应用程序可以使用融合的位置提供程序，它必须添加**Xamarin.GooglePlayServices.Maps**到项目的包。 此外，以下`using`语句应添加到任何引用如下所述的类的源文件：
+
+```csharp
+using Android.Gms.Common;
+using Android.Gms.Location;
+```
 
 ### <a name="checking-if-google-play-services-is-installed"></a>检查是否已安装 Google Play 服务
 
@@ -349,7 +355,7 @@ else
 ## <a name="related-links"></a>相关链接
 
 - [位置 （示例）](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [FusedLocationProvider （示例）](https://developer.xamarin.com/samples/FusedLocationProvider/)
 - [Google Play Services](http://developer.android.com/google/play-services/index.html)
 - [条件类](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [LocationManager 类](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)

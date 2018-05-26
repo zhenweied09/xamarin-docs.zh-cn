@@ -6,12 +6,12 @@ ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: e9a4a661e694b5a885f202a36f9a2916c6c339fd
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.date: 05/21/2018
+ms.openlocfilehash: ca48ad6fb7d5aae53f972f6e3b5257919d140a8d
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 布局
 
@@ -19,7 +19,7 @@ _Xamarin.Forms 布局用于组合成 visual 结构的用户界面控件。_
 
 [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout)和[ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) Xamarin.Forms 中的类是作为容器的视图和其他布局视图的专用子类型。 `Layout`类本身派生自[ `View` ](views.md)。 A`Layout`派生通常包含逻辑，以便在 Xamarin.Forms 应用程序中设置的位置和子元素的大小。
 
- [ ![](layouts-images/layouts-sml.png "Xamarin.Forms 布局类型")](layouts-images/layouts.png#lightbox "Xamarin.Forms 布局类型")
+[![Xamarin.Forms 布局类型](layouts-images/layouts-sml.png "Xamarin.Forms 布局类型")](layouts-images/layouts.png#lightbox "Xamarin.Forms 布局类型")
 
 派生自的类`Layout`可以划分为两个类别：
 
@@ -101,7 +101,14 @@ _Xamarin.Forms 布局用于组合成 visual 结构的用户界面控件。_
 
 |     |     |
 | --- | --- |
-| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) 定位子元素相对于`RelativeLayout`本身或其同级。 指示子表位置[附加属性](~/xamarin-forms/xaml/attached-properties.md)，设置指向类型的对象[ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)和[ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)/ [指南](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 示例](layouts-images/RelativeLayout.png "RelativeLayout 示例")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) 定位子元素相对于`RelativeLayout`本身或其同级。 指示子表位置[附加属性](~/xamarin-forms/xaml/attached-properties.md)，设置指向类型的对象[ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)和[ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/)。<br /><br />[API 文档](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) / [指南](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 示例](layouts-images/RelativeLayout.png "RelativeLayout 示例")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+|     |     |
+
+### <a name="flexlayout"></a>FlexLayout
+
+|     |     |
+| --- | --- |
+| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) 根据 CSS[灵活框布局模块](http://www.w3.org/TR/css-flexbox-1/)，通常称为_弹性布局_或_弹性框_。 `FlexLayout` 定义以下六个可绑定属性和允许级能堆积或使用许多对齐和方向的选项进行包装的五个附加的可绑定属性。<br /><br />[API 文档](xref:Xamarin.Forms.FlexLayout) / [指南](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/) | [![FlexLayout 示例](layouts-images/FlexLayout.png "FlexLayout 示例")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout 示例")<br />[C# 代码，此页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>相关链接
