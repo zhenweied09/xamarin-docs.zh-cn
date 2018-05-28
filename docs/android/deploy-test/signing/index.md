@@ -5,12 +5,12 @@ ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/26/2018
-ms.openlocfilehash: ba936137dd868e9ba5eabc6df89bb98a0a178ba2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/21/2018
+ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="signing-the-android-application-package"></a>对 Android 应用程序包进行签名
 
@@ -113,9 +113,9 @@ ms.lasthandoff: 04/04/2018
 
 [![“签名密码”对话框](images/vs/07-signing-password-vs-sml.png)](images/vs/07-signing-password-vs.png#lightbox)
 
-签名过程完成之后，单击“打开文件夹”：
+签名过程完成之后，单击“打开分发”：
 
-[![“打开文件夹”按钮](images/vs/08-open-folder-vs-sml.png)](images/vs/08-open-folder-vs.png#lightbox)
+[![打开“分发”按钮](images/vs/08-open-distribution-sml.png)](images/vs/08-open-distribution.png#lightbox)
 
 这会使 Windows 资源管理器打开包含生成的 APK 文件的文件夹。 此时，Visual Studio 已将 Xamarin.Android 应用程序编译为准备好进行分发的 APK。
 下面的屏幕截图显示准备好进行发布的应用 (**MyApp.MyApp.apk**) 的示例：
