@@ -232,6 +232,7 @@
 ### [自定义链接器设置](deploy-test/linker.md)
 ### [多核设备](deploy-test/multicore-devices.md)
 ### [性能](deploy-test/performance.md)
+### [分析](deploy-test/profiling.md)
 ### [准备发布](deploy-test/release-prep/index.md)
 #### [ProGuard](deploy-test/release-prep/proguard.md)
 ### [对 APK 进行签名](deploy-test/signing/index.md)
