@@ -1,21 +1,22 @@
 ---
 title: 本机窗体
-description: 本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 本机项目可以使用直接添加到项目中，或标准.NET 库，.NET 标准库时或共享项目中的内容页派生的页。 此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。
+description: 本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 本机项目可以使用直接添加到项目中，或从.NET 标准库、 标准.NET 库或共享项目的内容页派生的页。 此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: bb7aa9a7071f9ac7bef0dce5790a3fe74302cfb4
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335198"
 ---
 # <a name="native-forms"></a>本机窗体
 
-_本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。本机项目可以使用直接添加到项目中，或标准.NET 库，.NET 标准库时或共享项目中的内容页派生的页。此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。_
+_本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。本机项目可以使用直接添加到项目中，或从.NET 标准库、 标准.NET 库或共享项目的内容页派生的页。此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。_
 
 通常，Xamarin.Forms 应用程序包括一个或多个派生自的页[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)，并将这些页面共享所有平台的标准.NET 类库项目或共享项目中。 但是，本机窗体允许`ContentPage`-派生页添加直接到本机 Xamarin.iOS 和 Xamarin.Android，UWP 应用程序。 相比具有使用本机项目`ContentPage`-派生的页从标准.NET 类库项目或共享项目中，直接向本机项目添加页面的优点是页面可以用本机视图进行扩展。 然后可以在 XAML 中使用名为本机视图`x:Name`和引用从代码隐藏。 有关本机视图的详细信息，请参阅[本机视图](~/xamarin-forms/platform/native-views/index.md)。
 

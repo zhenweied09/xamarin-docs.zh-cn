@@ -7,11 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 15e1f53d053046b4a51666647ac846366d3c858b
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335211"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>演练： 将绑定 iOS Objective C 库
 
@@ -420,7 +421,7 @@ sdk: macosx10.11     arch: x86_64  i386
 sdk: watchos2.2      arch: armv7
 ```
 
-综上所述，我们可以看到我们具有`iphoneos8.1`我们计算机上安装 SDK。 使用就地此信息，我们已准备好分析 InfColorPicker 项目`.h`文件到初始**ApiDefinition.cs**和`StructsAndEnums.cs`InfColorPicker 项目。
+综上所述，我们可以看到我们具有`iphoneos9.3`我们计算机上安装 SDK。 使用就地此信息，我们已准备好分析 InfColorPicker 项目`.h`文件到初始**ApiDefinition.cs**和`StructsAndEnums.cs`InfColorPicker 项目。
 
 输入以下命令中的的 Terminal 应用：
 
