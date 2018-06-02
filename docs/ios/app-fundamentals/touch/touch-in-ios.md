@@ -6,11 +6,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 78783089303eba09b0ee36534b0078b82674a1c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689536"
 ---
 # <a name="touch-in-ios"></a>请在 iOS 中按
 
@@ -76,7 +77,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-## <a name="multi-touch"></a>Multi-Touch
+## <a name="multi-touch"></a>多点触控
 
 默认情况下，在控件上不启用多点触控。 在 iOS 设计器中，可以启用多点触控，如下面的屏幕截图所示：
 
@@ -117,7 +118,7 @@ if (this.imgTouchMe.Frame.Contains (touch.LocationInView (this.View)))
 
 Xamarin.iOS 提供类`UIGestureRecognizer`作为以下内置笔势识别器的基类：
 
--  *UITapGesturesRecognizer* – 这是用于一个或多个分流。
+-  *UITapGestureRecognizer* – 这是用于一个或多个分流。
 -  *UIPinchGestureRecognizer* – Pinching 和相隔指进行传播。
 -  *UIPanGestureRecognizer* – 平移或拖动。
 -  *UISwipeGestureRecognizer* – 轻扫以任意方向。

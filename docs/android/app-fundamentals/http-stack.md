@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689469"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>HttpClient 堆栈和适用于 Android 的 SSL/TLS 实现选择器
 
@@ -89,9 +90,9 @@ AndroidClientHandler 是的新处理程序委托给本机 Java/OS 代码，而�
 
 从开始 Xamarin.Android 8.3`HttpClientHandler`默认为单调 SSL (`btls`) 为基础的 TLS 提供程序。 单调 SSL TLS 提供程序提供以下优势：
 
--   它支持 TLS 1.2。
+-   它支持 TLS 1.2 +。
 -   它支持所有的 Android 版本。
--   它提供了两个 TLS 1.2 支持`HttpClient`和`WebClient`。
+-   它提供了两个支持 TLS 1.2 +`HttpClient`和`WebClient`。
 
 为基础 TLS 提供程序使用单调 SSL 的缺点是，它可以增加生成的 APK （它将添加大约 1 MB 的每个受支持的 ABI 的其他 APK 大小） 的大小。
 

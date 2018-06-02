@@ -6,12 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2017
-ms.openlocfilehash: d1f11ed1b52354dedbdb8893a96e0ae7589d5389
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.date: 05/31/2018
+ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689443"
 ---
 # <a name="local-databases"></a>本地数据库
 
@@ -33,17 +34,20 @@ Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.o
 
 <a name="XamarinForms_PCL_Project" />
 
-### <a name="xamarinsforms-pcl-project"></a>Xamarins.Forms PCL 项目
+### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms.NET 标准或 PCL 项目
 
-若要将 SQLite 支持添加到 Xamarin.Forms PCL 项目，使用 NuGet 的搜索功能查找**sqlite net pcl**和安装该程序包：
+若要将 SQLite 支持添加到 Xamarin.Forms 项目，使用 NuGet 的搜索功能查找**sqlite net pcl**和安装该程序包：
 
-![](databases-images/vs2017-sqlite-pcl-nuget.png "添加 NuGet SQLite.NET PCL 包")
+![添加 NuGet SQLite.NET PCL 包](databases-images/vs2017-sqlite-pcl-nuget.png "添加 NuGet SQLite.NET PCL 包")
 
 有大量的具有类似名称的 NuGet 包，正确的包具有以下属性：
 
 - **创建的：** Frank A.Krueger
 - **Id:** sqlite net pcl
 - **NuGet 链接：** [sqlite net pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!TIP]
+> 使用**sqlite net pcl**标准.NET 项目中甚至的 NuGet。
 
 已添加引用后，编写一个特定于平台的功能，它是确定数据库文件的位置的抽象的接口。 示例中使用该接口所定义的一个方法：
 
@@ -130,7 +134,7 @@ public Task<int> DeleteItemAsync(TodoItem item)
 
 若要配置 iOS 应用程序，请将相同的 NuGet 包添加到 iOS 项目使用*NuGet*窗口：
 
-![](databases-images/vsmac-sqlite-nuget.png "添加 NuGet SQLite.NET PCL 包")
+![添加 NuGet SQLite.NET PCL 包](databases-images/vsmac-sqlite-nuget.png "添加 NuGet SQLite.NET PCL 包")
 
 所需的唯一代码是`IFileHelper`确定数据文件路径的实现。 下面的代码将在该 SQLite 数据库文件放**库/数据库**在应用程序的沙盒中的文件夹。 请参阅[iOS 使用文件系统](~/ios/app-fundamentals/file-system.md)文档可供存储使用不同的目录的详细信息。
 
@@ -138,21 +142,21 @@ public Task<int> DeleteItemAsync(TodoItem item)
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.iOS
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
+      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
 
-            if (!Directory.Exists(libFolder))
-            {
-                Directory.CreateDirectory(libFolder);
-            }
+      if (!Directory.Exists(libFolder))
+      {
+        Directory.CreateDirectory(libFolder);
+      }
 
-            return Path.Combine(libFolder, filename);
-        }
+      return Path.Combine(libFolder, filename);
     }
+  }
 }
 ```
 
@@ -172,14 +176,14 @@ namespace Todo.iOS
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.Droid
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            return Path.Combine(path, filename);
-        }
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+        return Path.Combine(path, filename);
     }
+  }
 }
 ```
 
@@ -189,7 +193,7 @@ namespace Todo.Droid
 
 若要配置 UWP 应用程序，请将相同的 NuGet 包添加到 UWP 项目使用*NuGet*窗口：
 
-![](databases-images/vs2017-sqlite-uwp-nuget.png "添加 NuGet SQLite.NET PCL 包")
+![添加 NuGet SQLite.NET PCL 包](databases-images/vs2017-sqlite-uwp-nuget.png "添加 NuGet SQLite.NET PCL 包")
 
 一旦添加引用时，实现`IFileHelper`接口使用特定于平台的`Windows.Storage`API 来确定数据文件路径。
 
@@ -200,23 +204,21 @@ using Windows.Storage;
 [assembly: Dependency(typeof(FileHelper))]
 namespace Todo.UWP
 {
-    public class FileHelper : IFileHelper
+  public class FileHelper : IFileHelper
+  {
+    public string GetLocalFilePath(string filename)
     {
-        public string GetLocalFilePath(string filename)
-        {
-            return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-        }
+      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
     }
+  }
 }
-
 ```
 
 ## <a name="summary"></a>总结
 
 Xamarin.Forms 支持使用 SQLite 数据库引擎，这样就可以用于加载和保存在共享代码中的对象的数据库驱动的应用程序。
 
-本文着重**访问**使用 Xamarin.Forms 的 SQLite 数据库。 有关使用 SQLite.Net 本身的详细信息，请参阅[数据访问： 使用 SQLite.NET](~/cross-platform/app-fundamentals/index.md)文档。 跨所有平台; 可共享的大多数 SQLite.Net 代码是仅配置 SQLite 数据库文件的位置，需要特定于平台的功能。
-
+本文着重**访问**使用 Xamarin.Forms 的 SQLite 数据库。 有关使用 SQLite.Net 本身的详细信息，请参阅[在 Android 上的 SQLite.NET](~/android/data-cloud/data-access/using-sqlite-orm.md)或[在 iOS 上的 SQLite.NET](~/ios/data-cloud/data/using-sqlite-orm.md)文档。 跨所有平台; 可共享的大多数 SQLite.Net 代码是仅配置 SQLite 数据库文件的位置，需要特定于平台的功能。
 
 ## <a name="related-links"></a>相关链接
 
