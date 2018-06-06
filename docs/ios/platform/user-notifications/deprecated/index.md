@@ -1,26 +1,25 @@
 ---
-title: 不推荐使用的通知技术
+title: 不推荐使用的通知中 Xamarin.iOS 的技术
+description: 本文档介绍 iOS 10 中引入的用户通知 framework 已弃用的 iOS 通知技术。
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: eff1d999e705aa493d0481e34ead3b9b81d434f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4becc5e296fb6e2496d9ffd863f7137419480262
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788548"
 ---
-# <a name="deprecated-notification-technologies"></a>不推荐使用的通知技术
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>不推荐使用的通知中 Xamarin.iOS 的技术
 
 本部分说明如何实现本地和 Xamarin.iOS 中的推送通知。 它将解释 iOS 通知的各种 UI 元素，并讨论 API 的涉及创建和显示一条通知。
 
 > [!IMPORTANT]
 > 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
-
-
-
 
 ## <a name="sections"></a>部分
 

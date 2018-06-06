@@ -1,16 +1,17 @@
 ---
-title: 实时 Xamarin.Forms 的播放器
-description: 启动快速了解 Xamarin、 生成和运行 Android 或 iOS 设备上的应用。
+title: Xamarin.Forms 的 Xamarin 实时 Player
+description: 本文档讨论 Xamarin 实时播放器 Xamarin.Forms，描述安装、 Xamarin 实时播放器应用程序、 示例用于 Xamarin 实时播放器，限制，和故障排除。
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: dd179fb1d1ce3ca57cdf6e27bb86a12e2f9ef03f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 79cf2c790789963189d3eedd6645a6b6ae6503b6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793133"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms 的 Xamarin 实时 Player
 
@@ -46,7 +47,6 @@ Xamarin 实时播放器旨在如入门开发人员，其获得快速可视化在
 ## <a name="troubleshootingtroubleshootingmd"></a>[疑难解答](troubleshooting.md)
 
 如果出现问题，请找到帮助。
-
 
 ## <a name="related-links"></a>相关链接
 

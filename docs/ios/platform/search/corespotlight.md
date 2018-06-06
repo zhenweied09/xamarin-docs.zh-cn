@@ -1,18 +1,20 @@
 ---
-title: 使用核心 Spotlight 搜索
+title: 使用在 Xamarin.iOS 的核心 Spotlight 搜索
+description: 本文档介绍如何在 Xamarin.iOS 应用程序中使用核心 Spotlight 提供在应用程序内容的链接。 它讨论如何创建、 还原、 更新和删除可搜索的项。
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788034"
 ---
-# <a name="search-with-core-spotlight"></a>使用核心 Spotlight 搜索
+# <a name="search-with-core-spotlight-in-xamarinios"></a>使用在 Xamarin.iOS 的核心 Spotlight 搜索
 
 核心聚焦是一个新的框架，用于 iOS 9 提供类似于数据库的 API 来添加、 编辑或删除你的应用程序中内容链接。 使用核心 Spotlight 已添加的项都可在 iOS 设备上的 Spotlight 搜索中。
 

@@ -1,23 +1,23 @@
 ---
-title: 疑难解答
-description: 使用 Xamarin 实时播放器，以及如何修复它们的已知的问题。
+title: 故障排除 Xamarin 实时播放机
+description: 本文档介绍的实时的 Xamarin Player 和潜在修复的已知的问题。 它讨论连接问题、 配置问题，以及更多。
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: 147ce43d3fe764f71f27dce46b699142dfb99872
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793743"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="troubleshooting-xamarin-live-player"></a>故障排除 Xamarin 实时播放机
 
 ![预览功能](~/media/shared/preview.png)
 
 此文章介绍一些常见的问题，并提供的步骤来纠正它们。
-
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>移动设备不会连接后扫描条形码 （或输入的代码）
 
@@ -27,7 +27,6 @@ ms.lasthandoff: 05/09/2018
   - 如果计算机也连接到有线网络，请尝试拔掉电源有线的连接。
 - 网络可能紧密保护 （例如，某些公司网络）、 阻止通过实时的 Xamarin Player 所需的端口。
 - 关闭 Xamarin 实时播放器应用程序并重新启动它。
-
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>在 IDE 中的"错误时尝试部署"消息
 
@@ -67,7 +66,6 @@ ms.lasthandoff: 05/09/2018
 
 转到：https://www.guidgenerator.com/online-guid-generator.aspx并生成新的 guid，并确保大写上。
 
-
 **步骤 5： 配置设备**
 
 打开**PlayerDeviceList.xml**如 Visual Studio 或 Visual Studio 代码编辑器中。 你需要在此文件中手动配置你的设备。 默认情况下，该文件应包含以下空`Devices`XML 元素：
@@ -98,7 +96,6 @@ ms.lasthandoff: 05/09/2018
 </PlayerDevice>
 ```
 
-
 **添加 Android 设备：**
 
 ```xml
@@ -118,7 +115,6 @@ ms.lasthandoff: 05/09/2018
 ```
 
 **关闭并重新打开 Visual Studio。** 在列表中应显示你的设备。
-
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>在 IDE 中的"无法找到类型或命名空间"消息
 
@@ -141,9 +137,7 @@ public class SomeCustomButton : Xamarin.Forms.Button { ... }
 
 Xamarin.Forms Android 项目必须使用"Toolbar.axml"和"Tabbar.axml"相关的布局文件的名称。 默认模板使用这些名称;重命名它们会导致呈现问题。
 
-
 任何其他问题请报告上[bugzilla](https://aka.ms/live-player-report-issue)。
-
 
 ## <a name="related-links"></a>相关链接
 

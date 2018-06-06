@@ -1,19 +1,20 @@
 ---
-title: Web 视图
-description: 消除歧义 iOS web 视图选项
+title: Xamarin.iOS 中的 web 视图
+description: 本文档介绍 Xamarin.iOS 应用程序可以显示 web 内容的各种方法。 它讨论 UIWebView、 WKWebView、 SFSafariViewController、 Safari 和应用程序传输安全。
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790491"
 ---
-# <a name="web-views"></a>Web 视图
+# <a name="web-views-in-xamarinios"></a>Xamarin.iOS 中的 web 视图
 
 IOS 的生存期内 Apple 发布了大量的应用程序开发人员将在其应用中的 web 视图功能的方式。 大多数用户利用内置 Safari web 浏览器在其 iOS 设备上，并因此从其他应用的 web 视图功能是与这种体验一致。 他们期望相同的手势，若要会在 par 和功能相同的性能。
 

@@ -1,5 +1,5 @@
 ---
-title: 表视图
+title: Xamarin.Mac 中的表视图
 description: 本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。 它描述了 Xcode 和接口生成器及与其进行交互在代码中创建的表视图。
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c274405613f079cb61ad9c96497a9effdc7173f5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: da26810869f23b8861ffb4409248c56bff12a521
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793225"
 ---
-# <a name="table-views"></a>表视图
+# <a name="table-views-in-xamarinmac"></a>Xamarin.Mac 中的表视图
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了 Xcode 和接口生成器及与其进行交互在代码中创建的表视图。_
 
@@ -172,7 +173,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了
 
 与我们的表视图在接口生成器中设计和通过公开**Outlet**，接下来我们需要创建的 C# 代码来填充它。
 
-首先，让我们创建一个新`Product`类来保存单个行的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
+首先，让我们创建一个新`Product`类来保存单个行的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
 
 [![](table-view-images/populate01.png "创建一个空的类")](table-view-images/populate01.png#lightbox)
 
@@ -206,7 +207,7 @@ namespace MacTables
 
 ```
 
-接下来，我们需要创建的一个子类`NSTableDataSource`为所请求的我们的表格提供数据。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`ProductTableDataSource`为**名称**单击**新建**按钮。
+接下来，我们需要创建的一个子类`NSTableDataSource`为所请求的我们的表格提供数据。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductTableDataSource`为**名称**单击**新建**按钮。
 
 编辑`ProductTableDataSource.cs`文件并使其如下所示：
 
@@ -245,7 +246,7 @@ namespace MacTables
 
 此类已存储为我们的表视图项和替代`GetRowCount`以返回表中的行数。
 
-最后，我们需要创建的一个子类`NSTableDelegate`以提供我们的表的行为。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`ProductTableDelegate`为**名称**单击**新建**按钮。
+最后，我们需要创建的一个子类`NSTableDelegate`以提供我们的表的行为。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductTableDelegate`为**名称**单击**新建**按钮。
 
 编辑`ProductTableDelegate.cs`文件并使其如下所示：
 

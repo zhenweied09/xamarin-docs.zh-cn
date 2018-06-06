@@ -1,19 +1,19 @@
 ---
 title: Xamarin Inspector
-description: 可视化和调试实时的应用
+description: 此文档链接到指南描述如何安装和使用 Xamarin 检查器来浏览并调试应用程序。
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 87e78cb7a7b2d310bc77c1fd638a1cf32dad75a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8f33f61cd3c38dbce16f9a7afa103836aa454a0c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793082"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
-
 
 Xamarin 的工作簿和检查器将用户的交互式 C# 控制台工具。 与调试的 IDE 中，检查正在运行的应用时调试或诊断帮助为提供的服务的工作流应用程序集成，该检查器。
 

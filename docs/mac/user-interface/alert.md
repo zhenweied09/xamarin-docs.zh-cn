@@ -1,5 +1,5 @@
 ---
-title: 警报
+title: Xamarin.Mac 中的警报
 description: 本文介绍如何使用 Xamarin.Mac 应用程序中的警报。 它介绍创建和显示 C# 代码中的警报以及对用户交互作出响应。
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1eb781fe02213de6a994f56e321316b93a128b60
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792637"
 ---
-# <a name="alerts"></a>警报
+# <a name="alerts-in-xamarinmac"></a>Xamarin.Mac 中的警报
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的警报。它介绍创建和显示 C# 代码中的警报以及对用户交互作出响应。_
 

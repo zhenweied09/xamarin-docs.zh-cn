@@ -1,18 +1,19 @@
 ---
-title: 使用本地化
-description: 调整 watchOS 面向多个语言版本的应用
+title: 使用 watchOS Xamarin 的本地化
+description: 本文档介绍如何本地化 watchOS 使用 Xamarin 生成的应用。 它讨论监视应用程序，监视扩展，在代码中，字符串情节提要文本、 测试和的详细信息。
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4f158f1c8699ad5090eb7fade8af8918c8881d95
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790774"
 ---
-# <a name="working-with-localization"></a>使用本地化
+# <a name="working-with-watchos-localization-in-xamarin"></a>使用 watchOS Xamarin 的本地化
 
 _调整 watchOS 面向多个语言版本的应用_
 
@@ -24,7 +25,7 @@ _调整 watchOS 面向多个语言版本的应用_
 - **.strings**情节提要，与关联的文件和
 - **Localizable.strings**在代码中使用的文本的文件。
 
-默认情节提要和资源位于**基**目录，和特定于语言的翻译和其他资源存储在**.lproj**目录。
+默认情节提要和资源位于**基**目录，和特定于语言的翻译和其他资源存储在 **.lproj**目录。
 iOS 和监视操作系统自动将使用用户的语言选择加载正确的字符串和资源。
 
 因为 Apple Watch 应用程序必须具有两个部分-Watch 应用和监视扩展的资源所需在两个位置，具体取决于如何使用它们的本地化字符串。
@@ -35,13 +36,13 @@ iOS 和监视操作系统自动将使用用户的语言选择加载正确的字�
 
 监视应用程序包含描述应用程序的用户界面的情节提要。 任何控件 (如`Label`和`Image`) 支持本地化具有**本地化 ID**。
 
-每个特定于语言的**.lproj**目录应包含**.strings**翻译具有每个元素的文件 (使用**本地化 ID**)，以及映像引用的情节提要。
+每个特定于语言的 **.lproj**目录应包含 **.strings**翻译具有每个元素的文件 (使用**本地化 ID**)，以及映像引用的情节提要。
 
 ## <a name="watch-extension"></a>监视扩展
 
 监视扩展是应用程序代码在其中运行。 从代码将向用户显示任何文本需要扩展中，不能在监视应用程序进行本地化。
 
-扩展还应该包含特定于语言的**.lproj**目录，但**.strings**文件仅需要在代码中使用的文本的翻译。
+扩展还应该包含特定于语言的 **.lproj**目录，但 **.strings**文件仅需要在代码中使用的文本的翻译。
 
 ## <a name="globalizing-the-watch-solution"></a>全球化监视解决方案
 
@@ -143,9 +144,9 @@ displayText.SetText (localizedDisplay);
 
 ## <a name="localization"></a>本地化
 
-翻译后已配置你的解决方案，将需要处理你**.strings**文件和你想要支持每种语言的映像。
+翻译后已配置你的解决方案，将需要处理你 **.strings**文件和你想要支持每种语言的映像。
 
-你可以创建任意多个**.lproj**作为你的目录需要 （一个用于每个受支持的语言）。 如使用语言代码名为**en**， **es**， **de**，**日本**， **PT-BR**，（对于英语等西班牙语、 德语、 日语和葡萄牙语 （巴西） 分别)。
+你可以创建任意多个 **.lproj**作为你的目录需要 （一个用于每个受支持的语言）。 如使用语言代码名为**en**， **es**， **de**，**日本**， **PT-BR**，（对于英语等西班牙语、 德语、 日语和葡萄牙语 （巴西） 分别)。
 
 附加的示例用 （计算机生成） 翻译来演示如何本地化 watchOS 应用。
 

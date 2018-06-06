@@ -1,24 +1,25 @@
 ---
-title: 布局选项
+title: 在 Xamarin.iOS 的布局选项
+description: 本文档介绍中 Xamarin.iOS 的用户界面的布局的不同方式。 还讨论了自动调整大小和自动布局。
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f197bbffeabb708769c48f0130aa27a86b14386
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790111"
 ---
-# <a name="layout-options"></a>布局选项
+# <a name="layout-options-in-xamarinios"></a>在 Xamarin.iOS 的布局选项
 
 有两个不同的机制，用于控制布局视图进行调整大小或旋转时：
 
 -  **自动调整大小**– 自动调整大小的设计器中的检查器使您能够设置`AutoresizingMask`属性。 这会使控件定位到其容器的边缘和/或修复它们的大小。 自动调整大小适用于 iOS 的所有版本。 此进行了更详细地描述
--  **自动布局**– 允许对 UI 控件的关系细化的控制的 iOS6 中引入的功能。 它还允许相对于其他元素的元素的位置的设计图面上的控件。 本主题更详细地介绍了[使用 Xamarin iOS 设计器的自动数据布局](~/ios/user-interface/designer/designer-auto-layout.md)指南。
-
+-  **自动布局**– 允许对 UI 控件的关系细化的控制的 iOS 6 中引入的功能。 它还允许相对于其他元素的元素的位置的设计图面上的控件。 本主题更详细地介绍了[使用 Xamarin iOS 设计器的自动数据布局](~/ios/user-interface/designer/designer-auto-layout.md)指南。
 
 ## <a name="autosizing"></a>自动调整大小
 

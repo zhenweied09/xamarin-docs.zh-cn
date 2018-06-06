@@ -1,5 +1,5 @@
 ---
-title: 对话框
+title: 在 Xamarin.Mac 对话框
 description: 本文介绍如何使用对话框和 Xamarin.Mac 应用程序中的模式窗口。 它介绍如何创建在 Xcode 和接口生成器中，使用标准对话框，并在 C# 代码中的这些控件与之交互模式窗口。
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cd0b57cc40d3f7cffd4d5711ec04a7225be870e9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d9a93c8503d7e25f098e871378a22455b597e90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792689"
 ---
-# <a name="dialogs"></a>对话框
+# <a name="dialogs-in-xamarinmac"></a>在 Xamarin.Mac 对话框
 
 在使用 C# 和.NET Xamarin.Mac 应用程序中，你有权访问相同的对话框和模式窗口，开发人员使用*Objective C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护模式窗口 （或根据需要在 C# 代码中直接创建它们）。
 
@@ -507,7 +508,7 @@ namespace MacWindows
     [![](dialog-images/pref09.png "设置 segue 类型")](dialog-images/pref09.png#lightbox)
 11. 保存所做的更改并返回到 Visual Studio for Mac 同步。
 
-如果我们运行代码并选择**首选项...**从**应用程序菜单**，将显示窗口：
+如果我们运行代码并选择**首选项...** 从**应用程序菜单**，将显示窗口：
 
 [![](dialog-images/pref10.png "示例首选项窗口")](dialog-images/pref10.png#lightbox)
 
@@ -951,7 +952,7 @@ if (dlg.RunModal () == 1) {
 
 打开对话框中的 Url 的数组形式返回用户的选定的文件或目录`URL`属性。
 
-如果我们运行程序并选择**打开...**项从**文件**显示菜单上，以下： 
+如果我们运行程序并选择**打开...** 项从**文件**显示菜单上，以下： 
 
 [![](dialog-images/dialog03.png "打开的对话框")](dialog-images/dialog03.png#lightbox)
 
@@ -1073,7 +1074,7 @@ void ShowSaveAs (NSObject sender)
 
 `AllowedFileTypes`属性是用户可以选择将文件另存的文件类型的字符串数组。 文件类型可以是指定为扩展或_实用程序_。 默认值是`null`，这样，可使用任何文件类型。
 
-如果我们设置`ShowSaveAsSheet`属性`false`，运行该应用程序并选择**另存为...**从**文件**菜单上，将显示以下：
+如果我们设置`ShowSaveAsSheet`属性`false`，运行该应用程序并选择**另存为...** 从**文件**菜单上，将显示以下：
 
 [![](dialog-images/save01.png "保存对话框")](dialog-images/save01.png#lightbox)
 
@@ -1081,7 +1082,7 @@ void ShowSaveAs (NSObject sender)
 
 [![](dialog-images/save02.png "展开保存对话框")](dialog-images/save02.png#lightbox)
 
-如果我们设置`ShowSaveAsSheet`属性`true`，运行该应用程序并选择**另存为...**从**文件**菜单上，将显示以下：
+如果我们设置`ShowSaveAsSheet`属性`true`，运行该应用程序并选择**另存为...** 从**文件**菜单上，将显示以下：
 
 [![](dialog-images/save03.png "保存工作表的一个")](dialog-images/save03.png#lightbox)
 

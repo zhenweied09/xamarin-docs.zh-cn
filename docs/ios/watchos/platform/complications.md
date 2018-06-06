@@ -1,19 +1,20 @@
 ---
-title: 协调的并发数据
-description: watchOS 允许开发人员编写自定义监视表面复杂因素
+title: watchOS Xamarin 中的并发数据
+description: 本文档介绍如何使用 Xamarin 中 watchOS 复杂性。 它讨论如何将添加一个问题，编写一个问题，模板，并提供示例代码。
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: c058922f97183359122a1bfa2b0e162e4ce344f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c69f65091e7d6c83afe34c6d8c06477cc5d133b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791834"
 ---
-# <a name="complications"></a>协调的并发数据
+# <a name="watchos-complications-in-xamarin"></a>watchOS Xamarin 中的并发数据
 
 _watchOS 允许开发人员编写自定义监视表面复杂因素_
 
@@ -38,7 +39,7 @@ _watchOS 允许开发人员编写自定义监视表面复杂因素_
 
 ### <a name="add-new-project"></a>添加新项目...
 
-**添加新项目...**向导包括一个复选框，将自动创建了复杂性控制器类和配置**Info.plist**文件：
+**添加新项目...** 向导包括一个复选框，将自动创建了复杂性控制器类和配置**Info.plist**文件：
 
 ![](complications-images/file-new-project-sml.png "包括复杂性复选框")
 

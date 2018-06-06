@@ -1,18 +1,20 @@
 ---
-title: 自定义表的外观
+title: 自定义在 Xamarin.iOS 的表的外观
+description: 本文档介绍如何自定义在 Xamarin.iOS 的表的外观。 它讨论的单元格样式、 附件、 单元格分隔符，和自定义单元格的布局。
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: a447c59e7384ce7da168efdd018bc23c2abb25c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03383c69afb6afa9282d44751475d74fdcd92d4a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789949"
 ---
-# <a name="customizing-a-tables-appearance"></a>自定义表的外观
+# <a name="customizing-a-tables-appearance-in-xamarinios"></a>自定义在 Xamarin.iOS 的表的外观
 
 更改表的外观的最简单方法是使用不同的单元格样式。 你可以更改在创建中的每个单元格时使用的单元格样式`UITableViewSource`的`GetCell`方法。
 

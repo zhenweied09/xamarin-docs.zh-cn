@@ -1,18 +1,20 @@
 ---
-title: 填充包含数据的表
+title: 填充包含在 Xamarin.iOS 的数据的表
+description: 本文档介绍如何以填充包含在 Xamarin.iOS 应用程序中的数据的表。 它讨论 UITableViewSource，单元格重用添加索引，页眉和页脚。
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c139b96adfc325e7c251f8093eab338ddf0c6337
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 77167bb8938ec0b3dcd30b80235ee5d9a60b4ce0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790063"
 ---
-# <a name="populating-a-table-with-data"></a>填充包含数据的表
+# <a name="populating-a-table-with-data-in-xamarinios"></a>填充包含在 Xamarin.iOS 的数据的表
 
 若要将行添加到`UITableView`你需要实现`UITableViewSource`子类并重写查看表的方法调用来填充本身。
 

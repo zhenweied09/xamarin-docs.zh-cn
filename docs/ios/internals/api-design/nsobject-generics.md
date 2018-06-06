@@ -1,18 +1,20 @@
 ---
-title: 泛型的 NSObject 的子类
+title: 泛型的 NSObject 在 Xamarin.iOS 的子类
+description: 本文档介绍如何创建创建的 NSObject 泛型子类。 它检查什么可以和不能完成，讨论静态注册机构，并将性能探讨。
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9caad9d4990225a0468be8ee4987eaa9fea0c118
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786478"
 ---
-# <a name="generic-subclasses-of-nsobject"></a>泛型的 NSObject 的子类
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>泛型的 NSObject 在 Xamarin.iOS 的子类
 
 ## <a name="using-generics-with-nsobjects"></a>将泛型与 NSObjects
 
@@ -186,7 +188,7 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**原因：**就像泛型方法，需要能够知道使用什么类型为泛型类型参数 t。 使用该 Xamarin.iOS 运行时
+**原因：** 就像泛型方法，需要能够知道使用什么类型为泛型类型参数 t。 使用该 Xamarin.iOS 运行时
 
 对实例使用的实例本身的成员 (因为永远不会将实例泛型<T>，它将始终为泛型<SomeSpecificClass>)，但对于静态成员不存在此信息。
 

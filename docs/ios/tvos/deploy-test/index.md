@@ -1,5 +1,5 @@
 ---
-title: 部署和测试
+title: 部署和在 Xamarin 中测试 tvOS 应用
 description: 本部分介绍用于测试应用程序以及如何以将其分发的主题。 此处的主题包括等工具用于调试，测试人员以及如何发布到 Apple 电视应用商店应用程序的部署。
 ms.prod: xamarin
 ms.assetid: DA4B4BD7-DC09-4F61-BC07-36727AF52BA2
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: ab5b12e13095212a070c308b7e21d008c9aa2673
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b810d7cef05a4d4e26677eb0b18b9b72ca3995fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788577"
 ---
-# <a name="deployment-and-testing"></a>部署和测试
+# <a name="deploying-and-testing-tvos-apps-in-xamarin"></a>部署和在 Xamarin 中测试 tvOS 应用
 
 ## <a name="app-distributioniostvosdeploy-testapp-distributionindexmd"></a>[应用分发](~/ios/tvos/deploy-test/app-distribution/index.md)
 

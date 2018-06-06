@@ -1,5 +1,5 @@
 ---
-title: iOS 游戏 Api
+title: iOS 在 Xamarin.iOS 的游戏 Api
 description: 本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形和音频功能提供的新游戏增强功能。
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34d3d6980819510a3390e2c30069818d6dfd721f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 263c325816867e9eee32c92edf97f703b39bda7c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786855"
 ---
-# <a name="ios-gaming-apis"></a>iOS 游戏 Api
+# <a name="ios-gaming-apis-in-xamarinios"></a>iOS 在 Xamarin.iOS 的游戏 Api
 
 _本文介绍如何通过 iOS 9，可用来改善你的 Xamarin.iOS 游戏图形和音频功能提供的新游戏增强功能。_
 
@@ -364,7 +365,7 @@ public override void ViewWillLayoutSubviews ()
 }
 ```
 
-运行时，有些动画_"Boids"_将 flock 围绕我们手指 tap:
+运行时，有些动画 _"Boids"_ 将 flock 围绕我们手指 tap:
 
 [![](images/flocking01.png "稍有动画的 Boids 将 flock 围绕手指分流")](images/flocking01.png#lightbox)
 

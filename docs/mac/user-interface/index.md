@@ -1,19 +1,20 @@
 ---
-title: macOS 用户界面
-description: 此文章链接到指南描述各种 macOS UI 控件。
+title: 在 Xamarin.Mac macOS 用户界面控件
+description: 此文档链接到描述各种用户界面控件可供 Xamarin.Mac 开发人员的指南。 链接的内容将介绍 windows、 对话框、 警报、 菜单、 工具栏、 表视图、 大纲视图，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: d40faa29f2fe278377bf4eae42a032f3dc9086ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 231d3a935cf251d0b2a1a3e6947abcb1c2133b90
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792949"
 ---
-# <a name="macos-user-interface"></a>macOS 用户界面
+# <a name="macos-user-interface-controls-in-xamarinmac"></a>在 Xamarin.Mac macOS 用户界面控件
 
 _此文章链接到指南描述各种 macOS UI 控件。_
 
@@ -71,6 +72,6 @@ _此文章链接到指南描述各种 macOS UI 控件。_
 
 我们还建议先了解一下[Mac 示例库](https://developer.xamarin.com/samples/mac/all/)。 它包括大量可帮助你快速地获取起作用所 Xamarin.Mac 项目的已准备可用的代码。
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [macOS 人工界面指南](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

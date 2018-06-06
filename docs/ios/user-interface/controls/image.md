@@ -1,18 +1,20 @@
 ---
-title: 显示图像
+title: 显示使用 Xamarin.iOS 的图像
+description: 本文档介绍如何在 Xamarin.iOS 中显示图像。 以编程方式或通过 iOS 设计器，它会涉及到应用程序添加图像。
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 406cfe813cbb58111769203f3b6c3fb0c2edad3c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f42cc5e4ab26c4c53d96e96420cbbba8036d6b5d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789825"
 ---
-# <a name="displaying-images"></a>显示图像
+# <a name="displaying-images-with-xamarinios"></a>显示使用 Xamarin.iOS 的图像
 
 将映像添加到你的应用程序需要两个步骤： 首先，将图像添加到你的项目;然后，添加控件和代码以在屏幕上显示它们。 请参阅[处理映像](~/ios/app-fundamentals/images-icons/index.md)文章更详细的映像在 Xamarin.iOS 中处理的覆盖率。
 

@@ -1,17 +1,18 @@
 ---
 title: 在实时编译之前 Xamarin.Mac
-description: 继续操作的时间 (AOT) 编译的折衷方案和注意事项
+description: 本文档介绍中 Xamarin.Mac 实时编译之前。 它比较 AOT 编译为 JIT 编译，说明了如何启用 AOT 中，并将混合 AOT 探讨。
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: d6be1d6e4a3cccef827862fb1fd54b202b0ce5fd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec8474293fbb7372529e0f850e2d16db7ebf17be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792234"
 ---
 # <a name="xamarinmac-ahead-of-time-compilation"></a>在实时编译之前 Xamarin.Mac
 

@@ -1,15 +1,17 @@
 ---
 title: 示例集成
+description: 此文档链接到演示 Xamarin 工作簿集成的示例。 链接的示例适用于表示形式呈现和 SkiaSharp。
 ms.prod: xamarin
 ms.assetid: 327DAD2E-1F76-4EB5-BCD0-9E7384D99E48
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 62d8cf14d6deb9c59297b708221dec10ca009f7f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 75d88af4c294a35d45f05724eb96ce822cddf126
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793966"
 ---
 # <a name="sample-integrations"></a>示例集成
 

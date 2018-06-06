@@ -1,18 +1,20 @@
 ---
-title: 创建用户界面对象
+title: 在 Xamarin.iOS 中创建用户界面对象
+description: 本文档概述了如何在 Xamarin.iOS 中创建用户界面。 它讨论 iOS 设计器、 Xcode 接口生成器、 C# 和情节提要。
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 5229beb7a882049daf58d3a3e62da6fed25a1f48
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c688dcdf7498b0a2860d1878d893beae4f5cf8fc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790147"
 ---
-# <a name="creating-user-interface-objects"></a>创建用户界面对象
+# <a name="creating-user-interface-objects-in-xamarinios"></a>在 Xamarin.iOS 中创建用户界面对象
 
 Apple 组相关功能集成到等同于 Xamarin.iOS 命名空间的"框架"的部分。 `UIKit` 是包含适用于 iOS 的所有用户界面控件的命名空间。
 
@@ -21,7 +23,6 @@ Apple 组相关功能集成到等同于 Xamarin.iOS 命名空间的"框架"的�
 ```csharp
 using UIKit;
 ```
-
 
 这一章中所述的所有控件都均在 UIKit 命名空间，并且每个用户控件类名具有`UI`前缀。
 

@@ -1,22 +1,22 @@
 ---
-title: 使用警报
-description: 本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示一条警告消息。
+title: 使用 Xamarin 中 tvOS 警报
+description: 本文档介绍如何使用 Xamarin 中 tvOS 警报。 它讨论显示警报，添加文本字段和一个帮助器类。
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789078"
 ---
-# <a name="working-with-alerts"></a>使用警报
+# <a name="working-with-tvos-alerts-in-xamarin"></a>使用 Xamarin 中 tvOS 警报
 
 _本文介绍如何使用 UIAlertController 向 Xamarin.tvOS 中的用户显示一条警告消息。_
-
 
 如果你需要获取 tvOS 用户注意或询问执行破坏性操作 （如删除的文件） 的权限，你可以提供警报消息使用`UIAlertViewController`:
 

@@ -1,28 +1,26 @@
 ---
 title: 其他 tvOS 10 框架更改
-description: 本文介绍了其他的次要更改或对 tvOS 10 现有框架的增强功能。
+description: 本文档介绍细微的更改和对现有框架在 iOS 10 中所做的增强功能。 它讨论到 AVFoundation、 AVKit、 核心数据、 核心图形、 Foundation、 GameKit、 GameplayKit，以及更多的更新。
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c53726b91a0cd3e79041b9b1d51e9f7fbb1c79bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 326fb6a23048ba3d3e1d33f42c8da2fff8544c25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788870"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>其他 tvOS 10 框架更改
-
-_本文介绍了其他的次要更改或对 tvOS 10 现有框架的增强功能。_
-
 
 除了对 tvOS 的主要更改，Apple 已修改和改进，多个现有框架 tvOS 10。
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="av-foundation-framework-additions"></a>AV Foundation Framework 添加件
+## <a name="avfoundation-framework-additions"></a>AVFoundation Framework 添加件
 
 AVFoundation framework 包括以下增强功能：
 

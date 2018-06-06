@@ -1,21 +1,20 @@
 ---
-title: 创建自定义控件
-description: 本文介绍如何创建自定义控件和在接口生成器中使用它们。
+title: 在 Xamarin.Mac 中创建自定义控件
+description: 本文档介绍如何生成 Xamarin.Mac 中的自定义控件。 它演示如何生成自定义控件、 跟踪其状态、 绘制其接口、 响应用户输入和应用程序中使用的控件。
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e1ab3977df96e241fa2a5a80f6cabd74d7d775f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e4c2b2c9ee7bae3d6489fec6b22881653ec53043
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792673"
 ---
-# <a name="creating-custom-controls"></a>创建自定义控件
-
-_本文介绍如何创建自定义控件和在接口生成器中使用它们。_
+# <a name="creating-custom-controls-in-xamarinmac"></a>在 Xamarin.Mac 中创建自定义控件
 
 在使用 C# 和.NET Xamarin.Mac 应用程序中，你有权访问相同用户控件，开发人员使用*Objective C*， *Swift*和*Xcode*未. 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护你的用户控件 （或根据需要在 C# 代码中直接创建它们）。
 

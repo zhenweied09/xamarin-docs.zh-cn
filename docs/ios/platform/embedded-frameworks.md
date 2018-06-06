@@ -1,18 +1,19 @@
 ---
-title: 嵌入的框架
-description: 本文档介绍如何，应用程序开发人员可以在其应用中嵌入用户框架。
+title: 在 Xamarin.iOS 的嵌入式的框架
+description: 本文档介绍如何在 Xamarin.iOS 应用程序中的嵌入式框架与共享代码。 这可通过 mtouch 工具或本机引用。
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f223d8ef6e89cc44822b8a831dbba3cf71d727c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e42f0940fe3fc132c9d381907aad5afbe474c4ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787287"
 ---
-# <a name="embedded-frameworks"></a>嵌入的框架
+# <a name="embedded-frameworks-in-xamarinios"></a>在 Xamarin.iOS 的嵌入式的框架
 
 _本文档介绍如何，应用程序开发人员可以在其应用中嵌入用户框架。_
 

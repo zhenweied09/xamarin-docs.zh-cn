@@ -1,18 +1,20 @@
 ---
-title: 使用导航
+title: 使用 watchOS 在 Xamarin 中导航
+description: 本文档介绍如何使用 watchOS 应用程序中的导航。 它讨论模式的接口、 层次结构导航窗格中，和基于页面的接口。
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3cef621479db89bfe30c1e82bf5e12f18d0e46af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c9bcfc388164060549ca7010d11671abfa8230ac
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790635"
 ---
-# <a name="working-with-navigation"></a>使用导航
+# <a name="working-with-watchos-navigation-in-xamarin"></a>使用 watchOS 在 Xamarin 中导航
 
 最简单导航上的选项可监视是一个简单[模式弹出](#modal)，出现在当前的场景顶部。
 

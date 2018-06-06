@@ -1,15 +1,17 @@
 ---
 title: 入门 macOS
+description: 本文档介绍如何开始使用.NET 嵌入 macOS。 它讨论要求，并显示一个示例应用程序来演示如何将绑定的托管程序集和的 Xcode 项目中使用生成的输出。
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 85510168f37e724563eae59dfca438177b4feffe
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 38049eae5e420e5f3610341c2682fa92d2ac426e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793684"
 ---
 # <a name="getting-started-with-macos"></a>入门 macOS
 

@@ -1,26 +1,26 @@
 ---
-title: 订阅和报告
+title: 订阅和 Xamarin.iOS 中的报表
+description: 本文档介绍非续订订阅、 免费订阅、 自动续订订阅和使用 iTunes Connect 来报告对这些项。
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787024"
 ---
-# <a name="subscriptions-and-reporting"></a>订阅和报告
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>订阅和 Xamarin.iOS 中的报表
 
 ## <a name="about-non-renewing-subscriptions"></a>有关非续订订阅
 
 非续订订阅供表示的时间限制，如 （到导航应用程序的一周的访问权限） 或数据存档的限时访问包含服务的促销的产品。   
    
-   
-   
- 非续订订阅与其他产品类型之间的主要差异：
+非续订订阅与其他产品类型之间的主要差异：
 
 -  在 iTunes Connect 中的产品定义不包括术语。 应用程序代码必须能够推断的有效期从产品 id。 
 -  它们可以购买多个时间 （如一种耗材）。 应用程序都需要管理订阅术语/到期和续订，并防止用户购买重叠的订阅。 

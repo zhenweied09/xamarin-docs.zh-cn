@@ -1,30 +1,31 @@
 ---
-title: 疑难解答
-description: 本文提供使用 macOS Sierra Xamarin.Mac 应用中的多个故障排除提示。
+title: Xamarin.Mac-macOS Sierra 故障排除
+description: 本文档提供使用 macOS Sierra Xamarin.Mac 应用中的多个故障排除提示。 提示与 Mac 应用商店、 Apple Pay、 二进制兼容性、 CFNetwork、 CloudKit，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/22/2016
-ms.openlocfilehash: 7ea4ec48399b42ce69b0346b1a88a1d9fb9fbf6e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5b2571d9562fd137257e2dd0ea2ada8f071bab92
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792312"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac-macOS Sierra 故障排除
 
 _本文提供使用 macOS Sierra Xamarin.Mac 应用中的多个故障排除提示。_
 
-以下各节列出使用 macOS Sierra Xamarin.mac 与这些问题的解决方案时可能发生的一些已知的问题：
+以下部分列出使用 macOS Sierra Xamarin.mac 与这些问题的解决方案时可能发生的一些已知的问题：
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
 - [二进制兼容性](#Binary-Compatibility)
-- [CFNetwork HTTP Protocol](#CFNetwork-HTTP-Protocol)
+- [CFNetwork HTTP 协议](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Core 映像](#CoreImage)
 - [通知](#Notifications)
 - [NSUserActivity](#NSUserActivity)
 - [Safari](#Safari)
@@ -69,7 +70,7 @@ _本文提供使用 macOS Sierra Xamarin.Mac 应用中的多个故障排除提�
 
 <a name="CoreImage" />
 
-## <a name="coreimage"></a>CoreImage
+## <a name="core-image"></a>Core 映像
 
 `CIImageProcessor` API 现在支持任意输入的图像计数。 `CIImageProcessor` 将删除已包含在 macOS Sierra beta 1 的 API。
 

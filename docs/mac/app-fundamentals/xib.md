@@ -1,5 +1,5 @@
 ---
-title: .xib 文件
+title: 在 Xamarin.Mac 的.xib 文件
 description: 本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamarin.Mac 应用程序的用户界面中创建的.xib 文件的工作。
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c1f575f5d3d5f0fbe82d5e0d08103b9261944602
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3ef536ddb19ed60975368bd022e57c34c6f473dc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792269"
 ---
-# <a name="xib-files"></a>.xib 文件
+# <a name="xib-files-in-xamarinmac"></a>在 Xamarin.Mac 的.xib 文件
 
 _本文介绍如何使用在 Xcode 的接口生成器可以创建和维护 Xamarin.Mac 应用程序的用户界面中创建的.xib 文件的工作。_
 
@@ -167,7 +168,7 @@ namespace MacXib
 }
 ```
 
-现在在中定义应用程序的主窗口**.xib**添加窗口控制器时，会自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案 Pad**，双击**MainWindow.xib**文件：
+现在在中定义应用程序的主窗口 **.xib**添加窗口控制器时，会自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案 Pad**，双击**MainWindow.xib**文件：
 
 ![选择 MainWindow.xib 文件](xib-images/edit01.png "选择 MainWindow.xib 文件")
 
@@ -374,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 此代码将附加到你在 Xcode 和接口生成器中创建并将用户单击按钮时调用的操作。
 
-一些 UI 元素自动具有内置的操作，例如，默认的菜单栏中的项如**打开...**菜单项 (`openDocument:`)。 在**解决方案 Pad**，双击**AppDelegate.cs**文件以打开进行编辑，并添加下面的代码下面`DidFinishLaunching`方法：
+一些 UI 元素自动具有内置的操作，例如，默认的菜单栏中的项如**打开...** 菜单项 (`openDocument:`)。 在**解决方案 Pad**，双击**AppDelegate.cs**文件以打开进行编辑，并添加下面的代码下面`DidFinishLaunching`方法：
 
 ```csharp
 [Export ("openDocument:")]
@@ -465,7 +466,7 @@ void ShowPreferences (NSObject sender)
 
 `var preferences = new PreferencesWindowController ();`行创建的窗口控制器的.xib 文件从加载窗口，并将它的新实例。 `preferences.Window.MakeKeyAndOrderFront (this);`行向用户显示新窗口。
 
-如果你运行代码并选择**首选项...**从**应用程序菜单**，将显示窗口：
+如果你运行代码并选择**首选项...** 从**应用程序菜单**，将显示窗口：
 
 ![运行示例应用程序](xib-images/new04.png "运行示例应用程序")
 

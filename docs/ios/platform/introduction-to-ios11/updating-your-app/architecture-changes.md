@@ -1,21 +1,20 @@
 ---
-title: 体系结构更改
-description: 浏览 iOS 11 的新功能
+title: 在 iOS 11 中的体系结构更改
+description: 本文档介绍 32 位应用在 iOS 11 中的弃用。 它讨论如何更新应用程序迁移到目标 64 位体系结构。
 ms.prod: xamarin
 ms.assetid: 55F62F3F-8570-402B-B7D9-2875F76CB946
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 6dd874fd803d2b3de21b0b604cbc2bafa5bf1aec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09d528ceb0654debd7c0ac8818f19c622775eac2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787430"
 ---
-# <a name="architecture-changes"></a>体系结构更改
-
-_浏览 iOS 11 的新功能_
+# <a name="architecture-changes-in-ios-11"></a>在 iOS 11 中的体系结构更改
 
 你应注意与 iOS 11 的最大更改之一是弃用对于应用程序，如所述的 32 位支持[Apple 的](https://developer.apple.com/news/?id=06282017b)按版本。 所有新的应用和更新到现有应用程序必须支持 64 位。 32 位应用**将不启动**iOS 11 中存在。
 

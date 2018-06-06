@@ -1,19 +1,20 @@
 ---
-title: 使用情节提要
-description: 生成使用 Xcode 的情节提要 macOS 用户界面。
+title: 使用情节提要中 Xamarin.Mac
+description: 本文档介绍如何使用 Xamarin.Mac，检查如何将它们加载从代码、 视图控制器生命周期、 响应方链中的情节提要，segue，窗口控制器、 手势识别器和的详细信息。
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792835"
 ---
-# <a name="storyboards"></a>情节提要
+# <a name="working-with-storyboards-in-xamarinmac"></a>使用情节提要中 Xamarin.Mac
 
 情节提要定义所有分解为其查看控制器的功能概述给定应用程序的 UI。 在 Xcode 的接口生成器中，每个这些控制器居住在自己的场景。
 

@@ -1,5 +1,5 @@
 ---
-title: 复制和粘贴
+title: 复制并粘贴 Xamarin.Mac 中
 description: 本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程序。 它演示如何使用可以在多个应用以及如何支持给定应用内的自定义数据之间共享的标准数据类型。
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: cf81666403f687ce997e20f6f5f097dc9fcf1421
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: becdec771949584919595c84b13ae9e05bfd377b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791892"
 ---
-# <a name="copy-and-paste"></a>复制和粘贴
+# <a name="copy-and-paste-in-xamarinmac"></a>复制并粘贴 Xamarin.Mac 中
 
 _本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程序。它演示如何使用可以在多个应用以及如何支持给定应用内的自定义数据之间共享的标准数据类型。_
 
@@ -46,7 +47,7 @@ _本文介绍如何使用粘贴板提供复制和粘贴在 Xamarin.Mac 应用程
 
 请执行以下操作：
 
-1. 针对 Mac 和单击启动 Visual Studio**新项目...**链接。
+1. 针对 Mac 和单击启动 Visual Studio**新项目...** 链接。
 2. 选择**Mac** > **应用** > **Cocoa 应用**，然后单击**下一步**按钮： 
 
     [![创建一个新 Cocoa 应用程序项目](copy-paste-images/sample01.png "创建一个新 Cocoa 应用程序项目")](copy-paste-images/sample01-large.png#lightbox)
@@ -1279,7 +1280,7 @@ if (ok) {
 
 ## <a name="related-links"></a>相关链接
 
-- [MacCopyPaste (sample)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste （示例）](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [粘贴板编程指南](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS 人工界面指南](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

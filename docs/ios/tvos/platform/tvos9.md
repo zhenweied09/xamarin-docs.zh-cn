@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: e2e3843506061cc79ad911404468477bf49dfe56
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c3c278666c5d57d00b4038ae6d3f2d7925e88537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789019"
 ---
 # <a name="introduction-to-tvos-9"></a>TvOS 9 简介
 
 _本文介绍的所有新增和更改 Api 和 tvOS 9 中可用的功能为 Xamarin.tvOS 开发人员。_
-
 
 Apple 已发布 Apple TV 硬件采用经过重新设计，触摸启用远程，运行新的 （基于 iOS 9） 的 tvOS 操作系统的第四个生成。
 

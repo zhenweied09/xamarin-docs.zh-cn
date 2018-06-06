@@ -1,5 +1,5 @@
 ---
-title: 主动建议
+title: watchOS 中 Xamarin 主动建议
 description: 这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: f22be43f814865c3c14e12aa2aec3a8dbce09b7a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33dccd00e07062e040c2707826ef62b764e11a0e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791275"
 ---
-# <a name="proactive-suggestions"></a>主动建议
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS 中 Xamarin 主动建议
 
 _这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。_
 
@@ -37,7 +38,7 @@ _这篇文章演示如何在驱动器 engagement watchOS 3 应用程序中使用
 
 ## <a name="contextual-siri-reminders"></a>上下文 Siri 提醒
 
-允许使用 Siri 来快速使应用程序的提醒才能查看的内容在以后的日子当前正在应用中查看用户。 例如，如果它们已在应用中查看餐馆评论，它们无法调用 Siri，说*"再提醒我有关此当我回到家。"* 在应用程序也使用 Siri 会生成提醒，其中链接添加到评审。
+允许使用 Siri 来快速使应用程序的提醒才能查看的内容在以后的日子当前正在应用中查看用户。 例如，如果它们已在应用中查看餐馆评论，它们无法调用 Siri，说 *"再提醒我有关此当我回到家。"* 在应用程序也使用 Siri 会生成提醒，其中链接添加到评审。
 
 ## <a name="implementing-proactive-suggestions"></a>实现主动建议
 
@@ -170,7 +171,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 1. 在应用程序，他们希望以满足在友元中找到一家餐厅。
 4. 如果用户切换到地图应用时，餐馆的地址自动建议作为目标。
 5. 这甚至适用于第三方应用程序 (该支持`NSUserActivity`)，因此用户可以切换到持续一段时间共享应用程序和餐馆的地址自动建议作为那里的目标以及。
-6. 它还提供了上下文的 Siri，以便用户可以在餐馆应用内调用 Siri 并询问*"获取路线..."* ，并使用 Siri 将提供到餐馆查看用户的说明。
+6. 它还提供了上下文的 Siri，以便用户可以在餐馆应用内调用 Siri 并询问 *"获取路线..."* ，并使用 Siri 将提供到餐馆查看用户的说明。
 
 所有上述功能共同具有相同的一件事情，它们都指示建议最初来源于何处。 对于上述示例中，它是虚构的餐馆查看应用程序。
 

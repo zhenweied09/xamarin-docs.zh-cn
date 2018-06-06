@@ -1,19 +1,20 @@
 ---
-title: 情节提要快速入门
-description: 获取已启动的生成 macOS 情节提要具有的用户界面。
+title: Xamarin.Mac – 快速入门中的情节提要
+description: 本文档提供构建 macOS Xamarin.Mac 中的情节提要具有的用户界面的快速入门介绍。 它描述如何创建 segue 和创建首选项窗口。
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bf91a51a55583e2ba8ca1fc09eb3dcd0d9986cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792565"
 ---
-# <a name="starting-a-new-storyboard-based-project"></a>启动新的情节提要基于项目
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Xamarin.Mac – 快速入门中的情节提要
 
 作为使用情节提要定义 Xamarin.Mac 应用程序的用户界面的快速介绍，让我们开始新的 Xamarin.Mac 项目。 选择“Mac” > “App” > “Cocoa 应用”，然后单击“下一步”按钮：
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](quickstart-images/qs19.png "设置约束")](quickstart-images/qs19.png#lightbox)
 
-接下来，我们想要显示首选项窗口，当用户选择**首选项...**菜单项。 从菜单栏中，选择首选项菜单项，**控件**密钥单击和拖动线条到我们的选项卡视图控制器：
+接下来，我们想要显示首选项窗口，当用户选择**首选项...** 菜单项。 从菜单栏中，选择首选项菜单项，**控件**密钥单击和拖动线条到我们的选项卡视图控制器：
 
 [![](quickstart-images/qs20.png "拖动以创建 segue")](quickstart-images/qs20.png#lightbox)
 
@@ -115,7 +116,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](quickstart-images/qs21.png "选择 segue 类型")](quickstart-images/qs21.png#lightbox)
 
-如果我们保存更改，返回到适用于 Mac，Visual Studio 运行应用并选择**首选项...**菜单项，将显示对话框我们新首选项：
+如果我们保存更改，返回到适用于 Mac，Visual Studio 运行应用并选择**首选项...** 菜单项，将显示对话框我们新首选项：
 
 [![](quickstart-images/qs22.png "下面举例说明运行 segue")](quickstart-images/qs22.png#lightbox)
 
@@ -129,7 +130,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](quickstart-images/qs24.png "在 Xcode 中配置每个选项卡")](quickstart-images/qs24.png#lightbox)
 
-如果我们保存更改，返回到适用于 Mac，Visual Studio 运行应用并选择**首选项...**菜单项，现在将显示如标准 macOS 应用的对话框：
+如果我们保存更改，返回到适用于 Mac，Visual Studio 运行应用并选择**首选项...** 菜单项，现在将显示如标准 macOS 应用的对话框：
 
 [![](quickstart-images/qs25.png "正在运行的首选项窗口的一个示例")](quickstart-images/qs25.png#lightbox)
 

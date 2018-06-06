@@ -1,6 +1,6 @@
 ---
-title: iOS 扩展
-description: 在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，如在通知中心中，当用户请求自定义键盘，或者当它们照片时编辑。 所有扩展与容器应用程序一起安装，并从特定的扩展点，在主机应用程序中激活。
+title: iOS 中 Xamarin.iOS 的扩展
+description: 本文档介绍了扩展，它们是由 iOS 如通知中心内的标准上下文中的小组件。 它讨论如何创建扩展并从父应用程序与之通信。
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: af52db5f1add040af025f2134f0e9a7b3936f4f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c26f951ddaff34cf23662f701395e636e1258b7d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786725"
 ---
-# <a name="ios-extensions"></a>iOS 扩展
-
-_在 iOS 8 中引入了扩展的小组件提供的 iOS 在标准上下文中，如在通知中心中，当用户请求自定义键盘，或者当它们照片时编辑。所有扩展与容器应用程序一起安装，并从特定的扩展点，在主机应用程序中激活。_
+# <a name="ios-extensions-in-xamarinios"></a>iOS 中 Xamarin.iOS 的扩展
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 

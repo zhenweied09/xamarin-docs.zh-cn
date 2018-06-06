@@ -1,16 +1,17 @@
 ---
 title: Xamarin 实时播放器示例
-description: 以下是一些示例，以便与 Xamarin 实时播放器试用。
+description: 此文档链接到测试出 Xamarin 实时播放器时要使用的示例应用程序。 链接的示例包括基本计算器和 bug 清理程序游戏。
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 67c734a76e78973aa1acf8eb2b5dec720701d3d7
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793717"
 ---
 # <a name="xamarin-live-player-samples"></a>Xamarin 实时播放器示例
 
@@ -31,8 +32,6 @@ ms.lasthandoff: 05/09/2018
 这是一个焕然一新的熟悉游戏。 10 个 bug 隐藏在磁贴的一个 9 x 9 网格中。 若要获胜，必须找到并标记所有 10 个 bug。
 
 ![在 Android 上 BugSweeper 应用](samples-images/bugsweeper-sml.png)
-
-
 
 ## <a name="related-links"></a>相关链接
 

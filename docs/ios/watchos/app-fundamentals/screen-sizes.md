@@ -1,18 +1,20 @@
 ---
-title: 使用屏幕大小
+title: 使用 watchOS 在 Xamarin 的屏幕大小
+description: 本文档介绍如何使用各种 watchOS 屏幕尺寸。 它讨论 watchOS 接口设计器中，watchOS 模拟器和图像资源。
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 600b3de6cbf31bd4c3221eb1bf81eda7b4678c09
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 30866c70879950acd8f43fd5880b1b24ba127fa4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790706"
 ---
-# <a name="working-with-screen-sizes"></a>使用屏幕大小
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>使用 watchOS 在 Xamarin 的屏幕大小
 
 Apple Watch 现已推出两种屏幕大小：
 

@@ -1,19 +1,20 @@
 ---
-title: 设置和安装
-description: 设置针对 watchOS 进行开发
+title: 安装和在 Xamarin 中使用 watchOS
+description: 本文档介绍如何安装和 Xamarin 中使用 watchOS。 还讨论了安装，watchOS 项目结构，如何使用 iOS 设计器、 Xcode 集成，并提供了故障排除提示。
 ms.prod: xamarin
 ms.assetid: 69F21F15-198D-4B42-A703-21D35CAB0CCA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: 976b7a78b70522e6ca9942c286792b53e4f11ae5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea0c7b6a68077cde83fa211e4e6f3432b3e39d5c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791233"
 ---
-# <a name="installation"></a>安装
+# <a name="installing-and-using-watchos-in-xamarin"></a>安装和在 Xamarin 中使用 watchOS
 
 watchOS 4 需要 macOS Sierra (10.12) 以 Xcode 9。
 
@@ -118,7 +119,7 @@ Visual Studio 用户还可以使用 Xcode 若要通过切换要直接使用 Mac 
 
 ![](installation-images/openwith-xcode.png "在 Xcode 接口生成器中打开 Interface.storyboard")
 
-如果使用 Xcode，然后应遵循与正常的监视应用的相同步骤[iOS 应用情节提要](~/ios/user-interface/storyboards/index.md)(如创建 outlet 和操作**Ctrl + 拖动**到**.h**标头文件)。
+如果使用 Xcode，然后应遵循与正常的监视应用的相同步骤[iOS 应用情节提要](~/ios/user-interface/storyboards/index.md)(如创建 outlet 和操作**Ctrl + 拖动**到 **.h**标头文件)。
 
 在您保存情节提要在它会自动将添加的 Xcode 接口生成器中的 outlet 和你创建的操作为 C# **。 designer.cs**监视扩展项目中的文件。
 
@@ -177,7 +178,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 使用 Xcode 6 时 iPhone 5、 iPhone 5 条、 iPhone 6 和 iPhone 6 Plus 可以激活或者的外部显示**Apple Watch-38 mm**或**Apple Watch-42 mm**监视应用程序将在其中显示。
 
-**注意：**请记住，监视屏幕不自动显示在 iOS 模拟器中使用 Xcode 6 时。
+**注意：** 请记住，监视屏幕不自动显示在 iOS 模拟器中使用 Xcode 6 时。
 使用**硬件 > 外部显示器**菜单可显示监视屏幕。
 
 <a name="custommodes" />

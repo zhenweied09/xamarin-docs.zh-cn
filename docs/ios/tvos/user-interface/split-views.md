@@ -1,22 +1,20 @@
 ---
-title: 使用拆分视图控制器
-description: 本文介绍如何设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。
+title: 使用 tvOS 中 Xamarin 的拆分视图控制器
+description: 本文档介绍如何使用 tvOS 拆分中使用 Xamarin 构建的应用的视图。 它提供拆分视图控制器的高级概述如何使用情节提要，访问 master 和详细信息视图中，并显示和隐藏母版视图。
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 25151eb2929e2bc61dba27a9937ffdf4ee224626
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2dd07cd8a4e92d6d39be50ba670441d965ed4d13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789426"
 ---
-# <a name="working-with-split-view-controllers"></a>使用拆分视图控制器
-
-_本文介绍如何设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。_
-
+# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>使用 tvOS 中 Xamarin 的拆分视图控制器
 
 拆分视图控制器显示和管理主机以及详细信息视图控制器-并行安装，在屏幕上一次。 拆分视图控制器的使用在母版视图 （左侧的较小的部分） 中呈现的永久性驱动器，可获得焦点的内容和相关详细信息视图 （右侧更大的部分） 中的详细信息。
 

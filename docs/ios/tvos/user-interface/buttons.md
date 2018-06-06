@@ -1,22 +1,20 @@
 ---
-title: 使用按钮
-description: 本文介绍如何设计和使用 Xamarin.tvOS 应用内的按钮。
+title: 使用中 Xamarin tvOS 按钮
+description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的按钮。 它讨论如何使用按钮在代码中并在情节提要，并它检查如何设置按钮样式。
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: e915e96690fe67f0e704ec558313427f01753438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3de732e9eee696ce21ffc5526afd44f29695a313
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789380"
 ---
-# <a name="working-with-buttons"></a>使用按钮
-
-_本文介绍如何设计和使用 Xamarin.tvOS 应用内的按钮。_
-
+# <a name="working-with-tvos-buttons-in-xamarin"></a>使用中 Xamarin tvOS 按钮
 
 使用的实例`UIButton`类在 tvOS 窗口中创建一个可获得焦点，可选择按钮。 当用户选择一个按钮时，它将操作消息发送到目标对象允许你对用户进行 Xamarin.tvOS 应用响应的输入。
 

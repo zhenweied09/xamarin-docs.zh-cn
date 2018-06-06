@@ -1,18 +1,20 @@
 ---
-title: 购买非耗材产品
+title: 购买非耗材产品的 Xamarin.iOS
+description: 本文档介绍非耗材产品的 Xamarin.iOS，仍可无限期，而不考虑设备的功能通过用户购买。
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786946"
 ---
-# <a name="purchasing-non-consumable-products"></a>购买非耗材产品
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>购买非耗材产品的 Xamarin.iOS
 
 非耗材产品拥有由客户。 应当是他们将始终拥有访问到它们，即使当其设备丢失/被盗或者它们购买一个新。 它们可用于丛书、 杂志问题、 游戏级别、 照片筛选器，pro 功能，等等。一旦用户购买了非耗材产品，它们永远不需要再次支付相关费用。 如果你的代码会意外地允许他们尝试，StoreKit 将显示一条消息，已购买。
 

@@ -1,17 +1,19 @@
 ---
-title: 使用图标
+title: 使用 watchOS Xamarin 中的图标
+description: 本文档介绍了各种图标 watchOS 应用程序和如何设置解决方案以包括这些图标所必需的。
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a7cdecaa2ba6a8c9f28ef8598fec31506eee6852
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 150cca754de26edffcf97bb5d39b26166662c75b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790661"
 ---
-# <a name="working-with-icons"></a>使用图标
+# <a name="working-with-watchos-icons-in-xamarin"></a>使用 watchOS Xamarin 中的图标
 
 Apple Watch 解决方案需要图标的两个的集：
 
@@ -31,7 +33,7 @@ Apple Watch 解决方案需要图标的两个的集：
 
 若要确保您的 iOS 应用和监视应用程序都显示正确的名称和图标，请按照这些说明每个项目：
 
-### <a name="ios-app"></a>iOS App
+### <a name="ios-app"></a>iOS 应用程序
 
 请参阅[iOS 应用程序图标指导](~/ios/app-fundamentals/images-icons/app-icons.md)以确保正确配置 iOS 应用程序的图标。
 

@@ -1,18 +1,20 @@
 ---
-title: 引用本机库
+title: 引用在 Xamarin.iOS 的本机库
+description: 本文档讨论了如何将本机 C 库链接到 Xamarin.iOS 应用程序。 它描述如何从 C# 生成通用本机库和访问 C 方法。
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 4d58e869dc1357faef71ea88ed6b5ea30aaf960d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb27ba8b2d9c1b66448f22b7f80f17ba2e483544
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787719"
 ---
-# <a name="referencing-native-libraries"></a>引用本机库
+# <a name="referencing-native-libraries-in-xamarinios"></a>引用在 Xamarin.iOS 的本机库
 
 Xamarin.iOS 支持本机 C 库和 Objective-C 库链接。 本文档讨论了如何将链接与你的 Xamarin.iOS 项目你本机 C 库。 有关执行相同的 Objective C 库的信息，请参阅我们[绑定 Objective C 类型](~/ios/platform/binding-objective-c/index.md)文档。
 

@@ -1,19 +1,20 @@
 ---
-title: 在监视设备上测试
-description: 部署应用程序在 Apple Watch 上进行测试
+title: 在 Apple Watch 设备上测试
+description: 本文档介绍如何部署用于测试实际的 Apple Watch 上使用 Xamarin 生成的 watchOS 应用。 它讨论设备，预配配置文件，测试，并提供一些故障排除技巧。
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790856"
 ---
-# <a name="testing-on-watch-devices"></a>在监视设备上测试
+# <a name="testing-on-apple-watch-devices"></a>在 Apple Watch 设备上测试
 
 你已按照后[部署步骤](~/ios/watchos/deploy-test/index.md)若要创建应用 Id 和应用程序组 （如果需要），请使用此页上的说明：
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="devices"></a>设备
 
-测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心上注册的设备。 设备列表如下所示 (单击加号**+**来添加新设备):
+测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心上注册的设备。 设备列表如下所示 (单击加号**+** 来添加新设备):
 
 ![](device-images/devices-sml.png "设备列表如下所示")
 
@@ -153,6 +154,6 @@ waiting for debugger to connect
 
 检查是否任何你的项目中包含了 NuGets 具有依赖关系**Microsoft.Bcl.Build**。 这会自动添加包括常用某些 Microsoft 发布库与[Microsoft Http 客户端库](http://www.nuget.org/packages/Microsoft.Net.Http/)。
 
-**Microsoft.Bcl.Build.targets**文件添加到**.csproj**可能会干扰在部署过程中的 iOS 扩展打包。 你可以跟踪[bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912)。
+**Microsoft.Bcl.Build.targets**文件添加到 **.csproj**可能会干扰在部署过程中的 iOS 扩展打包。 你可以跟踪[bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912)。
 可能的解决方法是编辑.csproj 文件，进行手动移动**Microsoft.Bcl.Build.targets**为最后一个元素。
 

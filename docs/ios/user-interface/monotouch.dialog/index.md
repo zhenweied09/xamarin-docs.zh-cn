@@ -1,21 +1,19 @@
 ---
-title: MonoTouch.Dialog 简介
-description: MonoTouch.Dialog （保持联系D） 工具包是必不可少的框架，用于快速应用程序 UI 中 Xamarin.iOS 的开发。 保持联系D 可以快速、 轻松地定义复杂的应用程序使用的声明性方法，而不是内容的导航控制器、 表等麻烦的 UI。此外，保持联系D 具有灵活的一组 Api，开发人员提供一个完整的控件或将消息的方法，以及其他功能，例如加载请求刷新背景图像，请搜索支持和 JSON 数据通过动态 UI 生成。 本指南介绍使用保持联系的不同方式D，然后深层深入高级用法。
+title: 针对 Xamarin.iOS 的 MonoTouch.Dialog 简介
+description: 本文档介绍 MonoTouch.Dialog （保持联系D)，一个框架，用于使用 Xamarin.iOS 快速、 声明性 UI 的开发。 它讨论如何使用 MonoTouch.Dialog Api 在代码或 JSON 中创建一个接口和使用请求刷新、 搜索、 背景图像加载和的详细信息等功能。
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6511d8deed1800a8ae655f749feccd249bf4a8c0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790833"
 ---
-# <a name="introduction-to-monotouchdialog"></a>MonoTouch.Dialog 简介
-
-_MonoTouch.Dialog （保持联系D） 工具包是必不可少的框架，用于快速应用程序 UI 中 Xamarin.iOS 的开发。保持联系D 可以快速、 轻松地定义复杂的应用程序使用的声明性方法，而不是内容的导航控制器、 表等麻烦的 UI。此外，保持联系D 具有灵活的一组 Api，开发人员提供一个完整的控件或将消息的方法，以及其他功能，例如加载请求刷新背景图像，请搜索支持和 JSON 数据通过动态 UI 生成。本指南介绍使用保持联系的不同方式D，然后深层深入高级用法。_
-
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>针对 Xamarin.iOS 的 MonoTouch.Dialog 简介
 
 MonoTouch.Dialog，称为保持联系D 简称，是一个快速 UI 开发工具包，使开发人员可以构建应用程序屏幕和使用的信息，而不是内容的创建视图控制器、 表等麻烦的导航。在这种情况下，它提供用户界面开发和代码降低显著的简化。 例如，考虑下面的屏幕快照：
 
@@ -589,7 +587,7 @@ public override Source CreateSizingSource (bool unevenRows)
 - [演练：使用元素 API 创建应用程序](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [演练：使用反射 API 创建应用程序](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [演练：使用 JSON 元素创建用户界面](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
-- [MonoTouch.Dialog JSON Markup](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
+- [MonoTouch.Dialog JSON 标记](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [在 Github 上的 MonoTouch 对话框](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [UITableViewController 类引用](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
 - [UINavigationController 类引用](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

@@ -1,17 +1,18 @@
 ---
 title: 在 macOS 上的辅助功能
-description: 本指南介绍用于生成可访问的 Xamarin.Mac 应用程序的功能。
+description: 本文档介绍如何使用 macOS Xamarin.Mac 应用中的辅助功能。 它讨论情节提要和代码、 自定义控件和测试辅助功能的描述 UI 的元素。
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ad04e0276c046f133a6f71abb38912343d2d86b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2406654a46428e8c22284f5c7d114b07a463251
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791158"
 ---
 # <a name="accessibility-on-macos"></a>在 macOS 上的辅助功能
 

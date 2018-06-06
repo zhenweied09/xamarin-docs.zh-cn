@@ -1,5 +1,5 @@
 ---
-title: 源列表
+title: Xamarin.Mac 中的源列表
 description: 本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。 它介绍创建和维护 Xcode 和接口生成器中的源列表和 C# 代码中与它们进行交互。
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a8d3a67768b9e47833d1819c3bf44774a52d2438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c93d4b0855fb96897da2018596766b16e5385ab4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792767"
 ---
-# <a name="source-lists"></a>源列表
+# <a name="source-lists-in-xamarinmac"></a>Xamarin.Mac 中的源列表
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。它介绍创建和维护 Xcode 和接口生成器中的源列表和 C# 代码中与它们进行交互。_
 
@@ -47,7 +48,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。它介绍创
 
 源列表是操作的用于显示，如在查找工具或 iTunes 侧栏的源的大纲视图的特殊类型。 大纲视图与我们在接口生成器中定义了我们的源列表之前，让我们创建后备类在 Xamarin.Mac 中。
 
-首先，让我们创建一个新`SourceListItem`类以保存数据源列表。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`SourceListItem`为**名称**单击**新建**按钮：
+首先，让我们创建一个新`SourceListItem`类以保存数据源列表。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`SourceListItem`为**名称**单击**新建**按钮：
 
 [![](source-list-images/source01.png "添加空类")](source-list-images/source01.png#lightbox)
 
@@ -269,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`SourceListDataSource`为**名称**单击**新建**按钮。 请`SourceListDataSource.cs`文件外观如下所示：
+在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`SourceListDataSource`为**名称**单击**新建**按钮。 请`SourceListDataSource.cs`文件外观如下所示：
 
 ```csharp
 using System;
@@ -353,7 +354,7 @@ namespace MacOutlines
 
 这将为我们的源列表中提供数据。
 
-在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`SourceListDelegate`为**名称**单击**新建**按钮。 请`SourceListDelegate.cs`文件外观如下所示：
+在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`SourceListDelegate`为**名称**单击**新建**按钮。 请`SourceListDelegate.cs`文件外观如下所示：
 
 ```csharp
 using System;
@@ -445,7 +446,7 @@ namespace MacOutlines
 
 这将提供我们的源列表的行为。
 
-最后，在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`SourceListView`为**名称**单击**新建**按钮。 请`SourceListView.cs`文件外观如下所示：
+最后，在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`SourceListView`为**名称**单击**新建**按钮。 请`SourceListView.cs`文件外观如下所示：
 
 ```csharp
 using System;

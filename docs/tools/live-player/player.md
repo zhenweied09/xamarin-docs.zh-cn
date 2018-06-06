@@ -1,16 +1,17 @@
 ---
 title: Xamarin 实时播放器应用程序
-description: 编辑和实时 iOS 或 Android 设备上测试应用
+description: 本文档介绍了 Xamarin 实时播放器应用程序，可用于预览代码更改实时设备。 它讨论了安装程序、 示例、 日志、 管理设备的设置。
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2017
-ms.openlocfilehash: 3d4d34c6945387f5878ea708faf630d2545a750e
-ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
+ms.openlocfilehash: 88f7f62650484007c221aa7baaa684f872e0a8e9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794145"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin 实时播放器应用程序
 

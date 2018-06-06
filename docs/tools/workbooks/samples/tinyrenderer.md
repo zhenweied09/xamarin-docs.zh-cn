@@ -1,15 +1,17 @@
 ---
 title: TinyRenderer 工作簿
+description: 本文档介绍使用 OpenGL TinyRenderer 工作簿。 这些工作簿运行在基于 Windows 和 mac。
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: fc0716fc3babd0b2ee835b839ae816f2cb815b0f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 10704044042ea38dd3a5297c46371f9f9c27936c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794132"
 ---
 # <a name="tinyrenderer-workbooks"></a>TinyRenderer 工作簿
 
@@ -31,7 +33,6 @@ ms.lasthandoff: 05/09/2018
 [![](tinyrenderer-images/tinyrenderer-sml.png "线框呈现示例")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 这些工作簿中的 C# 代码基于此开放源代码[c + + 代码](https://github.com/ssloy/tinyrenderer)，并且文本是从此[wiki](https://github.com/ssloy/tinyrenderer/wiki/)。 我们非常感谢，原始工作位于下使我们能够将其转换为一组的工作簿的许可证。
-
 
 ## <a name="related-links"></a>相关链接
 

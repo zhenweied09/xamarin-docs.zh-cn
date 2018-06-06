@@ -1,21 +1,20 @@
 ---
-title: 使用选项卡栏控制器
-description: 本文介绍如何设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。
+title: 使用 tvOS Xamarin 中的选项卡栏控制器
+description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的选项卡栏控制器。 它提供了高级对视图的选项卡条和讨论选项卡栏项、 情节提要集成和选项卡栏项。
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789315"
 ---
-# <a name="working-with-tab-bar-controller"></a>使用选项卡栏控制器
-
-_本文介绍如何设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。_
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>使用 tvOS Xamarin 中的选项卡栏控制器
 
 对于许多类型的 tvOS 应用中，主导航显示为选项卡栏在屏幕顶部之间运行。 用户刷左侧和右侧的可能的类别和下方所做的更改的内容区域，以反映用户的选择列表中。
 

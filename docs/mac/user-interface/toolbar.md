@@ -1,5 +1,5 @@
 ---
-title: 工具栏
+title: 在 Xamarin.Mac 工具栏
 description: 本指南介绍了使用 Xamarin.Mac 应用程序中的工具栏。 它涵盖创建和维护工具栏中 Xcode 和接口生成器中，将其公开到代码中，并以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 729c5c69d80c52047585d1026d7c675f3267f34e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 11c01a2b2378ddc519185996deb78ba5bcbd2d1a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792883"
 ---
-# <a name="toolbars"></a>工具栏
+# <a name="toolbars-in-xamarinmac"></a>在 Xamarin.Mac 工具栏
 
 _本指南介绍了使用 Xamarin.Mac 应用程序中的工具栏。它涵盖创建和维护工具栏中 Xcode 和接口生成器中，将其公开到代码中，并以编程方式使用它们。_
 

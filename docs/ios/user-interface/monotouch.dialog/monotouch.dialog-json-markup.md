@@ -1,17 +1,19 @@
 ---
-title: MonoTouch.Dialog Json Markup
+title: MonoTouch.Dialog Json 标记
+description: 本文档介绍可用来生成使用 MonoTouch.Dialog Xamarin.iOS 用户界面的 JSON 语法。
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc3f4ea87bbd381a4a1767fb9179fb1bcf0c56d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790752"
 ---
-# <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json Markup
+# <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 标记
 
 本页介绍 MonoTouch.Dialog 的接受的 Json 标记[JsonElement](https://developer.xamarin.com/api/type/MonoTouch.Dialog.JsonElement/)
 
@@ -228,7 +230,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
  <a name="accessory" />
 
 
-### <a name="accessory"></a>accessory
+### <a name="accessory"></a>附件
 
 确定类型的附件，显示在呈现元素中，可能的值有：
 
@@ -269,7 +271,7 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement
 以下是有效的字体规范：
 
 -  "Helvetica"
--  "Helvetica-14"
+-  "Helvetica 14"
 
 
  <a name="linebreak" />
@@ -421,7 +423,7 @@ class Foo {
  <a name="autocorrect" />
 
 
-### <a name="autocorrect"></a>autocorrect
+### <a name="autocorrect"></a>自动更正
 
 确定要使用的项的自动更正样式。 可能的值为 true 或 false (或字符串`"yes"`和`"no"`)。
 

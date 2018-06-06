@@ -1,18 +1,20 @@
 ---
-title: 菜单控件 （强制触摸）
+title: watchOS Xamarin 中的菜单控件 (强制 Touch)
+description: 本文档介绍如何在 Xamarin 中使用 watchOS 强制触摸手势。 还会讨论如何响应强制触摸屏输入，如何添加一个菜单，并更改菜单项。
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4895f140acbc8a622cfb91c2fe9db6c5e9d9d1d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b973b925b99189416087224644c376864c56871
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791340"
 ---
-# <a name="menu-control-force-touch"></a>菜单控件 （强制触摸）
+# <a name="watchos-menu-control-force-touch-in-xamarin"></a>watchOS Xamarin 中的菜单控件 (强制 Touch)
 
 监视工具包提供触发菜单当在监视应用程序屏幕上执行强制触摸手势。
 

@@ -1,18 +1,20 @@
 ---
-title: 通知
+title: watchOS Xamarin 中的通知
+description: 本文档介绍如何使用 Xamarin 中 watchOS 通知。 它讨论创建通知控制器，生成通知，以及测试通知。
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 1a681c2bda941d8fe015a8d4da8b99f4d85e441b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 42b0354f19a9e0c31b7a859d598526fddad726cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791905"
 ---
-# <a name="notifications"></a>通知
+# <a name="watchos-notifications-in-xamarin"></a>watchOS Xamarin 中的通知
 
 监视应用可以接收通知，如果包含 iOS 应用程序支持它们。 没有内置的通知处理，以便不希望这样做*需要*若要添加的其他通知支持下面所述，但是如果你想要自定义通知行为，然后读取上显示的外观。
 
@@ -77,7 +79,7 @@ OS 决定是否以显示静态或动态视图基于许多因素影响。 你必�
 
 ## <a name="testing-notifications"></a>测试通知
 
-通知 （本地和远程） 可以仅正确测试在设备上，但是可以使用模拟它们**.json** iOS 模拟器中的文件。
+通知 （本地和远程） 可以仅正确测试在设备上，但是可以使用模拟它们 **.json** iOS 模拟器中的文件。
 
 ### <a name="testing-on-apple-watch"></a>在 Apple Watch 上进行测试
 

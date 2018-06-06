@@ -1,21 +1,20 @@
 ---
-title: watchOS
-description: 生成适用于使用 Xamarin 的 Apple Watch 应用
+title: 生成 watchOS 使用 Xamarin 应用
+description: 此文档链接到各种指南描述如何 watchOS 使用 Xamarin 生成应用。 链接的指南讨论入门、 watchOS 用户界面控件、 watchOS 功能、 部署和测试和故障排除
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 407c1648bef6e1ca84922a8186fbcfbc76c2c7a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791392"
 ---
-# <a name="watchos"></a>watchOS
-
-_生成适用于使用 Xamarin 的 Apple Watch 应用_
+# <a name="building-watchos-apps-with-xamarin"></a>生成 watchOS 使用 Xamarin 应用
 
 ![Apple Watch 选取器接口](images/watch1.png) ![Apple Watch 按钮](images/watch2.png) ![Apple Watch 映射接口](images/watch3.png)
 

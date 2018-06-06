@@ -1,34 +1,32 @@
 ---
-title: 平台功能
-description: 本部分中的文档涵盖特定于 iOS 的功能。
+title: iOS 平台功能
+description: 此文档链接到各种描述了各种版本的 iOS 中引入的功能和其他 iOS 平台功能的指南。
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95053faa4bab0a65660772aeea39405e4a80a042
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787082"
 ---
-# <a name="platform-features"></a>平台功能
+# <a name="ios-platform-features"></a>iOS 平台功能
 
 ##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[iOS 11 简介](~/ios/platform/introduction-to-ios11/index.md)
 
 如何安装和开始使用 Xcode 9 beta 和 Xamarin 的 iOS 11 支持预览。
 
-
 ##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[iOS 10 简介](~/ios/platform/introduction-to-ios10/index.md)
 
 Apple 的 iOS 10 包括几个新的 Api 和服务，您可以使用新特性和功能开发应用程序。 与 iOS 10，应用都具有新的性能，如扩展图、 消息、 Phone 和使用 Siri。 本部分说明来利用 Xamarin.iOS 应用程序中的这些功能的演示。
 
-
 ##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[iOS 9 简介](~/ios/platform/introduction-to-ios9/index.md)
 
 此节定义从 iOS 8 和如何在 Xamarin.iOS 应用程序中使用这些功能升级时，在 iOS 9 中所做的更改。
-
 
 ##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[iOS 8 简介](~/ios/platform/introduction-to-ios8.md)
 
@@ -147,8 +145,6 @@ iOS 10 包括一个新的语音 API，用于应用程序支持连续语音识别
 ##  <a name="wide-coloriosplatformwide-colormd"></a>[广泛的颜色](~/ios/platform/wide-color.md)
 
 iOS 10 和 macOS Sierra 增强了对扩展范围像素格式和整个系统包括框架，例如核心图形、 Core 映像、 金属和 AVFoundation 宽色域颜色空间的支持。 通过提供在整个图形堆栈整个此行为可以进一步简化对具有广泛的颜色显示设备的支持。
-
-
 
 ##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[绑定 Objective-C](binding-objective-c/index.md)
 

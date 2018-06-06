@@ -1,23 +1,22 @@
 ---
-title: 控件
-description: Xamarin.iOS 公开 Apple 提供的所有本机用户界面对象。 它们轻松地添加到使用 iOS 设计器中，Xcode 的接口生成器的 Xamarin.iOS 应用程序或以编程方式。 无论选择哪种方法，Xamarin.iOS 公开所有用户界面对象属性和 C# 中的方法。
+title: 在 Xamarin.iOS 的用户界面控件
+description: 此文档链接到介绍可供 Xamarin.iOS 开发人员的各种 iOS 用户界面控件的指南。 链接的内容讨论警报、 按钮、 集合视图、 图像、 手动相机控件、 地图、 标签、 选取、 日期选取器和的详细信息。
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 477cb4e479224b9e795f3460e0f59e0aa2038630
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790037"
 ---
-# <a name="controls"></a>控件
+# <a name="user-interface-controls-in-xamarinios"></a>在 Xamarin.iOS 的用户界面控件
 
-_Xamarin.iOS 公开 Apple 提供的所有本机用户界面对象。它们轻松地添加到使用 iOS 设计器中，Xcode 的接口生成器的 Xamarin.iOS 应用程序或以编程方式。无论选择哪种方法，Xamarin.iOS 公开所有用户界面对象属性和 C# 中的方法。_
-
-本文档将介绍一些最常见的 iOS 用户界面控件以及如何使用它们。
+本文档介绍了一些最常见的 iOS 用户界面控件以及如何使用它们。
 
 ## <a name="alertsalertsmd"></a>[警报](alerts.md)
 

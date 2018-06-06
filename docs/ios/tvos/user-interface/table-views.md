@@ -1,5 +1,5 @@
 ---
-title: 使用表视图
+title: 使用 tvOS Xamarin 中的表视图
 description: 本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789562"
 ---
-# <a name="working-with-table-views"></a>使用表视图
+# <a name="working-with-tvos-table-views-in-xamarin"></a>使用 tvOS Xamarin 中的表视图
 
 _本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。_
 
@@ -285,7 +286,7 @@ namespace tvTable
 
 每个表视图需要数据源 (`UITableViewDataSource`) 表中提供的数据并生成所需的行，为所需的表视图。
 
-对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...**和调用它`AttractionTableDatasource`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDatasource.cs`文件并使其如下所示：
+对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...** 和调用它`AttractionTableDatasource`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDatasource.cs`文件并使其如下所示：
 
 ```csharp
 using System;
@@ -477,7 +478,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 
 每个表视图需要委托 (`UITableViewDelegate`) 来响应用户交互或表上的其他系统事件。
 
-对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...**和调用它`AttractionTableDelegate`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDelegate.cs`文件并使其如下所示：
+对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...** 和调用它`AttractionTableDelegate`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDelegate.cs`文件并使其如下所示：
 
 ```csharp
 using System;

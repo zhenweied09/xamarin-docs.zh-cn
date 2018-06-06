@@ -1,21 +1,20 @@
 ---
-title: 使用导航控制器
-description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。
+title: 使用 tvOS Xamarin 中的导航栏
+description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的导航栏。 它讨论在情节提要中的导航栏来设置和响应来自这些按钮的事件。
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8a9a1c852137a2bcc0d46615e69eef0a245a9768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b6c8ff8551c91578b9399b88e90e94c6af12ac68
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789286"
 ---
-# <a name="working-with-navigation-controllers"></a>使用导航控制器
-
-_本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
+# <a name="working-with-tvos-navigation-bars-in-xamarin"></a>使用 tvOS Xamarin 中的导航栏
 
 导航栏可以添加到要显示的标题和可选的导航栏按钮的视图的顶部。 它们通常用于当用户导航从主页上，如表视图、 集合或菜单与子视图显示选定项的详细信息。
 
@@ -26,9 +25,6 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 > [!IMPORTANT]
 > 导航栏是默认情况下完全透明的。 应格外小心以确保导航栏的内容对其下的内容保持可读。 例如，在表视图或集合中的内容滚动时它的下方。
 
-
-
-
 <a name="Navigation-Bars-and-Storyboards" />
 
 ## <a name="navigation-bars-and-storyboards"></a>导航栏和情节提要
@@ -36,7 +32,6 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 使用 Xamarin.tvOS 应用中的导航栏的最简单方法是将它们添加到使用 iOS 设计器的应用程序的 UI。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
 
 1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
 1. 拖动**导航栏**从**工具箱**并将其放在屏幕顶部的视图： 
@@ -77,9 +72,6 @@ _本文介绍如何设计和使用在 Xamarin.tvOS 应用内的导航栏。_
 
 > [!IMPORTANT]
 > 尽管可以将事件分配如`TouchUpInside`到 UI 元素 （例如 UIButton) iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action`事件时创建用户界面元素的对 tvOS 的事件处理程序。
-
-
-
 
 下面的代码在三个不同 BarButtonItems 上提供的事件处理程序的示例： `ShowFirstHotel`， `ShowSecondHotel`，和`ShowThirdHotel`。 单击每个项时，背景图像`HotelImage`更改。 这在视图控制器中编辑 (示例`ViewController.cs`) 文件：
 

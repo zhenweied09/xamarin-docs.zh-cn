@@ -1,5 +1,5 @@
 ---
-title: 大纲视图
+title: Xamarin.Mac 中的大纲视图
 description: 本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。 它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 82cb3afadf7615fdd92476371e9ab80cd1228b02
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a12eee5f473ffdc6a235faeb55c0a3d6754f4629
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792822"
 ---
-# <a name="outline-views"></a>大纲视图
+# <a name="outline-views-in-xamarinmac"></a>Xamarin.Mac 中的大纲视图
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。_
 
@@ -176,7 +177,7 @@ _本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。它介绍
 
 与我们的大纲视图在接口生成器中设计和通过公开**Outlet**，接下来我们需要创建的 C# 代码来填充它。
 
-首先，让我们创建一个新`Product`类来保存单个行和组的子产品的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
+首先，让我们创建一个新`Product`类来保存单个行和组的子产品的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
 
 [![](outline-view-images/populate01.png "创建一个空的类")](outline-view-images/populate01.png#lightbox)
 
@@ -218,7 +219,7 @@ namespace MacOutlines
 }
 ```
 
-接下来，我们需要创建的一个子类`NSOutlineDataSource`为所请求的我们大纲提供数据。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`ProductOutlineDataSource`为**名称**单击**新建**按钮。
+接下来，我们需要创建的一个子类`NSOutlineDataSource`为所请求的我们大纲提供数据。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDataSource`为**名称**单击**新建**按钮。
 
 编辑`ProductTableDataSource.cs`文件并使其如下所示：
 
@@ -281,7 +282,7 @@ namespace MacOutlines
 
 此类已存储为我们的大纲视图项和替代`GetChildrenCount`以返回表中的行数。 `GetChild` （如请求的大纲视图） 中返回一个特定的父级或子级项和`ItemExpandable`作为父或子元素定义指定的项。
 
-最后，我们需要创建的一个子类`NSOutlineDelegate`以提供我们大纲的行为。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...**选择**常规** > **空类**，输入`ProductOutlineDelegate`为**名称**单击**新建**按钮。
+最后，我们需要创建的一个子类`NSOutlineDelegate`以提供我们大纲的行为。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDelegate`为**名称**单击**新建**按钮。
 
 编辑`ProductOutlineDelegate.cs`文件并使其如下所示：
 

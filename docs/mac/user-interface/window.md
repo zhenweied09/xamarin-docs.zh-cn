@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Windows 中 Xamarin.Mac
 description: 本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。 它介绍创建 windows 以及在 Xcode 和接口生成器中，从情节提要和.xib 文件加载它们和以编程方式使用它们的面板。
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f45bc69b74d98c7b9130f2caeaee91b184c38d87
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39efcf3554469219cc29d70ee059fe645c41280d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794067"
 ---
-# <a name="windows"></a>Windows
+# <a name="windows-in-xamarinmac"></a>Windows 中 Xamarin.Mac
 
 _本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。它介绍创建 windows 以及在 Xcode 和接口生成器中，从情节提要和.xib 文件加载它们和以编程方式使用它们的面板。_
 
@@ -687,7 +688,7 @@ void OpenDialog (NSObject sender)
 }
 ```
 
-现在我们运行我们的应用程序时，如果选择**打开...**从**文件**菜单中，选择从文本文件**打开**对话框框中，并将其打开：
+现在我们运行我们的应用程序时，如果选择**打开...** 从**文件**菜单中，选择从文本文件**打开**对话框框中，并将其打开：
 
 [![](window-images/file03.png "打开的对话框")](window-images/file03.png#lightbox)
 
@@ -719,7 +720,7 @@ void OpenDialog (NSObject sender)
 7. 选择**显示**从弹出菜单中。
 6. 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-如果我们运行代码并选择**首选项...**从**应用程序菜单**，将显示窗口：
+如果我们运行代码并选择**首选项...** 从**应用程序菜单**，将显示窗口：
 
 [![](window-images/new04.png "示例首选项菜单")](window-images/new04.png#lightbox)
 

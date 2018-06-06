@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793941"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -48,7 +49,7 @@ MVVM 模式中有三个核心组件： 模型、 视图和视图模型。 每个
 
 有多种选项可使在交互在视图中，响应中的视图模型上执行代码，例如单击按钮或项选择。 如果控件支持命令，该控件`Command`属性可以是数据绑定到`ICommand`视图模型上的属性。 调用控件的命令时，将执行视图模型中的代码。 除了命令，行为可以附加到视图中的对象，并且可以侦听要调用的命令或引发事件。 在响应中，然后可以调用行为`ICommand`视图模型或视图模型上的方法上。
 
-### <a name="viewmodel"></a>ViewModel
+### <a name="viewmodel"></a>视图模型
 
 视图模型实现属性和该视图可以数据绑定的命令，并通知通过更改通知事件的任何状态更改的视图。 属性和视图模型提供的命令中定义 UI，通过提供的功能，但视图确定该功能的显示方式。
 
@@ -175,7 +176,7 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, object o
 
 所有视图模型和访问视图的模型类应都实现`INotifyPropertyChanged`接口。 在视图模型或模型类中实现此接口允许类以提供到任何数据绑定的控件视图中的更改通知，基础属性值更改时。
 
-应由满足以下条件的属性更改通知，正确的用于构建应用的：
+应用应由满足以下条件构建的属性更改通知的正确用法：
 
 -   始终引发`PropertyChanged`如果公共属性的值发生更改的事件。 不会假定该引发`PropertyChanged`由于 XAML 绑定如何发生的情况的知识可以忽略事件。
 -   始终引发`PropertyChanged`任何事件计算其值由在视图中的其他属性的属性模型。

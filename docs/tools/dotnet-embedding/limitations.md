@@ -1,15 +1,17 @@
 ---
 title: .NET 嵌入限制
+description: 本文档介绍.NET 嵌入，允许你使用用其他编程语言的.NET 代码的工具的限制。
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 8ea3e7c6ff2fc28700c46109a814fc5da6958500
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fdd3ac4cd57ac7f79f9071d62e758625b30f05dd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794119"
 ---
 # <a name="net-embedding-limitations"></a>.NET 嵌入限制
 
@@ -21,7 +23,7 @@ ms.lasthandoff: 05/09/2018
 
 不能有两个单声道的运行时对相同的应用程序中共存。 这意味着你无法使用两个不同.NET 嵌入生成库对相同的应用程序中。
 
-**解决方法：**可用生成器来创建单个库包含多个程序集 （来自不同项目）。
+**解决方法：** 可用生成器来创建单个库包含多个程序集 （来自不同项目）。
 
 ### <a name="subclassing"></a>子类化
 

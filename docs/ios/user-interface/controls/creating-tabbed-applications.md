@@ -1,21 +1,20 @@
 ---
-title: 选项卡条和选项卡栏控制器
-description: 使用 UITabBarController 类生成 iOS 应用程序使用 tab 键导航用户界面。 在本文中我们将演练如何设置的选项卡式应用程序包含若干个控制器和视图。 然后，我们将查看如何加载 UITabBarController 时它不是根控制器，如在登录屏幕后。
+title: 选项卡条和在 Xamarin.iOS 的选项卡栏控制器
+description: 本文档介绍 iOS 选项卡栏控制器以及如何使用 Xamarin.iOS。 它演示了如何设置 UITabBarController、 处理图像、 设置徽章值、 使用事件，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789753"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>选项卡条和选项卡栏控制器
-
-_使用 UITabBarController 类生成 iOS 应用程序使用 tab 键导航用户界面。在本文中我们将演练如何设置的选项卡式应用程序包含若干个控制器和视图。然后，我们将查看如何加载 UITabBarController 时它不是根控制器，如在登录屏幕后。_
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>选项卡条和在 Xamarin.iOS 的选项卡栏控制器
 
 在 iOS 中使用选项卡式应用程序以支持用户界面，然后可以访问多个屏幕顺序不分先后。 通过`UITabBarController`类，应用程序可以轻松地将对这种多屏幕方案的支持。 `UITabBarController` 负责多屏幕管理，从而使应用程序开发人员可以专注于每个屏幕的详细信息。
 
@@ -237,7 +236,7 @@ tab3.TabBarItem.BadgeValue = null;
 
 [![](creating-tabbed-applications-images/inital-screen-application.png "此屏幕截图中显示的应用程序流")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
-让我们开始新的应用程序对于此示例。 同样，我们将使用**iPhone > 应用程序 > 空项目 (C#)**模板，此时命名项目`InitialScreenDemo`。
+让我们开始新的应用程序对于此示例。 同样，我们将使用**iPhone > 应用程序 > 空项目 (C#)** 模板，此时命名项目`InitialScreenDemo`。
 
 
 在此示例中我们将需要以保存我们查看控制器情节提要。 若要添加情节提要：

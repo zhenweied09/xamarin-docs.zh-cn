@@ -1,5 +1,5 @@
 ---
-title: 图像
+title: Xamarin.Mac 中的映像
 description: 本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。 它介绍创建和维护需要创建你的应用程序图标并使用 C# 代码和 Xcode 的接口生成器中的映像的映像。
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ae0a42051d56eb8bf002c61dfbc60c99924ff301
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792084"
 ---
-# <a name="images"></a>图像
+# <a name="images-in-xamarinmac"></a>Xamarin.Mac 中的映像
 
 _本文介绍如何使用图像和 Xamarin.Mac 应用程序中的图标。它介绍创建和维护需要创建你的应用程序图标并使用 C# 代码和 Xcode 的接口生成器中的映像的映像。_
-
 
 ## <a name="overview"></a>概述
 

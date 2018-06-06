@@ -1,21 +1,21 @@
 ---
-title: 演练： 使用 JSON 元素创建的用户界面
+title: 使用 JSON 在 Xamarin.iOS 中创建用户界面
 description: MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生成的支持。 在本教程中，我们将演练如何使用 JSONElement 从 JSON 包含与应用程序，或从远程 Url 加载创建用户界面。
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 322857295383d17da03507bdd5ac78753f8c0619
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f9ba2cce1650260aa889e8282c091012ef8bbddc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790648"
 ---
-# <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>演练： 使用 JSON 元素创建的用户界面
+# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>使用 JSON 在 Xamarin.iOS 中创建用户界面
 
 _MonoTouch.Dialog （保持联系D） 包括对 JSON 数据通过动态 UI 生成的支持。在本教程中，我们将演练如何使用 JSONElement 从 JSON 包含与应用程序，或从远程 Url 加载创建用户界面。_
-
 
 保持联系D 支持在 JSON 中声明的创建用户界面。 当使用 JSON，保持联系声明元素D 将关联的元素为你自动创建。 JSON 可以加载从本地文件，分析`JsonObject`实例或甚至远程 Url。
 
@@ -177,7 +177,7 @@ _rootElement = new RootElement ("Json Example"){
 
 ## <a name="related-links"></a>相关链接
 
-- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
+- [MTDJsonDemo （示例）](https://developer.xamarin.com/samples/MTDJsonDemo/)
 - [段视频-Miguel de Icaza 使用 MonoTouch.Dialog 创建 iOS 登录屏幕](http://youtu.be/3butqB1EG0c)
 - [段视频-使用方便地创建 iOS 用户界面 MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [MonoTouch.Dialog 简介](~/ios/user-interface/monotouch.dialog/index.md)

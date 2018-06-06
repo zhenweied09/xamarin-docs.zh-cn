@@ -1,18 +1,20 @@
 ---
-title: 存储工具包概述和检索产品信息
+title: StoreKit 概述和检索产品信息，请参阅 Xamarin.iOS
+description: 本文档概述了 StoreKit。 它描述用于 StoreKit，测试 StoreKit 交互、 显示销售产品、 处理无效的产品和显示本地化的价格的类。
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4ecd2942a99f80854fd340be454f9d8fefa5a36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964b97e82db8e79cb32598d0c955fac3ab122314
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787219"
 ---
-# <a name="store-kit-overview-and-retrieving-product-information"></a>存储工具包概述和检索产品信息
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>StoreKit 概述和检索产品信息，请参阅 Xamarin.iOS
 
 应用内购买的用户界面下面的屏幕截图所示。
 发生任何事务之前，应用程序必须检索该产品的价格和显示的说明。 然后当用户按**购买**，应用程序管理的确认对话框和 Apple ID 登录名的 StoreKit 向发出请求。 假设然后事务成功，StoreKit 通知应用程序代码中，其必须存储事务结果，且用户提供访问其购买的产品。   

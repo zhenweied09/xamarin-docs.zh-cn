@@ -1,19 +1,20 @@
 ---
-title: 异常封送处理
-description: Xamarin.iOS 包含新的事件，以帮助响应异常，尤其是在本机代码。
+title: 在 Xamarin.iOS 封送处理的异常
+description: 本文档介绍如何使用 Xamarin.iOS 应用程序中的本机和托管异常。 它讨论可能发生的问题以及这些问题的解决方案。
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786738"
 ---
-# <a name="exception-marshaling"></a>异常封送处理
+# <a name="exception-marshaling-in-xamarinios"></a>在 Xamarin.iOS 封送处理的异常
 
 _Xamarin.iOS 包含新的事件，以帮助响应异常，尤其是在本机代码。_
 
@@ -108,7 +109,7 @@ try {
 
 代码示例：
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ try {
 
 此变体是引发托管的异常中的托管的代码和通过本机框架，以获取然后展开第一个托管`catch`子句：
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

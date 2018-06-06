@@ -1,18 +1,20 @@
 ---
-title: Table 控件
+title: watchOS 中 Xamarin Table 控件
+description: 本文档介绍如何在 Xamarin 中使用 watchOS table 控件。 它讨论添加了一个表、 添加行控制器、 创建和填充行，响应次点击，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3f596b424292dd0f4db08429bc7c5d4a885d3954
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791353"
 ---
-# <a name="table-control"></a>Table 控件
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS 中 Xamarin Table 控件
 
 WatchOS`WKInterfaceTable`控件比其 iOS 对应的方法要简单得多，但执行类似的角色。 它创建一个滚动列表的行，可以自定义布局，并且其响应触控事件。
 
@@ -179,7 +181,7 @@ namespace WatchTablesExtension
 }
 ```
 
-其他**。 designer.cs**文件是包含的容器和在设计器图面，如本示例具有一个创建的操作的分部类定义`WKInterfaceLabel`控件：
+其他 **。 designer.cs**文件是包含的容器和在设计器图面，如本示例具有一个创建的操作的分部类定义`WKInterfaceLabel`控件：
 
 ```csharp
 using Foundation;
@@ -207,7 +209,7 @@ namespace WatchTables.OnWatchExtension
 }
 ```
 
-插座和此声明的操作然后可以引用以代码-但是**。 designer.cs**不应直接编辑文件。
+插座和此声明的操作然后可以引用以代码-但是 **。 designer.cs**不应直接编辑文件。
 
 
 

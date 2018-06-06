@@ -1,21 +1,20 @@
 ---
-title: 后台任务
-description: 使用新的后台任务 watchOS 3 以确保监视应用程序始终具有最新的数据和停靠快照。
+title: watchOS Xamarin 中的后台任务
+description: 本文档介绍如何使用 Xamarin，先了解一下类型的后台任务，请使用资源，实施后台任务、 计划、 最佳实践，和的详细信息中的 watchOS 后台任务。
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792037"
 ---
-# <a name="background-tasks"></a>后台任务
-
-_使用新的后台任务 watchOS 3 以确保监视应用程序始终具有最新的数据和停靠快照。_
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS Xamarin 中的后台任务
 
 与 watchOS 3，有，watch 应用可以使其信息保持最新的三个方面： 
 
@@ -544,7 +543,7 @@ snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 
 - 它仅提供几秒钟来完成任何给定的任务。 传递的时间量不仅还多少 CPU 处理能力的应用程序使用派生此限制，系统将考虑。
 - 超出其限制任何应用程序将终止与以下的错误代码：
-    - **CPU** - 0xc51bad01
+    - **CPU** -0xc51bad01
     - **时间**-0xc51bad02
 - 系统将会根据它要求应用程序以执行后台任务的类型的不同限制。 例如，`WKApplicationRefreshBackgroundTask`和`WKURLSessionRefreshBackgroundTask`任务获得的较长的运行时高于其他类型的后台任务。
 

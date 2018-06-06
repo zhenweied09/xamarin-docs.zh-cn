@@ -1,19 +1,20 @@
 ---
-title: 使用进度指示器
-description: 本文介绍如何设计和使用 Xamarin.tvOS 应用内的进度指示器。
+title: 在 Xamarin 的进度指示器使用 tvOS
+description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的进度指示器。 它讨论进度条和活动指示器。
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/25/2018
-ms.openlocfilehash: d512dfddb3a6c81767f937272a4ffb1ab1a35372
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f8812f6b3f8a461487dcaf548637c84b16631d6b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789211"
 ---
-# <a name="working-with-progress-indicators"></a>使用进度指示器
+# <a name="working-with-tvos-progress-indicators-in-xamarin"></a>在 Xamarin 的进度指示器使用 tvOS
 
 _本文介绍如何设计和使用 Xamarin.tvOS 应用内的进度指示器。_
 
@@ -132,7 +133,7 @@ ActivityIndicator.StopAnimating();
 
 本文已覆盖设计和使用 Xamarin.tvOS 应用内的进度指示器。
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [tvOS 示例](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)

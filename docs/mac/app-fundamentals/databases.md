@@ -1,5 +1,5 @@
 ---
-title: 数据库
+title: Xamarin.Mac 中的数据库
 description: 本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数据库和 Xcode 的接口生成器中的 UI 元素之间的数据绑定。 它还介绍如何使用 SQLite.NET ORM 以提供对 SQLite 数据访问。
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 33c1ab7092669bb1dbd4e7bfae628b58a0bf3726
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3bc40824396aba78b2645bf9701e8e0e659c8b0a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791987"
 ---
-# <a name="databases"></a>数据库
+# <a name="databases-in-xamarinmac"></a>Xamarin.Mac 中的数据库
 
 _本文介绍如何使用键值对的编码和键 / 值观察以便 SQLite 数据库和 Xcode 的接口生成器中的 UI 元素之间的数据绑定。它还介绍如何使用 SQLite.NET ORM 以提供对 SQLite 数据访问。_
 

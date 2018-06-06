@@ -1,14 +1,16 @@
 ---
 title: Xamarin 的工作簿编辑器键盘快捷键
+description: 本文档介绍可用于 Xamarin 的工作簿编辑器的键盘快捷方式。 具体而言，它考察返回密钥使用的各种方法。
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 1258a40a527ab47cee78b17454ac818e53c60ad2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b0ba268367ebf6a9eb55bd00dd84014de247649b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793899"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Xamarin 的工作簿编辑器键盘快捷键
 

@@ -1,5 +1,5 @@
 ---
-title: 菜单
+title: Xamarin.Mac 中的菜单
 description: 本文介绍如何使用 Xamarin.Mac 应用程序中的菜单。 它介绍创建和维护菜单和菜单项在 Xcode 和接口生成器和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cb89d1df60bafe14dcc989666f0eeb5d757e4017
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792916"
 ---
-# <a name="menus"></a>菜单
+# <a name="menus-in-xamarinmac"></a>Xamarin.Mac 中的菜单
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的菜单。它介绍创建和维护菜单和菜单项在 Xcode 和接口生成器和以编程方式使用它们。_
 
@@ -438,7 +439,7 @@ public void defineKeyword (NSObject sender) {
 
 ![属性检查器](menu-images/action01.png "属性检查器")
 
-单击**+**底部的按钮**属性检查器**添加新的自定义操作：
+单击**+** 底部的按钮**属性检查器**添加新的自定义操作：
 
 ![添加新操作](menu-images/action02.png "添加新的操作")
 
@@ -1007,7 +1008,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 让我们创建我们的应用程序的自定义停靠菜单通过执行以下操作：
 
-1. 在适用于 Mac 的 Visual Studio，右键单击应用程序的项目并选择**添加** > **新文件...**从新的文件对话框中，选择**Xamarin.Mac** > **空接口定义**，用于"DockMenu"**名称**单击**新建**按钮以创建新**DockMenu.xib**文件：
+1. 在适用于 Mac 的 Visual Studio，右键单击应用程序的项目并选择**添加** > **新文件...** 从新的文件对话框中，选择**Xamarin.Mac** > **空接口定义**，用于"DockMenu"**名称**单击**新建**按钮以创建新**DockMenu.xib**文件：
 
     ![添加空的接口定义](menu-images/dock02.png "添加空的接口定义")
 2. 在**解决方案 Pad**，双击**DockMenu.xib**文件以进行编辑在 Xcode 中打开它。 创建一个新**菜单**具有以下项：**地址**，**日期**，**问候**，和**签名** 

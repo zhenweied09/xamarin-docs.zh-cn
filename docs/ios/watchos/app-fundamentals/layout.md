@@ -1,18 +1,20 @@
 ---
-title: 使用布局
+title: 使用 watchOS 中 Xamarin 布局
+description: 本文档介绍如何创建使用 Xamarin watchOS 布局。 它讨论接口控制器、 组、 分隔符和内容控件。
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 38e26544a907ffcafdec38e3e2758d9bdac7b977
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 11ff5ec2fc8fe99a780a3d728d3d84af59794cea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790609"
 ---
-# <a name="working-with-layout"></a>使用布局
+# <a name="working-with-watchos-layout-in-xamarin"></a>使用 watchOS 中 Xamarin 布局
 
 针对 Apple Watch 设计布局[屏幕大小](~/ios/watchos/app-fundamentals/screen-sizes.md)提供独特的挑战。
 

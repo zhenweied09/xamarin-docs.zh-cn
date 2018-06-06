@@ -1,15 +1,17 @@
 ---
 title: 安装.NET 嵌入
+description: 本文档介绍如何安装.NET 嵌入。 它讨论如何手动，运行此工具如何生成绑定自动，如何使用自定义 MSBuild 目标和必要的生成后步骤。
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 4/18/2018
-ms.openlocfilehash: 1675889dceb1d364abe74461b32aa4c895a144a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 057a1f3f662b2dbe2f8aee277505e1d6e8798084
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793790"
 ---
 # <a name="installing-net-embedding"></a>安装.NET 嵌入
 

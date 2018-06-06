@@ -1,5 +1,5 @@
 ---
-title: 标准控件
+title: Xamarin.Mac 中标准控件
 description: 本文介绍如何使用标准的 AppKit 控件，如按钮、 标签、 文本字段、 复选框，并分段 Xamarin.Mac 应用程序中的控件。 它介绍将其添加到接口生成器的接口以及在代码中与它们进行交互。
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9d110d0d7a46d431ea6fca50caffe05903ddce2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793040"
 ---
-# <a name="standard-controls"></a>标准控件
+# <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac 中标准控件
 
 _本文介绍如何使用标准的 AppKit 控件，如按钮、 标签、 文本字段、 复选框，并分段 Xamarin.Mac 应用程序中的控件。它介绍将其添加到接口生成器的接口以及在代码中与它们进行交互。_
 

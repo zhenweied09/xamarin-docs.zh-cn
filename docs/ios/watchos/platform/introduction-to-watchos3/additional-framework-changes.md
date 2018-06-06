@@ -1,17 +1,18 @@
 ---
 title: 其他 watchOS 3 框架更改
-description: 本文介绍其他的次要更改或对现有框架用于 watchOS 3 的增强。
+description: 本文档介绍中引入的 watchOS 3，以及如何在 Xamarin 中使用它们的各种 framework 更改。 讨论核心数据、 核心运动、 Foundation、 HealthKit、 HomeKit、 PassKit 和 UIKit。
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 572aaff9d010ec1ec1f48db2878859e445e2fb20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af44096928c5e543ac99df3faec9f2e9215f666d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791509"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>其他 watchOS 3 框架更改
 

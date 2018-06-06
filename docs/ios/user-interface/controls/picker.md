@@ -1,19 +1,20 @@
 ---
-title: 选取器
-description: 本指南介绍了设计和选取器在 Xamarin.iOS 应用程序中使用。
+title: 在 Xamarin.iOS 选取器控件
+description: 本文档介绍如何设计和使用 Xamarin.iOS 应用程序中的选取器控件。 它讨论如何在代码中并在 iOS 设计器中实现了选取器。
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789907"
 ---
-# <a name="picker"></a>选取器
+# <a name="picker-control-in-xamarinios"></a>在 Xamarin.iOS 选取器控件
 
 选取器控件显示包含正在突出显示的选定值的值的可滚动列表的类似的滚轮控件。 用户旋转鼠标滚轮以选择他们希望的选项。
 

@@ -1,21 +1,20 @@
 ---
-title: EventKit
-description: 本指南提供有关如何访问和处理日历、 CalendarEvents 和提醒存储的数据在日历数据库中，通过 EventKit 公开的概述。 它涉及主要的类以及在 EventKit 编程以及大量与 EventKit framework 关联的常见任务中的角色。
+title: 在 Xamarin.iOS EventKit
+description: 本文档介绍 EventKit 以及如何在 Xamarin.iOS 中使用它。 它讨论日历、 日历事件和提醒，如下所示使用 EventKit，和的详细信息进行编程时常用的类。
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3522870d3e063d1e12660094a311e9850bcefa13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786709"
 ---
-# <a name="eventkit"></a>EventKit
-
-_本指南提供有关如何访问和处理日历、 CalendarEvents 和提醒存储的数据在日历数据库中，通过 EventKit 公开的概述。它涉及主要的类以及在 EventKit 编程以及大量与 EventKit framework 关联的常见任务中的角色。_
+# <a name="eventkit-in-xamarinios"></a>在 Xamarin.iOS EventKit
 
 iOS 具有两个日历相关的应用程序内置： 日历应用程序中，和提醒应用程序。 它足够简单，若要了解如何日历应用程序管理日历数据，但提醒应用程序是不太明显。 提醒可能会遇到这样时它们到期，当它们在完成后，与它们关联的日期等。在这种情况下，iOS 日历将所有数据都存储，无论是日历事件或提醒，在一个位置，调用*日历数据库*。
 

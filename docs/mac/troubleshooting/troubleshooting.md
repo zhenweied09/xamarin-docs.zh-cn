@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Mac 故障排除提示
-description: 本文档介绍用于解决开发 Xamarin.Mac 应用程序时遇到的问题的方法。
+description: 本文档介绍用于解决开发 Xamarin.Mac 应用程序时遇到的问题的方法。 它还介绍了如何获取支持。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
@@ -8,11 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3cec5465f3f30b230cc0f4f1b865209ed327a07c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5e6cd5b338034cfa9956244015d4585b4f005793
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792962"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.Mac 故障排除提示
 

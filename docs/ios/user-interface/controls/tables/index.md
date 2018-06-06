@@ -1,20 +1,20 @@
 ---
-title: 使用表和单元格
-description: 显示 UITableView 使用 Xamarin.iOS 的数据
+title: 使用表和 Xamarin.iOS 中的单元格
+description: 此文档链接到各种指南描述如何在 Xamarin.iOS 应用程序中显示与 UITableView 控件的数据。
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebdad2cc8e3083bee5acc127660b5641f42c731f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790011"
 ---
-# <a name="working-with-tables-and-cells"></a>使用表和单元格
-
+# <a name="working-with-tables-and-cells-in-xamarinios"></a>使用表和 Xamarin.iOS 中的单元格
 
 本部分介绍用于创建和显示表的类，然后提供如何在 Xamarin.iOS 中使用它们的示例。 它将介绍对于表，自定义布局，实现编辑和 Xamarin iOS 设计器用于以可视方式设计表使用的默认外观。 有时显示显然是行 （如音乐应用程序） 和其他情况下很难识别 table 控件 （如编辑联系人应用或在消息应用程序中的对话中） 的列表。
 
@@ -26,7 +26,6 @@ ms.lasthandoff: 04/04/2018
 -   **在表中显示数据**– 演示如何创建和填充表，使用不同的表和单元格样式和通过回收单元格对象来避免内存问题。 
 -   **高级用法**– 构建自定义单元格，并使用 UITableView 类的编辑功能。 
 -   **以可视方式创建表**– 使用 for iOS Xamarin 设计器使用情节提要创建表驱动的接口。 
-
 
 ## <a name="contents"></a>内容
 
@@ -43,7 +42,6 @@ ms.lasthandoff: 04/04/2018
  [在情节提要中创建表](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
  [自动调整行高](~/ios/user-interface/controls/tables/autosizing-row-height.md)
-
 
 ## <a name="related-links"></a>相关链接
 

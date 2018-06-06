@@ -1,21 +1,20 @@
 ---
-title: 增强型的用户通知
-description: 本文涵盖所有用户通知已得到增强的 iOS 10 和如何在 Xamarin.iOS 应用程序中使用它们的方式。
+title: 在 Xamarin.iOS 的增强型的用户通知
+description: 本指南介绍了在 iOS 10 中引入的用户通知 framework。 它讨论本地通知、 远程通知，通知管理、 通知操作和的详细信息。
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: b27d415240f3b8cd25c4bc54f6d176c50e42a250
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 29c529d57d35b0ab2b7bf2e80f8d295a8d059c5e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788649"
 ---
-# <a name="enhanced-user-notifications"></a>增强型的用户通知
-
-_本文涵盖所有用户通知已得到增强的 iOS 10 和如何在 Xamarin.iOS 应用程序中使用它们的方式。_
+# <a name="enhanced-user-notifications-in-xamarinios"></a>在 Xamarin.iOS 的增强型的用户通知
 
 新 iOS 10，框架允许在传递和本地和远程通知的处理其用户通知。 使用此框架，应用程序或应用扩展可以计划传递本地通知通过指定一组条件，例如位置或当天的时间。
 

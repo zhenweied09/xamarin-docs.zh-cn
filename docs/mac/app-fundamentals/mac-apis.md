@@ -1,19 +1,20 @@
 ---
-title: Mac API
-description: 本文档介绍如何读取 OBJECTIVE-C 的选择器以及如何查找其相应的 C# 方法。
+title: macOS Xamarin.Mac 开发人员的 Api
+description: 本文档介绍如何读取 OBJECTIVE-C 的选择器以及如何在 Xamarin.Mac 应用中查找其相应的 C# 方法。
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/02/2017
-ms.openlocfilehash: 0344fecb9a8d64a680bb11689f56cf074d952f4e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cceaa2f6e89b712be5929f7e978663d8c47f18c5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791545"
 ---
-# <a name="mac-apis"></a>Mac API
+# <a name="macos-apis-for-xamarinmac-developers"></a>macOS Xamarin.Mac 开发人员的 Api
 
 ## <a name="overview"></a>概述
 
