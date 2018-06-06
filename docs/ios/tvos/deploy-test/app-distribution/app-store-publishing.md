@@ -1,21 +1,20 @@
 ---
 title: 发布到 Apple 电视应用商店
-description: 这篇文章演示如何配置、 生成和发布通过 Apple 电视应用商店分发 Xamarin.tvOS 应用。 它包括介绍如何准备应用以便分发、 如何使用 Apple 的工具来提交供查看，应用程序以及，最后，如何将应用发布到 Apple 电视应用商店的分步指南。
+description: 本文档介绍如何将应用发布到 Apple 电视应用商店。 它讨论如何配置、 设置、 生成和提交一个使用 Xamarin 生成的 tvOS 应用程序。
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789299"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>发布到 Apple 电视应用商店
-
-_这篇文章演示如何配置、 生成和发布通过 Apple 电视应用商店分发 Xamarin.tvOS 应用。它包括介绍如何准备应用以便分发、 如何使用 Apple 的工具来提交供查看，应用程序以及，最后，如何将应用发布到 Apple 电视应用商店的分步指南。_
 
 按顺序将分发到所有 Apple TV 设备的应用程序、 Apple 要求应用程序，以便通过发布*Apple 电视 App Store*，使应用商店 tvOS 应用的一站式购物位置。 许多类型的应用的开发人员可以分发此单点大规模成功采用大写形式。 Apple 电视应用商店是提供分发和支付系统的应用程序开发人员的成套解决方案。
 
@@ -113,7 +112,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 使用 Apple 的基于 Web 的 iOS 预配门户的预配包含以下步骤：
 
 1.  选择“预配” > “分发”。
-2.  单击**+**按钮，然后选择你想要为创建的分布配置文件的类型**Apple 电视 App Store**。
+2.  单击**+** 按钮，然后选择你想要为创建的分布配置文件的类型**Apple 电视 App Store**。
 3.  从要为其创建分发配置文件的下拉列表中，选择“应用程序 ID”。
 4.  选择所需对应用程序签名证书。
 5.  为新的**分发配置文件**输入**名称**，并生成配置文件。

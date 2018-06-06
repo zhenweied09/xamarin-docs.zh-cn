@@ -1,22 +1,20 @@
 ---
-title: tvOS 内部机制
-description: Xamarin.tvOS 共享作为我们 Xamarin.iOS 产品，相同 dna 的解码，因此，我们已生成我们的 iOS 产品的高级的文档都几乎完全相同，到我们 tvOS 的产品。
+title: 在 Xamarin – 内部 tvOS
+description: 在 Xamarin，基于 Xamarin.iOS 上描述 tvOS 的内部工作原理的文档。 链接内容讨论了程序集，目标框架和相关 iOS 概念。
 ms.prod: xamarin
 ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 83b8d5b6dc4e73f05160960f0e2547284de57799
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0132eac4edd4ecb9f693828bd58288dfbcb1c008
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789140"
 ---
-# <a name="tvos-internals"></a>tvOS 内部机制
-
-_Xamarin.tvOS 共享作为我们 Xamarin.iOS 产品，相同 dna 的解码，因此，我们已生成我们的 iOS 产品的高级的文档都几乎完全相同，到我们 tvOS 的产品。_
-
+# <a name="tvos-in-xamarin--internals"></a>在 Xamarin – 内部 tvOS 
 
 ##  <a name="assembliesiostvosinternalsassembliesmd"></a>[程序集](~/ios/tvos/internals/assemblies.md)
 
@@ -73,8 +71,6 @@ Xamarin.iOS 支持本机 C 库和 Objective-C 库链接。 本文档讨论了如
 ###  <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[XIB 代码生成](~/ios/internals/xib-code-generation.md)
 
 Visual Studio for Mac如何与Xcode的Interface Builder集成以允许您使用Interface Builder来设计UI。
-
-
 
 ## <a name="related-links"></a>相关链接
 

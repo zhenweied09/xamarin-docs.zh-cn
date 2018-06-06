@@ -1,20 +1,19 @@
 ---
 title: 更新现有的 Mac 应用程序
-description: 请按照下列步骤以更新现有 Xamarin.Mac 应用程序使用统一的 API。
+description: 本文档描述必须遵守才能更新 Xamarin.Mac 应用程序从经典 API 到统一 API 的步骤。
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a2e3df4db13ccbf8001b762bf29a3eb53cacd35a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 5e6034b079bba5e884872e4f2096d677fd3641d0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782406"
 ---
 # <a name="updating-existing-mac-apps"></a>更新现有的 Mac 应用程序
-
-_请按照下列步骤以更新现有 Xamarin.Mac 应用程序使用统一的 API。_
 
 更新现有应用程序使用统一的 API 需要更改项目文件本身以及命名空间和应用程序代码中使用的 Api。
 

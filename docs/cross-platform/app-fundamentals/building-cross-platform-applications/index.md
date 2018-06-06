@@ -1,24 +1,23 @@
 ---
-title: 构建跨平台应用程序
+title: 生成跨平台应用程序
 description: 摘要以及六个部件，本部分讨论如何使用 Xamarin 开发平台-了解如何 Xamarin 的工作设计移动应用程序，然后测试并将部署到各种应用程序存储从生成应用程序。
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3966b731531d617f105583210334a23071a6802b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780169"
 ---
-# <a name="sharing-code-options"></a>共享代码选项
+# <a name="building-cross-platform-applications"></a>生成跨平台应用程序
 
 有用于跨平台移动应用程序间共享代码的两个选项： 共享资产项目和可移植类库。 这些选项[此处讨论](~/cross-platform/app-fundamentals/code-sharing.md); 的详细信息[可移植类库](~/cross-platform/app-fundamentals/pcl.md)和[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)也是可用。
 
 <a name="Sections" />
-
-## <a name="building-cross-platform-mobile-apps"></a>构建跨平台移动应用程序
 
  [概述](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
@@ -36,13 +35,11 @@ ms.lasthandoff: 05/10/2018
 
  <a name="Cross-Platform_Mobile_Application_Case_Studies" />
 
-
 ## <a name="case-studies"></a>案例研究
 
 本文档中概述的原则放入示例应用程序中的做法*Tasky*，以及[预生成过应用程序](https://xamarin.com/prebuilt)如[Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm)。
 
  <a name="Tasky" />
-
 
 ### <a name="tasky"></a>Tasky
 
@@ -53,7 +50,6 @@ Tasky 是用于 iOS、 Android 和 Windows Phone 的简单待办事项列表应�
 
 读取[Tasky 案例研究](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)。
 
-
 ## <a name="summary"></a>总结
 
 本部分介绍了 Xamarin 的应用程序开发工具，并讨论了如何生成面向多个移动平台的应用程序。
@@ -63,8 +59,6 @@ Tasky 是用于 iOS、 Android 和 Windows Phone 的简单待办事项列表应�
 （如文件和网络操作） 的常见应用程序功能和如何它们可以建立方式跨平台的给出了示例。
 
 最后，它简要讨论测试，并提供对案例研究，以将这些原则放入操作的引用。
-
-
 
 ## <a name="related-links"></a>相关链接
 

@@ -1,18 +1,20 @@
 ---
-title: 购买耗材
+title: 购买可使用产品的 Xamarin.iOS
+description: 本文档描述了在 Xamarin.iOS 可使用产品。 可使用的产品是一次性部分功能，如中游戏货币。
 ms.prod: xamarin
 ms.assetid: E0CB4A0F-C3FA-3933-58A7-13246971D677
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c2c84c044ff41cced2c97e414502faff45341ec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9c53af1055736512c42f83a58011b7b3a42bcd5b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786972"
 ---
-# <a name="purchasing-consumable-products"></a>购买耗材
+# <a name="purchasing-consumable-products-in-xamarinios"></a>购买可使用产品的 Xamarin.iOS
 
 可使用的产品是最简单的方法实现，因为不存在还原的要求。 它们可用于产品，如中游戏货币或单一用途的功能。 用户可以重新再次购买耗材转移和转移。
 
@@ -23,8 +25,6 @@ ms.lasthandoff: 04/04/2018
 [![购买过程可视化效果](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  基本工作流是：   
-   
-   
    
  1. 应用程序将添加`SKPayment`到队列。 如果需要将系统提示你输入其 Apple ID，并要求确认付款用户。   
    

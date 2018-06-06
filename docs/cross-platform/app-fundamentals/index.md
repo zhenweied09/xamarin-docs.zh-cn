@@ -1,18 +1,19 @@
 ---
-title: 共享代码
-description: 应用程序的核心概念
+title: 多个平台上的共享代码
+description: 此文档链接到各种指南描述的共享代码，包括可移植类库、 共享的项目、 标准.NET 和 NuGet 技术。
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 4cca202627d1b901e00532c92598ffddd48b4853
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 61377afa61e2c2006c2fdf8ef9b21fe7d567b3de
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780058"
 ---
-# <a name="sharing-code"></a>共享代码
+# <a name="sharing-code-on-multiple-platforms"></a>多个平台上的共享代码
 
 本部分提供的指南上的一些较常见的操作任务或开发人员需要时应注意的开发移动应用程序的概念。
 

@@ -1,29 +1,26 @@
 ---
-title: 本机引用
-description: 本机引用使你能够将本机框架嵌入到 Xamarin.iOS 或 Xamarin.Mac 项目或绑定项目。
+title: 本机引用 iOS、 Mac 和绑定项目
+description: 本机引用使你能够将本机框架嵌入到 Xamarin.iOS、 Xamarin.Mac 或绑定项目。
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c56e392420debb21998363cfffa288aec51691ea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3a497d0bb4674014b8063cb1fbc91eec6e7ae5ea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781713"
 ---
-# <a name="native-references"></a>本机引用
+# <a name="native-references-in-ios-mac-and-bindings-projects"></a>在 iOS、 Mac 和绑定项目中的本机引用
 
 _本机引用使你能够将本机框架嵌入到 Xamarin.iOS 或 Xamarin.Mac 项目或绑定项目。_
-
 
 自 iOS 8.0 就已可以创建应用程序扩展和在 Xcode 中的主应用程序之间共享代码的嵌入式的框架。 使用本机引用功能则可能要在 Xamarin.iOS 中使用这些 （使用 Xcode 创建） 的嵌入式的框架。
  
 > [!IMPORTANT]
 > 它将不能从任何类型的 Xamarin.iOS 或 Xamarin.Mac 项目创建嵌入的框架，本机引用只允许使用现有的本机 (OBJECTIVE-C) 框架的消耗。
-
-
-
 
 <a name="Terminology" />
 

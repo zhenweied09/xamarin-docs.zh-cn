@@ -1,18 +1,20 @@
 ---
-title: 程序集
+title: 程序集通过 Xamarin 对 tvOS 的支持
+description: 为了帮助阐明对 tvOS 应用程序可用的功能，本文档提供了 Xamarin tvOS 开发适用于支持的程序集的列表。
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 7d0ee27cfa2ae153ef481f943402f5fcfc5d04e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 217ec5ea81b304555bcaf19e53c8132628628627
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788818"
 ---
-# <a name="assemblies"></a>程序集
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>程序集通过 Xamarin 对 tvOS 的支持
 
 ## <a name="supported-assemblies"></a>支持的程序集
 
@@ -46,8 +48,6 @@ ms.lasthandoff: 04/04/2018
 ## <a name="portable-class-libraries"></a>可移植类库
 
 除了 Mac 绑定中，可以使用 Xamarin.tvOS [.NET 可移植类库](~/cross-platform/app-fundamentals/pcl.md)。
-
-
 
 ## <a name="related-links"></a>相关链接
 

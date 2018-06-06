@@ -1,16 +1,17 @@
 ---
 title: 32/64 位平台注意事项
-description: 当目标为你的应用程序的 32 位和 64 位体系结构时的注意事项
+description: 本文档介绍当目标为 Xamarin.iOS 或 Xamarin.Mac 应用程序的 32 位和 64 位体系结构时需要牢记的各种注意事项。
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c722efc0bc6e8a4ea29af603f88c0e0644c2ed8c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781544"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 位平台注意事项
 
@@ -105,6 +106,6 @@ ARM64 支持 iOS 8 iPhone 6 或其他 64 位设备上所需和提交新的或更
 
 有关生成使用 Xamarin.Mac 的 64 位应用程序的信息，请参阅[更新 Xamarin.Mac 统一应用程序迁移到 64 位](~/cross-platform/macios/32-and-64/mac-64-bit.md)指南。
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [经典 vs 统一的 API 差异](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

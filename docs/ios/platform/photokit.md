@@ -1,30 +1,31 @@
 ---
-title: PhotoKit
-description: 照片工具包允许应用程序查询系统图像库和创建自定义 UI，以查看和修改其内容。
+title: 在 Xamarin.iOS PhotoKit
+description: 本文档介绍 PhotoKit，讨论其模型对象，如何查询模型数据以及保存照片库的更改。
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: c721064f62f8e2255de2b4ea2d0438e3ed630d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4aeeec5b96e24c654407ad672930c0cb78592450
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787892"
 ---
-# <a name="photokit"></a>PhotoKit
+# <a name="photokit-in-xamarinios"></a>在 Xamarin.iOS PhotoKit
 
-_照片工具包允许应用程序查询系统图像库和创建自定义 UI，以查看和修改其内容。_
-
-照片工具包是一个新的框架，允许应用程序查询系统图像库和创建自定义用户界面查看和修改其内容。 它包括了多个类表示图像和视频资产，以及资产，例如专辑和文件夹的集合。
+PhotoKit 是一个新的框架，允许应用程序查询系统图像库和创建自定义用户界面查看和修改其内容。 它包括了多个类表示图像和视频资产，以及资产，例如专辑和文件夹的集合。
 
 ## <a name="model-objects"></a>模型对象
-照片工具包表示它所调用模型对象中的这些资源。 表示的照片和视频本身的模型对象属于类型`PHAsset`。 A`PHAsset`包含元数据，例如资产的媒体类型和其创建日期。
+
+PhotoKit 表示它所调用模型对象中的这些资源。 表示的照片和视频本身的模型对象属于类型`PHAsset`。 A`PHAsset`包含元数据，例如资产的媒体类型和其创建日期。
 同样，`PHAssetCollection`和`PHCollectionList`类分别包含有关资产集合和集合列表的元数据。 资产集合是的资产，如所有的照片和视频给定年份的分组。 同样，集合列表是组的资产集合，如照片和视频按年分组。
 
 ## <a name="querying-model-data"></a>查询模型数据
-照片工具包可以很容易查询模型数据通过各种提取方法。 例如，若要检索的所有映像，将调用`PFAsset.Fetch`，并传递`PHAssetMediaType.Image`媒体类型。
+
+PhotoKit 轻松地查询模型数据通过各种提取方法。 例如，若要检索的所有映像，将调用`PFAsset.Fetch`，并传递`PHAssetMediaType.Image`媒体类型。
 
     PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 

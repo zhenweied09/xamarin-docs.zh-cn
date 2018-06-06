@@ -1,18 +1,20 @@
 ---
-title: 在 iOS 上的数据存储空间简介
+title: 在 Xamarin.iOS 应用程序中的数据存储空间简介
+description: 本文档介绍的数据存储在 Xamarin.iOS 应用程序中，使用不同的方法，并提供有关的好处的 SQLite 的特定信息。
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: 0da267502629ba30da59c26600ef0e7c605640aa
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 3fc82e2a1a2cf8d25d934ca2194ecd7de1b8b7df
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784698"
 ---
-# <a name="introduction"></a>介绍
+# <a name="introduction-to-data-storage-in-xamarinios-apps"></a>在 Xamarin.iOS 应用程序中的数据存储空间简介
 
 ## <a name="when-to-use-a-database"></a>何时使用数据库
 

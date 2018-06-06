@@ -1,20 +1,21 @@
 ---
-title: 异步概述
-description: C# 语言 – 版本 5 – 最新版本引入了两个新的关键字表示异步操作： async 和 await。 这些关键字，可以编写在另一个线程中使用任务并行库执行长时间运行操作 （如网络访问权限） 的简单代码并轻松地访问在完成的结果。 Xamarin.iOS 和 Xamarin.Android 的最新版本支持 async 和 await-本文档提供了说明和 xamarin 中使用的新语法的示例。
+title: 异步支持概述
+description: 本文档介绍使用异步编程，并等待，C# 5 以更加轻松地编写异步代码中引入的概念。
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 22878695d93ae79bbbfe1b99961587ff0bf957be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782003"
 ---
 # <a name="async-support-overview"></a>异步支持概述
 
-_C# 语言 – 版本 5 – 最新版本引入了两个新的关键字表示异步操作： async 和 await。这些关键字，可以编写在另一个线程中使用任务并行库执行长时间运行操作 （如网络访问权限） 的简单代码并轻松地访问在完成的结果。Xamarin.iOS 和 Xamarin.Android 的最新版本支持 async 和 await-本文档提供了说明和 xamarin 中使用的新语法的示例。_
+_C# 5 引入两个关键字，来简化异步编程： async 和 await。这些关键字，可以编写在另一个线程中使用任务并行库执行长时间运行操作 （如网络访问权限） 的简单代码并轻松地访问在完成的结果。Xamarin.iOS 和 Xamarin.Android 的最新版本支持 async 和 await-本文档提供了说明和 xamarin 中使用的新语法的示例。_
 
 Xamarin 的异步支持 Mono 3.0 基础上构建，并从正在 Silverlight 以适合移动应用的.NET 4.5 版本的移动友好版本升级 API 配置文件。
 

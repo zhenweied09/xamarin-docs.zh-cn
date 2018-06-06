@@ -1,18 +1,20 @@
 ---
-title: 使用 UrhoSharp ARKit
+title: 使用在 Xamarin.iOS UrhoSharp ARKit
+description: 本文档介绍如何设置 ARKit 应用在 Xamarin.iOS，然后查看如何呈现帧，如何调整相机，如何检测平面，如何使用照明，和的详细信息。 它还讨论 UrhoSharp 以及为 HoloLens 编写代码。
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/01/2016
-ms.openlocfilehash: 95c9c602d0bfe1b77fda453a137dfdfc12a975c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0d70b1f751d5aa6b6c8fa578f53ba1ac8260cfa1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787098"
 ---
-# <a name="using-arkit-with-urhosharp"></a>使用 UrhoSharp ARKit
+# <a name="using-arkit-with-urhosharp-in-xamarinios"></a>使用在 Xamarin.iOS UrhoSharp ARKit
 
 通过引入[ARKit](https://developer.apple.com/arkit/)，Apple 变得更加简单开发人员能够创建增强的现实应用程序。 ARKit 可以跟踪你的设备的确切位置和检测各种曲面上世界，而且很然后由开发人员 blend 来自 ARKit 到你的代码的数据。
 

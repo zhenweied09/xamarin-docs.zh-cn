@@ -1,18 +1,20 @@
 ---
-title: 使用 NSUserActivity 搜索
+title: 使用在 Xamarin.iOS NSUserActivity 搜索
+description: 本文档介绍如何索引 NSUserActivity，使其可搜索 Spotlight 和 Safari 中。 讨论如何响应的 NSUserActivity 搜索结果中选择它。
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 803fcce359bbe27ea19901afa766f5b7f4692e0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4b053f66e9b6b7715cbe52c4e43d9db32db48f4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788203"
 ---
-# <a name="search-with-nsuseractivity"></a>使用 NSUserActivity 搜索
+# <a name="search-with-nsuseractivity-in-xamarinios"></a>使用在 Xamarin.iOS NSUserActivity 搜索
 
 `NSUserActivity` 在 iOS 8 中引入，用于为 Handoff 提供数据。
 它允许你在应用，然后可传递到另一个实例在不同的 iOS 设备上运行的应用程序的特定部分中创建活动。 接收设备然后可以继续在前一个设备，选取右用户离开的位置上启动的活动。 有关使用切换的详细信息，请参阅我们[简介 Handoff](~/ios/platform/handoff.md)文档。

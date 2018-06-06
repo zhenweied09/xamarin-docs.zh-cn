@@ -1,19 +1,21 @@
 ---
-title: .NET Standard
+title: 使用.NET 标准库来共享代码
+description: 本文档介绍如何使用.NET 标准库来共享代码。 它讨论创建.NET 标准库、 编辑其设置，以及在应用程序中使用它。
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: c70a1cb1aa05426ba6d54d8af3787f014883bfa1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781028"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="using-net-standard-libraries-to-share-code"></a>使用.NET 标准库来共享代码
 
-## <a name="using-net-standard-library-projects-to-share-code"></a>使用.NET 标准的类库项目来共享代码
+## <a name="net-standard"></a>.NET Standard
 
 .NET 标准库是一套正式的 .NET API 规范，有望在所有 .NET 运行时中推出。 推出标准库的动机是在 .NET 生态系统中建立更好的统一性。
 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) 持续为 .NET 运行时行为建立统一性，但适用于 .NET 库实现的 .NET 基类库 (BCL) 没有类似的规范。
@@ -33,7 +35,7 @@ ms.lasthandoff: 05/09/2018
 
 1. 在添加新项目对话框中，选择`.NET Core`类别，然后选择`Class Library(.NET Core)`。
 
-  **注意：**此模板将重命名为`.NET Standard`Visual Studio for mac。 的未来版本中
+  **注意：** 此模板将重命名为`.NET Standard`Visual Studio for mac。 的未来版本中
 
   ![创建.NET 核心类库](net-standard-images/vsm01.png)
 
@@ -49,7 +51,7 @@ ms.lasthandoff: 05/09/2018
 
 你可以在内更改你的版本`netstandard`通过更改`Target Framework`下拉列表中值。
 
-**此外：**可以编辑`.csproj`直接来更改此值。
+**此外：** 可以编辑`.csproj`直接来更改此值。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -79,7 +81,7 @@ ms.lasthandoff: 05/09/2018
 
 你可以在内更改你的版本`netstandard`通过更改`Target Framework`下拉列表中值。
 
-**此外：**可以编辑`.csproj`直接来更改此值。
+**此外：** 可以编辑`.csproj`直接来更改此值。
 
 #### <a name="using-net-standard-library"></a>使用.NET 标准库
 

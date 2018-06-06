@@ -1,21 +1,20 @@
 ---
-title: 使用父应用程序
-description: WatchOS 1 中的 iOS 和监视应用程序之间的共享数据
+title: 使用 watchOS 中 Xamarin 父应用程序
+description: 本文档介绍如何使用 Xamarin 的 watchOS 父应用程序。 它讨论 WatchKit 应用扩展、 iOS 应用、 共享的存储，以及的详细信息。
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 769847cccb3e21fea4d8f45d8e5d0c0fb59bdd43
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3af2cce0d84e3934eeb89917990f111d29aadef1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790687"
 ---
-# <a name="working-with-the-parent-application"></a>使用父应用程序
-
-_WatchOS 1 中的 iOS 和监视应用程序之间的共享数据_
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>使用 watchOS 中 Xamarin 父应用程序
 
 > [!IMPORTANT]
 > 访问父应用程序仅使用下面的示例可用于 watchOS 1 监视应用。
@@ -59,7 +58,7 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 ```
 
 
-### <a name="ios-app"></a>iOS App
+### <a name="ios-app"></a>iOS 应用程序
 
 从监视应用程序扩展的所有调用都路由通过 iPhone 应用`HandleWatchKitExtensionRequest`方法。
 如果您正在监视应用程序中进行不同的请求，则此方法将需要查询`userInfo`字典来确定如何处理该请求。
@@ -92,7 +91,7 @@ public partial class AppDelegate : UIApplicationDelegate
 
 <a name="nsuserdefaults" />
 
-### <a name="nsuserdefaults"></a>NSUserDefaults
+### <a name="nsuserdefaults"></a>使用 NSUserDefaults
 
 可以监视应用程序扩展和父 iPhone 应用中编写以下代码，以便它们可以引用一组通用的`NSUserDefaults`:
 

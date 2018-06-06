@@ -1,18 +1,20 @@
 ---
-title: 图像控件
+title: watchOS Xamarin 中的图像控件
+description: 本文档介绍如何在使用 Xamarin 生成 watchOS 应用程序中使用图像控件。 它讨论 WKInterfaceImage 控件，SetImage 方法，将图像添加到监视扩展、 动画和的详细信息。
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb58c587f737a5991a21f0efe9964353a8ab0399
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791246"
 ---
-# <a name="image-control"></a>图像控件
+# <a name="watchos-image-controls-in-xamarin"></a>watchOS Xamarin 中的图像控件
 
 watchOS 提供[ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/)控件来显示的图像和简单动画。 某些控件还可以 （如按钮、 组和接口控制器） 的背景图像。
 

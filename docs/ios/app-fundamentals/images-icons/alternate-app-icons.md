@@ -1,19 +1,20 @@
 ---
-title: 备用的应用程序图标
-description: 本文介绍如何在 Xamarin.iOS 中使用备用的应用程序图标。
+title: 在 Xamarin.iOS 的备用的应用程序图标
+description: 本文档介绍如何在 Xamarin.iOS 中使用备用的应用程序图标。 它讨论如何将这些图标添加到 Xamarin.iOS 项目、 如何修改 Info.plist 文件，以及如何以编程方式管理应用程序的图标。
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 8d9f27d58a881878aabeda4326805eec726c247c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1d37a29982454367c35bfdfad205abce0eb025af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784105"
 ---
-# <a name="alternate-app-icons"></a>备用的应用程序图标
+# <a name="alternate-app-icons-in-xamarinios"></a>在 Xamarin.iOS 的备用的应用程序图标
 
 _本文介绍如何在 Xamarin.iOS 中使用备用的应用程序图标。_
 

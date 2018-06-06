@@ -1,18 +1,19 @@
 ---
-title: HttpClient 堆栈和 iOS/macOS 的 SSL/TLS 实现选择器
+title: HttpClient 和 iOS/macOS 的 SSL/TLS 实现选择器
 description: HttpClient 堆栈和 SSL/TLS 实现选择器确定将由 Xamarin iOS、 tvOS 或 macOS 应用程序的 HttpClient 和 SSL/TLS 实现。
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: dcbdb4d20bca9764731b08e551a4d3b8a26a2ab4
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9de2c97933bd33111a751be51e06dffe09794f15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782263"
 ---
-# <a name="httpclient-stack-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 堆栈和 iOS/macOS 的 SSL/TLS 实现选择器
+# <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>HttpClient 和 iOS/macOS 的 SSL/TLS 实现选择器
 
 **HttpClient 实现选择器**xamarin.ios，Xamarin.tvOS 和 Xamarin.Mac 控制其`HttpClient`实现来使用。 您可以切换到使用 iOS、 tvOS 或 macOS 本机传输实现 (`NSUrlSession`或`CFNetwork`，取决于操作系统)。 好的结果是 TLS 1.2 支持、 较小二进制文件，并更快地下载;其缺点在于，它需要事件循环正在运行要执行的异步操作。
 

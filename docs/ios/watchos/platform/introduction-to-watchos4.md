@@ -1,21 +1,20 @@
 ---
 title: WatchOS 4 简介
-description: 可供使用 watchOS 4 Xamarin 的开发人员的新增功能。
+description: 本文档提供 watchOS 4，描述现可供 Xamarin 开发人员的新功能的简要介绍。
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2017
-ms.openlocfilehash: d3377b503273dc84cfe07227c4b007c8e073f1a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 550cf57f6b89a8fd5726ae55cb5eaaa54d6d2692
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791262"
 ---
 # <a name="introduction-to-watchos-4"></a>WatchOS 4 简介
-
-_可供使用 watchOS 4 Xamarin 的开发人员的新增功能。_
 
 WatchOS 4 应用程序中访问新功能：
 
@@ -29,7 +28,6 @@ WatchOS 3 之后的更改：
 
 * 在单个进程中运行应用程序代码和 UI。
 * 可以在监视 （无需要求用户接受其手机上） 上授予位置权限。
-
 
 ## <a name="related-links"></a>相关链接
 

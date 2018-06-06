@@ -1,5 +1,5 @@
 ---
-title: 应用程序传输安全
+title: 在 Xamarin.iOS 应用程序传输安全
 description: 应用程序传输安全性 (ATS) 强制实施 internet 资源 （如应用程序的后端服务器） 和你的应用程序之间的安全连接。
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: 7e3a191def7e0c06365f334b4a7708e5927eadf8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71632da89c6a276b427b36f91eb343ab0a5c515b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784317"
 ---
-# <a name="app-transport-security"></a>应用程序传输安全
+# <a name="app-transport-security-in-xamarinios"></a>在 Xamarin.iOS 应用程序传输安全
 
 _应用程序传输安全性 (ATS) 强制实施 internet 资源 （如应用程序的后端服务器） 和你的应用程序之间的安全连接。_
 
@@ -119,7 +120,7 @@ CFNetwork 基于处理程序基于本机`CFNetwork`framework。
 - WatchOS 不可用。
 - 某些 HttpClient 功能和选项将不可用。
 
-#### <a name="nsurlsession-handler"></a>NSUrlSession Handler
+#### <a name="nsurlsession-handler"></a>NSUrlSession 处理程序
 
 NSUrlSession 基于处理程序基于本机`NSUrlSession`API。
 

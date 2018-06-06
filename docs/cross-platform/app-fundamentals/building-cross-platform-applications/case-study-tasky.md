@@ -1,20 +1,19 @@
 ---
-title: 案例研究： Tasky
-description: 本文档介绍如何将生成跨平台应用程序的原则应用 Tasky 可移植的示例应用程序中。 它涉及移动应用程序设计、 编写供重复使用的常见代码和实施面向 iOS、 Android 和 Windows Phone 平台的特定于平台的项目。
+title: 跨平台应用程序的案例研究： Tasky
+description: 本文档介绍如何 Tasky 可移植的示例应用程序的设计和构建作为跨平台移动应用程序。 它讨论应用程序的要求、 接口、 数据模型、 核心功能、 实施和的详细信息。
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f8325bbc6b3f8aa40a08ca2c57605544ab0bc85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 48650445d06ad3bc7ca6d4da84c9b8837f8a0f88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782230"
 ---
-# <a name="case-study-tasky"></a>案例研究： Tasky
-
-_本文档介绍如何将生成跨平台应用程序的原则应用 Tasky 可移植的示例应用程序中。它涉及移动应用程序设计、 编写供重复使用的常见代码和实施面向 iOS、 Android 和 Windows Phone 平台的特定于平台的项目。_
+# <a name="cross-platform-app-case-study-tasky"></a>跨平台应用程序的案例研究： Tasky
 
 *Tasky* *可移植*是一个简单的待办事项列表应用程序。 本文档讨论了如何设计和生成，以下的指导[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)文档。 讨论涵盖以下几个方面：
 
@@ -478,7 +477,7 @@ MainPage 类使用`TaskListViewModel`以显示使用 XAML 的数据绑定功能�
 
 #### <a name="ios"></a>iOS
 
-应用程序使用 iOS 标准用户界面设计，例如添加按钮在导航栏中正在放置和使用内置**加号 （+）**图标。 它还使用默认值`UINavigationController`后退按钮行为和支持轻扫到删除表中的。
+应用程序使用 iOS 标准用户界面设计，例如添加按钮在导航栏中正在放置和使用内置**加号 （+）** 图标。 它还使用默认值`UINavigationController`后退按钮行为和支持轻扫到删除表中的。
 
  [![](case-study-tasky-images/ios-taskylist.png "它还将使用默认 UINavigationController 后退按钮行为，并支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ](case-study-tasky-images/ios-taskylist.png "它还使用默认 UINavigationController后退按钮行为和支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox)
 

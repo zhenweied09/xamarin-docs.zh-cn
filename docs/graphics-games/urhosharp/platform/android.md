@@ -1,16 +1,17 @@
 ---
 title: UrhoSharp Android 支持
-description: Android 特定的安装程序并 UrhoSharp 的功能。
+description: 本文档介绍特定于 Android 的安装程序和功能相关 UrhoSharp 的信息。 具体而言，它讨论了支持的体系结构，如何创建一个项目，配置和启动 Urho，和自定义嵌入的 Urho。
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 008afb060729b6d1badf47db7eafedbe631326df
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783776"
 ---
 # <a name="urhosharp-android-support"></a>UrhoSharp Android 支持
 

@@ -1,19 +1,20 @@
 ---
-title: 常见的模式和惯例
-description: 本文档介绍模型-视图-控制器模式、 数据源和委托模式和协议。
+title: 常见的模式和在 Xamarin.Mac 习语
+description: 本文档介绍生成 Xamarin.Mac 应用时使用的常见设计模式。 它讨论模型-视图-控制器模式、 数据源和委托模式和协议。
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/17/2016
-ms.openlocfilehash: cf499c555ddbefbdb5a7fae3ae8929a17e0d0cd7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6bba5575edf2dcbddbd354b590e03f9fed06291
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791532"
 ---
-# <a name="common-patterns-and-idioms"></a>常见的模式和惯例
+# <a name="common-patterns-and-idioms-in-xamarinmac"></a>常见的模式和在 Xamarin.Mac 习语
 
 在 Apple Api 通过 C# 公开整个某些习语和模式提出反复。 如果你有使用 Xamarin.iOS 编程经验，它们看起来可能熟悉。 文档将通常引用这些模式和习语重复，因此具有清楚地了解它们将帮助你了解你找到的文档。
 

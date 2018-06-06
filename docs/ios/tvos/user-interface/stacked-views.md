@@ -1,22 +1,20 @@
 ---
-title: 使用堆积视图
-description: 本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。
+title: 使用中 Xamarin tvOS 堆积视图
+description: 本文档介绍如何使用 tvOS 过堆积的视图中使用 Xamarin 构建的应用。 它提供堆积视图的高级概述，并讨论了自动布局，位置和大小堆积的视图、 常见用法、 与情节提要，集成和的详细信息。
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789367"
 ---
-# <a name="working-with-stacked-view"></a>使用堆积视图
-
-_本文介绍如何设计和在 Xamarin.tvOS 应用内部使用堆积视图。_
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>使用中 Xamarin tvOS 堆积视图
 
 堆栈视图控件 (`UIStackView`) 利用动态响应的内容更改和 Apple TV 设备的屏幕大小自动布局和大小类来管理水平或垂直，某些子视图的堆栈的电源。
 

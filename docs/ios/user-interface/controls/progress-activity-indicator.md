@@ -1,18 +1,20 @@
 ---
-title: 进度和活动指示器
+title: 进度和 Xamarin.iOS 中的活动指示器
+description: 本文档讨论了如何在 Xamarin.iOS 中使用进度和活动指示器。 它描述如何使用它们，以编程方式和使用情节提要。
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 58a492bed81a1d96a482c1396718da1c5e4af589
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 27ee788ec40bfd158dbc0d9926245b166e2954a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790050"
 ---
-# <a name="progress-and-activity-indicators"></a>进度和活动指示器
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>进度和 Xamarin.iOS 中的活动指示器
 
 很可能你的应用程序将需要执行长时间运行任务，例如加载或处理数据和，此延迟可能会导致延迟更新你的 UI。 在此期间你应始终使用进度指示器，可以放心用户系统正忙于执行工作。 这样，应用程序工作在其请求时，不等待其输入的用户控件，可以提供一种详细列出它们必须完全多长时间等待。
 

@@ -1,15 +1,17 @@
 ---
 title: ApiDefinitions 和 StructsAndEnums 文件
+description: 本文档描述目标 Sharpie 生成的 ApiDefinitions.cs 和 StructsAndEnums.cs 文件。 这些文件然后用于从 C# 访问 Objective C 代码。
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: cd0d32d48d96e2f4c2c109bfb79864fa77b8268f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3b991f6105c6053f473b049d195aaef63cbcdd57
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780888"
 ---
 # <a name="apidefinitions--structsandenums-files"></a>ApiDefinitions 和 StructsAndEnums 文件
 

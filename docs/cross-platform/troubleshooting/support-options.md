@@ -1,15 +1,17 @@
 ---
 title: 可用于 Xamarin 哪些支持选项？
+description: 本文档介绍了各种支持选项可用 Xamarin 开发人员。 它讨论电子邮件支持、 堆栈溢出，和其他资源。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ccd19a628d5bb50212a2a6b737689cdaf7aaad76
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a18998c6ff36a453d22b5cbe84179d70662693ba
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782302"
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>可用于 Xamarin 哪些支持选项？
 

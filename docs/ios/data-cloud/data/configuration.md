@@ -1,18 +1,20 @@
 ---
-title: 配置
+title: 在 Xamarin.iOS 中配置 SQLite
+description: 本文档介绍如何确定 Xamarin.iOS 应用程序中的 SQLite 数据库文件的位置。 这些概念是相关无论所选的数据访问机制。
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/11/2016
-ms.openlocfilehash: f4a1bc65fbba68b59196702978633eaf46bc44c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 57645c0bb947a60a3d74436b752210d1bac18124
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784376"
 ---
-# <a name="configuration"></a>配置
+# <a name="configuring-sqlite-in-xamarinios"></a>在 Xamarin.iOS 中配置 SQLite
 
 要在你将需要确定你的数据库文件的正确的文件位置的 Xamarin.iOS 应用程序中使用 SQLite。
 

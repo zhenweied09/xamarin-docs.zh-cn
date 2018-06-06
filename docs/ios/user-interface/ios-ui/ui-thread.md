@@ -1,18 +1,20 @@
 ---
-title: 使用 UI 线程
+title: 使用 Xamarin.iOS 中的 UI 线程
+description: 本文档介绍如何使用在 Xamarin.iOS 在 UI 线程。 它讨论 UI 线程执行、 提供后台线程示例中，并检查异步/等待。
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 72f161001509519fb02a652f23eaa7805a55f7ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4328b84625aff4c92d6e97029ced7dde747d4fc4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790404"
 ---
-# <a name="working-with-the-ui-thread"></a>使用 UI 线程
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>使用 Xamarin.iOS 中的 UI 线程
 
 应用程序用户界面始终是单线程的即使在多线程设备 – 没有只能有一个表示屏幕形式和对显示的内容的任何更改需要进行协调通过单个访问点。 这可以防止多个线程尝试 （例如） 在同一时间更新相同的像素。
 

@@ -1,5 +1,5 @@
 ---
-title: 按钮
+title: 在 Xamarin.iOS 的按钮
 description: UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。 本部分介绍使用按钮在 iOS 中的不同选项。
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c2c33103c005a5ed567b1c4703846f887d824ac4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bf9a36c63e0c153ed950f4c3531e99e6baf77687
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789474"
 ---
-# <a name="buttons"></a>按钮
+# <a name="buttons-in-xamarinios"></a>在 Xamarin.iOS 的按钮
 
 _UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。本部分介绍使用按钮在 iOS 中的不同选项。_
 

@@ -6,12 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 8d7ec3f2f64fdb8be903fd13bd72bcf545265a3d
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 05f1fc6158e9a20892ab4a4b49b33e4eac6bc5e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733056"
 ---
 # <a name="android-platform-specifics"></a>Android 平台的详细信息
 
@@ -26,6 +27,8 @@ _平台细节，可以使用提供功能，仅在特定平台上，而无需实�
 - 禁用[ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/)和[ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/)页上暂停的生命周期事件和继续分别使用 AppCompat 的应用程序。 有关详细信息，请参阅[禁用消失和显示页面生命周期事件](#disable_lifecycle_events)。
 - 控制是否[ `WebView` ](xref:Xamarin.Forms.WebView)可以显示混合的内容。 有关详细信息，请参阅[启用混合内容中的 WebView](#webview-mixed-content)。
 - 输入的法编辑器为设置选项的软键盘[ `Entry` ](xref:Xamarin.Forms.Entry)。 有关详细信息，请参阅[设置条目输入法编辑器选项](#entry-imeoptions)。
+- 禁用上支持的旧配色模式[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)。 有关详细信息，请参阅[禁用旧配色模式](#legacy-color-mode)。
+- 使用默认填充和 Android 的按钮的卷影值。 有关详细信息，请参阅[使用 Android 按钮](#button-padding-shadow)。
 
 <a name="soft_input_mode" />
 
@@ -308,7 +311,7 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 
 `Entry.On<Android>`方法指定此特定于平台的将仅在 Android 上运行。 [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags))方法，请在[ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)命名空间，用于设置的软键盘输入的法操作选项[ `Entry` ](xref:Xamarin.Forms.Entry)，与[ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)枚举提供以下值：
 
-- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) – 指示没有特定的操作的密钥是必需的并且基础控件将生成其自己如果它可以。
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) – 指示没有特定的操作的密钥是必需的并且基础控件将生成其自己如果它可以。 该地址可以是`Next`或`Done`。
 - [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) – 指示注意将进行任何操作键可用。
 - [`Go`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Go) – 指示操作键将执行"转到"操作，它们采用到的目标文本的用户类型。
 - [`Search`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Search) – 指示操作键执行"搜索"运算，它们使用户能够搜索文本的结果具有类型化。
@@ -325,6 +328,83 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 结果是，指定[ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)值应用于软键盘[ `Entry` ](xref:Xamarin.Forms.Entry)，这会设置输入的法编辑器选项：
 
 [![条目输入方法编辑器特定于平台的](android-images/entry-imeoptions.png "条目输入方法编辑器特定于平台的")](android-images/entry-imeoptions-large.png#lightbox "条目输入方法编辑器特定于平台的")
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>禁用旧配色模式
+
+Xamarin.Forms 视图的某些功能旧配色模式。 在此模式下，当[ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled)视图的属性设置为`false`，查看将覆盖由具有已禁用状态的默认本机颜色用户设置的颜色。 向后兼容性，这种旧颜色模式保持受支持的视图的默认行为。
+
+此特定于平台的禁用旧颜色此模式下，以便用户在视图上设置的颜色保持，即使禁用的视图。 设置使用在 XAML 中[ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty)附加到属性`false`:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                android:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
+```
+
+`VisualElement.On<Android>`方法指定此特定于平台的将仅在 Android 上运行。 [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean))方法，请在[ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)命名空间，用于控制是否禁用旧配色模式。 此外， [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement}))方法可以用于返回是否禁用旧配色模式。
+
+结果是，则可以禁用旧配色模式，以便用户在视图上设置的颜色甚至保持禁用视图时：
+
+![](android-images/legacy-color-mode-disabled.png "旧颜色模式被禁用")
+
+> [!NOTE]
+> 设置时[ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup)在视图中，完全忽略旧配色模式。 可视状态有关的详细信息，请参阅[Xamarin.Forms 视觉状态管理器](~/xamarin-forms/user-interface/visual-state-manager.md)。
+
+<a name="button-padding-shadow" />
+
+## <a name="using-android-buttons"></a>使用 Android 按钮
+
+此特定于平台的控制 Xamarin.Forms 按钮使用的默认填充和 Android 的按钮的卷影值。 设置使用在 XAML 中[ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty)和[ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty)附加到属性`boolean`值：
+
+```xaml
+<ContentPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button ...
+                android:Button.UseDefaultPadding="true"
+                android:Button.UseDefaultShadow="true" />         
+    </StackLayout>
+</ContentPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
+```
+
+`Button.On<Android>`方法指定此特定于平台的将仅在 Android 上运行。 [ `Button.SetUseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean))和[`Button.SetUseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean))方法，请在[ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)命名空间，用于控制是否 Xamarin.Forms 按钮将使用默认值填充和 Android 的按钮的卷影值。 此外， [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button}))和[ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button}))方法可以用于返回按钮是否使用默认值分别填充值和默认卷影值。
+
+结果为 Xamarin.Forms 按钮可以使用默认空白大小和 Android 的按钮的卷影值：
+
+![](android-images/button-padding-and-shadow.png "旧颜色模式被禁用")
+
+请注意，在每个上面的屏幕截图[ `Button` ](xref:Xamarin.Forms.Button)具有相同的定义，只不过右侧`Button`使用默认空白大小和 Android 的按钮的卷影值。
 
 ## <a name="summary"></a>总结
 

@@ -1,21 +1,20 @@
 ---
-title: 处理图标和图像
-description: 本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。
+title: 使用 tvOS 图标和 Xamarin 的图像
+description: 本文档介绍如何处理图标和中使用 Xamarin 生成的 tvOS 应用的映像。 它讨论了启动映像、 分层的映像、 应用程序图标，和的详细信息。
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59cbc53acf3ab7da12826b9d3cffb821631a0500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788792"
 ---
-# <a name="working-with-icons-and-images"></a>处理图标和图像
-
-_本文介绍如何设计和处理图标和 Xamarin.tvOS 应用内的图像。_
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>使用 tvOS 图标和 Xamarin 的图像
 
 创建迷人视觉图标和图像是开发你的 Apple TV 应用的沉浸式用户体验的关键部分。 本指南将介绍创建和包括 Xamarin.tvOS 应用的必要图形资产所需的步骤：
 

@@ -7,12 +7,13 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/02/2018
-ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.date: 06/02/2018
+ms.openlocfilehash: b0d9458238c4b3ac9ceeeb7d7ce4e2ca8b0b6de3
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732861"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>对 Android SDK 工具的更改
 
@@ -20,7 +21,7 @@ _对 Android SDK 如何管理已安装的 API 级别和 AVDs 的更改。_
 
 ## <a name="changes-to-android-sdk-tooling"></a>对 Android SDK 工具的更改
 
-中的 Android SDK 工具的最新版本，Google 已删除现有 AVD 和 SDK 管理器支持新的 CLI （命令行界面） 工具。 **Android**程序已被删除以及适用于 Mac 和 Xamarin for Visual Studio 的较旧版本的 Visual Studio 中的 Google GUI （图形用户界面） 管理器将不再起作用过去版本 25.2.5 的 Android SDK 工具。 例如，尝试使用**android**通过命令行程序将导致错误消息如下所示：
+中的 Android SDK 工具的最新版本，Google 已删除现有 AVD 和 SDK 管理器支持新的 CLI （命令行界面） 工具。 **Android**程序已被删除以及适用于 Mac 和较旧版本的 Visual Studio Tools for Xamarin 的 Visual Studio 中的 Google GUI （图形用户界面） 管理器将不再起作用过去版本 25.2.5 的 Android SDK 工具。 例如，尝试使用**android**通过命令行程序将导致错误消息如下所示：
 
 ```shell
 The "android" command is deprecated.
@@ -37,7 +38,7 @@ Visual Studio 和适用于 Mac 的 Visual Studio 现在提供已停止使用基�
 
 -   若要下载 Android SDK 工具、 平台和开发 Xamarin.Android 应用程序需要其他组件，使用[Xamarin Android SDK 管理器](~/android/get-started/installation/android-sdk.md)而不是旧 Google SDK 管理器。
 
--   若要创建和配置 Android 虚拟设备，使用[Xamarin Android 设备管理器](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)而不是旧 Google 模拟器管理器。
+-   若要创建和配置 Android 虚拟设备，使用[Android 设备管理器](~/android/get-started/installation/android-emulator/device-manager.md)而不是旧 Google 模拟器管理器。
 
 这些工具在功能上等效于基于 Google GUI 的管理器，它们可替代。
 
@@ -69,7 +70,7 @@ Visual Studio 和适用于 Mac 的 Visual Studio 现在提供已停止使用基�
 ## <a name="related-links"></a>相关链接
 
 - [Android SDK 安装](~/android/get-started/installation/android-sdk.md)
-- [Android 设备管理器](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+- [Android 设备管理器](~/android/get-started/installation/android-emulator/device-manager.md)
 - [了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)
 - [SDK Tools 发行说明 (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

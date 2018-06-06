@@ -1,15 +1,17 @@
 ---
 title: 绑定 Objective-C
+description: 本文档提供了各种指南描述如何创建 C# 绑定到 Objective C 代码，使开发人员能够使用 Xamarin 应用程序中的现成库的链接。
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 721036993061d08dadf8b279e13981caaa51f91f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 55c28387424dd7397280ffa255d94a950618d5ab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781002"
 ---
 # <a name="binding-objective-c"></a>绑定 Objective-C
 

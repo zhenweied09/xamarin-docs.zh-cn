@@ -1,22 +1,20 @@
 ---
-title: Siri 远程和蓝牙控制器
-description: 本文介绍如何在你 Xamarin.tvOS 应用中支持新的 Siri 远程和蓝牙游戏控制器。
+title: Siri 远程和对 tvOS 中 Xamarin 蓝牙控制器
+description: 本文介绍如何使用 Siri 远程和中使用 Xamarin 编写的 tvOS 应用蓝牙游戏控制器。
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789185"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri 远程和蓝牙控制器
-
-_本文介绍如何在你 Xamarin.tvOS 应用中支持新的 Siri 远程和蓝牙游戏控制器。_
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri 远程和对 tvOS 中 Xamarin 蓝牙控制器
 
 Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中他们点击设备的屏幕上的映像但间接从跨聊天室使用交互[Siri 远程](#The-Siri-Remote)。
 
@@ -40,9 +38,9 @@ Siri 远程具有以下功能和 tvOS 应用中的预期的用法：
 
 |功能|常规应用使用情况|游戏的应用使用情况|
 |---|---|---|
-|**触摸面**<br />轻扫，若要导航，请按以选择并按住对于上下文菜单。|**点击/轻扫**<br />UI 可获得焦点的项之间导航。<br /><br />**Click**<br />激活所选 （焦点） 项。|**点击/轻扫**<br />依赖于游戏设计和可用作通过边缘上的点击 D 填充。<br /><br />**Click**<br />执行主按钮功能。|
+|**触摸面**<br />轻扫，若要导航，请按以选择并按住对于上下文菜单。|**点击/轻扫**<br />UI 可获得焦点的项之间导航。<br /><br />**单击**<br />激活所选 （焦点） 项。|**点击/轻扫**<br />依赖于游戏设计和可用作通过边缘上的点击 D 填充。<br /><br />**单击**<br />执行主按钮功能。|
 |**菜单**<br />按下以返回到之前的屏幕或菜单。|返回到上一屏幕并从主应用程序屏幕退出到 Apple 电视主页屏幕。|暂停和继续玩游戏，将返回到上一屏幕并退出到 Apple 电视主页屏幕从主应用程序屏幕。|
-|**Siri/Search**<br />在使用 Siri 国家/地区，请按住语音控件，在所有其他国家/地区，显示搜索屏幕。|n/a|n/a|
+|**Siri/搜索**<br />在使用 Siri 国家/地区，请按住语音控件，在所有其他国家/地区，显示搜索屏幕。|n/a|n/a|
 |**播放/暂停**<br />播放和暂停媒体或提供应用程序中的辅助函数。|启动媒体播放和暂停/继续播放。|执行辅助按钮的功能或跳过简介视频 (如果存在)。|
 |**主文件夹**<br />按以返回到主页屏幕中，双击要显示运行中的应用，请按住进入睡眠状态的设备。|n/a|n/a|
 |**卷**<br />控件附加音频/视频设备卷。|n/a|n/a|
@@ -75,9 +73,6 @@ Touch 图面上的笔势，除了你的应用程序可以响应用户单击 Touc
 
 > [!IMPORTANT]
 > 你应**始终**为播放/暂停按钮在远程数据库上指定函数。 具有非功能性按钮可使查找中断向最终用户应用。 如果你没有此按钮的有效函数，将分配与主按钮 （Touch 面单击） 相同的功能。
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 

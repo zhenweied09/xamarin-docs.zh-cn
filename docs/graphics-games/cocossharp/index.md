@@ -1,18 +1,19 @@
 ---
-title: CocosSharp
-description: 此文档链接到有关使用 CocosSharp 游戏开发的各种文章。
+title: CocosSharp 二维游戏引擎
+description: 此文档链接到有关使用 CocosSharp 游戏开发的各种文章。 链接的内容描述示例应用、 绘制、 动画和的详细信息。
 ms.prod: xamarin
 ms.assetid: 5E72869D-3541-408B-AB64-D34C777AFB79
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2018
-ms.openlocfilehash: a188863cf57706e3f9dd6c8f4d2d3e60b2591e0b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 34d22b6e9d8c671e38fbadab0edafa2f57c566e7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783241"
 ---
-# <a name="cocossharp"></a>CocosSharp
+# <a name="cocossharp-2d-game-engine"></a>CocosSharp 二维游戏引擎
 
 _CocosSharp 是用于生成使用 C# 和 F # 的二维游戏的库。它是常用的 Cocos2D 引擎的.NET 端口。_
 

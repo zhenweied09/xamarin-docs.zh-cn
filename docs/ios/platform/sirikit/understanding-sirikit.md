@@ -1,17 +1,18 @@
 ---
 title: 了解 SiriKit 概念
-description: 本文介绍如何将需要在 Xamarin.iOS 应用程序中使用 SiriKit 的关键概念。
+description: 本文档介绍在 Xamarin.iOS 应用程序中使用 SiriKit 所需的关键概念。 例如，它讨论意向和意向 UI 扩展，SiriKit 权限设计更完美的体验，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 62b612f2e2725e5856a39e1d4d3fc1288282167a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788925"
 ---
 # <a name="understanding-sirikit-concepts"></a>了解 SiriKit 概念
 
@@ -140,10 +141,10 @@ Siri 知道的详细信息需要可以发送只接收方比消息，因此它将
 
 结构化的意向将包含以下信息：
 
-- **域：**消息
+- **域：** 消息
 - **意向：** sendMessage
 - **收件人：** Bobo
-- **内容：**请自动发送详细香蕉
+- **内容：** 请自动发送详细香蕉
 
 作为一组的每个域都有知道*操作*零到多个参数可能包括在意图，都可以在其中执行，并可以根据域和操作，发送到应用。
 

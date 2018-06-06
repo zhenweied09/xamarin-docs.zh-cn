@@ -7,11 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 4e3e090d826aa46d503f8c612250fd5122bc703e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733030"
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
 
@@ -388,7 +389,7 @@ namespace XamlSamples
 
 [![](data-binding-basics-images/listview3.png "绑定到的集合带有 DataTemplate 和转换器")](data-binding-basics-images/listview3-large.png#lightbox "绑定到的集合带有 DataTemplate 和转换器")
 
-`ListView`非常完善在处理中的基础可能动态发生的变更数据，但仅当执行某些步骤。 如果项的集合分配给`ItemsSource`属性`ListView`过程运行时中的更改 — 的是，如果可以将项目添加到或从集合中移除-使用`ObservableCollection`这些项的类。 `ObservableCollection` 实现`INotifyCollectionChanged`接口，和`ListView`将安装的处理程序`CollectionChanged`事件。
+`ListView`非常完善在处理动态如果你执行某些步骤，在基础数据，但仅中可能发生更改。 如果项的集合分配给`ItemsSource`属性`ListView`过程运行时中的更改 — 的是，如果可以将项目添加到或从集合中移除-使用`ObservableCollection`这些项的类。 `ObservableCollection` 实现`INotifyCollectionChanged`接口，和`ListView`将安装的处理程序`CollectionChanged`事件。
 
 如果在运行时，更改项本身的属性，则集合中的项应实现`INotifyPropertyChanged`对使用的属性值的接口和信号更改`PropertyChanged`事件。 说明了这一点在下一部分中的这一系列，[第 5 部分。从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)。
 

@@ -1,18 +1,20 @@
 ---
-title: watchOS 用户界面
+title: watchOS Xamarin 中的用户界面控件
+description: 本文档描述了可用于在 watchOS 用户界面中使用的各种控件。 它提供的标签、 按钮、 交换机、 滑块、 图像、 分隔符，图、 和的详细信息的说明。
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 73099768d876cad08571c3d0bf8340535eb1307b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b56cfed8f045d824996a004539533b27d66c8cb1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791405"
 ---
-# <a name="watchos-user-interface"></a>watchOS 用户界面
+# <a name="watchos-user-interface-controls-in-xamarin"></a>watchOS Xamarin 中的用户界面控件
 
 [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog)示例演示各种 watchOS 控件。 应用程序的情节提要如下所示 （单击来缩放）：
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 04/04/2018
 |图像|使用`myImage.SetImage("MyWatchImage")`以加载图像上监视，或`WKInterfaceDevice.CurrentDevice.AddCachedImage`缓存它们为在手表上重复使用。<br />[图像控件文档](~/ios/watchos/user-interface/image.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ImageDetailController.cs)|![](Images/image.png)|
 |Separator|使用分隔符来帮助创建具吸引力监视 Ui。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/SeparatorDetailController.cs)|![](Images/separator.png)| 
 |映射|地图图像静态显示受监视，但你可以控制其外观，包括添加 pin 的许多方面。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MapDetailController.cs)|![](Images/map.png)|
-|Movie & InlineMove|电影可以保持打开状态在他们自己或内联<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
+|电影和 InlineMove|电影可以保持打开状态在他们自己或内联<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/MovieDetailController.cs)|![](Images/movie.png)|
 |Group|使用组来帮助创建具吸引力监视 Ui。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GroupDetailController.cs)|![](Images/group.png)|
 |表|在 iOS 上的表的简化的版本。 实现`DidSelectRow`以响应用户选择 （或使用 segue）。<br />[表控件文档](~/ios/watchos/user-interface/table.md)<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/Table%20Detail%20Controller/TableDetailController.cs)|![](Images/table.png)|
 |设备|`WKInterfaceDevice.CurrentDevice` 包括属性，如`ScreenBounds`， `ScreenScale`，和`PreferredContentSizeCategory`。<br />[目录代码](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/DeviceDetailController.cs)|![](Images/device.png)|

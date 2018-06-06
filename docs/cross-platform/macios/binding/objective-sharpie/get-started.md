@@ -1,17 +1,19 @@
 ---
-title: 入门
+title: Getting Started With 目标 Sharpie
+description: 本文档提供目标 Sharpie，用于自动创建的 C# 绑定到 Objective C 代码的工具的高级概述。
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 5f61d0794e1f5a38370f0d840504720043f69590
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a0431f8952055a55be24ae5f85381a4295206a40
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781811"
 ---
-# <a name="getting-started"></a>入门
+# <a name="getting-started-with-objective-sharpie"></a>Getting Started With 目标 Sharpie
 
 > [!IMPORTANT]
 > 目标 Sharpie 是一个用于与 Objective C （以及通过扩展，C） 的高级知识的经验 Xamarin 开发人员工具。 在尝试将绑定 Objective C 库之前应具有纯色了解如何在命令行 （和熟悉的本机库的工作原理） 上生成本机库。

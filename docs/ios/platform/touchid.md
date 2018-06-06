@@ -1,19 +1,20 @@
 ---
-title: Touch ID
-description: Touch ID 是 Apple 的指纹生物识别身份验证技术。
+title: 在 Xamarin.iOS 的 touch ID
+description: 本文档介绍如何在 Xamarin.iOS 应用程序中使用 Touch ID，Apple 的指纹生物识别身份验证技术。
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d9d70c37de5cb91c4cd1fdc77e27942d851c346b
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: b5db80d280d7ad3c43a438d5caae57fbd1928896
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788575"
 ---
-# <a name="touch-id"></a>Touch ID
+# <a name="touch-id-in-xamarinios"></a>在 Xamarin.iOS 的 touch ID
 
 作为一种进行身份验证的用户-类似于密码 iOS 7 中引入了 touch ID。 但是，它只限于解锁设备、 使用应用商店、 使用 iTunes 和 iCloud keychain 仅进行身份验证。
 

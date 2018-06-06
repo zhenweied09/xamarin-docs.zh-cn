@@ -1,19 +1,20 @@
 ---
-title: 应用程序基础知识
-description: 应用程序的核心概念
+title: Xamarin.iOS 应用程序基础知识
+description: 此文档链接到各种指南描述概念认证 Xamarin.iOS 开发，例如应用程序传输安全的基础 backgrounding 事件，和线程处理。
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: d8dc1e25de527357fe6ad3ad1328a930e0e4dc70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdace50d851b2c99f9241b869f248e58d5b93377
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784492"
 ---
-# <a name="application-fundamentals"></a>应用程序基础知识
+# <a name="xamarinios-application-fundamentals"></a>Xamarin.iOS 应用程序基础知识
 
 本部分提供的指南，在某些更常见的操作任务或开发人员需要时应注意的开发 Xamarin.iOS (以前称为 MonoTouch) 应用程序的概念。
 

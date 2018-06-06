@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 加速
-description: 加速类允许您监视设备的加速传感器指示的三个维空间中的设备以加速。
+title: Xamarin.Essentials： 加速
+description: Xamarin.Essentials 中的加速类允许您监视设备的加速传感器，该值指示在三个维空间中设备的加速。
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: bb62ad438c2db906af112322174656bc62740cbc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 99529f08348254dff7577b7e82da739fabd63a14
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781860"
 ---
-# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials 加速
+# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials： 加速
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

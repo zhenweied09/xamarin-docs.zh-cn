@@ -1,20 +1,19 @@
 ---
 title: 可用的程序集
-description: Xamarin.iOS、 Xamarin.Android 和 Xamarin.Mac 中可用的程序集
+description: 本文档列出了可在 Xamarin.iOS 和 Xamarin.Android，Xamarin.Mac 中使用的程序集。 它还链接到有关标准.NET 库和可移植类库文档。
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ef1dde061ffce4082922cc2eb2af1ae9b045aedd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781902"
 ---
 # <a name="available-assemblies"></a>可用的程序集
-
-_Xamarin.iOS、 Xamarin.Android 和 Xamarin.Mac 中可用的程序集_
 
 Xamarin.iOS、 Xamarin.Android 和 Xamarin.Mac 所有随附了十余程序集。 就像 Silverlight 是桌面的.NET 程序集扩展的子集，Xamarin 平台也是几个 Silverlight 和桌面.NET 程序集的扩展的子集。
 

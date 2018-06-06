@@ -1,15 +1,16 @@
 ---
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: UI 控件比较
-description: 了解的相似之处和每个平台上的控件用之间的差异。
+description: 本文档提供了 Xamarin.Forms、 Windows 窗体和 WPF 之间的 UI 控件的比较。 它还链接到其他比较到 Xamarin.Forms 的 WPF 的文档。
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 01dead601f1d4ba50140d5cd9d280ebd5412225a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d97756952d7de724e1ef573092456e24294a74db
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782341"
 ---
 # <a name="ui-controls-comparison"></a>UI 控件比较
 

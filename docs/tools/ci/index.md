@@ -1,23 +1,21 @@
 ---
 title: 使用 Xamarin 的连续集成简介
-description: 持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。 本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。
+description: 此文档链接到描述与 Xamarin 持续集成的指南。 链接的内容提供的持续集成的概述和讨论应用 Center 生成、 TeamCity，以及 Jenkins。
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: topgenorth
 ms.author: toopge
 ms.date: 05/04/2017
-ms.openlocfilehash: 34838a1527cb3661e8e5ed51b5950f26026e9433
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1a38160b4f1536c0e0e393cb9ec3482624a40681
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793737"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>使用 Xamarin 的连续集成简介
 
-_持续集成是一种软件工程做法在其中为自动化的生成将编译并 （可选） 测试应用程序添加或更改项目的版本控制存储库中的开发人员代码时。本文将讨论持续集成的一般概念以及一些适用的选项，持续集成与 Xamarin 项目。_
-
 > [!Video https://youtube.com/embed/wXgnh2Q7Uv8]
-
 
 ##  <a name="introduction-to-continuous-integrationtoolsciintro-to-cimd"></a>[持续集成简介](~/tools/ci/intro-to-ci.md)
 
@@ -26,7 +24,6 @@ _持续集成是一种软件工程做法在其中为自动化的生成将编译�
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
 ## <a name="working-with-continuous-integration-environments"></a>使用持续集成环境
-
 
 ### <a name="using-app-center-build-with-xamarinappcenterbuildxamarin"></a>[结合使用 App Center 版本和 Xamarin](/appcenter/build/xamarin/)
 

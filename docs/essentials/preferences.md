@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 首选项
-description: 首选项类将应用程序首选项保存在键/值存储。
+title: Xamarin.Essentials： 首选项
+description: 本文档介绍 Xamarin.Essentials，将应用程序首选项保存在键/值存储中的首选项类。 它讨论如何使用类和可以存储的数据类型。
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 882ff8e0f10948f4f88303f8bcc3d45b3cecf5fd
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: e453c04a953e60be2508670723d175bde3dc7c42
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782836"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials 首选项
+# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials： 首选项
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

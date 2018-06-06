@@ -1,18 +1,19 @@
 ---
-title: 可访问性
-description: 确保你的应用程序为广泛的受众可能的
+title: 中的 Xamarin 应用的辅助功能
+description: 本文档提供有关创建可访问的应用的各种提示。 例如，它包括有关大型字体、 高对比度、 自我描述的接口，和的详细信息的建议。
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 48e9d760362e47d7046528c819959bfb14f71f91
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 97cd3655ac47a017d9590e1890b93d74f10a9c34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780299"
 ---
-# <a name="accessibility"></a>可访问性
+# <a name="accessibility-in-xamarin-apps"></a>中的 Xamarin 应用的辅助功能
 
 _确保你的应用程序为广泛的受众可能的_
 

@@ -6,12 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732978"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>调试的仿真程序上的 Android 磨损
 
@@ -23,7 +24,7 @@ _这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应�
 
 ## <a name="configure-the-google-android-emulator"></a>配置 Google Android 仿真程序
 
-若要在模拟器上运行你磨损的应用程序，必须安装 Android SDK Android 仿真程序，并将其配置为 Android 损耗。 有关整体的 Android SDK 仿真程序安装和配置信息，请参阅[Google Android 仿真程序](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
+若要在模拟器上运行你磨损的应用程序，必须安装 Android SDK Android 仿真程序，并将其配置为 Android 损耗。 有关整体的 Android SDK 仿真程序安装和配置信息，请参阅[Android 仿真程序安装程序](~/android/get-started/installation/android-emulator/index.md)。
 
 当创建磨损虚拟设备时，选择 Android 磨损设备配置文件 (如**Android 磨损正方形**)。 为提高性能，使用磨损**x86** CPU/ABI 在此示例中所示：
 

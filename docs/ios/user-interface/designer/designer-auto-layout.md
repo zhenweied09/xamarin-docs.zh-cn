@@ -1,21 +1,20 @@
 ---
 title: 与 iOS 的 Xamarin 设计器的自动数据布局
-description: 本指南介绍 iOS 自动布局和新约束工作流 iOS Xamarin 设计器中可用。
+description: 本指南介绍 iOS 自动布局，并描述如何使用适用于 iOS 的 Xamarin 设计器来创建和编辑布局使用约束。 它还介绍了在代码中，对进行动画处理约束更改，以及更多的修改约束。
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790196"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>与 iOS 的 Xamarin 设计器的自动数据布局
-
-_本指南介绍 iOS 自动布局和新约束工作流 iOS Xamarin 设计器中可用。_
 
 响应灵敏的设计方法 （也称为"自适应布局"） 的自动数据布局。 与过渡布局系统，其中每个元素的位置是硬编码到屏幕上的点，不同的是自动布局即将*关系*-相对于设计图面上的其他元素的元素的位置。 自动布局的核心是约束或在屏幕上的其他元素的上下文中定义的元素的位置或一组元素的规则的概念。 由于元素不会关联到特定位置在屏幕上，约束将帮助创建看起来上不同屏幕大小和设备的方向很好的自适应布局。
 
@@ -61,7 +60,7 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
   ![约束模式切换](designer-auto-layout-images/constraints.png)
 
-- **"更新约束"按钮：**务必要注意的更改，具体取决于您处于编辑模式的约束。
+- **"更新约束"按钮：** 务必要注意的更改，具体取决于您处于编辑模式的约束。
   - 在约束编辑模式下此按钮调整要匹配的元素范围的约束。
   - 在编辑模式的框架中此按钮调整要匹配的约束定义的位置的元素帧。
 

@@ -1,5 +1,5 @@
 ---
-title: 对 StoreKit 更改
+title: 到 StoreKit iOS 6 中的更改
 description: iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes （和应用商店/iBookstore） 功能从您的应用程序和一个新，在应用中的产品购买 Apple 将可下载文件的选项。 本文档说明如何实现使用 Xamarin.iOS 这些功能。
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ff717d1e4ea7da947d5534f1ce790b58d84fdfd4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787687"
 ---
-# <a name="changes-to-storekit"></a>对 StoreKit 更改
+# <a name="changes-to-storekit-in-ios-6"></a>到 StoreKit iOS 6 中的更改
 
 _iOS 6 到应用商店工具包 API 上引入了两个更改： 显示 iTunes （和应用商店/iBookstore） 功能从您的应用程序和一个新，在应用中的产品购买 Apple 将可下载文件的选项。本文档说明如何实现使用 Xamarin.iOS 这些功能。_
 
@@ -142,8 +143,8 @@ Apple 提供一个动态搜索 API 来查询应用商店和 iTunes iBookstore �
 
 下面是一些可能的恶意活动：
 
--   **iBooks app*- [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **圆点和 Kangaroo iBook*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;实体 = 电子书&amp;国家/地区 = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+-   **iBooks 应用*- [http://itunes.apple.com/search?term=ibooks&amp; 实体 = 软件&amp;国家/地区 = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **圆点和 Kangaroo iBook*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; 实体 = 电子书&amp;国家/地区 = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### <a name="enterprise-partner-feed"></a>企业合作伙伴源

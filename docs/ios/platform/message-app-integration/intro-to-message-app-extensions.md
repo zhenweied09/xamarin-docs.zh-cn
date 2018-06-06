@@ -1,5 +1,5 @@
 ---
-title: 消息应用扩展基础知识
+title: 在 Xamarin.iOS 的消息应用扩展基础知识
 description: 本文演示如何在 Xamarin.iOS 解决方案与邮件应用集成并向用户呈现的新功能包括消息应用扩展。
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 73ca0974a42bf661a89327148b68341114297084
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: bc06d73543b9e0bd1e8715fc722b0a95af7d9f07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787905"
 ---
-# <a name="message-app-extension-basics"></a>消息应用扩展基础知识
+# <a name="message-app-extension-basics-in-xamarinios"></a>在 Xamarin.iOS 的消息应用扩展基础知识
 
 _本文演示如何在 Xamarin.iOS 解决方案与邮件应用集成并向用户呈现的新功能包括消息应用扩展。_
 

@@ -1,19 +1,20 @@
 ---
-title: 疑难解答
-description: 本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示。
+title: Xamarin.iOS 9-故障排除
+description: 本文提供使用在 Xamarin.iOS 的 iOS 9 的各种故障排除提示。 提示涵盖 XML 分析、 模拟器、 布局约束、 网络问题和许多其他主题。
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787658"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9-故障排除
 
 _本文提供使用 iOS 9 Xamarin.iOS 应用程序中的多个故障排除提示。_
 
@@ -190,8 +191,6 @@ iOS 9 现在强制执行的启动屏幕要求，以便不再可以重用同一�
 使用 Xamarin.iOS 是可以进行内部入托管代码公开的内容，但其将中断 iOS 设计时调用的构造函数的视图或视图控制器初始化。
 
 一般情况下你应不初始化任何内容可返回 Objective C 代码从调用构造函数因为不能确保调用时。 这还意味着没有良好的起点 (其他.ctor) 或重写 （如 Objective C 不具有任何事件） 的调用其中应进行这种初始化。
-
-
 
 ## <a name="related-links"></a>相关链接
 

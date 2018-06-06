@@ -1,5 +1,5 @@
 ---
-title: 主动建议简介
+title: 主动建议在 Xamarin.iOS 简介
 description: 这篇文章演示如何在驱动器参与到 Xamarin.iOS 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b06dbf0e8e108616adb4f77910267aaa1ac71f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f736e9dda00546ddef7cf03457813c7e3d10882b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788009"
 ---
-# <a name="introduction-to-proactive-suggestions"></a>主动建议简介
+# <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>主动建议在 Xamarin.iOS 简介
 
 _这篇文章演示如何在驱动器参与到 Xamarin.iOS 应用程序中使用主动的建议，通过允许系统以主动向用户自动地提供有用的信息。_
 
@@ -54,7 +55,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 
 ## <a name="contextual-siri-reminders"></a>上下文 Siri 提醒
 
-允许使用 Siri 来快速使应用程序的提醒才能查看的内容在以后的日子当前正在应用中查看用户。 例如，如果它们已在应用中查看餐馆评论，它们无法调用 Siri，说*"再提醒我有关此当我回到家。"* 在应用程序也使用 Siri 会生成提醒，其中链接添加到评审。
+允许使用 Siri 来快速使应用程序的提醒才能查看的内容在以后的日子当前正在应用中查看用户。 例如，如果它们已在应用中查看餐馆评论，它们无法调用 Siri，说 *"再提醒我有关此当我回到家。"* 在应用程序也使用 Siri 会生成提醒，其中链接添加到评审。
 
 ## <a name="contact-based-suggestions"></a>基于联系人的建议
 
@@ -64,7 +65,7 @@ iOS 9 添加到功能来丰富用户在 Spotlight 和 Safari 搜索结果中看�
 
 如果持续一段时间共享应用程序使用[MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API，iOS 10 将显示为应用程序切换器中的一个选项有时时用户很可能需要持续一段时间。 应用程序必须还注册为持续一段时间共享应用程序通过指定`MKDirectionsModeRideShare`为[MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)中的键其`Info.plist`文件。
 
-如果应用程序仅支持共享持续一段时间，以将开始系统建议*"Get 到持续一段时间..."*，如果支持其他类型的路由方向 （如 Walking 或自行车），则系统将使用*"获取路线到..."*
+如果应用程序仅支持共享持续一段时间，以将开始系统建议 *"Get 到持续一段时间..."*，如果支持其他类型的路由方向 （如 Walking 或自行车），则系统将使用 *"获取路线到..."*
 
 > [!IMPORTANT]
 > [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/)应用将会接收的对象可能不包括经度和纬度的信息，并且需要进行地理编码。
@@ -203,10 +204,10 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 1. 在应用程序，他们希望以满足在友元中找到一家餐厅。
 2. 当用户移动应用中使用多任务应用程序切换器离开时，系统将自动显示建议 （位于屏幕底部） 以获取到餐馆使用其收藏导航布局应用程序的方向。
-3. 如果用户将切换到邮件应用并开始键入*"让我们在符合"*，QuickType 键盘将自动建议在餐馆的地址中粘贴。
+3. 如果用户将切换到邮件应用并开始键入 *"让我们在符合"*，QuickType 键盘将自动建议在餐馆的地址中粘贴。
 4. 如果用户切换到地图应用时，餐馆的地址自动建议作为目标。
 5. 这甚至适用于第三方应用程序 (该支持`NSUserActivity`)，因此用户可以切换到持续一段时间共享应用程序和餐馆的地址自动建议作为那里的目标以及。
-6. 它还提供了上下文的 Siri，以便用户可以在餐馆应用内调用 Siri 并询问*"获取路线..."* ，并使用 Siri 将提供到餐馆查看用户的说明。
+6. 它还提供了上下文的 Siri，以便用户可以在餐馆应用内调用 Siri 并询问 *"获取路线..."* ，并使用 Siri 将提供到餐馆查看用户的说明。
 
 所有上述功能共同具有相同的一件事情，它们都指示建议最初来源于何处。 对于上述示例中，它是虚构的餐馆查看应用程序。
 
@@ -479,7 +480,7 @@ Schema.org 可以提供相同类型的基于位置到网站的交互。 Apple �
 
 Safari 将提取符合以下架构属性的任何 web 页面上的任何内容：
 
-- **PostalAddress**
+- **邮政地址**
 - **GeoCoordinates**
 - 一个电话属性中。
 

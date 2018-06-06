@@ -1,23 +1,22 @@
 ---
-title: 实现 SiriKit
-description: 本文介绍如何在 Xamarin.iOS 应用程序中实现 SiriKit 支持所需的步骤。
+title: 在 Xamarin.iOS 中实现 SiriKit
+description: 本文档介绍在 Xamarin.iOS 应用程序中实现 SiriKit 支持所需的步骤。 它讨论意向扩展和意向 UI 扩展。
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f0e5e05828305bd3656d70105b6e2ad06f9fdc81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788844"
 ---
-# <a name="implementing-sirikit"></a>实现 SiriKit
+# <a name="implementing-sirikit-in-xamarinios"></a>在 Xamarin.iOS 中实现 SiriKit
 
 _本文介绍如何在 Xamarin.iOS 应用程序中实现 SiriKit 支持所需的步骤。_
-
-
 
 新 SiriKit 到 iOS 10，允许 Xamarin.iOS 应用程序提供的 iOS 设备上使用 Siri 和映射的应用程序向用户访问服务。 本文介绍如何通过添加所需的意向扩展名、 意向 UI 扩展和词汇在 Xamarin.iOS 应用程序中实现 SiriKit 支持所需的步骤。
 

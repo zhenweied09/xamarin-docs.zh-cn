@@ -1,20 +1,19 @@
 ---
-title: 使用 UrhoSharp
-description: UrhoSharp 引擎概述
+title: 使用 UrhoSharp 生成 3D 游戏
+description: 本文档提供 UrhoSharp，的概述描述场景、 组件、 形状、 摄像头、 操作、 用户输入、 声音，和的详细信息。
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 8eed81817620b3f68510ab2e043c3aeaafb6e78a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: eb1e93e47528e801da08f402f452e0e8ce5014d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784034"
 ---
-# <a name="using-urhosharp"></a>使用 UrhoSharp
-
-_UrhoSharp 引擎概述_
+# <a name="using-urhosharp-to-build-a-3d-game"></a>使用 UrhoSharp 生成 3D 游戏
 
 在编写你的第一个游戏之前，你想要获取掌握基础知识： 如何设置场景、 如何加载的资源 （包含图片） 以及如何创建简单的交互，为你的游戏。
 

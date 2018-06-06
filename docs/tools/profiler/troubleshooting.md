@@ -1,20 +1,19 @@
 ---
 title: Xamarin 探查器故障排除
-description: 故障排除 Xamarin 探查器
+description: 本文档提供与 Xamarin 探查器相关的疑难解答信息。 它介绍与日志记录和诊断，IDE 中，以及其他主题相关的问题。
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793845"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin 探查器故障排除
-
-_故障排除 Xamarin 探查器_
 
 ## <a name="logging-and-diagnostics"></a>日志记录和诊断
 
@@ -25,6 +24,7 @@ Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括
 - **.Mlpd**正在生成分析会话 （见下文）。
 
 ### <a name="getting-log-outputs"></a>获取日志输出
+
 在 Mac 上日志会保存到`~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`。
 
 在 Windows 上这些将保存到`%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log`请包括最新的日志，每当您提交问题。
@@ -49,7 +49,6 @@ Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括
 
 ![](troubleshooting-images/image17-vs.png "在 Visual Studio 中保存.mlpd 文件")
 
-
 务必请注意， **.mlpd**包含大量的信息，并且将大文件大小。
 
 ## <a name="troubleshooting"></a>疑难解答
@@ -70,7 +69,6 @@ Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括
 - 确保你在正确和身份验证。
 - [Visual Studio]你必须使用[Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/)和具有有效的企业许可证。
 
-
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>在尝试启动探查器时遇到错误
 
 如果你运行到此错误框中，在 Visual Studio 中使用探查器时：
@@ -83,14 +81,11 @@ Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括
 
 如果你有你想要专门观看的线程，理想的做法是以名称在非常从其创建，以便获取线程`ThreadName`而不是`0x0`。 有关作为 UI 中设置线程名称的示例，你可以使用下面的代码：
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## <a name="related-links"></a>相关链接
 

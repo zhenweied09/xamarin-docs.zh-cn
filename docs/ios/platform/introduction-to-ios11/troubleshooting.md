@@ -1,21 +1,20 @@
 ---
-title: 疑难解答
-description: 本文提供使用 iOS 11 Xamarin.iOS 应用程序中的多个故障排除提示。
+title: IOS 11 疑难解答应用它使用 Xamarin.iOS 构建
+description: 本指南介绍了可用于故障排除时开发 Xamarin.iOS 应用程序的资源。 它讨论 bug 报告，发行说明，Xamarin 版本博客和支持选项。
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 181f0a1c66d05e0adf2b682f2df971f5d7d67dfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787541"
 ---
-# <a name="troubleshooting"></a>疑难解答
-
-_本文提供使用 iOS 11 Xamarin.iOS 应用程序中的多个故障排除提示。_
+# <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>IOS 11 疑难解答应用它使用 Xamarin.iOS 构建
 
 以下各节列出时 iOS 11 使用 Xamarin.iOS 和可用的地方，可能发生的一些已知的问题这些问题的解决方案：
 

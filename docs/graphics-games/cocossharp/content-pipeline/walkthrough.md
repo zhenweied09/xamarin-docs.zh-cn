@@ -1,20 +1,21 @@
 ---
-title: 使用 MonoGame PipelineTool
-description: MonoGame 管道工具用于创建和管理 MonoGame 内容项目。 内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。
+title: 使用 MonoGame 管道工具
+description: MonoGame 管道工具用于创建和管理 MonoGame 内容项目。 内容的项目中的文件处理 MonoGame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783282"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>使用 MonoGame 管道工具
 
-_MonoGame 管道工具用于创建和管理 MonoGame 内容项目。内容的项目中的文件处理 Monogame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。_
+_MonoGame 管道工具用于创建和管理 MonoGame 内容项目。内容的项目中的文件处理 MonoGame 管道工具和输出为.xnb 文件以供在 CocosSharp 和 MonoGame 应用程序的使用。_
 
 MonoGame 管道工具提供用于将转换到的内容文件的简单易用的环境 **.xnb**在 CocosSharp 和 MonoGame 应用程序中使用的文件。 有关内容的管道和它们为何有用游戏开发中的信息，请参阅[对内容的管道本简介](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
@@ -238,7 +239,7 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 
 本演练演示了如何使用 MonoGame 管道工具来创建从输入的.png 文件.xnb 文件，以及如何从新创建.sprintefont 文件创建新的.xnb 文件。 此外讨论了如何构建 CocosSharp 项目以使用.xnb 文件以及如何加载这些文件在运行时。
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [MonoGame 下载](http://www.monogame.net/downloads/)
 - [MonoGame 管道文档](http://www.monogame.net/documentation/?page=Pipeline)

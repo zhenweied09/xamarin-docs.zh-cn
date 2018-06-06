@@ -1,21 +1,20 @@
 ---
-title: 应用商店图标
-description: 此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，要用作应用程序存储区图标。
+title: 在 Xamarin.iOS 应用程序商店图标
+description: 本文档介绍如何使用资产目录管理 Xamarin.iOS 应用程序的应用商店图标。 以前，应用商店图标进行管理 iTunes Connect 管理。
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/26/2017
-ms.openlocfilehash: f8d993ccb23817e237b9cef8074b881f3ea4b3a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783605"
 ---
-# <a name="app-store-icon"></a>应用商店图标
-
-_此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，要用作应用程序存储区图标。_
+# <a name="app-store-icons-in-xamarinios"></a>在 Xamarin.iOS 应用程序商店图标
 
 在 Xcode 9 之前通过 iTunes Connect 添加了所有的应用商店图标。 但是，这不再是这种情况。 应用商店图标现在必须包括作为项目捆绑包的一部分并资产目录中添加的。 将通过 Apple 拒绝应用程序不包含应用商店图标。
 

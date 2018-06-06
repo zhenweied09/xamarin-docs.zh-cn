@@ -1,18 +1,20 @@
 ---
-title: 编辑
+title: 编辑使用 Xamarin.iOS 的表
+description: 本文档介绍如何编辑 Xamarin.iOS 中的表。 它讨论轻扫可删除、 编辑模式，以及行插入。
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789985"
 ---
-# <a name="editing"></a>编辑
+# <a name="editing-tables-with-xamarinios"></a>编辑使用 Xamarin.iOS 的表
 
 通过重写中的方法启用表的编辑功能`UITableViewSource`子类。 最简单的编辑行为是可以使用单个方法重写实现轻扫删除手势。
 可以通过编辑模式中的表实现更复杂的编辑 （包括移动行）。
@@ -129,21 +131,21 @@ table.SetEditing (false, true);
 
 ## <a name="row-insertion-editing-style"></a>行插入编辑样式
 
-从表中的行插入是一种常见用户界面 – 标准 iOS 应用中的主要示例是**编辑联系人**屏幕。 此屏幕截图中显示的行插入功能的工作原理 – 在编辑模式下没有附加行 （单击） 时将其他行插入到数据。 编辑完成时，临时**（添加新）**该行将被移除。
+从表中的行插入是一种常见用户界面 – 标准 iOS 应用中的主要示例是**编辑联系人**屏幕。 此屏幕截图中显示的行插入功能的工作原理 – 在编辑模式下没有附加行 （单击） 时将其他行插入到数据。 编辑完成时，临时 **（添加新）** 该行将被移除。
 
  [![](editing-images/image12.png "编辑完成后，新添加的临时删除行")](editing-images/image12.png#lightbox)
 
 上有多种不同方法`UITableViewSource`影响表的编辑模式行为。 这些方法具有在示例代码中实现了，如下所示：
 
 -   **EditingStyleForRow** – 返回`UITableViewCellEditingStyle.Delete`包含数据，并返回的行`UITableViewCellEditingStyle.Insert`的最后一行 （这将添加专门用于充当插入按钮）。 
--   **CustomizeMoveTarget** – 虽然用户要移动的单元格此可选方法的返回值可以重写其选择的位置。 这意味着可以防止删除中某些位置 – 例如防止任何行后移动此示例的单元格**（添加新）**行。 
+-   **CustomizeMoveTarget** – 虽然用户要移动的单元格此可选方法的返回值可以重写其选择的位置。 这意味着可以防止删除中某些位置 – 例如防止任何行后移动此示例的单元格 **（添加新）** 行。 
 -   **CanMoveRow** – 返回为真启用移动句柄或 false 将禁止移动。 在示例中，最后一行有隐藏因为它是到服务器作为插入按钮仅移动句柄。 
 
 
 我们还添加了两个自定义方法以添加 'insert' 行，然后删除它再次在不再需要时。 从调用**编辑**和**完成**按钮：
 
--   **WillBeginTableEditing** – 当**编辑**按钮接触它调用`SetEditing`表置于编辑模式。 这会触发其中我们显示 WillBeginTableEditing 方法**（添加新）**要充当 '插入 button' 的表结尾处添加一行。 
--   **DidFinishTableEditing** – 接触完成按钮时`SetEditing`会再次调用关闭编辑模式。 示例代码用于删除**（添加新）**不再需要从表在编辑时的行。 
+-   **WillBeginTableEditing** – 当**编辑**按钮接触它调用`SetEditing`表置于编辑模式。 这会触发其中我们显示 WillBeginTableEditing 方法 **（添加新）** 要充当 '插入 button' 的表结尾处添加一行。 
+-   **DidFinishTableEditing** – 接触完成按钮时`SetEditing`会再次调用关闭编辑模式。 示例代码用于删除 **（添加新）** 不再需要从表在编辑时的行。 
 
 
 示例文件中实现这些方法重写**TableEditModeAdd/Code/TableSource.cs**:
@@ -173,7 +175,7 @@ public override bool CanMoveRow (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-这两个自定义方法用于添加和删除**（添加新）**启用或禁用行在表的编辑模式时：
+这两个自定义方法用于添加和删除 **（添加新）** 启用或禁用行在表的编辑模式时：
 
 ```csharp
 public void WillBeginTableEditing (UITableView tableView)

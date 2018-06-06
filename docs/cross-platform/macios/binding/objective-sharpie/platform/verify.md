@@ -1,18 +1,19 @@
 ---
-title: 验证属性
+title: 目标 Sharpie 验证属性
+description: 本文档介绍了生成的目标 Sharpie [验证] 属性。 突出显示了 [验证] 属性，其中它们应手动验证目标 Sharpie 输出的开发人员。
 ms.prod: xamarin
 ms.assetid: 107FBCEA-266B-4295-B7AA-40A881B82B7B
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: b9409b4351ed9233db0edf8e2dd9f516b9727fe0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 96e5bafc14c2d3aba03ccc137151a83ee8afeef9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780706"
 ---
-# <a name="verify-attributes"></a>验证属性
-
+# <a name="objective-sharpie-verify-attributes"></a>目标 Sharpie 验证属性
 
 你通常会发现，将使用批注绑定生成的目标 Sharpie`[Verify]`属性。 这些属性指示你应_验证_目标 Sharpie 通过比较与原始 C/Objective C 声明 （这将提供一条注释，该绑定的声明的上方） 绑定未正确操作。
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/09/2018
 
 提供给特性的提示参数可以是交叉引用与下面的文档。 对于任何生成的文档`[Verify]`绑定完成后，将在控制台上也提供属性。
 
-|验证提示|描述|
+|`[Verify]` 提示|描述|
 |---|---|
 |InferredFromPreceedingTypedef|此声明的名称已由从通用约定推断立即前面`typedef`原始本机源代码中。 验证推断的名称正确，因为此约定是不明确。|
 |ConstantsInterfaceAssociation|没有可靠一点方法来确定哪个 Objective C 接口与外部变量声明可能是关联。 这些实例绑定为`[Field]`到附近-通过具体接口以生成更直观的 API，可能消除常量部分接口中的属性完全接口。|

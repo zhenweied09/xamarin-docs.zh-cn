@@ -1,25 +1,27 @@
 ---
-title: 本机类型
+title: 用于 iOS 和 macOS 的本机类型
+description: 本文档介绍如何 Xamarin 的统一 API 将.NET 类型映射到 32 位和 64 位本机类型，根据需要根据编译目标体系结构。
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 4d11d053cf4471a98cbba0f7c97be3bef39276fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fc2b91a9265fcf09e4f58d5de27a1fdef9350b2d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781099"
 ---
-# <a name="native-types"></a>本机类型
+# <a name="native-types-for-ios-and-macos"></a>用于 iOS 和 macOS 的本机类型
 
-在差异的核心，Mac 和 iOS Api 使用的特定于体系结构的数据类型都始终在 32 位平台上和 64 位平台上的 64 位的 32 位。
+Mac 和 iOS Api 使用的都是始终在 32 位平台上和 64 位平台上的 64 位的 32 位的特定于体系结构的数据类型。
 
 例如，Objective C 将映射`NSInteger`数据类型设置为`int32_t`在 32 位系统上并且为`int64_t`在 64 位系统上。
 
-若要匹配此行为，请在我们统一的 API，我们正在替换以前使用的`int`(.NET 中其定义为始终`System.Int32`) 到新的数据类型： `System.nint`。  你可以将"n"是有意义"本机"，因此，本机整数键入的平台。
+若要匹配此行为，请在我们统一的 API，我们正在替换以前使用的`int`(.NET 中其定义为始终`System.Int32`) 到新的数据类型： `System.nint`。 你可以将"n"是有意义"本机"，因此，本机整数键入的平台。
 
-使用这些新的数据类型相同的源代码编译为 32 位、 32 位和 64 位或 64 位，具体取决于你编译标志。
+使用这些新的数据类型，是为 32 位和 64 位体系结构，具体取决于你编译标志编译相同的源代码。
 
 ## <a name="new-data-types"></a>新数据类型
 
@@ -35,7 +37,7 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="implicit-and-explicit-conversions"></a>隐式转换和显式转换
 
-新的数据类型的设计旨在使单个 C# 源文件自然地使用 32 位或 64 位存储，具体取决于主机 platorm 和编译设置。
+新的数据类型的设计旨在使单个 C# 源文件自然地使用 32 位或 64 位存储，具体取决于主机平台和编译设置。
 
 这需要我们设计一组的隐式和显式转换与特定于平台的数据类型到.NET 整型和浮点数据类型。
 

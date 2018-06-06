@@ -6,12 +6,13 @@ ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/02/2018
-ms.openlocfilehash: d1fc8a1c511e86615108d1df841c28256f23191f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/30/2018
+ms.openlocfilehash: df359fae545079c7ac1d7106ec86e9297f183f90
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732770"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>应安装的 Android SDK 包？
 
@@ -42,11 +43,8 @@ SDK 管理器中的工具文件夹中安装的最新的工具：
 需要安装适用于 API 15 和 23 的 SDK 平台。 请注意，不需要安装在最小值和目标之间的 API 级别 （即使是反向移植到这两种 API 级别）。
 
 ## <a name="system-images"></a>系统映像
-这些只是所需如果想要使用 Google 现成可用 Android 仿真程序。 
 
-- [如何配置默认仿真程序](~/android/get-started/installation/android-emulator/index.md)
-
-- [如何加快默认仿真程序](~/android/get-started/installation/android-emulator/index.md)
+这些只是所需如果想要使用 Google 现成可用 Android 仿真程序。 有关详细信息，请参阅[Android 仿真程序安装程序](~/android/get-started/installation/android-emulator/index.md)
 
 ## <a name="extras"></a>附加程序
 Android SDK 其他功能通常不是必需的;但十分有用，因为它们可能需要根据您的使用案例需要注意的它们。

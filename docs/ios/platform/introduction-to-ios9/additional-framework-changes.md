@@ -1,16 +1,17 @@
 ---
 title: 其他 iOS 9 框架更改
-description: 这篇文章介绍了其他的次要更改或增强现有框架 ios 9 功能。
+description: 本文档介绍 iOS 9 中引入的其他 framework 更改。 它讨论 AVFoundation、 AVKit 和 CloudKit。
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ae286ddbc61f48cbdd257dc453a2d9680bba703
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 15c9364cf3bdcb8c797882cc9ac76219959de439
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787703"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>其他 iOS 9 框架更改
 
@@ -20,9 +21,9 @@ _这篇文章介绍了其他的次要更改或增强现有框架 ios 9 功能。
 
 除了对 iOS 的主要更改，Apple 已在 iOS 9 中进行修改和对多个现有框架的改进。
 
-## <a name="av-foundation-framework-additions"></a>AV Foundation Framework 添加件
+## <a name="avfoundation-framework-additions"></a>AVFoundation Framework 添加件
 
-在 AV Foundation framework 中， [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/)类现在允许你通过以指定一种声音除了语言标识符。
+在 AVFoundation framework 中， [AVSpeechSynthesisVoice](https://developer.xamarin.com/api/type/AVFoundation.AVSpeechSynthesisVoice/)类现在允许你通过以指定一种声音除了语言标识符。
 
 例如，以下代码将获取所有可用的声音的列表：
 
@@ -66,7 +67,7 @@ var voices = AVSpeechSynthesisVoice.GetSpeechVoices ();
 - [CloudKit 目录： An introduction to CloudKit （Cocoa 和 JavaScript） 简介](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599)-使用 CloudKit 和 CloudKit JS Apple 的示例应用程序。
 
 > [!IMPORTANT]
-> Apple[提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)以帮助开发人员正确地处理欧盟的常规数据保护法规 (GDPR)。
+> Apple [提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)，用于帮助开发人员正确处理欧盟一般数据保护条例 (GDPR)。
 
 ## <a name="foundation-framework-additions"></a>Foundation Framework 添加件
 

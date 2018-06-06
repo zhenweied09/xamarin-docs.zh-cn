@@ -1,18 +1,20 @@
 ---
-title: 应用内购买基础知识和配置
+title: 应用内购买基础知识和配置 Xamarin.iOS 中
+description: 本文档介绍中 Xamarin.iOS，有关规则、 配置和 iTunes Connect 中讨论的相关信息的应用内购买。
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c08d27ce2f5d41b7de1d08ea73232e92f9fa8144
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ded160ad4b31346c400e63d739a3dc21f6304d3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787238"
 ---
-# <a name="in-app-purchase-basics-and-configuration"></a>应用内购买基础知识和配置
+# <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>应用内购买基础知识和配置 Xamarin.iOS 中
 
 实现应用内购买要求应用程序利用 StoreKit API 在设备上。 StoreKit 管理与 Apple 的 iTunes 服务器以获取产品信息并执行事务的所有通信。 必须配置预配配置文件应用内购买并且必须在 iTunes Connect 中输入产品信息。
 
@@ -83,7 +85,7 @@ Apple 必须批准每个产品，然后它就会在销售 – 名称、 描述�
 您可以使用你喜欢的任意字符串你**捆绑标识符**（只要它是在你的帐户中唯一的），但是 Apple 建议遵循反向 DNS 格式，而不是使用任何任意字符串。 本文附带的示例应用程序用于 com.xamarin.storekit.testing 捆绑标识符，但同样有效，以使用如 my_store_example 标识符 （即使 Apple 不建议这样做）。
 
 > [!IMPORTANT]
-> Apple 还允许通配符格式星号要添加到末尾**捆绑标识符**，以便单个应用程序 ID 可以使用多个应用程序，但是_-通配符应用 Id 不能用于 AppPurchase_. 通配符捆绑标识符可能 com.xamarin.* 示例
+> Apple 还允许通配符格式星号要添加到末尾**捆绑标识符**，以便单个应用程序 ID 可以使用多个应用程序，但是 _-通配符应用 Id 不能用于 AppPurchase_. 通配符捆绑标识符可能 com.xamarin.* 示例
 
 #### <a name="enabling-app-services"></a>启用应用程序服务
 

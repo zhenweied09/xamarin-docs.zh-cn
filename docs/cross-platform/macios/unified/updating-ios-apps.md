@@ -1,16 +1,17 @@
 ---
 title: 更新现有 iOS 应用程序
-description: 请按照下列步骤以更新现有的 Xamarin.iOS 应用程序，以使用统一的 API。
+description: 本文档描述必须遵守才能更新 Xamarin.iOS 应用程序从经典 API 到统一 API 的步骤。
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 74534333bb0c4ae54dc6816312a5531f29a80ce5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 4d506232903d4a94ac20a1fb9f93a39884d9099c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781873"
 ---
 # <a name="updating-existing-ios-apps"></a>更新现有 iOS 应用程序
 

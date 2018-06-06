@@ -1,15 +1,16 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: WPF 与。Xamarin.Forms 应用生命周期
-description: 了解应用程序启动过程中，并处理背景状态
+description: 本文档会比较的相似之处和 Xamarin.Forms 和 WPF 应用程序的应用程序生命周期之间的差异。 它还涉及可视化树、 图形、 资源和样式。
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: b4f9aebbbcab48290d37c5732c69267897238272
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: abb7773873fa181085464b5985cc8233715cc4be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781577"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 与。Xamarin.Forms 应用生命周期
 

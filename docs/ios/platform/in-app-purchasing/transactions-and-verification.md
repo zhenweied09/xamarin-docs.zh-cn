@@ -1,18 +1,20 @@
 ---
-title: 事务和验证
+title: 事务和在 Xamarin.iOS 的验证
+description: 本文档介绍如何在 Xamarin.iOS 应用程序中的过去购买还原允许。 它还介绍了如何保护购买和服务器发出的产品。
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786920"
 ---
-# <a name="transactions-and-verification"></a>事务和验证
+# <a name="transactions-and-verification-in-xamarinios"></a>事务和在 Xamarin.iOS 的验证
 
 ## <a name="restoring-past-transactions"></a>还原过去的事务
 

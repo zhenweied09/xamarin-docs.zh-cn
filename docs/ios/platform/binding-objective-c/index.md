@@ -1,6 +1,6 @@
 ---
 title: 绑定 iOS 库
-description: 如何使 iOS 本机库 （和 CocoaPods） 中的 Xamarin 应用可访问。
+description: 本文档介绍如何创建 C# 绑定到 Objective C 代码，因而可能在 Xamarin.iOS 应用程序中使用本机库和 CocoaPods。
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 268900c7ab7b317b0b20f4c1ead2360fd6f9bbf0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b054595568a34616a01f2c3f3c7d85f968c3f1fa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787159"
 ---
 # <a name="binding-ios-libraries"></a>绑定 iOS 库
-
-_如何使 iOS 本机库 （和 CocoaPods） 中的 Xamarin 应用可访问。_
 
 请按照以下链接以了解有关 Xamarin.iOS 和 Xamarin.Mac 绑定 Objective C 库和 CocoaPods 操作：
 

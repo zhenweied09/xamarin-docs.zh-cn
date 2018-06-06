@@ -1,15 +1,17 @@
 ---
 title: 第 1 – 了解 Xamarin 移动平台部分
+description: 本文档介绍了 Xamarin 平台在高级别上，查看在编译过程，平台 SDK 访问、 代码共享、 创建用户界面、 可视化设计器，和的详细信息。
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 10d1b0786d5ca0b42b6e6c3e2f2a08edb7a37591
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 40183e5f18ee589adaf2ea903f6948293c8680f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781889"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>第 1 – 了解 Xamarin 移动平台部分
 
@@ -143,8 +145,8 @@ Windows 应用 （WinForms，WPF 中或 UWP） 都是用 Visual Studio 生成的
 
 每个平台都有用于直观地布局屏幕的不同方法：
 
--   **iOS** – Xamarin 的 iOS 设计器有助于构建使用拖放功能和属性字段的视图。 这些视图共同构成情节提要，并可在访问**。情节提要**项目中包含的文件。
--   **Android** – Xamarin for Visual Studio 提供的 Android 的拖放 UI 设计器。 Android 屏幕布局将另存为**。AXML**文件时使用 Xamarin 工具。
+-   **iOS** – Xamarin 的 iOS 设计器有助于构建使用拖放功能和属性字段的视图。 这些视图共同构成情节提要，并可在访问 **。情节提要**项目中包含的文件。
+-   **Android** – Xamarin for Visual Studio 提供的 Android 的拖放 UI 设计器。 Android 屏幕布局将另存为 **。AXML**文件时使用 Xamarin 工具。
 -   **Windows** – Microsoft 提供了 Visual Studio 和 Blend 中的拖放 UI 设计器。 屏幕布局作为存储。XAML 文件。
 
 

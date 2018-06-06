@@ -1,18 +1,20 @@
 ---
-title: SiriKit
+title: 在 iOS 11 SiriKit 更新
+description: 本文档介绍如何使用 SiriKit iOS 11 中存在。 具体而言，它探讨如何使用任务和说明以及如何提供应用程序的可选名称。
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: a712f7da0d57e81872d7f779cf0eb52c30ee3bc2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28160b40c97b8cc62fae95d3643801f1c4cc5e93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787580"
 ---
-# <a name="sirikit"></a>SiriKit
+# <a name="sirikit-updates-in-ios-11"></a>在 iOS 11 SiriKit 更新
 
 SiriKit 在 iOS 10，引入了大量的服务 （包括锻炼，持续一段时间预订，以及调用） 的域。 请参阅[SiriKit 部分](~/ios/platform/sirikit/index.md)SiriKit 概念以及如何在你的应用程序中实现 SiriKit。
 

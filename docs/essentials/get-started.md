@@ -1,15 +1,16 @@
 ---
-title: Xamarin.Essentials
+title: 要开始使用 Xamarin.Essentials
 description: Xamarin.Essentials 提供一个单一的跨平台 API，适用于任何 iOS、 Android 或 UWP 应用程序可以从访问共享不管如何创建用户界面的代码。
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2e0abff4d0408d3db11ab95f1debc6621f609d86
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: f0f6eebbd12041a7be2d8e2dc00a9146b40d675f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783069"
 ---
 # <a name="get-started-with-xamarinessentials"></a>要开始使用 Xamarin.Essentials
 

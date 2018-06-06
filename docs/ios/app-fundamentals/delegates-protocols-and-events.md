@@ -1,21 +1,20 @@
 ---
-title: 事件、 协议和委托
-description: 本文提供了用于接收回调并填充数据的用户界面控件的密钥 iOS 技术。 这些技术是事件、 协议和委托。 本文说明了每个都，以及如何从 C# 使用每个。 它演示了 Xamarin.iOS 如何使用 iOS 控件来公开熟悉.NET 事件，以及如何 Xamarin.iOS 提供对等协议和委托 Objective C 概念的支持 （OBJECTIVE-C 的委托不应与 C# 委托相混淆）。 本文还提供了示例，演示如何使用 – 同时用作的 OBJECTIVE-C 的委托和非委托方案中的基础协议。
+title: 事件、 协议和在 Xamarin.iOS 的委托
+description: 本文档介绍如何使用事件，协议，并在 Xamarin.iOS 委托。 这些基本的概念是无处不在 Xamarin.iOS 开发中。
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0e4c23bffe689c9218da2f43b97d98f348513ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784005"
 ---
-# <a name="events-protocols-and-delegates"></a>事件、 协议和委托
-
-_本文提供了用于接收回调并填充数据的用户界面控件的密钥 iOS 技术。这些技术是事件、 协议和委托。本文说明了每个都，以及如何从 C# 使用每个。它演示了 Xamarin.iOS 如何使用 iOS 控件来公开熟悉.NET 事件，以及如何 Xamarin.iOS 提供对等协议和委托 Objective C 概念的支持 （OBJECTIVE-C 的委托不应与 C# 委托相混淆）。本文还提供了示例，演示如何使用 – 同时用作的 OBJECTIVE-C 的委托和非委托方案中的基础协议。_
+# <a name="events-protocols-and-delegates-in-xamarinios"></a>事件、 协议和在 Xamarin.iOS 的委托
 
 Xamarin.iOS 使用控件公开大多数用户交互的事件。
 传统的.NET 应用程序一样，Xamarin.iOS 应用程序在基本相同的方法中使用这些事件。 例如，Xamarin.iOS UIButton 类具有调用 TouchUpInside 事件的事件，并且只需像此类和事件是在.NET 应用程序中使用此事件。
@@ -28,15 +27,13 @@ Xamarin.iOS 使用控件公开大多数用户交互的事件。
 -  **协议**– 学习什么协议是否和如何使用它们，并创建一个示例为地图批注提供数据。
 -  **委托**– 学习有关通过扩展映射示例以处理用户交互，包括批注，然后学习强弱委托以及何时使用每个之间的差异的 OBJECTIVE-C 的委托。
 
-
 为了说明协议和委托，我们将构建的简单的映射应用程序向映射添加批注，如下所示：
 
  [![](delegates-protocols-and-events-images/01-map.png "向映射添加批注一个简单的映射应用程序的示例")](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ](delegates-protocols-and-events-images/04-annotation-with-callout.png "示例批注添加到图")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 有关此应用程序之前, 让我们开始吧看下 UIKit.NET 事件。
 
- <a name=".NET_Events_with_UIKit" />
-
+<a name=".NET_Events_with_UIKit" />
 
 ## <a name="net-events-with-uikit"></a>UIKit.NET 事件
 
@@ -47,7 +44,6 @@ aButton.TouchUpInside += (o,s) => {
     Console.WriteLine("button touched");
 };
 ```
-
 你可以实现这与 C# 2.0 样式匿名方法如下所示：
 
 ```csharp

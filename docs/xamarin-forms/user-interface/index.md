@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 84106cf8f699616fae772a6f149681840abca0e5
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733043"
 ---
 # <a name="user-interface"></a>用户界面
 
@@ -24,6 +25,10 @@ Xamarin.Forms 包括其自己非常简单用于创建简单的动画时也是足
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
 `BoxView`是只是一个简单彩色的矩形但装饰性项，基本图形，以及用于获取 interative 触摸屏输入可以使用它。
+
+## <a name="buttonbuttonmd"></a>[Button](button.md)
+
+`Button`响应点击或单击指示应用程序来执行特定任务。
 
 ## <a name="colorscolorsmd"></a>[颜色](colors.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 图像和图标
+title: 图像和在 Xamarin.iOS 的图标
 description: 本部分包括控件和为自定义文档类型提供图标中的各种，其中涵盖使用 Xamarin.iOS 应用程序，例如，使用它们以图标形式中的映像，启动屏幕的文章或包括它们。
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 444e3cbd88dfd3ff50153d858367ecd0310d240a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784047"
 ---
-# <a name="images-and-icons"></a>图像和图标
+# <a name="images-and-icons-in-xamarinios"></a>图像和在 Xamarin.iOS 的图标
 
 _本部分包括控件和为自定义文档类型提供图标中的各种，其中涵盖使用 Xamarin.iOS 应用程序，例如，使用它们以图标形式中的映像，启动屏幕的文章或包括它们。_
 

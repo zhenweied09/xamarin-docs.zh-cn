@@ -1,16 +1,17 @@
 ---
 title: 在 Xamarin iOS 和 Android 的 visual Basic.NET
-description: X 此演练演示如何生成本机的 Xamarin.iOS 和 Xamarin.Android 应用程序利用以 Visual Basic.NET 编写的业务逻辑。
+description: 本演练演示如何生成本机的 Xamarin.iOS 和 Xamarin.Android 应用程序使用以 Visual Basic.NET 编写的业务逻辑。
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 3b92442668f6bd86c1c521dd6b476e4bbb43c1ec
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a3e63f6c8d9b35a8158e2db6a48734b2205fe54c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782276"
 ---
 # <a name="visual-basicnet-in-xamarin-ios-and-android"></a>在 Xamarin iOS 和 Android 的 visual Basic.NET
 

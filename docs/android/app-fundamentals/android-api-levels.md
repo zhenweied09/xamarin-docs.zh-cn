@@ -6,12 +6,13 @@ ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 8f284fefd260764c6f09d78d2518bfd115782cd2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/01/2018
+ms.openlocfilehash: b942bb1be3441b1fb1a8bd65016914b3ecddbb26
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732315"
 ---
 # <a name="understanding-android-api-levels"></a>了解 Android API 级别
 
@@ -29,6 +30,10 @@ Xamarin.Android 公开三个 Android API 级别的项目设置：
 -   [面向 Android 版本](#target)&ndash;的你的应用程序的 Android 版本设计用于上运行的指定。 此 API 级别时使用的*运行*Android 的时间。
 
 你可以为你的项目配置 API 级别之前，必须安装该 API 级别的 SDK 平台组件。 有关下载和安装 Android SDK 组件的详细信息，请参阅[Android SDK 安装程序](~/android/get-started/installation/android-sdk.md)。
+
+> [!NOTE]
+> 从开始年 8 月 2018年，Google 播放控制台将需要新应用目标 API 级别 26 (Android 8.0) 或更高版本。
+现有应用程序将需要面向 API 级别 26 或更高版本中年 11 月 2018年开头。 有关详细信息，请参阅[提高应用程序的安全性和性能出现在年的 Google Play 上](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -51,7 +56,7 @@ Xamarin.Android 公开三个 Android API 级别的项目设置：
 
 [![默认为使用最新安装平台的目标框架](android-api-levels-images/xs-default-target-sml.png)](android-api-levels-images/xs-default-target.png#lightbox)
 
-可以下找到的最小值和目标 Android 版本设置**生成 > Android 应用程序**中**项目选项**。 将最低 Android 版本设置为**自动-使用目标框架版本**并将目标 Android 版本设置为相同的值的目标框架版本。 在以下屏幕截图中，目标 Android 框架设置为**Android 8.0 （API 级别 26）**以匹配上面的目标框架设置：
+可以下找到的最小值和目标 Android 版本设置**生成 > Android 应用程序**中**项目选项**。 将最低 Android 版本设置为**自动-使用目标框架版本**并将目标 Android 版本设置为相同的值的目标框架版本。 在以下屏幕截图中，目标 Android 框架设置为**Android 8.0 （API 级别 26）** 以匹配上面的目标框架设置：
 
 [![在项目选项中设置的目标和 framework 级别](android-api-levels-images/xs-default-app-sml.png)](android-api-levels-images/xs-default-app.png#lightbox)
 
@@ -170,13 +175,9 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 *目标框架*(也称为`compileSdkVersion`) 是您的应用程序在生成时被编译为的特定 Android 框架版本 （API 级别）。 此设置指定哪些 Api 应用*需要*时运行，但它不起 Api 个在其上实际可用向应用程序安装时使用。 因此，更改目标框架设置不会更改运行时行为。
 
-目标框架标识针对链接你的应用程序的库版本&ndash;这将确定可以在应用中使用的 Api。 例如，如果你想要使用[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) Android 5.0 棒糖形中引入的方法，必须将目标框架设置为**API 级别 21 （棒糖形）**或更高版本。 如果将你的项目的目标框架设置为 API 级别如**API Level 19 (KitKat)**和尝试调用`SetCategory`方法代码中的，您将得到编译错误。
+目标框架标识针对链接你的应用程序的库版本&ndash;这将确定可以在应用中使用的 Api。 例如，如果你想要使用[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) Android 5.0 棒糖形中引入的方法，必须将目标框架设置为**API 级别 21 （棒糖形）** 或更高版本。 如果将你的项目的目标框架设置为 API 级别如**API Level 19 (KitKat)** 和尝试调用`SetCategory`方法代码中的，您将得到编译错误。
 
 我们建议你始终编译与*最新*可用的目标框架版本。 执行此操作向你提供了有用的警告消息可能由你的代码调用任何弃用的 Api。 使用最新的目标框架版本一点尤其重要，当你使用最新的支持库版本&ndash;每个库要求你的应用能够编译在该支持库的最小的 API 级别或更高版本。 
-
-> [!NOTE]
-> 从开始年 8 月 2018年，Google 播放控制台将需要新应用目标 API 级别 26 (Android 8.0) 或更高版本。
-现有应用程序将需要面向 API 级别 26 或更高版本中年 11 月 2018年开头。 有关详细信息，请参阅[提高应用程序的安全性和性能出现在年的 Google Play 上](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)。
 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -202,9 +203,9 @@ Android 代码名称可能对应于多个版本和 API 级别 （如下面的列
 
 ### <a name="minimum-android-version"></a>最低 Android 版本
 
-*最低 Android 版本*(也称为`minSdkVersion`) 是最早版本的 Android OS （即，最低 API 级别），可以安装和运行你的应用程序。 默认情况下，应用可以仅会在匹配的目标框架设置的设备上安装或更高版本;如果最低 Android 版本设置为*较低*高于目标框架设置中，你的应用程序还可以在早期版本的 Android 上运行。 例如，如果目标框架设置为**Android 7.1 (Nougat)**和最低 Android 版本设置为**Android 4.0.3 （冰激凌德桑威奇）**，可以在 API 级别 15 从任何平台上安装你的应用程序为 API 级别 25，（含)。
+*最低 Android 版本*(也称为`minSdkVersion`) 是最早版本的 Android OS （即，最低 API 级别），可以安装和运行你的应用程序。 默认情况下，应用可以仅会在匹配的目标框架设置的设备上安装或更高版本;如果最低 Android 版本设置为*较低*高于目标框架设置中，你的应用程序还可以在早期版本的 Android 上运行。 例如，如果目标框架设置为**Android 7.1 (Nougat)** 和最低 Android 版本设置为**Android 4.0.3 （冰激凌德桑威奇）**，可以在 API 级别 15 从任何平台上安装你的应用程序为 API 级别 25，（含)。
 
-虽然你的应用程序可能已成功生成，并在此系列的平台上安装，但这并不保证它已成功将*运行*所有这些平台上。 例如，如果你的应用程序安装在**Android 5.0 （棒糖形）**和你的代码调用仅在中可用的 API **Android 7.1 (Nougat)**和更高版本，你的应用程序将获取运行时错误和可能崩溃。 因此，请确保你的代码必须&ndash;在运行时&ndash;，它调用仅在 Android 设备上运行支持的 Api。 换而言之，你的代码必须包含显式的运行时检查来确保你的应用程序仅在不够新，无法支持它们的设备上使用较新的 Api。
+虽然你的应用程序可能已成功生成，并在此系列的平台上安装，但这并不保证它已成功将*运行*所有这些平台上。 例如，如果你的应用程序安装在**Android 5.0 （棒糖形）** 和你的代码调用仅在中可用的 API **Android 7.1 (Nougat)** 和更高版本，你的应用程序将获取运行时错误和可能崩溃。 因此，请确保你的代码必须&ndash;在运行时&ndash;，它调用仅在 Android 设备上运行支持的 Api。 换而言之，你的代码必须包含显式的运行时检查来确保你的应用程序仅在不够新，无法支持它们的设备上使用较新的 Api。
 [运行时检查 Android 版本](#runtimechecks)本指南中，将在后面说明如何将这些运行时检查添加到你的代码。
 
 
@@ -279,7 +280,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 }
 ```
 
-在此示例中，我们的应用程序的目标框架设置为**Android 5.0 (API 级别 21)**并且其最低 Android 版本设置为**Android 4.1 (API 级别 16)**。 因为`SetCategory`位于 API 级别`Android.OS.BuildVersionCodes.Lollipop`和更高版本，此代码示例将调用`SetCategory`仅当有实际可用&ndash;它将*不*尝试调用`SetCategory`时 API级别是 16、 17、 18、 19 或 20。 仅的范围内通知未排序正确 （因为它们不按类型进行分类），但仍然发布通知来警告用户，在这些较早的 Android 版本上有所减少的功能。 我们的应用仍然正常工作，但其功能会稍微降低。
+在此示例中，我们的应用程序的目标框架设置为**Android 5.0 (API 级别 21)** 并且其最低 Android 版本设置为**Android 4.1 (API 级别 16)**。 因为`SetCategory`位于 API 级别`Android.OS.BuildVersionCodes.Lollipop`和更高版本，此代码示例将调用`SetCategory`仅当有实际可用&ndash;它将*不*尝试调用`SetCategory`时 API级别是 16、 17、 18、 19 或 20。 仅的范围内通知未排序正确 （因为它们不按类型进行分类），但仍然发布通知来警告用户，在这些较早的 Android 版本上有所减少的功能。 我们的应用仍然正常工作，但其功能会稍微降低。
 
 一般情况下，生成版本检查可帮助你决定在运行时之间执行某项操作与旧的方法的新方法的代码。 例如：
 

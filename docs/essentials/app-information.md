@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 应用程序信息
-description: AppInfo 类提供有关你的应用程序信息。
+title: Xamarin.Essentials： 应用程序信息
+description: 本文档介绍中 Xamarin.Essentials，提供有关你的应用程序的信息的 AppInfo 类。 例如，它公开的应用程序名称和版本。
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 4591f1256dc574299bb573ef9ec5afb35af7c542
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 25765fbbcbd2475bfcbc72ca5c4feefa8ef19d08
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782100"
 ---
-# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials 应用程序信息
+# <a name="xamarinessentials-app-information"></a>Xamarin.Essentials： 应用程序信息
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

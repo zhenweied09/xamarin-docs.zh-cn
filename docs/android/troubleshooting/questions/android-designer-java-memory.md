@@ -6,18 +6,19 @@ ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 32d98efd644fb033785fbae0d9689494e42b2809
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 691be280b80e379863cc09d0f1bba0ff5882cf21
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732916"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android 设计器中调整 Java 内存参数
 
 在启动时使用的默认内存参数`java`处理 Android 设计器可能与某些系统配置不兼容。
 
-使用 Xamarin Studio 5.7.2.7 （和更高版本、 Visual Studio for Mac） 启动和 Xamarin for Visual Studio 3.9.344 可以根据每个项目中自定义这些设置。
+开始使用 Xamarin Studio 5.7.2.7 （和更高版本、 Visual Studio for Mac） 和 Visual Studio Tools for Xamarin 3.9.344，可以根据每个项目中自定义这些设置。
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>新的 Android 设计器属性和相应的 Java 选项
 

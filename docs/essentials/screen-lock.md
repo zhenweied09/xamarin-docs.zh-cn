@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 屏幕锁定
-description: ScreenLock 类可以请求侵扰睡眠状态时，运行应用程序时使屏幕。
+title: Xamarin.Essentials： 屏幕锁定
+description: 本文档介绍中 Xamarin.Essentials，为了使屏幕侵扰休眠时运行该应用程序可以请求的 ScreenLock 类。
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0bdf75825d9c6dc594749fe7aa1e133207cfa0fa
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782903"
 ---
-# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials 屏幕锁定
+# <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials： 屏幕锁定
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 
@@ -32,7 +33,7 @@ public class ScreenLockTest
 {
     public void ToggleScreenLock()
     {
-        if (ScreenLock.IsActive)
+        if (!ScreenLock.IsActive)
             ScreenLock.RequestActive();
         else
             ScreenLock.RequestRelease();

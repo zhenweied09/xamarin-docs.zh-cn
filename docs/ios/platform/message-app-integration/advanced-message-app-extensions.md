@@ -1,5 +1,5 @@
 ---
-title: 高级的消息应用扩展
+title: 在 Xamarin.iOS 的高级的消息应用扩展
 description: 这篇文章演示用于使用与邮件应用集成并向用户呈现的新功能的 Xamarin.iOS 解决方案中的消息应用程序扩展的高级的技术。
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788010"
 ---
-# <a name="advanced-message-app-extensions"></a>高级的消息应用扩展
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>在 Xamarin.iOS 的高级的消息应用扩展
 
 _这篇文章演示用于使用与邮件应用集成并向用户呈现的新功能的 Xamarin.iOS 解决方案中的消息应用程序扩展的高级的技术。_
 
@@ -170,7 +171,7 @@ public void SendMessage (MSMessage message)
 
 此外，扩展可以将不同类型的数据发送到如会话：
 
-- **Text** - `ActiveConversation.InsertText ("Message", (error) => {...});`
+- **文本** - `ActiveConversation.InsertText ("Message", (error) => {...});`
 - **附件** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
 - **无需标贴** -  `ActiveConversation.InsertSticker (sticker, (obj) => {...});`其中`sticker`是`MSSticker`。
 

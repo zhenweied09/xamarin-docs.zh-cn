@@ -1,21 +1,20 @@
 ---
-title: 使用文件系统
-description: Xamarin.iOS 可以使用相同的 System.IO 类以便与文件和目录中你将在任意.NET 应用程序的 iOS。 但是，尽管熟悉类和方法中，iOS 上的文件可以创建或访问实现一些限制，并且还提供特殊功能，对于某些目录。 本文概述了这些限制和功能，并演示如何在 Xamarin.iOS 应用程序中的文件访问工作原理。
+title: 使用 Xamarin.iOS 中的文件系统
+description: 本文档介绍如何使用 Xamarin.iOS 中的文件系统。 它讨论了目录，读取文件、 XML 和 JSON 序列化、 应用程序沙盒，共享通过 iTunes，和的详细信息的文件。
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 5bcfac7911ac589e08cd6c5db8c8ea15a3497eca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784236"
 ---
-# <a name="working-with-the-file-system"></a>使用文件系统
-
-_Xamarin.iOS 可以使用相同的 System.IO 类以便与文件和目录中你将在任意.NET 应用程序的 iOS。但是，尽管熟悉类和方法中，iOS 上的文件可以创建或访问实现一些限制，并且还提供特殊功能，对于某些目录。本文概述了这些限制和功能，并演示如何在 Xamarin.iOS 应用程序中的文件访问工作原理。_
+# <a name="working-with-the-file-system-in-xamarinios"></a>使用 Xamarin.iOS 中的文件系统
 
 你可以使用 Xamarin.iOS 和`System.IO`中的类 *.NET 基类库 (BCL)* 访问 iOS 文件系统。 `File`类，可以创建、 删除和读取文件，和`Directory`类可以创建、 删除或枚举目录的内容。 你还可以使用`Stream`子类，它可以提供更大程度上控制文件操作 （如文件中压缩或位置搜索）。
 
@@ -29,15 +28,13 @@ iOS 还具有一些文件特定于系统的功能： 某些特定目录需要特
 
  <a name="General_File_Access" />
 
-
 ## <a name="general-file-access"></a>常规文件访问
 
 Xamarin.iOS 允许你使用.NET`System.IO`在 iOS 上的文件系统操作的类。
 
 下面的代码段演示了一些常见的文件操作。 你将找到它们所有下面集中在`SampleCode.cs`文件，请在本文的示例应用程序。
 
- <a name="Working_with_directories" />
-
+<a name="Working_with_directories" />
 
 ### <a name="working-with-directories"></a>使用目录
 

@@ -1,21 +1,20 @@
 ---
-title: 高级的用户通知
-description: 本文将新的用户通知框架深入了解一下以及如何充分利用它在 Xamarin.iOS 应用程序中。
+title: 在 Xamarin.iOS 的高级的用户通知
+description: 本文将深入了解一下在 iOS 10 中引入的用户通知框架。 它讨论用户通知、 用户通知接口、 媒体附件，自定义用户界面和的详细信息。
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788518"
 ---
-# <a name="advanced-user-notifications"></a>高级的用户通知
-
-_本文将新的用户通知框架深入了解一下以及如何充分利用它在 Xamarin.iOS 应用程序中。_
+# <a name="advanced-user-notifications-in-xamarinios"></a>在 Xamarin.iOS 的高级的用户通知
 
 新 iOS 10，框架允许在传递和本地和远程通知的处理其用户通知。 使用此框架，应用程序或应用扩展可以计划传递本地通知通过指定一组条件，例如位置或当天的时间。
 

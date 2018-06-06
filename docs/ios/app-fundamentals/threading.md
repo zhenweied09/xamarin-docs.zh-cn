@@ -1,17 +1,19 @@
 ---
-title: 线程
+title: 在 Xamarin.iOS 线程处理
+description: 本文档介绍如何在 Xamarin.iOS 应用程序中使用 System.Threading Api。 它讨论任务并行库中，生成响应的应用程序和垃圾回收。
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784912"
 ---
-# <a name="threading"></a>线程
+# <a name="threading-in-xamarinios"></a>在 Xamarin.iOS 线程处理
 
 Xamarin.iOS 运行时可使开发人员访问.NET 线程处理 Api，同时使用线程时显式 (`System.Threading.Thread, System.Threading.ThreadPool`) 和隐式时使用异步委托模式或 BeginXXX 方法，以及完整范围的 Api 支持任务并行库。
 

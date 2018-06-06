@@ -1,21 +1,20 @@
 ---
 title: 在 iOS 中的推送通知
-description: 本部分将介绍在 iOS 中的推送通知。 它引入了 Apple 推送通知网关服务和它到 iOS 应用程序的发布通知中所扮演的角色。 它将说明如何创建启用推送通知和讨论所需的安全证书。 最后本部分将讨论某些应用程序服务器必须执行能够跟踪客户端移动设备的管理任务。
+description: 本文档介绍如何使用 iOS 9 及更早版本中的推送通知。 它讨论向 Apple 推送通知网关服务 (APNS)，和的详细信息注册的证书。
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7bb2a250b9d3cc0c8df02f432330f9fe1dc58f94
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788662"
 ---
 # <a name="push-notifications-in-ios"></a>在 iOS 中的推送通知
-
-_本部分将介绍在 iOS 中的推送通知。它引入了 Apple 推送通知网关服务和它到 iOS 应用程序的发布通知中所扮演的角色。它将说明如何创建启用推送通知和讨论所需的安全证书。最后本部分将讨论某些应用程序服务器必须执行能够跟踪客户端移动设备的管理任务。_
 
 > [!IMPORTANT]
 > 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
@@ -50,7 +49,7 @@ Apple 维护的 APNS 的两种环境：*沙盒*和*生产*环境。 沙盒环境
 
     [![](remote-notifications-in-ios-images/image6new.png "导航到的应用 Id 部分并创建新的应用程序 ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  当你单击**+**按钮，你将能够输入的描述和捆绑标识符，在应用程序 id 中的下一步的屏幕截图所示：
+3.  当你单击**+** 按钮，你将能够输入的描述和捆绑标识符，在应用程序 id 中的下一步的屏幕截图所示：
 
     [![](remote-notifications-in-ios-images/image7new.png "输入应用程序 ID 说明和捆绑标识符")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

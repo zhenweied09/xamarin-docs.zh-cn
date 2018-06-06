@@ -1,20 +1,19 @@
 ---
 title: 访问 Graph API
-description: 使用 Active Directory 查询 Graph API 使用 Xamarin
+description: 本文档介绍如何将 Azure Active Directory 身份验证添加到使用 Xamarin 生成的移动应用程序。
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e177ac680a100a2723732c2ee7252ea0c16ea972
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c43dfa79831f22e55490b27c3c360602ae717627
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781125"
 ---
 # <a name="accessing-the-graph-api"></a>访问 Graph API
-
-_使用 Active Directory 查询 Graph API 使用 Xamarin_
 
 按照这些步骤，使用 Graph API 在 Xamarin 应用程序中：
 

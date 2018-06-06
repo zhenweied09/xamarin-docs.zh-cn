@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding 演练
+description: 此文档链接到演示如何使用 backgrounded 应用中的位置信息以及如何使用后台传输服务和 NSURLSession 的演练。
 ms.prod: xamarin
 ms.assetid: D4937080-7865-48C0-8FE5-310E90229BC3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: dd113905196fc6633b64319617dd19e393e196a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 94e9370f5bda5aaf78bf67fd7da0d7450c6fbe5d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783621"
 ---
 # <a name="ios-backgrounding-walkthroughs"></a>iOS Backgrounding 演练
 

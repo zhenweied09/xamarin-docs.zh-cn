@@ -1,18 +1,19 @@
 ---
-title: 演练-创建使用元素 API 的应用程序
+title: 创建使用元素 API 的 Xamarin.iOS 应用程序
 description: 本文基于 MonoTouch 对话框文章简介中提供的信息。 它提供的演练，演示如何使用 MonoTouch.Dialog (MTD） 元素 API 若要快速开始构建保持联系的应用程序D。
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e4fbf744c6f967d09e0033212024c2e2398fb768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64f407288da72dbf51fb3388ddf36caea377f09c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790427"
 ---
-# <a name="walkthrough---creating-an-application-using-the-elements-api"></a>演练-创建使用元素 API 的应用程序
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>创建使用元素 API 的 Xamarin.iOS 应用程序
 
 _本文基于 MonoTouch 对话框文章简介中提供的信息。它提供的演练，演示如何使用 MonoTouch.Dialog (MTD） 元素 API 若要快速开始构建保持联系的应用程序D。_
 

@@ -1,5 +1,5 @@
 ---
-title: 使用行操作
+title: 使用 Xamarin.iOS 中的行操作
 description: 本指南演示如何使用 UISwipeActionsConfiguration 或 UITableViewRowAction 创建的表行的自定义轻扫操作
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: c257406f3ad81e8144b47e099c9a00f3fdae30cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4be8b6dc66c9c047e6662067e7e3ecf81ab22893
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789936"
 ---
-# <a name="working-with-row-actions"></a>使用行操作
+# <a name="working-with-row-actions-in-xamarinios"></a>使用 Xamarin.iOS 中的行操作
 
 _本指南演示如何使用 UISwipeActionsConfiguration 或 UITableViewRowAction 创建的表行的自定义轻扫操作_
 

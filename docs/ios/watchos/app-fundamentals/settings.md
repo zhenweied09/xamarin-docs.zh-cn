@@ -1,18 +1,20 @@
 ---
-title: 使用设置
+title: 使用 watchOS Xamarin 中的设置
+description: 本文档介绍如何使用 Xamarin 中 watchOS 设置。 它讨论了使用在应用程序中和 Apple Watch 应用这些设置在 iPhone 上监视应用程序解决方案，添加设置。
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6de70eae1eb1c498336a62b4d7be5e2805de11f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6cfbcf3b4383588819490838c2a54cdb4faf9403
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790872"
 ---
-# <a name="working-with-settings"></a>使用设置
+# <a name="working-with-watchos-settings-in-xamarin"></a>使用 watchOS Xamarin 中的设置
 
 Apple Watch 应用可以使用相同的设置功能作为 iOS 应用-设置用户界面显示在**Apple Watch** iPhone 应用，但值中均可访问同时 iPhone 应用和监视扩展。
 
@@ -24,7 +26,7 @@ Apple Watch 应用可以使用相同的设置功能作为 iOS 应用-设置用�
 
 在**iPhone 应用**解决方案中 (*不*监视应用程序或扩展):
 
-1. 右键单击**添加 > 新文件...**选择**Settings.bundle** (不能编辑中的名称**新文件**对话框):
+1. 右键单击**添加 > 新文件...** 选择**Settings.bundle** (不能编辑中的名称**新文件**对话框):
 
    [![](settings-images/settings-add-sml.png "添加新的设置包")](settings-images/settings-add.png#lightbox)
 

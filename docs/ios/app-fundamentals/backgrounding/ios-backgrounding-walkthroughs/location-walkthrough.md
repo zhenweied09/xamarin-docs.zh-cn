@@ -1,18 +1,20 @@
 ---
-title: 演练-使用背景位置
+title: 演练-Xamarin.iOS 中的后台位置
+description: 本文档提供的演练如何在 backgrounded 的 Xamarin.iOS 应用程序中使用位置信息。 它介绍必需的安装程序、 用户界面，以及应用程序状态。
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e6c74d9ffba4f63682a905d6ebc06d02be81abf4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784089"
 ---
-# <a name="walkthrough---using-background-location"></a>演练-使用背景位置
+# <a name="walkthrough---background-location-in-xamarinios"></a>演练-Xamarin.iOS 中的后台位置
 
 在此示例中，我们将生成列显有关我们当前的位置信息的位置应用程序的 iOS:、 纬度和屏幕的其他参数。 此应用程序将演示如何正确执行位置更新，该应用程序时活动或 Backgrounded。
 

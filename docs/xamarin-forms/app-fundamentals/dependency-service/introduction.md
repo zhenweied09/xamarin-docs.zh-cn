@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 88821c5315fc338b5195e42ea4b2bc3e648e6ea1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 6a0544a58245efed696b92c543fbaf5e7e1b8365
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732822"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 简介
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="how-dependencyservice-works"></a>DependencyService 的工作原理
 
-Xamarin.Forms 应用程序需要三个组件使用`DependencyService`:
+Xamarin.Forms 应用需要四个组件来使用`DependencyService`:
 
 - **接口**&ndash;由在共享代码中的接口定义所需的功能。
 - **实现每个平台**&ndash;实现接口的类必须添加到每个平台项目。

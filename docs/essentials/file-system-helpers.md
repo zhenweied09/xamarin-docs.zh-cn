@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 文件系统帮助器
-description: FileSystem 类包含一系列的帮助器以查找应用程序的缓存和数据目录，并打开应用包内的文件。
+title: Xamarin.Essentials： 文件系统帮助器
+description: Xamarin.Essentials 中的文件系统类包含一系列的帮助器以查找应用程序的缓存和数据目录，并打开应用包内的文件。
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 14aabc319fefdbad86f29a9d27ce39b59da35e3e
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 13293ec05261cbdc1e70fd278002d1af18654851
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782580"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials 文件系统帮助器
+# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials： 文件系统帮助器
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 0fbd38b643e7806932ba262becc72be2bae6ba4b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784605"
 ---
-# <a name="launch-screens"></a>启动屏幕
+# <a name="launch-screens-for-xamarinios-apps"></a>为 Xamarin.iOS 应用程序启动屏幕
 
 _此文章介绍了如何在任何分辨率和方向，使用单个统一情节提要创建所有的 iOS 设备，应用程序启动屏幕。_
 

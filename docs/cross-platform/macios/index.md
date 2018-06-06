@@ -1,20 +1,19 @@
 ---
 title: Apple 平台 （iOS 和 Mac）
-description: 在本部分中，我们介绍了策略来共享你的 Xamarin.iOS 和 Xamarin.Mac 项目之间的代码。
+description: 本文档介绍与 Xamarin.iOS 和 Xamarin.Mac 开发相关的各种主题： 代码共享、 统一的 API，绑定 Objective C 库、 本机引用、 本机类型，等等。
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 3c01ff4af699dd0374729b638470d1ef34aa7022
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781528"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 平台 （iOS 和 Mac）
-
-_在本部分中，我们介绍了策略来共享你的 Xamarin.iOS 和 Xamarin.Mac 项目之间的代码。_
 
 ## <a name="code-sharing"></a>代码共享
 
@@ -48,8 +47,6 @@ Xamarin 让你通过绑定到你的应用使本机库。 本部分介绍：
 
 ## <a name="native-referencesnative-referencesmd"></a>[本机引用](native-references.md)
 
-
-
 ##  <a name="macios-native-typesnativetypesmd"></a>[Mac/iOS 本机类型](nativetypes.md)
 
 为了支持 32 和 64 位代码以透明方式从 C# 和 F #，我们引入了新的数据类型。   在此处了解有关它们的信息。
@@ -62,7 +59,6 @@ Xamarin 让你通过绑定到你的应用使本机库。 本部分介绍：
 
 本文介绍如何使用新的 iOS 统一 API 本机类型 (`nint`， `nuint`， `nfloat`) 在跨平台应用程序代码与非 iOS 设备，例如 Android 或 Windows Phone 操作系统的共享位置。
 它可让你应在何时使用本机类型的了解，并提供到新的类型必须用于跨平台代码的情况下的几个可能的解决方案。
-
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[HttpClient 堆栈和 SSL/TLS 实现选择器](http-stack.md)
 

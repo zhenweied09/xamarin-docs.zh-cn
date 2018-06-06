@@ -1,19 +1,20 @@
 ---
-title: 将部署到应用商店
-description: 将监视应用部署到应用商店
+title: 将 watchOS 应用部署到应用商店
+description: 本文档介绍如何部署 watchOS 应用使用应用商店的 Xamarin 生成。 花查看分发预配配置文件和 iTunes 连接，并且它还提供了一些故障排除技巧。
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 70613c79c2ec0c81f1dbdc218b747f809f859767
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790979"
 ---
-# <a name="deploying-to-the-app-store"></a>将部署到应用商店
+# <a name="deploying-watchos-apps-to-the-app-store"></a>将 watchOS 应用部署到应用商店
 
 > [!IMPORTANT]
 > 请务必查看[Apple 的监视工具包提交指南](https://developer.apple.com/app-store/watch/)，请参阅和[故障排除](#Troubleshooting)部分以了解可能会有任何问题。
@@ -37,8 +38,8 @@ ms.lasthandoff: 04/04/2018
 
   - 转到**窗口 > 管理器**选择**存档**。
   - 从列表中选择的应用程序和存档。
-  - （可选）**验证...**存档。
-  - **提交...**存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
+  - （可选）**验证...** 存档。
+  - **提交...** 存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
 
 阅读以下这些项与相关的特定提示。 请参阅[故障排除](#Troubleshooting)部分中如果遇到问题。
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 04/04/2018
 
   ![](appstore-images/xs-archive.png "生成菜单")
 
-你还可以选择**视图 > 存档...**菜单项以查看前面创建的存档。
+你还可以选择**视图 > 存档...** 菜单项以查看前面创建的存档。
 
   ![](appstore-images/xs-archives-sml.png "存档视图")
 
@@ -116,7 +117,7 @@ Xcode 将自动显示存档在 Visual Studio 中创建的 mac。
 
   ![](appstore-images/xc-archives.png "存档选项卡")
 
-3. （可选)**验证...**存档，然后选择**提交...**若要将应用上载到 iTunes Connect。
+3. （可选)**验证...** 存档，然后选择**提交...** 若要将应用上载到 iTunes Connect。
 
 4. （如果你属于多个），请选择开发团队然后确认提交：
 

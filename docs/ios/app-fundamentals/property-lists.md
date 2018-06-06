@@ -1,5 +1,5 @@
 ---
-title: 使用属性列表
+title: 使用在 Xamarin.iOS 的属性列表
 description: 本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) 编辑器了用于处理 Info.plist 和 Entitlements.plist。 它阐释设置图标和从 iOS 应用程序的启动映像在 Visual Studio for mac。
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f6ee7a606243f5d21d827546b528ca5d9d3f0281
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6b22acab3fb19a6209fac8dcf6a0870763e601d2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784463"
 ---
-# <a name="working-with-property-lists"></a>使用属性列表
+# <a name="working-with-property-lists-in-xamarinios"></a>使用在 Xamarin.iOS 的属性列表
 
 _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) 编辑器了用于处理 Info.plist 和 Entitlements.plist。它阐释设置图标和从 iOS 应用程序的启动映像在 Visual Studio for mac。_
 
@@ -113,7 +114,7 @@ _本文档介绍 Visual Studio for Mac 的图形和高级属性列表 (.plist) �
 
 ## <a name="utis"></a>UTIs
 
-有时应用程序需要支持打开自定义的文件类型。 例如，我们可能想要使用的自定义扩展打开映像文件*.xam*。 若要指定自定义文件类型，我们将创建自定义的实用程序的通用类型标识符-使用`UIExportedTypeDeclarations`密钥。 下面的屏幕截图演示如何创建自定义的实用程序.xam 扩展：
+有时应用程序需要支持打开自定义的文件类型。 例如，我们可能想要使用的自定义扩展打开映像文件 *.xam*。 若要指定自定义文件类型，我们将创建自定义的实用程序的通用类型标识符-使用`UIExportedTypeDeclarations`密钥。 下面的屏幕截图演示如何创建自定义的实用程序.xam 扩展：
 
  [![](property-lists-images/uti.png "UTIs 编辑器")](property-lists-images/uti.png#lightbox)
 

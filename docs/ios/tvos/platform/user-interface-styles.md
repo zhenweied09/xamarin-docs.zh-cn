@@ -1,5 +1,5 @@
 ---
-title: 新的用户界面样式
+title: tvOS Xamarin 中的用户界面样式
 description: 本文介绍如何光并且深色 UI 主题该 Apple 已添加到 tvOS 中，10 以及如何在 Xamarin.tvOS 应用程序中实现它们。
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da75a99e842b13d42251cdd1c5195ec66ff4a513
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43bfac29acb8b465fd1f3cdfd53c7664adeae18f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789166"
 ---
-# <a name="new-user-interface-styles"></a>新的用户界面样式
+# <a name="tvos-user-interface-styles-in-xamarin"></a>tvOS Xamarin 中的用户界面样式
 
 _本文介绍如何光并且深色 UI 主题该 Apple 已添加到 tvOS 中，10 以及如何在 Xamarin.tvOS 应用程序中实现它们。_
 
 tvOS 10 现在支持深色和浅色用户界面主题，所有生成在 UIKit 控件将自动调整以适应，根据用户的首选项。 此外，开发人员可以手动调整基于用户选定的主题的 UI 元素，并且可重写给定的主题。
-
 
 <a name="About-the-New-User-Interface-Styles" />
 
@@ -185,7 +185,7 @@ TvOS 10，可以设置应用的情节提要响应特征集合，并且许多 UI 
 
 * 开发人员可以指定不同的基于 UI 主题中的用户界面元素的变体**属性检查器**:
     
-    * 现在有多个属性**+**旁边这可通过单击添加 UI 主题特定版本： 
+    * 现在有多个属性**+** 旁边这可通过单击添加 UI 主题特定版本： 
 
         [![](user-interface-styles-images/theme08.png "添加 UI 主题特定版本")](user-interface-styles-images/theme08.png#lightbox) 
     

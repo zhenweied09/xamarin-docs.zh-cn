@@ -1,5 +1,5 @@
 ---
-title: 社交 Framework
+title: 在 Xamarin.iOS 的社交 Framework
 description: 社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Facebook，以及 SinaWeibo 的社交网络进行交互。
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788190"
 ---
-# <a name="social-framework"></a>社交 Framework
+# <a name="social-framework-in-xamarinios"></a>在 Xamarin.iOS 的社交 Framework
 
 _社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Facebook，以及 SinaWeibo 的社交网络进行交互。_
-
 
 使用社交框架允许应用程序而无需管理身份验证与社交网络从单个 API 进行交互。 它包括提供用于编写文章，以及允许通过 HTTP 使用每个社交网络 API 的抽象视图控制器的系统。
 
@@ -476,5 +476,5 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 
 ## <a name="related-links"></a>相关链接
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo （示例）](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
 - [Web 服务简介](~/cross-platform/data-cloud/web-services/index.md)

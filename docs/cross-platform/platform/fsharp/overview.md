@@ -1,16 +1,17 @@
 ---
 title: 'F # 入门'
-description: 'F # 是强类型函数编程语言，专门用于在.NET 上运行'
+description: '本文档介绍如何了解 F # 以及使用它来构建 Xamarin 应用程序使用 Visual Studio 2017 和 Visual Studio for mac。'
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 07082ed68e1257679b6296470d276b61a9f39f00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fb11feb2d3af537e1b21470a4cc10ec16f49bf77
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781772"
 ---
 # <a name="getting-started-with-f35"></a>Getting Started with F&#35;
 

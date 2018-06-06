@@ -1,19 +1,20 @@
 ---
-title: 使用 Web 标记搜索
-description: 添加可以链接回你的应用程序的基于 web 的搜索结果。
+title: 使用 Web 标记 Xamarin.iOS 中搜索
+description: 本文档介绍如何创建链接到一个 Xamarin.iOS 应用程序的基于 web 的搜索结果。 它讨论了如何启用 web 内容索引，这使您的应用程序的网站进行，可使用发现智能应用横幅、 通用链接和的详细信息。
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787989"
 ---
-# <a name="search-with-web-markup"></a>使用 Web 标记搜索
+# <a name="search-with-web-markup-in-xamarinios"></a>使用 Web 标记 Xamarin.iOS 中搜索
 
 用于提供对 web 站点通过其内容的访问的应用程序 (不只从在应用内)，web 内容可标记为特殊的链接，将通过 Apple 爬网，并提供到用户的 iOS 9 设备上应用的深层链接。
 

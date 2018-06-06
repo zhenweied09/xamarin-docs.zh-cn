@@ -1,15 +1,17 @@
 ---
 title: 从现有的库项目创建 NuGet
+description: 本文档介绍如何创建从现有的库项目，允许的代码将与其他开发人员共享的 NuGet 包。
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 466ec405d4951de2d47d075c748cbc20ac5074e6
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779978"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>从现有的库项目创建 NuGet
 

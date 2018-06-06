@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding 技术
+description: 本文档链接到指南描述在 iOS 中的各种 backgrounding 技术： 后台任务、 后台传输服务、 背景提取和远程通知。
 ms.prod: xamarin
 ms.assetid: 011A8D48-1CDC-486A-A2B0-C4946118E7A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 261507e8cbca8e94f5cabbb010dcd444c432d96c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ebf3c07a319a79994093f89f8e54f4cba7402533
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783750"
 ---
 # <a name="ios-backgrounding-techniques"></a>iOS Backgrounding 技术
 

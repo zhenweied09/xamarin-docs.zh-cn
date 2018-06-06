@@ -1,17 +1,19 @@
 ---
-title: API
+title: Xamarin.iOS API 概述
+description: 此文档链接到 Xamarin API 参考文档，描述 Xamarin.iOS API 设计中，以及可用于 Xamarin 开发的程序集的列表的指南。
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2ce97ecc75dd59c0851db22431529ef819f37ea7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 81c30af4d7c95960344015ed6dcfd868deda06af
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786130"
 ---
-# <a name="api"></a>API
+# <a name="xamarinios-api-overview"></a>Xamarin.iOS API 概述
 
 Xamarin.iOS 公开的 C# / CIL 将绑定到 CocoaTouch API 和还提供对 ECMA CIL Api 和各种其他.NET Api 访问。
 

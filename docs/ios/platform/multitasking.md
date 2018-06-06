@@ -1,5 +1,5 @@
 ---
-title: 适用于 iPad 的多任务
+title: 适用于 iPad Xamarin.iOS 中的多任务
 description: iOS 9 支持两个应用程序运行在同一时间、 通过使用幻灯片或拆分视图。 它还支持视频播放图片中图片。
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7eacd9ece067d2ddf6363c0551055daa3df4433a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787950"
 ---
-# <a name="multitasking-for-ipad"></a>适用于 iPad 的多任务
+# <a name="multitasking-for-ipad-in-xamarinios"></a>适用于 iPad Xamarin.iOS 中的多任务
 
 _iOS 9 支持两个应用程序运行在同一时间、 通过使用幻灯片或拆分视图。它还支持视频播放图片中图片。_
 
@@ -126,7 +127,7 @@ iOS 9 提供通过引入的 iPad 上的新多任务功能_滑动通过_，_拆�
 
 | **方向** | **主应用程序** | **辅助应用程序** |
 |--- |--- |--- |
-| **Portrait** |75%的屏幕<br />Compact 水平<br />正则垂直|25%的屏幕<br />Compact 水平<br />正则垂直|
+| **纵向** |75%的屏幕<br />Compact 水平<br />正则垂直|25%的屏幕<br />Compact 水平<br />正则垂直|
 | **横向** |75%的屏幕<br />正则水平<br />正则垂直|25%的屏幕<br />Compact 水平<br />正则垂直|
 | **横向** |50%的屏幕<br />Compact 水平<br />正则垂直|50%的屏幕<br />Compact 水平<br />正则垂直|
 
@@ -142,7 +143,7 @@ iOS 9 提供通过引入的 iPad 上的新多任务功能_滑动通过_，_拆�
 
 此外，不再可以依赖于设备屏幕边界，以定义应用程序的可见区域，你将需要改为使用您的应用程序窗口边界。 由于窗口边界完全受控制的用户，你无法以编程方式对其进行调整或防止用户更改这些边界。
 
-最后，你的应用程序必须使用情节提要文件存在而不是使用一组其启动屏幕**.png**图像文件，并支持所有四个接口方向 （纵向、 倒置纵向、 横向左右横向）若要考虑对运行在滑动通过面板中或在拆分视图模式下进行。
+最后，你的应用程序必须使用情节提要文件存在而不是使用一组其启动屏幕 **.png**图像文件，并支持所有四个接口方向 （纵向、 倒置纵向、 横向左右横向）若要考虑对运行在滑动通过面板中或在拆分视图模式下进行。
 
 <a name="Custom-Hardware-Keyboard-Shortcuts" />
 

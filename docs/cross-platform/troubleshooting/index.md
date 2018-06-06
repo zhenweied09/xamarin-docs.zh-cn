@@ -1,20 +1,23 @@
 ---
-title: 疑难解答
+title: Xamarin 故障排除
+description: Xamarin 开发有关的常见问题的答案描述如何更新到 NuGet，组件引用的内容的此文档链接讨论支持选项，并回答特定于产品的问题。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 5e8a28f85e947cffeaf6a0aac544e10f7e4eae8a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7a10a20290872005233bfffd5ec861f7372be4a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782058"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="xamarin-troubleshooting"></a>Xamarin 故障排除
 
 ## <a name="general-issues"></a>一般问题
+
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[常见问题](questions/index.md)
 
 有关常见问题的 Xamarin 平台和回答特定于 Visual Studio。

@@ -1,15 +1,17 @@
 ---
 title: 何时以及如何我应文件一个 bug 报告？
+description: 本文档介绍当，其中，以及如何文件一个 bug 报告。 它还提供了最佳做法，使工程师以便最好地诊断问题的错误报告。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d5471195b5051725b41b8f28b3959db362297669
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 08a782e9637442a43e9c63305ddf161403519169
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781938"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>何时以及如何我应文件一个 bug 报告？
 

@@ -1,20 +1,19 @@
 ---
 title: Microsoft Azure Active Directory
-description: 使用 Active Directory 在 Xamarin 移动应用程序的用户进行身份验证。
+description: 本文档介绍如何使用 Azure Active Directory 中使用 Xamarin 生成的移动应用程序的用户进行身份验证。
 ms.prod: xamarin
 ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7182b0ff308b952205c0d89ecb929695b0183e53
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9d34b38cf30a9d5a21f5d106f78823a2b077ef7c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780566"
 ---
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
-
-_使用 Active Directory 在 Xamarin 移动应用程序的用户进行身份验证。_
 
 
 Azure Active Directory 允许开发人员安全资源，例如文件、 链接和 Web Api、 Office 365 和员工用于登录到他们的系统或检查其电子邮件的同一个组织帐户的详细信息。

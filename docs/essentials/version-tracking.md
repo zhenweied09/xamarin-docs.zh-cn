@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 版本跟踪
-description: VersionTracking 类允许你检查应用程序版本和内部版本号以及看到此类的其他信息，就像它是第一个时间不断启动应用程序，或对于最新版本，获取以前的生成信息、 和的详细信息。
+title: Xamarin.Essentials： 版本跟踪
+description: 中 Xamarin.Essentials 的 VersionTracking 类允许你检查应用程序版本和内部版本号以及看到此类的其他信息，就像它是第一个时间不断启动应用程序，或对于最新版本，获取上一个生成信息和详细信息。
 ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f6ab63c44307fca860ccb73744b35c006f25a9ed
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782997"
 ---
-# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials 版本跟踪
+# <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials： 版本跟踪
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

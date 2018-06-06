@@ -1,21 +1,20 @@
 ---
-title: 演练-与 Xamarin 设计器使用 iOS 自定义控件
-description: 本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。 它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。 此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。
+title: 与 iOS 设计器一起使用的自定义控件
+description: 本文档介绍如何创建自定义控件和将其与 Xamarin 设计器用于 iOS。 它演示如何以使控件在 iOS 设计器的工具箱中可用、 实现控件，以便正确呈现和设计时间，等等。
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a7fb6cba82b52f2a3506df7a36b4813a88ff583
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dae675d65cb2be93ac828a1aebe560354630ab54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790160"
 ---
-# <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>演练-与 Xamarin 设计器使用 iOS 自定义控件
-
-_本文提供了演示如何创建自定义控件和将其 Xamarin 设计器中用于 iOS 的分步演练。它演示如何使控件在设计器的工具箱中可用，因此它可以拖动/放置到一个视图。此外，它演示如何实现控件，因此它正确呈现在设计时和运行时，以及如何创建可以在设计时设置的属性。_
+# <a name="using-custom-controls-with-the-ios-designer"></a>与 iOS 设计器一起使用的自定义控件
 
 ## <a name="requirements"></a>要求
 
@@ -29,7 +28,7 @@ Xamarin 设计器中为 iOS 是针对 Mac 和 Visual Studio 2015 和 2017 Window
 > 在 Xamarin.Studio 5.5 中启动，在其中创建自定义控件的方法是到早期版本略有不同。 若要创建自定义控件，或者`IComponent`界面是必需 （使用相关的实现方法中） 或的类可以是使用批注`[DesignTimeVisible(true)]`。 在下面的演练示例正在使用后一种方法。
 
 
-1. 创建新的解决方案从**iOS > 应用程序 > 单视图应用程序 > C#**模板，将其命名为`ScratchTicket`，并继续完成新项目向导：
+1. 创建新的解决方案从**iOS > 应用程序 > 单视图应用程序 > C#** 模板，将其命名为`ScratchTicket`，并继续完成新项目向导：
 
     [![](ios-designable-controls-walkthrough-images/01new.png "创建新的解决方案")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 

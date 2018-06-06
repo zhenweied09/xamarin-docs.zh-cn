@@ -1,21 +1,20 @@
 ---
-title: 在代码中创建 iOS 用户界面
-description: Xamarin.iOS 提供两种方法创建用户界面为你的应用 – 与 Xamarin 设计器或在代码的 iOS。 本文介绍如何在代码中完全创建 iOS 用户界面。 它演示如何从项目模板可通过从 UIKit 创建视图的层次结构生成控制器中的应用程序屏幕启动。 然后介绍了如何创建可在控制器中加载的自定义视图。
+title: 在 Xamarin.iOS 中的代码中创建 iOS 用户界面
+description: 本文档介绍如何使用代码生成一个 Xamarin.iOS 应用程序的用户界面。 它讨论视图控制器，生成查看层次结构，处理旋转、 和的详细信息。
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: e2f377b11cfb1ff5027cc704de694184d2208c97
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 5e8abc2cea2e2ca8abfada8bc85379d93d183768
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784629"
 ---
-# <a name="creating-ios-user-interfaces-in-code"></a>在代码中创建 iOS 用户界面
-
-_Xamarin.iOS 提供两种方法创建用户界面为你的应用 – 与 Xamarin 设计器或在代码的 iOS。本文介绍如何在代码中完全创建 iOS 用户界面。它演示如何从项目模板可通过从 UIKit 创建视图的层次结构生成控制器中的应用程序屏幕启动。然后，它还讨论了如何在控制器中创建可加载的自定义视图。_
+# <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>在 Xamarin.iOS 中的代码中创建 iOS 用户界面
 
 IOS 应用程序的用户界面类似 storefront – 应用程序通常中获取一个窗口中，但它可以用填充窗口需要它的多个对象，以及可以根据应用程序想要显示更改的对象和布局。 此情形中的对象（用户看到的内容）称为视图。 若要生成应用程序中的单个屏幕，视图会堆叠在内容视图层次结构，并由单个视图控制器管理层次结构。 具有多个屏幕的应用程序具有多个内容视图层次结构（各自具有自己的视图控制器），应用程序会将视图置于窗口中以基于用户所处的屏幕创建不同的内容视图层次结构。
 

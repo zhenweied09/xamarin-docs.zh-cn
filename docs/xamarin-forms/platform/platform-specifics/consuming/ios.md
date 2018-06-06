@@ -6,12 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: cc6cb282565e08f7ce4401e5317fba518a74a8f3
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 762a604186cf8657ce2f3732081cd82612b1b7ef
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732991"
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台细节
 
@@ -29,6 +30,7 @@ _平台细节，可以使用提供功能，仅在特定平台上，而无需实�
 - 在上设置状态条可见性[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)。 有关详细信息，请参阅[页上设置状态条可见性](#set_status_bar_visibility)。
 - 控制是否[ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/)处理触摸手势或将其传递给其内容。 有关详细信息，请参阅[延迟收尾 ScrollView 的内容工作](#delay_content_touches)。
 - 在上设置的分隔符样式[ `ListView` ](xref:Xamarin.Forms.ListView)。 有关详细信息，请参阅[设置 ListView 分隔符样式](#listview-separatorstyle)。
+- 禁用上支持的旧配色模式[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)。 有关详细信息，请参阅[禁用旧配色模式](#legacy-color-mode)。
 
 <a name="blur" />
 
@@ -506,6 +508,47 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 > [!NOTE]
 > 一旦分隔符样式设置为`FullWidth`，不能将其改回`Default`在运行时。
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>禁用旧配色模式
+
+Xamarin.Forms 视图的某些功能旧配色模式。 在此模式下，当[ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled)视图的属性设置为`false`，查看将覆盖由具有已禁用状态的默认本机颜色用户设置的颜色。 向后兼容性，这种旧颜色模式保持受支持的视图的默认行为。
+
+此特定于平台的禁用旧颜色此模式下，以便用户在视图上设置的颜色保持，即使禁用的视图。 设置使用在 XAML 中[ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty)附加到属性`false`:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                ios:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+_legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
+```
+
+`VisualElement.On<iOS>`方法指定此特定于平台的将仅在 iOS 上运行。 [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement},System.Boolean))方法，请在[ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)命名空间，用于控制是否禁用旧配色模式。 此外， [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.VisualElement}))方法可以用于返回是否禁用旧配色模式。
+
+结果是，则可以禁用旧配色模式，以便用户在视图上设置的颜色甚至保持禁用视图时：
+
+![](ios-images/legacy-color-mode-disabled.png "旧颜色模式被禁用")
+
+> [!NOTE]
+> 设置时[ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup)在视图中，完全忽略旧配色模式。 可视状态有关的详细信息，请参阅[Xamarin.Forms 视觉状态管理器](~/xamarin-forms/user-interface/visual-state-manager.md)。
 
 ## <a name="summary"></a>总结
 

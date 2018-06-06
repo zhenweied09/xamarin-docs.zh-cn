@@ -1,15 +1,17 @@
 ---
 title: 步骤 1。 注册应用程序，以便使用 Azure Active Directory
+description: 本文档介绍如何使用 Azure Active Directory 注册 Azure 应用程序，以便它可以由移动客户端安全地访问。
 ms.prod: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: bac26d47c0500de138efb0ebdf98b247d7b26fcf
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7f1e743eea81edc0aa45b49f6acb6a9fd461bc80
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780664"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>步骤 1。 注册应用程序，以便使用 Azure Active Directory
 

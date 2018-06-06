@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Mac 错误消息 (mmp)
-description: Mmp 错误参考指南。
+description: 本文档列出了由 mmp，用来打包到可执行的 Mac 应用程序的已编译程序的集的工具生成的错误。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
@@ -8,11 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 7f0d40e4adb16e47db18d0796afa42c66af096ce
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f5cf4a9003d3fb468ffcf337c33730cb12238c44
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792750"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 错误消息 (mmp)
 

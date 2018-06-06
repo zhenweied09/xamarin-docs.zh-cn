@@ -1,15 +1,17 @@
 ---
 title: Android 入门
+description: 本文档介绍如何开始使用.NET 嵌入 Android。 它讨论安装.NET 嵌入，创建一个 Android 库项目，使用生成的输出在 Android Studio 项目和其他注意事项。
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 57bedba786de82094ef43a6982d2df1bcab1de9c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6fbd46578f07692f266d97279031f1893bb96a1f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793912"
 ---
 # <a name="getting-started-with-android"></a>Android 入门
 
@@ -281,6 +283,6 @@ dependencies {
 * [致力于开放源代码项目](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [错误代码和描述](~/tools/dotnet-embedding/errors.md)
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [天气示例 (Android)](https://github.com/jamesmontemagno/embeddinator-weather)

@@ -1,21 +1,20 @@
 ---
-title: 演练-使用后台传输服务和 NSURLSession
-description: 在本演练中，我们使用后台传输服务和 NSURLSession API 可以启动下载继续下载在后台应用程序时的大图像。
+title: 后台传输和在 Xamarin.iOS NSURLSession
+description: 本文档提供的演练，演示如何使用后台传输和 NSUrlSession 启动下载的大图像，并当应用程序放置在后台继续该下载。
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 51e1ae0a4314d0b23ec9e3236656321bd3dcb4e4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 08a0ba1337c0d28d1f0d60d04394ccaf4a9ccfc7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783734"
 ---
-# <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>演练-使用后台传输服务和 NSURLSession
-
-_在本演练中，我们使用后台传输服务和 NSURLSession API 可以启动下载继续下载在后台应用程序时的大图像。_
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>后台传输和在 Xamarin.iOS NSURLSession
 
 后台传输可由配置背景`NSURLSession`和排上载或下载任务。 如果任务完成应用程序已 backgrounded、 挂起，或者终止时，iOS 将通过调用完成处理程序中应用程序的通知应用程序*AppDelegate*。 下图演示这一操作中：
 

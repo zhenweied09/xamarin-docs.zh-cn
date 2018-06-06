@@ -1,18 +1,20 @@
 ---
-title: 限制
+title: Xamarin.iOS 的限制
+description: 本文档介绍的 Xamarin.iOS，讨论泛型和泛型子类 NSObjects、 P/Invokes 在泛型对象，以及更多的限制。
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/09/2018
-ms.openlocfilehash: 8bd4ce464adf316517e2e1f2299006913bc68736
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 8eb2cd5a749beab6f089479f5992fe3fbc16dd0a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786224"
 ---
-# <a name="limitations"></a>限制
+# <a name="limitations-of-xamarinios"></a>Xamarin.iOS 的限制
 
 由于使用 Xamarin.iOS iPhone 上的应用程序编译为静态的代码，则不可以使用任何需要在运行时代码生成的功能。
 
@@ -103,7 +105,7 @@ System.Reflection 缺乏。 **发出**意味着没有取决于运行时代码生
 -  远程处理的 TransparentProxy 或任何其他会导致运行时动态生成代码的内容。 
 
 
- **重要说明：**不要混淆**Reflection.Emit**与**反射**。 Reflection.Emit 即将动态生成代码，并且具有该代码 JITed 和编译为本机代码。 由于 iPhone （没有 JIT 编译） 上的限制不是支持此。
+ **重要说明：** 不要混淆**Reflection.Emit**与**反射**。 Reflection.Emit 即将动态生成代码，并且具有该代码 JITed 和编译为本机代码。 由于 iPhone （没有 JIT 编译） 上的限制不是支持此。
 
 但是，整个反射 API，包括 Type.GetType ("someClass") 列出方法，列出提取属性和值的属性，就可以正常工作。
 

@@ -1,18 +1,19 @@
 ---
-title: 共享的项目
+title: 使用共享项目来共享代码
 description: 共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。 该代码编译为每个引用的项目的一部分，并可以包含有助于将特定于平台的功能合并到基本共享的代码的编译器指令。
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2910ada16aad2d8cb19cf0ee3a059c7df22b630e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 749daac36cce26c9d24d04b89e933aab994791b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781798"
 ---
-# <a name="shared-projects"></a>共享的项目
+# <a name="using-shared-projects-to-share-code"></a>使用共享项目来共享代码
 
 _共享的项目中，可以编写大量不同的应用程序项目的引用的常见代码。该代码编译为每个引用的项目的一部分，并可以包含有助于将特定于平台的功能合并到基本共享的代码的编译器指令。_
 

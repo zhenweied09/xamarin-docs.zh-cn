@@ -1,22 +1,22 @@
 ---
 redirect_url: /xamarin/cross-platform/internals/available-assemblies/
-title: 内部机制
-description: Xamarin Sdk 的内部工作情况的详细信息。
+title: Xamarin – 内部机制
+description: 此文档链接到指南描述 Xamarin 的内部工作原理。 目前，它链接到可用的程序集文档。
 ms.prod: xamarin
 ms.assetid: 0bec99a9-ab79-4f10-8d7b-35f9338c0728
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: e02d8552f841071f920c12928b9285231cb74834
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d7c001023cd1f29ac85659235b5954dc8d054562
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780040"
 ---
-# <a name="internals"></a>内部机制
+# <a name="xamarin--internals"></a>Xamarin – 内部机制
 
 本部分包含文档，其中解释一些更高级的跨平台应用程序功能和概念。
-
 
 ## <a name="available-assembliescross-platforminternalsavailable-assembliesmd"></a>[可用程序集](~/cross-platform/internals/available-assemblies.md)
 

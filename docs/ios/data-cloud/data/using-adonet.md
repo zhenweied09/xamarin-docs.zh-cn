@@ -1,18 +1,20 @@
 ---
-title: 使用 ADO.NET 和 iOS
+title: 使用 ADO.NET 和 Xamarin.iOS
+description: 本文档介绍如何使用 ADO.NET 作为一种方法来访问 SQLite Xamarin.iOS 应用程序中。 它讨论了程序集引用、 Mono.Data.Sqlite 和 BasicDataAccess 示例。
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7d8478c363da1e4362a8a837dafba7f9cf85872e
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 8240e3052b4deb4bfdf0ec94e67fbd6827a34dab
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784824"
 ---
-# <a name="using-adonet-with-ios"></a>使用 ADO.NET 和 iOS
+# <a name="using-adonet-with-xamarinios"></a>使用 ADO.NET 和 Xamarin.iOS
 
 Xamarin 提供内置支持可在 iOS 中，公开使用熟悉的类似于 ADO.NET 的语法上的 SQLite 数据库。 使用这些 Api 需要你编写 SQL 语句处理的 SQLite，如`CREATE TABLE`，`INSERT`和`SELECT`语句。
 
@@ -30,7 +32,7 @@ Xamarin 提供内置支持可在 iOS 中，公开使用熟悉的类似于 ADO.NE
 
 -----
 
-右键单击**引用 > 编辑引用...**然后单击以选择所需的程序集。
+右键单击**引用 > 编辑引用...** 然后单击以选择所需的程序集。
 
 ## <a name="about-monodatasqlite"></a>有关 Mono.Data.Sqlite
 

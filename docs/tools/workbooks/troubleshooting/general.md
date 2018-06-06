@@ -1,14 +1,16 @@
 ---
 title: 已知的问题和解决方法
+description: 本文档介绍了 Xamarin 的工作簿的已知的问题和解决方法。 它讨论 CultureInfo 问题、 JSON 问题和的详细信息。
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794028"
 ---
 # <a name="known-issues--workarounds"></a>已知的问题和解决方法
 
@@ -56,7 +58,7 @@ Newtonsoft.Json 10 已发布了可解除了一个依赖于版本的工作簿冲�
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>SkiaSharp 呈现器中工作簿 1.3 丢失了
 
-从工作簿 1.3 开始，我们已经删除了我们发运 SkiaSharp 呈现器在工作簿 0.99.0，为了支持 SkiaSharp 本身提供的呈现器，请使用我们 [SDK] [/ 参考线/跨-平台/工作簿/sdk /]。
+从工作簿 1.3 开始，我们已经删除了我们发运 SkiaSharp 呈现器在工作簿 0.99.0，为了 SkiaSharp 本身提供的呈现器，请使用支持我们[SDK](~/tools/workbooks/sdk/index.md)。
 
 ### <a name="workaround"></a>解决方法
 

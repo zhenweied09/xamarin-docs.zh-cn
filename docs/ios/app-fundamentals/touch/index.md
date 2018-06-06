@@ -1,22 +1,20 @@
 ---
-title: 触摸
-description: 许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。 这种交互并不只限于简单触摸检测 – 可以使用手势以及。 例如，捏合缩放手势是很常见的示例 – 挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南将检查触控和手势在 iOS 中。
+title: 处理触摸 Xamarin.iOS 应用程序中
+description: 此文档链接到指南描述如何使用触摸、 多点触控、 笔势和 3D Touch Xamarin.iOS 应用程序中。
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb8dce8b13345c13a6f95ae7784bd135e7d1f1f5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784152"
 ---
-# <a name="touch"></a>触摸
-
-_许多现有设备上的触摸屏允许用户快速、 高效地交互与设备自然和直观的方式。这种交互并不只限于简单触摸检测 – 可以使用手势以及。例如，捏合缩放手势是很常见的示例 – 挤压用户可以放大或缩小的两个手指屏幕的一部分。本指南将检查触控和手势在 iOS 中。_
-
+# <a name="handling-touch-in-xamarinios-apps"></a>处理触摸 Xamarin.iOS 应用程序中
 
 与其他移动平台，iOS 有多种方式来处理触摸屏输入。 它可以支持多点触控 — 在屏幕上的联系人的许多点-和复杂的笔势。 本指南介绍一些概念，以及在 iOS 上实施触控和手势 particularities。
 
@@ -38,8 +36,6 @@ iOS 封装在触摸数据`UITouch`类，该类将提供给应用程序可以通�
 
 * [3D Touch](~/ios/platform/3d-touch.md)
 * [提供 Haptic 反馈](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## <a name="related-links"></a>相关链接
 

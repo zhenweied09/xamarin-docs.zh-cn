@@ -1,21 +1,20 @@
 ---
-title: 使用集合视图
-description: 本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。
+title: 使用 tvOS Xamarin 中的集合视图
+description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的集合视图。 它介绍集合视图布局，正在创建单元格和补充视图，响应用户事件和的详细信息。
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b411ac6bb8d1492511f9e5d2234731ae64c3a82
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789273"
 ---
-# <a name="working-with-collection-views"></a>使用集合视图
-
-_本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。_
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>使用 tvOS Xamarin 中的集合视图
 
 集合视图内容的一组允许要使用任意布局显示。 使用内置支持，它们允许对于轻松创建类似网格或线性布局，同时还支持自定义布局。
 

@@ -1,17 +1,19 @@
 ---
-title: OBJECTIVE-C 的选择器
+title: Objective C 中 Xamarin.iOS 的选择器
+description: 本文档讨论了如何与从 C# 的 OBJECTIVE-C 的选择器进行交互。 它描述如何以调用选择器和执行此操作时必须考虑的技术注意事项。
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60f107bda29b351c119f5702b0ca797d7d16b0b1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25276851879ba828361d3236cbf7896cf748588c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787032"
 ---
-# <a name="objective-c-selectors"></a>OBJECTIVE-C 的选择器
+# <a name="objective-c-selectors-in-xamarinios"></a>Objective C 中 Xamarin.iOS 的选择器
 
 Objective C 语言基于*选择器*。 选择器是一条消息，可以发送到对象或*类*。 [Xamarin.iOS](~/ios/internals/api-design/index.md)图实例于实例方法的选择器和类选择器与静态方法。
 
@@ -141,7 +143,7 @@ Apple 的文档中列出的选择器名称。 例如， [UIKit NSString 扩展�
 
 <a name="Calling_objc_msgSend()" />
 
-### <a name="calling-objcmsgsend"></a>Calling objc_msgSend()
+### <a name="calling-objcmsgsend"></a>调用 objc_msgSend()
 
  `objc_msgSend()` 用于向对象发送消息 （选择器）。 此系列函数采用至少两个必需的参数： 选择器目标 （实例或处理的类） 的选择器本身，，然后所需的特定的选择器的任何自变量。 实例和选择器的参数必须为`System.IntPtr`，并且所有剩余的自变量必须与匹配的类型选择器要求，例如`nint`为`int`，或`System.IntPtr`所有`NSObject`-派生类型。 使用[NSObject.Handle](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)属性来获取`IntPtr`Objective C 类型实例。
 

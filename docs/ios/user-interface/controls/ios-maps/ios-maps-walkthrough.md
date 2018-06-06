@@ -1,5 +1,5 @@
 ---
-title: 批注和覆盖层
+title: 批注和 Xamarin.iOS 中的图像覆盖
 description: 本文提供了演示如何使用地图工具包的批注和覆盖功能的分步演练。 它演示如何向 Xamarin 发展 2013年大会，位置显示一个批注和覆盖区上的应用程序中添加地图。
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 9defbade6fafefb26d87e88665c491b3a559c1ae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7d224f034afc9b841bbf82b2b15b92db2d7820c7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789575"
 ---
-# <a name="annotations-and-overlays--walkthrough"></a>批注和覆盖层 – 演练
+# <a name="annotations-and-overlays-in-xamarinios"></a>批注和 Xamarin.iOS 中的图像覆盖
 
 我们将在本演练中生成应用程序如下所示：
 

@@ -1,19 +1,20 @@
 ---
-title: CoreML 简介
-description: 机器学习有关 iOS 11 上的移动应用
+title: 在 Xamarin.iOS CoreML 简介
+description: 本文档介绍 CoreML，这样在 iOS 上的机器学习。 本文档讨论了如何开始使用 CoreML 以及如何使用愿景 framework。
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 412a534829349dbbc3f3b76b166882fa6e0e1cd1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b893fe5e56cc2d43a71870ffbbd20f0b8c6cfd18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787489"
 ---
-# <a name="introduction-to-coreml"></a>CoreML 简介
+# <a name="introduction-to-coreml-in-xamarinios"></a>在 Xamarin.iOS CoreML 简介
 
 _机器学习有关 iOS 11 上的移动应用_
 
@@ -34,7 +35,7 @@ CoreML 使到 iOS 的机器学习 – 应用可以利用训练的机器学习模
 
 ### <a name="1-add-the-model-to-the-project"></a>1.向项目添加模型
 
-添加编译后的模型 (具有的目录**.modelc**扩展) 到**资源**项目目录。 目录的内容应具有生成操作的**BundleResource**:
+添加编译后的模型 (具有的目录 **.modelc**扩展) 到**资源**项目目录。 目录的内容应具有生成操作的**BundleResource**:
 
 ![该资源文件夹应包含编译后的模型](coreml-images/resources-modelc.png)
 
@@ -45,7 +46,7 @@ xcrun coremlcompiler compile {model.mlmodel} {outputFolder}
 ```
 
 > [!NOTE]
-> **.model**文件_必须_编译为**.modelc**它们可以由 CoreML 之前
+> **.model**文件_必须_编译为 **.modelc**它们可以由 CoreML 之前
 
 ### <a name="2-load-the-model"></a>2.加载模型
 

@@ -1,23 +1,20 @@
 ---
-title: 使用文本和搜索字段
-description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的文本和搜索字段。
+title: 使用 tvOS Xamarin 搜索字段和文本
+description: 本文档介绍如何使用文本和搜索字段中使用 Xamarin 生成的 tvOS 应用。 它提供的文本和搜索字段的高级概述，并讨论键盘、 情节提要集成、 搜索数据模型，以及的详细信息。
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bf71df62bd6ffd88f42d31809444cd7b3350b66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789717"
 ---
-# <a name="working-with-text-and-search-fields"></a>使用文本和搜索字段
-
-_本文介绍如何设计和使用在 Xamarin.tvOS 应用内的文本和搜索字段。_
-
-
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>使用 tvOS Xamarin 搜索字段和文本
 
 在需要时，Xamarin.tvOS 应用程序可以请求小段文字用户 （例如用户 Id 和密码） 使用的文本字段和屏幕键盘：
 

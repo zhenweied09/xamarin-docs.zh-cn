@@ -1,18 +1,20 @@
 ---
-title: 更新在后台应用程序
+title: 更新在后台 Xamarin.iOS 应用程序
+description: 本文档介绍通过多种方式来更新的 Xamarin.iOS 应用程序是在后台，如区域监视、 背景提取和远程通知。
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 370d1cba71fa695e4e01dfb93241536a8df01b11
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 973c18528eee2096b29ba86e82ceff31ecf3e207
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784060"
 ---
-# <a name="updating-an-application-in-the-background"></a>更新在后台应用程序
+# <a name="updating-a-xamarinios-app-in-the-background"></a>更新在后台 Xamarin.iOS 应用程序
 
 后台刷新是唤醒的应用程序已挂起或未运行，并使用新内容对其进行更新的过程。 iOS 提供刷新内容在后台的三个选项：
 

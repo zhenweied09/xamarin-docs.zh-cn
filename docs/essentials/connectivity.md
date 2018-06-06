@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials 连接
-description: 连接类允许您监视设备的网络条件中的更改，请检查当前的网络访问权限，以及当前连接方式。
+title: Xamarin.Essentials： 连接
+description: Xamarin.Essentials 中的连接类允许您监视设备的网络条件中的更改，请检查当前的网络访问权限，以及如何当前连接。
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: d2184f1e9817b473eac1d0b69a7637bc862de4cf
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 54c165e15e725caaecb1573b74cfe295170db141
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782861"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials 连接
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials： 连接
 
 ![预发行 NuGet](~/media/shared/pre-release.png)
 

@@ -1,15 +1,17 @@
 ---
 title: 第 6-部分测试和应用商店审批
+description: 本文档介绍如何测试跨平台应用程序设备上的、 管理测试用例、 自动测试、 运行单元测试和完成应用程序提交过程。
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: cae577ffb901f4c1196b0e997561825526409117
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 0faf7c9e4ff7c96cdfd25ab6d6658726ef247b32
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781642"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>第 6-部分测试和应用商店审批
 

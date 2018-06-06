@@ -1,20 +1,19 @@
 ---
-title: 文档选取器
-description: 文档选取器视图控制器授予用户对应用程序的沙箱以外的文件的访问权限。 它是用于共享文档应用之间的简单机制。 它还使更复杂的工作流，因为用户可以编辑与多个应用程序的单个文档。 本文介绍了如何在 Xamarin.iOS 应用程序中使用文档选取器和支持它所需的 iCloud 文档中的更改。
+title: 在 Xamarin.iOS 的文档选取器
+description: 本文档介绍 iOS 文档选取器，并讨论如何在 Xamarin.iOS 中使用它。 它将探讨 iCloud、 文档、 公共安装程序代码、 文档提供程序扩展，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786881"
 ---
-# <a name="document-picker"></a>文档选取器
-
-_文档选取器视图控制器授予用户对应用程序的沙箱以外的文件的访问权限。它是用于共享文档应用之间的简单机制。它还使更复杂的工作流，因为用户可以编辑与多个应用程序的单个文档。本文介绍了如何在 Xamarin.iOS 应用程序中使用文档选取器和支持它所需的 iCloud 文档中的更改。_
+# <a name="document-picker-in-xamarinios"></a>在 Xamarin.iOS 的文档选取器
 
 文档选取器允许应用之间共享的文档。 这些文档可能 iCloud 中或以不同应用程序的目录存储。 通过的一套共享文档[文档提供程序扩展](~/ios/platform/extensions.md)用户在已安装在其设备上。 
 
@@ -39,7 +38,7 @@ _文档选取器视图控制器授予用户对应用程序的沙箱以外的文�
 -  iOS 设备可以访问的 Mac OS iCloud 文件夹的内容。
 
 > [!IMPORTANT]
-> Apple[提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)以帮助开发人员正确地处理欧盟的常规数据保护法规 (GDPR)。
+> Apple [提供工具](https://developer.apple.com/support/allowing-users-to-manage-data/)，用于帮助开发人员正确处理欧盟一般数据保护条例 (GDPR)。
 
 ## <a name="what-is-a-document"></a>什么是文档？
 

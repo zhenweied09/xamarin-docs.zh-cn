@@ -1,19 +1,21 @@
 ---
-title: Monogame
+title: Monogame Framework
+description: 本文档链接到描述使用 MonoGame 游戏开发的各种指南： 概述、 提到 3D 图形和游戏，并查看特定于平台的注意事项。
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 8c5256f3e8f6a617362fe6721a0eaff897297100
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 1c398b7d20a8c28001c2f3371dd792ed4b017a5f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783117"
 ---
-# <a name="monogame"></a>Monogame
+# <a name="monogame-framework"></a>Monogame Framework
 
-MonoGame 是一种高效、 灵活的、 跨平台 API，用于开发 2D 和 3D 游戏。 它为许多跨平台游戏引擎提供了基础，但可以不在游戏引擎正在包装的情况下在游戏中直接使用。
+MonoGame 是用于开发 2D 和 3D 游戏的高效的、 灵活的、 跨平台的 API。 它为许多跨平台游戏引擎提供了基础，但可以不在游戏引擎正在包装的情况下在游戏中直接使用。
 
 ## <a name="introduction-to-game-development-with-monogamegraphics-gamesmonogameintroductionindexmd"></a>[使用 MonoGame 游戏开发简介](~/graphics-games/monogame/introduction/index.md)
 

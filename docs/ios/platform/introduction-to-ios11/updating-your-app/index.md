@@ -1,21 +1,20 @@
 ---
 title: 更新应用到 iOS 11
-description: 浏览 iOS 11 的新功能
+description: 此文档链接到各种参考线，用于描述可供与 iOS 11 新版 Xamarin.iOS 开发人员的新功能。 例如，visual 设计更新，应用商店更改，并应用程序图标更新。
 ms.prod: xamarin
 ms.assetid: EC809504-9CF6-4949-B6EE-36384297E744
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2581f729d85787021763f50f005e84d6bbb5db01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea57acbd6165f7b1abd8b9bd69873670c179f411
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787567"
 ---
 # <a name="updating-your-app-to-ios-11"></a>更新应用到 iOS 11
-
-_浏览 iOS 11 的新功能_
 
 在 iOS 11 中，体系结构更新、 新的可视更改和更新的 iTunes Connect 过程引入了 Apple。 本指南探讨了上述每项更改，从而帮助你获取更新适用于 iOS 11 你 Xamarin.iOS 应用程序。
 

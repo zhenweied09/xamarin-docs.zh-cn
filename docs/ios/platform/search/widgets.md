@@ -1,22 +1,22 @@
 ---
-title: 搜索和主屏幕小组件增强功能
-description: 本文介绍如何 Apple iOS 10 中的小组件系统对所做的增强功能。
+title: 搜索和主页屏幕小组件中的增强功能 iOS 10
+description: 本文档介绍 Apple iOS 10，包括对搜索和主屏幕小组件的更新中的小组件对所做的增强功能。
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e7a64738f29ab2b5c62659d721beb50db7c9adb5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8383f167f8c85459e996b83368281fa243317948
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788106"
 ---
-# <a name="search-and-home-screen-widget-enhancements"></a>搜索和主屏幕小组件增强功能
+# <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>搜索和主页屏幕小组件中的增强功能 iOS 10
 
 _本文介绍如何 Apple iOS 10 中的小组件系统对所做的增强功能。_
-
 
 Apple 引入了对小组件系统以确保小组件显示 10 锁定屏幕新的 iOS 存在任何背景上很好多项增强。 此外，小组件现在包含[NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode)属性，允许开发人员描述了多少内容是否可用并允许用户可以展开和折叠内容。
 

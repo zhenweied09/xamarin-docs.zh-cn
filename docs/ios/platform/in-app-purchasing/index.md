@@ -1,21 +1,19 @@
 ---
-title: 应用内购买
-description: iOS 应用程序可以销售数字产品和服务使用应用商店工具包 Api。 创建和管理在 iTunes Connect 门户产品。 Apple 管理事务处理和批准所有产品，然后他们可以销售，并收取每个事务 （当前 30%) 的费用。 Apple 要求你使用的应用程序，任何数字销售应用内购买，但不能将其用于销售的商品物理或非数字服务。 应用程序提供数字产品和服务的备用支付选项很可能被拒绝。 本文档介绍如何配置应用程序使用应用商店工具包，并提供的最常见的应用内购买情况的 Xamarin.iOS 示例。
+title: 应用内购买 Xamarin.iOS 中
+description: 本文档介绍如何销售数字产品和服务使用 StoreKit Api。 它链接到指南讨论了配置、 耗材、 非耗材产品、 事务、 订阅和的详细信息。
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8a41ed44a331c91a333b95c1d62136244a6945dd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787336"
 ---
-# <a name="in-app-purchasing"></a>应用内购买
-
-_iOS 应用程序可以销售数字产品和服务使用应用商店工具包 Api。创建和管理在 iTunes Connect 门户产品。Apple 管理事务处理和批准所有产品，然后他们可以销售，并收取每个事务 （当前 30%) 的费用。Apple 要求你使用的应用程序，任何数字销售应用内购买，但不能将其用于销售的商品物理或非数字服务。应用程序提供数字产品和服务的备用支付选项很可能被拒绝。本文档介绍如何配置应用程序使用应用商店工具包，并提供的最常见的应用内购买情况的 Xamarin.iOS 示例。_
-
+# <a name="in-app-purchasing-in-xamarinios"></a>应用内购买 Xamarin.iOS 中
 
 iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 由与 Apple 的服务器的通信的 iOS 进行金融交易用户通过其 Apple id。 没有用户界面组件 – StoreKit Api 是主要关心检索产品信息和执行事务。 实现应用内购买的应用程序必须构建其自己的用户界面，并跟踪已购买的项替换为用于向用户提供的必需的产品或服务的自定义代码。
 
@@ -27,9 +25,7 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 -  **构建用户界面和产品本身**– 必须实现的产品，包括跟踪每个购买和备份/还原它们如果相应的机制。
 -  **监视销售和接收资金**– 使用通过 iTunes Connect 提供的信息来监视销售趋势和跟踪你收入。
 
-
 本文档说明如何完成所有这些步骤，以提供使用 Xamarin.iOS 的应用内购买。
-
 
 ## <a name="requirements"></a>要求
 
@@ -39,7 +35,7 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 
  * [应用内购买基本知识和配置](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [存储工具包概述和检索产品信息](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [StoreKit 概述和检索产品信息](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
  * [购买易耗型产品](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
@@ -48,7 +44,6 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
  * [事务和验证](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
  * [订阅和报告](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
-
 
 ## <a name="summary"></a>总结
 

@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
-ms.date: 10/27/2017
-ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 06/03/2018
+ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793870"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -289,13 +290,15 @@ Xamarin 探查器的定义如下所示的五个部分组成：
 
 ### <a name="cycles"></a>循环
 
-通过使用 C# 和 F # 托管代码，它可以是很常见，和遗憾的是很容易创建对将永远无法释放的对象的引用。 此 intrument 可以找出这些对象，并显示在你的应用程序中引用的周期。
+通过使用 C# 和 F # 托管代码，它可以是很常见，和遗憾的是很容易创建对将永远无法释放的对象的引用。 此检测可以找出这些对象，并显示在你的应用程序中引用的周期。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
+[![周期检测](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![周期检测](images/cycles-vs.png)](images/time1-vs.png#lightbox) 
+[![周期检测](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
 -----
 

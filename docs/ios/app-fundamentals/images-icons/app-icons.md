@@ -1,21 +1,20 @@
 ---
-title: 应用程序图标
-description: 此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，要用作应用程序图标。
+title: 在 Xamarin.iOS 应用程序图标
+description: 本文档介绍如何使用在 Xamarin.iOS 的各种应用程序图标： 本身的应用程序图标、 Spotlight 图标、 设置图标和 iTunes 图片。
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783992"
 ---
-# <a name="application-icons"></a>应用程序图标
-
-_此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，要用作应用程序图标。_
+# <a name="application-icons-in-xamarinios"></a>在 Xamarin.iOS 应用程序图标
 
 将详细介绍以下主题：
 
@@ -45,7 +44,7 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **iPhone: iOS 9 和 10 (iPhone 6 和 7 加上)**
 
-    ||3x|
+    ||3 倍|
     |---|---|
     |应用程序图标|180x180|
     |Spotlight|120x120|
@@ -53,7 +52,7 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **iPhone: iOS 7 和 8**
 
-    ||1x|2x|
+    ||1 x|2x|
     |---|---|---|
     |应用程序图标|60x60<sup>1</sup>|120x120|
     |Spotlight|40x40<sup>2</sup>|80x80|
@@ -61,15 +60,15 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **iPhone: iOS 5 和 6**
 
-    ||1x|2x|
+    ||1 x|2x|
     |---|---|---|
     |应用程序图标|57x57|114x114|
     |Spotlight|29x29|58x58|
-    |设置|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+    |设置|29 x 29<sup>3，4</sup>|58x58<sup>3，4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>iPad 图标大小
 
-- **iPad: iOS 9 & 10**
+- **iPad: iOS 9 和 10**
 
     ||2 x (iPad Pro)|
     |---|---|
@@ -79,7 +78,7 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **iPad: iOS 7 和 8**
 
-    ||1x|2x|
+    ||1 x|2x|
     |---|---|---|
     |应用程序图标|76x76|152x152|
     |Spotlight|40x40|80x80|
@@ -87,11 +86,11 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 - **iPad: iOS 5 和 6**
 
-    ||1x|2x|
+    ||1 x|2x|
     |---|---|---|
     |应用程序图标|72x72|144x144|
     |Spotlight|50x50|100x100|
-    |设置|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+    |设置|29 x 29<sup>3，5</sup>|58x58<sup>3，5</sup>|
 
  1. 针对 Mac 和 Xcode 这两个 Visual Studio 不再支持设置适用于 iOS 7 的 1 x 图像。
  2. 使用资产目录时，不支持设置 iOS 7 的 1 x 映像。
@@ -114,7 +113,7 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**以将其打开以进行编辑。
 2. 向下滚动到**应用图标**部分。
-3. 从**源**下拉列表中，确保**AppIcons**选择： 
+3. 从**源**下拉列表中，确保**AppIcon**选择： 
 
     ![](app-icons-images/migrate01.png "确保选择 AppIcons")
 4. 从**解决方案资源管理器**，双击`Assets.xcassets`文件以打开进行编辑： 

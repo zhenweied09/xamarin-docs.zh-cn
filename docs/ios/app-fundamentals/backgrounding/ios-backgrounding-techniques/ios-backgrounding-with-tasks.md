@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding 任务
+description: 本文档介绍如何使用后台任务来后应用程序放置在后台执行长时间运行的任务。
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 559c8ccce0ff41dccce0fdc93d6c18a1fee3db7d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a95ca128bc6de7b2adc75511a581f5d2779d9c06
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784350"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding 任务
 

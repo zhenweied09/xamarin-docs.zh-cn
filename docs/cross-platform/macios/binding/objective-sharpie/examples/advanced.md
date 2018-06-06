@@ -1,21 +1,21 @@
 ---
 title: 高级 （手动） 的真实世界示例
+description: 本文档介绍如何 xcodebuild 的输出用作目标 Sharpie，这提供了洞察目标 Sharpie 实质上的用途的输入。
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781251"
 ---
 # <a name="advanced-manual-real-world-example"></a>高级 （手动） 的真实世界示例
 
-
 **此示例使用[POP 库从 Facebook](https://github.com/facebook/pop)。**
-
 
 本部分介绍使用更高级的方法进行绑定，我们将在其中使用 Apple 的`xcodebuild`工具以首先生成 POP 项目，然后手动推导目标 Sharpie 的输入。 这实质上是包含目标 Sharpie 实质上一节中执行的操作。
 

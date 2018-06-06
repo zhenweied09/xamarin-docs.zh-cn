@@ -1,23 +1,24 @@
 ---
-title: CoreImage
-description: CoreImage 是 iOS 5 以提供图像处理和实时视频增强功能引入一个新框架。 本文介绍通过 Xamarin.iOS 示例使用这些功能。
+title: 在 Xamarin.iOS core 映像
+description: Core 映像是使用 iOS 5 以提供图像处理和实时视频增强功能引入了一个新框架。 本文介绍通过 Xamarin.iOS 示例使用这些功能。
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786627"
 ---
-# <a name="coreimage"></a>CoreImage
+# <a name="core-image-in-xamarinios"></a>在 Xamarin.iOS core 映像
 
-_CoreImage 是 iOS 5 以提供图像处理和实时视频增强功能引入一个新框架。本文介绍通过 Xamarin.iOS 示例使用这些功能。_
+_Core 映像是使用 iOS 5 以提供图像处理和实时视频增强功能引入了一个新框架。本文介绍通过 Xamarin.iOS 示例使用这些功能。_
 
-CoreImage 是中提供了多种内置筛选器和要应用于图像和视频，包括人脸检测效果的 iOS 5 引入一个新框架。
+Core 映像是中提供了多种内置筛选器和要应用于图像和视频，包括人脸检测效果的 iOS 5 引入一个新框架。
 
 本文档包含简单的示例：
 
@@ -26,7 +27,7 @@ CoreImage 是中提供了多种内置筛选器和要应用于图像和视频，�
 -  列出可用的筛选器。
 
 
-这些示例应帮助你开始将 CoreImage 功能合并到你的 Xamarin.iOS 应用程序。
+这些示例应帮助你开始将 Core 映像功能合并到你的 Xamarin.iOS 应用程序。
 
 ## <a name="requirements"></a>要求
 
@@ -34,7 +35,7 @@ CoreImage 是中提供了多种内置筛选器和要应用于图像和视频，�
 
 ## <a name="face-detection"></a>人脸检测
 
-CoreImage 表面检测功能的作用它只是说 – 它将尝试确定中照片平面并返回它可以识别任何表面的坐标。 此信息可以用于在映像中的人员的次数计数、 （如在图像上绘制指示器 为标记人在照片），或可以将任何其他内容。
+Core 映像表面检测功能的作用它只是说 – 它将尝试确定中照片平面并返回它可以识别任何表面的坐标。 此信息可以用于在映像中的人员的次数计数、 （如在图像上绘制指示器 为标记人在照片），或可以将任何其他内容。
 
 从 CoreImage\SampleCode.cs 此代码演示如何创建和使用嵌入图像上的人脸检测：
 
@@ -219,11 +220,11 @@ foreach (var filter in filters){
 
 ## <a name="summary"></a>总结
 
-本文说明了如何使用某些人脸检测和对映像应用筛选器等新 iOS 5 CoreImage framework 功能。 供你使用的框架中有多个不同的映像筛选器。
+本文说明了如何使用某些人脸检测和对映像应用筛选器等新 iOS 5 Core 映像 framework 功能。 供你使用的框架中有多个不同的映像筛选器。
 
 ## <a name="related-links"></a>相关链接
 
 - [Core 映像 （示例）](https://developer.xamarin.com/samples/CoreImage/)
 - [调整协定和亮度的映像原因之一](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [使用 CoreImage 筛选器](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [使用核心映像筛选器](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter 类引用](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

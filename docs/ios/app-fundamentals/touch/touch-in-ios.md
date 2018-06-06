@@ -1,19 +1,20 @@
 ---
-title: 请在 iOS 中按
+title: 触控事件和在 Xamarin.iOS 的手势
+description: 本文档介绍如何使用触控事件、 多点触控、 手势、 多个手势和 Xamarin.iOS 应用程序中的自定义特定动作。
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 34073474ef3ef74f2fddbf487b3377224dc1aa3e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689536"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784584"
 ---
-# <a name="touch-in-ios"></a>请在 iOS 中按
+# <a name="touch-events-and-gestures-in-xamarinios"></a>触控事件和在 Xamarin.iOS 的手势
 
 它很重要，若要了解触控事件并在 iOS 应用程序，按 Api，因为它们是与设备的所有物理交互的中心。 所有触摸交互都涉及`UITouch`对象。 在本文中，我们将了解如何使用`UITouch`类，并支持触摸其 Api。 更高版本，我们将扩展在我们的知识，若要了解如何支持手势。
 

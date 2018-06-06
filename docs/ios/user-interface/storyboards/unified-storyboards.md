@@ -1,21 +1,20 @@
 ---
-title: 统一的情节提要
-description: 统一的情节提要使 iOS 开发人员能够使用单个的情节提要，而不是多个情节提要，以涵盖的设备的屏幕大小扩展范围中创建的用户界面。 本文旨在为更深入地概述提供到 Xamarin.iOS 中统一情节提要的操作。
+title: 在 Xamarin.iOS 的统一情节提要
+description: 本文档介绍中 Xamarin.iOS 的统一情节提要。 统一的情节提要允许开发人员支持具有单个接口定义的多个屏幕大小。
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d3324a6485f2d240ec339f6ce7f03aafe51c80c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792016"
 ---
-# <a name="unified-storyboards"></a>统一的情节提要
-
-_统一的情节提要使 iOS 开发人员能够使用单个的情节提要，而不是多个情节提要，以涵盖的设备的屏幕大小扩展范围中创建的用户界面。本文旨在为更深入地概述提供到 Xamarin.iOS 中统一情节提要的操作。_
+# <a name="unified-storyboards-in-xamarinios"></a>在 Xamarin.iOS 的统一情节提要
 
 iOS 8 包括用于创建用户界面的新的、 更简单易用的机制 — 统一情节提要。 使用单个演示图板以涵盖所有不同的硬件的屏幕大小，可以在创建快速且高度可响应视图"设计的一次，使用多"样式。
 
@@ -93,7 +92,7 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 特征环境中 iOS 8 的新接口，并且能够返回特征集合以下对象：
 
 -  屏幕 ( `UIScreens` )。
--  Windows ( `UIWindows` ).
+-  Windows ( `UIWindows` )。
 -  查看控制器 ( `UIViewController` )。
 -  视图 ( `UIView` )。
 -  演示文稿控制器 ( `UIPresentationController` )。
@@ -115,7 +114,7 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 
 以下是开发人员可能会看到在 iPhone 的典型特征集合：
 
-|属性|值|
+|属性|“值”|
 |--- |--- |
 |`HorizontalSizeClass`|压缩|
 |`VerticalSizeClass`|规则|
@@ -126,7 +125,7 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 
 还有可能有一个缺少它的一些值的特征集合 (它是 Apple 指作为*未指定*):
 
-|属性|值|
+|属性|“值”|
 |--- |--- |
 |`HorizontalSizeClass`|压缩|
 |`VerticalSizeClass`|未指定|
@@ -679,7 +678,7 @@ IOS 设计器将确认开发人员想要转换的情节提要即可使用大小�
 
  [![](unified-storyboards-images/exclude05.png "元素缺少时在 iPhone 模拟器中正在运行的应用")](unified-storyboards-images/exclude05.png#lightbox)
 
-若要从元素中删除为排除用例，只需选择中的元素**设计图面**，滚动到底部**属性资源管理器**单击**-**要删除的用例旁边的按钮。
+若要从元素中删除为排除用例，只需选择中的元素**设计图面**，滚动到底部**属性资源管理器**单击**-** 要删除的用例旁边的按钮。
 
 若要查看 Unified 情节提要的实现，查看`UnifiedStoryboard`示例 Xamarin iOS 8 应用程序附加到此文档。
 

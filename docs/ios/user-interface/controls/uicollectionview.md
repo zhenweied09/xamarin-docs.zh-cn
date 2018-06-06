@@ -1,5 +1,5 @@
 ---
-title: 集合视图
+title: 在 Xamarin.iOS 的集合视图
 description: 集合视图允许使用任意布局显示内容。 它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b9ba2f885364084d6bee67c460b4831c00c7ae55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790622"
 ---
-# <a name="collection-views"></a>集合视图
+# <a name="collection-views-in-xamarinios"></a>在 Xamarin.iOS 的集合视图
 
 _集合视图允许使用任意布局显示内容。它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。_
 
@@ -139,7 +140,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>“数据源”
 
-与其他部分 iOS，如`UITableView`和`MKMapView`，`UICollectionView`获取从其数据*数据源*，这会在通过 Xamarin.iOS 中公开**`UICollectionViewDataSource`**类。 此类负责提供到内容`UICollectionView`如：
+与其他部分 iOS，如`UITableView`和`MKMapView`，`UICollectionView`获取从其数据*数据源*，这会在通过 Xamarin.iOS 中公开**`UICollectionViewDataSource`** 类。 此类负责提供到内容`UICollectionView`如：
 
 -  **单元格**– 从返回`GetCell`方法。
 -  **补充视图**– 从返回`GetViewForSupplementaryElement`方法。
@@ -686,7 +687,7 @@ namespace CollectionView
 }
 ```
 
-请注意，`DataSource`和`Delegate`上面创建时从其情节提要构造集合视图设置 (或**.xib**文件)。
+请注意，`DataSource`和`Delegate`上面创建时从其情节提要构造集合视图设置 (或 **.xib**文件)。
 
 编辑**Main.storyboard**再次文件并选择集合视图和切换到**属性**。 设置**类**到自定义`WaterfallCollectionView`我们上面定义的类：
 

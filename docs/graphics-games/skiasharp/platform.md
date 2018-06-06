@@ -1,18 +1,19 @@
 ---
-title: SkiaSharp 平台特定的详细信息
-description: 如何将 SKSurface 内容引入本机应用程序的详细信息。
+title: 特定于 SkiaSharp 平台的说明
+description: 本文档介绍与 SkiaSharp 相关的特定于平台的详细信息。 它为 iOS、 Android、 macOS、 Windows 和 Xamarin.Forms 提供了示例代码。
 ms.prod: xamarin
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 3f40c7ea0b118816b7be373617795db9158c1450
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bcec8f2c850396f45cba795555b924d3cbc4ef22
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783524"
 ---
-# <a name="platform-specific-integration"></a>特定平台的集成
+# <a name="skiasharp-platform-specific-notes"></a>特定于 SkiaSharp 平台的说明
 
 下面的示例手动分配映像缓冲区，这样做是为了演示一种常用的平台模式就是在由平台提供的现有 RBGA 缓冲区上进行绘制。
 

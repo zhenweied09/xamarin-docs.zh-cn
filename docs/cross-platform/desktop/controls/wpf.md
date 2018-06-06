@@ -1,14 +1,16 @@
 ---
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: WPF 与。Xamarin.Forms： 相似之处和差异
+description: 本文档进行对比 WPF 到 Xamarin.Forms。 它讨论控件模板、 XAML、 绑定基础结构、 数据模板、 ItemsControl、 UserControl、 导航窗格中和 URL 定位。
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: ac30a29a2b4982b2f995c9f717cf1893ca5d8b8a
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: 232ddd5ea06891c70125adc9b8bf77f3e857dbd6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781964"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 与。Xamarin.Forms： 相似之处和差异
 

@@ -1,16 +1,17 @@
 ---
 title: 手动为 Xamarin 创建 NuGet 包
-description: 此页包含可帮助生成面向 Xamarin 平台的 NuGet 包的一些提示。
+description: 本文档包含提示可帮助生成面向 Xamarin 平台的 NuGet 包。 它介绍 NuGet 包 Xamarin 配置文件，包括平台依赖项的 PCL NuGets 并链接到各种开源的示例。
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cc39ade2ccc1192461bcfa19c98b7f9925b667a0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781414"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>手动为 Xamarin 创建 NuGet 包
 
@@ -58,7 +59,6 @@ A **.nuspec**针对所有这些文件将如下所示：
 - **Xamarin.iOS10**匹配 Xamarin.iOS 1.0 和更高版本
 - **Xamarin.iOS1.0**还将匹配 Xamarin.iOS 1.0 和更高版本
 
-
 ## <a name="pcl-nugets-with-platform-dependencies"></a>PCL NuGets 包括平台依赖项
 
 PCL 配置文件有限的哪些.NET framework Api 可以访问它们，并且它们可以肯定是无法访问特定于平台的代码。 这些第三方链接讨论了不同的方法，用于创建使用 PCL 和本机 Api 来提供适用于 Xamarin 和其他平台的兼容性的 NuGet 程序包：
@@ -76,7 +76,6 @@ PCL 配置文件有限的哪些.NET framework Api 可以访问它们，并且它
 - [**ModernHttpClient** ](https://www.nuget.org/packages/modernhttpclient/) – 编写使用 System.Net.Http，对应用程序，但删除此库和它将会明显更快 (视图[源](https://github.com/paulcbetts/ModernHttpClient))。
 - [**展开**](https://www.nuget.org/packages/Splat/) – 库以使跨平台的操作应 (视图[源](https://github.com/paulcbetts/Splat))。
 - [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -用于呈现矢量图形于.NET 的跨平台库 (视图[源](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec))。
-
 
 ## <a name="related-links"></a>相关链接
 

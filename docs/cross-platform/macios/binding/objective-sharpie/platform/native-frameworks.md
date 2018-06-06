@@ -1,15 +1,17 @@
 ---
 title: 绑定本机框架
+description: 本文档介绍如何使用目标 Sharpie 的-框架选项以创建一个绑定到库分布式用作框架。
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: 219295ad9299b36a763289c4aef8e52cd859ceea
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 02ee21ce58ecf945893f7e4f94763731abe92018
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781440"
 ---
 # <a name="binding-native-frameworks"></a>绑定本机框架
 

@@ -1,20 +1,21 @@
 ---
-title: 新的搜索 Api
+title: 在 Xamarin.iOS 的搜索 Api
 description: 本文介绍如何使用 iOS 9 提供的新应用程序搜索 Api 以允许用户搜索信息和内部 Xamarin.iOS 应用程序的功能。
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5dcd3d9665befaa82fd0f5677a4a662f633ed45b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc62ad34af0b9b98f0475599a08946122badd21e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788171"
 ---
-# <a name="new-search-apis"></a>新的搜索 Api
+# <a name="search-apis-in-xamarinios"></a>在 Xamarin.iOS 的搜索 Api
 
-_本文介绍如何使用 iOS 9 提供的新应用程序搜索 Api 以允许用户搜索信息和内部 Xamarin.iOS 应用程序的功能。_
+_本文介绍如何使用 iOS 9 提供的应用程序搜索 Api 以允许用户搜索信息和内部 Xamarin.iOS 应用程序的功能。_
 
 搜索已在 iOS 9，以提供了全新的方法，以访问信息和功能在 Xamarin.iOS 应用程序中扩展。 使用新的应用程序搜索 Api，应用程序内容成为可搜索访问 Spotlight 和 Safari 搜索结果，Handoff 和 Siri 提醒和建议。 这样用户就可以快速访问活动和深层应用中的信息。
 

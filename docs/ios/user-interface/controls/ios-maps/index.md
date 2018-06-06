@@ -1,21 +1,20 @@
 ---
-title: 映射
-description: iOS 包括 MapKit 框架，可以轻松地添加将映射到应用程序。 使用地图工具包，则可以将 iOS 应用程序添加支持功能，如平移和缩放、 在地图上显示用户的位置和分层丰富图形的交互式地图。 本文深入的几项映射工具包的功能，显示如何充分利用它们来构建到应用程序的地理功能
+title: Xamarin.iOS 中的映射
+description: 本文档介绍 iOS MapKit framework 以及如何与 Xamarin.iOS 配合使用。 它讨论了如何将添加一个代码图，它，平移和缩放、 使用用户位置，将批注添加、 使用标注和覆盖层，以及执行本地搜索的样式。
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790225"
 ---
-# <a name="maps"></a>映射
-
-_iOS 包括 MapKit 框架，可以轻松地添加将映射到应用程序。使用地图工具包，则可以将 iOS 应用程序添加支持功能，如平移和缩放、 在地图上显示用户的位置和分层丰富图形的交互式地图。本文深入的几项映射工具包的功能，显示如何充分利用它们来构建到应用程序的地理功能_
+# <a name="maps-in-xamarinios"></a>Xamarin.iOS 中的映射
 
 地图是所有现代移动操作系统中的共同功能。 iOS 提供映射支持本机通过映射工具包框架。 使用地图工具包应用程序可以轻松地添加丰富、 交互式的地图。 在有许多种情况下，例如添加批注，以将标记上一个代码图，位置和覆盖的任意形状的图形中，可以自定义这些映射。 Map 工具包甚至具有用于显示设备的当前位置的内置支持。
 

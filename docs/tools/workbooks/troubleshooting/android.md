@@ -1,14 +1,16 @@
 ---
 title: 在 Android 上的故障排除 Xamarin 工作簿
+description: 本文档提供使用在 Android 上的 Xamarin 工作簿的故障排除提示。 它讨论仿真程序支持，不会加载的工作簿和其他主题。
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: cbae5439b7f83d6114024b1f7225b3aaf2a1d166
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b01fa5b67f8a7f5577c6598f63f8c38e8fa4cf3c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793972"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>在 Android 上的故障排除 Xamarin 工作簿
 

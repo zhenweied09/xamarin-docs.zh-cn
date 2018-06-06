@@ -1,18 +1,20 @@
 ---
-title: 搜索栏
+title: Xamarin.iOS 中的搜索栏
+description: 本文档介绍如何在 Xamarin.iOS 中使用搜索栏。 它讨论如何以编程方式和在情节提要中创建搜索栏。
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 4ea39f6f935adba2c035884c625c57c0039b1165
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cd78c58ecb119c437296a0befe1d319d8837edae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789920"
 ---
-# <a name="search-bar"></a>搜索栏
+# <a name="search-bars-in-xamarinios"></a>Xamarin.iOS 中的搜索栏
 
 UISearchBar 用于搜索的值列表。 
 

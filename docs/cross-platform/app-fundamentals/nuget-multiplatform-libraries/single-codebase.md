@@ -1,15 +1,17 @@
 ---
 title: NuGet 为创建新的多平台库
+description: 本文档介绍如何使用来创建多平台库为使用 NuGet。 此方法适用于业务逻辑和算法，可以表示完全在.NET 基类库和因此将在不使用特定于平台的代码的所有目标平台上运行。
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: ee508d40423e3757f7e2934b7682f840ebf8b86a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b59450ac949bffdf927475598d3678564f09f8cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781323"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet 为创建新的多平台库
 

@@ -1,21 +1,21 @@
 ---
 title: 检查器安装和要求
-description: 如何下载、 安装和使用 Xamarin 检查器。
+description: 本文档介绍如何安装 Xamarin 检查器，并讨论受支持的操作系统、 Ide，以及应用程序平台。
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793803"
 ---
 # <a name="inspector-installation-and-requirements"></a>检查器安装和要求
 
 ## <a name="download-and-installation"></a>下载和安装
-
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/09/2018
 
 ## <a name="requirements"></a>要求
 
-### <a name="supported-operating-systems"></a>支持的操作系统
+### <a name="supported-operating-systems"></a>Supported Operating Systems
 
 - **Mac** -OS X 10.11 或更高版本
 - **Windows** -Windows 7 或更高版本 (通过 Internet Explorer 11 或更高版本和.NET 4.6.1 或更高版本)
@@ -55,7 +55,6 @@ ms.lasthandoff: 05/09/2018
 |iOS （统一）|支持 XS 和 Visual Studio 中|检查在 Windows 中的 iOS 应用需要检查器还在 Mac 生成主机上安装相同的版本。|
 |Android|支持 XS 和 Visual Studio 中|必须为目标 Android > = 4.0.3，替换**fastdev**启用。<br />必须使用 Google、 Visual Studio 或 Xamarin Android 仿真程序。 Android 7 仿真程序可能不允许在此时间的检查。|
 |WPF|仅支持在 Windows 上的 Visual Studio 中|
-
 
 <a name="reporting-bugs" />
 
@@ -167,6 +166,5 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 1. 在 `"/Applications/Xamarin Workbooks.app"` 删除 Workbooks 应用
 2. 在 `"Applications/Xamarin Inspector.app"` 删除 Inspector 应用
-2. 删除加载项：`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 和 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. 在 `/Library/Frameworks/Xamarin.Interactive.framework` 和 `/Library/Frameworks/Xamarin.Inspector.framework` 删除 Inspector 和支持文件
-
+3. 删除加载项：`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 和 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. 在 `/Library/Frameworks/Xamarin.Interactive.framework` 和 `/Library/Frameworks/Xamarin.Inspector.framework` 删除 Inspector 和支持文件

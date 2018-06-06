@@ -1,19 +1,20 @@
 ---
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: 桌面开发人员的跨平台
-description: Xamarin 让你生成适用于 Windows、 Android、 iOS 和 Mac 使用 Windows 窗体或 WPF 技能应用。
+description: 此文档链接到为 WPF 和 Windows 窗体开发人员描述 Xamarin.Forms 的各种指南。 链接的内容探讨了应用程序生命周期，UI 控件，移植指南和示例。
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 0794d931dd57971efcbd0ea5b42159e3524ea6b0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 21c74b8c0ccaffb2b3b8205a3bdda9101b99f072
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779949"
 ---
 # <a name="cross-platform-for-desktop-developers"></a>桌面开发人员的跨平台
 
-本部分包含信息用于帮助 WPF 和 Windows.Forms 开发人员参考以下现有认知了解使用 Xamarin，移动应用开发，以及体验对移动语法，并提供的桌面将应用移植到移动示例。
+本部分包含帮助 WPF 和 Windows 窗体开发人员了解移动应用程序开发使用 Xamarin，请参考以下现有认知和体验对移动语法，提供的和示例移植到移动的桌面应用程序的信息。
 
 ## <a name="app-lifecycle-comparisonlifecyclemd"></a>[应用程序生命周期比较](lifecycle.md)
 

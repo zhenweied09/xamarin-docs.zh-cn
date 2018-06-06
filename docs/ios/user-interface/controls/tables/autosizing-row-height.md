@@ -1,18 +1,20 @@
 ---
-title: 自动调整行高
+title: 在 Xamarin.iOS 的自动调整行高
+description: 本文档介绍如何将其高度改变基于的内容的表视图行添加到 Xamarin.iOS 应用程序。 还讨论了在 iOS 设计器中的单元格布局和启用自动调整大小的高度。
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 73e16c3381b639645463e3e8aaeed35224b67861
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c6beb112947f5423de200fd5c8957ef28dd48f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789962"
 ---
-# <a name="auto-sizing-row-height"></a>自动调整行高
+# <a name="auto-sizing-row-height-in-xamarinios"></a>在 Xamarin.iOS 的自动调整行高
 
 从 iOS 8，Apple 增加能够创建表视图 (`UITableView`)，可以自动增加和减少基于其使用的内容自动布局、 大小类和约束大小某一给定行的高度。
 

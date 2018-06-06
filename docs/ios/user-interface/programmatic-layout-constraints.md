@@ -1,5 +1,5 @@
 ---
-title: 以编程方式布局约束
+title: 以编程方式布局中 Xamarin.iOS 的约束
 description: 本指南介绍使用 iOS 自动布局约束在 C# 代码中而不是在 iOS 设计器中创建它们。
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 093101d09f5ffff637b034b3b4794aa6e785a0df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a40a3c66369902d2d6f8dbee5a6a7e9bad8a9e05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790596"
 ---
-# <a name="programmatic-layout-constraints"></a>以编程方式布局约束
+# <a name="programmatic-layout-constraints-in-xamarinios"></a>以编程方式布局中 Xamarin.iOS 的约束
 
 _本指南介绍使用 iOS 自动布局约束在 C# 代码中而不是在 iOS 设计器中创建它们。_
 

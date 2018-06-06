@@ -1,22 +1,20 @@
 ---
-title: 使用分段控件
-description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。
+title: 使用 Xamarin 中 tvOS 分段控件
+description: 本文档介绍如何使用 tvOS 分段的控件中使用 Xamarin 构建的应用。 它讨论段图标和文本、 事件，修改控件的外观和的详细信息。
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4eac932c7fad628a0a65127bceb641f34ea5d79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8980f9fbf6996217dbcaec869e4c81598ac36552
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789234"
 ---
-# <a name="working-with-segmented-controls"></a>使用分段控件
-
-_本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。_
-
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>使用 Xamarin 中 tvOS 分段控件
 
 分段控件提供了一套线性元素，其中每个图标或文本，可以包含，用于向用户提供一组相关的选项。
 

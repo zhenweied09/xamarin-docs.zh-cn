@@ -1,21 +1,19 @@
 ---
-title: 演练： 创建使用反射 API 的应用程序
-description: 除了元素 API，MonoTouch.Dialog （保持联系D） 还包括基于属性的反射 API。 反射 API 使与保持联系创建屏幕D 简单地修饰具有属性的类。 本文提供了演练演示如何创建使用反射 API 的应用程序。
+title: 创建使用反射 API 的 Xamarin.iOS 应用程序
+description: 本文档介绍 MonoTouch.Dialog 基于属性的反射 API 的说明进行操作，这将创建 UI 基于用属性修饰的类。
 ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e56eaeccb2e09d9f1ad84245bf41e2a4bf1b56f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c60d2a8ca58fe807dc340125d0db21b6f9ddff9f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790504"
 ---
-# <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>演练： 创建使用反射 API 的应用程序
-
-_除了元素 API，MonoTouch.Dialog （保持联系D） 还包括基于属性的反射 API。反射 API 使与保持联系创建屏幕D 简单地修饰具有属性的类。本文提供了演练演示如何创建使用反射 API 的应用程序。_
-
+# <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>创建使用反射 API 的 Xamarin.iOS 应用程序
 
 MTD 反射 API 允许类是用属性修饰该保持联系D 使用自动创建的屏幕。 反射 API 提供这些类并在屏幕上显示的内容之间的绑定。 尽管此 API 不提供 API 的元素执行细化的控制，它通过自动构建出基于类修饰元素层次结构来降低复杂性。
 
@@ -36,7 +34,6 @@ MTD 反射 API 允许类是用属性修饰该保持联系D 使用自动创建的
  [![](reflection-api-walkthrough-images/01-expense-entry.png "在此示例中，我们要生成简单的数据输入屏幕，如下所示")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
-
 
 ## <a name="creating-a-class-with-mtd-attributes"></a>使用保持联系创建类D 属性
 

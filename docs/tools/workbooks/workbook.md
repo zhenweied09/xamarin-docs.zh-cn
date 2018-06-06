@@ -1,20 +1,19 @@
 ---
 title: 交互式工作簿
-description: 使用工作簿包含 C# 代码进行试验，创建实时文档教学、 培训或浏览。
+description: 本文档介绍如何使用 Xamarin 工作簿创建包含 C# 代码，动手试验、 教学、 培训，或浏览实时文档。
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: de88bbc9bc45b8a6326924d964bdd9385acb82aa
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fa79aae9af2cd90741a54a5b3abc17910fcb181d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794171"
 ---
 # <a name="interactive-workbooks"></a>交互式工作簿
-
-_使用工作簿包含 C# 代码进行试验，创建实时文档教学、 培训或浏览。_
 
 你可以作为独立应用程序，独立于 IDE 中使用工作簿。
 

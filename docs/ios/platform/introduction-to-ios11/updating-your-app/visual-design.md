@@ -1,21 +1,20 @@
 ---
-title: 可视设计更新
-description: 浏览 iOS 11 的新功能
+title: 在 iOS 11 中的视觉对象设计更新
+description: 本文档介绍 iOS 11 中引入的更新的可视设计。 它讨论到导航栏、 搜索控制器、 边距、 全屏幕内容和表视图的更改。
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 50858592ec6246fe825e80a3039f3640ebf708a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc29e021e30910c7fcc4c3b451d0a4dfe187d05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787846"
 ---
-# <a name="visual-design-updates"></a>可视设计更新
-
-_浏览 iOS 11 的新功能_
+# <a name="visual-design-updates-in-ios-11"></a>在 iOS 11 中的视觉对象设计更新
 
 在 iOS 11 中，Apple 引入了新的可视更改，包括更新的导航栏、 搜索栏和表视图。 除了已得到改进，允许通过边距和全屏内容进行更大的灵活性。 本指南中介绍了这些更改。
 

@@ -1,15 +1,16 @@
 ---
 title: CocosSharp 内容管道
-description: 此文档链接到指南描述 CocosSharp 内容管道。
+description: 这尤其是文档的一般描述内容的管道的指南和 CocosSharp 内容管道的链接。
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 7cf4d5cd60da1703b6047f6840222946010c9300
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 908baef3a73fe1596ec5fe809f2ce45635dd9a7b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782948"
 ---
 # <a name="cocossharp-content-pipeline"></a>CocosSharp 内容管道
 

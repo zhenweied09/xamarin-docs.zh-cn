@@ -1,18 +1,20 @@
 ---
-title: 注册应用程序在后台运行
+title: 若要在后台运行的 Xamarin.iOS 应用程序注册
+description: 本文档介绍如何注册要在后台运行的 Xamarin.iOS 应用程序。 它讨论音频应用、 VoIP 应用、 外部附件和蓝牙、 和的详细信息。
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783670"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>注册应用程序在后台运行
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>若要在后台运行的 Xamarin.iOS 应用程序注册
 
 注册为后台权限适用于某些应用程序，但如果应用程序不断地调用时，若要执行重要的、 长时间运行任务，例如获取有关如何通过 GPS 用户，会发生什么情况的各个任务？ 而是应将这些应用程序注册为已知背景需要应用程序。
 

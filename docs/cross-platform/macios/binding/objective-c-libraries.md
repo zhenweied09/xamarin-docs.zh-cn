@@ -1,15 +1,17 @@
 ---
 title: 绑定 Objective C 库
+description: 本文档提供如何创建 C# 到绑定目标 C 代码中，描述如何将绑定事件、 方法、 自定义控件，和的详细信息的高级概述。
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: fddde9dbef0e4dfb03707a970d4263983d4cf85d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f7c4be4254ce3e3301c0c1e98d37134f5524c23b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782315"
 ---
 # <a name="binding-objective-c-libraries"></a>绑定 Objective C 库
 
@@ -1368,6 +1370,6 @@ class Demo {
 
 从历史上看我们需要将协议复制到每个实现，但在这些情况下现在我们可以获得`MKShape`类继承自`MKOverlay`协议，它会自动生成所需的所有方法。
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [绑定示例](https://developer.xamarin.com/samples/BindingSample/)

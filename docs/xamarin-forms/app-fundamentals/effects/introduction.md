@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 38805c09136405a7a241cfaeb8fa8cb6fb1a5d5f
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732718"
 ---
 # <a name="introduction-to-effects"></a>效果简介
 
@@ -53,7 +54,7 @@ Xamarin.Forms[页、 布局和控件](~/xamarin-forms/user-interface/controls/in
 
 每个特定于平台的`PlatformEffect`类公开以下方法，必须重写以实现的效果：
 
-- [`OnAttached`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.OnAttached()/) – 当影响附加到 Xamarin.Forms 控件时调用。 在每个特定于平台的效果类，此方法的重写的版本是执行自定义控件，以及在产生的效果不能应用于指定的 Xamarin.Forms 控件的情况下的异常处理的位置。
+- [`OnAttached`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.OnAttached()/) – 当效果附加到 Xamarin.Forms 控件时调用。 在每个特定于平台的效果类，此方法的重写的版本是执行自定义控件，以及在产生的效果不能应用于指定的 Xamarin.Forms 控件的情况下的异常处理的位置。
 - [`OnDetached`](https://developer.xamarin.com/api/member/Xamarin.Forms.Effect.OnDetached()/) – 当效果分离 Xamarin.Forms 控件中时调用。 在每个特定于平台的效果类，此方法的重写的版本是执行任何效果的清理操作如取消注册事件处理程序的位置。
 
 此外，`PlatformEffect`公开[ `OnElementPropertyChanged` ](https://developer.xamarin.com/api/member/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E.OnElementPropertyChanged/p/System.ComponentModel.PropertyChangedEventArgs/)方法，也可能被替代。 当元素的属性发生更改时，调用此方法。 在每个特定于平台的效果类，此方法的重写的版本是 Xamarin.Forms 控件上的可绑定的属性更改作出响应的位置。 更改的属性应始终会进行检查，如可以多次调用此重写。
