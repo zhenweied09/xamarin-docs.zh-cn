@@ -1,17 +1,18 @@
 ---
 title: IOS 6 简介
-description: iOS 6 包括多种用于开发应用，这 Xamarin.iOS 6 将向 C# 开发人员提供的新技术。
+description: 此文档链接到指南，用于描述 iOS 6 中引入的功能。 集合视图，PassKit，社交框架中，和所有讨论对 StoreKit 的更改。
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787609"
 ---
 # <a name="introduction-to-ios-6"></a>IOS 6 简介
 
@@ -28,12 +29,12 @@ _iOS 6 包括多种用于开发应用，这 Xamarin.iOS 6 将向 C# 开发人员
 集合视图允许使用任意布局显示内容。 它们允许轻松地同时支持自定义布局以及创建现成的类似网格布局。 有关详细信息请参阅、[简介集合视图](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)指南。
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[传递工具包简介](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[PassKit 简介](~/ios/platform/passkit.md)
 
-传递工具包框架允许在应用程序与托管 Passbook 应用中的数字传递进行交互。 有关详细信息请参阅、[传递工具包指南简介](~/ios/platform/passkit.md)。
+PassKit 框架允许在应用程序与托管 Passbook 应用中的数字传递进行交互。 有关详细信息请参阅、[传递工具包指南简介](~/ios/platform/passkit.md)。
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[事件工具包简介](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[EventKit 简介](~/ios/platform/eventkit.md)
 
 EventKit framework 提供了用于访问日历、 日历事件和提醒日历数据库存储的数据的方法。 访问对日历和日历事件后的可用 iOS 4，但 iOS 6 现在将访问权限提醒数据公开。 有关详细信息，请参阅[我](~/ios/platform/eventkit.md)[到 EventKit ntroduction](~/ios/platform/eventkit.md)指南。
 
@@ -43,7 +44,7 @@ EventKit framework 提供了用于访问日历、 日历事件和提醒日历数
 社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Facebook，以及 SinaWeibo 的社交网络进行交互。 有关详细信息请参阅、[社交 Framework 介绍](~/ios/platform/social-framework.md)指南。
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[更改存储工具包](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[对 StoreKit 的更改](changes-to-storekit.md)
 
 Apple 引入了存储工具包中的两项新功能： 购买和下载 iTunes 或从你的应用中的应用商店内容和托管应用内购买你的内容文件 ！。 有关详细信息请参阅、[更改为应用商店工具包](changes-to-storekit.md)指南。
 

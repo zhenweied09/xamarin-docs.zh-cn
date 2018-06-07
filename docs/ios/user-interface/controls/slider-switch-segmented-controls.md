@@ -1,27 +1,28 @@
 ---
-title: 滑块、 交换机和分段的控件
+title: 滑块、 交换机和在 Xamarin.iOS 的分段的控件
+description: 本文档讨论幻灯片、 交换机和 Xamarin.iOS，描述如何处理它们，以编程方式和 iOS 设计器中的分段的控件。
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3c98ea19b3f925e71f72b09d5356286d676a9f71
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790024"
 ---
-# <a name="sliders-switches-and-segmented-controls"></a>滑块、 交换机和分段的控件
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>滑块、 交换机和在 Xamarin.iOS 的分段的控件
 
 <a name="Sliders" />
-
 
 ## <a name="sliders"></a>滑块
 
 滑块控件允许针对简单选择的范围内的数字值。 控件的默认值为 0 和 1 之间的值，但可以自定义这些限制。
 
- [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "滑块")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 以下屏幕截图显示设计器中可编辑的属性：
 
@@ -61,7 +62,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 iOS 使用`UISwitch`为 boolean 类型的输入，可能由其他平台上的单选按钮。 用户可以通过移动操作该控件*thumb*之间**开/关**位置。
 
- [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image28a.png "交换机")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 可以在自定义的开关的外观**属性填充**的设计器中，这会使你能够控制的默认状态，**开/关浅色**颜色和**开/关映像**. 下图所示：
 

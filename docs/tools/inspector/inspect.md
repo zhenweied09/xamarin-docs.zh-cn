@@ -1,29 +1,26 @@
 ---
 title: 检查实时应用程序
-description: 可视化和调试实时的应用
+description: 本文档介绍如何使用 Xamarin 检查器检查应用程序。 它还介绍了 Xamarin 检查器工具的限制。
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 8bcdc5ac50a0f03086ad9e9c3265e3ce86b06704
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 16a0474c7fc9a496409e2133714b6d4374691dbc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793474"
 ---
 # <a name="inspecting-live-applications"></a>检查实时应用程序
 
 实时应用程序检查是适用于企业的客户。
 
-
 1. [安装 Xamarin 工作簿 （&) 检查器。](~/tools/inspector/install.md)
-
 1. 打开任何[支持应用程序项目](~/tools/inspector/install.md#supported-platforms)Visual Studio 中用于 Mac 或 Visual Studio。
 1. 在调试模式下运行你的应用。
-1. 单击**检查**IDE 工具栏中的按钮 (在 Visual Studio 中，**检查当前的应用...** 菜单项也会提供**工具**或**调试**菜单)。
-
-
+1. 单击**检查**IDE 工具栏中的按钮 (在 Visual Studio 中，**检查当前的应用。...** 菜单项也会提供**工具**或**调试**菜单)。
 
 [![](inspect-images/mac-heres-the-button.png "单击 IDE 工具栏中的检查按钮")](inspect-images/mac-heres-the-button.png#lightbox)
 

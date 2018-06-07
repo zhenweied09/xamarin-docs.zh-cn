@@ -1,5 +1,6 @@
 ---
 title: Xamarin.iOS 错误
+description: 本文档介绍 mtouch，用于捆绑 Xamarin.iOS 应用程序的工具所生成的各种错误。 错误代码列出并给出的完整说明。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e9332ba34f113f56859065c74c24c116a331eceb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789442"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 错误
 
@@ -1838,7 +1840,7 @@ Bitcode 支持还要求 LLVM AOT 后端使用 (-llvm)。
 
 <a name="MT4117" />
 
-### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: 注册机构签名不匹配方法中找到*。*-选择器指示该方法采用 * 参数，而托管的方法具有 * 参数。
+### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: 注册机构签名不匹配方法中找到 *。*-选择器指示该方法采用 * 参数，而托管的方法具有 * 参数。
 
 <a name="MT4118" />
 
@@ -1860,7 +1862,7 @@ Bitcode 支持还要求 LLVM AOT 后端使用 (-llvm)。
 
 <a name="MT4122" />
 
-### <a name="mt4122-cannot-use-the-clang-compiler-provided-in-the--sdk-to-compile-the-generated-code-from-the-static-registrar-when-non-ascii-type-names--are-present-in-the-application-either-use-gccg---compilergccg-the-dynamic-registrar---registrardynamic-or-a-newer-sdk"></a>MT4122： 不能使用 Clang 编译器中提供*。* SDK 进行编译时非 ASCII 静态的注册机构从生成的代码键入名称 (*) 都位于应用程序。 请使用 GCC / G + + (-编译器： gcc | g + +)，动态注册机构 (-注册机构： 动态) 或更高版本的 SDK。
+### <a name="mt4122-cannot-use-the-clang-compiler-provided-in-the--sdk-to-compile-the-generated-code-from-the-static-registrar-when-non-ascii-type-names--are-present-in-the-application-either-use-gccg---compilergccg-the-dynamic-registrar---registrardynamic-or-a-newer-sdk"></a>MT4122： 不能使用 Clang 编译器中提供 *。* SDK 进行编译时非 ASCII 静态的注册机构从生成的代码键入名称 (*) 都位于应用程序。 请使用 GCC / G + + (-编译器： gcc | g + +)，动态注册机构 (-注册机构： 动态) 或更高版本的 SDK。
 
 <a name="MT4123" />
 
@@ -1902,7 +1904,7 @@ Bitcode 支持还要求 LLVM AOT 后端使用 (-llvm)。
 
 <a name="MT4132" />
 
-### <a name="mt4132-the-registrar-found-an-invalid-generic-return-type--in-the-property--the-return-type-must-have-an-nsobject-constraint"></a>MT4132: 注册机构找到泛型返回类型无效\*加入的属性\*。 返回类型必须具有 NSObject 约束。
+### <a name="mt4132-the-registrar-found-an-invalid-generic-return-type--in-the-property--the-return-type-must-have-an-nsobject-constraint"></a>MT4132: 注册机构找到泛型返回类型无效\*加入的属性。\*。 返回类型必须具有 NSObject 约束。
 
 <a name="MT4133" />
 
@@ -1932,7 +1934,7 @@ Bitcode 支持还要求 LLVM AOT 后端使用 (-llvm)。
 
 <a name="MT4140" />
 
-### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: 注册机构签名不匹配方法中找到*。*-选择器指示可变参数方法采用 * 参数，而托管的方法具有 * 参数。
+### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: 注册机构签名不匹配方法中找到 *。*-选择器指示可变参数方法采用 * 参数，而托管的方法具有 * 参数。
 
 <a name="MT4141" />
 
@@ -2917,7 +2919,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 <a name="MT8009" />
 
-### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009： 找不到用于委托的方法的转换方法的块*。*s 参数 # *。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009： 找不到用于委托的方法的转换方法的块 *。* s 参数 # *。 请提交在 bug http://bugzilla.xamarin.com。
 
 这指示 API 未正确绑定。 如果这是通过 Xamarin 公开的 API，请在我们 bugzilla 中提交 bug ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS))，如果它是一种第三方绑定，请与供应商联系。
 
@@ -2929,7 +2931,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011： 找不到到块转换属性 ([DelegateProxy]) 的委托的方法的返回值*。*。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011： 找不到到块转换属性 ([DelegateProxy]) 的委托的方法的返回值 *。*。 请提交在 bug http://bugzilla.xamarin.com。
 
 Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需的方法。
 
@@ -2969,7 +2971,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 <a name="MT8016" />
 
-### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016： 无法转换进行阻止针对方法的返回值的委托*。*，因为输入不是委托，它是 *。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016： 无法转换进行阻止针对方法的返回值的委托 *。*，因为输入不是委托，它是 *。 请提交在 bug http://bugzilla.xamarin.com。
 
 问题的方法的 DelegateProxy 属性无效。
 
