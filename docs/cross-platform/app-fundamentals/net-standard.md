@@ -6,12 +6,12 @@ ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781028"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806785"
 ---
 # <a name="using-net-standard-libraries-to-share-code"></a>使用.NET 标准库来共享代码
 
@@ -37,7 +37,7 @@ ms.locfileid: "34781028"
 
   **注意：** 此模板将重命名为`.NET Standard`Visual Studio for mac。 的未来版本中
 
-  ![创建.NET 核心类库](net-standard-images/vsm01.png)
+  ![创建.NET 核心类库](net-standard-images/vsm01.png "创建新的.NET 核心类库")
 
 2. 解决方案资源管理器中所示，将显示.NET 标准库的项目。 依赖项节点将指示库使用[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "34781028"
 
 可查看并更改通过右键单击项目并选择.NET 标准库设置`Options`此屏幕截图中所示：
 
-![编辑项目选项中的标准.NET 目标框架](net-standard-images/vsm03.png)
+![编辑项目选项中的标准.NET 目标框架](net-standard-images/vsm03.png "编辑项目选项中的.NET 标准的目标 Framework 的版本")
 
 你可以在内更改你的版本`netstandard`通过更改`Target Framework`下拉列表中值。
 
@@ -67,17 +67,17 @@ ms.locfileid: "34781028"
 
 1. 在添加新项目对话框中，选择`.NET Standard`类别，然后选择`Class Library(.NET Standard)`。
 
-  ![](net-standard-images/vs01.png "创建新的标准.NET 类库")
+  ![创建新的.NET 标准类库](net-standard-images/vs01.png "创建新的标准.NET 类库")
 
 2. 解决方案资源管理器中所示，将显示.NET 标准库的项目。 依赖项节点将指示库使用[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)。
 
-  ![](net-standard-images/vs02.png "在解决方案中的标准.NET 项目")
+  ![项目文件夹中的 NETStandard.Library](net-standard-images/vs02.png "解决方案中的标准.NET 项目")
 
 #### <a name="editing-net-standard-library-settings"></a>编辑.NET 标准库设置
 
 可查看并更改通过右键单击项目并选择.NET 标准库设置`Properties`此屏幕截图中所示：
 
-![](net-standard-images/vs03.png "引用与其他项目相同的方式的标准.NET 库")
+![编辑项目属性中的.NET 标准目标框架](net-standard-images/vs03.png "引用与其他项目相同的方式的标准.NET 库")
 
 你可以在内更改你的版本`netstandard`通过更改`Target Framework`下拉列表中值。
 
@@ -87,7 +87,7 @@ ms.locfileid: "34781028"
 
 一旦创建.NET 标准库后，你可以添加任何兼容的应用程序或库项目中对它的引用与通常添加引用的方式相同。 在 Visual Studio 中，右键单击引用节点，然后选择`Add Reference...`然后切换到`Solution : Projects`选项卡如下所示：
 
-![](net-standard-images/vs04.png "在 Visual Studio 中，右键单击引用节点并选择添加引用...然后切换到解决方案项目选项卡如下所示")
+![引用.NET 标准库](net-standard-images/vs04.png "在 Visual Studio 中，右键单击引用节点并选择添加引用...然后切换到解决方案项目选项卡如下所示")
 
 -----
 
