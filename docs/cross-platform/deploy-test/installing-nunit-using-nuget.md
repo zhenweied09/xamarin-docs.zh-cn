@@ -28,7 +28,7 @@ _本指南介绍了如何使用 NuGet 将 NUnit 3.0 降级到 NUnit 2.6.4。_
 
 -----
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 本指南假定存在一个用于移动应用项目和测试项目的现有解决方案。
 
