@@ -17,7 +17,7 @@ ms.lasthandoff: 05/09/2018
 
 本指南将介绍为支持调试多个进程对 Visual Studio for Mac 所做的一些更改，如何配置解决方案以调试多个进程，以及如何使用 Visual Studio for Mac 附加到现有进程。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 调试多个进程需要使用 Visual Studio for Mac。
 
