@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848533"
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +42,8 @@ ListView 具有大量可用于执行每个平台的本机功能的组件。 下�
 
 - **[单元格](customizing-cell-appearance.md)** &ndash; ListView 中的数据也会出现在单元格。 每个单元格对应于数据行。 没有内置的单元格可供选择，或者你可以定义自己的自定义单元格。 内置和自定义单元可以是在 XAML 或代码中使用或定义。
   - **[内置](customizing-cell-appearance.md#Built_in_Cells)** &ndash;内置的单元格，尤其是 TextCell 和 ImageCell，可能会大幅提高性能，因为它们对应于每个平台上的本机控件。
-    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash;显示的文本，并且可选择带有详细文本的字符串。 详细信息文本呈现为第二行中以强调文字颜色与较小的字体。
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash;显示带文本的图像。 将显示为与左侧图像 TextCell。
+       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash;显示的文本，并且可选择带有详细文本的字符串。 详细信息文本呈现为第二行中以强调文字颜色与较小的字体。
+       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash;显示带文本的图像。 将显示为与左侧图像 TextCell。
   - **[自定义单元格](customizing-cell-appearance.md#customcells)** &ndash;自定义单元格非常，当你需要提供复杂的数据。 例如，自定义视图，无法用于提供歌曲，包括唱片集和艺术家的列表：
 
 ![](images/image-cell-default.png "与 ImageCells 的 ListView")

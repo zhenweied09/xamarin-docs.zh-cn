@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: 14553bc9484ecc236fb4ceefd687ec7742109758
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3c0330d8d6d07112350db007d0500d57c236dc24
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848019"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual 状态管理器
 
@@ -711,7 +712,7 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 
 **Xamarin.Forms 3.0 可视状态管理器，也可由[Xamarin 大学](https://university.xamarin.com/)**
 
-## <a name="related-links"></a>相关的链接
+## <a name="related-links"></a>相关链接
 
 - [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
 

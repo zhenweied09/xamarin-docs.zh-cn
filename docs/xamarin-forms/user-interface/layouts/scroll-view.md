@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 13f3d5c02b8451bcd52b355fb89f7931f50a0d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847532"
 ---
 # <a name="scrollview"></a>ScrollView
 
@@ -19,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](scroll-view-images/layouts-sml.png "Xamarin.Forms 布局")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
-本文介绍：
+本文包含以下内容：
 
 - **[目的](#Purpose)** &ndash;的目的`ScrollView`以及使用时。
 - **[使用情况](#Usage)** &ndash;如何使用`ScrollView`在实践中。
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/04/2018
 var scroll = new ScrollView();
 Content = scroll;
 var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,   HeightRequest = 600, WidthRequest = 600 });
+stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
 stack.Children.Add(new Entry());
 ```
 

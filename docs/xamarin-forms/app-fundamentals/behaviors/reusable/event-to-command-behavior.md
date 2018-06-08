@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 530c47703d72a3d199a35dbf04f4a0b3851921b9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e89400c74c3d1afbf8954d0f88387c5967ebd534
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848211"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>可重用 EventToCommandBehavior
 
@@ -126,7 +127,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
       resolvedParameter = Converter.Convert (eventArgs, typeof(object), null, null);
     } else {
       resolvedParameter = eventArgs;
-    }       
+    }        
 
     if (Command.CanExecute (resolvedParameter)) {
       Command.Execute (resolvedParameter);
@@ -193,5 +194,5 @@ selectedItemLabel.SetBinding (Label.TextProperty, "SelectedItemText");
 ## <a name="related-links"></a>相关链接
 
 - [EventToCommand 行为 （示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
-- [Behavior](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
+- [行为](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
 - [行为<T>](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/)

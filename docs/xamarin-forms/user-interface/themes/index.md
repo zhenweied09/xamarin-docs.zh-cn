@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: c128e6130f0d8c2ba076a82ac85bda5aadea1ee9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fca5a0cb2e188df822efb15b090ef7986cf4a2d8
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848091"
 ---
 # <a name="themes"></a>主题
 
@@ -22,7 +23,7 @@ Xamarin.Forms 主题发展变化 2016年已宣布，也可作为客户尝试并�
 
 请参阅[浅色主题](light.md)和[深色主题](dark.md)有关如何将它们添加到应用程序，或签出的说明的页[示例自定义主题](custom.md)。
 
-**重要说明：**还应遵循的步骤[加载主题程序集 （下文）](#loadtheme)通过将某些样板文件代码添加到 iOS`AppDelegate`和 Android `MainActivity`。 这将在将来的预览版得到改进。
+**重要说明：** 还应遵循的步骤[加载主题程序集 （下文）](#loadtheme)通过将某些样板文件代码添加到 iOS`AppDelegate`和 Android `MainActivity`。 这将在将来的预览版得到改进。
 
 
 ## <a name="control-appearance"></a>控件外观

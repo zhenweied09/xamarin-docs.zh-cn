@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848299"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -172,7 +173,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 
 在方案中，从正在运行的应用到您的计算机的连接 (如由使用指示`localhost`或`127.0.0.1`中**工具 > 选项 > Xamarin > 实时重新加载**) 不能 （即防火墙、 不同的网络）你可以配置远程服务器相反，哪些 IDE 和应用程序将连接到。
 
-实时重新加载使用标准[MQTT 协议](http://mqtt.org/)到交换消息，并因此可以与之通信[第三方服务器](https://github.com/mqtt/mqtt.github.io/wiki/servers)。 即使有[公共服务器](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers)(也称为*代理*) 可用，你可以使用。 实时重新加载经`broker.hivemq.com`和`iot.eclipse.org`主机名，以及提供的服务[www.cloudmqtt.com](https://www.cloudmqtt.com)和[www.cloudamqp.com](https://www.cloudamqp.com)。你还可以部署在云中，你自己 MQTT 服务器如[在 Azure 上的 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud)。
+实时重新加载使用标准[MQTT 协议](http://mqtt.org/)到交换消息，并因此可以与之通信[第三方服务器](https://github.com/mqtt/mqtt.github.io/wiki/servers)。 即使有[公共服务器](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers)(也称为*代理*) 可用，你可以使用。 实时重新加载经`broker.hivemq.com`和`iot.eclipse.org`主机名，以及提供的服务[www.cloudmqtt.com](https://www.cloudmqtt.com)和[www.cloudamqp.com](https://www.cloudamqp.com)。 你还可以部署在云中，你自己 MQTT 服务器如[在 Azure 上的 HiveMQ](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud)。
 
 你可以配置任何端口，但通常对远程服务器使用默认 1883年端口。 实时重新加载消息使用强端到端 AES 对称加密，以便安全地连接到远程服务器。 默认情况下，加密密钥和初始化向量 (IV) 重新生成对每个 Visual Studio 会话。
 

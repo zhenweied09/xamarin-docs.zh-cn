@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848195"
 ---
 # <a name="localization"></a>本地化
 
@@ -30,7 +31,7 @@ _可以使用.NET 资源文件本地化 Xamarin.Forms 应用。_
 
 #### <a name="shared-projects-are-not-recommended"></a>建议不要使用共享的项目
 
-TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/)但是由于生成系统的限制的资源文件不会获得**。 designer.cs**生成这违反能够访问的文件在代码中强类型的已翻译的字符串。
+TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/)但是由于生成系统的限制的资源文件不会获得 **。 designer.cs**生成这违反能够访问的文件在代码中强类型的已翻译的字符串。
 
 此文档的其余部分都与使用 Xamarin.Forms.NET 标准库模板的项目。
 
@@ -67,7 +68,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 ##### <a name="string-visibility"></a>字符串可见性
 
-默认情况下对字符串的强类型引用生成时，将会`internal`对程序集。 这是因为 RESX 文件的默认生成工具生成**。 designer.cs**文件`internal`属性。
+默认情况下对字符串的强类型引用生成时，将会`internal`对程序集。 这是因为 RESX 文件的默认生成工具生成 **。 designer.cs**文件`internal`属性。
 
 选择**AppResources.resx**文件，并显示**属性**板以查看其中此生成工具是配置。 下面显示的屏幕截图**自定义工具： ResXFileCodeGenerator**。
 
@@ -150,7 +151,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 常规模式是使用两个字母的语言代码，但有 （例如中文） 的一些示例，其中使用另一种格式，以及 （如葡萄牙语 （巴西）） 的其他示例要求四个字符的区域设置标识符的位置。
 
-这些特定于语言的资源文件*不这样做*需要**。 designer.cs**分部类，以便它们都可添加为正则 XML 文件，与**生成操作： EmbeddedResource**设置。 此屏幕截图显示一个包含特定于语言的资源文件的解决方案：
+这些特定于语言的资源文件*不这样做*需要 **。 designer.cs**分部类，以便它们都可添加为正则 XML 文件，与**生成操作： EmbeddedResource**设置。 此屏幕截图显示一个包含特定于语言的资源文件的解决方案：
 
 ![](text-images/appresources-langs.png "特定于语言的资源文件")
 
@@ -386,7 +387,7 @@ public class Localize : UsingResxLocalization.ILocalize
             switch (iOSLanguage)
             {
                 case "ms-MY":   // "Malaysian (Malaysia)" not supported .NET culture
-                case "ms-SG":   // "Malaysian (Singapore)" not supported .NET culture
+                case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
                 case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
@@ -551,7 +552,7 @@ namespace UsingResxLocalization.Android
 一旦此代码已添加到 Android 应用程序项目，它将能够自动显示已翻译的字符串。
 
 > [!NOTE]
->️**警告：**如果使用已翻译的字符串在版本 Android 生成，但不是在调试时，右键单击**Android 项目**和选择**选项 > 生成 > Android生成**并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
+>️**警告：** 如果使用已翻译的字符串在版本 Android 生成，但不是在调试时，右键单击**Android 项目**和选择**选项 > 生成 > Android生成**并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
 
 #### <a name="universal-windows-platform"></a>通用 Windows 平台
 

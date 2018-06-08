@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b083bb83dbc7266f749c4adc660a8bfb431df795
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8623127444836d3335f42f9ba7a40de6aedfef70
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848364"
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>使用 Azure 移动应用程序中同步脱机数据
 

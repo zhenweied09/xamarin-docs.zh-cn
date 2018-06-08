@@ -6,24 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 2e40effa7bc54b7b7cf73edaa882256fed521a95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/31/2018
+ms.openlocfilehash: a45a4edb93920cfe1d0289da44ee664e41c25cf1
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847843"
 ---
 # <a name="entry"></a>条目
 
 _单行文本或输入的密码_
 
-Xamarin.Forms`Entry`用于的单行文本输入。 `Entry`如编辑器视图中，支持多个键盘类型。 此外，`Entry`可以用作密码字段。
+Xamarin.Forms`Entry`用于的单行文本输入。 `Entry`、 Like`Editor`视图中，支持多个键盘类型。 此外，`Entry`可以用作密码字段。
 
 ## <a name="display-customization"></a>显示自定义项
 
 ### <a name="setting-and-reading-text"></a>设置和读取文本
 
-项，如其他文本呈现的视图，公开`Text`属性。 `Text` 用于设置和读取通过显示的文本`Entry`。 下面的示例演示如何在 XAML 中设置文本：
+`Entry`，如其他文本呈现的视图，公开`Text`属性。 此属性可以用于设置和读取通过显示的文本`Entry`。 下面的示例演示了如何设置`Text`在 XAML 中的属性：
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -44,6 +45,20 @@ var text = MyEntry.Text;
 > [!NOTE]
 > 宽度`Entry`可以通过设置定义其`WidthRequest`属性。 不依赖于的宽度`Entry`正在定义的值基于其`Text`属性。
 
+### <a name="limiting-input-length"></a>输入的长度限制
+
+[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性可以用于将输入允许的范围的长度限制[ `Entry` ](xref:Xamarin.Forms.Entry)。 此属性应为正整数设置：
+
+```xaml
+<Entry ... MaxLength="10" />
+```
+
+```csharp
+var entry = new Entry { ... MaxLength = 10 };
+```
+
+A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性值为 0 指示将允许任何输入，和的值`int.MaxValue`，这是默认值为[ `Entry` ](xref:Xamarin.Forms.Entry)，该值指示是否有任何可能输入的字符数的有效限制。
+
 ### <a name="keyboards"></a>键盘
 
 在与用户交互时显示键盘`Entry`可以通过编程方式设置`Keyboard`属性。
@@ -58,6 +73,23 @@ var text = MyEntry.Text;
 - **Url** &ndash;用于输入文件路径和 web 地址
 
 没有[示例的每个键盘](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)我们配方部分中。
+
+### <a name="enabling-and-disabling-spell-checking"></a>启用和禁用拼写检查
+
+[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性控制是否拼写正在检查已启用。 默认情况下，该属性设置为`true`。 当用户输入文本，指示拼写错误。
+
+但是，某些文本的条目情况下，输入用户名，如拼写检查提供的负的体验，因此应禁用通过设置[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性`false`:
+
+```xaml
+<Entry ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> 当[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`，和自定义键盘未被使用，本机拼写检查器将被禁用。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)具有已禁用拼写的集检查，如[ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat)、`IsSpellCheckEnabled`忽略属性。 因此，属性无法用于启用拼写检查`Keyboard`，显式禁用它。
 
 ### <a name="placeholders"></a>占位符
 

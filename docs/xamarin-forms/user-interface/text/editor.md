@@ -6,12 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.date: 05/31/2018
+ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848312"
 ---
 # <a name="editor"></a>编辑器
 
@@ -26,7 +27,7 @@ _多行文本输入_
 
 ### <a name="setting-and-reading-text"></a>设置和读取文本
 
-编辑器，如其他文本呈现的视图，公开`Text`属性。 `Text` 用于设置和读取通过显示的文本`Editor`。 下面的示例说明如何在 XAML 中的设置文本：
+`Editor`，如其他文本呈现的视图，公开`Text`属性。 此属性可以用于设置和读取通过显示的文本`Editor`。 下面的示例演示了如何设置`Text`在 XAML 中的属性：
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -44,6 +45,20 @@ var MyEditor = new Editor { Text = "I am an Editor" };
 var text = MyEditor.Text;
 ```
 
+### <a name="limiting-input-length"></a>输入的长度限制
+
+[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性可以用于将输入允许的范围的长度限制[ `Editor` ](xref:Xamarin.Forms.Editor)。 此属性应为正整数设置：
+
+```xaml
+<Editor ... MaxLength="10" />
+```
+
+```csharp
+var editor = new Editor { ... MaxLength = 10 };
+```
+
+A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性值为 0 指示将允许任何输入，和的值`int.MaxValue`，这是默认值为[ `Editor` ](xref:Xamarin.Forms.Editor)，该值指示是否有任何可能输入的字符数的有效限制。
+
 ### <a name="keyboards"></a>键盘
 
 在与用户交互时显示键盘`Editor`可以通过编程方式设置[ ``Keyboard`` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/)属性。
@@ -58,6 +73,23 @@ var text = MyEditor.Text;
 - **Url** &ndash;用于输入文件路径 （&） 的 web 地址
 
 没有[示例的每个键盘](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)我们配方部分中。
+
+### <a name="enabling-and-disabling-spell-checking"></a>启用和禁用拼写检查
+
+[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性控制是否拼写正在检查已启用。 默认情况下，该属性设置为`true`。 当用户输入文本，指示拼写错误。
+
+但是，某些文本的条目情况下，输入用户名，如拼写检查提供的负的体验，因此应禁用通过设置[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性`false`:
+
+```xaml
+<Editor ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var editor = new Editor { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> 当[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`，和自定义键盘未被使用，本机拼写检查器将被禁用。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)具有已禁用拼写的集检查，如[ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat)、`IsSpellCheckEnabled`忽略属性。 因此，属性无法用于启用拼写检查`Keyboard`，显式禁用它。
 
 ### <a name="colors"></a>颜色
 

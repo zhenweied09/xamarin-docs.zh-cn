@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846836"
 ---
 # <a name="getting-started-with-datapages"></a>Getting Started with DataPages
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 </Application>
 ```
 
-**重要说明：**还应遵循的步骤[加载主题程序集 （下文）](#loadtheme)通过将某些样板文件代码添加到 iOS`AppDelegate`和 Android `MainActivity`。 这将在将来的预览版得到改进。
+**重要说明：** 还应遵循的步骤[加载主题程序集 （下文）](#loadtheme)通过将某些样板文件代码添加到 iOS`AppDelegate`和 Android `MainActivity`。 这将在将来的预览版得到改进。
 
 
 ## <a name="3-add-a-xaml-page"></a>3.添加 XAML 页
@@ -94,7 +95,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 删除`Content`元素并将其替换`p:ListDataPage.DataSource`来填充数据的页。 在远程 Json 下面的示例是从 URL 加载数据文件。
 
-**注意：**预览*需要*`StyleClass`特性来为数据源提供呈现提示。 `StyleClass="Events"`在预览中预定义和包含样式的布局是指*硬编码*以匹配正在使用的 JSON 数据源。
+**注意：** 预览*需要*`StyleClass`特性来为数据源提供呈现提示。 `StyleClass="Events"`在预览中预定义和包含样式的布局是指*硬编码*以匹配正在使用的 JSON 数据源。
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
