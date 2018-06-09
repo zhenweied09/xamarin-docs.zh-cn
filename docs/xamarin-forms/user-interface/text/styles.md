@@ -1,33 +1,25 @@
 ---
-title: 样式
-description: Xamarin.Forms 中的样式文本
+title: Xamarin.Forms 文本样式
+description: 此文章介绍了如何在 Xamarin.Forms 应用程序中的样式文本。 可以定义一次样式，并将其使用的许多视图，但样式只能具有一种类型的视图。
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848442"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245317"
 ---
-# <a name="styles"></a>样式
+# <a name="xamarinforms-text-styles"></a>Xamarin.Forms 文本样式
 
 _Xamarin.Forms 中的样式文本_
 
-
 样式可以用于调整标签、 条目和编辑器的外观。 可以定义一次样式，并将其使用的许多视图，但样式只能具有一种类型的视图。
 可以提供样式`Key`有选择地使用特定的控件和应用`Style`属性。
-
-本文介绍了以下主题：
-
-- **[内置样式](#Built-In_Styles)** &ndash;使用内置到在你的应用程序整个样式基于文本的视图的样式。
-- **[自定义样式](#Custom_Styles)** &ndash;不够用的内置选项时定义自定义样式。
-- **[应用样式](#Applying_Styles)** &ndash;将自定义和内置样式应用于您的视图。
-- **[可访问性](#Accessibility)** &ndash;确保文本遵循辅助功能设置。
 
 <a name="Built-In_Styles" />
 

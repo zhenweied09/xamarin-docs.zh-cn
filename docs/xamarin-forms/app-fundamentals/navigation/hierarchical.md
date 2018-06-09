@@ -1,18 +1,18 @@
 ---
 title: 分层导航
-description: NavigationPage 类提供能够向前和向后，根据需要浏览页中，用户所在的层次结构导航体验。 类实现作为后进先出 (LIFO) 堆栈 Page 对象中的导航。 本文演示如何使用 NavigationPage 类来执行导航堆栈中的页。
+description: 本文演示如何使用 NavigationPage 类来执行导航堆栈中的后进先出 (LIFO) 页。
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847158"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242451"
 ---
 # <a name="hierarchical-navigation"></a>分层导航
 
@@ -48,7 +48,7 @@ _NavigationPage 类提供能够向前和向后，根据需要浏览页中，用�
 
 - 在 iOS 上导航栏位于顶部的页显示标题，并具有*回*返回到以前的页面的按钮。
 - 在 Android 上，导航栏位于顶部显示标题，一个图标，图标的页和*回*返回到以前的页面的按钮。 在中定义的图标`[Activity]`修饰的属性`MainActivity`Android 的特定于平台的项目中的类。
-- 在通用 Windows 平台上，导航栏在顶部显示标题的页位于。 
+- 在通用 Windows 平台上，导航栏在顶部显示标题的页位于。
 
 在所有平台的值上[ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/)属性将显示为页面标题。
 

@@ -1,5 +1,5 @@
 ---
-title: 本地数据库
+title: Xamarin.Forms 本地数据库
 description: Xamarin.Forms 支持使用 SQLite 数据库引擎，这样就可以用于加载和保存在共享代码中的对象的数据库驱动的应用程序。 本指南介绍了如何读取和将数据写入到本地 SQLite 数据库使用 SQLite.Net Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 91df4d36dd8d98712063a30773f927a82676b18e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689443"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243605"
 ---
-# <a name="local-databases"></a>本地数据库
+# <a name="xamarinforms-local-databases"></a>Xamarin.Forms 本地数据库
 
 _Xamarin.Forms 支持使用 SQLite 数据库引擎，这样就可以用于加载和保存在共享代码中的对象的数据库驱动的应用程序。本指南介绍了如何读取和将数据写入到本地 SQLite 数据库使用 SQLite.Net Xamarin.Forms 应用程序。_
 

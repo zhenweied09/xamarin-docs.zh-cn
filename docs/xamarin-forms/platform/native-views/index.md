@@ -1,19 +1,20 @@
 ---
-title: 本机视图
-description: 从 iOS、 Android 和通用 Windows 平台 (UWP) 的本机视图可以从 Xamarin.Forms 直接引用。 可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。
+title: Xamarin.Forms 中的本机视图
+description: 从 iOS、 Android 和通用 Windows 平台 (UWP) 的本机视图可以直接从 Xamarin.Forms 引用，并且它们可以与 Xamarin.Forms 视图交互。
 ms.prod: xamarin
 ms.assetid: 2294a023-d763-41de-a9da-c2bfc239a132
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 06459b9b44ac6991cacc8d9fdfccbf2ecabfcac0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2ce371767b5f22af421ab99cdb291b2dbcf1143
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244323"
 ---
-# <a name="native-views"></a>本机视图
+# <a name="native-views-in-xamarinforms"></a>Xamarin.Forms 中的本机视图
 
 _从 iOS、 Android 和通用 Windows 平台 (UWP) 的本机视图可以从 Xamarin.Forms 直接引用。可以在本机视图中设置属性和事件处理程序，并且它们可以与 Xamarin.Forms 视图交互。_
 

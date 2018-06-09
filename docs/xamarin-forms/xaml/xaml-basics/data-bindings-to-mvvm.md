@@ -1,17 +1,18 @@
 ---
 title: 第 5 部分。 从数据绑定到 MVVM
-description: 记住，模型-视图-视图模型 (MVVM) 体系结构模式就是使用 XAML。 模式强制执行三个软件层之间的分隔-XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的媒介调用视图模型。 视图和视图模型，以及经常连接通过在 XAML 文件中定义的数据绑定中。 为视图 BindingContext 通常是 ViewModel 的实例。
+description: MVVM 模式强制执行三个软件层之间的分隔-XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的媒介调用视图模型。
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245766"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>第 5 部分。 从数据绑定到 MVVM
 
@@ -649,7 +650,7 @@ public class PageDataViewModel
         };
     }
 
-    public static IList<PageDataViewModel> All { private set; get; } 
+    public static IList<PageDataViewModel> All { private set; get; }
 }
 ```
 

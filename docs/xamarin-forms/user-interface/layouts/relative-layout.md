@@ -1,20 +1,20 @@
 ---
-title: RelativeLayout
-description: 使用 RelativeLayout 创建缩放以适合任何屏幕大小的 Ui。
+title: Xamarin.Forms RelativeLayout
+description: 此文章介绍了如何使用 Xamarin.Forms RelativeLayout 类来创建 Ui 缩放以适合任何屏幕大小。
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: f23c00fb40ba661cbc1633b61a898a9437fdee98
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 712092e58a7a7358ba1fa808614822c7988e6105
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847015"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245050"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
 `RelativeLayout` 将使用位置和大小视图相对于布局或同级视图的属性。 与不同`AbsoluteLayout`，`RelativeLayout`不包含移动的定位点的概念，并且没有提供用于定位元素相对于底部或右边缘的布局的功能。 `RelativeLayout` 支持在其自己的边界之外的定位元素。
 

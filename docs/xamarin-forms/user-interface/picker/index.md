@@ -1,20 +1,20 @@
 ---
-title: 选取器
-description: 选取器视图是用于从数据的列表中选择文本项的控件。
+title: Xamarin.Forms 选取器
+description: Xamarin.Forms 选取器显示短列表的项，用户可以从中选择的项。 此文章介绍了如何使用选取器类来从数据的列表中选择文本项。
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 7f0050351ca28d7f8afeb82a85e82e51d399824b
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847493"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245034"
 ---
-# <a name="picker"></a>选取器
+# <a name="xamarinforms-picker"></a>Xamarin.Forms 选取器
 
 _选取器视图是用于从数据的列表中选择文本项的控件。_
 

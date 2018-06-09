@@ -1,18 +1,18 @@
 ---
 title: 第 4 部分。 数据绑定基础知识
-description: 数据绑定都允许这两个对象链接，以便其中一个中的更改导致更改另一部分中的属性。 这是一个非常有价值的工具，并可以完全在代码中定义数据绑定，而 XAML 提供快捷方式和方便起见。 因此，Xamarin.Forms 中最重要的标记扩展之一绑定。
+description: 数据绑定都允许这两个对象链接，以便其中一个中的更改导致更改另一部分中的属性。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: a8adc0c16043048ec919f5a0f9f7c5ce25f08ef9
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733030"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245945"
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
 
@@ -86,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 属性可以是在一个行上或分隔为多行：
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -102,13 +102,13 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 [![](data-binding-basics-images/sliderbinding.png "视图-视图绑定")](data-binding-basics-images/sliderbinding-large.png#lightbox "视图-视图绑定 ")
 
-## <a name="the-binding-mode"></a>绑定模式 
+## <a name="the-binding-mode"></a>绑定模式
 
 单一视图中其几个属性可以有数据绑定。 但是，每个视图只能有一个`BindingContext`，因此在该视图上的多个数据绑定必须所有引用同一对象的属性。
 
 向此服务器和其他问题的解决方案涉及`Mode`属性，它被设置为的成员`BindingMode`枚举：
 
-- `Default` 
+- `Default`
 - `OneWay` -值从源传输到目标
 - `OneWayToSource` -值从目标传输到源
 - `TwoWay` -值之间的传输这两种方式源和目标
@@ -324,7 +324,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 </ContentPage>
 ```
 
-请注意，使用`OnPlatform`来定义的大小`BoxView`和高度`ListView`行。 尽管所有三个平台的值相同，标记无法轻松地进行适配为其他值，以微调显示。 
+请注意，使用`OnPlatform`来定义的大小`BoxView`和高度`ListView`行。 尽管所有三个平台的值相同，标记无法轻松地进行适配为其他值，以微调显示。
 
 ## <a name="binding-value-converters"></a>绑定值转换器
 
@@ -366,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-`ConvertBack`因为绑定仅单向从源到目标方法无法在此程序中播放角色。 
+`ConvertBack`因为绑定仅单向从源到目标方法无法在此程序中播放角色。
 
 绑定引用使用的绑定转换器`Converter`属性。 绑定转换器，也可以接受具有指定的参数`ConverterParameter`属性。 对于某些更加通用，这是如何指定乘数。 绑定转换器检查是否存在有效的转换器参数`double`值。
 

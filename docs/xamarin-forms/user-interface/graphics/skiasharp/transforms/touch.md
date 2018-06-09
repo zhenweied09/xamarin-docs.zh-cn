@@ -1,17 +1,18 @@
 ---
 title: 触摸操作
-description: 使用矩阵转换来实现触摸拖动、 挤压，和旋转
+description: 本文章介绍如何使用矩阵转换来实现触摸拖动、 挤压，和旋转，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244281"
 ---
 # <a name="touch-manipulations"></a>触摸操作
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-这`SKMatrix`触摸逻辑如下所示修改对象。 
+这`SKMatrix`触摸逻辑如下所示修改对象。
 
-代码隐藏文件的剩余部分`TouchEffect`事件处理程序。 它首先会通过将转换到上方的手指当前位置`SKPoint`值。 有关`Pressed`操作类型的处理会检查任何其他手指触摸屏幕，而该上方的手指是位图的边界内。 
+代码隐藏文件的剩余部分`TouchEffect`事件处理程序。 它首先会通过将转换到上方的手指当前位置`SKPoint`值。 有关`Pressed`操作类型的处理会检查任何其他手指触摸屏幕，而该上方的手指是位图的边界内。
 
 代码的重要部分是`if`语句涉及到两个调用`Math.Pow`方法。 此数学检查手指位置是否之外填充位图的椭圆。 如果是这样，然后即缩放操作。 上方的手指是一个位图，角附近，透视点确定是相反的角。 如果内此椭圆上方的手指，则它是一个常规的平移操作：
 
@@ -901,5 +902,5 @@ else
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [调用从效果的事件](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

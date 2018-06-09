@@ -1,20 +1,20 @@
 ---
-title: 显式样式
-description: 显式样式是指通过设置其样式属性有选择地应用于这些控件。
+title: Xamarin.Forms 中的显式样式
+description: 显式样式是指通过设置其样式属性有选择地应用于这些控件。 此文章介绍了如何使用 Xamarin.Forms 应用程序中的显式样式。
 ms.prod: xamarin
 ms.assetid: C0DF9F8F-B431-4374-A574-325BC3C41A3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 9f9e87ae0fd9d609cef56123e9052d85941bda51
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: fd42eae9f70b1a44ee1c844264d1c0cda1fdb734
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848182"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245193"
 ---
-# <a name="explicit-styles"></a>显式样式
+# <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms 中的显式样式
 
 _显式样式是指通过设置其样式属性有选择地应用于这些控件。_
 

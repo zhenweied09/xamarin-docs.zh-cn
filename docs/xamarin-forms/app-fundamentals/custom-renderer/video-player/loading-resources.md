@@ -1,22 +1,24 @@
 ---
 title: 加载应用程序资源视频
+description: 此文章介绍了如何加载视频存储为应用程序中使用 Xamarin.Forms 的视频播放器应用程序的资源。
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241027"
 ---
 # <a name="loading-application-resource-videos"></a>加载应用程序资源视频
 
 有关自定义呈现器`VideoPlayer`视图是能够播放应用程序资源作为单个平台项目中嵌入的视频文件。 但是，当前版本的`VideoPlayer`无法访问标准.NET 库中嵌入的资源。
 
-若要加载这些资源，创建的实例`ResourceVideoSource`通过设置`Path`到文件名 （或的文件夹和文件名） 的资源的属性。 或者，可以调用静态`VideoSource.FromResource`方法可以引用该资源。 然后，设置`ResourceVideoSource`对象传递给`Source`属性`VideoPlayer`。 
+若要加载这些资源，创建的实例`ResourceVideoSource`通过设置`Path`到文件名 （或的文件夹和文件名） 的资源的属性。 或者，可以调用静态`VideoSource.FromResource`方法可以引用该资源。 然后，设置`ResourceVideoSource`对象传递给`Source`属性`VideoPlayer`。
 
 ## <a name="storing-the-video-files"></a>存储的视频文件
 
@@ -30,13 +32,13 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="android-video-resources"></a>Android 的视频资源
 
-在 Android 项目中，视频必须存储在子文件夹**资源**名为**原始**。 **原始**文件夹不能包含子文件夹。 为视频文件提供`Build Action`的`AndroidResource`。 设置`Path`属性`ResourceVideoSource`为文件名，例如， **MyFile.mp4**。 
+在 Android 项目中，视频必须存储在子文件夹**资源**名为**原始**。 **原始**文件夹不能包含子文件夹。 为视频文件提供`Build Action`的`AndroidResource`。 设置`Path`属性`ResourceVideoSource`为文件名，例如， **MyFile.mp4**。
 
-**VideoPlayerDemos.Android**项目包含的子文件夹**资源**名为**原始**，其中包含名为的文件**AndroidApiVideo.mp4**. 
+**VideoPlayerDemos.Android**项目包含的子文件夹**资源**名为**原始**，其中包含名为的文件**AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>UWP 视频资源
 
-在通用 Windows 平台项目中，你可以存储在项目中的任何文件夹中的视频。 为此文件提供`Build Action`的`Content`。 设置`Path`属性`ResourceVideoSource`到的文件夹和文件名，例如， **MyFolder/MyVideo.mp4**。 
+在通用 Windows 平台项目中，你可以存储在项目中的任何文件夹中的视频。 为此文件提供`Build Action`的`Content`。 设置`Path`属性`ResourceVideoSource`到的文件夹和文件名，例如， **MyFolder/MyVideo.mp4**。
 
 **VideoPlayerDemos.UWP**项目包含名为的文件夹**视频**文件**UWPApiVideo.mp4**。
 
@@ -169,7 +171,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-如果 iOS 资源存储在**资源**文件夹，并且如果 UWP 资源存储在项目的根文件夹中，可以用于三个平台使用相同的文件名。 如果是这样，则您可以将该名称直接为`Source`属性`VideoPlayer`。 
+如果 iOS 资源存储在**资源**文件夹，并且如果 UWP 资源存储在项目的根文件夹中，可以用于三个平台使用相同的文件名。 如果是这样，则您可以将该名称直接为`Source`属性`VideoPlayer`。
 
 下面是三个平台上运行该页面：
 

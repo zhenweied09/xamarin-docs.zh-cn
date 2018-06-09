@@ -1,20 +1,20 @@
 ---
-title: AbsoluteLayout
-description: 使用 AbsoluteLayout 创建像素完美 Ui。
+title: Xamarin.Forms AbsoluteLayout
+description: 此文章介绍了如何使用 Xamarin.Forms AbsoluteLayout 类来创建像素完美 Ui。 此类定位并调整其自己的大小和位置或绝对值成比例的子元素的大小。
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 506a9a4916cf2cf9105d59f56648e339d664a3d2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848379"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244451"
 ---
-# <a name="absolutelayout"></a>AbsoluteLayout
+# <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 定位并调整其自己的大小和位置或绝对值成比例的子元素的大小。 子视图可以定位和比例的大小使用成比例的值或静态值，并且可以混合使用静态值。
 

@@ -1,20 +1,20 @@
 ---
-title: 本机窗体
-description: 本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。 本机项目可以使用直接添加到项目中，或从.NET 标准库、 标准.NET 库或共享项目的内容页派生的页。 此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。
+title: 在 Xamarin 本机项目中的 Xamarin.Forms
+description: 此文章介绍了如何使用直接添加到 Xamarin 本机项目的内容页派生页以及如何在它们之间导航。
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: ca62b9fec3223e8da62d8e4cc6e1f69a58f335a0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335198"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243270"
 ---
-# <a name="native-forms"></a>本机窗体
+# <a name="xamarinforms-in-xamarin-native-projects"></a>在 Xamarin 本机项目中的 Xamarin.Forms
 
 _本机窗体允许 Xamarin.Forms 内容页派生页可供本机 Xamarin.iOS 和 Xamarin.Android，通用 Windows 平台 (UWP) 项目。本机项目可以使用直接添加到项目中，或从.NET 标准库、 标准.NET 库或共享项目的内容页派生的页。此文章介绍了如何使用直接添加到本机项目的内容页派生页以及如何在它们之间导航。_
 

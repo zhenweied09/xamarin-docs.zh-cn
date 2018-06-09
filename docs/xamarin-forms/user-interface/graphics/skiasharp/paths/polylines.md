@@ -1,17 +1,18 @@
 ---
 title: 折线和参数的等式
-description: 使用 SkiaSharp 来呈现任何行，可以定义为上面带有参数的公式
+description: 本文章介绍如何使用 SkiaSharp 呈现任何行到可以定义为上面带有参数的公式，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: efd2dbac0f4a1190fac646d8e9e3120ee4d245a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9539a21b7dbc91da63795639610886233ed705be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245304"
 ---
 # <a name="polylines-and-parametric-equations"></a>折线和参数的等式
 
@@ -116,4 +117,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

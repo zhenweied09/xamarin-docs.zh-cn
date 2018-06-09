@@ -1,5 +1,5 @@
 ---
-title: 简单的动画
+title: Xamarin.Forms 中的简单动画
 description: ViewExtensions 类提供可用于构造简单动画的扩展方法。 本文演示如何创建和取消使用 ViewExtensions 类的动画。
 ms.prod: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: 0d2cc30f9bc1ae5602394b8ca2d8e75517a01b54
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c0e2383d152db0b5055558a22386cafd8d27a059
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243000"
 ---
-# <a name="simple-animations"></a>简单的动画
+# <a name="simple-animations-in-xamarinforms"></a>Xamarin.Forms 中的简单动画
 
 _ViewExtensions 类提供可用于构造简单动画的扩展方法。本文演示如何创建和取消使用 ViewExtensions 类的动画。_
 

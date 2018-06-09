@@ -1,20 +1,20 @@
 ---
-title: StackLayout
-description: 使用 StackLayout 通过一个维度中呈现的视图集合。
+title: Xamarin.Forms StackLayout
+description: 此文章介绍了如何使用 Xamarin.Forms StackLayout 类通过一个维度中呈现的视图集合。
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 412ea71df2d13338725246704b342e9b93109709
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847820"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244592"
 ---
-# <a name="stacklayout"></a>StackLayout
+# <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
 `StackLayout` 将组织的一维的行 （"堆栈"） 中的视图水平或垂直。 视图中`StackLayout`可以基于使用布局选项的布局中的空间大小。 定位由视图添加到的布局和视图的布局选项的顺序确定。
 

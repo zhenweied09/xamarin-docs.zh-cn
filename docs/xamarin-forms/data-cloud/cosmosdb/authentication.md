@@ -1,17 +1,18 @@
 ---
 title: 使用 Azure Cosmos DB 文档数据库的用户进行身份验证
-description: Azure Cosmos DB 文档数据库支持已分区的集合，可以跨多个服务器和分区，同时支持无限的存储和吞吐量。 此文章介绍了如何组合使用分区集合，使用访问控制，以便用户只能访问自己在 Xamarin.Forms 应用程序中的文档。
+description: 此文章介绍了如何将访问控制与 Azure Cosmos DB 分区集合结合起来，以便用户只能访问自己在 Xamarin.Forms 应用程序中的文档。
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0132f849a066976896295da8b8b67ed8bf3c3e8d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 031a48e5e10100b2c57ac067a0dda916c93d20da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241606"
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>使用 Azure Cosmos DB 文档数据库的用户进行身份验证
 
@@ -145,7 +146,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 这将导致启动之间 Azure App Service 和 Facebook，Facebook 登录页将显示一个 OAuth 身份验证流程：
 
-![](authentication-images/login.png "Facebook Login")
+![](authentication-images/login.png "Facebook 登录名")
 
 登录可以取消按**取消**按钮在 iOS 上或通过按**回**在 Android 上，在这种情况下的用户保持状态未经身份验证和标识提供程序用户界面的按钮从屏幕上删除。
 

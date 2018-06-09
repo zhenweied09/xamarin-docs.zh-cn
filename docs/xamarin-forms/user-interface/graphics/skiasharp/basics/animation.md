@@ -1,19 +1,20 @@
 ---
-title: 基本动画
-description: 发现如何进行动画处理 SkiaSharp 图形
+title: SkiaSharp 中的基本动画
+description: 本文章介绍如何进行动画处理 SkiaSharp 图形 Xamarin.Forms 应用程序中的，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 859677a3dcfcddd0b333c9ddf60c01e2093b6a5b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 08583a62719927b900c6aeede1b3b4398ed803de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243338"
 ---
-# <a name="basic-animation"></a>基本动画
+# <a name="basic-animation-in-skiasharp"></a>SkiaSharp 中的基本动画
 
 _发现如何进行动画处理 SkiaSharp 图形_
 
@@ -250,4 +251,4 @@ public class ExpandingCirclesPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

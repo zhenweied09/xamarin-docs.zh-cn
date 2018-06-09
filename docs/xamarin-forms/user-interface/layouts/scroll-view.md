@@ -1,20 +1,20 @@
 ---
-title: ScrollView
-description: 使用 ScrollView 呈现无法适合只在一个屏幕并释放空间用于键盘的内容的布局。
+title: Xamarin.Forms ScrollView
+description: 此文章介绍了如何使用 Xamarin.Forms ScrollView 类呈现的布局，无法容纳在一个屏幕上，它具有内容的键盘留出空间。
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 72897013842d464ff9d46825e2b111efbaeb79b8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847532"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245229"
 ---
-# <a name="scrollview"></a>ScrollView
+# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) 包含布局和为用户提供了滚动屏幕外。 `ScrollView` 此外用于允许视图以显示键盘时自动移动到屏幕的可见部分。
 

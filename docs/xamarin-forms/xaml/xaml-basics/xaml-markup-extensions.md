@@ -1,17 +1,18 @@
 ---
 title: 第 3 部分。 XAML 标记扩展
-description: XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。 XAML 标记扩展是对于共享对象，并引用在应用程序，使用常量尤为重要，但它们在数据绑定中找到其最大的实用程序。
+description: XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245906"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
@@ -321,8 +322,8 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 
 - 公共静态字段
 - 公共静态属性
-- 公共常量字段 
-- 枚举成员。 
+- 公共常量字段
+- 枚举成员。
 
 `StaticResource`标记扩展支持的 XAML 实现定义使用的资源字典时`x:Static`属于内部 XAML 中，作为`x`前缀显示。
 
@@ -366,7 +367,7 @@ namespace XamlSamples
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(40, FontAttributes.Bold);
                     break;
-                    
+
                 case Device.UWP:
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(50, FontAttributes.Bold);

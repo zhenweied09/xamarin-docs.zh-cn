@@ -1,6 +1,6 @@
 ---
 title: 使用 Azure Cosmos DB 文档数据库
-description: Azure Cosmos DB 文档数据库是提供对 JSON 文档，提供快速、 高度可用、 可缩放数据库服务需要无缝缩放和全局复制的应用程序的较低的延迟访问的 NoSQL 数据库。 此文章介绍了如何使用 Azure Cosmos DB 标准.NET 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。
+description: 此文章介绍了如何使用 Azure Cosmos DB 标准.NET 客户端库来将 Azure Cosmos DB 文档数据库集成到 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
 ms.technology: xamarin-forms
@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a4656b5eb9a8159f1b3dc39c8cf62509101d219e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6e797eaad98f6fac66876aaebecd7ae53ad9dbab
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242500"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>使用 Azure Cosmos DB 文档数据库
 

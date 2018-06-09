@@ -1,28 +1,22 @@
 ---
 title: 设备方向
-description: 了解如何应用程序外观在纵向与横向方向进行布局。
+description: 此文章介绍了如何在纵向与横向方向非常好的布局 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 95049e2d44b369bfa879226e17d2bad20b7b5408
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 9245a17423d97887d2032856b10427685b25c29b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848130"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244346"
 ---
 # <a name="device-orientation"></a>设备方向
 
 请务必考虑将如何使用你的应用程序，以及可以如何纳入横向以改进用户体验。 单个布局可以用于容纳多个方向和最佳使用可用空间。 在应用程序级别中，可以禁用或启用旋转。
-
-本文将指导你完成创建应用程序利用设备方向功能，并包含以下部分：
-
-- **[控制方向](#Controlling_Orientation)** &ndash;了解如何跨每个平台控制在应用级别的方向。
-- **[对到方向中的更改作出反应](#Reacting_to_Changes_in_Orientation)** &ndash;了解如何接收通知，并做出响应，请更改方向。
-- **[响应式布局](#Responsive_Layout)** &ndash;了解如何创建跨横向和纵向方向自动工作的布局。
 
 <a name="Controlling_Orientation" />
 

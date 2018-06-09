@@ -1,18 +1,18 @@
 ---
 title: 实现视图
-description: Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。 本文演示如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。
+description: 此文章介绍了如何创建自定义呈现器的 Xamarin.Forms 自定义控件，用于显示来自设备的照相机的预览视频流。
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: d270a23fb2fee67e5e3dd415771c975aeb682854
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: eb0bc199bfd31ac631ca9d131796b606960d76aa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848481"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240481"
 ---
 # <a name="implementing-a-view"></a>实现视图
 

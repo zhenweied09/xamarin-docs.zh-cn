@@ -1,17 +1,18 @@
 ---
 title: SkiaSharp 曲线和路径
-description: 了解如何使用 SkiaSharp 绘制曲线和使用路径功能
+description: 本文说明如何使用 SkiaSharp 绘制曲线和 Xamarin.Forms 应用程序中使用路径功能，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 9bfab147b526a6c67aa295c61e334d75627f3ca3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243855"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 曲线和路径
 
@@ -53,4 +54,4 @@ _了解如何使用 SkiaSharp 绘制曲线和使用路径功能_
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

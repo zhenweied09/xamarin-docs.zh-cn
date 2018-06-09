@@ -1,17 +1,18 @@
 ---
 title: 非仿射转换
-description: 转换矩阵将第三个列创建透视和锥形的效果
+description: 本文章介绍如何转换矩阵中，将第三个列创建透视和锥形的效果，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 03c5b0dcbb7870e38991d7e0f4c7ac4feebfcf4e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244228"
 ---
 # <a name="non-affine-transforms"></a>非仿射转换
 
@@ -47,9 +48,9 @@ z = Persp0·x + Persp1·y + Persp2
 
 x" = x' / z'
 
-y" = y' / z'
+y"= y / z
 
-z" = z' / z' = 1
+z"= z / z = 1
 
 这些被称为*同类坐标*和开发通过数学知识的人年 8 月 Ferdinand Möbius，得更好已知为他拓扑 oddity Möbius 条带。
 
@@ -75,19 +76,19 @@ z = Persp0·x + Persp1·y + Persp2
 
 转换公式是：
 
-x` = x / (0.01·x + 1)
+x = x / （0.01·x + 1）
 
 y = y / （0.01·x + 1）
 
 现在使用此转换呈现原点定位一个 100 像素方框。 下面是如何转换的四个角：
 
-(0, 0) → (0, 0)
+（0，0） （0，0） 的 →
 
-(0, 100) → (0, 100)
+（0，100）-> （0，100）
 
-(100, 0) → (50, 0)
+（100，0） → （50，0）
 
-(100, 100) → (50, 50)
+（100，100）-> （50，50）
 
 当 x 为 100，则 z 分母为 2，因此的 x 和 y 坐标减半。 框的右侧会成为短于左侧:
 
@@ -469,4 +470,4 @@ W 和 H 表示的宽度和位图的高度。 第一个转换 (`S`) 只需缩放�
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

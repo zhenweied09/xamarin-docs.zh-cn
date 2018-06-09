@@ -1,16 +1,18 @@
 ---
 title: 通信之间松散耦合的组件
+description: '本章还说明了如何 eShopOnContainers 移动应用程序实现发布-订阅模式，允许基于消息的是很不方便链接对象和类型引用的组件之间的通信 '
 ms.prod: xamarin
 ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 01669573f215c5a13bb918c9f9ba80aa5ca528c9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 797032d17babe986de1357c6ac3291a4960d87ff
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245076"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>通信之间松散耦合的组件
 
@@ -26,7 +28,7 @@ Xamarin.Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamar
 
 ![](communicating-between-loosely-coupled-components-images/messagingcenter.png "多播发布-订阅功能")
 
-**图 4-1:**多播发布-订阅功能
+**图 4-1:** 多播发布-订阅功能
 
 发布服务器将使用的消息发送[ `MessagingCenter.Send` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Send%7BTSender%7D/p/TSender/System.String/)方法，而订阅服务器侦听的消息使用[ `MessagingCenter.Subscribe` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Subscribe%7BTSender%7D/p/System.Object/System.String/System.Action%7BTSender%7D/TSender/)方法。 此外，订阅服务器可以还取消订阅消息，如有必要，使用[ `MessagingCenter.Unsubscribe` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MessagingCenter.Unsubscribe%7BTSender%7D/p/System.Object/System.String/)方法。
 

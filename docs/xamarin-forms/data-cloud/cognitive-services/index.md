@@ -1,17 +1,18 @@
 ---
 title: 添加智能与认知服务
-description: Microsoft 认知服务是一套 Api、 Sdk 和供开发人员可以通过添加功能，如面部识别、 语音识别和语言理解，使其应用程序更智能的服务。 本文提供的示例应用程序演示如何调用的一些 Microsoft 认知服务 Api 的简介。
+description: 本文提供了演示如何调用的一些 Microsoft 认知服务 Api 的示例应用程序的介绍。
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 86253e42db7da2da6eb8b03e2d4a4b3c943b7e17
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: c577aaf1991082baaf34248ee31899902f692d0b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241518"
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>添加智能与认知服务
 

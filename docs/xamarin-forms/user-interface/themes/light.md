@@ -1,19 +1,20 @@
 ---
-title: 浅色主题
+title: Xamarin.Forms 浅色主题
+description: 此文章介绍了如何使用 Xamarin.Forms 浅色主题在应用程序。
 ms.prod: xamarin
 ms.assetid: D5D16AE3-F51F-4359-B37A-E1087ECE512B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 87c2a1a1003868aba10c7c1ec50856f307cc5bff
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 7f40e375d653acec60f8848627234ab46fcce8de
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848000"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245242"
 ---
-# <a name="light-theme"></a>浅色主题
+# <a name="xamarinforms-light-theme"></a>Xamarin.Forms 浅色主题
 
 ![](~/media/shared/preview.png "此 API 目前处于预览状态")
 
@@ -68,4 +69,3 @@ XAML 文件的示例所示：
 ```
 
 [的内置类的完整列表](~/xamarin-forms/user-interface/themes/index.md)显示哪些样式提供的某些常见的控件。
-

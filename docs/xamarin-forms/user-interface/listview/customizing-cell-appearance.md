@@ -1,20 +1,20 @@
 ---
-title: 单元格的外观
-description: 浏览更多用于同时利用 ListView 方便地显示数据的选项。
+title: 自定义 ListView 单元格的外观
+description: 本文探讨了用于同时利用 ListView 控件的便利性 Xamarin.Forms 应用程序中显示数据的选项。
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 14ef4abe773512f76d9823809270f27b1a0ad1a3
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 86447afbabca1384f9e46f5128a9dc00253a798c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848455"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244751"
 ---
-# <a name="cell-appearance"></a>单元格的外观
+# <a name="customizing-listview-cell-appearance"></a>自定义 ListView 单元格的外观
 
 ListView 显示可滚动列表，可以使用自定义`ViewCell`s。 `ViewCells` 可用于显示文本和图像、 指示 true/false 状态和接收用户输入。
 

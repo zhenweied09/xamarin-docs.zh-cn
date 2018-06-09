@@ -1,5 +1,5 @@
 ---
-title: 缓动函数
+title: Xamarin.Forms 中的缓动函数
 description: Xamarin.Forms 中包括允许你指定的传输函数，用于控制如何动画加快或减慢，因为它们正在运行一个缓动类。 本文演示如何使用预定义的缓动函数，以及如何创建自定义缓动函数。
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: e9171b885bdf5958b6969719301a1d7dad51d95b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9398a1b9cf4e5f6fd18f2213a7cf55e9cbb93ef0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243137"
 ---
-# <a name="easing-functions"></a>缓动函数
+# <a name="easing-functions-in-xamarinforms"></a>Xamarin.Forms 中的缓动函数
 
 _Xamarin.Forms 中包括允许你指定的传输函数，用于控制如何动画加快或减慢，因为它们正在运行一个缓动类。本文演示如何使用预定义的缓动函数，以及如何创建自定义缓动函数。_
 

@@ -1,17 +1,18 @@
 ---
 title: 路径信息和枚举
-description: 获取有关路径的信息和枚举的内容
+description: 本文章介绍如何获取有关 SkiaSharp 路径的信息和枚举的内容，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243787"
 ---
 # <a name="path-information-and-enumeration"></a>路径信息和枚举
 
@@ -27,7 +28,7 @@ _获取有关路径的信息和枚举的内容_
 
 ## <a name="getting-the-path-length"></a>获取路径长度
 
-本文[**路径和文本**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)您了解到如何使用[ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/)方法，以便绘制其基线遵循路径的过程的文本字符串。 但是，如果你想要调整文本大小，以便它精确适合路径？ 对于圆环绘制文本，这很容易，因为圆的周长很容易计算。 但的椭圆的圆的周长或的贝塞尔曲线的长度并不那么简单。 
+本文[**路径和文本**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)您了解到如何使用[ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/)方法，以便绘制其基线遵循路径的过程的文本字符串。 但是，如果你想要调整文本大小，以便它精确适合路径？ 对于圆环绘制文本，这很容易，因为圆的周长很容易计算。 但的椭圆的圆的周长或的贝塞尔曲线的长度并不那么简单。
 
 [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/)类可帮助。 [构造函数](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/)接受`SKPath`自变量，与[ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/)属性显示其长度。
 
@@ -151,7 +152,7 @@ public class UnicycleHalfPipePage : ContentPage
     };
 
     SKPath unicyclePath = SKPath.ParseSvgPathData(
-        "M 0 0" + 
+        "M 0 0" +
         "A 25 25 0 0 0 0 -50" +
         "A 25 25 0 0 0 0 0 Z" +
         "M 0 -25 L 0 -100" +
@@ -179,7 +180,7 @@ public class UnicycleHalfPipePage : ContentPage
         using (SKPath pipePath = new SKPath())
         {
             pipePath.MoveTo(50, 50);
-            pipePath.CubicTo(0, 1.25f * info.Height, 
+            pipePath.CubicTo(0, 1.25f * info.Height,
                              info.Width - 0, 1.25f * info.Height,
                              info.Width - 50, 50);
 
@@ -197,7 +198,7 @@ public class UnicycleHalfPipePage : ContentPage
                 t = (float)((1 - Math.Cos(t * 2 * Math.PI)) / 2);
 
                 SKMatrix matrix;
-                pathMeasure.GetMatrix(t * length, out matrix, 
+                pathMeasure.GetMatrix(t * length, out matrix,
                                       SKPathMeasureMatrixFlags.GetPositionAndTangent);
 
                 canvas.SetMatrix(matrix);
@@ -426,7 +427,7 @@ static class PathExtensions
 
 [![](information-images/globulartext-small.png "三重的 Globular 文本页的屏幕截图")](information-images/globulartext-large.png#lightbox "Globular 文本页面的三个屏幕截图")
 
-[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs)类构造函数执行此转换。 它将创建`SKPaint`对象的文本，然后，获取`SKPath`对象`GetTextPath`方法。 这是传递给的路径`CloneWithTransform`以及转换函数的扩展方法： 
+[ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs)类构造函数执行此转换。 它将创建`SKPaint`对象的文本，然后，获取`SKPath`对象`GetTextPath`方法。 这是传递给的路径`CloneWithTransform`以及转换函数的扩展方法：
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -453,9 +454,9 @@ public class GlobularTextPage : ContentPage
 
                 globePath = textPath.CloneWithTransform((SKPoint pt) =>
                 {
-                    double longitude = (Math.PI / textPathBounds.Width) * 
+                    double longitude = (Math.PI / textPathBounds.Width) *
                                             (pt.X - textPathBounds.Left) - Math.PI / 2;
-                    double latitude = (Math.PI / textPathBounds.Height) * 
+                    double latitude = (Math.PI / textPathBounds.Height) *
                                             (pt.Y - textPathBounds.Top) - Math.PI / 2;
 
                     longitude *= 0.75;
@@ -510,4 +511,4 @@ public class GlobularTextPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

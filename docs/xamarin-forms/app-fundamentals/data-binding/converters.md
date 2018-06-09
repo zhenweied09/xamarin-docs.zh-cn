@@ -1,19 +1,20 @@
 ---
-title: 绑定值转换器
-description: 强制转换或转换中的数据绑定的值
+title: Xamarin.Forms 绑定值转换器
+description: 此文章介绍了如何强制转换或通过实现值转换器 （这是也称为绑定转换器或绑定值转换器） 转换 Xamarin.Forms 数据绑定中的值。
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241824"
 ---
-# <a name="binding-value-converters"></a>绑定值转换器
+# <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 绑定值转换器
 
 数据绑定到目标属性，并在某些情况下从目标属性的源属性，通常将数据传输源属性中。 源和目标属性时相同的类型，或一个类型可以转换为另一种类型通过隐式转换时，此传输非常简单。 在不是这种情况，类型转换必须进行。
 

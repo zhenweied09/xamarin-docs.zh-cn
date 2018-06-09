@@ -1,19 +1,20 @@
 ---
-title: 验证
+title: 在企业应用程序中的验证
+description: 本章介绍 eShopOnContainers 移动应用程序如何执行验证的用户输入。 这包括指定验证规则，触发验证，并显示验证错误。
 ms.prod: xamarin
 ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 484f3b3d45e41d0dd0406681250ac90943a1cdde
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6a7f244b78d5b48dd219f59f1191993d62663bbf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847584"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243172"
 ---
-# <a name="validation"></a>验证
+# <a name="validation-in-enterprise-apps"></a>在企业应用程序中的验证
 
 接受用户输入的任何应用程序应确保输入有效。 输入包含特定范围内的唯一字符、 属于某个特定长度，或与特定的格式无法，例如，检查应用程序。 如果未经验证，用户可以提供将导致应用程序失败的数据。 验证强制实施业务规则并防止攻击者将恶意数据注入。
 

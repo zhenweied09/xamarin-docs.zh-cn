@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: b893fe5e56cc2d43a71870ffbbd20f0b8c6cfd18
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8b489fd1a1bcce474decf6881e8eb6620c2ee2e3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787489"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240731"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>在 Xamarin.iOS CoreML 简介
-
-_机器学习有关 iOS 11 上的移动应用_
 
 CoreML 使到 iOS 的机器学习 – 应用可以利用训练的机器学习模型，来执行各种类型的任务，从图像识别到解决的问题。
 
@@ -33,28 +31,19 @@ CoreML 使到 iOS 的机器学习 – 应用可以利用训练的机器学习模
 
 ![Mars 人类生存环境价格预测值示例屏幕快照](coreml-images/marspricer-heading.png)
 
-### <a name="1-add-the-model-to-the-project"></a>1.向项目添加模型
+### <a name="1-add-the-coreml-model-to-the-project"></a>1.向项目添加 CoreML 模型
 
-添加编译后的模型 (具有的目录 **.modelc**扩展) 到**资源**项目目录。 目录的内容应具有生成操作的**BundleResource**:
+添加 CoreML 模型 (具有的文件 **.mlmodel**扩展) 到**资源**项目目录。 
 
-![该资源文件夹应包含编译后的模型](coreml-images/resources-modelc.png)
-
-[示例](https://developer.xamarin.com/samples/monotouch/ios11/)使用模型在 Xcode 9 中编译或手动使用以下终端命令：
-
-```csharp
-xcrun coremlcompiler compile {model.mlmodel} {outputFolder}
-```
-
-> [!NOTE]
-> **.model**文件_必须_编译为 **.modelc**它们可以由 CoreML 之前
+在模型文件的属性中，其**生成操作**设置为**CoreMLModel**。 这意味着将编译到 **.mlmodelc**文件生成应用程序时。
 
 ### <a name="2-load-the-model"></a>2.加载模型
 
-使用一个模型之前, 加载它使用`MLModel.FromUrl`静态方法：
+加载模型使用`MLModel.Create`静态方法：
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
-model = MLModel.FromUrl(assetPath, out NSError error1);
+model = MLModel.Create(assetPath, out NSError error1);
 ```
 
 ### <a name="3-set-the-parameters"></a>3.设置的参数
@@ -113,13 +102,15 @@ CoreML 模型_MNISTClassifier_加载和稍后被包装在`VNCoreMLModel`这使�
 
 ```csharp
 // Load the ML model
-var assetPath = NSBundle.MainBundle.GetUrlForResource("MNISTClassifier", "mlmodelc");
-var mlModel = MLModel.FromUrl(assetPath, out NSError mlErr);
-var vModel = VNCoreMLModel.FromMLModel(mlModel, out NSError vnErr);
+var bundle = NSBundle.MainBundle;
+var assetPath = bundle.GetUrlForResource("MNISTClassifier", "mlmodelc");
+NSError mlErr, vnErr;
+var mlModel = MLModel.Create(assetPath, out mlErr);
+var model = VNCoreMLModel.FromMLModel(mlModel, out vnErr);
 
 // Initialize Vision requests
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
-ClassificationRequest = new VNCoreMLRequest(vModel, HandleClassification);
+ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
 类仍需要实现`HandleRectangles`和`HandleClassification`对于愿景请求，步骤 3 和 4 下面所示的方法。
@@ -153,7 +144,7 @@ void HandleRectangles(VNRequest request, NSError error) {
   // Run the Core ML MNIST classifier -- results in handleClassification method
   var handler = new VNImageRequestHandler(correctedImage, new VNImageOptions());
   DispatchQueue.DefaultGlobalQueue.DispatchAsync(() => {
-    handler.Perform(new VNRequest[] { ClassificationRequest }, out NSError err);
+    handler.Perform(new VNRequest[] {ClassificationRequest}, out NSError err);
   });
 }
 ```
@@ -167,7 +158,7 @@ void HandleRectangles(VNRequest request, NSError error) {
 ```csharp
 void HandleClassification(VNRequest request, NSError error){
   var observations = request.GetResults<VNClassificationObservation>();
-  ... omitted error handling ...
+  // ... omitted error handling ...
   var best = observations[0]; // first/best classification result
   // render in UI
   DispatchQueue.MainQueue.DispatchAsync(()=>{
@@ -175,8 +166,6 @@ void HandleClassification(VNRequest request, NSError error){
   });
 }
 ```
-
-
 
 ## <a name="samples"></a>示例
 
@@ -187,7 +176,6 @@ void HandleClassification(VNRequest request, NSError error){
 * [设想和 CoreML 示例](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLVision/)接受图像参数，并使用愿景 framework 来标识在图中，传递给识别单个数字 CoreML 模型的方形区域。
 
 * 最后， [CoreML 图像识别示例](https://developer.xamarin.com/samples/monotouch/ios11/CoreMLImageRecognition/)CoreML 用于标识一张照片中的功能。 默认情况下，它使用的较小者**SqueezeNet**模型 (5 MB)，但是它已写入，以便你可以下载并将合并较大**VGG16**模型 (553 MB)。 有关详细信息，请参阅[示例的自述文件](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md)。
-
 
 ## <a name="related-links"></a>相关链接
 

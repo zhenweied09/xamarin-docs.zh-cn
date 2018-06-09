@@ -1,18 +1,18 @@
 ---
 title: 添加平移笔势识别器
-description: 平移手势用于检测拖动并与 PanGestureRecognizer 类实现。 平移笔势的一个常见方案是水平和垂直拖动图像，以便它在小于图像大小视区中显示时，可以查看所有的映像包内容。 这通过在视区内，映像移动来实现，这篇文章中所示。
+description: 此文章介绍了如何使用平移笔势与水平和垂直拖动图像，以便在小于图像大小视区中显示时，可以查看所有的映像包内容。
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 1f564fe14be0bcda08722bad11c9c5bd8152687a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d3e4dfc57678ff75fb8f9761360748d94aeefcc2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846326"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239979"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>添加平移笔势识别器
 

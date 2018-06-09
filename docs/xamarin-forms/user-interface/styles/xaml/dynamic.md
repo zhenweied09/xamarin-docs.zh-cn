@@ -1,20 +1,20 @@
 ---
-title: 动态样式
-description: 样式，不要响应属性更改和应用程序的持续时间内保持不变。 例如，分配到可视元素，如果其中一个 Setter 实例修改、 删除或添加的新 Setter 实例的一种样式后, 所做的更改不会应用到的可视元素。 但是，应用程序可以响应在运行时动态的样式更改通过使用动态资源。
+title: Xamarin.Forms 中的动态样式
+description: 此文章介绍了如何 Xamarin.Forms 应用程序可以响应在运行时动态的样式更改通过使用动态资源。
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e0cfcbaef70f58622a21315637279740f568ada8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f82e0cfde29921ea768000f17b93d04f8ad307e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848065"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245216"
 ---
-# <a name="dynamic-styles"></a>动态样式
+# <a name="dynamic-styles-in-xamarinforms"></a>Xamarin.Forms 中的动态样式
 
 _样式，不要响应属性更改和应用程序的持续时间内保持不变。例如，分配到可视元素，如果其中一个 Setter 实例修改、 删除或添加的新 Setter 实例的一种样式后, 所做的更改不会应用到的可视元素。但是，应用程序可以响应在运行时动态的样式更改通过使用动态资源。_
 

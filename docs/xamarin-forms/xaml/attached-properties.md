@@ -1,17 +1,18 @@
 ---
 title: 附加属性
-description: 附加的属性是可绑定属性，在一个类中定义但附加到其他对象的特殊类型可识别作为特性的 XAML 中包含的类和句点分隔属性名称。 这篇文章提供附加属性的简介，并演示如何创建和使用它们。
+description: 这篇文章提供附加属性的简介，并演示如何创建和使用它们。
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: 5c903a39e5569c7ffedfff8eb8e6b0bd4071be9d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e0ecff37eaf615321c7fcdce35e334db89ae631a
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245893"
 ---
 # <a name="attached-properties"></a>附加属性
 

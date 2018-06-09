@@ -1,16 +1,18 @@
 ---
 title: 章 20 的摘要。 异步和文件 I/O
+description: 使用 Xamarin.Forms 创建移动应用： 章 20 的摘要。 异步和文件 I/O
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 521a8b18e74e078b9caafc6c79c7e418e1f5e08f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fbcf1c9cfb1cd87ea33f47ae61a8ebe233b89736
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241863"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>章 20 的摘要。 异步和文件 I/O
 
@@ -93,7 +95,7 @@ Xamarin.iOS 和 Xamarin.Android 库包括 Xamarin 明确针对这两个平台的
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android)，Android 类库
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP)，通用 Windows 类库
 - [**Xamarin.FormsBook.Platform.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Windows)，Windows 8.1 的 PCL。
-- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone), a PCL for Windows Phone 8.1
+- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone)，Windows Phone 8.1 的 PCL
 - [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT)，普遍适用于所有 Windows 平台的代码共享的项目
 
 单个平台的所有项目 (除**Xamarin.FormsBook.Platform.WinRT**) 引用了**Xamarin.FormsBook.Platform**。 三个 Windows 项目具有对引用**Xamarin.FormsBook.Platform.WinRT**。

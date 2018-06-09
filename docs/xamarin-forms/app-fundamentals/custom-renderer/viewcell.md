@@ -1,18 +1,18 @@
 ---
 title: 自定义 ViewCell
-description: Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。 本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。 这将停止从正在 Xamarin.Forms 布局计算在 ListView 滚动过程中重复调用。
+description: Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。 本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。
 ms.prod: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: ec7e8ef619ba065c0e9d81b71f267eb70a68bd14
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2011049180aa47b7be68486d4f30bd356e2ba813
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847701"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241798"
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 

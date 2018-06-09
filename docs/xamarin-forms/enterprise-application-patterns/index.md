@@ -1,17 +1,18 @@
 ---
 title: 使用 Xamarin.Forms 电子书的企业应用程序模式
-description: 开发自适应的、 可维护性、 和可测试 Xamarin.Forms 企业应用程序的体系结构指南
+description: 此电子书提供开发自适应的、 可维护性、 和可测试 Xamarin.Forms 企业应用程序的体系结构指南。
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c401465d8a57abe1d5a1cfaf9ee2616888332ea3
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242158"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>使用 Xamarin.Forms 电子书的企业应用程序模式
 

@@ -1,19 +1,20 @@
 ---
-title: 矩阵转换
-description: 深入了解与通用转换矩阵的 SkiaSharp 转换
+title: 在 SkiaSharp 矩阵转换
+description: 这篇文章更深入地深入 SkiaSharp 转换使用的通用转换矩阵，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90fadf0081f86e7739d75c0710caeaf1775c423e
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 816a5f47a4a4f5c01a1fb20b5c8e7a2fc83a64b0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244872"
 ---
-# <a name="matrix-transforms"></a>矩阵转换
+# <a name="matrix-transforms-in-skiasharp"></a>在 SkiaSharp 矩阵转换
 
 _深入了解与通用转换矩阵的 SkiaSharp 转换_
 
@@ -61,11 +62,11 @@ SKMatrix matrix = SKMatrix.MakeIdentity();
 
 使用标准矩阵乘法，已转换的点如下所示：
 
-x' = x
+x = x
 
-y' = y
+y = y
 
-z' = 1
+z = 1
 
 这是默认转换。
 
@@ -115,7 +116,7 @@ y = sy ·y
 
 转换公式是：
 
-x' = x + xSkew · y
+x = x + xSkew ·y
 
 y = ySkew ·x + y
 
@@ -129,9 +130,9 @@ y = ySkew ·x + y
 
 下面是转换公式：
 
-x' = cos(α) · x - sin(α) · y
+x = cos(α) ·x-sin(α) ·y
 
-y' = sin(α) · x - cos(α) · y
+y = sin(α) ·x-cos(α) ·y
 
 0 度 α 时，它是单位矩阵。 Α 时 180 度，转换矩阵如下所示：
 
@@ -229,7 +230,7 @@ x = ScaleX ·x + SkewX ·y + TransX
 
 y = SkewX ·x + ScaleY ·y + TransY
 
-z' = 1
+z = 1
 
 这是完整的二维仿射转换。 仿射转换保留平行直线，这意味着一个矩形将永远不会转换为的平行四边形之外的任何内容。
 
@@ -268,7 +269,7 @@ SKMatrix.PostConcat(ref A, ref B);
 
 这些调用执行以下操作：
 
-A = A × B
+A = × B
 
 这两个`PreConcat`方法非常相似：
 
@@ -358,7 +359,7 @@ SKMatrix.PostConcat(ref A, C);
 
 这是一系列连续乘法运算，因此结果为，如下所示：
 
-A × B × C
+× B × C
 
 连续乘法运算有助于了解每个转换的用途。 缩放变换路径坐标的大小增加通过因子为 3，因此坐标介于 –300 和 300 之间。 旋转变换旋转围绕其源星号。 Translate 转换然后会将它移动通过 300 像素右和向下，因此所有改为正值的坐标。
 
@@ -652,4 +653,4 @@ public partial class ShowAffineMatrixPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

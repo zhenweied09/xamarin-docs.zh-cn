@@ -1,19 +1,20 @@
 ---
-title: 基本绑定
-description: 数据绑定目标、 源和绑定上下文
+title: Xamarin.Forms Basic 绑定
+description: 此文章介绍了如何使用 Xamarin.Forms 数据绑定，其中至少链接的两个对象之间的属性对其中之一通常是用户界面对象。 这两个对象分别称为目标和源。
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 065258acacb8469b90dd2ca04286f0686dc90063
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f932b7dfbcccb8f1c6ccb726f5e48c2df6e93c6c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241684"
 ---
-# <a name="basic-bindings"></a>基本绑定
+# <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms Basic 绑定
 
 Xamarin.Forms 数据绑定链接的成对的两个对象，至少一个通常是用户界面对象之间的属性。 这两个对象被称为*目标*和*源*:
 
@@ -47,7 +48,7 @@ Xamarin.Forms 数据绑定链接的成对的两个对象，至少一个通常是
 
 `Slider`设置为 0 到 360 范围。 此程序的目的是旋转`Label`通过操作`Slider`。
 
-不带数据绑定，你将设置`ValueChanged`事件`Slider`访问的事件处理程序`Value`属性`Slider`并将该值设置为`Rotation`属性`Label`。 数据绑定自动执行该作业;事件处理程序和其中的代码不再需要。 
+不带数据绑定，你将设置`ValueChanged`事件`Slider`访问的事件处理程序`Value`属性`Slider`并将该值设置为`Rotation`属性`Label`。 数据绑定自动执行该作业;事件处理程序和其中的代码不再需要。
 
 你可以在任何派生自的类的实例上设置绑定[ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)，其中包括`Element`， `VisualElement`， `View`，和`View`衍生产品。  始终对目标对象设置绑定。 绑定引用的源对象。 若要设置数据绑定，使用目标类的以下两个成员：
 
@@ -73,7 +74,7 @@ public partial class BasicCodeBindingPage : ContentPage
 
 `Label`对象是绑定目标，因此这是上设置此属性和对其调用该方法的对象。 `BindingContext`属性指示绑定源，这是`Slider`。
 
-`SetBinding`方法调用在绑定目标系统上，但指定的目标属性和源属性。 目标属性指定为`BindableProperty`对象： `Label.RotationProperty`。 源属性指定为一个字符串，并指示`Value`属性`Slider`。 
+`SetBinding`方法调用在绑定目标系统上，但指定的目标属性和源属性。 目标属性指定为`BindableProperty`对象： `Label.RotationProperty`。 源属性指定为一个字符串，并指示`Value`属性`Slider`。
 
 `SetBinding`方法显示数据绑定的最重要规则之一：
 
@@ -120,7 +121,7 @@ label.SetBinding(RotationProperty, "Value");
 对目标对象，这是一样的代码中，设置数据绑定`Label`。 涉及两个 XAML 标记扩展。 这些是立即可以识别的大括号分隔符：
 
 - `x:Reference`引用源对象，它是所需的标记扩展`Slider`名为`slider`。
-- `Binding`标记扩展链接`Rotation`属性`Label`到`Value`属性`Slider`。 
+- `Binding`标记扩展链接`Rotation`属性`Label`到`Value`属性`Slider`。
 
 请参阅文章[XAML 标记扩展](~/xamarin-forms/xaml/markup-extensions/index.md)XAML 标记扩展有关的详细信息。 `x:Reference`标记扩展支持的[ `ReferenceExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/)类;`Binding`受[ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/)类。 以 XML 命名空间前缀指示，`x:Reference`是 XAML 2009 规范的一部分时`Binding`属于 Xamarin.Forms。 请注意，没有引号出现在大括号内。
 
@@ -185,13 +186,13 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-`Binding`构造函数具有 6 参数，因此`source`命名自变量与指定参数。 此自变量是`slider`对象。 
+`Binding`构造函数具有 6 参数，因此`source`命名自变量与指定参数。 此自变量是`slider`对象。
 
 运行此程序可能有点令人惊讶：
 
 [![替代代码绑定](basic-bindings-images/alternativecodebinding-small.png "替代代码绑定")](basic-bindings-images/alternativecodebinding-large.png#lightbox "替代代码绑定")
 
-在左侧的 iOS 屏幕显示屏幕时将首先显示的页的外观。 其中是`Label`？ 
+在左侧的 iOS 屏幕显示屏幕时将首先显示的页的外观。 其中是`Label`？
 
 问题在于`Slider`的初始值为 0。 这将导致`Scale`属性`Label`也设置为 0，重写其默认值为 1。 这会导致`Label`正在最初不可见。 如 Android 和通用 Windows 平台 (UWP) 的屏幕截图所示，你可以操控`Slider`以便`Label`再次出现，但其初始消失带来不便。
 
@@ -246,7 +247,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
                  Path="Value" />
     </Label.Scale>
 </Label>
-``` 
+```
 
 现在`Source`和`Path`属性是 XAML 的常规属性： 显示在引号内的值以及属性没有用逗号分隔。 `x:Reference`标记扩展也可能会变为对象元素：
 
@@ -267,9 +268,9 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 
 此语法不常见，但有时很必要时涉及复杂的对象。
 
-到目前为止所示的示例设置`BindingContext`属性和`Source`属性`Binding`到`x:Reference`标记扩展，以引用页面上的另一个视图。 这两个属性属于类型`Object`，并且它们可以设置为任何包含适合于绑定源的属性的对象。 
+到目前为止所示的示例设置`BindingContext`属性和`Source`属性`Binding`到`x:Reference`标记扩展，以引用页面上的另一个视图。 这两个属性属于类型`Object`，并且它们可以设置为任何包含适合于绑定源的属性的对象。
 
-在继续操作的文章中，将发现你可以设置`BindingContext`或`Source`属性`x:Static`要引用的静态属性或字段的值的标记扩展或`StaticResource`标记扩展，以引用存储中的对象资源字典中，或直接为一个对象，这是通常 （但不是总是） 视图模型的实例。 
+在继续操作的文章中，将发现你可以设置`BindingContext`或`Source`属性`x:Static`要引用的静态属性或字段的值的标记扩展或`StaticResource`标记扩展，以引用存储中的对象资源字典中，或直接为一个对象，这是通常 （但不是总是） 视图模型的实例。
 
 `BindingContext`属性还可以设置为`Binding`对象以便`Source`和`Path`属性`Binding`定义的绑定上下文。
 
@@ -294,7 +295,7 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
 
         <StackLayout VerticalOptions="FillAndExpand"
                      BindingContext="{x:Reference slider}">
-            
+
             <Label Text="TEXT"
                    FontSize="80"
                    HorizontalOptions="Center"
@@ -309,14 +310,14 @@ Scale="{Binding Value, Source={x:Reference slider}}" />
                      Rotation="{Binding Value}" />
         </StackLayout>
 
-        <Slider x:Name="slider" 
+        <Slider x:Name="slider"
                 Maximum="360" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
 
-`BindingContext`属性`StackLayout`设置为`slider`对象。 此绑定上下文继承两个`Label`和`BoxView`，这两个都没有其`Rotation`属性设置为`Value`属性`Slider`: 
+`BindingContext`属性`StackLayout`设置为`slider`对象。 此绑定上下文继承两个`Label`和`BoxView`，这两个都没有其`Rotation`属性设置为`Value`属性`Slider`:
 
 [![绑定上下文继承](basic-bindings-images/bindingcontextinheritance-small.png "绑定上下文继承")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "绑定上下文继承")
 

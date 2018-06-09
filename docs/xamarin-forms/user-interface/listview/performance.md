@@ -1,28 +1,24 @@
 ---
 title: ListView 性能
-description: 确保基于 ListView 的应用程序具有卓越性能。
+description: 尽管 ListView 是功能强大的视图，以显示数据，但它具有一些限制。 此文章介绍了如何确保与应用程序中的 Xamarin.Forms ListView 卓越性能。
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dcd4881e2ad7f1bb4af5455805da1dd2cade3605
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4803a612e2b06e458f2859dbbbd30b970f0fc8ea
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244898"
 ---
 # <a name="listview-performance"></a>ListView 性能
 
 如果编写移动应用程序，性能很重要。 用户希望平滑滚动和快速加载时间。 无法满足你的用户预期将你的应用程序存储区中的级别或成本对于业务线应用程序，成本你组织的时间和资金。
 
 尽管[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)是功能强大的视图来显示数据，它具有一些限制。 使用自定义单元格，尤其是当它们包含深度嵌套的视图层次结构或使用需要大量的度量某些布局时，滚动性能会降低。 幸运的是，没有可用于避免性能较差的技术。
-
-在本文中讨论了下列主题：
-
-- **[缓存策略](#cachingstrategy)**
-- **[提高 ListView 性能](#improving-performance)**
 
 <a name="cachingstrategy" />
 

@@ -1,19 +1,20 @@
 ---
-title: 位图基础知识
-description: 从各种源加载位图并显示它们。
+title: Bitmap SkiaSharp 中的基础知识
+description: 本文章介绍如何从各种源加载 SkiaSharp 中的位图，并将其显示在 Xamarin.Forms 应用程序，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 291f08afb95c70e9f9fccc02e1fd7353cf107213
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244381"
 ---
-# <a name="bitmap-basics"></a>位图基础知识
+# <a name="bitmap-basics-in-skiasharp"></a>Bitmap SkiaSharp 中的基础知识
 
 _从各种源加载位图并显示它们。_
 
@@ -247,5 +248,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [从图片库中选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

@@ -1,17 +1,18 @@
 ---
 title: 绘制一段弧线，三个方法
-description: 了解如何使用 SkiaSharp 三个不同的方式来定义弧
+description: 本文章介绍如何使用 SkiaSharp 定义弧通过三种不同方式，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: aba193ca38d60db52298fdf239d936310a4ac193
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 9e0ed04543436ec7a83d13fa6a56637fc7916338
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244147"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>绘制一段弧线，三个方法
 

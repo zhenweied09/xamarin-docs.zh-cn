@@ -1,19 +1,20 @@
 ---
-title: 字体
-description: Xamarin.Forms 中的设置字体
+title: Xamarin.Forms 中的字体
+description: 此文章介绍了如何在 Xamarin.Forms 应用中显示文本的控件上指定字体信息。
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 52c86c63c328729211c4fbd22bd10b5eb1e56615
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd45528446c9d3d4bdfa1b8f9f4010babb2ad044
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245626"
 ---
-# <a name="fonts"></a>字体
+# <a name="fonts-in-xamarinforms"></a>Xamarin.Forms 中的字体
 
 本指南介绍了如何 Xamarin.Forms 能够让你指定的字体特性 （包括权重和大小） 上显示文本的控件。 字体信息可以是[在代码中指定](#Setting_Font_in_Code)或[在 Xaml 中指定](#Setting_Font_in_Xaml)。
 还有可能要使用[自定义字体](#Using_a_Custom_Font)。

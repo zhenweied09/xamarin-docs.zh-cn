@@ -1,20 +1,20 @@
 ---
-title: Grid
-description: 在网格中呈现的视图。
+title: Xamarin.Forms 网格
+description: 此文章介绍了如何使用 Xamarin.Forms 网格类在具有行和列的网格中呈现视图。
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848104"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245148"
 ---
-# <a name="grid"></a>Grid
+# <a name="xamarinforms-grid"></a>Xamarin.Forms 网格
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 为行和列排列视图的支持。 可以设置行和列具有按比例大小或绝对大小。 `Grid`布局不应与传统的表相混淆，不应显示表格数据。 `Grid` 没有行、 列或单元格格式的概念。 与 HTML 表不同`Grid`纯粹旨在用于对内容进行布局。
 

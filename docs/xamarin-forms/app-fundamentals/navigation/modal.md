@@ -1,5 +1,5 @@
 ---
-title: 模式页
+title: Xamarin.Forms 模式页
 description: Xamarin.Forms 支持模式页面。 模式页面鼓励用户完成独立任务，在完成或取消该任务之前，不允许导航离开该任务。 本文演示如何导航到模式的页面。
 ms.prod: xamarin
 ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 30d0371e0eaa31673561ae12c7a46b7a7819a647
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 4540ac006993a46cb0ead9346c1cb960ac631926
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847414"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240133"
 ---
-# <a name="modal-pages"></a>模式页
+# <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 模式页
 
 _Xamarin.Forms 模式页提供支持。模式页面鼓励用户完成独立任务，在完成或取消该任务之前，不允许导航离开该任务。本文演示如何导航到模式的页面。_
 

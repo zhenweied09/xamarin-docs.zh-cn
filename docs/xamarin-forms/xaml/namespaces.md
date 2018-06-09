@@ -1,5 +1,5 @@
 ---
-title: XAML 命名空间
+title: Xamarin.Forms 中的 XAML 命名空间
 description: XAML 使用的命名空间声明 xmlns XML 属性。 本文介绍 XAML 命名空间语法中，并演示如何声明一个 XAML 命名空间，以访问的类型。
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2017
-ms.openlocfilehash: ecf255d2fc6937e93258eaa021f79152cb7b1c7f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: faa4998869b918caaf5bc4252dc81a5745199c93
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245828"
 ---
-# <a name="xaml-namespaces"></a>XAML 命名空间
+# <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms 中的 XAML 命名空间
 
 _XAML 使用的命名空间声明 xmlns XML 属性。本文介绍 XAML 命名空间语法中，并演示如何声明一个 XAML 命名空间，以访问的类型。_
 
@@ -54,7 +55,7 @@ XAML 使用前缀声明非默认命名空间，以在引用的命名空间中的
 
 通过指定公共语言运行时 (CLR) 命名空间名称和 （可选） 程序集名称的命名空间声明与声明具有前缀的 XAML 命名空间，可以在 XAML 中引用类型。 这可通过定义命名空间声明内的以下关键字的值：
 
-- **clr 命名空间：**或**使用：** – 在包含要将公开为 XAML 元素的类型的程序集内的 CLR 命名空间声明。 此关键字是必需的。
+- **clr 命名空间：** 或**使用：** – 在包含要将公开为 XAML 元素的类型的程序集内的 CLR 命名空间声明。 此关键字是必需的。
 - **程序集 =** – 包含引用的 CLR 命名空间的程序集。 此值是没有文件扩展名的程序集的名称。 应为包含将引用程序集的 XAML 文件的项目文件中的引用建立对程序集的路径。 此关键字，则可省略**clr 命名空间**值位于相同的程序集中引用类型的应用程序代码。
 
 请注意，字符分隔`clr-namespace`或`using`令牌从其值是一个冒号，而字符分隔`assembly`令牌从其值是一个等号。 要使用两个标记之间的字符是一个分号。

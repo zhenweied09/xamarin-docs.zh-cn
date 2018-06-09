@@ -1,16 +1,18 @@
 ---
 title: 身份验证和授权
+description: 本章介绍 eShopOnContainers 移动应用程序如何执行身份验证和授权针对容器化微服务。
 ms.prod: xamarin
 ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 9c6f3ae19b3e1b89220cbdf0985f4bdf789f2209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e6cfa566ab455841b3f11e4a857dcf678083417
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242422"
 ---
 # <a name="authentication-and-authorization"></a>身份验证和授权
 
@@ -39,7 +41,7 @@ OpenID Connect 和 OAuth 2.0 的组合组合的身份验证和 API 访问的两�
 
 ![](authentication-and-authorization-images/authentication.png "通过专用身份验证微服务进行身份验证")
 
-**图 9-1:**通过专用身份验证微服务进行身份验证
+**图 9-1:** 通过专用身份验证微服务进行身份验证
 
 EShopOnContainers 移动应用与标识微，它使用 IdentityServer 4 执行身份验证，并为 Api 的访问控制服务进行通信。 因此，移动应用程序请求令牌从 IdentityServer，用于对用户进行身份验证或访问资源：
 
@@ -222,7 +224,7 @@ EShopOnContainers 移动应用程序使用进行身份验证与 IdentityServer �
 
 ![](authentication-and-authorization-images/sign-in.png "在登录过程的高级概述")
 
-**图 9-2:**登录过程的高级概述
+**图 9-2:** 登录过程的高级概述
 
 向发出登录请求`<base endpoint>:5105/connect/authorize`。 以下身份验证成功，IdentityServer 返回包含授权代码和一个标识令牌身份验证响应。 然后，授权代码将发送到`<base endpoint>:5105/connect/token`，这将使用访问、 标识和刷新令牌进行响应。
 
@@ -230,7 +232,7 @@ EShopOnContainers 移动应用程序签名的扩展 IdentityServer 通过发送�
 
 ![](authentication-and-authorization-images/sign-out.png "注销过程的高级概述")
 
-**图 9-3:**注销过程的高级概述
+**图 9-3:** 注销过程的高级概述
 
 由在 eShopOnContainers 移动应用中，执行与 IdentityServer 通信`IdentityService`类，该类实现`IIdentityService`接口。 此接口指定实现的类必须提供`CreateAuthorizationRequest`， `CreateLogoutRequest`，和`GetTokenAsync`方法。
 
@@ -408,7 +410,7 @@ IdentityServer 可以集成到了授权工作流中，以便它提供控件授�
 
 ![](authentication-and-authorization-images/authorization.png "通过访问令牌的授权")
 
-**图 9-5:**通过访问令牌的授权
+**图 9-5:** 通过访问令牌的授权
 
 EShopOnContainers 移动应用程序与标识微服务通信，并请求访问令牌身份验证过程的一部分。 访问令牌然后转发到排序和 basket 微服务作为访问请求的一部分公开的 Api。 访问令牌包含有关客户端和用户信息。 Api 然后使用该信息来授予对其数据的访问权限。 有关如何配置 IdentityServer 来保护 Api 的信息，请参阅[配置 API 资源](#configuring-api-resources)。
 

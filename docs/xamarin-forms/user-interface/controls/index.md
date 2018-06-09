@@ -1,18 +1,18 @@
 ---
 title: 控件引用
-description: 用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。
+description: 用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。 本文列出了构成 Xamarin.Forms 应用程序的用户界面的控件组。
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 270904b87b1e37d4c4a74d997af50517fd6ffc5f
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 51457814bd6dbdef7f99874ee24b33a8651a1c7c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34335107"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242987"
 ---
 # <a name="controls-reference"></a>控件引用
 

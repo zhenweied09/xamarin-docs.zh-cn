@@ -1,19 +1,20 @@
 ---
-title: 三维旋转
-description: 使用非仿射转换轮换在三维空间中的 2D 对象。
+title: 在 SkiaSharp 的三维旋转
+description: 本文章介绍如何使用非仿射转换来旋转在三维空间中的 2D 对象，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244294"
 ---
-# <a name="3d-rotations"></a>三维旋转
+# <a name="3d-rotations-in-skiasharp"></a>在 SkiaSharp 的三维旋转
 
 _使用非仿射转换轮换在三维空间中的 2D 对象。_
 
@@ -62,23 +63,23 @@ _使用非仿射转换轮换在三维空间中的 2D 对象。_
 
 x' = M11·x + M21·y + M31·z + M41
 
-y' = M12·x + M22·y + M32·z + M42
+y = M12·x + M22·y + M32·z + M42
 
-z' = M13·x + M23·y + M33·z + M43
+z = M13·x + M23·y + M33·z + M43
 
-w' = M14·x + M24·y + M34·z + M44
+w = M14·x + M24·y + M34·z + M44
 
 很明显的转换公式的单元格`M11`， `M22`，`M33`将 X、 Y 和 Z 的说明，以提升因素和`M41`， `M42`，和`M43`转换中是因素 X、 Y 和 Z说明。
 
 若要将这些坐标转换回三维空间其中 W 等于 1，x，y，和 z 坐标所有除以 w:
 
-x" = x' / w'
+x"= x / w
 
 y"= y / w
 
 z"= z / w
 
-w" = w' / w' = 1
+w"= w / w = 1
 
 该除数 w 提供在三维空间中的透视。 如果 w 等于 1，就会不发生任何透视。
 
@@ -162,15 +163,15 @@ A.PostConcat(B);
 
 x' = M11·x + M21·y + M41
 
-y' = M12·x + M22·y + M42
+y = M12·x + M22·y + M42
 
-z' = M13·x + M23·y + M43
+z = M13·x + M23·y + M43
 
-w' = M14·x + M24·y + M44
+w = M14·x + M24·y + M44
 
 此外，z 坐标也不相关此处使用。 当二维图形系统中显示一个三维对象时，它处于折叠状态到二维对象通过忽略 Z 坐标值。 转换公式是实际上只是这两个：
 
-x" = x' / w'
+x"= x / w
 
 y"= y / w
 
@@ -207,13 +208,13 @@ y"= y / w
 
 x' = cos(α)·x
 
-y' = y
+y = y
 
 z = (sin （α） / 深度) ·x + 1
 
 现在将所有内容除以 z:
 
-x" = cos(α)·x / ((sin(α)/depth)·x + 1)
+x"= cos （α） ·x / ((sin （α） / 深度) ·x + 1)
 
 y"= y / ((sin （α） / 深度) ·x + 1)
 
@@ -538,4 +539,4 @@ public class AnimatedRotation3DPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,5 +1,5 @@
 ---
-title: 数据模板
+title: Xamarin.Forms 数据模板
 description: DataTemplate 可用于指定数据的外观上受支持的控件，并通常绑定到数据，以显示。
 ms.prod: xamarin
 ms.assetid: 838F4BDB-B719-457F-8633-27E9B267A2A0
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 14de42acd1bde00df146a9fe5d772366735ed295
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b461cb8be9dcf618b7a497b001186fde5f2b2aa1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239851"
 ---
-# <a name="data-templates"></a>数据模板
+# <a name="xamarinforms-data-templates"></a>Xamarin.Forms 数据模板
 
 _DataTemplate 可用于指定数据的外观上受支持的控件，并通常绑定到数据，以显示。_
 

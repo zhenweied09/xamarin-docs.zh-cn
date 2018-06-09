@@ -1,20 +1,20 @@
 ---
-title: 条目
-description: 单行文本或输入的密码
+title: Xamarin.Forms 条目
+description: 此文章介绍了如何使用 Xamarin.Forms 入口类接受的单行文本或应用程序中的密码输入。
 ms.prod: xamarin
 ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: a45a4edb93920cfe1d0289da44ee664e41c25cf1
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b6188b986589a56229ad2e092d4100ff3f75dbe4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847843"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245548"
 ---
-# <a name="entry"></a>条目
+# <a name="xamarinforms-entry"></a>Xamarin.Forms 条目
 
 _单行文本或输入的密码_
 

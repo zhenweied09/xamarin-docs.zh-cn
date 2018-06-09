@@ -1,18 +1,18 @@
 ---
 title: 突出显示在地图上的圆形区域
-description: 此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。
+description: 此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。 IOS 和 Android 用于向地图添加在循环的覆盖区上提供的 Api，而在 UWP 上在覆盖区上呈现为多边形。
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1bec7a318bebc40c050104a51408473d89f483a5
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 06ea1e788add0064571f01dc1080147e64bb8397
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846518"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240280"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>突出显示在地图上的圆形区域
 

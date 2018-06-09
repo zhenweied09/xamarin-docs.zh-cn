@@ -1,5 +1,5 @@
 ---
-title: 动画
+title: Xamarin.Forms 中的动画
 description: Xamarin.Forms 包括其自己非常简单用于创建简单的动画时也是足够通用，若要创建复杂的动画的动画基础结构。
 ms.prod: xamarin
 ms.assetid: AC0B4127-ECA3-44DA-8A24-A2B10A275083
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 7cff122e7ecc24f5ad93bd863ee422981871f857
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc04f638168a10266c20e278481fc0c513afe48
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245021"
 ---
-# <a name="animation"></a>动画
+# <a name="animation-in-xamarinforms"></a>Xamarin.Forms 中的动画
 
 _Xamarin.Forms 包括其自己非常简单用于创建简单的动画时也是足够通用，若要创建复杂的动画的动画基础结构。_
 
@@ -30,4 +31,3 @@ Xamarin.Forms 包括[ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.
 ## <a name="custom-animationscustommd"></a>[自定义动画](custom.md)
 
 [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/)类是所有 Xamarin.Forms 动画，与中的扩展方法的构建块[ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)类创建一个或多个`Animation`对象。 本文演示如何使用`Animation`类创建和取消动画、 同步多个动画，然后创建自定义不由现有动画方法进行动画处理的属性进行动画处理的动画。
-

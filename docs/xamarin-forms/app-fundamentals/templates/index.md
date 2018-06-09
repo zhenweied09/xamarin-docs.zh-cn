@@ -1,19 +1,20 @@
 ---
-title: 模板
-description: 如何使用 Xamarin.Forms 提供的模板化支持
+title: Xamarin.Forms 模板
+description: 本指南说明如何使用 Xamarin.Forms 提供的模板化支持。 这包括控件模板，可用于在运行时轻松主题和重新主题页面和受支持的控件定义数据的表示形式的数据模板。
 ms.prod: xamarin
 ms.assetid: 4453C209-C068-47D5-A49B-0ECC95C0FB3B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/05/2016
-ms.openlocfilehash: a37a82e008093d90dcf18bc46abada0d406b3815
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcc65685ecc69964f792dc699e12215015d7b840
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240413"
 ---
-# <a name="templates"></a>模板
+# <a name="xamarinforms-templates"></a>Xamarin.Forms 模板
 
 ## <a name="control-templatescontrol-templatesindexmd"></a>[控件模板](control-templates/index.md)
 

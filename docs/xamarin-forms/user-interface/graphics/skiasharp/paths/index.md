@@ -1,17 +1,18 @@
 ---
 title: SkiaSharp 行和路径
-description: 使用 SkiaSharp 绘制行和图形路径
+description: 本文章介绍如何使用 SkiaSharp Xamarin.Forms 应用程序中绘制直线和图形路径，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 2f9941305f165ec04e5fc80e3c41e3150a21a9b7
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: a922f7ec91624e20a9afedb8063328bdb7a4d42d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243748"
 ---
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 行和路径
 
@@ -51,4 +52,4 @@ _使用 SkiaSharp 绘制行和图形路径_
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

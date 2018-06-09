@@ -1,17 +1,18 @@
 ---
 title: SkiaSharp 转换
-description: 了解用于显示 SkiaSharp 图形的转换
+description: 本文探讨了用于在 Xamarin.Forms 应用程序中显示 SkiaSharp 图形的转换，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a94e1011557a5c7487315681e6e7c4d106ae4ba1
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d8e9c26df9286cec94562b5d3d7b7721cc3f3f3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244943"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 转换
 
@@ -86,4 +87,4 @@ SkiaSharp 转换是相对于窗口左上角`SKCanvas`相对于窗口左上角的
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

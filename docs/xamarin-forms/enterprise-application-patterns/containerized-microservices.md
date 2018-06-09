@@ -1,16 +1,18 @@
 ---
 title: 容器化微服务
+description: 本章介绍如何使用微服务和容器生成敏捷、 可缩放和可靠的现代云应用程序。
 ms.prod: xamarin
 ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 461a1310ff430c16e49fa0ed6037a77b1302f769
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33be84bc17f72c8b70d117a0742b001f1f763d3d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242256"
 ---
 # <a name="containerized-microservices"></a>容器化微服务
 
@@ -22,7 +24,7 @@ ms.lasthandoff: 04/04/2018
 
 **图 8-1**： 缩放方法的整体应用程序
 
-## <a name="microservices"></a>Microservices
+## <a name="microservices"></a>微服务
 
 微服务提供了应用程序开发和部署到不同的方法、 一种方法适合灵活性、 缩放和现代云应用程序的可靠性要求。 微服务应用程序分解为协同工作以提供应用程序的总体功能的独立组件。 术语 microservice 强调，应用程序应组成服务足够小，以反映独立问题，以便每个微服务实现单个函数。 此外，每个微服务具有定义完善的协定，以便其他微服务可以进行通信并与之共享数据。 微服务的典型示例包括购物车，库存处理、 购买子系统和付款处理。
 
@@ -121,13 +123,13 @@ EShopOnContainers 移动应用进行通信的容器化的后端微服务使用*�
 
 ![](containerized-microservices-images/eventbus.png "使用事件总线发布-订阅")
 
-**图 8-6:**发布-订阅使用事件总线
+**图 8-6:** 发布-订阅使用事件总线
 
 从应用程序的角度看，事件总线是只需发布-订阅通过接口公开的通道。 但是，实现事件总线的方式而异。 例如，事件总线实现可以使用 RabbitMQ、 Azure Service Bus 或 MassTransit NServiceBus 等其他服务总线。 图 8-7 显示事件总线 eShopOnContainers 引用应用程序中的使用方式。
 
 ![](containerized-microservices-images/microservicesarchitecturewitheventbus.png "引用应用程序中的异步事件驱动通信")
 
-**图 8-7:**引用应用程序中的异步事件驱动通信
+**图 8-7:** 引用应用程序中的异步事件驱动通信
 
 EShopOnContainers 事件总线，使用 RabbitMQ，实现提供了一到多异步发布-订阅功能。 这意味着，在发布后事件，可以有多个订阅服务器侦听同一事件。 图 8-9 阐释了此关系。
 

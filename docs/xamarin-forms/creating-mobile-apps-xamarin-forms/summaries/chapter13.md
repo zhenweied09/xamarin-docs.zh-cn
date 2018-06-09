@@ -1,16 +1,18 @@
 ---
 title: 第 13 章的摘要。 位图
+description: 使用 Xamarin.Forms 创建移动应用： 摘要的第 13 章。 位图
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241550"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>第 13 章的摘要。 位图
 
@@ -156,7 +158,7 @@ Windows 运行时项目支持位图命名方案组成一个比例因子以像素
 
 - 宽度为 320 像素正方形的 MyImage.scale 200.jpg
 
-仅某些百分比都有效。 本书的示例程序包含仅与映像**缩放 200**后缀，但当前 Xamarin.Forms 解决方案模板包括**缩放 100**，**缩放 125**，**缩放 150**，和**缩放-400**。 
+仅某些百分比都有效。 本书的示例程序包含仅与映像**缩放 200**后缀，但当前 Xamarin.Forms 解决方案模板包括**缩放 100**，**缩放 125**，**缩放 150**，和**缩放-400**。
 
 将位图添加到平台项目中，当**生成操作**应为：
 

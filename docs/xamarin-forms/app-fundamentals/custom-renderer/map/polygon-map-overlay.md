@@ -1,18 +1,18 @@
 ---
 title: 突出显示在地图上区域
-description: 本文介绍了如何添加一个代码图，以突出显示在地图上的区域的多边形覆盖。 多边形是闭合的形状并具有其内部填写。
+description: 此文章介绍了如何添加一个代码图，以突出显示在地图上的区域的多边形覆盖。 多边形是闭合的形状并具有其内部填写。
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e0ffa1948bb7dd0996dd21793237df550a32aa70
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b38ff41415477a8898ee3bd9593f983c705d949e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848325"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241785"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>突出显示在地图上区域
 

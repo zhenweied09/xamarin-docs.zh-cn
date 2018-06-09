@@ -1,17 +1,18 @@
 ---
 title: 对 Web 服务的访问进行身份验证
-description: 本指南说明如何将身份验证服务集成到 Xamarin.Forms 应用程序以使用户能够共享一个后端，同时仅有权访问他们自己的数据。 涉及的主题包括使用基本身份验证与 REST 服务中，使用 Xamarin.Auth 组件对 OAuth 标识提供程序，进行身份验证，以及使用内置身份验证机制提供的不同的提供程序。
+description: 本指南说明如何将身份验证服务集成到 Xamarin.Forms 应用程序以使用户能够共享一个后端，同时仅有权访问他们自己的数据。
 ms.prod: xamarin
 ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: bc34cf265885708fa6392936a8dbc9d82796e2fd
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: d598a9b3de31ea6823530f911c3544bf3cebb37f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240682"
 ---
 # <a name="authenticating-access-to-web-services"></a>对 Web 服务的访问进行身份验证
 

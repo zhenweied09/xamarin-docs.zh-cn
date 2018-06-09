@@ -1,19 +1,20 @@
 ---
-title: MVVM
+title: 模型-视图-视图模型模式
+description: 本章介绍 eShopOnContainers 移动应用程序如何使用 MVVM 模式来完全分离其用户界面中的应用程序的业务和演示文稿逻辑。
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fe2cace6a0fc3a1d901f55556eed09380f8f2006
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793941"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245427"
 ---
-# <a name="mvvm"></a>MVVM
+# <a name="the-model-view-viewmodel-pattern"></a>模型-视图-视图模型模式
 
 在 XAML 中，创建用户界面，然后添加的用户界面进行操作的代码隐藏，通常涉及到 Xamarin.Forms 开发人员的体验。 在应用程序进行修改，和增长大小和范围内时，会产生复杂的维护问题。 这些问题包括 UI 控件和业务逻辑，这会增加使 UI 修改和困难的此类代码进行单元测试的成本之间的紧密耦合。
 

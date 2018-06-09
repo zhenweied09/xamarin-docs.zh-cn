@@ -1,17 +1,18 @@
 ---
 title: 使用 XAML 样式的样式 Xamarin.Forms 应用
-description: 使用样式外观进行自定义
+description: 本指南说明如何使用 XAML 样式来自定义 Xamarin.Forms 应用程序的外观。
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: ead12eafad37c3cb88bdfe800c3cbaa03f82c6ad
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: f439e3ba888b67ac1752eae95149adcf55055943
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245867"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>使用 XAML 样式的样式 Xamarin.Forms 应用
 

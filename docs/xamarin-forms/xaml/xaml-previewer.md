@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms 的 XAML 预览
-description: 请参阅 Xamarin.Forms 布局呈现你进行键入 ！
+description: 此文章介绍了如何使用 XAML 预览程序以查看 Xamarin.Forms 布局呈现你进行键入。 XAML 预览程序可用于 Visual Studio 2017 和 Visual Studio for mac。
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 25c8e1a34f8be5ab2f8491e75fa5aac470d55bc8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848351"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245854"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 的 XAML 预览
 

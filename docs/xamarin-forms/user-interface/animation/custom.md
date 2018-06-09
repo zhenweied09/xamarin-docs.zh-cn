@@ -1,20 +1,20 @@
 ---
-title: 自定义动画
-description: 动画类是所有 Xamarin.Forms 动画，创建一个或多个动画对象 ViewExtensions 类中的扩展方法使用构建基块。 本文演示如何使用动画类来创建和取消动画，请同步多个动画，以及创建不由现有动画方法进行动画处理的属性进行动画处理的自定义动画。
+title: Xamarin.Forms 中的自定义动画
+description: 本文演示如何使用 Xamarin.FOrms 动画类来创建和取消动画，请同步多个动画，以及创建不由现有动画方法进行动画处理的属性进行动画处理的自定义动画。
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 238268a3ad2b82494f1d096d0cbeba97edb90366
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74430f6c158e74569f1b2cbfa0b6a85e8d40fbcf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847779"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242971"
 ---
-# <a name="custom-animations"></a>自定义动画
+# <a name="custom-animations-in-xamarinforms"></a>Xamarin.Forms 中的自定义动画
 
 _动画类是所有 Xamarin.Forms 动画，创建一个或多个动画对象 ViewExtensions 类中的扩展方法使用构建基块。本文演示如何使用动画类来创建和取消动画，请同步多个动画，以及创建不由现有动画方法进行动画处理的属性进行动画处理的自定义动画。_
 

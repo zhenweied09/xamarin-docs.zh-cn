@@ -1,17 +1,18 @@
 ---
 title: Getting Started with DataPages
+description: 此文章介绍了如何开始构建使用 Xamarin.Forms DataPages 一个简单的数据驱动页。
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d5e73839f889234c816bfff08f3e46dade8dffc9
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846836"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243072"
 ---
 # <a name="getting-started-with-datapages"></a>Getting Started with DataPages
 
@@ -21,7 +22,7 @@ ms.locfileid: "34846836"
 > DataPages 需要[Xamarin.Forms 主题](~/xamarin-forms/user-interface/themes/index.md)引用来呈现。
 
 
-若要开始构建使用 DataPages 预览版简单的数据驱动器页上，按照以下步骤。 在预览中的硬编码样式 （"事件"） 生成此演示使用了仅适用于特定的 JSON 格式，在代码中。
+若要开始构建简单数据驱动的页使用 DataPages 预览版，请按照下面的步骤。 在预览中的硬编码样式 （"事件"） 生成此演示使用了仅适用于特定的 JSON 格式，在代码中。
 
 [![](get-started-images/demo-sml.png "DataPages 示例应用程序")](get-started-images/demo.png#lightbox "DataPages 示例应用程序")
 

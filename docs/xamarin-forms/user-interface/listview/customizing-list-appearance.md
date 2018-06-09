@@ -1,20 +1,20 @@
 ---
-title: 列表外观
-description: 自定义使用标头、 页脚、 组和变量高度单元格的 Listview。
+title: 自定义 ListView 外观
+description: 此文章介绍了如何使用标头、 页脚、 组和变量高度单元格自 Listview 定义 Xamarin.Forms 应用程序中。
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b460e25aa5b97953069caa5456003b6cab2c8a8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848378"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245135"
 ---
-# <a name="list-appearance"></a>列表外观
+# <a name="customizing-listview-appearance"></a>自定义 ListView 外观
 
 `ListView` 包含用于控制表示法的总体列表中，除了基础选项`ViewCell`s。 选项包括：
 

@@ -1,19 +1,20 @@
 ---
-title: 绑定路径
-description: 使用访问子属性和集合成员的数据绑定
+title: Xamarin.Forms 绑定路径
+description: 此文章介绍了如何使用 Xamarin.Forms 数据绑定来访问子属性和使用的绑定类的路径属性的集合成员。
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240468"
 ---
-# <a name="binding-path"></a>绑定路径
+# <a name="xamarinforms-binding-path"></a>Xamarin.Forms 绑定路径
 
 在所有前面数据绑定的示例， [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/)属性`Binding`类 (或[ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/)属性`Binding`标记扩展) 已设置向单个属性。 实际上可以设置`Path`到*子属性*（的属性的属性），或者与集合的成员。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/04/2018
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 `Time`属性属于类型`TimeSpan`，它具有`TotalSeconds`属性。 `Time`和`TotalSeconds`属性是简单地连接有一个句点。 中的项`Path`字符串始终引用属性而不属于这些属性的类型。
 
 示例和几个其他都显示在**路径变体**页：
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/04/2018
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/04/2018
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/04/2018
 
 一种`Content`属性现在显示为`Xamarin.Forms.StackLayout`。 添加`Children`属性`Path`和该类型是`Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`，它是 Xamarin.Forms，但很明显是集合类型的内部类。 将索引添加到该和该类型是`Xamarin.Forms.Label`。 继续以这种方式。
 
-Xamarin.Forms 处理的绑定路径，它将安装`PropertyChanged`上实现的路径中的任何对象的处理程序`INotifyPropertyChanged`接口。 例如，最终绑定响应中第一个更改`Label`因为`Text`属性更改。 
+Xamarin.Forms 处理的绑定路径，它将安装`PropertyChanged`上实现的路径中的任何对象的处理程序`INotifyPropertyChanged`接口。 例如，最终绑定响应中第一个更改`Label`因为`Text`属性更改。
 
 中的绑定路径的属性不实现`INotifyPropertyChanged`，对该属性的任何更改将被忽略。 某些更改完全无法使无效的绑定路径，因此仅当属性和子属性的字符串永远不会变为无效时，应使用此方法。
 

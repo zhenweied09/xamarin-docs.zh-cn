@@ -1,19 +1,20 @@
 ---
-title: 深色主题
+title: Xamarin.Forms 深色主题
+description: 此文章介绍了如何使用 Xamarin.Forms 深色主题在应用程序。
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 676ed2d5f99c1f39904b2afe045cee21c0eab09c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847259"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245919"
 ---
-# <a name="dark-theme"></a>深色主题
+# <a name="xamarinforms-dark-theme"></a>Xamarin.Forms 深色主题
 
 ![](~/media/shared/preview.png "此 API 目前处于预览状态")
 
@@ -69,4 +70,3 @@ XAML 文件的示例所示：
 ```
 
 [的内置类的完整列表](~/xamarin-forms/user-interface/themes/index.md)显示哪些样式提供的某些常见的控件。
-

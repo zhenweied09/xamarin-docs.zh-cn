@@ -1,19 +1,20 @@
 ---
-title: 路径基础知识
-description: 浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象
+title: 路径中 SkiaSharp 的基础知识
+description: 本文介绍将组合连接的直线和曲线，SkiaSharp SKPath 对象，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b2881148631435c9082b42cad0e784100b010b46
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 2fc492f723a7a009da506d241ddf2e8459908633
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244040"
 ---
-# <a name="path-basics"></a>路径基础知识
+# <a name="path-basics-in-skiasharp"></a>路径中 SkiaSharp 的基础知识
 
 _浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象_
 
@@ -196,4 +197,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

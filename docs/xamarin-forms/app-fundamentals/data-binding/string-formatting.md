@@ -1,19 +1,20 @@
 ---
-title: 字符串格式设置
-description: 使用数据绑定进行格式化和显示为字符串的对象
+title: Xamarin.Forms 字符串格式设置
+description: 此文章介绍了如何使用 Xamarin.FOrms 数据绑定进行格式化和显示为字符串的对象。 这被通过将绑定的 StringFormat 设置为其占位符的标准.NET 格式化字符串。
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4e143f650c3cde7577def1a95e53b207608a088a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bdac74e4ec14797ec373f86b8a94c7af4d480951
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240296"
 ---
-# <a name="string-formatting"></a>字符串格式设置
+# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 字符串格式设置
 
 有时很方便使用数据绑定来显示的字符串表示形式的对象或值。 例如，你可能想要使用`Label`要显示的当前值`Slider`。 在此数据绑定，`Slider`是源，且目标为`Text`属性`Label`。
 

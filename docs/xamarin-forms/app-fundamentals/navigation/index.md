@@ -1,19 +1,20 @@
 ---
-title: 导航
-description: Xamarin.Forms 提供了多种不同的页导航体验，根据正在使用的页类型。
+title: Xamarin.Forms 导航
+description: 本指南说明如何在 Xamarin.Forms 应用中执行导航。 Xamarin.Forms 提供了多种不同的页导航体验，根据正在使用的页类型。
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 1a184e1ebfd9d87ba82642ebdfc30a8d3f92cce1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 90aedee42af7ed1788110e832fb3b435d870ee77
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241951"
 ---
-# <a name="navigation"></a>导航
+# <a name="xamarinforms-navigation"></a>Xamarin.Forms 导航
 
 _Xamarin.Forms 提供了多种不同的页导航体验，根据正在使用的页类型。_
 
@@ -42,4 +43,3 @@ Xamarin.Forms 还提供对模式的页的支持。 模式页面鼓励用户完�
 ## <a name="displaying-pop-upspop-upsmd"></a>[显示弹出窗口](pop-ups.md)
 
 Xamarin.Forms 提供了两个高类似 pop 的用户界面元素： 警报和操作表。 可以使用这些界面元素，询问简单的问题的用户并以指导用户完成任务。
-

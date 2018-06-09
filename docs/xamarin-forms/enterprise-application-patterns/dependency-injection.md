@@ -1,16 +1,18 @@
 ---
 title: 依赖关系注入
+description: 本章介绍了 eShopOnContainers 移动应用程序如何使用依赖关系注入若要分离的代码中依赖于这些类型的具体类型。
 ms.prod: xamarin
 ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 8db8e5b756fe770bdf292ec03c28eb5ed54acf9e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fb225349b9ffb1c950486a817897b3c26c6ffbe4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242565"
 ---
 # <a name="dependency-injection"></a>依赖关系注入
 
@@ -61,7 +63,7 @@ public class ProfileViewModel : ViewModelBase
 
 ![](dependency-injection-images/dependencyinjection.png "使用依赖关系注入时的依赖关系示例")
 
-**图 3-1:**时使用依赖关系注入的依赖关系
+**图 3-1:** 时使用依赖关系注入的依赖关系
 
 在运行时，容器必须知道的哪一种实现`IOrderService`接口它应实例化，它可以实例化之前`ProfileViewModel`对象。 这包括：
 

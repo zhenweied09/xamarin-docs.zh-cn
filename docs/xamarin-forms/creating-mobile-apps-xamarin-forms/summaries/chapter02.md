@@ -1,16 +1,18 @@
 ---
 title: 第 2 章的摘要。 应用程序的剖析
+description: 使用 Xamarin.Forms 创建移动应用： 第 2 章的摘要。 应用程序的剖析
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 81bcc8e2f8627264820a859123e1be1a9f960a92
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 208cf28341ceaa43d1c56b4f5086dc98febee6be
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242742"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用程序的剖析
 
@@ -142,11 +144,11 @@ A`Page`派生占用整个屏幕或几乎整个屏幕。 通常，页的子级是
 
 `Device.OnPlatform`方法，`Device.OS`属性，与`TargetPlatform`枚举都现在已弃用。 请改用[ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/)属性和比较`string`返回与以下的静态字段的值：
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/)字符串"iOS" 
+- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/)字符串"iOS"
 - [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/)字符串"Android"
 - [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/)字符串"UWP"，以引用 Windows 运行时平台
 - [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/)字符串"Windows"for Windows Runtime （Windows 8.1 和 Windows Phone 8.1）
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/)字符串"WinPhone"的 Windows Phone 8.0 
+- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/)字符串"WinPhone"的 Windows Phone 8.0
 
 [ `Device.Idiom` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.Idiom/)相关静态只读属性。 这将返回的成员[ `TargetIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetIdiom/)，其中包括以下成员：
 

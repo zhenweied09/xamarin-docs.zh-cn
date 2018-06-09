@@ -1,18 +1,18 @@
 ---
 title: 创建自定义布局
-description: Xamarin.Forms 定义四个布局类 – StackLayout、 AbsoluteLayout、 RelativeLayout，和网格中，而每个不同的方式排列其子。 但是，有时很必要组织使用不是由 Xamarin.Forms 的布局的页面内容。 本文介绍如何编写一个自定义布局的类，并演示了跨页上，水平排列其子，然后将包装对其他行的后续子级的显示方向区分 WrapLayout 类。
+description: 本文介绍如何编写一个自定义布局的类，并演示了跨页上，水平排列其子，然后将包装对其他行的后续子级的显示方向区分 WrapLayout 类。
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f2a443ded0d6b41db237e9842cd80e016bb5251
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f225a80a1c386668b71d1cdd47409eb017f19033
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847741"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244930"
 ---
 # <a name="creating-a-custom-layout"></a>创建自定义布局
 

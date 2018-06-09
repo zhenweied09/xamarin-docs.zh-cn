@@ -1,5 +1,5 @@
 ---
-title: ControlTemplate 绑定
+title: Xamarin.Forms ControlTemplate 绑定
 description: 模板绑定都允许对数据的控件模板中的控件绑定到公共属性启用的控件模板来轻松地更改中的控件上的属性值。 本文演示如何使用模板绑定从控件模板执行数据绑定。
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b2904d06d0982fb30e9a989f03f22b726b9772e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 99d798ce2c74da0cf7fa0d497128db628a12ead5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847171"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241576"
 ---
-# <a name="binding-from-a-controltemplate"></a>ControlTemplate 绑定
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Xamarin.Forms ControlTemplate 绑定
 
 _模板绑定都允许对数据的控件模板中的控件绑定到公共属性启用的控件模板来轻松地更改中的控件上的属性值。本文演示如何使用模板绑定从控件模板执行数据绑定。_
 

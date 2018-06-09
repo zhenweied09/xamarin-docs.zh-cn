@@ -1,17 +1,18 @@
 ---
 title: 使用 ASP.NET Web 服务 (ASMX)
-description: ASMX 能够生成使用简单对象访问协议 (SOAP) 发送消息的 web 服务。 SOAP 是一个独立于平台的独立于语言的协议用于构建和访问 web 服务。 ASMX 服务的使用者不需要知道任何有关平台、 对象模型或用于实现服务的编程语言。 它们只需了解如何发送和接收 SOAP 消息。 本文演示如何使用 Xamarin.Forms 应用程序中的 ASMX SOAP 服务。
+description: 本文演示如何使用 Xamarin.Forms 应用程序中的 ASMX SOAP 服务。
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6ec8168a8da64dbf3dfeb805856a4d91c9ec78ca
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242058"
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>使用 ASP.NET Web 服务 (ASMX)
 

@@ -1,22 +1,24 @@
 ---
 title: 章 16 的摘要。 数据绑定
+description: 使用 Xamarin.Forms 创建移动应用： 章 16 的摘要。 数据绑定
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f200e0c482402813ac7051255dd7c27da93d6dc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 520da1518c7b795bd1ad17cc3cfaa8d37815de53
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241505"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>章 16 的摘要。 数据绑定
 
 程序员通常会发现自己编写事件处理程序检测到一个对象的属性已更改，并使用它在另一个对象的属性的值更改。 此过程可以使用的技术自动*数据绑定*。 数据绑定通常在 XAML 中定义，并且成为定义的用户界面的一部分。
 
-通常，这些数据绑定连接到基础数据的用户界面对象。 这是一种技术，在更探讨[**第 18 章。MVVM**](chapter18.md). 但是，数据绑定也可以连接两个或多个用户界面元素。 大多数早期本章中的数据绑定的示例演示此技术。
+通常，这些数据绑定连接到基础数据的用户界面对象。 这是一种技术，在更探讨[**第 18 章。MVVM**](chapter18.md)。 但是，数据绑定也可以连接两个或多个用户界面元素。 大多数早期本章中的数据绑定的示例演示此技术。
 
 ## <a name="binding-basics"></a>绑定基础知识
 

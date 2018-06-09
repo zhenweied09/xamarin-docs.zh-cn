@@ -1,17 +1,18 @@
 ---
 title: 路径的填充类型
-description: 发现不同的效果，可以使用 SkiaSharp 路径填充类型
+description: 这篇文章检查不同的效果可能具有 SkiaSharp 路径的填充类型，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: d54ebd157fcc76b0fcc15bf89c72edbcd88b42f2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243702"
 ---
 # <a name="the-path-fill-types"></a>路径的填充类型
 

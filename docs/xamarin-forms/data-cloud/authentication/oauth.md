@@ -1,17 +1,18 @@
 ---
 title: 使用标识提供程序的用户进行身份验证
-description: Xamarin.Auth 是跨平台 SDK 进行身份验证用户以及存储的帐户。 它包括提供对使用如 Google、 Microsoft、 Facebook 和 Twitter 标识提供程序支持的 OAuth 身份验证器。 此文章介绍了如何使用 Xamarin.Auth 管理 Xamarin.Forms 应用程序中的身份验证过程。
+description: 此文章介绍了如何使用 Xamarin.Auth 管理 Xamarin.Forms 应用程序中的身份验证过程。
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 26e85a37cfd36b5d4f045273548efafccca79e1a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 361b5e5583b10b7ea07abd1460350d6445cae1c2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241255"
 ---
 # <a name="authenticating-users-with-an-identity-provider"></a>使用标识提供程序的用户进行身份验证
 

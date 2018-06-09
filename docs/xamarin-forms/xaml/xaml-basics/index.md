@@ -1,17 +1,18 @@
 ---
 title: Xamarin.Forms XAML 基础知识
-description: 开始使用移动设备的跨平台标记
+description: 本指南说明如何开始使用移动设备的跨平台 XAML。 XAML 允许开发人员在 Xamarin.Forms 应用程序使用的标记，而不是代码中定义的用户界面。
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627267b95bb2d810a60f84c51e38bf5387fe1f99
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245958"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 基础知识
 

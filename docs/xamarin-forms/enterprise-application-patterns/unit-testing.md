@@ -1,18 +1,20 @@
 ---
-title: 单元测试
+title: 单元测试的企业应用
+description: 本章还说明了如何 eShopOnContainers 移动应用程序中执行单元测试。
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242526"
 ---
-# <a name="unit-testing"></a>单元测试
+# <a name="unit-testing-enterprise-apps"></a>单元测试的企业应用
 
 移动应用都具有唯一桌面和基于 web 的应用程序无需担心的问题。 移动用户，它们使用，通过网络连接，由服务的可用性以及各种其他因素的设备将有所不同。 因此，应该测试的移动应用程序，因为它们将使用在现实生活中以提高其质量、 可靠性和性能。 有应该在应用程序，包括单元测试、 集成测试，以及进行单元测试所测试的最常见形式的用户界面执行的许多类型的测试。
 
@@ -52,7 +54,7 @@ public class OrderDetailViewModel : ViewModelBase
 
 ![](unit-testing-images/unittesting.png "实现 IOrderService 接口的类")
 
-**图 10-1:**实现 IOrderService 接口的类
+**图 10-1:** 实现 IOrderService 接口的类
 
 此方法允许`OrderService`对象传递到`OrderDetailViewModel`类在运行时，和的兴趣可测试性，它允许`OrderMockService`类，以将传入`OrderDetailViewModel`类在测试时间。 此方法的主要优点是它使单元测试，而无需庞大的资源，如 web 服务或数据库执行。
 

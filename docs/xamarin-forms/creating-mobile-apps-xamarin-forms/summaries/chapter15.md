@@ -1,16 +1,18 @@
 ---
 title: 第 15 章的摘要。 交互式接口
+description: 使用 Xamarin.Forms 创建移动应用： 章 15 的摘要。 交互式接口
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aac49c9e74dd22642396ea8daf5ee3abd85de7bf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241892"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>第 15 章的摘要。 交互式接口
 
@@ -23,8 +25,8 @@ Xamarin.Forms 包含 20 可实例化的类派生自`View`但不是`Layout`。 �
 - `Label`: [**第 2 章。应用程序的剖析**](chapter02.md)
 - `BoxView`: [**第 3 章。滚动堆栈**](chapter03.md)
 - `Button`: [**第 6 章。按钮单击事件**](chapter06.md)
-- `Image`: [**章 13。Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [**章 13。Bitmaps**](chapter13.md)
+- `Image`: [**章 13。位图**](chapter13.md)
+- `ActivityIndicator`: [**章 13。位图**](chapter13.md)
 - `ProgressBar`: [ **14 章。AbsoluteLayout**](chapter14.md)
 
 本章中的八个视图有效地允许用户与基本.NET 数据类型进行交互：
@@ -90,7 +92,7 @@ Xamarin.Forms 包含 20 可实例化的类派生自`View`但不是`Layout`。 �
 
 - [`Increment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) 类型的`double`、 初始化为 1
 
-您可以看到，`Stepper`包含两个按钮标记为**&ndash;**和**+**。 按**&ndash;**减少`Value`通过`Increment`到最小`Minimum`。 按**+**增加`Value`通过`Increment`到最大`Maximum`。
+您可以看到，`Stepper`包含两个按钮标记为**&ndash;** 和**+**。 按**&ndash;** 减少`Value`通过`Increment`到最小`Minimum`。 按**+** 增加`Value`通过`Increment`到最大`Maximum`。
 
 说明了这一点通过[ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo)示例。
 

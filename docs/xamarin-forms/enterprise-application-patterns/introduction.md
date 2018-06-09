@@ -1,18 +1,20 @@
 ---
-title: 介绍
+title: 企业应用程序开发的简介
+description: 本章提供企业应用程序开发的简介，并引入了 eShopOnContainers 移动应用程序。
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a4f1f6ba820221be7553405f570911d3dc66a657
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242955"
 ---
-# <a name="introduction"></a>介绍
+# <a name="introduction-to-enterprise-app-development"></a>企业应用程序开发的简介
 
 不考虑平台，企业应用的开发人员面临一些挑战：
 
@@ -130,7 +132,7 @@ EShopOnContainers 移动应用程序解决方案将源代码和其他资源组�
 
 可以在包含很少或没有修改任何 Xamarin.Forms 应用中重复使用从 eShopOnContainers 移动应用程序类。
 
-##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core Project
+##### <a name="eshoponcontainerscore-project"></a>eShopOnContainers.Core 项目
 
 EShopOnContainers.Core PCL 项目中包含的以下文件夹：
 

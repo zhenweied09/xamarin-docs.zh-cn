@@ -1,18 +1,20 @@
 ---
-title: 加
+title: 加到企业应用程序开发
+description: 本章提供到企业应用程序模式前言使用 Xamarin.Forms。
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242363"
 ---
-# <a name="preface"></a>加
+# <a name="preface-to-enterprise-app-development"></a>加到企业应用程序开发
 
 此电子书构建跨平台企业应用使用 Xamarin.Forms 提供指导。 Xamarin.Forms 是一个跨平台 UI 工具包，允许开发人员轻松地创建本机用户可以共享跨平台，包括 iOS、 Android 和通用 Windows 平台 (UWP) 的接口布局。 它对于业务到员工 (B2E) 企业到企业 (B2B) 和企业对消费者 (B2C) 应用，提供能够在所有目标平台间共享代码，并有助于降低总拥有成本 (TCO) 提供全面的解决方案。
 

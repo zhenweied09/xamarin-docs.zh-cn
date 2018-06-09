@@ -1,20 +1,20 @@
 ---
-title: 字数
-description: 一个有色的矩形用于修饰、 图形和交互。
+title: Xamarin.Forms 字数
+description: 此文章介绍了如何使用一个有色的矩形进行修饰、 图形和在 Xamarin.Forms 应用程序的交互。
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 356d0effe55638902b6ee599a0d9fb7e9b8ade2d
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: edb2785362f2cc7377d9adb0c1a89a6fa2b08111
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848403"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244310"
 ---
-# <a name="boxview"></a>字数
+# <a name="xamarinforms-boxview"></a>Xamarin.Forms 字数
 
 [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 呈现一个简单的矩形指定的宽度、 高度和颜色。 你可以使用`BoxView`效果，基本图形，并与用户通过触摸进行交互。
 
@@ -45,7 +45,7 @@ ms.locfileid: "34848403"
 
 `WidthRequest`和`HeightRequest`属性仅起作用，如果`BoxView`是*不受约束*布局中。 这是这种情况时需要知道子的大小，例如，当布局容器`BoxView`是在自动调整大小单元格的子项`Grid`布局。 A`BoxView`也是不受约束时其`HorizontalOptions`和`VerticalOptions`属性设置为值以外`LayoutOptions.Fill`。 如果`BoxView`是不受约束，但`WidthRequest`和`HeightRequest`属性未设置，然后的宽度或高度设置为 40 个单位或大约 1/4 英寸移动设备上的默认值。
 
-`WidthRequest`和`HeightRequest`属性会被忽略，如果`BoxView`是*约束*在布局中，用例的布局容器有其自身的大小一定`BoxView`。 
+`WidthRequest`和`HeightRequest`属性会被忽略，如果`BoxView`是*约束*在布局中，用例的布局容器有其自身的大小一定`BoxView`。
 
 A`BoxView`可以限制于一个维度和另一部分中不受约束。 例如，如果`BoxView`是垂直的子级`StackLayout`，垂直维度的`BoxView`是不受约束并且通常约束其水平维度。 但存在一些针对该水平维度例外规则： 如果`BoxView`具有其`HorizontalOptions`属性设置成非`LayoutOptions.Fill`，然后水平维度也是不受约束。 也可能是`StackLayout`本身可以具有不受约束的水平维度中，在这种情况下`BoxView`也将水平方向不受约束。
 
@@ -60,7 +60,7 @@ A`BoxView`可以限制于一个维度和另一部分中不受约束。 例如，
     <BoxView Color="CornflowerBlue"
              WidthRequest="160"
              HeightRequest="160"
-             VerticalOptions="Center" 
+             VerticalOptions="Center"
              HorizontalOptions="Center" />
 
 </ContentPage>
@@ -149,7 +149,7 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 <BoxView HeightRequest="3" />
 ```
 
-最后，你可以绘制垂直的行上一段文本的一侧封闭同时`BoxView`和`Label`中水平`StackLayout`。 在本例中为的高度`BoxView`的高度相同`StackLayout`，这由的高度控制`Label`: 
+最后，你可以绘制垂直的行上一段文本的一侧封闭同时`BoxView`和`Label`中水平`StackLayout`。 在本例中为的高度`BoxView`的高度相同`StackLayout`，这由的高度控制`Label`:
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -242,7 +242,7 @@ public class NamedColor
 }
 ```
 
-程序视觉对象所述的 XAML 文件。 `ItemsSource`属性`ListView`设置为静态`NamedColor.All`属性，这意味着`ListView`显示所有单个`NamedColor`对象： 
+程序视觉对象所述的 XAML 文件。 `ItemsSource`属性`ListView`设置为静态`NamedColor.All`属性，这意味着`ListView`显示所有单个`NamedColor`对象：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -290,7 +290,7 @@ public class NamedColor
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentPage> 
+</ContentPage>
 ```
 
 `NamedColor`对象设置格式的`ViewCell`作为数据模板的设置的对象`ListView`。 此模板包括`BoxView`其`Color`属性绑定到`Color`属性`NamedColor`对象。
@@ -388,15 +388,15 @@ public partial class MainPage : ContentPage
     static readonly int[, ,] numberPatterns = new int[10, 7, 5]
     {
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 1, 1}, { 1, 0, 1, 0, 1},
             { 1, 1, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, 
+            { 0, 0, 1, 0, 0}, { 0, 1, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0},
             { 0, 0, 1, 0, 0}, { 0, 0, 1, 0, 0}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0},
             { 0, 0, 1, 0, 0}, { 0, 1, 0, 0, 0}, { 1, 1, 1, 1, 1}
         },
         {
@@ -404,27 +404,27 @@ public partial class MainPage : ContentPage
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0}, 
+            { 0, 0, 0, 1, 0}, { 0, 0, 1, 1, 0}, { 0, 1, 0, 1, 0}, { 1, 0, 0, 1, 0},
             { 1, 1, 1, 1, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 0, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1}, 
+            { 1, 1, 1, 1, 1}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, { 0, 0, 0, 0, 1},
             { 0, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0}, 
+            { 0, 0, 1, 1, 0}, { 0, 1, 0, 0, 0}, { 1, 0, 0, 0, 0}, { 1, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0}, 
+            { 1, 1, 1, 1, 1}, { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 0, 1, 0, 0},
             { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}, { 0, 1, 0, 0, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0},
             { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 0}
         },
         {
-            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1}, 
+            { 0, 1, 1, 1, 0}, { 1, 0, 0, 0, 1}, { 1, 0, 0, 0, 1}, { 0, 1, 1, 1, 1},
             { 0, 0, 0, 0, 1}, { 0, 0, 0, 1, 0}, { 0, 1, 1, 0, 0}
         },
     };
@@ -528,24 +528,24 @@ public partial class MainPage : ContentPage
 }
 ```
 
-此程序使用的相对定位和调整大小的功能`AbsoluteLayout`。 宽度和高度的每个`BoxView`设置为小数值，专门 85%的 1 除以的水平和垂直点数。 位置也都设置为小数值。 
+此程序使用的相对定位和调整大小的功能`AbsoluteLayout`。 宽度和高度的每个`BoxView`设置为小数值，专门 85%的 1 除以的水平和垂直点数。 位置也都设置为小数值。
 
 因为所有位置和大小都是相对于总大小的`AbsoluteLayout`、`SizeChanged`页处理程序仅需要设置`HeightRequest`的`AbsoluteLayout`:
 
 ```csharp
 public partial class MainPage : ContentPage
 {
-    
+
     ···
-    
+
     void OnPageSizeChanged(object sender, EventArgs args)
     {
         // No chance a display will have an aspect ratio > 41:7
         absoluteLayout.HeightRequest = vertDots * Width / horzDots;
     }
-    
+
     ···
-    
+
 }
 ```
 
@@ -556,9 +556,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
-   
+
     ···
- 
+
     bool OnTimer()
     {
         DateTime dateTime = DateTime.Now;
@@ -596,7 +596,7 @@ public partial class MainPage : ContentPage
 
 [![字数时钟](boxview-images/boxviewclock-small.png "字数时钟")](boxview-images/boxviewclock-large.png#lightbox "字数时钟")
 
-中的所有视觉对象[ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)程序作为的子级的`AbsoluteLayout`。 这些元素将调整大小使用`LayoutBounds`附加属性，并使用`Rotation`属性。 
+中的所有视觉对象[ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)程序作为的子级的`AbsoluteLayout`。 这些元素将调整大小使用`LayoutBounds`附加属性，并使用`Rotation`属性。
 
 这三种`BoxView`的时钟指针或元素时实例化在 XAML 文件中，但不是定位大小：
 
@@ -613,13 +613,13 @@ public partial class MainPage : ContentPage
 
     <AbsoluteLayout x:Name="absoluteLayout"
                     SizeChanged="OnAbsoluteLayoutSizeChanged">
-        
+
         <BoxView x:Name="hourHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="minuteHand"
                  Color="Black" />
-        
+
         <BoxView x:Name="secondHand"
                  Color="Black" />
     </AbsoluteLayout>
@@ -631,9 +631,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
-      
+
     ···
- 
+
     BoxView[] tickMarks = new BoxView[60];
 
     public MainPage()
@@ -649,9 +649,9 @@ public partial class MainPage : ContentPage
 
         Device.StartTimer(TimeSpan.FromSeconds(1.0 / 60), OnTimerTick);
     }
-  
+
     ···
- 
+
 }
 ```
 
@@ -678,9 +678,9 @@ public partial class MainPage : ContentPage
     static readonly HandParams secondParams = new HandParams(0.02, 1.1, 0.85);
     static readonly HandParams minuteParams = new HandParams(0.05, 0.8, 0.9);
     static readonly HandParams hourParams = new HandParams(0.125, 0.65, 0.9);
- 
+
     ···
- 
+
  }
 ```
 
@@ -689,9 +689,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
- 
+
     void OnAbsoluteLayoutSizeChanged(object sender, EventArgs args)
     {
         // Get the center and radius of the AbsoluteLayout.
@@ -729,9 +729,9 @@ public partial class MainPage : ContentPage
         // Set the AnchorY property for rotations.
         boxView.AnchorY = handParams.Offset;
     }
- 
+
     ···
- 
+
 }
 ```
 
@@ -742,9 +742,9 @@ public partial class MainPage : ContentPage
 ```csharp
 public partial class MainPage : ContentPage
 {
- 
+
     ···
-     
+
     bool OnTimerTick()
     {
         // Set rotation angles for hour and minute hands.

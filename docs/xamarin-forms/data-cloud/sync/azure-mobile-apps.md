@@ -1,18 +1,18 @@
 ---
 title: 使用 Azure 移动应用程序中同步脱机数据
-description: 脱机同步允许用户交互与移动应用程序、 查看、 添加或修改数据，甚至在没有网络连接。 更改将存储在本地数据库中，并且一旦设备处于联机状态，可以与 Azure Mobile Apps 实例同步所做的更改。 此文章介绍了如何向 Xamarin.Forms 应用程序添加脱机同步功能。
+description: 此文章介绍了如何将脱机同步功能添加到的 Xamarin.Forms 应用程序使用的 Azure Mobile Apps 后端。
 ms.prod: xamarin
 ms.assetid: DBB343B0-2709-4C20-A669-5522B9956D9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: 8623127444836d3335f42f9ba7a40de6aedfef70
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: e8b0eeeb4f0033fccd7a61b4acb286bb8457e6c2
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848364"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243592"
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>使用 Azure 移动应用程序中同步脱机数据
 

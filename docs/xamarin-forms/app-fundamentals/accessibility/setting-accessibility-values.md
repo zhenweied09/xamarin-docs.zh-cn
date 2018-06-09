@@ -1,17 +1,18 @@
 ---
 title: 在用户界面元素上设置可访问性值
-description: Xamarin.Forms 允许可访问性值在用户界面元素上设置通过使用 AutomationProperties 类，后者又设置本机可访问性值的附加的属性。 本文介绍如何使用 AutomationProperties 类，以便屏幕读取器可在页上的元素进行通信。
+description: 本文介绍如何使用 AutomationProperties 类，以便屏幕读取器可在页上的元素进行通信。
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: cf9071684061b584e1cb75cfd50b33212f42bf79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ad7b1c41f34c14a81910d5be30fd6484919e8d39
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241879"
 ---
 # <a name="setting-accessibility-values-on-user-interface-elements"></a>在用户界面元素上设置可访问性值
 
