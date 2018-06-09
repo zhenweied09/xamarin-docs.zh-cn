@@ -1,17 +1,18 @@
 ---
 title: 使用 Azure 移动应用
-description: Azure 移动应用，可以使用可缩放的后端移动身份验证、 脱机同步和推送通知的支持与托管在 Azure App Service 中开发应用。 本文中，这仅适用于使用 Node.js 后端的 Azure Mobile Apps，说明如何查询、 插入、 更新和删除数据存储在 Azure Mobile Apps 实例中的表。
+description: 本文中，这仅适用于使用 Node.js 后端的 Azure Mobile Apps，说明如何查询、 插入、 更新和删除数据存储在 Azure Mobile Apps 实例中的表。
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241326"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>使用 Azure 移动应用
 

@@ -1,20 +1,20 @@
 ---
-title: 应用程序类
-description: 默认应用程序类，该类可以是 C# 或 XAML 的功能
+title: Xamarin.Forms 应用类
+description: 此文章介绍了功能的默认应用程序类，该类具有一个用于设置为应用程序的初始页属性，并为持久字典将简单值存储跨生命周期的状态更改。
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 4b502b0d6eea37e0b5b374cfd4740cf6a5ced478
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15fb866d2cde9409f401d6d021b22b8cb0468795
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846385"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240536"
 ---
-# <a name="app-class"></a>应用程序类
+# <a name="xamarinforms-app-class"></a>Xamarin.Forms 应用类
 
 `Application`基类提供了以下功能，你的项目默认情况下公开`App`子类：
 

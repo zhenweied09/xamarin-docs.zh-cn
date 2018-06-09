@@ -1,18 +1,20 @@
 ---
-title: DataPages
+title: Xamarin.Forms DataPages
+description: 本文介绍 Xamarin.Forms DataPages，也不能提供一个 API 到快速轻松地将数据源绑定到预建的视图。
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e83efcd71eb9427f0b63749e8885a991a206febe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2a74b636a41a72b26776157a774f0a33ef45a075
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243325"
 ---
-# <a name="datapages"></a>DataPages
+# <a name="xamarinforms-datapages"></a>Xamarin.Forms DataPages
 
 ![](~/media/shared/preview.png "此 API 目前处于预览状态")
 
@@ -72,4 +74,3 @@ Xamarin.Forms 基础结构与通过以下属性的数据源进行交互：
 
 有两种方法`MaskKey`和`UnmaskKey`可用来隐藏 （或显示） （例如数据项目属性 防止它们呈现）。
 键对应于数据项对象的命名的属性。
-

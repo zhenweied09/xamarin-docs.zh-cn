@@ -1,19 +1,20 @@
 ---
-title: 映射
-description: Xamarin.Forms 使用每个平台上本机映射 Api。
+title: Xamarin.Forms 映射
+description: 此文章介绍了如何使用 Xamarin.Forms Map 类可以使用每个平台上本机映射 Api 提供熟悉映射的用户体验。
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245470"
 ---
-# <a name="map"></a>映射
+# <a name="xamarinforms-map"></a>Xamarin.Forms 映射
 
 _Xamarin.Forms 使用每个平台上本机映射 Api。_
 
@@ -80,7 +81,7 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 - iOS 10 及更早版本
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 在应用程序正在使用中时使用位置服务
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – 在任何时候使用位置服务    
-    
+
 若要支持 iOS 11 及更早版本，你可以包括所有三个密钥： `NSLocationWhenInUseUsageDescription`， `NSLocationAlwaysAndWhenInUseUsageDescription`，和`NSLocationAlwaysUsageDescription`。
 
 在这些密钥的 XML 表示形式**Info.plist**如下所示。 你应更新`string`值以反映你的应用程序如何使用位置信息：

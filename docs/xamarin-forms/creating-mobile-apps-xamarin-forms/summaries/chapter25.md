@@ -1,16 +1,18 @@
 ---
 title: 章 25 的摘要。 页类型
+description: 使用 Xamarin.Forms 创建移动应用： 章 25 的摘要。 页类型
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 951ae41763d8338d5adf73fb46ebc6defa64f8f8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ecee7866f4bf9ac1a4f706853434dce2b9cef7f6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241150"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>章 25 的摘要。 页类型
 
@@ -58,7 +60,7 @@ Windows 8.1 和 Windows Phone 8.1 平台需要位图设置为`Icon`主控页的�
 
 ### <a name="your-own-user-interface"></a>用户界面
 
-Xamarin.Forms 提供用户界面用于 master 和详细信息视图之间切换，尽管你可以提供你自己。 若要这样做：
+Xamarin.Forms 提供用户界面用于 master 和详细信息视图之间切换，尽管你可以提供你自己。 为此，请执行以下操作：
 
 - 设置[ `IsGestureEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/)属性`false`禁用轻扫
 - 重写[ `ShouldShowToolbarButton` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/)方法，并且返回`false`隐藏在 Windows 8.1 和 Windows Phone 8.1 上的工具栏按钮。

@@ -1,5 +1,5 @@
 ---
-title: 简介样式
+title: Xamarin.Forms 样式简介
 description: 样式允许可视化元素，以自定义的外观。 样式为特定类型定义，并且包含有关该类型可用的属性的值。
 ms.prod: xamarin
 ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f878641f9266da74d61eda8a85d4e16de193be0e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 071cfa2ba145775c179bc85dce4fac29ba0bd8fa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847961"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245815"
 ---
-# <a name="introduction-to-styles"></a>简介样式
+# <a name="introduction-to-xamarinforms-styles"></a>Xamarin.Forms 样式简介
 
 _样式允许可视化元素，以自定义的外观。样式为特定类型定义，并且包含有关该类型可用的属性的值。_
 

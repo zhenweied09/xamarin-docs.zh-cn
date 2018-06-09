@@ -1,17 +1,18 @@
 ---
 title: 第 2 部分。 基本 XAML 语法
-description: XAML 主要设计用于实例化和初始化对象。 但通常情况下，属性必须设置为不能轻松地表示为 XML 字符串的复杂对象，并有时必须在子类上设置一个类定义的属性。 这些两个需求需要属性元素和附加的属性的基本 XAML 语法特征。
+description: 本文章介绍属性元素的基本 XAML 语法特征，并附加属性。
 ms.prod: xamarin
 ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: d0129ec9872d8e5270ed8f0072cff0035d4f5255
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 62223a4c56198271513b0b15587bb588e71b28cc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245841"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>第 2 部分。 基本 XAML 语法
 

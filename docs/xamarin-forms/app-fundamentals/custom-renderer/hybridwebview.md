@@ -1,18 +1,18 @@
 ---
 title: 实现 HybridWebView
-description: Xamarin.Forms 自定义用户界面控件应派生自视图类，用于放置布局和在屏幕上的控件。 本文演示如何创建用于 HybridWebView 自定义控件，其演示了如何增强特定于平台的 web 控件，若要从 JavaScript 中允许 C# 代码调用自定义呈现器。
+description: 本文演示如何创建用于 HybridWebView 自定义控件，其演示了如何增强特定于平台的 web 控件，若要从 JavaScript 中允许 C# 代码调用自定义呈现器。
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3926fd5c19ad187deef16c4beb0812b3947e9544
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d2cce7598fde4cf59a91940161e605860847623e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847236"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241294"
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 

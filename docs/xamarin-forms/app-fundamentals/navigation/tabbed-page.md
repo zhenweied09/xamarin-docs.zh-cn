@@ -1,5 +1,5 @@
 ---
-title: 选项卡式的页面
+title: Xamarin.Forms 选项卡式的页面
 description: Xamarin.Forms TabbedPage 包含的选项卡和更大的详细信息区域，列表带有入详细信息区域加载内容的每个选项卡。 本文演示如何使用 TabbedPage 若要浏览的页的集合。
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 7af9248e706e615ea3e693a58a5f7664e8dc4daa
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b7e3eb8539704fccd713af45490c35a6196b072f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847807"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240374"
 ---
-# <a name="tabbed-page"></a>选项卡式的页面
+# <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 选项卡式的页面
 
 _Xamarin.Forms TabbedPage 包含的选项卡和更大的详细信息区域，列表带有入详细信息区域加载内容的每个选项卡。本文演示如何使用 TabbedPage 若要浏览的页的集合。_
 

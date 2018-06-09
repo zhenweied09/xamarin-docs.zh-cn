@@ -1,17 +1,18 @@
 ---
 title: 将文本和图形集成
-description: 请参阅如何确定要将文本与 SkiaSharp 图形集成的呈现的文本字符串的大小
+description: 本文章介绍如何确定要将文本与 SkiaSharp 图形集成到 Xamarin.Forms 应用程序呈现的文本字符串的大小，并演示这一替换示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: dec1997d16afa1cb8235c47b125b113d7ff80a4d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: eb3724c3520153a83e37932f8be0735337e27a4f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243653"
 ---
 # <a name="integrating-text-and-graphics"></a>将文本和图形集成
 
@@ -168,4 +169,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>相关链接
 
 - [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

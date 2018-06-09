@@ -1,19 +1,20 @@
 ---
-title: 自定义呈现器
-description: 使用目标平台，允许 Xamarin.Forms 应用程序保留了适当的外观和感觉，为每个平台的本机控件呈现 Xamarin.Forms 用户界面。 自定义呈现器，开发人员可以重写此过程以自定义外观和每个平台上的 Xamarin.Forms 控件的行为。
+title: Xamarin.Forms 自定义呈现器
+description: 自定义呈现器，开发人员可以重写每个平台，以自定义的外观和行为的 Xamarin.Forms 控件上的本机控件的呈现。
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239885"
 ---
-# <a name="custom-renderers"></a>自定义呈现器
+# <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 自定义呈现器
 
 _使用目标平台，允许 Xamarin.Forms 应用程序保留了适当的外观和感觉，为每个平台的本机控件呈现 Xamarin.Forms 用户界面。自定义呈现器，开发人员可以重写此过程以自定义外观和每个平台上的 Xamarin.Forms 控件的行为。_
 
@@ -55,7 +56,7 @@ Xamarin.Forms 自定义用户界面控件应派生自[ `View` ](https://develope
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[实现视频播放器](video-player/index.md)
 
-这篇文章演示如何编写呈现器来实现一个自定义`VideoPlayer`可以播放从 web、 作为应用程序资源嵌入的视频或在用户的设备上的视频库中存储的视频的视频的控件。 演示了几种方法，包括实现方法和只读的可绑定属性。 
+这篇文章演示如何编写呈现器来实现一个自定义`VideoPlayer`可以播放从 web、 作为应用程序资源嵌入的视频或在用户的设备上的视频库中存储的视频的视频的控件。 演示了几种方法，包括实现方法和只读的可绑定属性。
 
 
 ## <a name="related-links"></a>相关链接
