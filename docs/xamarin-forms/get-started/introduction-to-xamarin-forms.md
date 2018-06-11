@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms 简介
-description: Xamarin.Forms 是本机支持的跨平台抽象 UI 工具包，让开发人员能够轻松创建可在 Android、iOS 和通用 Windows 平台之间共享的用户界面。 使用目标平台的本机控件即可呈现用户界面，从而让 Xamarin.Forms 应用程序为每个平台保留相应的界面外观。 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。
+description: 本文介绍了 Xamarin.Forms 以及如何开始使用它编写应用程序。
 ms.prod: xamarin
 ms.assetid: f619595f-3ee7-439b-a1bc-d13e5106e6e9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 43282196b1c5b6e43927554d2189e54fc532915a
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15a26ce633e8321e9101289276c9da302e5bd8cc
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848520"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35243689"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 简介
 
