@@ -1,21 +1,22 @@
 ---
-title: 命令界面
-description: 实现`Command`具有数据绑定属性
+title: Xamarin.Forms 命令界面
+description: 此文章介绍了如何使用 Xamarin.Forms 数据绑定实现的命令属性。 命令的接口提供了一种方法来实现命令得更好地适用于 MVVM 体系结构。
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7f8b40624b9434347f69a473eed3bdff5c1d3d33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 37fe5bbcfa3dbc6aa5483c89b49c1698a00ecbb6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241307"
 ---
-# <a name="the-command-interface"></a>命令界面
+# <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 命令界面
 
-模型-视图-视图模型 (MVVM) 体系结构，在数据绑定定义中视图模型，它通常是派生自的类属性之间`INotifyPropertyChanged`，和在视图中，这是通常的 XAML 文件的属性。 有时应用程序都有通过要求用户能够启动影响 ViewModel 中某项内容的命令超出这些属性绑定的需求。 这些命令通常由按钮单击事件发送信号或手指次点击，并且在处理程序中的代码隐藏文件中进行处理传统上`Clicked`事件`Button`或`Tapped`事件`TapGestureRecognizer`。 
+模型-视图-视图模型 (MVVM) 体系结构，在数据绑定定义中视图模型，它通常是派生自的类属性之间`INotifyPropertyChanged`，和在视图中，这是通常的 XAML 文件的属性。 有时应用程序都有通过要求用户能够启动影响 ViewModel 中某项内容的命令超出这些属性绑定的需求。 这些命令通常由按钮单击事件发送信号或手指次点击，并且在处理程序中的代码隐藏文件中进行处理传统上`Clicked`事件`Button`或`Tapped`事件`TapGestureRecognizer`。
 
 命令的接口提供了一种方法来实现命令得更好地适用于 MVVM 体系结构。 ViewModel 本身可以包含命令，如在视图中的特定活动的反应中执行的方法`Button`单击。 这些命令之间定义数据绑定和`Button`。
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/04/2018
 - [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) 因此， [ `ImageCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/)，它派生自 `TextCell`
 - [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
 
-[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) 定义[ `SearchCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/)类型的属性`ICommand`和[ `SearchCommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/)属性。 [ `RefreshCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/)属性[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)的类型也是`ICommand`。 
+[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) 定义[ `SearchCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/)类型的属性`ICommand`和[ `SearchCommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/)属性。 [ `RefreshCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/)属性[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)的类型也是`ICommand`。
 
 可以在不依赖于在视图中的特定的用户界面对象的方式 ViewModel 内处理所有这些命令。
 
@@ -57,7 +58,7 @@ public interface ICommand
 public ICommand MyCommand { private set; get; }
 ```
 
-视图模型还必须引用一个类以实现`ICommand`接口。 此类将很快所述。 在视图中，`Command`属性`Button`绑定到该属性： 
+视图模型还必须引用一个类以实现`ICommand`接口。 此类将很快所述。 在视图中，`Command`属性`Button`绑定到该属性：
 
 ```xaml
 <Button Text="Execute command"
@@ -136,7 +137,7 @@ public class PersonViewModel : INotifyPropertyChanged
 }
 ```
 
-`PersonCollectionViewModel`显示下面创建新对象类型的`PersonViewModel`，并允许用户以填充数据。 出于这个目的，类定义属性`IsEditing`类型的`bool`和`PersonEdit`类型的`PersonViewModel`。 此外，类定义的类型的三个属性`ICommand`和一个名为属性`Persons`类型的`IList<PersonViewModel>`: 
+`PersonCollectionViewModel`显示下面创建新对象类型的`PersonViewModel`，并允许用户以填充数据。 出于这个目的，类定义属性`IsEditing`类型的`bool`和`PersonEdit`类型的`PersonViewModel`。 此外，类定义的类型的三个属性`ICommand`和一个名为属性`Persons`类型的`IList<PersonViewModel>`:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -199,7 +200,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
         <Grid.BindingContext>
             <local:PersonCollectionViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -216,7 +217,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
         <!-- Entry Form -->
         <Grid Grid.Row="1"
               IsEnabled="{Binding IsEditing}">
-            
+
             <Grid BindingContext="{Binding PersonEdit}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -230,11 +231,11 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Name: " Grid.Row="0" Grid.Column="0" />
-                <Entry Text="{Binding Name}" 
+                <Entry Text="{Binding Name}"
                        Grid.Row="0" Grid.Column="1" />
 
                 <Label Text="Age: " Grid.Row="1" Grid.Column="0" />
-                <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal"
                              Grid.Row="1" Grid.Column="1">
                     <Stepper Value="{Binding Age}"
                              Maximum="100" />
@@ -315,7 +316,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
     {
         (SubmitCommand as Command).ChangeCanExecute();
     }
-    
+
     void RefreshCanExecutes()
     {
         (NewCommand as Command).ChangeCanExecute();
@@ -359,9 +360,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             },
             canExecute: () =>
             {
-                return PersonEdit != null && 
-                       PersonEdit.Name != null && 
-                       PersonEdit.Name.Length > 1 && 
+                return PersonEdit != null &&
+                       PersonEdit.Name != null &&
+                       PersonEdit.Name.Length > 1 &&
                        PersonEdit.Age > 0;
             });
 
@@ -373,7 +374,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-`canExecute`函数`SubmitCommand`每次在中更改某个属性时调用`PersonViewModel`对象处于编辑状态。 它将返回`true`仅当`Name`属性是至少包含一个字符和`Age`大于 0。 在那时，**提交**按钮将变为启用状态。 
+`canExecute`函数`SubmitCommand`每次在中更改某个属性时调用`PersonViewModel`对象处于编辑状态。 它将返回`true`仅当`Name`属性是至少包含一个字符和`Age`大于 0。 在那时，**提交**按钮将变为启用状态。
 
 `execute`函数**提交**移除的属性更改处理程序，从`PersonViewModel`，将对象添加到`Persons`集合，并将所有内容返回到初始条件。
 
@@ -401,7 +402,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             canExecute: () =>
             {
                 return IsEditing;
-            }); 
+            });
     }
 
     ···
@@ -417,7 +418,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 ## <a name="using-command-parameters"></a>使用命令参数
 
-这有时将为一个或多个按钮 （或其他用户界面对象） 共享同一个方便`ICommand`视图模型中的属性。 在这种情况下，使用`CommandParameter`属性来区分按钮。 
+这有时将为一个或多个按钮 （或其他用户界面对象） 共享同一个方便`ICommand`视图模型中的属性。 在这种情况下，使用`CommandParameter`属性来区分按钮。
 
 你可以继续使用`Command`类对于这些共享`ICommand`属性。 类定义[备用构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action%7BSystem.Object%7D/System.Func%7BSystem.Object,System.Boolean%7D/)接受`execute`和`canExecute`具有类型参数的方法`Object`。 这是如何`CommandParameter`传递给这些方法。
 
@@ -442,7 +443,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
         <Grid.BindingContext>
             <local:DecimalKeypadViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.Resources>
             <ResourceDictionary>
                 <Style TargetType="Button">
@@ -465,51 +466,51 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
                 Command="{Binding ClearCommand}" />
 
         <Button Text="&#x21E6;"
-                Grid.Row="1" Grid.Column="2" 
+                Grid.Row="1" Grid.Column="2"
                 Command="{Binding BackspaceCommand}" />
 
         <Button Text="7"
-                Grid.Row="2" Grid.Column="0" 
+                Grid.Row="2" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="7" />
 
         <Button Text="8"
-                Grid.Row="2" Grid.Column="1" 
+                Grid.Row="2" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="8" />
-        
+
         <Button Text="9"
-                Grid.Row="2" Grid.Column="2" 
+                Grid.Row="2" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="9" />
 
         <Button Text="4"
-                Grid.Row="3" Grid.Column="0" 
+                Grid.Row="3" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="4" />
 
         <Button Text="5"
-                Grid.Row="3" Grid.Column="1" 
+                Grid.Row="3" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="5" />
 
         <Button Text="6"
-                Grid.Row="3" Grid.Column="2" 
+                Grid.Row="3" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="6" />
 
         <Button Text="1"
-                Grid.Row="4" Grid.Column="0" 
+                Grid.Row="4" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="1" />
 
         <Button Text="2"
-                Grid.Row="4" Grid.Column="1" 
+                Grid.Row="4" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="2" />
 
         <Button Text="3"
-                Grid.Row="4" Grid.Column="2" 
+                Grid.Row="4" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="3" />
 
@@ -519,7 +520,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
                 CommandParameter="0" />
 
         <Button Text="&#x00B7;"
-                Grid.Row="5" Grid.Column="2" 
+                Grid.Row="5" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="." />
     </Grid>
@@ -532,7 +533,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 [![十进制键盘](commanding-images/decimalkeyboard-small.png "十进制键盘")](commanding-images/decimalkeyboard-large.png#lightbox "十进制键盘")
 
-请注意，所有三个屏幕截图中的十进制点按钮被禁用，因为输入的数已包含小数点。 
+请注意，所有三个屏幕截图中的十进制点按钮被禁用，因为输入的数已包含小数点。
 
 `DecimalKeypadViewModel`定义`Entry`类型的属性`string`(这是将触发的唯一属性`PropertyChanged`事件) 和三个属性的类型`ICommand`:
 
@@ -587,7 +588,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
             });
 
         ···
-    
+
     }
 
     void RefreshCanExecutes()
@@ -597,7 +598,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -638,7 +639,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -674,13 +675,13 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
 `execute`方法追加的字符串自变量`Entry`属性。 但是，如果结果开头零 （但不是零和小数点） 然后该初始零必须删除使用`Substring`函数。
 
-`canExecute`方法返回`false`仅当参数为 （指示小数点是否已按下） 的小数点和`Entry`已包含小数点。 
+`canExecute`方法返回`false`仅当参数为 （指示小数点是否已按下） 的小数点和`Entry`已包含小数点。
 
 所有`execute`方法调用`RefreshCanExecutes`，后者随后调用`ChangeCanExecute`两个`DigitCommand`和`ClearCommand`。 这可确保小数点和退格符按钮已启用或禁用基于当前的输入的数字序列。
 
@@ -753,13 +754,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-构造函数集`NavigateCommand`属性`execute`方法实例化`System.Type`参数，然后导航到它。 因为`PushAsync`调用需要`await`运算符，`execute`方法必须被标记为异步。 这实现的`async`在参数列表前的关键字。 
+构造函数集`NavigateCommand`属性`execute`方法实例化`System.Type`参数，然后导航到它。 因为`PushAsync`调用需要`await`运算符，`execute`方法必须被标记为异步。 这实现的`async`在参数列表前的关键字。
 
 构造函数还将设置`BindingContext`到其自身的页，以便绑定引用`NavigateCommand`中此类。
 
 此构造函数中的代码的顺序具有重要意义：`InitializeComponent`调用均会导致 XAML 以分析，但在该时间绑定到属性名为`NavigateCommand`无法解析，因为`BindingContext`设置为`null`。 如果`BindingContext`构造函数中设置*之前*`NavigateCommand`设置，则绑定可以解决当`BindingContext`设置，但在那时，`NavigateCommand`仍`null`。 设置`NavigateCommand`后`BindingContext`将没有在绑定上的任何效果，因为对更改`NavigateCommand`，不会激发`PropertyChanged`事件，并绑定并不知道这`NavigateCommand`现在无效。
 
-同时设置`NavigateCommand`和`BindingContext`（按任何顺序） 到在调用前`InitializeComponent`将运行，因为当 XAML 分析器遇到绑定定义设置绑定的两个组件。 
+同时设置`NavigateCommand`和`BindingContext`（按任何顺序） 到在调用前`InitializeComponent`将运行，因为当 XAML 分析器遇到绑定定义设置绑定的两个组件。
 
 数据绑定有时会很棘手，但是，如你所见本系列文章中，功能强大且灵活，而且极大地有助于通过将从用户界面的基础逻辑中分离，来组织你的代码。
 
