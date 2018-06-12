@@ -1,23 +1,23 @@
 ---
 title: Firebase 作业调度程序
-description: 本指南讨论使用从 Google Firebase 作业调度程序库的后台工作。
+description: 本指南讨论如何使用Google的Firebase作业调度程序库安排后台工作。
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
-ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/05/2018
+ms.openlocfilehash: 0d512342f1c978c84341d20c298a9fa750800d84
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806798"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 作业调度程序
 
-_本指南讨论使用从 Google Firebase 作业调度程序库的后台工作。_
+_本指南讨论如何使用Google的Firebase作业调度程序库安排后台工作。_
 
-![在预览中的 firebase 作业调度程序](~/media/shared/preview.png)
 
 ## <a name="overview"></a>概述
 
@@ -65,9 +65,6 @@ Firebase 作业调度程序需要 Android API 级别 9 或更高版本。 Fireba
 若要开始使用 Firebase 作业调度程序，首先添加[Xamarin.Firebase.JobDispatcher NuGet 包](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)到 Xamarin.Android 项目。 搜索 NuGet 程序包管理器**Xamarin.Firebase.JobDispatcher**包 （其中仍处于预发布阶段）。
 
 在添加 Firebase 作业调度程序库之后, 创建`JobService`类，然后安排其运行的实例`FirebaseJobDispatcher`。
-
-> [!NOTE]
-> Firebase 作业调度程序的当前绑定面向旧版本的库。 是 [已知的 bug [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] 这将阻止从正在更新要面向 Firebase 作业调度程序的较新版本的绑定。
 
 
 ### <a name="creating-a-jobservice"></a>创建 JobService
@@ -293,7 +290,6 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 
 ## <a name="related-links"></a>相关链接
 
-- [绑定生成器失败，出现错误致命的未经处理的异常： System.ArgumentNullException： 值不能为 null。](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [在 NuGet 上 Xamarin.Firebase.JobDispatcher](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-作业的调度程序在 GitHub 上](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Xamarin.Firebase.JobDispatcher 绑定](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
