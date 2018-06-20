@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 7af9700a9b661280c2ee32a1f65cdc01234cbe37
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781251"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209396"
 ---
 # <a name="advanced-manual-real-world-example"></a>高级 （手动） 的真实世界示例
 
@@ -19,7 +19,7 @@ ms.locfileid: "34781251"
 
 本部分介绍使用更高级的方法进行绑定，我们将在其中使用 Apple 的`xcodebuild`工具以首先生成 POP 项目，然后手动推导目标 Sharpie 的输入。 这实质上是包含目标 Sharpie 实质上一节中执行的操作。
 
-```csharp
+```
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 因为 POP 库具有 Xcode 项目 (`pop.xcodeproj`)，我们只需使用`xcodebuild`生成 POP。 此过程可能反过来又会生成目标 Sharpie 可能需要分析的标头文件。 这是生成之前绑定是重要的原因。 通过生成时`xcodebuild`传递相同的 SDK 标识符和体系结构，请确保你想要将传递给目标 Sharpie （然后请记住，目标 Sharpie 3.0 可以执行此通常操作 ！）：
 
-```csharp
+```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 
 现在我们就可以将绑定 POP。 我们知道，我们想要生成适用于 SDK`iphoneos8.1`与`arm64`体系结构和我们很关心在标头文件放入`build/Headers`下 POP git 签出。 如果我们`build/Headers`目录中，我们将看到一个标头文件数：
 
-```csharp
+```
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 如果我们看一下`POP.h`，我们可以看到这是库的主顶级标头文件`#import`s 其他文件。 因此，我们只需传递`POP.h`到目标 Sharpie 和 clang 将执行在幕后的其余部分：
 
-```csharp
+```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: fa8806345a364a70535a91b2ba99e3bfee8d47bc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794015"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269052"
 ---
 # <a name="debugging-integrations"></a>调试集成
 
@@ -23,8 +23,8 @@ ms.locfileid: "34794015"
 
 客户端日志位于在 macOS 和 Windows 上的以下位置：
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows：`%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows：`%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 需要注意的一点是，当加载通过常用的集成`#r`在开发过程中的机制，集成程序集将会拾取作为_依赖_工作簿和绝对路径是否与它一起打包未使用。 这可能导致更改才会显示不传播，就像重新生成集成未执行任何操作。
 
@@ -39,7 +39,7 @@ ms.locfileid: "34794015"
 若要启用 Mac 上的 Xamarin 工作簿的开发人员工具，请在终端中运行以下命令：
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 然后重新启动 Xamarin 的工作簿。 一旦您这样做，你应看到**检查元素**出现在你右键单击上下文菜单中，和新**开发人员**窗格中将可在工作簿首选项中。 此选项可以选择你是否想在启动时打开的开发人员工具：

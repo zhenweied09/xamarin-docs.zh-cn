@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 06758fd8fac62a63c309b173738a8ee889716143
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785261"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268805"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.iOS 的本地化
 
@@ -55,6 +55,16 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 第一个值可以缓存由操作系统，并因此可能不会始终反映用户的当前所选的区域设置。 第二个值用于获取当前所选的区域设置。
+
+> [!NOTE]
+> Mono （.NET 运行时基于 Xamarin.iOS） 和 Apple 的 iOS Api 不支持完全相同的语言/区域组合集。
+> 因此，就可以在 iOS 中选择的语言/区域组合**设置**应用程序未映射到 Mono 中的有效值。 例如，将 iPhone 的语言为英语和其区域设置为西班牙将导致以下 Api 以生成不同的值：
+> 
+> - `CurrentThead.CurrentCulture`: EN-US (Mono API)
+> - `CurrentThread.CurrentUICulture`: EN-US (Mono API)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (Apple API)
+>
+> 由于 Mono 使用`CurrentThread.CurrentUICulture`若要选择资源和`CurrentThread.CurrentCulture`设置日期和货币的格式，基于 Mono 的本地化 （例如，.resx 文件） 可能会不产生预期的结果，这些语言/区域组合。 在这些情况下，依赖于 Apple 的 Api，用于本地化根据需要。
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

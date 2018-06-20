@@ -5,12 +5,13 @@ ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b5e94a9b0bc3b9e9f141ad9fd262d29e01eb8a10
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793816"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268987"
 ---
 # <a name="workbooks-installation-and-requirements"></a>工作簿安装和要求
 
@@ -43,8 +44,8 @@ ms.locfileid: "34793816"
 
 |应用程序平台|支持 32 位操作系统|说明|
 |--- |--- |--- |
-|Mac （统一）|仅支持在 Mac 上|
-|iOS （统一）|在 Mac 和 Windows 上受支持|必须 mac 上安装 Xamarin.iOS 11.0 和 Xcode 9.0 或更高版本 在 Windows 上运行 iOS 工作簿需要运行的更高的版本，所有的 Mac 生成主机和[进行远程处理的 iOS 模拟器](~/tools/ios-simulator.md)在 Windows 上安装。|
+|Mac|仅支持在 Mac 上|
+|iOS|在 Mac 和 Windows 上受支持|必须 mac 上安装 Xamarin.iOS 11.0 和 Xcode 9.0 或更高版本 在 Windows 上运行 iOS 工作簿需要运行的更高的版本，所有的 Mac 生成主机和[进行远程处理的 iOS 模拟器](~/tools/ios-simulator.md)在 Windows 上安装。|
 |Android|在 Mac 和 Windows 上受支持|必须将 Google、 Visual Studio 或 Xamarin Android 仿真程序中，使用虚拟设备 > = 5.0|
 |WPF|在 Windows 上才支持|
 |控制台 (.NET Framework)|在 Mac 和 Windows 上受支持|
@@ -114,7 +115,7 @@ Visual Studio
 
 ### <a name="windows"></a>Windows
 
-具体取决于你如何获取工作簿和检查器，你可能需要执行两个卸载过程。 请检查这两种若要完全卸载软件。
+具体取决于您是如何获得工作簿，你可能需要执行两个卸载过程。 请检查这两种若要完全卸载软件。
 
 #### <a name="visual-studio-installer"></a>Visual Studio 安装程序
 
@@ -122,19 +123,19 @@ Visual Studio
 
 #### <a name="system-uninstall"></a>系统卸载
 
-如果您自己安装的工作簿和检查器使用下载的安装程序，它将需要通过卸载**应用和功能**Windows 10 上或通过系统设置页**添加/删除程序**较旧版本的 Windows 上的控制面板中。
+如果您自己安装的工作簿与下载的安装程序，它将需要通过卸载**应用和功能**Windows 10 上或通过系统设置页**添加/删除程序**控件中在较旧版本的 Windows 的面板。
 
 > **启动 > 设置 > 系统 > 应用程序和功能**
 
-![](install-images/windows-remove.png "Xamarin 工作簿和检查器中列出&quot;应用&amp;功能&quot;")
+![](install-images/windows-remove.png "Xamarin 工作簿中列出&quot;应用&amp;功能&quot;")
 
-**你仍应遵循为 Visual Studio 安装程序，以确保工作簿的过程 （&) 检查器不会不获取重新安装你不知情的情况下。**
+**你仍应遵循为 Visual Studio 安装程序，以确保工作簿不获取重新安装你不知情的情况下的过程。**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-从开始[1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/)，Xamarin 工作簿和检查器可以通过进行卸载从终端运行：
+从开始[1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/)，可以通过运行从终端卸载 Xamarin 工作簿：
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -153,7 +154,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 ## <a name="downgrading"></a>降级
 
-捆绑标识符**应用程序/Xamarin Workbooks.app**从更改`com.xamarin.Inspector`到`com.xamarin.Workbooks`1.4 的发行版本以方便将来拆分 Xamarin 工作簿和检查器安装程序中。
+捆绑标识符**应用程序/Xamarin Workbooks.app**从更改`com.xamarin.Inspector`到`com.xamarin.Workbooks`在 1.4 版本中，为工作簿和检查器现在完全拆分。
 
 较旧的安装程序中的 bug，由于不可能降级 1.4 或较新版本使用 1.3.2 或较旧的安装程序。
 

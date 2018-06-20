@@ -5,17 +5,17 @@ ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 8f33f61cd3c38dbce16f9a7afa103836aa454a0c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 823905c425b74659bbc0733ebb1f86eb1ce5fa11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793082"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268786"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
-Xamarin 的工作簿和检查器将用户的交互式 C# 控制台工具。 与调试的 IDE 中，检查正在运行的应用时调试或诊断帮助为提供的服务的工作流应用程序集成，该检查器。
+与调试的 IDE 中，从而允许你以交互方式执行 C# 代码或检查属性的 UI 中，检查正在运行的应用时调试或诊断帮助为提供的服务的工作流应用程序集成 Xamarin 检查器。
 
 实时应用程序检查是适用于企业的客户。 让我们知道如果你[遇到任何 bug](~/tools/inspector/install.md#reporting-bugs)。 我们有[论坛](https://forums.xamarin.com/categories/inspector)太 ！
 
@@ -23,7 +23,7 @@ Xamarin 的工作簿和检查器将用户的交互式 C# 控制台工具。 与�
 
 ## <a name="installation-and-requirementstoolsinspectorinstallmd"></a>[安装和要求](~/tools/inspector/install.md)
 
-获取 Xamarin 工作簿 （&） 在 Mac 或 Windows 的计算机上安装的检查器的信息。
+在 Mac 计算机或 Windows 计算机上安装获取 Xamarin 检查器信息。
 
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[检查实时应用程序](~/tools/inspector/inspect.md)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e83f8a585c4badc31bffaea53bb2f183e7b11fc9
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245766"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268857"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>第 5 部分。 从数据绑定到 MVVM
 
@@ -290,7 +290,7 @@ namespace XamlSamples
 </ContentPage>
 ```
 
-在每个绑定`Label`是默认设置`OneWay`。 它只需显示的值。 但在每个绑定`Slider`是`TwoWay`。 这允许`Slider`从 ViewModel 初始化。 请注意，`Color`属性设置为`Blue`ViewModel 实例化时。 但在更改`Slider`还需要在 ViewModel，然后计算一种新颜色中设置属性的新值。
+在每个绑定`Label`是默认设置`OneWay`。 它只需显示的值。 但在每个绑定`Slider`是`TwoWay`。 这允许`Slider`从 ViewModel 初始化。 请注意，`Color`属性设置为`Aqua`ViewModel 实例化时。 但在更改`Slider`还需要在 ViewModel，然后计算一种新颜色中设置属性的新值。
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "使用双向数据绑定的 MVVM")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM 使用双向数据绑定")
 

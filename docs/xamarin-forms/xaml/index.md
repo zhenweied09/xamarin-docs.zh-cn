@@ -6,12 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/24/2016
-ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: c040c12829708418d0a705b8e9f930989900c678
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209422"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>可扩展应用程序标记语言 (XAML)
 
@@ -45,6 +46,10 @@ XAML 使用`xmlns`命名空间声明的 XML 属性。 本文介绍 XAML 命名�
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[XAML 标记扩展](markup-extensions/index.md)
 
 XAML 包括将属性设置为值或超出什么可以使用简单的字符串表示的对象的标记扩展。 其中包括引用常量、 静态属性和字段、 资源字典和数据绑定。
+
+## <a name="field-modifiersfield-modifiersmd"></a>[字段修饰符](field-modifiers.md)
+
+`x:FieldModifier`命名空间属性指定的生成字段的命名 XAML 元素的访问级别。
 
 ## <a name="passing-argumentspassing-argumentsmd"></a>[传递参数](passing-arguments.md)
 

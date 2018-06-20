@@ -6,13 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 91df4d36dd8d98712063a30773f927a82676b18e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/18/2018
+ms.openlocfilehash: 123e65f1efe31935167ca8684e89e7c0b4505443
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243605"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209214"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 本地数据库
 
@@ -36,7 +36,7 @@ Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.o
 
 ### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms.NET 标准或 PCL 项目
 
-若要将 SQLite 支持添加到 Xamarin.Forms 项目，使用 NuGet 的搜索功能查找**sqlite net pcl**和安装该程序包：
+若要将 SQLite 支持添加到 Xamarin.Forms 项目，使用 NuGet 的搜索功能查找**sqlite net pcl**并安装最新的包：
 
 ![添加 NuGet SQLite.NET PCL 包](databases-images/vs2017-sqlite-pcl-nuget.png "添加 NuGet SQLite.NET PCL 包")
 
@@ -47,7 +47,7 @@ Xamarin.Forms 应用程序可以使用[SQLite.NET PCL NuGet](https://www.nuget.o
 - **NuGet 链接：** [sqlite net pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!TIP]
-> 使用**sqlite net pcl**标准.NET 项目中甚至的 NuGet。
+> 使用**sqlite net pcl**标准.NET 项目中甚至的 NuGet 包。
 
 已添加引用后，编写一个特定于平台的功能，它是确定数据库文件的位置的抽象的接口。 示例中使用该接口所定义的一个方法：
 
@@ -126,15 +126,11 @@ public Task<int> DeleteItemAsync(TodoItem item)
 > [!NOTE]
 > 使用异步 SQLite.Net API 的优点是该数据库操作将被移动到后台线程。 此外，没有必要编写处理代码，因为该 API 将对其负责的其他并发。
 
-所有用 PCL 项目，以在所有平台之间共享编写数据访问代码。 仅获取数据库的本地文件路径需要特定于平台的代码，如以下各节所述。
+所有数据访问代码编写.NET 标准的库项目，以在所有平台之间共享。 仅获取数据库的本地文件路径需要特定于平台的代码，如以下各节所述。
 
 <a name="PCL_iOS" />
 
 ### <a name="ios-project"></a>iOS 项目
-
-若要配置 iOS 应用程序，请将相同的 NuGet 包添加到 iOS 项目使用*NuGet*窗口：
-
-![添加 NuGet SQLite.NET PCL 包](databases-images/vsmac-sqlite-nuget.png "添加 NuGet SQLite.NET PCL 包")
 
 所需的唯一代码是`IFileHelper`确定数据文件路径的实现。 下面的代码将在该 SQLite 数据库文件放**库/数据库**在应用程序的沙盒中的文件夹。 请参阅[iOS 使用文件系统](~/ios/app-fundamentals/file-system.md)文档可供存储使用不同的目录的详细信息。
 
@@ -166,11 +162,7 @@ namespace Todo.iOS
 
 ### <a name="android-project"></a>Android 项目
 
-若要配置 Android 应用程序，请将相同的 NuGet 包添加到 Android 项目使用*NuGet*窗口：
-
-![](databases-images/vsmac-sqlite-nuget.png "添加 NuGet SQLite.NET PCL 包")
-
-已添加此引用，所需的唯一代码是`IFileHelper`确定数据文件路径的实现。
+所需的唯一代码是`IFileHelper`确定数据文件路径的实现：
 
 ```csharp
 [assembly: Dependency(typeof(FileHelper))]
@@ -191,11 +183,7 @@ namespace Todo.Droid
 
 ### <a name="windows-10-universal-windows-platform-uwp"></a>Windows 10 通用 Windows 平台 (UWP)
 
-若要配置 UWP 应用程序，请将相同的 NuGet 包添加到 UWP 项目使用*NuGet*窗口：
-
-![添加 NuGet SQLite.NET PCL 包](databases-images/vs2017-sqlite-uwp-nuget.png "添加 NuGet SQLite.NET PCL 包")
-
-一旦添加引用时，实现`IFileHelper`接口使用特定于平台的`Windows.Storage`API 来确定数据文件路径。
+实现`IFileHelper`接口使用特定于平台的`Windows.Storage`API 来确定数据文件路径：
 
 ```csharp
 using Windows.Storage;
