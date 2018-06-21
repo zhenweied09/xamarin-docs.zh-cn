@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 6d3e5e61069723b0910b092da6631d5dc4ad8629
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: b0fd644f1f3b49a949a3a9ba9aca4c0770f17013
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244540"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291346"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms 中的映像
 
@@ -153,8 +153,11 @@ IDE 生成此默认值通过串联**默认 Namespace**对于此项目以 filenam
 要加载的嵌入的图像的代码只是将传递**资源 ID**到[ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/)方法如下所示：
 
 ```csharp
-var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg") };
+var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
 ```
+
+> [!NOTE]
+> 若要支持在通用 Windows 平台上的发布模式下显示嵌入的图像，就需要使用的重载`ImageSource.FromResource`，它指定在其中进行搜索的映像的源程序集。
 
 当前没有资源标识符的隐式转换。 相反，你必须使用[ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/)或`new ResourceImageSource()`以加载嵌入的图像。
 
@@ -182,12 +185,15 @@ public class ImageResourceExtension : IMarkupExtension
    }
 
    // Do your translation lookup here, using whatever method you require
-   var imageSource = ImageSource.FromResource(Source);
+   var imageSource = ImageSource.FromResource(Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
 
    return imageSource;
  }
 }
 ```
+
+> [!NOTE]
+> 若要支持在通用 Windows 平台上的发布模式下显示嵌入的图像，就需要使用的重载`ImageSource.FromResource`，它指定在其中进行搜索的映像的源程序集。
 
 若要使用此扩展添加自定义`xmlns`到 XAML 中，使用项目的正确的命名空间和程序集值。 然后可以使用此语法设置图像源： `{local:ImageResource WorkingWithImages.beach.jpg}`。 完整的 XAML 示例所示：
 
@@ -224,9 +230,15 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-#### <a name="images-embedded-in-other-projects-dont-appear"></a>在其他项目中嵌入图像不会显示
+#### <a name="images-embedded-in-other-projects"></a>在其他项目中嵌入图像
 
-`Image.FromResource` 仅查找中的代码调用相同的程序集中对映像`FromResource`。 使用上面的调试代码可以确定哪些程序集包含特定的资源通过更改`typeof()`语句`Type`已知要处于每个程序集。
+默认情况下，`ImageSource.FromResource`方法只查找在代码调用相同的程序集中的映像`ImageSource.FromResource`方法。 使用上面的调试代码可以确定哪些程序集包含特定的资源通过更改`typeof()`语句`Type`已知要处于每个程序集。
+
+但是，可以作为的自变量指定要搜索的嵌入图像的源程序集`ImageSource.FromResource`方法：
+
+```csharp
+var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
+```
 
 <a name="Downloading_Images" />
 
@@ -316,7 +328,6 @@ webImage.Source = new UriImageSource
 Xamarin.Forms 提供了多种不同的方式，在跨平台应用程序，允许使用跨平台的相同图像或指定的特定于平台的映像中包括图像。 此外会自动缓存的已下载的映像，自动执行常见的编码方案。
 
 应用程序图标和初始屏幕图像是设置和配置与非 Xamarin.Forms 应用程序-按照相同的指南用于特定于平台的应用。
-
 
 ## <a name="related-links"></a>相关链接
 

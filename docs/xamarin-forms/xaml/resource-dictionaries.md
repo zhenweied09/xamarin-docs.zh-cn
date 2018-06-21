@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/21/2018
-ms.openlocfilehash: b9c15357895bae64176ef34a848b968917035f3d
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: c2e6a5624baba251061bcd324fcb849e3d95ebfd
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291030"
 ---
 # <a name="resource-dictionaries"></a>资源字典
 
@@ -251,7 +252,7 @@ Xamarin.Forms 从 3.0 开始，显式`ResourceDictionary`标记不是必需的�
 
 1. 本地的资源字典的资源。
 1. 合并的资源字典中包含的资源通过不推荐使用[ `MergedWith` ](xref:Xamarin.Forms.ResourceDictionary.MergedWith)属性。
-1. 已通过合并的资源字典中包含的资源`MergedDictionaries`中列出的顺序集合`MergedDictionaries`属性。
+1. 已通过合并的资源字典中包含的资源`MergedDictionaries`集合中, 列出的相反顺序`MergedDictionaries`属性。
 
 > [!NOTE]
 > 搜索资源字典可以是计算密集型任务，如果应用程序包含多个较大的资源字典。 因此，若要避免不必要的搜索，你应确保应用程序中的每一页仅使用适用于页的资源字典。

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7171142951a2893233233bb8a1c44c5a84c57b5c
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 47ea437be8a1570517f37cc59aab17431c5af7f0
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848195"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291320"
 ---
 # <a name="localization"></a>本地化
 
@@ -44,6 +44,9 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 在本文档中，我们将查看如何使用 RESX 文件来存储这些字符串和检索它们的显示，具体取决于用户的首选项。
 
 这些示例目标英语、 法语、 西班牙语、 德语、 中文、 日语、 俄语和葡萄牙语 （巴西） 语言。 应用程序可以转换为所需的尽可能少或任意多个语言。
+
+> [!NOTE]
+> 在通用 Windows 平台上, RESW 文件应用于推送通知本地化，而不是 RESX 文件。 有关详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
 ### <a name="adding-resources"></a>将资源添加
 
@@ -458,6 +461,8 @@ public class Localize : UsingResxLocalization.ILocalize
 > 从[其文档](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"使用 pt 作为语言 ID 为葡萄牙语它用作巴西和 PT-PT 中的语言 ID 葡萄牙语因为中葡萄牙使用的该"_。
 > 这意味着当葡萄牙语语言选择在非标准的区域，回退语言将葡萄牙语 （巴西） 在 iOS 上除非编写代码来更改此行为 (如`ToDotnetFallbackLanguage`上面)。
 
+有关 iOS 本地化的详细信息，请参阅[iOS 本地化](~/ios/app-fundamentals/localization/index.md)。
+
 #### <a name="android-application-project"></a>Android 应用程序项目
 
 Android 公开通过当前所选的区域设置`Java.Util.Locale.Default`，并使用下划线分隔符而不是短划线 （它将替换下面的代码）。 将此依赖关系服务实现添加到 Android 应用程序项目：
@@ -548,11 +553,12 @@ namespace UsingResxLocalization.Android
 >
 > 开发人员应修改`iOSToDotnetLanguage`和`ToDotnetFallbackLanguage`方法以处理其支持的语言所需的特定用例。
 
-
 一旦此代码已添加到 Android 应用程序项目，它将能够自动显示已翻译的字符串。
 
 > [!NOTE]
 >️**警告：** 如果使用已翻译的字符串在版本 Android 生成，但不是在调试时，右键单击**Android 项目**和选择**选项 > 生成 > Android生成**并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
+
+有关 Android 本地化的详细信息，请参阅[Android 本地化](~/android/app-fundamentals/localization.md)。
 
 #### <a name="universal-windows-platform"></a>通用 Windows 平台
 
@@ -573,6 +579,8 @@ namespace UsingResxLocalization.Android
 在更新的特定于平台的项目如下所示上述并重新应用程序编译的已翻译 RESX 文件之后, 更新的翻译将在每个应用可用。 下面是转换为简体中文的示例代码的屏幕快照：
 
 ![](text-images/simple-example-hans.png "转换为中文 （简体） 的跨平台用户界面")
+
+有关 UWP 本地化的详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
 ## <a name="localizing-xaml"></a>本地化 XAML
 
@@ -713,7 +721,7 @@ switch (Device.RuntimePlatform)
 
 ### <a name="ios-application-project"></a>iOS 应用程序项目
 
-iOS 使用名为本地化 Projects 命名标准或 **.lproj**目录，用于包含映像和字符串资源。 这些目录中可以包含在应用中，使用的图像的本地化的版本以及**InfoPlist.strings**可用来本地化应用程序名称的文件。
+iOS 使用名为本地化 Projects 命名标准或 **.lproj**目录，用于包含映像和字符串资源。 这些目录中可以包含在应用中，使用的图像的本地化的版本以及**InfoPlist.strings**可用来本地化应用程序名称的文件。 有关 iOS 本地化的详细信息，请参阅[iOS 本地化](~/ios/app-fundamentals/localization/index.md)。
 
 #### <a name="images"></a>图像
 
@@ -737,7 +745,7 @@ iOS 使用名为本地化 Projects 命名标准或 **.lproj**目录，用于包�
 
 ### <a name="android-application-project"></a>Android 应用程序项目
 
-Android 遵循用于存储使用不同的本地化的图像的不同方案**可绘制**和**字符串**带有语言代码后缀的目录。 （如 ZH-TW 或 PT-BR） 需要四个字母区域设置代码时，请注意，Android 需要附加**r**前面 dash/以下区域设置代码 （如。 中文 rTW 或 pt rBR）。
+Android 遵循用于存储使用不同的本地化的图像的不同方案**可绘制**和**字符串**带有语言代码后缀的目录。 （如 ZH-TW 或 PT-BR） 需要四个字母区域设置代码时，请注意，Android 需要附加**r**前面 dash/以下区域设置代码 （如。 中文 rTW 或 pt rBR）。 有关 Android 本地化的详细信息，请参阅[Android 本地化](~/android/app-fundamentals/localization.md)。
 
 #### <a name="images"></a>图像
 
@@ -773,7 +781,7 @@ Android 遵循用于存储使用不同的本地化的图像的不同方案**可�
 
 ### <a name="universal-windows-platform-application-projects"></a>通用 Windows 平台应用程序项目
 
-通用 Windows 平台拥有简化了映像和应用程序名称的本地化资源基础结构。
+通用 Windows 平台拥有简化了映像和应用程序名称的本地化资源基础结构。 有关 UWP 本地化的详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
 #### <a name="images"></a>图像
 
@@ -796,5 +804,6 @@ Android 遵循用于存储使用不同的本地化的图像的不同方案**可�
 - [跨平台本地化](~/cross-platform/app-fundamentals/localization.md)
 - [iOS 本地化](~/ios/app-fundamentals/localization/index.md)
 - [Android 本地化](~/android/app-fundamentals/localization.md)
+- [UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)
 - [使用 CultureInfo 类 (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
 - [查找和使用特定区域性 (MSDN) 为资源](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
