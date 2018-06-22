@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30776074"
 ---
 # <a name="error-mt1009-could-not-copy-the-assembly"></a>错误 MT1009： 无法将复制程序集
 

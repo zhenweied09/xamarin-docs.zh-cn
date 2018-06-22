@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32019680"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>呈现器基类，这些类和本机控件
 

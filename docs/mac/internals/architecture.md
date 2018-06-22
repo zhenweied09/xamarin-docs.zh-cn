@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30785551"
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.Mac 体系结构
 
@@ -45,7 +46,7 @@ Xamarin.Mac 应用程序运行在单声道执行环境中，并使用 Xamarin �
 
 ## <a name="compilation"></a>编译
 
-编译任何 Xamarin 平台应用程序时，Mono C# （或 F #） 编译器将运行，并且将 C# 和 F # 代码编译为 Microsoft 中间语言 （MSIL 或 IL）。 然后使用 Xamarin.Mac*就实时 (JIT)*编译器在运行时编译本机代码，根据需要在正确的体系结构上执行。
+编译任何 Xamarin 平台应用程序时，Mono C# （或 F #） 编译器将运行，并且将 C# 和 F # 代码编译为 Microsoft 中间语言 （MSIL 或 IL）。 然后使用 Xamarin.Mac*就实时 (JIT)* 编译器在运行时编译本机代码，根据需要在正确的体系结构上执行。
 
 这是使用 AOT 编译的 Xamarin.iOS 相反。 使用 AOT 编译器时，在生成时被编译所有程序集以及其中的所有方法。 使用 JIT，编译的过程仅为执行的方法按需。
 

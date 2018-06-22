@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30787084"
 ---
 # <a name="how-xamarinmac-works"></a>Xamarin.Mac 的工作原理
 
@@ -103,7 +104,7 @@ public CustomView () : base (NSObjectFlag.Empty)
 
 ### <a name="enabling-aot-compilation"></a>启用 AOT 编译
 
-在 Xamarin.Mac 中双击启用 AOT**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--aot:[options]`到**其他 mmp 自变量：**字段 (其中`[options]`是一个或多个选项，若要控制 AOT 类型，请参阅下文)。 例如：
+在 Xamarin.Mac 中双击启用 AOT**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--aot:[options]`到**其他 mmp 自变量：** 字段 (其中`[options]`是一个或多个选项，若要控制 AOT 类型，请参阅下文)。 例如：
 
 ![向其他 mmp 自变量添加 AOT](how-it-works-images/aot01.png "添加 AOT 到其他 mmp 自变量")
 
@@ -145,7 +146,7 @@ public CustomView () : base (NSObjectFlag.Empty)
 
 ### <a name="enabling-the-partial-static-registrar"></a>启用部分的静态注册机构
 
-部分静态注册机构在 Xamarin.Mac 中启用通过双击**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--registrar:static`到**其他 mmp 自变量：**字段。 例如：
+部分静态注册机构在 Xamarin.Mac 中启用通过双击**项目名称**中**解决方案资源管理器**、 导航至**Mac 生成**和添加`--registrar:static`到**其他 mmp 自变量：** 字段。 例如：
 
 ![将部分静态注册机构添加到其他 mmp 参数](how-it-works-images/psr01.png "将部分静态注册机构添加到其他 mmp 自变量")
 

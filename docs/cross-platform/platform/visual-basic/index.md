@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917962"
 ---
 # <a name="portable-visual-basicnet"></a>可移植 Visual Basic.NET
 
@@ -41,7 +42,7 @@ Xamarin iOS 和 Android 项目本质上不支持 Visual Basic;但是开发人员
 
 若要创建 PCL 并选择其配置文件的步骤如下：
 
-1.  在**新项目**屏幕上，选择**Visual Basic > 类库 （可移植）**选项：
+1.  在**新项目**屏幕上，选择**Visual Basic > 类库 （可移植）** 选项：
 
     [![](images/image1-sml.png "创建新的 Visual Basic 可移植库")](images/image1.png#lightbox)
 

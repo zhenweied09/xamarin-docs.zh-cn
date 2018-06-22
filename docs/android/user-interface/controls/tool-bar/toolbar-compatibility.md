@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30768696"
 ---
 # <a name="toolbar-compatibility"></a>工具栏兼容性
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="set-the-minimum-and-target-android-version"></a>设置最小值和目标 Android 版本
 
-必须设置应用程序的目标框架，为 API 级别 21 或更高版本或应用程序将不会正确部署。 如果出现错误，如**属性 tileModeX 包 android 中的任何资源标识符找到**出现时将应用部署，这是因为未将目标框架设置为**Android 5.0 (API 级别 21-棒糖形)**或更高版本。 
+必须设置应用程序的目标框架，为 API 级别 21 或更高版本或应用程序将不会正确部署。 如果出现错误，如**属性 tileModeX 包 android 中的任何资源标识符找到**出现时将应用部署，这是因为未将目标框架设置为**Android 5.0 (API 级别 21-棒糖形)** 或更高版本。 
 
 目标框架设置为 API 级别 21 级别或更高版本，将最低 Android 版本，此应用程序以支持 Android API 级别的项目设置。 有关设置 Android API 级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 在`ToolbarFun`示例中，最低 Android 版本设置为 KitKat (API 级别 4.4)。 
 

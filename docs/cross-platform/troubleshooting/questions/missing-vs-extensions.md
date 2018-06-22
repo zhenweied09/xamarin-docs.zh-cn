@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917884"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>安装后缺少 Visual Studio 扩展
 

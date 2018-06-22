@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30770958"
 ---
 # <a name="creating-resources-for-varying-screens"></a>为不同的屏幕创建资源
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/04/2018
 
 请注意，这些概念的前三个间相关&ndash;分辨率提高到没有增加密度会增加的屏幕大小。 但是如果增加的密度和解决方法然后屏幕的大小可以保持不变。 此屏幕的大小、 密度和解决方法之间的关系非常快速地使屏幕支持。
 
-为了应对这种复杂性，Android 框架倾向于使用*密度无关的像素 (dp)*对于屏幕布局。 通过使用密度无关的像素，UI 元素将显示给用户以在具有不同密度的屏幕上具有相同的物理大小。
+为了应对这种复杂性，Android 框架倾向于使用*密度无关的像素 (dp)* 对于屏幕布局。 通过使用密度无关的像素，UI 元素将显示给用户以在具有不同密度的屏幕上具有相同的物理大小。
 
 
 ## <a name="supporting-various-screen-sizes-and-densities"></a>支持各种屏幕大小和密度

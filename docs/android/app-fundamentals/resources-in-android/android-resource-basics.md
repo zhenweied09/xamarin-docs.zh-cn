@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764887"
 ---
 # <a name="android-resource-basics"></a>Android 资源基础知识
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/04/2018
 
 -  **Icon.png** &ndash;应用程序的默认图标
 
--  **Main.axml** &ndash;应用程序的默认用户界面布局文件。 请注意，Android 时使用**.xml**文件扩展名 Xamarin.Android 使用**.axml**文件扩展名。
+-  **Main.axml** &ndash;应用程序的默认用户界面布局文件。 请注意，Android 时使用 **.xml**文件扩展名 Xamarin.Android 使用 **.axml**文件扩展名。
 
 -  **Strings.xml** &ndash;字符串表来帮助进行本地化的应用程序
 

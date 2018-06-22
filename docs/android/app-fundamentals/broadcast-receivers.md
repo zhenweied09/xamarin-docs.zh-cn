@@ -12,6 +12,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31646698"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>在 Xamarin.Android 的广播接收方
 
