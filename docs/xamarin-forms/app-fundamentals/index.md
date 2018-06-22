@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f843f4b1c20daba2a504bd0e70ae51f4d0405c06
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d75cac7a21b2c74a6627845cdda8e4c04e72bddc
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240241"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309770"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 应用程序基础知识
 
@@ -47,6 +47,10 @@ ms.locfileid: "35240241"
 ## <a name="effectseffectsindexmd"></a>[效果](effects/index.md)
 
 效果允许进行自定义，每个平台上的本机控件，通常用于小样式更改。
+
+## <a name="filesfilesmd"></a>[文件](files.md)
+
+可以使用代码，在标准.NET 库中，或通过使用嵌入的资源来实现与 xamarin.forms 结合处理的文件。
 
 ## <a name="gesturesgesturesindexmd"></a>[手势](gestures/index.md)
 

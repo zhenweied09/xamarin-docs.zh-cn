@@ -5,12 +5,13 @@ ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: c37fce491b2e6f5e0211fcc6aa7906643a1bac2a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/20/2018
+ms.openlocfilehash: 5a162ba15bbb6d6dcdf7debe01fb12b3b08a843e
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309785"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>获取 Google 地图 API 密钥
 
@@ -104,41 +105,37 @@ Certificate fingerprints:
 
 你将使用 sha-1 指纹 (列出后**SHA1**) 在本指南后面。
 
-
 ## <a name="creating-an-api-project"></a>创建 API 项目
 
 检索到签名密钥库的 sha-1 指纹后，有必要在 Google Api 控制台中创建新的项目 （或向现有项目添加 Google 地图 Android API v2 服务）。
 
-1. 在浏览器中，导航到[Google 开发人员控制台](https://console.developers.google.com/)： 单击**创建项目**:
+1. 在浏览器中，导航到[Google 开发人员控制台 API 和服务仪表板](https://console.developers.google.com/apis/dashboard/)单击**选择一个项目**。 单击项目名称或创建一个新通过单击**新项目**:
 
    [![Google 开发人员控制台创建项目按钮](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs-sml.png)](obtaining-a-google-maps-api-key-images/01-google-developer-console-vs.png#lightbox)
 
-2. 在**新项目**对话框中，输入项目名称。
-   对话框将制造取决于你的项目名称，一个唯一项目 ID，如本示例中所示：
+2. 如果你创建新项目，请输入中的项目名称**新项目**显示对话框。 此对话框将制造取决于你的项目名称的唯一项目 ID。 接下来，单击**创建**按钮在此示例中所示：
 
    [![新项目命名为 XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
-3. 单击“创建”按钮。 在一分钟后操作，将创建项目并且你将转到**API Manager**页。 在**库**部分中，单击**Google 地图 Android API**:
+3. 在一分钟后操作，将创建项目并且你将转到**仪表板**项目页。 选项卡中单击**启用 API 和服务**:
 
    [![单击库部分中的 Google 地图 Android API](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
-4. 在顶部**Google 地图 Android API**页上，单击**启用**若要打开此项目的服务：
+4. 从**API 库**页上，单击**地图 SDK for Android**。 在下一页上，单击**启用**若要打开此项目的服务：
 
    [![单击仪表板部分中的启用按钮](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
-
-在此时创建 API 项目和 Google 地图 Android API v2 已添加到它。 但是，不能使用此 API 在你的项目中，直到为它创建凭据。 接下来我们将探讨如何创建 API 密钥和允许列表 Xamarin.Android 应用程序，以便其有权使用此密钥。
-
+在此时创建 API 项目和 Google 地图 Android API v2 已添加到它。 但是，不能使用此 API 在你的项目中，直到为它创建凭据。 下一部分将说明如何创建 API 密钥和白名单 Xamarin.Android 应用程序，以便其有权使用此密钥。
 
 ## <a name="obtaining-the-api-key"></a>获取 API 密钥
 
 后**Google 开发人员控制台**API 项目已被创建，它是创建 Android API 密钥所需。 Xamarin.Android 应用程序必须具有 API 密钥，然后它们被授予到 Android 映射 API v2 的访问权限。
 
-1. 在**Google 地图 Android API**显示的页 (单击后**启用**上一步中)，单击**转到凭据**按钮：
+1. 在**地图 SDK for Android**显示的页 (单击后**启用**上一步中)，请转到**凭据**选项卡，单击**创建凭据**按钮：
 
-   [![此 API 已启用消息](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![Android 凭据消息映射 SDK](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
-2. 在**凭据**页上，单击**我需要什么凭据？**按钮：
+2. 单击**API 密钥**:
 
    [![将凭据添加到你的项目对话框](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
@@ -150,7 +147,7 @@ Certificate fingerprints:
 
    [![选择凭据页上的 Android 应用](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
-5. 若要添加的 sha-1 指纹，请单击**+ 添加包名称和指纹**:
+5. 若要添加的 sha-1 指纹，请单击 **+ 添加包名称和指纹**:
 
    [![单击添加包名称和指纹](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
@@ -158,7 +155,7 @@ Certificate fingerprints:
 
    [![输入的包名称是 com.xamarin.docs.android.map](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
-7. 请注意，为了使你 APK 来访问 Google 地图，你必须包括 sha-1 指纹并打包你用于登录你 APK 每个密钥库 （调试和发布） 的名称。 例如，如果一台计算机用于调试和用于生成为发布 APK 的另一台计算机，则应包含从第一台计算机的调试密钥库的 sha-1 证书指纹和从的版本密钥库的 sha-1 证书指纹第二台计算机。 单击**+ 添加包名称和指纹**添加另一个的指纹和包名称，如本示例中所示：
+7. 请注意，为了使你 APK 来访问 Google 地图，你必须包括 sha-1 指纹并打包你用于登录你 APK 每个密钥库 （调试和发布） 的名称。 例如，如果一台计算机用于调试和用于生成为发布 APK 的另一台计算机，则应包含从第一台计算机的调试密钥库的 sha-1 证书指纹和从的版本密钥库的 sha-1 证书指纹第二台计算机。 单击 **+ 添加包名称和指纹**添加另一个的指纹和包名称，如本示例中所示：
 
    [![添加另一个指纹创建另一个 sha-1 证书](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
@@ -166,7 +163,17 @@ Certificate fingerprints:
 
    [![在 API 密钥列表中显示 XamarinMapsDemoKey](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs-sml.png)](obtaining-a-google-maps-api-key-images/12-list-of-apis-vs.png#lightbox)
 
+## <a name="connect-the-project-to-a-billable-account"></a>将项目连接到计费帐户
 
+从开始年 6 月，11 2018，API 密钥不起作用如果项目未连接到的计费帐户 （即使该服务是为移动应用程序仍可用）。
+
+1. 单击汉堡菜单按钮，然后选择**计费**页：
+
+   [![选择汉堡菜单计费部分](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+
+2. 将项目链接到记帐帐户，通过单击**链接的计费帐户**跟**创建计费帐户**上显示弹出窗口 （如果你没有帐户，你将指导您创建一个新）：
+
+   [![将项目链接到记帐帐户](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## <a name="adding-the-key-to-your-project"></a>将项添加到你的项目
 
@@ -177,15 +184,13 @@ Certificate fingerprints:
     android:versionName="4.10" package="com.xamarin.docs.android.mapsandlocationdemo"
     android:versionCode="10">
 ...
-
   <application android:label="@string/app_name">
     <!-- Put your Google Maps V2 API Key here. -->
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_API_KEY" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>
 </manifest>
 ```
-
 
 ## <a name="related-links"></a>相关链接
 
