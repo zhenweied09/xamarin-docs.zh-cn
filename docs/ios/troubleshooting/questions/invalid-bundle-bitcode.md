@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30777699"
 ---
 # <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submission"></a>提交到应用商店时的错误:"提交对无效捆绑-不允许在 bitcode 中嵌入的选项是否检测到"
 

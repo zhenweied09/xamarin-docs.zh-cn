@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917858"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>使用 Visual Basic.NET Xamarin.Forms
 
@@ -30,7 +31,7 @@ Xamarin 不直接支持 Visual Basic-按照此页后，可以创建 C# Xamarin.F
 
 2. 右击该解决方案和**添加 > 新建项目**。
 
-3. 选择**Visual Basic > 类库 （可移植）**项目类型：
+3. 选择**Visual Basic > 类库 （可移植）** 项目类型：
 
    [![](xamarin-forms-images/add-vb-2-sml.png "添加新可移植类库项目")](xamarin-forms-images/add-vb-2.png#lightbox)
 

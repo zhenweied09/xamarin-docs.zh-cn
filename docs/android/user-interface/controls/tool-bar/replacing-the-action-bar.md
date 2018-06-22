@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30772586"
 ---
 # <a name="replacing-the-action-bar"></a>替换操作栏
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="start-an-app-project"></a>启动应用程序项目
 
-创建一个名为的新的 Android 项目**ToolbarFun** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 创建此项目后，将目标和最小值 Android API 级别设置为**Android 5.0 (API 级别 21-棒糖形)**或更高版本。 有关设置 Android 版本级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 当生成和运行应用程序时，它显示的默认操作栏，此屏幕截图中所示：
+创建一个名为的新的 Android 项目**ToolbarFun** (请参阅[Hello，Android](~/android/get-started/hello-android/hello-android-quickstart.md)有关创建新的 Android 项目的详细信息)。 创建此项目后，将目标和最小值 Android API 级别设置为**Android 5.0 (API 级别 21-棒糖形)** 或更高版本。 有关设置 Android 版本级别的详细信息，请参阅[了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)。 当生成和运行应用程序时，它显示的默认操作栏，此屏幕截图中所示：
 
 [![默认操作栏的屏幕截图](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -188,7 +189,7 @@ ActionBar.Title = "My Toolbar";
 
 ### <a name="install-menu-icons"></a>安装菜单图标
 
-继续`ToolbarFun`示例应用程序，将菜单图标添加到应用程序项目。 下载[工具栏图标](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)所提取的内容复制并解压缩， *mipmap-*到项目文件夹*mipmap-*下的文件夹**ToolbarFun /资源**和在项目中包含每个添加的图标文件。
+继续`ToolbarFun`示例应用程序，将菜单图标添加到应用程序项目。 下载[工具栏图标](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)所提取的内容复制并解压缩， *mipmap-* 到项目文件夹*mipmap-* 下的文件夹**ToolbarFun /资源**和在项目中包含每个添加的图标文件。
 
 
 ### <a name="define-a-menu-resource"></a>定义菜单资源

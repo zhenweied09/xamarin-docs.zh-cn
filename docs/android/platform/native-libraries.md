@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774806"
 ---
 # <a name="using-native-libraries"></a>使用本机库
 
@@ -44,7 +45,7 @@ Xamarin.Android 支持通过标准的 PInvoke 机制的本机库使用。 你还
 ## <a name="debugging-native-code-with-visual-studio-2015"></a>使用 Visual Studio 2015 调试本机代码
 
 如果你使用*Visual Studio 2015*，无需修改项目文件 （如上面所述）。
-可以生成和调试 c + + 在 Xamarin.Android 解决方案，只需通过添加对 c + + 的项目引用**动态共享库 (Android)**项目。
+可以生成和调试 c + + 在 Xamarin.Android 解决方案，只需通过添加对 c + + 的项目引用**动态共享库 (Android)** 项目。
 
 Visual Studio c + + 开发人员可以查看[SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)示例尝试调试 c + + 中使用 Xamarin; 的 Visual Studio 2015，请参考我们[博客文章](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/)有关详细信息。
 

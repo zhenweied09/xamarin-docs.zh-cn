@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30769801"
 ---
 # <a name="working-with-the-android-manifest"></a>使用 Android 清单
 
@@ -127,7 +128,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>活动图标
 
-默认情况下，你的活动指定为由系统提供的默认启动程序图标。 若要使用自定义图标，首先添加你**.png**到**可资源/绘制**，设置为其生成操作**AndroidResource**，然后使用[ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/)属性来指定要使用的图标。 例如： 
+默认情况下，你的活动指定为由系统提供的默认启动程序图标。 若要使用自定义图标，首先添加你 **.png**到**可资源/绘制**，设置为其生成操作**AndroidResource**，然后使用[ `Icon` ](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/)属性来指定要使用的图标。 例如： 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

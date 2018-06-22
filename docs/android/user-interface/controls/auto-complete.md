@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764445"
 ---
 # <a name="auto-complete"></a>自动完成
 
@@ -192,4 +193,4 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 *此页的部分是基于工作创建和共享的 Android Open Source Project 的根据条款中所述修改*
  [ *Creative Commons 2.5 归属许可证*](http://creativecommons.org/licenses/by/2.5/) *.本教程基于*
  [ *Android 自动完成教程*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*。*
+ *。*

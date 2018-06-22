@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30782179"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>IOS 的 Xamarin 设计器中的自定义控件
 

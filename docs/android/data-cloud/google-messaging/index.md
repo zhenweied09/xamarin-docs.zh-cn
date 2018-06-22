@@ -12,6 +12,7 @@ ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31044660"
 ---
 # <a name="google-messaging"></a>Google 消息传送
 

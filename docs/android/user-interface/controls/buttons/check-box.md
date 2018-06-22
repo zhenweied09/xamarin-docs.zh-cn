@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30765748"
 ---
 # <a name="checkbox"></a>CheckBox
 
@@ -42,7 +43,7 @@ checkbox.Click += (o, e) => {
 
 运行它。
 
-**提示：**如果你需要自行更改的状态 (例如，当加载已保存[ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference)，使用[ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)属性 setter 或[ `Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)方法。
+**提示：** 如果你需要自行更改的状态 (例如，当加载已保存[ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference)，使用[ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked)属性 setter 或[ `Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle)方法。
 
 *此页的部分是基于工作创建和共享的 Android Open Source Project 的根据条款中所述修改*
 [*Creative Commons 2.5 归属许可证*](http://creativecommons.org/licenses/by/2.5/).

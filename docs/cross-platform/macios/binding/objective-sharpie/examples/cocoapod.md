@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33947389"
 ---
 # <a name="real-world-example-using-cocoapods"></a>使用 CocoaPods 实际示例
 

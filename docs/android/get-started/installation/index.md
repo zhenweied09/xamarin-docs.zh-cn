@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33947503"
 ---
 # <a name="setup-and-installation"></a>设置和安装
 
