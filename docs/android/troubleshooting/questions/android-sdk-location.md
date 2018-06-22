@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764003"
 ---
 # <a name="where-can-i-set-my-android-sdk-locations"></a>其中设置我的 Android SDK 位置？
 
@@ -62,6 +63,6 @@ ms.lasthandoff: 04/04/2018
 
 请注意，NDK 的版本号可能不同。 而不是，如**android ndk r14b**，它可能是早期版本，如**android ndk r10e**。
 
-若要设置为 Android SDK 的位置，输入到 Android SDK 目录的完整路径**Android SDK 的位置**框。 您可以选择的 Android SDK 文件夹中查找工具，按**CTRL +&#8984;+ I**要查看文件夹的信息，请单击并拖动右侧的路径**其中：**，复制，然后将其粘贴到**Android SDK位置**框中**位置**选项卡。例如，如果你的 Android SDK 位置位于**~/Library/Developer/Android/Sdk**，清除中的旧路径**Android SDK 的位置**框中，粘贴在此路径中，并单击**确定**.
+若要设置为 Android SDK 的位置，输入到 Android SDK 目录的完整路径**Android SDK 的位置**框。 您可以选择的 Android SDK 文件夹中查找工具，按**CTRL +&#8984;+ I**要查看文件夹的信息，请单击并拖动右侧的路径**其中：**，复制，然后将其粘贴到**Android SDK位置**框中**位置**选项卡。例如，如果你的 Android SDK 位置位于 **~/Library/Developer/Android/Sdk**，清除中的旧路径**Android SDK 的位置**框中，粘贴在此路径中，并单击**确定**.
 
 -----

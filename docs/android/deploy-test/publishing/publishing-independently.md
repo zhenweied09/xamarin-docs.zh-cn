@@ -11,6 +11,7 @@ ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113468"
 ---
 # <a name="publishing-independently"></a>独立发布
 

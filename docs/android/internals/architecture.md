@@ -11,6 +11,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32019290"
 ---
 # <a name="architecture"></a>体系结构
 
@@ -32,7 +33,7 @@ Android 类如何与 Android 运行时类进行通信的详细信息请参阅[AP
 
 Android 应用程序包是包含 ZIP 容器 *.apk*文件扩展名。 Xamarin.Android 应用程序包具有相同的结构和布局正常 Android 包，添加了以下内容：
 
--   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成 *.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这就允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：*之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
+-   （包含 IL） 的应用程序程序集是*存储*内未压缩*程序集*文件夹。 在过程中在版本中的启动生成 *.apk*是*mmap()* ed 到过程和程序集已从内存加载。 这就允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：* 之类的程序集位置信息[Assembly.Location](https://developer.xamarin.com/api/property/System.Reflection.Assembly.Location/)和[Assembly.CodeBase](https://developer.xamarin.com/api/property/System.Reflection.Assembly.CodeBase/)
     *不能指望*版本中生成。 为不同的文件系统条目不存在，并且它们没有可用的位置。
 
 
@@ -77,9 +78,9 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 
 当[Android 可调用包装器](~/android/platform/java-integration/android-callable-wrappers.md)(ACW) 创建从 Java，ACW 构造函数将导致相应 C# 要调用构造函数。 例如，对于 ACW *MainActivity*将包含一个默认构造函数将调用其*MainActivity*的默认构造函数。 (通过完成此操作*TypeManager.Activate()* ACW 构造函数中调用。)
 
-没有一个后果其他构造函数签名： *（IntPtr，JniHandleOwnership）*构造函数。 *（IntPtr，JniHandleOwnership）*每当 Java 对象公开给托管代码和托管的可调用包装器就需要构造管理 JNI 句柄调用构造函数。 这通常是自动完成。
+没有一个后果其他构造函数签名： *（IntPtr，JniHandleOwnership）* 构造函数。 *（IntPtr，JniHandleOwnership）* 每当 Java 对象公开给托管代码和托管的可调用包装器就需要构造管理 JNI 句柄调用构造函数。 这通常是自动完成。
 
-在其中的两种方案*（IntPtr，JniHandleOwnership）*构造函数必须手动管理可调用包装器子类上提供：
+在其中的两种方案 *（IntPtr，JniHandleOwnership）* 构造函数必须手动管理可调用包装器子类上提供：
 
 1. [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)进行了子类化。 *应用程序*是特殊; 默认值*应用程序*构造函数将*永远不会*通过调用和[（IntPtr，JniHandleOwnership） 必须改为提供构造函数](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
 
@@ -105,7 +106,7 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 
 6.  *Java.Lang.Object.GetObject&lt;TextView&gt;（)* 检查以确定是否已经存在相应的 C# 实例*处理*。 如果没有，则返回它。 在此方案中，不存在，因此*Object.GetObject&lt;T&gt;（)* 必须创建一个。
 
-7.  *Object.GetObject&lt;T&gt;（)* 查找*LogTextBox （IntPtr，JniHandleOwneship）*构造函数，对其进行调用，之间创建映射*处理*和创建的实例，并返回创建的实例。
+7.  *Object.GetObject&lt;T&gt;（)* 查找*LogTextBox （IntPtr，JniHandleOwneship）* 构造函数，对其进行调用，之间创建映射*处理*和创建的实例，并返回创建的实例。
 
 8.  *TextView.n_GetDefaultMovementMethod()* 时，将调用*LogTextBox.DefaultMovementMethod*属性 getter。
 
@@ -121,7 +122,7 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*以允许 Andro
 
 ### <a name="premature-dispose-calls"></a>过早 dispose （） 调用
 
-没有 JNI 句柄和对应的 C# 实例之间的映射。 Java.Lang.Object.Dispose() 中断此映射。 如果 JNI 句柄映射已中断后进入托管的代码，其外观 Java 激活和*（IntPtr，JniHandleOwnership）*将检查并调用构造函数。 如果构造函数不存在，将引发异常。
+没有 JNI 句柄和对应的 C# 实例之间的映射。 Java.Lang.Object.Dispose() 中断此映射。 如果 JNI 句柄映射已中断后进入托管的代码，其外观 Java 激活和 *（IntPtr，JniHandleOwnership）* 将检查并调用构造函数。 如果构造函数不存在，将引发异常。
 
 例如，给定以下托管可调用 Wraper 子类：
 
@@ -164,13 +165,13 @@ E/mono    ( 2906):   at Java.Lang.Object.GetObject (IntPtr handle, JniHandleOwne
 E/mono    ( 2906):   at Java.Lang.Object._GetObject[IJavaObject] (IntPtr handle, JniHandleOwnership transfer) [0x00000
 ```
 
-如果确实包含子类*（IntPtr，JniHandleOwnership）*构造函数，则*新*将创建类型的实例。 因此，该实例将显示"丢失"实例的所有数据，因为它是的新实例。 （请注意的值为 null。）
+如果确实包含子类 *（IntPtr，JniHandleOwnership）* 构造函数，则*新*将创建类型的实例。 因此，该实例将显示"丢失"实例的所有数据，因为它是的新实例。 （请注意的值为 null。）
 
 ```shell
 I/mono-stdout( 2993): [Managed: Value=]
 ```
 
-仅*dispose （)* 的管理可调用包装器子类，当你知道将不再，使用的 Java 对象或子类不包含实例数据时和*（IntPtr，JniHandleOwnership）*提供了构造函数。
+仅*dispose （)* 的管理可调用包装器子类，当你知道将不再，使用的 Java 对象或子类不包含实例数据时和 *（IntPtr，JniHandleOwnership）* 提供了构造函数。
 
 
 

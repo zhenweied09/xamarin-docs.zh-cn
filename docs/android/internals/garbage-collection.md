@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30772963"
 ---
 # <a name="garbage-collection"></a>垃圾回收
 
@@ -139,7 +140,7 @@ GC 具有不完整的视图的过程和可能不会运行时内存较低的因�
 例如，实例[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)类型或派生的类型是至少 20 字节的大小 (有更改恕不另行通知等，等等。)。 
 [托管可调用包装器](~/android/internals/architecture.md)不要添加其他实例成员，因此如果你具有[Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/)实例引用的内存的 10 MB blob Xamarin.Android 的 GC 不会知道&ndash;GC将看到 20 字节对象，将无法确定它链接到 Android 保持 10 MB 的内存处于活动状态的运行时分配的对象。 
 
-它是经常需要帮助 GC。 遗憾的是， *GC。AddMemoryPressure()*和*GC。RemoveMemoryPressure()*不支持，因此，如果你*知道*你只需释放大型 Java 分配的对象关系图可能需要手动调用[GC。Collect()](xref:System.GC.Collect)到提示符 GC 释放 Java 端内存，也可以显式释放*Java.Lang.Object*子类，重大托管可调用包装器和 Java 实例之间的映射。 有关示例，请参阅[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)。 
+它是经常需要帮助 GC。 遗憾的是， *GC。AddMemoryPressure()* 和*GC。RemoveMemoryPressure()* 不支持，因此，如果你*知道*你只需释放大型 Java 分配的对象关系图可能需要手动调用[GC。Collect()](xref:System.GC.Collect)到提示符 GC 释放 Java 端内存，也可以显式释放*Java.Lang.Object*子类，重大托管可调用包装器和 Java 实例之间的映射。 有关示例，请参阅[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6)。 
 
 
 > [!NOTE]
@@ -155,7 +156,7 @@ GC 具有不完整的视图的过程和可能不会运行时内存较低的因�
 
 #### <a name="disposing-bound-java-types"></a>释放绑定的 Java 类型
 
-如果实例是绑定的 Java 类型，可以释放实例*，只要*实例不会重复使用从托管代码*和*Java 实例不能在线程 （请参阅以前之间共享`Typeface.Create()`讨论)。 （此决定可能很难做出。）Java 实例进入下一次托管代码，*新*将为其创建包装器。 
+如果实例是绑定的 Java 类型，可以释放实例 *，只要*实例不会重复使用从托管代码*和*Java 实例不能在线程 （请参阅以前之间共享`Typeface.Create()`讨论)。 （此决定可能很难做出。）Java 实例进入下一次托管代码，*新*将为其创建包装器。 
 
 这会经常用到，当涉及到 Drawables 和其他资源密集型实例：
 

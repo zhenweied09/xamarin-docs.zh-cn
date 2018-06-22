@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30774845"
 ---
 # <a name="populating-a-listview-with-data"></a>填充数据的 ListView
 
@@ -72,7 +73,7 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 -   **GetItemId** &ndash;返回行标识符 （通常行数字，但也可以是任何您喜欢的长值）。
 
--   **此 [int]**索引器&ndash;返回与特定行号关联的数据。
+-   **此 [int]** 索引器&ndash;返回与特定行号关联的数据。
 
 中的代码示例**BasicTableAdapter/HomeScreenAdapter.cs**演示如何创建子类`BaseAdapter`:
 

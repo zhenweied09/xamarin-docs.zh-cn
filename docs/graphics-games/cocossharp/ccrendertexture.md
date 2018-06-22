@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33922517"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>性能和与 CCRenderTexture 的视觉效果
 

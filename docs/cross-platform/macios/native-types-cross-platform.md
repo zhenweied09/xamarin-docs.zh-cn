@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918150"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>使用跨平台应用中的本机类型
 

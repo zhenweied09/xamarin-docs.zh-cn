@@ -12,6 +12,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 05/03/2018
+  ms.locfileid: "32436474"
 abstract:
   description: Xamarin.Mac 为 .NET 开发人员提供了完整的 macOS SDK。 在 Visual Studio for Mac 中生成完全的本机应用。
   menu:

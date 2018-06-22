@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30773655"
 ---
 # <a name="running-android-services-in-remote-processes"></a>远程进程中运行 Android 服务
 
@@ -82,7 +83,7 @@ _通常情况下，Android 应用程序中的所有组件将相同的进程中�
 
 该服务将在运行的进程哪种依赖于的值`Process`属性。 Android 标识三种不同的进程：
 
--   **私有过程**&ndash;专用流程是指才可用的应用程序启动它。 若要标识为私有的进程，其名称必须启动**:** （用分号）。 图中的上一个代码段和屏幕截图所示的服务是一个专用的过程。 下面的代码段演示了`ServiceAttribute`:
+-   **私有过程**&ndash;专用流程是指才可用的应用程序启动它。 若要标识为私有的进程，其名称必须启动 **:** （用分号）。 图中的上一个代码段和屏幕截图所示的服务是一个专用的过程。 下面的代码段演示了`ServiceAttribute`:
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",

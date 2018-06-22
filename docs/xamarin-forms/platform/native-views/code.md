@@ -12,6 +12,7 @@ ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34050047"
 ---
 # <a name="native-views-in-c"></a>在 C# 中的本机视图
 

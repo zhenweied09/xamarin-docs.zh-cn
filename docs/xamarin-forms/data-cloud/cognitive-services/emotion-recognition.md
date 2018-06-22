@@ -12,6 +12,7 @@ ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34049761"
 ---
 # <a name="emotion-recognition-using-the-face-api"></a>表情识别使用面临的 API
 

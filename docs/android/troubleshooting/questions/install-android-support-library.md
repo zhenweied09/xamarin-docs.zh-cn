@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30765995"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>如何手动安装所需的 Xamarin.Android.Support 包 Android 支持库？
 
@@ -52,11 +53,11 @@ $url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zi
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-复制**android\_m2repository.zip**到**%LOCALAPPDATA%\\Xamarin\\快速\\**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
+复制**android\_m2repository.zip**到 **%LOCALAPPDATA%\\Xamarin\\快速\\**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
 
 **%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
-（可选）解压缩到文件**%LOCALAPPDATA%\\Xamarin\\Xamarin.Android.Support.v4\\23.4.0.0\\内容\\** (创建**内容\\m2repository**子目录)。 如果你跳过此步骤，然后使用库的第一个生成将会稍长因为它将需要完成此步骤。
+（可选）解压缩到文件 **%LOCALAPPDATA%\\Xamarin\\Xamarin.Android.Support.v4\\23.4.0.0\\内容\\** (创建**内容\\m2repository**子目录)。 如果你跳过此步骤，然后使用库的第一个生成将会稍长因为它将需要完成此步骤。
 子目录的版本号 (**23.4.0.0**在此示例中) 不是作为 NuGet 程序包版本完全相同。 你可以使用`ildasm`查找正确的版本号：
 
 ```cmd
@@ -74,7 +75,7 @@ property string 'Version' = string('23.4.0.0')}
 
 （例如通过使用 NuGet 包管理器安装它） 中下载所需的 Xamarin.Android.Support NuGet 包。
 
-双击_Xamarin.Android.Support.v4_下的程序集_引用_适用于 Mac 以在程序集浏览器中打开程序集的 Visual Studio 中的 Android 项目的一部分。 确保_语言_下拉列表设置为_C#_和选择顶级_Xamarin.Android.Support.v4_从程序集浏览器导航树中的程序集。 找到`SourceUrl`下之一属性`IncludeAndroidResourcesFrom`或`JavaLibraryReference`属性：
+双击_Xamarin.Android.Support.v4_下的程序集_引用_适用于 Mac 以在程序集浏览器中打开程序集的 Visual Studio 中的 Android 项目的一部分。 确保_语言_下拉列表设置为_C#_ 和选择顶级_Xamarin.Android.Support.v4_从程序集浏览器导航树中的程序集。 找到`SourceUrl`下之一属性`IncludeAndroidResourcesFrom`或`JavaLibraryReference`属性：
 
 ```csharp
 [assembly: IncludeAndroidResourcesFrom ("./", PackageName = "Xamarin.Android.Support.v4", SourceUrl = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip", EmbeddedArchive = "m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar", Version = "23.4.0.0")]
@@ -104,7 +105,7 @@ csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2rep
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-复制**android\_m2repository.zip**到**$HOME/.local/share/Xamarin/zips/**文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
+复制**android\_m2repository.zip**到 **$HOME/.local/share/Xamarin/zips/** 文件夹。 重命名要使用从上一个 MD5 哈希计算步骤的 MD5 哈希的文件。 例如：
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 

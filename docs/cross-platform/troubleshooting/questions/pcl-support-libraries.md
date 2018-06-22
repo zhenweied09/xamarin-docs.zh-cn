@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33919535"
 ---
 # <a name="how-can-i-view-what-libraries-are-supported-in-a-pcl"></a>如何查看在 PCL 中，则支持哪些库？
 
