@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a23072427a74119bfa339fea8a695cd13b775685
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732757"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935098"
 ---
 # <a name="oreo-features"></a>Oreo 功能
 
@@ -191,7 +191,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
 
 -----
 
-有关用于测试和调试配置的 Android 仿真程序的详细信息，请参阅[使用 Google Android 仿真程序调试](~/android/deploy-test/debugging/android-sdk-emulator/index.md)。
+有关用于测试和调试配置的 Android 仿真程序的详细信息，请参阅[在 Android 仿真程序上进行调试](~/android/deploy-test/debugging/debug-on-emulator.md)。
 
 如果你使用如 Nexus 或像素的物理设备，可以通过无线 (OTA) 更新通过自动更新你的设备或下载的系统映像并直接刷新你的设备。 有关手动到 Android Oreo 更新你的设备的详细信息，请参阅[Nexus 和像素设备的出厂映像](https://developers.google.com/android/images)。
 

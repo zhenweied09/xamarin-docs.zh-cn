@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 06/19/2017
-ms.openlocfilehash: 8f52c6783335bd7bc26bc9886dee670489ffba09
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.date: 06/25/2018
+ms.openlocfilehash: 4a3045b6f35930b61598f7038974722801c38c2e
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291771"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935511"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>认证咨询合作伙伴用来提供移动解决方案
 
@@ -56,7 +56,6 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[Ciber 美国](http://www.ciber.com/)|Greenwood Village，USA|使用云第一个数字转换服务、 唯一的快捷键和已设定焦点的 talent 服务，我们请你将来可能。|
 |[Cie 数字实验室](http://www.ciedigital.com/)|洛杉矶，USA;Irvine，USA|Cie 数字实验室是热衷了解面临合作伙伴的业务挑战和创新新带来 measureable 企业价值的软件解决方案|
 |[清楚起见电子商务历险](https://www.clarity-ventures.com)|Austin，TX|清楚起见是业务的正确舍入、 professional、 你的所有服务扩展。 从创作团队设计业务标识到屏幕的屏幕中的任何内容...|
-|[代码 Mill 技术](https://codemilltech.com/)|· 麦迪逊，USA|代码 Mill 是特别咨询和培训公司由 Microsoft 和 Xamarin MVP Matt Soucoup 成立的。 它专门用于 Xamarin 和 Azure 开发 |
 |[知道技术解决方案](http://www.cognizant.com)|布宜诺斯艾利斯，阿根廷;奥克兰，新西兰;墨尔本，澳大利亚;悉尼，澳大利亚;布里斯班，澳大利亚;布鲁塞尔，比利时;San 圣保罗，巴西;多伦多，加拿大;上海，中国;Heredia，哥斯达黎加;Jersey 城市，NJ，USA;旧金山，CA，USA;Teaneck，NJ，USA|知道将合并热衷于客户端满意度、 技术创新、 深入的行业和业务流程专业技术和的全局、 协作的员工，它包含在未来的工作|
 |[一致的解决方案，inc.](http://www.coherentsolutions.com)|纽约;波士顿，MA;明斯克，白俄罗斯|一致的解决方案是一个软件开发咨询和外包，因此解决了客户的业务问题全局专业知识、 创新和创造力，将整合在一起的公司|
 |[Cruxlab](https://cruxlab.com/)|洛杉矶，USA|我们创建自定义数字产品刚起步的公司和企业中，最终用户和企业|
@@ -65,10 +64,10 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[度](http://www.degdigital.com)|Overland Park，USA|度创建智能数字市场营销、 商业和协作的策略使组织可以扩大其竞争优势并实现其目标|
 |[DevRabbit](http://www.devrabbit.com)|San 拉蒙，USA|DevRabbit 是基于美国技术咨询事务所企业移动性、 Web 应用程序开发和云咨询提供最先进的解决方案。|
 |[Digineer](http://www.digineer.com)|Plymouth，MN|Digineer 提供企业项目管理、 业务分析、 应用程序开发人员和商业智能和员工配备信息服务|
-|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|波士顿，MA;欧洲;亚洲 Pasific; 中东;非洲|DigitasLBi 是可帮助公司导航的数字世界的国际通信机构|
+|[DigitasLBi Sverige AB](http://www.digitaslbi.com)|波士顿，MA;欧洲;亚太; 中东;非洲|DigitasLBi 是可帮助公司导航的数字世界的国际通信机构|
 |[DMI](https://dminc.com/)|组织贝塞斯达，MD|生成以帮助企业的连接 world 重塑本身，我们提供唯一的混合方案的功能和设计来燃料创新全新观念。|
 |[DOOR3](http://door3.com/)|New York，USA|在很多创造性机构，大型的咨询公司并专用的实现购物，我们是不同。 我们非常关心我们的业务，但我们更关注我们的客户。|
-|[DreamTeam 移动](http://dreamteam-mobile.com)|美国华盛顿特区。|DreamTeam Moible 创建本机 iOS、 Android、 Windows 和 Mac 应用程序使用 Xamarin，Swift 和本机做出响应。 我们生成用于多个平台的本机应用与共享基本代码|
+|[DreamTeam 移动](http://dreamteam-mobile.com)|美国华盛顿特区。|DreamTeam 移动创建本机 iOS、 Android、 Windows 和 Mac 应用程序使用 Xamarin，Swift 和本机做出响应。 我们生成用于多个平台的本机应用与共享基本代码|
 |[Durwella](http://www.durwella.com)|休斯顿，USA|Durwella 是侧重于科学和工程项目一软件解决方案公司|
 |[EastBanc 技术](http://www.eastbanctech.com)|美国华盛顿特区。|EastBanc 技术是交付灵活的技术解决方案平台无关的生命周期的完整软件开发公司|
 |[边缘 Webware，inc.](https://edgewebware.com)|Miamisburg，俄亥俄州|边缘 Webware，Inc.提供 web 和移动应用程序设计和/或开发服务|
@@ -79,7 +78,7 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[努力软件 Technologies inc.](http://www.techendeavour.com)|Austin，TX|努力的顾问评估企业移动成熟度和帮助解决了所有级别的组织的战略移动性需求|
 |[增强的系统咨询](http://www.enhancedsystems.com)|Johnson 城市，TN|增强 Systems 咨询，Inc.提供想要创建新的业务应用程序或现有的公司的专家设计、 开发和集成服务|
 |[Envoc](http://envoc.com/)|Baton 恶意，LA|我们的创造力和技术来提供出色的体验和创新的交叉点处存在|
-|[EPAM 系统](https://www.epam.com)|Newtown，PA|EPAM 系统，Inc 是前导全局产品开发和数字平台工程服务公司|
+|[EPAM 系统](https://www.epam.com)|Newtown，PA;New York City;费城;芝加哥;旧金山;洛杉矶;伦敦;明斯克;St 圣彼得堡;布达佩斯|EPAM 系统，Inc 是前导全局产品开发和数字平台工程服务公司|
 |[Experis Ciber b.v。](http://www.ciber.com)|Troy，MI |Ciber 跨北美和印度是拥有超过 2900 员工和机构的全局 IT 咨询公司|
 |[快进 LLC](http://www.fastforward.sh/)|Salem，MA|快进开发应用程序跨所有主要的本机操作系统，在所有设备类型，并使联网的工作|
 |[Fincons 组](http://www.finconsgroup.com)|洛杉矶，CA;纽约;伦敦，英国|Fincoins 组服务和解决方案提供大型客户和 Sme，同时针对技术和过程，它们需要的创新，从而保证实际需求的具体响应。|
@@ -88,7 +87,7 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[FusionComputing，inc.](http://www.fusioncomputing.com)|Douglasville 佐治亚州|我们开发跨平台的本机应用程序，因此你可以访问你在任何设备上的客户。|
 |[怪兽解决方案组](http://griffinsolutionsgroup.com)|Alpharetta，GA|由于我们有热衷于解决业务问题，被成立的怪兽解决方案组。 我们应用多年经验中多种行业有助于我们的客户端在进行适当的技术决策|
 |[Harman 连接服务，inc.](http://www.harman.com)|Mountain 视图，CA;Hartford，CT;西雅图，WA;纽瓦克，NJ;伦敦，英国;柏林，德国;莫斯科，俄罗斯|Harman 设计和工程师连接为 automakers、 使用者和全球，包括连接的汽车系统、 音频和 visual 产品、 企业自动化解决方案; 企业产品和解决方案和连接的服务|
-|[HCL 技术](https://www.hcltech.com/)|Noida，Uttar Pradesh、 印度;Mississauga，ON，加拿大;New York，NY，USA;San 圣保罗，巴西;墨西哥城，CDMX，墨西哥;伦敦，英国;悉尼，澳大利亚|HCL 技术是下一代全局技术公司，它可帮助企业数字期限 reimagine 他们的业务|
+|[HCL 技术](https://www.hcltech.com/)|Noida，Uttar Pradesh、 印度;Mississauga，ON，加拿大;New York，NY，USA;San 圣保罗，巴西;墨西哥城，CDMX，墨西哥;伦敦，英国;悉尼，澳大利亚|HCL 技术是下一代全局技术公司，它可帮助重新数字期限假设其业务的企业|
 |[Hexaware 技术 Ltd](http://hexaware.com/)|Iselin，新泽西|Hexaware 是全球领先提供商的 IT，BPO 和咨询服务 |
 |[高技术组 LLC](http://hightg.com)|堪萨斯城市堪萨斯|自定义软件开发公司|
 |[Hitcents](http://hitcents.com)|保龄球绿色，密钥;洛杉矶，CA，USA;旧金山，CA，USA;上海，上海中国|Hitcents 不只是生成应用;在生成体现在只在一个平台的体验。 它们还支持应用 24/7，因此任何用户，任何位置，可以访问你的应用。|
@@ -239,7 +238,7 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[流示范 CVBA](http://www.flowpilots.com)|安特卫普 6，比利时|流示范设计、 生成、 部署和管理数字工具，可帮助客户增加收入、 降低成本或使其员工处于的自由性和灵活性。|
 |[KENZE](http://www.kenze.be)|Mechelen，比利时|Microsoft.NET projecten en gerelateerde technologieën。  De drie belangrijkste pijlers binnen de organisatie zijn mensen，kennis en mensenkennis 想 zij vormen de 基础 voor kwalitatieve，succesvolle projecten en tevreden klanten。 |
 |[Levelapp](http://www.levelapp.be)|Hoeilaart，比利时|我们非常 Levelapp 完整移动代理。 我们将作为软件开发人员。 我们创建跨平台应用程序适应和推动战略愿景。 我们将值传递到客户、 合作伙伴和员工。 |
-|[Realdolmen](http://www.realdolmen.com/)|Huizingen，比利时;Kontich，比利时;Lummen，比利时;Ghent，比利时;Harelbeke，比利时;Namur，比利时;Mons，比利时|移动是新的标准。 几乎所有的公司需要移动服务或应用程序，为了保持竞争优势。 但在其自己的移动策略还不够;所有内容需要完全集成在常规 ICT 基础结构，包括云，安全，ERP，等等。 在 Realdolmen 我们将此连接的业务。 <link>|
+|[Realdolmen](http://www.realdolmen.com/)|Huizingen，比利时;Kontich，比利时;Lummen，比利时;Ghent，比利时;Harelbeke，比利时;Namur，比利时;Mons，比利时|移动是新的标准。 几乎所有的公司需要移动服务或应用程序，为了保持竞争优势。 但在其自己的移动策略还不够;所有内容需要完全集成在常规 ICT 基础结构，包括云，安全，ERP，等等。 在 Realdolmen 我们将此连接的业务。|
 
 
 ## <a name="brazil"></a>巴西
@@ -574,7 +573,7 @@ _很多合作伙伴列出的主位置，请提供跨边框的服务。_
 |[Billennium](http://billennium.pl/)|波兰华沙 |Billennium 具有多年中开发创新商业工具和解决方案的体验。|
 |[边缘一个解决方案 sp。 z o.o.](http://www.edge1s.com)|波兰华沙 |我们提供的技能和高度限定 IT 顾问体验。 在我们的产品组合中每个服务中，我们保证客户端的需求和期望灵活的方法|
 |[NETBULLS sp。 z o.o.](http://www.netbulls.io)|Bialystok，波兰|获取你的想法 skilfully 上市。 不会浪费英镑 $€、 时间或理由。 |
-|[Sii](http://www.sii.pl/en)|波兰; 华沙巴黎，法国;马德里，西班牙;柏林，德国;阿姆斯特丹、 荷兰;布鲁塞尔，比利时;卢森堡城市，卢森堡;Geneva，瑞士;Marrakesh，摩洛哥;Prague，Czechia;布加勒斯特，罗马尼亚;多伦多，ON，加拿大;圣地亚哥，圣地亚哥大城市区域，智利;布宜诺斯艾利斯自治布宜诺斯艾利斯，阿根廷;Bogot√ °，Bogota，哥伦比亚;新德里|Sii 是前导 IT 服务的公司在波兰支持从其创建的数字转换程序成功传送和更高版本。 我们提供交付先启用设备通信，大数据处理和脱机的企业和消费者应用的专业知识。|
+|[Sii](http://www.sii.pl/en)|波兰; 华沙巴黎，法国;马德里，西班牙;柏林，德国;阿姆斯特丹、 荷兰;布鲁塞尔，比利时;卢森堡城市，卢森堡;Geneva，瑞士;Marrakesh，摩洛哥;Prague，Czechia;布加勒斯特，罗马尼亚;多伦多，ON，加拿大;圣地亚哥，圣地亚哥大城市区域，智利;布宜诺斯艾利斯自治布宜诺斯艾利斯，阿根廷;Bogotá，Bogota，哥伦比亚;新德里|Sii 是前导 IT 服务的公司在波兰支持从其创建的数字转换程序成功传送和更高版本。 我们提供交付先启用设备通信，大数据处理和脱机的企业和消费者应用的专业知识。|
 
 
 ## <a name="portugal"></a>葡萄牙

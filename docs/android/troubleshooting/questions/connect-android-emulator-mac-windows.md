@@ -6,17 +6,17 @@ ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4afe2b9fab8eeebb3f0451379b8e3937cc8d8f55
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.date: 06/21/2018
+ms.openlocfilehash: f94c0966dd67940fc201df84a311db422d77b542
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "30823059"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935196"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>它可能连接到 Android 仿真程序在 Mac 上从运行 Windows VM？
 
-若要连接到 Windows 虚拟机从运行在 Mac 上的 Google Android 仿真程序，请使用以下步骤：
+若要连接到 Windows 虚拟机从运行在 Mac 上的 Android 仿真程序，请使用以下步骤：
 
 1.  在 mac 上启动仿真程序
 

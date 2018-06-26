@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 756f0570ce792450cfcaf6b1c5161a95a6cb80c8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848299"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935423"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -119,6 +119,7 @@ Xamarin 实时重新加载的初始预览版本仅可用于 Visual Studio 2017�
 ## <a name="known-issues"></a>已知问题
 
 * 仅支持在 Visual Studio 中。
+* 必须将链接设置为**不链接**或**仅上链接 Framework Sdk** 
 * 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，应用程序导航重置。 这将在下一步的预览版本中修复。
 * 调试 UWP 可能导致运行时崩溃时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）** 而不是**启动调试 (F5)**。
 

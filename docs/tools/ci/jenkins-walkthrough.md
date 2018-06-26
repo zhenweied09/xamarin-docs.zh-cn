@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8094f1ab78252e6d6bd8f5991bcb567b36ed1e9b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793939"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935339"
 ---
 # <a name="using-jenkins-with-xamarin"></a>通过 Xamarin 使用 Jenkins
 
@@ -385,7 +385,7 @@ Jenkins 将检索到一个名为的特殊文件夹的完整源代码*工作区*�
 
 ### <a name="submitting-tests-to-test-cloud"></a>正在提交测试与测试云
 
-自动的测试可以提交到测试云使用 shell 命令。 有关 Xamarin 测试云中的测试运行设置的详细信息，我们制定了指南针对使用[Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)或[Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)。
+自动的测试可以提交到测试云使用 shell 命令。 有关 Xamarin 测试云中的测试运行设置的详细信息，请参阅本指南使用[Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/)。
 
 
 ## <a name="summary"></a>总结

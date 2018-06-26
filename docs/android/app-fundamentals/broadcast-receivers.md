@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 6b2e316eaf67e51801be4fcd670e80ec81c8ff08
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31646698"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935394"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>在 Xamarin.Android 的广播接收方
 
@@ -25,7 +25,7 @@ A_广播的接收方_是一种 Android 组件，它允许应用程序响应消�
 Android 标识两种类型的广播：
 
 * **显式广播**&ndash;这些类型的广播目标特定的应用程序。 显式广播的最常见用途是为启动一个活动。 下面举例说明时应用程序需要拨打电话号码; 显式广播它将调度面向 Android 和电话号码沿传递内需上的 Phone 应用程序意向。 Android 然后将路由到 Phone 应用程序的意图。
-* **隐式 broadcase** &ndash;这些广播调度到设备上的所有应用。 隐式广播的一个示例是`ACTION_POWER_CONNECTED`意图。 此方法会被发布 Android 检测到在设备上的电池正在充电每次。 Android 将路由到已注册了此事件的所有应用此目的。
+* **隐式广播**&ndash;这些广播调度到设备上的所有应用。 隐式广播的一个示例是`ACTION_POWER_CONNECTED`意图。 此方法会被发布 Android 检测到在设备上的电池正在充电每次。 Android 将路由到已注册了此事件的所有应用此目的。
 
 广播的接收方的一个子类`BroadcastReceiver`类型和它必须重写[ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/)方法。 将执行 android`OnReceive`上的主线程，因此此方法应设计为可快速执行。 在生成中的线程时应小心`OnReceive`因为 Android 可能会终止进程，在方法结束时。 如果广播的接收方必须执行长时间运行的工作，则建议计划_作业_使用`JobScheduler`或_Firebase 作业调度程序_。 将单独指南中讨论计划与某一工作的工作。
 
