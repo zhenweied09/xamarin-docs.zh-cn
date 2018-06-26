@@ -49,7 +49,7 @@ Xamarin.Forms 主题发展变化 2016年已宣布，也可作为客户尝试并�
 * 浅色主题 （仅限于使其无主题的细微差异）
 * 深色主题
 
-![](images/standard-none-sml.png "控件而不通过主题") ![ ](images/standard-light-sml.png "控件与浅色主题") ![ ](images/standard-dark-sml.png "深色主题的控件")
+![](images/standard-none-sml.png "控件而不通过主题") ![](images/standard-light-sml.png "控件与浅色主题") ![](images/standard-dark-sml.png "深色主题的控件")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ Xamarin.Forms 主题发展变化 2016年已宣布，也可作为客户尝试并�
 
 这将会呈现浅色和深色，如下所示：
 
-![](images/boxview-light-sml.png "使用浅色主题 StyleClass 字数") ![ ](images/boxview-dark-sml.png "与深色主题 StyleClass 字数")
+![](images/boxview-light-sml.png "使用浅色主题 StyleClass 字数") ![](images/boxview-dark-sml.png "与深色主题 StyleClass 字数")
 
 <a name="builtin" />
 
