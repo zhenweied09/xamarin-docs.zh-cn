@@ -6,12 +6,12 @@ ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: d920dd688a7911ccf4002d67914c977da56f89e1
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 17deacf115042a2fcd6bad9e22a630eadb432d44
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780680"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269013"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>在 Windows 上安装 Xamarin 预览版
 
@@ -29,7 +29,8 @@ Visual Studio 预览版可能包含相应的 Xamarin 预览版功能，包括：
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks/Inspector
+- Xamarin Workbooks
+- Xamarin Inspector
 - Xamarin 远程 iOS 模拟器
 
 以下“预览版安装程序”屏幕截图显示了预览版和发行版选项（请注意灰色版本号：版本 15.0 是发行版，版本 15.1 是预览版）：
