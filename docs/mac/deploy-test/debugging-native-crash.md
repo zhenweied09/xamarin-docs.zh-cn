@@ -1,19 +1,20 @@
 ---
-title: 调试本机故障
-description: 本指南描述了如何调试在 Objective-C 运行时中生成的异常。
+title: 调试 Xamarin.Mac 应用中的本机故障
+description: 本文档描述了如何调试在 Objective-C 运行时中生成的异常。 其中讨论了断言失败、回叫问题、异常浮升等。
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 211f85c32fae3ed947e01890916e0a646981a51b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66ef76c4305e572d5cc45c142f38d89d6f17eeb0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792120"
 ---
-# <a name="debugging-a-native-crash"></a>调试本机故障
+# <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>调试 Xamarin.Mac 应用中的本机故障
 
 ## <a name="overview"></a>概述
 

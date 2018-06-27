@@ -1,27 +1,24 @@
 ---
 title: Mac 应用配置
-description: 本指南介绍配置要发布的 Xamarin.Mac 应用。
+description: 本文档介绍了如何配置 Xamarin.Mac 应用以进行发布。 其中讨论了应用程序设置、签名设置和生成设置。
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: e47ff676b4dd02d5312a74fb699ed594b5e0f944
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3d62cd0c5391393773ba32146f576e12a144bac9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791779"
 ---
 # <a name="mac-app-configuration"></a>Mac 应用配置
-
-_本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
-
 
 ## <a name="mac-app-configuration"></a>Mac 应用配置
 
 在 Visual Studio for Mac 中右键单击 Mac 应用程序项目，然后选择“选项”。
-
 
 ### <a name="application-settings"></a>应用程序设置
 
@@ -37,7 +34,6 @@ _本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
 
 - 运行 Mac OS X 10.7 或更高版本的 Mac 计算机。
 
-
 ### <a name="signing-settings"></a>签名设置
 
 通过“项目选项”对话框的“Mac 签名”部分，开发人员可对 Xamarin.Mac 应用进行签名，以供测试、自行发布或通过 Apple App Store 发布：
@@ -46,13 +42,11 @@ _本指南介绍如何配置要发布的 Xamarin.Mac 应用。_
 
 编译应用时，从此处选择“标识”、“配置文件”和用于对应用进行签名的任何自定义授权。 开发人员可根据需要对用于在其他 Mac 上安装应用的安装程序进行签名。
 
-
 ### <a name="build-settings"></a>生成设置
 
 成功编译应用后，开发人员可通过“项目选项”对话框的“Mac 生成”部分选择 Xamarin.Mac 应用的体系结构、控制应用支持的 macOS 版本，并根据需要创建安装包：
 
  [![编辑生成设置](app-configuration-images/config03.png "编辑生成设置")](app-configuration-images/config03-large.png#lightbox)
-
 
 ## <a name="related-links"></a>相关链接
 

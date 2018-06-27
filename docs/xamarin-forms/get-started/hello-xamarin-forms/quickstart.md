@@ -1,5 +1,6 @@
 ---
 title: Xamarin.Forms 快速入门
+description: 本文介绍了如何创建一个应用程序，将字母数字电话号码（由用户输入）转换为数字电话号码，然后呼叫该号码。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
@@ -7,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2018
-ms.openlocfilehash: 02aa7d4847f8ac601ca1311fd7fed09290e77482
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 90394195afc4257656c8d09fab348156a7f549d5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848052"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242903"
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 快速入门
 

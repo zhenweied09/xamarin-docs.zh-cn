@@ -1,28 +1,30 @@
 ---
 title: App Store 分发
-description: 本文档介绍 Apple 的 App Store 分发的要求。
+description: 本文档介绍如何在 App Store 中分发 Xamarin.iOS 应用程序。 其中介绍了如何创建分发证书、如何创建分发预配配置文件以及如何配置 iTunes Connect 并提交应用。
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 7a38c77dde7a66f2db194cd8888a2c32a3529a9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b763407797cf635908cf34cce4f1a6a06325000d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209254"
 ---
 # <a name="app-store-distribution"></a>App Store 分发
-
-本文档介绍 Apple 的 App Store 分发的要求。
 
 Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是使用 iTunes App Store 将应用分发给用户。 这是分发应用程序的最常见方法。 通过在 Apple 的 App Store 中发布应用程序，可将其提供给全球的客户。
 
 > [!IMPORTANT]
-> 请务必注意，必须加入个人或组织的 Apple 开发人员计划，才可使用 iTunes Connect 并将应用发布到 App Store。 如果是 Apple Developer **Enterprise** Program 的成员，则不能按照此页上的步骤执行操作。
+> Apple [表明](https://developer.apple.com/news/?id=05072018a)，从 2018 年 7 月开始，提交到 App Store 的所有应用和更新必须使用 iOS 11 SDK 来构建，并且必须[支持 iPhone X 显示器](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)。
 
 就像开发应用程序一样，分发应用程序需要使用相应的*配置文件*对应用程序进行设置。 配置文件是一种文件，其中包含了代码签名信息，以及应用程序标识和预期分发机制。 配置文件还包括可部署应用以实现非 App Store 分发的设备的信息。
+
+> [!IMPORTANT]
+> 请务必注意，必须加入个人或组织的 Apple 开发人员计划，才可使用 iTunes Connect 并将应用发布到 App Store。 如果是 Apple Developer **Enterprise** Program 的成员，则不能按照此页上的步骤执行操作。
 
 <a name="provisioning" />
 

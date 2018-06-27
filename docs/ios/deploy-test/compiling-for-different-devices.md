@@ -1,18 +1,20 @@
 ---
-title: 针对不同的设备进行编译
+title: 在 Xamarin.iOS 中针对不同的设备进行编译
+description: 本文档介绍了可用于针对不同设备自定义 Xamarin.iOS 生成的各种生成配置选项。
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 039e0a931613ec79ccd6f2b13bc18ae6b80f5195
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b1bfab36646256eee706316c70004aef8399994
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784840"
 ---
-# <a name="compiling-for-different-devices"></a>针对不同的设备进行编译
+# <a name="compiling-for-different-devices-in-xamarinios"></a>在 Xamarin.iOS 中针对不同的设备进行编译
 
 可以从项目的“iOS 生成”属性页上配置可执行文件的生成属性，可通过右键单击项目名称并浏览至 Visual Studio for Mac 中的“选项”>“iOS 生成”查找，或在 Visual Studio 的“属性”中查找：
 

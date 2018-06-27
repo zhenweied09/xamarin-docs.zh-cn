@@ -1,21 +1,22 @@
 ---
-title: 手动预配
-description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。
+title: Xamarin.iOS 的手动预配
+description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南介绍如何使用手动预配设置开发证书和配置文件。
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: f604d41990a7a592a3d5207e7a12075c35ae661f
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786098"
 ---
-# <a name="manual-provisioning"></a>手动预配
+# <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS 的手动预配
 
-Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本指南将介绍如何请求开发证书和配置文件，如何使用应用服务，以及如何将应用部署到设备。
+Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本指南介绍如何使用手动预配设置开发证书和配置文件。_
 
 <a name="signingidentity" />
 

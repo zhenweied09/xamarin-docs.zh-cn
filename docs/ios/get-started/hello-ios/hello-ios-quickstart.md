@@ -1,6 +1,6 @@
 ---
-title: Hello.iOS 快速入门
-description: 在此由两部分构成的指南中，将介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
+title: Hello，iOS - 快速入门
+description: 本演练演示如何生成名为 Hello，iOS 的简单 Xamarin.iOS 应用程序。 在此过程中，它介绍了生成 Xamarin.iOS 应用程序必须了解的基本工具和概念。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785981"
 ---
-# <a name="helloios-quickstart"></a>Hello.iOS 快速入门
+# <a name="hello-ios--quickstart"></a>Hello，iOS - 快速入门
 
 本指南介绍如何创建一个应用程序，它将用户输入的字母数字电话号码转换为数字电话号码，然后呼叫该号码。 最终应用程序如下所示：
 

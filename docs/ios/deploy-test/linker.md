@@ -1,18 +1,20 @@
 ---
-title: 在 iOS 上链接
+title: 链接 Xamarin.iOS 应用
+description: 本文档介绍 Xamarin.iOS 链接器，该链接器用于消除 Xamarin.iOS 应用程序中未使用的代码，以缩减其大小。
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: 1d83a152c0949abe0221f6eb6dfb42f4e79eaf38
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f80faa961fe4bef45df33c411d914ba80e605c75
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785575"
 ---
-# <a name="linking-on-ios"></a>在 iOS 上链接
+# <a name="linking-xamarinios-apps"></a>链接 Xamarin.iOS 应用
 
 生成应用程序时，Visual Studio for Mac 或 Visual Studio 会调用一个名为 mtouch 的工具，其中包括托管代码的链接器。 它用于从类库中删除应用程序未使用的功能。 目标是缩减应用程序的大小，以使其只附带必须的位。
 

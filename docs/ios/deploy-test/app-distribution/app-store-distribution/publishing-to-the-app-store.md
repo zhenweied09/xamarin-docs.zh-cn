@@ -1,21 +1,20 @@
 ---
-title: 发布到 App Store
-description: 本文介绍如何配置、生成和发布 Xamarin.iOS 应用程序，以通过 App Store 进行分发。 本文包含分布指南，其中涵盖如何准备用于分发的应用程序、如何使用 Apple 的工具提交应用程序以供审核，以及最后如何将应用程序发布到 App Store。
+title: 将 Xamarin.iOS 应用发布到 App Store
+description: 本文档介绍了如何配置、生成和发布 Xamarin.iOS 应用程序，以在 App Store 中进行分发。
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 5d78cb81f27ce7478719ff9f11f4eb38fddc3981
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785695"
 ---
-# <a name="publishing-to-the-app-store"></a>发布到 App Store
-
-本文介绍如何配置、生成和发布 Xamarin.iOS 应用程序，以通过 App Store 进行分发。_本文包含分步指南，介绍如何准备用于分发的应用程序、如何使用 Apple 的工具提交应用程序以供审核，以及最后如何将应用程序发布到 App Store。_
+# <a name="publishing-xamarinios-apps-to-the-app-store"></a>将 Xamarin.iOS 应用发布到 App Store
 
 为了将应用程序分发到所有 iOS 设备，Apple 要求应用通过 App Store 发布，使 App Store 成为 iOS 应用程序的一站式购物位置。 App Store 中包括超过 500,000 种应用程序，许多类型应用程序的开发人员采用了这种非常成功的单点分发。 App Store 是一种统包解决方案，可同时为应用开发人员提供分发和支付系统。
 

@@ -1,19 +1,20 @@
 ---
-title: 与 Mac 配对
-description: 本指南介绍如何使用“与 Mac 配对”将 Visual Studio 2017 连接到 Mac 生成主机。
+title: 通过“与 Mac 配对”进行 Xamarin.iOS 开发
+description: 本指南介绍如何使用“与 Mac 配对”将 Visual Studio 2017 连接到 Mac 生成主机。 其中讨论了如何启用 Mac 远程登录、如何从 Visual Studio 2017 连接到 Mac、以及如何将 Mac 生成主机手动添加到 Windows 计算机等。
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 04/16/2018
-ms.openlocfilehash: e2f9b23bb298b0bb01f7e5491963daed4521ac9c
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 05/29/2018
+ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786072"
 ---
-# <a name="pair-to-mac"></a>与 Mac 配对
+# <a name="pair-to-mac-for-xamarinios-development"></a>通过“与 Mac 配对”进行 Xamarin.iOS 开发
 
 本指南介绍如何使用与“与 Mac 配对”功能将 Visual Studio 2017 连接到 Mac 生成主机。
 
@@ -38,6 +39,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
 - 可使用 Windows 命令行生成 iOS 应用程序。
 
 > [!NOTE]
+> 
 > 按照本指南中的说明进行操作之前，请完成以下步骤： 
 > 
 > - 在 Windows 计算机上，[安装 Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
@@ -161,6 +163,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
 > [!IMPORTANT]
 > - “与 Mac 配对”不能安装 Xcode；必须手动将其安装在 Mac 生成主机上。 它是 Xamarin.iOS 开发所必需的。
 > - 自动预配 Mac 需要在 Mac 上启用远程登录，并且 Windows 计算机必须能够通过网络访问该 Mac。 有关详细信息，请参阅[在 Mac 上启用远程登录](#enable-remote-login-on-the-mac)。
+> - 自动预配 Mac 需要 Mac 上有 3 GB 的可用空间用于安装 Xamarin.iOS。
 
 Visual Studio 2017 [连接到 Mac](#connect-to-the-mac-from-visual-studio-2017) 时，“与 Mac 配对”会执行必要的软件安装/更新。
 

@@ -1,16 +1,18 @@
 ---
 title: Xamarin.Forms 多屏显示快速入门
+description: 本文介绍如何通过添加第二个屏幕来扩展 Phoneword 应用程序，以跟踪应用程序的调用历史记录。
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c931b4f74fbfbbb7396e492cb7ad7ae5d0097bad
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242386"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms 多屏显示快速入门
 
@@ -57,7 +59,7 @@ ms.lasthandoff: 04/27/2018
 
     通过按 **Ctrl+S**，保存对 **CallHistoryPage.xaml** 所做的更改，然后关闭文件。
 
-5. 在“解决方案资源管理器”中，双击 **App.xaml.cs** 将其打开：
+5. 在“解决方案资源管理器”中，双击共享“Phoneword”项目中的“App.xaml.cs”文件打开该文件：
 
     ![](quickstart-images/vs/open-app-class.png "打开的 App.xaml.cs")
 
@@ -88,7 +90,7 @@ ms.lasthandoff: 04/27/2018
 
     通过按 **Ctrl+S**，保存对 **App.xaml.cs** 所做的更改，然后关闭文件。
 
-7. 在“解决方案资源管理器”中，双击 **MainPage.xaml** 将其打开：
+7. 在“解决方案资源管理器”中，双击共享“Phoneword”项目中的“MainPage.xaml”文件打开该文件：
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "打开的 MainPage.xaml")
 

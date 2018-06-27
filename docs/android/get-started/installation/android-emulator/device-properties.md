@@ -1,0 +1,74 @@
+---
+title: 编辑 Android 虚拟设备属性
+description: 本文介绍了如何使用 Android Device Manager 编辑 Android 虚拟设备的配置文件属性。
+ms.prod: xamarin
+ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
+ms.technology: xamarin-android
+author: mgmclemore
+ms.author: mamcle
+ms.date: 05/30/2018
+ms.openlocfilehash: 75ac85c67825e5db1b663d00f10eee6d093bfc1f
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34733298"
+---
+# <a name="editing-android-virtual-device-properties"></a>编辑 Android 虚拟设备属性
+
+本文介绍了如何使用 Android Device Manager 编辑 Android 虚拟设备的配置文件属性。
+
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性。 “新建设备”和“设备编辑”屏幕在第一列中列出了虚拟设备的属性，第二列中为每个属性相应的值（如此示例中所示）： 
+
+[![“新建设备”屏幕示例](device-properties-images/win/01-new-device-editor-sml.png)](device-properties-images/win/01-new-device-editor.png#lightbox)
+
+当选择某个属性时，有关该属性的详细描述会显示在右侧。 可以修改“硬件配置文件属性”和“AVD 属性”。 硬件配置文件属性（如`hw.ramSize` 和 `hw.accelerometer`）描述仿真设备的物理特征。 这些特征包括屏幕大小、可用的 RAM 量以及是否具有加速计。 AVD 属性指定 AVD 在运行时的操作。 例如，可以配置 AVD 属性以指定 AVD 如何使用开发计算机的图形卡进行呈现。
+
+可以使用以下准则来更改属性：
+
+-   若要更改布尔属性，请单击布尔属性右侧的复选标记：
+
+    ![更改布尔属性](device-properties-images/win/02-boolean-value.png)
+
+-   若要更改枚举 (enumerated) 属性，请单击属性右侧的下拉箭头并选择一个新值。
+
+    ![更改枚举属性](device-properties-images/win/04-enum-value.png)
+
+-   若要更改字符串或整数属性，请双击值列中当前的字符串或整数设置并输入一个新值。
+
+    ![更改整数属性](device-properties-images/win/03-integer-value.png)
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性。 “新建设备”和“设备编辑”屏幕在第一列中列出了虚拟设备的属性，第二列中为每个属性相应的值（如此示例中所示）： 
+
+[![“新建设备”屏幕示例](device-properties-images/mac/01-new-device-editor-sml.png)](device-properties-images/mac/01-new-device-editor.png#lightbox)
+
+当选择某个属性时，有关该属性的详细描述会显示在右侧。 可以修改“硬件配置文件属性”和“AVD 属性”。 硬件配置文件属性（如`hw.ramSize` 和 `hw.accelerometer`）描述仿真设备的物理特征。 这些特征包括屏幕大小、可用的 RAM 量以及是否具有加速计。 AVD 属性指定 AVD 在运行时的操作。 例如，可以配置 AVD 属性以指定 AVD 如何使用开发计算机的图形卡进行呈现。
+
+可以使用以下准则来更改属性：
+
+-   若要更改布尔属性，请单击布尔属性右侧的复选标记：
+
+    ![更改布尔属性](device-properties-images/mac/02-boolean-value.png)
+
+-   若要更改枚举 (enumerated) 属性，请单击属性右侧的下拉菜单并选择一个新值。
+
+    ![更改枚举属性](device-properties-images/mac/04-enum-value.png)
+
+-   若要更改字符串或整数属性，请双击值列中当前的字符串或整数设置并输入一个新值。
+
+    ![更改整数属性](device-properties-images/mac/03-integer-value.png)
+
+-----
+
+下表详细说明了“新建设备”和“设备编辑器”屏幕中列出的属性：
+
+[!include[](~/android/includes/emulator-properties.md)]
+
+有关这些属性的详细信息，请参阅[硬件配置文件属性](https://developer.android.com/studio/run/managing-avds.html#hpproperties)。
+
