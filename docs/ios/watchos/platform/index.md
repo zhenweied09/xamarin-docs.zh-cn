@@ -6,19 +6,27 @@ ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/13/2016
-ms.openlocfilehash: 8ad4dc52c3bca0f54adb64bb97acaa23aeb1e590
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/25/2018
+ms.openlocfilehash: 16d10dd69223f404aac7c933302992a1544461e9
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791280"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066609"
 ---
 # <a name="watchos-platform-features"></a>watchOS 平台功能
 
-_要包含在 watchOS 应用中的 Apple Watch 特定功能。_
+此文档链接到各种指南描述 watchOS 平台功能，如 Apple Pay、 通知、 复杂性、 主动建议、 锻炼应用和的详细信息。
 
-## <a name="apple-pay-enhancementsioswatchosplatformapple-paymd"></a>[Apple 支付增强功能](~/ios/watchos/platform/apple-pay.md)
+## <a name="introduction-to-watchos-4introduction-to-watchos4md"></a>[watchOS 4 简介](introduction-to-watchos4.md)
+
+本文档提供功能在 watchOS 4 添加并更新的高级的概述。
+
+## <a name="introduction-to-watchos-3introduction-to-watchos3indexmd"></a>[watchOS 3 简介](introduction-to-watchos3/index.md)
+
+本指南介绍了 watchOS 3 中的新的和更新 Api。
+
+## <a name="apple-pay-enhancementsioswatchosplatformapple-paymd"></a>[Apple Pay 增强功能](~/ios/watchos/platform/apple-pay.md)
 
 在 watchOS 3，PassKit framework 已扩展为允许为安全的应用内付款 （的物理货物和服务） 为在 Apple Watch 上运行的应用程序的支持。
 
@@ -26,22 +34,13 @@ _要包含在 watchOS 应用中的 Apple Watch 特定功能。_
 
 watchOS 3 引入了多个应用程序可以使用更新后打开它，用户需要其信息确保它具有内容的后台任务。
 
-## <a name="introduction-to-watchos-4introduction-to-watchos4md"></a>[watchOS 4 简介](introduction-to-watchos4.md)
-
-WatchOS 4 中的新功能。
-
-## <a name="introduction-to-watchos-3introduction-to-watchos3indexmd"></a>[watchOS 3 简介](introduction-to-watchos3/index.md)
-
-本文介绍所有可用 watchOS 3 中的新增和更改 Api 的 Xamarin 开发人员。
-
-##  <a name="notificationsnotificationsmd"></a>[通知](notifications.md)
+## <a name="notificationsnotificationsmd"></a>[通知](notifications.md)
 
 了解如何提供自定义通知您监视的应用程序中的处理。
 
-##  <a name="complicationscomplicationsmd"></a>[复杂情况](complications.md)
+## <a name="complicationscomplicationsmd"></a>[复杂情况](complications.md)
 
 添加复杂性支持在手表表盘上显示的最新数据。
-
 
 ## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[主动建议](~/ios/watchos/platform/proactive-suggestions.md)
 

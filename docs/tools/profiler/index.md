@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 06/03/2018
-ms.openlocfilehash: 42a8a2e3751d111f6ba8ccbea32e0446460f9a29
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8882cb9cd84940e12865a730f75e36ecbaf9b6f0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793870"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066671"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -28,7 +28,7 @@ Xamarin 探查器具有大量检测可用于分析-分配、 周期和时间探�
 ## <a name="download-and-install"></a>下载并安装
 
 > [!NOTE]
-> 你将需要[Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/)订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
+> 你将需要[Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/)订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac 上的 Mac
 
 Xamarin 探查器是独立的应用程序，并且已集成使用适用于 Mac 的 Visual Studio 和 Visual Studio，若要启用分析从 IDE 内。
 

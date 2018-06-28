@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 15de334500ea25d22657c257a4a4fc6887cc122c
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935423"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066645"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -28,7 +28,7 @@ Xamarin 实时重新加载使你能够**更改你的 XAML 和看到这些文件�
 
 ## <a name="requirements"></a>要求
 
-* [Visual Studio 2017 15.7 版或更高版本](https://www.visualstudio.com/vs/)或更高版本与**使用.NET 进行移动开发**工作负荷。
+* [Visual Studio 2017 15.7 版或更高版本](https://visualstudio.microsoft.com/vs/)或更高版本与**使用.NET 进行移动开发**工作负荷。
 * [Xamarin.Forms 3.0.0 或更高版本](https://www.nuget.org/packages/Xamarin.Forms/)或更高版本。
 
 ## <a name="getting-started"></a>入门

@@ -7,16 +7,27 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 539ec976e3ea28aa2e017318022bd102f2c03ae5
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792210"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066879"
 ---
 # <a name="macos-platform-features"></a>macOS 平台功能
 
 本部分中的文档介绍使用 macOS Xamarin.Mac 应用程序中的密钥，特定于平台的功能。
+
+## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[MacOS Mojave 简介](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> Xamarin 的 macOS Mojave 支持当前处于预览状态，这意味着它可能包含 bug、 功能完成的不是，并且可能会更改。 将其用于实验仅。
+
+本文档提供新功能和更新功能在 macOS Mojave 生成 Xamarin.Mac 应用程序时可供使用的高级的概述。
+
+## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[MacOS 高 Sierra 简介](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+本文档介绍中 macOS 高 Sierra 的新的和增强功能。
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[macOS Sierra 简介](~/mac/platform/introduction-to-macos-sierra/index.md)
 
@@ -30,7 +41,6 @@ macOS Sierra 是 Apple 的桌面操作系统的最新具体化 for mac。 本文
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[OpenTK 简介](~/mac/platform/opentk.md)
 
 OpenTK （打开工具包） 是一个高级的、 低级别 C# 库，使用 OpenGL 和 OpenCL OpenAL 更加轻松。 OpenTK 可以用于游戏、 科学应用程序或其他需要 3D 图形的项目、 音频或计算功能。 本文提供了对使用 OpenTK Xamarin.Mac 应用中的简短介绍。
-
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[情节提要简介](~/mac/platform/storyboards/index.md)
 

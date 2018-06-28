@@ -6,40 +6,46 @@ ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 02/02/2018
-ms.openlocfilehash: 33679a79935d891e4d340d4adcf41e37d68cd40f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/25/2018
+ms.openlocfilehash: 969c634ffe95c184677ec02877b29fa557380729
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788954"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066983"
 ---
 # <a name="tvos-platform-features"></a>tvOS 平台功能
 
-这些文档描述了特定 tvOS 版本中的功能。
+这些指南介绍特定 tvOS 版本中的功能。
 
-但是，首先阅读[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)，因为它涵盖了关键概念和技术将在每篇文章中使用。
+## <a name="introduction-to-tvos-12iostvosplatformintroduction-to-tvos12indexmd"></a>[TvOS 12 简介](~/ios/tvos/platform/introduction-to-tvos12/index.md)
+
+> [!WARNING]
+> Xamarin 的 tvOS 12 支持当前为的预览版，它可能包含 bug，这意味着不是功能完成，并且可以更改。
+> 将其用于实验仅。
+
+本文档提供中 tvOS 12 生成使用 Xamarin tvOS 应用时可供使用的新的和更新功能的高级概述。
 
 ## <a name="introduction-to-tvos-11iostvosplatformintroduction-to-tvos11md"></a>[tvOS 11 简介](~/ios/tvos/platform/introduction-to-tvos11.md)
 
-本文介绍面向 Xamarin.tvOS 开发人员 tvOS 11 中可用的新功能。
+本文介绍面向 tvOS 开发人员使用 Xamarin tvOS 11 中可用的新功能。
 
 ## <a name="introduction-to-tvos-10iostvosplatformintroduction-to-tvos10indexmd"></a>[tvOS 10 简介](~/ios/tvos/platform/introduction-to-tvos10/index.md)
 
-本文介绍的所有新增和更改 Api 和 tvOS 10 中可用的功能为 Xamarin.tvOS 开发人员。
+本文介绍的所有新增和更改 Api 和 tvOS 10 中可用的功能对于使用 Xamarin tvOS 开发人员。
 
 ## <a name="introduction-to-tvos-9iostvosplatformtvos9md"></a>[tvOS 9 简介](~/ios/tvos/platform/tvos9.md)
 
-本文介绍的所有新增和更改 Api 和 tvOS 9 中可用的功能为 Xamarin.tvOS 开发人员。
+本文介绍的所有新增和更改 Api 和 tvOS 9 中可用的功能对于使用 Xamarin tvOS 开发人员。
 
 ## <a name="siri-remote-and-bluetooth-controllersiostvosplatformremote-bluetoothmd"></a>[Siri 远程和蓝牙控制器](~/ios/tvos/platform/remote-bluetooth.md)
 
-本文介绍如何在 Xamarin.tvOS 应用中支持将新的 Siri 远程和蓝牙游戏控制器。
+本文介绍如何使用 Xamarin 生成的 tvOS 应用中支持新的 Siri 远程和蓝牙游戏控制器。
 
 ## <a name="related-links"></a>相关链接
 
 - [tvOS 示例](https://developer.xamarin.com/samples/tvos/all/)
-- [tvOS](https://developer.apple.com/tvos/)
-- [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [tvOS (Apple)](https://developer.apple.com/tvos/)
+- [tvOS 人机接口指南 (Apple)](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [应用程序对 tvOS (Apple) 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
 - [构建应用程序对 tvOS 使用 Xamarin （视频）](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
