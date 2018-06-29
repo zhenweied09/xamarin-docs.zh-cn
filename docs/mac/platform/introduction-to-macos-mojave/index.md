@@ -1,5 +1,5 @@
 ---
-title: MacOS Sierra 简介
+title: MacOS Mojave 简介
 description: 本文档提供了高级 macOS Mojave 哪些 Xamarin 的预览版本当前提供 C# 绑定中的新的和更新功能的概述。
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: b711cc92680e94734f0077f2aa03c1d32944af09
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 810614bc5877b0bfa6e5295fac507da76af0b797
+ms.sourcegitcommit: 4939748d537cbb1934a3b5b22add39ef3d9aa64d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/28/2018
-ms.locfileid: "37067274"
+ms.locfileid: "37091527"
 ---
 # <a name="introduction-to-macos-mojave"></a>MacOS Mojave 简介
 

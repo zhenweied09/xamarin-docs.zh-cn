@@ -6,13 +6,13 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: 0af0ef56630103498041ad61f7c5ce900358b055
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: 6a3f3f79e81339cc903d85081ca173a7ac707f6a
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732848"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935472"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>设置用于 Xamarin.Android 的 Android SDK
 
@@ -39,7 +39,7 @@ Xamarin Android SDK 管理器可帮助你下载开发 Xamarin.Android 应用所�
 
 为什么要使用 Xamarin Android SDK 管理器，而不使用 Android SDK 中包含的 SDK 管理器？ 在 Android SDK Tools 包的 25.2.3 版本中，Google 引入了一个新的工具来维护 Android SDK。 此新工具 **[sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)** 是一个命令行实用工具，取代了用于 Android SDK 的独立 UI 管理器。 因此，如果更新到 SDK Tools 版本 26.0.1（Android 8.0 所需）或更高版本，并且想继续通过 UI 接口管理 Android SDK，则必须使用 Xamarin Android SDK 管理器。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -280,6 +280,5 @@ SDK 管理器启动后，它会自动确定每个已安装包的路径，并通�
 
 - [对 Android SDK 工具的更改](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [了解 Android API 级别](~/android/app-fundamentals/android-api-levels.md)
-- [SDK Tools 发行说明 (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
