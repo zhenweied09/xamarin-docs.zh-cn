@@ -5,12 +5,12 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 78ed943a0fa7ca0cb249a4ac030ea6b52dcfb537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782932"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080437"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials： 磁力计
 
@@ -77,6 +77,8 @@ public class MagnetometerTest
 - **游戏**– 速率适用于 （但不保证在 UI 线程上返回） 的游戏。
 - **正常**– 适用于屏幕方向更改的默认速率。
 - **Ui** – 速率适用于常规用户界面。
+
+如果事件处理程序不能保证在 UI 线程上运行和事件处理程序需要访问用户界面元素，如果使用[ `MainThread.BeginInvokeOnMainThread` ](main-thread.md)方法在 UI 线程上运行该代码。
 
 ## <a name="api"></a>API
 

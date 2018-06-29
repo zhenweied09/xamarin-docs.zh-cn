@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 5fec06fd6f0c13a75040d940a11811ef97c3bcc3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782734"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080435"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,8 +44,11 @@ Android、 iOS 和 UWP 提供唯一的操作系统和平台开发人员有权访
 * [地理位置](geolocation.md?context=xamarin/xamarin-forms)– 检索设备的 GPS 位置。
 * [陀螺](gyroscope.md?context=xamarin/xamarin-forms)– 跟踪设备的三个主轴的旋转。
 * [磁力计](magnetometer.md?context=xamarin/xamarin-forms)– 检测相对于地球磁字段的设备的方向。
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) – 在应用程序的主线程上运行代码。 
 * [打开浏览器](open-browser.md?context=xamarin/xamarin-forms)– 快速、 轻松地浏览器打开到特定的网站。
+* [方向传感器](orientation-sensor.md?context=xamarin/xamarin-forms)– 检索的三个维空间中的设备方向。
 * [电话拨号程序](phone-dialer.md?context=xamarin/xamarin-forms)– 打开电话拨号程序。
+* [Power](power.md?context=xamarin/xamarin-forms) – 获取设备的能量保护程序状态。
 * [首选项](preferences.md?context=xamarin/xamarin-forms)– 快速、 轻松地添加持久首选项。
 * [屏幕锁定](screen-lock.md?context=xamarin/xamarin-forms)– 保留在设备屏幕唤醒状态。
 * [安全存储](secure-storage.md?context=xamarin/xamarin-forms)– 安全地存储数据。

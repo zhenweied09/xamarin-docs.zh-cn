@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 99529f08348254dff7577b7e82da739fabd63a14
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8229a372659e7918457a9d2f358b871e1a3f5978
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781860"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080436"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials： 加速
 
@@ -89,6 +89,8 @@ X 轴为水平方向和右侧的点，Y 轴为垂直向上箭头和 Z 轴指向�
 - **游戏**– 速率适用于 （但不保证在 UI 线程上返回） 的游戏。
 - **正常**– 适用于屏幕方向更改的默认速率。
 - **Ui** – 速率适用于常规用户界面。
+
+如果事件处理程序不能保证在 UI 线程上运行和事件处理程序需要访问用户界面元素，如果使用[ `MainThread.BeginInvokeOnMainThread` ](main-thread.md)方法在 UI 线程上运行该代码。
 
 ## <a name="api"></a>API
 

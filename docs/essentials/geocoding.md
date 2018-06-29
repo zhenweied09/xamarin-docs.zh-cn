@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321439"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080321"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials： 地理编码
 
@@ -61,7 +61,7 @@ try
     var location = locations?.FirstOrDefault();
     if (location != null)
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}");
+        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
     }
 }
 catch (FeatureNotSupportedException fnsEx)
@@ -73,6 +73,8 @@ catch (Exception ex)
     // Handle exception that may have occured in geocoding
 }
 ```
+
+高度非始终可用。 如果不可用，`Altitude`属性可能`null`或的值可能为零。 如果高度可用，则值为以米为单位的上方 sea 级以上。 
 
 获取[placemarks](xref:Xamarin.Essentials.Placemark)坐标的现有集：
 
@@ -111,6 +113,10 @@ catch (Exception ex)
     // Handle exception that may have occurred in geocoding
 }
 ```
+
+## <a name="distance-between-two-locations"></a>两个位置之间的距离
+
+[ `Location` ](xref:Xamarin.Essentials.Location)和[ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions)类定义方法以计算两个位置之间的距离。 请参阅文章[ **Xamarin.Essentials： 地理位置**](geolocation.md#calculate-distance)有关示例。
 
 ## <a name="api"></a>API
 
