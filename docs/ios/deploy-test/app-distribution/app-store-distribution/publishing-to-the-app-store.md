@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: b8bea29e71e055621e7d0b85d3736ec6cc9ba3b4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 489d9fa569b083f5cb655dc503ab4fa551810b6d
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785695"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209468"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>将 Xamarin.iOS 应用发布到 App Store
+
+> [!IMPORTANT]
+> Apple [表明](https://developer.apple.com/news/?id=05072018a)，从 2018 年 7 月开始，提交到 App Store 的所有应用和更新必须使用 iOS 11 SDK 来构建，并且必须[支持 iPhone X 显示器](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)。
 
 为了将应用程序分发到所有 iOS 设备，Apple 要求应用通过 App Store 发布，使 App Store 成为 iOS 应用程序的一站式购物位置。 App Store 中包括超过 500,000 种应用程序，许多类型应用程序的开发人员采用了这种非常成功的单点分发。 App Store 是一种统包解决方案，可同时为应用开发人员提供分发和支付系统。
 
@@ -231,7 +234,7 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 1. 选择“iOS 捆绑签名”，将预配配置文件更改为 App Store 预配配置文件：
 
     ![](publishing-to-the-app-store-images/ipa01.png "选择“iOS 捆绑签名”，将预配配置文件更改为 App Store 预配配置文件")
-1. 依次选择“iOS IPA 选项”和“配置”下拉列表中的“临时”（如果没有看到“临时”，请改选“发布”）：
+1. 选择“iOS IPA 选项”>“配置”>“即席” （如果未提供“即席”选项，请改为选择“发布”并选中生成 IPA 文件的复选框：
 
     ![](publishing-to-the-app-store-images/imagevs02.png "从“配置”下拉列表选择“临时”")
 

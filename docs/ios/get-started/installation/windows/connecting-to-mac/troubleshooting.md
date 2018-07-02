@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e371b4aecdd7b40c33e4596fec3c3ca7691bb42c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 575e6705679539af6d3e5fae3ffc5721d9f79ba6
+ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786182"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36291043"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 生成主机连接疑难解答
 
@@ -91,7 +91,7 @@ ms.locfileid: "34786182"
     ssh amyb@10.1.8.95 'ls'
     ```
     
-    这应列出 Mac 上的主目录的内容。 如果 `ls` 命令可正常运行，但 Visual Studio 连接仍失败，则可以查看有关特定于 Xamarin 的复杂问题的“[已知问题和限制](#knownissues)”部分。 如果这些内容都与你的问题不符，请[提交新 bug 报告](https://bugzilla.xamarin.com/newbug)并附加“[检查详细日志文件](#verboselogs)”下所述的日志。
+    这应列出 Mac 上的主目录的内容。 如果 `ls` 命令可正常运行，但 Visual Studio 连接仍失败，则可以查看有关特定于 Xamarin 的复杂问题的“[已知问题和限制](#knownissues)”部分。 如果找不到所需问题，请在 Visual Studio 中转到“帮助”>“发送反馈”>“报告问题”，提交新的 Bug 报告并附加[检查详细日志文件](#verboselogs)下所述的日志。
 
 10. 如果**步骤 8 失败**，则可以在 Mac 上的终端中运行以下命令，以查看 SSH 服务器是否接受_任何_ 连接：
 

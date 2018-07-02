@@ -7,13 +7,13 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2018
-ms.openlocfilehash: 011ec94aca4e5110c704b83cb24cf6260338dfbd
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/13/2018
+ms.openlocfilehash: 7c8eee5fc7075f23221c06dab29b83b1d5e01ffc
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243621"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269065"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 深度解析
 
@@ -62,15 +62,11 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Xamarin.Forms 应用程序剖析
 
-以下屏幕截图显示 Visual Studio for Mac 中 Phoneword PCL 项目的内容：
+以下屏幕截图显示 Visual Studio for Mac 中 Phoneword .NET Standard 库项目的内容：
 
-![](deepdive-images/xs/pcl-project.png "Phoneword PCL 项目内容")
+![](deepdive-images/xs/library-project.png "Phoneword .NET Standard 库项目内容")
 
-项目包含 3 个文件夹：
-
-- **引用** - 包含生成和运行应用程序所需的程序集。 展开 .NET 可移植子集文件夹会显示对 [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx)、System.Core 和 [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx) 等 .NET 程序集的引用。 展开“从包”文件夹会显示对 Xamarin.Forms 程序集的引用。
-- **包** - 包目录存放 [NuGet](https://www.nuget.org) 包，该包可简化在应用程序中使用第三方库的流程。 右键单击文件夹并在弹出菜单中选择更新选项，可将这些包更新为最新版本。
-- **属性** - 包含 .NET 程序集元数据文件 **AssemblyInfo.cs**。 最好在此文件中填写一些应用程序相关的基本信息。 有关此文件的详细信息，请参阅 MSDN 上的 [AssemblyInfo 类](http://msdn.microsoft.com/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx)。
+项目具有包含 NuGet 和 SDK 节点的依赖项节点。 NuGet 节点包含已添加至项目的 Xamarin.Forms NuGet 包，SDK 节点包含可引用一组完整的 NuGet 包（此包用于定义 .NET Standard）的 `NETStandard.Library` 元包。
 
 -----
 
@@ -81,7 +77,6 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 - IDialer.cs – `IDialer` 接口，该接口指定 `Dial` 方法必须由任何实现类提供。
 - **MainPage.xaml** - `MainPage` 类的 XAML 标记，该类定义应用程序启动时所显示页的 UI。
 - **MainPage.xaml.cs** - `MainPage` 类的代码隐藏，该类包含用户与页面交互时执行的业务逻辑。
-- packages.config -（仅适用于 Visual Studio for Mac）一个 XML 文件，其中包含项目所使用的 NuGet 包的相关信息，以便跟踪所需包及其各自的版本。 Visual Studio for Mac 和 Visual Studio 均可配置为：与其他用户共享源代码时，自动还原任何缺少的 NuGet 包。 此文件的内容由 NuGet 包管理器控制，且不可手动编辑。
 - **PhoneTranslator.cs** - 负责将电话文字转换为电话号码的业务逻辑，此逻辑从 **MainPage.xaml.cs** 调用。
 
 有关 Xamarin.iOS 应用程序剖析的详细信息，请参阅 [Xamarin.iOS 应用程序剖析](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy)。 有关 Xamarin.Android 应用程序剖析的详细信息，请参阅 [Xamarin Android 应用程序剖析](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)。
@@ -99,8 +94,6 @@ Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方
 Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方式。 共享代码通常位于 .NET Standard 库中，平台特定应用程序将使用此共享代码。 下图概要演示了 Phoneword 应用程序的这种关系：
 
 ![](deepdive-images/xs/architecture.png "Phoneword 体系结构")
-
-有关 PCL的详细信息，请参阅[可移植类库简介](~/cross-platform/app-fundamentals/pcl.md)。
 
 -----
 
@@ -153,23 +146,26 @@ namespace Phoneword.iOS
 
 ### <a name="android"></a>Android
 
-要在 Android 中启动 Xamarin.Forms 初始页面，Phoneword.Droid 项目应包括使用 `MainLauncher` 属性创建 `Activity` 的代码，以及继承自 `FormsApplicationActivity` 类的活动，如以下代码示例所示：
+要在 Android 中启动 Xamarin.Forms 初始页面，Phoneword.Droid 项目应包括使用 `MainLauncher` 属性创建 `Activity` 的代码，以及继承自 `FormsAppCompatActivity` 类的活动，如以下代码示例所示：
 
 ```csharp
 namespace Phoneword.Droid
 {
-    [Activity(Label = "Phoneword",
-              Icon = "@drawable/icon",
+    [Activity(Label = "Phoneword", 
+              Icon = "@mipmap/icon", 
+              Theme = "@style/MainTheme", 
               MainLauncher = true,
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         internal static MainActivity Instance { get; private set; }
 
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
+            base.OnCreate(bundle);
             Instance = this;
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
