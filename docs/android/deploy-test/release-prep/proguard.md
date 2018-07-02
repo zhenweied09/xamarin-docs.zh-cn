@@ -1,27 +1,27 @@
 ---
 title: ProGuard
-description: ProGuard 是一个 Java 类文件压缩器、优化器、混淆器和预验证器。 它会检测和删除未使用的代码，分析和优化字节码，然后模糊处理类和类成员。 本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。 同时提供了几个 ProGuard 配置示例。
+description: Xamarin.Android ProGuard 是一个 Java 类文件压缩器、优化器和预验证器。 它会检测和删除未使用的代码，分析和优化字节码。 本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。 同时提供了几个 ProGuard 配置示例。
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771439"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321371"
 ---
 # <a name="proguard"></a>ProGuard
 
-_ProGuard 是一个 Java 类文件压缩器、优化器、混淆器和预验证器。它会检测和删除未使用的代码，分析和优化字节码，然后模糊处理类和类成员。本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。同时提供了几个 ProGuard 配置示例。_
+Xamarin.Android ProGuard 是一个 Java 类文件压缩器、优化器和预验证器。它会检测和删除未使用的代码，分析和优化字节码。本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。同时提供了几个 ProGuard 配置示例。
 
 
 ## <a name="overview"></a>概述
 
-ProGuard 从打包的应用程序中检测并删除未使用的类、字段、方法和属性。 它甚至可对引用的库执行相同操作（这有助于避免 64k 引用限制）。 Android SDK 中的 ProGuard 工具还能优化字节码，删除未使用的代码指令，并使用更短的名称模糊处理剩余的类、字段和方法。 ProGuard 读取**输入 jar**，然后将其压缩、优化、模糊处理和预验证，并将结果写入一个或多个**输出 jar**。 
+ProGuard 从打包的应用程序中检测并删除未使用的类、字段、方法和属性。 它甚至可对引用的库执行相同操作（这有助于避免 64k 引用限制）。 Android SDK 中的 ProGuard 工具还将优化字节码和删除未使用的代码说明。 ProGuard 读取输入文件，然后将其压缩、优化和预验证，并将结果写入一个或多个输出文件。 
 
 ProGuard 使用以下步骤处理输入 APK： 
 
@@ -30,7 +30,7 @@ ProGuard 使用以下步骤处理输入 APK：
 2.  **优化步骤** &ndash; ProGuard 进一步优化代码。 
     在其他优化中，可将非入口点的类和方法设置为私有、静态或最终，可删除未使用的参数，并且可内联一些方法。 
 
-3.  **模糊处理步骤** &ndash; ProGuard 重命名非入口点的类和类成员。 保留入口点，确保它们仍可通过其原始名称访问。 
+3.  **模糊处理步骤** &ndash; 在本机 Android 开发中，ProGuard 重命名非入口点的类和类成员。 保留入口点，确保它们仍可通过其原始名称访问。 但是，Xamarin.Android 并不支持此步骤，因为该应用是使用中间语言 (IL) 编译的。
 
 4.  **预验证步骤** &ndash; 在运行时前检查 Java 字节码，并对 Java VM 权益的类文件进行批注。 只有此步骤无需知道入口点。 
 

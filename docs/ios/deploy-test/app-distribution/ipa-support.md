@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 288ac813f23f281a1bbed375cadf5faa9d4ff9d0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4fd64a1ebf05dd149304f49d8282ee1b38bfcf03
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784870"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321358"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS 中的 IPA 支持
 
@@ -132,10 +132,10 @@ ms.locfileid: "34784870"
 
      ![](ipa-support-images/imagexs03.png "从列表中选择 iTunesMetadata.plist")
 
-1. 直接调用 xbuild（或 Classic API 的 mdtool），并通过命令行传递此属性：
+1. 直接调用 msbuild 并在命令行上传递此属性：
 
     ```bash
-    /Library/Frameworks/Mono.framework/Commands/xbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
+    /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -178,7 +178,7 @@ ms.locfileid: "34784870"
 
 通过几种可能的方法使用新属性：
 
-例如，若要将 **.ipa** 文件输出到旧的默认目录（正如在 Xamarin.iOS 9.6 和更低版本中），可以使用以下其中一种方法将 `IpaPackageDir` 属性设为 `$(OutputPath)`。 两种方法都与所有 Unified API Xamarin.iOS 内部版本兼容，包括 IDE 版本，以及使用 **xbuild**、**msbuild** 或 **mdtool** 的命令行版本：
+例如，若要将 **.ipa** 文件输出到旧的默认目录（正如在 Xamarin.iOS 9.6 和更低版本中），可以使用以下其中一种方法将 `IpaPackageDir` 属性设为 `$(OutputPath)`。 两种方法都与所有 Unified API Xamarin.iOS 内部版本兼容，包括 IDE 版本，以及使用 msbuild、xbuild 或 mdtool 的命令行版本：
 
 - 第一个选项是，在 **MSBuild** 文件的 `<PropertyGroup>` 元素内，设置 `IpaPackageDir` 属性。 例如，可将以下 `<PropertyGroup>` 添加到 iOS 应用项目 **.csproj** 文件的底部（右 `</Project>` 标记前）：
 
@@ -212,19 +212,17 @@ ms.locfileid: "34784870"
     </PropertyGroup>
     ```
 
-另一种用于 **msbuild** 或 **xbuild** 命令行生成的方法是添加 `/p:` 命令行参数来设置 `IpaPackageDir` 属性。 请注意，在这种情况下，**msbuild** 不会展开传入到命令行的 `$()` 表达式，因此不能使用 `$(OutputPath)` 语法。 必须改为提供完整路径名称。 Mono 的 **xbuild** 命令确实会展开 `$()` 表达式，但仍建议使用完整路径名称，因为在将来版本中，**xbuild** 最终会因支持 [**msbuild**](http://www.mono-project.com/docs/about-mono/releases/4.4.0/#msbuild-preview-for-os-x) 的跨平台版本而弃用。
+另一种用于 msbuild 或 xbuild 命令行生成的方法是添加 `/p:` 参数来设置 `IpaPackageDir` 属性。 请注意，在这种情况下，**msbuild** 不会展开传入到命令行的 `$()` 表达式，因此不能使用 `$(OutputPath)` 语法。 必须改为提供完整路径名称。 Mono 的 xbuild 命令确实会展开 `$()` 表达式，但仍建议使用完整路径名称，因为 xbuild 已因支持 msbuild 的[跨平台版本](https://www.mono-project.com/docs/about-mono/releases/5.0.0/#msbuild) 而被弃用。
 
 使用此方法的完整示例可能与 Windows 上的以下示例类似：
-
 
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
-
 或 Mac 上以下示例：
 
 ```bash
-xbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
+msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
 <a name="installipa" />

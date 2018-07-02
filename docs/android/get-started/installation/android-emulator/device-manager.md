@@ -6,13 +6,13 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: 888f126d3e58b0300ba7ce3ad1cb5a8001fc545a
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a7c1aeafd94d7e2639617cda13312ee8a09e2c94
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733285"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935323"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>使用 Android Device Manager 管理虚拟设备
 
@@ -28,10 +28,10 @@ ms.locfileid: "34733285"
 
 [![“设备”选项卡中 Android Device Manager 的屏幕截图](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
 
-使用 Android Device Manager 创建和配置在 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md) 中运行的 Android 虚拟设备 (AVD)。
+使用 Android Device Manager 创建和配置在 [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md) 中运行的 Android 虚拟设备 (AVD)。
 每台 AVD 是模拟物理 Android 设备的仿真器配置。 这样可以在模拟不同物理 Android 设备的多种配置中运行和测试应用。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要使用 Android Device Manager，需要具备以下各项：
 
@@ -48,7 +48,7 @@ ms.locfileid: "34733285"
 
 [![从“工具”菜单启动](device-manager-images/win/04-tools-menu-sml.png)](device-manager-images/win/04-tools-menu.png#lightbox)
 
-如果在启动时看到以下错误对话框，请参阅[仿真器安装问题疑难解答](~/android/get-started/installation/android-emulator/troubleshooting.md)查找解决方法：
+如果在启动时看到以下错误对话框，请参阅 [Android Emulator 故障排除](~/android/get-started/installation/android-emulator/troubleshooting.md)以查找解决方法：
 
 ![Android SDK 实例错误](device-manager-images/win/32-sdk-error.png)
 
@@ -165,7 +165,7 @@ ms.locfileid: "34733285"
 
     [![单击“在资源管理器中展现”的结果](device-manager-images/win/24-reveal-in-explorer-sml.png)](device-manager-images/win/24-reveal-in-explorer.png#lightbox)
 
--   **恢复出厂设置**  &ndash; 将所选设备重置为其默认设置，擦除用户在此设备运行时对其内部状态进行的任何更改（这也会擦除当前[快速启动](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md#quick-boot)快照（如果有））。 此更改不会影响在创建和编辑期间对虚拟设备做出的修改。 将出现提醒此重置无法被撤消的一个对话框。 单击“擦除用户数据”以确认重置。
+-   **恢复出厂设置**  &ndash; 将所选设备重置为其默认设置，擦除用户在此设备运行时对其内部状态进行的任何更改（这也会擦除当前[快速启动](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot)快照（如果有））。 此更改不会影响在创建和编辑期间对虚拟设备做出的修改。 将出现提醒此重置无法被撤消的一个对话框。 单击“擦除用户数据”以确认重置。
 
 -   **删除** &ndash; 永久删除所选的虚拟设备。
     将出现提醒删除设备无法被撤消的一个对话框。 如果确定要删除设备，请单击“删除”。
@@ -181,10 +181,10 @@ ms.locfileid: "34733285"
 > 本指南仅适用于 Visual Studio for Mac。
 Xamarin Studio 与 Android Device Manager 不兼容。
 
-使用 Android Device Manager 创建和配置在 [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md) 中运行的 Android 虚拟设备 (AVD)。
+使用 Android Device Manager 创建和配置在 [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md) 中运行的 Android 虚拟设备 (AVD)。
 每台 AVD 是模拟物理 Android 设备的仿真器配置。 这样可以在模拟不同物理 Android 设备的多种配置中运行和测试应用。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 - Visual Studio for Mac 7.5 或更高版本。
 
@@ -320,15 +320,113 @@ Xamarin Studio 与 Android Device Manager 不兼容。
 
 -----
 
+## <a name="troubleshooting"></a>疑难解答
+
+以下各节介绍如何诊断和避开使用 Android Device Manager 配置虚拟设备时可能发生的问题。
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+### <a name="android-sdk-in-non-standard-location"></a>Android SDK 位于非标准位置
+
+通常情况下，Android SDK 安装在以下位置：
+
+C:\\Program Files (x86)\\Android\\android-sdk
+
+如果 SDK 未安装在此位置，在启动 Android Device Manager 时可能会遇到此错误：
+
+![Android SDK 实例错误](troubleshooting-images/win/01-sdk-error.png)
+
+若要避开此问题，请执行下列操作：
+
+1. 从 Windows 桌面依次转到 C:\\Users\\username\\AppData\\Roaming\\XamarinDeviceManager：
+
+    ![Android Device Manager 日志文件位置](troubleshooting-images/win/02-log-files.png)
+
+2. 双击以打开某个日志文件，并找到“配置文件路径”。 例如:
+
+    [![日志文件中的“配置文件路径”](troubleshooting-images/win/03-config-file-path-sml.png)](troubleshooting-images/win/03-config-file-path.png#lightbox)
+
+3. 导航到此位置，然后双击“user.config”以将其打开。 
+
+4. 在“user.config”中，找到“&lt;UserSettings&gt;”元素，并向它添加一个“AndroidSdkPath”特性。 将此特性设置为 Android SDK 在开发计算机上的安装位置路径，然后保存文件。 例如，如果 Android SDK 安装在 C:\\Programs\\Android\\SDK，“&lt;UserSettings&gt;”将如下所示：
+        
+    ```xml
+    <UserSettings SdkLibLastWriteTimeUtcTicks="636409365200000000" AndroidSdkPath="C:\Programs\Android\SDK" />
+    ```
+
+对 user.config 进行更改后，应该能够启动 Android Device Manager。
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>快照禁用 Android Oreo 上的 WiFi
+
+如果 AVD 配置为使用模拟 Wi-Fi 访问的 Android Oreo，那么在快照之后重启 AVD 可能会导致 Wi-Fi 访问被禁用。
+
+若要解决此问题：
+
+1. 在 Android Device Manager 中选择 AVD。
+
+2. 在其他选项菜单中，单击“在资源管理器中展现”。
+
+3. 导航到“快照”>“default_boot”。
+
+4. 删除 snapshot.pb 文件：
+
+    ![snapshot.pb 文件的位置](troubleshooting-images/win/05-delete-snapshot.png)
+
+5. 重启 AVD。 
+
+进行这些更改后，AVD 将在允许 Wi-Fi 重新工作的状态下重新启动。
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>快照禁用 Android Oreo 上的 WiFi
+
+如果 AVD 配置为使用模拟 Wi-Fi 访问的 Android Oreo，那么在快照之后重启 AVD 可能会导致 Wi-Fi 访问被禁用。
+
+若要解决此问题：
+
+1. 在 Android Device Manager 中选择 AVD。
+
+2. 在其他选项菜单中，单击“在查找器中展现”。
+
+3. 导航到“快照”>“default_boot”。
+
+4. 删除 snapshot.pb 文件：
+
+    [![Snapshot.pb 文件的位置](troubleshooting-images/mac/02-delete-snapshot-sml.png)](troubleshooting-images/mac/02-delete-snapshot.png#lightbox)
+
+5. 重启 AVD。 
+
+进行这些更改后，AVD 将在允许 Wi-Fi 重新工作的状态下重新启动。
+
+-----
+
+### <a name="generating-a-bug-report"></a>生成 Bug 报表
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+如果发现 Android Device Manager 出现问题，但无法使用上述疑难解答提示解决，请右键单击标题栏并选择“生成 Bug 报告”，提交该 bug 报告：
+
+[![提交 bug 报告的菜单项位置](troubleshooting-images/win/04-bug-report-sml.png)](troubleshooting-images/win/04-bug-report.png#lightbox)
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+如果发现 Android Device Manager 出现问题，但无法使用上述疑难解答提示解决，请单击“帮助”>“生成 Bug 报告”，提交该 bug 报告：
+
+[![提交 bug 报告的菜单项位置](troubleshooting-images/mac/01-bug-report-sml.png)](troubleshooting-images/mac/01-bug-report.png#lightbox)
+
+
+-----
+
 ## <a name="summary"></a>总结
 
-本指南介绍 Visual Studio for Mac 和 Visual Studio Tools for Xamarin 中提供的 Android Device Manager。 其中介绍了启动和停止 Android 仿真器、选择要运行的 Android 虚拟设备 (AVD)、创建新的虚拟设备以及如何编辑虚拟设备等基本功能。 还说明了如何编辑配置文件硬件属性以进一步自定义。
+本指南介绍 Visual Studio for Mac 和 Visual Studio Tools for Xamarin 中提供的 Android Device Manager。 其中介绍了启动和停止 Android 仿真器、选择要运行的 Android 虚拟设备 (AVD)、创建新的虚拟设备以及如何编辑虚拟设备等基本功能。 还介绍了如何编辑配置文件硬件属性以便进一步进行自定义并提供了常见问题的故障排除技巧。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [对 Android SDK 工具的更改](~/android/troubleshooting/sdk-cli-tooling-changes.md)
-- [使用 Android SDK 仿真器进行调试](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [在 Android Emulator 上调试](~/android/deploy-test/debugging/debug-on-emulator.md)
 - [SDK Tools 发行说明 (Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

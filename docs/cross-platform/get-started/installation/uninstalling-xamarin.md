@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 444559672f25b13b7d3a769d6de4bd6384174965
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268883"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066463"
 ---
 # <a name="uninstalling-xamarin"></a>卸载 Xamarin
 
@@ -269,7 +269,7 @@ Xamarin 在以下各项中受支持：
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 及更早版本
 
-要完全卸载 Visual Studio 2015，请使用 [visualstudio.com 上的支持答案](https://www.visualstudio.com/vs/support/vs2015/uninstall-visual-studio-2015/)。
+要完全卸载 Visual Studio 2015，请使用 [visualstudio.com 上的支持答案](https://visualstudio.microsoft.com/vs/support/vs2015/uninstall-visual-studio-2015/)。
 
 通过“控制面板”，可从 Windows 计算机卸载 Xamarin。 导航到“程序和功能” ，或“程序”>“卸载程序”，如下所示：
 

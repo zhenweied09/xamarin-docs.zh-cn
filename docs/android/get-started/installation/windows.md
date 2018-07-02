@@ -6,13 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: 1eb8d4ec9ad60f0f9e81676920df4d950a875088
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732601"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066437"
 ---
 # <a name="windows-installation"></a>Windows 安装
 
@@ -68,9 +68,9 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 
 有关使用 Xamarin Android SDK 管理器的详细信息，请参阅 [Android SDK 安装](~/android/get-started/installation/android-sdk.md)。
 
-### <a name="google-android-emulator"></a>Google Android Emulator
+### <a name="android-emulator"></a>Android 仿真器
 
-[Google Android Emulator](https://developer.android.com/studio/run/emulator) 工具可有效地开发和测试 Xamarin.Android 应用。 例如，平板电脑等物理设备在部署时可能不可用，或开发人员可能想在提交代码前在计算机上运行某些集成测试。
+[Android Emulator](https://developer.android.com/studio/run/emulator) 工具可有效地开发和测试 Xamarin.Android 应用。 例如，平板电脑等物理设备在部署时可能不可用，或开发人员可能想在提交代码前在计算机上运行某些集成测试。
 
 在计算机上模拟 Android 设备包括以下部分：
 
@@ -83,10 +83,10 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 1. Microsoft Hyper-V &ndash; 可用于运行 Windows 10 4 月更新的计算机。
 2. Intel 硬件加速执行管理器 (HAXM) &ndash; 可用于运行 OS X、macOS 或较旧 Windows 版本的 x86 计算机。
 
-有关 Google Android Emulator、Hyper-V 和 HAXM 的详细信息，请参阅[通过硬件加速提高仿真器性能](~/android/get-started/installation/android-emulator/hardware-acceleration.md)指南。
+有关 Android Emulator、Hyper-V 和 HAXM 的详细信息，请参阅[通过硬件加速提高模拟器性能](~/android/get-started/installation/android-emulator/hardware-acceleration.md)指南。
 
 > [!NOTE]
-> 在较旧版本的 Windows 上，HAXM 与 Hyper-V 不兼容。 在此情况下，需要[禁用 Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) 或使用不具有 x86 优化的较慢的仿真器映像。
+> 在较旧版本的 Windows 上，HAXM 与 Hyper-V 不兼容。 在此情况下，需要[禁用 Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) 或使用不具有 x86 优化的较慢的仿真器映像。
 
 
 <a name="device" />
@@ -118,7 +118,7 @@ Android 使用多个 Android API 级别设置来确定应用在各种版本的 A
 
 ## <a name="related-links"></a>相关链接
 
-- [下载 Visual Studio](https://www.visualstudio.com/vs/)
+- [下载 Visual Studio](https://visualstudio.microsoft.com/vs/)
 - [安装 Visual Studio Tools for Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [系统要求](~/cross-platform/get-started/requirements.md)
 - [Android SDK 安装](~/android/get-started/installation/android-sdk.md)
