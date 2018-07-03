@@ -26,7 +26,7 @@ ms.locfileid: "35242363"
 
 本指南面向已熟悉使用 Xamarin.Forms 的读者。 Xamarin.Forms 的详细介绍，请参阅[Xamarin.Forms 文档](~/xamarin-forms/index.yml)，和[具有 Xamarin.Forms 创建移动应用](https://aka.ms/xamebook)。
 
-该指南可以补充[.NET 微服务： 为容器化.NET 应用程序的体系结构](https://aka.ms/microservicesebook)，其中重点介绍开发和部署容器化微服务。 其他值得读取的指南包括[Architecting 和开发现代 Web 应用程序使用 ASP.NET 核心和 Microsoft Azure](http://aka.ms/WebAppEbook)，[容器 Docker 应用生命周期内使用 Microsoft 平台和工具](http://aka.ms/dockerlifecycleebook)，和[Microsoft 平台和移动应用程序开发的工具](http://aka.ms/MobAppDev/StndPDF)。
+该指南可以补充[.NET 微服务： 为容器化.NET 应用程序的体系结构](https://aka.ms/microservicesebook)，其中重点介绍开发和部署容器化微服务。 其他值得读取的指南包括[Architecting 和开发现代 Web 应用程序使用 ASP.NET Core 和 Microsoft Azure](http://aka.ms/WebAppEbook)，[容器 Docker 应用生命周期内使用 Microsoft 平台和工具](http://aka.ms/dockerlifecycleebook)，和[Microsoft 平台和移动应用程序开发的工具](http://aka.ms/MobAppDev/StndPDF)。
 
 ## <a name="who-should-use-this-guide"></a>哪些人应该使用本指南
 

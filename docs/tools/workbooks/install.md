@@ -48,7 +48,7 @@ ms.locfileid: "34793816"
 |Android|在 Mac 和 Windows 上受支持|必须将 Google、 Visual Studio 或 Xamarin Android 仿真程序中，使用虚拟设备 > = 5.0|
 |WPF|在 Windows 上才支持|
 |控制台 (.NET Framework)|在 Mac 和 Windows 上受支持|
-|控制台 （.NET 核心）|在 Mac 和 Windows 上受支持|
+|控制台 （.NET Core）|在 Mac 和 Windows 上受支持|
 
 
 ## <a name="reporting-bugs"></a>报告 Bug

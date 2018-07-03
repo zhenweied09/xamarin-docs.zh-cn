@@ -24,7 +24,7 @@ _本文介绍如何将转换为使用.NET 标准 2.0 Xamarin.Forms 应用程序�
 
 Xamarin.Forms 2.4 允许 Xamarin.Forms 应用程序迁移到目标.NET 标准 2.0 通过 PCL 替换.NET 标准 2.0 库。 做到这一点，如下所示：
 
-- 确保[.NET 核心 2.0](https://www.microsoft.com/net/download/core)安装。
+- 确保[.NET Core 2.0](https://www.microsoft.com/net/download/core)安装。
 - 更新 Xamarin.Forms 解决方案，以便使用 Xamarin.Forms 2.4，或更高版本。
 - 将.NET 标准库添加到解决方案，面向.NET 标准 2.0。
 - 删除添加到标准.NET 库的类。
