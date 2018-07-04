@@ -72,11 +72,11 @@ ms.locfileid: "35242955"
 -   用角度 2 和 Typescript 开发单页面应用程序 (SPA)。 此方法用于 web 应用程序可避免执行往返与每个操作的服务器。
 -   使用 Xamarin.Forms，支持 iOS、 Android 和通用 Windows 平台 (UWP) 开发移动应用程序。
 
-有关 web 应用程序的信息，请参阅[Architecting 和开发现代 Web 应用程序使用 ASP.NET 核心和 Microsoft Azure](http://aka.ms/WebAppEbook)。
+有关 web 应用程序的信息，请参阅[Architecting 和开发现代 Web 应用程序使用 ASP.NET Core和 Microsoft Azure](http://aka.ms/WebAppEbook)。
 
 示例应用程序包括以下后端服务：
 
--   标识微服务，使用 ASP.NET 核心标识和 IdentityServer 中。
+-   标识微服务，使用 ASP.NET Core标识和 IdentityServer 中。
 -   目录微服务，这是数据驱动的创建、 读取、 更新和删除 (CRUD) 服务，使用使用 EntityFramework 核心的 SQL Server 数据库。
 -   排序 microservice，这是一个域驱动的服务使用域驱动的设计模式。
 -   购物篮微服务使用 Redis 缓存的数据驱动 CRUD 服务。

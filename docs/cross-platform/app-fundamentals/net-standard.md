@@ -8,7 +8,7 @@ ms.author: amburns
 ms.date: 04/12/2017
 ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
 ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/06/2018
 ms.locfileid: "34806785"
@@ -21,7 +21,7 @@ ms.locfileid: "34806785"
 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) 持续为 .NET 运行时行为建立统一性，但适用于 .NET 库实现的 .NET 基类库 (BCL) 没有类似的规范。
 
 你可以将它视为的简化的下一代[可移植类库](https://msdn.microsoft.com/library/gg597391.aspx)。
-它是所有.NET 平台，包括.NET 核心统一 API 的单个库。 你只需创建单个.NET 标准库，然后从任何支持.NET 标准平台的运行时使用它。
+它是所有.NET 平台，包括.NET Core统一 API 的单个库。 你只需创建单个.NET 标准库，然后从任何支持.NET 标准平台的运行时使用它。
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -37,7 +37,7 @@ ms.locfileid: "34806785"
 
   **注意：** 此模板将重命名为`.NET Standard`Visual Studio for mac。 的未来版本中
 
-  ![创建.NET 核心类库](net-standard-images/vsm01.png "创建新的.NET 核心类库")
+  ![创建.NET Core类库](net-standard-images/vsm01.png "创建新的.NET Core类库")
 
 2. 解决方案资源管理器中所示，将显示.NET 标准库的项目。 依赖项节点将指示库使用[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)。
 

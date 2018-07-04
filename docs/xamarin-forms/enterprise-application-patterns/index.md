@@ -66,7 +66,7 @@ Xamarin.Forms 包括页面导航、 从用户界面时，用户的交互或从�
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[身份验证和授权](authentication-and-authorization.md)
 
-有许多方法将身份验证和授权集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序与之通信。 在这里，使用 IdentityServer 4 容器化的标识 microservice 执行身份验证和授权。 IdentityServer 是用于与 ASP.NET 核心标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+有许多方法将身份验证和授权集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序与之通信。 在这里，使用 IdentityServer 4 容器化的标识 microservice 执行身份验证和授权。 IdentityServer 是用于与 ASP.NET Core标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[访问远程数据](accessing-remote-data.md)
 

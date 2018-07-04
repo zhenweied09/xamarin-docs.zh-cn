@@ -22,7 +22,7 @@ ms.locfileid: "35242084"
 
 ## <a name="introduction-to-representational-state-transfer"></a>具象状态传输简介
 
-具象状态传输 (REST) 是用于构建基于超媒体的分布式的系统体系结构样式。 REST 模型的主要优势是它具有基于开放标准并不将绑定的模型或访问任何特定实现到客户端应用程序的实现。 因此，无法使用 Microsoft ASP.NET 核心 MVC，实现 REST web 服务，并且无法使用任何语言和工具集，可以生成 HTTP 请求并分析 HTTP 响应开发客户端应用程序。
+具象状态传输 (REST) 是用于构建基于超媒体的分布式的系统体系结构样式。 REST 模型的主要优势是它具有基于开放标准并不将绑定的模型或访问任何特定实现到客户端应用程序的实现。 因此，无法使用 Microsoft ASP.NET Core MVC，实现 REST web 服务，并且无法使用任何语言和工具集，可以生成 HTTP 请求并分析 HTTP 响应开发客户端应用程序。
 
 REST 模型使用导航方案来表示网络，称为资源上的对象和服务。 通常实现 REST 的系统使用 HTTP 协议来传输请求访问这些资源。 在此类系统中，客户端应用程序提交的请求中标识资源的 URI 和 HTTP 方法 （如 GET、 POST、 PUT 或 DELETE），该值指示对该资源执行的操作的形式。 HTTP 请求的正文包含执行该操作所需的任何数据。
 
