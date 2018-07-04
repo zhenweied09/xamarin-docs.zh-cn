@@ -89,5 +89,4 @@
 #### [为什么 Visual Studio 未将引用的库项目包含在生成中？](troubleshooting/questions/vs-config-manager.md)
 
 ### [更新对 NuGet 的组件引用](troubleshooting/component-nuget.md)
-### [支持选项](troubleshooting/support-options.md)
 ## [示例](samples/index.yml)
