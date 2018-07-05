@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Essentials： 振动
-description: 本文档介绍中 Xamarin.Essentials，这样就可以启动和停止 vibrate 功能所需的时间内的振动类。
+description: 本文档介绍中 Xamarin.Essentials，可以启动和停止振动功能所需的时间内的振动类。
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2a2902ca4eac8b889f6875580d7cb4ea352803a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1de464d289bc684015e5fb8489683e3134535b70
+ms.sourcegitcommit: cb69bdb469db0b3118e365d71114091c6febb027
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782916"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37406766"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials： 振动
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**振动**类可以启动和停止 vibrate 功能所需的一段时间。
+**振动**类，可以启动和停止在所需的时间内的振动功能。
 
 ## <a name="getting-started"></a>入门
 
@@ -24,7 +24,7 @@ ms.locfileid: "34782916"
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Vibrate 权限是必需的并必须在 Android 项目中配置。 这可以通过以下方式添加：
+振动权限是必需的必须在 Android 项目中配置。 这可以通过以下方法添加：
 
 打开**AssemblyInfo.cs**文件下**属性**文件夹并添加：
 
@@ -34,33 +34,33 @@ Vibrate 权限是必需的并必须在 Android 项目中配置。 这可以通�
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹并添加以下内的**清单**节点。
+打开**AndroidManifest.xml**文件下**属性**文件夹，并添加以下的内部**清单**节点。
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**VIBRATE**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**振动**权限。 这将自动更新**AndroidManifest.xml**文件。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-不需要其他的安装程序。
+无需其他设置。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-不需要其他的安装程序。
+无需其他设置。
 
 -----
 
 ## <a name="using-vibration"></a>使用振动
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-可以为一个设定的时间或默认值为 500 毫秒请求振动功能。
+可以请求一个设定的时间或默认值为 500 毫秒的振动功能。
 
 ```csharp
 try
@@ -82,7 +82,7 @@ catch (Exception ex)
 }
 ```
 
-可以使用请求的设备振动取消`Cancel`方法：
+可以使用请求取消的设备振动`Cancel`方法：
 
 ```csharp
 try
@@ -99,12 +99,13 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-differences"></a>平台的差异
+## <a name="platform-differences"></a>平台差异
 
 | 平台 | 差异 |
 | --- | --- |
-| iOS | 始终型表示 500 毫秒。 |
-| iOS | 不能取消振动。 |
+| iOS | 仅手机铃声时设备设置为"振动上环"。 |
+| iOS | 始终手机铃声 500 毫秒。 |
+| iOS | 无法取消振动。 |
 
 ## <a name="api"></a>API
 

@@ -1,35 +1,35 @@
 ---
 title: 演练-在 Xamarin.iOS 中使用本地通知
-description: 在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地通知。 它将演示创建和发布将弹出警报时接收的应用程序的通知的基础知识。
+description: 在本部分中我们将了解如何在 Xamarin.iOS 应用程序中使用本地通知。 它将演示创建和发布一条通知，将弹出警报时的应用接收到的基础知识。
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: bb133d16f12249cbd31e4fce2b227162b4b28333
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf1e44ba4176922234fc1b6b9bfe5c463611cc7b
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30776776"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403424"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>演练-在 Xamarin.iOS 中使用本地通知
 
-_在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地通知。它将演示创建和发布将弹出警报时接收的应用程序的通知的基础知识。_
+_在本部分中我们将了解如何在 Xamarin.iOS 应用程序中使用本地通知。它将演示创建和发布一条通知，将弹出警报时的应用接收到的基础知识。_
 
 > [!IMPORTANT]
-> 此部分中的信息与 iOS 9 和之前，它仍处于此处以支持较旧的 iOS 版本。 对于 iOS 10 及更高版本，请参阅[用户通知 Framework 指南](~/ios/platform/user-notifications/index.md)支持的 iOS 设备上的本地和远程通知。
+> 在本部分中的信息与 iOS 9 相关和之前，它已被保留此处以支持较旧 iOS 版本。 适用于 iOS 10 及更高版本，请参阅[用户通知框架指南](~/ios/platform/user-notifications/index.md)的 iOS 设备上支持本地和远程通知。
 
 ## <a name="walkthrough"></a>演练
 
-允许创建的简单应用程序将显示运行中的本地通知。 此应用程序将在其上有这样一个按钮。 当我们单击按钮时，它将创建本地通知。 经过指定时间段后，我们将看到显示的通知。
+允许创建简单的应用程序将显示运行中的本地通知。 此应用程序上将具有一个按钮。 当我们单击按钮时，它将创建本地通知。 经过指定时间段后，我们将看到显示的通知。
 
 
-1. 在适用于 Mac 的 Visual Studio，创建一个新的单一视图 iOS 解决方案，并对其`Notifications`。
-1. 打开`Main.storyboard`文件中，并将按钮拖动到该视图。 将该按钮命名**按钮**，并为其提供标题**添加通知**。 你可能还想要设置某些[约束](~/ios/user-interface/designer/designer-auto-layout.md)到按钮在此点： 
+1. 在 Visual Studio for Mac 中，创建一个新的单一视图 iOS 解决方案并对其`Notifications`。
+1. 打开`Main.storyboard`文件，并将按钮拖到视图。 将该按钮命名**按钮**，并为其提供标题**添加通知**。 您可能还要设置某些[约束](~/ios/user-interface/designer/designer-auto-layout.md)到现在的按钮： 
 
-    ![](local-notifications-in-ios-walkthrough-images/image3.png "设置在按钮上的一些约束")
+    ![](local-notifications-in-ios-walkthrough-images/image3.png "设置在按钮上的某些约束")
 1. 编辑`ViewController`类，并将以下事件处理程序添加到 ViewDidLoad 方法：
 
     ```csharp
@@ -56,9 +56,9 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
     };
     ```
 
-    此代码将创建使用声音，该图标标记的值设置为 1，并为用户显示警报的通知。
+    此代码将创建一条通知，使用声音、 图标徽章将值设置为 1，并向用户显示一条警报。
 
-1. 接下来编辑文件`AppDelegate.cs`，首先将添加到下面的代码`FinishedLaunching`方法。 我们已检查，以确定设备正在运行 iOS 8，如果我们正在**必需**寻求接收通知的用户的权限：
+1. 编辑文件，接下来`AppDelegate.cs`，首先将以下代码添加到`FinishedLaunching`方法。 我们已检查，以查看设备是否正在运行 iOS 8 中，如果我们正在**需**以请求用户的权限，以接收通知：
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -70,7 +70,7 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
         }
     ```
 
-1. 仍在`AppDelegate.cs`，添加以下方法，将收到通知时调用：
+1. 仍在`AppDelegate.cs`，添加以下方法，将被调用时收到通知：
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
@@ -79,7 +79,7 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
                 UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
                 okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-                Window.RootViewController.PresentViewController(okayAlertController, true, null);
+                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
                 // reset our badge
                 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
@@ -87,7 +87,7 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
 
     ```
 
-1. 我们需要处理通知由于本地通知程序启动时所在的情况。 编辑该方法`FinishedLaunching`中`AppDelegate`包括下面的代码段：
+1. 我们需要以处理通知由于本地通知程序启动时所在的情况。 编辑方法`FinishedLaunching`在`AppDelegate`包含以下代码段：
 
 
     ```csharp
@@ -114,13 +114,13 @@ _在本部分中我们将演练如何在 Xamarin.iOS 应用程序中使用本地
 
     ```
 
-1. 最后，运行该应用程序。 在 iOS 8 中，将提示您允许通知。 单击**确定**，然后单击**添加通知**按钮。 片刻后你应看到警报对话框中，如以下屏幕截图中所示：
+1. 最后，运行该应用程序。 在 iOS 8 中，将提示允许通知。 单击**确定**，然后单击**添加通知**按钮。 片刻后您应看到警报对话框，如以下屏幕截图中所示：
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "确认能够发送通知") ![ ](local-notifications-in-ios-walkthrough-images/image1.png "添加通知按钮") ![ ](local-notifications-in-ios-walkthrough-images/image2.png "通知警报对话框")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "确认可将通知发送") ![ ](local-notifications-in-ios-walkthrough-images/image1.png "添加通知按钮") ![ ](local-notifications-in-ios-walkthrough-images/image2.png "通知警报对话框")
 
 ## <a name="summary"></a>总结
 
-本演练演示了如何使用各种 API 创建和发布在 iOS 中的通知。 它还演示了如何使用以向用户提供一些应用程序特定反馈的徽章更新应用程序图标。
+本演练演示了如何使用各种 API 用于创建和发布在 iOS 中的通知。 它还演示了如何使用一个标记来向用户提供一些应用程序的特定反馈更新应用程序图标。
 
 
 ## <a name="related-links"></a>相关链接
