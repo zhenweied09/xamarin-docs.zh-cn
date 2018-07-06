@@ -18,17 +18,17 @@ ms.locfileid: "35242422"
 
 身份验证是从用户获取标识的凭据，如名称和密码，并根据证书颁发机构验证这些凭据的过程。 如果凭据有效，提交凭据实体被视为已验证的身份。 一旦标识已经过身份验证，授权过程将确定该标识是否有权访问给定的资源。
 
-有许多种集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序，包括使用 ASP.NET Core标识时，例如 Microsoft、 Google、 外部身份验证提供程序与之通信的身份验证和授权Facebook 或 Twitter 和身份验证中间件。 EShopOnContainers 移动应用程序执行身份验证和授权与使用 IdentityServer 4 容器化的标识微服务。 用于对用户进行身份验证或访问资源，移动应用程序从 IdentityServer，请求安全令牌。 为代表用户颁发令牌的 IdentityServer，用户必须登录到 IdentityServer。 但是，IdentityServer 不提供用户界面或数据库进行身份验证。 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core标识用于此目的。
+有许多种集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序，包括使用 ASP.NET Core 标识时，例如 Microsoft、 Google、 外部身份验证提供程序与之通信的身份验证和授权Facebook 或 Twitter 和身份验证中间件。 EShopOnContainers 移动应用程序执行身份验证和授权与使用 IdentityServer 4 容器化的标识微服务。 用于对用户进行身份验证或访问资源，移动应用程序从 IdentityServer，请求安全令牌。 为代表用户颁发令牌的 IdentityServer，用户必须登录到 IdentityServer。 但是，IdentityServer 不提供用户界面或数据库进行身份验证。 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core 标识用于此目的。
 
 ## <a name="authentication"></a>身份验证
 
-应用程序需要了解的当前用户身份时，身份验证是必需的。 ASP.NET Core用于标识用户的主要机制是 ASP.NET Core标识成员身份系统，它在由开发人员配置了数据存储中存储用户的信息。 尽管可以使用自定义存储或第三方包将标识信息存储在 Azure 存储、 Azure Cosmos DB 或其他位置，此数据存储通常情况下，将一个 EntityFramework 存储区。
+应用程序需要了解的当前用户身份时，身份验证是必需的。 ASP.NET Core 用于标识用户的主要机制是 ASP.NET Core 标识成员身份系统，它在由开发人员配置了数据存储中存储用户的信息。 尽管可以使用自定义存储或第三方包将标识信息存储在 Azure 存储、 Azure Cosmos DB 或其他位置，此数据存储通常情况下，将一个 EntityFramework 存储区。
 
-有关身份验证方案，请使用本地用户数据存储区，并且保留之间通过 cookie （就是典型 ASP.NET MVC web 应用程序中） 发出的请求的标识信息，则 ASP.NET Core标识为合适的解决方案。 但是，cookie 并不总是保持和传输数据的自然方式。 例如，ASP.NET Core web 应用程序公开从移动应用程序访问的 RESTful 终结点通常需要使用持有者令牌身份验证，因为无法在此方案中使用 cookie。 但是，持有者令牌可以轻松地检索和包括在从移动应用程序进行 web 请求的 authorization 标头。
+有关身份验证方案，请使用本地用户数据存储区，并且保留之间通过 cookie （就是典型 ASP.NET MVC web 应用程序中） 发出的请求的标识信息，则 ASP.NET Core 标识为合适的解决方案。 但是，cookie 并不总是保持和传输数据的自然方式。 例如，ASP.NET Core web 应用程序公开从移动应用程序访问的 RESTful 终结点通常需要使用持有者令牌身份验证，因为无法在此方案中使用 cookie。 但是，持有者令牌可以轻松地检索和包括在从移动应用程序进行 web 请求的 authorization 标头。
 
 ### <a name="issuing-bearer-tokens-using-identityserver-4"></a>颁发的持有者令牌使用 IdentityServer 4
 
-[IdentityServer 4](https://github.com/IdentityServer/IdentityServer4)有关 ASP.NET Core，可用于许多的身份验证和授权方案，包括颁发本地 ASP.NET Core标识用户的安全令牌是一种开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+[IdentityServer 4](https://github.com/IdentityServer/IdentityServer4)有关 ASP.NET Core，可用于许多的身份验证和授权方案，包括颁发本地 ASP.NET Core 标识用户的安全令牌是一种开放源代码 OpenID Connect 和 OAuth 2.0 框架。
 
 > [!NOTE]
 > OpenID Connect 和 OAuth 2.0 则是非常相似，而同时将不同职责。
@@ -95,11 +95,11 @@ public void ConfigureServices(IServiceCollection services)
 -   用于签名的凭据。
 -   用户可能会请求的 API 和标识资源访问权限。
 -   将连接到请求令牌的客户端。
--   ASP.NET Core标识。
+-   ASP.NET Core 标识。
 
 >💡 **提示**： 动态加载 IdentityServer 4 配置。 IdentityServer 4 Api 均允许配置 IdentityServer 从内存中列表的配置对象。 在 eShopOnContainers 引用应用程序中，这些内存中集合是硬编码到应用程序。 但是，在生产方案中可以加载它们动态从配置文件或数据库。
 
-有关配置 IdentityServer 使用 ASP.NET Core标识的信息，请参阅[使用 ASP.NET Core标识](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html)IdentityServer 文档中。
+有关配置 IdentityServer 使用 ASP.NET Core 标识的信息，请参阅[使用 ASP.NET Core 标识](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html)IdentityServer 文档中。
 
 #### <a name="configuring-api-resources"></a>配置 API 资源
 
@@ -218,7 +218,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUr
 
 ### <a name="performing-authentication"></a>执行身份验证
 
-为代表用户颁发令牌的 IdentityServer，用户必须登录到 IdentityServer。 但是，IdentityServer 不提供用户界面或数据库进行身份验证。 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core标识用于此目的。
+为代表用户颁发令牌的 IdentityServer，用户必须登录到 IdentityServer。 但是，IdentityServer 不提供用户界面或数据库进行身份验证。 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core 标识用于此目的。
 
 EShopOnContainers 移动应用程序使用进行身份验证与 IdentityServer 一点图 9-2 中的混合身份验证流。
 
@@ -472,7 +472,7 @@ httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("
 
 ## <a name="summary"></a>总结
 
-有许多方法将身份验证和授权集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序与之通信。 EShopOnContainers 移动应用程序执行身份验证和授权与使用 IdentityServer 4 容器化的标识微服务。 IdentityServer 是用于与 ASP.NET Core标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+有许多方法将身份验证和授权集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序与之通信。 EShopOnContainers 移动应用程序执行身份验证和授权与使用 IdentityServer 4 容器化的标识微服务。 IdentityServer 是用于与 ASP.NET Core 标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
 
 用于对用户进行身份验证或访问资源，移动应用程序从 IdentityServer，请求安全令牌。 资源时，必须对需要授权的 Api 请求中包含访问令牌。 IdentityServer 的中间件验证传入的访问令牌，以确保它们发送从受信任的颁发者，并且它们可以有效地与接收它们的 API 一起使用。
 
