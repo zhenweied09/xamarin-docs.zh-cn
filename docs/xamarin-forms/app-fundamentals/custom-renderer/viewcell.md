@@ -1,36 +1,36 @@
 ---
 title: 自定义 ViewCell
-description: Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。 本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。
+description: Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含开发人员定义的视图的单元格。 本文演示如何创建 ViewCell Xamarin.Forms ListView 控件中托管的自定义呈现器。
 ms.prod: xamarin
 ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 2011049180aa47b7be68486d4f30bd356e2ba813
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3cb4d7f152e0f9540275f12f0ade568cd0552784
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241798"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935571"
 ---
 # <a name="customizing-a-viewcell"></a>自定义 ViewCell
 
-_Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含的开发人员定义的视图的单元格。本文演示如何创建 Xamarin.Forms ListView 控件中承载 ViewCell 自定义呈现器。这将停止从正在 Xamarin.Forms 布局计算在 ListView 滚动过程中重复调用。_
+_Xamarin.Forms ViewCell 是可以添加到 ListView 或 TableView，其中包含开发人员定义的视图的单元格。本文演示如何创建 ViewCell Xamarin.Forms ListView 控件中托管的自定义呈现器。这将停止 Xamarin.Forms 布局计算正在从 ListView 滚动期间重复调用。_
 
-每个 Xamarin.Forms 单元格有随附的呈现器针对每个平台创建的本机控件的实例。 当[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 应用程序，在 iOS 中呈现`ViewCellRenderer`该类进行实例化，这反过来实例化一个本机`UITableViewCell`控件。 在 Android 平台上，`ViewCellRenderer`类实例化一个本机`View`控件。 在通用 Windows 平台 (UWP)，`ViewCellRenderer`类实例化一个本机`DataTemplate`。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+每个 Xamarin.Forms 单元格已创建的本机控件实例的每个平台随附的呈现器。 当[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 应用程序，在 iOS 中呈现`ViewCellRenderer`类实例化时，这反过来实例化本机`UITableViewCell`控件。 在 Android 平台上`ViewCellRenderer`类实例化本机`View`控件。 在通用 Windows 平台 (UWP)，`ViewCellRenderer`类实例化本机`DataTemplate`。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
-下图说明之间的关系[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)和相应的本机控件实现它：
+下图说明了之间的关系[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)和相应的本机控件实现它：
 
-![](viewcell-images/viewcell-classes.png "ViewCell 控件实现的本机控件之间的关系")
+![](viewcell-images/viewcell-classes.png "ViewCell 控件与实现的本机控件之间的关系")
 
-呈现进程可以拍摄利用来实现特定于平台的自定义项创建的自定义呈现器[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)每个平台上。 执行此操作的过程如下所示：
+渲染过程时可以执行利用通过创建自定义呈现器为实现特定于平台的自定义[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)每个平台上。 执行此操作的过程如下所示：
 
 1. [创建](#Creating_the_Custom_Cell)Xamarin.Forms 自定义单元格。
 1. [使用](#Consuming_the_Custom_Cell)Xamarin.Forms 中的自定义单元格。
-1. [创建](#Creating_the_Custom_Renderer_on_each_Platform)为每个平台上的单元格的自定义呈现器。
+1. [创建](#Creating_the_Custom_Renderer_on_each_Platform)每个平台上的单元格的自定义呈现器。
 
-每个项将现在讨论反过来，若要实现`NativeCell`利用每个单元格，Xamarin.Forms 中承载的特定于平台的布局的呈现器[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件。 这将停止被反复调用期间的 Xamarin.Forms 布局计算`ListView`滚动。
+每个项将现在讨论反过来，实现`NativeCell`呈现器都使用了 Xamarin.Forms 中承载的每个单元的特定于平台的布局[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件。 这会阻止被重复调用期间的 Xamarin.Forms 布局计算`ListView`滚动。
 
 <a name="Creating_the_Custom_Cell" />
 
@@ -66,13 +66,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-`NativeCell`类将创建在.NET 标准的类库项目中，并定义自定义单元格的 API。 自定义单元格公开`Name`， `Category`，和`ImageFilename`可以显示通过数据绑定的属性。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+`NativeCell`类在.NET Standard 库项目中创建和定义自定义单元格的 API。 自定义单元格公开`Name`， `Category`，和`ImageFilename`可以通过数据绑定显示的属性。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>使用自定义单元格
 
-`NativeCell`自定义单元格可以引用 Xaml 中的标准.NET 库项目中通过声明其位置的命名空间和自定义单元格元素上使用的命名空间前缀。 下面的代码示例演示如何`NativeCell`自定义单元格可供 XAML 页：
+`NativeCell`自定义单元格可以是在 Xaml 中引用.NET Standard 库项目中通过声明其位置的命名空间和自定义单元格元素上使用的命名空间前缀。 下面的代码示例演示如何将`NativeCell`自定义单元格可供 XAML 页：
 
 ```xaml
 <ContentPage ...
@@ -94,9 +94,9 @@ public class NativeCell : ViewCell
 </ContentPage>
 ```
 
-`local`命名空间前缀可以命名任何内容。 但是，`clr-namespace`和`assembly`值必须匹配自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义单元格。
+`local`命名空间前缀可以命名任何内容。 但是，`clr-namespace`和`assembly`值必须匹配的自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义单元格。
 
-下面的代码示例演示如何`NativeCell`自定义单元格可供 C# 页：
+下面的代码示例演示如何将`NativeCell`自定义单元格可供 C# 页：
 
 ```csharp
 public class NativeCellPageCS : ContentPage
@@ -143,42 +143,42 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Xamarin.Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件用于显示数据，通过填充该字段的列表[ `ItemSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemsSource/)属性。 [ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略会试图尽量减少`ListView`通过回收列表单元格的内存占用量和执行加速。 有关详细信息，请参阅[缓存策略](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)。
+Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView)控件用于显示数据，通过填充一系列[ `ItemSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemsSource/)属性。 [ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)缓存策略尝试最大程度减少`ListView`通过回收列表单元格占用的内存和执行速度。 有关详细信息，请参阅[缓存策略](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)。
 
-在列表中的每一行都包含三个项的数据 – 一个名称、 类别和图像文件名。 通过定义列表中每个行的布局`DataTemplate`通过引用[ `ListView.ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemTemplate/)可绑定属性。 `DataTemplate`定义列表中的数据的每一行将`NativeCell`显示其`Name`， `Category`，和`ImageFilename`通过数据绑定的属性。 有关详细信息`ListView`控制，请参阅[ListView](~/xamarin-forms/user-interface/listview/index.md)。
+在列表中的每一行都包含三个项的数据-名称、 类别和图像文件名。 在列表中每行的布局由定义`DataTemplate`通过引用[ `ListView.ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%601.ItemTemplate/)可绑定属性。 `DataTemplate`定义会在列表中的数据的每个行`NativeCell`，它显示其`Name`， `Category`，和`ImageFilename`通过数据绑定的属性。 有关详细信息`ListView`控件，请参阅[ListView](~/xamarin-forms/user-interface/listview/index.md)。
 
-自定义呈现器现在可以添加到每个应用程序项目，自定义每个单元格的特定于平台的布局。
+自定义呈现器现在可以添加到自定义的每个单元的特定于平台的布局的每个应用程序项目。
 
 <a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>在每个平台上创建自定义呈现器
 
-用于创建自定义呈现器类的过程如下所示：
+创建自定义呈现器类的过程如下所示：
 
 1. 创建一个子类`ViewCellRenderer`呈现自定义单元格的类。
-1. 重写呈现自定义单元格的特定于平台的方法并编写逻辑以自定义它。
-1. 添加`ExportRenderer`到自定义呈现器类，以指定它将可用于呈现 Xamarin.Forms 自定义单元格特性。 此属性用于与 xamarin.forms 结合注册自定义呈现器。
+1. 重写呈现自定义单元格的特定于平台的方法并编写逻辑以其进行自定义。
+1. 添加`ExportRenderer`属性到自定义呈现器类，以指定它将用于呈现 Xamarin.Forms 自定义单元格。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
 
 > [!NOTE]
-> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果自定义呈现器未注册，则将使用控件的基类的默认呈现器。 但是，自定义呈现器需要每个平台项目中呈现时[ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)元素。
+> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果未注册的自定义呈现器，则将使用默认的呈现器的控件的基类。 但是，自定义呈现器呈现时所需的每个平台项目中[ViewCell](xref:Xamarin.Forms.ViewCell)元素。
 
-下图说明了示例应用程序，以及它们之间的关系中的每个项目的责任：
+下图演示了示例应用程序，以及它们之间的关系的每个项目的职责：
 
 ![](viewcell-images/solution-structure.png "NativeCell 自定义呈现器项目职责")
 
-`NativeCell`由特定于平台的呈现器类，该类的所有派生自呈现自定义单元格`ViewCellRenderer`为每个平台的类。 这将导致每个`NativeCell`自定义单元格呈现具有特定于平台的布局，如以下屏幕截图中所示：
+`NativeCell`自定义单元格呈现的特定于平台的呈现器类，它们都派生自`ViewCellRenderer`为每个平台的类。 这会导致每个`NativeCell`自定义单元格呈现特定于平台的布局，如以下屏幕截图中所示：
 
-![](viewcell-images/screenshots.png "每个平台上的 NativeCell")
+![](viewcell-images/screenshots.png "每个平台上 NativeCell")
 
-`ViewCellRenderer`类公开用于呈现自定义单元格的特定于平台的方法。 这是`GetCell`方法在 iOS 平台上， `GetCellCore` Android 平台，方法与`GetTemplate`在 UWP 上的方法。
+`ViewCellRenderer`类公开特定于平台的方法来呈现自定义单元格。 这是`GetCell`iOS 平台上的方法`GetCellCore`Android 平台上的方法和`GetTemplate`UWP 上的方法。
 
-每个自定义呈现器类用修饰`ExportRenderer`与 xamarin.forms 结合注册呈现器的属性。 该属性采用两个参数 – 呈现，Xamarin.Forms 单元格的类型名称和自定义呈现器的类型名称。 `assembly`到属性的前缀指定特性应用于整个程序集。
+每个自定义呈现器类用修饰`ExportRenderer`与 Xamarin.Forms 结合注册呈现器的属性。 该属性采用两个参数-Xamarin.Forms 单元格所呈现的类型名称和自定义呈现器的类型名称。 `assembly`到的属性的前缀指定特性应用于整个程序集。
 
 以下各节讨论每个特定于平台的自定义呈现器类的实现。
 
-### <a name="creating-the-custom-renderer-on-ios"></a>在 iOS 上创建自定义呈现器
+### <a name="creating-the-custom-renderer-on-ios"></a>在 ios 设备上创建自定义呈现器
 
-下面的代码示例演示为 iOS 平台的自定义呈现器：
+下面的代码示例显示了为 iOS 平台的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeCell), typeof(NativeiOSCellRenderer))]
@@ -207,21 +207,21 @@ namespace CustomRenderer.iOS
 }
 ```
 
-`GetCell`调用方法来生成每个单元格要显示。 每个单元格`NativeiOSCell`实例，该类定义的单元格和其数据的布局。 该操作的`GetCell`方法是依赖于[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略：
+`GetCell`调用方法来生成要显示每个单元格。 每个单元格是`NativeiOSCell`实例，用于定义单元和其数据的布局。 操作`GetCell`方法所依赖[ `ListView` ](xref:Xamarin.Forms.ListView)缓存策略：
 
-- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/)、`GetCell`方法将调用每个单元格。 A`NativeiOSCell`实例将为每个创建`NativeCell`最初屏幕显示的实例。 当用户滚动通过`ListView`，`NativeiOSCell`实例将能重复使用。 有关 iOS 单元格重新使用的详细信息，请参阅[单元格重用](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。
-
-  > [!NOTE]
-  > 此自定义呈现器代码将执行某些单元格重复使用，即使[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)设置为保留单元格。
-
-  所显示的每个数据`NativeiOSCell`实例，是否新创建的或重新使用，将使用更新的数据从各个`NativeCell`实例通过`UpdateCell`方法。
+- 当[ `ListView` ](xref:Xamarin.Forms.ListView)缓存策略是[ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement)，则`GetCell`方法将调用的每个单元。 一个`NativeiOSCell`将为每个创建实例`NativeCell`最初在屏幕显示的实例。 当用户通过滚动`ListView`，`NativeiOSCell`实例将重新使用。 有关 iOS 单元格重复使用的详细信息，请参阅[单元格重用](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。
 
   > [!NOTE]
-  > `OnNativeCellPropertyChanged`方法都不会调用时[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略设置为保留单元格。
+  > 此自定义呈现器代码将执行一些单元格重复使用，即使[ `ListView` ](xref:Xamarin.Forms.ListView)设置保留单元格。
 
-- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)、`GetCell`方法将调用屏幕上最初显示每个单元格。 A`NativeiOSCell`实例将为每个创建`NativeCell`最初屏幕显示的实例。 所显示的每个数据`NativeiOSCell`将中的数据更新实例`NativeCell`实例通过`UpdateCell`方法。 但是，`GetCell`不会按照用户进行滚动通过调用方法`ListView`。 相反，`NativeiOSCell`实例将能重复使用。 `PropertyChanged` 会在引发事件`NativeCell`实例时更改其数据，与`OnNativeCellPropertyChanged`事件处理程序将更新中每个重新使用的数据`NativeiOSCell`实例。
+  每个显示的数据`NativeiOSCell`实例，新创建的或重复使用，是否将更新从每个数据`NativeCell`实例通过`UpdateCell`方法。
 
-下面的代码示例演示`OnNativeCellPropertyChanged`具有时调用的方法`PropertyChanged`引发事件：
+  > [!NOTE]
+  > `OnNativeCellPropertyChanged`方法将永远不会调用何时[ `ListView` ](xref:Xamarin.Forms.ListView)缓存策略设置为保留的单元格。
+
+- 当[ `ListView` ](xref:Xamarin.Forms.ListView)缓存策略是[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)，则`GetCell`最初在屏幕上显示每个单元格将调用方法。 一个`NativeiOSCell`将为每个创建实例`NativeCell`最初在屏幕显示的实例。 每个显示的数据`NativeiOSCell`中的数据将更新实例`NativeCell`实例通过`UpdateCell`方法。 但是，`GetCell`不会调用方法，当用户滚动通过`ListView`。 相反，`NativeiOSCell`实例将重新使用。 `PropertyChanged` 将在引发事件`NativeCell`实例时数据发生更改，并`OnNativeCellPropertyChanged`事件处理程序将更新的数据在每个重复使用`NativeiOSCell`实例。
+
+下面的代码示例演示`OnNativeCellPropertyChanged`方法调用时`PropertyChanged`引发事件：
 
 ```csharp
 namespace CustomRenderer.iOS
@@ -250,7 +250,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-此方法将更新所显示的数据重新使用`NativeiOSCell`实例。 进行更改的属性检查，因为可以多次调用方法。
+此方法将更新所显示的数据重新使用`NativeiOSCell`实例。 检查已更改的属性变得很，因为可以多次调用方法。
 
 `NativeiOSCell`类定义每个单元格的布局，并在下面的代码示例所示：
 
@@ -315,11 +315,11 @@ internal class NativeiOSCell : UITableViewCell, INativeElementView
 }
 ```
 
-此类定义用于呈现该单元格的内容和其布局的控件。 此类应实现[ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/)接口，这是必需[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略。 此接口指定的类必须实现[ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/)属性，它应返回回收单元格的自定义单元格数据。
+此类定义用于呈现该单元格的内容和其布局的控件。 类实现[ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/)接口，这是需要[ `ListView` ](xref:Xamarin.Forms.ListView)使用[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)缓存策略。 此接口指定的类必须实现[ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/)属性，它应返回回收单元格的自定义单元格数据。
 
-`NativeiOSCell`构造函数初始化的外观`HeadingLabel`， `SubheadingLabel`，和`CellImageView`属性。 这些属性用于显示中存储的数据`NativeCell`实例，与`UpdateCell`方法调用每个属性值设置。 此外，当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略，所显示的数据`HeadingLabel`， `SubheadingLabel`，和`CellImageView`属性可以是通过更新`OnNativeCellPropertyChanged`中自定义呈现器方法。
+`NativeiOSCell`构造函数初始化的外观`HeadingLabel`， `SubheadingLabel`，和`CellImageView`属性。 这些属性用于显示中存储的数据`NativeCell`实例，与`UpdateCell`方法被调用来设置每个属性的值。 此外，当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)缓存策略，所显示的数据`HeadingLabel`， `SubheadingLabel`，和`CellImageView`属性可以是通过更新`OnNativeCellPropertyChanged`中自定义呈现器的方法。
 
-由执行单元格布局`LayoutSubviews`重写，这会设置的坐标`HeadingLabel`， `SubheadingLabel`，和`CellImageView`单元格内。
+通过执行单元格布局`LayoutSubviews`重写，该设置的坐标`HeadingLabel`， `SubheadingLabel`，和`CellImageView`单元格内。
 
 ### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
@@ -358,21 +358,21 @@ namespace CustomRenderer.Droid
 }
 ```
 
-`GetCellCore`调用方法来生成每个单元格要显示。 每个单元格`NativeAndroidCell`实例，该类定义的单元格和其数据的布局。 该操作的`GetCellCore`方法是依赖于[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略：
+`GetCellCore`调用方法来生成要显示每个单元格。 每个单元格是`NativeAndroidCell`实例，用于定义单元和其数据的布局。 操作`GetCellCore`方法所依赖[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略：
 
-- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RetainElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RetainElement/)、`GetCellCore`方法将调用每个单元格。 A`NativeAndroidCell`将为每个创建`NativeCell`最初屏幕显示的实例。 当用户滚动通过`ListView`，`NativeAndroidCell`实例将能重复使用。 有关 Android 单元格重新使用的详细信息，请参阅[行视图重新使用](~/android/user-interface/layouts/list-view/populating.md)。
-
-  > [!NOTE]
-  > 请注意此自定义呈现器代码将执行某些单元格重复使用，即使[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)设置为保留单元格。
-
-  所显示的每个数据`NativeAndroidCell`实例，是否新创建的或重新使用，将使用更新的数据从各个`NativeCell`实例通过`UpdateCell`方法。
+- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RetainElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RetainElement)，则`GetCellCore`方法将调用的每个单元。 一个`NativeAndroidCell`将为每个创建`NativeCell`最初在屏幕显示的实例。 当用户通过滚动`ListView`，`NativeAndroidCell`实例将重新使用。 有关 Android 单元格重复使用的详细信息，请参阅[重复使用行视图](~/android/user-interface/layouts/list-view/populating.md)。
 
   > [!NOTE]
-  > 请注意，当`OnNativeCellPropertyChanged`方法将调用时[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)是设置为保留单元格，它不会更新`NativeAndroidCell`属性值。
+  > 请注意此自定义呈现器代码将执行一些单元格重复使用，即使[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)设置保留单元格。
 
-- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)、`GetCellCore`方法将调用屏幕上最初显示每个单元格。 A`NativeAndroidCell`实例将为每个创建`NativeCell`最初屏幕显示的实例。 所显示的每个数据`NativeAndroidCell`将中的数据更新实例`NativeCell`实例通过`UpdateCell`方法。 但是，`GetCellCore`不会按照用户进行滚动通过调用方法`ListView`。 相反，`NativeAndroidCell`实例将能重复使用。  `PropertyChanged` 会在引发事件`NativeCell`实例时更改其数据，与`OnNativeCellPropertyChanged`事件处理程序将更新中每个重新使用的数据`NativeAndroidCell`实例。
+  每个显示的数据`NativeAndroidCell`实例，新创建的或重复使用，是否将更新从每个数据`NativeCell`实例通过`UpdateCell`方法。
 
-下面的代码示例演示`OnNativeCellPropertyChanged`具有时调用的方法`PropertyChanged`引发事件：
+  > [!NOTE]
+  > 请注意，当`OnNativeCellPropertyChanged`方法将调用何时[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)是设置为保留单元，它将不会更新`NativeAndroidCell`属性值。
+
+- 当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)缓存策略是[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)，则`GetCellCore`最初在屏幕上显示每个单元格将调用方法。 一个`NativeAndroidCell`将为每个创建实例`NativeCell`最初在屏幕显示的实例。 每个显示的数据`NativeAndroidCell`中的数据将更新实例`NativeCell`实例通过`UpdateCell`方法。 但是，`GetCellCore`不会调用方法，当用户滚动通过`ListView`。 相反，`NativeAndroidCell`实例将重新使用。  `PropertyChanged` 将在引发事件`NativeCell`实例时数据发生更改，并`OnNativeCellPropertyChanged`事件处理程序将更新的数据在每个重复使用`NativeAndroidCell`实例。
+
+下面的代码示例演示`OnNativeCellPropertyChanged`方法调用时`PropertyChanged`引发事件：
 
 ```csharp
 namespace CustomRenderer.Droid
@@ -401,7 +401,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-此方法将更新所显示的数据重新使用`NativeAndroidCell`实例。 进行更改的属性检查，因为可以多次调用方法。
+此方法将更新所显示的数据重新使用`NativeAndroidCell`实例。 检查已更改的属性变得很，因为可以多次调用方法。
 
 `NativeAndroidCell`类定义每个单元格的布局，并在下面的代码示例所示：
 
@@ -474,11 +474,11 @@ internal class NativeAndroidCell : LinearLayout, INativeElementView
 }
 ```
 
-此类定义用于呈现该单元格的内容和其布局的控件。 此类应实现[ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/)接口，这是必需[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略。 此接口指定的类必须实现[ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/)属性，它应返回回收单元格的自定义单元格数据。
+此类定义用于呈现该单元格的内容和其布局的控件。 类实现[ `INativeElementView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.INativeElementView/)接口，这是需要[ `ListView` ](xref:Xamarin.Forms.ListView)使用[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)缓存策略。 此接口指定的类必须实现[ `Element` ](https://developer.xamarin.com/api/property/Xamarin.Forms.INativeElementView.Element/)属性，它应返回回收单元格的自定义单元格数据。
 
-`NativeAndroidCell`构造函数放大`NativeAndroidCell`布局，并初始化`HeadingTextView`， `SubheadingTextView`，和`ImageView`膨胀布局中控件的属性。 这些属性用于显示中存储的数据`NativeCell`实例，与`UpdateCell`方法调用每个属性值设置。 此外，当[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)使用[ `RecycleElement` ](https://developer.xamarin.com/api/field/Xamarin.Forms.ListViewCachingStrategy.RecycleElement/)缓存策略，所显示的数据`HeadingTextView`， `SubheadingTextView`，和`ImageView`属性可以是通过更新`OnNativeCellPropertyChanged`中自定义呈现器方法。
+`NativeAndroidCell`构造函数增大`NativeAndroidCell`布局，并将初始化`HeadingTextView`， `SubheadingTextView`，和`ImageView`夸大布局中控件的属性。 这些属性用于显示中存储的数据`NativeCell`实例，与`UpdateCell`方法被调用来设置每个属性的值。 此外，当[ `ListView` ](xref:Xamarin.Forms.ListView)使用[ `RecycleElement` ](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement)缓存策略，所显示的数据`HeadingTextView`， `SubheadingTextView`，和`ImageView`属性可以是通过更新`OnNativeCellPropertyChanged`中自定义呈现器的方法。
 
-下面的代码示例演示的布局定义`NativeAndroidCell.axml`布局文件：
+下面的代码示例显示的布局定义`NativeAndroidCell.axml`布局文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -518,7 +518,7 @@ internal class NativeAndroidCell : LinearLayout, INativeElementView
 </RelativeLayout>
 ```
 
-此布局指定两个`TextView`控件和`ImageView`控件用于显示单元格的内容。 这两个`TextView`控件是垂直方向内`LinearLayout`控件，与正在中包含的所有控件`RelativeLayout`。
+此布局指定两个`TextView`控件和一个`ImageView`控件用于显示单元格的内容。 这两个`TextView`控件是在垂直方向`LinearLayout`控件，与中所包含的所有控件`RelativeLayout`。
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
@@ -538,9 +538,9 @@ namespace CustomRenderer.UWP
 }
 ```
 
-`GetTemplate`调用方法以返回要呈现列表中的数据的每一行的单元格。 它将创建`DataTemplate`每个`NativeCell`实例将与显示在屏幕上，`DataTemplate`定义的外观和单元格的内容。
+`GetTemplate`调用方法以返回要呈现列表中的数据的每一行的单元格。 它会创建`DataTemplate`为每个`NativeCell`实例将与显示在屏幕上，`DataTemplate`定义外观和单元格的内容。
 
-`DataTemplate`存储在应用程序级别的资源字典中，并在下面的代码示例所示：
+`DataTemplate`存储在应用程序级资源字典中，并在下面的代码示例所示：
 
 ```xaml
 <DataTemplate x:Key="ListViewItemTemplate">
@@ -565,11 +565,11 @@ namespace CustomRenderer.UWP
 </DataTemplate>
 ```
 
-`DataTemplate`指定用来显示该单元格，及其布局和外观的内容的控件。 两个`TextBlock`控件和`Image`控件用于显示通过数据绑定的单元格的内容。 此外，实例`ConcatImageExtensionConverter`用于串联`.jpg`文件扩展名为每个图像文件名称。 这样可确保`Image`控件可以加载并呈现图像时`Source`属性设置。
+`DataTemplate`指定用来显示该单元格，其布局和外观的内容的控件。 两个`TextBlock`控件和一个`Image`控件用于显示通过数据绑定的单元格的内容。 此外，实例`ConcatImageExtensionConverter`用于连接`.jpg`文件扩展名为每个图像文件名称。 这可确保`Image`控件可以加载并呈现图像时`Source`属性设置。
 
 ## <a name="summary"></a>总结
 
-本文演示了如何创建自定义呈现器[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) Xamarin.Forms 内承载[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件。 这将停止被反复调用期间的 Xamarin.Forms 布局计算`ListView`滚动。
+本文演示了如何创建自定义呈现器[ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/)位于 Xamarin.Forms [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)控件。 这会阻止被重复调用期间的 Xamarin.Forms 布局计算`ListView`滚动。
 
 
 ## <a name="related-links"></a>相关链接
