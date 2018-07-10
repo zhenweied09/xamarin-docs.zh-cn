@@ -1,32 +1,30 @@
 ---
 title: 对 Android 应用程序包进行签名
+description: 如何对 Android 应用程序包 (APK) 进行签名以便发布
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
-ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 07/02/2018
+ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458796"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403307"
 ---
 # <a name="signing-the-android-application-package"></a>对 Android 应用程序包进行签名
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+在[做好应用程序发布准备](~/android/deploy-test/release-prep/index.md)中，使用了“存档管理器”以生成应用并将它放置在存档中以进行签名和发布。 此部分说明如何创建 Android 签名标识、为 Android 应用程序创建新签名证书以及将存档应用即席发布到磁盘。 生成的 APK 可以旁加载到 Android 设备中，而无需经过应用商店。
 
-此部分介绍用于对 Visual Studio 提供的 APK 进行签名的集成发布工作流。 在[做好应用程序发布准备](~/android/deploy-test/release-prep/index.md)中，使用了“存档管理器”以生成应用并将它放置在存档中以进行签名和发布。 此部分说明如何创建 Android 签名标识、为 Android 应用程序创建新签名证书以及将存档应用即席发布到磁盘。
-生成的 APK 可以旁加载到 Android 设备中，而无需经过应用商店。
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 在[存档以便进行发布](~/android/deploy-test/release-prep/index.md#archive)中，“分发渠道”对话框提供了两种分发选择。 选择“即席”：
 
 [![“分发通道”对话框](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-在此部分中，我们会使用 Visual Studio for Mac 的集成发布工作流对 APK 进行签名。 在[做好应用程序发布准备](~/android/deploy-test/release-prep/index.md)中，我们使用了“存档管理器”以生成应用并将它放置在存档中以进行签名和发布。 在此部分中，我们会了解如何创建 Android 签名标识、为 Android 应用程序创建新签名证书以及将存档应用即席发布到磁盘。 生成的 APK 可以旁加载到 Android 设备中，而无需经过应用商店。
 
 在[存档以便进行发布](~/android/deploy-test/release-prep/index.md#archive)中，“签名和分发...”对话框向我们提供了两种分发选择。 选择“即席”，然后单击“下一步”：
 
@@ -58,14 +56,14 @@ ms.locfileid: "34458796"
 
 生成的密钥存储位于以下位置：
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+C:\\Users\\USERNAME\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\ALIAS\\ALIAS.keystore
 
-例如，以上步骤可能会在以下位置创建新签名密钥：
+例如，使用“chimp”作为别名，以上步骤会在以下位置创建新签名密钥：
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+C:\\Users\\USERNAME\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore
 
 > [!NOTE]
-> 请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Windows）丢失，将无法使用与以前版本相同的证书对应用签名。
+> 请确保将生成的密钥存储文件和密码备份在安全的位置 &ndash; 它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Windows）丢失，将无法使用与以前版本相同的证书对应用签名。
 
 有关密钥存储的详细信息，请参阅[查找密钥存储的 MD5 或 SHA1 签名](~/android/deploy-test/signing/keystore-signature.md)。
 
@@ -89,7 +87,7 @@ ms.locfileid: "34458796"
 
 
 > [!NOTE]
-> 请确保将生成的密钥存储文件备份在安全的位置 &ndash;，它不包含在解决方案中。 如果密钥存储文件（例如，因为移动到另一台计算机或重新安装了 Mac）丢失，将无法使用与以前版本相同的证书对应用签名。
+> 请确保将生成的密钥存储文件和密码备份在安全的位置 &ndash; 它不包含在解决方案中。 如果密钥存储文件丢失（例如，因为移动到另一台计算机或重新安装了 macOS），将无法使用与以前版本相同的证书对应用签名。
 
 有关密钥存储的详细信息，请参阅[查找密钥存储的 MD5 或 SHA1 签名](~/android/deploy-test/signing/keystore-signature.md)。
 
