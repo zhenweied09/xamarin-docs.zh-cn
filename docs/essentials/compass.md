@@ -1,32 +1,32 @@
 ---
 title: Xamarin.Essentials： 指南针
-description: 本文档介绍中 Xamarin.Essentials，允许您监视设备的磁北标题的指南针类。
+description: 本文档介绍 Xamarin.Essentials，可让你监视设备的地方，磁北标题中的 Compass 类。
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 63818014a9b3bdbef479055cbbcfbf8d348080fc
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: cf41948c55c742140896bfb48d9bb4abf25c8d68
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080438"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947408"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials： 指南针
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**指南针**类允许您监视设备的磁北标题。
+**指南针**类可让你监视设备的地方，磁北标题。
 
 ## <a name="using-compass"></a>使用指南针
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-指南针功能的工作方式是调用`Start`和`Stop`方法来侦听对指南针更改。 任何更改发送回通过`ReadingChanged`事件。 下面是一个示例：
+指南针功能适用于通过调用`Start`和`Stop`方法来侦听对指南针更改。 任何更改发送回通过`ReadingChanged`事件。 下面是一个示例：
 
 ```csharp
 public class CompassTest
@@ -68,28 +68,21 @@ public class CompassTest
 }
 ```
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[传感器速度](xref:Xamarin.Essentials.SensorSpeed)
+[!include[](~/essentials/includes/sensor-speed.md)]
 
-- **最快**– 尽可能 （但不保证在 UI 线程上返回） 快获取传感器数据。
-- **游戏**– 速率适用于 （但不保证在 UI 线程上返回） 的游戏。
-- **正常**– 适用于屏幕方向更改的默认速率。
-- **Ui** – 速率适用于常规用户界面。
-
-如果事件处理程序不能保证在 UI 线程上运行和事件处理程序需要访问用户界面元素，如果使用[ `MainThread.BeginInvokeOnMainThread` ](main-thread.md)方法在 UI 线程上运行该代码。
-
-## <a name="platform-implementation-specifics"></a>平台实现细节
+## <a name="platform-implementation-specifics"></a>平台实现的细节
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android 不提供用于检索指南针方向的 API。 我们使用加速和磁力计来计算磁北标题、 google 建议这样做。 
+Android 不提供一个 API 用于检索的指南针标题。 我们在此使用加速感应器和磁力仪来计算磁北方标题，google 建议这样做。 
 
-在极少数情况下，你可能看到不一致的结果因为传感器需要校准，涉及到图 8 动态移动你的设备。 这是为了打开 Google 图，点击你的位置的点，然后选择这样做的最佳方式**校准指南针**。
+在极少数情况下，您可能看到不一致的结果传感器需要校准，因为其中涉及图 8 动态移动你的设备。 这将打开 Google 地图，点击上获得您所在位置的点，然后选择这样做的最佳方式**校准指南针**。
 
-请注意，在同一时间从您的应用程序中运行多个传感器可能调整传感器速度。
+请注意，从您的应用程序在同一时间运行的多个传感器可能调整传感器速度。
 
 --------------
 
 ## <a name="api"></a>API
 
-- [指南针源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [指南针的源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
 - [指南针 API 文档](xref:Xamarin.Essentials.Compass)

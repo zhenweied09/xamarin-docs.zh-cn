@@ -1,32 +1,32 @@
 ---
-title: Xamarin.Essentials： 陀螺
-description: 中 Xamarin.Essentials 的陀螺类允许您监视设备的陀螺传感器，测量设备的三个主轴的旋转。
+title: Xamarin.Essentials： 陀螺仪
+description: 在 Xamarin.Essentials 陀螺仪类可让你监视设备的陀螺仪传感器测量设备的三个主要轴的旋转。
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6b2df3b6c5061464a06730ad09cbbbfdbceeb247
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: 3c83b3a9d8a7801e531006f50f8db2e1ad23e48c
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080447"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947210"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials： 陀螺
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials： 陀螺仪
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**陀螺**类允许您监视设备的陀螺传感器即围绕设备的三个主轴的旋转角度。
+**陀螺仪**类可让你监视设备的陀螺仪传感器是围绕设备的三个主要轴的旋转角度。
 
-## <a name="using-gyroscope"></a>使用陀螺
+## <a name="using-gyroscope"></a>使用陀螺仪
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-陀螺功能的工作方式是调用`Start`和`Stop`方法来侦听对陀螺更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
+陀螺仪功能适用于通过调用`Start`和`Stop`方法来侦听对陀螺仪的更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
 
 ```csharp
 
@@ -69,16 +69,9 @@ public class GyroscopeTest
 }
 ```
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[传感器速度](xref:Xamarin.Essentials.SensorSpeed)
-
-- **最快**– 尽可能 （但不保证在 UI 线程上返回） 快获取传感器数据。
-- **游戏**– 速率适用于 （但不保证在 UI 线程上返回） 的游戏。
-- **正常**– 适用于屏幕方向更改的默认速率。
-- **Ui** – 速率适用于常规用户界面。
-
-如果事件处理程序不能保证在 UI 线程上运行和事件处理程序需要访问用户界面元素，如果使用[ `MainThread.BeginInvokeOnMainThread` ](main-thread.md)方法在 UI 线程上运行该代码。
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [陀螺源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
-- [陀螺 API 文档](xref:Xamarin.Essentials.Gyroscope)
+- [陀螺仪源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [陀螺仪 API 文档](xref:Xamarin.Essentials.Gyroscope)

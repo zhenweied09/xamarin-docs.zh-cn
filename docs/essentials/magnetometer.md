@@ -1,32 +1,32 @@
 ---
-title: Xamarin.Essentials： 磁力计
-description: 中 Xamarin.Essentials 的磁力计类允许您监视设备的磁力计传感器，指示相对于地球磁字段与设备方向。
+title: Xamarin.Essentials： 磁力仪
+description: 中 Xamarin.Essentials 的磁力仪类可让你监视设备的磁力仪传感器，指示相对于地球磁场的设备的方向。
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.openlocfilehash: 52790f78c2d78347a35f111b3c4db63900c24ec7
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080437"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947356"
 ---
-# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials： 磁力计
+# <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials： 磁力仪
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**磁力计**类允许您监视设备的磁力计传感器指示相对于地球磁字段与设备方向。
+**磁力仪**类可让你监视设备的磁力仪传感器指示相对于地球磁场的设备的方向。
 
-## <a name="using-magnetometer"></a>使用磁力计
+## <a name="using-magnetometer"></a>使用磁力仪
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-磁力计功能的工作方式是调用`Start`和`Stop`方法来侦听到磁力计的更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
+磁力仪功能适用于通过调用`Start`和`Stop`方法来侦听对磁力仪的更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
 
 ```csharp
 
@@ -71,16 +71,9 @@ public class MagnetometerTest
 
 在 microteslas 中返回所有数据。
 
-## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[传感器速度](xref:Xamarin.Essentials.SensorSpeed)
-
-- **最快**– 尽可能 （但不保证在 UI 线程上返回） 快获取传感器数据。
-- **游戏**– 速率适用于 （但不保证在 UI 线程上返回） 的游戏。
-- **正常**– 适用于屏幕方向更改的默认速率。
-- **Ui** – 速率适用于常规用户界面。
-
-如果事件处理程序不能保证在 UI 线程上运行和事件处理程序需要访问用户界面元素，如果使用[ `MainThread.BeginInvokeOnMainThread` ](main-thread.md)方法在 UI 线程上运行该代码。
+[!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [磁力计源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
-- [磁力计 API 文档](xref:Xamarin.Essentials.Magnetometer)
+- [磁力仪源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [磁力仪 API 文档](xref:Xamarin.Essentials.Magnetometer)
