@@ -1,32 +1,32 @@
 ---
 title: Xamarin.Essentials： 电话拨号程序
-description: 中 Xamarin.Essentials 的 PhoneDialer 类可让应用程序在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
+description: 在 Xamarin.Essentials PhoneDialer 类使应用程序能够在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782837"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831392"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials： 电话拨号程序
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**PhoneDialer**类可让应用程序在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
+**PhoneDialer**类使应用程序能够在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
 
 ## <a name="using-phone-dialer"></a>使用电话拨号程序
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-电话拨号程序功能的工作方式是调用`Open`具有电话号码以打开与拨号程序的方法。 当`Open`请求 API 将自动尝试设置基于国家/地区代码，如果指定数字的格式。
+电话拨号程序功能的工作方式是调用`Open`方法使用的电话号码以打开与拨号程序。 当`Open`请求 API 将自动尝试根据国家/地区代码，如果指定该数字的格式。
 
 ```csharp
 public class PhoneDialerTest
