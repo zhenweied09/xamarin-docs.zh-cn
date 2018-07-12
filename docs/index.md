@@ -6,11 +6,11 @@ description: Xamarin 允许你使用 .NET 代码和特定于平台的用户界�
 featureFlags:
 - clicktale
 ms.openlocfilehash: 8f7f1432ab0dfc7a44a6b688ea998ec01812609a
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831353"
 ---
 <div id="main" class="v2">
     <div class="container">
