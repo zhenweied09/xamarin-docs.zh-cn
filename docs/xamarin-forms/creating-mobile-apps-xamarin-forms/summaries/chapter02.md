@@ -7,24 +7,24 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 94c575bdfdc2325def00de58381f9bc295d953b9
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: d1daceba29e45adf64947c89555cc4e75a850d32
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935105"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995272"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用剖析
 
-在 Xamarin.Forms 应用程序中，占用屏幕空间的对象称为*可视元素*、 通过封装[ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/)类。 可视元素可以拆分为三个类别对应于这些类：
+在 Xamarin.Forms 应用程序中，占用屏幕空间的对象称为*可视元素*、 通过封装[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)类。 可视元素可以拆分为三个类别对应于这些类：
 
-- [页](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)
-- [布局](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)
-- [视图](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)
+- [页](xref:Xamarin.Forms.Page)
+- [布局](xref:Xamarin.Forms.Layout)
+- [视图](xref:Xamarin.Forms.View)
 
 一个`Page`派生占据整个屏幕或几乎整个屏幕。 通常情况下，一个页面的子级是`Layout`派生类来组织子可视元素。 子级`Layout`可以是其他`Layout`类或`View`派生类 (通常称为*元素*)，这是熟悉的对象，如文本、 位图、 滑块、 按钮、 列表框等。
 
-本章演示如何通过在创建应用程序[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)，这是`View`显示文本的派生类。
+本章演示如何通过在创建应用程序[ `Label` ](xref:Xamarin.Forms.Label)，这是`View`显示文本的派生类。
 
 ## <a name="say-hello"></a>假设你好
 
@@ -43,7 +43,7 @@ ms.locfileid: "37935105"
 
 ## <a name="inside-the-files"></a>文件内
 
-显示的视觉对象**Hello**程序定义的构造函数中[ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs)类。 `App` 派生自 Xamarin.Forms 类[ `Application` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/)。
+显示的视觉对象**Hello**程序定义的构造函数中[ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs)类。 `App` 派生自 Xamarin.Forms 类[ `Application` ](xref:Xamarin.Forms.Application)。
 
 **引用**一部分**Hello** PCL 项目中包括以下 Xamarin.Forms 程序集：
 
@@ -111,18 +111,18 @@ ms.locfileid: "37935105"
 
 [ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings)解决方案展示了如何添加一个新 C# 文件到**Greetings**项目。 此文件定义一个名为`GreetingsPage`派生`ContentPage`。 在此书中，大多数项目都包含单个`ContentPage`派生其名称是带有后缀的项目名称`Page`追加。
 
-`GreetingsPage`构造函数实例化[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)视图，它是显示文本的 Xamarin.Forms 视图。 [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/)属性设置为显示的文本`Label`。 此程序设置`Label`到`Content`属性的`ContentPage`。 构造函数`App`类，然后实例化`GreetingsPage`并将其设置为其`MainPage`属性。
+`GreetingsPage`构造函数实例化[ `Label` ](xref:Xamarin.Forms.Label)视图，它是显示文本的 Xamarin.Forms 视图。 [ `Text` ](xref:Xamarin.Forms.Label.Text)属性设置为显示的文本`Label`。 此程序设置`Label`到`Content`属性的`ContentPage`。 构造函数`App`类，然后实例化`GreetingsPage`并将其设置为其`MainPage`属性。
 
 在页面的左上角显示的文本。 在 iOS 上，这意味着它与重叠页面的状态栏。 有几种解决方案，此问题：
 
 ### <a name="solution-1-include-padding-on-the-page"></a>解决方案 1。 包括在页上的填充
 
-设置[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Padding/)页上的属性。 `Padding` 类型[ `Thickness` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Thickness/)，具有四个属性的结构：
+设置[ `Padding` ](xref:Xamarin.Forms.Page.Padding)页上的属性。 `Padding` 类型[ `Thickness` ](xref:Xamarin.Forms.Thickness)，具有四个属性的结构：
 
-- [`Left`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Left/)
-- [`Top`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Top/)
-- [`Right`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Right/)
-- [`Bottom`](https://developer.xamarin.com/api/property/Xamarin.Forms.Thickness.Bottom/)
+- [`Left`](xref:Xamarin.Forms.Thickness.Left)
+- [`Top`](xref:Xamarin.Forms.Thickness.Top)
+- [`Right`](xref:Xamarin.Forms.Thickness.Right)
+- [`Bottom`](xref:Xamarin.Forms.Thickness.Bottom)
 
 `Padding` 定义页内的一个区域，其中排除内容。 这允许`Label`以避免覆盖 iOS 状态栏。
 
@@ -132,9 +132,9 @@ ms.locfileid: "37935105"
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>解决方案 3。 包括只适用于 iOS （PCL 和 SAP） 的填充
 
-在用于书的 Xamarin.Forms 版本`Padding`可以使用所选属性特定于 iOS 的 PCL 或 SAP [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/)或[ `Device.OnPlatform<T>` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform%7BT%7D/p/T/T/T/)静态方法。 这些方法现已弃用
+在用于书的 Xamarin.Forms 版本`Padding`可以使用所选属性特定于 iOS 的 PCL 或 SAP [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action))或[ `Device.OnPlatform<T>` ](xref:Xamarin.Forms.Device.OnPlatform*)静态方法。 这些方法现已弃用
 
-`Device.OnPlatform`方法用来运行特定于平台的代码，或者选择特定于平台的值。 在内部，它们使利用[ `Device.OS` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.OS/)静态只读属性，返回的成员[ `TargetPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/)枚举：
+`Device.OnPlatform`方法用来运行特定于平台的代码，或者选择特定于平台的值。 在内部，它们使利用[ `Device.OS` ](xref:Xamarin.Forms.Device.OS)静态只读属性，返回的成员[ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform)枚举：
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
@@ -142,13 +142,13 @@ ms.locfileid: "37935105"
 - [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)以前用来标识 Windows Phone 8.0 但是现在未使用
 - [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) 未使用
 
-`Device.OnPlatform`方法，`Device.OS`属性，并`TargetPlatform`枚举都现在已弃用。 请改用[ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/)属性，并比较`string`返回包含以下静态字段的值：
+`Device.OnPlatform`方法，`Device.OS`属性，并`TargetPlatform`枚举都现在已弃用。 请改用[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并比较`string`返回包含以下静态字段的值：
 
-- [`iOS`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.iOS/)字符串"iOS"
-- [`Android`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Android/)字符串"Android"
-- [`UWP`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.UWP/)字符串"UWP"，Windows 运行时平台
-- [`Windows`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.Windows/)字符串"Windows"的 Windows 运行时 （Windows 8.1 和 Windows Phone 8.1）
-- [`WinPhone`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device.WinPhone/)字符串"WinPhone"Windows Phone 8.0
+- [`iOS`](xref:Xamarin.Forms.Device.iOS)字符串"iOS"
+- [`Android`](xref:Xamarin.Forms.Device.Android)字符串"Android"
+- [`UWP`](xref:Xamarin.Forms.Device.UWP)字符串"UWP"，Windows 运行时平台
+- `Windows`字符串"Windows"的 Windows 运行时 （Windows 8.1 和 Windows Phone 8.1，不推荐使用）
+- `WinPhone`字符串"WinPhone"Windows Phone 8.0 （已弃用）
 
 [ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom)静态只读属性相关联。 这将返回的成员[ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom)，其中包括以下成员：
 
@@ -161,28 +161,28 @@ ms.locfileid: "37935105"
 
 ## <a name="solution-3a-set-margin-on-the-label"></a>解决方案 3a。 标签上的设置距
 
-[ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)太迟引入属性要包含在书中，但它也是类型`Thickness`，并且上设置`Label`来定义的计算中包括视图之外的区域视图的布局。
+[ `Margin` ](xref:Xamarin.Forms.View.Margin)太迟引入属性要包含在书中，但它也是类型`Thickness`，并且上设置`Label`来定义的计算中包括视图之外的区域视图的布局。
 
-`Padding`属性上才[ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/)并[ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)派生类。 `Margin`属性是可用于所有[ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)派生类。
+`Padding`属性上才[ `Layout` ](xref:Xamarin.Forms.Layout)并[ `Page` ](xref:Xamarin.Forms.Page)派生类。 `Margin`属性是可用于所有[ `View` ](xref:Xamarin.Forms.View)派生类。
 
 ## <a name="solution-4-center-the-label-within-the-page"></a>解决方案 4。 在页面内的使标签居中
 
-您可以居中`Label`内`Page`（或将其放入其他 8 个位置之一） 通过设置[ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/)并[ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/)属性的`Label`为类型的值[ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/)。 `LayoutOptions`结构定义两个属性：
+您可以居中`Label`内`Page`（或将其放入其他 8 个位置之一） 通过设置[ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)并[ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions)属性的`Label`为类型的值[ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions)。 `LayoutOptions`结构定义两个属性：
 
-- [ `Alignment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Alignment/)类型的属性[ `LayoutAlignment` ](xref:Xamarin.Forms.LayoutAlignment)，具有四个成员的枚举： [ `Start` ](xref:Xamarin.Forms.LayoutAlignment.Start)，这意味着左端或顶端具体取决于方向[ `Center` ](xref:Xamarin.Forms.LayoutAlignment.Center)， [ `End` ](xref:Xamarin.Forms.LayoutAlignment.End)，这意味着右侧或底部根据方向，以及[ `Fill` ](xref:Xamarin.Forms.LayoutAlignment.Fill)。
+- [ `Alignment` ](xref:Xamarin.Forms.LayoutOptions.Alignment)类型的属性[ `LayoutAlignment` ](xref:Xamarin.Forms.LayoutAlignment)，具有四个成员的枚举： [ `Start` ](xref:Xamarin.Forms.LayoutAlignment.Start)，这意味着左端或顶端具体取决于方向[ `Center` ](xref:Xamarin.Forms.LayoutAlignment.Center)， [ `End` ](xref:Xamarin.Forms.LayoutAlignment.End)，这意味着右侧或底部根据方向，以及[ `Fill` ](xref:Xamarin.Forms.LayoutAlignment.Fill)。
 
-- [ `Expands` ](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/)类型的属性`bool`。
+- [ `Expands` ](xref:Xamarin.Forms.LayoutOptions.Expands)类型的属性`bool`。
 
 通常不直接使用这些属性。 相反，将这两个属性的组合提供的类型的八个静态只读属性`LayoutOptions`:
 
-- [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`LayoutOptions.End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`LayoutOptions.StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`LayoutOptions.CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`LayoutOptions.End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`LayoutOptions.StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`LayoutOptions.CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 `HorizontalOptions` 并`VerticalOptions`是在 Xamarin.Forms 布局中，最重要的属性和中的更详细地讨论[**第 4 章。滚动堆栈**](chapter04.md)。
 
@@ -192,7 +192,7 @@ ms.locfileid: "37935105"
 
 ## <a name="solution-5-center-the-text-within-the-label"></a>解决方案 5。 在标签中的文本居中
 
-此外可以使文本居中 （或将其放在页上的其他 8 个位置中） 通过设置[ `HorizontalTextAlignment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.HorizontalTextAlignment/)并[ `VerticalTextAlignment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/)的属性`Label`成员[ `TextAlignment` ](xref:Xamarin.Forms.TextAlignment)枚举：
+此外可以使文本居中 （或将其放在页上的其他 8 个位置中） 通过设置[ `HorizontalTextAlignment` ](xref:Xamarin.Forms.Label.HorizontalTextAlignment)并[ `VerticalTextAlignment` ](xref:Xamarin.Forms.Label.VerticalTextAlignment)的属性`Label`成员[ `TextAlignment` ](xref:Xamarin.Forms.TextAlignment)枚举：
 
 - [`Start`](xref:Xamarin.Forms.TextAlignment.Start)含义左或靠上 （具体取决于方向）
 - [`Center`](xref:Xamarin.Forms.TextAlignment.Center)

@@ -1,36 +1,36 @@
 ---
-title: Bitmap SkiaSharp 中的基础知识
-description: 本文章介绍如何从各种源加载 SkiaSharp 中的位图，并将其显示在 Xamarin.Forms 应用程序，并演示这一替换示例代码。
+title: 位图中 SkiaSharp 的基础知识
+description: 这篇文章介绍了如何从各种源加载位图 SkiaSharp 中的并将它们显示在 Xamarin.Forms 应用程序，并且此示例代码进行了演示。
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 291f08afb95c70e9f9fccc02e1fd7353cf107213
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: dec6fa1534f14836ae98677ad33e280ff510fb97
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244381"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995178"
 ---
-# <a name="bitmap-basics-in-skiasharp"></a>Bitmap SkiaSharp 中的基础知识
+# <a name="bitmap-basics-in-skiasharp"></a>位图中 SkiaSharp 的基础知识
 
-_从各种源加载位图并显示它们。_
+_从各种源加载位图并将其显示。_
 
-SkiaSharp 中的支持是位图的非常大。 本文介绍如何仅的基础知识&mdash;如何加载位图以及如何显示它们：
+SkiaSharp 中的支持是位图的非常大。 本文介绍如何仅基本&mdash;如何加载位图和它们的显示方式：
 
 ![](bitmaps-images/bitmapssample.png "两个位图的显示")
 
-SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)。 有多种方法来创建位图，但是这篇文章限制到本身[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/)方法，后者将加载从位图[ `SKStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/)引用位图文件的对象。 可以方便地使用[ `SKManagedStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/)派生自的类`SKStream`因为它具有一个构造函数接受.NET 的[ `Stream` ](https://developer.xamarin.com/api/type/System.IO.Stream/)对象。
+SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)。 有许多方法来创建一个位图，但本文将限制到本身[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/)方法，这将加载从位图[ `SKStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/)对象，它引用一个位图文件。 它可以方便地使用[ `SKManagedStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/)派生的类`SKStream`因为它具有一个接受.NET 构造函数[ `Stream` ](xref:System.IO.Stream)对象。
 
-**基本位图**页面**SkiaSharpFormsDemos**程序演示如何从三个不同的源加载位图：
+**基本位图**页面**SkiaSharpFormsDemos**程序演示了如何从三个不同的源加载位图：
 
-- 超额 Internet
+- 借助 Internet 多
 - 从可执行文件中嵌入的资源
 - 从用户的照片库
 
-三个`SKBitmap`对象这些三个源定义为中的字段[ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs)类：
+三个`SKBitmap`对象作为字段中定义了这些三个源[ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs)类：
 
 ```csharp
 public class BasicBitmapsPage : ContentPage
@@ -55,7 +55,7 @@ public class BasicBitmapsPage : ContentPage
 
 ## <a name="loading-a-bitmap-from-the-web"></a>从 Web 加载位图
 
-若要加载基于 URL 的位图，可以使用[ `WebRequest` ](https://developer.xamarin.com/api/type/System.Net.WebRequest/)类，如下面的代码中执行中所示`BasicBitmapsPage`构造函数。 此处的 URL 指向与某些示例位图 Xamarin 网站上的区域。 在网站上的包允许追加调整特定宽度位图的规范：
+若要加载基于 URL 的位图，可以使用[ `WebRequest` ](xref:System.Net.WebRequest)类，如以下代码执行中所示`BasicBitmapsPage`构造函数。 此处的 URL 指向具有一些示例位图的 Xamarin web 站点上的区域。 在网站上的包，可以追加大小调整为特定宽度位图的规范：
 
 ```csharp
 Uri uri = new Uri("http://developer.xamarin.com/demo/IMG_3256.JPG?width=480");
@@ -85,15 +85,15 @@ request.BeginGetResponse((IAsyncResult arg) =>
 }, null);
 ```
 
-回调方法时已成功下载位图，传递给`BeginGetResponse`方法运行。 `EndGetResponse`调用需要处于`try`阻止以防出现错误。 `Stream`获取从对象`GetResponseStream`不能满足在某些平台上，因此位图内容复制到`MemoryStream`对象。 此时，`SKManagedStream`可以创建对象。 现在此引用的位图文件，这可能是 JPEG 或 PNG 文件。 `SKBitmap.Decode`方法对位图文件进行解码，并将结果存储在内部 SkiaSharp 格式。
+回调方法时已成功下载位图，传递给`BeginGetResponse`方法运行。 `EndGetResponse`调用需采用`try`阻止以防出现错误。 `Stream`对象，来自`GetResponseStream`不能满足在某些平台上使位图内容复制到`MemoryStream`对象。 此时，`SKManagedStream`可创建对象。 现在引用的位图文件，这可能是 JPEG 或 PNG 文件。 `SKBitmap.Decode`方法解码的位图文件，并将结果存储在内部 SkiaSharp 格式。
 
-回调方法传递给`BeginGetResponse`运行后构造函数已完成执行，这意味着`SKCanvasView`需要失效，以允许`PaintSurface`处理程序以更新显示。 但是，`BeginGetResponse`在执行，辅助线程中运行的回调，因此很有必要将使用`Device.BeginInvokeOnMainThread`运行`InvalidateSurface`用户界面线程中的方法。
+回调方法传递给`BeginGetResponse`运行后构造函数已完成执行，这意味着`SKCanvasView`需要失效允许`PaintSurface`处理程序以更新显示。 但是，`BeginGetResponse`回调运行在辅助线程的执行，因此需要使用`Device.BeginInvokeOnMainThread`运行`InvalidateSurface`用户界面线程中的方法。
 
-## <a name="loading-a-bitmap-resource"></a>加载位图资源
+## <a name="loading-a-bitmap-resource"></a>正在加载位图资源
 
-在代码中，方面加载位图的最简单方法在你的应用程序中直接包括位图资源。 **SkiaSharpFormsDemos**程序包括一个名为文件夹**媒体**包含一个名为的位图文件**monkey.png**。 在**属性**对话框对于此文件，则必须为此类文件**生成操作**的**嵌入的资源**！
+在代码中，方面加载位图的最简单方法直接在您的应用程序中包括的位图资源。 **SkiaSharpFormsDemos**程序包括一个名为文件夹**媒体**包含一个名为的位图文件**monkey.png**。 在中**属性**对话框中为此文件，必须提供此类文件**生成操作**的**嵌入的资源**！
 
-每个嵌入的资源具有*资源 ID*项目名称、 文件夹和文件名，所有连接由句点组成： **SkiaSharpFormsDemos.Media.monkey.png**。 你可以通过指定该资源获取与此资源的访问权限的自变量形式 ID [ `GetManifestResourceStream` ](https://developer.xamarin.com/api/member/System.Reflection.Assembly.GetManifestResourceStream/p/System.String/)方法[ `Assembly` ](https://developer.xamarin.com/api/type/System.Reflection.Assembly/)类：
+每个嵌入的资源具有*资源 ID* ，它包含项目名称、 文件夹和文件名，所有连接通过句点： **SkiaSharpFormsDemos.Media.monkey.png**。 可以通过指定该资源获取访问此资源 ID 作为参数到[ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String))方法[ `Assembly` ](xref:System.Reflection.Assembly)类：
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
@@ -110,11 +110,11 @@ using (SKManagedStream skStream = new SKManagedStream(stream))
 
 ## <a name="loading-a-bitmap-from-the-photo-library"></a>从照片库加载位图
 
-还有可能要从设备的图片库加载一张照片的用户。 Xamarin.Forms 本身未提供此工具。 该作业需要依赖服务，如文所述的那个[从图片库中选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)。
+还有可能要从设备的图片库加载一张照片的用户。 Xamarin.Forms 本身未提供此功能。 该作业需要一个依赖关系服务，如本文所述[图片库从选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)。
 
-**IPicturePicker.cs**文件和三个**PicturePickerImplementation.cs**已从这篇文章的文件复制到的各种项目**SkiaSharpFormsDemos**解决方案，并取得新命名空间名称。 此外，Android **MainActivity.cs**文章中所述修改文件和 iOS 项目已被授予权限以访问底部的两个行的照片库**info.plist**文件。
+**IPicturePicker.cs**文件和三个**PicturePickerImplementation.cs**该文章中的文件已复制到的各种项目**SkiaSharpFormsDemos**解决方案，并取得新命名空间名称。 此外，Android **MainActivity.cs**文章中所述修改文件和 iOS 项目已被授予权限以访问照片库使用两行代码靠近末尾部分给**info.plist**文件。
 
-`BasicBitmapsPage`构造函数将添加`TapGestureRecognizer`到`SKCanvasView`的点击通知。 在收到点击，`Tapped`处理程序获取访问图片选取器依赖关系服务并调用`GetImageStreamAsync`。 如果`Stream`返回对象，然后内容复制到`MemoryStream`，某些平台所需的方式。 代码的其余部分是类似于其他两个方法：
+`BasicBitmapsPage`构造函数将添加`TapGestureRecognizer`到`SKCanvasView`要通知的分流点。 在点击，收到`Tapped`处理程序获取访问图片选取器依赖关系服务并调用`GetImageStreamAsync`。 如果`Stream`返回对象，然后将内容复制到`MemoryStream`的平台的一些要求。 代码的其余部分是类似于两种方法：
 
 ```csharp
 // Add tap gesture recognizer
@@ -145,21 +145,21 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-请注意，`Tapped`处理程序调用`InvalidateSurface`方法`SKCanvasView`对象。 这将生成新调用`PaintSurface`处理程序。
+请注意，`Tapped`处理程序调用`InvalidateSurface`方法的`SKCanvasView`对象。 这将生成到新的调用`PaintSurface`处理程序。
 
 ## <a name="displaying-the-bitmaps"></a>显示位图
 
-`PaintSurface`处理程序需要显示三个位图。 处理程序假定电话处于纵向模式，并将画布垂直划分为三个相等部分。
+`PaintSurface`显示三个位图所需的处理程序。 该处理程序假定手机处于纵向模式，并且将在画布垂直划分为三个相等部分。
 
-使用最简单的形式显示第一个位图[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/)方法。 只需指定为 X 和 Y 坐标，此处是与位图左上角来定位：
+使用最简单的形式显示第一个位图[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/)方法。 您需要指定是定位位图左上角的 X 和 Y 坐标：
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-尽管`SKPaint`定义参数，它同时具有默认值为`null`，你可以忽略它。 位图的像素只需将传输到的一对一映射显示面的像素。
+尽管`SKPaint`定义参数，它具有默认值为`null`，可以忽略它。 位图的像素只被转移到具有一对一的映射显示器表面的像素为单位。
 
-程序可以获取位图的像素大小[ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/)和[ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/)属性。 这些属性允许程序计算元素的坐标位图画布的左上第三个中心中：
+程序可以获取位图的像素尺寸[ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/)并[ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/)属性。 这些属性允许程序计算的坐标，以在画布左上第三个中心位置位图：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -186,9 +186,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 ```
 
-第三个版本[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有两个`SKRect`用于指定位图转换显示，但该版本的矩形子集的自变量未使用此文章中。
+第三个版本[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有两个`SKRect`指定到显示，但该版本的位图的矩形子集的参数不在本文中使用。
 
-下面是要显示从嵌入的资源位图加载位图的代码：
+下面是代码，以显示从嵌入的资源位图加载位图：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -203,11 +203,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-位图拉伸到矩形，这正是 monkey 水平拉伸这些屏幕快照中的尺寸：
+位图将拉伸为矩形，这就是原因 monkey 水平拉伸这些屏幕截图中的尺寸：
 
-[![](bitmaps-images/basicbitmaps-small.png "三重基本位图页的屏幕截图")](bitmaps-images/basicbitmaps-large.png#lightbox "三个基本位图页的屏幕快照")
+[![](bitmaps-images/basicbitmaps-small.png "三个基本位图页的屏幕截图")](bitmaps-images/basicbitmaps-large.png#lightbox "三个基本位图页的屏幕截图")
 
-第三个图像&mdash;其中是否您运行程序并从你自己的图片库加载照片上只能查看&mdash;还显示在一个矩形，但矩形的位置和大小调整以保持该位图纵横比。 此计算是稍有更为复杂，因为它需要计算的缩放系数基于位图和目标矩形的大小和使在该区域的矩形内居中：
+第三个图像&mdash;，仅可看到是否运行该程序，并从你自己的图片库加载一张照片&mdash;还显示在一个矩形，但该矩形的位置和大小调整以保持位图的长宽比。 此计算是更复杂一些，因为它需要计算缩放系数基于位图和目标矩形的大小和集中在该区域的矩形：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -242,7 +242,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-如果尚未从图片库中，加载任何位图则`else`块显示了一些文本以提示用户点击屏幕。
+如果尚未从图片库中，加载任何位图则`else`块显示一些文本以提示用户点击屏幕。
 
 
 ## <a name="related-links"></a>相关链接

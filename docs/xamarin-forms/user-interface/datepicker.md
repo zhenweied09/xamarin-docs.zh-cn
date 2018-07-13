@@ -7,29 +7,29 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 31422f1067473ccb49a681098bd0809c451e7369
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935353"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994921"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
 _允许用户选择日期的 Xamarin.Forms 视图_
 
-Xamarin.Forms [ `DatePicker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)调用平台的日期选取器控件，并允许用户选择日期。 `DatePicker` 定义了八个属性：
+Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker)调用平台的日期选取器控件，并允许用户选择日期。 `DatePicker` 定义了八个属性：
 
-- [`MinimumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/) 类型的[ `DateTime` ](https://developer.xamarin.com/api/type/System.DateTime/)，默认为 1900 年的第一天。
-- [`MaximumDate`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/) 类型的`DateTime`的默认值为 2100年的年份的最后一天。
-- [`Date`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/) 类型的`DateTime`，默认值为所选日期[ `DateTime.Today` ](https://developer.xamarin.com/api/property/System.DateTime.Today/)。
-- [`Format`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Format/) 类型的`string`、 一个[标准](/dotnet/standard/base-types/standard-date-and-time-format-strings/)或[自定义](/dotnet/standard/base-types/custom-date-and-time-format-strings/).NET 格式设置字符串，它默认为"D"，长日期模式。
-- [`TextColor`](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.TextColor/) 类型的[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/)，用来显示默认为所选的日期的颜色[ `Color.Default` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)。
+- [`MinimumDate`](xref:Xamarin.Forms.DatePicker.MinimumDate) 类型的[ `DateTime` ](xref:System.DateTime)，默认为 1900 年的第一天。
+- [`MaximumDate`](xref:Xamarin.Forms.DatePicker.MaximumDate) 类型的`DateTime`的默认值为 2100年的年份的最后一天。
+- [`Date`](xref:Xamarin.Forms.DatePicker.Date) 类型的`DateTime`，默认值为所选日期[ `DateTime.Today` ](xref:System.DateTime.Today)。
+- [`Format`](xref:Xamarin.Forms.DatePicker.Format) 类型的`string`、 一个[标准](/dotnet/standard/base-types/standard-date-and-time-format-strings/)或[自定义](/dotnet/standard/base-types/custom-date-and-time-format-strings/).NET 格式设置字符串，它默认为"D"，长日期模式。
+- [`TextColor`](xref:Xamarin.Forms.DatePicker.TextColor) 类型的[ `Color` ](xref:Xamarin.Forms.Color)，用来显示默认为所选的日期的颜色[ `Color.Default` ](xref:Xamarin.Forms.Color.Default)。
 - [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) 类型的[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)，其默认值为[ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None)。
 - [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) 类型的`string`，其默认值为`null`。
 - [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) 类型的`double`，其默认值为-1.0。
 
-`DatePicker`激发[ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/)事件时用户选择日期。
+`DatePicker`激发[ `DateSelected` ](xref:Xamarin.Forms.DatePicker.DateSelected)事件时用户选择日期。
 
 > [!WARNING]
 > 设置时`MinimumDate`并`MaximumDate`，请确保`MinimumDate`总是小于或等于`MaximumDate`。 否则为`DatePicker`将引发异常。
@@ -192,4 +192,4 @@ public partial class MainPage : ContentPage
 ## <a name="related-links"></a>相关链接
 
 - [DaysBetweenDates 示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
-- [DatePicker API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/)
+- [DatePicker API](xref:Xamarin.Forms.DatePicker)

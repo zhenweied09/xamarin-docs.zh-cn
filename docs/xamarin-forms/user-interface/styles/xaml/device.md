@@ -1,35 +1,35 @@
 ---
-title: Xamarin.Forms 中的设备样式
-description: Xamarin.Forms 包括六个动态样式，称为设备样式，Device.Styles 类中。 此文章介绍了如何使用在 Xamarin.Forms 应用程序中的设备样式。
+title: 在 Xamarin.Forms 中的设备样式
+description: Xamarin.Forms 具有六个动态样式，称为设备样式，Device.Styles 类中。 本文介绍如何使用 Xamarin.Forms 应用程序中的设备样式。
 ms.prod: xamarin
 ms.assetid: 7FF19ED1-0822-4238-9435-AD970317A2F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 6b5d4623bb331f4bf52faa096afeacb21d6d7489
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bba42c966c6a606790655751db8b294d9ca7b6f9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245590"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994372"
 ---
-# <a name="device-styles-in-xamarinforms"></a>Xamarin.Forms 中的设备样式
+# <a name="device-styles-in-xamarinforms"></a>在 Xamarin.Forms 中的设备样式
 
-_Xamarin.Forms 包括六个动态样式，称为设备样式，Device.Styles 类中。_
+_Xamarin.Forms 具有六个动态样式，称为设备样式，Device.Styles 类中。_
 
-*设备*了样式：
+*设备*样式：
 
-- [`BodyStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)
-- [`CaptionStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.CaptionStyle/)
-- [`ListItemDetailTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemDetailTextStyle/)
-- [`ListItemTextStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.ListItemTextStyle/)
-- [`SubtitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.SubtitleStyle/)
-- [`TitleStyle`](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.TitleStyle/)
+- [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle)
+- [`CaptionStyle`](xref:Xamarin.Forms.Device.Styles.CaptionStyle)
+- [`ListItemDetailTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyle)
+- [`ListItemTextStyle`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyle)
+- [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
+- [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-所有六个样式只能应用于[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例。 例如，`Label`正在显示的段落正文可能设置其[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性[ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)。
+所有六个样式仅应用于[ `Label` ](xref:Xamarin.Forms.Label)实例。 例如， `Label` ，显示一个段落的主体可能会设置其[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)属性设置为[ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle)。
 
-下面的代码示例演示如何使用*设备*XAML 页中的样式：
+下面的代码示例演示了如何使用*设备*XAML 页面中的样式：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
@@ -63,13 +63,13 @@ _Xamarin.Forms 包括六个动态样式，称为设备样式，Device.Styles 类
 </ContentPage>
 ```
 
-设备样式绑定到使用`DynamicResource`标记扩展。 可以通过更改在 iOS 中看到样式具有动态性**可访问性**文本大小的设置。 外观*设备*样式是每个平台上不同，如以下屏幕截图中所示：
+设备样式绑定到使用`DynamicResource`标记扩展。 可以通过更改在 iOS 中看到样式的动态特性**可访问性**设置文本大小。 外观*设备*样式是每个平台上不同，如以下屏幕截图中所示：
 
-![](device-images/device-styles.png "每个平台上的设备样式")
+![](device-images/device-styles.png "每个平台上设备样式")
 
-*设备*样式还从通过设置派生[ `BaseResourceKey` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.BaseResourceKey/)为设备样式的密钥名称的属性。 在上面的代码示例`myBodyStyle`继承自[ `BodyStyle` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Device+Styles.BodyStyle/)将重音字符的文本颜色设置。 有关动态样式继承的详细信息，请参阅[动态样式继承](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance)。
+*设备*样式也从通过设置派生[ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey)设备样式的键名称的属性。 在上面的代码示例`myBodyStyle`继承自[ `BodyStyle` ](xref:Xamarin.Forms.Device.Styles.BodyStyle)将带重音符的文本颜色设置。 有关动态样式继承的详细信息，请参阅[动态样式继承](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance)。
 
-下面的代码示例演示 C# 中的等效页：
+下面的代码示例演示如何在 C# 中的等效页：
 
 ```csharp
 public class DeviceStylesPageCS : ContentPage
@@ -107,23 +107,23 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)每个属性[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例设置为适当的属性从[ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)类。
+[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)每个属性[ `Label` ](xref:Xamarin.Forms.Label)设置为从适当的属性实例[ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles)类。
 
 ## <a name="accessibility"></a>可访问性
 
-*设备*样式遵从辅助工具首选项，因此当辅助工具首选项更改每个平台上，将发生更改字体大小。 因此，若要支持辅助功能的文本，确保*设备*样式用作应用程序中的任何文本样式的基础。
+*设备*样式尊重辅助工具首选项，因此字体大小将更改为可访问性首选项更改每个平台上。 因此，若要支持辅助功能的文本，确保*设备*样式用作应用程序中的任何文本样式的基础。
 
-以下屏幕截图演示在每个平台上，用最小的可访问的字体大小的设备样式：
+下面的屏幕截图演示了如何在每个平台上，使用最小的可访问的字体大小的设备样式：
 
 [![](device-images/minimum-size.png "每个平台上的可访问的小型设备样式")](device-images/minimum-size-large.png#lightbox "每个平台上的可访问的小型设备样式")
 
-以下屏幕截图演示具有最大的可访问的字体大小的每个平台上的设备样式：
+下面的屏幕截图演示了如何在每个平台上，使用最大的可访问的字体大小的设备样式：
 
 ![](device-images/maximum-size.png "每个平台上的可访问的大型设备样式")
 
 ## <a name="summary"></a>总结
 
-Xamarin.Forms 包括六个*动态*样式，称为*设备*样式，在[ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)类。 所有六个样式只能应用于[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)实例。
+Xamarin.Forms 具有六*动态*样式，称为*设备*样式，在[ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles)类。 所有六个样式仅应用于[ `Label` ](xref:Xamarin.Forms.Label)实例。
 
 
 ## <a name="related-links"></a>相关链接
@@ -132,7 +132,7 @@ Xamarin.Forms 包括六个*动态*样式，称为*设备*样式，在[ `Devices.
 - [XAML 标记扩展](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [动态样式 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
 - [使用样式 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Device.Styles](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [样式](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Device.Styles](xref:Xamarin.Forms.Device.Styles)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [样式](xref:Xamarin.Forms.Style)
+- [资源库](xref:Xamarin.Forms.Setter)

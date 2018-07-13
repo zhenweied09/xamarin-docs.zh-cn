@@ -1,65 +1,65 @@
 ---
-title: Xamarin.Forms 中的 XAML 命名空间
-description: XAML 使用的命名空间声明 xmlns XML 属性。 本文介绍 XAML 命名空间语法中，并演示如何声明一个 XAML 命名空间，以访问的类型。
+title: 在 Xamarin.Forms 中 XAML 命名空间
+description: XAML 使用的命名空间声明的 xmlns XML 属性。 本文介绍 XAML 命名空间语法，并演示如何声明 XAML 命名空间以访问的类型。
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: 25299bc3b56c2fbb748db202e43e75be183cce66
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 30cbb2c3aebdafe2ebf35598c520ae725e01ce65
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209292"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995139"
 ---
-# <a name="xaml-namespaces-in-xamarinforms"></a>Xamarin.Forms 中的 XAML 命名空间
+# <a name="xaml-namespaces-in-xamarinforms"></a>在 Xamarin.Forms 中 XAML 命名空间
 
-_XAML 使用的命名空间声明 xmlns XML 属性。本文介绍 XAML 命名空间语法中，并演示如何声明一个 XAML 命名空间，以访问的类型。_
+_XAML 使用的命名空间声明的 xmlns XML 属性。本文介绍 XAML 命名空间语法，并演示如何声明 XAML 命名空间以访问的类型。_
 
 ## <a name="overview"></a>概述
 
-有两个始终位于 XAML 文件的根元素的 XAML 命名空间声明。 第一个定义默认的命名空间，如下面的 XAML 代码示例中所示：
+有两个都是 XAML 文件的根元素中的 XAML 命名空间声明。 第一个定义默认命名空间，如下面的 XAML 代码示例中所示：
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
-默认命名空间指定在没有任何前缀的 XAML 文件内定义的元素如指 Xamarin.Forms 类[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)。
+默认命名空间指定在没有任何前缀的 XAML 文件中定义的元素引用 Xamarin.Forms 类，如[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)。
 
-第二个命名空间声明将使用`x`前缀，如下面的 XAML 代码示例中所示：
+第二个命名空间声明使用`x`前缀，如下面的 XAML 代码示例中所示：
 
 ```csharp
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-XAML 使用前缀声明非默认命名空间，以在引用的命名空间中的类型时使用的前缀。 `x`命名空间声明指定元素定义中前缀为 XAML`x`用于元素和属性是固有的 XAML （专门 2009 XAML 规范）。
+XAML 使用前缀来引用命名空间中的类型时要使用的前缀与声明非默认命名空间。 `x`命名空间声明指定带前缀的 XAML 中定义元素`x`用于元素和属性是固有的 XAML （特别是 2009 XAML 规范）。
 
-下表概括了`x`Xamarin.Forms 所支持的命名空间属性：
+下表概括了`x`Xamarin.Forms 支持的命名空间属性：
 
 |构造|描述|
 |--- |--- |
-|`x:Arguments`|指定非默认的构造函数，或为工厂方法的对象声明的构造函数自变量。|
-|`x:Class`|指定在 XAML 中定义的类的命名空间和类名称。 类名称必须匹配的代码隐藏文件中的类名。 请注意，此构造只能出现在 XAML 文件的根元素。|
-|`x:FactoryMethod`|指定用于初始化的对象的工厂方法。|
-|`x:FieldModifier`|指定生成字段的命名 XAML 元素的访问的级别。|
-|`x:Key`|指定在每个资源的唯一用户定义键`ResourceDictionary`。 键的值可用于检索 XAML 资源，并通常用作参数`StaticResource`标记扩展。|
+|`x:Arguments`|指定非默认构造函数或工厂方法对象声明的构造函数自变量。|
+|`x:Class`|指定在 XAML 中定义的类的命名空间和类。 类名必须与匹配的代码隐藏文件的类名。 请注意，此构造只能出现在 XAML 文件的根元素。|
+|`x:FactoryMethod`|指定可用于初始化对象的工厂方法。|
+|`x:FieldModifier`|指定的命名 XAML 元素生成的字段的访问级别。|
+|`x:Key`|指定的每个资源的唯一用户键`ResourceDictionary`。 键的值用于检索 XAML 资源，并通常用作参数`StaticResource`标记扩展。|
 |`x:Name`|指定的 XAML 元素的运行时对象名称。 设置`x:Name`类似于在代码中声明变量。|
-|`x:TypeArguments`|指定泛型类型的构造函数的泛型类型自变量。|
+|`x:TypeArguments`|指定的泛型类型参数的泛型类型构造函数。|
 
-有关详细信息`x:FieldModifier`属性，请参阅[字段修饰符](~/xamarin-forms/xaml/field-modifiers.md)。 有关详细信息`x:Arguments`， `x:FactoryMethod`，和`x:TypeArguments`属性，请参阅[传递在 XAML 中的自变量](~/xamarin-forms/xaml/passing-arguments.md)。
+有关详细信息`x:FieldModifier`属性，请参阅[字段修饰符](~/xamarin-forms/xaml/field-modifiers.md)。 有关详细信息`x:Arguments`， `x:FactoryMethod`，并`x:TypeArguments`特性，请参见[在 XAML 中传递参数](~/xamarin-forms/xaml/passing-arguments.md)。
 
-在 XAML 中，命名空间声明从父元素继承到子元素。 因此，在 XAML 文件的根元素中定义命名空间，该文件中的所有元素都继承的命名空间声明。
+在 XAML 中，命名空间声明从父元素继承到子元素。 因此，在 XAML 文件的根元素中定义一个命名空间，该文件中的所有元素都继承的命名空间声明。
 
-## <a name="declaring-namespaces-for-types"></a>声明类型的命名空间
+## <a name="declaring-namespaces-for-types"></a>类型声明的命名空间
 
-通过指定公共语言运行时 (CLR) 命名空间名称和 （可选） 程序集名称的命名空间声明与声明具有前缀的 XAML 命名空间，可以在 XAML 中引用类型。 这可通过定义命名空间声明内的以下关键字的值：
+可以使用公共语言运行时 (CLR) 命名空间名称和程序集名称 （可选） 指定的命名空间声明中声明具有前缀的 XAML 命名空间，在 XAML 中引用类型。 这被通过定义以下中的关键字命名空间声明的值：
 
 - **clr 命名空间：** 或**使用：** – 在包含要将公开为 XAML 元素的类型的程序集内的 CLR 命名空间声明。 此关键字是必需的。
-- **程序集 =** – 包含引用的 CLR 命名空间的程序集。 此值是没有文件扩展名的程序集的名称。 应为包含将引用程序集的 XAML 文件的项目文件中的引用建立对程序集的路径。 此关键字，则可省略**clr 命名空间**值位于相同的程序集中引用类型的应用程序代码。
+- **程序集 =** – 包含所引用的 CLR 命名空间的程序集。 此值为程序集，不带文件扩展名的名称。 应为包含将引用程序集的 XAML 文件的项目文件中的引用建立对程序集的路径。 此关键字，则可省略**clr 命名空间**值是引用类型的应用程序代码在同一程序集中。
 
-请注意，字符分隔`clr-namespace`或`using`令牌从其值是一个冒号，而字符分隔`assembly`令牌从其值是一个等号。 要使用两个标记之间的字符是一个分号。
+请注意，字符分隔`clr-namespace`或`using`标记和其值是一个冒号，而字符分隔`assembly`标记和其值是一个等号。 要使用两个标记之间的字符是分号。
 
 下面的代码示例演示了一个 XAML 命名空间声明：
 
@@ -77,7 +77,7 @@ XAML 使用前缀声明非默认命名空间，以在引用的命名空间中的
 </ContentPage>
 ```
 
-`local`前缀是用于指示命名空间中的类型是本地的应用程序的约定。 或者，如果类型中不同的程序集，程序集名称应还定义在命名空间声明中，如下面的 XAML 代码示例中所示：
+`local`前缀是用来指示命名空间中的类型是应用程序的本地约定。 或者，如果类型属于不同程序集，程序集名称也应被定义在命名空间声明中，如以下 XAML 代码示例所示：
 
 ```xaml
 <ContentPage ... xmlns:behaviors="clr-namespace:Behaviors;assembly=BehaviorsLibrary" ...>
@@ -85,7 +85,7 @@ XAML 使用前缀声明非默认命名空间，以在引用的命名空间中的
 </ContentPage>
 ```
 
-时将从导入的命名空间，类型的实例声明为以下 XAML 代码示例所示，然后指定的命名空间前缀：
+当将从导入的命名空间，类型的实例声明为以下 XAML 代码示例所示，然后指定命名空间前缀：
 
 ```xaml
 <ListView ...>
@@ -97,9 +97,9 @@ XAML 使用前缀声明非默认命名空间，以在引用的命名空间中的
 
 ## <a name="summary"></a>总结
 
-这篇文章引入 XAML 命名空间语法中，并演示了如何声明一个 XAML 命名空间，以访问的类型。 XAML 使用`xmlns`可以在 XAML 中通过声明具有前缀的 XAML 命名空间引用命名空间声明和类型的 XML 属性。
+本文引入 XAML 命名空间语法，并说明了如何以声明要访问的类型的 XAML 命名空间。 XAML 使用`xmlns`XML 属性的命名空间声明和类型，可以引用在 XAML 中声明具有前缀的 XAML 命名空间。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [在 XAML 中的传递自变量](~/xamarin-forms/xaml/passing-arguments.md)
+- [在 XAML 中传递自变量](~/xamarin-forms/xaml/passing-arguments.md)

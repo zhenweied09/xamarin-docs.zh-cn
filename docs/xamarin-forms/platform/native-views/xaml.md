@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4afdf1210a435e4631b1fe43e9415f4f9f599350
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b7ea75c13d84cf9fe74d7a606f6127aaa6bbe3b2
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935486"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996329"
 ---
 # <a name="native-views-in-xaml"></a>在 XAML 中的本机视图
 
@@ -44,7 +44,7 @@ _从 iOS、 Android 和通用 Windows 平台的本机视图可以直接引用 Xa
 
 ## <a name="consuming-native-views"></a>使用本机视图
 
-下面的代码示例演示如何使用 Xamarin.Forms 到每个平台的本机视图[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/):
+下面的代码示例演示如何使用 Xamarin.Forms 到每个平台的本机视图[ `ContentPage` ](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -63,11 +63,11 @@ _从 iOS、 Android 和通用 Windows 平台的本机视图可以直接引用 Xa
 </ContentPage>
 ```
 
-以及指定`clr-namespace`并`assembly`本机视图命名空间，`targetPlatform`还必须指定。 此属性应设置为的值之一[ `TargetPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/)枚举，并通常将设置为`iOS`， `Android`，或`Windows`。 在运行时，XAML 分析器将忽略具有任何 XML 命名空间前缀`targetPlatform`这不匹配其运行应用程序的平台。
+以及指定`clr-namespace`并`assembly`本机视图命名空间，`targetPlatform`还必须指定。 此属性应设置为的值之一[ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform)枚举，并通常将设置为`iOS`， `Android`，或`Windows`。 在运行时，XAML 分析器将忽略具有任何 XML 命名空间前缀`targetPlatform`这不匹配其运行应用程序的平台。
 
 每个命名空间声明可以用于引用来自指定命名空间的任何类或结构。 例如，`ios`命名空间声明可用于引用在 iOS 中的任何类或结构`UIKit`命名空间。 可以通过 XAML，设置本机视图的属性，但属性和对象类型必须匹配。 例如，`UILabel.TextColor`属性设置为`UIColor.Red`使用`x:Static`标记扩展和`ios`命名空间。
 
-可绑定属性和附加可绑定属性也可以设置上的本机视图通过使用`Class.BindableProperty="value"`语法。 每个本机视图包装在平台特定`NativeViewWrapper`实例，派生自[ `Xamarin.Forms.View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/)类。 本机视图上设置可绑定属性或附加可绑定属性传输到包装器的属性值。 例如，可以通过设置指定居中的水平布局`View.HorizontalOptions="Center"`本机视图上。
+可绑定属性和附加可绑定属性也可以设置上的本机视图通过使用`Class.BindableProperty="value"`语法。 每个本机视图包装在平台特定`NativeViewWrapper`实例，派生自[ `Xamarin.Forms.View` ](xref:Xamarin.Forms.View)类。 本机视图上设置可绑定属性或附加可绑定属性传输到包装器的属性值。 例如，可以通过设置指定居中的水平布局`View.HorizontalOptions="Center"`本机视图上。
 
 > [!NOTE]
 > 请注意样式不能用于本机视图，因为样式仅可以由支持的属性为目标`BindableProperty`对象。
@@ -113,14 +113,14 @@ Android 小组件的构造函数通常需要 Android`Context`对象作为参数�
 
 ```
 
-该页面包含[ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/)其[ `IsEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsEnabled/)属性绑定到`NativeSwitchPageViewModel.IsSwitchOn`属性。 [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/)页的设置为的新实例`NativeSwitchPageViewModel`类在代码隐藏文件中，与 ViewModel 类实现`INotifyPropertyChanged`接口。
+该页面包含[ `Entry` ](xref:Xamarin.Forms.Entry)其[ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled)属性绑定到`NativeSwitchPageViewModel.IsSwitchOn`属性。 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)页的设置为的新实例`NativeSwitchPageViewModel`类在代码隐藏文件中，与 ViewModel 类实现`INotifyPropertyChanged`接口。
 
 此页还包含用于每个平台的本机交换机。 使用每个本机交换机[ `TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay)要更新的值绑定`NativeSwitchPageViewModel.IsSwitchOn`属性。 因此，此开关处于关闭状态，`Entry`处于禁用状态，以及何时开关为开，`Entry`已启用。 下面的屏幕截图显示了每个平台上的此功能：
 
 ![](xaml-images/native-switch-disabled.png "本机交换机已禁用")
 ![](xaml-images/native-switch-enabled.png "本机开关已启用")
 
-自动支持双向绑定，前提是本机属性实现`INotifyPropertyChanged`，在 iOS 上，支持键值对观察 (KVO)，或者是`DependencyProperty`UWP 上。 但是，许多本机视图不支持属性更改通知。 对于这些视图中，您可以指定[ `UpdateSourceEventName` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.UpdateSourceEventName/)用作绑定表达式的一部分的属性值。 此属性应设置为目标属性已更改时发出信号的本机视图中的事件的名称。 然后，本机开关的值发生更改时，`Binding`类会通知用户已更改开关值和`NativeSwitchPageViewModel.IsSwitchOn`更新属性值。
+自动支持双向绑定，前提是本机属性实现`INotifyPropertyChanged`，在 iOS 上，支持键值对观察 (KVO)，或者是`DependencyProperty`UWP 上。 但是，许多本机视图不支持属性更改通知。 对于这些视图中，您可以指定[ `UpdateSourceEventName` ](xref:Xamarin.Forms.Binding.UpdateSourceEventName)用作绑定表达式的一部分的属性值。 此属性应设置为目标属性已更改时发出信号的本机视图中的事件的名称。 然后，本机开关的值发生更改时，`Binding`类会通知用户已更改开关值和`NativeSwitchPageViewModel.IsSwitchOn`更新属性值。
 
 <a name="passing_arguments" />
 
@@ -199,12 +199,12 @@ Android 小组件的构造函数通常需要 Android`Context`对象作为参数�
 
 ## <a name="referring-to-native-views-from-code"></a>从代码中引用的本机视图
 
-尽管不能使用本机视图命名为`x:Name`属性，它是可以检索在共享访问项目中，其代码隐藏文件中的 XAML 文件中声明的本机视图实例，前提是本机视图是子级[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) ，它指定`x:Name`属性值。 然后，在代码隐藏文件中的条件编译指令内您应该：
+尽管不能使用本机视图命名为`x:Name`属性，它是可以检索在共享访问项目中，其代码隐藏文件中的 XAML 文件中声明的本机视图实例，前提是本机视图是子级[ `ContentView` ](xref:Xamarin.Forms.ContentView) ，它指定`x:Name`属性值。 然后，在代码隐藏文件中的条件编译指令内您应该：
 
-1. 检索[ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/)属性值，并将其转换为特定于平台的`NativeViewWrapper`类型。
+1. 检索[ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content)属性值，并将其转换为特定于平台的`NativeViewWrapper`类型。
 1. 检索`NativeViewWrapper.NativeElement`属性并将其转换为本机视图类型。
 
-然后执行所需的操作的本机视图调用本机 API。 此方法还提供了好处，针对不同平台的多个 XAML 本机视图可以是相同的子级[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)。 下面的代码示例演示了此种方法：
+然后执行所需的操作的本机视图调用本机 API。 此方法还提供了好处，针对不同平台的多个 XAML 本机视图可以是相同的子级[ `ContentView` ](xref:Xamarin.Forms.ContentView)。 下面的代码示例演示了此种方法：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -234,7 +234,7 @@ Android 小组件的构造函数通常需要 Android`Context`对象作为参数�
 </ContentPage>
 ```
 
-在上面的示例中，为每个平台的本机视图是子级[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)控件，具有`x:Name`属性值用于检索`ContentView`代码隐藏中：
+在上面的示例中，为每个平台的本机视图是子级[ `ContentView` ](xref:Xamarin.Forms.ContentView)控件，具有`x:Name`属性值用于检索`ContentView`代码隐藏中：
 
 ```csharp
 public partial class NativeViewInsideContentViewPage : ContentPage
@@ -276,9 +276,9 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 }
 ```
 
-[ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/)访问属性来检索为特定于平台的已包装的本机视图`NativeViewWrapper`实例。 `NativeViewWrapper.NativeElement`然后访问属性来检索作为其本机类型的本机视图。 然后调用本机视图 API 来执行所需的操作。
+[ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content)访问属性来检索为特定于平台的已包装的本机视图`NativeViewWrapper`实例。 `NativeViewWrapper.NativeElement`然后访问属性来检索作为其本机类型的本机视图。 然后调用本机视图 API 来执行所需的操作。
 
-IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，因为每个本机按钮使用`EventHandler`响应触摸事件委托。 但是，通用 Windows 平台 (UWP) 均使用单独`RoutedEventHandler`，这反过来将会占用`OnButtonTap`在此示例中的事件处理程序。 因此，单击本机按钮时，`OnButtonTap`事件处理程序执行，该缩放和旋转内包含的本机控件[ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)名为`contentViewTextParent`。 下面的屏幕截图演示了此每个平台上发生：
+IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，因为每个本机按钮使用`EventHandler`响应触摸事件委托。 但是，通用 Windows 平台 (UWP) 均使用单独`RoutedEventHandler`，这反过来将会占用`OnButtonTap`在此示例中的事件处理程序。 因此，单击本机按钮时，`OnButtonTap`事件处理程序执行，该缩放和旋转内包含的本机控件[ `ContentView` ](xref:Xamarin.Forms.ContentView)名为`contentViewTextParent`。 下面的屏幕截图演示了此每个平台上发生：
 
 ![](xaml-images/contentview.png "包含的本机控件 ContentView")
 
@@ -319,7 +319,7 @@ IOS 和 Android 的本机按钮共用同一个`OnButtonTap`事件处理程序，
 </ContentPage>
 ```
 
-该页面包含[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)显示用户选择的本机控件从水果。 `Label`绑定到`SubclassedNativeControlsPageViewModel.SelectedFruit`属性。 [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/)页的设置为的新实例`SubclassedNativeControlsPageViewModel`类在代码隐藏文件中，与 ViewModel 类实现`INotifyPropertyChanged`接口。
+该页面包含[ `Label` ](xref:Xamarin.Forms.Label)显示用户选择的本机控件从水果。 `Label`绑定到`SubclassedNativeControlsPageViewModel.SelectedFruit`属性。 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)页的设置为的新实例`SubclassedNativeControlsPageViewModel`类在代码隐藏文件中，与 ViewModel 类实现`INotifyPropertyChanged`接口。
 
 该页还包含每个平台的本机选取器视图。 每个本机视图显示水果的集合的绑定及其`ItemSource`属性设置为`SubclassedNativeControlsPageViewModel.Fruits`集合。 这允许用户选取水果，如以下屏幕截图中所示：
 

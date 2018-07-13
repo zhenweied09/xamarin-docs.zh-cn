@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c10a3c1a0ed2755734fe351df39caadc88dd61c4
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: a02239906f5a30c068cb7eebd31308ad188696b3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935106"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998093"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>第 28 章的摘要。 位置和地图
 
-Xamarin.Forms 支持[ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/)派生的元素`View`。 由于使用映射所涉及的特殊平台要求，它们实现在单独的程序集， **Xamarin.Forms.Maps**，并涉及不同的命名空间： `Xamarin.Forms.Maps`。
+Xamarin.Forms 支持[ `Map` ](xref:Xamarin.Forms.Maps.Map)派生的元素`View`。 由于使用映射所涉及的特殊平台要求，它们实现在单独的程序集， **Xamarin.Forms.Maps**，并涉及不同的命名空间： `Xamarin.Forms.Maps`。
 
 ## <a name="the-geographic-coordinate-system"></a>地理坐标系统
 
@@ -118,13 +118,13 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 [ **MapDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/MapDemos)示例组成[MapsDemoHomePage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml)文件和[MapsDemoHomePage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml.cs)代码隐藏文件允许导航到各种演示程序。
 
-[BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml)文件演示了如何显示[ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/)视图。 默认情况下它将显示罗马市/县，但可以由用户操作映射。
+[BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml)文件演示了如何显示[ `Map` ](xref:Xamarin.Forms.Maps.Map)视图。 默认情况下它将显示罗马市/县，但可以由用户操作映射。
 
-若要禁用水平和垂直滚动，设置[ `HasScrollEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasScrollEnabled/)属性设置为`false`。 若要禁用缩放，请设置[ `HasZoomEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasZoomEnabled/)到`false`。 这些属性可能不适用于所有平台。
+若要禁用水平和垂直滚动，设置[ `HasScrollEnabled` ](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled)属性设置为`false`。 若要禁用缩放，请设置[ `HasZoomEnabled` ](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled)到`false`。 这些属性可能不适用于所有平台。
 
 ### <a name="streets-and-terrain"></a>街道和地形
 
-可以通过设置显示不同类型的地图`Map`属性[ `MapType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.MapType/)类型的[ `MapType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapType/)，具有三个成员的枚举：
+可以通过设置显示不同类型的地图`Map`属性[ `MapType` ](xref:Xamarin.Forms.Maps.Map.MapType)类型的[ `MapType` ](xref:Xamarin.Forms.Maps.MapType)，具有三个成员的枚举：
 
 - [`Street`](xref:Xamarin.Forms.Maps.MapType.Street)默认值
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
@@ -134,32 +134,32 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 ### <a name="map-coordinates"></a>地图坐标
 
-程序可以获取当前区域的`Map`通过显示[ `VisibleRegion` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.VisibleRegion/)属性。 此属性是*不*受可绑定的属性，并没有通知机制，以指示何时已更改，因此想要监视属性的程序可能应实现此目的使用一个计时器。
+程序可以获取当前区域的`Map`通过显示[ `VisibleRegion` ](xref:Xamarin.Forms.Maps.Map.VisibleRegion)属性。 此属性是*不*受可绑定的属性，并没有通知机制，以指示何时已更改，因此想要监视属性的程序可能应实现此目的使用一个计时器。
 
-`VisibleRegion` 类型[ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/)，具有四个只读属性的类：
+`VisibleRegion` 类型[ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan)，具有四个只读属性的类：
 
-- [`Center`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Center/) 类型 [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/)
-- [`LatitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LatitudeDegrees/) 类型的`double`，指示该映射显示区域的高度
-- [`LongitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LongitudeDegrees/) 类型的`double`，指示地图的显示区域宽度
-- [`Radius`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Radius/) 类型的[ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/)，指示在地图上可见的最大圆形区域的大小
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) 类型 [`Position`](xref:Xamarin.Forms.Maps.Position)
+- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) 类型的`double`，指示该映射显示区域的高度
+- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 类型的`double`，指示地图的显示区域宽度
+- [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) 类型的[ `Distance` ](xref:Xamarin.Forms.Maps.Distance)，指示在地图上可见的最大圆形区域的大小
 
-`Position` 和`Distance`是这两个结构。 `Position` 定义两个只读属性，它们通过设置[`Position`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Position.Position/p/System.Double/System.Double/):
+`Position` 和`Distance`是这两个结构。 `Position` 定义两个只读属性，它们通过设置[`Position`构造函数](xref:Xamarin.Forms.Maps.Position.%23ctor(System.Double,System.Double)):
 
-- [`Latitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Latitude/)
-- [`Longitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Longitude/)
+- [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude)
+- [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude)
 
 `Distance` 旨在提供独立于单元的距离的指标和英制单位之间进行转换。 一个`Distance`值可以创建几种方式：
 
-- [`Distance` 构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Distance.Distance/p/System.Double/)与以米为单位的距离
-- [`Distance.FromMeters`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMeters/p/System.Double/) 静态方法
-- [`Distance.FromKilometers`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromKilometers/p/System.Double/) 静态方法
-- [`Distance.FromMiles`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMiles/p/System.Double/) 静态方法
+- [`Distance` 构造函数](xref:Xamarin.Forms.Maps.Distance.%23ctor(System.Double))与以米为单位的距离
+- [`Distance.FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters(System.Double)) 静态方法
+- [`Distance.FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers(System.Double)) 静态方法
+- [`Distance.FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles(System.Double)) 静态方法
 
 可从三个属性的值为：
 
-- [`Meters`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Meters/) 类型 `double`
-- [`Kilometers`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Kilometers/) 类型 `double`
-- [`Miles`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Miles/) 类型 `double`
+- [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters) 类型 `double`
+- [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers) 类型 `double`
+- [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles) 类型 `double`
 
 [MapCoordinatesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml)文件包含多个`Label`元素用于显示`MapSpan`信息。 [MapCoordinatesPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml.cs)代码隐藏文件中使用计时器来保持更新，因为用户操作映射的信息。
 
@@ -169,16 +169,16 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 ### <a name="setting-an-initial-location"></a>设置初始位置
 
-您可以调用[ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion/p/Xamarin.Forms.Maps.MapSpan/)方法的`Map`以编程方式在代码图上设置位置和缩放级别。 参数的类型是`MapSpan`。 您可以创建`MapSpan`对象使用下列操作之一：
+您可以调用[ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan))方法的`Map`以编程方式在代码图上设置位置和缩放级别。 参数的类型是`MapSpan`。 您可以创建`MapSpan`对象使用下列操作之一：
 
-- [`MapSpan` 构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.MapSpan.MapSpan/p/Xamarin.Forms.Maps.Position/System.Double/System.Double/)与`Position`，和纬度和经度的范围
-- [`MapSpan.FromCenterAndRadius`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius/p/Xamarin.Forms.Maps.Position/Xamarin.Forms.Maps.Distance/) 使用`Position`和 radius
+- [`MapSpan` 构造函数](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double))与`Position`，和纬度和经度的范围
+- [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance)) 使用`Position`和 radius
 
-还有可能创建一个新`MapSpan`使用的方法从现有[ `ClampLatitude` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.ClampLatitude/p/System.Double/System.Double/)或[ `WithZoom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.WithZoom/p/System.Double/)。
+还有可能创建一个新`MapSpan`使用的方法从现有[ `ClampLatitude` ](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double))或[ `WithZoom` ](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double))。
 
 [WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml)文件并[WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs)代码隐藏文件演示如何使用`MoveToRegion`方法来显示状态怀俄明州。
 
-也可以使用[`Map`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Map.Map/p/Xamarin.Forms.Maps.MapSpan/)与`MapSpan`对象来初始化该映射的位置。 [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml)文件演示如何执行此操作完全在 XAML 以显示在旧金山 Xamarin 的总部。
+也可以使用[`Map`构造函数](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan))与`MapSpan`对象来初始化该映射的位置。 [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml)文件演示如何执行此操作完全在 XAML 以显示在旧金山 Xamarin 的总部。
 
 ### <a name="dynamic-zooming"></a>动态缩放
 
@@ -188,7 +188,7 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 ### <a name="the-phones-location"></a>手机所在的位置
 
-[ `IsShowingUser` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.IsShowingUser/)的属性`Map`与三个平台上工作略有不同[ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml)文件演示了：
+[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser)的属性`Map`与三个平台上工作略有不同[ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml)文件演示了：
 
 - 在 iOS 上，则一个蓝点指示手机所在的位置，但您必须手动定位那里
 - 在 Android 上，将显示一个图标，当推送移动到手机所在的位置地图
@@ -200,12 +200,12 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 ### <a name="pins-and-science-museums"></a>Pin 和科学博物馆
 
-最后，`Map`类定义[ `Pins` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.Pins/)类型的属性`IList<Pin>`。 [ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/)类定义了四个属性：
+最后，`Map`类定义[ `Pins` ](xref:Xamarin.Forms.Maps.Map.Pins)类型的属性`IList<Pin>`。 [ `Pin` ](xref:Xamarin.Forms.Maps.Pin)类定义了四个属性：
 
-- [`Label`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Label/) 类型的`string`、 一个必需的属性
-- [`Address`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Address/) 类型的`string`，用户可读的可选地址
-- [`Position`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Position/) 类型的`Position`，指示固定在地图上的显示位置
-- [`Type`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Type/) 类型的[ `PinType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.PinType/)，枚举中，它不使用
+- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label) 类型的`string`、 一个必需的属性
+- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address) 类型的`string`，用户可读的可选地址
+- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 类型的`Position`，指示固定在地图上的显示位置
+- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) 类型的[ `PinType` ](xref:Xamarin.Forms.Maps.PinType)，枚举中，它不使用
 
 **MapDemos**项目包含的文件[ScienceMuseums.xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml)，其中列出了在美国科学博物馆和[ `Locations` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs)和[`Site` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs)用于反序列化此数据的类。
 
@@ -223,7 +223,7 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 ## <a name="geocoding-and-back-again"></a>地理编码和后再次
 
-[ **Xamarin.Forms.Maps** ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)程序集还包含[ `Geocoder` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Geocoder/)类[ `GetPositionsForAddressAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync/p/System.String/)转换方法零或更多可能的地理位置和另一种方法将文本地址[ `GetAddressesForPositionAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync/p/Xamarin.Forms.Maps.Position/) ，它将在另一个方向。
+[ **Xamarin.Forms.Maps** ](xref:Xamarin.Forms.Maps)程序集还包含[ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder)类[ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String))转换方法零或更多可能的地理位置和另一种方法将文本地址[ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) ，它将在另一个方向。
 
 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml)文件并[GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs)代码隐藏文件演示此功能。
 
