@@ -7,22 +7,22 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5843147b82837f1a8677d8be48a8e1ca92db1a75
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935411"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998330"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>第 3 章的摘要。 深入到文本
 
-本章探讨[ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)更为深入，包括颜色、 字体和格式设置中的视图。
+本章探讨[ `Label` ](xref:Xamarin.Forms.Label)更为深入，包括颜色、 字体和格式设置中的视图。
 
 ## <a name="wrapping-paragraphs"></a>包装段落
 
-当[ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/)的属性`Label`包含长文本`Label`会自动将其包装到多个行所示[ **Baskervilles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles)示例。 可以嵌入 Unicode 代码，如 \u2014 长破折号，或 C# 等 '\r' 中断到新行字符。
+当[ `Text` ](xref:Xamarin.Forms.Label.Text)的属性`Label`包含长文本`Label`会自动将其包装到多个行所示[ **Baskervilles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles)示例。 可以嵌入 Unicode 代码，如 \u2014 长破折号，或 C# 等 '\r' 中断到新行字符。
 
-当[ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/)和[ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/)的属性`Label`设置为`LayoutOptions.Fill`，则的总体大小`Label`受到空间，其容器使可用。 `Label`称为*约束*。 大小`Label`是其容器的大小。
+当[ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)和[ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions)的属性`Label`设置为`LayoutOptions.Fill`，则的总体大小`Label`受到空间，其容器使可用。 `Label`称为*约束*。 大小`Label`是其容器的大小。
 
 当`HorizontalOptions`和`VerticalOptions`属性设置为值而不`LayoutOptions.Fill`，则大小`Label`受呈现的文本，最大大小，其容器使可用于所需的空间`Label`。 `Label`称为*不受约束*并确定其自身的大小。
 
@@ -38,41 +38,41 @@ ms.locfileid: "37935411"
 
 ## <a name="text-and-background-colors"></a>文本和背景色
 
-设置[ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/)并[ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/)属性的`Label`到[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/)值控制的文本和背景颜色。
+设置[ `TextColor` ](xref:Xamarin.Forms.Label.TextColor)并[ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor)属性的`Label`到[ `Color` ](xref:Xamarin.Forms.Color)值控制的文本和背景颜色。
 
 `BackgroundColor`适用于占用的整个区域的背景`Label`。 具体取决于`HorizontalOptions`和`VerticalOptions`属性、 大小可能远远大于所显示的文本区域。 可以使用颜色来试验的各种值`HorizontalOptions`， `VerticalOptions`， `HorizontalExeAlignment`，和`VerticalTextAlignment`若要查看它们如何影响大小和位置`Label`，大小和位置中的文本和`Label`。
 
 ## <a name="the-color-structure"></a>颜色结构
 
-[ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/)结构允许您指定的颜色以红-绿-蓝 (RGB) 值或色调-饱和度-亮度 (HSL) 的值，或使用的颜色名称。 Alpha 通道也是可用于指示透明度。
+[ `Color` ](xref:Xamarin.Forms.Color)结构允许您指定的颜色以红-绿-蓝 (RGB) 值或色调-饱和度-亮度 (HSL) 的值，或使用的颜色名称。 Alpha 通道也是可用于指示透明度。
 
 使用`Color`构造函数来指定：
 
-- [灰色阴影](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/)
-- [RGB 值](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/)
-- [具有透明度的 RGB 值](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/System.Double/)
+- [灰色阴影](xref:Xamarin.Forms.Color.%23ctor(System.Double))
+- [RGB 值](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double))
+- [具有透明度的 RGB 值](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double))
 
 参数是`double`值范围从 0 到 1。
 
 此外可以使用多个静态方法来创建`Color`值：
 
-- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Double/System.Double/System.Double/) 有关`double`RGB 值从 0 到 1
-- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Int32/System.Int32/System.Int32/) 对于从 0 到 255 之间的整数 RGB 值
-- [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Double/System.Double/System.Double/System.Double/) 有关`double`透明度的 RGB 值
-- [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) 对于具有透明度整数 RGB 值
-- [`Color.FromHsla`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) 有关`double`透明度 HSL 值
-- [`Color.FromUint`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromUint/p/System.UInt32/) 有关`uint`值计算方式为 (B + 256 * (G + 256 * (R + 256 * 一个)))
-- [`Color.FromHex`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) 有关`string`的十六进制数字构成，采用格式"#AARRGGBB"或"#RRGGBB"或"#ARGB"或"#RGB"，其中每个字母对应于十六进制数字的 alpha、 红色、 绿色和蓝色通道。 此方法是主要用于 XAML 颜色转换，如中所述[第 7 章、 XAML 与代码](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md)。
+- [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) 有关`double`RGB 值从 0 到 1
+- [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Int32,System.Int32,System.Int32)) 对于从 0 到 255 之间的整数 RGB 值
+- [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Double,System.Double,System.Double,System.Double)) 有关`double`透明度的 RGB 值
+- [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) 对于具有透明度整数 RGB 值
+- [`Color.FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) 有关`double`透明度 HSL 值
+- [`Color.FromUint`](xref:Xamarin.Forms.Color.FromUint(System.UInt32)) 有关`uint`值计算方式为 (B + 256 * (G + 256 * (R + 256 * 一个)))
+- [`Color.FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) 有关`string`的十六进制数字构成，采用格式"#AARRGGBB"或"#RRGGBB"或"#ARGB"或"#RGB"，其中每个字母对应于十六进制数字的 alpha、 红色、 绿色和蓝色通道。 此方法是主要用于 XAML 颜色转换，如中所述[第 7 章、 XAML 与代码](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md)。
 
 创建之后，`Color`值是固定不变。 可以从下列属性获得的颜色特征：
 
-- [`R`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.R/)
-- [`G`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.G/)
-- [`B`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.B/)
-- [`A`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.A/)
-- [`Hue`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Hue/)
-- [`Saturation`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Saturation/)
-- [`Luminosity`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Luminosity/)
+- [`R`](xref:Xamarin.Forms.Color.R)
+- [`G`](xref:Xamarin.Forms.Color.G)
+- [`B`](xref:Xamarin.Forms.Color.B)
+- [`A`](xref:Xamarin.Forms.Color.A)
+- [`Hue`](xref:Xamarin.Forms.Color.Hue)
+- [`Saturation`](xref:Xamarin.Forms.Color.Saturation)
+- [`Luminosity`](xref:Xamarin.Forms.Color.Luminosity)
 
 这些是所有`double`值范围从 0 到 1。
 
@@ -84,16 +84,16 @@ ms.locfileid: "37935411"
 
 多个实例方法允许修改现有的颜色来创建新颜色：
 
-- [`AddLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.AddLuminosity/p/System.Double/)
-- [`MultiplyAlpha`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.MultiplyAlpha/p/System.Double/)
-- [`WithHue`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithHue/p/System.Double/)
-- [`WithLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithLuminosity/p/System.Double/)
-- [`WithSaturation`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithSaturation/p/System.Double/)
+- [`AddLuminosity`](xref:Xamarin.Forms.Color.AddLuminosity(System.Double))
+- [`MultiplyAlpha`](xref:Xamarin.Forms.Color.MultiplyAlpha(System.Double))
+- [`WithHue`](xref:Xamarin.Forms.Color.WithHue(System.Double))
+- [`WithLuminosity`](xref:Xamarin.Forms.Color.WithLuminosity(System.Double))
+- [`WithSaturation`](xref:Xamarin.Forms.Color.WithSaturation(System.Double))
 
 最后，两个静态只读属性定义特殊颜色值：
 
-- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)所有频道都设置为&ndash;1
-- [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
+- [`Color.Default`](xref:Xamarin.Forms.Color.Default)所有频道都设置为&ndash;1
+- [`Color.Accent`](xref:Xamarin.Forms.Color.Accent)
 
 `Color.Default` 用于强制实施平台的配色方案，并因此在不同的平台上的不同上下文中具有不同的含义。 默认情况下将平台的颜色方案：
 
@@ -115,19 +115,19 @@ ms.locfileid: "37935411"
 
 ## <a name="font-sizes-and-attributes"></a>字体大小和属性
 
-设置[ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontFamily/)属性的`Label`到一个字符串，如"Times Roman"选择字体系列。 但是，您需要指定在特定平台支持的字体系列和平台是在这方面不一致。
+设置[ `FontFamily` ](xref:Xamarin.Forms.Label.FontFamily)属性的`Label`到一个字符串，如"Times Roman"选择字体系列。 但是，您需要指定在特定平台支持的字体系列和平台是在这方面不一致。
 
-设置[ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontSize/)的属性`Label`到`double`用于指定字体的大致高度。 请参阅[第 5 章处理大小](chapter05.md)，有关详细信息以智能方式选择字体大小。
+设置[ `FontSize` ](xref:Xamarin.Forms.Label.FontSize)的属性`Label`到`double`用于指定字体的大致高度。 请参阅[第 5 章处理大小](chapter05.md)，有关详细信息以智能方式选择字体大小。
 
-或者，你可以获取多个预设依赖于平台的字体大小之一。 静态[ `Device.GetNamedSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/)方法并[重载](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/Xamarin.Forms.Element/)两者都返回`double`适合于平台的字体大小值基于成员[ `NamedSize` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/)枚举 ([`Default`](xref:Xamarin.Forms.NamedSize.Default)， [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro)， [ `Small` ](xref:Xamarin.Forms.NamedSize.Small)， [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium)， 并[ `Large` ](xref:Xamarin.Forms.NamedSize.Large))。 从返回的值`Medium`成员不一定是相同`Default`。 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes)示例使用这些命名大小显示文本。
+或者，你可以获取多个预设依赖于平台的字体大小之一。 静态[ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type))方法并[重载](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element))两者都返回`double`适合于平台的字体大小值基于成员[ `NamedSize` ](xref:Xamarin.Forms.NamedSize)枚举 ([`Default`](xref:Xamarin.Forms.NamedSize.Default)， [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro)， [ `Small` ](xref:Xamarin.Forms.NamedSize.Small)， [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium)， 并[ `Large` ](xref:Xamarin.Forms.NamedSize.Large))。 从返回的值`Medium`成员不一定是相同`Default`。 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes)示例使用这些命名大小显示文本。
 
 设置[ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes)的属性`Label`给这些成员[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)枚举[ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold)， [ `Italic`](xref:Xamarin.Forms.FontAttributes.Italic)，或[ `None` ](xref:Xamarin.Forms.FontAttributes.None)。 你可以组合`Bold`和`Italic`使用 C# 按位 OR 运算符的成员。
 
 ## <a name="formatted-text"></a>带格式文本
 
-中的所有示例到目前为止，整个文本都显示`Label`统一已设置格式。 若要改变在文本字符串中的格式设置，未设置`Text`属性的`Label`。 与此相反，设置[ `FormattedText` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FormattedText/)类型的对象的属性[ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/)。
+中的所有示例到目前为止，整个文本都显示`Label`统一已设置格式。 若要改变在文本字符串中的格式设置，未设置`Text`属性的`Label`。 与此相反，设置[ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText)类型的对象的属性[ `FormattedString` ](xref:Xamarin.Forms.FormattedString)。
 
-`FormattedString` 具有[ `Spans` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FormattedString.Spans/)属性是一系列[ `Span` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Span/)对象。 每个`Span`对象都有其自身[ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.Text/)， [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontFamily/)， [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontSize/)， [ `FontAttributes` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontAttributes/)， [ `ForegroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.ForegroundColor/)，并[ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.BackgroundColor/)属性。
+`FormattedString` 具有[ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans)属性是一系列[ `Span` ](xref:Xamarin.Forms.Span)对象。 每个`Span`对象都有其自身[ `Text` ](xref:Xamarin.Forms.Span.Text)， [ `FontFamily` ](xref:Xamarin.Forms.Span.FontFamily)， [ `FontSize` ](xref:Xamarin.Forms.Span.FontSize)， [ `FontAttributes` ](xref:Xamarin.Forms.Span.FontAttributes)， [ `ForegroundColor` ](xref:Xamarin.Forms.Span.ForegroundColor)，并[ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor)属性。
 
 [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText)示例演示如何使用`FormattedText`对于单行文本、 属性和[ **VariableFormattedParagraph**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara)说明整个段落，该方法，如下所示：
 

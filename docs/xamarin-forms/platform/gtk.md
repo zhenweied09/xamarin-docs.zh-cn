@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830475"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998188"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 平台安装程序
 
@@ -211,7 +211,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>本机窗体
 
-本机窗体允许 Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页可供本机项目，包括 GTK # 项目。 这可以通过创建的实例来实现[ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-派生页，并将其转换为本机 GTK # 类型使用`CreateContainer`扩展方法：
+本机窗体允许 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页可供本机项目，包括 GTK # 项目。 这可以通过创建的实例来实现[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页，并将其转换为本机 GTK # 类型使用`CreateContainer`扩展方法：
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

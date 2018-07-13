@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: ff707cdf73665ae07881d2d17ec837a4cfacaca0
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935366"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998255"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 设备类
 
@@ -24,11 +24,11 @@ ms.locfileid: "37935366"
 
 ## <a name="providing-platform-specific-values"></a>提供特定于平台的值
 
-在 Xamarin.Forms 2.3.4 之前, 的平台运行应用程序无法获取通过检查[ `Device.OS` ](xref:Xamarin.Forms.Device.OS)属性并将对其进行比较[ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS)， [`TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)， [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone)，并且[ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows)枚举值。 同样，之一[ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/)重载可用于提供对控件的特定于平台的值。
+在 Xamarin.Forms 2.3.4 之前, 的平台运行应用程序无法获取通过检查[ `Device.OS` ](xref:Xamarin.Forms.Device.OS)属性并将对其进行比较[ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS)， [`TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)， [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone)，并且[ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows)枚举值。 同样，之一[ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action))重载可用于提供对控件的特定于平台的值。
 
-但是，因为 Xamarin.Forms 2.3.4 这些 Api 已弃用并替换。 [ `Device` ](xref:Xamarin.Forms.Device)类现在包含的标识平台 – 公共字符串常量[ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)， [ `Device.Android` ](xref:Xamarin.Forms.Device.Android)， `Device.WinPhone`(不推荐使用）， `Device.WinRT` （已弃用） [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP)，并[ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)。 同样， [ `Device.OnPlatform` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.OnPlatform/p/System.Action/System.Action/System.Action/System.Action/)已替换重载[ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/)并[ `On` ](xref:Xamarin.Forms.On) Api。
+但是，因为 Xamarin.Forms 2.3.4 这些 Api 已弃用并替换。 [ `Device` ](xref:Xamarin.Forms.Device)类现在包含的标识平台 – 公共字符串常量[ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)， [ `Device.Android` ](xref:Xamarin.Forms.Device.Android)， `Device.WinPhone`(不推荐使用）， `Device.WinRT` （已弃用） [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP)，并[ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)。 同样， [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action))已替换重载[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)并[ `On` ](xref:Xamarin.Forms.On) Api。
 
-在 C# 中，可以通过创建提供特定于平台的值`switch`语句[ `Device.RuntimePlatform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Device.RuntimePlatform/)属性，并提供`case`语句所需的平台：
+在 C# 中，可以通过创建提供特定于平台的值`switch`语句[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并提供`case`语句所需的平台：
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-[ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/)并[ `On` ](xref:Xamarin.Forms.On)类提供 XAML 中的相同功能：
+[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)并[ `On` ](xref:Xamarin.Forms.On)类提供 XAML 中的相同功能：
 
 ```xaml
 <StackLayout>
@@ -60,7 +60,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 </StackLayout>
 ```
 
-[ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/)类是一个泛型类，因此必须实例化与`x:TypeArguments`匹配目标类型的属性。 在中[ `On` ](xref:Xamarin.Forms.On)类， [ `Platform` ](xref:Xamarin.Forms.On.Platform)属性可以接受单个`string`值或以逗号分隔的多个`string`值。
+[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)类是一个泛型类，因此必须实例化与`x:TypeArguments`匹配目标类型的属性。 在中[ `On` ](xref:Xamarin.Forms.On)类， [ `Platform` ](xref:Xamarin.Forms.On.Platform)属性可以接受单个`string`值或以逗号分隔的多个`string`值。
 
 > [!IMPORTANT]
 > 提供不正确`Platform`属性中的值`On`类不会导致错误。 相反，该代码将执行且不应用任何特定于平台的值。
@@ -75,6 +75,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 -  **平板电脑**– iPad，Windows 设备和 Android 设备宽于 600 dip ^
 -  **桌面**– 仅在返回[UWP 应用](~/xamarin-forms/platform/windows/installation/index.md)Windows 10 桌面计算机上 (返回`Phone`移动 Windows 设备，包括连续体方案中)
 -  **电视**– Tizen TV 设备
+-  **观看**– Tizen 监视设备
 -  **不支持**– 未使用
 
 *^ dip 不一定是物理像素计数*
@@ -172,7 +173,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-后台线程，如在计时器或异步操作，例如 web 请求完成处理程序中运行的代码应永远不会访问用户界面元素。 任何需要更新用户界面的后台代码都应纳入[ `BeginInvokeOnMainThread` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.BeginInvokeOnMainThread/p/System.Action/)。 此命令的等效`InvokeOnMainThread`在 iOS 上，`RunOnUiThread`在 Android 上，和`Dispatcher.RunAsync`通用 Windows 平台上。
+后台线程，如在计时器或异步操作，例如 web 请求完成处理程序中运行的代码应永远不会访问用户界面元素。 任何需要更新用户界面的后台代码都应纳入[ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))。 此命令的等效`InvokeOnMainThread`在 iOS 上，`RunOnUiThread`在 Android 上，和`Dispatcher.RunAsync`通用 Windows 平台上。
 
 Xamarin.Forms 代码是：
 

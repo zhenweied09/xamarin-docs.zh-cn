@@ -7,16 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2dd94d5fb8eecc5cf4a3e376bc67c2cb6afb153b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 54238b46b759497bc6c6738673b98db833399752
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935433"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998356"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>第 14 章的摘要。 绝对布局
 
-像`StackLayout`， [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/)派生自`Layout<View>`，并继承`Children`属性。 `AbsoluteLayout` 实现指定的位置及其子级和它们的大小，（可选），程序员需要布局系统。 位置由相对于左上角的子窗口左上角指定`AbsoluteLayout`以与设备无关单位。 `AbsoluteLayout` 此外实现按比例定位和调整大小功能。
+像`StackLayout`， [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout)派生自`Layout<View>`，并继承`Children`属性。 `AbsoluteLayout` 实现指定的位置及其子级和它们的大小，（可选），程序员需要布局系统。 位置由相对于左上角的子窗口左上角指定`AbsoluteLayout`以与设备无关单位。 `AbsoluteLayout` 此外实现按比例定位和调整大小功能。
 
 `AbsoluteLayout` 应将顺序视为仅当程序员可以施加大小对的子对象时要使用的特殊用途布局系统 (例如，`BoxView`元素) 或当元素的大小并不会影响其他子级的位置。 `HorizontalOptions`并`VerticalOptions`属性不起作用的子级上`AbsoluteLayout`。
 
@@ -24,9 +24,9 @@ ms.locfileid: "37935433"
 
 ## <a name="absolutelayout-in-code"></a>在代码中的 AbsoluteLayout
 
-您可以添加到子`Children`的集合`AbsoluteLayout`使用标准[ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/)方法，但`AbsoluteLayout`还提供了扩展[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/)允许您指定的方法[ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/)。 另一个[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/)方法仅需要[ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/)，孩子在这种情况下是不受约束和调整自身大小。
+您可以添加到子`Children`的集合`AbsoluteLayout`使用标准[ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*)方法，但`AbsoluteLayout`还提供了扩展[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/)允许您指定的方法[ `Rectangle` ](xref:Xamarin.Forms.Rectangle)。 另一个[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/)方法仅需要[ `Point` ](xref:Xamarin.Forms.Point)，孩子在这种情况下是不受约束和调整自身大小。
 
-您可以创建`Rectangle`具有值[构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/)需要四个值&mdash;指示相对于其父级的子级的左上角的位置的前两个和第二个两个，该值指示孩子的大小。 也可以使用[构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/)需要`Point`和一个[ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/)值。
+您可以创建`Rectangle`具有值[构造函数](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double))需要四个值&mdash;指示相对于其父级的子级的左上角的位置的前两个和第二个两个，该值指示孩子的大小。 也可以使用[构造函数](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size))需要`Point`和一个[ `Size` ](xref:Xamarin.Forms.Size)值。
 
 这些`Add`中演示的方法[ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo)，哪些位置`BoxView`元素使用`Rectangle`的值，和一个`Label`使用只元素`Point`值。
 
@@ -34,15 +34,15 @@ ms.locfileid: "37935433"
 
 ## <a name="attached-bindable-properties"></a>附加可绑定属性
 
-还有可能要设置的位置和 （可选） 的子项的大小`AbsoluteLayout`添加到之后`Children`使用静态方法的集合[ `AbsoluteLayout.SetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutBounds/p/Xamarin.Forms.BindableObject/Xamarin.Forms.Rectangle/)。 第一个参数是子;第二个是`Rectangle`对象。 您可以指定的子调整自身大小水平和/或垂直宽度和高度值设置为[ `AbsoluteLayout.AutoSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/)常量。
+还有可能要设置的位置和 （可选） 的子项的大小`AbsoluteLayout`添加到之后`Children`使用静态方法的集合[ `AbsoluteLayout.SetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle))。 第一个参数是子;第二个是`Rectangle`对象。 您可以指定的子调整自身大小水平和/或垂直宽度和高度值设置为[ `AbsoluteLayout.AutoSize` ](xref:Xamarin.Forms.AbsoluteLayout.AutoSize)常量。
 
 [ **ChessboardDynamic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic)示例 put`AbsoluteLayout`中`ContentView`与`SizeChanged`处理程序以调用`AbsoluteLayout.SetLayoutBounds`对所有的子对象以使它们尽可能大。  
 
-附加可绑定属性的`AbsoluteLayout`定义为类型的静态只读字段`BindableProperty`名为[ `AbsoluteLayout.LayoutBoundsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty/)。 静态`AbsoluteLayout.SetLayoutBounds`方法实现通过调用`SetValue`上具有的子级`AbsoluteLayout.LayoutBoundsProperty`。 子包含在其中存储附加可绑定属性和其值的字典。 在布局期间`AbsoluteLayout`可以通过调用来获取该值[ `AbsoluteLayout.GetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutBounds/p/Xamarin.Forms.BindableObject/)，这通过实现`GetValue`调用。
+附加可绑定属性的`AbsoluteLayout`定义为类型的静态只读字段`BindableProperty`名为[ `AbsoluteLayout.LayoutBoundsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty)。 静态`AbsoluteLayout.SetLayoutBounds`方法实现通过调用`SetValue`上具有的子级`AbsoluteLayout.LayoutBoundsProperty`。 子包含在其中存储附加可绑定属性和其值的字典。 在布局期间`AbsoluteLayout`可以通过调用来获取该值[ `AbsoluteLayout.GetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject))，这通过实现`GetValue`调用。
 
 ## <a name="proportional-sizing-and-positioning"></a>按比例调整大小和位置
 
-`AbsoluteLayout` 实现按比例调整大小和定位功能。 类定义了第二个附加可绑定属性， [ `LayoutFlagsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty/)，使用相关的静态方法[ `AbsoluteLayout.SetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutFlags/p/Xamarin.Forms.BindableObject/Xamarin.Forms.AbsoluteLayoutFlags/)并[ `AbsoluteLayout.GetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutFlags/p/Xamarin.Forms.BindableObject/)。
+`AbsoluteLayout` 实现按比例调整大小和定位功能。 类定义了第二个附加可绑定属性， [ `LayoutFlagsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty)，使用相关的静态方法[ `AbsoluteLayout.SetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags))并[ `AbsoluteLayout.GetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject))。
 
 参数`AbsoluteLayout.SetLayoutFlags`和返回值的`AbsoluteLayout.GetLayoutFlags`是类型的值[ `AbsoluteLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayoutFlags)，具有以下成员的枚举：
 
@@ -87,7 +87,7 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1-layoutBounds.Height))
 
 可以使用`AbsoluteLayout`来构造*覆盖*，其中涵盖与其他控件，页面可能是为了防止用户与页面上的普通控件进行交互。
 
-[ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay)示例演示了此种方法，并且还演示[ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/)，后者将显示在程序完成向其的范围内任务。
+[ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay)示例演示了此种方法，并且还演示[ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar)，后者将显示在程序完成向其的范围内任务。
 
 ## <a name="some-fun"></a>一些有趣
 
