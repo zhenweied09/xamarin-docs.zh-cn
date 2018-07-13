@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: bae3e7323596cc88f2b76aceeb5a4d1df4ce2d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f62842c3b2aea93d28303b7f47c5d50df6381387
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774377"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998415"
 ---
 # <a name="hello-android-deep-dive"></a>了解 Android：深度分析
 
@@ -98,9 +98,9 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 查看项目中的项，查看每个文件夹及其用途：
 
--   **属性** &ndash; 包含 [AndroidManifest.xml](~/android/platform/android-manifest.md) 文件，该文件描述了对 Xamarin.Android 应用程序的所有要求（包括名称、版本号和权限）。 **Properties** 文件夹还包括.NET 程序集元数据文件 [AssemblyInfo.cs](http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.applicationservices.assemblyinfo(v=vs.110).aspx)。 最好在此文件中填写一些应用程序相关的基本信息。
+-   **属性** &ndash; 包含 [AndroidManifest.xml](~/android/platform/android-manifest.md) 文件，该文件描述了对 Xamarin.Android 应用程序的所有要求（包括名称、版本号和权限）。 **Properties** 文件夹还包括.NET 程序集元数据文件 [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo)。 最好在此文件中填写一些应用程序相关的基本信息。
 
--   **引用** &ndash; 包含生成和运行应用程序所需的程序集。 如果展开“引用”目录，可查看对 .NET 程序集（如 [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx)、System.Core 和 [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx)）的引用以及对 Xamarin 的 Mono.Android 程序集的引用。
+-   **引用** &ndash; 包含生成和运行应用程序所需的程序集。 如果展开“引用”目录，可查看对 .NET 程序集（如 [System](xref:System)、System.Core 和 [System.Xml](xref:System.Xml)）的引用以及对 Xamarin 的 Mono.Android 程序集的引用。
 
 
 -   **资产** &ndash; 包含应用程序需要运行的文件（包括字体、本地数据文件和文本文件）。 此处包括的文件可通过生成的 `Assets` 类访问。 有关 Android 资产的详细信息，请参阅 Xamarin [使用 Android 资产](~/android/app-fundamentals/resources-in-android/android-assets.md)指南。

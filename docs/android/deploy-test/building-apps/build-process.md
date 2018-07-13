@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019706"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998230"
 ---
 # <a name="build-process"></a>生成过程
 
@@ -76,7 +76,7 @@ Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和
 
 ## <a name="build-properties"></a>生成属性
 
-MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx)中的 MyApp.csproj。 
+MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild)中的 MyApp.csproj。
 
 -   配置 &ndash; 指定要使用的生成配置，例如“调试”或“发行”。 配置属性用于确定其他属性（确定目标行为）的默认值。 其他配置可能会在 IDE 中创建。
 
@@ -86,7 +86,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   DebugSymbols &ndash; 确定 Android 程序包是否为*可调试*以及 `$(DebugType)` 属性的布尔值。 可调试包包含调试符号，将 `//application/@android:debuggable` 属性设置为 `true`，并自动添加 `INTERNET` 权限，以便调试器可以附加到该过程。 如果 `DebugSymbols` 是 `True`，并且 `DebugType` 是空字符串或 `Full`，则应用程序是可调试的。
 
--   DebugType &ndash; 指定要生成的[调试符号的类型](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx)作为版本的一部分，它还会影响应用程序是否可调试。 可能的值包括：
+-   DebugType &ndash; 指定要生成的[调试符号的类型](https://docs.microsoft.com/visualstudio/msbuild/csc-task)作为版本的一部分，它还会影响应用程序是否可调试。 可能的值包括：
 
     - Full：生成 Full 符号。 如果 `DebugSymbols` MSBuild 属性也为 `True`，则应用程序包是可调试的。
 
@@ -484,7 +484,7 @@ Enter key password for keystore.alias
 
 ## <a name="build-actions"></a>生成操作
 
-生成操作将[应用于项目中的文件](http://msdn.microsoft.com/en-us/library/bb629388.aspx)，并控制文件的处理方式。 
+生成操作将[应用于项目中的文件](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)，并控制文件的处理方式。 
 
 <a name="AndroidEnvironment" />
 

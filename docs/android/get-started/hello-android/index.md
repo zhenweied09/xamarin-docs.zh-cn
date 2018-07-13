@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: da6dabed58bedcbcaf1191c16a790e055184c95a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 188d4b89354f97341c22036d90b55924650203ce
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762794"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996624"
 ---
 # <a name="hello-android"></a>了解 Android
 
@@ -31,5 +31,5 @@ _在此由两部分构成的指南中，你将使用 Visual Studio for Mac 或 V
 ## <a name="related-links"></a>相关链接
 
 - [Android 入门](http://developer.android.com/training/index.html)
-- [在 Visual Studio 中进行调试](http://msdn.microsoft.com/en-us/library/k0k771bt%28v=vs.90%29.aspx)
+- [在 Visual Studio 中进行调试](https://docs.microsoft.com/visualstudio/debugger/)
 - [Visual Studio for Mac 方案 - 调试](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)

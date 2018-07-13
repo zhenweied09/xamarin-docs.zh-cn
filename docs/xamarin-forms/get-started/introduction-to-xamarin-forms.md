@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 15a26ce633e8321e9101289276c9da302e5bd8cc
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 95b0744cdd52ac1c3f5d7c62c18139a30400ab04
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35243689"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999008"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 简介
 
@@ -47,9 +47,9 @@ Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方
 
 [![](introduction-to-xamarin-forms-images/image05-sml.png "默认 Xamarin.Forms 应用程序")](introduction-to-xamarin-forms-images/image05.png#lightbox "Default Xamarin.Forms Application")
 
-屏幕截图中的每个屏幕对应于 Xamarin.Forms 中的一个页面。 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 在 Android 表示为一个活动，在 iOS 中表示为一个视图控制器，在 Windows 通用平台 (UWP) 中则表示为一个页面。 以上屏幕截图中的示例实例化 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 对象，并使用该对象显示 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)。
+屏幕截图中的每个屏幕对应于 Xamarin.Forms 中的一个页面。 [`Page`](xref:Xamarin.Forms.Page) 在 Android 表示为一个活动，在 iOS 中表示为一个视图控制器，在 Windows 通用平台 (UWP) 中则表示为一个页面。 以上屏幕截图中的示例实例化 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 对象，并使用该对象显示 [`Label`](xref:Xamarin.Forms.Label)。
 
-为了最大限度重用启动代码，Xamarin.Forms 应用程序有一个名为 `App` 的单个类，该类负责实例化第一个将要显示的 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)。 `App` 类的示例可以在以下代码中看到：
+为了最大限度重用启动代码，Xamarin.Forms 应用程序有一个名为 `App` 的单个类，该类负责实例化第一个将要显示的 [`Page`](xref:Xamarin.Forms.Page)。 `App` 类的示例可以在以下代码中看到：
 
 ```csharp
 public class App : Application
@@ -68,13 +68,13 @@ public class App : Application
 }
 ```
 
-此代码实例化一个新的 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 对象，该对象将在页面上垂直和水平居中显示单个 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)。
+此代码实例化一个新的 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 对象，该对象将在页面上垂直和水平居中显示单个 [`Label`](xref:Xamarin.Forms.Label)。
 
 <a name="Launching_the_Initial_Xamarin_Forms_Page_on_Each_Platform" />
 
 ### <a name="launching-the-initial-xamarinforms-page-on-each-platform"></a>在每个平台上启动 Xamarin.Forms 初始页面
 
-若要在应用程序内部使用此 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/)，每个平台应用程序启动时必须初始化 Xamarin.Forms 框架并提供 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 的一个实例。 初始化步骤因平台而异，此内容将在以下部分讨论。
+若要在应用程序内部使用此 [`Page`](xref:Xamarin.Forms.Page)，每个平台应用程序启动时必须初始化 Xamarin.Forms 框架并提供 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 的一个实例。 初始化步骤因平台而异，此内容将在以下部分讨论。
 
 <a name="Launching_in_iOS" />
 
@@ -101,14 +101,14 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
 
 #### <a name="android"></a>Android
 
-若要在 Android 中启动 Xamarin.Forms 初始页面，平台项目应包括可使用 `MainLauncher` 属性创建 `Activity` 的代码，且具有从 `FormsApplicationActivity` 类继承的活动，如以下代码示例所示：
+若要在 Android 中启动 Xamarin.Forms 初始页面，平台项目应包括可使用 `MainLauncher` 属性创建 `Activity` 的代码，且具有从 `FormsAppCompatActivity` 类继承的活动，如以下代码示例所示：
 
 ```csharp
 namespace HelloXamarinFormsWorld.Android
 {
-    [Activity(Label = "HelloXamarinFormsWorld", MainLauncher = true,
+    [Activity(Label = "HelloXamarinFormsWorld", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -163,15 +163,15 @@ public partial class MainPage
 
 在运行时，每个控件都会映射到其本身的本机等效项（即呈现的内容）。
 
-控件在布局内部进行托管。 现在检查 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 类，该类实现常用的布局。
+控件在布局内部进行托管。 现在检查 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 类，该类实现常用的布局。
 
 <a name="StackLayout" />
 
 #### <a name="stacklayout"></a>StackLayout
 
-[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 在屏幕上自动排列控件而不考虑屏幕大小，从而简化了跨平台应用程序开发。 根据添加顺序，以垂直方式或水平方式逐个放置每个子元素。 `StackLayout` 使用的空间大小取决于 [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) 和 [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) 属性的设置方式，但默认情况下，`StackLayout` 尝试使用整个屏幕。
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) 在屏幕上自动排列控件而不考虑屏幕大小，从而简化了跨平台应用程序开发。 根据添加顺序，以垂直方式或水平方式逐个放置每个子元素。 `StackLayout` 使用的空间大小取决于 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 和 [`VerticalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 属性的设置方式，但默认情况下，`StackLayout` 尝试使用整个屏幕。
 
-以下 XAML 代码举例说明了如何使用 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 排列三个 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 控件：
+以下 XAML 代码举例说明了如何使用 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 排列三个 [`Label`](xref:Xamarin.Forms.Label) 控件：
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -214,11 +214,11 @@ public class StackLayoutExample : ContentPage
 }
 ```
 
-默认情况下，[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 采用垂直方向，如以下屏幕截图所示：
+默认情况下，[`StackLayout`](xref:Xamarin.Forms.StackLayout) 采用垂直方向，如以下屏幕截图所示：
 
 [![](introduction-to-xamarin-forms-images/image09-sml.png "垂直 StackLayout")](introduction-to-xamarin-forms-images/image09.png#lightbox "Vertical StackLayout")
 
-可以将 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 更改为水平方向，如以下 XAML 代码示例所示：
+可以将 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 更改为水平方向，如以下 XAML 代码示例所示：
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -298,15 +298,15 @@ Content = new StackLayout
 
 [![](introduction-to-xamarin-forms-images/image11-sml.png "带 LayoutOptions 的水平 StackLayout")](introduction-to-xamarin-forms-images/image11.png#lightbox "Horizontal StackLayout with LayoutOptions")
 
-有关 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 类的详细信息，请参阅 [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)。
+有关 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 类的详细信息，请参阅 [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)。
 
 <a name="Lists_in_Xamarin_Forms" />
 
 ## <a name="lists-in-xamarinforms"></a>Xamarin.Forms 中的列表
 
-[`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件负责在屏幕上显示项集合 - `ListView` 中的每一个项都包含在单个单元格中。 默认情况下，`ListView` 使用内置 [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) 模板并呈现单行文本。
+[`ListView`](xref:Xamarin.Forms.ListView) 控件负责在屏幕上显示项集合 - `ListView` 中的每一个项都包含在单个单元格中。 默认情况下，`ListView` 使用内置 [`TextCell`](xref:Xamarin.Forms.TextCell) 模板并呈现单行文本。
 
-以下代码示例演示一个简单的 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 示例：
+以下代码示例演示一个简单的 [`ListView`](xref:Xamarin.Forms.ListView) 示例：
 
 ```csharp
 var listView = new ListView
@@ -324,17 +324,17 @@ Content = new StackLayout
 };
 ```
 
-以下屏幕截图显示生成的 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)：
+以下屏幕截图显示生成的 [`ListView`](xref:Xamarin.Forms.ListView)：
 
  ![](introduction-to-xamarin-forms-images/image13.png "ListView")
 
-有关 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件的详细信息，请参阅 [ListView](~/xamarin-forms/user-interface/listview/index.md)。
+有关 [`ListView`](xref:Xamarin.Forms.ListView) 控件的详细信息，请参阅 [ListView](~/xamarin-forms/user-interface/listview/index.md)。
 
 <a name="Binding_to_a_Custom_Class" />
 
 ### <a name="binding-to-a-custom-class"></a>绑定到自定义类
 
-[`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件还可以通过默认的 [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) 模板显示自定义对象。
+[`ListView`](xref:Xamarin.Forms.ListView) 控件还可以通过默认的 [`TextCell`](xref:Xamarin.Forms.TextCell) 模板显示自定义对象。
 
 以下代码示例演示 `TodoItem` 类：
 
@@ -346,7 +346,7 @@ public class TodoItem
 }
 ```
 
-可按如下代码示例所示填充 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件：
+可按如下代码示例所示填充 [`ListView`](xref:Xamarin.Forms.ListView) 控件：
 
 ```csharp
 listView.ItemsSource = new TodoItem [] {
@@ -358,7 +358,7 @@ listView.ItemsSource = new TodoItem [] {
 };
 ```
 
-可以创建一个绑定以设置 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 要显示的 `TodoItem` 属性类型，如以下代码示例所示：
+可以创建一个绑定以设置 [`ListView`](xref:Xamarin.Forms.ListView) 要显示的 `TodoItem` 属性类型，如以下代码示例所示：
 
 ```csharp
 listView.ItemTemplate = new DataTemplate(typeof(TextCell));
@@ -373,7 +373,7 @@ listView.ItemTemplate.SetBinding(TextCell.TextProperty, "Name");
 
 ### <a name="selecting-an-item-in-a-listview"></a>选择 ListView 中的项
 
-为响应用户触摸 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 中的单元格，应处理 [`ItemSelected`](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemSelected/) 事件，如以下代码示例所示：
+为响应用户触摸 [`ListView`](xref:Xamarin.Forms.ListView) 中的单元格，应处理 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 事件，如以下代码示例所示：
 
 ```csharp
 listView.ItemSelected += async (sender, e) => {
@@ -381,7 +381,7 @@ listView.ItemSelected += async (sender, e) => {
 };
 ```
 
-当包含在 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 中时，[`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync/p/Xamarin.Forms.Page/) 方法可用来打开具有内置后退导航的新页面。 [`ItemSelected`](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemSelected/) 事件可以访问通过 [`e.SelectedItem`](https://developer.xamarin.com/api/property/Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem/) 属性与单元格关联的对象，将其绑定到新页面并使用 `PushAsync` 显示新页面，如以下代码示例所示：
+当包含在 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 中时，[`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 方法可用来打开具有内置后退导航的新页面。 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 事件可以访问通过 [`e.SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 属性与单元格关联的对象，将其绑定到新页面并使用 `PushAsync` 显示新页面，如以下代码示例所示：
 
 ```csharp
 listView.ItemSelected += async (sender, e) => {
@@ -393,19 +393,19 @@ listView.ItemSelected += async (sender, e) => {
 
 每个平台实现内置后退导航的方法都各不相同。 有关详细信息，请参阅[导航](#Navigation)。
 
-有关 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 选择的详细信息，请参阅 [ListView 交互性](~/xamarin-forms/user-interface/listview/interactivity.md)。
+有关 [`ListView`](xref:Xamarin.Forms.ListView) 选择的详细信息，请参阅 [ListView 交互性](~/xamarin-forms/user-interface/listview/interactivity.md)。
 
 <a name="Customizing_the_appearance_of_a_cell" />
 
 ### <a name="customizing-the-appearance-of-a-cell"></a>自定义单元格的外观
 
-通过子类化 [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 类，并将该类的类型设置为 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 的 [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) 属性，可以自定义单元格的外观。
+通过子类化 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 类，并将该类的类型设置为 [`ListView`](xref:Xamarin.Forms.ListView) 的 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 属性，可以自定义单元格的外观。
 
-以下屏幕截图所示的单元格由一个 [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 和两个 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 控件组成：
+以下屏幕截图所示的单元格由一个 [`Image`](xref:Xamarin.Forms.Image) 和两个 [`Label`](xref:Xamarin.Forms.Label) 控件组成：
 
  ![](introduction-to-xamarin-forms-images/image14.png "ListView 自定义单元格外观")
 
-若要创建此自定义布局，应子类化 [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) 类，如以下代码示例所示：
+若要创建此自定义布局，应子类化 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 类，如以下代码示例所示：
 
 ```csharp
 class EmployeeCell : ViewCell
@@ -456,11 +456,11 @@ class EmployeeCell : ViewCell
 
 此段代码执行下列任务：
 
--  添加 [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 控件并将其绑定到 `Employee` 对象的 `ImageUri` 属性。 若要深入了解数据绑定，请参阅[数据绑定](#Data_Binding)。
--  创建垂直方向的 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 来存放两个 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 控件。 `Label` 控件被绑定到 `DisplayName` 和 `Employee` 对象的 `Twitter` 属性。
--  创建 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)用于托管现有的 [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) 和 `StackLayout`。 使用水平方向排列其子级。
+-  添加 [`Image`](xref:Xamarin.Forms.Image) 控件并将其绑定到 `Employee` 对象的 `ImageUri` 属性。 若要深入了解数据绑定，请参阅[数据绑定](#Data_Binding)。
+-  创建垂直方向的 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 来存放两个 [`Label`](xref:Xamarin.Forms.Label) 控件。 `Label` 控件被绑定到 `DisplayName` 和 `Employee` 对象的 `Twitter` 属性。
+-  创建 [`StackLayout`](xref:Xamarin.Forms.StackLayout)用于托管现有的 [`Image`](xref:Xamarin.Forms.Image) 和 `StackLayout`。 使用水平方向排列其子级。
 
-创建好自定义单元格后，可以通过将其包装在 [`DataTemplate`](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) 中由 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件使用，如以下代码示例所示：
+创建好自定义单元格后，可以通过将其包装在 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 中由 [`ListView`](xref:Xamarin.Forms.ListView) 控件使用，如以下代码示例所示：
 
 ```csharp
 List<Employee> myListOfEmployeeObjects = GetAListOfAllEmployees();
@@ -472,7 +472,7 @@ listView.ItemsSource = myListOfEmployeeObjects;
 listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 ```
 
-此代码为 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 提供 `Employee` 的 `List`。 可使用 `EmployeeCell` 类呈现每个单元格。 `ListView` 将 `Employee` 对象作为其 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 传递给 `EmployeeCell`。
+此代码为 [`ListView`](xref:Xamarin.Forms.ListView) 提供 `Employee` 的 `List`。 可使用 `EmployeeCell` 类呈现每个单元格。 `ListView` 将 `Employee` 对象作为其 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 传递给 `EmployeeCell`。
 
 有关自定义单元格的外观的详细信息，请参阅[单元格的外观](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)。
 
@@ -480,7 +480,7 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 
 ### <a name="using-xaml-to-create-and-customize-a-list"></a>使用 XAML 创建和自定义列表
 
-以下代码示例演示上一部分中 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 的 XAML 等效项：
+以下代码示例演示上一部分中 [`ListView`](xref:Xamarin.Forms.ListView) 的 XAML 等效项：
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -510,13 +510,13 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 </ContentPage>
 ```
 
-此 XAML 定义包含 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 的 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)。 可通过 [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) 属性设置 `ListView` 的数据源。 在 [`ListView.ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) 元素内定义 `ItemsSource` 中每一行的布局。
+此 XAML 定义包含 [`ListView`](xref:Xamarin.Forms.ListView) 的 [`ContentPage`](xref:Xamarin.Forms.ContentPage)。 可通过 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 属性设置 `ListView` 的数据源。 在 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 元素内定义 `ItemsSource` 中每一行的布局。
 
 <a name="Data_Binding" />
 
 ## <a name="data-binding"></a>数据绑定
 
-数据绑定连接两个对象，即源和目标。 源对象提供数据。 目标对象使用（并经常显示）来自源对象的数据。 例如，[`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)（目标对象）通常会将其 [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) 属性绑定到源对象中的公共 `string` 属性。 下图说明了这种绑定关系：
+数据绑定连接两个对象，即源和目标。 源对象提供数据。 目标对象使用（并经常显示）来自源对象的数据。 例如，[`Label`](xref:Xamarin.Forms.Label)（目标对象）通常会将其 [`Text`](xref:Xamarin.Forms.Label.Text) 属性绑定到源对象中的公共 `string` 属性。 下图说明了这种绑定关系：
 
 ![](introduction-to-xamarin-forms-images/data-binding.png "数据绑定")
 
@@ -524,8 +524,8 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 
 创建数据绑定只需两个步骤：
 
-- 目标对象的 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 属性必须设置为源。
-- 必须在目标和源之间建立绑定。 在 XAML 中，此过程可通过使用 [`Binding`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) 标记扩展实现。 在 C# 中，此过程可通过 [`SetBinding`](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) 方法实现。
+- 目标对象的 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 属性必须设置为源。
+- 必须在目标和源之间建立绑定。 在 XAML 中，此过程可通过使用 [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) 标记扩展实现。 在 C# 中，此过程可通过 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 方法实现。
 
 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
@@ -537,9 +537,9 @@ listView.ItemTemplate = new DataTemplate(typeof(EmployeeCell));
 <Entry Text="{Binding FirstName}" ... />
 ```
 
-在 [`Entry.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.Text/) 属性和源 对象的 `FirstName` 属性之间建立绑定。 `Entry` 控件中所做的更改将自动传播到 `employeeToDisplay` 对象。 同样，如果更改了 `employeeToDisplay.FirstName` 属性，Xamarin.Forms 绑定引擎也会更新 `Entry` 控件的内容。 这称为双向绑定。 为了使双向绑定发挥作用，模型类必须实现 `INotifyPropertyChanged` 接口。
+在 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 属性和源 对象的 `FirstName` 属性之间建立绑定。 `Entry` 控件中所做的更改将自动传播到 `employeeToDisplay` 对象。 同样，如果更改了 `employeeToDisplay.FirstName` 属性，Xamarin.Forms 绑定引擎也会更新 `Entry` 控件的内容。 这称为双向绑定。 为了使双向绑定发挥作用，模型类必须实现 `INotifyPropertyChanged` 接口。
 
-尽管可以在 XAML 中设置 `EmployeeDetailPage` 类的 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 属性，但此处在代码隐藏中设置 `Employee` 对象的实例：
+尽管可以在 XAML 中设置 `EmployeeDetailPage` 类的 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 属性，但此处在代码隐藏中设置 `Employee` 对象的实例：
 
 ```csharp
 public EmployeeDetailPage(Employee employee)
@@ -549,7 +549,7 @@ public EmployeeDetailPage(Employee employee)
 }
 ```
 
-虽然可以分别设置每个目标对象的 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 属性，但没有必要。 `BindingContext` 是特殊属性，其所有子级都会继承该属性。 因此，当 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 上的 `BindingContext` 设置为 `Employee` 实例时，`ContentPage` 的所有子级都具有相同的 `BindingContext`，并且都可绑定到 `Employee` 对象的公共属性。
+虽然可以分别设置每个目标对象的 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 属性，但没有必要。 `BindingContext` 是特殊属性，其所有子级都会继承该属性。 因此，当 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 上的 `BindingContext` 设置为 `Employee` 实例时，`ContentPage` 的所有子级都具有相同的 `BindingContext`，并且都可绑定到 `Employee` 对象的公共属性。
 
 ### <a name="c35"></a>C&#35;
 
@@ -568,15 +568,15 @@ public EmployeeDetailPage(Employee employeeToDisplay)
 }
 ```
 
-向 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 构造函数传递 `Employee` 对象的一个实例，并将 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 设置为要绑定到的对象。 实例化 [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) 控件，并在 [`Entry.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.Text/) 属性和源对象的 `FirstName` 属性之间设置绑定。 `Entry` 控件中所做的更改将自动传播到 `employeeToDisplay` 对象。 同样，如果更改了 `employeeToDisplay.FirstName` 属性，Xamarin.Forms 绑定引擎也会更新 `Entry` 控件的内容。 这称为双向绑定。 为了使双向绑定发挥作用，模型类必须实现 `INotifyPropertyChanged` 接口。
+向 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 构造函数传递 `Employee` 对象的一个实例，并将 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 设置为要绑定到的对象。 实例化 [`Entry`](xref:Xamarin.Forms.Entry) 控件，并在 [`Entry.Text`](xref:Xamarin.Forms.Entry.Text) 属性和源对象的 `FirstName` 属性之间设置绑定。 `Entry` 控件中所做的更改将自动传播到 `employeeToDisplay` 对象。 同样，如果更改了 `employeeToDisplay.FirstName` 属性，Xamarin.Forms 绑定引擎也会更新 `Entry` 控件的内容。 这称为双向绑定。 为了使双向绑定发挥作用，模型类必须实现 `INotifyPropertyChanged` 接口。
 
-`SetBinding` 方法采用两个参数。 第一个参数指定绑定类型的信息。 第二个参数提供绑定内容或绑定方式的信息。 大多数情况下，第二个参数只是一个字符串，持有 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) 上的属性名称。 使用下列语法可直接绑定到 `BindingContext`：
+`SetBinding` 方法采用两个参数。 第一个参数指定绑定类型的信息。 第二个参数提供绑定内容或绑定方式的信息。 大多数情况下，第二个参数只是一个字符串，持有 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 上的属性名称。 使用下列语法可直接绑定到 `BindingContext`：
 
 ```csharp
 someLabel.SetBinding(Label.TextProperty, new Binding("."));
 ```
 
-使用点语法指示 Xamarin.Forms 使用 [`BindingContext`](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/)（而非 `BindingContext` 上的属性）作为数据源。 如果 `BindingContext` 是简单类型（例如 `string` 或 `int`），此语法非常有用。
+使用点语法指示 Xamarin.Forms 使用 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)（而非 `BindingContext` 上的属性）作为数据源。 如果 `BindingContext` 是简单类型（例如 `string` 或 `int`），此语法非常有用。
 
 <a name="INotifyPropertyChanged" />
 
@@ -627,20 +627,20 @@ public class MyObject : INotifyPropertyChanged
 
 ## <a name="navigation"></a>导航
 
-Xamarin.Forms 提供多种不同的页导航体验，具体取决于使用的 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 类型。 对于 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 实例，提供两种导航体验：
+Xamarin.Forms 提供多种不同的页导航体验，具体取决于使用的 [`Page`](xref:Xamarin.Forms.Page) 类型。 对于 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 实例，提供两种导航体验：
 
 - [分层导航](#Hierarchical_Navigation)
 - [模式导航](#Modal_Navigation)
 
-[`CarouselPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/)[`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) 和 [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) 类提供替代导航体验。 有关详细信息，请参阅[导航](~/xamarin-forms/app-fundamentals/navigation/index.md)。
+[`CarouselPage`](xref:Xamarin.Forms.CarouselPage)[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 和 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 类提供替代导航体验。 有关详细信息，请参阅[导航](~/xamarin-forms/app-fundamentals/navigation/index.md)。
 
 <a name="Hierarchical_Navigation" />
 
 ### <a name="hierarchical-navigation"></a>分层导航
 
-[`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 类提供分层导航体验，用户可以随心所欲地向前或向后导航页面。 此类将导航实现为 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 对象的后进先出 (LIFO) 堆栈。
+[`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 类提供分层导航体验，用户可以随心所欲地向前或向后导航页面。 此类将导航实现为 [`Page`](xref:Xamarin.Forms.Page) 对象的后进先出 (LIFO) 堆栈。
 
-在分层导航中，使用 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 类在 [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) 对象的堆栈内进行导航。 若要从一页移动到另一页，应用程序会将新页推送到导航堆栈中，在堆栈中，该页会变为活动页。 若要返回到前一页，应用程序会从导航堆栈弹出当前页，而使最顶层的页成为活动页。
+在分层导航中，使用 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 类在 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 对象的堆栈内进行导航。 若要从一页移动到另一页，应用程序会将新页推送到导航堆栈中，在堆栈中，该页会变为活动页。 若要返回到前一页，应用程序会从导航堆栈弹出当前页，而使最顶层的页成为活动页。
 
 添加到导航堆栈中的第一页称为应用程序的根页，以下代码示例显示了实现此过程的方法：
 
@@ -651,7 +651,7 @@ public App ()
 }
 ```
 
-若要导航到 `LoginPage`，需要调用当前页的 [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) 属性上的 [`PushAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PushAsync/p/Xamarin.Forms.Page/) 方法，如以下代码示例所示：
+若要导航到 `LoginPage`，需要调用当前页的 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 属性上的 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync(Xamarin.Forms.Page)) 方法，如以下代码示例所示：
 
 ```csharp
 await Navigation.PushAsync(new LoginPage());
@@ -659,7 +659,7 @@ await Navigation.PushAsync(new LoginPage());
 
 这会将新的 `LoginPage` 对象推送到导航堆栈中，在堆栈中，它成为活动页。
 
-通过设备上的返回按钮（无论是设备上的物理按钮还是屏幕按钮），可以从导航堆栈中弹出活动页。 若要以编程方式返回到前一页，`LoginPage` 实例必须调用 [`PopAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.NavigationPage.PopAsync()/) 方法，如以下代码示例所示：
+通过设备上的返回按钮（无论是设备上的物理按钮还是屏幕按钮），可以从导航堆栈中弹出活动页。 若要以编程方式返回到前一页，`LoginPage` 实例必须调用 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 方法，如以下代码示例所示：
 
 ```csharp
 await Navigation.PopAsync();
@@ -673,14 +673,14 @@ await Navigation.PopAsync();
 
 Xamarin.Forms 支持模式页面。 模式页面鼓励用户完成独立任务，在完成或取消该任务之前，不允许导航离开该任务。
 
-模式页面可以是 Xamarin.Forms 支持的任何 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 类型。 若要显示模式页面，应用程序会将页面推送到导航堆栈中，在堆栈中，该页会变为活动页。 若要返到回前一页，应用程序会从导航堆栈弹出当前页面，而使最顶层的页成为活动页。
+模式页面可以是 Xamarin.Forms 支持的任何 [`Page`](xref:Xamarin.Forms.Page) 类型。 若要显示模式页面，应用程序会将页面推送到导航堆栈中，在堆栈中，该页会变为活动页。 若要返到回前一页，应用程序会从导航堆栈弹出当前页面，而使最顶层的页成为活动页。
 
-可以由任何 [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) 派生类型上的 [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) 属性公开模式导航方法。 也可使用 [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) 属性公开 [`ModalStack`](https://developer.xamarin.com/api/property/Xamarin.Forms.INavigation.ModalStack/) 属性，并从中获得导航堆栈中的模式页面。 但是，在模式导航中没有执行模式堆栈操作或弹出到根页的概念。 这是因为基础平台普遍都不支持这些操作。
+可以由任何 [`Page`](xref:Xamarin.Forms.Page) 派生类型上的 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 属性公开模式导航方法。 也可使用 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 属性公开 [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) 属性，并从中获得导航堆栈中的模式页面。 但是，在模式导航中没有执行模式堆栈操作或弹出到根页的概念。 这是因为基础平台普遍都不支持这些操作。
 
 > [!NOTE]
-> 执行模式页面导航无需具有 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) 实例。
+> 执行模式页面导航无需具有 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 实例。
 
-若要以模式方式导航到 `LoginPage`，需要调用当前页的 [`Navigation`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Navigation/) 属性上的 [`PushModalAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PushModalAsync(Xamarin.Forms.Page)/) 方法，如以下代码示例所示：
+若要以模式方式导航到 `LoginPage`，需要调用当前页的 [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) 属性上的 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) 方法，如以下代码示例所示：
 
 ```csharp
 await Navigation.PushModalAsync(new LoginPage());
@@ -688,7 +688,7 @@ await Navigation.PushModalAsync(new LoginPage());
 
 这会将 `LoginPage` 实例推送到导航堆栈中，在堆栈中，它成为活动页。
 
-通过设备上的返回按钮（无论是设备上的物理按钮还是屏幕按钮），可以从导航堆栈中弹出活动页。 若要以编程方式返回原始页，`LoginPage` 实例必须调用 [`PopModalAsync`](https://developer.xamarin.com/api/member/Xamarin.Forms.INavigation.PopModalAsync()/) 方法，如以下代码示例所示：
+通过设备上的返回按钮（无论是设备上的物理按钮还是屏幕按钮），可以从导航堆栈中弹出活动页。 若要以编程方式返回原始页，`LoginPage` 实例必须调用 [`PopModalAsync`](xref:Xamarin.Forms.INavigation.PopModalAsync) 方法，如以下代码示例所示：
 
 ```csharp
 await Navigation.PopModalAsync();
@@ -706,10 +706,10 @@ await Navigation.PopModalAsync();
 
 - 控件模板让你在运行时能够轻松设计或重新设计应用程序页面的主题。 有关详细信息，请参阅[控件模板](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)。
 - 数据模板让你可以在支持的控件上定义数据表示形式。 有关详细信息，请参阅[数据模板](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)。
-- 共享代码可通过 [`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) 类访问本机功能。 有关详细信息，请参阅[通过 DependencyService 访问本机功能](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
+- 共享代码可通过 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 类访问本机功能。 有关详细信息，请参阅[通过 DependencyService 访问本机功能](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
 - Xamarin.Forms 具有简单的消息传送服务，用于发送和接收消息，减少两个类之间的耦合。 有关详细信息，请参阅[通过 MessagingCenter 发布和订阅](~/xamarin-forms/app-fundamentals/messaging-center.md)。
 - 通过 `Renderer` 类可以在每个平台上以不同方式呈现每个页面、布局和控件，反过来又可以创建本机控件，在屏幕上排列该控件，并添加共享代码中指定的行为。 开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 有关详细信息，请参阅[自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)。
-- 还可以自定义每个平台上的本机控件的效果。 通过子类化 [`PlatformEffect`](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/) 控件在特定于平台的项目中创建效果，并将其附加到相应的 Xamarin.Forms 控件中使用。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+- 还可以自定义每个平台上的本机控件的效果。 通过子类化 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 控件在特定于平台的项目中创建效果，并将其附加到相应的 Xamarin.Forms 控件中使用。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
 
 此外，也可以阅读 Charles Petzold 撰写的 Creating Mobile Apps with Xamarin.Forms（使用 Xamarin.Forms 创建移动应用），了解有关 Xamarin.Forms 的详细信息。 有关详细信息，请参阅[使用 Xamarin.Forms 创建移动应用](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)。
 
@@ -725,6 +725,6 @@ await Navigation.PopModalAsync();
 - [用户界面](~/xamarin-forms/user-interface/index.md)
 - [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-forms/all/)
 - [入门示例](https://developer.xamarin.com/samples/xamarin-forms/GettingStarted/)
-- [Xamarin.Forms](https://developer.xamarin.com/api/namespace/Xamarin.Forms/)
+- [Xamarin.Forms](xref:Xamarin.Forms)
 - [免费自学教程（视频）](https://university.xamarin.com/self-guided)
 - [Hello，Xamarin.Forms iOS 工作簿](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)

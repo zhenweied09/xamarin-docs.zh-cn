@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 538ca831e51069f345a8a7a53aa844352c207faa
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268831"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996176"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms 多屏显示快速入门
 
@@ -63,7 +63,7 @@ ms.locfileid: "36268831"
 
     ![](quickstart-images/vs/open-app-class.png "打开的 App.xaml.cs")
 
-6. 在 **App.xaml.cs** 中，导入 `System.Collections.Generic` 命名空间，添加 `PhoneNumbers` 属性的声明，初始化 `App` 构造函数中的属性，并将 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 属性初始化为 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)。 使用 `PhoneNumbers` 集合存储应用程序呼叫的每个已翻译的电话号码列表：
+6. 在 **App.xaml.cs** 中，导入 `System.Collections.Generic` 命名空间，添加 `PhoneNumbers` 属性的声明，初始化 `App` 构造函数中的属性，并将 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 属性初始化为 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)。 使用 `PhoneNumbers` 集合存储应用程序呼叫的每个已翻译的电话号码列表：
 
     ```csharp
     using System.Collections.Generic;
@@ -94,7 +94,7 @@ ms.locfileid: "36268831"
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "打开的 MainPage.xaml")
 
-8. 在 **MainPage.xaml** 中，在 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 控件末尾处添加 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 控件。 此按钮用于导航到呼叫历史记录页：
+8. 在 **MainPage.xaml** 中，在 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 控件末尾处添加 [`Button`](xref:Xamarin.Forms.Button) 控件。 此按钮用于导航到呼叫历史记录页：
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"
@@ -209,7 +209,7 @@ ms.locfileid: "36268831"
 
     ![](quickstart-images/xs/open-app-class.png "打开的 App.xaml.cs")
 
-7. 在 **App.xaml.cs** 中，导入 `System.Collections.Generic` 命名空间，添加 `PhoneNumbers` 属性的声明，初始化 `App` 构造函数中的属性，并将 [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) 属性初始化为 [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)。 使用 `PhoneNumbers` 集合存储应用程序呼叫的每个已翻译的电话号码列表：
+7. 在 **App.xaml.cs** 中，导入 `System.Collections.Generic` 命名空间，添加 `PhoneNumbers` 属性的声明，初始化 `App` 构造函数中的属性，并将 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 属性初始化为 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)。 使用 `PhoneNumbers` 集合存储应用程序呼叫的每个已翻译的电话号码列表：
 
     ```csharp
     using System.Collections.Generic;
@@ -240,7 +240,7 @@ ms.locfileid: "36268831"
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "打开的 MainPage.xaml")
 
-9. 在 **MainPage.xaml** 中，在 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 控件末尾处添加 [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) 控件。 此按钮用于导航到呼叫历史记录页：
+9. 在 **MainPage.xaml** 中，在 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 控件末尾处添加 [`Button`](xref:Xamarin.Forms.Button) 控件。 此按钮用于导航到呼叫历史记录页：
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"

@@ -1,23 +1,21 @@
 ---
 title: 跨平台性能
-description: 可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。 这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。 本文介绍并讨论这些方法。
+description: 本文档介绍的各种技术可用于提高移动应用程序的性能。 其中讨论了 Profiler、IDisposable 资源、弱引用，SGen 垃圾回收器、大小缩减技术等。
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997434"
 ---
 # <a name="cross-platform-performance"></a>跨平台性能
 
-_可通过多种方法提高使用 Xamarin 平台生成的应用程序的性能。这些方法共同可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。本文将介绍并讨论这些方法。_
-
 应用程序性能差表现在许多方面。 这会造成应用程序看起来无响应，导致滚动缓慢，还可降低电池寿命。 但是，优化性能不止需要实现高效的代码。 还必须考虑用户对应用程序性能的体验。 例如，确保操作执行不会妨碍用户执行其他活动，这有助于改进用户的体验。
-
 
 <a name="profiler" />
 
@@ -89,7 +87,7 @@ public void ReadText (string filename)
 
 `StreamReader` 类实现 `IDisposable`，`finally` 块调用 `StreamReader.Dispose` 方法来释放资源。
 
-有关详细信息，请参阅 [IDisposable 接口](https://developer.xamarin.com/api/type/System.IDisposable/)。
+有关详细信息，请参阅 [IDisposable 接口](xref:System.IDisposable)。
 
 <a name="events" />
 
@@ -381,5 +379,5 @@ SGen 启动垃圾回收时，将在回收内存的同时停止应用程序的线
 - [Xamarin Profiler 简介](~/tools/profiler/index.md)
 - [Xamarin.Forms 性能](~/xamarin-forms/deploy-test/performance.md)
 - [异步支持概述](~/cross-platform/platform/async.md)
-- [IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/)
+- [IDisposable](xref:System.IDisposable)
 - [避免 Xamarin 应用中的常见缺陷（视频）](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
