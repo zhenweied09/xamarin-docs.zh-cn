@@ -7,12 +7,12 @@ ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 92cf7f0163c4f074c718e86b06cf4830ff857c58
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935597"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997447"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>第 16 章的摘要。 数据绑定
 
@@ -24,27 +24,27 @@ ms.locfileid: "37935597"
 
 在数据绑定中涉及多个属性、 方法和类：
 
-- [ `Binding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Binding/)类派生自[ `BindingBase` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingBase/)和封装数据绑定的许多特征
-- [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/)属性定义由[ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)类
-- [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/)方法也由定义[ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/)类
-- [ `BindableObjectExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObjectExtensions/)类定义了三个其他`SetBinding`方法
+- [ `Binding` ](xref:Xamarin.Forms.Binding)类派生自[ `BindingBase` ](xref:Xamarin.Forms.BindingBase)和封装数据绑定的许多特征
+- [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)属性定义由[ `BindableObject` ](xref:Xamarin.Forms.BindableObject)类
+- [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase))方法也由定义[ `BindableObject` ](xref:Xamarin.Forms.BindableObject)类
+- [ `BindableObjectExtensions` ](xref:Xamarin.Forms.BindableObjectExtensions)类定义了三个其他`SetBinding`方法
 
 以下两个类的绑定支持 XAML 标记扩展：
 
-- [`BindingExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) 支持`Binding`标记扩展
-- [`ReferenceExtension`](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) 支持`x:Reference`标记扩展
+- [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) 支持`Binding`标记扩展
+- [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 支持`x:Reference`标记扩展
 
 在数据绑定中涉及两个接口：
 
-- [`INotifyPropertyChanged`](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/) 在`System.ComponentModel`命名空间是用于实现在属性发生更改时通知
-- [`IValueConverter`](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/) 用于定义将值从一种类型转换为另一个数据绑定中的较小类
+- [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 在`System.ComponentModel`命名空间是用于实现在属性发生更改时通知
+- [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 用于定义将值从一种类型转换为另一个数据绑定中的较小类
 
-数据绑定连接两个相同的对象或 （更常见） 两个不同的对象的属性。 这两个属性*源*并*目标*。 通常情况下，源属性中的更改会导致在目标属性发生更改，但有时反转方向。 而不考虑：
+数据绑定连接两个相同的对象或 （更常见） 两个不同的对象的属性。 这两个属性嘿 *源*并*目标*。 通常情况下，源属性中的更改会导致在目标属性发生更改，但有时反转方向。 而不考虑：
 
-- *目标*属性必须为后盾 [`BindableProperty`](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableProperty/)
-- *源*属性通常是实现的类的成员 [`INotifyPropertyChanged`](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/)
+- *目标*属性必须为后盾 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)
+- *源*属性通常是实现的类的成员 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged)
 
-实现的类`INotifyPropertyChanged`激发[ `PropertyChanged` ](https://developer.xamarin.com/api/event/System.ComponentModel.INotifyPropertyChanged.PropertyChanged/)属性值更改时事件。 `BindableObject` 实现`INotifyPropertyChanged`并自动触发`PropertyChanged`事件时由属性支持`BindableProperty`更改值，但您可以编写您自己的类实现`INotifyPropertyChanged`而无需派生自`BindableObject`。
+实现的类`INotifyPropertyChanged`激发[ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)属性值更改时事件。 `BindableObject` 实现`INotifyPropertyChanged`并自动触发`PropertyChanged`事件时由属性支持`BindableProperty`更改值，但您可以编写您自己的类实现`INotifyPropertyChanged`而无需派生自`BindableObject`。
 
 ## <a name="code-and-xaml"></a>代码和 XAML
 
@@ -53,19 +53,19 @@ ms.locfileid: "37935597"
 - 源是`Value`属性 `Slider`
 - 目标是`Opacity`属性 `Label`
 
-通过设置连接两个对象`BindingContext`的`Label`对象传递给`Slider`对象。 两个属性连接通过调用[ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObjectExtensions.SetBinding/p/Xamarin.Forms.BindableObject/Xamarin.Forms.BindableProperty/System.String/)上的扩展方法`Label`引用`OpacityProperty`可绑定的属性和`Value`属性`Slider`表示为字符串。
+通过设置连接两个对象`BindingContext`的`Label`对象传递给`Slider`对象。 两个属性连接通过调用[ `SetBinding` ](xref:Xamarin.Forms.BindableObjectExtensions.SetBinding*)上的扩展方法`Label`引用`OpacityProperty`可绑定的属性和`Value`属性`Slider`表示为字符串。
 
 操作`Slider`然后导致`Label`淡入和移出视图。
 
-[ **OpacityBindingXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/OpacityBindingXaml)是与数据绑定在 XAML 中设置的同一个程序。 `BindingContext`的`Label`设置为`x:Reference`标记扩展引用`Slider`，并`Opacity`属性的`Label`设置为`Binding`与标记扩展其[ `Path`](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/)属性引用`Value`属性的`Slider`。
+[ **OpacityBindingXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/OpacityBindingXaml)是与数据绑定在 XAML 中设置的同一个程序。 `BindingContext`的`Label`设置为`x:Reference`标记扩展引用`Slider`，并`Opacity`属性的`Label`设置为`Binding`与标记扩展其[ `Path`](xref:Xamarin.Forms.Binding.Path)属性引用`Value`属性的`Slider`。
 
 ## <a name="source-and-bindingcontext"></a>源和 BindingContext
 
-[ **BindingSourceCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode)示例代码中演示一种替代方法。 一个`Binding`通过设置创建对象[ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Source/)属性设置为`Slider`对象并[ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/)属性设置为"Value"。 [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.BindableObject.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/)方法`BindableObject`上调用`Label`对象。
+[ **BindingSourceCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode)示例代码中演示一种替代方法。 一个`Binding`通过设置创建对象[ `Source` ](xref:Xamarin.Forms.Binding.Source)属性设置为`Slider`对象并[ `Path` ](xref:Xamarin.Forms.Binding.Path)属性设置为"Value"。 [ `SetBinding` ](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase))方法`BindableObject`上调用`Label`对象。
 
-[ `Binding`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Binding.Binding/p/System.String/Xamarin.Forms.BindingMode/Xamarin.Forms.IValueConverter/System.Object/System.String/System.Object/)可能也使用以定义`Binding`对象。
+[ `Binding`构造函数](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))可能也使用以定义`Binding`对象。
 
-[ **BindingSourceXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml)示例演示在 XAML 中可比较的方法。 `Opacity`的属性`Label`设置为`Binding`与标记扩展[ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/)设置为`Value`属性和[ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Source/)设置为嵌入`x:Reference`标记扩展。
+[ **BindingSourceXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml)示例演示在 XAML 中可比较的方法。 `Opacity`的属性`Label`设置为`Binding`与标记扩展[ `Path` ](xref:Xamarin.Forms.Binding.Path)设置为`Value`属性和[ `Source` ](xref:Xamarin.Forms.Binding.Source)设置为嵌入`x:Reference`标记扩展。
 
 总之，有两种方式引用的绑定源对象：
 
@@ -74,11 +74,11 @@ ms.locfileid: "37935597"
 
 如果同时指定两者，第二个优先。 利用`BindingContext`是传播在可视化树。 这是*非常*如果多个目标属性绑定到相同的源对象。
 
-[ **WebViewDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/WebViewDemo)程序演示如何使用此技术[ `WebView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/)元素。 两个`Button`向后和向前导航元素继承`BindingContext`从其父对象的引用`WebView`。 `IsEnabled`的两个按钮的属性然后可以通过简单`Binding`目标按钮的标记扩展`IsEnabled`基础设置的属性[ `CanGoBack` ](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.CanGoBack/)和[ `CanGoForward`](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.CanGoForward/)的只读属性`WebView`。
+[ **WebViewDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/WebViewDemo)程序演示如何使用此技术[ `WebView` ](xref:Xamarin.Forms.WebView)元素。 两个`Button`向后和向前导航元素继承`BindingContext`从其父对象的引用`WebView`。 `IsEnabled`的两个按钮的属性然后可以通过简单`Binding`目标按钮的标记扩展`IsEnabled`基础设置的属性[ `CanGoBack` ](xref:Xamarin.Forms.WebView.CanGoBack)和[ `CanGoForward`](xref:Xamarin.Forms.WebView.CanGoForward)的只读属性`WebView`。
 
 ## <a name="the-binding-mode"></a>绑定模式
 
-设置[ `Mode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.Mode/)的属性`Binding`成员[ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/)枚举：
+设置[ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode)的属性`Binding`成员[ `BindingMode` ](xref:Xamarin.Forms.BindingMode)枚举：
 
 - [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) 因此，源属性中的更改会影响目标
 - [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) 因此，目标属性中的更改会影响源
@@ -103,7 +103,7 @@ ms.locfileid: "37935597"
 
 ## <a name="string-formatting"></a>字符串格式设置
 
-当目标属性属于类型`string`，可以使用[ `StringFormat` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.StringFormat/)属性定义`BindingBase`以源转换为`string`。 设置`StringFormat`属性设置为.NET 格式设置字符串，你将使用静态[ `String.Format` ](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/)格式显示对象。 时使用此格式设置字符串中标记扩展，请在它两边用单引号因此大括号不会被误解为嵌入的标记扩展。
+当目标属性属于类型`string`，可以使用[ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat)属性定义`BindingBase`以源转换为`string`。 设置`StringFormat`属性设置为.NET 格式设置字符串，你将使用静态[ `String.Format` ](xref:System.String.Format(System.String,System.Object))格式显示对象。 时使用此格式设置字符串中标记扩展，请在它两边用单引号因此大括号不会被误解为嵌入的标记扩展。
 
 [ **ShowViewValues** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ShowViewValues)示例演示如何使用`StringFormat`在 XAML 中。
 
@@ -111,11 +111,11 @@ ms.locfileid: "37935597"
 
 ## <a name="why-is-it-called-path"></a>为什么它称为"路径"？
 
-[ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/)属性的`Binding`因此称为，因为它可以是属性和索引器用句点分隔的一系列。 [ **BindingPathDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingPathDemos)示例显示了几个示例。
+[ `Path` ](xref:Xamarin.Forms.Binding.Path)属性的`Binding`因此称为，因为它可以是属性和索引器用句点分隔的一系列。 [ **BindingPathDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingPathDemos)示例显示了几个示例。
 
 ## <a name="binding-value-converters"></a>绑定值转换器
 
-不同类型的源和目标属性的绑定时，你可以使用绑定转换器的类型之间进行转换。 这是实现的类[ `IValueConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.IValueConverter/)接口，并包含两个方法： [ `Convert` ](https://developer.xamarin.com/api/member/Xamarin.Forms.IValueConverter.Convert/p/System.Object/System.Type/System.Object/System.Globalization.CultureInfo/)将源转换到目标，以及[ `ConvertBack` ](https://developer.xamarin.com/api/member/Xamarin.Forms.IValueConverter.ConvertBack/p/System.Object/System.Type/System.Object/System.Globalization.CultureInfo/)若要将目标转换到源。
+不同类型的源和目标属性的绑定时，你可以使用绑定转换器的类型之间进行转换。 这是实现的类[ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter)接口，并包含两个方法： [ `Convert` ](xref:Xamarin.Forms.IValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo))将源转换到目标，以及[ `ConvertBack` ](xref:Xamarin.Forms.IValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo))若要将目标转换到源。
 
 [ `IntToBoolConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/IntToBoolConverter.cs)类[ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit)库是一个示例，用于转换`int`到`bool`。 可通过演示[ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ButtonEnabler)示例中，后者只允许`Button`如果至少一个字符键入`Entry`。
 
