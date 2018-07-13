@@ -7,16 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f9b9e27afd5dbbf52f3653995470136e794f17b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935194"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995464"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>第 13 章的摘要。 位图
 
-Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素显示位图。 所有 Xamarin.Forms 平台都支持的 JPEG、 PNG、 GIF 和 BMP 文件格式。
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 Xamarin.Forms 平台都支持的 JPEG、 PNG、 GIF 和 BMP 文件格式。
 
 在 Xamarin.Forms 中的位图来自四个位置：
 
@@ -27,30 +27,30 @@ Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.I
 
 在 pcl 中的位图资源是独立于平台的而平台项目中的位图资源是特定于平台的。
 
-通过设置指定的位图[ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/)的属性`Image`对象的类型[ `ImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/)，一个带有三个派生类抽象类：
+通过设置指定的位图[ `Source` ](xref:Xamarin.Forms.Image.Source)的属性`Image`对象的类型[ `ImageSource` ](xref:Xamarin.Forms.ImageSource)，一个带有三个派生类抽象类：
 
-- [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) 用于通过基于 web 访问位图`Uri`对象设置为其[ `Uri` ](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.Uri/)属性
-- [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/) 用于访问存储在平台应用程序项目中的位图基于文件夹和文件路径设置为其[ `File` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FileImageSource.File/)属性
-- [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/) 用于加载使用.NET 的位图`Stream`返回由指定的对象`Stream`从`Func`设置为其[ `Stream` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StreamImageSource.Stream/)属性
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) 用于通过基于 web 访问位图`Uri`对象设置为其[ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri)属性
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 用于访问存储在平台应用程序项目中的位图基于文件夹和文件路径设置为其[ `File` ](xref:Xamarin.Forms.FileImageSource.File)属性
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) 用于加载使用.NET 的位图`Stream`返回由指定的对象`Stream`从`Func`设置为其[ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream)属性
 
 或者 （和更常见的） 可以使用的以下静态方法`ImageSource`类中，将返回的所有`ImageSource`对象：
 
-- [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) 用于通过基于 web 访问位图`Uri`对象
-- [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) 用于访问存储在 PCL 中，该应用程序中嵌入的资源为位图或[ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Type/)或[ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Reflection.Assembly/)访问另一个源程序集中的位图
-- [`ImageSource.FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) 用于访问从平台应用程序项目的位图
-- [`ImageSource.FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) 用于加载位图基于`Stream`对象
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 用于通过基于 web 访问位图`Uri`对象
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) 用于访问存储为 PCL; 在应用程序中嵌入的资源的位图[ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type))或[ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly))访问另一个源程序集中的位图
+- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) 用于访问从平台应用程序项目的位图
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) 用于加载位图基于`Stream`对象
 
 没有类等效项的`Image.FromResource`方法。 `UriImageSource`类是很有用，如果您需要缓存进行控制。 `FileImageSource`类是在 XAML 中很有用。 `StreamImageSource` 对于异步加载很有用`Stream`对象，而`ImageSource.FromStream`是同步的。
 
 ## <a name="platform-independent-bitmaps"></a>独立于平台的位图
 
-[ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode)项目将位图加载通过 web 使用`ImageSource.FromUri`。 `Image`元素设置为`Content`属性的`ContentPage`，因此其被限制到页的大小。 而不考虑位图的大小，受约束`Image`元素拉伸到其容器的大小，并且在其最大大小显示位图`Image`元素同时保持位图的长宽比。 区域`Image`更高版本可以具有颜色位图[ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/)。
+[ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode)项目将位图加载通过 web 使用`ImageSource.FromUri`。 `Image`元素设置为`Content`属性的`ContentPage`，因此其被限制到页的大小。 而不考虑位图的大小，受约束`Image`元素拉伸到其容器的大小，并且在其最大大小显示位图`Image`元素同时保持位图的长宽比。 区域`Image`更高版本可以具有颜色位图[ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor)。
 
-[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml)示例类似，但只需设置`Source`到 URL 的属性。 就会处理转换[ `ImageSourceConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSourceConverter/)类。
+[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml)示例类似，但只需设置`Source`到 URL 的属性。 就会处理转换[ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter)类。
 
 ### <a name="fit-and-fill"></a>配合和填充
 
-您可以控制如何通过设置拉伸位图[ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/)的属性`Image`的以下成员之一[ `Aspect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/)枚举：
+您可以控制如何通过设置拉伸位图[ `Aspect` ](xref:Xamarin.Forms.Image.Aspect)的属性`Image`的以下成员之一[ `Aspect` ](xref:Xamarin.Forms.Aspect)枚举：
 
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)： 尊重纵横比 （默认值）
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill)： 填充区域，不会接受纵横比
@@ -84,7 +84,7 @@ Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.I
 
 [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser)示例允许用户浏览存储在 Xamarin 网站上的库存映像。 它使用.NET`WebRequest`类下载包含位图的列表的 JSON 文件。
 
-该程序使用[ `ActivityIndicator` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/)以指示内容怎么回事。 加载每个位图，只读[ `IsLoading` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.IsLoading/)的属性`Image`是`true`。 `IsLoading`属性由可绑定的属性，因此支持`PropertyChanged`该属性发生更改时触发事件。 该程序将一个处理程序附加到此事件，并使用当前的设置`IsLoaded`若要设置[ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/)属性`ActivityIndicator`。
+该程序使用[ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator)以指示内容怎么回事。 加载每个位图，只读[ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading)的属性`Image`是`true`。 `IsLoading`属性由可绑定的属性，因此支持`PropertyChanged`该属性发生更改时触发事件。 该程序将一个处理程序附加到此事件，并使用当前的设置`IsLoaded`若要设置[ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/)属性`ActivityIndicator`。
 
 ## <a name="streaming-bitmaps"></a>流式处理位图
 
@@ -102,11 +102,11 @@ Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.I
 
 ## <a name="platform-specific-bitmaps"></a>特定于平台的位图
 
-所有 Xamarin.Forms 平台都允许将位图存储在平台应用程序程序集。 这些平台位图时检索到的 Xamarin.Forms 应用程序，属于类型[ `FileImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/)。 可将其用于：
+所有 Xamarin.Forms 平台都允许将位图存储在平台应用程序程序集。 这些平台位图时检索到的 Xamarin.Forms 应用程序，属于类型[ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)。 可将其用于：
 
-- [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/)属性 [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
-- [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/)属性 [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
-- [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)属性 `Button`
+- [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon)属性 [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon)属性 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- [ `Image` ](xref:Xamarin.Forms.Button)属性 `Button`
 
 平台程序集已经包含图标和初始屏幕的位图：
 
@@ -170,23 +170,23 @@ Windows 运行时项目支持命名方案，例如包含的每个与设备无关
 
 ### <a name="toolbars-and-their-icons"></a>工具栏和它们的图标
 
-特定于平台的位图的主要用途之一是 Xamarin.Forms 工具栏中，通过添加构造[ `ToolbarItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)对象添加到[ `ToolbarItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.ToolbarItems/) 所定义集合`Page`. `ToobarItem` 派生自[ `MenuItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)从它继承了某些属性。
+特定于平台的位图的主要用途之一是 Xamarin.Forms 工具栏中，通过添加构造[ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem)对象添加到[ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) 所定义集合`Page`. `ToobarItem` 派生自[ `MenuItem` ](xref:Xamarin.Forms.MenuItem)从它继承了某些属性。
 
 最重要`ToolbarItem`属性是：
 
-- [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) 根据平台可能会出现的文本和 `Order`
-- [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) 类型的`FileImageSource`可能会出现因平台而异的图像和 `Order`
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) 根据平台可能会出现的文本和 `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) 类型的`FileImageSource`可能会出现因平台而异的图像和 `Order`
 - [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) 类型的[ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder)，一个包含三个成员的枚举[ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default)， [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary)，并[ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
 数`Primary`应限制为三个或四个项。 应包括`Text`设置的所有项。 对于大多数平台，仅`Primary`项需要`Icon`，但 Windows 8.1 需要`Icon`的所有项。 图标应为 32 个与设备无关单位正方形。 `FileImageSource`类型指示它们是特定于平台的。
 
-`ToolbarItem`激发[ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/)事件时点击，非常类似于`Button`。 `ToolbarItem` 此外支持[ `Command` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/)并[ `CommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/)属性通常与 MVVM 结合使用。 (请参阅[第 18 章、 MVVM](chapter18.md))。
+`ToolbarItem`激发[ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked)事件时点击，非常类似于`Button`。 `ToolbarItem` 此外支持[ `Command` ](xref:Xamarin.Forms.MenuItem.Command)并[ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter)属性通常与 MVVM 结合使用。 (请参阅[第 18 章、 MVVM](chapter18.md))。
 
-IOS 和 Android 都需要页将显示一个工具栏[ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/)或导航到的页`NavigationPage`。 [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo)程序集`MainPage`属性及其`App`类[`NavigationPage`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/)与`ContentPage`自变量，并演示了工具栏的构造和事件处理程序。
+IOS 和 Android 都需要页将显示一个工具栏[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)或导航到的页`NavigationPage`。 [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo)程序集`MainPage`属性及其`App`类[`NavigationPage`构造函数](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page))与`ContentPage`自变量，并演示了工具栏的构造和事件处理程序。
 
 ### <a name="button-images"></a>按钮图像
 
-此外可以使用特定于平台的位图设置[ `Image` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Image/)的属性`Button`到 32 个与设备无关单位正方形，如所示的位图[ **ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage)示例。
+此外可以使用特定于平台的位图设置[ `Image` ](xref:Xamarin.Forms.Button.Image)的属性`Button`到 32 个与设备无关单位正方形，如所示的位图[ **ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage)示例。
 
 
 

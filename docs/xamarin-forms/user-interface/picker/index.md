@@ -1,53 +1,53 @@
 ---
 title: Xamarin.Forms 选取器
-description: Xamarin.Forms 选取器显示短列表的项，用户可以从中选择的项。 此文章介绍了如何使用选取器类来从数据的列表中选择文本项。
+description: Xamarin.Forms 选取器将显示一个项，用户可以从中选择某个项的简短列表。 本文介绍如何使用选取器类来从数据的列表中选择文本项。
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 82ae36a7be139e2a93d0e5c43c4bad355c49f217
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: c852cd29197b000ed1ff53853d64cfa25fb699e7
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245034"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996592"
 ---
 # <a name="xamarinforms-picker"></a>Xamarin.Forms 选取器
 
-_选取器视图是用于从数据的列表中选择文本项的控件。_
+_选取器视图是一个用于选择文本项中的数据列表控件。_
 
-Xamarin.Forms [ `Picker` ](xref:Xamarin.Forms.Picker)显示短列表的项，用户可以从中选择的项。 `Picker` 定义八个属性：
+Xamarin.Forms [ `Picker` ](xref:Xamarin.Forms.Picker)显示的项，用户可以从中选择某个项的短列表。 `Picker` 定义了八个属性：
 
-- [`Title`](xref:Xamarin.Forms.Picker.Title) 类型的`string`，使用默认`null`。
-- [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) 类型的`IList`，源列表的项以显示，默认值为`null`。
-- [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 类型的`int`，所选的项，默认值为-1 的索引。
-- [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) 类型的`object`，所选的项目，默认为`null`。
-- [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) 类型的[ `Color` ](xref:Xamarin.Forms.Color)，用来显示的文本，默认为颜色[ `Color.Default` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/)。
-- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes) 类型的[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)，使用默认[ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None)。
-- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) 类型的`string`，使用默认`null`。
+- [`Title`](xref:Xamarin.Forms.Picker.Title) 类型的`string`，其默认值为`null`。
+- [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) 类型的`IList`，源列表的项可以显示，它默认为`null`。
+- [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 类型的`int`，默认值为-1 的选定项的索引。
+- [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) 类型的`object`，默认情况下的选定的项`null`。
+- [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) 类型的[ `Color` ](xref:Xamarin.Forms.Color)，用于显示文本，默认情况下的颜色[ `Color.Default` ](xref:Xamarin.Forms.Color.Default)。
+- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes) 类型的[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)，其默认值为[ `FontAtributes.None` ](xref:Xamarin.Forms.FontAttributes.None)。
+- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) 类型的`string`，其默认值为`null`。
 - [`FontSize`](xref:Xamarin.Forms.Picker.FontSize) 类型的`double`，其默认值为-1.0。
 
-所有八个属性由[ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty)对象，这意味着它们可以风格，并且这些属性可以将数据绑定的目标。 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex)和[ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem)属性具有的默认绑定模式[ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay)，这意味着，它们可以是数据绑定的目标在使用的应用程序[模型-视图-视图模型 (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md)体系结构。 有关设置字体属性的信息，请参阅[字体](~/xamarin-forms/user-interface/text/fonts.md)。
+所有八个属性受[ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty)对象，这意味着它们可以设置的样式，这些属性可以是数据绑定的目标。 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex)并[ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem)属性具有的默认绑定模式[ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay)，这意味着，它们可以是数据绑定的目标在使用的应用程序[模型-视图-视图模型 (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md)体系结构。 有关设置字体属性的信息，请参阅[字体](~/xamarin-forms/user-interface/text/fonts.md)。
 
-A [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)首次显示时不显示任何数据。 相反，值其[ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/)属性显示为在 iOS 和 Android 平台上的占位符：
+一个[ `Picker` ](xref:Xamarin.Forms.Picker)首次显示时不显示任何数据。 相反的值及其[ `Title` ](xref:Xamarin.Forms.Picker.Title)属性显示为在 iOS 和 Android 平台上的占位符：
 
-[![](images/picker-initial.png "初始选取器显示")](images/picker-initial-large.png#lightbox "初始选取器显示")
+[![](images/picker-initial.png "选取器显示的初始")](images/picker-initial-large.png#lightbox "初始选取器显示")
 
-当[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)显示提升焦点，其数据和用户可以选择的项：
+当[ `Picker` ](xref:Xamarin.Forms.Picker)显示提升焦点，其数据和用户可以选择一项：
 
 [![](images/picker-selection.png "选取器中选择项")](images/picker-selection-large.png#lightbox "选取器中选择项")
 
-[ `Picker` ](xref:Xamarin.Forms.Picker)激发[ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged)事件时用户选择一个项。 以下所选内容，所选的项显示通过`Picker`:
+[ `Picker` ](xref:Xamarin.Forms.Picker)激发[ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged)当用户选择某个项的事件。 以下所选内容，所选的项显示通过`Picker`:
 
-![](images/picker-after-selection.png "选定内容后选取器")
+![](images/picker-after-selection.png "在选择后选取器")
 
-有两种技术来填充[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)数据：
+有两种技术用于填充[ `Picker` ](xref:Xamarin.Forms.Picker)数据：
 
-- 设置[ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.ItemsSource/)属性设置为要显示的数据。 这是推荐采用的方法，Xamarin.Forms 2.3.4 中引入。 有关详细信息，请参阅[设置选取器的 ItemsSource 属性](populating-itemssource.md)。
-- 添加要向显示的数据[ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/)集合。 此方法已填充的原始过程[ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)使用数据。 有关详细信息，请参阅[将数据添加到了选取器的项集合](populating-items.md)。
+- 设置[ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource)属性设置为要显示的数据。 这是在 Xamarin.Forms 2.3.4 中引入的推荐的方法。 有关详细信息，请参阅[选取器的 ItemsSource 属性设置](populating-itemssource.md)。
+- 添加要向显示的数据[ `Items` ](xref:Xamarin.Forms.Picker.Items)集合。 此技术已填充的原始过程[ `Picker` ](xref:Xamarin.Forms.Picker)的数据。 有关详细信息，请参阅[将数据添加到选取器的项集合](populating-items.md)。
 
 ## <a name="related-links"></a>相关链接
 
-- [选取器](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)
+- [选取器](xref:Xamarin.Forms.Picker)

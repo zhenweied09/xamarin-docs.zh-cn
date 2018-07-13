@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 中的布局
-description: Xamarin.Forms 具有几种布局和功能用于组织在屏幕上，内容和此文章介绍了它们。
+title: 在 Xamarin.Forms 中的布局
+description: Xamarin.Forms 具有多个布局和功能的组织在屏幕上，内容和此文章介绍了它们。
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -8,52 +8,52 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: d11e0e286c25f11c24dc788be8d1c29155261b7a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cff5f9c15f4608ecfb643d2c49dd636df8b18b5c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244885"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995750"
 ---
-# <a name="layouts-in-xamarinforms"></a>Xamarin.Forms 中的布局
+# <a name="layouts-in-xamarinforms"></a>在 Xamarin.Forms 中的布局
 
-Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
+Xamarin.Forms 具有多个布局和功能的组织在屏幕上的内容。
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Xamarin.Forms 布局，也可由[Xamarin 大学](https://university.xamarin.com/)**
+**Xamarin.Forms 布局，也可由[Xamarin 学院课程](https://university.xamarin.com/)**
 
-每个布局控件是下面所述，以及如何处理屏幕方向更改的详细信息：
+每个布局控件被下述，以及如何处理屏幕方向更改的详细信息：
 
-* **[StackLayout](stack-layout.md)**  &ndash;用于线性，排列视图水平或垂直。 可以向左或向右的布局的中心对齐 StackLayout 中的视图。
-* **[AbsoluteLayout](absolute-layout.md)**  &ndash;用于按设置坐标排列视图 （&） 在绝对值和比率方面的调整大小。 AbsoluteLayout 可用来进行分层视图，以及它们定位于左、 右或中心。
-* **[RelativeLayout](relative-layout.md)**  &ndash;用于排列视图，通过设置相对于其父级的维度和位置的约束。
-* **[网格](grid.md)** &ndash;用于排列在网格中的视图。 根据绝对值或比率，可以指定行和列。
-* **[FlexLayout](flex-layout.md)**  &ndash;用于与包装水平或垂直排列视图。
-* **[ScrollView](scroll-view.md)**  &ndash;用于提供滚动视图不能完全适合屏幕的界限。
-* **[LayoutOptions](layout-options.md)**  &ndash;定义对齐方式和视图中，相对于其父级的扩展。
+* **[StackLayout](stack-layout.md)**  &ndash;用来排列视图线性增长，水平或垂直。 视图在 StackLayout 中的可以对齐到中心，左或向右的布局。
+* **[AbsoluteLayout](absolute-layout.md)**  &ndash;用来排列视图通过设置坐标和大小方面绝对值或比率。 AbsoluteLayout 可以用于分层视图，以及定位到左、 靠右或居中。
+* **[RelativeLayout](relative-layout.md)**  &ndash;用来排列视图通过设置相对于其父级的尺寸和位置的约束。
+* **[网格](grid.md)** &ndash;用来排列在网格中的视图。 根据绝对值或比率，可以指定行和列。
+* **[FlexLayout](flex-layout.md)**  &ndash;用来与包装水平或垂直排列视图。
+* **[ScrollView](scroll-view.md)**  &ndash;用于提供滚动时视图无法完全适合屏幕的界限。
+* **[LayoutOptions](layout-options.md)**  &ndash;定义对齐方式和视图，相对于其父级的扩展。
 * **[输入透明度](#input_transparency)** &ndash;指定元素是否接收输入。
-* **[边距和填充](margin-and-padding.md)** &ndash;演示如何控制布局行为元素呈现用户界面中时。
+* **[边距和填充](margin-and-padding.md)** &ndash;演示如何在用户界面中呈现元素时控制布局行为。
 * **[设备方向](device-orientation.md)** &ndash;说明如何处理设备方向更改。
-* **[在平板电脑和桌面设备上的布局](tablet.md)** &ndash;演示如何针对每个平台上的更大屏幕进行优化。
-* **[创建自定义布局](custom.md)** &ndash;说明如何创建一个自定义布局的类。
-* **[布局压缩](layout-compression.md)** &ndash;移除指定尝试提升页呈现性能的来自的可视化树的布局。
+* **[在平板电脑和桌面设备上的布局](tablet.md)** &ndash;演示如何针对每个平台上较大的屏幕进行优化。
+* **[创建自定义布局](custom.md)** &ndash;介绍了如何创建一个自定义布局的类。
+* **[布局压缩](layout-compression.md)** &ndash;删除指定从可视化树的布局以试图提升页面呈现性能。
 
-平台控件还可直接在具有 Xamarin.Forms 布局[**本机嵌入**](~/xamarin-forms/platform/native-views/index.md) （新 Xamarin.Forms 2.2 中），并且可以[**创建自定义布局**](custom.md)来满足特定要求。
+平台控件还可直接在与 Xamarin.Forms 布局[**本机嵌入**](~/xamarin-forms/platform/native-views/index.md) （新 Xamarin.Forms 2.2 中），你可以[**创建自定义布局**](custom.md)来满足特定要求。
 
 下图直观显示布局控件：
 
 [![](images/layouts-sml.png "Xamarin.Forms 布局")](images/layouts.png#lightbox "Xamarin.Forms 布局")
 
-## <a name="choosing-the-right-layout"></a>选择右的布局
+## <a name="choosing-the-right-layout"></a>选择正确的布局
 
-在你的应用程序中选择的布局可以帮助，或者会降低你为你正在创建具吸引力，也可用 Xamarin.Forms 应用。 花费一些时间来考虑每个布局工作可帮助你编写更简洁且更具伸缩性的 UI 代码。 屏幕可以具有不同的布局，以实现的特定设计的组合。
+选择应用程序中的布局可以帮助或伤害您为要创建具有吸引力且可使用 Xamarin.Forms 应用。 花费一些时间来考虑每个布局也可帮助你编写更干净且更具缩放性 UI 代码。 屏幕可以具有不同的布局来实现特定的设计的组合。
 
 ### <a name="stacklayoutstack-layoutmd"></a>[StackLayout](stack-layout.md)
 
-`StackLayout`用于显示视图沿水平或垂直的一行。 位置和布局中的大小将根据视图的确定`HeightRequest`， `WidthRequest`，`HorizontalOptions`和`VerticalOptions`。 `StackLayout` 通常用作基布局，排列在屏幕上的其他布局。
+`StackLayout`用于显示视图沿水平或垂直的行。 根据视图的确定位置和布局中的大小`HeightRequest`， `WidthRequest`，`HorizontalOptions`和`VerticalOptions`。 `StackLayout` 通常用作基布局，排列在屏幕上的其他布局。
 
-有关何时示例`StackLayout`将是一个不错的选择，请考虑的应用程序需要显示一个按钮和具有左对齐的标签和右对齐按钮的标签。
+有关何时示例`StackLayout`会是一个不错的选择，请考虑的应用程序需要显示一个按钮和具有左对齐的标签和右对齐按钮的标签。
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -64,7 +64,7 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
 
 ### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
 
-`FlexLayout`类似于`StackLayout`，前者水平或垂直显示子视图：
+`FlexLayout`类似于`StackLayout`，因为它在水平或垂直显示子视图：
 
 ```xaml
 <FlexLayout Direction="Column"
@@ -77,15 +77,15 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
 </FlexLayout>
 ```
 
-但是，如果没有太多个子级的单个行或列中, 容纳不下`FlexLayout`仍可包装这些视图。 `FlexLayout` 基于 CSS 灵活框布局模块，并具有许多相同的内置选项用于定位和对齐及其子级。
+但是，如果过多的子节点中单个行或列，容纳不下`FlexLayout`仍可包装这些视图。 `FlexLayout` CSS 灵活框布局模块上，为基础，具有许多相同的内置选项用于定位和对齐及其子级。
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 
-`AbsoluteLayout`用于显示具有作为显式值或相对于布局的大小的值的大小和位置所指定的视图。 与不同`StackLayout`和`Grid`，`AbsoluteLayout`允许子视图重叠。 与不同`RelativeLayout`，`AbsoluteLayout`不可以放置屏幕之外的元素。
+`AbsoluteLayout`用于显示具有作为显式值或相对于布局的大小的值的大小和位置所指定的视图。 与不同`StackLayout`并`Grid`，`AbsoluteLayout`允许子视图重叠。 与不同`RelativeLayout`，`AbsoluteLayout`不允许您将置于屏幕上的元素。
 
-有关何时示例`AbsoluteLayout`将是一个不错的选择，请考虑的应用程序需要提供作为堆栈的对象的集合。 此选项通常显示当呈现唱片集的照片或歌曲。 下面的代码与旋转以提示超时和累积的内容的元素提供多行之中，的外观：
+有关何时示例`AbsoluteLayout`会是一个不错的选择，请考虑的应用程序需要提供作为堆栈对象的集合。 上述方法通常被显示的照片或多首歌曲的唱片集时。 下面的代码使用旋转以提示的超时和累积内容元素提供一堆的外观：
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <AbsoluteLayout Padding="15">
@@ -101,15 +101,15 @@ Xamarin.Forms 具有几种布局和用于组织在屏幕上的内容的功能。
 请注意上述代码中的以下方面：
 
 - 每个`Image`显示在同一位置 （中间的水平空间）
-- `Padding`程序认为是`AbsoluteLayout`与`RelativeLayout`，表示忽略它。
-- `AbsoluteLayout.LayoutFlags` 指定将如何解释布局边界。 在这种情况下`PositionProportional`，意味着这些坐标也会的布局，大小的比率，而大小将被解释为显式大小。
-- `AbsoluteLayout.Layoutbounds` 这种顺序指定水平位置、 垂直位置、 宽度和高度。
+- `Padding`视为`AbsoluteLayout`，但不同于`RelativeLayout`，这会将其忽略。
+- `AbsoluteLayout.LayoutFlags` 指定将如何解释布局范围。 在这种情况下`PositionProportional`，意味着，坐标将布局的大小比率而大小将被解释为显式的大小。
+- `AbsoluteLayout.Layoutbounds` 按此顺序指定的水平位置、 垂直位置、 宽度和高度。
 
 ### <a name="relativelayoutrelative-layoutmd"></a>[RelativeLayout](relative-layout.md)
 
-`RelativeLayout`用于显示视图大小和位置指定为相对于布局或另一个视图的值的值。 相对的值不需要匹配他对应值相关的视图。 例如，很可能先设置视图的`Width`属性按比例到另一个视图`X`属性。
+`RelativeLayout`用于显示视图大小和位置指定为相对于布局或另一个视图的值的值。 相对值不需要匹配他对应相关视图上的值。 例如，就可以设置的视图`Width`属性设置为另一个视图成正比`X`属性。
 
-RelativeLayout 可以用于创建跨设备大小按比例缩放的 Ui。 下面的 XAML 实现与框的最顶层的角，在使用中 center 标志 flagpole 设计：
+RelativeLayout 可以用于创建跨设备的大小按比例扩展的用户界面。 以下 XAML 实现以在最顶部边角的框是图案中带有 flagpole 中心中的标志：
 
 ```xaml
 <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -134,14 +134,14 @@ RelativeLayout 可以用于创建跨设备大小按比例缩放的 Ui。 下面�
 请注意上述代码中的以下方面：
 
 - 位置和大小指定为约束。
-- 名为 flagpole 以便的标志的 （绿框中的） 可以相对于 flagpole 集位置。
-- 约束表达式具有`Factor`和`Constant`属性，用于定义为倍数的位置和大小 （或秒的小数部分） 的其他对象，以及常量的属性。 常量可以是负数。
+- 名为 flagpole，以便该标志的 （绿色框的） 可以相对于 flagpole 设置位置。
+- 约束表达式具有`Factor`和`Constant`属性，可用于为序列图中定义的位置和大小 （或小数部分） 的属性的其他对象，以及一个常量。 常量可以为负数。
 
 ### <a name="gridgridmd"></a>[网格](grid.md)
 
-`Grid`适用于在行和列中显示元素。 请注意，网格不是表，因此它没有单元格、 页眉和页脚行或行与列之间的边框的概念。 一般情况下，不适合于显示表格格式数据网格。 对于使用，请考虑[ListView](~/xamarin-forms/user-interface/listview/index.md)或[TableView](~/xamarin-forms/user-interface/tableview.md)。
+`Grid`用于显示行和列中的元素。 请注意，在网格不是表，因此它不具有这一概念的单元格、 页眉和页脚行或行与列之间的边框。 一般情况下，不适合于显示表格数据网格。 使用，请考虑[ListView](~/xamarin-forms/user-interface/listview/index.md)或[TableView](~/xamarin-forms/user-interface/tableview.md)。
 
-有关何时示例`Grid`是右的布局，以使用，请数字输入考虑的一个计算器。 一个计算器数字输入可能包括四个行和三个列，每个都有一个按钮。 下面的代码实现此设计：
+有关何时示例`Grid`是正确的布局，若要使用，请考虑一个计算器数字输入。 一个计算器的数字输入可能包含四个行和三个列，每个都有一个按钮。 下面的代码实现此设计：
 
 ```xaml
 <Grid>
@@ -173,46 +173,46 @@ RelativeLayout 可以用于创建跨设备大小按比例缩放的 Ui。 下面�
 
 请注意上述代码中的以下方面：
 
-- 网格列显式指定和，不从内容推断。
+- 网格和列显式指定，不会推断出的内容。
 - `Height` 和`Width`可将该值设置为星号，这意味着，网格会设置这些值以填充可用空间。
 - 每个按钮的位置由指定`Grid.Row`  &  `Grid.Column`属性。
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 
-[ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/)结构可以用于定义对齐方式和视图中，相对于其父级的扩展。
+[ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions)结构可用于定义对齐方式和视图，相对于其父级的扩展。
 
 ### <a name="margin-and-paddingmargin-and-paddingmd"></a>[边距和填充](margin-and-padding.md)
 
-[ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/)和[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)属性控制布局行为元素呈现用户界面中时。
+[ `Margin` ](xref:Xamarin.Forms.View.Margin)并[ `Padding` ](xref:Xamarin.Forms.Layout.Padding)元素呈现用户界面中时，属性控制布局行为。
 
 <a name="input_transparency" />
 
 ### <a name="input-transparency"></a>输入的透明度
 
-每个元素具有[ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/)属性，用于定义元素是否接收输入。 其默认值是`false`，确保元素接收输入。
+每个元素有[ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent)用于定义该元素是否接收输入的属性。 其默认值是`false`，确保元素接收输入。
 
-当容器类，例如布局类，其值传输到子元素上设置此属性。 因此，设置[ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/)属性`true`布局类将导致不接收输入的布局中的元素。
+当容器类，如布局类，其值传输到子元素上设置此属性。 因此，设置[ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent)属性设置为`true`布局类将导致不接收输入布局中的元素。
 
 ### <a name="device-orientationdevice-orientationmd"></a>[设备方向](device-orientation.md)
 
-Xamarin.Forms 和其内置的布局是能够处理更改设备方向。 请考虑您的应用程序将支持，以及如何将使哪些方向利用横向和纵向模式中提供的空间。
+Xamarin.Forms 和其内置布局是能够处理设备方向中的更改。 请考虑您的应用程序将支持，以及如何将使哪个方向的横向和纵向模式中提供的空间使用。
 
 ### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[对于平板电脑和桌面应用程序的布局](tablet.md)
 
-iOS、 Android 和通用 Windows 平台所有上支持更大的屏幕大小平板设备 （以及便携式计算机和适用于 Windows 的桌面）。 Xamarin.Forms 能够让你通过检测的设备类型和调整页面布局中，或使用完全不同的页完全适用于较大的屏幕来优化应用程序以较大的屏幕。
+iOS、 Android 和通用 Windows 平台支持更大的屏幕大小上的所有适用于平板电脑设备 （以及便携式计算机和 Windows 的桌面）。 使用 Xamarin.Forms，可以通过检测设备类型和调整页面布局中，或使用完全不同的页面完全用于较大的屏幕来优化您的应用程序的较大的屏幕。
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[创建自定义布局](custom.md)
 
-Xamarin.Forms 定义四个布局类- [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)， [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/)， [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)，和[ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)，和每个不同的方式排列其子。 但是，有时由 Xamarin.Forms 进行必要的组织不使用的布局的页面内容提供。 本文介绍如何编写一个自定义布局的类，并演示了方向区分`WrapLayout`跨页上，水平排列其子，然后将包装对其他行的后续子级的显示的类。
+Xamarin.Forms 定义了四个布局类- [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)， [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout)， [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout)，并[ `Grid` ](xref:Xamarin.Forms.Grid)，和每个不同的方式排列子项。 但是，有时通过 Xamarin.Forms 进行必要的组织不使用的布局页内容提供。 本文介绍如何编写一个自定义布局的类，并说明了方向区分`WrapLayout`类跨页上，水平排列子项，然后将包装对其他行的后续子级的显示。
 
 ### <a name="layout-compressionlayout-compressionmd"></a>[布局压缩](layout-compression.md)
 
-布局压缩的可视化树中中删除指定的布局，以尝试提升页呈现性能。 这带来的性能优势因页面复杂性、要使用的操作系统版本以及运行应用的设备而异。 不过，在旧设备上实现的性能提升最大。
+布局压缩从可视化树中删除指定的布局，以试图提升页面呈现性能。 这带来的性能优势因页面复杂性、要使用的操作系统版本以及运行应用的设备而异。 不过，在旧设备上实现的性能提升最大。
 
-## <a name="making-your-choice"></a>做出选择
+## <a name="making-your-choice"></a>使您的选择
 
-请注意，在大多数情况下，多个布局选项可用来实现您所需的设计。 当存在多个有效的选项时，请考虑哪种方法将是最简单的您的实际情况。
-大多数设计无法实现与只是一种布局，因此作为嵌套布局需要来创建更复杂的设计。
+请注意，在大多数情况下，多个布局选项可用于实现您所需的设计。 当存在多个有效的选项时，请考虑哪种方法将是最适合你的情况。
+大多数设计无法实现与只是一种布局，因此需要创建更复杂的设计作为嵌套布局。
 
 
 ## <a name="related-links"></a>相关链接

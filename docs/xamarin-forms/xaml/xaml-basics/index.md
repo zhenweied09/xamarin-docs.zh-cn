@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms XAML 基础知识
-description: 本指南说明如何开始使用移动设备的跨平台 XAML。 XAML 允许开发人员在 Xamarin.Forms 应用程序使用的标记，而不是代码中定义的用户界面。
+description: 本指南介绍如何开始使用移动设备的跨平台 XAML。 XAML 允许开发人员在 Xamarin.Forms 应用程序使用标记而不是代码中定义的用户界面。
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 627267b95bb2d810a60f84c51e38bf5387fe1f99
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 901174eb9510eaab670564655f9f6b4bff940bd7
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245958"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995435"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 基础知识
 
-XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Forms 应用程序中使用标记（而不是代码）来定义用户界面。 XAML 永远不需要在 Xamarin.Forms 程序中，但通常会更简洁的和比等效代码更为直观连贯的可能非常有用。 XAML 是非常适用于常用的 MVVM （模型-视图-视图模型） 应用程序体系结构： XAML 定义的视图，通过基于 XAML 的数据绑定链接到 ViewModel 代码。
+XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Forms 应用程序中使用标记（而不是代码）来定义用户界面。 XAML 永远不会需要在 Xamarin.Forms 程序中，但通常会更简洁和更直观地一致比等效的代码，并可能会非常有用。 XAML 是非常适合于与常用的 MVVM （模型-视图-视图） 应用程序体系结构一起使用： XAML 定义通过基于 XAML 的数据绑定链接到 ViewModel 代码的视图。
 
 ## <a name="xaml-basics-contents"></a>XAML 基础知识内容
 
@@ -27,11 +27,11 @@ XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Form
 * [第 4 部分：数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 * [第 5 部分：从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)
 
-除了这些 XAML 基础知识文章中，你可以下载书籍的章节[具有 Xamarin.Forms 创建移动应用](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
+除了这些 XAML 基础知识文章中，您可以下载一书的章节[使用 Xamarin.Forms 创建移动应用](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
 [![](images/cover-sml.png "封面")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
-中更深入书籍 （） 的许多章节中介绍了 XAML 主题包括：
+很多书的章节中更加详细地介绍 XAML 主题包括：
 
 <table style="border:0px; box-shadow:0 0px 0px" cellpadding="0" cellspacing="2" border="0" width="85%">
 <tr style="background:#ecf0f1">
@@ -43,7 +43,7 @@ XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Form
 </tr>
 <tr style="background:#f8f9fa">
   <td style="border:0px;">
-    <h4>第 8 章。 代码和协调的 XAML</h4>
+    <h4>第 8 章。 代码和 XAML 协调工作</h4>
   </td>
   <td style="border:0px;" align="right"><a href="https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf">下载 PDF</a> </td>
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter08.md">摘要</a></td>
@@ -63,31 +63,31 @@ XAML (Extensible Application Markup Language) 允许开发人员在 Xamarin.Form
   <td style="border:0px;" align="right"><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md">摘要</a></td></tr>
 </table>
 
-这些章节可以是[免费下载](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)。
+可以是这些章节[免费下载的](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)。
 
 <a name="Overview" />
 
 ## <a name="overview"></a>概述
 
-XAML 是一种基于 XML 的语言由 Microsoft 创建作为实例化和初始化对象，和组织父-子层次结构中的那些对象的编程代码的替代方法。 XAML 适应在.NET framework 中中的多种技术但它在定义 Windows Presentation Foundation (WPF)、 Silverlight、 Windows 运行时和通用的 Windows 中的用户界面的布局中找到了其最大的实用程序平台 (UWP)。
+XAML 是基于 XML 的语言由 Microsoft 创建的作为编程代码实例化和初始化对象，并组织这些对象在父-子层次结构中的替代方法。 XAML 适应多种技术在.NET framework 中，但它在定义的 Windows Presentation Foundation (WPF)、 Silverlight、 Windows 运行时和通用 Windows 中的用户界面布局中找到其最大的实用程序平台 (UWP)。
 
-XAML 也是 Xamarin.Forms 的跨平台基于本机的编程接口 iOS、 Android 和 UWP 的一部分移动设备。 在 XAML 文件中，Xamarin.Forms 开发人员可以定义用户界面使用所有 Xamarin.Forms 视图、 布局和页，为很好地自定义类。 可以编译或可执行文件中嵌入的 XAML 文件。 无论哪种方式，在生成时查找命名的对象，再在运行时实例化和初始化对象，以及这些对象和编程的代码之间建立链接，被分析 XAML 信息。
+XAML 也是 Xamarin.Forms 的跨平台本机基于编程接口为 iOS、 Android 和 UWP 的一部分移动设备。 在 XAML 文件中，Xamarin.Forms 开发人员可以定义用户界面用作所有 Xamarin.Forms 视图、 布局和页面，以及自定义类。 可以编译或可执行文件中嵌入的 XAML 文件。 无论哪种方式，分析 XAML 信息在生成时查找命名的对象，并再次在运行时来实例化和初始化对象，并建立这些对象和编程代码之间的链接。
 
-XAML 相比具有一些优势等效代码：
+XAML 具有几大优势，等效的代码：
 
--  XAML 通常会更简洁、 更具可读性比等效代码。
--  XML 中的固有的父-子层次结构允许要以更高版本的 visual 清晰度来模拟用户界面对象的父-子层次结构 XAML。
--  XAML 可以轻松地手动编写的程序员，但还适于本身非常有用且由可视化设计工具生成。
+-  XAML 通常会更简洁和可读比等效的代码。
+-  在 XML 中固有的父-子层次结构允许 XAML 来模拟更 visual 清楚用户界面对象的父-子层次结构。
+-  XAML 可以轻松地手动编写的程序员，但还有助于为可工具化并通过可视化设计工具生成。
 
-当然，也有缺点，主要与相关的固有的标记语言的限制：
+当然，也有缺点，主要与是固有的标记语言的限制：
 
 -  XAML 不能包含代码。 必须在代码文件中定义所有事件处理程序。
--  XAML 不能包含重复处理的循环。 (但是，多个 Xamarin.Forms 视觉对象-最值得注意的是[ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) -可以生成多个子元素中的对象上基于其`ItemsSource`集合。)
--  XAML 不能包含有条件处理 （但是，数据绑定可以引用有效地允许某些条件的处理的基于代码的绑定转换器。）
--  XAML 通常无法实例化未定义无参数构造函数的类。 （但是，没有有时方法解决此限制。）
--  XAML 通常无法调用方法。 （同样，此限制可以有时克服。）
+-  XAML 不能包含重复处理的循环。 (但是，多个 Xamarin.Forms 视觉对象 — 最值得注意的是[ `ListView` ](xref:Xamarin.Forms.ListView) — 可以生成多个子级中的对象基于其`ItemsSource`集合。)
+-  XAML 不能包含有条件处理 （但是，数据绑定可以引用，可有效地处理某些条件的代码基于绑定转换器。）
+-  XAML 通常无法实例化类未定义无参数构造函数。 （但是，没有有时会解决此限制问题的方法。）
+-  XAML 通常不能调用方法。 （同样，此限制可以有时克服。）
 
-还没有可视化设计器用于在 Xamarin.Forms 应用程序中生成 XAML。 所有 XAML 都必须手工编写的但没有[XAML 预览程序](~/xamarin-forms/xaml/xaml-previewer.md)。 新到使用 XAML 的程序员可能想要频繁生成并运行其应用程序，特别之后可能不明显正确的任何内容。 凭借大量经验在 XAML 中的偶数开发人员知道实验奖励有。
+还没有可视化设计器生成 XAML 在 Xamarin.Forms 应用程序。 所有 XAML 都必须手动编写的但没有[XAML 预览程序](~/xamarin-forms/xaml/xaml-previewer.md)。 新增到 XAML 的程序员可能想要频繁生成并运行其应用程序，尤其是之后可能不正确很明显的任何内容。 凭借大量经验在 XAML 中甚至开发人员知道试验有价值。
 
 XAML 基本上是 XML，但 XAML 具有一些独特的语法功能。 最重要的是：
 
@@ -95,15 +95,15 @@ XAML 基本上是 XML，但 XAML 具有一些独特的语法功能。 最重要�
 - 附加的属性
 - 标记扩展
 
-这些功能*不*XML 扩展。 XAML 是完全合法的 XML。 但这些 XAML 语法功能使用 XML 以唯一方式。 它们详细讨论中的文章，其中介绍了如何使用 XAML 实现 MVVM 以此结束。
+这些功能都*不*XML 扩展。 XAML 是完全合法的 XML。 但是，这些 XAML 语法功能独特的方式使用 XML。 它们详细讨论了中的文章，其中简要介绍如何使用 XAML 来实现 MVVM 得出结论。
 
 ## <a name="requirements"></a>要求
 
 本文假定你熟悉 Xamarin.Forms 工作。 读取[Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)强烈建议。
 
-本文还假定你熟悉 XML，包括了解的 XML 命名空间声明和条款使用某些*元素*，*标记*，和*属性*。
+本文还假定熟悉 XML，包括了解使用 XML 命名空间声明和条款*元素*，*标记*，并*特性*。
 
-当你熟悉 Xamarin.Forms 和 XML 时，即可开始读取[第 1 部分。Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)。
+当您熟悉使用 Xamarin.Forms 和 XML 时，开始读取[第 1 部分。开始使用 XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)。
 
 
 
@@ -111,5 +111,5 @@ XAML 基本上是 XML，但 XAML 具有一些独特的语法功能。 最重要�
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [创建移动应用簿](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
+- [创建移动应用书籍](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Xamarin.Forms 示例](https://developer.xamarin.com/samples/xamarin-forms/all/)

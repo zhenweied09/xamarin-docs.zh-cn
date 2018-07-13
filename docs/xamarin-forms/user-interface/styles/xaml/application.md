@@ -1,28 +1,28 @@
 ---
-title: Xamarin.Forms 中的全局样式
-description: 样式可全局方法将它们添加到应用程序的资源字典。 这有助于避免能跨页或控件的重复样式。
+title: 在 Xamarin.Forms 中的全局样式
+description: 样式可全局添加到应用程序的资源字典。 这有助于避免跨页或控件的样式的重复项。
 ms.prod: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c5ce0f3e4ff906f9bdef06e605e71d4ed64d2a68
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e7b2a37b868ea03ca626ffd2dcddb006a235b0cc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245343"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995396"
 ---
-# <a name="global-styles-in-xamarinforms"></a>Xamarin.Forms 中的全局样式
+# <a name="global-styles-in-xamarinforms"></a>在 Xamarin.Forms 中的全局样式
 
-_样式可全局方法将它们添加到应用程序的资源字典。这有助于避免能跨页或控件的重复样式。_
+_样式可全局添加到应用程序的资源字典。这有助于避免跨页或控件的样式的重复项。_
 
 ## <a name="creating-a-global-style-in-xaml"></a>在 XAML 中创建全局样式
 
-默认情况下，从模板创建的所有 Xamarin.Forms 应用程序都使用**应用**类，以实现[ `Application` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Application/)子类。 若要声明[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)在应用程序级别，在应用程序的[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)使用 XAML，默认值**应用**类必须替换 XAML**应用**类和关联的代码隐藏。 有关详细信息，请参阅[使用 App 类](~/xamarin-forms/app-fundamentals/application-class.md)。
+默认情况下，所有从模板创建的 Xamarin.Forms 应用程序使用**应用程序**类，以实现[ `Application` ](xref:Xamarin.Forms.Application)子类。 若要声明[ `Style` ](xref:Xamarin.Forms.Style)在应用程序级别，在应用程序的[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)使用 XAML，默认值**应用**类必须替换 XAML**应用**类和关联的代码隐藏。 有关详细信息，请参阅[使用 App 类](~/xamarin-forms/app-fundamentals/application-class.md)。
 
-下面的代码示例演示[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)在应用程序级别声明：
+下面的代码示例演示[ `Style` ](xref:Xamarin.Forms.Style)在应用程序级别声明：
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.App">
@@ -42,9 +42,9 @@ _样式可全局方法将它们添加到应用程序的资源字典。这有助�
 </Application>
 ```
 
-这[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)定义单个*显式*样式， `buttonStyle`，它将使用设置的外观[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例。 但是，可以全局样式*显式*或*隐式*。
+这[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)定义单个*显式*样式`buttonStyle`，这将用于设置的外观[ `Button` ](xref:Xamarin.Forms.Button)实例。 但是，可以全局样式*显式*或*隐式*。
 
-下面的代码示例演示 XAML 页应用`buttonStyle`到页面的[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例：
+下面的代码示例显示了 XAML 页应用`buttonStyle`向该页面的[ `Button` ](xref:Xamarin.Forms.Button)实例：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
@@ -58,15 +58,15 @@ _样式可全局方法将它们添加到应用程序的资源字典。这有助�
 </ContentPage>
 ```
 
-这将导致以下屏幕截图中所示的外观：
+这会导致下面的屏幕截图中所示的外观：
 
 [![](application-images/application-styles-1.png "全局样式示例")](application-images/application-styles-1-large.png#lightbox "全局样式示例")
 
-有关创建一页中的样式信息[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，请参阅[显式样式](~/xamarin-forms/user-interface/styles/explicit.md)和[隐式样式](~/xamarin-forms/user-interface/styles/implicit.md)。
+有关创建在页面的样式信息[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)，请参阅[显式样式](~/xamarin-forms/user-interface/styles/explicit.md)并[隐式样式](~/xamarin-forms/user-interface/styles/implicit.md)。
 
 ### <a name="overriding-styles"></a>重写样式
 
-视图层次结构中较低级别的样式优先于那些定义更高版本上。 例如，设置[ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)设置[ `Button.TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.TextColor/)到`Red`在应用程序级别将被替代设置的页级别样式`Button.TextColor`到`Green`. 同样，将在控件级别样式将页级别样式中重写。 此外，如果`Button.TextColor`设置直接上的控件属性，它将优先于任何样式。 在下面的代码示例演示了此优先：
+样式的视图层次结构中较低级别优先于更高版本定义了。 例如，设置[ `Style` ](xref:Xamarin.Forms.Style) ，用于设置[ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor)到`Red`在应用程序级别将被重写由设置的页级别样式`Button.TextColor`到`Green`. 同样，将控件级别样式将页级别样式中重写。 此外，如果`Button.TextColor`设置直接上的控件属性，这将优先于任何样式。 在下面的代码示例演示此优先顺序：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.ApplicationStylesPage" Title="Application" Icon="xaml.png">
@@ -96,13 +96,13 @@ _样式可全局方法将它们添加到应用程序的资源字典。这有助�
 </ContentPage>
 ```
 
-原始`buttonStyle`、 在应用程序级别定义、 通过重写`buttonStyle`页级别定义的实例。 此外，来控制级别重写的页级别样式`buttonStyle`。 因此， [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例将以蓝色文本，显示，如以下屏幕截图中所示：
+原始`buttonStyle`，在应用程序级别定义，通过重写`buttonStyle`页级别定义的实例。 此外，由控件级别重写页面级样式`buttonStyle`。 因此， [ `Button` ](xref:Xamarin.Forms.Button)实例显示带有蓝色文本，如以下屏幕截图中所示：
 
 [![](application-images/application-styles-2.png "重写样式示例")](application-images/application-styles-2-large.png#lightbox "重写样式示例")
 
 ## <a name="creating-a-global-style-in-c35"></a>在 C 中创建全局样式&#35;
 
-[`Style`](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) 可以将实例添加到应用程序的[ `Resources` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Resources/) C# 中通过创建新的集合[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)，然后按添加`Style`实例到`ResourceDictionary`，作为下面的代码示例所示：
+[`Style`](xref:Xamarin.Forms.Style) 可以将实例添加到应用程序的[ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) C# 中通过创建一个新的集合[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)，然后通过将添加`Style`实例到`ResourceDictionary`，作为下面的代码示例所示：
 
 ```csharp
 public class App : Application
@@ -124,9 +124,9 @@ public class App : Application
 }
 ```
 
-构造函数定义单个*显式*样式用于将应用于[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)整个应用程序的实例。 *显式* [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)实例添加到[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)使用[ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ResourceDictionary.Add/p/System.String/System.Object/)方法，指定`key`字符串来引用`Style`实例。 `Style`实例可以然后应用到任何应用程序中的正确类型的控件。 但是，可以全局样式*显式*或*隐式*。
+构造函数定义单个*显式*用于将应用于样式[ `Button` ](xref:Xamarin.Forms.Button)整个应用程序的实例。 *显式* [ `Style` ](xref:Xamarin.Forms.Style)实例将添加到[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)使用[ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object))方法，指定`key`字符串来指代`Style`实例。 `Style`实例然后应用到任何应用程序中的正确类型的控件。 但是，可以全局样式*显式*或*隐式*。
 
-下面的代码示例演示 C# 页应用`buttonStyle`到页面的[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例：
+下面的代码示例显示了 C# 页应用`buttonStyle`向该页面的[ `Button` ](xref:Xamarin.Forms.Button)实例：
 
 ```csharp
 public class ApplicationStylesPageCS : ContentPage
@@ -146,11 +146,11 @@ public class ApplicationStylesPageCS : ContentPage
 }
 ```
 
-`buttonStyle`应用于[ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)实例通过设置其[ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/)属性，并控制的外观`Button`实例。
+`buttonStyle`应用于[ `Button` ](xref:Xamarin.Forms.Button)实例通过设置其[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)属性和控件的外观`Button`实例。
 
 ## <a name="summary"></a>总结
 
-样式可提供全局通过将它们添加到应用程序的[ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)。 这有助于避免能跨页或控件的重复样式。
+样式可提供全局添加到应用程序的[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)。 这有助于避免跨页或控件的样式的重复项。
 
 
 
@@ -159,6 +159,6 @@ public class ApplicationStylesPageCS : ContentPage
 - [XAML 标记扩展](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [基本样式 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 - [使用样式 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)
-- [样式](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [样式](xref:Xamarin.Forms.Style)
+- [资源库](xref:Xamarin.Forms.Setter)

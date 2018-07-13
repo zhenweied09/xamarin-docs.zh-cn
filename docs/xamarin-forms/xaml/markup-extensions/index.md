@@ -1,48 +1,48 @@
 ---
 title: XAML 标记扩展
-description: 本文说明了如何使用 Xamarin.Forms XAML 标记扩展来通过允许要从文本字符串以外的源设置的元素属性扩展的功能和灵活性的 XAML。
+description: 本文介绍如何使用 Xamarin.Forms XAML 标记扩展来扩展的功能和灵活性的 XAML 元素特性，若要从文本字符串以外的源设置，从而。
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: c6f1853c5864eed8484e7746755c6fa80a28a49b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d507ff3c74de6bb4ea36c1a7b7dc2cd5dd60823b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245880"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996735"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 标记扩展
 
-XAML 标记扩展帮助通过允许要从文本字符串以外的源设置的元素属性扩展的功能和灵活性的 XAML。
+XAML 标记扩展可帮助元素特性，若要从文本字符串以外的源设置，从而扩展的功能和灵活性的 XAML。
 
-例如，通常设置`Color`属性`BoxView`如下所示：
+例如，正常情况下设置`Color`属性的`BoxView`如下所示：
 
 ```xaml
 <BoxView Color="Blue" />
 ```
 
-或者，你可以将其设置为十六进制的 RGB 颜色值：
+或者，可以将其设置为十六进制的 RGB 颜色值：
 
 ```xaml
 <BoxView Color="#FF0080" />
 ```
 
-在任一情况下，文本字符串设置为`Color`属性转换为`Color`值[ `ColorTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColorTypeConverter/)类。
+在任一情况下，文本字符串设置为`Color`属性转换为`Color`的值[ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter)类。
 
-您可能希望改为设置`Color`属性中使用的资源字典存储的值从你已创建的类的静态属性的值或从类型的属性`Color`在页上，另一个元素或从构造分隔色调、 饱和度和亮度值。
+您可能希望改为设置`Color`属性从存储中使用的资源字典的值或已创建的类的静态属性的值或类型的属性`Color`的页上，另一个元素或从构造分隔色调、 饱和度和亮度值。
 
-所有这些选项都可能使用 XAML 标记扩展。 但不允许短语"标记扩展"让你： XAML 标记扩展是*不*to XML 扩展。 即使使用 XAML 标记扩展，XAML 始终是合法的 XML。
+所有这些选项都可能使用 XAML 标记扩展。 但不要让短语"标记扩展"被吓： XAML 标记扩展是*不*XML 的扩展。 即使使用 XAML 标记扩展，XAML 始终是合法的 XML。
 
-标记扩展的实际上只是不同的方式来表示一个元素的属性。 XAML 标记扩展是通常可以通过将括在大括号中的属性设置识别：
+标记扩展是实际上只是以不同的方式来表示一个元素的属性。 XAML 标记扩展是通常可识别括在大括号中的属性设置：
 
 ```xaml
 <BoxView Color="{StaticResource themeColor}" />
 ```
 
-在大括号中的任何属性设置为*始终*XAML 标记扩展。 但是，如上所示，将 XAML 标记扩展也可以引用而不使用大括号。
+在大括号中的任何属性设置为*始终*XAML 标记扩展。 但是，正如您将看到，XAML 标记扩展还可以引用而不使用大括号。
 
 本文分为两个部分：
 
@@ -52,14 +52,14 @@ XAML 标记扩展帮助通过允许要从文本字符串以外的源设置的元
 
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[创建 XAML 标记扩展](creating.md)
 
-编写你自己自定义的 XAML 标记扩展。
+编写您自己自定义的 XAML 标记扩展。
 
 
 
 ## <a name="related-links"></a>相关链接
 
 - [标记扩展 （示例）](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
-- [从 Xamarin.Forms 簿 XAML 标记扩展章](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [从 Xamarin.Forms 书籍的 XAML 标记扩展一章](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [资源字典](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [动态样式](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [数据绑定](~/xamarin-forms/app-fundamentals/data-binding/index.md)

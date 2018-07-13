@@ -7,28 +7,28 @@ ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b71859d0848d7bf790b3cc4beddc67a5ea86d340
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 5f5b934b5f828bf6f5e8d4a0f0738c7db633aefb
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935473"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995835"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>第 17 章的摘要。 控制网格
 
-[ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)是一个强大的布局机制，排列为行和列的单元格的子项。 与类似 HTML 不同`table`元素，`Grid`是仅用于布局而不是演示文稿的目的。
+[ `Grid` ](xref:Xamarin.Forms.Grid)是一个强大的布局机制，排列为行和列的单元格的子项。 与类似 HTML 不同`table`元素，`Grid`是仅用于布局而不是演示文稿的目的。
 
 ## <a name="the-basic-grid"></a>基本网格
 
-`Grid` 派生自[ `Layout<View>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/)，用于定义[ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/)属性的`Grid`继承。 您可以填充此集合在 XAML 或代码中。
+`Grid` 派生自[ `Layout<View>` ](xref:Xamarin.Forms.Layout`1)，用于定义[ `Children` ](xref:Xamarin.Forms.Layout`1.Children)属性的`Grid`继承。 您可以填充此集合在 XAML 或代码中。
 
 ### <a name="the-grid-in-xaml"></a>XAML 中的网格
 
-定义`Grid`在 XAML 中通常开头填充[ `RowDefinitions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.RowDefinitions/)并[ `ColumnDefinitions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.ColumnDefinitions/)集合`Grid`与[ `RowDefinition`](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/)并[ `ColumnDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/)对象。 这是如何建立的行数和列的`Grid`，及其属性。
+定义`Grid`在 XAML 中通常开头填充[ `RowDefinitions` ](xref:Xamarin.Forms.Grid.RowDefinitions)并[ `ColumnDefinitions` ](xref:Xamarin.Forms.Grid.ColumnDefinitions)集合`Grid`与[ `RowDefinition`](xref:Xamarin.Forms.RowDefinition)并[ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)对象。 这是如何建立的行数和列的`Grid`，及其属性。
 
-`RowDefinition` 具有[ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.RowDefinition.Height/)属性和`ColumnDefinition`具有[ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ColumnDefinition.Width/)属性，这两个类型[ `GridLength` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLength/)，一种结构。
+`RowDefinition` 具有[ `Height` ](xref:Xamarin.Forms.RowDefinition.Height)属性和`ColumnDefinition`具有[ `Width` ](xref:Xamarin.Forms.ColumnDefinition.Width)属性，这两个类型[ `GridLength` ](xref:Xamarin.Forms.GridLength)，一种结构。
 
-在 XAML 中， [ `GridLengthTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridLengthTypeConverter/)将转换到的简单文本字符串`GridLength`值。 在后台[`GridLength`构造函数](https://developer.xamarin.com/api/constructor/Xamarin.Forms.GridLength.GridLength/p/System.Double/Xamarin.Forms.GridUnitType/)创建`GridLength`值根据的数量和类型的值[ `GridUnitType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/)，具有三个成员的枚举：
+在 XAML 中， [ `GridLengthTypeConverter` ](xref:Xamarin.Forms.GridLengthTypeConverter)将转换到的简单文本字符串`GridLength`值。 在后台[`GridLength`构造函数](xref:Xamarin.Forms.GridLength.%23ctor(System.Double,Xamarin.Forms.GridUnitType))创建`GridLength`值根据的数量和类型的值[ `GridUnitType` ](xref:Xamarin.Forms.GridUnitType)，具有三个成员的枚举：
 
 - [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; 设备无关的单位 （在 XAML 中的数字） 中指定的宽度或高度
 - [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; 高度或宽度是自动调整大小基于单元格内容 (如在 XAML 中的"Auto")
@@ -36,17 +36,17 @@ ms.locfileid: "37935473"
 
 每个子`Grid`必须指定行和列 （显式或隐式）。 跨越行和列跨度是可选的。 这些指定使用附加的可绑定属性&mdash;由定义的属性`Grid`但设置的子级`Grid`。 `Grid` 定义了四个静态附加可绑定属性：
 
-- [`RowProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowProperty/) &mdash; 从零开始的行;默认值为 0
-- [`ColumnProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnProperty/) &mdash; 从零开始的列;默认值为 0
-- [`RowSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.RowSpanProperty/) &mdash; 数量的行跨越子;默认值为 1
-- [`ColumnSpanProperty`](https://developer.xamarin.com/api/field/Xamarin.Forms.Grid.ColumnSpanProperty/) &mdash; 数字列的子跨越;默认值为 1
+- [`RowProperty`](xref:Xamarin.Forms.Grid.RowProperty) &mdash; 从零开始的行;默认值为 0
+- [`ColumnProperty`](xref:Xamarin.Forms.Grid.ColumnProperty) &mdash; 从零开始的列;默认值为 0
+- [`RowSpanProperty`](xref:Xamarin.Forms.Grid.RowSpanProperty) &mdash; 数量的行跨越子;默认值为 1
+- [`ColumnSpanProperty`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) &mdash; 数字列的子跨越;默认值为 1
 
 在代码中，程序可以使用八个静态方法来设置和获取这些值：
 
-- [`Grid.SetRow`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.SetRow/p/Xamarin.Forms.BindableObject/System.Int32/) 和 [`Grid.GetRow`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.GetRow/p/Xamarin.Forms.BindableObject/)
-- [`Grid.SetColumn`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.SetColumn/p/Xamarin.Forms.BindableObject/System.Int32/) 和 [`Grid.GetColumn`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.GetColumn/p/Xamarin.Forms.BindableObject/)
-- [`Grid.SetRowSpan`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.SetRowSpan/p/Xamarin.Forms.BindableObject/System.Int32/) 和 [`Grid.GetRowSpan`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.GetRowSpan/p/Xamarin.Forms.BindableObject/)
-- [`Grid.SetColumnSpan`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.SetColumnSpan/p/Xamarin.Forms.BindableObject/System.Int32/) 和 [`Grid.GetColumnSpan`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid.GetColumnSpan/p/Xamarin.Forms.BindableObject/)
+- [`Grid.SetRow`](xref:Xamarin.Forms.Grid.SetRow(Xamarin.Forms.BindableObject,System.Int32)) 和 [`Grid.GetRow`](xref:Xamarin.Forms.Grid.GetRow(Xamarin.Forms.BindableObject))
+- [`Grid.SetColumn`](xref:Xamarin.Forms.Grid.SetColumn(Xamarin.Forms.BindableObject,System.Int32)) 和 [`Grid.GetColumn`](xref:Xamarin.Forms.Grid.GetColumn(Xamarin.Forms.BindableObject))
+- [`Grid.SetRowSpan`](xref:Xamarin.Forms.Grid.SetRowSpan(Xamarin.Forms.BindableObject,System.Int32)) 和 [`Grid.GetRowSpan`](xref:Xamarin.Forms.Grid.GetRowSpan(Xamarin.Forms.BindableObject))
+- [`Grid.SetColumnSpan`](xref:Xamarin.Forms.Grid.SetColumnSpan(Xamarin.Forms.BindableObject,System.Int32)) 和 [`Grid.GetColumnSpan`](xref:Xamarin.Forms.Grid.GetColumnSpan(Xamarin.Forms.BindableObject))
 
 在 XAML 中设置这些值使用以下属性：
 
@@ -57,10 +57,10 @@ ms.locfileid: "37935473"
 
 [ **SimpleGridDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/SimpleGridDemo)示例演示如何创建和初始化`Grid`在 XAML 中。
 
-`Grid`继承[ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/)属性从`Layout`和定义提供的行和列之间的间距的两个其他属性：
+`Grid`继承[ `Padding` ](xref:Xamarin.Forms.Layout.Padding)属性从`Layout`和定义提供的行和列之间的间距的两个其他属性：
 
-- [`RowSpacing`](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.RowSpacing/) 默认值为 6
-- [`ColumnSpacing`](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.ColumnSpacing/) 默认值为 6
+- [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) 默认值为 6
+- [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) 默认值为 6
 
 `RowDefinitions`和`ColumnDefinitions`集合不是绝对必需的。 如果不存在，`Grid`创建行和列`Grid`子级，并提供所有这些默认值`GridLength`的"\*"（星号）。
 

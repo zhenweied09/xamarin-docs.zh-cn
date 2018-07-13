@@ -7,32 +7,32 @@ ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9c7fd87579d0c35c9efe31edf5c25b8ed8f40658
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 148388b80137bd335bbb977ea230726da1f4a32d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935393"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995880"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>第 25 章的摘要。 页类型
 
 到目前为止您已了解两个类派生自`Page`:`ContentPage`和`NavigationPage`。 本章提供了其他两个：
 
-- [`MasterDetailPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) 管理两个页面、 一个母版和详细信息
-- [`TabbedPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) 管理多个通过选项卡访问的子页面
+- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 管理两个页面、 一个母版和详细信息
+- [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 管理多个通过选项卡访问的子页面
 
 这些类型的页面提供更高级的导航选项比`NavagationPage`中所述[第 24 章。页面导航](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter24.md)。
 
 ## <a name="master-and-detail"></a>母版和详细信息
 
-[ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/)定义的类型的两个属性`Page`: [ `Master` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Master/)并[ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/)。 通常设置为这些属性的每个`ContentPage`。 `MasterDetailPage`显示，并将这两页之间进行切换。
+[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)定义的类型的两个属性`Page`: [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master)并[ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail)。 通常设置为这些属性的每个`ContentPage`。 `MasterDetailPage`显示，并将这两页之间进行切换。
 
 有两种基本方法可用来切换这两页：
 
 - *拆分*母版和详细信息所在的并排显示
 - *弹出框*其中的详细信息页介绍了或部分介绍了主页面上
 
-有多个变体*弹出框*方法 (*幻灯片*，*重叠*，以及*交换*)，但它们通常是平台依赖。 可以设置[ `MasterDetailBehavior` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.MasterBehavior/)的属性`MasterDetailPage`成员[ `MasterBehavior` ](xref:Xamarin.Forms.MasterBehavior)枚举：
+有多个变体*弹出框*方法 (*幻灯片*，*重叠*，以及*交换*)，但它们通常是平台依赖。 可以设置[ `MasterDetailBehavior` ](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior)的属性`MasterDetailPage`成员[ `MasterBehavior` ](xref:Xamarin.Forms.MasterBehavior)枚举：
 
 - [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
 - [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
@@ -54,7 +54,7 @@ ms.locfileid: "37935393"
 
 `Master`并`Detail`与可视化树中定义属性[SchoolAndDetailPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml)文件，它派生自`MasterDetailPage`。 此安排可进行数据绑定来设置之间的母版和详细信息页。
 
-XAML 文件还设置[ `IsPresented` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsPresented/)的属性`MasterDetailPage`到`True`。 这将导致在启动时; 要显示的母版页默认情况下显示的详细信息页。 [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs)文件中设置`IsPresented`到`false`从选定的项时`ListView`母版页中。 随即显示的详细信息页：
+XAML 文件还设置[ `IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented)的属性`MasterDetailPage`到`True`。 这将导致在启动时; 要显示的母版页默认情况下显示的详细信息页。 [SchoolAndDetailPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/SchoolAndDetail/SchoolAndDetail/SchoolAndDetail/SchoolAndDetailPage.xaml.cs)文件中设置`IsPresented`到`false`从选定的项时`ListView`母版页中。 随即显示的详细信息页：
 
 [![学校和详细信息的三个屏幕截图](images/ch25fg09-small.png "详细信息页上，从 MasterDetailPage")](images/ch25fg09-large.png#lightbox "从 MasterDetailPage 的详细信息页")
 
@@ -62,8 +62,8 @@ XAML 文件还设置[ `IsPresented` ](https://developer.xamarin.com/api/property
 
 Xamarin.Forms 提供的用户界面，用于在母版和详细信息视图之间切换，尽管你可以提供您自己。 为此，请执行以下操作：
 
-- 设置[ `IsGestureEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.IsGestureEnabled/)属性设置为`false`禁用轻扫
-- 重写[ `ShouldShowToolbarButton` ](https://developer.xamarin.com/api/member/Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton()/)方法并返回`false`隐藏在 Windows 8.1 和 Windows Phone 8.1 上的工具栏按钮。
+- 设置[ `IsGestureEnabled` ](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled)属性设置为`false`禁用轻扫
+- 重写[ `ShouldShowToolbarButton` ](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton)方法并返回`false`隐藏在 Windows 8.1 和 Windows Phone 8.1 上的工具栏按钮。
 
 然后，必须提供一种方法来切换 master 和详细信息页中，如所示[ **ColorsDetail** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/ColorsDetails)示例。
 
@@ -71,28 +71,28 @@ Xamarin.Forms 提供的用户界面，用于在母版和详细信息视图之间
 
 ## <a name="tabbedpage"></a>TabbedPage
 
-[ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/)是可以在使用选项卡之间切换的页的集合。 它派生`MultiPage<Page>`并定义任何公共属性或其自己的方法。 [`MultiPage<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.MultiPage%3CT%3E/)但是，未定义属性：
+[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)是可以在使用选项卡之间切换的页的集合。 它派生`MultiPage<Page>`并定义任何公共属性或其自己的方法。 [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1)但是，未定义属性：
 
-- [`Children`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.Children/) 类型的属性 `IList<T>`
+- [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) 类型的属性 `IList<T>`
 
 填写此`Children`页面对象的集合。
 
 另一种方法允许你定义`TabbedPage`子级非常像`ListView`使用自动生成的选项卡式的页这两个属性：
 
-- [`ItemsSource`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemsSource/) 类型 `IEnumerable`
-- [`ItemTemplate`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.ItemTemplate/) 类型 `DataTemplate`
+- [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 类型 `IEnumerable`
+- [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 类型 `DataTemplate`
 
 但是，这种方法不会不好在 iOS 上运行时集合中包含多个几个项。
 
 `MultiPage<T>` 定义两个让你跟踪当前查看的页的多个属性：
 
-- [`CurrentPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.CurrentPage/) 类型的`T`，用于引用页面
-- [`SelectedItem`](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%3CT%3E.SelectedItem/) 类型的`Object`，用于引用中的对象`ItemsSource`集合
+- [`CurrentPage`](xref:Xamarin.Forms.MultiPage`1.CurrentPage) 类型的`T`，用于引用页面
+- [`SelectedItem`](xref:Xamarin.Forms.MultiPage`1.SelectedItem) 类型的`Object`，用于引用中的对象`ItemsSource`集合
 
 `MultiPage<T>` 此外定义了两个事件：
 
-- [`PagesChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.PagesChanged/) 当`ItemsSource`集合更改
-- [`CurrentPageChanged`](https://developer.xamarin.com/api/event/Xamarin.Forms.MultiPage%3CT%3E.CurrentPageChanged/) 查看的页发生更改时
+- [`PagesChanged`](xref:Xamarin.Forms.MultiPage`1.PagesChanged) 当`ItemsSource`集合更改
+- [`CurrentPageChanged`](xref:Xamarin.Forms.MultiPage`1.CurrentPageChanged) 查看的页发生更改时
 
 ### <a name="discrete-tab-pages"></a>离散的选项卡页
 
