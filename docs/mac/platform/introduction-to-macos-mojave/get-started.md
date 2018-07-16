@@ -6,13 +6,13 @@ ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: ee5269bf314401328d0184631e817b37ce091479
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 07/08/2018
+ms.openlocfilehash: cf2725eafa18330a07a08db4235bad1a1ecd47b6
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831340"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030613"
 ---
 # <a name="getting-started-with-macos-mojave"></a>开始使用 macOS Mojave
 
@@ -23,7 +23,7 @@ ms.locfileid: "38831340"
 > 将它用于仅试验。
 
 > [!NOTE]
-> 有关详细信息，请阅读[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)Xamarin 的预览版本。
+> 有关详细信息，请阅读 Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)。
 
 本文档介绍如何获取设置，将生成 macOS Mojave Xamarin.Mac 应用。 它讨论了如何下载 Xcode 10 和更新 Visual Studio for mac。
 
@@ -36,7 +36,7 @@ ms.locfileid: "38831340"
 
 2. **运行 Xcode 10** – 更新并运行 Visual Studio for Mac; 之前运行 Xcode 10 安装 Xamarin 需要一些工具。
 
-3. **更新 Visual Studio for Mac** – 按照中的说明[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)安装 Xamarin 预览版。
+3. **更新 Visual Studio for Mac** – 按照上的说明[发布博客](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)安装 Xamarin 预览版。
 
 4. _（可选）_ **在 Mac 上安装最新的 macOS Mojave beta** – 若要测试 Xamarin.Mac 应用程序使用新引入的 macOS Mojave Api，已注册的 Apple 开发人员可[下载](https://developer.apple.com/download/)并安装最新的 macOS Mojave 开发人员测试版。
 
@@ -46,9 +46,9 @@ ms.locfileid: "38831340"
    > [!IMPORTANT]
    > 然后再向 macOS Mojave 用于生成和测试 Xamarin.Mac 应用程序来调用新 macOS Mojave Api 升级你的 Mac:
    > - 读取[Apple 的发行说明](https://developer.apple.com/download/)操作系统更新。
-   > - 读取[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)Xamarin 的预览版本。 请注意，此首个预览版不包括适用于新 macOS Mojave AppKit Api （如深色模式） 的绑定。
+   > - 读取 Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)。
 
 ## <a name="related-links"></a>相关链接
 
 - [下载 Xcode 10](https://developer.apple.com/download/)
-- Xamarin 预览版[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

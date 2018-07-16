@@ -6,13 +6,13 @@ ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 05ccae0415e450365a50fe4dbd8412ccd38b48ac
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 07/08/2018
+ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830423"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030699"
 ---
 # <a name="introduction-to-ios-12"></a>IOS 12 简介
 
@@ -23,17 +23,21 @@ ms.locfileid: "38830423"
 
 > [!NOTE]
 > - 审阅[入门](get-started.md)指南说明如何开始构建使用 Xamarin iOS 12 应用程序。
-> - 有关详细信息，请阅读[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)Xamarin 的预览版本。
+> - 有关详细信息，请阅读 Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)。
 
 本文档提供的 Xamarin 预览版版本提供了 C# 绑定某些 iOS 12 Api 的高级说明。
 
 ## <a name="arkit-2"></a>ARKit 2
 
-ARKit 是 iOS 中包含的增强的现实框架。 ARKit 2 允许多个用户在增强的现实场景中彼此交互使用可以保留空间中的对象并返回到其在更高版本时，并提供对 2D 和 3D 图像识别和跟踪。 iOS 12 还提供了 AR 快速查找，一种方法来呈现 usdz AR 应用程序中的模型。
+ARKit 是 iOS 中包含的增强的现实框架。 ARKit 2 允许多个用户进行相互交互在增强的现实场景中使用可以保留空间中的对象并返回到其在更高版本时，并提供 2D 图像识别和跟踪和 3D 物体识别。 iOS 12 还提供了 AR 快速查找，一种方法来呈现 usdz AR 应用程序中的模型。
 
 ## <a name="siri-shortcuts"></a>使用 Siri 快捷方式
 
 使用 Siri 快捷方式允许开发人员将其应用程序与使用 Siri 更深入地集成。 使用 Siri 快捷方式，用户可以使用语音命令来打开内容或启动任务在其应用中。 使用 Siri 将了解当某些快捷方式会更容易使用，建议将它们通过向用户通知。
+
+## <a name="core-ml-2"></a>Core ML 2
+
+Core ML 2 可以减少应用程序通过模型量化和灵活的模型的大小、 提高了与新的批次预测 API，应用程序性能和使用自定义模型以在机器学习中支持的改进。
 
 ## <a name="notification-improvements"></a>通知的改进
 
@@ -41,9 +45,9 @@ ARKit 是 iOS 中包含的增强的现实框架。 ARKit 2 允许多个用户在
 
 在 iOS 中 12 通知内容扩展允许自定义用户界面和动态操作。 这些功能使用户通知中的更丰富、 更多相关体验。
 
-## <a name="core-ml-2-natural-language-framework"></a>Core ML 2： 自然语言框架
+## <a name="natural-language-framework"></a>自然语言框架
 
-自然语言框架，Core ML 2 的一部分，应用程序来执行各种类型的语言分析。 例如，它可用来识别词类并确定所表示的文本块的语言。
+自然语言框架使应用程序可以执行各种类型的语言分析。 例如，它可用来识别词类并确定所表示的文本块的语言。
 
 ## <a name="carplay"></a>CarPlay
 
@@ -57,8 +61,16 @@ iOS 12 将建议并存储的用户名和强密码的应用程序包含创建帐�
 
 与 iOS 12、 第三方密码管理器应用程序可以提供扩展以提供用户名和密码登录字段的值。
 
+## <a name="healthkit-updates"></a>HealthKit 更新
+
+引入了 iOS 11.3[健康记录](https://www.apple.com/healthcare/health-records/)，它允许用户下载它们的运行状况记录来自各种医疗保健机构的信息并在其 iOS 设备上查看它。 iOS 12 添加的 Api，使第三方应用程序安全地访问此数据。
+
+## <a name="imessage-app-presentation-contexts"></a>iMessage 应用演示文稿上下文
+
+在 iOS 12、 iMessage 应用支持允许作为普通 iMessage 应用或照片或视频效果的上下文中运行的应用程序的演示文稿上下文。
+
 ## <a name="related-links"></a>相关链接
 
 - [适用于 iOS 12 (Apple) 进行准备](https://developer.apple.com/ios/)
 - [iOS 12 预览版 (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin 预览版[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: 03841306ba54e511dbf2f2b86a7c17e9f4669bcd
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: e45d9944a2f4fc392b5a78efb4a7751d19641c73
+ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38847556"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39030660"
 ---
 # <a name="introduction-to-tvos-12"></a>TvOS 12 简介
 
@@ -23,7 +23,7 @@ ms.locfileid: "38847556"
 
 > [!NOTE]
 > - 审阅[入门](~/ios/platform/introduction-to-ios12/get-started.md)指南说明如何开始构建 iOS 12 和 tvOS 12 应用使用 Xamarin。
-> - 有关详细信息，请阅读[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)Xamarin 的预览版本。
+> - 有关详细信息，请阅读 Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)。
 
 本文档提供的新的和更新 tvOS 概述 12 的 Xamarin 预览版版本目前提供的 C# 绑定的功能。
 
@@ -41,4 +41,4 @@ tvOS 12 允许所有应用程序，无论它们的呈现方式，与焦点引擎
 - [tvOS – Apple 开发人员 (Apple)](https://developer.apple.com/tvos/)
 - [什么是 tvOS 12 (Apple) （视频） 中的新增功能](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [电视 (Apple)](https://www.apple.com/tv/)
-- Xamarin 预览版[发行说明](https://releases.xamarin.com/preview-release-xcode-10-beta/)
+- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
