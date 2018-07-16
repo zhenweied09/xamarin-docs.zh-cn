@@ -370,6 +370,7 @@
 #### [菜单 (Force Touch)](watchos/user-interface/menu.md)
 #### [文本输入](watchos/user-interface/text-input.md)
 ### [平台功能](watchos/platform/index.md)
+#### [watchOS 5 简介](watchos/platform/introduction-to-watchos5/index.md)
 #### [watchOS 4 简介](watchos/platform/introduction-to-watchos4.md)
 #### [watchOS 3 简介](watchos/platform/introduction-to-watchos3/index.md)
 ##### [其他 watchOS 3 框架更改](watchos/platform/introduction-to-watchos3/additional-framework-changes.md)
