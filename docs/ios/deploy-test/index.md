@@ -1,22 +1,22 @@
 ---
-title: 部署和测试
-description: 稳定和部署指南
+title: 部署和测试 Xamarin.iOS 应用
+description: 本文档链接到的各种指南介绍了有关部署和测试 Xamarin.iOS 应用程序的主题。 例如，应用分发、.ipa 文件、预配、无线部署、TestFlight 和调试。
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 515ea8e63f8309c46a7d802af1daafcb0c483762
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96eeefa631eb4055d8bd0af5b89160ab0899907
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785179"
 ---
-# <a name="deployment-and-testing"></a>部署和测试
+# <a name="deploying-and-testing-xamarinios-apps"></a>部署和测试 Xamarin.iOS 应用
 
 此部分介绍用于测试应用程序以及分发方式的主题。 本部分的主题包括用于调试的工具、如何部署给测试员以及如何将应用程序发布到 App Store 等内容。
-
 
 ##  <a name="app-distributioniosdeploy-testapp-distributionindexmd"></a>[应用分发](~/ios/deploy-test/app-distribution/index.md)
 
@@ -46,19 +46,14 @@ TestFlight 现在归 Apple 所有，是进行 Xamarin.iOS 应用的 Beta 测试�
 
 Visual Studio 和 Visual Studio for Mac IDE 都支持在 iOS 模拟器和 iOS 设备中调试 Xamarin.iOS 应用程序。 本文介绍如何使用调试器以及如何配置其支持的各种选项。
 
-
 ##  <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
 本文档介绍如何为 Xamarin.iOS 项目创建单元测试。
 可使用 Touch.Unit 框架实现对 Xamarin.iOS 的单元测试，该框架同时包含 iOS 测试运行程序以及 [NUnitLite](http://www.nunitlite.com/) 框架的修改版，可提供一组熟悉的 API 用于编写单元测试。
 
-
-
 ##  <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[使用 Instruments 检测利用 MarkHeap 的本机泄漏](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
 本文介绍如何在任何 iOS 设备和 Xamarin.iOS 应用程序中使用 Instruments。 它还介绍了如何在模拟器中分析应用程序。
-
-
 
 ##  <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[演练 - 使用 Apple 的 Instruments 工具](~/ios/deploy-test/walkthrough-apples-instrument.md)
 

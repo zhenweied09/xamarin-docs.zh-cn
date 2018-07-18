@@ -1,46 +1,46 @@
 ---
 title: Xamarin.Forms 标签
-description: 此文章介绍了如何使用 Xamarin.Forms 标签类在应用程序中显示单个和多行文本。
+description: 本文介绍如何使用 Xamarin.Forms 标签类在应用程序中显示单个和多行文本。
 ms.prod: xamarin
 ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e9f99ace64e013dfa681e497b9d33376d79555ed
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ce602a84ea1024dc22298a3ec1567a9a34ad4a82
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245493"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995961"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 标签
 
-_Xamarin.Forms 中的显示文本_
+_在 Xamarin.Forms 中显示文本_
 
-`Label`视图用于显示文本，单个和多行。 自定义字体 （系列、 大小和选项） 和彩色的文本，可以有标签。 本文介绍了以下主题：
+`Label`视图用于显示文本、 单个和多行。 自定义字体 （系列、 大小和选项） 和彩色的文本，可以有标签。 本文介绍了以下主题：
 
-- **[截断和包装](#Truncation_and_Wrapping)** &ndash;截断和包装用于处理一行文本无法容纳其中的情况下的选项。
-- **[字体](#Font)** &ndash;字体选项。
+- **[截断和换行](#Truncation_and_Wrapping)** &ndash;截断和处理文本不能位于同一行的情况下的换行选项。
+- **[字体](#Font)** &ndash;的字体选项。
 - **[颜色](#Color)** &ndash;标签文本颜色选项。
-- **[格式化文本](#Formatted_Text)** &ndash;用于显示文本与多个格式/样式内联选项。
+- **[格式化文本](#Formatted_Text)** &ndash;用于显示具有多个格式/样式内联的文本的选项。
 
 ## <a name="styling-label"></a>样式标签
 
-以下部分介绍的设置属性`Label`手动基于每个实例。 请注意，设置的属性可以分组为一个一致地应用到一个或多个视图的样式。 这可以提高代码的可读性，并可以进行设计更改更加轻松地实现。 请参阅[样式](~/xamarin-forms/user-interface/text/styles.md)有关详细信息。
+以下部分介绍了设置属性的`Label`手动在每个实例基础上。 请注意，属性集可以分组为一致地应用于一个或多个视图的一种样式。 这可以提高代码的可读性，并轻松地实现设计更改。 请参阅[样式](~/xamarin-forms/user-interface/text/styles.md)有关详细信息。
 
 <a name="Truncation_and_Wrapping" />
 
 ## <a name="truncation-and-wrapping"></a>截断和换行
 
-可以设置标签来处理无法容纳在以下几种方式，通过公开的一行文本`LineBreakMode`属性。 [`LineBreakMode`](https://developer.xamarin.com/api/type/Xamarin.Forms.LineBreakMode/) 是一个枚举的以下选项：
+可以设置标签来处理不适合在以下几种方式，通过公开的一行文本`LineBreakMode`属性。 [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) 是一个枚举，下列选项：
 
-- **HeadTruncation** &ndash;截断的文本，显示最终的开头。
-- **CharacterWrap** &ndash;使到新的行的文本字符边界处换行。
-- **MiddleTruncation** &ndash;显示的开头和末尾的文本，由省略号中间的替换。
-- **NoWrap** &ndash;不会包装文本，仅显示任意数量的文本作为可调整到一行。
-- **TailTruncation** &ndash;显示截断末尾的文本的开头。
-- **自动换行**&ndash;使文本在单词边界处换行。
+- **HeadTruncation** &ndash;将截断的文本，其中显示最终的开头。
+- **CharacterWrap** &ndash;到新行上的文本进行换行字符边界处。
+- **MiddleTruncation** &ndash;显示开头和末尾的文本，与通过省略号中间的替换。
+- **NoWrap** &ndash;不换行文本，仅显示可以为任意数量的文本适合某个行。
+- **TailTruncation** &ndash;显示文本，截断结束的开头。
+- **换行**&ndash;使文本在单词边界处换行。
 
 ## <a name="font"></a>字体
 
@@ -48,11 +48,11 @@ _Xamarin.Forms 中的显示文本_
 
 ## <a name="color"></a>颜色
 
-`Label`s 可以设置要使用通过可绑定的自定义的文本颜色`TextColor`属性。
+`Label`s 可以设置为使用通过可绑定的自定义文本颜色`TextColor`属性。
 
-特别注意，有必要确保颜色将每个平台上可用。 因为每个平台都有不同的文本和背景颜色的默认值，你将需要小心地将其选取适用于每个的默认值。
+特别注意有必要确保将每个平台上可用的颜色。 因为每个平台都有不同的文本和背景颜色的默认值，将需要谨慎地选择适用于每个默认值。
 
-下面的代码用于设置标签的文本颜色：
+使用以下代码设置标签的文本颜色：
 
 在代码中：
 
@@ -70,7 +70,7 @@ public partial class LabelPage : ContentPage
 }
 ```
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,17 +90,17 @@ Title="Label Demo">
 
 <a name="Formatted_Text" />
 
-## <a name="formatted-text"></a>格式化的文本
+## <a name="formatted-text"></a>带格式的文本
 
-标签公开`FormattedText`这允许你以使用多个字体呈现文本和颜色在同一视图的属性。
+标签公开`FormattedText`这允许你以使用多个字体呈现文本和颜色在同一视图中的属性。
 
-`FormattedText`属性属于类型[ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/)。 格式化的字符串组成一个或多个`Span`s，每个具有以下属性：
+`FormattedText`属性属于类型[ `FormattedString` ](xref:Xamarin.Forms.FormattedString)。 格式的字符串组成的一个或多个`Span`s，每个具有以下属性：
 
-- **BackgroundColor** &ndash;可以用来设置背景色，例如，可获得突出显示效果。
+- **BackgroundColor** &ndash;可以用于设置背景色，例如若要实现荧光笔的效果。
 - **FontAttributes** &ndash;可以是设置为粗体、 斜体，还是两者皆否。
 - **FontFamily** &ndash;设置要使用的字体。
-- **FontSize** &ndash;设置的文本大小。
-- **ForegroundColor** &ndash;设置的文本颜色。
+- **FontSize** &ndash;设置文本的大小。
+- **ForegroundColor** &ndash;设置文本的颜色。
 - **文本**&ndash;要显示的文本。
 
 下面的 C# 代码演示的第一个单词以粗体显示，最后一个单词为红色的标签：
@@ -124,7 +124,7 @@ public partial class LabelPage : ContentPage
 }
 ```
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -155,4 +155,4 @@ Title="Label Demo">
 
 - [借助 Xamarin.Forms，第 3 章创建移动应用](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [文本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [标签 API](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [标签 API](xref:Xamarin.Forms.Label)

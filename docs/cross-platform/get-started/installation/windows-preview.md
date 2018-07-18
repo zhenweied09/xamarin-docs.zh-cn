@@ -1,15 +1,17 @@
 ---
 title: 在 Windows 上安装 Xamarin 预览版
+description: 本文档介绍了如何使用预览版本通道在 Visual Studio 2017 上安装 Xamarin 预览版本。
 ms.prod: xamarin
 ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: asb3993
 ms.author: amburns
 ms.date: 03/20/2018
-ms.openlocfilehash: 20b9bbfcdcc698f19c6400cd738ba7f6d5db7e44
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 12a661a7cb0e92046e56c5c2ece6e8504252ca10
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066853"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>在 Windows 上安装 Xamarin 预览版
 
@@ -19,7 +21,7 @@ ms.lasthandoff: 05/10/2018
 - 预览版 – 等效于 Visual Studio for Mac 中的 Alpha 和 Beta 通道
 
 > [!TIP] 
-> 若要尝试预发行功能，应[下载 Visual Studio 2017 预览版安装程序](https://www.visualstudio.com/vs/preview/)，其中将提供选项用于并行安装 Visual Studio 的预览版和稳定版（发行版）。 有关 Visual Studio 2017 中新增功能的详细信息，请参阅[发行说明](/visualstudio/releasenotes/vs2017-preview-relnotes)。
+> 若要尝试预发行功能，应[下载 Visual Studio 2017 预览版安装程序](https://visualstudio.microsoft.com/vs/preview/)，其中将提供选项用于并行安装 Visual Studio 的预览版和稳定版（发行版）。 有关 Visual Studio 2017 中新增功能的详细信息，请参阅[发行说明](/visualstudio/releasenotes/vs2017-preview-relnotes)。
 
 Visual Studio 预览版可能包含相应的 Xamarin 预览版功能，包括：
 
@@ -27,7 +29,8 @@ Visual Studio 预览版可能包含相应的 Xamarin 预览版功能，包括：
 - Xamarin.iOS
 - Xamarin.Android
 - Xamarin Profiler
-- Xamarin Workbooks/Inspector
+- Xamarin Workbooks
+- Xamarin Inspector
 - Xamarin 远程 iOS 模拟器
 
 以下“预览版安装程序”屏幕截图显示了预览版和发行版选项（请注意灰色版本号：版本 15.0 是发行版，版本 15.1 是预览版）：

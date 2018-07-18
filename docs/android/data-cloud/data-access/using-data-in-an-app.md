@@ -11,6 +11,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31647029"
 ---
 # <a name="using-data-in-an-app"></a>在应用程序中使用数据
 
@@ -97,7 +98,7 @@ public int DeleteStock(Stock stock)
 
 在创建分发数据库文件使用你的应用，注意使用命名的表和列以确保它们匹配你的代码的要求，尤其是如果你使用 SQLite.NET 这应以满足您的 C# 类和属性的名称 （或关联的自定义属性）。
 
-若要确保在 Android 应用程序中的其他部分之前，运行某些代码，你可以将它放在要加载的第一个活动，也可以创建`Application`加载之前的任何活动的子类。 下面的代码显示`Application`将现有数据库文件复制的子类**data.sqlite**外**/Resources/Raw/**目录。
+若要确保在 Android 应用程序中的其他部分之前，运行某些代码，你可以将它放在要加载的第一个活动，也可以创建`Application`加载之前的任何活动的子类。 下面的代码显示`Application`将现有数据库文件复制的子类**data.sqlite**外 **/Resources/Raw/** 目录。
 
 ```csharp
 [Application]

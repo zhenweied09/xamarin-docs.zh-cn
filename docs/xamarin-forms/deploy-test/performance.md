@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: bcc265c4d8410bb1aa2305f8a137c96a63c60fae
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d7719f231a6d70594985a1158340104d68367ffe
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847714"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998599"
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 性能
 
@@ -59,7 +59,7 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 
 ## <a name="choose-the-correct-layout"></a>选择正确布局
 
-能够显示多个子级，但只具有单个子级的布局会比较浪费。 例如，下面的代码示例演示一个具有单个子级的 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)：
+能够显示多个子级，但只具有单个子级的布局会比较浪费。 例如，下面的代码示例演示一个具有单个子级的 [`StackLayout`](xref:Xamarin.Forms.StackLayout)：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -73,7 +73,7 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 </ContentPage>
 ```
 
-这比较浪费，应删除 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 元素，如下面的代码示例中所示：
+这比较浪费，应删除 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 元素，如下面的代码示例中所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -85,7 +85,7 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 </ContentPage>
 ```
 
-此外，不要尝试使用其他布局的组合来重现特定布局的外观，因为这会导致执行不需要的布局计算。 例如，不要尝试使用 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 实例的组合来重现 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 布局。 下面的代码示例演示了这种错误做法的示例：
+此外，不要尝试使用其他布局的组合来重现特定布局的外观，因为这会导致执行不需要的布局计算。 例如，不要尝试使用 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 实例的组合来重现 [`Grid`](xref:Xamarin.Forms.Grid) 布局。 下面的代码示例演示了这种错误做法的示例：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -115,7 +115,7 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 </ContentPage>
 ```
 
-这比较浪费，因为会执行不需要的布局计算。 相反，可以使用 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 更好地实现所需布局，如下面的代码示例所示：
+这比较浪费，因为会执行不需要的布局计算。 相反，可以使用 [`Grid`](xref:Xamarin.Forms.Grid) 更好地实现所需布局，如下面的代码示例所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -163,7 +163,7 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 
 ## <a name="reduce-unnecessary-bindings"></a>减少不需要的绑定
 
-不要将绑定用于可以方便地进行静态设置的内容。 绑定无需绑定的数据不会带来优势，因为绑定并不经济高效。 例如，设置 `Button.Text = "Accept"` 的开销要低于将 [`Button.Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Text/) 绑定到值为“Accept”的 ViewModel `string` 属性。
+不要将绑定用于可以方便地进行静态设置的内容。 绑定无需绑定的数据不会带来优势，因为绑定并不经济高效。 例如，设置 `Button.Text = "Accept"` 的开销要低于将 [`Button.Text`](xref:Xamarin.Forms.Button.Text) 绑定到值为“Accept”的 ViewModel `string` 属性。
 
 <a name="optimizelayout" />
 
@@ -171,36 +171,36 @@ XAMLC 在默认情况下处于禁用状态，以便确保后向兼容性。 但�
 
 Xamarin.Forms 2 引入了一种经过优化的布局引擎，它可影响布局更新。 若要获取最佳可能布局性能，请遵循以下准则：
 
-- 通过指定 [`Margin`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) 属性值来减少布局层次结构的深度，从而允许创建具有更少换行视图的布局。 有关详细信息，请参阅[边距和填充](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)。
-- 使用 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) 时，尝试确保将尽可能少的行和列设置为 [`Auto`](https://developer.xamarin.com/api/property/Xamarin.Forms.GridLength.Auto/) 大小。 每个自动调整大小的行或列都会导致布局引擎执行额外布局计算。 而是应在可能时使用固定大小的行和列。 或者，使用 [`GridUnitType.Star`](https://developer.xamarin.com/api/field/Xamarin.Forms.GridUnitType.Star/) 枚举值将行和列设置，为占据成比例的空间量，前提是父树遵循这些布局准则。
-- 除非需要，否则不要设置布局的 [`VerticalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 和 [`HorizontalOptions`](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) 属性。 [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) 和 [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) 的默认值可以实现最佳布局优化。 更改这些属性会产生成本并消耗内存，即使是将它们设置为默认值。
-- 尽可能避免使用 [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)。 它会导致 CPU 不得不执行显著更多的工作。
-- 使用 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) 时，尽可能避免使用 [`AbsoluteLayout.AutoSize`](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) 属性。
-- 使用 [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) 时，确保只有一个子级设置为 [`LayoutOptions.Expands`](https://developer.xamarin.com/api/property/Xamarin.Forms.LayoutOptions.Expands/)。 此属性可确保指定子级会占用 `StackLayout` 可以向它提供的最大空间，而多次执行这些计算比较浪费。
-- 不要调用 [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) 类的任何方法，因为它们会导致执行成本高昂的布局计算。 相反，可能可以通过设置 [`TranslationX`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/) 和 [`TranslationY`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) 属性来获取所需布局行为。 或者，将 [`Layout<View>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) 类设为子类以实现所需布局行为。
-- 不要比需要更频繁地更新任何 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 实例，因为标签大小的更改可能会导致重新计算整个屏幕布局。
-- 除非需要，否则不要设置 [`Label.VerticalTextAlignment`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.VerticalTextAlignment/) 属性。
-- 尽可能将任何 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 实例的 [`LineBreakMode`](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.LineBreakMode/) 都设置为 [`NoWrap`](https://developer.xamarin.com/api/field/Xamarin.Forms.LineBreakMode.NoWrap/)。
+- 通过指定 [`Margin`](xref:Xamarin.Forms.View.Margin) 属性值来减少布局层次结构的深度，从而允许创建具有更少换行视图的布局。 有关详细信息，请参阅[边距和填充](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)。
+- 使用 [`Grid`](xref:Xamarin.Forms.Grid) 时，尝试确保将尽可能少的行和列设置为 [`Auto`](xref:Xamarin.Forms.GridLength.Auto) 大小。 每个自动调整大小的行或列都会导致布局引擎执行额外布局计算。 而是应在可能时使用固定大小的行和列。 或者，使用 [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) 枚举值将行和列设置，为占据成比例的空间量，前提是父树遵循这些布局准则。
+- 除非需要，否则不要设置布局的 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 和 [`HorizontalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 属性。 [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) 和 [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) 的默认值可以实现最佳布局优化。 更改这些属性会产生成本并消耗内存，即使是将它们设置为默认值。
+- 尽可能避免使用 [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)。 它会导致 CPU 不得不执行显著更多的工作。
+- 使用 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 时，尽可能避免使用 [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) 属性。
+- 使用 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 时，确保只有一个子级设置为 [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands)。 此属性可确保指定子级会占用 `StackLayout` 可以向它提供的最大空间，而多次执行这些计算比较浪费。
+- 不要调用 [`Layout`](xref:Xamarin.Forms.Layout) 类的任何方法，因为它们会导致执行成本高昂的布局计算。 相反，可能可以通过设置 [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 和 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) 属性来获取所需布局行为。 或者，将 [`Layout<View>`](xref:Xamarin.Forms.Layout`1) 类设为子类以实现所需布局行为。
+- 不要比需要更频繁地更新任何 [`Label`](xref:Xamarin.Forms.Label) 实例，因为标签大小的更改可能会导致重新计算整个屏幕布局。
+- 除非需要，否则不要设置 [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) 属性。
+- 尽可能将任何 [`Label`](xref:Xamarin.Forms.Label) 实例的 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 都设置为 [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap)。
 
 <a name="optimizelistview" />
 
 ## <a name="optimize-listview-performance"></a>优化 ListView 性能
 
-使用 [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件时，应对许多用户体验进行优化：
+使用 [`ListView`](xref:Xamarin.Forms.ListView) 控件时，应对许多用户体验进行优化：
 
 - **初始化** – 从创建控件时开始，到在屏幕上显示项时结束的时间间隔。
 - **滚动** – 能够滚动列表，并确保 UI 不滞后于触控笔势。
 - **交互**，用于添加、删除和选择项。
 
-[`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) 控件需要应用程序提供数据和单元格模板。 实现此目标的方法会对该控件的性能产生很大影响。 有关详细信息，请参阅 [ListView 性能](~/xamarin-forms/user-interface/listview/performance.md)。
+[`ListView`](xref:Xamarin.Forms.ListView) 控件需要应用程序提供数据和单元格模板。 实现此目标的方法会对该控件的性能产生很大影响。 有关详细信息，请参阅 [ListView 性能](~/xamarin-forms/user-interface/listview/performance.md)。
 
 <a name="optimizeimages" />
 
 ## <a name="optimize-image-resources"></a>优化图像资源
 
-显示图像资源可能会极大提高应用的内存占用量。 因此，仅应在必要时创建图像，应用程序不再需要图像后应立即将其释放。 例如，如果应用程序通过从流中读取其数据来显示图像，请确保仅当需要时才创建流，并确保在不再需要时释放流。 可以通过在创建页面时或是在 [`Page.Appearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) 事件触发时创建流，然后在 [`Page.Disappearing`](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Disappearing/) 事件触发时释放流，来实现此目标。
+显示图像资源可能会极大提高应用的内存占用量。 因此，仅应在必要时创建图像，应用程序不再需要图像后应立即将其释放。 例如，如果应用程序通过从流中读取其数据来显示图像，请确保仅当需要时才创建流，并确保在不再需要时释放流。 可以通过在创建页面时或是在 [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) 事件触发时创建流，然后在 [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) 事件触发时释放流，来实现此目标。
 
-使用 [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) 方法下载图像进行显示时，通过确保将 [`UriImageSource.CachingEnabled`](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.CachingEnabled/) 属性设置为 `true`，来缓存下载的图像。 有关详细信息，请参阅[使用图像](~/xamarin-forms/user-interface/images.md)。
+使用 [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 方法下载图像进行显示时，通过确保将 [`UriImageSource.CachingEnabled`](xref:Xamarin.Forms.UriImageSource.CachingEnabled) 属性设置为 `true`，来缓存下载的图像。 有关详细信息，请参阅[使用图像](~/xamarin-forms/user-interface/images.md)。
 
 有关详细信息，请参阅[优化图像资源](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)。
 
@@ -208,9 +208,9 @@ Xamarin.Forms 2 引入了一种经过优化的布局引擎，它可影响布局�
 
 ## <a name="reduce-the-visual-tree-size"></a>减小可视化树大小
 
-减少页面上的元素数可以更快呈现页面。 可通过两种主要方法来实现此目标。 第一种方法是隐藏不可见的元素。 每个元素的 [`IsVisible`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.IsVisible/) 属性可确定该元素是否应属于可视化树的一部分。 因此，如果某个元素因为隐藏在其他元素后面而不可见，则删除该元素，或将其 `IsVisible` 属性设置为 `false`。
+减少页面上的元素数可以更快呈现页面。 可通过两种主要方法来实现此目标。 第一种方法是隐藏不可见的元素。 每个元素的 [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 属性可确定该元素是否应属于可视化树的一部分。 因此，如果某个元素因为隐藏在其他元素后面而不可见，则删除该元素，或将其 `IsVisible` 属性设置为 `false`。
 
-第二种方法是删除不需要的元素。 例如，下面的代码示例演示一个显示一系列 [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) 元素的页面布局：
+第二种方法是删除不需要的元素。 例如，下面的代码示例演示一个显示一系列 [`Label`](xref:Xamarin.Forms.Label) 元素的页面布局：
 
 ```xaml
 <ContentPage.Content>
@@ -330,5 +330,5 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 - [快速呈现器](~/xamarin-forms/internals/fast-renderers.md)
 - [布局压缩](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Xamarin.Forms 图像调整器示例](https://developer.xamarin.com/samples/xamarin-forms/XamFormsImageResize/)
-- [XamlCompilation](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilation/)
-- [XamlCompilationOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationOptions/)
+- [XamlCompilation](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)
+- [XamlCompilationOptions](xref:Xamarin.Forms.Xaml.XamlCompilationOptions)

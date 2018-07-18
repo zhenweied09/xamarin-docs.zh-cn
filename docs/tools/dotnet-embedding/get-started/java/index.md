@@ -6,12 +6,12 @@ ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: 84ef5d047b3f70635d74ef5bee7741a7447db677
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 53871a5311cdba824b0bddca37dd5c416d06e272
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793212"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066804"
 ---
 # <a name="getting-started-with-java"></a>Java 入门
 
@@ -35,10 +35,10 @@ ms.locfileid: "34793212"
 
 对于 Android:
 
-* [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/)或更高版本
+* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)或更高版本
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
-你可以使用[Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)来编辑和编译 C# 代码。
+你可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)来编辑和编译 C# 代码。
 
 > [!NOTE]
 > 早期版本的 Xcode、 Visual Studio、 Xamarin.Android、 Android Studio 中，和 Mono_可能_工作，而是未经测试，不受支持。

@@ -12,6 +12,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: zh-CN
   ms.lasthandoff: 05/03/2018
+  ms.locfileid: "32436380"
 abstract:
   description: Xamarin 提供了用于移动设备、平板电脑和桌面应用程序的跨平台开发解决方案。 本部分介绍了适用的详细信息，无论定目标到哪个平台。
   menu:

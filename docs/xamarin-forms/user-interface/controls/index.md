@@ -1,38 +1,38 @@
 ---
 title: 控件引用
-description: 用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。 本文列出了构成 Xamarin.Forms 应用程序的用户界面的控件组。
+description: 用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。 本文列出了构成了 Xamarin.Forms 应用程序的用户界面的控件组。
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 51457814bd6dbdef7f99874ee24b33a8651a1c7c
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 7aa8b47a6d851ea67de7817ecd1f0e924822bfb0
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35242987"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994982"
 ---
 # <a name="controls-reference"></a>控件引用
 
 _用于构造 Xamarin.Forms 应用程序的所有可视元素的说明。_
 
-Xamarin.Forms 应用程序的可视界面将构造的对象映射到每个目标平台的本机控件。 这样，特定于平台的应用程序适用于 iOS、 Android 和通用 Windows 平台，若要使用 Xamarin.Forms 代码中包含[.NET 标准库](~/cross-platform/app-fundamentals/net-standard.md)或[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
+Xamarin.Forms 应用程序的可视界面将映射到每个目标平台的本机控件的对象的构造。 这样，特定于平台的应用程序的 iOS、 Android 和通用 Windows 平台，以使用 Xamarin.Forms 中包含的代码[.NET 标准库](~/cross-platform/app-fundamentals/net-standard.md)或[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
 
-用于创建 Xamarin.Forms 应用程序的用户界面的四个主控制组显示在以下四个文章中：
+用于创建 Xamarin.Forms 应用程序的用户界面的四个主要控件组是这些四篇文章中所示：
 
 - [**页**](pages.md)
 - [**布局**](layouts.md)
 - [**视图**](views.md)
 - [**单元格**](cells.md)
 
-Xamarin.Forms 页通常占用整个屏幕。 此页通常包含一种布局，其中包含视图和可能是其他布局。 单元格都使用门户中的专用的组件[ `TableView` ](views.md#tableView)和[ `ListView` ](views.md#listView)。
+Xamarin.Forms 页面通常占据整个屏幕。 页通常包含一种布局，其中包含视图和可能是其他布局。 单元格是使用门户中的专用的组件[ `TableView` ](views.md#tableView)并[ `ListView` ](views.md#listView)。
 
-中的四个相关文章[**页**](pages.md)， [**布局**](layouts.md)， [**视图**](views.md)，和[**单元格**](cells.md)，（如果它们存在），其中包含指向其 API 文档，用以描述其用途 （如果存在），项目和一个或多个示例程序描述了每个类型的控件。 每种类型的控件也伴随显示网页中的页面的屏幕截图[ **FormsGallery** ](https://developer.xamarin.com/samples/FormsGallery/)在 iOS、 Android 和 UWP 上运行的设备的示例。 以下每个屏幕快照是 C# 页上，等效的 XAML 页，对源代码的链接和 （在适当的时候） XAML 页的 C# 代码隐藏文件。
+在上的四个文章[**页面**](pages.md)， [**布局**](layouts.md)， [**视图**](views.md)，并[**单元格**](cells.md)，（如果存在），其中包含指向其 API 文档、 文章描述了其使用 （如果存在） 和一个或多个示例程序介绍了每种类型的控件。 显示来自的页面的屏幕截图还附带有每种类型的控件[ **FormsGallery** ](https://developer.xamarin.com/samples/FormsGallery/)设备 iOS、 Android 和 UWP 上运行的示例。 下面的每个屏幕快照是 C# 页上，等效 XAML 页面的源代码的链接和 （在适当的时候） XAML 页的 C# 代码隐藏文件。
 
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Xamarin.Forms FormsGallery 示例](https://developer.xamarin.com/samples/FormsGallery/)
-- [API 文档](https://developer.xamarin.com/api/root/Xamarin.Forms/)
+- [API 文档](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

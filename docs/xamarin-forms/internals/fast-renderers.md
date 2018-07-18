@@ -1,48 +1,48 @@
 ---
 title: Xamarin.Forms 快速呈现器
-description: 本文介绍快速呈现器，可将减少通货膨胀和 Xamarin.Forms 控件在 Android 上的呈现成本平展生成的本机控件层次结构。
+description: 本文介绍了快速呈现器，减少的通货膨胀和呈现成本在 Android 上 Xamarin.Forms 控件通过平展生成的本机控件层次结构。
 ms.prod: xamarin
 ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 40cc095da41aaae5cb474987d8b03f7cf4a17322
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243056"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997108"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 快速呈现器
 
-_本文介绍快速呈现器，可将减少通货膨胀和 Xamarin.Forms 控件在 Android 上的呈现成本平展生成的本机控件层次结构。_
+_本文介绍了快速呈现器，减少的通货膨胀和呈现成本在 Android 上 Xamarin.Forms 控件通过平展生成的本机控件层次结构。_
 
-传统上，在 Android 上原始控件呈现器的大多数组成两个视图：
+一直以来，大部分在 Android 上的原始控件呈现器组成两个视图：
 
 - 一个本机控件，如`Button`或`TextView`。
-- 容器`ViewGroup`，处理一些布局工作、 笔势处理以及其他任务。
+- 容器`ViewGroup`用于处理某些布局工作、 手势处理和其他任务。
 
-但是，此方法具有性能影响两个视图创建为每个逻辑的控件，这会导致更复杂的可视化树需要更多内存，以及更多处理，以在屏幕上呈现的。
+但是，此方法具有性能暗示，为每个逻辑控件，这会导致更复杂的可视化树需要更多内存和处理，以在屏幕上呈现的详细信息创建两个视图。
 
-快速的呈现器减少的通货膨胀和 Xamarin.Forms 控件呈现成本成单个视图。 因此，而不被创建两个视图，并将它们添加到视图树，创建只有一个。 这提高了性能，通过创建更少的对象，这反过来意味着不太复杂的视图树，并减少内存使用情况 （这也会导致更少的垃圾回收暂停时间）。
+快速呈现器减少到一个视图的通货膨胀和呈现成本的 Xamarin.Forms 控件。 因此，而不被创建两个视图，并将它们添加到视图树，创建只有一个。 通过创建更少的对象，这又意味着不太复杂的视图树，和更低的内存使用情况 （这也会导致较少的垃圾回收暂停），这可以提高性能。
 
-快速的呈现器是可用于在 Android 上 Xamarin.Forms 2.4 中的以下控件：
+快速呈现器是可用于在 Android 上 Xamarin.Forms 2.4 中的以下控件：
 
-- [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/)
-- [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)
-- [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/)
+- [`Button`](xref:Xamarin.Forms.Button)
+- [`Image`](xref:Xamarin.Forms.Image)
+- [`Label`](xref:Xamarin.Forms.Label)
 
-就功能而言，这些快速的呈现器并没有什么区别到原始的呈现器。 但是，它们是当前实验，可以仅能通过添加以下代码的行你`MainActivity`之前调用的类`Forms.Init`:
+就功能而言，这些快速呈现器是对原始的呈现器没有什么不同。 但是，当前处在试验阶段，仅可以通过添加以下代码行来使用你`MainActivity`类，然后调用`Forms.Init`:
 
 ```csharp
 Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> 因此将忽略此设置之前应用 compat 活动，都仅适用于应用程序兼容 Android 后端，快速呈现器。
+> 快速呈现器只是适用于应用程序兼容性 Android 后端，因此将忽略此设置之前应用程序兼容性活动。
 
-每个应用程序，取决于布局的复杂性将不同的性能改进。 例如，在当滚动时可能是性能改进的 x2 [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/)包含数千行的数据，其中每个行中的单元格进行的使用快速呈现器的控件，这会导致明显生成更平滑滚动。
+对于每个应用程序，取决于布局的复杂性而异的性能改进。 例如，在滚动浏览时可能有性能提升了 x2 [ `ListView` ](xref:Xamarin.Forms.ListView)包含数千行数据，其中每个行中的单元格的使用快速呈现器的控件构成，这会导致以可视方式更顺畅地滚动。
 
 
 ## <a name="related-links"></a>相关链接

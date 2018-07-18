@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30771091"
 ---
 # <a name="troubleshooting-bindings"></a>故障排除的绑定
 
@@ -20,7 +21,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 ## <a name="overview"></a>概述
 
-绑定 Android 库 ( **.aar**或**.jar**) 文件很少是简单的次重要; 它通常需要额外的工作来减少从 Java 和.NET 之间的差异导致的问题。
+绑定 Android 库 ( **.aar**或 **.jar**) 文件很少是简单的次重要; 它通常需要额外的工作来减少从 Java 和.NET 之间的差异导致的问题。
 这些问题将阻止 Xamarin.Android 绑定 Android 库，并显示为生成日志中的错误消息。 本指南将提供用于解决问题的一些提示，列出了一些较为常见的问题/情景，并提供成功绑定 Android 库的可能解决方案。
 
 当绑定时的现有 Android 库，所以务必请记住以下几点：
@@ -42,7 +43,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 检查的类和的 Java 类的方法可以提供有价值的信息将会帮助你在绑定的库。
 [博士 GUI](http://jd.benow.ca/)是一种图形工具，可显示从 Java 源代码**类**包含在一个 JAR 文件。 它可以作为独立应用程序或插件为于 IntelliJ 或运行 Eclipse。
 
-反编译 Android 库打开**。JAR** Java 反编译程序文件。 如果库**。AAR**文件中，有必要将文件解压缩**classes.jar**该存档文件中。 以下是使用博士 GUI 分析的示例屏幕快照[高手](http://square.github.io/picasso/)JAR:
+反编译 Android 库打开 **。JAR** Java 反编译程序文件。 如果库 **。AAR**文件中，有必要将文件解压缩**classes.jar**该存档文件中。 以下是使用博士 GUI 分析的示例屏幕快照[高手](http://square.github.io/picasso/)JAR:
 
 ![使用 Java 反编译程序分析高手 2.5.2.jar](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
 
@@ -50,7 +51,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 - **具有模糊处理的特征的类**&ndash;的经过模糊处理的类特性包括：
 
-    - Class 名称中包含**$**，即**$.class**
+    - Class 名称中包含**$**，即 **$.class**
     - 类名称完全泄露小写字符，即**a.class**      
 
 - **`import` 语句未引用库**&ndash;标识未引用的库，并将这些依赖项添加到的项目的 Xamarin.Android 绑定**生成操作**的**ReferenceJar**或**EmbedddedReferenceJar**。
@@ -99,7 +100,7 @@ _本文总结了生成绑定，以及可能的原因和建议的方法可以解�
 
 ### <a name="problem-missing-c-types-in-generated-output"></a>问题： 缺少 C# 中生成的输出类型。
 
-绑定**.dll**生成但未命中某些 Java 类型，或生成的 C# 源代码不会生成由于一个错误，指出有缺少的类型。
+绑定 **.dll**生成但未命中某些 Java 类型，或生成的 C# 源代码不会生成由于一个错误，指出有缺少的类型。
 
 #### <a name="possible-causes"></a>可能的原因：
 
@@ -237,9 +238,9 @@ return type of 'Java.Lang.Object'
 
 ### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>问题： A **.so**绑定所需的库是未加载
 
-某些绑定项目还取决于中功能**.so**库。 很可能不会自动加载 Xamarin.Android **.so**库。 Xamarin.Android 的已包装的 Java 代码执行时，将无法使 JNI 调用和错误消息_java.lang.UnsatisfiedLinkError： 找不到的本机方法：_会在 logcat 出应用程序中显示。
+某些绑定项目还取决于中功能 **.so**库。 很可能不会自动加载 Xamarin.Android **.so**库。 Xamarin.Android 的已包装的 Java 代码执行时，将无法使 JNI 调用和错误消息_java.lang.UnsatisfiedLinkError： 找不到的本机方法：_ 会在 logcat 出应用程序中显示。
 
-此解决方法是手动加载**.so**库通过调用`Java.Lang.JavaSystem.LoadLibrary`。 例如假设 Xamarin.Android 项目已共享库**libpocketsphinx_jni.so**具有生成操作的绑定项目中包含**EmbeddedNativeLibrary**，则以下（在使用共享的库之前执行） 的代码段将加载**.so**库：
+此解决方法是手动加载 **.so**库通过调用`Java.Lang.JavaSystem.LoadLibrary`。 例如假设 Xamarin.Android 项目已共享库**libpocketsphinx_jni.so**具有生成操作的绑定项目中包含**EmbeddedNativeLibrary**，则以下（在使用共享的库之前执行） 的代码段将加载 **.so**库：
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");

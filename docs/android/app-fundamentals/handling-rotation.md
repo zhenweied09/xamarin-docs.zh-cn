@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30768891"
 ---
 # <a name="handling-rotation"></a>处理旋转
 
@@ -45,7 +46,7 @@ _本主题介绍如何处理在 Xamarin.Android 设备方向更改。它介绍�
 
 [![默认项目模板结构](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
-此项目创建单个**main.axml**文件中**资源/布局**文件夹。 当活动的`OnCreate`方法调用，因此它放大中定义的视图**main.axml，**其声明一个按钮，如下面的 XML 中所示：
+此项目创建单个**main.axml**文件中**资源/布局**文件夹。 当活动的`OnCreate`方法调用，因此它放大中定义的视图**main.axml，** 其声明一个按钮，如下面的 XML 中所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

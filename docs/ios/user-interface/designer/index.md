@@ -7,22 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/31/2018
-ms.openlocfilehash: eadc2147a44d6077436e394a4757d367ce42e5fa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a931373a6abba3084af3c7aefcdddc903ad1b577
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789998"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209227"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>使用 iOS 设计器构建用户界面
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-=======
-# <a name="ios-designer"></a>iOS 设计器
-
 _Xamarin 设计器中为 iOS 是可视化设计器中的适用于 iOS 情节提要和接口生成器格式适用于 Mac 和 Visual Studio 与 Visual Studio 完全集成。IOS 设计器维护的情节提要和.xib 格式中，与完全兼容，以便可以在适用于 Mac 的 Visual Studio 或 Visual Studio 除了 Xcode 的接口生成器中编辑文件。此外，适用于 iOS 的 Xamarin 设计器支持高级的功能，如在编辑器中的设计时呈现的自定义控件。_
->>>>>>> master
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

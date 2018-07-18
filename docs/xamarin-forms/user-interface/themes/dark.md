@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 深色主题
-description: 此文章介绍了如何使用 Xamarin.Forms 深色主题在应用程序。
+description: 本文介绍如何使用 Xamarin.Forms 深色主题的应用程序中。
 ms.prod: xamarin
 ms.assetid: 43A3798D-6F05-4734-AF5E-97235B46D9B9
 ms.technology: xamarin-forms
@@ -8,18 +8,18 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 1fc329f506afde04b0dc59dc637d999865aafbe1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245919"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38853240"
 ---
 # <a name="xamarinforms-dark-theme"></a>Xamarin.Forms 深色主题
 
 ![](~/media/shared/preview.png "此 API 目前处于预览状态")
 
 > [!NOTE]
-> 主题需要 Xamarin.Forms 2.3 预览版本。 检查[的故障排除技巧](~/xamarin-forms/user-interface/themes/index.md)如果出现错误。
+> 主题需要 Xamarin.Forms 2.3 预览版本。 检查[故障排除提示](~/xamarin-forms/user-interface/themes/index.md)如果出现错误。
 
 若要使用深色主题：
 
@@ -30,8 +30,8 @@ ms.locfileid: "35245919"
 
 ## <a name="2-add-to-the-resource-dictionary"></a>2.将添加到资源字典
 
-在**App.xaml**文件添加新的自定义`xmlns`主题，然后确保应用程序的资源字典与合并主题的资源。
-XAML 文件的示例所示：
+在中**App.xaml**文件并添加新的自定义`xmlns`主题，然后确保与应用程序的资源字典合并主题的资源。
+XAML 文件的示例如下所示：
 
 ```xaml
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,13 +45,13 @@ XAML 文件的示例所示：
 
 ## <a name="3-load-theme-classes"></a>3.加载主题类
 
-遵循此[故障排除步骤](~/xamarin-forms/user-interface/themes/index.md)和在 iOS 和 Android 应用程序项目中添加所需的代码。
+按照这[故障排除步骤](~/xamarin-forms/user-interface/themes/index.md)，并在 iOS 和 Android 应用程序项目中添加所需的代码。
 
 ## <a name="4-use-styleclass"></a>4.使用 StyleClass
 
-下面是按钮和标签深色主题，以及生成它们的标记中的示例。
+下面是按钮和标签在深色主题，以及生成它们的标记的示例。
 
-[![](dark-images/dark-theme-sml.png "按钮和标签深色主题中")](dark-images/dark-theme.png#lightbox "按钮和标签深色主题中")
+[![](dark-images/dark-theme-sml.png "按钮和标签在深色主题")](dark-images/dark-theme.png#lightbox "按钮和标签在深色主题")
 
 ```xaml
 <StackLayout Padding="20">
@@ -69,4 +69,4 @@ XAML 文件的示例所示：
 </StackLayout>
 ```
 
-[的内置类的完整列表](~/xamarin-forms/user-interface/themes/index.md)显示哪些样式提供的某些常见的控件。
+[内置类的完整列表](~/xamarin-forms/user-interface/themes/index.md)显示哪些样式是可用于某些常见的控件。

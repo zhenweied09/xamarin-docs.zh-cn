@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30780718"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>使用 iOS 设计器中的表
 
@@ -45,7 +46,7 @@ StoryboardTable 示例包含的简单的主-从应用程序使用情节提要中
 
 ## <a name="walkthrough"></a>演练
 
-Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … > 单个视图 App(C#)**，并调用它_StoryboardTables_。
+Visual Studio 中使用创建新的解决方案 **（创建） 新建项目 … > 单个视图 App(C#)**，并调用它_StoryboardTables_。
 
  [![创建新项目对话框](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
@@ -114,7 +115,7 @@ Visual Studio 中使用创建新的解决方案**（创建） 新建项目 … >
 请执行以下操作： 
 
 -  拖动**栏按钮项**从工具箱拖到_右侧导航栏的_。
--  在**属性填充**下**栏按钮项**选择**标识符： 添加**(以使其*+*递增按钮)。 
+-  在**属性填充**下**栏按钮项**选择**标识符： 添加**(以使其*+* 递增按钮)。 
 -  请为其提供一个名称，以便标识它，可以同时在代码中在更高版本的阶段。 请注意，你将需要为根视图控制器提供一个类名称 (例如**ItemViewController**) 以允许你设置栏按钮项的名称。
 
 

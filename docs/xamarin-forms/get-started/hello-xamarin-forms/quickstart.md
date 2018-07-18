@@ -1,18 +1,19 @@
 ---
 title: Xamarin.Forms 快速入门
+description: 本文介绍了如何创建一个应用程序，将字母数字电话号码（由用户输入）转换为数字电话号码，然后呼叫该号码。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/03/2018
-ms.openlocfilehash: 02aa7d4847f8ac601ca1311fd7fed09290e77482
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.date: 06/13/2018
+ms.openlocfilehash: 5b5f8c80e49d66ed3bd8b008c975d1cfeda93ed4
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38832379"
 ---
 # <a name="xamarinforms-quickstart"></a>Xamarin.Forms 快速入门
 
@@ -32,9 +33,12 @@ ms.locfileid: "34848052"
 
     ![](quickstart-images/vs/new-solution.png "新建项目")
 
-3. 在“新建项目”对话框中，单击“跨平台”，选择“移动应用(Xamarin.Forms)”模板，将“名称”和“解决方案”名称设为 `Phoneword`，为项目选择合适的位置，然后单击“确定”按钮：
+3. 在“新建项目”对话框中，单击“跨平台”，选择“移动应用(Xamarin.Forms)”模板，将“名称”设为“Phoneword”，为项目选择合适的位置，然后单击“确定”按钮：
 
     ![](quickstart-images/vs/new-project.w157.png "跨平台项目模板")
+
+    > [!NOTE]
+    > 如果未能将解决方案的名称设为“Phoneword”，则会导致许多生成错误。
 
 4. 在“新的跨平台应用”对话框中，单击“空白应用”，选择“.NET Standard”作为代码共享策略，然后单击“确定”按钮：
 
@@ -91,7 +95,7 @@ ms.locfileid: "34848052"
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -122,61 +126,20 @@ ms.locfileid: "34848052"
 
     按 **Ctrl+S**，保存对 **MainPage.xaml.cs** 所做的更改，然后关闭文件。
 
-9. 在“解决方案资源管理器”中，展开“App.xaml”，然后双击 **App.xaml.cs** 将其打开：
-
-    ![](quickstart-images/vs/open-app-class.png "打开的 App.xaml.cs")
-
-10. 在“App.xaml.cs”中，删除所有模板代码并将其替换为以下代码。 `App` 构造函数会将 `MainPage` 类设置为页面，该页面将在应用程序启动时显示：
-
-    ```csharp
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
-
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-    namespace Phoneword
-    {
-        public partial class App : Application
-        {
-            public App()
-            {
-                InitializeComponent();
-                MainPage = new MainPage();
-            }
-
-            protected override void OnStart()
-            {
-                // Handle when your app starts
-            }
-
-            protected override void OnSleep()
-            {
-                // Handle when your app sleeps
-            }
-
-            protected override void OnResume()
-            {
-                // Handle when your app resumes
-            }
-        }
-    }
-    ```
-
-    通过按 **Ctrl+S**，保存对 **App.xaml.cs** 所做的更改，然后关闭文件。
-
-11. 在“解决方案资源管理器”中，右键单击“Phoneword”项目，然后选择“添加”>“新建项...”：
+9. 在“解决方案资源管理器”中，右键单击“Phoneword”项目，然后选择“添加”>“新建项...”：
 
     ![](quickstart-images/vs/add-new-item.png "添加新项")
 
-12. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“类”，将新文件命名为 **PhoneTranslator**，然后单击“添加”按钮：
+10. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“类”，将新文件命名为 **PhoneTranslator**，然后单击“添加”按钮：
 
     ![](quickstart-images/vs/add-translator-class.w157.png "添加新类")
 
-13. 在“PhoneTranslator.cs”中，删除所有模板代码并将其替换为以下代码。 此代码会将手机词翻译为电话号码：
+11. 在“PhoneTranslator.cs”中，删除所有模板代码并将其替换为以下代码。 此代码会将手机词翻译为电话号码：
 
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
@@ -229,15 +192,15 @@ ms.locfileid: "34848052"
 
     通过按 **Ctrl+S**，保存对 **PhoneTranslator.cs** 所做的更改，然后关闭文件。
 
-14. 在“解决方案资源管理器”中，右键单击“Phoneword”项目，然后选择“添加”>“新建项...”：
+12. 在“解决方案资源管理器”中，右键单击“Phoneword”项目，然后选择“添加”>“新建项...”：
 
     ![](quickstart-images/vs/add-new-item.png "添加新项")
 
-15. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“界面”，将新文件命名为 **IDialer**，然后单击“添加”按钮：
+13. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“界面”，将新文件命名为 **IDialer**，然后单击“添加”按钮：
 
     ![](quickstart-images/vs/add-idialer-interface.w157.png "添加新接口")
 
-16. 在“IDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将定义 `Dial` 方法，必须在每个平台上实现此方法，才可拨打翻译后的电话号码：
+14. 在“IDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将定义 `Dial` 方法，必须在每个平台上实现此方法，才可拨打翻译后的电话号码：
 
     ```csharp
     namespace Phoneword
@@ -254,15 +217,15 @@ ms.locfileid: "34848052"
     > [!NOTE]
     > 此时完成了应用程序的常用代码。 此时，可将特定于平台的电话拨号程序实现为 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
 
-17. 在“解决方案资源管理器”中，右键单击“Phoneword.iOS”项目，然后选择“添加”>“新建项...”：
+15. 在“解决方案资源管理器”中，右键单击“Phoneword.iOS”项目，然后选择“添加”>“新建项...”：
 
     ![](quickstart-images/vs/add-new-item-ios.png "添加新项")
 
-18. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
+16. 在“添加新项”对话框中，选择“Apple”>“代码”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
 
     ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "添加新类")
 
-19. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 <code>Dial</code> 方法，此方法将在 iOS 平台上用于拨打翻译后的电话号码：
+17. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 <code>Dial</code> 方法，此方法将在 iOS 平台上用于拨打翻译后的电话号码：
 
     ```csharp
     using Foundation;
@@ -286,15 +249,15 @@ ms.locfileid: "34848052"
 
     通过按 **Ctrl+S**，保存对 **PhoneDialer.cs** 所做的更改，然后关闭文件。
 
-20. 在“解决方案资源管理器”中，右键单击“Phoneword.Android”项目，然后选择“添加”>“新建项...”：
+18. 在“解决方案资源管理器”中，右键单击“Phoneword.Android”项目，然后选择“添加”>“新建项...”：
 
     ![](quickstart-images/vs/add-new-item-android.png "添加新项")
 
-21. 在“添加新项”对话框中，选择“Visual C#”>“Android”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
+19. 在“添加新项”对话框中，选择“Visual C#”>“Android”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
 
     ![](quickstart-images/vs/new-phone-dialer-android.w157.png "添加新类")
 
-22. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 Android 平台上用于拨打翻译后的电话号码：
+20. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 Android 平台上用于拨打翻译后的电话号码：
 
     ```csharp
     using Android.Content;
@@ -315,7 +278,7 @@ ms.locfileid: "34848052"
                 if (context == null)
                     return false;
 
-                var intent = new Intent (Intent.ActionCall);
+                var intent = new Intent (Intent.ActionDial);
                 intent.SetData (Uri.Parse ("tel:" + number));
 
                 if (IsIntentAvailable (context, intent)) {
@@ -345,7 +308,7 @@ ms.locfileid: "34848052"
 
     通过按 **Ctrl+S**，保存对 **PhoneDialer.cs** 所做的更改，然后关闭文件。
 
-23. 在“解决方案资源管理器”的“Phoneword.Android”项目中，双击“MainActivity.cs”将其打开，然后删除所有模板代码并将其替换成下列代码：
+21. 在“解决方案资源管理器”的“Phoneword.Android”项目中，双击“MainActivity.cs”将其打开，然后删除所有模板代码并将其替换成下列代码：
 
     ```csharp
     using Android.App;
@@ -354,7 +317,8 @@ ms.locfileid: "34848052"
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
+                  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -365,36 +329,35 @@ ms.locfileid: "34848052"
                 ToolbarResource = Resource.Layout.Toolbar;
 
                 base.OnCreate(bundle);
-
                 Instance = this;
                 global::Xamarin.Forms.Forms.Init(this, bundle);
                 LoadApplication(new App());
             }
         }
-    }  
+    }
     ```
 
     按 Ctrl+S，保存对 MainActivity.cs 所做的更改，然后关闭文件。
 
-24. 在“解决方案资源管理器”的“Phoneword.Android”项目中，双击“属性”，然后选择“Android 清单”选项卡：
+22. 在“解决方案资源管理器”的“Phoneword.Android”项目中，双击“属性”，然后选择“Android 清单”选项卡：
 
     ![](quickstart-images/vs/android-manifest.png "打开的 Android 清单")
 
-25. 在“所需的权限”部分中，启用“CALL_PHONE”权限。 这将向应用程序授予进行电话呼叫的权限：
+23. 在“所需的权限”部分中，启用“CALL_PHONE”权限。 这将向应用程序授予进行电话呼叫的权限：
 
     ![](quickstart-images/vs/android-manifest-changed.png "启用 CallPhone 权限")
 
     通过按 **Ctrl+S**，保存对清单所做的更改，然后关闭文件。
 
-26. 在“解决方案资源管理器”中，右键单击“Phoneword.UWP”项目，然后选择“添加”>“新建项...”：
+24. 在“解决方案资源管理器”中，右键单击“Phoneword.UWP”项目，然后选择“添加”>“新建项...”：
 
     ![](quickstart-images/vs/add-new-item-uwp.png "添加新项")
 
-27. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
+25. 在“添加新项”对话框中，选择“Visual C#”>“代码”>“类”，将新文件命名为 **PhoneDialer**，然后单击“添加”按钮：
 
     ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "添加新类")
 
-28. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 和 helper 方法，这些方法将在通用 Windows 平台上用于拨打翻译后的电话号码：
+26. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 和 helper 方法，这些方法将在通用 Windows 平台上用于拨打翻译后的电话号码：
 
     ```csharp
     using Phoneword.UWP;
@@ -445,42 +408,42 @@ ms.locfileid: "34848052"
 
     通过按 **Ctrl+S**，保存对 **PhoneDialer.cs** 所做的更改，然后关闭文件。
 
-29. 在“解决方案资源管理器”的“Phoneword.UWP”项目中，右键单击“引用”，然后选择“添加引用...”：
+27. 在“解决方案资源管理器”的“Phoneword.UWP”项目中，右键单击“引用”，然后选择“添加引用...”：
 
     ![](quickstart-images/vs/uwp-add-reference.png "添加引用")
 
-30. 在“引用管理器”对话框中，选择“通用 Windows”>“扩展”>“适用于 UWP 的 Windows Mobile 扩展”，然后单击“确定”按钮：
+28. 在“引用管理器”对话框中，选择“通用 Windows”>“扩展”>“适用于 UWP 的 Windows Mobile 扩展”，然后单击“确定”按钮：
 
     ![](quickstart-images/vs/uwp-add-reference-extensions.png "添加适用于 UWP 的 Windows 移动扩展")
 
-31. 在“解决方案资源管理器”的“Phoneword.UWP”项目中，双击“Package.appxmanifest”：
+29. 在“解决方案资源管理器”的“Phoneword.UWP”项目中，双击“Package.appxmanifest”：
 
     ![](quickstart-images/vs/uwp-manifest.png "打开 UWP 清单")
 
-31. 在“功能”页上，启用“电话呼叫”功能。 这将向应用程序授予进行电话呼叫的权限：
+30. 在“功能”页上，启用“电话呼叫”功能。 这将向应用程序授予进行电话呼叫的权限：
 
     ![](quickstart-images/vs/uwp-manifest-changed.png "启用“电话呼叫”功能")
 
     通过按 **Ctrl+S**，保存对清单所做的更改，然后关闭文件。
 
-32. 在 Visual Studio 中，选择“生成”>“生成解决方案”菜单项，或按 **Ctrl+Shift+B**。 将生成应用程序，Visual Studio 状态栏中将显示一条成功消息：
+31. 在 Visual Studio 中，选择“生成”>“生成解决方案”菜单项，或按 **Ctrl+Shift+B**。 将生成应用程序，Visual Studio 状态栏中将显示一条成功消息：
 
     ![](quickstart-images/vs/build-successful.png "生成成功")
 
     如果发生错误，请重复前面的步骤并更正任何错误，直到成功生成应用程序。
 
-33. 在“解决方案资源管理器”中，右键单击“Phoneword.UWP”项目，然后选择“设为启用项目”：
+32. 在“解决方案资源管理器”中，右键单击“Phoneword.UWP”项目，然后选择“设为启用项目”：
 
     ![](quickstart-images/vs/uwp-set-as-startup-project.png "设为启动项目")
 
-34. 在 Visual Studio 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动应用程序：
+33. 在 Visual Studio 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动应用程序：
 
     ![](quickstart-images/vs/start.png "Visual Studio 工具栏")
     ![](quickstart-images/vs/phone-result-uwp.png "Phoneword 应用程序 UWP")
 
-35. 在“解决方案资源管理器”中，右键单击“Phoneword.Android”项目，然后选择“设为启用项目”。
-36. 在 Visual Studio 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 Android 模拟器内的应用程序。
-37. 如果拥有 iOS 设备并符合 Xamarin.Forms 开发的 Mac 系统要求，请使用类似技术将应用部署到 iOS 设备。 或者，将应用部署到 [iOS 远程模拟器](~/tools/ios-simulator.md)。
+34. 在“解决方案资源管理器”中，右键单击“Phoneword.Android”项目，然后选择“设为启用项目”。
+35. 在 Visual Studio 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 Android 模拟器内的应用程序。
+36. 如果拥有 iOS 设备并符合 Xamarin.Forms 开发的 Mac 系统要求，请使用类似技术将应用部署到 iOS 设备。 或者，将应用部署到 [iOS 远程模拟器](~/tools/ios-simulator.md)。
 
     注意：所有模拟器都不支持电话呼叫。
 
@@ -494,27 +457,22 @@ ms.locfileid: "34848052"
 
     ![](quickstart-images/xs/choose-template.png "选择模板")
 
-3. 在“配置空白窗体应用”对话框中，为新应用 `Phoneword` 命名，确保“使用可移植类库”单选按钮已选中，并确保“将 XAML 用于用户界面文件”复选框已选中，然后单击“下一步”按钮：
+3. 在“配置空白表单应用”对话框中，将新应用命名为“Phoneword”，确保选中“使用 .NET Standard”单选按钮，然后单击“下一步”按钮：
 
     ![](quickstart-images/xs/configure-app.png "配置 Forms 应用程序")
 
-4. 在“配置新空白窗体应用”对话框中，将“解决方案”和“项目”名称保留设置为 `Phoneword`，为项目选择合适的位置，然后单击“创建”按钮创建项目：
+4. 在“配置新空白表单应用”对话框中，将“解决方案”和“项目”名称保留设置为“Phoneword”，为项目选择合适的位置，然后单击“创建”按钮创建项目：
 
     ![](quickstart-images/xs/configure-project.png "配置 Forms 项目")
 
-5. 在**解决方案面板**中，选择“Phoneword”项目，右键单击并选择“添加”>“新文件...”：
+    > [!NOTE]
+    > 如果未能将解决方案和项目的名称设为“Phoneword”，则会导致许多生成错误。
 
-    ![](quickstart-images/xs/add-new-file.png "添加新文件")
-
-6. 在“新建文件”对话框中，选择“Forms”>“Forms ContentPage Xaml”，将新文件命名为 **MainPage**，然后单击“新建”按钮。 这会将一个名为 **MainPage** 的页面添加到项目：
-
-    ![](quickstart-images/xs/add-mainpage-class.png "添加新的 ContentPage")
-
-7. 在“Solution Pad”中，双击 **MainPage.xaml**将其打开：
+5. 在“Solution Pad”中，双击 **MainPage.xaml**将其打开：
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "打开的 MainPage.xaml")
 
-8. 在“MainPage.xaml”中，删除所有模板代码并将其替换为以下代码。 此代码以声明方式定义页面上的用户界面：
+6. 在“MainPage.xaml”中，删除所有模板代码并将其替换为以下代码。 此代码以声明方式定义页面上的用户界面：
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -524,7 +482,7 @@ ms.locfileid: "34848052"
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, WinPhone, Windows" Value="20" />
+                <On Platform="Android, UWP" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -538,11 +496,11 @@ ms.locfileid: "34848052"
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **MainPage.xaml** 所做的更改，然后关闭文件。
 
-9. 在“Solution Pad”中，双击 **MainPage.xaml.cs** 将其打开：
+7. 在“Solution Pad”中，双击 **MainPage.xaml.cs** 将其打开：
 
     ![](quickstart-images/xs/open-mainpage-codebehind.png "打开的 MainPage.xaml.cs")
 
-10. 在“MainPage.xaml.cs”中，删除所有模板代码并将其替换为以下代码。 如果分别在用户界面上单击“翻译”和“调用”按钮，作为响应，将分别执行 `OnTranslate` 和 `OnCall` 方法：
+8. 在“MainPage.xaml.cs”中，删除所有模板代码并将其替换为以下代码。 如果分别在用户界面上单击“翻译”和“调用”按钮，作为响应，将分别执行 `OnTranslate` 和 `OnCall` 方法：
 
     ```csharp
     using System;
@@ -561,7 +519,7 @@ ms.locfileid: "34848052"
 
             void OnTranslate (object sender, EventArgs e)
             {
-                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                translatedNumber = PhonewordTranslator.ToNumber (phoneNumberText.Text);
                 if (!string.IsNullOrWhiteSpace (translatedNumber)) {
                     callButton.IsEnabled = true;
                     callButton.Text = "Call " + translatedNumber;
@@ -592,61 +550,20 @@ ms.locfileid: "34848052"
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **MainPage.xaml.cs** 所做的更改，然后关闭文件。
 
-11. 在“Solution Pad”中，双击 **App.xaml.cs**将其打开：
-
-    ![](quickstart-images/xs/open-app-class.png "打开的 App.xaml.cs")
-
-12. 在“App.xaml.cs”中，删除所有模板代码并将其替换为以下代码。 `App` 构造函数会将 `MainPage` 类设置为页面，该页面将在应用程序启动时显示：
-
-    ```csharp
-    using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
-
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-    namespace Phoneword
-    {
-        public partial class App : Application
-        {
-            public App()
-            {
-                InitializeComponent();
-                MainPage = new MainPage();
-            }
-
-            protected override void OnStart()
-            {
-                // Handle when your app starts
-            }
-
-            protected override void OnSleep()
-            {
-                // Handle when your app sleeps
-            }
-
-            protected override void OnResume()
-            {
-                // Handle when your app resumes
-            }
-        }
-    }
-    ```
-
-    通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **Phoneword.cs** 所做的更改，然后关闭文件。
-
-13. 在**解决方案面板**中，选择“Phoneword”项目，右键单击并选择“添加”>“新文件...”：
+9. 在**解决方案面板**中，选择“Phoneword”项目，右键单击并选择“添加”>“新文件...”：
 
     ![](quickstart-images/xs/add-new-translator-file.png "添加新文件")
 
-14. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneTranslator**，然后单击“新建”按钮：
+10. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneTranslator**，然后单击“新建”按钮：
 
     ![](quickstart-images/xs/add-translator-class.png "添加新类")
 
-15. 在“PhoneTranslator.cs”中，删除所有模板代码并将其替换为以下代码。 此代码会将手机词翻译为电话号码：
+11. 在“PhoneTranslator.cs”中，删除所有模板代码并将其替换为以下代码。 此代码会将手机词翻译为电话号码：
 
     ```csharp
     using System.Text;
 
-    namespace Core
+    namespace Phoneword
     {
         public static class PhonewordTranslator
         {
@@ -699,15 +616,15 @@ ms.locfileid: "34848052"
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **PhoneTranslator.cs** 所做的更改，然后关闭文件。
 
-16. 在**解决方案面板**中，选择“Phoneword”项目，右键单击并选择“添加”>“新文件...”：
+12. 在**解决方案面板**中，选择“Phoneword”项目，右键单击并选择“添加”>“新文件...”：
 
     ![](quickstart-images/xs/add-new-interface.png "添加新文件")
 
-17. 在“新建文件”对话框中，选择“常规”>“空界面”，将新文件命名为 **IDialer**，然后单击“新建”按钮：
+13. 在“新建文件”对话框中，选择“常规”>“空界面”，将新文件命名为 **IDialer**，然后单击“新建”按钮：
 
     ![](quickstart-images/xs/add-idialer-interface.png "添加新接口")
 
-18. 在“IDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将定义 `Dial` 方法，必须在每个平台上实现此方法，才可拨打翻译后的电话号码：
+14. 在“IDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将定义 `Dial` 方法，必须在每个平台上实现此方法，才可拨打翻译后的电话号码：
 
     ```csharp
     namespace Phoneword
@@ -723,15 +640,15 @@ ms.locfileid: "34848052"
     > [!NOTE]
     > 此时完成了应用程序的常用代码。 此时，可将特定于平台的电话拨号程序实现为 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)。
 
-19. 在“Solution Pad”中，选择“Phoneword.iOS”项目，右键单击并选择“添加”>“新建文件...”：
+15. 在“Solution Pad”中，选择“Phoneword.iOS”项目，右键单击并选择“添加”>“新建文件...”：
 
     ![](quickstart-images/xs/add-new-file-ios.png "添加新文件")
 
-20. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneDialer**，然后单击“新建”按钮：
+16. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneDialer**，然后单击“新建”按钮：
 
     ![](quickstart-images/xs/new-phonedialer-ios.png "添加新类")
 
-21. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 iOS 平台上用于拨打翻译后的电话号码：
+17. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 iOS 平台上用于拨打翻译后的电话号码：
 
     ```csharp
     using Foundation;
@@ -755,15 +672,15 @@ ms.locfileid: "34848052"
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **PhoneDialer.cs** 所做的更改，然后关闭文件。
 
-22. 在“Solution Pad”中，选择“Phoneword.Droid”项目，右键单击并选择“添加”>“新建文件...”：
+18. 在“Solution Pad”中，选择“Phoneword.Droid”项目，右键单击并选择“添加”>“新建文件...”：
 
     ![](quickstart-images/xs/add-new-file-android.png "添加新文件")
 
-23. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneDialer**，然后单击“新建”按钮：
+19. 在“新建文件”对话框中，选择“常规”>“空类”，将新文件命名为 **PhoneDialer**，然后单击“新建”按钮：
 
     ![](quickstart-images/xs/new-phonedialer-android.png "添加新类")
 
-24. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 Android 平台上用于拨打翻译后的电话号码：
+20. 在“PhoneDialer.cs”中，删除所有模板代码并将其替换为以下代码。 此代码将创建 `Dial` 方法，此方法将在 Android 平台上用于拨打翻译后的电话号码：
 
     ```csharp
     using Android.Content;
@@ -784,7 +701,7 @@ ms.locfileid: "34848052"
                 if (context == null)
                     return false;
 
-                var intent = new Intent (Intent.ActionCall);
+                var intent = new Intent (Intent.ActionDial);
                 intent.SetData (Uri.Parse ("tel:" + number));
 
                 if (IsIntentAvailable (context, intent)) {
@@ -814,7 +731,7 @@ ms.locfileid: "34848052"
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **PhoneDialer.cs** 所做的更改，然后关闭文件。
 
-25. 在“Solution Pad”的“Phoneword.Droid”项目中，双击“MainActivity.cs”将其打开，然后删除所有模板代码并将其替换成下列代码：
+21. 在“Solution Pad”的“Phoneword.Droid”项目中，双击“MainActivity.cs”将其打开，然后删除所有模板代码并将其替换成下列代码：
 
     ```csharp
     using Android.App;
@@ -823,7 +740,8 @@ ms.locfileid: "34848052"
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
+                  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -834,48 +752,43 @@ ms.locfileid: "34848052"
                 ToolbarResource = Resource.Layout.Toolbar;
 
                 base.OnCreate(bundle);
-
                 Instance = this;
                 global::Xamarin.Forms.Forms.Init(this, bundle);
                 LoadApplication(new App());
             }
         }
-    }        
+    }
     ```
 
     选择“文件”>“保存”（或按 &#8984;+S），保存对 MainActivity.cs 所做的更改，然后关闭文件。
 
-    > [!NOTE]
-    > 示例代码使用 `Theme="@style/MainTheme"`，因为它基于较旧的模板。 如果收到主题名称的编译器错误，可在 **Phoneword/Droid/Resources/values/styles.xml** 中验证正确样式名称。
-
-26. 在“Solution Pad”中，展开“属性”文件夹，然后右键单击“AndroidManifest.xml”文件：
+22. 在“Solution Pad”中，展开“属性”文件夹，然后右键单击“AndroidManifest.xml”文件：
 
     ![](quickstart-images/xs/android-manifest.png "打开的 Android 清单")
 
-27. 在“所需的权限”部分中，启用“CallPhone”权限。 这将向应用程序授予进行电话呼叫的权限：
+23. 在“所需的权限”部分中，启用“CallPhone”权限。 这将向应用程序授予进行电话呼叫的权限：
 
     ![](quickstart-images/xs/android-manifest-changed.png "启用 CallPhone 权限")
 
     通过选择“文件”>“保存”，或按 **&#8984; + S**，保存对 **AndroidManifest.xml** 所做的更改，然后关闭文件。
 
-28. 在“Solution Pad”中，从“Phoneword”项目中删除“PhonewordPage”类。 创建项目时将自动添加此页面，因此不再需要此页面。
-29. 在 Visual Studio for Mac 中，选择“生成”>“生成所有”菜单项，或按 **&#8984; + B**。 应用程序将生成，并在 Visual Studio for Mac 工具栏中显示一条成功消息。
+24. 在 Visual Studio for Mac 中，选择“生成”>“生成所有”菜单项，或按 **&#8984; + B**。 应用程序将生成，并在 Visual Studio for Mac 工具栏中显示一条成功消息。
 
     ![](quickstart-images/xs/build-successful.png "生成成功")
 
-30. 如果发生错误，请重复前面的步骤并更正任何错误，直到成功生成应用程序。
-31. 在 Visual Studio for Mac 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 iOS 模拟器内的应用程序：
+25. 如果发生错误，请重复前面的步骤并更正任何错误，直到成功生成应用程序。
+26. 在 Visual Studio for Mac 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 iOS 模拟器内的应用程序：
 
     ![](quickstart-images/xs/start.png "Visual Studio for Mac 工具栏")
     ![](quickstart-images/xs/phoneword-result-ios.png "iOS 模拟器")
 
     注意：iOS 模拟器不支持电话呼叫。
 
-32. 在**解决方案面板**中，选择“Phoneword.Droid”项目，右键单击并选择“设为启动项目”：
+27. 在**解决方案面板**中，选择“Phoneword.Droid”项目，右键单击并选择“设为启动项目”：
 
     ![](quickstart-images/xs/set-startup-project.png "设为启动项目")
 
-33. 在 Visual Studio for Mac 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 Android 模拟器内的应用程序：
+28. 在 Visual Studio for Mac 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 Android 模拟器内的应用程序：
 
     ![](quickstart-images/xs/phoneword-result-android.png "Android 仿真器")
 

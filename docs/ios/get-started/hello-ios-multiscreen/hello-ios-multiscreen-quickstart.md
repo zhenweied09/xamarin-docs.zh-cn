@@ -1,6 +1,6 @@
 ---
-title: Hello，iOS 多屏显示
-description: 在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。
+title: Hello，iOS 多屏显示 – 快速入门
+description: 本文档演示如何扩展 Phoneword 示例应用程序以添加第二个屏幕，并在此过程中介绍了模型-视图-控制器、iOS 导航以及其他核心 iOS 开发概念。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 3b59b942b3c256418d60436a1c4ba8b4aea14aa4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 469032dc7caa46c6a89b350dc37bc9a93366066a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785666"
 ---
-# <a name="helloios-multiscreen-quickstart"></a>了解 iOS 多屏快速入门
+# <a name="hello-ios-multiscreen--quickstart"></a>Hello，iOS 多屏显示 – 快速入门
 
 本部分演练将向 Phoneword 应用程序添加第二个屏幕，将显示使用该应用进行呼叫的电话号码历史记录。 最终的应用程序将拥有第二个屏幕，可显示呼叫历史记录，如下面的屏幕截图所示：
 

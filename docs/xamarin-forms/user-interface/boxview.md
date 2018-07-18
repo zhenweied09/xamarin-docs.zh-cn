@@ -1,55 +1,55 @@
 ---
 title: Xamarin.Forms 字数
-description: 此文章介绍了如何使用一个有色的矩形进行修饰、 图形和在 Xamarin.Forms 应用程序的交互。
+description: 本文介绍如何使用一个有色的矩形进行修饰、 图形和 Xamarin.Forms 应用程序中的交互。
 ms.prod: xamarin
 ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: edb2785362f2cc7377d9adb0c1a89a6fa2b08111
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244310"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997047"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms 字数
 
-[`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) 呈现一个简单的矩形指定的宽度、 高度和颜色。 你可以使用`BoxView`效果，基本图形，并与用户通过触摸进行交互。
+[`BoxView`](xref:Xamarin.Forms.BoxView) 呈现指定的宽度、 高度和颜色的一个简单的矩形。 可以使用`BoxView`修饰，基本图形，以及与用户通过触摸交互。
 
-因为 Xamarin.Forms 不具有内置的向量图形系统`BoxView`有助于弥补。 此文章使用中所述的示例程序的某些`BoxView`用于呈现图形。 `BoxView`可以调整大小以类似于特定的宽度和粗细的行，然后旋转任何角度使用`Rotation`属性。
+因为 Xamarin.Forms 不具有内置的向量图形系统`BoxView`可帮助进行补偿。 此文章使用中所述的示例程序的一些`BoxView`呈现图形。 `BoxView`可以调整大小以类似于特定的宽度和粗细的行，然后通过任何角度旋转`Rotation`属性。
 
-尽管`BoxView`可模拟简单的图形，你可能想要调查[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)更复杂的图形要求。
+尽管`BoxView`可以模仿简单的图形，你可能想要调查[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)更复杂的图形要求。
 
 本文讨论以下主题：
 
 - **[设置字数颜色和大小](#colorandsize)** &ndash;设置`BoxView`属性。
-- **[呈现文本修饰](#textdecorations)** &ndash;使用`BoxView`呈现线。
-- **[列出与字数颜色](#listingcolors)** &ndash;显示所有系统中的颜色`ListView`。
-- **[播放游戏的生命周期由子类化字数](#subclassing)** &ndash;实现有名的移动电话自动化。
+- **[呈现的文本修饰](#textdecorations)** &ndash;使用`BoxView`呈现线条。
+- **[列出的颜色的字数](#listingcolors)** &ndash;显示所有系统中的颜色`ListView`。
+- **[播放游戏的生命周期由子类化字数](#subclassing)** &ndash;实现著名的移动电话自动机。
 - **[创建数字时钟](#digitalclock)** &ndash;模拟点矩阵显示。
-- **[创建模拟时钟](#analogclock)** &ndash;转换和进行动画处理`BoxView`元素。
+- **[创建模拟时钟](#analogclock)** &ndash;转换并进行动画处理`BoxView`元素。
 
 <a name="colorandsize" />
 
 ## <a name="setting-boxview-color-and-size"></a>设置字数颜色和大小
 
-非常频繁将设置的以下三个属性`BoxView`:
+通常将设置的以下三个属性`BoxView`:
 
-- [`Color`](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) 若要设置其颜色。
-- [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) 若要设置的宽度`BoxView`以独立于设备的单位。
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) 若要设置的高度`BoxView`。
+- [`Color`](xref:Xamarin.Forms.BoxView.Color) 若要设置其颜色。
+- [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 若要设置的宽度`BoxView`以与设备无关单位。
+- [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 若要设置的高度`BoxView`。
 
-`Color`属性属于类型`Color`; 的属性可以设置为任何`Color`值，包括 141 静态只读字段的名为颜色范围按字母顺序从`AliceBlue`到`YellowGreen`。
+`Color`属性属于类型`Color`; 的属性可以设置为任何`Color`值，其中包括 141 静态只读字段的已命名的颜色范围为按字母顺序`AliceBlue`到`YellowGreen`。
 
-`WidthRequest`和`HeightRequest`属性仅起作用，如果`BoxView`是*不受约束*布局中。 这是这种情况时需要知道子的大小，例如，当布局容器`BoxView`是在自动调整大小单元格的子项`Grid`布局。 A`BoxView`也是不受约束时其`HorizontalOptions`和`VerticalOptions`属性设置为值以外`LayoutOptions.Fill`。 如果`BoxView`是不受约束，但`WidthRequest`和`HeightRequest`属性未设置，然后的宽度或高度设置为 40 个单位或大约 1/4 英寸移动设备上的默认值。
+`WidthRequest`并`HeightRequest`属性只能播放一个角色，如果`BoxView`是*不受约束*布局中。 这种情况时的布局容器需要知道子的大小，例如，当`BoxView`中的自动调整大小单元格的子`Grid`布局。 一个`BoxView`也是不受约束时其`HorizontalOptions`并`VerticalOptions`属性设置为值而不`LayoutOptions.Fill`。 如果`BoxView`是不受约束，但`WidthRequest`和`HeightRequest`属性未设置，然后宽度或高度设置为 40 单位，或大约 1/4 英寸的移动设备上的默认值。
 
-`WidthRequest`和`HeightRequest`属性会被忽略，如果`BoxView`是*约束*在布局中，用例的布局容器有其自身的大小一定`BoxView`。
+`WidthRequest`并`HeightRequest`属性将被忽略，如果`BoxView`是*约束*在布局中，用例的布局容器对其自身的大小施加`BoxView`。
 
-A`BoxView`可以限制于一个维度和另一部分中不受约束。 例如，如果`BoxView`是垂直的子级`StackLayout`，垂直维度的`BoxView`是不受约束并且通常约束其水平维度。 但存在一些针对该水平维度例外规则： 如果`BoxView`具有其`HorizontalOptions`属性设置成非`LayoutOptions.Fill`，然后水平维度也是不受约束。 也可能是`StackLayout`本身可以具有不受约束的水平维度中，在这种情况下`BoxView`也将水平方向不受约束。
+一个`BoxView`可以被限制在一个维度和其他不受约束。 例如，如果`BoxView`是垂直的子级`StackLayout`，垂直维度的`BoxView`是不受约束，且其水平维度通常被约束。 但有该水平维度的例外情况： 如果`BoxView`具有其`HorizontalOptions`属性设置为内容而不`LayoutOptions.Fill`，也不受约束的水平维度则。 也可能是`StackLayout`本身可以具有不受约束的水平维度，在这种情况下`BoxView`也将水平方向不受约束。
 
-[ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView)示例显示一个英寸的正方形不受约束`BoxView`中其页的中心：
+[ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView)示例将显示一英寸的正方形不受约束`BoxView`在其页面的中心：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -70,17 +70,17 @@ A`BoxView`可以限制于一个维度和另一部分中不受约束。 例如，
 
 [![基本字数](boxview-images/basicboxview-small.png "基本字数")](boxview-images/basicboxview-large.png#lightbox "BasicBoxView")
 
-如果`VerticalOptions`和`HorizontalOptions`属性会从`BoxView`标记或者被设置为`Fill`，则`BoxView`将成为受页的大小和扩展以适应页面。
+如果`VerticalOptions`并`HorizontalOptions`属性都将从中`BoxView`标记，或者被设置为`Fill`，则`BoxView`变得受页的大小和扩展以填充页。
 
-A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`BoxView`使用设置`LayoutBounds`附加可绑定属性。 `AbsoluteLayout`文中讨论[ **AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md)。
+一个`BoxView`也可以是子的`AbsoluteLayout`。 在此情况下，位置和大小`BoxView`使用设置`LayoutBounds`附加可绑定属性。 `AbsoluteLayout`一文中讨论[ **AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md)。
 
-你将看到在下面的示例程序中的所有这些情况下的示例。
+您将看到的示例程序，请按照中的所有这些情况下的示例。
 
 <a name="textdecorations" />
 
-## <a name="rendering-text-decorations"></a>呈现文本修饰
+## <a name="rendering-text-decorations"></a>呈现的文本修饰
 
-你可以使用`BoxView`上页面的水平线和垂直线窗体中添加一些简单的修饰。 [ **TextDecoration** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/TextDecoration)示例演示这一操作。 在中定义的程序的视觉对象所有**MainPage.xaml**文件，其中包含几个`Label`和`BoxView`中的元素`StackLayout`此处所示：
+可以使用`BoxView`形式的水平线和垂直线页面上添加一些简单装饰物。 [ **TextDecoration** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/TextDecoration)示例演示了这。 所有程序的视觉对象中定义**MainPage.xaml**文件，其中包含多个`Label`并`BoxView`中的元素`StackLayout`如下所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -111,11 +111,11 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 </ContentPage>
 ```
 
-所有遵循的标记都是子级`StackLayout`。 此标记包含几种类型的装饰性`BoxView`元素用于`Label`元素：
+所有遵循的标记都是子级`StackLayout`。 此标记由几种类型的装饰性`BoxView`元素用于`Label`元素：
 
-[![文本修饰](boxview-images/textdecoration-small.png "文本效果")](boxview-images/textdecoration-large.png#lightbox "文本效果")
+[![文本修饰](boxview-images/textdecoration-small.png "文本修饰")](boxview-images/textdecoration-large.png#lightbox "文本修饰")
 
-在页面顶部的时尚标头通过实现`AbsoluteLayout`的子级是四个`BoxView`元素和`Label`，所有这些选项均进行分配的特定位置和大小：
+在页面顶部的时尚标头，可以使用`AbsoluteLayout`其子级是四个`BoxView`元素和一个`Label`，则所有这些选项均进行分配的特定位置和大小：
 
 ```xaml
 <AbsoluteLayout>
@@ -129,9 +129,9 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 </AbsoluteLayout>
 ```
 
-在 XAML 文件中，`AbsoluteLayout`后跟`Label`格式化描述文本`AbsoluteLayout`。
+在 XAML 文件中，`AbsoluteLayout`后跟`Label`使用的格式化文本描述`AbsoluteLayout`。
 
-您可以通过封闭同时添加下划线的文本字符串`Label`和`BoxView`中`StackLayout`具有其`HorizontalOptions`值设置成非`Fill`。 宽度`StackLayout`然后受的宽度`Label`，后者随后上施加该宽度`BoxView`。 `BoxView`分配仅显式高度：
+可以通过封闭同时添加下划线的文本字符串`Label`并`BoxView`中`StackLayout`具有其`HorizontalOptions`值设置为内容而不`Fill`。 宽度`StackLayout`然后受到的宽度`Label`，后者随后实施该宽度`BoxView`。 `BoxView`分配仅显式高度：
 
 ```xaml
 <StackLayout HorizontalOptions="Center">
@@ -141,15 +141,15 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
 </StackLayout>
 ```
 
-此方法不能用于 underline 较长的文本字符串或段落中的各个单词。
+不能使用此方法以用下划线标出较长文本字符串或一个段落中的各个单词。
 
-还有可能要使用`BoxView`以类似于 HTML `hr` （水平规则） 元素。 只需让的宽度`BoxView`由其父容器，在这种情况下即`StackLayout`:
+它也是可以使用`BoxView`类似于 HTML `hr` （水平标尺） 元素。 只需让的宽度`BoxView`由其父容器，在这种情况下是`StackLayout`:
 
 ```xaml
 <BoxView HeightRequest="3" />
 ```
 
-最后，你可以绘制垂直的行上一段文本的一侧封闭同时`BoxView`和`Label`中水平`StackLayout`。 在本例中为的高度`BoxView`的高度相同`StackLayout`，这由的高度控制`Label`:
+最后，您可以绘制一条竖线一侧的文本的段落括两者`BoxView`并`Label`水平`StackLayout`。 在本例中为的高度`BoxView`的高度相同`StackLayout`，其中所依据的高度`Label`:
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -160,17 +160,17 @@ A`BoxView`也可以是子`AbsoluteLayout`。 在此情况下，位置和大小`B
         ···
 
     </Label>
-/StackLayout>
+</StackLayout>
 ```
 <a name="listingcolors" />
 
-## <a name="listing-colors-with-boxview"></a>列出与字数的颜色
+## <a name="listing-colors-with-boxview"></a>列出的颜色的字数
 
-`BoxView`适用于显示颜色。 此程序使用`ListView`来列出所有的公共静态只读字段的 Xamarin.Forms`Color`结构：
+`BoxView`便于在显示颜色。 此程序使用`ListView`若要列出所有的公共静态只读字段的 Xamarin.Forms`Color`结构：
 
 [![ListView 颜色](boxview-images/listviewcolors-small.png "ListView 颜色")](boxview-images/listviewcolors-large.png#lightbox "ListView 颜色")
 
-[ **ListViewColors** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ListViewColors/)程序包括一个名为类`NamedColor`。 静态构造函数使用反射访问的所有字段`Color`结构并创建`NamedColor`为每个对象。 这些模板存储在静态`All`属性：
+[ **ListViewColors** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ListViewColors/)程序包括一个名为类`NamedColor`。 静态构造函数使用反射访问的所有字段`Color`结构，并创建`NamedColor`为每个对象。 它们存储在静态`All`属性：
 
 ```csharp
 public class NamedColor
@@ -242,7 +242,7 @@ public class NamedColor
 }
 ```
 
-程序视觉对象所述的 XAML 文件。 `ItemsSource`属性`ListView`设置为静态`NamedColor.All`属性，这意味着`ListView`显示所有单个`NamedColor`对象：
+XAML 文件中描述了程序视觉对象。 `ItemsSource`的属性`ListView`设置为静态`NamedColor.All`属性，这意味着`ListView`显示所有单个`NamedColor`对象：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -293,15 +293,15 @@ public class NamedColor
 </ContentPage>
 ```
 
-`NamedColor`对象设置格式的`ViewCell`作为数据模板的设置的对象`ListView`。 此模板包括`BoxView`其`Color`属性绑定到`Color`属性`NamedColor`对象。
+`NamedColor`对象的格式由`ViewCell`对象，它将设置为的数据模板`ListView`。 此模板包括`BoxView`其`Color`属性绑定到`Color`属性的`NamedColor`对象。
 
 <a name="subclassing" />
 
-## <a name="playing-the-game-of-life-by-subclassing-boxview"></a>玩游戏通过子类化字数的生命周期
+## <a name="playing-the-game-of-life-by-subclassing-boxview"></a>玩游戏通过子类化字数生命
 
-游戏的生命周期是移动电话的自动化通过数学知识的人 John Conway 发明和普及的页中，并用*科学 American*二十世纪七十年代中。 由 Wikipedia 文章提供的很好的介绍[Conway 游戏的生命](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。
+游戏的生命周期是移动电话自动机由数学知识的人 John Conway 发明和的页中在那时推广*科学记数法美国*在二十世纪七十年代。 维基百科文章提供详细的介绍[Conway 游戏的生活](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。
 
-Xamarin.Forms [ **GameOfLife** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife/)程序定义一个名为`LifeCell`派生自`BoxView`。 此类封装生活游戏中的单个单元格的逻辑：
+Xamarin.Forms [ **GameOfLife** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife/)程序定义一个名为`LifeCell`派生`BoxView`。 此类封装的逻辑的游戏的生命周期中的单个单元格：
 
 ```csharp
 class LifeCell : BoxView
@@ -344,23 +344,23 @@ class LifeCell : BoxView
 }
 ```
 
-`LifeCell` 将三个更多属性添加`BoxView`:`Col`和`Row`属性存储在网格中的单元格的位置和`IsAlive`属性指示其状态。 `IsAlive`属性也设置`Color`属性`BoxView`为黑色单元格是否处于活动状态，和白色如果该单元格不处于活动状态。
+`LifeCell` 将添加到其他三个属性`BoxView`:`Col`并`Row`属性存储在网格内单元格的位置和`IsAlive`属性指示其状态。 `IsAlive`属性还会设置`Color`属性的`BoxView`为黑色单元格是否处于活动状态，和白色如果该单元格不处于活动状态。
 
-`LifeCell` 此外将安装`TapGestureRecognizer`以允许用户通过点击它们切换状态的单元格。 类将转换`Tapped`从笔势识别器到其自己的事件`Tapped`事件。
+`LifeCell` 此外会安装`TapGestureRecognizer`以允许用户在点击它们切换单元格的状态。 类将`Tapped`事件到其自己的手势识别器从`Tapped`事件。
 
-**GameOfLife**程序还包括`LifeGrid`封装的游戏，逻辑大部分的类和一个`MainPage`处理程序的视觉对象的类。 其中包括描述游戏的规则覆盖。 此处将程序处于操作显示几个 hundred`LifeCell`页上的对象：
+**GameOfLife**程序还包括`LifeGrid`封装的逻辑的游戏时，大部分的类和一个`MainPage`处理程序的视觉对象的类。 其中包括介绍游戏的规则的覆盖。 下面是该程序中显示几个量为几百`LifeCell`页上的对象：
 
-[![生命周期的游戏](boxview-images/gameoflife-small.png "生命周期的游戏")](boxview-images/gameoflife-large.png#lightbox "生命周期的游戏")
+[![游戏生命](boxview-images/gameoflife-small.png "游戏生命")](boxview-images/gameoflife-large.png#lightbox "生命的游戏")
 
 <a name="digitalclock" />
 
 ## <a name="creating-a-digital-clock"></a>创建数字时钟
 
-[ **DotMatrixClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock/)程序创建 210`BoxView`元素，以模拟传统的 5-7 点矩阵显示的点。 可以读取的时间在纵向或横向模式中，但它大于环境中：
+[ **DotMatrixClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock/)程序创建 210`BoxView`元素，以模拟老式的 5 到 7 点阵显示的点。 可以读取在纵向或横向模式下的时间，但它是在环境中更大：
 
-[![点矩阵时钟](boxview-images/dotmatrixclock-small.png "点矩阵时钟")](boxview-images/dotmatrixclock-large.png#lightbox "点矩阵时钟")
+[![点式时钟](boxview-images/dotmatrixclock-small.png "点阵时钟")](boxview-images/dotmatrixclock-large.png#lightbox "点阵时钟")
 
-XAML 文件未稍有多个实例化`AbsoluteLayout`用于时钟：
+XAML 文件 does 稍有多个实例化`AbsoluteLayout`用于时钟：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -375,7 +375,7 @@ XAML 文件未稍有多个实例化`AbsoluteLayout`用于时钟：
 </ContentPage>
 ```
 
-其他任何代码隐藏文件中出现。 点矩阵显示逻辑极大地简化了描述对应于每个十进制数字和一个冒号的点的多个数组的定义：
+所有其他代码隐藏文件中出现。 圆点矩阵显示逻辑大大简化了描述对应于每个 10 位数字和一个冒号的点的多个数组的定义：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -447,9 +447,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-这些字段以此结束的三维数组`BoxView`用于存储六位数字的点模式的元素。
+这些字段演示的三维数组的最后`BoxView`元素用于存储六位数字的圆点模式。
 
-此构造函数创建所有`BoxView`元素位数和冒号，以及初始化`Color`属性`BoxView`冒号的元素：
+该构造函数创建所有`BoxView`数字和冒号，以及初始化元素`Color`属性的`BoxView`冒号的元素：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -528,9 +528,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-此程序使用的相对定位和调整大小的功能`AbsoluteLayout`。 宽度和高度的每个`BoxView`设置为小数值，专门 85%的 1 除以的水平和垂直点数。 位置也都设置为小数值。
+此程序使用的相对定位和大小调整功能`AbsoluteLayout`。 宽度和高度的每个`BoxView`设置为小数值，专门 85%的 1 除以水平和垂直点数目。 位置也都设置为小数部分值。
 
-因为所有位置和大小都是相对于总大小的`AbsoluteLayout`、`SizeChanged`页处理程序仅需要设置`HeightRequest`的`AbsoluteLayout`:
+因为所有位置和大小都都相对于总大小`AbsoluteLayout`，则`SizeChanged`页的处理程序只需要设置`HeightRequest`的`AbsoluteLayout`:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -549,9 +549,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-宽度`AbsoluteLayout`自动设置，因为它拉伸到页的整个宽度。
+宽度`AbsoluteLayout`自动设置，因为它拉伸到整个页面的宽度。
 
-中的最终代码`MainPage`类处理计时器回调和颜色的每个数字的点。 多维数组的代码隐藏文件开头的定义有助于使计划的最简单的一部分的此逻辑：
+中的最终代码`MainPage`类处理计时器回调和颜色的每个数字的点。 在代码隐藏文件开头多维数组的定义可帮助使此逻辑的程序的最简单的一部分：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -590,15 +590,15 @@ public partial class MainPage : ContentPage
 ```
 <a name="analogclock" />
 
-## <a name="creating-an-analog-clock"></a>创建是模拟时钟
+## <a name="creating-an-analog-clock"></a>创建模拟时钟
 
-点矩阵时钟可能似乎是一个明显的应用程序的`BoxView`，但`BoxView`元素也是能够意识到是模拟时钟：
+点式时钟可能看起来是显而易见的应用程序`BoxView`，但`BoxView`元素也是能够意识到了模拟时钟：
 
 [![字数时钟](boxview-images/boxviewclock-small.png "字数时钟")](boxview-images/boxviewclock-large.png#lightbox "字数时钟")
 
-中的所有视觉对象[ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)程序作为的子级的`AbsoluteLayout`。 这些元素将调整大小使用`LayoutBounds`附加属性，并使用`Rotation`属性。
+中的所有视觉对象[ **BoxViewClock** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/)程序是的子级`AbsoluteLayout`。 这些元素的大小将调整使用`LayoutBounds`附加属性，并使用旋转`Rotation`属性。
 
-这三种`BoxView`的时钟指针或元素时实例化在 XAML 文件中，但不是定位大小：
+这三个`BoxView`时钟指针的元素在 XAML 文件中，实例化但未定位或调整大小：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -626,7 +626,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 ```
 
-代码隐藏文件的构造函数实例化 60`BoxView`元素周围的时钟圆的周长刻度：
+代码隐藏文件的构造函数实例化 60`BoxView`刻度线在时钟圆周的周围的元素：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -655,7 +655,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-所有的位置和大小`BoxView`元素出现在`SizeChanged`处理程序`AbsoluteLayout`。 少量结构类的内部调用`HandParams`描述每个相对于时钟的总大小的三个指针的大小：
+所有的位置和大小`BoxView`元素中出现`SizeChanged`处理程序`AbsoluteLayout`。 内部的类的一个小结构称为`HandParams`介绍每三个手中相对于时钟的总大小的大小：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -684,7 +684,7 @@ public partial class MainPage : ContentPage
  }
 ```
 
-`SizeChanged`处理程序确定的中心和半径`AbsoluteLayout`，然后大小并置于 60`BoxView`用作刻度线的元素。 `for`循环到结束通过设置`Rotation`的每个属性`BoxView`元素。 在结束`SizeChanged`处理程序，`LayoutHand`调用方法来调整大小和位置时钟三个指针：
+`SizeChanged`处理程序确定的中心和半径`AbsoluteLayout`，然后调整大小和定位 60`BoxView`用作刻度的元素。 `for`循环的结尾部分通过设置`Rotation`属性的每种`BoxView`元素。 在末尾`SizeChanged`处理程序，`LayoutHand`调用方法来调整大小和位置时钟三个指针：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -735,9 +735,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`LayoutHand`方法调整大小，并置于每个手形，垂直向上 12:00 位置点。 该方法的末尾`AnchorY`属性设置为对应于时钟的中心的位置。 这表示旋转中心。
+`LayoutHand`方法大小和位置以垂直向上 12:00 位置点每个指针。 该方法末尾`AnchorY`属性设置为对应于时钟的中心的位置。 这表示旋转中心。
 
-手旋转计时器回调函数中：
+手轮换计时器回调函数中：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -770,11 +770,11 @@ public partial class MainPage : ContentPage
 }
 ```
 
-第二个指针视为略有不同： 动画缓动函数应用以使移动看上去机械，而不是平滑。 每个刻度，第二个指针有点拉取，然后超过其目标。 此一小段代码将大量添加到的移动要增强真实性。
+第二个指针的处理方式稍有不同： 缓动函数的动画应用以使移动看上去机械，而不是平滑。 在每个时钟周期，第二个指针有点拉取，然后超过其目标。 此小段代码很向移动的真实性。
 
 ## <a name="conclusion"></a>结束语
 
-`BoxView`看起来可能在简单，但随着你所见，它可以是很强，和可以几乎重现视觉对象通常可能仅用于矢量图形。 有关更复杂的图形，请查阅[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)。
+`BoxView`可能看起来简单在第一次，而是作为你所见，它可以相当灵活多变，并且可以几乎重现的视觉效果通常可以仅使用矢量图形。 有关更复杂的图形，请查阅[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)。
 
 
 ## <a name="related-links"></a>相关链接
@@ -782,7 +782,7 @@ public partial class MainPage : ContentPage
 - [基本字数 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView)
 - [文本修饰 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/TextDecoration)
 - [列表框颜色 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ColorListBox)
-- [生命周期 （示例） 的游戏](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife)
-- [点矩阵时钟 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock)
+- [游戏的生命周期 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife)
+- [点式时钟 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock)
 - [字数时钟 （示例）](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock)
-- [BoxView](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/)
+- [BoxView](xref:Xamarin.Forms.BoxView)

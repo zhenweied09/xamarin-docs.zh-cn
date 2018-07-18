@@ -1,21 +1,20 @@
 ---
-title: 设备预配
-description: Xamarin.iOS 成功安装后，iOS 开发的下一步是 iOS 设备预配。 本指南将介绍如何请求开发证书和配置文件、如何使用应用服务，以及如何将应用部署到设备。
+title: Xamarin.iOS 的设备预配
+description: 本文档介绍如何预配设备，以便将该设备用于测试应用程序。 其中还介绍了如何配置应用，以便使用推送通知等功能。
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785783"
 ---
-# <a name="device-provisioning"></a>设备预配
-
-Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。本指南将介绍如何请求开发证书和配置文件，如何使用应用服务，以及如何将应用部署到设备。
+# <a name="device-provisioning-for-xamarinios"></a>Xamarin.iOS 的设备预配
 
 开发 Xamarin.iOS 应用程序时，除了将应用部署到模拟器，还必须将其部署到物理设备进行测试。 通过在设备上运行，可以暴露出由于硬件限制（如内存或网络连接）而产生的硬件 Bug 和性能问题。 若要在物理设备上测试，必须*预配*设备，并且就设备测试事件通知 Apple。
 

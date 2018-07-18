@@ -1,42 +1,42 @@
 ---
 title: 自定义 ListView 外观
-description: 此文章介绍了如何使用标头、 页脚、 组和变量高度单元格自 Listview 定义 Xamarin.Forms 应用程序中。
+description: 本文介绍如何自定义 Listview Xamarin.Forms 应用程序中使用标头、 页脚、 组和高度不同的单元格。
 ms.prod: xamarin
 ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: febf712848b81c09a4e25c824acc097e8b65e409
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1326a1326b4a88459e4e0a01ef590e770e3a88c0
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245135"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997343"
 ---
 # <a name="customizing-listview-appearance"></a>自定义 ListView 外观
 
-`ListView` 包含用于控制表示法的总体列表中，除了基础选项`ViewCell`s。 选项包括：
+`ListView` 具有用于控制总体列表中，除了基础的演示文稿选项`ViewCell`s。 选项包括：
 
-- [**分组**](#Grouping) &ndash; ListView 中更易于导航和改进的组织的项进行分组。
-- [**页眉和页脚**](#Headers_and_Footers) &ndash;开头和末尾具有其他项滚动视图中显示的信息。
+- [**分组**](#Grouping) &ndash;更方便的导航和改进的组织在 ListView 中的项进行分组。
+- [**页眉和页脚**](#Headers_and_Footers) &ndash;的开头和结尾的滚动与其他项的视图在显示的信息。
 - [**行分隔符**](#Row_Separators) &ndash;显示或隐藏项之间的分隔线。
-- [**变量高度行**](#Row_Heights) &ndash;默认情况下的所有行都都高度相同，但这可以更改为允许与不同的高度，要显示的行。
+- [**变量高度行**](#Row_Heights) &ndash;默认情况下的所有行都均为相同的高度，但这可以更改为允许具有不同高度要显示的行。
 
 <a name="Grouping" />
 
 ## <a name="grouping"></a>分组
-通常情况下，大型数据集可能变得难以操作时不断滚动列表中显示。 启用分组可以更好地组织内容和激活特定于平台的控件，轻松导航数据通过提高在这些情况下的用户体验。
+通常，大型数据集可以变得难以处理时不断滚动列表中显示。 启用分组可以更好地组织内容和激活轻松导航数据的特定于平台的控件通过提高在这些情况下的用户体验。
 
-当激活分组`ListView`，为每个组添加一个标题行。
+有关激活分组时`ListView`，为每个组添加一个标题行。
 
 若要启用分组：
 
-- 创建列表的列表 （正在的元素列表的每个组中的组的列表）。
+- 创建列表的列表 （组的列表，每个组正在元素的列表）。
 - 设置`ListView`的`ItemsSource`到该列表。
 - 设置`IsGroupingEnabled`为 true。
-- 设置[ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/)要绑定到正在为组的标题使用的组的属性。
-- [可选]设置[ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/)要绑定到作为组的短名称正在使用的组的属性。 短名称用于跳转列表 （在 iOS 上的右侧列）。
+- 设置[ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding)要绑定到正用作组的标题的组的属性。
+- [可选]设置[ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding)要绑定到要用作组的短名称的组的属性。 短名称用于跳转列表 （在 iOS 上的右侧列）。
 
 首先创建组的类：
 
@@ -56,9 +56,9 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-在上面的代码中，`All`是将赋予我们 ListView 用作绑定源的列表。 `Title` 和`ShortName`是将用于组标题的属性。
+在上面的代码，`All`是要提供给我们 ListView 用作绑定源的列表。 `Title` 和`ShortName`是将用于组标题的属性。
 
-在此阶段，`All`为空列表。 添加静态构造函数，以便在程序启动时将填充列表：
+在此阶段，`All`为空列表。 添加静态构造函数，使程序启动时将填充列表：
 
 ```csharp
 static PageTypeGroup()
@@ -81,7 +81,7 @@ static PageTypeGroup()
 }
 ```
 
-在上述代码中我们可以调用`Add`元素`groups`，这是类型的实例`PageTypeGroup`。 这是可能因为`PageTypeGroup`继承自`List<PageModel>`。 这是列表的一个示例的列表模式上文中记下。
+在上述代码中我们可以调用`Add`上的元素`groups`，这是类型的实例`PageTypeGroup`。 这可能是因为`PageTypeGroup`继承`List<PageModel>`。 这是列表的上面记下列表模式的示例。
 
 下面是用于显示分组的列表 XAML:
 
@@ -112,18 +112,18 @@ x:Class="DemoListView.GroupingViewPage"
 
 请注意，我们具有：
 
-- 设置`GroupShortNameBinding`到`ShortName`我们组类中定义的属性
-- 设置`GroupDisplayBinding`到`Title`我们组类中定义的属性
+- 设置`GroupShortNameBinding`到`ShortName`我们组的类中定义的属性
+- 设置`GroupDisplayBinding`到`Title`我们组的类中定义的属性
 - 设置`IsGroupingEnabled`为 true
 - 更改`ListView`的`ItemsSource`到分组列表
 
 ### <a name="customizing-grouping"></a>自定义分组
 
-如果在列表中启用了分组，也可以定制组标头。
+如果在列表中已启用分组，也可以定制的组标头。
 
-类似于如何`ListView`具有`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。
+类似于如何`ListView`已`ItemTemplate`用于定义如何显示行`ListView`具有`GroupHeaderTemplate`。
 
-自定义 XAML 中的组标头的示例所示：
+自定义 XAML 中的组标头的示例如下所示：
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,12 +161,12 @@ x:Class="DemoListView.GroupingViewPage">
 <a name="Headers_and_Footers" />
 
 ## <a name="headers-and-footers"></a>页眉和页脚
-它有可能 ListView 向向下滚动页眉和页脚显示列表中的元素。 页眉和页脚可以是文本或更复杂的布局的字符串。 请注意，这是独立于[部分组](#Grouping)。
+很可能 ListView 显示页眉和页脚的向下滚动列表中的元素。 页眉和页脚可以是文本字符串或更复杂的布局。 请注意，这是独立于[部分组](#Grouping)。
 
-你可以设置`Header`和/或`Footer`到一个简单的字符串值，也可以将它们设置为更复杂的布局。
-也有`HeaderTemplate`和`FooterTemplate`属性让你创建更复杂的页眉和页脚的布局支持数据绑定。
+可以设置`Header`和/或`Footer`到一个简单的字符串值，也可以将其设置为更复杂的布局。
+此外，还有`HeaderTemplate`和`FooterTemplate`属性，可创建更复杂的页眉和页脚的布局支持数据绑定的。
 
-若要创建简单的页眉/页脚，仅将页眉或页脚属性设置为你想要显示的文本。 在代码中：
+若要创建简单的页眉/页脚，只需为你想要显示的文本设置页眉或页脚属性。 在代码中：
 
 ```csharp
 ListView HeaderList = new ListView() {
@@ -175,15 +175,15 @@ ListView HeaderList = new ListView() {
     };
 ```
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <ListView  x:Name="HeaderList"  Header="Header" Footer="Footer"></ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "页眉和页脚的 ListView")
+![](customizing-list-appearance-images/header-default.png "使用页眉和页脚的 ListView")
 
-若要创建自定义的页眉和页脚，定义页眉和页脚视图：
+若要创建自定义的页眉和页脚，请定义页眉和页脚视图：
 
 ```xaml
 <ListView.Header>
@@ -202,15 +202,15 @@ ListView HeaderList = new ListView() {
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "自定义的页眉和页脚的 ListView")
+![](customizing-list-appearance-images/header-custom.png "使用自定义标头和表尾的 ListView")
 
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>行分隔符
-分隔线显示之间`ListView`默认情况下，在 iOS 和 Android 的元素。 如果你想要隐藏在 iOS 和 Android 的分隔符行，设置`SeparatorVisibility`上你 ListView 的属性。 选项`SeparatorVisibility`是：
+分隔符线之间显示`ListView`默认情况下在 iOS 和 Android 上的元素。 如果你想隐藏在 iOS 和 Android 上的分隔符线，设置`SeparatorVisibility`在 ListView 中的属性。 选项为`SeparatorVisibility`是：
 
 * **默认**-iOS 和 Android 上显示一条分隔线。
-* **无**-隐藏在所有平台上的分隔符。
+* **无**-隐藏所有平台上的分隔符。
 
 默认可见性：
 
@@ -226,7 +226,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "带有默认行分隔符的 ListView")
+![](customizing-list-appearance-images/separator-default.png "与默认行分隔符的 ListView")
 
 None:
 
@@ -244,7 +244,7 @@ XAML:
 
 ![](customizing-list-appearance-images/separator-none.png "不带行分隔符的 ListView")
 
-你还可以设置通过分隔符线条的颜色`SeparatorColor`属性：
+此外可以设置通过分隔线的颜色`SeparatorColor`属性：
 
 C#：
 
@@ -261,19 +261,19 @@ XAML:
 ![](customizing-list-appearance-images/separator-custom.png "带有绿色行分隔符的 ListView")
 
 > [!NOTE]
-> 设置这些属性在 Android 上在加载后`ListView`会产生较大的性能损失。
+> 设置这些属性在 Android 上加载后`ListView`会产生对较大性能产生负面影响。
 
 <a name="Row_Heights" />
 
 ## <a name="row-heights"></a>行高
-默认情况下，在 ListView 中的所有行都具有高度相同。 ListView 具有可用来更改该行为的两个属性：
+默认情况下，ListView 中的所有行都具有相同的高度。 ListView 有可用于更改该行为的两个属性：
 
-- `HasUnevenRows` &ndash; `true`/`false` 值，如果行具有不同的高度设置为`true`。 默认为 `false`。
-- `RowHeight` &ndash; 每个高度行时的设置`HasUnevenRows`是`false`。
+- `HasUnevenRows` &ndash; `true`/`false` 值，如果行具有不同高度设置为`true`。 默认为 `false`。
+- `RowHeight` &ndash; 集的每个高度行何时`HasUnevenRows`是`false`。
 
-通过设置可以设置的所有行的高度`RowHeight`属性`ListView`。
+通过设置可设置的所有行的高度`RowHeight`属性上的`ListView`。
 
-### <a name="custom-fixed-row-height"></a>自定义的固定的行高
+### <a name="custom-fixed-row-height"></a>自定义固定的行高
 
 C#：
 
@@ -290,10 +290,10 @@ XAML:
 ![](customizing-list-appearance-images/height-custom.png "使用固定的行高度的 ListView")
 
 
-### <a name="uneven-rows"></a>不均匀的行
+### <a name="uneven-rows"></a>以不相等的行
 
-如果你想要单独行具有不同的高度，则可以设置`HasUnevenRows`属性`true`。
-请注意，行高无需手动设置一次`HasUnevenRows`已设置为`true`，这是因为高度将自动计算通过 Xamarin.Forms。
+如果你想要具有不同高度的单个行，则可以设置`HasUnevenRows`属性设置为`true`。
+请注意行高不需要手动设置一次`HasUnevenRows`已设置为`true`，因为 xamarin.forms 自动计算高度。
 
 
 C#：
@@ -308,11 +308,11 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "不均匀的行的 ListView")
+![](customizing-list-appearance-images/height-uneven.png "以不相等行的 ListView")
 
 ### <a name="runtime-resizing-of-rows"></a>运行时调整大小的行
 
-单个`ListView`行可以以编程方式调整大小以在运行时，条件是`HasUnevenRows`属性设置为`true`。 [ `Cell.ForceUpdateSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Cell.ForceUpdateSize()/)方法更新单元格的大小，即使它不当前可见的如下面的代码示例中所示：
+各个`ListView`行在运行时，提供的可以以编程方式调整大小`HasUnevenRows`属性设置为`true`。 [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize)方法更新单元格的大小，即使它不是当前可见，如下面的代码示例中所示：
 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
@@ -327,11 +327,11 @@ void OnImageTapped (object sender, EventArgs args)
 }
 ```
 
-`OnImageTapped`事件处理程序执行以响应[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)在单元格中点击，并会增加的大小`Image`，以便轻松地查看显示的单元格中。
+`OnImageTapped`事件处理程序执行以响应[ `Image` ](xref:Xamarin.Forms.Image)在单元格中被点击，并会增加的大小`Image`，以便轻松地查看该单元中显示。
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "运行时行大小调整的 ListView")
+![](customizing-list-appearance-images/dynamic-row-resizing.png "使用运行时行重设大小的 ListView")
 
-请注意是否过度使用此功能没有强可能存在性能下降。
+请注意是否过度使用此功能没有强可能导致性能下降。
 
 
 

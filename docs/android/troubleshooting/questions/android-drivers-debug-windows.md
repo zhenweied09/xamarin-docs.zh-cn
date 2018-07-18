@@ -6,13 +6,13 @@ ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 7b3a4c2f807839897a099959fe3a6ea9ec25df78
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: ee3f2b1e1ff6a3ac1bec2d73d4af6e740979aa04
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732744"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066866"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>调试在 Windows 上的 Android 需要哪些 USB 驱动程序？
 
@@ -28,7 +28,7 @@ ms.locfileid: "34732744"
 
 - [应用中心测试](https://docs.microsoft.com/appcenter/test-cloud/)-测试在数百个真正 Android 设备上运行的服务的云。
 
-- [适用于 Android 的 Visual Studio 模拟器](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
+- [适用于 Android 的 Visual Studio 模拟器](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
-- [使用 Google Android 仿真程序调试](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [在 Android 仿真程序上进行调试](~/android/deploy-test/debugging/debug-on-emulator.md)
 

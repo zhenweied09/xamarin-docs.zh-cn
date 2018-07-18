@@ -1,32 +1,32 @@
 ---
 title: Xamarin.Essentials： 数据传输
-description: 中 Xamarin.Essentials 的 DataTransfer 类可让应用程序共享数据，例如向其他应用程序在设备上的文本和 web 链接。
+description: Xamarin.Essentials 中的 DataTransfer 类，应用程序共享数据，例如在设备上的其他应用程序的文本和 web 链接。
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 69d429b1cdbbbd6dbb53e3cefa89695666494ba7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c1ed298e1317d0a3f78f4dbd9fc89a2b01c6958c
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782380"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855105"
 ---
 # <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials： 数据传输
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**DataTransfer**类可让应用程序共享数据，例如向其他应用程序在设备上的文本和 web 链接。
+**DataTransfer**类，应用程序可以共享数据，例如在设备上的其他应用程序的文本和 web 链接。
 
 ## <a name="using-data-transfer"></a>使用数据传输
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-数据传输功能的工作方式是调用`RequestAsync`与包含要向其他应用程序共享的信息的数据请求负载的方法。 可以混合使用文本和 Uri 和每个平台将处理根据内容进行筛选。
+数据传输功能的工作方式是调用`RequestAsync`与所含信息用于对其他应用程序共享的数据请求有效负载的方法。 可以混合文本和 Uri 和每个平台将处理基于内容的筛选。
 
 ```csharp
 
@@ -52,21 +52,29 @@ public class DataTransferTest
 }
 ```
 
-共享到外部应用程序发出请求时出现的用户界面：
+要共享给发出请求时出现的外部应用程序的用户界面：
 
 ![数据传输](data-transfer-images/data-transfer.png)
 
-## <a name="platform-differences"></a>平台的差异
+## <a name="platform-differences"></a>平台差异
 
-| 平台 | 差异 |
-| --- | --- |
-| Android | 使用者属性用于消息的所需的使用者。 |
-| iOS | 未使用的主题。 |
-| iOS | 未使用的标题。 |
-| UWP | 标题将默认为应用程序名称如果未是设置。 |
-| UWP | 未使用的主题。 |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+* `Subject` 属性用于所需主题的一条消息。
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* `Subject` 不使用。
+* `Title` 不使用。 
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+* `Title` 将默认为应用程序名称如果未设置。
+* `Subject` 不使用。
+
+-----
 
 ## <a name="api"></a>API
 
-- [数据传输源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
+- [数据传输的源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
 - [数据传输 API 文档](xref:Xamarin.Essentials.DataTransfer)

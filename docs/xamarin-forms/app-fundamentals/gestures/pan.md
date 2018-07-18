@@ -1,26 +1,26 @@
 ---
-title: 添加平移笔势识别器
-description: 此文章介绍了如何使用平移笔势与水平和垂直拖动图像，以便在小于图像大小视区中显示时，可以查看所有的映像包内容。
+title: 添加平移手势识别器
+description: 本文介绍如何使用平移手势到水平和垂直方向拖动图像，以便将图像尺寸小于视区中显示时可以查看的所有映像内容。
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: d3e4dfc57678ff75fb8f9761360748d94aeefcc2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 45c0a1452916f193236e5ba741f8e8e19b6691aa
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239979"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996801"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>添加平移笔势识别器
+# <a name="adding-a-pan-gesture-recognizer"></a>添加平移手势识别器
 
-_平移手势用于检测拖动并与 PanGestureRecognizer 类实现。平移笔势的一个常见方案是水平和垂直拖动图像，以便它在小于图像大小视区中显示时，可以查看所有的映像包内容。这通过在视区内，映像移动来实现，这篇文章中所示。_
+_平移手势用于检测拖动并使用 PanGestureRecognizer 类实现。平移手势的常见方案是水平和垂直拖动图像，以便将图像尺寸小于视区中显示时可以查看的所有映像内容。这通过移动中位于视区的映像来实现，本文中所示。_
 
 ## <a name="overview"></a>概述
 
-若要使用户界面元素与平移笔势可拖动，创建[ `PanGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/)实例时，处理[ `PanUpdated` ](https://developer.xamarin.com/api/event/Xamarin.Forms.PanGestureRecognizer.PanUpdated/)事件，并添加到新的笔势识别器[`GestureRecognizers` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/)上的用户界面元素的集合。 下面的代码示例演示`PanGestureRecognizer`附加到[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素：
+若要使用户界面元素与平移手势可拖动，创建[ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)实例，则处理[ `PanUpdated` ](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated)事件，并添加到新的笔势识别器[`GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers)上的用户界面元素的集合。 下面的代码示例演示`PanGestureRecognizer`附加到[ `Image` ](xref:Xamarin.Forms.Image)元素：
 
 ```csharp
 var panGesture = new PanGestureRecognizer();
@@ -30,7 +30,7 @@ panGesture.PanUpdated += (s, e) => {
 image.GestureRecognizers.Add(panGesture);
 ```
 
-这也可以实现在 XAML 中，如下面的代码示例中所示：
+这也可以在 XAML，如下面的代码示例中所示：
 
 ```xaml
 <Image Source="MonoMonkey.jpg">
@@ -40,7 +40,7 @@ image.GestureRecognizers.Add(panGesture);
 </Image>
 ```
 
-代码`OnPanUpdated`随后将事件处理程序添加到代码隐藏文件：
+有关代码`OnPanUpdated`事件处理程序然后添加到代码隐藏文件：
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -50,11 +50,11 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 ```
 
 > [!NOTE]
-> 在 Android 上的正确平移需要[Xamarin.Forms 2.1.0-pre1 NuGet 包](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1)最少。
+> 需要在 Android 上的正确平移[Xamarin.Forms 2.1.0-pre1 NuGet 包](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1)最小值。
 
 ## <a name="creating-a-pan-container"></a>创建平移容器
 
-本部分包含的通用帮助器类执行任意形式平移，其中通常适用于在图像或地图中导航。 处理平移手势以执行拖动操作需要某些数学运算来转换用户界面。 此数学用于拖动仅在已包装的用户界面元素的边界内。 以下代码示例演示 `PanContainer` 类：
+本部分包含的通用帮助器类执行自由格式平移，这通常适用于在映像或映射中导航。 处理平移手势来执行拖动操作需要某些数学运算来转换用户界面。 使用此数学拖动仅在预包装的用户界面元素的边界内。 以下代码示例演示 `PanContainer` 类：
 
 ```csharp
 public class PanContainer : ContentView
@@ -77,7 +77,7 @@ public class PanContainer : ContentView
 }
 ```
 
-此类可以环绕的用户界面元素，因此，平移手势将将拖动的已包装的用户界面元素。 下面的 XAML 代码示例演示`PanContainer`包装[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素：
+此类可以封装用户界面元素，以便平移手势将拖动的已包装的用户界面元素。 以下 XAML 代码示例所示`PanContainer`包装[ `Image` ](xref:Xamarin.Forms.Image)元素：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -94,7 +94,7 @@ public class PanContainer : ContentView
 </ContentPage>
 ```
 
-下面的代码示例演示如何`PanContainer`包装[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) C# 页面中的元素：
+下面的代码示例演示如何`PanContainer`包装[ `Image` ](xref:Xamarin.Forms.Image) C# 页面中的元素：
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -117,9 +117,9 @@ public class HomePageCS : ContentPage
 }
 ```
 
-在这两个示例中， [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)和[ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)属性设置为要显示的图像的宽度和高度值。
+在这两个示例中， [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)并[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性设置为要显示的图像的宽度和高度值。
 
-当[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素收到平移手势时，将拖动所显示的图像。 由执行拖动`PanContainer.OnPanUpdated`方法，下面的代码示例中所示：
+当[ `Image` ](xref:Xamarin.Forms.Image)元素收到平移手势时，将拖动显示的图像。 由执行拖动`PanContainer.OnPanUpdated`方法，在下面的代码示例所示：
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -142,21 +142,21 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-此方法将更新的已包装的用户界面元素，根据用户的平移手势可查看的内容。 这通过使用的值来实现[ `TotalX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PanUpdatedEventArgs.TotalX/)和[ `TotalY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PanUpdatedEventArgs.TotalY/)属性[ `PanUpdatedEventArgs` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanUpdatedEventArgs/)实例来计算方向和平移的距离。 `App.ScreenWidth`和`App.ScreenHeight`属性提供的高度和宽度的视区和均由各自的特定于平台的项目设置为的屏幕宽度和的设备的屏幕高度值。 已包装的用户元素然后拖动通过设置其[ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/)和[ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/)计算的值的属性。
+此方法更新的预包装的用户界面元素，基于用户的平移手势可查看的内容。 这通过使用的值来实现[ `TotalX` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX)并[ `TotalY` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY)属性的[ `PanUpdatedEventArgs` ](xref:Xamarin.Forms.PanUpdatedEventArgs)实例来计算方向和平移的距离。 `App.ScreenWidth`和`App.ScreenHeight`属性提供的高度和宽度的视区，并通过各自的特定于平台的项目设置为屏幕宽度和设备的屏幕高度值。 预包装的用户元素设置，然后拖动其[ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX)并[ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY)计算出的值的属性。
 
-时平移不占用整个屏幕的元素中的内容，可以从该元素获取的高度和宽度的视区[ `Height` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Height/)和[ `Width` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Width/)属性。
+当平移中未占据整个屏幕的元素的内容，可以从该元素的获取的高度和宽度的视区[ `Height` ](xref:Xamarin.Forms.VisualElement.Height)并[ `Width` ](xref:Xamarin.Forms.VisualElement.Width)属性。
 
 > [!NOTE]
-> 显示高分辨率图像会大大增加应用的内存需求量。 因此，它们应仅创建在应用程序不再需要它们时，就会立即应释放和所需时。 有关详细信息，请参阅[优化图像资源](~/xamarin-forms/deploy-test/performance.md#optimizeimages)。
+> 显示高分辨率图像可以极大地提高应用程序的内存占用量。 因此，它们应仅创建所需和应应用不再需要它们时，就立即释放时。 有关详细信息，请参阅[优化图像资源](~/xamarin-forms/deploy-test/performance.md#optimizeimages)。
 
 ## <a name="summary"></a>总结
 
-平移笔势用于检测拖动和使用实施[ `PanGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/)类。
+平移手势用于检测拖动和使用实现[ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)类。
 
 
 
 ## <a name="related-links"></a>相关链接
 
 - [PanGesture （示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PanGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [PanGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.PanGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

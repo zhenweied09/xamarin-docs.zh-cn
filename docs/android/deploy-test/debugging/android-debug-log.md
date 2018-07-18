@@ -1,16 +1,18 @@
 ---
 title: Android 调试日志
+description: 如何使用调试日志调试 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/04/2018
-ms.openlocfilehash: e0e22fe35dc5042a7b3c895a250803e936611629
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.date: 06/22/2018
+ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935212"
 ---
 # <a name="android-debug-log"></a>Android 调试日志
 
@@ -21,7 +23,7 @@ ms.lasthandoff: 04/05/2018
 “调试日志”工具使你能够在通过 Visual Studio 调试应用时查看日志输出。 调试日志支持以下设备：
 
 -   物理 Android 手机、平板电脑和可穿戴设备。
--   在 Google Android 仿真器上运行的 Android 虚拟设备。 
+-   在 Android Emulator 上运行的 Android 虚拟设备。 
 
 > [!NOTE]
 > “调试日志”工具并不适用于 Xamarin Live Player。

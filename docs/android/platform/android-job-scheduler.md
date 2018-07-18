@@ -1,6 +1,6 @@
 ---
-title: "Android 作业计划程序"
-description: "本指南讨论 使用 Android 的作业计划程序 API 的后台工作。"
+title: Android 作业计划程序
+description: 本指南讨论 使用 Android 的作业计划程序 API 的后台工作。
 ms.prod: xamarin
 ms.assetid: 673BB8C3-C5CC-43EC-BA8F-758F15D986C9
 ms.technology: xamarin-android
@@ -12,6 +12,7 @@ ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/21/2018
+ms.locfileid: "30005683"
 ---
 # <a name="android-job-scheduler"></a>Android 作业计划程序
 

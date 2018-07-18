@@ -1,16 +1,17 @@
 ---
 title: 性能和安全性
-description: 提高应用性能并确保安全通信的提示。
+description: 本文档链接到的各种指南介绍了用于提高 Xamarin.iOS、Xamarin.Android 和 Xamarin.Mac 应用程序性能的技术。
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2017
-ms.openlocfilehash: 507175cd73aa008c1bb120b0e42d9e98fc4c849a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6c226095c43a389f491dd2af9a158ceb4420b637
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780579"
 ---
 # <a name="performance-and-security"></a>性能和安全性
 

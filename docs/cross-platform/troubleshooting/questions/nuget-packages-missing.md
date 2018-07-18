@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917377"
 ---
 # <a name="missing-packages-error-after-updating-nuget-packages"></a>在更新 Nuget 包后缺少包错误
 

@@ -7,15 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: b54313668a2cb87a6cce0b8c519a06247524df81
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 05492f866bb083326ef1eccb8db3d624d8dc4806
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209305"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>在 iTunes Connect 中配置应用
 
-本文介绍在 iTunes Connect 中设置和维护 Xamarin.iOS 应用程序使其可在 App Store 上分发所需的步骤。
+> [!IMPORTANT]
+> Apple [表明](https://developer.apple.com/news/?id=05072018a)，从 2018 年 7 月开始，提交到 App Store 的所有应用和更新必须使用 iOS 11 SDK 来构建，并且必须[支持 iPhone X 显示器](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md)。
 
 iTunes Connect 是一系列基于 Web 的工具，它可在 App Store 上管理 iOS 应用程序等。 Xamarin.iOS 应用程序需要在 iTunes Connect 中进行恰当安装并配置，然后才能提交到 Apple 进行审核并最终在 App Store 作为付费或免费应用发布。
 

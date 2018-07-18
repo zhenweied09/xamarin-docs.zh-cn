@@ -1,5 +1,5 @@
 ---
-title: 应用程序图标
+title: Xamarin.Mac 应用的应用程序图标
 description: 本文介绍如何创建 Xamarin.Mac 应用程序图标所需的图像，将图像捆绑到 .icns 文件以及将该图标包含在 Xamarin.Mac 项目中。
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3603e43b4b98d1387c718d0a6010d38aa01440c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 685a29eea4b03361b185e25ae0e146be7b5e69b6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792029"
 ---
-# <a name="application-icon"></a>应用程序图标
+# <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 应用的应用程序图标
 
 本文介绍如何创建 Xamarin.Mac 应用程序图标所需的图像，将图像捆绑到 .icns 文件以及将该图标包含在 Xamarin.Mac 项目中。
 
@@ -53,8 +54,8 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 
 像开发人员将在 Xamarin.Mac 应用中使用的任何其他图像资源一样，应用图标需要提供有标准和 Retina 分辨率版本。 同样，与任何其他图像一样，命名图标文件时请使用 `@2x` 格式：
 
-- 标准分辨率   -  ImageName**.**filename-extension（示例：icon_512x512.png）
-- 高分辨率   -  ImageName**@2x.**filename-extension（示例：icon_512x512@2x.png）
+- 标准分辨率   -  ImageName **.** filename-extension（示例：icon_512x512.png）
+- 高分辨率   -  ImageName**@2x.** filename-extension（示例：icon_512x512@2x.png）
 
 例如，若要提供应用图标的 512 x 512 版本，文件将命名为 icon_512x512.png 和 icon_512x512@2x.png。
 

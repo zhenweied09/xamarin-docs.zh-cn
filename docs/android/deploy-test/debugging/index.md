@@ -6,28 +6,25 @@ ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
-ms.openlocfilehash: a4ce36e28bd5b6dcf78d248b1f2ba951cad9b286
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/22/2018
+ms.openlocfilehash: 1ed6ec57365c5d3a861dd3fd947a2ad195ce5357
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935381"
 ---
 # <a name="debugging"></a>调试
 
 本节讨论如何在设备或仿真器上调试 Xamarin.Android 应用。
+
 ## <a name="debugging-overview"></a>调试概述
 
 开发 Android 应用程序需要在物理硬件上或使用仿真器运行应用程序。 使用硬件是最好的方法，但并不总是最实用的方法。 在许多情况下，使用如下所述的仿真器之一模拟/仿真 Android 硬件，这可简化操作且更具成本效益。
 
+### <a name="debugging-on-the-android-emulatorandroiddeploy-testdebuggingdebug-on-emulatormd"></a>[在 Android Emulator 上调试](~/android/deploy-test/debugging/debug-on-emulator.md)
 
-### <a name="google-android-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
-
-这些文章介绍如何使用随 Android SDK 提供的默认仿真器。 此仿真器适用于 Visual Studio for Windows 和 Visual Studio for Mac。
-
-### <a name="visual-studio-android-emulatorandroiddeploy-testdebuggingvisual-studio-android-emulatormd"></a>[Visual Studio Android Emulator](~/android/deploy-test/debugging/visual-studio-android-emulator.md)
-
-本文介绍如何使用 Visual Studio 2015 中内置的 Android 仿真器来调试和测试 Xamarin.Android 应用。 如果使用 Visual Studio 2015 并且不需要自定义设备配置文件，则此仿真器是个不错的选择。
+本文介绍如何从 Visual Studio 启动 Android Emulator 并在虚拟设备中运行应用。
 
 ### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[在设备上进行调试](~/android/deploy-test/debugging/debug-on-device.md)
 
@@ -38,4 +35,4 @@ ms.lasthandoff: 05/10/2018
 开发人员用于调试应用程序的一个非常常见的技巧是使用 `Console.WriteLine`。 但是，在移动平台（如 Android）上没有控制台。 Android 设备会提供日志，你在编写应用时可能需要利用它。 这有时称为 **logcat**，原因在于为检索它而输入的命令。 本文介绍如何使用 **logcat**。
 
 > [!WARNING]
-> 请注意，**Xamarin Android Player** 已弃用。 有关详细信息，请参阅[此博客文章中的公告](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/)。
+> 请注意，**Xamarin Android Player** 已弃用。 有关详细信息，请参阅[此博客文章中的公告](https://blog.xamarin.com/live-from-dotnetconf-cycle-7-xamarin-studio-6-and-more/)。 此外，自 Visual Studio 2017 起，已弃用 **Visual Studio Android Emulator**。

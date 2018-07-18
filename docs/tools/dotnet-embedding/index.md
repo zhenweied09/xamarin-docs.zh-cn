@@ -1,48 +1,48 @@
 ---
 title: .NET 嵌入
-description: '.NET 嵌入允许你现有的.NET 代码 (C#、 F # 中，和其他人） 可供其他编程语言编写的代码。'
+description: '.NET 嵌入允许现有.NET 代码 (C#、 F # 和其他人） 可供其他编程语言编写的代码。'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
 ms.openlocfilehash: 16f59498a49d10a43e04989136d8835bf78bd89d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793111"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38830395"
 ---
 # <a name="net-embedding"></a>.NET 嵌入
 
 ![预览](~/media/shared/preview.png)
 
-.NET 嵌入允许你现有的.NET 代码 (C#、 F # 中，和其他） 可以从其他编程语言，且在各种不同的环境中使用。
+.NET 嵌入允许现有.NET 代码 (C#、 F # 和其他人） 可以通过其他编程语言，且在各种不同环境中使用。
 
-这意味着，如果您具有想要使用它从现有的 iOS 应用程序的.NET 库，你可以执行该操作。   或者，如果你想要将其链接使用本机 c + + 库，你可以执行该操作。   或使用通过 Java 的.NET 代码。
+这意味着，如果有想要使用它从现有的 iOS 应用程序的.NET 库，您可以这样做。   或者，如果你想要将其链接与本机 c + + 库，则也可以做到。   或使用 Java 从.NET 代码。
 
 .NET 嵌入基于[Embeddinator 4000](https://github.com/mono/Embeddinator-4000)开放源代码项目。
 
 ## <a name="environments-and-languages"></a>环境和语言
 
-该工具是同时注意它将使用的环境，以及将使用它的语言。   例如，iOS 平台不允许在实时 (JIT) 编译，以便让.NET 嵌入将静态编译你的.NET 代码到可以在 iOS 中使用的本机代码。  其他环境允许 JIT 编译和在这些环境中，我们选择对 JIT 编译。
+该工具是能够意识到它将使用的环境，以及使用它的语言。   例如，iOS 平台不允许在实时 (JIT) 编译，因此.NET 嵌入将以静态方式编译您的.NET 代码到本机代码可以在 iOS 中使用。  其他环境并允许 JIT 编译，并在这些环境中，我们选择 JIT 编译。
 
-支持各种语言使用者，因此，它显示为目标语言的惯用代码的.NET 代码。   目前，这是支持的语言的列表：
+它支持各种语言使用者，因此它显示为目标语言中惯用代码的.NET 代码。   这是目前支持的语言列表：
 
-- [**Objective C** ](objective-c/index.md) – 映射到惯用 OBJECTIVE-C 的 Api 的.NET
-- [**Java** ](android/index.md) – 映射到惯用 Java Api 的.NET
-- [**C** ](get-started/c.md) – 映射到 C Api 如面向对象的.NET
+- [**Objective C** ](objective-c/index.md) – 映射到惯用的 Objective C Api 的.NET
+- [**Java** ](android/index.md) – 映射到惯用的 Java Api 的.NET
+- [**C** ](get-started/c.md) – 映射到 C Api 等面向对象的.NET
 
-多个语言将产生更高版本的原因。
+稍后将推出更多语言。
 
 ## <a name="getting-started"></a>入门
 
-若要开始，请检查我们的指南为每个当前支持的语言之一：
+若要开始，请我们为每个当前支持的语言的指南之一：
 
-- [**Objective C** ](get-started/objective-c/index.md) – 介绍 macOS 和 iOS
-- [**Java** ](get-started/java/index.md) – 介绍 macOS 和 Android
-- [**C** ](get-started/c.md) – 介绍如何在桌面平台上的 C 语言
+- [**Objective C** ](get-started/objective-c/index.md) – 介绍了在 macOS 和 iOS
+- [**Java** ](get-started/java/index.md) – 介绍了在 macOS 和 Android
+- [**C** ](get-started/c.md) – 包含在桌面平台上的 C 语言
 
 ## <a name="related-links"></a>相关链接
 
-- [在 GitHub 上的 Embeddinator 4000](https://github.com/mono/Embeddinator-4000)
+- [GitHub 上的 Embeddinator 4000](https://github.com/mono/Embeddinator-4000)

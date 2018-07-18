@@ -8,29 +8,29 @@ author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
 ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245906"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935610"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
-_XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。XAML 标记扩展是对于共享对象，并引用在应用程序，使用常量尤为重要，但它们在数据绑定中找到其最大的实用程序。_
+_XAML 标记扩展构成允许将属性设置为对象或从其他源间接引用的值的 XAML 中的重要功能。XAML 标记扩展是特别重要的共享对象，并引用整个应用程序，使用的常量，但它们在数据绑定中查找其最大的实用程序。_
 
 ## <a name="xaml-markup-extensions"></a>XAML 标记扩展
 
-一般情况下，你可以使用 XAML 将对象的属性设置为显式值，如字符串、 数字、 枚举成员或转换为在幕后值的字符串。
+一般情况下，使用 XAML 将对象的属性设置为显式值，如字符串、 数字、 枚举成员或转换为在后台值的字符串。
 
-有时，但是，属性必须改为引用其他，某一位置定义的值，或通过在运行时的代码可能需要很少的处理。 出于这些目的，XAML*标记扩展*可用。
+有时，但是，属性必须改为引用其他，某一位置定义的值，或可能由代码在运行时需要很少的处理。 出于这些目的，XAML*标记扩展*可用。
 
-这些 XAML 标记扩展不是扩展的 XML。 XAML 是完全合法的 XML。 它们在称为"扩展"，因为它们提供支持的类中实现的代码`IMarkupExtension`。 你可以编写自己的自定义标记扩展。
+这些 XAML 标记扩展不是扩展的 XML。 XAML 是完全合法的 XML。 它们称为"扩展"因为它们由代码中实现的类支持`IMarkupExtension`。 您可以编写自己的自定义标记扩展。
 
-在许多情况下，XAML 标记扩展是 XAML 文件中立即可识别因为它们显示由大括号分隔的特性设置为: {和}，但有时标记扩展会出现在标记作为传统的元素。
+在许多情况下，XAML 标记扩展是 XAML 文件中立即认出因为它们将显示由大括号分隔的属性设置为: {和}，但有时标记扩展将出现在标记为传统的元素。
 
 ## <a name="shared-resources"></a>共享的资源
 
-某些 XAML 页属性设置为相同的值与包含多个视图。 例如，有许多属性设置这些`Button`对象是否相同：
+某些 XAML 页属性设置为相同的值包含多个视图。 例如，许多这些属性设置`Button`对象是否相同：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -67,11 +67,11 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-如果其中一个属性需要更改，你可能希望以使更改只需一次，而不是三次。 如果这是代码，你将很可能会使用常数和静态只读对象为了使此类值保持一致且轻松地修改。
+如果其中一个属性需要更改，可能想要进行的更改只需一次而不是三次。 如果这是代码，您将可能使用常量和静态只读对象来帮助保持一致且轻松地修改此类值。
 
-在 XAML 中，一个常用来存储此类值或解决方案中的对象*资源字典*。 `VisualElement`类定义一个名为属性`Resources`类型的`ResourceDictionary`，即具有键的类型的字典`string`和类型的值`object`。 可以放入此字典的对象，然后从标记中，所有 XAML 中引用它们。
+在 XAML，一种受欢迎的解决方案是将存储此类值或对象中*资源字典*。 `VisualElement`类定义一个名为属性`Resources`类型的`ResourceDictionary`，这是类型的键的字典`string`的类型和值`object`。 可以将对象放入此字典，然后从标记中，所有在 XAML 中引用它们。
 
-若要在页面上使用的资源字典，包含一对`Resources`属性元素标记。 它是最方便的方法将这些页的顶部：
+若要在页面上使用的资源字典，包含一对`Resources`属性元素标记。 它是最方便的方式将这些页面的顶部：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -86,7 +86,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-它也是需要显式包含`ResourceDictionary`标记：
+还有必要显式包括`ResourceDictionary`标记：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -103,7 +103,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-现在对象和各种类型的值可以添加到资源字典。 这些类型必须是可实例化。 它们不能是抽象类，例如。 这些类型还必须具有公共无参数构造函数。 每个项，要求使用指定的字典项`x:Key`属性。 例如：
+现在可以对资源字典添加对象和各种类型的值。 这些类型必须是可实例化。 它们不能为抽象类，例如。 这些类型还必须具有公共无参数构造函数。 每个项需要一个使用指定的字典键`x:Key`属性。 例如：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -125,9 +125,9 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-这两项是结构类型的值`LayoutOptions`，和每个具有唯一键以及一个或两个属性设置。 在代码和标记，它是更常见的是使用的静态字段`LayoutOptions`，但还有更方便地设置的属性。
+这两项是结构类型的值`LayoutOptions`，并且每个包含唯一键，另一个或两个属性设置。 在代码和标记，它是更常见，若要使用的静态字段`LayoutOptions`，但下面是更方便地设置属性。
 
-现在需要设置`HorizontalOptions`和`VerticalOptions`对这些资源，这些按钮的属性和完成与`StaticResource`XAML 标记扩展：
+现在需要设置`HorizontalOptions`并`VerticalOptions`对这些资源，这些按钮的属性和为此，执行`StaticResource`XAML 标记扩展：
 
 ```xaml
 <Button Text="Do this!"
@@ -139,11 +139,11 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
         FontSize="24" />
 ```
 
-`StaticResource`标记扩展始终用大括号分隔，并包含字典键。
+`StaticResource`标记扩展始终用大括号分隔，并且包括字典的键。
 
-名称`StaticResource`使其有别于`DynamicResource`，Xamarin.Forms 还支持。 `DynamicResource` 适用于在运行时，可能会更改的值与关联的字典键时`StaticResource`只后当构造页上元素的从字典访问元素。
+名称`StaticResource`使它有别于`DynamicResource`，它还支持 Xamarin.Forms。 `DynamicResource` 适用于在运行时，可能会更改的值与关联的字典键时`StaticResource`只是当构造页上的元素后从字典访问元素。
 
-有关`BorderWidth`属性，它是必需的双精度值存储在字典中。 XAML 方便地定义了标记的常见数据类型，如`x:Double`和`x:Int32`:
+有关`BorderWidth`属性，它是必需的字典中存储一个双精度值。 XAML 可以方便地定义对等的常见数据类型的标记`x:Double`和`x:Int32`:
 
 ```xaml
 <ContentPage.Resources>
@@ -162,7 +162,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage.Resources>
 ```
 
-你不需要将其放在三个行上。 上移一行仅采用此旋转角度此字典条目：
+不需要将其放在三个行。 此旋转角度此字典条目仅占用一行：
 
 ```xaml
 <ContentPage.Resources>
@@ -183,7 +183,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage.Resources>
 ```
 
-可以在相同的方式中引用这些两个资源`LayoutOptions`值：
+这两个资源可以引用方式与`LayoutOptions`值：
 
 ```xaml
 <Button Text="Do this!"
@@ -195,19 +195,19 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
         FontSize="24" />
 ```
 
-资源类型的`Color`，你可以使用直接将这些类型的属性的分配时，你使用的相同的字符串表示形式。 创建资源时调用的类型转换器。 下面是类型的资源`Color`:
+类型的资源`Color`，可以使用直接分配这些类型的属性时使用的相同字符串表示形式。 创建资源时，将调用类型转换器。 下面是类型的资源`Color`:
 
 ```xaml
 <Color x:Key="textColor">Red</Color>
 ```
 
-通常情况下，程序集`FontSize`属性的成员`NamedSize`如枚举`Large`。 `FontSizeConverter`类在后台以将其转换为平台相关值使用的工作原理`Device.GetNamedSized`方法。 但是，在定义的字体大小资源时，它更有意义用于数字值，显示此处`x:Double`类型：
+通常情况下，程序集`FontSize`属性绑定到的成员`NamedSize`如枚举`Large`。 `FontSizeConverter`类在后台将其转换为依赖于平台的值使用的工作原理`Device.GetNamedSized`方法。 但是，在定义的字体大小资源时，它更有意义使用数字值，显示为此处`x:Double`类型：
 
 ```xaml
 <x:Double x:Key="fontSize">24</x:Double>
 ```
 
-现在所有属性除外`Text`由资源设置定义：
+现在所有的属性除外`Text`由资源设置定义：
 
 ```xaml
 <Button Text="Do this!"
@@ -219,7 +219,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
         FontSize="{StaticResource fontSize}" />
 ```
 
-还有可能要使用`OnPlatform`要定义的平台的不同值的资源字典中。 下面是如何`OnPlatform`对象可以是不同的文本颜色资源字典中的一部分：
+还有可能要使用`OnPlatform`来定义适用于平台的不同值的资源字典中。 下面是如何`OnPlatform`对象可以是不同的文本颜色的资源字典的一部分：
 
 ```xaml
 <OnPlatform x:Key="textColor"
@@ -230,9 +230,9 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </OnPlatform>
 ```
 
-请注意，`OnPlatform`获取同时`x:Key`特性，因为它是在字典中的对象和`x:TypeArguments`特性，因为它是一个泛型类。 `iOS`， `Android`，和`UWP`属性转换为`Color`值在初始化对象时。
+请注意，`OnPlatform`获取同时`x:Key`属性，因为它是在字典中的对象和一个`x:TypeArguments`属性，因为它是一个泛型类。 `iOS`， `Android`，并`UWP`特性转换为`Color`值在初始化对象时。
 
-下面是最终完成 XAML 访问六个共享的值的三个按钮文件：
+下面是最终完成 XAML 文件具有访问共享的六个值的三个按钮：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -293,11 +293,11 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </ContentPage>
 ```
 
-屏幕截图验证一致样式和平台相关样式：
+屏幕截图验证一致样式和依赖于平台的样式：
 
-[![](xaml-markup-extensions-images/sharedresources.png "风格的控件")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "风格的控件")
+[![](xaml-markup-extensions-images/sharedresources.png "设置控件的样式")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "风格的控件")
 
-尽管它是最常见的定义`Resources`集合顶部的页上，请记住，`Resources`属性定义由`VisualElement`，并且你可以提供`Resources`上页面上的其他元素的集合。 例如，尝试将添加到一个`StackLayout`在此示例中：
+尽管最常见的定义`Resources`集合顶部的页上，请记住，`Resources`属性定义由`VisualElement`，并且可以具有`Resources`上页面上其他元素的集合。 例如，请添加一个到`StackLayout`在此示例中：
 
 ```xaml
 <StackLayout>
@@ -310,22 +310,22 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
 </StackLayout>
 ```
 
-您会发现这些按钮的文本颜色现在为蓝色。 基本上，每当 XAML 分析器遇到`StaticResource`标记扩展，它将向上的可视化树搜索，并使用第一个`ResourceDictionary`遇到包含该注册表项。
+你会发现这些按钮的文本颜色现在为蓝色。 基本上，只要 XAML 分析程序遇到`StaticResource`标记扩展，它在可视树搜索，并使用第一个`ResourceDictionary`遇到包含该密钥。
 
-最常见的资源字典中存储的对象类型的一个方法是 Xamarin.Forms `Style`，后者定义属性设置的集合。 文中讨论了样式[样式](~/xamarin-forms/user-interface/styles/index.md)。
+最常见的资源字典中存储的对象类型之一是 Xamarin.Forms `Style`，其定义的属性设置的集合。 样式将在本文中讨论[样式](~/xamarin-forms/user-interface/styles/index.md)。
 
-开发人员熟悉 XAML 它们可以如将可视元素想要知道的有时`Label`或`Button`中`ResourceDictionary`。 虽然肯定可能，但它不太大意义。 用途`ResourceDictionary`是共享对象。 可视元素不能共享。 同一个实例不能出现两次在单个页。
+有时开发人员熟悉 XAML 想知道是否他们可如将可视元素`Label`或`Button`中`ResourceDictionary`。 虽然肯定可能，但它没有太大意义。 用途`ResourceDictionary`是共享的对象。 不能共享一个可视元素。 同一个实例不能出现两次在单个页面上。
 
 ## <a name="the-xstatic-markup-extension"></a>X:static 标记扩展
 
-尽管其名称，这种相似性`x:Static`和`StaticResource`有很大不同。 `StaticResource` 从资源字典时返回一个对象`x:Static`访问以下项之一：
+尽管其名称的相似之处`x:Static`和`StaticResource`有很大差异。 `StaticResource` 从资源字典时返回的对象`x:Static`访问以下项之一：
 
 - 公共静态字段
 - 公共静态属性
 - 公共常量字段
 - 枚举成员。
 
-`StaticResource`标记扩展支持的 XAML 实现定义使用的资源字典时`x:Static`属于内部 XAML 中，作为`x`前缀显示。
+`StaticResource`标记扩展支持的 XAML 实现定义的资源字典，虽然`x:Static`属于内部函数 XAML，作为`x`前缀显示。
 
 下面是几个示例，演示如何`x:Static`可以显式引用静态字段和枚举成员：
 
@@ -336,7 +336,7 @@ _XAML 标记扩展构成允许将属性设置为对象或从其他源间接引�
        TextColor="{x:Static Color.Aqua}" />
 ```
 
-到目前为止，这不是非常令人印象深刻的。 但`x:Static`标记扩展还可以引用静态字段或属性从你自己的代码。 例如，下面是`AppConstants`包含某些字段可能想要在应用程序的多个页上使用的静态字段的类：
+到目前为止，这并不令人印象非常深刻。 但`x:Static`标记扩展还可以引用静态字段或属性从你自己的代码。 例如，下面是`AppConstants`类，其中包含一些您可能想要在整个应用程序的多个页面上使用的静态字段：
 
 ```csharp
 using System;
@@ -378,32 +378,32 @@ namespace XamlSamples
 }
 ```
 
-若要引用的 XAML 文件中此类的静态字段，你将需要某种方式，以指示在此文件所在的 XAML 文件内。 使用 XML 命名空间声明来执行此操作。
+若要引用的 XAML 文件中此类的静态字段，将需要设法指出此文件的所在位置在 XAML 文件中。 使用 XML 命名空间声明来执行此操作。
 
-回想一下，作为标准的 Xamarin.Forms XAML 模板的一部分创建的 XAML 文件包含两个 XML 命名空间声明： 一个用于访问 Xamarin.Forms 类和另一个用于引用标记和特性到使用 XAML 内部函数：
+回想一下作为标准 Xamarin.Forms XAML 模板的一部分创建的 XAML 文件包含两个 XML 命名空间声明： 一个用于访问 Xamarin.Forms 类和另一个用于引用标记和属性到 XAML 内部函数：
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-你将需要其他的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义新的前缀。 若要访问类本地共享应用程序标准.NET 库，如`AppConstants`，XAML 程序员通常使用前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，是在 C# 中显示的名称`namespace`定义中或在`using`指令：
+你将需要额外的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义一个新的前缀。 若要访问的共享的应用程序的.NET 标准库的本地类，例如`AppConstants`，XAML 编程人员通常使用该前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，是在 C# 中显示的名称`namespace`定义中或在`using`指令：
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-此外可以在.NET 标准库引用任何程序集中定义.NET 命名空间的 XML 命名空间的声明。 例如，下面是`sys`前缀标准.NET`System`命名空间，该对话框位于**mscorlib**程序集，其中一次尤为"的 Microsoft 常见对象运行时库，"，但现在意味着"多语言标准常见对象运行时库。" 由于这是另一个程序集，你还必须指定程序集名称，在这种情况下**mscorlib**:
+此外可以在.NET Standard 库引用任何程序集中定义.NET 命名空间的 XML 命名空间的声明。 例如，下面是`sys`的标准.NET 前缀`System`命名空间，即**mscorlib**程序集，这对于"Microsoft 通用对象运行时库，"花了一次，但现在表示"多语言标准常见对象运行时库。" 由于这是另一个程序集，您还必须指定程序集名称，在这种情况下**mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-请注意，关键字`clr-namespace`后跟一个冒号，然后.NET 命名空间名称后, 跟一个分号，关键字`assembly`，一个等号和程序集名称。
+请注意，在关键字`clr-namespace`后跟一个冒号，然后.NET 命名空间名称后, 接分号，关键字`assembly`，等号和程序集名称。
 
-是，加上冒号`clr-namespace`但等号遵循`assembly`。 语法已定义在此方式故意： 最 XML 命名空间声明引用一个 URI，如开始 URI 方案名称`http`，这始终后跟一个冒号。 `clr-namespace`此字符串的一部分用于模拟这种约定。
+是的加上冒号`clr-namespace`但等号后面`assembly`。 语法定义在此方式故意： 最 XML 命名空间声明引用一个 URI，如开始一个 URI 方案名称`http`，这始终后跟一个冒号。 `clr-namespace`此字符串的一部分用于模拟这种约定。
 
-这两个以下命名空间声明中包含**StaticConstantsPage**示例。 请注意，`BoxView`维度设置为`Math.PI`和`Math.E`，但通过 100 的比例因子缩放：
+中包含以下两个命名空间声明**StaticConstantsPage**示例。 请注意，`BoxView`尺寸设置为`Math.PI`和`Math.E`，但缩放到原来的 100:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -431,24 +431,24 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-所产生的大小`BoxView`相对于屏幕是与平台相关：
+大小所产生的`BoxView`相对于屏幕是依赖于平台的：
 
- [![](xaml-markup-extensions-images/staticconstants.png "使用 X:static 标记扩展的控件")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "控件使用 X:static 标记扩展")
+ [![](xaml-markup-extensions-images/staticconstants.png "使用 X:static 标记扩展的控件")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "使用 X:static 标记扩展的控件")
 
-## <a name="other-standard-markup-extensions"></a>其他标准的标记扩展
+## <a name="other-standard-markup-extensions"></a>其他标准标记扩展
 
-几个标记扩展是固有的 XAML 和 Xamarin.Forms XAML 文件中支持。 其中一些未非常频繁使用，但在需要时非常重要：
+多个标记扩展是固有的 XAML 和在 Xamarin.Forms XAML 文件中受支持。 其中一些不常使用，但在需要时至关重要：
 
--  如果属性具有非`null`值由默认，但你想要将其设置为`null`，将其设置为`{x:Null}`标记扩展。
--  如果属性的类型是`Type`，你可以将其分配给`Type`对象使用标记扩展`{x:Type someClass}`。
--  你可以在 XAML 中使用定义数组`x:Array`标记扩展。 此标记扩展有必需的特性名为`Type`，该值指示数组中元素的类型。
-- `Binding`标记扩展已在[第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+-  如果属性具有非`null`值的默认值，但你想要将其设置为`null`，将其设置为`{x:Null}`标记扩展。
+-  如果某个属性属于类型`Type`，你可以将其分配给`Type`对象使用标记扩展`{x:Type someClass}`。
+-  可在 XAML 中使用定义数组`x:Array`标记扩展。 此标记扩展具有所需的属性名为`Type`，该值指示数组中元素的类型。
+- `Binding`标记扩展中讨论了[第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 ## <a name="the-constraintexpression-markup-extension"></a>ConstraintExpression 标记扩展
 
-标记扩展可以有属性，但它们不将设置 XML 属性等。 在标记扩展中，用逗号，分隔属性设置和没有引号出现在大括号内。
+标记扩展可以有属性，但它们不将设置等的 XML 属性。 在标记扩展中，属性设置以逗号分隔，并在大括号内显示没有引号。
 
-这可以用名为 Xamarin.Forms 标记扩展说明`ConstraintExpression`，与用于`RelativeLayout`类。 作为常量，或相对于父或其他已命名的视图，可以指定的位置或大小的子视图。 语法`ConstraintExpression`允许您设置的位置或大小的视图使用`Factor`属性的另一个视图，加上一次`Constant`。 需要代码比这更复杂的任何内容。
+这可以用名为 Xamarin.Forms 标记扩展说明`ConstraintExpression`，用于与`RelativeLayout`类。 作为常量，或相对于父级或其他命名的视图，可以指定的位置或子视图的大小。 语法`ConstraintExpression`允许您设置的位置或视图使用的大小`Factor`属性的另一个视图，加上一次`Constant`。 比这更复杂的任何内容需要代码。
 
 以下是一个示例：
 
@@ -545,7 +545,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-与此示例，应执行的最重要经验可能是标记扩展的语法： 没有引号必须出现在标记扩展的大括号内。 在 XAML 文件中键入标记扩展，很自然会想要用引号引起来的属性的值。 反对倾向做法 ！
+可能需要与此示例的最重要经验是标记扩展的语法： 没有引号必须出现在标记扩展的大括号内。 键入时标记扩展在 XAML 文件中，是自然地想要将属性的值括在引号。 忍不住 ！
 
 下面是运行的程序：
 
@@ -553,7 +553,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 ## <a name="summary"></a>总结
 
-此处显示的 XAML 标记扩展的 XAML 文件提供了重要的支持。 但是而言最有价值的 XAML 标记扩展的或许是`Binding`，此内容进行介绍在下一部分中的这一系列，[第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+如下所示的 XAML 标记扩展提供 XAML 文件的重要支持。 但也许是最有价值的 XAML 标记扩展`Binding`，其中并未包括在本系列的下一部分[第 4 部分。数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 
 

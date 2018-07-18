@@ -1,21 +1,20 @@
 ---
 title: Xamarin.iOS for Visual Studio 简介
-description: 本文介绍如何使用 Visual Studio 生成并测试 Xamarin iOS 应用程序。 它将介绍如何使用 Visual Studio 新建 iOS 项目、生成 iOS 应用程序，然后使用通过网络连接到主机 Apple 编译器和模拟器的 Mac 以及 Xamarin 生成工具链进行编译、测试和调试。
+description: 本文档介绍如何使用 Visual Studio 生成和测试 Xamarin iOS 应用程序。 其中讨论了如何创建项目、运行和调试应用以及如何从 Windows 连接到 Mac 生成主机。
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: e07119bee6478a503ca6c586fa3348206ccd16f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786195"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Xamarin.iOS for Visual Studio 简介
-
-本文介绍如何使用 Visual Studio 生成并测试 Xamarin iOS 应用程序。其中将说明如何使用 Visual Studio 新建 iOS 项目、生成 iOS 应用程序，然后使用通过网络连接到主机 Apple 编译器和模拟器的 Mac 以及 Xamarin 生成工具链进行编译、测试和调试。
 
 借助 Xamarin for Windows，iOS 应用程序可在 Visual Studio 中进行编写和测试，并且由联网的 Mac 提供生成和部署服务。
 
@@ -27,7 +26,6 @@ ms.lasthandoff: 05/07/2018
 -  对所有跨平台项目（包括 iOS 源代码）使用常用 Visual Studio 工具（如 Resharper 和 Team Foundation Server）。
 -  使用熟悉的 IDE，同时利用所有 Apple API 的 Xamarin.iOS 绑定。
 
-
 <a name="Requirements_and_Installation" />
 
 ## <a name="requirements-and-installation"></a>要求和安装
@@ -38,7 +36,6 @@ ms.lasthandoff: 05/07/2018
 
 -  使用 Mac 作为主要的开发计算机，并运行安装了 Visual Studio 的 Windows 虚拟机。 建议使用 VM 软件，如 [Parallels](http://www.parallels.com/products/desktop/) 或 [VMWare](http://www.vmware.com/products/fusion/)。
 -  将 Mac 当做生成主机使用。 在这种情况下，需连接到与 Windows 计算机所处的同一网络上，该计算机已安装[必备](~/cross-platform/get-started/installation/windows.md#installation)工具。
-
 
 对于每种情况，都应遵循以下步骤：
 
@@ -64,7 +61,6 @@ Xamarin iOS for Visual Studio 将项添加到标准工具栏和新的 iOS 工具
 -  **解决方案配置** - 允许选择要使用的配置（例如，调试和发布）。
 -  **解决方案平台** - 可以选择“iPhone”或“iPhoneSimulator”进行部署。
 
-
 ### <a name="ios-toolbar"></a>iOS 工具栏
 
 iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示：
@@ -77,10 +73,7 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 -  **显示 iOS 模拟器** - 在 Mac 上将 iOS 模拟器窗口放在最前面。
 -  **显示生成服务器上的 IPA 文件** - 打开 Mac 上的 Finder，找到应用程序的 IPA 输出文件位置。
 
-
-
 ## <a name="ios-output-options"></a>iOS 输出选项
-
 
 ### <a name="output-window"></a>输出窗口
 
@@ -108,29 +101,23 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 
     [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild 输出")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
-
 ## <a name="ios-project-properties"></a>iOS 项目属性
 
 可通过右键单击项目名称并选择上下文菜单中的“属性”找到 Visual Studio 的项目属性。 这样就可以配置 iOS 应用程序了，如以下屏幕截图所示：
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "配置 iOS 应用程序")
 
 -  iOS 应用程序包签名 - 连接 Mac 以填充代码签名标识和预配配置文件：
 
-
  ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "填充代码签名标识和预配配置文件")
 
 -  iOS IPA 选项 - IPA 文件将保存到 Mac 文件系统中：
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "iOS IPA 选项")
 
 -  iOS 运行选项 - 配置其他参数：
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "iOS 运行选项")
-
-
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>为 iOS 应用程序创建新的项目
 
@@ -156,7 +143,6 @@ iOS 工具栏在所有版本的 Visual Studio 中都类似。 外观如下所示
 
  有关使用 iOS 设计器的详细信息，请参阅[设计器](~/ios/user-interface/designer/index.md)指南。
 
-
 ## <a name="running--debugging-ios-applications"></a>运行和调试 iOS 应用程序
 
 ### <a name="device-logging"></a>设备日志记录
@@ -175,7 +161,6 @@ Visual Studio 新的“设备日志”工具窗口允许显示 Android 和 iOS �
 
 此工具窗口包括：一个日志条目表、一个用于选择设备的下拉列表、一种清除日志条目的方法、一个搜索框，以及播放/停止/暂停按钮。
 
-
 ### <a name="set-debugging-stops"></a>设置调试停止
 
 可以在应用程序中的任意位置设置断点，将信号发送到调试器以暂停程序执行。 若要在 Visual Studio 中设置断点，请在想要中断的代码行号旁边，单击编辑器的空白区：
@@ -185,7 +170,6 @@ Visual Studio 新的“设备日志”工具窗口允许显示 Android 和 iOS �
 开始调试，并使用模拟器或设备将应用程序导航到断点。 命中断点时，将突出显示此行并启用 Visual Studio 的正常调试行为：你可以进入、结束或跳出代码，检查局部变量，或使用即时窗口。
 
 此屏幕截图显示使用 OS X 上的 Parallels 在 Visual Studio 旁运行的 iOS 模拟器：
-
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "此屏幕截图显示使用 OS X 上的 Parallels 在 Visual Studio 旁运行的 iOS 模拟器")
 

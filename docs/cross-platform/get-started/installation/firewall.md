@@ -1,16 +1,17 @@
 ---
 title: Xamarin 防火墙配置说明
-description: 一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin 的平台适合你的公司。
+description: 本文档提供了必须在防火墙中列入白名单，以使 Xamarin 能够在企业环境中工作的主机列表。
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 34ac0b0eb2563b2122d7b093b19ac3a6ac78cbe5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dab4aeccd58da22736aea3139f11cbdff259ef7b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781086"
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Xamarin 防火墙配置说明
 

@@ -1,15 +1,17 @@
 ---
 title: 自定义链接器配置
+description: 本文档介绍了可以用于配置链接器的 XML 文件，显式确保所需代码不会从链接的应用程序中消除。
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 333fe4163cea53217456f75249a191d66d181cb5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: caf43e6cb975b65240f5c0f8538b9be175978eac
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780455"
 ---
 # <a name="custom-linker-configuration"></a>自定义链接器配置
 

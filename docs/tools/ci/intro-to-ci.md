@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: topgenorth
 ms.author: toopge
 ms.date: 07/19/2017
-ms.openlocfilehash: 333e672b054c38370847338e9a4ffad94c90bb5d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 67fc32fc9f79d54274642fbab2d0c2f8afd14d8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793657"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066502"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>使用 Xamarin 的连续集成简介
 
@@ -48,14 +48,14 @@ _持续集成是一种软件工程做法在其中为自动化的生成将编译�
 
 ### <a name="visual-studio-team-services-and-team-foundation-server"></a>Visual Studio Team Services 和 Team Foundation Server
 
-[Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) (VSTS) 和[Team Foundation Server](http://msdn.microsoft.com/vstudio/ff637362.aspx) (TFS) 是 Microsoft 的协作工具的持续集成生成服务，跟踪任务、 敏捷规划和报告工具，以及版本控件。 与版本控制 VSTS 和 TFS 可以处理其自己的系统 （Team Foundation 版本控制或 TFVC） 或在 GitHub 上承载的项目。
+[Visual Studio Team Services](https://visualstudio.microsoft.com/team-services/) (VSTS) 和[Team Foundation Server](https://visualstudio.microsoft.com/tfs/) (TFS) 是 Microsoft 的协作工具的持续集成生成服务，跟踪任务、 敏捷规划和报告工具，以及版本控件。 与版本控制 VSTS 和 TFS 可以处理其自己的系统 （Team Foundation 版本控制或 TFVC） 或在 GitHub 上承载的项目。
 
  - Visual Studio Team Services 提供通过云服务。 它的主要优点是它不需要专用的硬件或基础结构，并且可以访问它从任意位置通过 web 浏览器和 Visual Studio 中，使它对于在地理位置的团队有吸引力等流行开发工具分发。 它是免费的五个开发人员团队为或更少之后可以购买哪些其他许可证以适应不断增长的团队。
  - TFS 是专为在本地 Windows server 设计，并通过本地网络或与该网络的 VPN 连接访问。 其主要优点是您完全控制的生成服务器的配置和可以安装不需要任何其他软件或服务。 TFS 具有对于小团队免费的入门级 Express 版本。
 
 TFS 和 VSTS 与 Visual Studio 紧密集成，并允许开发人员可以执行许多版本控制和从中的单个 IDE 舒适的 CI 任务。 适用于 Eclipse （见下文） 的 Team Explorer Everywhere 插件也是可用的。 适用于 Mac 的 visual Studio 不提供任何支持 TFS 或 VSTS。
 
-Visual Studio 团队服务的生成系统具有直接支持对于 Xamarin 项目，在其中创建要目标 （Android、 iOS 和 Windows） 每个平台的生成定义。 相应的 Xamarin 许可证，需要为每个生成定义。 也可以连接本地，Xamarin 支持 TFS 生成到为此目的的 Visual Studio Team Services 的服务器。 通过此设置，可以将生成排队发送至 VSTS 委派给本地服务器。 有关详细信息，请参阅[部署和配置生成服务器](https://msdn.microsoft.com/library/ms181712.aspx)。 或者，你可以使用另一生成工具，如 Jenkins 或团队城市。
+Visual Studio 团队服务的生成系统具有直接支持对于 Xamarin 项目，在其中创建要目标 （Android、 iOS 和 Windows） 每个平台的生成定义。 相应的 Xamarin 许可证，需要为每个生成定义。 也可以连接本地，Xamarin 支持 TFS 生成到为此目的的 Visual Studio Team Services 的服务器。 通过此设置，可以将生成排队发送至 VSTS 委派给本地服务器。 有关详细信息，请参阅[部署和配置生成服务器](https://docs.microsoft.com/vsts/pipelines/agents/agents?view=vsts)。 或者，你可以使用另一生成工具，如 Jenkins 或团队城市。
 
 所有应用程序生命周期管理 (ALM) 功能的 Visual Studio、 Visual Studio Team Services 和 Team Foundation Server，请参阅完整的摘要[适用于 Xamarin 应用的应用程序生命周期管理](https://msdn.microsoft.com/library/mt162217(v=vs.140).aspx)MSDN 上。
 
@@ -107,7 +107,7 @@ Visual Studio 2015 和 Visual Studio for Mac 提供本机支持 git;对于旧版
 
 ### <a name="visual-studio-team-services-and-jenkins"></a>Visual Studio Team Services 和 Jenkins
 
-如果你使用 Jenkins 生成你的应用，你可以在 Visual Studio Team Services 或 Team Foundation Server 中存储你的代码，并继续用于 Jenkins CI 生成。 Jenkins 生成的数据时会触发代码推送到你的团队项目的 Git 存储库或者当你检查代码到 TFVC。 有关详细信息，请参阅[利用 Visual Studio Team Services Jenkins](https://www.visualstudio.com/docs/marketplace/integrate/service-hooks/services/jenkins)。
+如果你使用 Jenkins 生成你的应用，你可以在 Visual Studio Team Services 或 Team Foundation Server 中存储你的代码，并继续用于 Jenkins CI 生成。 Jenkins 生成的数据时会触发代码推送到你的团队项目的 Git 存储库或者当你检查代码到 TFVC。 有关详细信息，请参阅[利用 Visual Studio Team Services Jenkins](https://docs.microsoft.com/en-us/vsts/service-hooks/services/jenkins?view=vsts)。
 
 [![](intro-to-ci-images/intro04-small.png "如果你使用 Jenkins 生成你的应用，你可以在 Visual Studio Team Services 或 Team Foundation Server 中存储你的代码，并继续用于 Jenkins CI 生成")](intro-to-ci-images/intro04.png#lightbox)
 

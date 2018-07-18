@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30773610"
 ---
 # <a name="lollipop-features"></a>棒糖形功能
 
@@ -72,7 +73,7 @@ Android 5.0 （棒糖形） 引入了一种新的设计语言，*材料设计*�
    有关使用 Android SDK 管理器的详细信息，请参阅[SDK 管理器](http://developer.android.com/tools/help/sdk-manager.html)。
 
 4. 创建新的 Xamarin.Android 项目。 如果你不熟悉如何使用 Xamarin Android 开发，请参阅[Hello，Android](~/android/get-started/hello-android/index.md)若要了解有关创建 Android 项目。 在创建 Android 项目时，一定要配置的 Android 5.0 版本设置。
-   在 Visual Studio for Mac 中，导航到**项目选项&gt;生成&gt;常规**并设置**目标框架**到**Android 5.0 （棒糖形）**或更高版本：
+   在 Visual Studio for Mac 中，导航到**项目选项&gt;生成&gt;常规**并设置**目标框架**到**Android 5.0 （棒糖形）** 或更高版本：
 
     ![将目标 Framwework 设置为 Android 5.0 棒糖形](lollipop-images/target-framework.png)
 

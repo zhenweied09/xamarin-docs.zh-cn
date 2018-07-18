@@ -1,5 +1,5 @@
 ---
-title: 预配配置文件
+title: Xamarin.Mac 应用的预配配置文件
 description: 本指南介绍如何创建发布 Xamarin.Mac 应用所需的设置配置文件。
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f3120c45de5022dca1e522be251f453f9f5b4c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9660d5373cc5213f648b145ef38ddbf25c7633ce
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792146"
 ---
-# <a name="provisioning-profiles"></a>预配配置文件
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 应用的预配配置文件
 
 配置文件允许开发人员将多个 macOS（以前称为 Mac OS X）特定功能（例如 iCloud 和推送通知）合并到 Xamarin.Mac 应用中。 开发人员必须为开发的每个应用程序创建、下载和安装 Mac 配置文件才能使用这些功能。
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30767708"
 ---
 # <a name="packaging-wear-apps"></a>打包磨损应用
 
@@ -24,7 +25,7 @@ Android 磨损应用来打包于 Google Play 上的分发的完整 Android 应�
 
 1. 如果您磨损的应用程序尚不手持解决方案的一部分，右键单击解决方案节点，然后选择**添加 > 添加现有项目...**.
 
-2. 导航到**.csproj**文件磨损应用程序，选择它，然后单击**打开**。 磨损应用程序项目现在应可以看到手持解决方案中。
+2. 导航到 **.csproj**文件磨损应用程序，选择它，然后单击**打开**。 磨损应用程序项目现在应可以看到手持解决方案中。
 
 3. 右键单击**引用**节点，然后选择**添加引用**。
 
@@ -36,7 +37,7 @@ Android 磨损应用来打包于 Google Play 上的分发的完整 Android 应�
 
 1. 如果您磨损的应用程序尚不手持解决方案的一部分，右键单击解决方案节点，然后选择**添加 > 添加现有项目...**.
 
-2. 导航到**.csproj**文件磨损应用程序，选择它，然后单击**打开**。 磨损应用程序项目现在应可以看到手持解决方案中。
+2. 导航到 **.csproj**文件磨损应用程序，选择它，然后单击**打开**。 磨损应用程序项目现在应可以看到手持解决方案中。
 
 3. 右键单击解决方案，然后单击中的手持项目节点**编辑引用...**.
 
@@ -84,7 +85,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 2. 手动生成 Wearable 项目作为**版本**生成。
 
-3. 手动添加版本**。APK**从单步 (2) 执行**原始资源/** Handheld (Phone) 项目的目录。
+3. 手动添加版本 **。APK**从单步 (2) 执行**原始资源/** Handheld (Phone) 项目的目录。
 
 4. 手动添加新的 XML 资源**Resources/xml/wearable_app_desc.xml**在手持项目中它是指可穿戴**APK**步骤 (3) 中：
 

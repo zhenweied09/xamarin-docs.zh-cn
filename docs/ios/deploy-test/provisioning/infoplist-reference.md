@@ -1,18 +1,20 @@
 ---
-title: Info.plist 引用
+title: Xamarin.iOS 的 Info.plist 引用
+description: 本文档介绍可以在 Xamarin.iOS 应用程序的 Info.plist 文件中设置的各种键/值对。 应用执行特定任务（例如访问位置、照片、麦克风或照相机）时，这些键是必需的。
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2017
-ms.openlocfilehash: 8ad2c5e8137dede71d9858aa144e440d984c1a75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fa40add67155bd982041b829264a10b9764aa950
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785471"
 ---
-# <a name="infoplist-reference"></a>Info.plist 引用
+# <a name="infoplist-reference-for-xamarinios"></a>Xamarin.iOS 的 Info.plist 引用
 
 有关使用 Info.Plist 键的详细信息，请参阅[保护安全和隐私](~/ios/app-fundamentals/security-privacy.md)指南。 
 

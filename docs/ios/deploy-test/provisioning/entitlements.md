@@ -1,5 +1,5 @@
 ---
-title: 使用权利
+title: 在 Xamarin.iOS 中使用权利
 description: 权利是授予应用程序的特殊应用功能和安全性权限，这些应用程序经过正确配置可以使用权利。
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f158ab7e51eb7610566ed052b326fecf016add8a
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785299"
 ---
-# <a name="working-with-entitlements"></a>使用权利
+# <a name="working-with-entitlements-in-xamarinios"></a>在 Xamarin.iOS 中使用权利
 
 _权利是授予给应用程序的特殊应用功能和安全性权限，这些应用程序经过正确配置可以使用权利。_
 

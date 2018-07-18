@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30771013"
 ---
 # <a name="java-bindings-metadata"></a>Java 绑定元数据
 
@@ -245,7 +246,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>模糊处理
 
-对 Java 库进行模糊处理的工具可能会影响 Xamarin.Android 绑定生成器，并且能够生成 C# 包装类。 经过模糊处理的类的特征包括: * class 名称中包含**$**，即**$.class** * 类名称完全泄露小写字符，即**a.class**
+对 Java 库进行模糊处理的工具可能会影响 Xamarin.Android 绑定生成器，并且能够生成 C# 包装类。 经过模糊处理的类的特征包括: * class 名称中包含**$**，即 **$.class** * 类名称完全泄露小写字符，即**a.class**
 
 此代码段演示如何生成一个"未经过模糊处理"的 C# 类型：
 

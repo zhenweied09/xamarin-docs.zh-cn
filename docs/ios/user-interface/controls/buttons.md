@@ -1,72 +1,72 @@
 ---
-title: 在 Xamarin.iOS 的按钮
-description: UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。 本部分介绍使用按钮在 iOS 中的不同选项。
+title: 在 Xamarin.iOS 中的按钮
+description: UIButton 类用于表示在 iOS 屏幕的按钮的各种不同的样式。 本指南介绍使用按钮在 iOS 中的不同选项。
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/21/2017
-ms.openlocfilehash: bf9a36c63e0c153ed950f4c3531e99e6baf77687
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/11/2018
+ms.openlocfilehash: 32f6330ad2fddc2e8386d6e574918a011f3bebad
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789474"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985999"
 ---
-# <a name="buttons-in-xamarinios"></a>在 Xamarin.iOS 的按钮
+# <a name="buttons-in-xamarinios"></a>在 Xamarin.iOS 中的按钮
 
-_UIButton 类用于表示在 iOS 屏幕中的按钮的各种不同的样式。本部分介绍使用按钮在 iOS 中的不同选项。_
+在 iOS 中，`UIButton`类表示一个按钮控件。
 
-`UIButton`类表示在 iOS 中的按钮控件。 
+可以修改按钮的属性，以编程方式或使用**Properties Pad**的 iOS 设计器：
 
-可以在中编辑按钮属性`Properties Pad`iOS 设计器：
+![IOS 设计器的属性面板](buttons-images/properties.png "iOS 设计器的 Properties Pad")
 
+## <a name="creating-a-button-programmatically"></a>以编程方式创建按钮
 
-![](buttons-images/properties.png "IOS 设计器属性小键盘")
+一个`UIButton`可以创建仅几行代码。
 
-## <a name="creating-a-button"></a>创建按钮
+- 实例化一个按钮，并指定其类型：
 
-通过只几行代码，可以在创建 UIButton。
+  ```csharp
+  UIButton myButton = new UIButton(UIButtonType.System);
+  ```
 
-首先，实例化一个新按钮，并指定所需的按钮的类型：
+  按钮的类型由指定`UIButtonType`:
 
-```csharp
-UIButton myButton = new UIButton(UIButtonType.System);
-```
+  - `UIButtonType.System` -常规用途的按钮
+  - `UIButtonType.DetailDisclosure` -表示详细信息，通常是关于表中特定项的可用性
+  - `UIButtonType.InfoDark` -指示; 的配置信息的可用性深色的
+  - `UIButtonType.InfoLight` -指示; 的配置信息的可用性浅色
+  - `UIButtonType..AddContact` -指示可以添加联系人
+  - `UIButtonType.Custom` 自定义按钮
 
-UIButtonType 应指定为以下项之一：
+  有关不同的按钮类型的详细信息，看看：
+  
+  - [自定义按钮类型](#custom-button-types)本文档的部分
+  - [按钮类型](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/create_different_types_of_buttons)方案
+  - Apple [iOS 人机接口指南 》](https://developer.apple.com/design/human-interface-guidelines/ios/controls/buttons/)。
 
-- **系统**-这是使用 iOS 的标准按钮类型，你将最常使用的类型。
-- **DetailDisclosure** -显示的按钮用于隐藏或显示详细的信息"调低"类型。
-- **InfoDark** -在深色详细信息按钮显示在一个圆周中的"i"。
-- **InfoLight** -light 详细信息按钮显示在一个圆周中的"i"。
-- **AddContact** -显示作为添加联系人按钮的按钮。
-- **自定义**-允许你自定义按钮的多个特征。
+- 定义按钮的大小和位置：
 
-按钮类型详细信息可在[按钮类型](https://developer.xamarin.com/recipes/ios/standard_controls/buttons/create_different_types_of_buttons/)配方。
+  ```csharp
+  myButton.Frame = new CGRect(25, 25, 300, 150);
+  ```
 
-接下来，定义屏幕大小和位置的按钮。 示例:
+- 设置按钮的文本。 使用`SetTitle`方法，需要对文本和一个`UIControlState`值：
 
-```csharp
-myButton.Frame = new CGRect (25, 25, 300, 150);
-```
+  ```csharp
+  myButton.SetTitle("Hello, World!", UIControlState.Normal);
+  ```
 
-若要更改按钮中的文本，请使用`SetTitle`按钮，这就需要你设置的文本字符串的属性和`UIControlStyle`。 例如：
+  有关设置按钮的样式和设置其文本的详细信息，请参阅：
 
-```csharp
-myButton.SetTitle("Hello, World!", UIControlState.Normal);
-```
+  - [样式按钮](#styling-a-button)本文档的部分
+  - [设置按钮文本](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/set_button_text)方案。
 
-设置为每个状态的不同属性让你能够通信 （如向用户的详细信息 请的文本颜色灰色为禁用状态）。 您可以使用 iOS 设计器中，每个状态之间切换也可以编程方式执行操作。 有关设置按钮文本和状态的详细信息，请参阅[设置按钮文本](https://developer.xamarin.com/recipes/ios/standard_controls/buttons/set_button_text/)配方。
+## <a name="handling-a-button-tap"></a>处理点击按钮
 
-## <a name="dealing-with-user-interactions"></a>处理用户交互
-
-
-按钮不是非常有用的除非它们执行某些单击时操作 ！ 
-
-在 iOS 上按钮的事件几乎始终是触控事件，当使用其屏幕上的按钮与交互通过触摸它。 列出所有可能的 UIControl 事件的列表[此处](https://developer.apple.com/documentation/uikit/uicontrolevents)，但在 iOS 上的最常用事件`TouchUpInside`。 然后，你可以创建事件处理程序来执行一些操作按下了按钮：
-
+若要响应按钮点击，提供处理程序，为按钮的`TouchUpInside`事件：
 
 ```csharp
 button.TouchUpInside += (sender, e) => {
@@ -74,38 +74,44 @@ button.TouchUpInside += (sender, e) => {
 };
 ```
 
-### <a name="adding-events-in-the-ios-designer"></a>在 iOS 设计器中添加事件
- 
-在属性板中使用事件选项卡将事件添加到控件。
+> [!NOTE]
+> `TouchUpInside` 不是唯一可用的按钮事件。 `UIButton` 是的一个子类`UIControl`，用于定义[多个不同事件](https://developer.xamarin.com/api/type/UIKit.UIControlEvent/)。
 
-选择该事件，然后输入一个新的事件处理程序或从列表中的选择一个的名称。 执行此操作将视图控制器类中创建新的分部方法。
+### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>使用 iOS 设计器指定按钮事件处理程序
 
-![事件选项卡](buttons-images/image1.png)
+使用**事件**选项卡**Properties Pad**若要指定的按钮的各种事件在事件处理程序。
 
-## <a name="styling-a-button"></a>样式按钮
+对于相应的事件中，键入新的事件处理程序的名称，或从列表中选择一个。 执行此操作将为按钮的视图控制器在代码中创建一个事件处理程序。
 
-UIButtons 不同于大多数 UIKit 控制，因此根本不能更改标题都具有一种状态，你必须更改每个`UIControlState`。 设置标题颜色和阴影颜色以类似的方式完成：
+![事件选项卡的属性面板](buttons-images/image1.png "事件选项卡的属性面板")
+
+## <a name="styling-a-button"></a>设置按钮样式
+
+`UIButton` 每个控件可以存在于多个不同的状态，指定由`UIControlState`值 – `Normal`， `Disabled`， `Focused`， `Highlighted`，等等。每种状态，可以提供以编程方式或使用 iOS 设计器指定一个唯一样式。
+
+> [!NOTE]
+> 对于所有的完整列表`UIControlState`值，看一看[ `UIKit.UIControlState enumeration` ](https://developer.xamarin.com/api/type/UIKit.UIControlState/)文档。
+
+例如，若要设置标题颜色和阴影颜色`UIControlState.Normal`:
 
 ```csharp
-button.SetTitleColor (UIColor.White, UIControlState.Normal);
+button.SetTitleColor(UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-此外，你可以为按钮的标题使用特性化的文本。 例如：
+下面的代码设置为特性化 （风格） 字符串的按钮标题`UIControlState.Normal`和`UIControlState.Highlighted`:
 
 ```csharp
-var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
-myButton.SetAttributedTitle (normalAttributedTitle, UIControlState.Normal);
+var normalAttributedTitle = new NSAttributedString(buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
+myButton.SetAttributedTitle(normalAttributedTitle, UIControlState.Normal);
 
-var highlightedAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Green, strikethroughStyle: NSUnderlineStyle.Thick);
-myButton.SetAttributedTitle (highlightedAttributedTitle, UIControlState.Highlighted);
+var highlightedAttributedTitle = new NSAttributedString(buttonTitle, foregroundColor: UIColor.Green, strikethroughStyle: NSUnderlineStyle.Thick);
+myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlighted);
 ```
 
 ## <a name="custom-button-types"></a>自定义按钮类型
 
-
-当你将设置`Custom`按钮类型，该对象具有没有默认呈现。 你可以通过设置图像的不同状态配置按钮的外观。 例如，下面的代码演示如何添加不同映像`Normal`，`Highlighted`和`Selected`状态：
-
+按钮`UIButtonType`的`Custom`不有任何默认样式。 但是，就可以通过设置不同状态下的映像来配置该按钮的外观：
 
 ```csharp
 button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
@@ -113,16 +119,13 @@ button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UICont
 button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
+具体取决于是否用户接触到按钮，或不，它将呈现为以下映像之一 (`UIControlState.Normal`，`UIControlState.Highlighted`和`UIControlState.Selected`指出，分别):
 
-具体取决于是否用户接触到按钮，或不，它将呈现为以下映像之一 (`Normal`，`Highlighted`和`Selected`分别状态):
+![UIControlState.Normal](buttons-images/image22.png "UIControlState.Normal")
+![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted") 
+![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
 
-
-![](buttons-images/image22.png "UIButton 状态正常")
-![](buttons-images/image23.png "突出显示的 UIButton 状态")
-![](buttons-images/image24.png "选择的 UIButton 状态")
-
-有关使用自定义按钮的详细信息，请参阅[使用按钮图像](https://developer.xamarin.com/recipes/ios/standard_controls/buttons/use_an_image_for_a_button/)。
-
+有关如何使用自定义按钮的详细信息，请参阅[使用图像作为按钮](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button)方案。
 
 ## <a name="related-links"></a>相关链接
 

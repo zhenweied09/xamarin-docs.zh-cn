@@ -1,6 +1,6 @@
 ---
-title: Hello，iOS：深入了解
-description: 这个两部分的指南介绍如何使用 Visual Studio for Mac 或 Visual Studio 生成一个基本 Xamarin.iOS 应用程序，并促进了解使用 Xamarin 进行 iOS 应用程序开发的基础知识。 它会介绍生成和部署 Xamarin.iOS 应用程序所需的工具、概念和步骤。
+title: Hello，iOS - 深入了解
+description: 本文档深入介绍了 Hello，iOS 示例应用程序，包括其体系结构、用户界面、内容视图层次结构、测试、部署等。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786395"
 ---
-# <a name="hello-ios-deep-dive"></a>Hello，iOS 深入了解
+# <a name="hello-ios--deep-dive"></a>Hello，iOS - 深入了解
 
 快速入门演练介绍了如何生成和运行基本 Xamarin.iOS 应用程序。 现在可以更深入地了解 iOS 应用程序的工作原理，以便可以生成更复杂的程序。 本指南回顾了“Hello，iOS”演练中的步骤，以便了解 iOS 应用程序开发的基本概念。
 
 本文探讨了以下主题：
-
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 

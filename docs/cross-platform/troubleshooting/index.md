@@ -1,18 +1,18 @@
 ---
 title: Xamarin 故障排除
-description: Xamarin 开发有关的常见问题的答案描述如何更新到 NuGet，组件引用的内容的此文档链接讨论支持选项，并回答特定于产品的问题。
+description: 此文档所链接到 Xamarin 开发有关的常见问题的解答介绍了如何更新组件引用到 NuGet，内容讨论支持选项，并回答特定于产品的问题。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
 author: asb3993
 ms.author: amburns
-ms.date: 02/18/2018
-ms.openlocfilehash: 7a10a20290872005233bfffd5ec861f7372be4a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 05/10/2018
+ms.openlocfilehash: fe2cfacaa8658357a1c6629b1c1e8676efebd452
+ms.sourcegitcommit: 90be517ed7a1dbd221da5be5d1a7228d36f164d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782058"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792548"
 ---
 # <a name="xamarin-troubleshooting"></a>Xamarin 故障排除
 
@@ -20,15 +20,11 @@ ms.locfileid: "34782058"
 
 ### <a name="frequently-asked-questionsquestionsindexmd"></a>[常见问题](questions/index.md)
 
-有关常见问题的 Xamarin 平台和回答特定于 Visual Studio。
+有关常见问题的 Xamarin 平台和 Visual Studio 特有的答案。
 
 ### <a name="updating-component-references-to-nugetcomponent-nugetmd"></a>[更新对 NuGet 的组件引用](component-nuget.md)
 
-如何更新现有的 Xamarin 解决方案，若要更改组件引用到 NuGet 程序包。
-
-### <a name="support-optionssupport-optionsmd"></a>[支持选项](support-options.md)
-
-为 Xamarin 产品支持的选项。
+如何更新现有的 Xamarin 解决方案，若要更改对 NuGet 包的组件引用。
 
 ## <a name="product-specific-questions"></a>特定于产品的问题
 

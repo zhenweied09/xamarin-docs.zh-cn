@@ -6,15 +6,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: f7ba0620a4639ff62e2d75d7cf8f02fcc01faac5
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: 2cb2167f534251e15455e11b6a2c85f53fb48b8c
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066996"
 ---
 # <a name="publishing-independently"></a>独立发布
 
-可在不使用任何现有 Android 应用商店的情况下发布应用程序。 本部分将介绍其他发布方法和 Xamarin.Android 的许可级别。
+可在不使用任何现有 Android 市场的情况下发布应用程序。 本部分将介绍其他发布方法和 Xamarin.Android 的许可级别。
 
 
 ## <a name="xamarin-licensing"></a>Xamarin 许可
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 
 -   **Visual Studio Enterprise** &ndash; 面向任何规模的团队（仅限 Windows）。 此许可包括企业功能（标准或云订阅）。
 
-若要下载社区版或深入了解如何购买 Professional 版和 Enterprise 版，请访问 [visualstudio.com](https://www.visualstudio.com/xamarin/)。
+若要下载社区版或深入了解如何购买 Professional 版和 Enterprise 版，请访问 [visualstudio.com](https://visualstudio.microsoft.com/xamarin/)。
 
 
 ## <a name="allow-installation-from-unknown-sources"></a>允许来自未知源的安装

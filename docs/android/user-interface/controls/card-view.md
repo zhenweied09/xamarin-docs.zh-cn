@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30771829"
 ---
 # <a name="cardview"></a>卡片视图-
 
@@ -50,9 +51,9 @@ _卡片视图-小组件是类似于卡的视图中显示文本和图像的内容
 
 1. 打开你的项目，右键单击**引用**节点 (在**解决方案资源管理器**窗格中)，然后选择**管理 NuGet 包...**.
 
-2. 当**管理 NuGet 包**显示对话框中，输入**卡片视图-**的搜索框中。
+2. 当**管理 NuGet 包**显示对话框中，输入**卡片视图-** 的搜索框中。
 
-3. 当**Xamarin 支持库 v7 卡片视图-**出现时，单击**安装**。
+3. 当**Xamarin 支持库 v7 卡片视图-** 出现时，单击**安装**。
 
 若要了解如何配置 Android 5.0 应用程序项目，请参阅[设置 Android 5.0 项目](~/android/platform/lollipop.md)。
 有关安装 NuGet 包的详细信息，请参阅[演练： 在你的项目包括 NuGet](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)。

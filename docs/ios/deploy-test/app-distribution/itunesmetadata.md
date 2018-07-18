@@ -1,5 +1,5 @@
 ---
-title: iTunesMetadata.plist 文件
+title: Xamarin.iOS 应用中的 iTunesMetadata.plist 文件
 description: 本文介绍了 iTunesMetadata.plist 文件，该文件用于向 iTunes 提供 iOS 应用程序使用 Ad Hoc 分发进行测试或企业部署的相关信息。
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 1b1b0c758126acb0c1e7953ea36e5ac871ee20ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39e1af5edf91ffd6811fa8d221fd56580f3b33da
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784896"
 ---
-# <a name="the-itunesmetadataplist-file"></a>iTunesMetadata.plist 文件
+# <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 应用中的 iTunesMetadata.plist 文件
 
 本文介绍了 iTunesMetadata.plist 文件，该文件用于向 iTunes 提供 iOS 应用程序使用 Ad Hoc 分发进行测试或企业部署的相关信息。
 

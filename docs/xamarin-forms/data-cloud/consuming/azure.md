@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 73d74b59ef6e59028eec7cad19feec21908b6329
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241326"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269039"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>使用 Azure 移动应用
 
 _Azure 移动应用，可以使用可缩放的后端移动身份验证、 脱机同步和推送通知的支持与托管在 Azure App Service 中开发应用。本文中，这仅适用于使用 Node.js 后端的 Azure Mobile Apps，说明如何查询、 插入、 更新和删除数据存储在 Azure Mobile Apps 实例中的表。_
+
+> [!NOTE]
+> 从开始在 6 月 30 日，所有新的 Azure Mobile Apps 将创建使用 TLS 1.2 默认情况下。 此外，还建议你现有 Azure Mobile Apps 重新配置为使用 TLS 1.2。 有关如何强制 Azure 移动应用程序中的 TLS 1.2 的信息，请参阅[强制实施 TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112)。 有关如何配置 Xamarin 项目以使用 TLS 1.2 的信息，请参阅[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)。
 
 有关如何创建可供 Xamarin.Forms Azure Mobile Apps 实例的信息，请参阅[创建 Xamarin.Forms 应用](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/)。 按照这些说明操作之后, 的可下载示例应用程序可以将配置为使用 Azure Mobile Apps 实例通过设置`Constants.ApplicationURL`Azure Mobile Apps 实例的 url。 然后，运行示例应用程序时它将连接到 Azure Mobile Apps 实例，如下面的屏幕截图中所示：
 

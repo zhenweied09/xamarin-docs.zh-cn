@@ -1,17 +1,19 @@
 ---
-title: 环境
+title: Xamarin.iOS 应用的执行环境
+description: 本文档介绍如何设置 Xamarin.iOS 应用的临时和永久环境变量。 这些变量可以在项目的属性中指定，也可以作为 mtouch 打包工具的额外参数进行指定。
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bc06ce3f3a26842340ce6e19741a8a7dfe8f086d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 246c65729f9327dd1ccf549603b4c2b1feb023e8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784961"
 ---
-# <a name="environment"></a>环境
+# <a name="execution-environment-for-xamarinios-apps"></a>Xamarin.iOS 应用的执行环境
 
 *执行环境*是一系列影响程序执行的环境变量。 可以在项目的属性中暂时设置环境变量，或通过将 mtouch 打包工具指定为额外参数来永久设置环境变量。
 

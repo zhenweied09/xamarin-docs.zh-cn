@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918482"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>迁移到统一的 API 绑定
 

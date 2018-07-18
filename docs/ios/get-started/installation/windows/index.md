@@ -1,17 +1,18 @@
 ---
 title: 在 Windows 上安装 Xamarin.iOS
-description: 本文介绍如何设置适用于 Xamarin.iOS 开发的 Windows 计算机和 Mac 生成主机。
+description: 本文档介绍了如何设置 Windows 计算机和 Mac 生成主机，以及如何将 Windows 与 Mac 配对，以便进行 Xamarin.iOS 开发。
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: e6f50a48481be3ca5c64332f5a182e44715740c0
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.openlocfilehash: 2bff37aba9b961b7308bf261377951dc96bd8e34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786059"
 ---
 # <a name="installing-xamarinios-on-windows"></a>在 Windows 上安装 Xamarin.iOS
 

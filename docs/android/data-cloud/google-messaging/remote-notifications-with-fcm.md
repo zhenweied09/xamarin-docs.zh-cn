@@ -12,6 +12,7 @@ ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31044933"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知 Firebase 云消息传送
 
@@ -534,7 +535,7 @@ subscribeButton.Click += delegate {
 
 5.  设备已准备好，单击**发送消息**Firebase 控制台中。 
 
-6.  检查 IDE 输出窗口以查看**/主题/新闻**日志输出中： 
+6.  检查 IDE 输出窗口以查看 **/主题/新闻**日志输出中： 
 
     [![显示从 /topic/news 的消息](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 

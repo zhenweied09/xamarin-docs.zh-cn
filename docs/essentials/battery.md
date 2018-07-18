@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Essentials： 电池
-description: 本文档介绍 Xamarin.Essentials，允许你检查设备的电池信息和监视的更改中的电池类。
+description: 本文档介绍 Xamarin.Essentials，可以检查设备的电池信息和更改监视器中的电池类。
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 35764b4c2270359a7c010e1186f882e236e17fd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1ed0ef5e013967545e739733c887702325f60c3f
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782081"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855050"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials： 电池
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**电池**类允许你检查设备的电池信息和监视的更改。
+**电池**类，可以检查设备的电池信息和监视的更改。
 
 ## <a name="getting-started"></a>入门
 
@@ -24,7 +24,7 @@ ms.locfileid: "34782081"
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-`Battery`权限是必需的必须在 Android 项目中配置。 这可以通过以下方式添加：
+`Battery`权限是必需的必须在 Android 项目中配置。 这可以通过以下方法添加：
 
 打开**AssemblyInfo.cs**文件下**属性**文件夹并添加：
 
@@ -34,7 +34,7 @@ ms.locfileid: "34782081"
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹并添加以下内的**清单**节点。
+打开**AndroidManifest.xml**文件下**属性**文件夹，并添加以下的内部**清单**节点。
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY" />
@@ -44,23 +44,23 @@ ms.locfileid: "34782081"
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-不需要其他的安装程序。
+无需其他设置。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-不需要其他的安装程序。
+无需其他设置。
 
 -----
 
 ## <a name="using-battery"></a>使用电池
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-检查当前电池信息：
+检查当前的电池信息：
 
 ```csharp
 var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
@@ -108,7 +108,7 @@ switch (source)
 }
 ```
 
-每当任何电池的属性更改时触发事件：
+每当任何电池的属性发生更改时触发一个事件：
 
 ```csharp
 public class BatteryTest
@@ -129,13 +129,23 @@ public class BatteryTest
 }
 ```
 
-## <a name="platform-differences"></a>平台的差异
+## <a name="platform-differences"></a>平台差异
 
-| 平台 | 差异 |
-| --- | --- |
-| iOS | 设备必须用于测试 Api。 |
-| iOS | 仅将返回 Ac 或电池 PowerSource。 |
-| UWP | 仅将返回 Ac 或电池 PowerSource。 |
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+任何平台的差异。
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+* 必须使用设备来测试 Api。 
+* 仅将返回`Ac`或`Battery`为`PowerSource`。 
+* 无法取消振动。
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+* 仅将返回`Ac`或`Battery`为`PowerSource`。 
+
+-----
 
 ## <a name="api"></a>API
 

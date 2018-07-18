@@ -1,21 +1,20 @@
 ---
-title: 入门
-description: 通过这些实用详细的指南，从零开始学习开发移动应用程序以进行部署。
+title: Xamarin 入门
+description: 本文档链接到介绍如何开始使用 Xamarin 开发的各种指南。 链接内容讨论了如何生成第一个应用，对移动开发进行了总体介绍，并介绍了 Xamarin University 培训。
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: de5b1499f95e6703e0c11adb1f76e1717a494e33
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3873236c64f1288a896c40d468f06b60f532a431
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780791"
 ---
-# <a name="getting-started"></a>入门
-
-_通过这些实用详细的指南，从零开始学习开发移动应用程序以进行部署。_
+# <a name="getting-started-with-xamarin"></a>Xamarin 入门
 
 开始前，请检查[系统要求](requirements.md)和[安装说明](installation/index.md)，确保一切就绪。
 

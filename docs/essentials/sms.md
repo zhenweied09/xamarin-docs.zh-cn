@@ -1,32 +1,32 @@
 ---
-title: 'Xamarin.Essentials: SMS'
-description: 应用程序，以使用指定的消息将发送到收件人打开默认 SMS 应用程序可以 Xamarin.Essentials 中的 Sms 类。
+title: Xamarin.Essentials： 短信
+description: Xamarin.Essentials 中的 Sms 类使应用程序以使用指定的消息将发送到收件人打开默认短信应用程序。
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: a93a67b83ea8f435a5e3ad5d26e1d6cbbb7092f7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815592"
 ---
-# <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
+# <a name="xamarinessentials-sms"></a>Xamarin.Essentials： 短信
 
-![预发行 NuGet](~/media/shared/pre-release.png)
+![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**Sms**类可让应用程序使用指定的消息将发送到收件人打开默认 SMS 应用程序。
+**Sms**类使应用程序以使用指定的消息将发送到收件人打开默认短信应用程序。
 
 ## <a name="using-sms"></a>使用短信
 
-在你的类中添加对 Xamarin.Essentials 的引用：
+在类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-SMS 功能的工作方式是调用`ComposeAsync`方法`SmsMessage`，其中包含消息的接收方和消息，这两种都是可选的正文。
+短信功能适用于通过调用`ComposeAsync`方法`SmsMessage`，其中包含消息的收件人和消息，这两者都是可选的正文。
 
 ```csharp
 public class SmsTest
@@ -53,4 +53,4 @@ public class SmsTest
 ## <a name="api"></a>API
 
 - [Sms 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
-- [Sms API 文档](xref:Xamarin.Essentials.Sms)
+- [短信 API 文档](xref:Xamarin.Essentials.Sms)

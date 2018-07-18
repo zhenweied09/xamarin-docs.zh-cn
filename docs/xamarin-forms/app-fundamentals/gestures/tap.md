@@ -1,26 +1,26 @@
 ---
-title: 添加点击手势笔势识别器
-description: 此文章介绍了如何使用在 Xamarin.Forms 应用程序中点击检测的点击动作。 与 TapGestureRecognizer 类实现 tap 检测。
+title: 添加的点击手势手势识别程序
+description: 本文介绍如何使用点击手势进行点击检测在 Xamarin.Forms 应用程序中。 点击检测是通过 TapGestureRecognizer 类实现的。
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: bbe4ca7a1080459b8aeb33640be5158b15e97715
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240660"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994849"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>添加点击手势笔势识别器
+# <a name="adding-a-tap-gesture-gesture-recognizer"></a>添加的点击手势手势识别程序
 
-_点击动作用于 tap 检测，并与 TapGestureRecognizer 类实现。_
+_点击手势用于点击检测并使用 TapGestureRecognizer 类实现。_
 
 ## <a name="overview"></a>概述
 
-若要使用户界面元素与点击动作可单击，创建[ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)实例时，处理[ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/)事件并将添加到新的笔势识别器[`GestureRecognizers` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/)上的用户界面元素的集合。 下面的代码示例演示`TapGestureRecognizer`附加到[ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/)元素：
+若要使用户界面元素与点击手势可单击，创建[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)实例，则处理[ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped)事件，并添加到新的笔势识别器[`GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers)上的用户界面元素的集合。 下面的代码示例演示`TapGestureRecognizer`附加到[ `Image` ](xref:Xamarin.Forms.Image)元素：
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -30,19 +30,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-默认情况下该映像将响应单个分流。 设置[ `NumberOfTapsRequired` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/)属性要等待的时间双击 （或点击如果所需的操作）。
+默认情况下该映像将响应单个分流点。 设置[ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired)属性时要等待的双点击 （或更多分流点，如果需要）。
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-当[ `NumberOfTapsRequired` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired/)设置高于 1，事件处理程序将仅执行当次点击发生在一段时间 （此期间不可配置） 内。 如果第二个 （或后续） 点击操作不会发生在该时间段内有效地对它们将被忽略，并点击计数重新启动。
+当[ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired)设置高于 1，事件处理程序，才会执行如果在一段时间 （这段不是可配置） 内未发生两次点击。 如果在该时间段内不会发生第二个 （或后续） 两次点击有效地忽略它们并点击计数重新启动。
 
 <a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>使用 Xaml
 
-可以将笔势识别器添加到使用附加的属性的 Xaml 中的控件。 若要添加的语法[ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)的图像如下所示 (在这种情况下定义*双击*事件):
+笔势识别器可以添加到 Xaml 中，使用附加的属性中的控件。 若要添加的语法[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)如下所示的图像 (在这种情况下定义*双击*事件):
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -54,7 +54,7 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 </Image>
 ```
 
-事件处理程序 （示例） 中的代码增加了一个计数器和映像从颜色更改为黑色&amp;白色。
+（在此示例中） 的事件处理程序的代码递增计数器，并会将映像从颜色更改为黑色&amp;白色。
 
 ```csharp
 void OnTapGestureRecognizerTapped(object sender, EventArgs args)
@@ -72,7 +72,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>使用 ICommand
 
-通常使用 Mvvm 模式的应用程序使用`ICommand`而不是直接方式设置事件处理程序。 [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)可以轻松地支持`ICommand`通过在代码中设置绑定：
+通常使用 Mvvm 模式的应用程序使用`ICommand`而不是直接绑定事件处理程序。 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)可以轻松地支持`ICommand`通过在代码中设置绑定：
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -80,7 +80,7 @@ tapGestureRecognizer.SetBinding (TapGestureRecognizer.CommandProperty, "TapComma
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-或使用 Xaml:
+也可以使用 Xaml:
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -92,7 +92,7 @@ image.GestureRecognizers.Add(tapGestureRecognizer);
 </Image>
 ```
 
-在此示例中找不到此视图模型的完整代码。 相关`Command`实现详细信息如下所示：
+可以在此示例中找到此视图模型的完整代码。 相关`Command`实现的详细信息如下所示：
 
 ```csharp
 public class TapViewModel : INotifyPropertyChanged
@@ -116,11 +116,11 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## <a name="summary"></a>总结
 
-点击动作用于 tap 检测并实现与[ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)类。 可指定的点击数来识别双击 (或三次点击，或多个点击) 行为。
+点击手势用于点击检测和使用实现[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)类。 可以指定的点击数来识别双击 (或三击或多个点击) 行为。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [TapGesture （示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [TapGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

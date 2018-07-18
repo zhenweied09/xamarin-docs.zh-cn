@@ -1,16 +1,17 @@
 ---
 title: 面向 Objective-C 开发人员的 C# 入门
-description: Xamarin.iOS 允许用 C# 编写的平台无关的代码跨平台共享。 但是，现有 iOS 应用程序可能想要利用已创建的 Objective-C 代码。 本文面向希望转移到 Xamarin 和 C# 语言的 Objective-C 开发人员提供一个快速入门。
+description: 本文档为 Objective-C 开发人员介绍 C#。 通过检查协议和接口、类别和扩展方法、框架和程序集、选择器和命名参数等来比较和对比这两种语言。
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4c8e7246b4414fb4153f0dd9eb812ddff1e7b07
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 514841bb18ebed72c07377ff95127dff247f0d71
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786208"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>面向 Objective-C 开发人员的 C# 入门
 

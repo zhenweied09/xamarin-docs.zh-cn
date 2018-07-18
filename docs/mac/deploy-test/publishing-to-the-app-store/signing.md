@@ -1,19 +1,20 @@
 ---
-title: 使用开发人员 ID 签名
-description: 本指南介绍使用开发人员 ID 对 Xamarin.Mac 应用进行签名，以便进行发布。
+title: 使用开发人员 ID 对 Xamarin.Mac 应用进行签名
+description: 本文档介绍如何使用开发人员 ID 对 Xamarin.Mac 应用进行签名，以便可以在 Mac App Store 之外进行分发。 其中讨论了代码签名选项和生成。
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 130766ef7f9ab8e311db97a7209f4ec62a2ceee4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792298"
 ---
-# <a name="sign-with-developer-id"></a>使用开发人员 ID 签名
+# <a name="signing-xamarinmac-apps-with-a-developer-id"></a>使用开发人员 ID 对 Xamarin.Mac 应用进行签名
 
 如果开发人员计划直接将应用分发给 macOS 用户，Apple 建议使用开发人员 ID 对应用进行代码签名，以便可在启用“网关守卫”的 macOS 系统上安装此应用。 如果应用未经签名，**网关守卫**会通过警告消息阻止用户安装（在启动时按住 Ctrl 键可跳过此限制）。
 

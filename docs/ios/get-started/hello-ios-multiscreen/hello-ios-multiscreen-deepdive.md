@@ -1,6 +1,6 @@
 ---
-title: Hello，iOS 多屏显示
-description: 在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。
+title: Hello，iOS 多屏显示 - 深入了解
+description: 本文档更深入地探讨了扩展的 Phoneword 应用程序，进一步介绍了模型-视图-控制器、iOS 导航和其他 iOS 开发概念。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785653"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>了解 iOS 多屏显示详述
+# <a name="hello-ios-multiscreen--deep-dive"></a>Hello，iOS 多屏显示 - 深入了解
 
 在“快速入门”演练中，我们生成并运行了首个多屏显示的 Xamarin.iOS 应用程序。 现在就来更深入了解 iOS 导航和体系结构。
 

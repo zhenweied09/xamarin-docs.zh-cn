@@ -1,19 +1,20 @@
 ---
-title: 映射
+title: 如何使用 Xamarin.Android Google 地图和位置
 description: 此文章介绍了如何使用 Xamarin.Android 的地图和位置。 它涵盖利用内置地图应用程序直接使用 Google 映射 Android API V2 中的所有内容。
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e57dc07aefbd1c80a53f4225f5f44fe72a9ddb9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935368"
 ---
-# <a name="maps"></a>映射
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>如何使用 Xamarin.Android Google 地图和位置
 
 _此文章介绍了如何使用 Xamarin.Android 的地图和位置。它涵盖利用内置地图应用程序直接使用 Google 映射 Android API V2 中的所有内容。_
 
@@ -34,6 +35,5 @@ _此文章介绍了如何使用 Xamarin.Android 的地图和位置。它涵盖�
 - [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [活动生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [获取 Google Maps API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Google Api 外接程序](http://code.google.com/android/add-ons/google-apis/reference/index.html?com/google/android/maps/package-summary.html)
 - [意向列表： 调用在 Android 设备上的 Google 应用程序](http://developer.android.com/guide/appendix/g-app-intents.html)
 - [位置和映射](http://developer.android.com/guide/topics/location/index.html)

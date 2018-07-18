@@ -1,41 +1,41 @@
 ---
 title: 检查设备方向
-description: 此文章介绍了如何使用 Xamarin.Forms DependencyService 类来共享代码中访问设备方向。
+description: 本文介绍如何使用 Xamarin.Forms DependencyService 类来访问设备方向从共享代码。
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: e21531b7f39d3876d91eea8fa6cb9e409a9deffa
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240050"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995636"
 ---
 # <a name="checking-device-orientation"></a>检查设备方向
 
-本文将指导你使用[ `DependencyService` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/)检查每个平台上使用本机 Api 的共享代码中的设备方向。 本演练基于现有`DeviceOrientation`通过阿里 Özgür 插件。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
+本文将指导你使用[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)检查设备方向从每个平台上使用本机 Api 的共享代码。 本演练基于现有`DeviceOrientation`阿里 Özgür 的插件。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
 
-- **[创建接口](#Creating_the_Interface)** &ndash;了解接口如何创建在共享代码中。
+- **[创建接口](#Creating_the_Interface)** &ndash;了解如何在接口中共享代码创建。
 - **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
-- **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码实现接口。
-- **[UWP 实现](#WindowsImplementation)** &ndash;了解如何在本机代码中的通用 Windows 平台 (UWP) 实现接口。
-- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现共享代码中。
+- **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码中实现的接口。
+- **[UWP 实现](#WindowsImplementation)** &ndash;了解如何为通用 Windows 平台 (UWP) 中的本机代码实现的接口。
+- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现从共享代码。
 
 应用程序使用`DependencyService`将具有以下结构：
 
 ![](device-orientation-images/orientation-diagram.png "DependencyService 应用程序结构")
 
 > [!NOTE]
-> 可以检测是否在设备处于纵向或横向朝方向在共享代码中，如所示在 [设备 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation)。 本文中所述方法使用本机功能以获取有关方向，包括设备是否为倒置的详细信息。
+> 可以检测是否在设备处于纵向或横向方向中的共享代码，如下所示在 [设备 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation)。 在本文中所述的方法使用本机功能来获取有关方向，包括设备在正面朝下的详细信息。
 
 <a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>创建界面
 
-首先，创建表示你计划实现的功能的共享代码中的接口。 对于此示例，该接口包含一种方法：
+首先，表达你打算实现的功能的共享代码中创建的接口。 对于此示例，该接口包含一个方法：
 
 ```csharp
 namespace DependencyServiceSample.Abstractions
@@ -54,16 +54,16 @@ namespace DependencyServiceSample.Abstractions
 }
 ```
 
-此接口在共享代码中对编码将允许 Xamarin.Forms 应用程序访问每个平台上的设备方向 Api。
+针对此接口在共享代码中编写代码将允许 Xamarin.Forms 应用程序访问每个平台上的设备方向 Api。
 
 > [!NOTE]
-> 实现接口的类必须具有无参数构造函数中，若要使用`DependencyService`。
+> 实现接口的类必须具有无参数的构造函数，以使用`DependencyService`。
 
 <a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>iOS 实现
 
-每个特定于平台的应用程序项目中，必须实现该接口。 请注意此类具有无参数构造函数，以便`DependencyService`可以创建新实例：
+必须在每个特定于平台的应用程序项目中实现该接口。 请注意，类具有无参数构造函数，以便`DependencyService`可以创建新实例：
 
 ```csharp
 using UIKit;
@@ -87,7 +87,7 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-最后，添加此`[assembly]`属性上面类 （和外部任何已定义的命名空间），包括任何所需`using`语句：
+最后，添加以下`[assembly]`包括任何所需属性该类上方 （和任何已定义的命名空间之外），`using`语句：
 
 ```csharp
 using UIKit;
@@ -99,7 +99,7 @@ namespace DependencyServiceSample.iOS {
     ...
 ```
 
-此属性的实现为注册类`IDeviceOrientation`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可以使用在共享代码中创建它的实例。
+此属性的实现作为注册类`IDeviceOrientation`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可用于共享代码中创建它的一个实例。
 
 <a name="Android_Implementation" />
 
@@ -131,7 +131,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-添加此`[assembly]`属性上面类 （和外部任何已定义的命名空间），包括任何所需`using`语句：
+添加以下`[assembly]`包括任何所需属性该类上方 （和任何已定义的命名空间之外），`using`语句：
 
 ```csharp
 using DependencyServiceSample.Droid; //enables registration outside of namespace
@@ -142,7 +142,7 @@ namespace DependencyServiceSample.Droid {
     ...
 ```
 
-此属性的实现为注册类`IDeviceOrientaiton`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可在共享的代码可以创建它的实例。
+此属性的实现作为注册类`IDeviceOrientaiton`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可在共享的代码可以创建它的一个实例。
 
 <a name="WindowsImplementation" />
 
@@ -171,7 +171,7 @@ namespace DependencyServiceSample.WindowsPhone
 }
 ```
 
-添加`[assembly]`属性上面类 （和外部任何已定义的命名空间），包括任何所需`using`语句：
+添加`[assembly]`包括任何所需属性该类上方 （和任何已定义的命名空间之外），`using`语句：
 
 ```csharp
 using DependencyServiceSample.WindowsPhone; //enables registration outside of namespace
@@ -181,13 +181,13 @@ namespace DependencyServiceSample.WindowsPhone {
     ...
 ```
 
-此属性的实现为注册类`DeviceOrientationImplementation`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可在共享的代码可以创建它的实例。
+此属性的实现作为注册类`DeviceOrientationImplementation`接口，这意味着`DependencyService.Get<IDeviceOrientation>`可在共享的代码可以创建它的一个实例。
 
 <a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>在共享代码中实现
 
-现在我们可以编写和测试访问的共享的代码`IDeviceOrientation`接口。 此简单页包含用于更新基于设备方向自己文本的按钮。 它使用`DependencyService`要获取其实例的`IDeviceOrientation`接口&ndash;在运行时此实例将具有完全访问权限的本机 SDK 的特定于平台的实现：
+现在，我们可以编写并测试访问的共享的代码`IDeviceOrientation`接口。 此简单的页面包括一个按钮，更新其自己基于设备方向的文本。 它使用`DependencyService`若要获取的实例`IDeviceOrientation`接口&ndash;此实例将在运行时是具有完全访问权限的本机 SDK 的特定于平台的实现：
 
 ```csharp
 public MainPage ()
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-在 iOS、 Android 或 Windows 平台上运行此应用程序，并按按钮会导致在该按钮的文本更新设备的方向。
+在 iOS、 Android 或 Windows 平台上运行此应用程序并按下按钮会导致在更新设备的方向的按钮的文本。
 
 ![](device-orientation-images/orientation.png "设备方向示例")
 

@@ -1,24 +1,24 @@
 ---
 title: Xamarin.Forms 绑定模式
-description: 此文章介绍了如何控制源和目标使用 BindingMode 枚举的成员使用指定的绑定模式之间的信息流。 每个可绑定属性具有默认绑定模式，该属性为数据绑定目标时实际上指示的模式。
+description: 此文章介绍了如何控制流的源和目标使用的绑定模式，这指定与 BindingMode 枚举的成员之间的信息。 每个可绑定属性具有默认绑定模式，当该属性是数据绑定目标时有效指示的模式。
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: 12e6416eee989b0d36a7b9fe0ca4dcd9b18b0ade
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: a6eaf08d17f70c43f451361e27555a09c39f26a9
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241811"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935662"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 绑定模式
 
-在[上一篇文章](basic-bindings.md)、**替代代码绑定**和**的替代项 XAML 绑定**特色的页`Label`与其`Scale`属性绑定到`Value`属性`Slider`。 因为`Slider`初始值为 0，这导致`Scale`属性`Label`将设置为 0，而不是 1，与`Label`消失。
+中[前一篇文章](basic-bindings.md)，则**替代方法代码绑定**并**替代 XAML 绑定**特色的页`Label`使用其`Scale`属性绑定到`Value`属性的`Slider`。 因为`Slider`初始值为 0，这导致`Scale`的属性`Label`设置为 0，而不是 1，和`Label`消失。
 
-在[ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)示例中，**反向绑定**页是类似于以前的文章中的程序，只不过在上定义的数据绑定`Slider`而不是在`Label`:
+在中[ **DataBindingDemos** ](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)示例中，**反向绑定**页是类似于前一篇文章中的程序，只不过上定义的数据绑定`Slider`而不是在`Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -41,78 +41,78 @@ ms.locfileid: "35241811"
 </ContentPage>
 ```
 
-首先，这看起来可能向后： 现在`Label`是数据绑定源中，与`Slider`目标。 绑定引用`Opacity`属性`Label`，具有默认值为 1。
+首先，这看起来可能向后： 现在`Label`是数据绑定源和`Slider`是目标。 绑定引用`Opacity`属性的`Label`，其中包含默认值为 1。
 
-如你所料，`Slider`从初始初始化为值 1`Opacity`值`Label`。 在左侧的 iOS 屏幕快照所示：
+正如您所料，`Slider`初始化为值 1 从初始`Opacity`的值`Label`。 在左侧 iOS 屏幕截图所示：
 
 [![反向绑定](binding-mode-images/reversebinding-small.png "反向绑定")](binding-mode-images/reversebinding-large.png#lightbox "反向绑定")
 
-但你可能会对感到惊讶，`Slider`仍将有效，如 Android 和 UWP 屏幕截图所示。 这看起来来建议数据绑定更好时起作用`Slider`是绑定目标而不是`Label`因为初始化工作方式与我们所料。
+但您可能会很吃惊，`Slider`仍将有效，如 Android 和 UWP 的屏幕截图所示。 这似乎表明，数据绑定的工作方式更好时`Slider`是绑定目标而不是`Label`因为初始化工作方式与我们所料。
 
-之间的差异**反向绑定**示例和前面的示例包括*绑定模式*。
+之间的差异**反向绑定**示例和更早的示例涉及*绑定模式*。
 
 ## <a name="the-default-binding-mode"></a>默认绑定模式
 
-绑定模式指定的成员[ `BindingMode` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindingMode/)枚举：
+绑定模式指定的成员[ `BindingMode` ](xref:Xamarin.Forms.BindingMode)枚举：
 
-- [`Default`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.Default/)
-- [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; 数据源和目标之间将这两种方式
-- [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; 数据源从转到目标
-- [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 从目标转到源数据
-- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; 数据将转从源到目标，但仅当`BindingContext`更改 （新与 Xamarin.Forms 3.0）
+- [`Default`](xref:Xamarin.Forms.BindingMode.Default)
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 数据源和目标之间出现这两种方式
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 数据源中发送到目标
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 数据从目标发送到源
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 数据源从转到目标，但仅当`BindingContext`更改 （新 Xamarin.Forms 3.0）
 
-每个可绑定属性具有默认绑定模式创建可绑定的属性时，设置以及可从[ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/)属性`BindableProperty`对象。 当该属性是数据绑定目标时，此默认绑定模式将实际上指示的模式。
+每个可绑定属性具有默认值绑定时创建的可绑定属性，设置的模式和可以在中找到[ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode)属性的`BindableProperty`对象。 当该属性是数据绑定目标时实际上这一默认绑定模式指示的模式。
 
-大多数属性，如的默认绑定模式`Rotation`， `Scale`，和`Opacity`是`OneWay`。 这些属性时数据绑定目标，则将目标属性设置从源。
+如大多数属性的默认绑定模式`Rotation`， `Scale`，并`Opacity`是`OneWay`。 当这些属性是数据绑定目标时，则目标属性设置从源。
 
-但是的默认绑定模式`Value`属性`Slider`是`TwoWay`。 这意味着当`Value`属性是数据绑定目标，则目标 （像往常一样） 设置从源但源也将设置从目标。 这样做可允许`Slider`从初始设置`Opacity`值。
+但是的默认绑定模式`Value`的属性`Slider`是`TwoWay`。 这意味着，当`Value`属性是数据绑定目标，则目标 （像往常一样） 设置从源但从目标还设置源。 这样做可允许`Slider`若要从初始设置`Opacity`值。
 
-此双向绑定可能看起来创建无限循环，但是，也不会发生。 可绑定属性不发信号属性更改，除非该属性实际发生变化。 这样可以防止无限循环。
+此双向绑定可能看起来创建无限循环，但未按预期进行。 可绑定属性不发出信号属性更改，除非该属性实际上发生变化。 这可以防止无限循环。
 
 ### <a name="two-way-bindings"></a>双向绑定
 
-最多可绑定属性具有的默认绑定模式`OneWay`但以下属性具有的默认绑定模式`TwoWay`:
+最可绑定属性具有的默认绑定模式`OneWay`但以下属性具有默认绑定模式的`TwoWay`:
 
 - `Date` 属性 `DatePicker`
-- `Text` 属性`Editor`， `Entry`， `SearchBar`，和 `EntryCell`
+- `Text` 属性的`Editor`， `Entry`， `SearchBar`，和 `EntryCell`
 - `IsRefreshing` 属性 `ListView`
 - `SelectedItem` 属性 `MultiPage`
 - `SelectedIndex` 和`SelectedItem`的属性 `Picker`
-- `Value` 属性`Slider`和 `Stepper`
+- `Value` 属性的`Slider`和 `Stepper`
 - `IsToggled` 属性 `Switch`
 - `On` 属性 `SwitchCell`
 - `Time` 属性 `TimePicker`
 
-这些特定属性定义为`TwoWay`非常好的原因：
+这些特定的属性定义为`TwoWay`非常充分的理由：
 
-模型-视图-视图模型 (MVVM) 应用程序体系结构用于数据绑定，ViewModel 类时，数据绑定源中，和视图中，如组成视图`Slider`，数据绑定目标。 MVVM 绑定类似于**反向绑定**多个前面的示例中的绑定的示例。 它是很有可能，您想要使用的 ViewModel 中的相应属性的值进行初始化的页上的每个视图，但在视图中的更改还应影响 ViewModel 属性。
+当使用模型-视图-视图模型 (MVVM) 应用程序体系结构中使用数据绑定时，ViewModel 类是数据绑定源和视图，其中包含视图如`Slider`，是数据绑定的目标。 MVVM 绑定类似于**反向绑定**大于上一示例中的绑定的示例。 它是属性的很有可能您想要使用在 ViewModel 中，相应的值进行初始化的页面上的每个视图，但在视图中的更改应还影响 ViewModel 属性。
 
-与默认绑定模式的属性`TwoWay`是最有可能在 MVVM 方案中使用这些属性。
+使用默认绑定模式的属性`TwoWay`是最有可能在 MVVM 方案中使用这些属性。
 
-### <a name="one-way-to-source-bindings"></a>一次性单向到源绑定
+### <a name="one-way-to-source-bindings"></a>一个单向到源绑定
 
-只读可绑定属性具有的默认绑定模式`OneWayToSource`。 只有一个读/写可绑定属性具有的默认绑定模式`OneWayToSource`:
+只读的可绑定属性具有默认绑定模式的`OneWayToSource`。 设置了默认绑定模式的仅一个读/写可绑定属性`OneWayToSource`:
 
 - `SelectedItem` 属性 `ListView`
 
-基本原理是上的绑定`SelectedItem`属性应导致绑定源设置。 在本文后面的示例重写该行为。
+基本原理是，在绑定`SelectedItem`属性应导致绑定源设置。 在本文后面的示例重写该行为。
 
 ### <a name="one-time-bindings"></a>一次性绑定
 
-多个属性具有的默认绑定模式`OneTime`。 这些是：
+多个属性具有默认绑定模式的`OneTime`。 这些是：
 
 - `IsTextPredictionEnabled` 属性 `Entry`
-- `Text``BackgroundColor`，和`Style`属性`Span`。
+- `Text``BackgroundColor`，并`Style`的属性`Span`。
 
-绑定模式的属性为目标`OneTime`仅在绑定上下文更改时，才会更新。 对于这些目标属性的绑定，这将简化绑定基础结构，因为不需要监视的源属性中的更改。
+绑定模式的属性为目标`OneTime`仅绑定上下文更改时，会更新。 对于这些目标属性的绑定，这将简化绑定基础结构，因为不需要监视的源属性中的更改。
 
 ## <a name="viewmodels-and-property-change-notifications"></a>Viewmodel 和属性更改通知
 
-**简单颜色选择器**页演示如何将简单视图模型。 数据绑定允许用户选择一种颜色使用三个`Slider`色调、 饱和度和亮度的元素。
+**简单颜色选择器**页演示如何使用简单的 ViewModel。 数据绑定允许用户选择颜色使用三个`Slider`元素的色调、 饱和度和亮度。
 
-视图模型是数据绑定源。 ViewModel 未*不*定义可绑定属性，但它实现一种通知机制，它允许绑定基础结构以属性的值更改时得到通知。 此通知机制是[ `INotifyPropertyChanged` ](https://developer.xamarin.com/api/type/System.ComponentModel.INotifyPropertyChanged/)接口，定义名为的单个属性[ `PropertyChanged` ](https://developer.xamarin.com/api/event/System.ComponentModel.INotifyPropertyChanged.PropertyChanged/)。 通常实现此接口的类激发事件时的一个公共属性值更改。 事件不需要如果属性永远不会更改激发。 (`INotifyPropertyChanged`接口还由实现`BindableObject`和`PropertyChanged`可绑定的属性发生更改的值时触发事件。)
+ViewModel 是数据绑定源。 ViewModel does*不*来定义可绑定属性，但它实现一种通知机制，允许绑定基础结构的属性值更改时得到通知。 此通知机制[ `INotifyPropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged)接口，定义一个名为的单个属性[ `PropertyChanged` ](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)。 通常实现此接口的类激发事件时的一个公共属性值的改变。 事件不需要，如果该属性永远不会更改触发。 (`INotifyPropertyChanged`也会实现接口`BindableObject`和一个`PropertyChanged`可绑定属性值更改时触发事件。)
 
-`HslColorViewModel`类定义五个属性： `Hue`， `Saturation`， `Luminosity`，和`Color`属性相互关联。 在任何一种这三种颜色组件更改值时`Color`重新计算属性，和`PropertyChanged`事件触发的所有四个属性：
+`HslColorViewModel`类定义了五个属性： `Hue`， `Saturation`， `Luminosity`，和`Color`相互关联的属性。 当任何一个的三个颜色组件更改值时`Color`属性将重新计算，和`PropertyChanged`的事件触发的所有四个属性：
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -206,13 +206,13 @@ public class HslColorViewModel : INotifyPropertyChanged
 }
 ```
 
-当`Color`属性更改、 静态`GetNearestColorName`中的方法`NamedColor`类 (也包括在**DataBindingDemos**解决方案) 获取最接近的命名的颜色并设置`Name`属性。 这`Name`属性具有私有`set`访问器，因此它无法从设置，在类外部。
+当`Color`属性更改、 静态`GetNearestColorName`中的方法`NamedColor`类 (也包含在**DataBindingDemos**解决方案) 获取最接近已命名的颜色，并设置`Name`属性。 这`Name`属性有一个私有`set`访问器，因此它不能将设置从类外部的。
 
-当视图模型设置用作绑定源时，绑定基础结构将附加的处理程序`PropertyChanged`事件。 这种方式，绑定可以对属性的更改通知，然后再设置从更改后的值的目标属性。
+当 ViewModel 设置用作绑定源时，绑定基础结构附加到一个处理程序`PropertyChanged`事件。 这样一来的绑定可以对属性的更改的通知和能够更改后的值中设置目标属性。
 
-但是，当目标属性 (或`Binding`目标属性上的定义) 具有`BindingMode`的`OneTime`，则没有必要绑定基础结构上附加处理程序`PropertyChanged`事件。 更新目标属性时，才`BindingContext`更改，并不时本身的源属性更改。
+但是，当目标属性 (或`Binding`目标属性上的定义) 具有`BindingMode`的`OneTime`，则没有必要的绑定基础结构上附加一个处理程序`PropertyChanged`事件。 更新目标属性时，才`BindingContext`更改，并不在源属性本身更改。
 
-**简单颜色选择器**XAML 文件实例化`HslColorViewModel`中页面的资源字典并初始化`Color`属性。 `BindingContext`属性`Grid`设置为`StaticResource`绑定扩展来引用该资源：
+**简单颜色选择器**XAML 文件实例化`HslColorViewModel`中页面的资源字典并将初始化`Color`属性。 `BindingContext`的属性`Grid`设置为`StaticResource`绑定扩展来引用该资源：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -256,17 +256,17 @@ public class HslColorViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-`BoxView`， `Label`，和三个`Slider`视图继承从绑定上下文`Grid`。 这些视图是引用视图模型中的源属性的所有绑定目标。 有关`Color`属性`BoxView`，和`Text`属性`Label`，数据绑定是`OneWay`： 在视图中的属性将设置视图模型中的属性中。
+`BoxView`， `Label`，和三个`Slider`视图继承从绑定上下文`Grid`。 这些视图是引用 ViewModel 中的源属性的所有绑定目标。 有关`Color`的属性`BoxView`，和`Text`属性`Label`，数据绑定是`OneWay`： 从 ViewModel 中的属性设置视图中的属性。
 
-`Value`属性`Slider`，但是， `TwoWay`。 这允许每台`Slider`从视图模型，以及用于 ViewModel 若要设置从每个要设置`Slider`。
+`Value`的属性`Slider`，，但`TwoWay`。 这样，每个`Slider`若要从 ViewModel 中，以及若要设置从每个 viewmodel 设置`Slider`。
 
-当首次运行该程序时， `BoxView`， `Label`，和三个`Slider`元素都设置为从基于初始 ViewModel`Color`时实例化视图模型设置的属性。 在左侧的 iOS 屏幕快照所示：
+首次运行该程序时， `BoxView`， `Label`，和三个`Slider`元素是从基于初始 ViewModel 的所有组`Color`时实例化 ViewModel 设置的属性。 在左侧 iOS 屏幕截图所示：
 
-[![简单颜色选择器](binding-mode-images/simplecolorselector-small.png "简单颜色选择器")](binding-mode-images/simplecolorselector-large.png#lightbox "简单颜色选择器")
+[![简单的颜色选择器](binding-mode-images/simplecolorselector-small.png "简单颜色选择器")](binding-mode-images/simplecolorselector-large.png#lightbox "简单颜色选择器")
 
-在操作滑块，`BoxView`和`Label`相应地，Android 和 UWP 屏幕截图所示更新。
+操控滑块`BoxView`和`Label`相应地，Android 和 UWP 的屏幕截图所示更新。
 
-实例化资源字典中的 ViewModel 是一个常见的方法。 它也是可以实例化中的属性元素标记 ViewModel`BindingContext`属性。 在**简单颜色选择器**XAML 文件中，请尝试删除`HslColorViewModel`从资源字典并将其设置为`BindingContext`属性`Grid`如下所示：
+实例化 ViewModel 中的资源字典是一个常用方法。 它也是可以实例化 ViewModel 中的属性元素标记`BindingContext`属性。 在中**简单颜色选择器**XAML 文件中，请尝试删除`HslColorViewModel`从资源字典并将其设置为`BindingContext`属性`Grid`如下所示：
 
 ```xaml
 <Grid>
@@ -279,13 +279,13 @@ public class HslColorViewModel : INotifyPropertyChanged
 </Grid>
 ```
 
-可以在各种不同的方式设置的绑定上下文。 有时，代码隐藏文件实例化视图模型，并将其设置为`BindingContext`页属性。 这些是所有有效的方法。
+可以通过多种方式中设置的绑定上下文。 有时，代码隐藏文件实例化 ViewModel 并将其设置为`BindingContext`页属性。 这些是所有有效的方法。
 
-## <a name="overriding-the-binding-mode"></a>重写的绑定模式
+## <a name="overriding-the-binding-mode"></a>重写绑定模式
 
-如果在目标属性上的默认绑定模式不适合特定的数据绑定，则可能可以通过设置重写它[ `Mode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.Mode/)属性`Binding`(或[ `Mode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Mode/)属性`Binding`标记扩展) 的成员之一`BindingMode`枚举。
+如果在目标属性上的默认绑定模式不适用于特定的数据绑定，则可以通过设置替代[ `Mode` ](xref:Xamarin.Forms.BindingBase.Mode)的属性`Binding`(或[ `Mode` ](xref:Xamarin.Forms.Xaml.BindingExtension.Mode)的属性`Binding`标记扩展) 的成员之一`BindingMode`枚举。
 
-但是，将设置`Mode`属性`TwoWay`始终不起作用，正如所料。 例如，请尝试修改**的替代项 XAML 绑定**XAML 文件将其包括`TwoWay`绑定定义中：
+但是，将设置`Mode`属性设置为`TwoWay`始终无法按您所料。 例如，请尝试修改**替代 XAML 绑定**XAML 文件以包括`TwoWay`绑定定义中：
 
 ```xaml
 <Label Text="TEXT"
@@ -297,9 +297,9 @@ public class HslColorViewModel : INotifyPropertyChanged
                        Mode=TwoWay}" />
 ```
 
-它是预期的`Slider`将初始化为的初始值`Scale`属性，它是 1，但，也不会发生。 当`TwoWay`初始化绑定，目标设置从源首先，这意味着，`Scale`属性设置为`Slider`默认值为 0。 当`TwoWay`上设置绑定`Slider`，则`Slider`从源最初会对其进行设置。
+它可能会发生的`Slider`将初始化为初始值的`Scale`属性，它是 1，但未按预期进行。 当`TwoWay`初始化绑定，目标从源中设置第一次，这意味着`Scale`属性设置为`Slider`默认值为 0。 当`TwoWay`上设置绑定`Slider`，则`Slider`从源最初设置。
 
-你可以将绑定模式设置为`OneWayToSource`中**的替代项 XAML 绑定**示例：
+您可以将绑定模式设置为`OneWayToSource`中**替代 XAML 绑定**示例：
 
 ```xaml
 <Label Text="TEXT"
@@ -311,11 +311,11 @@ public class HslColorViewModel : INotifyPropertyChanged
                        Mode=OneWayToSource}" />
 ```
 
-现在`Slider`初始化为 1 (默认值的`Scale`) 但操作`Slider`不会影响`Scale`属性，因此这不是非常有用。
+现在`Slider`初始化为 1 (默认值`Scale`) 但操作`Slider`不会影响`Scale`属性，因此这不是很有用。
 
-一个非常有用的应用程序的重写的默认绑定模式`TwoWay`涉及`SelectedItem`属性`ListView`。 默认绑定模式是`OneWayToSource`。 当上设置数据绑定`SelectedItem`属性来引用视图模型中的源属性，则该源属性设置从`ListView`选择。 但是，在某些情况下，你可能还想`ListView`从 ViewModel 初始化。
+重写的默认绑定模式非常有用的应用程序`TwoWay`涉及`SelectedItem`属性的`ListView`。 默认绑定模式是`OneWayToSource`。 如果在设置数据绑定`SelectedItem`属性来引用 ViewModel 中的源属性，则该 source 属性将设置从`ListView`所选内容。 但是，在某些情况下，你可能还想`ListView`从 ViewModel 进行初始化。
 
-**示例设置**页演示这种方法。 此页表示经常在视图模型，这样中定义的应用程序设置的简单实现`SampleSettingsViewModel`文件：
+**的示例设置**页演示此技术。 此页表示应用程序设置，经常在 ViewModel 中，这种中定义的简单实现`SampleSettingsViewModel`文件：
 
 ```csharp
 public class SampleSettingsViewModel : INotifyPropertyChanged
@@ -409,13 +409,13 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 }
 ```
 
-每个应用程序设置是一个属性，保存到一个名为方法中的 Xamarin.Forms properties 字典`SaveState`和从构造函数中该字典加载。 类的底部是帮助简化 Viewmodel，使它们更不容易出错的两种方法。 `OnPropertyChanged`底部的方法有一个设置为调用属性的可选参数。 字符串形式指定属性的名称时，这样可以避免拼写错误。
+每个应用程序设置是一个属性，将保存到一个名为方法中的 Xamarin.Forms 属性字典`SaveState`以及从该字典的构造函数中加载。 类的底部是两个方法，可以帮助简化 Viewmodel，使它们更不易出错。 `OnPropertyChanged`底部方法具有一个可选参数，设置为调用属性。 以字符串形式指定的属性名称时，这可以避免拼写错误。
 
-`SetProperty`类中的方法执行更多： 它与为字段，存储的值设置为该属性的值进行比较，并仅调用`OnPropertyChanged`当两个值是否不相等。
+`SetProperty`类中的方法执行更多： 它将被存储为一个字段的值设置为属性值进行比较，并仅调用`OnPropertyChanged`两个值不相等。
 
-`SampleSettingsViewModel`类定义的背景色为两个属性：`BackgroundNamedColor`属性属于类型`NamedColor`，其中一个类中也包含了**DataBindingDemos**解决方案。 `BackgroundColor`属性属于类型`Color`，并从获取`Color`属性`NamedColor`对象。
+`SampleSettingsViewModel`类定义的背景颜色的两个属性：`BackgroundNamedColor`属性属于类型`NamedColor`，其中一个类也包含在**DataBindingDemos**解决方案。 `BackgroundColor`属性属于类型`Color`，并从获取`Color`属性的`NamedColor`对象。
 
-`NamedColor`类使用.NET 反射枚举 Xamarin.Forms 中的所有静态公共字段`Color`结构，并将其存储具有可从静态访问集合中其名`All`属性：
+`NamedColor`类使用.NET 反射来枚举在 Xamarin.Forms 中的所有静态公共字段`Color`结构，并将其存储在可从静态访问集合中其名称与`All`属性：
 
 ```csharp
 public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
@@ -523,7 +523,7 @@ public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
 }
 ```
 
-`App`类**DataBindingDemos**项目定义一个名为属性`Settings`类型的`SampleSettingsViewModel`。 此属性将初始化时`App`实例化类时，与`SaveState`方法调用时`OnSleep`调用方法：
+`App`类中**DataBindingDemos**项目定义一个名为属性`Settings`类型的`SampleSettingsViewModel`。 初始化此属性时`App`类实例化，并`SaveState`时调用方法`OnSleep`调用方法：
 
 ```csharp
 public partial class App : Application
@@ -557,9 +557,9 @@ public partial class App : Application
 }
 ```
 
-应用程序生命周期方法的详细信息，请参阅文章[**应用生命周期**](~/xamarin-forms/app-fundamentals/app-lifecycle.md)。
+应用程序生命周期方法的详细信息，请参阅文章[**应用程序生命周期**](~/xamarin-forms/app-fundamentals/app-lifecycle.md)。
 
-在中处理的几乎所有操作都其他**SampleSettingsPage.xaml**文件。 `BindingContext`页的设置使用`Binding`标记扩展： 绑定源是静态`Application.Current`属性，它是实例的`App`在项目中，类和`Path`设置为`Settings`属性，它是`SampleSettingsViewModel`对象：
+几乎所有其他项中处理**SampleSettingsPage.xaml**文件。 `BindingContext`页的设置使用`Binding`标记扩展： 绑定源是静态`Application.Current`属性，它是该实例的`App`类在项目中，并且`Path`设置为`Settings`属性，它是`SampleSettingsViewModel`对象：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -640,19 +640,19 @@ public partial class App : Application
 </ContentPage>
 ```
 
-页的所有子级都继承绑定上下文。 大部分此页上的其他绑定到中的属性都是`SampleSettingsViewModel`。 `BackgroundColor`属性用于设置`BackgroundColor`属性`StackLayout`，和`Entry`， `DatePicker`， `Switch`，和`Stepper`属性被绑定到视图模型中的其他属性。
+页的所有子项都继承的绑定上下文。 大部分此页上的其他绑定到中的属性都是`SampleSettingsViewModel`。 `BackgroundColor`属性用于设置`BackgroundColor`的属性`StackLayout`，和`Entry`， `DatePicker`， `Switch`，和`Stepper`属性被绑定到 ViewModel 中的其他属性。
 
-`ItemsSource`属性`ListView`设置为静态`NamedColor.All`属性。 这样就会填写`ListView`所有`NamedColor`实例。 中每个项`ListView`，项的绑定上下文设置为`NamedColor`对象。 `BoxView`和`Label`中`ViewCell`绑定到中的属性`NamedColor`。
+`ItemsSource`的属性`ListView`设置为静态`NamedColor.All`属性。 这样就会填写`ListView`所有`NamedColor`实例。 中每一项`ListView`，该项目的绑定上下文设置为`NamedColor`对象。 `BoxView`并`Label`中`ViewCell`绑定到属性中`NamedColor`。
 
-`SelectedItem`属性`ListView`属于类型`NamedColor`，并将其绑定到`BackgroundNamedColor`属性`SampleSettingsViewModel`:
+`SelectedItem`的属性`ListView`属于类型`NamedColor`，并将其绑定到`BackgroundNamedColor`属性`SampleSettingsViewModel`:
 
 ```xaml
 SelectedItem="{Binding BackgroundNamedColor, Mode=TwoWay}"
 ```
 
-默认绑定模式`SelectedItem`是`OneWayToSource`，这会从所选的项设置的视图模型属性。 `TwoWay`模式允许`SelectedItem`从 ViewModel 初始化。
+默认绑定模式`SelectedItem`是`OneWayToSource`，用于从所选的项设置的 ViewModel 属性。 `TwoWay`模式允许`SelectedItem`从 ViewModel 进行初始化。
 
-但是，当`SelectedItem`设置这种方式，`ListView`不会自动滚动以显示所选的项。 代码隐藏文件中的少量代码不需要：
+但是，当`SelectedItem`这种方式，设置`ListView`不会自动滚动以显示所选的项。 在代码隐藏文件中的一小段代码，有必要：
 
 ```csharp
 public partial class SampleSettingsPage : ContentPage
@@ -671,16 +671,16 @@ public partial class SampleSettingsPage : ContentPage
 }
 ```
 
-当首次运行时，在左侧的 iOS 屏幕快照显示的程序。 中的构造函数`SampleSettingsViewModel`初始化的背景色为白色，并且这是中选定的内容`ListView`:
+当首次运行时，在左侧的 iOS 屏幕快照显示了的程序。 中的构造函数`SampleSettingsViewModel`初始化的背景色为白色，并且在选择的内容`ListView`:
 
 [![示例设置](binding-mode-images/samplesettings-small.png "示例设置")](binding-mode-images/samplesettings-large.png#lightbox "示例设置")
 
-其他两个屏幕快照显示更改的设置。 在试验的这一页，请记得将该程序进入睡眠状态或在设备或正在运行的仿真程序上终止它。 终止程序从 Visual Studio 调试器将不会导致`OnSleep`中重写`App`类调用。
+其他两个屏幕快照显示更改后的设置。 在与此页进行试验，记得将进入睡眠状态或终止在设备或仿真程序认为其正在运行的程序。 终止该程序从 Visual Studio 调试器将不会导致`OnSleep`重写中`App`类来调用。
 
-在下一篇文章中，你将看到如何指定[**字符串格式设置**](string-formatting.md)上设置的数据绑定`Text`属性`Label`。
+将在下一篇文章中了解如何指定[**字符串格式设置**](string-formatting.md)上设置的数据绑定`Text`属性`Label`。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [数据绑定演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [从 Xamarin.Forms 簿的数据绑定章](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [数据绑定 Xamarin.Forms 书籍章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

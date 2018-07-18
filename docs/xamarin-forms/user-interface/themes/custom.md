@@ -1,32 +1,32 @@
 ---
-title: 创建自定义 Xamarin.Forms 主题
-description: 此文章介绍了如何创建用于应用程序中引用的自定义的 Xamarin.Forms 主题。
+title: 创建 Xamarin.Forms 自定义主题
+description: 本文介绍如何创建自定义 Xamarin.Forms 主题针对在应用中引用。
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 34e923e4df76680ad8d0be5f2844ef56b32af4db
+ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245567"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985986"
 ---
-# <a name="creating-a-custom-xamarinforms-theme"></a>创建自定义 Xamarin.Forms 主题
+# <a name="creating-a-custom-xamarinforms-theme"></a>创建 Xamarin.Forms 自定义主题
 
 ![](~/media/shared/preview.png "此 API 目前处于预览状态")
 
-除了从 Nuget 包添加主题 (如[Light](~/xamarin-forms/user-interface/themes/light.md)和[深色](~/xamarin-forms/user-interface/themes/dark.md)主题)，你可以创建你自己的资源字典主题可引用的应用程序中。
+除了从 Nuget 包添加主题 (如[Light](~/xamarin-forms/user-interface/themes/light.md)并[深色](~/xamarin-forms/user-interface/themes/dark.md)主题)，可以创建自己的资源字典主题可以引用的应用程序中。
 
 ## <a name="example"></a>示例
 
-这三种`BoxView`上显示的 s[主题页](~/xamarin-forms/user-interface/themes/index.md)根据两个可下载主题中定义的三个类的风格。
+这三个`BoxView`上显示的 s[主题页](~/xamarin-forms/user-interface/themes/index.md)根据两个可下载的主题中定义的三个类样式。
 
-若要了解这些起作用，下面的标记，请创建你无法将直接添加到等效样式你**App.xaml**。
+若要了解工作原理，下面的标记创建等效的样式，您可以将直接添加到您**App.xaml**。
 
-请注意`Class`属性，则为`Style`(相对于[ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms 的早期版本中提供的属性)。
+请注意`Class`特性`Style`(而不是[ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms 的早期版本中的属性)。
 
 ```xml
 <ResourceDictionary>
@@ -63,17 +63,17 @@ ms.locfileid: "35245567"
 </ResourceDictionary>
 ```
 
-你将注意到，`Rounded`类引用自定义效果`CornerRadius`。
-这种效果的代码下面给出了-引用该正确的自定义`xmlns`必须添加到**App.xaml**的根元素：
+你会看到`Rounded`类是指自定义效果`CornerRadius`。
+这种效果的代码下面给出了-若要引用正确自定义`xmlns`必须添加到**App.xaml**的根元素：
 
 ```csharp
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>标准.NET 类库项目或共享项目中的 C# 代码
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>.NET Standard 库项目或共享项目中的 C# 代码
 
-用于创建轮角代码`BoxView`使用[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
-使用应用的圆角半径`BindableProperty`并通过应用实现[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。 影响需要特定于平台的代码中[iOS](#ios)和[Android](#android)项目 （下面显示）。
+用于创建轮角的代码`BoxView`使用[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+使用应用的圆角半径`BindableProperty`并通过应用来实现[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。 效果要求中的特定于平台的代码[iOS](#ios)并[Android](#android)项目 （如下所示。）
 
 ```csharp
 namespace ThemesDemo
@@ -85,8 +85,7 @@ namespace ThemesDemo
     private static void OnChanged<TEffect, TProp>(BindableObject bindable, object oldValue, object newValue)
               where TEffect : Effect, new()
     {
-        var view = bindable as View;
-        if (view == null)
+        if (!(bindable is View view))
         {
             return;
         }
@@ -128,7 +127,7 @@ namespace ThemesDemo
 
 <a name="ios" />
 
-### <a name="c-code-in-the-ios-project"></a>C# 代码的 iOS 项目中
+### <a name="c-code-in-the-ios-project"></a>C# 代码中的 iOS 项目
 
 ```csharp
 using System;
@@ -184,7 +183,7 @@ namespace ThemesDemo.iOS
 
 <a name="android" />
 
-### <a name="c-code-in-the-android-project"></a>C# 代码中的 Android 项目
+### <a name="c-code-in-the-android-project"></a>Android 项目中的 C# 代码
 
 ```csharp
 using System;
@@ -257,8 +256,8 @@ namespace ThemesDemo.Droid
 
 ## <a name="summary"></a>总结
 
-可以通过定义为每个需要自定义外观的控件的样式创建的自定义主题。 应可由不同区分多个控件的样式`Class`资源字典中的属性，然后通过设置应用`StyleClass`在控件上的属性。
+可以通过定义每个需要自定义外观的控件的样式来创建自定义主题。 应由不同区分多个控件的样式`Class`资源字典中的属性，然后通过设置应用`StyleClass`在控件上的属性。
 
-此外可以利用样式[效果](~/xamarin-forms/app-fundamentals/effects/index.md)来进一步自定义控件的外观。
+此外可以利用一种样式[效果](~/xamarin-forms/app-fundamentals/effects/index.md)来进一步自定义控件的外观。
 
-[隐式样式](~/xamarin-forms/user-interface/styles/implicit.md)(既没有`x:Key`或`Style`属性) 继续应用于这些匹配的所有控件`TargetType`。
+[隐式样式](~/xamarin-forms/user-interface/styles/implicit.md)(不带`x:Key`或`Style`属性) 继续应用于匹配的所有控件`TargetType`。

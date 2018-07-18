@@ -12,6 +12,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33798600"
 ---
 # <a name="android-localization"></a>Android 本地化
 
@@ -251,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>设备测试
 
 若要测试的设备上，更改中的语言**设置**应用。
-**提示：**使图标中的注释和的菜单项的位置，以便你可以还原到原始设置的语言。
+**提示：** 使图标中的注释和的菜单项的位置，以便你可以还原到原始设置的语言。
 
 
 ## <a name="summary"></a>总结

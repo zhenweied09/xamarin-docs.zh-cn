@@ -1,45 +1,45 @@
 ---
-title: 突出显示在地图上的圆形区域
-description: 此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。 IOS 和 Android 用于向地图添加在循环的覆盖区上提供的 Api，而在 UWP 上在覆盖区上呈现为多边形。
+title: 突出显示地图上的圆形区域
+description: 本文介绍如何将循环覆盖添加到映射中，以突出显示地图的圆形区域。 IOS 和 Android 提供的 Api 向地图添加圆形覆盖，而 UWP 上在覆盖区上将呈现为多边形。
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 06ea1e788add0064571f01dc1080147e64bb8397
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3064296d4c78a3342fb27afc971c37a029987e5e
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240280"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998552"
 ---
-# <a name="highlighting-a-circular-area-on-a-map"></a>突出显示在地图上的圆形区域
+# <a name="highlighting-a-circular-area-on-a-map"></a>突出显示地图上的圆形区域
 
-_此文章介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。_
+_本文介绍如何将循环覆盖添加到映射中，以突出显示地图的圆形区域。_
 
 ## <a name="overview"></a>概述
 
-覆盖是在地图上的分层的图形。 叠加支持它被放大随着与地图的绘制图形内容。 以下屏幕快照显示在向地图添加循环覆盖区上的结果：
+覆盖是在地图上的分层的图形。 覆盖层支持绘制图形的内容，它被放大随着与该映射。 以下屏幕截图显示将循环覆盖添加到映射的结果：
 
 ![](circle-map-overlay-images/screenshots.png)
 
-当[ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) Xamarin.Forms 应用程序，在 iOS 中呈现控件`MapRenderer`该类进行实例化，这反过来实例化一个本机`MKMapView`控件。 在 Android 平台上，`MapRenderer`类实例化一个本机`MapView`控件。 在通用 Windows 平台 (UWP)，`MapRenderer`类实例化一个本机`MapControl`。 呈现进程可以拍摄利用来实现特定于平台的映射自定义项创建的自定义呈现器`Map`每个平台上。 执行此操作的过程如下所示：
+当[ `Map` ](xref:Xamarin.Forms.Maps.Map) Xamarin.Forms 应用程序，在 iOS 中呈现控件`MapRenderer`类实例化时，这反过来实例化本机`MKMapView`控件。 在 Android 平台上`MapRenderer`类实例化本机`MapView`控件。 在通用 Windows 平台 (UWP)，`MapRenderer`类实例化本机`MapControl`。 渲染过程时可以执行利用通过创建自定义呈现器为实现特定于平台的映射自定义`Map`每个平台上。 执行此操作的过程如下所示：
 
 1. [创建](#Creating_the_Custom_Map)Xamarin.Forms 自定义地图。
 1. [使用](#Consuming_the_Custom_Map)Xamarin.Forms 中的自定义映射。
-1. [自定义](#Customizing_the_Map)通过每个平台上创建地图自定义呈现器映射。
+1. [自定义](#Customizing_the_Map)通过每个平台上创建代码图的自定义呈现器映射。
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/") 必须初始化，并在使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) 必须初始化和使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)
 
-有关自定义地图使用自定义呈现器的信息，请参阅[自定义地图 Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
+有关自定义使用自定义呈现器的映射的信息，请参阅[自定义图钉](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
 
 <a name="Creating_the_Custom_Map" />
 
 ### <a name="creating-the-custom-map"></a>创建自定义地图
 
-创建`CustomCircle`具有类`Position`和`Radius`属性：
+创建`CustomCircle`类具有`Position`和`Radius`属性：
 
 ```csharp
 public class CustomCircle
@@ -49,7 +49,7 @@ public class CustomCircle
 }
 ```
 
-然后，创建一个子类[ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/)类，这将添加类型的属性`CustomCircle`:
+然后，创建一个子类[ `Map` ](xref:Xamarin.Forms.Maps.Map)类，将类型的属性添加`CustomCircle`:
 
 ```csharp
 public class CustomMap : Map
@@ -62,7 +62,7 @@ public class CustomMap : Map
 
 ### <a name="consuming-the-custom-map"></a>使用自定义地图
 
-使用`CustomMap`通过声明它的实例 XAML 页实例中的控件：
+使用`CustomMap`控件通过声明它的实例中的 XAML 页实例：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +75,7 @@ public class CustomMap : Map
 </ContentPage>
 ```
 
-或者，使用`CustomMap`通过声明它的实例在 C# 页实例中的控件：
+或者，使用`CustomMap`控件通过声明它的实例中的 C# 页实例：
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -93,7 +93,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-初始化`CustomMap`根据需要控制：
+初始化`CustomMap`控件：
 
 ```csharp
 public partial class MapPage : ContentPage
@@ -120,17 +120,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-此初始化添加[ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/)和`CustomCircle`实例到自定义映射，并置于具有地图的视图[ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)/)方法，这会更改的位置和缩放通过创建映射的级别[ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/)从[ `Position` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/)和[ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/)。
+此初始化添加[ `Pin` ](xref:Xamarin.Forms.Maps.Pin)并`CustomCircle`实例到自定义映射，并将具有地图的视图[ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*)方法，以更改的位置和缩放通过创建映射的级别[ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan)从[ `Position` ](xref:Xamarin.Forms.Maps.Position)和一个[ `Distance` ](xref:Xamarin.Forms.Maps.Distance)。
 
 <a name="Customizing_the_Map" />
 
 ### <a name="customizing-the-map"></a>自定义地图
 
-自定义呈现器必须现在添加到将在循环的覆盖区上添加到映射的每个应用程序项目中。
+自定义呈现器必须现在添加到要向地图添加循环覆盖每个应用程序项目中。
 
-#### <a name="creating-the-custom-renderer-on-ios"></a>在 iOS 上创建自定义呈现器
+#### <a name="creating-the-custom-renderer-on-ios"></a>在 ios 设备上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法将添加在循环的覆盖区上：
+创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法中添加循环覆盖：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -170,11 +170,11 @@ namespace MapOverlay.iOS
 
 ```
 
-此方法将执行下面的配置，提供自定义呈现器附加到新 Xamarin.Forms 元素：
+此方法执行下面的配置，前提是自定义呈现器附加到新 Xamarin.Forms 元素：
 
 - `MKMapView.OverlayRenderer`属性设置为对应的委托。
-- 通过设置静态创建圆`MKCircle`对象，以米为单位指定的圆，中心和的圆的半径。
-- 圆添加到映射上，通过调用`MKMapView.AddOverlay`方法。
+- 通过设置静态创建圆形`MKCircle`对象，以米为单位指定圆的中心和圆的半径。
+- 该圆形被添加到映射通过调用`MKMapView.AddOverlay`方法。
 
 然后，实现`GetOverlayRenderer`方法以自定义在覆盖区上的呈现：
 
@@ -200,7 +200,7 @@ public class CustomMapRenderer : MapRenderer
 
 #### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`和`OnMapReady`添加在循环的覆盖区上的方法：
+创建一个子类`MapRenderer`类并重写其`OnElementChanged`和`OnMapReady`添加循环覆盖的方法：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -248,11 +248,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-`OnElementChanged`方法调用`MapView.GetMapAsync`方法，获取基础`GoogleMap`，与视图，前提是自定义呈现器附加到新 Xamarin.Forms 元素。 一次`GoogleMap`实例不可用，`OnMapReady`将调用方法，其中圆创建方法是实例化`CircleOptions`对象，以米为单位指定的圆，中心和的圆的半径。 圆随后通过调用添加到映射`NativeMap.AddCircle`方法。
+`OnElementChanged`方法调用`MapView.GetMapAsync`方法，获取基础`GoogleMap`的，提供自定义呈现器附加到新 Xamarin.Forms 元素绑定到视图。 一次`GoogleMap`实例不可用，`OnMapReady`将调用方法，其中通过实例化创建圆形`CircleOptions`对象，以米为单位指定圆的中心和圆的半径。 该圆形然后通过调用添加到映射`NativeMap.AddCircle`方法。
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>在通用 Windows 平台上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法将添加在循环的覆盖区上：
+创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法中添加循环覆盖：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -296,12 +296,12 @@ namespace MapOverlay.UWP
 }
 ```
 
-此方法执行以下操作，前提是自定义呈现器附加到新 Xamarin.Forms 元素：
+提供自定义呈现器附加到新 Xamarin.Forms 元素，此方法将执行以下操作：
 
-- 从检索到的圆圈位置和半径`CustomMap.Circle`属性并传递到`GenerateCircleCoordinates`方法，后者生成纬度和经度坐标的圆的周长。 此帮助器方法的代码所示。
-- 圆外围坐标将转换为`List`的`BasicGeoposition`坐标。
-- 通过实例化创建圆`MapPolygon`对象。 `MapPolygon`类用于在地图上显示多点形状，通过设置其`Path`属性`Geopath`对象，其中包含形状的坐标。
-- 将其添加到代码图上呈现多边形`MapControl.MapElements`集合。
+- 从检索的圆圈位置和半径`CustomMap.Circle`属性，并传递给`GenerateCircleCoordinates`方法，后者生成纬度和经度坐标圆圈外围。 此帮助器方法的代码如下所示。
+- 圆形外围坐标转换为`List`的`BasicGeoposition`坐标。
+- 通过实例化创建圆形`MapPolygon`对象。 `MapPolygon`类用于在地图上显示多点形状，通过设置其`Path`属性设置为`Geopath`对象，其中包含的形状坐标。
+- 将其添加到地图上呈现多边形`MapControl.MapElements`集合。
 
 
 ```
@@ -328,11 +328,11 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何将循环覆盖添加到一个图，以突出显示的地图的圆形区域。
+本文介绍了如何将循环覆盖添加到映射，以突出显示地图的圆形区域。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [循环映射 Ovlerlay （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
 - [自定义图钉](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
-- [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)
+- [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

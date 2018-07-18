@@ -1,23 +1,23 @@
 ---
-title: mtouch
+title: 使用 mtouch 捆绑 Xamarin.iOS 应用
+description: 本文档介绍 mtouch，该工具可完成将 Xamarin.iOS 应用程序转换为捆绑包、在模拟器中启动并将其部署到物理设备所需的多个步骤。
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 933ad24a8778ffbee3a1b6089c6ebcf33d26bf84
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9aaa79f929898f6765b97ab0a0c4a30a271d945a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784948"
 ---
-# <a name="mtouch"></a>mtouch
-
+# <a name="using-mtouch-to-bundle-xamarinios-apps"></a>使用 mtouch 捆绑 Xamarin.iOS 应用
 
 iPhone 应用程序以应用程序捆绑包的形式发货。 这些是扩展名为 `.app` 的目录，其中包含 iPhone 用于了解应用程序的代码、数据、配置文件和清单。
 
 将 .NET 可执行文件转变为应用程序的过程主要由 `mtouch` 命令驱动，它是一种集成将应用程序转变为捆绑包所需的多个步骤的工具。 此工具用于在模拟器中启动应用程序并将软件部署到实际的 iPhone 或 iPod Touch设备。
-
 
 ## <a name="detailed-instructions"></a>详细说明
 

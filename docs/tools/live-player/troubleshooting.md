@@ -1,74 +1,74 @@
 ---
-title: 故障排除 Xamarin 实时播放机
-description: 本文档介绍的实时的 Xamarin Player 和潜在修复的已知的问题。 它讨论连接问题、 配置问题，以及更多。
+title: 故障排除 Xamarin Live Player
+description: 本文档介绍了 Xamarin Live Player 和可能的修补程序的已知的问题。 它讨论了连接问题、 配置问题和详细信息。
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
 ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831327"
 ---
-# <a name="troubleshooting-xamarin-live-player"></a>故障排除 Xamarin 实时播放机
+# <a name="troubleshooting-xamarin-live-player"></a>故障排除 Xamarin Live Player
 
 ![预览功能](~/media/shared/preview.png)
 
-此文章介绍一些常见的问题，并提供的步骤来纠正它们。
+本文介绍一些常见的问题，并提供了步骤来更正它们。
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>移动设备不会连接后扫描条形码 （或输入的代码）
 
-运行 Xamarin 实时播放器的移动设备不在与运行 IDE 的计算机位于同一网络上时发生。 请查看以下内容：
+运行 Xamarin Live Player 的移动设备不在与运行在 IDE 的计算机位于同一网络上时发生。 请查看以下内容：
 
-- 确认的设备和计算机均在同一 Wi-fi 网络上。
-  - 如果计算机也连接到有线网络，请尝试拔掉电源有线的连接。
-- 网络可能紧密保护 （例如，某些公司网络）、 阻止通过实时的 Xamarin Player 所需的端口。
-- 关闭 Xamarin 实时播放器应用程序并重新启动它。
+- 确认设备和计算机位于相同的 Wi-fi 网络。
+  - 如果计算机也连接到有线网络，请尝试拔出有线的连接。
+- 网络可能会受到严格保护 （例如，某些公司网络），阻止通过 Xamarin Live Player 所需的端口。
+- 关闭 Xamarin Live Player 应用并重新启动它。
 
-## <a name="error-while-trying-to-deploy-message-in-ide"></a>在 IDE 中的"错误时尝试部署"消息
+## <a name="error-while-trying-to-deploy-message-in-ide"></a>在 IDE 中的"尝试部署时出现错误"消息
 
-**"IOException： 无法从传输连接中读取数据： 非阻止套接字上的操作将阻塞"**
+**"IOException： 无法从传输连接读取数据： 将阻止对非阻止套接字操作"**
 
-如果运行实时的 Xamarin Player 的移动设备不在与运行 Visual Studio; 的计算机位于同一网络上，通常会遇到此错误这通常发生在连接到以前成功配对的设备。
+运行 Xamarin Live Player 的移动设备不在运行 Visual Studio; 的计算机所在的同一网络上时，通常会遇到此错误这通常发生在连接到以前已成功配对的设备。
 
-* 检查的设备和计算机均在同一 Wi-fi 网络上。
-* 网络可能紧密保护 （例如，某些公司网络）、 阻止通过实时的 Xamarin Player 所需的端口。 以下的端口所需的 Xamarin 实时播放器：
+* 检查设备和计算机位于相同的 Wi-fi 网络。
+* 网络可能会受到严格保护 （例如，某些公司网络），阻止通过 Xamarin Live Player 所需的端口。 以下端口所需的 Xamarin Live Player:
   * 37847 – 内部网络访问权限 
-  * 8090 – 外部的网络访问权限
+  * 8090 – 外部网络访问权限
 
 ## <a name="manually-configure-device"></a>手动配置设备
 
-如果你无法通过 Wi-fi 连接到你的设备可以尝试手动配置你的设备配置文件中，通过，通过执行以下步骤：
+如果不可以通过 Wi-fi 连接到你的设备可以尝试手动配置你的设备配置文件中，通过使用以下步骤：
 
 **步骤 1： 打开配置文件**
 
-前往应用程序数据文件夹：
+转到应用程序数据文件夹：
 
 * Windows: **%userprofile%\AppData\Roaming**
 * macOS: **~/Users/$USER/.config**
 
-在此文件夹中，你将找到**PlayerDeviceList.xml**如果它不存在你需要创建一个。
+在此文件夹中将查找**PlayerDeviceList.xml**如果不存在你需要创建一个。
 
 **步骤 2： 获取 IP 地址**
 
-在实时的 Xamarin Player 应用中，转到**有关 > 连接测试 > 启动连接测试**。
+在 Xamarin Live Player 应用，请转至**有关 > 连接测试 > 开始连接测试**。
 
-记下的 IP 地址，你将需要配置你的设备时列出的 IP 地址。
+记下的 IP 地址，你将需要列出配置你的设备时的 IP 地址。
 
 **步骤 3： 获取配对代码**
 
-在实时的 Xamarin Player tap 内部**对**或**再次对**，然后按**手动输入**。 数值代码将显示，你将需要更新配置文件。
+在 Xamarin Live Player 点击**对**或**再次对**，然后按**手动输入**。 数值代码将显示，这将需要更新配置文件。
 
 **步骤 4： 生成 GUID**
 
-转到：https://www.guidgenerator.com/online-guid-generator.aspx并生成新的 guid，并确保大写上。
+转到：https://www.guidgenerator.com/online-guid-generator.aspx和生成新 guid，并确保大写上。
 
 **步骤 5： 配置设备**
 
-打开**PlayerDeviceList.xml**如 Visual Studio 或 Visual Studio 代码编辑器中。 你需要在此文件中手动配置你的设备。 默认情况下，该文件应包含以下空`Devices`XML 元素：
+打开**PlayerDeviceList.xml**向上如 Visual Studio 或 Visual Studio Code 编辑器中。 您需要在此文件中手动配置你的设备。 默认情况下，该文件应包含以下空`Devices`XML 元素：
 
 ```xml
 <DeviceList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -114,13 +114,13 @@ ms.locfileid: "34793743"
 </PlayerDevice>
 ```
 
-**关闭并重新打开 Visual Studio。** 在列表中应显示你的设备。
+**关闭并重新打开 Visual Studio。** 你的设备应显示在列表中。
 
-## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>在 IDE 中的"无法找到类型或命名空间"消息
+## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>在 IDE 中"无法找到类型或命名空间"消息
 
-你已选择的检查**启动项目**匹配你的设备类型 （iOS 或 Android） 和该配置与该设备类型 （如。 **调试 | iPhone 模拟器**适用于 iOS)。
+检查所选**启动项目**匹配你的设备类型 （iOS 或 Android） 和该配置与该设备类型 （例如。 **调试 | iPhone 模拟器**适用于 iOS)。
 
-## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>Player 中的"类型 InterpretedXamarin.Forms.Button 找不到构造函数"消息
+## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>在播放机中的"构造函数对类型 'InterpretedXamarin.Forms.Button 找不到"消息
 
 某些系统类不能重写，例如：
 
@@ -130,14 +130,14 @@ public class SomeCustomButton : Xamarin.Forms.Button { ... }
 
 ## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: Resource.Layout 不包含 Main 的定义"
 
-带有 AXML 文件中定义的用户界面，对于 Android 项目出现此错误。
-在 Xamarin 实时播放器中当前不支持 AXML 文件。
+使用 AXML 文件中定义的用户界面，Android 项目的出现此错误。
+在 Xamarin Live Player 中当前不支持 AXML 文件。
 
-### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Android 工具栏和选项卡呈现不正确使用 Xamarin.Forms
+### <a name="android-toolbar-and-tabs-render-incorrectly-using-xamarinforms"></a>Android 工具栏和选项卡的呈现错误地使用 Xamarin.Forms
 
 Xamarin.Forms Android 项目必须使用"Toolbar.axml"和"Tabbar.axml"相关的布局文件的名称。 默认模板使用这些名称;重命名它们会导致呈现问题。
 
-任何其他问题请报告上[bugzilla](https://aka.ms/live-player-report-issue)。
+请在报告的任何其他问题[bugzilla](https://aka.ms/live-player-report-issue)。
 
 ## <a name="related-links"></a>相关链接
 

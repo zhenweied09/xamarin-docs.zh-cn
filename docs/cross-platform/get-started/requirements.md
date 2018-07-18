@@ -1,16 +1,17 @@
 ---
 title: 系统要求
-description: 使用 Xamarin 的先决条件
+description: 本文档列出了在 Mac 和 Windows 计算机上使用 Xamarin 生成应用的系统要求。 它还链接到安装说明。
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: asb3993
 ms.author: amburns
 ms.date: 08/28/2017
-ms.openlocfilehash: eb0fabf55362888b766c13d1ead3f82db3e680b4
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 04db2fe4e3385c55ecf653b002b909f16e99a101
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780719"
 ---
 # <a name="system-requirements"></a>系统要求
 

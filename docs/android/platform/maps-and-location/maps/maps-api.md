@@ -1,18 +1,20 @@
 ---
-title: 地图 API
+title: 使用你的应用程序中的 Google 映射 API
+description: 如何在 Xamarin.Android 应用程序中实现 Google 地图 API v2 功能。
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: fc16178a4068b2dcf22fc19047e0ef403e83633f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a0e010a8300eb4b4452737e34d2f55a35ab95428
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935134"
 ---
-# <a name="maps-api"></a>地图 API
+# <a name="using-the-google-maps-api-in-your-application"></a>应用程序中使用 Google 地图 API
 
 使用地图应用程序非常有利，但有时你想要在你的应用程序中直接包含地图。 除了内置映射应用程序，还提供了 Google[适用于 Android 的本机映射 API](https://developers.google.com/maps/documentation/android/)。
 地图 API 适合于你想要维护的映射体验的更好地控制的情况。 可能用于地图 API 的事件包括：
@@ -314,7 +316,7 @@ Android 的地图 API 提供的 API 的允许活动更改角度来看，添加�
 
 地图来模拟作为平面平面在屏幕上，根据 Mercator 投影。 地图视图是*相机*此平面上直接向下查找。 可以通过更改位置、 缩放、 倾斜，并影响控制的照相机的位置。 [CameraUpdate](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdate)类用于移动的照相机的位置。 `CameraUpdate` 不直接实例化对象，而是地图 API 提供[CameraUpdateFactory](http://developer.android.com/reference/com/google/android/gms/maps/CameraUpdateFactory.html)类。
 
-一次`CameraUpdate`创建对象，它作为参数传递到[GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera(com.google.maps.CameraUpdate))或[GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera(com.google.maps.CameraUpdate))方法。 `MoveCamera`方法更新立即时映射`AnimateCamera`方法提供平滑、 动画转换。
+一次`CameraUpdate`创建对象，它作为参数传递到[GoogleMap.MoveCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#moveCamera%28com.google.maps.CameraUpdate%29)或[GoogleMap.AnimateCamera](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/GoogleMap.html#animateCamera%28com.google.maps.CameraUpdate%29)方法。 `MoveCamera`方法更新立即时映射`AnimateCamera`方法提供平滑、 动画转换。
 
 此代码片段是如何使用一个简单示例`CameraUpdateFactory`创建`CameraUpdate`，都会增加地图的缩放级别 1:
 
@@ -327,7 +329,7 @@ if (_map != null) {
 }
 ```
 
-地图 API 提供[CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html)其将聚合所有相机位置的可能值。 此类的实例可以提供给[CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition(com.google.android.gms.maps.model.CameraPosition))方法将返回`CameraUpdate`对象。 地图 API 还包括[CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) fluent API 提供用于创建的类`CameraPosition`对象。
+地图 API 提供[CameraPosition](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html)其将聚合所有相机位置的可能值。 此类的实例可以提供给[CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29)方法将返回`CameraUpdate`对象。 地图 API 还包括[CameraPosition.Builder](http://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) fluent API 提供用于创建的类`CameraPosition`对象。
 下面的代码段演示创建的示例`CameraUpdate`从`CameraPosition`并将它更改上的照相机的位置`GoogleMap`:
 
 ```csharp
@@ -371,7 +373,7 @@ Android 的地图 API 提供 API 的绘制地图上的以下各项：
 
 ##### <a name="adding-a-marker"></a>添加标记
 
-要向地图中添加一个标记，则有必要创建一个新[MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions)对象，然后调用[AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker(com.google.android.gms.maps.model.MarkerOptions))方法`GoogleMap`实例。 此方法将返回[标记](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker)对象。
+要向地图中添加一个标记，则有必要创建一个新[MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions)对象，然后调用[AddMarker](http://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29)方法`GoogleMap`实例。 此方法将返回[标记](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker)对象。
 
 ```csharp
 MapFragment mapFrag = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.my_mapfragment_container);
@@ -381,7 +383,7 @@ if (_map != null) {
     MarkerOptions markerOpt1 = new MarkerOptions();
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -401,7 +403,7 @@ if (_map != null) {
 
 -   `FromBitmap(Bitmap image)` &ndash; 指定的位图用作图标。
 
--   `FromFile(string fileName` &ndash; 从指定路径中的文件创建自定义图标。
+-   `FromFile(string fileName)` &ndash; 从指定路径中的文件创建自定义图标。
 
 -   `FromResource(int resourceId)` &ndash; 从指定的资源创建一个自定义图标。
 
@@ -416,7 +418,7 @@ if (_map != null)
     markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
     markerOpt1.SetTitle("Vimy Ridge");
     markerOpt1.InvokeIcon(BitmapDescriptorFactory.DefaultMarker (BitmapDescriptorFactory.HueCyan));
-    _map.AddMarker(marker1);
+    _map.AddMarker(markerOpt1);
 }
 ```
 
@@ -514,7 +516,7 @@ myMap.AddPolygon(rectOptions);
 CircleOptions circleOptions = new CircleOptions ();
 circleOptions.InvokeCenter (new LatLng(37.4, -122.1));
 circleOptions.InvokeRadius (1000);
-_map.AddCircle (CircleOptions);
+_map.AddCircle (circleOptions);
 ```
 
 
@@ -613,4 +615,3 @@ private void MapOnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEvent
 - [Google 映射 Android API v2](https://developers.google.com/maps/documentation/android/)
 - [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [获取 Google 地图 API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [未更新，但 AVD 问题 57880: Google Play Services](https://code.google.com/p/android/issues/detail?id=57880)

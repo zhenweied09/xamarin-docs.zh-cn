@@ -11,6 +11,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31646776"
 ---
 # <a name="using-adonet-with-android"></a>使用 ADO.NET 和 Android
 
@@ -31,7 +32,7 @@ Xamarin 提供内置支持，可在 Android 上提供可以使用熟悉的类似
 -----
 
 
-右键单击**引用 > 编辑引用...**然后单击以选择所需的程序集。
+右键单击**引用 > 编辑引用...** 然后单击以选择所需的程序集。
 
 ## <a name="about-monodatasqlite"></a>有关 Mono.Data.Sqlite
 

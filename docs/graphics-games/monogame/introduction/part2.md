@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33921659"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>第 2 – 实现 WalkingGame 部分
 
@@ -52,7 +53,7 @@ _本演练演示如何添加游戏逻辑和内容分发到一个空的 MonoGame 
 
 ### <a name="creating-a-texture2d"></a>创建 Texture2D
 
-我们需要创建`Texture2D`实例呈现我们画面时可用。 所有游戏内容最终包含在名为的文件夹**内容，**位于特定于平台的项目。 MonoGame 共享项目不能包含内容，因为内容必须使用特定于平台的生成操作。 CocosSharp 开发人员会发现内容的文件夹的熟悉的概念 – 位于 CocosSharp 和 MonoGame 项目中的同一位置。 在 iOS 项目中，并在 Android 项目中的资产文件夹内，可以找到的内容文件夹。
+我们需要创建`Texture2D`实例呈现我们画面时可用。 所有游戏内容最终包含在名为的文件夹**内容，** 位于特定于平台的项目。 MonoGame 共享项目不能包含内容，因为内容必须使用特定于平台的生成操作。 CocosSharp 开发人员会发现内容的文件夹的熟悉的概念 – 位于 CocosSharp 和 MonoGame 项目中的同一位置。 在 iOS 项目中，并在 Android 项目中的资产文件夹内，可以找到的内容文件夹。
 
 若要添加我们的游戏中的内容，请右键单击**内容**文件夹，然后选择**添加 > 添加文件...** 导航到解压缩 content.zip 文件的位置并选择**charactersheet.png**文件。 如果系统询问有关如何将文件添加到文件夹，我们应选择**复制**选项：
 

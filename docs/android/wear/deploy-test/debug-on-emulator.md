@@ -6,13 +6,13 @@ ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 9be9b91a0ed7e7607469bf8d74087b6f93677559
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/21/2018
+ms.openlocfilehash: baa8df87caf2c05d7b6202d5160c930e51656e10
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732978"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36934973"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>调试的仿真程序上的 Android 磨损
 
@@ -22,7 +22,7 @@ _这些文章介绍如何调试的仿真程序上的 Xamarin.Android 磨损应�
 
 开发 Android 磨损应用程序需要运行该应用程序，请在物理硬件上或使用仿真程序或模拟器。 使用硬件是最好的方法，但并不总是最实用的方法。 在许多情况下，它可以更简单且更具成本效益以模拟/模拟 Android 磨损硬件使用仿真程序，如下所述。 如果你尚不熟悉此过程的部署和运行 Android 磨损应用程序，请参阅[Hello，带](~/android/wear/get-started/hello-wear.md)。
 
-## <a name="configure-the-google-android-emulator"></a>配置 Google Android 仿真程序
+## <a name="configure-the-android-emulator"></a>配置 Android 仿真程序
 
 若要在模拟器上运行你磨损的应用程序，必须安装 Android SDK Android 仿真程序，并将其配置为 Android 损耗。 有关整体的 Android SDK 仿真程序安装和配置信息，请参阅[Android 仿真程序安装程序](~/android/get-started/installation/android-emulator/index.md)。
 
@@ -48,4 +48,4 @@ Android 仿真程序启动后，则 Xamarin.Android 将磨损应用部署到仿�
  
 ## <a name="summary"></a>总结
  
-本指南介绍如何配置磨损开发 Google Android 仿真程序和启动调试的磨损虚拟设备。
+本指南介绍如何配置于磨损开发的 Android 仿真程序和启动调试的磨损虚拟设备。

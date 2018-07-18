@@ -7,11 +7,12 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: e120b917a106d01067e073219bbe2688c2811448
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fffb78d6f2599c231617ed025d41282beffd319b
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066450"
 ---
 # <a name="c-6-new-features-overview"></a>C# 6 新功能概述
 
@@ -48,7 +49,7 @@ _最新版本的 C# 语言 – 版本 6 – 一直发展的要具有样本要少
 Mono C# 6 编译器包含在 Mono 4.0 及更高版本，即[免费下载](http://www.mono-project.com/download/)。
 适用于 Mac 的 visual Studio 自动更新你的系统上的单声道安装。
 
-Windows 用户必须具有[Visual Studio 2015 或 2017年 ^](https://www.visualstudio.com/)安装为 C# 6 代码编译 （即使你为 IDE 选择 Xamarin Studio for Windows）。
+Windows 用户必须具有[Visual Studio 2015 或 2017年 ^](https://visualstudio.microsoft.com/)安装为 C# 6 代码编译 （即使你为 IDE 选择 Xamarin Studio for Windows）。
 
 ^ 或 *[Microsoft 生成工具 2015年](http://www.microsoft.com/download/details.aspx?id=48159)* 命令行编译或生成服务器，例如。
 

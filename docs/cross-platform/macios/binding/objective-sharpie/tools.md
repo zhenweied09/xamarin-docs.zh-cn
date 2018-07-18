@@ -1,26 +1,26 @@
 ---
 title: 目标 Sharpie 工具和命令
-description: 本文档概述了包括目标 Sharpie 和命令行自变量与它们使用的工具。
+description: 本文档概述了包含目标 Sharpie 和命令行自变量与其使用的工具。
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 9ef566559249caca75281d9490d5314e08e26d44
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781060"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855063"
 ---
 # <a name="objective-sharpie-tools--commands"></a>目标 Sharpie 工具和命令
 
-_包括目标 Sharpie 和命令行参数以使用它们的工具的概述。_
+_包含目标 Sharpie 和命令行参数来使用它们的工具的概述。_
 
-<style type="text/css"> .terminal 蓝色 {颜色： rgb(10,96,254);}.terminal 绿色 {颜色： rgb(12,156,26);}.terminal 洋红色 {颜色： rgb(152,12,103);} </style>
+<style type="text/css"> .terminal 蓝色 {颜色： rgb(10,96,254);}.terminal 绿色 {color: rgb(12,156,26);}.terminal 洋红色 {颜色： rgb(152,12,103);} </style>
 
 
-已成功目标 Sharpie 后[安装](~/cross-platform/macios/binding/objective-sharpie/get-started.md)，打开终端并熟悉<em>命令</em>目标 Sharpie 必须提供：
+目标 Sharpie 成功后[安装](~/cross-platform/macios/binding/objective-sharpie/get-started.md)，打开终端并自己应熟悉<em>命令</em>目标 Sharpie 必须提供：
 
 <pre>$ <b>sharpie -help</b>
 usage: sharpie [OPTIONS] TOOL [TOOL_OPTIONS]
@@ -50,18 +50,18 @@ Available Tools:
   verify-docs        Show cross reference documentation for [Verify] attributes
   docs               Open the Objective Sharpie online documentation</pre>
 
-目标 Sharpie 提供了以下工具：
+目标 Sharpie 提供以下工具：
 
 |工具|描述|
 |--- |--- |
-|**xcode**|提供有关当前的 Xcode 安装和版本的 iOS 和 Mac Sdk 所提供的信息。 我们将使用此信息更高版本时我们生成我们的绑定。|
-|**Pod**|搜索、 配置、 安装 （在本地目录），并将绑定 Objective C [CocoaPod](https://cocoapods.org/) master 规范存储库中可用的库。 此工具会评估已安装的 CocoaPod 自动推导出正确的输入要传递给`bind`下面的工具。 3.0 中新增功能 ！|
+|**xcode**|提供有关当前 Xcode 安装以及 iOS 和 Mac Sdk 提供的版本信息。 我们将使用此信息更高版本生成我们的绑定时。|
+|**pod**|搜索、 配置、 将安装 （在本地目录中），并将绑定 OBJECTIVE-C [CocoaPod](https://cocoapods.org/)规范的主存储库中可用的库。 此工具将评估已安装的 CocoaPod 自动推导出正确的输入要传递给`bind`下列工具。 3.0 中的新增功能 ！|
 |**bind**|分析标头文件 (`*.h`) 到初始 Objective C 库中[ApiDefinition.cs 和 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md)文件。|
-|**update**|检查目标 Sharpie 的较新版本和下载并启动安装程序，如果有的话。|
+|**update**|检查目标 Sharpie 的较新版本和下载并启动安装程序，如果有可用。|
 |**verify-docs**|显示有关详细的信息`[Verify]`属性。|
-|**docs**|导航到在默认 web 浏览器中的此文档。|
+|**docs**|导航到默认 web 浏览器中的此文档。|
 
-若要获得关于特定目标 Sharpie 工具帮助，请输入工具的名称和`-help`选项。 例如，`sharpie xcode -help`将返回以下输出：
+若要获取特定的目标 Sharpie 工具的帮助，请输入工具的名称和`-help`选项。 例如，`sharpie xcode -help`将返回以下输出：
 
 <pre>$ <b>sharpie xcode -help</b>
 usage: sharpie xcode [OPTIONS]
@@ -73,7 +73,7 @@ Options:
 Xcode Options:
   -sdks            List all available Xcode SDKs. Pass -verbose for more details.</pre>
 
-我们可以开始绑定过程之前，我们需要通过终端中输入以下命令获取有关我们当前已安装的 Sdk 信息`sharpie xcode -sdks`。 你的输出可能与不同，具体取决于你已安装 Xcode 的哪个版本。 在任何安装的 Sdk 目标 Sharpie 查找`Xcode*.app`下`/Applications`目录：
+我们可以在绑定过程之前，我们需要通过在终端中输入以下命令获取有关当前已安装 Sdk 的信息`sharpie xcode -sdks`。 你的输出可能会因已安装的 Xcode 版本信息。 目标 Sharpie 寻找 Sdk 安装在任何`Xcode*.app`下`/Applications`目录：
 
 <pre>$ <b>sharpie xcode -sdks</b>
 <span class="terminal-blue">sdk:</span> appletvos9.0    <span class="terminal-green">arch:</span> arm64
@@ -84,5 +84,9 @@ Xcode Options:
 <span class="terminal-blue">sdk:</span> macosx10.10     <span class="terminal-green">arch:</span> x86_64  i386
 <span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
 
-综上所述，我们可以看到我们具有`iphoneos9.1`我们计算机上安装 SDK，并且具有`arm64`体系结构支持。 我们将在本部分中的所有示例使用此值。 使用就地此信息，我们已准备好将 Objective C 库标头文件解析到初始`ApiDefinition.cs`和`StructsAndEnums.cs`绑定项目。
+综上所述，我们可以看到，我们有`iphoneos9.1`SDK 安装在我们的机器上并且具有`arm64`体系结构支持。 我们将在本部分中的所有示例使用此值。 使用此信息后，我们已准备好将 Objective C 库标头文件分析到初始`ApiDefinition.cs`和`StructsAndEnums.cs`绑定项目。
 
+## <a name="related-links"></a>相关链接
+
+- [Xamarin 大学课程： 构建 OBJECTIVE-C 绑定库](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin 大学课程： 构建使用目标 Sharpie OBJECTIVE-C 绑定库](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

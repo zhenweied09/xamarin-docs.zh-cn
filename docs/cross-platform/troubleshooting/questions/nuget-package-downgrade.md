@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33947516"
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>如何将降级 NuGet 包
 

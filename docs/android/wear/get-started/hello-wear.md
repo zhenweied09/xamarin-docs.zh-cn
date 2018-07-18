@@ -12,6 +12,7 @@ ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33798409"
 ---
 # <a name="hello-wear"></a>Hello 磨损
 
@@ -44,13 +45,13 @@ _创建第一个 Android 磨损应用并在磨损模拟器或设备上运行它�
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-确保**到目标最低 Android**设置为**Android 5.0 （棒糖形）**或更高版本： 
+确保**到目标最低 Android**设置为**Android 5.0 （棒糖形）** 或更高版本： 
 
 [![将目标框架设置为 Visual Studio 中的 Android 5.0](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
-确保目标框架设置为**Android 5.0 （棒糖形）**或更高版本：
+确保目标框架设置为**Android 5.0 （棒糖形）** 或更高版本：
 
 [![在设计时将目标框架设置为 Visual Studio 中的 Android 5.0 for Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 

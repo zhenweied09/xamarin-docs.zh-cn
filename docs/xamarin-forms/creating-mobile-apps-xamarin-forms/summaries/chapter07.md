@@ -1,76 +1,76 @@
 ---
-title: 第 7 章的摘要。 与代码的 XAML
-description: 使用 Xamarin.Forms 创建移动应用： 摘要的第 7 章。 与代码的 XAML
+title: 第 7 章的摘要。 XAML 与代码
+description: 使用 Xamarin.Forms 创建移动应用： 第 7 章的摘要。 XAML 与代码
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: efa3a22c12983ef742bb46f91ab6096294cdc533
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 02e4ea44d87360deed361d161759fa3a2808100f
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241443"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995152"
 ---
-# <a name="summary-of-chapter-7-xaml-vs-code"></a>第 7 章的摘要。 与代码的 XAML
+# <a name="summary-of-chapter-7-xaml-vs-code"></a>第 7 章的摘要。 XAML 与代码
 
-Xamarin.Forms 支持基于 XML 的标记语言称为可扩展应用程序标记语言或 XAML （读作"zammel"）。 XAML 的另一种向 C# 和定义用户界面元素之间的绑定和基础数据中定义的 Xamarin.Forms 应用程序的用户界面的布局。
+Xamarin.Forms 支持名为 Extensible Application Markup Language 的基于 XML 的标记语言或 XAML （读作"zammel"）。 XAML 可用于替代 C# 中，定义用户界面元素之间的绑定和基础数据内定义的 Xamarin.Forms 应用程序的用户界面布局。
 
 ## <a name="properties-and-attributes"></a>属性和特性
 
-Xamarin.Forms 类和结构变成 XML 元素，在 XAML 中，而这些类和结构的属性变得 XML 属性。 要实例化在 XAML 中，类通常必须具有公共无参数构造函数。 在 XAML 中设置任何属性必须具有公共`set`访问器。
+Xamarin.Forms 类和结构成为 XAML 中的 XML 元素，这些类和结构的属性将成为 XML 特性。 若要在 XAML 中实例化，类通常必须具有公共无参数构造函数。 在 XAML 中设置任何属性必须具有公共`set`访问器。
 
-有关的基本数据类型的属性 (`string`， `double`， `bool`，依此类推)，XAML 分析器使用标准`TryParse`方法将属性设置转换为这些类型。 XAML 分析器可以方便地处理枚举类型，并且它枚举成员的情况下组合的枚举类型会被标记为`Flags`属性。
+属性的基本数据类型 (`string`， `double`， `bool`，依次类推)，XAML 分析器使用标准`TryParse`方法将属性设置为这些类型。 XAML 分析器可以方便地处理枚举类型，并且如果使用的枚举类型进行标记，它可以将合并枚举成员`Flags`属性。
 
-若要帮助 XAML 分析器，更复杂的类型 （或这些类型的属性） 可以包含[ `TypeConverterAttribute` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TypeConverterAttribute/)标识派生自的类[ `TypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TypeConverter/)支持从转换对这些类型的字符串值。 例如， [ `ColorTypeConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColorTypeConverter/)将转换到颜色名称和字符串，如"#rrggbb"`Color`值。
+若要帮助 XAML 分析器，更复杂的类型 （或这些类型的属性） 可以包含[ `TypeConverterAttribute` ](xref:Xamarin.Forms.TypeConverterAttribute)标识派生的类[ `TypeConverter` ](xref:Xamarin.Forms.TypeConverter)它支持从转换对这些类型的字符串值。 例如， [ `ColorTypeConverter` ](xref:Xamarin.Forms.ColorTypeConverter)转换为颜色名称和字符串，如"#rrggbb"`Color`值。
 
 ## <a name="property-element-syntax"></a>属性元素语法
 
-在 XAML 中，类和从其创建的对象表示为 XML 元素。 这些被称为*对象元素*。 这些对象的大部分属性表示为 XML 属性。 这些应用程序称为*属性特性*。
+在 XAML，类和从其创建的对象都表示为 XML 元素。 这些参数称为*对象元素*。 大多数属性，这些对象表示为 XML 属性。 这些被称为*属性的特性*。
 
-有时属性必须设置为无法表示为一个简单的字符串的对象。 在这种情况下，XAML 支持调用的标记*属性元素*组成的类名称与句点分隔的属性名称。 然后，对象元素可以出现在属性元素标记的对。
+有时属性必须设置为一个对象，无法表示为一个简单的字符串。 在这种情况下，XAML 支持标记，调用*property 元素*，它包含的类名称和句点分隔的属性名称。 对象元素然后只能在一对属性元素标记中出现。
 
 ## <a name="adding-a-xaml-page-to-your-project"></a>将 XAML 页添加到你的项目
 
-首次创建，或者可以将 XAML 页添加到现有项目时，Xamarin.Forms 可移植类库可以包含一个 XAML 页。 在添加新项对话框，选择 XAML 页中，是指项或`ContentPage`和 XAML。 (不`ContentView`。)
+首次创建，或可以将 XAML 页添加到现有项目时，Xamarin.Forms 可移植类库可以包含一个 XAML 页面。 在添加新项对话框，选择的项的引用的 XAML 页面，或`ContentPage`和 XAML。 (不`ContentView`。)
 
-创建两个文件： filename 扩展.xaml 的 XAML 文件和 C# 文件扩展名。 xaml.cs。 C# 文件通常称为*代码隐藏*的 XAML 文件。 代码隐藏文件是派生自的分部类定义`ContentPage`。 在生成时，分析 XAML 和另一个分部类定义生成相同的类。 此生成的类包含一个名为方法`InitializeComponent`从代码隐藏文件的构造函数调用。
+创建两个文件： filename 扩展.xaml 的 XAML 文件和 C# 文件扩展名。 xaml.cs。 C# 文件通常称为*代码隐藏*的 XAML 文件。 代码隐藏文件是派生自的分部类定义`ContentPage`。 在生成时，XAML 进行分析，并为相同的类生成另一个分部类定义。 此生成的类包括一个名为方法`InitializeComponent`从代码隐藏文件的构造函数调用。
 
-在运行时，在结束`InitializeComponent`调用时，所有 XAML 文件的元素已实例化并初始化就像它们具有已在 C# 代码中创建。
+在运行时，在结束`InitializeComponent`调用所有已实例化并初始化就像他们已在 C# 代码创建 XAML 文件的元素。
 
-XAML 文件中的根元素是`ContentPage`。 根标记包含至少两个 XML 命名空间声明，一个用于 Xamarin.Forms 元素，其他定义`x`元素和属性固有的所有 XAML 实现的前缀。 根标记还包含`x:Class`属性，指示的命名空间和派生自的类名称`ContentPage`。 这与代码隐藏文件中的命名空间和类名称相匹配。
+XAML 文件中的根元素是`ContentPage`。 根标记包含至少两个 XML 命名空间声明，一个用于 Xamarin.Forms 元素以及其他定义`x`元素和所有 XAML 实现中的内部属性的前缀。 根标记还包含`x:Class`属性，用于指示命名空间和派生的类名称`ContentPage`。 此匹配的代码隐藏文件中的命名空间和类名称。
 
-通过以下方式演示 XAML 和代码的组合[ **CodePlusXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)示例。
+XAML 和代码的组合所示[ **CodePlusXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)示例。
 
 ## <a name="the-xaml-compiler"></a>XAML 编译器
 
-Xamarin.Forms 具有 XAML 编译器，但其使用基于使用的是可选的[ `XamlCompilationAttribute` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.XamlCompilationAttribute/)。 如果尚未编译 XAML，在生成期间，分析 XAML 和 XAML 文件嵌入在 PCL 中，其中还进行分析，在运行时。 如果编译 XAML 后，生成过程将 XAML 转换为二进制格式，和运行时处理更有效。
+Xamarin.Forms 具有 XAML 编译器，但其使用是可选的基于使用的[ `XamlCompilationAttribute` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)。 如果未编译 XAML，XAML 分析在生成时，并在 PCL 中，其中还进行分析，在运行时中嵌入的 XAML 文件。 如果编译 XAML，生成过程将 XAML 转换成二进制格式，并且该运行时过程更高效。
 
-## <a name="platform-specificity-in-the-xaml-file"></a>XAML 文件中的平台特征
+## <a name="platform-specificity-in-the-xaml-file"></a>XAML 文件中的平台特异性
 
-在 XAML 中， [ `OnPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnPlatform%3CT%3E/)类可以用于选择依赖于平台的标记。 这是一个泛型类，必须要实例化的`x:TypeArguments`匹配的目标类型属性。 [ `OnIdiom` ](https://developer.xamarin.com/api/type/Xamarin.Forms.OnIdiom%3CT%3E/)类越来越少地是类似，但使用。
+在 XAML 中， [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)类可用于选择依赖于平台的标记。 这是一个泛型类，必须使用实例化`x:TypeArguments`匹配目标类型的属性。 [ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1)类十分类似，但使用少得多。
 
-使用`OnPlatform`自书已发布以来已更改。 它最初具有名为的属性使用结合`iOS`， `Android`，和`WinPhone`。 现在用于子[ `On` ](https://developer.xamarin.com/api/type/Xamarin.Forms.On/)对象。 设置[ `Platform` ](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Platform/)为一致的公共字符串属性`const`字段[ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/)类。 设置[ `Value` ](https://developer.xamarin.com/api/property/Xamarin.Forms.On.Value/)属性的值与一致`x:TypeArguments`属性`OnPlatform`标记。
+使用`OnPlatform`通讯簿已发布后已更改。 它最初具有名为的属性使用结合`iOS`， `Android`，和`WinPhone`。 现在用于子[ `On` ](xref:Xamarin.Forms.On)对象。 设置[ `Platform` ](xref:Xamarin.Forms.On.Platform)属性设置为一个字符串，包含具有公共一致`const`的字段[ `Device` ](xref:Xamarin.Forms.Device)类。 设置[ `Value` ](xref:Xamarin.Forms.On.Value)属性的值与一致`x:TypeArguments`属性的`OnPlatform`标记。
 
-`OnPlatform` 中所示[ **ScaryColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/ScaryColorList)示例中，因此调用因为它包含块的几乎完全相同的 XAML。 此重复的标记存在提供的建议方法应可将其减少。
+`OnPlatform` 中所示[ **ScaryColorList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/ScaryColorList)示例中，因此称为，因为它包含块几乎完全相同的 XAML。 此重复标记存在建议应可降低它的技术。
 
 ## <a name="the-content-property-attributes"></a>内容属性特性
 
-某些属性元素频繁出现，如`<ContentPage.Content>`的根元素的标记`ContentPage`，或`<StackLayout.Children>`环绕的子级的标记`StackLayout`。
+某些属性元素频繁出现，如`<ContentPage.Content>`标记上的根元素`ContentPage`，或`<StackLayout.Children>`包含的子级的标记`StackLayout`。
 
-允许每个类来标识一个属性与[ `ContentPropertyAttribute` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPropertyAttribute/)类上。 此属性，则不需要的属性元素标记。 `ContentPage` 定义作为其内容属性`Content`，和`Layout<T>`(从其类`StackLayout`派生) 作为其内容属性定义`Children`。 这些属性元素标记不是必需的。
+每个类允许标识一个属性与[ `ContentPropertyAttribute` ](xref:Xamarin.Forms.ContentPropertyAttribute)类上。 对于此属性，则不需要的属性元素标记。 `ContentPage` 定义它的内容属性为`Content`，并`Layout<T>`(从其类`StackLayout`派生) 作为其内容属性定义`Children`。 这些属性元素标记不是必需的。
 
-属性元素`Label`是`Text`。
+Property 元素的`Label`是`Text`。
 
 ## <a name="formatted-text"></a>带格式文本
 
-[ **TextVariations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/TextVariations)示例包含几个示例的设置`Text`和`FormattedText`属性`Label`。 在 XAML 中，`Span`对象显示为子级的`FormattedString`对象。
+[ **TextVariations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/TextVariations)示例包含设置的几个示例`Text`并`FormattedText`的属性`Label`。 在 XAML 中，`Span`对象显示为子级的`FormattedString`对象。
 
- 如果将多行字符串设置为`Text`属性，行尾字符都转换为空格字符，但时多行字符串中显示的内容为保留的行尾字符`Label`或`Label.Text`标记：
+ 如果多行字符串设置为`Text`属性，行尾字符都转换为空格字符，但多行字符串中出现的内容时，将保留行尾字符`Label`或`Label.Text`标记：
 
- [![共享的文本变体的三个屏幕截图](images/ch07fg03-small.png "格式化文本变体")](images/ch07fg03-large.png#lightbox "格式化文本变体")
+ [![共享的文本变体的三个屏幕截图](images/ch07fg03-small.png "格式的文本变体")](images/ch07fg03-large.png#lightbox "格式化文本变体")
 
 
 

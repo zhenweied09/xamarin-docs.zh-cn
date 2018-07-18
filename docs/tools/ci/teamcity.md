@@ -6,11 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 32338bc89df2ef7ee4426482b1967861f0c0e058
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: e7279c03c730e95f211b555e5b832942c19ea8aa
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935410"
 ---
 # <a name="using-team-city-with-xamarin"></a>使用 Xamarin 团队城市
 
@@ -141,7 +142,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 当测试运行时，将调用 NUnit 样式 XML 文件的形式返回测试结果**报告.xml**。 TeamCity 将生成日志中显示的信息。
 
-有关如何将提交到测试云 UITests 的详细信息，请查阅 》 上 Xamarin 的指南[提交测试配置为测试云](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)。
+有关如何将提交到测试云 UITests 的详细信息，请查阅本指南在[上载准备 Xamarin.UITests](/appcenter/test-cloud/preparing-for-upload/uitest/)。
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>提交 Calabash 测试来测试云
 
@@ -206,6 +207,5 @@ $ test-cloud submit /path/to/APK <test-cloud-team-api-key> --devices <ANDROID_DE
 
 ## <a name="related-links"></a>相关链接
 
-- [提交到 Xamarin 测试云 (UITest) 的测试](https://developer.xamarin.com~/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/)
-- [提交到 Xamarin 测试云 (Calabash) 的测试](https://developer.xamarin.com~/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/)
+- [准备 Xamarin.UITests 以及上载](/appcenter/test-cloud/preparing-for-upload/uitest/)
 - [安装和配置 TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

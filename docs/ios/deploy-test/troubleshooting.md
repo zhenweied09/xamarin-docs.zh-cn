@@ -1,19 +1,20 @@
 ---
-title: 疑难解答
-description: 创建平稳部署的提示和技巧
+title: Xamarin.iOS 测试和部署 - 疑难解答
+description: 本文档提供了与代码签名和预配、TestFlight 以及将 iOS 应用程序包从 Mac 生成主机复制到 Windows 有关的疑难解答提示。
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: fe7425bbf6440317cc856d2c727874298f66bc33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 056b9ba5c1625093cd7fdd2914fa5df919a2f426
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785380"
 ---
-# <a name="troubleshooting"></a>疑难解答
+# <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Xamarin.iOS 测试和部署 - 疑难解答
 
 ## <a name="code-signing--provisioning"></a>代码签名和设置
 
@@ -32,7 +33,6 @@ iOS 方面的代码签名和设置可能非常麻烦，因此务必要确保代�
 * 确保所有所需证书和对应私钥都可用。 每个团队都需要开发人员证书（用于在自己的设备上安装应用）和分发证书（用于在其他设备上安装）
 
 * 安装新预配配置文件或证书时，重新启动 Xcode 和 Visual Studio for Mac / Visual Studio。
-
 
 ## <a name="testflight"></a>TestFlight
 

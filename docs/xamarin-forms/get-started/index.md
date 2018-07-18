@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 入门
-description: Xamarin.Forms 是一个跨平台 UI 工具包，允许开发人员有效创建可跨 iOS、Android、通用 Windows 平台应用共享的本机用户界面布局。 此系列介绍 Xamarin.Forms 开发的基础知识，并介绍如何构建多平台和多屏幕的应用程序。
+description: 本指南介绍了 Xamarin.Forms 开发的基础知识，以及如何生成多平台和多屏幕应用程序。
 ms.prod: xamarin
 ms.assetid: d87d7232-242c-4ec4-81e9-36103d7e8fcf
 ms.technology: xamarin-forms
@@ -8,11 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: da5547de1f21b1f02462f47a4e6ffee43dd0d1bf
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 6ac76f41fc0646107102e0d5e59609c0f3969511
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242435"
 ---
 # <a name="getting-started-with-xamarinforms"></a>Xamarin.Forms 入门
 

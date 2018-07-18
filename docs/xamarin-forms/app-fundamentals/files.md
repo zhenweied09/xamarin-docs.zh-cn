@@ -1,42 +1,68 @@
 ---
 title: Xamarin.Forms 中处理的文件
-description: 使用嵌入的资源或针对本机文件系统 Api 编写，可以完成处理与 xamarin.forms 结合的文件。
+description: 可以使用代码，在标准.NET 库中，或通过使用嵌入的资源来实现与 xamarin.forms 结合处理的文件。
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/22/2017
-ms.openlocfilehash: 80fdedd6c5df15272e36e6ac9c1414a4f731123a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 06/21/2018
+ms.openlocfilehash: 0be441a7be9777698212e690aca95fdd75e5050f
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241928"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36310148"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms 中处理的文件
 
-_使用嵌入的资源或针对本机文件系统 Api 编写，可以完成处理与 xamarin.forms 结合的文件。_
+_可以使用代码，在标准.NET 库中，或通过使用嵌入的资源来实现与 xamarin.forms 结合处理的文件。_
 
 ## <a name="overview"></a>概述
 
-Xamarin.Forms 代码在多个平台上运行 - 每个平台都有自己的文件系统。 这意味着读取和写入文件是大多数轻松地完成每个平台上使用本机文件 Api。 或者，嵌入的资源是更简单的解决方案，用于将与应用的数据文件。
-
-本文档涵盖以下常见文件处理方案：
-
--  [ **文件作为资源嵌入**](#Loading_Files_Embedded_as_Resources) -文件可以作为应用程序并加载使用反射 API 的一部分提供。
--  [ **保存和加载文件**](#Loading_and_Saving_Files) -用户可写存储可以是本机实现，然后使用访问`DependencyService`。
-
-
-第三方组件调用**PCLStorage**还可用于读取和写入到用户可访问存储 PCL 代码中的文件。
+Xamarin.Forms 代码在多个平台上运行 - 每个平台都有自己的文件系统。 以前，这意味着，读取和写入文件时非常方便地执行每个平台上使用本机文件 Api。 或者，嵌入的资源是更简单的解决方案，用于将与应用的数据文件。 但是，.NET 标准 2.0 是可以共享.NET 标准库中的文件访问代码。
 
 有关处理图像文件的信息，请参阅[处理映像](~/xamarin-forms/user-interface/images.md)页。
+
+<a name="Loading_and_Saving_Files" />
+
+## <a name="saving-and-loading-files"></a>保存和加载文件
+
+`System.IO`类可以用于访问每个平台上的文件系统。 `File`类，可以创建、 删除和读取文件，和`Directory`类可以创建、 删除或枚举目录的内容。 你还可以使用`Stream`子类，它可以提供更大程度上控制文件操作 （如文件中压缩或位置搜索）。
+
+可以使用编写文本文件`File.WriteAllText`方法：
+
+```csharp
+File.WriteAllText(fileName, text);
+```
+
+可以使用读取文本文件`File.ReadAllText`方法：
+
+```csharp
+string text = File.ReadAllText(fileName);
+```
+
+此外，`File.Exists`方法确定是否存在指定的文件：
+
+```csharp
+bool doesExist = File.Exists(fileName);
+```
+
+使用的一个值，可以从.NET 标准库确定的每个平台上的文件路径[ `Environment.SpecialFolder` ](xref:System.Environment.SpecialFolder)枚举的第一个参数为`Environment.GetFolderPath`方法。 这可以然后与结合使用的文件名`Path.Combine`方法：
+
+```csharp
+string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
+```
+
+这些操作所示示例应用，其中包括将保存并加载文本的页：
+
+[![保存和加载文本](files-images/saveandload-sml.png "保存和加载在应用程序中的文件")](files-images/saveandload.png#lightbox "保存和加载在应用程序中的文件")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
 ## <a name="loading-files-embedded-as-resources"></a>加载文件作为资源嵌入
 
-若要嵌入到一个文件**PCL**程序集，创建或添加文件，并确保**生成操作： EmbeddedResource**。
+若要嵌入到一个文件 **.NET 标准**程序集，创建或添加文件，并确保**生成操作： EmbeddedResource**。
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -112,7 +138,7 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>组织资源
 
-上面的示例假定文件嵌入 PCL 项目，用例的资源 ID 的形式的根目录**Namespace.Filename.Extension**，如`WorkingWithFiles.PCLTextResource.txt`和`WorkingWithFiles.iOS.SharedTextResource.txt`。
+上面的示例假定文件嵌入的用例的资源 ID 的形式的标准.NET 库项目根**Namespace.Filename.Extension**，如`WorkingWithFiles.PCLTextResource.txt`和`WorkingWithFiles.iOS.SharedTextResource.txt`。
 
 就可以组织文件夹中的嵌入的资源。 嵌入的资源放入文件夹中，文件夹名称将成为一部分的资源 ID （用句点分隔），以便资源 ID 格式变为**Namespace.Folder.Filename.Extension**。 放置到一个文件夹中的示例应用中使用的文件**myfolder 文件夹**会使相应资源 Id`WorkingWithFiles.MyFolder.PCLTextResource.txt`和`WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`。
 
@@ -132,119 +158,13 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 }
 ```
 
-<a name="Loading_and_Saving_Files" />
-
-## <a name="saving-and-loading-files"></a>保存和加载文件
-
-Xamarin.Forms 运行在多个平台上，每个都有其自己的文件系统，因为没有单个方法用于加载和保存用户创建的文件。 为了演示如何保存和加载示例应用程序包含一个屏幕，将保存并加载一些用户输入的文本文件完成的屏幕如下所示：
-
- [![保存和加载文本](files-images/saveandload-sml.png "保存和加载在应用程序中的文件")](files-images/saveandload.png#lightbox "保存和加载在应用程序中的文件")
-
-每个平台都有一个略有不同的目录结构和不同的文件系统功能-例如 Xamarin.iOS 和 Xamarin.Android 支持大多数`System.IO`功能，但通用 Windows 平台仅支持[ `Windows.Storage`](/uwp/api/windows.storage/) Api。
-
-若要获取解决此问题，示例应用程序时，可定义一个接口在 Xamarin.Forms PCL 中用于加载和保存文件。 它提供了一个简单的 API，用于加载和保存文本文件将存储在设备上。
-
-```csharp
-public interface ISaveAndLoad {
-    void SaveText (string filename, string text);
-    string LoadText (string filename);
-}
-```
-
-PCL 代码然后使用[DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)以获得对接口的本机实现的引用。 这允许可移植代码委托的加载和保存的文件复制到每个特定于平台的项目中编写的类。 在示例中，**保存**和**负载**按钮编写如下所示：
-
-```csharp
-var saveButton = new Button {Text = "Save"};
-saveButton.Clicked += (sender, e) => {
-    DependencyService.Get<ISaveAndLoad>().SaveText("temp.txt", input.Text);
-};
-var loadButton = new Button {Text = "Load"};
-loadButton.Clicked += (sender, e) => {
-    output.Text = DependencyService.Get<ISaveAndLoad>().LoadText("temp.txt");
-};
-```
-
-然后实现需要文件实际上可以保存和加载之前要添加到每个特定于平台的项目。
-
-### <a name="ios-and-android"></a>iOS 和 Android
-
-对于 Xamarin.iOS 和 Xamarin.Android 项目接口的实现可以是完全相同。 代码如下所示，包括`[assembly: Dependency (typeof (SaveAndLoad))]`属性所需的`DependencyService`工作。
-
-```csharp
-[assembly: Dependency (typeof (SaveAndLoad))]
-namespace WorkingWithFiles {
-    public class SaveAndLoad : ISaveAndLoad {
-        public void SaveText (string filename, string text) {
-            var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
-            var filePath = Path.Combine (documentsPath, filename);
-            System.IO.File.WriteAllText (filePath, text);
-        }
-        public string LoadText (string filename) {
-            var documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
-            var filePath = Path.Combine (documentsPath, filename);
-            return System.IO.File.ReadAllText (filePath);
-        }
-    }
-}
-```
-
-### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
-
-UWP 具有不同的文件系统 API — [ `Windows.Storage` ](/windows/uwp/files/quickstart-reading-and-writing-files/) –，它是用于保存和加载文件。
-`ISaveAndLoad`可以实现接口，如下所示：
-
-```csharp
-using System;
-using System.Threading.Tasks;
-using Windows.Storage;
-using WinApp;
-using WorkingWithFiles;
-using Xamarin.Forms;
-
-[assembly: Dependency(typeof(SaveAndLoad_WinApp))]
-
-namespace WindowsApp
-{
-    // https://msdn.microsoft.com/library/windows/apps/xaml/hh758325.aspx
-    public class SaveAndLoad_WinApp : ISaveAndLoad
-    {
-        public async Task SaveTextAsync(string filename, string text)
-        {
-            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            StorageFile sampleFile = await localFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(sampleFile, text);
-        }
-        public async Task<string> LoadTextAsync(string filename)
-        {
-            StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-            StorageFile sampleFile = await storageFolder.GetFileAsync(filename);
-            string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
-            return text;
-        }
-    }
-}
-```
-
-<a name="Saving_and_Loading_in_Shared_Projects" />
-
-### <a name="saving-and-loading-in-shared-projects"></a>保存和加载在共享项目中
-
-由于共享项目支持编译器指令所以有可能在共享项目中的单个类文件中包括所有特定于平台的代码 (而不使用`DependencyService`)。
-单个`SaveAndLoad`类无法编写包含这两个实现更高版本，有选择地编译到引用的项目使用类似的编译器指令`#if WINDOWS_PHONE`， `#if __IOS__`，和`#if __ANDROID__`。
-
-## <a name="additional-information"></a>其他信息
-
-基于 PCL Xamarin.Forms 项目还可以充分利用[PCLStorage NuGet](http://www.nuget.org/packages/pclstorage) ([代码&amp;文档](https://pclstorage.codeplex.com/)) 来帮助实施方式跨平台的文件操作。
-
-
 ## <a name="summary"></a>总结
 
-本文档介绍了用于加载嵌入的资源和保存和加载设备上的文本的某些简单文件操作。 开发人员可以实现自己的本机文件 Api 使用`DependencyService`，使其很复杂，需要处理其文件操作要求。
-
+本文介绍了一些简单的文件操作来保存和加载在设备上，文本和用于加载嵌入的资源。 使用.NET 标准 2.0 就可能共享.NET 标准库中的文件访问代码。
 
 ## <a name="related-links"></a>相关链接
 
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
-- [创建、 写入和读取文件 (UWP)](/windows/uwp/files/quickstart-reading-and-writing-files/)
 - [Xamarin.Forms 示例](https://github.com/xamarin/xamarin-forms-samples)
+- [使用 Xamarin.iOS 中的文件系统](~/ios/app-fundamentals/file-system.md)
 - [文件工作簿](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/files/files.workbook)

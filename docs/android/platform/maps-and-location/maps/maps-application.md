@@ -1,18 +1,20 @@
 ---
-title: 映射应用程序
+title: 启动映射应用程序
+description: 如何启动内置地图中的应用程序从 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/05/2017
-ms.openlocfilehash: b94c65c079b28fe042a42ec04357c11f3516d205
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: d15b6e544f58f03272c711236b579ca568e09539
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935017"
 ---
-# <a name="maps-application"></a>映射应用程序
+# <a name="launching-the-maps-application"></a>启动映射应用程序
 
 使用在 Xamarin.Android 的地图的最简单方法是利用内置地图应用程序如下所示：
 

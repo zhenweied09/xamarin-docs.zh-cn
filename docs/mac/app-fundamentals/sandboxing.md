@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30787904"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>沙盒处理 Xamarin.Mac 应用
 
@@ -148,7 +149,7 @@ public override void AwakeFromNib ()
 1. 启动 Xcode，然后选择**首选项**从**Xcode**菜单： 
 
     ![编辑在 Xcode 中的帐户](sandboxing-images/sign11.png "编辑在 Xcode 中的帐户")
-2. 单击**查看详细信息...**按钮： 
+2. 单击**查看详细信息...** 按钮： 
 
     ![单击查看详细信息按钮](sandboxing-images/sign12.png "单击查看详细信息按钮")
 3. 单击**刷新**按钮 （在左下角）。
@@ -225,11 +226,11 @@ public override void AwakeFromNib ()
 
 ### <a name="debugging-a-sandboxed-app"></a>调试沙盒应用程序
 
-调试器连接到 Xamarin.Mac 应用的整个 TCP，这意味着，默认情况下启用后沙盒处理，它将无法连接到应用程序，因此如果你尝试在不适当的权限启用的情况下运行应用程序，你将收到一个错误*"无法连接到调试器"*。 
+调试器连接到 Xamarin.Mac 应用的整个 TCP，这意味着，默认情况下启用后沙盒处理，它将无法连接到应用程序，因此如果你尝试在不适当的权限启用的情况下运行应用程序，你将收到一个错误 *"无法连接到调试器"*。 
 
 [![设置所需的选项](sandboxing-images/debug01.png "设置所需的选项")](sandboxing-images/debug01-large.png#lightbox)
 
-**允许传出网络连接 （客户端）**权限是所需的调试器，启用此操作将允许通常调试。 你无法调试没有它，因为我们已更新`CompileEntitlements`目标`msbuild`自动将该权限添加到权利，为仅是沙盒处理以用于调试任何应用版本。 发布版本应使用在权利文件中，不做任何修改指定的权利。
+**允许传出网络连接 （客户端）** 权限是所需的调试器，启用此操作将允许通常调试。 你无法调试没有它，因为我们已更新`CompileEntitlements`目标`msbuild`自动将该权限添加到权利，为仅是沙盒处理以用于调试任何应用版本。 发布版本应使用在权利文件中，不做任何修改指定的权利。
 
 ### <a name="resolving-an-app-sandbox-violation"></a>解决了应用沙盒冲突
 
@@ -258,7 +259,7 @@ public override void AwakeFromNib ()
 请执行以下操作：
 
 1. 在**解决方案 Pad**，双击**Entitlements.plist**文件以打开进行编辑。
-2. 下**权利**部分，选中**允许传出网络连接 （客户端）**复选框： 
+2. 下**权利**部分，选中**允许传出网络连接 （客户端）** 复选框： 
 
     [![编辑权利](sandboxing-images/sign17.png "编辑权利")](sandboxing-images/sign17-large.png#lightbox)
 3. 将所做的更改保存到应用程序。
