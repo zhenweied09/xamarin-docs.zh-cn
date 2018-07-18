@@ -1,4 +1,4 @@
----
+﻿---
 title: 身份验证和授权
 description: 本章介绍 eShopOnContainers 移动应用程序如何执行身份验证和授权对容器化微服务。
 ms.prod: xamarin

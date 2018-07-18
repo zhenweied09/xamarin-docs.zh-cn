@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用 Xamarin.Forms 电子书的企业应用程序模式
 description: 此电子书提供了用于开发自适应、 可维护性、 和可测试的 Xamarin.Forms 企业应用程序的体系结构指南。
 ms.prod: xamarin

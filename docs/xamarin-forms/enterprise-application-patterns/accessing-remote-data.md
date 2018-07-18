@@ -1,4 +1,4 @@
----
+﻿---
 title: 访问远程数据
 description: 本章介绍 eShopOnContainers 移动应用程序如何访问容器化微服务中的数据。
 ms.prod: xamarin
@@ -23,6 +23,7 @@ ms.locfileid: "38996160"
 ## <a name="introduction-to-representational-state-transfer"></a>具象状态传输简介
 
 具象状态传输 (REST) 是用于构建基于超媒体的分布式的系统的体系结构样式。 REST 模型的主要优势是它具有基于开放标准，并不绑定该模型或访问任何特定实现到客户端应用程序的实现。 因此，无法使用 Microsoft ASP.NET Core MVC，实现 REST web 服务，并且无法使用任何语言和工具集，可以生成 HTTP 请求并分析 HTTP 响应开发客户端应用程序。
+
 
 REST 模型使用导航方案来表示网络，称为资源上的对象和服务。 通常实现 REST 的系统使用 HTTP 协议来传输请求，从而访问这些资源。 在此类系统中，客户端应用程序提交中标识的资源的 URI 和 HTTP 方法 （如 GET、 POST、 PUT 或 DELETE），该值指示要对该资源执行的操作的窗体的请求。 HTTP 请求的正文包含执行该操作所需的任何数据。
 
