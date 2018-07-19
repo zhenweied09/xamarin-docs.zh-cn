@@ -1,33 +1,33 @@
 ---
-title: 与 SkiaSharp 2D 绘图
-description: 本文档提供跨平台 2D 的概述使用 SkiaSharp 进行绘制。 它链接到各种指南描述 SkiaSharp 和其各种 Api。
+title: 2D 绘制使用 SkiaSharp
+description: 本文档提供跨平台 2D 的概述使用 SkiaSharp 绘制。 它链接到各种指南描述 SkiaSharp 和其各种 Api。
 ms.prod: xamarin
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
-ms.date: 09/14/2017
-ms.openlocfilehash: 962fe657f25976f9b5069f2d434e92f816d249ca
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 07/17/2018
+ms.openlocfilehash: 0c8cbc14308c8c4131e5aaa2bcc0ddfa798af610
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783281"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130915"
 ---
-# <a name="2d-drawing-with-skiasharp"></a>与 SkiaSharp 2D 绘图
+# <a name="2d-drawing-with-skiasharp"></a>2D 绘制使用 SkiaSharp
 
-SkiaSharp 为执行二维图形提供功能强大的 C# API。 通过打开[Google Skia 库](http://skia.org)，同一个库为提供技术支持 Google Chrome、 Firefox 和 Android 的图形堆栈。
+SkiaSharp 进行二维图形提供了功能强大的 C# API。 由[Google 的 Skia 库](http://skia.org)，为提供支持 Google Chrome、 Firefox 和 Android 的图形堆栈的同一个库。
 
-[![](images/ide-sml.png "SkiaSharp 提供了一个功能强大的 C# API，用于执行二维图形")](images/ide.png#lightbox)
+[![](images/ide-sml.png "SkiaSharp 提供功能强大的 C# API 进行二维图形")](images/ide.png#lightbox)
 
-SkiaSharp 是可移植库，并作为方便地提供[跨平台 NuGet 包](https://www.nuget.org/packages/SkiaSharp)，并支持以下平台现成： macOS，Xamarin.Android、 Xamarin.iOS 和 Windows 桌面。
+SkiaSharp 是可移植库，并附带提供方便地[跨平台 NuGet 包](https://www.nuget.org/packages/SkiaSharp)，并支持在初始状态下的以下平台： macOS、 Xamarin.Android、 Xamarin.iOS、 和 Windows 桌面。
 
 ## <a name="introduction-to-skiasharpgraphics-gamesskiasharpintroductionmd"></a>[SkiaSharp 简介](~/graphics-games/skiasharp/introduction.md)
 
-SkiaSharp 和示例的核心概念概述代码来呈现图形、 文本、 位图和使用映像筛选器。
+SkiaSharp 和示例的核心概念的概述代码来呈现图形、 文本、 位图，并使用映像筛选器。
 
-## <a name="skiasharp-tutorials-for-xamarinformsxamarin-formsuser-interfacegraphicsskiasharpindexmd"></a>[有关 Xamarin.Forms SkiaSharp 教程](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)
+## <a name="skiasharp-tutorials-for-xamarinformsxamarin-formsuser-interfacegraphicsskiasharpindexmd"></a>[适用于 Xamarin.Forms 的 SkiaSharp 教程](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)
 
-了解如何使用跨平台呈现 Xamarin.Forms 中的图形：
+了解如何使用跨平台 Xamarin.Forms 中呈现的图形：
 
 - [绘制基础知识](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md)
   * [绘制一个简单的圆形](~/xamarin-forms/user-interface/graphics/skiasharp/basics/circle.md)
@@ -36,22 +36,22 @@ SkiaSharp 和示例的核心概念概述代码来呈现图形、 文本、 位�
   * [基本动画](~/xamarin-forms/user-interface/graphics/skiasharp/basics/animation.md)
   * [将文本和图形集成](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md)
   * [位图基础知识](~/xamarin-forms/user-interface/graphics/skiasharp/basics/bitmaps.md)
-- [行和路径](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
-  * [行和描边大写字母](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
+- [线和路径](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md)
+  * [线和笔划大写字母](~/xamarin-forms/user-interface/graphics/skiasharp/paths/lines.md)
   * [路径基础知识](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md)
-  * [路径的填充类型](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
-  * [折线和参数的等式](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
+  * [路径填充类型](~/xamarin-forms/user-interface/graphics/skiasharp/paths/fill-types.md)
+  * [折线和参数等式](~/xamarin-forms/user-interface/graphics/skiasharp/paths/polylines.md)
   * [点和短划线](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)
   * [手指绘图](~/xamarin-forms/user-interface/graphics/skiasharp/paths/finger-paint.md)
 - [转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/index.md)
-  * [转换变换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
-  * [缩放变换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
-  * [旋转变换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)
-  * [时间差转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/skew.md)
+  * [翻译转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)
+  * [缩放转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/scale.md)
+  * [旋转转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md)
+  * [倾斜转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/skew.md)
   * [矩阵转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)
   * [触摸操作](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/touch.md)
   * [非仿射转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)
-  * [三维旋转](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
+  * [3D 旋转](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)
 - [曲线和路径](~/xamarin-forms/user-interface/graphics/skiasharp/curves/index.md)
   * [绘制弧线的三个方法](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md)
   * [贝塞尔曲线的三种类型](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md)
@@ -60,17 +60,25 @@ SkiaSharp 和示例的核心概念概述代码来呈现图形、 文本、 位�
   * [路径效果](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md)
   * [路径和文本](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)
   * [路径信息和枚举](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
+- [位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
+  * [显示位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
+  * [创建和绘制位图上](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
+  * [裁剪位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
+  * [位图的分段的显示](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
+  * [将位图保存到文件](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [访问位图像素位](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
+  * [对位图进行动画处理](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[平台特定说明](~/graphics-games/skiasharp/platform.md)
 
-本页介绍在包括 iOS、 Android、 macOS 和 Windows 的不同平台上 SkiaSharp 的设置说明。
+此页介绍了不同的平台包括 iOS、 Android、 macOS 和 Windows 上的 SkiaSharp 的安装说明。
 
 ## <a name="api-documentationhttpsdeveloperxamarincomapinamespaceskiasharp"></a>[API 文档](https://developer.xamarin.com/api/namespace/SkiaSharp/)
 
-你可以浏览[API 文档](https://developer.xamarin.com/api/namespace/SkiaSharp/)为 SkiaSharp 在我们的 web 站点上。
+您可以浏览[API 文档](https://developer.xamarin.com/api/namespace/SkiaSharp/)为 SkiaSharp 上我们的网站。
 
 ## <a name="work-in-progress"></a>正在进行的工作
 
-SkiaSharp 是我们正在与我们的社区共享工作正在进行。 而我们具有绑定 Skia API 的重要部分，将剩余工作量进行。 我们使用 Skia，显示的稳定 C API，并且我们计划将继续参与到 Skia 来提供完整的覆盖范围提供给 Api 的 C 绑定我们工作。
+SkiaSharp 是工作正在进行的我们正在与我们的社区共享。 尽管我们已绑定 Skia API 的重要组成部分，很多工作仍需完成。 我们使用稳定的 C API 显示 Skia，并且我们计划将继续参与 Skia api 提供完整的覆盖范围的 C 绑定到我们的工作。
 
-若要帮助我们指南我们绑定工作，请为问题 GitHub 存储库上发表意见或建议[ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp)。
+若要帮助我们指导我们绑定的工作，请将保留的意见或建议为问题的 GitHub 存储库[ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp)。

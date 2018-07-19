@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
-ms.date: 04/03/2017
-ms.openlocfilehash: dec6fa1534f14836ae98677ad33e280ff510fb97
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/17/2018
+ms.openlocfilehash: cbce6f414586597dc2b2788aa18b03228c128018
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995178"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130954"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>位图中 SkiaSharp 的基础知识
 
@@ -22,7 +22,7 @@ SkiaSharp 中的支持是位图的非常大。 本文介绍如何仅基本&mdash
 
 ![](bitmaps-images/bitmapssample.png "两个位图的显示")
 
-SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)。 有许多方法来创建一个位图，但本文将限制到本身[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/SkiaSharp.SKStream/)方法，这将加载从位图[ `SKStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStream/)对象，它引用一个位图文件。 它可以方便地使用[ `SKManagedStream` ](https://developer.xamarin.com/api/type/SkiaSharp.SKManagedStream/)派生的类`SKStream`因为它具有一个接受.NET 构造函数[ `Stream` ](xref:System.IO.Stream)对象。
+SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)。 有许多方法来创建一个位图，但本文将限制到本身[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/)方法，从.NET 加载位图`Stream`对象。
 
 **基本位图**页面**SkiaSharpFormsDemos**程序演示了如何从三个不同的源加载位图：
 
@@ -55,39 +55,46 @@ public class BasicBitmapsPage : ContentPage
 
 ## <a name="loading-a-bitmap-from-the-web"></a>从 Web 加载位图
 
-若要加载基于 URL 的位图，可以使用[ `WebRequest` ](xref:System.Net.WebRequest)类，如以下代码执行中所示`BasicBitmapsPage`构造函数。 此处的 URL 指向具有一些示例位图的 Xamarin web 站点上的区域。 在网站上的包，可以追加大小调整为特定宽度位图的规范：
+若要加载基于 URL 的位图，可以使用[ `HttpClient` ](/dotnet/api/system.net.http.httpclient?view=netstandard-2.0)类。 您应实例化的一个实例`HttpClient`和重复使用它，因此将其存储为字段：
 
 ```csharp
-Uri uri = new Uri("http://developer.xamarin.com/demo/IMG_3256.JPG?width=480");
-WebRequest request = WebRequest.Create(uri);
-request.BeginGetResponse((IAsyncResult arg) =>
+HttpClient httpClient = new HttpClient();
+```
+
+使用时`HttpClient`iOS 和 Android 应用程序，你将想要设置项目属性，如文档中所述**[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**。
+
+因为它是最方便的方式使用`await`运算符，其中`HttpClient`，不能执行的代码中`BasicBitmapsPage`构造函数。 相反，它是一部分`OnAppearing`重写。 此处的 URL 指向具有一些示例位图的 Xamarin web 站点上的区域。 在网站上的包，可以追加大小调整为特定宽度位图的规范：
+
+
+```csharp
+protected override async void OnAppearing()
 {
+    base.OnAppearing();
+
+    // Load web bitmap.
+    string url = "https://developer.xamarin.com/demo/IMG_3256.JPG?width=480";
+
     try
     {
-        using (Stream stream = request.EndGetResponse(arg).GetResponseStream())
+        using (Stream stream = await httpClient.GetStreamAsync(url))
         using (MemoryStream memStream = new MemoryStream())
         {
-            stream.CopyTo(memStream);
+            await stream.CopyToAsync(memStream);
             memStream.Seek(0, SeekOrigin.Begin);
 
-            using (SKManagedStream skStream = new SKManagedStream(memStream))
-            {
-                webBitmap = SKBitmap.Decode(skStream);
-            }
-        }
+            webBitmap = SKBitmap.Decode(stream);
+            canvasView.InvalidateSurface();
+        };
     }
     catch
     {
     }
-
-    Device.BeginInvokeOnMainThread(() => canvasView.InvalidateSurface());
-
-}, null);
+}
 ```
 
-回调方法时已成功下载位图，传递给`BeginGetResponse`方法运行。 `EndGetResponse`调用需采用`try`阻止以防出现错误。 `Stream`对象，来自`GetResponseStream`不能满足在某些平台上使位图内容复制到`MemoryStream`对象。 此时，`SKManagedStream`可创建对象。 现在引用的位图文件，这可能是 JPEG 或 PNG 文件。 `SKBitmap.Decode`方法解码的位图文件，并将结果存储在内部 SkiaSharp 格式。
+Android 将使用时引发的异常`Stream`从返回`GetStreamAsync`中`SKBitmap.Decode`方法因为它正在执行主线程上较长的操作。 出于此原因，位图文件的内容复制到`MemoryStream`对象使用`CopyToAsync`。
 
-回调方法传递给`BeginGetResponse`运行后构造函数已完成执行，这意味着`SKCanvasView`需要失效允许`PaintSurface`处理程序以更新显示。 但是，`BeginGetResponse`回调运行在辅助线程的执行，因此需要使用`Device.BeginInvokeOnMainThread`运行`InvalidateSurface`用户界面线程中的方法。
+静态`SKBitmap.Decode`方法负责解码的位图文件。 它适用于 JPEG、 PNG、 GIF 和几个其他常用的位图格式，并将结果存储在内部 SkiaSharp 格式。 在此情况下，`SKCanvasView`需要失效允许`PaintSurface`处理程序以更新显示。 
 
 ## <a name="loading-a-bitmap-resource"></a>正在加载位图资源
 
@@ -100,19 +107,18 @@ string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
 Assembly assembly = GetType().GetTypeInfo().Assembly;
 
 using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-using (SKManagedStream skStream = new SKManagedStream(stream))
 {
-    resourceBitmap = SKBitmap.Decode(skStream);
+    resourceBitmap = SKBitmap.Decode(stream);
 }
 ```
 
-这`Stream`对象可以直接向转换`SKManagedStream`对象。
+这`Stream`对象可以被直接传递到`SKBitmap.Decode`方法。
 
 ## <a name="loading-a-bitmap-from-the-photo-library"></a>从照片库加载位图
 
 还有可能要从设备的图片库加载一张照片的用户。 Xamarin.Forms 本身未提供此功能。 该作业需要一个依赖关系服务，如本文所述[图片库从选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)。
 
-**IPicturePicker.cs**文件和三个**PicturePickerImplementation.cs**该文章中的文件已复制到的各种项目**SkiaSharpFormsDemos**解决方案，并取得新命名空间名称。 此外，Android **MainActivity.cs**文章中所述修改文件和 iOS 项目已被授予权限以访问照片库使用两行代码靠近末尾部分给**info.plist**文件。
+**IPhotoLibrary.cs**中的文件**SkiaSharpFormsDemos**项目和三个**PhotoLibrary.cs**平台项目中的文件已改编自那篇文章。 此外，Android **MainActivity.cs**文章中所述修改文件和 iOS 项目已被授予权限以访问照片库使用两行代码靠近末尾部分给**info.plist**文件。
 
 `BasicBitmapsPage`构造函数将添加`TapGestureRecognizer`到`SKCanvasView`要通知的分流点。 在点击，收到`Tapped`处理程序获取访问图片选取器依赖关系服务并调用`GetImageStreamAsync`。 如果`Stream`返回对象，然后将内容复制到`MemoryStream`的平台的一些要求。 代码的其余部分是类似于两种方法：
 
@@ -122,22 +128,13 @@ TapGestureRecognizer tapRecognizer = new TapGestureRecognizer();
 tapRecognizer.Tapped += async (sender, args) =>
 {
     // Load bitmap from photo library
-    IPicturePicker picturePicker = DependencyService.Get<IPicturePicker>();
+    IPhotoLibrary photoLibrary = DependencyService.Get<IPhotoLibrary>();
 
-    using (Stream stream = await picturePicker.GetImageStreamAsync())
+    using (Stream stream = await photoLibrary.PickPhotoAsync())
     {
         if (stream != null)
         {
-            using (MemoryStream memStream = new MemoryStream())
-            {
-                stream.CopyTo(memStream);
-                memStream.Seek(0, SeekOrigin.Begin);
-
-                using (SKManagedStream skStream = new SKManagedStream(memStream))
-                {
-                    libraryBitmap = SKBitmap.Decode(skStream);
-                }
-            }
+            libraryBitmap = SKBitmap.Decode(stream);
             canvasView.InvalidateSurface();
         }
     }

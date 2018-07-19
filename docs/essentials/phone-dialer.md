@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Essentials： 电话拨号程序
-description: 在 Xamarin.Essentials PhoneDialer 类使应用程序能够在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
+description: 在 Xamarin.Essentials PhoneDialer 类使应用程序能够在拨号器中打开一个电话号码
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831392"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130788"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials： 电话拨号程序
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**PhoneDialer**类使应用程序能够在优化的系统首选的浏览器或外部浏览器中打开 web 链接。
+**PhoneDialer**类使应用程序能够在拨号器中打开一个电话号码。
 
 ## <a name="using-phone-dialer"></a>使用电话拨号程序
 
