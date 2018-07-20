@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: f06d0b312422889072be634768611ea1cc25088d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 464fbdb043ac35eba7a4cc2d9ec76b78cc91ac5b
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997167"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156507"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>第 6 章的摘要。 按钮单击事件
 
@@ -80,10 +80,12 @@ ms.locfileid: "38997167"
 
 [ **PersistentKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/PersistentKeypad)示例是非常类似于**SimplestKeypad**只不过该程序使用`OnSleep`重写以保存当前的键盘输入，并若要还原该数据页构造函数。
 
-
+> [!NOTE]
+> 正在保存程序设置的另一种方法提供的 Xamarin.Essentials[首选项](~/essentials/preferences.md)类。
 
 ## <a name="related-links"></a>相关链接
 
 - [第 6 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [第 6 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 - [第 6 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
+- [Xamarin.Forms 按钮](~/xamarin-forms/user-interface/button.md)

@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998330"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156569"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>第 3 章的摘要。 深入到文本
 
@@ -100,8 +100,6 @@ ms.locfileid: "38998330"
 - iOS： 浅色背景上的深文本
 - Android： 浅色 （在工作簿） 深色背景上的文本或浅色背景上的深文本 (材料设计通过在 AppCompat**主**的示例代码存储库的分支)
 - 浅色背景上的 UWP： 深文本
-- Windows 8.1： 浅色文本在深色背景上
-- Windows Phone 8.1： 浅色文本在深色背景上
 
 `Color.Accent`值会导致在深色或浅色背景可见的特定于平台的 （和用户有时可选） 颜色。
 

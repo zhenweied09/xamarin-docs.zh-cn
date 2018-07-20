@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 8a035da3dec468df291a19849ca89964c6707589
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: e7b2eea22758155db7d79fa26f3376e16cf16a45
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994752"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39157011"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>第 9 章的摘要。 特定于平台的 API 调用
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 此外，有时需要按平台运行一些代码，而异。 这一章介绍了一些技巧。
 
@@ -32,19 +35,20 @@ Xamarin.Forms 共享资产项目可以执行不同的代码，为每个平台使
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService 和可移植类库
 
-一种库通常无法访问应用程序项目中的类。 此限制似乎阻止中所示的技术**PlatInfoSap2** PCL 中使用。 但是，Xamarin.Forms 包含名为的类[ `DependencyService` ](xref:Xamarin.Forms.DependencyService) ，使用.NET 反射 PCL 中访问应用程序项目中的公共类。
+> [!NOTE] 
+> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
 
-在 PCL 中必须定义`interface`与需要使用每个平台中的成员。 然后，每个平台包含该接口的实现。 实现接口的类必须带有[DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute)程序集级别上。
+一种库通常无法访问应用程序项目中的类。 此限制似乎阻止中所示的技术**PlatInfoSap2**在库中使用。 但是，Xamarin.Forms 包含名为的类[ `DependencyService` ](xref:Xamarin.Forms.DependencyService) ，可以使用.NET 反射来访问库中的应用程序项目中的公共类。
 
-然后，在 PCL 中使用泛型[ `Get` ](xref:Xamarin.Forms.DependencyService.Get*)方法的`DependencyService`以获取实现该接口的平台类的实例。
+库必须定义`interface`与需要使用每个平台中的成员。 然后，每个平台包含该接口的实现。 实现接口的类必须带有[DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute)程序集级别上。
+
+库然后使用泛型[ `Get` ](xref:Xamarin.Forms.DependencyService.Get*)方法的`DependencyService`以获取实现该接口的平台类的实例。
 
 了这一点[ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo)示例。
 
 ## <a name="platform-specific-sound-generation"></a>特定于平台的发声功能
 
 [ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound)示例添加到嘟嘟声**MonkeyTap**通过访问每个平台中的发声功能进行编程。
-
-
 
 ## <a name="related-links"></a>相关链接
 

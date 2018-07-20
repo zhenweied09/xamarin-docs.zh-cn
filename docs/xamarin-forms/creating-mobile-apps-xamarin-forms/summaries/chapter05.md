@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 36d208f2326c7584bc03c351b4a5b05a3f3928c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995448"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156491"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>第 5 章的摘要。 处理大小
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 到目前为止已经遇到在 Xamarin.Forms 中的多个大小：
 
@@ -36,7 +39,10 @@ ms.locfileid: "38995448"
 
 Android 是类似的。 程序员工作单位*密度无关的像素*(dps) 和为一英寸 160 dp 上基于 dps 和像素之间的关系。
 
-Windows 运行时还建立了暗含接近 160 独立于设备的单位为一英寸的缩放比例。
+Windows 手机和移动设备还已建立暗含接近 160 独立于设备的单位为一英寸的缩放比例。
+
+> [!NOTE]
+> Xamarin.Forms 不再支持任何基于 Windows 的电话或移动设备。
 
 总之，面向手机和平板电脑的 Xamarin.Forms 程序员可以假定所有的度量单位基于以下条件：
 

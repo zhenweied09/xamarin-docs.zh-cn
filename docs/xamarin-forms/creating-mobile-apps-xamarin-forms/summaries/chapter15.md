@@ -7,12 +7,12 @@ ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 6da3753d723ed44ca640d8c80ae07258a03cbbbc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 534355b607d17e2d5a8c08254300496b49506bc8
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998662"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156634"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>第 15 章的摘要。 交互式接口
 
@@ -243,5 +243,7 @@ Xamarin.Forms 定义了三个视图，让用户输入和编辑文本：
 
 - [第 15 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [第 15 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+- [滑块](~/xamarin-forms/user-interface/slider.md)
 - [项](~/xamarin-forms/user-interface/text/entry.md)
 - [编辑器](~/xamarin-forms/user-interface/text/editor.md)
+- [DatePicker](~/xamarin-forms/user-interface/datepicker.md)

@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: a02239906f5a30c068cb7eebd31308ad188696b3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: da8ce02a0185364c2b833238ee04ebc29e8d3bb2
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998093"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156608"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>第 28 章的摘要。 位置和地图
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 Xamarin.Forms 支持[ `Map` ](xref:Xamarin.Forms.Maps.Map)派生的元素`View`。 由于使用映射所涉及的特殊平台要求，它们实现在单独的程序集， **Xamarin.Forms.Maps**，并涉及不同的命名空间： `Xamarin.Forms.Maps`。
 
@@ -48,6 +51,9 @@ Xamarin.Forms 支持[ `Map` ](xref:Xamarin.Forms.Maps.Map)派生的元素`View`�
 
 Xamarin.Forms`Map`类不包括一个工具用于获取用户的地理位置，但这通常是需要时使用的映射，因此一个依赖关系服务必须处理它。
 
+> [!NOTE]
+> Xamarin.Forms 应用程序可以改用[ `Geolocation` ](~/essentials/geolocation.md) Xamarin.Essentials 中包含的类。
+
 ### <a name="the-location-tracker-api"></a>位置跟踪器 API
 
 [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform)解决方案包含一个位置跟踪器 API 的代码。 [ `GeographicLocation` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs)结构封装纬度和经度。 [ `ILocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs)接口定义了两种方法来启动和暂停位置跟踪程序，并可用的新位置时的事件。
@@ -60,9 +66,9 @@ IOS 实现`ILocationTracker`是[ `LocationTracker` ](https://github.com/xamarin/
 
 Android 的实现`ILocationTracker`是[ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs)利用了 Android 类[ `LocationManager` ](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)类。
 
-#### <a name="the-windows-runtime-geo-locator"></a>Windows 运行时地理定位符
+#### <a name="the-uwp-geo-locator"></a>UWP 地理定位符
 
-Windows 运行时实现`ILocationTracker`是[ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs)类，利用了 UWP [ `Geolocator` ](https://msdn.microsoft.com/library/windows/apps/br225534)。
+通用 Windows 平台实现`ILocationTracker`是[ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs)类，利用了 UWP [ `Geolocator` ](/uwp/api/Windows.Devices.Geolocation.Geolocator)。
 
 ### <a name="display-the-phones-location"></a>显示手机所在的位置
 
@@ -82,9 +88,9 @@ Windows 运行时实现`ILocationTracker`是[ `LocationTracker` ](https://github
 
 获取用户的位置的 android 应用程序必须 ACCESS_FILE_LOCATION 权限中包括的 AndroidManifest.xml 文件。
 
-#### <a name="location-permissions-for-the-windows-runtime"></a>Windows 运行时的位置权限
+#### <a name="location-permissions-for-the-uwp"></a>适用于 UWP 的位置权限
 
-Windows 或 Windows Phone 应用程序必须具有`location`在 Package.appxmanifest 文件中标记的设备功能。
+通用 Windows 平台应用程序必须具有`location`在 Package.appxmanifest 文件中标记的设备功能。
 
 ## <a name="working-with-xamarinformsmaps"></a>使用 Xamarin.Forms.Maps
 
@@ -110,9 +116,9 @@ IOS 应用程序中使用`Map`需要在 info.plist 文件中的两个行。
 
 需要使用 Google 地图服务提供的授权密钥。 在插入此密钥**AndroidManifest.xml**文件。 此外， **AndroidManifest.xml**文件所需的`manifest`中获取用户的位置所涉及的标记。
 
-#### <a name="enabling-windows-runtime-maps"></a>启用 Windows 运行时映射
+#### <a name="enabling-uwp-maps"></a>启用 UWP 映射
 
-Windows 运行时应用程序需要使用必应地图提供的授权密钥。 作为参数传递此密钥`Xamarin.FormsMaps.Init`方法。 应用程序还必须启用位置服务。
+通用 Windows 平台应用程序需要使用必应地图提供的授权密钥。 作为参数传递此密钥`Xamarin.FormsMaps.Init`方法。 应用程序还必须启用位置服务。
 
 ### <a name="the-unadorned-map"></a>无修饰的映射
 
@@ -233,4 +239,4 @@ Windows 运行时应用程序需要使用必应地图提供的授权密钥。 �
 
 - [第 28 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [第 28 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [地图控件](~/xamarin-forms/user-interface/map.md)
+- [Xamarin.Forms 映射](~/xamarin-forms/user-interface/map.md)

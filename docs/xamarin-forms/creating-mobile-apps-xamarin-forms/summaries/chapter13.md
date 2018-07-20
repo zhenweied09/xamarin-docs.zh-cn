@@ -6,26 +6,32 @@ ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995464"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156621"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>第 13 章的摘要。 位图
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 Xamarin.Forms 平台都支持的 JPEG、 PNG、 GIF 和 BMP 文件格式。
 
 在 Xamarin.Forms 中的位图来自四个位置：
 
 - 通过指定 URL 的 web
-- 为常见的可移植类库中的资源嵌入
+- 作为在共享库中的资源嵌入
 - 作为资源嵌入在平台应用程序项目
 - 从任何位置可由.NET 引用`Stream`对象，其中包括 `MemoryStream`
 
-在 pcl 中的位图资源是独立于平台的而平台项目中的位图资源是特定于平台的。
+共享库中的位图资源是独立于平台的而平台项目中的位图资源是特定于平台的。
+
+> [!NOTE] 
+> 本书的文本，就对可移植类库，它已替换为.NET Standard 库的引用。 本书中的所有示例代码已都转换为使用.NET 标准库。
 
 通过设置指定的位图[ `Source` ](xref:Xamarin.Forms.Image.Source)的属性`Image`对象的类型[ `ImageSource` ](xref:Xamarin.Forms.ImageSource)，一个带有三个派生类抽象类：
 
@@ -63,7 +69,7 @@ Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 
 程序集`VerticalOptions`并`HorizontalOptions`的属性`Image`到`LayoutOptions.Center`，这使得`Image`不受约束的元素。 `Image`和位图都相同的大小：
 
 - 在 iOS 和 Android，`Image`是位图的像素大小。 没有位图像素和屏幕像素之间的一对一映射。
-- Windows 运行时在平台上，`Image`是以与设备无关单位位图的像素大小。 大多数设备上，每个位图像素占用多个屏幕像素。
+- 在通用 Windows 平台上，`Image`是以与设备无关单位位图的像素大小。 大多数设备上，每个位图像素占用多个屏幕像素。
 
 [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap)示例 put`Image`中垂直`StackLayout`在 XAML 中。 名为标记扩展[ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs)有助于引用 XAML 中嵌入的资源。 此类只从它的程序集加载资源在虚拟机所在，因此它不能放置在库中。
 
@@ -82,7 +88,10 @@ Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 
 
 ### <a name="browsing-and-waiting"></a>浏览和等待
 
-[ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser)示例允许用户浏览存储在 Xamarin 网站上的库存映像。 它使用.NET`WebRequest`类下载包含位图的列表的 JSON 文件。
+[ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser)示例允许用户浏览存储在 Xamarin 网站上的库存映像。 它使用.NET [ `WebRequest` ](xref:System.Net.WebRequest)类下载包含位图的列表的 JSON 文件。
+
+> [!NOTE]
+> Xamarin.Forms 程序应使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)而非[ `WebRequest` ](xref:System.Net.WebRequest)用于通过 internet 访问的文件。 
 
 该程序使用[ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator)以指示内容怎么回事。 加载每个位图，只读[ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading)的属性`Image`是`true`。 `IsLoading`属性由可绑定的属性，因此支持`PropertyChanged`该属性发生更改时触发事件。 该程序将一个处理程序附加到此事件，并使用当前的设置`IsLoaded`若要设置[ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/)属性`ActivityIndicator`。
 
@@ -154,7 +163,7 @@ Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 
 
 位图将始终呈现在 160 设备无关的单位。 （使用标准的 Xamarin.Forms 解决方案模板仅包括 hdpi、 xhdpi 和 xxhdpi 文件夹。）
 
-Windows 运行时项目支持命名方案，例如包含的每个与设备无关单位以像素为单位的缩放系数以百分比的位图：
+UWP 项目支持包含以像素为单位，每个与设备无关单位的缩放系数以百分比表示，例如位图命名方案：
 
 - 在为 320 像素正方形的 MyImage.scale 200.jpg
 
@@ -164,7 +173,7 @@ Windows 运行时项目支持命名方案，例如包含的每个与设备无关
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- Windows 运行时：**内容**
+- UWP:**内容**
 
 [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap)示例创建两个按钮类似对象组成`Image`元素与`TapGestureRecognizer`安装。 适用对象是一个英寸正方形。 `Source`的属性`Image`使用设置`OnPlatform`和`On`对象引用的平台上的文件名可能不同。 位图图像包括数字，指示其像素大小，因此大家可以检索和呈现的大小的位图。
 
@@ -188,10 +197,12 @@ IOS 和 Android 都需要页将显示一个工具栏[ `NavigationPage` ](xref:Xa
 
 此外可以使用特定于平台的位图设置[ `Image` ](xref:Xamarin.Forms.Button.Image)的属性`Button`到 32 个与设备无关单位正方形，如所示的位图[ **ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage)示例。
 
-
+> [!NOTE]
+> 使用按钮上的图像已得到增强。 请参阅[位图使用按钮](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)。
 
 ## <a name="related-links"></a>相关链接
 
 - [第 13 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
 - [第 13 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [使用图像](~/xamarin-forms/user-interface/images.md)
+- [使用位图按钮](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

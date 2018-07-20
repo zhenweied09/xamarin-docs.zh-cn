@@ -6,21 +6,27 @@ ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 2ff54b65b1dca9798c91f147da7e8482649e40d2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996277"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156725"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>第 20 章的摘要。 异步和文件 I/O
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
  图形用户界面必须按顺序响应用户输入事件。 这意味着用户输入事件的所有处理必须都出现在单个线程中，通常称为*主线程*或*UI 线程*。
 
 用户期望能够响应的图形用户界面。 这意味着程序必须快速处理用户输入事件。 如果这不可能，然后处理必须是要转移到辅助执行线程。
 
 本书中的几个示例程序使用过[ `WebRequest` ](xref:System.Net.WebRequest)类。 此类中[ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object))方法启动工作线程，完成时调用回调函数。 但是，该回调函数在运行工作线程，因此，程序必须调用[ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))方法访问的用户界面。
+
+> [!NOTE]
+> Xamarin.Forms 程序应使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)而非[ `WebRequest` ](xref:System.Net.WebRequest)用于通过 internet 访问的文件。 `HttpClient` 支持异步操作。
 
 异步处理到更为现代的方法是在.NET 和 C# 中可用。 这涉及[ `Task` ](xref:System.Threading.Tasks.Task)并[ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1)类和中的其他类型[ `System.Threading` ](xref:System.Threading)和[ `System.Threading.Tasks` ](xref:System.Threading.Tasks)命名空间，以及 C# 5.0`async`和`await`关键字。 这就是这一章的重点。
 
@@ -74,13 +80,16 @@ Xamarin.iOS 和 Xamarin.Android 库包括 Xamarin 明确针对这两个平台的
 
 这意味着，您将需要使用[ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (中首先讨论[**第 9 章。特定于平台的 API 调用**](chapter09.md)实现文件 I/O。
 
+> [!NOTE]
+> 使用.NET Standard 2.0 库，已替换为可移植类库和.NET Standard 2.0 支持[ `System.IO` ](xref:System.IO)所有 Xamarin.Forms 平台的类型。 不再需要使用`DependencyService`对于大部分文件 I/O 任务。 请参阅[Xamarin.Forms 中的文件处理](~/xamarin-forms/app-fundamentals/files.md)文件 I/O 使用更现代方法。
+
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>第一个尝试跨平台文件 I/O
 
 [ **TextFileTryout** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TextFileTryout)示例定义[ `IFileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/TextFileTryout/TextFileTryout/TextFileTryout/IFileHelper.cs)界面，用于文件 I/O 和此接口中的所有平台的实现。 但是，因为 Windows 运行时文件 I/O 方法是异步 Windows 运行时实现不使用此接口中的方法。
 
 ### <a name="accommodating-windows-runtime-file-io"></a>适应 Windows 运行时文件 I/O
 
-在 Windows 运行时下运行的程序使用中的类[ `Windows.Storage` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)并[ `Windows.Storage.Streams` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.aspx)文件 I/O，包括本地存储应用程序的命名空间。 Microsoft 已确定要求超过 50 毫秒异步模式，以避免阻止 UI 线程的任何操作，因为这些文件 I/O 方法主要是异步的。
+在 Windows 运行时下运行的程序使用中的类[ `Windows.Storage` ](/uwp/api/Windows.Storage)并[ `Windows.Storage.Streams` ](/uwp/api/Windows.Storage.Streams)文件 I/O，包括本地存储应用程序的命名空间。 Microsoft 已确定要求超过 50 毫秒异步模式，以避免阻止 UI 线程的任何操作，因为这些文件 I/O 方法主要是异步的。
 
 演示这种新方法的代码将在库中，以便可以由其他应用程序使用它。
 
@@ -94,8 +103,6 @@ Xamarin.iOS 和 Xamarin.Android 库包括 Xamarin 明确针对这两个平台的
 - [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS)，iOS 类库
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android)，Android 类库
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP)，通用 Windows 类库
-- [**Xamarin.FormsBook.Platform.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Windows)，Windows 8.1 的 PCL。
-- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone)，Windows Phone 8.1 的 PCL
 - [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT)，普遍适用于所有 Windows 平台的代码的共享的项目
 
 所有单个平台项目 (除**Xamarin.FormsBook.Platform.WinRT**) 引用了**Xamarin.FormsBook.Platform**。 三个 Windows 项目具有对的引用**Xamarin.FormsBook.Platform.WinRT**。
