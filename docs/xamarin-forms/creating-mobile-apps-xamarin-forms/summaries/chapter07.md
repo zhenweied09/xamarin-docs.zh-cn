@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 02e4ea44d87360deed361d161759fa3a2808100f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995152"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156907"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>第 7 章的摘要。 XAML 与代码
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 Xamarin.Forms 支持名为 Extensible Application Markup Language 的基于 XML 的标记语言或 XAML （读作"zammel"）。 XAML 可用于替代 C# 中，定义用户界面元素之间的绑定和基础数据内定义的 Xamarin.Forms 应用程序的用户界面布局。
 
@@ -35,6 +38,9 @@ Xamarin.Forms 类和结构成为 XAML 中的 XML 元素，这些类和结构的�
 ## <a name="adding-a-xaml-page-to-your-project"></a>将 XAML 页添加到你的项目
 
 首次创建，或可以将 XAML 页添加到现有项目时，Xamarin.Forms 可移植类库可以包含一个 XAML 页面。 在添加新项对话框，选择的项的引用的 XAML 页面，或`ContentPage`和 XAML。 (不`ContentView`。)
+
+> [!NOTE] 
+> Visual Studio 选项发生了更改编写的这一章。
 
 创建两个文件： filename 扩展.xaml 的 XAML 文件和 C# 文件扩展名。 xaml.cs。 C# 文件通常称为*代码隐藏*的 XAML 文件。 代码隐藏文件是派生自的分部类定义`ContentPage`。 在生成时，XAML 进行分析，并为相同的类生成另一个分部类定义。 此生成的类包括一个名为方法`InitializeComponent`从代码隐藏文件的构造函数调用。
 
@@ -72,10 +78,9 @@ Property 元素的`Label`是`Text`。
 
  [![共享的文本变体的三个屏幕截图](images/ch07fg03-small.png "格式的文本变体")](images/ch07fg03-large.png#lightbox "格式化文本变体")
 
-
-
 ## <a name="related-links"></a>相关链接
 
 - [第 7 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [第 7 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [第 7 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [XAML 基础知识](~/xamarin-forms/xaml/xaml-basics/index.md)

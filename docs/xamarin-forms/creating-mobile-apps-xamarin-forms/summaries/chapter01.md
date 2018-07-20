@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 58a8976b054ac7fad5c4e24f0561d1b4e468c1b2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: abf30f2cd828d67ef6fb04f809fce6235e1add9b
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995126"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156478"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>第 1 章的摘要。 Xamarin.Forms 如何组合？
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 在编程中最令人不快的作业中的一个移植的代码库从一个平台，尤其是如果该平台涉及不同的编程语言。 倾向于时移植代码对其进行重构，但如果这两个平台必须同时维护，然后两个代码库之间的差异会使将来维护更加困难。
 
@@ -32,6 +35,9 @@ ms.locfileid: "38995126"
 
 开发人员可以使用 Xamarin 平台在 C# 中编写的应用程序，该目标 Mac、 iOS 或 Android。 但当目标多个平台，可以很有意义分享一些在目标平台的代码。 这涉及到将分成依赖于平台的代码 （通常涉及用户界面），并独立于平台的代码，通常需要只是基本的.NET framework 的程序。 此独立于平台的代码也可以驻留在可移植类库 (PCL) 或共享的项目，通常称为共享资产项目或 SAP。
 
+> [!NOTE] 
+> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
+
 ## <a name="introducing-xamarinforms"></a>Xamarin.Forms 简介
 
 当目标多个移动平台，Xamarin.Forms 允许更多代码共享。 编写用于 Xamarin.Forms 的单个程序可以面向五个不同的平台：
@@ -42,13 +48,21 @@ ms.locfileid: "38995126"
 - Windows 8.1 的 Windows 运行时 API
 - Windows Phone 8.1 的 Windows 运行时 API
 
-当前的 Xamarin.Forms 解决方案模板不包括在 Windows 8.1 和 Windows Phone 8.1 平台的项目模板。
+> [!NOTE] 
+> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 此外，还有支持预览版[Mac](~/xamarin-forms/platform/mac.md)， [WPF](~/xamarin-forms/platform/wpf.md)， [GTK #](~/xamarin-forms/platform/gtk.md)，以及[Tizen](/xamarin-forms/platform/tizen.md)平台。
 
-PCL 或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包含调用向该 PCL 的小型应用程序存根。 Xamarin.Forms Api 将映射到每个平台上的本机控件，以便每个平台维护其特征的外观和感觉：
+一个库或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包括调入此共享代码的小型应用程序存根。 
+
+Xamarin.Forms Api 将映射到每个平台上的本机控件，以便每个平台维护其特征的外观和感觉：
 
 [![平台共享的视觉对象的三个屏幕截图](images/ch01fg03-small.png "每个平台上的 Xamarin.Forms 控件")](images/ch01fg03-large.png#lightbox "每个平台上的 Xamarin.Forms 控件")
 
-从左到右的屏幕截图显示在 iPhone、 Android 手机和 Windows 10 移动电话。 每个屏幕上的页面包含 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label)用于显示文本， [ `Button` ](xref:Xamarin.Forms.Button)适用于启动操作， [ `Switch` ](xref:Xamarin.Forms.Switch)为选择开/关值和一个[ `Slider` ](xref:Xamarin.Forms.Slider)用于指定连续范围内的值。 所有这四个视图都是的子级[ `StackLayout` ](xref:Xamarin.Forms.StackLayout)上[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)。
+从左到右的屏幕截图显示在 iPhone、 Android 手机和 Windows 10 移动电话。 
+
+> [!NOTE] 
+> Xamarin.Forms 不再支持 Windows 10 移动版。
+
+每个屏幕上的页面包含 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label)用于显示文本， [ `Button` ](xref:Xamarin.Forms.Button)适用于启动操作， [ `Switch` ](xref:Xamarin.Forms.Switch)为选择开/关值和一个[ `Slider` ](xref:Xamarin.Forms.Slider)用于指定连续范围内的值。 所有这四个视图都是的子级[ `StackLayout` ](xref:Xamarin.Forms.StackLayout)上[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)。
 
 此外附加到该网页是多个包含一个 Xamarin.Forms 工具栏[ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem)对象。 这些是显示为图标的 iOS 和 Android 屏幕顶部和底部的 Windows 10 移动版屏幕。
 
@@ -79,8 +93,6 @@ Xamarin 和 Microsoft web 站点包含有关如何执行此操作的信息：
 - [Windows 开发人员中心](http://dev.windows.com)
 
 一次可以创建和运行这些各个平台的项目，您应该没有什么问题，创建并运行 Xamarin.Forms 应用程序。
-
-
 
 ## <a name="related-links"></a>相关链接
 

@@ -6,19 +6,22 @@ ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 3571774ddec4182f35cac6f13d4582235e2ff31a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: 49f2d96fb7f95ab880d5cfafa420afbbe933c1ad
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997421"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156712"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>第 4 章的摘要。 滚动堆栈
 
 本章主要介绍的概念专门介绍*布局*，这是类和技术的 Xamarin.Forms 使用来组织页面上的多个视图的可视显示为整体的术语。
 
 布局涉及多个派生的类[ `Layout` ](xref:Xamarin.Forms.Layout)并[ `Layout<T>` ](xref:Xamarin.Forms.Layout`1)。 本章主要介绍[ `StackLayout` ](xref:Xamarin.Forms.StackLayout)。
+
+> [!NOTE]
+> [ `FlexLayout` ](~/xamarin-forms/user-interface/layouts/flex-layout.md)中引入可以有类似的方式使用 Xamarin.Forms 3.0`StackLayout`但具有更大的灵活性。
 
 这一章中还引入了都[ `ScrollView` ](xref:Xamarin.Forms.ScrollView)， [ `Frame` ](xref:Xamarin.Forms.Frame)，以及[ `BoxView` ](xref:Xamarin.Forms.BoxView)类。
 
@@ -104,7 +107,7 @@ ms.locfileid: "38997421"
 
 此技巧是为了让`ScrollView`的子`StackLayout``VerticalOptions`设置为`FillAndExpand`。 了这一点[ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat)示例。
 
-**BlackCat**示例还演示了如何定义和访问程序资源嵌入在可移植类库 (PCL)。 这还可以实现使用共享资产项目 (SAPs)，但此过程稍微有些棘手，作为[ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap)示例演示。
+**BlackCat**示例还演示了如何定义和访问的共享库中嵌入的程序资源。 这还可以实现使用共享资产项目 (SAPs)，但此过程稍微有些棘手，作为[ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap)示例演示。
 
 
 
@@ -115,3 +118,4 @@ ms.locfileid: "38997421"
 - [第 4 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
+- [BoxView](~/xamarin-forms/user-interface/boxview.md)

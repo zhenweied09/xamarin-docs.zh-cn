@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: d1daceba29e45adf64947c89555cc4e75a850d32
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/17/2018
+ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995272"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156673"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用剖析
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 在 Xamarin.Forms 应用程序中，占用屏幕空间的对象称为*可视元素*、 通过封装[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)类。 可视元素可以拆分为三个类别对应于这些类：
 
@@ -28,7 +31,12 @@ ms.locfileid: "38995272"
 
 ## <a name="say-hello"></a>假设你好
 
-使用安装 Xamarin 平台，你可以创建新的 Xamarin.Forms 解决方案在 Visual Studio 或 Visual Studio for mac。 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello)解决方案使用可移植类库的通用代码。 它演示了在 Visual Studio 中创建不作任何修改的 Xamarin.Forms 解决方案。 该解决方案包含六个项目 （其中两个不会创建与当前的 Xamarin.Forms 解决方案模板的最后一个）：
+使用安装 Xamarin 平台，你可以创建新的 Xamarin.Forms 解决方案在 Visual Studio 或 Visual Studio for mac。 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello)解决方案使用可移植类库的通用代码。 
+
+> [!NOTE] 
+> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
+
+此示例演示在 Visual Studio 中创建不作任何修改的 Xamarin.Forms 解决方案。 此解决方案由六个项目组成：
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello)，由其他项目共享的可移植类库 (PCL)
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid)，适用于 Android 的应用程序项目
@@ -37,13 +45,19 @@ ms.locfileid: "38995272"
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows)，用于 Windows 8.1 的应用程序项目
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone)，适用于 Windows Phone 8.1 应用程序项目
 
+> [!NOTE] 
+> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 
+
 您可以进行任何这些应用程序项目启动项目，然后生成并在设备或模拟器上运行该程序。
 
-在许多 Xamarin.Forms 程序，您不会修改应用程序项目。 这些通常保持小的存根，只是为了启动该程序。 您的侧重点的大部分将可移植类库普遍适用于所有应用程序。
+在许多 Xamarin.Forms 程序，您不会修改应用程序项目。 这些通常保持小的存根，只是为了启动该程序。 您的大部分将是侧重点的普遍适用于所有应用程序库。
 
 ## <a name="inside-the-files"></a>文件内
 
 显示的视觉对象**Hello**程序定义的构造函数中[ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs)类。 `App` 派生自 Xamarin.Forms 类[ `Application` ](xref:Xamarin.Forms.Application)。
+
+> [!NOTE] 
+> Visual Studio 解决方案模板适用于 Xamarin.Forms 使用 XAML 文件创建一个页面。 直到本书中未涵盖 XAML[第 7 章](chapter07.md)。
 
 **引用**一部分**Hello** PCL 项目中包括以下 Xamarin.Forms 程序集：
 
@@ -60,21 +74,20 @@ ms.locfileid: "38995272"
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
+> [!NOTE] 
+> **引用**不再列出程序集，这些项目的部分。 相反，该项目文件包含**PackageReference**标记引用的 Xamarin.Forms NuGet 包。 **引用**Visual Studio 列表中的部分**Xamarin.Forms**包而不是 Xamarin.Forms 程序集。 
+
 每个应用程序项目包含调用静态`Forms.Init`中的方法`Xamarin.Forms`命名空间。 此初始化 Xamarin.Forms 库。 不同版本的`Forms.Init`定义为每个平台。 调用此方法可在以下类：
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [ `App`类，`OnLaunched`方法](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
-- Windows 8.1: [ `App`类，`OnLaunched`方法](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/App.xaml.cs#L65)
-- Windows Phone 8.1: [ `App`类，`OnLaunched`方法](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WinPhone/App.xaml.cs#L67)
 
-此外，每个平台必须实例化`App`类在 pcl 中的位置。 此错误出现在调用`LoadApplication`为以下几类：
+此外，每个平台必须实例化`App`类共享库中的位置。 此错误出现在调用`LoadApplication`为以下几类：
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.UWP/MainPage.xaml.cs)
-- Windows 8.1： [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Windows/MainPage.xaml.cs)
-- Windows Phone 8.1: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.WindowsPhone/MainPage.xaml.cs)
 
 否则，这些应用程序项目是正常的"执行任何操作"的程序。
 
@@ -82,30 +95,20 @@ ms.locfileid: "38995272"
 
 就可以使用可移植类库 (PCL) 或共享资产项目 (SAP) 中的常见代码创建 Xamarin.Forms 解决方案。 若要创建的 SAP 解决方案，请在 Visual Studio 中选择共享选项。 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap)解决方案演示了不作任何修改的 SAP 模板。
 
-所有常见平台的应用程序项目引用的一个库项目中的都代码的 PCL 方法捆绑包。 使用 SAP 方法时，公共代码有效地在所有平台应用程序项目中存在并在它们之间共享。
+> [!NOTE] 
+> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。 否则，PCL 和.NET Standard 库在概念上非常类似。
 
-大多数 Xamarin.Forms 开发人员更喜欢 PCL 方法。 在此书中，大部分解决方案都是 PCL。 包括那些使用 SAP **Sap**项目名称中的后缀。
+所有通用平台应用程序项目引用的库项目中的都代码库方法捆绑包。 使用 SAP 方法时，公共代码有效地在所有平台应用程序项目中存在并在它们之间共享。
 
-若要支持所有 Xamarin.Forms 平台，使用 PCL 的.NET 的版本必须适应以下平台：
-
-- .NET Framework 4.5
-- Windows 8
-- Windows Phone 8.1
-- Xamarin.Android
-- Xamarin.iOS
-- Xamarin.IOS （经典）
-
-这称为 PC 配置文件 111。
+大多数 Xamarin.Forms 开发人员更喜欢库方法。 在本书中，大部分解决方案使用一个库。 包括那些使用 SAP **Sap**项目名称中的后缀。
 
 共享项目中的代码可以通过使用 C# 预处理器指令针对各种平台的不同代码执行使用 SAP 方法 (`#if`，#`elif`，和`#endif`) 使用这些预定义的标识符：
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
 - UWP: `WINDOWS_UWP`
-- Windows 8.1： `WINDOWS_APP`
-- Windows Phone 8.1: `WINDOWS_PHONE_APP`
 
-在 PCL 中可以确定在运行时, 运行哪种平台，您会看到更高版本中这一章。
+在共享库中，可以确定在运行时, 运行哪种平台，您将看到更高版本中这一章。
 
 ## <a name="labels-for-text"></a>标签文本
 
@@ -138,17 +141,13 @@ ms.locfileid: "38995272"
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
-- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) Windows 8.1、 Windows Phone 8.1 和所有 UWP 设备。
-- [`WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)以前用来标识 Windows Phone 8.0 但是现在未使用
-- [`Other`](xref:Xamarin.Forms.TargetPlatform.Other) 未使用
+- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) 对于 UWP 设备。
 
 `Device.OnPlatform`方法，`Device.OS`属性，并`TargetPlatform`枚举都现在已弃用。 请改用[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并比较`string`返回包含以下静态字段的值：
 
 - [`iOS`](xref:Xamarin.Forms.Device.iOS)字符串"iOS"
 - [`Android`](xref:Xamarin.Forms.Device.Android)字符串"Android"
-- [`UWP`](xref:Xamarin.Forms.Device.UWP)字符串"UWP"，Windows 运行时平台
-- `Windows`字符串"Windows"的 Windows 运行时 （Windows 8.1 和 Windows Phone 8.1，不推荐使用）
-- `WinPhone`字符串"WinPhone"Windows Phone 8.0 （已弃用）
+- [`UWP`](xref:Xamarin.Forms.Device.UWP)字符串"UWP"，指通用 Windows 平台
 
 [ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom)静态只读属性相关联。 这将返回的成员[ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom)，其中包括以下成员：
 
@@ -157,7 +156,7 @@ ms.locfileid: "38995272"
 - [`Phone`](xref:Xamarin.Forms.TargetIdiom.Phone)
 - [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) 未使用
 
-适用于 iOS 和 Android 之间截止`Tablet`和`Phone`是纵向宽度为 600 的单位。 对于 Windows 平台中，`Desktop`指示在 Windows 10 下运行的 UWP 应用程序`Tablet`是 Windows 8.1 的程序，和`Phone`指示 Windows 10 或 Windows Phone 8.1 应用程序下运行的 UWP 应用程序。
+适用于 iOS 和 Android 之间截止`Tablet`和`Phone`是纵向宽度为 600 的单位。 对于 Windows 平台中，`Desktop`指示在 Windows 10 下运行的 UWP 应用程序和`Phone`指示 Windows 10 应用程序下运行的 UWP 应用程序。
 
 ## <a name="solution-3a-set-margin-on-the-label"></a>解决方案 3a。 标签上的设置距
 
@@ -199,8 +198,6 @@ ms.locfileid: "38995272"
 - [`End`](xref:Xamarin.Forms.TextAlignment.End)这意味着右侧或底部 （取决于方向）
 
 这两个属性定义仅可由`Label`，而`HorizontalAlignment`并`VerticalAlignment`属性定义由`View`并由所有继承`View`派生类。 下的视觉效果可能看起来类似，但它们有很大差异，如下一章中所示。
-
-
 
 ## <a name="related-links"></a>相关链接
 

@@ -1,5 +1,4 @@
-# [使用 Xamarin.Forms 工作簿创建移动应用](index.md)
-## [章节摘要](summaries/index.md)
+# [使用 Xamarin.Forms 书籍创建移动应用](index.md)
 ## [1.Xamarin.Forms 可以起到什么作用？](summaries/chapter01.md)
 ## [2.应用剖析](summaries/chapter02.md)
 ## [3.深入到文本](summaries/chapter03.md)

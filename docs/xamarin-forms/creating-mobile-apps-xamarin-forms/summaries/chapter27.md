@@ -6,51 +6,54 @@ ms.technology: xamarin-forms
 ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 0497770909b33108eaac0fa5044e98febeb61763
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: c8b149cfeb814e2a1e0a0d1b38cca24ea096d112
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996303"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156520"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>第 27 章的摘要。 自定义呈现器
 
-如的 Xamarin.Forms 元素`Button`呈现并封装在一个名为类的特定于平台的按钮`ButtonRenderer`。  下面是[iOS 版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs)，则[Android 版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)，并[Windows 运行时版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT/ButtonRenderer.cs)。
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
+
+如的 Xamarin.Forms 元素`Button`呈现并封装在一个名为类的特定于平台的按钮`ButtonRenderer`。  下面是[iOS 版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs)，则[Android 版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)，并[的 UWP 版本`ButtonRenderer` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ButtonRenderer.cs)。
 
 本章讨论了如何编写您自己的呈现器创建映射到特定于平台的对象的自定义视图。
 
 ## <a name="the-complete-class-hierarchy"></a>完整的类层次结构
 
-有七个包含 Xamarin.Forms 特定于平台的代码的程序集。
+有四个包含 Xamarin.Forms 特定于平台的代码的程序集。
 您可以使用下面的链接的 GitHub 上查看的源代码：
 
 - [**Xamarin.Forms.Platform** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform) （非常小）
 - [**Xamarin.Forms.Platform.iOS**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.iOS)
 - [**Xamarin.Forms.Platform.Android**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.Android)
-- [**Xamarin.Forms.Platform.WinRT** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.WinRT) （大于的下一步的三个）
 - [**Xamarin.Forms.Platform.UAP**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.UAP)
-- [**Xamarin.Forms.Platform.WinRT.Tablet**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.WinRT.Tablet)
-- [**Xamarin.Forms.Platform.WinRT.Phone**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Platform.WinRT.Phone)
+
+> [!NOTE]
+> `WinRT`一书中提到的程序集不再是此解决方案的一部分。 
 
 [ **PlatformClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/PlatformClassHierarchy)示例将显示为正在执行平台有效的程序集的类层次结构。
 
 您会注意到一个名为的重要类`ViewRenderer`。 这是创建特定于平台的呈现器时，在从派生的类。 它存在于三个不同的版本，因为它绑定到视图系统的目标平台：
 
-IOS [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L26)具有泛型参数：
+IOS [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs#L25)具有泛型参数：
 
 - `TView` 约束为 [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
 - `TNativeView` 约束为 [`UIKit.UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/)
 
-Android [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L14)具有泛型参数：
+Android [ `ViewRenderer<TView, TNativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17)具有泛型参数：
 
 - `TView` 约束为 [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
 - `TNativeView` 约束为 [`Android.Views.View`](https://developer.xamarin.com/api/type/Android.Views.View/)
 
-Windows 运行时[ `ViewRenderer<TElement, TNativeElement>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WinRT/ViewRenderer.cs#L12)具有以不同方式命名的泛型自变量：
+UWP [ `ViewRenderer<TElement, TNativeElement>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ViewRenderer.cs#L6)具有以不同方式命名的泛型自变量：
 
 - `TElement` 约束为 [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeElement` 约束为 [`Windows.UI.Xaml.FrameworkElement`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.aspx)
+- `TNativeElement` 约束为 [`Windows.UI.Xaml.FrameworkElement`](/uwp/api/Windows.UI.Xaml.FrameworkElement)
 
 在编写将呈现器时，将派生的类从`View`，然后编写多个`ViewRenderer`类、 一个针对每个受支持的平台。 每个特定于平台的实现将引用从为指定的类型派生的本机类`TNativeView`或`TNativeElement`参数。
 
@@ -87,7 +90,7 @@ Windows 运行时[ `ViewRenderer<TElement, TNativeElement>` ](https://github.com
 
 - iOS: [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseViewRenderer.cs)，使用[ `EllipseUIView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/EllipseUIView.cs)椭圆的类。
 - Android: [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseViewRenderer.cs)，使用[ `EllipseDrawableView` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/EllipseDrawableView.cs)椭圆的类。
-- Windows 运行时： [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs)，这可以使用本机 Windows [ `Ellipse` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.shapes.ellipse.aspx)类。
+- UWP: [ `EllipseViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/EllipseViewRenderer.cs)，这可以使用本机 Windows [ `Ellipse` ](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)类。
 
 [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo)类显示多个这样的`EllipseView`对象：
 
@@ -103,7 +106,7 @@ Windows 运行时[ `ViewRenderer<TElement, TNativeElement>` ](https://github.com
 
 - iOS: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/StepSliderRenderer.cs)
 - Android: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/StepSliderRenderer.cs)
-- Windows 运行时： [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/StepSliderRenderer.cs)
+- UWP: [`StepSliderRenderer`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/StepSliderRenderer.cs)
 
 呈现器检测到本机控件，更改，然后调用`SetValueFromRenderer`，该引用中定义的可绑定属性`StepSlider`，这将导致更改`StepSlider`激发`ValueChanged`事件。
 
