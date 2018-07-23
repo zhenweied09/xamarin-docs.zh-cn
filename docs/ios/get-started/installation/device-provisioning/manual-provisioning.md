@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786098"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111181"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS 的手动预配
 
 Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本指南介绍如何使用手动预配设置开发证书和配置文件。_
 
-<a name="signingidentity" />
+> [!NOTE]
+> 此页上的说明与付费访问 Apple 开发者计划的开发人员相关。 如果你有一个免费帐户，请参阅[免费预配](~/ios/get-started/installation/device-provisioning/free-provisioning.md)指南，详细了解基于设备的测试。
 
 ## <a name="creating-a-signing-identity"></a>创建签名标识
 
@@ -27,9 +28,9 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 - 开发证书
 - 私钥
 
-开发证书和关联[密钥](#keypairs)对 iOS 开发者至关重要：它们生成了你的 Apple 标识，并将你与给定设备和配置文件相关联以用于开发，类似于将你的数字签名放入应用程序。 Apple 会检查证书以控制对你可以部署的设备的访问。
+开发证书和关联[密钥](#understanding-certificate-key-pairs)对 iOS 开发者至关重要：它们生成了你的 Apple 标识，并将你与给定设备和配置文件相关联以用于开发，类似于将你的数字签名放入应用程序。 Apple 会检查证书以控制对你可以部署的设备的访问。
 
-可以通过访问 Apple Members Center 的[证书、标识符和配置文件](https://developer.apple.com/account/overview.action)部分管理开发团队、证书和配置文件。 Apple 要求你拥有签名标识才能为设备或模拟器生成代码。  
+可通过访问 Apple Members Center 的[证书、标识符和配置文件](https://developer.apple.com/account/overview.action)（要求登录）部分管理开发团队、证书和配置文件。 Apple 要求你拥有签名标识才能为设备或模拟器生成代码。  
 
 > [!IMPORTANT]
 > 请务必注意，任何时候，一次只能有两个 iOS 开发证书。 如果需要创建更多证书，需要撤销现有证书。 使用已撤销证书的计算机不能对应用进行签名。
@@ -70,8 +71,6 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
     [![](manual-provisioning-images/keychain.png "Keychain Access 中的证书")](manual-provisioning-images/keychain.png#lightbox)
 
-<a name="keypairs" />
-
 ### <a name="understanding-certificate-key-pairs"></a>了解证书密钥对
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
@@ -89,7 +88,7 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
 <a name="provisioning" />
 
-## <a name="provisioning-an-ios-device-for-development"></a>设置 iOS 设备进行开发
+## <a name="provisioning-an-ios-device-for-development"></a>预配 iOS 设备进行开发
 
 现在你已经生成 Apple 标识，并且已具有开发证书，现在必须设置预配配置文件和所需实体，以便将应用部署到 Apple 设备。 设备必须运行 Xcode 支持的 iOS 版本 - 可能需要更新设备和/或 Xcode。
 
@@ -136,10 +135,9 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
 将设备添加到开发人员门户后，需要创建设置配置文件并向其添加设备。
 
-
 <a name="provisioningprofile" />
 
-## <a name="creating-a-development-provisioning-profile"></a>创建开发设置配置文件
+## <a name="creating-a-development-provisioning-profile"></a>创建开发预配配置文件
 
 与开发证书一样，预配配置文件可以通过 Apple Members Center 的[证书、标识符和配置文件](https://developer.apple.com/account/overview.action)部分手动创建。
 
@@ -157,7 +155,7 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
 3. 单击“继续”按钮，按照屏幕上的说明创建新的应用程序 ID。
 
-### <a name="provisioning-profile"></a>设置配置文件
+### <a name="provisioning-profile"></a>预配配置文件
 
 创建好应用 ID 后，即可生成配置文件。 此配置文件包含以下信息：与此配置文件相关的应用有哪个（些）（如果是通配符应用 ID，则为多个应用），谁可以使用配置文件（具体取决于添加了哪些开发人员证书），以及哪些设备可以安装应用。
 
@@ -228,8 +226,6 @@ Apple 提供一系列精选的特殊应用服务（亦称为“功能”），�
 * 创建含有此应用 ID 的新[配置文件](#provisioningprofile)。
 * 在 Xamarin.iOS 项目中设置权利
 
-<a name="deploy" />
-
 ## <a name="deploying-to-a-device"></a>部署到设备
 
 这时，设置应已完成，且应用已准备好部署到设备。 为此，请执行以下步骤：
@@ -276,7 +272,6 @@ Apple 提供一系列精选的特殊应用服务（亦称为“功能”），�
 ## <a name="summary"></a>总结
 
 本指南介绍了针对 Xamarin.iOS 设置开发环境所需的步骤。 探讨了如何使用关于开发人员、开发团队、可运行应用的设备和单个应用 ID 的信息对应用程序进行代码签名。
-
 
 ## <a name="related-links"></a>相关链接
 

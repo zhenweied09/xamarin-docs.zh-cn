@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: c4ad067778203759a54ed8141db0b82602e40f6c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997447"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156652"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>第 16 章的摘要。 数据绑定
+
+> [!NOTE] 
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 程序员通常会发现自己编写事件处理程序检测何时更改一个对象的属性，并使用它来更改另一个对象中属性的值。 可以使用的技术自动执行此过程*数据绑定*。 数据绑定通常在 XAML 中定义，并成为用户界面的定义的一部分。
 
@@ -85,6 +88,9 @@ ms.locfileid: "38997447"
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) 因此，源和目标中的更改会影响每个其他
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default) 若要使用[ `DefaultBindingMode` ](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode)时指定目标`BindableProperty`已创建。 如果未指定，默认值是`OneWay`正常可绑定属性和`OneWayToSource`为只读的可绑定属性。
 
+> [!NOTE]
+> `BindingMode`枚举现在还包括`OnTime`仅当绑定上下文更改时并不是在时应用绑定源属性发生更改。
+
 可能需要通常在 MVVM 方案中的数据绑定的目标属性具有`DefaultBindingMode`的`TwoWay`。 这些是：
 
 - `Value` 属性的`Slider`和 `Stepper`
@@ -137,3 +143,4 @@ ms.locfileid: "38997447"
 
 - [第 16 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)
 - [第 16 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
+- [数据绑定](~/xamarin-forms/app-fundamentals/data-binding/index.md)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 571b5bb37ee10bb83dceef058613f955a8b7bff9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772895"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067355"
 ---
 # <a name="publishing-to-google-play"></a>发布到 Google Play
 
@@ -20,7 +20,7 @@ ms.locfileid: "30772895"
 本部分将介绍一些特定于 Google Play 的主题，例如注册成为发布者、收集资产以便帮助 Google Play 推广和宣传应用程序、Google Play 上的应用程序评分指南以及使用筛选器限定应用程序只部署到某些特定设备。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要通过 Google Play 分发应用程序，必须创建开发者帐户。 只需执行一次此操作，并且支付一次性费用 25 美元。
 
@@ -240,7 +240,7 @@ OAuth 客户端的默认名称是 Google Play Android 开发者。 可将其更�
 
 #### <a name="publish"></a>发布
 
-单击“允许”后，浏览器会报告已接收验证码。即将关闭..._，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
+单击“允许”后，浏览器会报告已接收验证码。即将关闭...，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
 
 [![已添加到 Google Play 帐户的帐户](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 

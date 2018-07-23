@@ -8,14 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785653"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111220"
 ---
-# <a name="hello-ios-multiscreen--deep-dive"></a>Hello，iOS 多屏显示 - 深入了解
+# <a name="hello-ios-multiscreen--deep-dive"></a>深入了解 iOS 多屏显示
 
 在“快速入门”演练中，我们生成并运行了首个多屏显示的 Xamarin.iOS 应用程序。 现在就来更深入了解 iOS 导航和体系结构。
 
@@ -43,7 +43,6 @@ MVC 模式很有用，因为它在 GUI 应用程序的不同部件之间实现�
 > [!NOTE]
 > MVC 模式有些类同于 ASP.NET 网页或 WPF 应用程序的结构。 在这些示例中，“视图”是一种组件，实际负责描述 UI，并响应 ASP.NET 中的 ASPX (HTML) 网页或 WPF 应用中的 XAML。 “控制器”是负责管理“视图”的组件，它对应于 ASP.NET 或 WPF 中的代码后置。
 
-
 ### <a name="model"></a>模型
 
 “模型”对象通常是特定于应用程序的数据表示形式，其将在“视图”中显示或输入到“视图”中。 “模型”定义通常不严格 - 例如，在 **Phoneword_iOS** 应用中，电话号码列表（表现为字符串列表）就是“模型”。 如果正在构建跨平台应用程序，可选择在 iOS 和 Android 应用程序之间共享 **PhonewordTranslator** 代码。 也可将该共享代码视为“模型”。
@@ -54,7 +53,6 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 
 > [!NOTE]
 > 在某些宣传资料中，MVC 模式的“模型”部分可指代整个应用程序后端，而不仅仅是 UI 上显示的数据。 在本指南中，我们使用该模型的新型解释，但区别并不特别重要。
-
 
 ### <a name="view"></a>视图
 
@@ -86,27 +84,24 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
     [![](hello-ios-multiscreen-deepdive-images/03.png "此图描述了从堆栈中“弹出”卡的过程")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **提供标题栏** – **导航控制器**的顶部称为标题栏。 它负责显示视图控制器标题，如下图所示：  
+-  **提供标题栏** - 导航控制器的顶部称为标题栏。 它负责显示视图控制器标题，如下图所示：  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "标题栏负责显示“视图控制器”标题")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
-
-
-
 ### <a name="root-view-controller"></a>根视图控制器
 
-**导航控制器**不会管理内容视图层次结构，因此本身没有要显示的内容。
-相反，**导航控制器**与根视图控制器进行配对：
+导航控制器不会管理内容视图层次结构，因此本身没有要显示的内容。
+相反，导航控制器与根视图控制器进行配对：
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "导航控制器与根视图控制器进行配对")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-根视图控制器是指**导航控制器**堆栈中的第一个视图控制器，而且根视图控制器的内容视图层次结构是指要加载到窗口的第一个内容视图层次结构。 如果要在导航控制器堆栈上放置整个应用程序，可将无源的 Segue 迁移到**导航控制器**，然后将第一个屏幕的视图控制器设为根视图控制器，操作方式与在 Phoneword 应用中执行的一样：
+根视图控制器是指导航控制器堆栈中的第一个视图控制器，而且根视图控制器的内容视图层次结构是指要加载到窗口的第一个内容视图层次结构。 如果要在导航控制器堆栈上放置整个应用程序，可将无源的 Segue 迁移到导航控制器，然后将第一个屏幕的视图控制器设为根视图控制器，操作方式与在 Phoneword 应用中执行的一样：
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "Sourceless Segue 将第一个屏幕视图控制器设置为根视图控制器")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>其他导航选项
 
-**导航控制器**是在 iOS 中处理导航的常见方式，但不是唯一的选择。 [标签栏控制器](~/ios/user-interface/controls/creating-tabbed-applications.md)可将应用程序拆分为不同功能区；[拆分视图控制器](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)可创建主/详细信息视图；而[弹出式导航控制器](http://components.xamarin.com/view/flyoutnavigation)会创建用户可从侧面轻扫的导航。 上述均可与**导航控制器**配合使用，便于直观呈现内容。
+导航控制器是在 iOS 中处理导航的常见方式，但不是唯一的选择。 例如，[选项卡栏控制器](~/ios/user-interface/controls/creating-tabbed-applications.md)可将应用程序拆分为不同功能区域，[拆分视图控制器](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)可用于创建母版/详细信息视图。 将导航控制器与这些其他导航模式结合使用可采用多种方式灵活显示和导航 iOS 中的内容。
 
 ## <a name="handling-transitions"></a>处理转换
 
@@ -202,7 +197,6 @@ Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概
 -  **表格视图控制器** - `CallHistoryController` 是一种表格视图控制器。 表格视图控制器包含表格视图、iOS 中最常见的布局和数据显示工具。 但是，表格不在本指南的讨论范围内。 有关表格视图控制器的详细信息，请参阅[使用表格和单元格](~/ios/user-interface/controls/tables/index.md)指南。
 -   **情节提要 ID** – 通过设置情节提要 ID，可在 Objective-C 中创建“视图控制器”类，其中包含情节提要中视图控制器的代码后置。 情节提要 ID 用于查找 Objective-C 类并在情节提要中执行视图控制器的实例化。 有关情节提要 ID 的详细信息，请参阅[情节提要简介](~/ios/user-interface/storyboards/index.md)指南。
 
-
 ## <a name="summary"></a>总结
 
 祝贺，你完成了首个多屏显示的 iOS 应用程序！
@@ -210,7 +204,6 @@ Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概
 在本指南中，我们介绍了 MVC 模式并用其创建多屏应用程序。 我们还探讨了导航控制器及其在支持 iOS 导航方面的角色。 现在，你了解了丰富的基础知识，可开始自行开发 Xamarin.iOS 应用程序。
 
 接下来，让我们借助[移动开发简介](~/cross-platform/get-started/introduction-to-mobile-development.md)和[构建跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)指南，学习使用 Xamarin 构建跨平台应用程序。
-
 
 ## <a name="related-links"></a>相关链接
 
