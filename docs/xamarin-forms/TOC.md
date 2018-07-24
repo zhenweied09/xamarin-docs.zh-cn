@@ -310,6 +310,7 @@
 ## [高级概念和内部机制](internals/index.md)
 ### [快速呈现器](internals/fast-renderers.md)
 ### [.NET Standard](internals/net-standard.md)
+### [依赖项解析](internals/dependency-resolution.md)
 ## [疑难解答](troubleshooting/index.md)
 ### [常见问题](troubleshooting/questions/index.md)
 #### [可否将 Xamarin.Forms 默认模板更新到较新的 NuGet 包？](troubleshooting/questions/update-forms-template.md)
