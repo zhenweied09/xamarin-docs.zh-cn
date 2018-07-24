@@ -6,13 +6,13 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/31/2018
-ms.openlocfilehash: 95afdfde878759d4a598e200d16fe6fb1fa2005e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/16/2018
+ms.openlocfilehash: 57304f2f07a0834c31e32bb89a4742a2de7e861c
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998217"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202989"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 条目
 
@@ -59,26 +59,98 @@ var entry = new Entry { ... MaxLength = 10 };
 
 一个[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性值为 0 指示将允许任何输入，并将值`int.MaxValue`，它是默认值， [ `Entry` ](xref:Xamarin.Forms.Entry)，指示是否有任何可能输入的字符数的有效限制。
 
-### <a name="keyboards"></a>键盘
+### <a name="customizing-the-keyboard"></a>自定义键盘
 
-当与用户交互时显示键盘`Entry`可以通过编程方式设置`Keyboard`属性。
+当与用户交互时显示键盘[ `Entry` ](xref:Xamarin.Forms.Entry)可以通过编程方式设置[ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard)属性，因为的以下属性之一[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)类：
 
-键盘类型的选项是：
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 用于短和表情符号是有用的地方。
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – 默认键盘。
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – 输入电子邮件地址时使用。
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – 输入数字时使用。
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – 使用输入文本，而无需任何时[ `KeyboardFlags` ](xref:Xamarin.Forms.KeyboardFlags)指定。
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – 使用输入电话号码时。
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 输入文本时使用。
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 用于输入文件路径 （& a） 的 web 地址。
 
-- **默认值**&ndash;默认键盘
-- **聊天**&ndash;用于短和位置表情符号会很有用
-- **电子邮件**&ndash;输入电子邮件地址时使用
-- **数值**&ndash;输入数字时使用
-- **电话**&ndash;输入电话号码时，使用
-- **Url** &ndash;用于输入文件路径和 web 地址
+这可以实现在 XAML 中，如下所示：
 
-没有[示例中的每个键盘](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)我们方案的部分中。
+```xaml
+<Entry Keyboard="Chat" />
+```
+
+等效的 C# 代码是：
+
+```csharp
+var entry = new Entry { Keyboard = Keyboard.Chat };
+```
+
+可以在中找到的每个键盘示例我们[配方](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)存储库。
+
+[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)类还具有[ `Create` ](xref:Xamarin.Forms.Keyboard.Create*)工厂方法，可以用来通过指定的大小写、 拼写检查，并建议行为自定义键盘。 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 枚举值指定为具有自定义的方法的参数`Keyboard`返回。 `KeyboardFlags`枚举包含的以下值：
+
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 没有功能添加到键盘。
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – 指示每个输入的句子的第一个单词的第一个字母将自动大写。
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – 指示该拼写检查功能将在输入的文本上执行。
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – 指示该单词上输入的文本，则将提供完成。
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – 指示每个单词的第一个字母将自动大写。
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – 指示每个字符将自动大写。
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) -指示没有自动大写会发生。
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – 指示拼写检查、 第完成单词和句子大小写会在输入的文本上发生。
+
+以下 XAML 代码示例演示如何自定义默认值[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)提供完成单词和每个输入的字符大写：
+
+```xaml
+<Entry Placeholder="Enter text here">
+    <Entry.Keyboard>
+        <Keyboard x:FactoryMethod="Create">
+            <x:Arguments>
+                <KeyboardFlags>Suggestions,CapitalizeCharacter</KeyboardFlags>
+            </x:Arguments>
+        </Keyboard>
+    </Entry.Keyboard>
+</Entry>
+```
+
+等效的 C# 代码是：
+
+```csharp
+var entry = new Entry { Placeholder = "Enter text here" };
+entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
+```
+
+#### <a name="customizing-the-return-key"></a>自定义 Return 键
+
+Return 键是软键盘上的外观显示何时[ `Entry` ](xref:Xamarin.Forms.Entry)具有焦点，可以通过设置自定义[ `ReturnType` ](xref:Xamarin.Forms.Entry.ReturnType)属性的值[ `ReturnType` ](xref:Xamarin.Forms.ReturnType)枚举：
+
+- [`Default`](xref:Xamarin.Forms.ReturnType.Default) – 指示是否需要任何特定的 return 键，并且将使用平台默认值。
+- [`Done`](xref:Xamarin.Forms.ReturnType.Done) – 指示"Done"的 return 键。
+- [`Go`](xref:Xamarin.Forms.ReturnType.Go) – 表示"Go"return 键。
+- [`Next`](xref:Xamarin.Forms.ReturnType.Next) – 表示"下一步"返回密钥。
+- [`Search`](xref:Xamarin.Forms.ReturnType.Search) – 表示"搜索"返回密钥。
+- [`Send`](xref:Xamarin.Forms.ReturnType.Send) – 指示"发送"return 键。
+
+下面的 XAML 示例演示如何设置返回的项：
+
+```xaml
+<Entry ReturnType="Send" />
+```
+
+等效的 C# 代码是：
+
+```csharp
+var entry = new Entry { ReturnType = ReturnType.Send };
+```
+
+> [!NOTE]
+> 返回键的确切外观是依赖于平台。 在 iOS 上，返回的密钥是基于文本的按钮。 但是，在 Android 和通用 Windows 平台中，return 键是基于图标的按钮。
+
+按下 return 键时， [ `Completed` ](xref:Xamarin.Forms.Entry.Completed)事件就会激发，并且任何`ICommand`指定的[ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand)执行属性。 此外，任何`object`通过指定[ `ReturnCommandParameter` ](xref:Xamarin.Forms.Entry.ReturnCommandParameter)属性将传递给`ICommand`作为参数。 有关命令的详细信息，请参阅[命令界面](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)。
 
 ### <a name="enabling-and-disabling-spell-checking"></a>启用和禁用拼写检查
 
 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性控制是否拼写检查已启用。 默认情况下，该属性设置为`true`。 当用户输入文本，指示拼写错误。
 
-但是，对于某些文本项方案中，输入用户名，如拼写检查功能提供了负的体验，因此应禁用通过设置[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`:
+但是，对于某些文本项方案，例如输入用户名，拼写检查功能提供负体验，并应通过设置禁用[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`:
 
 ```xaml
 <Entry ... IsSpellCheckEnabled="false" />
@@ -90,6 +162,23 @@ var entry = new Entry { ... IsSpellCheckEnabled = false };
 
 > [!NOTE]
 > 当[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`，并自定义键盘未被使用，将禁用本机拼写检查器。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)具有已设置，以禁用拼写检查，如[ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat)，则`IsSpellCheckEnabled`属性将被忽略。 因此，该属性不能用于启用拼写检查`Keyboard`的显式禁用它。
+
+### <a name="enabling-and-disabling-text-prediction"></a>启用和禁用文本预测
+
+[ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)属性控制是否文本预测和自动启用文本校正。 默认情况下，该属性设置为`true`。 当用户输入文本时，会显示 word 预测。
+
+但是，对于某些文本项方案，例如输入用户名、 文本预测和文本自动更正提供负体验，并应通过设置禁用[ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)属性设置为`false`:
+
+```xaml
+<Entry ... IsTextPredictionEnabled="false" />
+```
+
+```csharp
+var entry = new Entry { ... IsTextPredictionEnabled = false };
+```
+
+> [!NOTE]
+> 当[ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)属性设置为`false`，和自定义键盘不被使用，文本预测和自动禁用文本更正。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)已设置该禁用文本预测`IsTextPredictionEnabled`属性将被忽略。 因此，该属性不能用于启用文本预测`Keyboard`的显式禁用它。
 
 ### <a name="placeholders"></a>占位符
 
@@ -141,7 +230,6 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ![](entry-images/passwordplaceholder.png "条目 IsPassword 和占位符的示例")
 
-
 ### <a name="colors"></a>颜色
 
 若要使用的自定义背景和文本颜色通过以下可绑定属性，可以设置项：
@@ -191,12 +279,12 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 
 项公开两个事件：
 
-- [TextChanged](xref:Xamarin.Forms.Entry.TextChanged) &ndash;文本项中更改时引发。 更改之前和之后提供的文本。
-- [已完成](xref:Xamarin.Forms.Entry.Completed)&ndash;用户已结束输入通过键盘上按 return 键时引发。
+- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; 文本更改的项中时引发。 更改之前和之后提供的文本。
+- [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; 当用户已结束输入通过键盘上按 return 键时引发。
 
 ### <a name="completed"></a>已完成
 
-`Completed`使用事件做出反应的条目的交互完成。 `Completed` 当用户通过键盘上输入 return 键结束与某个字段的输入时引发。 该事件的处理程序是一个泛型事件处理程序，使发件人和`EventArgs`:
+`Completed`使用事件做出反应的条目的交互完成。 `Completed` 当用户通过键盘上按 return 键结束与某个字段的输入时引发。 该事件的处理程序是一个泛型事件处理程序，使发件人和`EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -217,6 +305,8 @@ void Entry_Completed (object sender, EventArgs e)
 var entry = new Entry ();
 entry.Completed += Entry_Completed;
 ```
+
+之后[ `Completed` ](xref:Xamarin.Forms.Entry.Completed)事件触发时，任何`ICommand`指定的[ `ReturnCommand` ](xref:Xamarin.Forms.Entry.ReturnCommand)执行属性时，使用`object`指定[ `ReturnCommandParameter`](xref:Xamarin.Forms.Entry.ReturnCommandParameter)属性传递给`ICommand`。
 
 ### <a name="textchanged"></a>TextChanged
 

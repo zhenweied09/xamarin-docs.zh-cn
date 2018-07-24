@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998290"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203080"
 ---
 # <a name="customizing-a-map-pin"></a>自定义图钉
 
@@ -240,7 +240,7 @@ namespace CustomRenderer.iOS
 `GetViewForAnnotation`方法接受`IMKAnnotation`，其中包含批注的数据，返回`MKAnnotationView`显示在映射中，并在下面的代码示例所示：
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotatio
 1. `GetCustomPin`调用方法以返回批注的自定义的 pin 数据。
 1. 为了节省内存，批注的视图已入池以供重复使用通过调用[ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/)。
 1. `CustomMKAnnotationView`类用于扩展`MKAnnotationView`类与`Id`并`Url`对应于中的相同属性的属性`CustomPin`实例。 新实例`CustomMKAnnotationView`创建，前提是该批注是`null`:
-  - `CustomMKAnnotationView.Image`属性设置为将表示在地图上的批注的图像。
-  - `CustomMKAnnotationView.CalloutOffset`属性设置为`CGPoint`，它指定将在标注居中上面批注。
-  - `CustomMKAnnotationView.LeftCalloutAccessoryView`属性设置为批注标题和地址的左侧将出现 monkey 的映像。
-  - `CustomMKAnnotationView.RightCalloutAccessoryView`属性设置为*信息*批注标题和地址右侧将显示的按钮。
-  - `CustomMKAnnotationView.Id`属性设置为`CustomPin.Id`属性返回`GetCustomPin`方法。 这样，使其可以识别的批注[可进一步自定义标注](#Selecting_the_Annotation)，如果所需的。
-  - `CustomMKAnnotationView.Url`属性设置为`CustomPin.Url`属性返回`GetCustomPin`方法。 URL 将导航到时用户[点击右标注附件视图中显示的按钮](#Tapping_on_the_Right_Callout_Accessory_View)。
+    - `CustomMKAnnotationView.Image`属性设置为将表示在地图上的批注的图像。
+    - `CustomMKAnnotationView.CalloutOffset`属性设置为`CGPoint`，它指定将在标注居中上面批注。
+    - `CustomMKAnnotationView.LeftCalloutAccessoryView`属性设置为批注标题和地址的左侧将出现 monkey 的映像。
+    - `CustomMKAnnotationView.RightCalloutAccessoryView`属性设置为*信息*批注标题和地址右侧将显示的按钮。
+    - `CustomMKAnnotationView.Id`属性设置为`CustomPin.Id`属性返回`GetCustomPin`方法。 这样，使其可以识别的批注[可进一步自定义标注](#Selecting_the_Annotation)，如果所需的。
+    - `CustomMKAnnotationView.Url`属性设置为`CustomPin.Url`属性返回`GetCustomPin`方法。 URL 将导航到时用户[点击右标注附件视图中显示的按钮](#Tapping_on_the_Right_Callout_Accessory_View)。
 1. [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/)属性设置为`true`以便标注批注点击时显示。
 1. 批注返回要显示在代码图上。
 
