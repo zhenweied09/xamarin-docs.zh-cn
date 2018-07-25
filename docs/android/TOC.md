@@ -113,6 +113,8 @@
 ## [平台功能](platform/index.md)
 ### [Android 无线发送](platform/android-beam.md)
 ### [Android 清单](platform/android-manifest.md)
+### [使用 Xamarin.Android 的文件访问](platform/files/index.md)
+#### [外部存储](platform/files/external-storage.md)
 ### [指纹身份验证](platform/fingerprint-authentication/index.md)
 #### [入门](platform/fingerprint-authentication/get-started.md)
 #### [扫描指纹](platform/fingerprint-authentication/scanning.md)
