@@ -1,38 +1,38 @@
 ---
-title: 播放声音与 AVAudioPlayer Xamarin.Mac 中
-description: 本文档介绍如何播放声音与 AVAudioPlayer Xamarin.Mac 应用中。 它讨论 AVAudioPlayer 在高级别和详细探讨其他文档的链接。
+title: 在 Xamarin.Mac 中播放声音使用 AVAudioPlayer
+description: 本文档介绍如何播放声音使用 AVAudioPlayer Xamarin.Mac 应用中。 它讨论了在高级别和其他文档的更全面探讨链接 AVAudioPlayer。
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e5b9ec43189999f8a0aee29eb50221b494e2133
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 03a0207ce8c742f0ca98ab6c75ed3e7b2f37d09e
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791850"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241339"
 ---
-# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>播放声音与 AVAudioPlayer Xamarin.Mac 中
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>在 Xamarin.Mac 中播放声音使用 AVAudioPlayer
 
 ## <a name="about-the-avaudioplayer"></a>有关 AVAudioPlayer
 
-`AVAudioPlayer`类用于播放音频数据从内存或文件。 Apple 建议使用此类播放音频应用程序中，除非你正在流式处理的网络，或者需要低延迟音频 I/O。
+`AVAudioPlayer`类用于播放音频数据从内存或文件。 Apple 建议使用此类播放音频，在您的应用程序，除非正在流式处理的网络或需要较低的延迟音频 I/O。
 
-你可以使用`AVAudioPlayer`类来执行以下操作：
+可以使用`AVAudioPlayer`类来执行以下操作：
 
 - 播放声音的任何可选循环的持续时间。
 - 可选同步同时播放多个声音。
-- 控制卷、 播放速率和播放每个声音的立体声定位。
-- 支持功能，如快速前进或后退。
-- 获取播放级别计数数据。
+- 控制音量、 播放速度和立体声定位的每个声音播放的声音。
+- 支持快进或快退等功能。
+- 获取播放计数数据的级别。
 
-`AVAudioPlayer` 支持 iOS、 tvOS 以及如.aif、.wav 或.mp3 macOS 提供的任何音频格式的声音。
+`AVAudioPlayer` 支持 iOS、 tvOS 和 macOS 如.aif、.wav 或.mp3 提供任何音频格式的声音。
 
-## <a name="playing-sounds-in-macos"></a>在 macOS 播放声音
+## <a name="playing-sounds-in-macos"></a>在 macOS 中播放声音
 
-因为 macOS 支持相同的音频工具箱类，因为 iOS，请参阅我们的 iOS[与 AVAudioPlayer 播放声音](https://developer.xamarin.com/recipes/ios/media/sound/avaudioplayer/)Xamarin.Mac 应用中的播放音频的完整详细信息的文档。
+由于 macOS 支持相同的音频工具箱类，因为 iOS，请参阅我们的 iOS[使用 AVAudioPlayer 播放声音](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer)Xamarin.Mac 应用中播放音频的完整详细信息的文档。
 
 ## <a name="related-links"></a>相关链接
 

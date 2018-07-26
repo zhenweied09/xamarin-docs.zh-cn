@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: b79b2e44e79a6ff75b096c7443f6d46c20e27144
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 563c04ef1c8eec00108844894c5f9bdc0e9950e3
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31647029"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241881"
 ---
-# <a name="using-data-in-an-app"></a>在应用程序中使用数据
+# <a name="using-data-in-an-app"></a>在应用中使用数据
 
-**DataAccess_Adv**示例显示的工作应用程序允许用户输入和 CRUD （创建、 读取、 更新和删除） 的数据库功能。 该应用程序包含两个屏幕： 列表和一个数据输入窗体。 所有数据访问代码都是重用在 iOS 和 Android 中而不进行修改。
+**DataAccess_Adv**示例显示允许用户输入和 CRUD （创建、 读取、 更新和删除） 的数据库功能的工作应用程序。 此应用程序包含两个屏幕： 列表和数据输入窗体。 所有数据访问代码都是在 iOS 和 Android 中无需修改即可重复使用。
 
 添加一些数据后的应用程序屏幕如下所示在 Android 上：
 
@@ -23,11 +23,11 @@ ms.locfileid: "31647029"
 
 ![Android 示例详细信息](using-data-in-an-app-images/image12.png "Android 示例详细信息")
 
-Android 项目如下所示&ndash;本节中所示的代码包含在**Orm**目录：
+Android 项目如下所示&ndash;在本部分中所示的代码包含在**Orm**目录：
 
 ![Android 项目树](using-data-in-an-app-images/image14.png "Android 项目树")
 
-超出了本文档的范围是 Android 中的活动的本机 UI 代码。 请参阅[Android Listview 和适配器](~/android/user-interface/layouts/list-view/index.md)指南以获取对 UI 控件的详细信息。
+在 Android 中的活动的本机 UI 代码不在本文的范围之内。 请参阅[Android Listview 和适配器](~/android/user-interface/layouts/list-view/index.md)指南以获取对 UI 控件的详细信息。
 
 ## <a name="read"></a>读取
 
@@ -53,11 +53,11 @@ public Stock GetStock (int id)
 }
 ```
 
-Android 呈现数据作为`ListView`。
+Android 将为数据呈现`ListView`。
 
 ## <a name="create-and-update"></a>创建和更新
 
-若要简化应用程序代码，一条存储方法是提供执行插入或更新根据 PrimaryKey 是否已设置。 因为`Id`属性将标有`[PrimaryKey]`不应在代码中设置它的属性。 此方法将检测是否已将值以前保存 （通过检查主键属性），并且插入或相应地更新该对象：
+为了简化应用程序代码，一条存储方法是提供执行插入或更新取决于是否已设置 PrimaryKey。 因为`Id`属性是否标记有`[PrimaryKey]`属性不应在代码中设置它。 此方法将检测是否值已被以前保存 （通过检查主键属性），并插入或相应地更新该对象：
 
 ```csharp
 public int SaveStock (Stock item)
@@ -73,11 +73,11 @@ public int SaveStock (Stock item)
 }
 ```
 
-实际应用程序通常将需要一些验证 （如必填的字段，最小长度或其他业务规则）。 尽可能多的验证逻辑尽可能传递备份到该平台的功能根据显示的 UI 的验证错误，在共享代码中实现良好的跨平台应用程序。
+实际应用程序通常需要一些 （如必填的字段，最小长度或其他业务规则） 的验证。 尽可能多的验证逻辑作为在共享的代码，传递验证错误，备份到平台的功能根据显示的 UI，可以实现很好的跨平台应用程序。
 
 ## <a name="delete"></a>删除
 
-与不同`Insert`和`Update`方法，`Delete<T>`方法可以接受只的主键值而不是完整`Stock`对象。 在此示例中`Stock`对象传递到方法，但仅 Id 属性传递给`Delete<T>`方法。
+与不同`Insert`并`Update`方法，`Delete<T>`方法可接受只是主密钥值而不是一个完整`Stock`对象。 在此示例中`Stock`对象传递给该方法，但仅 Id 属性传递给`Delete<T>`方法。
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -88,17 +88,17 @@ public int DeleteStock(Stock stock)
 }
 ```
 
-## <a name="using-a-pre-populated-sqlite-database-file"></a>使用预先填充的 SQLite 数据库文件
+## <a name="using-a-pre-populated-sqlite-database-file"></a>使用预填充的 SQLite 数据库文件
 
-某些应用程序附带已用数据填充数据库。 你可以轻松地通过完成此移动应用程序中发布你的应用程序与现有的 SQLite 数据库文件，在访问它之前将其复制到可写目录。 由于 SQLite 是一种标准文件格式，可在多个平台上，有许多工具可用于创建一个 SQLite 数据库文件：
+某些应用程序附带已用数据填充数据库。 您可以轻松地完成此操作在移动应用程序中传送你的应用与现有的 SQLite 数据库文件并对其进行访问之前将其复制到可写目录。 由于 SQLite 是多个平台使用的标准文件格式，有许多工具可用于创建一个 SQLite 数据库文件：
 
--   **SQLite Manager Firefox Extension** &ndash;适用于 Mac 和 Windows 并生成与 iOS 和 Android 兼容的文件。
+-   **SQLite Manager Firefox 扩展**&ndash;适用于 Mac 和 Windows，并生成与 iOS 和 Android 兼容的文件。
 
 -   **命令行**&ndash;请参阅[www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) 。
 
-在创建分发数据库文件使用你的应用，注意使用命名的表和列以确保它们匹配你的代码的要求，尤其是如果你使用 SQLite.NET 这应以满足您的 C# 类和属性的名称 （或关联的自定义属性）。
+时使用您的应用程序创建分发数据库文件，请注意使用命名的表和列，确保它们与您的代码的预期，尤其是如果您使用 SQLite.NET 这将要求要与 C# 类和属性匹配的名称 （或关联的自定义属性）。
 
-若要确保在 Android 应用程序中的其他部分之前，运行某些代码，你可以将它放在要加载的第一个活动，也可以创建`Application`加载之前的任何活动的子类。 下面的代码显示`Application`将现有数据库文件复制的子类**data.sqlite**外 **/Resources/Raw/** 目录。
+若要确保某些代码运行在 Android 应用中的其他部分之前，你可以将它放在要加载的第一个活动，也可以创建`Application`加载之前的任何活动的子类。 下面的代码显示`Application`会将现有的数据库文件复制的子类**data.sqlite**共 **/Resources/Raw/** 目录。
 
 ```csharp
 [Application]
@@ -139,5 +139,5 @@ public class YourAndroidApp : Application {
 
 - [DataAccess Basic （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 高级 （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android 数据配方](https://developer.xamarin.com/recipes/android/data/)
+- [Android 数据方案](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Xamarin.Forms 数据访问](~/xamarin-forms/app-fundamentals/databases.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/16/2018
-ms.openlocfilehash: 57304f2f07a0834c31e32bb89a4742a2de7e861c
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 272887f0abb0785f959c542e65789d7645a583f1
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202989"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241220"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 条目
 
@@ -84,7 +84,7 @@ var entry = new Entry { ... MaxLength = 10 };
 var entry = new Entry { Keyboard = Keyboard.Chat };
 ```
 
-可以在中找到的每个键盘示例我们[配方](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/)存储库。
+可以在中找到的每个键盘示例我们[配方](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry)存储库。
 
 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard)类还具有[ `Create` ](xref:Xamarin.Forms.Keyboard.Create*)工厂方法，可以用来通过指定的大小写、 拼写检查，并建议行为自定义键盘。 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 枚举值指定为具有自定义的方法的参数`Keyboard`返回。 `KeyboardFlags`枚举包含的以下值：
 

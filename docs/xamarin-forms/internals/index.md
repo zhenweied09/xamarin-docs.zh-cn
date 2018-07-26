@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2017
-ms.openlocfilehash: 292b0814cba446c97042ba1fe52ad9414ba74760
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: ac9a90373878035ffa8ac0be9da8993bf189b6b3
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203054"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241248"
 ---
 # <a name="advanced-concepts--internals"></a>高级概念和内部机制
 
@@ -26,4 +26,4 @@ ms.locfileid: "39203054"
 
 ## <a name="dependency-resolutiondependency-resolutionmd"></a>[依赖项解析](dependency-resolution.md)
 
-此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms 中，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器的效果，生存期的控制和`DependencyService`实现。
+此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器的效果，生存期的控制和`DependencyService`实现。

@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 2baf7dae71ce7607c629b570ad25f477dec66c17
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765303"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241170"
 ---
 # <a name="web-view"></a>Web 视图
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 可以创建你自己的窗口用于查看 web 页 （或甚至开发完成浏览器）。 在本教程中，你将创建一个简单[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) ，可以查看和中导航网页。
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 可以创建自己的窗口用于查看的网页 （或甚至开发完整的浏览器）。 在本教程中，你将创建一个简单[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) ，可以查看和导航网页。
 
 创建一个名为的新项目**HelloWebView**。
 
-打开**Resources/Layout/Main.axml**和插入以下：
+打开**Resources/Layout/Main.axml**并插入以下：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -29,11 +29,11 @@ ms.locfileid: "30765303"
     android:layout_height="fill_parent" />
 ```
 
-由于此应用程序将访问 Internet，你必须添加到 Android 适当的权限清单文件。 打开项目的属性，以指定你的应用程序所需操作的权限。 启用`INTERNET`权限如下所示：
+由于此应用程序将访问 Internet，必须添加相应的权限向 Android 清单文件。 打开项目的属性，以指定你的应用程序运行所需的权限。 启用`INTERNET`权限如下所示：
 
 ![在 Android 清单中设置 INTERNET 权限](web-view-images/01-set-internet-permissions.png)
 
-现在打开**MainActivity.cs**和添加一条 using 指令的易于使用的功能：
+现在，打开**MainActivity.cs**和添加 using 指令的易于使用的功能：
 
 ```csharp
 using Android.Webkit;
@@ -45,7 +45,7 @@ using Android.Webkit;
 WebView web_view;
 ```
 
-当**WebView**是要求加载 URL 时，它会将默认情况下委托对默认浏览器的请求。 具有**WebView**加载 URL （而不是默认浏览器），则必须子类`Android.Webkit.WebViewClient`，并重写`ShouldOverriderUrlLoading`方法。 此自定义实例`WebViewClient`提供给`WebView`。 若要执行此操作，添加以下嵌套`HelloWebViewClient`类内`MainActivity`:
+当**WebView**是要求加载 URL 时，它会将默认情况下委托对默认浏览器的请求。 能够**WebView**加载 URL （而不是默认浏览器），则必须子类`Android.Webkit.WebViewClient`并重写`ShouldOverriderUrlLoading`方法。 此自定义的实例`WebViewClient`提供给`WebView`。 若要执行此操作，添加以下嵌套`HelloWebViewClient`类`MainActivity`:
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -58,9 +58,9 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-当`ShouldOverrideUrlLoading`返回`false`，它向 Android 发出信号，当前`WebView`实例处理请求，并且不需要任何进一步操作。 
+当`ShouldOverrideUrlLoading`返回`false`，向 Android 发出信号，它的当前`WebView`实例处理请求并不需要任何进一步的操作。 
 
-如果你面向的 API 级别 24 或更高版本，请使用重载`ShouldOverrideUrlLoading`采用`IWebResourceRequest`的第二个参数而不是`string`:
+如果您的目标 API 级别 24 或更高版本，请使用的重载`ShouldOverrideUrlLoading`采用`IWebResourceRequest`的第二个参数而不是`string`:
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -91,14 +91,14 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-此值将初始化成员[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)替换为从[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)布局，并使 JavaScript 的[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)与[`JavaScriptEnabled` ](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/) 
- `= true` (请参阅[调用 C\#从 JavaScript](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript)有关如何调用 C 的信息的原因之一\#从 JavaScript 函数)。 最后，初始网页加载与[ `LoadUrl(String)` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl)。
+此值将初始化成员[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)中[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)布局，并启用适用于 JavaScript [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)与[`JavaScriptEnabled` ](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/) 
+ `= true` (请参阅[调用 C\#从 JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)方案了解如何调用 C\#从 JavaScript 函数)。 最后，与加载初始网页[ `LoadUrl(String)` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl)。
 
-生成并运行应用。 你应看到与下面的屏幕截图所示的简单的 web 页面查看器应用程序：
+生成并运行应用。 您应该看到一个简单的 web 页面查看器应用程序与以下屏幕截图所示：
 
-[![显示 WebView 应用示例](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
+[![显示 web 视图应用程序示例](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
-若要处理**回**按钮按键，添加以下 using 语句：
+若要处理**回**按钮按下，添加以下 using 语句：
 
 ```csharp
 using Android.Views;
@@ -118,19 +118,19 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-这[ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))当活动运行时按下按钮时，将调用回调方法。 内部使用条件[ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/)以检查是否按下键是**回**按钮和是否[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)实际能够导航回 （如果它具有历史记录）。 如果都为 true，则[ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/)调用方法时，这将会定位后一个步骤中的[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)历史记录。 返回`true`指示已处理此事件。 如果不满足此条件，然后会将事件发送回系统。
+这[ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))每当该活动正在运行并且按下按钮时，将调用回调方法。 内部使用的条件[ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/)若要检查是否按下了键**回**按钮以及是否[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)实际上能够导航回 （如果它具有历史记录）。 如果两者均为 true，则[ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/)调用方法时，这将导航中的后退一步[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)历史记录。 返回`true`指示已处理该事件。 如果不满足此条件，然后该事件发送到系统。
 
-再次运行该应用程序。 你现在应能够跟随链接并在向后导航页历史记录：
+再次运行该应用程序。 现在应能够单击的链接，并在向后导航页历史记录：
 
 [![后退按钮在操作中的示例屏幕快照](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
-*此页的部分是基于工作创建和共享的 Android Open Source Project 的根据条款中所述修改*
-[*Creative Commons 2.5 归属许可证*](http://creativecommons.org/licenses/by/2.5/).
+*此页的部分是基于工作创建和共享通过 Android 的开放源项目和使用中所述的条款的修改*
+[*Creative Commons 2.5 Attribution 许可证*](http://creativecommons.org/licenses/by/2.5/).
 
 
 ## <a name="related-links"></a>相关链接
 
-- [从 JavaScript 中调用 C#](https://developer.xamarin.com/recipes/android/controls/webview/call_csharp_from_javascript)
+- [从 JavaScript 中调用 C#](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
 - [Android.Webkit.WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView)
 - [KeyEvent](https://developer.xamarin.com/api/type/Android.Webkit.WebView/Client)

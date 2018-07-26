@@ -1,55 +1,55 @@
 ---
-title: 进度和 Xamarin.iOS 中的活动指示器
-description: 本文档讨论了如何在 Xamarin.iOS 中使用进度和活动指示器。 它描述如何使用它们，以编程方式和使用情节提要。
+title: 进度和活动指示器在 Xamarin.iOS
+description: 本文档讨论了如何在 Xamarin.iOS 中使用进度和活动指示器。 它介绍了如何使用它们以编程方式和使用演示图板。
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 27ee788ec40bfd158dbc0d9926245b166e2954a9
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 24ad47bd37693eccf38033159acef72a9d4942be
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790050"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242174"
 ---
-# <a name="progress-and-activity-indicators-in-xamarinios"></a>进度和 Xamarin.iOS 中的活动指示器
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>进度和活动指示器在 Xamarin.iOS
 
-很可能你的应用程序将需要执行长时间运行任务，例如加载或处理数据和，此延迟可能会导致延迟更新你的 UI。 在此期间你应始终使用进度指示器，可以放心用户系统正忙于执行工作。 这样，应用程序工作在其请求时，不等待其输入的用户控件，可以提供一种详细列出它们必须完全多长时间等待。
+很可能您的应用程序将需要执行长时间运行任务，例如加载或处理数据和这种延迟，可能会延迟导致更新 UI。 在此期间您应该始终使用进度指示器确信用户系统正忙于执行工作。 这使用户可以控制的应用程序正在处理其请求，它不会等待其输入，并可提供一种方法的详细介绍了它们需要等待的确切时间。
 
-iOS 提供两种主要方法以提供您的应用程序中此进度指示： 活动指示器 (包括特定_网络_活动指示器) 和进度栏。
+iOS 提供两种主要方法来提供应用程序中的此进度指示： 活动指示器 (包括特定_网络_活动指示器) 和进度栏。
 
 ## <a name="activity-indicator"></a>活动指示器
 
-当你的应用程序正在运行一个长的过程，但你不知道确切的任务所需的时间长度，则应显示活动指示器。
+您的应用程序正在运行一个长的过程，但不知道确切的任务所需的时间长度时，应显示活动指示器。
 
-Apple 具有用于处理活动指示器以下建议：
+Apple 已使用活动指示器的以下建议：
 
-- **只要有可能，请改用进度条**-因为活动指示器向用户不提供任何反馈需要多长时间运行的过程，始终使用一个进度栏，如果长度知道 （例如，若要下载的文件中的字节数）。
-- **保留指示器动画**-用户： 与静态活动指示器相关到已停止的应用程序，因此你始终应该具有动画处理时所显示的指示器。
-- **描述任务正在处理**-只需单独显示活动指示器还不够，用户需要了解它们正在等待的过程。 包含任务均明确定义一个有意义标签 （通常单个、 完整句子）。
+- **只要有可能，请改用进度条**-活动指示器为用户不提供任何反馈正在运行的进程将需要多长，因为如果 （例如，若要下载的文件中的字节数） 知道长度始终使用一个进度栏。
+- **保留指示器经过动画处理**-用户： 与静态活动指示器相关到已停止的应用程序，因此应始终具有经过动画处理时所显示的指示器。
+- **描述任务正在处理**-本身显示活动指示器以外还不够，用户需要了解它们正在等待的过程。 包含有意义的标签 （通常一个单一的完整句子），以明确定义的任务。
 
 ### <a name="implementing-an-activity-indicator"></a>实现活动指示器
 
-通过实现活动指示器[ `UIActivityIndictorView` ](https://developer.xamarin.com/api/type/UIKit.UIActivityIndicatorView/)类，则指示`UIActivity`正在进行。
+通过实现活动指示器[ `UIActivityIndictorView` ](https://developer.xamarin.com/api/type/UIKit.UIActivityIndicatorView/)类，以指示的`UIActivity`正在进行。
 
 ### <a name="activity-indicators-and-storyboards"></a>活动指示器和情节提要
 
-如果使用 iOS 设计器来创建你的 UI，则活动指示器可以添加到你的布局中从工具箱。 可以从属性填充调整以下属性：
+如果使用 iOS 设计器创建 UI，可以从工具箱拖到你的布局添加活动指示器。 从属性面板，可以调整以下属性：
 
-![属性填充](progress-activity-indicator-images/progress-indicator1.png)
+![属性面板](progress-activity-indicator-images/progress-indicator1.png)
 
 ### <a name="managing-activity-indicator-behavior"></a>管理活动指示器行为
 
 使用`StartAnimating()`和`StopAnimating()`方法来启动和停止活动指示器动画。
 
-设置`HidesWhenStopped`属性`true`进行消失后活动指示器`StopAnimating()`已调用。 此值设置为`true`默认情况下。 随时可以查看活动指示器是否通过检查运行其旋转动画`IsAnimating`属性。 
+设置`HidesWhenStopped`属性设置为`true`使活动指示器消失后`StopAnimating()`已调用。 此值设置为`true`默认情况下。 随时可以查看活动指示器是否通过检查运行其旋转动画`IsAnimating`属性。 
 
 
-### <a name="managing-activity-indicator-appearances"></a>管理活动指示器外观
+### <a name="managing-activity-indicator-appearances"></a>管理活动指示器的外观
 
-`UIActivityIndicatorViewStyle`在实例化活动指示器时，枚举可以作为参数传递。 你可以使用这将的视觉样式设置为`Gray`， `White`，或`WhiteLarge`，例如：
+`UIActivityIndicatorViewStyle`在实例化活动指示器时，枚举可以作为参数传递。 可以使用此设置为视觉样式`Gray`， `White`，或`WhiteLarge`，例如：
 
 ```csharp
 activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
@@ -59,47 +59,47 @@ activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.White
 
 ## <a name="progress-bar"></a>进度栏
 
-为用来指示的状态和长度的耗时的任务的颜色填充一条线显示一个进度栏。 任务的长度是知道或可以计算时，应始终使用进度栏。
+进度栏显示为一条线的填充颜色来表示的状态和长度的耗时的任务。 任务的长度是知道或可以计算时，应始终使用进度条。
 
-Apple 具有以下建议用于使用进度栏：
+Apple 已使用进度条的以下建议：
 
-- **准确地报告进度**-进度栏应始终为准确地反映来完成任务所需的时间。 永远不会有意使应用程序显示繁忙的时间。
-- **用于 Well-Defined 持续时间**-进度栏不应该仅显示花费时间较长的任务将放置，但为用户和任务中有多少已完成的指示和估计剩余时间。
+- **准确地报告进度**-进度栏应始终为所需的时间来完成任务的准确表示形式。 永远不会误报使应用显示繁忙的时间。
+- **用于 Well-Defined 持续时间**-进度栏，不应仅显示较长的任务正在放置，但在为用户和指示完成的任务和估计剩余时间。
 
-### <a name="implementing-an-progress-bar"></a>实现一个进度栏
+### <a name="implementing-an-progress-bar"></a>实现进度栏
 
-一个进度栏创建方法是实例化 [`UIProgressView`](https://developer.xamarin.com/api/type/UIKit.UIProgressView/)
+通过实例化来创建一个进度栏 [`UIProgressView`](https://developer.xamarin.com/api/type/UIKit.UIProgressView/)
 
-### <a name="progress-bars-and-storyboards"></a>进度栏和情节提要
+### <a name="progress-bars-and-storyboards"></a>进度条和情节提要
 
-使用 iOS 设计器时，还可以向你的 UI 添加一个进度栏。 搜索**进度视图**中**工具箱**并将其拖到你的视图。
+使用 iOS 设计器时，还可以向你的 UI 添加一个进度栏。 搜索**进度视图**中**工具箱**并将其拖到视图。
 
-属性小键盘上，可以调整以下属性：
+在属性面板上，可以调整以下属性：
 
-![属性填充](progress-activity-indicator-images/progress-indicator3.png)
+![属性面板](progress-activity-indicator-images/progress-indicator3.png)
 
 
 ### <a name="managing-progress-bar-behavior"></a>管理进度栏行为
 
-可以通过使用最初设置的进度栏`Progress`属性：
+可以通过使用最初设置进度栏的`Progress`属性：
 
 ```csharp
 ProgressBar.Progress = 0f;
 ```
 
-可以使用调整进度`SetProgress`方法并传递一个布尔值，如果你想进行动画处理或不更改声明。
+可以使用调整进度`SetProgress`方法并传递声明是否经过动画处理的或不更改一个布尔值。
 
 ```csharp
 ProgressBar.SetProgress(1.0f, true);
 ```
 
-有关使用进度栏的详细信息，请参阅[报告进度](https://developer.xamarin.com/recipes/cross-platform/networking/download_progress/#Reporting_Progress_in_iOS)配方，和[UICatalog tvOS 示例](https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/)。
+有关使用进度栏的详细信息，请参阅[报告进度](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress)方案，并[UICatalog tvOS 示例](https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/)。
 
-### <a name="managing-progress-bar-appearance"></a>管理进度栏外观
+### <a name="managing-progress-bar-appearance"></a>管理进度栏的外观
 
 类似于活动指示器，`UIProgressViewStyle`在实例化进度栏时，枚举可以作为参数传递。
 
-可以使用以下属性来调整的进度和跟踪映像及色调颜色：
+可以通过使用以下属性调整的进度并跟踪图像和着色颜色：
 
 ```csharp
 progressBar = new UIProgressView(UIProgressViewStyle.Default)

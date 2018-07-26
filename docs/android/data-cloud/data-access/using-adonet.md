@@ -6,42 +6,42 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 29e81afdf2c46cdefc68e2c2fae4e6e47999a346
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 9e0c1be2e37355242db2fb70857d90127c3b5259
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31646776"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242207"
 ---
 # <a name="using-adonet-with-android"></a>使用 ADO.NET 和 Android
 
-Xamarin 提供内置支持，可在 Android 上提供可以使用熟悉的类似于 ADO.NET 的语法公开的 SQLite 数据库。 使用这些 Api 需要你编写 SQL 语句处理的 SQLite，如`CREATE TABLE`，`INSERT`和`SELECT`语句。
+Xamarin 提供内置支持是可在 Android 上，可以使用熟悉的类似于 ADO.NET 的语法公开的 SQLite 数据库。 使用这些 Api 需要你编写 SQL 语句处理的 SQLite，如`CREATE TABLE`，`INSERT`和`SELECT`语句。
 
 ## <a name="assembly-references"></a>程序集引用
 
-若要使用访问通过 ADO.NET 必须添加 SQLite`System.Data`和`Mono.Data.Sqlite`引用为 Android 项目，如下所示：
+若要使用的访问必须添加的 ADO.NET 通过 SQLite`System.Data`和`Mono.Data.Sqlite`引用到 Android 项目，如下所示：
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin) 
 
-![Visual Studio 中的 android 引用](using-adonet-images/image7.png "Android 引用 Visual Studio 中") 
+![在 Visual Studio 中的 android 参考](using-adonet-images/image7.png "Android 引用 Visual Studio 中") 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac) 
 
-![适用于 Mac 的 Visual Studio 中的 android 引用](using-adonet-images/image5.png "Android 引用 Visual Studio 中的 Mac") 
+![Visual Studio for Mac 中的 android 参考](using-adonet-images/image5.png "Android 引用在 Visual Studio for Mac") 
 
 -----
 
 
-右键单击**引用 > 编辑引用...** 然后单击以选择所需的程序集。
+右键单击**引用 > 编辑引用...** ，然后单击以选择所需的程序集。
 
 ## <a name="about-monodatasqlite"></a>有关 Mono.Data.Sqlite
 
-我们将使用`Mono.Data.Sqlite.SqliteConnection`类以创建空数据库文件，然后实例化`SqliteCommand`对象，我们可以使用执行 SQL 对数据库的说明。
+我们将使用`Mono.Data.Sqlite.SqliteConnection`类，以创建空数据库文件，然后实例化`SqliteCommand`对象，我们可以使用执行 SQL 对数据库的说明。
 
-**创建一个空数据库**&ndash;调用`CreateFile`使用一个有效的方法 (即。 可写) 文件路径。 你应检查是否调用此方法之前已存在此文件，否则将旧的基础上创建新的 （空） 数据库和旧的文件中的数据将会丢失。
-`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` `dbPath`应根据本文档前面所述的规则确定变量。
+**创建空数据库**&ndash;调用`CreateFile`使用有效的方法 (即。 可写) 文件路径。 您应检查是否调用此方法之前已存在该文件，否则将旧的基础上创建新的 （空白） 数据库和旧的文件中的数据都将丢失。
+`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` `dbPath`变量，必须根据本文档前面所述的规则来确定。
 
-**创建数据库连接** &ndash; SQLite 数据库文件创建后可以创建连接对象来访问数据。 使用的连接字符串，即采用的形式构造连接`Data Source=file_path`，如下所示：
+**创建数据库连接** &ndash; SQLite 数据库文件创建后可以创建连接对象，以访问数据。 使用连接字符串，其形式的构造连接`Data Source=file_path`，如下所示：
 
 ```csharp
 var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -50,9 +50,9 @@ connection.Open();
 connection.Close();
 ```
 
-如前所述，连接不应是重复使用跨不同的线程。 如果有疑问，创建作为所需的连接并将其关闭，完成后;但要执行此超过通常太需要注意。
+前面曾提到，连接永远不应重复使用跨不同的线程。 如果有疑问，创建所需的连接并将其关闭时完成;但要注意的执行详细通常不太必要。
 
-**创建和执行数据库命令**&ndash;一旦我们有一个连接我们可以执行对其任意 SQL 命令。 下面的代码显示`CREATE TABLE`正在执行的语句。
+**创建和执行数据库命令**&ndash;我们有一个连接后我们可以执行对其的任意 SQL 命令。 下面的代码显示`CREATE TABLE`正在执行的语句。
 
 ```csharp
 using (var command = connection.CreateCommand ()) {
@@ -61,7 +61,7 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-直接对数据库执行 SQL 时，应执行正常的预防措施不以无效的请求，例如，尝试创建已存在一个表。 跟踪的数据库的结构，以便不会导致`SqliteException`如**SQLite 错误表 [项目] 已存在**。
+直接对数据库执行 SQL 时，应执行正常的预防措施不以使无效请求，例如尝试创建已存在的表。 跟踪的数据库的结构，以便不会造成`SqliteException`如**SQLite 错误表 [项目] 已存在**。
 
 ## <a name="basic-data-access"></a>基本数据访问
 
@@ -69,7 +69,7 @@ using (var command = connection.CreateCommand ()) {
 
 ![Android ADO.NET 示例](using-adonet-images/image8.png "Android ADO.NET 示例")
 
-下面的代码演示如何执行简单的 SQLite 操作，并显示应用程序的主窗口中的文本中的结果。
+下面的代码说明了如何执行简单的 SQLite 操作并为应用程序的主窗口中的文本显示中的结果。
 
 你将需要包含这些命名空间：
 
@@ -79,13 +79,13 @@ using System.IO;
 using Mono.Data.Sqlite;
 ```
 
-下面的代码示例显示了一个整个数据库交互：
+下面的代码示例显示了整个数据库进行交互：
 
 1.  创建数据库文件
 2.  插入一些数据
 3.  查询数据
 
-这些操作将通常会出现在多个位置在整个代码，例如可能创建的数据库文件和表，你的应用程序首次启动时，还可以在单个屏幕中将数据读取和写入在你的应用程序中执行。 在下面的示例已被分组到单个方法对于此示例：
+这些操作将通常会出现在多个位置在整个代码，例如可能你的应用程序首次启动时创建的数据库文件和表，并在单个屏幕中执行数据读取和写入应用程序中。 在下面的示例已被分组到单个方法对于此示例：
 
 ```csharp
 public static SqliteConnection connection;
@@ -143,11 +143,11 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>更复杂的查询
 
-因为 SQLite 允许对数据运行任意 SQL 命令，你可以执行任何`CREATE`， `INSERT`， `UPDATE`， `DELETE`，或`SELECT`您喜欢的语句。 你可以阅读 SQLite 支持 Sqlite 网站上的 SQL 命令。 使用三种方法之一上运行 SQL 语句`SqliteCommand`对象：
+由于 SQLite 允许对数据运行任意 SQL 命令，因此可以执行任何`CREATE`， `INSERT`， `UPDATE`， `DELETE`，或`SELECT`您喜欢的语句。 你可以阅读 SQLite 支持 Sqlite 网站上的 SQL 命令。 使用三种方法之一上运行 SQL 语句`SqliteCommand`对象：
 
--   **ExecuteNonQuery** &ndash;通常用于表创建或数据插入。 某些操作的返回值是受影响的行数，否则它为-1。
+-   **ExecuteNonQuery** &ndash;通常用于表创建或数据期间插入操作。 对于某些操作的返回值是受影响的行数，否则为-1。
 
--   **ExecuteReader** &ndash;时一个行集合应返回为使用`SqlDataReader`。
+-   **ExecuteReader** &ndash;时应作为返回的行集合使用`SqlDataReader`。
 
 -   **ExecuteScalar** &ndash;检索单个值 （例如聚合）。
 
@@ -165,8 +165,8 @@ using (var c = connection.CreateCommand ()) {
 
 ### <a name="executereader"></a>EXECUTEREADER
 
-下面的方法演示`WHERE`中的子句`SELECT`语句。
-代码编写一个完整的 SQL 语句，因为它必须注意进行转义保留的字符，如字符串周围的引号 （'）。
+下面的方法演示`WHERE`子句中的`SELECT`语句。
+因为代码精心编制一个完整的 SQL 语句必须请注意它转义保留的字符，如字符串周围的引号 （'）。
 
 ```csharp
 public static string MoreComplexQuery ()
@@ -193,16 +193,16 @@ public static string MoreComplexQuery ()
 }
 ```
 
-`ExecuteReader` 方法返回 `SqliteDataReader` 对象。 除了`Read`方法在示例中，显示其他有用的属性包括：
+`ExecuteReader` 方法返回 `SqliteDataReader` 对象。 除了`Read`方法中所示示例中，其他有用属性包括：
 
--   **RowsAffected** &ndash;查询受影响的行计数。
+-   **RowsAffected** &ndash;受查询影响的行的计数。
 
 -   **HasRows** &ndash;是否没有返回任何行。
 
 
 ### <a name="executescalar"></a>EXECUTESCALAR
 
-使用此窗体`SELECT`返回单个值 （如聚合） 的语句。
+使用此窗体`SELECT`返回单个值 （例如聚合） 的语句。
 
 ```csharp
 using (var contents = connection.CreateCommand ()) {
@@ -211,7 +211,7 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-`ExecuteScalar`方法的返回类型是`object`&ndash;应根据数据库查询将结果强制转换。 一个整数，可能会导致`COUNT`查询或单个列中的字符串`SELECT`查询。 请注意，这不同于其他`Execute`方法返回一个读取器对象或受影响的行数的计数。
+`ExecuteScalar`方法的返回类型是`object`&ndash;应具体取决于数据库查询结果强制转换。 结果可能是一个整数`COUNT`查询或单个列中的字符串`SELECT`查询。 请注意，这是与其他不同`Execute`方法返回一个读取器对象或受影响的行数。
 
 
 
@@ -219,5 +219,5 @@ using (var contents = connection.CreateCommand ()) {
 
 - [DataAccess Basic （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 高级 （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android 数据配方](https://developer.xamarin.com/recipes/android/data/)
+- [Android 数据方案](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Xamarin.Forms 数据访问](~/xamarin-forms/app-fundamentals/databases.md)

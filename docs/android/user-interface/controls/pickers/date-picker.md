@@ -7,46 +7,46 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/22/2018
-ms.openlocfilehash: 916a9c74fa28b99e799eef80db822e86cfda617d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8f4e6318d904efb2f77c36732fc6519699f72ac9
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764978"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241131"
 ---
 # <a name="date-picker"></a>日期选取器
 
 ## <a name="overview"></a>概述
 
-没有用户时必须数据输入到 Android 应用程序的情况。 若要对此有帮助，Android 框架提供[ `DatePicker` ](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)小组件和[ `DatePickerDialog` ](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/) 。 `DatePicker`允许用户在一致的界面中选择年、 月和日，跨设备和应用程序。 `DatePickerDialog`是封装的帮助器类`DatePicker`在对话框中。
+没有用户时必须数据输入到 Android 应用程序的情况。 为了帮助解决这个问题，Android 框架提供了[ `DatePicker` ](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)小组件和[ `DatePickerDialog` ](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/) 。 `DatePicker` ，用户可以跨设备和应用程序一致的界面中选择年、 月和日。 `DatePickerDialog`是一个帮助器类，用于封装`DatePicker`在对话框中。
 
-现代的 Android 应用程序应显示`DatePickerDialog`中[ `DialogFragment` ](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)。 这将允许应用程序显示为弹出对话框中的 DatePicker 或嵌入在活动中。 此外，`DialogFragment`将管理的生命周期和显示的对话框中，可以减少必须实现的代码。
+现代的 Android 应用程序应显示`DatePickerDialog`中[ `DialogFragment` ](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)。 这将允许应用程序将显示为弹出对话框中的 DatePicker 或嵌入在活动中。 此外，`DialogFragment`将管理的生命周期和显示的对话框中，减少必须实现的代码量。
 
-本指南将演示如何使用`DatePickerDialog`、 在已包装`DialogFragment`。 示例应用程序将显示`DatePickerDialog`为模式对话框当用户单击活动上的按钮。 由用户设置日期时`TextView`将更新所选的日期。
+本指南将演示如何使用`DatePickerDialog`、 包装在`DialogFragment`。 示例应用程序将显示`DatePickerDialog`为模式对话框，当用户单击活动上的按钮。 当由用户设置日期时`TextView`将更新所选的日期。
 
-[![选择日期的屏幕截图按钮跟日期选取器对话框](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
+[![选择日期的屏幕截图按钮，再通过日期选取器对话框](date-picker-images/image-01-sml.png)](date-picker-images/image-01.png#lightbox)
 
 ## <a name="requirements"></a>要求
 
 本指南的示例应用程序面向 Android 4.1 （API 级别
-16) 或更高版本，但适用于 Android 3.0 （API 级别为 11 或更高版本）。 它是 android 的可以支持较旧版本项目和一些代码更改 Android 支持库 v4 添加。
+16) 或更高版本，但适用于 Android 3.0 （API 级别为 11 或更高版本）。 它是 android 的可以支持较旧版本项目和一些代码更改 Android 支持库 v4 加。
 
-## <a name="using-the-datepicker"></a>使用包含 DatePicker
+## <a name="using-the-datepicker"></a>使用 DatePicker
 
-此示例将扩展`DialogFragment`。 将承载子类并将其显示`DatePickerDialog`:
+此示例将扩展`DialogFragment`。 将托管子类并将其显示`DatePickerDialog`:
 
-![日期选取器特写对话框](date-picker-images/image-02.png)
+![特写的日期选取器对话框](date-picker-images/image-02.png)
 
-当用户选择日期，并单击**确定**按钮，`DatePickerDialog`将调用此方法[ `IOnDateSetListener.OnDateSet` ](https://developer.xamarin.com/api/member/Android.App.DatePickerDialog+IOnDateSetListener.OnDateSet/p/Android.Widget.DatePicker/System.Int32/System.Int32/System.Int32/)。
-此接口由宿主实现`DialogFragment`。 如果用户单击**取消**按钮，然后片段并对话框会消除本身。
+当用户选择日期并单击**确定**按钮，`DatePickerDialog`将调用的方法[ `IOnDateSetListener.OnDateSet` ](https://developer.xamarin.com/api/member/Android.App.DatePickerDialog+IOnDateSetListener.OnDateSet/p/Android.Widget.DatePicker/System.Int32/System.Int32/System.Int32/)。
+此接口由宿主实现`DialogFragment`。 如果用户单击**取消**按钮，则片段和对话框将关闭本身。
 
-有多种`DialogFragment`可以返回到托管活动的所选的日期：
+有几种方法`DialogFragment`可以返回到托管的活动的所选的日期：
 
-1. **调用方法或设置一个属性**&ndash;活动可以提供的属性或针对将此值设置的方法。
+1. **调用方法或设置属性**&ndash;活动可以提供的属性或方法专门为此值设置。
 
-2. **引发事件** &ndash; `DialogFragment`可以定义将一个事件时引发`OnDateSet`调用。
+2. **引发事件** &ndash; `DialogFragment`可以定义将为事件时引发`OnDateSet`调用。
 
-3. **使用`Action`**  &ndash; `DialogFragment`可以调用`Action<DateTime>`活动中显示日期。 活动将提供`Action<DateTime`实例化时`DialogFragment`。 此示例将会使用第三个方法，并要求活动提供`Action<DateTime>`到`DialogFragment`。
+3. **使用`Action`**  &ndash; `DialogFragment`可以调用`Action<DateTime>`显示在活动中的日期。 该活动将提供`Action<DateTime`实例化时`DialogFragment`。 此示例将使用第三种方法，并要求提供活动`Action<DateTime>`到`DialogFragment`。
 
 
 
@@ -92,19 +92,19 @@ public class DatePickerFragment : DialogFragment,
 }
 ```
 
-`NewInstance`方法调用来实例化一个新`DatePickerFragment`。 此方法采用`Action<DateTime>`，当用户单击时就将调用**确定**按钮`DatePickerDialog`。
+`NewInstance`方法调用来实例化一个新`DatePickerFragment`。 此方法采用`Action<DateTime>`，将在用户单击时调用**确定**按钮`DatePickerDialog`。
 
-Android 片段是要显示，当将调用该方法`OnCreateDialog`。 此方法将创建一个新`DatePickerDialog`对象并将其初始化与当前日期和回调对象 (即的当前实例`DatePickerFragment`)。
+当显示片段，Android 将调用的方法`OnCreateDialog`。 此方法将创建一个新`DatePickerDialog`对象，并使用当前日期和回调的对象对其进行初始化 (这是当前实例的`DatePickerFragment`)。
 
 
 > [!NOTE]
-> 请注意，每月的值时`IOnDateSetListener.OnDateSet`调用在 0 到 11 和不在 1 到 12 范围内。 每月天数会在 1 到 31 （具体取决于已选择月份） 范围内。
+> 请注意，月份中的值时`IOnDateSetListener.OnDateSet`调用在 0 到 11 和不在 1 到 12 范围内。 每月天数会在 1 到 31 （具体取决于选择了月） 的范围内。
 
 
 
 ### <a name="showing-the-datepickerfragment"></a>显示 DatePickerFragment
 
-现在，`DialogFragment`已实现，本部分将讨论如何在活动中使用的片段。 在示例应用程序附带本指南中，该活动将实例化`DialogFragment`使用`NewInstance`工厂方法和它调用的然后显示`DialogFragment.Show`。 实例化一部分`DialogFragment`，活动将传递`Action<DateTime>`，这将显示在日期`TextView`承载活动：
+现在，`DialogFragment`已实现，本部分将说明如何在活动中使用片段。 在本指南附带示例应用，该活动将实例化`DialogFragment`使用`NewInstance`工厂方法，然后显示时，它调用`DialogFragment.Show`。 实例化的一部分`DialogFragment`，活动会`Action<DateTime>`，随后会显示在日期`TextView`承载活动：
 
 ```csharp
 [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon")]
@@ -137,7 +137,7 @@ public class MainActivity : Activity
 
 ## <a name="summary"></a>总结
 
-此示例讨论如何显示`DatePicker`为弹出窗口模式对话框作为 Android 活动的一部分的小组件。 它提供的示例 DialogFragment 实现对其进行讨论`IOnDateSetListener`接口。 此示例还演示了如何 DialogFragment 可能与主机活动来显示所选的日期进行交互。
+此示例介绍了如何显示`DatePicker`为弹出模式对话框的 Android 活动一部分的小组件。 它提供示例 DialogFragment 实现，并讨论`IOnDateSetListener`接口。 此示例还演示了如何 DialogFragment 可能与主机的活动来显示所选的日期进行交互。
 
 
 ## <a name="related-links"></a>相关链接
@@ -146,4 +146,4 @@ public class MainActivity : Activity
 - [DatePicker](https://developer.xamarin.com/api/type/Android.Widget.DatePicker/)
 - [DatePickerDialog](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog/)
 - [DatePickerDialog.IOnDateSetListener](https://developer.xamarin.com/api/type/Android.App.DatePickerDialog+IOnDateSetListener/)
-- [选择一个日期](https://github.com/xamarinhttps://developer.xamarin.com/recipes/tree/master/android/controls/datepicker/select_a_date)
+- [选择日期](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/datepicker/select_a_date)

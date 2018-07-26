@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/11/2016
-ms.openlocfilehash: cf474015b28d9708d69719b38348391091040a28
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b3a7858361d25f26807ea328e8bfdd30ca8d483b
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762579"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241872"
 ---
 # <a name="configuration"></a>配置
 
-要在你将需要确定你的数据库文件的正确的文件位置的 Xamarin.Android 应用程序中使用 SQLite。
+若要将需要确定您的数据库文件的正确的文件位置在 Xamarin.Android 应用程序中使用 SQLite。
 
 ## <a name="database-file-path"></a>数据库文件路径
 
-无论使用哪种数据访问方法，你必须创建数据库文件，然后可以将随 SQLite 存储数据。 根据您面向的哪种平台的文件位置将有所不同。 适用于 Android 可用于环境类构造有效的路径，如下面的代码段中所示：
+无论使用哪种数据访问方法，可以使用 SQLite 存储数据之前，必须创建数据库文件。 根据您面向的哪种平台的文件位置将有所不同。 适用于 Android 可用于环境类构造有效的路径，如下面的代码段中所示：
 
 ```csharp
 string dbPath = Path.Combine (
@@ -28,9 +28,9 @@ string dbPath = Path.Combine (
 // dbPath contains a valid file path for the database file to be stored
 ```
 
-没有要决定在何处存储数据库文件时考虑的其他事项。 例如，在 Android 上你可以选择是否使用内部或外部的存储。
+没有要确定用于存储数据库文件的位置时需要考虑的其他事项。 例如，在 Android 上你可以选择是否使用内部或外部存储。
 
-如果你想要使用跨平台应用程序中的每个平台上的其他位置，可用编译器指令所示来生成每个平台的不同路径：
+如果你想要在跨平台应用程序中的每个平台上使用的其他位置，可用的编译器指令所示来生成每个平台的不同路径：
 
 ```csharp
 var sqliteFilename = "MyDatabase.db3";
@@ -46,13 +46,13 @@ string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library f
 var path = Path.Combine (libraryPath, sqliteFilename);
 ```
 
-有关在 Android 中使用文件系统的提示，请参阅[浏览文件](https://developer.xamarin.com/recipes/android/data/Files/Browse_Files)配方。 请参阅[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)使用编译器指令写入每个平台的特定代码的详细信息的文档。
+有关在 Android 中使用文件系统上的提示，请参阅[浏览文件](https://github.com/xamarin/recipes/tree/master/Recipes/android/data/files/browse_files)方案。 请参阅[生成跨平台应用程序](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)使用编译器指令将写入每个平台特定代码的详细信息的文档。
 
 ## <a name="threading"></a>线程
 
-不应在多个线程使用相同的 SQLite 数据库连接。 小心地将其打开、 使用，然后关闭你在同一线程创建的任何连接。
+不应跨多个线程使用相同的 SQLite 数据库连接。 请注意打开、 使用，然后关闭任何同一线程创建的连接。
 
-若要确保你的代码不尝试从多个线程同时访问的 SQLite 数据库，手动执行锁时想要访问数据库，如下：
+若要确保你的代码不尝试从多个线程同时访问 SQLite 数据库，手动采用的锁时想要访问数据库时，此类：
 
 ```csharp
 object locker = new object(); // class level private field
@@ -62,12 +62,12 @@ lock (locker){
 }
 ```
 
-应使用同一个锁包装所有数据库访问 （读取、 写入、 更新等）。 必须格外小心，以免死锁情况通过确保在锁子句内的工作保持简单并不调用其他方法，可能还需要锁的 ！
+应使用同一个锁包装所有数据库访问权限 （读取、 写入、 更新等）。 必须格外小心，以避免死锁情况下，通过确保锁子句中的工作保持简单并不会不调用其他方法的可能还需要一个锁 ！
 
 
 ## <a name="related-links"></a>相关链接
 
 - [DataAccess Basic （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 高级 （示例）](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android 数据配方](https://developer.xamarin.com/recipes/android/data/)
+- [Android 数据方案](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
 - [Xamarin.Forms 数据访问](~/xamarin-forms/app-fundamentals/databases.md)

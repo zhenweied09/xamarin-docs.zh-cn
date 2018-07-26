@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: f6ca8f0900c8bc325cc49a7484dabe5bf2534257
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999060"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241206"
 ---
 # <a name="device-orientation"></a>设备方向
 
@@ -91,7 +91,7 @@ Xamarin.Android 支持多个选项用于指定方向：
 
 ## <a name="reacting-to-changes-in-orientation"></a>对方向中的更改作出反应
 
-Xamarin.Forms 不提供任何本机事件用于通知的共享代码中的方向更改您的应用程序。 但是，`SizeChanged`的事件`Page`，则会激发的宽度或高度`Page`更改。 时的宽度`Page`大于高度，在设备处于横向模式。 有关详细信息，请参阅[显示基于屏幕方向的映像](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)。
+Xamarin.Forms 不提供任何本机事件用于通知的共享代码中的方向更改您的应用程序。 但是，`SizeChanged`的事件`Page`，则会激发的宽度或高度`Page`更改。 时的宽度`Page`大于高度，在设备处于横向模式。 有关详细信息，请参阅[显示基于屏幕方向的映像](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)。
 
 > [!NOTE]
 > 没有用于接收通知的方向更改共享代码中的现有的免费 NuGet 包。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
@@ -475,4 +475,4 @@ protected override void OnSizeAllocated (double width, double height){
 - [布局 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [BusinessTumble 示例 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
 - [响应式布局 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
-- [显示基于屏幕方向的映像](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/)
+- [显示基于屏幕方向的映像](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

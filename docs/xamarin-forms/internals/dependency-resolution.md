@@ -1,22 +1,22 @@
 ---
 title: 在 Xamarin.Forms 中的依赖项解析
-description: 此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms 中，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制.
+description: 此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制。
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: b9e49d32dd4b0b02c742cd829eafabd1c55230f0
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203178"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242376"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>在 Xamarin.Forms 中的依赖项解析
 
-_此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms 中，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制.代码示例取自[依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)示例。_
+_此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制。代码示例取自[依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)示例。_
 
 在上下文中使用模型-视图-视图模型 (MVVM) 模式的 Xamarin.Forms 应用程序，用于注册和解析视图模型，以及注册服务和将其注入到视图模型，可以使用依赖关系注入容器。 在视图模型创建期间容器会注入任何所需的依存关系。 如果尚未创建这些依赖项，该容器创建，并将首先解析依赖项。 有关依赖关系注入，包括将依赖项注入到视图模型的示例的详细信息请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
 
@@ -55,7 +55,7 @@ public partial class App : Application
 在此示例中，依赖关系解析方法设置为使用 Autofac 依赖关系注入容器解析已向容器注册的任何类型的 lambda 表达式。 否则为`null`将返回，这将导致在 Xamarin.Forms 中尝试解析的类型。
 
 > [!NOTE]
-> 通过依赖关系注入容器使用的 API 是特定于容器。 在本文中的代码示例使用 Autofac 作为依赖关系注入容器，它提供`IContainer`和`ContainerBuilder`类型。 替代依赖关系注入容器同样可用，但会使用不同的 Api 不是本文中介绍。
+> 通过依赖关系注入容器使用的 API 是特定于容器。 在本文中的代码示例使用 Autofac 作为依赖关系注入容器，它提供`IContainer`和`ContainerBuilder`类型。 替代依赖关系注入容器同样可用，但不是此处介绍会使用不同的 Api。
 
 请注意，无需在应用程序启动过程中设置依赖关系解析方法。 可以随时设置它。 唯一约束是 Xamarin.Forms 需要了解的有关依赖关系解析方法时，应用程序尝试使用存储在依赖关系注入容器中的类型。 因此，如果应用程序将需要在启动过程的依赖关系注入容器中的服务，将具有依赖关系解析方法要设置应用程序的生命周期中及早。 同样，如果将依赖关系注入容器管理的创建和生存期的特定[ `Effect` ](xref:Xamarin.Forms.Effect)，Xamarin.Forms 将需要尝试创建视图之前了解有关依赖关系解析方法，使用该`Effect`。
 
@@ -170,7 +170,7 @@ void RegisterTypes()
 }
 ```
 
-在此示例中，`App.RegisterTypeWithParameters`方法注册`VideoPlayerRenderer`与依赖关系注入容器，使用此注册方法，确保`MainActivity`实例将作为注入`Context`参数，并且`Logger`类型将作为注入`ILogger`参数。
+在此示例中，`App.RegisterTypeWithParameters`方法注册`VideoPlayerRenderer`与依赖关系注入容器。 此注册方法可确保`MainActivity`实例将作为注入`Context`自变量，并且`Logger`类型将作为注入`ILogger`参数。
 
 ### <a name="registering-effects"></a>注册效果
 

@@ -1,31 +1,31 @@
 ---
 title: 使用表和 Xamarin.iOS 中的单元格
-description: 此文档链接到各种指南描述如何在 Xamarin.iOS 应用程序中显示与 UITableView 控件的数据。
+description: 本文档所链接到各种指南描述如何在 Xamarin.iOS 应用程序中显示与 UITableView 控件的数据。
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: ebdad2cc8e3083bee5acc127660b5641f42c731f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: ea5b6ba532d577bd503529065eef803acf3a7aa9
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790011"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241693"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>使用表和 Xamarin.iOS 中的单元格
 
-本部分介绍用于创建和显示表的类，然后提供如何在 Xamarin.iOS 中使用它们的示例。 它将介绍对于表，自定义布局，实现编辑和 Xamarin iOS 设计器用于以可视方式设计表使用的默认外观。 有时显示显然是行 （如音乐应用程序） 和其他情况下很难识别 table 控件 （如编辑联系人应用或在消息应用程序中的对话中） 的列表。
+本部分介绍了用来创建和显示表的类，然后提供了有关如何在 Xamarin.iOS 中使用它们的示例。 它将介绍如何为自定义布局，实现编辑和使用 Xamarin iOS 设计器直观地设计表的表使用的默认外观。 有时显示显然是一系列行 （如音乐应用程序） 和其他情况下很难识别表控件 （如编辑联系人应用或在邮件应用中的会话中）。
 
-对于那些从事具有 Xamarin.Android 的跨平台应用程序，UITableView 控件是类似于 Android 中的 ListView 类 （和 UITableViewSource 类是类似于 Android 的适配器类）。
+对于那些致力于跨平台应用程序使用 Xamarin.Android，UITableView 控件是类似于在 Android 中的 ListView 类 （和 UITableViewSource 类是类似于 Android 的适配器类）。
 
-这些文章需要全面了解了如何使用表，包括：
+这些文章将介绍全面介绍了使用表，其中包括：
 
--   **表部件**– 简介和说明的可视元素`UITableView`控件。 
--   **在表中显示数据**– 演示如何创建和填充表，使用不同的表和单元格样式和通过回收单元格对象来避免内存问题。 
--   **高级用法**– 构建自定义单元格，并使用 UITableView 类的编辑功能。 
--   **以可视方式创建表**– 使用 for iOS Xamarin 设计器使用情节提要创建表驱动的接口。 
+-   **表部件**– 介绍和解释的可见元素`UITableView`控件。 
+-   **在表中显示数据**– 演示了如何创建和填充表，使用不同的表和单元格样式和通过回收 cell 对象来避免内存问题。 
+-   **高级用法**– 生成自定义单元格并使用 UITableView 类的编辑功能。 
+-   **直观地创建表**– 适用于 iOS 使用 Xamarin 设计器和情节提要中创建的表驱动的界面。 
 
 ## <a name="contents"></a>内容
 
@@ -48,11 +48,11 @@ ms.locfileid: "34790011"
 - [WorkingWithTables （示例）](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
 - [情节提要 （示例） 中的表](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
 - [情节提要简介](~/ios/user-interface/storyboards/index.md)
-- [情节提要 TableView 原因之一](https://developer.xamarin.com/recipes/ios/general/storyboard/storyboard_a_tableview)
+- [情节提要 TableView 方案](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/storyboard_a_tableview)
 - [MonoTouch.Dialog 简介](~/ios/user-interface/monotouch.dialog/index.md)
-- [在 Github 上的 TableEditing 示例](https://github.com/xamarin/monotouch-samples/tree/master/TableEditing)
-- [在 Github 上的 TableParts 示例](https://github.com/xamarin/monotouch-samples/tree/master/TableParts)
-- [在 Github 上的 TableAndCellStyles 示例](https://github.com/xamarin/mobile-samples/tree/master/TablesLists)
+- [Github 上的 TableEditing 示例](https://github.com/xamarin/monotouch-samples/tree/master/TableEditing)
+- [Github 上的 TableParts 示例](https://github.com/xamarin/monotouch-samples/tree/master/TableParts)
+- [Github 上的 TableAndCellStyles 示例](https://github.com/xamarin/mobile-samples/tree/master/TablesLists)
 - [UITableView 类引用](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableView_Class/)
 - [UITableViewCell 类引用](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/)
 - [UITableViewDelegate](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewDelegate_Protocol/)
