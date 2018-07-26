@@ -420,7 +420,7 @@ Xamarin.iOS 仅支持嵌入的框架，在使用统一的 API;请更新你的项
 
 <a name="MT0071" />
 
-### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071： 未知的平台: *。 这通常表示 Xamarin.iOS; 中的 bug在一个 bug 报告，请记录http://bugzilla.xamarin.com与测试用例。
+### <a name="mt0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinios-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT0071： 未知的平台: *。 这通常表示 Xamarin.iOS; 中的 bug在一个 bug 报告，请记录 http://bugzilla.xamarin.com 与测试用例。
 
 这通常表示 Xamarin.iOS; 中的 bug在一个 bug 报告，请记录[ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)与测试用例。
 
@@ -917,7 +917,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 <a name="MT1013" />
 
-### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013： 依赖项跟踪错误： 没有要比较的文件。 在一个 bug 报告，请记录http://bugzilla.xamarin.com与测试用例。
+### <a name="mt1013-dependency-tracking-error-no-files-to-compare-please-file-a-bug-report-at-httpbugzillaxamarincom-with-a-test-case"></a>MT1013： 依赖项跟踪错误： 没有要比较的文件。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 与测试用例。
 
 这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)与测试 caes。
 
@@ -1123,13 +1123,13 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 请检查你设备被锁定。
 
-如果要部署企业应用或使用可用的预配配置文件，你可能必须信任开发人员 (对此进行说明<a href="http://stackoverflow.com/a/30726375/183422">此处</a>)。
+如果要部署企业应用或使用可用的预配配置文件，你可能必须信任开发人员 (对此进行说明 <a href="http://stackoverflow.com/a/30726375/183422">此处</a> )。
 
 <a name="MT1108" />
 
 ### <a name="mt1108-could-not-find-developer-tools-for-this-xx-yy-device"></a>MT1108： 找不到此 XX (YY) 设备的开发人员工具。
 
-从 mtouch 的几个操作需要<tt>DeveloperDiskImage.dmg</tt>文件必须存在。   此文件是 Xcode 的一部分，通常位于相对于你用于在生成针对、 SDK <tt>Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg</tt>。
+从 mtouch 的几个操作需要 <tt>DeveloperDiskImage.dmg</tt> 文件必须存在。   此文件是 Xcode 的一部分，通常位于相对于你用于在生成针对、 SDK <tt>Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg</tt>。
 
 发生此错误可能是因为你没有 DeveloperDiskImage.dmg 已连接的设备相匹配。
 
@@ -1143,7 +1143,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 ### <a name="mt1110-application-failed-to-launch-because-of-ios-security-restrictions-please-ensure-the-developer-is-trusted"></a>MT1110： 应用程序启动因 iOS 安全限制而失败。 请确保开发人员是受信任。
 
-如果要部署企业应用或使用可用的预配配置文件，你可能必须信任开发人员 (对此进行说明<a href="http://stackoverflow.com/a/30726375/183422">此处</a>)。
+如果要部署企业应用或使用可用的预配配置文件，你可能必须信任开发人员 (对此进行说明 <a href="http://stackoverflow.com/a/30726375/183422">此处</a> )。
 
 <a name="MT1111" />
 
@@ -1659,7 +1659,7 @@ Parameter name: instruction
 
 链接器无法处理混合模式程序集。
 
-请参阅https://msdn.microsoft.com/library/x0w2664k.aspx为混合模式程序集的详细信息。
+请参阅 https://msdn.microsoft.com/library/x0w2664k.aspx 为混合模式程序集的详细信息。
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: AOT 错误消息
 
@@ -1988,7 +1988,7 @@ class MyCustomNSObject : MyNSObject
 
 <a name="MT4144" />
 
-### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144： 无法注册的方法 * 因为它没有关联的 trampoline。 在一个 bug 报告，请记录http://bugzilla.xamarin.com。
+### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144： 无法注册的方法 * 因为它没有关联的 trampoline。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
 这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
@@ -2981,7 +2981,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 <a name="MT8018" />
 
-### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018： 内部一致性错误。 在一个 bug 报告，请记录http://bugzilla.xamarin.com。
+### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018： 内部一致性错误。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
 这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
@@ -3005,13 +3005,13 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 <a name="MT8022" />
 
-### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022： 预期的令牌引用 * 为 *，但它是 *。 在一个 bug 报告，请记录http://bugzilla.xamarin.com。
+### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022： 预期的令牌引用 * 为 *，但它是 *。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
 这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8023" />
 
-### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: 实例对象需要构造封闭式泛型方法打开的泛型方法: * (令牌引用: *)。 在一个 bug 报告，请记录http://bugzilla.xamarin.com。
+### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: 实例对象需要构造封闭式泛型方法打开的泛型方法: * (令牌引用: *)。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
 这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
