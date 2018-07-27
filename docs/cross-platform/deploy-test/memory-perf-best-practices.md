@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997434"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242402"
 ---
 # <a name="cross-platform-performance"></a>跨平台性能
 
@@ -340,7 +340,7 @@ SGen 启动垃圾回收时，将在回收内存的同时停止应用程序的线
 
 ## <a name="optimize-image-resources"></a>优化图像资源
 
-图像是应用程序使用的一些最昂贵的资源，通常以高分辨率捕获。 尽管这可创建包含完整详细信息的生动图像，但显示此类图像的应用程序往往需要占用更多 CPU 才能解码图像和更多内存来存储已解码图像。 如果需要缩小图像才能显示，那么在内存中解码高分辨率图像就是一种资源浪费。 相反，可通过创建已存储图像的多个分辨率版本（接近预计显示大小）来减少 CPU 使用率和内存占用量。 例如，在列表视图中显示的图像分辨率多数时候都比全屏显示的图像分辨率更低。 此外，还可以加载缩小版本的高分辨率图像，在最大程度降低对内存影响的同时有效地显示这些图像。 有关详细信息，请参阅[高效加载大位图](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently/)。
+图像是应用程序使用的一些最昂贵的资源，通常以高分辨率捕获。 尽管这可创建包含完整详细信息的生动图像，但显示此类图像的应用程序往往需要占用更多 CPU 才能解码图像和更多内存来存储已解码图像。 如果需要缩小图像才能显示，那么在内存中解码高分辨率图像就是一种资源浪费。 相反，可通过创建已存储图像的多个分辨率版本（接近预计显示大小）来减少 CPU 使用率和内存占用量。 例如，在列表视图中显示的图像分辨率多数时候都比全屏显示的图像分辨率更低。 此外，还可以加载缩小版本的高分辨率图像，在最大程度降低对内存影响的同时有效地显示这些图像。 有关详细信息，请参阅[高效加载大位图](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently)。
 
 无论图像分辨率高低，显示图像资源都可能大大提高应用的内存占用量。 因此，仅应在必要时创建图像，应用程序不再需要图像后应立即将其释放。
 

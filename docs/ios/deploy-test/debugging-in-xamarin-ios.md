@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 494dfad0ba3d26147604ce1bca1de49fac318811
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4b21a69e49c8c7fd79de8edac9858c4714657f1c
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785429"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242311"
 ---
 # <a name="debugging-xamarinios-apps"></a>调试 Xamarin.iOS 应用
 
@@ -30,7 +30,7 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 ## <a name="setting-breakpoints"></a>设置断点
 
-准备好开始调试应用程序时，第一步是[设置应用程序的断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)。 单击编辑器中想要中断的代码行数旁的边缘区域，即可实现此操作：
+准备好开始调试应用程序时，第一步是[设置应用程序的断点](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)。 单击编辑器中想要中断的代码行数旁的边缘区域，即可实现此操作：
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -121,7 +121,7 @@ Xamarin.iOS 调试器使用 [Mono 软调试器](http://www.mono-project.com/docs
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-若要在 Visual Studio 2015 中设置条件断点，请先[设置常规断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)。 右键单击断点，以显示其上下文菜单：
+若要在 Visual Studio 2015 中设置条件断点，请先[设置常规断点](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)。 右键单击断点，以显示其上下文菜单：
 
  [![](debugging-in-xamarin-ios-images/image4vs.png "断点上下文菜单")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
@@ -241,6 +241,6 @@ Xamarin.iOS 随附用于 Mono 类库的源代码，可使用此代码在调试�
 
 - [使用 Xamarin 进行调试](/visualstudio/mac/debugging/)
 - [数据可视化效果](/visualstudio/mac/data-visualizations/)
-- [设置断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)
-- [逐行执行代码](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)
-- [将信息输出到日志窗口](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)
+- [设置断点](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)
+- [逐行执行代码](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)
+- [将信息输出到日志窗口](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)

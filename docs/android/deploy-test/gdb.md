@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 1292db3534570dace90639958a3d5be9f6466716
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 886cc1de87bd8225bd0389d2e7b84b546ffb39d7
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765241"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241492"
 ---
 # <a name="gdb"></a>GDB
 
@@ -145,7 +145,7 @@ GNU gdb (GDB) 7.3.1-gg2
 2.  应用调试已启用。
 3.  可访问的 `gdbserver`。
 
-默认在调试应用中启用 `INTERNET` 权限。 如果它在你的应用程序中尚未出现，可以通过编辑 **Properties/AndroidManifest.xml** 或[“项目属性”](https://developer.xamarin.com/recipes/android/general/projects/add_permissions_to_android_manifest/)来添加它。
+默认在调试应用中启用 `INTERNET` 权限。 如果它在你的应用程序中尚未出现，可以通过编辑 **Properties/AndroidManifest.xml** 或[“项目属性”](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)来添加它。
 
 应用调试可通过下面的方法启用：将 [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) 自定义属性设置为 `true`，或编辑 **Properties/AndroidManifest.xml**，并将 `//application/@android:debuggable` 属性设置为 `true`：
 

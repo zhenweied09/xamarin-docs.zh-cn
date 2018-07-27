@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: f51992ec5311bdf0c7df7478651398f6ed8491a9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996228"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242220"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 深度解析
 
@@ -79,7 +79,7 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 - **MainPage.xaml.cs** - `MainPage` 类的代码隐藏，该类包含用户与页面交互时执行的业务逻辑。
 - **PhoneTranslator.cs** - 负责将电话文字转换为电话号码的业务逻辑，此逻辑从 **MainPage.xaml.cs** 调用。
 
-有关 Xamarin.iOS 应用程序剖析的详细信息，请参阅 [Xamarin.iOS 应用程序剖析](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy)。 有关 Xamarin.Android 应用程序剖析的详细信息，请参阅 [Xamarin Android 应用程序剖析](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)。
+有关 Xamarin.iOS 应用程序剖析的详细信息，请参阅 [Xamarin.iOS 应用程序剖析](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application)。 有关 Xamarin.Android 应用程序剖析的详细信息，请参阅 [Xamarin Android 应用程序剖析](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy)。
 
 ## <a name="architecture-and-application-fundamentals"></a>体系结构和应用程序基础知识
 
@@ -325,7 +325,7 @@ void OnTranslate(object sender, EventArgs e)
 
 ## <a name="testing-and-deployment"></a>测试和部署
 
-Visual Studio for Mac 和 Visual Studio 均提供许多用于测试和部署应用程序的选项。 调试应用程序是应用程序开发生命周期的普遍一环，有助于诊断代码问题。 有关详细信息，请参阅[设置断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)、[逐步执行代码](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)和[日志窗口的输出信息](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)。
+Visual Studio for Mac 和 Visual Studio 均提供许多用于测试和部署应用程序的选项。 调试应用程序是应用程序开发生命周期的普遍一环，有助于诊断代码问题。 有关详细信息，请参阅[设置断点](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)、[逐步执行代码](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)和[日志窗口的输出信息](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)。
 
 模拟器是开始部署和测试应用程序的有利位置，其提供用于测试应用程序的有用功能。 但是，用户不会在模拟器中使用最终应用程序，因此应尽早并经常在实际设备上测试应用程序。 有关 iOS 设备预配的详细信息，请参阅[设备预配](~/ios/get-started/installation/device-provisioning/index.md)。 有关 Android 设备预配的详细信息，请参阅[设置设备进行开发](~/android/get-started/installation/set-up-device-for-development.md)。
 
