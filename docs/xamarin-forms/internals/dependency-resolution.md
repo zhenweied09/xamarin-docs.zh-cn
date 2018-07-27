@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/23/2018
-ms.openlocfilehash: 8235b6fb5fda2a414cf192dd66007d1d02f232aa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242376"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270483"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>在 Xamarin.Forms 中的依赖项解析
 
@@ -111,7 +111,7 @@ public partial class App : Application
 
 从平台项目，按照类型注册`IContainer`必须生成对象，这通过调用来实现`BuildContainer`方法。 此方法将调用的 Autofac`Build`方法`ContainerBuilder`实例，生成新的依赖关系注入容器，其中包含所做的注册。
 
-以下各节，在`Logger`实现的类`ILogger`接口，注入到类构造函数。 `Logger`类实现简单的日志记录功能使用`Debug.WriteLine`方法，用于展示如何将服务注入到自定义呈现器的效果，并[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)实现。
+以下各节，在`Logger`类，该类实现`ILogger`接口注入到类构造函数。 `Logger`类实现简单的日志记录功能使用`Debug.WriteLine`方法，用于展示如何将服务注入到自定义呈现器的效果，并[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)实现。
 
 ### <a name="registering-custom-renderers"></a>注册自定义呈现器
 

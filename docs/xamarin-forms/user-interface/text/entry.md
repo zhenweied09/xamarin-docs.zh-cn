@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/16/2018
-ms.openlocfilehash: 272887f0abb0785f959c542e65789d7645a583f1
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5ccd2a653e5190df11a58477905e868b25878e44
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241220"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270107"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 条目
 
@@ -86,7 +86,7 @@ var entry = new Entry { Keyboard = Keyboard.Chat };
 
 可以在中找到的每个键盘示例我们[配方](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry)存储库。
 
-[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)类还具有[ `Create` ](xref:Xamarin.Forms.Keyboard.Create*)工厂方法，可以用来通过指定的大小写、 拼写检查，并建议行为自定义键盘。 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 枚举值指定为具有自定义的方法的参数`Keyboard`返回。 `KeyboardFlags`枚举包含的以下值：
+[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)类还具有[ `Create` ](xref:Xamarin.Forms.Keyboard.Create*)工厂方法，可以用来通过指定的大小写、 拼写检查，并建议行为自定义键盘。 [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 枚举值指定为方法，为自定义的自变量`Keyboard`返回。 `KeyboardFlags`枚举包含的以下值：
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 没有功能添加到键盘。
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – 指示每个输入的句子的第一个单词的第一个字母将自动大写。
