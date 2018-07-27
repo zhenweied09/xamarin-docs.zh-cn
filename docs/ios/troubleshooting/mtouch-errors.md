@@ -2141,7 +2141,7 @@ Xamarin.iOS 生成提及的 P/Invoke 包装函数失败。
 
 注册机构不支持对上述类型之间进行转换。
 
-这是在 Xamarin.iOS 一个 bug，如果问题 API 提供的 Xamarin.iOS;请提交在 bug [ http://bugzilla.xamarin.com ] [ 1]。
+这是在 Xamarin.iOS 一个 bug，如果问题 API 提供的 Xamarin.iOS;请提交在 bug [http://bugzilla.xamarin.com][1]。
 
 如果到此运行时本机库绑定项目开发时，我们打开与将添加对新类型的组合的支持。 如果出现这种情况，请文件的增强功能请求 ([http://bugzilla.xamarin.com][2]) 与测试用例，我们将评估它。
 
@@ -2179,7 +2179,7 @@ Xamarin.iOS 生成提及的 P/Invoke 包装函数失败。
 
 ### <a name="mt5106-could-not-compile-the-files--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT5106： 无法编译文件 *。 请在一个 bug 报告，记录 http://bugzilla.xamarin.com
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 ### <a name="mt52xx-linking"></a>MT52xx： 链接
 
@@ -2338,7 +2338,7 @@ class MyImports {
 
 链接 AOT 编译器的输出时，会报告此错误。
 
-此错误最可能表示 Xamarin.iOS 中的存在 bug。 在一个 bug 报告，请记录[ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+此错误最可能表示 Xamarin.iOS 中的存在 bug。 在一个 bug 报告，请记录[http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT5217" />
 
@@ -2915,7 +2915,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 ### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008： 的 Xamarin.iOS.dll 加载的版本编译为 * 位，而进程是 * bits。 请提交在 bug http://bugzilla.xamarin.com。
 
-这表示在生成过程中出错。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示在生成过程中出错。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8009" />
 
@@ -2927,7 +2927,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 ### <a name="mt8010-native-type-size-mismatch-between-xamariniosmacdll-and-the-executing-architecture-xamariniosmacdll-was-built-for--bit-while-the-current-process-is--bit"></a>MT8010： 本机类型大小不匹配 Xamarin。[iOS |Mac].dll 和正在执行的体系结构。 Xamarin。[iOS |Mac].dll 为生成的 *-位，而当前的进程是 *-位。
 
-这表示在生成过程中出错。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示在生成过程中出错。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8011" />
 
@@ -2935,7 +2935,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需的方法。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8012" />
 
@@ -2943,7 +2943,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 问题的方法的 DelegateProxy 属性无效。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8013" />
 
@@ -2951,7 +2951,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 问题的方法的 DelegateProxy 属性无效。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8014" />
 
@@ -2959,7 +2959,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 问题的方法的 DelegateProxy 属性无效。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8015" />
 
@@ -2967,7 +2967,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 问题的方法的 DelegateProxy 属性无效。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8016" />
 
@@ -2975,7 +2975,7 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 问题的方法的 DelegateProxy 属性无效。
 
-这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这通常表示 Xamarin.iOS; 中的 bug请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <!-- 8017 is used by mmp -->
 
@@ -2983,40 +2983,40 @@ Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需
 
 ### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018： 内部一致性错误。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8019" />
 
 ### <a name="mt8019-could-not-find-the-assembly--in-the-loaded-assemblies"></a>MT8019： 找不到程序集 * 中加载的程序集。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8020" />
 
 ### <a name="mt8020-could-not-find-the-module-with-metadatatoken--in-the-assembly-"></a>MT8020： 找不到与 MetadataToken 模块 * 程序集中 *。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8021" />
 
 ### <a name="mt8021-unknown-implicit-token-type-"></a>MT8021： 未知隐式令牌类型: *。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8022" />
 
 ### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022： 预期的令牌引用 * 为 *，但它是 *。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8023" />
 
 ### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: 实例对象需要构造封闭式泛型方法打开的泛型方法: * (令牌引用: *)。 在一个 bug 报告，请记录 http://bugzilla.xamarin.com 。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 <a name="MT8024" />
 
 ### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024： 将智能枚举 {smart_type} 中找不到有效的扩展类型。 请提交在 bug https://bugzilla.xamarin.com。
 
-这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+这表示 Xamarin.iOS 中的存在 bug。 请提交在 bug [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
