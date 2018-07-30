@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 685a29eea4b03361b185e25ae0e146be7b5e69b6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9c81138aea57c0027ad0f53e3116878ffb800eae
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792029"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276036"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 应用的应用程序图标
 
@@ -23,9 +23,9 @@ ms.locfileid: "34792029"
 
 在 Xamarin.Mac 应用程序中使用 C# 和 .NET 时，开发人员有权访问其在 *Objective-C* 和 *Xcode* 中操作时访问的相同图像和图标工具。
 
-一个很好的图标需指明 Xamarin.Mac 应用的主要用途，并指出用户在使用应用时应期待的体验。 本文介绍了所有必需步骤，帮助你创建图标所需的图像资产，将这些资产打包到 `AppIcons.appiconset` 文件中并在 Xamarin.Mac 应用中使用该文件。
+一个很好的图标需指明 Xamarin.Mac 应用的主要用途，并指出用户在使用应用时应期待的体验。 本文介绍了所有必需步骤，帮助你创建图标所需的图像资产，将这些资产打包到 `AppIcon.appiconset` 文件中并在 Xamarin.Mac 应用中使用该文件。
 
-![AppIcons.appiconset 编辑器](app-icon-images/intro01.png "AppIcons.appiconset 编辑器")
+![AppIcon.appiconset 编辑器](app-icon-images/intro01.png "AppIcon.appiconset 编辑器")
 
 
 ## <a name="application-icon"></a>应用程序图标
@@ -85,7 +85,7 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 
 1. 在“Solution Pad”中，打开“Assets.xcassets” > “AppIcons.appiconset”： 
 
-    ![编辑 AppIcons.appiconset](app-icon-images/intro01.png "编辑 AppIcons.appiconset")
+    ![编辑 AppIcon.appiconset](app-icon-images/intro01.png "编辑 AppIcon.appiconset")
 2. 对于每个所需的图标大小，单击图标并选择上面创建的相应图像文件： 
 
     [![选择图标图像](app-icon-images/intro02.png "选择图标图像")](app-icon-images/intro02-large.png#lightbox)
@@ -94,12 +94,12 @@ Apple 建议在设计应用程序的图标时使用以下技巧：
 
 ## <a name="using-the-icon"></a>使用图标
 
-生成 `AppIcons.appiconset` 文件后，需要将其分配给 Visual Studio for Mac 中的 Xamarin.Mac 项目。
+生成 `AppIcon.appiconset` 文件后，需要将其分配给 Visual Studio for Mac 中的 Xamarin.Mac 项目。
 
 请执行以下操作：
 
 1. 在“Solution Pad”中双击 **Info.plist** 打开“项目选项”。
-2. 在“Mac OS X 应用程序目标”部分，单击“应用图标”选择 `AppIcons.appiconset` 文件： 
+2. 在“Mac OS X 应用程序目标”部分，单击“应用图标”选择 `AppIcon.appiconset` 文件： 
 
     [![设置图标集](app-icon-images/icon01.png "设置图标集")](app-icon-images/icon01-large.png#lightbox)
 3. 保存更改。

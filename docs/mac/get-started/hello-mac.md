@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 438bb8141818ccdb1aaf2fa604707d2fb7601cd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f06bf6736b427a4d77ac34957d75cd321f3dae3a
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792780"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39275932"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello，Mac - 演练
 
@@ -36,7 +36,7 @@ ms.locfileid: "34792780"
 
 <a name="Requirements" />
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 以下是通过 Xamarin.Mac 开发 macOS 应用程序所需的条件：
 
@@ -249,7 +249,7 @@ namespace Hello_Mac
 
 [![](hello-mac-images/infoplist01.png "Visual Studio for Mac plist 编辑器")](hello-mac-images/infoplist01.png#lightbox)
 
-它还可定义用于在“主界面”下拉菜单下显示 Xamarin.Mac 应用的用户界面的 _Storyboard_。 在上面的示例中，下拉菜单中的 `Main` 关联到“解决方案资源管理器”中项目的源树中的 `Main.storyboard`。 通过指定包含它们（本例中为应用图标）的“资产目录”，还定义了应用图标。
+它还可定义用于在“主界面”下拉菜单下显示 Xamarin.Mac 应用的用户界面的 _Storyboard_。 在上面的示例中，下拉菜单中的 `Main` 关联到“解决方案资源管理器”中项目源树的 `Main.storyboard`。 它还定义应用图标，具体是通过指定包含图标的资产目录（在此示例中为“应用图标”）。
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 

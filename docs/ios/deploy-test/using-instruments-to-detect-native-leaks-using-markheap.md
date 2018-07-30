@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785600"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182203"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>使用 Instruments 分析 Xamarin.iOS 应用程序
 
 Xcode **Instruments** 是一种工具，可用于分析设备或模拟器中的 Xamarin.iOS 应用。 Mono 使用其实时模型编译代码，并且 Instruments 也不会解读此类数据，因此难以处理对基于模拟器的应用程序使用 Instruments生成的输出。
 鉴于此，本指南将集中讨论如何使用开发人员应用解读此文档中的 Instruments 输出。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Xcode Instruments 只能在 Mac 上运行。
 
@@ -27,11 +27,11 @@ Xcode Instruments 只能在 Mac 上运行。
 
 选择设备，然后运行 Instruments 应用：
 
-1.  在 Visual Studio for Mac 中打开 Xamarin.iOS 项目。
-2.  选择“调试|iPhone”配置。
-3.  将 iOS 设备连接到计算机。
-4.  在“运行”菜单中，选择“上传到设备”。 现在应用程序将生成并上传到该设备。
-5.  在“工具”菜单中，选择“启动 Instruments”。
+1. 在 Visual Studio for Mac 中打开 Xamarin.iOS 项目。
+2. 选择“调试|iPhone”配置。
+3. 将 iOS 设备连接到计算机。
+4. 在“运行”菜单中，选择“上传到设备”。 现在应用程序将生成并上传到该设备。
+5. 在“工具”菜单中，选择“启动 Instruments”。
 
 
 此时将打开 Instruments 并显示以下对话：
@@ -65,4 +65,4 @@ Xcode Instruments 只能在 Mac 上运行。
 ## <a name="related-links"></a>相关链接
 
 - [Instruments 演练](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS 垃圾回收](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS 垃圾回收（博客文章）](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

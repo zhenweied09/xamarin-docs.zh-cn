@@ -8,38 +8,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f7869f572bfd6f6c8a0bc710c6e28671c22ad7eb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 16920f27a1830dc6a3ab1a3cb0a267eb3b1d90ea
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786395"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203018"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello，iOS - 深入了解
 
 快速入门演练介绍了如何生成和运行基本 Xamarin.iOS 应用程序。 现在可以更深入地了解 iOS 应用程序的工作原理，以便可以生成更复杂的程序。 本指南回顾了“Hello，iOS”演练中的步骤，以便了解 iOS 应用程序开发的基本概念。
-
-本文探讨了以下主题：
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-- **Visual Studio for Mac 简介** - Visual Studio for Mac 以及创建新应用程序的简介。
-- **Xamarin.iOS 应用程序剖析** - Xamarin.iOS 应用程序基本部分的教程。
-- **体系结构和应用基础知识** – iOS 应用程序的各个部分以及它们之间的关系的回顾。
-- **用户界面 (UI)** – 使用 iOS 设计器创建用户界面。
-- **视图控制器和视图生命周期** – 视图生命周期以及使用视图控制器管理内容视图层次结构的简介。
-- **测试、部署和完成收尾工作** - 完成应用程序（提供了有关测试、部署、生成图稿等方面的建议）。
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-- **Visual Studio 简介** – Visual Studio 以及创建新应用程序的简介。
-- **Xamarin.iOS 应用程序剖析** - Xamarin.iOS 应用程序基本部分的教程。
-- **体系结构和应用基础知识** – iOS 应用程序的各个部分以及它们之间的关系的回顾。
-- **用户界面 (UI)** – 使用 iOS 设计器创建用户界面。
-- **视图控制器和视图生命周期** – 视图生命周期以及使用视图控制器管理内容视图层次结构的简介。
-- **测试、部署和完成收尾工作** - 完成应用程序（提供了有关测试、部署、生成图稿等方面的建议）。
-
------
 
 本指南可帮助你培养生成单屏幕 iOS 应用程序所需的技能和知识。 完成本指南之后，你应了解 Xamarin.iOS 应用程序的不同部分以及它们如何组合在一起。
 
@@ -65,9 +43,7 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 
 -----
 
-<a name="anatomy" />
-
-## <a name="anatomy-of-a-xamarinios-application"></a>Xamarin.iOS 应用程序剖析
+## <a name="anatomy-of-a-xamarinios-application"></a>Xamarin.iOS 应用剖析
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -126,7 +102,7 @@ namespace Phoneword_iOS
 }
 ```
 
-### <a name="application-delegate"></a>应用程序委托
+### <a name="application-delegate"></a>应用委托
 
 在 iOS 中，应用程序委托类会处理系统事件；此类处于 `AppDelegate.cs` 中。 `AppDelegate` 类管理应用程序窗口。 窗口是充当用户界面容器的 `UIWindow` 类的单个实例。 默认情况下，应用程序只获取一个将其内容加载到其中的窗口，该窗口会附加到提供与物理设备屏幕尺寸匹配的边框的屏幕（单个 `UIScreen` 实例）。
 
@@ -163,7 +139,7 @@ iOS 应用的用户界面类似于店面 - 应用程序通常只获取一个窗�
 
 此部分会通过介绍视图、内容视图层次结构和 iOS 设计器来深入探讨用户界面。
 
-### <a name="ios-designer-and-storyboards"></a>iOS 设计器和情节提要
+### <a name="ios-designer-and-storyboards"></a>iOS Designer 和情节提要
 
 iOS 设计器是一种用于在 Xamarin 中构建用户界面的可视化工具。 可以通过双击任何情节提要 (.storyboard) 文件（这会打开类似于下面屏幕截图的视图）来启动该设计器：
 
@@ -322,7 +298,7 @@ public partial class ViewController : UIViewController
 
 自定义代码添加到生命周期的任何阶段时，生命周期方法的基实现都必须进行替代。 这通过利用现有生命周期方法（已附加了一些代码）并使用其他代码扩展它来实现。 基实现从方法内部进行调用，以确保原始代码在新代码之前运行。 下一部分中对此演示了一个示例。
 
-有关使用视图控制器的详细信息，请参阅 Apple 的[适用于 iOS 的视图控制器编程指南](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html)和 [UIViewController 参考](https://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/Reference/Reference.html)。
+有关使用视图控制器的详细信息，请参阅 Apple 的[适用于 iOS 的视图控制器编程指南](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1)和 [UIViewController 参考](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc)。
 
 ### <a name="responding-to-user-interaction"></a>响应用户交互
 
@@ -379,7 +355,7 @@ Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概
     CallButton.SetTitle ("Call", UIControlState.Normal);
     ```
 - **启用和禁用按钮** – **按钮**可以处于 `Enabled` 或 `Disabled` 状态。 禁用的**按钮**不会响应用户输入。 例如，下面的代码禁用 `CallButton`：CallButton.Enabled = false；有关按钮的详细信息，请参阅[按钮](~/ios/user-interface/controls/buttons.md)指南。
-- **消除键盘** – 当用户点击文本字段中，iOS 会显示键盘以便用户可以输入内容。 遗憾的是，没有内置功能可消除键盘。 下面的代码会添加到 `TranslateButton` 以便在用户按 `TranslateButton` 时消除键盘：PhoneNumberText.ResignFirstResponder ()；有关消除键盘的其他示例，请参阅[消除键盘](https://developer.xamarin.com/recipes/ios/input/keyboards/dismiss_the_keyboard)方法。
+- **消除键盘** – 当用户点击文本字段中，iOS 会显示键盘以便用户可以输入内容。 遗憾的是，没有内置功能可消除键盘。 下面的代码会添加到 `TranslateButton` 以便在用户按 `TranslateButton` 时消除键盘：PhoneNumberText.ResignFirstResponder ()；有关消除键盘的其他示例，请参阅[消除键盘](https://github.com/xamarin/recipes/tree/master/Recipes/ios/input/keyboards/dismiss_the_keyboard)方法。
 - **使用 URL 发起电话呼叫** – 在 Phoneword 应用中，使用 Apple URL 方案启动系统电话应用。 自定义 URL 方案由“tel:”前缀和转换后的电话号码组成，如下面的代码所示：
 
     ```csharp
@@ -399,7 +375,7 @@ Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概
                 }
     ```
 
-有关 iOS 警报视图的详细信息，请参阅[警报控制器方法](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)。
+有关 iOS 警报视图的详细信息，请参阅[警报控制器方法](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)。
 
 ## <a name="testing-deployment-and-finishing-touches"></a>测试、部署和完成收尾工作
 
@@ -407,11 +383,11 @@ Visual Studio for Mac 和 Visual Studio 均提供许多用于测试和部署应�
 
 ### <a name="debugging-tools"></a>调试工具
 
-有时，应用程序代码中的问题难以进行诊断。 为了帮助诊断复杂的代码问题，可以[设置断点](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/set_a_breakpoint/)、[逐行执行代码](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/step_through_code/)或[将信息输出到日志窗口](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/output_information_to_log_window/)。
+有时，应用程序代码中的问题难以进行诊断。 为了帮助诊断复杂的代码问题，可以[设置断点](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)、[逐行执行代码](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code)或[将信息输出到日志窗口](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)。
 
 ### <a name="deploy-to-a-device"></a>部署到设备
 
-iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针对测试的有用优化，包括模拟位置、[模拟移动](https://developer.xamarin.com/recipes/ios/multitasking/test_location_changes_in_simulator/)等。 但是，用户不会在模拟器中使用最终应用。 所有应用程序都应该及早并且经常在实际设备上进行测试。
+iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针对测试的有用优化，包括模拟位置、[模拟移动](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator)等。 但是，用户不会在模拟器中使用最终应用。 所有应用程序都应该及早并且经常在实际设备上进行测试。
 
 设备会花费时间进行设置并需要 Apple 开发人员帐户。 [设备预配](~/ios/get-started/installation/device-provisioning/index.md)指南提供了有关使设备准备好进行开发的详尽说明。
 
@@ -464,5 +440,5 @@ iOS 模拟器是测试应用程序的快速方法。 该模拟器具有一些针
 ## <a name="related-links"></a>相关链接
 
 - [Hello，iOS（示例）](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
-- [iOS 人机界面指南](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS 预配门户](https://developer.apple.com/ios/manage/overview/index.action)
+- [iOS 人机界面指南](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
+- [iOS 预配门户](http://developer.apple.com/account/#/overview)

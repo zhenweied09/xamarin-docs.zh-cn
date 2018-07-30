@@ -6,6 +6,7 @@
 ## [应用程序基础知识](app-fundamentals/index.md)
 ### [辅助功能](app-fundamentals/accessibility.md)
 ### [常用模式和惯例](app-fundamentals/patterns.md)
+### [控制台应用](app-fundamentals/console.md)
 ### [macOS API](app-fundamentals/mac-apis.md)
 ### [.xib 文件](app-fundamentals/xib.md)
 ### [没有 .storyboard/.xib 的用户界面设计](app-fundamentals/xibless-ui.md)

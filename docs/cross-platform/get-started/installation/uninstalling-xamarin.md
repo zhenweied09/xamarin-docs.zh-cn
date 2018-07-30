@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 265833c3b1453dfb21064860a747651d45c2c4a0
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 87f59e9f0c2150291a43cdfee4fe6c5dfc2058f8
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066463"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203119"
 ---
 # <a name="uninstalling-xamarin"></a>卸载 Xamarin
 
@@ -260,7 +260,7 @@ Xamarin 在以下各项中受支持：
 >
 > 在某些情况下，卸载其中一个 SxS 实例可能导致这些功能将被错误地删除。 在卸载了 SxS 实例后，这可能会降低针对系统上剩余的 Visual Studio 实例的 Xamarin 平台性能。
 >
->通过在 Visual Studio 安装程序中运行“修复”选项（即将重新安装缺少的组件），可解决此问题。
+>解决方法为，运行 Visual Studio 安装程序中的“修复”选项，这会重新安装缺少的组件。
 
 
 ## <a name="uninstalling-older-and-unsupported-products"></a>卸载旧产品和不受支持的产品

@@ -7,13 +7,13 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 9e4349b807c98e6f5cfbc55fa57153f99054d474
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 07/20/2018
+ms.openlocfilehash: beb90587e0d720de7770056c8b51264099edecdc
+ms.sourcegitcommit: fb55eba393e43bcc9e9d1fef9ef1f1310e99f620
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732461"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189016"
 ---
 # <a name="hello-android-quickstart"></a>Hello，Android：快速入门
 
@@ -26,7 +26,7 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 [![完成时应用的屏幕截图](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 若要按照本演练进行操作，你需要以下内容：
 
@@ -49,15 +49,8 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 
 ## <a name="configuring-emulators"></a>配置仿真器
 
-如果你使用 Google 的 Android SDK 模拟器，我们建议你将该模拟器配置为使用硬件加速。 [通过硬件加速提高仿真器性能](~/android/get-started/installation/android-emulator/hardware-acceleration.md)中提供了有关配置硬件加速的说明。
+如果使用的是 Android 仿真器，建议将仿真器配置为使用硬件加速。 [通过硬件加速提高仿真器性能](~/android/get-started/installation/android-emulator/hardware-acceleration.md)中提供了有关配置硬件加速的说明。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-如果使用的 Visual Studio Android 模拟器，则必须在计算机上启用 Hyper-V。 有关配置 Visual Studio Android 模拟器的详细信息，请参阅[适用于 Android 的 Visual Studio 模拟器的系统要求](https://msdn.microsoft.com/en-us/library/mt228280.aspx)。
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
------
 
 ## <a name="walkthrough"></a>演练
 
@@ -66,16 +59,20 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 启动 Visual Studio。  单击“文件”>“新建”>“项目”以创建新项目。
 
 在“新建项目”对话框中，单击“Android 应用”模板。
-将新项目命名为 `Phoneword`。 单击“确定”以创建新项目：
+将新项目命名为 `Phoneword`。 单击“确定”：
 
-[![新项目为 Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
+[![新项目为 Phoneword](hello-android-quickstart-images/vs/01-new-project-name-w157-sml.png)](hello-android-quickstart-images/vs/01-new-project-name-w157.png#lightbox)
+
+在“新 Android 应用”对话框中，依次单击“空白应用”和“确定”，以新建项目：
+
+[![选择“空白应用”模板](hello-android-quickstart-images/vs/02-blank-app-w157-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>创建布局
 
 创建新项目之后，在“解决方案资源管理器”中展开 **Resources** 文件夹，然后展开 **layout** 文件夹。
-双击 **Main.axml** 以在 Android 设计器中打开它。 这是应用屏幕的布局文件：
+双击“activity_main.axml”，以在 Android Designer 中打开它。 这是应用屏幕的布局文件：
 
-[![打开 Main.axml](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
+[![打开“activity_main.axml”](hello-android-quickstart-images/vs/04-open-layout-sml.png)](hello-android-quickstart-images/vs/04-open-layout.png#lightbox)
 
 在“工具箱”（左侧区域）的搜索字段中输入 `text`，并将一个“文本(大)”小组件拖动至 Design Surface 上（中央区域）：
 
@@ -115,7 +112,7 @@ _在由两部分构成的本指南中，你将生成第一个 Xamarin.Android �
 
 在“添加新项”对话框中，选择“Visual C#”>“代码”>“代码文件”，然后将新代码文件命名为“PhoneTranslator.cs”：
 
-[![添加 PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
+[![添加 PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml-w157.png)](hello-android-quickstart-images/vs/14-add-class-w157.png#lightbox)
 
 这将创建新的空 C# 类。 在此文件中插入以下代码：
 
@@ -287,6 +284,8 @@ namespace Phoneword
 
 [![完成时应用的屏幕截图](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
+
+
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
 从“应用程序”文件夹或从 Spotlight 启动 Visual Studio for Mac。 
@@ -418,7 +417,7 @@ namespace Core
 下一步是通过向 `MainActivity` 类中添加支持代码来添加代码以关联用户界面。
 在“Solution Pad”中双击“MainActivity.cs”中以打开它。
 
-首先将事件处理程序添加到“转换”按钮。 在 `MainActivity` 类中找到 `OnCreate` 方法。 在 `OnCreate` 中的 `base.OnCreate(bundle)` 和 `SetContentView (Resource.Layout.Main)` 调用下添加按钮代码。 删除模板按钮处理代码，以便 `OnCreate` 方法如下所示：
+首先将事件处理程序添加到“转换”按钮。 在 `MainActivity` 类中找到 `OnCreate` 方法。 在 `OnCreate` 中的 `base.OnCreate(bundle)` 和 `SetContentView (Resource.Layout.Main)` 调用下添加按钮代码。 删除全部现有按钮处理代码（即引用 `Resource.Id.myButton` 并为其创建单击处理程序的代码），让 `OnCreate` 方法如下所示：
 
 ```csharp
 using System;
