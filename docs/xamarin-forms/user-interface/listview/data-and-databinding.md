@@ -6,27 +6,49 @@ ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 17c353844a7ddc808e5d9f0632434472913170a4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/30/2018
+ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995201"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351491"
 ---
 # <a name="listview-data-sources"></a>ListView 数据源
 
-ListView 用于显示数据的列表。 我们将了解有关填充 ListView 与数据和如何我们可以绑定到选定的项。
+一个[ `ListView` ](xref:Xamarin.Forms.ListView)用于显示数据的列表。 我们将了解有关填充 ListView 与数据和如何我们可以绑定到选定的项。
 
 - **[设置 ItemsSource](#ItemsSource)**  &ndash;使用简单列表或数组。
 - **[数据绑定](#Data_Binding)** &ndash;模型和 ListView 之间建立关系。 绑定适合于 MVVM 模式。
 
 ## <a name="itemssource"></a>ItemsSource
-使用数据填充 ListView`ItemsSource`属性，它可以接受任何集合实现`IEnumerable`。 最简单的方法来填充`ListView`，需使用一个字符串数组：
+
+一个[ `ListView` ](xref:Xamarin.Forms.ListView)与使用数据填充[ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource)属性，它可以接受任何集合实现`IEnumerable`。 最简单的方法来填充`ListView`，需使用一个字符串数组：
+
+```xaml
+<ListView>
+      <ListView.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>mono</x:String>
+            <x:String>monodroid</x:String>
+            <x:String>monotouch</x:String>
+            <x:String>monorail</x:String>
+            <x:String>monodevelop</x:String>
+            <x:String>monotone</x:String>
+            <x:String>monopoly</x:String>
+            <x:String>monomodal</x:String>
+            <x:String>mononucleosis</x:String>
+          </x:Array>
+      </ListView.ItemsSource>
+</ListView>
+```
+
+等效的 C# 代码是：
 
 ```csharp
 var listView = new ListView();
-listView.ItemsSource = new string[]{
+listView.ItemsSource = new string[]
+{
   "mono",
   "monodroid",
   "monotouch",
@@ -145,10 +167,6 @@ XAML 的上一位定义`ContentPage`，其中包含`ListView`。 数据源`ListV
 
 假设`listView`的`ItemsSource`是一个字符串，列表`SomeLabel`将具有其 text 属性绑定到`SelectedItem`。
 
-
-
 ## <a name="related-links"></a>相关链接
 
 - [两个双向绑定 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
-- [1.4 的发行说明](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
-- [1.3 的发行说明](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

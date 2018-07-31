@@ -1,40 +1,41 @@
 ---
-title: 高级概念和内部的 iOS
-description: 本主题探讨 MonoTouch API 设计、 程序集和类从.NET 基类库 (BCL)，以及适用于 Mac 的 Visual Studio 与 Xcode 的接口生成器和 Apple 的工具链的集成方式。
+title: iOS 高级概念和内部机制
+description: 本主题介绍到 MonoTouch API 设计、 程序集和类从.NET 基类库 (BCL)，以及如何使用 Xcode 的 Interface Builder 和 Apple 的工具链集成，Visual Studio for Mac。
 ms.prod: xamarin
 ms.assetid: 951713CD-D6AD-981C-A09E-4F2C98588D8B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2ed2d48a54e4170ae640766cf5fbf7d3744cd165
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2017
+ms.openlocfilehash: aca113448038df8b22eeb858acb48ee17a7809e2
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786894"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350857"
 ---
-# <a name="ios-advanced-concepts-and-internals"></a>高级概念和内部的 iOS
+# <a name="ios-advanced-concepts-and-internals"></a>iOS 高级概念和内部机制
 
-_本主题探讨 MonoTouch API 设计、 程序集和类从.NET 基类库 (BCL)，以及适用于 Mac 的 Visual Studio 与 Xcode 的接口生成器和 Apple 的工具链的集成方式。_
+_本主题介绍到 MonoTouch API 设计、 程序集和类从.NET 基类库 (BCL)，以及如何使用 Xcode 的 Interface Builder 和 Apple 的工具链集成，Visual Studio for Mac。_
 
 ##  <a name="api-designiosinternalsapi-designindexmd"></a>[API 设计](~/ios/internals/api-design/index.md)
 
-说明背后的 API 绑定的设计原则。
+说明 API 绑定的设计原则。
 
 ##  <a name="available-assembliescross-platforminternalsavailable-assembliesmd"></a>[可用程序集](~/cross-platform/internals/available-assemblies.md)
 
-列出可用的程序集和类从.NET 基类库 (BCL)。
+列出了可用的程序集和类从.NET 基类库 (BCL)。
 
 ##  <a name="xib-code-generationiosinternalsxib-code-generationmd"></a>[XIB 代码生成](~/ios/internals/xib-code-generation.md)
 
-它还介绍如何针对 Mac 和 Xcode 的接口生成器的 Visual Studio 允许你设计 UI 使用接口生成器。
+它还介绍了 Visual Studio for Mac 和 Xcode 的 Interface Builder 如何允许你设计 UI 使用 Interface Builder。
 
 > [!IMPORTANT]
-> 本文档介绍 Visual Studio 使用 Xcode 的接口生成器的 Mac 的集成。 有关 iOS 设计器的详细信息，请查看[iOS 设计器](~/ios/user-interface/designer/index.md)文档。
+> 本文档介绍 Visual Studio 与 Xcode 的 Interface Builder 的 Mac 的集成。 IOS 设计器的详细信息，请查看[iOS 设计器](~/ios/user-interface/designer/index.md)文档。
 
 ##  <a name="ios-architectureiosinternalsarchitecturemd"></a>[iOS 体系结构](~/ios/internals/architecture.md)
 
-Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继续操作的时间 (AOT) 编译编译到 ARM 程序集语言的 C# 代码。 本指南介绍了较低级别的 Xamarin.iOS
+Xamarin.iOS 应用程序在 Mono 的执行环境中运行，并使用完整的继续操作的时间 (AOT) 编译 C# 代码编译为 ARM 汇编语言。 本指南介绍 Xamarin.iOS 较低级别
 
 ##  <a name="objective-c-selectorsiosinternalsobjective-c-selectorsmd"></a>[Objective-C 的选择器](~/ios/internals/objective-c-selectors.md)
 
@@ -42,4 +43,4 @@ Xamarin.iOS 应用程序运行在单声道执行环境中，并使用完整继�
 
 ##  <a name="limitationslimitationsmd"></a>[限制](limitations.md)
 
-缺陷和限制需要注意的使用 Xamarin.iOS。
+问题和限制需要注意的使用 Xamarin.iOS。

@@ -1,16 +1,17 @@
 ---
 title: 故障排除 Xamarin 工作簿
-description: 提供使用 Xamarin 工作簿的故障排除信息的各种指南本文档链接。 链接的内容讨论常规的已知的问题，Android 工作簿的问题，并提供支持相关资源。
+description: 本文档所链接提供了有关使用 Xamarin 工作簿的疑难解答信息的各种方法指南。 链接的内容讨论常见的已知的问题，Android 工作簿的问题，并提供与支持相关的资源。
 ms.prod: xamarin
 ms.assetid: 1706EA2C-7A94-4E30-BD4D-A2F31070554F
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 0ef0a7680bf6e0c86926b6bbd0ddf661492919c7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/30/2017
+ms.openlocfilehash: d3815c8481db3bac6017a48bfd533409a308ad85
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794041"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350623"
 ---
 # <a name="troubleshooting-xamarin-workbooks"></a>故障排除 Xamarin 工作簿
 
@@ -20,6 +21,6 @@ ms.locfileid: "34794041"
 
 ## <a name="discuss-issues-on-the-forumsforums"></a>[讨论在论坛上的问题][forums]
 
-## <a name="file-a-bug-reporttoolsworkbooksinstallmdreporting-bugs"></a>[一个 Bug 报告文件](~/tools/workbooks/install.md#reporting-bugs)
+## <a name="file-a-bug-reporttoolsworkbooksinstallmdreporting-bugs"></a>[提交 Bug 报告](~/tools/workbooks/install.md#reporting-bugs)
 
 [forums]: https://forums.xamarin.com/categories/inspector

@@ -5,12 +5,12 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: b7246afca19607ef2f70288d4643696f4ac35d52
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 18fe081372cc190e5ead2045f36d63652f8702c3
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831482"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353797"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials： 设备信息
 
@@ -29,7 +29,7 @@ using Xamarin.Essentials;
 通过 API 公开了以下信息：
 
 ```csharp
-// Device Model (SMG-950U)
+// Device Model (SMG-950U, iPhone10,6)
 var device = DeviceInfo.Model;
 
 // Manufacturer (Samsung)
@@ -72,7 +72,15 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="device-type"></a>设备类型
 
-`DeviceInfo.DeviceType` 将枚举来确定该应用程序是否运行在物理或虚拟设备相关联。 虚拟设备是模拟器或仿真程序。
+`DeviceInfo.DeviceType` 将一个枚举以确定物理或虚拟设备上运行的应用程序相关联。 虚拟设备是模拟器或仿真程序。
+
+## <a name="platform-implementation-specifics"></a>平台实现的细节
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+iOS 不公开的 API 为开发人员若要获取的特定 iOS 设备的名称。 而是如返回硬件标识符_iPhone10，6_指 iPhone X。这些标识符的映射不提供由 Apple，但可能位于[iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) （非官方源源）。
+
+--------------
 
 ## <a name="api"></a>API
 

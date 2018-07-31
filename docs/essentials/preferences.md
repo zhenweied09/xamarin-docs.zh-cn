@@ -5,12 +5,12 @@ ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: ca6d4f1ec60a80b483c79dd75267144e67d80c0b
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 4a45587c79cfbbcd1198f100915e698289f74950
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831759"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353745"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials： 首选项
 
@@ -83,6 +83,10 @@ Preferences.Clear();
 [ApplicationDataContainer](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer)用于在设备上存储的值。 如果没有`sharedName`指定了`LocalSettings`是使用，否则名称用于创建一个新容器内的`LocalSettings`。
 
 --------------
+
+## <a name="persistence"></a>持久性
+
+卸载应用程序将导致所有_首选项_要删除。 没有为此，其中的应用面向并运行 Android 6.0 （API 级别 23） 或更高版本中使用的一个例外[__自动备份__](https://developer.android.com/guide/topics/data/autobackup)。 此功能在默认情况下，并保留应用程序数据，包括__共享首选项__，这是什么**首选项**API 利用。 您可以禁用此以下 google[文档](https://developer.android.com/guide/topics/data/autobackup)。
 
 ## <a name="limitations"></a>限制
 

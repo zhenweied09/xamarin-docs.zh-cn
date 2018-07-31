@@ -1,33 +1,33 @@
 ---
 title: 在 Xamarin.Forms 中的依赖项解析
-description: 此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制。
+description: 此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有控制创建和自定义呈现器、 效果和 DependencyService 实现的生存期。
 ms.prod: xamarin
 ms.assetid: 491B87DC-14CB-4ADC-AC6C-40A7627B2524
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/23/2018
-ms.openlocfilehash: 2379c8ddc4bea6dd97bc4febd055dd8dfef39beb
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 8952f98045d9830e9b8f25a7d4b93a5e4310cb32
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270483"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351573"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>在 Xamarin.Forms 中的依赖项解析
 
-_此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有对构造和自定义呈现器、 效果和 DependencyService 实现的生存期的控制。代码示例取自[依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)示例。_
+_此文章介绍了如何将依赖项解析方法注入到 Xamarin.Forms，以便应用程序的依赖关系注入容器具有控制创建和自定义呈现器、 效果和 DependencyService 实现的生存期。在本文中的代码示例摘自[使用容器的依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)示例。_
 
 在上下文中使用模型-视图-视图模型 (MVVM) 模式的 Xamarin.Forms 应用程序，用于注册和解析视图模型，以及注册服务和将其注入到视图模型，可以使用依赖关系注入容器。 在视图模型创建期间容器会注入任何所需的依存关系。 如果尚未创建这些依赖项，该容器创建，并将首先解析依赖项。 有关依赖关系注入，包括将依赖项注入到视图模型的示例的详细信息请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
 
-对创建的控制和 Xamarin.Forms，它使用传统上执行平台项目中的类型的生存期`Activator.CreateInstance`方法创建的自定义呈现器的效果，实例和[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)实现。 遗憾的是，这就限制了开发人员可以控制创建和生存期这些类型，并将依赖项注入到它们的功能。 但是，可以通过将依赖项解析方法注入到 Xamarin.Forms，用于控制如何将创建类型 – 通过应用程序的依赖关系注入容器，或通过 Xamarin.Forms 更改此行为。
+对创建的控制和 Xamarin.Forms，它使用传统上执行平台项目中的类型的生存期`Activator.CreateInstance`方法创建的自定义呈现器的效果，实例和[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)实现。 遗憾的是，这就限制了开发人员可以控制创建和生存期这些类型，并将依赖项注入到它们的功能。 通过将依赖项解析方法注入到 Xamarin.Forms，用于控制如何将创建类型 – 通过应用程序的依赖关系注入容器，或通过 Xamarin.Forms，可以更改此行为。 但是，请注意，没有无需将依赖项解析方法注入到 Xamarin.Forms。 Xamarin.Forms 将继续创建和管理在平台项目中的类型的生存期，如果不注入依赖关系解析方法。
 
 > [!NOTE]
-> 没有任何要求将注入到 Xamarin.Forms 的依赖关系解析方法。 Xamarin.Forms 将继续创建和管理在平台项目中的类型的生存期，如果不注入依赖关系解析方法。
+> 尽管本文着重介绍将依赖项解析方法注入到 Xamarin.Forms 解析已注册的类型使用依赖关系注入容器，还有可能注入使用工厂方法来解决的依赖关系解析方法已注册的类型。 有关详细信息，请参阅[使用工厂方法的依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/FactoriesDemo/)示例。
 
 ## <a name="injecting-a-dependency-resolution-method"></a>注入依赖关系解析方法
 
-[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver)类提供的功能将依赖项解析方法注入到 Xamarin.Forms 中，使用之一[ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*)方法。 然后，当 Xamarin.Forms 需要特定类型的实例时，依赖关系解析方法都有机会提供该实例。 如果依赖项解析方法返回`null`的请求的类型，Xamarin.Forms 回退到尝试创建类型实例本身使用`Activator.CreateInstance`方法。
+[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver)类提供的功能将依赖项解析方法注入到 Xamarin.Forms 中，使用[ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*)方法。 然后，当 Xamarin.Forms 需要特定类型的实例时，依赖关系解析方法都有机会提供该实例。 如果依赖项解析方法返回`null`的请求的类型，Xamarin.Forms 回退到尝试创建类型实例本身使用`Activator.CreateInstance`方法。
 
 下面的示例演示如何设置具有的依赖关系解析方法[ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*)方法：
 
@@ -97,6 +97,18 @@ public partial class App : Application
                 (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
                 (pi, ctx) => ctx.Resolve(param2Type))
         });
+    }
+
+    public static void RegisterTypeWithParameters<TInterface, T>(Type param1Type, object param1Value, Type param2Type, string param2Name) where TInterface : class where T : class, TInterface
+    {
+        builder.RegisterType<T>()
+               .WithParameters(new List<Parameter>()
+        {
+            new TypedParameter(param1Type, param1Value),
+            new ResolvedParameter(
+                (pi, ctx) => pi.ParameterType == param2Type && pi.Name == param2Name,
+                (pi, ctx) => ctx.Resolve(param2Type))
+        }).As<TInterface>();
     }
 
     public static void BuildContainer()
@@ -219,7 +231,7 @@ public interface IPhotoPicker
 
 在每个平台项目中，`PhotoPicker`类实现`IPhotoPicker`使用平台 Api 的接口。 有关这些依赖关系服务的详细信息，请参阅[图片库从选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)。
 
-在所有三个平台上`PhotoPicker`类具有以下构造函数中，这要求`ILogger`参数：
+在 iOS 和 UWP`PhotoPicker`类具有以下构造函数中，这要求`ILogger`参数：
 
 ```csharp
 public PhotoPicker(ILogger logger)
@@ -239,7 +251,32 @@ void RegisterTypes()
 }
 ```
 
-在此示例中，`Logger`具体类型注册通过对其接口类型，映射和`PhotoPicker`类型还注册通过接口映射。 当用户导航到照片选择页上，并选择以选择照片，`OnSelectPhotoButtonClicked`执行处理程序：
+在此示例中，`Logger`具体类型注册通过对其接口类型，映射和`PhotoPicker`类型还注册通过接口映射。
+
+`PhotoPicker` Android 平台上的构造函数是稍微复杂一些，因为它需要`Context`除了参数`ILogger`参数：
+
+```csharp
+public PhotoPicker(Context context, ILogger logger)
+{
+    _context = context ?? throw new ArgumentNullException(nameof(context));
+    _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+}
+```
+
+下面的示例演示`RegisterTypes`Android 平台上的方法：
+
+```csharp
+void RegisterTypes()
+{
+    App.RegisterType<ILogger, Logger>();
+    App.RegisterTypeWithParameters<IPhotoPicker, Services.Droid.PhotoPicker>(typeof(Android.Content.Context), this, typeof(ILogger), "logger");
+    App.BuildContainer();
+}
+```
+
+在此示例中，`App.RegisterTypeWithParameters`方法注册`PhotoPicker`与依赖关系注入容器。 此注册方法可确保`MainActivity`实例将作为注入`Context`自变量，并且`Logger`类型将作为注入`ILogger`参数。
+
+当用户导航到照片选择页上，并选择以选择照片，`OnSelectPhotoButtonClicked`执行处理程序：
 
 ```csharp
 async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
@@ -262,7 +299,7 @@ async void OnSelectPhotoButtonClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>相关链接
 
-- [依赖项解析 （示例）](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/)
+- [使用容器 （示例） 的依赖项解析](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
 - [实现视频播放器](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [调用效果中的事件](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

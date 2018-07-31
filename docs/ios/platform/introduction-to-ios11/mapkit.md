@@ -1,41 +1,41 @@
 ---
-title: 在 iOS 11 上 MapKit 中的新增功能
-description: 本文档介绍 iOS 11 中的新增 MapKit 功能： 分组标记、 指南针按钮、 缩放视图和用户跟踪按钮。
+title: IOS 11 上 MapKit 中的新增功能
+description: 本文档介绍 iOS 11 中的新 MapKit 功能： 标记、 指南针按钮、 缩放视图和用户跟踪按钮分组。
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
-ms.openlocfilehash: f73078a2dcbaeefeb5608ce7ec1e2c12b261acad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/30/2017
+ms.openlocfilehash: c060a7bbc8d5968aeaca5f84743cdf22513dfbec
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787401"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350581"
 ---
-# <a name="new-features-in-mapkit-on-ios-11"></a>在 iOS 11 上 MapKit 中的新增功能
+# <a name="new-features-in-mapkit-on-ios-11"></a>IOS 11 上 MapKit 中的新增功能
 
 iOS 11 到 MapKit 添加了以下新功能：
 
-- [群集的批注](#clustering)
+- [聚类分析的批注](#clustering)
 - [指南针按钮](#compass)
 - [缩放视图](#scale)
 - [用户跟踪按钮](#user-tracking)
 
-![映射显示群集的标记和罗经按钮](mapkit-images/cyclemap-heading.png)
+![映射显示群集的标记和罗盘按钮](mapkit-images/cyclemap-heading.png)
 
 <a name="clustering" />
 
-## <a name="automatically-grouping-markers-while-zooming"></a>自动缩放时分组标记
+## <a name="automatically-grouping-markers-while-zooming"></a>自动分组标记时缩放
 
-示例[MapKit 示例"Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)演示如何实现新的 iOS 11 批注群集功能。
+该示例[MapKit 示例"Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)演示如何实现新的 iOS 11 批注聚类分析功能。
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1.创建`MKPointAnnotation`子类
 
-点批注类表示图上的每个标记。 可以使用单独添加它们`MapView.AddAnnotation()`或从数组使用`MapView.AddAnnotations()`。
+点批注类表示在地图上的每个标记。 可以使用单独添加它们`MapView.AddAnnotation()`或从数组使用`MapView.AddAnnotations()`。
 
-点批注类没有可视表示形式，只需要它们来表示与标记关联的数据 (最重要的是，`Coordinate`属性，它是其纬度和经度图上的)，以及任何自定义属性：
+点批注类不具有可视表示形式，仅需要它们来表示与标记关联的数据 (最重要的是，`Coordinate`属性即其纬度和经度在地图上的)，以及任何自定义属性：
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -59,16 +59,16 @@ public class Bike : MKPointAnnotation
 
 ### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2.创建`MKMarkerAnnotationView`单个标记的子类
 
-该标记批注视图的可视表示形式的每个批注和如使用属性的样式：
+标记批注视图是每个批注的可视表示形式，并使用类似于属性的样式：
 
 - **MarkerTintColor** – 标记的颜色。
-- **GlyphText** – 文本显示在标记中。
-- **GlyphImage** – 设置了标记中显示的图像。
-- **DisplayPriority** – 确定 z 顺序 （堆叠行为） 时映射是与标记拥挤。 使用之一`Required`， `DefaultHigh`，或`DefaultLow`。
+- **GlyphText** – 标记中显示的文本。
+- **GlyphImage** – 设置标记中显示的图像。
+- **DisplayPriority** – 确定 z 顺序 （堆叠行为） 时映射是充满标记。 使用之一`Required`， `DefaultHigh`，或`DefaultLow`。
 
-若要支持自动群集，你还必须设置：
+若要支持自动聚类分析，还必须设置：
 
-- **ClusteringIdentifier** – 此设置控制哪些标记获取聚集在一起。 你可以对所有标记，使用相同的标识符或使用不同的标识符来控制组合在一起的方式。
+- **ClusteringIdentifier** – 此设置控制哪些标记获取聚集在一起。 可以使用相同的标识符，对于所有标记，或使用不同的标识符来控制组合在一起的方式。
 
 ```csharp
 [Register("BikeView")]
@@ -104,15 +104,15 @@ public class BikeView : MKMarkerAnnotationView
   }
 ```
 
-### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3.创建`MKAnnotationView`来表示群集的标记
+### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3.创建`MKAnnotationView`来表示标记的群集
 
-尽管表示群集的标记的批注视图_无法_是简单的映像，用户希望应用程序提供有关多少标记具有组合在一起的视觉提示。
+尽管表示标记的群集的批注视图_无法_是简单的映像，用户希望该应用程序提供有关多少标记分组在一起的视觉提示。
 
-[示例代码](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)CoreGraphics 用于呈现在该群集，以及每个标记类型的比例的圆形图表示的标记数。
+[示例代码](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)使用 CoreGraphics 呈现的群集，以及每个标记类型的比例的圆形图表示形式中的标记数。
 
-你还应设置：
+您还应设置：
 
-- **DisplayPriority** – 确定 z 顺序 （堆叠行为） 时映射是与标记拥挤。 使用之一`Required`， `DefaultHigh`，或`DefaultLow`。
+- **DisplayPriority** – 确定 z 顺序 （堆叠行为） 时映射是充满标记。 使用之一`Required`， `DefaultHigh`，或`DefaultLow`。
 - **CollisionMode** –`Circle`或`Rectangle`。
 
 ```csharp
@@ -181,7 +181,7 @@ public class ClusterView : MKAnnotationView
 
 ### <a name="4-register-the-view-classes"></a>4.注册视图类
 
-当正在创建地图视图控件，并添加到视图中，注册以启用自动聚类分析行为，因为映射被放大和缩小的批注视图类型：
+当正在创建地图视图控件并添加到视图，注册以启用自动聚类分析行为，因为地图放大和缩小的批注视图类型：
 
 ```csharp
 MapView.Register(typeof(BikeView), MKMapViewDefault.AnnotationViewReuseIdentifier);
@@ -190,9 +190,9 @@ MapView.Register(typeof(ClusterView), MKMapViewDefault.ClusterAnnotationViewReus
 
 ### <a name="5-render-the-map"></a>5.呈现地图 ！
 
-地图呈现时，将群集批注标记，或将其呈现根据缩放级别中。 当缩放级别更改时，标记进行动画处理入和移出群集。
+当呈现地图时，批注标记将被群集或呈现根据缩放级别。 当缩放级别更改时，标记进行动画处理，入和移出群集。
 
-![在图上显示群集的标记的模拟器](mapkit-images/cyclemap-sml.png)
+![模拟器地图上显示群集的标记](mapkit-images/cyclemap-sml.png)
 
 请参阅[映射部分](~/ios/user-interface/controls/ios-maps/index.md)有关使用 MapKit 显示数据的详细信息。
 
@@ -200,13 +200,13 @@ MapView.Register(typeof(ClusterView), MKMapViewDefault.ClusterAnnotationViewReus
 
 ## <a name="compass-button"></a>指南针按钮
 
-iOS 11 添加了弹出外地图指南针并使其在其他位置的视图中的功能。 请参阅[Tandm 示例应用程序](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)有关示例。
+iOS 11 新增的功能来弹出缩小图指南针和视图中呈现它在其他地方。 请参阅[Tandm 示例应用](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)有关的示例。
 
-创建一个按钮，如下所示指南针 （包括实时动画更改映射方向时），并将其呈现在另一个控件上。
+创建一个按钮，如下所示指南针 （包括实时动画映射方向更改时），并将其呈现在另一个控件。
 
-![导航栏中的指南针按钮](mapkit-images/compass-sml.png)
+![在导航栏中的指南针按钮](mapkit-images/compass-sml.png)
 
-下面的代码创建指南针按钮，并将其呈现在导航栏上：
+下面的代码创建指南针按钮，并将其呈现的导航栏上：
 
 ```csharp
 var compass = MKCompassButton.FromMapView(MapView);
@@ -215,15 +215,15 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-`ShowsCompass`属性可以用于控制地图视图内默认指南针的可见性。
+`ShowsCompass`属性可用于控制默认指南针映射视图中的可见性。
 
 <a name="scale" />
 
 ## <a name="scale-view"></a>缩放视图
 
-添加其他位置在视图中使用的小数位数`MKScaleView.FromMapView()`方法要获取其缩放视图在视图层次结构中其他位置添加的实例。
+使用视图中的其他位置添加刻度`MKScaleView.FromMapView()`方法来获取缩放视图的视图层次结构中其他位置添加的实例。
 
-![叠加在地图上的缩放视图](mapkit-images/scale-sml.png)
+![在地图上叠加的缩放视图](mapkit-images/scale-sml.png)
 
 ```csharp
 var scale = MKScaleView.FromMapView(MapView);
@@ -233,15 +233,15 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-`ShowsScale`属性可以用于控制地图视图内默认指南针的可见性。
+`ShowsScale`属性可用于控制默认指南针映射视图中的可见性。
 
 <a name="user-tracking" />
 
 ## <a name="user-tracking-button"></a>用户跟踪按钮
 
-用户跟踪按钮中心用户的当前位置的地图。 使用`MKUserTrackingButton.FromMapView()`方法以获取该按钮的实例，应用格式设置的更改，并在查看层次结构中其他位置添加。
+用户跟踪按钮中心地图在用户的当前位置。 使用`MKUserTrackingButton.FromMapView()`方法以获取按钮的实例、 应用格式设置的更改，并添加其他位置中的视图层次结构。
 
-![叠加在地图上的用户位置按钮](mapkit-images/user-location-sml.png)
+![在地图上叠加的用户位置按钮](mapkit-images/user-location-sml.png)
 
 ```csharp
 var button = MKUserTrackingButton.FromMapView(MapView);
@@ -258,4 +258,4 @@ View.AddSubview(button); // constraints omitted for simplicity
 
 - [MapKit 示例 Tandm](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
-- [什么是新建中 MapKit (WWDC) （视频）](https://developer.apple.com/videos/play/wwdc2017/237/)
+- [What's New 中 MapKit (WWDC) （视频）](https://developer.apple.com/videos/play/wwdc2017/237/)

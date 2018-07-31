@@ -5,12 +5,12 @@ ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: cf41948c55c742140896bfb48d9bb4abf25c8d68
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: c3fe98c384a87bdc08ce94e7537d1a6343767561
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947408"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353878"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials： 指南针
 
@@ -32,7 +32,7 @@ using Xamarin.Essentials;
 public class CompassTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public CompassTest()
     {
@@ -40,7 +40,7 @@ public class CompassTest
         Compass.ReadingChanged += Compass_ReadingChanged;
     }
 
-    void Compass_ReadingChanged(CompassChangedEventArgs e)
+    void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
@@ -62,7 +62,7 @@ public class CompassTest
         }
         catch (Exception ex)
         {
-            // Some other exception has occured
+            // Some other exception has occurred
         }
     }
 }
@@ -74,11 +74,21 @@ public class CompassTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android 不提供一个 API 用于检索的指南针标题。 我们在此使用加速感应器和磁力仪来计算磁北方标题，google 建议这样做。 
+Android 不提供一个 API 用于检索的指南针标题。 我们在此使用加速感应器和磁力仪来计算磁北方标题，google 建议这样做。
 
 在极少数情况下，您可能看到不一致的结果传感器需要校准，因为其中涉及图 8 动态移动你的设备。 这将打开 Google 地图，点击上获得您所在位置的点，然后选择这样做的最佳方式**校准指南针**。
 
 请注意，从您的应用程序在同一时间运行的多个传感器可能调整传感器速度。
+
+## <a name="low-pass-filter"></a>低通滤波器
+
+由于如何 Android 指南针更新值，并计算可能需要消除这些值。 一个_低传递筛选器_可以应用的角度的正弦和余弦值求平均值，并可以通过设置开启`ApplyLowPassFilter`属性`Compass`类：
+
+```csharp
+Compass.ApplyLowPassFilter = true;
+```
+
+这只应用在 Android 平台上。 可以读取的详细信息[此处](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860)。
 
 --------------
 

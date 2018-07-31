@@ -6,13 +6,13 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
-ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.date: 07/27/2018
+ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39211999"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351559"
 ---
 # <a name="platform-features"></a>平台功能
 
@@ -45,6 +45,10 @@ Android 3.0 引入了片段，演示如何在手机和平板电脑上找到的�
 
 本指南介绍了如何支持 Android 6.0_将应用链接_，该技术允许移动应用来响应在网站上的 Url。 它将讨论如何实现应用程序将 Android 6.0 应用程序中的链接以及如何配置网站以授予对移动应用的权限来处理应用程序链接的域。
 
+
+##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Android P 预览](~/android/platform/android-p.md)
+
+本文提供 Android P 预览版中的新增功能的概述，介绍如何进行准备 Xamarin.Android 进行 Android P 开发，并提供示例代码，说明如何在 Xamarin.Android 应用中使用 Android P 的主要功能。
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)

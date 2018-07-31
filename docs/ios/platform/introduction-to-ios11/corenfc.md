@@ -1,47 +1,47 @@
 ---
-title: 在 Xamarin.iOS 的核心 NFC
-description: 本文档介绍如何读取 Xamarin.iOS 使用 iOS 11 中引入的 Api 中的字段通信标记附近。
+title: 在 Xamarin.iOS 中的核心 NFC
+description: 本文档介绍如何附近字段中使用 iOS 11 中引入的 Api 的 Xamarin.iOS 通信标记读取。
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 09/25/2016
-ms.openlocfilehash: c42048f9c00238fb73e354ea86322c3d19bae601
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 09/25/2017
+ms.openlocfilehash: 1381a4564f93fd091f181949454df3f06b31ae6b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787372"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350828"
 ---
-# <a name="core-nfc-in-xamarinios"></a>在 Xamarin.iOS 的核心 NFC
+# <a name="core-nfc-in-xamarinios"></a>在 Xamarin.iOS 中的核心 NFC
 
-_使用 iOS 11 读取近距离通信 (NFC) 标记_
+_使用 iOS 11 读取近场通信 (NFC) 标记_
 
-CoreNFC 中是一个新框架提供对访问权限的 iOS 11_近场通信_(NFC) 单选读取从应用中的标记。 它适用于 iPhone 7，7 Plus，8，8，此外，与 X。
+CoreNFC 是新框架，在 iOS 11 中提供访问权限_近场通信_(NFC) 单选读取来自应用程序中的标记。 它适用于 iPhone 7、 8、 8 Plus，和 X 7 Plus。
 
-在 iOS 设备的 NFC 标记读取器支持所有的 NFC 标记类型 1 至步骤 5 包含_NFC 数据交换格式_(NDEF) 信息。
+IOS 设备中的 NFC 标记读取器支持所有 NFC 标记类型 1 至 5 包含_NFC 数据交换格式_(NDEF) 信息。
 
 有一些限制需要注意的：
 
-- CoreNFC 仅支持读取 （不编写或格式设置） 的标记。
-- 标记扫描必须是用户启动的并在 60 秒后的超时。
-- 应用必须在用于扫描前台中可见。
-- 仅可以在 （而不是在模拟器中） 的真实设备上测试 CoreNFC。
+- CoreNFC 仅支持读取 （未编写或格式设置） 的标记。
+- 标记扫描必须由用户启动，并在 60 秒后的超时。
+- 应用必须在前台，让扫描中可见。
+- CoreNFC 仅了测试 （而不是在模拟器中） 的真实设备上。
 
-此页描述使用 CoreNFC 所需的配置，并演示如何使用 API 使用["TFCTagReader"示例代码](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)。
+此页介绍了使用 CoreNFC 所需的配置，并演示如何使用 API 通过["TFCTagReader"示例代码](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)。
 
 ## <a name="configuration"></a>配置
 
-若要启用 CoreNFC，必须在你的项目中配置三个项：
+若要启用 CoreNFC，必须在项目中配置三个项：
 
-- **Info.plist**私钥。
+- **Info.plist**隐私密钥。
 - **Entitlements.plist**条目。
-- 使用预配配置文件**NFC 标记读取**功能。
+- 包含的预配配置文件**NFC 标记读取**功能。
 
 ### <a name="infoplist"></a>Info.plist
 
-添加**NFCReaderUsageDescription**私钥和扫描正在进行中时，向用户显示的文本。 使用适合你的应用程序消息 （例如，说明扫描的目的）：
+添加**NFCReaderUsageDescription**隐私密钥和扫描正在进行中时，向用户显示的文本。 使用适用于你的应用程序的消息 （例如，说明用途的扫描）：
 
 ```xml
 <key>NFCReaderUsageDescription</key>
@@ -50,7 +50,7 @@ CoreNFC 中是一个新框架提供对访问权限的 iOS 11_近场通信_(NFC) 
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-你的应用程序必须请求**字段通信标记读取附近**中的功能是使用以下键/值对你**Entitlements.plist**:
+您的应用程序必须请求**附近字段通信标记读取**功能是使用以下键/值对中你**Entitlements.plist**:
 
 ```xml
 <key>com.apple.developer.nfc.readersession.formats</key>
@@ -63,24 +63,24 @@ CoreNFC 中是一个新框架提供对访问权限的 iOS 11_近场通信_(NFC) 
 
 创建一个新**应用程序 ID**并确保**NFC 标记读取**勾选了服务：
 
-[![与选择的 NFC 标记读取的开发人员门户新应用程序 ID 页](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![使用 NFC 标记读取所选的开发人员门户新的应用 ID 页](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
-然后应为此应用程序 ID，创建新的预配配置文件，然后下载并将其安装在你开发的 mac。
+然后应为此应用 ID，创建新的预配配置文件，然后下载并将其安装在您的开发 mac。
 
-## <a name="reading-a-tag"></a>读取一个标记
+## <a name="reading-a-tag"></a>读取标记
 
-你的项目配置后，添加`using CoreNFC;`到顶部文件并按照以下三个步骤来实现 NFC 标记读取功能：
+你的项目配置后，添加`using CoreNFC;`页首的文件并遵循以下三个步骤来实现 NFC 标记读取功能：
 
 ### <a name="1-implement-infcndefreadersessiondelegate"></a>1.实现 `INFCNdefReaderSessionDelegate`
 
-接口有两种方法来实现：
+此接口具有两种方法来实现：
 
 - `DidDetect` – 当成功读取标记时调用。
-- `DidInvalidate` – 当发生错误或达到 60 秒超时时调用。
+- `DidInvalidate` – 当出现错误，或者达到 60 秒超时时调用。
 
 #### <a name="diddetect"></a>DidDetect
 
-在示例代码中，每个扫描的消息已添加到表格视图：
+在示例代码中，每个扫描生成的消息添加到表格视图：
 
 ```csharp
 public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
@@ -96,14 +96,14 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-此方法可能多次调用 （和可能在传递消息的数组） 如果该会话允许进行多个标记读取。 该值通过第三个参数设置`Start`方法 (中所述[步骤 2](#step2))。
+可能会多次调用此方法 （和可能会在传递的消息数组） 如果该会话允许多个标记读数。 这使用第三个参数的设置`Start`方法 (中所述[第 2 步](#step2))。
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
-多种原因可导致产生失效：
+多种原因可能失效：
 
 - 扫描时出错。
-- 上限时间停止应用程序要在前台。
+- 应用程序保持在前台。
 - 用户选择取消扫描。
 - 扫描已取消应用程序。
 
@@ -121,13 +121,13 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 }
 ```
 
-一旦已失效会话，必须创建新的会话对象以重新扫描。
+后一个会话已失效，必须创建新的会话对象以再次扫描。
 
 <a name="step2" />
 
 ### <a name="2-start-an-nfcndefreadersession"></a>2.启动 `NFCNdefReaderSession`
 
-扫描应该开头的用户请求，如按下按钮。
+扫描应开始与用户请求，如按下按钮。
 下面的代码创建并启动扫描的会话：
 
 ```csharp
@@ -135,16 +135,16 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-参数`NFCNdefReaderSession`构造函数如下所示：
+为参数`NFCNdefReaderSession`构造函数如下所示：
 
-- `delegate` – 的实现`INFCNdefReaderSessionDelegate`。 在示例代码中，委托实现在表视图控制器，因此`this`用作委托参数。
-- `queue` – 回调处理的队列。 它可以是`null`，在这种情况下，一定要使用`DispatchQueue.MainQueue`更新用户界面控件 （如示例所示） 时。
-- `invalidateAfterFirstRead` – 当`true`，在第一次成功扫描; 后停止扫描时`false`扫描将继续，直到扫描被取消或达到 60 秒的超时，将返回多个结果。
+- `delegate` – 的实现`INFCNdefReaderSessionDelegate`。 在示例代码中，委托在中实现表视图控制器，因此`this`用作委托参数。
+- `queue` – 处理的回叫队列。 它可以是`null`，在这种情况下，一定要使用`DispatchQueue.MainQueue`更新用户界面控件 （如示例所示） 时。
+- `invalidateAfterFirstRead` – 当`true`，扫描将在第一次成功扫描; 后停止时`false`扫描将继续，直到扫描被取消或达到 60 秒超时返回多个结果。
 
 
 ### <a name="3-cancel-the-scanning-session"></a>3.取消了扫描的会话
 
-用户可以取消通过用户界面中系统提供的按钮的扫描会话：
+用户可取消通过用户界面中的系统提供的按钮的扫描会话：
 
 ![扫描时的取消按钮](corenfc-images/scan-cancel-sml.png)
 
@@ -158,7 +158,7 @@ Session.InvalidateSession();
 
 ## <a name="summary"></a>总结
 
-CoreNFC 让你的应用从 NFC 标记，读取数据。 它支持读取各种标记格式 （NDEF 类型 1 至步骤 5），但不支持编写或格式设置。
+CoreNFC 让你的应用从 NFC 标记读取数据。 它支持读取以不同的标记格式 （NDEF 类型 1 到 5），但不支持写入或格式设置。
 
 
 ## <a name="related-links"></a>相关链接

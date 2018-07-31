@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831406"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353355"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials： 闪光灯
 
@@ -42,7 +42,7 @@ ms.locfileid: "38831406"
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-或右键单击 Anroid 项目并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**手电筒**并**照相机**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Android 项目，并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**手电筒**并**照相机**权限。 这将自动更新**AndroidManifest.xml**文件。
 
 通过添加这些权限来[Google Play 将自动筛选出设备](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)无需任何特定硬件。 可以通过以下代码添加到你在 Android 项目的 AssemblyInfo.cs 文件获取解决此问题：
 
@@ -96,9 +96,9 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>平台实现的细节
 
-### <a name="androidtabandroid-specifics"></a>[Android](#tab/android-specifics)
+### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-闪光灯类已基于设备的操作系统的需求。
+经过优化的闪光灯类，基于设备的操作系统。
 
 #### <a name="api-level-23-and-higher"></a>API 级别 23 和更高版本
 
@@ -108,11 +108,11 @@ catch (Exception ex)
 
 照相机图面上纹理创建以打开或关闭`FlashMode`的照相机单元。 
 
-### <a name="iostabios-specifics"></a>[iOS](#tab/ios-specifics)
+### <a name="iostabios"></a>[iOS](#tab/ios)
 
 [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)用于打开和关闭 Torch 和闪存设备模式。
 
-### <a name="uwptabuwp-specifics"></a>[UWP](#tab/uwp-specifics)
+### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 [Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)用于检测要启用或禁用的设备背面的第一个灯泡。
 

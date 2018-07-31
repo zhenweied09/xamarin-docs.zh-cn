@@ -1,35 +1,36 @@
 ---
-title: 应用内购买 Xamarin.iOS 中
-description: 本文档介绍如何销售数字产品和服务使用 StoreKit Api。 它链接到指南讨论了配置、 耗材、 非耗材产品、 事务、 订阅和的详细信息。
+title: 应用内购买在 Xamarin.iOS
+description: 本文档介绍如何销售数字产品和服务使用 StoreKit Api。 它链接到讨论配置、 易耗型产品、 非易耗型产品、 事务、 订阅和的详细信息的指南。
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 8a41ed44a331c91a333b95c1d62136244a6945dd
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/18/2017
+ms.openlocfilehash: 102ff2f11cc2f3d536e3ce9dd595a881f370f764
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787336"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351416"
 ---
-# <a name="in-app-purchasing-in-xamarinios"></a>应用内购买 Xamarin.iOS 中
+# <a name="in-app-purchasing-in-xamarinios"></a>应用内购买在 Xamarin.iOS
 
-iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 由与 Apple 的服务器的通信的 iOS 进行金融交易用户通过其 Apple id。 没有用户界面组件 – StoreKit Api 是主要关心检索产品信息和执行事务。 实现应用内购买的应用程序必须构建其自己的用户界面，并跟踪已购买的项替换为用于向用户提供的必需的产品或服务的自定义代码。
+iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 提供与 Apple 的服务器进行通信的 iOS 用于财务交易与用户通过其 Apple id。 StoreKit Api 的主要工作是与检索产品信息和执行事务 – 没有用户界面组件。 实现应用内购买的应用程序必须构建其自己的用户界面，并跟踪自定义代码，以向用户提供所需的产品或服务的已购买的项。
 
-提供在应用内购买功能需要大量的步骤：
+提供应用内购买功能需要多个步骤：
 
--  **配置你的应用**– 应用程序的预配配置文件，必须先设置正确。
--  **创建产品**– 产品说明和价格都必须在 iTunes Connect 门户中创建。
--  **实现 StoreKit** – 必须根据所售产品的类型实现了 StoreKit API。
--  **构建用户界面和产品本身**– 必须实现的产品，包括跟踪每个购买和备份/还原它们如果相应的机制。
--  **监视销售和接收资金**– 使用通过 iTunes Connect 提供的信息来监视销售趋势和跟踪你收入。
+-  **在应用中配置**– 应用程序的预配配置文件，必须先设置正确。
+-  **创建产品**– 必须在 iTunes Connect 门户中创建产品说明和价格。
+-  **实现 StoreKit** – StoreKit API 必须实现根据正在销售的产品的类型。
+-  **构建用户界面和产品本身**– 必须实现产品，包括跟踪每次购买和备份/还原它们在适当的机制。
+-  **监视销售和接收资金**– 使用 iTunes Connect 提供信息来监视销售趋势和跟踪您的收入。
 
-本文档说明如何完成所有这些步骤，以提供使用 Xamarin.iOS 的应用内购买。
+本文档介绍如何完成所有这些步骤，以提供应用内购买使用 Xamarin.iOS。
 
 ## <a name="requirements"></a>要求
 
-若要支持的应用内购买必须使用 Xamarin.iOS 5.0 或更高版本，使用 Xcode 7 和更高版本。
+若要支持应用内购买必须使用 Xcode 7 及更高版本使用 Xamarin.iOS 5.0 或更高版本。
 
 ## <a name="contents"></a>内容
 
@@ -47,13 +48,13 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 
 ## <a name="summary"></a>总结
 
-这篇文章了引入的应用内购买的概念、 概述如何配置应用程序以充分利用它，并且不提供使用 Xamarin.iOS 的示例。 已覆盖：
+本文已引入了应用内购买的概念，阐述了如何配置应用程序以充分利用它并显示使用 Xamarin.iOS 示例。 提到了：
 
 -  **iOS 设置门户**– 使应用程序中的准则购买功能。
--  **iTunes Connect** – 配置要销售你的应用程序中的产品。
--  **存储工具包**– 用于构建应用内购买功能的类的说明。
--  **编码的应用程序购买**– 如何在应用内购买融入 Xamarin.iOS 应用程序的示例。
--  **Reporting** – 通过 iTunes Connect 提供的统计信息的概述。
+-  **在 iTunes Connect** – 产品销售应用程序中配置。
+-  **存储工具包**– 用来构建应用内购买功能的类的说明。
+-  **购买提高应用程序编码**– 如何构建应用内购买到 Xamarin.iOS 应用程序的示例。
+-  **报告**– 概述可通过 iTunes Connect 的统计信息。
 
 
 ## <a name="related-links"></a>相关链接
@@ -61,11 +62,11 @@ iOS 应用程序可以销售数字产品或服务使用 StoreKit – 一组 Api 
 - [InAppPurchaseSample](https://developer.xamarin.com/samples/StoreKit/)
 - [在应用内购买编程指南](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [iTunes Connect 开发人员指南](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
-- [存储工具包 Framework 参考](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
-- [应用内购买产品标识符问答](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
+- [存储工具包框架引用](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
+- [应用内购买产品标识符问题与解答](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [应用内购买技术说明](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
-- [您的第一个应用商店提交](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [应用程序存储资源中心](https://developer.apple.com/appstore/index.html)
+- [你的第一个应用商店提交](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+- [应用程序应用商店资源中心](https://developer.apple.com/appstore/index.html)
 - [App Store 提交提示](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [App Store 审核指南](https://developer.apple.com/appstore/resources/approval/guidelines.html)
-- [管理你的应用程序](https://developer.apple.com/appstore/resources/managing/index.html)
+- [管理您的应用程序](https://developer.apple.com/appstore/resources/managing/index.html)

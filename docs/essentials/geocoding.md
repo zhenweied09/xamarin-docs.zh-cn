@@ -5,18 +5,18 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 063adba82d96e7fcc64d7ec49a0c0133e1cef8ef
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: a4d6e4d9b32e665893d82693a3c858630b63d372
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831443"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353670"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials： 地理编码
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**地理编码**类提供 Api 到地理编码为位置坐标 placemark 和到 placemark 反向地理编码 coordincates。
+**地理编码**类提供 Api 到地理编码为位置坐标 placemark 和到 placemark 反向地理编码坐标。
 
 ## <a name="getting-started"></a>入门
 
@@ -32,7 +32,7 @@ ms.locfileid: "38831443"
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-使用地理编码 funcationality 需要必应地图 API 密钥。 免费注册[必应地图](https://www.bingmapsportal.com/)帐户。 下**我的帐户 > 我的密钥**创建新密钥，并填写基于应用程序类型的信息 (它应该是**公共 Windows 应用 (UWP，8.x 及更早版本)** 适用于 UWP 应用)。
+使用地理编码功能需要必应地图 API 密钥。 免费注册[必应地图](https://www.bingmapsportal.com/)帐户。 下**我的帐户 > 我的密钥**创建新密钥，并填写基于应用程序类型的信息 (它应该是**公共 Windows 应用 (UWP，8.x 及更早版本)** 适用于 UWP 应用)。
 
 在早期中调用任何之前的应用程序的生命**地理编码**方法设置 API 密钥：
 
@@ -70,11 +70,11 @@ catch (FeatureNotSupportedException fnsEx)
 }
 catch (Exception ex)
 {
-    // Handle exception that may have occured in geocoding
+    // Handle exception that may have occurred in geocoding
 }
 ```
 
-海拔高度始终不可用。 如果不可用，`Altitude`属性可能会`null`或的值可能为零。 如果可用的海拔高度，值为以米为单位以上高度。 
+海拔高度始终不可用。 如果不可用，`Altitude`属性可能会`null`或的值可能为零。 如果可用的海拔高度，值为以米为单位以上高度。
 
 获取[placemarks](xref:Xamarin.Essentials.Placemark)的一组现有的坐标：
 

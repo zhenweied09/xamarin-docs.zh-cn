@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270197"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351738"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>认证提供移动解决方案的咨询合作伙伴
 
@@ -112,6 +112,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Interknowlogy](http://www.interknowlogy.com/)|San Diego，CA，USA|自定义应用程序开发的全球领袖，InterKnowlogy 利用当前和新兴技术来提供通过触摸、 手势和语音的互连的体验|
 |[Intouch 解决方案](http://www.intouchsol.com )|Overland Park，KS，USA;英国伦敦;芝加哥，IL，USA;纽约，纽约州，美国|我们是在医药和医疗保健空间内前导数字机构|
 |[iTexico](http://www.itexico.com)|美国德克萨斯州奥斯汀市|iTexico 是一种全球软件技术公司，致力于帮助企业在整个项目的移动开发通过 nearshore 外包 Äôs 生命周期。|
+|[JBS](https://www.jbssolutions.com)|宾夕法尼亚州 USA|JBS 是自定义软件解决方案提供商。|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto，CA，USA;芝加哥，IL，USA;极了，俄亥俄州，USA;Seongnam si，韩国 Gyeonggi 执行操作，|Kaonsoft 是创新的软件公司，提供了完整的端到端解决方案，若要创建适用于跨平台的移动应用程序的企业。|
 |[Katalyst Technologies inc. ](http://www.katalysttech.com )|Evanston，IL，USA;亚特兰大，GA，USA;孟买，Maharashtra，印度;海得拉巴，Telangana，印度;浦那，Maharashtra 印度|Katalyst，认为，技术可以真正是促成因素。 具有领先公司不只是相信到我们的原因提供产品和服务，但还更改其核心业务操作通过跨企业的自定义的有影响解决方案的方式。|
 |[Kleio 技术 LLC](http://kleiotechnology.com)|皇家 Palm 海滩，佛罗里达州|传统上，我们已经处理了教育、 品牌和标识。 我们研究客户端的业务问题解决在设计、 用户体验和内容的策略。 我们帮助达到客户端需求并使其更具盈利水平的业务|

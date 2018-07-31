@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 15e2cb69806f281e88e226b7bcd87a20e149d508
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947304"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353836"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials： 加速感应器
 
@@ -33,7 +33,7 @@ using Xamarin.Essentials;
 public class AccelerometerTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public AccelerometerTest()
     {
@@ -41,7 +41,7 @@ public class AccelerometerTest
         Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
     }
 
-    void Accelerometer_ReadingChanged(AccelerometerChangedEventArgs e)
+    void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: X: {data.Acceleration.X}, Y: {data.Acceleration.Y}, Z: {data.Acceleration.Z}");
@@ -81,7 +81,7 @@ X 轴是水平的并且点向右，Y 轴为垂直和向上箭头和 Z 轴指向�
 
 * 当设备位于平面上一个表时，加速值是 + 1.00 之间 G 或 (+ 9.81 m/s ^2)，对应于设备的加速度 (0 m/s ^2) 减去引力 (-9.81 m/s ^2) 和如下所示 G.规范化
 
-* 当设备位于平面上一个表并被推向 m/秒的加速天空 ^2，加速值是否等于一个 + 9.81 它们分别对应于设备的加速度 (+ m/s ^2) 的重力强制减 (-9.81 m/s ^2) 和规范化中。 
+* 当设备位于平面上一个表并被推向 m/秒的加速天空 ^2，加速值是否等于一个 + 9.81 它们分别对应于设备的加速度 (+ m/s ^2) 的重力强制减 (-9.81 m/s ^2) 和规范化中。
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
