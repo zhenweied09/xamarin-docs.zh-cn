@@ -6,13 +6,13 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
-ms.openlocfilehash: abc21c3830126346ffb877639657c973da474812
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+ms.date: 07/30/2018
+ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038386"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360833"
 ---
 # <a name="a-basic-recyclerview-example"></a>基本 RecyclerView 示例
 
@@ -368,7 +368,15 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 [![照片查看使用垂直滚动照片卡应用程序的两个屏幕快照](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+如果 （如上面的屏幕截图中所示），将不会绘制阴影，编辑**properties/Androidmanifest.xml**并添加以下属性设置为`<application>`元素：
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 此基本应用仅支持浏览照片相册。 它不响应以项的触摸事件，也不会处理基础数据中的更改。 此功能中添加[扩展 RecyclerView 示例](~/android/user-interface/layouts/recycler-view/extending-the-example.md)。
+
+
 
 
 ### <a name="changing-the-layoutmanager"></a>更改 LayoutManager

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997356"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360807"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
@@ -22,11 +22,11 @@ ms.locfileid: "38997356"
 
 本文包含以下内容：
 
-- **[目的](#Purpose)** &ndash;的目的`ScrollView`和一起使用时。
-- **[使用情况](#Usage)** &ndash;如何使用`ScrollView`在实践中。
-- **[属性](#Properties)** &ndash;可以读取和修改的公共属性。
-- **[方法](#Methods)** &ndash;可以调用以滚动视图的公共方法。
-- **[事件](#Events)** &ndash;可用于侦听视图状态中的更改的事件。
+- **[目的](#purpose)** &ndash;的目的`ScrollView`和一起使用时。
+- **[使用情况](#usage)** &ndash;如何使用`ScrollView`在实践中。
+- **[属性](#properties)** &ndash;可以读取和修改的公共属性。
+- **[方法](#methods)** &ndash;可以调用以滚动视图的公共方法。
+- **[事件](#events)** &ndash;可用于侦听视图状态中的更改的事件。
 
 ## <a name="purpose"></a>目标
 
