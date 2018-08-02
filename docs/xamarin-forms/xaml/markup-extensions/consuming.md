@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 6f0c15976871129362fb3d6d3287215d1fba2cb9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995977"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393667"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>使用 XAML 标记扩展
 
@@ -24,12 +24,12 @@ XAML 标记扩展帮助元素特性，若要设置从各种源，从而增强的
 - [`x:Array`](#array) &ndash; 构造特定类型的对象的数组。
 - [`x:Null`](#null) &ndash; 将属性设置为`null`值。
 
-三个其他 XAML 标记扩展从历史上看其他 XAML 实现中，通过受支持和 Xamarin.Forms 还支持。 这些更全面介绍了其他文章：
+其他 XAML 标记扩展从历史上看其他 XAML 实现中，通过受支持和 Xamarin.Forms 还支持。 这些更全面介绍了其他文章：
 
 - `StaticResource` &ndash; 资源字典中引用的对象，如本文所述[**资源字典**](~/xamarin-forms/xaml/resource-dictionaries.md)。
 - `DynamicResource` &ndash; 响应中使用的资源字典中的对象的更改，如本文所述[**动态样式**](~/xamarin-forms/user-interface/styles/dynamic.md)。
 - `Binding` &ndash; 建立两个对象的属性之间的链接文章中所述[**数据绑定**](~/xamarin-forms/app-fundamentals/data-binding/index.md)。
-- `TemplateBinding` &ndash; 在本文中所述从控件模板，执行数据绑定 [**控件模板中绑定**] / 指南/xamarin 窗体/应用程序的基础知识/模板/控件的模板/模板-绑定 /)
+- `TemplateBinding` &ndash; 从控件模板，执行数据绑定，如本文所述[**控件模板中绑定**](/guides/xamarin-forms/application-fundamentals/templates/control-templates/template-binding/)。
 
 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout)布局使用自定义标记扩展[ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)。 文章中介绍了此标记扩展[ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)。
 

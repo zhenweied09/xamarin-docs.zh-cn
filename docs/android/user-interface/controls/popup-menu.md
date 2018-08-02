@@ -1,55 +1,53 @@
 ---
 title: 弹出菜单
+description: 如何将锚定的弹出菜单添加到特定视图。
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/18/2017
-ms.openlocfilehash: e7fad84133ca712c531ab0d12a67db78103c7cdd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 07/31/2018
+ms.openlocfilehash: d7cadde88e9ae7ee30815ee9323785038dbb1a39
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763145"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393654"
 ---
 # <a name="popup-menu"></a>弹出菜单
 
-`PopupMenu`类添加用于显示附加到特定的视图的弹出菜单的支持。 下图显示弹出菜单按钮，从出现突出显示就像它选择了第二个项：
+[PopupMenu](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (也称为_快捷菜单_) 是一个菜单，定位到特定视图。 在以下示例中，单个活动包含一个按钮。 当用户点击按钮时，将显示三个项弹出菜单：
 
- [![三个项的包含三个 PopopMenu 示例](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
-
-Android 4 添加几个新功能`PopupMenu`，使其稍微容易使用，即：
-
--   **充气**&ndash;放大量方法现可直接在 PopupMenu 类上。
--   **DismissEvent** &ndash; PopupMenu 类现在具有 DismissEvent。
-
-让我们看看这些改进。 在此示例中，我们具有单个活动包含一个按钮。 当用户单击按钮时，将显示弹出菜单，如下所示：
-
- [![在具有按钮和 3 项弹出菜单的仿真程序中运行的应用程序的示例](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
+[![使用按钮和三个项弹出菜单的应用示例](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
 ## <a name="creating-a-popup-menu"></a>创建弹出菜单
 
-当我们创建的实例`PopupMenu`，我们需要其构造函数的引用进行传递到`Context`，以及菜单附加到的视图。 在这种情况下，我们创建`PopupMenu`在我们的按钮的单击事件处理程序，这名为`showPopupMenu`。
-此按钮也是我们将在其中附加的视图`PopupMenu`，如下面的代码中所示：
+第一步是创建菜单的菜单资源文件并将其置于**资源/菜单**。 例如，以下 XML 是在上面的屏幕截图中显示的三个项菜单的代码**Resources/menu/popup_menu.xml**:
 
-```csharp
-showPopupMenu.Click += (s, arg) => {
-    PopupMenu menu = new PopupMenu (this, showPopupMenu);
-}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+          android:title="item 1" />
+    <item android:id="@+id/item1"
+          android:title="item 2" />
+    <item android:id="@+id/item1"
+          android:title="item 3" />
+</menu>
 ```
 
-在 Android 3 中，此代码放大量 XML 资源中的菜单需要先获取对的引用`MenuInflator`，然后调用其`Inflate`与包含菜单和菜单实例放到大量的 XML 的资源 ID 的方法。 这种方法仍适用中 Android 4 和更高版本为下面的代码显示：
+接下来，创建的实例`PopupMenu`和锚定到其视图。 创建的实例时`PopupMenu`，将其构造函数传递的引用`Context`以及菜单将附加到的视图。 因此，弹出菜单锚定到此视图在其构造过程。
+
+在以下示例中，`PopupMenu`在按钮的单击事件处理程序中创建 (其名为`showPopupMenu`)。 此按钮也是到视图`PopupMenu`定位，如下面的代码示例中所示：
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
     PopupMenu menu = new PopupMenu (this, showPopupMenu);
-    menu.MenuInflater.Inflate (Resource.Menu.popup_menu, menu.Menu);
 };
 ```
 
-从 Android 4 开始但是，你可以现在调用`Inflate`实例上直接`PopupMenu`。 这使代码更简洁，如下所示：
+最后，必须在弹出菜单*夸大*与先前创建的菜单资源。 在下面的示例中，调用的菜单[充气](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/)方法将添加并将其[显示](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/)调用方法来显示它：
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -59,12 +57,10 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-在上面的代码中，在后 inflating 菜单我们只需调用`menu.Show`若要在屏幕上显示。
-
 
 ## <a name="handling-menu-events"></a>处理菜单事件
 
-当用户选择菜单项，`MenuItemClick`将引发事件并将关闭菜单。 点击菜单之外的任意位置只需将关闭它。 在任一情况下，截至 Android 4，当消除菜单上，其`DismissEvent`将引发。 下面的代码添加两个事件处理程序`MenuItemClick`和`DismissEvent`事件：
+当用户选择菜单项， [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/)单击将引发事件并将已解除的菜单。 点击菜单外的任意位置将只需关闭它。 在任一情况下，当消除菜单上，其[DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/)将会引发。 下面的代码将事件处理程序添加两个`MenuItemClick`和`DismissEvent`事件：
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -78,7 +74,7 @@ showPopupMenu.Click += (s, arg) => {
     menu.DismissEvent += (s2, arg2) => {
         Console.WriteLine ("menu dismissed");
     };
-            menu.Show ();
+    menu.Show ();
 };
 ```
 
@@ -87,5 +83,3 @@ showPopupMenu.Click += (s, arg) => {
 ## <a name="related-links"></a>相关链接
 
 - [PopupMenuDemo （示例）](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
-- [引入冰激凌德桑威奇](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 平台](http://developer.android.com/sdk/android-4.0.html)
