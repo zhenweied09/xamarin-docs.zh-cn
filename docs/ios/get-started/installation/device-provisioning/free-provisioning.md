@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111152"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353316"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 应用的免费预配
 
@@ -35,7 +35,7 @@ ms.locfileid: "39111152"
 - Xamarin.iOS 应用必须使用显式应用 ID，而不是通配符应用 ID。
 - Xamarin.iOS 应用中使用的捆绑包标识符必须唯一，且不能曾在其他应用中使用过。 使用免费预配的任何捆绑包标识符都不能再次使用。
 - 如果已分配某应用，将无法通过免费预配对该应用进行部署。
-- 如果应用使用应用程序服务，则需要创建配置文件，如[设备预配](~/ios/get-started/installation/device-provisioning/index.md#appservices)指南中详述。 
+- 如果应用使用应用程序服务，则需要创建配置文件，如[设备预配](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)指南中详述。 
 
 请参阅本文档的[限制](#limitations)部分，详细了解与免费预配关联的限制，并参阅[应用分发指南](~/ios/deploy-test/app-distribution/index.md)，详细了解分发 iOS 应用程序。
 
@@ -144,4 +144,4 @@ Apple 施加了一些限制，限制什么时候、以什么方式才能使用�
 ## <a name="related-links"></a>相关链接
 
 - [设备预配](~/ios/get-started/installation/device-provisioning/index.md)
-- [对应用程序服务进行预配](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [对应用程序服务进行预配](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)

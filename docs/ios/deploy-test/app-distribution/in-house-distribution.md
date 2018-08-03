@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 657370705233e923b482b67fc5afed12631c8187
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1dff0e614943805930cf7d838110c4a42eee6f48
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785023"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353199"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 应用的内部分发
 
@@ -98,7 +98,7 @@ Apple Developer Enterprise Program 证书将持续 3 年，配置文件将在 1 
 1. 在 [Apple Developer Center](https://developer.apple.com/account/overview.action) 中，浏览到“证书、标识符和描述文件”部分。 在“标识符”下选择“应用 ID”。
 2. 单击“+”按钮并提供“名称”，该名称将在门户中标识它。
 3. 应用前缀需已设置为你的团队 ID 且不可更改。 选择显式或通配符应用 ID，并以反向 DNS 格式输入程序包 ID，如：**Explicit**: com.[DomainName].[AppName] **Wildcard**:com.[DomainName].*
-4. 选择应用要求的任意[应用服务](~/ios/get-started/installation/device-provisioning/index.md#appservices)。
+4. 选择应用要求的任意[应用服务](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)。
 5. 单击“继续”按钮，按照屏幕上的说明创建新的应用程序 ID。
 
 拥有创建分发配置文件所需的必要组件后，请按照下面的步骤进行创建：
