@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 6c8abbdb18bcaee405f8fe7fe8c22a930435c7e5
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242441"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514526"
 ---
 # <a name="local-notifications"></a>本地通知
 
@@ -366,8 +366,8 @@ string message = Intent.Extras.GetString ("message", "");
 有关创建挂起意向的详细信息，请参阅[PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)。
 
 
-<a name="notif-chan" />
-
+<a name="notif-chan"></a>
+<a name="notification-channels"></a>
 ## <a name="notification-channels"></a>通知通道
 
 从 Android 8.0 (Oreo) 开始，你可以使用*通知通道*功能来创建用于每种类型的通知，你想要显示的用户可自定义通道。 通知通道使您组通知，以便所有通知都发布到通道附录相同的行为。 例如，可能有适用于需要立即关注的通知的通知通道和单独的"更安静"通道用于信息性消息。

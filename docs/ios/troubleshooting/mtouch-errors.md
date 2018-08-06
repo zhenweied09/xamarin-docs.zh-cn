@@ -1904,7 +1904,7 @@ Bitcode 支持还要求 LLVM AOT 后端使用 (-llvm)。
 
 <a name="MT4132" />
 
-### <a name="mt4132-the-registrar-found-an-invalid-generic-return-type--in-the-property--the-return-type-must-have-an-nsobject-constraint"></a>MT4132: 注册机构找到泛型返回类型无效\*加入的属性。\*。 返回类型必须具有 NSObject 约束。
+### <a name="mt4132-the-registrar-found-an-invalid-generic-return-type--in-the-property--the-return-type-must-have-an-nsobject-constraint"></a>MT4132: 注册机构找到泛型返回类型无效\*加入的属性\*。 返回类型必须具有 NSObject 约束。
 
 <a name="MT4133" />
 
@@ -2931,7 +2931,7 @@ Xamarin.iOS 将通常要求本机链接器中，需要使用此类符号`-u symb
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011： 找不到到块转换属性 ([DelegateProxy]) 的委托的方法的返回值 *。*。 请提交在 bug http://bugzilla.xamarin.com。
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011： 找不到到块转换属性 ([DelegateProxy]) 的委托的方法的返回值 *.*。 请提交在 bug http://bugzilla.xamarin.com。
 
 Xamarin.iOS 无法在运行时 （若要将委托转换为块） 中找到所需的方法。
 
