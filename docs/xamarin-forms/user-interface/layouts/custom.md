@@ -410,7 +410,7 @@ async Task<ImageList> GetImageListAsync()
 
 ![](custom-images/landscape-ios.png "示例 iOS 应用程序横向屏幕截图")
 ![](custom-images/landscape-android.png "示例 Android 应用程序横向屏幕快照")
- ![ ] (custom-images/landscape-uwp.png "示例 UWP 应用程序横向屏幕快照")
+![](custom-images/landscape-uwp.png "示例 UWP 应用程序横向屏幕快照")
 
 每个行中的列数取决于照片大小、 屏幕宽度和每个与设备无关单位的像素数。 [ `Image` ](xref:Xamarin.Forms.Image)元素以异步方式加载照片，并因此`WrapLayout`类将接收到频繁调用其[ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double))方法作为每个`Image`在元素收到基于加载照片的新大小。
 
