@@ -49,7 +49,7 @@ DismissController();
 
 显示例如可以通过导航，类似的方式的堆栈的场景`UINavigationController`适用于 iOS。 可以推送到导航堆栈上和 （以编程方式或通过用户选择） 中弹出场景。
 
-![](navigation-images/hierarchy-1.png "可以在导航堆栈上推送后台") ![ ](navigation-images/hierarchy-2.png "场景可以从导航堆栈中弹出")
+![](navigation-images/hierarchy-1.png "可以在导航堆栈上推送后台") ![](navigation-images/hierarchy-2.png "场景可以从导航堆栈中弹出")
 
 与 iOS，左侧边缘滑动导航回父控制器分层导航堆栈中。
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 基于页面的接口往下轻扫左到右，方式类似于`UIPageViewController`适用于 iOS。 指示器点将显示该屏幕以显示当前显示哪一页的底部。
 
-![](navigation-images/paged-1.png "示例的第一页") ![ ](navigation-images/paged-2.png "示例第二页") ![ ](navigation-images/paged-5.png "示例第五个页")
+![](navigation-images/paged-1.png "示例的第一页") ![](navigation-images/paged-2.png "示例第二页") ![](navigation-images/paged-5.png "示例第五个页")
 
 
 若要使基于页面的接口监视应用程序的主 UI，使用`ReloadRootControllers`具有接口控制器和上下文的数组：

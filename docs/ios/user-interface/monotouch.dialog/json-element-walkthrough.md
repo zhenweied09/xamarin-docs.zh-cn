@@ -21,7 +21,7 @@ MT。D 支持在 JSON 中声明的创建用户界面。 当使用 JSON，mt。 �
 
 MT。D 支持使用 JSON 时元素 API 中提供的功能的完整范围。 例如，下面的屏幕截图中的应用程序是完全声明使用 JSON:
 
-[![](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全声明使用 JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全使用声明JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全声明使用 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "例如，此屏幕截图中的应用程序完全使用声明JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 让我们重新访问中的示例[元素 API 演练](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)教程中，显示如何添加任务的详细信息屏幕，使用 JSON。
 

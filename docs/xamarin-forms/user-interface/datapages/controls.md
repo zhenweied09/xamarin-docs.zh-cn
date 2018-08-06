@@ -62,11 +62,11 @@ Xamarin.Forms DataPages Nuget 包括了一些可以充分利用数据源绑定�
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "在 Android 上 HeroImage 控件") ![ ] (controls-images/heroimage-dark-android.png "HeroImage 在 Android 上的控件")
+![](controls-images/heroimage-light-android.png "在 Android 上 HeroImage 控件") ![](controls-images/heroimage-dark-android.png "HeroImage 在 Android 上的控件")
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "在 iOS 上 HeroImage 控件") ![ ] (controls-images/heroimage-dark-ios.png "HeroImage 在 iOS 上的控件")
+![](controls-images/heroimage-light-ios.png "在 iOS 上 HeroImage 控件") ![](controls-images/heroimage-dark-ios.png "HeroImage 在 iOS 上的控件")
 
 
 <a name="listitem" />
@@ -132,7 +132,7 @@ Xamarin.Forms DataPages Nuget 包括了一些可以充分利用数据源绑定�
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "在 iOS 上 CardView 自定义控件") ![ ] (controls-images/cardview-dark-ios.png "CardView 在 iOS 上的自定义控件")
+![](controls-images/cardview-light-ios.png "在 iOS 上 CardView 自定义控件") ![](controls-images/cardview-dark-ios.png "CardView 在 iOS 上的自定义控件")
 
 <a name="custom" />
 

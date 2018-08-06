@@ -116,7 +116,7 @@ _在本部分中我们将了解如何在 Xamarin.iOS 应用程序中使用本地
 
 1. 最后，运行该应用程序。 在 iOS 8 中，将提示允许通知。 单击**确定**，然后单击**添加通知**按钮。 片刻后您应看到警报对话框，如以下屏幕截图中所示：
 
-    ![](local-notifications-in-ios-walkthrough-images/image0.png "确认可将通知发送") ![ ](local-notifications-in-ios-walkthrough-images/image1.png "添加通知按钮") ![ ](local-notifications-in-ios-walkthrough-images/image2.png "通知警报对话框")
+    ![](local-notifications-in-ios-walkthrough-images/image0.png "确认可将通知发送") ![](local-notifications-in-ios-walkthrough-images/image1.png "添加通知按钮") ![](local-notifications-in-ios-walkthrough-images/image2.png "通知警报对话框")
 
 ## <a name="summary"></a>总结
 

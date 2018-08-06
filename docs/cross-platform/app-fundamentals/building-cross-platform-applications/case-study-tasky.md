@@ -479,7 +479,7 @@ MainPage 类使用`TaskListViewModel`以显示使用 XAML 的数据绑定功能�
 
 应用程序使用 iOS 标准用户界面设计，例如添加按钮在导航栏中正在放置和使用内置**加号 （+）** 图标。 它还使用默认值`UINavigationController`后退按钮行为和支持轻扫到删除表中的。
 
- [![](case-study-tasky-images/ios-taskylist.png "它还将使用默认 UINavigationController 后退按钮行为，并支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ](case-study-tasky-images/ios-taskylist.png "它还使用默认 UINavigationController后退按钮行为和支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "它还将使用默认 UINavigationController 后退按钮行为，并支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "它还使用默认 UINavigationController后退按钮行为和支持轻扫--删除表中")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ Android 应用程序使用内置控件包括需要时间刻度显示的行的内
 
 Windows Phone 应用程序使用标准的布局，填充而不是在顶部导航栏屏幕底部应用栏。
 
- [![](case-study-tasky-images/wp-taskylist.png "Windows Phone 应用程序使用标准的布局，填充而不是在顶部导航栏屏幕底部应用栏")](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "Windows Phone 应用程序使用标准布局，填充而不是在顶部导航栏屏幕底部应用栏")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "Windows Phone 应用程序使用标准的布局，填充而不是在顶部导航栏屏幕底部应用栏")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "Windows Phone 应用程序使用标准布局，填充而不是在顶部导航栏屏幕底部应用栏")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

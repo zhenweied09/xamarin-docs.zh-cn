@@ -109,8 +109,8 @@ Apple 必须批准每个产品，然后它就会在销售 – 名称、 描述�
 
 该过程以添加新产品具有两个步骤：
 
-1.   选择的产品类型： [ ![ ](in-app-purchase-basics-and-configuration-images/image8.png "选择的产品类型")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   输入产品的属性，包括产品 Id，定价层和本地化的说明： [ ![ ](in-app-purchase-basics-and-configuration-images/image9.png "输入的产品属性")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   选择的产品类型： [![](in-app-purchase-basics-and-configuration-images/image8.png "选择的产品类型")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   输入产品的属性，包括产品 Id，定价层和本地化的说明： [![](in-app-purchase-basics-and-configuration-images/image9.png "输入的产品属性")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 每个应用内购买产品所需的字段的描述如下：
 

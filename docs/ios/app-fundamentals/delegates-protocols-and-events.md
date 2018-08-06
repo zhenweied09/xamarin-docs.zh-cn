@@ -29,7 +29,7 @@ Xamarin.iOS 使用控件公开大多数用户交互的事件。
 
 为了说明协议和委托，我们将构建的简单的映射应用程序向映射添加批注，如下所示：
 
- [![](delegates-protocols-and-events-images/01-map.png "向映射添加批注一个简单的映射应用程序的示例")](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ](delegates-protocols-and-events-images/04-annotation-with-callout.png "示例批注添加到图")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/01-map.png "向映射添加批注一个简单的映射应用程序的示例")](delegates-protocols-and-events-images/01-map.png#lightbox) [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "示例批注添加到图")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 有关此应用程序之前, 让我们开始吧看下 UIKit.NET 事件。
 

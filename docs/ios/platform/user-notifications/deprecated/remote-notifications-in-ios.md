@@ -22,7 +22,7 @@ ms.locfileid: "34788662"
 推送通知应保持简短，并且只包含足够的数据用于通知移动应用程序，它应更新，请联系服务器应用程序。 例如，当新的电子邮件到达时，服务器应用程序将仅通知的移动应用程序收到了新的电子邮件。 通知将不会包含新的电子邮件本身。 移动应用程序便可检索新的电子邮件从服务器时适合
 
 在中心的推送通知在 iOS 中的是*Apple 推送通知网关服务 (APNS)*。 这是由负责将通知从应用程序服务器路由到 iOS 设备的 Apple 提供的服务。
-下图阐释了适用于 iOS 的推送通知拓扑： ![ ](remote-notifications-in-ios-images/image4.png "此图阐释了适用于 iOS 的推送通知拓扑")
+下图阐释了适用于 iOS 的推送通知拓扑： ![](remote-notifications-in-ios-images/image4.png "此图阐释了适用于 iOS 的推送通知拓扑")
 
 远程通知本身是遵循格式的字符串的 JSON 格式和协议中指定[的通知负载](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1)部分[本地和推送通知编程指南](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)中[iOS 开发人员文档](https://developer.apple.com/devcenter/ios/index.action)。
 

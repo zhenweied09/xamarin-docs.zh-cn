@@ -121,7 +121,7 @@ Xamarin 方法将是组分为两种项目类型的代码：
 
 应用程序项目每个引用共享项目中，而包含对用户来说，存在功能所需的用户界面代码，这些屏幕截图中所示：
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "应用程序项目共享项目中的每个引用") ![ ](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "应用程序项目每个引用共享项目中")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "应用程序项目共享项目中的每个引用") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "应用程序项目每个引用共享项目中")
 
 
 案例研究中给出了应如何构造项目的特定示例。

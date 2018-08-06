@@ -157,7 +157,7 @@ listView.IsPullToRefreshEnabled = true;
 
 ![](interactivity-images/refresh-start.png "ListView 下拉以刷新正在进行中")
 
-以用户身份的请求以刷新已发布的请求。 这是用户看到同时正在更新列表： ![ ] (interactivity-images/refresh-in-progress.png "ListView 拉取到完成刷新")
+以用户身份的请求以刷新已发布的请求。 这是用户看到同时正在更新列表： ![](interactivity-images/refresh-in-progress.png "ListView 拉取到完成刷新")
 
 ListView 公开了几个事件，可用于对请求刷新事件做出响应。
 

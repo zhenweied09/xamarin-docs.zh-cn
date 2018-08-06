@@ -19,7 +19,7 @@ ms.locfileid: "34787950"
 
 _iOS 9 支持两个应用程序运行在同一时间、 通过使用幻灯片或拆分视图。它还支持视频播放图片中图片。_
 
-![](multitasking-images/about02-sml.png "拆分屏幕示例") ![ ](multitasking-images/about03-sml.png "图片中图示例")
+![](multitasking-images/about02-sml.png "拆分屏幕示例") ![](multitasking-images/about03-sml.png "图片中图示例")
 
 iOS 9 增加了对在特定 iPad 硬件上同时运行两个应用程序的多任务支持。 适用于 iPad 的多任务支持通过以下功能：
 
