@@ -18,7 +18,7 @@ ms.locfileid: "34791246"
 
 watchOS 提供[ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/)控件来显示的图像和简单动画。 某些控件还可以 （如按钮、 组和接口控制器） 的背景图像。
 
-![](image-images/image-walkway.png "Apple Watch 显示图片") ![ ] (image-images/image-animation.png "Apple Watch 与简单动画")
+![](image-images/image-walkway.png "Apple Watch 显示图片") ![](image-images/image-animation.png "Apple Watch 与简单动画")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 使用资产目录映像将映像添加到监视工具包应用程序。

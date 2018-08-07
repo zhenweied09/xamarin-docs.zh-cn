@@ -254,7 +254,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009： 引用的{0}。{1}    * * 此消息与 MM2006 * *
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009： 引用的{0}。{1}    ** 此消息与 MM2006 **
 
 <a name="MM2010" />
 
@@ -266,7 +266,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012： 仅第一个{0}的{1}"引用的"显示的警告。 * * 此消息与 2009年 * *
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012： 仅第一个{0}的{1}"引用的"显示的警告。 ** 此消息与 2009年 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac 扩展不支持链接。 请求链接将被忽略。 * * 此消息在中已过时 XM 3.6 + * *
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac 扩展不支持链接。 请求链接将被忽略。 ** 此消息在中已过时 XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
