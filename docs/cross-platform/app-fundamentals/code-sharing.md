@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
-ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 08/06/2018
+ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
+ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270467"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39520280"
 ---
 # <a name="sharing-code-overview"></a>共享代码概述
 
@@ -19,7 +19,7 @@ _本文档将跨平台项目之间共享代码的不同方法进行比较：.NET
 
 有三种跨平台应用程序之间共享代码的方法：
 
-- [**.NET 标准库**](#Net_Standard) –.NET Standard 项目中可以实现跨多个平台共享代码，并且可以访问大量的.NET Api （具体取决于版本）。 .NET standard 1.0-1.6 实现逐渐变大的 Api，设置，而.NET Standard 2.0 提供的最佳覆盖范围。
+- [**.NET 标准库**](#Net_Standard) –.NET Standard 项目中可以实现跨多个平台共享代码，并且可以访问大量的.NET Api （具体取决于版本）。 .NET standard 1.0-1.6 实现逐渐变大组 Api，而.NET Standard 2.0 提供了.NET BCL （包括 Xamarin 应用中提供的.NET Api） 的最佳覆盖范围。
 - [**共享的项目**](#Shared_Projects) – 使用共享资产项目类型可组织源代码，并使用`#if`编译器指令根据需要管理特定于平台的要求。
 - [**可移植类库**](#Portable_Class_Libraries) （已弃用） – 可移植类库 (Pcl) 可以面向多个平台的公共 API 图面，并使用接口来提供特定于平台的功能。 在最新版本的 Visual Studio 中已弃用 Pcl&ndash;改为使用.NET Standard。
 
