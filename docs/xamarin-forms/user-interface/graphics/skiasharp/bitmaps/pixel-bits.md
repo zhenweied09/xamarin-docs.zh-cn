@@ -2,17 +2,17 @@
 title: 访问 SkiaSharp 像素位
 description: 了解用于访问和修改 SkiaSharp 位图的像素位的各种技术。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: charlespetzold
 ms.author: chape
 ms.date: 07/11/2018
-ms.openlocfilehash: 51252a1c18602c704b87f7b01efe7cc5a7549ac1
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5d79dd89b5313d5d7ead665c54e9a27026cea38c
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131215"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615621"
 ---
 # <a name="accessing-skiasharp-pixel-bits"></a>访问 SkiaSharp 像素位
 

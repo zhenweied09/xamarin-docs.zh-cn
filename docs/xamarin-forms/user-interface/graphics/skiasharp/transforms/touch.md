@@ -2,17 +2,17 @@
 title: 触摸操作
 description: 本文介绍了如何使用矩阵转换来实现拖动触摸、 收缩手势，和旋转，并且此示例代码进行了演示。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: 2de5b9a3a6bf0d36330212a52ba5c7278b970efc
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: e2c1529980681ed1013c53343c2d077297352b95
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130902"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615387"
 ---
 # <a name="touch-manipulations"></a>触摸操作
 

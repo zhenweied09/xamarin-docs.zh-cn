@@ -2,17 +2,17 @@
 title: 将 SkiaSharp 位图保存到文件
 description: 了解 SkiaSharp 将位图存储在用户的照片库中支持的各种文件格式。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2018
-ms.openlocfilehash: 5ef18728bbf417750575bad88b3498f66fa585c4
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: e957134ecceee84962e5a4fc153285ea0a2a5906
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39276010"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615556"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>将 SkiaSharp 位图保存到文件
 

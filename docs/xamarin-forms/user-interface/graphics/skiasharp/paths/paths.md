@@ -1,44 +1,44 @@
 ---
-title: 路径中 SkiaSharp 的基础知识
-description: 本文介绍将组合连接的直线和曲线，SkiaSharp SKPath 对象，并演示这一替换示例代码。
+title: SkiaSharp 中的路径基础知识
+description: 本文探讨了结合使用连接的直线和曲线的 SkiaSharp SKPath 对象，并演示此示例代码。
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 2fc492f723a7a009da506d241ddf2e8459908633
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 3c07614c12fb503638d3d5e63b24eb5367ba691a
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244040"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615530"
 ---
-# <a name="path-basics-in-skiasharp"></a>路径中 SkiaSharp 的基础知识
+# <a name="path-basics-in-skiasharp"></a>SkiaSharp 中的路径基础知识
 
-_浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象_
+_了解结合使用连接的直线和曲线的 SkiaSharp SKPath 对象_
 
-图形路径的最重要之一是功能的能够定义当应连接多个行和当他们不应该连接。 如这些两个三角形顶端所示的差异可能是非常可见：
+图形路径的最重要之一是功能的能够定义应已连接多个行和时应不将它们连接起来。 差异可能是非常可见，如以下两个三角形顶部所示：
 
-![](paths-images/connectedlinesexample.png "显示连接和断开连接的行之间的区别的两个三角形")
+![](paths-images/connectedlinesexample.png "显示连接和断开连接行之间的区别的两个三角形")
 
-图形路径包装[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/)对象。 路径是一个或多个集合*轮廓*。 每个分布是一套*连接*直线和曲线。 轮廓未连接到相互但它们以可视方式可能重叠。 有时单一 contour 可以自身重叠。
+图形路径封装[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/)对象。 路径是一个或多个集合*轮廓*。 每个分布是一系列*连接*直线和曲线。 分布图未连接到彼此，但它们可能会以可视方式重叠。 有时单一 contour 可以重叠本身。
 
-通过以下方法的调用通常开始轮廓`SKPath`:
+轮廓线通常从以下方法的调用开始`SKPath`:
 
 - `MoveTo` 若要开始新的轮廓
 
-该方法的自变量是一个单一的点，您可以表示为`SKPoint`值或作为单独的 X 和 Y 坐标。 `MoveTo`调用建立轮廓和一台初始的点开头*当前点*。 你可以调用以下方法以继续使用行或从当前的点到点方法，然后将成为新的当前点中指定的曲线具有轮廓：
+该方法的参数是可以表示为单个点`SKPoint`值，或将作为单独的 X 和 Y 坐标。 `MoveTo`调用建立轮廓和一个初始的点开头*当前点*。 可以调用以下方法来继续使用直线或曲线从当前的点到点方法，然后将成为新的当前点中指定的轮廓：
 
-- `LineTo` 向路径添加一条直线
-- `ArcTo` 若要添加一段弧线，它是上一个圆或椭圆的圆的周长线
+- `LineTo` 若要向路径添加一条直线
+- `ArcTo` 若要添加一段弧线，这是圆或椭圆圆周上的线条
 - `CubicTo` 若要添加的三次方贝塞尔样条
 - `QuadTo` 若要添加的二次贝塞尔样条
-- `ConicTo` 若要添加的合理二次贝塞尔样条，这可以准确地呈现圆锥部分 （省略号、 parabolas 和 hyperbolas）
+- `ConicTo` 若要添加的合理二次贝塞尔样条，可以准确地呈现圆锥部分 （椭圆、 条抛物线合理组合和 hyperbolas） 的
 
-这些五个方法均包含描述行或曲线所需的所有信息。 上述每种五个方法结合使用与当前点建立它前面的方法调用。 例如，`LineTo`方法将添加到具有轮廓的直线基于当前的点，因此的参数`LineTo`是单点。
+这些五个方法均包含描述直线或曲线所需的所有信息。 每个五个方法适用于前面紧邻的方法调用来建立的当前点一起使用。 例如，`LineTo`方法将添加一条直线到轮廓取决于当前点，因此参数`LineTo`是单一点。
 
-`SKPath`类还定义了具有相同的名称与这些六个方法的方法`R`开头：
+`SKPath`类还定义了具有相同的名称作为这些六种方法，但使用的方法`R`开头：
 
 - `RMoveTo`
 - `RLineTo`
@@ -47,11 +47,11 @@ _浏览组合连接的直线和曲线的 SkiaSharp SKPath 对象_
 - `RQuadTo`
 - `RConicTo`
 
-`R`代表*相对*。 它们具有与不带相应的方法相同的语法`R`但相对于当前点。 这些是路径的便于绘制类似的部件中多次调用的方法。
+`R`代表*相对*。 它们具有与相应的方法，而不必相同的语法`R`但相对于当前点。 这些可以方便地绘制类似组成部分中多次调用的方法的路径。
 
-通过再次调用结束的轮廓`MoveTo`或`RMoveTo`，，从此处开始，新的轮廓线或调用`Close`，用于关闭轮廓。 `Close`方法自动追加一条直线从当前点具有轮廓的第一个点并将路径标记为已关闭，这意味着它将呈现而无需任何笔划端头。
+轮廓线结尾再次调用`MoveTo`或`RMoveTo`，其中开始新的轮廓或调用`Close`，用于关闭轮廓。 `Close`方法自动追加一条直线从当前的点分布的第一个点并将路径标记为已关闭，这意味着它将呈现而无需任何笔划大写字母。
 
-打开和关闭轮廓之间的区别所示**两个三角形轮廓**页上，使用`SKPath`对象具有两个轮廓呈现两个三角形。 第一个轮廓线是打开和关闭第二个。 下面是[ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs)类：
+打开和关闭分布图之间的差异所示**两个三角形轮廓**页上，使用`SKPath`具有两个要呈现两个三角形的轮廓的对象。 第一个轮廓线是打开和关闭第二个。 下面是[ `TwoTriangleContours` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs)类：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -97,33 +97,33 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-第一个轮廓包含调用[ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/)使用 X 和 Y 坐标而非`SKPoint`值后, 跟三个调用[ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/)要绘制的三个四条边三角形。 第二个轮廓具有只有两个调用`LineTo`但完成通过调用具有轮廓[ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/)，用于关闭轮廓。 差异非常重要：
+对的调用包含的第一个轮廓[ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/)使用 X 和 Y 坐标而非`SKPoint`值后, 跟三个对[ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/)要绘制的三条边三角形。 第二个 contour 具有只有两个调用`LineTo`但完成通过调用 contour [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/)，用于关闭轮廓。 重要的区别是：
 
-[![](paths-images/twotrianglecontours-small.png "三重的两个三角形轮廓页面屏幕截图")](paths-images/twotrianglecontours-large.png#lightbox "三倍的两个三角形轮廓页面屏幕截图")
+[![](paths-images/twotrianglecontours-small.png "三重的两个三角形轮廓页屏幕截图")](paths-images/twotrianglecontours-large.png#lightbox "带来三倍的两个三角形轮廓页屏幕截图")
 
-如你所见，第一个轮廓显然是一系列的三个连接的直线，但最终不会将连接的开头。 在顶部重叠的两行。 第二个轮廓线将显然关闭，并完成了一个更少`LineTo`调用，因为`Close`方法会自动添加的最后一行以关闭具有轮廓。
+正如您所看到的第一个轮廓显然是一系列的三个相互连接的直线，但结束时不会连接与的开始部分。 在顶部重叠两行。 第二个 contour 显然关闭并完成了一个更少`LineTo`调用因为`Close`方法自动添加最终行以关闭轮廓。
 
-`SKCanvas` 只定义一个[ `DrawPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/)方法，该方法在此演示中调用两次以填充并路径进行描边。 所有轮廓将都填充，甚至包括那些未关闭。 为了填充闭合的路径，一条直线假设在开始和轮廓的终结点之间存在。 如果删除最后一个`LineTo`从第一个轮廓线或删除`Close`从第二个轮廓线，每个分布的调用将具有只有两个边但就像它是一个三角形填充。
+`SKCanvas` 只定义一个[ `DrawPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawPath/p/SkiaSharp.SKPath/SkiaSharp.SKPaint/)方法，该方法在本演示中调用了两次以填满并绘制路径。 所有轮廓进行都填充，甚至包括那些未关闭。 为了填充闭合的路径，则假定一条直线起点和终点的轮廓之间存在。 如果删除最后一个`LineTo`从第一个轮廓或删除`Close`从第二个分布，每个分布的调用都将拥有但会仅两个方面，就好像三角形填充。
 
-`SKPath` 定义了许多其他方法和属性。 以下方法将整个分布类型添加到路径，这可能会关闭或未关闭根据的方法：
+`SKPath` 定义了许多其他方法和属性。 以下方法将整个分布图添加到路径，它可能已关闭或未关闭根据该方法：
 
 - `AddRect`
 - [`AddRoundedRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddRoundedRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPathDirection/)
 - [`AddCircle`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddCircle/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathDirection/)
 - [`AddOval`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddOval/p/SkiaSharp.SKRect/SkiaSharp.SKPathDirection/)
-- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) 若要添加一条曲线的椭圆的圆的周长上
+- [`AddArc`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) 若要添加一条曲线的椭圆圆周上
 - `AddPath` 若要将另一路径添加到当前路径
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) 若要按相反的顺序添加另一个路径
 
-请记住，`SKPath`对象定义仅几何图形&mdash;一系列点和连接。 仅当`SKPath`与结合`SKPaint`对象是呈现特定颜色、 描边宽度等使用的路径。 此外，请记住，`SKPaint`对象传递给`DrawPath`方法定义的整条路径的特征。 如果你想要绘制内容需要多个颜色，必须为每种颜色来使用一个单独的路径。
+请记住`SKPath`对象定义仅几何图形&mdash;一系列点和连接。 仅当`SKPath`与组合`SKPaint`对象是使用特定颜色、 笔划宽度等呈现的路径。 此外，请记住`SKPaint`对象传递给`DrawPath`方法定义特征的完整路径。 如果你想要绘制一些内容需要多个颜色，必须为每种颜色来使用一个单独的路径。
 
-就像由描边端点定义的开始和结束的行的外观，通过定义两行之间的连接的外观*描边联接*。 通过设置指定此[ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/)属性`SKPaint`指向成员的[ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/)枚举：
+就像由描边端点定义的开始和结束的行的外观，通过定义两行之间的连接的外观*笔划联接*。 通过设置来指定这[ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/)的属性`SKPaint`成员[ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/)枚举：
 
-- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) 尖角联接
+- [`Miter`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Miter/) 用于尖尖联接
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Round/) 用于圆角联接
 - [`Bevel`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeJoin.Bevel/) 已被截关闭联接
 
-**描边联接**页面的显示了这三个描边，则类似的代码的联接**笔划端头**页。 这是`PaintSurface`中的事件处理程序[ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs)类：
+**笔划联接**页面的显示了这三个绘制笔画，代码类似于联接**笔划大写字母**页。 这是`PaintSurface`中的事件处理程序[ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs)类：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -187,11 +187,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-此处是三个平台上运行的程序：
+下面是三个平台上运行的程序：
 
-[![](paths-images/strokejoins-small.png "三重的描边联接页的屏幕截图")](paths-images/strokejoins-large.png#lightbox "三重的描边联接页的屏幕截图")
+[![](paths-images/strokejoins-small.png "三重笔划联接页屏幕截图")](paths-images/strokejoins-large.png#lightbox "笔划联接页的三个屏幕截图")
 
-斜接联接包含，其中行连接是尖角。 当在小角度加入两行时，该斜接联接可以变得相当长。 若要防止过长斜接联接，长度斜接联接的受限制的值[ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/)属性`SKPaint`。 超出了该长度的斜接联接是已被截掉成为凹凸效果联接。
+斜接联接包含，其中用线条连接是尖角。 当在一个小角度加入两行时，斜接联接可能会变得相当长。 若要防止过长斜接联接，斜接联接的长度受限制的值[ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/)属性的`SKPaint`。 超过此长度的斜接联接砍掉成为斜切接合。
 
 
 ## <a name="related-links"></a>相关链接

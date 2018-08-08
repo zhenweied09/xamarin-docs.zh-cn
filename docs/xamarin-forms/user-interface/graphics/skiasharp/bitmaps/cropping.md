@@ -2,17 +2,17 @@
 title: 裁剪 SkiaSharp 位图
 description: 了解如何使用 SkiaSharp 来设计用于以交互方式用于裁剪矩形的用户界面。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: b264fb14e0dc50ca980b8035a75f6f6d8b3ed85f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 3dd9011d19e77f52d1fe89a37e4d992c23c72ab1
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131212"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615543"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>裁剪 SkiaSharp 位图
 

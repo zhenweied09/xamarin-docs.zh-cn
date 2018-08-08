@@ -2,16 +2,17 @@
 title: 2D 绘制使用 SkiaSharp
 description: 本文档提供跨平台 2D 的概述使用 SkiaSharp 绘制。 它链接到各种指南描述 SkiaSharp 和其各种 Api。
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: 0c8cbc14308c8c4131e5aaa2bcc0ddfa798af610
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130915"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615517"
 ---
 # <a name="2d-drawing-with-skiasharp"></a>2D 绘制使用 SkiaSharp
 
@@ -62,10 +63,10 @@ SkiaSharp 和示例的核心概念的概述代码来呈现图形、 文本、 �
   * [路径信息和枚举](~/xamarin-forms/user-interface/graphics/skiasharp/curves/information.md)
 - [位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
   * [显示位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
-  * [创建和绘制位图上](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
+  * [位图创建和绘制](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
   * [裁剪位图](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
-  * [位图的分段的显示](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [将位图保存到文件](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [位图分段显示](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
+  * [将位图保存为文件](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
   * [访问位图像素位](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
   * [对位图进行动画处理](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 

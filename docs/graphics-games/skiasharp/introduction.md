@@ -1,27 +1,28 @@
 ---
 title: SkiaSharp 简介
-description: 本文档提供了核心 SkiaSharp 概念的简要介绍。 具体而言，它讨论获取和在 SKCanvas 上进行绘制。
+description: 本文档提供了简要介绍了核心 SkiaSharp 概念。 具体而言，它讨论了获取并在 SKCanvas 上绘制。
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: a42836a49560a73b9e35ef97bfb2ba83d15812e3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eb4a391c52c598c6d276b75028337bf54455e7b4
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783056"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615480"
 ---
 # <a name="an-introduction-to-skiasharp"></a>SkiaSharp 简介
 
-_这提供了 SkiaSharp 背后的概念的简要介绍_
+_这提供了简要介绍了 SkiaSharp 背后的概念_
 
-SkiaSharp 提供丰富且功能强大二维图形 API 可用于呈现到二维缓冲区。  你可以使用这些实现自定义用户界面元素和可以合并到你的应用程序的二维图形。  SkiaSharp 是对的.NET 绑定[Skia](https://skia.org)库和继承的功能和此库的能力。
+SkiaSharp 提供了丰富且功能强大 2D 图形 API，可用于呈现到 2D 的缓冲区。  您可以使用这些实现自定义用户界面元素，并可以合并到你的应用程序的 2D 图形。  SkiaSharp 是绑定到的.NET [Skia](https://skia.org)库和继承的功能和此库的能力。
 
-库是跨平台目前只有[NuGet 包](https://www.nuget.org/packages/SkiaSharp)，您可以通过添加 NuGet 引用将它添加到你的项目。
+库是目前跨平台以[NuGet 包](https://www.nuget.org/packages/SkiaSharp)，您可以通过添加 NuGet 引用将它添加到你的项目。
 
-若要绘制，你的代码将创建`SkCanvas`该主题描述了将执行绘制操作的图面。
+若要绘制，你的代码将创建`SkCanvas`它描述了将执行绘制操作的图面。
 
 ## <a name="obtaining-an-skcanvas"></a>获取 SKCanvas
 
@@ -35,13 +36,13 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>在 SKCanvas 上绘制
 
-`SKCanvas`使用其他图形的设计理念相似的绘图模型模型，你可能比较熟悉，使用可选的透明度通道的颜色，并可以绘制线条、 弧、 文本和图像。
+`SKCanvas`使用绘制模型在精神上类似于其他绘制模型，您可能熟悉，它使用可选的透明度通道使用的颜色，并可以绘制线条、 弧线、 文本和图像。
 
-以下是只是几个可通过 SkiaSharp 许多不同的事物。  在下面变量的示例`canvas`属于类型 SKCanvas。
+以下是一些可以使用 SkiaSharp 许多不同的事物。  以下变量示例中`canvas`SKCanvas 类型。
 
 ### <a name="drawing-xamagon"></a>绘制 Xamagon
 
-此示例绘制 Xamarin 的徽标 Xamagon:
+此示例中绘制 Xamarin 的 Xamagon 徽标：
 
 ```csharp
 // clear the canvas / fill with white
@@ -110,7 +111,7 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-### <a name="drawing-with-image-filters"></a>绘制带有映像筛选器
+### <a name="drawing-with-image-filters"></a>使用映像筛选器进行绘制
 
 ```csharp
 Stream fileStream = File.OpenRead ("MyImage.png"); // open a stream to an image file

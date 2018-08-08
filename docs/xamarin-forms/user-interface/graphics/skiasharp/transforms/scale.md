@@ -1,67 +1,67 @@
 ---
-title: 缩放变换
-description: Thhis 文章介绍 SkiaSharp 缩放变换的缩放到各种大小的对象，并演示这一替换示例代码。
+title: 缩放转换
+description: Thhis 文章探讨了 SkiaSharp 缩放转换为缩放到不同大小的对象，此示例代码进行了演示。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 9008e95a7cd6caf7ab2346ff4e2364a4efef0d65
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 94105cbb83e4c6eb3558ca3fc55e505ab41f28fe
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244670"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615598"
 ---
-# <a name="the-scale-transform"></a>缩放变换
+# <a name="the-scale-transform"></a>缩放转换
 
-_发现 SkiaSharp 缩放变换的缩放到各种大小的对象_
+_发现 SkiaSharp 缩放转换为缩放到不同大小的对象_
 
-如你所见中[转换转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)文章，转换变换可以图形对象从一个位置移动到另一个。 与此相反，缩放变换的图形对象的大小更改：
+如您所见中[转换转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md)文章翻译转换可以图形对象从一个位置移动到另一个。 与此相反，缩放转换将更改图形的对象的大小：
 
-![](scale-images/scaleexample.png "显示为按比例大小高 word")
+![](scale-images/scaleexample.png "在大小进行缩放、 高 word")
 
-缩放变换通常还会导致将随着它们所做的更大的图形坐标。
+缩放转换通常还会导致移动它们进行了更大的图形坐标。
 
-前面你已了解描述的翻译因素的影响的两个转换公式`dx`和`dy`:
+前面描述的翻译因素的影响的两个转换公式`dx`和`dy`:
 
 x = x + dx
 
 y = y + dy
 
-缩放的因素`sx`和`sy`是乘法而不是累加性：
+缩放的比例`sx`和`sy`是乘法而不是累加性：
 
-x = sx ·x
+x = sx 推荐配置x
 
-y = sy ·y
+y = sy 推荐配置y
 
 Translate 因素的默认值为 0;缩放比例的默认值为 1。
 
-`SKCanvas`类定义了四个`Scale`方法。 第一个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/)方法对于时所需的相同水平和垂直缩放的情况下考虑因素是：
+`SKCanvas`类定义了四个`Scale`方法。 第一个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/)方法对于用例时所需的相同水平和垂直缩放因素是：
 
 ```csharp
 public void Scale (Single s)
 ```
 
-这称为*各向同性*缩放&mdash;缩放，它相同在两个方向。 各向同性缩放保留对象的长宽比。
+这称为*增益*缩放&mdash;缩放，它相同两个方向。 增益缩放保留对象的长宽比。
 
-第二个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/)方法允许你指定的水平和垂直缩放的不同值：
+第二个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/)方法允许你指定的水平和垂直缩放不同的值：
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
 这会导致*各向异性*缩放。
-第三个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/)方法组合在一次的两个缩放因素`SKPoint`值：
+第三个[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/)方法将组合在单个的两个缩放因素`SKPoint`值：
 
 ```csharp
 public void Scale (SKPoint size)
 ```
 
-第四个`Scale`将很快所述方法。
+第四个`Scale`将稍后所述方法。
 
-**基本缩放**页演示`Scale`方法。 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 文件包含两个`Slider`元素，可以选择介于 0 和 10 之间的水平和垂直比例因子。 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs)代码隐藏文件中使用这些值来调用`Scale`显示圆角的矩形用虚线描边和调整大小以适应在左上方的一些文本之前画布角：
+**基本的规模**页说明`Scale`方法。 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) XAML 文件包含两个`Slider`元素，可选择介于 0 和 10 之间的水平和垂直比例因子。 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs)代码隐藏文件中使用这些值以调用`Scale`显示圆角的矩形用虚线描边和调整大小以适应在左上方的一些文本之前画布的角：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -100,28 +100,28 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-你可能想知道： 缩放因素如何影响从返回的值`MeasureText`方法`SKPaint`？ 问题的回答是： 根本不容易。 `Scale` 是一种方法`SKCanvas`。 它不会影响你使用需要做什么`SKPaint`对象，直到你使用该对象来呈现在画布上的内容。
+您可能想知道： 缩放因素如何影响从返回的值`MeasureText`方法的`SKPaint`？ 答案是： 根本不容易。 `Scale` 是一种方法的`SKCanvas`。 它不影响与执行任何操作`SKPaint`对象，直到该对象用于呈现在画布上的某些内容。
 
-如你所见，所有内容后绘制`Scale`按比例调用增加：
+您可以看到，所有内容绘制后`Scale`调用按比例增加：
 
-[![](scale-images/basicscale-small.png "三重的基本缩放页的屏幕截图")](scale-images/basicscale-large.png#lightbox "三重的基本缩放页的屏幕截图")
+[![](scale-images/basicscale-small.png "三个基本的规模页屏幕截图")](scale-images/basicscale-large.png#lightbox "带来三倍的基本的规模页屏幕截图")
 
-文本，虚线，在这一行中，角和之间的画布的左侧，从上边缘和圆角的矩形的 10 个像素边距舍入短划线的长度的宽度都受到相同的比例因子。
+文本，虚线中的边角，并在画布的左侧和顶部边缘和圆角的矩形之间的 10 个像素边距舍入的行的短划线的长度的宽度都受到相同的缩放比例。
 
 > [!IMPORTANT]
 > 通用 Windows 平台无法正确呈现 anisotropicly 缩放后的文本。
 
-各向异性缩放原因变得不同的行的描边宽度与对齐水平和垂直轴。 （这也是表露此页上的第一个图像。）如果不希望的描边宽度的缩放因素会影响，将其设置为 0，它将始终为一个像素宽而不考虑`Scale`设置。
+各向异性缩放原因变得不同的行的笔划宽度和对齐水平和垂直轴。 （这也是表露此页面上的第一个图像。）如果不希望笔划宽度受到影响的缩放比例，将其设置为 0，它将始终为一个像素宽而不考虑`Scale`设置。
 
-缩放是相对于画布的左上角。 这可能是完全所需的但它可能不是。 假设你想要在画布上放置文本和矩形其他位置，并且你想要缩放相对于其中心。 在这种情况下，你可以使用的第四个版本[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/)方法，其中包括两个附加参数来指定的缩放中心：
+缩放是相对于画布的左上角。 这可能正是您所需但可能不会。 假设你想要在画布上放置文本和其他位置的矩形，并且你想要缩放相对于其中心。 在这种情况下可以使用的第四个版本[ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/)方法，其中包含两个附加参数来指定缩放中心：
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
 ```
 
-`px`和`py`参数定义一个点，它有时称为*缩放 center*但在 SkiaSharp 文档称为*透视点*。 这是不受缩放画布相对于窗口左上角的点。 相对于该中心会进行所有缩放。
+`px`并`py`参数定义一个点，它有时被称为*缩放中心*但中 SkiaSharp 文档被称为*透视点*。 这是不受缩放画布的相对于左上角的点。 所有缩放相对于该中心会发生。
 
-[**居中缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs)页显示此工作原理。 `PaintSurface`处理程序是类似于**基本缩放**程序只不过`margin`计算值以使文本水平居中，这意味着，程序最适合在纵向模式下：
+[**居中规模**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs)页显示了具体过程。 `PaintSurface`处理程序是类似于**基本的规模**程序不同之处在于`margin`计算值以使文本水平居中，这意味着程序适合在纵向模式下：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -164,34 +164,34 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-定位圆角矩形的左上角`margin`画布的左侧的像素为单位和`margin`像素。 最后两个自变量`Scale`方法设置为这些值加上的宽度和高度的文本，也是圆角矩形的宽度和高度。 这意味着所有缩放是相对于该矩形的中心：
+圆角矩形的左上角位于`margin`从画布左侧的像素和`margin`像素。 最后两个参数`Scale`方法设置为这些值加上的宽度和高度的文本，这也是圆角矩形的宽度和高度。 这意味着，所有缩放是相对于该矩形的中心：
 
-[![](scale-images/centeredscale-small.png "三重的居中比例页的屏幕截图")](scale-images/centeredscale-large.png#lightbox "三重的居中比例页的屏幕截图")
+[![](scale-images/centeredscale-small.png "居中缩放页的三个屏幕截图")](scale-images/centeredscale-large.png#lightbox "三重居中缩放页屏幕截图")
 
-`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 如你所见，负值垂直扩展 （如在中心屏幕在 Android 上） 将导致对象翻转围绕通过缩放中心的水平轴。 负值水平伸缩 （例如，在 UWP 屏幕右侧） 导致对象翻转围绕通过缩放中心的垂直轴。
+`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 正如您所看到的负值的垂直缩放 （如在中心屏幕在 Android 上） 将导致对象绕水平轴通过缩放的中心的翻转。 负值，水平缩放 （例如，如右侧 UWP 屏幕所示） 会导致对象绕垂直轴通过缩放的中心的翻转。
 
-此第四个版本的`Scale`方法是实际的快捷方式。 你可能想要了解通过将其原理`Scale`中此代码替换为以下方法：
+此第四个版本的`Scale`方法是实际的快捷方式。 您可能想要了解其如何替换`Scale`在此代码中使用以下方法：
 
 ```csharp
 canvas.Translate(-px, -py);
 ```
 
-这些是透视点坐标的减号。
+这些是假负的透视点坐标。
 
-现在再次运行程序。 你将看到，以便在画布的左上角的中心是移动矩形和文本。 您几乎可以看到它。 滑块，因为现在不在所有缩放程序当然不工作。
+现在再次运行程序。 你将看到，以便在中心是在画布的左上角向矩形和文本。 几乎不能，您可以看到它。 滑块不支持当然，因为现在不会在所有扩展程序。
 
-现在，将添加基本`Scale`（不带缩放中心中） 调用*之前*，`Translate`调用：
+现在，添加基本`Scale`（不带缩放的中心） 调用*之前*的`Translate`调用：
 
 ```csharp
 canvas.Scale(sx, sy);
 canvas.Translate(–px, –py);
 ```
 
-如果你熟悉此练习中其他图形编程系统，您可能会认为这是错误，但它不是。 Skia 连续转换调用稍有以不同方式处理从您可能已熟悉。
+如果您熟悉此练习中其他图形编程系统，您可能认为这就是问题，但它不是。 Skia 处理连续的转换调用有点以不同的方式从您可能熟悉。
 
-使用连续`Scale`和`Translate`调用，圆角矩形的中心仍然在左上角中，但是可以现在缩放该相对于窗口左上角的画布上，这也是圆角矩形的中心。
+使用连续`Scale`和`Translate`调用，圆角矩形的中心仍在左上角，但您可以将其横向相对于左上角的画布，这也是圆角矩形的中心。
 
-现在，在此之前`Scale`调用添加另一个`Translate`居中的值与调用：
+现在，在此之前`Scale`调用添加另一个`Translate`居中值调用：
 
 ```csharp
 canvas.Translate(px, py);
@@ -199,25 +199,25 @@ canvas.Scale(sx, sy);
 canvas.Translate(–px, –py);
 ```
 
-这将移动缩放后的结果返回到原始位置。 这些三个调用是到等效的：
+这会移动缩放后的结果返回到原始位置。 这些三种调用是等效于：
 
 ```csharp
 canvas.Scale(sx, sy, px, py);
 ```
 
-因此就总转换公式而加剧各个转换：
+单个转换会更加复杂，以便总转换公式：
 
- x = sx ·(x – px) + px
+ x = sx 推荐配置(x – px) + px
 
- y = sy ·(y – py) + py
+ y = sy 推荐配置(y – py) + py
 
-请记住，默认值的`sx`和`sy`均为 1。 很容易确信这些公式不转换透视点 （上一年度中的 px）。 它仍保留在相对于画布的相同位置。
+请记住的默认值`sx`和`sy`均为 1。 它很容易使您自己确信这些公式不转换中心点 （像素，py）。 它将保持在相同的位置相对于 canvas。
 
-在合并`Translate`和`Scale`调用的顺序非常重要。 如果`Translate`之后`Scale`，按比例因子进行有效地缩放转换因素。 如果`Translate`之前`Scale`，不缩放转换因素。 此过程变成了某种程度上更清晰 (尽管较为复杂的数学) 时引入的转换矩阵的主题。
+结合`Translate`和`Scale`调用，则顺序很重要。 如果`Translate`之后`Scale`，平移因数有效地进行缩放的缩放比例。 如果`Translate`之前`Scale`，平移因数不进行缩放。 此过程就会明白了某种程度上 (尽管较为复杂的数学) 引入的转换矩阵主题了。
 
-`SKPath`类定义的只读[ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/)返回的属性`SKRect`在路径中定义的坐标的范围。 例如，当`Bounds`从之前创建的 hendecagram 路径获取属性`Left`和`Top`矩形属性是大约-100、`Right`和`Bottom`属性大约 100，与`Width`和`Height`属性是大约 200。 （大部分的实际值都是较少因为用一个半径为 100 圆圈定义星形的点，但仅顶部点不与水平或垂直轴平行。）
+`SKPath`类定义的只读[ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/)返回的属性`SKRect`路径中定义的坐标范围。 例如，当`Bounds`从更早版本，创建的 hendecagram 路径获取属性`Left`并`Top`矩形的属性是大约-100、 步长`Right`和`Bottom`属性大约 100，并`Width`和`Height`属性是大约 200 个。 （大部分的实际值都是小小于因为星星的点定义的一个圆圈一个半径为 100，但只有顶部的点是并行具有水平或垂直轴。）
 
-此信息的可用性意味着它应当可以派生缩放和平移因素适用于缩放画布的大小的路径。 [**各向异性缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs)页演示这一操作与 11 星。 *各向异性*缩放意味着，它是不相等沿水平方向和垂直方向，这意味着在星型将不会保留其原始的纵横比。 下面是相关的代码中`PaintSurface`处理程序：
+此信息的可用性意味着它应该可以派生缩放和平移因素适用于缩放画布的大小的路径。 [**各向异性缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs)页此进行了演示使用 11 星。 *各向异性*规模意味着，它是在水平方向和垂直方向，不相等这意味着在星型将不会保留原始纵横比。 下面是相关的代码中`PaintSurface`处理程序：
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -245,24 +245,24 @@ using (SKPaint strokePaint = new SKPaint
 }
 ```
 
-`pathBounds`获取此代码的顶部附近和随后用于更高版本的宽度和高度在画布矩形`Scale`调用。 通过呈现时，单独的调用将缩放路径的坐标`DrawPath`调用但星形将居中在画布的右上角。 它需要向下和向左移动。 这是个作业的`Translate`调用。 这两种属性`pathBounds`是大约-100，因此转换因素是约 100。 因为`Translate`后，将调用`Scale`调用，以便它们将在星型的中心移动到画布的中心，这些值有效地缩放比例因子，通过：
+`pathBounds`获取此代码中，顶部附近，并随后用于更高版本的宽度和高度画布中的矩形`Scale`调用。 通过呈现时，本身的调用将扩展的路径中的坐标`DrawPath`星形，但是该调用将在画布的右上角中居中。 它需要向下和向左移动。 这是作业的`Translate`调用。 这两个属性的`pathBounds`是大约-100、 步长，因此翻译因素是大约 100。 因为`Translate`调用晚`Scale`调用，这些值的有效地缩放的缩放比例，以便它们将在星型的中心移动到画布的中心：
 
-[![](scale-images/anisotropicscaling-small.png "三重的各向异性缩放页的屏幕截图")](scale-images/anisotropicscaling-large.png#lightbox "各向异性缩放页的三个屏幕截图")
+[![](scale-images/anisotropicscaling-small.png "三重各向异性缩放页屏幕截图")](scale-images/anisotropicscaling-large.png#lightbox "各向异性缩放页上的三个屏幕截图")
 
-你可以考虑的另一种方法`Scale`和`Translate`调用是在反向序列中确定的效果：`Translate`调用将转移路径，使之成为完全可见但面向画布的左上角。 `Scale`方法然后使该星级相对于窗口左上角更大。
+另一种方法可以考虑一下`Scale`和`Translate`的调用是确定在反向序列中的效果：`Translate`调用将转移路径，因此它将完全可见但面向在画布的左上角。 `Scale`方法然后使该星型相对于左上角更大。
 
-实际上，它显示在星型是略大于画布。 问题在于描边宽度。 `Bounds`属性`SKPath`指示坐标的尺寸编码在路径中，并且程序使用来扩展它。 当特定描边宽度呈现路径时，呈现的路径大于画布。
+实际上，它将显示 star 是有点大于画布。 问题在于笔划宽度。 `Bounds`属性的`SKPath`指示坐标维数编码在路径中，并且该程序使用来扩展它。 使用特定的笔划宽度呈现路径时，呈现的路径大于画布。
 
-若要修复此问题，你需要的补偿。 在此程序中的一个简单的方法是将添加以下语句右侧之前`Scale`调用：
+若要解决此问题需要补偿的。 在此程序中的一种简单方法是添加以下语句右侧之前`Scale`调用：
 
 ```csharp
 pathBounds.Inflate(strokePaint.StrokeWidth / 2,
                    strokePaint.StrokeWidth / 2);
 ```
 
-这会增加`pathBounds`的所有四个边 1.5 单元的矩形。 仅当舍入描边联接时，这是一个合理的解决方案。 斜接联接可能较长且难以进行计算。
+这会增加`pathBounds`通过所有四个边 1.5 个单位的矩形。 仅当舍入笔划联接时，这是一个合理的解决方案。 斜接联接可以较长，而且很难计算。
 
-你还可以通过以下方式使用了类似的方法以文本作为**各向异性文本**页说明。 以下是相关的部分`PaintSurface`处理程序[ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs)类：
+此外可以使用类似的技术与文本，作为**各向异性文本**页说明。 下面是相关部分`PaintSurface`处理程序[ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs)类：
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -288,17 +288,17 @@ using (SKPaint textPaint = new SKPaint
 }
 ```
 
-它是类似的逻辑，且文本将扩展到基于文本的边界矩形从返回的页大小`MeasureText`（这是略大于实际文本）：
+它是类似的逻辑和文本扩展的基于文本的边界矩形从返回的页大小为`MeasureText`（这可能有点大于实际文本）：
 
-[![](scale-images/anisotropictext-small.png "三重各向异性测试页的屏幕截图")](scale-images/anisotropictext-large.png#lightbox "各向异性测试页的三个屏幕快照")
+[![](scale-images/anisotropictext-small.png "各向异性测试页的三个屏幕截图")](scale-images/anisotropictext-large.png#lightbox "各向异性测试页的三个屏幕截图")
 
-如果你需要保留纵横比的图形对象，你将需要使用各向同性缩放。 **各向同性缩放**页演示这一为 11 星。 从概念上讲，在使用各向同性缩放比例页的中心显示图形对象的步骤如下：
+如果您需要保持图形对象的纵横比，您需要使用增益缩放。 **增益缩放**页此进行了演示为 11 星。 从概念上讲，用于在增益缩放页的中心显示图形对象的步骤如下：
 
-- 将转换到的左上角的图形对象的中心。
-- 缩放基于除以图形对象维度的水平和垂直页尺寸的最小值的对象。
-- 将转换到页的中心的扩展对象的中心。
+- 转换到左上角的图形对象的中心。
+- 缩放基于水平和垂直页尺寸由图形对象维度划分的最小值的对象。
+- 转换中心的缩放到页面的中心对象。
 
-[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs)显示星形前会按相反的顺序执行以下步骤：
+[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs)显示星号前会按相反的顺序执行以下步骤：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -337,9 +337,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-代码十次还将显示在星型，10%和渐进式将颜色更改从红色为蓝色，减少的缩放每次挑选：
+该代码还显示在星型十次，10%和逐渐将颜色更改由红色变为蓝色，降低缩放每次挑选：
 
-[![](scale-images/isotropicscaling-small.png "三重的各向同性缩放页的屏幕截图")](scale-images/isotropicscaling-large.png#lightbox "三倍的各向同性缩放页的屏幕截图")
+[![](scale-images/isotropicscaling-small.png "三重增益缩放页屏幕截图")](scale-images/isotropicscaling-large.png#lightbox "增益缩放页的三个屏幕截图")
 
 
 ## <a name="related-links"></a>相关链接

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/08/2018
-ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 4e1249b7a9c1e9797cbc758c3bd1b83f87d47431
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030699"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615143"
 ---
 # <a name="introduction-to-ios-12"></a>IOS 12 简介
 
@@ -21,11 +21,12 @@ ms.locfileid: "39030699"
 > [!WARNING]
 > Xamarin 的 iOS 12 支持目前处于预览状态，它可能包含 bug，这意味着不是功能完备，并可能会更改。 将它用于仅试验。
 
-> [!NOTE]
-> - 审阅[入门](get-started.md)指南说明如何开始构建使用 Xamarin iOS 12 应用程序。
-> - 有关详细信息，请阅读 Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)。
-
 本文档提供的 Xamarin 预览版版本提供了 C# 绑定某些 iOS 12 Api 的高级说明。
+
+若要开始构建使用 Xamarin iOS 12 应用程序，看一看：
+
+- [入门指南](get-started.md)
+- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## <a name="arkit-2"></a>ARKit 2
 
@@ -69,8 +70,12 @@ iOS 12 将建议并存储的用户名和强密码的应用程序包含创建帐�
 
 在 iOS 12、 iMessage 应用支持允许作为普通 iMessage 应用或照片或视频效果的上下文中运行的应用程序的演示文稿上下文。
 
+## <a name="vision-framework"></a>影像框架
+
+影像框架包括改进的面部检测器可以检测人脸的不同的方向。 此外，请求修订，现在可以使用以选择特定的视觉 framework 算法修订版本。
+
 ## <a name="related-links"></a>相关链接
 
 - [适用于 iOS 12 (Apple) 进行准备](https://developer.apple.com/ios/)
 - [iOS 12 预览版 (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
