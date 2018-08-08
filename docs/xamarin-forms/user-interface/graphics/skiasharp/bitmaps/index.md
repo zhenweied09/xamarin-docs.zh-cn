@@ -2,17 +2,17 @@
 title: SkiaSharp 位图
 description: 了解如何加载、 保存、 显示、 创建、 上绘制、 进行动画处理，并访问 SkiaSharp 位图的位。
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: 1bca13574bf5d58eb0751538243e71ae7ab7d25b
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 1e3a364e90cf2c0e60058793a6ef51c8442423f3
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39131218"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615478"
 ---
 # <a name="skiasharp-bitmaps"></a>SkiaSharp 位图
 
