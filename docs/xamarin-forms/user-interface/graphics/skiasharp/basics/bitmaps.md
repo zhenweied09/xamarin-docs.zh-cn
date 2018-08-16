@@ -63,7 +63,7 @@ public class BasicBitmapsPage : ContentPage
 HttpClient httpClient = new HttpClient();
 ```
 
-使用时`HttpClient`iOS 和 Android 应用程序，你将想要设置项目属性，如文档中所述**[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**。
+使用时`HttpClient`iOS 和 Android 应用程序，你将想要设置项目属性，如文档中所述 **[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**。
 
 因为它是最方便的方式使用`await`运算符，其中`HttpClient`，不能执行的代码中`BasicBitmapsPage`构造函数。 相反，它是一部分`OnAppearing`重写。 此处的 URL 指向具有一些示例位图的 Xamarin web 站点上的区域。 在网站上的包，可以追加大小调整为特定宽度位图的规范：
 

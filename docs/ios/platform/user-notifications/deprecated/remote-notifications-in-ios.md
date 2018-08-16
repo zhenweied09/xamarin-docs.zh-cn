@@ -49,7 +49,7 @@ Apple 维护两个环境的 APNS:*沙盒*和一个*生产*环境。 沙盒环境
 
     [![](remote-notifications-in-ios-images/image6new.png "导航到应用 Id 部分并创建新的应用 ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  当您单击**+** 按钮，可以输入说明和捆绑包标识符的应用程序 ID，如下面的屏幕截图中所示：
+3.  当您单击 **+** 按钮，可以输入说明和捆绑包标识符的应用程序 ID，如下面的屏幕截图中所示：
 
     [![](remote-notifications-in-ios-images/image7new.png "输入应用 ID 说明和捆绑标识符")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

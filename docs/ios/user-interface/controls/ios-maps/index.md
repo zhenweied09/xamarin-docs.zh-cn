@@ -409,7 +409,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 ## <a name="summary"></a>总结
 
-检查此文*地图**工具包*适用于 iOS 的框架。 首先，探讨了`MKMapView`类允许交互式地图要包含在应用程序中。 然后，它演示了如何进一步自定义使用批注和覆盖层的映射。 最后，它会检查本地搜索功能已添加到 Map kit 包与 iOS 6.1，演示如何使用执行位置基于查询兴趣点并将其添加到地图。
+检查此文 *地图* *工具包* 适用于 iOS 的框架。 首先，探讨了`MKMapView`类允许交互式地图要包含在应用程序中。 然后，它演示了如何进一步自定义使用批注和覆盖层的映射。 最后，它会检查本地搜索功能已添加到 Map kit 包与 iOS 6.1，演示如何使用执行位置基于查询兴趣点并将其添加到地图。
 
 ## <a name="related-links"></a>相关链接
 

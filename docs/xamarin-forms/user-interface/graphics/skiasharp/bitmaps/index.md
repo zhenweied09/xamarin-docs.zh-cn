@@ -18,7 +18,7 @@ ms.locfileid: "39615478"
 
 位图的矩形数组，对应于显示设备的像素数据。 有时称为图形编程与位图关联的区域_光栅图形_（名为早期视频显示器在扫描行的后面） 与此相反到_矢量图形_的直线和曲线. 
 
-文章**[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 介绍了一些加载和显示位图的基础知识。 这些文章详述该介绍性文章中的概念：
+文章 **[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 介绍了一些加载和显示位图的基础知识。 这些文章详述该介绍性文章中的概念：
 
 ## <a name="displaying-skiasharp-bitmapsdisplayingmd"></a>[显示 SkiaSharp 位图](displaying.md)
 
