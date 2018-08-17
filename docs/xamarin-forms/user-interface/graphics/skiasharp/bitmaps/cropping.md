@@ -582,7 +582,7 @@ public partial class PhotoPuzzlePage1 : ContentPage
 
 它可能是，从库中选择的照片不面向它出现在照片库中，但是旋转或倒置。 （这是与 iOS 设备存在问题）。为此，`PhotoPuzzlePage2`可以旋转为所需方向图像。 XAML 文件包含三个按钮标记为**90&#x00B0;右**（沿顺时针方向表示的）， **90&#x00B0;左侧**（开始沿逆时针方向），和**完成**。
 
-代码隐藏文件实现本文中所示的位图旋转逻辑**[创建和上 SkiaSharp 位图绘制](drawing.md#rotating-bitmaps)**。 用户可以旋转图像顺时针或逆时针旋转 90 度任意次数： 
+代码隐藏文件实现本文中所示的位图旋转逻辑 **[创建和上 SkiaSharp 位图绘制](drawing.md#rotating-bitmaps)** 。 用户可以旋转图像顺时针或逆时针旋转 90 度任意次数： 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage

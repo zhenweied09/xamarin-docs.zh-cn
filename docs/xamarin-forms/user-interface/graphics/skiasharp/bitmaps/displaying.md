@@ -20,7 +20,7 @@ ms.locfileid: "39615309"
 
 ![显示示例](displaying-images/DisplayingSample.png "显示示例")
 
-`DrawBitmapLattice`并`DrawBitmapNinePatch`一文中讨论方法**[分段显示 SkiaSharp 位图](segmented.md)**。
+`DrawBitmapLattice`并`DrawBitmapNinePatch`一文中讨论方法 **[分段显示 SkiaSharp 位图](segmented.md)** 。
 
 在此页上的示例取自**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序。 从该应用程序的主页上，选择**SkiaSharp 位图**，然后转到**显示位图**部分。
 

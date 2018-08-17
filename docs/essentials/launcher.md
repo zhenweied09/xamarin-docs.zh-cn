@@ -7,7 +7,7 @@ ms.author: jamont
 ms.date: 07/25/2018
 ms.openlocfilehash: 252bb873c1494265aafb2285057490ca29ce7419
 ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39573628"
@@ -16,7 +16,7 @@ ms.locfileid: "39573628"
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**启动器**类，应用程序可以由系统打开 URI。 这通常用于深入链接到另一个应用程序的自定义 URI 方案。 如果想要打开浏览器访问网站，则应参考**[浏览器](open-browser.md)** API。
+**启动器**类，应用程序可以由系统打开 URI。 这通常用于深入链接到另一个应用程序的自定义 URI 方案。 如果想要打开浏览器访问网站，则应参考 **[浏览器](open-browser.md)** API。
 
 ## <a name="using-launcher"></a>使用启动器
 

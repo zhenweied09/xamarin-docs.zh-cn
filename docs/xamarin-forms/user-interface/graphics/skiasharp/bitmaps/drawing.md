@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 `PaintSurface`处理程序呈现多个时间行和列中显示的位图。 请注意，`Clear`中的方法`PaintSurface`处理程序的自变量`SKColors.Aqua`，显示器表面的背景色哪种颜色：
 
-[![Hello，位图 ！] (drawing-images/HelloBitmap.png "Hello，位图 ！")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello，位图 ！](drawing-images/HelloBitmap.png "Hello，位图 ！")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 浅绿色背景的外观显示位图为透明除文本之外。
 
@@ -260,9 +260,9 @@ public partial class MonkeyMoustachePage : ContentPage
 
 方法`SKCanvas`可用于上绘制位图包括`DrawBitmap`。 这意味着，您可以绘制一个位图另一个，通常以某种方式对其进行修改。
 
-通过访问实际像素位是最通用的方法来修改位图，主题的文章中介绍**[访问 SkiaSharp 位图像素](pixel-bits.md)**。 但有许多其他方法来修改不需要访问像素位的位图。
+通过访问实际像素位是最通用的方法来修改位图，主题的文章中介绍 **[访问 SkiaSharp 位图像素](pixel-bits.md)** 。 但有许多其他方法来修改不需要访问像素位的位图。
 
-中包含的以下位图**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序为 360 像素宽，高度 480 像素：
+中包含的以下位图 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序为 360 像素宽，高度 480 像素：
 
 ![山地车的攀岩运动员](drawing-images/MountainClimbers.jpg "Mountain 攀岩运动员")
 
