@@ -1,32 +1,32 @@
 ---
-title: Xamarin.Essentials： 加速感应器
-description: Xamarin.Essentials 中的加速感应器类可让你监视设备的加速度传感器，指示三个维空间中的设备的加速度。
+title: Xamarin.Essentials：Accelerometer
+description: Xamarin.Essentials 中的 Accelerometer 类可用于监视设备的加速计传感器，指示设备在三维空间内的加速度。
 ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353836"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40184424"
 ---
-# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials： 加速感应器
+# <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials：Accelerometer
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**加速感应器**类可让你监视设备的加速度传感器指示三个维空间中的设备的加速度。
+Accelerometer 类可用于监视设备的加速计传感器，指示设备在三维空间内的加速度。
 
-## <a name="using-accelerometer"></a>使用加速感应器
+## <a name="using-accelerometer"></a>使用 Accelerometer
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-加速感应器功能适用于通过调用`Start`和`Stop`方法来侦听对加速的更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
+Accelerometer 功能通过调用 `Start` 和 `Stop` 方法来侦听加速的变化。 然后通过 `ReadingChanged` 事件反馈任何变化。 示例用法如下：
 
 ```csharp
 
@@ -48,7 +48,7 @@ public class AccelerometerTest
         // Process Acceleration X, Y, and Z
     }
 
-    public void ToggleAcceleromter()
+    public void ToggleAccelerometer()
     {
         try
         {
@@ -69,23 +69,23 @@ public class AccelerometerTest
 }
 ```
 
-加速感应器读数报告回中。G 是万有引力的一项强制等于所施加的地球引力字段 (9.81 m/s ^2)。
+Accelerometer 读数以 G 为单位反馈回来。G 是等于地球重力加速度 (9.81 m/s^2) 的重力单位。
 
-坐标系统定义相对于其默认方向在手机的屏幕。 设备的屏幕方向更改时，不会交换轴。
+相对于手机屏幕的默认方向定义坐标系。 设备的屏幕方向更改时，不会交换轴。
 
-X 轴是水平的并且点向右，Y 轴为垂直和向上箭头和 Z 轴指向屏幕的正面的外部。 在此系统中，隐藏在屏幕坐标具有负 Z 值。
+X 轴水平向右，Y 轴垂直向上，Z 轴从屏幕正面指向外。 在此坐标系中，屏幕后方的坐标具有负 Z 值。
 
 示例：
 
-* 当设备位于平面上一个表，并在其左侧向右推入时，x 加速值为正。
+* 当设备平放在桌面上，并从左侧向右推时，X 轴加速值为正。
 
-* 当设备位于平面上一个表时，加速值是 + 1.00 之间 G 或 (+ 9.81 m/s ^2)，对应于设备的加速度 (0 m/s ^2) 减去引力 (-9.81 m/s ^2) 和如下所示 G.规范化
+* 当设备平放在桌面上，加速值为 +1.00 G (+ 9.81 m/s^2)，对应于设备的加速度 (0 m/s^2) 减去重力加速度 (-9.81 m/s ^2)，以 G 为单位规范化。
 
-* 当设备位于平面上一个表并被推向 m/秒的加速天空 ^2，加速值是否等于一个 + 9.81 它们分别对应于设备的加速度 (+ m/s ^2) 的重力强制减 (-9.81 m/s ^2) 和规范化中。
+* 当设备平放在桌面上，并以 A m/s^2 的加速度向上推时，加速值等于 A+9.81，对应于设备的加速度 (+A m/s^2) 减去重力加速度 (-9.81 m/s ^2)，并以 G 为单位规范化。
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
-- [加速感应器源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
-- [加速感应器 API 文档](xref:Xamarin.Essentials.Accelerometer)
+- [Accelerometer 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Accelerometer API 文档](xref:Xamarin.Essentials.Accelerometer)
