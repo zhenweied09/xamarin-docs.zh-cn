@@ -1,54 +1,55 @@
 ---
-title: Xamarin.Forms 的 Xamarin 实时 Player
-description: 本文档讨论 Xamarin 实时播放器 Xamarin.Forms，描述安装、 Xamarin 实时播放器应用程序、 示例用于 Xamarin 实时播放器，限制，和故障排除。
+title: 适用于 Xamarin.Forms 的 Xamarin Live Player
+description: 本文档介绍 Xamarin Live Player 用于 Xamarin.Forms，描述安装 Xamarin Live Player 应用，示例，以便与 Xamarin Live Player，限制，使用和故障排除。
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 author: topgenorth
 ms.author: toopge
-ms.date: 05/10/2017
-ms.openlocfilehash: 79cf2c790789963189d3eedd6645a6b6ae6503b6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/08/2017
+ms.openlocfilehash: c719e273d03b898984393c6be555f603a122ad4b
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793133"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251181"
 ---
-# <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.Forms 的 Xamarin 实时 Player
+# <a name="xamarin-live-player-for-xamarinforms"></a>适用于 Xamarin.Forms 的 Xamarin Live Player
 
-Xamarin 实时播放器可帮助你开始使用 Xamarin.Forms 开发通过学习来生成移动应用程序可以在你的 Android 或 iOS 设备上进行测试。 在 Xamarin 实时播放器应用程序中运行你的代码 – 无需设置的仿真程序或使用电缆将代码部署 ！ 若要开始，下载 Xamarin 实时播放器、 配对到 Visual Studio 和部署你的代码和测试应用程序。 
+Xamarin Live Player 可帮助你开始使用 Xamarin.Forms 开发的学习来构建移动应用程序可以在 Android 设备上测试。 若要开始，下载 Xamarin Live Player、 配对到 Visual Studio 中，并将代码部署和测试应用程序。
 
-Xamarin 实时播放器旨在如入门开发人员，其获得快速可视化在设备上的沙盒。 因为它解释源代码可能会达到[限制](limitations.md)后某些时间和需要进行完全编译的应用程序设备或仿真程序。
+Xamarin Live Player 预览被设计入门开发人员在他们的想法快速可视化，在设备上的沙盒。 由于解释的源代码可能会达到[限制](limitations.md)后某些时间和需要进行完全编译您的设备或仿真程序的应用程序。
 
-## <a name="get-started-with-xamarin-live-player"></a>要开始使用 Xamarin 实时播放机
+![预览功能](~/media/shared/preview.png)
 
-[![实时的 Xamarin Player： 代码、 扫描、 测试](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+## <a name="get-started-with-xamarin-live-player"></a>开始使用 Xamarin Live Player
 
-1. 按照下载应用[实时的 Xamarin Player 安装](install.md)说明。
-2. 启用*实时的 Xamarin Player*中**首选项**，然后选择你的设备从**设备**列表。
-2. 管理实时播放器设备扫描 QR 代码以对您的设备与 Visual Studio。
-3. 应用程序在你的手机或平板电脑上运行权限。
+[![Xamarin Live Player： 代码中，扫描，请测试](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
-## <a name="xamarin-live-player-setupinstallmd"></a>[实时的 Xamarin Player 安装程序](install.md)
+1. 按照下载应用[Xamarin Live Player 安装程序](install.md)说明。
+2. 启用*Xamarin Live Player*中**首选项**，然后选择你的设备从**设备**列表。
+3. 管理 Live Player 设备扫描 QR 代码以将设备到 Visual Studio 配对。
+4. 在手机或平板电脑上直接运行应用。
 
-下载 Xamarin 实时 Player 和配置你的 IDE 以使用具有从 Visual Studio 2017 或 Visual Studio 的 Xamarin.Forms 应用的 mac。 
+## <a name="xamarin-live-player-setupinstallmd"></a>[Xamarin Live Player 安装程序](install.md)
+
+下载 Xamarin Live Player 和配置 IDE 以将其用于 Xamarin.Forms 应用从 Visual Studio 2017 或 Visual Studio for mac。 
 
 ## <a name="xamarin-live-player-appplayermd"></a>[Xamarin Live Player 应用](player.md)
 
-使用 Xamarin 实时播放器应用程序。
+使用 Xamarin Live Player 应用。
 
-## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[示例尝试与 Xamarin 实时播放器](samples.md)
+## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[通过 Xamarin Live Player 尝试的示例](samples.md)
 
-若要使用 Xamarin 实时播放器应用程序的示例的链接。
+示例，以便使用与 Xamarin Live Player 应用的链接。
 
 ## <a name="limitationslimitationsmd"></a>[限制](limitations.md)
 
-实时的 Xamarin Player 它可以支持哪些功能具有一些限制。
+Xamarin Live Player 对它可以支持哪些功能具有某些限制。
 
 ## <a name="troubleshootingtroubleshootingmd"></a>[疑难解答](troubleshooting.md)
 
-如果出现问题，请找到帮助。
+如果遇到问题，请找到帮助。
 
 ## <a name="related-links"></a>相关链接
 
-- [博客文章](https://blog.xamarin.com/live-player/)
-- [Xamarin 实时播放器示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Xamarin Live Player 示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)

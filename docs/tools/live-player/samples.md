@@ -1,31 +1,31 @@
 ---
-title: Xamarin 实时播放器示例
-description: 此文档链接到测试出 Xamarin 实时播放器时要使用的示例应用程序。 链接的示例包括基本计算器和 bug 清理程序游戏。
+title: Xamarin Live Player 示例
+description: 本文档所链接到 Xamarin Live Player 出测试时要使用的示例应用程序。 链接的示例包括基本计算器和 bug 清理程序游戏。
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
-ms.date: 06/20/2017
-ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/08/2017
+ms.openlocfilehash: 6f9f2ed97e03862fc7e77e4a7ff67f456dfde277
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793717"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251010"
 ---
-# <a name="xamarin-live-player-samples"></a>Xamarin 实时播放器示例
+# <a name="xamarin-live-player-samples"></a>Xamarin Live Player 示例
 
-## <a name="get-started-with-xamarinforms"></a>要开始使用 Xamarin.Forms
+## <a name="get-started-with-xamarinforms"></a>Xamarin.Forms 入门
 
-请访问[示例库](https://developer.xamarin.com/samples/xamarin-live-player/all/)为 Xamarin.Forms 示例采用了实时的 Xamarin Player。
+请访问[示例库](https://developer.xamarin.com/samples/xamarin-live-player/all/)的 Xamarin.Forms 示例采用了 Xamarin Live Player。
 
 ## <a name="featured-samples"></a>特色的示例
 
 ### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[基本计算器](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-此 Xamarin.Forms 应用提供可以在 Android 或 iOS 设备使用一个简单计算器。
+此 Xamarin.Forms 应用程序提供了可以在 Android 设备使用一个简单的计算器。
 
-![基本计算器示例屏幕快照](samples-images/basic-calculator-sml.png)
+![基本计算器示例屏幕截图](samples-images/basic-calculator-sml.png)
 
 ### <a name="bugsweeperhttpsdeveloperxamarincomsamplesmobileliveplayerbugsweeperlp"></a>[BugSweeper](https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/)
 
@@ -35,4 +35,4 @@ ms.locfileid: "34793717"
 
 ## <a name="related-links"></a>相关链接
 
-- [Xamarin.Forms 实时播放器示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Xamarin.Forms 实时播放机示例](https://developer.xamarin.com/samples/xamarin-live-player/all/)

@@ -1,6 +1,6 @@
 ---
 title: iOS 中 Xamarin.iOS 的扩展
-description: 本文档介绍了扩展，它们是由 iOS 如通知中心内的标准上下文中的小组件。 它讨论如何创建扩展并从父应用程序与之通信。
+description: 本文档介绍了扩展，它们是由 iOS 如通知中心内的标准上下文中的小组件。 它讨论了如何创建扩展，并从父应用程序与之进行通信。
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
@@ -8,207 +8,170 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c26f951ddaff34cf23662f701395e636e1258b7d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 831625c88bb3c0f8403d3b330054050488956cb6
+ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786725"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251007"
 ---
-# <a name="ios-extensions-in-xamarinios"></a>iOS 中 Xamarin.iOS 的扩展
+# <a name="ios-extensions-in-xamarinios"></a>在 Xamarin.iOS 中的 iOS 扩展
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**通过在 iOS 中，创建扩展[Xamarin 大学](https://university.xamarin.com/)**
+**在 iOS 中，通过创建扩展[Xamarin University](https://university.xamarin.com/)**
 
-扩展，因为在 iOS 8 中引入了一些专用`UIViewControllers`，提供的标准的上下文内的 iOS 如在**通知中心**，如用户请求执行的自定义键盘类型专用化输入或其他上下文，如编辑的照片，扩展可以提供特殊效果筛选器。
+专用扩展，如在 iOS 8 中引入`UIViewControllers`，按呈现 iOS 标准上下文内此类为内**通知中心**，如用户请求执行的自定义键盘类型专用化输入或其他上下文如编辑的照片，扩展可以提供特殊效果筛选器。
 
-所有扩展安装结合容器应用程序 （使用 64 位统一 Api 编写两个元素） 以及从特定的扩展点，在主机应用程序中激活。 并且，因为它们将用作为对现有系统函数的补充，它们必须是精益，和可靠的高性能。 
-
-本文介绍了以下主题：
-
-- [扩展点](#Extension-Points)-列出可用扩展点的类型和可以为每个点创建的扩展的类型。
-- [限制](#Limitations)的扩展有大量的限制，其中一些是通用于所有类型的而其他类型的扩展可能有特定的限制，其使用情况。
-- [分发、 安装和运行扩展](#Distributing-Installing-and-Running-Extensions)-扩展从分布在容器的应用，而后者，已提交并通过应用商店分发内。 此时，安装与应用一起分发的扩展插件，但用户必须显式启用每个扩展。 不同类型的扩展启用不同的方式。
-- [扩展生命周期](#Extension-Lifecycle)-的扩展的`UIViewController`将实例化并开始正常视图控制器生命周期。 但是，与不同的是正常的应用程序，扩展都是加载、 执行，，然后终止重复。
-- [创建扩展](#Creating-an-Extension)-在开发时扩展，你的解决方案将包含至少两个项目： 在容器应用程序和一个项目的每个扩展容器提供。
-- [演练](#Walkthrough)-介绍创建简单**今天**小组件提供了其用户界面使用情节提要的扩展或在代码中，安装扩展，并在 iOS 模拟器中对其进行测试。
-- [与主机应用程序通信](#Communicating-with-the-Host-App)-简要讨论与扩展主机应用程序通信。
-- [与父应用程序通信](#Communicating-with-the-Parent-App)-简要讨论与扩展中的父应用程序通信。
-- [预防措施和注意事项](#Precautions-and-Considerations)-某些知道的预防措施和应考虑设计和实现扩展时考虑的事项的列表。
- 
-
-<a name="Extension-Points" />
+所有扩展 （与使用 64 位统一 Api 编写这两个元素） 安装在与容器应用程序一起使用，并且从特定的扩展点在主机应用程序中激活。 因为它们将用作补充现有的系统函数，它们必须高效，且可靠的高性能。 
 
 ## <a name="extension-points"></a>扩展点
 
 |类型|描述|扩展点|主机应用程序|
 |--- |--- |--- |--- |
 |操作|专用的编辑器或特定媒体类型的查看器|`com.apple.ui-services`|任意|
-|文档提供程序|允许应用程序以使用远程文档存储区|`com.apple.fileprovider-ui`|使用应用[UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
+|文档提供程序|允许应用程序以使用远程文档存储|`com.apple.fileprovider-ui`|使用应用[UIDocumentPickerViewController](https://developer.xamarin.com/api/type/UIKit.UIDocumentPickerViewController/)|
 |键盘|备用键盘|`com.apple.keyboard-service`|任意|
-|照片编辑|照片操作和编辑|`com.apple.photo-editing`|Photos.app 编辑器|
-|共享|共享数据，与社交网络，消息传送服务，等等。|`com.apple.share-services`|任意|
-|今天|显示在今天屏幕或通知中心上的"小组件"|`com.apple.widget-extensions`|今天和通知中心|
+|照片编辑|照片处理和编辑|`com.apple.photo-editing`|Photos.app 编辑器|
+|共享|与社交网络，消息传送服务等共享数据。|`com.apple.share-services`|任意|
+|今天|显示在今日屏幕或通知中心上的"小组件"|`com.apple.widget-extensions`|今天和通知中心|
 
 [其他扩展点](~/ios/platform/introduction-to-ios10/index.md#app-extensions)iOS 10 中已添加。
 
-<a name="Limitations" />
-
 ## <a name="limitations"></a>限制
 
-扩展有大量的限制，其中有一些通用于所有类型 （对于实例，没有任何类型的扩展可访问的摄像头或麦克风） 虽然其他类型的扩展可能具有其使用情况 （例如，自定义键盘上的特定限制不能使用为类似于密码的安全数据输入字段）。 
+扩展具有许多限制，其中一些通用于所有类型 （对于实例，没有任何类型的扩展插件可以访问照相机或麦克风） 而其他类型的扩展可能会对其使用情况 （例如，自定义键盘产生具体的限制不能用于保护数据输入字段如密码）。 
 
 通用的限制是：
 
-- [运行状况工具包](~/ios/platform/healthkit.md)和[事件工具包 UI](~/ios/platform/eventkit.md)框架不可用
+- [运行状况工具包](~/ios/platform/healthkit.md)并[事件工具包 UI](~/ios/platform/eventkit.md)框架将不可用
 - 扩展不能使用[扩展后台模式](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
-- （但它们可以访问现有的媒体文件），扩展将不能访问设备的照相机或麦克风
-- 扩展无法接收无线删除数据 （尽管它们可以通过传输通过无线删除数据）
-- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/)和[UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/)不可用; 扩展必须使用[UIAlertController](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- 多个成员[UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/)都不可用： [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)， `UIApplication.OpenURL`，`UIApplication.BeginIgnoringInteractionEvents`和 `UIApplication.EndIgnoringInteractionEvents`
-- iOS 增强当今扩展了 16 MB 内存使用情况限制。
-- 默认情况下键盘扩展没有网络访问权限。 这会影响调试在设备上 （限制不在模拟器中强制执行），因为 Xamarin.iOS 要求网络访问以进行调试的正常工作。 它是以请求网络访问权限可能通过设置`Requests Open Access`中项目的 Info.plist 到值`Yes`。 请参阅 Apple 的[自定义键盘指南](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html)键盘扩展限制有关的详细信息。
+- 扩展无法访问设备的摄像机或麦克风 （尽管它们可能访问现有的媒体文件）
+- 扩展不能将收到以无线方式删除数据 （但它们可以传输通过以无线方式删除数据）
+- [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/)并[UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/)不可用; 扩展必须使用[看到](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
+- 多个成员[UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/)不可用： [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)， `UIApplication.OpenURL`，`UIApplication.BeginIgnoringInteractionEvents`和 `UIApplication.EndIgnoringInteractionEvents`
+- iOS 增强今天的扩展了 16 MB 内存使用情况限制。
+- 默认情况下键盘扩展无网络访问权限。 这会影响调试在设备上 （该限制不在模拟器中强制执行），因为 Xamarin.iOS 需要网络访问权限来调试工作。 它通过设置就可以请求网络访问权限`Requests Open Access`到项目的 Info.plist 中的值`Yes`。 请参阅 Apple[自定义键盘指南](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html)有关键盘扩展限制的详细信息。
 
-有关各个限制，请参阅 Apple 的[应用程序扩展编程指南](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/)。
-
-<a name="Distributing-Installing-and-Running-Extensions" />
+有关单独的限制，请参阅 Apple[应用程序扩展编程指南](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/)。
 
 ## <a name="distributing-installing-and-running-extensions"></a>分发、 安装和运行扩展
 
-在容器的应用，而后者，已提交并通过应用商店分发内，从分发扩展。 此时，安装与应用一起分发的扩展插件，但用户必须显式启用每个扩展。 在不同的方式; 中启用了不同类型的扩展某些需要用户导航到**设置**应用并使其从那里。 虽然其他人处于启用在使用，例如发送照片时启用共享的扩展点。 
+容器应用程序，而后者，已提交并通过 App Store 分发中，从分发扩展。 此时，安装应用程序一起分发的扩展插件，但用户必须显式启用每个扩展。 在不同的方式; 中启用了不同类型的扩展多个要求用户导航到**设置**应用并启用从该处。 在使用，例如发送照片时启用共享的扩展点启用时其他人。 
 
-应用程序在其中扩展使用 （其中，则在用户遇到扩展点） 被称为**主机应用程序**，因为它是承载扩展，它执行时的应用。 安装扩展的应用程序已**容器应用**，因为它是包含扩展，安装时的应用。  
+应用程序在其中 （其中，则在用户遇到此扩展点） 使用该扩展被称为**主机应用**，因为它是托管扩展，在执行时的应用程序。 安装扩展的应用程序是**容器应用**，因为它是安装时包含扩展的应用。  
 
-通常情况下，容器应用程序介绍扩展，并指导用户完成启用它的过程。
-
-<a name="Extension-Lifecycle" />
+通常情况下，容器应用介绍扩展，并指导用户完成启用它的过程。
 
 ## <a name="extension-lifecycle"></a>扩展生命周期
 
-扩展可以很简单，只需为单个[UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/)或更复杂的扩展提供的 UI 的多个屏幕。 当用户遇到_扩展点_(例如，当共享映像)，它们将有机会选择从为该扩展点注册的扩展。 
+扩展可以作为单个一样简单[UIViewController](https://developer.xamarin.com/api/type/UIKit.UIViewController/)或显示 UI 的多个屏幕的更复杂的扩展。 当用户遇到_扩展点_(例如共享映像)，它们将有机会从注册该扩展点的扩展中进行选择。 
 
-如果他们选择你的应用程序之一的扩展，其`UIViewController`将实例化并开始正常视图控制器生命周期。 但是，与常规的应用，这样做是挂起，但通常不终止用户完成与其进行交互时，不同扩展都是加载、 执行，，然后终止重复。
+如果他们选择您的应用程序的扩展，其`UIViewController`将实例化并开始正常视图控制器生命周期。 但是，与常规应用，后者虽然是挂起，但通常不终止用户完成与它们交互时，不同扩展加载、 执行，并重复然后终止。
 
-扩展可以与通过其承载应用程序进行通信[NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)对象。 某些扩展有接收使用的结果的异步回调的操作。 将在后台线程上执行这些回调和扩展必须考虑这一点;例如，通过使用[NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/)如果他们想要更新的用户界面。 请参阅[与主机应用程序通信](#Communicating-with-the-Host-App)下面部分以了解更多详细信息。
+扩展可以与通过其主机应用程序进行通信[NSExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)对象。 某些扩展具有接收结果的异步回调的操作。 将在后台线程上执行这些回调和扩展必须考虑这点;例如，通过使用[NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/member/Foundation.NSObject.InvokeOnMainThread/)如果用户想要更新的用户界面。 请参阅[与主机应用程序通信](#Communicating-with-the-Host-App)部分获取更多详细信息。
 
-默认情况下，扩展和其容器应用无法通信，尽管一起安装。 在某些情况下，容器应用程序是实质上是一个空"装运"的容器安装扩展后，其目的提供服务。 但是，如果规定的情况下，容器应用程序和扩展插件可能会共享资源从常见的区域。 此外，**今天扩展**可能会请求其容器应用以打开 URL。 演示了此行为[发展倒计时小组件](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)。
-
-<a name="Creating-an-Extension" />
+默认情况下，扩展和其容器应用程序可以不进行通信，尽管一起安装。 在某些情况下，容器应用是实质上是一个空"shipping"的容器安装扩展后，就会提供其用途。 但是，如果规定的情况下，容器应用程序和扩展可能会共享公共区域中的资源。 此外，**今天扩展**可能会请求自己的容器应用程序来打开 URL。 此行为所示[发展倒计时小组件](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo)。
 
 ## <a name="creating-an-extension"></a>创建扩展
 
-扩展 （和其容器应用程序） 必须是 64 位二进制文件和使用 Xamarin.iOS 构建[统一 Api](http://developer.xamarin.com/guides/cross-platform/macios/unified)。 在开发时扩展，你的解决方案将包含至少两个项目： 在容器应用程序和一个项目的每个扩展容器提供。 
-
-<a name="Container-App-Project-Requirements" />
+扩展 （和其容器应用程序） 必须是 64 位二进制文件和使用 Xamarin.iOS 生成[统一 Api](http://developer.xamarin.com/guides/cross-platform/macios/unified)。 在开发时扩展，你的解决方案将包含至少两个项目： 容器应用程序，另一个项目的每个扩展容器提供。 
 
 ### <a name="container-app-project-requirements"></a>容器应用程序项目要求
 
-用于安装扩展的容器应用程序具有以下要求：
+用于安装该扩展的容器应用具有以下要求：
 
-- 它必须维护向扩展项目的引用。   
-- 它必须是一个完整的应用 （必须能够启动并成功运行），即使它不执行任何操作超过提供安装扩展的方法。 
-- 它必须具有一个捆绑标识符，它是扩展的捆绑标识符的基础项目 （请参阅下面有关详细信息的部分）。
-
-<a name="Extension-Project-Requirements" />
+- 它必须保留对扩展项目的引用。   
+- 它必须是一个完整的应用 （必须能够启动并成功运行），即使它不执行任何操作超过提供的方法安装的扩展。 
+- 它必须具有一个捆绑包标识符，是扩展的捆绑包标识符的基础项目 （请参见下面的更多详细信息部分）。
 
 ### <a name="extension-project-requirements"></a>扩展项目要求
 
 此外，扩展的项目具有以下要求：
 
-- 它必须具有开头其容器应用的捆绑标识符的捆绑标识符。 例如，如果容器应用程序具有的捆绑标识符`com.myCompany.ContainerApp`，扩展的标识符可能`com.myCompany.ContainerApp.MyExtension`: 
+- 它必须具有以其容器应用的捆绑包标识符开头的捆绑标识符。 例如，如果容器应用的具有的捆绑包标识符`com.myCompany.ContainerApp`，可能是扩展的标识符`com.myCompany.ContainerApp.MyExtension`: 
 
     ![](extensions-images/bundleidentifiers.png) 
-- 它必须定义键`NSExtensionPointIdentifier`，使用适当的值 (如`com.apple.widget-extension`为**今天**通知中心小组件)，请在其`Info.plist`文件。
-- 它还必须定义*任一*`NSExtensionMainStoryboard`密钥或`NSPrincipalClass`中的键其`Info.plist`文件具有适当的值：
-    - 使用`NSExtensionMainStoryboard`键以指定的名称为扩展提供的主 UI 情节提要 (减`.storyboard`)。 例如，`Main`为`Main.storyboard`文件。
-    - 使用`NSPrincipalClass`键以指定启动扩展时将初始化的类。 值必须与匹配**注册**值你`UIViewController`: 
+- 它必须定义该密匙`NSExtensionPointIdentifier`，使用适当的值 (如`com.apple.widget-extension`有关**今天**通知中心小组件)，请在其`Info.plist`文件。
+- 它还必须定义*任一*`NSExtensionMainStoryboard`密钥或`NSExtensionPrincipalClass`键中其`Info.plist`文件使用适当的值：
+    - 使用`NSExtensionMainStoryboard`键以指定为扩展显示的主要用户界面的情节提要的名称 (减去`.storyboard`)。 例如，`Main`为`Main.storyboard`文件。
+    - 使用`NSExtensionPrincipalClass`键以指定启动扩展时将初始化的类。 值必须匹配**注册**的值在`UIViewController`: 
 
     ![](extensions-images/registerandprincipalclass.png)
 
-特定类型的扩展可能具有附加要求。 例如，**今天**或**通知中心**扩展的主体类必须实现[INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/)。
+特定类型的扩展可能具有其他要求。 例如，**今天**或**通知中心**扩展的主体类必须实现[INCWidgetProviding](https://developer.xamarin.com/api/type/NotificationCenter.INCWidgetProviding/)。
 
 > [!IMPORTANT]
-> 如果启动你的项目使用一个 Visual Studio 提供的适用于 Mac 的扩展模板时，将提供并为你自动通过模板来满足大多数 （如果不是所有） 这些要求。
-
-<a name="Walkthrough" />
+> 如果启动一个使用 Visual Studio for Mac 提供的扩展模板的项目，将提供并为您自动由模板满足大多数 （如果并非所有） 这些要求。
 
 ## <a name="walkthrough"></a>演练 
 
-在下面的演练，你将创建一个示例**今天**计算的日期和年份中剩余的天数的小组件：
+在下面的演练，你将创建一个示例**今天**小组件，用于计算日期和年份中的剩余天数：
 
-[![](extensions-images/carpediemscreenshot-sm.png "计算的日期和年份中剩余天数示例今天小组件")](extensions-images/carpediemscreenshot.png#lightbox)
-
-<a name="Creating-the-Solution" />
+[![](extensions-images/carpediemscreenshot-sm.png "计算的日期和年份中的剩余天数示例今天小组件")](extensions-images/carpediemscreenshot.png#lightbox)
 
 ### <a name="creating-the-solution"></a>创建解决方案
 
 若要创建所需的解决方案，请执行以下操作：
 
-1. 首先，创建新的 iOS，**单视图应用**项目，然后单击**下一步**按钮： 
+1. 首先，创建一个新的 iOS**单一视图应用**项目，然后单击**下一步**按钮： 
 
-    [![](extensions-images/today01.png "首先，创建新的 iOS、 单个视图应用程序项目并单击下一步按钮")](extensions-images/today01.png#lightbox)
-2. 调用项目`TodayContainer`单击**下一步**按钮： 
+    [![](extensions-images/today01.png "首先，创建新的 iOS、 单一视图应用程序项目并单击下一步按钮")](extensions-images/today01.png#lightbox)
+2. 调用项目`TodayContainer`然后单击**下一步**按钮： 
 
-    [![](extensions-images/today02.png "调用项目 TodayContainer 并单击下一步按钮")](extensions-images/today02.png#lightbox)
-3. 验证**项目名称**和**SolutionName**单击**创建**按钮以创建解决方案： 
+    [![](extensions-images/today02.png "调用项目 TodayContainer，然后单击下一步按钮")](extensions-images/today02.png#lightbox)
+3. 验证是否**项目名称**并**SolutionName**然后单击**创建**按钮以创建解决方案： 
 
-    [![](extensions-images/today03.png "验证项目名称和解决方案名称，单击创建按钮以创建解决方案")](extensions-images/today03.png#lightbox)
-4. 接下来，在**解决方案资源管理器**，右击该解决方案，并添加一个新**iOS 扩展**项目从**今天扩展**模板： 
+    [![](extensions-images/today03.png "验证项目名称和解决方案名称，然后单击创建按钮以创建解决方案")](extensions-images/today03.png#lightbox)
+4. 接下来，在**解决方案资源管理器**，右键单击解决方案并添加一个新**iOS 扩展**从项目**今天扩展**模板： 
 
-    [![](extensions-images/today04.png "接下来，在解决方案资源管理器，右击该解决方案并从今天扩展模板添加新的 iOS 扩展项目")](extensions-images/today04.png#lightbox)
-5. 调用项目`DaysRemaining`单击**下一步**按钮： 
+    [![](extensions-images/today04.png "接下来，在解决方案资源管理器，右键单击解决方案并从今天扩展模板中添加新的 iOS 扩展项目")](extensions-images/today04.png#lightbox)
+5. 调用项目`DaysRemaining`然后单击**下一步**按钮： 
 
-    [![](extensions-images/today05.png "调用项目 DaysRemaining 并单击下一步按钮")](extensions-images/today05.png#lightbox)
-6. 查看项目，然后单击**创建**按钮以创建它： 
+    [![](extensions-images/today05.png "调用项目 DaysRemaining，然后单击下一步按钮")](extensions-images/today05.png#lightbox)
+6. 查看项目，然后单击**创建**按钮来创建它： 
 
-    [![](extensions-images/today06.png "查看项目，然后单击创建按钮来创建它")](extensions-images/today06.png#lightbox)
+    [![](extensions-images/today06.png "检查项目，并单击创建按钮来创建它")](extensions-images/today06.png#lightbox)
 
 生成的解决方案现在应具有两个项目，如下所示：
 
 [![](extensions-images/today07.png "生成的解决方案现在应有两个项目，如下所示")](extensions-images/today07.png#lightbox)
 
-<a name="Creating-the-Extension-User-Interface" />
+### <a name="creating-the-extension-user-interface"></a>创建扩展用户界面
 
-### <a name="creating-the-extension-user-interface"></a>创建扩展的用户界面
+接下来，你将需要设计的界面您**今天**小组件。 这既可以使用情节提要或通过在代码中创建用户界面。 这两种方法会将详细介绍如下。
 
-接下来，你将需要设计的界面你**今天**小组件。 这既可以使用情节提要或通过在代码中创建 UI。 在详细信息，将下面介绍这两种方法。
+#### <a name="using-storyboards"></a>使用演示图板
 
-<a name="Using-Storyboards" />
+若要生成使用情节提要 UI，执行以下操作：
 
-#### <a name="using-storyboards"></a>使用情节提要
+1. 在中**解决方案资源管理器**，双击扩展项目`Main.storyboard`文件将其打开进行编辑： 
 
-若要生成使用情节提要 UI，请执行以下操作：
+    [![](extensions-images/today08.png "双击要打开以进行编辑的扩展项目 Main.storyboard 文件")](extensions-images/today08.png#lightbox)
+2. 选择的标签，已自动添加到 UI 模板并为其提供**名称**`TodayMessage`中**小组件**选项卡**属性资源管理器**: 
 
-1. 在**解决方案资源管理器**，双击扩展项目的`Main.storyboard`文件以打开进行编辑： 
-
-    [![](extensions-images/today08.png "双击要打开进行编辑的扩展项目 Main.storyboard 文件")](extensions-images/today08.png#lightbox)
-2. 选择模板自动添加到 UI 的标签，并为其提供**名称**`TodayMessage`中**小组件**选项卡**属性资源管理器**: 
-
-    [![](extensions-images/today09.png "选择模板自动添加到 UI 的标签，并为其提供属性资源管理器的小组件选项卡中名称 TodayMessage")](extensions-images/today09.png#lightbox)
+    [![](extensions-images/today09.png "选择的标签，已自动添加到 UI 模板并为其提供在属性资源管理器小组件选项卡名称 TodayMessage")](extensions-images/today09.png#lightbox)
 3. 将所做的更改保存到情节提要。
-
-<a name="Using-Code" />
 
 #### <a name="using-code"></a>使用代码
 
-若要生成代码中的用户界面，请执行以下操作： 
+若要生成的 UI 代码中，执行以下操作： 
 
-1. 在**解决方案资源管理器**，选择**DaysRemaining**项目中，添加一个新类，称之为`CodeBasedViewController`: 
+1. 在中**解决方案资源管理器**，选择**DaysRemaining**项目中，添加一个新类并调用其`CodeBasedViewController`: 
 
-    [![](extensions-images/code01.png "Aelect DaysRemaining 项目中，添加一个新类并调用它 CodeBasedViewController")](extensions-images/code01.png#lightbox)
-2. 同样，**解决方案资源管理器**，双击扩展的`Info.plist`文件以打开进行编辑： 
+    [![](extensions-images/code01.png "Aelect DaysRemaining 项目中，添加一个新类，调用它 CodeBasedViewController")](extensions-images/code01.png#lightbox)
+2. 同样，在**解决方案资源管理器**，双击扩展的`Info.plist`文件将其打开进行编辑： 
 
-    [![](extensions-images/code02.png "双击扩展的 Info.plist 文件，以便打开进行编辑")](extensions-images/code02.png#lightbox)
-3. 选择**源视图**（从屏幕底部） 并打开`NSExtension`节点： 
+    [![](extensions-images/code02.png "双击要打开以进行编辑的扩展 Info.plist 文件")](extensions-images/code02.png#lightbox)
+3. 选择**源视图**（从屏幕的底部），然后打开`NSExtension`节点： 
 
-    [![](extensions-images/code03.png "选择从屏幕底部的源视图，然后打开 NSExtension 节点")](extensions-images/code03.png#lightbox)
-4. 删除`NSExtensionMainStoryboard`密钥，然后添加`NSPrincipalClass`值`CodeBasedViewController`: 
+    [![](extensions-images/code03.png "从屏幕的底部选择源视图，然后打开 NSExtension 节点")](extensions-images/code03.png#lightbox)
+4. 删除`NSExtensionMainStoryboard`密钥，然后添加`NSExtensionPrincipalClass`具有值`CodeBasedViewController`: 
 
-    [![](extensions-images/code04.png "删除 NSExtensionMainStoryboard 密钥并添加值 CodeBasedViewController NSPrincipalClass")](extensions-images/code04.png#lightbox)
+    [![](extensions-images/code04.png "删除 NSExtensionMainStoryboard 密钥，并添加值 CodeBasedViewController NSExtensionPrincipalClass")](extensions-images/code04.png#lightbox)
 5. 保存更改。
 
-接下来，编辑`CodeBasedViewController.cs`文件并使其如下所示：
+接下来，编辑`CodeBasedViewController.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -219,7 +182,7 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-    [Register("CodeBasedViewContoller")]
+    [Register("CodeBasedViewController")]
     public class CodeBasedViewController : UIViewController, INCWidgetProviding
     {
         public CodeBasedViewController ()
@@ -244,13 +207,11 @@ namespace DaysRemaining
 }
 ```
 
-请注意，`[Register("CodeBasedViewContoller")]`为指定的值匹配`NSPrincipalClass`上面。
-
-<a name="Coding-the-Extension" />
+请注意，`[Register("CodeBasedViewController")]`与为指定的值匹配`NSExtensionPrincipalClass`上面。
 
 ### <a name="coding-the-extension"></a>编码扩展
 
-使用创建用户界面，打开`TodayViewController.cs`或`CodeBasedViewController.cs`文件 （基于用于创建用户界面上面的方法）、 更改**ViewDidLoad**方法并使其如下所示：
+用户界面创建后，打开`TodayViewController.cs`或`CodeBasedViewController.cs`（基于用于创建更高版本的用户界面的方法），文件更改**ViewDidLoad**方法，并使其如下所示：
 
 ```csharp
 public override void ViewDidLoad ()
@@ -271,55 +232,47 @@ public override void ViewDidLoad ()
 }
 ```
 
-如果使用的代码基于用户接口方法，将`// Insert code to power extension here...`与从上面的新代码的注释。 之后调用基实现 （和插入的代码基于版本的标签），这段代码执行简单计算，以获取按年和剩余多少天的星期数。 然后它标签中显示该消息 (`TodayMessage`) 在 UI 设计中创建。
+如果使用基于代码的用户界面方法，将为`// Insert code to power extension here...`使用上面提供的新代码的注释。 之后调用基实现 （和插入的代码基于版本标签），此代码执行简单计算，以获取按年和剩余多少天的日期。 然后，它在该标签中显示消息 (`TodayMessage`) 在 UI 设计中创建。
 
-请注意此过程为编写一个应用程序的正常过程的方式类似。 扩展的`UIViewController`具有在应用程序，视图控制器相同的生命周期，只不过扩展不具有后台模式，并且不会挂起完成用户使用它们。 相反，扩展不重复初始化，并根据需要取消分配。
-
-<a name="Creating-the-Container-App-User-Interface" />
+请注意此过程为编写应用程序的正常过程的相似程度。 扩展的`UIViewController`只不过扩展没有后台模式并不会挂起时用户已完成在应用中，具有相同的生命周期视图控制器使用它们。 相反，扩展重复初始化并根据需要取消分配。
 
 ### <a name="creating-the-container-app-user-interface"></a>创建容器应用程序用户界面
 
-本演练中，容器应用程序只需用作一种方法用来提供并安装扩展，并不提供任何功能。 编辑 TodayContainer`Main.storyboard`文件并添加一些文本定义的扩展函数和如何安装它：
+本演练中，容器应用只需用作一种方法用来传送和安装该扩展，并不提供其自己的任何功能。 编辑 TodayContainer`Main.storyboard`文件，并添加一些文本定义的扩展函数和如何安装它：
 
-[![](extensions-images/today10.png "编辑 TodayContainers Main.storyboard 文件并添加一些定义扩展函数和如何安装它的文本")](extensions-images/today10.png#lightbox)
+[![](extensions-images/today10.png "编辑 TodayContainers Main.storyboard 文件并添加一些文本定义扩展函数和如何安装它")](extensions-images/today10.png#lightbox)
 
 将所做的更改保存到情节提要。
 
-<a name="Testing-the-Extension" />
-
 ### <a name="testing-the-extension"></a>测试扩展
 
-若要在 iOS 模拟器中测试你的扩展，运行**TodayContainer**应用。 容器的主视图将显示：
+若要在 iOS 模拟器中测试你的扩展，运行**TodayContainer**应用。 将显示容器的主视图：
 
-[![](extensions-images/run01.png "将显示的容器的主视图")](extensions-images/run01.png#lightbox)
+[![](extensions-images/run01.png "将显示容器的主视图")](extensions-images/run01.png#lightbox)
 
-接下来，命中**主页**在模拟器中，向下轻扫以打开屏幕的顶部的按钮**通知中心**，选择**今天**选项卡，单击**编辑**按钮：
+接下来，点击**主页**按钮在模拟器中，若要打开的屏幕顶部向下轻扫**通知中心**，选择**今天**卡，然后单击**编辑**按钮：
 
-[![](extensions-images/run02.png "命中在模拟器中，从要打开通知中心，选择今天选项卡，单击编辑按钮的屏幕的顶部向下轻扫主页按钮")](extensions-images/run02.png#lightbox)
+[![](extensions-images/run02.png "点击主页按钮在模拟器中，从要打开通知中心，选择今天选项卡，然后单击编辑按钮的屏幕顶部向下轻扫")](extensions-images/run02.png#lightbox)
 
 添加**DaysRemaining**扩展**今天**查看，然后单击**完成**按钮：
 
-[![](extensions-images/run03.png "将 DaysRemaining 扩展添加到今日视图，单击完成按钮")](extensions-images/run03.png#lightbox)
+[![](extensions-images/run03.png "将 DaysRemaining 扩展添加到今日视图，然后单击完成按钮")](extensions-images/run03.png#lightbox)
 
-新的小组件将添加到**今天**将显示视图和结果：
+新的小组件将添加到**今天**视图和结果将显示：
 
 [![](extensions-images/run04.png "新的小组件将添加到今日视图，并将显示结果")](extensions-images/run04.png#lightbox)
 
-<a name="Communicating-with-the-Host-App" />
+## <a name="communicating-with-the-host-app"></a>与主机应用程序进行通信
 
-## <a name="communicating-with-the-host-app"></a>与主机应用程序通信
+今天扩展上面创建的示例不使用其主机应用程序进行通信 (**今天**屏幕)。 如果有的话，它将使用[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)的属性`TodayViewController`或`CodeBasedViewController`类。 
 
-示例今天上面创建的扩展不与其主机应用程序通信 (**今天**屏幕)。 如果那样，它将使用[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)属性`TodayViewController`或`CodeBasedViewController`类。 
+对于将从其主机应用接收数据的扩展，数据采用的数组的形式[NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/)对象存储在[InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/)属性[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)的扩展的`UIViewController`。
 
-对于将从其主机应用接收数据的扩展，数据是以数组的形式[NSExtensionItem](https://developer.xamarin.com/api/type/Foundation.NSExtensionItem/)对象存储在[InputItems](https://developer.xamarin.com/api/property/Foundation.NSExtensionContext.InputItems/)属性[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)的扩展的`UIViewController`。
+其他扩展名，例如照片编辑扩展，可能会区分用户完成或取消使用情况。 这将返回到主机应用程序通过发出信号[CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/)并[CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/)方法[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)属性。
 
-其他扩展名，例如照片编辑扩展可能区分用户完成或取消使用情况。 这将回到此主机应用程序通过发出信号[CompleteRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CompleteRequest/)和[CancelRequest](https://developer.xamarin.com/api/member/Foundation.NSExtensionContext.CancelRequest/)方法[ExtensionContext](https://developer.xamarin.com/api/type/Foundation.NSExtensionContext/)属性。
+有关详细信息，请参阅 Apple[应用程序扩展编程指南](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)。
 
-有关详细信息，请参阅 Apple 的[应用程序扩展编程指南](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1)。
-
-<a name="Communicating-with-the-Parent-App" />
-
-## <a name="communicating-with-the-parent-app"></a>与父应用程序通信
+## <a name="communicating-with-the-parent-app"></a>与父应用程序进行通信
 
 应用组允许不同的应用程序（或一个应用程序及其扩展）访问共享文件存储位置。 应用组可以用于如下所示的数据：
 
@@ -329,13 +282,11 @@ public override void ViewDidLoad ()
 
 有关详细信息，请参阅[应用组](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md)一部分我们**使用功能**文档。
 
-<a name="MobileCoreServices" />
-
 ## <a name="mobilecoreservices"></a>MobileCoreServices
 
-在使用扩展，使用统一类型标识符 （实用程序） 来创建和操作应用程序、 其他应用程序和/或服务之间交换的数据。
+在使用扩展，使用统一类型标识符 (UTI) 创建和操作应用程序、 其他应用程序和/或服务之间交换的数据。
 
-`MobileCoreServices.UTType`静态类定义的以下帮助器属性，与 Apple 的`kUTType...`定义：
+`MobileCoreServices.UTType`静态类定义以下帮助程序属性与 Apple 的`kUTType...`定义：
 
 - `kUTTypeAlembic` - `Alembic`
 - `kUTTypeAliasFile` - `AliasFile`
@@ -499,23 +450,17 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 有关详细信息，请参阅[应用组](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md)一部分我们**使用功能**文档。
 
-
-<a name="Precautions-and-Considerations" />
-
 ## <a name="precautions-and-considerations"></a>预防措施和注意事项
 
-扩展有明显更少内存提供给他们不是执行应用。 他们预计要执行快速和与指向用户和它们承载在应用程序的最小入侵。 但是，扩展还应提供到消费应用程序与的经过品牌打造的用户界面，可允许用户确定扩展的开发人员或它们所属的容器应用程序的独特、 有用函数。
+扩展具有更少的内存提供给他们不是执行应用程序。 它们应执行快速和具有对用户和应用程序中托管的最小入侵。 但是，扩展还应提供一个经过品牌打造的用户界面，允许用户标识扩展的开发人员与正在使用的应用或其所属的容器应用的独特、 有用函数。
 
-提供这些紧密的要求，您应该仅部署已全面测试和优化性能和内存消耗的扩展。 
-
-<a name="Summary" />
+给定这些严格要求，应仅将部署扩展，它已彻底进行测试和优化性能和内存消耗。 
 
 ## <a name="summary"></a>总结
 
-本文档已覆盖扩展，它们是什么，扩展点以及由 iOS 规定扩展上的已知的限制的类型。 它讨论创建、 分发、 安装和运行扩展和扩展生命周期。 它提供的演练创建一个简单的**今天**小组件显示两种方式创建小组件的 UI 使用情节提要或代码。 它介绍了如何在 iOS 模拟器中测试扩展。 最后，它简要讨论与主机应用程序和几个预防措施和开发扩展时应考虑的事项通信。 
-
+本文档已介绍了扩展，它们是什么，扩展点以及由 iOS 规定的扩展的已知的限制的类型。 它介绍了创建、 分发、 安装和运行扩展和扩展生命周期。 提供创建一个简单的演练**今天**小组件显示两种方式创建小组件的 UI 使用情节提要或代码。 它介绍了如何在 iOS 模拟器中测试扩展。 最后，它简要介绍了与主机应用程序和一些预防措施和开发扩展时应采取的注意事项进行通信。 
 
 ## <a name="related-links"></a>相关链接
 
 - [ContainerApp （示例）](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
-- [创建在 Xamarin.iOS 的扩展 （视频）](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
+- [在 Xamarin.iOS 中创建扩展 （视频）](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)

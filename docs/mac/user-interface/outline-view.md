@@ -1,187 +1,187 @@
 ---
-title: Xamarin.Mac 中的大纲视图
-description: 本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。 它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。
+title: 在 Xamarin.Mac 中的大纲视图
+description: 本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。 它介绍了创建和维护在 Xcode 和 Interface Builder 中的大纲视图和以编程方式使用它们。
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a12eee5f473ffdc6a235faeb55c0a3d6754f4629
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7228a22eeae3dfdb354ba3693c277251fd2cd821
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792822"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40250992"
 ---
-# <a name="outline-views-in-xamarinmac"></a>Xamarin.Mac 中的大纲视图
+# <a name="outline-views-in-xamarinmac"></a>在 Xamarin.Mac 中的大纲视图
 
-_本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。它介绍创建和维护 Xcode 和接口生成器中的大纲视图和以编程方式使用它们。_
+_本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。它介绍了创建和维护在 Xcode 和 Interface Builder 中的大纲视图和以编程方式使用它们。_
 
-在使用 C# 和.NET Xamarin.Mac 应用程序中，你有权访问相同大纲视图，开发人员使用*Objective C*和*Xcode*未。 因为 Xamarin.Mac 与 Xcode 直接集成，你可以使用 Xcode 的_接口生成器_来创建和维护大纲视图 （或根据需要在 C# 代码中直接创建它们）。
+如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个大纲视图，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护大纲视图 （或选择通过 C# 代码中直接创建）。
 
-大纲视图是表的一种允许用户类型展开或折叠的分层数据行。 表视图类似，大纲视图与表示各个项和表示的那些项目的属性的列的行中显示一组相关项的数据。 与不同的表视图中，大纲视图中的项不在平面列表中，其组织的层次结构，如文件和在硬盘上的文件夹中。
+大纲视图是一种表，用户可以通过展开或折叠的分层数据的行。 表视图中，如大纲视图显示数据的一组相关项，其中每行表示各个项和列，表示这些项的属性。 与不同的表视图中，在大纲视图中的项不在平面列表中，它们在层次结构中，如文件和文件夹在硬盘上的组织方式。
 
-[![](outline-view-images/populate03.png "运行示例应用程序")](outline-view-images/populate03.png#lightbox)
+[![](outline-view-images/populate03.png "运行示例应用")](outline-view-images/populate03.png#lightbox)
 
-在本文中，我们将介绍使用 Xamarin.Mac 应用程序中的大纲视图的基础知识。 强烈建议你通读[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和接口生成器简介](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder)和[插座和操作](~/mac/get-started/hello-mac.md#Outlets_and_Actions)部分中的，因为它介绍主要概念和我们将在本文中使用的技术。
+在本文中，我们将介绍 Xamarin.Mac 应用程序中使用大纲视图的基础知识。 强烈建议您明确[Hello，Mac](~/mac/get-started/hello-mac.md)文章第一次，具体而言[Xcode 和 Interface Builder 简介](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder)并[输出口和操作](~/mac/get-started/hello-mac.md#outlets-and-actions)部分中的，因为它介绍了关键概念和技术，我们将在本文中使用。
 
-你可能想要看一看[公开 C# 类 / Objective C 的方法](~/mac/internals/how-it-works.md)部分[Xamarin.Mac 内部](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`命令用于网络-最多 C# 类 OBJECTIVE-C 的对象和 UI 元素。
+可能想要看一看[公开 C# 类 / 方法添加到 Objective C](~/mac/internals/how-it-works.md)一部分[Xamarin.Mac 内部机制](~/mac/internals/how-it-works.md)文档，它还说明了`Register`和`Export`命令用于布置于 C# 类对 OBJECTIVE-C 对象和 UI 元素。
 
 <a name="Introduction_to_Outline_Views" />
 
-## <a name="introduction-to-outline-views"></a>介绍概述视图
+## <a name="introduction-to-outline-views"></a>大纲视图简介
 
-大纲视图是表的一种允许用户类型展开或折叠的分层数据行。 表视图类似，大纲视图与表示各个项和表示的那些项目的属性的列的行中显示一组相关项的数据。 与不同的表视图中，大纲视图中的项不在平面列表中，其组织的层次结构，如文件和在硬盘上的文件夹中。
+大纲视图是一种表，用户可以通过展开或折叠的分层数据的行。 表视图中，如大纲视图显示数据的一组相关项，其中每行表示各个项和列，表示这些项的属性。 与不同的表视图中，在大纲视图中的项不在平面列表中，它们在层次结构中，如文件和文件夹在硬盘上的组织方式。
 
-如果大纲视图中的项包含其他项，它可以展开或折叠的用户。 可展开的项目将显示一个明显的三角形，用于指向右侧，当项处于折叠状态，并展开项时指向下。 单击泄露三角形会导致要展开或折叠的项。
+如果大纲视图中的项包含其他项，它可展开或折叠的用户。 可展开的项显示一个明显的三角形，用于指向右侧项折叠和展开项时，向下指时。 单击泄露三角形会导致要展开或折叠的项。
 
-大纲视图 (`NSOutlineView`) 是位于表视图的子类 (`NSTableView`)，并在这种情况下，从其父类继承其大部分行为。 因此，大纲视图也支持所支持的表视图中，选择行或列，例如通过拖动列标题，等等，调整列的许多操作。 Xamarin.Mac 应用程序具有这些功能的控制权，可以配置该大纲视图的参数 （无论是在代码还是接口生成器） 以允许或禁止某些操作。
+大纲视图 (`NSOutlineView`) 是一个表视图的子类 (`NSTableView`) 并在这种情况下，将其大部分行为继承其父类。 结果是，大纲视图也支持许多操作支持的表视图中，如选择行或列，通过拖动列标题，等等，重新定位列。 Xamarin.Mac 应用程序可以控制这些功能，并可以配置大纲视图的参数 （不管是在代码或 Interface Builder 中） 以允许或禁止某些操作。
 
-大纲视图不会存储它自己的数据，而是依赖数据源 (`NSOutlineViewDataSource`) 提供的行和所需，根据需要逐列。
+大纲视图不会存储其自己的数据，而是依赖数据源 (`NSOutlineViewDataSource`) 提供的行和按需基于要求的列。
 
-可以通过提供的子类大纲视图委托的自定义大纲视图的行为 (`NSOutlineViewDelegate`) 若要支持大纲列管理，键入选择功能、 行选择，编辑、 自定义跟踪和为各个自定义视图列和行。
+可以通过提供的大纲视图委托子类自定义大纲视图的行为 (`NSOutlineViewDelegate`) 若要支持大纲列管理，键入要选择功能、 行选择和编辑、 自定义跟踪和为各个自定义视图列和行。
 
-由于与表视图，大纲视图共享大部分它的行为和功能，你可能希望通过我们[表视图](~/mac/user-interface/table-view.md)文档，然后再继续执行本文。
+由于与表视图，大纲视图共享大部分它的行为和功能，你可能想要通过我们[表视图](~/mac/user-interface/table-view.md)文档，然后再继续完成这篇文章。
 
 <a name="Creating_and_Maintaining_Outline_Views_in_Xcode" />
 
 ## <a name="creating-and-maintaining-outline-views-in-xcode"></a>创建和维护在 Xcode 中的大纲视图
 
-时创建新的 Xamarin.Mac Cocoa 应用程序时，默认情况下将获得标准保留为空，窗口。 在中定义此 windows`.storyboard`自动包括在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案资源管理器**，双击`Main.storyboard`文件：
+在创建新的 Xamarin.Mac 的 Cocoa 应用程序时，默认情况下获得标准保留为空，窗口。 在中定义此 windows`.storyboard`自动包含在项目中的文件。 若要编辑您的 windows 设计、 在**解决方案资源管理器**，双击`Main.storyboard`文件：
 
-[![](outline-view-images/edit01.png "选择主情节提要")](outline-view-images/edit01.png#lightbox)
+[![](outline-view-images/edit01.png "选择主要情节提要")](outline-view-images/edit01.png#lightbox)
 
-这将在 Xcode 的接口生成器中打开的窗口设计：
+这将在 Xcode 的 Interface Builder 中打开的窗口设计：
 
-[![](outline-view-images/edit02.png "编辑在 Xcode 中 UI")](outline-view-images/edit02.png#lightbox)
+[![](outline-view-images/edit02.png "编辑在 Xcode 中的 UI")](outline-view-images/edit02.png#lightbox)
 
-类型`outline`到**库 Inspector 的**搜索框以使其更轻松地找到大纲视图控件：
+类型`outline`成**库检查器**搜索框，可以更轻松地找到大纲视图控件：
 
 [![](outline-view-images/edit03.png "从库中选择的大纲视图")](outline-view-images/edit03.png#lightbox)
 
-大纲视图拖到中的视图控制器**界面编辑器**，使其填写的内容区域的视图控制器，并将其设置为其中缩小和随着中的窗口**约束编辑器**:
+大纲视图拖至中的视图控制器**界面编辑器**，使其填充内容区域的视图控制器，并将其设置为其中缩小和中的窗口都在增加**约束编辑器**:
 
 [![](outline-view-images/edit04.png "编辑约束")](outline-view-images/edit04.png#lightbox)
 
-选择中的大纲视图**接口层次结构**和以下属性位于**属性检查器**:
+选择中的大纲视图**界面层次结构**和以下属性可用于在**属性检查器**:
 
 [![](outline-view-images/edit05.png "属性检查器")](outline-view-images/edit05.png#lightbox)
 
-- **概述列**的表列中显示分层数据。
+- **概述列**-在其中显示分层数据的表列。
 - **自动保存大纲列**-如果`true`，大纲列将自动保存和还原应用程序运行之间。
-- **缩进**-要缩进下已展开的项目列的量。
+- **缩进**-要缩进已展开的项目下的列的量。
 - **缩进遵循单元格**-如果`true`，缩进标记将缩进以及单元格。
 - **自动保存展开项**-如果`true`，将自动保存和还原应用程序运行之间的项的展开/折叠状态。
-- **内容模式**-允许你使用任一视图 (`NSView`) 或单元格 (`NSCell`) 若要显示的行和列中的数据。 从开始 macOS 10.7，应使用视图。
-- **浮动对行进行分组**-如果`true`，表视图将绘制分组单元格，就像它们浮动。
+- **内容模式**-可以使用任一视图 (`NSView`) 或单元格 (`NSCell`) 若要显示的行和列中的数据。 从 macOS 10.7，应使用视图。
+- **浮动的行进行分组**-如果`true`，表视图将绘制分组单元格，如同它们浮动。
 - **列**-定义显示的列数。
 - **标头**-如果`true`，这些列将具有标题。
 - **重新排序**-如果`true`，用户将能够将对表中的列重新排序。
-- **调整大小**-如果`true`，用户将能够拖动列标题来调整列的大小。
-- **调整列大小**-控制如何表将自动调整列的大小。
-- **突出显示**-选择单元格时，将使用的突出显示的表类型的控件。
-- **备用行**-如果`true`、 曾经其他行，将有不同的背景色。
+- **重设大小**-如果`true`，用户将能够拖动列标题来调整列的大小。
+- **列大小调整**-控制如何在表将自动大小的列。
+- **突出显示**-当选择了某个单元时使用的突出显示的表类型的控件。
+- **行的备用**-如果`true`、 永远另一行将具有不同的背景色。
 - **水平网格**-选择的水平绘制单元格之间的边框类型。
 - **垂直网格**-选择的垂直绘制的单元格之间的边框类型。
-- **网格颜色**-设置单元格边框颜色。
-- **后台**-设置单元格背景色。
+- **网格颜色**-设置单元格的边框颜色。
+- **背景**-设置单元格背景色。
 - **选择**-可用于控制如何，用户可以在与表中选择单元格：
     - **多个**-如果`true`，用户可以选择多个行和列。
-    - **列**-如果`true`，用户可以选择列。
-    - **键入 Select** -如果`true`，用户可以键入要选择的行的字符。
-    - **空**-如果`true`，用户无需选择行或列，表允许未选择任何内容根本。
-- **自动保存**-下保存表格式是自动的名称。
+    - **列**-如果`true`，用户可以选择的列。
+    - **键入 Select** -如果`true`，用户可以键入要选择某一行的字符。
+    - **空**-如果`true`，用户不需要选择的行或列，表进行任何选择根本。
+- **自动保存**-在保存表格式是自动的名称。
 - **列信息**-如果`true`的顺序和列的宽度将自动保存。
-- **分行符**-选择单元格处理分行符的方式。
-- **将截断最后一个可见行**-如果`true`，该单元格将被截断数据能否不适合它的边界内。
+- **分行符**-选择单元格处理换行符的方式。
+- **将最后一个可见行截断**-如果`true`，将不适合它的边界内的数据可以截断该单元格。
 
 > [!IMPORTANT]
-> 除非你要保留旧 Xamarin.Mac 应用程序，`NSView`应通过使用基于的大纲视图`NSCell`基于表视图。 `NSCell` 被视为旧和可能不支持今后。
+> 要保留旧的 Xamarin.Mac 应用程序，除非`NSView`应通过使用基于的大纲视图`NSCell`基于表视图。 `NSCell` 被视为旧版，可能不支持今后。
 
-选择中的表列**接口层次结构**和以下属性位于**属性检查器**:
+选择中的表列**界面层次结构**和以下属性可用于在**属性检查器**:
 
 [![](outline-view-images/edit06.png "属性检查器")](outline-view-images/edit06.png#lightbox)
 
 - **标题**-设置列的标题。
-- **对齐**-在单元格内设置文本的对齐方式。
+- **对齐方式**-的单元中设置文本的对齐方式。
 - **标题字体**-选择单元格的标头文本的字体。
-- **排序关键字**-是用于对列中的数据进行排序的键。 将用户无法对此列进行排序的情况下留空。
-- **选择器**-是**操作**用于执行排序。 将用户无法对此列进行排序的情况下留空。
-- **顺序**-为列数据的排序顺序。
-- **调整大小**-选择的调整大小的列类型。
+- **排序关键字**-是用于对列中的数据进行排序的键。 保留为空，如果用户不能对此列进行排序。
+- **选择器**-是**操作**用于执行排序。 保留为空，如果用户不能对此列进行排序。
+- **顺序**-是列数据的排序顺序。
+- **重设大小**-选择调整大小的列的类型。
 - **可编辑**-如果`true`，用户可以编辑单元格基于表的单元格。
-- **隐藏**-如果`true`，隐藏列。
+- **隐藏**-如果`true`，隐藏该列。
 
-你可以通过它的句柄 （垂直居中右侧列的） 左或向右拖动来调整列的大小。
+您可以通过拖动其句柄 （垂直方向上居中列的右侧） 左或向右来调整列的大小。
 
-让我们在我们的表视图中选择每个列，并为第一列**标题**的`Product`和第二个`Details`。
+让我们来选择表视图中的每个列，并为提供的第一列**标题**的`Product`将第二个`Details`。
 
-选择一个表格单元格视图 (`NSTableViewCell`) 中**接口层次结构**和以下属性位于**属性检查器**:
+选择一个表格单元格视图 (`NSTableViewCell`) 中**界面层次结构**和以下属性可用于在**属性检查器**:
 
 [![](outline-view-images/edit07.png "属性检查器")](outline-view-images/edit07.png#lightbox)
 
-这些是所有标准视图的属性。 此外可以调整此列此处行的大小。
+这些是所有的标准视图的属性。 此外可以调整此列的行的大小。
 
-选择表视图单元格 (默认情况下，这是`NSTextField`) 中**接口层次结构**和以下属性位于**属性检查器**:
+选择表视图单元格 (默认情况下，这是`NSTextField`) 中**界面层次结构**和以下属性可用于在**属性检查器**:
 
 [![](outline-view-images/edit08.png "属性检查器")](outline-view-images/edit08.png#lightbox)
 
-您必须要在此处设置的标准文本字段的所有属性。 默认情况下，标准的文本字段用于显示列中的某个单元格数据。
+您必须要在此处设置的标准文本字段的所有属性。 默认情况下，标准的文本字段用于在列中显示的单元格的数据。
 
-选择一个表格单元格视图 (`NSTableFieldCell`) 中**接口层次结构**和以下属性位于**属性检查器**:
+选择一个表格单元格视图 (`NSTableFieldCell`) 中**界面层次结构**和以下属性可用于在**属性检查器**:
 
 [![](outline-view-images/edit09.png "属性检查器")](outline-view-images/edit09.png#lightbox)
 
-最重要的设置如下：
+最重要的设置是：
 
-- **布局**-选择此列中的单元格的布局方式如何。
-- **使用单个行模式**-如果`true`，该单元格是否限制为单个行。
-- **第一个运行时布局宽度**-如果`true`，该单元格将首选宽度设置为其 （手动或自动） 时它将显示第一次运行应用程序。
-- **操作**-控制编辑**操作**发送单元格。
-- **行为**-定义单元格是否可选择或可编辑。
-- **格式文本**-如果`true`，该单元格可以显示格式和样式的文本。
-- **撤消**-如果`true`，对它的单元格不承担责任撤消行为。
+- **布局**-选择此列中的单元格的布局的方式。
+- **使用单个行模式**-如果`true`，该单元格被限制为单个行。
+- **第一个运行时布局宽度**-如果`true`，该单元格将首选宽度为其设置 （手动或自动） 时显示首次运行该应用程序。
+- **操作**-控制何时编辑**操作**发送有关单元格。
+- **行为**-定义单元格是否可选或可编辑。
+- **格式文本**-如果`true`，该单元格可以显示进行了格式化，带样式的文本。
+- **撤消**-如果`true`，该单元格承担的责任，对它的撤消行为。
 
-选择表单元格视图 (`NSTableFieldCell`) 中的表列底部**接口层次结构**:
+选择表单元格视图 (`NSTableFieldCell`) 中的表格列底部**界面层次结构**:
 
-[![](outline-view-images/edit11.png "选择表单元格视图")](outline-view-images/edit10.png#lightbox)
+[![](outline-view-images/edit11.png "选择表单元视图")](outline-view-images/edit10.png#lightbox)
 
-这使您可以编辑作为的基础的表单元格视图_模式_为给定的列创建的所有单元格。
+这使您可以编辑表单元格视图用作的基础_模式_为给定的列创建的所有单元格。
 
 <a name="Adding_Actions_and_Outlets" />
 
-### <a name="adding-actions-and-outlets"></a>添加操作和容器
+### <a name="adding-actions-and-outlets"></a>添加操作和输出口
 
-只需像任何其他 Cocoa UI 控件，我们需要公开我们大纲视图并且会列和 C# 代码使用单元格**操作**和**Outlet** （基于所需的功能）。
+只需像任何其他 Cocoa UI 控件，我们需要公开大纲视图和列并与 C# 代码使用的单元格**操作**并**输出口**（基于所需的功能）。
 
-该过程是我们想要公开任何大纲视图元素相同的：
+过程是相同的任何我们想要公开的大纲视图元素：
 
-1. 切换到**助手编辑器中**并确保`ViewController.h`选择文件： 
+1. 切换到**助手编辑器**并确保`ViewController.h`选择文件： 
 
     [![](outline-view-images/edit11.png "选择正确的.h 文件")](outline-view-images/edit11.png#lightbox)
-2. 选择从该大纲视图**接口层次结构**、 单击和拖动到`ViewController.h`文件。
-3. 创建**Outlet**大纲视图中调用的`ProductOutline`: 
+2. 选择从大纲视图**界面层次结构**、 单击和拖动到`ViewController.h`文件。
+3. 创建**输出口**为大纲视图名为`ProductOutline`: 
 
-    [![](outline-view-images/edit13.png "配置上的电源插座")](outline-view-images/edit13.png#lightbox)
-4. 创建**Outlet**对于表列也被称为`ProductColumn`和`DetailsColumn`: 
+    [![](outline-view-images/edit13.png "配置输出口")](outline-view-images/edit13.png#lightbox)
+4. 创建**输出口**对于表列也被称为`ProductColumn`和`DetailsColumn`: 
 
-    [![](outline-view-images/edit14.png "配置上的电源插座")](outline-view-images/edit14.png#lightbox)
+    [![](outline-view-images/edit14.png "配置输出口")](outline-view-images/edit14.png#lightbox)
 5. 保存更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-接下来，我们将编写的代码显示概要中的一些数据时运行该应用程序。
+接下来，我们将编写的代码显示大纲的某些数据时运行该应用程序。
 
 <a name="Populating_the_Table_View" />
 
-## <a name="populating-the-outline-view"></a>填充该大纲视图
+## <a name="populating-the-outline-view"></a>填充大纲视图
 
-与我们的大纲视图在接口生成器中设计和通过公开**Outlet**，接下来我们需要创建的 C# 代码来填充它。
+与我们的大纲视图在 Interface Builder 中设计和通过公开**输出口**，接下来我们需要创建的 C# 代码来填充它。
 
-首先，让我们创建一个新`Product`类来保存单个行和组的子产品的信息。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`Product`为**名称**单击**新建**按钮：
+首先，让我们创建一个新`Product`类来保存为单个行的子产品组的信息。 在中**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`Product`有关**名称**然后单击**新建**按钮：
 
-[![](outline-view-images/populate01.png "创建一个空的类")](outline-view-images/populate01.png#lightbox)
+[![](outline-view-images/populate01.png "创建一个空类")](outline-view-images/populate01.png#lightbox)
 
-请`Product.cs`文件外观如下所示：
+使`Product.cs`文件外观如下所示：
 
 ```csharp
 using System;
@@ -219,9 +219,9 @@ namespace MacOutlines
 }
 ```
 
-接下来，我们需要创建的一个子类`NSOutlineDataSource`为所请求的我们大纲提供数据。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDataSource`为**名称**单击**新建**按钮。
+接下来，我们需要创建一个子类`NSOutlineDataSource`按要求我们轮廓提供的数据。 在中**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDataSource`有关**名称**然后单击**新建**按钮。
 
-编辑`ProductTableDataSource.cs`文件并使其如下所示：
+编辑`ProductTableDataSource.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -280,11 +280,11 @@ namespace MacOutlines
 }
 ```
 
-此类已存储为我们的大纲视图项和替代`GetChildrenCount`以返回表中的行数。 `GetChild` （如请求的大纲视图） 中返回一个特定的父级或子级项和`ItemExpandable`作为父或子元素定义指定的项。
+此类采用我们大纲视图项的存储，并重写`GetChildrenCount`表中返回的行数。 `GetChild` （如请求的大纲视图） 将返回一个特定的父级或子级项和`ItemExpandable`定义为父或子元素指定的项。
 
-最后，我们需要创建的一个子类`NSOutlineDelegate`以提供我们大纲的行为。 在**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDelegate`为**名称**单击**新建**按钮。
+最后，我们需要创建一个子类`NSOutlineDelegate`以提供有关我们概述的行为。 在中**解决方案资源管理器**，右键单击该项目并选择**添加** > **新文件...** 选择**常规** > **空类**，输入`ProductOutlineDelegate`有关**名称**然后单击**新建**按钮。
 
-编辑`ProductOutlineDelegate.cs`文件并使其如下所示：
+编辑`ProductOutlineDelegate.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -349,9 +349,9 @@ namespace MacOutlines
 }
 ```
 
-当我们创建的实例`ProductOutlineDelegate`，我们还传递的实例中`ProductOutlineDataSource`大纲提供数据。 `GetView`方法负责返回视图 （数据） 以显示给定列和行的单元格。 如果可能，将重用现有视图以显示该单元格，如果不是必须创建一个新视图。
+我们创建的实例时`ProductOutlineDelegate`，我们还传递的实例中`ProductOutlineDataSource`提供概要中的数据。 `GetView`方法负责返回视图 （数据） 以显示为列和行的单元格。 如果可能，将重复使用现有视图以显示单元格，如果不是必须创建新视图。
 
-若要填充大纲，让我们编辑`MainWindow.cs`文件并进行`AwakeFromNib`方法外观如下所示：
+若要填充概要中，让我们编辑`MainWindow.cs`文件，然后进行`AwakeFromNib`方法看起来像以下：
 
 ```csharp
 public override void AwakeFromNib ()
@@ -388,11 +388,11 @@ public override void AwakeFromNib ()
 }
 ```
 
-如果我们运行应用程序时，显示以下信息：
+如果我们运行该应用程序，将显示以下：
 
-[![](outline-view-images/populate02.png "在折叠的视图")](outline-view-images/populate02.png#lightbox)
+[![](outline-view-images/populate02.png "折叠的视图")](outline-view-images/populate02.png#lightbox)
 
-如果我们展开大纲视图中的节点，它将查找如下所示：
+如果我们展开大纲视图中的节点，它将如下所示：
 
 [![](outline-view-images/populate03.png "已展开的视图")](outline-view-images/populate03.png#lightbox)
 
@@ -400,13 +400,13 @@ public override void AwakeFromNib ()
 
 ## <a name="sorting-by-column"></a>按列排序
 
-让我们允许用户通过单击列标题在大纲中的数据进行排序。 首先，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择`Product`列中，输入`Title`为**排序键**，`compare:`为**选择器**和选择`Ascending`为**顺序**:
+让我们允许用户通过单击列标题排序概要中的数据。 首先，双击`Main.storyboard`文件以打开 Interface Builder 中为进行编辑。 选择`Product`列中，输入`Title`有关**排序键**，`compare:`有关**选择器**，然后选择`Ascending`为**顺序**:
 
-[![](outline-view-images/sort01.png "设置排序键的顺序")](outline-view-images/sort01.png#lightbox)
+[![](outline-view-images/sort01.png "设置排序键顺序")](outline-view-images/sort01.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-现在让我们编辑`ProductOutlineDataSource.cs`文件并添加以下方法：
+现在让我们编辑`ProductOutlineDataSource.cs`文件，并添加以下方法：
 
 ```csharp
 public void Sort(string key, bool ascending) {
@@ -431,7 +431,7 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 }
 ```
 
-`Sort`方法使我们能够基于数据源中的数据排序给定`Product`类字段按升序或降序。 重写`SortDescriptorsChanged`每次使用单击列标题时，将调用方法。 将传递**密钥**我们在接口生成器和该列的排序顺序中设置的值。
+`Sort`方法使我们能够对基于数据源中的数据排序给定`Product`类字段按升序或降序排序。 重写`SortDescriptorsChanged`每次使用单击列标题上时，将调用方法。 将其传递**密钥**Interface Builder 和该列的排序顺序中设置的值。
 
 如果我们运行该应用程序，并单击列标题中，将按该列排序行：
 
@@ -441,14 +441,14 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 
 ## <a name="row-selection"></a>行选择
 
-如果你想要允许用户选择单个行中，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择中的大纲视图**接口层次结构**并取消选中**多个**中的复选框**属性检查器**:
+如果你想要允许用户选择的单个行中，双击`Main.storyboard`文件以打开 Interface Builder 中为进行编辑。 选择中的大纲视图**界面层次结构**并取消选中**多个**中的复选框**属性检查器**:
 
 [![](outline-view-images/select01.png "属性检查器")](outline-view-images/select01.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 
-接下来，编辑`ProductOutlineDelegate.cs`文件并添加以下方法：
+接下来，编辑`ProductOutlineDelegate.cs`文件，并添加以下方法：
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -458,20 +458,20 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-这将允许用户在该大纲视图中选择任何单个行。 返回`false`为`ShouldSelectItem`的任一项，你不希望用户能够选择或`false`对于每个项，如果你不希望用户能够选择任何项。
+这将允许用户在大纲视图中选择任何单个行。 返回`false`有关`ShouldSelectItem`有关任一项，您不希望用户能够选择或`false`每一项，如果您不希望用户能够选择任何项。
 
 <a name="Multiple_Row_Selection" />
 
 ## <a name="multiple-row-selection"></a>多个行选择
 
-如果你想要允许用户选择多个行中，双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择中的大纲视图**接口层次结构**并检查**多个**中的复选框**属性检查器**:
+如果你想要允许用户选择多个行中，双击`Main.storyboard`文件以打开 Interface Builder 中为进行编辑。 选择中的大纲视图**界面层次结构**，并检查**多个**中的复选框**属性检查器**:
 
 [![](outline-view-images/select02.png "属性检查器")](outline-view-images/select02.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
 
-接下来，编辑`ProductOutlineDelegate.cs`文件并添加以下方法：
+接下来，编辑`ProductOutlineDelegate.cs`文件，并添加以下方法：
 
 ```csharp
 public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
@@ -481,19 +481,19 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 }
 ```
 
-这将允许用户在该大纲视图中选择任何单个行。 返回`false`为`ShouldSelectRow`的任一项，你不希望用户能够选择或`false`对于每个项，如果你不希望用户能够选择任何项。
+这将允许用户在大纲视图中选择任何单个行。 返回`false`有关`ShouldSelectRow`有关任一项，您不希望用户能够选择或`false`每一项，如果您不希望用户能够选择任何项。
 
 <a name="Type_to_Select_Row" />
 
 ## <a name="type-to-select-row"></a>要选择的行类型
 
-如果你想要允许用户与选定的大纲视图键入字符，然后选择第一行具有该字符，则双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择中的大纲视图**接口层次结构**并检查**类型选择**中的复选框**属性检查器**:
+如果你想要允许用户使用选定的大纲视图中键入字符，然后选择第一行具有该字符，则双击`Main.storyboard`文件以打开 Interface Builder 中为进行编辑。 选择中的大纲视图**界面层次结构**，并检查**类型选择**中的复选框**属性检查器**:
 
 [![](outline-view-images/type01.png "编辑的行类型")](outline-view-images/type01.png#lightbox)
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-现在让我们编辑`ProductOutlineDelegate.cs`文件并添加以下方法：
+现在让我们编辑`ProductOutlineDelegate.cs`文件，并添加以下方法：
 
 ```csharp
 public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSObject startItem, NSObject endItem, string searchString)
@@ -509,21 +509,21 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 }
 ```
 
-`GetNextTypeSelectMatch`方法采用给定`searchString`并返回第一个项`Product`中它的包含该字符串`Title`。
+`GetNextTypeSelectMatch`方法采用给定`searchString`，并返回第一个项`Product`，该字符串中包含的`Title`。
 
 <a name="Reordering_Columns" />
 
 ## <a name="reordering-columns"></a>对列重新排序
 
-如果你想要允许用户将对在大纲视图中的列重新排序，请双击`Main.storyboard`文件以打开它以在接口生成器中编辑。 选择中的大纲视图**接口层次结构**并检查**Reordering**中的复选框**属性检查器**:
+如果你想要允许用户拖动对在大纲视图中的列重新排序，请双击`Main.storyboard`文件以打开 Interface Builder 中为进行编辑。 选择中的大纲视图**界面层次结构**，并检查**重新排序功能**中的复选框**属性检查器**:
 
 [![](outline-view-images/reorder01.png "属性检查器")](outline-view-images/reorder01.png#lightbox)
 
-如果我们为提供的值**自动保存**属性并检查**列信息**字段中，我们对表的布局进行任何更改将自动为我们保存和还原应用程序的下一次运行。
+如果我们提供的值**自动保存**属性并检查**的列信息**字段中，我们对表的布局进行任何更改会自动为我们保存和还原应用程序的下一次运行时。
 
 保存所做的更改并返回到 Visual Studio for Mac 与 Xcode 同步。
 
-现在让我们编辑`ProductOutlineDelegate.cs`文件并添加以下方法：
+现在让我们编辑`ProductOutlineDelegate.cs`文件，并添加以下方法：
 
 ```csharp
 public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex, nint newColumnIndex)
@@ -532,9 +532,9 @@ public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex,
 }
 ```
 
-`ShouldReorder`方法应返回`true`它想要允许为任何列拖到重新排序`newColumnIndex`，否则返回`false`;
+`ShouldReorder`方法应返回`true`它想要允许为任何列拖动到重新排序`newColumnIndex`，否则返回`false`;
 
-如果我们运行应用程序时，我们可以通过拖动围绕的列标题来对我们列重新排序：
+如果我们运行该应用程序，我们可以拖动周围的列标题对列重新排序：
 
 [![](outline-view-images/reorder02.png "重新排序的列的示例")](outline-view-images/reorder02.png#lightbox)
 
@@ -542,7 +542,7 @@ public override bool ShouldReorder (NSOutlineView outlineView, nint columnIndex,
 
 ## <a name="editing-cells"></a>编辑单元格
 
-如果你想要允许用户编辑给定的单元格的值，编辑`ProductOutlineDelegate.cs`文件并将更改`GetViewForItem`方法，如下所示：
+如果你想要允许用户编辑给定的单元格的值，请编辑`ProductOutlineDelegate.cs`文件，并更改`GetViewForItem`方法，如下所示：
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -596,15 +596,15 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-现在如果我们运行应用程序时，用户可以编辑的单元格的表视图中：
+现在如果我们运行该应用程序，用户可以编辑的表视图中的单元格：
 
-[![](outline-view-images/editing01.png "下面举例说明编辑单元格")](outline-view-images/editing01.png#lightbox)
+[![](outline-view-images/editing01.png "举例说明如何编辑单元格")](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views" />
 
-## <a name="using-images-in-outline-views"></a>在大纲视图中使用图像
+## <a name="using-images-in-outline-views"></a>在大纲视图中使用映像
 
-若要包含图像，作为一部分中的单元格`NSOutlineView`，你将需要更改该大纲视图返回数据的方式`NSTableViewDelegate's``GetView`方法来使用`NSTableCellView`而不是典型`NSTextField`。 例如：
+用于包含映像中的单元格的一部分`NSOutlineView`，将需要更改大纲视图返回的数据是如何`NSTableViewDelegate's``GetView`要使用的方法`NSTableCellView`而不是典型`NSTextField`。 例如：
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -668,23 +668,23 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-有关详细信息，请参阅[与大纲视图中使用映像](~/mac/app-fundamentals/image.md)一部分我们[使用映像](~/mac/app-fundamentals/image.md)文档。
+有关详细信息，请参阅[使用大纲视图中使用图像](~/mac/app-fundamentals/image.md)一部分我们[使用映像](~/mac/app-fundamentals/image.md)文档。
 
 <a name="Data_Binding_Outline_Views" />
 
 ## <a name="data-binding-outline-views"></a>数据绑定大纲视图
 
-通过使用 Xamarin.Mac 应用程序中的键值对的编码和数据绑定技术，你可以显著缩短你需要编写和维护填充和使用 UI 元素的代码量。 你还可以进一步分离你的备份数据的好处 (_数据模型_) 从你前面结束用户界面 (_模型-视图-控制器_)，从而导致易于维护更灵活的应用程序设计。
+通过在 Xamarin.Mac 应用程序中使用的键-值编码和数据绑定技术，您可以极大地减少需要编写和维护来填充和使用 UI 元素的代码量。 此外可以进一步分离你的备份数据的好处 (_数据模型_) 从你前面结束用户界面 (_模型-视图-控制器_)，从而导致更易于维护，更灵活的应用程序设计。
 
-键值对的编码 (KVC) 是用于间接访问的对象的属性，请使用键 （特殊格式字符串） 来标识而不是通过实例变量访问这些属性或访问器方法的机制 (`get/set`)。 通过实现 Xamarin.Mac 应用程序中的键值对的编码符合访问器，你可以访问键 / 值观察 (KVO)、 数据绑定、 核心数据、 Cocoa 绑定和 scriptability 等其他 macOS 功能。
+键值对的编码 (KVC) 是一种机制间接访问对象的属性、 使用密钥 （特殊格式字符串） 来标识而不是通过实例变量访问它们的属性或访问器方法 (`get/set`)。 在 Xamarin.Mac 应用程序中实现键 / 值编码符合访问器，可以获得其他 macOS 功能，例如键-值观察 (KVO)、 数据绑定、 核心数据、 Cocoa 绑定和 scriptability 的访问权限。
 
-有关详细信息，请参阅[大纲视图数据绑定](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding)一部分我们[数据绑定和键 / 值编码](~/mac/app-fundamentals/databinding.md)文档。
+有关详细信息，请参阅[大纲视图的数据绑定](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding)一部分我们[数据绑定和键值编码](~/mac/app-fundamentals/databinding.md)文档。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文已了解使用 Xamarin.Mac 应用程序中的大纲视图的详细的信息。 我们看到不同的类型，并使用的大纲视图、 如何创建和维护在 Xcode 的接口生成器中的大纲视图以及如何在 C# 代码中使用大纲视图。
+本文已在 Xamarin.Mac 应用程序中使用大纲视图的详细的信息。 我们看到了不同类型，并使用大纲视图、 如何创建和维护在 Xcode 的 Interface Builder 中的大纲视图以及如何在 C# 代码中使用大纲视图。
 
 ## <a name="related-links"></a>相关链接
 
@@ -695,7 +695,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 - [源列表](~/mac/user-interface/source-list.md)
 - [数据绑定和键值编码](~/mac/app-fundamentals/databinding.md)
 - [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
-- [介绍概述视图](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
+- [大纲视图简介](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)
 - [NSOutlineViewDataSource](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Protocols/NSOutlineViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40004175)
 - [NSOutlineViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSOutlineViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008609)

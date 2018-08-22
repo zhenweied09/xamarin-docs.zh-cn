@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
-ms.date: 05/17/2017
-ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 08/08/2018
+ms.openlocfilehash: ceb8964ac378957dcf5883bbbfff9e984b079294
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831327"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251047"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>故障排除 Xamarin Live Player
 
@@ -78,24 +78,6 @@ ms.locfileid: "38831327"
 </DeviceList>
 ```
 
-**添加 iOS 设备：**
-
-```xml
-<PlayerDevice>
-<SecretCode>ENTER-PAIR-CODE-HERE</SecretCode>
-<UniqueIdentifier>ENTER-GUID-HERE</UniqueIdentifier>
-<Name>iPhone Player</Name>
-<Platform>iOS</Platform>
-<AndroidApiLevel>0</AndroidApiLevel>
-<DebuggerEndPoint>ENTER-IP-HERE:37847</DebuggerEndPoint>
-<HostEndPoint />
-<NeedsAppInstall>false</NeedsAppInstall>
-<IsSimulator>false</IsSimulator>
-<SimulatorIdentifier />
-<LastConnectTimeUtc>2018-01-08T20:36:03.9492291Z</LastConnectTimeUtc>
-</PlayerDevice>
-```
-
 **添加 Android 设备：**
 
 ```xml
@@ -118,7 +100,7 @@ ms.locfileid: "38831327"
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>在 IDE 中"无法找到类型或命名空间"消息
 
-检查所选**启动项目**匹配你的设备类型 （iOS 或 Android） 和该配置与该设备类型 （例如。 **调试 | iPhone 模拟器**适用于 iOS)。
+检查所选**启动项目**匹配 （例如你的设备类型。 Android) 和该配置与该设备类型 （例如。 **调试**适用于 Android)。
 
 ## <a name="constructor-on-type-interpretedxamarinformsbutton-not-found-message-in-player"></a>在播放机中的"构造函数对类型 'InterpretedXamarin.Forms.Button 找不到"消息
 
