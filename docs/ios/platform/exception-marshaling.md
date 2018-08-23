@@ -76,7 +76,7 @@ try {
 
 这是因为 Objective C 堆栈开卷机不知道托管`catch`子句，并且既不将`finally`执行子句。
 
-在上面的代码示例_是_有效，是因为 Objective C 的未经处理的 Objective C 异常通知方法有[ `NSSetUncaughtExceptionHandler` ] [ 2]，后者Xamarin.iOS 和 Xamarin.Mac 使用，在该点尝试将任何 Objective C 异常转换为托管异常。
+在上面的代码示例_是_有效，是因为 Objective C 的未经处理的 Objective C 异常通知方法有 [`NSSetUncaughtExceptionHandler`][2]，后者Xamarin.iOS 和 Xamarin.Mac 使用，在该点尝试将任何 Objective C 异常转换为托管异常。
 
 ## <a name="scenarios"></a>方案
 

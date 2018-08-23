@@ -25,7 +25,7 @@ Xamarin 的工作簿的所有代理和客户端，便于丰富呈现结果提供
 
 ## <a name="external-representations"></a>外部表示形式
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 提供注册的能力[ `RepresentationProvider` ] [ repp]，集成必须实现从任意对象转换为以不可知的形式呈现该。 这些不可知的窗体必须实现[ `ISerializableObject` ] [ serobj]接口。
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 提供注册的能力 [`RepresentationProvider`][repp]，集成必须实现从任意对象转换为以不可知的形式呈现该。 这些不可知的窗体必须实现[ `ISerializableObject` ] [ serobj]接口。
 
 实现`ISerializableObject`接口将添加精确地控制如何序列化对象的序列化方法。 `Serialize`方法需要开发人员将完全指定哪些属性要进行序列化，以及将哪些的最终名称。 查看`Person`对象中我们 [`KitchenSink`示例] [示例]，则我们可以看到此工作原理：
 
@@ -71,7 +71,7 @@ public sealed class Person : ISerializableObject
 
 呈现器在 JavaScript 中实现，并将有权访问通过表示的对象的 JavaScript 版本`ISerializableObject`。 JavaScript 复制也将具有`$type`字符串指示的.NET 类型名称的属性。
 
-我们建议使用 TypeScript 进行客户端集成代码，这是当然的编译为香草 JavaScript。 无论哪种方式，该 SDK 提供[typings] [ typings]它们可以直接引用 TypeScript 或简称为手动如果编写香草 JavaScript 首选。
+我们建议使用 TypeScript 进行客户端集成代码，这是当然的编译为香草 JavaScript。 无论哪种方式，该 SDK 提供 [typings][typings] 它们可以直接引用 TypeScript 或简称为手动如果编写香草 JavaScript 首选。
 
 呈现的主要集成点是`xamarin.interactive.RendererRegistry`:
 
