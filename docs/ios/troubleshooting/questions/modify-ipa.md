@@ -46,7 +46,7 @@ ms.locfileid: "39350977"
 
 9.  删除从所需的文件`.ipa`。 您可以将它们移动到回收站使用查找程序，或使用命令行上将其删除`Terminal.app`。 若要查看的内容`Payload/iPhone`文件在查找程序中，单击该文件，然后选择**显示包内容**。
 
-10.  使用相同的常规方法如下所示步骤 3 中，找到日志文件下的`~/Library/Logs/Xamarin/MonoTouchVS/`具有项目名称和`generated session id`名称中： ![ ](modify-ipa-images/build-log.png "在查找器中找到项目生成日志")
+10.  使用相同的常规方法如下所示步骤 3 中，找到日志文件下的`~/Library/Logs/Xamarin/MonoTouchVS/`具有项目名称和`generated session id`名称中： ![](modify-ipa-images/build-log.png "在查找器中找到项目生成日志")
 
 11.  生成日志从步骤 10 中，例如双击打开它。
 
