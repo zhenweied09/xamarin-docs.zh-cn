@@ -443,7 +443,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>承载照片 cropper 画布视图
 
-与处理裁剪的逻辑，这两个类**裁剪照片**页面**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序具有很少要执行的任务。 XAML 文件实例化`Grid`到主机`PhotoCropperCanvasView`和一个**完成**按钮：
+与处理裁剪的逻辑，这两个类**裁剪照片**页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序具有很少要执行的任务。 XAML 文件实例化`Grid`到主机`PhotoCropperCanvasView`和一个**完成**按钮：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -534,7 +534,7 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 著名的 Xamarin.Forms 版本 14-15 个填数游戏出现在书的第 22 章[_使用 Xamarin.Forms 创建移动应用_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)并且可以作为下载[ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)。 但是，填数游戏变得更加有趣 （且通常更具挑战性） 当基于照片库中的映像。
 
-14-15 个填数游戏的此版本属于**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序，并包含一系列页面标题为**照片拼图**。
+14-15 个填数游戏的此版本属于 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序，并包含一系列页面标题为**照片拼图**。
 
 **PhotoPuzzlePage1.xaml**文件都包含`Button`:
 

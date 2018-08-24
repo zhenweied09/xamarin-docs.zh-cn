@@ -85,7 +85,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-在这里，`PersonRenderer`实现`Renderer`接口。 请参阅[typings] [ typings]有关详细信息。
+在这里，`PersonRenderer`实现`Renderer`接口。 请参阅 [typings][typings] 有关详细信息。
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
 [xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
