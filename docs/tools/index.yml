@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: a466a6591316b908ca26cb20906fd7866a20fca2
+ms.sourcegitcommit: 00a3505a73ce2213ba35bc85c06738edd1155060
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751878"
 documentType: LandingData
 title: Xamarin 工具
 metadata:
   description: 帮助改进 Xamarin 开发体验的工具。
   author: conceptdev
   ms.author: crdun
-  ms.date: 02-17-2018
+  ms.date: 08/08/2018
   ms.topic: landing-page
-  ms.openlocfilehash: b1f47f67677c2618b89b52ab2c015a8a4da48f95
-  ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
-  ms.translationtype: HT
-  ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/04/2018
-  ms.locfileid: "33112467"
 abstract:
   description: 帮助改进 Xamarin 开发体验的工具。
   menu:
@@ -28,36 +28,30 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/tools/live-player/index.md
-      html: 通过 Live Player 应用和 Visual Studio 在几分钟内开始使用 Xamarin。
-      image:
-        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
-        href: ~/tools/live-player/index.md
-      title: Xamarin Live Player
-    - href: ~/tools/inspector/index.md
-      html: 了解和调试用户界面。
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/workbooks/index.md
-      html: 以交互方式了解 C# 和 Xamarin 平台。
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
     - href: ~/tools/ios-simulator.md
       html: 在 Windows 上使用 Visual Studio 与 iOS 模拟器进行交互。
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
         href: ~/tools/ios-simulator.md
       title: 适用于 Windows 的 iOS 模拟器
+    - href: ~/tools/inspector/index.md
+      html: 了解和调试用户界面。
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
     - href: ~/tools/profiler/index.md
       html: 识别并修复性能问题。
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
       title: Xamarin Profiler
+    - href: ~/tools/workbooks/index.md
+      html: 以交互方式了解 C# 和 Xamarin 平台。
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
     - href: ~/tools/dotnet-embedding/index.md
       html: 允许通过其他编程语言使用现有 .NET 代码。
       image:
