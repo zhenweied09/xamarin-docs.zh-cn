@@ -25,7 +25,7 @@ Xamarin 的工作簿的所有代理和客户端，便于丰富呈现结果提供
 
 ## <a name="external-representations"></a>外部表示形式
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 提供注册的能力 [`RepresentationProvider`][repp]，集成必须实现从任意对象转换为以不可知的形式呈现该。 这些不可知的窗体必须实现[ `ISerializableObject` ] [ serobj]接口。
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 提供注册的能力 [`RepresentationProvider`][repp]，集成必须实现从任意对象转换为以不可知的形式呈现该。 这些不可知的窗体必须实现 [`ISerializableObject`][serobj] 接口。
 
 实现`ISerializableObject`接口将添加精确地控制如何序列化对象的序列化方法。 `Serialize`方法需要开发人员将完全指定哪些属性要进行序列化，以及将哪些的最终名称。 查看`Person`对象中我们 [`KitchenSink`示例] [示例]，则我们可以看到此工作原理：
 
