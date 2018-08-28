@@ -762,7 +762,7 @@ void OpenDialog (NSObject sender)
 5. 删除现有的窗口并将从面板拖**库检查器**中**界面编辑器**: 
 
     [![](window-images/panels01.png "删除现有的窗口")](window-images/panels01.png#lightbox)
-6. 最多挂钩面板 **文件的所有者*-**窗口*- **插座**: 
+6. 最多挂钩面板 **文件的所有者*- **窗口*- **插座**: 
 
     [![](window-images/panels02.png "将拖到面板的网络")](window-images/panels02.png#lightbox)
 7. 切换到**标识检查器**和设置的面板类为`DocumentPanel`: 
