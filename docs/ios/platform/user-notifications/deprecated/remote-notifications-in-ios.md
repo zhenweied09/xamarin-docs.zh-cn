@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
 ms.openlocfilehash: f11f5d1cbde0f5eae27215af8eb6544be46c0206
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "39654810"
 ---
 # <a name="push-notifications-in-ios"></a>在 iOS 中的推送通知
@@ -81,12 +81,10 @@ Apple 维护两个环境的 APNS:*沙盒*和一个*生产*环境。 沙盒环境
 
 8.  若要创建开发预配配置文件，导航到**预配配置文件**部分，并按照步骤来创建它，使用我们刚刚创建的应用程序 Id。
 
-9.  一旦你创建预配配置文件，打开**Xcode 管理器**并刷新它。 如果你创建预配配置文件不会出现可能有必要从 iOS 设置门户下载配置文件并手动将其导入。 下面的屏幕截图与添加的预配配置文件显示组织者的示例：
-
+9.  一旦你创建预配配置文件，打开**Xcode 管理器**并刷新它。 如果你创建预配配置文件不会出现可能有必要从 iOS 设置门户下载配置文件并手动将其导入。 下面的屏幕截图与添加的预配配置文件显示组织者的示例：  
     [![](remote-notifications-in-ios-images/image13new.png "此屏幕截图显示组织者的示例与添加的预配配置文件")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  此时，我们需要配置 Xamarin.iOS 项目以使用这个新创建的预配配置文件。 这是从**项目选项**对话框下**iOS 捆绑签名**选项卡，如以下屏幕截图中显示：
-
+10.  此时，我们需要配置 Xamarin.iOS 项目以使用这个新创建的预配配置文件。 这是从**项目选项**对话框下**iOS 捆绑签名**选项卡，如以下屏幕截图中显示：  
     [![](remote-notifications-in-ios-images/image11.png "配置 Xamarin.iOS 项目以使用这个新创建的预配配置文件")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 此时应用程序配置为使用推送通知。 但是，仍有几个步骤所需的证书。 此证书是 DER PushSharp，需要的个人信息交换 (PKCS12) 证书与不兼容的格式。 若要将证书转换，这样就可供 PushSharp，执行这些最后的步骤：
