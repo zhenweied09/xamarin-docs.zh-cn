@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995737"
 ---
 # <a name="customizing-a-contentpage"></a>自定义 ContentPage
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 对基类的调用`OnElementChanged`方法实例化 Android`ViewGroup`控件，它是一组视图。 前提被呈现器不已附加到现有的 Xamarin.Forms 元素，且前提是存在的页实例，所呈现的自定义呈现器仅呈现实时照相机流。
 
-然后通过调用一系列的方法使用的自定义页面`Camera`API 以提供来自照相机和之前捕获照片的功能的实时流`AddView`会调用方法来添加实时照相机流式传输到 UI `ViewGroup`。
+然后通过调用一系列的方法使用的自定义页面`Camera`API 以提供来自照相机和之前捕获照片的功能的实时流`AddView`会调用方法来添加实时照相机流式传输到 UI `ViewGroup`。 请注意，在 Android 上它也不必重写`OnLayout`方法以执行在视图上的度量值和布局操作。 有关详细信息，请参阅[ContentPage 呈现器示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)。
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>在 UWP 上创建页的呈现器
 
