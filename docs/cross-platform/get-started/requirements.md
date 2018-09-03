@@ -6,24 +6,18 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 6d16f01965b6b3bcba35cf14d4000f53a4400653
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 422eb24b86ba14ff4e5362db8aeec5775fab5833
+ms.sourcegitcommit: aa16f267c59725cc88bd84b049544ecfbec297ac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241973"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43263510"
 ---
 # <a name="system-requirements"></a>系统要求
 
 Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 Android，因此系统要求应与这些平台的要求匹配。 此页列出了 Xamarin 平台的系统兼容性以及建议的开发环境和 SDK 版本。
 
-- [开发环境](#devenv)
-- [macOS 要求](#mac)
-- [Windows 要求](#windows)
-
-有关获取软件和所需 SDK 的详细信息，请参阅[安装说明](#install)。
-
-<a name="devenv" />
+有关获取软件和所需 SDK 的详细信息，请参阅[安装说明](#installation-instructions)。
 
 ## <a name="development-environments"></a>开发环境
 
@@ -31,15 +25,12 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 
 [!include[](~/cross-platform/includes/development-environment.md)]
 
-
 > [!NOTE]
 > 若要在 Windows 计算机上针对 iOS 进行开发，必须有[可通过网络访问的 Mac 计算机](~/ios/get-started/installation/windows/connecting-to-mac/index.md)，以供远程编译和调试。 这同样适用于 Visual Studio 在 Mac 计算机上的 Windows VM 内运行的情况。
 
-<a name="mac" />
-
 ## <a name="macos-requirements"></a>macOS 要求
 
-使用 Mac 计算机进行 Xamarin 开发需要以下软件/SDK 版本。 检查操作系统版本，并按照 [Xamarin 安装程序](#install)相关说明操作。
+使用 Mac 计算机进行 Xamarin 开发需要以下软件/SDK 版本。 检查操作系统版本，并按照 [Xamarin 安装程序](#installation-instructions)相关说明操作。
 
 [!include[](~/cross-platform/includes/macos-requirements.md)]
 
@@ -48,11 +39,14 @@ Xamarin 产品依赖于 Apple 和 Google 中的平台 SDK 才能面向 iOS 或 A
 
 ### <a name="testing--debugging-on-macos"></a>macOS 上的测试和调试
 
-可通过 USB 将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（可直接在开发计算机上测试 Xamarin.Mac 应用；Apple Watch 应用首先部署到配对的 iPhone）。
+- 可通过 USB 将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（Apple Watch 应用首先部署到配对的 iPhone）。
+- 可直接在开发计算机上测试 Xamarin.Mac 应用。
 
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
-<a name="windows" />
+> [!WARNING]
+> 即将发布的 Xamarin.Mac 4.8 版本仅支持 macOS 10.9 或更高版本。
+> 早期版本的 Xamarin.Mac 支持 macOS 10.7 或更高版本，但这些较旧的 macOS 版本缺少足够的 TLS 基础结构，无法支持 TLS 1.2。 若要面向 macOS 10.7 或 macOS 10.8，请使用 Xamarin.Mac 4.6 或更早版本。
 
 ## <a name="windows-requirements"></a>Windows 要求
 
@@ -63,18 +57,14 @@ Visual Studio 2017 安装程序支持自动安装 Xamarin（使用 .NET 的移�
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
->
->- 适用于 Visual Studio 的 Xamarin 支持各种 Visual Studio 2017 版本（Community、Professional 和 Enterprise）。
->
->- 必须在 Windows 10 上安装 Visual Studio 2017，才能为通用 Windows 平台 (UWP) 开发 Xamarin.Forms 应用。
+> - 适用于 Visual Studio 的 Xamarin 支持各种 Visual Studio 2017 版本（Community、Professional 和 Enterprise）。
+> - 必须在 Windows 10 上安装 Visual Studio 2017，才能为通用 Windows 平台 (UWP) 开发 Xamarin.Forms 应用。
 
 ### <a name="testing--debugging-on-windows"></a>Windows 上的测试和调试
 
-可通过 USB 将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（iOS 设备必须连接到 Mac 计算机，而不是运行 Visual Studio 的计算机）。
+可通过 USB 或无线将 Xamarin 移动应用程序部署到物理设备以进行测试和调试（iOS 设备必须连接到 Mac 计算机，而不是运行 Visual Studio 的计算机）。
 
 [!include[](~/cross-platform/includes/windows-testing.md)]
-
-<a name="install" />
 
 ## <a name="installation-instructions"></a>安装说明
 
