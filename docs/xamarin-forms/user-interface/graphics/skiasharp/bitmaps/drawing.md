@@ -54,7 +54,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 然后可以显示位图。 在更高版本时，该程序可以创建一个新`SKCanvas`相同位图，并在其上绘制的更多基于对象。
 
-**Hello 位图**页面**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序写入的文本"Hello，位图 ！" 位图和显示的位图多次。  
+**Hello 位图**页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序写入的文本"Hello，位图 ！" 位图和显示的位图多次。  
 
 构造函数`HelloBitmapPage`首先创建`SKPaint`用于显示文本的对象。 它会确定文本字符串的维度并使用这些维度创建一个位图。 然后，创建`SKCanvas`对象，基于该位图，调用`Clear`，然后调用`DrawText`。 它始终是一个好办法调用`Clear`与新位图因为新创建的位图可能包含随机数据。
 
@@ -494,7 +494,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 调用另一个常见用途上位图_翻转_。 从概念上讲，在三个维度围绕垂直轴或通过位图的中心水平轴旋转位图。 垂直翻转创建镜像映像。
 
-**位图挡板**页面**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序演示这些进程。 XAML 文件包含`SKCanvasView`和用于翻转水平和垂直方向的两个按钮：
+**位图挡板**页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序演示这些进程。 XAML 文件包含`SKCanvasView`和用于翻转水平和垂直方向的两个按钮：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

@@ -16,7 +16,7 @@ ms.locfileid: "39615309"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>显示 SkiaSharp 位图
 
-一文中引入了使用者的 SkiaSharp 位图**[位图基础知识中 SkiaSharp](../basics/bitmaps.md)**。 该文章介绍了三种方式来加载位图并通过三种方式显示位图。 本文介绍的技术加载位图并得更深入的使用`DrawBitmap`方法的`SKCanvas`。
+一文中引入了使用者的 SkiaSharp 位图 **[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 。 该文章介绍了三种方式来加载位图并通过三种方式显示位图。 本文介绍的技术加载位图并得更深入的使用`DrawBitmap`方法的`SKCanvas`。
 
 ![显示示例](displaying-images/DisplayingSample.png "显示示例")
 
@@ -32,7 +32,7 @@ SkiaSharp 应用程序通常使用的位图来自三个不同来源之一：
 - 从可执行文件中嵌入的资源
 - 从用户的照片库
 
-还有可能 SkiaSharp 应用程序以创建新的位图，然后在其上绘制或从算法上设置位图位。 在文章中讨论了这些技术**[创建和上 SkiaSharp 位图绘制](drawing.md)** 并**[访问 SkiaSharp 位图像素](pixel-bits.md)**.
+还有可能 SkiaSharp 应用程序以创建新的位图，然后在其上绘制或从算法上设置位图位。 在文章中讨论了这些技术 **[创建和上 SkiaSharp 位图绘制](drawing.md)** 并 **[访问 SkiaSharp 位图像素](pixel-bits.md)**.
 
 在以下三个代码示例中的加载位图，则该类假定为包含类型的字段`SKBitmap`:
 
@@ -40,13 +40,13 @@ SkiaSharp 应用程序通常使用的位图来自三个不同来源之一：
 SKBitmap bitmap;
 ```
 
-与项目**[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 所述，通过 Internet 加载位图的最佳方法是使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)类。 类的单个实例可以定义为字段：
+与项目 **[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 所述，通过 Internet 加载位图的最佳方法是使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)类。 类的单个实例可以定义为字段：
 
 ```csharp
 HttpClient httpClient = new HttpClient();
 ```
 
-使用时`HttpClient`iOS 和 Android 应用程序，你将想要设置项目属性，如文档中所述**[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**。
+使用时`HttpClient`iOS 和 Android 应用程序，你将想要设置项目属性，如文档中所述 **[传输层安全 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)**。
 
 使用的代码`HttpClient`情况下，涉及`await`运算符，因此它必须位于`async`方法：
 
@@ -90,7 +90,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 也可以为 iOS、 Android 和通用 Windows 平台 (UWP) 的单个平台项目中的资源存储位图文件。 但是，加载这些位图需要位于平台项目中的代码。
 
-获取位图的第三个方法是从用户的图片库。 下面的代码使用包含在一个依赖关系服务**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序。 **SkiaSharpFormsDemo** .NET Standard 库包含`IPhotoLibrary`接口，而每个平台项目包含`PhotoLibrary`实现该接口的类。
+获取位图的第三个方法是从用户的图片库。 下面的代码使用包含在一个依赖关系服务 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序。 **SkiaSharpFormsDemo** .NET Standard 库包含`IPhotoLibrary`接口，而每个平台项目包含`PhotoLibrary`实现该接口的类。
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -128,7 +128,7 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 可选`SKPaint`参数，可显示位图使用混合模式或筛选效果。 这些将在后续文章中所示。
 
-**像素尺寸**页面**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 示例程序将显示一个位图资源，可为 320 像素宽乘 240 像素高：
+**像素尺寸**页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 示例程序将显示一个位图资源，可为 320 像素宽乘 240 像素高：
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -178,7 +178,7 @@ public class PixelDimensionsPage : ContentPage
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>用于加载资源位图方法
 
-有很多即将推出的示例将需要加载位图资源。 静态`BitmapExtensions`类中**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 解决方案包含用于帮助解决问题的方法：
+有很多即将推出的示例将需要加载位图资源。 静态`BitmapExtensions`类中 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 解决方案包含用于帮助解决问题的方法：
 
 ```csharp
 static class BitmapExtensions
@@ -303,7 +303,7 @@ public class UniformScalingPage : ContentPage
 
 ## <a name="a-versatile-bitmap-display-function"></a>通用位图显示函数
 
-基于 XAML 的编程环境 （例如 UWP 和 Xamarin.Forms） 具有一个工具用于扩展或压缩位图的大小，同时保留其纵横比。 虽然 SkiaSharp 不包括此功能，可以自行实现。 `BitmapExtensions`类中包含[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)应用程序演示了如何。 类定义了两个新`DrawBitmap`执行纵横比计算的方法。 这些新方法是扩展方法的`SKCanvas`。
+基于 XAML 的编程环境 （例如 UWP 和 Xamarin.Forms） 具有一个工具用于扩展或压缩位图的大小，同时保留其纵横比。 虽然 SkiaSharp 不包括此功能，可以自行实现。 `BitmapExtensions`类中包含 [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)应用程序演示了如何。 类定义了两个新`DrawBitmap`执行纵横比计算的方法。 这些新方法是扩展方法的`SKCanvas`。
 
 新`DrawBitmap`方法包含类型的参数`BitmapStretch`，在中定义的枚举**BitmapExtensions.cs**文件：
 

@@ -92,7 +92,7 @@ Xamarin.Forms 包含 20 可实例化类派生自`View`但不是`Layout`。 已�
 
 - [`Increment`](xref:Xamarin.Forms.Stepper.Increment) 类型的`double`，将初始化为 1
 
-直观地`Stepper`包含两个按钮标记为**&ndash;** 并**+**。 按下**&ndash;** 减少`Value`由`Increment`为最小值`Minimum`。 按下**+** 增加`Value`由`Increment`最大为`Maximum`。
+直观地`Stepper`包含两个按钮标记为 **&ndash;** 并 **+**。 按下 **&ndash;** 减少`Value`由`Increment`为最小值`Minimum`。 按下 **+** 增加`Value`由`Increment`最大为`Maximum`。
 
 这可通过演示[ **StepperDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/StepperDemo)示例。
 
