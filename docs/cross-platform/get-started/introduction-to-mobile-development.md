@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: c6f0233d736c51142d6d83996361558709fd2070
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781915"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43780508"
 ---
 # <a name="introduction-to-mobile-development"></a>移动开发简介
 
@@ -19,7 +19,7 @@ ms.locfileid: "34781915"
 
 本文档旨在介绍 Xamarin 平台。 若要了解有关生成移动应用程序（从设计到测试）的过程的详细信息，请参阅[移动软件开发生命周期简介](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)文档。
 
-请参看[系统要求](~/cross-platform/get-started/requirements.md#mac)以确认你是否能够安装 Xamarin。
+请参看[系统要求](~/cross-platform/get-started/requirements.md#macos-requirements)以确认你是否能够安装 Xamarin。
 
 ## <a name="introduction-to-xamarin"></a>Xamarin 简介
 

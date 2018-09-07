@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772352"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780505"
 ---
 # <a name="ios-build-mechanics"></a>iOS 生成机制
 
@@ -97,7 +97,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
 - 其他提示
   - 选择生成而不是重新生成，因为重新生成会在生成之前清除。 清除可能需要很长时间，因为它将删除可能会使用的引用。
   - 利用模拟器不会强制执行沙盒的事实。 每当在模拟器中启动应用时，将大型资源（如视频或其他资产）包含在项目中会产生成本高昂的文件复制操作。 通过将这些文件置于主目录可避免这些成本高昂的操作，并根据完整的文件路径在应用程序中引用它们。  
-  - 如有疑问，请使用 `–time –time` 标志衡量所做的更改
+  - 如有疑问，请使用 `--time --time` 标志衡量所做的更改
 
 下面的屏幕截图演示了如何在 iOS 选项中设置模拟器的这些选项：
 
@@ -137,7 +137,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
 应避免的某些事项：
 
 - Fat 二进制文件（调试） 
-- 禁用链接器 `–nolink` 
+- 禁用链接器 `--nolink` 
 - 禁用去除 
   - 符号 `--nosymbolstrip` 
   - IL（发行版）`--nostrip`。  
@@ -151,7 +151,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
 - 避免在每个生成（调试）上部署大型静态文件 
   - 使用 UIFileSharingEnabled (info.plist) 
     - 可以一次上传资产 
-- 如有疑问，请使用 `–time –time` 标志衡量所做的更改
+- 如有疑问，请使用 `--time --time` 标志衡量所做的更改
 
 下面的屏幕截图演示了如何在 iOS 选项中设置模拟器的这些选项：
 
