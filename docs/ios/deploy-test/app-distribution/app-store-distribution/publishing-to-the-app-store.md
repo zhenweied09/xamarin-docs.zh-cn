@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: 60aa177ccb14c443f1599b4ce42c07faa695baed
-ms.sourcegitcommit: 7d766f8a080ee6999e47c873a9f2ccec8fa5dd5a
+ms.openlocfilehash: 7560f66acc3a3ea683e75be2ae85f908036e008c
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37439169"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780521"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>将 Xamarin.iOS 应用发布到 App Store
 
@@ -104,7 +104,7 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 
     设置好上述选项后，生成设置应类似如下：
 
-    ![iOS 生成设置](publishing-to-the-app-store-images/build-m157.png "iOS 生成设置")
+    ![iOS 生成设置](publishing-to-the-app-store-images/build-m157.png "iOS Build settings")
 
     另请参阅 [iOS 生成机制](~/ios/deploy-test/ios-build-mechanics.md)指南，其中进一步介绍了生成设置。
 
@@ -121,17 +121,16 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. 从解决方案资源管理器打开 Info.plist。 选择“手动预配”。 保存并关闭文件。
-2. 请确保 Visual Studio 2017 已[与 Mac 生成主机配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)。
-3. 在解决方案资源管理器中右键单击“项目名称”，选择“属性”并导航至“iOS 生成”选项卡。
-4. 将“配置”设为“发布”，并将“平台”设为“iPhone”。
-5. 若要使用特定 iOS SDK 进行生成，请从“SDK 版本”列表中进行选择。 如果不需要，则让此值保持为“默认”。
-6. 通过链接，可去除未使用的代码，从而降低应用程序的整体大小。 在大多数情况下，“链接器行为”应设为默认值“仅链接框架 SDK”。 在某些情况下，例如使用一些第三方库时，可能需要将此值设为“不链接”以避免删除所需代码。 有关详细信息，请参阅[链接 Xamarin.iOS 应用](~/ios/deploy-test/linker.md)指南。
-7. 选中“优化 PNG 图像”以进一步降低应用程序的大小。
-8. 不应启用调试，因为这将使生成增加不必要的大小。
-9. 对于 iOS 11，请选择一个支持 ARM64 的设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md)文档中的“启用 Xamarin.iOS 应用的 64 位生成”部分。
-10. 可使用 LLVM 编译器生成更小更快的代码。 但是此选项会增加编译时间。
-11. 根据应用程序的需要，还可调整所用的“垃圾回收”的类型和“国际化”设置。
+1. 请确保 Visual Studio 2017 已[与 Mac 生成主机配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)。
+2. 在“解决方案资源管理器”中，右键单击“项目名称”，选择“属性”。
+3. 导航到“iOS 生成”选项卡并将“配置”设置为“发布”，将“平台”设置为“iPhone”。
+4. 若要使用特定 iOS SDK 进行生成，请从“SDK 版本”列表中进行选择。 如果不需要，则让此值保持为“默认”。
+5. 通过链接，可去除未使用的代码，从而降低应用程序的整体大小。 在大多数情况下，“链接器行为”应设为默认值“仅链接框架 SDK”。 在某些情况下，例如使用一些第三方库时，可能需要将此值设为“不链接”以避免删除所需代码。 有关详细信息，请参阅[链接 Xamarin.iOS 应用](~/ios/deploy-test/linker.md)指南。
+6. 选中“优化 PNG 图像”以进一步降低应用程序的大小。
+7. 不应启用调试，因为这将使生成增加不必要的大小。
+8. 对于 iOS 11，请选择一个支持 ARM64 的设备体系结构。 若要深入了解适用于 64 位 iOS 设备的生成，请参阅 [32/64 位平台注意事项](~/cross-platform/macios/32-and-64/index.md)文档中的“启用 Xamarin.iOS 应用的 64 位生成”部分。
+9. 可使用 LLVM 编译器生成更小更快的代码。 但是此选项会增加编译时间。
+10. 根据应用程序的需要，还可调整所用的“垃圾回收”的类型和“国际化”设置。
 
     设置好上述选项后，生成设置应类似如下：
 
@@ -139,27 +138,26 @@ iOS 使用预配配置文件来控制特定应用程序生成的部署方式。 
 
     另请参阅 [iOS 生成机制](~/ios/deploy-test/ios-build-mechanics.md)指南，其中进一步介绍了生成设置。
 
-12. 导航至“iOS 捆绑签名”选项卡。如果此处的选项不可编辑，请确保在 Info.plist 文件中选择了“手动预配”。
-13. 请确保将“配置”设置为“发布”，并将“平台”设置为“iPhone”。
-14. 将“签名标识”设置为“分发(自动)”。
-15. 对于“预配配置文件”，请选择[上面创建的](#create-and-install-an-app-store-provisioning-profile) App Store 预配配置文件。
+11. 导航至“iOS 捆绑签名”选项卡。请确保将“配置”设置为“发布”，将“平台”设置为“iPhone”，并选择“手动预配”。
+12. 将“签名标识”设置为“分发(自动)”。
+13. 对于“预配配置文件”，请选择[上面创建的](#create-and-install-an-app-store-provisioning-profile) App Store 预配配置文件。
 
     现在，项目的捆绑签名选项应类似如下：
 
     ![iOS 捆绑签名设置](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
 
-16. 导航到“iOS IPA 选项”选项卡。
-17. 请确保将“配置”设置为“发布”，并将“平台”设置为“iPhone”。
-18. 勾选“生成 iTunes 包存档 (IPA)”复选框。 此设置将让每个“发布”生成（因为这是所选配置）生成一个 .ipa 文件。 可将此文件提交到 Apple 以发布在 App Store 上。
+14. 导航到“iOS IPA 选项”选项卡。
+15. 请确保将“配置”设置为“发布”，并将“平台”设置为“iPhone”。
+16. 勾选“生成 iTunes 包存档 (IPA)”复选框。 此设置将让每个“发布”生成（因为这是所选配置）生成一个 .ipa 文件。 可将此文件提交到 Apple 以发布在 App Store 上。
 
     > [!NOTE]
     > 对于 App Store 发布，“iTunes 元数据”和“iTunes 图稿”不是必需的。 有关详细信息，请参阅 [Xamarin.iOS 应用中的 iTunesMetadata.plist 文件](~/ios/deploy-test/app-distribution/itunesmetadata.md)以及 [iTunes 图稿](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork)。
 
-19. 若要指定一个与 Xamarin.iOS 项目名称不同的 .ipa 文件名，请在“包名称”字段中输入这个名称。
+17. 若要指定一个与 Xamarin.iOS 项目名称不同的 .ipa 文件名，请在“包名称”字段中输入这个名称。
 
     ![iOS 捆绑签名设置](publishing-to-the-app-store-images/ipaOptions-w157.png "iOS Bundle Signing settings")
 
-20. 保存生成配置并将其关闭。
+18. 保存生成配置并将其关闭。
 
 -----
 

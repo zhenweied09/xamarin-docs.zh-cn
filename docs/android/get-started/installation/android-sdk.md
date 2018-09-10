@@ -6,13 +6,13 @@ ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/03/2018
-ms.openlocfilehash: 92b2eec32aed27e630ac68f3522aa3b40cfc940a
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.date: 08/09/2018
+ms.openlocfilehash: 55b6c10a9014b89534c37faeac2faf84f02339cd
+ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514485"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780525"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>设置用于 Xamarin.Android 的 Android SDK
 
@@ -36,13 +36,13 @@ Xamarin Android SDK 管理器（作为 .NET 移动开发的一部分安装）可
 
 - Visual Studio 2017（Community、Professional 或 Enterprise 版本）。 需要 Visual Studio 2017 版本 15.7 或更高版本。
 
-- Visual Studio Tools for Xamarin 版本 4.10.0 或更高版本。 
+- Visual Studio Tools for Xamarin 版本 4.10.0 或更高版本（作为使用 .NET 的移动开发工作负载的一部分安装）。 
 
 Xamarin Android SDK 管理器与 Visual Studio 2015 不兼容。 Visual Studio 2015 的用户应使用 Android SDK 中由 Google 提供的 SDK 管理器工具。
 
 Xamarin Android SDK 管理器还需要 Java 开发工具包（此工具包自动安装在 Xamarin.Android 中）。 有多种 JDK 可选方案供选择：
 
--   Xamarin.Android 默认使用[JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，这是在为 API 级别 24 或更高级别进行开发时所必需的（JDK 8 还支持低于 24 的 API 级别）。
+-   Xamarin.Android 默认使用 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，这是在为 API 级别 24 或更高级别进行开发时所必需的（JDK 8 还支持低于 24 的 API 级别）。
 
 -   如果专门为 API 级别 23 或更低级别进行开发，可以继续使用 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)。
 

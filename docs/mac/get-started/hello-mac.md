@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: f06bf6736b427a4d77ac34957d75cd321f3dae3a
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: 81a15f85c3b3b10525e2eb4966900edc95224fe0
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39275932"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "43780511"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello，Mac - 演练
 
@@ -33,22 +33,21 @@ ms.locfileid: "39275932"
 -  **输出口和操作** - 如何使用输出口和操作在用户界面中连接控件。
 -  **部署/测试** – 如何运行和测试 Xamarin.Mac 应用。
 
-
-<a name="Requirements" />
-
 ## <a name="requirements"></a>要求
 
-以下是通过 Xamarin.Mac 开发 macOS 应用程序所需的条件：
+若要使用最新的 macOS API 开发 Xamarin.Mac 应用，需要：
 
-- 运行 macOS Yosemite(10.10) 或更高版本的 Mac 计算机。
-- Xcode 7 及更高版本（建议从 [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) 安装最新的稳定版本。）
-- 最新版本的 Xamarin.Mac 和 Visual Studio for Mac。
+- 运行 macOS High Sierra (10.13) 或更高版本的 Mac 计算机。
+- [Xcode 9 或更高版本](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)。
+- 最新版本的 [Xamarin.Mac 和 Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)。
 
-运行通过 Xamarin.Mac 创建的 Mac 应用程序具有以下系统要求：
+若要运行使用 Xamarin.Mac 构建的应用程序，需要：
 
 - 运行 Mac OS X 10.7 或更高版本的 Mac 计算机。
 
-<a name="Starting_a_new_Xamarin.Mac_App_in_Xamarin_Studio" />
+> [!WARNING]
+> 即将发布的 Xamarin.Mac 4.8 版本仅支持 macOS 10.9 或更高版本。
+> 早期版本的 Xamarin.Mac 支持 macOS 10.7 或更高版本，但这些较旧的 macOS 版本缺少足够的 TLS 基础结构，无法支持 TLS 1.2。 若要面向 macOS 10.7 或 macOS 10.8，请使用 Xamarin.Mac 4.6 或更早版本。
 
 ## <a name="starting-a-new-xamarinmac-app-in-visual-studio-for-mac"></a>在 Visual Studio for Mac 中启动新的 Xamarin.Mac 应用
 
@@ -86,8 +85,6 @@ Visual Studio for Mac 会使用解决方案和项目，这与 Visual Studio 完�
 
 根据需要，开发人员可以创建一个或多个包含通用共享代码的代码库项目。 这些库项目可由应用的项目使用，或者与其他 Xamarin.Mac 应用项目共享（或者是基于代码类型的 Xamarin.iOS 和 Xamarin.Android），与标准 .NET 应用程序方式相同。
 
-<a name="The_Project" />
-
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Xamarin.Mac 应用程序剖析
 
 如果熟悉 iOS 编程，可发现存在众多相似之处。 事实上，iOS 使用 Mac 所用的 CocoaTouch 框架（Cocoa 的精简版本），因此许多概念会交叉。
@@ -103,8 +100,6 @@ Visual Studio for Mac 会使用解决方案和项目，这与 Visual Studio 完�
 -   `ViewController.designer.cs` – 此文件中包含有助于与主屏幕用户界面进行集成的 plumbing 代码。
 
 以下部分将简要介绍这些文件。 之后会进行详细介绍，但现在了解相关基础知识会很有帮助。
-
-<a name="Main_cs" />
 
 ### <a name="maincs"></a>Main.cs
 
@@ -129,8 +124,6 @@ namespace Hello_Mac
         }
 }
 ```
-
-<a name="AppDelegate_cs" />
 
 ### <a name="appdelegatecs"></a>AppDelegate.cs
 
@@ -167,8 +160,6 @@ namespace Hello_Mac
 应用实例化后，`DidFinishLaunching` 方法会运行，并实际上负责创建应用的窗口以及启动在其中显示视图的过程。
 
 用户或系统实例化应用关闭时会调用 `WillTerminate` 方法。 开发人员可使用此方法在应用退出前最终确定应用（例如保存用户参数设置或窗口大小和位置）。
-
-<a name="ViewController_cs" />
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
@@ -210,8 +201,6 @@ namespace Hello_Mac
 }
 ```
 
-<a name="ViewController_Designer_cs" />
-
 ### <a name="viewcontrollerdesignercs"></a>ViewController.Designer.cs
 
 主窗口类的设计器文件现在为空，但通过 Xcode 内的 Interface Builder 创建用户界面时会由 Visual Studio for Mac 自动进行填充：
@@ -241,8 +230,6 @@ namespace Hello_Mac
 
 创建 Xamarin.Mac 应用项目以及基本了解其组件后，可切换到 Xcode，使用 Interface Builder 创建用户界面。
 
-<a name="Info_plist" />
-
 ### <a name="infoplist"></a>Info.plist
 
 `Info.plist` 文件包含 Xamarin.Mac 应用的相关信息，例如其“名称”和“捆绑标识符”：
@@ -258,8 +245,6 @@ namespace Hello_Mac
 [![](hello-mac-images/entitlements01.png "Visual Studio for Mac 权利编辑器")](hello-mac-images/entitlements01.png#lightbox)
 
 对于 Hello World 示例，无需权利。 下一部分介绍如何使用 Xcode 的 Interface Builder 编辑 `Main.storyboard` 文件和定义 Xamarin.Mac 应用的 UI。
-
-<a name="Introduction_to_Xcode_and_Interface_Builder" />
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 和 Interface Builder 简介
 
@@ -279,8 +264,6 @@ namespace Hello_Mac
 > 开发人员无需使用 Xcode 和 Interface Builder 来创建 Xamarin.Mac 应用的用户界面，可直接通过 C# 代码创建 UI，但这超出了本文的讨论范围。 为简单起见，本教程其余部分会使用 Interface Builder 来创建用户界面。
 
 
-<a name="Components_of_Xcode" />
-
 ### <a name="components-of-xcode"></a>Xcode 组件
 
 从 Visual Studio for Mac 的 Xcode 中打开 `.storyboard` 文件时，“项目导航器”位于左侧，“界面层次结构”和“界面编辑器”位于中间，“属性和实用程序”部分位于右侧：
@@ -289,27 +272,19 @@ namespace Hello_Mac
 
 后续部分介绍其中每个 Xcode 功能的作用以及如何使用这些功能创建 Xamarin.Mac 应用的界面。
 
-<a name="Project_Navigation" />
-
 ### <a name="project-navigation"></a>项目导航
 
 打开 `.storyboard` 文件在 Xcode 中进行编辑时，Visual Studio for Mac 会在后台创建 Xcode 项目文件，以便在 Visual Studio for Mac 和 Xcode 之间传递更改。 之后，开发人员从 Xcode 切换回 Visual Studio for Mac 时，对此项目所作的任何更改都将通过 Visual Studio for Mac 与 Xamarin.Mac 项目同步。
 
 通过“项目导航”部分，开发人员可在组成此_填充码_ Xcode 项目的所有文件之间导航。 通常，开发人员只会对此列表中的 `.storyboard` 文件感兴趣，例如 `Main.storyboard`。
 
-<a name="Interface_Hierarchy" />
-
 ### <a name="interface-hierarchy"></a>界面层次结构
 
 通过“界面层次结构”部分，开发人员可轻松访问用户界面的多个关键属性，例如占位符和主窗口。 可使用此部分访问组成用户界面的各个元素（视图），并通过在层次结构内拖动这些元素来调整其嵌套方式。
 
-<a name="Interface_Editor" />
-
 ### <a name="interface-editor"></a>界面编辑器
 
 “界面编辑器”部分提供了用户界面图形化布局的设计面。从“属性和实用程序”部分的“库”中拖动元素来创建设计。 用户界面元素（视图）添加到设计图面后，会添加到“界面层次结构”部分，从而使其显示于“界面编辑器”中。
-
-<a name="Properties_Utilities" />
 
 ### <a name="properties--utilities"></a>属性和实用程序
 
@@ -322,8 +297,6 @@ namespace Hello_Mac
 “属性”部分内具有 8 个不同的检查器选项卡，如下所示：
 
 [![](hello-mac-images/xcode05.png "所有检查器的概述")](hello-mac-images/xcode05.png#lightbox)
-
-<a name="Properties_Utility_Types" />
 
 ### <a name="properties--utility-types"></a>属性和实用程序类型
 
@@ -341,8 +314,6 @@ namespace Hello_Mac
 使用“库”部分查找要放入设计器的控件和对象，从而以图形方式生成用户界面：
 
 [![](hello-mac-images/xcode06.png "XCode 库检查器")](hello-mac-images/xcode06.png#lightbox)
-
-<a name="Creating_the_Interface" />
 
 ## <a name="creating-the-interface"></a>创建界面
 
@@ -404,8 +375,6 @@ namespace Hello_Mac
 
 用户界面创建后，开发人员需要公开 UI 项，以便 Xamarin.Mac 可进行访问和在 C# 代码中与之交互。 接下来的“输出口和操作”部分中介绍了其执行方法。
 
-<a name="Outlets_and_Actions" />
-
 ### <a name="outlets-and-actions"></a>输出口和操作
 
 **输出口**和**操作**是什么？ 在传统的 .NET 用户界面编程中，用户界面中的控件在添加时会自动作为属性公开。 然而在 Mac 中情况则不同，如果仅将控件添加到视图，代码不可对其进行访问。 开发人员必须对代码显式公开 UI。 为此，Apple 提供了两个选项：
@@ -420,8 +389,6 @@ namespace Hello_Mac
 [![](hello-mac-images/xcode16.png "在 Xcode 中查看源")](hello-mac-images/xcode16.png#lightbox)
 
 此存根 `.h` 文件反映了创建新的 `NSWindow` 时自动添加到 Xamarin.Mac 项目的 `ViewController.designer.cs`。 此文件用于同步对 Interface Builder 所作的更改，且会在此文件中创建**输出口**和**操作**，从而使 UI 元素对 C# 代码公开。
-
-<a name="Adding_an_Outlet" />
 
 #### <a name="adding-an-outlet"></a>添加输出口
 
@@ -461,8 +428,6 @@ namespace Hello_Mac
 
 10. 保存对文件所做的更改。
 
-<a name="Adding_an_Action" />
-
 #### <a name="adding-an-action"></a>添加操作
 
 接下来，对 C# 代码公开按钮。 与上面的标签类似，开发人员可将按钮连接到**输出口**。 由于只希望对点击的按钮响应，因此改用**操作**。
@@ -492,8 +457,6 @@ namespace Hello_Mac
 
 > [!NOTE]
 > 对第一个应用创建用户界面、输出口和操作可能花费了较长的时间，且工作看起来较大，但其实大部分时间是用于介绍许多新概念和新功能。 使用 Interface Builder 练习一段时间后，一两分钟内便可创建此界面及其所有的输出口和操作。
-
-<a name="Synchronizing_Changes_with_Xcode" />
 
 ### <a name="synchronizing-changes-with-xcode"></a>与 Xcode 同步更改
 
@@ -526,8 +489,6 @@ Visual Studio for Mac 会侦听对 **.h** 文件的更改，然后在相应的 *
 
 > [!NOTE]
 > 大多数情况下，Visual Studio for Mac 会自动发现 Xcode 中所作的任何更改，并将其同步到 Xamarin.Mac 项目。 如果同步不自动进行，请切换回 Xcode，然后再次切换到 Visual Studio for Mac。 这通常会开始同步周期。
-
-<a name="Writing_the_Code" />
 
 ## <a name="writing-the-code"></a>编写代码
 
@@ -574,8 +535,6 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 此代码会附加到在 Xcode 和 Interface Builder 中创建的**操作**，且每次用户点击按钮时都会调用此代码。
 
-<a name="Testing_the_Application" />
-
 ## <a name="testing-the-application"></a>测试应用程序
 
 现在即可生成并运行应用，确保其可按预期运行。 开发人员可在一个步骤中同时生成和运行应用，或者只生成应用而不运行。
@@ -589,15 +548,11 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 [![](hello-mac-images/run01.png "选择调试版本")](hello-mac-images/run01.png#lightbox)
 
-<a name="Building_the_Application" />
-
 ## <a name="building-the-application"></a>生成应用程序
 
 本示例中，只需调试版本，因此请确保选择“调试”。 首先，通过按 **⌘B** 或在“生成”菜单中选择“生成所有”，生成应用。
 
 如果没有任何错误，则 Visual Studio for Mac 状态栏中会显示“生成成功”消息。 如果出现错误，请检查项目，并确定是否正确执行了上述步骤。 请首先确认代码（Xcode 和 Visual Studio for Mac 中的代码）与本教程中的代码匹配。
-
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>运行应用程序
 
@@ -614,8 +569,6 @@ partial void ClickedButton (Foundation.NSObject sender) {
 如果多次点击按钮，则标签会更新计数：
 
 [![](hello-mac-images/run03.png "显示单击按钮的结果")](hello-mac-images/run03.png#lightbox)
-
-<a name="Where_to_Next" />
 
 ## <a name="where-to-next"></a>下一步
 
