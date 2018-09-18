@@ -58,7 +58,7 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 
 `EditText` 是一个用于输入和修改文本的 UI 元素。
 
-![EditText 示例(images/edit-text.png)
+![EditText 示例](images/edit-text.png)
 
 
 ## <a name="galleryandroiduser-interfacecontrolsgallerymd"></a>[Gallery](~/android/user-interface/controls/gallery.md)
@@ -70,7 +70,7 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 
 ## <a name="navigation-barandroiduser-interfacecontrolsnavigation-barmd"></a>[Navigation Bar](~/android/user-interface/controls/navigation-bar.md)
 
-`Navigation Bar`提供在不包括有关的硬件按钮的设备上的导航控件**主页**，**回**，和**菜单**。
+`Navigation Bar`提供在不包括有关的硬件按钮的设备上的导航控件**主页**，**返回**，和**菜单**。
 
 ![Navigation Bar 示例](images/navigation-bar.png)
 
