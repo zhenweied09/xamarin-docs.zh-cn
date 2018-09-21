@@ -1,4 +1,4 @@
----
+﻿---
 title: Android 资源
 description: 本文介绍 Android 中的资源 Xamarin.Android 的概念，并将文档如何使用它们。 它介绍如何在 Android 应用程序中使用资源以支持应用程序本地化和多个设备，包括不同的屏幕大小和密度。
 ms.prod: xamarin
