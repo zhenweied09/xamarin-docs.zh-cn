@@ -20,7 +20,7 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 
 ## <a name="action-barandroiduser-interfacecontrolsaction-barmd"></a>[ActionBar](~/android/user-interface/controls/action-bar.md) 
 
-`ActionBar` 是一个工具栏，显示活动标题、 导航接口和其他交互式项。 通常情况下，`ActionBar`显示在活动的窗口的顶部。
+`ActionBar` 是一个工具栏，显示活动标题、 导航接口和其他交互式项。 通常情况下，操作栏显示在活动的窗口的顶部。
 
 ![ActionBar 示例](images/action-bar.png)
 
@@ -34,7 +34,7 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 
 ## <a name="buttonsandroiduser-interfacecontrolsbuttonsindexmd"></a>[Button](~/android/user-interface/controls/buttons/index.md)
 
-`Button`是用户点击执行操作的 UI 元素。
+按钮是用户点击执行操作的 UI 元素。
 
 ![Button 示例](images/buttons.png)
 
@@ -70,7 +70,7 @@ Xamarin.Android 公开所有由 Android 提供的本机用户界面控件 （小
 
 ## <a name="navigation-barandroiduser-interfacecontrolsnavigation-barmd"></a>[Navigation Bar](~/android/user-interface/controls/navigation-bar.md)
 
-`Navigation Bar`提供在不包括有关的硬件按钮的设备上的导航控件**主页**，**返回**，和**菜单**。
+*导航栏*提供在不包括有关的硬件按钮的设备上的导航控件**主页**，**回**，和**菜单**。
 
 ![Navigation Bar 示例](images/navigation-bar.png)
 
