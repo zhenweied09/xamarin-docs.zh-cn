@@ -104,8 +104,8 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 `fontStyle`属性具有两个可能值：
 
-* **normal** &ndash;普通字体
-* **italic** &ndash;倾斜字体
+* **normal** &ndash; 普通字体
+* **italic** &ndash; 倾斜字体
 
 `fontWeight`特性都对应于 CSS`font-weight`属性，引用的字体粗细。 这是为 100-900 范围中的值。 以下列表描述常见的字体粗细值和其名称：
 
