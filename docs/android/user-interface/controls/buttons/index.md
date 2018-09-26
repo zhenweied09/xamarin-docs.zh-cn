@@ -14,14 +14,14 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32435889"
 ---
-# <a name="buttons-in-xamarinandroid"></a>在 Xamarin.Android 的按钮
+# <a name="buttons-in-xamarinandroid"></a>Xamarin.Android 中的 Button
 
-`Button`类用于表示在 Android 屏幕中的按钮的各种不同的样式。 本部分介绍使用按钮在 Xamarin.Android 的不同选项：
+`Button`类用来表示 Android 屏幕上各种不同的按钮样式。本部分介绍在 Xamarin 中使用按钮的不同选项：
 
--   [单选按钮](~/android/user-interface/controls/buttons/radio-button.md)允许用户从一组中选择一个选项。
+-   [RadioButton](~/android/user-interface/controls/buttons/radio-button.md)允许用户从一组中选择一个选项。
 
--   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md)两个状态之间允许用户翻转 （切换） 设置。
+-   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md)允许用户在两个状态设置之间翻转（切换）。
 
--   [复选框](~/android/user-interface/controls/buttons/check-box.md)是可以选中或取消选中以表示一个两个可能状态的按钮的特殊类型。
+-   [CheckBox](~/android/user-interface/controls/buttons/check-box.md)是一种特殊类型的按钮，可以被选中或未被选中，来指示两种可能的状态之一。
 
--   你还可以创建[自定义按钮](~/android/user-interface/controls/buttons/custom-button.md)，它使用映像而不是文本。
+-   你还可以创建[自定义 Button](~/android/user-interface/controls/buttons/custom-button.md)，它使用图片而不是文本。
