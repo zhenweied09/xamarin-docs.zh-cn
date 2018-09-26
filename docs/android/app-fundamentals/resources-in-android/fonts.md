@@ -26,7 +26,7 @@ ms.locfileid: "31044816"
 
 相似的字体 （或可能有几种不同样式的字体） 可能分组到_字体系列_。 这使开发人员指定的字体，例如它的权重，某些属性，并且 Android 将自动选择合适的字体的字体系列。
 
-Android 支持库 v26 会将对字体的支持向后移植到 API 级别 26。如果目标是较旧的 API 级别，则需声明 `app` XML 命名空间，并使用 `android:` 命名空间和 `app:` 命名空间来命名各种字体属性。如果仅使用 `android:` 命名空间，则字体不会显示在运行 API 25 或更低级别的设备上。例如，以下 XML 代码片段声明一个新的[__字体系列](#font_families)资源，该资源可以在 API 14 及更高级别中使用：
+Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目标较旧的 API 级别，就需要声明`app`XML 命名空间，并使用具有各种字体属性`android:`命名空间和`app:`命名空间。 如果仅`android:`使用命名空间，然后字体将不会运行 API 级别 25 或更少的显示的设备。 例如，此 XML 代码段中声明一个新[_字体系列_](#font_families)起 API 级别 14 和更高版本中的资源：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,7 +60,7 @@ Android 支持库 v26 会将对字体的支持向后移植到 API 级别 26。�
 
 ## <a name="fonts-as-a-resource"></a>字体作为资源
 
-将字体打包进 Android APK 中可确保它对应用程序始终可用。字体文件（.TTF 或 .OTF 文件）可以像任何其他资源一样添加到 Xamarin.Android 应用程序中，只需将文件复制到 Xamarin.Android 项目的 **Resources** 文件夹中的子目录即可。字体资源保存在项目 **Resources** 文件夹的 **font** 子目录中。
+打包到 Android APK 字体可确保，并总是应用程序。 字体文件 (任一。TTF 或。通过将文件复制到中的子目录 OTF 文件） 添加到 Xamarin.Android 应用程序就像任何其他资源，**资源**Xamarin.Android 项目文件夹。 字体资源保留在**字体**子目录的**资源**项目文件夹中的。 
 
 > [!NOTE]
 > 字体应有**生成操作**的**AndroidResource**或它们不会打包到最终 APK。 应该通过 IDE 自动将设置的生成操作。
@@ -71,11 +71,11 @@ Android 支持库 v26 会将对字体的支持向后移植到 API 级别 26。�
 
 ### <a name="font-families"></a>字体系列
 
-字体系列是一套有不同粗细和样式的字体。例如，粗体和斜体可能有不同的字体文件。字体系列由 XML 文件（保留在 **Resources/font** 目录中）中的 `font` 元素定义。每个字体系列都应该有其自己的 XML 文件。
+字体系列是一套有不同粗细和样式的字体。 例如，粗体和斜体可能有不同的字体文件。 字体系列由 XML 文件（保留在 **Resources/font** 目录中）中的 `font` 元素定义。 每个字体系列都应该有其自己的 XML 文件。
 
-若要创建字体系列，请先将所有字体添加到 **Resources/font** 文件夹。然后，在字体系列的字体文件夹中创建新的 XML 文件。XML 文件的名称与所引用的字体没有关联或关系；资源文件可以采用任何合法的 Android 资源文件名称。此 XML 文件会有一个根 `font-family` 元素，其中包含一个或多个 `font` 元素。每个 `font` 元素声明一个字体的特性。
+若要创建字体系列，请先将所有字体添加到 **Resources/font** 文件夹。 然后，在字体系列的字体文件夹中创建新的 XML 文件。 XML 文件的名称与所引用的字体没有关联或关系；资源文件可以采用任何合法的 Android 资源文件名称。 此 XML 文件会有一个根 `font-family` 元素，其中包含一个或多个 `font` 元素。 每个 `font` 元素声明一个字体的特性。
 
-以下 XML 是 Sources Sans Pro 字体的字体系列示例，定义多个不同的字体粗细。它在 **Resources/font** 文件夹中另存为名为 **sourcesanspro.xml** 的文件：
+以下 XML 是一种字体系列_源 San Pro_定义多个不同的字体权重的字体。 这将另存为文件中**资源/字体**文件夹名为**sourcesanspro.xml**:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,7 +107,7 @@ Android 支持库 v26 会将对字体的支持向后移植到 API 级别 26。�
 * **normal** &ndash; 普通字体
 * **italic** &ndash; 倾斜字体
 
-`fontWeight` 特性对应于 CSS `font-weight` 特性，是指字体粗细。值的范围为 100 - 900。以下列表介绍了常见字体粗细值及其名称：
+`fontWeight` 特性对应于 CSS `font-weight` 特性，是指字体粗细。 值的范围为 100 - 900。 以下列表介绍了常见字体粗细值及其名称：
 
 * **Thin** &ndash; 100
 * **Extra Light** &ndash; 200
@@ -144,7 +144,7 @@ textView1.Typeface = typeface;
 textView1.Text = "Changed the font";
 ```
 
-`GetFont` 方法会自动加载字体系列中的第一种字体。若要加载与特定样式相符的字体，请使用 `Typeface.Create` 方法。此方法会尝试加载与指定样式相符的字体。例如，以下代码片段会尝试从 **Resources/font** 中定义的字体系列加载一个粗体 `Typeface` 对象：
+`GetFont` 方法会自动加载字体系列中的第一种字体。  若要加载与特定样式相符的字体，请使用 `Typeface.Create` 方法。 此方法会尝试加载与指定样式相符的字体。 例如，以下代码片段会尝试从 **Resources/font** 中定义的字体系列加载一个粗体 `Typeface` 对象：
 
 ```csharp
 var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceStyle.Bold);
@@ -166,7 +166,7 @@ Android 8.0 支持两种不同的方式下载字体：
 1. **声明为资源的可下载字体**&ndash;应用程序可能声明可下载字体复制到 Android 通过 XML 资源文件。 这些文件将包含的所有元数据的 Android 需要以异步方式字体时下载应用程序启动并在设备上对它们进行缓存。
 2. **以编程方式**&ndash;中 Android API 级别 26 Api 允许应用程序的应用程序运行时以编程方式，下载该字体。 应用程序将创建`FontRequest`对象给定字体，并将传递到此对象`FontsContract`类。 `FontsContract`采用`FontRequest`并检索从字体_字体提供程序_。 Android 以同步方式将下载该字体。 创建的示例`FontRequest`将在本指南后面所示。
 
-无论使用哪种方法，都必须先将资源文件添加到 Xamarin.Android 应用程序，然后才能下载字体。首先，必须在 **Resources/font** 目录的 XML 文件中声明字体系列中的字体。以下代码片段是一个示例，演示了如何使用默认的字体提供程序从 [Google 字体开源集合](https://fonts.google.com)下载字体，该提供程序是 Android 8.0（或支持库 v26）附带的：
+无论使用哪种方法，都必须先将资源文件添加到 Xamarin.Android 应用程序，然后才能下载字体。 首先，必须在 **Resources/font** 目录的 XML 文件中声明字体系列中的字体。 以下代码片段是一个示例，演示了如何使用默认的字体提供程序从 [Google 字体开源集合](https://fonts.google.com)下载字体，该提供程序是 Android 8.0（或支持库 v26）附带的：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -195,7 +195,7 @@ Android 8.0 支持两种不同的方式下载字体：
 
 ### <a name="font-certificates"></a>字体证书
 
-如果字体提供程序没有预装在设备上，或者应用使用的是 `Xamarin.Android.Support.Compat` 库，则 Android 需要字体提供程序的安全证书。这些证书会列在数组资源文件中，该文件保留在 **Resources/values** 目录中。
+如果字体提供程序没有预装在设备上，或者应用使用的是 `Xamarin.Android.Support.Compat` 库，则 Android 需要字体提供程序的安全证书。 这些证书会列在数组资源文件中，该文件保留在 **Resources/values** 目录中。 
 
 例如，名为以下 XML **Resources/values/fonts_cert.xml** ，并将证书存储 Google 字体提供程序： 
 
