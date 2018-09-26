@@ -1,5 +1,5 @@
 ---
-title: 自定义按钮
+title: 自定义 Button
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android
@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
 ms.locfileid: "30766564"
 ---
-# <a name="custom-button"></a>自定义按钮
+# <a name="custom-button"></a>自定义 Button
 
 在本部分中，你将创建一个按钮与自定义映像而不是文本，使用[ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/)小组件和定义三个不同的映像以不同的按钮状态使用一个 XML 文件。 按下按钮时，将显示一条短消息。
 
