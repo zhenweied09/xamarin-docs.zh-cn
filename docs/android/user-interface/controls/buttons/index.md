@@ -22,6 +22,6 @@ ms.locfileid: "32435889"
 
 -   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md)允许用户在两个状态设置之间翻转（切换）。
 
--   [CheckBox](~/android/user-interface/controls/buttons/check-box.md)是一种特殊类型的按钮，可以被选中或未被选中，来指示两种可能的状态之一。
+-   [CheckBox](~/android/user-interface/controls/buttons/check-box.md) 是一种特殊类型的按钮，可以通过将其选中或取消选中来指示两种可能的状态之一。
 
--   你还可以创建[自定义 Button](~/android/user-interface/controls/buttons/custom-button.md)，它使用图片而不是文本。
+-   你还可以创建[自定义按钮](~/android/user-interface/controls/buttons/custom-button.md)，它使用图片而不是文本。
