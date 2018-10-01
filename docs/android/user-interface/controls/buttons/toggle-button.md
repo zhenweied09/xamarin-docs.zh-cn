@@ -17,7 +17,7 @@ ms.locfileid: "30762293"
 
 在本部分中，你将创建专用于使用的两个状态之间切换按钮[ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/)小组件。 此小组件是单选按钮的绝佳替代方法，如果你具有两个互相排斥的简单状态 ("打开"和"关闭"，例如)。 Android 4.0 （API 级别 14） 中引入了名为的切换按钮的替代方法[ `Switch` ](https://developer.xamarin.com/api/type/Android.Widget.Switch/)。
 
-左边的图像为**ToggleButton**的示例，而右边的图像则展示的是**Switch**的示例：
+左边的一对图像为 **ToggleButton** 的示例，而右边的一对图像则展示的是 **Switch** 的示例：
 
 ![在打开和关闭状态的开关和 ToggleButtons 示例](toggle-button-images/togglebutton-switch.png)  
 
