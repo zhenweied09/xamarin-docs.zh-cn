@@ -17,7 +17,7 @@ ms.locfileid: "30762293"
 
 在本部分中，你将创建专用于使用的两个状态之间切换按钮[ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/)小组件。 此小组件是单选按钮的绝佳替代方法，如果你具有两个互相排斥的简单状态 ("打开"和"关闭"，例如)。 Android 4.0 （API 级别 14） 中引入了名为的切换按钮的替代方法[ `Switch` ](https://developer.xamarin.com/api/type/Android.Widget.Switch/)。
 
-一个示例**ToggleButton**时映像的右对提供的示例所示的映像，左侧显示对**交换机**:
+左边的一对图像为 **ToggleButton** 的示例，而右边的一对图像则展示的是 **Switch** 的示例：
 
 ![在打开和关闭状态的开关和 ToggleButtons 示例](toggle-button-images/togglebutton-switch.png)  
 
@@ -41,10 +41,9 @@ togglebutton.Click += (o, e) => {
 
 这将捕获[ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/)元素从布局中，并处理 Click 事件，定义要在单击该按钮时执行的操作。 在此示例中，该方法检查此按钮时，新状态，然后显示[ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/)消息，指出当前的状态。
 
-请注意， [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/)其自己的状态更改之间 checked 和 unchecked，以使你只需要求它本来就是句柄。
+注意， [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/)在选中和未选中之间处理自己的状态更改，因此你只需要获取当前是哪一种状态。
 
 运行该应用程序。
-
 
 **提示：** 如果你需要自行更改的状态 (例如，当加载已保存[ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/))，使用[ `Checked` ](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)属性 setter 或[ `Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)方法。
 
@@ -52,4 +51,4 @@ togglebutton.Click += (o, e) => {
 ## <a name="related-links"></a>相关链接
 
 - [ToggleButton](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [切换](http://developer.android.com/reference/android/widget/Switch.html)
+- [Switch](http://developer.android.com/reference/android/widget/Switch.html)

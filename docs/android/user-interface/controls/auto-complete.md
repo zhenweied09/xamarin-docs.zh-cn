@@ -13,7 +13,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
 ms.locfileid: "30764445"
 ---
-# <a name="auto-complete"></a>自动完成
+# <a name="auto-complete"></a>AutoCompleteTextView
 
 
 ## <a name="overview"></a>概述
@@ -47,7 +47,7 @@ ms.locfileid: "30764445"
 
 启动一个名为的新项目*HelloAutoComplete*。
 
-创建一个名为的 XML 文件`list_item.xml`和将其保存在**资源/布局**文件夹。 设置到此文件的生成操作`AndroidResource`。 编辑文件应如下所示：
+创建一个名为 `list_item.xml` 的 XML 文件，然后将其保存在 **Resources/Layout** 文件夹中。将此文件的“生成操作”设置为 `AndroidResource`。编辑文件，完成后应如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -63,7 +63,7 @@ ms.locfileid: "30764445"
 
 此文件定义一个简单[ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/)将用于显示在列表中的建议每个项。
 
-打开**Resources/Layout/Main.axml**和插入以下：
+打开 **Resources/Layout/Main.axml** 并插入以下代码：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
