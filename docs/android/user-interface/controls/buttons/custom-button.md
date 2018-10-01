@@ -1,5 +1,5 @@
 ---
-title: 自定义 Button
+title: 自定义按钮
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android
@@ -13,15 +13,15 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 04/04/2018
 ms.locfileid: "30766564"
 ---
-# <a name="custom-button"></a>自定义 Button
+# <a name="custom-button"></a>自定义按钮
 
 在本部分中，你将创建一个按钮与自定义映像而不是文本，使用[ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/)小组件和定义三个不同的映像以不同的按钮状态使用一个 XML 文件。 按下按钮时，将显示一条短消息。
 
-右键单击并下载这三个图像，然后将其复制到你的**Resources/drawable**项目目录。 这些将用于不同的按钮状态。
+右键单击并下载下面的三个图像，然后将其复制到项目的 **Resources/drawable** 目录。这些图像将用于不同的按钮状态。
 
  [![正常状态的绿色 Android 图标](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [![已设定焦点状态的橙色 Android 图标](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [![黄色 Android 按下状态图标](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
-创建中的新文件**Resources/drawable**名为目录**android_button.xml**。 插入以下 XML:
+在 **Resources/drawable** 目录中创建名为 **android_button.xml** 的新文件。插入以下 XML：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -39,7 +39,7 @@ ms.locfileid: "30766564"
 
 > [!NOTE]
 > `<item>`元素顺序很重要。 当引用此图像时，将遍历这些项，以确定哪个项适合当前按钮状态。
-> “默认”的图像是最后一个，因此只在`android:state_presed`和`android:state_focus`这两个条件都为false时才应用它。
+> “默认”的图像是最后一个，因此只在 `android:state_presed` 和 `android:state_focus` 这两个条件都为 false 时才应用它。
 
 打开**Resources/layout/Main.axml**文件并添加[ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/)元素：
 
