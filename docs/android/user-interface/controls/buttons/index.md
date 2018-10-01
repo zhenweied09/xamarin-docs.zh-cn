@@ -1,5 +1,5 @@
 ---
-title: 在 Xamarin.Android 的按钮
+title: Xamarin.Android 中的 Button
 description: 实现用户点击执行操作的 UI 元素
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
@@ -16,7 +16,7 @@ ms.locfileid: "32435889"
 ---
 # <a name="buttons-in-xamarinandroid"></a>Xamarin.Android 中的 Button
 
-`Button`类用来表示 Android 屏幕上各种不同的按钮样式。本部分介绍在 Xamarin 中使用按钮的不同选项：
+`Button`类用来表示 Android 屏幕上各种不同的按钮样式。 本部分介绍在 Xamarin 中使用按钮的不同选项：
 
 -   [RadioButton](~/android/user-interface/controls/buttons/radio-button.md)允许用户从一组中选择一个选项。
 

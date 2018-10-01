@@ -1,5 +1,5 @@
 ---
-title: 自动完成
+title: AutoCompleteTextView
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
@@ -47,7 +47,7 @@ ms.locfileid: "30764445"
 
 启动一个名为的新项目*HelloAutoComplete*。
 
-创建一个名为 `list_item.xml` 的 XML 文件，然后将其保存在 **Resources/Layout** 文件夹中。将此文件的“生成操作”设置为 `AndroidResource`。编辑文件，完成后应如下所示：
+创建一个名为 `list_item.xml` 的 XML 文件，然后将其保存在 **Resources/Layout** 文件夹中。 将此文件的“生成操作”设置为 `AndroidResource`。 编辑文件，完成后应如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
