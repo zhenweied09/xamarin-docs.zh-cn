@@ -26,7 +26,7 @@ ms.locfileid: "31044816"
 
 相似的字体 （或可能有几种不同样式的字体） 可能分组到_字体系列_。 这使开发人员指定的字体，例如它的权重，某些属性，并且 Android 将自动选择合适的字体的字体系列。
 
-Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目标较旧的 API 级别，就需要声明`app`XML 命名空间，并使用具有各种字体属性`android:`命名空间和`app:`命名空间。 如果仅`android:`使用命名空间，然后字体将不会运行 API 级别 25 或更少的显示的设备。 例如，此 XML 代码段中声明一个新[_字体系列_](#font_families)起 API 级别 14 和更高版本中的资源：
+Android 支持库 v26 会将对字体的支持向后移植到 API 级别 26。 如果目标是较旧的 API 级别，则需声明 `app` XML 命名空间，并使用 `android:` 命名空间和 `app:` 命名空间来命名各种字体属性。 如果仅使用 `android:` 命名空间，则字体不会显示在运行 API 25 或更低级别的设备上。 例如，以下 XML 代码片段声明一个新的[字体系列](#font_families)资源，该资源可以在 API 14 及更高级别中使用：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,7 +60,7 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 ## <a name="fonts-as-a-resource"></a>字体作为资源
 
-打包到 Android APK 字体可确保，并总是应用程序。 字体文件 (任一。TTF 或。通过将文件复制到中的子目录 OTF 文件） 添加到 Xamarin.Android 应用程序就像任何其他资源，**资源**Xamarin.Android 项目文件夹。 字体资源保留在**字体**子目录的**资源**项目文件夹中的。 
+将字体打包进 Android APK 中可确保它对应用程序始终可用。 字体文件（.TTF 或 .OTF 文件）可以像任何其他资源一样添加到 Xamarin.Android 应用程序中，只需将文件复制到 Xamarin.Android 项目的 **Resources** 文件夹中的子目录即可。 字体资源保存在项目 **Resources** 文件夹的 **font** 子目录中。 
 
 > [!NOTE]
 > 字体应有**生成操作**的**AndroidResource**或它们不会打包到最终 APK。 应该通过 IDE 自动将设置的生成操作。
@@ -75,7 +75,7 @@ Android 支持库 v26 将向后移植到 API 级别 26 字体支持。 如果目
 
 若要创建字体系列，请先将所有字体添加到 **Resources/font** 文件夹。 然后，在字体系列的字体文件夹中创建新的 XML 文件。 XML 文件的名称与所引用的字体没有关联或关系；资源文件可以采用任何合法的 Android 资源文件名称。 此 XML 文件会有一个根 `font-family` 元素，其中包含一个或多个 `font` 元素。 每个 `font` 元素声明一个字体的特性。
 
-以下 XML 是一种字体系列_源 San Pro_定义多个不同的字体权重的字体。 这将另存为文件中**资源/字体**文件夹名为**sourcesanspro.xml**:
+以下 XML 是 _Sources Sans Pro_ 字体的字体系列示例，定义多个不同的字体粗细。 它在 **Resources/font** 文件夹中另存为名为 **sourcesanspro.xml** 的文件：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
