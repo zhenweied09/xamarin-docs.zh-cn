@@ -38,7 +38,7 @@ ms.locfileid: "30766564"
 
 
 > [!NOTE]
-> 顺序`<item>`元素很重要。 这可绘制引用时，`<item>`是否遍历按顺序来确定哪一个适合于当前的按钮状态。
+> `<item>`元素顺序很重要。 当引用此图像时，`<item>`将遍历这些项，以确定哪个项适合当前按钮状态。
 > “默认”的图像是最后一个，因此只在 `android:state_pressed` 和 `android:state_focused` 这两个条件都为 false 时才应用它。
 
 打开**Resources/layout/Main.axml**文件并添加[ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/)元素：
