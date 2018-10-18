@@ -211,7 +211,7 @@ namespace AppKit
 
 [![](standard-controls-images/edit12.png "拖动以创建输出口或操作")](standard-controls-images/edit12.png#lightbox)
 
-选择的暴露来创建，并为类型**输出口**或**操作****名称**: 
+选择的暴露来创建，并为类型**输出口**或**操作** **名称**: 
 
 [![](standard-controls-images/edit13.png "配置电源插座或操作")](standard-controls-images/edit13.png#lightbox)
 

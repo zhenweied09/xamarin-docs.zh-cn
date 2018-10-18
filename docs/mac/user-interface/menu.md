@@ -439,7 +439,7 @@ public void defineKeyword (NSObject sender) {
 
 ![属性检查器](menu-images/action01.png "属性检查器")
 
-单击**+** 底部的按钮**属性检查器**添加新的自定义操作：
+单击 **+** 底部的按钮 **属性检查器** 添加新的自定义操作：
 
 ![添加新的操作](menu-images/action02.png "添加一个新操作")
 
