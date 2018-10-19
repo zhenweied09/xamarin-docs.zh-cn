@@ -1,32 +1,24 @@
 ---
 title: MacOS Mojave 简介
-description: 本文档提供高级的 macOS Mojave 的 Xamarin 预览版版本目前提供的绑定 C# 中的新的和更新功能的概述。
+description: 本文档提供高级的 macOS Mojave 中新的和更新功能的概述。
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 07/08/2018
-ms.openlocfilehash: 916a1323127ac9be387c9465fb660dd0e7569a93
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: ce293a7c97a2cb4975baef807ded9a8fd0a90476
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615829"
 ---
 # <a name="introduction-to-macos-mojave"></a>MacOS Mojave 简介
 
-![预览](~/media/shared/preview.png)
+本文档提供高级的 macOS Mojave 中新的和更新功能的概述。
 
-> [!WARNING]
-> Xamarin 的支持将 macOS Mojave SDK 随 Xcode 10 是目前处于预览状态，这意味着，它可能包含 bug，不具备完整的功能，并可能会更改。 将它用于仅试验。
-
-本文档提供高级的 macOS Mojave 的 Xamarin 预览版版本目前提供的绑定 C# 中的新的和更新功能的概述。
-
-若要开始 macOS Mojave 借助 Xamarin 构建应用，看一看：
-
-- [入门指南](~/mac/platform/introduction-to-macos-mojave/get-started.md)
-- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+若要开始 macOS Mojave 借助 Xamarin 构建应用，看一看[入门指南](~/mac/platform/introduction-to-macos-mojave/get-started.md)有关[Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)。
 
 ## <a name="dark-mode"></a>深色模式
 
@@ -44,8 +36,16 @@ ms.locfileid: "39615829"
 
 影像框架包括改进的面部检测器可以检测人脸的不同的方向。 此外，请求修订，现在可以使用以选择特定的视觉 framework 算法修订版本。
 
+## <a name="network-framework"></a>网络框架
+
+基础网络框架网络堆栈`URLSession`iOS 应用程序中常用的 Api 现可作为独立框架，使其更轻松地使用 TCP、 UDP、 TLS、 IPv4/IPv6，和的详细信息。
+
+## <a name="deprecations"></a>弃用功能
+
+Macos Mojave，OpenGL ES 和 OpenCL，Apple 已弃用[鼓励开发人员](https://developer.apple.com/macos/whats-new/)采用金属和金属性能着色器。
+
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Mac 示例](https://developer.xamarin.com/samples/mac/)
 - [macOS-Apple 开发人员](https://developer.apple.com/macos/)
-- Xamarin 预览版[发布博客文章](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- [Xamarin.Mac 5.0 发行说明](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)

@@ -6,25 +6,25 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
-ms.openlocfilehash: 5ccd2a653e5190df11a58477905e868b25878e44
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/27/2018
+ms.openlocfilehash: 08eb77878dad9c89754585b87394d2c33900fe83
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39270107"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 条目
 
 _单行文本或输入的密码_
 
-Xamarin.Forms`Entry`用于单行文本输入。 `Entry`，例如`Editor`视图中，支持多个键盘类型。 此外，`Entry`可以用作密码字段。
+Xamarin.Forms [ `Entry` ](xref:Xamarin.Forms.Entry)用于单行文本输入。 `Entry`，例如[ `Editor` ](xref:Xamarin.Forms.Editor)视图中，支持多个键盘类型。 此外，`Entry`可以用作密码字段。
 
 ## <a name="display-customization"></a>显示自定义
 
 ### <a name="setting-and-reading-text"></a>设置和读取文本
 
-`Entry`，如其他文本呈现的视图，公开`Text`属性。 此属性可以用于设置和读取通过显示的文本`Entry`。 下面的示例演示了如何设置`Text`在 XAML 中的属性：
+`Entry`，如其他文本呈现的视图，公开[ `Text` ](xref:Xamarin.Forms.Entry.Text)属性。 此属性可以用于设置和读取通过显示的文本`Entry`。 下面的示例演示了如何设置`Text`在 XAML 中的属性：
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -58,6 +58,32 @@ var entry = new Entry { ... MaxLength = 10 };
 ```
 
 一个[ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength)属性值为 0 指示将允许任何输入，并将值`int.MaxValue`，它是默认值， [ `Entry` ](xref:Xamarin.Forms.Entry)，指示是否有任何可能输入的字符数的有效限制。
+
+### <a name="setting-the-cursor-position-and-text-selection-length"></a>设置光标位置和文本所选内容长度
+
+[ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition)属性可以用于返回或设置下一个字符将插入中存储的字符串的位置[ `Text` ](xref:Xamarin.Forms.Entry.Text)属性：
+
+```xaml
+<Entry Text="Cursor position set" CursorPosition="5" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position set", CursorPosition = 5 };
+```
+
+默认值[ `CursorPosition` ](xref:Xamarin.Forms.Entry.CursorPosition)属性为 0，表示将在开头插入文本`Entry`。
+
+此外， [ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength)属性可以用于返回或设置选定文本的长度`Entry`:
+
+```xaml
+<Entry Text="Cursor position and selection length set" CursorPosition="2" SelectionLength="10" />
+```
+
+```csharp
+var entry = new Entry { Text = "Cursor position and selection length set", CursorPosition = 2, SelectionLength = 10 };
+```
+
+默认值[ `SelectionLength` ](xref:Xamarin.Forms.Entry.SelectionLength)属性为 0，指示未选定任何文本。
 
 ### <a name="customizing-the-keyboard"></a>自定义键盘
 
@@ -180,21 +206,17 @@ var entry = new Entry { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > 当[ `IsTextPredictionEnabled` ](xref:Xamarin.Forms.Entry.IsTextPredictionEnabled)属性设置为`false`，和自定义键盘不被使用，文本预测和自动禁用文本更正。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)已设置该禁用文本预测`IsTextPredictionEnabled`属性将被忽略。 因此，该属性不能用于启用文本预测`Keyboard`的显式禁用它。
 
-### <a name="placeholders"></a>占位符
+### <a name="setting-placeholder-text"></a>设置占位符文本
 
-`Entry` 可以设置为显示占位符文本，它不存储用户输入时。 在实践中，这是通常出现在窗体中以阐明适用于给定字段的内容。 占位符文本颜色不能进行自定义，而不考虑相同`TextColor`设置。 如果设计调用的自定义占位符的颜色，您将需要故障回复到[自定义呈现器]()。 将创建以下`Entry`与 XAML 中的占位符为"Username":
+[ `Entry` ](xref:Xamarin.Forms.Entry)可以设置为显示占位符文本，它不存储用户输入时。 这可以通过设置[ `Placeholder` ](xref:Xamarin.Forms.Entry.Placeholder)属性设置为`string`，并通常用于指示的是适用于的内容类型`Entry`。 此外，通过设置控制的占位符文本颜色[ `PlaceholderColor` ](xref:Xamarin.Forms.Entry.PlaceholderColor)属性设置为[ `Color` ](xref:Xamarin.Forms.Color):
 
 ```xaml
-<Entry Placeholder="Username" />
+<Entry Placeholder="Username" PlaceholderColor="Olive" />
 ```
-
-在 C# 中：
 
 ```csharp
-var MyEntry = new Entry { Placeholder = "Username" };
+var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive };
 ```
-
-![](entry-images/placeholder.png "条目占位符示例")
 
 ### <a name="password-fields"></a>密码字段
 

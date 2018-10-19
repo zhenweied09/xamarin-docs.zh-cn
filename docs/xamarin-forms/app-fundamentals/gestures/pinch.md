@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 37befdcd4ccbcd49e3cebda92d55ae6f70da2ad6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998693"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>添加捏合手势识别器
 
 _捏合手势用于执行交互式缩放，并使用 PinchGestureRecognizer 类实现。捏合手势的常见方案是图像的执行交互式 pinch 位置处的缩放。这通过缩放内容的视区，来实现，本文中所示。_
-
-## <a name="overview"></a>概述
 
 若要使用户界面元素可使用收缩手势进行缩放，创建[ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer)实例，则处理[ `PinchUpdated` ](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated)事件，并添加到新的笔势识别器[`GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers)上的用户界面元素的集合。 下面的代码示例演示`PinchGestureRecognizer`附加到[ `Image` ](xref:Xamarin.Forms.Image)元素：
 
@@ -161,11 +159,6 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 ```
 
 此方法更新基于用户的收缩手势的预包装的用户界面元素的缩放级别。 这通过使用的值来实现[ `Scale` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale)， [ `ScaleOrigin` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin)并[ `Status` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status)属性[ `PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs)实例来计算 pinch 手势的原始应用的缩放因子。 预包装的用户元素然后放大捏合手势原点通过设置其[ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX)， [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY)，以及[ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale)计算出的值的属性。
-
-## <a name="summary"></a>总结
-
-捏合手势用于执行交互式缩放，并且通过实现[ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer)类。
-
 
 ## <a name="related-links"></a>相关链接
 

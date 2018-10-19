@@ -1,5 +1,5 @@
 ---
-title: 添加的点击手势手势识别程序
+title: 添加的点击手势识别程序
 description: 本文介绍如何使用点击手势进行点击检测在 Xamarin.Forms 应用程序中。 点击检测是通过 TapGestureRecognizer 类实现的。
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994849"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>添加的点击手势手势识别程序
+# <a name="adding-a-tap-gesture-recognizer"></a>添加的点击手势识别程序
 
 _点击手势用于点击检测并使用 TapGestureRecognizer 类实现。_
-
-## <a name="overview"></a>概述
 
 若要使用户界面元素与点击手势可单击，创建[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)实例，则处理[ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped)事件，并添加到新的笔势识别器[`GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers)上的用户界面元素的集合。 下面的代码示例演示`TapGestureRecognizer`附加到[ `Image` ](xref:Xamarin.Forms.Image)元素：
 
@@ -72,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>使用 ICommand
 
-通常使用 Mvvm 模式的应用程序使用`ICommand`而不是直接绑定事件处理程序。 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)可以轻松地支持`ICommand`通过在代码中设置绑定：
+通常使用模型-视图-视图模型 (MVVM) 模式的应用程序使用`ICommand`而不是直接绑定事件处理程序。 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)可以轻松地支持`ICommand`通过在代码中设置绑定：
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -113,10 +111,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## <a name="summary"></a>总结
-
-点击手势用于点击检测和使用实现[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)类。 可以指定的点击数来识别双击 (或三击或多个点击) 行为。
 
 
 ## <a name="related-links"></a>相关链接

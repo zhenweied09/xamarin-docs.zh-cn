@@ -4,14 +4,14 @@ description: 本文介绍如何使用 SkiaSharp 剪辑图形路径与特定区�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0c07d68535349004eeefeaa18daa9c59b889a6a7
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615283"
 ---
 # <a name="clipping-with-paths-and-regions"></a>路径和区域中的剪辑
@@ -22,7 +22,7 @@ _使用剪辑图形路径指向的特定区域，并创建区域_
 
 ![](clipping-images/clippingsample.png "通过锁眼 monkey")
 
-*剪辑区域*是在其中呈现图形的屏幕区域。 不呈现的剪辑区域之外显示任何内容。 通常由定义剪辑区域[ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/)对象，但您可以或者定义剪辑区域使用[ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/)对象。 这两种对象类型首先似乎相关，因为您可以从路径中创建一个区域。 但是，不能从一个区域，创建路径和它们在内部有很大不同： 路径包含一系列直线和曲线，而由一系列水平扫描行定义一个区域。
+*剪辑区域*是在其中呈现图形的屏幕区域。 不呈现的剪辑区域之外显示任何内容。 通常由一个矩形来定义剪辑区域或[ `SKPath` ](xref:SkiaSharp.SKPath)对象，但您可以或者定义剪辑区域使用[ `SKRegion` ](xref:SkiaSharp.SKRegion)对象。 这两种对象类型首先似乎相关，因为您可以从路径中创建一个区域。 但是，不能从一个区域，创建路径和它们在内部有很大不同： 路径包含一系列直线和曲线，而由一系列水平扫描行定义一个区域。
 
 上面的图像已通过**Monkey 通过锁眼**页。 [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs)类定义使用 SVG 数据的路径，并使用构造函数从程序资源加载位图：
 
@@ -104,15 +104,15 @@ canvas.ClipPath(keyholePath);
 
 ## <a name="combining-clipping-paths"></a>组合剪切路径
 
-严格地说，剪辑区域未"设置"`ClipPath`方法。 相反，它结合了最初为矩形屏幕大小等于现有剪切路径。 你可以获取的剪辑区域使用的矩形边界[ `ClipBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipBounds/)属性或[ `ClipDeviceBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipDeviceBounds/)属性。 `ClipBounds`属性返回`SKRect`反映任何转换的值可能有效。 `ClipDeviceBounds`属性返回`RectI`值。 这是一个具有整数维度的矩形，描述在实际的像素尺寸的剪辑区域。
+严格地说，剪辑区域未"设置"`ClipPath`方法。 相反，它结合了现有剪切路径，开始为画布大小等于一个矩形。 你可以获取的剪辑区域使用的矩形边界[ `ClipBounds` ](xref:SkiaSharp.SKCanvas.ClipBounds)属性或[ `ClipDeviceBounds` ](xref:SkiaSharp.SKCanvas.ClipDeviceBounds)属性。 `ClipBounds`属性返回`SKRect`反映任何转换的值可能有效。 `ClipDeviceBounds`属性返回`RectI`值。 这是一个具有整数维度的矩形，描述在实际的像素尺寸的剪辑区域。
 
-任何对`ClipPath`减少通过合并为新区域的剪辑区域的剪辑区域。 完整语法[ `ClipPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipPath/p/SkiaSharp.SKPath/SkiaSharp.SKClipOperation/System.Boolean/)方法是：
+任何对`ClipPath`减少通过合并为新区域的剪辑区域的剪辑区域。 完整语法[ `ClipPath` ](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean))方法是：
 
 ```csharp
 public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-此外，还有[ `ClipRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRect/p/SkiaSharp.SKRect/SkiaSharp.SKClipOperation/System.Boolean/)结合一个矩形剪辑区域的方法：
+此外，还有[ `ClipRect` ](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean))结合一个矩形剪辑区域的方法：
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
@@ -167,11 +167,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](clipping-images//fourcircleintersectclip-small.png "三重的四个圆圈相交剪辑页屏幕截图")](clipping-images/fourcircleintersectclip-large.png#lightbox "带来三倍的四个圆圈相交剪辑页屏幕截图")
 
-[ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/)枚举具有只有两个成员：
+[ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation)枚举具有只有两个成员：
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Difference/) 从现有的剪辑区域中删除指定的路径或矩形
+- `Difference` 从现有的剪辑区域中删除指定的路径或矩形
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Intersect/) 与指定的路径或使用现有的剪辑区域的矩形相交
+- `Intersect` 与指定的路径或使用现有的剪辑区域的矩形相交
 
 如果替换四个`SKClipOperation.Intersect`中的自变量`FourCircleIntersectClipPage`类的`SKClipOperation.Difference`，可以看到如下：
 
@@ -248,33 +248,31 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKClipOperation clipOp)
 
 ## <a name="exploring-regions"></a>探索区域
 
-如果你已经浏览了的 API 文档`SKCanvas`，您可能已经注意到的重载`ClipPath`并`ClipRect`而是类似于上面所述的方法的方法有一个名为参数[ `SKRegionOperation`](https://developer.xamarin.com/api/type/SkiaSharp.SKRegionOperation/)而非`SKClipOperation`。 `SKRegionOperation` 具有六个成员，提供某种程度上更灵活地合并到窗体剪辑区域路径：
+您还可以定义的剪辑区域[ `SKRegion` ](xref:SkiaSharp.SKRegion)对象。
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Difference/)
+一个新创建的`SKRegion`对象描述的空白区域。 在对象上的第一个调用是通常[ `SetRect` ](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) ，以便在区域描述的矩形区域。 参数`SetRect`是`SKRectI`值&mdash;整数矩形坐标，因为它指定根据像素的矩形。 然后，可以调用[ `SetPath` ](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion))与`SKPath`对象。 这将创建相同的内部路径，但剪辑到初始的矩形区域的区域。
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Intersect/)
-
-- [`Union`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Union/)
-
-- [`XOR`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.XOR/)
-
-- [`ReverseDifference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.ReverseDifference/)
-
-- [`Replace`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Replace/)
-
-但是的重载`ClipPath`并`ClipRect`与`SKRegionOperation`参数已过时，并且不能使用。
-
-您仍然可以使用`SKRegionOperation`枚举，但它要求您定义的剪辑区域[ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/)对象。
-
-一个新创建的`SKRegion`对象描述的空白区域。 在对象上的第一个调用是通常[ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) ，以便在区域描述的矩形区域。 参数`SetRect`是`SKRectI`值&mdash;的矩形值与整数属性。 然后，可以调用[ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/)与`SKPath`对象。 这将创建相同的内部路径，但剪辑到初始的矩形区域的区域。
-
-`SKRegionOperation`枚举仅发挥作用时调用之一[ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/)方法重载，例如这个：
+此外可以通过调用之一修改在区域[ `Op` ](xref:SkiaSharp.SKRegion.Op*)方法重载，例如这个：
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
 
-您要做的区域`Op`上的调用结合了作为参数基于指定的区域`SKRegionOperation`成员。 时最后一个区域适用于剪辑，您可以设置的 canvas 使用的剪辑区域作为[ `ClipRegion` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRegion/p/SkiaSharp.SKRegion/SkiaSharp.SKClipOperation/)方法的`SKCanvas`:
+[ `SKRegionOperation` ](xref:SkiaSharp.SKRegionOperation)枚举是类似于`SKClipOperation`但它具有更多成员：
+
+- `Difference`
+
+- `Intersect`
+
+- `Union`
+
+- `XOR`
+
+- `ReverseDifference`
+
+- `Replace`
+
+您要做的区域`Op`上的调用结合了作为参数基于指定的区域`SKRegionOperation`成员。 时最后一个区域适用于剪辑，您可以设置的 canvas 使用的剪辑区域作为[ `ClipRegion` ](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation))方法的`SKCanvas`:
 
 ```csharp
 public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperation.Intersect)
@@ -364,9 +362,9 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 若要了解这种差异很有必要，将有助于您了解哪些区域。 如果您已考虑如何剪辑操作或区域操作可能会在内部实现，它可能看起来非常复杂。 组合多个可能非常复杂的路径，并生成的路径的轮廓可能是算法非常棘手的工作。
 
-但如果每个路径缩短为水平扫描行，如老式清空 tube 电视中的一系列显著简化此作业。 每个扫描行是只需一条水平线起始点和终结点。 例如，10 半径的圆形可分解为 20 水平扫描行，其中每个圆圈由左侧部分开始并结束于的右侧部分。 结合使用的任何区域操作的两个圆成为非常简单，因为它是只需检查每个对相应扫描行的开始和结束坐标。
+如果每个路径缩短为水平扫描行，如老式清空 tube 电视中的一系列显著简化此作业。 每个扫描行是只需一条水平线起始点和终结点。 例如，10 个像素的半径的圆形可分解为 20 水平扫描行，其中每个圆的左侧部分开始，在右侧的部分结束。 结合使用的任何区域操作的两个圆成为非常简单，因为它是只需检查每个对相应扫描行的开始和结束坐标。
 
-这是什么区域是： 定义一个区域的一系列的水平扫描行。
+这是什么区域是： 一系列定义一个区域的水平扫描行。
 
 但是，当区域被简化为一系列的扫描行，这些扫描线基于特定的像素尺寸。 严格地说，区域不是向量图形对象。 它是在更接近本质上比为路径的压缩单色位图。 因此，区域不能缩放或旋转不失真，并因此它们不转换时使用的剪辑区域。
 
@@ -514,5 +512,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -4,14 +4,14 @@ description: 此文介绍了如何使用手指在 Xamarin.Forms 应用程序中�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: b0f28cd3e8a928a6da3169dee96ec089178a64e2
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 03a6de3b6297e57620655e3697fe729e6fb06501
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615816"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp 中手指绘画
@@ -24,7 +24,7 @@ _使用手指在画布上绘制。_
 
 在 Xamarin.Forms 中的触摸支持不允许跟踪各手指在屏幕上，因此已开发 Xamarin.Forms 触控跟踪效果以提供更多点触控支持。 这种效果本文所述[**效果从调用事件**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)。 示例程序[**触控跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)包括使用 SkiaSharp，包括一个手指绘制程序的两个页面。
 
-[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括此点触控跟踪事件。 .NET Standard 库项目中包括`TouchEffect`类，`TouchActionType`枚举`TouchActionEventHandler`委托，和`TouchActionEventArgs`类。 每个平台项目包括`TouchEffect`类用于该平台; iOS 项目还包含`TouchRecognizer`类。
+[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)解决方案包括此点触控跟踪事件。 .NET Standard 库项目中包括`TouchEffect`类，`TouchActionType`枚举`TouchActionEventHandler`委托，和`TouchActionEventArgs`类。 每个平台项目都包括`TouchEffect`类用于该平台; iOS 项目还包含`TouchRecognizer`类。
 
 **手指绘制**页面**SkiaSharpFormsDemos**是手指绘画的简化的实现。 它不允许选择颜色或宽度进行描边，则具有无法清除画布上，而且当然不能保存您的作品。
 
@@ -76,7 +76,7 @@ public partial class FingerPaintPage : ContentPage
 }
 ```
 
-顾名思义，`inProgressPaths`字典将存储当前正在由一个或多个手指绘制的路径。 字典的键是附带触控事件的触摸屏输入 ID。 `completedPaths`字段是已完成时手指从屏幕上绘制提升的路径的路径的集合。
+顾名思义，`inProgressPaths`字典将存储当前正在由一个或多个手指绘制的路径。 字典的键是附带触控事件的触摸屏输入 ID。 `completedPaths`字段是已完成路径已绘制一个手指从屏幕上提起后的路径的集合。
 
 `TouchAction`处理程序管理这两个集合。 当手指首先触摸屏幕，一个新`SKPath`添加到`inProgressPaths`。 当这根手指移动时，额外的点将添加到路径。 在手指松开，路径将转移到`completedPaths`集合。 可以同时绘制与多个手指。 指向某个路径或集合，每次更改后`SKCanvasView`失效：
 
@@ -141,7 +141,7 @@ public partial class FingerPaintPage : ContentPage
 ```csharp
 public partial class FingerPaintPage : ContentPage
 {
-    ,,,
+    ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         SKCanvas canvas = args.Surface.Canvas;
@@ -165,10 +165,11 @@ public partial class FingerPaintPage : ContentPage
 
 [![](finger-paint-images/fingerpaint-small.png "手指绘制页的三个屏幕截图")](finger-paint-images/fingerpaint-large.png#lightbox "的手指绘制页的三个屏幕截图")
 
+现在已了解如何绘制的线条以及如何定义使用参数化的等式的曲线。 在后面的部分[ **SkiaSharp 曲线和路径**](../curves/index.md)介绍了各种类型的曲线的`SKPath`支持。 但有用的先决条件是探讨[ **SkiaSharp 转换**](../transforms/index.md)。
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [触控跟踪效果演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/Effects/TouchTrackingEffectDemos/)
 - [调用效果中的事件](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
