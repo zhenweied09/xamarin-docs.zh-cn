@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 4f5f3ab00b55de270c209d6fa7082c3acc40b5ef
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 0d0d6a2eddc03b5aaa2fecabc38a91e5f09b72ac
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39241300"
 ---
 # <a name="hello-xamarinforms"></a>Hello，Xamarin.Forms
@@ -37,4 +37,3 @@ _本指南介绍如何使用 Visual Studio for Mac 或 Visual Studio 开发 Xama
 - [Visual Studio for Mac 方案 - 调试](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [免费自学教程（视频）](https://university.xamarin.com/self-guided)
 - [Xamarin 入门（视频）](https://developer.xamarin.com/videos/)
-- [Hello，Xamarin.Forms iOS 工作簿](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook)
