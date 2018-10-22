@@ -15,20 +15,22 @@ ms.locfileid: "34783117"
 ---
 # <a name="monogame-framework"></a>Monogame Framework
 
-MonoGame 是用于开发 2D 和 3D 游戏的高效的、 灵活的、 跨平台的 API。 它为许多跨平台游戏引擎提供了基础，但可以不在游戏引擎正在包装的情况下在游戏中直接使用。
+MonoGame是一款用于开发2D和3D游戏的高效，灵活，跨平台的API。 它为许多跨平台游戏引擎提供了基础，但也可以直接在游戏中使用而无需包含在游戏引擎中。
 
-## <a name="introduction-to-game-development-with-monogamegraphics-gamesmonogameintroductionindexmd"></a>[使用 MonoGame 游戏开发简介](~/graphics-games/monogame/introduction/index.md)
+## <a name="introduction-to-game-development-with-monogamegraphics-gamesmonogameintroductionindexmd"></a>[介绍使用MonoGame进行游戏开发](~/graphics-games/monogame/introduction/index.md)
 
-MonoGame 是一个跨平台，用于导入资产提供图形、 音频、 游戏状态管理、 输入和内容的管道的 API 的硬件加速。
+MonoGame是一个跨平台的硬件加速API，提供图形，音频，游戏状态管理，输入以及用于导入资源的内容流水线。
 
-## <a name="3d-graphics-with-monogamegraphics-gamesmonogame3dindexmd"></a>[与 MonoGame 3D 图形](~/graphics-games/monogame/3d/index.md)
+## <a name="3d-graphics-with-monogamegraphics-gamesmonogame3dindexmd"></a>[MonoGame的3D图形](~/graphics-games/monogame/3d/index.md)
 
-MonoGame 提供用于显示实时 3D 图形的灵活、 更高效的 API。 它包括用于呈现的更高级别的构造，并还对较低级别图形资源的访问。
+MonoGame提供灵活，高效的API，用于显示实时的3D图形。 它即包括高层的渲染结构封装，也可以访问底层的图形资源。
 
-## <a name="monogame-gamepad-referencegraphics-gamesmonogameinputmd"></a>[MonoGame 游戏板引用](~/graphics-games/monogame/input.md)
+## <a name="monogame-gamepad-referencegraphics-gamesmonogameinputmd"></a>[MonoGame GamePad参考](~/graphics-games/monogame/input.md)
 
-游戏板是用于访问 MonoGame 中的输入的设备的标准的、 跨平台的类。
+GamePad是一个标准的跨平台类，用于访问MonoGame中的输入设备。
 
-## <a name="monogame-platform-specific-considerationsgraphics-gamesmonogameplatformsindexmd"></a>[MonoGame 平台特别注意的事项](~/graphics-games/monogame/platforms/index.md)
+## <a name="monogame-platform-specific-considerationsgraphics-gamesmonogameplatformsindexmd"></a>[MonoGame平台特定注意事项](~/graphics-games/monogame/platforms/index.md)
 
-MonoGame 各种平台支持。 本部分介绍特定于每个平台的主题。
+MonoGame在各种平台上都受支持。本节介绍具体到每个平台的主题。
+
+
