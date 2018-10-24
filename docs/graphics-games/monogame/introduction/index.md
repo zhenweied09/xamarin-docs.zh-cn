@@ -15,37 +15,38 @@ ms.locfileid: "33920801"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>使用 MonoGame 游戏开发简介
 
-_此多个部分的演练演示如何创建使用 MonoGame 的简单二维应用程序。它涵盖了常见的游戏编程概念，如图形中，输入，游戏实体和物理。_
+_这个由多部分组成的演练展示了如何使用MonoGame创建一个简单的2D应用程序。它涵盖了常见的游戏编程概念，例如图形、输入、游戏实体和物理学。_
 
-本指南介绍了 MonoGame API 技术进行跨平台游戏。 有关平台的完整列表，请参阅[MonoGame 网站](http://www.monogame.net/)。 本教程将使用 C# 代码示例，虽然 MonoGame 也是完全正常运行 F #。
+本文介绍了用于制作跨平台游戏的 MonoGame API 技术。有关平台的完整列表，请参阅 [MonoGame 网站](http://www.monogame.net/)。本教程将使用 C＃ 代码示例，虽然 MonoGame 也完全可以使用F＃。
 
-MonoGame 是一个跨平台，用于导入资产提供图形、 音频、 游戏状态管理、 输入和内容的管道的 API 的硬件加速。 与大多数的游戏引擎不同 MonoGame 并未提供或在施加任何模式或项目的结构。  这意味着开发人员可用于根据组织其代码，它还意味着，在首次开始一个新项目，则需要的安装程序代码。
+MonoGame 是一个跨平台的硬件加速API、提供图形、音频、游戏状态管理、输入以及用于导入资产的内容流水线。与大多数游戏引擎不同，MonoGame 不提供或强加任何模式或项目结构。虽然这意味着开发人员可以随意组织他们的代码，但这也意味着首次启动新项目时需要一些设置代码。
 
-本演练的第一个部分侧重于设置一个空的项目。 最后一节介绍如何编写的所有我们游戏逻辑和内容 — — 最其中将跨平台。
+本演练的第一部分重点介绍如何设置一个空项目。最后一部分介绍了如何编写我们所有的游戏逻辑和内容 — 大多数都是跨平台的。
 
-本演练结束时，我们将创建一个简单的游戏玩家可控的动画的字符使用触摸屏输入。  虽然这不是从技术上讲完整游戏 （因为它未包含任何 win 或丢失的条件），它演示大量游戏开发概念，并可以用作许多类型的游戏奠定了基础。 
+本演练结束时，我们将创建一个简单的游戏，玩家可以通过触摸输入控制动画角色。虽然这在技术上并不是一个完整的游戏（因为它没设置赢或输的条件），但它展示了许多游戏开发概念，可以作为许多游戏类型的基础。
 
-下面显示此演练的结果：
+下面显示了此演练的结果：
 
 ![示例游戏字符跟随鼠标的动画](images/image1.gif)
 
 ## <a name="monogame-and-xna"></a>Monogame 和 XNA
 
-MonoGame 库用于模拟在语法和功能的 Microsoft XNA 库。  所有 MonoGame 对象都存在 Microsoft.Xna 命名空间 – 允许无需修改在 MonoGame 中使用的大多数 XNA 代码下。 
+MonoGame 库旨在模仿 Microsoft XNA 库的功能和语法。所有 MonoGame 对象都存在于 Microsoft.Xna 命名空间下 - 允许大多数 XNA 代码在 MonoGame 中使用而无需修改。
 
-开发人员熟悉 XNA 将已经熟悉 MonoGame 的语法，并寻找 MonoGame 所使用的其他信息的开发人员将能够引用现有的联机 XNA 演练、 API 文档和讨论。
+
+熟悉 XNA 的开发人员已熟悉 MonoGame 的语法，想寻找更多有关使用 MonoGame 的信息的开发人员可参考现有的在线XNA演练、API 文档和讨论。
 
 
 ## <a name="walkthrough-parts"></a>演练部分
 
-- [第 1 – 创建跨平台 MonoGame 项目部分](~/graphics-games/monogame/introduction/part1.md)
-- [第 2 – 实现 WalkingGame 部分](~/graphics-games/monogame/introduction/part2.md)
+- [第 1 部分 – 创建跨平台 MonoGame 项目](~/graphics-games/monogame/introduction/part1.md)
+- [第 2 部分 – 实现 WalkingGame ](~/graphics-games/monogame/introduction/part2.md)
 
 ## <a name="related-links"></a>相关链接
 
 - [WalkingGame MonoGame 项目 （示例）](https://developer.xamarin.com/samples/mobile/WalkingGameMG/)
 - [XNB 字体 iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
 - [XNB 字体 Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
-- [在 NuGet 上 MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
-- [在 NuGet 上 MonoGame iOS](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
+- [NuGet 上的 MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
+- [NuGet 上的 MonoGame iOS](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [MonoGame API 文档](http://www.monogame.net/documentation/?page=main)
