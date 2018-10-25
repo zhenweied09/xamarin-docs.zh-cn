@@ -6,25 +6,17 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: f8f8f9b4e5755e8b1707178fef633321b64e4e94
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/14/2018
+ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994671"
 ---
 # <a name="hierarchical-navigation"></a>分层导航
 
 _NavigationPage 类提供了可以向前和向后，根据需要通过页导航用户所在的分层导航体验。类实现导航作为后进先出 (LIFO) 堆栈的页对象。本文演示如何使用 NavigationPage 类在大量页面中执行导航。_
-
-本文讨论以下主题：
-
-- [执行导航](#Performing_Navigation)– 创建根页、 将页面推送到导航堆栈、 弹出导航堆栈中的页面和页面转换进行动画处理。
-- [将数据传递时导航](#Passing_Data_when_Navigating)– 将数据页的构造函数，通过和传递`BindingContext`。
-- [操作导航堆栈](#Manipulating_the_Navigation_Stack)– 通过插入或删除页操作堆栈。
-
-## <a name="overview"></a>概述
 
 若要从一个页面移动到另一个，应用程序会将新页面推送到导航堆栈中，其中它将成为活动页，如以下关系图中所示：
 
@@ -312,10 +304,58 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 前提是用户的凭据是否正确，`MainPage`实例插入到当前页之前的导航堆栈。 [ `PopAsync` ](xref:Xamarin.Forms.NavigationPage.PopAsync)方法然后会从导航堆栈中，当前页删除与`MainPage`实例成为活动页。
 
-## <a name="summary"></a>总结
+## <a name="displaying-views-in-the-navigation-bar"></a>在导航栏中显示视图
 
-本文演示了如何使用[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)类来执行大量页面中导航。 此类提供分层导航体验，用户是可以向前和向后，根据需要通过页进行导航。 此类将导航实现为 [`Page`](xref:Xamarin.Forms.Page) 对象的后进先出 (LIFO) 堆栈。
+任何 Xamarin.Forms [ `View` ](xref:Xamarin.Forms.View)可以显示在导航栏中的[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)。 这可以通过设置[ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty)附加到属性`View`。 此附加的属性可以设置任意[ `Page` ](xref:Xamarin.Forms.Page)，以及何时`Page`将被推送到`NavigationPage`，则`NavigationPage`将遵守属性的值。
 
+以下示例摘自[标题视图示例](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)，演示如何设置[ `NavigationPage.TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty)从 XAML 附加属性：
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationPageTitleView.TitleViewPage">
+    <NavigationPage.TitleView>
+        <Slider HeightRequest="44" WidthRequest="300" />
+    </NavigationPage.TitleView>
+    ...
+</ContentPage>
+```
+
+下面是等效的C#代码：
+
+```csharp
+public class TitleViewPage : ContentPage
+{
+    public TitleViewPage()
+    {
+        var titleView = new Slider { HeightRequest = 44, WidthRequest = 300 };
+        NavigationPage.SetTitleView(this, titleView);
+        ...
+    }
+}
+```
+
+这会导致[ `Slider` ](xref:Xamarin.Forms.Slider)上的导航栏中显示[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+[![滑块 TitleView](hierarchical-images/titleview-small.png "滑块 TitleView")](hierarchical-images/titleview-large.png#lightbox "滑块 TitleView")
+
+> [!IMPORTANT]
+> 很多视图不会显示在导航栏中，除非使用指定的视图的大小[ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)并[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性。 或者，该视图可以包装在[ `StackLayout` ](xref:Xamarin.Forms.StackLayout)与[ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)并[ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions)属性设置为适当的值。
+
+注意，因为[ `Layout` ](xref:Xamarin.Forms.Layout)类派生自[ `View` ](xref:Xamarin.Forms.View)类[ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty)可以设置附加的属性来显示布局包含多个视图的类。 在 iOS 和通用 Windows 平台 (UWP) 上，不能更改导航栏的高度，并因此会发生剪切，如果在导航栏中显示的视图大小大于默认大小的导航栏。 但是，在 Android 上，导航栏的高度可通过设置来更改[ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty)可绑定属性设置为`double`表示新的高度。 有关详细信息，请参阅[NavigationPage 上设置导航栏高度](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight)。
+
+或者，可以通过将某些内容在导航栏中，而另一些在视图中放置在您的颜色匹配到导航栏的页面内容的顶部建议扩展的导航栏。 此外，在 iOS 上的分隔线和位于导航栏底部的卷影可以删除通过设置[ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty)可绑定属性设置为`true`。 有关详细信息，请参阅[隐藏导航栏分隔符在 NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar)。
+
+> [!NOTE]
+> [ `BackButtonTitle` ](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty)， [ `Title` ](xref:Xamarin.Forms.Page.Title)， [ `TitleIcon` ](xref:Xamarin.Forms.NavigationPage.TitleIconProperty)，并[ `TitleView` ](xref:Xamarin.Forms.NavigationPage.TitleViewProperty)都可以定义属性占用空间，在导航栏上的值。 虽然导航栏大小因平台和屏幕大小而异，设置所有这些属性会由于可用的有限空间冲突。 而不是尝试使用这些属性的组合，你可能会发现可以更好地实现您所需的导航栏的设计通过仅设置`TitleView`属性。
+
+### <a name="limitations"></a>限制
+
+有许多需要注意的显示时的限制[ `View` ](xref:Xamarin.Forms.View)中的导航栏[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage):
+
+- 在 iOS 上，视图放在导航栏中的`NavigationPage`在不同的位置，具体取决于是否启用了大标题中显示。 有关启用大标题的详细信息，请参阅[显示大标题](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title)。
+- 在 Android 上，将视图放置在导航栏中的`NavigationPage`只能在使用应用程序兼容性的应用来完成。
+- 我们不建议将大型和复杂的视图，如放置[ `ListView` ](xref:Xamarin.Forms.ListView)并[ `TableView` ](xref:Xamarin.Forms.TableView)，在导航栏中的`NavigationPage`。
 
 ## <a name="related-links"></a>相关链接
 
@@ -323,6 +363,7 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 - [分层 （示例）](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 - [PassingData （示例）](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow （示例）](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
+- [TitleView （示例）](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
 - [如何在 Xamarin.Forms （Xamarin University 视频） 示例中的屏幕流中创建一个符号](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
 - [如何在 Xamarin.Forms （Xamarin University 视频） 中的屏幕流中创建一个符号](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

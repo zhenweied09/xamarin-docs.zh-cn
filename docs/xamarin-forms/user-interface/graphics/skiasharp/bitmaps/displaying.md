@@ -4,14 +4,14 @@ description: 了解如何显示的 SkiaSharp 中像素的位图大小和扩展�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: cbe3166c4edb147f7179f2c719901b382db8ec80
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615309"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>显示 SkiaSharp 位图
@@ -71,7 +71,7 @@ catch
 
 请注意，`Stream`对象，来自`GetStreamAsync`复制到`MemoryStream`。 Android 不允许`Stream`从`HttpClient`由主线程以外的异步方法中进行处理。 
 
-[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/)做大量工作：`Stream`传递给它的对象引用包含在其中一个常见的位图文件格式、 通常 JPEG、 PNG 或 GIF 整个位图的内存块。 `Decode`方法必须确定格式，并再到 SkiaSharp 自己内部的位图格式解码的位图文件。
+[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream))做大量工作：`Stream`传递给它的对象引用包含在其中一个常见的位图文件格式、 通常 JPEG、 PNG 或 GIF 整个位图的内存块。 `Decode`方法必须确定格式，并再到 SkiaSharp 自己内部的位图格式解码的位图文件。
 
 你的代码调用后`SKBitmap.Decode`，它可能会使`CanvasView`以便`PaintSurface`处理程序可以显示新加载的位图。
 
@@ -107,16 +107,16 @@ using (Stream stream = await picturePicker.GetImageStreamAsync())
 
 通常情况下，此类代码还将使失效`CanvasView`，以便`PaintSurface`处理程序可以显示新的位图。
 
-`SKBitmap`类定义了多个有用的属性，包括[ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/)并[ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/)，显示的位图，以及许多方法，其中包括的像素尺寸若要创建位图，以复制这些值，并公开像素位的方法。 
+`SKBitmap`类定义了多个有用的属性，包括[ `Width` ](xref:SkiaSharp.SKBitmap.Width)并[ `Height` ](xref:SkiaSharp.SKBitmap.Height)，显示的位图，以及许多方法，其中包括的像素尺寸若要创建位图，以复制这些值，并公开像素位的方法。 
 
 ## <a name="displaying-in-pixel-dimensions"></a>在像素尺寸中显示
 
-SkiaSharp [ `Canvas` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCanvas/)类定义了四个`DrawBitmap`方法。 这些方法允许位图，以显示两个完全不同的方式： 
+SkiaSharp [ `Canvas` ](xref:SkiaSharp.SKCanvas)类定义了四个`DrawBitmap`方法。 这些方法允许位图，以显示两个完全不同的方式： 
 
 - 指定`SKPoint`值 (或单独`x`和`y`值) 中其像素大小显示位图。 位图的像素是直接映射到的视频显示器的像素为单位。
 - 指定矩形将导致要被拉伸到的大小和形状的矩形的位图。 
 
-在使用其像素大小显示位图[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKPoint/SkiaSharp.SKPaint/)与`SKPoint`参数或[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/)具有单独`x`和`y`参数：
+在使用其像素大小显示位图[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKPoint,SkiaSharp.SKPaint))与`SKPoint`参数或[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint))具有单独`x`和`y`参数：
 
 ```csharp
 DrawBitmap(SKBitmap bitmap, SKPoint pt, SKPaint paint = null)
@@ -126,7 +126,21 @@ DrawBitmap(SKBitmap bitmap, float x, float y, SKPaint paint = null)
 
 这两种方法是在功能上相同的。 指定的点指示相对于 canvas 位图左上角的位置。 由于移动设备的像素的分辨率很高，较小位图通常显示在这些设备上很小。
 
-可选`SKPaint`参数，可显示位图使用混合模式或筛选效果。 这些将在后续文章中所示。
+可选`SKPaint`参数，可显示使用透明的位图。 若要执行此操作，创建`SKPaint`对象并设置`Color`属性设置为任何`SKColor`值，该值具有 alpha 通道小于 1。 例如：
+
+```csharp
+paint.Color = new SKColor(0, 0, 0, 0x80);
+```
+
+作为最后一个参数传递 0x80 指示 50%的透明度。 此外可以在其中一个预定义的颜色设置 alpha 通道：
+
+```csharp
+paint.Color = SKColors.Red.WithAlpha(0x80);
+```
+
+但是，是颜色本身是不相关。 使用时检查仅 alpha 通道`SKPaint`对象中`DrawBitmap`调用。
+
+`SKPaint`对象也扮演着角色时显示位图使用混合模式或筛选效果。 这些文章中演示[SkiaSharp 组合的情况下和混合模式](../effects/blend-modes/index.md)并[SkiaSharp 映像筛选器](../effects/image-filters.md)。
 
 **像素尺寸**页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 示例程序将显示一个位图资源，可为 320 像素宽乘 240 像素高：
 
@@ -202,7 +216,7 @@ static class BitmapExtensions
 
 ## <a name="stretching-to-fill-a-rectangle"></a>拉伸以填充矩形
 
-`SKCanvas`类还定义了[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/)呈现到一个矩形，另一个位图方法[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/)呈现为位图的矩形子集方法矩形：
+`SKCanvas`类还定义了[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint))呈现到一个矩形，另一个位图方法[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint))呈现为位图的矩形子集方法矩形：
 
 ```
 DrawBitmap(SKBitmap bitmap, SKRect dest, SKPaint paint = null)
@@ -242,7 +256,7 @@ public class FillRectanglePage : ContentPage
 }
 ```
 
-请注意，使用新`BitmapExtensions.LoadBitmapResource`方法以设置`SKBitmap`字段。 从获取目标矩形[ `Rect` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Rect/)属性的`SKImageInfo`，它介绍显示器表面的大小：
+请注意，使用新`BitmapExtensions.LoadBitmapResource`方法以设置`SKBitmap`字段。 从获取目标矩形[ `Rect` ](xref:SkiaSharp.SKImageInfo.Rect)属性的`SKImageInfo`，它介绍显示器表面的大小：
 
 [![填充矩形](displaying-images/FillRectangle.png "填充矩形")](displaying-images/FillRectangle-Large.png#lightbox)
 
@@ -649,6 +663,6 @@ public partial class ScalingModesPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 

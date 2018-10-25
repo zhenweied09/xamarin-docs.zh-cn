@@ -1,38 +1,44 @@
 ---
 title: 折线和参数等式
-description: 本文介绍如何为使用 SkiaSharp 呈现任何行定义与参数等式，并演示此示例代码。
+description: 本文介绍如何到使用 SkiaSharp 呈现任何行，可以定义与参数方程确定，此示例代码进行了演示。
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d5896a9d4f1aac2ea90d544d638e4adf68d24140
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615790"
 ---
 # <a name="polylines-and-parametric-equations"></a>折线和参数等式
 
-_使用 SkiaSharp 呈现任何行，可以定义与参数化的等式_
+_使用 SkiaSharp 呈现可以定义与参数化的等式的任何行_
 
-在本指南的后面部分中，您将看到的各种方法的`SKPath`定义来呈现某些类型的曲线。 但是，它，有时需要绘制曲线并不直接支持的一种`SKPath`。 在这种情况下，可以使用 polyline （一系列相互连接的直线） 绘制数学上可以定义任何曲线。 如果使各条线足够小，并且许多足够结果看起来类似于一条曲线。 此循环是实际 3,600 较短的行：
+在中[ **SkiaSharp 曲线和路径**](../curves/index.md)部分的本指南中，您将看到的各种方法的[ `SKPath` ](xref:SkiaSharp.SKPath)定义来呈现某些类型的曲线。 但是，它，有时需要绘制曲线并不直接支持的一种`SKPath`。 在这种情况下，可以使用 polyline （一系列相互连接的直线） 绘制数学上可以定义任何曲线。 如果使各条线足够小，并且许多足够结果看起来类似于一条曲线。 此循环是实际 3,600 较短的行：
 
 ![](polylines-images/spiralexample.png "螺旋")
 
 通常最好是定义根据参数方程确定一对曲线。 它们是 X 和 Y 坐标表示的公式依赖于第三个变量，有时称为`t`的时间。 例如，以下参数方程确定为定义的中心点 （0，0） 的 1 半径的圆形*t*从 0 到 1:
 
- x = cos(2πt) y = sin(2πt)
+x = cos(2πt)
+
+y = sin(2πt)
 
  如果你想 radius 大于 1，只需正弦和余弦值乘以该 radius 并如果你需要将中心移动到另一个位置添加这些值：
 
- x = xCenter + radius·cos(2πt) y = yCenter + radius·sin(2πt)
+x = xCenter + radius·cos(2πt)
+
+y = yCenter + radius·sin(2πt)
 
 有关使用到的水平和垂直轴并行一个椭圆，涉及两个半径：
 
-x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
+x = xCenter + xRadius·cos(2πt)
+
+y = yCenter + yRadius·sin(2πt)
 
 然后可以将等效 SkiaSharp 代码放在一个循环，用于计算各个点并将添加到路径中。 下面的 SkiaSharp 代码创建`SKPath`填充显示器表面的椭圆的对象。 循环直接周期通过 360 度。 中心是一半的宽度和高度显示图面，并因此是两个半径：
 
@@ -116,5 +122,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

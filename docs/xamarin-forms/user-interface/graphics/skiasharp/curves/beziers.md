@@ -4,14 +4,14 @@ description: 此文介绍了如何使用 SkiaSharp 呈现在 Xamarin.Forms 应�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 0ad722f22cf5ed8dc06fdf0d1e063d285e2ddb2f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615335"
 ---
 # <a name="three-types-of-bzier-curves"></a>三种类型的贝塞尔曲线
@@ -20,17 +20,19 @@ _了解如何使用 SkiaSharp 呈现三次方、 二次，和圆锥贝塞尔曲�
 
 圣皮埃尔贝塞尔 （1910年 – 1999 年），汽车公司 Renault，计算机辅助设计的汽车正文使用曲线的法语工程师命名贝塞尔曲线。
 
-贝塞尔曲线已知成为非常适合于交互设计： 它们是也能正常运行&mdash;换而言之，没有会导致无限或难以处理的曲线的 singularities&mdash;并且它们通常是美. 贝塞尔曲线通常定义字符轮廓的基于计算机的字体：
+贝塞尔曲线已知成为非常适合于交互设计： 它们是也能正常运行&mdash;换而言之，没有会导致无限或难以处理的曲线的 singularities&mdash;并且它们通常是美:
 
 ![](beziers-images/beziersample.png "示例贝塞尔曲线")
 
-有关的维基百科文章[贝赛尔曲线](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)包含一些有用的信息。 术语*贝赛尔曲线*实际上是指一系列类似的曲线。 SkiaSharp 支持三种类型的名为的贝塞尔曲线*三次方*，则*二次*，并*圆锥*。 也称为是圆锥*rational 二次方程式*。
+贝塞尔曲线通常定义字符轮廓的基于计算机的字体。
+
+有关的维基百科文章[**贝赛尔曲线**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)包含一些非常有用的背景信息。 术语*贝赛尔曲线*实际上是指一系列类似的曲线。 SkiaSharp 支持三种类型的名为的贝塞尔曲线*三次方*，则*二次*，并*圆锥*。 也称为是圆锥*rational 二次方程式*。
 
 ## <a name="the-cubic-bzier-curve"></a>三次方贝塞尔曲线
 
 中的三次是大多数开发人员认为当贝塞尔曲线的使用者提供的贝塞尔曲线的类型。
 
-您可以添加到的三次方贝赛尔曲线`SKPath`对象使用[ `CubicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/SkiaSharp.SKPoint/)具有三个方法`SKPoint`参数，或[ `CubicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.CubicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/System.Single/)具有单独重载`x`和`y`参数：
+您可以添加到的三次方贝赛尔曲线`SKPath`对象使用[ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKPoint))具有三个方法`SKPoint`参数，或[ `CubicTo` ](xref:SkiaSharp.SKPath.CubicTo(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single))具有单独重载`x`和`y`参数：
 
 ```csharp
 public void CubicTo (SKPoint point1, SKPoint point2, SKPoint point3)
@@ -45,7 +47,7 @@ public void CubicTo (Single x1, Single y1, Single x2, Single y2, Single x3, Sing
 - 第二个控制点：`point2`在`CubicTo`调用
 - 终结点：`point3`在`CubicTo`调用
 
-生成的曲线的开始处开始并结束在终结点。 曲线通常不会经历的两个控制点;而是它们的功能多 like 磁铁拉取针对它们的曲线。
+生成的曲线的开始处开始并结束在终结点。 曲线通常不会经历的两个控制点;改为两个控制点更像磁铁拉取针对它们的曲线函数。
 
 了解的三次方贝塞尔曲线的最佳方式是通过试验。 这种情况**贝塞尔曲线**页上，派生自`InteractivePage`。 [ **BezierCurvePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml)文件实例化`SKCanvasView`和`TouchEffect`。 [ **BezierCurvePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierCurvePage.xaml.cs)代码隐藏文件中创建四个`TouchPoint`其构造函数中的对象。 `PaintSurface`事件处理程序将创建`SKPath`呈现基于四个的贝赛尔曲线`TouchPoint`对象，并还将以点分隔的切线从控件点绘制到的终结点：
 
@@ -101,7 +103,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 - 第一条曲线，它也是第二条曲线的起始点的终结点
 - 第二条曲线的第一个控制点
 
-在下一篇文章中对[ **SVG 路径数据**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)您会发现一个工具用于简化平滑已连接的贝塞尔曲线的定义。
+在下一篇文章中对[ **SVG 路径数据**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md)，您会发现一个工具用于简化平滑已连接的贝塞尔曲线的定义。
 
 有时它可用于了解呈现三次方贝塞尔曲线的基础参数等式。 有关*t*范围从 0 到 1，以下参数方程确定如下所示：
 
@@ -111,7 +113,7 @@ y(t) = (1 – t) ³y₀ + 3t (1 – t) ²y₁ + 3t² (1 – t) y₂ + t³y₃
 
 最高的 3 指数确认这些是三次方 polynomials。 很容易地验证，当`t`等于 0，则点为 (x₀，y₀)，即起始点，以及何时`t`等于 1，该点为 (x₃，y₃)，这是终结点。 附近的起始点 (的低值的`t`)，（x₁，y₁） 的第一个控制点具有强生效，并且附近终结点 (' t 的高值) 第二个控制点 （x₂，y₂） 具有很大影响。
 
-## <a name="bzier-curve-approximation-to-circular-arcs"></a>贝塞尔曲线的近似圆弧
+## <a name="bezier-curve-approximation-to-circular-arcs"></a>贝塞尔曲线的近似圆弧
 
 有时很方便地使用贝塞尔曲线来呈现一个圆弧。三次方贝塞尔曲线可估计一个圆弧很好地最多每个季度圆形，因此四个已连接的贝塞尔曲线可定义整个圆圈。 在发布超过 25 年的两篇文章中讨论此近似值：
 
@@ -203,7 +205,7 @@ float Magnitude(SKPoint v)
 
 ```
 
-起点和终点 (`point0`和`point3`) 基于该圆形的普通参数等式计算。 因为圆的中心 （0，0），这些点可以也被视为径向向量从圆的中心到周长。 控制点是在行的正切值为圆圈，因此可以为这些径向向量直角。 在右尖括号向量是只是原始交换的 X 和 Y 坐标和负所做的其中一个向量。
+起点和终点 (`point0`和`point3`) 基于该圆形的普通参数等式计算。 因为圆的中心 （0，0），这些点可以也被视为径向向量从圆的中心到周长。 控制点是在行的正切值为圆圈，因此可以为这些径向向量直角。 直角到另一个向量是只需使用交换的 X 和 Y 坐标和负所做的其中一个原始向量。
 
 下面是使用三个不同的角度的三个平台上运行的程序：
 
@@ -350,7 +352,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 y(t) = (1 – t) ²y₀ + 2t (1 – t) y₁ + t²y₂
 
-若要添加到路径的二次贝塞尔曲线，请使用[ `QuadTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/)方法或[ `QuadTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.QuadTo/p/System.Single/System.Single/System.Single/System.Single/)重载具有单独`x`和`y`坐标：
+若要添加到路径的二次贝塞尔曲线，请使用[ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint))方法或[ `QuadTo` ](xref:SkiaSharp.SKPath.QuadTo(System.Single,System.Single,System.Single,System.Single))重载具有单独`x`和`y`坐标：
 
 ```csharp
 public void QuadTo (SKPoint point1, SKPoint point2)
@@ -427,7 +429,7 @@ y(t) = ((1 – t) ²y₀ + 2wt (1 – t) y₁ + t²y₂)) ÷ d(t)
 
 也称为 rational 二次贝塞尔曲线*conics*因为它们完全可以代表任何圆锥部分的段&mdash;hyperbolas、 条抛物线合理组合、 椭圆和圆。
 
-若要为路径添加合理的二次贝塞尔曲线，请使用[ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/)方法或[ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/)重载具有单独`x`和`y`坐标：
+若要为路径添加合理的二次贝塞尔曲线，请使用[ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single))方法或[ `ConicTo` ](xref:SkiaSharp.SKPath.ConicTo(System.Single,System.Single,System.Single,System.Single,System.Single))重载具有单独`x`和`y`坐标：
 
 ```csharp
 public void ConicTo (SKPoint point1, SKPoint point2, Single weight)
@@ -552,5 +554,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

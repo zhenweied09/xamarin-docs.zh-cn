@@ -6,44 +6,58 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/16/2018
-ms.openlocfilehash: b5069381126db0859508480df5596ed5ec85686f
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/04/2018
+ms.openlocfilehash: c98dcc30ac89e3df0338df02e14a32575c0dc847
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39203031"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 标签
 
 _在 Xamarin.Forms 中显示文本_
 
-[ `Label` ](xref:Xamarin.Forms.Label)视图用于显示文本、 单个和多行。 自定义字体 （系列、 大小和选项） 和彩色的文本，可以有标签。
+[ `Label` ](xref:Xamarin.Forms.Label)视图用于显示文本、 单个和多行。 标签可以具有文本修饰，彩色文本，并使用自定义字体 （系列、 大小和选项）。
 
-<a name="Truncation_and_Wrapping" />
+## <a name="text-decorations"></a>文本修饰
 
-## <a name="truncation-and-wrapping"></a>截断和换行
+下划线和删除线的文本修饰可应用于[ `Label` ](xref:Xamarin.Forms.Label)通过设置实例`Label.TextDecoration`属性设置为一个或多个`TextDecoration`枚举成员：
 
-可以设置标签来处理不适合在以下几种方式，通过公开的一行文本`LineBreakMode`属性。 [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) 是一个枚举，使用以下值：
+- `None`
+- `Underline`
+- `Strikethrough`
 
-- **HeadTruncation** &ndash;将截断的文本，其中显示最终的开头。
-- **CharacterWrap** &ndash;到新行上的文本进行换行字符边界处。
-- **MiddleTruncation** &ndash;显示开头和末尾的文本，与通过省略号中间的替换。
-- **NoWrap** &ndash;不换行文本，仅显示可以为任意数量的文本适合某个行。
-- **TailTruncation** &ndash;显示文本，截断结束的开头。
-- **换行**&ndash;使文本在单词边界处换行。
+下面的 XAML 示例演示了如何设置`Label.TextDecoration`属性：
 
-## <a name="fonts"></a>字体
+```xaml
+<Label Text="This is underlined text." TextDecorations="Underline"  />
+<Label Text="This is text with strikethrough." TextDecorations="Strikethrough" />
+<Label Text="This is underlined text with strikethrough." TextDecorations="Underline, Strikethrough" />
+```
 
-有关详细信息，有关上指定字体`Label`，请参阅[字体](~/xamarin-forms/user-interface/text/fonts.md)。
+等效的 C# 代码是：
+
+```csharp
+var underlineLabel = new Label { Text = "This is underlined text.", TextDecorations = TextDecorations.Underline };
+var strikethroughLabel = new Label { Text = "This is text with strikethrough.", TextDecorations = TextDecorations.Strikethrough };
+var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
+```
+
+下面的屏幕截图演示`TextDecoration`应用于枚举成员[ `Label` ](xref:Xamarin.Forms.Label)实例：
+
+![](label-images/label-textdecorations.png "具有文本修饰的文本标签")
+
+> [!NOTE]
+> 此外可应用于的文本修饰[ `Span` ](xref:Xamarin.Forms.Span)实例。 有关详细信息`Span`类，请参阅[格式的文本](#Formatted_Text)。
 
 ## <a name="colors"></a>颜色
 
-`Label`s 可以设置为使用通过可绑定的自定义文本颜色[ `TextColor` ](xref:Xamarin.Forms.Label.TextColor)属性。
+标签可以设置为使用通过可绑定的自定义文本颜色[ `TextColor` ](xref:Xamarin.Forms.Label.TextColor)属性。
 
 特别注意有必要确保将每个平台上可用的颜色。 因为每个平台都有不同的文本和背景颜色的默认值，将需要谨慎地选择适用于每个默认值。
 
-使用以下 XAML 设置标签的文本颜色：
+下面的 XAML 示例设置的文本颜色`Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -51,7 +65,7 @@ _在 Xamarin.Forms 中显示文本_
              x:Class="TextSample.LabelPage"
              Title="Label Demo">
     <StackLayout Padding="5,10">
-      <Label TextColor="#77d065" FontSize = "20" Text="This is a label." />
+      <Label TextColor="#77d065" FontSize = "20" Text="This is a green label." />
     </StackLayout>
 </ContentPage>
 ```
@@ -66,7 +80,7 @@ public partial class LabelPage : ContentPage
         InitializeComponent ();
 
         var layout = new StackLayout { Padding = new Thickness(5,10) };
-        var label = new Label { Text="This is a label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
+        var label = new Label { Text="This is a green label.", TextColor = Color.FromHex("#77d065"), FontSize = 20 };
         layout.Children.Add(label);
         this.Content = layout;
     }
@@ -79,13 +93,60 @@ public partial class LabelPage : ContentPage
 
 有关颜色的详细信息，请参阅[颜色](~/xamarin-forms/user-interface/colors.md)。
 
+## <a name="fonts"></a>字体
+
+有关详细信息，有关上指定字体`Label`，请参阅[字体](~/xamarin-forms/user-interface/text/fonts.md)。
+
+<a name="Truncation_and_Wrapping" />
+
+## <a name="truncation-and-wrapping"></a>截断和换行
+
+可以设置标签来处理不适合在以下几种方式，通过公开的一行文本`LineBreakMode`属性。 [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) 是一个枚举，使用以下值：
+
+- **HeadTruncation** &ndash;将截断的文本，其中显示最终的开头。
+- **CharacterWrap** &ndash;到新行上的文本进行换行字符边界处。
+- **MiddleTruncation** &ndash;显示开头和末尾的文本，与通过省略号中间的替换。
+- **NoWrap** &ndash;不换行文本，仅显示可以为任意数量的文本适合某个行。
+- **TailTruncation** &ndash;显示文本，截断结束的开头。
+- **换行**&ndash;使文本在单词边界处换行。
+
+## <a name="displaying-a-specific-number-of-lines"></a>显示指定的行数
+
+通过显示的行数[ `Label` ](xref:Xamarin.Forms.Label)可以指定通过设置`Label.MaxLines`属性设置为`int`值：
+
+- 当`MaxLines`为 0，`Label`尊重的值[ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode)属性既可以显示一个行中，可能会截断或具有的所有文本的所有行。
+- 当`MaxLines`为 1，结果等同于设置[ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode)属性设置为[ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode)， [ `HeadTruncation` ](xref:Xamarin.Forms.LineBreakMode)， [`MiddleTruncation` ](xref:Xamarin.Forms.LineBreakMode)，或[ `TailTruncation` ](xref:Xamarin.Forms.LineBreakMode)。 但是，`Label`将遵守的值[ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode)省略号，如果适用的位置方面的属性。
+- 当`MaxLines`大于 1，`Label`指定数量的行，同时遵循的值将显示[ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode)省略号，如果适用的位置方面的属性。 但是，将设置`MaxLines`属性的值大于 1 如果不起作用[ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode)属性设置为[ `NoWrap` ](xref:Xamarin.Forms.LineBreakMode)。
+
+下面的 XAML 示例演示了如何设置`MaxLines`上的属性[ `Label` ](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       MaxLines="2" />
+```
+
+等效的 C# 代码是：
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  MaxLines = 2
+};
+```
+
+以下屏幕截图显示的设置结果`MaxLines`属性设置为 2，在文本时足够长，以占用 2 个以上的行：
+
+![](label-images/label-maxlines.png "标签指示 MaxLines 示例")
+
 <a name="Formatted_Text" />
 
-## <a name="formatted-text"></a>带格式的文本
+## <a name="formatted-text"></a>带格式文本
 
 标签公开[ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText)这允许文本呈现使用多种字体和颜色在同一视图中的属性。
 
-`FormattedText`属性属于类型[ `FormattedString` ](xref:Xamarin.Forms.FormattedString)，其中包含一个或多个[ `Span` ](xref:Xamarin.Forms.Span)情况下，通过设置[ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans)属性. 每个`Span`拥有以下属性：
+`FormattedText`属性属于类型[ `FormattedString` ](xref:Xamarin.Forms.FormattedString)，其中包含一个或多个[ `Span` ](xref:Xamarin.Forms.Span)情况下，通过设置[ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans)属性. 以下`Span`属性可以用于设置可视外观：
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) -s p a n 背景的颜色。
 - [`Font`](xref:Xamarin.Forms.Span.Font) – 在范围中的文本的字体。
@@ -93,11 +154,15 @@ public partial class LabelPage : ContentPage
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – 属于该范围中的文本的字体的字体系列。
 - [`FontSize`](xref:Xamarin.Forms.Span.FontSize) – 范围中文本的字体的大小。
 - [`ForegroundColor`](xref:Xamarin.Forms.Span.ForegroundColor) – 范围中文本的颜色。 此属性已过时，已由`TextColor`属性。
+- [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) -若要将应用于跨度的默认行高度的乘数。 有关详细信息，请参阅[行高](#line-height)。
 - [`Style`](xref:Xamarin.Forms.Span.Style) – 要将应用于跨度的样式。
 - [`Text`](xref:Xamarin.Forms.Span.Text) – 跨度的文本。
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 范围中文本的颜色。
+- `TextDecoration` -若要应用于范围中的文本的修饰。 有关详细信息，请参阅[文本修饰](#text-decorations)。
 
-下面的 XAML 示例演示`FormattedText`由三个属性`Span`实例：
+此外， [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers)属性可以用于定义将在响应手势的手势识别器的集合[ `Span` ](xref:Xamarin.Forms.Span)。
+
+下面的 XAML 示例演示`FormattedText`由三个属性[ `Span` ](xref:Xamarin.Forms.Span)实例：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -106,11 +171,15 @@ public partial class LabelPage : ContentPage
              Title="Label Demo - XAML">
     <StackLayout Padding="5,10">
         ...
-        <Label>
+        <Label LineBreakMode="WordWrap">
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="Red Bold, " TextColor="Red" FontAttributes="Bold" />
-                    <Span Text="default, " Style="{DynamicResource BodyStyle}" />
+                    <Span Text="default, " Style="{DynamicResource BodyStyle}">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}" />
+                        </Span.GestureRecognizers>
+                    </Span>
                     <Span Text="italic small." FontAttributes="Italic" FontSize="Small" />
                 </FormattedString>
             </Label.FormattedText>
@@ -130,7 +199,10 @@ public class LabelPageCode : ContentPage
         ...
         var formattedString = new FormattedString ();
         formattedString.Spans.Add (new Span{ Text = "Red bold, ", ForegroundColor = Color.Red, FontAttributes = FontAttributes.Bold });
-        formattedString.Spans.Add (new Span { Text = "default, ", Style = Device.Styles.BodyStyle });
+
+        var span = new Span { Text = "default, " };
+        span.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(async () => await DisplayAlert("Tapped", "This is a tapped Span.", "OK")) });
+        formattedString.Spans.Add(span);
         formattedString.Spans.Add (new Span { Text = "italic small.", FontAttributes = FontAttributes.Italic, FontSize =  Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
 
         layout.Children.Add (new Label { FormattedText = formattedString });
@@ -139,19 +211,93 @@ public class LabelPageCode : ContentPage
 }
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > [ `Text` ](xref:Xamarin.Forms.Span.Text)属性的`Span`可以通过数据绑定设置。 有关详细信息，请参阅[数据绑定](~/xamarin-forms/app-fundamentals/data-binding/index.md)。
+
+请注意， [ `Span` ](xref:Xamarin.Forms.Span)还可以添加到 span 的任何手势响应[ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers)集合。 例如， [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)已添加到第二个`Span`在上面的代码示例。 因此，当这`Span`点击`TapGestureRecognizer`将通过执行响应`ICommand`由定义[ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command)属性。 有关手势识别器的详细信息，请参阅[Xamarin.Forms 手势](~/xamarin-forms/app-fundamentals/gestures/index.md)。
 
 以下屏幕截图显示设置的结果`FormattedString`属性设置为三个`Span`实例：
 
 ![](label-images/formattedtext.png "标签 FormattedText 示例")
 
-## <a name="styling-a-label"></a>设置标签的样式
+## <a name="line-height"></a>行高
 
-前面几节介绍设置[ `Label` ](xref:Xamarin.Forms.Label)根据每个实例的属性。 但是，属性集可以分组为一致地应用于一个或多个视图的一种样式。 这可以提高代码的可读性，并轻松地实现设计更改。 有关详细信息，请参阅[样式](~/xamarin-forms/user-interface/text/styles.md)。
+垂直高度[ `Label` ](xref:Xamarin.Forms.Label)和一个[ `Span` ](xref:Xamarin.Forms.Span)可以通过设置自定义[ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)属性或[ `Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight)到`double`值。 IOS 和 Android 上这些值是乘数的原始行高度，并在通用 Windows 平台 (UWP)`Label.LineHeight`属性值是标签字体大小的倍数。
+
+> [!NOTE]
+> - 在 iOS 上， [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)并[ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight)属性更改的单个行中，可以容纳的文本和换行到多个行的文本行高度。
+> - 在 Android 上， [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)并[ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight)属性只能更改换行到多个行的文本行高度。
+> - 在 UWP 中， [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)属性更改的换行到多个行的文本行高度和[ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight)属性不起作用。
+
+下面的 XAML 示例演示了如何设置[ `LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)上的属性[ `Label` ](xref:Xamarin.Forms.Label):
+
+```xaml
+<Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus."
+       LineBreakMode="WordWrap"
+       LineHeight="1.8" />
+```
+
+等效的 C# 代码是：
+
+```csharp
+var label =
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus.", LineBreakMode = LineBreakMode.WordWrap,
+  LineHeight = 1.8
+};
+```
+
+以下屏幕截图显示设置的结果[ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight)属性设置为 1.8:
+
+![](label-images/label-lineheight.png "标签 LineHeight 示例")
+
+下面的 XAML 示例演示了如何设置[ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight)上的属性[ `Span` ](xref:Xamarin.Forms.Span):
+
+```xaml
+<Label LineBreakMode="WordWrap">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. "
+                  LineHeight="1.8"/>
+            <Span Text="Nullam feugiat sodales elit, et maximus nibh vulputate id."
+                  LineHeight="1.8" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+等效的 C# 代码是：
+
+```csharp
+var formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. ",
+  LineHeight = 1.8
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "Nullam feugiat sodales elit, et maximus nibh vulputate id.",
+  LineHeight = 1.8
+});
+var label = new Label
+{
+  FormattedText = formattedString,
+  LineBreakMode = LineBreakMode.WordWrap
+};
+```
+
+以下屏幕截图显示设置的结果[ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight)属性设置为 1.8:
+
+![](label-images/span-lineheight.png "Span LineHeight 示例")
+
+## <a name="styling-labels"></a>样式标签
+
+前面几节介绍设置[ `Label` ](xref:Xamarin.Forms.Label)并[ `Span` ](xref:Xamarin.Forms.Span)根据每个实例的属性。 但是，属性集可以分组为一致地应用于一个或多个视图的一种样式。 这可以提高代码的可读性，并轻松地实现设计更改。 有关详细信息，请参阅[样式](~/xamarin-forms/user-interface/text/styles.md)。
 
 ## <a name="related-links"></a>相关链接
 
-- [借助 Xamarin.Forms，第 3 章创建移动应用](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [文本 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [借助 Xamarin.Forms，第 3 章创建移动应用](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [标签 API](xref:Xamarin.Forms.Label)
+- [跨度 API](xref:Xamarin.Forms.Span)

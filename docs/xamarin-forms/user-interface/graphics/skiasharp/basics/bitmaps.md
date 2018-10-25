@@ -4,14 +4,14 @@ description: 这篇文章介绍了如何从各种源加载位图 SkiaSharp 中�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 92863ff9e843cabc26c568e95aab52c6d199c35e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 7732bc2ea9a9c5a896b27ca9bd73433ecdcfd9fa
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615194"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>位图中 SkiaSharp 的基础知识
@@ -24,7 +24,7 @@ SkiaSharp 中的支持是位图的非常大。 本文介绍如何仅基本&mdash
 
 部分中可包含位图中的多更深入地探讨[SkiaSharp 位图](../bitmaps/index.md)。
 
-SkiaSharp 位图的类型的对象[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)。 有许多方法来创建一个位图，但本文将限制到本身[ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/)方法，从.NET 加载位图`Stream`对象。
+SkiaSharp 位图的类型的对象[ `SKBitmap` ](xref:SkiaSharp.SKBitmap)。 有许多方法来创建一个位图，但本文将限制到本身[ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream))方法，从.NET 加载位图`Stream`对象。
 
 **基本位图**页面**SkiaSharpFormsDemos**程序演示了如何从三个不同的源加载位图：
 
@@ -94,13 +94,13 @@ protected override async void OnAppearing()
 }
 ```
 
-Android 将使用时引发的异常`Stream`从返回`GetStreamAsync`中`SKBitmap.Decode`方法因为它正在执行主线程上较长的操作。 出于此原因，位图文件的内容复制到`MemoryStream`对象使用`CopyToAsync`。
+Android 操作系统使用时引发异常`Stream`从返回`GetStreamAsync`中`SKBitmap.Decode`方法因为它正在执行主线程上较长的操作。 出于此原因，位图文件的内容复制到`MemoryStream`对象使用`CopyToAsync`。
 
-静态`SKBitmap.Decode`方法负责解码的位图文件。 它适用于 JPEG、 PNG、 GIF 和几个其他常用的位图格式，并将结果存储在内部 SkiaSharp 格式。 在此情况下，`SKCanvasView`需要失效允许`PaintSurface`处理程序以更新显示。 
+静态`SKBitmap.Decode`方法负责解码的位图文件。 它适用于 JPEG、 PNG 和 GIF 的位图格式，并将结果存储在内部 SkiaSharp 格式。 在此情况下，`SKCanvasView`需要失效允许`PaintSurface`处理程序以更新显示。 
 
 ## <a name="loading-a-bitmap-resource"></a>正在加载位图资源
 
-在代码中，方面加载位图的最简单方法直接在您的应用程序中包括的位图资源。 **SkiaSharpFormsDemos**程序包括一个名为文件夹**媒体**包含一个名为的位图文件**monkey.png**。 在中**属性**对话框中为此文件，必须提供此类文件**生成操作**的**嵌入的资源**！
+在代码中，方面加载位图的最简单方法直接在您的应用程序中包括的位图资源。 **SkiaSharpFormsDemos**程序包括一个名为文件夹**媒体**包含几个位图文件，其中一个名为**monkey.png**。 对于存储为程序资源的位图，必须使用**属性**对话框，可以为该文件提供**生成操作**的**嵌入的资源**！
 
 每个嵌入的资源具有*资源 ID* ，它包含项目名称、 文件夹和文件名，所有连接通过句点： **SkiaSharpFormsDemos.Media.monkey.png**。 可以通过指定该资源获取访问此资源 ID 作为参数到[ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String))方法[ `Assembly` ](xref:System.Reflection.Assembly)类：
 
@@ -122,7 +122,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 **IPhotoLibrary.cs**中的文件**SkiaSharpFormsDemos**项目和三个**PhotoLibrary.cs**平台项目中的文件已改编自那篇文章。 此外，Android **MainActivity.cs**文章中所述修改文件和 iOS 项目已被授予权限以访问照片库使用两行代码靠近末尾部分给**info.plist**文件。
 
-`BasicBitmapsPage`构造函数将添加`TapGestureRecognizer`到`SKCanvasView`要通知的分流点。 在点击，收到`Tapped`处理程序获取访问图片选取器依赖关系服务并调用`GetImageStreamAsync`。 如果`Stream`返回对象，然后将内容复制到`MemoryStream`的平台的一些要求。 代码的其余部分是类似于两种方法：
+`BasicBitmapsPage`构造函数将添加`TapGestureRecognizer`到`SKCanvasView`要通知的分流点。 在点击，收到`Tapped`处理程序获取访问图片选取器依赖关系服务并调用`PickPhotoAsync`。 如果`Stream`返回对象，然后将它传递到`SKBitmap.Decode`方法：
 
 ```csharp
 // Add tap gesture recognizer
@@ -144,21 +144,21 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-请注意，`Tapped`处理程序调用`InvalidateSurface`方法的`SKCanvasView`对象。 这将生成到新的调用`PaintSurface`处理程序。
+请注意，`Tapped`处理程序还会调用`InvalidateSurface`方法的`SKCanvasView`对象。 这将生成到新的调用`PaintSurface`处理程序。
 
 ## <a name="displaying-the-bitmaps"></a>显示位图
 
 `PaintSurface`显示三个位图所需的处理程序。 该处理程序假定手机处于纵向模式，并且将在画布垂直划分为三个相等部分。
 
-使用最简单的形式显示第一个位图[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/)方法。 您需要指定是定位位图左上角的 X 和 Y 坐标：
+使用最简单的形式显示第一个位图[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint))方法。 您需要指定是定位位图左上角的 X 和 Y 坐标：
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-尽管`SKPaint`定义参数，它具有默认值为`null`，可以忽略它。 位图的像素只被转移到具有一对一的映射显示器表面的像素为单位。
+尽管`SKPaint`定义参数，它具有默认值为`null`，可以忽略它。 位图的像素只被转移到具有一对一的映射显示器表面的像素为单位。 可以看到应用程序的这`SKPaint`上的下一步部分中的参数[ **SkiaSharp 透明度**](transparency.md)。
 
-程序可以获取位图的像素尺寸[ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/)并[ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/)属性。 这些属性允许程序计算的坐标，以在画布左上第三个中心位置位图：
+程序可以获取位图的像素尺寸[ `Width` ](xref:SkiaSharp.SKBitmap.Width)并[ `Height` ](xref:SkiaSharp.SKBitmap.Height)属性。 这些属性允许程序计算的坐标，以在画布左上第三个中心位置位图：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -179,13 +179,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-其他两个位图显示使用的版本[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/)与`SKRect`参数：
+其他两个位图显示使用的版本[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint))与`SKRect`参数：
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 ```
 
-第三个版本[ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有两个`SKRect`指定到显示，但该版本的位图的矩形子集的参数不在本文中使用。
+第三个版本[ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint))具有两个`SKRect`指定到显示，但该版本的位图的矩形子集的参数不在本文中使用。
 
 下面是代码，以显示从嵌入的资源位图加载位图：
 
@@ -243,9 +243,10 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 如果尚未从图片库中，加载任何位图则`else`块显示一些文本以提示用户点击屏幕。
 
+您可以显示具有不同程度的透明性，并在下一篇文章位图[ **SkiaSharp 透明度**](transparency.md)介绍了如何。
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [从图片库中选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

@@ -6,12 +6,12 @@ ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/06/2017
-ms.openlocfilehash: 558a05b5fdc4c4f08194b708de886bca342dd860
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 09/15/2018
+ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38995409"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 简介
@@ -20,7 +20,10 @@ ms.locfileid: "38995409"
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 允许应用从共享代码调用特定于平台的功能。 此功能通过 Xamarin.Forms 应用，若要执行的本机应用程序可以执行任何操作。
 
-`DependencyService` 是依赖关系解析程序。 在实践中，定义了一个接口和`DependencyService`查找该接口从各种平台项目的正确实现。
+`DependencyService` 是服务定位器。 在实践中，定义了一个接口和`DependencyService`查找该接口从各种平台项目的正确实现。
+
+> [!NOTE]
+> 默认情况下[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)将唯一解析平台具有无参数构造函数的实现。 但是，依赖关系解析方法可以注入到 Xamarin.Forms 使用依赖关系注入容器或工厂方法来解析平台的实现。 这种方法可以用于解决平台实现个构造函数的参数。 有关详细信息，请参阅[Xamarin.Forms 中的依赖项解析](~/xamarin-forms/internals/dependency-resolution.md)。
 
 ## <a name="how-dependencyservice-works"></a>DependencyService 的工作原理
 
@@ -144,7 +147,6 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 > [!NOTE]
 > 您**必须**提供每个平台项目中的实现。 如果不注册了任何接口实现，则`DependencyService`将不能解决`Get<T>()`方法在运行时。
-
 
 ## <a name="related-links"></a>相关链接
 

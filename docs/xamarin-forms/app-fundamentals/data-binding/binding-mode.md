@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/01/2018
-ms.openlocfilehash: a6eaf08d17f70c43f451361e27555a09c39f26a9
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 420c1de0691de419180dd497a9031ea5e7dd1054
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "37935662"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 绑定模式
@@ -312,6 +312,9 @@ public class HslColorViewModel : INotifyPropertyChanged
 ```
 
 现在`Slider`初始化为 1 (默认值`Scale`) 但操作`Slider`不会影响`Scale`属性，因此这不是很有用。
+
+> [!NOTE]
+> [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)类还定义[ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX)并[ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY)属性，可以缩放`VisualElement`中按不同方式水平和垂直方向。
 
 重写的默认绑定模式非常有用的应用程序`TwoWay`涉及`SelectedItem`属性的`ListView`。 默认绑定模式是`OneWayToSource`。 如果在设置数据绑定`SelectedItem`属性来引用 ViewModel 中的源属性，则该 source 属性将设置从`ListView`所选内容。 但是，在某些情况下，你可能还想`ListView`从 ViewModel 进行初始化。
 

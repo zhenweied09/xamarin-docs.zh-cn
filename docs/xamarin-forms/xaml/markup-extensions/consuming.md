@@ -6,23 +6,25 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 01/05/2018
-ms.openlocfilehash: a630d7c2acb95b7551c9f5f870078a0efcfc075c
-ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
+ms.date: 08/01/2018
+ms.openlocfilehash: e483716952aa97de4411733006f4fa12c3e6da98
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39393667"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>使用 XAML 标记扩展
 
-XAML 标记扩展帮助元素特性，若要设置从各种源，从而增强的功能和灵活性的 XAML。 多个 XAML 标记扩展是 XAML 2009 规范的一部分。 这些通常在与 XAML 文件中出现`x`命名空间前缀，且通常被引用到具有此前缀。 以下各节中描述了这些：
+XAML 标记扩展帮助元素特性，若要设置从各种源，从而增强的功能和灵活性的 XAML。 多个 XAML 标记扩展是 XAML 2009 规范的一部分。 这些通常在与 XAML 文件中出现`x`命名空间前缀，且通常被引用到具有此前缀。 本文讨论了以下标记扩展：
 
-- [`x:Static`](#static) &ndash; 引用的静态属性、 字段或枚举成员。
-- [`x:Reference`](#reference) &ndash; 名为页面上的元素的引用。
-- [`x:Type`](#type) &ndash; 将属性设置为`System.Type`对象。
-- [`x:Array`](#array) &ndash; 构造特定类型的对象的数组。
-- [`x:Null`](#null) &ndash; 将属性设置为`null`值。
+- [`x:Static`](#static) – 引用静态属性、 字段或枚举成员。
+- [`x:Reference`](#reference) – 名为页面上的元素的引用。
+- [`x:Type`](#type) – 将属性设置为`System.Type`对象。
+- [`x:Array`](#array) – 构造特定类型的对象的数组。
+- [`x:Null`](#null) – 将属性设置为`null`值。
+- [`OnPlatform`](#onplatform) -自定义根据每个平台的 UI 外观。
+- [`OnIdiom`](#onidiom) -自定义 UI 外观基于的设备运行应用程序的惯用语法。
 
 其他 XAML 标记扩展从历史上看其他 XAML 实现中，通过受支持和 Xamarin.Forms 还支持。 这些更全面介绍了其他文章：
 
@@ -453,10 +455,89 @@ public partial class TypeDemoPage : ContentPage
 
 请注意，该四个的`Label`元素具有衬线字体，但在中心`Label`具有默认的 sans-serif 字体。
 
+<a name="onplatform" />
+
+## <a name="onplatform-markup-extension"></a>OnPlatform 标记扩展
+
+`OnPlatform`标记扩展允许您自定义根据每个平台的 UI 外观。 它提供了相同的功能[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)并[ `On` ](xref:Xamarin.Forms.On)类，但具有更简洁表示形式。
+
+`OnPlatform`标记扩展受[ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension)类，该类定义以下属性：
+
+- `Default` 类型的`object`，设置为默认值应用于表示平台的属性。
+- `Android` 类型的`object`，设置一个值为要应用在 Android 上。
+- `GTK` 类型的`object`，设置一个值为要应用于 GTK 平台。
+- `iOS` 类型的`object`，设置为值用于在 iOS 上应用。
+- `macOS` 类型的`object`，设置为值用于在 macOS 上应用。
+- `Tizen` 类型的`object`，设置一个值为要应用于 Tizen 平台。
+- `UWP` 类型的`object`，设置一个值为通用 Windows 平台上应用。
+- `WPF` 类型的`object`，设置一个值为要应用于 Windows Presentation Foundation 平台。
+- `Converter` 类型的`IValueConverter`，设置为`IValueConverter`实现。
+- `ConverterParameter` 类型的`object`，设置一个值为要传递给`IValueConverter`实现。
+
+> [!NOTE]
+> 此 XAML 分析器允许[ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension)类以缩写为`OnPlatform`。
+
+`Default`属性是 content 属性`OnPlatformExtension`。 因此，对于使用大括号表示 XAML 标记表达式，则可以消除`Default=`表达式的一部分提供，它是第一个参数。
+
+> [!IMPORTANT]
+> XAML 分析器要求正确类型的值将会提供给属性使用`OnPlatform`标记扩展。 如果类型转换，则有必要，`OnPlatform`标记扩展将尝试执行它使用 Xamarin.Forms 提供的默认值转换器。 但是，有不能通过默认转换器，在这些情况下执行某些类型转换`Converter`属性应设置为`IValueConverter`实现。
+
+**OnPlatform 演示**页显示了如何使用`OnPlatform`标记扩展：
+
+```xaml
+<BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
+         WidthRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"  
+         HeightRequest="{OnPlatform 250, iOS=200, Android=300, UWP=400}"
+         HorizontalOptions="Center" />
+```
+
+在此示例中，所有这三个`OnPlatform`表达式使用的缩写的形式`OnPlatformExtension`类名。 这三个`OnPlatform`标记扩展集[ `Color` ](xref:Xamarin.Forms.BoxView.Color)， [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)，并且[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性[`BoxView` ](xref:Xamarin.Forms.BoxView)为 iOS、 Android 和 UWP 上不同的值。 标记扩展还为未指定，同时消除了在平台上的这些属性提供默认值`Default=`表达式的一部分。 请注意，由逗号分隔的标记扩展属性的设置。
+
+下面是在所有三个平台上运行的程序：
+
+[![OnPlatform 演示](consuming-images/onplatformdemo-small.png "OnPlatform 演示")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform 演示")
+
+<a name="onidiom" />
+
+## <a name="onidiom-markup-extension"></a>OnIdiom 标记扩展
+
+`OnIdiom`标记扩展，可自定义 UI 外观基于的设备运行应用程序的惯用语法。 它受[ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension)类，该类定义以下属性：
+
+- `Default` 类型的`object`，设置为默认值应用于设备的惯用语言表示的属性。
+- `Phone` 类型的`object`，设置为值用于在手机上应用。
+- `Tablet` 类型的`object`，若要在平板电脑上应用的值设置。
+- `Desktop` 类型的`object`，设置为值用于在桌面平台上应用。
+- `TV` 类型的`object`，设置一个值为要应用于电视平台。
+- `Watch` 类型的`object`，设置为值应用于监视平台。
+- `Converter` 类型的`IValueConverter`，设置为`IValueConverter`实现。
+- `ConverterParameter` 类型的`object`，设置一个值为要传递给`IValueConverter`实现。
+
+> [!NOTE]
+> 此 XAML 分析器允许[ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension)类以缩写为`OnIdiom`。
+
+`Default`属性是 content 属性`OnIdiomExtension`。 因此，对于使用大括号表示 XAML 标记表达式，则可以消除`Default=`表达式的一部分提供，它是第一个参数。
+
+> [!IMPORTANT]
+> XAML 分析器要求正确类型的值将会提供给属性使用`OnIdiom`标记扩展。 如果类型转换，则有必要，`OnIdiom`标记扩展将尝试执行它使用 Xamarin.Forms 提供的默认值转换器。 但是，有不能通过默认转换器，在这些情况下执行某些类型转换`Converter`属性应设置为`IValueConverter`实现。
+
+**OnIdiom 演示**页显示了如何使用`OnIdiom`标记扩展：
+
+```xaml
+<BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
+         WidthRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HeightRequest="{OnIdiom 100, Phone=200, Tablet=300, Desktop=400}"
+         HorizontalOptions="Center" />
+```
+
+在此示例中，所有这三个`OnIdiom`表达式使用的缩写的形式`OnIdiomExtension`类名。 这三个`OnIdiom`标记扩展集[ `Color` ](xref:Xamarin.Forms.BoxView.Color)， [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)，并且[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性[`BoxView` ](xref:Xamarin.Forms.BoxView)为手机、 平板电脑和桌面的惯用语言在不同的值。 标记扩展还提供默认值为这些属性在未指定，同时消除习惯用语`Default=`表达式的一部分。 请注意，由逗号分隔的标记扩展属性的设置。
+
+下面是在所有三个平台上运行的程序：
+
+[![OnIdiom 演示](consuming-images/onidiomdemo-small.png "OnIdiom 演示")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom 演示")
+
 ## <a name="define-your-own-markup-extensions"></a>定义你自己的标记扩展
 
 如果遇到过需要在 Xamarin.Forms 中不可用的 XAML 标记扩展，则可以[创建您自己](creating.md)。
-
 
 ## <a name="related-links"></a>相关链接
 

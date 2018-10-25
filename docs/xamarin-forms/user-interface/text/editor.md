@@ -6,12 +6,12 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/13/2018
-ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 07/31/2018
+ms.openlocfilehash: 23ba73eb4099a9db9e989c68ae7f381e1c96541d
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39270451"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 编辑器
@@ -156,6 +156,18 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 
 > [!NOTE]
 > 当[ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled)属性设置为`false`，并自定义键盘未被使用，将禁用本机拼写检查器。 但是，如果[ `Keyboard` ](xref:Xamarin.Forms.Keyboard)具有已设置，以禁用拼写检查，如[ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat)，则`IsSpellCheckEnabled`属性将被忽略。 因此，该属性不能用于启用拼写检查`Keyboard`的显式禁用它。
+
+### <a name="setting-placeholder-text"></a>设置占位符文本
+
+[ `Editor` ](xref:Xamarin.Forms.Editor)可以设置为显示占位符文本，它不存储用户输入时。 这可以通过设置[ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder)属性设置为`string`，并通常用于指示的是适用于的内容类型`Editor`。 此外，通过设置控制的占位符文本颜色[ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor)属性设置为[ `Color` ](xref:Xamarin.Forms.Color):
+
+```xaml
+<Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
+```
+
+```csharp
+var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
+```
 
 ### <a name="colors"></a>颜色
 

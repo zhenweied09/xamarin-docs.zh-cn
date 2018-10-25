@@ -6,12 +6,12 @@ ms.assetid: 4CBF703D-84A0-4CDF-A433-5926B587782A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: 813a913c2c2fb27456c9a489c73b16d5892c4b8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/26/2018
+ms.openlocfilehash: 3ae2fb8110b7e0a5c6c85c489897acc1a03be8d8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997047"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms 字数
@@ -35,13 +35,16 @@ ms.locfileid: "38997047"
 
 ## <a name="setting-boxview-color-and-size"></a>设置字数颜色和大小
 
-通常将设置的以下三个属性`BoxView`:
+通常将设置以下属性的`BoxView`:
 
 - [`Color`](xref:Xamarin.Forms.BoxView.Color) 若要设置其颜色。
+- [`CornerRadius`](xref:Xamarin.Forms.BoxView.CornerRadius) 若要设置其圆角半径。
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 若要设置的宽度`BoxView`以与设备无关单位。
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 若要设置的高度`BoxView`。
 
 `Color`属性属于类型`Color`; 的属性可以设置为任何`Color`值，其中包括 141 静态只读字段的已命名的颜色范围为按字母顺序`AliceBlue`到`YellowGreen`。
+
+`CornerRadius`属性属于类型[ `CornerRadius` ](xref:Xamarin.Forms.CornerRadius); 的属性可以设置为单个`double`统一角半径值，或`CornerRadius`结构定义的四个`double`应用到的值左上、 右上、 左下角和右下角`BoxView`。
 
 `WidthRequest`并`HeightRequest`属性只能播放一个角色，如果`BoxView`是*不受约束*布局中。 这种情况时的布局容器需要知道子的大小，例如，当`BoxView`中的自动调整大小单元格的子`Grid`布局。 一个`BoxView`也是不受约束时其`HorizontalOptions`并`VerticalOptions`属性设置为值而不`LayoutOptions.Fill`。 如果`BoxView`是不受约束，但`WidthRequest`和`HeightRequest`属性未设置，然后宽度或高度设置为 40 单位，或大约 1/4 英寸的移动设备上的默认值。
 
@@ -58,6 +61,7 @@ ms.locfileid: "38997047"
              x:Class="BasicBoxView.MainPage">
 
     <BoxView Color="CornflowerBlue"
+             CornerRadius="10"
              WidthRequest="160"
              HeightRequest="160"
              VerticalOptions="Center"

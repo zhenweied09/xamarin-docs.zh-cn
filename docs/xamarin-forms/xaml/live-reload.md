@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38860662"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
@@ -26,10 +26,12 @@ Xamarin Live 重新加载使你能够**对你的 XAML 进行更改和查看它�
 
 实时重新加载目前仅在 Visual Studio 2017 中提供。
 
+[![加入在聊天 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## <a name="requirements"></a>要求
 
-* [Visual Studio 2017 版本 15.7 或更高版本](https://visualstudio.microsoft.com/vs/)或更高版本使用**使用.NET 的移动开发**工作负荷。
-* [Xamarin.Forms 3.0.0 或更高版本](https://www.nuget.org/packages/Xamarin.Forms/)或更高版本。
+* [Visual Studio 2017 版本 15.7 或更高版本](https://visualstudio.microsoft.com/vs/)与**使用.NET 的移动开发**工作负荷。
+* [Xamarin.Forms 3.0.0 或更高版本](https://www.nuget.org/packages/Xamarin.Forms/)。
 
 ## <a name="getting-started"></a>入门
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1.从 Visual Studio Marketplace 安装 Xamarin 实时重新加载
@@ -121,6 +123,8 @@ Xamarin Live 重新加载的初始预览版功能仅适用于 Visual Studio 2017
 * 仅 Visual Studio 中受支持。
 * 链接必须设置为**不链接**或**仅上链接 Framework Sdk** 
 * 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，重置应用导航。 这将在下一步的预览版本中修复。
+* 当前的 ContentView 重新加载需要重新加载包含页。 这将在下一步的预览版本中修复。
+* 包含 AutomationId 元素可能会导致重新加载失败。
 * 调试 UWP 可能会导致运行时故障发生时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）** 而不是**开始调试 (F5)**。
 
 ## <a name="troubleshooting"></a>疑难解答

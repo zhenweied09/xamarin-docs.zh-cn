@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997108"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 快速呈现器
@@ -32,6 +32,7 @@ _本文介绍了快速呈现器，减少的通货膨胀和呈现成本在 Androi
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 就功能而言，这些快速呈现器是对原始的呈现器没有什么不同。 但是，当前处在试验阶段，仅可以通过添加以下代码行来使用你`MainActivity`类，然后调用`Forms.Init`:
 

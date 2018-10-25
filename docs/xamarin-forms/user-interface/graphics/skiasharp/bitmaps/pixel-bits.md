@@ -1,20 +1,20 @@
 ---
-title: 访问 SkiaSharp 像素位
+title: 访问 SkiaSharp 位图像素位
 description: 了解用于访问和修改 SkiaSharp 位图的像素位的各种技术。
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 5d79dd89b5313d5d7ead665c54e9a27026cea38c
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615621"
 ---
-# <a name="accessing-skiasharp-pixel-bits"></a>访问 SkiaSharp 像素位
+# <a name="accessing-skiasharp-bitmap-pixel-bits"></a>访问 SkiaSharp 位图像素位
 
 本文中所示[**到文件的保存 SkiaSharp 位图**](saving.md)，位图通常存储在文件中的压缩格式，如 JPEG 或 PNG。 在与此相反，不压缩 SkiaSharp 位图存储在内存中。 已存储为一系列连续的像素为单位。 此压缩的格式便于将位图转移到显示图面。
 
@@ -39,7 +39,7 @@ SkiaSharp 提供几种方法用于访问位图的像素位。 你选择哪一个
 
 ### <a name="the-setpixel-method"></a>SetPixel 方法
 
-如果您只需设置或获取多个单个像素[ `SetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixel/p/System.Int32/System.Int32/SkiaSharp.SKColor/)并[ `GetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixel/p/System.Int32/System.Int32/)方法是理想之选。 对于每个这两种方法，您指定的整数列和行。 无论像素格式，这两种方法让你获取或设置作为像素`SKColor`值：
+如果您只需设置或获取多个单个像素[ `SetPixel` ](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor))并[ `GetPixel` ](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32))方法是理想之选。 对于每个这两种方法，您指定的整数列和行。 无论像素格式，这两种方法让你获取或设置作为像素`SKColor`值：
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -85,7 +85,7 @@ public class GradientBitmapPage : ContentPage
 
 ### <a name="the-pixels-property"></a>像素属性
 
-`SKBitmap` 定义[ `Pixels` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Pixels/)返回的数组的属性`SKColor`整个位图的值。 此外可以使用`Pixels`设置位图的颜色值的数组：
+`SKBitmap` 定义[ `Pixels` ](xref:SkiaSharp.SKBitmap.Pixels)返回的数组的属性`SKColor`整个位图的值。 此外可以使用`Pixels`设置位图的颜色值的数组：
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -129,7 +129,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
 ### <a name="the-getpixels-pointer"></a>GetPixels 指针
 
-可能是功能最强大的技术来访问的位图像素[ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixels()/)，不会与混淆`GetPixel`方法或`Pixels`属性。 将立即注意到与差异`GetPixels`，它将返回不在 C# 编程中非常常见的内容：
+可能是功能最强大的技术来访问的位图像素[ `GetPixels` ](xref:SkiaSharp.SKBitmap.GetPixels)，不会与混淆`GetPixel`方法或`Pixels`属性。 将立即注意到与差异`GetPixels`，它将返回不在 C# 编程中非常常见的内容：
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
@@ -145,7 +145,7 @@ byte* ptr = (byte*)pixelsAddr.ToPointer();
 
 `ptr`变量的类型是_字节的指针_。 这`ptr`变量，可以访问用于存储位图的像素为单位的各个字节的内存。 使用类似下面的代码从此内存中读取一个字节或写入一个字节的内存：
 
-```sharp
+```csharp
 byte pixelComponent = *ptr;
 
 *ptr = pixelComponent;
@@ -282,7 +282,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 
 ### <a name="the-setpixels-method"></a>SetPixels 方法
 
-`SKBitmap` 此外定义了一个名为方法[ `SetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixels/p/System.IntPtr/)，调用如下：
+`SKBitmap` 此外定义了一个名为方法[ `SetPixels` ](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr))，调用如下：
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -741,7 +741,55 @@ public partial class ColorAdjustmentPage : ContentPage
 
 很可能此方法的性能可以通过创建单独的源和目标位图的颜色类型的各种组合的方法更多改进，并且避免检查每个像素的类型。 另一个选项是有多个`for`循环的`col`变量根据颜色类型。
 
+## <a name="posterization"></a>海报
+
+涉及到访问像素位的另一个常见作业_海报_。 如果颜色编码以位图的像素为单位数量减少，使结果类似于使用有限的调色板的手绘海报。
+
+**色调分离**页上的 monkey 映像之一执行此过程：
+
+```csharp
+public class PosterizePage : ContentPage
+{
+    SKBitmap bitmap =
+        BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
+                                            "SkiaSharpFormsDemos.Media.Banana.jpg");
+    public PosterizePage()
+    {
+        Title = "Posterize";
+
+        unsafe
+        {
+            uint* ptr = (uint*)bitmap.GetPixels().ToPointer();
+            int pixelCount = bitmap.Width * bitmap.Height;
+
+            for (int i = 0; i < pixelCount; i++)
+            {
+                *ptr++ &= 0xE0E0E0FF; 
+            }
+        }
+
+        SKCanvasView canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+        canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform;
+    }
+}
+```
+
+构造函数中的代码访问每个像素，执行按位与运算，值 0xE0E0E0FF，然后将结果存储在位图中返回。 值 0xE0E0E0FF 保留高 3 位的每个颜色组件，并将较低的 5 位设置为 0。 而不是 2<sup>24</sup>或 16777216 种颜色，位图都会减少到 2<sup>9</sup>或 512 颜色：
+
+[![色调分离](pixel-bits-images/Posterize.png "色调分离")](pixel-bits-images/色调分离-Large.png#lightbox)
+
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
