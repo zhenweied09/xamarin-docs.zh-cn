@@ -1,24 +1,24 @@
 ---
 title: Xamarin.Mac 扩展支持
-description: 本文档介绍对 Finder、 共享和今天的扩展的 Xamarin.Mac 的支持。 它会检查限制和已知的问题，链接到演练和示例应用，并提供有关使用扩展的提示。
+description: 本文档介绍 Xamarin.Mac 的查找器、 共享和今天的扩展支持。 检查限制和已知的问题，链接到演练和示例应用，并提供用于处理扩展插件的提示。
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4cef6e89b89ef41a0c93b687c9df11a8aa971ed5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792370"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117559"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 扩展支持
 
-Xamarin.Mac 2.10 预览版中已添加了多个 macOS 扩展点：
+在 Xamarin.Mac 2.10 预览版中添加了对支持多个 macOS 扩展点：
 
-- 查找工具
+- 查找器
 - 共享
 - 今天
 
@@ -26,40 +26,40 @@ Xamarin.Mac 2.10 预览版中已添加了多个 macOS 扩展点：
 
 ## <a name="limitations-and-known-issues"></a>限制和已知的问题
 
-以下限制并且知道开发 Xamarin.Mac 中的扩展时可能发生的问题：
+以下限制和了解开发在 Xamarin.Mac 中的扩展时可能出现的问题：
 
-* 当前没有 Visual Studio 中的调试支持 for mac。 所有调试将需要通过完成**NSLog**和**控制台**。 请参阅下面有关详细信息的提示部分。
-* 扩展都必须包含在主机应用程序中，当运行一次使用系统的寄存器。 然后必须在中启用它们**扩展**部分**系统首选项**。 
-* 某些扩展故障可能导致主机应用程序不稳定和导致奇怪的行为。 具体而言， **Finder**和**今天**部分**通知中心**可能变为"卡住"，并且变得不响应。 这已在扩展项目中在 Xcode 中，有经验和当前显示与 Xamarin.Mac 不相关。 通常这可以在系统日志中看到 (通过**控制台**，有关详细信息，请参阅提示) 打印重复的错误消息。 重新启动 macOS 似乎解决此问题。
+* 当前没有调试支持在 Visual Studio for mac。 所有调试将需要通过完成**NSLog**并**控制台**。 请参阅下面的提示部分以了解详细信息。
+* 扩展必须包含在主机应用程序中，此操作时运行一次与向系统注册。 然后必须在启用它们**扩展**一部分**系统首选项**。 
+* 某些扩展崩溃可能会破坏主机应用程序的稳定性和导致奇怪的行为。 具体而言， **Finder**并**今天**部分**通知中心**可能变成"卡纸"而变得无响应。 这已在扩展项目在 Xcode 中，方面经验丰富，似乎与 Xamarin.Mac 无关。 这通常可以看到系统日志中 (通过**控制台**，请参阅详细信息的提示) 打印重复的错误消息。 重新启动 macOS 将显示要解决此问题。
 
 <a name="Tips" />
 
 ## <a name="tips"></a>提示
 
-使用 Xamarin.Mac 中的扩展时，以下提示可以是很有帮助：
+使用扩展在 Xamarin.Mac 中时，以下提示可以提供帮助：
 
-- 因为 Xamarin.Mac 当前不支持调试扩展，调试体验将主要取决于执行和`printf`喜欢语句。 但是，扩展沙盒在进程中运行，因此`Console.WriteLine`将不执行操作的其他 Xamarin.Mac 应用程序中一样。 调用[`NSLog`直接](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554)将调试消息输出到系统日志。
-- 任何未捕获的异常时将崩溃扩展过程中，提供只有少量的中的有用信息**系统日志**。 包装中的让人头痛代码`try/catch`（异常） 阻止，`NSLog`的之前重新引发可能会很有用。
-- **系统日志**可以从访问**控制台**下的应用**应用程序** > **实用工具**:
+- Xamarin.Mac 目前不支持调试扩展，如调试体验将主要取决于执行和`printf`等语句。 但是，扩展的进程中运行沙盒，因此`Console.WriteLine`其他 Xamarin.Mac 应用程序中一样将不执行操作。 调用[`NSLog`直接](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554)将调试消息输出到系统日志。
+- 任何未捕获的异常将崩溃扩展过程中，只有少量的有用信息中提供**系统日志**。 中的有问题代码包装`try/catch`(Exception) 块`NSLog`的之前重新引发可能会很有用。
+- **系统日志**可以从访问**控制台**待应用程序**应用程序** > **实用程序**:
 
     [![](extensions-images/extension02.png "系统日志")](extensions-images/extension02.png#lightbox)
-- 如上所述，运行扩展主机应用程序将其注册到系统。 删除与应用程序捆绑包将其取消注册。 
-- 如果注册的应用的扩展的"孤立"版本，使用以下命令 （以便它们可以 deleted) 找到它们： `plugin kit -mv`
+- 如上文所述，运行扩展主机应用程序将其注册系统。 删除与应用程序捆绑包将其注销。 
+- 如果已注册"孤立"应用程序的扩展版本，使用以下命令 （因此也可删除） 找到它们： `plugin kit -mv`
 
 
 <a name="Walkthrough-and-Sample-App" />
 
 ## <a name="walkthrough-and-sample-app"></a>演练和示例应用
 
-由于开发人员将创建和使用 Xamarin.Mac 扩展 Xamarin.iOS 扩展的方式相同，请参阅我们[扩展简介](~/ios/platform/extensions.md)更多详细信息的文档。
+由于开发人员将创建和处理 Xamarin.Mac 扩展作为 Xamarin.iOS 的扩展相同的方式，请参阅我们[扩展插件简介](~/ios/platform/extensions.md)文档了解详细信息。
 
-包含小示例 Xamarin.Mac 项目中，可以找到的每个扩展类型的工作示例[此处](https://developer.xamarin.com/samples/mac/ExtensionSamples/)。
+包含小型示例 Xamarin.Mac 项目中，每个扩展类型的工作示例可以找到[此处](https://developer.xamarin.com/samples/mac/ExtensionSamples/)。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文已采取了快速了解一下使用 Xamarin.Max 版本 2.10 （和更高版本） 应用程序中的扩展。
+本文已介绍一下使用 Xamarin.Max 版本 2.10 （和更高版本） 应用程序中的扩展。
 
 ## <a name="related-links"></a>相关链接
 

@@ -4,15 +4,15 @@ description: 本文档介绍安全和隐私功能的 Io，并讨论了如何使�
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1a28bf394d29c09bfd264f03e0eea6c8b582f271
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 1c88a5c16dbe5559f0b551a97a27ebb893991187
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120497"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 安全和隐私功能
 
@@ -72,7 +72,7 @@ Apple 已与安全和隐私 iOS 10 （及更高版本） 中存在多项增强�
 
 ![警报示例 NSHomeKitUsageDescription](security-privacy-images/info01.png "示例 NSHomeKitUsageDescription 警报")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin.iOS for Visual Studio 中的当前不支持编辑**Info.plist**默认 iOS 中的隐私密钥清单编辑器。 而是需要使用通用 PList 编辑器，因此执行以下操作：
 
@@ -90,7 +90,7 @@ Xamarin.iOS for Visual Studio 中的当前不支持编辑**Info.plist**默认 iO
     ![输入描述](security-privacy-images/InfoPListSetValue.png "输入的说明")
 7. 保存对文件所做的更改。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要设置的任何隐私密钥，请执行以下步骤：
 

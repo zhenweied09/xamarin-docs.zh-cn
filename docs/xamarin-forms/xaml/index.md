@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: f593e5d084d8cd7071d17195663478d430d994b7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4045f3a1d31b1c0c8b69e840d3943b6ce258b894
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995477"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113574"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>可扩展应用程序标记语言 (XAML)
 
@@ -37,7 +37,7 @@ XAML 可以根据需要使用 XAML 编译器 (XAMLC) 直接编译为中间语言
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[XAML 预览程序](xaml-previewer.md)
 
-[XAML 预览程序](~/xamarin-forms/xaml/xaml-previewer.md)中通告的 Xamarin Evolve 2016 是可用于测试的 Alpha 通道中。
+[XAML 预览程序](~/xamarin-forms/xaml/xaml-previewer.md)呈现页的并排方案使用 XAML 标记，从而可以查看您的呈现将如你所键入的用户界面的实时预览。
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[XAML 命名空间](namespaces.md)
 

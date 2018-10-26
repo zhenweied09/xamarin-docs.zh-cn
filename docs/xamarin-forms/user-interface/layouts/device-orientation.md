@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 7f0e1c27f7d6a62dc43ac447c4f796d685a6cd91
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241206"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118872"
 ---
 # <a name="device-orientation"></a>设备方向
 
@@ -28,7 +28,7 @@ ms.locfileid: "39241206"
 
 在 iOS 上，设备方向配置使用的应用程序**Info.plist**文件。 如果该应用包含它作为目标，此文件将包含的 iPhone 和 iPod，方向设置，以及适用于 iPad 的设置。 以下是对 IDE 的特定说明。 在本文档的顶部使用 IDE 选项选择你想要看到的说明进行操作：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 在 Visual Studio 中，打开 iOS 项目，并打开**Info.plist**。 该文件将打开到配置面板中，从 iPhone 部署信息选项卡开始：
 
@@ -38,7 +38,7 @@ ms.locfileid: "39241206"
 
 ![在 Visual Studio 中支持的设备方向](device-orientation-images/orientation-vs-ipad.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 在 Visual Studio for Mac 中，打开 iOS 项目，并打开**Info.plist**。 下**应用程序**选项卡上，各节将才可设置方向：
 

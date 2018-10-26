@@ -3,15 +3,15 @@ title: 体系结构
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121121"
 ---
 # <a name="architecture"></a>体系结构
 
@@ -71,7 +71,7 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*为允许 Andro
 托管的可调用包装器子类是可能所在的"有意义"的所有特定于应用程序逻辑。 其中包括自定义[Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)子类 (如[Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13)默认项目模板中的类型)。 (具体而言，这些是任何*Java.Lang.Object*来执行此操作的子类*不*包含[RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)自定义特性或[RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/)是*false*，这是默认设置。)
 
 如管理托管的可调用包装可调用包装器子类还包含全局引用，可通过访问[Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)属性。 就像与托管的可调用包装器，通过调用全局引用可以显式释放操作[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)。
-与托管的可调用包装器，不同*谨慎*应为释放的这种情况下前, 采取*dispose （)* 实例的连接将中断 Java 实例之间的映射 (的实例Android 可调用包装器） 和托管的实例。
+与托管的可调用包装器，不同*谨慎*应为释放的这种情况下前, 采取*dispose （)* 定义是该实例将中断 Java 实例之间的映射 (的实例Android 可调用包装器） 和托管的实例。
 
 
 ### <a name="java-activation"></a>Java 激活
@@ -88,7 +88,7 @@ Xamarin.Android 应用程序还包含*Android 可调用包装器*为允许 Andro
 
 
 请注意，(2) 是一个有漏洞的抽象。 在 Java 中，与 C# 中，从一个构造函数调用虚拟方法始终调用派生程度最高的方法实现。 例如， [TextView (上下文，AttributeSet，int) 构造函数](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/)调用虚拟方法[TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod())，该绑定为[TextView.DefaultMovementMethod 属性](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/)。
-因此，如果某种[LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs)为 (1) 已[子类 TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26)，(2)[重写 TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)，和 (3)[激活它的实例通过 XML，类](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29)重写*DefaultMovementMethod* ACW 构造函数有机会执行，并该将会出现在 C# 构造函数有机会执行之前，会调用属性。
+因此，如果某种[LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs)为 (1) 已[子类 TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26)，(2)[重写 TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)，和 (3)[激活它的实例类的 XML，通过](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29)重写*DefaultMovementMethod*之前 ACW 构造函数有机会执行时，它会发生之前将调用属性C#机会到构造函数执行。
 
 这通过实例化实例 LogTextBox 支持通过[LogTextView （IntPtr，JniHandleOwnership）](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28)构造函数时 ACW LogTextBox 实例首次进入托管代码中，然后再调用[(上下文，IAttributeSet，int) LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41)构造函数*同一个实例上*ACW 构造函数执行时。
 

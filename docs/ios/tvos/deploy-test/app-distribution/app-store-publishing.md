@@ -1,141 +1,141 @@
 ---
-title: 发布到 Apple 电视应用商店
-description: 本文档介绍如何将应用发布到 Apple 电视应用商店。 它讨论如何配置、 设置、 生成和提交一个使用 Xamarin 生成的 tvOS 应用程序。
+title: 发布到 Apple TV App Store
+description: 本文档介绍如何将应用发布到 Apple TV App Store。 它介绍如何配置、 预配、 生成和提交使用 Xamarin 生成的 tvOS 应用程序。
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122395"
 ---
-# <a name="publishing-to-the-apple-tv-app-store"></a>发布到 Apple 电视应用商店
+# <a name="publishing-to-the-apple-tv-app-store"></a>发布到 Apple TV App Store
 
-按顺序将分发到所有 Apple TV 设备的应用程序、 Apple 要求应用程序，以便通过发布*Apple 电视 App Store*，使应用商店 tvOS 应用的一站式购物位置。 许多类型的应用的开发人员可以分发此单点大规模成功采用大写形式。 Apple 电视应用商店是提供分发和支付系统的应用程序开发人员的成套解决方案。
+按顺序将分发到所有 Apple TV 设备的应用程序，Apple 要求应用以通过发布*Apple TV App Store*，使应用商店 tvOS 应用的一站式购物位置。 多种类型的应用的开发人员可以依赖此单点分发的巨大成功采用大写形式。 Apple TV App Store 是一种统包解决方案，提供应用程序开发人员分发和支付系统。
 
-提交到 Apple 电视应用商店应用程序的过程：
+提交到 Apple TV App Store 的应用程序的过程包括：
 
 1. 创建应用 ID，选择“权利”。
 2. 创建分发预配配置文件。
-3. 使用此配置文件来生成你的应用程序。
-4. 提交你的应用通过*iTunes Connect*。
+3. 使用此配置文件来构建您的应用程序。
+4. 通过将应用提交*iTunes Connect*。
 
 
-这篇文章中我们将介绍设置、 生成和提交有关 Apple TV 应用商店分发应用程序所需的所有步骤。
+在本文中，我们将介绍预配、 生成和提交有关 Apple TV App Store 分发应用程序所需的所有步骤。
 
 <a name="Before_you_Submit" />
 
 ## <a name="before-you-submit-an-application"></a>提交应用程序前的准备
 
-提交到 Apple 电视应用商店发布应用程序后，它将经历审阅过程由 Apple 以确保它满足质量和内容的 Apple 的准则。 如果应用程序不符合这些指南，Apple 将拒绝此应用程序，此时需要处理 Apple 提出的不符合项，然后重新提交。
-因此，如果熟悉这些指南并尽力使应用程序与其相符，应用程序通过 Apple 审核的几率较大。 Apple 的准则位于[应用商店查看准则](https://developer.apple.com/appstore/resources/approval/guidelines.html)和[新 Apple tv 准备你的应用程序提交](https://developer.apple.com/tvos/submit/)。
+提交到 Apple TV App Store 发布应用程序后，会经历一个审查过程，确保其符合 Apple 的质量和内容的指导原则 Apple 的。 如果应用程序不符合这些指南，Apple 将拒绝此应用程序，此时需要处理 Apple 提出的不符合项，然后重新提交。
+因此，如果熟悉这些指南并尽力使应用程序与其相符，应用程序通过 Apple 审核的几率较大。 Apple 相关指南目前[应用商店查看准则](https://developer.apple.com/appstore/resources/approval/guidelines.html)并[新建 Apple TV 的应用程序提交过您准备](https://developer.apple.com/tvos/submit/)。
 
 提交应用时需要注意几点：
 
-1. 请确保应用程序的说明与匹配的应用程序中包含的功能。
-2. 测试应用程序不崩溃正常使用。 这包括你支持每个 Apple TV 设备上的使用情况。
+1. 请确保应用程序的说明与匹配应用中包含的功能。
+2. 测试应用不会在正常使用时崩溃。 这包括支持的所有 Apple TV 设备上的使用情况。
 
 
-Apple 还维护 Apple 电视应用商店提交提示的列表。 可在[在 App Store 上分发](https://developer.apple.com/appstore/resources/submission/tips.html)中阅读这些列表。
+Apple 还会保留 Apple TV App Store 提交提示的列表。 可在[在 App Store 上分发](https://developer.apple.com/appstore/resources/submission/tips.html)中阅读这些列表。
 
 <a name="Configuring_your_Application_in_iTunes_Connect" />
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>在 iTunes Connect 中配置应用程序
 
-[iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa)是一套基于 web 的工具，除了别的之外管理 Apple 电视 App store 你 tvOS 应用。 Xamarin.tvOS 应用程序将需要进行正确设置，并可供查看提交到 Apple 和销售或作为 Apple 电视应用商店中免费的应用程序从根本上讲，释放前在 iTunes Connect 中配置。
+[在 iTunes Connect](https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa)是一套基于 web 工具，可在管理位于 Apple TV App Store 上的 tvOS 应用等。 Xamarin.tvOS 应用将需要进行恰当安装并配置在 iTunes Connect 中，然后可以提交到 Apple 进行审核并从根本上讲，付费或为 Apple TV App Store 中的免费应用发布。
 
 请执行以下操作：
 
 1. 验证 iTunes Connect 的**协议、税款和银行**部分中是否具备恰当的最新协议，以便发布免费或付费的 iOS 应用程序。
-2. 创建一个新**iTunes Connect 记录**应用程序并指定其**显示名称**（如 Apple 电视应用商店中所示）。
+2. 创建一个新**iTunes Connect 记录**应用程序，并指定其**显示名称**（如 Apple TV App Store 中所示）。
 3. 选择**售价**或指定免费发布应用程序。
-4. 提供**应用存储图标**（大图标） 的操作，请在它支持的 Apple TV 设备中的应用程序和屏幕截图。 请参阅我们[处理图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)更多详细信息的指南。
-5. 提供很明显，简洁**说明**的应用程序包括它的功能和向最终用户受益。
-6. 提供**类别**，**子类别**，和**关键字**有助于在 Apple 电视 App Store 中找到你的应用程序的用户。
+4. 提供**App Store 图标**（大图标） 和你在操作中，它支持在 Apple TV 设备上的应用程序的屏幕截图。 请参阅我们[使用的图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)更多详细信息的指南。
+5. 提供简洁**说明**的应用程序包括其功能和对最终用户的好处。
+6. 提供**类别**，**子类别**，并**关键字**以帮助用户在 Apple TV App Store 中找到你的应用。
 7. 提供 Apple 要求的你的网站的**联系人**和**支持人员** URL。
-8. 设置你的应用程序**评级**，后者由 Apple 电视 App store 的家长控制。
+8. 将应用程序的设置**评级**，后者由 Apple TV App Store 上的家长控制。
 9. 配置可选的 App Store 技术，如 **Game Center** 和**应用内购买**。
 
-有关更多详细信息，请参阅我们[在 iTunes Connect 中配置你 tvOS 应用](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md)文档。
+有关更多详细信息，请参阅我们[iTunes Connect 中配置 tvOS 应用](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md)文档。
 
 <a name="Preparing_for_App_Store_Distribution" />
 
 ## <a name="preparing-for-app-store-distribution"></a>准备 App Store 分发
 
-若要发布到 Apple 电视应用商店应用，首先需要生成分发，这涉及很多步骤。 下列各节介绍如何准备 Xamarin.tvOS 应用程序发布，以便它可以生成并将其提交到 Apple 电视应用商店评审和版本的所需的所有内容。
+若要将应用发布到 Apple TV App Store，首先需要生成进行分发，这涉及到许多步骤。 以下部分介绍了有关发布准备 Xamarin.tvOS 应用，以便它可以生成并将其提交到 Apple TV App Store 进行审核和发布所需的所有内容。
 
 <a name="Provisioning_for_Application_Services" />
 
 ### <a name="provisioning-for-application-services"></a>对应用程序服务进行预配
 
-Apple 提供的特殊应用程序服务，也称为权利，为它创建一个唯一的 ID 时，则在您 tvOS 的应用程序时可以激活的选择。 无论你使用自定义授权，还是不，仍需要创建 Xamarin.tvOS 应用程序的唯一 ID，然后可以在 Apple 电视应用商店上发布它。
+Apple 提供一系列特殊的应用程序服务，也称为权利时为其创建的唯一 ID 可以为 tvOS 应用激活。 无论使用自定义权利，仍需要在 Apple TV App Store 上发布之前创建 Xamarin.tvOS 应用的唯一 ID。
 
 使用 Apple 的基于 Web 的 iOS 预配门户创建应用 ID 和（可选）选择权利，包括以下步骤：
 
-1. 选择**设置** > **开发**。
+1. 选择**预配** > **开发**。
 2. 单击“+”按钮，并为新的应用程序提供“名称”和“捆绑 ID”。
-3. 滚动到屏幕的底部，选择任何**应用程序服务**Xamarin.tvOS 应用程序将需要的。
+3. 滚动到屏幕的底部，选择任意**应用服务**Xamarin.tvOS 应用将需要的。
 4. 单击“继续”按钮，并按照屏幕上的说明创建新的应用程序 ID。
 
-除了选择并配置所需的应用程序服务，定义你应用程序 ID 时，你还需要通过编辑同时 Xamarin.tvOS 项目中配置的应用程序 ID 和权利`Info.plist`和`Entitlements.plist`文件。
+除了选择和配置所需的应用程序服务定义你的应用 ID 时，您还需要通过编辑 Xamarin.tvOS 项目中配置应用程序 ID 和权利`Info.plist`和`Entitlements.plist`文件。
 
 执行以下操作在 Visual Studio for Mac:
 
 1. 在“解决方案资源管理器”中，双击 `Info.plist` 文件，将其打开进行编辑。
-2. 在**tvOS 应用程序目标**部分，填写你的应用程序的名称，然后输入**捆绑标识符**创建时定义应用程序 id。
+2. 在中**tvOS 应用程序目标**部分中，填写你的应用程序的名称并输入**捆绑包标识符**创建时定义应用程序 id。
 3. 保存对 `Info.plist` 文件所做的更改。
 4. 在“解决方案资源管理器”中，双击 `Entitlements.plist` 文件，将其打开进行编辑。
-5. 选择并配置所需的你 Xamarin.tvOS 应用程序，使其与安装程序时定义应用程序 id。 执行上面的权利
+5. 选择并配置所需的 Xamarin.tvOS 应用，使其匹配时定义应用程序 id。 执行上面的设置权利
 6. 保存对 `Entitlements.plist` 文件所做的更改。
 
-有关详细说明，请参阅[为应用程序服务进行预配](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices)文档。 本文档已针对 iOS 编写的而相同的步骤用于设置的 Xamarin.tvOS 应用。
+有关详细说明，请参阅[为应用程序服务进行预配](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices)文档。 本文档针对 iOS 编写的而使用相同的步骤 Xamarin.tvOS 应用预配。
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
-### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>设置应用程序图标，启动映像和顶层架子映像
+### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>设置应用程序图标、 启动图像和顶架图像
 
-TvOS 可接受的 Apple，用于包含在 Apple 电视应用商店应用，需要正确的图标、 启动和所有它将在运行的 Apple TV 设备顶部架映像。 你将需要添加将编译到所需的图像资产`Assets.car`文件并包含在 Xamarin.tvOS 应用程序捆绑包，然后将其上载到 iTunes Connect。
+对于可被包含在 Apple TV App Store 中接受 Apple 的 tvOS 应用程序，它需要正确的图标、 启动和所有它将其运行的 Apple TV 设备 Top Shelf 图像。 你将需要添加将编译到所需的图像资产`Assets.car`文件，并包含在 Xamarin.tvOS 应用的捆绑包，然后将其上载到 iTunes Connect。
 
-有关详细说明，请参阅我们[处理图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)文档。
+有关详细说明，请参阅我们[使用的图标和图像](~/ios/tvos/app-fundamentals/icons-images.md)文档。
 
 <a name="Creating_and_Installing_a_Distribution_Profile" />
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>创建并安装分发配置文件
 
-tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生成。 这些文件包含有关用于应用签名的证书、应用程序 ID 和应用安装位置的信息。 对于开发和临时分发，预配配置文件还包括允许部署应用的设备列表。 但是，有关 Apple TV 应用商店分发证书和应用程序的唯一 ID 信息都包括在内，因为公共分发的唯一机制是通过 Apple 电视应用商店。
+使用 tvOS*预配配置文件*以控制可以部署特定应用程序生成的方式。 这些文件包含有关用于应用签名的证书、应用程序 ID 和应用安装位置的信息。 对于开发和临时分发，预配配置文件还包括允许部署应用的设备列表。 但是，对于 Apple TV App Store 分发，唯一的证书和应用程序 ID 信息是包括在内，因为公开分发的唯一机制是通过 Apple TV App Store。
 
 使用 Apple 的基于 Web 的 iOS 预配门户的预配包含以下步骤：
 
 1.  选择“预配” > “分发”。
-2.  单击**+** 按钮，然后选择你想要为创建的分布配置文件的类型**Apple 电视 App Store**。
+2.  单击**+** 按钮，然后选择你想要为创建的分发配置文件的类型**Apple TV App Store**。
 3.  从要为其创建分发配置文件的下拉列表中，选择“应用程序 ID”。
-4.  选择所需对应用程序签名证书。
+4.  选择所需应用程序进行签名的证书。
 5.  为新的**分发配置文件**输入**名称**，并生成配置文件。
 6.  刷新在 Xcode 中可用的配置文件的列表。
-7.  选择预配配置文件，Visual Studio 中用于分发**应用商店**_生成配置_。
+7.  选择分发预配配置文件在 Visual Studio for**应用商店**_生成配置_。
 
-有关详细说明，请参阅[创建分发配置文件](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile)和[在 Xamarin.iOS 项目中选择分发配置文件](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile)。 同样，这些文档都特定于 iOS 的但对于 tvOS 应用程序使用相同的方法。
+有关详细说明，请参阅[创建分发配置文件](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile)和[在 Xamarin.iOS 项目中选择分发配置文件](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile)。 同样，这两个文档是特定于 iOS 的但为 tvOS 应用使用相同的方法。
 
 
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>设置应用程序的生成配置
 
-默认情况下，当你创建一个新的 Xamarin.tvOS 应用_生成配置_自动创建两个**调试**和**版本**部署。 在向 Apple 进行将提交你的应用程序最终版本之前，有几个将需要对基进行的修改**版本**配置。
+默认情况下，当创建新的 Xamarin.tvOS 应用，_生成配置_自动创建两个**调试**并**发行**部署。 向 Apple 您将提交你的应用程序在最终生成前，，有一些你将需要对基类进行的修改**版本**配置。
 
 请执行以下操作：
 
-1. 右键单击**项目名称**中**解决方案资源管理器**和选择**选项**可以打开进行编辑。
-2. 如果你正面向 tvOS 的特定版本，请选择它下**tvOS 生成** > **iOS SDK 版本**。 对于 tvOS 支持预览版本，请将此值设置为**默认**。
-3. 链接减小的总体大小的应用程序的可分发通过去除未使用的方法、 属性类，等等，并且在大多数情况下应保留为默认值的**仅链接 framework SDK**。 在某些情况下，例如使用某些特定第三方库时，可能会强制将此值设置为“不链接”，防止删除需要的元素。
-4. 若要提供 Xamarin.tvOS 应用，你将需要使用 LLVM 优化编译器。 确保**使用优化编译器 LLVM**下选中复选框**版本**配置。
-5. Apple 还 tvOS 应用使用 bitcode 必选项。 下面再次**版本**配置中，添加`--bitcode=asmonly`到**其他 mtouch 参数**框。
-6. **适用于 iOS 的优化 PNG 图像文件**应选中复选框，因为这样做有助于进一步减少到你的应用的可交付结果大小。
+1. 右键单击**项目名称**中**解决方案资源管理器**并选择**选项**打开进行编辑。
+2. 如果你正面向特定版本的 tvOS 下, 将其选中**tvOS 生成** > **iOS SDK 版本**。 为 tvOS 支持预览版本，请将此值设置为**默认**。
+3. 链接将减小总体应用程序的可分发通过去除未使用的方法、 属性类，等等，在大多数情况下，应保留为默认值**仅链接 framework SDK**。 在某些情况下，例如使用某些特定第三方库时，可能会强制将此值设置为“不链接”，防止删除需要的元素。
+4. 寄送 Xamarin.tvOS 应用，你将需要使用 LLVM 优化编译器。 絋粄**使用 LLVM 优化编译器**下选中框**发行**配置。
+5. Apple 还所需的 tvOS 应用使用 bitcode。 下再次**发行**配置中，添加`--bitcode=asmonly`到**其他 mtouch 参数**框。
+6. **适用于 iOS 优化 PNG 图像文件**应选中复选框，因为这样做有助于进一步减少应用程序的可交付结果大小。
 7. *不*应启用调试，因为这将为生成增加不必要的大小。
 
 
@@ -143,7 +143,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 ## <a name="building-and-submitting-the-distributable"></a>生成并提交可分发文件
 
-与你正确配置的 Xamarin.tvOS 应用，现在已准备进行将提交你的最终分发生成向 Apple 进行查看和版本。
+与 Xamarin.tvOS 应用正确配置，你现在可以进行的最后一个分发生成的将提交到 Apple 进行审核和发布。
 
 #### <a name="build-your-archive"></a>生成存档
 
@@ -165,21 +165,21 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 对应用进行签名并准备分发：
 
-1. 选择**对签名并分配...**，如下所示：
+1. 选择**签名并分发...**，如下所示：
 
     [![](app-store-publishing-images/buildxs04new.png "选择 theSign 和分发...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. 这将打开发布向导。 选择“App Store”分发频道以创建包，再打开应用加载程序：
 
-    [![](app-store-publishing-images/distribute01.png "选择应用程序存储的分销渠道")](app-store-publishing-images/distribute01.png#lightbox)
-3. 在预配配置文件屏幕上，选择你的签名标识和对应预配配置文件，或使用其他身份重新登录：
+    [![](app-store-publishing-images/distribute01.png "选择 App Store 分发通道")](app-store-publishing-images/distribute01.png#lightbox)
+3. 在预配配置文件屏幕上，选择签名标识和对应的预配配置文件，或使用其他标识重新签名：
 
-    [![](app-store-publishing-images/distribute02.png "选择的签名标识和对应预配配置文件")](app-store-publishing-images/distribute02.png#lightbox)
+    [![](app-store-publishing-images/distribute02.png "选择签名标识和对应的预配配置文件")](app-store-publishing-images/distribute02.png#lightbox)
 4. 验证包的详细信息，再单击“发布”以保存 `.ipa` 包：
 
     [![](app-store-publishing-images/distribute03.png "验证包的详细信息")](app-store-publishing-images/distribute03.png#lightbox)
 5. 保存 `.ipa` 后，应用即可通过应用加载程序上传到 iTunes Connect：
 
-    [![](app-store-publishing-images/distribute04.png "上载到 iTunes 应用程序加载程序通过连接")](app-store-publishing-images/distribute04.png#lightbox)
+    [![](app-store-publishing-images/distribute04.png "上传到 iTunes Connect 通过应用程序加载程序")](app-store-publishing-images/distribute04.png#lightbox)
 
 创建分发生成并将其存档后，现可将应用程序提交到 iTunes Connect。
 
@@ -190,7 +190,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 分发生成完成后，即可将 iOS 应用程序提交到 Apple 以供审核，然后在 App Store 上发布。
 
 
-适用于 Mac 的 Visual Studio 中的存档工作流将应用程序加载程序会自动打开，保存后`.ipa`:
+Visual Studio for Mac 中的存档工作流应用程序加载程序，会自动打开后已保存`.ipa`:
 
 2. 选择“提交应用”，单击“选择”按钮：
 
@@ -202,7 +202,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
     [![](app-store-publishing-images/publishvs02.png "应用程序加载程序验证屏幕")](app-store-publishing-images/publishvs02.png#lightbox)
 5. 单击“下一步”按钮，将按照 App Store 的要求验证应用：
 
-    [![](app-store-publishing-images/publishvs03.png "正在验证针对应用商店应用程序")](app-store-publishing-images/publishvs03.png#lightbox)
+    [![](app-store-publishing-images/publishvs03.png "正在验证对应用商店应用程序")](app-store-publishing-images/publishvs03.png#lightbox)
 6. 单击“发送”按钮，将应用程序发送到 Apple 以供审核。
 7. 文件成功上传后，应用程序加载程序将通知你。
 
@@ -210,7 +210,7 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 ### <a name="itunes-connect-status"></a>iTunes Connect 状态
 
-如果您重新登录到 iTunes Connect 并从可用的应用的列表中选择你的应用程序，在 iTunes Connect 中的状态现在应显示它是**等待查看**(它可能会暂时在读取**上载收到**它正在处理）：
+如果您重新登录到 iTunes Connect，并从可用应用的列表中选择你的应用，iTunes Connect 中的状态现在应显示它是**等待审核**(可能会暂时读取**收到上传**而将其进行处理）：
 
 [![](app-store-publishing-images/image21.png "在 iTunes 中的状态连接显示等待评审")](app-store-publishing-images/image21.png#lightbox)
 
@@ -218,13 +218,13 @@ tvOS 使用*预配配置文件*以控制如何可以部署特定应用程序生�
 
 ## <a name="troubleshooting"></a>疑难解答
 
-如果你遇到的问题提交到 Apple 电视 App Store 你 Xamarin.tvOS 的应用，请参阅我们[故障排除](~/ios/tvos/troubleshooting.md)指南。 它包含可能会遇到的一些已知的问题和如何解决这些 Xamarin.tvOS 中。
+如果您遇到的问题将 Xamarin.tvOS 应用提交到 Apple TV App Store，请参阅我们[故障排除](~/ios/tvos/troubleshooting.md)指南。 它包含可能会遇到的一些已知的问题和如何解决这些 Xamarin.tvOS 中。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文介绍配置、 生成和提交针对 Apple 电视应用商店发布的应用程序的分步指南。 首先，介绍创建并安装分发配置文件所需的步骤。 接下来，它在遍历如何使用适用于 Mac 的 Visual Studio 创建的分发版本。 最后，它向您展示如何使用 iTunes Connect 和 Xcode 存档工具来提交到 Apple 电视应用商店应用程序。
+本文提供配置、 生成和提交用于 Apple TV App Store 发布的应用的分步指南。 首先，介绍创建并安装分发配置文件所需的步骤。 然后，介绍如何使用 Visual Studio for Mac 创建分发生成。 最后，它演示了如何使用 iTunes Connect 和 Xcode 存档工具提交到 Apple TV App Store 的应用程序。
 
 
 ## <a name="related-links"></a>相关链接

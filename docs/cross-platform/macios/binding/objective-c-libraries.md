@@ -1,21 +1,21 @@
 ---
 title: 绑定 OBJECTIVE-C 库
-description: 本文档提供高级别概述了如何创建 C# 绑定到 OBJECTIVE-C 代码描述如何将绑定事件、 方法、 自定义控件和的详细信息。
+description: 本文档提供了高级别概述了如何创建C#绑定到 OBJECTIVE-C 代码描述如何将绑定事件、 方法、 自定义控件和的详细信息。
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
-author: bradumbaugh
-ms.author: brumbaug
+author: conceptdev
+ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 4c414e0e863f44045473a248576a3612b1719559
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 42e357c0fbb4b858866e15d638177d6823de0f09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854826"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112671"
 ---
 # <a name="binding-objective-c-libraries"></a>绑定 OBJECTIVE-C 库
 
-当使用 Xamarin.iOS 或 Xamarin.Mac，可能会遇到情况下你想要使用第三方 OBJECTIVE-C 的库。 在这些情况下，可以使用 Xamarin 绑定项目创建 C# 绑定到本机 OBJECTIVE-C 的库。 该项目使用相同的工具，我们使用 C# 将 iOS 和 Mac Api。
+当使用 Xamarin.iOS 或 Xamarin.Mac，可能会遇到情况下你想要使用第三方 OBJECTIVE-C 的库。 在这些情况下，您可以使用 Xamarin 绑定项目来创建C#将绑定到本机 OBJECTIVE-C 的库。 该项目使用相同的工具，我们使用 iOS 和 Mac Api，用于将C#。
 
 本文档介绍如何将绑定 Objective C Api，如果要绑定只是 C Api，则应为此，使用标准.NET 机制[P/Invoke framework](http://www.mono-project.com/docs/advanced/pinvoke/)。
 如何以静态方式链接 C 库的详细信息位于[链接本机库](~/ios/platform/native-interop.md)页。
@@ -34,17 +34,17 @@ ms.locfileid: "37854826"
 
 ## <a name="getting-started"></a>入门
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 创建绑定的最简单方法是创建 Xamarin.iOS 绑定项目。
 您可以执行此操作从 Visual Studio for Mac 通过选择项目类型， **iOS > 库 > 绑定库**:
 
 [![](objective-c-libraries-images/00-sml.png "执行此操作从 Visual Studio for Mac 通过选择项目类型，iOS 库绑定库")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 创建绑定的最简单方法是创建 Xamarin.iOS 绑定项目。
-您可以选择执行此 Windows 上从 Visual Studio 项目类型， **Visual C# > iOS > 绑定库 (iOS)**:
+您可以选择执行此 Windows 上从 Visual Studio 项目类型，**可视化C#> iOS > 绑定库 (iOS)**:
 
 [![](objective-c-libraries-images/00vs-sml.png "iOS 绑定库 iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -55,7 +55,7 @@ ms.locfileid: "37854826"
 
 生成的项目包含可以编辑一个小模板，将包含两个文件：`ApiDefinition.cs`和`StructsAndEnums.cs`。
 
-`ApiDefinition.cs`是将在其中定义的 API 协定，这是介绍如何将基础的 Objective C API 投射到 C# 的文件。 语法和此文件的内容是本文档讨论的主要主题，它的内容仅限于 C# 接口和 C# 委托声明。 `StructsAndEnums.cs`文件是将在此输入所需的任何定义的接口和委托的文件。 这包括枚举值和你的代码可能使用的结构。
+`ApiDefinition.cs`是将在其中定义的 API 协定，这是介绍如何将基础的 Objective C API 投影到的文件C#。 语法和此文件的内容是本文档讨论的主要主题，它的内容仅限于C#接口和C#委托声明。 `StructsAndEnums.cs`文件是将在此输入所需的任何定义的接口和委托的文件。 这包括枚举值和你的代码可能使用的结构。
 
 <a name="Binding_an_API" />
 
@@ -63,7 +63,7 @@ ms.locfileid: "37854826"
 
 若要执行全面的绑定，将想要了解 Objective C API 定义和熟悉的.NET Framework 设计准则。
 
-若要将绑定的库通常您将开始使用 API 定义文件。 API 定义文件是只是 C# 源文件，其中包含绑定的 C# 接口已通过几种帮助驱动器的属性批注。  此文件是定义什么是 C# 和 Objective C 之间的约定的内容。
+若要将绑定的库通常您将开始使用 API 定义文件。 API 定义文件只是C#源文件，其中包含C#接口已通过几种帮助获取绑定的属性批注。  此文件是定义之间协定C#和 OBJECTIVE-C 是。
 
 例如，这是一个库的简单 api 文件：
 
@@ -99,7 +99,7 @@ namespace Cocos2D {
 
 -  API 定义文件 (`ApiDefinition.cs`模板中)。
 -  可选： 任何枚举类型、 所需的 API 定义文件的结构 (`StructsAndEnums.cs`模板中)。
--  可选： 额外源可能会展开生成的绑定，或提供更多 C# 友好 API （任何 C# 文件添加到项目）。
+-  可选： 额外源可能会展开生成的绑定，或提供更C#友好 API (任何C#向项目添加的文件)。
 -  要绑定本机库。
 
 此图表显示在文件之间的关系：
@@ -116,7 +116,7 @@ public enum CameraMode {
 }
 ```
 
-`APIDefinition.cs`文件结合`StructsAndEnum`类，用于生成库的核心绑定。 您可以使用作为生成的库的是，但通常情况下，你将想要优化生成的库中添加一些 C# 功能为了用户方便。 一些示例包括实现`ToString()`方法，提供 C# 索引器，将隐式转换添加到和从某些本机类型或提供一些方法的强类型化版本。 这些改进存储在额外的 C# 文件中。 只将 C# 文件添加到你的项目并且它们将包括在此生成过程。
+`APIDefinition.cs`文件结合`StructsAndEnum`类，用于生成库的核心绑定。 您可以使用作为生成的库的是，但通常情况下，你将想要优化生成的库来添加一些C#为了用户方便的功能。 一些示例包括实现`ToString()`方法，提供C#索引器，将隐式转换添加到和从某些本机类型或提供一些方法的强类型化版本。 这些改进都存储在额外C#文件。 只将添加C#文件复制到你的项目，它们将包含在此生成过程。
 
 下面的示例演示如何将实现中的代码在`Extra.cs`文件。 请注意，你将使用分部类根据这些增强的组合而生成的分部类`ApiDefinition.cs`和`StructsAndEnums.cs`核心绑定：
 
@@ -133,7 +133,7 @@ public partial class Camera {
 生成库将生成本机绑定。
 
 若要完成此绑定，应将本机库添加到项目中。  您可以执行此操作通过将本机库添加到项目中，通过拖放本机库从查找工具拖到项目中，解决方案资源管理器，或通过右键单击该项目，然后选择**外** > **将文件添加**选择本机库。
-按照约定的本机库以单词"lib"开头和以".a"扩展名结尾。 Visual Studio for Mac 时执行此操作时，将添加两个文件：.a 文件和一个自动填充的 C# 文件，其中包含有关本机库包含的信息：
+按照约定的本机库以单词"lib"开头和以".a"扩展名结尾。 Visual Studio for Mac 时执行此操作时，将添加两个文件：.a 文件和自动填充C#文件，其中包含有关本机库包含的信息：
 
  [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "按照约定的本机库与 word 库开头和结尾扩展名.a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
 
@@ -146,7 +146,8 @@ using ObjCRuntime;
 [assembly: LinkWith ("libMagicChord.a", SmartLink = true, ForceLoad = true)]
 ```
 
-完整的有关如何使用的详细信息[ `[LinkWith]` ](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)属性中记录了[绑定类型参考指南](~/cross-platform/macios/binding/binding-types-reference.md)。
+完整的有关如何使用的详细信息 [`[LinkWith]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute) 
+属性中记录了[绑定类型参考指南](~/cross-platform/macios/binding/binding-types-reference.md)。
 
 现在，生成项目时您会得到与`MagicChords.dll`文件，其中包含的绑定和本机库。 你可以分发此项目或生成的 DLL 到其自己的其他开发人员使用。
 
@@ -166,7 +167,9 @@ API 定义文件包含多个接口。 API 定义中的接口将打开到类声�
 
 ### <a name="binding-methods"></a>绑定方法
 
-可以执行的最简单绑定是将方法绑定。 只需声明中的 C# 命名约定的接口的方法和修饰方法替换[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性。 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性是链接在 C# 名称与 Xamarin.iOS 运行时中的 OBJECTIVE-C 的名称。 参数[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)特性是 OBJECTIVE-C 的选择器的名称。 示例如下：
+可以执行的最简单绑定是将方法绑定。 只需声明中的接口的方法C#命名约定和修饰的方法 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
+属性。 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性是链接在C#Objective C 中具有名称 Xamarin.iOS 运行时名称。 参数 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+属性是 OBJECTIVE-C 的选择器的名称。 示例如下：
 
 ```csharp
 // A method, that takes no arguments
@@ -192,7 +195,8 @@ void Beep ();
 
 这是必需的因为协定是一个接口的一部分，接口有没有静态 vs 实例声明的概念，因此再一次需要求助于属性。 如果你想要隐藏绑定中的特定方法，您可以修饰方法替换[ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)属性。
 
-`btouch-native`命令将引入引用参数不为 null 检查。 如果你想要允许特定参数的 null 值，使用[ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)属性上的参数如下：
+`btouch-native`命令将引入引用参数不为 null 检查。 如果你想要允许特定参数的 null 值，使用 [`[NullAllowed]`](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)
+该参数，此类的属性：
 
 ```csharp
 [Export ("setText:")]
@@ -205,11 +209,15 @@ string SetText ([NullAllowed] string text);
 
 ### <a name="binding-properties"></a>绑定属性
 
-就像方法一样使用绑定 OBJECTIVE-C 的属性[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性和直接映射到 C# 属性。 就像方法，可以使用修饰属性[ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute)并且[ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)属性。
+就像方法一样使用绑定 OBJECTIVE-C 的属性 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)
+属性，并直接映射到C#属性。 就像方法，可以使用修饰属性 [`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute)
+和 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+特性。
 
-当你使用[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)上盖 btouch 本机下的一个属性的属性实际上会绑定两个方法： getter 和 setter。 提供要导出的名称**basename** ，setter 计算通过预先计算的单词"set"，打开的第一个字母**basename**为大写和进行需要的选择器自变量。 这意味着，`[Export ("label")]`应用于属性实际上会绑定"标签"和"setLabel:"OBJECTIVE-C 方法。
+当你使用[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)上盖 btouch 本机下的一个属性的属性实际上会绑定两个方法： getter 和 setter。 提供要导出的名称**basename** setter 计算通过预先计算的单词"set"，打开的第一个字母**basename**为大写和进行需要的选择器自变量。 这意味着，`[Export ("label")]`应用于属性实际上会绑定"标签"和"setLabel:"OBJECTIVE-C 方法。
 
-有时 Objective C 属性不遵循上面所述的模式和名称，将手动覆盖。 在这些情况下可以控制该绑定通过使用生成的方式[ `[Bind]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute)属性 getter 或 setter，例如：
+有时 Objective C 属性不遵循上面所述的模式和名称，将手动覆盖。 在这些情况下可以控制该绑定通过使用生成的方法 [`[Bind]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAttribute) 
+属性 getter 或 setter，例如：
 
 ```csharp
 [Export ("menuVisible")]
@@ -239,7 +247,8 @@ interface UIView_MyIn
 NSRunLoop Current { get; }
 ```
 
-就像方法允许部分参数，使用标记[ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)，可以将应用[ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)到一个属性以指示该 null 是有效的值的属性，例如：
+就像方法允许部分参数，使用标记[ `[NullAllowed]` ](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)，可以将应用 [`[NullAllowed]`](~/cross-platform/macios/binding/binding-types-reference.md#NullAllowedAttribute)
+到一个属性以指示该 null 是有效的值的属性，例如：
 
 ```csharp
 [Export ("text"), NullAllowed]
@@ -271,11 +280,13 @@ string Text { get; [NullAllowed] set; }
 
 Objective C 框架使用一些类是使用可变子类不可变的用法。 例如`NSString`是不可变版本，而`NSMutableString`是允许变化的子类。
 
-这些类中很常见的不可变的基本类包含具有 getter 但没有 setter 的属性。 对于要引入 setter 的可变版本。 由于不使用 C# 真正做到这一点，我们必须将此用法映射到将使用 C# 的术语。
+这些类中很常见的不可变的基本类包含具有 getter 但没有 setter 的属性。 对于要引入 setter 的可变版本。 由于这不是真的可能实现与C#，我们需要将此用法映射到将使用的术语C#。
 
-这将映射到 C# 的方法是在基类上添加 getter 和 setter，但标记与 setter [ `[NotImplemented]` ](~/cross-platform/macios/binding/binding-types-reference.md#NotImplementedAttribute)属性。
+这将映射到的方法C#是在基类上添加 getter 和 setter，但标记使用的资源库 [`[NotImplemented]`](~/cross-platform/macios/binding/binding-types-reference.md#NotImplementedAttribute)
+属性。
 
-然后，在可变的子类，使用[ `[Override]` ](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute)属性以确保该属性实际重写父行为上的属性。
+然后，在可变的子类，使用 [`[Override]`](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 
+要确保该属性实际重写父行为的属性的属性。
 
 示例:
 
@@ -314,7 +325,8 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>绑定协议
 
-在 API 设计文档中，部分中所述[讨论模型和协议](~/ios/internals/api-design/index.md#Models)，Xamarin.iOS 会 Objective C 协议映射到已使用标记的类[ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)属性。 这通常用来实现 Objective C 委托类。
+在 API 设计文档中，部分中所述[讨论模型和协议](~/ios/internals/api-design/index.md#Models)，Xamarin.iOS 会 Objective C 协议映射到已使用标记的类 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+属性。 这通常用来实现 Objective C 委托类。
 
 常规的绑定的类和委托类之间最大的区别是，委托类可能具有一个或多个可选方法。
 
@@ -329,7 +341,8 @@ interface UIAccelerometerDelegate {
 }
 ```
 
-由于这是在定义上的可选方法`UIAccelerometerDelegate`无其他执行组件。 但如果在协议上没有所需的方法，您应添加[ `[Abstract]` ](~/cross-platform/macios/binding/binding-types-reference.md#AbstractAttribute)属性为该方法。 这将强制实现的用户实际提供的方法的正文。
+由于这是在定义上的可选方法`UIAccelerometerDelegate`无其他执行组件。 但如果在协议上没有所需的方法，您应添加 [`[Abstract]`](~/cross-platform/macios/binding/binding-types-reference.md#AbstractAttribute)
+属性的方法。 这将强制实现的用户实际提供的方法的正文。
 
 一般情况下，响应消息的类中使用协议。 这通常是对象的 Objective C 中通过将响应的协议中方法的实例分配给"委托"属性。
 
@@ -384,11 +397,12 @@ interface UIAccelerometer {
     }
 ```
 
-**类实现**提供完整的抽象类可以重写的各个方法并获取完整的类型安全。  但由于 C# 不支持多重继承，其中可能的方案需要具有不同的基类，但仍想要实现一个接口，即位置
+**类实现**提供完整的抽象类可以重写的各个方法并获取完整的类型安全。  但由于C#不支持多重继承，有的方案，可能需要具有不同的基类，但仍想要实现一个接口，即位置
 
 生成**接口定义**传入。  它是具有来自协议的所有所需的方法的接口。  这允许开发人员想要实现您的协议只是实现该接口。  在运行时将自动注册为采用协议类型。
 
-请注意，仅列出了所需的方法和接口确实公开了可选的方法。  这意味着采用协议的类将获得完整的类型检查所需的方法，但将不得不求助于弱类型化 (使用手动[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性和匹配签名) 为可选协议方法。
+请注意，仅列出了所需的方法和接口确实公开了可选的方法。  这意味着采用协议的类将获得完整的类型检查所需的方法，但将不得不求助于 （手动使用弱类型化 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+属性和匹配签名） 的可选的协议方法。
 
 为了更方便地使用使用协议的 API，绑定工具还将生成一个扩展方法类公开的所有可选方法。  这意味着，只要您正在使用 API，则您将能够将视作具有所有方法的协议。
 
@@ -448,7 +462,8 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 
 ### <a name="binding-class-extensions"></a>绑定类扩展
 
-Objective C 中就可以使用新方法，在精神上类似于 C# 扩展方法扩展类。 当存在下列方法之一时，可以使用[ `[BaseType]` ](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)属性来标记为 Objective C 消息的接收方的方法。
+Objective C 中就可以扩展类，使用新方法，在精神到类似C#的扩展方法。 当存在下列方法之一时，可以使用 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 
+若要标记为 Objective C 消息的接收方的方法的属性。
 
 例如，在 Xamarin.iOS 中我们绑定定义的扩展方法`NSString`时`UIKit`作为中的方法导入`NSStringDrawingExtensions`，如下所示：
 
@@ -471,7 +486,7 @@ Objective C 支持可变参数参数。 例如：
   NS_REQUIRES_NIL_TERMINATION ;
 ```
 
-若要从 C# 调用此方法将想要创建的签名如下：
+调用此方法从C#想要创建的签名如下：
 
 ```csharp
 [Export ("appendWorkers"), Internal]
@@ -514,7 +529,8 @@ public void AppendWorkers(params Worker[] workers)
 NSString NSSomeEventNotification { get; }
 ```
 
-如果你想要包装在不是派生的静态类中的各个字段`NSObject`，可以使用[ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute_Class)类，此类中的属性：
+如果你想要包装在不是派生的静态类中的各个字段`NSObject`，可以使用 [`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute_Class) 
+此类的类的属性：
 
 ```csharp
 [Static]
@@ -611,9 +627,10 @@ interface MyType {
 
 ### <a name="binding-nsvalue-nsnumber-and-nsstring-to-a-better-type"></a>绑定`NSValue`， `NSNumber`，和`NSString`为更好的类型
 
-[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)特性，绑定`NSNumber`，`NSValue`和`NSString`（枚举） 到更准确的 C# 类型。 该属性可用于创建更好、 更准确，基于本机 API 的.NET API。
+[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)特性，绑定`NSNumber`，`NSValue`并`NSString`（枚举） 到了更多准确C#类型。 该属性可用于创建更好、 更准确，基于本机 API 的.NET API。
 
-（上返回值） 的方法、 参数和属性可修饰[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)。 唯一限制是，您的成员**不得**位于内部[ `[Protocol]` ](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute)或[ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)接口。
+（上返回值） 的方法、 参数和属性可修饰[ `[BindAs]` ](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)。 唯一限制是，您的成员**不得**位于内部 [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
+或[ `[Model]` ](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)接口。
 
 例如：
 
@@ -659,7 +676,9 @@ CAScroll [] SupportedScrollModes { get; set; }
 
 通知是发布到的消息`NSNotificationCenter.DefaultCenter`，作为一种机制，用于从一部分到另一个应用程序广播消息。 开发人员通常使用[NSNotificationCenter](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/)的[AddObserver](https://developer.xamarin.com/api/type/Foundation.NSNotificationCenter/M/AddObserver/)方法。 当应用程序将消息发送到通知中心时，它通常包含中存储的有效负载[NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/)字典。 此字典弱类型化，并获取它的信息是容易出错，因为用户通常需要在哪些键位于字典和可以存储在字典中的值的类型的文档中读取。 存在密钥有时可作为一个布尔值。
 
-Xamarin.iOS 绑定生成器提供了对开发人员可以将绑定通知的支持。 若要执行此操作，请设置[ `[Notification]` ](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)上也是一个属性的属性标记有[ `[Field]` ](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)属性 （它可以是公共或私有）。
+Xamarin.iOS 绑定生成器提供了对开发人员可以将绑定通知的支持。 若要执行此操作，设置 [`[Notification]`](~/cross-platform/macios/binding/binding-types-reference.md#NotificationAttribute)
+属性也是属性上的使用标记 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute)
+属性 （它可以是公共或私有）。
 
 此属性可以使用不带参数不执行任何负载的通知，也可以指定`System.Type`引用在 API 定义中，另一个接口通常与名称以"EventArgs"结尾。 生成器会将接口转换类子类`EventArgs`，将包括所有列出的属性。 [ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性应使用 EventArgs 类中，若要列出用于查找要提取的值的 Objective C 字典的键的名称。
 
@@ -735,7 +754,7 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
 ### <a name="binding-categories"></a>绑定类别
 
-类别是用于扩展的类中可用方法和属性集的 OBJECTIVE-C 的机制。   在实践中，它们用于扩展的基类的功能 (例如`NSObject`) 特定框架中的链接时 (例如`UIKit`)，使其方法可用，但仅当新的框架中的链接。   在某些其他情况下，它们用于组织在类中的功能的功能。   它们是在精神上类似于 C# 扩展方法。这是什么类别将如下所示在 Objective c:
+类别是用于扩展的类中可用方法和属性集的 OBJECTIVE-C 的机制。   在实践中，它们用于扩展的基类的功能 (例如`NSObject`) 特定框架中的链接时 (例如`UIKit`)，使其方法可用，但仅当新的框架中的链接。   在某些其他情况下，它们用于组织在类中的功能的功能。   它们是在精神到类似C#扩展方法。这是什么类别将如下所示在 Objective c:
 
 ```csharp
 @interface UIView (MyUIViewExtension)
@@ -745,9 +764,11 @@ var token = MyClass.NotificationsObserveScreenChanged ((notification) => {
 
 上面的示例中如果在上找到一个库，将会扩展的实例`UIView`使用方法`makeBackgroundRed`。
 
-若要将这些绑定，可以使用[ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)接口定义的属性。  使用时[ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)属性的含义[ `[BaseType]` ](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)属性更改被用来指定基类来扩展，为要扩展的类型。
+若要将这些绑定，可以使用[ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)接口定义的属性。  使用时 [`[Category]`](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)
+属性的含义 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute) 
+属性更改被用来指定基类来扩展，为要扩展的类型。
 
-下面演示如何将`UIView`绑定扩展并将其转换为 C# 扩展方法：
+下面演示如何`UIView`绑定扩展并将其转换为C#扩展方法：
 
 ```csharp
 [BaseType (typeof (UIView))]
@@ -771,7 +792,8 @@ picture;
 @end
 ```
 
-尽管可以使用[ `[Category]` ](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)属性还声明此修饰样式，您可能还只是它们将全部添加到类定义。  这两种将实现该目的：
+尽管可以使用 [`[Category]`](~/cross-platform/macios/binding/binding-types-reference.md#CategoryAttribute)
+属性还声明此修饰样式，您可能还只是它们将全部添加到类定义。  这两种将实现该目的：
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -810,15 +832,15 @@ interface SocialNetworking {
 
 ### <a name="binding-blocks"></a>绑定块
 
-块是由 Apple Objective-c。 将在功能上等效的 C# 匿名方法引入了新的构造 例如，`NSSet`类现在公开此方法：
+块是由 Apple 将在功能上等同的引入了新的构造C#匿名方法添加到 Objective-c。 例如，`NSSet`类现在公开此方法：
 
 ```csharp
 - (void) enumerateObjectsUsingBlock:(void (^)(id obj, BOOL *stop) block
 ```
 
-上面的说明声明一个名为方法`enumerateObjectsUsingBlock:`采用一个参数名为`block`。 此块等同于 C# 匿名方法，因为它可以捕获当前环境"（this"指针，对本地变量和参数的访问） 的支持。 中的上述方法`NSSet`调用具有两个参数的块`NSObject`(`id obj`一部分) 和一个布尔值的指针 ( `BOOL *stop`) 部分。
+上面的说明声明一个名为方法`enumerateObjectsUsingBlock:`采用一个参数名为`block`。 这种块是类似于C#，它提供了支持用于捕获当前环境"（this"指针，对本地变量和参数的访问） 中的匿名方法。 中的上述方法`NSSet`调用具有两个参数的块`NSObject`(`id obj`一部分) 和一个布尔值的指针 ( `BOOL *stop`) 部分。
 
-若要将绑定与 btouch 这种类型的 API，需要首先声明块类型签名，如 C# 委托，然后从 API 入口点，此类引用它：
+若要将绑定与 btouch 这种类型的 API，需要首先声明块类型签名为C#委托，然后从 API 入口点，此类引用它：
 
 ```csharp
 // This declares the callback signature for the block:
@@ -829,7 +851,7 @@ delegate void NSSetEnumerator (NSObject obj, ref bool stop)
 void Enumerate (NSSetEnumerator enum)
 ```
 
-和现在代码可以从 C# 中调用函数：
+现在你的代码可以调用从函数和C#:
 
 ```csharp
 var myset = new NSMutableSet ();
@@ -857,7 +879,8 @@ s.Enumerate ((obj, stop) => {
 
 绑定生成器可以将某一类的方法转换为适合异步的方法 (返回 Task 的方法&lt;T&gt;)。
 
-可以使用[ `[Async]` ](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute)特性，返回 void，并且其最后一个参数是一个回调方法。  绑定生成器时将此应用于方法时，将生成该方法带有后缀的版本`Async`。  如果回调不带任何参数，返回值将是`Task`，如果回调采用参数，则结果将是`Task<T>`。  如果回调采用多个参数，则应设置`ResultType`或`ResultTypeName`来指定所需的生成将保存的所有属性的类型名称。
+可以使用 [`[Async]`](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute) 
+方法的返回 void，并且其最后一个参数是回调的特性。  绑定生成器时将此应用于方法时，将生成该方法带有后缀的版本`Async`。  如果回调不带任何参数，返回值将是`Task`，如果回调采用参数，则结果将是`Task<T>`。  如果回调采用多个参数，则应设置`ResultType`或`ResultTypeName`来指定所需的生成将保存的所有属性的类型名称。
 
 示例:
 
@@ -933,9 +956,11 @@ interface XyzPanel {
 }
 ```
 
-如果你的 API 不需要覆盖，可以通过使用安全地隐藏 NSDictionary 基于 API [ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)属性。
+如果你的 API 不需要覆盖，可以通过使用安全地隐藏 NSDictionary 基于 API [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+属性。
 
-正如您所见，我们使用[ `[Wrap]` ](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute)属性，用于显示新的 API 入口点，以及我们对其使用我们强类型显现`XyzOptions`类。  此包装方法还允许为 null，来传递。
+正如您所见，我们使用 [`[Wrap]`](~/cross-platform/macios/binding/binding-types-reference.md#WrapAttribute)
+属性，用于显示新的 API 入口点，以及我们对其使用我们强类型显现`XyzOptions`类。  此包装方法还允许为 null，来传递。
 
 现在，我们没有提到的一点是 where`XyzOptionsKeys`原来的位置值。  通常，您将分，它会显示类似的静态类中的 API 密钥`XyzOptionsKeys`，如下所示：
 
@@ -985,13 +1010,14 @@ interface XyzPanel {
 }
 ```
 
-以防您需要在中引用你`XyzOption`成员不同的字段 (即不是名称带有后缀的属性`Key`)，可以修饰的属性[ `[Export]` ](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute)属性名称与你想要使用。
+以防您需要在中引用你`XyzOption`成员不同的字段 (即不是名称带有后缀的属性`Key`)，可以修饰的属性 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 
+你想要使用的名称的属性。
 
 <a name="Type_mappings" />
 
 ## <a name="type-mappings"></a>类型映射
 
-本部分介绍如何将 OBJECTIVE-C 的类型映射到 C# 类型。
+本部分介绍了如何将 OBJECTIVE-C 的类型映射到C#类型。
 
 <a name="Simple_Types" />
 
@@ -1001,7 +1027,7 @@ interface XyzPanel {
 
 |Objective C 类型名称|Xamarin.iOS Unified API 类型|
 |---|---|
-|`BOOL`, `GLboolean`|`bool`|
+|`BOOL`， `GLboolean`|`bool`|
 |`NSInteger`|`nint`|
 |`NSUInteger`|`nuint`|
 |`CFTimeInterval` / `NSTimeInterval`|`double`|
@@ -1010,7 +1036,7 @@ interface XyzPanel {
 |`CGRect`|`CGRect`|
 |`CGPoint`|`CGPoint`|
 |`CGSize`|`CGSize`|
-|`CGFloat`, `GLfloat`|`nfloat`|
+|`CGFloat`， `GLfloat`|`nfloat`|
 |CoreFoundation 类型 (`CF*`)|`CoreFoundation.CF*`|
 |`GLint`|`nint`|
 |`GLfloat`|`nfloat`|
@@ -1029,7 +1055,7 @@ interface XyzPanel {
 
 ### <a name="arrays"></a>数组
 
-Xamarin.iOS 运行时会自动负责将转换到 C# 数组`NSArrays`，并执行转换，因此，例如虚构的 OBJECTIVE-C 方法返回`NSArray`的`UIViews`:
+Xamarin.iOS 运行时会自动将负责将转换的C#到数组`NSArrays`，并执行转换，因此，例如虚构的 OBJECTIVE-C 方法返回`NSArray`的`UIViews`:
 
 ```csharp
 // Get the peer views - untyped
@@ -1049,7 +1075,7 @@ UIView [] GetPeerViews ();
 void SetViews (UIView [] views);
 ```
 
-其思路是使用 C# 强类型化数组，因为这将使 IDE 提供正确的代码完成与实际类型而不会迫使用户已经猜到，或查阅文档以找出数组中包含的对象的实际类型。
+其思路是使用强类型C#数组，因为这将使 IDE 提供正确的代码完成与实际类型而不会迫使用户已经猜到，或查阅文档以找出数组中包含的对象的实际类型。
 
 在其中您可以跟踪向数组中包含的实际派生程度最高类型下的情况下，可以使用`NSObject []`作为返回值。
 
@@ -1057,7 +1083,7 @@ void SetViews (UIView [] views);
 
 ### <a name="selectors"></a>选择器
 
-选择器显示为特殊类型的 Objective C api `SEL`。 在绑定选择器时，将映射到类型`ObjCRuntime.Selector`。  通常选择器中使用对象、 目标对象和一个选择器 API 调用的目标对象中公开。 基本上提供这两种对应于 C# 委托： 封装要调用的方法以及要调用的方法中的对象的内容。
+选择器显示为特殊类型的 Objective C api `SEL`。 在绑定选择器时，将映射到类型`ObjCRuntime.Selector`。  通常选择器中使用对象、 目标对象和一个选择器 API 调用的目标对象中公开。 基本上提供这两种对应于C#委托： 封装要调用的方法以及要调用的方法中的对象的内容。
 
 这是该绑定如下所示：
 
@@ -1085,7 +1111,8 @@ class DialogPrint : UIViewController {
 }
 ```
 
-若要使绑定到 C# 开发人员更好，您通常将提供采用的方法`NSAction`参数，它允许而不是使用 C# 委托和 lambda `Target+Selector`。 若要这样做通常会隐藏`SetTarget`方法通过将其与标记[ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)属性，然后将公开新的帮助器方法，如下：
+若要使绑定到更好C#开发人员，您通常将提供采用的方法`NSAction`参数，它允许C#而不是使用委托和 lambda `Target+Selector`。 若要这样做通常会隐藏`SetTarget`通过将其与标记的方法 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+属性，然后将公开新的帮助器方法，如下：
 
 ```csharp
 // API.cs
@@ -1127,11 +1154,12 @@ class DialogPrint : UIViewController {
 
 ### <a name="strings"></a>字符串
 
-当绑定使用的方法`NSString`，可以替换，使用 C# 字符串类型，两者都上返回类型和参数。
+当绑定使用的方法`NSString`，您可以替换，使用C#字符串类型，返回类型和参数。
 
 您可能想要使用的唯一情况`NSString`直接时，此字符串用作为标记。 有关字符串的详细信息和`NSString`，请阅读[NSString 上的 API 设计](~/ios/internals/api-design/nsstring.md)文档。
 
-在某些极少数情况下，API 可能要公开类似于 C 的字符串 (`char *`) 而不是 OBJECTIVE-C 的字符串 (`NSString *`)。 在这些情况下，你可以批注与参数[ `[PlainString]` ](~/cross-platform/macios/binding/binding-types-reference.md#plainstring)属性。
+在某些极少数情况下，API 可能要公开类似于 C 的字符串 (`char *`) 而不是 OBJECTIVE-C 的字符串 (`NSString *`)。 在这些情况下，你可以批注与参数 [`[PlainString]`](~/cross-platform/macios/binding/binding-types-reference.md#plainstring)
+属性。
 
 <a name="outref_parameters" />
 
@@ -1181,7 +1209,8 @@ void SomeString (ref NSObject byref);
 
 #### <a name="using-internal"></a>使用 [Internal]
 
-可以使用[ `[Internal]` ](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)特性以隐藏从公共 API 的方法。 您可能想要在其中公开的 API 是过低级别，您想要提供一个基于此方法的单独文件中的高级实现的情况下执行此操作。
+可以使用 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute)
+若要隐藏的公共 API 中的某个方法的属性。 您可能想要在其中公开的 API 是过低级别，您想要提供一个基于此方法的单独文件中的高级实现的情况下执行此操作。
 
 此外可以使用此时遇到绑定生成器中的限制，例如某些高级的方案可能会公开未绑定的类型和想要在您自己的方式，将绑定和你想要自行包装这些类型在您自己的方式。
 
@@ -1191,7 +1220,7 @@ void SomeString (ref NSObject byref);
 
 Objective C 类通常将通知广播或委托类 （Objective C 委派） 上发送消息来请求信息。
 
-此模型中，而完全支持，并按 Xamarin.iOS 有时会比较麻烦。 Xamarin.iOS 公开 C# 事件模式，并可以在这些情况下使用的类上的方法回调系统。 这样，若要运行如下代码：
+此模型中，而完全支持，并按 Xamarin.iOS 有时会比较麻烦。 Xamarin.iOS 公开C#事件模式，并可以在这些情况下使用的类上的方法回调系统。 这样，若要运行如下代码：
 
 ```csharp
 button.Clicked += delegate {
@@ -1199,9 +1228,9 @@ button.Clicked += delegate {
 };
 ```
 
-绑定生成器都能够减少的键入所需的 Objective C 模式映射到 C# 模式。
+绑定生成器是能够减少键入映射到的 Objective C 模式所需的C#模式。
 
-它从 Xamarin.iOS 1.4 将有可能还指示生成器以生成绑定特定的 Objective C 委托并将委托公开为 C# 事件和主机类型的属性。
+它从 Xamarin.iOS 1.4 将有可能还指示生成器以生成特定的 Objective C 委托的绑定并公开作为委托C#事件和主机类型的属性。
 
 有此过程中涉及的两个类、 主机类，它将是当前发出事件，然后将发送到的那个`Delegate`或`WeakDelegate`和实际委托类。
 
@@ -1227,7 +1256,7 @@ interface MyClassDelegate {
 要包装类，您必须：
 
 -  在主机类中，将添加到你 [`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
-   声明充当其委托和 C# 名称为其公开的类型。 在上述示例中，这些将是`typeof (MyClassDelegate)`和`WeakDelegate`分别。
+   声明充当其委托的类型和C#公开的名称。 在上述示例中，这些将是`typeof (MyClassDelegate)`和`WeakDelegate`分别。
 -  在委托类中，有两个以上的参数，每个方法需要指定要用于自动生成的 EventArgs 类的类型。
 
 绑定生成器并不局限于包装只有单个事件目标，就可以，一些 Objective C 类来发出消息到多个委托，因此必须提供数组以支持此安装程序。 大多数组织不需要它，但生成器已准备好支持这种情况。
@@ -1279,11 +1308,13 @@ c.Loaded += delegate (sender, args){
 
 回调事件调用一样，区别在于，而不是让多个潜在的订阅服务器 (例如，多个方法可以将挂钩到`Clicked`事件或`DownloadFinished`事件) 回调仅具有单个订阅者。
 
-该过程是完全相同，唯一的区别是，而不是公开的名称`EventArgs`类将生成的 EventArgs 实际上用于生成的 C# 委托名称来命名。
+该过程是完全相同，唯一的区别是，而不是公开的名称`EventArgs`类将生成的 EventArgs 实际上用于命名生成C#委托名称。
 
-如果委托类中的方法返回一个值，绑定生成器会将此映射到而不是事件的父类别中的委托方法。 在这些情况下，你需要提供应返回由方法如果用户未挂接到委托的默认值。 执行此操作使用[ `[DefaultValue]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute)或[ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute)属性。
+如果委托类中的方法返回一个值，绑定生成器会将此映射到而不是事件的父类别中的委托方法。 在这些情况下，你需要提供应返回由方法如果用户未挂接到委托的默认值。 执行此操作使用 [`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute)
+或[ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute)属性。
 
-[`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute) 将进行硬编码返回值，而[ `[DefaultValueFromArgument]` ](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute)用来指定将返回哪些输入的参数。
+[`[DefaultValue]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueAttribute) 将返回值进行硬编码时 [`[DefaultValueFromArgument]`](~/cross-platform/macios/binding/binding-types-reference.md#DefaultValueFromArgumentAttribute)
+用于指定将返回哪些输入的参数。
 
 <a name="Enumerations_and_Base_Types" />
 

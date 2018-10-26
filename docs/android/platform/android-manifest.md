@@ -3,15 +3,15 @@ title: 使用 Android 清单
 ms.prod: xamarin
 ms.assetid: CB7CCF60-FEF1-3B28-215F-159391E74347
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 0857b70e6e1d9104f62ec2e26f8edbab385d06f3
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 655f988cc54cf54e346e68109271775dee2918a9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111247"
 ---
 # <a name="working-with-the-android-manifest"></a>使用 Android 清单
 
@@ -37,7 +37,8 @@ namespace Demo
 }
 ```
 
-这会导致执行任何操作中生成**AndroidManifest.xml**。 如果你想`<activity/>`元素生成，你需要使用[ `[Activity]` ](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute)自定义属性： 
+这会导致执行任何操作中生成**AndroidManifest.xml**。 如果你想`<activity/>`元素生成，你需要使用 [`[Activity]`](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) 
+自定义属性： 
 
 ```csharp
 namespace Demo
@@ -177,7 +178,10 @@ public class MyActivity : Activity
 
 ### <a name="intent-actions-and-features"></a>意向操作和功能
 
-Android 清单提供了一种方法，以便描述您的活动的功能。 这是通过[意向](http://developer.android.com/guide/topics/manifest/intent-filter-element.html)并[ `[IntentFilter]` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)自定义属性。 可以指定的操作是适用于您的活动与[ `IntentFilter` ](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/)构造函数，和使用适当的哪些类别[ `Categories` ](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/)属性。 至少一个活动必须提供 （这是在构造函数中提供的活动的原因）。 `[IntentFilter]` 可以提供多个，且每次使用会导致单独`<intent-filter/>`元素内的`<activity/>`。 例如：
+Android 清单提供了一种方法，以便描述您的活动的功能。 这是通过[意向](http://developer.android.com/guide/topics/manifest/intent-filter-element.html)和 [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
+自定义属性。 可以指定的操作是适用于您使用的活动 [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
+构造函数，和使用适当的哪些类别 [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
+属性。 至少一个活动必须提供 （这是在构造函数中提供的活动的原因）。 `[IntentFilter]` 可以提供多个，且每次使用会导致单独`<intent-filter/>`元素内的`<activity/>`。 例如：
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

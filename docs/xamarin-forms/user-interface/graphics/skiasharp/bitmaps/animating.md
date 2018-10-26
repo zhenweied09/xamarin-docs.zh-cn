@@ -4,15 +4,15 @@ description: 了解如何： 按顺序显示一系列的位图，并呈现动画
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 45a009757d84aa98acc41f6cd2bf672c8472c5bb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 78fcbae8db70a83d7d0a643e0b27f575152e9515
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112543"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 位图进行动画处理
 
@@ -498,15 +498,15 @@ public partial class MainPage : ContentPage
 
 SkisSharp 提取的帧的动画 GIF 文件使用似乎不记录任何位置，因此下面的代码的说明是比平常更多详细：
 
-动画 GIF 文件的解码的页面的构造函数中发生，并且要求`Stream`用于创建对象，用于引用位图`SKManagedStream`对象，然后[ `SKCodec` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/)对象。 [ `FrameCount` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameCount/)属性指示的构成了动画的帧数。 
+动画 GIF 文件的解码的页面的构造函数中发生，并且要求`Stream`用于创建对象，用于引用位图`SKManagedStream`对象，然后[ `SKCodec` ](xref:SkiaSharp.SKCodec)对象。 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount)属性指示的构成了动画的帧数。 
 
 这些帧最终保存为各个位图，因此该构造函数使用`FrameCount`若要分配的类型数组`SKBitmap`以及两个`int`的持续时间内的每个帧和 （用于简化动画逻辑） 的累计数组持续时间。
 
-[ `FrameInfo` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.FrameInfo/)的属性`SKCodec`类是一个数组[ `SKCodecFrameInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodecFrameInfo/)值、 一个用于每个帧，但从该结构所需的此程序的唯一事情是[ `Duration` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodecFrameInfo.Duration/)的以毫秒为单位的帧。
+[ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo)的属性`SKCodec`类是一个数组[ `SKCodecFrameInfo` ](xref:SkiaSharp.SKCodecFrameInfo)值、 一个用于每个帧，但从该结构所需的此程序的唯一事情是[ `Duration` ](xref:SkiaSharp.SKCodecFrameInfo.Duration)的以毫秒为单位的帧。
 
-`SKCodec` 定义一个名为属性[ `Info` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCodec.Info/)类型的[ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/)，但该`SKImageInfo`值指示 (至少对于此映像) 颜色类型是`SKColorType.Index8`，这意味着，每个像素的颜色类型的索引。 若要避免麻烦，颜色表，则程序将使用[ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Width/)并[ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Height/)信息从该结构来构造它是拥有全彩色`ImageInfo`值。 每个`SKBitmap`从的创建。
+`SKCodec` 定义一个名为属性[ `Info` ](xref:SkiaSharp.SKCodec.Info)类型的[ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo)，但该`SKImageInfo`值指示 (至少对于此映像) 颜色类型是`SKColorType.Index8`，这意味着，每个像素的颜色类型的索引。 若要避免麻烦，颜色表，则程序将使用[ `Width` ](xref:SkiaSharp.SKImageInfo.Width)并[ `Height` ](xref:SkiaSharp.SKImageInfo.Height)信息从该结构来构造它是拥有全彩色`ImageInfo`值。 每个`SKBitmap`从的创建。
 
-`GetPixels`方法`SKBitmap`返回`IntPtr`引用该位图的像素位。 尚未设置这些像素位。 是否`IntPtr`传递到某个[ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCodec.GetPixels/p/SkiaSharp.SKImageInfo/System.IntPtr/SkiaSharp.SKCodecOptions/)方法的`SKCodec`。 该方法将框架从 GIF 文件复制到引用的内存空间`IntPtr`。 [ `SKCodecOptions` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCodecOptions.SKCodecOptions/p/System.Int32/System.Boolean/)构造函数指示的帧号码：
+`GetPixels`方法`SKBitmap`返回`IntPtr`引用该位图的像素位。 尚未设置这些像素位。 是否`IntPtr`传递到某个[ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions))方法的`SKCodec`。 该方法将框架从 GIF 文件复制到引用的内存空间`IntPtr`。 [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions.%23ctor(System.Int32,System.Boolean))构造函数指示的帧号码：
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -657,6 +657,6 @@ public partial class AnimatedGifPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Mandelbrot 集合动画 （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)

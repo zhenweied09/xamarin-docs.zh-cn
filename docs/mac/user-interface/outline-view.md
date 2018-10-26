@@ -4,15 +4,15 @@ description: 本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7228a22eeae3dfdb354ba3693c277251fd2cd821
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113561"
 ---
 # <a name="outline-views-in-xamarinmac"></a>在 Xamarin.Mac 中的大纲视图
 

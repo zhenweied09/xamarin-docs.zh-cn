@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/01/2018
+ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114309"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 设备类
 
@@ -28,7 +28,7 @@ ms.locfileid: "38998255"
 
 但是，因为 Xamarin.Forms 2.3.4 这些 Api 已弃用并替换。 [ `Device` ](xref:Xamarin.Forms.Device)类现在包含的标识平台 – 公共字符串常量[ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)， [ `Device.Android` ](xref:Xamarin.Forms.Device.Android)， `Device.WinPhone`(不推荐使用）， `Device.WinRT` （已弃用） [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP)，并[ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)。 同样， [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action))已替换重载[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)并[ `On` ](xref:Xamarin.Forms.On) Api。
 
-在 C# 中，可以通过创建提供特定于平台的值`switch`语句[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并提供`case`语句所需的平台：
+在C#，可以通过创建提供特定于平台的值`switch`语句[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并提供`case`语句所需的平台：
 
 ```csharp
 double top;
@@ -60,16 +60,18 @@ layout.Margin = new Thickness(5, top, 5, 0);
 </StackLayout>
 ```
 
-[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)类是一个泛型类，因此必须实例化与`x:TypeArguments`匹配目标类型的属性。 在中[ `On` ](xref:Xamarin.Forms.On)类， [ `Platform` ](xref:Xamarin.Forms.On.Platform)属性可以接受单个`string`值或以逗号分隔的多个`string`值。
+[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1)类是必须使用实例化一个泛型类`x:TypeArguments`匹配目标类型的属性。 在中[ `On` ](xref:Xamarin.Forms.On)类， [ `Platform` ](xref:Xamarin.Forms.On.Platform)属性可以接受单个`string`值或以逗号分隔的多个`string`值。
 
 > [!IMPORTANT]
 > 提供不正确`Platform`属性中的值`On`类不会导致错误。 相反，该代码将执行且不应用任何特定于平台的值。
+
+或者，`OnPlatform`标记扩展可用于在 XAML 中自定义根据每个平台的 UI 外观。 有关详细信息，请参阅[OnPlatform 标记扩展](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)。
 
 <a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
-`Device.Idiom`可以用于更改布局或根据设备运行应用程序的功能。 [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom)枚举包含的以下值：
+`Device.Idiom`属性可用于更改布局或功能，具体取决于设备应用程序上运行。 [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom)枚举包含的以下值：
 
 -  **Phone** – iPhone、 iPod touch 和 Android 设备窄于 600 dip ^
 -  **平板电脑**– iPad，Windows 设备和 Android 设备宽于 600 dip ^
@@ -80,7 +82,7 @@ layout.Margin = new Thickness(5, top, 5, 0);
 
 *^ dip 不一定是物理像素计数*
 
-`Idiom` 是用于构建充分利用较大的屏幕，此类的布局特别有用：
+`Idiom`属性是用于构建充分利用较大的屏幕，此类的布局特别有用：
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -89,6 +91,25 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+[ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1)类提供在 XAML 中的相同功能：
+
+```xaml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnIdiom x:TypeArguments="Thickness">
+            <OnIdiom.Phone>0,20,0,0</OnIdiom.Phone>
+            <OnIdiom.Tablet>0,40,0,0</OnIdiom.Tablet>
+            <OnIdiom.Desktop>0,60,0,0</OnIdiom.Desktop>
+        </OnIdiom>
+    </StackLayout.Margin>
+    ...
+</StackLayout>
+```
+
+[ `OnIdiom` ](xref:Xamarin.Forms.OnPlatform`1)类是必须使用实例化一个泛型类`x:TypeArguments`匹配目标类型的属性。
+
+或者，`OnIdiom`标记扩展可用于在 XAML 中自定义 UI 外观基于的设备运行应用程序的惯用语法。 有关详细信息，请参阅[OnIdiom 标记扩展](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom)。
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
@@ -104,7 +125,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
 ```
 
-在 C# 中的等效代码是：
+中的等效代码C#是：
 
 ```csharp
 this.FlowDirection = Device.FlowDirection;
@@ -129,7 +150,7 @@ this.FlowDirection = Device.FlowDirection;
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
-`GetNamedSize` 设置时，可以使用[ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md) C# 代码中：
+`GetNamedSize` 设置时，可以使用[ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md)在C#代码：
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);

@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/06/2018
-ms.openlocfilehash: 98d4ce241c01bd09c68d86c583f12fdc7a11db0f
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/01/2018
+ms.openlocfilehash: 69f754db0fd9661fb317f43c7cda546b0b510265
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39175185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119396"
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台特定信息
 
@@ -377,6 +377,7 @@ slider.On<iOS>().SetUpdateOnTap(true);
 - 控制是否将页标题显示为页导航栏中的大型标题。 有关详细信息，请参阅[显示大标题](#large_title)。
 - 设置状态条可见性[ `Page` ](xref:Xamarin.Forms.Page)。 有关详细信息，请参阅[页上设置状态条可见性](#set_status_bar_visibility)。
 - 确保该页面内容位于上是安全的所有 iOS 设备的屏幕区域。 有关详细信息，请参阅[启用安全区域布局指南](#safe_area_layout)。
+- 在 iPad 上设置模式页面演示文稿的样式。 有关详细信息，请参阅[在 iPad 上设置模式页面演示文稿样式](#modal-page-presentation-style)。
 
 <a name="navigationpage-hideseparatorbar" />
 
@@ -681,6 +682,51 @@ protected override void OnAppearing()
     Padding = safeInsets;
 }
 ```
+
+<a name="modal-page-presentation-style" />
+
+### <a name="setting-the-modal-page-presentation-style-on-an-ipad"></a>在 iPad 上设置模式页面演示文稿样式
+
+此特定于平台的用于在 iPad 上设置的模式页面演示文稿样式。 设置使用在 XAML`Page.ModalPresentationStyle`可绑定属性设置为`UIModalPresentationStyle`枚举值：
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.ModalPresentationStyle="FormSheet">
+    ...
+</ContentPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+public class iOSModalFormSheetPageCS : ContentPage
+{
+    public iOSModalFormSheetPageCS()
+    {
+        On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FormSheet);
+        ...
+    }
+}
+```
+
+`Page.On<iOS>`方法指定仅将在 iOS 上运行此特定于平台的。 `Page.SetModalPresentationStyle`方法，请在[ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)命名空间，用于上设置模式的演示文稿样式[ `Page` ](xref:Xamarin.Forms.Page)通过指定以下项之一`UIModalPresentationStyle`枚举值：
+
+- `FullScreen`用于设置模式的演示文稿样式以覆盖整个屏幕。 默认情况下，使用此演示文稿样式显示模式页面。
+- `FormSheet`用于设置模式的演示文稿样式上居中且小于屏幕。
+
+此外，`GetModalPresentationStyle`方法可以用于检索的当前值`UIModalPresentationStyle`应用于枚举[ `Page` ](xref:Xamarin.Forms.Page)。
+
+结果是，在模式的演示文稿样式[ `Page` ](xref:Xamarin.Forms.Page)可以设置：
+
+[![](ios-images/modal-presentation-style-small.png "在 iPad 上的模式演示风格")](ios-images/modal-presentation-style-large.png#lightbox "iPad 上的模式的演示文稿样式")
+
+> [!NOTE]
+> 使用此特定于平台的设置模式的演示文稿样式的页面必须使用模式导航。 有关详细信息，请参阅[Xamarin.Forms 模式页面](~/xamarin-forms/app-fundamentals/navigation/modal.md)。
 
 ## <a name="layouts"></a>布局
 

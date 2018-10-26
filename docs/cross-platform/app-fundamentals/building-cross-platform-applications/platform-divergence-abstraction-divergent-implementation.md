@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 4a60c99cbc9819f07b77bfe9abe046ea92a550a5
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: ef224b7410565ae15da7613c04d11e7bd6a44dcb
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117936"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>第 4 部分-处理多个平台
 
@@ -23,15 +23,9 @@ ms.locfileid: "37403320"
 
 请参阅平台有何不同的功能的概述的平台功能文档。
 
- <a name="Examples_of_Platform_Divergence" />
+## <a name="examples-of-platform-divergence"></a>平台分歧的示例
 
-
-### <a name="examples-of-platform-divergence"></a>平台分歧的示例
-
- <a name="Fundamental_elements_that_exist_across_platforms" />
-
-
-#### <a name="fundamental-elements-that-exist-across-platforms"></a>存在于跨平台的基本元素
+### <a name="fundamental-elements-that-exist-across-platforms"></a>存在于跨平台的基本元素
 
 有一些特性是通用的移动应用程序。
 以下是设计的更高级别的概念的所有设备通常情况下，因此窗体应用程序的基础：
@@ -42,13 +36,9 @@ ms.locfileid: "37403320"
 -  编辑数据的单一视图
 -  向后导航
 
-
 设计你的高级屏幕流时可以将常见的用户体验基于这些概念。
 
- <a name="platform-specific_attributes" />
-
-
-#### <a name="platform-specific-attributes"></a>特定于平台的属性
+### <a name="platform-specific-attributes"></a>特定于平台的属性
 
 除了存在于任何平台的基本元素，您将需要您的设计解决关键平台差异。 您可能需要考虑 （和编写代码专门用于处理） 这些差异：
 
@@ -58,11 +48,7 @@ ms.locfileid: "37403320"
 -   **触控和手势**-操作系统支持手势识别功能各不相同，尤其是在较旧版本的每个操作系统。 早期版本的 Android 具有非常有限的支持触控操作，这意味着支持较旧的设备可能需要单独的代码
 -   **推送通知**– （例如每个平台上有不同的功能实现。 动态磁贴在 Windows 上）。
 
-
- <a name="Device-specific_features" />
-
-
-#### <a name="device-specific-features"></a>特定于设备的功能
+### <a name="device-specific-features"></a>特定于设备的功能
 
 确定应用程序所需的最小功能必须进行的内容;或决定时，若要在每个平台上充分利用哪些其他功能。 将所需的代码来检测功能和禁用功能或 （例如提供多种可选方案。 地理位置的替代方法可以是允许用户键入某一位置，或从映射中进行选择）：
 
@@ -72,32 +58,18 @@ ms.locfileid: "37403320"
 -   **Twitter 和 Facebook** – 仅内置 iOS5 和 iOS6 分别。 在早期版本和其他平台上将需要提供您自己的身份验证函数，并直接与每个服务的 API。
 -   **附近的通信 (NFC)** – （有些） 仅在 Android 手机 （在撰写本文时）。
 
-
- <a name="Dealing_with_Platform_Divergence" />
-
-
-### <a name="dealing-with-platform-divergence"></a>面对的平台分歧
+## <a name="dealing-with-platform-divergence"></a>面对的平台分歧
 
 从相同的基本代码，每个都有自己的优点和缺点的一组支持多个平台到有两种不同方法。
 
 -   **平台抽象**– 业务外观模式下，提供跨平台的统一的访问和进行了抽象到一个统一的 API 的特定平台实现。
 -   **同名的不同实现**– 通过体系结构工具，例如接口以及继承或条件编译的同名的不同实现通过调用特定平台的功能。
 
-
- <a name="Platform_Abstraction" />
-
-
 ## <a name="platform-abstraction"></a>平台抽象
-
- <a name="Class_Abstraction" />
-
 
 ### <a name="class-abstraction"></a>类抽象
 
 使用接口或基类共享代码中定义和实现或扩展特定于平台的项目中。 编写和扩展了类抽象的共享的代码是特别适合到可移植类库因为它们具有提供给他们的框架的有限的子集，并不能包含编译器指令，以支持特定于平台的代码分支。
-
- <a name="Interfaces" />
-
 
 #### <a name="interfaces"></a>接口
 
@@ -115,50 +87,24 @@ ms.locfileid: "37403320"
 
 无需创建和将实现传递到共享代码。 如果深度中共享代码使用此接口然后它最终通过多个方法参数传递或否则通过调用链向下推送。 如果共享的代码使用大量不同的接口然后它们必须全部创建和共享代码的某个位置中设置。
 
- <a name="Inheritance" />
-
-
 #### <a name="inheritance"></a>继承
 
 共享的代码可以在一个或多个特定于平台的项目中实现抽象或虚拟类，无法进行扩展。 这是类似于使用接口，但有一些已实现的行为。 接口或继承是否更好的设计选择有不同视点： 特别是因为 C# 仅允许单一继承它可以规定可以今后设计你的 Api 的方式。 谨慎使用继承。
 
 优点和缺点接口同样适用于继承的基类可以包含一些实现代码 （可能是整个平台不可知实现，可以根据需要扩展） 的其他优点。
 
-<a name="Xamarin.Forms" />
-
-### <a name="xamarinforms"></a>Xamarin.Forms
+## <a name="xamarinforms"></a>Xamarin.Forms
 
 请参阅[Xamarin.Forms](~/xamarin-forms/get-started/index.md)文档。
 
-
-### <a name="plug-in-cross-platform-functionality"></a>插件的跨平台功能
-
-此外可以以一致的方式使用插件扩展的跨平台应用。
-
-从链接我们[插件 github](https://github.com/xamarin/plugins)，大多数插件是开放源代码项目 （通常可用于通过 Nuget 安装），可帮助您实现各种从电池状态对的设置的特定于平台的功能易于在 Xamarin 平台和 Xamarin.Forms 应用中使用的公共 API。
-
-
-<a name="Other_Cross-Platform_Libraries" />
-
 ### <a name="other-cross-platform-libraries"></a>其他跨平台库
 
-有大量可用的提供跨平台功能的第三方库：
+这些库还提供了跨平台功能的C#开发人员：
 
--   **MvvmCross** -  [https://github.com/slodge/MvvmCross/](https://github.com/slodge/MvvmCross/)
--   **本国语言编写**（用于本地化）-  [https://github.com/rdio/vernacular/](https://github.com/rdio/vernacular/)
--   **MonoGame** （适用于 XNA 游戏）-  [http://www.monogame.net](http://www.monogame.net)
--   **NGraphics** - [NGraphics](https://github.com/praeclarum/NGraphics)和其前身 [https://github.com/praeclarum/CrossGraphics](https://github.com/praeclarum/CrossGraphics)
+- [**Xamarin.Essentials** ](~/essentials/index.md) – 常见功能的跨平台 Api。
+- [**SkiaSharp** ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) – 跨平台 2D 图形。
 
-
- <a name="Divergent_Implementation" />
-
-
-### <a name="divergent-implementation"></a>同名的不同实现
-
- <a name="Conditional_Compilation" />
-
-
-#### <a name="conditional-compilation"></a>条件编译
+## <a name="conditional-compilation"></a>条件编译
 
 有一些情况下，你的共享的代码将仍需要在每个平台上，可能访问类或行为不同的功能以不同的方式工作。 条件编译最适用于共享资产项目中，在同一源文件中具有不同符号定义的多个项目引用的位置。
 
@@ -169,10 +115,7 @@ Xamarin 项目始终定义`__MOBILE__`适用于 iOS 和 Android 应用程序项�
 // Xamarin iOS or Android-specific code
 #endif
 ```
-
-<a name="iOS" />
-
-##### <a name="ios"></a>iOS
+#### <a name="ios"></a>iOS
 
 Xamarin.iOS 定义`__IOS__`可以用于检测的 iOS 设备。
 
@@ -194,9 +137,7 @@ Xamarin.iOS 定义`__IOS__`可以用于检测的 iOS 设备。
 #endif
 ```
 
-<a name="Android" />
-
-##### <a name="android"></a>Android
+#### <a name="android"></a>Android
 
 可以使用下面的代码应仅编译到 Xamarin.Android 应用程序
 
@@ -214,7 +155,7 @@ Xamarin.iOS 定义`__IOS__`可以用于检测的 iOS 设备。
 #endif
 ```
 
-##### <a name="mac"></a>Mac
+#### <a name="mac"></a>Mac
 
 当前没有适用于 Xamarin.Mac，内置的符号，但您可以添加自己的 Mac 中的应用程序项目**选项 > 生成 > 编译器**中**定义符号**框中，或编辑 **.csproj**文件，并添加存在 (例如`__MAC__`)
 
@@ -222,16 +163,17 @@ Xamarin.iOS 定义`__IOS__`可以用于检测的 iOS 设备。
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
 ```
 
-<a name="Windows_Phone" />
+#### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-##### <a name="windows-phone"></a>Windows Phone
+请使用 `WINDOWS_UWP`。 没有下划线字符，如 Xamarin 平台符号将字符串。
 
-Windows Phone 应用程序定义两个符号 –`WINDOWS_PHONE`和`SILVERLIGHT`– 可用于目标平台的代码。 这些没有下划线等的 Xamarin 平台符号包围它们执行操作。
+```csharp
+#if WINDOWS_UWP
+// UWP-specific code
+#endif
+```
 
-
-<a name="Using_Conditional_Compilation" />
-
-##### <a name="using-conditional-compilation"></a>使用条件编译
+#### <a name="using-conditional-compilation"></a>使用条件编译
 
 条件编译的一个简单的案例研究示例设置 SQLite 数据库文件的文件位置。 三个平台具有指定的文件位置稍有不同的要求：
 
@@ -271,4 +213,3 @@ public static string DatabaseFilePath {
 ```
 
 结果是可以生成并将 SQLite 数据库文件放在每个平台上的其他位置中的所有平台上使用的类。
-

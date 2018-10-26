@@ -4,15 +4,15 @@ description: Xamarin.Android 已确定与多个版本的 Android 应用程序的
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/02/2018
-ms.openlocfilehash: 3b060567b47395bc213627c9378de4fca9db41bb
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120055"
 ---
 # <a name="understanding-android-api-levels"></a>了解 Android API 级别
 
@@ -35,7 +35,7 @@ Xamarin.Android 提供了三个 Android API 级别的项目设置：
 > 从 2018 年 8 月开始，Google Play 控制台将需要新的应用程序目标 API 级别 26 (Android 8.0) 或更高版本。
 现有应用程序将需要目标 API 级别 26 或更高版本开始，在 2018 年 11 月。 有关详细信息，请参阅[改善应用程序安全性和性能在即将年的 Google Play 上](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 通常情况下，所有三个 Xamarin.Android API 级别设置为相同的值。 上**应用程序**页上，将**使用 Android 版本 （目标框架） 编译**到最新的稳定 API 版本 （或最小值，包含所有所需的功能的 Android 版本）。
 在以下屏幕截图中，目标框架设置为**Android 7.1 (API 级别 25-Nougat)**:
@@ -50,7 +50,7 @@ Xamarin.Android 提供了三个 Android API 级别的项目设置：
 
 [![使用 API 级别 25 编译 Nougat，最低 Android 版本设置为 API 级别 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 通常情况下，所有三个 Xamarin.Android API 级别设置为相同的值。 设置**目标框架**到最新的稳定 API 版本 （或最小值，包含所有所需的功能的 Android 版本）。 若要设置**目标框架**，导航到**生成 > 常规**中**项目选项**。 在以下屏幕截图中，目标框架设置为**使用最新安装的平台 (8.0)**:
 
@@ -81,70 +81,17 @@ Xamarin.Android 提供了三个 Android API 级别的项目设置：
 
 每个版本的 Android 会由多个名称：
 
--   Android 版本，如**Android 7.1**
--   一个代码名称，如_Nougat_
--   相应的 API 级别，如**API 级别 25**
+-   Android 版本，如**Android 9.0**
+-   代码 （或餐后甜点） 名称，例如_饼图_
+-   相应的 API 级别，如**API 级别 28**
 
-Android 的代码名称可能对应于多个版本和 API 级别 （如下面的列表中所示），但每个 Android 版本对应于一个 API 级别。
+Android 的代码名称可能对应于多个版本和 API 级别 （如在下表中所示），但每个 Android 版本对应于一个 API 级别。
 
-此外，定义 Xamarin.Android*生成版本代码*，它将映射到当前已知的 Android API 级别。 以下列表有助于 API 级别、 Android 版本、 代码名称和 Xamarin.Android 生成版本代码之间进行转换。
+此外，定义 Xamarin.Android*生成版本代码*，它将映射到当前已知的 Android API 级别。 下表可以帮助你进行 API 级别、 Android 版本、 代码名称和 Xamarin.Android 生成版本代码之间转换 (生成版本代码中定义`Android.OS`命名空间):
 
--   **API 27 (Android 8.1)** &ndash; _Oreo_，2017 年 12 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.OMr1`
+[!include[](~/android/includes/api-levels.md)]
 
--   **API 26 (Android 8.0)** &ndash; _Oreo_，2017 年 8 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.O`
-
--   **API 25 (Android 7.1)** &ndash; _Nougat_，2016 年 12 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.NMr1`
-
--   **API 24 (Android 7.0)** &ndash; _Nougat_，2016 年 8 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.N`
-
--   **API 23 (Android 6.0)** &ndash; _Marshmallow_，2015 年 8 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.M`
-
--   **API 22 (Android 5.1)** &ndash; _棒糖形_，2015 年 3 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.LollipopMr1`
-
--   **API 21 版 (Android 5.0)** &ndash; _棒糖形_，2014 年 11 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Lollipop`
-
--   **API 20 (Android 4.4W)** &ndash; _Kitkat 监视_，2014 年 6 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.KitKatWatch`
-
--   **API 19 (Android 4.4)** &ndash; _Kitkat_，2013 年 10 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.KitKat`
-
--   **API 18 (Android 4.3)** &ndash; _Jelly Bean_，2013 年 7 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.JellyBeanMr2`
-
--   **API 17 (Android 4.2-4.2.2)** &ndash; _Jelly Bean_、 2012 年 11 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.JellyBeanMr1`
-
--   **API 16 (Android 4.1 4.1.1)** &ndash; _Jelly Bean_、 2012 年 6 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.JellyBean`
-
--   **API 15 (Android 4.0.3-4.0.4)** &ndash; _Ice Cream Sandwich_、 2011 年 12 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.IceCreamSandwichMr1`
-
--   **API 14 (Android 4.0 4.0.2)** &ndash; _Ice Cream Sandwich_、 2011 年 10 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.IceCreamSandwich`
-
--   **API (Android 3.2) 13** &ndash; _Honeycomb_、 2011 年 6 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.HoneyCombMr2`
-
--   **API 12 (Android 3.1.x)** &ndash; _Honeycomb_、 2011 年 5 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.HoneyCombMr1`
-
--   **API 11 (Android 3.0.x)** &ndash; _Honeycomb_、 2011 年 2 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.HoneyComb`
-
--   **API 10 (Android 2.3.3-2.3.4)** &ndash; _Gingerbread_、 2011 年 2 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.GingerBreadMr1`
-
--   **API 9 (Android 2.3 2.3.2)** &ndash; _Gingerbread_，2010 年 11 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.GingerBread`
-
--   **API 8 (Android 2.2.x)** &ndash; _Froyo_，2010 年 6 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Froyo`
-
--   **API 7 (Android 2.1.x)** &ndash; _Eclair_，2010 年 1 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.EclairMr1`
-
--   **API 6 （Android 2.0.1 开始）** &ndash; _Eclair_，2009 年 12 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Eclair01`
-
--   **API 5 (Android 2.0)** &ndash; _Eclair_，2009 年 11 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Eclair`
-
--   **API 4 (Android 1.6)** &ndash; _圆环图_，2009 年 9 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Donut`
-
--   **API 3 (Android 1.5)** &ndash; _Cupcake_，2009 年 5 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Cupcake`
-
--   **API 2 (Android 1.1)** &ndash; _Base_，2009 年 2 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Base11`
-
--   **API 1 (Android 1.0)** &ndash; _Base_，2008 年 10 月发布。 生成版本代码 `Android.OS.BuildVersionCodes.Base`
-
-
-此列表指示，如新的 Android 版本的发布频率&ndash;有时多个版本每年。 因此，可能运行你的应用的 Android 设备的通用包括的各种较旧和较新的 Android 版本。 如何保证您的应用程序将许多不同版本的 Android 上运行一致而可靠地？ Android API 级别可帮助你管理此问题。
+此表所示，新的 Android 版本的发布频率&ndash;有时多个版本每年。 因此，可能运行你的应用的 Android 设备的通用包括的各种较旧和较新的 Android 版本。 如何保证您的应用程序将许多不同版本的 Android 上运行一致而可靠地？ Android API 级别可帮助你管理此问题。
 
 
 ### <a name="android-api-levels"></a>Android API 级别
@@ -175,12 +122,12 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 *目标框架*(也称为`compileSdkVersion`) 是在生成时的编译你的应用程序的特定 Android 框架版本 （API 级别）。 此设置指定哪些 Api 应用*需要*时运行，但它不起作用的 Api 是实际可供您的应用程序在安装时使用。 因此，更改目标框架设置不会更改运行时行为。
 
-目标框架标识你的应用程序针对链接的库版本&ndash;这决定了可以在应用中使用哪些 Api。 例如，如果你想要使用[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)在 Android 5.0 Lollipop 中引入的方法，必须将目标框架设置为**API Level 21 (Lollipop)** 或更高版本。 如果将你的项目的目标框架设置为 API 级别等**API 级别 19 (KitKat)** 尝试调用`SetCategory`在代码中的方法，将收到编译错误。
+目标框架标识你的应用程序针对链接的库版本&ndash;此设置确定可以在应用中使用哪些 Api。 例如，如果你想要使用[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)在 Android 5.0 Lollipop 中引入的方法，必须将目标框架设置为**API Level 21 (Lollipop)** 或更高版本。 如果将你的项目的目标框架设置为 API 级别等**API 级别 19 (KitKat)** 尝试调用`SetCategory`在代码中的方法，将收到编译错误。
 
 我们建议始终编译与*最新*可用的目标框架版本。 执行此操作提供有用的警告消息可能由代码调用任何已弃用的 api。 使用最新支持库版本时，使用最新的目标框架版本则尤其&ndash;每个库要求您的应用程序进行编译时支持该库的最低 API 级别或更高版本。 
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要访问 Visual Studio 中的目标框架设置，打开项目属性中的**解决方案资源管理器**，然后选择**应用程序**页：
 
@@ -188,7 +135,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 通过选择下的下拉列表菜单中的 API 级别设置目标框架**使用 Android 版本编译**如上所示。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要访问 Mac 在 Visual Studio 中的目标框架设置，请右键单击项目名称并选择**选项**; 这将打开**项目选项**对话框。 在此对话框中，导航到**生成 > 常规**如下所示：
 
@@ -209,7 +156,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 [运行时检查的 Android 版本](#runtimechecks)本指南中，将在后面介绍了如何将这些运行时检查添加到你的代码。
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要访问 Visual Studio 中的最低 Android 版本设置，打开项目属性中的**解决方案资源管理器**，然后选择**Android 清单**页。 下的下拉列表菜单中**最低 Android 版本**可以为应用程序选择最低 Android 版本：
 
@@ -217,7 +164,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 如果选择**使用编译使用 SDK 版本**，最低 Android 版本将作为目标框架设置相同。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要访问的 Mac 在 Visual Studio 中的最低 Android 版本，请右键单击项目名称并选择**选项**; 这将打开**项目选项**对话框。 导航到**生成 > Android 应用程序**。
 使用右侧的下拉列表菜单**最低 Android 版本**，可以为你的应用程序设置最低 Android 版本：
@@ -237,7 +184,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 目标框架和目标 Android 版本，具有非常相似的名称，而不是相同的操作。 目标框架设置目标 API 级别将信息传递给 Xamarin.Android 以供*编译时*，而目标 Android 版本目标 API 级别将信息传递给 Android 以便在使用*运行时*（应用程序的设备上安装并运行）。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要访问 Visual Studio 中的此设置，打开项目属性中的**解决方案资源管理器**，然后选择**Android 清单**页。 下的下拉列表菜单中**目标 Android 版本**可以为应用程序中选择目标 Android 版本：
 
@@ -245,7 +192,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 我们建议您显式设置为最新版本的用于测试你的应用的 Android 目标 Android 版本。 理想情况下，它应设置为最新的 Android SDK 版本&ndash;这样即可使用新的 Api 之前通过行为更改的工作。 对于大多数开发人员，我们*不这样做*建议目标 Android 版本设置成**使用编译使用 SDK 版本**。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要访问的 Mac 在 Visual Studio 中的此设置，请右键单击项目名称并选择**选项**; 这将打开**项目选项**对话框。 导航到**生成 > Android 应用程序**。 使用右侧的下拉列表菜单**目标 Android 版本**，可以为你的应用程序设置目标 Android 版本：
 
@@ -264,7 +211,7 @@ Android 的代码名称可能对应于多个版本和 API 级别 （如下面的
 
 <a name="runtimechecks" />
 
-## <a name="runtime-checks-for-android-versions"></a>Android 版本的运行时检查
+## <a name="runtime-checks-for-android-versions"></a>运行时检查的 Android 版本
 
 发布 Android 每个新版本后，框架 API 会更新以提供新或替代功能。 几个例外情况之外，从早期的 Android 版本的 API 功能将会传递到较新的 Android 版本，无需修改即可。 因此，如果您的应用程序在特定 Android API 级别上运行，它通常会能够无需修改即可在更高版本的 Android API 级别上运行。 但如果你还想要更早版本的 Android 上运行你的应用？
 
@@ -294,22 +241,22 @@ else
 }
 ```
 
-没有快速而简单规则，说明如何减少或缺少一个或多个 Api 的较旧 Android 版本上运行时修改应用程序的功能。 在某些情况下 (例如，在`SetCategory`上面示例中)，只需不可用时，只需省略 API 调用。 但是，在其他情况下，您可能需要为时实现替代功能`Android.OS.Build.VERSION.SdkInt`被检测出是早于 API 级别，您的应用程序需要以提供其最佳体验。
+没有快速而简单规则，说明如何减少或缺少一个或多个 Api 的较旧 Android 版本上运行时修改应用程序的功能。 在某些情况下 (例如，在`SetCategory`上面示例中)，只需省略 API 调用时不可用。 但是，在其他情况下，您可能需要为时实现替代功能`Android.OS.Build.VERSION.SdkInt`被检测出是早于 API 级别，您的应用程序需要以提供其最佳体验。
 
 <a name="libraries" />
 
 ## <a name="api-levels-and-libraries"></a>API 级别和库
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 创建 Xamarin.Android 类库项目 （如类库或绑定库） 时，可以配置的目标框架设置&ndash;最低 Android 版本和目标 Android 版本设置不可用。 这是因为没有任何**Android 清单**页：
 
 [![仅使用 Android 版本选项编译可用](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 如果创建 Xamarin.Android 类库项目，则没有**Android 应用程序**页可以配置最低 Android 版本和目标 Android 版本&ndash;最低 Android 版本和目标Android 版本设置不可用。
-这是因为没有任何**生成 > Android 应用程序**页):
+这是因为没有任何**生成 > Android 应用程序**页：
 
 [![生成不包含最小值和目标版本选项常规页](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 

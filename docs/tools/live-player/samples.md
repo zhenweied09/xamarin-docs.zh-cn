@@ -3,15 +3,15 @@ title: Xamarin Live Player 示例
 description: 本文档所链接到 Xamarin Live Player 出测试时要使用的示例应用程序。 链接的示例包括基本计算器和 bug 清理程序游戏。
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: 6f9f2ed97e03862fc7e77e4a7ff67f456dfde277
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 31312a41312ba1c82cf9f05721d122ce00cda42b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116350"
 ---
 # <a name="xamarin-live-player-samples"></a>Xamarin Live Player 示例
 

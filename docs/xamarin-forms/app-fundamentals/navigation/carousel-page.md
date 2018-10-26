@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: bce3a60f3647a537906cfa11fc1dcfcc6f5cf365
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 48c009b836ac109e0d54cd2fdb036c46e17c4387
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121498"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 轮播页面
 
@@ -22,7 +22,7 @@ _Xamarin.Forms CarouselPage 是内容的一个页面，用户可以向从左到�
 
 下面的屏幕截图演示[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage)每个平台上：
 
-![](carousel-page-images/thirdpage.png "CarouselPage Thid 项")
+![](carousel-page-images/thirdpage.png "CarouselPage 第三项")
 
 布局[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage)是在每个平台上完全相同。 导航页，可以通过轻扫右到左遍历该集合，向前导航和轻扫从左到右向后导航整个集合。 以下屏幕截图显示在首页[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage)实例：
 
@@ -81,7 +81,7 @@ _Xamarin.Forms CarouselPage 是内容的一个页面，用户可以向从左到�
 </CarouselPage>
 ```
 
-下面的代码示例显示了 C# 中的等效 UI:
+下面的代码示例显示了中的等效 UI C#:
 
 ```csharp
 public class MainPageCS : CarouselPage
@@ -186,7 +186,7 @@ public MainPage ()
 }
 ```
 
-下面的代码示例显示等效[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage) C# 创建的：
+下面的代码示例显示等效[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage)中创建C#:
 
 ```csharp
 public class MainPageCS : CarouselPage

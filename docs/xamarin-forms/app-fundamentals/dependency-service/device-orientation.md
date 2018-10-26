@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115407"
 ---
 # <a name="checking-device-orientation"></a>检查设备方向
 
@@ -29,7 +29,7 @@ ms.locfileid: "38995636"
 ![](device-orientation-images/orientation-diagram.png "DependencyService 应用程序结构")
 
 > [!NOTE]
-> 可以检测是否在设备处于纵向或横向方向中的共享代码，如下所示在 [设备 Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation)。 在本文中所述的方法使用本机功能来获取有关方向，包括设备在正面朝下的详细信息。
+> 可以检测是否在设备处于纵向或横向方向中的共享代码，如中所示[设备方向](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation)。 在本文中所述的方法使用本机功能来获取有关方向，包括设备在正面朝下的详细信息。
 
 <a name="Creating_the_Interface" />
 
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-在 iOS、 Android 或 Windows 平台上运行此应用程序并按下按钮会导致在更新设备的方向的按钮的文本。
+在 iOS、 Android 或 Windows 平台上运行此应用程序并按下按钮将导致该按钮的文本更新设备的方向。
 
 ![](device-orientation-images/orientation.png "设备方向示例")
 

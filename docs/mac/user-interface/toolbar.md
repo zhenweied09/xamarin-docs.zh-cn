@@ -4,15 +4,15 @@ description: 本文介绍 Xamarin.Mac 应用程序中的工具栏。 它介绍�
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 06faaf16ffd0adc64063bfa5a264c1895b9ca9cb
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120250"
 ---
 # <a name="toolbars-in-xamarinmac"></a>在 Xamarin.Mac 中的工具栏
 
@@ -168,7 +168,7 @@ MacOS 应用程序中的任何窗口可以包括一个工具栏：
 - **标签**-要显示的工具栏中项的文本
 - **调色板标签**-显示有关中的项的文本**允许工具栏项**区域
 - **标记**-可帮助识别代码中的项的可选、 唯一标识符。
-- **标识符**-定义了工具栏项类型。 自定义的值可以用于选择在代码中的工具栏项。
+- **标识符**-定义工具栏项类型。 自定义的值可以用于选择在代码中的工具栏项。
 - **可选择**-如果选中，该项将充当开/关按钮。
 
 > [!IMPORTANT]

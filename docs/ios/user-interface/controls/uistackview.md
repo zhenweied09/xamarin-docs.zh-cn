@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790095"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122668"
 ---
 # <a name="stack-views-in-xamarinios"></a>在 Xamarin.iOS 堆栈视图
 
 _本文介绍如何使用 Xamarin.iOS 应用程序中的新 UIStackView 控件管理的子视图中的一组水平或垂直排列的堆栈。_
 
 > [!IMPORTANT]
-> 请注意，尽管 StackView 支持在 iOS 设计器中，您可能会遇到可用性错误时使用稳定通道。 切换 Beta 或 Alpha 通道应可解决此问题。 我们已决定提供本演练中使用 Xcode，直到在稳定通道中实现所需的修补程序。
+> 请注意，尽管 StackView 支持在 iOS 设计器中，您可能会遇到可用性错误时使用稳定通道。 Beta 版或 Alpha 通道切换应可解决此问题。 我们已决定提供本演练中使用 Xcode，直到在稳定通道中实现所需的修补程序。
 
 堆栈视图控件 (`UIStackView`) 利用自动布局和大小类水平或垂直，管理的子视图，堆栈的强大，但该功能可动态响应的 iOS 设备的方向和屏幕大小。
 

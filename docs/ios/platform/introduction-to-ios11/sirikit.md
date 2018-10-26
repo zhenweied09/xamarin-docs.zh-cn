@@ -1,132 +1,132 @@
 ---
-title: 在 iOS 11 SiriKit 更新
-description: 本文档介绍如何使用 SiriKit iOS 11 中存在。 具体而言，它探讨如何使用任务和说明以及如何提供应用程序的可选名称。
+title: IOS 11 中 SiriKit 更新
+description: 本文档介绍如何使用 SiriKit，iOS 11 中。 具体而言，它将检查如何使用任务和便笺以及如何提供应用程序的可选名称。
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/07/2017
-ms.openlocfilehash: 28160b40c97b8cc62fae95d3643801f1c4cc5e93
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7e895dc2865880ec2789a40f8cdf047a20f8693b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111033"
 ---
-# <a name="sirikit-updates-in-ios-11"></a>在 iOS 11 SiriKit 更新
+# <a name="sirikit-updates-in-ios-11"></a>IOS 11 中 SiriKit 更新
 
-SiriKit 在 iOS 10，引入了大量的服务 （包括锻炼，持续一段时间预订，以及调用） 的域。 请参阅[SiriKit 部分](~/ios/platform/sirikit/index.md)SiriKit 概念以及如何在你的应用程序中实现 SiriKit。
+SiriKit iOS 10 中引入了许多服务域 （包括锻炼，持续一段时间的预订，并调用）。 请参阅[SiriKit 部分](~/ios/platform/sirikit/index.md)SiriKit 概念以及如何在应用中实现 SiriKit。
 
-![Siri 任务列表演示](sirikit-images/sirikit.png)
+![使用 Siri 任务列表演示](sirikit-images/sirikit.png)
 
-在 iOS 11 SiriKit 添加这些新的和更新的意向域：
+SiriKit，iOS 11 中的添加这些新的和更新的意向域：
 
-- [**列出并说明**](#listsnotes) – 新 ！ 提供对于应用程序使用 API 处理任务和说明。
-- **可视化代码**– 新 ！ Siri 可以显示要共享的联系信息或参与付款交易的 QR 代码。
-- **付款**– 添加付款交互的搜索和传输意向。
-- **写预订**– 添加取消持续一段时间和反馈意向。
+- [**列出并说明**](#listsnotes) – 新 ！ 提供用于应用的 API 来处理任务和便笺。
+- **可视化代码**– 新 ！ 使用 Siri 可以显示共享联系人信息或参与支付交易的 QR 代码。
+- **付款**– 添加付款的交互，搜索和传输意图。
+- **写预订**– 添加了取消持续一段时间和反馈意图。
 
 其他新功能包括：
 
-- [**备用的应用名称**](#alternativenames) – 提供别名，以帮助客户告诉 Siri 通过提供其他名称/发音面向你的应用程序。
-- **启动锻炼**– 提供在后台启动测验的功能。
+- [**备用的应用名称**](#alternativenames) – 提供别名，可帮助客户告知 Siri 面向您的应用程序通过提供其他名称/发音。
+- **启动锻炼**– 提供了在后台启动健身的功能。
 
-下面解释了其中一些功能。 有关其他详细信息，请参阅[Apple 的 SiriKit 文档](https://developer.apple.com/documentation/sirikit)。
+下面介绍了其中一些功能。 有关其他详细信息，请参阅[Apple 的 SiriKit 文档](https://developer.apple.com/documentation/sirikit)。
 
 <a name="listsnotes" />
 
 ## <a name="lists-and-notes"></a>列表和说明
 
-新的列表和说明域将提供一个 API，使应用程序来处理任务和通过使用 Siri 语音请求的说明。
+新的列表和说明域提供应用的 API 来处理任务并通过使用 Siri 语音请求的说明。
 
 **任务**
 
 - 具有标题和完成状态。
-- 根据需要包括截止时间和位置。
+- 选择性地包含了截止时间和位置。
 
 **备注**
 
 - 具有标题和内容的字段。
 
-任务和说明可以组织到组中。 本部分的其余部分介绍如何实现 SiriKit，此新的域使用[TasksNotes SiriKit 示例](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)。
+任务和便笺可以组织成组。 本部分的其余部分将介绍如何实现 SiriKit，此新的域使用[TasksNotes SiriKit 示例](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)。
 
 ### <a name="how-to-process-a-sirikit-request"></a>如何处理 SiriKit 请求
 
-处理 SiriKit 请求通过执行以下步骤：
+通过执行以下步骤处理 SiriKit 请求：
 
-1. **解决**– 验证参数和请求更多用户信息 （如果需要）。
+1. **解决**– 验证参数和进一步信息从用户请求 （如果需要）。
 2. **确认**– 最终验证和验证可以处理该请求。
 3. **处理**– 执行操作 （更新数据或执行网络操作）。
 
-前两个步骤是可选 （尽管建议使用），则需要执行最后一个步骤。
-更多详细说明，在[SiriKit 部分](~/ios/platform/sirikit/index.md)。
+前两个步骤是可选的 （尽管建议），并最终步骤是必需的。
+有更多详细的说明中[SiriKit 部分](~/ios/platform/sirikit/index.md)。
 
-### <a name="resolve-and-confirm-methods"></a>解决并确认方法
+### <a name="resolve-and-confirm-methods"></a>解决和确认方法
 
-这些可选的方法让你从用户执行验证，选择默认值或请求其他信息的代码。
+这些可选方法让你从用户执行验证、 选择默认值或请求其他信息的代码。
 
-例如，对于`IINCreateTaskListIntent`接口，所需的方法是`HandleCreateTaskList`。 有四个提供更好地控制 Siri 交互的可选方法：
+例如，对于`IINCreateTaskListIntent`接口，所需的方法是`HandleCreateTaskList`。 有四种可选方法，提供更好地控制 Siri 交互：
 
-- `ResolveTitle` – 验证标题、 设置默认标题 （如果适用），或发出信号，不需要的数据。
-- `ResolveTaskTitles` – 验证用户说出的任务的列表。
-- `ResolveGroupName` – 验证组名称、 选择一组默认或发出信号，不需要的数据。
-- `ConfirmCreateTaskList` – 验证你的代码可以执行请求的操作，但不会执行它 (仅`Handle*`方法应修改数据)。
+- `ResolveTitle` – 验证标题、 设置的默认标题 （如果适用），或发出信号不需要的数据。
+- `ResolveTaskTitles` – 验证用户所说的任务的列表。
+- `ResolveGroupName` – 验证组名称，选择默认组，或发出信号不需要的数据。
+- `ConfirmCreateTaskList` -验证你的代码可以执行请求的操作，但不会执行它 (只`Handle*`方法应修改数据)。
 
-### <a name="handle-the-intent"></a>句柄意图
+### <a name="handle-the-intent"></a>处理意向
 
-有六个意向列表和说明域中的，三个用于任务和三个用于说明。
-为处理这些意向而必须实现这些方法包括：
+有六个意向列表和说明域中的，三个任务和三个用于说明。
+必须实现以处理这些意向的方法是：
 
 - 对于任务：
   - `HandleAddTasks`
   - `HandleCreateTaskList`
   - `HandleSetTaskAttribute`
-- 说明：
+- 有关说明：
   - `HandleCreateNote`
   - `HandleAppendToNote`
   - `HandleSearchForNotebookItems`
 
-每个方法具有特定意向类型传递给它，其中包含使用 Siri 从用户的请求已分析的所有信息 (可能在并更新`Resolve*`和`Confirm*`方法)。
-你的应用程序必须分析的数据提供，则执行某些操作来存储或以其他方式处理数据，并返回结果，Siri 说出并向用户显示。
+每个方法都具有特定意向类型传递给它，其中包含使用 Siri 从用户的请求已分析的所有信息 (并且可能在更新`Resolve*`和`Confirm*`方法)。
+您的应用程序必须分析的数据提供，则执行某些操作来存储或以其他方式处理数据，并返回 Siri，并向用户显示的结果。
 
 ### <a name="response-codes"></a>响应代码
 
-所需`Handle*`和可选`Confirm*`方法指示的响应代码，它们将传递对对象的值设置为其完成处理程序。 响应来自`INCreateTaskListIntentResponseCode`枚举：
+所需`Handle*`和可选`Confirm*`方法指示通过其传递对对象的值设置为其完成处理程序的响应代码。 响应来自`INCreateTaskListIntentResponseCode`枚举：
 
-- `Ready` – 在确认阶段返回 (即。 从`Confirm*`方法，但不是能从`Handle*`方法)。
+- `Ready` – 在确认阶段返回 (ie。 从`Confirm*`方法，但不能从`Handle*`方法)。
 - `InProgress` – 用于长时间运行任务 （如网络/服务器操作）。
-- `Success` – 与成功的操作的详细信息进行响应 (仅从`Handle*`方法)。
-- `Failure` – 意味着出错，并且无法完成该操作。
-- `RequiringAppLaunch` -无法处理的意图，但是该操作可能在应用程序。
+- `Success` -成功的操作的详细信息响应 (只能从`Handle*`方法)。
+- `Failure` – 意味着出现了错误，并且无法完成该操作。
+- `RequiringAppLaunch` -无法处理的目的，但该操作可以在应用程序。
 - `Unspecified` -不要使用： 将向用户显示错误消息。
 
-了解有关这些方法和在 Apple 的响应[SiriKit 列出并说明文档](https://developer.apple.com/documentation/sirikit/lists_and_notes)。
+了解有关这些方法和在 Apple 的响应的详细信息[SiriKit 列出并说明文档](https://developer.apple.com/documentation/sirikit/lists_and_notes)。
 
 ### <a name="implementing-lists-and-notes"></a>实现列表和说明
 
-[TasksNotes SiriKit 示例](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)使用以下步骤将 SiriKit 支持添加到空白 iOS 应用创建的。
+[TasksNotes SiriKit 示例](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)使用以下步骤将 SiriKit 支持添加到一个空白 iOS 应用创建的。
 
-首先，添加 SiriKit 支持，请执行以下步骤为你的 iOS 应用：
+首先，若要添加 SiriKit 的支持，请执行以下步骤将 iOS 应用程序：
 
-1. 刻度**SiriKit**中**Entitlements.plist**。
-2. 添加**隐私 – Siri 使用率描述**键，以**Info.plist**，以及你的客户的消息。
+1. 刻度线**SiriKit**中**Entitlements.plist**。
+2. 添加**隐私-Siri 使用说明**关键**Info.plist**，以及为客户一条消息。
 3. 调用`INPreferences.RequestSiriAuthorization`在应用中，以提示用户允许使用 Siri 交互的方法。
-4. 将 SiriKit 添加到你在开发人员门户上的应用程序 ID 并重新创建你预配配置文件以包括新的授权。
+4. 将 SiriKit 添加到你在开发人员门户上的应用 ID 并重新创建预配配置文件以包括新的权利。
 
-然后将新的扩展项目添加到你的应用能处理 Siri 请求：
+然后将新的扩展项目添加到您的应用程序处理 Siri 请求：
 
-1. 右键单击你的解决方案，然后选择**添加 > 添加新项目...**.
-2. 选择**iOS > 扩展 > 意向扩展**模板。
+1. 在解决方案上右键单击并选择**添加 > 添加新项目...**.
+2. 选择**iOS > 扩展 > Intents 扩展**模板。
 3. 将添加两个新项目： 意向和 IntentUI。 自定义 UI 是可选的因此该示例仅包含中的代码**意向**项目。
 
-扩展项目是将其中处理所有 SiriKit 请求。 为单独的扩展，它不自动具有任何方式来与主应用程序 – 通信通常解决这个问题通过实现共享的文件存储使用应用组。
+扩展项目是在其中将处理所有 SiriKit 请求。 为单独的扩展，它自动没有任何方式与主应用程序 – 通信通常解决此问题通过实现共享的文件存储中使用应用组。
 
 #### <a name="configure-the-intenthandler"></a>配置 IntentHandler
 
-`IntentHandler`类是入口点，对于使用 Siri 请求 – 每个意向传递给`GetHandler`方法，返回一个可以处理该请求的对象。
+`IntentHandler`类是入口点，对于使用 Siri 请求 – 每个意向传递给`GetHandler`方法，它将返回一个对象，就可以处理请求。
 
-下面的代码演示一个简单的实现：
+下面的代码显示了一个简单的实现：
 
 ```csharp
 [Register("IntentHandler")]
@@ -144,20 +144,20 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 }
 ```
 
-此类必须继承自`INExtension`，因为示例转到处理列表和说明意向，它还会实现`IINNotebookDomainHandling`。
+类必须继承`INExtension`，因为此示例将处理列表，并说明意向，它也能实现`IINNotebookDomainHandling`。
 
 > [!NOTE]
-> - 接口的.NET 带有大写字母前缀中没有约定`I`，其中从 iOS SDK 绑定协议时 Xamarin 遵循。
-> - Xamarin 还会保留从 iOS 的类型名称，Apple 将前两个字符用在类型名称以反映具有类型属于 framework。
-> - 有关`Intents`框架中，将类型前缀为`IN*`（如。 `INExtension`) 但它们是_不_接口。
-> - 它还会依照，协议 （就在 C# 中的接口） 结束，两个`I`s，如`IINAddTasksIntentHandling`。
+> - 适用于接口以前缀为大写的.NET 中没有一种约定`I`，Xamarin iOS SDK 从绑定协议时所遵循的。
+> - Xamarin 还将保留通过 iOS，类型名称和 Apple 使用前两个字符的类型名称以反映类型所属的框架。
+> - 有关`Intents`框架中，类型都带有前缀`IN*`（例如。 `INExtension`) 但是这些_不_接口。
+> - 遵循该协议 (这会变得中的接口C#) 具有两个最终`I`s，如`IINAddTasksIntentHandling`。
 
-#### <a name="handling-intents"></a>处理颜色
+#### <a name="handling-intents"></a>处理意向
 
-每个意向 （添加任务、 设置任务属性，等等） 的实现单个方法类似于下面所示。 此方法应执行三项主要功能：
+每个意向 （添加任务、 设置任务属性等） 实现在单个方法类似于如下所示。 此方法应执行三个主要功能：
 
-1. **处理意图**– 通过使用 Siri 分析的数据中可`intent`对象特定于类型的意图。 你的应用程序可能验证了该数据使用可选`Resolve*`方法。
-2. **验证和更新数据存储区**– 保存到文件系统 （使用应用组以便主 iOS 应用程序也可以访问它），或通过网络请求的数据。
+1. **处理意向**– 通过 Siri 分析的数据可供在`intent`对象特定于类型的意图。 您的应用程序可能已经验证可使用可选数据`Resolve*`方法。
+2. **验证和更新数据存储区**– 保存到文件系统 （使用应用组，以便主 iOS 应用也可以访问它），或通过网络请求的数据。
 3. **提供响应**– 使用`completion`处理程序以将响应发送回 Siri 读取/显示给用户：
 
 ```csharp
@@ -173,62 +173,62 @@ public void HandleCreateTaskList(INCreateTaskListIntent intent, Action<INCreateT
 }
 ```
 
-请注意，`null`传递的第二个参数的响应 – 这是用户活动参数，并且在未提供时, 将使用默认值。
-你可以设置自定义活动类型处理程序，但前提是你的 iOS 应用支持通过`NSUserActivityTypes`中的键**Info.plist**。 然后，你可以打开你的应用程序时，处理这种情况，并执行特定操作 （如打开到相关的视图控制器以及使用 Siri 操作从加载的数据）。
+请注意，`null`传递响应 – 第二个参数，这是用户活动参数，以及时未提供，将使用默认值。
+可以自定义活动类型设置，只要你的 iOS 应用支持通过`NSUserActivityTypes`中的键**Info.plist**。 然后可以打开您的应用程序时，处理这种情况，并执行特定操作 （例如打开到相关的视图控制器，并将数据加载从 Siri 操作）。
 
-该示例还 hardcodes`Success`结果，但在实际方案中，应添加正确的错误报告。
+该示例还会`Success`结果，但在实际情况下，应添加正确的错误报告。
 
 ### <a name="test-phrases"></a>测试短语
 
 以下测试短语应在示例应用程序中运行：
 
-- "在 TasksNotes 使同类、 香蕉，与梨杂货列表"
-- "添加任务 WWDC 中 TasksNotes"
+- "在 TasksNotes 使苹果、 香蕉，与梨购物列表"
+- "添加任务 WWDC TasksNotes 中"
 - "添加任务 WWDC 到中 TasksNotes 培训列表"
 - "标记为已完成在 TasksNotes 参加 WWDC"
-- "在 TasksNotes 再提醒我时主页获取购买 iphone"
-- "标记为已完成 TasksNotes 购买 iPhone"
-- "提醒我要在上午 8 中 TasksNotes 主页保留"
+- "在 TasksNotes 提醒我在我回到家时购买 iphone"
+- "标记为已完成在 TasksNotes 购买 iPhone"
+- "提醒我 TasksNotes 在上午 8 点应保留主文件夹"
 
-![创建新的列表示例](sirikit-images/createtasklist-sml.png) ![设置任务作为完整示例](sirikit-images/settaskattribute-sml.png)
+![创建新的列表示例](sirikit-images/createtasklist-sml.png) ![作为完整的示例设置的任务](sirikit-images/settaskattribute-sml.png)
 
 > [!NOTE]
-> 测试与使用 Siri （而不像早期版本中），iOS 11 模拟器支持。
+> IOS 11 模拟器支持使用 Siri （不同于较早版本） 进行测试。
 >
-> 如果测试在真实设备上，不要忘记配置你应用程序 ID 和预配 SiriKit 支持的配置文件。
+> 如果在实际设备上测试，别忘了配置你的应用 ID 和预配 SiriKit 支持的配置文件。
 
 <a name="alternativenames" />
 
 ## <a name="alternative-names"></a>可选名称
 
-此新的 iOS 11 功能意味着你可以将配置应用程序，以帮助用户与使用 Siri 正确触发它的可选名称。 添加到以下项**Info.plist** iOS 应用程序项目的文件：
+此新的 iOS 11 功能意味着你可以将配置应用以帮助用户使用 Siri 正确触发它的可选名称。 添加到以下项**Info.plist** iOS 应用项目文件：
 
-![Info.plist 显示替代的应用程序名称键和值](sirikit-images/alternative-names.png)
+![Info.plist 显示替代应用名称键和值](sirikit-images/alternative-names.png)
 
-与其他应用程序名称集相同，以下短语也适用于示例应用程序 (实际名**TasksNotes**):
+使用备用的应用程序名称集，以下短语也适用于示例应用程序 (其实际名为**TasksNotes**):
 
-- "请同类、 香蕉，与在梨杂货列表_MonkeyNotes_"
+- "制作杂货列表苹果、 香蕉，与在梨_MonkeyNotes_"
 - "添加任务中的 WWDC _MonkeyTodo_"
 
 
 ## <a name="troubleshooting"></a>疑难解答
 
-运行示例，或将 SiriKit 添加到自己的应用程序时，你可能会遇到一些错误：
+运行示例，或将 SiriKit 添加到自己的应用程序时可能遇到一些错误：
 
 ### <a name="nsinternalinconsistencyexception"></a>NSInternalInconsistencyException
 
-_Objective C 引发异常。名称： NSInternalInconsistencyException 原因： 使用类 < INPreferences: 0x60400082ff00 > 从应用程序需要授权 com.apple.developer.siri。是否 Xcode 项目中已启用 Siri 功能？_
+_Objective C 中引发异常。名称： NSInternalInconsistencyException 原因： 使用类 < INPreferences: 0x60400082ff00 > 从应用程序需要授权 com.apple.developer.siri。您是否在 Xcode 项目中启用 Siri 功能？_
 
-- 中勾选了 SiriKit **Entitlements.plist**。
+- 在中勾选了 SiriKit **Entitlements.plist**。
 - **Entitlements.plist**中配置**项目选项 > 生成 > iOS 捆绑签名**。
 
-  [![显示权利正确设置的项目选项](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
+  [![显示权利正确设置项目选项](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
-- （适用于设备部署）应用程序 ID 已启用的 SiriKit 和预配配置文件下载。
+- （适用于设备部署）应用程序 ID 已启用的 SiriKit，预配配置文件下载。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [SiriKit (Apple)](https://developer.apple.com/documentation/sirikit)
 - [TasksNotes SiriKit 示例](https://developer.xamarin.com/samples/monotouch/ios11/SiriKitSample/)
-- [什么是新建中 SiriKit (WWDC) （视频）](https://developer.apple.com/videos/play/wwdc2017/214/)
+- [What's New 中 SiriKit (WWDC) （视频）](https://developer.apple.com/videos/play/wwdc2017/214/)

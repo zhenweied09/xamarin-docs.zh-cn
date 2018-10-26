@@ -1,28 +1,28 @@
 ---
-title: Android 设计器中调整 Java 内存参数
+title: 调整 Android designer 的 Java 内存参数
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 691be280b80e379863cc09d0f1bba0ff5882cf21
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732916"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118053"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android 设计器中调整 Java 内存参数
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>调整 Android designer 的 Java 内存参数
 
-在启动时使用的默认内存参数`java`处理 Android 设计器可能与某些系统配置不兼容。
+启动时使用的默认内存参数`java`处理有关 Android 设计器可能与某些系统配置不兼容。
 
-开始使用 Xamarin Studio 5.7.2.7 （和更高版本、 Visual Studio for Mac） 和 Visual Studio Tools for Xamarin 3.9.344，可以根据每个项目中自定义这些设置。
+从 Xamarin Studio 5.7.2.7 （和更高版本、 Visual Studio for Mac） 和 Visual Studio Tools for Xamarin 3.9.344，可以基于每个项目自定义这些设置。
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>新的 Android 设计器属性和相应的 Java 选项
 
-下面的属性名称对应于指示 java[命令行选项](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
+下面的属性名称对应于所指示的 java[命令行选项](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
 - **AndroidDesignerJavaRendererMinMemory** -Xms
 
@@ -31,19 +31,19 @@ ms.locfileid: "34732916"
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  在 Visual Studio 中打开解决方案。
 
-2.  在解决方案资源管理器中选择一个地的每个 Android 项目，然后单击[显示所有文件](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx)两次上每个项目。 你可以跳过不包含任何项目的项目`.axml`布局文件。 此步骤将确保每个项目目录包含`.csproj.user`文件。
+2.  在解决方案资源管理器中选择一个地的每个 Android 项目，然后单击[显示所有文件](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx)两次上每个项目。 你可以跳过项目不包含任何`.axml`布局文件。 此步骤将确保每个项目目录包含`.csproj.user`文件。
 
 3.  退出 Visual Studio。
 
 4.  找到`.csproj.user`为每个步骤 2 中的项目文件。
 
-5.  编辑每个`.csproj.user`在文本编辑器中的文件。
+5.  编辑每个`.csproj.user`文本编辑器中的文件。
 
-6.  添加新的 Android 设计器的内存属性内的任意或全部`<PropertyGroup>`元素。 你可以使用现有`<PropertyGroup>`或创建一个新。 下面是一个完整示例`.csproj.user`文件都包括所有 3 属性设置为其默认值：
+6.  添加 any 或 all 中的新 Android 设计器的内存属性`<PropertyGroup>`元素。 可以使用现有`<PropertyGroup>`或新建一个。 下面是一个完整示例`.csproj.user`文件，其中包含所有 3 个属性设置为其默认值：
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -63,25 +63,25 @@ ms.locfileid: "34732916"
 
 8.  重新启动 Visual Studio 并重新打开你的解决方案。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  打开你在 Visual Studio for Mac，以确保解决方案目录中的解决方案包含`.userprefs`文件。
+1.  打开你的解决方案在 Visual Studio for Mac，以确保解决方案目录包含`.userprefs`文件。
 
 2.  退出 Visual Studio for mac。
 
-3.  找到`.userprefs`解决方案目录中的文件。
+3.  找到`.userprefs`的解决方案目录中的文件。
 
-4.  编辑`.userprefs`在文本编辑器中的文件。
+4.  编辑`.userprefs`文本编辑器中的文件。
 
-5.  查找具有以下格式的现有 XML 元素。 此元素名称的最后一部分将与你的项目的名称匹配： 在此示例中的"AndroidApplication1":
+5.  找到具有以下格式的现有 XML 元素。 此元素名称的最后一个部分将匹配项目的名称:"AndroidApplication1"在此示例中：
 
     ```xml
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >
     ```
 
-6.  如果`<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >`元素不存在，则在封闭的任何位置创建它`<Properties>`元素。 请确保将"AndroidApplication1"替换为你项目的名称。
+6.  如果`<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >`元素不存在，在包含它的任意位置创建它`<Properties>`元素。 请确保"AndroidApplication1"替换为你的项目的名称。
 
-7.  添加任何或所有新的 Android 设计器的内存属性作为元素的属性。 下面是一个完整示例`.userprefs`文件都包括所有 3 属性设置为其默认值：
+7.  将任何或所有的新的 Android 设计器的内存属性添加为元素的属性。 下面是一个完整示例`.userprefs`文件，其中包含所有 3 个属性设置为其默认值：
 
     ```xml
     <Properties StartupItem="AndroidApplication1\AndroidApplication1.csproj">
@@ -95,11 +95,11 @@ ms.locfileid: "34732916"
     </Properties>
     ```
 
-8.  重复步骤 5-7 用于每个 Android 项目中包含任何的解决方案`.axml`布局文件。 (即，添加一个`<MonoDevelop.Ide.ItemProperties.ProjectName>`每个项目的元素。)
+8.  重复步骤 5-7 为每个 Android 项目的解决方案中的包含任何`.axml`布局文件。 (即，添加一个`<MonoDevelop.Ide.ItemProperties.ProjectName>`元素为每个项目。)
 
 9.  保存并关闭`.userprefs`文件。
 
-10. 适用于 Mac 重新启动 Visual Studio 并重新打开你的解决方案。
+10. 重启 Visual Studio for Mac，并重新打开你的解决方案。
 
 -----
 

@@ -4,15 +4,15 @@ description: 本文档介绍 iOS 本地化功能以及如何在 Xamarin.iOS 应�
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 2a6096efc18f40d18ea37573e77d93796e812cc2
-ms.sourcegitcommit: 4cc17681ee4164bdf2f5da52ac1f2ae99c391d1d
+ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39387435"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115921"
 ---
 # <a name="localization-in-xamarinios"></a>在 Xamarin.iOS 的本地化
 
@@ -70,8 +70,6 @@ var lang = NSBundle.MainBundle.PreferredLocalizations[0];
 
 iOS 生成`NSCurrentLocaleDidChangeNotification`用户更新其区域设置时。 应用程序可以侦听此通知，虽然它们正在运行，并可以对 UI 进行适当更改。
 
-<a name="basics" />
-
 ## <a name="localization-basics-in-ios"></a>在 iOS 中的本地化基础知识
 
 若要显示给用户提供本地化的资源的 Xamarin 中可轻松利用 iOS 的以下功能。 请参阅[TaskyL10n 示例](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)若要了解如何实现这些概念。
@@ -120,13 +118,13 @@ iOS 生成`NSCurrentLocaleDidChangeNotification`用户更新其区域设置时�
 
 ### <a name="getlocalizedstring-method"></a>GetLocalizedString 方法
 
-`NSBundle.MainBundle.GetLocalizedString`方法查找已存储在中的本地化文本 **.strings**项目中的文件。 这些文件按语言版本，在包含的特别命名目录 **.lproj**后缀。
+`NSBundle.MainBundle.GetLocalizedString`方法查找已存储在中的本地化文本 **.strings**项目中的文件。 这些文件按语言版本，在包含的特别命名目录 **.lproj**后缀 （请注意该扩展的第一个字母为小写"L"）。
 
 #### <a name="strings-file-locations"></a>.strings 文件位置
 
 - **Base.lproj**是包含默认语言资源的目录。
   它通常位于项目根目录中 (但也可以置于**资源**文件夹)。
-- **<language>.lproj**目录创建时为每个支持的语言，通常**资源**文件夹。
+- **&lt;语言&gt;.lproj**目录创建时为每个支持的语言，通常**资源**文件夹。
 
 可以有多个不同 **.strings**每个语言目录中的文件：
 
@@ -147,9 +145,9 @@ iOS 生成`NSCurrentLocaleDidChangeNotification`用户更新其区域设置时�
 
 应转义字符串中的以下字符：
 
-* `\"`  引号
-* `\\`  反斜杠
-* `\n`  换行符
+* `\"` 引号
+* `\\` 反斜杠
+* `\n` 换行符
 
 这是一个示例**es/Localizable.strings** (ie。西班牙语） 文件中的示例：
 
@@ -171,16 +169,15 @@ iOS 生成`NSCurrentLocaleDidChangeNotification`用户更新其区域设置时�
 
 1. 请参阅图在代码中，例如：
 
-  ```csharp
-  UIImage.FromBundle("flag");
-  ```
+    ```csharp
+    UIImage.FromBundle("flag");
+    ```
 
 2. 将默认图像文件放**flag.png**中**Base.lproj** （本机开发语言目录）。
 
 3. 根据需要将中的图像的本地化的版本放 **.lproj**文件夹 （例如每种语言。 **es.lproj**， **ja.lproj**)。 使用相同的文件名**flag.png**中每个语言的目录。
 
 如果映像不存在特定的语言，iOS 将回退到默认的本机语言文件夹并从那里加载图像。
-
 
 #### <a name="launch-images"></a>启动图像
 
@@ -247,14 +244,14 @@ Medium,None: 7/8/2015
 
 <a name="rtl" />
 
-### <a name="right-to-left-rtl-layout"></a>右到左 (RTL) 布局
+### <a name="right-to-left-rtl-layout"></a>从右到左 (RTL) 布局
 
 iOS 提供了许多功能可帮助构建 RTL 识别应用程序：
 
-* 使用自动布局`leading`和`trailing`控件对齐 （这对应于左侧和右侧表示英语，但是对于 RTL 语言相反） 的属性。
+- 使用自动布局`leading`和`trailing`控件对齐 （这对应于左侧和右侧表示英语，但是对于 RTL 语言相反） 的属性。
   [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md)控件是对布局控件是 RTL 感知特别有用。
-* 使用`TextAlignment = UITextAlignment.Natural`（这将会保留对于大多数语言，但适合 RTL） 的文本对齐方式。
-* `UINavigationController` 自动翻转后退按钮，并反转轻扫方向。
+- 使用`TextAlignment = UITextAlignment.Natural`（这将会保留对于大多数语言，但适合 RTL） 的文本对齐方式。
+- `UINavigationController` 自动翻转后退按钮，并反转轻扫方向。
 
 下面的屏幕截图演示[本地化 Tasky 示例](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)阿拉伯语和希伯来语中 （尽管已在字段中输入英语）：
 
@@ -322,8 +319,8 @@ someControl.Text = localizedString;
 
 创建和编辑情节提要中的控件，请选择每个控件，并选中要用于本地化的 ID:
 
-* 在 Visual Studio for Mac 中，该文件位于**Properties Pad**称为**本地化 ID**。
-* 在 Xcode 中，名为**对象 ID**。
+- 在 Visual Studio for Mac 中，该文件位于**Properties Pad**称为**本地化 ID**。
+- 在 Xcode 中，名为**对象 ID**。
 
 此字符串值通常具有"NF3-h8-xmR"，如一个窗体，如以下屏幕截图中所示：
 

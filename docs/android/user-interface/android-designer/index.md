@@ -1,40 +1,40 @@
 ---
-title: Android Designer
-description: 本文介绍如何在 Xamarin.Android 设计器的功能。 它介绍了设计器的基础知识，显示如何使用设计器进行布局小组件以可视方式以及如何编辑属性。 它还显示如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。
+title: Xamarin.Android 设计器
+description: 本文介绍 Xamarin.Android 设计器的功能。 它还说明了设计器基础知识，演示如何使用设计器以可视方式布置小组件和编辑属性。 它还阐释了如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计的横向和纵向等的替代视图。
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: 20da09895bae759c77e96300d798267881a7cbfd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 07/25/2018
+ms.openlocfilehash: 1923d11829cf96941c8775f5f6b013116e0f2893
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114506"
 ---
-# <a name="android-designer"></a>Android Designer
+# <a name="xamarinandroid-designer"></a>Xamarin.Android 设计器
 
-_本文介绍如何在 Xamarin.Android 设计器的功能。它介绍了设计器的基础知识，显示如何使用设计器进行布局小组件以可视方式以及如何编辑属性。它还显示如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何设计横向和纵向等的替代视图。_
+_本文介绍 Xamarin.Android 设计器的功能。它还说明了设计器基础知识，演示如何使用设计器以可视方式布置小组件和编辑属性。它还阐释了如何使用设计器使用跨各种配置，如主题、 语言和设备配置的用户界面和资源，以及如何替代如横向和纵向视图的设计。_
 
 
 ## <a name="overview"></a>概述
 
-Xamarin.Android 支持这两种声明性风格用户界面设计基于在 XML 文件，以及在代码中创建的编程的用户界面。
-使用声明性方法时，XML 文件可以是手动编辑或已修改以可视方式使用 Xamarin.Android 设计器。 使用设计器 UI 创建期间允许即时的反馈，加快开发，并使 UI 创建的过程不太费力。
+Xamarin.Android 支持基于 XML 文件，以及在代码中创建的编程式用户界面中的用户界面设计的这两个以声明性方式。
+使用声明性方法时，XML 文件可以是手动编辑或修改直观地使用 Xamarin.Android 设计器。 使用设计器的 UI 创建期间允许即时的反馈，以加速开发，并使 UI 创建的过程不太费力。
 
-这篇文章调查 Xamarin.Android 设计器的许多功能。 它还说明了：
+本文调查了 Xamarin.Android 设计器的许多功能。 它说明了：
 
 1.  使用设计器的基础知识。
-2.  构成设计器中的各个部分。
-3.  如何在设计器加载 Android 布局。
+2.  使设计器中的各个部分。
+3.  如何将 Android 布局加载到设计器。
 4.  如何添加小组件。
 5.  如何编辑属性。
 6.  如何使用各种资源和设备配置。
-7.  如何修改横向和纵向如替代视图的用户界面。 
-8.  如何处理使用备用的视图时可能出现的冲突。 
-9.  如何使用材料设计工具来生成材料设计符合应用。
+7.  如何修改横向与纵向如替代视图的用户界面。 
+8.  如何处理可能时使用替代视图导致的冲突。 
+9.  如何使用材料设计工具来构建材料设计-兼容的应用程序。
 
 
 
@@ -54,7 +54,8 @@ Xamarin.Android 支持这两种声明性风格用户界面设计基于在 XML �
 
 ## <a name="summary"></a>总结
 
-本文讨论了 Xamarin.Android 设计器的功能集。 它介绍了如何开始使用设计器中，并且说明了其各个部分。 它介绍如何加载了布局，以及如何添加和修改小组件，均使用**属性填充**和设计器图面上的内联。 它还说明了如何使用各种资源和设备配置。 最后，它会检查如何使用设计器开发专为替代视图，例如横向和纵向、 的用户界面，以及如何解决可能出现此类视图之间的冲突。 
+本文讨论了 Xamarin.Android 设计器的功能集。
+它介绍了如何开始使用设计器中，并说明其各部分。 它描述如何加载布局，以及如何添加和修改小组件，通过使用两**设计器图面**并将**源**视图。 它还介绍了如何使用各种资源和设备配置。 最后，它会检查如何使用设计器开发专为替代视图，如横向与纵向，生成的用户界面，以及如何解决可能会出现此类视图之间的冲突。
 
 
 

@@ -3,25 +3,25 @@ title: 应用程序本地化和字符串资源
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: cfb127500f919b61788087465700dfed213d5eb2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9d90e371199c8587d61199240523cf0a23f5efd
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765849"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116519"
 ---
 # <a name="application-localization-and-string-resources"></a>应用程序本地化和字符串资源
 
-应用程序本地化是一种提供备用的资源，若要针对某个特定区域设置的行为。 例如，您可能为各种国家/地区，提供本地化的语言字符串或颜色或布局以匹配特定区域性可能会更改。 Android 将加载并在无源代码的任何更改的运行时时使用适用于设备的区域设置的资源。
+应用程序本地化是提供备用资源，以针对某个特定区域设置的操作。 例如，你可能会对于各种国家/地区，提供本地化的语言字符串或可能会更改颜色或布局以匹配特定区域性。 Android 将加载并在运行时无需更改源代码时使用适用于设备的区域设置的资源。
 
-例如下, 图显示了在三个不同的设备区域设置中，运行的相同应用程序，但在每个按钮上显示的文本是特定于每个设备设置为的区域设置：
+例如下, 图显示了在三个不同的设备区域设置中，运行的相同应用程序，但每个按钮中显示的文本是特定于每个设备设置为的区域设置：
 
 [![三个不同的区域设置的示例](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
-在此示例中，文件的内容布局， **main.axml**如下所示：
+在此示例中，布局文件的内容**Main.axml**外观如下所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -39,27 +39,27 @@ android:text="@string/hello"
 </LinearLayout>
 ```
 
-在上面的示例中，该按钮的字符串从资源加载的字符串中提供的资源 ID:
+在上面的示例中，为按钮的字符串从资源加载通过提供的资源 ID 的字符串：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![这三种语言的资源字符串](application-localization-images/02-resource-strings-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![这三种语言的资源字符串](application-localization-images/02-resource-strings-xs.png)
  
 -----
  
-## <a name="localizing-android-apps"></a>本地化 Android 应用
+## <a name="localizing-android-apps"></a>本地化的 Android 应用
 
-读取[简介本地化](~/cross-platform/app-fundamentals/localization.md)有关提示和本地化的移动应用程序的指南。
+读取[简介本地化](~/cross-platform/app-fundamentals/localization.md)的提示和本地化移动应用的指南。
 
-[本地化 Android 应用](~/android/app-fundamentals/localization.md)指南包含有关如何将字符串翻译和本地化映像使用 Xamarin.Android 的更具体示例。
+[本地化 Android 应用](~/android/app-fundamentals/localization.md)指南包含有关如何将字符串翻译和本地化使用 Xamarin.Android 的映像更具体的示例。
 
 
 
 ## <a name="related-links"></a>相关链接
 
-- [本地化 Android 应用](~/android/app-fundamentals/localization.md)
+- [本地化的 Android 应用](~/android/app-fundamentals/localization.md)
 - [跨平台本地化概述](~/cross-platform/app-fundamentals/localization.md)

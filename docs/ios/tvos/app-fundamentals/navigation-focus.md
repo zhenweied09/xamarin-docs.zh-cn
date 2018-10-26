@@ -1,87 +1,87 @@
 ---
-title: 使用 tvOS 导航和焦点中 Xamarin
-description: 本文介绍如何焦点以及如何使用它为在 Xamarin.tvOS 应用内部处理导航和呈现的概念。
+title: 使用 tvOS 导航和焦点在 Xamarin 中
+description: 本文介绍如何焦点和如何它用来显示和处理在 Xamarin.tvOS 应用内导航的概念。
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2af3306b605ee802b72b159d5f2759d71d292a64
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1cfa51b8e5434480d7d15fbf23d78f8b8735f16a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112580"
 ---
-# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>使用 tvOS 导航和焦点中 Xamarin
+# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>使用 tvOS 导航和焦点在 Xamarin 中
 
-_本文介绍如何焦点以及如何使用它为在 Xamarin.tvOS 应用内部处理导航和呈现的概念。_
+_本文介绍如何焦点和如何它用来显示和处理在 Xamarin.tvOS 应用内导航的概念。_
 
 
-本文介绍的概念[焦点](#Focus-and-Selection)以及如何使用它来处理[导航](#Navigation)Xamarin.tvOS 应用程序的用户界面中。 我们将检查内置 tvOS 导航控件如何使用焦点、 高亮和选择提供 Xamarin.tvOS 应用程序的用户界面导航。
+这篇文章介绍的概念[焦点](#Focus-and-Selection)以及如何它用于处理[导航](#Navigation)Xamarin.tvOS 应用的用户界面中。 我们将介绍内置 tvOS 导航控件如何使用焦点、 突出显示和选择内容提供 Xamarin.tvOS 应用的用户界面导航。
 
 [![](navigation-focus-images/intro01.png "tvOS 应用用户界面导航")](navigation-focus-images/intro01.png#lightbox)
 
-接下来，我们来看看如何与使用焦点[视差](#Focus-and-Parallax)和*分层映像*可为当前的导航状态提供视觉线索，向最终用户。
+接下来，我们来看看如何配合使用焦点[视差](#Focus-and-Parallax)并*分层映像*当前导航状态向最终用户提供可视线索。
 
-最后，我们将看一下使用[焦点](#Working-with-Focus)，[焦点更新](#Working-with-Focus-Updates)，[焦点指南](#Working-with-Focus-Guides)，[集合中的焦点](#Working-with-Focus-in-Collections)和[启用视差](#Enabling-Parallax)Xamarin.tvOS 应用中的图像视图。
+最后，我们将介绍使用[焦点](#Working-with-Focus)，[焦点更新](#Working-with-Focus-Updates)，[焦点指南](#Working-with-Focus-Guides)，[集合中的焦点](#Working-with-Focus-in-Collections)和[启用视差](#Enabling-Parallax)Xamarin.tvOS 应用程序中的图像视图。
 
 <a name="Navigation" />
 
 ## <a name="navigation"></a>导航
 
-Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中他们点击设备的屏幕上的映像但间接从跨聊天室使用交互[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)。 你将需要设计应用程序的用户界面，以便它流动当然，但保留用户深陷于 Apple TV 体验时记住这一点。
+Xamarin.tvOS 应用程序的用户将不与它的接口直接作为 ios 其中用户点击设备的屏幕上的映像但间接从跨空间使用交互[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)。 需要时设计应用程序的用户界面，以便它流很自然地，但保留沉浸在 Apple TV 体验用户记住这一点。
 
-成功 tvOS 应用平稳支持应用程序的用途以及它提供而不会调用注意导航本身的数据结构的方式实现导航。 设计你导航，使它而无需占据用户界面或绘制焦点离开内容和应用程序用户体验的外观自然和熟悉程度。
+成功的 tvOS 应用顺利地支持应用程序的用途和它而不会调用注意导航本身提供的数据结构的方式实现导航。 设计您的导航，使它感觉自然且熟悉而无需在支配用户界面或绘制焦点从内容和应用程序的用户体验。
 
 [![](navigation-focus-images/nav01.png "TvOS 设置应用程序")](navigation-focus-images/nav01.png#lightbox)
 
-虽然通常使用 Apple TV，用户将转到堆积的一组屏幕，每个提供一组给定的内容。 反过来，每个新的屏幕可能会导致使用如的标准 UI 控件的内容的一个或多个子屏幕[按钮](~/ios/tvos/user-interface/buttons.md)，[选项卡条](~/ios/tvos/user-interface/tab-bars.md)，表，[集合视图](~/ios/tvos/user-interface/collection-views.md)或[拆分视图](~/ios/tvos/user-interface/split-views.md)。
+虽然通常使用 Apple TV 中，用户将转到堆栈集屏幕，每个提供一组给定的内容。 反过来，每个新的屏幕可能会导致一个或多个使用如的标准 UI 控件的内容的子屏幕[按钮](~/ios/tvos/user-interface/buttons.md)，[选项卡栏](~/ios/tvos/user-interface/tab-bars.md)，表[集合视图](~/ios/tvos/user-interface/collection-views.md)或[拆分视图](~/ios/tvos/user-interface/split-views.md)。
 
-与数据的每个新屏幕上，用户导航更深入到此堆栈的屏幕。 通过使用**菜单**按钮上使用 Siri 远程，它们可以向后导航整个堆栈，以返回到之前的屏幕或主菜单中。
+使用数据的每个新屏幕，用户导航更深入到此堆栈的屏幕。 通过使用**菜单**按钮远程计算机上使用 Siri，它们可以向后导航到要返回到上一屏幕或主菜单中的堆栈。
 
-Apple 提供的建议设计应用程序 tvOS 导航时记住以下：
+请记住以下设计你的 tvOS 应用的导航时，Apple 提供建议：
 
-- **布局你导航到快速进行查找的内容且易于**-最小数目的 tap，你的应用程序中的访问内容的用户需要单击和尽可能刷。 简化你导航和组织屏幕的最小数字的内容。
-- **创建流体接口使用 Touch** -确保用户可以之间移动_可获得焦点的项_与使用手势可能的最小数目的最小问题。
-- **具有焦点记住设计**-由于用户在同一房间与内容交互，它们需要在与它使用 Siri 远程交互之前将焦点移到用户界面项。 如果它要求他们实现其目标的太多手势，用户将获得沮丧与你的应用。
-- **提供向后导航菜单按钮通过**-若要创建的简单且熟悉的体验，允许用户向后使用 Siri 远程导航**菜单**按钮。 按**菜单**按钮应始终返回到之前的屏幕或返回到应用程序的主菜单中。 在应用程序的顶部级别，按**菜单**按钮应返回到 Apple 电视主页屏幕。
-- **通常避免显示后退按钮**-因为按**菜单**上使用 Siri 远程按钮屏幕堆栈中向后导航，避免显示额外的控制，它将复制此行为。 此规则的唯一例外是购买屏幕或破坏性操作 （如删除内容） 的屏幕位置**取消**应也显示按钮。
-- **显示在单个屏幕上，而不是许多大型集合**-Siri 远程旨在使滚动的内容快速的大型集合并轻松使用手势。 如果你的应用程序处理的可获得焦点的项的大型集合，请考虑将它们放在单个屏幕而不是中断到许多屏幕这需要对用户的一部分的多个导航。
-- **为 Navigation 使用标准控件**-再次，若要创建的简单且熟悉的用户体验，只要有可能，请使用内置`UIKit`控件如页面控件、 选项卡条、 分段控件、 表视图、 集合视图和拆分你的应用导航的视图。 用户已熟悉这些元素，因为它们直观地将能够在你的应用程序。
-- **倾向于水平内容导航**-由于 Apple TV 的性质，轻扫从左到右上使用 Siri 远程是比更自然高和调低。 设计内容布局为你的应用时，请考虑此选项。
+- **布局到快速进行查找的内容且易于导航**-用户想访问内容的最少数量的分流点，在应用内单击，并尽可能轻扫。 简化您的导航和组织内容的屏幕的最小数字。
+- **创建流畅接口使用触摸**-确保用户可以移动之间_可获得焦点项_的同时使用手势可能的最小数目的最小冲突。
+- **在考虑到中具有焦点的设计**-用户在同一房间与内容交互，因为它们需要与它使用 Siri 远程交互之前将焦点移动到用户界面项。 如果要求才能实现其目标太多手势，用户将获得您的应用程序感到失望。
+- **提供向后导航菜单按钮通过**-若要创建的简单且熟悉的体验，允许用户向后使用 Siri 远程导航**菜单**按钮。 按下**菜单**按钮应始终返回到上一屏幕或返回到应用程序的主菜单。 在应用程序的最高级别，按**菜单**按钮应返回到 Apple 电视主页屏幕。
+- **通常避免显示后退按钮**-因为按**菜单**上使用 Siri 远程按钮屏幕堆栈中向后导航，应避免显示复制此行为的额外控件。 此规则的例外是购买屏幕或具有破坏性操作 （如删除内容） 的屏幕位置**取消**应还显示按钮。
+- **显示在单个屏幕上，而不是许多大型集合**-Siri 远程旨在使浏览大型集合的内容快速和轻松使用手势。 如果您的应用程序适用于可获得焦点项的大型集合，请考虑将它们保留在单个屏幕而不是它们分解成许多屏幕，这需要在用户的一部分的多个导航。
+- **使用标准控件的导航**-同样，若要创建的简单且熟悉的用户体验，只要有可能，使用内置`UIKit`页面控件、 选项卡栏，分段控件、 表视图、 集合视图和拆分等控件你的应用导航的视图。 因为用户已熟悉这些元素，它们将直观地能够导航您的应用程序。
+- **倾向于水平内容导航**-Apple TV 的性质，轻扫从左到右 Siri 远程上的是比向上和向下更自然。 设计内容布局为你的应用时，请考虑此选项。
 
 <a name="Focus-and-Selection" />
 
-## <a name="focus-and-selection"></a>焦点和所选内容
+## <a name="focus-and-selection"></a>焦点和选择内容
 
-在 Apple TV，图像、 按钮或其他 UI 元素被视为可_焦点_时当前导航的目标。
+在 Apple TV 图像、 按钮或其他 UI 元素被视为_焦点_时的当前导航目标。
 
-[![](navigation-focus-images/focus01.png "焦点和选择示例")](navigation-focus-images/focus01.png#lightbox)
+[![](navigation-focus-images/focus01.png "焦点和选择内容示例")](navigation-focus-images/focus01.png#lightbox)
 
-与不同，在用户与设备的触摸屏上的元素的直接交互其中的 iOS 设备在同一房间使用 Siri 远程与从 tvOS 元素进行交互的用户。 若要显示和处理这种用户交互，Apple TV 使用_焦点_基于模型。
+与不同，在用户直接交互使用设备的触摸屏上的元素的 iOS 设备使用 Siri 远程在室内与从 tvOS 元素进行交互的用户。 若要显示和处理这种用户交互，Apple TV 使用_焦点_基于的模型。
 
-使用手势和按钮按下[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)，用户将焦点从一个用户界面元素移到另一个。 一旦焦点已移动到需要的元素，用户可单击以选择的内容或激活该元素所表示的操作。
+使用笔势和按钮按下上[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)，用户将焦点从一个 UI 元素移到另一个。 一旦焦点已移动到所需的元素，用户单击以选择的内容或激活该元素所表示的操作。
 
-焦点发生变动，作为使用细微动画和 （如对映像视差影响） 的效果清楚地将标识当前具有焦点的用户界面项。
+焦点发生变动，作为使用精致的动画效果和副作用 （例如映像上视差效果） 用于明确识别当前具有焦点的用户界面项。
 
-Apple 具有用于处理焦点和选择以下建议：
+Apple 具有用于处理焦点和选择内容的以下建议：
 
-- **使用内置 UI 控件时动作效果**-通过使用`UIKit`和你的用户界面，焦点模型中的焦点 API 将自动应用的默认运动和视觉效果到你的 UI 元素。 这使得你应用感觉本机和熟悉的 Apple TV 平台的用户，并允许可获得焦点的项之间的流畅和直观移动。
-- **将焦点移预期双向**-上 Apple TV 中，几乎每个元素使用间接操作。 例如，用户使用 Siri 远程要将焦点移并系统自动滚动要保持当前具有焦点的项可见的接口。 如果你的应用程序实现这种类型的交互，请确保焦点上移开，按用户的手势的方向。 因此，如果用户轻扫权限 Siri 远程焦点应移动到右侧 （这会导致向左滚动屏幕）。 此规则的一个例外是使用直接操作 （其中向上轻扫移元素） 的全屏项。
-- **确保已设定焦点的项是 Obvious** -因为你的用户与你的 UI 元素 £ ¬ 交互，很重要代表当前具有焦点的项。通常这将自动由处理内置`UIKit`元素。 对于自定义控件，使用功能，如项大小或卷影显示焦点。
-- **使用到使已设定焦点的项响应视差**-小上使用 Siri 远程, 的循环笔势导致平缓、 实时移动的已设定焦点的项。 这[视差效果](#Focus-and-Parallax)内置于`UIKit`_分层映像_授予连接到已设定焦点的项的意义上的用户。
-- **创建的相应大小的焦点项**-具有充足的间距的大型项是更轻松地选择和导航比较小的项。
-- **设计用户界面元素到查找良好是已设定焦点或 Unfocused** -通常 Apple TV 通过增加其大小表示已设定焦点的项。 确保你的应用程序的 UI 元素查找适合于任何演示文稿大小和，必要情况下，提供更大大小的元素的资产。
-- **表示必须焦点更改**-使用动画可顺利淡入淡出项之间**已设定焦点**和**Unfocused**需要快从正在转换的状态。
-- **不会正确显示游标**-用户希望导航应用程序的 UI 使用焦点而不是移动在屏幕的游标。 你的用户界面应始终使用焦点模型以提供一致的用户体验。
+- **对于动态效果，使用内置的 UI 控件**-通过使用`UIKit`和您的用户界面，焦点模型中的焦点 API 将自动应用的默认动画和视觉效果到 UI 元素。 这使应用感觉本机和 Apple TV 平台的用户熟悉并允许可获得焦点的项之间的流畅且直观的移动。
+- **将焦点移在预期的方向上**-在 Apple TV 中，几乎每个元素使用间接操作。 例如，用户时使用 Siri 远程将焦点移和系统，自动滚动以使当前聚焦的项保持可见的接口。 如果您的应用程序实现这种类型的交互，请确保焦点移动在用户的手势的方向。 因此，如果用户往下轻扫权限 Siri 远程焦点应移动到右 （这会导致滚动到左侧屏幕）。 此规则的一个例外是使用直接操作 （其中向上轻扫上移该元素） 的全屏幕项。
+- **确保已设定焦点项位于 Obvious** -与你的 UI 元素远程交互，你的用户，因为很重要，当前聚焦的项更醒目。通常这将自动由处理内置`UIKit`元素。 对于自定义控件，使用功能，如项大小或卷影显示焦点。
+- **使用到使已设定焦点项响应式视差**-小，循环手势 Siri 远程上的导致简要、 实时的方式移动的已设定焦点的项。 这[视差效果](#Focus-and-Parallax)内置`UIKit`_分层映像_让用户连接到已设定焦点的项的了解。
+- **创建具有适当大小的可获得焦点项**-具有充足的间距的大型项是更轻松地选择和导航比较小的项。
+- **设计用户界面元素看起来很好或者已设定焦点或 Unfocused** -通常 Apple TV 通过增加其大小表示已设定焦点的项。 请确保你的应用的 UI 元素外观精美在以任何演示文稿大小和，如有必要，提供更大大小的元素的资产。
+- **表示焦点流畅地更改**-使用动画项之间顺利淡**已设定焦点**和**Unfocused**状态保留转换被他们疑惑不解。
+- **不显示光标**-用户希望导航应用程序的 UI 使用焦点而不是将光标在屏幕上四处移动。 您的用户界面应始终使用焦点模型以提供一致的用户体验。
 
 <a name="Working-with-Focus" />
 
 ### <a name="working-with-focus"></a>使用焦点
 
-可能存在你想要创建自定义控件可能会成为可获得焦点的项的时间。 如果因此重写`CanBecomeFocused`属性，并返回`true`，否则返回`false`。 例如：
+可能想要创建的自定义控件，可能会变得可获得焦点项的时间。 如果因此替代`CanBecomeFocused`属性，并返回`true`，否则返回`false`。 例如：
 
 ```csharp
 public class myView : UIView
@@ -92,7 +92,7 @@ public class myView : UIView
 }
 ```
 
-在任何时候，你可以使用`Focused`属性`UIKit`控件以查看其是否当前项。 如果`true`UI 项当前具有焦点，否则不。 例如：
+随时可以使用`Focused`属性的`UIKit`控件以查看它是否是当前项。 如果`true`UI 项当前具有焦点，否则不会。 例如：
 
 ```csharp
 // Is my view in focus?
@@ -102,7 +102,7 @@ if (myView.Focused) {
 }
 ```
 
-尽管通过代码，你不能直接将焦点移到另一个用户界面元素，可以指定哪些用户界面元素首先获得焦点时屏幕加载通过设置其`PreferredFocusedView`属性`true`。 例如：
+虽然通过代码，您不能直接将焦点移到另一个用户界面元素，可以指定哪些 UI 元素首先获得焦点，通过设置加载屏幕时其`PreferredFocusedView`属性设置为`true`。 例如：
 
 ```csharp
 // Make the play button the starting focus item
@@ -113,17 +113,17 @@ playButton.PreferredFocusedView = true;
 
 ### <a name="working-with-focus-updates"></a>使用焦点更新 
 
-当用户导致焦点从一个用户界面元素移动到另一个 （例如，在响应上使用 Siri 远程笔势）_焦点更新事件_将发送到失去焦点的项和获得焦点的项。
+当用户将导致焦点从一个 UI 元素转到另一个 （例如，在对 Siri 远程手势响应）_焦点更新事件_将发送到失去焦点的项和获得焦点的项。
 
-继承的自定义元素`UIView`或`UIViewController`，您可以重写以处理焦点更新事件的多个方法：
+继承的自定义元素的`UIView`或`UIViewController`，可以重写几种方法来处理焦点更新事件：
 
-- **DidUpdateFocus** -视图获得或失去焦点的任何时间都将调用此方法。
+- **DidUpdateFocus** -将视图获得或失去焦点时调用此方法。
 - **ShouldUpdateFocus** -此方法用于定义允许其中移动焦点。
 
-若要请求，焦点引擎移动焦点回`PreferredFocusedView`UI 元素，调用`SetNeedsUpdateFocus`视图控制器的方法。
+若要请求，焦点引擎会移动焦点返回到`PreferredFocusedView`UI 元素，调用`SetNeedsUpdateFocus`的视图控制器的方法。
 
 > [!IMPORTANT]
-> 调用`SetNeedsUpdateFocus`仅当针对调用视图控制器包含当前具有焦点的视图不起作用。
+> 调用`SetNeedsUpdateFocus`才起对正在调用它的视图控制器包含当前具有焦点的视图。
 
 
 
@@ -132,19 +132,19 @@ playButton.PreferredFocusedView = true;
 
 ### <a name="working-with-focus-guides"></a>使用焦点指南
 
-内置于 tvOS 的焦点引擎是很好地处理落在水平和垂直网格的项之间的动作数。 通常情况下，你需要执行任何操作，多个添加到接口设计和焦点引擎的 UI 元素将自动处理这些元素，而开发人员介入无之间移动。
+内置于 tvOS 的焦点引擎是适合处理落在水平和垂直网格的项之间移动。 通常情况下，您需要执行任何操作多个添加到界面设计和焦点引擎的 UI 元素将自动处理而无需开发人员干预这些元素之间移动。
 
-但是，可能有时间，由于您的用户界面设计、 必需品时 UI 元素不会在水平和垂直网格上和可能无法访问，因为它们是彼此对角线。 这是因为焦点引擎被设计为处理简单向上、 向下，仅限 UI 项之间的左和向右移动。
+但是，可能有时间，因为您的用户界面设计、 必要条件时 UI 元素不处于上水平和垂直网格，并且可能无法访问，因为它们是相互对角线。 这是因为焦点引擎被设计为处理简单，向下，仅 UI 项之间的左和向右移动。
 
-执行示例的以下 UI 布局：
+执行以下 UI 布局有关的示例：
 
  [![](navigation-focus-images/guide01.png "使用焦点指南示例")](navigation-focus-images/guide01.png#lightbox)
  
-因为**详细信息**按钮不在上水平和垂直网格与**购买**按钮将用户都无法访问。 但是，这可以轻松地使用更正_焦点指南_向焦点引擎提供移动提示。 
+因为**详细信息**上的水平和垂直网格与按钮不会回退**购买**按钮会向用户无法访问。 但是，这可以轻松地使用更正_重点指南_提供焦点引擎为移动提示。 
 
-焦点指南 (`UIFocusGuide`) 将作为到焦点引擎，从而允许重定向到另一个视图的焦点 Focusable 公开非可见区域的视图。
+重点指南 (`UIFocusGuide`) 公开为 Focusable 到焦点引擎，从而允许焦点重定向到另一个视图的视图的不可见区域。
 
-因此，若要解决上述示例中，下面的代码无法添加到视图控制器创建之间焦点指南**详细信息**和**购买**按钮：
+因此，若要解决上述示例中，下面的代码无法添加到视图控制器，才能创建焦点指南之间**详细信息**并**购买**按钮：
 
 ```csharp
 public UIFocusGuide FocusGuide = new UIFocusGuide ();
@@ -166,19 +166,19 @@ public override void ViewDidLoad ()
 }
 ```
 
-首先，新`UIFocusGuide`被创建并添加到视图的布局指南集合使用`AddLayoutGuide`方法。
+首先，一个新`UIFocusGuide`被创建并添加到视图的布局参考线集合使用`AddLayoutGuide`方法。
 
-接下来，相对于调整焦点参考线的顶部、 左、 宽度和高度锚**详细信息**和**购买**按钮，以将其置于它们之间。 请参阅：
+接下来，相对于调整重点指南上、 左、 宽度和高度的定位点**详细信息**并**购买**按钮进行定位它们之间。 请参阅：
 
-[![](navigation-focus-images/guide02.png "示例焦点指南")](navigation-focus-images/guide02.png#lightbox)
+[![](navigation-focus-images/guide02.png "示例重点指南")](navigation-focus-images/guide02.png#lightbox)
 
-它也是特别注意的正在激活新的约束，因为它们通过设置创建其`Active`属性`true`:
+还有一点需要注意正在激活新约束，因为它们创建通过设置其`Active`属性设置为`true`:
 
 ```csharp
 FocusGuide.LeftAnchor.ConstraintEqualTo (...).Active = true;
 ```
 
-新的焦点指南建立并添加到视图，视图控制器的`DidUpdateFocus`可以重写方法，添加以下代码以之间移动**详细信息**和**购买**按钮：
+使用新的焦点指南建立并添加到视图，视图控制器的`DidUpdateFocus`方法可以重写并添加以下代码以切换**更多信息**并**购买**按钮：
 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
@@ -206,16 +206,16 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 }
 ```
 
-首先，此代码 get`NextFocusedView`从`UIFocusUpdateContext`已传入的 (`context`)。 此视图是否`null`，然后不需要任何处理并方法退出。
+首先，此代码获取`NextFocusedView`从`UIFocusUpdateContext`，没有传递 (`context`)。 如果此视图为`null`，然后需要不会进行处理并已退出该方法。
 
-接下来，`nextFocusableItem`计算。 如果它匹配**详细信息**或**购买**按钮，焦点发送到使用焦点指南相反按钮`PreferredFocusedView`属性。 例如：
+下一步，`nextFocusableItem`进行计算。 如果它匹配**详细信息**或**购买**按钮，焦点将发送到相反按钮使用焦点指南`PreferredFocusedView`属性。 例如：
 
 ```csharp
 // Move from the More Info to Buy button
 FocusGuide.PreferredFocusedView = BuyButton;
 ```
 
-事件中均不按钮是焦点移位的源`PreferredFocusedView`清除属性：
+在的任一按钮是焦点班次的源`PreferredFocusedView`清除属性：
 
 ```csharp
 // No valid move
@@ -226,7 +226,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>使用集合中的焦点
 
-在决定是否的单个项可以焦点中时`UICollectionView`或`UITableView`，你将重写方法`UICollectionViewDelegate`或`UITableViewDelegate`分别。 例如：
+确定是否可以单个项中可获得焦点时`UICollectionView`或`UITableView`，将重写的方法`UICollectionViewDelegate`或`UITableViewDelegate`分别。 例如：
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
@@ -244,39 +244,39 @@ public class CardHandDelegate : UICollectionViewDelegateFlowLayout
 }
 ```
 
-`CanFocusItem`方法返回`true`如果当前项可焦点，否则它将返回`false`。
+`CanFocusItem`方法将返回`true`如果当前项可以在具有焦点，否则它返回`false`。
 
-如果你想`UICollectionView`或`UITableView`要记住和还原焦点至最后一项在失去并重新获得焦点时，设置`RemembersLastFocusedIndexPath`属性`true`。
+如果你想`UICollectionView`或`UITableView`若要记住，并将焦点还原到最后一个项丢失和重新获得焦点时，将设置`RemembersLastFocusedIndexPath`属性设置为`true`。
 
 <a name="Focus-and-Parallax" />
 
 ## <a name="focus-and-parallax"></a>焦点和视差
 
-如上面所述，用户界面元素被视为_焦点_时将其当前的项在导航事件期间。 项进入焦点时，通常略有增加其大小和直观地提升使用阴影。 
+如上面所述，用户界面元素被视为_焦点_时的当前项导航事件期间。 项进入焦点时，通常它的大小略有增加，并以可视方式提升使用卷影。 
 
-如果用户在 Siri 远程数据库上进行速度慢、 循环笔势，已设定焦点的项将 sway 实时响应此移动。 Sway 发生时，照明的光泽适用于其映像进行显示表现的图面。 给定的处于非活动状态之后, 的任何扩展的焦点内容变暗和已设定焦点的项将变得甚至更大。 
+如果用户使用 Siri 远程上进行速度较慢且循环手势，已设定焦点的项将 sway 实时响应此移动。 Sway 出现时，照明的光泽应用于其图像进行似乎出类拔萃的图面。 给定的一段非活动状态后, 变暗聚焦不准的任何内容和焦点项将变得更大。 
 
-这些效果协同工作来提供电视屏幕上的内容和与新床从 Apple TV 交互的用户之间的心理连接。
+这些效果协同工作以提供电视屏幕上的内容和躺椅上从 Apple TV 与交互的用户之间的心理连接。
 
-在 Apple TV 上, 此视差效果用于在整个系统传达的 3D 深度和 dynamics 以在焦点的项的意义。 tvOS 使用透明的一系列[分层映像](~/ios/tvos/app-fundamentals/icons-images.md#Layered-Images)它移动，可以动态扩展来创建此效果。
+在 Apple TV 中，此视差效果用于在整个系统传递的 3D 深度和动态，从而焦点项的意义。 tvOS 使用一系列透明[分层映像](~/ios/tvos/app-fundamentals/icons-images.md#Layered-Images)它移动，可以动态扩展以创建这种效果。
 
-分层的映像所需的 tvOS 应用程序的图标，并支持对动态顶部架内容。 尽管不要求这样做，Apple 强烈建议在任何其他可获得焦点的项，在您的应用程序 UI 中实现分层映像。
+分层的映像所需的 tvOS 应用图标和顶层的动态内容的支持。 尽管不要求这样做，Apple 强烈建议在应用程序的 UI 中的任何其他可获得焦点项中实现分层映像。
 
 ### <a name="enabling-parallax"></a>启用视差
 
-`UIImageView`控件 (或任何继承自的控件`UIImageView`) 自动支持视差效果。 默认情况下，此支持被禁用，若要启用它，请使用以下代码：
+`UIImageView`控件 (或任何继承的控件`UIImageView`) 自动支持视差效果。 默认情况下，禁用该支持，以启用它，请使用以下代码：
 
 ```csharp
 myImageView.AdjustsImageWhenAncestorFocused = true;
 ```
 
-此属性设置为`true`，由用户和焦点中选择此项时，图像视图自动将取得视差的效果。
+此属性设置为`true`，图像视图会自动获取视差效果按用户和焦点中选择此项时。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文已覆盖焦点以及如何使用它来处理在 Xamarin.tvOS 应用程序的用户界面中进行导航的概念。 它检查内置 tvOS 导航控件如何使用焦点、 高亮和选择提供导航。 接下来，它看起来了如何焦点可以使用与视差和分层映像，可为当前的导航状态提供视觉线索，向最终用户。 最后，它会检查使用焦点，焦点更新集合和启用视差中的焦点。
+本文只讨论了焦点和如何使用它来处理 Xamarin.tvOS 应用的用户界面中的导航的概念。 它检查内置 tvOS 导航控件如何使用焦点、 突出显示和选择内容提供导航。 接下来，它介绍了如何焦点可以使用与视差和分层映像，为当前的导航状态向最终用户提供可视线索。 最后，它会检查工作具有焦点，焦点更新集合和启用视差中的焦点。
 
 
 
@@ -286,4 +286,4 @@ myImageView.AdjustsImageWhenAncestorFocused = true;
 - [tvOS 示例](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [适用于 tvOS 应用编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

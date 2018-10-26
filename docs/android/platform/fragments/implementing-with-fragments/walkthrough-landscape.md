@@ -4,51 +4,51 @@ ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 58291388d375a4fd9273c8e0cd46db3799966766
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 7ec8ad6ce428107d2255dd07c7e69c9e77780c09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118235"
 ---
 # <a name="fragments-walkthrough-ndash-landscape"></a>片段演练&ndash;横向
 
-[片段演练&ndash;第 1 部分](./walkthrough.md)演示了如何创建和使用片段中的 Android 应用程序面向 phone 上较小的屏幕。 本演练的下一步是修改应用程序以利用平板电脑上的额外水平空间&ndash;将始终会起到列表的一个活动 ( `TitlesFragment`) 和`PlayQuoteFragment`将动态添加到中对用户进行的选定内容的响应的活动：
+[片段演练&ndash;第 1 部分](./walkthrough.md)演示了如何创建和使用面向较小屏幕手机上的 Android 应用中的片段。 本演练的下一步是修改应用程序以充分利用平板电脑上的额外水平间距&ndash;将有一个活动，它将始终为播放列表 ( `TitlesFragment`) 和`PlayQuoteFragment`将动态添加到用户所做的选择内容的响应中的活动：
 
-[![在平板电脑上运行的应用程序](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
+[![平板电脑上运行的应用](./walkthrough-landscape-images/01-tablet-screenshot-sml.png)](./walkthrough-landscape-images/01-tablet-screenshot.png#lightbox)
 
-在横向模式下运行的手机将是有益的此增强功能：
+在横向模式下运行的电话也将受益于此增强功能：
 
-[![在横向模式中 Android 手机上运行应用](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![在横向模式下在 Android 手机上运行的应用](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-## <a name="updating-the-app-to-handle-landscape-orientation"></a>更新应用程序来处理横向
+## <a name="updating-the-app-to-handle-landscape-orientation"></a>更新应用程序来处理横向方向
 
-以下修改之处，将依赖在中完成的工作[片段演练-电话](./walkthrough.md)
+以下修改之处将生成执行的操作为基础[片段演练-电话](./walkthrough.md)
 
-1. 创建备用的布局，以同时显示`TitlesFragment`和`PlayQuoteFragment`。
-1. 更新`TitlesFragment`以检测设备如果正在同时显示两个片段并相应地更改行为。
-1. 更新`PlayQuoteActivity`以关闭该设备时在横向模式中。
+1. 创建备用布局，同时显示这两`TitlesFragment`和`PlayQuoteFragment`。
+1. 更新`TitlesFragment`来检测设备如果同时显示这两个片段，并相应地更改行为。
+1. 更新`PlayQuoteActivity`关闭时在设备处于横向模式。
 
 ## <a name="1-create-an-alternate-layout"></a>1.创建备用布局
 
-Android 设备上创建主活动时, Android 将决定哪种布局加载基于设备的方向。 默认情况下，将提供 Android **Resources/layout/activity_main.axml**布局文件。 对于在横向模式中加载的设备提供 Android 将**Resources/layout-land/activity_main.axml**布局文件。 上的参考线[Android 资源](/xamarin/android/app-fundamentals/resources-in-android)包含 Android 如何判断哪些资源时要为应用程序加载的文件的详细信息。
+Android 设备上创建主活动后，Android 将决定要加载的布局基于设备的方向。 默认情况下，Android 将提供**Resources/layout/activity_main.axml**布局文件。 对于在横向模式下加载的设备将提供 Android **Resources/layout-land/activity_main.axml**布局文件。 上的参考线[Android 资源](/xamarin/android/app-fundamentals/resources-in-android)包含 Android 如何决定要为应用程序加载哪些资源文件的详细信息。
 
-创建备用布局面向**横向**中所述的步骤的方向[备用布局](/xamarin/android/user-interface/android-designer/alternative-layout-views)指南。 这应将新的布局资源文件添加到项目中， **Resources/layout/activity_main.axml**:
+创建面向的备用布局**横向**中所述的步骤的方向[备用布局](/xamarin/android/user-interface/android-designer/alternative-layout-views)指南。 这应将新的布局资源文件添加到项目中， **Resources/layout/activity_main.axml**:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![在解决方案资源管理器的备用布局](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
+[![在解决方案资源管理器中的备用布局](./walkthrough-landscape-images/02-alternate-layout.w157-sml.png)](./walkthrough-landscape-images/02-alternate-layout.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![在本解决方案中的备用布局](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
+[![Solution Pad 中的备用布局](./walkthrough-landscape-images/02-alternate-layout.m743-sml.png)](./walkthrough-landscape-images/02-alternate-layout.m743.png#lightbox)
 
 -----
 
-创建备用版式后，编辑文件的来源**Resources/layout-land/activity_main.axml** ，使其匹配此 XML:
+在创建备用布局之后, 编辑该文件的源**Resources/layout-land/activity_main.axml** ，使其匹配此 XML:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -74,13 +74,13 @@ Android 设备上创建主活动时, Android 将决定哪种布局加载基于�
 </LinearLayout>
 ```
 
-活动的根视图给定的资源 ID`two_fragments_layout`和具有两个子视图，`fragment`和`FrameLayout`。 虽然`fragment`以静态方式加载，`FrameLayout`充当将被替换为在运行时由一个"占位符" `PlayQuoteFragment`。 每次在中选择新 play `TitlesFragment`、`playquote_container`将使用的新实例的更新`PlayQuoteFragment`。
+活动的根视图提供的资源 ID`two_fragments_layout`并且具有两个子视图`fragment`和一个`FrameLayout`。 虽然`fragment`静态加载`FrameLayout`充当将被替换为在运行时通过的"占位符" `PlayQuoteFragment`。 每次在中选择新 play `TitlesFragment`，则`playquote_container`将使用的新实例更新`PlayQuoteFragment`。
 
-每个子视图占用它们的父级的最大高度。 由控制每个子视图的宽度`android:layout_weight`和`android:layout_width`属性。 在此示例中，每个子视图将占用 50%的宽度提供由父级。 请参阅[LinearLayout 上的 Google 文档](https://developer.android.com/guide/topics/ui/layout/linear.html)有关的详细信息_布局权重_。
+子视图的每个将占用其父级的最大高度。 由控制每个子视图的宽度`android:layout_weight`和`android:layout_width`属性。 在此示例中，每个子视图将占用 50%的宽度由父提供。 请参阅[Google 的文档上 LinearLayout](https://developer.android.com/guide/topics/ui/layout/linear.html)有关详细信息_布局权重_。
 
-## <a name="2-changes-to-titlesfragment"></a>2.对 TitlesFragment 更改
+## <a name="2-changes-to-titlesfragment"></a>2.对 TitlesFragment 的更改
 
-一旦创建备用布局后，有必要更新`TitlesFragment`。 当应用程序显示两个片段上一个活动，然后`TitlesFragment`应加载`PlayQuoteFragment`父活动中。 否则为`TitlesFragment`应启动`PlayQuoteActivity`哪台主机`PlayQuoteFragment`。 一个布尔型标志将帮助`TitlesFragment`确定应使用哪种行为。 将在中初始化此标志`OnActivityCreated`方法。
+一旦创建备用布局后，有必要更新`TitlesFragment`。 当应用显示的两个片段上一个活动，然后`TitlesFragment`应加载`PlayQuoteFragment`父活动中。 否则为`TitlesFragment`应会启动`PlayQuoteActivity`哪台主机`PlayQuoteFragment`。 一个布尔型标志将帮助`TitlesFragment`确定应使用哪种行为。 此标志将在初始化`OnActivityCreated`方法。
 
 首先，在顶部添加一个实例变量`TitlesFragment`类：
 
@@ -88,7 +88,7 @@ Android 设备上创建主活动时, Android 将决定哪种布局加载基于�
 bool showingTwoFragments;
 ```
 
-然后，将添加到下面的代码段`OnActivityCreated`初始化该变量： 
+然后，添加以下代码片段`OnActivityCreated`初始化该变量： 
 
 ```csharp
 var quoteContainer = Activity.FindViewById(Resource.Id.playquote_container);
@@ -101,9 +101,9 @@ if (showingTwoFragments)
 }
 ```
 
-如果设备正在运行在横向模式中，则`FrameLayout`具有资源 ID`playquote_container`将显示在屏幕上，因此`showingTwoFragments`将初始化为`true`。 如果设备是纵向模式下运行，然后`playquote_container`将不会在屏幕上，因此`showingTwoFragments`将`false`。
+如果设备运行在横向模式下，则`FrameLayout`使用的资源 ID`playquote_container`将显示在屏幕上，因此`showingTwoFragments`将初始化为`true`。 如果设备运行在纵向模式下，然后`playquote_container`不会在屏幕上，因此`showingTwoFragments`将`false`。
 
-`ShowPlayQuote`方法将需要更改显示引号方式&ndash;放在片段或启动新的活动。  更新`ShowPlayQuote`方法以加载片段时显示两个片段，否则，它应启动活动：
+`ShowPlayQuote`方法将需要更改它如何显示引号&ndash;片段或启动新的活动。  更新`ShowPlayQuote`方法以加载片段时显示两个片段，否则应启动活动：
 
 ```csharp
 void ShowPlayQuote(int playId)
@@ -134,11 +134,11 @@ void ShowPlayQuote(int playId)
 }
 ```
 
-如果用户具有选择不同于当前显示在 play `PlayQuoteFragment`，然后新`PlayQuoteFragment`创建，将替换内容`playquote_container`的上下文中`FragmentTransaction`。
+如果用户已经选择了不同于当前显示在播放`PlayQuoteFragment`，然后一个新`PlayQuoteFragment`创建并将内容替换为`playquote_container`的上下文中`FragmentTransaction`。
 
 ### <a name="complete-code-for-titlesfragment"></a>TitlesFragment 的完整代码
 
-完成对所有以前的更改后`TitlesFragment`，完整的类应匹配此代码：
+在完成到以前的所有更改后`TitlesFragment`，完整的类应与此代码相匹配：
 
 ```csharp
 public class TitlesFragment : ListFragment
@@ -209,9 +209,9 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-## <a name="3-changes-to-playquoteactivity"></a>3.对 PlayQuoteActivity 更改
+## <a name="3-changes-to-playquoteactivity"></a>3.对 PlayQuoteActivity 的更改
 
-没有一个最终的详细信息，来处理无足轻重的：`PlayQuoteActivity`时在设备处于横向模式不需要。 如果设备不在横向模式中`PlayQuoteActivity`应该是不可见。 更新`OnCreate`方法`PlayQuoteActivity`，以便它将关闭本身。 此代码是的最终版本`PlayQuoteActivity.OnCreate`:
+没有一个最终的详细信息，需要注意：`PlayQuoteActivity`时在设备处于横向模式下不需要。 如果设备在横向模式下`PlayQuoteActivity`应该是不可见。 更新`OnCreate`方法的`PlayQuoteActivity`，以便它将关闭本身。 此代码是最终版本`PlayQuoteActivity.OnCreate`:
 
 ```csharp
 protected override void OnCreate(Bundle savedInstanceState)
@@ -231,12 +231,12 @@ protected override void OnCreate(Bundle savedInstanceState)
 }
 ```
 
-此修改添加一项检查的设备方向。 如果是，在横向模式中，则`PlayQuoteActivity`将关闭本身。
+此修改将添加对设备方向的检查。 如果是，在横向模式下则`PlayQuoteActivity`关闭本身。
 
 ## <a name="4-run-the-application"></a>4.运行此应用程序
 
-完成这些更改后，运行应用时，旋转设备以横向模式 （如有必要），，然后选择播放。 引号应显示在同一屏幕作为起到的列表：
+完成这些更改后，运行应用时，旋转为横向模式下 （如有必要），该设备，然后选择播放。 应为的播放列表在同一屏幕上显示引号：
 
-[![在横向模式中 Android 手机上运行应用](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
+[![在横向模式下在 Android 手机上运行的应用](./images/intro-screenshot-phone-land-sml.png)](./images/intro-screenshot-phone-land.png#lightbox)
 
-[![在 Android 平板电脑上运行的应用程序](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)
+[![在 Android 平板电脑上运行应用](./images/intro-screenshot-tablet-sml.png)](./images/intro-screenshot-tablet.png#lightbox)

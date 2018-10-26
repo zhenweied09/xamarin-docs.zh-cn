@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 65bb3fa070c082fa6c6c489e326a870a80fb9502
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122746"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin 本机项目中的 Xamarin.Forms
 
@@ -33,7 +33,7 @@ _本机窗体允许 Xamarin.Forms ContentPage 派生页可供本机 Xamarin.iOS�
 > [!NOTE]
 > **NativeForms**示例应用程序解决方案不包含任何 Xamarin.Forms 项目。 相反，它包含在 Xamarin.iOS 项目、 Xamarin.Android 项目，和 UWP 项目。 每个项目是使用本机窗体来使用本机项目[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页。 但是，没有的理由为何无法使用本机项目`ContentPage`-派生自.NET Standard 库项目或共享项目的页面。
 
-在使用本机窗体，Xamarin.Forms 等功能[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)， [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)，和数据绑定引擎，仍的所有工作。
+在使用本机窗体，Xamarin.Forms 等功能[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)， [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)，和数据绑定引擎，仍的所有工作。 但是，必须使用本机导航 API 执行页面导航。
 
 ## <a name="ios"></a>iOS
 

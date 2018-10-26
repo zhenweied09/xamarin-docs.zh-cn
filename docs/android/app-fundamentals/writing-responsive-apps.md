@@ -1,21 +1,21 @@
 ---
-title: 编写响应的应用程序
+title: 编写响应式应用程序
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8c113b67b3fbfa57ca86c72e11ddeb0e4e1a9ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a1642c4cbb790cf09d2a31e629408afc61d5b7ab
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763496"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121771"
 ---
-# <a name="writing-responsive-applications"></a>编写响应的应用程序
+# <a name="writing-responsive-applications"></a>编写响应式应用程序
 
-维护响应 GUI 的密钥之一是执行后台线程上的长时间运行任务，因此 GUI 不会被阻塞。 让我们假设我们想要计算一个值，以显示给用户，但该值需要 5 秒钟时间来计算：
+维护响应式 GUI 的关键之一是为 GUI 不会阻止此后台线程上的长时间运行任务。 假设我们想要计算的值以显示给用户，但此值需要 5 秒钟来计算：
 
 ```csharp
 public class ThreadDemo : Activity
@@ -43,7 +43,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-这将起作用，但应用程序将"挂起"为 5 秒时计算的值。 在此期间，应用程序将不响应任何用户交互。 若要获取解决此，我们想要执行后台线程上的我们计算：
+这将起作用，但应用程序将"挂起"5 秒时计算的值。 在此期间，应用程序将不响应任何用户交互。 若要解决此问题，我们要做我们在后台线程上的计算：
 
 ```csharp
 public class ThreadDemo : Activity
@@ -71,7 +71,7 @@ public class ThreadDemo : Activity
 }
 ```
 
-现在我们计算后台线程上的值，因此我们 GUI 计算期间保持响应状态。 但是，完成计算后，我们的应用程序崩溃时，请将此保留在日志：
+现在我们计算在后台线程上的值，因此我们 GUI 在计算期间保持响应状态。 但是，完成计算后，我们的应用程序崩溃时，请在日志中保留此：
 
 ```shell
 E/mono    (11207): EXCEPTION handling: Android.Util.AndroidRuntimeException: Exception of type 'Android.Util.AndroidRuntimeException' was thrown.
@@ -82,7 +82,7 @@ E/mono    (11207):   at Android.Widget.TextView.set_Text (IEnumerable`1 value)
 E/mono    (11207):   at MonoDroidDebugging.Activity1.SlowMethod ()
 ```
 
-这是因为你必须更新从 GUI 线程 GUI。 我们的代码将更新从线程池线程，导致应用崩溃的 GUI。 我们需要计算上的后台线程中，我们值但然后执行我们在与处理的 GUI 线程上的更新[Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
+这是因为必须更新从 GUI 线程 GUI。 我们的代码将更新从线程池线程，导致应用崩溃的 GUI。 我们需要计算我们，在后台线程上的值，但然后完成我们的更新，与处理在 GUI 线程上[Activity.RunOnUIThread](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)):
 
 ```csharp
 public class ThreadDemo : Activity
@@ -110,6 +110,6 @@ public class ThreadDemo : Activity
 }
 ```
 
-此代码按预期运行。 此 GUI 保持响应状态，并计算复杂后获取正确更新。
+此代码按预期运行。 此 GUI 仍然能够做出响应，并完成计算后获取正确更新。
 
-请注意这种技术不只是用于计算成本高昂的值。 它可以用于可以在后台，如 web 服务调用或下载 internet 数据的任何长时间运行任务。
+请注意这种技术不只是用于计算成本高的值。 它可以用于任何长时间运行的任务可以在后台，如 web 服务调用或 internet 数据下载完成的。

@@ -4,15 +4,15 @@ description: 此文介绍了如何使用转换矩阵的第三个列创建透视�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: da5306ed9c301a7229d2fc5e913a4217e844bbba
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116142"
 ---
 # <a name="non-affine-transforms"></a>非仿射转换
 
@@ -61,6 +61,8 @@ z"= z / z = 1
 在此等式，你不希望的 z 值变为 0:
 
 z = Persp0·x + Persp1·y + Persp2
+
+因此，这些值存在一些实际的限制： 
 
 `Persp2`单元格可以是零或不为零。 如果`Persp2`为零，则 z 为点 （0，0），0，这是通常不可取因为该点是在二维图形中很常见。 如果`Persp2`不等于零，则不会丢失的一般性如果`Persp2`固定为 1。 例如，如果你确定`Persp2`应为 5，然后您可以只是矩阵中的所有单元格被除 5，这使得`Persp2`等于 1，并且结果将是相同。
 
@@ -360,8 +362,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     canvas.Clear();
 
-    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
     float taperFraction = (float)taperFractionSlider.Value;
 
     SKMatrix taperMatrix =
@@ -392,9 +394,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](non-affine-images/tapertransform-small.png "三重锥化转换页屏幕截图")](non-affine-images/tapertransform-large.png#lightbox "锥化转换页上的三个屏幕截图")
 
-另一种通用非仿射转换是在下一篇文章中所示的三维旋转[3D 旋转](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)。
+另一种通用非仿射转换是在下一篇文章中所示的三维旋转[ **3D 旋转**](3d-rotation.md)。
 
-非仿射转换可以将矩形转换为任何凸四边形。 这可通过演示**显示非仿射矩阵**页。 是非常类似于**显示仿射矩阵**页上，从[矩阵转换](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md)一文，只不过它具有第四个`TouchPoint`对象操作的第四个角的位图：
+非仿射转换可以将矩形转换为任何凸四边形。 这可通过演示**显示非仿射矩阵**页。 它是非常类似于**显示仿射矩阵**页上，从[**矩阵转换**](matrix.md)一文，只不过它具有第四个`TouchPoint`对象操作中的第四角的位图：
 
 [![](non-affine-images/shownonaffinematrix-small.png "显示非仿射矩阵页上的三个屏幕截图")](non-affine-images/shownonaffinematrix-large.png#lightbox "显示非仿射矩阵页上的三个屏幕截图")
 
@@ -459,14 +461,14 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 
 在右侧的最后一个坐标是与四个触摸点相关联的四个点。 这些是位图的边角的最后一个坐标。
 
-W 和 H 表示宽度和位图的高度。 第一个转换 (`S`) 只是缩放为 1 像素正方形的位图。 第二个转换为非仿射转换`N`，和第三个是仿射转换`A`。 该仿射转换基于三个点，因此它只需像前面仿射[ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68)方法并不涉及具有的第四个行 (a，b） 点。
+W 和 H 表示宽度和位图的高度。 第一个转换`S`只是缩放为 1 像素正方形的位图。 第二个转换为非仿射转换`N`，和第三个是仿射转换`A`。 该仿射转换基于三个点，因此它只需像前面仿射[ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68)方法并不涉及具有的第四个行 (a，b） 点。
 
 `a`和`b`值进行计算，以便第三个转换为仿射转换。 该代码获取仿射变换的逆变换，然后使用该映射的右下角。 这是点 (a，b)。
 
-非仿射转换的另一个用途是模拟三维图形。 在下一篇文章中， [3D 旋转](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md)您了解如何将二维图形在 3D 空间中的。
+非仿射转换的另一个用途是模拟三维图形。 在下一篇文章中， [ **3D 旋转**](3d-rotation.md)您了解如何将二维图形在 3D 空间中的。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,25 +1,25 @@
 ---
 title: 选取器
-description: 使用内置的 Android 对话框来查询用户时间和日期
+description: 使用内置的 Android 对话框查询用户的日期和时间
 ms.prod: xamarin
 ms.assetid: 57C86933-3F04-47DD-9839-72D522D73330
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: de9c77cd1ea96727f5fbf10d11ff99c0aec5fe74
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af6e71e83f90be720db75887553e24a99966720c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119814"
 ---
 # <a name="pickers"></a>选取器
 
 
-*选取*是允许用户通过使用由 Android 提供的对话框中选择日期或时间的 UI 元素：
+*选取器*是允许用户通过使用由 Android 提供的对话框中选择一个日期或时间的 UI 元素：
 
--   [日期选取器](~/android/user-interface/controls/pickers/date-picker.md)用于选择日期 （年、 月和日）。
+-   [日期选取器](~/android/user-interface/controls/pickers/date-picker.md)用于选择日期 （年、 月和天）。
 
     ![示例日期选取器](images/date-picker.png)
 

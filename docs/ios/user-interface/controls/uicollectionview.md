@@ -1,28 +1,28 @@
 ---
-title: 在 Xamarin.iOS 的集合视图
-description: 集合视图允许使用任意布局显示内容。 它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。
+title: 在 Xamarin.iOS 中的集合视图
+description: 集合视图允许使用任意布局显示的内容。 这些功能可轻松地创建类似于网格的布局默认情况下，同时还支持自定义布局。
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b9ba2f885364084d6bee67c460b4831c00c7ae55
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114725"
 ---
-# <a name="collection-views-in-xamarinios"></a>在 Xamarin.iOS 的集合视图
+# <a name="collection-views-in-xamarinios"></a>在 Xamarin.iOS 中的集合视图
 
-_集合视图允许使用任意布局显示内容。它们允许轻松地创建同时还支持自定义布局的现成的类似网格布局。_
+_集合视图允许使用任意布局显示的内容。这些功能可轻松地创建类似于网格的布局默认情况下，同时还支持自定义布局。_
 
-中可用的集合视图`UICollectionView`类中，是在 iOS 6 中新引入使用布局在屏幕上提供多个项的概念。 向提供数据的模式`UICollectionView`创建项目并相同委派和数据源模式通常用于 iOS 开发这些项按照与之交互。
+中可用的集合视图`UICollectionView`类中，将介绍使用布局在屏幕上显示多个项中 iOS 6 的新概念。 向提供数据的模式`UICollectionView`创建项并与这些项遵循的相同委派和数据源通常用于 iOS 开发的模式进行交互。
 
-但是，集合视图会使用独立于布局子系统`UICollectionView`本身。 因此，只需提供一个不同的布局可以轻松更改表示法的集合视图。
+但是，集合视图会使用独立于的布局子系统`UICollectionView`本身。 因此，只需提供不同的布局可以轻松更改表示法的集合视图。
 
-iOS 提供一个名为的布局类`UICollectionViewFlowLayout`允许基于行的布局如网格创建与任何额外工作。 此外，自定义布局可以还创建允许你所想象的任何演示文稿。
+iOS 提供了一个名为的布局类`UICollectionViewFlowLayout`允许基于行的布局如网格来创建任何其他操作。 此外，自定义布局可以也可创建允许你想象的任何演示文稿。
 
 ## <a name="uicollectionview-basics"></a>UICollectionView 基础知识
 
@@ -30,26 +30,26 @@ iOS 提供一个名为的布局类`UICollectionViewFlowLayout`允许基于行的
 
 -  **单元格**– 数据驱动的每个项的视图
 -  **补充视图**– 与节关联的数据驱动的视图。
--  **修饰视图**– 非数据驱动的视图创建布局
+-  **修饰视图**– 非数据驱动的布局由创建视图
 
 ## <a name="cells"></a>单元格
 
-单元格是表示数据集，其中要呈现的集合视图中的单个项的对象。 是的一个实例，每个单元格`UICollectionViewCell`类，该类由三个不同的视图下, 图中所示：
+单元格是表示单个项的集合视图提供在数据集中的对象。 每个单元格是的一个实例`UICollectionViewCell`类，它由三个不同的视图，如下图中所示：
 
- [![](uicollectionview-images/01-uicollectionviewcell.png "每个单元格组成三个不同的视图，如下所示")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
+ [![](uicollectionview-images/01-uicollectionviewcell.png "每个单元格组成的三个不同视图，如下所示")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
-`UICollectionViewCell`类为每个这些视图具有以下属性：
+`UICollectionViewCell`类为每个视图具有以下属性：
 
--   `ContentView` – 此视图包含该单元格显示的内容。 它将呈现在最顶层的 z 顺序在屏幕上。
--   `SelectedBackgroundView` – 对所选内容的支持内置了单元格。 此视图用于以可视方式表示单元格已选中。 呈现的正下方`ContentView`时选择了单元格。
--   `BackgroundView` – 单元格还可以显示背景，这提供的`BackgroundView`。 此视图呈现下`SelectedBackgroundView`。
+-   `ContentView` – 此视图包含该单元格显示的内容。 它将呈现在屏幕上的最顶层 z 顺序。
+-   `SelectedBackgroundView` – 单元格具有内置的对所选内容的支持。 此视图用于以可视方式表示选择了某个单元。 呈现正下方`ContentView`时选择了单元格。
+-   `BackgroundView` – 单元还可以显示背景，这主讲人`BackgroundView`。 此视图呈现下`SelectedBackgroundView`。
 
 
-通过设置`ContentView`使其小于`BackgroundView`和`SelectedBackgroundView`、`BackgroundView`可用于以可视方式帧内容，while`SelectedBackgroundView`时，将显示选择了单元格，如下所示：
+通过设置`ContentView`以便小于`BackgroundView`并`SelectedBackgroundView`，则`BackgroundView`可用于以可视方式帧的内容，while`SelectedBackgroundView`时，将显示选择了某个单元，如下所示：
 
  [![](uicollectionview-images/02-cells.png "不同的单元格元素")](uicollectionview-images/02-cells.png#lightbox)
 
-上面的屏幕截图中的单元格创建通过继承`UICollectionViewCell`和设置`ContentView`，`SelectedBackgroundView`和`BackgroundView`属性，分别，如下面的代码中所示：
+上面的屏幕截图中的单元格创建通过继承自`UICollectionViewCell`并设置`ContentView`，`SelectedBackgroundView`和`BackgroundView`属性，分别如下面的代码中所示：
 
 ```csharp
 public class AnimalCell : UICollectionViewCell
@@ -88,19 +88,19 @@ public class AnimalCell : UICollectionViewCell
 
 ## <a name="supplementary-views"></a>补充视图
 
-补充视图是显示的每个部分与关联的信息的视图`UICollectionView`。 类似于单元格，补充视图是数据驱动。 在单元格显示来自数据源的项数据，补充的视图提供部分数据，如中书架本书类别或的音乐库中的音乐风格。
+补充视图是显示信息的每个部分与关联的视图`UICollectionView`。 单元格，等补充视图是数据驱动。 单元格显示来自数据源的项数据，其中补充视图将显示部分数据，例如在书架书的类别或音乐库中的音乐流派。
 
-例如，补充视图无法使用提供的标头，特定的部分中下, 图中所示：
+例如，补充视图可用来显示特定部分的标头中如下图所示：
 
- [![](uicollectionview-images/02a-supplementary-view.png "补充视图用于呈现的标头，特定的部分中，如下所示")](uicollectionview-images/02a-supplementary-view.png#lightbox)
+ [![](uicollectionview-images/02a-supplementary-view.png "补充视图用于显示标头的特定部分中，如下所示")](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
-若要使用补充的视图，它首先需要在注册`ViewDidLoad`方法：
+若要使用补充的视图，首先需要在中注册`ViewDidLoad`方法：
 
 ```csharp
 CollectionView.RegisterClassForSupplementaryView (typeof(Header), UICollectionElementKindSection.Header, headerId);
 ```
 
-然后，视图需要通过使用返回`GetViewForSupplementaryElement`、 通过使用创建`DequeueReusableSupplementaryView`，并继承自`UICollectionReusableView`。 下面的代码段将生成 SupplementaryView 上面的屏幕截图中所示：
+然后，视图需要通过返回`GetViewForSupplementaryElement`创建使用`DequeueReusableSupplementaryView`，并继承`UICollectionReusableView`。 下面的代码段将生成 SupplementaryView 上面的屏幕截图中所示：
 
 ```csharp
 public override UICollectionReusableView GetViewForSupplementaryElement (UICollectionView collectionView, NSString elementKind, NSIndexPath indexPath)
@@ -112,19 +112,19 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ```
 
-补充视图是比只页眉和页脚更通用的。
-它们可放置集合视图中的任何位置，并且可以由任何视图，使其外观完全可自定义。
+补充视图是更通用的标头和表尾之外。
+它们可放置在集合视图中的任何位置，并可以包含的任何视图，使其外观完全可自定义。
 
  <a name="Decoration_Views" />
 
 
 ## <a name="decoration-views"></a>修饰视图
 
-修饰视图是纯粹 visual 视图，可以显示在`UICollectionView`。 与不同的单元格和补充视图，它们不是数据驱动。 它们始终会在布局的子类创建，并且随后可以更改作为内容的布局。 例如，无法使用修饰视图来提供中的内容滚动的后台视图`UICollectionView`，如下所示：
+修饰视图是纯 visual 视图，可以显示在`UICollectionView`。 与不同的单元格和补充视图，它们不是数据驱动。 它们始终创建布局的子类中，随后可以更改作为内容的布局。 例如，可以使用修饰视图中的内容呈现背景视图滚动`UICollectionView`，如下所示：
 
- [![](uicollectionview-images/02c-decoration-view.png "包含一个红色背景修饰视图")](uicollectionview-images/02c-decoration-view.png#lightbox)
+ [![](uicollectionview-images/02c-decoration-view.png "具有红色背景修饰视图")](uicollectionview-images/02c-decoration-view.png#lightbox)
 
- 以下代码段更改为样本中的红色背景`CircleLayout`类：
+ 以下代码段在后台更改为示例中的红色`CircleLayout`类：
 
  ```csharp
  public class MyDecorationView : UICollectionReusableView
@@ -140,34 +140,34 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>“数据源”
 
-与其他部分 iOS，如`UITableView`和`MKMapView`，`UICollectionView`获取从其数据*数据源*，这会在通过 Xamarin.iOS 中公开**`UICollectionViewDataSource`** 类。 此类负责提供到内容`UICollectionView`如：
+与其他部分的 Io，如`UITableView`并`MKMapView`，`UICollectionView`获取从其数据*数据源*，通过 Xamarin.iOS 中公开了此**`UICollectionViewDataSource`** 类。 此类负责提供内容到`UICollectionView`如：
 
 -  **单元格**– 从返回`GetCell`方法。
 -  **补充视图**– 从返回`GetViewForSupplementaryElement`方法。
--  **节数**– 从返回`NumberOfSections`方法。 默认值为 1，如果未实现。
--  **每部分的项目数量**– 从返回`GetItemsCount`方法。
+-  **节数**– 从返回`NumberOfSections`方法。 默认值为 1; 如果未实现。
+-  **每个部分中的项数**– 从返回`GetItemsCount`方法。
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
-为方便起见，`UICollectionViewController`类是可用。这将自动配置为将这两个委托，这将在下一部分中进行讨论，和数据源为其`UICollectionView`视图。
+为方便起见，`UICollectionViewController`类是可用。这自动配置为这两个委托，这将在下一节中进行讨论，并且数据源的其`UICollectionView`视图。
 
-与`UITableView`、`UICollectionView`类将仅调用其数据源才能获取屏幕上显示的项的单元格。
-滚动到屏幕之外的单元格都将置于对队列的重复使用，如以下图像所示：
+如同`UITableView`，则`UICollectionView`类只会调用其数据源获取的项在屏幕上的单元格。
+滚动到屏幕之外的单元格都放入到的重用，队列，如图所示：
 
- [![](uicollectionview-images/03-cell-reuse.png "滚动到屏幕之外的单元格都将置于到队列，重复使用某个如下所示")](uicollectionview-images/03-cell-reuse.png#lightbox)
+ [![](uicollectionview-images/03-cell-reuse.png "滚动到屏幕之外的单元格都将置于到队列以供重复使用，如下所示")](uicollectionview-images/03-cell-reuse.png#lightbox)
 
-单元格重用已得到简化了`UICollectionView`和`UITableView`。 不再需要创建直接在数据源中的单元格，如果单元格注册与系统不重复使用队列中出现。 如果进行调用以取消排队重用队列中的单元格时，单元格不可用，iOS 将创建它自动基于类型或已注册的 nib。
-相同的技术也是适用于补充的视图。
+单元格重用已得到简化了`UICollectionView`和`UITableView`。 不再需要直接在数据源中创建一个单元格，如果其中一个不是重复使用队列中出现因为向系统注册的单元格。 如果单元格不可用，进行调用以取消排队中重复使用队列的单元格时，将创建 iOS 自动根据的类型或已注册的 nib。
+相同的方法也是可用于补充视图。
 
-例如，考虑以下代码以注册`AnimalCell`类：
+例如，考虑下面的代码将其注册`AnimalCell`类：
 
 ```csharp
 static NSString animalCellId = new NSString ("AnimalCell");
 CollectionView.RegisterClassForCell (typeof(AnimalCell), animalCellId);
 ```
 
-当`UICollectionView`需要单元格，因为其项是在屏幕上，`UICollectionView`调用其数据源的`GetCell`方法。 这与 UITableView 的工作方式类似，此方法是负责配置通过将备份数据的单元格`AnimalCell`类在这种情况下。
+当`UICollectionView`由于其项是在屏幕上，需要一个单元格`UICollectionView`调用其数据源的`GetCell`方法。 与如何使用 UITableView 类似，此方法负责配置从支持数据，将单元格`AnimalCell`类在这种情况下。
 
-下面的代码演示如何实现`GetCell`返回`AnimalCell`实例：
+下面的代码演示的实现`GetCell`，它返回`AnimalCell`实例：
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, Foundation.NSIndexPath indexPath)
@@ -182,34 +182,34 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 }
 ```
 
-调用`DequeReusableCell`是该单元格将或者取消排队等候，从重用队列，则未在队列中，创建根据注册的调用中的类型提供一个单元格时`CollectionView.RegisterClassForCell`。
+在调用`DequeReusableCell`是该单元格将或者取消其排队等候，从重复使用队列，则未在队列中，创建将基于在调用注册的类型提供一个单元格时`CollectionView.RegisterClassForCell`。
 
-在这种情况下，通过注册`AnimalCell`类，iOS 会创建一个新`AnimalCell`内部并返回它时进行调用以取消排队单元格，其后为其配置包含在动物类，并且返回到要显示的图像`UICollectionView`.
+在这种情况下，通过注册`AnimalCell`类中，iOS 会创建一个新`AnimalCell`在内部，并返回它时进行调用以取消排队一个单元格之后, 进行配置的映像，包含在 animal 类中并且返回要显示到`UICollectionView`.
 
  <a name="Delegate" />
 
 
 ### <a name="delegate"></a>委托
 
-`UICollectionView`类使用类型的委托`UICollectionViewDelegate`以支持与中的内容交互`UICollectionView`。 这样就可以控制的：
+`UICollectionView`类使用类型的委托`UICollectionViewDelegate`若要支持与中的内容进行交互`UICollectionView`。 这允许控制：
 
--  **单元格选择**– 确定是否选定单元格。
--  **单元格高亮**– 确定当前接触单元格。
--  **单元格菜单**– 响应长按笔势中单元格显示的菜单。
+-  **单元格选择**– 确定选择了单元格。
+-  **单元格突出显示**– 确定当前接触单元格。
+-  **单元格菜单**– 长按手势的响应中的单元格显示菜单。
 
 
-与数据源，`UICollectionViewController`配置默认情况下为的委托`UICollectionView`。
+与数据源一样`UICollectionViewController`默认情况下为的委托配置`UICollectionView`。
 
  <a name="Cell_HighLighting" />
 
 
 #### <a name="cell-highlighting"></a>单元格突出显示
 
-当上一个单元格按下，单元格转换为突出显示状态，直到未选择用户将其手指提起从单元格。 这实际上选择之前允许的单元格的外观临时更改。 在选择，该单元格时`SelectedBackgroundView`显示。 下图显示突出显示的状态，只需选择发生之前：
+当单元格按下的单元格转换为突出显示的状态，且其未选择直到用户手指从单元格。 这样，临时更改中的单元格的外观实际选择之前。 选择它后该单元格的`SelectedBackgroundView`显示。 下图显示了突出显示的状态，只需在所选内容发生之前：
 
- [![](uicollectionview-images/04-cell-highlight.png "此图显示突出显示的状态之前所选内容时发生")](uicollectionview-images/04-cell-highlight.png#lightbox)
+ [![](uicollectionview-images/04-cell-highlight.png "此图显示了突出显示的状态，只需在所选内容发生之前")](uicollectionview-images/04-cell-highlight.png#lightbox)
 
-若要实现突出显示，`ItemHighlighted`和`ItemUnhighlighted`方法`UICollectionViewDelegate`可用。 例如，下面的代码将应用的黄色背景`ContentView`当突出显示该单元格时，和白色背景时未选中此选项，如在上图中所示：
+若要实现突出显示，请`ItemHighlighted`和`ItemUnhighlighted`方法的`UICollectionViewDelegate`可用。 例如，下面的代码将应用的黄色背景`ContentView`时突出显示该单元格时，和白色背景时未突出显示，如在上图中所示：
 
 ```csharp
 public override void ItemHighlighted (UICollectionView collectionView, NSIndexPath indexPath)
@@ -230,7 +230,7 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
 #### <a name="disabling-selection"></a>禁用所选内容
 
-在默认情况下启用选择`UICollectionView`。 若要禁用所选内容，重写`ShouldHighlightItem`并返回 false，如下所示：
+默认情况下启用选择`UICollectionView`。 若要禁用所选内容，请重写`ShouldHighlightItem`并返回 false，如下所示：
 
 ```csharp
 public override bool ShouldHighlightItem (UICollectionView collectionView, NSIndexPath indexPath)
@@ -239,40 +239,40 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 }
 ```
 
-当禁用突出显示时，选择一个单元格的过程已禁用。 此外，还有`ShouldSelectItem`方法直接控制选择，虽然如果`ShouldHighlightItem`实现，并返回 false，`ShouldSelectItem`不调用。
+突出显示处于禁用状态，选择单元格的过程也是已禁用。 此外，还有`ShouldSelectItem`方法，用于控制所选内容直接，但如果`ShouldHighlightItem`实现，并将返回 false，`ShouldSelectItem`不调用。
 
- `ShouldSelectItem` 允许选择要打开逐个项的项的方式，打开或关闭时`ShouldHighlightItem`未实现。 它还允许突出显示没有任何选择，如果`ShouldHighlightItem`实现，并返回 true，时`ShouldSelectItem`返回 false。
+ `ShouldSelectItem` 允许选择以逐个项的项，打开或关闭时`ShouldHighlightItem`未实现。 它还允许突出显示而无需选择，如果`ShouldHighlightItem`实现，则返回 true，同时`ShouldSelectItem`返回 false。
 
  <a name="Cell_Menus" />
 
 
 #### <a name="cell-menus"></a>单元格菜单
 
-中的每个单元格`UICollectionView`能够显示一个菜单，使剪切、 复制和粘贴 （可选） 必须支持。 若要创建单元格上的编辑菜单：
+每个单元格中`UICollectionView`能够显示一个菜单，使剪切、 复制和粘贴 （可选） 支持。 若要创建某个单元格上的编辑菜单：
 
-1.  重写`ShouldShowMenu`并返回 true，如果该项目应显示菜单。
-1.  重写`CanPerformAction`并返回 true 的每个项可以执行执行操作，这将是任何剪切、 复制或粘贴。
-1.  重写`PerformAction`若要执行编辑，将复制的粘贴操作。
+1.  重写`ShouldShowMenu`并返回 true，如果项应显示一个菜单。
+1.  重写`CanPerformAction`并返回其中会出现任何剪切、 复制或粘贴的项可以执行，每个操作，则返回 true。
+1.  重写`PerformAction`若要执行的编辑，请将复制的粘贴操作。
 
 
-长按单元格时，下面的屏幕截图显示菜单：
+长按下一个单元格时，以下屏幕截图显示菜单：
 
- [![](uicollectionview-images/04a-menu.png "长按单元格时，此屏幕截图中显示菜单")](uicollectionview-images/04a-menu.png#lightbox)
+ [![](uicollectionview-images/04a-menu.png "长按下一个单元格时，此屏幕截图显示菜单")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
 
 
 ## <a name="layout"></a>布局
 
-`UICollectionView` 支持允许的所有元素，单元格、 增补视图和修饰视图来管理独立于定位的布局系统`UICollectionView`本身。
-使用该布局系统，应用程序可以支持如类似网格的那个我们已了解在本文中，以及提供自定义布局的布局。
+`UICollectionView` 支持允许的所有元素，单元格、 补充视图和修饰视图，管理独立于位置的布局系统`UICollectionView`本身。
+使用布局系统，应用程序可以支持类似于网格的一个我们在本文中中, 所见，以及提供自定义布局的布局。
 
  <a name="Layout_Basics" />
 
 
 ### <a name="layout-basics"></a>布局基础知识
 
-在中的布局`UICollectionView`继承自的类中定义`UICollectionViewLayout`。 布局实现负责创建中的所有项的布局属性`UICollectionView`。 有两种方法来创建布局：
+中的布局`UICollectionView`继承的类中定义`UICollectionViewLayout`。 布局实现负责创建中的每个项的布局属性`UICollectionView`。 有两种方法来创建布局：
 
 -  使用内置`UICollectionViewFlowLayout`。
 -  通过继承提供自定义布局`UICollectionViewLayout`。
@@ -283,9 +283,9 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 ### <a name="flow-layout"></a>流布局
 
-`UICollectionViewFlowLayout`类提供，适用于排列在网格中的单元格的内容，如我们所见的基于行的布局。
+`UICollectionViewFlowLayout`类提供了适用于排列在网格单元格中的内容，正如我们所看到的基于行的布局。
 
-若要使用流布局：
+若要使用的流布局：
 
 -  创建的实例`UICollectionViewFlowLayout`:
 
@@ -294,51 +294,51 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 var layout = new UICollectionViewFlowLayout ();
 ```
 
--  将此实例传递给构造函数的`UICollectionView`:
+-  将该实例传递给构造函数的`UICollectionView`:
 
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
 ```
 
-这是在网格中的布局内容需要的。 此外，方向发生更改时，`UICollectionViewFlowLayout`处理重新排列内容相应地，如下所示：
+这是它只需要一个网格中的内容。 此外，方向发生更改时，`UICollectionViewFlowLayout`处理重新排列内容相应地，如下所示：
 
  [![](uicollectionview-images/05-layout-orientation.png "方向更改的示例")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
 
 
-#### <a name="section-inset"></a>部分内嵌
+#### <a name="section-inset"></a>部分嵌入
 
-若要提供围绕一些空间`UIContentView`，布局具有`SectionInset`类型的属性`UIEdgeInsets`。 例如，下面的代码提供的每个区域的周围 50 像素缓冲区`UIContentView`时由放置`UICollectionViewFlowLayout`:
+若要提供围绕一些空间`UIContentView`，布局都`SectionInset`类型的属性`UIEdgeInsets`。 例如，下面的代码提供 50 像素缓冲区的每个部分围绕`UIContentView`时进行布局的`UICollectionViewFlowLayout`:
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 ```
 
-这会导致间距周围的部分如下所示：
+这会导致的区域，如下所示的周围的间距：
 
- [![](uicollectionview-images/06-sectioninset.png "如下所示，在该节周围间距")](uicollectionview-images/06-sectioninset.png#lightbox)
+ [![](uicollectionview-images/06-sectioninset.png "如下所示在该节周围的间距")](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
 
 #### <a name="subclassing-uicollectionviewflowlayout"></a>子类化 UICollectionViewFlowLayout
 
-在版本到使用`UICollectionViewFlowLayout`直接，它可以还子类化来进一步自定义沿行的内容的布局。 例如，这可以用于创建不支持单元格换到网格中，但改为使用水平滚动效果，创建单个行的布局，如下所示：
+在使用的版本中`UICollectionViewFlowLayout`直接，它可以也子类化来进一步自定义内容沿着一条线的布局。 例如，这可以用于创建不会包装到一个网格单元格，但改为使用水平滚动效果，将创建单个行的布局，如下所示：
 
- [![](uicollectionview-images/07-line-layout.png "使用水平滚动影响单个行")](uicollectionview-images/07-line-layout.png#lightbox)
+ [![](uicollectionview-images/07-line-layout.png "具有水平滚动效果的单个行")](uicollectionview-images/07-line-layout.png#lightbox)
 
-若要实现这通过子类化`UICollectionViewFlowLayout`需要：
+若要实现这一点： 子类化`UICollectionViewFlowLayout`要求：
 
--  正在初始化将应用于该版式本身的任何布局属性或构造函数中的布局中的所有项。
--  重写`ShouldInvalidateLayoutForBoundsChange`，使其返回 true，当边界`UICollectionView`将重新计算单元格的布局的更改。 使用此转换应用于靠近单元格将应用在滚动期间，在这种情况下确保代码。
--  重写`TargetContentOffset`以便靠近单元格的中心对齐`UICollectionView`作为滚动停止。
--  重写`LayoutAttributesForElementsInRect`返回的数组`UICollectionViewLayoutAttributes`。 每个`UICollectionViewLayoutAttribute`包含有关如何布局特定项，其中包括属性，例如其`Center`， `Size` ，`ZIndex`和`Transform3D`。
+-  正在初始化应用于自身的布局的任何布局属性或构造函数中的布局中的所有项。
+-  重写`ShouldInvalidateLayoutForBoundsChange`，使其返回 true，这样，当边界`UICollectionView`将重新计算的更改，单元格的布局。 使用此转换应用于靠近单元格将滚动过程中应用这种情况下确保代码。
+-  重写`TargetContentOffset`使靠近单元格的中心的管理单元`UICollectionView`作为滚动停止。
+-  重写`LayoutAttributesForElementsInRect`返回的数组`UICollectionViewLayoutAttributes`。 每个`UICollectionViewLayoutAttribute`包含有关如何布局的特定项，如包括属性的信息及其`Center`， `Size` ，`ZIndex`和`Transform3D`。
 
 
-下面的代码演示此类实现：
+下面的代码显示了此类实现：
 
 ```csharp
 using System;
@@ -412,35 +412,35 @@ namespace SimpleCollectionView
 
 ### <a name="custom-layout"></a>自定义布局
 
-除了使用`UICollectionViewFlowLayout`，布局可以还完全自定义通过直接从继承`UICollectionViewLayout`。
+除了使用之外`UICollectionViewFlowLayout`，布局也可以完全自定义通过直接从继承`UICollectionViewLayout`。
 
 若要重写的主要方法是：
 
--   `PrepareLayout` – 用于执行将在布局流程中使用的初始几何计算。
--   `CollectionViewContentSize` – 返回用来显示内容的区域的大小。
--   `LayoutAttributesForElementsInRect` – 当 UICollectionViewFlowLayout 示例中前面所示，此方法用于将信息提供给`UICollectionView`如何布局有关每个项。 但是，与不同`UICollectionViewFlowLayout`，在创建自定义布局，但你选择，您可以定位项。
+-   `PrepareLayout` – 用于执行将在整个布局过程中使用的初始几何计算。
+-   `CollectionViewContentSize` -返回用于显示内容的区域的大小。
+-   `LayoutAttributesForElementsInRect` --如前面所示 UICollectionViewFlowLayout 示例中，使用此方法将信息提供给`UICollectionView`如何布局有关每个项。 但是，与不同`UICollectionViewFlowLayout`，但你选择在创建自定义布局，可以定位项。
 
 
-例如，相同的内容无法循环布局中看到如下所示：
+例如，相同的内容会以循环的布局，如下所示：
 
- [![](uicollectionview-images/08-circle-layout.png "循环的自定义如下所示的布局")](uicollectionview-images/08-circle-layout.png#lightbox)
+ [![](uicollectionview-images/08-circle-layout.png "循环的自定义布局，如下所示")](uicollectionview-images/08-circle-layout.png#lightbox)
 
-有关布局的强大件事就是从类似网格布局中，更改为水平滚动布局中，和随后到此循环布局需要只允许布局类提供给`UICollectionView`更改。 在中为 nothing `UICollectionView`，其委托或数据在所有源代码更改。
-
-
-## <a name="changes-in-ios-9"></a>在 iOS 9 中的更改
+有关布局的强大件事是从类似于网格的布局更改为水平滚动布局，和随后向此循环布局都需要提供给布局类`UICollectionView`进行更改。 在中为 nothing `UICollectionView`，其委托或数据源的代码更改根本。
 
 
-在 iOS 9，集合视图中 (`UICollectionView`) 现在支持将通过添加新的默认笔势识别器和几个新的支持方法在初始状态下的项重新排序。
+## <a name="changes-in-ios-9"></a>IOS 9 中的更改
 
-使用这些新方法，你可以轻松地实现拖动集合视图中重新排序，并可以选择自定义期间重新排序过程的任何阶段的项外观。
+
+在 iOS 9，集合视图中 (`UICollectionView`) 现在支持将通过添加新的默认手势识别程序和几个新的支持方法在初始状态下的项重新排序。
+
+使用这些新方法，可以轻松地实现拖放以重新排序集合视图中，可以选择自定义项外观重新排序过程任何阶段。
 
 [![](uicollectionview-images/intro01.png "重新排序过程的示例")](uicollectionview-images/intro01.png#lightbox)
 
-在本文中，我们来看看在 Xamarin.iOS 应用程序以及一些其他 iOS 9 对集合视图控件所做的更改中实现拖到重新排序：
+在本文中，我们将查看在 Xamarin.iOS 应用程序以及一些其他 iOS 9 具有所做的更改到集合视图控件中实现拖放重新排序：
 
-- [项变得简单重新排序](#Easy-Reordering-of-Items)
-    - [重新排序的简单示例](#Simple-Reordering-Example)
+- [项轻松重新排序](#Easy-Reordering-of-Items)
+    - [简单的重新排序示例](#Simple-Reordering-Example)
     - [使用自定义笔势识别器](#Using-a-Custom-Gesture-Recognizer)
     - [自定义布局和重新排序](#Custom-Layouts-and-Reording)
 - [集合视图更改](#Collection-View-Changes)
@@ -449,11 +449,11 @@ namespace SimpleCollectionView
 
 ## <a name="reordering-of-items"></a>项重新排序
 
-如上面所述，在 iOS 9 中的集合视图的最重大更改之一是现成的轻松拖到重新排序功能添加。
+如上面所述，对 iOS 9 中的集合视图的最重要更改之一是添加了现成的简单拖放重新排序功能。
 
-在 iOS 9 中，添加到集合视图重新排序的最快方法是使用`UICollectionViewController`。
-集合视图控制器现在具有`InstallsStandardGestureForInteractiveMovement`属性，它将添加一个标准*笔势识别器*支持拖动对集合中的项重新排序。
-由于默认值是`true`，只需实现`MoveItem`方法`UICollectionViewDataSource`类，以支持拖到重新排序。 例如：
+在 iOS 9，添加到集合视图重新排序的最快方法是使用`UICollectionViewController`。
+集合视图控制器现在具有`InstallsStandardGestureForInteractiveMovement`属性，它将添加一个标准*笔势识别器*支持拖动以重新排列集合中的项。
+因为默认值为`true`，只需实现`MoveItem`方法的`UICollectionViewDataSource`类，以支持拖放重新排序。 例如：
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -464,36 +464,36 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 ```
 <a name="Simple-Reordering-Example" />
 
-### <a name="simple-reordering-example"></a>重新排序的简单示例
+### <a name="simple-reordering-example"></a>简单的重新排序示例
 
-作为一个快速示例，启动新的 Xamarin.iOS 项目并编辑**Main.storyboard**文件。 拖动`UICollectionViewController`拖到设计图面：
+作为快速示例中，启动一个新的 Xamarin.iOS 项目和编辑**Main.storyboard**文件。 拖动`UICollectionViewController`拖到设计图面：
 
 [![](uicollectionview-images/quick01.png "添加 UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
 
-选择 （它可能是最简单的方法文档大纲中执行此操作） 的集合视图。 在属性 Pad 布局选项卡中，设置以下大小，如下面的屏幕截图中所示：
+选择 （它可能是最简单的方法执行此操作从文档大纲） 的集合视图。 在属性面板的布局选项卡中，设置以下大小，如下面的屏幕截图中所示：
 
-- **单元格大小**： 宽度 – 60 |高度 – 60
-- **标头大小**： 宽度 – 0 |高度 – 0
-- **页脚大小**： 宽度 – 0 |高度 – 0
+- **单元格大小**： 宽度-60 |高度-60
+- **标头大小**： 宽度-0 |高度-0
+- **页脚大小**： 宽度-0 |高度-0
 - **最小间距**： 单元格 – 8 |行 – 8
-- **部分内边距**： 顶部 – 16 |底部 – 16 |左 – 16 |右 – 16
+- **部分内边距**： 顶部 – 16 |底部 – 16 |左-16 |右 – 16
 
-[![](uicollectionview-images/quick04.png "设置集合视图大小")](uicollectionview-images/quick04.png#lightbox)
+[![](uicollectionview-images/quick04.png "设置集合视图大小步骤")](uicollectionview-images/quick04.png#lightbox)
 
 接下来，编辑单元格的默认值：
-    - 更改为蓝色其背景色
-    - 添加一个标签来充当单元格的标题
-    - 将重用标识符设置为**单元格**
+    - 更改其背景颜色设置为蓝色
+    - 添加一个标签，使其作为该单元格的标题
+    - 将重复使用标识符设置为**单元格**
 
-[![](uicollectionview-images/quick02.png "编辑默认单元格")](uicollectionview-images/quick02.png#lightbox)
+[![](uicollectionview-images/quick02.png "编辑单元格的默认值")](uicollectionview-images/quick02.png#lightbox)
 
-添加约束以保留的单元格内居中，因为它在改变大小的标签：
+添加约束，以保留更改大小时的单元格内居中标签：
 
-在**属性填充**为_CollectionViewCell_并设置**类**到`TextCollectionViewCell`:
+在**属性面板**有关_CollectionViewCell_并设置**类**到`TextCollectionViewCell`:
 
 [![](uicollectionview-images/quick05.png "将类设置为 TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
 
-设置**集合可重用视图**到`Cell`:
+设置**集合的可重用视图**到`Cell`:
 
 [![](uicollectionview-images/quick06.png "设置为单元格的集合可重用视图")](uicollectionview-images/quick06.png#lightbox)
 
@@ -528,9 +528,9 @@ namespace CollectionView
 }
 ```
 
-此处`Text`标签的属性公开为该单元格的标题，以便可以从代码中设置。
+此处`Text`标签的属性公开为标题的单元格，因此可以从代码中设置。
 
-向项目添加新的 C# 类和调用它`WaterfallCollectionSource`。 编辑文件，并使其看起来如下所示：
+添加一个新C#类到项目，并调用其`WaterfallCollectionSource`。 编辑文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -597,10 +597,10 @@ namespace CollectionView
 }
 ```
 
-此类将是我们集合视图的数据源，并提供在集合中每个单元格的信息。
-请注意，`MoveItem`实现方法以允许为集合中的项拖动重新排序。
+此类将成为我们集合视图的数据源，并提供集合中每个单元格的信息。
+请注意，`MoveItem`实现方法是为了允许为集合中的项将重新排序。
 
-向项目中添加另一个新的 C# 类和调用它`WaterfallCollectionDelegate`。 编辑此文件并使其看起来如下所示：
+添加另一个新C#类到项目，并调用其`WaterfallCollectionDelegate`。 编辑此文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -650,9 +650,9 @@ namespace CollectionView
 }
 ```
 
-这将充当我们集合视图的委托。 方法已被重写，以突出显示单元格，当用户与之交互集合视图中。
+这将充当我们集合视图的委托。 方法已重写以在用户与之交互集合视图中突出显示单元格。
 
-向项目添加一个最后一个 C# 类和调用它`WaterfallCollectionView`。 编辑此文件并使其看起来如下所示：
+添加最后一个C#类到项目，并调用其`WaterfallCollectionView`。 编辑此文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -687,21 +687,21 @@ namespace CollectionView
 }
 ```
 
-请注意，`DataSource`和`Delegate`上面创建时从其情节提要构造集合视图设置 (或 **.xib**文件)。
+请注意，`DataSource`并`Delegate`我们在上面创建的时从其情节提要构造集合视图设置 (或 **.xib**文件)。
 
-编辑**Main.storyboard**再次文件并选择集合视图和切换到**属性**。 设置**类**到自定义`WaterfallCollectionView`我们上面定义的类：
+编辑**Main.storyboard**再次文件并选择集合视图切换到**属性**。 设置**类**到自定义`WaterfallCollectionView`我们上面定义的类：
 
-保存到 UI 所做的更改并运行应用程序。
-如果用户从列表中选择一个项，并将其拖动到新位置，因为它们开移动的项其他项将自动动画。
-当用户将项放置到新位置时，它将只讨论到该位置。 例如：
+保存对 UI 所做的更改并运行应用程序。
+如果用户从列表中选择项并将其拖动到新位置时，其他项将设置动画效果自动随着开的项。
+当用户将项放置在新位置时，它将只讨论该位置。 例如：
 
-[![](uicollectionview-images/intro01.png "下面举例说明将项拖动到新位置")](uicollectionview-images/intro01.png#lightbox)
+[![](uicollectionview-images/intro01.png "举例说明如何将项拖动到新位置")](uicollectionview-images/intro01.png#lightbox)
 
 <a name="Using-a-Custom-Gesture-Recognizer" />
 
 ### <a name="using-a-custom-gesture-recognizer"></a>使用自定义笔势识别器
 
-在您无法使用的情况下`UICollectionViewController`，并且必须使用正则表达式`UIViewController`，或者如果你想要使更好地控制拖放笔势，你可以创建你自己的自定义笔势识别器并将其添加到集合视图中，加载视图时。 例如：
+您不能使用的情况下`UICollectionViewController`，并且必须使用正则表达式`UIViewController`，或如果你想要使更好地控制拖放手势，您可以创建你自己的自定义笔势识别器并加载视图时将其添加到集合视图。 例如：
 
 ```csharp
 public override void ViewDidLoad ()
@@ -737,22 +737,22 @@ public override void ViewDidLoad ()
 }
 ```
 
-此处我们将使用几种新方法添加到集合视图来实现和控制拖动操作：
+此处我们将使用几个新方法添加到集合视图来实现，可以控制拖动操作：
 
- - `BeginInteractiveMovementForItem` -将标记移动操作开始。
- - `UpdateInteractiveMovementTargetPosition` -发送对其进行更新该项的位置。
- - `EndInteractiveMovement` -将标记的末尾将项移动。
+ - `BeginInteractiveMovementForItem` -将标记移动操作的开始。
+ - `UpdateInteractiveMovementTargetPosition` -，则发送更新项的位置。
+ - `EndInteractiveMovement` -将项移动结束标记。
  - `CancelInteractiveMovement` -将标记用户取消移动操作。
 
-应用程序运行时，将工作拖动操作，默认值拖动手势识别器附带集合视图时一样。
+运行应用程序时，拖放操作将默认拖动手势识别器附带集合视图时一样工作。
 
 <a name="Custom-Layouts-and-Reording" />
 
 ### <a name="custom-layouts-and-reordering"></a>自定义布局和重新排序
 
-在 iOS 9 中，几个新方法已添加用于在集合视图中的拖到重新排序和自定义布局。 若要浏览此功能，让我们向集合添加自定义布局。
+在 iOS 9 中，已添加几个新方法以使用集合视图中的拖放重新排序和自定义布局。 若要浏览此功能，让我们向集合添加自定义布局。
 
-首先，添加一个新 C# 类调用`WaterfallCollectionLayout`到项目。 对其进行编辑，并使其如下所示：
+首先，添加一个新C#类调用`WaterfallCollectionLayout`到项目。 对其进行编辑，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -1144,8 +1144,8 @@ namespace CollectionView
 }
 ```
 
-这可以是使用类以提供自定义的两个列、 瀑布图类型到集合视图的布局。
-该代码使用键值对的编码 (通过`WillChangeValue`和`DidChangeValue`方法) 提供此类中我们计算属性的数据绑定。
+这可以是类用于提供自定义的两个列、 瀑布图类型布局到集合视图。
+该代码使用键-值编码 (通过`WillChangeValue`和`DidChangeValue`方法) 来提供此类中我们计算属性的数据绑定。
 
 接下来，编辑`WaterfallCollectionSource`并进行以下更改和添加：
 
@@ -1169,9 +1169,9 @@ public WaterfallCollectionSource (WaterfallCollectionView collectionView)
 }
 ```
 
-这将为每个项将显示在列表中创建一个随机的高度。
+这将为每个项将显示在列表中创建随机的高度。
 
-接下来，编辑`WaterfallCollectionView`类并添加以下帮助器属性：
+接下来，编辑`WaterfallCollectionView`类，并添加以下帮助程序属性：
 
 ```csharp
 public WaterfallCollectionSource Source {
@@ -1201,99 +1201,99 @@ public override void AwakeFromNib ()
 }
 ```
 
-这将创建我们自定义布局的实例，设置要提供大小信息的每个项的事件并将新的布局附加到我们集合视图。
+这创建我们的自定义布局的实例，设置事件，以便提供每个项的大小并将新的布局附加到集合视图。
 
-如果我们试运行 Xamarin.iOS 应用程序时，集合视图现在外观如下所示：
+我们再次运行 Xamarin.iOS 应用程序，如果集合视图将现在如下所示：
 
-[![](uicollectionview-images/custom01.png "集合视图将现在如下所示")](uicollectionview-images/custom01.png#lightbox)
+[![](uicollectionview-images/custom01.png "集合视图现在如下所示")](uicollectionview-images/custom01.png#lightbox)
 
-我们可以仍拖-到-对项目重新排序为之前，但现在是调整大小以适应其新位置时将丢弃这些值将更改的项。
+我们可以仍是拖放到重排项之前，但现在更改的项大小以适合其新位置时将其删除。
 
 ## <a name="collection-view-changes"></a>集合视图更改
 
-在以下部分中，我们将详细的介绍了的 iOS 9 到集合视图中的每个类所做的更改。
+在以下部分中，我们将详细的介绍了 iOS 9 到集合视图中的每个类所做的更改。
 
 ### <a name="uicollectionview"></a>UICollectionView
 
-进行以下更改或添加项`UICollectionView`ios 9 的类：
+对进行以下更改或添加`UICollectionView`适用于 iOS 9 的类：
 
- - `BeginInteractiveMovementForItem` – 标记拖动操作开始。
- - `CancelInteractiveMovement` – 告知集合用户已取消拖动操作的视图。
- - `EndInteractiveMovement` – 告知集合用户完成拖动操作的视图。
- - `GetIndexPathsForVisibleSupplementaryElements` – 返回`indexPath`的页眉或页脚集合视图部分中的。
- - `GetSupplementaryView` – 返回给定的页眉或页脚。
- - `GetVisibleSupplementaryViews` – 返回所有可见的页眉和页脚的列表。
- - `UpdateInteractiveMovementTargetPosition` – 告知集合视图，用户已在移动，或者在移动，在拖动操作过程中的项。
+ - `BeginInteractiveMovementForItem` – 标记的拖动操作开始位置。
+ - `CancelInteractiveMovement` – 告知集合视图用户已取消拖动操作。
+ - `EndInteractiveMovement` – 告知集合视图在用户完成拖动操作。
+ - `GetIndexPathsForVisibleSupplementaryElements` -返回`indexPath`的页眉或页脚中集合视图部分。
+ - `GetSupplementaryView` -返回给定的页眉或页脚。
+ - `GetVisibleSupplementaryViews` -返回所有可见的标头和表尾的列表。
+ - `UpdateInteractiveMovementTargetPosition` – 告知集合视图用户已移动，或在移动，在拖动操作期间的项。
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
-进行以下更改或添加项`UICollectionViewController`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewController`iOS 9 中的类：
 
- - `InstallsStandardGestureForInteractiveMovement` -如果`true`将使用新笔势识别器自动支持拖到重新排序。
- - `CanMoveItem` – 如果给定的项可以拖动重新排序，则通知集合视图。
+ - `InstallsStandardGestureForInteractiveMovement` -如果`true`将使用新笔势识别器的自动支持拖放重新排序。
+ - `CanMoveItem` – 如果给定的项目可以拖放重新排序，则通知集合视图。
  - `GetTargetContentOffset` – 用于获取给定的集合视图项的偏移量。
- - `GetTargetIndexPathForMove` -获取`indexPath`拖动操作的给定项目。
+ - `GetTargetIndexPathForMove` – 获取`indexPath`的拖动操作的给定项。
  - `MoveItem` – 在列表中移动给定项的顺序。
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
-进行以下更改或添加项`UICollectionViewDataSource`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewDataSource`iOS 9 中的类：
 
- - `CanMoveItem` – 如果给定的项可以拖动重新排序，则通知集合视图。
+ - `CanMoveItem` – 如果给定的项目可以拖放重新排序，则通知集合视图。
  - `MoveItem` – 在列表中移动给定项的顺序。
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
-进行以下更改或添加项`UICollectionViewDelegate`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewDelegate`iOS 9 中的类：
 
  - `GetTargetContentOffset` – 用于获取给定的集合视图项的偏移量。
- - `GetTargetIndexPathForMove` -获取`indexPath`拖动操作的给定项目。
+ - `GetTargetIndexPathForMove` – 获取`indexPath`的拖动操作的给定项。
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
-进行以下更改或添加项`UICollectionViewFlowLayout`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewFlowLayout`iOS 9 中的类：
 
- - `SectionFootersPinToVisibleBounds` – 软木于可见集合视图边界部分页脚。
- - `SectionHeadersPinToVisibleBounds` – 软木于可见集合视图边界节标头。
+ - `SectionFootersPinToVisibleBounds` – 始终处于可见集合视图边界部分页脚。
+ - `SectionHeadersPinToVisibleBounds` – 始终处于可见集合视图边界部分标头。
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
-进行以下更改或添加项`UICollectionViewLayout`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewLayout`iOS 9 中的类：
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` – 在用户完成拖动或取消它时，则返回在拖动操作的末尾处的失效上下文。
- - `GetInvalidationContextForInteractivelyMovingItems` – 返回在拖动操作开始处的失效上下文。
- - `GetLayoutAttributesForInteractivelyMovingItem` -获取的布局属性给定项拖动项时。
- - `GetTargetIndexPathForInteractivelyMovingItem` – 返回`indexPath`拖动项时在给定时间的项。
+ - `GetInvalidationContextForEndingInteractiveMovementOfItems` – 当用户完成拖动或取消它，则返回在拖动操作结束时失效上下文。
+ - `GetInvalidationContextForInteractivelyMovingItems` -返回拖动操作开始处的无效化上下文。
+ - `GetLayoutAttributesForInteractivelyMovingItem` – 获取布局特性给定项目的同时拖动项。
+ - `GetTargetIndexPathForInteractivelyMovingItem` -返回`indexPath`拖动项时在给定时间点的项。
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
-进行以下更改或添加项`UICollectionViewLayoutAttributes`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewLayoutAttributes`iOS 9 中的类：
 
- - `CollisionBoundingPath` – 在拖动操作期间返回两个项目的冲突的路径。
- - `CollisionBoundsType` – 返回冲突的类型 (作为`UIDynamicItemCollisionBoundsType`) 在拖动操作期间发生这种。
+ - `CollisionBoundingPath` – 在拖动操作过程中返回两个项目的冲突的路径。
+ - `CollisionBoundsType` -返回的冲突类型 (作为`UIDynamicItemCollisionBoundsType`) 已在拖动操作过程中发生。
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
-进行以下更改或添加项`UICollectionViewLayoutInvalidationContext`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewLayoutInvalidationContext`iOS 9 中的类：
 
- - `InteractiveMovementTarget` – 返回拖动操作的目标项。
- - `PreviousIndexPathsForInteractivelyMovingItems` – 返回`indexPaths`的其他项涉及拖动以重新排序操作。
- - `TargetIndexPathsForInteractivelyMovingItems` – 返回`indexPaths`的将拖到重新排序操作后对其重新排序的项。
+ - `InteractiveMovementTarget` -返回拖动操作的目标的项。
+ - `PreviousIndexPathsForInteractivelyMovingItems` -返回`indexPaths`的其他项参与拖放进行重新排序操作。
+ - `TargetIndexPathsForInteractivelyMovingItems` -返回`indexPaths`的项将作为拖放重新排序操作结果重新排序。
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
-进行以下更改或添加项`UICollectionViewSource`在 iOS 9 中的类：
+对进行以下更改或添加`UICollectionViewSource`iOS 9 中的类：
 
- - `CanMoveItem` – 如果给定的项可以拖动重新排序，则通知集合视图。
- - `GetTargetContentOffset` – 返回通过拖动重新排序操作将被移动的项的偏移量。
- - `GetTargetIndexPathForMove` – 返回`indexPath`将拖到重新排序操作期间移动的项。
+ - `CanMoveItem` – 如果给定的项目可以拖放重新排序，则通知集合视图。
+ - `GetTargetContentOffset` -返回通过拖动重新排序操作将被移动的项的偏移量。
+ - `GetTargetIndexPathForMove` -返回`indexPath`将拖放重新排序操作期间移动的项。
  - `MoveItem` – 在列表中移动给定项的顺序。
 
 ## <a name="summary"></a>总结
 
-本文已涉及到在 iOS 9 中的集合视图的更改，并描述如何在 Xamarin.iOS 中实现它们。
-它涵盖实现简单拖到重新排序操作中的集合视图中;自定义笔势识别器使用重新拖到排序;以及字段拖到重新排序如何影响自定义集合视图布局。
+本文已涵盖在 iOS 9 中的集合视图的更改，并介绍了如何在 Xamarin.iOS 中实现这些。
+它包括在集合视图; 中实现一个简单的拖放重新排序操作与重新拖动到排序; 使用自定义笔势识别器和拖放重新排序如何影响自定义集合视图布局。
 
 ## <a name="related-links"></a>相关链接
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 61e0fa2587ce9a8794dbd32ff9de1f13da857342
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 4e65f31d76d9540bed6110198d7cafaab9fe78f5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38838005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114894"
 ---
 # <a name="xaml-standard-preview"></a>XAML 标准 （预览）
 
@@ -20,7 +20,7 @@ ms.locfileid: "38838005"
 
 请执行以下步骤，尝试使用 Xamarin.Forms 中 XAML 标准：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 下载[预览此处 NuGet 包](https://aka.ms/xf-xamlstandard-nuget)。
 2. 添加**Xamarin.Forms.Alias**到 Xamarin.Forms.NET Standard 和平台项目的 NuGet 包。
@@ -28,7 +28,7 @@ ms.locfileid: "38838005"
 4. 添加`xmlns:a`引用 `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. 在 XAML 中使用的类型-请参阅[控件参考](controls.md)有关详细信息。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 下载[预览此处 NuGet 包](https://aka.ms/xf-xamlstandard-nuget)。
 2. 添加**Xamarin.Forms.Alias**到 Xamarin.Forms.NET Standard 和平台项目的 NuGet 包。
