@@ -15,7 +15,6 @@ ms.locfileid: "34783201"
 ---
 # <a name="monogame-platform-specific-considerations"></a>MonoGame 平台特别注意的事项
 
-## <a name="monogame-on-universal-windows-platform-uwpgraphics-gamesmonogameplatformsuwpmd"></a>[通用Windows平台（UWP）上的MonoGame](~/graphics-games/monogame/platforms/uwp.md)
+## <a name="monogame-on-universal-windows-platform-uwpgraphics-gamesmonogameplatformsuwpmd"></a>[通用 Windows 平台 (UWP) 上的 MonoGame](~/graphics-games/monogame/platforms/uwp.md)
 
-本演练涵盖了 MonoGame 通用Windows平台（UWP）项目的创建和内容加载。 UWP应用程序可以在所有Windows 10设备上运行，包括台式机，平板电脑，Windows Phone和Xbox One。
-
+本演练涵盖了 MonoGame 通用 Windows 平台 (UWP) 的项目创建和内容加载。UWP 应用可以在所有 Windows 10 设备上运行，包括台式机、平板电脑、Windows Phone 和 Xbox One。
