@@ -4,19 +4,19 @@ description: Xamarin.Android ProGuard 是一个 Java 类文件压缩器、优化
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 998232119159c5dc3a284dd51d55dc381271a4e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321371"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117390"
 ---
 # <a name="proguard"></a>ProGuard
 
-Xamarin.Android ProGuard 是一个 Java 类文件压缩器、优化器和预验证器。它会检测和删除未使用的代码，分析和优化字节码。本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。同时提供了几个 ProGuard 配置示例。
+Xamarin.Android ProGuard 是一个 Java 类文件压缩器、优化器和预验证器。它会检测和删除未使用的代码，分析和优化字节码。本指南阐释了 ProGuard 的工作原理、如何在项目中启用它，以及如何进行配置。同时提供了几个 ProGuard 配置示例。_
 
 
 ## <a name="overview"></a>概述
@@ -323,11 +323,11 @@ C:\Program Files (x86)\Java\jdk1.8.0_92\\bin\java.exe -jar C:\Android\android-sd
 
 此问题通常发生在 Windows 上，因为 `.cfg` 文件编码错误。 ProGuard 不能处理字节顺序标记 (BOM)，它可能出现在文本文件中。 如果存在 BOM，ProGuard 将退出并显示上述错误。 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 为避免此问题，请从允许不使用 BOM 保存文件的文本编辑器中编辑自定义配置文件。 若要解决此问题，请确保文本编辑器的编码设置为 `UTF-8`。 例如，保存文件时，文本编辑器 [Notepad++](https://notepad-plus-plus.org/) 可通过选择“编码”&gt;“无 BOM 时采用 UTF-8 编码”在没有 BOM 的情况下保存文件。 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 为避免此问题，请从可忽略 BOM 的文本编辑器保存自定义配置文件。 
 

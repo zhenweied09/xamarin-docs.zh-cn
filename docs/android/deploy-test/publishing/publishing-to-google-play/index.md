@@ -3,15 +3,15 @@ title: 发布到 Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
-ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
+ms.openlocfilehash: e8b1fdd933d026875ae10e76894120c8c4504769
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39067355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123331"
 ---
 # <a name="publishing-to-google-play"></a>发布到 Google Play
 
@@ -130,7 +130,7 @@ Google Play 上的应用程序需要使用高保真版本的应用程序图标�
 
 ### <a name="publishing-to-google-play"></a>发布到 Google Play
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 采用集成工作流，将应用从 Visual Studio 发布到 Google Play。 如果使用早于 7.0 版本的 Xamarin Android，则必须通过 Google Play 开发者控制台手动上传 APK。 此外，必须已至少上传 1 个 APK，才能使用此集成工作流。 如果尚未上传第一个 APK，则必须手动进行上传。 有关详细信息，请参阅[手动上传 APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md)。
 
@@ -161,7 +161,7 @@ Xamarin Android 7.0 采用集成工作流，将应用从 Visual Studio 发布到
 
 下一部分介绍如何新建 Google API 项目以及如何生成所需的_客户端 ID_ 和_客户端密码_。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Visual Studio for Mac 采用集成工作流，将应用发布到 Google Play。 如果使用早于 5.9 版本的 Xamarin Studio，则必须通过 Google Play 开发者控制台手动上传 APK，然后使用“发布到 Google Play”对话框进行后续 APK 更新。 此外，必须已至少上传 1 个 APK，才能使用“发布到 Google Play”。 如果尚未上传第一个 APK，则必须手动进行上传。 有关如何手动上传 APK 的信息，请参阅[手动上传 APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md)。
 
@@ -227,7 +227,7 @@ OAuth 客户端的默认名称是 Google Play Android 开发者。 可将其更�
 
 #### <a name="register-google-api-access"></a>注册 Google API 访问权限
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 使用客户端 ID 和客户端密码填写 Visual Studio for Mac 中的“Google Play API 帐户”对话框。 可以为帐户提供说明 &ndash; 这样可以注册多个 Google Play 帐户并可将以后的 APK 上传到其他 Google Play 帐户。 将客户端 ID 和客户端密码复制到此对话框，然后单击“注册”：
 
@@ -240,7 +240,7 @@ OAuth 客户端的默认名称是 Google Play Android 开发者。 可将其更�
 
 #### <a name="publish"></a>发布
 
-单击“允许”后，浏览器会报告已接收验证码。即将关闭...，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
+单击“允许”后，浏览器会报告已接收验证码。即将关闭..._，且应用将被添加到 Visual Studio 中的 Google Play 帐户列表中。 在“Google Play 帐户”对话框中，单击“继续”：
 
 [![已添加到 Google Play 帐户的帐户](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
@@ -283,7 +283,7 @@ OAuth 客户端的默认名称是 Google Play Android 开发者。 可将其更�
 
 若要解决此错误，请使用不同的版本号重新生成应用，然后通过“分发渠道”对话框重新提交到 Google Play。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 使用客户端 ID 和客户端密码填写 Visual Studio for Mac 中的“Google Play API 帐户”对话框。 可以为帐户提供说明 &ndash; 这样可以注册多个 Google Play 帐户并可将以后的 APK 上传到其他 Google Play 帐户。 将客户端 ID 和客户端密码复制到此对话框，然后单击“注册”：
 
