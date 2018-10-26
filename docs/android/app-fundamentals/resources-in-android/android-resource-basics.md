@@ -3,25 +3,25 @@ title: Android 资源基础知识
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110129"
 ---
 # <a name="android-resource-basics"></a>Android 资源基础知识
 
 几乎所有的 Android 应用程序将在其中; 具有某种形式的资源在最低限度它们通常具有 XML 文件的窗体中的用户界面布局。 当首次创建 Xamarin.Android 应用程序时，默认资源是通过 Xamarin.Android 项目模板的安装程序：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![资源文件](android-resource-basics-images/01-resource-files-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![资源文件](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -44,11 +44,11 @@ ms.locfileid: "39241313"
 
 创建资源只需将文件添加到所涉及的资源类型的目录。 下面的屏幕快照显示了德语区域设置的字符串资源已添加到项目。 当**Strings.xml**到文件中，添加**生成操作**自动设置为**AndroidResource**由 Xamarin.Android 工具：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![生成操作设置为 AndroidResource Strings.xml](android-resource-basics-images/02-build-action-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![生成操作设置为 AndroidResource Strings.xml](android-resource-basics-images/02-build-action-xs.png)
  

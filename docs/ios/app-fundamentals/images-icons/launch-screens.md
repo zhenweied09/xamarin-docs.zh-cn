@@ -4,15 +4,15 @@ description: 本文介绍如何在任何分辨率和方向，使用单个统一�
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 40b8c38e89e96223bbf657ff06356d9fb2e9d9b3
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 0ec1defa29a4fe85c4ae3e809d8733e68cc268ac
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116915"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>适用于 Xamarin.iOS 应用启动屏幕
 
@@ -28,7 +28,7 @@ _本文介绍如何在任何分辨率和方向，使用单个统一情节提要�
 
 在 iOS 8 （和更高版本），开发人员可以创建特殊统一情节提要提供而不是使用一个或多个静态启动映像启动屏幕。 如果创建 iOS 设计器启动情节提要，请使用大小类和自动布局来定义不同的显示环境的不同布局。 通过使用大小类和自动布局，开发人员可以创建一个看起来没问题在所有设备上的单一启动屏幕和显示环境。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 在 Visual Studio for Mac 中，通过选择创建新项目**文件 > 新的解决方案**，然后选择**单一视图应用**: 
 
@@ -95,7 +95,7 @@ _本文介绍如何在任何分辨率和方向，使用单个统一情节提要�
 
 13. 将所做的更改保存到情节提要。 在模拟器或设备上运行应用并启动屏幕会显示，如应用程序正在启动。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 创建新项目。 在 Visual Studio 中，选择**文件 > 新建 > 项目 > Visual C# > iPhone 和 iPad > iOS 应用 (Xamarin)**:
 
@@ -187,7 +187,7 @@ _本文介绍如何在任何分辨率和方向，使用单个统一情节提要�
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>迁移以启动屏幕情节提要
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 当更新现有应用程序要用于其启动屏幕情节提要，右键单击**项目名称**中**解决方案资源管理器**，然后选择**添加** > **新文件...**.选择**iOS** > **启动屏幕**然后单击**新建**按钮：
 
@@ -205,7 +205,7 @@ _本文介绍如何在任何分辨率和方向，使用单个统一情节提要�
 
     ![](launch-screens-images/storyboard08.png "设置启动屏幕情节提要")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 右键单击项目名称在**解决方案资源管理器**，然后选择**添加** > **新文件...**: 
 

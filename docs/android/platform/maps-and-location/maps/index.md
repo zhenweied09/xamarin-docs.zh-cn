@@ -1,33 +1,33 @@
 ---
-title: 如何使用 Xamarin.Android Google 地图和位置
-description: 此文章介绍了如何使用 Xamarin.Android 的地图和位置。 它涵盖利用内置地图应用程序直接使用 Google 映射 Android API V2 中的所有内容。
+title: 如何使用 Xamarin.Android 使用 Google 地图和位置
+description: 本文介绍如何使用 Xamarin.Android 使用地图和位置。 它涵盖了从利用内置地图应用程序直接使用 Google 映射 Android API V2 的所有内容。
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935368"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117120"
 ---
-# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>如何使用 Xamarin.Android Google 地图和位置
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>如何使用 Xamarin.Android 使用 Google 地图和位置
 
-_此文章介绍了如何使用 Xamarin.Android 的地图和位置。它涵盖利用内置地图应用程序直接使用 Google 映射 Android API V2 中的所有内容。_
+_本文介绍如何使用 Xamarin.Android 使用地图和位置。它涵盖了从利用内置地图应用程序直接使用 Google 映射 Android API V2 的所有内容。_
 
-## <a name="maps-overview"></a>地图概述
+## <a name="maps-overview"></a>映射概述
 
-映射技术，它们是对移动设备的无处不在补充。 台式计算机和便携式计算机不往往采用内置的位置感知。 另一方面，移动设备使用此类应用程序，以查找设备并显示不断变化的位置信息。 Android 有功能强大、 内置技术，在使用可在设备的位置硬件的地图上显示位置数据。 本文介绍如何提供了一系列的下 Xamarin.Android 地图应用程序需要提供服务，包括： 
+映射技术是对移动设备的通用补充。 台式计算机和便携式计算机不往往具有内置的位置感知。 但是，移动设备使用此类应用程序查找的设备并显示变化的位置信息。 Android 应用了功能强大、 内置显示地图使用位置可能在设备上可用的硬件的位置数据的技术。 本文介绍一系列在 Xamarin.Android 的地图应用程序需要产品/服务，包括： 
 
--  使用内置映射应用程序以快速添加映射功能。
--  使用地图 API，以控制地图的显示。
--  使用各种方法来添加图形覆盖文件。
+-  使用内置地图应用程序以快速添加映射功能。
+-  使用地图 API 以控制地图的显示。
+-  使用各种技术添加图形叠加。
 
-本部分中的主题介绍各种映射功能。
-首先，它们介绍如何利用 Android 的内置地图应用程序以及如何显示全景街道视图的位置。 然后它们讨论了如何使用地图 API 以合并直接在应用程序，涵盖这两个如何控件位置和一个代码图，显示的映射功能，以及如何添加图形覆盖文件。
+在本部分中的主题介绍各种映射功能。
+首先，它们说明了如何利用 Android 的内置地图应用程序以及如何显示的位置的街道全景视图。 然后他们将讨论如何使用地图 API 来将直接在应用程序中，介绍如何控制位置和一个代码图，显示这两个映射功能合并，以及如何添加图形叠加。
 
 
 ## <a name="related-links"></a>相关链接
@@ -36,4 +36,4 @@ _此文章介绍了如何使用 Xamarin.Android 的地图和位置。它涵盖�
 - [活动生命周期](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [获取 Google Maps API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [意向列表： 调用在 Android 设备上的 Google 应用程序](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [位置和映射](http://developer.android.com/guide/topics/location/index.html)
+- [位置和地图](http://developer.android.com/guide/topics/location/index.html)

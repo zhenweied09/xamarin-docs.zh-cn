@@ -1,45 +1,45 @@
 ---
-title: ContentProviders 简介
-description: Android 操作系统使用内容提供商为了便于访问共享数据，例如媒体文件、 联系人和日历信息。 本文介绍 ContentProvider 类，并提供如何使用它的两个示例。
+title: 简介 Contentprovider
+description: Android 操作系统使用的内容提供商来方便地对媒体文件、 联系人和日历信息等的共享数据的访问。 本文介绍 ContentProvider 类，并提供如何使用它的两个示例。
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: e534c02820bfeab3a5bc1211bf0cbb20b9821af3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4105200c48e41b142fc71e3a524023790b683cdb
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105982"
 ---
-# <a name="intro-to-contentproviders"></a>ContentProviders 简介
+# <a name="intro-to-contentproviders"></a>简介 Contentprovider
 
-_Android 操作系统使用内容提供商为了便于访问共享数据，例如媒体文件、 联系人和日历信息。本文介绍 ContentProvider 类，并提供如何使用它的两个示例。_
+_Android 操作系统使用的内容提供商来方便地对媒体文件、 联系人和日历信息等的共享数据的访问。本文介绍 ContentProvider 类，并提供如何使用它的两个示例。_
 
 
 ## <a name="content-providers-overview"></a>内容提供程序概述
 
-A *ContentProvider*封装的数据存储库，并提供一个 API 来访问它。 提供程序存在的 Android 应用程序通常还提供用于显示/管理数据的用户界面的一部分。 使用内容提供程序的主要好处使其他应用程序能够轻松地访问封装的数据使用的提供程序客户端对象 (称为*ContentResolver*)。 在一起，内容提供程序和内容解析程序提供一致的应用程序间 API 进行很容易生成和使用的数据访问。 任何应用程序可以选择使用`ContentProviders`内部管理数据以及将其公开给其他应用程序。
+一个*ContentProvider*封装的数据存储库，并提供一个 API 来访问它。 提供程序存在通常还提供一个 UI 用于显示/管理数据的 Android 应用程序的一部分。 使用内容提供商的主要好处，让其他应用程序能够轻松地访问封装的数据使用的提供程序客户端对象 (称为*ContentResolver*)。 在一起，内容提供商和内容冲突解决程序提供一致的应用程序间 API 进行生成和使用简单的数据访问。 任何应用程序可以选择使用`ContentProviders`在内部管理数据以及将其公开给其他应用程序。
 
-A `ContentProvider` ，则也需要应用程序，以提供自定义搜索建议，或如果你想要提供将复杂的数据从你的应用程序，将粘贴到其他应用程序复制的功能。 本文档演示如何访问和生成`ContentProviders`与 Xamarin.Android。
+一个`ContentProvider`，还需要为应用程序提供自定义搜索建议，或如果你想要提供应用程序以粘贴到其他应用程序中的复杂数据复制的功能。 本文档演示如何访问和生成`ContentProviders`使用 Xamarin.Android。
 
 本部分的结构如下所示：
 
-- **它是如何工作**&ndash;的新增功能概述`ContentProvider`旨在为，以及如何配合工作。
+- **其工作原理**&ndash;的内容概述`ContentProvider`旨在为，以及如何配合工作。
 
-- **使用内容提供商**&ndash;示例访问联系人列表。
+- **使用内容提供商**&ndash;示例： 访问联系人列表。
 
-- **使用 ContentProvider 共享数据**&ndash;编写和使用`ContentProvider`在同一应用程序。
+- **使用 ContentProvider 共享数据**&ndash;编写和使用方`ContentProvider`在同一应用程序。
 
-`ContentProviders` 并对其数据的操作的光标通常用于填充 Listview。 请参阅[Listview 和适配器指南](~/android/user-interface/layouts/list-view/index.md)有关如何使用这些类的详细信息。
+`ContentProviders` 并对其数据的游标通常用于填充 Listview。 请参阅[Listview 和适配器指南](~/android/user-interface/layouts/list-view/index.md)有关如何使用这些类的详细信息。
 
-`ContentProviders` 公开的 Android （或其他应用程序），可以方便地在你的应用程序中包含来自其他源的数据。 它们允许你访问和显示数据，例如联系人列表、 照片或从应用程序中的日历事件，并允许用户与该数据进行交互。
+`ContentProviders` 公开的 Android （或其他应用程序），可以轻松在应用程序中包括来自其他源的数据。 它们使你能够访问和呈现数据，如联系人列表、 照片或从应用程序中的日历事件，让用户使用该数据进行交互。
 
-自定义`ContentProviders`是一种简便的方法来打包你的数据在你自己的应用中使用或用于通过其他应用程序 （包括自定义搜索和复制/粘贴等特殊用途）。
+自定义`ContentProviders`是由其他应用程序 （包括自定义搜索和复制/粘贴等特殊用途） 打包你的数据在你自己的应用，内部使用或供使用的简便方法。
 
-本部分中的主题提供一些简单的示例使用和写入`ContentProvider`代码。
+在本部分中的主题提供使用和编写一些简单示例`ContentProvider`代码。
 
 
 

@@ -1,33 +1,33 @@
 ---
 title: 在 iOS 上的辅助功能
-description: 本文档介绍 iOS，讨论各种属性和可用来使你的应用程序可尽可能多的用户通过尽可能的功能中的辅助功能。
+description: 本文档介绍了在 iOS 中，讨论各种属性和功能，可用于使你的应用程序可由任意数量的用户尽可能可访问性。
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/18/2016
-ms.openlocfilehash: fa85459870211ff26c3bfdd3cc25f722a635952c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108894"
 ---
 # <a name="accessibility-on-ios"></a>在 iOS 上的辅助功能
 
-本页介绍如何使用 iOS 可访问性 Api 来生成应用根据[可访问性清单](~/cross-platform/app-fundamentals/accessibility.md)。
-请参阅[Android 可访问性](~/android/app-fundamentals/accessibility.md)和[OS X 可访问性](~/mac/app-fundamentals/accessibility.md)其他平台 Api 的页。
+此页介绍了如何使用 iOS 可访问性 Api 构建应用程序根据[可访问性清单](~/cross-platform/app-fundamentals/accessibility.md)。
+请参阅[Android 可访问性](~/android/app-fundamentals/accessibility.md)并[OS X 辅助功能](~/mac/app-fundamentals/accessibility.md)页的其他平台 Api。
 
 ## <a name="describing-ui-elements"></a>描述 UI 元素
 
-iOS 提供`AccessibilityLabel`和`AccessibilityHint`属性开发人员可以添加描述性文本可以由语音朗读使用屏幕阅读器，以使控件更易于访问。 此外可以使用提供的其他上下文中可访问模式的一个或多个特征标记控件。
+提供了 iOS`AccessibilityLabel`和`AccessibilityHint`属性开发人员能够添加说明性文本可以由语音朗读屏幕读取器可使控件更易于访问。 此外可以使用提供的其他上下文中可访问模式的一个或多个特征标记控件。
 
-某些控件可能不需要的可访问 （示例中，输入文本或图像，仅仅是装饰性的上一个标签） –`IsAccessibilityElement`用于禁用在这些情况下可访问性。
+某些控件可能不需要的可访问 （例如，在文本输入或仅仅是装饰性的图像的标签） –`IsAccessibilityElement`提供以禁用在这些情况下可访问性。
 
 **UI 设计器**
 
-**属性填充**包含可访问性节，允许这些设置，以在 iOS UI 设计器中选择了一个控件时才进行编辑：
+**Properties Pad**包含允许 iOS 用户界面设计器中选择一个控件时要编辑这些设置可访问性部分：
 
 ![](accessibility-images/ios-designer-sml.png "辅助功能设置")
 
@@ -44,7 +44,7 @@ displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibil
 
 ### <a name="what-is-accessibilityidentifier"></a>什么是 AccessibilityIdentifier？
 
-`AccessibilityIdentifier`用于设置的唯一密钥，可以用于通过 UIAutomation API 的用户界面元素引用。
+`AccessibilityIdentifier`用于设置可用于指代 UIAutomation API 通过用户界面元素的唯一键。
 
 值`AccessibilityIdentifier`永远不会读出或向用户显示。
 
@@ -52,11 +52,11 @@ displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibil
 
 ## <a name="postnotification"></a>PostNotification
 
-`UIAccessibility.PostNotification`方法可将事件引发到外部 （例如，在它们与特定控件交互时） 的直接交互用户。
+`UIAccessibility.PostNotification`方法可将事件引发到外部 （例如，当它们与特定控件交互时） 的直接交互用户。
 
 ### <a name="announcement"></a>公告
 
-用于通知用户某些状态已更改 （如后台操作已完成），可以从代码发送公告。 这可能伴随着用户界面中的可视指示：
+若要通知的用户的某个状态发生更改 （例如，后台操作已完成），可以从代码发送公告。 这可能伴随着用户界面中的直观指示：
 
 ```csharp
 UIAccessibility.PostNotification (
@@ -77,11 +77,11 @@ UIAccessibility.PostNotification (
 
 ## <a name="accessibility-and-localization"></a>可访问性和本地化
 
-辅助功能属性一样的标签和提示可以本地化只需像用户界面中的其他文本。
+辅助功能属性一样可以只是本地化的标签和提示，例如用户界面中的其他文本。
 
 **MainStoryboard.strings**
 
-如果在情节提要中的用户界面布局方式，你可以在与其他属性相同的方式提供辅助功能属性的翻译。 在示例中，`UITextField`具有**本地化 ID**的`Pqa-aa-ury`和西班牙语设置的两个可访问性属性：
+如果情节提要中的用户界面布局方式，您可以与其他属性相同的方式提供辅助功能属性的翻译。 在以下示例中，`UITextField`已**本地化 ID**的`Pqa-aa-ury`和在西班牙语中设置的两个可访问性属性：
 
 ```csharp
 /* Accessibility */
@@ -89,11 +89,11 @@ UIAccessibility.PostNotification (
 "Pqa-aa-ury.accessibilityHint" = "escriba más información";
 ```
 
-此文件将放在**es.lproj**西班牙语内容目录。
+此文件会放**es.lproj**西班牙语内容目录。
 
 **Localizable.strings**
 
-或者，可以将翻译添加到**Localizable.strings**文件的本地化内容目录中 （例如。 **es.lproj**为西班牙语):
+或者，可以将翻译添加到**Localizable.strings**本地化内容目录 （例如中的文件。 **es.lproj**西班牙语):
 
 ```csharp
 /* Accessibility */
@@ -101,7 +101,7 @@ UIAccessibility.PostNotification (
 "Provide more information" = "escriba más información";
 ```
 
-可以在 C# 中通过使用这些翻译`LocalizedString`方法：
+这些转换可在C#通过`LocalizedString`方法：
 
 ```csharp
 notesText.AccessibilityLabel = NSBundle.MainBundle.LocalizedString ("Notes", "");
@@ -114,27 +114,27 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 
 ## <a name="testing-accessibility"></a>测试辅助功能
 
-在中启用语音朗读**设置**通过导航到应用**常规 > 可访问性 > 语音朗读**:
+在中启用语音朗读**设置**通过导航到应用程序**常规 > 可访问性 > VoiceOver**:
 
 ![](accessibility-images/settings-sml.png "设置的语速")
 
-**可访问性**屏幕还提供了缩放、 文本大小、 颜色和对比度选项、 语音设置和其他配置选项设置。
+**可访问性**屏幕还提供了有关缩放、 文本大小、 颜色和对比度选项、 语音设置和其他配置选项的设置。
 
-请按照以下[语音朗读说明](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)在 iOS 设备上的辅助功能进行测试。
+请按照这些[VoiceOver 说明](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)在 iOS 设备上的辅助功能进行测试。
 
 
 ## <a name="simulator-testing"></a>模拟器测试
 
-在模拟器中，测试时**可访问性检查器**是可用于帮助验证辅助功能属性和事件是否正确配置。 打开检查功能在**设置**通过导航到应用**常规 > 可访问性 > 可访问性检查器**:
+在模拟器中测试时**可访问性检查器**是可用于帮助验证是否正确配置的辅助功能属性和事件。 检查器中打开**设置**通过导航到应用程序**常规 > 可访问性 > 可访问性检查器**:
 
 ![](accessibility-images/settings-inspector-sml.png "启用辅助功能检查器")
 
-启用后，检查器窗口悬停 iOS 屏幕在所有时间。
-下面是输出的示例，选择表视图行时，请注意**标签**包含提供的行，并确保它"已完成"的内容的句子 (ie。 刻度线是可见):
+启用后，检查器窗口将鼠标悬停在 iOS 屏幕在所有时间。
+下面是输出的示例，选择表视图行时，请注意**标签**包含提供的行，并且确保它"完成"的内容的句子 (ie。 刻度线是可见):
 
 ![](accessibility-images/tableview-a11y-sml.png "使用可访问性检查器")
 
-该检查器可见时，使用在左上角的"X"图标来暂时显示和隐藏在覆盖区上，启用/禁用辅助功能设置。
+该检查器可见时，使用在左上方的"X"图标以暂时显示和隐藏在覆盖区上并启用/禁用辅助功能设置。
 
 
 

@@ -1,19 +1,19 @@
 ---
 title: Xamarin.Mac 错误消息 (mmp)
-description: 本文档列出了由 mmp，用来打包到可执行的 Mac 应用程序的已编译程序的集的工具生成的错误。
+description: 本文档列出了由 mmp，用来打包到可执行文件的 Mac 应用程序编译的程序集的工具生成的错误。
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: f5cf4a9003d3fb468ffcf337c33730cb12238c44
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3c7b7c39eb714dbd47049c9440c188667a75e48f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106268"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.Mac 错误消息 (mmp)
 
@@ -25,17 +25,17 @@ ms.locfileid: "34792750"
 
 #### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM0000： 意外的错误-请文件 bug 报告在 http://bugzilla.xamarin.com
 
-出现意外的错误条件。 请[文件一个 bug 报告](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)利用尽可能多的信息可能，其中包括：
+出现意外的错误条件。 请[提交 bug 报告](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)提供尽可能多的信息可能，包括：
 
-* 完全生成具有最大详细级别的日志，(例如`-v -v -v -v`中**其他 mmp 参数**);
-* 再现错误; 的最小测试用例和
+* 完整生成日志，与最大详细级别 (例如`-v -v -v -v`中**其他 mmp 参数**);
+* 重新生成错误; 的最小测试用例和
 * 所有版本信息
 
-获取确切的版本信息的最简单方法是使用**Xamarin Studio**菜单上，**有关 Xamarin Studio**项，**显示详细信息**按钮，然后复制/粘贴版本信息 (你可以使用**复制信息**按钮)。
+若要获取确切的版本信息的最简单方法是使用**Xamarin Studio**菜单中，**关于 Xamarin Studio**项，**显示详细信息**按钮，然后复制/粘贴版本信息 (可以使用**复制信息**按钮)。
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001: Xamarin.Mac 该版本是要求 Mono {0} (当前单声道版本是{1})。 请更新从 Mono.framework http://mono-project.com/Downloads
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001： 此版本的 Xamarin.Mac 需要 Mono {0} (当前的 Mono 版本是{1})。 请更新从 Mono.framework http://mono-project.com/Downloads
 
 <a name="MM0003" />
 
@@ -47,7 +47,7 @@ ms.locfileid: "34792750"
 
 <a name="MM0008" />
 
-#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008： 应提供一个根程序集仅，找到{0}程序集:{1}
+#### <a name="mm0008-you-should-provide-one-root-assembly-only-found-0-assemblies-1"></a>MM0008： 应提供一个根程序集唯一，但发现{0}程序集:{1}
 
 <a name="MM0010" />
 
@@ -57,7 +57,7 @@ ms.locfileid: "34792750"
 
 <a name="MM0016" />
 
-#### <a name="mm0016-the-option-0-has-been-deprecated"></a>MM0016: 选项 '{0}已弃用。
+#### <a name="mm0016-the-option-0-has-been-deprecated"></a>MM0016： 选项 '{0}已弃用。
 
 <a name="MM0017" />
 
@@ -69,7 +69,7 @@ ms.locfileid: "34792750"
 
 <a name="MM0020" />
 
-#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020： 有效选项为{0}是{1}。
+#### <a name="mm0020-the-valid-options-for-0-are-1"></a>MM0020： 有效选项为 '{0}是{1}。
 
 <a name="MM0023" />
 
@@ -85,60 +85,60 @@ ms.locfileid: "34792750"
 
 <a name="MM0050" />
 
-#### <a name="mm0050-you-cannot-provide-a-root-assembly-if---no-root-assembly-is-passed"></a>MM0050： 如果-否根集传递，则不能提供根程序集。
+#### <a name="mm0050-you-cannot-provide-a-root-assembly-if---no-root-assembly-is-passed"></a>MM0050： 如果-传递否根程序集不能提供根程序集。
 
 <a name="MM0051" />
 
-#### <a name="mm0051-an-output-directory---output-is-required-if---no-root-assembly-is-passed"></a>MM0051： 输出目录 (-输出) 是必需的如果-否-根-程序集被传递。
+#### <a name="mm0051-an-output-directory---output-is-required-if---no-root-assembly-is-passed"></a>MM0051： 输出目录 (-输出) 如果-传递否根程序集是必需的。
 
 <a name="MM0053" />
 
-#### <a name="mm0053-cannot-disable-new-refcount-with-the-unified-api"></a>MM0053： 不能禁用使用统一的 API 的新引用计数。
+#### <a name="mm0053-cannot-disable-new-refcount-with-the-unified-api"></a>MM0053： 不能禁用使用统一 API 的新引用计数。
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056： 找不到 Xcode 中任何我们默认位置。 请安装 Xcode，或通过使用-sdkroot 的自定义路径 =<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056： 找不到 Xcode，我们默认位置中。 请安装 Xcode，或通过使用--sdkroot 的自定义路径 =<path>
 
 <a name="MM0059" />
 
-#### <a name="mm0059-could-not-find-the-currently-selected-xcode-on-the-system-0"></a>MM0059： 系统上找不到当前所选的 Xcode: {0};
+#### <a name="mm0059-could-not-find-the-currently-selected-xcode-on-the-system-0"></a>MM0059： 找不到系统上的当前所选的 Xcode: {0};
 
 <a name="MM0060" />
 
-#### <a name="mm0060-could-not-find-the-currently-selected-xcode-on-the-system-xcode-select---print-path-returned-0-but-that-directory-does-not-exist"></a>MM0060： 找不到当前所选的 Xcode，系统上。 xcode 选择-打印路径返回{0}，但该目录不存在。
+#### <a name="mm0060-could-not-find-the-currently-selected-xcode-on-the-system-xcode-select---print-path-returned-0-but-that-directory-does-not-exist"></a>MM0060： 找不到系统上的当前所选的 Xcode。 ' xcode-select--打印路径返回{0}，但该目录不存在。
 
 <a name="MM0068" />
 
-#### <a name="mm0068-invalid-value-for-target-framework-0"></a>MM0068： 的目标框架的值无效： {0}。
+#### <a name="mm0068-invalid-value-for-target-framework-0"></a>MM0068： 目标框架无效值： {0}。
 
 <a name="MM0071" />
 
 #### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071： 未知的平台: *。 这通常表示 Xamarin.Mac; 中的 bug在一个 bug 报告，请记录 https://bugzilla.xamarin.com 与测试用例。
 
-这通常表示 Xamarin.Mac; 中的 bug在一个 bug 报告，请记录[ https://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)与测试用例。
+这通常表示 Xamarin.Mac; 中的 bug请提交在 bug 报告[ https://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)与测试用例。
 
 <a name="MM0079" />
 
-#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079： 内部错误-任何可执行文件复制到应用程序捆绑包。 请联系support@xamarin.com
+#### <a name="mm0079-internal-error---no-executable-was-copied-into-the-app-bundle-please-contact-supportxamarincom"></a>MM0079： 内部错误-没有可执行文件复制到应用程序捆绑包。 请联系support@xamarin.com
 
 <a name="MM0080" />
 
-#### <a name="mm0080-disabling-newrefcount---new-refcountfalse-is-deprecated"></a>MM0080： 禁用 NewRefCount、--新的 refcount:false，已弃用。
+#### <a name="mm0080-disabling-newrefcount---new-refcountfalse-is-deprecated"></a>MM0080： 禁用 NewRefCount、--new-refcount:false，已弃用。
 
 <!-- 0088 used by mtouch -->
 <!-- 0089 used by mtouch -->
 
 <a name="MM0091" />
 
-#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091： 此版本的 Xamarin.Mac 需要 * SDK (随 Xcode *)。 请升级 Xcode 以获取必需的标头文件或使用动态注册机构或将托管链接器行为设置为链接平台或仅上链接 Framework Sdk （若要尽量避免新的 Api）。
+#### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091： 此版本的 Xamarin.Mac 需要 * SDK (随 Xcode *)。 可以将升级 Xcode 以获取必需的标头文件或使用动态注册机构或托管链接器行为设置为链接平台或仅上链接 Framework Sdk （若要尽量避免新的 Api）。
 
-Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序的错误消息中指定的 SDK 版本。 若要修复此错误的建议的方法是升级 Xcode 来获取所需的 SDK，这将包括所有必需的标头文件。 如果你有多个版本的 Xcode 安装，或想要在非默认位置使用 Xcode，请确保在 IDE 的首选项中设置正确的 Xcode 位置。
+Xamarin.Mac 需要标头文件，从要生成应用程序上的静态注册的错误消息中指定的 SDK 版本。 若要修复此错误的建议的方法是升级 Xcode 以获取所需的 SDK，这将包括所有必需的标头文件。 如果有多个版本的 Xcode 安装，或者想要使用 Xcode 中的非默认位置，请务必在 IDE 的首选项中设置正确的 Xcode 位置。
 
-一种潜在、 备用解决方案，是启用托管链接器。 这将删除未使用 API 包括，在大多数情况下，新的 API 从中对标头文件进行缺失 （或不完整）。 但是这不会正常如果你的项目使用了较新的 SDK 比你的 Xcode 中引入的 API 提供。
+一种潜在的备用解决方案，是能够托管链接器。 这将删除未使用 API 包括，在大多数情况下，新的 API 标头文件的丢失 （或不完整） 的位置。 但是这不起如果项目使用了较新的 SDK 比一个你的 Xcode 中引入的 API 提供。
 
-第二个潜在替代解决方案，是改为使用动态注册机构。 这将通过动态注册类型施加的启动成本，但删除标头文件要求。 
+第二个潜在的备用解决方案中，改为使用动态注册机构。 这将通过动态注册类型施加的启动成本，但删除标头文件要求。 
 
-上一次 straw 解决方案是使用较旧版本的 Xamarin.Mac，另一个支持你的项目的 SDK 需要。
+最后的办法-就解决方案是使用较旧版本的 Xamarin.Mac，另一个支持你的项目的 SDK 需要。
 
 <a name="MM0097" />
 
@@ -146,27 +146,27 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM0098" />
 
-#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098: AOT 编译才统一上可用
+#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098: AOT 编译上才统一
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099： 内部错误{0}。 请文件与测试用例的一个 bug 报告 (http://bugzilla.xamarin.com)。
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099： 内部错误{0}。 请提交 bug 报告与测试用例 (http://bugzilla.xamarin.com)。
 
 <a name="MM0114" />
 
-#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114： 混合 AOT 编译要求所有要 AOT 编译的程序集。
+#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114： 混合 AOT 编译要求将所有程序集进行 AOT 编译。
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx： 文件复制 / 符号链接 （相关项目）
 
 <a name="MM1034" />
 
-#### <a name="mm1034-could-not-create-symlink-file---target-error-number"></a>MM1034： 无法创建符号链接 {file}-> {面向}： 错误 {number}
+#### <a name="mm1034-could-not-create-symlink-file---target-error-number"></a>MM1034： 无法创建符号链接 {file}-> {target}： 错误 {number}
 
 ### <a name="mm14xx-product-assemblies"></a>MM14xx： 产品程序集
 
 <a name="MM1401" />
 
-#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401： 所需{0}程序集是从引用缺少
+#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401： 所需{0}从引用缺少程序集
 
 <a name="MM1402" />
 
@@ -174,7 +174,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM1403" />
 
-#### <a name="mm1403-0-1-could-not-be-found-target-framework-0-is-unusable-to-package-the-application"></a>MM1403: {0} {1}找不到。 目标框架{0}，则无法使用应用程序打包。
+#### <a name="mm1403-0-1-could-not-be-found-target-framework-0-is-unusable-to-package-the-application"></a>MM1403: {0} {1}未找到。 目标框架{0}不可用，将应用程序打包。
 
 <a name="MM1404" />
 
@@ -182,7 +182,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM1405" />
 
-#### <a name="mm1405-usefullxammacframework-must-always-target-framework-net-45-not-0-which-is-invalid"></a>MM1405: useFullXamMacFramework 必须始终为目标 framework.NET 4.5 起，不{0}的无效
+#### <a name="mm1405-usefullxammacframework-must-always-target-framework-net-45-not-0-which-is-invalid"></a>MM1405: useFullXamMacFramework 必须始终 framework 为目标.NET 4.5 中，不{0}的无效
 
 <a name="MM1406" />
 
@@ -190,9 +190,9 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Xamarin.Mac 引用之间的不匹配{0}并选择的目标框架{1}。
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Xamarin.Mac 引用之间不匹配{0}并选择目标框架{1}。
 
-### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx： 程序集 （不需要链接器） 的收集错误
+### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx： 程序集 （不需要链接器） 正在收集错误
 
 <a name="MM1501" />
 
@@ -202,19 +202,19 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM1600" />
 
-#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600： 不匹配-O 动态库 (未知标头"0 x{0}): {1}。
+#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600： 不是 MACH-O 动态库 (未知标头"0 x{0}): {1}。
 
 <a name="MM1601" />
 
-#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601： 不是静态库 (未知的标头{0}): {1}。
+#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601： 不是静态库 (未知标头{0}): {1}。
 
 <a name="MM1602" />
 
-#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602： 不匹配-O 动态库 (未知标头"0 x{0}): {1}。
+#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602： 不是 MACH-O 动态库 (未知标头"0 x{0}): {1}。
 
 <a name="MM1603" />
 
-#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603: 位置处的 fat 条目的格式未知{0}中{1}。
+#### <a name="mm1603-unknown-format-for-fat-entry-at-position-0-in-1"></a>MM1603： 位置处的 fat 条目未知的格式{0}在{1}。
 
 <a name="MM1604" />
 
@@ -234,7 +234,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2003" />
 
-#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003： 选项 '{0}将被忽略，因为链接被禁用
+#### <a name="mm2003-option-0-will-be-ignored-since-linking-is-disabled"></a>MM2003： 选项 '{0}将被忽略，因为禁用了链接
 
 <a name="MM2004" />
 
@@ -242,15 +242,15 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2005" />
 
-#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005： 从定义{0}无法分析。
+#### <a name="mm2005-definitions-from-0-could-not-be-parsed"></a>MM2005： 定义从{0}无法分析。
 
 <a name="MM2006" />
 
-#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006： 本机库{0}引用，但找不到。
+#### <a name="mm2006-native-library-0-was-referenced-but-could-not-be-found"></a>MM2006： 本机库{0}引用，但未找到。
 
 <a name="MM2007" />
 
-#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: Xamarin.Mac 统一的 API 对完整的.NET 配置文件不支持链接。 传递-nolink 标志。
+#### <a name="mm2007-xamarinmac-unified-api-against-a-full-net-profile-does-not-support-linking-pass-the--nolink-flag"></a>MM2007: Xamarin.Mac Unified API 针对完整.NET 配置文件不支持链接。 传递-nolink 标志。
 
 <a name="MM2009" />
 
@@ -262,19 +262,19 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM2011" />
 
-#### <a name="mm2011-unknown-tlsprovider-0--valid-values-are-default-or-appletls"></a>MM2011： 未知的 TLSProvider{0}。  有效值为默认或 appletls
+#### <a name="mm2011-unknown-tlsprovider-0--valid-values-are-default-or-appletls"></a>MM2011： 未知的 TLSProvider{0}。  有效的值为默认值或 appletls
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012： 仅第一个{0}的{1}"引用的"显示的警告。 ** 此消息与 2009年 \*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012： 只有第一个{0}的{1}"引用"所示的警告。 ** 此消息与 2009年 \*\*
 
 <a name="MM2013" />
 
-#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013： 无法解析对引用"{0}"，引用中的"{1}"。 该应用将不包含所引用的程序集，并可能在运行时失败。
+#### <a name="mm2013-failed-to-resolve-the-reference-to-0-referenced-in-1-the-app-will-not-include-the-referenced-assembly-and-may-fail-at-runtime"></a>MM2013： 无法解析到引用"{0}"，在被引用的"{1}"。 该应用将不包括引用的程序集，并在运行时可能会失败。
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac 扩展不支持链接。 请求链接将被忽略。 ** 此消息在中已过时 XM 3.6 + \*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac 扩展不支持链接。 请求的链接将被忽略。 ** 此消息在中已过时 XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -288,7 +288,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM202x" />
 
-#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x： 绑定优化器失败处理`...`。
+#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x： 处理绑定优化器失败`...`。
 
 <a name="MM2100" />
 
@@ -300,13 +300,13 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 处理程序集时发生意外的错误。
 
-错误消息中名为导致出现此问题的程序集。 若要解决此问题的程序集将需要提供在[bug 报表](https://bugzilla.xamarin.com)与具有详细级别启用完整的生成日志一起 (即`-v -v -v -v`中**其他 mtouch 参数**)。
+错误消息中名为导致出现此问题的程序集。 若要解决此问题的程序集将需要在中提供[bug 报表](https://bugzilla.xamarin.com)以及完整的生成日志包含详细级别启用 (即`-v -v -v -v`中**其他 mtouch 参数**)。
 
 <a name="MM2104" />
 
-#### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104： 无法将链接程序集{0}按原样混合模式。
+#### <a name="mm2104-unable-to-link-assembly-0-as-it-is-mixed-mode"></a>MM2104： 无法链接程序集{0}按原样混合模式。
 
-链接器无法处理混合模式程序集。
+链接器不会处理混合模式程序集。
 
 请参阅 https://msdn.microsoft.com/library/x0w2664k.aspx 为混合模式程序集的详细信息。
 
@@ -316,7 +316,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM3001" />
 
-#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001： 无法不 AOT 程序集{0}
+#### <a name="mm3001-could-not-aot-the-assembly-0"></a>MM3001： 可能不 AOT 的程序集{0}
 
 <!-- 3002 used by mtouch -->
 <!-- 3003 used by mtouch -->
@@ -328,11 +328,11 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM3009" />
 
-#### <a name="mm3009-aot-of-0-was-requested-but-was-not-found"></a>MM3009: AOT{0}已请求但未找到
+#### <a name="mm3009-aot-of-0-was-requested-but-was-not-found"></a>MM3009: AOT{0}已请求但找不到
 
 <a name="MM3010" />
 
-#### <a name="mm3010-exclusion-of-aot-of-0-was-requested-but-was-not-found"></a>MM3010： 排除的 AOT{0}已请求但未找到
+#### <a name="mm3010-exclusion-of-aot-of-0-was-requested-but-was-not-found"></a>MM3010： 排除的 AOT{0}已请求但找不到
 
 ## <a name="mm4xxx-code-generation"></a>MM4xxx： 代码生成
 
@@ -346,7 +346,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM4134" />
 
-#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: 你的应用程序正在使用{0}框架，不包括在 MacOS SDK 将生成应用程序 (此框架在 OSX 中引入{2}，而你正在生成与 MacOS {1} SDK。)使用静态的注册机构 (pass-注册机构： 动态作为你的项目的 Mac 生成选项，可选择中的其他 mmp 参数) 不支持此配置。 或者在你的应用的 Mac 生成选项中选择一个较新的 SDK。
+#### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: 应用程序使用{0}框架，不包括在 MacOS SDK 要使用来构建您的应用程序 (此框架在 OSX 中引入{2}，而正在生成的 MacOS {1} SDK。)此配置不支持使用静态注册机构 (pass-注册机构： 动态作为在您的项目的 Mac 生成选项中选择其他 mmp 参数)。 或者您的应用程序的 Mac 生成选项中选择更高版本的 SDK。
 
 ## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC 和工具链
 
@@ -360,7 +360,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5103" />
 
-#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103： 编译失败。 错误代码- {0}。 请在一个 bug 报告，记录 http://bugzilla.xamarin.com
+#### <a name="mm5103-failed-to-compile-error-code---0-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MM5103： 编译失败。 错误代码- {0}。 请提交在 bug 报告 http://bugzilla.xamarin.com
 
 <!-- 5104 used by mtouch -->
 
@@ -368,7 +368,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.framework MDK 找不到。 请安装适用于从你 Mono.framework 版本 MDK http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.framework MDK 缺少。 请安装适用于从你 Mono.framework 版本 MDK http://mono-project.com/Downloads
 
 <a name="MM5203" />
 
@@ -376,7 +376,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5204" />
 
-#### <a name="mm5204-invalid-architecture-x8664-is-only-supported-on-non-classic-profiles"></a>MM5204： 无效的体系结构。 x86_64 仅支持在非经典配置文件上。
+#### <a name="mm5204-invalid-architecture-x8664-is-only-supported-on-non-classic-profiles"></a>MM5204： 无效的体系结构。 x86_64 仅支持对非经典配置文件。
 
 <a name="MM5205" />
 
@@ -384,7 +384,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5218" />
 
-#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218： 不能忽略动态符号 {symbol} (-忽略动态符号 = {符号}) 因为它未检测到为动态符号。
+#### <a name="mm5218-cant-ignore-the-dynamic-symbol-symbol---ignore-dynamic-symbolsymbol-because-it-was-not-detected-as-a-dynamic-symbol"></a>MM5218： 不能忽略动态符号 {符号} (-忽略动态符号 = {符号}) 由于未被检测为动态的符号。
 
 请参阅[等效 mtouch 警告](~/ios/troubleshooting/mtouch-errors.md#MT5218)。
 
@@ -405,7 +405,7 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5301" />
 
-#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301： 找不到 pkg 配置。 请安装从 Mono.framework http://mono-project.com/Downloads
+#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301： 找不到包配置。 请安装从 Mono.framework http://mono-project.com/Downloads
 
 <!-- 5302 used by mtouch -->
 <!-- 5303 used by mtouch -->
@@ -417,19 +417,19 @@ Xamarin.Mac 要求标头文件，从要生成静态注册机构的应用程序�
 
 <a name="MM5306" />
 
-#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306： 缺失的依赖关系。 请安装 Xcode 命令行工具组件
+#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306： 缺少依赖项。 请安装 Xcode 命令行工具组件
 
 <a name="MM5308" />
 
-#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Xcode 许可协议可能不具有已接受。  请启动 Xcode。
+#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Xcode 接受许可协议可能不具有。  请启动 Xcode。
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309： 本机链接失败，错误代码为 1。  有关详细信息请查看生成日志。
+#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309： 本机链接失败，错误代码为 1。  有关详细信息的生成日志中检查。
 
 <a name="MM5310" />
 
-#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: install_name_tool 失败，错误代码{0}。 有关详细信息请查看生成日志。
+#### <a name="mm5310-installnametool-failed-with-an-error-code-0-check-build-log-for-details"></a>MM5310: install_name_tool 失败，错误代码{0}。 有关详细信息的生成日志中检查。
 
 <!-- MM6xxx: mmp internal tools -->
 <!-- MM7xxx: reserved -->

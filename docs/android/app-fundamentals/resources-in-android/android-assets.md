@@ -3,37 +3,37 @@ title: 使用 Android 资产
 ms.prod: xamarin
 ms.assetid: 70ECDDC9-FA40-03B4-BF04-E7CFFFE4260D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 337a1ed82010658adce40e8946ed1b0361fb6094
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114855"
 ---
 # <a name="using-android-assets"></a>使用 Android 资产
 
-_资产_提供一种方法在你的应用程序中包括如文本、 xml、 字体、 音乐和视频的任意文件。 如果你尝试以包括这些文件为"资源"，Android 将其进行处理到其资源系统和将无法获取原始数据。 如果你想要访问数据不变，资产是一种方法执行此操作。
+_资产_提供一种方法要包含在你的应用程序中的任意文件，例如文本、 xml、 字体、 音乐和视频。 如果尝试以包括这些文件作为"资源"，Android 将处理它们，到其资源的系统和将无法获取原始数据。 如果你想要访问数据保持不变，资产是一种方式执行此操作。
 
-添加到项目的资产将显示从你的应用程序使用可以读取的文件系统一样[AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)。
-在此简单演示中我们将向我们项目中，添加文本文件资产读取它使用`AssetManager`，并将其显示在 TextView。
+资产添加到你的项目将显示就像从你的应用程序使用可以读取的文件系统一样[AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)。
+在此简单演示中，我们要将文本文件资产添加到我们的项目，使用读取该`AssetManager`，并将其显示在一个 TextView。
 
 
 ## <a name="add-asset-to-project"></a>将资产添加到项目
 
-资产进入`Assets`项目文件夹。 将新的文本文件添加到此文件夹调用`read_asset.txt`。 在其中填充部分文本，如"我来自资产 ！"。
+资产，请转`Assets`项目文件夹。 将新的文本文件添加到此文件夹名为`read_asset.txt`。 将一些文本放入其中，像"我来自资产 ！"。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio 应该将设置**生成操作**到此文件**AndroidAsset**:
+Visual Studio 应已设置**生成操作**到此文件**AndroidAsset**:
 
 ![将生成操作设置为 AndroidAsset](android-assets-images/asset-properties-vs.png) 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-应该将设置适用于 Mac 的 visual Studio**生成操作**到此文件**AndroidAsset**:
+应该将设置 visual Studio for Mac**生成操作**到此文件**AndroidAsset**:
 
 [![将生成操作设置为 AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
@@ -44,8 +44,8 @@ Visual Studio 应该将设置**生成操作**到此文件**AndroidAsset**:
 
 ## <a name="reading-assets"></a>读取资产
 
-资产使用读取[AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)。 实例`AssetManager`可通过访问[资产](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/)属性`Android.Content.Context`，如的活动。
-在下面的代码中，我们打开我们**read_asset.txt**资产，读取内容，并将其使用 TextView 显示。
+使用读取资产[AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)。 实例`AssetManager`即可访问[资产](https://developer.xamarin.com/api/property/Android.Content.Context.Assets/)属性`Android.Content.Context`，例如活动。
+在下面的代码中，我们打开我们**read_asset.txt**资产，读取内容，并将其使用一个 TextView 显示。
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -72,12 +72,12 @@ protected override void OnCreate (Bundle bundle)
 
 ## <a name="running-the-application"></a>运行应用程序
 
-运行应用程序和你应该会看到如下：
+运行应用程序，你应该会看到如下：
 
-![示例屏幕快照](android-assets-images/screenshot.png)
+![示例屏幕截图](android-assets-images/screenshot.png)
 
 
 ## <a name="related-links"></a>相关链接
 
 - [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [上下文](https://developer.xamarin.com/api/type/Android.Content.Context/)

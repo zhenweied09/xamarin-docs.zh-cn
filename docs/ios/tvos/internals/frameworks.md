@@ -1,18 +1,18 @@
 ---
 title: 在 tvOS 的支持和不支持框架
-description: 为了帮助阐明对 tvOS 应用程序可用的功能，本文档提供了两个列表的 Apple 框架： tvOS，支持和不受 tvOS。
+description: 为了帮助阐明提供对 tvOS 应用程序的功能，本文档提供了两个列表的 Apple 框架： tvOS 支持和不受 tvOS。
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 85067d1dc95ee63cf905e81fba7afc973f7ec37e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123177"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>在 tvOS 的支持和不支持框架
 
@@ -20,7 +20,7 @@ ms.locfileid: "34789117"
 
 ## <a name="supported-frameworks"></a>支持的框架
 
-这是由 Apple 提供用在 Xamarin.tvOS 应用程序框架的列表：
+这是一组由 Apple 提供 Xamarin.tvOS 应用程序中使用的框架：
 
 * 加速
 * AudioToolbox
@@ -29,7 +29,7 @@ ms.locfileid: "34789117"
 * AVKit
 * CFNetwork
 * CloudKit
-* CoreBluetooth
+* Corebluetooth 通信
 * CoreData
 * CoreFoundation
 * CoreGraphics
@@ -43,7 +43,7 @@ ms.locfileid: "34789117"
 * Foundation
 * GameController
 * GameKit
-* 玩游戏
+* 游戏玩法
 * GLKit
 * ImageIO
 * MachO
@@ -70,7 +70,7 @@ ms.locfileid: "34789117"
 
 ## <a name="unsupported-frameworks"></a>不受支持的框架
 
-下面是 iOS 9 支持但是 Apple 删除从 tvOS 9 支持，因此，不能在你 Xamarin.tvOS 应用中使用的框架的列表：
+下面是的但由 Apple 删除从 tvOS 9 支持和因此，不能使用 Xamarin.tvOS 应用程序中支持的 iOS 9 框架列表：
 
 * 帐户
 * AddressBook
@@ -104,7 +104,7 @@ ms.locfileid: "34789117"
 * ReplayKit
 * SafariServices
 * 社交
-* twitter
+* Twitter
 * VideoToolbox
 * WatchConnectivity
 * WatchKit
@@ -116,4 +116,4 @@ ms.locfileid: "34789117"
 
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [适用于 tvOS 应用编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

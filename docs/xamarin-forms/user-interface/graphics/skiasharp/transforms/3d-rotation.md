@@ -4,15 +4,15 @@ description: 此文介绍了如何使用非仿射转换来旋转 3D 空间中的
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 84ebdd007d17eaf0bcfc1be119cb4130299503bc
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 750f357819a85077b3f272a7a10cbd3928186681
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615660"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110285"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp 中的三维旋转
 
@@ -24,7 +24,7 @@ _非仿射转换用于旋转 3D 空间中的 2D 对象。_
 
 此工作涉及使用三维旋转，然后派生非仿射`SKMatrix`执行这些三维旋转的转换。
 
-很难开发这`SKMatrix`转换仅在两个维度中工作。 在此 3 x 3 矩阵派生自用于在三维图中的 4-4 矩阵时，该作业变得容易。 SkiaSharp 包括[ `SKMatrix44` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.PreConcat/p/SkiaSharp.SKMatrix44/)类达到此目的，但在三维图中的一些背景知识是了解 3D 旋转和 4-4 转换矩阵的必要条件。
+很难开发这`SKMatrix`转换仅在两个维度中工作。 在此 3 x 3 矩阵派生自用于在三维图中的 4-4 矩阵时，该作业变得容易。 SkiaSharp 包括[ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44)类达到此目的，但在三维图中的一些背景知识是了解 3D 旋转和 4-4 转换矩阵的必要条件。
 
 三维坐标系添加第三条坐标轴，称为 Z.从概念上讲，Z 轴是在屏幕上成直角。 在 3D 空间中的坐标点的三个数字来指示: （x，y，z）。 在 3D 在本文中，增加的 X 值中使用的坐标系统是向右和增加的 Y 值下降，就像两个维度中一样。 从屏幕里增加正 Z 值。 左上角，就像 2D 图形一样，是起点。 可以在屏幕视为与对此平面成直角 Z 轴 XY 平面。
 
@@ -48,7 +48,7 @@ _非仿射转换用于旋转 3D 空间中的 2D 对象。_
 |  M41  M42  M43  M44  |
 </pre>
 
-但是，SkiaSharp`Matrix44`类是稍有不同。 设置或获取各个单元格的值的唯一办法`SKMatrix44`是使用[ `Item` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Item/p/System.Int32/System.Int32/)索引器。 行和列索引是从零开始而不是基于 1 和换行和列。 使用索引器访问在上图中的单元格 M14`[3, 0]`在`SKMatrix44`对象。
+但是，SkiaSharp`Matrix44`类是稍有不同。 设置或获取各个单元格的值的唯一办法`SKMatrix44`是使用[ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32))索引器。 行和列索引是从零开始而不是基于 1 和换行和列。 使用索引器访问在上图中的单元格 M14`[3, 0]`在`SKMatrix44`对象。
 
 在 3D 图形系统中，三维点 （x，y，z） 转换为 1-4 4-4 转换矩阵相乘的矩阵：
 
@@ -112,7 +112,7 @@ X 值保持不变时受制于此转换。 绕 Y 轴的旋转离开保持不变�
 
 旋转的方向被隐含的坐标系统的左右手使用习惯。 这是惯用左手系统，因此，如果您指向越来越多的特定轴的值在左侧的滚动块 — 绕 X 轴旋转的右侧向下绕 Y 轴，并面向使用者绕 Z 轴旋转的旋转，然后的曲线 yo其他手指指示正角度的旋转的方向。
 
-`SKMatrix44` 已通用化静态[ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/)并[ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) ，可以指定发生围绕其旋转的轴方法：
+`SKMatrix44` 已通用化静态[ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single))并[ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) ，可以指定发生围绕其旋转的轴方法：
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -220,7 +220,7 @@ y"= y / ((sin （α） / 深度) ·x + 1)
 
 X 值时使用一个正的角度绕 Y 轴，然后正旋转 2D 对象 recede 到后台，而负 X 值转到前台。 X 值看起来更接近于 Y 轴 （它所依据的余弦值） 作为最远的地方 Y 轴坐标变得更小或变复杂，因为他们远离观察者或更接近于查看器。
 
-使用时`SKMatrix44`，执行所有的三维旋转和透视操作乘以各种`SKMatrix44`值。 然后您可以从 4 通过 4 提取二维的 3 x 3 矩阵使用矩阵[ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/)属性的`SKMatrix44`类。 此属性返回熟悉`SKMatrix`值。
+使用时`SKMatrix44`，执行所有的三维旋转和透视操作乘以各种`SKMatrix44`值。 然后您可以从 4 通过 4 提取二维的 3 x 3 矩阵使用矩阵[ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix)属性的`SKMatrix44`类。 此属性返回熟悉`SKMatrix`值。
 
 **旋转 3D**页的允许您对三维旋转进行试验。 [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml)文件实例化的四个滑块设置绕 X、 Y 和 Z 轴，旋转以及设置深度值：
 
@@ -441,7 +441,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing`替代定义三个 Xamarin.Forms`Animation`对象进行动画处理`xRotationDegrees`， `yRotationDegrees`，和`zRotationDegrees`字段不同的速率。 请注意，这些动画在段内设置来准备数字-5 秒，7 秒和 11 秒，因此整体组合仅重复的每个 385 秒或超过 10 分钟：
+`OnAppearing`替代定义三个 Xamarin.Forms`Animation`对象进行动画处理`xRotationDegrees`， `yRotationDegrees`，和`zRotationDegrees`字段不同的速率。 请注意，这些动画的段设置为素数数字 （5 秒、 7 秒和 11 秒），方便整体组合仅重复的每个 385 秒或超过 10 分钟：
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -536,5 +536,5 @@ public class AnimatedRotation3DPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

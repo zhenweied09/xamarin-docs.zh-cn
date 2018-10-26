@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: dafa60ff57f34bd4169af48e380079d9637d8d26
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 00308a6c7883d4ac6ce41592d4a0e18f9fb28d52
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241102"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113308"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>从图片库中选取照片
 
@@ -114,11 +114,14 @@ namespace DependencyServiceSample.iOS
                 NSData data = image.AsJPEG(1);
                 Stream stream = data.AsStream();
 
+                UnregisterEventHandlers();
+
                 // Set the Stream as the completion of the Task
                 taskCompletionSource.SetResult(stream);
             }
             else
             {
+                UnregisterEventHandlers();
                 taskCompletionSource.SetResult(null);
             }
             imagePicker.DismissModalViewController(true);
@@ -126,8 +129,15 @@ namespace DependencyServiceSample.iOS
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
+            UnregisterEventHandlers();
             taskCompletionSource.SetResult(null);
             imagePicker.DismissModalViewController(true);
+        }
+
+        void UnregisterEventHandlers()
+        {
+            imagePicker.FinishedPickingMedia -= OnImagePickerFinishedPickingMedia;
+            imagePicker.Canceled -= OnImagePickerCancelled;
         }
     }
 }
@@ -276,7 +286,7 @@ Button pickPictureButton = new Button
 stack.Children.Add(pickPictureButton);
 ```
 
-`Clicked`处理程序使用`DependencyService`类来调用`GetImageStreamAsync`。 这会导致在平台项目中的调用。 如果该方法返回`Stream`对象，则处理程序将创建`Image`元素以使用该图片`TabGestureRecognizer`，并替换`StackLayout`的页面上`Image`:
+`Clicked`处理程序使用`DependencyService`类来调用`GetImageStreamAsync`。 这会导致在平台项目中的调用。 如果该方法返回`Stream`对象，则处理程序将创建`Image`元素以使用该图片`TapGestureRecognizer`，并替换`StackLayout`的页面上`Image`:
 
 ```csharp
 pickPictureButton.Clicked += async (sender, e) =>

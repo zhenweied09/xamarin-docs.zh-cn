@@ -1,37 +1,37 @@
 ---
-title: 在 Xamarin.iOS 的布局选项
-description: 本文档介绍中 Xamarin.iOS 的用户界面的布局的不同方式。 还讨论了自动调整大小和自动布局。
+title: 在 Xamarin.iOS 中的布局选项
+description: 本文档介绍不同的方式来布置在 Xamarin.iOS 中的用户界面。 它讨论了自动调整大小和自动布局。
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b35149028763691c17fe526673d023cc9b707c28
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790111"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116649"
 ---
-# <a name="layout-options-in-xamarinios"></a>在 Xamarin.iOS 的布局选项
+# <a name="layout-options-in-xamarinios"></a>在 Xamarin.iOS 中的布局选项
 
-有两个不同的机制，用于控制布局视图进行调整大小或旋转时：
+有两种不同机制，用于控制布局调整大小或旋转视图时：
 
--  **自动调整大小**– 自动调整大小的设计器中的检查器使您能够设置`AutoresizingMask`属性。 这会使控件定位到其容器的边缘和/或修复它们的大小。 自动调整大小适用于 iOS 的所有版本。 此进行了更详细地描述
--  **自动布局**– 允许对 UI 控件的关系细化的控制的 iOS 6 中引入的功能。 它还允许相对于其他元素的元素的位置的设计图面上的控件。 本主题更详细地介绍了[使用 Xamarin iOS 设计器的自动数据布局](~/ios/user-interface/designer/designer-auto-layout.md)指南。
+-  **自动调整大小**– 在设计器中的自动调整大小检查器提供了一种方法来设置`AutoresizingMask`属性。 这将让控件锚定到其容器的边缘和/或修复它们的大小。 自动调整大小适用于 iOS 的所有版本。 这是下面更详细地描述
+-  **自动布局**– 允许精细地控制用户界面控件的关系的 iOS 6 中引入的功能。 它将允许的位置相对于其他元素的元素的设计图面上的控件。 本主题中的更详细地介绍了[与 Xamarin iOS 设计器的自动布局](~/ios/user-interface/designer/designer-auto-layout.md)指南。
 
 ## <a name="autosizing"></a>自动调整大小
 
-当用户调整大小时的窗口，如将设备旋转时和方向更改，系统将自动调整根据其自动调整大小规则该窗口中的视图。 可以设置这些规则在 C# 中使用`AutoresizingMask`属性`UIView`或**属性填充**的 ios 设计器中，如下所示：
+当用户调整窗口中的，如旋转设备时和方向更改，系统将自动调整大小根据其自动调整大小规则该窗口中的视图。 这些规则可以设置C#使用`AutoresizingMask`属性`UIView`中或在**Properties Pad**的 iOS 设计器中，如下图所示：
 
  [![](layout-options-images/image41.png "Visual Studio for Mac 设计器")](layout-options-images/image41.png#lightbox)
 
-选择一个控件时，这将允许你手动指定的位置和尺寸控件，以及选择**自动调整大小**行为。 如下面的屏幕截图中所示，我们可以使用 springs 和 struts 调整控件中为它的父定义所选的视图的关系：
+当控件被选定时，这使您可以手动指定的位置和尺寸控件，以及选择**自动调整大小**行为。 下面的屏幕截图中所示，我们可以使用弹簧和 struts 中自动调整大小控制到其父级的定义所选的视图的关系：
 
  [![](layout-options-images/image42.png "Visual Studio for Mac 设计器")](layout-options-images/image42.png#lightbox)
 
-调整*spring*将导致要调整大小的视图基于的宽度或高度的其父视图。 调整*strut*将使视图保持常量本身和其父视图，请在该特定的边缘之间的距离。
+调整*spring*将导致要调整大小的视图的宽度或高度与其父视图的基础。 调整*strut*将使视图保持常量本身及其父视图，该特定的边缘之间的距离。
 
 此外可以在代码中设置这些设置：
 
@@ -41,11 +41,11 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 ```
 
 
-若要测试的自动调整大小设置，启用不同**支持设备方向**中项目的选项：
+若要测试自动调整大小设置，请启用不同**受支持设备方向**中项目的选项：
 
  [![](layout-options-images/image43a.png "自动调整大小设置")](layout-options-images/image43a.png#lightbox)
 
-后面的代码中，我们可以使用下面的代码，这会导致水平调整大小的两个文本框控件：
+在代码隐藏中我们可以使用下面的代码，这会导致要水平调整大小的两个文本控件：
 
 ```csharp
 textview1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
@@ -54,15 +54,15 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 ```
 
 
-我们还可以调整使用设计器的控件。 选择 struts，如下面表现出将导致要保持而不会被剪裁关闭视图底部的右对齐的图像：
+我们还可以调整使用设计器的控件。 如下面表现出选择 struts 将导致要保持而无需剪切掉视图底部的右对齐的图像：
 
  [![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png#lightbox)
 
-这些屏幕截图显示如何控件调整大小或位置本身转动屏幕时：
+这些屏幕截图显示的控件如何调整大小或旋转屏幕时重新定位自身：
 
  [![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png#lightbox)
 
-请注意，文本视图和文本字段同时拉伸以使保持不变的保留，并且由于右键边距，`FlexibleWidth`设置。 映像包含的边缘和左边距灵活，这意味着它保留底部和右边距 – 转动屏幕时视图中保留该映像。 复杂布局通常需要每个可见控件上这些设置使用户界面保持一致并防止控件重叠时视图的边界更改 （由于旋转或其他调整大小的事件） 的组合。
+请注意，文本视图和文本字段都拉伸以使保持不变的保留，并且由于右键边距，`FlexibleWidth`设置。 映像具有的顶部和左侧边距灵活，这意味着它保留底部和右边距 – 旋转屏幕时视图中保留该图像。 复杂的布局通常需要每个可见的控件上这些设置以使用户界面保持一致并防止控件重叠的视图的边界更改 （由于旋转或其他调整大小事件） 时的组合。
 
 
 

@@ -3,26 +3,29 @@ title: LinearLayout
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: b7564d95c9a472276846b4773d355d8167f37efe
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846401"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115765"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 是[ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)显示子[ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)元素按线性方向垂直或水平。
+[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 是 [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+显示子 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+线性方向中的元素垂直或水平。
 
-你应谨慎过度使用[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)。
-如果你开始嵌套多个[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s，你可能需要考虑使用[ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)相反。
+您应该小心使用过度[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)。
+如果开始嵌套多个[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s，您可能需要考虑使用 [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+改为。
 
 启动一个名为的新项目**HelloLinearLayout**。
 
-打开**Resources/Layout/Main.axml**和插入以下：
+打开 **Resources/Layout/Main.axml** 并插入以下代码：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -100,9 +103,14 @@ ms.locfileid: "34846401"
 </LinearLayout>
 ```
 
-请仔细检查此 XML。 没有根[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)定义自己的方向为垂直&ndash;所有子[ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)s （它具有两个） 将堆积垂直。 第一个子级是另一种[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)使用水平方向和第二个子级是[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)使用垂直方向。 其中每个嵌套[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s 包含几个[ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/)元素，用于定义其父级的方式与每个其他面向[ `LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/).
+请仔细检查此 XML。 没有根 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+它定义自己的方向为垂直&ndash;所有子[ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)s （它的具有两个） 将是堆积垂直。 第一个子级是另一个 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+使用水平方向，并且第二个子级 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+使用垂直方向。 每个嵌套[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)s 包含多个 [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+元素，它们是由其父级定义的方式与每个其他面向[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)。
 
-现在打开**HelloLinearLayout.cs**并确保它加载**Resources/Layout/Main.axml**中的布局[ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)方法：
+现在，打开**HelloLinearLayout.cs**并确保它将加载**Resources/Layout/Main.axml**中的布局 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+方法：
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -116,9 +124,10 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 运行该应用程序。 你应看到以下信息：
 
-[![屏幕快照的第一个 LinearLayout 水平排列的应用程序中，第二个垂直](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[![屏幕截图的第一个 LinearLayout 水平排列的应用，第二个垂直](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-请注意如何在 XML 特性定义每个视图的行为。 尝试试验不同的值`android:layout_weight`若要查看如何分发屏幕的实际空间基于每个元素的权重。 请参阅[公共布局对象](http://developer.android.com/guide/topics/ui/declaring-layout.html)文档详细了解[ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)句柄`android:layout_weight`属性。
+请注意，XML 属性定义每个视图的行为的方法。 尝试试验不同的值`android:layout_weight`若要查看如何分布的屏幕空间基于每个元素的权重。 请参阅[常见布局对象](http://developer.android.com/guide/topics/ui/declaring-layout.html)深入了解如何文档 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+句柄`android:layout_weight`属性。
 
 
 ## <a name="references"></a>参考资料
@@ -126,6 +135,6 @@ protected override void OnCreate (Bundle savedInstanceState)
 -   [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 
 -   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
-*此页的部分是基于工作创建和共享的 Android Open Source Project 的根据条款中所述修改*
-[*Creative Commons 2.5 归属许可证*](http://creativecommons.org/licenses/by/2.5/).
+*此页的部分是基于工作创建和共享通过 Android 的开放源项目和使用中所述的条款的修改*
+[*Creative Commons 2.5 Attribution 许可证*](http://creativecommons.org/licenses/by/2.5/).
 

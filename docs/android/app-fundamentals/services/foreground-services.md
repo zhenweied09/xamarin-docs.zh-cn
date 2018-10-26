@@ -3,15 +3,15 @@ title: 前景服务
 ms.prod: xamarin
 ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 47e1eda2f701b654f81f664050847677fba8bcc5
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: df917896f901060a5518076afa859d34a03f4d6d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108348"
 ---
 # <a name="foreground-services"></a>前景服务
 
@@ -78,7 +78,7 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 }
 ```
 
-前一次通知将显示这是类似于以下状态栏通知：
+前一次通知将显示类似于下面的状态栏通知：
 
 ![在状态栏中显示通知的图像](foreground-services-images/foreground-services-01.png "通知显示在状态栏中的图像")
 

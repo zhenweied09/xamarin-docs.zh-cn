@@ -3,15 +3,15 @@ title: 故障排除 Xamarin 工作簿
 description: 本文档所链接提供了有关使用 Xamarin 工作簿的疑难解答信息的各种方法指南。 链接的内容讨论常见的已知的问题，Android 工作簿的问题，并提供与支持相关的资源。
 ms.prod: xamarin
 ms.assetid: 1706EA2C-7A94-4E30-BD4D-A2F31070554F
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d3815c8481db3bac6017a48bfd533409a308ad85
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: fcf6f443c86fd1ef0390669621d5c7b7fa748500
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350623"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102849"
 ---
 # <a name="troubleshooting-xamarin-workbooks"></a>故障排除 Xamarin 工作簿
 

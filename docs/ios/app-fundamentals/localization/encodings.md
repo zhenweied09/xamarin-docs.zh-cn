@@ -1,37 +1,37 @@
 ---
-title: 在 Xamarin.iOS 的国际化编码
-description: 本文档介绍中 Xamarin.iOS，讨论可用的编码以及如何将它们添加到应用程序的国际化编码。
+title: 在 Xamarin.iOS 中的国际化编码
+description: 本文档介绍了在 Xamarin.iOS 中，讨论可用的编码以及如何将它们添加到应用程序的国际化编码。
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 7c59b6f1ac269c57ab720aeb6999c0f0d178bab3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112490"
 ---
-# <a name="internationalization-encodings-in-xamarinios"></a>在 Xamarin.iOS 的国际化编码
+# <a name="internationalization-encodings-in-xamarinios"></a>在 Xamarin.iOS 中的国际化编码
 
-默认情况下，不是所有编码都包含 Xamarin.iOS 类库中。
+默认情况下，不是所有编码都包含在 Xamarin.iOS 类库中。
 
-若要减少应用程序的大小，Xamarin.iOS 不包括任何特定的编码，并且必须以指示 mtouch 包括包含所需的编码的支持的程序集。
+若要减少应用程序的大小，Xamarin.iOS 不包括任何特定的编码，并且必须指示 mtouch 包括包含所需的编码的支持的程序集。
 
-这是通过用于 Mac 或 Visual Studio 在 Visual Studio 的 iOS 生成/高级窗格中选择的额外的编码：
+这是 for Mac 或 Visual Studio 在 Visual Studio 的 iOS 生成/高级窗格中选择的额外的编码：
 
  [![](encodings-images/00.png "选择的额外编码")](encodings-images/00.png#lightbox)
 
  [![](encodings-images/00a.png "选择的额外编码")](encodings-images/00a.png#lightbox)
 
-你可以选择以下方法之一：
+您可以选择其中之一：
 
 -  cjk： 中文、 日语和朝鲜语
 -  mideast： 阿拉伯语、 希伯来语、 土耳其语和 Latin5。
--  其他： 西里尔文、 波罗、 越南语、 乌克兰和泰语
--  极少数： EBCDIC 编码和其他少见的代码页
--  西部： 拉丁语言，复活和西欧
+-  其他： 西里尔语、 波罗的语、 越南语、 乌克兰语和泰语
+-  极少数： EBCDIC 编码以及其他极少数的代码页
+-  西部： 拉丁语言，复活节和西欧语言
 -  全部
 
 

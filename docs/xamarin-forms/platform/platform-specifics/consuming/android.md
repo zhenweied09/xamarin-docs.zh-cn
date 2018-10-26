@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/03/2018
-ms.openlocfilehash: c422b9ac5af9417523f349537fda1bb0c01aa7bc
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/01/2018
+ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39175172"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108972"
 ---
 # <a name="android-platform-specifics"></a>Android 平台特定信息
 
@@ -310,6 +310,7 @@ webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 在 Android 上，为 Xamarin.Forms 页面提供以下特定于平台的功能：
 
 - 设置导航栏的高度[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)。 有关详细信息，请参阅[NavigationPage 上设置导航栏高度](#navigationpage-barheight)。
+- 中的页面中导航时禁用过渡动画[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。 有关详细信息，请参阅[TabbedPage 中禁用页面切换动画](#tabbedpage-transition-animations)。
 - 启用在页面间轻扫[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。 有关详细信息，请参阅[启用轻扫页面之间中您不要将 TabbedPage](#enable_swipe_paging)。
 - 在设置工具栏位置和颜色[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。 有关详细信息，请参阅[设置 TabbedPage 工具栏位置和颜色](#tabbedpage-toolbar)。
 
@@ -348,6 +349,36 @@ public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
 结果是，在导航栏的高度[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)可以设置：
 
 ![](android-images/navigationpage-barheight.png "NavigationPage 导航栏高度")
+
+<a name="tabbedpage-transition-animations" />
+
+### <a name="disabling-page-transition-animations-in-a-tabbedpage"></a>您不要将 TabbedPage 中禁用页面切换动画
+
+此特定于平台的用于时的页面之间导航，或者以编程方式或在使用选项卡栏中，禁用过渡动画[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。 设置使用在 XAML`TabbedPage.IsSmoothScrollEnabled`可绑定属性设置为`false`:
+
+```xaml
+<TabbedPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.IsSmoothScrollEnabled="false">
+    ...
+</TabbedPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+On<Android>().SetIsSmoothScrollEnabled(false);
+```
+
+`TabbedPage.On<Android>`方法指定仅将在 Android 上运行此特定于平台的。 `TabbedPage.SetIsSmoothScrollEnabled`方法，请在[ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)命名空间，用于控制是否在页之间导航时，将显示过渡动画[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。 此外，`TabbedPage`类中`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`命名空间还具有以下方法：
+
+- `IsSmoothScrollEnabled`它用于检索是否之间导航页中，将显示过渡动画`TabbedPage`。
+- `EnableSmoothScroll`用于启用过渡动画中的页面之间导航时`TabbedPage`。
+- `DisableSmoothScroll`用于在页面之间导航时禁用过渡动画`TabbedPage`。
 
 <a name="enable_swipe_paging" />
 

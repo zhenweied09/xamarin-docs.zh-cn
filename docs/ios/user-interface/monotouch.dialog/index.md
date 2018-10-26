@@ -4,14 +4,14 @@ description: 本文档介绍了 MonoTouch.Dialog （mt。D)，面向与 Xamarin.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: bee4b460552c7273021b16955b52ba3d95d3e07c
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: a948d5beca6c09dc77e5c86d3f281851e4839ff0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107984"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>适用于 Xamarin.iOS 的 MonoTouch.Dialog 简介
 
@@ -54,7 +54,7 @@ public class Expense
 MT。D，通过将所有相关代码封装到用于创建表的通用 API，简化。 然后，它提供了一种基于声明性绑定语法可简化对象，该 API 抽象。 在这种情况下，两个 Api 中提供了 mt。D:
 
 -   **低级别元素 API** –*元素 API*基于创建表示屏幕和其组件的元素的分层树。 元素 API 为开发人员提供最大的灵活性和控制中创建 Ui。 此外，元素 API 通过 JSON，这允许非常快地声明，以及从服务器动态 UI 生成具有高级支持声明性定义。 
--   **高级反射 API** – 也称为*绑定**API*中的类进行批注与用户界面提示，然后 mt。D 自动创建基于对象的屏幕，并提供和内容之间的绑定是显示 （以及根据需要编辑） 在屏幕上，备份的基础对象。   上面的示例所示反射 API 的用法。 此 API 不提供细化的控件元素 API 执行，但会减少由自动构建基于类的属性的元素层次结构的复杂性更进一步。 
+-   **高级反射 API** – 也称为*绑定**API*中的类进行批注与用户界面提示，然后 mt。D 自动创建基于对象的屏幕，并提供和内容之间的绑定是显示 （以及根据需要编辑） 在屏幕上，备份的基础对象。 上面的示例所示反射 API 的用法。 此 API 不提供细化的控件元素 API 执行，但会减少由自动构建基于类的属性的元素层次结构的复杂性更进一步。 
 
 
 MT。D 中有大量的内置 UI 元素的屏幕创建过程中，但它还认识到需要自定义的元素和高级的屏幕布局。 在这种情况下，可扩展性是一流特色烤到 API。 开发人员可以扩展现有元素或创建新的和无缝集成。

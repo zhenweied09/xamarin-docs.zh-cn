@@ -4,15 +4,15 @@ description: 本文档介绍如何使用后台任务后应用程序放置在后�
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351533"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120991"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS 后台处理及任务
 
@@ -20,7 +20,7 @@ ms.locfileid: "39351533"
 
 后台任务可以分解为三个类别：
 
-1.  **后台安全任务**-中的任意位置调用了一项任务的应用程序不希望中断应用程序应输入背景。
+1.  **后台安全任务**-被调用任意位置有任务在应用程序中不希望中断应用程序应输入背景。
 1.  **DidEnterBackground 任务**-在期间调用`DidEnterBackground`应用程序生命周期方法，以帮助清理和状态保存。
 1.  **后台传输 (iOS 7 +)** -一种特殊的后台任务用于执行 iOS 7 上的网络传输。 与常规任务，后台传输没有预先确定的时间限制。
 

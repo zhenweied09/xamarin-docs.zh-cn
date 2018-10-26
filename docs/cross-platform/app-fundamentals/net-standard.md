@@ -5,13 +5,14 @@ ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: conceptdev
 ms.author: crdun
+ms.custom: video
 ms.date: 07/18/2018
-ms.openlocfilehash: 65ba1915a2a968a14f0ce21bcada76e1b83531b0
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105826"
 ---
 # <a name="net-standard-library-code-sharing"></a>.NET 标准库代码共享
 
@@ -27,7 +28,7 @@ ms.locfileid: "39270647"
 
 ### <a name="creating-a-net-standard-library"></a>创建.NET 标准库
 
-.NET 标准库添加到你的解决方案是一个相当直截了当。
+可以将.NET 标准库添加到你的解决方案通过以下步骤：
 
 1. 在中**添加新项目**对话框中，选择 **.NET Core**类别，然后选择 **.NET 标准库**:
 
@@ -86,6 +87,10 @@ ms.locfileid: "39270647"
 ![引用.NET 标准库](net-standard-images/vs04.png "在 Visual Studio 中，右键单击引用节点并选择添加引用...然后切换到解决方案项目选项卡所示")
 
 -----
+
+## <a name="net-standard-and-xamarinforms-for-the-net-developer-video"></a>.NET standard 和 Xamarin.Forms 为.NET 开发人员 （视频）
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/NET-Standard-and-XamarinForms-for-the-NET-Developer/player]
 
 ## <a name="related-links"></a>相关链接
 

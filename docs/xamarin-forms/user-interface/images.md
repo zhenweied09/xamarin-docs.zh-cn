@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 47fbe67561ea9150d0fdc0b41eb5c70edbeac75e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f79ee7af9106eea8a4792c0e4bb10c5ad5a367a9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111072"
 ---
 # <a name="images-in-xamarinforms"></a>在 Xamarin.Forms 中的图像
 
@@ -21,13 +21,6 @@ _可以使用 Xamarin.Forms 跨平台共享映像、 可以专门为每个平台
 映像是应用程序导航、 可用性和品牌的一个重要部分。 Xamarin.Forms 应用程序需要能够在所有平台之间共享映像，但也有可能每个平台上显示不同的图像。
 
 特定于平台的映像还所需的图标和初始屏幕;这些需要根据每个平台配置。
-
-本文档介绍了以下主题：
-
-- [ **本地映像**](#Local_Images) -显示图像随应用程序，包括解决如 Retina、 Android 或 UWP 的图像的高 DPI 版本 iOS 的本机分辨率。
-- [ **嵌入图像**](#Embedded_Images) -显示的图像作为程序集资源嵌入。
-- [ **下载映像**](#Downloading_Images) -下载和显示图像。
-- [ **图标和初始屏幕**](#Icons_and_splashscreens) -特定于平台的图标和启动图像。
 
 ## <a name="displaying-images"></a>显示图像
 
@@ -49,13 +42,13 @@ _可以使用 Xamarin.Forms 跨平台共享映像、 可以专门为每个平台
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -裁剪图像，以便它同时还能保留方面填充显示区域 (即。 无扭曲)。
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -上下黑边映像 （如果需要），以便整个图像适合的显示区域的空白区域添加到顶部/底部或边，具体取决于图像是高或宽。
 
-可以从加载图像[本地文件](#Local_Images_in_Xaml)，则[嵌入的资源](#embedded_images)，或[下载](#Downloading_Images)。
-
-<a name="Local_Images" />
+可以从加载图像[本地文件](#Local_Images)，则[嵌入的资源](#embedded-images)，或[下载](#Downloading_Images)。
 
 ## <a name="local-images"></a>本地映像
 
-可以添加到每个应用程序项目并从 Xamarin.Forms 共享代码中引用的图像文件。 所有应用之间使用的单一映像*必须在每个平台上使用相同的文件名*，并且它应为有效的 Android 资源名称 (即。 允许只包含小写字母、 数字、 下划线和句点)。
+可以添加到每个应用程序项目并从 Xamarin.Forms 共享代码中引用的图像文件。 映像是特定于平台的例如，在不同的平台或略有不同的设计使用不同的分辨率时，此方法的分发映像时需要。
+
+所有应用之间使用的单一映像*必须在每个平台上使用相同的文件名*，并且它应为有效的 Android 资源名称 (即。 允许只包含小写字母、 数字、 下划线和句点)。
 
 - **iOS** -首选方式管理和支持的映像，因为 iOS 9 是使用**资产目录图像集**，其中应包含的所有所需支持各种设备和缩放比例的图像的版本应用程序。 有关详细信息，请参阅[将图像添加到资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 - **Android** -将在图像放**资源/drawable**目录**生成操作： AndroidResource**。 此外可以提供的图像的高和低 DPI 版本 (在适当地命名为**资源**如子目录**drawable ldpi**， **drawable hdpi**，和**drawable xhdpi**)。
@@ -70,7 +63,7 @@ _可以使用 Xamarin.Forms 跨平台共享映像、 可以专门为每个平台
 <Image Source="waterfront.jpg" />
 ```
 
-等效的 C# 代码如下所示：
+等效于C#代码如下所示：
 
 ```csharp
 var image = new Image { Source = "waterfront.jpg" };
@@ -88,8 +81,6 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 
 > [!IMPORTANT]
 > 若要跨所有平台使用相同的映像文件名名称必须在所有平台上有效。 Android 绘图制定了命名限制 – 允许小写字母、 数字、 下划线和句点 – 和跨平台兼容性必须随后出现在所有其他平台上过。 示例文件名**waterfront.png**如下所示的规则，但无效文件名的示例包括"water front.png"，"WaterFront.png"，"water-front.png"和"wåterfront.png"。
-
-<a name="Native_Resolutions" />
 
 ### <a name="native-resolutions-retina-and-high-dpi"></a>本机分辨率 （Retina 和高 DPI）
 
@@ -117,15 +108,13 @@ UWP 图像文件名称[可以使用作为后缀`.scale-xxx`文件扩展名之前
 - [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) -具有[ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon)可以设置为本地文件引用的属性。
 - [`ImageCell`](xref:Xamarin.Forms.ImageCell) -具有[ `ImageSource` ](xref:Xamarin.Forms.ImageCell.ImageSource)从本地文件、 嵌入的资源或一个 URI 检索可以设置为图像的属性。
 
-<a name="embedded_images" />
-
 ## <a name="embedded-images"></a>嵌入图像
 
-嵌入的图像还提供了应用程序 （例如本地映像），但而不是让每个应用程序的文件结构图像中的映像的副本在程序集作为资源嵌入文件。 此分发映像方式尤其适合于创建组件，如图像与代码捆绑在一起。
+嵌入的图像还提供了应用程序 （例如本地映像），但而不是让每个应用程序的文件结构图像中的映像的副本在程序集作为资源嵌入文件。 此方法分发映像时每个平台上使用相同的映像，建议使用，并且是尤其适合于创建组件，如图像与代码捆绑在一起。
 
 若要在项目中嵌入图像，右键单击要添加新项，然后选择你想要添加的图像/秒。 默认情况下该图像将出现**生成操作： 无**; 这需要设置为**生成操作： EmbeddedResource**。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](images-images/vs-buildaction.png "将生成操作设置： EmbeddedResource")
 
@@ -135,7 +124,7 @@ UWP 图像文件名称[可以使用作为后缀`.scale-xxx`文件扩展名之前
 IDE 已生成此默认值的串联**默认 Namespace**对于此项目包含文件名，使用句点 （.） 之间的每个值。
 <!-- https://msdn.microsoft.com/library/ms950960.aspx -->
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](images-images/xs-buildaction.png "将生成操作设置： EmbeddedResource")
 
@@ -164,8 +153,6 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 以下屏幕截图显示在每个平台上显示的嵌入的图像的结果：
 
 [![ResourceImageSource](images-images/resource-sml.png "示例应用程序显示嵌入的图像")](images-images/resource.png#lightbox "示例应用程序显示嵌入的图像")
-
-<a name="Embedded_Images_in_Xaml" />
 
 ### <a name="using-xaml"></a>使用 XAML
 
@@ -213,8 +200,6 @@ public class ImageResourceExtension : IMarkupExtension
 
 ### <a name="troubleshooting-embedded-images"></a>故障排除的嵌入的图像
 
-<a name="Debugging_Embedded_Images" />
-
 #### <a name="debugging-code"></a>调试代码
 
 因为它是有时难以理解为什么不加载特定的图像资源，可以暂时将以下调试代码添加到应用程序以帮助确认正确配置了资源。 它会输出所有已知的资源嵌入到给定的程序集<span class="UIItem">控制台</span>来帮助调试加载问题的资源。
@@ -240,8 +225,6 @@ foreach (var res in assembly.GetManifestResourceNames())
 var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
 ```
 
-<a name="Downloading_Images" />
-
 ## <a name="downloading-images"></a>下载图像
 
 以下 XAML 所示，可以显示中，为自动下载图像：
@@ -259,7 +242,7 @@ var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTy
 </ContentPage>
 ```
 
-等效的 C# 代码如下所示：
+等效于C#代码如下所示：
 
 ```csharp
 var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")) };
@@ -276,8 +259,6 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 以下屏幕截图显示在每个平台上显示的远程图像的结果：
 
 [![下载 ImageSource](images-images/download-sml.png "示例应用程序显示下载的映像")](images-images/download.png#lightbox "示例应用程序显示下载的映像")
-
-<a name="Image_Caching" />
 
 ### <a name="downloaded-image-caching"></a>已下载的映像缓存
 
@@ -305,11 +286,9 @@ webImage.Source = new UriImageSource
 
 内置缓存可以轻松支持方案，如每个单元中滚动的映像，其中你可以设置 （或绑定） 映像的列表，并允许内置缓存负责重新加载映像时单元格滚动到视图返回。
 
-<a name="Icons_and_splashscreens" />
+## <a name="icons-and-splash-screens"></a>图标和初始屏幕
 
-## <a name="icons-and-splashscreens"></a>图标和初始屏幕
-
-虽然不与相关[ `Image` ](xref:Xamarin.Forms.Image)视图、 应用程序图标和初始屏幕也是使用 Xamarin.Forms 项目中的映像的一个重要用途。
+虽然不与相关[ `Image` ](xref:Xamarin.Forms.Image)视图、 应用程序图标和初始屏幕也是 Xamarin.Forms 项目中的映像的一个重要用途。
 
 设置图标和初始屏幕的 Xamarin.Forms 应用可在每个应用程序项目中。 这意味着生成正确调整大小的 iOS、 Android 和 UWP 的映像。 这些映像应名为并位于根据每个平台的要求。
 
@@ -317,7 +296,7 @@ webImage.Source = new UriImageSource
 
 请参阅[iOS 处理图像](~/ios/app-fundamentals/images-icons/index.md)， [Google 插图](http://developer.android.com/design/style/iconography.html)，并[准则磁贴和图标资产](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)有关创建这些应用程序资源的详细信息。
 
-## <a name="splashscreens"></a>初始屏幕
+## <a name="splash-screens"></a>初始屏幕
 
 只有 iOS 和 UWP 应用程序需要 （也称为启动屏幕或默认映像） 的初始屏幕。
 

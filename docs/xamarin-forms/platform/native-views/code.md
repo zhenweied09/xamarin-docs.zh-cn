@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ad633f49c1c448529fa4c2b50483ec233c1ee841
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996189"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112380"
 ---
 # <a name="native-views-in-c"></a>在 C# 中的本机视图
 
@@ -20,7 +20,7 @@ _从 iOS、 Android 和 UWP 的本机视图，可以从使用 C# 创建的 Xamar
 
 ## <a name="overview"></a>概述
 
-允许任何 Xamarin.Forms 控件`Content`来设置，或具有`Children`集合中，可以添加特定于平台的视图。 例如，iOS`UILabel`可以直接添加到[ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content)属性，或设置为[ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children)集合。 但请注意，此功能需要使用`#if`Xamarin.Forms 共享项目解决方案中定义，不提供从 Xamarin.Forms.NET Standard 库解决方案。
+允许任何 Xamarin.Forms 控件`Content`设置，或具有`Children`集合中，可以添加特定于平台的视图。 例如，iOS`UILabel`可以直接添加到[ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content)属性，或设置为[ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children)集合。 但请注意，此功能需要使用`#if`Xamarin.Forms 共享项目解决方案中定义，不提供从 Xamarin.Forms.NET Standard 库解决方案。
 
 下面的屏幕截图演示了特定于平台的视图具有已添加到 Xamarin.Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 

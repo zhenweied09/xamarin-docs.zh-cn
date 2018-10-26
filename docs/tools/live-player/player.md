@@ -3,15 +3,15 @@ title: Xamarin Live Player 应用
 description: 本文档介绍了 Xamarin Live Player 设备的实时应用程序，可用于预览代码更改。 它讨论了安装程序、 示例、 日志、 设置、 管理设备和的详细信息。
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2017
-ms.openlocfilehash: b3166aa440cbe2981d597771b360373fadc6451b
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: fdd602da932e0c36cadade50476babba51d67398
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250941"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113150"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 应用
 

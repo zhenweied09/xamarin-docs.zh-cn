@@ -4,15 +4,15 @@ description: 本文档所链接到各种指南描述概念基础到 Xamarin.iOS 
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111207"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110467"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Xamarin.iOS 应用程序基础知识
 
@@ -60,7 +60,7 @@ Apple 已与安全和隐私 iOS 10 （及更高版本） 中存在多项增强�
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[线程处理](~/ios/app-fundamentals/threading.md)
 
-本文讨论了线程处理在 Xamarin.iOS 应用程序，并讨论了有点.NET 线程池、 响应式应用程序和垃圾回收。
+本文讨论了在 Xamarin.iOS 应用程序中，线程处理，并稍微讨论了.NET 线程池、 响应式应用程序和垃圾回收。
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[触控](~/ios/app-fundamentals/touch/index.md)
 

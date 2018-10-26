@@ -4,15 +4,15 @@ description: 显示 SkiaSharp 位图，以便某些区域被拉伸并不是某�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e5bfa076a8746abd6275e9d7a8393c7c8ab53294
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119223"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>SkiaSharp 位图的分段的显示
 
@@ -26,7 +26,7 @@ SkiaSharp`SKCanvas`对象定义一个名为方法`DrawBitmapNinePatch`和两个�
 
 ## <a name="the-nine-patch-display"></a>包含 9 个修补程序显示 
 
-从概念上讲， [ `DrawBitmapNinePatch` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapNinePatch/p/SkiaSharp.SKBitmap/SkiaSharp.SKRectI/SkiaSharp.SKRect/SkiaSharp.SKPaint/)将位图划分为九个矩形：
+从概念上讲， [ `DrawBitmapNinePatch` ](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint))将位图划分为九个矩形：
 
 ![九个修补程序](segmented-images/NinePatch.png "九个修补程序")
 
@@ -40,7 +40,7 @@ SkiaSharp`SKCanvas`对象定义一个名为方法`DrawBitmapNinePatch`和两个�
 canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 ```
 
-Center 矩形是相对于位图。 它是`SKRectI`值 (整数新版`SKRect`) 和所有坐标和大小都都以像素为单位。 目标矩形是相对于显示图面。 `paint` 参数是可选的。
+Center 矩形是相对于位图。 它是`SKRectI`值 (整数新版`SKRect`) 和所有坐标和大小都都以像素为单位。 目标矩形是相对于显示图面。 `paint` 自变量是可选的。
 
 **九个修补程序显示**页面[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)示例首先使用静态构造函数来创建类型的公共静态属性`SKBitmap`:
 
@@ -119,14 +119,14 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 这两个`DrawBitmapLattice`方法都是类似于`DrawBitmapNinePatch`，但它们通用于所有的水平或垂直分割数。 这些部门定义对应于像素为单位的整数数组的数组。 
 
-[ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/System.Int32[]/System.Int32[]/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有参数的整数中的这些阵列的方法似乎不起作用。 [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/SkiaSharp.SKLattice/SkiaSharp.SKRect/SkiaSharp.SKPaint/)具有类型参数的方法`SKLattice`的工作原理，这是在如下所示的示例中使用。
+[ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint))具有参数的整数中的这些阵列的方法似乎不起作用。 [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint))具有类型参数的方法`SKLattice`的工作原理，这是在如下所示的示例中使用。
 
-[ `SKLattice` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLattice/)结构定义四个属性：
+[ `SKLattice` ](xref:SkiaSharp.SKLattice)结构定义四个属性：
 
-- [`XDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.XDivs/)一个整数数组
-- [`YDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.YDivs/)一个整数数组
-- [`Flags`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Flags/)一个数组`SKLatticeFlags`，枚举类型
-- [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Bounds/) 类型的`Nullable<SKRectI>`指定位图中的一个可选源矩形
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs)一个整数数组
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs)一个整数数组
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags)一个数组`SKLatticeFlags`，枚举类型
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) 类型的`Nullable<SKRectI>`指定位图中的一个可选源矩形
 
 `XDivs`数组分成垂直条带位图的宽度。 第一条从像素延伸 0 左侧到`XDivs[0]`。 此带呈现其像素宽度。 从第二个条带延伸`XDivs[0]`到`XDivs[1]`，并且拉伸。 从第三个条带延伸`XDivs[1]`到`XDivs[2]`和呈现其像素宽度。 最后一条从数组的最后一个元素扩展到位图的右边缘。 如果数组具有偶数数目的元素，则它会显示在其像素宽度。 否则，它的拉伸。 垂直条带线的总数是一个数组中的元素数。
 
@@ -134,7 +134,7 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 共同`XDivs`和`YDivs`数组将位图划分为矩形。 矩形的数量等于水平条带线的数目和垂直条带线的数目的乘积。
 
-根据 Skia 文档`Flags`数组包含一个元素的每个矩形，第一次的顶行是矩形，然后第二行等。 `Flags`数组类型是[ `SKLatticeFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLatticeFlags/)，具有以下成员的枚举：
+根据 Skia 文档`Flags`数组包含一个元素的每个矩形，第一次的顶行是矩形，然后第二行等。 `Flags`数组类型是[ `SKLatticeFlags` ](xref:SkiaSharp.SKLatticeFlags)，具有以下成员的枚举：
 
 - `Default` 使用值为 0
 - `Transparent` 值为 1
@@ -225,5 +225,5 @@ public class LatticeDisplayPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

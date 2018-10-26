@@ -4,15 +4,15 @@ description: 本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
+ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "40251168"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106970"
 ---
 # <a name="windows-in-xamarinmac"></a>在 Xamarin.Mac 中的 Windows
 
@@ -347,14 +347,14 @@ using Foundation;
 
 namespace SourceWriter
 {
-    public class EditorWidowDelegate : NSWindowDelegate
+    public class EditorWindowDelegate : NSWindowDelegate
     {
         #region Computed Properties
         public NSWindow Window { get; set;}
         #endregion
 
         #region constructors
-        public EditorWidowDelegate (NSWindow window)
+        public EditorWindowDelegate (NSWindow window)
         {
             // Initialize
             this.Window = window;
@@ -427,7 +427,7 @@ namespace SourceWriter
 
 ```csharp
 // Set delegate
-Window.Delegate = new EditorWidowDelegate(Window);
+Window.Delegate = new EditorWindowDelegate(Window);
 ```
 
 ### <a name="saving-changes-before-closing-the-app"></a>关闭应用之前保存更改
@@ -489,7 +489,7 @@ void NewDocument (NSObject sender) {
 
 如果我们打开**Windows**菜单中，可以看到该应用程序会自动跟踪和处理我们打开的窗口：
 
-[![](window-images/display05.png "Widows 菜单")](window-images/display05.png#lightbox)
+[![](window-images/display05.png "Windows 菜单")](window-images/display05.png#lightbox)
 
 使用菜单中的 Xamarin.Mac 应用程序的详细信息，请参阅我们[与菜单一起使用](~/mac/user-interface/menu.md)文档。
 

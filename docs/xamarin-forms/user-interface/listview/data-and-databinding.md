@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 71e1655b6bc05c621ee97fcf826ce8b468f0dd48
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 4f80682c5d8c4f5231fbdd2e081fdcf7962aa969
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103720"
 ---
 # <a name="listview-data-sources"></a>ListView 数据源
 
@@ -89,7 +89,7 @@ employeeList.Add(new Employee(){ DisplayName="Mr. Mono"});
 数据绑定的详细信息，请参阅[数据绑定基础知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)这四个是一部分[Xamarin.Forms XAML 基础知识文章系列](~/xamarin-forms/xaml/xaml-basics/index.md)。
 
 ### <a name="binding-cells"></a>单元格绑定
-单元格 （和单元格的子项） 的属性可以绑定到对象中的属性`ItemsSource`。 例如，ListView 可以用于显示图像的员工的列表。
+单元格 （和单元格的子项） 的属性可以绑定到对象中的属性`ItemsSource`。 例如，ListView 可以用于显示员工的列表。
 
 Employee 类：
 

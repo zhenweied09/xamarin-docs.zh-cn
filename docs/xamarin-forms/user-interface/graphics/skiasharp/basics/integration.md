@@ -4,15 +4,15 @@ description: 本文介绍如何创建响应触摸的 SkiaSharp 图形和 Xamarin
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 23dcc6f11f40283a220aba47b33717e7e5740dbe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: bf9b0388ff3b024439cfc3488e4057ba32fdab6b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115076"
 ---
 # <a name="integrating-with-xamarinforms"></a>与 Xamarin.Forms 集成
 
@@ -44,7 +44,7 @@ SkiaSharp 图形可以与 Xamarin.Forms 中通过多种方法的其余部分集�
 
 请注意`skia`XML 命名空间声明。
 
-`Tapped`处理程序`TapGestureRecognizer`对象只需切换的值的布尔型字段，并调用[ `InvalidateSurface` ](https://developer.xamarin.com/api/member/SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface()/)方法`SKCanvasView`:
+`Tapped`处理程序`TapGestureRecognizer`对象只需切换的值的布尔型字段，并调用[ `InvalidateSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface)方法`SKCanvasView`:
 
 ```csharp
 bool showFill = true;
@@ -84,15 +84,15 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-`StrokeWidth`已设置属性为 50 地突出显示不同之处。 您还可以通过首先绘制内部，，然后概要中查看整个线条宽度。 默认情况下，图形图表绘制更高版本中`PaintSurface`事件处理程序会掩盖与前面的处理程序中绘制。
+`StrokeWidth`已设置属性为 50 地突出显示不同之处。 您还可以通过首先绘制内部，，然后概要中查看整个线条宽度。 默认情况下，图形图表的更高版本中绘制`PaintSurface`事件处理程序会掩盖与前面的处理程序中绘制。
 
-**颜色浏览**页演示了如何，您还可以在与其他 Xamarin.Forms 元素中，集成 SkiaSharp 图形，并且还演示用于在 SkiaSharp 中定义的颜色的两个替代方法之间的差异。 静态[ `SKColor.FromHsl` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsl/p/System.Single/System.Single/System.Single/System.Byte/)方法创建`SKColor`值基于色调-饱和度-亮度模型：
+**颜色浏览**页演示了如何，您还可以在与其他 Xamarin.Forms 元素中，集成 SkiaSharp 图形，并且还演示用于在 SkiaSharp 中定义的颜色的两个替代方法之间的差异。 静态[ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte))方法创建`SKColor`值基于色调-饱和度-亮度模型：
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-静态[ `SKColor.FromHsv` ](https://developer.xamarin.com/api/member/SkiaSharp.SKColor.FromHsv/p/System.Single/System.Single/System.Single/System.Byte/)方法创建`SKColor`值基于类似的色调-饱和度-值模型：
+静态[ `SKColor.FromHsv` ](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte))方法创建`SKColor`值基于类似的色调-饱和度-值模型：
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
@@ -100,7 +100,7 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 
 在这两种情况下，`h`参数范围是从 0 到 360。 `s`， `l`，和`v`参数范围从 0 到 100。 `a` （alpha 或不透明度） 参数范围是从 0 到 255 之间。
 
-[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml)文件将创建两个`SKCanvasView`中的对象`StackLayout`与并行`Slider`和`Label`的视图，以便用户选择 HSL 和HSV 颜色值：
+[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml)文件将创建两个`SKCanvasView`中的对象`StackLayout`与并行`Slider`和`Label`的视图，以便用户选择 HSL 和 HSV颜色值：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -240,5 +240,5 @@ HSV 模型中的饱和度和值是 100 时，将导致纯颜色。 值为 0，�
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

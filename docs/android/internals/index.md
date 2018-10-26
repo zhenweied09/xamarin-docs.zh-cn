@@ -1,39 +1,39 @@
 ---
 title: 高级的概念和内部机制
-description: 后面 Xamarin.Android 和它的 API 设计的基础体系结构。
+description: Xamarin.Android 和它的 API 设计背后的基础体系结构。
 ms.prod: xamarin
 ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/21/2018
-ms.openlocfilehash: 79e61db4c27a2d29b4ee0a9d39f2d25ea5d93303
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: f5844dd4340afa0596219a33ed1e479a0dbcfa76
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114166"
 ---
 # <a name="advanced-concepts-and-internals"></a>高级的概念和内部机制
 
-_本部分包含这些主题介绍体系结构、 API 设计以及 Xamarin.Android 的限制。此外，它包括这些主题介绍其垃圾回收实现和 Xamarin.Android 中可用的程序集。因为 Xamarin.Android[开放源代码](https://github.com/xamarin/xamarin-android)，还有可能可以通过检查其源代码理解 Xamarin.Android 的内部工作情况。_
+_本部分包含这些主题介绍体系结构、 API 设计和 Xamarin.Android 的限制。此外，它包含的主题说明其垃圾回收实现以及可在 Xamarin.Android 中的程序集。因为 Xamarin.Android[开放源代码](https://github.com/xamarin/xamarin-android)，则还可以通过检查其源代码了解 Xamarin.Android 的内部工作机制。_
 
 
 ##  <a name="architectureandroidinternalsarchitecturemd"></a>[体系结构](~/android/internals/architecture.md)
 
-此文章介绍了 Xamarin.Android 应用程序背后的基础体系结构。 它说明如何 Xamarin.Android 应用程序环境中运行单声道执行一起与 Android 运行时虚拟机，并解释了此类作为 Android 可调用包装器和管理可调用包装器的关键概念。 
+本文介绍 Xamarin.Android 应用程序的基础体系结构。 它介绍了如何 Xamarin.Android 应用程序为环境中运行 Mono 执行与一起使用 Android 运行时虚拟机，并说明了此类作为 Android 可调用包装器和托管可调用包装器的重要概念。 
 
 
 
 ##  <a name="api-designandroidinternalsapi-designmd"></a>[API 设计](~/android/internals/api-design.md)
 
-除了属于 Mono 的基类库的核心，Xamarin.Android 附带的各种 Android Api 允许开发人员使用 Mono 创建本机 Android 应用程序的绑定。
+除了核心是 Mono 的一部分的基类库，Xamarin.Android 提供与各种 Android Api 允许开发人员使用 Mono 创建本机 Android 应用程序的绑定。
 
-存在 Xamarin.Android 的核心是互操作的引擎与 Java 领域这样桥 C# 的环境并允许开发人员访问对 Java Api 通过 C# 或其他.NET 语言。
+有 Xamarin.Android 的核心是互操作引擎与 Java 领域这样桥 C# 的环境和开发人员提供了访问 Java api 从 C# 或其他.NET 语言。
 
 
 
 ##  <a name="assembliescross-platforminternalsavailable-assembliesmd"></a>[程序集](~/cross-platform/internals/available-assemblies.md)
 
-Xamarin.Android 附带几个程序集。 就像 Silverlight 是桌面的.NET 程序集扩展的子集，Xamarin.Android 还有几个 Silverlight 和桌面.NET 程序集的扩展的子集。 
+Xamarin.Android 附带了几个程序集。 就像 Silverlight 是桌面.NET 程序集的扩展的子集，Xamarin.Android 也是多个 Silverlight 和桌面.NET 程序集的扩展的子集。 
 

@@ -1,50 +1,50 @@
 ---
-title: watchOS 中 Xamarin Table 控件
-description: 本文档介绍如何在 Xamarin 中使用 watchOS table 控件。 它讨论添加了一个表、 添加行控制器、 创建和填充行，响应次点击，和的详细信息。
+title: watchOS 在 Xamarin 中的表控件
+description: 本文档介绍如何在 Xamarin 中使用 watchOS 表控件。 它讨论添加表、 添加行控制器、 创建和填充行，响应点击，和的详细信息。
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: cd5e7299874bbfb1b652315a549b9d067d58e9a0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791353"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109388"
 ---
-# <a name="watchos-table-controls-in-xamarin"></a>watchOS 中 Xamarin Table 控件
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS 在 Xamarin 中的表控件
 
-WatchOS`WKInterfaceTable`控件比其 iOS 对应的方法要简单得多，但执行类似的角色。 它创建一个滚动列表的行，可以自定义布局，并且其响应触控事件。
+WatchOS`WKInterfaceTable`控件比其 iOS 对应的要简单得多，但执行类似的角色。 它会创建滚动列表中，可能会有自定义布局，并且该响应触摸事件中的行。
 
 ![](table-images/table-list-sml.png "监视表列表") ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
-## <a name="adding-a-table"></a>添加了一个表
+## <a name="adding-a-table"></a>添加表
 
-拖动**表**到场景的控件。 默认情况下它将类似此 （显示未指定的单行布局）：
+拖动**表**到场景的控件。 默认情况下它将类似此 （显示单个未指定的行布局）：
 
-[![](table-images/add-table-sml.png "添加了一个表")](table-images/add-table.png#lightbox)
+[![](table-images/add-table-sml.png "添加表")](table-images/add-table.png#lightbox)
 
-为表的名称在**属性**填充的**名称**框中，以便可以在代码中引用。
+为表提供一个名称**属性**填充的**名称**框，以便可以在代码中引用。
 
 ## <a name="add-a-row-controller"></a>添加行控制器
 
-该表自动包含单个行，表示由包含行控制器**组**默认情况下的控件。
+该表自动包含单个行，由一个包含的行控制器**组**默认情况下的控件。
 
-若要设置**类**行控制器中，选择中的行**文档大纲**类中键入名称和**属性**填充：
+若要设置**类**对于行控制器，请选择中的行**文档大纲**并键入中的类名称**属性**板：
 
-[![](table-images/add-row-controller-sml.png "在属性键盘输入的类名称")](table-images/add-row-controller.png#lightbox)
+[![](table-images/add-row-controller-sml.png "在属性面板中输入类名")](table-images/add-row-controller.png#lightbox)
 
-设置行的控制器类后，IDE 将在项目中创建相应的 C# 文件。 拖到行上的控件 （如标签），并给予他们名称以便它们可以在代码中引用。
-
-
+一旦设置行的控制器类，IDE 将创建相应的C#项目文件中的。 控件 （如标签） 拖至行，因此它们可以在代码中引用为其提供名称。
 
 
-## <a name="create-and-populate-rows"></a>创建并填充行
 
-`SetNumberOfRows` 创建了行控制器类为每个行，使用`Identifier`选择正确的订阅。 如果你为行控制器指定自定义`Identifier`，更改**默认**在下面的代码代码段为你使用的标识符。 `RowController` *的每一行*时，将创建`SetNumberOfRows`称为和显示的表。
+
+## <a name="create-and-populate-rows"></a>创建并填充的行
+
+`SetNumberOfRows` 创建行控制器类为每个行，使用`Identifier`选择正确的订阅。 如果你为行控制器提供自定义`Identifier`，更改**默认**中所使用的标识符为以下代码段。 `RowController` *的每一行*时创建`SetNumberOfRows`称为和显示的表。
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -52,9 +52,9 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 ```
 
 > [!IMPORTANT]
-> 像它们是在 iOS 中，表行没有被虚拟化。 尝试限制 （Apple 建议小于 20） 的行数。
+> 像在 iOS 中，未虚拟化表行。 尝试限制 （Apple 推荐小于 20） 的行数。
 
-创建行后, 需要填充每个单元格 (如`GetCell`像在 iOS 中)。 此代码段从[WatchTables 示例](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)更新每个行中的标签
+一旦已创建的行，就必须填充每个单元 (如`GetCell`像在 iOS 中)。 来自此代码片段[WatchTables 示例](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)更新每个行中的标签
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -64,19 +64,19 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> 使用`SetNumberOfRows`，然后循环访问使用`GetRowController`导致要发送到手表的整个表。 后续视图的表中，如果你需要添加或删除特定行使用`InsertRowsAt`和`RemoveRowsAt`以提高性能。
+> 使用`SetNumberOfRows`，然后遍历使用`GetRowController`导致要发送到所监视的整个表。 在随后的表的视图，如果您需要添加或删除特定行使用`InsertRowsAt`和`RemoveRowsAt`以提高性能。
 
 
-## <a name="respond-to-taps"></a>响应分流
+## <a name="respond-to-taps"></a>响应的分流点
 
-可以通过两种方式来响应行选择：
+您可以响应行选择两个不同的方式：
 
-- 实现`DidSelectRow`方法在接口控制器上，或
-- 在情节提要创建 segue 并实现`GetContextForSegue`如果你想行选择，以打开另一个场景。
+- 实现`DidSelectRow`方法接口在控制器上，或
+- 创建情节提要 segue 并实现`GetContextForSegue`如果想要行选择要打开另一个场景。
 
 ### <a name="didselectrow"></a>DidSelectRow
 
-若要以编程方式处理行选择，实现`DidSelectRow`方法。 若要打开新的场景，请使用`PushController`并传递场景的标识符和要使用的数据上下文：
+若要以编程方式处理行选择，实现`DidSelectRow`方法。 若要打开新的场景，请使用`PushController`，并传递场景的标识符和要使用的数据上下文：
 
 ```csharp
 public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
@@ -90,10 +90,10 @@ public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 
 ### <a name="getcontextforsegue"></a>GetContextForSegue
 
-将拖动 segue 情节提要从你的表行到另一个场景 (按住**控件**密钥拖动时)。
-请务必选择 segue，并在中为该标识符**属性**pad (如`secondLevel`在下面的示例)。
+将 segue 情节提要上从表行向另一个场景 (按住**控制**密钥拖动指针时)。
+请务必选择 segue 并为其提供标识符**属性**板 (如`secondLevel`在下面的示例)。
 
-在接口控制器中，实现`GetContextForSegue`方法并返回应提供的数据上下文 segue 进行呈现的场景。
+在界面控制器中，实现`GetContextForSegue`方法并返回应提供的数据上下文的场景的 segue 提供。
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier, WKInterfaceTable table, nint rowIndex)
@@ -105,27 +105,27 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 }
 ```
 
-此数据传递给目标情节提要场景其`Awake`方法。
+此数据将传递给目标情节提要场景其`Awake`方法。
 
 ## <a name="multiple-row-types"></a>多个行类型
 
-默认情况下 table 控件具有你可以设计的单个行类型。 若要添加更多行模板使用**行**框中**属性**pad 创建更多行控制器：
+默认情况下 table 控件具有您可以设计的单个行类型。 若要添加更多行模板使用**行**框中**属性**板来创建更多行控制器：
 
 ![](table-images/prototype-rows1.png "设置原型行数")
 
-设置**行**属性**3**将创建其他行占位符，您可以拖动到控件。 对于每一行，设置**类**名称中**属性**pad，确保创建行控制器类。
+设置**行**属性设置为**3**将创建其他行占位符，您可以拖动到控件。 对于每一行，设置**类**名称**属性**板，以确保创建行控制器类。
 
-![](table-images/prototype-rows2.png "设计器中的原型行")
+![](table-images/prototype-rows2.png "在设计器中的原型行")
 
-以不同的行类型使用表中填充`SetRowTypes`方法，以指定要用于表中的每一行的行控制器类型。 使用行的标识符来指定哪些行控制器应该用于每个行。
+若要填充的表使用不同的行类型使用`SetRowTypes`方法，以指定要用于表中的每一行的行控制器类型。 使用的行标识符以指定哪些行控制器应该用于每个行。
 
-此数组中的元素数目应与匹配您希望在表中的行数：
+此数组中元素的数目应与匹配您希望在表中的行数：
 
 ```csharp
 myTable.SetRowTypes (new [] {"type1", "default", "default", "type2", "default"});
 ```
 
-当填充具有多个行控制器的表，将需要跟踪的哪种类型会因为填充 UI:
+当填充表具有多个行控制器，将需要跟踪的填充 UI 如预期的类型：
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -145,26 +145,26 @@ for (var i = 0; i < rows.Count; i++) {
 
 ## <a name="vertical-detail-paging"></a>垂直的详细信息分页
 
-watchOS 3 引入表的新功能： 能够滚动查看详细信息页与每个行，而无需返回到表并选择另一个行。 可通过向上和向下轻扫，或使用数字王冠滚动的详细信息屏幕。
+watchOS 3 引入了表的新功能： 滚动浏览的详细信息页的功能与每个行，而无需返回到表并选择另一个行。 可通过向上和向下轻扫或使用数字 Crown 滚动的详细信息屏幕。
 
 ![](table-images/table-scroll-sml.png "垂直的详细信息分页示例") ![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
-> 此功能目前只可通过编辑在 Xcode 接口生成器情节提要。
+> 此功能目前仅通过编辑在 Xcode Interface Builder 情节提要。
 
-若要启用此功能，请选择`WKInterfaceTable`设计图面上，刻度上**垂直详细信息分页**选项：
+若要启用此功能，请选择`WKInterfaceTable`上的设计图面和刻度线**垂直详细信息分页**选项：
 
 ![](table-images/vertical-detail-paging-sml.png "选择垂直详细信息分页选项")
 
-作为[解释的 Apple](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023)表导航必须使用 segue 以使用分页功能。 重新编写使用的任何现有代码`PushController`使用 segue 的相反。
+作为[通过 Apple 解释](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023)表导航必须使用 segue 为了使用分页功能。 重新编写使用的任何现有代码`PushController`使用请 segue 相反。
 
 <a name="add_row_controller" />
 
-## <a name="appendix-row-controller-code-example"></a>附录： 行控制器代码示例
+## <a name="appendix-row-controller-code-example"></a>附录： 行控制器的代码示例
 
-在设计器中创建行控制器时，IDE 将自动创建两个代码文件。 这些生成的文件中的代码下面显示了引用。
+在设计器中创建行控制器时，IDE 将自动创建两个代码文件。 有关参考，这些生成的文件中的代码所示。
 
-第一个将命名类，例如**RowController.cs**，如下所示：
+第一个将被命名为对于类，例如**RowController.cs**，如下所示：
 
 ```csharp
 using System;
@@ -181,7 +181,7 @@ namespace WatchTablesExtension
 }
 ```
 
-其他 **。 designer.cs**文件是包含的容器和在设计器图面，如本示例具有一个创建的操作的分部类定义`WKInterfaceLabel`控件：
+另 **。 designer.cs**文件是包含输出口和操作的设计器图面，如其中一个此示例创建一个分部类定义`WKInterfaceLabel`控件：
 
 ```csharp
 using Foundation;
@@ -209,7 +209,7 @@ namespace WatchTables.OnWatchExtension
 }
 ```
 
-插座和此声明的操作然后可以引用以代码-但是 **。 designer.cs**不应直接编辑文件。
+输出口和操作此处声明，可以引用在代码中-但是 **。 designer.cs**不应直接编辑文件。
 
 
 

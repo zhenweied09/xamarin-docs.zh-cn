@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 256d5c81475be095c8fa0ab0408cbcf673c6b301
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f397cf595a9ae151c5f105341733b2c57023fe99
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109713"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>使用 Visual Basic.NET 的 Xamarin.Forms
 
@@ -79,7 +79,7 @@ Xamarin 不直接支持 Visual Basic-按照此页后，可以创建一个 C# Xam
     ```
 
 9. 现在，我们需要指向新的 Visual Basic 项目的 iOS 和 Android 项目。
-右键单击**引用**节点中的 iOS 和 Android 项目以打开**引用管理器**。 取消刻度线的 C# 可移植库和刻度线 VB 可移植库 （不要忘了，此方法适用于 iOS 和 Android 项目）。
+右键单击**引用**节点中的 iOS 和 Android 项目以打开**引用管理器**。 取消勾选标记C#可移植库和刻度线 VB 可移植库 （不要忘了，此方法适用于 iOS 和 Android 项目）。
 
    [![](xamarin-forms-images/add-vb-8-sml.png "删除旧的项目引用，请添加 Visual Basic 参考")](xamarin-forms-images/add-vb-8.png#lightbox)
 

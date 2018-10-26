@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: F42526FF-2B0D-4A9D-B129-CECF680ED0DE
 author: conceptdev
 ms.author: crdun
-ms.date: 07/16/2018
+ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "39351738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121420"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>认证提供移动解决方案的咨询合作伙伴
 
@@ -111,10 +111,10 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[IntelliTect](http://intellitect.com/)|Spokane，WA，USA|ntelliTect Corporation 是高端软件体系结构和咨询公司总部位于华盛顿州 Spokane 市的开发。|
 |[Interknowlogy](http://www.interknowlogy.com/)|San Diego，CA，USA|自定义应用程序开发的全球领袖，InterKnowlogy 利用当前和新兴技术来提供通过触摸、 手势和语音的互连的体验|
 |[Intouch 解决方案](http://www.intouchsol.com )|Overland Park，KS，USA;英国伦敦;芝加哥，IL，USA;纽约，纽约州，美国|我们是在医药和医疗保健空间内前导数字机构|
-|[iTexico](http://www.itexico.com)|美国德克萨斯州奥斯汀市|iTexico 是一种全球软件技术公司，致力于帮助企业在整个项目的移动开发通过 nearshore 外包 Äôs 生命周期。|
+|[iTexico](http://www.itexico.com)|美国德克萨斯州奥斯汀市|iTexico 是一种全球软件技术公司，致力于帮助企业在整个项目的生命周期，通过 nearshore 外包的移动开发。|
 |[JBS](https://www.jbssolutions.com)|宾夕法尼亚州 USA|JBS 是自定义软件解决方案提供商。|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto，CA，USA;芝加哥，IL，USA;极了，俄亥俄州，USA;Seongnam si，韩国 Gyeonggi 执行操作，|Kaonsoft 是创新的软件公司，提供了完整的端到端解决方案，若要创建适用于跨平台的移动应用程序的企业。|
-|[Katalyst Technologies inc. ](http://www.katalysttech.com )|Evanston，IL，USA;亚特兰大，GA，USA;孟买，Maharashtra，印度;海得拉巴，Telangana，印度;浦那，Maharashtra 印度|Katalyst，认为，技术可以真正是促成因素。 具有领先公司不只是相信到我们的原因提供产品和服务，但还更改其核心业务操作通过跨企业的自定义的有影响解决方案的方式。|
+|[Katalyst Technologies inc. ](http://www.katalysttech.com )|Evanston，IL，USA;亚特兰大，GA，USA;孟买，Maharashtra，印度;海得拉巴，Telangana，印度;浦那，Maharashtra 印度|Katalyst，认为，技术可以真正是促成因素。 具有领先公司不只是相信到我们的原因提供产品和服务，但还更改其核心业务操作通过跨企业的自定义的有影响解决方案的方式。|
 |[Kleio 技术 LLC](http://kleiotechnology.com)|皇家 Palm 海滩，佛罗里达州|传统上，我们已经处理了教育、 品牌和标识。 我们研究客户端的业务问题解决在设计、 用户体验和内容的策略。 我们帮助达到客户端需求并使其更具盈利水平的业务|
 |[LEAP](http://www.leapagency.com/our-work)|路易斯维尔，肯塔基州|极富感染力的沉浸式体验旨在激发化学人和不同品牌之间。 激发，体验吸引并进行娱乐。 建立关系的体验。 产生的影响的体验。|
 |[Leaware](http://www.leaware.com)|Elmhurst，IL;Monheim 是 Rhein，德国;波兰华沙|Leaware 是软件房屋，公司和开发公司-专门研究本机、 多平台的移动应用程序和 web 应用程序的设计。 我们唯一的技能、 能力、 blend 和体验可帮助我们的最先进、 最可靠的解决方案在市场上立即创建。|
@@ -123,10 +123,10 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[生命周期咨询](http://lifecycleconsulting.com.au)|Syndey AU|生命周期是专门处理板/移动开发，商业智能的软件开发公司订购使用 Microsoft 和 Xamarin 技术的软件和系统集成。 通过利用敏捷方法，它们对于其客户端，并为他们提供高枕无忧，并使可交付结果和成本要轻松地跟踪实现很容易发现过程。|
 |[Magenic](http://magenic.com)|佐治亚州亚特兰大;马萨诸塞州;伊利诺伊州;明尼苏达州明尼阿波利斯;旧金山，加利福尼亚州;纽波特海滩，CA;马尼拉，菲律宾|Magenic 转换技术，以获取你想要通过的企业。 我们的成功可归因于我们吸引没有一家公司可以匹配的每个项目提供灵活性、 专业知识和速度。 |
 |[Magenium 解决方案](http://magenium.com)|Glen Ellyn，IL，USA|我们的服务范围从 IT 人员配备云计算到移动应用开发。 通过技术，我们将帮助客户端扩展业务，提高工作效率、 保持竞争力，并降低成本。|
-|[Mapleton Hill](Https://www.mapletonhill.net )|博尔德县，CO|Mapleton Hill 是完整的服务应用程序开发部门基于博尔德县，CO 中。 是否需要自定义软件、 API、 响应迅速的 CMS 网站或使用 Xamarin 生成的本机移动应用，我们将涵盖|
+|[Mapleton Hill](Https://www.mapletonhill.net )|博尔德县，CO|Mapleton Hill 是完整的服务应用程序开发部门基于博尔德县，CO 中。 是否需要自定义软件、 API、 响应迅速的 CMS 网站或使用 Xamarin 生成的本机移动应用，我们将涵盖|
 |[Megsoft Consulting，Inc](http://megsoftconsulting.com)|华盛顿特区|Megsoft Consulting，Inc.是一家公司专门从事创建移动应用程序使用基于 Microsoft.NET framework 和 Azure 生态系统的 Xamarin 跨平台工具。 |
 |[案情要点 Solutions Inc.](http://meritsolutions.com)|Wheaton，IL |荣誉奖解决方案的便是其中几个全球范围内的 Microsoft 合作伙伴能够从 Azure 托管服务、 物联网 (IoT) 到移动应用程序 – 和所有内容的 Microsoft Dynamics 365 之间提供端到端数字化转型-。|
-|[网格系统 LLC](http://www.mesh-systems.com )|Carmel、 IN |网格系统知道如何解锁计算机数据的值并使用它来转换的人员、 进程和计算机之间的关系。 |
+|[网格系统 LLC](http://www.mesh-systems.com )|Carmel、 IN |网格系统知道如何解锁计算机数据的值并使用它来转换的人员、 进程和计算机之间的关系。 |
 |[MetroStar 系统](http://www.metrostarsystems.com/)|Reston，VA|数字将转换，从而帮助增强您的投资，并在明天的世界中成功。|
 |[MiC 软件 ](http://mic-software.net/)|弗雷期诺，CA，USA|我们要在产品/服务的定制的服务，完全量身订作以便满足我们的客户的个人的要求|
 |[Mindtree](http://www.mindtree.com)|Warren，NJ|Mindtree 可提供数字转换和技术服务从构思到执行，让全球上市公司 2000年客户端的性能优于竞争对手的产品|
@@ -135,16 +135,16 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Motis 咨询](http://www.motisconsulting.com/)|Dubuque，州政府|可以帮助 Motis 咨询。 阅读我们有关你的产品战略、 体系结构或开发需求的帮助与移动或桌面软件应用程序相关的 Motis 解决方案和联系人详细信息。|
 |[Nebbia 技术 ](http://www.nebbiatech.com/)|美国佛罗里达州的|我们是首个基于云的软件公司，主要从事 Microsoft 技术。 我们构建令人惊叹应用 DevOps 中的最佳做法的同时利用 Azure 的产品。 我们具有云优先焦点并帮助他们迁移到云并充分利用其云投资的客户端与我们合作。|
 |[状态](http://www.ness.com/)|San Jose，CA，USA|数字化转型和自定义软件产品工程服务以帮助组织设想、 生成和不断发展以进入新市场，其数字平台捕获新收入和提高操作性数字工程提供效率。 |
-|[Neudesic](http://www.neudesic.com)|加州大学;佐治亚州亚特兰大;德克萨斯州奥斯汀;伊利诺伊州;德克萨斯州达拉斯市;科罗拉多州丹佛;德克萨斯州休斯顿;加利福尼亚州洛杉矶;纽约，纽约州;费城;Phoenix，AZ;俄勒冈州波特兰市;美国华盛顿州西雅图|Neudesic 是前导国家/地区的系统集成商和受信任的 Microsoft 合作伙伴，识别的独立调查机构合作以我们的功能和 Microsoft 技术专业知识。 我们还维护与 Theobald、 AWS、 Dell、 Xamarin、 Metalogix、 Nintex 和其他人等其他行业领先的战略联盟。 通过使用与我们联盟的密切合作来处理 Äî 值混合处理其工具和技术的专业技能 Äî Neudesic 是能够为每个业务挑战交付最可行的解决方案。|
+|[Neudesic](http://www.neudesic.com)|加州大学;佐治亚州亚特兰大;德克萨斯州奥斯汀;伊利诺伊州;德克萨斯州达拉斯市;科罗拉多州丹佛;德克萨斯州休斯顿;加利福尼亚州洛杉矶;纽约，纽约州;费城;Phoenix，AZ;俄勒冈州波特兰市;美国华盛顿州西雅图|Neudesic 是前导国家/地区的系统集成商和受信任的 Microsoft 合作伙伴，识别的独立调查机构合作以我们的功能和 Microsoft 技术专业知识。 我们还维护与 Theobald、 AWS、 Dell、 Xamarin、 Metalogix、 Nintex 和其他人等其他行业领先的战略联盟。 通过使用与我们联盟的密切合作来处理&ndash;值混合处理其工具和技术的专业技能&ndash;Neudesic 是能够为每个业务挑战交付最可行的解决方案。|
 |[NIIT 技术](http://www.niit-tech.com)|亚特兰大，GA，USA;诺，Uttar Pradesh，印度;英国伦敦;西班牙马德里;新加坡|NIIT 技术是一个全局的 IT 解决方案组织在美国、 欧洲、 亚洲和澳大利亚寻址的客户端的要求。 NIIT 技术服务提供一系列服务旅行和运输、 银行和金融服务、 保险、 制造和媒体行业中的客户端。 专注于数字服务，该公司可帮助企业设计灵活、 可缩放的数字的操作模型。  我们提供广泛的同类最佳的解决方案和有效的服务包括体验、 分析和集成数字服务价值链之间分散的。|
-|[Nous Infosystems](http://nousinfosystems.com)|Edison，NJ |新项目始终是受欢迎的。 |
+|[Nous Infosystems](http://nousinfosystems.com)|Edison，NJ 和 San Ramon 市;Bentford，英国;Mississauga，加拿大安大略;Mainz，德国;Bengaluru，Coimbatore，印度;迪拜，阿拉伯联合酋长国|Nous，主要的 Xamarin 合作伙伴，使其客户可以轻松地采用功能强大的 Xamarin 平台并使用其现有的业务团队、 工具和C#/.NET 代码有效地去实时移动设备上。 我们提供了端到端企业移动性服务的用户体验和设计，Xamarin 建议服务、 应用程序开发服务、 测试和支持服务。|
 |[Noutash 咨询 inc.保留所有权利。](http://www.noutashconsulting.ca/)|士嘉堡，ON|我们的顾问创建原始创造性的移动应用，而这些程序美观且功能强大的专用化。|
 |[Oakwood](http://www.oakwoodsys.com/)|堪萨斯城，月，USA|我们自定义软件包含一组独特的工具、 技术、 功能和最佳实践。  设计唯一规范和要求。|
 |[Odessian LLC](http://www.odessian.com)|皮奥里亚，IL|我们的专业人员是擅长匹配问题的技术。 我们将各种行业 prospectives 创建最适合你的业务的最佳解决方案。|
 |[能够软件](http://www.onprairiesoftware.com/about-us.html)|Walhalla，ND|在能够软件背后的理念是提供从美国的经济高效的软件开发服务。 他们想要为想要将其开发外包选项可以使这适用于陆的美国公司提供。 使他们能够提供质量较低成本的开发服务的关键是要基于本身乡村区域中。 通过此操作，而且，他们认为它们可以生成出色的职业道德，此区域中的强的开发团队。|
-|[打开系统技术 (OST)](http://www.ostusa.com/app-dev)|Grand Rapids，MI;密歇根州底特律;明尼苏达州明尼阿波利斯;伊利诺伊州|通过在头是一个灯泡或是否只是乐于看到我们？ 如果需要在概念转变为将努力为您的企业的跨平台移动应用程序的帮助我们 Äôve 了只需执行此操作的专家。  我们知道，还有更多构建移动应用程序比只是应用程序。  我们了解企业体系结构和集成的需求。  在您考虑 API 的基于微服务体系结构，与关系数据库、 脱机同步、 蓝牙 LE iot 和如何将在云中的 NoSQL？  如果是这样，我们可以帮助您规划和利用实用的敏捷方法进行开发、 测试、 部署和支持您的应用程序。  我们喜欢移动，但我们的真正兴趣是咨询我们的客户端以及帮助它们实现自身愿景。  联系并共享您处理的事情。  您会发现又很想吸引友好和衷心团队。|
+|[打开系统技术 (OST)](http://www.ostusa.com/app-dev)|Grand Rapids，MI;密歇根州底特律;明尼苏达州明尼阿波利斯;伊利诺伊州|通过在头是一个灯泡或是否只是乐于看到我们？ 如果需要在概念转变为将努力为您的业务的跨平台移动应用程序的帮助，我们只需执行此操作的专家。  我们知道，还有更多构建移动应用程序比只是应用程序。  我们了解企业体系结构和集成的需求。  在您考虑 API 的基于微服务体系结构，与关系数据库、 脱机同步、 蓝牙 LE iot 和如何将在云中的 NoSQL？  如果是这样，我们可以帮助您规划和利用实用的敏捷方法进行开发、 测试、 部署和支持您的应用程序。  我们喜欢移动，但我们的真正兴趣是咨询我们的客户端以及帮助它们实现自身愿景。  联系并共享您处理的事情。  您会发现又很想吸引友好和衷心团队。|
 |[OpenArc](https://www.openarc.net/)|Wexford，PA，USA;克利夫兰，俄亥俄州，USA;美国华盛顿特区|在云中 OpenArc 是学无止境 IT 和业务咨询公司帮助客户端获得通过使用前导技术和最佳做法，使其业务的优势。 作为使用 Xamarin 合作伙伴，我们重点是帮助客户端设想、 架构师/设计和扩展或构建云和移动应用程序，将他们的后端系统和 IoT 设备与集成。 我们的组织包含三个主服务区域： 咨询，软件开发和人才的策略。 我们策略的服务帮助客户端构思格式正确的解决方案使用前导人为中心的设计考虑技术和方法来确保视觉、 客户参与度和具有清晰的路线图进值。 我们的软件工程和开发服务确保解决方案生成权限，使用正确的技术，第一次。 我们的专业技能跨端到端解决方案，包括： 用户体验/UI 和内容的设计、 响应式 web、 Agile/Scrum、 混合和本机开发，内容管理、 安全、 后端、 社交和 IoT 集成、 分析和项目管理。 专门的团队进行创新架构师、 开发和 QA/测试人员，设想、 设计和创建的最高质量、 最佳的解决方案以适合您的构想，与正在进行的全天候支持。|
-|[Pariveda 解决方案](http://www.parivedasolutions.com/About/Pages/Xamarin.aspx)|德克萨斯州达拉斯市;德克萨斯州休斯顿;伊利诺伊州;旧金山，加利福尼亚州;加利福尼亚州洛杉矶;华盛顿州西雅图;纽约，纽约州;华盛顿特区;佐治亚州亚特兰大|加速的能力采用移动技术，它利用 Pariveda Äôs 经验证的移动性策略和工作效率和生动的创新的解决方案。 其解决方案利用其移动性做法 Äôs 的企业能够提供策略和自定义解决当前和未来需求的移动解决方案的额外知识。 Pariveda 提供解决方案的范围从直到您企业的开发和实现移动策略。|
+|[Pariveda 解决方案](http://www.parivedasolutions.com/About/Pages/Xamarin.aspx)|德克萨斯州达拉斯市;德克萨斯州休斯顿;伊利诺伊州;旧金山，加利福尼亚州;加利福尼亚州洛杉矶;华盛顿州西雅图;纽约，纽约州;华盛顿特区;佐治亚州亚特兰大|加速采用移动技术，它利用 Pariveda 的经验证的移动性策略和工作效率和生动的创新的解决方案的能力。 其解决方案利用其移动性实践的企业能够提供策略和自定义解决当前和未来需求的移动解决方案的额外知识。 Pariveda 提供解决方案的范围从直到您企业的开发和实现移动策略。|
 |[Perficient](http://www.perficient.com/services/technology/mobile)|佐治亚州亚特兰大|Perficient 是为整个北美的全球上市公司 2000年和企业客户提供服务前导数字化转型咨询公司。 借助无与伦比的信息技术、 管理咨询和创新功能，Perficient 以及其 Perficient 数字机构传送视觉、 执行和值，该值具有未完成的数字体验、 业务优化和行业解决方案.|
 |[PILR 技术](http://pilrtech.com)|Joplin，月，美国;Springfield，月，美国;堪萨斯城，月，USA|PILR 技术有助于通过创建软件的优秀的组织。 我们的合作伙伴与领导者及其团队来解决独特的挑战，可提供通过软件真正的价值。|
 |[PIXI3](http://www.pixi3.com/)|里加，拉脱维亚;Greenwood Village，CO，USA|用于多个平台的桌面软件。 实现特定的业务逻辑的服务器软件。 适用于手机和平板电脑的移动应用程序。 用于嵌入式的系统和专用的设备的软件。 |
@@ -158,36 +158,36 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[RapidValue 解决方案](http://www.rapidvaluesolutions.com/)|普市|RapidValue 是启用数字转换包括企业移动性、 通路的解决方案和云服务的全球领袖。 我们帮助生成数字解决方案的企业，以及在生成新技术的领先产品。|
 |[Reinvently](http://reinvently.com/xamarin-app-development/)|Palo Alto，CA |对于我们而言，设计是描述产品的显示方式的通用语言和工作。 我们计划转化为战略和开发，从而想法直观地有形。|
 |[Reztech LLC](http://reztech.com)|Phoenix，AZ，USA;美国德克萨斯州达拉斯||
-|[Rightpoint]( http://www.rightpoint.com/contact)|芝加哥，IL，USA;波士顿，MA，USA;Detroit，MI，USA;亚特兰大，GA，USA;丹佛，CO，USA;达拉斯美国德克萨斯州;洛杉矶市;纽约，纽约州，美国|Rightpoint 是客户体验部门使用的核心技术。 好的客户体验由将其 Rightpoint 交付的人员带来的理念基础 Äôs 使命是删除障碍，并从中寻找新的机遇，跨每个 touchpoint 公司与客户建立连接。 只需创建移动应用程序，或确保移动网站设计响应式，超出 Rightpoint 建立一个整体 engagement 模型，侧重于客户部署模式而不是其通道选择，为构建多通道解决方案满足用户需求。 转移此模式允许营销人员值传递给潜在客户并更有意义且一致的方式与现有客户建立持久忠诚度。|
+|[Rightpoint]( http://www.rightpoint.com/contact)|芝加哥，IL，USA;波士顿，MA，USA;Detroit，MI，USA;亚特兰大，GA，USA;丹佛，CO，USA;达拉斯美国德克萨斯州;洛杉矶市;纽约，纽约州，美国|Rightpoint 是客户体验部门使用的核心技术。 好的客户体验由将其交付的人员带来的理念基础成立，Rightpoint 的使命是删除障碍，并从中寻找新的机遇，跨每个 touchpoint 公司与客户建立连接。 只需创建移动应用程序，或确保移动网站设计响应式，超出 Rightpoint 建立一个整体 engagement 模型，侧重于客户部署模式而不是其通道选择，为构建多通道解决方案满足用户需求。 转移此模式允许营销人员值传递给潜在客户并更有意义且一致的方式与现有客户建立持久忠诚度。|
 |[Sapient Razorfish](http://www.sapientrazorfish.com)|佐治亚州亚特兰大|随着人们的期望能够随着每个新的数字体验和业务成功多地依赖于比以往对于某一数字为中心的组织，SapientRazorfish 角度来看待否接收器、 企业级客户体验和为了更加有效和高效的关键数字的操作。 作为数字品牌-使用者关系的先驱者曾这样，我们的合作伙伴与我们的客户端利用已连接的世界，若要创建的不常见影响结果。|
 |[Saviant 咨询](http://www.saviantconsulting.com/xamarin-consulting.asp)||Saviant 是智能解决方案公司金级 Cloud Platform 和 Microsoft 的金牌数据分析合作伙伴。 我们有率先开发创新型解决方案，以利用云、 移动、 分析和 IoT，以帮助企业转换并实现其业务的现代化。 我们可帮助构建高度可缩放跨平台移动应用程序加速的业务增长的企业。 我们利用 Xamarin 设计、 创建、 部署并将移动应用安全、 快速地集成到我们的客户的业务环境。 |
 |[Seamgen LLC](http://www.seamgen.com)|加利福尼亚州圣地亚哥|完整堆栈 web 和移动应用程序开发团队，你的服务。 工作热情的技术专家 Seamgen 的团队可以创建您需要的任何内容，从移动应用程序到基于云的服务的响应式网站。 它们是技术合作伙伴的开发过程中，所有阶段中使用进行设计和开发解决方案，它补充并增强现有系统体系结构，并且它们是精通所有最新技术用于移动和 web应用程序开发。|
 |[SELA 组](http://www.selagroup.com)|华盛顿州贝尔维尤;美国，VA;Bnei Brak 以色列;浦那，印度;加拿大多伦多;新加坡|Sela 自 2000年已经成为 Microsoft 认证合作伙伴的学习解决方案 (CPLS)。 通过 Sela 和 55 高级培训师和技术大学提供可靠的教职员而设的 IT 行业认证开发的 300 多个课程。 Sela 具有全球范围内的其他项中包括 Microsoft、 SAP、 NCR、 Motorola、 HP、 BMC Software、 ECI、 Comverse 和 IBM 800 多个客户端。|
 |[致以数字限制](http://www.shoutdigital.com)|州费城|在 2009 年的正确数字和上很好的客户端解决方案的后退和大量繁琐的工作，我们已构建为 30 自豪团队能大声说。 我们相信构建从长远来看，与我们的客户端的受信任伙伴关系。 我们的护理和质量是在我们提供的所有内容。 我们的专业技能帮助彻底改变其数字的未来前景广阔的客户端。 |
-|[Skyline Technologies](http://www.skylinetechnologies.com)|Appleton，WI|提供其独特的见解和技术知识，可提供无与伦比的价值，对你的业务，Skyline 的目的是帮助你解决最棘手的业务挑战并设想什么 Äôs 可能的通过技术。 在每个客户端服务、 它们能够正确的人在表 Äîelevating 超出技术会话从你所在位置移动到你想要的差距。|
-|[障碍滑雪赛咨询](http://www.slalom.com)|华盛顿州西雅图;马萨诸塞州;伊利诺伊州;科罗拉多州丹佛;德克萨斯州休斯顿;加利福尼亚州洛杉矶;纽约，纽约州;俄勒冈州波特兰市;旧金山，加利福尼亚州;沃思堡美国德克萨斯州;达拉斯美国德克萨斯州;Phoenix，AZ，USA;美国; ID 州博伊西盐湖城，UT，USA;ON，加拿大多伦多;Detroit，MI，USA;美国华盛顿特区;费城工作，PA，USA;Hartford，CT，USA;亚特兰大，GA，USA;圣路易斯，月，美国;San Jose，CA，USA;明尼阿波利斯，MN，USA;San Diego，CA，USA;英国伦敦|使障碍滑雪赛唯一的所有事物，他们的员工都都在列表的顶部。 它们 Äôre 资深顾问及其所选字段的深入专业知识与对真正关心其客户端中产生了 Äô 企业，并且它们位于的社区。 并且有 Äôs 其他内容 Äîthey 笑脸。 其客户端之一曾经说过，他可以识别障碍滑雪赛顾问，因为它们 Äôre 房间内都微笑的聪明人。 因为它们 Äôve 发展到 3,000 + 顾问 16 机构在美国和伦敦，它们 Äôve 保留其侧重于实现他们的员工，完全照做。|
-|[SmartBridge](http://smartbridge.com)|美国德克萨斯州休斯顿|在 Smartbridge，我们评估、 实现、 创建和管理企业解决方案 |
+|[Skyline Technologies](http://www.skylinetechnologies.com)|Appleton，WI|提供其独特的见解和技术知识，可提供无与伦比的价值，对你的业务，Skyline 的目标是帮助你解决最棘手的业务挑战并设想可能通过技术。 在每次客户端服务，能够让你正确的人表&ndash;提升超出技术来弥合你所在位置移动到你想要从会话。|
+|[障碍滑雪赛咨询](http://www.slalom.com)|华盛顿州西雅图;马萨诸塞州;伊利诺伊州;科罗拉多州丹佛;德克萨斯州休斯顿;加利福尼亚州洛杉矶;纽约，纽约州;俄勒冈州波特兰市;旧金山，加利福尼亚州;沃思堡美国德克萨斯州;达拉斯美国德克萨斯州;Phoenix，AZ，USA;美国; ID 州博伊西盐湖城，UT，USA;ON，加拿大多伦多;Detroit，MI，USA;美国华盛顿特区;费城工作，PA，USA;Hartford，CT，USA;亚特兰大，GA，USA;圣路易斯，月，美国;San Jose，CA，USA;明尼阿波利斯，MN，USA;San Diego，CA，USA;英国伦敦|使障碍滑雪赛唯一的所有事物，他们的员工都都在列表的顶部。 综观资深顾问真正关注的信息进行区分客户端的业务和他们居住在社区中与所选字段中的深入专业知识。 并且还&ndash;其他内容&ndash;它们微笑。 其客户端之一曾经说过，因为它们是在工作室中的的人员微笑，他可以识别障碍滑雪赛顾问。 它们已在美国和伦敦之间发展到 3,000 + 16 机构中的顾问，因为它们已保持其侧重于实现他们的员工，完全照做。|
+|[SmartBridge](http://smartbridge.com)|美国德克萨斯州休斯顿|在 Smartbridge，我们评估、 实现、 创建和管理企业解决方案 |
 |[Softeq](http://www.softeq.com/)|美国德克萨斯州休斯顿|Softeq 开发 Inc.是帮助其客户端设计、 开发和发布适用于 B2B 还是 B2C 市场的新产品的完整堆栈开发公司。 Softeq 提供硬件和应用程序级技能这使它唯一地定位为 IoT 解决方案开发项目和覆盖各阶段的产品开发的支持周期-从 PCB 和机箱设计到云后端和移动客户端应用程序。 Softeq 一直是长期的移动开发合作伙伴耐克、 NVIDIA、 Intel 和迪斯尼，并提供了在 Xamarin 开发经验证的能力。|
 |[Softjourn](https://softjourn.com/en#1)|Fremont，CA，USA;Ivano Frankivsk 乌克兰;Wroc≈Çaw 波兰|在卡和付款、 预付、 媒体和票证的应用程序的自定义软件开发的专家。|
 |[Softserve](http://www.softserveinc.com)|美国德克萨斯州奥斯汀市|好的想法开始简单的问题。 我们准备好开始会话。 联系我们或立即填写下面表单。|
 |[软件工程专业人员 (SEP)](http://www.sep.com)|Carmel、 IN|SEP 1988 年启动了工程师 thrived 具有挑战性的项目和持续学习。 他们想要构建-不销售的软件工程师直接与客户端简化创新并鼓励协作工作的其中一家公司。 |
 |[Softweb 解决方案](http://www.softwebsolutions.com/)|Elgin，IL|Softweb 解决方案是芝加哥基于的技术咨询公司提供先进的解决方案，以更好地制定你的业务。 他们擅长的领域可以分为三个核心领域： 企业移动性、 开发 Web 应用程序和云咨询。 其其他技术优势包括协作软件和 CRM/ERP 系统上的工作。|
-|[Sogeti](http://www.sogeti.com/xamarin)|Datyon，俄亥俄州，USA;Alpharetta，GA，USA;美国; 奥斯汀，德克萨斯州巴尔的摩，马里兰州，美国;Westchester，IL，USA;Cincinnati，俄亥俄州，USA;Westerville，俄亥俄州，USA;欧文美国德克萨斯州;Greenwood Village，CO，USA;Wes Des Moines，IA，USA;Southfield，MI，USA;休斯顿美国德克萨斯州;Indianapolis，IN，USA;Fairway，KS，USA;Richfield，MN，USA;纽约，纽约州，美国;奥马哈，NE，USA;Scottsdale，AZ，USA;Redmond，WA，USA;西部是 Chester，俄亥俄州，USA;塔拉哈西美国佛罗里达州;坦帕美国佛罗里达州;布鲁塞尔，比利时;Kort，Danmark;埃斯波，芬兰;法国巴黎;D√ºsseldorf，德国;印度孟买;都柏林，爱尔兰;Bertrange，Luxumbourg;Vianen，荷兰;奥斯陆，挪威;西班牙马德里;Bromma 日，瑞典;瑞士的日内瓦;伦敦，英国|通过使用 Xamarin 其全局合作关系，Sogeti 生成世界领先的应用。 其主要的共同点： 将其联合热衷于技术、 数字化转型和测试。 他们真正了解数字中断并能帮助您解决的问题，随着你的公司添加更多数字，但加速客户忠诚度和游戏化。 它们使客户端以从 Xamarin 受益 Äôs 世界知名的产品组合为生成、 测试和运行。|
+|[Sogeti](http://www.sogeti.com/xamarin)|Datyon，俄亥俄州，USA;Alpharetta，GA，USA;美国; 奥斯汀，德克萨斯州巴尔的摩，马里兰州，美国;Westchester，IL，USA;Cincinnati，俄亥俄州，USA;Westerville，俄亥俄州，USA;欧文美国德克萨斯州;Greenwood Village，CO，USA;Wes Des Moines，IA，USA;Southfield，MI，USA;休斯顿美国德克萨斯州;Indianapolis，IN，USA;Fairway，KS，USA;Richfield，MN，USA;纽约，纽约州，美国;奥马哈，NE，USA;Scottsdale，AZ，USA;Redmond，WA，USA;西部是 Chester，俄亥俄州，USA;塔拉哈西美国佛罗里达州;坦帕美国佛罗里达州;布鲁塞尔，比利时;Kort，Danmark;埃斯波，芬兰;法国巴黎;D√ºsseldorf，德国;印度孟买;都柏林，爱尔兰;Bertrange，Luxumbourg;Vianen，荷兰;奥斯陆，挪威;西班牙马德里;Bromma 日，瑞典;瑞士的日内瓦;伦敦，英国|通过使用 Xamarin 其全局合作关系，Sogeti 生成世界领先的应用。 其主要的共同点： 将其联合热衷于技术、 数字化转型和测试。 他们真正了解数字中断并能帮助您解决的问题，随着你的公司添加更多数字，但加速客户忠诚度和游戏化。 它们使客户端以受益于 Xamarin 的世界知名的产品组合为生成、 测试和运行。|
 |[实体交互](http://www.solid.ws/xamarin)||Solid Interactive 是完整的服务软件开发和咨询组织专门从事 web、 移动和电视应用程序开发领域。  Solid 交互提供了从策略、 设计、 编程、 测试、 部署和市场营销的应用程序开发的许多方面的专业知识。 我们的团队是平台和技术不可知，因此下一步可以自定义对你的业务。  |
 |[S p a N Infotech 印度 Pvt.ltd。](http://www.spansystems.com)|印度班加罗尔;德克萨斯州欧文市|跨度的最佳使用效果的域知识、 技术专业知识和可靠的 engagement 模型会影响其客户的企业。 客户端评估服务，而不是基于成本的或纯进程驱动模型从其实用方法接收出巨大价值。 SPAN 的管理团队是很深认识中维护的可测量和无形期望通过关系。|
-|[Sparkhound](http://www.sparkhound.com/)|德克萨斯州达拉斯市|建立在 1998 年，Sparkhound 将继续帮助企业获得成功通过转换技术构建的业务解决方案。 我们的计划 / 生成 / 运行方法可确保高效解决方案设计、 实施和持续管理，从而影响 IT 生命周期的每个组件。 Sparkhound Äôs 技术解决方案基于五个核心领域： 自定义应用程序、 业务咨询、 云、 企业应用程序和托管服务。 Sparkies 密集关注在获得成功结果还将始终首先放置客户 Ä¶ 的成功就是我们的平台。|
+|[Sparkhound](http://www.sparkhound.com/)|德克萨斯州达拉斯市|建立在 1998 年，Sparkhound 将继续帮助企业获得成功通过转换技术构建的业务解决方案。 我们的计划 / 生成 / 运行方法可确保高效解决方案设计、 实施和持续管理，从而影响 IT 生命周期的每个组件。 Sparkhound 的技术解决方案基于五个核心领域： 自定义应用程序、 业务咨询、 云、 企业应用程序和托管服务。 Sparkies 密集关注在获得成功结果还将始终首先放置客户： 的成功就是我们的平台。|
 |[SPR 咨询](http://spr.com/)|芝加哥，IL，USA|在 SPR，我们将使用数字技术来转换的人的体验。|
 |[SpurTree 技术](http://spurtreetech.com)|印度班加罗尔;加拿大多伦多;Walpole，MA|SpurTree 继续推送本身进行创新与新兴技术领域，在其解决方案，并可靠和强过程中传递管理，以确保它们超出客户期望。 它们已投入大量时间和精力会充当其客户，例如移动和社交媒体解决方案、 企业体系结构和基础结构咨询增长方面的技术。|
 |[Stefanini](https://stefanini.com/en/)|Southfield，密歇根 |Stefanini 是一家全球性 IT 服务公司使用 30 个国家/地区的超过 75 机构在美国、 欧洲、 非洲、 澳大利亚和亚洲 30 多个语言版本。 自 1987 年以来 Stefanini 一直提供离岸、 在岸和 nearshore IT 服务，包括应用程序开发、 IT 基础结构外包 （支持人员支持和桌面服务）、 系统集成、 咨询和到战略人员配备世界各地的财富 1000年强企业。 |
 |[日晷技术](http://www.sundialer.com)|佛罗里达州的坦帕奥兰多|于 1990 年，生动 Fort Lauderdale sprang 日晷技术。  日晷成立合并最佳的对话式计算机的电话服务集成，Internet，Windows 和 SQL Server 技术。 日晷是第一个过 Windows Dialogic 基于预测拨号程序美国以及世界各地调用 center 市场。|
-|[Syrinx 咨询](http://www.syrinx.com)|Needham，MA，USA|Syrinx 的移动开发团队组成专家那里了解移动技术和直接使用你的公司创建和部署的唯一的目标应用程序或适用于你的组织的应用。 他们了解它 Äôs 不只是运行; 所需的技术它 Äôs 集成、 灵活性、 可伸缩性、 清单、 市场营销和客户体验因素过。|
+|[Syrinx 咨询](http://www.syrinx.com)|Needham，MA，USA|Syrinx 的移动开发团队组成专家那里了解移动技术和直接使用你的公司创建和部署的唯一的目标应用程序或适用于你的组织的应用。 他们了解它不是只需运行; 所需的技术它的集成、 灵活性、 可伸缩性、 清单、 市场营销和客户体验因素过。|
 |[Tallan]( http://www.tallan.com)|德克萨斯州达拉斯市|Tallan 的组织提供服务美国国内与分支机构的 Hartford、 纽约、 波士顿、 亚特兰大、 Orange County、 CA、 坦帕、 达拉斯和华盛顿特区|
-|[Technossus](http://www.technossus.com/)|分校，CA，USA|Technossus 是私营、 屡获殊荣的软件解决方案和咨询公司的技术。 由行业专家成立近十年前，我们帮助公司设计、 开发和实现创新的软件解决方案。 我们的核心价值，包括一起致力于为每个客户端提供出色的价值和质量 Äîevery 时间。 我们超过预期，并提供解决方案，使业务转型并经济高效地提高操作性能。|
+|[Technossus](http://www.technossus.com/)|分校，CA，USA|Technossus 是私营、 屡获殊荣的软件解决方案和咨询公司的技术。 由行业专家成立近十年前，我们帮助公司设计、 开发和实现创新的软件解决方案。 我们的核心价值，包括一起致力于为每个客户端提供出色的价值和质量&ndash;每次。 我们超过预期，并提供解决方案，使业务转型并经济高效地提高操作性能。|
 |[Tecknoworks](http://www.tecknoworks.com)||驱动由我们热衷于技术和我们的好奇心，若要了解每一天的新事物，我们一直在帮助的人员和组织取得成功通过技术 15 年以上。 |
 |[Tecordeon Inc](http://www.tecordeon.com)|加利福尼亚州洛杉矶;海得拉巴，印度|Tecordeon Inc.是增长最快的软件开发和外包给其客户端提供全面的软件解决方案的公司之一。 该公司专门在产品/服务移动应用程序开发、 Web 应用程序开发、 丰富 Internet 应用程序开发、 移动应用程序测试、 系统集成、 软件测试和验证服务，质量保证服务和的详细信息。 此外，Tecordeon Inc 具有特定于行业的软件方面的专业知识技术、 娱乐、 医疗保健、 媒体、 财务和许多其他部分。|
 |[Terrace 软件](http://www.terrace.com)|旧金山，加利福尼亚州|我们公司副线是生成与我们。 我们认为此短语精确地介绍了我们的任务。 它很简单。 我们与客户端紧密合作，、 收听他们的设想、 制定全面的计划和实现使用最新技术的创新型解决方案。|
 |[应用专业人员](http://www.TheAppPros.com)|Springfield，MO|识别的移动应用程序的重要性日益增加对于小型和中型企业，我们特别是致力于帮助本地商家和刚起步的公司充分利用其资源通过开发复杂的应用程序，以帮助发展，维护和改进您的业务操作。|
-|[经验证的方法](http://www.provenmethod.com)|佐治亚州亚特兰大|经验证的方法的开展业务的开头有策略地进行思考您的业务目标，然后与你进行快速开发和实现灵活、 高效的解决方案中的合作。 然后通过微小的、 有经验的、 长期 IT 专业人员，支持的 25 年的 IT 业务成功传递，这些解决方案 Äì 所有工作，以满足您的业务目标。|
+|[经验证的方法](http://www.provenmethod.com)|佐治亚州亚特兰大|经验证的方法的开展业务的开头有策略地进行思考您的业务目标，然后与你进行快速开发和实现灵活、 高效的解决方案中的合作。 然后通过微小的、 有经验的、 长期 IT 专业人员，支持的 25 年的 IT 业务成功传递，这些解决方案&ndash;所有工作，以满足您的业务目标。|
 |[三重-我 Corporation](http://triplei.com)||是否获取权限，或您梦想的作业完成的作业，我们可以帮助你获得业务成功。 By 出现，给我们打电话或向我们发送便笺。 我们期待你的听力不好。  |
 |[请考虑预软件 LLC](http://www.thinkaheadsoftware.com)|东部 Windsor，CT|我们是 Internet 业务解决方案提供商提供软件开发、 咨询和托管服务的应用程序。 我们的专业技术包括用于 web、 业务应用程序和适用于 iOS 和 Android 平台的移动应用程序的开发。 |
 |[ThinkPower 信息 Corporation](http://www.thinkpower.info)|纽约州纽约市|ThinkPower 成立于 2005 年，与内部员工总 150，提供自定义的 web/移动应用软件开发服务。 |
@@ -195,11 +195,11 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[tkLABS，inc.](https://www.tklabs.com/)|日出，FL，USA;Hoffman 财产，IL，USA|tkLABS 是工程咨询公司致力于提供同类最佳的产品工程设计和开发服务的多准则。 我们简单的方法将立即向你的问题的核心，发现一个智能且细小的解决方案。|
 |[TowerStrides inc.保留所有权利。](http://www.towerstrides.com)|Chantilly，VA|Hemos sido galardonados por nuestra herramienta SPARTANE con la que el 100 %del 后端 de las 应用 es generado sin necesidad de programar。 Vea 取消视频 demostrativo de nuestra herramienta。 |
 |[Trailhead 技术合作伙伴](http://trailheadtechnology.com/partners/xamarin)||Trailhead 技术合作伙伴提供适用于企业客户使用.NET、 Xamarin、 Angular 和其他先进的技术平台自定义移动、 web、 IoT 和云软件解决方案。|
-|[Valore 合作伙伴 （DBA Statera 西南）](http://www.valorepartners.com)|Tempe，AZ|Valore 合作伙伴在其目标是通过编写实际开发长久的合作关系和交付今天的约定的创新的解决方案 Äôs 高级信息技术。 它们适用于客户端以在设计和实现了智能的现场组合和基于云的 Microsoft 技术，使他们能够利用可通过大的灵活性和可扩展性，以及实现有意义的成本的机会减少。|
-|[Valorem](http://www.valorem.com/)|密苏里州堪萨斯城|使用领先的技术，Valorem 转换企业品牌，并提供卓越的客户体验。 参与我们的团队 Äô 认为领导和创新带来了独特的观点，解决方案和体验您 Äôve 一直在寻找。 权限，我们人、 客户和合作伙伴命中促使我们的核心。 我们的员工致力于确保您的体验 Valorem 超乎异常。|
+|[Valore 合作伙伴 （DBA Statera 西南）](http://www.valorepartners.com)|Tempe，AZ|Valore 合作伙伴在其目标是通过编写在当今的高级的信息技术的发展前景时传递语音的实用且创新型解决方案开发长久的合作关系。 它们适用于客户端以在设计和实现了智能的现场组合和基于云的 Microsoft 技术，使他们能够利用可通过大的灵活性和可扩展性，以及实现有意义的成本的机会减少。|
+|[Valorem](http://www.valorem.com/)|密苏里州堪萨斯城|使用领先的技术，Valorem 转换企业品牌，并提供卓越的客户体验。 具有吸引力的我们的团队认为领导和创新带来了独特的观点、 解决方案和您一直期待的体验。 权限，我们人、 客户和合作伙伴命中促使我们的核心。 我们的员工致力于确保您的体验 Valorem 超乎异常。|
 |[Vectorform](https://www.vectorform.com/)|Detroit，MI，USA;西雅图，WA，USA;纽约，纽约州，美国;慕尼黑工厂，德国|Vectorform 是一个平台，旨在帮助组织创建数字产品和客户体验。 与近 20 年的经过测试的体验，我们可帮助组织定义其业务的未来并解决复杂问题了解之外生成。 我们提供了专用的角度来看，品牌创新提供动力和更好的客户体验。|
 |[Venado 技术](http://venadotech.com/)|德克萨斯州达拉斯市|Venado Technologies 是国际供应商的技术服务专门从事新兴技术支持 （Xamarin 培训/训练营） Mobile 应用程序开发，mBaaS 集成和托管服务。 将重点放在客户的独特需求，Venado 提供超越通常提供的咨询服务公司的服务。 Venado 技术为基础科罗拉多州丹佛中与世界各地的办公室中的顾问。|
-|[Ventureforth，inc.](http://www.ventureforth.com )|佐治亚州亚特兰大|通过结合使用行业领先的技术解决方案和最佳实践，我们移动和云计算解决方案提供实际的可计量的价值，使我们的全球领袖中移动员工。 |
+|[Ventureforth，inc.](http://www.ventureforth.com )|佐治亚州亚特兰大|通过结合使用行业领先的技术解决方案和最佳实践，我们移动和云计算解决方案提供实际的可计量的价值，使我们的全球领袖中移动员工。 |
 |[Wandio](http://www.wandio.com)|第比利斯，格鲁吉亚|您的业务的定制的软件解决方案。 Wandio 生成可靠的后端系统、 web 和移动应用程序，可帮助在世界各地的公司，以提高其业务。|
 |[我们是毛象 Consulting LLC](http://www.wearemammoth.com)|芝加哥，IL，USA|我们是毛象是一家公司的设计人员、 工程师和战略专家与组织合作，以提高 web 和移动应用使用 world。 |
 |[West Monroe Partners](http://www.westmonroepartners.com)|North America、 Europe、 拉丁美洲及更高版本。|West Monroe Partners 团队由不常见的业务技术精湛的顾问和技术专家对结合起来以实现可承受成功混合组成。|
@@ -272,7 +272,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Cortex 媒体](http://cortex.bz)|加拿大魁北克分发|Cortex 媒体设计移动平台真实和虚拟的连接企业和用户|
 |[Formatec](http://mobile.formatec.ca)|加拿大，哈利法克斯，新斯科舍|Formatec 是私有的加拿大公司，致力于开发和测试包括智能手机和平板电脑的移动设备运行的软件应用程序|
 |[nventive](http://www.nventive.com)|蒙特利尔，QC|nventive 是针对 iOS、 Android 和 Windows 10 的最新技术的移动应用程序开发的新式 studio。|
-|[ObjectSharp Corporation](http://www.objectsharp.com)|加拿大多伦多|作为第一个 Microsoft.NET 咨询合作伙伴在加拿大，ObjectSharp 可以为您提供完整的 Microsoft 自定义开发、 培训和辅导服务： PC 和平板电脑 Äì Windows 8 + 7，Windows Phone Äì Windows Phone、 云 Äì Azure。 其 Microsoft Mvp、 高级软件开发人员和有经验的培训师将帮助您设计、 构建和交付更好和更快的应用程序。|
+|[ObjectSharp Corporation](http://www.objectsharp.com)|加拿大多伦多|作为第一个 Microsoft.NET 咨询合作伙伴在加拿大，ObjectSharp 可以为您提供完整的 Microsoft 自定义开发、 培训和辅导服务： PC 和平板电脑、 Windows 8 + Windows 7、 Phone、 Windows Phone、 云和 Azure。 其 Microsoft Mvp、 高级软件开发人员和有经验的培训师将帮助您设计、 构建和交付更好和更快的应用程序。|
 |[全景软件](http://www.panoramicsoft.com)|萨里，英属哥伦比亚|  全景 Software Inc.已在创建战略移动软件标题在社会、 教育、 音乐和游戏市场中自 2006 年以来。 |
 |[RedBit 开发](http://www.redbitdev.com)|加拿大多伦多|RedBit 开发是一家软件咨询和设计公司专注于提供软件产品和解决方案来帮助公司拓展新客户，驱动器 （& a） 创建收入的通道，并增加的品牌知名度。 他们专注于学习有关您的业务、 研究您的流程和确定技术可以更好满足。 将它移动的基于的解决方案，基于 web 的解决方案、 设计或完整的端到端系统，其目标是与你的企业能够将结果传送合作。|
 |[SDA 软件 Associates inc.](http://www.sda.com)|不列颠哥伦比亚省温哥华|我们是 web 和移动 consultancy、 热衷于创建有用且可靠的软件。 我们帮助增加的品牌知名度和忠诚度富有吸引力和相关的 web 和移动体验我们的客户端。|
@@ -338,7 +338,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 | 合作伙伴 | 位置 | 描述 |
 | --- | --- | --- |
 |[Maven 公司](http://www.maven.do)|多米尼加共和国|Maven 是具有大梦想的小型公司。 它成立于 2012年作为一种方法都提供了新颖度、 排名靠前在多米尼加共和国的质量，和不同的软件解决方案。 我们的目标是我们的客户提供有保证质量的软件开发，并在执行此操作，培养信任并向其必要条件承担相应责任的关系。|
-|[Solvex Dominicana](http://www.solvex.com.do)||Solvex 值专业经验。 建立在 2014 年，该公司现在具有 200 超过其中 80%有 5 个或多个年的经验提供软件的软件工程师。 |
+|[Solvex Dominicana](http://www.solvex.com.do)||Solvex 值专业经验。 建立在 2014 年，该公司现在具有 200 超过其中 80%有 5 个或多个年的经验提供软件的软件工程师。 |
 
 
 ## <a name="egypt"></a>埃及
@@ -365,7 +365,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[La 移动 IT](http://www.la-mobile-it.com)|格勒诺布尔，法国|Nous sommes spécialisés depuis 10 ans dans le 移动 et avons des 关系 étroites avec nos partenaires，客户端 et fournisseurs pour tout ce qui touche-> la mobilité。 Nous n'avons aucune exclusivité、 si vous désirez obtenir des conseils、 nous présenter une 解决方案 ou encore devenir partenaire、 contactez nous ！|
 |[Matelli 服务](http://www.matelli.fr/english/)|法国巴黎|Matelli 是在 2008 年成立了创建自定义的业务 web 和移动应用程序为其客户端的信息服务公司。|
 |[心理的工作原理](http://www.mentalworks.fr)|法国巴黎|Mentalworks 是非典型技术数码： 同时 web 机构 e 营销机构和咨询公司 / ESN。 此专业知识可以让它们创建网站、 移动应用或自定义业务应用程序并将关键的技术解决方案集成。|
-|[橙色业务应用程序](http://www.orange-business.com/en/contact-us)|法国巴黎;苏黎世，瑞士|橙色业务服务是一个全局电信运算符和 IT 服务公司。 其 20,000 名员工支持数字转换的每个方面中的公司、 当地政府机构和公共部门组织。 它们可帮助更有效地协作、 更有效地运行，并更好地与客户的公司 Äì 连接他们的员工，站点，并在计算机安全且可靠。|
+|[橙色业务应用程序](http://www.orange-business.com/en/contact-us)|法国巴黎;苏黎世，瑞士|橙色业务服务是一个全局电信运算符和 IT 服务公司。 其 20,000 名员工支持数字转换的每个方面中的公司、 当地政府机构和公共部门组织。 它们可帮助更有效地协作、 更有效地运行，并更好地与客户的公司&ndash;连接他们的员工，站点，并在计算机安全且可靠。|
 |[Page Up](http://www.pageup.fr)|学位||
 |[Rayonnance 技术](http://rayonnance.fr)|法国巴黎|Rayonnance 组为 Android、 IOS 专门 13 年多的 Windows 终端业务 （Windows Mobile、 Windows Phone 8.1，Windows 8） 上的可跟踪性和移动应用程序实现中一个前导法语集成商。|
 |[SFEIR](http://www.sfeir.com)|Neuilly-sur-Seine，法国;则，法国;Lille，法国;Leudelange，卢森堡|SFEIR est une communauté façonnée par et pour des développeurs talentueux。 Nous créons des 应用程序 de pointe et relevons avec nos 客户端 leurs défis 技术 les plus ambitieux。|
@@ -380,7 +380,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[27interactive](http://27interactive.com)|Düsseldorf，德国;汉堡，德国|跨平台解决方案，用于智能手机和平板电脑以 Android、 iOS、 Windows 和 macOS 的定制|
 |[AIT](http://www.aitgmbh.de)|斯图加特，德国|AIT 是一种领先的开发商和软件顾问，专门研究.NET 平台和的详细信息。 许多年来已多奖励入选 Microsoft 金牌合作伙伴。|
 |[所有有关 Ashley GmbH](http://www.a-gentur.de)|Ibbenbueren，德国|Ashley 有关所有支持的设计和优化 IT 解决方案的公司。|
-|[BRICKMAKERS GmbH](http://www.brickmakers.de)|Koblenz，德国|对于所有 Brickmakers 活动，重点都是在项目 Äôs 成功和权益。 由于在其进程期间其敏捷动作，而提供的客户的最大透明度。 除了范围概念、 设计和开发，它们也非常乐意承担其门户网站和市场营销的应用。 这使他们能够自其体验带到数字产品的完整生命周期。|
+|[BRICKMAKERS GmbH](http://www.brickmakers.de)|Koblenz，德国|对于所有 Brickmakers 活动，重点都是项目的成功和权益。 由于在其进程期间其敏捷动作，而提供的客户的最大透明度。 除了范围概念、 设计和开发，它们也非常乐意承担其门户网站和市场营销的应用。 这使他们能够自其体验带到数字产品的完整生命周期。|
 |[BTC AG](http://www.btc-ag.com )|Oldenburg，德国|我们开发新的解决方案，并为您指定标准|
 |[CATIS](http://www.catis.de/)|Wolfsburg，德国;Gifhorn，德国;Hanover，德国;Sindelfingen，德国;Ingolstadt，德国;Ajax，加拿大;Mlada Boleslav，捷克共和国;Chattanooga，TN|CATIS 现代工作单元具有应用程序开发人员能够通过创建定制 Business 和使用者应用 mobilising 企业的资深的团队|
 |[Cayas 软件](http://www.cayas.de)|Minden，德国|Cayas 软件会创建针对桌面、 Android、 iPad 和 iPhone，以及 web 应用的自定义软件|
@@ -458,7 +458,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Mahiz Srl](http://www.mahiz.it/)|意大利|软件 artisans，Mahiz 可帮助公司来构建更好的产品，提供二十年的经验的字段的信息技术。 其使命是软件的 rid 的错误阻止产品、 过程和想法发展世界。 |
 |[Proge 软件](http://www.progesoftware.com)|罗马，意大利;意大利米兰|我们拥有已具有高的技术内容项目对于大型和中型公司，同时全国和生成国际经验而言，由于 1985年。 我们提供了设计、 开发和维护公司的 IT 系统所需的所有活动|
 |[PS 移动 srl](http://www.psmobile.it)|Bologna，意大利|PS 移动的理念基于对话框;侦听到的客户和一起定义策略。 为了使它更成功至关重要协调用户、 业务目标和平台提供的可能情况的需求。 其开发团队提供了图形、 技术和用户体验和采用方面的出色性能，考虑所选平台的特定方面。|
-|[SOFOS snc](http://www.sofos.it )|Bologna，都市 Bologna 市/县意大利||
+|[SOFOS snc](http://www.sofos.it )|Bologna，都市 Bologna 市/县意大利||
 
 
 ## <a name="japan"></a>日本
@@ -505,7 +505,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[InfoTacto](http://infotacto.com)|墨西哥的墨西哥城|我们是在风险管理、 运行状况、 社会安全 （养老金计划和社交权益方案）、 公共安全、 酒店扇区和计算机技术的丰富经验的专业人员的综合组。|
 |[Lisyx 技术 SA de CV](http://www.lisyx.com)|莱昂 Guanajuato|Lisyx Technologies 是一家咨询公司，致力于解决方案的信息技术和业务流程。 它们在增值业务和 IT 外包服务和新兴技术的解决方案提供咨询服务。|
 |[Migesa](http://www.migesa.com.mx/)|蒙特雷、 新莱昂、 墨西哥;墨西哥城，CDMX，墨西哥|存在在 35 年前的市场，Migesa 是之一的最大信息和通信技术服务和解决方案集成商。 我们设计和实现用于中型和大型公司的需求定制解决方案。|
-|[RAMSCT SC](http://www.ramsct.com )|墨西哥城|Cada empresa nivel mundial se encuentra actualmente evaluando la mejor manera de utilizar soluciones móviles dentro de su negocio。 Nuestra experiencia en soluciones móviles por más de 10 años nos permite ofrecer soluciones totalmente integradas incluyendo:  |
+|[RAMSCT SC](http://www.ramsct.com )|墨西哥城|Cada empresa nivel mundial se encuentra actualmente evaluando la mejor manera de utilizar soluciones móviles dentro de su negocio。 Nuestra experiencia en soluciones móviles por más de 10 años nos permite ofrecer soluciones totalmente integradas incluyendo:  |
 |[TotalTech SA de CV](http://www.totaltech.com.mx)||omos expertos en desarrollo de 应用 para iOS、 Android y Windows Phone。 |
 |[Xherstone](http://www.xherstone.com)|Naucalpan de Juárez 墨西哥|Xherstone 是软件、 web 和移动开发公司，致力于的个性化设置到的开放源代码技术领先。 我们结合业务知识和技术经验。|
 
@@ -647,7 +647,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 | --- | --- | --- |
 |[DevsDNA](http://www.devsdna.com)|塞维利亚，西班牙|在我们认为开展业务的另一种方法，并创建的 DevsDNA 软件是可能的。 遗憾的是，我们现代社会缺少透明度、 道德、 原则和道德指南针。|
 |[KutirTech](http://www.kutirtech.com)|Malaga，西班牙  |超过 13 年，我们已构建并大型和小型企业客户端的支持 web 和移动应用程序。 我们不断地探索和试验最佳的类的工具和技术并自带的工具和技能，使我们的企业客户端成功的正确组合。|
-|[咨询 S.L Pasiona](http://www.pasiona.com)|日前往西班牙巴塞罗那|我们已于 2007年侦听并与我们的客户参与对话是提供给他们的需要而定制的创新技术解决方案的最佳方法的前提。 它是我们的使命和我们 raison Äôetre d。 我们是咨询公司专门从事于为每个公司开发自定义的解决方案，因为每个客户端不同，它需要唯一且排他处理。 我们一直致力于创新、 高质量的工作、 持续的培训和人工 teaRegional 高级支持的值|
+|[咨询 S.L Pasiona](http://www.pasiona.com)|日前往西班牙巴塞罗那|我们已于 2007年侦听并与我们的客户参与对话是提供给他们的需要而定制的创新技术解决方案的最佳方法的前提。 这是我们的使命和我们 raison d'etre。 我们是咨询公司专门从事于为每个公司开发自定义的解决方案，因为每个客户端不同，它需要唯一且排他处理。 我们一直致力于创新、 高质量的工作、 持续的培训和人工 teaRegional 高级支持的值|
 |[TalentoMobile](http://www.talentomobile.com/)|西班牙 |我们是数字本地人。 我们将数字化您的业务流程并与你的客户，同时使用我们的解决方案和我们的产品的连接。|
 |[Vass Consultoria de Sistemas](http://www.vass.es/en)|西班牙马德里;日前往西班牙巴塞罗那|VASS 是一名 IT 咨询公司，在 1999 年成立了，高度专业化新技术和集成的产品和服务全面的知识和技术的掌握中。 它们是具有对国际扩展在欧洲和北美的多个国家/地区中存在的清除承诺的公司。 VASS 是利润的一家公司，致力于社会，2%的社交操作。|
 
@@ -718,12 +718,12 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Proto 软件](https://www.protosoftware.co.uk/)|英国|我们可以共同制定上一系列的平台包括 iOS、 Android 和 Windows 为您提供的超过 3 亿个潜在客户宣传业务的移动的应用。 |
 |[很少是不可能](http://www.rarelyimpossible.com)|Bournemouth，英国|很少是不可能帮助公司构建移动应用和 IoT 云解决方案来解决业务问题，重点是在设计和开发阶段的用户体验。 通过项目和产品对于我们的客户端，我们创建我们的目标是使工具来帮助他们在其每一天中与组织中的任何人。|
 |[Rock Solid 知识](http://www.rocksolidknowledge.com)|Bristol，英国|为 Xamarin 合作伙伴，我们可以构建跨平台移动解决方案 iOS 和 Android 上使用 Xamarin 窗体和本机 UI。 我们已在开发提供本机 UI 感觉同时共享，或非常棒的平台间的代码，处理解决方案方面经验丰富。|
-|[Screenmedia](http://www.screenmedia.co.uk)|格拉斯哥，英国|Screenmedia 认为，若要创建客户端和最终用户的人工中央解决方案，它们必须是人的 centred 的业务。 其视觉和值完全反映这种状态和正常情况下，那么做他们的员工。 Screenmedia 的做法是区域性是其成功的关键。 它 Äôs 驱动器和维持的新兴技术; 他们持续创新的内容可帮助创建与客户端; 敏捷的合作关系并且它 Äôs 就极具挑战性工作充满乐趣。|
+|[Screenmedia](http://www.screenmedia.co.uk)|格拉斯哥，英国|Screenmedia 认为，若要创建客户端和最终用户的人工中央解决方案，它们必须是人的 centred 的业务。 其视觉和值完全反映这种状态和正常情况下，那么做他们的员工。 Screenmedia 的做法是区域性是其成功的关键。 它是什么驱动器和维持的新兴技术; 他们持续创新可帮助创建与客户端; 敏捷的合作关系它就极具挑战性的工作充满乐趣。|
 |[Sequence](https://www.sequence.co.uk/)|加迪夫，英国;英国伦敦|序列是成立于 1995 年创意数码。 专门处理设计、 策略和用户体验，他们曾经使用过一些随行业，包括从生产到旅行和旅游在英国的最大组织。 使用其客户通过激情和创新连接品牌。|
-|[ShinobiSolutions](https://www.shinobicontrols.com/shinobienterprise)|英国纽卡斯尔 upon Tyne，|自 2011 年成立以来，Shinobicontrols 已在创建全面的、 功能强大交互式 UI 控件适用于 iOS 和 Android 开发人员。 2012 年，因此启动 shinobicharts，其第一个产品。 从那时起，他们 Äôve 增长速度快，并且现在将它们提供给成千上万的客户与我们的产品的迅速扩展产品组合的 UI 解决方案。|
+|[ShinobiSolutions](https://www.shinobicontrols.com/shinobienterprise)|英国纽卡斯尔 upon Tyne，|自 2011 年成立以来，Shinobicontrols 已在创建全面的、 功能强大交互式 UI 控件适用于 iOS 和 Android 开发人员。 2012 年，因此启动 shinobicharts，其第一个产品。 从那时起，他们已经增长速度快，并立即提供 UI 解决方案给成千上万的客户与我们的产品的迅速扩展产品组合。|
 |[Skillweb](http://www.skillweb.co.uk)|高 Wycombe，英国|Skillweb 是提供技术解决方案，以帮助组织管理其移动员工和跟踪其商品移动私人所有，基于英国的业务。 该公司已在英国和欧洲运营自 1999年部署的管理，并且负责每个月的最多 100 万个事务和不断增长。|
 |[解决软件](http://www.softwaresolved.com/)|Exeter，英国;英国伦敦;英国曼彻斯特|我们在构建长期的合作关系我们根据信任和传递的未完成的软件的客户端。 我们是 Microsoft 金牌合作伙伴和我们的流程是 ISO 9001 认证。  这意味着我们公认与软件开发中的最高质量标准。|
-|[StyleTech](https://www.styletech.co.uk/)|外壳、 英国|我们正在专家定制软件开发最先进、 定制解决方案以满足客户 Äô 要求同时还支持、 维护和增强旧系统。 自 1999年操作系统，我们提供从公共和私营交付 1000 个以上定制的软件项目类型提供了各种各样的客户端的跟踪记录，我们在医疗保健、 科学记数法，传输、 制造和技术行业 specialise。 与可接近、 友好的区域性，我们始终为所有客户提供有针对性和服务质量。 借助 Xamarin、 Xamarin Test Cloud 和 Azure，我们都是移动设备上的专家，平板、 云、 web 或桌面开发，且始终将最佳做法应用于分析、 设计、 安全、 测试和集成的区域。|
+|[StyleTech](https://www.styletech.co.uk/)|外壳、 英国|我们正在专家定制软件开发最先进、 定制解决方案以同时还支持、 维护和增强的旧式系统满足客户的需求。 自 1999年操作系统，我们提供从公共和私营交付 1000 个以上定制的软件项目类型提供了各种各样的客户端的跟踪记录，我们在医疗保健、 科学记数法，传输、 制造和技术行业 specialise。 与可接近、 友好的区域性，我们始终为所有客户提供有针对性和服务质量。 借助 Xamarin、 Xamarin Test Cloud 和 Azure，我们都是移动设备上的专家，平板、 云、 web 或桌面开发，且始终将最佳做法应用于分析、 设计、 安全、 测试和集成的区域。|
 |[Superluminal](http://www.superluminalsoftware.co.uk)|Oxford，英国|此处在 Superluminal 我们是软件工程师，因此我们设计从零开始，我们的软件构建到进程和超费用将您的业务的关键系统。 我们还可以维护和升级你的当前系统，如果以阻止其启动，或者需要更改以满足业务需求。|
 |[定制的应用公司限制](http://www.thebespokeappcompany.co.uk)|Barrowford，英国;北部西部 Leicestershire 地区、 英国||
 |[Thumbmunkeys Ltd](http://www.thumbmunkeys.com)|纽约，北部约克郡英国|使用了跟踪记录，包括使用超过 30 亿下载创建使用者应用，Thumbmunkeys 知道如何创建真正异常和具有吸引力的用户的移动体验。 我们英国基于团队的专家级开发人员和设计人员提供端到端定制的解决方案从咨询到原型制作、 UI/用户体验设计、 跨平台开发、 云开发和持续的技术支持。|
@@ -731,7 +731,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[Waterstons LTD](https://waterstons.com)|Durham，英国|构建更好的业务。 通过技术、 体验和承诺，Waterstons 适用于数百个客户端，大型和小型，以提高其业务。|
 |[Xpand IT](http://www.xpand-it.com)|葡萄牙里斯本;英国伦敦|世界移动和 130 多个中的移动应用提供不同的市场中的几年中，Xpand IT 是体验的企业移动应用程序服务领域的领先者。|
 |[YARG Limited](http://www.yarg.com)|英国伦敦|YARG 开发跨平台移动应用适用于 iPhone、 iPad、 Android 和 Windows Phone。 他们感到自豪提供值、 产品质量和个人的服务的高级别。|
-|[Zepto 系统限制](http://www.zeptosystems.com )|英国伦敦|改变外包和到智能溯源了。 增加内部容量和技能与远程员工在保存时，成本 （最多 60%)，招聘，和保留。|
+|[Zepto 系统限制](http://www.zeptosystems.com )|英国伦敦|改变外包和到智能溯源了。 增加内部容量和技能与远程员工在保存时，成本 （最多 60%)，招聘，和保留。|
 
 
 ## <a name="ukraine"></a>乌克兰

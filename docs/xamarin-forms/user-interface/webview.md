@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ed7bec4e25628d938218a40d157442debad8f835
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/02/2018
+ms.openlocfilehash: 8d68afaf0edf178bba6f18d3071de029e111edee
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998369"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118664"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -164,11 +164,11 @@ source.BaseUrl = DependencyService.Get<IBaseUrl>().Get();
 
 在 iOS 上，web 内容应位于项目的根目录中或**资源**生成操作目录*BundleResource*如下所示：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](webview-images/ios-vs.png "在 iOS 上的本地文件")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](webview-images/ios-xs.png "在 iOS 上的本地文件")
 
@@ -191,11 +191,11 @@ namespace WorkingWithWebview.iOS{
 
 在 Android 上，HTML、 CSS 和图像的文件夹中放置资产与生成操作*AndroidAsset*如下所示：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](webview-images/android-vs.png "在 Android 上的本地文件")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](webview-images/android-xs.png "在 Android 上的本地文件")
 
@@ -368,9 +368,14 @@ void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 
 ## <a name="performance"></a>性能
 
-最新进展看到每个流行的 web 浏览器等硬件加速呈现和 JavaScript 编译采用技术。 遗憾的是，由于安全限制，这些改进大部分中未提供的 iOS equaivalent `WebView`， `UIWebView`。 Xamarin.Forms`WebView`使用`UIWebView`。 如果这是个问题，您将需要编写自定义呈现器使用的`WKWebView`，它支持更快地浏览。 请注意，`WKWebView`仅适用于 iOS 8 和更高版本。
+常用 web 浏览器现在采用技术，如硬件加速呈现和 JavaScript 编译。 在 iOS 上，默认情况下，Xamarin.Forms`WebView`由实现`UIWebView`类，其中许多技术是在此实现中不可用。 但是，应用程序可以选择项以使用 iOS`WkWebView`类，以实现 Xamarin.Forms `WebView`，它支持更快地浏览。 这可以通过添加以下代码来实现**AssemblyInfo.cs** iOS 平台项目中的应用程序的文件：
 
-默认情况下在 Android 上的 web 视图是大约与内置浏览器一样快。
+```csharp
+// Opt-in to using WkWebView instead of UIWebView.
+[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
+```
+
+`WebView` 默认情况下在 Android 上是大约与内置浏览器一样快。
 
 [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view)使用 Microsoft Edge 呈现引擎。 台式机和平板电脑设备应看到与使用 Edge 浏览器本身相同的性能。
 

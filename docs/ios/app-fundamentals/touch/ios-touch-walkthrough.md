@@ -1,44 +1,44 @@
 ---
-title: 演练： 在 Xamarin.iOS 中使用触摸
-description: 本文档介绍如何处理触摸讨论示例触摸交互、 手势识别器和自定义笔势识别器的 Xamarin.iOS 应用程序中。
+title: 演练： 在 Xamarin.iOS 中使用触控
+description: 本文档介绍如何处理 Xamarin.iOS 应用程序，讨论示例触摸交互、 手势识别器和自定义笔势识别器中的触控。
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fff49599d3843bb09d407316d6964ca54b6a1004
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121550"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>演练： 在 Xamarin.iOS 中使用触摸
+# <a name="walkthrough-using-touch-in-xamarinios"></a>演练： 在 Xamarin.iOS 中使用触控
 
-本演练演示如何编写对不同类型的触控事件做出响应代码。 每个示例包含在单独的屏幕：
+本演练演示如何编写对不同种类的触摸事件做出响应代码。 每个示例包含在单独的屏幕：
 
-- [Touch 示例](#Touch_Samples)– 如何对触控事件做出响应。
-- [笔势识别器示例](#Gesture_Recognizer_Samples)– 如何使用内置笔势识别器。
+- [触控示例](#Touch_Samples)– 如何响应触摸事件。
+- [笔势识别器示例](#Gesture_Recognizer_Samples)– 如何使用内置的手势识别器。
 - [自定义笔势识别器示例](#Custom_Gesture_Recognizer)– 如何构建自定义笔势识别器。
 
 每个部分包含说明从头开始编写代码。
-[启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)已包含完整的情节提要和菜单屏幕：
+[启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)已包含一个完整的情节提要和菜单屏幕：
 
  [![](ios-touch-walkthrough-images/image3.png "此示例包含菜单屏幕")](ios-touch-walkthrough-images/image3.png#lightbox)
 
-按照下面将代码添加到情节提要，并了解有关触控事件可用在 iOS 中的不同类型的说明。 或者，打开[已完成的示例](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)若要查看使用的所有内容。
+请按照下面将代码添加到情节提要，并了解不同类型的触控事件可用在 iOS 中的说明。 或者，打开[已完成的示例](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)若要查看使用的所有内容。
 
 <a name="Touch_Samples"/>
 
-## <a name="touch-samples"></a>Touch 示例
+## <a name="touch-samples"></a>触控示例
 
-在此示例中，我们将演示一些触摸 Api。 请按照下列步骤以添加需实现触控事件的代码：
+在此示例中，我们将演示一些触控 Api。 请执行以下步骤添加实现触摸事件所需的代码：
 
 
-1. 打开项目**Touch_Start**。 运行该项目的第一个以确保一切都好了和触摸**Touch 示例**按钮。 （尽管没有任何按钮将起作用），你应看到类似于以下屏幕：
+1. 打开项目**Touch_Start**。 运行该项目的第一个以确保所有内容都是好了和触控**触控示例**按钮。 （尽管没有任何按钮将工作），您应该看到一个类似于以下屏幕：
     
-    [![](ios-touch-walkthrough-images/image4.png "使用非工作按钮运行示例应用程序")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "使用非工作按钮运行示例应用")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. 编辑文件**TouchViewController.cs**并将以下两个实例变量添加到类`TouchViewController`:
@@ -94,13 +94,13 @@ ms.locfileid: "34784785"
     }
     ```
     
-    此方法的工作原理是检查`UITouch`对象，以及如果它存在执行基于触摸发生一些操作：
+    此方法的工作原理是检查`UITouch`对象，并且如果它存在，则执行某些操作基于触控的发生位置：
 
     * _内部 TouchImage_ – 显示文本`Touches Began`标签和更改映像中。
-    * _内部 DoubleTouchImage_ – 更改显示如果笔势双点击的图像。
-    * _内部 DragImage_ – 设置一个标志，指示已开始触摸屏输入。 该方法`TouchesMoved`将使用此标志来确定如果`DragImage`应移动屏幕，正如我们应看到在下一步。
+    * _内部 DoubleTouchImage_ – 更改双点击手势时显示的图像。
+    * _在 DragImage_ – 设置一个标志，指示已启动触摸屏输入。 该方法`TouchesMoved`将使用此标志确定如果`DragImage`或不是，应在屏幕上四处移动我们应在下一步中看到。
 
-    上面的代码仅处理各个收尾工作，则仍没有行为如果用户在屏幕上移动其手指。 若要对移动做出响应，实现`TouchesMoved`中下面的代码所示：
+    上面的代码只处理单个收尾工作了，就仍有没有行为如果用户在屏幕上移动手指。 若要对移动做出响应，实现`TouchesMoved`如下面的代码中所示：
 
     ```csharp 
     public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -129,11 +129,11 @@ ms.locfileid: "34784785"
     }
     ```
 
-    此方法获取`UITouch`对象，然后检查以查看何处出现触摸屏输入。 如果触摸发生在`TouchImage`，然后收尾工作移动显示在屏幕的文本。 
+    此方法获取`UITouch`对象，然后检查以确定发生触摸的位置。 如果在触摸屏输入时发生`TouchImage`，然后收尾工作了移动屏幕显示的文本。 
 
-    如果`touchStartedInside`为 true，则我们知道用户对拥有其手指`DragImage`和来回移动。 代码将移动`DragImage`在用户移动其手指在屏幕。
+    如果`touchStartedInside`为 true，则我们知道用户具有他们的手指`DragImage`和来回移动。 代码将移动`DragImage`用户在将他们的手指在屏幕上四处移动。
 
-1. 我们需要处理的情况，用户将提升到屏幕外，他或她手指或 iOS 取消触摸事件时。 为此，我们将实现`TouchesEnded`和`TouchesCancelled`如下所示：
+1. 我们需要处理的情况，用户将不在屏幕上，他或她手指提起或 iOS 取消触摸事件时。 为此，我们将实现`TouchesEnded`和`TouchesCancelled`，如下所示：
 
     ```csharp
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -167,31 +167,31 @@ ms.locfileid: "34784785"
     
     这两种方法将重置`touchStartedInside`标志设为 false。 `TouchesEnded` 此外将显示`TouchesEnded`在屏幕上。
 
-1. 此时结束 Touch 示例屏幕。 请注意如何屏幕更改当你进行交互时与每个映像，如下面的屏幕截图中所示：
+1. 此时已完成的 Touch 示例屏幕。 请注意如何在屏幕发生在以交互方式与每个映像，如以下屏幕截图中所示：
         
-    [![](ios-touch-walkthrough-images/image4.png "起始的应用程序屏幕")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "起始应用屏幕")](ios-touch-walkthrough-images/image4.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image5.png "屏幕后用户拖动按钮")](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![](ios-touch-walkthrough-images/image5.png "屏幕之后用户拖动按钮")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
 
 ##  <a name="gesture-recognizer-samples"></a>笔势识别器示例
 
-[上一节](#Touch_Samples)演示了如何通过使用触控事件拖动围绕屏幕对象。
-本部分中我们将消除触控事件，并演示如何使用以下笔势识别器：
+[上一节](#Touch_Samples)演示了如何通过使用触摸事件将在屏幕上四处一个对象。
+在本部分中我们将去掉的触控事件，并演示如何使用以下手势识别器：
 
--  `UIPanGestureRecognizer`拖动围绕屏幕图像。
--  `UITapGestureRecognizer`响应在屏幕上的双精度分流。
+-  `UIPanGestureRecognizer`拖动图像在屏幕上四处。
+-  `UITapGestureRecognizer`以响应在屏幕上的双精度分流点。
 
-如果你运行[启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)，然后单击**笔势识别器示例**按钮，你应看到以下屏幕：
+如果在运行[启动示例代码](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)，然后单击**手势识别器示例**按钮，你应看到以下屏幕：
 
- [![](ios-touch-walkthrough-images/image6.png "单击手势识别器示例按钮会显示此屏幕")](ios-touch-walkthrough-images/image6.png#lightbox)
+ [![](ios-touch-walkthrough-images/image6.png "单击手势识别器示例按钮可显示此屏幕")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 请按照下列步骤以实现笔势识别器操作：
 
 
-1. 编辑文件**GestureViewController.cs**并添加以下实例变量：
+1. 编辑文件**GestureViewController.cs** ，并添加以下实例变量：
 
     ```csharp
     #region Private Variables
@@ -200,8 +200,8 @@ ms.locfileid: "34784785"
     #endregion
     ```
 
-    我们需要此实例变量来跟踪的映像之前的位置。
-平移笔势识别器将使用`originalImageFrame`值来计算在屏幕上重绘图像所需的偏移量。
+    我们需要此实例变量来跟踪的映像的上一位置。
+平移手势识别器将使用`originalImageFrame`值来计算在屏幕上重绘图像所需的偏移量。
 
 1. 将以下方法添加到控制器：
 
@@ -220,9 +220,9 @@ ms.locfileid: "34784785"
     ```
 
     此代码实例化`UIPanGestureRecognizer`实例，并将其添加到视图。
-请注意我们将目标分配给方法的形式在笔势`HandleDrag`– 提供此方法是在下一步。
+请注意，我们将目标分配给该方法的窗体中的笔势`HandleDrag`– 下一步中提供此方法。
 
-1. 若要实现 HandleDrag，请到控制器中添加以下代码：
+1. 若要实现 HandleDrag，请向控制器添加以下代码：
 
     ```csharp
     private void HandleDrag(UIPanGestureRecognizer recognizer)
@@ -246,10 +246,10 @@ ms.locfileid: "34784785"
     }
     ```
 
-    上面的代码将先检查笔势识别器的状态，然后移动在屏幕的映像。 使用此代码中的位置，控制器现在可以支持拖动在屏幕的一个映像。
+    上面的代码将首先检查笔势识别器的状态，然后移动屏幕图像。 利用此代码，控制器现在可以支持将一个图像在屏幕上四处拖动。
 
 
-1. 添加`UITapGestureRecognizer`那会将更改 DoubleTouchImage 中正在显示的图像。 添加以下方法`GestureViewController`控制器：
+1. 添加`UITapGestureRecognizer`DoubleTouchImage 中正在显示的图像将发生变化。 添加以下方法`GestureViewController`控制器：
 
     ```csharp
     private void WireUpTapGestureRecognizer()
@@ -283,9 +283,9 @@ ms.locfileid: "34784785"
     }
     ```
 
-    此代码是非常相似的代码`UIPanGestureRecognizer`但而不是我们将使用的目标使用委托`Action`。 
+    此代码是非常相似的代码`UIPanGestureRecognizer`而不是使用我们将使用的目标委托，但`Action`。 
 
-1. 我们需要做最后一件事情是修改`ViewDidLoad`，以便它调用我们刚添加的方法。 更改 ViewDidLoad，以使它类似于下面的代码：
+1. 我们需要做的最后一件事就是修改`ViewDidLoad`，以便它将调用我们刚添加的方法。 更改 ViewDidLoad，使其类似于以下代码：
 
     ```csharp
     public override void ViewDidLoad()
@@ -302,13 +302,13 @@ ms.locfileid: "34784785"
     }
     ```
 
-    我们初始化的值也请注意`originalImageFrame`。
+    我们初始化的值还注意到`originalImageFrame`。
 
 
-1. 运行该应用程序，并使用两个图像进行交互。
+1. 运行应用程序，并将两个图像与之交互。
 下面的屏幕截图是这些交互的一个示例：
     
-    [![](ios-touch-walkthrough-images/image7.png "此屏幕快照显示拖交互")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![](ios-touch-walkthrough-images/image7.png "此屏幕截图显示拖放交互")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
 
@@ -316,14 +316,14 @@ ms.locfileid: "34784785"
 
 ## <a name="custom-gesture-recognizer"></a>自定义笔势识别器
 
-在本部分中我们将前面几节来生成自定义笔势识别器中应用的概念。 自定义笔势识别器将子类`UIGestureRecognizer`，并将在用户绘制"V"时识别在屏幕上，然后切换位图。 下面的屏幕截图演示了此屏幕：
+在本部分中我们将前面几节来构建自定义笔势识别器中应用的概念。 自定义笔势识别器将子类`UIGestureRecognizer`，并将在屏幕上识别时用户绘制"V"，然后切换位图。 下面的屏幕截图是此屏幕的示例：
 
- [![](ios-touch-walkthrough-images/image8.png "用户在屏幕上绘制 V 时，将识别应用程序")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![](ios-touch-walkthrough-images/image8.png "用户在屏幕上绘制 V 时，将识别该应用程序")](ios-touch-walkthrough-images/image8.png#lightbox)
 
-按照这些步骤创建自定义笔势识别器：
+请按照以下步骤创建自定义笔势识别器操作：
 
 
-1. 将新类添加到名为的项目`CheckmarkGestureRecognizer`，并使它看上去类似下列代码：
+1. 将新类添加到名为的项目`CheckmarkGestureRecognizer`，并使其如以下代码所示：
 
     ```csharp
     using System;
@@ -438,12 +438,12 @@ ms.locfileid: "34784785"
     }
     ```
 
-    重置方法调用时`State`属性更改为`Recognized`或`Ended`。 这是要重置在自定义笔势识别器中设置任何内部状态的时间。
-现在类可以重新开始在用户交互应用程序后下, 一次，并随时可以重新尝试识别手势。
+    重置方法时调用`State`属性更改为任一`Recognized`或`Ended`。 这是重置自定义笔势识别器中设置任何内部状态的时间。
+现在可以重新开始用户交互应用程序后下, 一次，并且准备好重新尝试执行识别手势。
 
 
 
-1. 既然我们已经定义自定义笔势识别器 (`CheckmarkGestureRecognizer`) 编辑**CustomGestureViewController.cs**文件并添加以下两个实例变量：
+1. 现在，我们已定义自定义笔势识别器 (`CheckmarkGestureRecognizer`) 编辑**CustomGestureViewController.cs**文件，并添加以下两个实例变量：
 
     ```csharp
     #region Private Variables
@@ -452,7 +452,7 @@ ms.locfileid: "34784785"
     #endregion
     ```
 
-1. 若要实例化和配置我们笔势识别器，将以下方法添加到控制器：
+1. 若要实例化并配置我们的笔势识别器，请向控制器添加以下方法：
 
     ```csharp
     private void WireUpCheckmarkGestureRecognizer()
@@ -481,7 +481,7 @@ ms.locfileid: "34784785"
     }
     ```
 
-1. 编辑`ViewDidLoad`，以便它调用`WireUpCheckmarkGestureRecognizer`，下面的代码段中所示：
+1. 编辑`ViewDidLoad`，以便它将调用`WireUpCheckmarkGestureRecognizer`，如以下代码片段中所示：
 
     ```csharp
     public override void ViewDidLoad()
@@ -493,7 +493,7 @@ ms.locfileid: "34784785"
     }
     ```
 
-1. 运行该应用程序，并尝试在屏幕上绘制"V"。 你应看到图像显示更改，如以下屏幕截图中所示：
+1. 运行该应用程序，并尝试在屏幕上绘制"V"。 您应该看到图像显示更改，如以下屏幕截图中所示：
     
     [![](ios-touch-walkthrough-images/image9.png "检查按钮")](ios-touch-walkthrough-images/image9.png#lightbox)
     
@@ -501,11 +501,11 @@ ms.locfileid: "34784785"
 
 
 
-上述三个部分表现出不同的方式来响应 touch 在 iOS 中的事件： 使用触控事件，内置笔势识别器，或使用自定义笔势识别器。
+上述三个部分演示响应触摸事件在 iOS 中的不同方式： 使用触控事件，内置的手势识别器，或使用自定义笔势识别器。
 
 
 
 ## <a name="related-links"></a>相关链接
 
-- [iOS Touch 启动 （示例）](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS 最终 Touch （示例）](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
+- [iOS 接触启动 （示例）](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
+- [iOS 最终接触 （示例）](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)

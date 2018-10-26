@@ -1,33 +1,33 @@
 ---
-title: Xamarin 的工作簿中的表示形式
-description: 本文档介绍了 Xamarin 的工作簿表示管道中，可以呈现的丰富结果返回一个值的任何代码。
+title: Xamarin 工作簿中的表示形式
+description: 本文档介绍了 Xamarin Workbooks 表示管道中，可以返回一个值，任何代码的丰富结果呈现。
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: d4d8fa164b9f52e2c5331aa2c08fdddf232572d4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d9aafbe13e06875b6577a4d2308e419932fd1589
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103707"
 ---
-# <a name="representations-in-xamarin-workbooks"></a>Xamarin 的工作簿中的表示形式
+# <a name="representations-in-xamarin-workbooks"></a>Xamarin 工作簿中的表示形式
 
-## <a name="representations"></a>表示形式之间实现
+## <a name="representations"></a>表示形式
 
-在工作簿或检查器会话中，通过在代理中表示管道进行处理，执行并输出的结果 （例如方法返回一个值或表达式的结果） 的代码。 所有对象，除了基元整数，如将反映生成交互式成员关系图，并且将经历一个过程来提供客户端可能会使更丰富的备用表示形式。 （包括周期和无限的可枚举对象），任何大小和深度的对象安全地由于延迟和交互式反射和远程处理支持。
+在工作簿或检查器会话中，通过在代理表示管道处理代码的执行并生成结果 （例如方法返回一个值或表达式的结果）。 所有对象，如整数、 基元除外将反射以生成交互式成员关系图并将完成一个过程来提供客户端可以呈现具有更丰富的替代表示。 （包括周期和无限的可枚举对象），任何大小和深度的对象安全地由于延迟和交互式反射和远程处理支持。
 
-Xamarin 的工作簿的所有代理和客户端，便于丰富呈现结果提供几种常见类型。 [`Color`][xir-color] 是这样的类型的一个示例，例如在 iOS 上，代理负责进行相互转换`CGColor`或`UIColor`将对象插入`Xamarin.Interactive.Representations.Color`对象。
+Xamarin 工作簿提供几种常见类型到所有代理和客户端，便于丰富呈现的结果。 [`Color`][xir-color] 是这种类型的一个示例，例如在 iOS 上，代理负责将转换`CGColor`或`UIColor`将对象插入`Xamarin.Interactive.Representations.Color`对象。
 
-除了公共的表示形式，集成 SDK 提供用于序列化代理中的自定义表示形式和呈现在客户端中的表示形式之间实现的 Api。
+除了常见表示形式，集成 SDK 提供用于序列化自定义代理中的表示形式和呈现客户端中的表示形式的 Api。
 
 ## <a name="external-representations"></a>外部表示形式
 
 [`Xamarin.Interactive.IAgent.RepresentationManager`][repman] 提供注册的能力 [`RepresentationProvider`][repp]，集成必须实现从任意对象转换为以不可知的形式呈现该。 这些不可知的窗体必须实现 [`ISerializableObject`][serobj] 接口。
 
-实现`ISerializableObject`接口将添加精确地控制如何序列化对象的序列化方法。 `Serialize`方法需要开发人员将完全指定哪些属性要进行序列化，以及将哪些的最终名称。 查看`Person`对象中我们 [`KitchenSink`示例] [示例]，则我们可以看到此工作原理：
+实现`ISerializableObject`接口将精确地控制如何序列化对象的序列化方法。 `Serialize`方法需要开发人员将完全指定哪些属性是要序列化，并且最终名称将是。 看一下`Person`对象中我们 [`KitchenSink`示例] [示例]，则我们可以看到这的工作原理：
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -41,7 +41,7 @@ public sealed class Person : ISerializableObject
 }
 ```
 
-如果我们想要提供超集或从原始对象的属性的子集，可以做到这一点与`Serialize`。 例如，我们可能会执行类似于以下提供预先计算`Age`属性`Person`:
+如果我们想要提供的超集或子集从原始对象的属性，为此，我们使用`Serialize`。 例如，我们可能会执行如下操作提供预计算`Age`属性上的`Person`:
 
 ```csharp
 public sealed class Person : ISerializableObject
@@ -65,13 +65,13 @@ public sealed class Person : ISerializableObject
 ```
 
 > [!NOTE]
-> 生成的 Api`ISerializableObject`对象直接无需由处理`RepresentationProvider`。 如果你想要显示的对象是**不** `ISerializableObject`，你将想要处理包装在您`RepresentationProvider`。
+> 生成的 Api`ISerializableObject`对象直接无需由`RepresentationProvider`。 你想要显示的对象是否**不** `ISerializableObject`，想要处理将在其包装在`RepresentationProvider`。
 
 ### <a name="rendering-a-representation"></a>呈现表示形式
 
-呈现器在 JavaScript 中实现，并将有权访问通过表示的对象的 JavaScript 版本`ISerializableObject`。 JavaScript 复制也将具有`$type`字符串指示的.NET 类型名称的属性。
+呈现器在 JavaScript 中实现，并将有权通过所表示的对象的 JavaScript 版本`ISerializableObject`。 JavaScript 副本也会`$type`字符串指示的.NET 类型名称的属性。
 
-我们建议使用 TypeScript 进行客户端集成代码，这是当然的编译为香草 JavaScript。 无论哪种方式，该 SDK 提供 [typings][typings] 它们可以直接引用 TypeScript 或简称为手动如果编写香草 JavaScript 首选。
+我们建议为客户端集成代码，当然编译为传统的 JavaScript 中使用 TypeScript。 无论哪种方式，该 SDK 提供 [typings][typings] 它们可以直接引用 TypeScript 或简称为手动如果编写香草 JavaScript 首选。
 
 呈现的主要集成点是`xamarin.interactive.RendererRegistry`:
 

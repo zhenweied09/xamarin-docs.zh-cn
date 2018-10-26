@@ -1,53 +1,53 @@
 ---
 title: 检查实时应用程序
-description: 本文档介绍如何使用 Xamarin 检查器检查应用程序。 它还介绍了 Xamarin 检查器工具的限制。
+description: 本文档介绍如何使用 Xamarin Inspector 检查应用程序。 它还介绍了 Xamarin 检查器工具的限制。
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 67cc6b42901521226322d964514f19b4b639148b
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103631"
 ---
 # <a name="inspecting-live-applications"></a>检查实时应用程序
 
-实时应用程序检查是适用于企业的客户。
+适用于企业客户提供实时应用检测。
 
-1. 打开任何[支持应用程序项目](~/tools/inspector/install.md#supported-platforms)Visual Studio 中用于 Mac 或 Visual Studio。
+1. 打开任何[支持应用程序项目](~/tools/inspector/install.md#supported-platforms)Visual Studio for Mac 或 Visual Studio 中。
 1. 在调试模式下运行你的应用。
 1. 单击**检查**IDE 工具栏中的按钮 (在 Visual Studio 中，**检查当前的应用。 ...** 菜单项也会提供**工具**或**调试**菜单)。
 
 [![](inspect-images/mac-heres-the-button.png "单击 IDE 工具栏中的检查按钮")](inspect-images/mac-heres-the-button.png#lightbox)
 
-将打开一个新的 Xamarin 检查器客户端窗口，使用全新的 REPL 提示符。
+将打开一个新的 Xamarin Inspector 客户端窗口，使用全新的 REPL 提示符。
 
-[![](inspect-images/inspector-0.7.0-map-inspect-small.png "将打开一个新的 Xamarin 检查器客户端窗口，使用全新的 REPL 提示符")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
+[![](inspect-images/inspector-0.7.0-map-inspect-small.png "将打开一个新的 Xamarin Inspector 客户端窗口，使用全新的 REPL 提示符")](inspect-images/inspector-0.7.0-map-inspect.png#lightbox)
 
-此窗口出现后，必须交互式 C# 提示可用于执行和 C# 语句和表达式进行求。 这独特之处在于，在目标进程的上下文中计算代码。 在这种情况下，我们展示根据显示的 iOS 应用程序运行的代码。
+此窗口出现后，您有某个交互式C#可用于执行和评估的提示C#语句和表达式。 这独特之处在于，目标进程的上下文中计算代码。 在这种情况下，我们将演示对显示的 iOS 应用程序运行的代码。
 
-对应用程序的状态进行任何更改的实际发生目标进程，因此，你可以使用 C#，以更改该应用程序实时，也可以检查实时应用程序的状态。
+目标进程中，因此，可以使用的实际发生对应用程序的状态进行任何更改C#若要更改应用程序存在，或可以检查实时应用程序的状态。
 
-例如，在 iOS 上，我们可能需要找到我们 UIApplication 委托类，该类是我们 （其中我们存储大量的应用程序状态） 的主要驱动程序：
+例如，在 iOS 上，我们可能想要找到我们 UIApplication 委托类，该类是主驱动程序 （我们在其中存储的大量应用程序状态）：
 
     var del = (MyApp.AppDelegate) UIApplication.SharedApplication.Delegate
     del.Database.GetAllCustomers ()
     ...
     del.Database.AddCustomer (...)
 
-（请注意每个提交发生在多行的编辑器中。 `Shift + Enter` 将创建一个新行，和`Cmd + Enter`(`Ctrl + Enter` Windows 上) 将提交评估的代码。 `Enter` 会自动将提交时是安全的。）
+（请注意，每次提交发生在多行编辑器中。 `Shift + Enter` 将创建一个新行，并`Cmd + Enter`(`Ctrl + Enter`在 Windows 上) 将提交的代码进行评估。 `Enter` 自动提交时是安全的。）
 
-更方便的方法可用于访问你的应用程序的可视元素是使用"检查"按钮。 按此操作时，你可以通过单击你的应用程序选择 UI 元素。 变量`selectedView`将分配为指向在屏幕上的实际元素。 在上面的屏幕截图，你可以看到如何我们访问，然后编辑`selectedView.BarTintColor`上`UISearchBar`我们已选中。
+若要访问你的应用程序的可视元素更方便方法是通过使用"检查"按钮。 后按下这之后，您可以通过单击你的应用程序选择 UI 元素。 该变量`selectedView`将分配来指向在屏幕上的实际元素。 在上面的屏幕截图，可以看到我们如何访问，然后编辑`selectedView.BarTintColor`上`UISearchBar`选择。
 
-实时可视化树也是非常有用的。 它表示你查看层次结构的当前快照。 你可以选择要设置行`selectedView`REPL 中并查看该视图的属性值。 在 Mac 上，你可以与的分层视图的三维分离型可视化效果进行交互。 在 Windows 上，可以直观地编辑视图的属性值。
+实时可视化树也是非常有用。 它表示视图层次结构的当前快照。 可以选择行，以设置`selectedView`REPL 中以及查看视图的属性值。 在 Mac 上，与分层视图的三维分离型可视化效果进行交互。 在 Windows 中，可以直观地编辑视图的属性值。
 
 ## <a name="known-limitations"></a>已知的限制
 
- - 在主显示器上仅支持视图选择。
- - 属性网格编辑不可用于 Mac，并且在 Windows 上限制为几种数据类型。 用于 REPL 更强大的编辑。
- - 只要安装检查器外接程序/扩展插件并且在 IDE 中启用，我们会将代码注入到你的应用程序每次在调试模式下启动。 如果你注意到你的应用程序中的任何奇怪的行为，请尝试禁用或卸载该检查器外接程序/扩展，重新启动 IDE 中，并且要重新检查。 和请[报告 bug](~/tools/inspector/install.md#reporting-bugs)让我们知道 ！
- - 如果检查 UI 元素后，即可在仍更改，请[告诉我们](~/tools/inspector/install.md#reporting-bugs)，因为这可能表明 bug。
+ - 视图选择仅支持在主显示器上。
+ - 属性网格编辑不可用于 Mac 和 Windows 上仅限于几种数据类型。 用于 REPL 更功能强大的编辑。
+ - 只要检查器外接程序/扩展已安装并启用在 IDE 中，我们将代码注入到您的应用程序每次在调试模式下启动。 如果应用程序中发现任何异常行为，请尝试禁用或卸载检查器外接程序/扩展、 重新启动 IDE，并重新检查。 并请[错误进行归档](~/tools/inspector/install.md#reporting-bugs)，让我们了解 ！
+ - 如果检查 UI 元素后，即可更改中是否仍要请[告诉我们](~/tools/inspector/install.md#reporting-bugs)，因为这可能表示一个 bug。
 

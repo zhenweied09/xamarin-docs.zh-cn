@@ -4,15 +4,15 @@ description: 本文档介绍 Xamarin.iOS 应用程序可以在显示 web 内容�
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 56b0f0e910cc95ca50d1e5e460ce71a1c8f669a2
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242035"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104357"
 ---
 # <a name="web-views-in-xamarinios"></a>在 Xamarin.iOS 中的 web 视图
 

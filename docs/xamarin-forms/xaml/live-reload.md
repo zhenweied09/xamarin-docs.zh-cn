@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860662"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109986"
 ---
 # <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
 
@@ -22,11 +22,10 @@ Xamarin Live 重新加载使你能够**对你的 XAML 进行更改和查看它�
 
 由于您的应用程序被编译使用实时重新加载时，它可用于所有库和第三方控件。 在所有平台 Xamarin.Forms 支持，包括 Android、 iOS 和 UWP，以及适用于所有有效的部署目标包括模拟器、 仿真器，以及物理设备上实时重新加载的工作原理。
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-实时重新加载目前仅在 Visual Studio 2017 中提供。
-
-[![加入在聊天 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [实时重新加载预览已结束](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> 在没有讨论这[![加入在聊天 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>要求
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 6de4380f2ce2d19df4ff912b7c86b75ca9e7821b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: cebdd6fafafae7d1cd6258e6200808731e3c4f29
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118807"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms 应用程序类
 
@@ -79,7 +79,7 @@ public class App : Xamarin.Forms.Application
 
 `Properties` Dictionary 使用`string`密钥和存储`object`值。
 
-例如，可以设置持久性`"id"`在代码中的任意位置的属性 (当选择项，在页面的`OnDisappearing`方法，或在`OnSleep`方法) 如下所示：
+例如，您可以设置永久`"id"`在代码中的任意位置的属性 (当选择项，在页面的`OnDisappearing`方法，或在`OnSleep`方法) 如下所示：
 
 ```csharp
 Application.Current.Properties ["id"] = someClass.ID;

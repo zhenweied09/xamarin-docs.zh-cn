@@ -4,28 +4,25 @@ description: 本文介绍了如何进行动画处理 SkiaSharp 图形在 Xamarin
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 0ba3d86f52d2e6907f32450d87f30280ade95d3f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 1357f0be1ba4c15c4046e92f8556c957b9c4bd46
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615634"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122232"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp 中的基本动画
 
 _了解如何对 SkiaSharp 图形进行动画处理_
 
-您可以设置动画效果 SkiaSharp 图形在 Xamarin.Forms 中导致`PaintSurface`非常频繁地调用方法每次绘制图形略有不同。 下面是动画看似展开从中心的同心圆本文稍后所示：
+您可以设置动画效果 SkiaSharp 图形在 Xamarin.Forms 中导致`PaintSurface`定期调用的方法，每次绘制图形略有不同。 下面是动画看似展开从中心的同心圆本文稍后所示：
 
 ![](animation-images/animationexample.png "从中心看似扩展的多个同心环")
 
-**Pulsating 椭圆**页面[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序之间进行动画处理的椭圆的两个轴，以便它似乎 pulsating 和甚至可以控制此 pulsation 速率：
-
-
-[ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml)文件实例化 Xamarin.Forms`Slider`和`Label`以显示当前滑块的值。 这是一种常见的方法来集成`SKCanvasView`与其他 Xamarin.Forms 视图：
+**Pulsating 椭圆**页面[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)程序之间进行动画处理的椭圆的两个轴，以便它似乎 pulsating 和甚至可以控制此 pulsation 的速率。 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml)文件实例化 Xamarin.Forms`Slider`和`Label`以显示当前滑块的值。 这是一种常见的方法来集成`SKCanvasView`与其他 Xamarin.Forms 视图：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -107,7 +104,7 @@ async Task AnimationLoop()
 
 ```
 
-`while`循环开始通过获取周期时间与`Slider`。 这是以秒为单位，例如，5 次。 第二个语句计算的值`t`有关*时间*。 有关`cycleTime`为 5，`t`将增加从 0 到 1 每隔 5 秒。 参数`Math.Sin`函数中的第二个语句范围从 0 到 2 π 每隔 5 秒。 `Math.Sin`函数将返回值从 0 到 1 后到 0，再到&ndash;1 和 0 每隔 5 秒，但其速度更慢更改时的值是接近 1 或-1 的值。 值 1 添加的值始终为正数，因此然后它除以 2，因此值介于 ½ 到 ½ 为介于 0 到 ½，但速度较慢的值时大约 1 和 0 到 1。 这存储在`scale`字段中，和`SKCanvasView`失效。
+`while`循环开始通过获取周期时间与`Slider`。 这是以秒为单位，例如，5 次。 第二个语句计算的值`t`有关*时间*。 有关`cycleTime`为 5，`t`将增加从 0 到 1 每隔 5 秒。 参数`Math.Sin`函数中的第二个语句范围从 0 到 2 π 每隔 5 秒。 `Math.Sin`函数将返回值从 0 到 1 后到 0，再到&ndash;1 和 0 每隔 5 秒，但其速度更慢更改时的值是接近 1 或-1 的值。 值 1 添加的值始终为正数，因此然后它除以 2，因此从 ½ 为 ½ 为介于 0 到 ½，但速度较慢的值时大约 1 和 0 到 1 的值范围。 这存储在`scale`字段中，和`SKCanvasView`失效。
 
 `PaintSurface`方法使用此`scale`值来计算两个椭圆的轴：
 
@@ -146,7 +143,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 请注意，`SKPaint`中创建对象时`using`块。 像许多 SkiaSharp 类`SKPaint`派生自`SKObject`，它派生`SKNativeObject`，它实现[ `IDisposable` ](xref:System.IDisposable)接口。 `SKPaint` 重写`Dispose`方法来释放非托管的资源。
 
- 将放`SKPaint`中`using`块确保`Dispose`用于释放这些非托管的资源的块结束时调用。 发生这种情况是否仍要使用的内存时`SKPaint`释放对象.NET 垃圾回收器，但在动画代码中，最好是将某种程度上主动地释放内存中更有序的方式。
+ 将放`SKPaint`中`using`块确保`Dispose`用于释放这些非托管的资源的块结束时调用。 发生这种情况是否仍要使用的内存时`SKPaint`释放对象.NET 垃圾回收器，但在动画代码中，最好是主动地释放内存中更有序的方式。
 
  在此特定情况下更好的解决方案就是创建两个`SKPaint`对象一次并将其保存为字段。
 
@@ -178,7 +175,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-此程序使用不同的方法来通过基于 Xamarin.Forms 的动画`Device.StartTimer`。 `t`字段以动画形式是从 0 到 1 每个`cycleTime`毫秒：
+此程序使用不同的方法来通过基于 Xamarin.Forms 的动画`Device.StartTimer`方法。 `t`字段以动画形式是从 0 到 1 每个`cycleTime`毫秒：
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -212,7 +209,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-`PaintSurface`处理程序绘制具有经过动画处理的半径的 5 个同心圆。 如果`baseRadius`变量计算为 100，然后为`t`从 0 到 1，从 0 到 100、 100 到 200、 200 到 300、 300 到 400 和 400 到 500 的五个圆圈增加半径的动画。 对于大多数的圆圈`strokeWidth`是 50 但第一个圆`strokeWidth`进行从 0 到 50 的动画处理。 对于大多数的圆圈，颜色为蓝色，但最后一个圆，颜色以动画形式从蓝到透明：
+`PaintSurface`处理程序绘制具有经过动画处理的半径的五个同心圆。 如果`baseRadius`变量计算为 100，然后为`t`从 0 到 1，从 0 到 100、 100 到 200、 200 到 300、 300 到 400 和 400 到 500 的五个圆圈增加半径的动画。 对于大多数的圆圈`strokeWidth`是 50 但第一个圆`strokeWidth`进行从 0 到 50 的动画处理。 对于大多数的圆圈，颜色为蓝色，但最后一个圆，颜色以动画形式从蓝到透明。 请注意，到第四个参数`SKColor`指定不透明度的构造函数：
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -250,5 +247,5 @@ public class ExpandingCirclesPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
