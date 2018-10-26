@@ -4,15 +4,15 @@ description: 本演练介绍如何使用 Firebase Cloud Messaging 实现远程�
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 36ac1be1274ff90d573aa53e5c86ae0a97709505
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514422"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105540"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知使用 Firebase Cloud Messaging
 
@@ -53,7 +53,7 @@ _本演练介绍如何使用 Firebase Cloud Messaging 实现远程通知 （也�
 
 在中[Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)，指定 FCM 启用应用的包名称。 此包名称也可作为[*应用程序 ID* ](./firebase-cloud-messaging.md#fcm-in-action-app-id)关联[API 密钥](firebase-cloud-messaging.md#fcm-in-action-api-key)。 将应用配置为使用此包名称：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  打开的属性**FCMClient**项目。
 
@@ -65,7 +65,7 @@ _本演练介绍如何使用 Firebase Cloud Messaging 实现远程通知 （也�
 
 更新时**Android 清单**，还检查，以确保`Internet`启用权限。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  打开的属性**FCMClient**项目。
 
@@ -86,7 +86,7 @@ _本演练介绍如何使用 Firebase Cloud Messaging 实现远程通知 （也�
 
 Firebase Cloud Messaging 取决于 Google Play 服务，因为[Xamarin Google Play 服务的基本](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Base/)必须将 NuGet 包添加到 Xamarin.Android 项目。 需要版本 29.0.0.2 或更高版本。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  在 Visual Studio 中，右键单击**引用 > 管理 NuGet 包...**.
 
@@ -96,7 +96,7 @@ Firebase Cloud Messaging 取决于 Google Play 服务，因为[Xamarin Google Pl
 
     [![安装 Google Play 服务基础](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  在 Visual Studio for Mac 中，右键单击**包 > 添加包...**.
 
@@ -123,7 +123,7 @@ using Android.Gms.Common;
 
 若要从 FCM，接收消息[Xamarin Firebase-消息传送](https://www.nuget.org/packages/Xamarin.Firebase.Messaging/)必须将 NuGet 包添加到应用程序项目。 无此包的 Android 应用程序无法接收来自 FCM 服务器的消息。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  在 Visual Studio 中，右键单击**引用 > 管理 NuGet 包...**.
 
@@ -133,7 +133,7 @@ using Android.Gms.Common;
 
     [![安装 Xamarin Firebase 消息传送](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  在 Visual Studio for Mac 中，右键单击**包 > 添加包...**.
 
@@ -161,7 +161,7 @@ using Android.Util;
 
 下一步是添加**google-services.json**到你的项目的根目录的文件：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  复制**google-services.json**到项目文件夹。
 
@@ -169,11 +169,14 @@ using Android.Util;
 
 3.  选择**google-services.json**中**解决方案资源管理器**窗口。
 
-4.  在中**属性**窗格中，设置**生成操作**到**GoogleServicesJson** (如果**GoogleServicesJson**生成操作不会显示，保存并关闭解决方案，然后重新打开它）：
+4.  在中**属性**窗格中，设置**生成操作**到**GoogleServicesJson**:
 
     [![将生成操作设置为 GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+    > [!NOTE] 
+    > 如果**GoogleServicesJson**生成操作不会显示，保存并关闭解决方案，然后重新打开它。
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1.  复制**google-services.json**到项目文件夹。
 
@@ -273,7 +276,7 @@ void CreateNotificationChannel()
         return;
     }
 
-    var channel = new NotificationChannel(MyFirebaseMessagingService.CHANNEL_ID,
+    var channel = new NotificationChannel(CHANNEL_ID,
                                           "FCM Notifications",
                                           NotificationImportance.Default)
                   {
@@ -419,7 +422,7 @@ void SendRegistrationToAppServer (string token)
 
 [![日志标记按钮添加到应用屏幕](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
-### <a name="log-tokes"></a>日志 tokes
+### <a name="log-tokens"></a>日志标记
 
 在此步骤中添加的代码仅供演示之&ndash;生产客户端应用程序必须无需记录注册令牌。 编辑**Resources/layout/Main.axml**并添加以下`Button`声明后立即`TextView`元素：
 
@@ -432,7 +435,7 @@ void SendRegistrationToAppServer (string token)
   android:text="Log Token" />
 ```
 
-将以下代码添加到末尾`MainActivity.OnCreate`方法：
+在 `MainActivity.OnCreate` 方法的末尾添加以下代码：
 
 ```csharp
 var logTokenButton = FindViewById<Button>(Resource.Id.logTokenButton);

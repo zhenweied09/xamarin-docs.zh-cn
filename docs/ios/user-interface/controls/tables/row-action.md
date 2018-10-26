@@ -4,15 +4,15 @@ description: 本指南演示如何使用 UISwipeActionsConfiguration 或 UITable
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 4be8b6dc66c9c047e6662067e7e3ecf81ab22893
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6d41f37d4a63db710bb04e35e6e1a4be0dd4f7a4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105904"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>使用 Xamarin.iOS 中的行操作
 
@@ -20,29 +20,29 @@ _本指南演示如何使用 UISwipeActionsConfiguration 或 UITableViewRowActio
 
 ![演示在行上的轻扫操作](row-action-images/action02.png)
 
-iOS 提供两种方法在表上执行操作：`UISwipeActionsConfiguration`和`UITableViewRowAction`。
+iOS 提供两种方法对表执行操作：`UISwipeActionsConfiguration`和`UITableViewRowAction`。
 
-`UISwipeActionsConfiguration` 在 iOS 11 中引入了和用于定义一组应采取的操作时发生用户刷_在任一方向_表视图中某一行上。 此行为是类似于本机将 Mail.app 
+`UISwipeActionsConfiguration` 在 iOS 11 中引入，用于定义一组应执行的操作的发生用户扫 _，在任一方向_表视图中的行。 此行为是类似于本机 Mail.app 
 
-`UITableViewRowAction`类用于定义当用户刷留水平表视图中的某行时将发生的操作。
-例如，当编辑一个表，轻扫行上的左侧显示**删除**默认情况下的按钮。 通过将附加的多个实例`UITableViewRowAction`类到`UITableView`，可以定义多个自定义操作，每个都有其自己的文本、 格式设置和行为。
+`UITableViewRowAction`类用于定义用户扫左水平表视图中的行时将执行的操作。
+例如，当编辑表中，轻扫的行的左侧显示**删除**默认情况下的按钮。 通过将附加的多个实例`UITableViewRowAction`类来`UITableView`，可以定义多个自定义操作，每个都有其自己的文本、 格式设置和行为。
 
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
-有三个步骤实现使用轻扫操作所需`UISwipeActionsConfiguration`:
+有三个步骤实现轻扫操作所需`UISwipeActionsConfiguration`:
 
 1. 重写`GetLeadingSwipeActionsConfiguration`和/或`GetTrailingSwipeActionsConfiguration`方法。 这些方法返回`UISwipeActionsConfiguration`。 
-2. 实例化`UISwipeActionsConfiguration`要返回。 此类采用的数组`UIContextualAction`。
+2. 实例化`UISwipeActionsConfiguration`要返回。 此类采用数组的`UIContextualAction`。
 3. 创建 `UIContextualAction`。
 
-下列各节中更详细地对它们进行了解释。
+以下各节中更详细地介绍了这些。
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1.实现 SwipeActionsConfigurations 方法
 
-`UITableViewController` (以及`UITableViewSource`和`UITableViewDelegate`) 包含两个方法：`GetLeadingSwipeActionsConfiguration`和`GetTrailingSwipeActionsConfiguration`，用于在表视图行实现一组轻扫操作。 前导轻扫操作是指到轻扫，从左到右语言中的屏幕的左下方以及从右到左语言中的屏幕的右端。 
+`UITableViewController` (还`UITableViewSource`并`UITableViewDelegate`) 包含两个方法：`GetLeadingSwipeActionsConfiguration`和`GetTrailingSwipeActionsConfiguration`，，用于实现轻扫操作的一组在表视图行。 前导轻扫操作是指轻扫从左到右语言中的屏幕的左侧和从右到左语言中的屏幕的右侧。 
 
-下面的示例 (从[TableSwipeActions](https://developer.xamarin.com/samples/monotouch/TableSwipeActions)示例) 演示如何实现前导轻扫配置。 两个操作的上下文的操作，解释了从创建[下面](#create-uicontextualaction)。 这些操作然后传递给新初始化[ `UISwipeActionsConfiguration` ](#create-uiswipeactionsconfigurations)，这用作返回值。
+下面的示例 (从[TableSwipeActions](https://developer.xamarin.com/samples/monotouch/TableSwipeActions)示例) 演示如何实现前导轻扫配置。 两个操作创建的上下文的操作，将进行介绍[如下](#create-uicontextualaction)。 这些操作将再传递到新初始化[ `UISwipeActionsConfiguration` ](#create-uiswipeactionsconfigurations)，它作为返回值使用。
 
 
 ```csharp
@@ -65,7 +65,7 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
 ### <a name="2-instantiate-a-uiswipeactionsconfiguration"></a>2.实例化 `UISwipeActionsConfiguration`
 
-实例化`UISwipeActionsConfiguration`使用`FromActions`方法将添加一个新数组的`UIContextualAction`s，如下面的代码段中所示：
+实例化`UISwipeActionsConfiguration`通过使用`FromActions`方法将添加一个新数组`UIContextualAction`s，如下面的代码段中所示：
 
 ```csharp
 var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction })
@@ -73,23 +73,23 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-请务必注意，在其中显示你的操作的顺序是依赖于如何传递到你的阵列。 例如，前导刷上面的代码，因此显示的操作：
+请务必注意，在其中显示你的操作的顺序是取决于如何传递到你的阵列。 例如，前导扫上面的代码，因此显示的操作：
 
-![前导轻扫操作显示在一个表行](row-action-images/action03.png)
+![前导轻扫操作显示在表行](row-action-images/action03.png)
 
-为尾随刷，操作将会显示，如下图中所示：
+为尾部扫，操作将显示在下图中所示：
 
-![尾随轻扫操作显示在一个表行](row-action-images/action04.png)
+![尾随轻扫操作显示在表行](row-action-images/action04.png)
 
-此代码段也使用新`PerformsFirstActionWithFullSwipe`属性。 默认情况下，此属性设置为 true，这意味着用户完全刷行上时，将发生数组中的第一个操作。 如果你有不是破坏性操作 (例如"删除"，这可能不是理想的行为，并且因此应将其设置为`false`。
+此代码片段还使用新的`PerformsFirstActionWithFullSwipe`属性。 默认情况下，此属性设置为 true，这表示当用户在行上完全轻扫数组中的第一个操作将会发生。 如果不是破坏性操作 (例如"删除"，这可能不是理想的行为，因此应将其设置为`false`。
 
 <a name="create-uicontextualaction" />
 
 ### <a name="create-a-uicontextualaction"></a>创建 `UIContextualAction`
 
-上下文的操作是实际创建用户刷表行时，将显示的操作。
+上下文的操作是实际创建将在用户轻扫表行时显示的操作。
 
-若要初始化的操作必须提供`UIContextualActionStyle`、 一个标题，以及一`UIContextualActionHandler`。 `UIContextualActionHandler`采用三个参数： 操作、 操作中，显示的视图和完成处理程序：
+若要初始化的操作必须提供`UIContextualActionStyle`、 一个标题的以及`UIContextualActionHandler`。 `UIContextualActionHandler`采用三个参数： 操作、 操作中，显示的视图和完成处理程序：
 
 ```csharp
 public UIContextualAction ContextualFlagAction(int row)
@@ -113,13 +113,13 @@ public UIContextualAction ContextualFlagAction(int row)
 }
 ```
 
-可以编辑各种的可视属性，如的背景色或图像的操作。 上面的代码段演示如何将图像添加到操作并设置它的背景色为蓝色。
+可以编辑各种可视属性，例如背景色或图像的操作。 上面的代码段演示如何向操作添加图像并设置其背景颜色设置为蓝色。
 
-一旦创建上下文的操作，它们可用于初始化`UISwipeActionsConfiguration`中`GetLeadingSwipeActionsConfiguration`方法。
+创建上下文的操作后，它们可用于初始化`UISwipeActionsConfiguration`在`GetLeadingSwipeActionsConfiguration`方法。
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-可以定义一个或多个自定义行操作`UITableView`，你将需要创建的实例`UITableViewDelegate`类并重写`EditActionsForRow`方法。 例如：
+可以定义一个或多个自定义行操作`UITableView`，将需要创建的实例`UITableViewDelegate`类并重写`EditActionsForRow`方法。 例如：
 
 ```csharp
 using System;
@@ -163,7 +163,7 @@ namespace BasicTable
 }
 ```
 
-静态`UITableViewRowAction.Create`方法用于创建一个新`UITableViewRowAction`将显示**Hi**按钮用户刷水平保留在表中的行上时。 更高版本的新实例`TableDelegate`创建并附加到`UITableView`。 例如：
+静态`UITableViewRowAction.Create`方法用于创建一个新`UITableViewRowAction`将显示**Hi**按钮时用户扫水平左表中的行。 更高版本的新实例`TableDelegate`创建并附加到`UITableView`。 例如：
 
 ```csharp
 TableDelegate tableDelegate;
@@ -175,11 +175,11 @@ table.Delegate = tableDelegate;
 
 ```
 
-当在运行上面的代码并在一个表行上, 剩余用户刷**Hi**按钮才会显示而不是**删除**默认情况下显示的按钮：
+当运行上面的代码和上一个表行，剩余用户扫**Hi**按钮将显示而不是**删除**默认情况下显示的按钮：
 
-[![](row-action-images/action01.png "正在显示而不是删除按钮 Hi 按钮")](row-action-images/action01.png#lightbox)
+[![](row-action-images/action01.png "而不是删除按钮显示 Hi 按钮")](row-action-images/action01.png#lightbox)
 
-如果用户点击**Hi**按钮，`Hello World!`将写出到 Visual Studio 中的控制台用于 Mac 或 Visual Studio 中调试模式下运行应用程序时。
+如果在用户点击**Hi**按钮，`Hello World!`将写出到控制台在 Visual Studio for Mac 或 Visual Studio 在调试模式下运行应用程序时。
 
 
 

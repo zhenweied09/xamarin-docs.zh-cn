@@ -4,39 +4,39 @@ description: 本文档提供对 tvOS 11 和 Apple 的发行说明的链接中的
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/08/2018
-ms.openlocfilehash: 83251cfa50dde4fb2089057aaaa2771956a4a3b0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4da83d5ecc7a54bcd692751e07c81e8e5bb0d94a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106515"
 ---
 # <a name="introduction-to-tvos-11"></a>TvOS 11 简介
 
-_可供使用 tvOS 11 Xamarin 的开发人员的新增功能_
+_使用适用于 tvOS 11 Xamarin 的开发人员提供的新功能_
 
-Xamarin.tvOS 应用中访问新 tvOS 11 功能：
+访问新的 tvOS 11 功能 Xamarin.tvOS 应用中：
 
 - 从右到左语言支持 
-- 焦点支持 SceneKit 和 SpriteKit
+- SceneKit 和 SpriteKit 支持焦点模式
 - 安全区域布局指南 
-- 普通按钮样式，可以更轻松地样式
-- 支持的交互式焦点与分层的图像
-- 自定义动画协调焦点交互
+- 普通按钮样式，可以更轻松地设置样式
+- 交互焦点支持分层的映像
+- 协调具有焦点的交互的自定义动画
 - 自定义声音协调焦点交互
-- 机器学习与 CoreML
+- 使用 CoreML 机器学习
 - 图像和视频功能检测
-- 较高的效率视频编码 (HEVC) 支持
+- 高效率视频编码 (HEVC) 支持
 - 较高的效率映像格式 (HEIF) 支持
-- 将提升上应用商店的应用内购买
-- 浅色和深色映像顶部架扩展
+- 升级在 App Store 上的应用内购买
+- 顶层扩展的浅色和深色映像
 - AirPlay 2
-- 裸机 2
+- 配置文件 2
 
-有关更改 Apple tvOS 11 中引入的完整列表，请参阅[中 tvOS](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)文档。
+Apple tvOS 11 中引入的更改的完整列表，请参阅[What's New 中 tvOS](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)文档。
 
 ## <a name="related-links"></a>相关链接
 
@@ -45,4 +45,4 @@ Xamarin.tvOS 应用中访问新 tvOS 11 功能：
 - [什么是新建 tvOS 11 （Apple 开发人员指南）](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)
 - [什么是新建 tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/209/)
 - [TvOS 11 (WWDC 2017) 中的焦点交互](https://developer.apple.com/videos/play/wwdc2017/224/)
-- [开发人员 (Apple) 的 tvOS](https://developer.apple.com/tvos/)
+- [面向开发人员 (Apple) 的 tvOS](https://developer.apple.com/tvos/)

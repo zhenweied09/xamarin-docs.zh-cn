@@ -3,19 +3,19 @@ title: 用户配置文件
 ms.prod: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 1eaae86ab9eacf007eca792d96e889db6f367922
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2d9dc54801c4df084007a2903becf0c68bf1c6df
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30765501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109960"
 ---
 # <a name="user-profile"></a>用户配置文件
 
-Android 已支持的枚举联系人[ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)自 API 级别 5 提供程序。 例如，列出联系人非常简单，只使用[ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/)类，如下面的代码示例中所示：
+Android 支持枚举联系人[ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)自 API 级别 5 的提供程序。 例如，列出联系人非常简单，使用[ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/)类，如下面的代码示例中所示：
 
 ```csharp
 // Get the URI for the user's contacts:
@@ -45,18 +45,18 @@ if (cursor != null)
 }
 ```
 
-Android 4 (API 级别 14 中)，从开始[ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/)类是可通过`ContactsContract`提供程序。 `ContactsContact.Profile`允许访问个人的配置文件的设备，其中包括如设备所有者的姓名和电话号码的联系人数据的所有者。
+Android 4 (API 级别 14) 开头[ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/)类是可通过`ContactsContract`提供程序。 `ContactsContact.Profile`包括联系人数据，例如设备所有者的姓名和电话号码的设备的所有者提供对个人配置文件的访问。
 
 
 ## <a name="required-permissions"></a>所需权限
 
-若要读取和写入联系人数据，应用程序必须请求`READ_CONTACTS`和`WRITE_CONTACTS`权限，分别。
+若要读取和写入的联系人数据，应用程序必须请求`READ_CONTACTS`和`WRITE_CONTACTS`权限，分别。
 此外，若要阅读和编辑用户配置文件，应用程序必须请求`READ_PROFILE`和`WRITE_PROFILE`权限。
 
 
-## <a name="updating-profile-data"></a>正在更新配置文件数据
+## <a name="updating-profile-data"></a>更新配置文件数据
 
-设置这些权限后，应用程序可以使用正常的 Android 技术与用户配置文件的数据进行交互。 例如，若要更新的配置文件的显示名称，调用[ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update)与`Uri`通过检索[ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/)属性，如下所示下面：
+设置这些权限后，应用程序可以使用正常的 Android 技术与用户配置文件的数据进行交互。 例如，若要更新配置文件的显示名称，请调用[ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update)与`Uri`通过检索[ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/)属性，如所示如下：
 
 ```csharp
 var values = new ContentValues ();
@@ -68,7 +68,7 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, 
 
 ## <a name="reading-profile-data"></a>读取配置文件数据
 
-发出到查询[ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/)读回配置文件数据。 例如，下面的代码将读取用户配置文件的显示名称：
+发出到查询[ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/)读回的配置文件数据。 例如，下面的代码将读取用户配置文件的显示名称：
 
 ```csharp
 // Read the profile
@@ -90,9 +90,9 @@ if (cursor != null)
 }
 ```
 
-## <a name="navigating-to-the-user-profile"></a>导航到的用户配置文件
+## <a name="navigating-to-the-user-profile"></a>导航到用户配置文件
 
-最后，导航到的用户配置文件，可创建与为打算`ActionView`操作和`ContactsContract.Profile.ContentUri`然后将其传递到`StartActivity`方法如下：
+最后，若要导航到用户配置文件，创建使用意向`ActionView`操作和一个`ContactsContract.Profile.ContentUri`然后将其传递给`StartActivity`方法如下：
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
@@ -100,16 +100,16 @@ var intent = new Intent (Intent.ActionView,
 StartActivity (intent);
 ```
 
-当运行上面的代码，用户配置文件将显示以下屏幕截图中所示：
+当运行上面的代码，用户配置文件将显示如以下屏幕截图中所示：
 
-[![显示的 John Doe 用户配置文件的配置文件的屏幕截图](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[![显示 John Doe 用户配置文件的配置文件的屏幕截图](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-使用用户配置文件类似于与 Android 中的其他数据进行交互，它提供的额外级别的设备的个性化。
+使用用户配置文件是类似于与 Android 中的其他数据进行交互，它提供了一层额外的设备的个性化。
 
 
 
 ## <a name="related-links"></a>相关链接
 
-- [ContactsProviderDemo (sample)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
-- [引入冰激凌德桑威奇](http://www.android.com/about/ice-cream-sandwich/)
+- [ContactsProviderDemo （示例）](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [引入 Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 平台](http://developer.android.com/sdk/android-4.0.html)

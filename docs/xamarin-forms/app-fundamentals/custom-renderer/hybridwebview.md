@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 4715685fdf417ba2d08f9ae3d36d6e691fa701fa
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.date: 10/19/2018
+ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242454"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105033"
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 
@@ -328,7 +328,7 @@ namespace CustomRenderer.Droid
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Android.Webkit.WebView>
     {
-        const string JavaScriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
+        const string JavascriptFunction = "function invokeCSharpAction(data){jsBridge.invokeAction(data);}";
         Context _context;
 
         public HybridWebViewRenderer(Context context) : base(context)
@@ -344,6 +344,7 @@ namespace CustomRenderer.Droid
             {
                 var webView = new Android.Webkit.WebView(_context);
                 webView.Settings.JavaScriptEnabled = true;
+                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
                 SetNativeControl(webView);
             }
             if (e.OldElement != null)
@@ -355,31 +356,42 @@ namespace CustomRenderer.Droid
             if (e.NewElement != null)
             {
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
-                Control.LoadUrl(string.Format("file:///android_asset/Content/{0}", Element.Uri));
-                InjectJS(JavaScriptFunction);
-            }
-        }
-
-        void InjectJS(string script)
-        {
-            if (Control != null)
-            {
-                Control.LoadUrl(string.Format("javascript: {0}", script));
+                Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
         }
     }
 }
 ```
 
-`HybridWebViewRenderer`类加载 web 页中指定`HybridWebView.Uri`属性转换成一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)控件，并`invokeCSharpAction`JavaScript 函数注入到 web 页上，加载 web 页之后,使用`InjectJS`方法。 用户输入其名称并单击 HTML 后`button`元素，`invokeCSharpAction`执行 JavaScript 函数。 此功能来实现，如下所示：
+`HybridWebViewRenderer`类加载 web 页中指定`HybridWebView.Uri`属性转换成一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)控件，并`invokeCSharpAction`JavaScript 函数注入到网页，网页后完成加载后，`OnPageFinished`重写中`JavascriptWebViewClient`类：
+
+```csharp
+public class JavascriptWebViewClient : WebViewClient
+{
+    string _javascript;
+
+    public JavascriptWebViewClient(string javascript)
+    {
+        _javascript = javascript;
+    }
+
+    public override void OnPageFinished(WebView view, string url)
+    {
+        base.OnPageFinished(view, url);
+        view.EvaluateJavascript(_javascript, null);
+    }
+}
+```
+
+用户输入其名称并单击 HTML 后`button`元素，`invokeCSharpAction`执行 JavaScript 函数。 此功能来实现，如下所示：
 
 - 前提`Control`属性是`null`，执行以下操作：
-  - 一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)创建实例，并在控件中启用 JavaScript。
+  - 一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)创建实例，在该控件中启用 JavaScript 和一个`JavascriptWebViewClient`实例设置的实现为`WebViewClient`。
   - `SetNativeControl`调用方法来分配对本机引用[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)控制对`Control`属性。
 - 提供自定义呈现器附加到新 Xamarin.Forms 元素：
   - [ `WebView.AddJavascriptInterface` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/)方法将一个新中注入`JSBridge`WebView 的 JavaScript 上下文，其命名的实例到主框架`jsBridge`。 这允许在方法`JSBridge`类从 JavaScript 访问。
   - [ `WebView.LoadUrl` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/)方法将加载指定的 HTML 文件`HybridWebView.Uri`属性。 该代码指定该文件存储在`Content`项目文件夹中的。
-  - `InjectJS`方法调用注入`invokeCSharpAction`到的网页的 JavaScript 函数。
+  - 在中`JavascriptWebViewClient`类，`invokeCSharpAction`页面加载完毕后，JavaScript 函数注入到 web 页。
 - 当元素呈现器附加到的更改：
   - 释放资源。
 
@@ -401,7 +413,8 @@ public class JSBridge : Java.Lang.Object
   {
     HybridWebViewRenderer hybridRenderer;
 
-    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer)) {
+    if (hybridWebViewRenderer != null && hybridWebViewRenderer.TryGetTarget (out hybridRenderer))
+    {
       hybridRenderer.Element.InvokeAction (data);
     }
   }
@@ -414,9 +427,6 @@ public class JSBridge : Java.Lang.Object
 > 项目使用`[Export]`属性必须包含对引用`Mono.Android.Export`，或将导致编译器错误。
 
 请注意，`JSBridge`类维护`WeakReference`到`HybridWebViewRenderer`类。 这是为了避免创建两个类之间的循环引用。 有关详细信息请参阅[弱引用](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx)MSDN 上。
-
-> [!IMPORTANT]
-> 确保 Android Oreo 上的 Android 清单设置**目标 Android 版本**到**自动**。 否则，运行此代码将导致错误消息"invokeCSharpAction 未定义"。
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 

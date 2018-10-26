@@ -1,37 +1,37 @@
 ---
-title: 在 Xamarin.iOS 的自定义文档图标
-description: 此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，用作自定义文档类型的图标。
+title: 在 Xamarin.iOS 中的自定义文档图标
+description: 此文章涉及包括并管理一个 Xamarin.iOS 应用程序中的图像资产，以用作自定义文档类型的图标。
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/23/2017
-ms.openlocfilehash: 415500050e4e957ca635c4b18004716dd44a162d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 51abd00f9a21b702811bb3897f273deff54f7d01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110480"
 ---
-# <a name="custom-document-icons-in-xamarinios"></a>在 Xamarin.iOS 的自定义文档图标
+# <a name="custom-document-icons-in-xamarinios"></a>在 Xamarin.iOS 中的自定义文档图标
 
-_此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像资产，用作自定义文档类型的图标。_
+_此文章涉及包括并管理一个 Xamarin.iOS 应用程序中的图像资产，以用作自定义文档类型的图标。_
 
-如果一个 Xamarin.iOS 应用程序支持加载特定的文档类型，开发人员可以提供在遇到该文档类型，例如当用户按住中的附件时，系统将使用的图标*邮件应用程序*作为此处所示：
+如果 Xamarin.iOS 应用程序支持加载特定文档类型，开发人员可以提供遇到该文档类型，例如当用户按住中的附件时，系统将使用的图标*邮件应用程序*作为如下所示：
 
- [![](custom-document-types-images/17.png "下面举例说明文档类型图标")](custom-document-types-images/17.png#lightbox)
+ [![](custom-document-types-images/17.png "举例说明了文档类型图标")](custom-document-types-images/17.png#lightbox)
 
-开发人员可以将文档类型信息添加应用程序中的文件格式是支持的左包括字典条目`CFBundleTypeName`字符串和`LSItemContentTypes`中应用的数组`Info.plist`。 文档类型的图标进入`CFBundleTypeIconFiles`数组。 如果未提供一个文档图标，iOS 将是派生的应用程序图标。
-可以为多种大小，针对各种设备分辨率进行了优化提供图标。 
+开发人员可以添加文档类型信息的文件格式应用为能够打开，通过包含字典条目`CFBundleTypeName`字符串和`LSItemContentTypes`数组中应用的`Info.plist`。 文档类型的图标进入`CFBundleTypeIconFiles`数组。 如果未提供文档图标，iOS 将派生一个从应用程序图标。
+图标可以提供有关多个大小，针对各种设备分辨率进行了优化。 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-若要将 Visual Studio 中的这些值分配适用于 Mac，使用**文档类型**部分下**高级**选项卡上`Info.plist`编辑器来添加文档类型，并为其分配图像图标。 例如，下面是显示的 PDF 支持注册屏幕截图：
+若要将 Visual Studio 中的这些值分配为 Mac，请使用**文档类型**部分下**高级**选项卡上`Info.plist`编辑器来添加文档类型并为其分配图像的图标。 例如，下面是显示的 PDF 支持注册的屏幕截图：
 
- [![](custom-document-types-images/18.png "在 Info.plist 编辑器上的高级选项卡下的文档类型部分")](custom-document-types-images/18.png#lightbox)
+ [![](custom-document-types-images/18.png "高级选项卡上的 Info.plist 编辑器下的文档类型部分")](custom-document-types-images/18.png#lightbox)
  
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要分配这些值在 Visual Studio 中的，使用**文档类型**部分下**高级**选项卡上`Info.plist`:
 
@@ -44,11 +44,11 @@ _此文章介绍如何包括和管理一个 Xamarin.iOS 应用程序中的图像
 -----
 
 
-有关文档类型的详细信息，请参阅 Apple 的[统一类型标识符引用](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html)和[文档适用于 iOS 的交互编程主题](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html)。
+有关文档类型的详细信息，请参阅 Apple[统一的类型标识符引用](http://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html)并[适用于 iOS 的文档交互编程主题](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html)。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [使用图像 （示例）](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello，iPhone](~/ios/get-started/hello-ios/index.md)
-- [自定义图标和映像创建指南](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [自定义图标和图像创建指南](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

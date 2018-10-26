@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 47ea437be8a1570517f37cc59aab17431c5af7f0
-ms.sourcegitcommit: c2d1249cb67b877ee0d9cb8d095ec66fd51d8c31
+ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36291320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108452"
 ---
 # <a name="localization"></a>本地化
 
@@ -20,100 +20,100 @@ _可以使用.NET 资源文件本地化 Xamarin.Forms 应用。_
 
 ## <a name="overview"></a>概述
 
-本地化.NET 应用程序使用的内置机制[RESX 文件](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx)和中的类`System.Resources`和`System.Globalization`命名空间。 包含已翻译的字符串的 RESX 文件都嵌入到 Xamarin.Forms 程序集，以及一个编译器生成的类，提供对翻译强类型访问。 然后可以在代码中检索已翻译的文本。
+用于本地化.NET 应用程序使用的内置机制[RESX 文件](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx)中的类和`System.Resources`和`System.Globalization`命名空间。 包含已翻译的字符串的 RESX 文件嵌入在 Xamarin.Forms 程序集，以及编译器生成的类，提供强类型化访问翻译。 然后可以在代码中检索已翻译的文本。
 
 ### <a name="sample-code"></a>代码示例
 
 有与此文档关联的两个示例：
 
-* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization)是很简单的示例所述的概念。 下面所示的代码片段是所有与此示例。
-* [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized)是基本正在运行的应用使用这些本地化技术。
+* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization)介绍的概念非常简单演示。 如下所示的代码段都来自此示例。
+* [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized)是使用这些本地化技术的基本工作应用。
 
-#### <a name="shared-projects-are-not-recommended"></a>建议不要使用共享的项目
+#### <a name="shared-projects-are-not-recommended"></a>不建议使用共享的项目
 
-TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/)但是由于生成系统的限制的资源文件不会获得 **。 designer.cs**生成这违反能够访问的文件在代码中强类型的已翻译的字符串。
+TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/)但是，由于生成系统的限制的资源文件不会收到 **。 designer.cs**生成的文件，这将导致无法访问在代码中强类型已翻译的字符串。
 
-此文档的其余部分都与使用 Xamarin.Forms.NET 标准库模板的项目。
+此文档的其余部分与使用 Xamarin.Forms.NET 标准库模板的项目。
 
 ## <a name="globalizing-xamarinforms-code"></a>全球化 Xamarin.Forms 代码
 
-**全球化**应用程序是使其"全球通用。"的过程 这意味着编写代码，它能够显示不同的语言。
+**全球化**应用程序是使其"全球通用。"的过程 这意味着编写能够显示不同的语言的代码。
 
-全球化应用程序的要点之一生成用户界面，以便有没有*硬编码*文本。 相反，向用户显示的任何内容应检索从一组的已转换为所选语言的字符串。
+全球化应用程序的关键部分之一构建用户界面，以便有没有*硬编码*文本。 相反，向用户显示的任何内容应检索从一组已被翻译为所选语言的字符串。
 
-在本文档中，我们将查看如何使用 RESX 文件来存储这些字符串和检索它们的显示，具体取决于用户的首选项。
+本文档中，我们将介绍如何使用 RESX 文件来存储这些字符串和检索它们的显示，具体取决于用户的首选项。
 
-这些示例目标英语、 法语、 西班牙语、 德语、 中文、 日语、 俄语和葡萄牙语 （巴西） 语言。 应用程序可以转换为所需的尽可能少或任意多个语言。
+这些示例针对英语、 法语、 西班牙语、 德语、 中文、 日语、 俄语和葡萄牙语 （巴西） 语言。 应用程序可以转换为较多或少所需的语言。
 
 > [!NOTE]
-> 在通用 Windows 平台上, RESW 文件应用于推送通知本地化，而不是 RESX 文件。 有关详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
+> 在通用 Windows 平台上 RESW 文件应该用于推送通知本地化，而不是 RESX 文件。 有关详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
-### <a name="adding-resources"></a>将资源添加
+### <a name="adding-resources"></a>添加资源
 
-全球化 Xamarin.Forms.NET 标准库应用程序的第一步添加可用于将使用的所有文本都存储在应用程序的 RESX 资源文件。 我们需要添加包含默认的文本，RESX 文件，然后添加我们想要支持每种语言的其他 RESX 文件。
+全球化 Xamarin.Forms.NET Standard 库应用程序的第一步添加用于将使用的所有文本都存储在应用程序的 RESX 资源文件。 我们需要添加包含默认的文本的 RESX 文件，然后添加我们想要支持每种语言的其他 RESX 文件。
 
 #### <a name="base-language-resource"></a>基本语言资源
 
-基本资源 (RESX) 文件将包含 （的示例假定英语为默认语言） 的默认语言字符串。 将文件添加到 Xamarin.Forms 常见代码项目中，右键单击项目并选择**添加 > 新文件...**.
+基本资源 (RESX) 文件将包含默认语言字符串 （这些示例假定的默认语言是英语）。 通过右键单击项目，然后选择将文件添加到 Xamarin.Forms 公共代码项目**添加 > 新建文件...**.
 
-选择有意义的名称，例如**AppResources**按**确定**。
+选择有意义的名称，例如**AppResources**然后按**确定**。
 
-[![将资源文件添加](text-images/resx-new-file-sml.png "新建文件对话框")](text-images/resx-new-file.png#lightbox "新建文件对话框")
+[![添加资源文件](text-images/resx-new-file-sml.png "新建文件对话框")](text-images/resx-new-file.png#lightbox "新建文件对话框")
 
-两个文件将添加到项目中：
+两个文件将添加到项目：
 
-* **AppResources.resx**可以翻译字符串以 XML 格式的存储位置的文件。
+* **AppResources.resx**可翻译字符串的 XML 格式的存储位置的文件。
 * **AppResources.designer.cs**声明的分部类，以包含对 RESX XML 文件中创建的所有元素的引用的文件。
 
-解决方案树将显示作为相关的文件。 RESX 文件*应*编辑添加新的可以翻译字符串; **。 designer.cs**文件应*不*对其进行编辑。
+在解决方案树将显示为相关的文件。 RESX 文件*应*进行编辑，以便添加新的可翻译字符串; **。 designer.cs**文件应*不*进行编辑。
 
 ![](text-images/appresources-tree.png "AppResources.resx 文件")
 
 ##### <a name="string-visibility"></a>字符串可见性
 
-默认情况下对字符串的强类型引用生成时，将会`internal`对程序集。 这是因为 RESX 文件的默认生成工具生成 **。 designer.cs**文件`internal`属性。
+默认情况下时生成强类型引用为字符串，它们将为`internal`对程序集。 这是因为 RESX 文件的默认生成工具生成 **。 designer.cs**文件具有`internal`属性。
 
-选择**AppResources.resx**文件，并显示**属性**板以查看其中此生成工具是配置。 下面显示的屏幕截图**自定义工具： ResXFileCodeGenerator**。
-
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-[![](text-images/vs-resx-internal-sml.png "AppResources.Resx 的属性窗口")](text-images/vs-resx-internal.png#lightbox)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-[![](text-images/xs-resx-internal-sml.png "AppResources.Resx 的属性填充")](text-images/xs-resx-internal.png#lightbox)
-
------
-
-若要使强类型字符串属性`public`，你必须手动将配置更改为**自定义工具： PublicResXFileCodeGenerator**，下面的屏幕截图中所示：
+选择**AppResources.resx**文件，并显示**属性**板以查看此生成工具的配置。 下面显示的屏幕截图**自定义工具： ResXFileCodeGenerator**。
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-public-sml.png "AppResources.Resx 的属性窗口")](text-images/vs-resx-public.png#lightbox)
+[![](text-images/vs-resx-internal-sml.png "AppResources.Resx 属性窗口")](text-images/vs-resx-internal.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "AppResources.Resx 的属性填充")](text-images/xs-resx-internal.png#lightbox)
-
-
-[![](text-images/xs-resx-public-sml.png "AppResources.Resx 的属性填充")](text-images/xs-resx-public.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "属性面板来显示 AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 -----
 
-此更改是可选的并且仅需要如果你想要跨不同的程序集引用本地化的字符串 （例如，如果将这些 RESX 文件置于不同的程序集到你的代码）。 本主题的示例离开字符串`internal`因为它们在同一 Xamarin.Forms.NET 标准库程序集使用这些定义。
+若要使强类型化的字符串属性`public`，你必须手动将配置更改为**自定义工具： PublicResXFileCodeGenerator**，如以下屏幕截图中所示：
 
-你只需以在基的 RESX 文件上设置自定义工具; 如上所示不需要设置*任何*以下各节所述的特定于语言的 RESX 文件上的生成工具。
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+[![](text-images/vs-resx-public-sml.png "AppResources.Resx 属性窗口")](text-images/vs-resx-public.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+
+[![](text-images/xs-resx-internal-sml.png "属性面板来显示 AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
+
+
+[![](text-images/xs-resx-public-sml.png "属性面板来显示 AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
+
+-----
+
+此更改是可选的并仅需要你想要跨不同的程序集引用本地化的字符串 （例如，如果将 RESX 文件中的不同程序集放置到你的代码）。 此主题的示例使字符串`internal`因为它们同一程序集中 Xamarin.Forms.NET 标准库使用位置定义。
+
+只需在基的 RESX 文件上设置自定义工具，如上所示;不需要设置*任何*以下各节所述的特定于语言的 RESX 文件的生成工具。
 
 ##### <a name="editing-the-resx-file"></a>编辑 RESX 文件
 
-遗憾的是没有任何内置 RESX 编辑器在 Visual Studio for mac。 添加新的可以翻译字符串，则需要添加新的 XML`data`每个字符串的元素。 每个`data`元素可以包含以下：
+遗憾的是没有任何内置的 RESX 编辑器在 Visual Studio for mac。 添加新的可翻译字符串需要新的 XML 添加`data`为每个字符串的元素。 每个`data`元素可以包含以下：
 
-* `name` 属性 （必需） 是针对此可以翻译字符串的密钥。 它必须是有效的 C# 属性名-因此允许不包含空格或特殊字符。
-* `value` 元素 （必需）、 实际应用程序中显示的字符串。
-* `comment` （可选） 的元素可以包含说明为说明了如何使用此字符串转换器。
-* `xml:space` （可选） 若要控制字符串中的间距的保存方式的属性。
+* `name` （必需） 的属性是此翻译字符串的键。 它必须是有效C#属性名称-以便允许使用任何空格或特殊字符。
+* `value` 元素 （必需），它是应用程序中显示的实际字符串。
+* `comment` 元素 （可选） 可以包含说明如何使用此字符串翻译的说明。
+* `xml:space` （可选） 若要控制如何保留在字符串中的间距的属性。
 
 一些示例`data`元素如下所示：
 
@@ -131,34 +131,34 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 </data>
 ```
 
-写入应用程序，应在新到基 RESX 资源文件中添加文本向用户显示的每个段`data`元素。 建议您包括`comment`s 尽可能多地以确保高质量的翻译。
+编写的应用程序，如每个段向用户显示的文本应将添加到基本 RESX 资源文件中的新`data`元素。 建议您包括`comment`s 尽可能多地以确保高质量翻译。
 
 > [!NOTE]
-> Visual Studio （包括免费的社区版） 包含基本的 RESX 编辑器。 如果你有权访问的 Windows 计算机，可以是一种简便方式添加和编辑 RESX 文件中的字符串。
+> Visual Studio （包括免费的 Community 版本） 包含基本的 RESX 编辑器。 如果你有权访问的 Windows 计算机，可以在方便地添加和编辑 RESX 文件中的字符串。
 
 #### <a name="language-specific-resources"></a>特定于语言的资源
 
-通常情况下，直到应用程序的大量都已写入 （在这种情况下，默认 RESX 文件将包含大量字符串），则不会进行默认文本字符串的实际转换。 它仍是在开发周期的初期添加特定于语言的资源使用机器翻译文本，以帮助本地化代码进行测试 （可选） 填充一个好办法。
+通常情况下，默认文本字符串的实际译文就不会发生之前已写入大型应用程序块 （在这种情况下默认 RESX 文件将包含大量字符串）。 它仍是在开发周期的早期添加特定于语言的资源 （可选） 使用的机器翻译文本，以帮助测试本地化代码填充一个好办法。
 
-一个附加的 RESX 文件添加我们想要支持每种语言。
-特定于语言的资源文件必须遵循特定的命名约定： 使用相同的文件名，如基资源文件 （如。 **AppResources**) 后跟一个句点 （.），然后选择的语言代码。 简单的示例包括：
+我们想要支持每种语言添加另一个 RESX 文件。
+特定于语言的资源文件必须遵循特定的命名约定： 基本资源文件 （例如使用相同的文件名。 **AppResources**) 后跟一个句点 （.） 和语言代码。 简单的示例包括：
 
-* **AppResources.fr.resx** -法语语言翻译。
-* **AppResources.es.resx** -西班牙语语言翻译。
-* **AppResources.de.resx** -德语语言翻译。
-* **AppResources.ja.resx**的日语语言翻译。
+* **AppResources.fr.resx**的法语语言翻译。
+* **AppResources.es.resx** -西班牙语翻译。
+* **AppResources.de.resx**的德语语言翻译。
+* **AppResources.ja.resx** -日语语言翻译。
 * **AppResources.zh Hans.resx** -中文 （简体） 语言翻译。
 * **AppResources.zh Hant.resx** -中文 （繁体） 语言翻译。
 * **AppResources.pt.resx** -葡萄牙语语言翻译。
 * **AppResources.pt BR.resx** -巴西葡萄牙语语言翻译。
 
-常规模式是使用两个字母的语言代码，但有 （例如中文） 的一些示例，其中使用另一种格式，以及 （如葡萄牙语 （巴西）） 的其他示例要求四个字符的区域设置标识符的位置。
+常规模式是使用两个字母的语言代码，但有 （如中文版） 的一些示例，其中使用不同的格式，以及 （如葡萄牙语 （巴西）） 的其他示例中有四个字符的区域设置标识符是必需。
 
-这些特定于语言的资源文件*不这样做*需要 **。 designer.cs**分部类，以便它们都可添加为正则 XML 文件，与**生成操作： EmbeddedResource**设置。 此屏幕截图显示一个包含特定于语言的资源文件的解决方案：
+这些特定于语言的资源文件*不这样做*需要 **。 designer.cs**分部类，以便它们可作为常规 XML 文件，添加，使用**生成操作： EmbeddedResource**设置。 此屏幕截图显示了一个包含特定于语言的资源文件的解决方案：
 
 ![](text-images/appresources-langs.png "特定于语言的资源文件")
 
-在开发应用程序和基 RESX 文件已添加文本时，你应将它发送到将将每个转换的转换器`data`元素并返回特定于语言的资源文件 （使用显示的命名约定） 要包括在应用程序。 一些机转换的示例如下所示：
+在应用程序开发和基本的 RESX 文件已添加文本时，您应它发送到每个转换的转换器`data`元素并返回一个特定于语言的资源文件 （使用显示的命名约定） 包含在应用程序中。 机器翻译的一些示例如下所示：
 
 **AppResources.es.resx （西班牙语）**
 
@@ -178,7 +178,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 </data>
 ```
 
-**AppResources.pt BR.resx （葡萄牙语 （巴西)）**
+**AppResources.pt BR.resx （巴西葡萄牙语）**
 
 ```xml
 <data name="AddButton" xml:space="preserve">
@@ -187,13 +187,13 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 </data>
 ```
 
-仅`value`元素需要更新通过转换器-`comment`不能转换。 请记住： 时编辑 XML 文件进行转义保留的字符，例如`<`， `>`，`&`与`&lt;`， `&gt;`，和`&amp;`如果它们出现在`value`或`comment`。
+仅`value`元素需要更新通过转换器-`comment`不能进行转换。 请记住： 编辑 XML 文件进行转义保留的字符喜欢`<`， `>`，`&`与`&lt;`， `&gt;`，并且`&amp;`如果它们出现在`value`或`comment`。
 
 <a name="incode" />
 
-### <a name="using-resources-in-code"></a>代码中使用的资源
+### <a name="using-resources-in-code"></a>在代码中使用的资源
 
-RESX 资源文件中的字符串将可用于在用户界面代码使用`AppResources`类。 `name`分配给每个字符串中 RESX 文件将成为这如下所示，可以在 Xamarin.Forms 代码中引用该类上的属性：
+RESX 资源文件中的字符串可用于在用户界面代码中使用`AppResources`类。 `name`分配给每个字符串在 RESX 文件将成为该类，如下所示，可以在 Xamarin.Forms 代码中引用的属性：
 
 ```csharp
 var myLabel = new Label ();
@@ -205,28 +205,28 @@ myEntry.Placeholder = AppResources.NotesPlaceholder;
 myButton.Text = AppResources.AddButton;
 ```
 
-预期上 iOS、 Android 和通用 Windows 平台 (UWP) 呈现为你的用户界面的一样，只不过现在可以将应用程序翻译成多个语言，因为正在从资源加载文本，而不是硬编码。 下面是在转换之前每个平台上显示用户界面屏幕截图：
+在 iOS、 Android 和通用 Windows 平台 (UWP) 将呈现为你的用户界面所期望的只不过现在就可以将翻译为多种语言的应用，因为正在从资源加载文本，而不是硬编码。 下面是在转换之前每个平台上显示 UI 的屏幕截图：
 
-![](text-images/simple-example-english.png "在转换之前的跨平台用户界面")
+![](text-images/simple-example-english.png "在转换之前的跨平台 Ui")
 
 ### <a name="troubleshooting"></a>疑难解答
 
-#### <a name="testing-a-specific-language"></a>测试特定的语言
+#### <a name="testing-a-specific-language"></a>测试特定语言
 
-它可能会很棘手，若要切换到不同的语言，在你想要快速测试不同的区域性时的开发期间 particulary 的模拟器或设备。
+它可能比较棘手，若要在模拟器或设备切换到不同的语言，尤其是在开发时想要快速测试不同的区域性。
 
-你可以强制一种特定的语言，以通过设置加载`Culture`此代码段中所示：
+您可以强制加载的设置的特定语言`Culture`中此代码片段所示：
 
 ```csharp
 // force a specific culture, useful for quick testing
 AppResources.Culture =  new CultureInfo("fr-FR");
 ```
 
-这种方法 – 直接在上设置的区域性`AppResources`类 – 也可以用于实现在您的应用程序 （而不是使用设备的区域设置） 语言选择器。
+这种方法 – 上直接设置区域性`AppResources`类 – 也可用于实现在您的应用程序 （而不是使用设备的区域设置） 语言选择器。
 
 #### <a name="loading-embedded-resources"></a>加载嵌入资源
 
-尝试调试嵌入的资源 （例如 RESX 文件） 的问题时，下面的代码段非常有用。 将此代码添加到你的应用 （在早期的应用程序生命周期中），将会列出嵌入到程序集中，显示完整的资源标识符的所有资源：
+下面的代码段时，尝试调试嵌入的资源 （如 RESX 文件） 的问题。 将此代码添加到你的应用 （应用程序生命周期中及早），将会列出嵌入程序集中，显示完整的资源标识符的所有资源：
 
 ```csharp
 using System.Reflection;
@@ -239,7 +239,7 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-在**AppResources.Designer.cs**文件 (解决*行 33*)，完整*资源管理器名称*（如指定 `"UsingResxLocalization.Resx.AppResources"`) 类似于下面的代码：
+在中**AppResources.Designer.cs**文件 (围绕*第 33 行*)，完整*资源管理器名称*（例如指定。 `"UsingResxLocalization.Resx.AppResources"`) 类似于下面的代码：
 
 ```csharp
 System.Resources.ResourceManager temp =
@@ -248,27 +248,27 @@ System.Resources.ResourceManager temp =
                 typeof(AppResources).GetTypeInfo().Assembly);
 ```
 
-检查**应用程序输出**的结果的上面显示的调试代码，以确认正确的资源列出 （例如。`"UsingResxLocalization.Resx.AppResources"`).
+检查**应用程序输出**的结果的上面显示的调试代码，以确认正确列出了资源 （即`"UsingResxLocalization.Resx.AppResources"`).
 
 如果没有，则`AppResources`类将不能加载其资源。
-请检查以下内容以解决问题，无法找到资源：
+检查以下项目，其中资源找不到解决的问题：
 
-* 项目的默认命名空间匹配的根命名空间中**AppResources.Designer.cs**文件。
-* 如果**AppResources.resx**文件位于一个子目录，则子目录名称应为命名空间的一部分*和*的资源标识符的一部分。
+* 项目的默认命名空间匹配中的根命名空间**AppResources.Designer.cs**文件。
+* 如果**AppResources.resx**文件位于一个子目录，则子目录名称应为命名空间的一部分*和*资源标识符的一部分。
 * **AppResources.resx**文件具有**生成操作： EmbeddedResource**。
-* **项目选项 > 源代码 >.NET 命名策略 > 使用 Visual Studio 样式资源名称**勾选了。 如果你愿意，可以 untick 这，但是需要引用 RESX 资源时使用的命名空间将整个应用更新。
+* **项目选项 > 源代码 >.NET 命名策略 > 使用 Visual Studio 样式资源名称**勾选了。 如果您愿意可以 untick 这，但是引用 RESX 资源时使用的命名空间将需要更新整个应用。
 
-#### <a name="doesnt-work-in-debug-mode-android-only"></a>在调试模式下 (仅 Android) 不起作用
+#### <a name="doesnt-work-in-debug-mode-android-only"></a>不能在调试模式 (仅限 Android)
 
-如果使用已翻译的字符串在版本 Android 生成，但不是在调试时，右键单击**Android 项目**和选择**选项 > 生成 > Android 生成**и · ± ј**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
+如果使用已翻译的字符串在你的 Android 版本生成，但不是进行调试时，右键单击**Android 项目**，然后选择**选项 > 生成 > Android 生成**并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
 
 ### <a name="displaying-the-correct-language"></a>显示正确的语言
 
-到目前为止，我们探讨了如何编写代码，以便可以提供翻译，但不是如何实际使它们显示。 Xamarin.Forms 代码可以充分利用。NET 的资源加载正确的语言翻译，但我们需要查询来确定用户选定的语言的每个平台上的操作系统。
+到目前为止，我们探讨了如何编写代码，以便可以提供翻译，但不是如何实际使其显示。 Xamarin.Forms 代码可以充分利用。NET 的资源加载正确的语言翻译，但我们需要查询来确定用户所选的语言的每个平台上的操作系统。
 
-由于获取用户的语言首选项需要一些特定于平台的代码，使用[依赖服务](~/xamarin-forms/app-fundamentals/dependency-service/index.md)公开 Xamarin.Forms 应用中的信息并为每个平台实现它。
+由于需要一些特定于平台的代码来获取用户的语言首选项，使用[依赖关系服务](~/xamarin-forms/app-fundamentals/dependency-service/index.md)公开 Xamarin.Forms 应用中的该信息并为每个平台实现。
 
-首先，定义一个接口，以便公开用户的首选的区域性，类似于下面的代码：
+首先，定义一个接口来公开用户的首选的区域性，类似于下面的代码：
 
 ```csharp
 public interface ILocalize
@@ -278,7 +278,7 @@ public interface ILocalize
 }
 ```
 
-其次，使用[DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) Xamarin.Forms 中`App`类来调用接口并将我们 RESX 资源区域性设置为正确的值。 请注意，我们不需要手动设置此值为通用 Windows 平台，因为资源 framework 自动在这些平台上识别所选的语言。
+第二种，使用[DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) Xamarin.Forms 中`App`类来调用该接口并将我们 RESX 资源区域性设置为正确的值。 请注意，我们无需手动将此值设置为通用 Windows 平台，因为资源框架会自动识别这些平台上所选的语言。
 
 ```csharp
 if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
@@ -289,9 +289,9 @@ if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.And
 }
 ```
 
-资源`Culture`需要应用程序首次加载，以便使用正确的语言字符串时设置。 （可选） 可能会更新可能会引发 iOS 或 Android，如果用户更新其语言首选项应用运行时的特定于平台的事件根据此值。
+资源`Culture`需要应用程序首次加载，以便使用正确的语言字符串时设置。 （可选） 可能会更新此值根据可能会引发 iOS 或 Android，如果用户更新其语言首选项应用运行时的特定于平台的事件。
 
-实现`ILocalize`接口所示[特定于平台的代码](#Platform-specific_Code)下面一节。 这些实现充分利用此`PlatformCulture`帮助器类：
+为实现`ILocalize`接口所示[特定于平台的代码](#Platform-specific_Code)下面一节。 这些实现充分利用此`PlatformCulture`帮助器类：
 
 ```csharp
 public class PlatformCulture
@@ -330,15 +330,15 @@ public class PlatformCulture
 
 ### <a name="platform-specific-code"></a>特定于平台的代码
 
-要检测要显示的语言必须是特定于平台的因为 iOS、 Android 和 UWP 所有略有不同的方式公开此信息的代码。 代码`ILocalize`依赖服务是提供下面为每个平台，以及其他特定于平台的要求，以确保本地化的文本正确地呈现。
+检测要显示哪种语言的代码必须是特定于平台的因为 iOS、 Android 和 UWP 所有略有不同的方式公开此信息。 有关代码`ILocalize`依赖关系服务是提供下面为每个平台，以及其他特定于平台的要求，以确保本地化的文本能够正确显示。
 
-特定于平台的代码还必须处理其中操作系统使用户能够配置不支持的区域设置标识符的情况。NET 的`CultureInfo`类。 在这些情况下必须编写自定义代码来检测不受支持的区域设置进行替代最佳。NET 兼容的区域设置。
+特定于平台的代码还必须处理情况下，操作系统允许用户配置不支持的区域设置标识符。NET 的`CultureInfo`类。 在这些情况下必须编写自定义代码来检测到不受支持的区域设置进行替代最佳。NET 兼容区域设置。
 
 #### <a name="ios-application-project"></a>iOS 应用程序项目
 
-iOS 用户从日期和时间格式设置区域性分别选择其首选的语言。 若要加载正确的资源来本地化我们只需查询的 Xamarin.Forms 应用`NSLocale.PreferredLanguages`的第一个元素的数组。
+iOS 用户从日期和时间格式设置区域性中分别选择其首选的语言。 若要加载了正确的资源进行本地化的 Xamarin.Forms 应用，我们只需查询`NSLocale.PreferredLanguages`数组中的第一个元素。
 
-以下实现`ILocalize`依赖服务应放在 iOS 应用程序项目。 因为 iOS 而不是短划线 （这是.NET 标准表示形式） 使用下划线代码会将下划线替换实例化之前`CultureInfo`类：
+以下实现`ILocalize`依赖关系服务应位于 iOS 应用程序项目中。 因为 iOS 而不是短划线 （这是.NET 标准表示形式） 使用下划线代码会将下划线替换实例化之前`CultureInfo`类：
 
 ```csharp
 [assembly:Dependency(typeof(UsingResxLocalization.iOS.Localize))]
@@ -422,18 +422,18 @@ public class Localize : UsingResxLocalization.ILocalize
 ```
 
 > [!NOTE]
-> `try/catch`块以`GetCurrentCultureInfo`方法模拟完全匹配找不到，查找接近的匹配项，只需根据语言 （区域设置中的字符的第一个块） 通常用于区域设置说明符 – 回退行为。
+> `try/catch`中的块，`GetCurrentCultureInfo`方法模拟完全匹配找不到，查找接近的匹配项，只需根据语言 （区域设置中的字符的第一个块） 通常用于区域设置说明符 – 回退行为。
 >
-> Xamarin.Forms，这对于某些区域设置中在 iOS 中有效，但并不对应到有效`CultureInfo`中.NET 和上面尝试处理这种情况的代码。
+> Xamarin.Forms 中，对于某些区域设置中在 iOS 中有效，但不是对应于有效`CultureInfo`在.NET 中，并会尝试处理这上面的代码。
 >
-> 例如，iOS**设置 > 常规语言&amp;区域**屏幕可让你设置你的手机**语言**到**英语**但**区域**到**西班牙**，这将导致的区域设置字符串`"en-ES"`。 当`CultureInfo`创建失败，代码回退使用刚刚前两个字母来选择显示语言。
+> 例如，iOS**设置 > 常规语言&amp;区域**屏幕，可设置你的手机**语言**到**英语**但**区域**到**西班牙**，这会导致的区域设置字符串`"en-ES"`。 当`CultureInfo`创建失败，代码将回退使用只是前两个字母来选择显示语言。
 >
-> 开发人员应修改`iOSToDotnetLanguage`和`ToDotnetFallbackLanguage`方法以处理其支持的语言所需的特定用例。
+> 开发人员应修改`iOSToDotnetLanguage`和`ToDotnetFallbackLanguage`方法来处理其支持的语言所需的特定用例。
 
 
-有一些系统定义的用户界面的元素来自动如转换由 iOS**完成**按钮上`Picker`控件。 若要强制转换我们需要指示哪种语言中我们支持这些元素的 iOS **Info.plist**文件。 你可以将这些值添加通过**Info.plist > 源**如下所示：
+有一些系统定义的用户界面元素的自动转换为 iOS，如**完成**按钮`Picker`控件。 若要强制 iOS 这些元素需要我们指明我们在支持哪种语言翻译**Info.plist**文件。 可以添加这些值通过**Info.plist > 源**如下所示：
 
-![在 Info.plist 中的本地化键](text-images/info-plist.png "Info.plist 中的本地化键")
+![本地化 Info.plist 中的键](text-images/info-plist.png "本地化 Info.plist 中的密钥")
 
 或者，打开**Info.plist**文件在 XML 编辑器中，并直接编辑的值：
 
@@ -454,18 +454,18 @@ public class Localize : UsingResxLocalization.ILocalize
 <string>en</string>
 ```
 
-一旦实现依赖服务并更新**Info.plist**，iOS 应用程序将能够显示本地化的文本。
+实现依赖关系服务和更新后**Info.plist**，iOS 应用程序将能够显示本地化的文本。
 
 > [!NOTE]
-> 请注意，Apple 将葡萄牙语略有不同比你预期。
-> 从[其文档](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"使用 pt 作为语言 ID 为葡萄牙语它用作巴西和 PT-PT 中的语言 ID 葡萄牙语因为中葡萄牙使用的该"_。
-> 这意味着当葡萄牙语语言选择在非标准的区域，回退语言将葡萄牙语 （巴西） 在 iOS 上除非编写代码来更改此行为 (如`ToDotnetFallbackLanguage`上面)。
+> 请注意，Apple 将葡萄牙语稍有不同于您所料。
+> 从[其 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"pt 作为语言 ID 为使用葡萄牙语因为它用于在巴西和 PT-PT-语言 ID 为葡萄牙语因为它会用葡萄牙"_。
+> 这意味着当葡萄牙语语言选择在非标准的区域设置的回退语言将葡萄牙语 （巴西） 在 iOS 上，除非编写代码来更改此行为 (如`ToDotnetFallbackLanguage`上面)。
 
 有关 iOS 本地化的详细信息，请参阅[iOS 本地化](~/ios/app-fundamentals/localization/index.md)。
 
 #### <a name="android-application-project"></a>Android 应用程序项目
 
-Android 公开通过当前所选的区域设置`Java.Util.Locale.Default`，并使用下划线分隔符而不是短划线 （它将替换下面的代码）。 将此依赖关系服务实现添加到 Android 应用程序项目：
+Android 公开通过当前所选的区域设置`Java.Util.Locale.Default`，并且还使用下划线分隔符而不是短划线 （它将替换下面的代码）。 将此依赖关系服务实现添加到 Android 应用程序项目：
 
 ```csharp
 [assembly:Dependency(typeof(UsingResxLocalization.Android.Localize))]
@@ -547,44 +547,44 @@ namespace UsingResxLocalization.Android
 ```
 
 > [!NOTE]
-> `try/catch`块以`GetCurrentCultureInfo`方法模拟完全匹配找不到，查找接近的匹配项，只需根据语言 （区域设置中的字符的第一个块） 通常用于区域设置说明符 – 回退行为。
+> `try/catch`中的块，`GetCurrentCultureInfo`方法模拟完全匹配找不到，查找接近的匹配项，只需根据语言 （区域设置中的字符的第一个块） 通常用于区域设置说明符 – 回退行为。
 >
-> Xamarin.Forms，这对于某些区域设置中在 Android 中有效，但并不对应到有效`CultureInfo`中.NET 和上面尝试处理这种情况的代码。
+> Xamarin.Forms 中，对于某些区域设置在 Android 中有效，但不是对应于有效`CultureInfo`在.NET 中，并会尝试处理这上面的代码。
 >
-> 开发人员应修改`iOSToDotnetLanguage`和`ToDotnetFallbackLanguage`方法以处理其支持的语言所需的特定用例。
+> 开发人员应修改`iOSToDotnetLanguage`和`ToDotnetFallbackLanguage`方法来处理其支持的语言所需的特定用例。
 
-一旦此代码已添加到 Android 应用程序项目，它将能够自动显示已翻译的字符串。
+此代码添加到 Android 应用程序项目后，它将能够自动显示已翻译的字符串。
 
 > [!NOTE]
->️**警告：** 如果使用已翻译的字符串在版本 Android 生成，但不是在调试时，右键单击**Android 项目**和选择**选项 > 生成 > Android生成**并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
+>️**警告：** 如果使用已翻译的字符串在你的 Android 版本生成，但不是进行调试时，右键单击**Android 项目**，然后选择**选项 > 生成 > Android构建**，并确保**快速程序集部署**不勾选了。 此选项会导致加载资源出现问题，如果要测试本地化应用程序不应使用。
 
 有关 Android 本地化的详细信息，请参阅[Android 本地化](~/android/app-fundamentals/localization.md)。
 
 #### <a name="universal-windows-platform"></a>通用 Windows 平台
 
-通用 Windows 平台 (UWP) 项目不需要依赖服务。 相反，此平台会自动设置资源的区域性正确。
+通用 Windows 平台 (UWP) 项目不需要依赖关系服务。 相反，此平台自动资源的区域性设置正确。
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-展开.NET 标准库项目中的属性节点并双击**AssemblyInfo.cs**文件。 将以下行添加到要将非特定语言资源程序集语言设置为英语的文件：
+展开.NET Standard 库项目中的属性节点并双击**AssemblyInfo.cs**文件。 将以下行添加到要将非特定语言资源程序集语言设置为英语的文件：
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]
 ```
 
-这可告知资源管理器的应用程序的默认区域性，因此确保语言中性 RESX 文件中定义的字符串 (**AppResources.resx**) 应用程序运行在一个英语区域设置时，将显示。
+这会通知资源管理器的应用程序的默认区域性，因此确保语言中性 RESX 文件中定义的字符串 (**AppResources.resx**) 应用程序运行在一个英语区域设置时，会显示。
 
 ### <a name="example"></a>示例
 
-在更新的特定于平台的项目如下所示上述并重新应用程序编译的已翻译 RESX 文件之后, 更新的翻译将在每个应用可用。 下面是转换为简体中文的示例代码的屏幕快照：
+更新的特定于平台的项目如下所示更高版本和已翻译的 RESX 文件重新编译应用程序之后, 将可以在每个应用更新后的翻译。 下面是示例代码转换为简体中文屏幕截图：
 
-![](text-images/simple-example-hans.png "转换为中文 （简体） 的跨平台用户界面")
+![](text-images/simple-example-hans.png "跨平台 Ui 翻译成中文 （简体）")
 
 有关 UWP 本地化的详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
 ## <a name="localizing-xaml"></a>本地化 XAML
 
-当生成标记的 XAML 中的 Xamarin.Forms 用户界面将与类似此操作，请使用字符串嵌入直接在 XML 中：
+当生成标记的 XAML 中的 Xamarin.Forms 用户界面将类似于以下形式，与字符串嵌入直接在 XML 中：
 
 ```xaml
 <Label Text="Notes:" />
@@ -592,7 +592,7 @@ namespace UsingResxLocalization.Android
 <Button Text="Add to list" />
 ```
 
-理想情况下，我们无法转换直接在 XAML 中，我们可以通过创建中执行此操作的用户界面控件*标记扩展*。 公开 RESX 资源到使用 XAML 的标记扩展的代码所示。 此类应添加到 Xamarin.Forms 通用代码 （以及 XAML 页面中）：
+理想情况下，我们无法将直接在 XAML 中，我们可以通过创建来执行此操作中的用户界面控件转换*标记扩展*。 公开 RESX 资源到 XAML 标记扩展的代码如下所示。 此类应添加到 Xamarin.Forms 常见代码 （以及 XAML 页面中）：
 
 ```csharp
 using System;
@@ -646,20 +646,20 @@ namespace UsingResxLocalization
 }
 ```
 
-下面的列表内容说明了在上面的代码的重要元素：
+下面的列表内容说明了上面的代码中的重要元素：
 
-* 此类命名`TranslateExtension`，而是通过约定我们可以指就**翻译**我们标记中。
+* 此类命名`TranslateExtension`，但按照惯例，我们可以引用是作为**Translate**我们标记中。
 * 此类应实现`IMarkupExtension`，所需为其 Xamarin.Forms 工作。
-* `"UsingResxLocalization.Resx.AppResources"` 是我们 RESX 资源的资源标识符。 它包含我们默认命名空间、 资源文件所在的文件夹和默认的 RESX 文件名。
-* `ResourceManager`类创建使用`IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`来确定当前的程序集加载资源，并缓存在静态中`ResMgr`字段。 它创建为`Lazy`类型，以便其创建将推迟，直到它首先用`ProvideValue`方法。
-* `ci` 使用依赖项服务从本机操作系统中获取用户的选择的语言。
-* `GetString` 是从资源文件中检索实际的已翻译的字符串的方法。 在通用 Windows 平台上，`ci`将为 null 因为`ILocalize`接口未实现在这些平台上。 这是等效于调用`GetString`仅带第一个参数的方法。 相反，资源框架会自动识别区域设置，并将从相应的 RESX 文件中检索已翻译的字符串。
-* 错误处理已包含在内，以帮助调试缺少的资源通过引发异常 (在`DEBUG`仅限模式)。
+* `"UsingResxLocalization.Resx.AppResources"` 是我们 RESX 的资源的资源标识符。 它是我们默认命名空间、 资源文件所在的文件夹和默认的 RESX 文件名组成。
+* `ResourceManager`使用创建类`IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`若要确定当前的程序集将加载资源，并缓存在静态`ResMgr`字段。 它将作为创建`Lazy`类型，以便其创建推迟到中的第一次使用`ProvideValue`方法。
+* `ci` 使用依赖关系服务从本机操作系统中获取用户的所选的语言。
+* `GetString` 是从资源文件中检索实际的已翻译的字符串的方法。 在通用 Windows 平台上，`ci`将为 null 因为`ILocalize`这些平台上不实现接口。 这相当于调用`GetString`仅带第一个参数的方法。 相反，资源框架会自动识别区域设置，将从相应的 RESX 文件中检索的已翻译的字符串。
+* 错误处理已包括在内，以帮助调试缺少的资源通过引发异常 (在`DEBUG`仅模式下)。
 
-以下 XAML 代码段演示如何使用标记扩展。 有两个步骤即可使它正常：
+以下 XAML 代码段演示如何使用标记扩展。 有两个步骤以使其正常运行：
 
-1. 声明自定义`xmlns:i18n`在根节点的命名空间。 `namespace`和`assembly`完全-在此示例中它们是相同但可以是不同项目中的项目设置必须匹配。
-2. 使用`{Binding}`上将通常包含要调用的文本的属性的语法`Translate`标记扩展。 资源键是唯一的必需的参数。
+1. 声明自定义`xmlns:i18n`命名空间的根节点中。 `namespace`和`assembly`完全-在此示例中它们完全相同，但可能不同项目中的项目设置必须匹配。
+2. 使用`{Binding}`通常会包含要调用的文本的属性的语法`Translate`标记扩展。 资源键是唯一的必需的参数。
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -681,14 +681,14 @@ namespace UsingResxLocalization
 <Button Text="{i18n:TranslateExtension Text=AddButton}" />
 ```
 
-## <a name="localizing-platform-specific-elements"></a>本地化特定于平台的元素
+## <a name="localizing-platform-specific-elements"></a>在本地化特定于平台的元素
 
-尽管我们可以满足 Xamarin.Forms 代码中的用户界面的转换，但有一些必须在每个特定于平台的项目中的元素。 本部分将介绍如何本地化：
+虽然我们可以处理的 Xamarin.Forms 代码中的用户界面转换，但是有一些元素必须在每个特定于平台的项目中完成的。 本部分将介绍如何本地化：
 
 * Application Name
 * 图像
 
-示例项目包括已本地化的图像调用**flag.png**中, 引用了该 C#，如下所示：
+示例项目包括名为本地化的图像**flag.png**中, 引用了C#，如下所示：
 
 ```csharp
 var flag = new Image();
@@ -704,7 +704,7 @@ switch (Device.RuntimePlatform)
 }
 ```
 
-在如下的 XAML 中还引用标志映像：
+标志图像也引用中 XAML 如下：
 
 ```xaml
 <Image>
@@ -717,49 +717,49 @@ switch (Device.RuntimePlatform)
 </Image>
 ```
 
-所有平台将自动都解决类似这样的映像，本地化版本的映像引用，前提执行如下所述的项目结构。
+只要实现如下所述的项目结构，所有平台将自动都解析到本地化版本的映像，这些图像引用。
 
 ### <a name="ios-application-project"></a>iOS 应用程序项目
 
-iOS 使用名为本地化 Projects 命名标准或 **.lproj**目录，用于包含映像和字符串资源。 这些目录中可以包含在应用中，使用的图像的本地化的版本以及**InfoPlist.strings**可用来本地化应用程序名称的文件。 有关 iOS 本地化的详细信息，请参阅[iOS 本地化](~/ios/app-fundamentals/localization/index.md)。
+iOS 使用某一命名标准称为本地化项目或 **.lproj**目录，用于包含图像和字符串资源。 这些目录可以包含在应用中，使用的图像的本地化的版本以及**InfoPlist.strings**可用于本地化的应用程序名称的文件。 有关 iOS 本地化的详细信息，请参阅[iOS 本地化](~/ios/app-fundamentals/localization/index.md)。
 
 #### <a name="images"></a>图像
 
-此屏幕快照显示 iOS 示例应用程序与特定于语言的 **.lproj**目录。 西班牙语目录调用**es.lproj**，包含默认的映像的本地化的版本，以及**flag.png**:
+此屏幕截图显示了具有特定于语言的 iOS 示例应用程序 **.lproj**目录。 西班牙语目录称为**es.lproj**，包含默认图像的本地化的版本，以及**flag.png**:
 
 ![](text-images/ios-resources.png "iOS 本地化项目目录")
 
-每个语言目录包含一份**flag.png**、 针对该语言本地化。 如果提供没有图像，则操作系统将默认为默认语言目录中的图像。 有关完整 Retina 支持，还应提供**@2x**和**@3x**的每个图像的副本。
+每个语言目录包含一份**flag.png**，该语言的本地化。 如果提供没有图像，则操作系统将默认为默认语言的目录中的图像。 有关完整的 Retina 支持，应提供**@2x**并**@3x**每个映像的副本。
 
 #### <a name="app-name"></a>应用程序名称
 
-内容**InfoPlist.strings**是不仅仅是一个键-值来配置的应用程序名称：
+内容**InfoPlist.strings**只是一个单个键-值来配置应用程序名称：
 
 ```csharp
 "CFBundleDisplayName" = "ResxEspañol";
 ```
 
-当运行应用程序时，应用程序名称和映像已同时本地化：
+运行应用程序时，应用程序名称和映像已同时本地化：
 
-![](text-images/ios-imageicon.png "iOS 示例应用程序文本和图像本地化")
+![](text-images/ios-imageicon.png "iOS 示例应用程序文本和映像本地化")
 
 ### <a name="android-application-project"></a>Android 应用程序项目
 
-Android 遵循用于存储使用不同的本地化的图像的不同方案**可绘制**和**字符串**带有语言代码后缀的目录。 （如 ZH-TW 或 PT-BR） 需要四个字母区域设置代码时，请注意，Android 需要附加**r**前面 dash/以下区域设置代码 （如。 中文 rTW 或 pt rBR）。 有关 Android 本地化的详细信息，请参阅[Android 本地化](~/android/app-fundamentals/localization.md)。
+Android 遵循不同的方案用于存储使用不同的本地化的图像**drawable**并**字符串**带有语言代码后缀的目录。 当需要 （例如 ZH-TW 或 PT） 的四个字母区域设置代码时，请注意，Android 需要额外**r**前面 dash/以下区域设置代码 （例如。 zh rTW 或 pt rBR）。 有关 Android 本地化的详细信息，请参阅[Android 本地化](~/android/app-fundamentals/localization.md)。
 
 #### <a name="images"></a>图像
 
-此屏幕快照显示 Android 示例，其中具有某些本地化 drawables 和字符串：
+此屏幕截图显示了 Android 示例某些本地化的绘图和字符串：
 
-![](text-images/android-resources.png "Android 本地化 Drawables 和字符串目录")
+![](text-images/android-resources.png "Android 本地化绘图和字符串目录")
 
-请注意，Android 不会使用中文 Hans 和简体中文和繁体中文; 此不同代码相反，它仅支持特定国家/地区代码 ZH-CN 和 ZH-TW。
+请注意，Android 不使用-Zh-hans 和简体和繁体中文; Zh-hant 代码相反，它仅支持特定国家/地区代码 ZH-CN 和 ZH-TW。
 
-若要为高密度屏幕支持不同的分辨率的图像，创建与其他语言文件夹`-*dpi`后缀，例如**drawables es mdpi**， **drawables es xdpi**， **drawables es xxdpi**等。请参阅[提供的替代项 Android 资源](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)有关详细信息。
+若要支持高密度屏幕的不同分辨率的图像，创建与其他语言文件夹`-*dpi`后缀，如**绘图 es mdpi**，**绘图 es xdpi**， **绘图 es xxdpi**，等等。请参阅[提供的替代 Android 资源](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)有关详细信息。
 
 #### <a name="app-name"></a>应用程序名称
 
-内容**strings.xml**是不仅仅是一个键-值来配置的应用程序名称：
+内容**strings.xml**只是一个单个键-值来配置应用程序名称：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -768,42 +768,42 @@ Android 遵循用于存储使用不同的本地化的图像的不同方案**可�
 </resources>
 ```
 
-更新**MainActivity.cs** Android 应用程序项目中，以便`Label`引用 XML 的字符串。
+更新**MainActivity.cs**的 Android 应用程序项目中，以便`Label`引用 XML 的字符串。
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
-应用程序现在本地化的应用程序名称和映像。 下面是结果的屏幕快照中 (西班牙语）：
+现在，应用程序本地化的应用程序名称和图像。 下面是结果 （在西班牙语） 的屏幕截图：
 
-![](text-images/android-imageicon.png "Android 示例应用程序文本和图像本地化")
+![](text-images/android-imageicon.png "Android 示例应用程序文本和映像本地化")
 
 ### <a name="universal-windows-platform-application-projects"></a>通用 Windows 平台应用程序项目
 
-通用 Windows 平台拥有简化了映像和应用程序名称的本地化资源基础结构。 有关 UWP 本地化的详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
+通用 Windows 平台的强大简化了映像和应用程序名称的本地化的资源基础结构。 有关 UWP 本地化的详细信息，请参阅[UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)。
 
 #### <a name="images"></a>图像
 
-可以将它们放置在特定资源的文件夹中，按本地化映像，如下面的屏幕截图中所示：
+可以通过将它们放在特定于资源的文件夹中，本地化图像，如以下屏幕截图中所示：
 
 ![](text-images/uwp-image-folder-structure.png "UWP 映像本地化文件夹结构")
 
-在运行时的 Windows 资源基础结构将选择适当的映像，根据用户的区域设置。
+在运行时的 Windows 资源基础结构将选择合适的映像，根据用户的区域设置。
 
 ## <a name="summary"></a>总结
 
-可以使用 RESX 文件和.NET 全球化类本地化 Xamarin.Forms 应用程序。 除了特定于平台的代码来检测用户希望哪种语言的少量，大部分本地化工作集中在通用代码。
+可以使用 RESX 文件和.NET 全球化类本地化 Xamarin.Forms 应用程序。 除少量特定于平台的代码来检测用户首选哪种语言，本地化工作的大部分常见的代码中集中管理。
 
-若要利用 iOS 和 Android 中提供的多分辨率支持的特定于平台的方式通常处理图像。
+若要充分利用 iOS 和 Android 中提供的多分辨率支持特定于平台的方式通常处理映像。
 
 ## <a name="related-links"></a>相关链接
 
 - [RESX 本地化示例](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
-- [TodoLocalized 示例应用程序](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
+- [TodoLocalized 示例应用](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
 - [跨平台本地化](~/cross-platform/app-fundamentals/localization.md)
 - [iOS 本地化](~/ios/app-fundamentals/localization/index.md)
 - [Android 本地化](~/android/app-fundamentals/localization.md)
 - [UWP 本地化](/windows/uwp/design/globalizing/globalizing-portal/)
 - [使用 CultureInfo 类 (MSDN)](http://msdn.microsoft.com/library/87k6sx8t%28v=vs.90%29.aspx)
-- [查找和使用特定区域性 (MSDN) 为资源](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [查找并使用为特定区域性 (MSDN) 资源](http://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)

@@ -4,15 +4,15 @@ description: 本文档介绍如何设置 ARKit 应用在 Xamarin.iOS 中，然�
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351686"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103889"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>ARKit 使用 Xamarin.iOS 中 UrhoSharp
 
@@ -25,7 +25,7 @@ ms.locfileid: "39351686"
 
 ## <a name="the-basics"></a>基本知识
 
-我们要做并显示三维内容之上世界通过 iPhone 所示。   我们的想法是 blend 来自手机的照相机，摄像机带有三维内容、 内容和用户的手机在将移动的房间内，确保它们是属于该房间像三维对象-这是由到此世界上定位对象。
+我们要做并显示三维内容之上世界的 iPhone/iPad 所示。   我们的想法是 blend 来自设备的照相机，摄像机带有三维内容、 内容和用户的设备在将移动的房间内，确保它们是属于该房间像三维对象-这是由到此世界上定位对象。
 
 ![在 ARKit 动画的图](urhosharp-images/image1.gif)
 

@@ -1,85 +1,85 @@
 ---
-title: Xamarin 探查器故障排除
-description: 本文档提供与 Xamarin 探查器相关的疑难解答信息。 它介绍与日志记录和诊断，IDE 中，以及其他主题相关的问题。
+title: Xamarin Profiler 故障排除
+description: 本文档提供与 Xamarin Profiler 相关的故障排除信息。 它描述与日志记录和诊断、 IDE 和其他主题相关的问题。
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 71faf79ef9b783480dbb6ff4674859a9148abca3
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103746"
 ---
-# <a name="xamarin-profiler-troubleshooting"></a>Xamarin 探查器故障排除
+# <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 故障排除
 
 ## <a name="logging-and-diagnostics"></a>日志记录和诊断
 
-Xamarin 团队可以帮助跟踪问题，如果你向我们提供信息，包括：
+Xamarin 团队可帮助跟踪问题，如果你向我们提供的信息，包括：
 
-- 问题、 崩溃时，或失败和工作流对它引起段视频。
-- 日志输出 （见下文）。
-- **.Mlpd**正在生成分析会话 （见下文）。
+- 截屏视频中的问题、 崩溃或故障以及导致它在工作流。
+- 日志会输出 （见下文）。
+- **.Mlpd**正在生成的分析会话 （见下文）。
 
 ### <a name="getting-log-outputs"></a>获取日志输出
 
 在 Mac 上日志会保存到`~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`。
 
-在 Windows 上这些将保存到`%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log`请包括最新的日志，每当您提交问题。
+在 Windows 上这些保存到`%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log`每当提交问题时请包括最新的日志。
 
-我们正在将添加详细日志记录我们看一下，因此此输出应增长，并且随着时间的推移会更有用。
+我们添加了更多记录，我们看一下，因此此输出应增长，并随着时间的推移变得更加有用。
 
 <a name="gen_mlpd" />
 
 ### <a name="generating-mlpd-files"></a>生成.mlpd 文件
 
-**.Mlpd**文件是单声道运行时探查器的压缩的输出。 Xamarin 探查器 GUI 读取从数据 **.mlpd**并将其显示为用户。 **.mlpd** ，则可为 Xamarin 调试工具，因为它们可帮助我们诊断的问题探查器可能会遇到与你的数据的工程师文件。
+**.Mlpd**文件是压缩的 mono 运行时探查器输出。 Xamarin Profiler GUI 中读取的数据 **.mlpd** ，并为用户显示。 **.mlpd**文件可用于 Xamarin 调试工具，因为它们可帮助诊断 Profiler 可能会遇到与你的数据的问题，我们的工程师。
 
-**.Mlpd**为当前会话自动保存在你的 Mac 的`/tmp`目录，并可以确定按时间戳。 如果你启用日志记录，则第一个输出将为的路径 **.mlpd**文件。 **.Mlpd**文件通常保存在目录中启动 ~/var/文件夹...
+**.Mlpd**的当前会话自动保存在你的 Mac`/tmp`目录，并可以确定按时间戳。 如果在启用日志记录，第一个输出将的路径 **.mlpd**文件。 **.Mlpd**文件通常保存在目录中启动 ~/var/文件夹...
 
-**.Mlpd**为当前会话也可以通过选择保存**文件 > 另存为...** 从探查器的菜单：
+**.Mlpd**也可以通过选择保存当前会话的**文件 > 另存为...** 从 Profiler 的菜单：
 
 **Visual Studio for Mac**:
 
-![](troubleshooting-images/image17.png "Visual Studio 中适用于 Mac 的保存.mlpd 文件")
+![](troubleshooting-images/image17.png ".Mlpd 文件保存在 Visual Studio for Mac")
 
 **Visual Studio**:
 
 ![](troubleshooting-images/image17-vs.png "在 Visual Studio 中保存.mlpd 文件")
 
-务必请注意， **.mlpd**包含大量的信息，并且将大文件大小。
+务必要注意 **.mlpd**包含大量信息，并将大文件大小。
 
 ## <a name="troubleshooting"></a>疑难解答
 
-下面列出了常见的问题、 解决方法，和提示和技巧使用探查器。
+以下列表显示常见难题、 解决方法，以及提示和技巧使用 Profiler。
 
 > [!NOTE]
-> **请注意**： 你必须是一个 Visual Studio**企业**订阅服务器才可解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac。
+> **请注意**： 您需要 Visual Studio**企业**订阅服务器才能解锁此功能在 Windows 上的任一 Visual Studio Enterprise 或 Visual Studio for mac。
 
-#### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>我无法看到 iOS 探查器选项，或灰显 [Visual Studio 和适用于 Mac 的 Visual Studio]
+#### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>看不到 iOS 探查器选项，或灰显 [Visual Studio 和 Visual Studio for Mac]
 
-检查来解决此问题的以下设置：
+检查以下设置来解决此问题：
 
-- 确保您使用的调试配置
-- 确保你正在使用 SGen 垃圾回收器。
-- 确保该平台是[支持](~/tools/profiler/index.md#Profiler_Support)。
-- 确保你具有正确的许可证。
-- 确保你在正确和身份验证。
-- [Visual Studio]你必须使用[Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/)和具有有效的企业许可证。
+- 确保使用调试配置
+- 请确保使用 SGen 垃圾回收器。
+- 请确保该平台是[支持](~/tools/profiler/index.md#Profiler_Support)。
+- 确保具有合适的许可证。
+- 确保记录您在和正确的身份验证。
+- [Visual Studio]您必须使用[Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/)以及是否具有有效的企业许可证。
 
-#### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>在尝试启动探查器时遇到错误
+#### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>尝试启动探查器时遇到错误
 
-如果你运行到此错误框中，在 Visual Studio 中使用探查器时：
+如果您遇到此错误框在 Visual Studio 中使用探查器时：
 
-![](troubleshooting-images/error.png "错误对话框时使用 Visual Studio 中的探查器")
+![](troubleshooting-images/error.png "在 Visual Studio 中使用探查器时的错误框")
 
-它通常是由于无法启动到模拟器 / 仿真程序。 重试和正常运行应用程序，请修复它赋予，，然后尝试再次使用探查器的问题。
+它通常是由于无法启动到模拟器 / 仿真程序。 请尝试并正常运行应用，修复的问题，它提供了，然后尝试再次使用 Profiler。
 
-#### <a name="to-watch-a-specific-thread"></a>若要监视特定线程
+#### <a name="to-watch-a-specific-thread"></a>若要观看特定线程
 
-如果你有你想要专门观看的线程，理想的做法是以名称在非常从其创建，以便获取线程`ThreadName`而不是`0x0`。 有关作为 UI 中设置线程名称的示例，你可以使用下面的代码：
+如果你有想要专门观看的线程，它将为命名在最开始创建，以便 get 获取线程的理想之选`ThreadName`而不是`0x0`。 若要为用户界面中设置线程名称示例，可以使用以下代码：
 
 ```csharp
 RunOnUiThread (() => {
@@ -89,6 +89,6 @@ RunOnUiThread (() => {
 
 ## <a name="related-links"></a>相关链接
 
-- [演练-使用 Xamarin 探查器](~/tools/profiler/index.md)
+- [演练-使用 Xamarin Profiler](~/tools/profiler/index.md)
 - [内存和性能的最佳做法](~/cross-platform/deploy-test/memory-perf-best-practices.md)
 - [发行说明](https://developer.xamarin.com/releases/profiler/preview/)

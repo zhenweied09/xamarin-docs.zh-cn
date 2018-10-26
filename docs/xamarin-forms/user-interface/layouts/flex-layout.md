@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: a6c1b0a4e0df1c25f595ca4eb53079c74b84972e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998578"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108738"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -486,7 +486,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 [![在实验页中： 对齐内容](flex-layout-images/ExperimentAlignContent.png "实验页中的对齐内容")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
-在 iOS 屏幕截图，这两个行位于顶部;在 Android 屏幕截图，它们在中心;并且 UWP 的屏幕截图中它们是在底部。 此外可以以各种方式分布行：
+在 iOS 屏幕截图中，这两个行位于顶部;在 Android 屏幕截图，它们在中心;并且 UWP 的屏幕截图中它们是在底部。 此外可以以各种方式分布行：
 
 [![在实验页中： 对齐内容 2](flex-layout-images/ExperimentAlignContent2.png "实验页中的对齐内容 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 

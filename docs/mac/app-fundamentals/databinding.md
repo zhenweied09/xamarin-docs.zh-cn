@@ -4,15 +4,15 @@ description: 本文介绍如何使用键-值的编码和观察以便数据绑定
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40250962"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110376"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>数据绑定和键值编码在 Xamarin.Mac 中
 
@@ -334,7 +334,7 @@ public NSArray People {
 此处需要注意两件事：
 
 1. 我们使用了`NSMutableArray`而不是标准的 C# 数组或集合，因为它要求将数据绑定到 AppKit 控件如**表视图**，**大纲视图**和**集合**.
-2. 我们通过它强制转换为公开的员工数组`NSArray`的数据绑定目的和更改其 C# 格式名称， `People`，为数据绑定要求，`personModelArray`形式 **{class_name} 数组**（请注意第一个字符进行大小写）。
+2. 我们通过它强制转换为公开的员工数组`NSArray`数据绑定目的而更改其C#格式的名称， `People`，为数据绑定要求，`personModelArray`形式 **{class_name} 数组**（请注意，第一个字符进行大小写）。
 
 接下来，我们需要添加一些特殊名称公共方法，以支持**阵列控制器**并**树控制器**:
 

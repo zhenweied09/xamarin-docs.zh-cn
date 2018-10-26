@@ -1,31 +1,31 @@
 ---
-title: 与 MonoGame 3D 图形的简介
-description: MonoGame 提供用于显示实时 3D 图形的灵活、 更高效的 API。 它包括用于呈现的更高级别的构造，并还对较低级别图形资源的访问。
+title: 使用 MonoGame 的 3D 图形简介
+description: MonoGame 提供灵活、高效的 API，用于显示实时 3D 图形。 它包括用于渲染的较高级构造，同时可以访问较低级的图形资源。
 ms.prod: xamarin
 ms.assetid: 8706826E-8BA5-4E00-A7D6-4072626E3292
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: b0d8a5b8ae08c460aee4748036ee171a0e84085d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: dc0f8b34bbd85d5687431d8a20db4a31c72f5298
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109622"
 ---
-# <a name="introduction-to-3d-graphics-with-monogame"></a>与 MonoGame 3D 图形的简介
+# <a name="introduction-to-3d-graphics-with-monogame"></a>使用 MonoGame 的 3D 图形简介
 
-_MonoGame 提供用于显示实时 3D 图形的灵活、 更高效的 API。它包括用于呈现的更高级别的构造，并还对较低级别图形资源的访问。_
+_MonoGame 为显示实时 3D 图形提供了一个灵活、 高效的 API。它包括用于呈现的更高级别的构造，并还对低级别图形资源的访问。_
 
-MonoGame API 用于开发 3D 游戏和应用程序提供了一组广泛的类。 它支持对硬件的最大的性能，同时保持完全相同的语法在各种平台之间的直接访问。
+MonoGame API 开发 3D 游戏和应用程序提供一组广泛的类。 这样，直接访问硬件的最大性能，同时在各种平台之间维护完全相同的语法。
 
-MonoGame 几乎是相同给 Microsoft 的 XNA，以便开发人员曾使用 XNA 找到 MonoGame 开发熟悉。 开发人员没有使用过 XNA，但具有用于 DirectX 或 OpenGL 3D 游戏，将看到很多类和概念的熟悉以及。
+MonoGame 也几乎与 Microsoft 相同的 XNA，以便使用 XNA 时遇到的开发人员会发现 MonoGame 开发熟悉。 不使用 XNA，但已使用 DirectX 或 OpenGL 的三维游戏开发人员会发现许多类和概念的熟悉以及。
 
-第一个部分介绍如何从.fbx 文件将三维模型添加到你的游戏。 下一部分讨论如何创建包括公共控件，如移动和搜寻 3D 相机。 最后一节将更深入了解`VertexBuffer`从.fbx 文件加载的类可提供更好地控制与呈现模型比较的三维呈现。
+第一个部分介绍了如何将三维模型添加到您的游戏，从.fbx 文件。 下一节讨论了如何创建三维照相机，其中包括公共控件，如移动和仔细查看。 最后一个部分将深入探讨`VertexBuffer`从.fbx 文件加载的类，它允许更灵活地控制与呈现模型比较的 3D 渲染。
 
 
 ## <a name="topics"></a>主题
 
 - [使用模型类](~/graphics-games/monogame/3d/part1.md)
-- [绘制带有顶点的 3D 图形](~/graphics-games/monogame/3d/part2.md)
+- [使用顶点绘制 3D 图形](~/graphics-games/monogame/3d/part2.md)
 - [3D 坐标](~/graphics-games/monogame/3d/part3.md)

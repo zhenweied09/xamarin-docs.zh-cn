@@ -1,69 +1,69 @@
 ---
 title: 使用 watchOS 在 Xamarin 中导航
-description: 本文档介绍如何使用 watchOS 应用程序中的导航。 它讨论模式的接口、 层次结构导航窗格中，和基于页面的接口。
+description: 本文档介绍如何使用在 watchOS 应用程序中进行导航。 它讨论模式接口、 分层导航，以及基于页面的接口。
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c9bcfc388164060549ca7010d11671abfa8230ac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 71978bebcdf6033a766ae2bcb75ae061ed215a8b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102368"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>使用 watchOS 在 Xamarin 中导航
 
-最简单导航上的选项可监视是一个简单[模式弹出](#modal)，出现在当前的场景顶部。
+最简单导航上的选项可监视是一个简单[模式弹出框](#modal)，将出现当前场景的顶部。
 
-存在多场景监视应用是否可用的两个导航范例：
+多场景 watch 应用存在有两种导航模式可用：
 
 - [分层导航](#Hierarchical_Navigation)
 - [基于页面的接口](#Page-Based_Interfaces)
 
 <a name="modal"/>
 
-## <a name="modal-interfaces"></a>模式的接口
+## <a name="modal-interfaces"></a>模式接口
 
-使用`PresentController`方法以模式方式打开接口控制器。 必须已在中定义的接口控制器**Interface.storyboard**。
+使用`PresentController`方法以模式方式打开界面控制器。 界面控制器必须已在中定义**Interface.storyboard**。
 
 ```csharp
 PresentController ("pageController","some context info");
 ```
 
-有模式地显示控制器使用整个屏幕 （覆盖以前相同）。 默认情况下，标题设置为**取消**和点击它会消除控制器。
+有模式地显示控制器使用整个屏幕 （包括上一场景）。 默认情况下的标题设置为**取消**和点击它会消除控制器。
 
-若要以编程方式关闭以模式方式显示控制器，调用`DismissController`。
+若要以编程方式关闭有模式地显示控制器，请调用`DismissController`。
 
 ```csharp
 DismissController();
 ```
 
-模式的屏幕可以是单个场景或使用基于页面的布局。
+模式屏幕可以是一个场景或使用基于页面的布局。
 
 <a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>分层导航
 
-显示例如可以通过导航，类似的方式的堆栈的场景`UINavigationController`适用于 iOS。 可以推送到导航堆栈上和 （以编程方式或通过用户选择） 中弹出场景。
+提供了可以通过反向导航，方式类似于一个堆栈等场景`UINavigationController`适用于 iOS。 可以推送到导航堆栈上和 （以编程方式或通过用户选择） 弹出的场景。
 
 ![](navigation-images/hierarchy-1.png "可以在导航堆栈上推送后台") ![](navigation-images/hierarchy-2.png "场景可以从导航堆栈中弹出")
 
-与 iOS，左侧边缘滑动导航回父控制器分层导航堆栈中。
+与 iOS 一样左边缘扫导航回父控制器分层导航堆栈中。
 
-这两个[WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog)和[WatchTables](https://developer.xamarin.com/samples/WatchTables)示例包括层次结构导航。
+这两个[WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog)并[WatchTables](https://developer.xamarin.com/samples/WatchTables)示例包括分层导航。
 
-### <a name="pushing-and-popping-in-code"></a>推送和弹出在代码中
+### <a name="pushing-and-popping-in-code"></a>推送和弹出代码中
 
-观看工具包不需要过度存档的"导航控制器"要创建类似 iOS 执行的操作-只需推送控制器使用`PushController`方法和导航堆栈将自动创建。
+观看工具包不需要过度存档的"导航控制器"若要创建类似 iOS 执行的操作-只需推送控制器使用`PushController`方法，并导航堆栈会自动创建。
 
 ```csharp
 PushController("secondPageController","some context info");
 ```
 
-监视的屏幕将包括**回**按钮在左上角，但你可以以编程方式从导航堆栈使用删除场景`PopController`。
+监视的屏幕将包括**回**按钮在左上角，但您可以从导航堆栈中使用以编程方式删除场景`PopController`。
 
 ```csharp
 PopController();
@@ -77,7 +77,7 @@ PopToRootController();
 
 ### <a name="using-segues"></a>使用 Segue
 
-Segue 可以定义层次结构导航情节提要中的场景之间创建。 若要获取目标场景，操作系统调用的上下文`GetContextForSegue`初始化新的接口控制器。
+Segue 可以在情节提要来定义分层导航中的场景之间创建。 若要获取上下文的目标场景，操作系统调用`GetContextForSegue`来初始化新的界面控制器。
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier)
@@ -92,12 +92,12 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 ## <a name="page-based-interfaces"></a>基于页面的接口
 
-基于页面的接口往下轻扫左到右，方式类似于`UIPageViewController`适用于 iOS。 指示器点将显示该屏幕以显示当前显示哪一页的底部。
+基于页面的接口往下轻扫从左到右，方式类似于`UIPageViewController`适用于 iOS。 指示器点沿屏幕以显示当前显示的页的底部显示。
 
 ![](navigation-images/paged-1.png "示例的第一页") ![](navigation-images/paged-2.png "示例第二页") ![](navigation-images/paged-5.png "示例第五个页")
 
 
-若要使基于页面的接口监视应用程序的主 UI，使用`ReloadRootControllers`具有接口控制器和上下文的数组：
+若要使基于页面的界面监视应用程序的主 UI，请使用`ReloadRootControllers`界面控制器和上下文的数组：
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -105,7 +105,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 ReloadRootControllers (controllerNames, contexts);
 ```
 
-你还可以呈现不是根的基于页面的控制器使用`PresentController`从一个其他后台应用程序中。
+此外可以显示不是根的基于页面的控制器使用`PresentController`从一个应用程序中其他场景。
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };

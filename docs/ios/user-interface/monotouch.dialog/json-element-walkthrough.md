@@ -4,14 +4,14 @@ description: MonoTouch.Dialog （mt。D） 包括对 JSON 数据通过动态 UI 
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 94cef78bb7eedc03192071f17af765ebb702e260
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 4c04edc5dd66917dbf83385ab88fd5f01e232c2d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105189"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>使用 JSON 在 Xamarin.iOS 中创建用户界面
 

@@ -1,21 +1,21 @@
 ---
-title: 使用 MonoGame 游戏开发简介
-description: 此多个部分的演练演示如何创建使用 MonoGame 的简单二维应用程序。  它涵盖了常见的游戏编程概念，如图形中，输入，游戏实体和物理。
+title: 使用 MonoGame 的游戏开发简介
+description: 此多部分演练演示如何创建使用 MonoGame 的简单 2D 应用程序。  它涵盖了常见的游戏编程概念，例如，图形中，输入，游戏实体和物理特性。
 ms.prod: xamarin
 ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 46cc3a7e3bb6c58e04626c9d2cc9437c16ba19f5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 4ab98d59bc74672f9531f4dbd3c33a6270582612
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 10/25/2018
 ms.locfileid: "33920801"
 ---
-# <a name="introduction-to-game-development-with-monogame"></a>使用 MonoGame 游戏开发简介
+# <a name="introduction-to-game-development-with-monogame"></a>使用 MonoGame 的游戏开发简介
 
-_此多个部分的演练演示如何创建使用 MonoGame 的简单二维应用程序。它涵盖了常见的游戏编程概念，如图形中，输入，游戏实体和物理。_
+_此多部分演练演示如何创建使用 MonoGame 的简单 2D 应用程序。它涵盖了常见的游戏编程概念，例如，图形中，输入，游戏实体和物理特性。_
 
 本文介绍了用于制作跨平台游戏的 MonoGame API 技术。 有关平台的完整列表，请参阅 [MonoGame 网站](http://www.monogame.net/)。 本教程将使用 C＃ 代码示例，虽然 MonoGame 也完全可以使用F＃。
 

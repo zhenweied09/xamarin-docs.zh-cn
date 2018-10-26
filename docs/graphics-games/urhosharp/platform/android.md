@@ -1,59 +1,59 @@
 ---
 title: UrhoSharp Android 支持
-description: 本文档介绍特定于 Android 的安装程序和功能相关 UrhoSharp 的信息。 具体而言，它讨论了支持的体系结构，如何创建一个项目，配置和启动 Urho，和自定义嵌入的 Urho。
+description: 本文档介绍特定于 Android 的安装程序和功能相关 UrhoSharp 的信息。 具体而言，它讨论了支持的体系结构，如何创建配置并启动 Urho，和 Urho 的自定义嵌入的项目。
 ms.prod: xamarin
 ms.assetid: 8409BD81-B1A6-4F5D-AE11-6BBD3F7C6327
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 6e489f52712989b5f94fa52d5ec6f22a13ce6252
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e7371fa85fd5955e9a0fd285adb32844001821b3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783776"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105424"
 ---
 # <a name="urhosharp-android-support"></a>UrhoSharp Android 支持
 
-_Android 特定安装程序和功能_
+_Android 的特定安装程序和功能_
 
-尽管 Urho 是一个可移植类库，并且允许相同的 API，用于跨各种平台的游戏的逻辑，仍需要初始化 Urho，在您平台特定的驱动程序，并在某些情况下，你将想要利用平台特定的功能.
+尽管 Urho 是可移植类库，并且允许相同的 API，用于跨各种平台的游戏逻辑，仍需要初始化 Urho 在平台特定驱动程序，并在某些情况下，将想要充分利用平台特定功能.
 
-在下面的页面中，假定`MyGame`是的一个子类`Application`类。
+在以下页中，假定`MyGame`是一个的子类`Application`类。
 
 ## <a name="architectures"></a>体系结构
 
-**支持的体系结构**: x86、 armeabi，armeabi v7a
+**支持的体系结构**: x86、 armeabi，armeabi-v7a
 
 ## <a name="create-a-project"></a>创建项目
 
 创建 Android 项目，并添加 UrhoSharp NuGet 包。
 
-添加数据包含你资产的**资产**目录并确保所有文件都具有**AndroidAsset**作为**生成操作**。
+添加数据包含你的资产**资产**目录并确保所有文件都有**AndroidAsset**作为**生成操作**。
 
-![项目设置](android-images/image-3.png "包含资产的资产目录中添加数据")
+![项目安装程序](android-images/image-3.png "包含资产的资产目录中添加数据")
 
 ## <a name="configure-and-launching-urho"></a>配置和启动 Urho
 
-添加 using 语句`Urho`和`Urho.Android`命名空间，并将这段代码用于初始化 Urho，以及启动你的应用程序。
+添加 using 语句`Urho`和`Urho.Android`命名空间，以及如何将这段代码用于初始化 Urho，以及启动你的应用程序。
 
-运行一个游戏，在 MyGame 类中实现的最简单方法是调用
+若要运行游戏时，MyGame 类中实现的最简单方法是调用
 
 ```csharp
 UrhoSurface.RunInActivity<MyGame>();
 ```
 
-这将作为内容与游戏打开全屏活动。
+这将作为内容与游戏打开全屏幕活动。
 
-## <a name="custom-embedding-of-urho"></a>自定义嵌入的 Urho
+## <a name="custom-embedding-of-urho"></a>自定义嵌入 Urho
 
-你可以或者使其 Urho 接管整个应用程序屏幕中，并且若要使用它为你的应用程序的一个组件，可以创建`SurfaceView`通过：
+您可以或者使 Urho 接管整个应用程序屏幕上，并将其用作应用程序的组件，可以创建`SurfaceView`通过：
 
 ```csharp
 var surface = UrhoSurface.CreateSurface<MyGame>(activity)
 ```
 
-你还需要几个事件从你将活动转发到 UrhoSharp，例如：
+您还需要一些将事件转发从您活动到 UrhoSharp，例如：
 
 ```csharp
 protected override void OnPause()
@@ -63,9 +63,9 @@ protected override void OnPause()
 }
 ```
 
-必须为执行同样： `OnResume`， `OnPause`， `OnLowMemory`， `OnDestroy`，`DispatchKeyEvent`和`OnWindowFocusChanged`。
+您必须对执行相同操作： `OnResume`， `OnPause`， `OnLowMemory`， `OnDestroy`，`DispatchKeyEvent`和`OnWindowFocusChanged`。
 
-下面的示例演示将启动游戏的典型活动：
+这显示了启动游戏的典型活动：
 
 ```csharp
 [Activity(Label = "MyUrhoApp", MainLauncher = true,

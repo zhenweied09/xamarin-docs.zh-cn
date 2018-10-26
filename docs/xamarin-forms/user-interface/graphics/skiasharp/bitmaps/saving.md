@@ -4,15 +4,15 @@ description: 了解 SkiaSharp 将位图存储在用户的照片库中支持的�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: e957134ecceee84962e5a4fc153285ea0a2a5906
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 7f34bd5bbab4accaa30c22266dacd30692bf9ccc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107568"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>将 SkiaSharp 位图保存到文件
 
@@ -40,13 +40,13 @@ SkiaSharp 应用程序具有创建或修改位图后，应用程序可能想要�
 - _解码_&mdash;读取位图文件格式并将它解压缩
 - _编码_&mdash;压缩位图和写入位图文件格式
 
-[ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/)类包含多个方法名为`Decode`的创建`SKBitmap`压缩源中。 只需是提供文件名、 流或字节数组。 解码器可以确定文件格式，并将其提交给正确的内部解码函数。
+[ `SKBitmap` ](xref:SkiaSharp.SKBitmap)类包含多个方法名为`Decode`的创建`SKBitmap`压缩源中。 只需是提供文件名、 流或字节数组。 解码器可以确定文件格式，并将其提交给正确的内部解码函数。
 
-此外， [ `SKCodec` ](https://developer.xamarin.com/api/type/SkiaSharp.SKCodec/)类有两个方法名为`Create`，可以创建`SKCodec`从压缩源对象，并允许在解码过程中获取更多地涉及应用程序。 (`SKCodec`类在本文中所示[**进行动画处理 SkiaSharp 位图**](animating.md#gif-animation)与解码动画的 GIF 文件。)
+此外， [ `SKCodec` ](xref:SkiaSharp.SKCodec)类有两个方法名为`Create`，可以创建`SKCodec`从压缩源对象，并允许在解码过程中获取更多地涉及应用程序。 (`SKCodec`类在本文中所示[**进行动画处理 SkiaSharp 位图**](animating.md#gif-animation)与解码动画的 GIF 文件。)
 
 如果编码位图，则需要详细信息： 编码器必须知道应用程序要使用 （JPEG 或 PNG 或其他内容） 的特定文件格式。 如果需要有损格式，则编码还必须知道所需的质量级别。 
 
-`SKBitmap`类定义了一个[ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Encode/p/SkiaSharp.SKWStream/SkiaSharp.SKEncodedImageFormat/System.Int32/)方法具有以下语法：
+`SKBitmap`类定义了一个[ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32))方法具有以下语法：
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
@@ -54,13 +54,13 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 稍后在更详细地介绍了这些方法。 编码的位图将写入可写流。 (中的 W`SKWStream`代表"可写"。)第二个和第三个参数指定的文件格式和 （适用于有损格式） 所需的质量，范围从 0 到 100。
 
-此外， [ `SKImage` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImage/)并[ `SKPixmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPixmap/)类还定义`Encode`的某种程度上更灵活，且可能更喜欢的方法。 您可以轻松地创建`SKImage`对象从`SKBitmap`对象使用静态[ `SKImage.FromBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.FromBitmap/p/SkiaSharp.SKBitmap/)方法。 你可以获取`SKPixmap`对象从`SKBitmp`对象使用[ `PeekPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.PeekPixels()/)方法。
+此外， [ `SKImage` ](xref:SkiaSharp.SKImage)并[ `SKPixmap` ](xref:SkiaSharp.SKPixmap)类还定义`Encode`的某种程度上更灵活，且可能更喜欢的方法。 您可以轻松地创建`SKImage`对象从`SKBitmap`对象使用静态[ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap))方法。 你可以获取`SKPixmap`对象从`SKBitmp`对象使用[ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels)方法。
 
-之一[ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.Encode()/)定义的方法`SKImage`没有参数，会自动保存为 PNG 格式。 该无参数的方法是非常易于使用。
+之一[ `Encode` ](xref:SkiaSharp.SKImage.Encode)定义的方法`SKImage`没有参数，会自动保存为 PNG 格式。 该无参数的方法是非常易于使用。
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>用于保存位图文件的特定于平台的代码
 
-当编码`SKBitmap`对象到特定文件格式，通常您会得到某种类型的流对象或数组的数据。 一些`Encode`方法 (包括不带任何参数定义的一个`SKImage`) 返回[ `SKData` ](https://developer.xamarin.com/api/type/SkiaSharp.SKData/)对象，将其转换为使用的字节数组[ `ToArray` ](https://developer.xamarin.com/api/member/SkiaSharp.SKData.ToArray()/)方法。 然后，此数据必须保存到文件中。 
+当编码`SKBitmap`对象到特定文件格式，通常您会得到某种类型的流对象或数组的数据。 一些`Encode`方法 (包括不带任何参数定义的一个`SKImage`) 返回[ `SKData` ](xref:SkiaSharp.SKData)对象，将其转换为使用的字节数组[ `ToArray` ](xref:SkiaSharp.SKData.ToArray)方法。 然后，此数据必须保存到文件中。 
 
 正在保存到应用程序本地存储中的文件是非常简单，因为您可以使用标准`System.IO`类和方法，此任务。 在本文中演示此技术[**进行动画处理 SkiaSharp 位图**](animating.md#bitmap-animation)与对一系列的 mandelbrot 位图进行动画处理。
 
@@ -237,13 +237,13 @@ public class PhotoLibrary : IPhotoLibrary
 
 ## <a name="exploring-the-image-formats"></a>浏览图像格式
 
-下面是[ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Encode/p/SkiaSharp.SKWStream/SkiaSharp.SKEncodedImageFormat/System.Int32/)方法的`SKImage`试：
+下面是[ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32))方法的`SKImage`试：
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](https://developer.xamarin.com/api/type/SkiaSharp.SKEncodedImageFormat/) 是一个具有十一个位图文件格式，其中一些相当晦涩引用的成员的枚举：
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) 是一个具有十一个位图文件格式，其中一些相当晦涩引用的成员的枚举：
 
 - `Astc` &mdash; 自适应可缩放的纹理压缩
 - `Bmp` &mdash; Windows 位图
@@ -688,7 +688,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-**保存**按钮处理程序使用简化[ `Encode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKImage.Encode()/)方法从`SKImage`。 此方法将编码使用 PNG 格式。 `SKImage`对象会根据创建`saveBitmap`，和`SKData`对象包含已编码的 PNG 文件。 
+**保存**按钮处理程序使用简化[ `Encode` ](xref:SkiaSharp.SKImage.Encode)方法从`SKImage`。 此方法将编码使用 PNG 格式。 `SKImage`对象会根据创建`saveBitmap`，和`SKData`对象包含已编码的 PNG 文件。 
 
 `ToArray`方法的`SKData`获取字节数组。 这是传递给`SavePhotoAsync`方法，以及一个固定的文件夹名称和唯一的文件名构造从当前日期和时间。
 
@@ -704,6 +704,6 @@ public partial class FingerPaintSavePage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [SpinPaint （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/)

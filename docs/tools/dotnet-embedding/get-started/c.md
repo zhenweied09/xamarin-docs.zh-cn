@@ -1,23 +1,23 @@
 ---
 title: C 入门
-description: 本文档介绍如何使用.NET 嵌入在 C 应用程序中嵌入的.NET 代码。 还会讨论如何用于在 Visual Studio 2017 和 Visual Studio 中嵌入.NET mac。
+description: 本文档介绍如何使用.NET 嵌入 C 应用程序中嵌入.NET 代码。 介绍了如何使用.NET 嵌入在 Visual Studio 2017 和 Visual Studio for mac。
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 248d44f23495e45d9d35b34622de0f3b85ca3e8d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a16821e83dc169d7800162e1eaf45c4be661185a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794093"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106801"
 ---
 # <a name="getting-started-with-c"></a>C 入门
 
 ## <a name="requirements"></a>要求
 
-若要使用.NET 嵌入 C，你将需要 Mac 或 Windows 的计算机运行：
+若要使用.NET 嵌入 C，您将需要 Mac 或 Windows 计算机正在运行：
 
 ### <a name="macos"></a>macOS
 
@@ -30,11 +30,11 @@ ms.locfileid: "34794093"
 * Windows 7、 8、 10 或更高版本
 * Visual Studio 2015 或更高版本
 
-## <a name="installing-net-embedding-from-nuget"></a>安装 NuGet 从嵌入.NET
+## <a name="installing-net-embedding-from-nuget"></a>.NET 嵌入从 NuGet 安装
 
-请按照以下[说明](~/tools/dotnet-embedding/get-started/install/install.md)若要为安装和配置.NET 嵌入你的项目。
+请按照这些[说明](~/tools/dotnet-embedding/get-started/install/install.md)来安装和配置.NET 嵌入为你的项目。
 
-你应配置的命令调用将如下所示 （可能使用不同的版本号和路径）：
+命令调用应配置将如下所示 （可能具有不同的版本号和路径）：
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
@@ -52,7 +52,7 @@ $(SolutionDir)\packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe -
 
 ### <a name="output-files"></a>输出文件
 
-如果一切运行正常，你将看到与下面的输出：
+如果一切顺利，您将看到与以下输出：
 
 ```shell
 Parsing assemblies...
@@ -71,12 +71,12 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-由于`--compile`标志已传递给该工具，.NET 嵌入应也已编译的输出文件到是共享库，你可以生成的文件旁边找到， **libmanaged.dylib**上 macOS 和文件**managed.dll** Windows 上。
+由于`--compile`标志传递给该工具，.NET 嵌入应也已编译输出文件到共享库，可找到生成的文件旁边， **libmanaged.dylib**文件在 macOS 和**managed.dll**在 Windows 上。
 
-若要使用共享的库，您可以包括**managed.h** C 标头文件，它提供对应于各自的 C 声明托管库 Api 并使用前面所述的链接编译共享的库。
+若要使用共享的库，可以包括**managed.h** C 头文件，它提供对应于相应的 C 声明托管库 Api 并使用前面提到的链接编译共享的库。
 
 ## <a name="further-reading"></a>其他阅读材料
 
 * [.NET 嵌入限制](~/tools/dotnet-embedding/limitations.md)
-* [致力于开放源代码项目](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [错误代码和描述](~/tools/dotnet-embedding/errors.md)
+* [参与到开放源代码项目](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [错误代码和说明](~/tools/dotnet-embedding/errors.md)

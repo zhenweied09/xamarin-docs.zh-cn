@@ -4,19 +4,19 @@ description: 了解如何创建 SkiaSharp 位图，然后通过创建基于这�
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: c8ddf8c0829cea319dd93dd9c3686b94ed8eb89e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109232"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>创建并在 SkiaSharp 位图上绘制
 
-您已了解如何应用程序可以加载位图，从 Web、 应用程序资源和用户的照片库。 还有可能要创建新应用程序中的位图。 最简单的方法涉及到的构造函数之一[ `SKBitmap` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+您已了解如何应用程序可以加载位图，从 Web、 应用程序资源和用户的照片库。 还有可能要创建新应用程序中的位图。 最简单的方法涉及到的构造函数之一[ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -37,7 +37,7 @@ SKBitmap bitmap = new SKBitmap(width, height);
 
 ## <a name="drawing-on-the-bitmap"></a>在此位图上绘图
 
-在的表面上绘制是位图的绘制视频显示器上相同。 若要绘制视频显示器上，你可以获取`SKCanvas`对象从`PaintSurface`事件参数。 若要绘制位图上，您创建`SKCanvas`对象使用[ `SKCanvas` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/)构造函数：
+在的表面上绘制是位图的绘制视频显示器上相同。 若要绘制视频显示器上，你可以获取`SKCanvas`对象从`PaintSurface`事件参数。 若要绘制位图上，您创建`SKCanvas`对象使用[ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap))构造函数：
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -123,9 +123,9 @@ public partial class HelloBitmapPage : ContentPage
 
 `Clear` 存在两个不同的版本： 
 
-- [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/)方法替换`SKColor`参数替换该颜色的像素为单位为像素的显示图面。
+- [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor))方法替换`SKColor`参数替换该颜色的像素为单位为像素的显示图面。
 
-- [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/)不带任何参数的方法将替换与像素[ `SKColors.Empty` ](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/)颜色，这是一种颜色的所有组件 （红色、 绿色、 蓝色和 alpha） 设置为零。 此颜色有时称为"透明的黑色。"
+- [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear)不带任何参数的方法将替换与像素[ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty)颜色，这是一种颜色的所有组件 （红色、 绿色、 蓝色和 alpha） 设置为零。 此颜色有时称为"透明的黑色。"
 
 调用`Clear`新位图上没有自变量初始化整个位图是完全透明。 随后在位图上绘制的任何内容通常是不透明或半透明。
 
@@ -151,7 +151,7 @@ Color = new SKColor(0, 0, 0, 0)
 
 ## <a name="bitmap-color-types"></a>位图颜色类型
 
-最简单`SKBitmap`构造函数允许您指定整数像素宽度和高度的位图。 其他`SKBitmap`构造函数是更复杂。 这些构造函数需要两个枚举类型的参数： [ `SKColorType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/)并[ `SKAlphaType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/)。 其他构造函数使用[ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/)结构，它将这些信息合并。
+最简单`SKBitmap`构造函数允许您指定整数像素宽度和高度的位图。 其他`SKBitmap`构造函数是更复杂。 这些构造函数需要两个枚举类型的参数： [ `SKColorType` ](xref:SkiaSharp.SKColorType)并[ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType)。 其他构造函数使用[ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo)结构，它将这些信息合并。
 
 `SKColorType`枚举具有 9 成员。 这些成员的每个描述了特定存储位图像素的方式：
 
@@ -161,7 +161,7 @@ Color = new SKColor(0, 0, 0, 0)
 - `Argb4444` &mdash; 每个像素都是 16 位，每个 4 的 alpha、 红色、 绿色和蓝色
 - `Rgba8888` &mdash; 每个像素都是 32 位，8 每个表示红色、 绿色、 蓝色和 alpha
 - `Bgra8888` &mdash; 每个像素都是 32 位，8 每个表示蓝色、 绿色、 红色和 alpha
-- `Index8` &mdash; 每个像素为 8 位，并且表示的索引 [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; 每个像素为 8 位，并且表示的索引 [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; 每个像素都是表示从黑色到白色的灰影的 8 位
 - `RgbaF16` &mdash; 每个像素都是 64 位，使用红、 绿、 蓝色和 alpha 以 16 位浮点格式
 
@@ -596,5 +596,5 @@ public partial class BitmapFlipperPage : ContentPage
 
 ## <a name="related-links"></a>相关链接
 
-- [SkiaSharp Api](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos （示例）](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

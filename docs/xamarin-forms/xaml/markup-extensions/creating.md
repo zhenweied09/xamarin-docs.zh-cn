@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4b3d5c65ddf8be433d1f8e182774aa839f60357
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 6b61d03910d908f5fab0d946ed97c88b1e32885d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109544"
 ---
 # <a name="creating-xaml-markup-extensions"></a>创建 XAML 标记扩展
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` 当需要访问作为嵌入资源的.NET Standard 库项目中存储的图像文件的 XAML 文件时非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法要求完全限定资源名称，其中包含的程序集名称、 文件夹名称和用句点分隔的文件名。 `ImageResourceExtension`不需要的程序集名称部分因为获取使用反射的程序集名称，并将前面添加到`Source`属性。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着除非图像还在该库中，此 XAML 资源扩展不能为外部库的一部分的程序集调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded_images)访问位图作为嵌入资源存储的详细信息的文章。)
+`ImageResourceExtension` 当需要访问作为嵌入资源的.NET Standard 库项目中存储的图像文件的 XAML 文件时非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法要求完全限定资源名称，其中包含的程序集名称、 文件夹名称和用句点分隔的文件名。 `ImageResourceExtension`不需要的程序集名称部分因为获取使用反射的程序集名称，并将前面添加到`Source`属性。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着除非图像还在该库中，此 XAML 资源扩展不能为外部库的一部分的程序集调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded-images)访问位图作为嵌入资源存储的详细信息的文章。)
 
 尽管`ImageResourceExtension`需要`Source`属性设置，`Source`属性指示在属性中为类的内容属性。 这意味着，`Source=`可以省略大括号中的表达式的一部分。 在中**图像资源演示**页上，`Image`元素提取使用文件夹名称和文件名用句点分隔的两个映像：
 

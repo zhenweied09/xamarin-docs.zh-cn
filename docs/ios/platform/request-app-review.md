@@ -1,34 +1,34 @@
 ---
 title: 请求在 Xamarin.iOS 应用评审
-description: 本文介绍 RequestReview 方法添加到 iOS 10，该 Apple，并讨论了如何在 Xamarin.iOS 中实现它。
+description: 本文介绍 RequestReview 方法添加到 iOS 10 中，该 Apple，并讨论了如何在 Xamarin.iOS 中实现它。
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 2b329ebad5faaa635d9a791f8760bd5f521de591
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f72aaa781b0712e206cf02725cfc434594287f41
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788152"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109778"
 ---
 # <a name="request-app-review-in-xamarinios"></a>请求在 Xamarin.iOS 应用评审
 
-_本文介绍如何 RequestReview 方法添加到 iOS 10 以及如何在 Xamarin.iOS 中实现该该 Apple。_
+_这篇文章介绍 RequestReview 方法添加到 iOS 10 及如何在 Xamarin.iOS 中实现该 Apple。_
 
-新到 iOS 10.3`RequestReview()`方法允许 iOS 应用程序要求用户进行评估或对其进行评审。 当用户在已安装从应用商店传送应用程序中调用此方法时，iOS 10 将处理整个分级和开发人员查看过程。 因为此过程受应用商店策略，则警报可能或可能不会显示。
+向 iOS 10.3，新`RequestReview()`方法允许 iOS 应用程序要求用户进行评估或查看它。 用户从应用商店安装的传送应用程序中调用此方法时，iOS 10 将处理整个分级和查看过程帮助开发人员。 由于此过程由应用商店策略管理，警报可能会或可能不会显示。
 
-![](request-app-review-images/review01.png "示例评审请求的警报")
+![](request-app-review-images/review01.png "评审请求一个示例警报")
 
-## <a name="requesting-a-rating-or-review"></a>请求的分级或查看
+## <a name="requesting-a-rating-or-review"></a>请求的评级或评价
 
-虽然`RequestReview()`静态方法`SKStoreReviewController`可以调用类在有意义的用户体验中的任何时刻，控制和由应用商店策略审查流程。 因此，此方法可能或可能不会显示警报，应永远不会调用以响应用户操作，如点击按钮。
+虽然`RequestReview()`的静态方法`SKStoreReviewController`类可以调用在有意义的用户体验在任何时刻，控制和处理的应用商店策略审核过程。 因此，此方法可能会或可能不会显示警报并应永远不会调用以响应用户操作，例如点击一个按钮。
 
-例如，应用可能会请求检查后，将启动给定的次数或游戏玩家完成级别后可能会请求进行评审。
+例如，应用可能会请求评审后，启动给定的数目的时间或播放机完成一个级别后，游戏可能会请求评审。
 
-对请求评论只要 Xamarin.iOS 应用程序完成启动，进行以下更改到`AppDelegate.cs`文件：
+请求评审只要 Xamarin.iOS 应用完成启动，进行以下更改到`AppDelegate.cs`文件：
 
 ```csharp
 using Foundation;
@@ -57,17 +57,17 @@ namespace iOSTenThree
 ```
 
 > [!NOTE]
-> 调用`RequestReview()`在未得到充分开发应用程序将始终显示分级以及查看对话框，以便可以测试它。 这不适用于通过 TestFlight，其中将忽略方法调用已分发的应用。
+> 调用`RequestReview()`在未得到充分开发应用程序将始终显示分级以及查看对话框，以便可以对其进行测试。 这不适用于已通过 TestFlight，其中将忽略方法调用中分发的应用。
 
-当`RequestReview()`方法调用中的传送应用程序用户在已安装从应用商店，iOS 10 为开发人员处理的整个分级和查看过程。 同样，因为此过程受应用商店策略，则警报可能，或可能不会显示。
+当`RequestReview()`方法调用中用户已从应用商店安装的传送应用程序时，iOS 10 将帮助开发人员处理整个评级和评审过程。 同样，因为此过程由应用商店策略管理，警报将可能或可能不会显示。
 
 ## <a name="linking-to-an-app-store-product-page"></a>将链接到应用商店产品页 
 
-除了新`RequestReview`方法，开发人员仍可以提供在应用内从应用商店中的应用程序的产品页的深层链接。 通过追加`action=write-review`到产品页 URL 的末尾，页面将打开用户可以自动编写的应用程序查看。 
+除了新`RequestReview`方法，开发人员仍可以提供的深层链接到应用内从应用商店中的应用程序的产品页。 通过追加`action=write-review`为产品页面的 URL，页面将打开用户可以自动编写的应用程序的评审。 
 
 ## <a name="summary"></a>总结
 
-本文已覆盖 RequestReview 方法添加到 iOS 10 以及如何在 Xamarin.iOS 中实现该该 Apple。
+本文只讨论了 RequestReview 方法添加到 iOS 10 及如何在 Xamarin.iOS 中实现该 Apple。
 
 
 

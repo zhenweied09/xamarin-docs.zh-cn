@@ -4,15 +4,15 @@ description: 本文档介绍在 Xamarin.iOS 中的情节提要。 它介绍了�
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: bd8fee1b8f1941203bb0e6f00e261cbfbbccc9a7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106879"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>在 Xamarin.iOS 中的情节提要简介
 
@@ -129,7 +129,7 @@ if (callHistoryContoller != null) {
 
 有时您可能需要将演示图板添加到以前非演示图板文件。 一次执行此操作在 Visual Studio for Mac 可以简化通过执行以下步骤：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 通过浏览到创建一个新的情节提要文件**文件 > 新建文件 > iOS > 情节提要**，如下所示： 
     
@@ -148,7 +148,7 @@ if (callHistoryContoller != null) {
             set;
             }
             
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 右键单击为项目创建一个新的情节提要文件**添加 > 新文件 > iOS > 空情节提要**，如下所示： 
     

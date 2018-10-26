@@ -4,15 +4,15 @@ description: 本指南介绍 Renderscript 并说明如何使用该目标 API 级
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3331eb579f0aa2d7f29508773c588455c134f56a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241183"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108725"
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 简介
 
@@ -48,11 +48,12 @@ Renderscript 是一个编程框架，由 Google 创建以便改进需要大量�
 
 3. **分配的内存**&ndash;数据传递到和从通过内核_[分配](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_。 内核可能有一个输入和/或一个输出分配。
 
-[Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)命名空间包含用来与 Renderscript 运行时交互的类。 具体而言， [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)类将管理的生命周期和 Renderscript 引擎的资源。 Android 应用程序必须初始化一个或多个[ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)对象。 分配是托管的 API，它负责分配和访问的 Android 应用和 Renderscript 运行时之间共享的内存。 通常情况下，为输入，创建一个资源分配，并可以选择另一个分配创建用于保存该内核的输出。 Renderscript 运行时引擎和关联的托管的包装类将管理对由分配的内存的访问，则无需执行任何额外的工作应用的 Android 应用程序开发人员。
+[Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/)命名空间包含用来与 Renderscript 运行时交互的类。 具体而言， [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)类将管理的生命周期和 Renderscript 引擎的资源。 一个或多个必须进行初始化的 Android 应用 [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+对象。 分配是托管的 API，它负责分配和访问的 Android 应用和 Renderscript 运行时之间共享的内存。 通常情况下，为输入，创建一个资源分配，并可以选择另一个分配创建用于保存该内核的输出。 Renderscript 运行时引擎和关联的托管的包装类将管理对由分配的内存的访问，则无需执行任何额外的工作应用的 Android 应用程序开发人员。
 
 分配将包含一个或多个[Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/)。
 元素是一种特殊的类型的描述中每个分配的数据。
-元素类型必须匹配分配输出的输入元素的类型。 在执行时，将循环并行情况下，输入分配的每个元素并将结果写入到输出 Renderscript 分配。 有两种类型的元素：
+元素类型分配必须与输入元素的类型匹配的输出。 在执行时，将循环并行情况下，输入分配的每个元素并将结果写入到输出 Renderscript 分配。 有两种类型的元素：
 
 - **简单类型**&ndash;从概念上讲这是为 C 数据类型，相同`float`或`char`。
 
@@ -60,7 +61,8 @@ Renderscript 是一个编程框架，由 Google 创建以便改进需要大量�
 
 Renderscript 引擎将执行运行时检查以确保每个分配中的元素与所需的内核兼容。 如果在分配的元素的数据类型与内核的期望的数据类型不匹配，则将引发异常。
 
-所有 Renderscript 内核将都包装的类型，是的后代[ `Android.Renderscripts.Script` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)类。 `Script`类用于为 Renderscript 设置参数，设置相应`Allocations`，并运行 Renderscript。 有两个`Script`Android SDK 中的子类：
+所有 Renderscript 内核将都包装的类型，是的后代 [`Android.Renderscripts.Script`](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)
+类的新实例。 `Script`类用于为 Renderscript 设置参数，设置相应`Allocations`，并运行 Renderscript。 有两个`Script`Android SDK 中的子类：
 
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; 一些常见 Renderscript 任务被捆绑在 Android SDK 中并且都可以访问的子类[ScriptIntrinsic](https://developer.xamarin.com/api/type/Android.Renderscripts.ScriptIntrinsic/)类。 开发人员需要任何额外步骤以在其应用程序中使用这些脚本，因为它们已提供，没有必要。
@@ -107,13 +109,15 @@ Renderscript 引擎将执行运行时检查以确保每个分配中的元素与�
 
 接下来介绍了在 Android 应用程序中使用 Renderscript 的基本步骤。
 
-**创建 Renderscript 上下文** &ndash; [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)类是一个托管的包装 Renderscript 上下文并将控件初始化，资源管理和清理。 使用创建 Renderscript 对象`RenderScript.Create`工厂方法，它使用 Android 上下文 （如活动） 作为参数。 以下代码行演示如何初始化 Renderscript 上下文：
+**创建 Renderscript 上下文** &ndash; [`Renderscript`](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)
+类是一个托管的包装 Renderscript 上下文并将控件初始化，资源管理和清理。 使用创建 Renderscript 对象`RenderScript.Create`工厂方法，它使用 Android 上下文 （如活动） 作为参数。 以下代码行演示如何初始化 Renderscript 上下文：
 
 ```csharp
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**创建分配**&ndash;具体取决于内部函数的脚本，可能有必要创建一个或两个`Allocation`s。 [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)类具有多个工厂方法，用于帮助进行实例化的内部函数的分配。 例如，下面的代码段演示如何创建位图的分配。
+**创建分配**&ndash;具体取决于内部函数的脚本，可能有必要创建一个或两个`Allocation`s。 的 [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+类具有多个工厂方法，用于帮助进行实例化的内部函数的分配。 例如，下面的代码段演示如何创建位图的分配。
 
 ```csharp
 Android.Graphics.Bitmap originalBitmap;

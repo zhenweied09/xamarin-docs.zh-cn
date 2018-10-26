@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Android 中的 Button
-description: 实现用户点击执行操作的 UI 元素
+description: 实现用户点击以执行操作的 UI 元素
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: b741683d7dfe80337a0085ac8d94becb0b518535
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 1eb2ca1881d1710481c84a4420ec644f3a4ab7a5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32435889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107685"
 ---
 # <a name="buttons-in-xamarinandroid"></a>Xamarin.Android 中的 Button
 

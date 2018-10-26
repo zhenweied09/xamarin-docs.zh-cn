@@ -1,30 +1,30 @@
 ---
-title: 生成 tvOS Xamarin 具有的用户界面
-description: 使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的接口生成器和 UX 设计原则。
+title: 构建 tvOS Xamarin 具有用户界面
+description: 包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的 Interface Builder 和 UX 设计原则与 xamarin.tvos 一起使用时。
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: bc29510b90a3651f7547f38c234b6e2904016f83
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a519af9e4bddb949b6e0547387d804f1437deb21
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789062"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104604"
 ---
-# <a name="building-tvos-user-interfaces-with-xamarin"></a>生成 tvOS Xamarin 具有的用户界面
+# <a name="building-tvos-user-interfaces-with-xamarin"></a>构建 tvOS Xamarin 具有用户界面
 
-_使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的接口生成器和 UX 设计原则。_
+_包括用户界面 (UI) 控件的常规用户体验 (UX) 覆盖率使用 Xcode 的 Interface Builder 和 UX 设计原则与 xamarin.tvos 一起使用时。_
 
-当使用 C# 和.NET 基于 Xamarin 的 tvOS，你有权访问相同的用户界面控件的开发人员 Objective C 或 Swift 和 Xcode 中执行。 可以使用 Xcode 的接口生成器来创建和维护你的用户界面 （或根据需要在 C# 代码中直接创建它们）。
+当使用C#和.NET 中的基于 Xamarin 的 tvOS 中，你有权访问相同的用户界面控件使用 OBJECTIVE-C 或 Swift 和 Xcode 中的开发人员执行。 可以使用 Xcode 的 Interface Builder 来创建和维护你的用户界面 (或选择创建直接在C#代码)。
 
-下面列出的指南提供有关使用 tvOS UI 中的元素的 Xamarin.tvOS 应用的详细的信息。 强烈建议你通读[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)首先，因为它涉及关键概念以及我们将在每篇文章中使用的技术。
+下面列出的指南提供有关使用 tvOS UI 中的元素 Xamarin.tvOS 应用详细的信息。 强烈建议您明确[你好，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)第一次，因为它包括了关键概念和技术，我们将在每篇文章中使用。
 
 ## <a name="working-with-alertsiostvosuser-interfacealertsmd"></a>[使用警报](~/ios/tvos/user-interface/alerts.md)
 
-本文介绍如何使用`UIAlertController`向 Xamarin.tvOS 中的用户显示一条警告消息。
+本文介绍如何使用`UIAlertController`Xamarin.tvOS 中向用户显示一条警告消息。
 
 ## <a name="working-with-buttonsiostvosuser-interfacebuttonsmd"></a>[使用按钮](~/ios/tvos/user-interface/buttons.md)
 
@@ -32,7 +32,7 @@ _使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (
 
 ## <a name="working-with-collection-viewsiostvosuser-interfacecollection-viewsmd"></a>[使用集合视图](~/ios/tvos/user-interface/collection-views.md)
 
-本文介绍如何设计和集合视图在 Xamarin.tvOS 应用内部使用。
+本文介绍如何设计和在 Xamarin.tvOS 应用内使用集合视图。
 
 ## <a name="working-with-navigation-barsiostvosuser-interfacenavigation-barsmd"></a>[使用导航栏](~/ios/tvos/user-interface/navigation-bars.md)
 
@@ -40,35 +40,35 @@ _使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (
 
 ## <a name="working-with-page-controlsiostvosuser-interfacepage-controlsmd"></a>[使用页面控件](~/ios/tvos/user-interface/page-controls.md)
 
-本文介绍如何设计和在 Xamarin.tvOS 应用内部使用页面控件。
+本文介绍如何设计和在 Xamarin.tvOS 应用内使用的页控件。
 
 ## <a name="working-with-progress-indicatorsiostvosuser-interfaceprogress-indicatorsmd"></a>[使用进度指示器](~/ios/tvos/user-interface/progress-indicators.md)
 
 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的进度指示器。
 
-## <a name="working-with-segmented-controlsiostvosuser-interfacesegmented-controlsmd"></a>[使用分段控件](~/ios/tvos/user-interface/segmented-controls.md)
+## <a name="working-with-segmented-controlsiostvosuser-interfacesegmented-controlsmd"></a>[中的分段控件](~/ios/tvos/user-interface/segmented-controls.md)
 
 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的分段控件。
 
 ## <a name="working-with-split-view-controllersiostvosuser-interfacesplit-viewsmd"></a>[使用拆分视图控制器](~/ios/tvos/user-interface/split-views.md)
 
-本文介绍如何设计和在 Xamarin.tvOS 应用内部使用拆分视图控制器。
+本文介绍如何设计和拆分视图控制器在 Xamarin.tvOS 应用内使用。
 
 ## <a name="working-with-stack-viewsiostvosuser-interfacestacked-viewsmd"></a>[使用堆栈视图](~/ios/tvos/user-interface/stacked-views.md)
 
-本文介绍如何设计和堆栈视图在 Xamarin.tvOS 应用内部使用。
+本文介绍如何设计和在 Xamarin.tvOS 应用内使用堆栈视图。
 
-## <a name="working-with-tab-barsiostvosuser-interfacetab-barsmd"></a>[使用选项卡条](~/ios/tvos/user-interface/tab-bars.md)
+## <a name="working-with-tab-barsiostvosuser-interfacetab-barsmd"></a>[使用选项卡栏](~/ios/tvos/user-interface/tab-bars.md)
 
-本文介绍如何设计和选项卡条在 Xamarin.tvOS 应用内部使用。
+本文介绍如何设计和选项卡栏在 Xamarin.tvOS 应用内使用。
 
 ## <a name="working-with-table-viewsiostvosuser-interfacetable-viewsmd"></a>[使用表视图](~/ios/tvos/user-interface/table-views.md)
 
-本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。
+本文介绍如何设计和使用在 Xamarin.tvOS 应用内的表视图和表视图控制器。
 
-## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[使用文本和搜索字段](~/ios/tvos/user-interface/text-fields-and-search.md)
+## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[处理文本和搜索字段](~/ios/tvos/user-interface/text-fields-and-search.md)
 
-本文介绍如何设计和使用在 Xamarin.tvOS 应用内的文本和搜索字段。
+本文介绍如何设计和在 Xamarin.tvOS 应用内处理文本和搜索字段。
 
 
 
@@ -77,5 +77,5 @@ _使用 Xamarin.tvOS 时，包括用户界面 (UI) 控件的常规用户体验 (
 - [tvOS 示例](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [构建应用程序对 tvOS 使用 Xamarin （视频）](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [适用于 tvOS 应用编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [构建适用于使用 Xamarin （视频） 的 tvOS 应用](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

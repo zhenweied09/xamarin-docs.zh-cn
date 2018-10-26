@@ -1,4 +1,4 @@
-﻿---
+---
 title: 访问远程数据
 description: 本章介绍 eShopOnContainers 移动应用程序如何访问容器化微服务中的数据。
 ms.prod: xamarin
@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 009a4025bc9df6f657964b7e97e559635ef0a929
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105475"
 ---
 # <a name="accessing-remote-data"></a>访问远程数据
 
@@ -23,7 +23,6 @@ ms.locfileid: "38996160"
 ## <a name="introduction-to-representational-state-transfer"></a>具象状态传输简介
 
 具象状态传输 (REST) 是用于构建基于超媒体的分布式的系统的体系结构样式。 REST 模型的主要优势是它具有基于开放标准，并不绑定该模型或访问任何特定实现到客户端应用程序的实现。 因此，无法使用 Microsoft ASP.NET Core MVC，实现 REST web 服务，并且无法使用任何语言和工具集，可以生成 HTTP 请求并分析 HTTP 响应开发客户端应用程序。
-
 
 REST 模型使用导航方案来表示网络，称为资源上的对象和服务。 通常实现 REST 的系统使用 HTTP 协议来传输请求，从而访问这些资源。 在此类系统中，客户端应用程序提交中标识的资源的 URI 和 HTTP 方法 （如 GET、 POST、 PUT 或 DELETE），该值指示要对该资源执行的操作的窗体的请求。 HTTP 请求的正文包含执行该操作所需的任何数据。
 
@@ -61,26 +60,26 @@ EShopOnContainers 移动应用使用`HttpClient`类，以通过 HTTP 使用正�
 当`CatalogView`导航到，`OnInitialize`中的方法`CatalogViewModel`调用类。 此方法从目录微服务，检索目录数据，如以下代码示例所示：
 
 ```csharp
-public override async Task InitializeAsync(object navigationData)  
+public override async Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Products = await _productsService.GetCatalogAsync();  
-    ...  
+    ...  
+    Products = await _productsService.GetCatalogAsync();  
+    ...  
 }
 ```
 
 此方法调用`GetCatalogAsync`方法`CatalogService`注入到的实例`CatalogViewModel`Autofac 通过。 下面的代码示例演示`GetCatalogAsync`方法：
 
 ```csharp
-public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
+public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
-    builder.Path = "api/v1/catalog/items";  
-    string uri = builder.ToString();  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
+    builder.Path = "api/v1/catalog/items";  
+    string uri = builder.ToString();  
 
-    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
-    ...  
-    return catalog?.Data.ToObservableCollection();            
+    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
+    ...  
+    return catalog?.Data.ToObservableCollection();            
 }
 ```
 
@@ -89,18 +88,18 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 下面的代码示例演示`GetAsync`中的方法`RequestProvider`类：
 
 ```csharp
-public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
+public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    HttpResponseMessage response = await httpClient.GetAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    HttpResponseMessage response = await httpClient.GetAsync(uri);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>   
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>   
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -109,18 +108,18 @@ public async Task<TResult> GetAsync<TResult>(string uri, string token = "")
 `CreateHttpClient`方法在下面的代码示例所示：
 
 ```csharp
-private HttpClient CreateHttpClient(string token = "")  
+private HttpClient CreateHttpClient(string token = "")  
 {  
-    var httpClient = new HttpClient();  
-    httpClient.DefaultRequestHeaders.Accept.Add(  
-        new MediaTypeWithQualityHeaderValue("application/json"));  
+    var httpClient = new HttpClient();  
+    httpClient.DefaultRequestHeaders.Accept.Add(  
+        new MediaTypeWithQualityHeaderValue("application/json"));  
 
-    if (!string.IsNullOrEmpty(token))  
-    {  
-        httpClient.DefaultRequestHeaders.Authorization =   
-            new AuthenticationHeaderValue("Bearer", token);  
-    }  
-    return httpClient;  
+    if (!string.IsNullOrEmpty(token))  
+    {  
+        httpClient.DefaultRequestHeaders.Authorization =   
+            new AuthenticationHeaderValue("Bearer", token);  
+    }  
+    return httpClient;  
 }
 ```
 
@@ -131,23 +130,23 @@ private HttpClient CreateHttpClient(string token = "")
 ```csharp
 [HttpGet]  
 [Route("[action]")]  
-public async Task<IActionResult> Items(  
-    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
+public async Task<IActionResult> Items(  
+    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
 {  
-    var totalItems = await _catalogContext.CatalogItems  
-        .LongCountAsync();  
+    var totalItems = await _catalogContext.CatalogItems  
+        .LongCountAsync();  
 
-    var itemsOnPage = await _catalogContext.CatalogItems  
-        .OrderBy(c=>c.Name)  
-        .Skip(pageSize * pageIndex)  
-        .Take(pageSize)  
-        .ToListAsync();  
+    var itemsOnPage = await _catalogContext.CatalogItems  
+        .OrderBy(c=>c.Name)  
+        .Skip(pageSize * pageIndex)  
+        .Take(pageSize)  
+        .ToListAsync();  
 
-    itemsOnPage = ComposePicUri(itemsOnPage);  
-    var model = new PaginatedItemsViewModel<CatalogItem>(  
-        pageIndex, pageSize, totalItems, itemsOnPage);             
+    itemsOnPage = ComposePicUri(itemsOnPage);  
+    var model = new PaginatedItemsViewModel<CatalogItem>(  
+        pageIndex, pageSize, totalItems, itemsOnPage);             
 
-    return Ok(model);  
+    return Ok(model);  
 }
 ```
 
@@ -166,26 +165,26 @@ public async Task<IActionResult> Items(
 当的项添加到购物篮`ReCalculateTotalAsync`中的方法`BasketViewModel`调用类。 此方法更新购物篮中的项的总计值，并将篮数据发送到购物篮微服务，如下面的代码示例中所示：
 
 ```csharp
-private async Task ReCalculateTotalAsync()  
+private async Task ReCalculateTotalAsync()  
 {  
-    ...  
-    await _basketService.UpdateBasketAsync(new CustomerBasket  
-    {  
-        BuyerId = userInfo.UserId,   
-        Items = BasketItems.ToList()  
-    }, authToken);  
+    ...  
+    await _basketService.UpdateBasketAsync(new CustomerBasket  
+    {  
+        BuyerId = userInfo.UserId,   
+        Items = BasketItems.ToList()  
+    }, authToken);  
 }
 ```
 
 此方法调用`UpdateBasketAsync`方法`BasketService`注入到的实例`BasketViewModel`Autofac 通过。 下面的方法演示`UpdateBasketAsync`方法：
 
 ```csharp
-public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
+public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    string uri = builder.ToString();  
-    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
-    return result;  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    string uri = builder.ToString();  
+    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
+    return result;  
 }
 ```
 
@@ -194,22 +193,22 @@ public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBaske
 下面的代码示例显示了之一`PostAsync`中的方法`RequestProvider`类：
 
 ```csharp
-public async Task<TResult> PostAsync<TResult>(  
-    string uri, TResult data, string token = "", string header = "")  
+public async Task<TResult> PostAsync<TResult>(  
+    string uri, TResult data, string token = "", string header = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    ...  
-    var content = new StringContent(JsonConvert.SerializeObject(data));  
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
-    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    ...  
+    var content = new StringContent(JsonConvert.SerializeObject(data));  
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
+    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>  
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>  
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -219,10 +218,10 @@ public async Task<TResult> PostAsync<TResult>(
 
 ```csharp
 [HttpPost]  
-public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
+public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
 {  
-    var basket = await _repository.UpdateBasketAsync(value);  
-    return Ok(basket);  
+    var basket = await _repository.UpdateBasketAsync(value);  
+    return Ok(basket);  
 }
 ```
 
@@ -239,23 +238,23 @@ public async Task<IActionResult> Post([FromBody]CustomerBasket value)
 签出过程调用时，`CheckoutAsync`中的方法`CheckoutViewModel`调用类。 此方法创建新订单之前清除购物篮，如下面的代码示例中所示：
 
 ```csharp
-private async Task CheckoutAsync()  
+private async Task CheckoutAsync()  
 {  
-    ...  
-    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
-    ...  
+    ...  
+    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
+    ...  
 }
 ```
 
 此方法调用`ClearBasketAsync`方法`BasketService`注入到的实例`CheckoutViewModel`Autofac 通过。 下面的方法演示`ClearBasketAsync`方法：
 
 ```csharp
-public async Task ClearBasketAsync(string guidUser, string token)  
+public async Task ClearBasketAsync(string guidUser, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    builder.Path = guidUser;  
-    string uri = builder.ToString();  
-    await _requestProvider.DeleteAsync(uri, token);  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    builder.Path = guidUser;  
+    string uri = builder.ToString();  
+    await _requestProvider.DeleteAsync(uri, token);  
 }
 ```
 
@@ -264,10 +263,10 @@ public async Task ClearBasketAsync(string guidUser, string token)
 下面的代码示例演示`DeleteAsync`中的方法`RequestProvider`类：
 
 ```csharp
-public async Task DeleteAsync(string uri, string token = "")  
+public async Task DeleteAsync(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    await httpClient.DeleteAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    await httpClient.DeleteAsync(uri);  
 }
 ```
 
@@ -277,9 +276,9 @@ public async Task DeleteAsync(string uri, string token = "")
 
 ```csharp
 [HttpDelete("{id}")]  
-public void Delete(string id)  
+public void Delete(string id)  
 {  
-    _repository.DeleteBasketAsync(id);  
+    _repository.DeleteBasketAsync(id);  
 }
 ```
 
@@ -321,7 +320,7 @@ EShopOnContainers 移动应用使用专用缓存，其中数据保存在本地�
 
 EShopOnContainers 移动应用程序使用远程产品图像的从缓存中受益。 这些映像将由[ `Image` ](xref:Xamarin.Forms.Image)控件，并`CachedImage`由提供控制[FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/)库。
 
-Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)控件支持缓存下载的图像。 默认情况下，启用缓存，并将该映像存储 24 小时内的本地。 此外，使用配置的过期时间[ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity)属性。 有关详细信息，请参阅[下载图像缓存](~/xamarin-forms/user-interface/images.md#Image_Caching)。
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)控件支持缓存下载的图像。 默认情况下，启用缓存，并将该映像存储 24 小时内的本地。 此外，使用配置的过期时间[ `CacheValidity` ](xref:Xamarin.Forms.UriImageSource.CacheValidity)属性。 有关详细信息，请参阅[下载图像缓存](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)。
 
 FFImageLoading 的`CachedImage`控件是适用于 Xamarin.Forms 的替代[ `Image` ](xref:Xamarin.Forms.Image)控件，提供启用补充功能的其他属性。 在此功能，该控件提供了可配置缓存，同时支持错误和加载图像的占位符。 以下代码示例演示如何使用 eShopOnContainers 移动应用`CachedImage`控制`ProductTemplate`，这是使用的数据模板[ `ListView` ](xref:Xamarin.Forms.ListView)控件中`CatalogView`:
 

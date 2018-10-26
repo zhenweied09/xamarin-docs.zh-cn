@@ -1,59 +1,59 @@
 ---
-title: 使用其中的选项卡式的布局
-description: 本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程序中创建选项卡式的用户界面。
+title: 使用 ActionBar 的选项卡式的布局
+description: 本指南介绍，并介绍了如何使用 ActionBar Api 创建 Xamarin.Android 应用程序中的选项卡式的用户界面。
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3e96ce2064391d585943f4d79453f8b4f8c6f583
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af5554d08ac6c45fc0c392bd17cef5d91251bb1a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32020122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106502"
 ---
-# <a name="tabbed-layouts-with-the-actionbar"></a>使用其中的选项卡式的布局
+# <a name="tabbed-layouts-with-the-actionbar"></a>使用 ActionBar 的选项卡式的布局
 
-_本指南介绍，并说明如何使用其中 Api 在 Xamarin.Android 应用程序中创建选项卡式的用户界面。_
+_本指南介绍，并介绍了如何使用 ActionBar Api 创建 Xamarin.Android 应用程序中的选项卡式的用户界面。_
 
 
 ## <a name="overview"></a>概述
 
-操作栏是用于为主要功能，如选项卡、 应用程序标识、 菜单和搜索提供一致的用户界面的 Android UI 模式。 在 Android 3.0 （API 级别 11） 中，Google 向 Android 平台的引入其中 Api。 其中 Api 引入用户界面主题，以提供一致的外观和用于提供选项卡式的用户接口的类。 本指南介绍如何将操作栏选项卡添加到 Xamarin.Android 应用程序。 它还介绍了如何使用 Android 支持库 v7 到向后移植操作栏选项卡添加到面向 Android 2.3 到 Android 2.1 的 Xamarin.Android 应用程序。 
+在操作栏是 Android UI 模式，它用于为选项卡、 应用程序标识、 菜单和搜索等主要功能提供一致的用户界面。 在 Android 3.0 （API 级别为 11） 中，Google 引入了 ActionBar Api 向 Android 平台。 ActionBar Api 引入了用户界面主题，以提供一致的外观和允许的选项卡式的用户界面的类。 本指南介绍如何将操作栏选项卡添加到 Xamarin.Android 应用程序。 它还讨论了如何使用 Android 支持库 v7 到向后移植到面向 Android 2.1 到 Android 2.3 的 Xamarin.Android 应用程序的操作栏选项卡。 
 
-请注意，`Toolbar`是你应使用而不是一个更高版本和更通用操作栏组件`ActionBar`(`Toolbar`旨在替换`ActionBar`)。 有关详细信息，请参阅[工具栏](~/android/user-interface/controls/tool-bar/index.md)。 
+请注意，`Toolbar`是一个更高版本和更通用的操作栏组件，您应使用而不是`ActionBar`(`Toolbar`旨在替换`ActionBar`)。 有关详细信息，请参阅[工具栏](~/android/user-interface/controls/tool-bar/index.md)。 
 
 
 
 ## <a name="requirements"></a>要求
 
-任何 Xamarin.Android 应用程序面向 API 级别 11 (Android 3.0) 或更高版本作为本机 Android Api 的一部分中有权访问其中 Api。 
+所有 Xamarin.Android 应用程序面向 API 级别 11 (Android 3.0) 或更高版本的本机 Android Api 一部分中有权访问 ActionBar Api。 
 
-一些操作栏 Api 返回移植到 API 级别 7 (Android 2.1)，但不可通过[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，这将提供给 Xamarin.Android 应用程序通过[Xamarin Android 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
+某些 ActionBar Api 返回移植到了 API 级别 7 (Android 2.1)，通过[V7 AppCompat 库](http://developer.android.com/tools/support-library/features.html#v7-appcompat)，可由适用于 Xamarin.Android 应用通过[Xamarin Android 支持库-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)包。
 
 
 
-## <a name="introducing-tabs-in-the-actionbar"></a>引入操作栏中的选项卡
+## <a name="introducing-tabs-in-the-actionbar"></a>引入了操作栏中的选项卡
 
-操作栏尝试同时显示所有其选项卡，并使所有选项卡的大小基于最宽的选项卡标签的宽度相等。 这是由下面的屏幕截图所示： 
+在操作栏尝试同时显示所有其选项卡并使所有选项卡的大小基于最宽的选项卡标签的宽度相同。 这是下面的屏幕截图所示： 
 
-![其中的所有大小相等的多选项卡显示的示例屏幕截图](with-action-bar-images/image1.png)
+![ActionBar 的所有大小相等的选项卡所示的示例屏幕截图](with-action-bar-images/image1.png)
 
-当其中无法显示所有选项卡时，它将设置的水平可滚动视图中的选项卡。 左侧或右侧以查看剩余的选项卡，用户可能往下轻扫。 从 Google Play 此屏幕截图显示了此示例： 
+当 ActionBar 无法显示所有选项卡后时，它将设置可水平滚动视图中的选项卡。 左侧或右侧才能看到其余的选项卡，用户可能往下轻扫。 从 Google Play 此屏幕截图显示了此示例： 
 
-![示例中的水平可滚动视图选项卡的屏幕截图](with-action-bar-images/image2.png)
+![可水平滚动视图中的选项卡的屏幕截图示例](with-action-bar-images/image2.png)
 
-在操作栏中的每个选项卡应关联[*片段*](~/android/platform/fragments/index.md)。 当用户选择一个选项卡时，应用程序将显示与选项卡关联的片段。其中不负责向用户显示相应的片段。 相反，其中将通知有关通过实现 ActionBar.ITabListener 接口的类的选项卡中的状态更改应用程序。 此接口提供三种 Android 选项卡的状态更改时将调用的回调方法： 
+应与之关联的操作栏中的每个选项卡[*片段*](~/android/platform/fragments/index.md)。 当用户选择一个选项卡时，则应用程序将显示选项卡与相关联的片段。ActionBar 不负责向用户显示相应的片段。 相反，ActionBar 会通知应用程序通过实现 ActionBar.ITabListener 接口的类的选项卡中的状态更改。 此接口提供了三个选项卡的状态更改时，Android 将调用的回调方法： 
 
 -  **OnTabSelected** -当用户选择选项卡时调用此方法。它应该会显示该片段。
 
--  **OnTabReselected** -当选项卡已被选择，但由用户再次选择时调用此方法。 通常使用此回调以刷新/更新显示的片段。
+-  **OnTabReselected** -当选项卡已被选中，但用户再次选择时调用此方法。 通常使用此回叫来刷新/更新显示的片段。
 
--  **OnTabUnselected** -当用户选择另一个选项卡时调用此方法。使用此回调以将状态保存在显示的片段中之前就会消失。
+-  **OnTabUnselected** -当用户选择另一个选项卡时调用此方法。此回叫用于将状态保存在显示的片段中之前就会消失。
 
-Xamarin.Android 包装`ActionBar.ITabListener`上的事件与`ActionBar.Tab`类。 应用程序可以将事件处理程序分配给一个或多个这些事件。 有三个事件 (一个用于在每个方法`ActionBar.ITabListener`) 操作栏选项卡将引发： 
+Xamarin.Android 包装`ActionBar.ITabListener`上的事件与`ActionBar.Tab`类。 应用程序可能会将事件处理程序分配给一个或多个这些事件。 有三个事件 (一个用于在每个方法`ActionBar.ITabListener`) 将引发操作栏选项卡： 
 
 -  TabSelected
 -  TabReselected
@@ -61,27 +61,27 @@ Xamarin.Android 包装`ActionBar.ITabListener`上的事件与`ActionBar.Tab`类�
 
 
 
-### <a name="adding-tabs-to-the-actionbar"></a>向其中添加选项卡
+### <a name="adding-tabs-to-the-actionbar"></a>向 ActionBar 添加选项卡
 
-其中是本机到 Android 3.0 （API 级别 11） 和更高版本，可供任何面向此 API 与最小值的 Xamarin.Android 应用程序。 
+ActionBar 是本机 Android 3.0 （API 级别为 11） 和更高版本，并且可供任何针对此 API 是一个最少的 Xamarin.Android 应用程序。 
 
-以下步骤说明了如何将操作栏选项卡添加到 Android 活动： 
+以下步骤演示了如何将 ActionBar 选项卡添加到 Android 活动： 
 
-1. 在`OnCreate`一个活动的方法&ndash;*之前初始化任何 UI 小组件*&ndash;应用程序必须设置`NavigationMode`上`ActionBar`到`ActionBar.NavigationModeTabs`此代码中所示代码段：
+1. 在中`OnCreate`方法的活动&ndash;*之前初始化任何 UI 小组件*&ndash;应用程序必须设置`NavigationMode`上`ActionBar`到`ActionBar.NavigationModeTabs`此代码中所示代码片段：
 
    ```csharp
    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
    SetContentView(Resource.Layout.Main);
    ```
 
-2. 创建新的选项卡上使用`ActionBar.NewTab()`。
+2. 创建新选项卡上使用`ActionBar.NewTab()`。
 
-3. 分配事件处理程序或提供自定义`ActionBar.ITabListener`将响应用户交互操作栏选项卡时引发的事件的实现。
+3. 分配事件处理程序或提供自定义`ActionBar.ITabListener`将会响应用户交互操作栏选项卡时引发的事件的实现。
 
-4. 添加到上一步中创建该选项卡`ActionBar`。
+4. 添加到在上一步中创建的选项卡`ActionBar`。
 
 
-下面的代码是使用以下步骤将选项卡添加到使用事件处理程序的状态更改进行响应的应用程序的一个示例： 
+以下代码是使用以下步骤将选项卡添加到使用事件处理程序的状态更改进行响应的应用程序的一个示例： 
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -108,26 +108,26 @@ protected override void OnCreate(Bundle bundle)
 ```
 
 
-#### <a name="event-handlers-vs-actionbaritablistener"></a>事件处理程序与 ActionBar.ITabListener
+#### <a name="event-handlers-vs-actionbaritablistener"></a>事件处理程序 vs ActionBar.ITabListener
 
-应用程序应使用事件处理程序和`ActionBar.ITabListener`针对不同的方案。 事件处理程序确实提供了一定数量的语法上的便利;他们无需创建类并实现保存你`ActionBar.ITabListener`。 这种便利未是需要付出代价&ndash;Xamarin.Android 执行此转换为你创建一个类和实现`ActionBar.ITabListener`为你。 当应用程序具有有限的数量的选项卡时，这是正常的。 
+应用程序应使用事件处理程序和`ActionBar.ITabListener`为不同的方案。 事件处理程序确实提供一定量的语法上方便;他们无需创建一个类并实现保存您`ActionBar.ITabListener`。 这种便利确实代价&ndash;Xamarin.Android 执行此转换的创建一个类和实现`ActionBar.ITabListener`为您。 当应用程序具有有限的数量的选项卡时，这是没问题。 
 
-许多选项卡上，在处理时共享之间操作栏选项卡的常见功能，也可以在内存和性能，以创建一个自定义类，实现方面更加高效`ActionBar.ITabListener`，和共享的类的单个实例。 这会减少 GREF 的 Xamarin.Android 应用程序正在使用的数量。 
+多个选项卡上，在处理时共享操作栏选项卡之间的常见功能，也可以是内存和性能，以创建一个自定义类，实现更高效`ActionBar.ITabListener`，和共享单个类的实例。 这将减少 GREF 的 Xamarin.Android 应用程序使用的数目。 
 
 
 
 ### <a name="backwards-compatibility-for-older-devices"></a>向后兼容性较旧的设备
 
-[Android 支持库 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)后端口操作栏选项卡添加到 Android 2.1 （API 级别 7）。 此组件添加到项目后，选项卡是在 Xamarin.Android 应用程序中可访问。
+[Android 支持库 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)后端口操作栏选项卡添加到 Android 2.1 （API 级别 7）。 此组件添加到项目后，选项卡是可在 Xamarin.Android 应用程序中访问。
 
-若要使用其中，活动必须子类`ActionBarActivity`并使用 AppCompat 主题，如下面的代码段中所示：
+若要使用 ActionBar，活动必须子类`ActionBarActivity`和使用 AppCompat 主题，如下面的代码段中所示：
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
 public class MainActivity: ActionBarActivity
 ```
 
-活动可能会获得对从其操作栏的引用`ActionBarActivity.SupportingActionBar`属性。 下面的代码段演示了在活动中操作栏设置的示例：
+活动可能会获取对从其 ActionBar 的引用`ActionBarActivity.SupportingActionBar`属性。 下面的代码段说明了设置 ActionBar 在活动中的示例：
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
@@ -174,7 +174,7 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 
 ## <a name="summary"></a>总结
 
-在本指南中我们将讨论如何在使用其中 Xamarin.Android 中创建选项卡式的用户界面。 我们介绍了如何向其中添加选项卡和活动与通过选项卡事件的交互方式`ActionBar.ITabListener`接口。 我们还了解了 Android 支持库 v7 AppCompat 包 backports 操作栏与旧版本的 Android 的选项卡。 
+在本指南中我们讨论了如何在 Xamarin.Android 中使用 ActionBar 创建选项卡式的用户界面。 我们介绍了如何将选项卡添加到 ActionBar 和活动与通过选项卡事件的交互方式`ActionBar.ITabListener`接口。 我们还了解到 Android 支持库 v7 AppCompat 包 backports ActionBar 与旧版本的 Android 的选项卡。 
 
 
 ## <a name="related-links"></a>相关链接

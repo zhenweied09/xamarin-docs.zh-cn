@@ -1,26 +1,26 @@
 ---
-title: 使用 tvOS Xamarin 中的表视图
-description: 本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。
+title: 使用 tvOS 在 Xamarin 中的表视图
+description: 本文介绍如何设计和使用在 Xamarin.tvOS 应用内的表视图和表视图控制器。
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105891"
 ---
-# <a name="working-with-tvos-table-views-in-xamarin"></a>使用 tvOS Xamarin 中的表视图
+# <a name="working-with-tvos-table-views-in-xamarin"></a>使用 tvOS 在 Xamarin 中的表视图
 
-_本文介绍如何设计和表视图和表视图控制器使用内 Xamarin.tvOS 应用。_
+_本文介绍如何设计和使用在 Xamarin.tvOS 应用内的表视图和表视图控制器。_
 
-TvOS，在表视图呈现为滚动 （可选） 可以组织到组或部分的行的单个列中。 当您需要向用户，以明文了解方式高效地显示大量的数据时，应使用表视图。
+TvOS，在表视图，显示为滚动可以根据需要组织到组或节的行的单个列。 当您需要向用户，以明文形式，若要了解的方式有效地显示大量数据时，应使用表视图。
 
-表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息：
+表视图通常显示中的一侧[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航中的另一侧显示的选定项的详细信息：
 
 [![](table-views-images/intro01.png "示例表视图")](table-views-images/intro01.png#lightbox)
 
@@ -28,128 +28,128 @@ TvOS，在表视图呈现为滚动 （可选） 可以组织到组或部分的�
 
 ## <a name="about-table-views"></a>有关表视图
 
-A`UITableView`作为 （可选） 可以组织到组或部分的信息的分层列表中显示单个列的可滚动的行： 
+一个`UITableView`显示为可以根据需要组织到组或节的信息的分层列表的单个列的可滚动的行： 
 
 [![](table-views-images/table01.png "选定的项")](table-views-images/table01.png#lightbox)
 
-Apple 具有使用表的以下建议：
+Apple 已使用表的以下建议：
 
-- **要注意的宽度**-尝试表宽度实现正确的平衡。 如果太宽表，它可能很难从远处扫描，并可以从可用的内容区域。 如果表是太窄，它可能会导致信息被截断或换行，再次将非常困难，用户可以在同一房间从读取。
-- **显示快速表内容**-有关的数据的大型列表，延迟加载内容并开始向用户显示表时，就会立即显示信息。 如果在该表中考虑到长，无法加载，用户可能会丢失你的应用或认为它锁定感兴趣。
-- **通知用户的长内容负载**-如果长表加载时间是不可避免的存在[进度栏或活动指示器](~/ios/tvos/user-interface/progress-indicators.md)以便它们知道应用程序未锁定。
+- **要注意的宽度**-尝试表宽度中取得适当平衡。 如果太宽表，它可能很难从远处扫描，可能需要从可用的内容区域。 如果表太窄，它可能会导致信息被截断或换行，再次将非常困难，用户可以从在同一房间中读取。
+- **显示快速表内容**-有关的数据的大型列表，延迟加载内容并开始显示信息就立即向用户显示表。 如果表花多长时间加载，用户可能会丢失您的应用或认为它已锁定了感兴趣。
+- **通知用户的长内容负载**-如果长表加载时间是不可避免的存在[进度栏或活动指示器](~/ios/tvos/user-interface/progress-indicators.md)，以便其了解应用程序没有锁住了。
 
 <a name="Table-Cell-Types" />
 
 ## <a name="table-view-cell-types"></a>表视图单元格类型
 
-A`UITableViewCell`用于表示单个行的表视图中的数据。 Apple 已定义的多个默认表单元格类型：
+一个`UITableViewCell`用于表示单个表视图中的数据行。 Apple 已定义的多个默认表单元格类型：
 
-- **默认**-此类型显示图像的单元格中，然后在右侧左对齐标题左侧的一个选项。 
-- **副标题**-此类型提供的第一行和较小的左对齐标题左对齐副标题在下一行。
-- **值 1** -此类型显示具有较轻彩色、 右对齐副标题左对齐标题上同一行。
-- **值 2** -此类型显示具有较轻彩色、 左对齐副标题右对齐标题上同一行。
+- **默认**-此类型提供一个选项图像左对齐标题在右侧的单元格的左侧。 
+- **副标题**-此类型提供的第一行和较小的左对齐标题左对齐副标题下一行。
+- **值 1** -此类型会具有更轻便彩色的右边对齐副标题左对齐标题显示在同一行。
+- **值 2** -此类型显示在同一行上的一个右对齐标题，其更轻便彩色的左对齐副标题。
 
 所有默认表视图单元格类型还支持图形元素，如泄露指示器或复选标记。 
 
-此外，你可以定义**自定义**表视图单元格类型，并且存在_原型单元格_，你可以创建接口设计器中或通过代码。
+此外，你可以定义**自定义**表视图单元格类型，并且存在_原型单元格_，您可以创建界面设计器中或通过代码。
 
-Apple 具有使用表视图单元格的以下建议：
+Apple 已使用表视图单元格的以下建议：
 
-- **避免文本剪辑**-保留独立的短的文本行，以便最终它们不被截断。 截断的词或短语很难让用户在同一房间从分析。
-- **请考虑已设定焦点的行状态**-因为某一行变得更大，了更多舍入具有焦点的角，你需要进行测试所有状态中的单元格的外观。 图像或文本可能会变得剪切或处于已设定焦点状态查找不正确。
-- **应谨慎可编辑表使用**-移动或删除表行是花费更多时间上 tvOS 于 iOS。 你需要仔细决定，是否此功能将添加或偏离 tvOS 应用程序。
-- **创建自定义单元格类型适用**-而内置的表视图单元格类型则非常适合于许多情况下，请考虑创建自定义单元格类型的非标准的信息以更好地控制和更好地呈现到的信息用户。
+- **避免文本剪切**-保留单独的行的短文本，使它们最终不会被截断。 用户可以在同一房间从分析难以被截断的词或短语。
+- **已设定焦点的行状态，请考虑**-因为行变得更大，使用舍入的详细信息具有焦点的边角，你需要测试所有状态中的单元格的外观。 图像或文本可能会变得剪辑，或在已设定焦点状态中查找不正确。
+- **可编辑的表尽可能少地使用**-移动或删除表行是花费更多时间在 tvOS 上 ios。 需要仔细确定，是否此功能将添加或使你的 tvOS 应用变得混乱。
+- **创建自定义单元格类型的相应**-虽然内置的表视图单元格类型非常适合用于很多情况下，请考虑创建自定义单元格类型的非标准的信息来提供更好地控制和更好地呈现到的信息用户。
 
 <a name="Working-With-Table-Views" />
 
 ## <a name="working-with-table-views"></a>使用表视图
 
-Xamarin.tvOS 应用中使用的表视图的最简单方法是创建和修改其外观接口设计器中。
+使用 Xamarin.tvOS 应用中的表视图的最简单方法是创建和修改在界面设计器中的显示。
 
 若要开始，请执行以下操作：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
     
-1. 在适用于 Mac 的 Visual Studio，启动一个新的 tvOS 应用程序项目，然后选择**tvOS** > **应用** > **单视图应用**单击**下一步**按钮： 
+1. 在 Visual Studio for Mac 中，启动一个新的 tvOS 应用程序项目并选择**tvOS** > **应用** > **单一视图应用**单击**下一步**按钮： 
 
     [![](table-views-images/table02.png "选择单一视图应用")](table-views-images/table02.png#lightbox)
-1. 输入**名称**为应用程序并单击**下一步**: 
+1. 输入**名称**的应用程序并单击**下一步**: 
 
     [![](table-views-images/table03.png "输入应用程序的名称")](table-views-images/table03.png#lightbox)
-1. 可以调整**项目名称**和**解决方案名称**或者接受默认设置，然后单击**创建**按钮以创建新的解决方案： 
+1. 可以调整**项目名称**并**解决方案名称**或接受默认值，然后单击**创建**按钮以创建新的解决方案： 
 
     [![](table-views-images/table04.png "项目名称和解决方案名称")](table-views-images/table04.png#lightbox)
-1. 在**解决方案 Pad**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
+1. 在中**Solution Pad**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
 
     [![](table-views-images/table05.png "Main.storyboard 文件")](table-views-images/table05.png#lightbox)
 1. 选择并删除**默认视图控制器**: 
 
     [![](table-views-images/table06.png "选择并删除默认视图控制器")](table-views-images/table06.png#lightbox)
-1. 选择**拆分视图控制器**从**工具箱**和将其拖到设计图面。
-1. 默认情况下，你将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和**表视图控制器**中的左侧和**视图控制器**右下方。 这是 Apple 的建议的用法中 tvOS 的表视图： 
+1. 选择**拆分视图控制器**从**工具箱**并将其拖到设计图面上。
+1. 默认情况下，您将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和一个**表格视图控制器**中的左侧和**视图控制器**中的右侧。 这是 tvOS 中的表视图的 Apple 的建议的用法： 
 
     [![](table-views-images/table08.png "添加拆分视图")](table-views-images/table08.png#lightbox)
-1. 你将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便你可以在 C# 中，更高版本访问它代码。 例如，**表视图控制器**: 
+1. 将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便可以访问它后面C#代码。 例如，**表格视图控制器**: 
 
-    [![](table-views-images/table09.png "指定一个类名称")](table-views-images/table09.png#lightbox)
-1. 确保你创建的自定义类**表视图控制器**、**表视图**和任何**原型单元格**。 适用于 Mac 的 visual Studio 将添加到项目树的自定义类，因为它们创建： 
+    [![](table-views-images/table09.png "分配的类名称")](table-views-images/table09.png#lightbox)
+1. 确保创建的自定义类**表格视图控制器**，则**表视图**和任何**原型的单元格**。 Visual Studio for Mac 将添加到项目树的自定义类，因为它们创建： 
 
-    [![](table-views-images/table10.png "项目树中的自定义类")](table-views-images/table10.png#lightbox)
-1. 接下来，在设计图面中选择表视图，然后根据需要调整它的属性。 如数**原型单元格**和**样式**（纯或分组）： 
+    [![](table-views-images/table10.png "在项目树中的自定义类")](table-views-images/table10.png#lightbox)
+1. 接下来，在设计图面中选择表视图，并根据需要调整它的属性。 例如数目**原型的单元格**并**样式**（纯或分组）： 
 
     [![](table-views-images/table11.png "小组件选项卡")](table-views-images/table11.png#lightbox)
-1. 每个**原型单元格**，选择它并分配一个唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为你稍后将需要此标识符时你填充表。 例如`AttrCell`: 
+1. 每个**原型单元格**，选择它并分配唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为您稍后将需要此标识符时您填充表。 例如`AttrCell`: 
 
     [![](table-views-images/table12.png "小组件选项卡")](table-views-images/table12.png#lightbox)
-1. 你还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**并使用设计图面的布局单元格通过将从其他 UI 小组件中拖动**工具箱**: 
+1. 您还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**，并使用设计图面上向布局单元格从其他 UI 小组件中通过拖动**工具箱**: 
 
     [![](table-views-images/table13.png "单元格的布局")](table-views-images/table13.png#lightbox)
-1. 为分配唯一**名称**中的所有 UI 元素中的原型单元格设计**小组件**选项卡**属性资源管理器**以便你可以访问它们更高版本中的 C# 代码： 
+1. 分配唯一**名称**中的所有 UI 元素中的单元格原型设计**小组件**选项卡**属性资源管理器**以便您可以访问它们更高版本在C#代码： 
 
     [![](table-views-images/table14.png "指定一个名称")](table-views-images/table14.png#lightbox)
-1. 原型单元格的表视图中的所有重复上述步骤。
-1. 接下来，将自定义类分配给 UI 设计、 布局的详细信息视图和分配唯一的其余部分**名称**查看详细信息中每个 UI 元素，以便你可以访问它们在 C# 中以及。 例如： 
+1. 所有表视图中的原型单元格重复上述步骤。
+1. 接下来，将自定义类分配到 UI 设计、 布局的详细信息视图和分配唯一的 rest**名称**于每个 UI 元素在详细信息视图，以便你可以访问它们在C#以及。 例如： 
 
     [![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png#lightbox)
 1. 将所做的更改保存到情节提要。
     
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. 在 Visual Studio 中，启动一个新的 tvOS 应用程序项目并选择**tvOS** > **单视图应用**并输入你的应用程序的名称。 单击**好**按钮以创建新的解决方案： 
+1. 在 Visual Studio 中，启动一个新的 tvOS 应用程序项目并选择**tvOS** > **单一视图应用**并输入您的应用程序的名称。 单击**好**按钮以创建新的解决方案： 
 
     [![](table-views-images/table02-vs.png "选择单一视图应用")](table-views-images/table02-vs.png#lightbox)
-1. 在**解决方案资源管理器**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
+1. 在中**解决方案资源管理器**，双击`Main.storyboard`文件以在 iOS 设计器中打开它： 
 
     [![](table-views-images/table05-vs.png "Main.storyboard 文件")](table-views-images/table05-vs.png#lightbox)
 1. 选择并删除**默认视图控制器**: 
 
     [![](table-views-images/table06-vs.png "选择并删除默认视图控制器")](table-views-images/table06-vs.png#lightbox)
-1. 选择**拆分视图控制器**从**工具箱**和将其拖到设计图面： 
+1. 选择**拆分视图控制器**从**工具箱**并将其拖到设计图面上： 
 
     [![](table-views-images/table07-vs.png "拆分视图控制器")](table-views-images/table07-vs.png#lightbox)
-1. 默认情况下，你将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和**表视图控制器**中的左侧和**视图控制器**右下方。 这是 Apple 的建议的用法中 tvOS 的表视图： 
+1. 默认情况下，您将获得[拆分视图](~/ios/tvos/user-interface/split-views.md)与**导航视图控制器**和一个**表格视图控制器**中的左侧和**视图控制器**中的右侧。 这是 tvOS 中的表视图的 Apple 的建议的用法： 
 
     [![](table-views-images/table08-vs.png "布局 UI")](table-views-images/table08-vs.png#lightbox)
-1. 你将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便你可以在 C# 中，更高版本访问它代码。 例如，**表视图控制器**: 
+1. 将需要选择表视图的每个部分并将其分配一个自定义**类名**中**小组件**选项卡**属性资源管理器**，以便可以访问它后面C#代码。 例如，**表格视图控制器**: 
 
     [![](table-views-images/table09-vs.png "小组件选项卡")](table-views-images/table09-vs.png#lightbox)
-1. 确保你创建的自定义类**表视图控制器**、**表视图**和任何**原型单元格**。 适用于 Mac 的 visual Studio 将添加到项目树的自定义类，因为它们创建： 
+1. 确保创建的自定义类**表格视图控制器**，则**表视图**和任何**原型的单元格**。 Visual Studio for Mac 将添加到项目树的自定义类，因为它们创建： 
 
-    [![](table-views-images/table10-vs.png "项目树中的自定义类")](table-views-images/table10-vs.png#lightbox)
-1. 接下来，在设计图面中选择表视图，然后根据需要调整它的属性。 如数**原型单元格**和**样式**（纯或分组）： 
+    [![](table-views-images/table10-vs.png "在项目树中的自定义类")](table-views-images/table10-vs.png#lightbox)
+1. 接下来，在设计图面中选择表视图，并根据需要调整它的属性。 例如数目**原型的单元格**并**样式**（纯或分组）： 
 
     [![](table-views-images/table11-vs.png "小组件选项卡")](table-views-images/table11-vs.png#lightbox)
-1. 每个**原型单元格**，选择它并分配一个唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为你稍后将需要此标识符时你填充表。 例如`AttrCell`: 
+1. 每个**原型单元格**，选择它并分配唯一**标识符**中**小组件**选项卡**属性资源管理器**。 此步骤是_非常重要_因为您稍后将需要此标识符时您填充表。 例如`AttrCell`: 
 
     [![](table-views-images/table12-vs.png "分配一个标识符")](table-views-images/table12-vs.png#lightbox)
-1. 你还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**并使用设计图面的布局单元格通过将从其他 UI 小组件中拖动**工具箱**: 
+1. 您还可以选择提供作为一个单元格[默认表视图单元格类型](#Table-View-Cell-Types)通过**样式**下拉列表中或将其设置为**自定义**，并使用设计图面上向布局单元格从其他 UI 小组件中通过拖动**工具箱**: 
 
     [![](table-views-images/table13-vs.png "样式下拉列表")](table-views-images/table13-vs.png#lightbox)
-1. 为分配唯一**名称**中的所有 UI 元素中的原型单元格设计**小组件**选项卡**属性资源管理器**以便你可以访问它们更高版本中的 C# 代码： 
+1. 分配唯一**名称**中的所有 UI 元素中的单元格原型设计**小组件**选项卡**属性资源管理器**以便您可以访问它们更高版本在C#代码： 
 
     [![](table-views-images/table14-vs.png "小组件选项卡")](table-views-images/table14-vs.png#lightbox)
-1. 原型单元格的表视图中的所有重复上述步骤。
-1. 接下来，将自定义类分配给 UI 设计、 布局的详细信息视图和分配唯一的其余部分**名称**查看详细信息中每个 UI 元素，以便你可以访问它们在 C# 中以及。 例如： 
+1. 所有表视图中的原型单元格重复上述步骤。
+1. 接下来，将自定义类分配到 UI 设计、 布局的详细信息视图和分配唯一的 rest**名称**于每个 UI 元素在详细信息视图，以便你可以访问它们在C#以及。 例如： 
 
     [![](table-views-images/table15.png "UI 布局")](table-views-images/table15.png#lightbox)
 1. 将所做的更改保存到情节提要。
@@ -160,25 +160,25 @@ Xamarin.tvOS 应用中使用的表视图的最简单方法是创建和修改其�
 
 ## <a name="designing-a-data-model"></a>设计数据模型
 
-使用表视图将变得更容易显示的信息以及要简化了将提供的详细信息 （如用户选择，或将突出显示的表视图中的行），创建一个自定义类或类，使其作为数据模型的信息显示.
+若要使用的表视图将变得更容易显示的信息以及要简化呈现的详细信息 （如用户选择或突出显示表视图中的行），创建自定义类或类，以充当有关的信息的数据模型提供.
 
-以列出中的一个旅行预订应用程序为例**城市**，每个包含的唯一列表**焦点**，用户可以选择。 用户将能够将标记为引力*收藏*，选择此选项可获取*方向*到引力和*预订航班*给定所在的城市。
+包含一系列一个旅行预订应用程序为例**城市**，每个包含的唯一列表**忍耐**，用户可以选择。 用户将能够将标记作为引力*最喜欢*，选择要获取*方向*到吸引程度和*预订航班*为给定的城市。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-若要创建数据模型，用于**引力**，右键单击项目名称中**解决方案 Pad**和选择**添加** > **新文件...**.输入`AttractionInformation`为**名称**单击**新建**按钮： 
+若要创建的数据模型**引力**，右键单击项目名称中**Solution Pad** ，然后选择**添加** > **新文件...**.输入`AttractionInformation`有关**名称**然后单击**新建**按钮： 
 
 [![](table-views-images/data01.png "为名称输入 AttractionInformation")](table-views-images/data01.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-若要创建数据模型，用于**引力**，右键单击项目名称中**解决方案资源管理器**和选择**添加** > **新项...**.选择**类**并输入`AttractionInformation`为**名称**单击**添加**按钮： 
+若要创建的数据模型**引力**，右键单击项目名称中**解决方案资源管理器**，然后选择**添加** > **新项...**.选择**类**并输入`AttractionInformation`有关**名称**然后单击**添加**按钮： 
 
-[![](table-views-images/data01-vs.png "选择的类并为名称输入 AttractionInformation")](table-views-images/data01-vs.png#lightbox)
+[![](table-views-images/data01-vs.png "选择类，并输入名称的 AttractionInformation")](table-views-images/data01-vs.png#lightbox)
 
 -----
 
-编辑`AttractionInformation.cs`文件并使其如下所示：
+编辑`AttractionInformation.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -210,23 +210,23 @@ namespace tvTable
 }
 ```
 
-此类提供的属性来存储有关的信息给定**引力**。
+此类提供用于存储有关信息的属性给定**引力**。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-接下来，右键单击项目名称中**解决方案 Pad**再次选择**添加** > **新文件...**.输入`CityInformation`为**名称**单击**新建**按钮： 
+接下来，右键单击项目名称在**Solution Pad**试，然后选择**添加** > **新文件...**.输入`CityInformation`有关**名称**然后单击**新建**按钮： 
 
 [![](table-views-images/data02.png "为名称输入 CityInformation")](table-views-images/data02.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-接下来，右键单击项目名称中**解决方案资源管理器**再次选择**添加** > **新建项...**.输入`CityInformation`为**名称**单击**添加**按钮： 
+接下来，右键单击项目名称在**解决方案资源管理器**试，然后选择**添加** > **新项...**.输入`CityInformation`有关**名称**然后单击**添加**按钮： 
 
 [![](table-views-images/data02-vs.png "为名称输入 CityInformation")](table-views-images/data02-vs.png#lightbox)
 
 -----
 
-编辑`CityInformation.cs`文件并使其如下所示：
+编辑`CityInformation.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -278,15 +278,15 @@ namespace tvTable
 }
 ```
 
-此类可包含的所有信息有关目标**城市**的集合**焦点**对于该城市，并提供了两个帮助器方法 (`AddAttraction`) 以使其更轻松地添加到环境城市。
+此类可包含有关目标的所有信息**城市**，一系列**忍耐**该城市的并提供了两个帮助器方法 (`AddAttraction`) 以使其更轻松地添加到忍耐城市。
 
 <a name="The-Table-Data-Source" />
 
-## <a name="the-table-view-data-source"></a>表视图数据源
+## <a name="the-table-view-data-source"></a>表视图的数据源
 
-每个表视图需要数据源 (`UITableViewDataSource`) 表中提供的数据并生成所需的行，为所需的表视图。
+每个表视图需要的数据源 (`UITableViewDataSource`) 提供的数据的表并生成必要的行所需的表视图。
 
-对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...** 和调用它`AttractionTableDatasource`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDatasource.cs`文件并使其如下所示：
+对于上述示例中，右键单击项目名称在**解决方案资源管理器**，选择**添加** > **新文件...** ，并调用它`AttractionTableDatasource`然后单击**新建**按钮以创建。 接下来，编辑`AttractionTableDatasource.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -383,7 +383,7 @@ namespace tvTable
 
 让我们看看类的几个部分中详细信息。
 
-首先，我们定义一个常量，以保存原型单元格 （这是在上面接口设计器中分配的同一标识符） 的唯一标识符、 快捷方式将重新添加到表视图控制器并为我们的数据创建存储：
+首先，我们已定义了一个常量，用于保存原型单元格 （这是上述接口设计器中分配的同一标识符） 的唯一标识符、 快捷方式重新添加到表格视图控制器，为我们的数据创建的存储：
 
 ```csharp
 const string CellID = "AttrCell";
@@ -391,7 +391,7 @@ public AttractionTableViewController Controller { get; set;}
 public List<CityInformation> Cities { get; set;}
 ```
 
-接下来，我们保存表视图控制器，然后生成并填充我们 （使用上面定义数据模型） 的数据源时创建的类：
+接下来，我们保存表格视图控制器，然后生成并填充我们 （使用上面定义的数据模型） 的数据源时创建的类：
 
 ```csharp
 public AttractionTableDatasource (AttractionTableViewController controller)
@@ -403,7 +403,7 @@ public AttractionTableDatasource (AttractionTableViewController controller)
 }
 ```
 
-示例中，为了`PopulateCities`方法只需创建数据模型对象在内存中但无法从数据库或 web 服务中实际的应用程序轻松地被读取这些：
+作为示例，`PopulateCities`方法只需创建数据模型对象在内存中但无法从真正的应用程序中的数据库或 web 服务轻松地被读取这些：
 
 ```csharp
 public void PopulateCities ()
@@ -418,7 +418,7 @@ public void PopulateCities ()
 }
 ```
 
-`NumberOfSections`方法返回表中的节的数目：
+`NumberOfSections`方法返回表中的节数：
 
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
@@ -428,9 +428,9 @@ public override nint NumberOfSections (UITableView tableView)
 }
 ```
 
-有关**纯**设置样式表视图，始终返回 1。
+有关**普通**设置样式表视图，始终返回 1。
 
-`RowsInSection`方法在当前的部分中返回的行数：
+`RowsInSection`方法在当前节中返回的行数：
 
 ```csharp
 public override nint RowsInSection (UITableView tableView, nint section)
@@ -440,9 +440,9 @@ public override nint RowsInSection (UITableView tableView, nint section)
 }
 ```
 
-再次，为**纯**表视图，在数据源中返回的总项数。
+同样，对于**普通**表视图，在数据源中返回的项总数。
 
-`TitleForHeader`方法返回的标题，给定部分：
+`TitleForHeader`方法返回给定标题部分：
 
 ```csharp
 public override string TitleForHeader (UITableView tableView, nint section)
@@ -452,9 +452,9 @@ public override string TitleForHeader (UITableView tableView, nint section)
 }
 ```
 
-有关**纯**表视图类型，请将保留为空标题 (`""`)。
+有关**普通**表视图类型中，将标题留空 (`""`)。
 
-最后，当请求的表视图，创建然后填充原型单元格使用`GetCell`方法： 
+最后，当请求表视图，创建并填充原型单元格使用`GetCell`方法： 
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -470,7 +470,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-有关详细信息使用`UITableViewDatasource`，请参阅 Apple 的[UITableViewDatasource](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40006941)文档。
+有关使用的详细信息`UITableViewDatasource`，请参阅 Apple [UITableViewDatasource](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40006941)文档。
 
 <a name="The-Table-View-Delegate" />
 
@@ -478,7 +478,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 
 每个表视图需要委托 (`UITableViewDelegate`) 来响应用户交互或表上的其他系统事件。
 
-对于上述示例中，右键单击项目名称中**解决方案资源管理器**，选择**添加** > **新文件...** 和调用它`AttractionTableDelegate`单击**新建**按钮以创建。 接下来，编辑`AttractionTableDelegate.cs`文件并使其如下所示：
+对于上述示例中，右键单击项目名称在**解决方案资源管理器**，选择**添加** > **新文件...** ，并调用它`AttractionTableDelegate`然后单击**新建**按钮以创建。 接下来，编辑`AttractionTableDelegate.cs`文件，并使其看起来如下所示：
 
 ```csharp
 using System;
@@ -533,9 +533,9 @@ namespace tvTable
 }
 ```
 
-在详细信息，让我们看此类的多个部分组成。
+让我们看看此类的多个部分中的详细信息。
 
-首先，我们创建的快捷方式表视图控制器时创建的类：
+首先，我们创建表视图控制器的快捷方式时创建的类：
 
 ```csharp
 public AttractionTableViewController Controller { get; set;}
@@ -548,7 +548,7 @@ public AttractionTableDelegate (AttractionTableViewController controller)
 }
 ```
 
-然后，当选择行时 （用户单击的 Touch 面上 Apple 远程） 我们想要将标记**引力**由为收藏的所选行：
+然后，在选定某一行时 （用户单击的 Apple 远程 Touch 面上） 我们想要将标记**引力**表示为收藏的选定行：
 
 ```csharp
 public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -561,7 +561,7 @@ public override void RowSelected (UITableView tableView, Foundation.NSIndexPath 
 }
 ```
 
-接下来，用户 （通过给予它焦点使用 Apple 远程 Touch 面） 突出显示某行时我们希望将显示的详细信息**引力**所对应的行详细信息部分中我们拆分视图控制器：
+接下来，用户会突出显示某行 （通过给予它焦点使用 Apple 远程 Touch 面） 时我们想要显示的详细信息**引力**所对应的行详细信息部分中的拆分视图控制器：
 
 ```csharp
 public override bool CanFocusRow (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -582,17 +582,17 @@ internal void RaiseAttractionHighlighted (AttractionInformation attraction)
 }
 ```
 
-`CanFocusRow`针对即将获得焦点的表视图中每一行中调用方法。 返回`true`如果行可以获得焦点，否则返回`false`。 在此示例中，我们已创建了自定义`AttractionHighlighted`收到焦点时将在每一行引发的事件。
+`CanFocusRow`即将获得焦点的表视图中每个行调用方法。 返回`true`如果一行可获得焦点，否则返回`false`。 对于此示例中，我们已创建了一个自定义`AttractionHighlighted`收到焦点时引发的每一行的事件。
 
-有关详细信息使用`UITableViewDelegate`，请参阅 Apple 的[UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942)文档。
+有关使用的详细信息`UITableViewDelegate`，请参阅 Apple [UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942)文档。
 
 <a name="The-Table-View-Cell" />
 
 ## <a name="the-table-view-cell"></a>表视图单元格
 
-对于每个原型单元格添加到接口设计器中的表视图，还会创建表视图单元格的自定义实例 (`UITableViewCell`) 以便您可以按其创建填充新的单元格 （行）。
+对于每个原型单元格添加到界面设计器中的表视图，您还创建表视图单元格的自定义实例 (`UITableViewCell`) 以便可以按其创建填充新的单元格 （行）。
 
-用于示例应用中，双击`AttractionTableCell.cs`文件打开进行编辑，并使其如下所示：
+对于示例应用程序中，双击`AttractionTableCell.cs`文件打开以进行编辑，并使其如下所示：
 
 ```csharp
 using System;
@@ -640,7 +640,7 @@ namespace tvTable
 }
 ```
 
-此类提供了存储引力数据模型对象 (`AttractionInformation`如上文所定义) 显示在给定行中：
+此类提供了具有数据模型对象存储 (`AttractionInformation`如上文所定义) 显示给定行中：
 
 ```csharp
 private AttractionInformation _attraction = null;
@@ -655,7 +655,7 @@ public AttractionInformation Attraction {
 }
 ```
 
-`UpdateUI`方法填充 UI 小组件 （即已添加到接口设计器中的单元格的原型） 根据需要：
+`UpdateUI`方法填充 UI 小组件 （即已添加到界面设计器中的单元格的原型） 根据需要：
 
 ```csharp
 private void UpdateUI ()
@@ -671,15 +671,15 @@ private void UpdateUI ()
 }
 ```
 
-有关详细信息使用`UITableViewCell`，请参阅 Apple 的[UITableViewCell](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938)文档。
+有关使用的详细信息`UITableViewCell`，请参阅 Apple [UITableViewCell](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938)文档。
 
 <a name="The-Table-View-Controller" />
 
-## <a name="the-table-view-controller"></a>表视图控制器
+## <a name="the-table-view-controller"></a>表格视图控制器
 
-表视图控制器 (`UITableViewController`) 管理已添加到接口设计器通过情节提要表视图。
+表格视图控制器 (`UITableViewController`) 管理已添加到情节提要界面设计器通过表视图。
 
-用于示例应用中，双击`AttractionTableViewController.cs`文件打开进行编辑，并使其如下所示：
+对于示例应用程序中，双击`AttractionTableViewController.cs`文件打开以进行编辑，并使其如下所示：
 
 ```csharp
 using System;
@@ -721,27 +721,27 @@ namespace tvTable
 }
 ```
 
-让我们仔细看一下此类。 首先，我们已创建快捷方式，以更加轻松地访问表视图`DataSource`和`TableDelegate`。 我们将使用这些更高版本中左侧的拆分视图的表视图和权限中的详细信息视图之间进行通信。
+让我们进一步看一下此类。 首先，我们已创建了快捷方式，以使其更易于访问表视图`DataSource`和`TableDelegate`。 我们将使用这些更高版本中左侧和右侧的拆分视图的表视图和右中的详细信息视图之间进行通信。
 
-最后，当表视图加载到内存中，我们创建的实例`AttractionTableDatasource`和`AttractionTableDelegate`（不管是上述步骤中创建） 并将它们附加到表视图。
+最后，当表视图加载到内存中，我们创建的实例`AttractionTableDatasource`和`AttractionTableDelegate`（无论是上述步骤中创建） 并将它们附加到表视图。
 
-有关详细信息使用`UITableViewController`，请参阅 Apple 的[UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)文档。
+有关使用的详细信息`UITableViewController`，请参阅 Apple [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)文档。
 
 <a name="Pulling-it-All-Together" />
 
-## <a name="pulling-it-all-together"></a>将它放在所有一起
+## <a name="pulling-it-all-together"></a>将所有放在一起
 
-如本文档的开头所述，表视图中的一侧通常显示[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航窗格中，使用中的另一侧显示的选定项的详细信息。 例如： 
+如本文档开头所述，表视图通常显示中的一侧[拆分视图](~/ios/tvos/user-interface/split-views.md)作为导航中的另一侧显示的选定项的详细信息。 例如： 
 
 [![](table-views-images/intro01.png "运行示例应用")](table-views-images/intro01.png#lightbox)
 
-由于这是中 tvOS 的标准模式，让我们看一下的最后几步将所有内容组合到一起，并进行相互交互左右两侧拆分视图。
+由于这是 tvOS 中的标准模式，让我们看一下将所有内容组合在一起的最后一个步骤并彼此交互的拆分视图左侧和右侧边。
 
 <a name="The-Detail-View" />
 
 ### <a name="the-detail-view"></a>详细信息视图
 
-对于旅行应用程序的示例显示上面的自定义类 (`AttractionViewController`) 定义为在作为详细信息视图拆分视图的右侧提供标准视图控制器：
+旅游应用的示例介绍上面的自定义类 (`AttractionViewController`) 定义标准中作为详细信息视图拆分视图的右侧显示的视图控制器：
 
 ```csharp
 using System;
@@ -844,17 +844,17 @@ namespace tvTable
 }
 ```
 
-在这里，我们提供了**引力**(`AttractionInformation`) 被显示为一个属性，然后创建`UpdateUI`填充 UI 小组件的方法添加到接口设计器中的视图。
+在这里，我们提供了**引力**(`AttractionInformation`) 被作为属性显示并且创建`UpdateUI`填充 UI 小组件的方法添加到界面设计器中的视图。
 
-我们还定义了一种快捷方式回拆分视图控制器 (`SplitView`)，我们将使用通信将变回表视图 (`AcctractionTableView`)。
+我们还定义一种快捷方式返回到拆分视图控制器 (`SplitView`)，我们将使用通信将变回表视图 (`AcctractionTableView`)。
 
-最后，自定义操作 （事件） 已添加到三个`UIButton`接口设计器中创建的实例，允许用户将标记为引力_收藏_，获取_方向_到引力和_预订航班_给定所在的城市。
+最后，自定义操作 （事件） 已添加到这三个`UIButton`接口设计器中创建的实例，允许用户若要将标记作为引力_收藏_，获取_方向_到吸引程度并且_预订航班_为给定的城市。
 
 <a name="The-Navigation-View-Controller" />
 
 ### <a name="the-navigation-view-controller"></a>导航视图控制器
 
-由于表视图控制器嵌套在左侧的拆分视图中的导航视图控制器，因此导航视图控制器已分配的自定义类 (`MasterNavigationController`) 中接口设计器和定义，如下所示：
+导航视图控制器左侧和右侧的拆分视图中的导航视图控制器在嵌套表格视图控制器，因为已分配的自定义类 (`MasterNavigationController`) 接口设计器中，定义如下：
 
 ```csharp
 using System;
@@ -881,16 +881,16 @@ namespace tvTable
 }
 ```
 
-同样，此类仅定义几个快捷方式，以更加轻松地通过拆分视图控制器的两个方面进行通信：
+同样，此类只是定义一些快捷方式以便更轻松地跨拆分视图控制器的两个方面进行通信：
 
 * `SplitView` -为拆分视图控制器的链接 (`MainSpiltViewController`) 属于导航视图控制器。
-* `TableController` -获取表视图控制器 (`AttractionTableViewController`)，会显示为导航的视图控制器中的顶部视图。
+* `TableController` -获取表格视图控制器 (`AttractionTableViewController`) 以导航视图控制器中的顶层视图。
 
 <a name="The-Split-View-Controller" />
 
 ### <a name="the-split-view-controller"></a>拆分视图控制器
 
-拆分视图控制器是我们的应用程序的基类，因为我们创建了一个自定义类 (`MasterSplitViewController`) 接口设计器中为其和，如下所示定义：
+由于拆分视图控制器是我们的应用程序的基础，因此我们创建的自定义类 (`MasterSplitViewController`) 为其接口设计器中，定义如下：
 
 ```csharp
 using System;
@@ -937,21 +937,21 @@ namespace tvTable
 }
 ```
 
-首先，我们创建的快捷方式**详细信息**侧的拆分视图 (`AttractionViewController`) 并对其**Master**端 (`MasterNavigationController`)。 同样，这样它更容易两条边更高版本之间进行通信。
+首先，我们创建的快捷方式**详细信息**侧的拆分视图 (`AttractionViewController`) 和**Master**端 (`MasterNavigationController`)。 同样，这使得它更轻松地实现更高版本的两个方面之间的通信。
 
-接下来，拆分视图加载到内存中，则我们将拆分视图控制器附加到双方拆分视图并响应用户突出显示的表视图中引力 (`AttractionHighlighted`) 通过显示在新引力**详细信息**侧的拆分视图。
+接下来，拆分视图加载到内存中，则我们将拆分视图控制器连接到拆分视图的两面并响应突出显示的表视图中具有用户 (`AttractionHighlighted`) 通过显示在新引力**详细信息**端的拆分视图。
 
-请参阅[tvTables](https://developer.xamarin.com/samples/monotouch/tvos/tvTable/)示例应用程序内拆分视图的表视图的完整实现。
+请参阅[tvTables](https://developer.xamarin.com/samples/monotouch/tvos/tvTable/)拆分视图内的表视图的完整的实现的示例应用程序。
 
-## <a name="table-views-in-detail"></a>在详细信息的表视图
+## <a name="table-views-in-detail"></a>详细信息中的表视图
 
-因为 tvOS 建立从 iOS 中移出，表视图和表视图控制器设计，以类似的方式工作。 有关详细使用表视图中的 Xamarin 应用的信息，请参阅我们的 iOS[处理表和单元格](~/ios/user-interface/controls/tables/index.md)文档。
+TvOS 基于 iOS，因为表视图和表视图控制器设计，以类似的方式的行为。 有关更多详细信息使用 Xamarin 应用程序中的表视图，请参阅我们的 iOS[使用表和单元格](~/ios/user-interface/controls/tables/index.md)文档。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文已覆盖设计和表视图在 Xamarin.tvOS 应用内部使用。 并提供了使用表视图内拆分视图，即 tvOS 应用中的表视图的典型用法的示例。
+本文只讨论了设计和使用在 Xamarin.tvOS 应用内的表视图。 并提供了使用表视图，在拆分视图，这是一个 tvOS 应用程序中的表视图的典型的用法的示例。
 
 
 
@@ -961,4 +961,4 @@ namespace tvTable
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [适用于 tvOS 应用编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
