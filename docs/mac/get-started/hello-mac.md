@@ -5,45 +5,45 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/23/2017
-ms.openlocfilehash: 81a15f85c3b3b10525e2eb4966900edc95224fe0
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+author: lobrien
+ms.author: laobri
+ms.date: 09/02/2018
+ms.openlocfilehash: f79a509e3122cbccbe6bf10040f8143432c9d66c
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "43780511"
 ---
 # <a name="hello-mac--walkthrough"></a>Hello，Mac - 演练
 
-通过 Xamarin.Mac，可使用以 *Objective-C* 和 *Xcode* 进行开发时所用的 OS X 库和界面控件来以 C# 和 .NET 开发完全本机 Mac 应用。 由于 Xamarin.Mac 与 Xcode 直接集成，开发人员可以使用 Xcode 的 _Interface Builder_ 创建应用的用户界面（或选择通过 C# 代码直接创建）。
+通过 Xamarin.Mac，可使用以 Objective-C 或 Swift 进行开发时所用的 macOS API 来以 C# 和 .NET 开发完全本机 Mac 应用。 由于 Xamarin.Mac 与 Xcode 直接集成，开发人员可以使用 Xcode 的 _Interface Builder_ 创建应用的用户界面（或选择通过 C# 代码直接创建）。
 
-此外，由于 Xamarin.Mac 应用程序通过 C# 和 .NET 编写而成，因而可与 Xamarin.iOS 和 Xamarin.Android 移动应用共享常用后端代码；同时在每个平台上实现本机体验。
+此外，由于 Xamarin.Mac 应用程序通过 C# 和 .NET 编写而成，因而可与 Xamarin.iOS 和 Xamarin.Android 移动应用共享代码；同时在每个平台上实现本机体验。
 
 本文通过生成一个对按钮点击次数进行计数的简单 Hello, Mac 应用，介绍了通过 Xamarin.Mac、Visual Studio for Mac 以及 Xcode 的 Interface Builder 创建 Mac 应用需要用到的主要概念：
 
-[![](hello-mac-images/run02.png "正在运行的 Hello, Mac 应用示例")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "正在运行的 Hello, Mac 应用示例")](hello-mac-images/run02.png#lightbox)
 
 包含以下概念：
 
--  **Visual Studio for Mac** – 介绍 Visual Studio for Mac，以及如何使用 Visual Studio for Mac 创建 Xamarin.Mac 应用程序。
--  **Xamarin.Mac 应用程序剖析** – Xamarin.Mac 应用程序组成部分。
--  **Xcode 的 Interface Builder** - 如何使用 Xcode 的 Interface Builder 定义应用的用户界面。
--  **输出口和操作** - 如何使用输出口和操作在用户界面中连接控件。
--  **部署/测试** – 如何运行和测试 Xamarin.Mac 应用。
+- **Visual Studio for Mac** – 介绍 Visual Studio for Mac，以及如何使用 Visual Studio for Mac 创建 Xamarin.Mac 应用程序。
+- **Xamarin.Mac 应用程序剖析** – Xamarin.Mac 应用程序组成部分。
+- **Xcode 的 Interface Builder** - 如何使用 Xcode 的 Interface Builder 定义应用的用户界面。
+- **输出口和操作** - 如何使用输出口和操作在用户界面中连接控件。
+- **部署/测试** – 如何运行和测试 Xamarin.Mac 应用。
 
 ## <a name="requirements"></a>要求
 
-若要使用最新的 macOS API 开发 Xamarin.Mac 应用，需要：
+Xamarin.Mac 应用程序开发需要以下条件：
 
 - 运行 macOS High Sierra (10.13) 或更高版本的 Mac 计算机。
 - [Xcode 9 或更高版本](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)。
-- 最新版本的 [Xamarin.Mac 和 Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)。
+- 最新版本的 [Xamarin.Mac 和 Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation/)。
 
 若要运行使用 Xamarin.Mac 构建的应用程序，需要：
 
-- 运行 Mac OS X 10.7 或更高版本的 Mac 计算机。
+- 运行 macOS 10.7 或更高版本的 Mac 计算机。
 
 > [!WARNING]
 > 即将发布的 Xamarin.Mac 4.8 版本仅支持 macOS 10.9 或更高版本。
@@ -53,51 +53,45 @@ ms.locfileid: "43780511"
 
 如上所述，本指南将介绍如何创建名称为 `Hello_Mac` 的 Mac 应用，该应用会向主窗口添加一个按钮和标签。 点击此按钮后，标签会显示已点击次数。
 
-若要开始，请执行以下操作：
+若要开始，请执行以下步骤：
 
 1. 启动 Visual Studio for Mac：
 
-    [![](hello-mac-images/setup01.png "主要的 Visual Studio for Mac 接口")](hello-mac-images/setup01.png#lightbox)
+    [![](hello-mac-images/setup01-sml.png "主要的 Visual Studio for Mac 接口")](hello-mac-images/setup01.png#lightbox)
 
-2. 单击屏幕左上角的“新建解决方案...”链接，打开“新建项目”对话框：
+2. 单击“新建项目...”按钮以打开“新建项目”对话框，然后依次选择“Mac” > “应用” > “Cocoa 应用”，单击“下一步”按钮：
 
-    [![](hello-mac-images/setup03.png "在 Visual Studio for Mac 中新建解决方案")](hello-mac-images/setup02.png#lightbox)
+    [![](hello-mac-images/setup02-sml.png "选择 Cocoa 应用")](hello-mac-images/setup02.png#lightbox)
 
-3. 选择“Mac” > “App” > “Cocoa 应用”，然后单击“下一步”按钮：
+3. 在“应用名称”中输入 `Hello_Mac`，其他所有项保持默认值。 单击“下一步”：
 
-    [![](hello-mac-images/setup03.png "选择 Cocoa 应用")](hello-mac-images/setup03.png#lightbox)
+    [![](hello-mac-images/setup03-sml.png "设置应用名称")](hello-mac-images/setup03.png#lightbox)
 
-4. 在“应用名称”中输入 `Hello_Mac`，其他所有项保持默认值。 单击“下一步”：
+4. 确认该新项目在计算机中的位置：
 
-    [![](hello-mac-images/setup05.png "设置应用名称")](hello-mac-images/setup05.png#lightbox)
-
-4. 创建包括多个不同项目的解决方案时，开发人员可能需要在此处设置不同的“解决方案名称”，但对于本示例，请保留其与**项目名称**相同的默认值：
-
-    [![](hello-mac-images/setup04.png "验证新解决方案详细信息")](hello-mac-images/setup04.png#lightbox)
+    [![](hello-mac-images/setup04-sml.png "验证新解决方案详细信息")](hello-mac-images/setup04.png#lightbox)
 
 5. 单击“创建”按钮。
 
 Visual Studio for Mac 会创建新的 Xamarin.Mac 应用，并显示添加到此应用解决方案的默认文件：
 
- [![](hello-mac-images/project01.png "新解决方案的默认视图")](hello-mac-images/project01.png#lightbox)
+[![](hello-mac-images/project01-sml.png "新解决方案的默认视图")](hello-mac-images/project01.png#lightbox)
 
-Visual Studio for Mac 会使用解决方案和项目，这与 Visual Studio 完全相同。 解决方案是可包含一个或多个项目的容器；项目可包含应用程序、支持库和测试应用程序等。在本例中，Visual Studio for Mac 已自动创建一个解决方案和一个应用程序项目。
-
-根据需要，开发人员可以创建一个或多个包含通用共享代码的代码库项目。 这些库项目可由应用的项目使用，或者与其他 Xamarin.Mac 应用项目共享（或者是基于代码类型的 Xamarin.iOS 和 Xamarin.Android），与标准 .NET 应用程序方式相同。
+Visual Studio for Mac 使用与Visual Studio 2017 相同的解决方案和项目结构。 解决方案是可包含一个或多个项目的容器；项目可包含应用程序、支持库和测试应用程序等。“文件 > 新建项目”模板会自动创建一个解决方案和应用程序项目。
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Xamarin.Mac 应用程序剖析
 
-如果熟悉 iOS 编程，可发现存在众多相似之处。 事实上，iOS 使用 Mac 所用的 CocoaTouch 框架（Cocoa 的精简版本），因此许多概念会交叉。
+Xamarin.Mac 应用程序编程与使用 Xamarin.iOS 编程非常相似。 iOS 使用 Mac 所用的 CocoaTouch 框架（Cocoa 的精简版本）。
 
 项目中所含文件如下：
 
--   `Main.cs` – 此文件包含应用的主入口点。 启动应用时，其中会包含运行的首个类和方法。
--   `AppDelegate.cs` – 此文件包含的主应用类负责侦听操作系统中的事件。
--   `Info.plist` – 此文件包含应用属性，例如应用程序名称和图标等属性。
--   `Entitlements.plist` - 此文件包含应用的授权，并允许访问 Sandboxing 和 iCloud 支持等。
--  `Main.storyboard` - 定义应用的用户界面（窗口和菜单），通过 Segues 设计窗口间的互连。 Storyboard 是包含视图（用户界面元素）定义的 XML 文件。 此文件可在 Xcode 内由 Interface Builder 创建和维护。
--   `ViewController.cs` – 这是主窗口的控制器。 控制器会在另一文章中进行详细介绍，但现在，可将控制器理解为任何特定视图的主引擎。
--   `ViewController.designer.cs` – 此文件中包含有助于与主屏幕用户界面进行集成的 plumbing 代码。
+- Main.cs 包含应用的主入口点。 启动应用时，`Main` 类会包含运行的首个方法。
+- AppDelegate.cs 包含的 `AppDelegate` 类负责侦听操作系统中的事件。
+- Info.plist 包含应用属性，例如应用程序名称和图标等属性。
+- Entitlements.plist 包含应用的授权，并允许访问 Sandboxing 和 iCloud 支持等。
+- Main.storyboard 定义应用的用户界面（窗口和菜单），通过 Segues 设计窗口间的互连。 Storyboard 是包含视图（用户界面元素）定义的 XML 文件。 此文件可在 Xcode 内由 Interface Builder 创建和维护。
+- ViewController.cs 是主窗口的控制器。 控制器会在另一文章中进行详细介绍，但现在，可将控制器理解为任何特定视图的主引擎。
+- ViewController.designer.cs 包含有助于与主屏幕用户界面进行集成的联结代码。
 
 以下部分将简要介绍这些文件。 之后会进行详细介绍，但现在了解相关基础知识会很有帮助。
 
@@ -114,14 +108,14 @@ using ObjCRuntime;
 
 namespace Hello_Mac
 {
-        class MainClass
+    class MainClass
+    {
+        static void Main (string[] args)
         {
-                static void Main (string[] args)
-                {
-                        NSApplication.Init ();
-                        NSApplication.Main (args);
-                }
+            NSApplication.Init ();
+            NSApplication.Main (args);
         }
+    }
 }
 ```
 
@@ -165,7 +159,7 @@ namespace Hello_Mac
 
 Cocoa（以及其派生产品 CocoaTouch）使用“模型视图控制器” (MVC) 模式。 `ViewController` 声明表示控制实际应用窗口的对象。 通常，对于每个创建的窗口（以及窗口内许多其他项），都存在一个负责窗口生命周期的控制器，例如显示窗口、向窗口添加新视图（控件）等。
 
-`ViewController` 类是主窗口的控制器。 这意味着其负责主窗口的生命周期。 之后会详细进行介绍，现在快速了解即可：
+`ViewController` 类是主窗口的控制器。 此控制器负责主窗口的生命周期。 之后会详细进行介绍，现在快速了解即可：
 
 ```csharp
 using System;
@@ -203,7 +197,7 @@ namespace Hello_Mac
 
 ### <a name="viewcontrollerdesignercs"></a>ViewController.Designer.cs
 
-主窗口类的设计器文件现在为空，但通过 Xcode 内的 Interface Builder 创建用户界面时会由 Visual Studio for Mac 自动进行填充：
+主窗口类的设计器文件最初为空，但通过 Xcode Interface Builder 创建用户界面时会由 Visual Studio for Mac 自动进行填充：
 
 ```csharp
 // WARNING
@@ -226,7 +220,7 @@ namespace Hello_Mac
 }
 ```
 
-开发人员通常不会担心设计器文件，因为设计器文件会由 Visual Studio for Mac 自动管理，并提供必需的 pluming 代码，通过该代码可访问已添加到应用中任意窗口或视图的控件。
+设计器文件不应直接编辑，因为设计器文件会由 Visual Studio for Mac 自动管理，以提供 pluming 代码，通过该代码可访问已添加到应用中任意窗口或视图的控件。
 
 创建 Xamarin.Mac 应用项目以及基本了解其组件后，可切换到 Xcode，使用 Interface Builder 创建用户界面。
 
@@ -244,7 +238,7 @@ namespace Hello_Mac
 
 [![](hello-mac-images/entitlements01.png "Visual Studio for Mac 权利编辑器")](hello-mac-images/entitlements01.png#lightbox)
 
-对于 Hello World 示例，无需权利。 下一部分介绍如何使用 Xcode 的 Interface Builder 编辑 `Main.storyboard` 文件和定义 Xamarin.Mac 应用的 UI。
+对于 Hello World 示例，无需权利。 下一部分介绍如何使用 Xcode 的 Interface Builder 编辑 Main.storyboard 文件和定义 Xamarin.Mac 应用的 UI。
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 和 Interface Builder 简介
 
@@ -254,7 +248,7 @@ namespace Hello_Mac
 
 [![](hello-mac-images/xcode01.png "解决方案资源管理器中的 Main.storyboard 文件")](hello-mac-images/xcode01.png#lightbox)
 
-这会启动 Xcode，其类似于：
+这会启动 Xcode，其如以下屏幕截图所示：
 
 [![](hello-mac-images/xcode02.png "默认的 XCode Interface Builder 视图")](hello-mac-images/xcode02.png#lightbox)
 
@@ -263,10 +257,9 @@ namespace Hello_Mac
 > [!NOTE]
 > 开发人员无需使用 Xcode 和 Interface Builder 来创建 Xamarin.Mac 应用的用户界面，可直接通过 C# 代码创建 UI，但这超出了本文的讨论范围。 为简单起见，本教程其余部分会使用 Interface Builder 来创建用户界面。
 
-
 ### <a name="components-of-xcode"></a>Xcode 组件
 
-从 Visual Studio for Mac 的 Xcode 中打开 `.storyboard` 文件时，“项目导航器”位于左侧，“界面层次结构”和“界面编辑器”位于中间，“属性和实用程序”部分位于右侧：
+从 Visual Studio for Mac 的 Xcode 中打开 .storyboard 文件时，“项目导航器”位于左侧，“界面层次结构”和“界面编辑器”位于中间，“属性和实用程序”部分位于右侧：
 
 [![](hello-mac-images/xcode03.png "XCode 中 Interface Builder 的各个部分")](hello-mac-images/xcode03.png#lightbox)
 
@@ -274,9 +267,9 @@ namespace Hello_Mac
 
 ### <a name="project-navigation"></a>项目导航
 
-打开 `.storyboard` 文件在 Xcode 中进行编辑时，Visual Studio for Mac 会在后台创建 Xcode 项目文件，以便在 Visual Studio for Mac 和 Xcode 之间传递更改。 之后，开发人员从 Xcode 切换回 Visual Studio for Mac 时，对此项目所作的任何更改都将通过 Visual Studio for Mac 与 Xamarin.Mac 项目同步。
+打开 .storyboard 文件在 Xcode 中进行编辑时，Visual Studio for Mac 会在后台创建 Xcode 项目文件，以便在 Visual Studio for Mac 和 Xcode 之间传递更改。 之后，开发人员从 Xcode 切换回 Visual Studio for Mac 时，对此项目所作的任何更改都将通过 Visual Studio for Mac 与 Xamarin.Mac 项目同步。
 
-通过“项目导航”部分，开发人员可在组成此_填充码_ Xcode 项目的所有文件之间导航。 通常，开发人员只会对此列表中的 `.storyboard` 文件感兴趣，例如 `Main.storyboard`。
+通过“项目导航”部分，开发人员可在组成此填充码 Xcode 项目的所有文件之间导航。 通常，开发人员只会对此列表中的 `.storyboard` 文件感兴趣，例如 `Main.storyboard`。
 
 ### <a name="interface-hierarchy"></a>界面层次结构
 
@@ -302,14 +295,14 @@ namespace Hello_Mac
 
 由左至右，这些选项卡依次为：
 
--   **文件检查器** – 文件检查器显示文件信息，例如正在编辑的 Xib 文件的文件名称和位置。
--   **快速帮助** – 快速帮助选项卡基于 Xcode 中所选内容提供相应背景帮助。
--   **标识检查器** – 标识检查器提供有关所选控件/视图的信息。
--   **属性检查器** – 通过属性检查器，开发人员可自定义所选控件/视图的各种属性。
--   **大小检查器** – 通过大小检查器，开发人员可控制所选控件/视图的大小和调整大小。
--   **连接检查器** – 连接检查器显示所选控件的“输出口”和“操作”连接。 后文将详细介绍输出口和操作。
--   **绑定检查器** – 通过绑定检查器，开发人员可配置控件，以使其值自动绑定到数据模型。
--   **视图效果检查器** – 通过视图效果检查器，开发人员可对控件指定效果，例如动画。
+- **文件检查器** – 文件检查器显示文件信息，例如正在编辑的 Xib 文件的文件名称和位置。
+- **快速帮助** – 快速帮助选项卡基于 Xcode 中所选内容提供相应背景帮助。
+- **标识检查器** – 标识检查器提供有关所选控件/视图的信息。
+- **属性检查器** – 通过属性检查器，开发人员可自定义所选控件/视图的各种属性。
+- **大小检查器** – 通过大小检查器，开发人员可控制所选控件/视图的大小和调整大小。
+- **连接检查器** – 连接检查器显示所选控件的“输出口”和“操作”连接。 后文将详细介绍输出口和操作。
+- **绑定检查器** – 通过绑定检查器，开发人员可配置控件，以使其值自动绑定到数据模型。
+- **视图效果检查器** – 通过视图效果检查器，开发人员可对控件指定效果，例如动画。
 
 使用“库”部分查找要放入设计器的控件和对象，从而以图形方式生成用户界面：
 
@@ -319,7 +312,7 @@ namespace Hello_Mac
 
 了解 Xcode IDE 和 Interface Builder 的基础知识后，开发人员便可创建主视图的用户界面。
 
-请执行以下操作：
+请按照这些步骤使用 Interface Builder：
 
 1. 在 Xcode 中，从“库”部分拖动“Push Button”：
 
@@ -329,7 +322,7 @@ namespace Hello_Mac
 
     [![](hello-mac-images/xcode08.png "将按钮添加到界面设计")](hello-mac-images/xcode08.png#lightbox)
 
-3. 单击“属性检查器”中的 **Title** 属性，将此按钮的标题更改为 `Click Me`：
+3. 单击“属性检查器”中的 Title 属性，将此按钮的标题更改为“Click Me”：
 
     [![](hello-mac-images/xcode09.png "设置按钮的属性")](hello-mac-images/xcode09.png#lightbox)
 
@@ -365,7 +358,7 @@ namespace Hello_Mac
 
 14. 保存用户界面更改。
 
-调整控件大小和移动控件时，请注意 Interface Builder 会根据 [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)提供有用的快捷提示。 这些指南有助于开发人员创建出外观和风格为 Mac 用户所熟悉的优质应用。
+调整控件大小和移动控件时，请注意 Interface Builder 会根据 [macOS 人机界面指南](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)提供有用的快捷提示。 这些指南有助于开发人员创建出外观和风格为 Mac 用户所熟悉的优质应用。
 
 在“界面层次结构”部分中可查看组成用户界面的元素布局和层次结构的显示方式：
 
@@ -379,14 +372,14 @@ namespace Hello_Mac
 
 **输出口**和**操作**是什么？ 在传统的 .NET 用户界面编程中，用户界面中的控件在添加时会自动作为属性公开。 然而在 Mac 中情况则不同，如果仅将控件添加到视图，代码不可对其进行访问。 开发人员必须对代码显式公开 UI。 为此，Apple 提供了两个选项：
 
--   **输出口** – 输出口类似于属性。 如果开发人员将控件连接到输出口，则控件会通过属性对代码公开，从而使控件可执行诸如附加事件处理程序和调用方法等操作。
--   **操作** - 操作类似于 WPF 中的命令模式。 例如，对控件执行操作时，比如单击按钮，则控件会自动在代码中调用方法。 操作功能强大且非常方便，因为开发人员可对同一操作连接多个控件。
+- **输出口** – 输出口类似于属性。 如果开发人员将控件连接到输出口，则控件会通过属性对代码公开，从而使控件可执行诸如附加事件处理程序和调用方法等操作。
+- **操作** - 操作类似于 WPF 中的命令模式。 例如，对控件执行操作时，比如单击按钮，则控件会自动在代码中调用方法。 操作功能强大且非常方便，因为开发人员可对同一操作连接多个控件。
 
 在 Xcode 中，会通过拖动控件直接将**输出口**和**操作**添加到代码。 更具体地说，这意味着若要创建“输出口”或“操作”，开发人员需选择要添加“输出口”和“操作”的控件元素，按住键盘上的 Ctrl 键，然后将此控件直接拖到代码中。
 
 对于 Xamarin.Mac 开发人员，这意味着开发人员应拖动到与要创建**输出口**或**操作**的 C# 文件所对应的 Objective-C 存根文件中。 Visual Studio for Mac 创建一个名为 `ViewController.h` 的文件作为其生成的填充码 Xcode 项目的一部分，以便使用 Interface Builder：
 
-[![](hello-mac-images/xcode16.png "在 Xcode 中查看源")](hello-mac-images/xcode16.png#lightbox)
+[![](hello-mac-images/xcode16-sml.png "在 Xcode 中查看源")](hello-mac-images/xcode16.png#lightbox)
 
 此存根 `.h` 文件反映了创建新的 `NSWindow` 时自动添加到 Xamarin.Mac 项目的 `ViewController.designer.cs`。 此文件用于同步对 Interface Builder 所作的更改，且会在此文件中创建**输出口**和**操作**，从而使 UI 元素对 C# 代码公开。
 
@@ -412,7 +405,7 @@ namespace Hello_Mac
 
     [![](hello-mac-images/outlet03.png "查看 ViewController.h 文件")](hello-mac-images/outlet03.png#lightbox)
 
-6. **最后一步非常重要！** 如果开发人员未选中正确的文件，则无法创建**输出口**和**操作**，或者其会公开给 C# 中错误的类！
+6. 最后一个步骤至关重要！：如果未选中正确的文件，则无法创建输出口和操作，或者会公开给 C# 中错误的类！
 
 7. 在“界面编辑器”中，按住键盘上的 **Ctrl** 键，单击并将前面创建的标签拖动到代码编辑器中（`@interface ViewController : NSViewController {}` 代码下方）：
 
@@ -435,6 +428,7 @@ namespace Hello_Mac
 请执行以下操作：
 
 1. 请确保 Xcode 仍位于“助手编辑器”中，且 **ViewController.h** 文件在“代码编辑器”中可见。
+
 2. 在“界面编辑器”中，按住键盘上的 **Ctrl** 键，单击并将前面创建的按钮拖动到代码编辑器中（`@property (assign) IBOutlet NSTextField *ClickedLabel;` 代码下方）：
 
     [![](hello-mac-images/action01.png "拖动以创建“操作”")](hello-mac-images/action01.png#lightbox)
@@ -464,7 +458,7 @@ namespace Hello_Mac
 
 在“解决方案资源管理器”中选择 ViewController.designer.cs，查看 C# 代码中如何连接输出口和操作：
 
-[![](hello-mac-images/sync01.png "与 Xcode 同步更改")](hello-mac-images/sync01.png#lightbox)
+[![](hello-mac-images/sync01-sml.png "与 Xcode 同步更改")](hello-mac-images/sync01.png#lightbox)
 
 注意 **ViewController.designer.cs** 文件中的这两个定义：
 
@@ -478,7 +472,7 @@ partial void ClickedButton (Foundation.NSObject sender);
 
 与 Xcode 的 `ViewController.h` 文件中的定义对齐：
 
-```csharp
+```objc
 @property (assign) IBOutlet NSTextField *ClickedLabel;
 - (IBAction)ClickedButton:(id)sender;
 ```
@@ -496,7 +490,7 @@ Visual Studio for Mac 会侦听对 **.h** 文件的更改，然后在相应的 *
 
 对于此示例应用，每次单击第一个按钮时，会更新标签，显示该按钮的已点击次数。 为完成此操作，请通过在“解决方案资源管理器”中双击 `ViewController.cs` 文件以将它打开进行编辑：
 
-[![](hello-mac-images/code01.png "在 Visual Studio for Mac 中查看 ViewController.cs 文件")](hello-mac-images/code01.png#lightbox)
+[![](hello-mac-images/code01-sml.png "在 Visual Studio for Mac 中查看 ViewController.cs 文件")](hello-mac-images/code01.png#lightbox)
 
 首先，在 `ViewController` 类中创建类级别变量以跟踪已发生的点击数。 编辑类定义，使其类似于如下所示：
 
@@ -514,7 +508,7 @@ namespace Hello_Mac
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.AwakeFromNib ();
+    base.ViewDidLoad ();
 
     // Set the initial value for the label
     ClickedLabel.StringValue = "Button has not been clicked yet.";
@@ -527,7 +521,6 @@ public override void ViewDidLoad ()
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
-
     // Update counter and label
     ClickedLabel.StringValue = string.Format("The button has been clicked {0} time{1}.",++numberOfTimesClicked, (numberOfTimesClicked < 2) ? "" : "s");
 }
@@ -541,12 +534,12 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 生成应用时，开发人员可选择所需的版本类型：
 
--   **调试** – 调试版本会编译到 **.app**（应用程序）文件，其中包含的一些额外元数据可使开发人员在应用运行时进行相关调试。
--   **发布** – 发布版本也会创建 **.app** 文件，但其中不包含调试调试信息，因此其大小更小，执行速度更快。
+- **调试** – 调试版本会编译到 **.app**（应用程序）文件，其中包含的一些额外元数据可使开发人员在应用运行时进行相关调试。
+- **发布** – 发布版本也会创建 **.app** 文件，但其中不包含调试调试信息，因此其大小更小，执行速度更快。
 
-开发人员可以从 Visual Studio for Mac 屏幕左上角的“配置选择器”中选择生成的类型。
+开发人员可以从 Visual Studio for Mac 屏幕左上角的“配置选择器”中选择生成的类型：
 
-[![](hello-mac-images/run01.png "选择调试版本")](hello-mac-images/run01.png#lightbox)
+[![](hello-mac-images/run01-sml.png "选择调试版本")](hello-mac-images/run01.png#lightbox)
 
 ## <a name="building-the-application"></a>生成应用程序
 
@@ -558,17 +551,17 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 可通过三种方式运行应用：
 
--  按 **⌘+Enter**。
--  在“运行”菜单中，选择“调试”。
--  单击 Visual Studio for Mac 工具栏中的“播放”按钮（位于“解决方案资源管理器”上方）。
+- 按 **⌘+Enter**。
+- 在“运行”菜单中，选择“调试”。
+- 单击 Visual Studio for Mac 工具栏中的“播放”按钮（位于“解决方案资源管理器”上方）。
 
 应用会生成（如果尚未生成），以调试模式启动并显示主界面窗口：
 
-[![](hello-mac-images/run02.png "运行应用程序")](hello-mac-images/run02.png#lightbox)
+[![](hello-mac-images/run02-sml.png "运行应用程序")](hello-mac-images/run02.png#lightbox)
 
 如果多次点击按钮，则标签会更新计数：
 
-[![](hello-mac-images/run03.png "显示单击按钮的结果")](hello-mac-images/run03.png#lightbox)
+[![](hello-mac-images/run03-sml.png "显示单击按钮的结果")](hello-mac-images/run03.png#lightbox)
 
 ## <a name="where-to-next"></a>下一步
 
@@ -579,18 +572,18 @@ partial void ClickedButton (Foundation.NSObject sender) {
 - [对话框](~/mac/user-interface/dialog.md) - 本文介绍如何在 Xamarin.Mac 应用程序中使用对话框和模式窗口。 其中包含如何在 Xcode 和 Interface Builder 中创建和维护模式窗口、使用标准对话框、显示以及响应 C# 代码中的窗口。
 - [警告](~/mac/user-interface/alert.md) - 本文介绍 Xamarin.Mac 应用程序中警告的相关内容。 其中包括通过 C# 代码创建和显示警告以及响应警告。
 - [菜单](~/mac/user-interface/menu.md) - 从屏幕顶部的应用程序主菜单到可在窗口中任意位置出现的弹出菜单和上下文菜单，Mac 应用程序用户界面中的各个部分都会使用到菜单。 菜单是构成 Mac 应用程序用户体验的一个组成部分。 本文介绍如何在 Xamarin.Mac 应用程序中使用 Cocoa 菜单。
-- [工具栏](~/mac/user-interface/toolbar.md) - 本文介绍 Xamarin.Mac 应用程序中工具栏的相关内容。 其中包含如何在 Xcode 和 Interface Builder 中创建和维护工具栏、如何使用输出口和操作对代码公开工具栏项、如何启用和禁用工具栏项以及响应 C# 代码中的工具栏项。
+- [工具栏](~/mac/user-interface/toolbar.md) - 本文介绍 Xamarin.Mac 应用程序中工具栏的相关内容。 其中包含 如何在 Xcode 和 Interface Builder 中创建和维护工具栏、如何使用输出口和操作对代码公开工具栏项、如何启用和禁用工具栏项以及响应 C# 代码中的工具栏项。
 - [表视图](~/mac/user-interface/table-view.md) - 本文介绍如何使用 Xamarin.Mac 应用程序中表视图。 其中包含在如何 Xcode 和 Interface Builder 中创建和维护表视图、如何使用输出口和操作对代码公开表视图项、如何填充表项以及响应 C# 代码中的表视图项。
 - [大纲视图](~/mac/user-interface/outline-view.md) - 本文介绍如何在 Xamarin.Mac 应用程序中使用大纲视图。 其中包含如何在 Xcode 和 Interface Builder 中创建和维护大纲视图、如何使用输出口和操作对代码公开大纲视图项、填充大纲项以及响应 C# 代码中的大纲视图项。
 - [源列表](~/mac/user-interface/source-list.md) - 本文介绍如何 Xamarin.Mac 应用程序中使用源列表。 其中包含如何在 Xcode 和 Interface Builder 中创建和维护源列表、如何使用输出口和操作对代码公开源列表项、如何填充源列表项以及响应 C# 代码中的源列表项。
 - [集合视图](~/mac/user-interface/collection-view.md) - 本文介绍如何在 Xamarin.Mac 应用程序中使用集合视图。 其中包含如何在 Xcode 和 Interface Builder 中创建和维护集合视图、如何使用操作对代码公开集合视图元素、如何填充集合视图以及响应 C# 代码中的集合视图。
 - [图像](~/mac/app-fundamentals/image.md) - 本文介绍如何在 Xamarin.Mac 应用中使用图像和图标。 其中包括如何创建和维护用于创建应用图标的图像以及如何在 C# 代码和 Xcode 的 Interface Builder 中使用图像。
 
-此外，建议参阅 [Mac 示例库](https://developer.xamarin.com/samples/mac/all/)，其中包括许多可供使用的代码，有助于开发人员快速开始 Xamarin.Mac 项目。
+[Mac 示例库](https://developer.xamarin.com/samples/mac/all/)包含即时可用的代码示例，以便于学习 Xamarin.Mac。
 
-有关完整 Xamarin.Mac 应用示例（其中包含用户在典型 Mac 应用程序中可能希望找到的许多功能），请参阅 [SourceWriter 示例](https://developer.xamarin.com/samples/mac/SourceWriter/)。 SourceWriter 是一个非常简单的源代码编辑器，提供代码补全和简单语法突出显示支持。
+[SourceWriter 示例应用](https://developer.xamarin.com/samples/mac/SourceWriter/)是一个完整的 Xamarin.Mac 应用示例（其中包含用户在典型 Mac 应用程序中可能希望找到的许多功能）。 SourceWriter 是一个非常简单的源代码编辑器，提供代码补全和简单语法突出显示支持。
 
-SourceWriter 代码已经完全注释，且在可用时，提供了相关链接，链接涵盖了从关键技术或方法到 Xamarin.Mac 指南文档中的相关信息。
+SourceWriter 代码已经完全注释，且在可用时，提供了相关链接，链接涵盖了从关键技术或方法到 Xamarin.Mac 文档中的相关信息。
 
 ## <a name="summary"></a>总结
 
@@ -599,4 +592,4 @@ SourceWriter 代码已经完全注释，且在可用时，提供了相关链接�
 ## <a name="related-links"></a>相关链接
 
 - [Hello，Mac（示例）](https://developer.xamarin.com/samples/mac/Hello_Mac/)
-- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS 人机界面指南](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
