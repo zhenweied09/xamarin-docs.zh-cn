@@ -4,15 +4,15 @@ description: 本文介绍如何创建可通过 Ad Hoc 分发用来部署应用�
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4fd64a1ebf05dd149304f49d8282ee1b38bfcf03
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 70d6b908beb0d04788365b104b5e4a2679b0ebe1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113243"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS 中的 IPA 支持
 
@@ -54,7 +54,7 @@ ms.locfileid: "36321358"
 
 ## <a name="creating-an-ipa"></a>创建 IPA
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 创建 IPA 现已内置于新的发布工作流。 为此，请按照下面的指示存档应用、对其签名并保存 IPA。
 
@@ -138,7 +138,7 @@ ms.locfileid: "36321358"
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 在创建并选择了预配配置文件、创建了可选的 iTunesMetadata.plist 文件，以及在 Visual Studio 中设置了 iTunes Artwork 后，便可以生成 IPA 以供分发。 接下来，需要配置项目。 请执行以下操作：
 
@@ -233,11 +233,11 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 新的 iOS 应用程序将显示在“我的应用”部分，在其中右键单击应用程序即可获取它的相关信息：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "“我的应用”部分中的新 iOS 应用程序")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "“我的应用”部分中的新 iOS 应用程序")
 

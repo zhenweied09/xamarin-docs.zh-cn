@@ -4,15 +4,15 @@ description: 本文档概述适用于 Xamarin.iOS 应用程序的分发技巧，
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 815277e9a4f9384d92bf17376f426cacd40dbc9f
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 6141b84af56d7680e2b294317ba97fb6943e17c5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209435"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106047"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Xamarin.iOS 应用分发概述
 

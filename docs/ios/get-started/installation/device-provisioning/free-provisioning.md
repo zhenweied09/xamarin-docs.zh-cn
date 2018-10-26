@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 503dae8253b3c0bb82038dd54b5d97ff632b439b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115026"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 应用的免费预配
 
@@ -87,7 +87,7 @@ ms.locfileid: "39353316"
 
 ### <a name="deploy-your-xamarinios-app"></a>部署 Xamarin.iOS 应用
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 通过 USB 或[以无线方式](~/ios/deploy-test/wireless-deployment.md)将 iOS 设备连接到 Mac 生成主机。
 2. 在 Visual Studio for Mac 的“Solution Pad”中，双击“Info.plist”。
@@ -106,7 +106,7 @@ ms.locfileid: "39353316"
 9. 单击“确定”保存，并关闭“项目选项”。
 10. 选择 iOS 设备并运行应用。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 请确保 Visual Studio 2017 已[与 Mac 生成主机配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)。
 2. 通过 USB 或[以无线方式](~/ios/deploy-test/wireless-deployment.md)将 iOS 设备连接到 Mac 生成主机。

@@ -4,15 +4,15 @@ description: 本文档介绍如何在 App Store 中分发 Xamarin.iOS 应用程�
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: b763407797cf635908cf34cce4f1a6a06325000d
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115128"
 ---
 # <a name="app-store-distribution"></a>App Store 分发
 
@@ -121,11 +121,11 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 7. 单击“生成”按钮，创建新的配置文件并完成该过程。
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  可能需要退出 Visual Studio for Mac，并让 Xcode 刷新可用签名标识和预配配置文件列表（按照[请求签名标识](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)部分中的说明操作），然后 Visual Studio for Mac 中才会有新的分发配置文件。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  可能需要退出 Visual Studio，并让 Xcode（在生成主机的 Mac 上）刷新可用签名标识和预配配置文件列表（按照[请求签名标识](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)部分中的说明操作），然后 Visual Studio 中才会有新的分发配置文件。
 
@@ -137,7 +137,7 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
 
 如果准备好最终生成用于在 iTunes App Store 中销售的 Xamarin.iOS 应用程序，可选择上面创建的分发配置文件。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  在 Visual Studio for Mac 中，执行以下操作：
 
@@ -153,7 +153,7 @@ Xamarin.iOS 应用开发完成后，软件开发生命周期中的下一步是�
     ![](images/releasexs03.png "选择“签名标识”和“分发配置文件”")
 5. 单击“确定”按钮保存更改。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  在 Visual Studio 中，执行以下操作：
 

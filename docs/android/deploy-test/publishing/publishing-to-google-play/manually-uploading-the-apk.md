@@ -3,15 +3,15 @@ title: 手动上传 APK
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bfddb315d74e6282004edeb10a35271dce3b9c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111273"
 ---
 # <a name="manually-uploading-the-apk"></a>手动上传 APK
 
@@ -165,7 +165,7 @@ Google Play 不允许将免费应用程序更改为付费应用（但是，可�
 -   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play 使用此属性，根据屏幕大小确定应用程序是否可部署到设备中。 
     Google Play 假定 Android 可将较小布局调整为较大屏幕，但反之不成立。 因此，声明支持标准屏幕的应用程序会在搜索较大屏幕而非较小屏幕时的搜索结果中出现。 如果 Xamarin.Android 应用程序在清单文件中不提供 `<supports-screen>` 元素，Google Play 将假定所有属性均具有值 true，并且该应用程序支持所有屏幕大小。 必须将此元素手动添加到 **AndroidManifest.xml**。 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; 此清单元素用于请求某些硬件功能，例如键盘类型、导航设备和触摸屏等。必须将此元素手动添加到 **AndroidManifest.xml**。 
+-   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; 此清单元素用于请求某些硬件功能，例如键盘类型、导航设备和触摸屏等。必须将此元素手动添加到 **AndroidManifest.xml。 
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 此清单元素声明为确保应用程序正常运行，设备所必需的硬件或软件功能。 此特性仅提供信息。 Google Play 不会向设备显示不符合此筛选条件的应用程序。 仍可通过其他方式（手动或下载）安装该应用程序。 必须将此元素手动添加到 **AndroidManifest.xml**。 
 

@@ -4,15 +4,15 @@ description: 本文档概述了如何对 Xamarin.iOS 应用程序进行单元测
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121823"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>对 Xamarin.iOS 应用进行单元测试
 
@@ -21,13 +21,13 @@ ms.locfileid: "34785458"
 
 ## <a name="setting-up-a-test-project"></a>建立测试项目
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要为项目创建单元测试框架，只需向解决方案添加“iOS 单元测试项目”类型的项目。 为此，请右键单击解决方案，然后选择“添加”>“添加新项目”。 从列表中选择“iOS”>“测试”>“统一 API”>“iOS 单元测试项目”（可选择 C# 或 F#）。
 
 ![](touch.unit-images/00.png "选择 C# 或 F#")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要为项目创建单元测试框架，只需向解决方案添加“iOS 单元测试项目”类型的项目。 为此，请右键单击解决方案，然后选择“添加”>“新项目...”。从列表中选择“Visual C#”>“iOS”>“单元测试应用(iOS)”。
 
@@ -37,11 +37,11 @@ ms.locfileid: "34785458"
 
 上述操作将创建一个包含基本运行程序，并引用新 MonoTouch.NUnitLite 程序集的基本项目，项目如下所示：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "解决方案资源管理器中的项目")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "解决方案资源管理器中的项目")
 

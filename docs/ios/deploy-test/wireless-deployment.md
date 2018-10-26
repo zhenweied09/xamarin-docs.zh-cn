@@ -4,15 +4,15 @@ description: 本文档介绍如何以无线方式将 Xamarin.iOS 应用从 Visua
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 02/09/2018
-ms.openlocfilehash: ade7eb7ff26fec8df616401801585e499ddf4206
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118898"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>适用于 Xamarin.iOS 和 tvOS 应用的无线部署
 
@@ -20,20 +20,20 @@ ms.locfileid: "34785513"
 
 本指南详细介绍了如何通过网络配对和部署到设备。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 Visual Studio for Mac 和 Visual Studio 提供无线部署功能。
 
 若要使用无线部署，必须具有：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - macOS 10.12.4
 - 最新版 Visual Studio for Mac
 - Xcode 9.0 或更高版本
 - 使用 iOS 11.0 或 tvOS 11.0 和更高版本的设备
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - 最新版 Visual Studio
 - 使用 iOS 11.0 或 tvOS 11.0 和更高版本的设备

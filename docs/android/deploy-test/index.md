@@ -4,14 +4,15 @@ description: 本部分包含的指南介绍如何测试应用程序、优化应�
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 5b3061f30f6f120cf8edb41ccf5e70ae853aeb9e
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 4c9ab8c14db131427329cef51e7b74e982a1c7b8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103681"
 ---
 # <a name="deployment-and-testing"></a>部署和测试
 
@@ -57,6 +58,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="xamarinandroid-performanceandroiddeploy-testperformancemd"></a>[Xamarin.Android 性能](~/android/deploy-test/performance.md)
 
 可以通过许多方法提高使用 Xamarin.Android 构建的应用程序的性能。 总体上，这些方法可以极大地降低由 CPU 执行的工作量和应用程序占用的内存量。
+
+## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[分析 Android 应用](~/android/deploy-test/profiling.md)
+
+本指南介绍如何使用探查器工具来检查 Android 应用的性能和内存使用情况。
+
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[做好应用程序发布准备](~/android/deploy-test/release-prep/index.md)
 

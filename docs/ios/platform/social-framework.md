@@ -1,27 +1,27 @@
 ---
-title: 在 Xamarin.iOS 的社交 Framework
-description: 社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Facebook，以及 SinaWeibo 的社交网络进行交互。
+title: 在 Xamarin.iOS 社交框架
+description: 社交框架将为与社交网络在中国用户包括 Twitter 和 Facebook，以及 SinaWeibo 交互提供一个统一的 API。
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 08ccd5b5ac78e82bf745764d70e59d2db9ec6776
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788190"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115700"
 ---
-# <a name="social-framework-in-xamarinios"></a>在 Xamarin.iOS 的社交 Framework
+# <a name="social-framework-in-xamarinios"></a>在 Xamarin.iOS 社交框架
 
-_社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Facebook，以及 SinaWeibo 的社交网络进行交互。_
+_社交框架将为与社交网络在中国用户包括 Twitter 和 Facebook，以及 SinaWeibo 交互提供一个统一的 API。_
 
-使用社交框架允许应用程序而无需管理身份验证与社交网络从单个 API 进行交互。 它包括提供用于编写文章，以及允许通过 HTTP 使用每个社交网络 API 的抽象视图控制器的系统。
+使用社交框架允许应用程序而无需管理身份验证与社交网络单一 API 进行交互。 它包括用于撰写文章，以及允许通过 HTTP 使用每个社交网络 API 的抽象提供视图控制器的系统。
 
 > [!IMPORTANT]
-> 若要连接到各种社交网络的跨平台 API，请参阅[Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin 组件应用商店中为组件。
+> 若要连接到各种社交网络的跨平台 API，请参阅[Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) Xamarin Component Store 组件。
 
 ## <a name="connecting-to-twitter"></a>连接到 Twitter
 
@@ -31,21 +31,21 @@ _社交框架提供一个统一的 API 的用户在中国包括 Twitter 和 Face
 
  [![](social-framework-images/twitter01.png "Twitter 帐户设置")](social-framework-images/twitter01.png#lightbox)
 
-输入并使用 Twitter 验证帐户后，设备用于访问 Twitter 的社交 Framework 类上的任何应用程序将使用此帐户。
+一旦已输入和验证与 Twitter 帐户，用于访问 Twitter 的社交框架类在设备上的任何应用程序将使用此帐户。
 
 ### <a name="sending-tweets"></a>发送推文
 
-社交 Framework 包括调用的控制器`SLComposeViewController`，提供了用于编辑和发送推文的系统提供视图。 以下屏幕截图显示此视图的一个示例：
+社交框架包括名为的控制器`SLComposeViewController`，提供了用于编辑和发送推文的系统提供视图。 下面的屏幕截图显示了此视图的一个示例：
 
- [![](social-framework-images/twitter02.png "此屏幕截图显示了 SLComposeViewController 的示例")](social-framework-images/twitter02.png#lightbox)
+ [![](social-framework-images/twitter02.png "此屏幕截图显示 SLComposeViewController 的示例")](social-framework-images/twitter02.png#lightbox)
 
-若要使用`SLComposeViewController`与 Twitter 的控制器实例必须创建通过调用`FromService`方法替换`SLServiceType.Twitter`如下所示：
+若要使用`SLComposeViewController`与 Twitter，控制器的实例必须创建通过调用`FromService`方法替换`SLServiceType.Twitter`，如下所示：
 
 ```csharp
 var slComposer = SLComposeViewController.FromService (SLServiceType.Twitter);
 ```
 
-后`SLComposeViewController`返回实例，所以可以用来显示用于发布到 Twitter 的 UI。 但是，首先要做是通过调用在此情况下，检查的社交网络 Twitter 可用性`IsAvailable`:
+之后`SLComposeViewController`实例返回，所以可以用来显示 UI 来发布到 Twitter。 但是，首先要做是通过调用这种情况下，检查是否有社交网络，Twitter `IsAvailable`:
 
 ```csharp
 if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
@@ -53,14 +53,14 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController` 永远不会发送推文直接无需用户交互。 但是，它可以使用以下方法初始化：
+ `SLComposeViewController` 永远不会发送的推文直接无需用户交互。 但是，它可以使用以下方法进行初始化：
 
 -   `SetInitialText` – 将添加要显示推文中的初始文本。 
 -  `AddUrl` – 将 Url 添加到推文。
 -  `AddImage` – 将图像添加到推文。
 
 
-初始化后，调用`PresentVIewController`显示创建的视图`SLComposeViewController`。 用户可以然后根据需要编辑并发送推文，或取消发送它。 在任一情况下，应在关闭控制器`CompletionHandler`，其中还可以检查结果以查看推文已发送，或者取消时，如下所示：
+初始化后，调用`PresentVIewController`显示创建的视图`SLComposeViewController`。 用户可以根据需要编辑和发送推文，或取消将其发送。 在任一情况下，应在关闭控制器`CompletionHandler`，其中还可以检查结果以看到是否推文发送或已取消，如下所示：
 
 ```csharp
 slComposer.CompletionHandler += (result) => {
@@ -73,7 +73,7 @@ slComposer.CompletionHandler += (result) => {
 
 #### <a name="tweet-example"></a>推文示例
 
-下面的代码演示如何使用`SLComposeViewController`提供用于发送推文的视图：
+下面的代码演示了如何使用`SLComposeViewController`呈现视图用于发送的推文：
 
 ```csharp
 using System;
@@ -138,9 +138,9 @@ namespace SocialFrameworkDemo
 
 ### <a name="calling-twitter-api"></a>调用 Twitter API
 
-社交 Framework 还包括对社交网络进行 HTTP 请求的支持。 它封装中的请求`SLRequest`用于面向特定的社交网络的 API 的类。
+社交框架还包括对社交网络向发出 HTTP 请求的支持。 它封装在请求`SLRequest`类，用于为面向特定的社交网络的 API。
 
-例如，下面的代码向 Twitter 若要获取公共时间线 （通过在详述上面给出的代码） 发出请求：
+例如，下面的代码将向 Twitter，公共时间线 （通过扩展上面给出的代码） 发出请求：
 
 ```csharp
 using Accounts;
@@ -220,14 +220,14 @@ partial void RequestTwitterTimeline_TouchUpInside (UIButton sender)
 #endregion
 ```
 
-让我们看一下此代码中详细信息。 首先，它可以访问帐户存储，并获取 Twitter 帐户的类型：
+让我们看看这些代码在详细信息。 首先，它可以访问帐户存储，并获取 Twitter 帐户的类型：
 
 ```csharp
 var accountStore = new ACAccountStore ();
 var accountType = accountStore.FindAccountType (ACAccountType.Twitter);
 ```
 
-接下来，是否你的应用程序可以有权访问他们的 Twitter 帐户并且，如果授予访问权限，该帐户加载到内存和更新用户界面要求用户：
+接下来，它会要求用户是否您的应用程序可以有权访问他们的 Twitter 帐户和该帐户授予访问权限，如果加载到内存和 UI 更新：
 
 ```csharp
 // Request access to Twitter account
@@ -244,7 +244,7 @@ accountStore.RequestAccess (accountType, (granted, error) => {
 });
 ```
 
-当用户请求的时间线数据 （通过轻按在 UI 中的按钮） 时，则应用程序首先窗体从 Twitter 访问数据的请求：
+当用户请求的时间线数据 （通过点击一个按钮在 UI 中的） 时，该应用程序首先窗体从 Twitter 访问数据的请求：
 
 ```csharp
 // Initialize request
@@ -252,7 +252,7 @@ var parameters = new NSDictionary ();
 var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
-此示例是将返回的结果限制为 10 个最新条目通过包括`?count=10`在 URL 中。 最后，它将请求附加到的 Twitter 帐户 （已加载上面） 并执行调用 Twitter 以提取数据：
+此示例通过包括限制返回的结果为 10 个最新条目`?count=10`在 URL 中。 最后，它将请求附加到 Twitter 帐户 （即已加载上方），并执行到 Twitter 的调用来提取数据：
 
 ```csharp
 // Request data
@@ -281,27 +281,27 @@ request.PerformRequest ((data, response, error) => {
 });
 ```
 
-如果成功加载了数据，原始的 JSON 数据将显示 （如下面的示例输出中）：
+如果已成功加载了数据，原始的 JSON 数据将显示 （如下面的示例输出中）：
 
-[![](social-framework-images/twitter03.png "下面举例说明原始的 JSON 数据显示")](social-framework-images/twitter03.png#lightbox)
+[![](social-framework-images/twitter03.png "原始的 JSON 数据显示的一个示例")](social-framework-images/twitter03.png#lightbox)
 
-在实际应用中，JSON 结果然后无法分析为 normal 和向用户显示的结果。 请参阅[简介 Web 服务](~/cross-platform/data-cloud/web-services/index.md)有关如何分析 JSON 的信息。
+在实际应用中，JSON 结果可能将被分析为 normal 和向用户显示的结果。 请参阅[介绍 Web 服务](~/cross-platform/data-cloud/web-services/index.md)有关如何分析 JSON 的信息。
 
 ## <a name="connecting-to-facebook"></a>连接到 Facebook
 
 ### <a name="facebook-account-settings"></a>Facebook 帐户设置
 
-连接到 Facebook 社交 framework 操作几乎与用于 Twitter 上面所示的过程相同。 Facebook 用户帐户必须在设备设置中配置，如下所示：
+连接到 Facebook 社交框架与使用 Twitter 如上所示的过程几乎完全相同。 必须在设备设置中配置 Facebook 用户帐户，如下所示：
 
 [![](social-framework-images/facebook01.png "Facebook 帐户设置")](social-framework-images/facebook01.png#lightbox)
 
-配置后，在使用社交框架的设备上的任何应用程序将使用此帐户连接到 Facebook。
+配置后，使用社交框架在设备上的任何应用程序将使用此帐户连接到 Facebook。
 
-### <a name="posting-to-facebook"></a>发布到 Facebook
+### <a name="posting-to-facebook"></a>将发布到 Facebook
 
-由于社交 Framework 是一个统一的 API，为访问多个社交网络而设计，代码将保留而不考虑所使用的社交网络几乎完全相同。
+社交框架是一个统一的 API 旨在访问多个社交网络，如代码保持几乎完全相同，而不考虑所使用的社交网络。
 
-例如，`SLComposeViewController`可以使用方式与更早版本，显示仅不同切换到特定 Facebook 的设置和选项的 Twitter 示例完全相同。 例如：
+例如，`SLComposeViewController`可用方式与显示更早版本，唯一的不同切换到特定于 Facebook 的设置和选项的 Twitter 示例完全相同。 例如：
 
 ```csharp
 using System;
@@ -365,13 +365,13 @@ namespace SocialFrameworkDemo
 }
 ```
 
-与 Facebook 一起使用时`SLComposeViewController`显示查找到 Twitter 示例中，显示几乎完全相同的视图**Facebook**为在此情况下标题：
+与 Facebook 一起使用时`SLComposeViewController`显示一个视图，它看起来几乎等同于 Twitter 的示例中，显示**Facebook**中这种情况下作为标题：
 
 [![](social-framework-images/facebook02.png "SLComposeViewController 显示")](social-framework-images/facebook02.png#lightbox)
 
-### <a name="calling-facebook-graph-api"></a>调用 Facebook Graph API
+### <a name="calling-facebook-graph-api"></a>调用 Facebook 图形 API
 
-类似于 Twitter 的示例，社交 Framework 的`SLRequest`对象可以用于 Facebook 的 graph API。 例如，以下代码将返回信息从 graph API 的 Xamarin 帐户有关 （由在详述上面给出的代码）：
+类似于 Twitter 等社交框架的`SLRequest`对象可以用于 Facebook 的 graph API。 例如，下面的代码返回信息从 Xamarin 帐户有关图形 API （通过扩展上面给出的代码）：
 
 ```csharp
 using Accounts;
@@ -454,7 +454,7 @@ partial void RequestFacebookTimeline_TouchUpInside (UIButton sender)
 #endregion
 ```
 
-此代码，上面介绍的 Twitter 版本之间唯一的真正的区别是 Facebook 的要求，若要获取开发人员/应用程序特定 ID (可以从 Facebook 开发人员门户中生成） 发出请求时必须将其设置为一个选项：
+此代码，上面介绍的 Twitter 版本之间唯一的真正的区别是 Facebook 的要求，以获取应用程序开发人员/特定 ID （其中你可以从 Facebook 的开发人员门户生成） 发出请求时必须将其设置为一个选项：
 
 ```csharp
 var options = new AccountStoreOptions ();
@@ -467,11 +467,11 @@ accountStore.RequestAccess (accountType, options, (granted, error) => {
 });
 ```
 
-未能设置此选项 （或使用无效的键） 将导致错误或返回任何数据。
+未能设置此选项 （或使用了无效密钥） 将导致错误或返回任何数据。
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何使用社交 Framework 与 Twitter 和 Facebook 进行交互。 它介绍了在设备设置中配置为每个社交网络的帐户的位置。 它还讨论了如何使用`SLComposeViewController`提供发布到社交网络的统一的视图。 此外，它会检查`SLRequest`用于调用每个社交网络 API 的类。
+本文介绍了如何使用社交框架与 Twitter 和 Facebook 进行交互。 它介绍了在设备设置中配置帐户以执行每个社交网络的位置。 它还介绍了如何使用`SLComposeViewController`提供发布到社交网络的统一的视图。 此外，它会检查`SLRequest`类，用于调用每个社交网络的 API。
 
 
 ## <a name="related-links"></a>相关链接

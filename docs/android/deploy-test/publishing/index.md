@@ -3,15 +3,15 @@ title: 发布应用程序
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 99efc1b6cbef4e9004da564d433e891f36d0df49
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ef504e4bef22ac5b2bec5b6a57eb46e8b2f1baff
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102537"
 ---
 # <a name="publishing-an-application"></a>发布应用程序
 
@@ -34,10 +34,10 @@ Xamarin.Android 应用程序开发的最终步骤是发布应用程序。 发布
 
 -   通过网站 &ndash; Xamarin.Android 应用程序可通过在网站下载获得，用户可在网站中单击链接安装应用程序。
 -   通过电子邮件 &ndash; 用户可以从电子邮件安装 Xamarin.Android 应用程序。 在 Android 设备上打开附件时会安装应用程序。
--   通过应用商店 &ndash; 有多个应用商城可用于分发，例如 [Google Play](http://play.google.com/) 或 [Android 版 Amazon 应用商店](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011)。
+-   通过应用商店 &ndash; 有多个应用市场可用于分发，例如 [Google Play](http://play.google.com/) 或 [Android 版 Amazon 应用商店](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011)。
 
 
-发布应用程序最常见的方法是通过知名的应用商店，因为它可以提供最广的市场范围和达到最佳的分发控制。 但是，通过应用商店发布应用程序需要进行其他工作。
+发布应用程序最常见的方法是通过知名的应用商店，因为它可以提供最广的市场范围和达到最佳的分发控制。 但是，通过应用市场发布应用程序需要进行其他工作。
 
 Xamarin.Android 应用程序可同时通过多个渠道分发。 例如，应用程序可在 Google Play 和 Android 版 Amazon 应用商店上发布，也可从 Web 服务器下载。
 
@@ -46,7 +46,7 @@ Xamarin.Android 应用程序可同时通过多个渠道分发。 例如，应用
 
 通过 Amazon 移动应用分发程序，移动应用开发人员可在 Amazon 上分发和销售应用程序。 用户可使用 Amazon 应用商店应用程序在 Android 设备上发现和购买应用。 Android 设备上运行的 Amazon 应用商店的屏幕截图如下所示：
 
-Google Play 无疑是最全面和最受欢迎的 Android 应用程序应用商店。 在 Google Play 中，用户可以仅通过单击设备或计算机上的图标便可发现、下载、评价和购买应用程序。 Google Play 还提供工具以帮助分析销售和市场趋势和控制可能下载应用程序的设备和用户。 Android 设备上运行的 Google Play 的屏幕截图如下所示：
+Google Play 无疑是最全面和最受欢迎的 Android 应用程序应用市场。 在 Google Play 中，用户可以仅通过单击设备或计算机上的图标便可发现、下载、评价和购买应用程序。 Google Play 还提供工具以帮助分析销售和市场趋势和控制可能下载应用程序的设备和用户。 Android 设备上运行的 Google Play 的屏幕截图如下所示：
 
 [![Google Play 屏幕快照](images/google-play-app.png)](images/google-play-app.png#lightbox)
 

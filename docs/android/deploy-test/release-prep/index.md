@@ -3,15 +3,15 @@ title: 做好应用程序发布准备
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32020421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123448"
 ---
 # <a name="preparing-an-application-for-release"></a>做好应用程序发布准备
 
@@ -40,15 +40,15 @@ ms.locfileid: "32020421"
 
 ## <a name="specify-the-application-icon"></a>指定应用程序图标
 
-强烈建议每个 Xamarin.Android 应用程序都指定一个应用程序图标。 某些应用程序商城将不允许发布没有图标的 Android 应用程序。 `Application` 特性的 `Icon` 属性用于指定 Xamarin.Android 项目的应用程序图标。
+强烈建议每个 Xamarin.Android 应用程序都指定一个应用程序图标。 某些应用程序市场将不允许发布没有图标的 Android 应用程序。 `Application` 特性的 `Icon` 属性用于指定 Xamarin.Android 项目的应用程序图标。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 在 Visual Studio 2015 及更高版本中，可通过项目“属性”的“Android 清单”部分指定应用程序图标，如以下屏幕截图所示：
 
 [![设置应用程序图标](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 在 Visual Studio for Mac 中，还可通过“项目选项”的“Android 应用程序”部分指定应用程序图标，如下面的屏幕截图所示：
 
@@ -75,13 +75,13 @@ ms.locfileid: "32020421"
 
 -   **版本名称** &ndash; 仅用于向用户传递应用程序（如安装在特定设备上）的版本相关信息的字符串。 版本名称将向用户显示，或在 Google Play 中显示。 此字符串不供 Android 内部使用。 版本名称可以是任何字符串值，它能帮助用户了解其设备上安装的版本。 此值在 **AndroidManifest.xml** 文件中存储为 `android:versionName`。 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 在 Visual Studio 中，可在项目“属性”的“Android 清单”部分设置这些值，如以下屏幕截图所示：
 
 [![设置版本号](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 可通过“项目选项”的“生成”>“Android 应用程序”部分设置这些值，如以下屏幕截图所示：
 
@@ -104,7 +104,7 @@ ms.locfileid: "32020421"
 
 -   配置：仅 SDK 程序集 &ndash; Xamarin.Android 4.2.5 大小 = 3.0 MB。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 通过项目“属性”的“Android 选项”部分设置链接器选项：
 
@@ -119,7 +119,7 @@ ms.locfileid: "32020421"
 
 -   **SDK 和用户程序集** &ndash; 这会链接应用程序所需的所有程序集，而不是仅链接 Xamarin.Android 所需的程序集。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 通过“项目选项”的“Android 生成”部分中的“链接器”选项卡设置链接器选项，如以下屏幕截图所示：
 
@@ -146,11 +146,11 @@ ProGuard 不是 Xamarin.Android 链接器的替代工具。 Xamarin.Android 链�
 
 选择“启用 ProGuard”**P**时，Xamarin.Android 将在生成的 APK 中运行 ProGuard 工具。 ProGuard 配置文件由 ProGuard 在生成时生成和使用。 Xamarin.Android 还支持自定义 ProguardConfiguration 生成操作。 可以将自定义 ProGuard 配置文件添加到项目中，右键单击并选中该文件作为生成操作，如此示例中所示： 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![ProGuard 生成操作](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![ProGuard 生成操作](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -190,7 +190,7 @@ Android 清单包含 `android:debuggable` 属性，该属性控制是否可以�
 
 ### <a name="application-protection-with-dotfuscator"></a>使用 Dotfuscator 保护应用程序
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 即使[已禁用调试](#Disable_Debugging)，攻击者仍可能重新打包应用程序，从而添加或删除配置选项或权限。 这可使他们对应用程序进行反向工程、调试或篡改。
 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 可用于混淆托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码，对应用是否在根设备上运行进行检测和响应。
@@ -200,7 +200,7 @@ Dotfuscator CE 随附在 Visual Studio 中，但是仅 Visual Studio 2015 Update
 若要配置 Dotfuscator CE，请参阅 [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)（结合使用 Dotfuscator Community Edition 和 Xamarin）。
 完成配置后，Dotfuscator CE 将自动保护创建的每个生成。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 即使[已禁用调试](#Disable_Debugging)，攻击者仍可能重新打包应用程序，从而添加或删除配置选项或权限。 这可使他们对应用程序进行反向工程、调试或篡改。
 虽然它不支持 Visual Studio for Mac，但可结合使用 [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) 和 Visual Studio 来混淆托管代码，并在生成时向 Xamarin.Android 应用插入运行时安全状态检测代码，对应用是否在根设备上运行进行检测和响应。
@@ -241,13 +241,13 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 ## <a name="set-packaging-properties"></a>设置打包属性
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 可在项目“属性”的“Android 选项”部分设置打包属性，如以下屏幕截图所示：
 
 [![打包属性](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 可在“项目选项”中设置打包属性，如下面的屏幕截图所示：
 
@@ -280,13 +280,13 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 ## <a name="compile"></a>Compile
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 完成上述所有步骤后，应用即可用于编译。 选择“生成”>“重新生成解决方案”以验证其是否在发布模式下成功生成。 请注意，此步骤尚不会产生 APK。
 
 [对应用包进行签名](~/android/deploy-test/signing/index.md)中更详细地讨论了打包和签名。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 完成上述所有步骤后，即可编译应用程序（选择“生成”>“全部生成”）以验证该应用程序已按发布模式成功生成。 请注意，此步骤尚不会产生 APK。
 
@@ -297,7 +297,7 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 ## <a name="archive-for-publishing"></a>存档以供发布
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要开始发布过程，请在**解决方案资源管理器**中右键单击项目，然后选择“存档...”上下文菜单项：
 
@@ -356,7 +356,7 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 * **Google Play** &ndash; 将已签名的 APK 发布到 Google Play。 继续查看[发布到 Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)，了解如何对 APK 进行签名并将其发布到 Google Play 商店。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要开始发布过程，请选择“生成”>“存档以供发布”：
 

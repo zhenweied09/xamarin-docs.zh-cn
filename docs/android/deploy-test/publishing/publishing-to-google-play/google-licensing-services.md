@@ -3,15 +3,15 @@ title: Google 授权服务
 ms.prod: xamarin
 ms.assetid: E96BDCC3-454A-A797-5819-905E2BB1AC41
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 12/20/2017
-ms.openlocfilehash: ebc557ce16858c675b291f17620616a2dba4c054
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eedfcfe2ed274ddf541addec67e66250deab7899
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114621"
 ---
 # <a name="google-licensing-services"></a>Google 授权服务
 
@@ -37,7 +37,7 @@ Google 授权安全可靠，每个响应均使用 RSA 键对进行签名，且�
 Google 授权服务还是 APK 扩展文件的关键组件（将在本文档后面讨论）。 APK 扩展文件利用 Google 授权服务获取要下载的扩展文件的 URL。
 
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 只有通过 Google Play 购买的应用程序才可享受 Google 授权服务的权益。 即使设备上未安装 Google Play，使用授权服务的应用程序仍将在该设备上正常运行。
 

@@ -4,15 +4,15 @@ description: 本文介绍如何在物理 Android 设备上调试 Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1848bb624bf5f4bd627441a17fd077843c94edb9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109700"
 ---
 # <a name="debug-on-device"></a>在设备上进行调试
 
@@ -27,7 +27,7 @@ ms.locfileid: "30762717"
 
 设备连接到计算机后，即可采用与其他任何 Xamarin 产品或 .NET 应用程序相同的方式调试 Xamarin.Android 应用程序。 请务必在 IDE 中选择“调试”配置和外部设备，确保必要的调试符号可用且 IDE 可连接到运行的应用程序： 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![已选中调试配置](debug-on-device-images/image1-vs.png)
 
@@ -39,7 +39,7 @@ ms.locfileid: "30762717"
 
 ![已到达断点](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![已选中调试配置](debug-on-device-images/image1-xs.png)
 
