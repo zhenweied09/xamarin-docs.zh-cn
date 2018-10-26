@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2017
-ms.openlocfilehash: a89bce4f35a73d0b881fd38b2ae246d2eb86ef7b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/17/2018
+ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104942"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 用户界面视图
 
@@ -44,11 +44,11 @@ DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预�
 
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
-`DatePicker`使用户可以选择指定范围内的一个日期。 它使用特定程序运行的平台支持的日期选取器实现。
+`DatePicker`使用户可以选择指定范围内的一个日期。 实现使用日期选取器受特定平台上运行应用程序。
 
-## <a name="graphicsgraphicsindexmd"></a>[图形](graphics/index.md)
+## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[使用 SkiaSharp 图形](graphics/skiasharp/index.md)
 
-如何将图形和游戏引擎视觉对象合并到 Xamarin.Forms 应用程序。
+如何将图形合并到使用 SkiaSharp 的 Xamarin.Forms 应用程序。
 
 ## <a name="imagesimagesmd"></a>[图像](images.md)
 
@@ -74,6 +74,10 @@ Xamarin.Forms 提供了显示的数据的滚动行的列表视图控件。 控�
 
 `Slider`允许用户从连续范围选择的数字值。
 
+## <a name="steppersteppermd"></a>[分档器](stepper.md)
+
+`Stepper`允许用户从一系列值中选择的数字值。 它包含两个按钮带有负号和加号。 以增量方式将操作的两个按钮更改所选的值。
+
 ## <a name="stylesstylesindexmd"></a>[样式](styles/index.md)
 
 字体、 颜色和其他属性可以分组为样式，它们可以在控件、 布局或使用 ResourceDictionaries 的整个应用程序之间共享。
@@ -89,6 +93,10 @@ Xamarin.Forms 有多个视图来显示和接收文本。 可以进行格式化�
 ## <a name="themesthemesindexmd"></a>[主题](themes/index.md)
 
 Xamarin.Forms 主题定义特定的可视化外观，对标准控件。 一旦应用程序的资源字典中添加了一个主题，将更改标准控件的外观。
+
+## <a name="timepickertimepickermd"></a>[TimePicker](timepicker.md)
+
+`TimePicker`允许用户选择的时间。 它使用特定平台上运行应用程序的支持时间选取器实现。
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[可视状态管理器](visual-state-manager.md)
 

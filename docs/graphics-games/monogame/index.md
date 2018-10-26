@@ -1,17 +1,17 @@
 ---
 title: Monogame Framework
-description: 本文档链接到描述使用 MonoGame 游戏开发的各种指南： 概述、 提到 3D 图形和游戏，并查看特定于平台的注意事项。
+description: 本文档链接到各种指南描述使用 MonoGame 的游戏开发： 概述，讨论有关 3D 图形和游戏板，并查看特定于平台的注意事项。
 ms.prod: xamarin
 ms.assetid: 35EC29CE-538B-4844-BACC-E51823EFF3B5
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 1c398b7d20a8c28001c2f3371dd792ed4b017a5f
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b51bba3491af593b4378cbd5aaf42043927ab68
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783117"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122876"
 ---
 # <a name="monogame-framework"></a>Monogame Framework
 
@@ -27,8 +27,8 @@ MonoGame 提供灵活、高效的 API，用于显示实时 3D 图形。 它包�
 
 ## <a name="monogame-gamepad-referencegraphics-gamesmonogameinputmd"></a>[MonoGame GamePad 参考](~/graphics-games/monogame/input.md)
 
-游戏板是用于访问 MonoGame 中的输入的设备的标准的、 跨平台的类。
+游戏板是用于访问 MonoGame 中的输入的设备的标准的跨平台的类。
 
-## <a name="monogame-platform-specific-considerationsgraphics-gamesmonogameplatformsindexmd"></a>[MonoGame 平台特别注意的事项](~/graphics-games/monogame/platforms/index.md)
+## <a name="monogame-platform-specific-considerationsgraphics-gamesmonogameplatformsindexmd"></a>[MonoGame 平台特定注意事项](~/graphics-games/monogame/platforms/index.md)
 
-MonoGame 各种平台支持。 本部分介绍特定于每个平台的主题。
+MonoGame 支持多种平台上。 本部分介绍特定于每个平台的主题。

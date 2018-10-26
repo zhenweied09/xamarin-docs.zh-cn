@@ -1,30 +1,30 @@
 ---
-title: Java 入门
-description: 本文档介绍如何开始使用.NET 嵌入 Java。 它讨论系统要求、 安装和支持的平台。
+title: 开始使用 Java
+description: 本文档介绍如何开始使用.NET 嵌入与 Java 配合使用。 它讨论的系统要求、 安装和支持的平台。
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 53871a5311cdba824b0bddca37dd5c416d06e272
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121745"
 ---
-# <a name="getting-started-with-java"></a>Java 入门
+# <a name="getting-started-with-java"></a>开始使用 Java
 
-这是适用于 Java，涵盖所有支持的平台的基础知识的入门页。
+这是适用于 Java，介绍了所有支持平台的基础知识的入门页。
 
 ## <a name="requirements"></a>要求
 
-若要使用.NET 嵌入的 Java 中，你将需要：
+若要使用 Java 将需要使用.NET 嵌入：
 
 * Java 1.8 或更高版本
 * [Mono 5.0](http://www.mono-project.com/download/)
 
-适用于 Mac:
+为 Mac:
 
 * Xcode 8.3.2 或更高版本
 
@@ -36,46 +36,46 @@ ms.locfileid: "37066804"
 对于 Android:
 
 * [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)或更高版本
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
+* [Android Studio 3.x](https://developer.android.com/studio/index.html)使用 Java 1.8
 
-你可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)来编辑和编译 C# 代码。
+可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)来编辑和编译在C#代码。
 
 > [!NOTE]
-> 早期版本的 Xcode、 Visual Studio、 Xamarin.Android、 Android Studio 中，和 Mono_可能_工作，而是未经测试，不受支持。
+> 早期版本的 Xcode、 Visual Studio、 Xamarin.Android、 Android Studio 中和 Mono_可能_起作用，而是经过测试，不受支持。
 
 ## <a name="installation"></a>安装
 
-.NET 嵌入是一种当前位于[NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
+.NET 嵌入是上当前可用[NuGet](https://www.nuget.org/packages/Embeddinator-4000/):
 
 ```shell
 nuget install Embeddinator-4000
 ```
 
-这会将**Embeddinator 4000.exe**到**包/Embeddinator-4000/工具**目录。
+这会将**Embeddinator 4000.exe**成**包/Embeddinator 4000/工具**目录。
 
-此外，你可以生成源从嵌入.NET，请参阅我们[git 存储库](https://github.com/mono/Embeddinator-4000/)和[参与](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)说明的文档。
+此外，您可以构建.NET 嵌入来自源，请参阅我们[git 存储库](https://github.com/mono/Embeddinator-4000/)并[参与](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)文档有关的说明。
 
 ## <a name="platforms"></a>平台
 
-Java 目前处于预览状态 macOS、 Windows 和 Android。
+Java 目前处于预览状态时适用于 macOS、 Windows 和 Android。
 
-通过选择平台`--platform=<platform>`.NET 嵌入工具命令行自变量。 当前`macOS`， `Windows`，和`Android`支持。
+通过选择平台`--platform=<platform>`嵌入.NET 工具的命令行参数。 目前`macOS`， `Windows`，和`Android`支持。
 
 ### <a name="macos-and-windows"></a>macOS 和 Windows
 
-对于开发，你应能够使用支持 Java 1.8 任何 Java IDE。 您甚至可以使用 Android Studio 此如果需要，[这里](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects)。 也可以是任何标准的 Java jar 文件，你可以使用输出的 JAR 文件。
+对于开发，您应能够使用任何支持的 Java 1.8 的 Java IDE。 您甚至可以使用 Android Studio 中为此必要时，[在这里看到](https://stackoverflow.com/questions/16626810/can-android-studio-be-used-to-run-standard-java-projects)。 也可以是任何标准的 Java jar 文件，可以使用 JAR 文件输出。
 
 ### <a name="android"></a>Android
 
-请确保你已设置为之前尝试创建一个开发 Android 应用程序使用.NET 嵌入。 [按照说明进行操作](~/tools/dotnet-embedding/get-started/java/android.md)假定你已成功生成并部署 Android 应用程序从你的计算机。
+请确保你已设置为之前尝试创建一个开发 Android 应用程序使用.NET 嵌入。 [按照](~/tools/dotnet-embedding/get-started/java/android.md)假定您已成功地构建和部署 Android 应用程序从您的计算机。
 
-Android Studio 建议开发，但其他 Ide 搭配使用，只要没有针对支持[AAR 文件格式](https://developer.android.com/studio/projects/android-library.html)。
+Android Studio 建议进行开发，但其他 Ide，只要没有针对支持应适用[AAR 文件格式](https://developer.android.com/studio/projects/android-library.html)。
 
 ## <a name="further-reading"></a>其他阅读材料
 
-* [在 Android 上入门](~/tools/dotnet-embedding/get-started/java/android.md)
+* [Android 上开始使用](~/tools/dotnet-embedding/get-started/java/android.md)
 * [在 Android 上的回调](~/tools/dotnet-embedding/android/callbacks.md)
-* [初步 Android 研究](~/tools/dotnet-embedding/android/index.md)
+* [Android 的初步研究](~/tools/dotnet-embedding/android/index.md)
 * [.NET 嵌入限制](~/tools/dotnet-embedding/limitations.md)
-* [致力于开放源代码项目](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [错误代码和描述](~/tools/dotnet-embedding/errors.md)
+* [参与到开放源代码项目](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+* [错误代码和说明](~/tools/dotnet-embedding/errors.md)

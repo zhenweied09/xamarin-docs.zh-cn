@@ -4,15 +4,15 @@ description: 本文档介绍如何附近字段中使用 iOS 11 中引入的 Api 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 1381a4564f93fd091f181949454df3f06b31ae6b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 6888f7147796d3c00752d10387c19d0d9f269cad
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106814"
 ---
 # <a name="core-nfc-in-xamarinios"></a>在 Xamarin.iOS 中的核心 NFC
 
@@ -29,7 +29,7 @@ IOS 设备中的 NFC 标记读取器支持所有 NFC 标记类型 1 至 5 包含
 - 应用必须在前台，让扫描中可见。
 - CoreNFC 仅了测试 （而不是在模拟器中） 的真实设备上。
 
-此页介绍了使用 CoreNFC 所需的配置，并演示如何使用 API 通过["TFCTagReader"示例代码](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)。
+此页介绍了使用 CoreNFC 所需的配置，并演示如何使用 API 通过["NFCTagReader"示例代码](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)。
 
 ## <a name="configuration"></a>配置
 

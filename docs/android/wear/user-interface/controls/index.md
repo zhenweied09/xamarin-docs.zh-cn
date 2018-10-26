@@ -1,29 +1,29 @@
 ---
-title: Android 磨损控件
+title: Android 穿戴设备控件
 ms.prod: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2adae250d2f59e8eee0558a92c3845c5592aa01a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112034"
 ---
-# <a name="android-wear-controls"></a>Android 磨损控件
+# <a name="android-wear-controls"></a>Android 穿戴设备控件
 
-Android 磨损应用可以使用正则的 Android 应用程序，其中包括已使用许多相同控制`Button`， `TextView`，和图像 drawables。 布局控件包括`ScrollView`， `LinearLayout`，和`RelativateLayout`还可以使用。
+Android Wear 应用可以使用的正则 Android 应用，包括已使用许多相同的控件`Button`， `TextView`，边距和图像绘图。 布局控件包括`ScrollView`， `LinearLayout`，和`RelativateLayout`也可用。
 
-此页链接到 Android 磨损特定控件从[wearable UI 库](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary)在通过 Xamarin 项目中可用[Wearable 支持](http://www.nuget.org/packages/Xamarin.Android.Wear/)NuGet 包。 这些控件包括：
+此页链接到 Android Wear 特定控件从[可穿戴 UI 库](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary)在通过 Xamarin 项目中可用[可穿戴支持](http://www.nuget.org/packages/Xamarin.Android.Wear/)NuGet 包。 这些控件包括：
 
--   **GridViewPager** &ndash;创建二维导航界面，其中用户滚动先进行选择 (有关详细信息，请参阅[GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
+-   **GridViewPager** &ndash;创建二维的导航界面，其中用户滚动鼠标向下后行中进行选择 (有关详细信息，请参阅[GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):
 
-    ![GridViewPager 示例屏幕截图](images/gridviewpager.png)
+    ![GridViewPager 的屏幕截图示例](images/gridviewpager.png)
 
-对于磨损应用其他重要控件包括：
+Wear 应用其他重要控件包括：
 
 * `BoxInsetLayout` (请参阅[处理屏幕尺寸](~/android/wear/screen-sizes.md))，
 
@@ -33,9 +33,9 @@ Android 磨损应用可以使用正则的 Android 应用程序，其中包括已
 
 * `CardScrollView` (请参阅[Android 创建卡](https://developer.android.com/training/wearables/ui/cards.html))，
 
-* `WearableListView` (请参阅[Android 创建列出](https://developer.android.com/training/wearables/ui/lists.html))。
+* `WearableListView` (请参阅[列出了 Android 创建](https://developer.android.com/training/wearables/ui/lists.html))。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [Android.Support.Wearable 文档](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Android.Support.Wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)

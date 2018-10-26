@@ -1,136 +1,150 @@
 ---
-title: 为不同的屏幕创建资源
+title: 为不同屏幕创建资源
 ms.prod: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: a98d65c6c04ae2400572a2405d487035ac466678
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 08/28/2018
+ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30770958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117429"
 ---
-# <a name="creating-resources-for-varying-screens"></a>为不同的屏幕创建资源
+# <a name="creating-resources-for-varying-screens"></a>为不同屏幕创建资源
 
-本身的 android 设备上运行多个不同，每个都具有各种分辨率、 屏幕大小和屏幕密度。 Android 将执行缩放和调整大小以使应用程序在这些设备上工作，但这可能会导致达不到最佳用户体验。 例如，映像可能出现的模糊，映像可能占用过多 （或没有足够） 屏幕空间这将导致用户界面元素在布局中的位置将重叠或太很远。
+Android 本身在设备上运行多个不同，每个都拥有各种分辨率、 屏幕大小和屏幕密度。 Android 将执行缩放和调整大小以使应用程序在这些设备上运行，但这可能会导致非最佳用户体验。 例如，图像可能会显示模糊，或者它们可能会按预期在视图上定位。
 
 
 ## <a name="concepts"></a>概念
 
-几个术语和概念很重要了解以支持多个屏幕。
+几个术语和概念非常重要，若要了解为支持多个屏幕。
 
 - **屏幕大小**&ndash;用于显示你的应用程序的物理空间量
 
-- **屏幕密度**&ndash;屏幕在任何给定区域的像素数。 典型单位是度量的每英寸点数 (dpi)。
+- **屏幕密度**&ndash;在屏幕上任何给定区域中的像素数。 典型单位是度量的每英寸点数 (dpi)。
 
-- **解析**&ndash;屏幕上的像素的总数。 当开发应用程序，则解析不与屏幕的大小和密度同样重要。
+- **解决方法**&ndash;在屏幕上的像素为单位的总数。 开发应用程序时, 解析不可与屏幕大小和密度一样重要。
 
-- **密度无关的像素 (dp)** &ndash;这是虚拟单位度量值以允许布局设计为独立的密度。 若要将分发点转换为屏幕像素请使用以下公式：
+- **密度无关像素 (dp)** &ndash;虚拟单位度量值以允许布局设计为独立的密度。 此公式用于将分发点转换成屏幕像素：
 
     px &equals; dp &times; dpi &divide; 160
 
-- **方向**&ndash;屏幕的方向被视为可横向宽度大于高度时。 与此相反，，纵向时的屏幕是高度大于宽度。 根据用户旋转设备，应用程序的生命周期内可以更改方向。
+- **方向**&ndash;屏幕的方向被视为可横向宽度大于高度时。 与此相反，纵向方向为时屏幕的高度大于宽度。 如用户旋转设备，可以在应用程序的生存期内更改方向。
 
-请注意，这些概念的前三个间相关&ndash;分辨率提高到没有增加密度会增加的屏幕大小。 但是如果增加的密度和解决方法然后屏幕的大小可以保持不变。 此屏幕的大小、 密度和解决方法之间的关系非常快速地使屏幕支持。
+请注意，这些概念的前三个相互关联&ndash;提高分辨率不增加密度会增加屏幕大小。 但是如果增加的密度和解决方法，那么屏幕大小可以保持不变。 屏幕大小、 密度和解决方法之间的关系使变得复杂屏幕支持快速。
 
-为了应对这种复杂性，Android 框架倾向于使用*密度无关的像素 (dp)* 对于屏幕布局。 通过使用密度无关的像素，UI 元素将显示给用户以在具有不同密度的屏幕上具有相同的物理大小。
-
-
-## <a name="supporting-various-screen-sizes-and-densities"></a>支持各种屏幕大小和密度
-
-Android 处理大多数呈现布局为每个屏幕配置正确的工作。 但是，有帮助解决系统时可以执行某些操作。
-
-而不是为布局中的实际像素密度无关的像素的用途是适用于大多数情况，以确保密度独立性。
-Android 将缩放 drawables 在运行时到相应的大小。
-但是，很可能这种扩展将导致显示模糊的位图。 若要避免此问题，可能需要提供不同的密度的备用资源。 设计的多个解决方法和屏幕密度将证明更轻松的设备时开始更高的分辨率或密度映像，然后再然后缩小。 这将阻止任何模糊或调整大小，可能会导致的失真。
+为了帮助应对这种复杂性，Android 框架倾向于使用*密度无关的像素 (dp)* 对于屏幕的布局。 通过使用密度无关的像素，UI 元素将显示以用户在具有不同密度的屏幕上具有相同的物理大小。
 
 
-### <a name="declare-the-screen-size-the-application-supports"></a>声明为应用程序支持的屏幕大小
+## <a name="supporting-various-screen-sizes-and-densities"></a>支持不同屏幕大小和密度
 
-声明的屏幕大小可确保仅受支持的设备可以下载应用程序。 这通过设置实现[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html)中的元素**AndroidManifest.xml**文件。 此元素用于指定应用程序支持何种屏幕大小。 给定的屏幕是当应用程序可以正确需要支持它的布局以填满屏幕。 通过使用此清单元素，该应用程序将不会显示在[ *Google Play* ](https://play.google.com/)设备不满足屏幕规范。 但是，应用程序仍将具有不受支持屏幕设备上运行，但在布局可能出现的模糊和像素化。
+Android 处理大部分工作来呈现的每个屏幕配置正确的布局。 但是，有一些执行的操作，可以帮助解决问题的系统。
 
-为了执行此操作在 Xamarin.Android 中，有必要首先添加**AndroidManifest.xml**文件到项目中，如果不存在：
+使用而不是在布局中的实际像素密度无关像素已足够在大多数情况下，以确保密度独立性。
+Android 将在运行时为适当大小缩放绘图。
+但是，有可能，缩放将导致位图，以显示模糊。 若要解决此问题，提供针对不同密度的备用资源。 当设计用于多个分辨率和屏幕密度的设备，它将证明管理更轻松开始使用更高的分辨率或密度映像然后再减少。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android 清单](resources-for-varying-screens-images/01-android-manifest-vs-sml.png)](resources-for-varying-screens-images/01-android-manifest-vs.png#lightbox)
+### <a name="declare-the-supported-screen-size"></a>声明支持的屏幕大小
 
-**AndroidManifest.xml**添加到**属性**目录。 然后编辑该文件以包括[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+声明的屏幕大小可确保仅受支持的设备可以下载应用程序。 这可以通过设置[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html)中的元素**AndroidManifest.xml**文件。 此元素用于指定应用程序支持何种屏幕大小。 如果在应用程序可以正确地放置其布局以填满屏幕支持被视为给定的屏幕。 通过使用此清单元素，该应用程序将不会显示在[ *Google Play* ](https://play.google.com/)适用于不符合屏幕规范的设备。 但是，应用程序仍将具有不受支持的屏幕，设备上运行，但两种布局可能出现的模糊和像素化。
 
-[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-vs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-vs.png#lightbox)
+中的声明支持的屏幕 sixes **Properites/AndroidManifest.xml**解决方案的文件：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Android 清单](resources-for-varying-screens-images/01-android-manifest-xs-sml.png)](resources-for-varying-screens-images/01-android-manifest-xs.png#lightbox)
+[![Android 清单](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
-**AndroidManifest.xml**添加到**属性**目录。 然后编辑该文件以包括[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![添加支持屏幕](resources-for-varying-screens-images/02-adding-supports-screens-xs-sml.png)](resources-for-varying-screens-images/02-adding-supports-screens-xs.png#lightbox)
+[![Android 清单](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
+
+编辑**AndroidManifest.xml**包括[支持屏幕](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0"
+          package="HelloWorld.HelloWorld">
+      <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+      <supports-screens android:resizable="true"
+                        android:smallScreens="true"
+                        android:normalScreens="true"
+                        android:largeScreens="true" />
+      <application android:allowBackup="true"
+                   android:icon="@mipmap/ic_launcher"
+                   android:label="@string/app_name"
+                   android:roundIcon="@mipmap/ic_launcher_round"
+                   android:supportsRtl="true" android:theme="@style/AppTheme">
+  </application>
+</manifest>
+```
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>针对不同屏幕大小提供备用布局
 
-尽管 Android 将调整大小根据屏幕大小，这可能不是在某些情况下足够。 它可能需要增加在更大的屏幕上，一些 UI 元素的大小或更改为较小屏幕的 UI 元素的位置。
 
-从 API 级别 13 (Android 3.2) 开始，屏幕大小支持已弃用使用软件*N*dp 限定符。 此新限定符声明空间给定布局量需要。 强烈建议应运行在 Android 3.2 或更高版本的应用程序应使用这些较新的限定符。
+备用布局可自定义视图的特定的屏幕大小、 更改的位置或组件 UI 元素的大小。
 
-例如，如果布局所需的屏幕宽度最小 700dp，备用布局会在文件夹**布局 sw700dp**:
+从 API 级别 13 (Android 3.2) 开始，屏幕大小将不推荐使用而改为使用 sw*N*dp 限定符。 此新限定符声明需要给定布局空间量。 建议用于运行在 Android 3.2 或更高版本的应用程序应使用这些较新的限定符。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+例如，如果布局所需的最小 700 屏幕宽度的分发点，备用布局会转的文件夹中**布局 sw700dp**:
 
-![700dp 屏幕宽度的布局文件夹](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+![700 dp 屏幕宽度的布局文件夹](resources-for-varying-screens-images/03-layout-sw700dp-vs.png)
 
-![700dp 屏幕宽度的布局文件夹](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
------
-
-
-作为参考，以下是一些数字，为各种设备：
-
-- **典型 phone** &ndash; 320dp： 典型电话
-
-- **5"平板电脑 /"tweener"设备** &ndash; 480dp： 如 Samsung 注意
-
-- **7"平板电脑** &ndash; 600dp： 如 Barnes&amp;挺查找
-
-- **10"平板电脑** &ndash; 720dp： 如 Motorola Xoom
-
-为应用程序目标 API 级别最多 12 (Android 3.1)，在布局应转在目录中使用限定符**小**/**正常**/**大型** / **xlarge**作为泛化的大多数设备中可用的各种屏幕大小。 例如，在下图中，有四个不同的屏幕大小的备用资源：
-
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
-
-![针对四个屏幕大小的备用资源](resources-for-varying-screens-images/04-layout-large-vs.png)
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
-
-![针对四个屏幕大小的备用资源](resources-for-varying-screens-images/04-layout-large-xs.png)
+![700 dp 屏幕宽度的布局文件夹](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
 
-下面是较旧的前期 API 级别 13 屏幕大小限定符如何与密度无关的像素进行比较的比较：
 
-- 426dp x 320dp 是**小**
+作为一般准则，下面是一些数字为各种设备：
 
-- 470dp x 320dp 是**正常**
+- **典型的电话** &ndash; 320 dp： 典型的电话
 
-- 640dp x 480dp 是**大型**
+- **5"平板电脑 /"tweener"设备** &ndash; 480 dp： 例如 Samsung 记录
 
-- 960dp x 720dp 是**xlarge**
+- **7"平板电脑** &ndash; 600 dp： 如 Barnes &amp; Noble 四处
 
-较新的屏幕大小 API 级别 13 中的限定符，并设置具有优先权要高于 API 级别 12 和更低的较旧屏幕限定符。
-对于将跨越旧和新的 API 级别的应用程序，可能需要创建备用资源使用这两个集的限定符，如下面的屏幕快照中所示：
+- **10 个"平板电脑** &ndash; 720 dp： 如 Motorola Xoom
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+应用程序的目标 API 级别最多 12 (Android 3.1) 布局应放入目录使用限定符**小型**/**正常**/**大型** /**加大**作为不同屏幕大小所提供的大多数设备的泛化。 例如，在下图中，有四个不同的屏幕大小的备用资源：
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+![适用于四个屏幕大小的备用资源](resources-for-varying-screens-images/04-layout-large-vs.png)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+
+![适用于四个屏幕大小的备用资源](resources-for-varying-screens-images/04-layout-large-xs.png)
+
+-----
+
+以下是较旧的 pre-API 级别 13 屏幕大小限定符如何与密度无关的像素进行比较的比较：
+
+- 426 dp x 320 dp 是**小**
+
+- 470 dp x 320 dp 是**正常**
+
+- 640 dp x 480 dp 是**大型**
+
+- 960 dp x 720 dp 是**加大**
+
+较新屏幕的大小在 API 级别 13 中的限定符并设置具有优先权要高于 API 级别 12 和更低的较旧屏幕限定符。
+对于跨应用程序，将旧的和新的 API 级别，它可能有必要创建备用资源使用这两个集的限定符，如以下屏幕截图中所示：
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![使用这两个限定符的备用资源](resources-for-varying-screens-images/05-both-qualifiers-vs.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![使用这两个限定符的备用资源](resources-for-varying-screens-images/05-both-qualifiers-xs.png)
 
@@ -138,51 +152,51 @@ Android 将缩放 drawables 在运行时到相应的大小。
 
 
 
-### <a name="provide-different-bitmaps-for-different-screen-densities"></a>为不同的屏幕密度提供不同的位图
+### <a name="provide-different-bitmaps-for-different-screen-densities"></a>针对不同屏幕密度提供不同的位图
 
-尽管 Android 具有可伸缩性根据设备的位图，位图本身可能不像缩放向上或向下： 它们可能变得模糊。 提供适合于屏幕密度的位图将缓解此问题。
+虽然 Android 缩放根据设备的位图，位图本身可能不完美地增加或减少： 它们可能会变得模糊。 提供适用于屏幕密度的位图将缓解此问题。
 
-例如下, 图是一种布局和外观可能发生的问题时密度，请指定未提供资源。
+例如下, 图是可能发生的布局和外观问题的示例时密度-指定未提供资源。
 
 ![不带密度资源的屏幕截图](resources-for-varying-screens-images/06-density-not-provided.png)
 
-比较而言，旨在提供与密度特定资源的布局：
+这与使用特定于密度的资源设计的布局：
 
-![与密度特定资源的屏幕截图](resources-for-varying-screens-images/07-density-specific-resources.png)
+![使用特定于密度的资源的屏幕截图](resources-for-varying-screens-images/07-density-specific-resources.png)
 
 
-### <a name="create-varying-density-resources-with-android-asset-studio"></a>使用 Android 资产 Studio 创建不同的密度资源
+### <a name="create-varying-density-resources-with-android-asset-studio"></a>Android Asset Studio 创建不同的密度资源
 
-各种密度这些位图创建可能会有点需要很长时间。 在这种情况下，Google 已创建一个在线的实用程序，这会减少某些内容涉及调用这些位图创建麻烦[ **Android 资产 Studio**](https://romannurik.github.io/AndroidAssetStudio/)。
+这些位图不同密度的创建可能会有点令人厌倦。 在这种情况下，Google 已创建一个在线实用程序，这样可以减少一些涉及与名为这些位图创建内容的麻烦[ **Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/)。
 
-[![Android 资产 Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
+[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
-此网站将帮助创建目标的四个常见屏幕密度通过提供一个图像的位图。 Android Studio 中资产将然后创建一些自定义操作的位图，然后使他们可以作为 zip 文件下载。
+此网站将创建一个映像，从而针对四个通用屏幕密度的位图的帮助。 Android Asset Studio 将然后创建一些自定义位图，并可以稍后要下载为 zip 文件。
 
 
 ## <a name="tips-for-multiple-screens"></a>多个屏幕的提示
 
-Android 上会非常多个设备上，运行和屏幕大小和屏幕密度的组合可能看起来非常艰巨。 以下提示可帮助最大程度减少支持各种设备所需的工作量：
+Android 上创作多个设备上，运行，屏幕大小和屏幕密度的组合可能会感到不知所措。 以下提示可帮助最大程度减少支持各种设备所需的工作量：
 
-- **仅设计和开发您需要**&ndash;有许多不同的设备，但一些可能需要很大的工作量来设计和开发的极少数窗体因素中存在。 [**屏幕的大小和密度**](http://developer.android.com/resources/dashboard/screens.html)仪表板是提供数据的屏幕大小/屏幕密度矩阵分解的 Google 提供的页。 此分解提供有关如何在支持屏幕上的开发工作的见解。
+- **仅设计和开发为所需**&ndash;有许多不同设备，但某些极少数外观造型，可能需要花费大量精力来设计和开发的存在。 [**屏幕大小和密度**](http://developer.android.com/resources/dashboard/screens.html)仪表板是提供数据的屏幕大小/屏幕密度矩阵分解的 Google 提供的页。 此明细提供有关如何支持屏幕上的开发工作的见解。
 
-- **使用分发点，而不是像素**-像素变得让人头痛随着屏幕密度的变化。 请不要对像素值。 避免 dp （独立于密度的像素为单位） 为支持的像素为单位。
+- **使用分发点而不是像素**-像素会变得麻烦作为屏幕密度的更改。 请不要对像素值。 避免以 dp （密度无关像素为单位） 支持的像素为单位。
 
 - **避免** [AbsoluteLayout](https://developer.xamarin.com/api/type/Android.Widget.AbsoluteLayout/)
-  **任何位置可能**&ndash;它在 API 级别 3 (Android 1.5) 中已弃用，并将导致脆弱的布局。 不应使用。 相反，尝试使用更灵活的布局小组件，如[ **LinearLayout**](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)， [ **RelativeLayout**](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)，或新[**GridLayout**](https://developer.xamarin.com/api/type/Android.Widget.GridLayout/)。
+  **只要可能**&ndash;它在 API 级别 3 (Android 1.5) 中已弃用，并且会导致脆弱的布局。 不应使用。 相反，尝试使用如下所示更灵活的布局小组件[ **LinearLayout**](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)， [ **RelativeLayout**](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)，或新[**GridLayout**](https://developer.xamarin.com/api/type/Android.Widget.GridLayout/)。
 
-- **选取一个作为默认设置的布局方向**&ndash;例如，而不是提供的备用资源**布局上关于领土**和**布局端口**，put 的资源在布局**布局**，和资源到纵向**布局端口**。
+- **选取一个为默认布局方向**&ndash;例如，而不是提供的备用资源**布局 land**并**布局端口**，放置的资源在横向**布局**，以及为纵向的资源**布局端口**。
 
-- **使用高度和宽度的 LayoutParams** -定义在 XML 布局文件中，UI 元素时 Android 应用程序中使用**wrap_content**和**fill_parent**值将具有多个成功确保正确查看跨不同设备比使用像素或密度的独立单元。 这些维度值来根据需要缩放位图资源导致 Android。 鉴于此相同密度无关的单位是最保留时指定边距和填充的 UI 元素。
+- **使用高度和宽度的 LayoutParams** -在 XML 布局文件中，定义 UI 元素时 Android 应用程序中使用**wrap_content**和**fill_parent**值将为获得更大成功确保正确查看跨不同设备比使用像素或密度无关的单位。 这些维度值导致 Android 来相应地缩放位图资源。 鉴于相同原因，密度无关的单位是最适合保留有关何时指定边距和填充的 UI 元素。
 
 
 ## <a name="testing-multiple-screens"></a>测试多个屏幕
 
-Android 应用程序需要将支持的所有配置对其进行测试。 理想情况下设备应在实际设备本身上进行测试，但在许多情况下这是不可能或可行。
-在这种情况下为每个设备配置使用仿真程序和 Android 虚拟设备安装程序将很有用。
+Android 应用程序必须针对所有受支持的配置进行测试。 理想情况下应在实际设备自身上测试设备，但在许多情况下这是不可能或可行。
+在这种情况下，每个设备配置为使用仿真程序和 Android 虚拟设备安装程序将很有用。
 
-Android SDK 提供外观可能用于创建 AVD 的某些仿真程序将复制大小、 密度和解决方法的多个设备。
-许多硬件供应商同样提供用于其设备的外观。
+Android SDK 提供了一些仿真器外观可用于创建 Avd 将复制大小、 密度和多个设备的分辨率。
+许多硬件供应商同样提供为其设备的外观。
 
-另一个选项是使用第三方测试服务的服务。
-这些服务将采取 APK，在很多不同设备上运行它，然后提供应用程序的工作方式的反馈。
+另一种方法是使用第三方测试服务的服务。
+这些服务将需要对 apk 进行，许多不同设备上运行，然后提供应用程序的工作方式的反馈。

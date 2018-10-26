@@ -4,15 +4,15 @@ title: XAML 实时预览
 description: 本文档讨论了如何使用 Xamarin Live Player 实时预览 XAML 页面、 对 XAML，进行更改并查看立即出现在设备上的更改。
 ms.prod: xamarin
 ms.assetid: 86E9A179-21F8-4F3A-A9CE-36F0FC5DB4A8
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 200d19aa0a13d0557e52cb90021190978838ed39
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 1602c98eceaff607c79400a37c4ace60d5bf8807
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110591"
 ---
 # <a name="xaml-live-previewing"></a>XAML 实时预览
 
@@ -70,7 +70,7 @@ Xamarin Live Player 的优势之一是能够实时预览 XAML 页面，对 Visua
 
 ## <a name="deploying-to-android-emulator"></a>部署到 Android 仿真器
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 打开要在 Visual Studio 2017 编辑器中的实时预览 XAML 页：
 
@@ -84,7 +84,7 @@ Xamarin Live Player 的优势之一是能够实时预览 XAML 页面，对 Visua
 
     ![](live-view-images/vs-image3.png)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 打开要为 Mac 编辑器在 Visual Studio 中的实时预览 XAML 页：
 

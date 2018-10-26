@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 180a196e0b95854815c8a74ef1d2df63407dd04f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997999"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108426"
 ---
 # <a name="introduction-to-custom-renderers"></a>自定义呈现器简介
 
@@ -52,7 +52,7 @@ public class MyEntry : Entry
 `local`命名空间前缀可以是任何内容。 但是，`namespace`和`assembly`值必须匹配的自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
 
 > [!NOTE]
-> 定义`xmlns`比要简单得在.NET Standard 类库项目中共享的项目。 .NET Standard 库编译为程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 （包括 XAML） 的所有共享的资源时使用共享项目，将编译到每个引用的项目，这意味着，如果 iOS、 Android 和 UWP 项目具有其自己*程序集名称*它是不可能编写`xmlns`声明由于需要为每个应用程序不同的值。 共享的项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
+> 定义`xmlns`比要简单得在.NET Standard 类库项目中共享的项目。 .NET Standard 库编译为程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 （包括 XAML） 的所有共享的资源时使用共享项目，将编译到每个引用的项目，这意味着，如果 iOS、 Android 和 UWP 项目具有其自己*程序集名称*就无法写入`xmlns`声明由于需要为每个应用程序不同的值。 共享的项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
 
 `MyEntry`自定义控件然后呈现在每个平台，具有灰色背景上，如以下屏幕截图中所示：
 

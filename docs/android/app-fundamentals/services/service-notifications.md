@@ -1,27 +1,27 @@
 ---
 title: 服务通知
-description: 本指南讨论如何 Android 服务可能使用本地通知调度到用户的信息。
+description: 本指南介绍如何 Android 服务可能使用本地通知调度到用户的信息。
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 65ccb94bd4fac1f3818b4f08eb34ecf73d6c52e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d56f67254a9eae334fa8ac3f08d3ef270800c309
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762628"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103241"
 ---
 # <a name="service-notifications"></a>服务通知
 
-_本指南讨论如何 Android 服务可能使用本地通知调度到用户的信息。_
+_本指南介绍如何 Android 服务可能使用本地通知调度到用户的信息。_
 
 
 ## <a name="service-notifications-overview"></a>服务通知概述
 
-即使 Android 应用程序不在前台服务通知功能允许应用程序以向用户显示信息。 它有可能的通知，以便提供用户，例如显示从应用程序的活动的操作。 下面的代码示例演示服务如何可能调度到用户的通知：
+服务通知允许用于向用户显示信息的应用，即使 Android 应用程序不在前景中。 很可能的通知，以便提供用于用户，例如，显示从应用程序的活动操作。 下面的代码示例演示了一项服务可能会如何调度到用户的通知：
 
 ```csharp
 [Service]
@@ -46,18 +46,18 @@ public class MyService: Service
 }
 ```
 
-此屏幕截图是显示通知的示例：
+这是屏幕截图显示通知的示例：
 
 [![在状态栏中显示的通知图标](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
-当用户幻灯片向下的顶部的通知屏幕时，将显示完整的通知：
+当用户滑向下的顶部的通知屏幕时，将显示完整的通知：
 
-![Notication 通知栏中显示](service-notifications-images/02-fullnotification.png)
+![通知栏中显示的通知](service-notifications-images/02-fullnotification.png)
 
 
-## <a name="updating-a-notification"></a>更新通知
+## <a name="updating-a-notification"></a>正在更新通知
 
-若要更新通知，该服务将重新发布通知使用相同的通知 id。 Android 将显示或更新根据需要在状态栏中的通知。
+若要更新通知，该服务将重新发布使用相同的通知 id。 Android 将显示或更新状态栏中根据需要的通知。
 
 ```csharp 
 void UpdateNotification(string content)
@@ -79,7 +79,7 @@ Notification GetNotification(string content, PendingIntent intent)
 }
 ```
 
-中提供了有关通知的详细信息[本地通知](~/android/app-fundamentals/notifications/local-notifications.md)部分[Android 通知](~/android/app-fundamentals/notifications/index.md)指南。
+有关通知的详细信息现已推出[本地通知](~/android/app-fundamentals/notifications/local-notifications.md)一部分[Android 通知](~/android/app-fundamentals/notifications/index.md)指南。
 
 
 ## <a name="related-links"></a>相关链接

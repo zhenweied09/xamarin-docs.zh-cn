@@ -4,15 +4,15 @@ description: 本文档介绍如何使用 Xamarin.iOS 中的各种应用程序图
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: cd67c564461721ade6f3eb269b461ddea5e2d2c4
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39275997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118508"
 ---
 # <a name="application-icons-in-xamarinios"></a>在 Xamarin.iOS 应用程序图标
 
@@ -109,7 +109,7 @@ ms.locfileid: "39275997"
 
 若要使用资产目录，请执行以下操作：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**打开进行编辑。
 2. 向下滚动到**应用图标**部分。
@@ -126,7 +126,7 @@ ms.locfileid: "39275997"
 7. 单击**打开**按钮以在项目中包含图像，并将它设为 xcasset。
 8. 重复上述步骤的所需的所有图像。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 双击**Info.plist**中的文件**解决方案资源管理器**:
 
@@ -155,7 +155,7 @@ ms.locfileid: "39275997"
 
 请执行以下操作：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**打开进行编辑。
 2. 向下滚动到**应用图标**部分。
@@ -166,7 +166,7 @@ ms.locfileid: "39275997"
 
      ![](app-icons-images/migrate03.png "在 Assets.xcassets AppIcons 图像集")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**打开进行编辑。
 2. 在 iPhone 上单击图标部分： 
@@ -187,7 +187,7 @@ ms.locfileid: "39275997"
 
 若要指定 iTunes 图稿，请执行以下操作：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**打开进行编辑。
 2. 滚动到**iTunes 图稿**编辑器的部分： 
@@ -196,7 +196,7 @@ ms.locfileid: "39275997"
 3. 任何缺少的图像，请单击编辑器中的缩略图，从打开的文件对话框中选择所需的 iTunes 图稿的图像文件，单击**确定**按钮。
 4. 重复此步骤直至所有所需映像已为指定应用程序。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 双击`Info.plist`文件中**解决方案资源管理器**打开进行编辑。
 

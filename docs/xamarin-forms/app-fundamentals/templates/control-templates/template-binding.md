@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 86de2ad6009365b3debbe1a2310651002b023219
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106424"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>从 Xamarin.Forms ControlTemplate 绑定
 
@@ -156,13 +156,24 @@ public class HomePageCS : ContentPage
 }
 ```
 
+您还可以绑定到视图模型属性直接，以便无需声明`BindableProperty`s`HeaderText`并`FooterText`上`ContentPage`，通过将控件模板绑定到 Parent.BindingContext。_PropertyName_例如：
+
+```xaml
+<ControlTemplate x:Key="TealTemplate">
+  <Grid>
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.HeaderText}" ... />
+    ...
+    <Label Text="{TemplateBinding Parent.BindingContext.FooterText}" ... />
+  </Grid>
+</ControlTemplate>
+```
+
 有关数据绑定到 Viewmodel 的详细信息，请参阅[从数据绑定到 MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)。
 
 ## <a name="summary"></a>总结
 
 使用模板绑定控件模板中执行数据绑定演示这篇文章。 模板绑定允许对数据的控件模板中的控件绑定到公共属性，使控件模板来轻松地更改中的控件上的属性值。
-
-
 
 ## <a name="related-links"></a>相关链接
 

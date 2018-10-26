@@ -4,15 +4,15 @@ description: 在本部分中的文档介绍特定于 Android 的功能。 这里
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/27/2018
-ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104695"
 ---
 # <a name="platform-features"></a>平台功能
 
@@ -46,9 +46,9 @@ Android 3.0 引入了片段，演示如何在手机和平板电脑上找到的�
 本指南介绍了如何支持 Android 6.0_将应用链接_，该技术允许移动应用来响应在网站上的 Url。 它将讨论如何实现应用程序将 Android 6.0 应用程序中的链接以及如何配置网站以授予对移动应用的权限来处理应用程序链接的域。
 
 
-##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Android P 预览](~/android/platform/android-p.md)
+##  <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 饼图](~/android/platform/pie.md)
 
-本文提供 Android P 预览版中的新增功能的概述，介绍如何进行准备 Xamarin.Android 进行 Android P 开发，并提供示例代码，说明如何在 Xamarin.Android 应用中使用 Android P 的主要功能。
+本文提供 Android 饼图中的新增功能的概述，介绍如何进行准备 Xamarin.Android 进行 Android 饼图开发，并提供了一个应用示例，演示了如何使用新 Android 饼图显示切除和通知中的功能Xamarin.Android 应用。
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)
@@ -59,14 +59,14 @@ Android 3.0 引入了片段，演示如何在手机和平板电脑上找到的�
 
 ##  <a name="android-7-nougatandroidplatformnougatmd"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
-本文提供了 Android 7.0 Nougat 中引入的新功能的高级别概述。
+本文提供了 Android 7.0 Nougat 中引入的新功能的高级概述。
 
 
 
 
 ##  <a name="android-6-marshmallowandroidplatformmarshmallowmd"></a>[Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-本文提供了 Android 6.0 Marshmallow 中引入的新功能的高级别概述。
+本文提供了 Android 6.0 Marshmallow 中引入的新功能的高级概述。
 
 
 
@@ -86,7 +86,7 @@ Android 4.4 (KitKat) 是加载了太多的用户和开发人员的功能。 本�
 
 ##  <a name="android-41-jelly-beanandroidplatformjelly-beanmd"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-本文档将 Android 4.1 中引入的开发人员提供的新功能的高级别概述。 这些功能包括： 增强的通知，Android 无线发送共享大型文件、 多媒体、 对等网络发现、 动画、 新的权限的更新的更新。
+本文档将 Android 4.1 中引入的开发人员提供新功能的高级的概述。 这些功能包括： 增强的通知，Android 无线发送共享大型文件、 多媒体、 对等网络发现、 动画、 新的权限的更新的更新。
 
 
 
@@ -98,12 +98,12 @@ Android 4.4 (KitKat) 是加载了太多的用户和开发人员的功能。 本�
 
 ##  <a name="working-with-the-android-manifestandroid-manifestmd"></a>[使用 Android 清单](android-manifest.md)
 
-此文章 introducts AndroidManifest.xml 文件中，并在它也许是如何用于控制功能和描述 Mono for Android 应用程序的要求。
+本文介绍了 AndroidManifest.xml 文件，以及如何将它可能用来控制功能和描述 Mono for Android 应用程序的要求。
 
 
 ##  <a name="introduction-to-content-providersandroidplatformcontent-providersindexmd"></a>[内容提供程序简介](~/android/platform/content-providers/index.md)
 
-ContentProvider 封装的数据存储库，并提供一个 API 来访问它。 提供程序存在通常还提供一个 UI 用于显示/管理数据的 Android 应用程序的一部分。 使用内容提供商的主要好处，让其他应用程序能够轻松地访问封装的数据使用提供程序客户端对象 （称为 ContentResolver）。 一起内容提供商和内容冲突解决程序提供一致的应用程序间 API 进行生成和使用简单的数据访问。 本文档演示如何访问和生成使用 Xamarin.Android Contentprovider。
+ContentProvider 封装的数据存储库，并提供一个 API 来访问它。 提供程序还提供一个 UI 以便显示/管理的数据的 Android 应用程序的一部分存在。 使用内容提供商的主要好处，让其他应用程序能够轻松地访问封装的数据使用提供程序客户端对象 （称为 ContentResolver）。 一起内容提供商和内容冲突解决程序提供一致的应用程序间 API 进行生成和使用简单的数据访问。 本文档演示如何访问和生成使用 Xamarin.Android Contentprovider。
 
 
 

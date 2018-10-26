@@ -4,15 +4,15 @@ description: 如何在 Xamarin.Android 应用程序中使用交换机小组件
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: e3bcce48a675a9ba3d1d41f93babc7fcb26448c8
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+ms.openlocfilehash: ef400aaa31992b577762ad695418b865882e2e2d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115949"
 ---
 # <a name="switch"></a>开关
 

@@ -4,15 +4,15 @@ description: 本指南将说明在 Xamarin.Android 中的文件访问
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116792"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>文件存储和使用 Xamarin.Android 的访问
 
@@ -24,7 +24,7 @@ Android 应用的一个常见要求是操作文件&ndash;保存图片、 下载�
 这些分组才概念，并不一定是引用单个分区或设备上的目录。 Android 设备将始终提供内部存储和外部存储的分区。 很可能某些设备可能包含被视为外部存储的多个分区。 而不考虑分区进行读取的 Api，编写，或创建的文件是相同的。 有两个 Xamarin.Android 应用程序可用于文件访问的 Api 集：
 
 1. **.NET Api （提供的 Mono 和 xamarin.android 包装）** &ndash;这些包含[文件系统帮助程序](~/essentials/file-system-helpers.md?context=xamarin/android)提供[Xamarin.Essentials](~/essentials/index.md?context=xamarin/android)。 .NET Api 提供最佳的跨平台兼容性和本指南的重点将这种情况下是这些 Api。
-1. **本机 Java 文件访问 Api （提供的 Java 和 xamarin.android 包装）** &ndash; Java 提供其自身 Api，可用于读取和写入文件。 这些是完全可以接受的替代方案到对.NET Api，但特定于 Android，并不适合用于跨平台的应用。
+1. **本机 Java 文件访问 Api （提供的 Java 和 xamarin.android 包装）** &ndash; Java 提供其自身 Api，可用于读取和写入文件。 这些是对.NET Api 中，完全可以接受的替代方案，但特定于 Android，并不适合用于跨平台的应用。
 
 读取和写入文件，在 Xamarin.Android 中几乎完全相同，因为它是与任何其他.NET 应用程序。 Xamarin.Android 应用程序确定将进行操作，然后使用标准.NET 习惯用语文件访问的文件的路径。 由于内部和外部存储的实际路径可能不同设备的或从到 Android 版本的 Android 版本，建议不要进行硬编码文件的路径。 相反，使用 Xamarin.Android Api 来确定文件的路径。 这样一来，用于读取和写入文件的.NET Api 公开的本机 Android Api，可帮助确定文件存储在内部和外部存储的路径。
 
@@ -79,7 +79,7 @@ Android 应用的一个常见要求是操作文件&ndash;保存图片、 下载�
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>读取或写入到文件存储在内部存储
 
-任一[C# Api 用于编写](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)到一个文件是不够的; 只需是获取分配给目录中的文件的路径在应用程序。 强烈建议具有文件访问权限阻止主线程将关联的异步版本的.NET Api 用于最小化可能是任何问题。
+任一[ C# Api，可用于编写](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)到一个文件是不够的; 只需是获取分配给应用程序的目录中的文件的路径。 强烈建议具有文件访问权限阻止主线程将关联的异步版本的.NET Api 用于最小化可能是任何问题。
 
 此代码片段是一个整数写入 utf-8 文本文件的内部存储目录的应用程序的一个示例：
 

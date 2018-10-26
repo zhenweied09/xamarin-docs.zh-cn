@@ -1,31 +1,31 @@
 ---
-title: 如何在 Xamarin Studio 中设置对于 iOS 项目的 Mono 运行时环境变量？
+title: 如何在 Xamarin Studio 中设置 iOS 项目的 Mono 运行时环境的变量？
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1176CEA9-C7F1-411B-8F1A-99374E8AFF33
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/31/2017
-ms.openlocfilehash: 5f4f3a2de012d35ddca9c1fa830d599d9d5acb17
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ba74e316f706e5bf22f973de4dad38d94ccd0db9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30776113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116935"
 ---
-# <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studio"></a>如何在 Xamarin Studio 中设置对于 iOS 项目的 Mono 运行时环境变量？
+# <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studio"></a>如何在 Xamarin Studio 中设置 iOS 项目的 Mono 运行时环境的变量？
 
-如果你需要为 Mono 设置任何运行时环境变量，可以将它们设置**项目选项 > 运行 > 常规**页。
+如果需要为 Mono 设置任何运行时环境变量，可以将它们设置**项目选项 > 运行 > 常规**页。
 
-注意： 垃圾回收环境变量 SGen (MONO\_GC\_PARAMS) 设置从 Xamarin Studio 启动时，将仅使用这种方式。 如果启动设备中的应用程序时，将忽略 Sgen 的设置。 
+注意： SGen 垃圾回收的环境变量 (MONO\_GC\_PARAMS) 从 Xamarin Studio 启动时，才会使用这种方式的设置。 如果您启动从设备应用，将忽略 Sgen 的设置。 
 
-若要永久设置应用程序的环境变量，你需要添加此作为其他 mtouch 自变量 （对于所有相关的配置）：
+若要永久设置环境变量的应用，需要将这添加作为其他 mtouch 参数 （适用于所有相关的配置）：
 
 ```csharp
    --setenv=NAME=VALUE
 ```
 
-若要查看可设置的环境变量，请参阅单声道手册页： [ http://docs.go-mono.com/?link=man%3amono(1) ](http://docs.go-mono.com/?link=man%3amono(1))请参阅一节： `ENVIRONMENT VARIABLES`
+若要查看可设置的环境变量，请参阅 Mono 手册页： [ http://docs.go-mono.com/?link=man%3amono(1) ](http://docs.go-mono.com/?link=man%3amono(1))请参阅以下节： `ENVIRONMENT VARIABLES`
 
-![](xs-mono-runtime-images/environment-variables.jpg "项目的设置环境变量")
+![](xs-mono-runtime-images/environment-variables.jpg "为项目设置环境变量")

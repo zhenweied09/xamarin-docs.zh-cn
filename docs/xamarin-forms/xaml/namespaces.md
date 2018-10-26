@@ -6,13 +6,13 @@ ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 06/18/2018
-ms.openlocfilehash: 30cbb2c3aebdafe2ebf35598c520ae725e01ce65
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/21/2018
+ms.openlocfilehash: a83e31cd117689e3af2f5357331408de55edaecf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102745"
 ---
 # <a name="xaml-namespaces-in-xamarinforms"></a>在 Xamarin.Forms 中 XAML 命名空间
 
@@ -42,13 +42,14 @@ XAML 使用前缀来引用命名空间中的类型时要使用的前缀与声明
 |--- |--- |
 |`x:Arguments`|指定非默认构造函数或工厂方法对象声明的构造函数自变量。|
 |`x:Class`|指定在 XAML 中定义的类的命名空间和类。 类名必须与匹配的代码隐藏文件的类名。 请注意，此构造只能出现在 XAML 文件的根元素。|
+|`x:DataType`|指定的 XAML 元素，它的子级，将绑定到的对象的类型。|
 |`x:FactoryMethod`|指定可用于初始化对象的工厂方法。|
 |`x:FieldModifier`|指定的命名 XAML 元素生成的字段的访问级别。|
 |`x:Key`|指定的每个资源的唯一用户键`ResourceDictionary`。 键的值用于检索 XAML 资源，并通常用作参数`StaticResource`标记扩展。|
 |`x:Name`|指定的 XAML 元素的运行时对象名称。 设置`x:Name`类似于在代码中声明变量。|
 |`x:TypeArguments`|指定的泛型类型参数的泛型类型构造函数。|
 
-有关详细信息`x:FieldModifier`属性，请参阅[字段修饰符](~/xamarin-forms/xaml/field-modifiers.md)。 有关详细信息`x:Arguments`， `x:FactoryMethod`，并`x:TypeArguments`特性，请参见[在 XAML 中传递参数](~/xamarin-forms/xaml/passing-arguments.md)。
+有关详细信息`x:DataType`属性，请参阅[编译绑定](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)。 有关详细信息`x:FieldModifier`属性，请参阅[字段修饰符](~/xamarin-forms/xaml/field-modifiers.md)。 有关详细信息`x:Arguments`， `x:FactoryMethod`，并`x:TypeArguments`特性，请参见[在 XAML 中传递参数](~/xamarin-forms/xaml/passing-arguments.md)。
 
 在 XAML 中，命名空间声明从父元素继承到子元素。 因此，在 XAML 文件的根元素中定义一个命名空间，该文件中的所有元素都继承的命名空间声明。
 

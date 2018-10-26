@@ -3,15 +3,15 @@ title: Xamarin.Android API 设计原则
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8abb78f335b159223e9394b7845eccbba8d124da
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110708"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 设计原则
 
@@ -167,7 +167,8 @@ button.Click += (sender, e) => {
 
 我们想要添加的其他方法和 ctor 来公开基于委托的连接的重载。 此外，多个回调的侦听器需要一些附加检查，以确定实现单个回调是否合理的因此我们将在发现转换这些。 如果没有相应的事件，侦听器必须使用在 C# 中，但请将任何您认为可能具有委托的使用情况与我们的注意力。 我们还投入了接口而不使用"侦听器"后缀的某些转换时很明显，他们将从一个委托的替代方法获益。
 
-所有侦听器接口实现[ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)接口，因为绑定，以便侦听器类必须实现此接口的实现细节。 这可以通过实现侦听器接口上的一个子类[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)或任何其他包装 Java 对象，如 Android 活动。
+所有侦听器接口实现 [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
+接口，因为绑定，以便侦听器类必须实现此接口的实现细节。 这可以通过实现侦听器接口上的一个子类[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/)或任何其他包装 Java 对象，如 Android 活动。
 
 
 ### <a name="runnables"></a>可运行对象
@@ -262,7 +263,7 @@ Java 接口将转换为两种类型：
 因此，Java 表达式*MediaStore.Video.VideoColumns.TITLE*需要绑定到 C# 表达式*MediaStore.Video.MediaColumnsConsts.Title*这很难发现而无需读取很多 Java 文档。 在 1.9，等效的 C# 表达式将是[ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)。
 
 此外，考虑[android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/)类型，实现 Java *Parcelable*接口。 因为它实现了接口，例如该接口上的所有常量都是"通过"绑定类型，可访问*Bundle.CONTENTS_FILE_DESCRIPTOR*是完全有效的 Java 表达式。
-以前，要移植到 C# 此表达式需要查看所有接口都实现从哪种类型中看到*CONTENTS_FILE_DESCRIPTOR*原来的位置。 从 Xamarin.Android 1.9 开始，实现包含常量的 Java 接口的类将具有嵌套*InterfaceConsts*类型，它将包含继承的接口的所有常量。 这将允许翻译*Bundle.CONTENTS_FILE_DESCRIPTOR*到[ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)。
+以前，要移植到此表达式C#将需要查看所有接口都实现从哪种类型中看到*CONTENTS_FILE_DESCRIPTOR*原来的位置。 从 Xamarin.Android 1.9 开始，实现包含常量的 Java 接口的类将具有嵌套*InterfaceConsts*类型，它将包含继承的接口的所有常量。 这将允许翻译*Bundle.CONTENTS_FILE_DESCRIPTOR*到[ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)。
 
 最后，类型与*月成本*如后缀*Android.OS.ParcelableConsts*现在已过时，新引入 InterfaceConsts 以外嵌套类型。 Xamarin.Android 3.0 中将删除它们。
 

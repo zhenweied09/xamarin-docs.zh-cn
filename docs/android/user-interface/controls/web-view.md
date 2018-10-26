@@ -3,23 +3,24 @@ title: Web 视图
 ms.prod: xamarin
 ms.assetid: 807F214A-166D-B342-0BBA-525517577F6B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 8d7b0e1abc8eb11bf812a111764b9cccfb41e041
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110077"
 ---
 # <a name="web-view"></a>Web 视图
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 可以创建自己的窗口用于查看的网页 （或甚至开发完整的浏览器）。 在本教程中，你将创建一个简单[ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) ，可以查看和导航网页。
+[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 可以创建自己的窗口用于查看的网页 （或甚至开发完整的浏览器）。 在本教程中，你将创建一个简单 [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+可以查看和导航网页。
 
 创建一个名为的新项目**HelloWebView**。
 
-打开**Resources/Layout/Main.axml**并插入以下：
+打开 **Resources/Layout/Main.axml** 并插入以下代码：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -74,7 +75,8 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-接下来，使用以下代码[ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))方法：
+接下来，使用以下代码 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+方法：
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -118,7 +120,8 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-这[ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))每当该活动正在运行并且按下按钮时，将调用回调方法。 内部使用的条件[ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/)若要检查是否按下了键**回**按钮以及是否[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)实际上能够导航回 （如果它具有历史记录）。 如果两者均为 true，则[ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/)调用方法时，这将导航中的后退一步[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)历史记录。 返回`true`指示已处理该事件。 如果不满足此条件，然后该事件发送到系统。
+此 [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+该活动正在运行并且按下按钮时，将调用回调方法。 内部使用的条件[ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/)若要检查是否按下了键**回**按钮以及是否[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)实际上能够导航回 （如果它具有历史记录）。 如果两者均为 true，则[ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/)调用方法时，这将导航中的后退一步[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)历史记录。 返回`true`指示已处理该事件。 如果不满足此条件，然后该事件发送到系统。
 
 再次运行该应用程序。 现在应能够单击的链接，并在向后导航页历史记录：
 

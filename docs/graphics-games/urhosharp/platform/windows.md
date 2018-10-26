@@ -1,37 +1,37 @@
 ---
 title: UrhoSharp Windows 支持
-description: 本文档讨论 UrhoSharp Windows 的支持。 它描述如何创建项目、 配置和启动 Urho，WPF 中，与集成和与 UWP 集成。
+description: 本文档讨论对 UrhoSharp Windows 支持。 它介绍了如何创建项目、 配置和启动 Urho、 将与 WPF 中，集成和与 UWP 集成。
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 094eaf0ebe84ce8c1771bd6481ee897463349856
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119600"
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 支持
 
-尽管 Urho 是一个可移植类库，并且允许相同的 API，用于跨各种平台的游戏的逻辑，仍需要初始化 Urho，在您平台特定的驱动程序，并在某些情况下，你将想要利用平台特定的功能.
+尽管 Urho 是可移植类库，并且允许相同的 API，用于跨各种平台的游戏逻辑，仍需要初始化 Urho 在平台特定驱动程序，并在某些情况下，将想要充分利用平台特定功能.
 
-在下面的页面中，假定`MyGame`是的一个子类`Application`类。
+在以下页中，假定`MyGame`是一个的子类`Application`类。
 
 **支持的体系结构：** 仅 64 位 Windows。
 
-你可以看到完整的示例显示如何使用在此我们[示例](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
+可以看到完整的示例演示如何使用在此我们[示例](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples)
 
 ## <a name="standalone-project"></a>独立项目
 
 ### <a name="creating-a-project"></a>创建项目
 
-创建控制台项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
+创建控制台项目、 引用 Urho NuGet 和确保找到资产 （包含的数据目录的目录）。
 
 ### <a name="configuring-and-launching-urho"></a>配置和启动 Urho
 
-若要启动你的应用程序，请执行此操作：
+若要启动应用程序，请执行此操作：
 
 ```csharp
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
@@ -46,7 +46,7 @@ new MyGame().Run();
 
 ### <a name="creating-a-project"></a>创建项目
 
-创建 WPF 项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
+创建 WPF 项目、 引用 Urho NuGet 和确保找到资产 （包含的数据目录的目录）。
 
 ### <a name="configuring-and-launching-urho-from-wpf"></a>配置和启动从 WPF Urho
 
@@ -90,7 +90,7 @@ new MyGame().Run();
 
 ### <a name="creating-a-project"></a>创建项目
 
-创建 UWP 项目引用 Urho NuGet，然后确保找到资产 （这些目录包含的数据目录）。
+创建 UWP 项目、 引用 Urho NuGet 和确保找到资产 （包含的数据目录的目录）。
 
 ### <a name="configuring-and-launching-urho-from-uwp"></a>配置和启动从 UWP Urho
 
@@ -123,7 +123,7 @@ new MyGame().Run();
 
 ### <a name="creating-a-project"></a>创建项目
 
-创建 Windows.Forms 项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
+创建 Windows.Forms 项目、 引用 Urho NuGet 和确保找到资产 （包含的数据目录的目录）。
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>配置和启动从 Windows.Forms Urho
 

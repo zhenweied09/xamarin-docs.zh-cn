@@ -1,25 +1,25 @@
 ---
-title: UrhoSharp Mac 支持
-description: 本文档讨论对 UrhoSharp macOS 支持。 它介绍如何创建项目，并提供一些代码示例的链接。
+title: UrhoSharp Mac 的支持
+description: 本文档讨论对 UrhoSharp macOS 支持。 它介绍如何创建一个项目，并提供一些示例代码的链接。
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: aae7b09231ae0e8f88bb9435f50fadd2ff822c1a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6d0a048020284319682c1bee0f9a1d7f9af00977
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113867"
 ---
-# <a name="urhosharp-mac-support"></a>UrhoSharp Mac 支持
+# <a name="urhosharp-mac-support"></a>UrhoSharp Mac 的支持
 
 _Mac 特定设置和功能_
 
-尽管 Urho 是一个可移植类库，并且允许相同的 API，用于跨各种平台的游戏的逻辑，仍需要初始化 Urho，在您平台特定的驱动程序，并在某些情况下，你将想要利用平台特定的功能.
+尽管 Urho 是可移植类库，并且允许相同的 API，用于跨各种平台的游戏逻辑，仍需要初始化 Urho 在平台特定驱动程序，并在某些情况下，将想要充分利用平台特定功能.
 
-在下面的页面中，假定`MyGame`是的一个子类`Application`类。
+在以下页中，假定`MyGame`是一个的子类`Application`类。
 
 ## <a name="macos"></a>macOS
 
@@ -27,7 +27,7 @@ _Mac 特定设置和功能_
 
 ## <a name="creating-a-project"></a>创建项目
 
-创建控制台项目、 引用 Urho NuGet 和确保找到资产 （这些目录包含的数据目录）。
+创建控制台项目、 引用 Urho NuGet 和确保找到资产 （包含的数据目录的目录）。
 
 ```csharp
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";

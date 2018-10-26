@@ -4,21 +4,21 @@ description: 本文档介绍如何使用代码以生成 Xamarin.iOS 应用程序
 ms.prod: xamarin
 ms.assetid: 7CB1FEAE-0BB3-4CDC-9076-5BD555003F1D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 688457ab25398e8c5b9848a7e58f6163db4c0a05
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109531"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>在 Xamarin.iOS 中的代码中创建 iOS 用户界面
 
 IOS 应用程序的用户界面类似于店面，首先 – 应用程序通常只获取一个窗口，但它可以填满窗口使用如许多对象需要以及根据什么应用程序可以更改对象和排列方式要显示的。 此情形中的对象（用户看到的内容）称为视图。 若要生成的应用程序中的单个屏幕，视图相互堆叠在内容视图层次结构中，并由单个视图控制器管理层次结构。 具有多个屏幕的应用程序具有多个内容视图层次结构（各自具有自己的视图控制器），应用程序会将视图置于窗口中以基于用户所处的屏幕创建不同的内容视图层次结构。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 下图显示了窗口、视图、子视图与视图控制器之间的关系，它们向设备屏幕提供了用户界面： 
 
@@ -26,7 +26,7 @@ IOS 应用程序的用户界面类似于店面，首先 – 应用程序通常�
 
 可以使用构造这些视图层次结构[适用于 iOS 的 Xamarin 设计器](~/ios/user-interface/designer/index.md)在 Visual Studio 中，但是最好有基本的了解了如何完全在代码中处理。 本文将指导完成一些基本的点来启动和运行仅限代码的用户界面开发。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 下图显示了窗口、视图、子视图与视图控制器之间的关系，它们向设备屏幕提供了用户界面： 
 
@@ -38,7 +38,7 @@ IOS 应用程序的用户界面类似于店面，首先 – 应用程序通常�
 
 ## <a name="creating-a-code-only-project"></a>创建仅限代码的项目
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="ios-blank-project-template"></a>iOS 空白项目模板
 
@@ -54,14 +54,13 @@ IOS 应用程序的用户界面类似于店面，首先 – 应用程序通常�
 
 [![项目文件](ios-code-only-images/empty-project.w157-sml.png "项目文件")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-
 1. **AppDelegate.cs** -包含`UIApplicationDelegate`子类， `AppDelegate` ，用于处理从 iOS 应用程序事件。 在中创建应用程序窗口`AppDelegate`的`FinishedLaunching`方法。
 1. **Main.cs** -包含应用程序指定的类的入口点为`AppDelegate`。
 1. **Info.plist** -包含应用程序的配置信息的属性列表文件。
 1. **Entitlements.plist** – 包含有关功能和权限的应用程序的信息的属性列表文件。
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>iOS 模板
 
@@ -72,20 +71,20 @@ Visual Studio for Mac 不提供一个空的模板。 所有模板都都具有支
 
 
 1. 使用单一视图应用模板来创建新的 iOS 项目：
-    
+
     [![](ios-code-only-images/single-view-app.png "使用单一视图应用模板")](ios-code-only-images/single-view-app.png#lightbox)
 
 1. 删除`Main.Storyboard`和`ViewController.cs`文件。 不要**不**删除`LaunchScreen.Storyboard`。 应删除视图控制器，因为它是在情节提要中创建的视图控制器的隐藏代码：
 1. 请务必选择**删除**从弹出的对话框：
-    
+
     [![](ios-code-only-images/delete.png "从弹出对话框中选择删除")](ios-code-only-images/delete.png#lightbox)
 
 1. 在 Info.plist 中，删除内部信息**部署信息 > 主界面**选项：
-    
+
     [![](ios-code-only-images/main-interface.png "删除主界面选项内的信息")](ios-code-only-images/main-interface.png#lightbox)
 
 1. 最后，将以下代码添加到你`FinishedLaunching`AppDelegate 类中的方法：
-        
+
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             // create a new window instance based on the screen size
@@ -102,9 +101,7 @@ Visual Studio for Mac 不提供一个空的模板。 所有模板都都具有支
 
 -----
 
-
-
-使用生成 iOS 应用程序[MVC 模式](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#Model_View_Controller)。 从窗口的根视图控制器创建应用程序显示的第一个屏幕。 请参阅[Hello，iOS 多屏显示](~/ios/get-started/hello-ios-multiscreen/index.md)指导有关 MVC 的详细信息模式本身。
+使用生成 iOS 应用程序[MVC 模式](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md#model-view-controller-mvc)。 从窗口的根视图控制器创建应用程序显示的第一个屏幕。 请参阅[Hello，iOS 多屏显示](~/ios/get-started/hello-ios-multiscreen/index.md)指导有关 MVC 的详细信息模式本身。
 
 实现`AppDelegate`添加的模板创建应用程序窗口的其中只有一个每个 iOS 应用程序，并使其显示与下面的代码：
 
@@ -207,17 +204,17 @@ public class AppDelegate : UIApplicationDelegate
 
  [![](ios-code-only-images/image2.png "在控制器嵌套在导航控制器")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-controller"></a>创建视图控制器
+## <a name="creating-a-view-vontroller"></a>创建视图 vontroller
 
 现在，我们已了解如何添加控制器作为`RootViewController`的窗口，让我们了解如何在代码中创建自定义视图控制器。
 
 添加新的类名为`CustomViewController`，如下所示：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](ios-code-only-images/customviewcontroller.w157-sml.png "添加新的类名为 CustomViewController")](ios-code-only-images/customviewcontroller.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](ios-code-only-images/new-file.png "添加新的类名为 CustomViewController")](ios-code-only-images/new-file.png#lightbox)
 
@@ -236,8 +233,6 @@ namespace CodeOnlyDemo
     }
 }
 ```
-
-<a name="Initializing_the_View"/>
 
 ## <a name="initializing-the-view"></a>初始化视图
 
@@ -413,7 +408,7 @@ submitButton.Layer.CornerRadius = 5f;
 这些更改，该视图将如下所示：
 
 [![](ios-code-only-images/image6.png "视图的示例运行")](ios-code-only-images/image6.png#lightbox)
- 
+
 ## <a name="adding-multiple-views-to-the-view-hierarchy"></a>将多个视图添加到的视图层次结构
 
 iOS 提供的工具，使用到的视图层次结构中添加多个视图`AddSubviews`。
@@ -424,7 +419,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>添加按钮功能
 
-单击按钮时，用户希望发生这种情况的内容。 例如，会显示一个警告或导航执行到另一个屏幕。 
+单击按钮时，用户希望发生这种情况的内容。 例如，会显示一个警告或导航执行到另一个屏幕。
 
 让我们添加一些代码，将第二个视图控制器推送到导航堆栈上。
 
@@ -470,7 +465,7 @@ foreach(var subview in View.Subviews)
 
 如果在用户旋转设备为横向，控件不调整大小相应地，如以下屏幕截图所示：
 
- [![](ios-code-only-images/image7.png "如果在用户旋转设备为横向，控件是否未相应地调整大小")](ios-code-only-images/image7.png#lightbox)
+[![](ios-code-only-images/image7.png "如果在用户旋转设备为横向，控件是否未相应地调整大小")](ios-code-only-images/image7.png#lightbox)
 
 若要解决此问题的一种方法是通过设置`AutoresizingMask`上每个视图的属性。 在这种情况下，我们希望水平拉伸的控件，因此我们将设置每个`AutoresizingMask`。 以下示例适用于`usernameField`，但相同需要应用于视图层次结构中每个小工具。
 
@@ -480,7 +475,7 @@ usernameField.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 
 现在当我们旋转设备或模拟器，所有内容拉伸以填充附加空间，如下所示：
 
- [![](ios-code-only-images/image8.png "所有控件都拉伸以填充更多空间")](ios-code-only-images/image8.png#lightbox)
+[![](ios-code-only-images/image8.png "所有控件都拉伸以填充更多空间")](ios-code-only-images/image8.png#lightbox)
 
 ## <a name="creating-custom-views"></a>创建自定义视图
 
@@ -585,19 +580,19 @@ submitButton.TouchUpInside += delegate
 
 现在，当我们运行该应用程序，并点击提交按钮，将显示具有一个圆形的新视图：
 
- [![](ios-code-only-images/circles.png "显示与某一圆形的新视图")](ios-code-only-images/circles.png#lightbox)
+[![](ios-code-only-images/circles.png "显示与某一圆形的新视图")](ios-code-only-images/circles.png#lightbox)
 
 ## <a name="creating-a-launch-screen"></a>创建启动屏幕
 
-一个[启动屏幕](~/ios/app-fundamentals/images-icons/launch-screens.md)作为一种方式向其可以响应用户显示您的应用程序启动时显示。 由于您的应用程序加载时显示启动屏幕，它无法创建在代码中这是因为应用程序仍在加载到内存中。 
+一个[启动屏幕](~/ios/app-fundamentals/images-icons/launch-screens.md)作为一种方式向其可以响应用户显示您的应用程序启动时显示。 由于您的应用程序加载时显示启动屏幕，它无法创建在代码中这是因为应用程序仍在加载到内存中。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-当你创建的 iOS 项目在 Visual Studio 中，启动屏幕为你的.xib 文件，可在窗体中提供**资源**内你的项目文件夹中。 
+在 Visual Studio 中创建一个 iOS 项目时，为你的.xib 文件，可在窗体中提供了启动屏幕**资源**内你的项目文件夹中。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-当你在 Visual Studio 中创建 iOS 项目的 Mac，启动屏幕为你的情节提要文件形式提供。 
+当您在 for Mac 在 Visual Studio 中创建一个 iOS 项目时，会为您的情节提要文件形式提供启动屏幕。
 
 -----
 
@@ -613,7 +608,7 @@ Apple 建议.xib 或情节提要文件用于应用程序面向 iOS 8 或更高�
 > [!IMPORTANT]
 > 截至 iOS 9，Apple 建议情节提要应作为创建启动屏幕的主要方法。
 
-### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>创建启动映像预 ios 8 的应用程序
+### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>创建的启动映像的预 iOS 8 的应用程序
 
 如果应用程序的所有面向 iOS 8 之前的版本不同，静态图像可以使用除.xib 或情节提要启动屏幕。 
 
@@ -622,22 +617,17 @@ Apple 建议.xib 或情节提要文件用于应用程序面向 iOS 8 或更高�
 > [!IMPORTANT]
 > 如果你的应用程序没有启动屏幕，你可能会注意到，它并不完全适合屏幕的大小。 如果是这样，您应确保至少，包含名为 640 x 1136 映像`Default-568@2x.png`向你的 Info.plist。 
 
-
-
 ## <a name="summary"></a>总结
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 本文讨论了如何开发以编程方式在 Visual Studio 中的 iOS 应用程序。 我们介绍了如何构建一个项目的空项目模板，讨论了如何创建并将根视图控制器添加到窗口。 然后，我们介绍了如何使用控件从 UIKit 创建视图层次结构控制器中的开发应用程序屏幕。 接下来，我们探讨如何使视图布局相应地在不同的方向和我们已了解如何创建自定义视图通过子类化`UIView`，以及如何加载的视图控制器中。 最后，我们探讨了如何将启动屏幕添加到应用程序。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 本文讨论了如何开发 iOS 应用程序以编程方式在 Visual Studio for mac。 我们了解了如何生成的项目从一个视图模板，讨论了如何创建并将根视图控制器添加到窗口。 然后，我们介绍了如何使用控件从 UIKit 创建视图层次结构控制器中的开发应用程序屏幕。 接下来，我们探讨如何使视图布局相应地在不同的方向和我们已了解如何创建自定义视图通过子类化`UIView`，以及如何加载的视图控制器中。 最后，我们探讨了如何将启动屏幕添加到应用程序。
 
 -----
-
-
-
 
 ## <a name="related-links"></a>相关链接
 

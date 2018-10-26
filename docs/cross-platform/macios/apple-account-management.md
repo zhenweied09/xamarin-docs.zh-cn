@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 4557d3b055e5c49842b9fdcff1dac9ee996e8bab
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 1e353aceaf0e2c0525b82c0ccb7e7bcb73df3075
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106060"
 ---
 # <a name="apple-account-management"></a>Apple 帐户管理
 
@@ -44,7 +44,7 @@ Apple 帐户管理位于 Visual Studio for Mac 和 Visual Studio 2017 （版本 
 
 ## <a name="adding-an-apple-developer-account"></a>添加 Apple 开发人员帐户
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 若要打开帐户管理对话框，请转到**Visual Studio > 首选项 > Apple 开发人员帐户**:
 
@@ -68,7 +68,7 @@ Apple 帐户管理位于 Visual Studio for Mac 和 Visual Studio 2017 （版本 
 
     ![视图的详细信息屏幕显示签名标识和预配配置文件在计算机上](apple-account-management-images/image6.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 开始将你的 Apple ID 添加到 Visual Studio 2017 之前，请确保您的开发环境是否[到 Mac 生成主机配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)。
 
@@ -109,11 +109,11 @@ Apple 帐户管理位于 Visual Studio for Mac 和 Visual Studio 2017 （版本 
 
 如果下拉列表中的一个选项为灰显未选定的这意味着没有正确的团队的权限创建此类型的证书。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![创建证书选项](apple-account-management-images/image8.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![创建证书选项](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ Apple 帐户管理位于 Visual Studio for Mac 和 Visual Studio 2017 （版本 
 
 团队详细信息对话框中还显示连接到你的开发人员帐户的所有预配配置文件的列表。 您可以通过按所有预配配置文件下载到本地计算机**下载所有配置文件**按钮
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![下载预配配置文件部分](apple-account-management-images/image9.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![下载预配配置文件部分](apple-account-management-images/prov4.png)
 

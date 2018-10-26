@@ -1,63 +1,63 @@
 ---
 title: 开始使用 Xamarin 工作簿 SDK
-description: 本文档介绍如何开始使用 Xamarin 工作簿 SDK，用于开发针对 Xamarin 工作簿的集成。
+description: 本文档介绍如何开始使用 Xamarin 工作簿 SDK，可用于开发的 Xamarin 工作簿的集成。
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 7a077923741cb93a1277a55e6657f688b130e810
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 5800e98acbff147735ae4a6125979a4b47be2367
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115362"
 ---
 # <a name="getting-started-with-the-xamarin-workbooks-sdk"></a>开始使用 Xamarin 工作簿 SDK
 
-本文档提供的快速开发针对 Xamarin 工作簿的集成入门指南。 大部分此会使用稳定的 Xamarin 工作簿，但**在工作簿 1.3 中仅支持加载通过 NuGet 包的集成**，在编写时的 alpha 通道。
+本文档提供了开发 Xamarin Workbooks 针对集成入门的快速指南。 其中的大部分将使用稳定 Xamarin 工作簿，但**加载通过 NuGet 包的集成仅支持在工作簿 1.3 中**，在撰写本文的 alpha 通道中。
 
 ## <a name="general-overview"></a>常规概述
 
-Xamarin 的工作簿集成是使用的小型库[ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] SDK 以与 Xamarin 工作簿和检查器中集成代理以提供增强的体验。
+Xamarin Workbooks 的集成是使用的小型库[ `Xamarin.Workbooks.Integrations` NuGet] [ nuget] SDK 与 Xamarin 工作簿和检查器集成代理程序以提供增强的体验。
 
-有三个主要步骤开发集成入门-我们将在此处概述它们。
+有 3 个主要步骤开发集成入门，我们将在此处介绍它们。
 
 ## <a name="creating-the-integration-project"></a>创建集成项目
 
-最多平台的库作为开发集成库。 由于你想要在所有可用的代理、 过去和未来提供最佳的集成，你将需要选择一组广泛支持的库。 建议使用最广泛的支持"可移植类库"模板：
+集成库最好是作为多平台库开发的。 因为你想要提供有关所有可用的代理、 过去和未来的最佳集成，你将想要选择一组广泛支持的库。 我们建议使用最广泛的支持"可移植库"模板：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![适用于 Mac 的可移植运行库模板 Visual Studio](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
+[![可移植库模板 Visual Studio for Mac](images/xamarin-studio-pcl.png)](images/xamarin-studio-pcl.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![可移植运行库模板 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
+[![可移植库模板的 Visual Studio](images/visual-studio-pcl.png)](images/visual-studio-pcl.png#lightbox)
 
-在 Visual Studio 中，你将需要确保你为可移植库中选择以下的目标平台：
+在 Visual Studio 中，你将想要确保可移植库中选择以下目标平台：
 
-[![可移植运行库平台 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
+[![可移植库平台的 Visual Studio](images/visual-studio-pcl-platforms.png)](images/visual-studio-pcl-platforms.png#lightbox)
 
 -----
 
 一旦创建类库项目，添加对的引用我们`Xamarin.Workbooks.Integration`NuGet 库通过 NuGet 程序包管理器。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![NuGet Visual Studio for Mac](images/xamarin-studio-nuget.png)](images/xamarin-studio-nuget.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![NuGet Visual Studio](images/visual-studio-nuget.png)](images/visual-studio-nuget.png#lightbox)
 
 -----
 
-你将需要删除为你作为项目的一部分创建的空类，你将需要它此。 完成这些步骤后，你已准备好开始构建你的集成。
+你将想要删除作为项目的一部分创建的空类 — 您不需要使用它对此。 完成这些步骤后，你准备好开始构建你的集成。
 
 ## <a name="building-an-integration"></a>生成集成
 
-我们要生成简单的集成。 我们实际上喜欢颜色绿色，因此我们会将绿色的颜色添加到每个对象的表示形式。 首先，创建新的类称为`SampleIntegration`，并使其实现我们[ `IAgentIntegration` ] [ integration-type]接口：
+我们将构建简单的集成。 我们非常喜欢颜色绿色，因此我们将为每个对象的表示形式，添加将绿色。 首先，创建一个名为的新类`SampleIntegration`，并使其实现我们[ `IAgentIntegration` ] [ integration-type]接口：
 
 ```csharp
 using Xamarin.Interactive;
@@ -70,7 +70,7 @@ public class SampleIntegration : IAgentIntegration
 }
 ```
 
-我们希望做什么是添加[表示](~/tools/workbooks/sdk/representations.md)为每个对象，它是绿色的颜色。 我们将执行这可以通过使用表示提供程序。 提供程序从此继承[ `RepresentationProvider` ] [ reppr]类-对于我们的工具，我们只需重写[ `ProvideRepresentations` ] [ prrep]:
+我们想要执行操作是添加[表示形式](~/tools/workbooks/sdk/representations.md)为每个对象的颜色为绿色。 我们将使用的表示形式提供此操作。 提供程序继承自[ `RepresentationProvider` ] [ reppr]类 — 对于我们的愿景，我们只需重写[ `ProvideRepresentations` ] [ prrep]:
 
 ```csharp
 using Xamarin.Interactive.Representations;
@@ -85,22 +85,22 @@ class SampleRepresentationProvider : RepresentationProvider
 }
 ```
 
-我们要返回[ `Color` ] [ color]、 预生成表示我们 SDK 中的类型。
-你会注意到，此处的返回类型是`IEnumerable<object>`&mdash;一个表示提供程序可能会返回多个表示形式之间实现对象 ！ 所有表示提供程序都称为对于每个对象，所以务必要不进行任何假设哪些对象传递给你。
+将返回[ `Color` ] [ color]、 预生成我们的 SDK 中的表示形式类型。
+您会注意到，此处的返回类型是`IEnumerable<object>`&mdash;一个表示形式提供程序可能会返回多个表示形式的对象 ！ 因此，必须以不进行任何假设哪些对象传递给您为每个对象，调用表示形式的所有提供程序。
 
-最后一步是实际向代理注册我们提供程序，并告知在哪里可以找到我们集成类型的工作簿。 若要注册提供程序，此将代码添加到`IntegrateWith`中的方法`SampleIntegration`我们之前创建的类：
+最后一步是实际向代理注册我们的提供程序，并告知在哪里可以找到我们集成类型的工作簿。 若要注册提供程序，将添加到此代码`IntegrateWith`中的方法`SampleIntegration`我们之前创建的类：
 
 ```csharp
 agent.RepresentationManager.AddProvider (new SampleRepresentationProvider ());
 ```
 
-设置集成类型是通过程序集级特性。 在你 AssemblyInfo.cs、 或在同一类中作为集成类型为方便起见，你可以将此：
+设置集成类型是通过程序集级属性。 在 AssemblyInfo.cs 或方便你集成类型与相同的类中，可以将此：
 
 ```csharp
 [assembly: AgentIntegration (typeof (SampleIntegration))]
 ````
 
-在开发期间，你可能会发现它更方便地使用[`AddProvider`重载][ addprovider]上`RepresentationManager`方法允许你注册了一个简单的回调，以提供工作簿内的表示形式然后转到该代码你`RepresentationProvider`后的实现。 一个示例，用于呈现[ `OxyPlot` ] [ oxyplot] `PlotModel`可能如下所示：
+在开发期间，可能会更方便地使用[`AddProvider`重载][ addprovider]上`RepresentationManager`，使用户能够注册一个简单的回调，以提供工作簿内的表示形式然后将移动到该代码在`RepresentationProvider`完后的实现。 一个示例，用于呈现[ `OxyPlot` ] [ oxyplot] `PlotModel`可能如下所示：
 
 ```csharp
 InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
@@ -111,15 +111,15 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 ```
 
 > [!NOTE]
-> 这些 Api 为你提供的快速方法来启动和运行，但我们不建议仅使用它们传送整个集成&mdash;它们提供对你的类型由客户端的处理方式的很少控制。
+> 这些 Api 可以快速启动并运行，但我们不会建议只使用了它们传送整个集成&mdash;它们提供很少控制在客户端如何处理您的类型。
 
-注册的表示，与你的集成已准备好提供 ！
+已注册的表示形式，与你的集成已准备好交付 ！
 
 ## <a name="shipping-your-integration"></a>传送你的集成
 
-在发运你的集成，你将需要将其添加到 NuGet 包。
-你可以将它发运与你现有的库 NuGet，或如果你要创建新包，你可以使用此模板.nuspec 文件作为起始点。
-你将需要填写与你的集成相关的部分。 最重要的部分是所有的你的集成的文件必须位于`xamarin.interactive`根目录下的包目录。 这使我们能够轻松地找到你的集成，而不考虑是否使用现有包或创建一个新的相关的所有文件。
+若要提供你的集成，需要将其添加到 NuGet 包。
+可以将其送与现有库的 NuGet，或如果要创建新的包，您可以使用此模板.nuspec 文件作为起始点。
+你将需要填写你的集成与相关部分。 最重要的部分是，所有集成的文件必须为`xamarin.interactive`目录的包根目录下。 这使我们能够轻松地找到你的集成，而不考虑是否使用现有包或创建一个新相关的所有文件。
 
 ```xml
 <?xml version="1.0"?>
@@ -137,29 +137,29 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 </package>
 ```
 
-一旦你已创建.nuspec 文件，你可以包你 NuGet 如下所示：
+创建.nuspec 文件后，能够打包 NuGet 如下所示：
 
 ```csharp
 nuget pack MyIntegration.nuspec
 ```
 
-然后发布它到[NuGet][nugetorg]。 后存在，你将能够从任何工作簿中引用它，并查看其操作。 在下面的屏幕截图中，我们已打包的示例集成我们在本文档中生成和工作簿中安装 NuGet 包：
+然后将其向发布[NuGet][nugetorg]。 后存在，您将能够从任何工作簿中引用它并观察它的操作。 在下面的屏幕截图，我们已经打包我们在本文档中生成和安装 NuGet 包的工作簿中的示例集成：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![使用集成的工作簿](images/mac-workbooks-integrated.png)](images/mac-workbooks-integrated.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![使用集成的工作簿](images/windows-workbooks-integrated.png)](images/windows-workbooks-integrated.png#lightbox)
 
 -----
 
-请注意你未看到任何`#r`指令或任何操作即可初始化集成-工作簿进行处理的所有这些为你在幕后 ！
+请注意，你未看到任何`#r`指令或任何内容来初始化集成-工作簿已处理所有这些为您在后台 ！
 
 ## <a name="next-steps"></a>后续步骤
 
-签出我们的移动部分的构成 SDK，有关详细信息的其他文档和我们[示例集成](~/tools/workbooks/samples/index.md)有关你可以从你的集成，如提供自定义在中运行的 JavaScript 执行操作的其他事项工作簿客户端。
+请查看我们有关移动片段组成该 SDK 的详细信息的其他文档和我们[示例集成](~/tools/workbooks/samples/index.md)有关您可以从你的集成，例如，提供自定义运行中的 JavaScript 执行的其他事项工作簿的客户端。
 
 [integration-type]: https://developer.xamarin.com/api/type/Xamarin.Interactive.IAgentIntegration/
 [repman-api]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.IRepresentationManager/

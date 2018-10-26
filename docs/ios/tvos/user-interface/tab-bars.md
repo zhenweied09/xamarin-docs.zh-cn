@@ -1,149 +1,149 @@
 ---
-title: 使用 tvOS Xamarin 中的选项卡栏控制器
-description: 本文档介绍如何使用在 tvOS 应用程序中使用 Xamarin 生成的选项卡栏控制器。 它提供了高级对视图的选项卡条和讨论选项卡栏项、 情节提要集成和选项卡栏项。
+title: 使用 tvOS 在 Xamarin 中的选项卡栏控制器
+description: 本文档介绍如何在 tvOS 应用程序中使用 Xamarin 生成的选项卡栏控制器使用。 它提供高级别视图选项卡栏上，并讨论了选项卡栏项、 情节提要集成和选项卡栏项。
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0efc30fd9814e4da858c4e3e4e99990eccf102e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119818"
 ---
-# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>使用 tvOS Xamarin 中的选项卡栏控制器
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>使用 tvOS 在 Xamarin 中的选项卡栏控制器
 
-对于许多类型的 tvOS 应用中，主导航显示为选项卡栏在屏幕顶部之间运行。 用户刷左侧和右侧的可能的类别和下方所做的更改的内容区域，以反映用户的选择列表中。
+对于许多类型的 tvOS 应用程序，主要导航显示为选项卡栏，屏幕的顶部运行。 在用户轻扫的可能类别和所做的更改下面的内容区域，以反映用户的选择列表中的左侧和右侧。
 
 [![](tab-bars-images/tab01.png "示例选项卡栏")](tab-bars-images/tab01.png#lightbox)
 
-选项卡栏是半透明默认情况下，并始终显示在屏幕的顶部。 具有焦点，选项卡栏将介绍在屏幕顶部 140 像素，但焦点切换到下面的内容区域时将快速滑动消失。
+选项卡栏是半透明默认情况下，并始终显示在屏幕的顶部。 具有焦点，选项卡栏将介绍在屏幕的顶部 140 像素，但焦点切换到下面的内容区域时将快速滑消失。
 
 <a name="Tab-Bars-in-tvOS" />
 
 ## <a name="tab-bars-in-tvos"></a>选项卡条中 tvOS
 
-`UITabViewController`适用于类似的方式，而且有用途类似上 tvOS 方式与其在 iOS 中，具有以下主要差异：
+`UITabViewController`在类似的方式和工作方式与其在 iOS 中，具有以下主要差异 tvOS 上有相似的目标：
 
-- 不同于在该区域显示在屏幕底部的 iOS 上的选项卡栏中，选项卡条中 tvOS 占用屏幕顶部 140 像素，并是半透明默认情况下。
-- 当焦点离开下面的内容区域在选项卡栏时，选项卡栏会快速滑关闭屏幕顶部，并隐藏。 用户可以一次点击的菜单按钮或上向上轻扫[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)要再次显示选项卡栏。
-- 向下轻扫上使用 Siri 远程，会将焦点移动到第一个选项卡栏下方的内容区域[可获得焦点的项](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection)中正在显示的内容。 同样，这将隐藏选项卡栏，一旦焦点切换。
-- 单击以选择的选项卡栏中显示的类别会切换到该类别的内容和焦点将切换为该视图中的第一个可获得焦点项。
-- 应修复的选项卡栏中显示的类别的数目和应始终可访问所有类别，应永远不会禁用给定的类别。
-- 选项卡条不支持上 tvOS 的自定义项。 此外，它们不会显示**详细**类别 （如 iOS) 是否存在于多个类别中可以容纳该值选项卡栏。
+- 与屏幕的底部将显示的 iOS 上的选项卡栏，不同选项卡条中 tvOS 占用屏幕的顶部 140 像素，而且其半透明默认情况下。
+- 当焦点离开下面的内容区域在选项卡栏时，选项卡栏将快速滑出屏幕的顶部，并被隐藏。 在用户可以一次点击的菜单按钮或上向上轻扫[Siri 远程](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)若要再次显示选项卡栏。
+- Siri 远程上向下轻扫，会将焦点移到与第一个选项卡栏下方的内容区域[可获得焦点项](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection)中显示的内容。 同样，这将隐藏选项卡栏，一旦焦点转移。
+- 单击以选择的选项卡栏中显示一个类别将切换到的类别的内容和焦点将切换到该视图中的第一个可获得焦点项。
+- 应修复的类别选项卡栏中显示的数量和应随时都可访问所有类别，应永远不会禁用给定的类别。
+- 选项卡栏在 tvOS 上不支持自定义项。 此外，它们不显示**详细**类别 （如 iOS) 如果有多个类别比可容纳在选项卡栏中。
 
-Apple 具有用于处理选项卡条以下建议：
+Apple 具有以下建议以获得使用选项卡栏：
 
-- **使用逻辑上组织内容的选项卡条**-使用选项卡条来按照逻辑组织 tvOS 应用适用于的内容。 例如，特色、 顶部图表、 已采购和搜索。
-- **将徽章添加到新内容的通知用户**-您可以选择显示徽章 (红色 oval 以白色数字或感叹号) 通知的类别中的新内容的用户。
-- **徽章尽可能少地使用**-不使徽章与选项卡栏混乱不堪，并仅显示它们它们向用户提供关键信息。
-- **限制类别数**-若要将降低复杂性和使易于管理应用程序，不重载类别你选项卡栏，并确保所有类别是否可见且不拥挤。 简单、 短标题工作效率最佳。
-- **不禁用类别**-所有选项卡 （类别） 应始终为可见且已启用在所有时间。 如果给定的选项卡上没有任何内容，原因为用户提供说明。 例如，购买选项卡将用户所作的任何购买的情况下为空。
+- **使用选项卡栏，以逻辑方式组织内容**-使用选项卡栏以逻辑方式组织你的 tvOS 应用适用于的内容。 例如，特色、 顶部图表、 购买和搜索。
+- **将徽章添加到新内容的通知用户**-您可以选择显示锁屏提醒 (以白色的数字或感叹号的红色 oval) 以通知用户某个类别中的新内容。
+- **徽章尽可能少地使用**-不混乱徽章与选项卡栏，并仅显示他们向用户提供关键信息。
+- **限制类别数**-若要将降低复杂性和保持可管理应用程序、 不重载具有类别在选项卡栏，并确保所有类别都可见并不很拥挤。 简短的标题效果最佳。
+- **不禁用类别**-所有选项卡 （类别） 应始终为可见且已启用在所有时间。 如果给定的选项卡不包含任何内容，原因为用户提供说明。 例如，购买选项卡将为空，如果用户已进行了无购买量。
 
 <a name="Tab-Bar-Items" />
 
-## <a name="tab-bar-items"></a>选项卡工具栏项
+## <a name="tab-bar-items"></a>选项卡栏项
 
-由选项卡栏项表示的选项卡栏中的每个类别 （选项卡） (`UITabBarItem`)。 Apple 具有以下建议用于使用选项卡栏项：
+在选项卡栏中的每个类别 （选项卡） 由选项卡栏项 (`UITabBarItem`)。 Apple 已对使用的选项卡栏项的以下建议：
 
-- **使用基于文本的选项卡**-时的选项卡栏项是可以表示为一个图标，Apple 提供的建议使用文本，只是因为简洁的标题是更轻松地解释比图标。
-- **使用短、 有意义的名词或谓词**-A 选项卡栏项应清楚地中继它包含并且适合时 （例如照片、 电影或音乐） 的简单名词或谓词 （如搜索或 Play） 的内容。
+- **使用基于文本的选项卡**-Apple 时的选项卡栏项是能够以图标表示，建议使用文本，只是因为简明的标题更容易解释比图标。
+- **使用短、 有意义的名词或动词**-选项卡栏项应清楚地中继的内容，它包含和 （如照片、 电影或音乐） 简单名词或动词 （如搜索或播放） 时效果最佳。
 
 <a name="Tab-Bars-and-Storyboards" />
 
-## <a name="tab-bars-and-storyboards"></a>选项卡条和情节提要
+## <a name="tab-bars-and-storyboards"></a>选项卡栏和情节提要
 
-使用 Xamarin.tvOS 应用中的选项卡条的最简单方法是将它们添加到使用 iOS 设计器的应用程序的 UI。
+若要使用 Xamarin.tvOS 应用中的选项卡栏的最简单方法是将它们添加到应用程序的 UI 使用 iOS 设计器。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
     
-1. 启动新的 Xamarin.tvOS 应用程序并选择**tvOS** > **应用** > **选项卡式应用**: 
+1. 启动新的 Xamarin.tvOS 应用程序，然后选择**tvOS** > **应用** > **选项卡式应用**: 
 
     [![](tab-bars-images/tab02.png "选择选项卡式的应用")](tab-bars-images/tab02.png#lightbox)
-1. 按照提示操作以创建新的 Xamarin.tvOS 解决方案的所有操作。
-1. 在**解决方案 Pad**，双击`Main.storyboard`文件，并打开以进行编辑。
-1. 若要更改**图标**或**标题**对于给定的类别，选择**选项卡栏项**为**视图控制器**中**文档大纲**:
+1. 按所有提示创建新的 Xamarin.tvOS 解决方案。
+1. 在中**Solution Pad**，双击`Main.storyboard`文件，然后打开进行编辑。
+1. 若要更改**图标**或**标题**对于给定的类别，选择**选项卡栏项**有关**视图控制器**中**文档大纲**:
 
-    [![](tab-bars-images/tab03a.png "选项卡栏项文档大纲中的视图控制器")](tab-bars-images/tab03a.png#lightbox)
-1. 然后在中设置所需的属性**小组件选项卡**的**属性资源管理器**: 
+    [![](tab-bars-images/tab03a.png "选项卡栏项视图控制器在文档大纲")](tab-bars-images/tab03a.png#lightbox)
+1. 然后设置所需的属性**小组件选项卡**的**属性资源管理器**: 
 
     [![](tab-bars-images/tab03.png "小组件选项卡")](tab-bars-images/tab03.png#lightbox)
-1. 若要添加新类别 （选项卡），删除**视图控制器**拖到设计图面： 
+1. 若要添加新类别 （选项卡），请删除**视图控制器**拖到设计图面： 
 
     [![](tab-bars-images/tab04.png "视图控制器")](tab-bars-images/tab04.png#lightbox)
-1. 控件单击并拖动从**选项卡视图控制器**对新**视图控制器**。
-1. 从弹出窗口中，选择**查看控制器**为选项卡 （类别） 中添加新视图： 
+1. 单击并从拖动**选项卡视图控制器**对新**视图控制器**。
+1. 从弹出窗口中，选择**查看控制器**作为 （类别） 的选项卡中添加新视图： 
 
     [![](tab-bars-images/tab05.png "选择选项卡")](tab-bars-images/tab05.png#lightbox)
-1. 通过 iOS 设计器中添加 UI 元素设计用于正常工作，每个 Caterogies 内容区域的 ui 布局。
-1. 公开用于 UI 控件在 C# 代码中任何所需的事件。
-1. 命名你想要在 C# 代码中公开的任何 UI 控件。
+1. 通过将 UI 元素添加在 iOS 设计器中设计正常工作，每个 Caterogies 内容区域的 UI 的布局。
+1. 公开用于 UI 控件中任何所需的事件C#代码。
+1. 命名你想要公开中的任何 UI 控件C#代码。
 1. 保存更改。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. 启动新的 Xamarin.tvOS 应用程序并选择**tvOS** > **应用** > **选项卡式应用**: 
+1. 启动新的 Xamarin.tvOS 应用程序，然后选择**tvOS** > **应用** > **选项卡式应用**: 
 
     [![](tab-bars-images/tab02vs.png "选择选项卡式的应用")](tab-bars-images/tab02vs.png#lightbox)
-1. 按照提示操作以创建新的 Xamarin.tvOS 解决方案的所有操作。
-1. 在**解决方案资源管理器**，双击`Main.storyboard`文件，并打开以进行编辑。
-1. 若要更改**图标**或**标题**对于给定的类别，选择**选项卡栏项**为**视图控制器**中**文档大纲**:
+1. 按所有提示创建新的 Xamarin.tvOS 解决方案。
+1. 在中**解决方案资源管理器**，双击`Main.storyboard`文件，然后打开进行编辑。
+1. 若要更改**图标**或**标题**对于给定的类别，选择**选项卡栏项**有关**视图控制器**中**文档大纲**:
 
     [![](tab-bars-images/tab03avs.png "文档大纲中的视图控制器")](tab-bars-images/tab03avs.png#lightbox)
-1. 然后在中设置所需的属性**小组件选项卡**的**属性资源管理器**: 
+1. 然后设置所需的属性**小组件选项卡**的**属性资源管理器**: 
 
     [![](tab-bars-images/tab03vs.png "小组件选项卡")](tab-bars-images/tab03vs.png#lightbox)
-1. 若要添加新类别 （选项卡），拖动**视图控制器**从**工具箱**并将其放到设计图面上： 
+1. 若要添加新类别 （选项卡），请拖动**视图控制器**从**工具箱**并将其放到设计图面上： 
 
     [![](tab-bars-images/tab04vs.png "视图控制器")](tab-bars-images/tab04vs.png#lightbox)
-1. 控件单击并拖动从**选项卡视图控制器**对新**视图控制器**。
-1. 从弹出窗口中，选择**查看控制器**为选项卡 （类别） 中添加新视图： 
+1. 单击并从拖动**选项卡视图控制器**对新**视图控制器**。
+1. 从弹出窗口中，选择**查看控制器**作为 （类别） 的选项卡中添加新视图： 
 
     [![](tab-bars-images/tab05vs.png "选择选项卡")](tab-bars-images/tab05vs.png#lightbox)
-1. 通过在 iOS 设计器中添加 UI 元素设计用于正常工作，每个 Caterogies 内容区域的 ui 布局。
-1. 公开用于 UI 控件在 C# 代码中任何所需的事件。
-1. 命名你想要在 C# 代码中公开的任何 UI 控件。
+1. 通过将 UI 元素添加在 iOS 设计器中设计正常工作，每个 Caterogies 内容区域的 UI 的布局。
+1. 公开用于 UI 控件中任何所需的事件C#代码。
+1. 命名你想要公开中的任何 UI 控件C#代码。
 1. 保存更改。
     
 -----
 
 > [!IMPORTANT]
-> 尽管可以将事件分配如`TouchUpInside`到 UI 元素 (如`UIButton`) 在 iOS 设计器中，它将永远不会调用因为 Apple TV 没有触摸屏幕或支持触控事件。 应始终使用`Primary Action `事件时创建用户界面元素的对 tvOS 的事件处理程序。
+> 虽然可以分配事件，如`TouchUpInside`到用户界面元素 (如`UIButton`) 在 iOS 设计器中，它将永远不会调用，因为 Apple TV 没有触摸屏输入屏幕上或支持触控事件。 应始终使用`Primary Action `事件时创建用户界面元素的适用于 tvOS 的事件处理程序。
 
-有关使用情节提要的详细信息，请参阅我们[Hello，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)。 
+使用情节提要的详细信息，请参阅我们[你好，tvOS 快速入门指南](~/ios/tvos/get-started/hello-tvos.md)。 
 
 <a name="Working-with-Tab-Bars" />
 
-## <a name="working-with-tab-bars"></a>使用选项卡条
+## <a name="working-with-tab-bars"></a>使用选项卡栏
 
-使用`Items`属性`UITabBar`若要访问的集合`UITabBarItems`它包含零 (0) 索引数组的形式。 `SelectedItem`属性将返回当前所选的选项卡 （类别） 作为`UITabBarItem`。
+使用`Items`的属性`UITabBar`若要访问的集合`UITabBarItems`它包含零 (0) 索引数组的形式。 `SelectedItem`属性将返回当前所选的选项卡 （类别） 作为`UITabBarItem`。
 
 
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>使用选项卡栏项
 
-若要在给定的选项卡上 (包含白色文本的红色 oval) 显示一个标记，请使用下面的代码：
+若要在给定的选项卡上 (oval 红色和白色文本) 显示一个徽章，请使用以下代码：
 
 ```csharp
 // Display a badge
 TabBar.Items [2].BadgeValue = "10";
 ```
 
-这会产生运行时的以下结果：
+这会生成以下结果运行时：
 
-[![](tab-bars-images/tab06.png "选项卡栏项带有徽标")](tab-bars-images/tab06.png#lightbox)
+[![](tab-bars-images/tab06.png "具有徽章的选项卡栏项")](tab-bars-images/tab06.png#lightbox)
 
-使用`Title`属性`UITabBarItem`更改标题和`Image`属性可更改的图标。
+使用`Title`的属性`UITabBarItem`来更改标题和`Image`属性来更改的图标。
 
 <a name="Summary" />
 
 ## <a name="summary"></a>总结
 
-本文已覆盖设计和在 Xamarin.tvOS 应用内部使用的选项卡栏控制器。
+本文只讨论了设计和在 Xamarin.tvOS 应用内使用的选项卡栏控制器。
 
 
 
@@ -153,4 +153,4 @@ TabBar.Items [2].BadgeValue = "10";
 - [tvOS 示例](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS 人机接口指南](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [应用程序对 tvOS 的编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [适用于 tvOS 应用编程指南](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
