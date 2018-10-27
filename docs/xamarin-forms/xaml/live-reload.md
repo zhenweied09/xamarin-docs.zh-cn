@@ -1,31 +1,26 @@
 ---
-title: 实时重新加载
+title: Xamarin 实时重新加载 （预览版）
 description: 请参阅对你的 XAML 的更改反映实时，而无需其他编译和部署。
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
-ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+robots: noindex
+ms.date: 10/26/2018
+ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
+ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109986"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50142331"
 ---
-# <a name="xamarin-live-reload"></a>Xamarin 实时重新加载
-
-![预览](~/media/shared/preview.png)
-
-Xamarin Live 重新加载使你能够**对你的 XAML 进行更改和查看它们反映实时，而无需其他编译并部署**。 将重新部署到你的 XAML 所做的任何更改在保存和部署目标上反映出来。
-
-由于您的应用程序被编译使用实时重新加载时，它可用于所有库和第三方控件。 在所有平台 Xamarin.Forms 支持，包括 Android、 iOS 和 UWP，以及适用于所有有效的部署目标包括模拟器、 仿真器，以及物理设备上实时重新加载的工作原理。
+# <a name="xamarin-live-reload-preview"></a>Xamarin 实时重新加载 （预览版）
 
 > [!NOTE]
-> [实时重新加载预览已结束](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> 在没有讨论这[![加入在聊天 https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> Xamarin Live 重新加载预览已结束，并且我们想要感谢各位的反馈和提出的意见。 请阅读我们[路线图](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap)的 Visual Studio 2019，若要了解有关我们正在开发适用于 Xamarin.Forms 的新的工作效率功能的详细信息。 此扩展仍然可供 Visual Studio 2017，但不是会收到将来的更新。
+
+Xamarin Live 重新加载使你能够**对你的 XAML 进行更改和查看它们反映实时，而无需其他编译并部署**。 将重新部署到你的 XAML 所做的任何更改在保存和部署目标上反映出来。
 
 ## <a name="requirements"></a>要求
 
@@ -86,7 +81,7 @@ public partial class App : Application
 ## <a name="frequently-asked-questions"></a>常见问题 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>位于 Xamarin Live 重新加载 Visual Studio for Mac？ 
 
-Xamarin Live 重新加载的初始预览版功能仅适用于 Visual Studio 2017。 支持 Visual Studio for Mac 被计划在将来版本。
+否，才可用于 Visual Studio 2017 预览版本的 Xamarin Live 重新加载。
 
 ### <a name="does-this-work-with-all-libraries-such-as-prism"></a>这的工作原理的所有其他库，如 Prism？ 
 
@@ -94,7 +89,7 @@ Xamarin Live 重新加载的初始预览版功能仅适用于 Visual Studio 2017
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>实时重新加载重新部署哪些更改？ 
 
-实时重新加载仅应用到 XAML 或 CSS 所做的更改。 如果更改 C# 文件，将需要重新编译。 重新加载 C# 的支持计划在将来的版本。
+实时重新加载仅应用到 XAML 或 CSS 所做的更改。 如果更改 C# 文件，将需要重新编译。 
 
 ### <a name="what-platforms-are-supported"></a>支持哪些平台？ 
 
@@ -121,8 +116,8 @@ Xamarin Live 重新加载的初始预览版功能仅适用于 Visual Studio 2017
 
 * 仅 Visual Studio 中受支持。
 * 链接必须设置为**不链接**或**仅上链接 Framework Sdk** 
-* 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，重置应用导航。 这将在下一步的预览版本中修复。
-* 当前的 ContentView 重新加载需要重新加载包含页。 这将在下一步的预览版本中修复。
+* 重新加载应用程序范围内的资源 (即**App.xaml**或共享资源字典)，重置应用导航。 
+* 当前的 ContentView 重新加载需要重新加载包含页。
 * 包含 AutomationId 元素可能会导致重新加载失败。
 * 调试 UWP 可能会导致运行时故障发生时，请编辑 XAML。 解决方法： 使用**启动但不调试 （Ctrl + F5）** 而不是**开始调试 (F5)**。
 
