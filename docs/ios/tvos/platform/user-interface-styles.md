@@ -185,7 +185,7 @@ TvOS 10 中可以设置应用的情节提要来响应特征集合和很多 UI �
 
 * 开发人员可以指定基于 UI 主题中的用户界面元素的不同变体**属性检查器**:
     
-    * 现在有多个属性**+** 旁边的可单击要添加的用户界面主题特定版本： 
+    * 现在有多个属性 **+** 旁边的可单击要添加的用户界面主题特定版本： 
 
         [![](user-interface-styles-images/theme08.png "添加 UI 主题特定版本")](user-interface-styles-images/theme08.png#lightbox) 
     
