@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: abf9bf3875f9d64f136224607a6539005fa651c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301248"
 ---
 # <a name="android-localization"></a>Android 本地化
 
@@ -36,7 +36,7 @@ var lang = Resources.Configuration.Locale; // eg. "es_ES"
 
 常见示例包括：
 
-* `en_US` 英语 (美国 Statees)
+* `en_US` 英语 （美国）
 * `es_ES` 西班牙语 （西班牙）
 * `ja_JP` 日语 （日本）
 * `zh_CN` 中文 （中国）

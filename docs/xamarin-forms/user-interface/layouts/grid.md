@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994497"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301235"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 网格
 
@@ -22,12 +22,12 @@ ms.locfileid: "38994497"
 
 本文将介绍：
 
-- **[目的](#Purpose)** &ndash;的常见用途`Grid`。
-- **[使用情况](#Usage)** &ndash;如何使用`Grid`来实现您所需的设计。
-  - **[行和列](#Rows_and_Columns)** &ndash;指定行和列`Grid`。
-  - **[将视图放置](#Placing_Views)** &ndash;将视图添加到在网格中的特定行和列。
-  - **[间距](#Spacing)** &ndash;配置行和列之间的空格。
-  - **[Span](#Spans)**  &ndash;配置跨越多个行或列的元素。
+- **[目的](#purpose)** &ndash;的常见用途`Grid`。
+- **[使用情况](#usage)** &ndash;如何使用`Grid`来实现您所需的设计。
+  - **[行和列](#rows-and-columns)** &ndash;指定行和列`Grid`。
+  - **[将视图放置](#placing-views-in-a-grid)** &ndash;将视图添加到在网格中的特定行和列。
+  - **[间距](#spacing)** &ndash;配置行和列之间的空格。
+  - **[Span](#spans)**  &ndash;配置跨越多个行或列的元素。
 
 ![](grid-images/grid.png "网格探索")
 
@@ -42,8 +42,6 @@ ms.locfileid: "38994497"
 ## <a name="usage"></a>用法
 
 与传统表不同`Grid`无法推断的数量和大小的行和列的内容。 相反，`Grid`已`RowDefinitions`和`ColumnDefinitions`集合。 这些日志包含行数和列布局方式的定义。视图将添加到`Grid`使用指定的行和列索引，该标识所属的行和列应置于一个视图。
-
-<a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>行和列
 
@@ -83,8 +81,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### <a name="placing-views-in-a-grid"></a>将视图放置在网格中
 
