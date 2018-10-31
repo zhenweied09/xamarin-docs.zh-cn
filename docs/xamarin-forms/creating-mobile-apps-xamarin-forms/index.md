@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156972"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234981"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>使用 Xamarin.Forms 书籍创建移动应用
 
-<p><img src="Images/Cover-sml.png" title="使用 Xamarin.Forms 书籍创建移动应用" align="left" />本书<i>使用 Xamarin.Forms 创建移动应用</i>Charles Petzold 的是有关学习如何编写 Xamarin.Forms 应用程序的指南。 唯一的先决条件是 C# 编程语言的知识。 本书提供了大量探索到 Xamarin.Forms 的用户界面，还介绍了动画、 MVVM、 触发器、 行为、 自定义布局、 自定义呈现器，以及更多。 
+<p><img src="images/cover-sml.png" title="使用 Xamarin.Forms 书籍创建移动应用" align="left" />本书<i>使用 Xamarin.Forms 创建移动应用</i>Charles Petzold 的是有关学习如何编写 Xamarin.Forms 应用程序的指南。 唯一的先决条件是了解C#编程语言。 本书提供了大量探索到 Xamarin.Forms 的用户界面，还介绍了动画、 MVVM、 触发器、 行为、 自定义布局、 自定义呈现器，以及更多。 
 
 本书在 2016 年春季发布，从那时起尚未更新。 有很多书中保持该有价值，但一些[材料已过时](#ways-in-which-the-book-is-outdated)，和一些主题是不再完全正确，或者完成。 
 

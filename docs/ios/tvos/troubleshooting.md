@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 45c57aa6d6308697d9bc581bf8d1691f3b29a9e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120575"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234852"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>使用 Xamarin 生成的 tvOS 应用进行故障排除
 
@@ -32,7 +32,7 @@ _本文介绍了解使用 Xamarin 的 tvOS 支持时可能遇到的问题。_
     - **可能的变通方法**– 降级我们稳定通道中可用的 Mono 框架版本。
 - **Xamarin Visual Studio 和 Xamarin.iOS** -在 Visual studio 中，该错误的 WatchKit 应用程序部署时`The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist`可能会出现。
 
-报表任何 bug，请找到指向[Bugzilla](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+报表任何 bug，请在上找到[GitHub](https://github.com/xamarin/xamarin-macios/issues/new)。
 
 ## <a name="troubleshooting"></a>疑难解答
 

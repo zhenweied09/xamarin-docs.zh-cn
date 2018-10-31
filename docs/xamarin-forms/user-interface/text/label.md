@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/04/2018
-ms.openlocfilehash: c98dcc30ac89e3df0338df02e14a32575c0dc847
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: a6c0cd057082a6fa4793ca3de18cefd00243e9e3
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39203031"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235059"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 标签
 
@@ -22,13 +22,13 @@ _在 Xamarin.Forms 中显示文本_
 
 ## <a name="text-decorations"></a>文本修饰
 
-下划线和删除线的文本修饰可应用于[ `Label` ](xref:Xamarin.Forms.Label)通过设置实例`Label.TextDecoration`属性设置为一个或多个`TextDecoration`枚举成员：
+下划线和删除线的文本修饰可应用于[ `Label` ](xref:Xamarin.Forms.Label)通过设置实例`Label.TextDecorations`属性设置为一个或多个`TextDecorations`枚举成员：
 
 - `None`
 - `Underline`
 - `Strikethrough`
 
-下面的 XAML 示例演示了如何设置`Label.TextDecoration`属性：
+下面的 XAML 示例演示了如何设置`Label.TextDecorations`属性：
 
 ```xaml
 <Label Text="This is underlined text." TextDecorations="Underline"  />
@@ -44,7 +44,7 @@ var strikethroughLabel = new Label { Text = "This is text with strikethrough.", 
 var bothLabel = new Label { Text = "This is underlined text with strikethrough.", TextDecorations = TextDecorations.Underline | TextDecorations.Strikethrough };
 ```
 
-下面的屏幕截图演示`TextDecoration`应用于枚举成员[ `Label` ](xref:Xamarin.Forms.Label)实例：
+下面的屏幕截图演示`TextDecorations`应用于枚举成员[ `Label` ](xref:Xamarin.Forms.Label)实例：
 
 ![](label-images/label-textdecorations.png "具有文本修饰的文本标签")
 
@@ -158,7 +158,7 @@ var label =
 - [`Style`](xref:Xamarin.Forms.Span.Style) – 要将应用于跨度的样式。
 - [`Text`](xref:Xamarin.Forms.Span.Text) – 跨度的文本。
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – 范围中文本的颜色。
-- `TextDecoration` -若要应用于范围中的文本的修饰。 有关详细信息，请参阅[文本修饰](#text-decorations)。
+- `TextDecorations` -若要应用于范围中的文本的修饰。 有关详细信息，请参阅[文本修饰](#text-decorations)。
 
 此外， [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers)属性可以用于定义将在响应手势的手势识别器的集合[ `Span` ](xref:Xamarin.Forms.Span)。
 

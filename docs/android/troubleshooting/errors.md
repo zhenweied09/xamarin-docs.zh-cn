@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: b51e8b3d931ccbb511afe7d06d9be66fa104fb46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121836"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235072"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Xamarin.Android 错误矩阵
 
@@ -40,7 +40,7 @@ ms.locfileid: "50121836"
 
 |错误代码|描述|
 |--- |--- |
-|XA0000|意外的错误-请填写[bug 报表](http://bugzilla.xamarin.com)。|
+|XA0000|意外的错误-请填写[bug 报表](https://github.com/xamarin/xamarin-android/issues/new)。|
 |XA0001|-devname 提供不需要任何特定于设备的操作。|
 |XA0002|无法分析环境变量{0}。|
 |XA0003|应用程序名称{0}.exe 与 SDK 或产品程序集 (.dll) 名称冲突。|

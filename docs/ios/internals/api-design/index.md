@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cd25e5c78885f53902c577a900958b842a70219c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56f9cbdae565f0d89463742377ec2311d8e375ac
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116948"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235046"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 设计
 
@@ -107,7 +107,7 @@ Xamarin.iOS 反映在 C# 中从 OBJECTIVE-C 类的层次结构 例如，OBJECTIV
 
 ##### <a name="nsobject"></a>NSObject
 
-[NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)类型是 Objective C 的所有绑定的基础。 Xamarin.iOS 类型镜像 iOS 产品 CocoaTouch Api 中的类型的两个类： C 类型 （通常称为 CoreFoundation 类型） 和 Objective C 类型 （这些都派生 NSObject 类）。
+[NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)类型是 Objective C 的所有绑定的基础。 Xamarin.iOS 类型镜像 iOS 产品 CocoaTouch Api 中的类型的两个类: （通常称为 CoreFoundation 类型） 的 C 类型和 Objective C 类型 （这些都派生 NSObject 类）。
 
 对于每个镜像的非托管的类型的类型，则可以获取本机对象通过[处理](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)属性。
 
