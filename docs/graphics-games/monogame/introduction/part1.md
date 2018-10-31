@@ -15,7 +15,7 @@ ms.locfileid: "33921984"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>第 1 部分 – 创建跨平台 MonoGame
 
-_本演练演示如何创建用于 iOS 和 Android 使用 MonoGame 的新项目。结果是 Visual Studio for Mac 与跨平台共享的代码项目，以及为每个平台的一个项目的解决方案。此项目将显示空蓝色屏幕时执行。_
+_本演练演示了如何使用 MonoGame 为 iOS 和 Android 创建新项目。演练的结果是一个 Visual Studio for Mac 解决方案，其中包含一个跨平台共享代码项目以及适用于每个平台的一个项目。执行时，该项目会显示一个空的蓝屏。_
 
 MonoGame 支持开发大部分代码都可以重用的跨平台游戏。 本演练将重点介绍如何设置一个解决方案，其中包含一个适用于 iOS 和 Android 的项目，以及一个适用于跨平台代码的共享代码项目。
 
@@ -25,7 +25,7 @@ MonoGame 支持开发大部分代码都可以重用的跨平台游戏。 本演�
 
 ## <a name="adding-monogame-to-visual-studio-for-mac"></a>将 MonoGame 添加到 Visual Studio for Mac 中
 
-MonoGame 可以作为添加外接程序到 Visual Studio for mac。 在 Mac 上，选择**Visual Studio for Mac** > **外接程序管理器...** . 在 Windows 中，选择 * * 工具 * * >**外接程序管理器...** . 选择**库**选项卡上，展开**游戏开发**类别，然后选择**MonoGame 外接程序**，然后单击**安装**:
+可以将 MonoGame 作为 Visual Studio for Mac 的加载项添加。 在 Mac 上，选择**Visual Studio for Mac** > **加载项管理器...**。 在 Windows 上，选择“工具”>“加载项管理器...”。 选择“库”选项卡，展开“游戏开发”类别并选择“MonoGame 加载项”，然后单击“安装”：
 
 ![Visual Studio 选择 MonoGame Mac 扩展库](part1-images/image2.png)
 
