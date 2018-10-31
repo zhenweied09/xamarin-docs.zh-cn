@@ -105,7 +105,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    如果**m2repository**存档不会显示此表中，可以通过预先计算创建的下载 URL **https://dl-ssl.google.com/android/repository/** 的名称**m2repository**下载。 例如，使用**https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** 若要下载**android\_m2repository\_r10.zip**。
+    如果**m2repository**存档不会显示此表中，可以通过预先计算创建的下载 URL **https://dl-ssl.google.com/android/repository/** 的名称**m2repository**下载。 例如，使用 **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** 若要下载 **android\_m2repository\_r10.zip**。
 
 2.  文件重命名为上述表中所示的下载 URL 的相应 MD5 哈希。 例如，如果您下载**android\_m2repository\_r25.zip**，其重命名为**0B3F1796C97C707339FB13AE8507AF50.zip**。 如果下载的文件的下载 URL 的 MD5 哈希表中未显示，则可以使用[online MD5 生成器](http://www.webconfs.com/online-md5-generator.php)将 URL 转换为 MD5 哈希字符串。 
 
