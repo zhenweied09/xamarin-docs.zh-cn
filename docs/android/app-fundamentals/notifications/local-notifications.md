@@ -4,15 +4,15 @@ description: 本部分演示如何在 Xamarin.Android 中实现本地通知。 �
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514526"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117676"
 ---
 <a name="compatibility"></a>
 
@@ -26,7 +26,7 @@ Android 提供用于向用户显示通知图标和通知信息的两个系统控
 
 ![在设备上的示例通知区域](local-notifications-images/01-notification-shade.png)
 
-若要获取有关通知的详细信息，用户可以打开通知抽屉 （它可以扩展每个通知图标可显示通知内容），并执行与通知关联的任何操作。 下面的屏幕截图所示*通知抽屉*，它对应于上面显示的通知区域：
+若要获取有关通知的详细信息，用户可以打开通知抽屉 （它可以扩展每个通知图标可显示通知内容），并执行与通知关联的任何操作。 以下屏幕截图显示*通知抽屉*，它对应于上面显示的通知区域：
 
 [![示例通知抽屉显示三个通知](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -64,11 +64,11 @@ Android 通知使用两种类型的布局：
 
 ![简单的通知照片](local-notifications-images/04-simple-notification-photo.png)
 
-从 Android 5.0 开始，通知也会出现在锁屏上：
+从 Android 5.0 开始，通知也会出现在锁定屏幕上：
 
-[![示例锁屏通知](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
+[![示例锁定屏幕通知](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
-用户可以双击锁屏通知来解锁设备，并跳转到源自该通知的应用或轻扫以取消通知。 应用程序可以设置通知，以控制在锁屏上显示的内容的可见性级别，用户可以选择是否允许在锁屏通知中显示的敏感内容。
+用户可以双击锁定屏幕通知来解锁设备，并跳转到源自该通知的应用或轻扫以取消通知。 应用程序可以设置通知，以控制锁定屏幕上显示的内容的可见性级别和用户可以选择是否允许敏感内容要在锁定屏幕通知中显示。
 
 Android 5.0 引入了名为以高优先级通知显示格式*平视*。 危险警告通知从屏幕顶部几秒钟向下滑动，然后备份到通知区域参加：
 
@@ -76,11 +76,11 @@ Android 5.0 引入了名为以高优先级通知显示格式*平视*。 危险�
 
 危险警告通知使系统用户界面将呈现给用户的重要信息而不会中断当前正在运行的活动的状态。
 
-Android 包括对通知的元数据的支持，因此可以进行排序和以智能方式显示通知。 通知的元数据还可以控制如何在锁屏上和格式平视显示通知。 应用程序可以设置以下类型的通知的元数据：
+Android 包括对通知的元数据的支持，因此可以进行排序和以智能方式显示通知。 通知的元数据还可以控制如何在锁定屏幕上和格式平视显示通知。 应用程序可以设置以下类型的通知的元数据：
 
 -   **优先级**&ndash;优先级别确定如何以及何时显示通知。 例如，在 Android 5.0，高优先级的通知将显示为危险警告通知。
 
--   **可见性**&ndash;指定多少通知内容为时的通知出现在锁屏上显示。
+-   **可见性**&ndash;指定多少通知内容为在锁定屏幕上会显示通知时要显示。
 
 -   **类别**&ndash;通知系统如何处理在各种情况下，例如设备时通知*请勿打扰*模式。
 
@@ -152,7 +152,7 @@ Android 支持单事件通知的三个扩展的布局样式：
 
 -   通知的优先级： 最小值、 低，默认情况下，高，或最大值。 在 Android 8.0 及更高版本，通过设置优先级[_通知通道_](#notification-channels)。
 
--   在锁屏上通知的可见性： 公用、 专用或机密。
+-   在锁定屏幕上通知的可见性： 公用、 专用或机密。
 
 -   类别的元数据，可帮助 Android 进行分类和筛选通知。
 
@@ -603,7 +603,7 @@ builder.SetStyle (inboxStyle);
 
 若要将新的文本行添加到通知正文，请调用[Addline](https://developer.xamarin.com/api/member/Android.App.Notification+InboxStyle.AddLine/p/System.String/)方法`InboxStyle`对象 (的最大高度*收件箱*通知是 256 个分发点)。 请注意，与不同*大文本*样式*收件箱*样式支持通知正文中的各行文本。
 
-此外可以使用*收件箱*样式扩展格式显示独立的文本行所需的任何通知。 例如，*收件箱*通知样式可用于合并多个挂起通知到&ndash;可以更新单个*收件箱*样式与新的通知通知内容的行 (请参阅[更新通知](#updating-a-notification)上方)，而不是不是生成一个连续的新，主要是类似的通知流。
+此外可以使用*收件箱*样式扩展格式显示独立的文本行所需的任何通知。 例如，*收件箱*通知样式可用于合并多个挂起通知到篕璶硄 &ndash;可以更新单个*收件箱*样式与新的通知通知内容的行 (请参阅[更新通知](#updating-a-notification)上方)，而不是不是生成一个连续的新，主要是类似的通知流。
 
 
 ## <a name="configuring-metadata"></a>配置元数据
@@ -657,14 +657,14 @@ builder.SetPriority (NotificationPriority.High);
 
 ### <a name="visibility-settings"></a>可见性设置
 
-从开始 Android 5.0*可见性*设置才可用来控制在安全的锁屏上显示的内容量通知。
+从开始 Android 5.0*可见性*设置才可用来控制安全锁定屏幕上显示的内容量通知。
 Xamarin.Android 定义以下枚举来设置通知可见性：
 
--   `NotificationVisibility.Public` &ndash; 安全在锁屏上显示通知的完整内容。
+-   `NotificationVisibility.Public` &ndash; 安全锁定屏幕上显示通知的完整内容。
 
--   `NotificationVisibility.Private` &ndash; 仅基本显示的信息 （例如通知图标和把它发布的应用的名称），安全在锁屏上但通知的详细信息的其余部分隐藏。 所有通知都默认为`NotificationVisibility.Private`。
+-   `NotificationVisibility.Private` &ndash; 仅基本显示的信息 （例如通知图标和把它发布的应用的名称），在安全锁定屏幕上但通知的详细信息的其余部分隐藏。 所有通知都默认为`NotificationVisibility.Private`。
 
--   `NotificationVisibility.Secret` &ndash; 安全锁屏，甚至不通知图标不显示任何内容。 仅在用户解锁设备后才能提供通知内容。
+-   `NotificationVisibility.Secret` &ndash; 不会显示在安全锁定屏幕上，甚至不通知图标。 仅在用户解锁设备后才能提供通知内容。
 
 若要设置通知，应用程序调用的可见性`SetVisibility`方法的`NotificationCompat.Builder`对象，传入的可见性设置。 例如，对此调用`SetVisibility`使通知`Private`:
 
@@ -672,11 +672,11 @@ Xamarin.Android 定义以下枚举来设置通知可见性：
 builder.SetVisibility (NotificationVisibility.Private);
 ```
 
-当`Private`发布通知，安全锁屏上显示的名称和应用程序的图标。 而不是通知消息，用户将看到"解锁你的设备以查看此通知":
+当`Private`发布通知，安全锁定屏幕上显示的名称和应用程序的图标。 而不是通知消息，用户将看到"解锁你的设备以查看此通知":
 
 ![解锁设备的通知消息](local-notifications-images/25-lockscreen-private.png)
 
-在此示例中， **NotificationsLab**发起应用程序的名称。 此版本经过修订的通知会显示锁屏时才安全 （即，通过 PIN、 图案或密码保护）&ndash;锁屏不安全，通知的完整内容是否可用在锁屏上。
+在此示例中， **NotificationsLab**发起应用程序的名称。 此版本经过修订的通知时才出现在锁定屏幕安全 （即，通过 PIN、 图案或密码保护）&ndash;锁定屏幕不安全，通知的完整内容是否可用在锁定屏幕上。
 
 
 ### <a name="category-settings"></a>类别设置
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 在此示例中，应用程序的**目标框架**设置为 Android 5.0 和**最低 Android 版本**设置为**Android 4.1 (API 级别为 16)**。 因为`SetCategory`是在 API 级别 21 和更高版本中可用，此示例代码将调用`SetCategory`仅当有可用&ndash;不会调用`SetCategory`API 级别时是小于 21。
 
 
-### <a name="lockscreen-visibility"></a>锁屏可见性
+### <a name="lock-screen-visibility"></a>锁定屏幕可见性
 
-因为 Android 不支持 Android 5.0 （API 级别 21） 之前, 进行锁屏通知`NotificationCompat.Builder`不支持`SetVisibility`方法。 如上文所述的`SetCategory`，你的代码可以检查在运行时和调用的 API 级别`SetVisiblity`它时才可用：
+因为 Android 不支持 Android 5.0 （API 级别 21） 之前, 的锁定屏幕通知`NotificationCompat.Builder`不支持`SetVisibility`方法。 如上文所述的`SetCategory`，你的代码可以检查在运行时和调用的 API 级别`SetVisiblity`它时才可用：
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {
@@ -768,7 +768,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何在 Android 中创建本地通知。 所述的通知剖析，它介绍了如何使用`NotificationCompat.Builder`若要创建通知，如何在大图标样式通知*大文本*，*图像*和*收件箱*格式、 如何设置通知的元数据设置，如优先级、 可见性和类别，以及如何启动通知中的活动。 本文还介绍了这些通知设置如何使用新的危险警告锁屏，并*请勿打扰*Android 5.0 中引入的功能。 最后，您学习了如何使用`NotificationCompat.Builder`以保持与早期版本的 Android 通知兼容。
+本文介绍了如何在 Android 中创建本地通知。 所述的通知剖析，它介绍了如何使用`NotificationCompat.Builder`若要创建通知，如何在大图标样式通知*大文本*，*图像*和*收件箱*格式、 如何设置通知的元数据设置，如优先级、 可见性和类别，以及如何启动通知中的活动。 本文还介绍了这些通知设置如何使用新的危险警告，锁定屏幕和*请勿打扰*Android 5.0 中引入的功能。 最后，您学习了如何使用`NotificationCompat.Builder`以保持与早期版本的 Android 通知兼容。
 
 设计适用于 Android 的通知的指南，请参阅[通知](http://developer.android.com/guide/topics/ui/notifiers/notifications.html)。
 

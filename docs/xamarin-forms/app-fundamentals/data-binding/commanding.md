@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b18d042e34146a72b488da9017648a430c9cd353
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996368"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675236"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 命令界面
 
@@ -22,7 +22,7 @@ ms.locfileid: "38996368"
 
 若要允许之间的数据绑定`Button`和 ViewModel，`Button`定义两个属性：
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) 类型 <xref:System.Windows.Input.ICommand>
+- [`Command`](xref:Xamarin.Forms.Button.Command) 类型 [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
 - [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) 类型 `Object`
 
 若要使用命令接口，您可以定义数据绑定面向`Command`的属性`Button`其中源是类型的 ViewModel 中的属性`ICommand`。 ViewModel 包含与该代码`ICommand`时单击该按钮时执行的属性。 可以设置`CommandParameter`到同一个绑定到任意数据来区分多个按钮，如果所有`ICommand`ViewModel 中的属性。
@@ -39,7 +39,7 @@ ms.locfileid: "38996368"
 
 ## <a name="the-icommand-interface"></a>ICommand 接口
 
-<xref:System.Windows.Input.ICommand>接口不是 Xamarin.Forms 的一部分。 而定义在[System.Windows.Input](xref:System.Windows.Input)命名空间，它包括两个方法和一个事件：
+[ `System.Windows.Input.ICommand` ](xref:System.Windows.Input.ICommand)接口不是 Xamarin.Forms 的一部分。 而定义在[System.Windows.Input](xref:System.Windows.Input)命名空间，它包括两个方法和一个事件：
 
 ```csharp
 public interface ICommand
@@ -76,7 +76,7 @@ ViewModel 还必须引用实现的类`ICommand`接口。 此类将稍后所述�
 
 ## <a name="the-command-class"></a>命令类
 
-如果将 ViewModel 定义类型的属性`ICommand`，ViewModel 也必须包含或引用实现的类`ICommand`接口。 此类必须包含或引用`Execute`并`CanExecute`方法和激发`CanExecuteChanged`事件每当`CanExecute`方法可能返回不同的值。
+当将 ViewModel 定义类型的属性`ICommand`，ViewModel 也必须包含或引用实现的类`ICommand`接口。 此类必须包含或引用`Execute`并`CanExecute`方法和激发`CanExecuteChanged`事件每当`CanExecute`方法可能返回不同的值。
 
 可以自己，编写此类也可以使用其他人编写了一个类。 因为`ICommand`是一部分的 Microsoft Windows，它具有已使用多年与 Windows MVVM 应用程序。 使用的 Windows 类，实现`ICommand`使你可共享 Windows 应用程序和 Xamarin.Forms 应用程序之间将 Viewmodel。
 
@@ -285,7 +285,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 所有的逻辑**新建**，**提交**，并**取消**中处理按钮`PersonCollectionViewModel`通过定义`NewCommand`， `SubmitCommand`，和`CancelCommand`属性。 构造函数`PersonCollectionViewModel`将这三个属性设置为类型的对象`Command`。  
 
-一个[构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean}))的`Command`类，可将类型的自变量传递`Action`并`Func<bool>`对应于`Execute`和`CanExecute`方法。 它是最简单的方法将这些操作和函数定义为 lamda 函数直接在`Command`构造函数。 下面是定义`Command`对象`NewCommand`属性：
+一个[构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean}))的`Command`类，可将类型的自变量传递`Action`并`Func<bool>`对应于`Execute`和`CanExecute`方法。 它是最简单的方法将这些操作和函数定义为 lambda 函数直接在`Command`构造函数。 下面是定义`Command`对象`NewCommand`属性：
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -378,7 +378,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 `execute`函数**提交**移除属性更改处理程序从`PersonViewModel`，将对象添加到`Persons`集合，并返回到初始条件的所有内容。
 
-`execute`函数**取消**按钮执行所有操作的**提交**按钮执行 execept 将对象添加到集合：
+`execute`函数**取消**按钮执行所有操作的**提交**does 除外按钮添加到集合的对象：
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -693,7 +693,6 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 命令是用于实现导航菜单，例如，在方便[**数据绑定演示**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)程序本身。 下面是部分**MainPage.xaml**:
 
-
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -763,8 +762,6 @@ public partial class MainPage : ContentPage
 将两者都设置`NavigateCommand`并`BindingContext`（按任何顺序） 到在调用前先`InitializeComponent`正常工作，因为 XAML 分析器遇到绑定定义时设置的绑定的这两个组件。
 
 数据绑定有时会很棘手，但是，如您所见本系列的文章中，功能强大且用途广泛，而且极大地帮助来分隔从用户界面的基本逻辑来组织你的代码。
-
-
 
 ## <a name="related-links"></a>相关链接
 
