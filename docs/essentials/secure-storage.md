@@ -1,38 +1,75 @@
 ---
-title: Xamarin.Essentials： 安全存储
-description: 本文档介绍中 Xamarin.Essentials，可帮助安全地存储简单键/值对的 SecureStorage 类。 它讨论了如何使用类、 平台实现的细节和限制。
+title: Xamarin.Essentials：Secure Storage
+description: 本文档介绍了 Xamarin.Essentials 中的 SecureStorage 类，该类有助于安全地存储简单的键/值对。 讨论了如何使用类、平台实现细节和限制。
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: redth
-ms.author: jodick
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2dfdb7051b269e73c68290a557849b9ae606c165
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: a5b5385af991ff988902bb3ed9670cd71d421bc6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116025"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials： 安全存储
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials：Secure Storage
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**SecureStorage**类可帮助安全地存储简单键/值对。
+SecureStorage 类有助于安全地存储简单的键/值对。
 
 ## <a name="getting-started"></a>入门
 
-访问**SecureStorage**功能，以下特定于平台的安装程序是必需的：
+若要访问 SecureStorage 功能，需要以下特定于平台的设置：
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-无需其他设置。
+> [!TIP]
+> [应用的自动备份](https://developer.android.com/guide/topics/data/autobackup)是 Android 6.0（API 级别 23）及更高版本的功能，可备份用户的应用数据（共享首选项、应用的内部存储中的文件和其他特定文件）。 在新设备上重新安装或安装应用时，会还原数据。 这可能会影响使用共享首选项（已备份但在还原时无法解密）的 `SecureStorage`。 Xamarin.Essentials 可通过删除键（以便可以进行重置）自动处理这种情况，但你可以通过禁用自动备份来采取其他步骤。
+
+### <a name="enable-or-disable-backup"></a>启用或禁用备份
+可以选择通过在 `AndroidManifest.xml` 文件中将 `android:allowBackup` 设置设为 false，为整个应用程序禁用自动备份。 仅当计划按另一种方式还原数据时才建议使用此方法。
+
+```xml
+<manifest ... >
+    ...
+    <application android:allowBackup="false" ... >
+        ...
+    </application>
+</manifest>
+```
+
+### <a name="selective-backup"></a>选择性备份
+可以将自动备份配置为禁止备份特定内容。 可以创建自定义规则集以禁止备份 `SecureStore` 项。
+
+1. 在你的 AndroidManifest.xml 中设置 `android:fullBackupContent` 属性：
+
+    ```xml
+    <application ...
+        android:fullBackupContent="@xml/auto_backup_rules">
+    </application>
+    ```
+
+2. 在 Resources/xml 目录中创建名为 auto_backup_rules.xml 的新 XML 文件。 然后设置以下内容，包括除 `SecureStorage` 以外的所有共享首选项：
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <full-backup-content>
+        <include domain="sharedpref" path="."/>
+        <exclude domain="sharedpref" path="${applicationId}.xamarinessentials.xml"/>
+    </full-backup-content>
+    ```
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-当在 iOS 模拟器上进行开发，启用**密钥链**权利，并添加应用程序的捆绑包标识符的密钥链访问组。
+在 iOS 模拟器上开发时，启用密钥链权利，并为应用程序的捆绑包标识符添加密钥链访问组。 
 
-打开**Entitlements.plist**中的 iOS 项目和查找**Keychain**权利，并启用它。 这会自动将作为一个组添加应用程序的标识符。
+打开 iOS 项目中的 Entitlements.plist，查找密钥链权利并启用它。 这样会自动将应用程序的标识符添加为一个组。
 
-在项目属性下**iOS 捆绑签名**设置**自定义权利**到**Entitlements.plist**。
+在“iOS 捆绑包签名”下的“项目属性”中，将“自定义权利”设置为“Entitlements.plist”。
+
+> [!TIP]
+> 部署到 iOS 设备时，此权利不是必需的，应将其删除。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
@@ -40,15 +77,15 @@ ms.locfileid: "39353290"
 
 -----
 
-## <a name="using-secure-storage"></a>使用安全存储
+## <a name="using-secure-storage"></a>使用 Secure Storage
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-若要保存的值给定_密钥_安全存储中：
+将给定密钥的值保存在安全存储中：
 
 ```csharp
 try
@@ -61,7 +98,7 @@ catch (Exception ex)
 }
 ```
 
-若要从安全存储中检索值：
+从安全存储中检索值：
 
 ```csharp
 try
@@ -75,7 +112,7 @@ catch (Exception ex)
 ```
 
 > [!NOTE]
-> 如果没有与请求的键相关联的值`GetAsync`将返回`null`。
+> 如果没有与所请求的密钥关联的值，则 `GetAsync` 将返回 `null`。
 
 若要删除特定密钥，请调用：
 
@@ -90,41 +127,41 @@ SecureStorage.RemoveAll();
 ```
 
 
-## <a name="platform-implementation-specifics"></a>平台实现的细节
+## <a name="platform-implementation-specifics"></a>平台实现细节
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Android KeyStore](https://developer.android.com/training/articles/keystore.html)用来存储用于加密值，之后再将它保存到的密码密钥[共享首选项](https://developer.android.com/training/data-storage/shared-preferences.html)的文件名 **[您的应用包的 ID].xamarinessentials**.  在共享首选项文件中使用的关键在于_MD5 哈希_传递到的密钥的`SecureStorage`Api。
+[Android 密钥存储](https://developer.android.com/training/articles/keystore.html)用来存储用于在将值保存到文件名为 **[你的应用包 ID].xamarinessentials** 的[共享首选项](https://developer.android.com/training/data-storage/shared-preferences.html)中之前加密值的加密密钥。  共享首选项文件中所使用的密钥是传递到 `SecureStorage` API 的密钥的 MD5 哈希。
 
-## <a name="api-level-23-and-higher"></a>API 级别 23 和更高版本
+## <a name="api-level-23-and-higher"></a>API 级别 23 及更高版本
 
-在较新的 API 级别**AES**密钥是从 Android 密钥存储中获取并用于**AES/GCM/NoPadding**密码以加密值，然后将存储在共享首选项文件中。
+在较新的 API 级别上，AES 密钥是从 Android 密钥存储中获得的，并与 AES/GCM/NoPadding 密码结合使用以在将值存储在共享首选项文件中之前加密值。
 
-## <a name="api-level-22-and-lower"></a>API 级别 22 和更低
+## <a name="api-level-22-and-lower"></a>API 级别 22 及更高版本
 
-在较旧的 API 级别上 Android 密钥存储仅支持存储**RSA**密钥，通过使用该**RSA/ECB/PKCS1Padding**进行加密的密码**AES** （随机密钥在运行时生成） 和存储在共享首选项文件中的项下_SecureStorageKey_，如果其中一个已尚未生成。
+在较旧的 API 级别上，Android 密钥存储仅支持存储 RSA 密钥，这些密钥与 RSA/ECB/PKCS1Padding 密码结合使用以加密 AES 密钥（运行时随机生成），并且存储在密钥 SecureStorageKey 下的共享首选项文件中（如果尚未生成一个）。
 
-**SecureStorage**使用[首选项](preferences.md)API，如下所示相同的数据持久性中所述[首选项](preferences.md#persistence)文档。 如果设备从 API 级别 22 或更低级别升级到 API 级别 23 和更高版本，此类型的加密将继续使用，除非卸载该应用程序或**RemoveAll**调用。
+SecureStorage 使用[首选项](preferences.md) API，并遵循[首选项](preferences.md#persistence)文档中所述的相同数据持久性。 如果设备从 API 级别 22 或更低级别升级到 API 级别 23 及更高版本，则将继续使用此类型的加密，除非卸载该应用或调用 RemoveAll。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-[密钥链](https://developer.xamarin.com/api/type/Security.SecKeyChain/)用于在 iOS 设备上安全地存储值。  `SecRecord`用来存储值具有`Service`值设置为 **[YOUR-应用的捆绑包的 ID].xamarinessentials**。
+[密钥链](https://developer.xamarin.com/api/type/Security.SecKeyChain/)用于在 iOS 设备上安全地存储值。  用于存储值的 `SecRecord` 具有设置为 [你的应用捆绑包 ID].xamarinessentials 的 `Service` 值。
 
-在某些情况下密钥链数据与 iCloud、 同步和卸载应用程序可能从 iCloud 和用户的其他设备中删除安全值。
+在某些情况下，密钥链数据与 iCloud 同步，卸载应用程序可能不会从用户的 iCloud 和其他设备中删除安全值。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)是用于 UWP 设备上安全地加密值。
+[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) 用于已在 UWP 设备上安全加密的值。
 
-加密的值存储在`ApplicationData.Current.LocalSettings`，在一个名为容器内 **[YOUR APP ID].xamarinessentials**。
+加密值存储在名为 [你的应用 ID].xamarinessentials 的容器内的 `ApplicationData.Current.LocalSettings` 中。
 
-**SecureStorage**使用[首选项](preferences.md)API，如下所示相同的数据持久性中所述[首选项](preferences.md#persistence)文档。
+SecureStorage 使用[首选项](preferences.md) API，并遵循[首选项](preferences.md#persistence)文档中所述的相同数据持久性。
 
 -----
 
 ## <a name="limitations"></a>限制
 
-此 API 用于存储少量文本。  性能可能会很慢，如果你尝试使用它来存储大量的文本。
+此 API 用于存储少量文本。  如果尝试将其用于存储大量文本，则可能会降低性能。
 
 ## <a name="api"></a>API
 

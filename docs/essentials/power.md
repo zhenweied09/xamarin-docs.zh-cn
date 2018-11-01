@@ -1,47 +1,51 @@
 ---
-title: Xamarin.Essentials： 电源能源保护程序状态
-description: Power 类允许要获取的能源节省状态来确定设备是否在低功耗模式下运行的程序。
+title: Xamarin.Essentials：节能模式状态
+description: Power 类允许程序获取节能模式状态来确定设备是否在低功耗模式下运行。
 ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 06/27/2018
-ms.openlocfilehash: 760a305280269734034a817182a8c2a07894ca2b
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 96b4aef3a8df571392d43836d46b03b025c80888
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675375"
 ---
-# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials： 电源能源保护程序状态
+# <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials：节能模式状态
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**电源**类提供了有关设备的能源节省状态，指示设备是否正在运行在低功耗模式下的信息。 如果设备的能源节省状态上，应用程序应避免后台处理。
+Power 类提供有关设备的节能模式状态的信息，指示设备是否在低功耗模式下运行。 如果设备的节能模式状态已打开，则应用程序应避免后台处理。
 
 ## <a name="background"></a>背景
 
-使用电池运行的设备可以置于低功耗精力模式。 有时设备是此模式时会自动切换，例如，电池电量降至低于 20%的容量。 操作系统响应能源节省模式通过减少往往会消耗电池的活动。 通过避免后台处理或其他高功率设备的活动，在打开能源节省模式时，可帮助应用程序。
+使用电池运行的设备可以置于低功耗节能模式。 有时，设备会自动切换到此模式，例如，当电池电量降到 20% 以下时。 操作系统通过减少往往会消耗电池的活动来响应节能模式。 打开节能模式时，应用程序有助于避免后台处理或其他高功率活动。
 
-适用于 Android 设备**电源**类返回有意义的信息仅为 Android 版本 5.0 (Lollipop) 及更高版本。
+对于 Android 设备，Power 类仅为 Android 版本 5.0 (Lollipop) 及更高版本返回有意义的信息。
+
+## <a name="get-started"></a>入门
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-the-power-class"></a>使用 Power 类
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-获取当前的能源保护程序状态的设备使用静态`Power.EnergySaverStatus`属性：
+使用静态 `Power.EnergySaverStatus` 属性获取设备的当前节能状态：
 
 ```csharp
 // Get energy saver status
 var status = Power.EnergySaverStatus;
 ```
 
-此属性返回的成员`EnergySaverStatus`枚举，它可以是`On`， `Off`，或`Unknown`。 如果属性返回`On`，应用程序应避免后台处理或可能会消耗提供了强大的其他活动。
+此属性会返回 `EnergySaverStatus` 枚举的成员，可以是 `On`、`Off` 或 `Unknown`。 如果该属性返回 `On`，则应用程序应避免后台处理或可能会消耗大量电力的其他活动。
 
-应用程序还应安装一个事件处理程序。 **电源**类公开的能源节省状态发生更改时触发的事件：
+应用程序还应安装事件处理程序。 Power 类会公开节能模式状态发生更改时触发的事件：
 
 ```csharp
 public class EnergySaverTest
@@ -60,7 +64,7 @@ public class EnergySaverTest
 }
 ```
 
-如果能源保护程序状态将更改为`On`，应用程序应停止执行后台处理。 如果状态将变为`Unknown`或`Off`，应用程序可以继续在后台处理。
+如果节能模式状态更改为 `On`，则应用程序应停止执行后台处理。 如果状态更改为 `Unknown` 或 `Off`，则应用程序可以继续执行后台处理。
 
 ## <a name="api"></a>API
 

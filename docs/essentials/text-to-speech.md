@@ -1,32 +1,36 @@
 ---
-title: Xamarin.Essentials： 文本到语音转换
-description: 中 Xamarin.Essentials 启用应用程序在要朗读后的文本，从设备和该引擎可以支持的查询可用语言的文本到语音转换引擎中使用内置的 TextToSpeech 类。
+title: Xamarin.Essentials：Text-to-Speech
+description: Xamarin.Essentials 中的 TextToSpeech 类允许应用程序使用内置的文本到语音转换引擎回讲设备中的文本并查询引擎可以支持的可用语言。
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ba822870edafce44140caa66b01f4da242fb7779
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.date: 08/30/2018
+ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675362"
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials： 文本到语音转换
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials：Text-to-Speech
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**TextToSpeech**类，在要朗读后的文本，从设备和该引擎可以支持的查询可用语言的文本到语音转换引擎中使用内置的应用程序。
+TextToSpeech 类允许应用程序使用内置的文本到语音转换引擎回讲设备中的文本并查询引擎可以支持的可用语言。
 
-## <a name="using-text-to-speech"></a>使用文本到语音转换
+## <a name="get-started"></a>入门
 
-在类中添加对 Xamarin.Essentials 的引用：
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-text-to-speech"></a>使用 Text-to-Speech
+
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-文本到语音转换功能适用于通过调用`SpeakAsync`方法与文本和可选参数，并返回完成后将语音样本。 
+Text-to-Speech 通过调用具有文本和可选参数的 `SpeakAsync` 方法工作，并在完成语音样本后返回。
 
 ```csharp
 public async Task SpeakNowDefaultSettings()
@@ -46,7 +50,7 @@ public void SpeakNowDefaultSettings2()
 }
 ```
 
-此方法采用一个可选`CancellationToken`停止它启动后将语音样本。
+此方法采用可选的 `CancellationToken`，以便在语音样本启动时将其停止。
 
 ```csharp
 CancellationTokenSource cts;
@@ -67,7 +71,7 @@ public void CancelSpeech()
 }
 ```
 
-文本到语音转换将自动排队，在同一个线程的语音请求。
+Text-to-Speech 会自动将同一线程中的语音请求加入队列。
 
 ```csharp
 bool isBusy = false;
@@ -93,7 +97,7 @@ public void SpeakMultiple()
 
 ### <a name="speech-settings"></a>语音设置
 
-更灵活地控制如何解说音频一下`SpeakSettings`，它允许设置音量、 音调、 和区域设置。
+为了更好地控制如何使用可用于设置音量、音调和区域设置的 `SpeakSettings` 回讲音频。
 
 ```csharp
 public async Task SpeakNow()
@@ -108,16 +112,16 @@ public async Task SpeakNow()
 }
 ```
 
-以下是支持这些参数的值：
+下面是这些参数的支持值：
 
 | 参数 | 最低 | 最大值 |
 | --- | :---: | :---: |
-| 间距 | 0 | 2.0 |
-| 卷 | 0 | 1.0 |
+| 音调 | 0 | 2.0 |
+| 音量 | 0 | 1.0 |
 
-### <a name="speech-locales"></a>语音的区域设置
+### <a name="speech-locales"></a>语音区域设置
 
-每个平台提供了要朗读后的文本以多种语言和重音符号的区域设置。 每个平台都有不同的代码和方法的指定此操作，这就是为什么 Essentials 提供了跨平台`Locale`类和方法进行查询，使用`GetLocalesAsync`。
+每个平台支持不同的区域设置，以便使用不同语言和重音回讲文本。 平台具有用于指定区域设置的不同代码和方法，这就是 Xamarin.Essentials 为何提供跨平台 `Locale` 类以及使用 `GetLocalesAsync` 查询区域设置的方法的原因。
 
 ```csharp
 public async Task SpeakNow()
@@ -140,8 +144,8 @@ public async Task SpeakNow()
 
 ## <a name="limitations"></a>限制
 
-- 不能保证查询文本队列，如果在多个线程调用。
-- 背景音频播放不正式支持。
+- 如果跨多个线程调用语音样本队列，则不能予以保证。
+- 背景音频播放未受到官方支持。
 
 ## <a name="api"></a>API
 

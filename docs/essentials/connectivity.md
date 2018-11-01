@@ -1,32 +1,34 @@
 ---
-title: Xamarin.Essentials： 连接
-description: Xamarin.Essentials 中的连接类允许您监视的设备的网络状况变化，检查当前的网络访问权限，以及当前连接方式。
+title: Xamarin.Essentials：Connectivity
+description: Xamarin.Essentials 中的 Connectivity 类可用于监视设备的网络状况是否发生变化，检查当前的网络访问权限，以及当前的连接方式。
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: bc0cd206881356a92128c758f0225f98f88c2814
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675401"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials： 连接
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials：Connectivity
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**连接**类可让你监视的更改在设备的网络条件，检查当前的网络访问权限，以及当前连接方式。
+Connectivity 类可用于监视设备的网络状况是否发生变化，检查当前的网络访问权限，以及当前的连接方式。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
-访问**连接**功能以下平台特定的安装程序是必需的。
+[!include[](~/essentials/includes/get-started.md)]
+
+若要访问 Connectivity 功能，需要以下特定于平台的设置。
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-`AccessNetworkState`权限是必需的必须在 Android 项目中配置。 这可以通过以下方法添加：
+`AccessNetworkState` 权限是必需的，且必须在 Android 项目中配置。 可通过以下方法添加此权限：
 
-打开**AssemblyInfo.cs**文件下**属性**文件夹并添加：
+打开 Properties 文件夹下的 AssemblyInfo.cs 文件并添加：
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
@@ -34,13 +36,13 @@ ms.locfileid: "39353693"
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹，并添加以下的内部**清单**节点。
+打开 Properties 文件夹下的 AndroidManifest.xml 文件，并在 manifest 节点内添加。
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-或右键单击 Android 项目，并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**访问网络状态**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Android 项目并打开项目的属性。 在“Android 清单”下查找“所需权限:”区域，然后选中“访问网络状态”权限。 这样会自动更新 AndroidManifest.xml 文件。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -52,15 +54,15 @@ ms.locfileid: "39353693"
 
 -----
 
-## <a name="using-connectivity"></a>使用连接
+## <a name="using-connectivity"></a>使用 Connectivity
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-检查当前的网络访问：
+检查当前网络访问：
 
 ```csharp
 var current = Connectivity.NetworkAccess;
@@ -71,15 +73,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[网络访问](xref:Xamarin.Essentials.NetworkAccess)划分为以下类别：
+[网络访问](xref:Xamarin.Essentials.NetworkAccess)分为以下几类：
 
-* **Internet** – 本地和 internet 访问。
-* **ConstrainedInternet** – 有限的 internet 访问。 指示强制网络门户连接性，其中提供了本地访问 web 门户，但访问 Internet，需要通过门户提供了特定的凭据。
-* **本地**– 本地网络只能访问。
-* **无**– 不不提供任何连接。
-* **未知**– 无法确定 internet 连接。
+* Internet – 本地和 Internet 访问。
+* ConstrainedInternet – 受限 Internet 访问。 指示强制网络门户连接情况，其中可以本地访问 Web 门户，但需要通过门户提供特定凭据才能访问 Internet。
+* 本地 – 仅限本地网络访问。
+* 无 – 无可用连接。
+* **未知** – 无法确定 Internet 连接。
 
-你可以检查哪种[连接配置文件](xref:Xamarin.Essentials.ConnectionProfile)设备正在主动使用：
+你可以检查设备当前正在使用哪种[连接配置文件](xref:Xamarin.Essentials.ConnectionProfile)：
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +91,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-只要连接配置文件或网络访问的更改可以接收的事件触发时：
+只要连接配置文件或网络访问发生变化，就可以接收已触发的事件：
 
 ```csharp
 public class ConnectivityTest
@@ -100,7 +102,7 @@ public class ConnectivityTest
         Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
     }
 
-    void Connectivity_ConnectivityChanged(ConnectivityChangedEventArgs  e)
+    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
     {
         var access = e.NetworkAccess;
         var profiles = e.Profiles;
@@ -110,9 +112,9 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>限制
 
-务必要注意的是可能的`Internet`报告的`NetworkAccess`但对 web 完全访问权限不可用。 由于每个平台上的连接工作原理它仅可以保证的连接可用。 例如此设备可能连接到 Wi-fi 网络，但与 internet 断开路由器。 在这种情况可能会报告 Internet，但活动连接不可用。
+需要注意的是 `Internet` 可能由 `NetworkAccess` 报告，但对 Web 的完全访问权限不可用。 由于每个平台上的连接方式不同，因此只能保证连接可用。 例如，设备可能会连接到 Wi-Fi 网络，但路由器与 Internet 断开连接。 在此示例中，可能会报告 Internet，但活动连接不可用。
 
 ## <a name="api"></a>API
 
-* [连接源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
-* [连接 API 文档](xref:Xamarin.Essentials.Connectivity)
+* [Connectivity 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Connectivity API 文档](xref:Xamarin.Essentials.Connectivity)
