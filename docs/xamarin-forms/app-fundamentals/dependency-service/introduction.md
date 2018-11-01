@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/15/2018
-ms.openlocfilehash: 28c6daa361b7de09a0d9332b21f1b6f75e035850
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38995409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675011"
 ---
 # <a name="introduction-to-dependencyservice"></a>DependencyService 简介
 
@@ -42,7 +42,7 @@ Xamarin.Forms 应用需要四个组件来使用`DependencyService`:
 
 ### <a name="interface"></a>接口
 
-您设计的接口将定义如何与特定于平台的功能进行交互。 注意如果你正在开发的组件或 Nuget 包作为共享的组件。 API 设计可以执行或破坏包。 下面的示例指定语音文本的允许的灵活指定字要朗读但由要为每个平台自定义的实现简单的界面：
+您设计的接口将定义如何与特定于平台的功能进行交互。 注意如果你正在开发的组件或 NuGet 包作为共享的组件。 API 设计可以执行或破坏包。 下面的示例指定语音文本的允许的灵活指定字要朗读但由要为每个平台自定义的实现简单的界面：
 
 ```csharp
 public interface ITextToSpeech {

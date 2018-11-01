@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675206"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 触发器
 
@@ -85,7 +85,8 @@ ms.locfileid: "38995532"
 
 数据触发器使用数据绑定来监视另一个控件来导致`Setter`以调用。 而不是`Property`属性中的属性触发器，请设置`Binding`属性来监视指定的值。
 
-下面的示例使用数据绑定语法`{Binding Source={x:Reference entry}, Path=Text.Length}`这是我们是如何引用另一个控件的属性。 时的长度`entry`为零，激活触发器。 在此示例中触发禁用的按钮时输入为空。
+下面的示例使用数据绑定语法 `{Binding Source={x:Reference entry}, Path=Text.Length}`
+这是我们是如何引用另一个控件的属性。 时的长度`entry`为零，激活触发器。 在此示例中触发禁用的按钮时输入为空。
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 
 共享中的触发器时要小心`ResourceDictionary`，以便对其所有应用将配置一次的任何状态，在控件之间共享一个实例。
 
-请注意，不支持事件触发器`EnterActions`并`ExitActions`[如下所述](#enterexit)。    
+请注意，不支持事件触发器`EnterActions`并`ExitActions`[如下所述](#enterexit)。
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 
 这可以通过`IValueConverter`。 以下转换转换器代码`Text.Length`绑定到`bool`，该值指示字段是否为空：
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ public class MultiTriggerConverter : IValueConverter
 XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
 
 * 该按钮具有`IsEnabled="false"`默认设置。
-* 多触发器条件使用转换器来打开`Text.Length`值为布尔值。
+* 多触发器条件使用转换器来启用`Text.Length`值到`boolean`。
 * 当所有条件都都`true`，setter 使按钮的`IsEnabled`属性`true`。
 
 ```xaml
@@ -266,7 +266,6 @@ XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
 
 这些屏幕截图显示了上述的两个多触发器示例之间的差异。 屏幕的顶部，一个中输入文本`Entry`足以**保存**按钮。
 在屏幕的底部**登录名**按钮始终处于非活动状态，直到这两个字段包含数据。
-
 
 ![](triggers-images/multi-requireall.png "MultiTrigger 示例")
 

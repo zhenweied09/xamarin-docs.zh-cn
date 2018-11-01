@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 34e923e4df76680ad8d0be5f2844ef56b32af4db
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 625564eebf83b3075f61b1a25bde1a78abe1ca2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674903"
 ---
 # <a name="creating-a-custom-xamarinforms-theme"></a>创建 Xamarin.Forms 自定义主题
 
@@ -26,7 +26,8 @@ ms.locfileid: "38985986"
 
 若要了解工作原理，下面的标记创建等效的样式，您可以将直接添加到您**App.xaml**。
 
-请注意`Class`特性`Style`(而不是[ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) Xamarin.Forms 的早期版本中的属性)。
+请注意`Class`属性`Style`(而不是 [`x:Key`](~/xamarin-forms/user-interface/styles/inheritance.md)
+属性的 Xamarin.Forms 的早期版本中提供）。
 
 ```xml
 <ResourceDictionary>
@@ -200,7 +201,7 @@ namespace ThemesDemo.Droid
 
         protected override bool CanBeApplied()
         {
-            return Container != null && (int)Android.OS.Build.VERSION.SdkInt >= 21;
+            return Container != null && Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop;
         }
 
         protected override void OnAttachedInternal()

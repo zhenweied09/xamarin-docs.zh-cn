@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 4b22b15cfe5aaa836b65fc75f847b88c8e00e80b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674946"
 ---
 # <a name="using-adonet-with-android"></a>使用 ADO.NET 和 Android
 
@@ -38,7 +38,7 @@ Xamarin 提供内置支持是可在 Android 上，可以使用熟悉的类似于
 
 我们将使用`Mono.Data.Sqlite.SqliteConnection`类，以创建空数据库文件，然后实例化`SqliteCommand`对象，我们可以使用执行 SQL 对数据库的说明。
 
-**创建空数据库**&ndash;调用`CreateFile`使用有效的方法 (即。 可写) 文件路径。 您应检查是否调用此方法之前已存在该文件，否则将旧的基础上创建新的 （空白） 数据库和旧的文件中的数据都将丢失。
+**创建空数据库**&ndash;调用`CreateFile`方法包含有效的 （即可写入） 的文件路径。 您应检查是否调用此方法之前已存在该文件，否则将旧的基础上创建新的 （空白） 数据库和旧的文件中的数据都将丢失。
 `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` `dbPath`变量，必须根据本文档前面所述的规则来确定。
 
 **创建数据库连接** &ndash; SQLite 数据库文件创建后可以创建连接对象，以访问数据。 使用连接字符串，其形式的构造连接`Data Source=file_path`，如下所示：
@@ -143,7 +143,7 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>更复杂的查询
 
-由于 SQLite 允许对数据运行任意 SQL 命令，因此可以执行任何`CREATE`， `INSERT`， `UPDATE`， `DELETE`，或`SELECT`您喜欢的语句。 你可以阅读 SQLite 支持 Sqlite 网站上的 SQL 命令。 使用三种方法之一上运行 SQL 语句`SqliteCommand`对象：
+由于 SQLite 允许对数据运行任意 SQL 命令，因此可以执行任何`CREATE`， `INSERT`， `UPDATE`， `DELETE`，或`SELECT`您喜欢的语句。 你可以阅读 SQLite 支持 SQLite 网站上的 SQL 命令。 使用三种方法之一上运行 SQL 语句`SqliteCommand`对象：
 
 -   **ExecuteNonQuery** &ndash;通常用于表创建或数据期间插入操作。 对于某些操作的返回值是受影响的行数，否则为-1。
 

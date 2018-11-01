@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 92d0f393ff8d96ac9c0040ab7c46a364418cf956
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675284"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>可重用 EventToCommandBehavior
 
@@ -25,7 +25,7 @@ _行为可用于将命令与不设计与命令进行交互的控件相关联。�
 以下行为属性必须设置为使用行为：
 
 - **EventName** – 行为侦听事件的名称。
-- **命令**– **ICommand**要执行。 行为期望找到`ICommand`实例上[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)可能继承自父元素的附加控件。
+- **命令**–`ICommand`要执行。 行为期望找到`ICommand`实例上[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)可能继承自父元素的附加控件。
 
 此外可以设置以下可选行为属性：
 

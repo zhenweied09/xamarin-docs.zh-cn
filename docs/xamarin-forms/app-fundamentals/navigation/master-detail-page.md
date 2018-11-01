@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997460"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675518"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 母版-详细信息页
 
@@ -45,7 +45,7 @@ _Xamarin.Forms MasterDetailPage 是信息的管理两个相关的页面 – 主�
 母版和详细信息页之间导航体验的行为是依赖于平台：
 
 - 在 iOS 上，详细信息页*幻灯片*左侧，和的详细信息的左侧的部分作为母版页幻灯片右侧页仍是可见的。
-- 在 Android 上，详细信息和主页面都*重叠*相互。
+- 在 Android 上，详细信息和主页面都*叠加*相互。
 - UWP 上的详细信息和主页面*交换*。
 
 只不过 iOS 和 Android 上的母版页类似的宽度都作为在纵向模式下，母版页使更多详细信息页将显示，则将在横向模式中观察到类似的行为。
@@ -79,7 +79,7 @@ _Xamarin.Forms MasterDetailPage 是信息的管理两个相关的页面 – 主�
 </MasterDetailPage>
 ```
 
-下面的代码示例显示等效[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) C# 创建的：
+下面的代码示例显示等效[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)中创建C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -269,7 +269,7 @@ public partial class MainPage : MasterDetailPage
 </MasterDetailPage>
 ```
 
-下面的代码示例显示等效[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) C# 创建的：
+下面的代码示例显示等效[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)中创建C#:
 
 ```csharp
 public class MainPageCS : MasterDetailPage
