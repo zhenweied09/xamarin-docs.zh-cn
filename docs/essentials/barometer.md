@@ -5,18 +5,22 @@ ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/16/2018
-ms.openlocfilehash: 0217b89bc3f45347acecbdb3b8cdccfeed751744
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9172d816fe9a15993ba8f015310d0e79874c2d84
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675024"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials：Barometer
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Barometer 类可用于监视设备的气压计传感器，该传感器可测量压力。
+
+## <a name="get-started"></a>入门
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-barometer"></a>使用 Barometer
 

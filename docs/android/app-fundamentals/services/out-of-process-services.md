@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3a11fe56da6076ba53e97643e6890f0fa14b8036
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: HT
+ms.openlocfilehash: 8514d3b2c423e524d03a800f5f56359f3aee4b75
+ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113932"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50737188"
 ---
 # <a name="running-android-services-in-remote-processes"></a>远程进程中的运行 Android 服务
 
@@ -56,7 +56,7 @@ _通常情况下，Android 应用程序中的所有组件将在同一进程中�
 本指南介绍了实现进程外服务的详细信息。 本文将讨论如何实现用于在其自己的进程中运行的服务和客户端与该服务使用可能通信的方式`Messenger`框架。 它将还简要讨论的双向通信： 客户端将消息发送到服务和将消息发送回客户端服务。 服务可以在不同的应用程序之间共享，因为本指南还将讨论使用 Android 权限来限制对服务的客户端访问的一项技术。
 
 > [!IMPORTANT]
-> [Bugzilla 51940-使用隔离的进程和应用程序的自定义类的服务不能正确解析重载](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)Xamarin.Android 服务将不会启动正确的报表时`IsolatedProcess`设置为`true`。 本指南提供的引用。 Xamarin.Android 应用程序仍应能够与用 Java 编写的进程外服务进行通信。
+> [Bugzilla 51940/GitHub 1950-使用隔离的进程和应用程序的自定义类的服务不能正确解析重载](https://github.com/xamarin/xamarin-android/issues/1950)Xamarin.Android 服务将不会启动正确的报表时`IsolatedProcess`设置为`true`。 本指南提供的引用。 Xamarin.Android 应用程序仍应能够与用 Java 编写的进程外服务进行通信。
 
 ## <a name="requirements"></a>要求
 

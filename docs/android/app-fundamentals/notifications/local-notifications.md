@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117676"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675544"
 ---
 <a name="compatibility"></a>
 
@@ -747,7 +747,7 @@ builder.SetStyle (textStyle);
 若要支持较旧版本的 Android、 where`SetCategory`是不可用，你的代码可以检查在运行时有条件地调用的 API 级别`SetCategory`API 级别时为等于或大于 Android 5.0 （API 级别 21）：
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
@@ -760,7 +760,7 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 因为 Android 不支持 Android 5.0 （API 级别 21） 之前, 的锁定屏幕通知`NotificationCompat.Builder`不支持`SetVisibility`方法。 如上文所述的`SetCategory`，你的代码可以检查在运行时和调用的 API 级别`SetVisiblity`它时才可用：
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```
