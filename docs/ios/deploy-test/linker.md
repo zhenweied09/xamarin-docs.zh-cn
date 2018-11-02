@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120107"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234877"
 ---
 # <a name="linking-xamarinios-apps"></a>链接 Xamarin.iOS 应用
 
@@ -53,7 +53,7 @@ ms.locfileid: "50120107"
 
 ### <a name="dont-link"></a>不链接
 
-禁用链接将确保不修改任何程序集。 出于性能原因，这是 IDE 针对 iOS 模拟器时的默认设置。 对于设备生成，只有当链接器包含阻止应用程序运行的 bug 时，才应将此选项用作解决方法。 如果应用程序仅使用 -nolink，请提交[错误报告](http://bugzilla.xamarin.com)。
+禁用链接将确保不修改任何程序集。 出于性能原因，这是 IDE 针对 iOS 模拟器时的默认设置。 对于设备生成，只有当链接器包含阻止应用程序运行的 bug 时，才应将此选项用作解决方法。 如果应用程序仅使用 -nolink，请提交[错误报告](https://github.com/xamarin/xamarin-macios/issues/new)。
 
 使用命令行工具 mtouch 时，它对应于 -nolink 选项。
 
