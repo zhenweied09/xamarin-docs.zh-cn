@@ -4,15 +4,15 @@ description: 可使用各种配置运行 Android Emulator 来模拟不同的设�
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 06/22/2018
-ms.openlocfilehash: f281227ae6ee17548e9c4653d52c7ae6d2bfff2d
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+author: conceptdev
+ms.author: crdun
+ms.date: 08/27/2018
+ms.openlocfilehash: 6ce8f633cdc0fd4616673eb047d640a8703b3a30
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102524"
 ---
 # <a name="android-emulator-setup"></a>Android 仿真器设置
 
@@ -29,8 +29,7 @@ ms.locfileid: "36935030"
 
 ### <a name="hardware-acceleration-for-emulator-performanceandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[通过硬件加速提高仿真器性能](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
-如何准备计算机以最大限度提高 Android Emulator 的性能。
-由于在没有硬件加速的情况下 Android Emulator 的运行可能会极度缓慢，因此，建议在使用模拟器之前在计算机上启用硬件加速。
+如何使用 Hyper-V 或 HAXM 虚拟化技术为计算机准备最大的 Android Emulator 性能。 由于在没有硬件加速的情况下 Android Emulator 的运行可能会极度缓慢，因此，建议在使用模拟器之前在计算机上启用硬件加速。
 
 ### <a name="managing-virtual-devices-with-the-android-device-managerandroidget-startedinstallationandroid-emulatordevice-managermd"></a>[使用 Android Device Manager 管理虚拟设备](~/android/get-started/installation/android-emulator/device-manager.md)
 

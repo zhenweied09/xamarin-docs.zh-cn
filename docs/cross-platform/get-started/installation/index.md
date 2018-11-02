@@ -3,32 +3,44 @@ title: 安装 Xamarin
 description: 本部分概述可用于在 Visual Studio 上设置 Xamarin 的安装和设置的做法。
 ms.prod: xamarin
 ms.assetid: 0f813a14-2f0c-415d-8667-4563f3dc06e8
-author: asb3993
-ms.author: amburns
-ms.date: 09/29/2017
-ms.openlocfilehash: 71d5f743a5c1e2bd159a7267ddecfdc611eb2db8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.custom: video
+ms.date: 08/08/2018
+ms.openlocfilehash: 231c3fa03de77d9f89d215bfae03266f37b1dc5f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115947"
 ---
 # <a name="installing-xamarin"></a>安装 Xamarin
 
-_本部分概述可用于在 Visual Studio 上设置 Xamarin 的安装和设置的做法。_
+如何设置 Visual Studio 和 Xamarin 以开始使用 .NET 生成移动应用。
 
-##  <a name="installing-xamarin-in-visual-studio-on-windowscross-platformget-startedinstallationwindowsmd"></a>[在 Visual Studio on Windows 中安装 Xamarin](~/cross-platform/get-started/installation/windows.md)
+## <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-本文介绍如何在 Windows 计算机上安装 Xamarin for Visual Studio。
+## <a name="installing-xamarin-on-windows"></a>在 Windows 上安装 Xamarin
 
-##  <a name="installing-visual-studio-for-macvisualstudiomacinstallation"></a>[安装 Visual Studio for Mac](/visualstudio/mac/installation/)
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-2017-for-Mobile-Development-with-NET/player]
 
-本文介绍如何安装 Visual Studio for Mac。
+## <a name="step-by-step-instructions"></a>分步说明
 
-##  <a name="uninstalling-xamarincross-platformget-startedinstallationuninstalling-xamarinmd"></a>[卸载 Xamarin](~/cross-platform/get-started/installation/uninstalling-xamarin.md)
+[!include[](~/cross-platform/includes/install-xamarin-windows.md)]
 
-本文介绍如何从 Mac 或 Windows 计算机卸载 Xamarin Studio 或 Xamarin 的其他产品。
+## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-##  <a name="xamarin-firewall-configuration-instructionsfirewallmd"></a>[Xamarin 防火墙配置说明](firewall.md)
+## <a name="installing-xamarin-on-macos"></a>在 macOS 上安装 Xamarin
 
-一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin 的平台适合你的公司。
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Installing-Visual-Studio-for-Mac-for-Mobile-Development-with-NET/player]
+
+## <a name="step-by-step-instructions"></a>分步说明
+
+除此视频外，还提供涵盖 Visual Studio for Mac 和 Xamarin 的[分步安装指南](/visualstudio/mac/installation/)。
+
+-----
+
+## <a name="related-links"></a>相关链接
+
+- [卸载 Xamarin](~/cross-platform/get-started/installation/uninstalling-xamarin.md)
+- [Xamarin 防火墙配置说明](firewall.md)

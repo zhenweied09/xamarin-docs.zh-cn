@@ -5,35 +5,32 @@ ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
 ms.custom: xamu-video
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: a60331a6c8cd1b65e51a63b221cbdb7182803bd1
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 77b721adc4a745a5bf184bfbde1985bce980ddf7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32435811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110337"
 ---
-# <a name="getting-started-series"></a>入门系列
+# <a name="get-started-with-xamarinandroid"></a>Xamarin.Android 入门
 
-##  <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[设置和安装](~/android/get-started/installation/index.md)
+## <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[设置和安装](~/android/get-started/installation/index.md)
 
 在 Visual Studio 中设置并运行 Xamarin.Android。 本部分介绍下载、安装、仿真器配置以及设备预配等内容。
 
-
-##  <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello，Android](~/android/get-started/hello-android/index.md)
+## <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello，Android](~/android/get-started/hello-android/index.md)
 
 在这个两部分的指南中，你会使用 Visual Studio 生成第一个 Xamarin.Android 应用程序，并了解使用 Xamarin 进行 Android 应用程序开发的基础知识。
 同时，本指南会介绍生成和部署 Xamarin.Android 应用程序所需的工具、概念和步骤。
 
-
-##  <a name="hello-android-multiscreenandroidget-startedhello-android-multiscreenindexmd"></a>[Hello，Android 多屏幕](~/android/get-started/hello-android-multiscreen/index.md)
+## <a name="hello-android-multiscreenandroidget-startedhello-android-multiscreenindexmd"></a>[Hello，Android 多屏幕](~/android/get-started/hello-android-multiscreen/index.md)
 
 在这个由两部分组成的指南中，我们会扩展在“了解 Android”指南中创建的应用程序，以便实现第二个屏幕。 在此过程中，本指南将介绍基本 Android 应用程序构建基块，并随着更好地了解 Android 应用程序结构和功能来使用户深入了解 Android 体系结构。
 
-
-##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[面向 Java 开发人员的 Xamarin](~/android/get-started/java-developers.md)
+## <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[面向 Java 开发人员的 Xamarin](~/android/get-started/java-developers.md)
 
 本文介绍面向 Java 开发人员的 C# 编程，主要侧重于 Java 开发人员在学习 Xamarin.Android 应用开发时会遇到的 C# 语言功能。
 

@@ -1,31 +1,29 @@
 ---
 title: Hello，iOS 多屏显示
-description: 在由两部分构成的该指南中，我们将扩展《了解 iOS》指南中创建的 Phoneword 应用程序以处理第二个屏幕。 与此同时，我们将引入模型-视图-控制器设计模式，实现首次 iOS 导航，并更深入了解 iOS 应用程序结构和功能。
+description: 本文档链接到扩展 Phoneword 示例应用程序以添加第二个屏幕的演练。 该演练介绍了模型-视图-控制器设计模式、iOS 导航和其他核心 iOS 开发概念。
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 95be7bd39aced5dad680efbae0bd7e0f4d040f7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0e3a37364b5715650fc893ec4549749b0788087a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119769"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello，iOS 多屏显示
 
-##  <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[第 1 部分：快速入门](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[第 1 部分：快速入门](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-本指南的第一部分中，我们将向 Phoneword 应用程序添加第二个屏幕，用于跟踪使用应用呼叫的号码的历史记录。
+本指南的第一部分向 Phoneword 示例应用程序添加第二个屏幕，用于跟踪输入号码的历史记录。
 
-##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[第 2 部分：深度分析](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[第 2 部分：深度分析](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-
-
-本文档的第二部分中，我们将回顾已生成的应用程序，讨论体系结构和导航，以及期间遇到的其他新的 iOS 概念。
-
+本文档的第二部分介绍已生成的应用程序，讨论体系结构和导航，以及期间遇到的其他新的 iOS 概念。
 
 ## <a name="related-links"></a>相关链接
 

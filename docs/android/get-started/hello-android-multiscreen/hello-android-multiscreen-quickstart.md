@@ -1,25 +1,24 @@
 ---
 title: 了解 Android 多屏显示：快速入门
 description: 本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第二个屏幕的情况。 与此同时，介绍了基础的 Android 应用程序构建基块，便于更深入探讨 Android 体系结构。
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 04/30/2018
-ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120484"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>了解 Android 多屏显示：快速入门
 
 _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第二个屏幕的情况。与此同时，介绍了基础的 Android 应用程序构建基块，便于更深入探讨 Android 体系结构。_
-
-## <a name="hello-android-multiscreen-quickstart"></a>了解 Android 多屏显示快速入门
 
 在本指南的演练部分中，将向 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 应用程序添加第二个屏幕，用于跟踪使用此应用转换的号码的相关历史记录。 [最终的应用程序](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)将具有第二个屏幕，可显示“已转换”的号码，如右侧屏幕截图所示：
 
@@ -27,8 +26,7 @@ _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第�
 
 附随的[深入了解](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)将回顾构建的内容，并讨论体系结构、导航和此过程中遇到的其他 Android 新概念。
 
-
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 由于本指南紧接[了解 Android](~/android/get-started/hello-android/index.md) 中的内容，因此需要完成[了解 Android 快速入门](~/android/get-started/hello-android/hello-android-quickstart.md)。
 如果想要直接跳到以下演练，可下载完整版的 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/)（参见“了解 Android 快速入门”），然后使用该版本进行演练。
@@ -37,13 +35,13 @@ _本指南分为两部分，介绍了扩展 Phoneword 应用程序以处理第�
 
 在本演练中，将向 Phoneword 应用程序添加一个“转换历史记录”屏幕。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 首先在 Visual Studio 中打开 Phoneword 应用程序，然后从“解决方案资源管理器”中编辑 Main.axml 文件。
 
 ### <a name="updating-the-layout"></a>更新布局
 
-从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“属性面板”窗格中，将按钮“ID”更改为 `@+id/TranslationHistoryButton` 
+从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“属性面板”窗格中，将按钮“ID”更改为 `@+id/TranslationHistoryButton`
 
 [![拖动新按钮](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
@@ -107,7 +105,7 @@ namespace Phoneword
 
 在此类中，将按编程方式创建和填充 `ListActivity`，因此无需新建此活动的布局文件。 有关更详细的信息，请参阅[了解 Android 多屏显示详述](~/android/get-started/hello-android/hello-android-deepdive.md)。
 
-### <a name="adding-translation-history-code"></a>添加转换历史记录代码
+### <a name="adding-a-list"></a>添加列表
 
 此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表（和稍后使用的“意向”），请将以下 `using` 指令添加到 MainActivity.cs 顶部：
 
@@ -169,19 +167,20 @@ translateButton.Click += (sender, e) =>
 
 保存并生成应用程序，确保没有错误。
 
-### <a name="running-the-app"></a>运行应用
+### <a name="running-the-app"></a>运行应用程序
 
 向仿真器或设备部署应用程序。 下面的屏幕截图描述了正在运行的 **Phoneword** 应用程序:
 
 [![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 首先在 Visual Studio for Mac 中打开 Phoneword 项目，然后从“Solution Pad”中编辑 Main.axml 文件。
 
 ### <a name="updating-the-layout"></a>更新布局
 
-从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“Properties Pad”中，将按钮“ID”更改为 `@+id/TranslationHistoryButton` 
+从“工具箱”中将“按钮”拖动到 Design Surface 上，然后将其置于“TranslatedPhoneWord”TextView 下方。 在“Properties Pad”中，将按钮“ID”更改为 `@+id/TranslationHistoryButton`：
 
 [![拖动新按钮](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
@@ -189,11 +188,9 @@ translateButton.Click += (sender, e) =>
 
 [![设置转换历史记录按钮文本](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
-
 在“Solution Pad”中的“Resources”文件夹下展开“values”节点，然后双击字符串资源文件 Strings.xml：
 
 [![打开的字符串](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
-
 
 向 **Strings.xml** 文件添加 `translationHistory` 字符串名称和值，然后保存该文件：
 
@@ -246,7 +243,7 @@ namespace Phoneword
 
 在此类中，将按编程方式创建和填充 `ListActivity`，因此无需新建该活动的布局文件。 有关更详细的信息，请参阅[了解 Android 多屏显示详述](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)。
 
-### <a name="adding-translation-history-code"></a>添加转换历史记录代码
+### <a name="adding-a-list"></a>添加列表
 
 此应用会收集电话号码（用户已在第一个屏幕上转换的），然后传递给第二个屏幕。 电话号码以字符串列表的形式存储。 若要支持列表（和稍后使用的“意向”），请将以下 `using` 指令添加到 MainActivity.cs 顶部：
 
@@ -303,16 +300,15 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-### <a name="running-the-app"></a>运行应用
+### <a name="running-the-app"></a>运行应用程序
 
 向仿真器或设备部署应用程序。 下面的屏幕截图描述了正在运行的 **Phoneword** 应用程序:
 
 [![示例屏幕快照](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
------
+::: zone-end
 
 恭喜，你完成了第一个多屏 Xamarin.Android 应用程序！ 现在可仔细分析刚才所学的工具和技能 &ndash; 接下来介绍[了解 Android 多屏显示详述](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)。
-
 
 ## <a name="related-links"></a>相关链接
 

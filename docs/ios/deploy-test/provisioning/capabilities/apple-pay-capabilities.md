@@ -1,19 +1,20 @@
 ---
-title: Apple Pay 功能
+title: Xamarin.iOS 中的 Apple Pay 功能
 description: 向应用程序添加功能通常需要其他预配设置。 本指南将介绍 Apple Pay 功能所需的设置。
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: c389dc4831009d760e4a6a810b5b3c01637c822e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112335"
 ---
-# <a name="apple-pay-capabilities"></a>Apple Pay 功能
+# <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS 中的 Apple Pay 功能
 
 _向应用程序添加功能通常需要其他预配设置。本指南将介绍 Apple Pay 功能所需的设置。_
 
@@ -39,11 +40,11 @@ _向应用程序添加功能通常需要其他预配设置。本指南将介绍 
 
 2.  在“标识符”下，选择“商户 ID”，然后选择“+”来创建新的商户 ID：  
 
-3.  使用新的描述和标识符填写表单，如下所示。 此描述便于你识别此 ID，并可在以后进行更改。 此标识符对你必须唯一，且必须以字符串 `merchant` 开头。 Apple 推荐标识符采用如下格式：`merchant.com.[Your-App-Name]`：
+3.  使用新的描述和标识符填写表单，如下所示。 此描述便于你识别此 ID，并可在以后进行更改。 此标识符对你必须唯一，且必须以字符串 `merchant` 开头。 Apple 推荐标识符采用如下格式：`merchant.com.[Your-App-Name]`：
    
     ![新的商户 ID 详细信息](apple-pay-capabilities-images/image58.png)
 
-4.  确认详细信息，然后**注册** ID： 
+4.  确认详细信息，然后注册 ID： ****  
     
     ![商户 ID 确认](apple-pay-capabilities-images/image59.png)
 
@@ -153,6 +154,6 @@ Apple 需要一个证书来加密与交易相关联的敏感数据。 每个创�
 
 * 在应用中使用框架命名空间。
 * 将所需权利添加到应用。 有关所需权利以及添加方法的详细信息，请参阅[使用权利](~/ios/deploy-test/provisioning/entitlements.md)指南。
-* 在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。
+* 在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 **** **** 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。 __ 
 
 如果遇到与应用服务有关的问题，请参考主要指南的[故障排除](~/ios/deploy-test/provisioning/capabilities/index.md)部分。

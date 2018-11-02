@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: dd48d917b669e5f83eaafa2f1ba5af5d9a19a342
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675102"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 入门
 
@@ -66,7 +66,7 @@ Xamarin.Essentials 可用作 NuGet 包，可以通过使用 Visual Studio 将其
     # <a name="androidtabandroid"></a>[Android](#tab/android)
 
     Xamarin.Essentials 支持最低 Android 版本 4.4（对应于 API 级别 19），但用于编译的目标 Android 版本必须为 8.1（对应于 API 级别 27）。 （在 Visual Studio 中，已在“Android 清单”选项卡中的 Android 项目的“项目属性”对话框中设置这两个版本。在 Visual Studio for Mac 中，已在“Android 应用程序”选项卡中的 Android 项目的“项目选项”对话框中设置这两个版本。） 
-    
+
     Xamarin.Essentials 安装所需的 Xamarin.Android.Support 库的版本 27.0.2.1。 应用程序所需的任何其他 Xamarin.Android.Support 库还应使用 NuGet 包管理器更新到版本 27.0.2.1。 应用程序所使用的所有 Xamarin.Android.Support 库应相同，并且至少应为版本 27.0.2.1。 如果在解决方案中添加 Xamarin.Essentials NuGet 或更新 Nuget 时遇到问题，请参阅[疑难解答页面](troubleshooting.md)。
 
     在 Android 项目的 `MainLauncher` 或任何启动的 `Activity` 中，必须在 `OnCreate` 方法中初始化 Xamarin.Essentials：
@@ -108,7 +108,7 @@ Xamarin.Essentials 可用作 NuGet 包，可以通过使用 Visual Studio 将其
 
 ## <a name="other-resources"></a>其他资源
 
-我们建议不熟悉 Xamarin 的开发人员访问 [Xamarin 开发入门](~/cross-platform/getting-started/index.md)。
+建议刚开始接触 Xamarin 的开发人员访问 [Xamarin 开发入门](~/cross-platform/getting-started/index.md)。
 
 访问 [Xamarin.Essentials GitHub 存储库](http://github.com/xamarin/Essentials)查看当前源代码，接下来，运行示例，并克隆存储库。 欢迎为社区做贡献！
 

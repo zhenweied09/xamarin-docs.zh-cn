@@ -4,15 +4,15 @@ description: 本文档介绍的技术可用于提升 Xamarin.iOS 应用程序的
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: caf35ab601d20e1cb235ab9ebb131e6dffc614fc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108869"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 性能
 
@@ -101,7 +101,9 @@ container.AddSubview (new MyView (container));
 
 在这里，包含的对象不会使父级处于活动状态。 但是，父级通过对 `container.AddSubView` 的调用使子级处于活动状态。
 
-使用委托或数据源模式的 iOS API 也采用这种做法。其中，对等类包含实现代码（例如，在 [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) 类中设置 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) 属性或 [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) 时）。
+使用委托或数据源模式的 iOS API 也采用这种做法。其中，对等类包含实现代码（例如，在 [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) 类中
+设置 [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) 属性
+或 [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) 时）。
 
 对于纯粹为了实现协议而创建的类（例如，[`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/)），可以直接在类中实现接口并替代方法，再向 `this` 分配 `DataSource` 属性，而不是创建子类。
 

@@ -4,15 +4,15 @@ description: 本文档链接到的指南介绍了如何在 Mac 和 Windows 上�
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 58eb2c348530e6ed3caa04c5a367e01d3b98beaa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 5ce074e3659d4c380bd02537ef2cb8ac5734aede
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785933"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112021"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 安装
 
@@ -20,9 +20,9 @@ ms.locfileid: "34785933"
 
 若要针对 Xamarin.iOS 构建，需具备以下条件：
 
--    iOS SDK 最新版。
--    Xcode 最新版。
--    Mac OS X Sierra(10.12) 及更高版本。
+- iOS SDK 最新版
+- Xcode 最新版
+- macOS High Sierra (10.13) 及更高版本
 
 Xcode 的最新版可通过 [iOS 开发人员中心](https://developer.apple.com/devcenter/ios/index.action#downloads)（需要登录）或 Mac App Store 进行下载：
 

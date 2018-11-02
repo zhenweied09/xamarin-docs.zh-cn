@@ -4,15 +4,15 @@ description: 权利是授予应用程序的特殊应用功能和安全性权限�
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103408"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>在 Xamarin.iOS 中使用权利
 
@@ -20,12 +20,11 @@ _权利是授予给应用程序的特殊应用功能和安全性权限，这些�
 
 在 iOS 中，应用在_沙盒_中运行，沙盒提供一套规则，用于限制在应用程序和特定系统资源或用户数据之间的访问。 _权利_用于请求系统扩展沙盒以赋予应用其他功能。
 
-若要扩展应用的功能，则必须在应用的 Entitlements.plist 文件中提供权利。 仅某些功能可扩展，[使用功能](~/ios/deploy-test/provisioning/capabilities/index.md)指南中列出了这些功能，[下文](#keyreference)对其进行了。 权利作为键值对传递给系统，通常而言，每个功能只需一个即可。 本指南后面的[权利键引用](#keyreference)部分介绍了特定的键和值。
+若要扩展应用的功能，则必须在应用的 Entitlements.plist 文件中提供权利。 仅某些功能可扩展，[使用功能](~/ios/deploy-test/provisioning/capabilities/index.md)指南中列出了这些功能，[下文](#entitlement-key-reference)对其进行了。 权利作为键值对传递给系统，通常而言，每个功能只需一个即可。 本指南后面的[权利键引用](#entitlement-key-reference)部分介绍了特定的键和值。
 Visual Studio for Mac 和 Visual Studio 提供一个清晰的界面，用于通过 Entitlements.plist 编辑器在 Xamarin.iOS 应用中添加权利。
 本指南介绍了 Entitlements.plist 编辑器及其使用方法。 本指南还提供了所有权利的引用，可添加到 iOS 项目以获得各种功能。
 
 ## <a name="entitlements-and-provisioning"></a>权利和预配
-
 
 Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行签名。
 
@@ -38,7 +37,7 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 
 定义应用 ID 时，除了选择和配置所需的应用程序服务，还必须通过编辑“Info.plist”和“Entitlements.plist”文件在 Xamarin.iOS 项目中配置权利。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要在 Visual Studio for Mac 中配置权利，请执行以下操作：
 
@@ -55,7 +54,7 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 5. 选择并配置 Xamarin.iOS 应用程序所需的任何权利，使其匹配创建应用 ID 时定义的设置。
 6. 保存对“Entitlements.plist”文件的更改。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要在 Visual Studio 中配置权利，请执行以下操作：
 
@@ -74,10 +73,7 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 5. 选择并配置 Xamarin.iOS 应用程序所需的任何权利，使其匹配创建应用 ID 时定义的设置。
 6. 保存对“Entitlements.plist”文件的更改。
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>添加新的 Entitlements.plist 文件
 
@@ -91,8 +87,6 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 2.  在“新文件”对话框中，依次选择“iOS”>“属性列表”，再将它命名为“Entitlements”：
 
     ![“新文件”对话框](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>权利键引用
 
@@ -150,11 +144,11 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 ### <a name="push-notifications"></a>推送通知
 
 - **键**：aps-environment
-- **字符串**：`production` 或 `development`
+- **字符串**：`development` 或 `production`
 
 ### <a name="siri"></a>Siri
 
-- **说明**：通过 SiriKit，iOS 应用可使用应用扩展、新的 Intents 和 Intents UI 框架来提供可访问 iOS 设备上的 Siri 和 Maps 应用的服务。 有关详细信息，请参阅 SiriKit 指南简介。
+- **说明**：通过 SiriKit，iOS 应用可使用应用扩展、新的 Intents 和 Intents UI 框架来提供可访问 iOS 设备上的 Siri 和 Maps 应用的服务。 有关详细信息，请参阅 SiriKit 指南简介。
     - **键**：com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>个人 VPN
@@ -203,6 +197,12 @@ Entitlements.plist 文件用于指定权利以及对应用程序捆绑包进行�
 - **说明**：使用无线附件配置可允许应用配置 MFi Wi-Fi 附件
     - **键**：com.apple.external-accessory.wireless-configuration
     - **布尔值**：YES
+
+### <a name="classkit"></a>ClassKit
+
+- **说明**：通过 ClassKit，教师可在应用中查看学生在布置的活动中的进度。
+    - **密钥**：com.apple.developer.ClassKit-environment
+    - **字符串**：`development` 或 `production`
 
 ## <a name="summary"></a>总结
 

@@ -1,6 +1,7 @@
 ---
 title: Xamarin.Forms 深度解析
 description: 本文介绍了使用 Xamarin.Forms 开发应用程序的基础知识。 涵盖的主题包括：Xamarin.Forms 应用程序剖析、体系结构和应用程序基础知识以及用户界面。
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
@@ -8,24 +9,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 7eff7f4413b533caadcf2aa8b5eed8c4ab65449d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: def4ecccf92c47a5cc7c08e2821e5f3387fb752f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118703"
 ---
 # <a name="xamarinforms-deep-dive"></a>Xamarin.Forms 深度解析
 
 在 [Xamarin.Forms 快速入门](~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md)中，生成了 Phoneword 应用程序。 本文对已生成的内容进行回顾，以深入了解有关 Xamarin.Forms 应用程序工作原理的基础知识。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Visual Studio 简介
 
-Visual Studio 是 Microsoft 提供的强大 IDE。 它采用完全集成的可视化设计器、包含重构工具的文本编辑器、程序集浏览器、源代码集成等。 本文重点介绍如何通过 Xamarin 插件使用 Visual Studio 的一些基本功能。
-
-Visual Studio 将代码组织为解决方案和项目。 解决方案是可以容纳一个或多个项目的容器。 项目可以是应用程序、支持库、测试应用程序等。 Phoneword 应用程序包含 1 个内附 4 个项目的解决方案，如以下屏幕截图所示。
+Visual Studio 将代码组织为解决方案和项目。 解决方案是可以容纳一个或多个项目的容器。 项目可以是应用程序、支持库、测试应用程序等。 Phoneword 应用程序包含 1 个内附 4 个项目的解决方案，如以下屏幕截图所示：
 
 ![](deepdive-images/vs/solution.png "Visual Studio 解决方案资源管理器")
 
@@ -42,15 +41,17 @@ Visual Studio 将代码组织为解决方案和项目。 解决方案是可以�
 
 ![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard 项目内容")
 
-项目具有包含 NuGet 和 SDK 节点的依赖项节点。 NuGet 节点包含已添加至项目的 Xamarin.Forms NuGet 包，SDK 节点包含可引用一组完整的 NuGet 包（此包用于定义 .NET Standard）的 `NETStandard.Library` 元包。
+项目具有包含 NuGet 和 SDK 节点的依赖项节点：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+- **NuGet**&ndash; 已添加到项目中的 Xamarin.Forms NuGet 包。
+- **SDK** &ndash; `NETStandard.Library` 元包，它引用定义 .NET Standard 的一整套 NuGet 包。
+
+::: zone-end
+::: zone pivot="macos"
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Visual Studio for Mac 简介
 
-Visual Studio for Mac 是免费的开源 IDE，类似于 Visual Studio。 它采用完全集成的可视化设计器、包含重构工具的文本编辑器、程序集浏览器、源代码集成等。 有关 Visual Studio for Mac 的详细信息，请参阅 [Visual Studio for Mac 简介](/visualstudio/mac/)。
-
-Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual Studio 做法。 解决方案是可以容纳一个或多个项目的容器。 项目可以是应用程序、支持库、测试应用程序等。 Phoneword 应用程序包含 1 个内附 3 个项目的解决方案，如以下屏幕截图所示。
+[Visual Studio for Mac](/visualstudio/mac/) 遵循将代码组织为解决方案和项目的 Visual Studio 做法。 解决方案是可以容纳一个或多个项目的容器。 项目可以是应用程序、支持库、测试应用程序等。 Phoneword 应用程序包含 1 个内附 3 个项目的解决方案，如以下屏幕截图所示：
 
 ![](deepdive-images/xs/solution.png "Visual Studio for Mac 解决方案窗格")
 
@@ -66,9 +67,12 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 ![](deepdive-images/xs/library-project.png "Phoneword .NET Standard 库项目内容")
 
-项目具有包含 NuGet 和 SDK 节点的依赖项节点。 NuGet 节点包含已添加至项目的 Xamarin.Forms NuGet 包，SDK 节点包含可引用一组完整的 NuGet 包（此包用于定义 .NET Standard）的 `NETStandard.Library` 元包。
+项目具有包含 NuGet 和 SDK 节点的依赖项节点：
 
------
+- **NuGet**&ndash; 已添加到项目中的 Xamarin.Forms NuGet 包。
+- **SDK** &ndash; `NETStandard.Library` 元包，它引用定义 .NET Standard 的一整套 NuGet 包。
+
+::: zone-end
 
 项目还包括多个文件：
 
@@ -83,19 +87,20 @@ Visual Studio for Mac 遵循将代码组织为解决方案和项目的 Visual St
 
 ## <a name="architecture-and-application-fundamentals"></a>体系结构和应用程序基础知识
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方式。 共享代码通常位于 .NET Standard 库中，平台特定应用程序将使用此共享代码。 下图概要演示了 Phoneword 应用程序的这种关系：
 
 ![](deepdive-images/vs/architecture.png "Phoneword 体系结构")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Xamarin.Forms 应用程序采用与传统跨平台应用程序相同的构建方式。 共享代码通常位于 .NET Standard 库中，平台特定应用程序将使用此共享代码。 下图概要演示了 Phoneword 应用程序的这种关系：
 
 ![](deepdive-images/xs/architecture.png "Phoneword 体系结构")
 
------
+::: zone-end
 
 若要最大限度重用启动代码，Xamarin.Forms 应用程序需有一个名为 `App` 的单个类，该类负责实例化应用程序在每个平台上将显示的首页，如以下代码示例所示：
 
@@ -176,6 +181,8 @@ namespace Phoneword.Droid
 
 通过调用 `Init` 方法，`OnCreate` 替代初始化 Xamarin.Forms 框架。 这会导致在加载 Xamarin.Forms 应用程序之前，将特定于 Android 的 Xamarin.Forms 实现加载到应用程序。 此外，`MainActivity` 类将在 `Instance` 属性中存储对其自身的引用。 引用自 `PhoneDialer` 类的 `Instance` 属性被称为本地上下文。
 
+::: zone pivot="windows"
+
 ## <a name="universal-windows-platform"></a>通用 Windows 平台
 
 在通用 Windows 平台 (UWP) 应用程序中，可从 `App` 类调用初始化 Xamarin.Forms 框架的 `Init` 方法：
@@ -210,12 +217,14 @@ namespace Phoneword.UWP
 > [!NOTE]
 > 通用 Windows 平台 (UWP) 应用可以使用 Xamarin.Forms 生成，但只能在 Windows 上使用 Visual Studio。
 
+::: zone-end
+
 ## <a name="user-interface"></a>用户界面
 
 可使用 4 个主要控件组创建 Xamarin.Forms 应用程序的用户界面。
 
 1. **页面** - Xamarin.Forms 页呈现跨平台移动应用程序屏幕。 Phoneword 应用程序使用 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 类显示单个屏幕。 有关页面的详细信息，请参阅 [Xamarin.Forms 页面](~/xamarin-forms/user-interface/controls/pages.md)。
-1. **布局** - Xamarin.Forms 布局是用于将视图组合到逻辑结构的容器。 Phoneword 应用程序使用 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 类以水平堆叠方式排列控件。 有关布局的详细信息，请参阅 [Xamarin.Forms 布局](~/xamarin-forms/user-interface/controls/layouts.md)。
+1. **布局** - Xamarin.Forms 布局是用于将视图组合到逻辑结构的容器。 Phoneword 应用程序使用 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 类以垂直堆叠方式排列控件。 有关布局的详细信息，请参阅 [Xamarin.Forms 布局](~/xamarin-forms/user-interface/controls/layouts.md)。
 1. **视图** - Xamarin.Forms 视图是显示在用户界面上的控件，如标签、按钮和文本输入框。 Phoneword 应用程序使用 [`Label`](xref:Xamarin.Forms.Label)、[`Entry`](xref:Xamarin.Forms.Entry) 和 [`Button`](xref:Xamarin.Forms.Button) 控件。 有关视图的详细信息，请参阅 [Xamarin.Forms 视图](~/xamarin-forms/user-interface/controls/views.md)。
 1. **单元格** - Xamarin.Forms 单元格是专门用于列表中的项的元素，描述列表中每个项的绘制方式。 Phoneword 应用程序不会使用任何单元格。 有关单元格的详细信息，请参阅 [Xamarin.Forms 单元格](~/xamarin-forms/user-interface/controls/cells.md)。
 
@@ -232,7 +241,7 @@ namespace Phoneword.UWP
         <StackLayout>
             <Label Text="Enter a Phoneword:" />
             <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
             <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
 </ContentPage>
@@ -265,7 +274,7 @@ void OnTranslate(object sender, EventArgs e)
 对 `OnTranslate` 方法的切换按钮布线会在 `MainPage` 类的 XAML 标记中出现：
 
 ```xaml
-<Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+<Button x:Name="translateButton" Text="Translate" Clicked="OnTranslate" />
 ```
 
 ## <a name="additional-concepts-introduced-in-phoneword"></a>Phoneword 中引入的其他概念

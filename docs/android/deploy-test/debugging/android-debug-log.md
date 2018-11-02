@@ -4,15 +4,15 @@ description: 如何使用调试日志调试 Xamarin.Android 应用程序。
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935212"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114777"
 ---
 # <a name="android-debug-log"></a>Android 调试日志
 
@@ -33,7 +33,7 @@ ms.locfileid: "36935212"
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>从 Visual Studio 访问调试日志
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要打开“设备日志”工具，单击工具栏上的“设备日志 (logcat)”图标：
 
@@ -68,7 +68,7 @@ ms.locfileid: "36935212"
 在选择设备后，“设备日志”工具会从正在运行的应用中自动添加日志条目 &ndash; 这些日志条目显示在日志条目表中。 在设备之间切换将停止和启动设备日志记录。 请注意，在任何设备显示在设备选择器中之前，必须加载 Android 项目。 如果设备未显示在设备选择器中，请确认它在“启动”按钮旁边的 Visual Studio 设备下拉列表菜单中可用。
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 要打开“设备日志”，请单击“视图”>“面板”>“设备日志”：
 
@@ -107,7 +107,7 @@ ms.locfileid: "36935212"
 
 ## <a name="accessing-from-the-command-line"></a>从命令行访问
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 另一种方法是通过命令行查看调试日志。 打开命令提示符窗口，并导航到 Android SDK 平台工具文件夹（通常情况下，SDK 平台工具文件夹位于 C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools 中）。
 
@@ -117,7 +117,7 @@ ms.locfileid: "36935212"
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 另一种方法是通过命令行查看调试日志。 打开终端窗口，并导航到 Android SDK 平台工具文件夹（通常情况下，SDK 平台工具文件夹位于 /Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools 中）。
 

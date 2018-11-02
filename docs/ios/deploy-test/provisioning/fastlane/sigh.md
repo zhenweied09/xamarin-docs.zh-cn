@@ -1,20 +1,20 @@
 ---
-title: Fastlane for iOS – Sigh
+title: Fastlane for iOS – Sigh
 description: 本文档介绍了 fastlane 的 sigh 命令，该命令用于创建、更新和修复所有 Xamarin.iOS 生成配置的预配配置文件。
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119509"
 ---
-# <a name="fastlane-for-ios--sigh"></a>Fastlane for iOS – Sigh
+# <a name="fastlane-for-ios-sigh"></a>Fastlane for iOS – Sigh
 
 > [!IMPORTANT]
 > Fastlane 建议使用 [ `match`](~/ios/deploy-test/provisioning/fastlane/match.md) 来生成和维护预配配置文件。 只有想要完全控制代码签名并充分了解相关信息，才可直接使用 sigh。

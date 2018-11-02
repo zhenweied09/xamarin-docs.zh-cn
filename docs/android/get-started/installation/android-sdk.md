@@ -4,15 +4,15 @@ description: Visual Studio 包含 Android SDK 管理器，用于下载 Android S
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 55b6c10a9014b89534c37faeac2faf84f02339cd
-ms.sourcegitcommit: b6f3e55d4f3dcdc505abc8dc9241cff0bb5bd154
+ms.openlocfilehash: 6023bb4ebcc9d4adcd3408ca09bf9118d14351d4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120809"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>设置用于 Xamarin.Android 的 Android SDK
 
@@ -28,7 +28,7 @@ _Visual Studio 包含 Android SDK 管理器，用于下载 Android SDK 工具、
 
 Xamarin Android SDK 管理器（作为 .NET 移动开发的一部分安装）可帮助你下载开发 Xamarin.Android 应用所需的最新 Android 组件。 它取代了已被弃用的 Google 的独立 SDK 管理器。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>要求
 
@@ -46,7 +46,7 @@ Xamarin Android SDK 管理器还需要 Java 开发工具包（此工具包自动
 
 -   如果专门为 API 级别 23 或更低级别进行开发，可以继续使用 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)。
 
--   如果使用 Visual Studio 15.8 Preview 5 或更高版本，可尝试使用 [Microsoft 分发的 OpenJDK](openjdk.md)（目前处于预览阶段）而不使用 JDK 8。
+-   如果使用 Visual Studio 15.8 Preview 5 或更高版本，可尝试使用 [Microsoft Mobile OpenJDK 分发](openjdk.md)（目前处于预览阶段）而不使用 JDK 8。
 
 > [!IMPORTANT]
 > Xamarin.Android 不支持 JDK 9。
@@ -129,7 +129,7 @@ Android SDK 位置是在“Android SDK 和工具”屏幕的顶部进行配置�
 若要切换回平台和工具支持的存储库，请单击“Microsoft (推荐)”。 这会将包和工具的列表还原到默认选择。
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="requirements"></a>要求
 
@@ -143,7 +143,7 @@ Xamarin Android SDK 管理器还需要 Java 开发工具包（此工具包自动
 
 -   如果专门为 API 级别 23 或更低级别进行开发，可以继续使用 [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)。
 
--   如果使用 Visual Studio for Mac 7.7 或更高版本，可尝试使用 [Microsoft 分发的 OpenJDK](openjdk.md)（目前处于预览阶段）而不使用 JDK 8。
+-   如果使用 Visual Studio for Mac 7.7 或更高版本，可尝试使用 [Microsoft Mobile OpenJDK 分发](openjdk.md)（目前处于预览阶段）而不使用 JDK 8。
 
 > [!IMPORTANT]
 > Xamarin.Android 不支持 JDK 9。

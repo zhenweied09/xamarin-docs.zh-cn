@@ -5,12 +5,12 @@ ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
-ms.date: 12/02/2016
-ms.openlocfilehash: dab4aeccd58da22736aea3139f11cbdff259ef7b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 10/05/2018
+ms.openlocfilehash: 68689ce7d92a038d0724e1441f68fddcb1d0bba8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "34781086"
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Xamarin 防火墙配置说明
@@ -25,35 +25,31 @@ _一个主机列表，需要在防火墙中允许这些列表才可让 Xamarin �
 
 需要添加以下已知地址，以便使用 Xamarin 安装程序的最新版本时正常安装软件：
 
--  xamarin.com（安装程序清单）
--  dl.xamarin.com（包下载位置）
--  dl.google.com（用于下载 Android SDK）
--  download.oracle.com (JDK)
--  visualstudio.com（安装包下载位置）
--  go.microsoft.com（安装程序 URL 解析）
--  aka.ms（安装程序 URL 解析）
+- xamarin.com（安装程序清单）
+- dl.xamarin.com（包下载位置）
+- dl.google.com（用于下载 Android SDK）
+- download.oracle.com (JDK)
+- visualstudio.com（安装包下载位置）
+- go.microsoft.com（安装程序 URL 解析）
+- aka.ms（安装程序 URL 解析）
 
 如果正使用 Mac，并且遇到 Xamarin.Android 安装问题，请确保 macOS 能够下载 Java。
 
+### <a name="nuget-including-xamarinforms"></a>NuGet（包括 Xamarin.Forms）
 
-### <a name="components-store-and-nuget-including-xamarinforms"></a>Components Store 和 NuGet（包括 Xamarin.Forms）
+需要添加以下地址才可访问 NuGet（Xamarin.Forms 打包为 NuGet）：
 
-需要添加以下地址才可访问 Xamarin Component Store 或 NuGet（Xamarin.Forms 打包为 NuGet）：
-
--  components.xamarin.com（用于使用 Xamarin Components Store）
--  xampubdl.blob.core.windows.net（托管 Components Store 下载）
--  www\.nuget.org（用于访问 NuGet）
--  az320820.vo.msecnd.net（NuGet 下载文件）
--  dl-ssl.google.com（Google 组件）
-
+- www\.nuget.org（用于访问 NuGet）
+- az320820.vo.msecnd.net（NuGet 下载文件）
+- dl-ssl.google.com（适用于 Android 和 Xamarin.Forms 的 Google 组件）
 
 ### <a name="software-updates"></a>软件更新
 
 需要添加以下地址，确保可正常下载该软件：
 
--  software.xamarin.com（更新程序服务）
--  download.visualstudio.microsoft.com
--  dl.xamarin.com
+- software.xamarin.com（更新程序服务）
+- download.visualstudio.microsoft.com
+- dl.xamarin.com
 
 ## <a name="xamarin-mac-agent"></a>Xamarin Mac 代理
 

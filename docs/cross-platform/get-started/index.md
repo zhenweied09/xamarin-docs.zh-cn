@@ -7,14 +7,14 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 35c7605f9682bef9e93fb4f25404659662126a9d
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 3b1769dec78f65544e8996e21cb8ae003e4af198
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111325"
 ---
-# <a name="getting-started-with-xamarin"></a>Xamarin 入门
+# <a name="get-started-with-xamarin"></a>Xamarin 入门
 
 开始前，请检查[系统要求](requirements.md)和[安装说明](installation/index.md)，确保一切就绪。
 
@@ -27,7 +27,6 @@ ms.locfileid: "39242022"
 
 - [Android 快速入门](~/android/get-started/hello-android/hello-android-quickstart.md)
 - [iOS 快速入门](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
-- [Mac 入门](~/mac/get-started/hello-mac.md)
 
 ## <a name="getting-started-with-mobile-development"></a>移动开发入门
 

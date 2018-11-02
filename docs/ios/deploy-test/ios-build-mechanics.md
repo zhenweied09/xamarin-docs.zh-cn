@@ -4,15 +4,15 @@ description: 本指南介绍如何对应用进行计时，以及如何使用可�
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104838"
 ---
 # <a name="ios-build-mechanics"></a>iOS 生成机制
 
@@ -27,7 +27,7 @@ ms.locfileid: "43780505"
 
 ## <a name="timing-apps"></a>计时应用
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 若要在 Visual Studio for Mac 中启用诊断 MSBuild 输出：
 
@@ -40,7 +40,7 @@ ms.locfileid: "43780505"
 7. 通过单击“生成输出”按钮，查看“Errors Pad”中的诊断输出（“视图”>“板”>“错误”）
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 若要在 Visual Studio 中启用诊断 MSBuild 输出：
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 从技术上讲，Xamarin 工具适用于运行 OS X 10.10 Yosemite 或更高版本的任何 Mac。 但是，Mac 性能可能会影响开发人员的体验和生成时间。
 
-在断开连接的状态下，Windows 上的 Visual Studio 仅执行 C# 编译阶段，且不会尝试执行链接或 AOT 编译，将应用打包到 .app 捆绑包或登录应用程序包。 （C# 编译阶段是罕见的性能瓶颈。）通过直接在 Visual Studio for Mac 的 Mac 生成主机上生成，尝试找出生成速度减缓的管道位置。
+在断开连接的状态下，Windows 上的 Visual Studio 仅执行 C# 编译阶段，而不会尝试执行链接或 AOT 编译、将应用打包到“.app”捆绑包或登录应用程序包 __ 。 （C# 编译阶段是罕见的性能瓶颈。）通过直接在 Visual Studio for Mac 的 Mac 生成主机上生成，尝试找出生成速度减缓的管道位置。
 
 
 此外，sluggishness 更为常见的位置之一是 Windows 计算机和 Mac 生成主机之间的网络连接。 这可能是由于网络的物理障碍、使用无线连接，或需要遍历饱和计算机（如 Mac-in-the-cloud 服务）。
@@ -131,7 +131,7 @@ Apple 提供用于 iOS 开发的模拟器，通过创建限制较少的代码运
   - 生成单个体系结构（例如 ARM64）的速度要快于 FAT 二进制文件（例如 ARMv7 + ARM64）
   - 避免在调试时优化 PNG 文件
   - 请考虑链接所有程序集。 优化每个程序集 
-  - 通过使用 `--dsym=false` 禁用调试符号的创建。 但是，应注意一点，禁用该设置将意味着崩溃报告只能在生成应用的计算机上进行符号化，且前提是该应用未去除。
+  - 通过使用  `--dsym=false` 禁用调试符号的创建。 但是，应注意一点，禁用该设置将意味着崩溃报告只能在生成应用的计算机上进行符号化，且前提是该应用未去除。
 
  
 应避免的某些事项：

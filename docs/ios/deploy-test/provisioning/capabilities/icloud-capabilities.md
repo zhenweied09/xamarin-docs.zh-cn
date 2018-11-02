@@ -1,19 +1,20 @@
 ---
-title: iCloud 功能
+title: Xamarin.iOS 中的 iCloud 功能
 description: 向应用程序添加功能通常需要其他预配设置。 本指南将介绍 iCloud 功能所需的设置。
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: e426423854e7c569576c374ea1284c4de099a2d1
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 13d0e7a70c91c6e3e422f2e91cefc403627a340c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105514"
 ---
-# <a name="icloud-capabilities"></a>iCloud 功能
+# <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS 中的 iCloud 功能
 
 _向应用程序添加功能通常需要其他预配设置。本指南将介绍 iCloud 功能所需的设置。_
 
@@ -106,6 +107,6 @@ iCloud 向 iOS 用户提供了一种方便简单的方式来存储内容并在�
 
 * 在应用中使用框架命名空间。
 * 将所需权利添加到应用。 有关所需权利以及添加方法的详细信息，请参阅[使用权利](~/ios/deploy-test/provisioning/entitlements.md)指南。
-* 在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。
+* 在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 **** **** 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。 __ 
 
 如果遇到与应用服务有关的问题，请参考主要指南的[故障排除](~/ios/deploy-test/provisioning/capabilities/index.md)部分。

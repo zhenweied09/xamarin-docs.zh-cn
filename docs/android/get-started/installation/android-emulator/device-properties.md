@@ -1,25 +1,27 @@
 ---
 title: 编辑 Android 虚拟设备属性
 description: 本文介绍了如何使用 Android Device Manager 编辑 Android 虚拟设备的配置文件属性。
+zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/30/2018
-ms.openlocfilehash: 75ac85c67825e5db1b663d00f10eee6d093bfc1f
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: 9007157cfd96b82a5781b3bdc3ffb4fe63f4e422
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119613"
 ---
 # <a name="editing-android-virtual-device-properties"></a>编辑 Android 虚拟设备属性
 
 本文介绍了如何使用 Android Device Manager 编辑 Android 虚拟设备的配置文件属性。
 
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="android-device-manager-on-windows"></a>Windows 上的 Android Device Manager
 
 Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性。 “新建设备”和“设备编辑”屏幕在第一列中列出了虚拟设备的属性，第二列中为每个属性相应的值（如此示例中所示）： 
 
@@ -41,8 +43,10 @@ Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性
 
     ![更改整数属性](device-properties-images/win/03-integer-value.png)
 
+::: zone-end
+::: zone pivot="macos"
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+## <a name="android-device-manager-on-macos"></a>macOS 上的 Android Device Manager
 
 Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性。 “新建设备”和“设备编辑”屏幕在第一列中列出了虚拟设备的属性，第二列中为每个属性相应的值（如此示例中所示）： 
 
@@ -64,7 +68,7 @@ Android Device Manager 支持编辑单个 Android 虚拟设备配置文件属性
 
     ![更改整数属性](device-properties-images/mac/03-integer-value.png)
 
------
+::: zone-end
 
 下表详细说明了“新建设备”和“设备编辑器”屏幕中列出的属性：
 

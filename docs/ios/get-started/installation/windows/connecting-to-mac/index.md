@@ -4,15 +4,15 @@ description: 本指南介绍如何使用“与 Mac 配对”将 Visual Studio 20
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: c4e28c1f3e058977d6f9072b70f17717a2b27585
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786072"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104084"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>通过“与 Mac 配对”进行 Xamarin.iOS 开发
 
@@ -226,7 +226,7 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 上面的示例中传递到 `msbuild` 的参数有：
 
 - `ServerAddress` - Mac 生成主机的 IP 地址。
-- `ServerUser` – 登录到 Mac 生成主机时要使用的用户名。
+- `ServerUser` – 登录到 Mac 生成主机时要使用的用户名。
   使用系统用户名而不是全名。
 - `ServerPassword` – 登录到 Mac 生成主机时要使用的密码。
  
@@ -246,6 +246,6 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 - [连接疑难解答](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
 - [Xamarin Mac 生成代理 - Xamarin University 闪电讲座](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Xamarin.iOS for Visual Studio 简介](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
-- [适用于 Windows 的远程 iOS 模拟器](~/tools/ios-simulator.md)
+- [适用于 Windows 的远程 iOS 模拟器](~/tools/ios-simulator/index.md)
 - [无线部署](~/ios/deploy-test/wireless-deployment.md)
 

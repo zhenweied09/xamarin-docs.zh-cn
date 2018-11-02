@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
-ms.openlocfilehash: 75e6d25f95a0a3f18c83fe73f67ad4a7797f0924
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.openlocfilehash: 504f20f6575e559d7c4965643b74b407d5e84de8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34470325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112337"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 要求
 
@@ -25,7 +25,7 @@ _Xamarin.Forms 平台和开发系统要求。_
 可对以下操作系统编写 Xamarin.Forms 应用程序：
 
 - iOS 8 或更高版本
-- Android 4.0.3 (API 15) 或更高版本（[详细信息](#android)）
+- Android 4.4 (API 19) 或更高版本（[详细信息](#android)）
 - Windows 10 通用 Windows 平台（[详细信息](#windows10)）
 
 假定开发人员熟悉 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 和[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
@@ -50,15 +50,15 @@ _Xamarin.Forms 平台和开发系统要求。_
 
 应安装最新的 Android SDK 工具和 Android API 平台。 可使用 [Android SDK 管理器](~/android/get-started/installation/android-sdk.md)更新到最新版本。
 
-此外，Android 项目的目标/编译版本必须设置为“使用最新安装的平台”。 但是，最低版本可设置为 API 15，因此可继续支持使用 Android 4.0.3（以及更高版本）的设备。 在“项目选项”中可设置这些值：
+此外，Android 项目的目标/编译版本必须设置为“使用最新安装的平台”。 但是，最低版本可设置为 API 19，因此可继续支持使用 Android 4.4（以及更高版本）的设备。 在“项目选项”中可设置这些值：
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 “项目选项”>“应用程序”>“应用程序属性”
 
 ![](installation-images/options-android-vs-sml.png "Visual Studio 中的 Android 生成选项")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 “生成”>“常规”
 

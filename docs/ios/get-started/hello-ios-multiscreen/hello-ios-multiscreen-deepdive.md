@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118963"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>深入了解 iOS 多屏显示
 
@@ -22,15 +22,13 @@ ms.locfileid: "39111220"
 在本指南中，将介绍模型-视图-控制器 (MVC) 模式以及其在 iOS 体系结构和导航中的角色。
 然后将深入探讨导航控制器，并学习如何使用它在 iOS 中提供熟悉的导航体验。
 
-<a name="Model_View_Controller" />
-
 ## <a name="model-view-controller-mvc"></a>模型视图控制器 (MVC)
 
-在[了解 iOS](~/ios/get-started/hello-ios/index.md) 教程中，介绍了 iOS 应用程序只有一个窗口，且视图控制器负责将其内容视图层次结构加载到窗口中。 如下图所示，在第二个 Phoneword 演练中，我们向应用程序添加了第二个屏幕，并在两个屏幕间传递了一些数据（一份电话号码列表）：
+在[了解 iOS](~/ios/get-started/hello-ios/index.md) 教程中，介绍了 iOS 应用程序只有一个“窗口”，且视图控制器负责将其“内容视图层次结构”加载到窗口中。 如下图所示，在第二个 Phoneword 演练中，我们向应用程序添加了第二个屏幕，并在两个屏幕间传递了一些数据（一份电话号码列表）：
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "此图描述了在两个屏幕之间传递数据的过程")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-本例中，在第一个屏幕中收集数据，然后从第一个视图控制器传递到第二个，由第二个屏幕显示。 屏幕、视图控制器和数据的该分布方式遵循模型-视图-控制器 (MVC) 模式。 在后面几节中，我们将讨论该模式的优势及其组件，并探讨如何将其应用到 Phoneword 应用程序中。
+本例中，在第一个屏幕中收集数据，然后从第一个视图控制器传递到第二个，由第二个屏幕显示。 屏幕、视图控制器和数据的分布方式遵循模型-视图-控制器 (MVC) 模式。 在后面几节中，我们将讨论该模式的优势及其组件，并探讨如何将其应用到 Phoneword 应用程序中。
 
 ### <a name="benefits-of-the-mvc-pattern"></a>MVC 模式的优势
 
@@ -68,7 +66,7 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 
 在 Phoneword 应用程序中，我们使用导航控制器来帮助管理多个屏幕之间的导航。 导航控制器是一个按 `UINavigationController` 类表示的专用 `UIViewController`。 导航控制器不会管理单个内容视图层次结构，转而管理其他视图控制器及其按导航工具栏形式显示的特定内容视图层次结构（包括标题、后退按钮和其他可选功能）。
 
-导航控制器在 iOS 应用程序中很常见，为主要的 iOS 应用程序（如**设置**应用）提供导航，如以下屏幕截图所示：
+导航控制器在 iOS 应用程序中很常见，为主要的 iOS 应用程序（如“设置”应用）提供导航，如以下屏幕截图所示：
 
  [![](hello-ios-multiscreen-deepdive-images/01.png "导航控制器提供 iOS 应用程序（例如此处所示的设置应用）的导航")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
@@ -97,11 +95,11 @@ MVC 完全不考虑数据持久性和模型的访问权限。 换言之，MVC �
 
 根视图控制器是指导航控制器堆栈中的第一个视图控制器，而且根视图控制器的内容视图层次结构是指要加载到窗口的第一个内容视图层次结构。 如果要在导航控制器堆栈上放置整个应用程序，可将无源的 Segue 迁移到导航控制器，然后将第一个屏幕的视图控制器设为根视图控制器，操作方式与在 Phoneword 应用中执行的一样：
 
- [![](hello-ios-multiscreen-deepdive-images/06.png "Sourceless Segue 将第一个屏幕视图控制器设置为根视图控制器")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/06.png "无源的 Segue 将第一个屏幕视图控制器设置为根视图控制器")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>其他导航选项
 
-导航控制器是在 iOS 中处理导航的常见方式，但不是唯一的选择。 例如，[选项卡栏控制器](~/ios/user-interface/controls/creating-tabbed-applications.md)可将应用程序拆分为不同功能区域，[拆分视图控制器](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)可用于创建母版/详细信息视图。 将导航控制器与这些其他导航模式结合使用可采用多种方式灵活显示和导航 iOS 中的内容。
+导航控制器是在 iOS 中处理导航的常见方式，但不是唯一的选择。 例如，[选项卡栏控制器](~/ios/user-interface/controls/creating-tabbed-applications.md)可将应用程序拆分为不同功能区域，[拆分视图控制器](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)可用于创建母版/详细信息视图。 将导航控制器与这些其他导航模式结合使用，可采用多种方式灵活显示和导航 iOS 中的内容。
 
 ## <a name="handling-transitions"></a>处理转换
 
@@ -153,7 +151,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 
 ### <a name="navigation-without-segues"></a>不使用 Segue 进行导航
 
-若要在代码中切换不同的视图控制器，则是否使用 Segue，操作都相同，但需手动完成几个步骤。
+若要在代码中切换不同的视图控制器，则无论是否使用 Segue，操作都相同，但需手动完成几个步骤。
 首先，使用 `this.NavigationController` 获取对导航控制器的引用，我们当前位于该控制器堆栈中。 然后，使用导航控制器的 `PushViewController` 方法，将下一个视图控制器手动推送到堆栈（即传入视图控制器），还可对转换进行动画处理（将其设为 `true`）。
 
 以下代码处理从 Phoneword 屏幕到“调用历史记录”屏幕的转换：
@@ -193,7 +191,7 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 Phoneword 应用程序引入了多个本指南中未提及的概念。 这些概念包括：
 
--  **视图控制器的自动创建** – 在**属性面板**中输入视图控制器的类名称时，iOS 设计器将检查该类是否存在并生成视图控制器支持的类。 若要深入了解此选项以及其他 iOS 设计器功能，请参阅 [iOS 设计器简介](~/ios/user-interface/designer/introduction.md)指南。
+-  **视图控制器的自动创建** – 在“属性面板”中输入视图控制器的类名称时，iOS 设计器将检查该类是否存在并生成视图控制器支持的类。 若要深入了解此选项以及其他 iOS 设计器功能，请参阅 [iOS 设计器简介](~/ios/user-interface/designer/introduction.md)指南。
 -  **表格视图控制器** - `CallHistoryController` 是一种表格视图控制器。 表格视图控制器包含表格视图、iOS 中最常见的布局和数据显示工具。 但是，表格不在本指南的讨论范围内。 有关表格视图控制器的详细信息，请参阅[使用表格和单元格](~/ios/user-interface/controls/tables/index.md)指南。
 -   **情节提要 ID** – 通过设置情节提要 ID，可在 Objective-C 中创建“视图控制器”类，其中包含情节提要中视图控制器的代码后置。 情节提要 ID 用于查找 Objective-C 类并在情节提要中执行视图控制器的实例化。 有关情节提要 ID 的详细信息，请参阅[情节提要简介](~/ios/user-interface/storyboards/index.md)指南。
 

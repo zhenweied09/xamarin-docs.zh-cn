@@ -1,18 +1,19 @@
 ---
 title: Xamarin.Forms 多屏显示快速入门
 description: 本文介绍如何通过添加第二个屏幕来扩展 Phoneword 应用程序，以跟踪应用程序的调用历史记录。
+zone_pivot_groups: platform
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 957c3e0d3b0637c8b536d920a05397bc711dfb7d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123474"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Xamarin.Forms 多屏显示快速入门
 
@@ -20,9 +21,9 @@ ms.locfileid: "38996176"
 
 [![](quickstart-images/intro-app-examples-sml.png "Phoneword 应用程序")](quickstart-images/intro-app-examples.png#lightbox "Phoneword Application")
 
-扩展 Phoneword 应用程序，如下所示：
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="update-the-app-with-visual-studio"></a>使用 Visual Studio 更新应用
 
 1. 启动 Visual Studio。 在起始页上，单击“打开项目…”，然后在“打开项目”对话框中选择 Phoneword 项目的解决方案文件：
 
@@ -160,11 +161,15 @@ ms.locfileid: "38996176"
 
 13. 在“解决方案资源管理器”中，右键单击“Phoneword.Droid”项目，然后选择“设为启用项目”。
 14. 在 Visual Studio 工具栏中，按“开始”按钮（类似“播放”按钮的三角形按钮），启动 Android 模拟器内的应用程序。
-15. 如果拥有 iOS 设备并符合 Xamarin.Forms 开发的 Mac 系统要求，请使用类似技术将应用部署到 iOS 设备。 或者，将应用部署到 [iOS 远程模拟器](~/tools/ios-simulator.md)。
+15. 如果拥有 iOS 设备并符合 Xamarin.Forms 开发的 Mac 系统要求，请使用类似技术将应用部署到 iOS 设备。 或者，将应用部署到 [iOS 远程模拟器](~/tools/ios-simulator/index.md)。
 
-    注意：所有模拟器都不支持电话呼叫。
+    > [!NOTE]
+    > 设备仿真器不支持电话呼叫。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
+
+## <a name="update-the-app-with-visual-studio-for-mac"></a>使用 Visual Studio for Mac 更新应用
 
 1. 启动 Visual Studio for Mac。 在起始页上单击“打开…”，然后在对话框中选择 Phoneword 项目的解决方案文件：
 
@@ -314,12 +319,12 @@ ms.locfileid: "38996176"
 
     ![](quickstart-images/xs/phone-result-android.png "Android 仿真器")
 
-    注意：Android 模拟器不支持电话呼叫。
+    > [!NOTE]
+    > 设备仿真器不支持电话呼叫。
 
------
+::: zone-end
 
 祝贺你！你已完成多屏幕 Xamarin.Forms 应用程序。 本指南的[下一个主题](~/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md)将回顾此演练中采用的步骤，以深入了解使用 Xamarin.Forms 进行页面导航和数据绑定的知识。
-
 
 ## <a name="related-links"></a>相关链接
 

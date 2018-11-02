@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/22/2018
-ms.openlocfilehash: a0c3179dc8e349c23d5521230e0957d1be9384ec
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 5cb388df6223ebfe0a196e7db38495bf7723943f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110643"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS 的自动预配
 
@@ -20,12 +20,12 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
 ## <a name="requirements"></a>要求
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - Visual Studio for Mac 7.3 或更高版本
 - Xcode 9 或更高版本
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - Visual Studio 2017 版本 15.7（或更高版本）
 
@@ -40,16 +40,20 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 开始自动签名进程前，应确保 Apple ID 已添加到 Visual Studio 中，如 [Apple 帐户管理](~/cross-platform/macios/apple-account-management.md)指南所述。 一旦添加了 Apple ID，便可以使用任意相关联的团队。 此操作可以指定团队的证书、配置文件和其他 ID。 团队 ID 还可用于创建预配配置文件中包含的应用 ID 的前缀。 Apple 可以通过此团队 ID 验证你的身份是否和你所述一致。
 
 > [!IMPORTANT]
-> 在开始之前，请确保登录 [iTunes Connect](https://itunesconnect.apple.com/) 或 [appleid.apple.com](https://appleid.apple.com) 以检查是否已接受最新的 Apple 帐户策略。 如果系统提示，请完成这些步骤以接受 Apple 的任何新帐户协议。 如果不接受自 2018 年 5 月起的隐私协议，那么在尝试设置设备时，将收到以下警报：
+> 在开始之前，请确保登录 [iTunes Connect](https://itunesconnect.apple.com/) 或 [appleid.apple.com](https://appleid.apple.com) 以检查是否已接受最新的 Apple 帐户策略。 如果系统提示，请完成这些步骤以接受 Apple 的任何新帐户协议。 如果不接受自 2018 年 5 月起的隐私协议，那么在尝试预配设备时，将看到以下警报之一：
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
->}
->```
+> }
+> ```
+> 或
+> ```
+> Authentication Service Is Unavailable
+> ```
 
 若要自动签名应用以在 iOS 设备上开发，请执行以下操作：
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. 在 Visual Studio for Mac 中打开 iOS 项目。
 
@@ -67,7 +71,7 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
 
     如果自动签名失败，则“自动签名板”将显示错误的原因。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 按照[与 Mac 配对](~/ios/get-started/installation/windows/connecting-to-mac/index.md)指南所述，将 Visual Studio 2017 与 Mac 配对。
 
@@ -99,6 +103,30 @@ Xamarin.iOS 成功安装后，iOS 开发的下一步是预配 iOS 设备。_本�
     - 此功能将添加到应用 ID，并生成具有更新后的应用 ID 的新预配配置文件。
     - 当前并非所有功能均受支持。 有关受支持功能的详细信息，请参阅[使用功能](~/ios/deploy-test/provisioning/capabilities/index.md)指南。
 
+## <a name="wildcard-app-ids"></a>通配符应用 ID
+
+从 Visual Studio for Mac 7.6 开始，自动预配将默认尝试创建并使用通配符应用 ID 和预配配置文件，而不是基于 Info.plist 中指定的捆绑包标识符的显式应用 ID。 通配符应用 ID 可减少 Apple 开发人员门户中要维护的配置文件和 ID 的数量。
+
+在某些情况下，应用的权利需要显式应用 ID。 以下权利不支持通配符应用 ID：
+
+- 应用组
+- 关联的域
+- Apple Pay
+- Game Center
+- HealthKit
+- HomeKit
+- 热点
+- 应用内购买
+- 多路径
+- NFC
+- 个人 VPN
+- 推送通知
+- 无线附件配置
+
+若应用使用其中一种权利，Visual Studio for Mac 将尝试创建显式（而不是通配符）应用 ID。
+
+> [!NOTE]
+> 使用通配符应用 ID 的自动配置目前仅适用于 Visual Studio for Mac。
 
 ## <a name="related-links"></a>相关链接
 

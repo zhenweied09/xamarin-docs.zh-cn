@@ -4,19 +4,19 @@ description: 本文档介绍了如何使用 Apple 的 Instruments 应用分析�
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
-ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
+ms.openlocfilehash: cef817c30dd20840c440cdbbdc8145047ad1fc0e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39182203"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110786"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>使用 Instruments 分析 Xamarin.iOS 应用程序
 
-Xcode **Instruments** 是一种工具，可用于分析设备或模拟器中的 Xamarin.iOS 应用。 Mono 使用其实时模型编译代码，并且 Instruments 也不会解读此类数据，因此难以处理对基于模拟器的应用程序使用 Instruments生成的输出。
+Xcode Instruments 是一种工具，可用于分析设备或模拟器中的 Xamarin.iOS 应用。 Mono 使用其实时模型编译代码，并且 Instruments 也不会解读此类数据，因此难以处理对基于模拟器的应用程序使用 Instruments生成的输出。
 鉴于此，本指南将集中讨论如何使用开发人员应用解读此文档中的 Instruments 输出。
 
 ## <a name="requirements"></a>要求

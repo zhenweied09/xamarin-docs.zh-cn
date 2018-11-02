@@ -3,15 +3,15 @@ title: 查找密钥存储的签名
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 46b43e6689f751c4fac1e8668234fce7f953521e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112442"
 ---
 # <a name="finding-your-keystores-signature"></a>查找密钥存储的签名
 
@@ -21,7 +21,7 @@ Xamarin.Android 应用的 MD5 或 SHA1 签名取决于用于对 APK 进行签名
 
 Xamarin.Android 使用相同的 **debug.keystore** 文件对所有调试版本进行签名。 初次安装 Xamarin.Android 时会生成此文件。以下步骤详细介绍了默认 Xamarin.Android **debug.keystore** 文件的 MD5 或 SHA1 签名查找过程。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 找到用于对应用进行签名的 Xamarin **debug.keystore** 文件。 默认情况下，用于对 Xamarin.Android 应用程序调试版本进行签名的密钥存储位于以下位置：
 
@@ -60,7 +60,7 @@ Certificate fingerprints:
 ```
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 找到用于对应用进行签名的 Xamarin **debug.keystore** 文件。 默认情况下，用于对 Xamarin.Android 应用程序调试版本进行签名的密钥存储位于以下位置：
 
@@ -114,20 +114,20 @@ KeyIdentifier [
 
 对于使用自定义 **.keystore** 文件签名的发布版本，过程与上述相同，将 Xamarin.Android 使用的 **debug.keystore** 文件替换为发布 **.keystore** 文件。 发布密钥存储文件创建后，替换为自己的密钥存储密码值和别名。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 使用 Visual Studio“分发”向导对 Xamarin.Android 应用进行签名时，产生的密钥存储位于以下位置：
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+C:\\Users\\USERNAME\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\alias\\alias.keystore
 
 例如，如果按照[创建新证书](~/android/deploy-test/signing/index.md#newcertvs)中的步骤创建新的签名密钥，则产生的示例密钥存储位于以下位置：
 
-**C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+C:\\Users\\USERNAME\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore
 
 有关对 Xamarin.Android 应用进行签名的详细信息，请参阅[对 Android 应用程序包进行签名](~/android/deploy-test/signing/index.md)。
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 通过 Visual Studio for Mac 的“签名并分发...”向导对应用签名时，产生的密钥存储位于以下位置：
 

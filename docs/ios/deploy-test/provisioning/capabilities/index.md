@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120939"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>使用 Xamarin.iOS 中的功能
 
@@ -73,7 +73,7 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 
 ## <a name="using-the-ide"></a>使用 IDE
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 功能添加到 Visual Studio for Mac 中的“Entitlements.plist”。 若要添加功能，请使用以下步骤：
 
@@ -93,7 +93,7 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 
     ![将功能添加到 entitlements.plist 文件](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 功能随即添加到“Entitlements.plist”。 若要在 Visual Studio 2017 中添加功能，请使用以下步骤：
 
@@ -206,12 +206,12 @@ Apple 向开发人员提供了一些功能，这些功能通常称为应用服�
 
 下表详细列出了一些可能会阻碍使用已启用的应用服务开发应用的常见问题。
 
--   确保创建了正确的 ID 并在 Apple 开发人员门户的“证书、ID 和配置文件”部分注册了 ID。
--   确保“服务”已添加到应用 ID（或扩展 ID），并且该服务已配置为使用 Apple 开发人员门户的“证书、ID 和配置文件”中所创建的上述应用组/商户 ID/容器。
--   确保已安装配置文件和应用 ID，且应用的“Info.plist”（在 Xamarin 项目中）正在使用上述配置的某个应用 ID。
--   确保应用的 **Entitlements.plist** 文件（在 Xamarin 项目中）启用了正确的服务。
+-   确保创建了正确的 ID 并在 Apple 开发人员门户的“证书、ID 和配置文件”部分注册了 ID ****。
+-   确保“服务”已添加到应用 ID（或扩展 ID），并且该服务已配置为使用 Apple 开发人员门户的“证书、ID 和配置文件”中所创建的上述应用组/商户 ID/容器 **** 。
+-   确保已安装配置文件和应用 ID，且应用的“Info.plist”（在 Xamarin 项目中）正在使用上述配置的某个应用 ID **** 。
+-   确保应用的 Entitlements.plist 文件（在 Xamarin 项目中）启用了正确的服务 **** 。
 -   确保 info.plist 中设置了正确的隐私密钥
--   在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist”。 对“调试”和“iOS 模拟器”生成来说，这不是默认设置。
+-   在应用的“iOS 捆绑包签名”中，确保“自定义权利”设置为“Entitlements.plist” **** ****。 对“调试”和“iOS 模拟器”生成来说，这不是默认设置 __ 。
 
 <a name="summary" />
 

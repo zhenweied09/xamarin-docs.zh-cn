@@ -4,15 +4,15 @@ description: TestFlight 现在归 Apple 所有，是进行 Xamarin.iOS 应用的
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: efb0a59ac43ca3e0c4959caa8478a51512e29a3a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785682"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120510"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>使用 TestFlight 来分发 Xamarin.iOS 应用
 
@@ -31,7 +31,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 - TestFlight 应用现是一款真正的 iOS 应用，因此运行速度更快。
 - Beta 测试完成后，可快速高效地移动应用进行审核；只需单击一次按钮。
 
-## <a name="requirements"></a>惠?
+## <a name="requirements"></a>要求
 
 只有 iOS 8.0 或更高版本的应用才可通过 TestFlight 进行测试。
 
@@ -98,7 +98,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
 首先，在 IDE 中生成[最终可分发文件](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)，然后通过“应用程序加载程序”或 Xcode 中的存档功能[将应用提交到 Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)。
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ###  <a name="create-an-archive"></a>创建存档
 
@@ -126,7 +126,7 @@ TestFlight 是 Apple 向 iOS 应用推出的 Beta 测试服务，仅可通过 [i
 
  有关这些步骤的详细信息，请参阅[将应用提交到 Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 部分。
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ###  <a name="building-your-final-distributable"></a>生成最终可分发文件
  由于 Visual Studio 的 Xamarin 插件不支持存档 Xamarin.iOS 应用以发布到 App Store，因此可采用两种方式通过 Visual Studio 发布 iOS 应用程序。 这些是：
