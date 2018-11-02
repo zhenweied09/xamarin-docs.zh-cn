@@ -92,7 +92,7 @@ Watch 应用包含描述应用程序的用户界面的情节提要。 任何控�
 
 ![](localization-images/storyboard-image.png "在情节提要中设置图像映像属性")
 
-注意： 因为所有 Apple Watch 都具有 Retina 显示，只有**@2x**映像的版本是必需的。 不需要指定**@2x**情节提要中。
+注意： 因为所有 Apple Watch 都具有 Retina 显示，只有 **@2x** 映像的版本是必需的。 不需要指定 **@2x** 情节提要中。
 
 ### <a name="watch-extension"></a>监视扩展
 

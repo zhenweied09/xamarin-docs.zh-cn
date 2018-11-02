@@ -33,8 +33,8 @@ Android 类如何与 Android 运行时类进行通信的详细信息请参阅[AP
 
 Android 应用程序包是包含 ZIP 容器 *.apk*文件扩展名。 Xamarin.Android 应用程序包具有相同的结构和布局作为常规 Android 包，增加了以下信息：
 
--   （包含 IL） 的应用程序程序集都*存储*内未压缩*程序集*文件夹。 在过程中启动版本中的生成 *.apk*是*mmap()* ed 到过程和程序集是从内存中加载。 这将允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：* 程序集位置信息，例如[Assembly.Location](xref:System.Reflection.Assembly.Location)并[Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
-    *不能依赖*版本中生成。 为不同的文件系统条目不存在，并且必须没有可用的位置。
+-   （包含 IL） 的应用程序程序集都*存储*内未压缩*程序集*文件夹。 在过程中启动版本中的生成 *.apk*是*mmap()* ed 到过程和程序集是从内存中加载。 这将允许更快的应用程序启动，因为程序集不需要在执行之前提取。 - *注意：* 程序集位置信息，例如[Assembly.Location](xref:System.Reflection.Assembly.Location)并 [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+    *不能依赖* 版本中生成。 为不同的文件系统条目不存在，并且必须没有可用的位置。
 
 
 -   包含 Mono 运行时本机库中有 *.apk* 。 Xamarin.Android 应用程序必须包含本机库所需目标 Android 体系结构，例如*armeabi* ， *armeabi-v7a* ， *x86* 。 Xamarin.Android 应用程序不能在平台上运行，除非它包含相应的运行时库。
