@@ -1,22 +1,22 @@
 ---
 title: 可重用 EventToCommandBehavior
-description: 行为可用于将命令与不设计与命令进行交互的控件相关联。 本文演示如何使用 Xamarin.Forms 行为事件激发时调用命令。
+description: 行为可用于将命令与不设计与命令进行交互的控件相关联。 本文演示如何创建和使用 Xamarin.Forms 行为以事件激发时调用命令。
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 2609ce4ea677c6b03021a919599c250abff663a3
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675284"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911549"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>可重用 EventToCommandBehavior
 
-_行为可用于将命令与不设计与命令进行交互的控件相关联。本文演示如何使用 Xamarin.Forms 行为事件激发时调用命令。_
+_行为可用于将命令与不设计与命令进行交互的控件相关联。本文演示如何创建和使用 Xamarin.Forms 行为以事件激发时调用命令。_
 
 ## <a name="overview"></a>概述
 
@@ -31,6 +31,9 @@ _行为可用于将命令与不设计与命令进行交互的控件相关联。�
 
 - **CommandParameter** – `object` ，将传递到该命令。
 - **转换器**– [ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter)实现，它将更改的事件参数数据的格式，如之间传递*源*和*目标*由绑定引擎。
+
+> [!NOTE]
+> `EventToCommandBehavior`是一个自定义类，可以位于[EventToCommand 行为示例](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)，并不是 Xamarin.Forms 的一部分。
 
 ## <a name="creating-the-behavior"></a>创建行为
 

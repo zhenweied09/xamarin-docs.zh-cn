@@ -1,22 +1,22 @@
 ---
 title: 可重用 EffectBehavior
-description: 行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。 本文演示如何使用 Xamarin.Forms 行为添加到控件的效果。
+description: 行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。 本文演示如何创建和使用 Xamarin.Forms 行为添加到控件的效果。
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 1ce7eda6f556041cbffc3793b00e8e2cba44d3d0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995776"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911588"
 ---
 # <a name="reusable-effectbehavior"></a>可重用 EffectBehavior
 
-_行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。本文演示如何使用 Xamarin.Forms 行为添加到控件的效果。_
+_行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。本文演示如何创建和使用 Xamarin.Forms 行为添加到控件的效果。_
 
 ## <a name="overview"></a>概述
 
@@ -28,6 +28,9 @@ _行为是将效果添加到控件时，删除处理代码中的代码隐藏文�
 - **名称**– 的值[ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute)影响类的属性。
 
 有关效果的详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+
+> [!NOTE]
+> `EffectBehavior`是一个自定义类，可以位于[效果行为示例](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)，并不是 Xamarin.Forms 的一部分。
 
 ## <a name="creating-the-behavior"></a>创建行为
 
