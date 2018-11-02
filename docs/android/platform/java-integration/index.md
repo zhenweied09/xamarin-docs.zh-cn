@@ -27,7 +27,7 @@ _Java 生态系统包括组件的不同和巨大的集合。许多这些组件�
 
 -   **创建 Java 绑定库**&ndash;使用此技术，Xamarin.Android 项目用于创建C#Java 类型的包装。 然后，Xamarin.Android 应用程序可以引用C#包装器创建此项目，然后使用`.jar`文件。 
 
--   **Java 本机接口** &ndash; *Java 本机**接口*(JNI) 是一个框架，允许非 Java 代码 (如 c + + 或C#) 调用或调用通过运行的 Java 代码JVM 内部。 
+-   **Java 本机接口** &ndash; *Java 本机* *接口*(JNI) 是一个框架，允许非 Java 代码 (如 c + + 或C#) 调用或调用通过运行的 Java 代码JVM 内部。 
 
 -   **将代码移植**&ndash;此方法包括获取 Java 源代码，并再将其转换为C#。 这可以手动或通过使用如锐化的自动化的工具。 
 

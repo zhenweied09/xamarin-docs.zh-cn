@@ -140,7 +140,7 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
 ## <a name="data-source"></a>“数据源”
 
-与其他部分的 Io，如`UITableView`并`MKMapView`，`UICollectionView`获取从其数据*数据源*，通过 Xamarin.iOS 中公开了此**`UICollectionViewDataSource`** 类。 此类负责提供内容到`UICollectionView`如：
+与其他部分的 Io，如`UITableView`并`MKMapView`，`UICollectionView`获取从其数据 *数据源*，通过 Xamarin.iOS 中公开了此 **`UICollectionViewDataSource`** 类。 此类负责提供内容到`UICollectionView`如：
 
 -  **单元格**– 从返回`GetCell`方法。
 -  **补充视图**– 从返回`GetViewForSupplementaryElement`方法。
