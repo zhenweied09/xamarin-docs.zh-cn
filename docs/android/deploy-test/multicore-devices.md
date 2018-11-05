@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: c4fba219b7fbfef9930539f0e25fda74ae1299b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a2739d1a3848303b3086c23c0a28a889250ee2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675505"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>多核设备和 Xamarin.Android
 
 _Android 可以在几种不同的计算机体系结构上运行。本文档讨论可为一个 Xamarin.Android 应用程序部署的不同 CPU 体系结构。本文还将介绍如何打包 Android 应用程序以支持不同的 CPU 体系结构。将介绍应用程序二进制接口 (ABI)，并且将提供有关在 Xamarin.Android 应用程序中使用哪些 ABI 的指导。_
-
 
 ## <a name="overview"></a>概述
 
@@ -25,19 +24,17 @@ Android 允许创建“胖二进制文件”，这是一个 `.apk` 文件，其�
 
 具体而言，每个 Android 应用程序将至少支持一个嵌入式应用程序二进制接口 (EABI)。 EABI 是特定于嵌入式软件程序的约定。 典型的 EABI 将描述如下内容：
 
--   CPU 指令集。
+- CPU 指令集。
 
--   内存的字节排序方式在运行时存储和加载。
+- 内存的字节排序方式在运行时存储和加载。
 
--   对象文件和程序库的二进制格式，以及这些文件和库中允许或支持的内容类型。
+- 对象文件和程序库的二进制格式，以及这些文件和库中允许或支持的内容类型。
 
--   用于在应用程序代码和系统之间传递数据的各种约定（例如：调用函数时如何使用寄存器和/或堆栈、对齐约束等）
+- 用于在应用程序代码和系统之间传递数据的各种约定（例如：调用函数时如何使用寄存器和/或堆栈、对齐约束等）
 
--   枚举类型、结构、字段和数组的对齐和大小约束。
+- 枚举类型、结构、字段和数组的对齐和大小约束。
 
--   运行时可用于计算机代码的函数符号列表，通常来自一组专门选择的库。
-
-
+- 运行时可用于计算机代码的函数符号列表，通常来自一组专门选择的库。
 
 ### <a name="armeabi-and-thread-safety"></a>armeabi 和线程安全性
 
@@ -48,12 +45,9 @@ Android 允许创建“胖二进制文件”，这是一个 `.apk` 文件，其�
 > [!NOTE]
 > Xamarin.Android 将确保 `.so` 以正确的顺序添加到 APK。 此 bug 对 Xamarin.Android 的用户来说应该不是问题。
 
-
 ### <a name="abi-descriptions"></a>ABI 说明
 
 Android 支持的每个 ABI 均由唯一名称标识。
-
-
 
 #### <a name="armeabi"></a>armeabi
 
@@ -61,48 +55,36 @@ Android 支持的每个 ABI 均由唯一名称标识。
 
 **注意**：Xamarin.Android 的 `armeabi` 代码不具线程安全性，不应在多 CPU `armeabi-v7a` 设备上使用（如下所述）。 在单核 `armeabi-v7a` 设备上使用 `aremabi` 代码是安全的。
 
-
-
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 这是另一种基于 ARM 的 CPU 指令集，可扩展上述 `armeabi` EABI。 `armeabi-v7a` EABI 支持硬件浮点操作和多个 CPU (SMP) 设备。 使用 `armeabi-v7a` EABI 的应用程序与使用 `armeabi` 的应用程序相比，可以获得极大的性能改进。
 
 **注意：**`armeabi-v7a` 计算机代码将不会在 ARMv5 设备上运行。
 
-
-
 #### <a name="arm64-v8a"></a>arm64-v8a
 
 这是基于 ARMv8 CPU 体系结构的 64 位指令集。 此体系结构用于 *Nexus 9*。
 Xamarin.Android 5.1 为此体系结构提供实验性支持（有关详细信息，请参阅[实验性功能](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)）。
 
-
-
 #### <a name="x86"></a>x86
 
 这是支持通常名为 x86 或 IA-32 的指令集的 CPU 的 ABI 名称。 此 ABI 对应于 Pentium Pro 指令集的指令，包括 MMX、SSE、SSE2 和 SSE3 指令集。 不包括任何其他可选的 IA-32 指令集扩展，例如：
 
--  MOVBE 指令。
--  补充 SSE3 扩展 (SSSE3)。
--  SSE4 的任何变体。
+- MOVBE 指令。
+- 补充 SSE3 扩展 (SSSE3)。
+- SSE4 的任何变体。
 
-
-注意：虽然 Google TV 在 x86 上运行，但不受 Android 的 NDK 支持
-
-
+注意：虽然 Google TV 在 x86 上运行，但不受 Android 的 NDK 支持。
 
 #### <a name="x8664"></a>x86_64
 
 这是支持 64 位 x86 指令集（也称为 x64 或 AMD64）的 CPU 的 ABI 名称。 Xamarin.Android 5.1 为此体系结构提供实验性支持（有关详细信息，请参阅[实验性功能](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)）。
-
 
 #### <a name="mips"></a>mips
 
 这是基于 MIPS 的至少支持 `MIPS32r1` 指令集的 CPU 的 ABI 名称。 Android 不支持 MIPS 16 和 `micromips`。
 
 注意：Xamarin.Android 目前不支持 MIPS 设备，但在未来的版本中将支持。
-
-
 
 #### <a name="apk-file-format"></a>APK 文件格式
 
@@ -112,42 +94,36 @@ Android 应用程序包是包含 Android 应用程序所需的所有代码、资
 
 `.apk` 文件内容的快速说明：
 
--   **AndroidManifest.xml** &ndash; 这是 `AndroidManifest.xml` 文件，采用二进制 XML 格式。
+- AndroidManifest.xml &ndash; 这是 `AndroidManifest.xml` 文件，采用二进制 XML 格式。
 
--   **classes.dex** &ndash; 这包含应用程序代码，编译为 Android 运行时 VM 使用的 `dex` 文件格式。
+- classes.dex &ndash; 这包含应用程序代码，编译为 Android 运行时 VM 使用的 `dex` 文件格式。
 
--   **resources.arsc** &ndash; 此文件包含应用程序的所有预编译资源。
+- resources.arsc &ndash; 此文件包含应用程序的所有预编译资源。
 
--   **lib** &ndash; 此目录包含每个 ABI 的编译代码。 它将包含上一节中所述的每个 ABI 的一个子文件夹。 在上面的屏幕截图中，所涉及的 `.apk` 都具有 `armeabi-v7a` 和 `x86` 的本机库。
+- **lib** &ndash; 此目录包含每个 ABI 的编译代码。 它将包含上一节中所述的每个 ABI 的一个子文件夹。 在上面的屏幕截图中，所涉及的 `.apk` 都具有 `armeabi-v7a` 和 `x86` 的本机库。
 
--   **META-INF** &ndash; 此目录（如果存在）用于存储签名信息、包和扩展配置数据。
+- META-INF &ndash; 此目录（如果存在）用于存储签名信息、包和扩展配置数据。
 
--   **res** &ndash; 此目录包含未编译为 `resources.arsc` 的资源。
+- res &ndash; 此目录包含未编译为 `resources.arsc` 的资源。
 
 > [!NOTE]
 > 文件 `libmonodroid.so` 是所有 Xamarin.Android 应用程序所需的本机库。
-
-
 
 #### <a name="android-device-abi-support"></a>Android 设备 ABI 支持
 
 每个 Android 设备支持在最多两个 ABI 中执行本机代码：
 
--   **“主”ABI** &ndash; 这对应于系统映像中使用的计算机代码。
+- “主”ABI &ndash; 这对应于系统映像中使用的计算机代码。
 
--   **“辅助”ABI** &ndash; 这是也受系统映像支持的可选 ABI。
-
+- “辅助”ABI &ndash; 这是也受系统映像支持的可选 ABI。
 
 例如，典型的 ARMv5TE 设备将仅具有主 ABI `armeabi`，而 ARMv7 设备将指定主 ABI `armeabi-v7a` 和辅助 ABI `armeabi`。 典型的 x86 设备将仅指定主 ABI `x86`。
-
 
 ### <a name="android-native-library-installation"></a>Android 本机库安装
 
 在包安装时，`.apk` 中的本机库被提取到应用的本机库目录中，通常为 `/data/data/<package-name>/lib`，此后称为 `$APP/lib`。
 
 Android 的本机库安装行为在 Android 版本之间会发生显著变化。
-
-
 
 #### <a name="installing-native-libraries-pre-android-40"></a>安装本机库：Android 4.0 之前
 
@@ -178,15 +154,13 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-
 #### <a name="installing-native-libraries-android-40-ndash-android-403"></a>安装本机库：Android 4.0 &ndash; Android 4.0.3
 
 Android 4.0 Ice Cream Sandwich 更改了提取逻辑。 它将枚举所有本机库，查看是否已经提取文件的基本名称，并且如果满足以下两个条件，则将提取该库：
 
--   它还没有被提取。
+- 它还没有被提取。
 
--   本机库的 ABI 匹配目标的主或辅助 ABI。
-
+- 本机库的 ABI 匹配目标的主或辅助 ABI。
 
 满足这些条件即允许“合并”行为；也就是说，如果我们有一个具有以下内容的 `.apk`：
 
@@ -239,26 +213,23 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-
 ### <a name="xamarinandroid-and-abis"></a>Xamarin.Android 和 ABI
 
 Xamarin.Android 支持以下体系结构：
 
--  `armeabi`
--  `armeabi-v7a`
--  `x86`
+- `armeabi`
+- `armeabi-v7a`
+- `x86`
 
 Xamarin.Android 为以下体系结构提供实验性支持：
 
--  `arm64-v8a`
--  `x86_64`
+- `arm64-v8a`
+- `x86_64`
 
-
-请注意，在 64 位设备上运行应用不需要 64 位运行时。 有关 Xamarin.Android 5.1 中的实验性功能的详细信息，请参阅[实验性功能](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features)。
+> [!NOTE]
+> 自 2018 年 8 月起新应用需要面向 API 级别 26，自 2019 年 8 月起，除 32 位版本之外，应用还[需要提供 64 位版本](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)。
 
 Xamarin.Android 当前不支持 `mips`。
-
-
 
 ### <a name="declaring-supported-abis"></a>声明受支持的 ABI
 
@@ -273,17 +244,14 @@ Xamarin.Android 当前不支持 `mips`。
 
 在某些可能需要声明额外的 ABI 支持的情况，例如以下情况：
 
--   将应用程序部署到 `x86` 设备。
+- 将应用程序部署到 `x86` 设备。
 
--   将应用程序部署到 `armeabi-v7a` 设备以确保线程安全性。
-
-
+- 将应用程序部署到 `armeabi-v7a` 设备以确保线程安全性。
 
 ## <a name="summary"></a>总结
 
 本文档讨论可运行 Android 应用程序的不同 CPU 体系结构。 它介绍了应用程序二进制接口以及 Android 如何使用它来支持不同的 CPU 体系结构。
 然后接着讨论如何在 Xamarin.Android 应用程序中指定 ABI 支持，并强调了在仅适用于 `armeabi` 的 `armeabi-v7a` 设备上使用 Xamarin.Android 应用程序时出现的问题。
-
 
 ## <a name="related-links"></a>相关链接
 

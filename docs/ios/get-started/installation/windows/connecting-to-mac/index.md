@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: d55760f1fdd6912b973cc1e7a65415a0f2c6eb47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: befeb92529aa066f6106e855ed1fbdfe49c51e66
+ms.sourcegitcommit: c59e1882aa4af3ce36fba5c6eaeb5cf73a9cb289
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104084"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50919037"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>通过“与 Mac 配对”进行 Xamarin.iOS 开发
 
@@ -22,7 +22,7 @@ ms.locfileid: "50104084"
 
 生成本机 iOS 应用程序需要使用仅在 Mac 上运行的 Apple 生成工具。 因此，Visual Studio 2017 必须连接到可访问网络的 Mac，以生成 Xamarin.iOS 应用程序。
 
-Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成主机、对其进行验证并记住生成主机，以便基于 Windows 的 iOS 开发人员能够高效工作。 
+Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成主机、对其进行验证并记住生成主机，以便基于 Windows 的 iOS 开发人员能够高效工作。
 
 “与 Mac 配对”启用以下开发工作流：
 
@@ -40,12 +40,14 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
 
 > [!NOTE]
 > 
-> 按照本指南中的说明进行操作之前，请完成以下步骤： 
+> 按照本指南中的说明进行操作之前，请完成以下步骤：
 > 
 > - 在 Windows 计算机上，[安装 Visual Studio 2017](~/cross-platform/get-started/installation/windows.md)
 > - 在 Mac 上，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) 和 [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+>    - _安装后必须手动打开 Xcode_，以便它可以添加任何其他的组件。
 >
 > 如果不想安装 Visual Studio for Mac，Visual Studio 2017 可以使用 Xamarin.iOS 和 Mono 自动配置 Mac 生成主机。
+> 仍然需安装和运行 Xcode。
 > 有关详细信息，请参阅[自动预配 Mac](#automatic-mac-provisioning)。
 
 ## <a name="enable-remote-login-on-the-mac"></a>启用 Mac 上的远程登录
@@ -87,7 +89,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
 3. 选择列表中的 Mac。 单击“连接” 。 
 
 4. 输入用户名和密码。
-    
+
     - 第一次连接到某特定 Mac 时，会提示为该计算机输入用户名和密码：
 
         ![为 Mac 输入用户名和密码](images/auth.png "Entering a username and password for the Mac")
@@ -102,7 +104,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
     [从 Visual Studio 2017 版本 15.6 开始](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning)，Visual Studio 2017 会根据需要在已连接的 Mac 生成主机上安装或更新 Mono 和 Xamarin.iOS（请注意，仍须手动安装 Xcode）。 有关详细信息，请参阅[自动预配 Mac ](#automatic-mac-provisioning)。
 
 6. 查找连接状态图标。
-    
+
     - Visual Studio 2017 连接到 Mac 时，“与 Mac 配对”对话框中该 Mac 的项会显示一个图标，指示当前已连接该设备：
 
         ![已连接的 Mac](images/connected.png "A connected Mac")
@@ -112,7 +114,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
       > [!TIP]
       > 右键单击“与 Mac 配对”列表中的任意 Mac 会打开上下文菜单，可在菜单中选择“连接...”、“忘记此 Mac”或“断开连接”：
       >
-      > ![“与 Mac 配对”上下文菜单](images/contextmenu.png "The Pair to Mac context menus") 
+      > ![“与 Mac 配对”上下文菜单](images/contextmenu.png "The Pair to Mac context menus")
       >
       > 如果选择“忘记此 Mac”，系统将忘记所选 Mac 的凭据。 若要重新连接到此 Mac，将需要重新输入用户名和密码。
 
@@ -131,7 +133,7 @@ Visual Studio 2017 的“与 Mac 配对”功能会发现、连接到 Mac 生成
         [![“系统首选项”>“共享”中的 Mac 的 IP 地址](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
 
     - 或者，使用命令行。 在终端，发出此命令： 
-   
+
         ```bash
         $ ipconfig getifaddr en0
         196.168.1.8
@@ -177,7 +179,7 @@ Visual Studio 2017 [连接到 Mac](#connect-to-the-mac-from-visual-studio-2017) 
 |---|---|---|---|
 |Mono|[![缺少 Mono 安装](images/mono-missing.png "Missing Mono installation")](images/mono-missing-large.png#lightbox)|[![下载 Mono](images/mono-downloading.png "Downloading Mono")](images/mono-downloading-large.png#lightbox)|[![安装 Mono](images/mono-installing.png "Installing Mono")](images/mono-installing-large.png#lightbox)|
 
-### <a name="xamarinios"></a>Xamarin.iOS 
+### <a name="xamarinios"></a>Xamarin.iOS
 
 “与 Mac 配对”升级 Mac 上的 Xamarin.iOS，以匹配 Windows 计算机上安装的版本。
 
@@ -216,22 +218,23 @@ Visual Studio 2017 [连接到 Mac](#connect-to-the-mac-from-visual-studio-2017) 
 
 如果在使用“自动预配 Mac”的过程中遇到任何问题，请查看存储在 %LOCALAPPDATA%\Xamarin\Logs\15.0 中的 Visual Studio 2017 IDE 日志。 这些日志可能包含错误消息，可帮助更好地诊断失败或获取支持。
 
-## <a name="build-ios-apps-from-the-windows-command-line"></a>从 Windows 命令行生成 iOS 应用 
+## <a name="build-ios-apps-from-the-windows-command-line"></a>从 Windows 命令行生成 iOS 应用
 
 “与 Mac 配对”支持从命令行生成 Xamarin.iOS 应用程序。 例如:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
 ```
+
 上面的示例中传递到 `msbuild` 的参数有：
 
 - `ServerAddress` - Mac 生成主机的 IP 地址。
 - `ServerUser` – 登录到 Mac 生成主机时要使用的用户名。
   使用系统用户名而不是全名。
 - `ServerPassword` – 登录到 Mac 生成主机时要使用的密码。
- 
+
 > [!NOTE]
-> Visual Studio 2017 将 `msbuild` 存储在以下目录：C:\Program Files (x86)\Microsoft Visual Studio\2017\<Version>\MSBuild\15.0\Bin
+> Visual Studio 2017 将 `msbuild` 存储在以下目录：C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin
 
 “与 Mac 配对”第一次从 Visual Studio 2017 或命令行登录到特定的 Mac 生成主机时，会设置 SSH 密钥。 借助这些密钥，之后登录时无需使用用户名或密码。 新创建的密钥存储在 %LOCALAPPDATA%\Xamarin\MonoTouch。
 
@@ -248,4 +251,3 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 - [Xamarin.iOS for Visual Studio 简介](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [适用于 Windows 的远程 iOS 模拟器](~/tools/ios-simulator/index.md)
 - [无线部署](~/ios/deploy-test/wireless-deployment.md)
-
