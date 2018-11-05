@@ -128,7 +128,7 @@ BasicEffect effect;
 接下来，修改`Initialize`方法以定义效果：
 
 ```csharp
-protected override void Initialize ()
+ protected override void Initialize ()
 {
     floorVerts = new VertexPositionTexture[6];
 
