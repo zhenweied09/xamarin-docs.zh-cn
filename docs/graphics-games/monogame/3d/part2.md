@@ -43,6 +43,7 @@ _MonoGame 支持使用顶点数组来定义3D对象在每个点上的渲染方�
 ## <a name="creating-a-project"></a>创建项目
 
 首先，我们将下载一个项目作为我们的起点。 我们将使用[可在此处找到](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/)的模型项目。
+
 下载并解压缩后，打开并运行该项目。 我们会在屏幕上看到六个机器人模型：
 
 ![](part2-images/image4.png "屏幕上绘制的六个机器人模型")
@@ -66,7 +67,6 @@ protected override void Draw(GameTime gameTime)
 我们将创建一个顶点数组来定义几何体。 在本演练中，我们将创建一个3D平面（3D空间中的正方形，而不是飞机，英文中plane也有飞机的意思）。 虽然我们的平面有四个边和四个角，但它将由两个三角形组成，每个三角形需要三个顶点。 因此，我们将总共定义六个点。
 
 到目前为止，我们一直在讨论一般意义上的顶点，但 MonoGame 提供了一些可用于顶点的标准结构：
-
 
 - `Microsoft.Xna.Framework.Graphics.VertexPositionColor`
 - `Microsoft.Xna.Framework.Graphics.VertexPositionColorTexture`
