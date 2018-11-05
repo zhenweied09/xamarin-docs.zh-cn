@@ -107,7 +107,6 @@ protected override void Initialize ()
 
 为了帮助直观地观察顶点，请参考下图：
 
-
 ![](part2-images/image6.png "若要帮助直观地显示顶点将如下所示，请考虑此关系图")
 
 我们需要依靠我们的图来使顶点可视化，直到我们完成渲染代码的实现。
@@ -191,7 +190,6 @@ void DrawGround()
 
 我们需要在我们的`Game1.Draw`方法中调用`DrawGround`:
 
-
 ```csharp
 protected override void Draw (GameTime gameTime)
 {
@@ -205,11 +203,9 @@ protected override void Draw (GameTime gameTime)
 
 应用程序在执行时将显示以下内容：
 
-
 ![](part2-images/image7.png "应用程序执行时将显示此")
 
 让我们来看看上面代码中的一些细节。
-
 
 ### <a name="view-and-projection-properties"></a> View和Projection属性
 
