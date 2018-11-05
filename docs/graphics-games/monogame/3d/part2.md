@@ -231,7 +231,6 @@ protected override void Draw (GameTime gameTime)
 
 ## <a name="rendering-with-a-texture"></a>使用纹理渲染
 
-
 此时，我们的应用程序渲染出了一个白色平面（在透视模式下）。 接下来，我们将为渲染平面时使用的项目添加纹理。
 
 为了简单起见，我们将.png直接添加到项目中，而不是使用 MonoGame Pipeline 工具。 为此，请将[此.png 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)下载到您的计算机上。 下载完成后，右键单击解决方案面板中的**Content**文件夹，然后选择**Add>Add Files...**。 如果是在Android上工作，则此文件夹将位于Android工程中的**Assets**文件夹下。 如果在iOS上，那么此文件夹将位于iOS工程的根目录中。 导航到保存**checkerboard.png**的位置，然后选择该文件。 选择将文件复制到这个目录中。
