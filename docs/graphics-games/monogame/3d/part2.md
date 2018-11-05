@@ -307,7 +307,6 @@ void DrawGround()
 最后，我们需要修改`Game1.Initialize`方法以在顶点上指定纹理坐标：
 
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -337,7 +336,6 @@ protected override void Initialize ()
 ```
 
 如果我们运行此代码，我们可以看到我们的平面现在会显示出一个棋盘图案：
-
 
 ![](part2-images/image8.png "在平面现在显示棋盘图案")
 
@@ -382,7 +380,6 @@ protected override void Initialize ()
 ```
 
 这会导致纹理重复 20 次：
-
 
 ![](part2-images/image10.png "这会导致重复 20 次的纹理")
 
