@@ -388,7 +388,6 @@ protected override void Initialize ()
 
 现在，我们的平面被正确地渲染了，我们可以重新添加模型来查看一个整体的情况。 首先，我们将绘制模型的代码重新添加到我们的`Game1.Draw`方法中（包含已修改好的位置）：
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -410,7 +409,6 @@ protected override void Draw(GameTime gameTime)
 
 我们还将在`Game1`类中创建一个`Vector3`实例来表示我们相机的位置。 我们将在`checkerboardTexture`声明下添加一个字段：
 
-
 ```csharp
 ...
 Texture2D checkerboardTexture;
@@ -419,7 +417,6 @@ Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 接下来，从`DrawModel`方法中删除局部变量`cameraPosition`：
-
 
 ```csharp
 void DrawModel(Vector3 modelPosition)
@@ -443,7 +440,6 @@ void DrawModel(Vector3 modelPosition)
 
 同样从`DrawGround`方法中删除局部变量`cameraPosition`：
 
-
 ```csharp
 void DrawGround()
 {
@@ -458,7 +454,6 @@ void DrawGround()
 ```
 
 现在，如果我们运行代码，我们可以同时看到模型和地面：
-
 
 ![](part2-images/image11.png "模型和一开始显示在同一时间")
 
@@ -480,6 +475,3 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 - [棋盘文件 （示例）](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
 - [已完成的项目 （示例）](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)
-
-
-
