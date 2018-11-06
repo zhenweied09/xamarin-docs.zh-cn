@@ -16,57 +16,57 @@ ms.locfileid: "38998437"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Model-View-ViewModel模式
 
-Xamarin.Forms开发人员通常通过XAML创建用户界面，并且在code-behind文件添加代码来操作用户界面。 随着应用程序进行修改，代码量和领域的增加，可能出现复杂的维护问题。 这些问题包括 UI 控件和业务逻辑之间的紧密耦合，这会增加修改UI的代价和进行单元测试的难度。
+Xamarin.Forms 开发人员通常通过在 XAML 创建用户界面，并且在 code-behind 文件添加代码来操作用户界面。 随着应用程序进行修改，代码量和范围的增加，可能出现复杂的维护问题。 这些问题包括 UI 控件和业务逻辑之间的紧密耦合，这会增加修改 UI 的代价和进行单元测试的难度。
 
-Model-View-ViewModel (MVVM) 模式有助于从应用程序的用户界面 (UI) 完全隔离业务和展现逻辑。 维护应用程序逻辑与UI之间的完全分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和UI设计人员在开发一个应用程序的各自部分时更轻松地进行协作。
+Model-View-ViewModel (MVVM) 模式有助于从应用程序的用户界面 (UI) 完全隔离业务和展现逻辑。 维护应用程序逻辑与 UI 之间的完全隔离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和 UI 设计人员在开发一个应用程序的各自部分时更轻松地进行协作。
 
 ## <a name="the-mvvm-pattern"></a>MVVM 模式
 
-MVVM 模式中有三个核心部分： Model、 View和ViewModel。 每个用于不同用途。 图 2-1 显示了三个组件之间的关系。
+MVVM 模式中有三个核心部分： Model、 View 和 ViewModel。 每个用于不同用途。 图 2-1 显示了三个组件之间的关系。
 
 ![](mvvm-images/mvvm.png "MVVM 模式")
 
 **图 2-1**:: MVVM 模式
 
-除了了解每个部分的职责，还有必要了解它们如何互相交互。 概括的来说，View"知道"ViewModel的存在，以及ViewModel"知道"Model，但Model不会意识到ViewModel的存在，并且ViewModel不会意识到View。 因此，ViewModel把Model从View中隔离开来，并允许Model独立于View发展。
+除了了解每个部分的职责，还有必要了解它们如何互相交互。 概括的来说，View "知道" ViewModel 的存在，以及 ViewModel "知道" Model，但 Model 不会意识到 ViewModel的存在，并且 ViewModel 也不会意识到 View。 因此，ViewModel 把 Model 从 View 中隔离开来，并允许 Model 独立于 View 发展。
 
 使用 MVVM 模式的好处是，如下所示：
 
 -   如果一个现有 Model 实现封装了现有业务逻辑，它可以难以修改或者带来的风险较高。 在这样的情景下，ViewModel 可以充当 Model 类的适配器，并使你可以避免对 Model 代码进行任何重大更改。
--   开发人员可以为 ViewModel 和 Model 创建单元测试，而无需依赖于对应的 View。 针对ViewModel 的单元测试可以使用跟 View 相同的功能。
--   应用程序 UI可以被重新设计，而不必触动代码，前提是该 View 完全在 XAML 中实现。 因此，新版本的 View 应该适用于已有的 ViewModel。
+-   开发人员可以为 ViewModel 和 Model 创建单元测试，而无需依赖于对应的 View。 针对 ViewModel 的单元测试可以使用跟 View 相同的功能。
+-   应用程序 UI 可以被重新设计，而不必触动代码，前提是该 View 完全在 XAML 中实现。 因此，新版本的 View 应该适用于已有的 ViewModel。
 -   设计人员和开发人员在开发过程中可以从事独立地及同时地工作在各自的部分。 设计人员可以集中精力在 View 中，而开发人员可以工作在 ViewModel 和 Model 部分。
 
 有效地使用 MVVM 的关键在于了解如何将应用代码放到的正确类，并了解这些类如何进行交互。 以下章节将讨论每个类在 MVVM 模式中的职责。
 
 ### <a name="view"></a>View
 
-View负责定义结构、 布局和外观的用户在屏幕上看到的内容。 理想情况下，每个View在XAML中定义，具有有限的code-behind代码，不包含业务逻辑。 但是，在某些情况下，code-behind代码可能包含一些XAML中难以实现的 UI 逻辑，如动画(Animation)。
+View 负责定义结构、 布局和外观的用户在屏幕上看到的内容。 理想情况下，每个 View 在 XAML 中定义，具有有限的 code-behind 代码，不包含业务逻辑。 但是，在某些情况下，code-behind 代码可能包含一些 XAML 中难以实现的 UI 逻辑，如动画 (Animation)。
 
-在 Xamarin.Forms 应用程序中，View通常是从[ `Page` ](xref:Xamarin.Forms.Page)-派生或[ `ContentView` ](xref:Xamarin.Forms.ContentView)-派生的类。 但是，也可以通过数据模板（Data Template），在显示对象时，指定UI元素以可视化方式表示对象。 数据模板作为View不具有任何code-behind代码，旨在绑定到特定的ViewModel类型。
+在 Xamarin.Forms 应用程序中，View 通常是从[ `Page` ](xref:Xamarin.Forms.Page)-派生或[ `ContentView` ](xref:Xamarin.Forms.ContentView)-派生的类。 但是，也可以通过数据模板 (Data Template)，在显示对象时，指定UI元素以可视化方式表示对象。 数据模板作为 View 不具有任何 code-behind 代码，旨在绑定到特定的 ViewModel 类型。
 
 > [!TIP]
-> 避免启用和禁用代码隐藏中的 UI 元素。 请确保视图模型是负责定义会影响该视图的显示器，例如命令是否可用，或指示操作处于挂起状态的某些方面的逻辑状态更改。 因此，启用和禁用 UI 元素的绑定以查看模型属性，而不是启用和禁用它们，在代码隐藏中。
+> 避免在 code-behind 代码中启用和禁用 UI 元素。 请确保 ViewModel 负责定义会影响 View 在某些方面显示的逻辑状态变更，例如一个命令是否可用，或指示一个操作处于挂起状态。 因此，应通过绑定ViewModel属性来启用和禁用UI元素，而不是在 code-behind 代码中启用和禁用它们。
 
-有几个选项以响应交互在视图中，视图模型上执行代码，如按钮单击或项选择。 如果控件支持命令，该控件`Command`属性可以进行数据绑定到`ICommand`视图模型上的属性。 调用控件的命令时，将执行在视图模型中的代码。 除了命令，行为可以附加到视图中的对象，并且可以侦听要调用的命令或事件被引发。 在响应中，然后可以调用行为`ICommand`视图模型或视图模型上的方法。
+有多个方式来执行 ViewModel 上的代码以响应在 View 上的交互，如按钮单击或选择某个条目。 如果一个控件支持命令，那么该控件的`Command`属性可以被数据绑定 ViewModel 的`ICommand`属性上。当控件的命令被调用，将执行在ViewModel中的代码。 除了命令，行为（behaviors）也可以被附加到View中的对象，并且可以侦听要调用的命令或被引发的事件。 作为响应，这些行为然后可以调用 ViewModel 上的`ICommand`或方法。
 
 ### <a name="viewmodel"></a>ViewModel
 
-视图模型实现的属性和该视图可以数据绑定到的命令，并通知视图的更改通知事件通过任何状态更改。 属性和视图模型提供的命令定义的功能，可提供 UI，但该视图确定该功能的显示方式。
+ViewModel 实现的属性和命令可以数据绑定到 View，并通过变更通知事件来通知 View 一些状态的更改。 ViewModel 提供的属性和命令定义了可提供给 UI 的功能，但 View 决定了这些功能的显示方式。
 
 > [!TIP]
-> 保持 UI 响应使用异步操作。 移动应用程序应保持 UI 线程通畅来提高用户的角度看，性能。 因此，在视图模型中，异步方法用于 I/O 操作并引发事件以异步通知的属性更改视图。
+> 使用异步操作来保持 UI 响应。 移动应用程序应保持 UI 线程通畅来提高用户对性能的感知度。 因此，在 ViewModel 中，异步方法用于 I/O 操作并引发事件异步地通知 View 进行属性变更。
 
-视图模型也是负责协调与所需的任何模型类的视图的交互的。 通常是视图模型和模型类之间的一个对多关系。 视图模型可能会选择公开直接到视图模型类，以便在视图中的控件可以直接与他们的数据绑定。 在这种情况下，在 model 类将需要设计支持数据绑定并更改通知事件。
+ViewModel 也负责协调 View 与所需的一些 Model 类之间的交互。 ViewModel 和 Model 类之间通常是一对多的关系。 ViewModel 可能会选择直接公开 Model 类给 View，以便在 View 中的控件可以直接与这些 Model 进行数据绑定。 在这种情况下，Model 类将需要被设计为支持数据绑定以及变更通知事件。
 
-每个视图模型提供了窗体中可以轻松地使用视图模型中的数据。 若要实现此目的，视图模型有时会执行数据转换。 将此数据转换放入视图模型是一个好主意，因为它提供了该视图可以绑定到的属性。 例如，视图模型可能组合两个属性，以简化显示通过视图的值。
+每个 ViewModel 从 Model 获取数据并以容易读写的方式提供给 View 。 若要实现此目的，ViewModel 有时会执行数据转换。 将此数据转换放入 ViewModel 是一个好主意，因为它提供给 View 可以实现绑定的属性。 例如，ViewModel 可能组合两个属性，以简化在上 View 显示。
 
 > [!TIP]
-> 集中转换层中的数据转换。 还有可能要作为一个单独的数据转换层，位于视图模型和视图之间使用转换器。 这可以是有必要，例如，当数据需要特殊格式设置的视图模型不提供。
+> 把数据转换集中在转换层 (conversion layer)。 也可以利用转换器作为一个位于 ViewModel 与 View 之间的独立数据转换层。 这也许是有必要的，例如，当数据需要特殊格式设置而 ViewModel 不提供时。
 
-为了使要参与双向数据绑定与视图的视图模型，其属性必须引发`PropertyChanged`事件。 视图模型满足此要求通过实现`INotifyPropertyChanged`接口，并引发`PropertyChanged`时的属性更改事件。
+为了使 ViewModel 参与跟 View 双向数据绑定，其属性必须引发`PropertyChanged`事件。 ViewModel 通过实现`INotifyPropertyChanged`接口来满足这个要求，并在属性变更时引发`PropertyChanged`事件。
 
-对于集合，视图友好`ObservableCollection<T>`提供。 此集合实现集合更改通知，从而减轻开发人员无需实现`INotifyCollectionChanged`集合上的接口。
+对于集合，则为其提供了对 View 友好的`ObservableCollection<T>`类。 此集合实现集合变更通知，从而避免开发人员在集合上实现`INotifyCollectionChanged`的接口。
 
 ### <a name="model"></a>模型
 
