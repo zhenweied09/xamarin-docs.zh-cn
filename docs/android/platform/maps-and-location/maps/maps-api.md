@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
+ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235033"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51027322"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>应用程序中使用 Google 地图 API
 
@@ -40,7 +40,7 @@ ms.locfileid: "50235033"
 
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />获取 Google 地图 API 密钥
 
-最后一步是获取 Google Maps API 密钥 （请注意，不能重复使用传统的 Google Maps v1 API 的 API 密钥）。 有关如何获取和使用 Xamarin.Android 使用的 API 密钥的信息，请参阅[获取 Google 地图 API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)。
+第一步是获取 Google Maps API 密钥 （请注意，不能重复使用传统的 Google Maps v1 API 的 API 密钥）。 有关如何获取和使用 Xamarin.Android 使用的 API 密钥的信息，请参阅[获取 Google 地图 API 密钥](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)。
  
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> 安装 Google Play Services SDK
@@ -183,7 +183,7 @@ Xamarin.Android 应用程序可以使用地图 API 之前，必须使用安装 G
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **Programmaatically** -`MapFragment`可以以编程方式使用实例化[ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance())方法，然后添加到活动。 此代码段显示了实例化的最简单方法`MapFragment`对象，并向活动中添加：
+-   **以编程方式**-`MapFragment`可以以编程方式使用实例化[ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance())方法，然后添加到活动。 此代码段显示了实例化的最简单方法`MapFragment`对象，并向活动中添加：
     
     ```csharp
         var mapFrag = MapFragment.NewInstance();
