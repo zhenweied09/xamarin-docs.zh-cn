@@ -1,6 +1,6 @@
 ﻿---
 title: 使用 Xamarin.Forms 电子书的企业应用程序模式
-description: 此电子书提供了用于开发自适应、 可维护性、 和可测试的 Xamarin.Forms 企业应用程序的体系结构指南。
+description: 此电子书提供了用于开发可适应的、 可维护的、 和可测试的 Xamarin.Forms 企业应用程序的架构指南。
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
@@ -14,25 +14,25 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38994343"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>使用 Xamarin.Forms 电子书的企业应用程序模式
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>使用 Xamarin.Forms 的企业应用程序模式电子书
 
-_开发自适应、 可维护性、 和可测试的 Xamarin.Forms 企业应用程序的体系结构指南_
+_开发可适应的、 可维护的、 和可测试的 Xamarin.Forms 企业应用程序的架构指南_
 
 ![](images/cover-sml.png "使用 Xamarin.Forms 电子书的企业应用程序模式")
 
-此电子书提供有关如何实现模型-视图-视图模型 (MVVM) 模式、 依赖关系注入、 导航、 验证和配置管理，同时保持松散耦合的指南。 此外，还有指导执行身份验证和授权与 IdentityServer，从容器化微服务和单元测试访问的数据。
+此电子书提供有关如何实现Model-View-ViewModel (MVVM) 模式、 依赖关系注入、 导航、 验证和配置管理，同时保持松散耦合的指南。 此外，还有指导利用 IdentityServer 执行身份验证和授权，从容器化微服务访问数据和单元测试。
 
 ## <a name="prefaceprefacemd"></a>[前言](preface.md)
 
-本章介绍的目的和范围的指南，以及它旨在的人员。
+本章介绍关于本指南的目的和范围，以及它面向的读者。
 
 ## <a name="introductionintroductionmd"></a>[介绍](introduction.md)
 
-企业应用的开发人员面临着多种挑战，可以在开发过程中更改应用的体系结构。 因此，很重要，以便可以修改或扩展随着时间的推移生成应用。 这种适应性的设计可能很困难，但通常涉及到离散的松散耦合组件，可以轻松地集成在一起到应用程序分区应用程序。
+企业应用的开发人员面临着多种挑战，这会在开发过程中更改应用的架构。 因此，构建一款随着时间的推移可以被修改或扩展的应用很重要。 这种适应性的设计可能很困难，通常涉及把应用程序分到离散的，松散耦合的组件，这些组件可以轻松地集成在一起到应用程序。
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
-模型-视图-视图模型 (MVVM) 模式有助于完全隔离的应用程序从其用户界面 (UI) 的业务和演示文稿逻辑。 维护应用程序逻辑与 UI 之间完全分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和开发的应用程序及其相应部分时，UI 设计器更轻松地进行协作。
+Model-View-ViewModel (MVVM) 模式有助于完全隔离的应用程序从其用户界面 (UI) 的业务和演示文稿逻辑。 维护应用程序逻辑与 UI 之间完全分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和开发的应用程序及其相应部分时，UI 设计器更轻松地进行协作。
 
 ## <a name="dependency-injectiondependency-injectionmd"></a>[依赖关系注入](dependency-injection.md)
 
@@ -48,13 +48,13 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)类实现
 
 Xamarin.Forms 包括对页面导航、 从用户的交互用户界面时，或从应用本身，由于内部逻辑驱动的状态更改时，通常会支持。 但是，导航可能很复杂，若要在应用中使用 MVVM 模式的实现。
 
-这一章介绍`NavigationService`类，用于执行从视图模型的视图模型第一个导航。 将导航逻辑放在视图模型类意味着通过自动测试可在逻辑。 此外，视图模型然后可以实现对控件导航，以确保实施某些业务规则的逻辑。
+这一章介绍`NavigationService`类，用于执行从ViewModel的ViewModel第一个导航。 将导航逻辑放在ViewModel类意味着通过自动测试可在逻辑。 此外，ViewModel然后可以实现对控件导航，以确保实施某些业务规则的逻辑。
 
 ## <a name="validationvalidationmd"></a>[验证](validation.md)
 
 接受用户输入的任何应用程序应确保输入有效。 而不进行验证，用户可以提供会导致应用失败的数据。 验证强制实施业务规则，可防止攻击者将恶意数据注入。
 
-在上下文的模型-视图模型的模型 (MVVM) 模式，视图模型或模型通常需要执行数据验证和信号到视图的任何验证错误，以便用户可以更正它们。
+在上下文的Model-ViewModel的模型 (MVVM) 模式，ViewModel或Model通常需要执行数据验证和信号到View的任何验证错误，以便用户可以更正它们。
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[配置管理](configuration-management.md)
 
@@ -74,7 +74,7 @@ Xamarin.Forms 包括对页面导航、 从用户的交互用户界面时，或�
 
 ## <a name="unit-testingunit-testingmd"></a>[单元测试](unit-testing.md)
 
-测试模型和视图模型的 MVVM 应用程序从等同于测试任何其他类，并可以使用相同的工具和技术。 但是，有一些是模型的典型的模式和视图模型类，可受益于特定的单元测试技术的。
+测试View和ViewModel的 MVVM 应用程序从等同于测试任何其他类，并可以使用相同的工具和技术。 但是，有一些是View的典型的模式和ViewModel类，可受益于特定的单元测试技术的。
 
 ## <a name="feedback"></a>反馈
 
