@@ -1,32 +1,36 @@
 ---
-title: Xamarin.Essentials： 陀螺仪
-description: 在 Xamarin.Essentials 陀螺仪类可让你监视设备的陀螺仪传感器测量设备的三个主要轴的旋转。
+title: Xamarin.Essentials：Gyroscope
+description: Xamarin.Essentials 中的 Gyroscope 类使你能够监控设备的陀螺仪传感器，此传感器测量围绕设备三个主轴的旋转。
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f1e1199ae32158889ec569eb5f7e9742f37d45d4
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 1d42658160855e260e0d159c58a1f95e7a8c7d4c
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674699"
 ---
-# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials： 陀螺仪
+# <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials：Gyroscope
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**陀螺仪**类可让你监视设备的陀螺仪传感器是围绕设备的三个主要轴的旋转角度。
+Gyroscope 类使你能够监控设备的陀螺仪传感器，此传感器测量围绕设备三个主轴的旋转。
 
-## <a name="using-gyroscope"></a>使用陀螺仪
+## <a name="get-started"></a>入门
 
-在类中添加对 Xamarin.Essentials 的引用：
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-gyroscope"></a>使用 Gyroscope
+
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-陀螺仪功能适用于通过调用`Start`和`Stop`方法来侦听对陀螺仪的更改。 任何更改发送回通过`ReadingChanged`事件。 下面是示例用法：
+通过调用 `Start` 和 `Stop` 方法来使用 Gyroscope 功能以侦听陀螺仪的变化。 然后通过 `ReadingChanged` 事件反馈任何变化。 示例用法如下：
 
 ```csharp
 
@@ -73,5 +77,5 @@ public class GyroscopeTest
 
 ## <a name="api"></a>API
 
-- [陀螺仪源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
-- [陀螺仪 API 文档](xref:Xamarin.Essentials.Gyroscope)
+- [Gyroscope 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [Gyroscope API 文档](xref:Xamarin.Essentials.Gyroscope)

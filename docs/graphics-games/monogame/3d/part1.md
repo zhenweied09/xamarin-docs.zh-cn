@@ -15,7 +15,7 @@ ms.locfileid: "50108583"
 ---
 # <a name="using-the-model-class"></a>使用模型类
 
-_Model 类极大地简化了呈现复杂的三维对象与呈现 3D 图形的传统方法相比。从内容文件，从而使内容无自定义代码的简单集成创建模型对象。_
+_与传统的 3D 图形渲染方法相比，Model 类极大地简化了渲染复杂 3D 对象的过程。Model 对象是从内容文件创建的，允许轻松集成内容而无需自定义代码。_
 
 MonoGame API 包含一个 `Model` 类，可用于存储从内容文件加载的数据并执行渲染。 模型文件可以非常简单（例如纯色三角形），也可以包含用于复杂渲染的信息，包括纹理和明暗。
 
@@ -46,15 +46,15 @@ MonoGame API 包含一个 `Model` 类，可用于存储从内容文件加载的�
 
 `Model` 类可以通过从含有 3D 几何图形数据的磁盘上加载 .xnb 文件来构造。   这个 .xnb 文件是通过内容项目创建的。 Monogame 模板会自动在 Content 文件夹中包含一个内容项目（扩展名为 .mgcp）。 有关 MonoGame 管道工具的详细讨论，请参阅[内容管道指南](~/graphics-games/cocossharp/content-pipeline/index.md)。
 
-本指南中我们将跳过使用 MonoGame 管道工具，然后将使用。此处包括的 XNB 文件。 请注意，。XNB 文件每个平台不同，因此请确保正确的 XNB 文件集用于你正在使用任何一个平台。
+本指南将略过 MonoGame 管道工具，并使用此处包含的 .XNB 文件。 请注意，.XNB 文件因平台而异，因此请确保在使用的任何平台上使用正确的 XNB 文件。
 
-我们将解压缩[Content.zip 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)，以便我们可以使用包含的.xnb 文件，在我们的游戏。 如果处理的 Android 项目，右键单击**资产**中的文件夹**WalkingGame.Android**项目。 如果使用 iOS 项目，右键单击**WalkingGame.iOS**项目。 选择**添加-> 添加文件...** 并正在努力在平台的文件夹中选择这两个.xnb 文件。
+将解压缩 [Content.zip 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)，以便可以在游戏中使用其中包含的 .xnb 文件。 如果正在开发 Android 项目，请右键单击 **WalkingGame.Android** 项目中的 **Assets** 文件夹。 如果正在开发 iOS 项目，请右键单击 **WalkingGame.iOS** 项目。 选择 **“添加”->“添加文件”...** 并选择与所使用的平台相对应的文件夹下的 2 个 .xnb 文件。
 
 这两个文件现应为项目的一部分：
 
 ![解决方案资源管理器具有 xnb 文件的内容文件夹](part1-images/xnbsinxs.png)
 
-Visual Studio for Mac 不自动设置新添加 XNBs 的生成操作。 IOS 中，右键单击每个文件并选择**生成操作-> BundleResource**。 对于 Android，右键单击每个文件并选择**生成操作-> AndroidAsset**。
+Visual Studio for Mac可能不会自动为新添加的 XNB 设置生成操作。 对于iOS，右键单击每个文件，然后选择 **“生成操作”->“BundleResource”**。 对于 Android，右键单击每个文件并选择**生成操作-> AndroidAsset**。
 
 ## <a name="rendering-a-3d-model"></a>渲染 3D 模型
 
@@ -168,7 +168,7 @@ public class Game1 : Game
 
 ### <a name="model-class"></a>Model 类
 
-`Model`类是从内容文件 （如.fbx 文件） 中执行 3D 渲染的核心类。 它包含所有呈现，包括三维几何图形纹理引用所需的信息和`BasicEffect`控制定位、 照明和照相机值的实例。
+`Model`类是用于从内容文件（例如 .fbx 文件）执行 3D 渲染的核心类。 它包含渲染所需的所有信息，包括 3D 几何体、纹理引用以及负责控制位置、光照和相机参数的 `BasicEffect` 实例。
 
 `Model` 类本身不直接提供位置变量，因为单个模型实例可以在多个不同位置进行渲染，这将在本指南的后面部分中介绍。
 
@@ -176,7 +176,7 @@ public class Game1 : Game
 
 ### <a name="basiceffect-class"></a>BasicEffect 类
 
-`BasicEffect`类提供用于控制呈现选项的属性。 我们对进行第一次修改`BasicEffect`是调用`EnableDefaultLighting`方法。 顾名思义，这使默认的光照，这是非常方便地验证`Model`显示游戏中按预期方式。 如果我们注释掉`EnableDefaultLighting`调用，然后我们将看到呈现只是其纹理，但没有明暗度或反射发光的模型：
+`BasicEffect`类提供用于控制渲染选项的属性。 要对 `BasicEffect` 进行的第一个修改是调用`EnableDefaultLighting` 方法。 顾名思义，这使默认的光照，这是非常方便地验证`Model`显示游戏中按预期方式。 如果我们注释掉`EnableDefaultLighting`调用，然后我们将看到呈现只是其纹理，但没有明暗度或反射发光的模型：
 
 ```csharp
 //effect.EnableDefaultLighting ();
@@ -209,7 +209,7 @@ var cameraPosition = new Vector3 (0, 30, 0);
 
 ## <a name="rendering-multiple-models"></a>渲染多个模型
 
-如上所述，单个`Model`可绘制多个时间。 为了简单起见我们将移动`Model`绘制到它自己采用所需的方法的代码`Model`作为参数的位置。 完成后，我们`Draw`和`DrawModel`方法看起来类似于：
+如上所述，单个`Model`可绘制多个时间。 如上所述，单个 `Model` 可以绘制多次。为简化此过程，可将 `Model` 绘制代码移动到它自己的方法中，该方法将目标模型位置作为参数。 完成后，`Draw` 和 `DrawModel` 方法如下所示：
 
 
 ```csharp
