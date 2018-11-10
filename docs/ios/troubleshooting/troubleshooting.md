@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
 ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
+ms.lasthandoff: 11/08/2018
 ms.locfileid: "50675323"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>适用于 Xamarin.iOS 的故障排除技巧 
@@ -310,7 +310,7 @@ Xamarin.iOS 和 Visual Studio for Mac 的当前版本失败时的项目名称或
 
 （由 Ed Anuff 提供）
 
-请执行这些步骤：
+请执行以下步骤：
 
 -  在 iPhone 生成到 3.2 或 iTunes 的 SDK 版本连接的更改将拒绝此上传由于其查看使用 SDK 版本不会早于 3.2 构建的 iPad 兼容应用程序
 -  创建自定义项目的 Info.plist 并显式设置为在其中 3.0 MinimumOSVersion。   这将重写设置 Xamarin.iOS 的 MinimumOSVersion 3.2 值。   如果不这样做，应用程序不能在 iPhone 上运行。
@@ -432,6 +432,6 @@ Visual Studio for Mac 中的新项目作为其默认 SDK 设置，使用最早�
 
 ## <a name="receiving-activation-incomplete-error-message"></a>接收激活不完整错误消息
 
-使用 Xamarin.iOS for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从[ contact@xamarin.com ](mailto:contact@xamarin.com)。
+使用 Xamarin.iOS for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从 [contact@xamarin.com](mailto:contact@xamarin.com)。
 
 -  日志位置： %LocalAppData%/Xamarin/Logs
