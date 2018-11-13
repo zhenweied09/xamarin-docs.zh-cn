@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 摘要的第 23 章。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156751"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563987"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>第 23 章的摘要。 触发器和行为
 
@@ -152,7 +152,7 @@ ms.locfileid: "39156751"
 
 [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle)示例通过两个之间切换来扩展此概念`FormattedString`对象。
 
-[ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs)类**Xamarin.FormsBook.Toolkit**库派生`ContentView`，定义`IsToggled`属性，并结合`ToggleBehavior`切换逻辑。 这使得它更轻松地切换按钮定义中 XAML，如所示[ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox)示例。
+[ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs)类**Xamarin.FormsBook.Toolkit**库派生`ContentView`，定义`IsToggled`属性，并结合`ToggleBehavior`切换逻辑。 这使得它更轻松地切换按钮定义中 XAML，如所示[ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox)示例。
 
 [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo)包括[ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs)派生的类`ToggleBase`，并使用[ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)类来构造一个切换按钮，类似于 Xamarin.Forms `Switch`。
 

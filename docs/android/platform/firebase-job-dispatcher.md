@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116157"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526918"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 作业调度程序
 
@@ -44,9 +44,9 @@ Firebase 作业调度程序是从 Google 提供了一个 fluent API 来简化计
 * 一个`Firebase.JobDispatcher.RetryStrategy`包含有关作业无法正确执行时应完成的操作的信息。 重试策略指定尝试重新运行该作业之前等待多长时间。 
 * 一个`Firebase.JobDispatcher.Constraint`是一个可选值，描述一个条件，必须满足才能运行该作业，例如设备已打开 unmetered 网络或计费。
 * `Firebase.JobDispatcher.Job`是一个 API，统一了中的工作单元，可以通过计划到以前的 Api `JobDispatcher`。 `Job.Builder`类用于实例化`Job`。
-* 一个`Firebasee.JobDispatcher.JobDispatcher`使用以前的三个 Api 来计划随操作系统一起工作，并提供一种方法可以取消作业，如有必要。
+* 一个`Firebase.JobDispatcher.JobDispatcher`使用以前的三个 Api 来计划随操作系统一起工作，并提供一种方法可以取消作业，如有必要。
 
-若要计划使用 Firebase 作业调度程序的工作，Xamarin.Android 应用程序必须封装扩展的类型中的代码`JobService`类。 `JobService` 有三个生命周期方法，可以在作业的生存期内调用：
+若要计划使用 Firebase 作业调度程序的工作，Xamarin.Android 应用程序必须封装扩展的类型中的代码`JobService`类。 `JobService` 有三个作业的生存期内可以调用的生命周期方法：
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; 此方法是在其中工作将发生，并且应始终实现。 它在主线程上运行。 此方法将返回`true`剩余，如果没有工作或`false`如果完成工作。 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; 这称为时出于某种原因停止作业。 它应返回`true`如果应供稍后重新安排作业。
@@ -177,7 +177,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>将 jarameters 传递到作业
+#### <a name="passing-parameters-to-a-job"></a>将参数传递到作业
 
 通过创建参数传递到作业`Bundle`连同传递`Job.Builder.SetExtras`方法：
 
@@ -252,7 +252,7 @@ Job myJob = dispatcher.NewJobBuilder()
 可以定义一个自定义`RetryStrategy`与`FirebaseJobDispatcher.NewRetryStrategy`方法。 它采用三个参数：
 
 1. `int policy` &ndash; _策略_是上一个之一`RetryStrategy`值， `RetryStrategy.RetryPolicyLinear`，或`RetryStrategy.RetryPolicyExponential`。
-2. `int intialBackoffSeconds` &ndash; _初始退避算法_延迟，以秒为单位，尝试重新运行该作业之前需。 此默认值为 30 秒。 
+2. `int initialBackoffSeconds` &ndash; _初始退避算法_延迟，以秒为单位，尝试重新运行该作业之前需。 此默认值为 30 秒。 
 3. `int maximumBackoffSeconds` &ndash; _最大回退_值声明的最大尝试重新运行该作业之前的延迟秒数。 默认值为 3600 秒。 
 
 ```csharp

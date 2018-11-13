@@ -1,17 +1,17 @@
 ---
 title: UrhoSharp Windows 支持
-description: 本文档讨论对 UrhoSharp Windows 支持。 它介绍了如何创建项目、 配置和启动 Urho、 将与 WPF 中，集成和与 UWP 集成。
+description: 本文档讨论对 UrhoSharp Windows 支持。 它介绍如何创建项目、 配置和启动 Urho、 将与 WPF、 集成和与 UWP 集成。
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 8aca028ec1015616a9884cd09b7ffa5e04f2e43d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 471029375d8a61a6c48d94a66d7836807e0da22f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119600"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526801"
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 支持
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104032"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526828"
 ---
 # <a name="collection-views-in-xamarinmac"></a>在 Xamarin.Mac 中的集合视图
 
 _本文说明如何使用集合视图中的 Xamarin.Mac 应用的。它介绍如何创建和维护集合视图在 Xcode 和 Interface Builder 中的和以编程方式使用它们。_
 
-当使用 C# 和.NET 在 Xamarin.Mac 应用中，开发人员有权访问相同 AppKit 集合视图控件，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，开发人员可使用 Xcode 的_Interface Builder_来创建和维护集合视图。
+当使用C#和.NET 中的 Xamarin.Mac 应用中，开发人员有权访问相同的 AppKit 集合视图控件的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，开发人员可使用 Xcode 的_Interface Builder_来创建和维护集合视图。
 
 一个`NSCollectionView`显示一个网格，组织使用的子视图的`NSCollectionViewLayout`。 在网格中每个子视图由`NSCollectionViewItem`用于管理从视图的内容加载`.xib`文件。
 

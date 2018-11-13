@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 106357e9442d51fdd31bb30b4f0342e2b59f67fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118482"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526658"
 ---
 # <a name="ios-app-architecture"></a>iOS 应用程序体系结构
 
@@ -118,7 +118,7 @@ Xamarin.iOS 应用程序运行在 Mono 的执行环境，并使用完整继续�
 
 ## <a name="generator"></a>Generator
 
-Xamarin.iOS 包含每个单个 iOS API 的定义。 可以在浏览其中的任何[MaciOS github 存储库](https://github.com/xamarin/xamarin-macios/tree/master/src)。 这些定义包含接口的属性，以及任何必需的方法和属性。 例如，下面的代码是用于在 UIKit 中定义 UIToolbar[命名空间](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)。 请注意它是具有多种方法和属性的接口：
+Xamarin.iOS 包含每个单个 iOS API 的定义。 可以在浏览其中的任何[MaciOS github 存储库](https://github.com/xamarin/xamarin-macios/tree/master/src)。 这些定义包含接口的属性，以及任何必需的方法和属性。 例如，下面的代码用于定义在 UIKit 中 UIToolbar[命名空间](https://github.com/xamarin/xamarin-macios/blob/master/src/uikit.cs#L11277-L11327)。 请注意它是具有多种方法和属性的接口：
 
 ```csharp
 [BaseType (typeof (UIView))]

@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 7f34bd5bbab4accaa30c22266dacd30692bf9ccc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107568"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526502"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>将 SkiaSharp 位图保存到文件
 
@@ -54,7 +54,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 稍后在更详细地介绍了这些方法。 编码的位图将写入可写流。 (中的 W`SKWStream`代表"可写"。)第二个和第三个参数指定的文件格式和 （适用于有损格式） 所需的质量，范围从 0 到 100。
 
-此外， [ `SKImage` ](xref:SkiaSharp.SKImage)并[ `SKPixmap` ](xref:SkiaSharp.SKPixmap)类还定义`Encode`的某种程度上更灵活，且可能更喜欢的方法。 您可以轻松地创建`SKImage`对象从`SKBitmap`对象使用静态[ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap))方法。 你可以获取`SKPixmap`对象从`SKBitmp`对象使用[ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels)方法。
+此外， [ `SKImage` ](xref:SkiaSharp.SKImage)并[ `SKPixmap` ](xref:SkiaSharp.SKPixmap)类还定义`Encode`的某种程度上更灵活，且可能更喜欢的方法。 您可以轻松地创建`SKImage`对象从`SKBitmap`对象使用静态[ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap))方法。 你可以获取`SKPixmap`对象从`SKBitmap`对象使用[ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels)方法。
 
 之一[ `Encode` ](xref:SkiaSharp.SKImage.Encode)定义的方法`SKImage`没有参数，会自动保存为 PNG 格式。 该无参数的方法是非常易于使用。
 

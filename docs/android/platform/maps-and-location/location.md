@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120289"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563506"
 ---
 # <a name="location-services"></a>位置服务
 
@@ -190,7 +190,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 若要通知的位置更新的 Xamarin.Android 应用程序，浮点混合的位置提供程序将调用`LocationCallBack.OnLocationResult(LocationResult result)`。 `Android.Gms.Location.LocationResult`参数将包含更新位置信息。
 
-当浮点混合的位置提供程序位置数据的可用性中检测到更改时，它将调用`LocationProvider.OnLocationAvaibility(LocationAvailability
+当浮点混合的位置提供程序位置数据的可用性中检测到更改时，它将调用`LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)`方法。 如果`LocationAvailability.IsLocationAvailable`属性返回`true`，则可以假定，将设备位置结果报告`OnLocationResult`一样准确且为最新的所需的`LocationRequest`。 如果`IsLocationAvailable`为 false，则不将返回的任何位置结果`OnLocationResult`。
 
 此代码片段是一个示例实现`LocationCallback`对象：
@@ -253,9 +253,9 @@ LocationManager locationManager = (LocationManager) GetSystemService(Context.Loc
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>从 LocationManager 请求位置更新
 
-一旦应用程序后，对引用`LocationManager`，它需要告知`LocationManager`哪种类型的位置信息所必需的并更新该信息的频率。 执行此操作通过调用`RequestionLocationUpdates`上`LocationManager`对象，并传入更新和将接收位置更新的回调的一些标准。 此回叫是一种类型，必须实现`ILocationListener`接口 （在本指南后面的更多详细信息中所述）。
+一旦应用程序后，对引用`LocationManager`，它需要告知`LocationManager`哪种类型的位置信息所必需的并更新该信息的频率。 执行此操作通过调用`RequestLocationUpdates`上`LocationManager`对象，并传入更新和将接收位置更新的回调的一些标准。 此回叫是一种类型，必须实现`ILocationListener`接口 （在本指南后面的更多详细信息中所述）。
 
-`RequestionLocationUpdates`方法告诉系统位置服务，你的应用程序想要开始接收位置更新。 此方法允许您指定的提供程序，以及时间和距离阈值来控制更新频率。 例如，以下请求位置下的方法将更新从 GPS 位置提供程序每隔 2000年毫秒，并且仅当位置更改多个 1 metre:
+`RequestLocationUpdates`方法告诉系统位置服务，你的应用程序想要开始接收位置更新。 此方法允许您指定的提供程序，以及时间和距离阈值来控制更新频率。 例如，下面的方法请求从 GPS 位置提供程序每隔 2000年毫秒，更新的位置，并仅当位置更改多个 1 metre:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

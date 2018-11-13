@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106970"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526970"
 ---
 # <a name="windows-in-xamarinmac"></a>在 Xamarin.Mac 中的 Windows
 
 _本文介绍如何使用 windows 和 Xamarin.Mac 应用程序中的面板。其中介绍创建 windows 以及在 Xcode 和 Interface Builder，从情节提要和.xib 文件加载它们并以编程方式使用它们中的面板。_
 
-当在 Xamarin.Mac 应用程序中使用 C# 和.NET，有权访问相同的 Windows 和面板，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护 Windows 和面板 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 在 Xamarin.Mac 应用程序，将有权访问相同的 Windows 和面板的使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护 Windows 和面板 （或选择通过 C# 代码中直接创建）。
 
 根据其用途，Xamarin.Mac 应用程序可以提供一个或多个 Windows 屏幕上管理和协调它显示，并适用于的信息。 窗口的主要功能是：
 
@@ -284,7 +284,7 @@ public override void ViewWillAppear ()
 MyWindow.PerformClose(this);
 ```
 
-会尝试关闭`MyWindow``NSWindow`实例。 如果成功，窗口将关闭、 其他将发出警告声和将仍处于打开状态。
+会尝试关闭`MyWindow``NSWindow`实例。 如果成功，窗口将关闭，否则将发出警报的声音，并且将保持打开状态。
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller
@@ -758,7 +758,7 @@ void OpenDialog (NSObject sender)
 3. 对“名称”输入 `DocumentPanel`，然后单击“新建”按钮。
 4. 双击`DocumentPanel.xib`文件以打开 Interface Builder 中为进行编辑： 
 
-    [![](window-images/new02.png "编辑并")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "编辑面板")](window-images/new02.png#lightbox)
 5. 删除现有的窗口并将从面板拖**库检查器**中**界面编辑器**: 
 
     [![](window-images/panels01.png "删除现有的窗口")](window-images/panels01.png#lightbox)

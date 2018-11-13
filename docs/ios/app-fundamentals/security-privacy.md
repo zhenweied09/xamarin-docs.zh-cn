@@ -80,7 +80,7 @@ Xamarin.iOS for Visual Studio 中的当前不支持编辑**Info.plist**默认 iO
 2. 选择**泛型 PList 编辑器**从列表中的程序打开该文件，然后单击**确定**。
 
     ![选择泛型 PList 编辑器](security-privacy-images/InfoEditorSelectionVs.png "选择泛型 PList 编辑器")
-3. 单击**+** 编辑器将新条目添加到列表中的最后一行上的按钮。 这称为"自定义属性"，类型设置为`String`和空值。
+3. 单击 **+** 编辑器将新条目添加到列表中的最后一行上的按钮。 这称为"自定义属性"，类型设置为`String`和空值。
 4. 单击属性名称，并将显示一个下拉列表。
 5. 从下拉列表中，选择隐私密钥 (如**隐私-HomeKit 使用说明**): 
 

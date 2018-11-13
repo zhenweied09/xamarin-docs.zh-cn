@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fa6b128572490ce1fe330b722181e33bbad1ffd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82e4dfb9add7002fd7d3568d0ec946ea38dfd530
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122044"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526386"
 ---
 # <a name="source-lists-in-xamarinmac"></a>在 Xamarin.Mac 中的源列表
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的源列表。它介绍了创建和维护在 Xcode 和 Interface Builder 中的源列表和 C# 代码中与其进行交互。_
 
-如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个源列表，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护源列表 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问相同的源列表的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护源列表 （或选择通过 C# 代码中直接创建）。
 
 源列表是一种特殊的大纲视图用于显示源的操作，例如在查找器或 iTunes 侧栏。
 

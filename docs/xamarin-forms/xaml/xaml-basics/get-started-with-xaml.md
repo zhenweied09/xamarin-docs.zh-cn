@@ -4,15 +4,15 @@ description: 在 Xamarin.Forms 应用程序中，XAML 是主要用于定义页�
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: f75e49c04ded99b3f7468709926277648f9f3729
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7ee701c659e0051f5509934dbf0d86e9b3890c9a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103161"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563860"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 XAML 入门
 
@@ -42,7 +42,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-在 Visual Studio for Mac 中，选择**文件 > 新建解决方案**菜单中。 中**新的项目**对话框中，选择**多平台 > 应用**左侧，并**空白窗体应用程序**(*不***窗体应用**) 从模板列表：
+在 Visual Studio for Mac 中，选择**文件 > 新建解决方案**菜单中。 中**新的项目**对话框中，选择**多平台 > 应用**左侧，并**空白窗体应用程序** (*不* **窗体应用**) 从模板列表：
 
 ![](get-started-with-xaml-images/mac/newprojectdialog1.png "新建项目对话框 1")
 

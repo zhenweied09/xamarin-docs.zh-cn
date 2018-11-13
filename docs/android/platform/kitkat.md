@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103304"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527322"
 ---
 # <a name="kitkat-features"></a>KitKat 功能
 
@@ -215,7 +215,7 @@ public class MainActivity : Activity
 </merge>
 ```
 
-上面的示例使用`merge`来使较短的代码视图，并简化视图层次结构。 可以阅读更多有关`merge`布局[此处](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html)。
+上面的示例使用`merge`以使视图代码更短和简化的视图层次结构。 可以阅读更多有关`merge`布局[此处](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html)。
 
 通过调用创建一个场景[ `Scene.GetSceneForLayout` ](https://developer.xamarin.com/api/member/Android.Transitions.Scene.GetSceneForLayout/p/Android.Views.ViewGroup/System.Int32/Android.Content.Context/)，并在容器对象中，资源 ID 场景的布局文件，以及当前传递`Context`，如下面的代码示例所示：
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>半透明 UI
 
-KitKat 提供更好地控制主题通过使用可选 transclucent 状态和导航栏在应用程序。 您可以更改用于定义 Android 主题的同一个 XML 文件中的系统 UI 元素的透明度。 KitKat 引入了以下属性：
+KitKat 提供更好地控制主题通过使用可选的半透明状态和导航栏在应用程序。 您可以更改用于定义 Android 主题的同一个 XML 文件中的系统 UI 元素的透明度。 KitKat 引入了以下属性：
 
 -  `windowTranslucentStatus` -设置为 true，使顶部状态栏半透明。
 
@@ -322,7 +322,7 @@ KitKat 提供更好地控制主题通过使用可选 transclucent 状态和导�
 
 存储访问框架 (SAF) 是用户与存储的内容，例如图像、 视频和文档交互的新方法。 而不是向用户显示一个对话框，以选择一个应用程序来处理内容，KitKat 打开新的用户界面，使用户能够访问其数据存储在一个聚合的位置。 选择内容后用户将返回到请求内容的应用程序，并将继续正常进行的应用体验。
 
-此更改需要开发人员端上的两个操作： 首先，需要从提供程序的内容的应用程序需要更新到 reqesting 内容的新方法。 第二个，将数据写入到的应用程序`ContentProvider`需要进行修改以使用新的框架。 这两种方案都依赖于新 [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+此更改需要开发人员端上的两个操作： 首先，需要从提供程序的内容的应用程序需要更新为新请求内容的方式。 第二个，将数据写入到的应用程序`ContentProvider`需要进行修改以使用新的框架。 这两种方案都依赖于新 [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API。
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 调用`StartActivityForResult`启动 SAF UI，用户可以浏览以选择一个映像：
 
-[![浏览到映像用于使用存储访问框架的应用的屏幕截图示例](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![浏览到映像中使用存储访问框架的应用的屏幕截图示例](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 用户已选择一个映像之后,`OnActivityResult`返回`Android.Net.Uri`的所选的文件。 下面的代码示例显示用户的图像选择：
 
@@ -424,10 +424,10 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 打印选项通常会在中显示的活动[选项菜单](http://developer.android.com/guide/topics/ui/menus.html#options-menu)。
 选项菜单可让用户在活动上执行操作。 它是在屏幕的右上角，如下所示：
 
-[![打印菜单项全都在屏幕的右上角的屏幕截图示例](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![打印菜单项显示在屏幕的右上角的屏幕截图示例](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
-可以在中定义其他菜单项*菜单*目录下*资源*。 下面的代码定义了一个示例菜单项调用[打印](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
+可以在中定义的附加菜单项*菜单*目录下*资源*。 下面的代码定义了一个示例菜单项调用[打印](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -505,7 +505,7 @@ void PrintPage ()
 
 `Print` 将作为参数: ("MyWebPage"在此示例中)，打印作业的名称 [`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
 它生成打印文档的内容和 [`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
-(`null`在上面的示例)。 您可以指定`PrintAttributes`以帮助打印页面上的内容的布局，但默认属性应处理大多数方案。
+(`null`在上面的示例)。 您可以指定`PrintAttributes`以帮助打印页面上的内容的布局，但默认属性应处理大多数情况。
 
 调用`Print`加载打印 UI，其中列出了打印作业的选项。 用户界面，用户可以选择打印或 HTML 内容保存为 pdf 格式，如下面的屏幕截图所示：
 
@@ -547,7 +547,7 @@ HCE 服务还需要注册应用程序清单，并使用适当的权限，意向�
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ KitKat 还附带了两个新的传感器类型用于跟踪用户的步骤。 这
 
 [![显示步骤计数器 SensorsActivity 应用的屏幕截图](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-您可以创建`SensorManager`通过调用`GetSystemService(SensorService)`并将结果作为转换`SensorManager`。 若要使用的步骤计数器，请调用`GetDeafultSensor`上`SensorManager`。 你可以注册传感器并侦听步骤计数的帮助中的更改 [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+您可以创建`SensorManager`通过调用`GetSystemService(SensorService)`并将结果作为转换`SensorManager`。 若要使用的步骤计数器，请调用`GetDefaultSensor`上`SensorManager`。 你可以注册传感器并侦听步骤计数的帮助中的更改 [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 接口，如下面的代码示例所示：
 
 ```csharp
@@ -689,7 +689,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 -  *暂停动画*-暂停和恢复使用创建的动画 [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    类的新实例。
 
--  *读取动态更改的文本*-表示动态使用新的文本更新为与新的"实时区域"的用户界面部分 [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *读取动态更改的文本*-表示动态使用新的文本更新为与新的"实时区域"的用户界面部分 [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    因此在可访问性模式下会自动读取新的文本属性。
 
 -  *增强音频体验*-请噪音跟踪与 [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b72246968c9b321329e56fd51eaaa98a1625922e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123071"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528866"
 ---
 # <a name="understanding-sirikit-concepts"></a>了解 SiriKit 概念
 
@@ -148,7 +148,7 @@ Siri 不具有名称"Bobo"在其数据库中，但该应用程序并不具有与
 
 每个域都以组形式知道*操作*零到多个参数可能包括在意图中，可以在其中执行和基于域和操作，发送到应用。
 
-其目的是然后发送到适用于的应用程序扩展处理中。 作为结果的处理目的，应用将生成**IntentResponse**它将被捆绑与意图并包括描述要应用的应用未意向的参数。
+其目的是然后发送到适用于的应用程序扩展处理中。 作为结果的处理目的，应用将生成**IntentResponse**它将被捆绑与意图并包括参数描述应用程序意向的一样。
 
 此外将包括每个 IntentResponse**响应代码**以通知应用程序是否能够完成请求，或不使用 Siri。 某些域具有非常特定的错误响应代码，也可以发送。
 

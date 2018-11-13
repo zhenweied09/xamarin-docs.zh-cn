@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675154"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527360"
 ---
 # <a name="file-handling-in-xamarinforms"></a>在 Xamarin.Forms 中处理的文件
 
@@ -20,7 +20,7 @@ _可以使用代码在.NET Standard 库中，或通过使用嵌入的资源来�
 
 ## <a name="overview"></a>概述
 
-Xamarin.Forms 代码在多个平台上运行 - 每个平台都有自己的文件系统。 以前，这意味着，读取和写入文件时非常方便地执行每个平台上使用本机文件 Api。 或者，嵌入的资源是更简单的解决方案，用于将数据文件的应用。 但是，使用.NET Standard 2.0 有可能共享.NET Standard 库中的文件访问代码。
+Xamarin.Forms 代码在多个平台上运行 - 每个平台都有自己的文件系统。 以前，这意味着，读取和写入文件非常轻松地执行每个平台上使用本机文件 Api。 或者，嵌入的资源是更简单的解决方案，用于将数据文件的应用。 但是，使用.NET Standard 2.0 有可能共享.NET Standard 库中的文件访问代码。
 
 有关处理图像文件的信息，请参阅[处理图像](~/xamarin-forms/user-interface/images.md)页。
 

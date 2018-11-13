@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 20 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156725"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563766"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>第 20 章的摘要。 异步和文件 I/O
 
@@ -28,7 +28,7 @@ ms.locfileid: "39156725"
 > [!NOTE]
 > Xamarin.Forms 程序应使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)而非[ `WebRequest` ](xref:System.Net.WebRequest)用于通过 internet 访问的文件。 `HttpClient` 支持异步操作。
 
-异步处理到更为现代的方法是在.NET 和 C# 中可用。 这涉及[ `Task` ](xref:System.Threading.Tasks.Task)并[ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1)类和中的其他类型[ `System.Threading` ](xref:System.Threading)和[ `System.Threading.Tasks` ](xref:System.Threading.Tasks)命名空间，以及 C# 5.0`async`和`await`关键字。 这就是这一章的重点。
+异步处理到更为现代的方法是在.NET 和 C# 中可用。 这涉及[ `Task` ](xref:System.Threading.Tasks.Task)并[ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1)类和中的其他类型[ `System.Threading` ](xref:System.Threading)和[ `System.Threading.Tasks` ](xref:System.Threading.Tasks)命名空间，并将C#5.0`async`并`await`关键字。 这就是这一章的重点。
 
 ## <a name="from-callbacks-to-await"></a>从回调以等待
 

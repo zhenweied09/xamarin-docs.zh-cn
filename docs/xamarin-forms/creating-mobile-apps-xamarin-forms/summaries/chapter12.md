@@ -7,18 +7,18 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 8ee169d15c4b5060f2a7696bfebd314ed7029570
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 55168f8f401cca711422dc49027b2b055fba5f1f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156936"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526749"
 ---
 # <a name="summary-of-chapter-12-styles"></a>第 12 章的摘要。 样式
 
 在 Xamarin.Forms 中，样式允许多个视图来共享的属性设置的集合。 这减少了标记，并使维护一致的视觉主题。
 
-样式几乎总是定义，并在标记中使用。 类型的对象[ `Style` ](xref:Xamarin.Forms.Style)是在资源字典中实例化，然后设置为[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)的可视元素使用属性`StaticResource`或`DyanamicResource`标记扩展插件。
+样式几乎总是定义，并在标记中使用。 类型的对象[ `Style` ](xref:Xamarin.Forms.Style)是在资源字典中实例化，然后设置为[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)的可视元素使用属性`StaticResource`或`DynamicResource`标记扩展插件。
 
 ## <a name="the-basic-style"></a>基本样式
 
@@ -40,7 +40,7 @@ ms.locfileid: "39156936"
 
 ## <a name="styles-in-code"></a>在代码中的样式
 
-虽然不常见，但可以实例化并初始化`Style`代码中的对象。 这可通过演示[ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode)示例。
+虽然不常见，但可以实例化和初始化`Style`代码中的对象。 这可通过演示[ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode)示例。
 
 ## <a name="style-inheritance"></a>样式继承
 

@@ -6,12 +6,12 @@ ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
 author: conceptdev
 ms.author: crdun
 ms.date: 02/22/2018
-ms.openlocfilehash: 3667f129cb566f71e9afd2969af13fe5b9682882
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9bd70fec5d6d3bbbc4855980e1542bd4e486acaa
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109375"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528515"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>更新到 64 位 Xamarin.Mac 统一应用程序
 
@@ -21,7 +21,7 @@ ms.locfileid: "50109375"
 
 ## <a name="targeting-64-bit"></a>面向 64 位
 
-1. 打开**项目选项**窗口，供你在 Xamarin.Mac 应用：
+1. 打开**项目选项**的 Xamarin.Mac 应用的窗口：
 
    ![项目的上下文菜单](mac-64-bit-images/1-contextual_menu-vsmac.png "项目的上下文菜单")
 
@@ -36,7 +36,7 @@ ms.locfileid: "50109375"
 第一次生成或运行应用程序与 64 位支持，您可能会遇到来自 clang 或运行时问题的链接错误。 都会发生这些错误，如果第三方依赖项 — 例如，本机引用 Xamarin.Mac 或绑定项目或手动加载整个系统的框架中，尚未更新到 64 位。
 
 > [!TIP]
-> 将项目转换为 64 位进行了重大更改，可能会间接发现各种编程错误。 具体而言，它可能会更改的大小和数据结构，这会影响的 p/invoke 签名和链接在项目中的本机代码的对齐方式。 请考虑查看给定任何生成警告并测试应用程序 throughly 之后以发现潜在问题。
+> 将项目转换为 64 位进行了重大更改，可能会间接发现各种编程错误。 具体而言，它可能会更改的大小和数据结构，这会影响的 p/invoke 签名和链接在项目中的本机代码的对齐方式。 请考虑查看任何生成警告并全面测试您的应用程序之后，若要发现潜在问题。
 
 #### <a name="example-error-resulting-from-a-dynamically-linked-third-party-dependency-that-does-not-target-64-bit"></a>示例中的动态链接第三方依赖项不面向 64 位导致错误：
 

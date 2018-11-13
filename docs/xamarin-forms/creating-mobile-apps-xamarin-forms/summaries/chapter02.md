@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 2 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fe6a8c3d17cf1fe6f489f6425bbdaa3cd30f390a
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156673"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563861"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用剖析
 
@@ -102,7 +102,7 @@ ms.locfileid: "39156673"
 
 大多数 Xamarin.Forms 开发人员更喜欢库方法。 在本书中，大部分解决方案使用一个库。 包括那些使用 SAP **Sap**项目名称中的后缀。
 
-共享项目中的代码可以通过使用 C# 预处理器指令针对各种平台的不同代码执行使用 SAP 方法 (`#if`，#`elif`，和`#endif`) 使用这些预定义的标识符：
+共享项目中的代码可以通过使用为各种平台的不同代码执行与 SAP 方法C#预处理器指令 (`#if`，#`elif`，并`#endif`) 使用这些预定义的标识符：
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
@@ -112,7 +112,7 @@ ms.locfileid: "39156673"
 
 ## <a name="labels-for-text"></a>标签文本
 
-[ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings)解决方案展示了如何添加一个新 C# 文件到**Greetings**项目。 此文件定义一个名为`GreetingsPage`派生`ContentPage`。 在此书中，大多数项目都包含单个`ContentPage`派生其名称是带有后缀的项目名称`Page`追加。
+[ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings)解决方案展示了如何添加新C#的文件**Greetings**项目。 此文件定义一个名为`GreetingsPage`派生`ContentPage`。 在此书中，大多数项目都包含单个`ContentPage`派生其名称是带有后缀的项目名称`Page`追加。
 
 `GreetingsPage`构造函数实例化[ `Label` ](xref:Xamarin.Forms.Label)视图，它是显示文本的 Xamarin.Forms 视图。 [ `Text` ](xref:Xamarin.Forms.Label.Text)属性设置为显示的文本`Label`。 此程序设置`Label`到`Content`属性的`ContentPage`。 构造函数`App`类，然后实例化`GreetingsPage`并将其设置为其`MainPage`属性。
 
@@ -131,7 +131,7 @@ ms.locfileid: "39156673"
 
 ### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>解决方案 2。 包括只适用于 iOS (仅适用于 SAP) 的填充
 
-仅在使用 C# 预处理器指令中使用 SAP 在 iOS 上设置填充属性。 了这一点[ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap)解决方案。
+只能在使用与 SAP 在 iOS 上设置填充属性C#预处理器指令。 了这一点[ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap)解决方案。
 
 ### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>解决方案 3。 包括只适用于 iOS （PCL 和 SAP） 的填充
 
@@ -203,5 +203,5 @@ ms.locfileid: "39156673"
 
 - [第 2 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [第 2 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
-- [第 2 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
+- [第 2 章F#示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
 - [Xamarin.Forms 入门](~/xamarin-forms/get-started/index.md)

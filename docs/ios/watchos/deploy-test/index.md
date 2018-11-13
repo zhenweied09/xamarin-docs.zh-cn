@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120952"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528593"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>部署和测试使用 Xamarin 的 watchOS 应用
 
@@ -50,7 +50,7 @@ ms.locfileid: "50120952"
 
 ### <a name="explicit-app-ids"></a>显式应用 Id
 
-创建**应用程序 ID**为每个每个项目的捆绑 ID （这将在 iOS 开发人员中心上如下所示）：
+创建**应用程序 ID**为每个项目的捆绑 ID （这将在 iOS 开发人员中心上如下所示）：
 
 ![IOS 开发人员中心中的捆绑 Id](images/appids-specific-sml.png)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50120952"
 
 它在中创建组后，可以将引用你**应用程序 ID**配置。 请记住将其包含这两个 iOS 应用程序和监视扩展**应用 Id**。
 
-![可用 consifurations](images/appgroups-sml.png)
+![可用的配置](images/appgroups-sml.png)
 
 不要**不**启用应用组在 Apple Watch 应用 id。 不需要监视本身上启用。
 

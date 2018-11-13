@@ -6,12 +6,12 @@ ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 42155eb541849f365e7fab0a3d5c3ad583e760b7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9fd6c9108695f58bd69a1c4aa307ca2e4be6dede
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109401"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528736"
 ---
 # <a name="bouncinggame-details"></a>BouncingGame 详细信息
 
@@ -100,7 +100,7 @@ namespace BouncingGame
 
 ![将文件添加到文件夹对话框](bouncing-game-images/image2.png "将文件添加到文件夹对话框")
 
-接下来，我们将添加到 Android 项目的文件。 右键单击或单击控件中内容的文件夹 (位于**资产**上 Android 项目的文件夹)，然后选择选择**添加** > **添加文件...**.这一次，导航到 iOS 项目**内容**文件夹。 当系统询问有关如何添加该文件，选择**添加链接**选项：
+接下来，我们将添加到 Android 项目的文件。 右键单击或单击控件中内容的文件夹 (位于**资产**上 Android 项目的文件夹)，然后选择**添加** > **添加文件...**.这一次，导航到 iOS 项目**内容**文件夹。 当系统询问有关如何添加该文件，选择**添加链接**选项：
 
 ![将文件添加到文件夹对话框](bouncing-game-images/addalink.png "将文件添加到文件夹对话框")
 
@@ -249,7 +249,7 @@ public class GameLayer : CCLayer
 
 ## <a name="implementing-every-frame-logic"></a>实现每个帧逻辑
 
-到目前为止，游戏提供静态场景。 我们将添加逻辑以通过添加代码，这会更新以高频率的对象的位置来控制的对象在场景中移动。 在这种情况下，代码将运行每秒 60 60 次*帧*每秒 （除非硬件不能处理频繁地更新此）。 具体而言，我们将添加逻辑以使球从处于并且针对球拍，来移动球拍根据输入，并更新玩家的分数，每次球发生球拍反弹。
+到目前为止，游戏提供静态场景。 我们将添加逻辑以通过添加代码，这会更新以高频率的对象的位置来控制的对象在场景中移动。 在这种情况下，代码将运行每秒-60 60 次*帧*每秒 （除非硬件不能处理频繁地更新此）。 具体而言，我们将添加逻辑以使球从处于并且针对球拍，来移动球拍根据输入，并更新玩家的分数，每次球发生球拍反弹。
 
 `Schedule`方法，它提供的`CCNode`类中，可以让我们将每个帧逻辑添加到游戏。 我们将添加代码后的`// New code`GameLayer 构造函数：
 

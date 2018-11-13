@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118872"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527323"
 ---
 # <a name="device-orientation"></a>设备方向
 
@@ -96,7 +96,7 @@ Xamarin.Forms 不提供任何本机事件用于通知的共享代码中的方向
 > [!NOTE]
 > 没有用于接收通知的方向更改共享代码中的现有的免费 NuGet 包。 请参阅[GitHub 存储库](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)有关详细信息。
 
-或者，则可以重写[ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*)方法`Page`，插入任何布局更改那里逻辑。 `OnSizeAllocated`调用方法时`Page`分配新的大小，这种情况发生的 whenver 将设备旋转。 请注意的基实现`OnSizeAllocated`执行重要布局功能，因此，必须在重写中调用基实现：
+或者，则可以重写[ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*)方法`Page`，插入任何布局更改那里逻辑。 `OnSizeAllocated`调用方法时`Page`分配新的大小，这种情况发生时将设备旋转。 请注意的基实现`OnSizeAllocated`执行重要布局功能，因此，必须在重写中调用基实现：
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

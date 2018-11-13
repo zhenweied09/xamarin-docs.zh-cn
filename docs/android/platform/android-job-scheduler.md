@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108764"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527009"
 ---
 # <a name="android-job-scheduler"></a>Android 作业计划程序
 
@@ -42,7 +42,7 @@ Android 作业计划程序是内置于 Android 操作系统，提供简化计划
 * `Android.App.Job.JobService`是一个抽象类，必须使用将在应用程序的主线程运行作业的逻辑扩展。 这意味着，`JobService`负责的工作方式是以异步方式执行。
 * `Android.App.Job.JobInfo`对象保留的条件来确定作业应该运行指导 Android。
 
-若要计划使用 Android 作业计划程序的工作，Xamarin.Android 应用程序必须封装在扩展类中的代码`JobService`类。 `JobService` 有三个生命周期方法，可以在作业的生存期内调用：
+若要计划使用 Android 作业计划程序的工作，Xamarin.Android 应用程序必须封装在扩展类中的代码`JobService`类。 `JobService` 有三个作业的生存期内可以调用的生命周期方法：
 
 * **bool （JobParameters 参数） OnStartJob** &ndash;调用此方法`JobScheduler`来执行工作，并可在应用程序的主线程上运行。 它负责`JobService`来以异步方式执行的工作并`true`剩余，如果没有工作或`false`如果完成工作。
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Android 作业计划程序的一项强大功能是能够控制时的作业运行或在什么条件下一个作业可能会运行。 下表描述的一些方法对`JobInfo.Builder`的允许的应用程序来影响一个作业的运行时：  
@@ -186,7 +186,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 若要计划作业，Xamarin.Android 应用程序将获取对的引用`JobScheduler`系统服务，并调用`JobScheduler.Schedule`方法替换`JobInfo`上一步中创建的对象。 `JobScheduler.Schedule` 将立即返回两个整数值之一：
 
-* **JobScheduler.ResultSuccess** &ndash;作业已成功计划。 
+* **JobScheduler.ResultSuccess** &ndash;成功计划作业。 
 * **JobScheduler.ResultFailure** &ndash;无法计划作业。 这通常由冲突引起`JobInfo`参数。
 
 此代码是计划的作业和通知用户计划尝试的结果的示例：
@@ -211,7 +211,7 @@ else
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

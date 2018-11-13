@@ -1,5 +1,5 @@
 ---
-title: 片段的 ViewPager
+title: 带片段的 ViewPager
 description: ViewPager 是使您可以实现动作导航的布局管理器。 动作导航允许用户轻扫，左侧和右侧到单步执行的数据页。 本指南介绍如何实现使用 ViewPager，使用片段作为数据页的可轻扫 UI。
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
@@ -7,21 +7,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: def46f69b139ef52bb6e65a1c415b9c899e63897
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b6e1c8ce91eaad46e779527c5ba12e2187cad24
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109414"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528424"
 ---
-# <a name="viewpager-with-fragments"></a>片段的 ViewPager
+# <a name="viewpager-with-fragments"></a>带片段的 ViewPager
 
 _ViewPager 是使您可以实现动作导航的布局管理器。动作导航允许用户轻扫，左侧和右侧到单步执行的数据页。本指南介绍如何实现使用 ViewPager，使用片段作为数据页的可轻扫 UI。_
 
  
 ## <a name="overview"></a>概述
 
-`ViewPager` 通常使用与片段结合使用，因此它更轻松地管理中每个页面的生命周期`ViewPager`。 在此演练中，`ViewPager`用于创建应用程序调用**FlashCardPager**的闪存卡上显示一系列数学问题。 每个闪存卡实现为一个片段。 用户通过闪存卡左右轻扫并点击以显示其答案对数学问题。 此应用程序创建`Fragment`实例的每个适配器派生自的闪存卡并实现`FragmentPagerAdapter`。 在中[Viewpager 和视图](~/android/user-interface/controls/view-pager/viewpager-and-views.md)，执行大部分工作的`MainActivity`生命周期方法。 在中**FlashCardPager**，将通过完成大部分工作`Fragment`在其生命周期方法之一。 
+`ViewPager` 通常使用与片段结合使用，因此它更轻松地管理中每个页面的生命周期`ViewPager`。 在此演练中，`ViewPager`用于创建名为应用程序**FlashCardPager**的闪存卡上显示一系列数学问题。 每个闪存卡实现为一个片段。 用户通过闪存卡左右轻扫并点击以显示其答案对数学问题。 此应用程序创建`Fragment`实例的每个适配器派生自的闪存卡并实现`FragmentPagerAdapter`。 在中[Viewpager 和视图](~/android/user-interface/controls/view-pager/viewpager-and-views.md)，执行大部分工作的`MainActivity`生命周期方法。 在中**FlashCardPager**，将通过完成大部分工作`Fragment`在其生命周期方法之一。 
 
 本指南不涉及片段的基础知识&ndash;如果您尚不熟悉在 Xamarin.Android 中的片段，请参阅[片段](~/android/platform/fragments/index.md)来帮助你开始使用片段。 
 

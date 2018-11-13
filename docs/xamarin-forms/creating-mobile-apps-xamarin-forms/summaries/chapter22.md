@@ -7,12 +7,12 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c4d92784654db8e566b41c8270dbe2095bd28b94
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 354338aedf67a02918858cbab71d866e5cd8ec9d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156595"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527139"
 ---
 # <a name="summary-of-chapter-22-animation"></a>第 22 章的摘要。 动画
 
@@ -48,7 +48,7 @@ ms.locfileid: "39156595"
 
 ### <a name="composite-animations"></a>复合动画
 
-可以混合使用等待和非等待创建复合动画的动画。 这些是中的动画`ViewExtensions`面向`TranslatonX`， `TranslationY`，和`Scale`转换属性：
+可以混合使用等待和非等待创建复合动画的动画。 这些是中的动画`ViewExtensions`面向`TranslationX`， `TranslationY`，和`Scale`转换属性：
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing))
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))
@@ -134,7 +134,7 @@ ms.locfileid: "39156595"
 
 ## <a name="deeper-into-animations"></a>深入到动画
 
-Xamarin.Forms 动画系统可以是有点令人困惑。 除了`Easing`类中，动画系统包含`ViewExtensions`， `Animation`，和`AnimationExtension`classses。
+Xamarin.Forms 动画系统可以是有点令人困惑。 除了`Easing`类中，动画系统包含`ViewExtensions`， `Animation`，和`AnimationExtension`类。
 
 ### <a name="viewextensions-class"></a>ViewExtensions 类
 
@@ -144,7 +144,7 @@ Xamarin.Forms 动画系统可以是有点令人困惑。 除了`Easing`类中，
 
 [ `Animation` ](xref:Xamarin.Forms.AnimationExtensions)类有[构造函数](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action))具有五个参数来定义回调和已完成的方法，以及动画的参数。
 
-可以通过添加子动画[ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation))， [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation))， [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))，并和重载的[ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
+可以通过添加子动画[ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation))， [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation))， [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))，并重载[ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
 
 动画对象然后通过调用启动[ `Commit` ](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean}))方法。
 
@@ -162,7 +162,7 @@ Xamarin.Forms 动画系统可以是有点令人困惑。 除了`Easing`类中，
 
 ### <a name="beyond-the-high-level-animation-methods"></a>超出高级动画方法
 
-[ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations)示例还演示了如何执行动画之外的属性所针对的由其他`ViewExtensions`方法。 在一个示例中，一系列句点的变长;在另一个示例中，`BackgroundColor`属性进行动画处理。
+[ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations)示例还演示了如何执行超出面向的属性的动画`ViewExtensions`方法。 在一个示例中，一系列句点的变长;在另一个示例中，`BackgroundColor`属性进行动画处理。
 
 ### <a name="more-of-your-own-awaitable-methods"></a>多个你自己的可等待方法
 

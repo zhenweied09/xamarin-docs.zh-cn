@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117286"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528453"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>使用在 Xamarin.Mac 中的情节提要
 
@@ -68,7 +68,7 @@ controller.ShowWindow(this);
 - `ViewDidDisappear` -从屏幕中删除该视图后，将直接调用此方法。
 - `UpdateViewConstraints` -定义视图的约束自动布局位置和大小需要更新时，调用此方法。
 - `ViewWillLayout` -此视图的子视图上屏幕的布局之前，调用此方法。
-- `ViewDidLayout` -查看视图的子视图上屏幕的布局后，将直接调用此方法。
+- `ViewDidLayout` -视图的子视图上屏幕的布局后，将直接调用此方法。
 
 <a name="The-Responder-Chain" />
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-（可选） 可以重写`ShouldPerfromSegue`方法，并控制是否通过实际执行 SegueC#代码。 对于手动提供视图控制器，调用其`DismissController`方法以在不再需要时从显示中删除它们。
+（可选） 可以重写`ShouldPerformSegue`方法，并控制是否通过实际执行 SegueC#代码。 对于手动提供视图控制器，调用其`DismissController`方法以在不再需要时从显示中删除它们。
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ namespace OnCardMac
 2. `Storyboard`属性将包含其他从中加载窗口控制器的情节提要`null`如果未从情节提要加载。
 3. 您可以调用`DismissController`方法来关闭给定的窗口并从视图中删除它。
 
-窗口控制器视图与控制器一样，实现`PerformSegue`，`PrepareForSegue`和`ShouldPerfromSegue`方法，可以用作 Segue 操作的源。
+窗口控制器视图与控制器一样，实现`PerformSegue`，`PrepareForSegue`和`ShouldPerformSegue`方法，可以用作 Segue 操作的源。
 
 窗口控制器负责 macOS 应用的以下功能：
 
@@ -259,7 +259,7 @@ MacOS 中提供了以下手势识别器：
 
 ## <a name="using-storyboard-references"></a>使用情节提要引用
 
-可以在情节提要引用大型、 复杂的情节提要设计并将其分割为较小获取引用从原始的情节提要，因此删除消除复杂性并使生成单个情节提要更轻松地设计和维护。
+情节提要引用，可采用庞大而复杂的情节提要设计并将其分割为较小的情节提要获取引用从原始，从而消除复杂性，并将生成单独的情节提要设为更轻松地设计和维护。
 
 另外，还可提供情节提要引用_定位点_到同一个情节提要或上一个不同的特定场景中的另一个场景。
 

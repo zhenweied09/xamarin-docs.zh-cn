@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 摘要的第 16 章。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 083cb4ed57df989a55a26394cbf8440d53a9e769
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: a3884aef844b14d2b5923901596df8ce76018538
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156652"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563586"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>第 16 章的摘要。 数据绑定
 
@@ -42,7 +42,7 @@ ms.locfileid: "39156652"
 - [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 在`System.ComponentModel`命名空间是用于实现在属性发生更改时通知
 - [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 用于定义将值从一种类型转换为另一个数据绑定中的较小类
 
-数据绑定连接两个相同的对象或 （更常见） 两个不同的对象的属性。 这两个属性嘿 *源*并*目标*。 通常情况下，源属性中的更改会导致在目标属性发生更改，但有时反转方向。 而不考虑：
+数据绑定连接两个相同的对象或 （更常见） 两个不同的对象的属性。 这两个属性*源*并*目标*。 通常情况下，源属性中的更改会导致在目标属性发生更改，但有时反转方向。 而不考虑：
 
 - *目标*属性必须为后盾 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)
 - *源*属性通常是实现的类的成员 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged)

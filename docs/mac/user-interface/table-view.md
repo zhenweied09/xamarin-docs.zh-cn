@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a8c55c8b4ff3fbd515aad8bf45c52a0b549af9f
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
-ms.translationtype: MT
+ms.openlocfilehash: 0d89fff81d1d13baa578068bcaef11dd5af00e14
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285594"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527048"
 ---
 # <a name="table-views-in-xamarinmac"></a>在 Xamarin.Mac 中的表视图
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的表视图。它描述了在 Xcode 和 Interface Builder 和在代码中与它们交互中的创建表视图。_
 
-如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个表视图，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护表视图 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问同一个表视图，使用的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护表视图 （或选择通过 C# 代码中直接创建）。
 
 表视图中包含一个或多个列的多个行中的信息以表格格式显示数据。 根据要创建的表视图的类型，用户可以按列排序、 重新组织列、 添加列、 删除列或编辑表中包含的数据。
 

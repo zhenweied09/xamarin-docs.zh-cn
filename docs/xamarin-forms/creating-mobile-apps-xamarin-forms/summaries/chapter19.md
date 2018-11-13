@@ -7,12 +7,12 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 07/18/2018
-ms.openlocfilehash: 01985cf253c0f33c52128386b36c11af50381ee1
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 84d21738298360eb8829a569b152a131e6543709
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156676"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526775"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>第 19 章的摘要。 集合视图
 
@@ -60,7 +60,7 @@ Xamarin.Forms 定义了三个视图的保留集合并显示其元素：
 
 ### <a name="the-row-separator"></a>行分隔符
 
-在 iOS 和 Android 的显示，细线分隔行。 您可以使用此控制[ `SeparatorVisibiliy` ](xref:Xamarin.Forms.ListView.SeparatorVisibility)并[ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor)属性。 `SeparatorVisibility` 属性属于类型[ `SeparatorVisbility` ](xref:Xamarin.Forms.SeparatorVisibility)，具有两个成员的枚举：
+在 iOS 和 Android 的显示，细线分隔行。 您可以使用此控制[ `SeparatorVisibility` ](xref:Xamarin.Forms.ListView.SeparatorVisibility)并[ `SeparatorColor` ](xref:Xamarin.Forms.ListView.SeparatorColor)属性。 `SeparatorVisibility` 属性属于类型[ `SeparatorVisibility` ](xref:Xamarin.Forms.SeparatorVisibility)，具有两个成员的枚举：
 
 - [`Default`](xref:Xamarin.Forms.SeparatorVisibility.Default)默认设置
 - [`None`](xref:Xamarin.Forms.SeparatorVisibility.None)

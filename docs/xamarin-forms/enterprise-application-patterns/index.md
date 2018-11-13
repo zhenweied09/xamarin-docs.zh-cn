@@ -1,4 +1,4 @@
-﻿---
+---
 title: 使用 Xamarin.Forms 电子书的企业应用程序模式
 description: 此电子书提供了用于开发自适应、 可维护性、 和可测试的 Xamarin.Forms 企业应用程序的体系结构指南。
 ms.prod: xamarin
@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ecfe99f66e16eafabc3117036ff065e3a35259c3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994343"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528437"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>使用 Xamarin.Forms 电子书的企业应用程序模式
 
@@ -54,7 +54,7 @@ Xamarin.Forms 包括对页面导航、 从用户的交互用户界面时，或�
 
 接受用户输入的任何应用程序应确保输入有效。 而不进行验证，用户可以提供会导致应用失败的数据。 验证强制实施业务规则，可防止攻击者将恶意数据注入。
 
-在上下文的模型-视图模型的模型 (MVVM) 模式，视图模型或模型通常需要执行数据验证和信号到视图的任何验证错误，以便用户可以更正它们。
+在上下文的模型-视图-视图模型 (MVVM) 模式，视图模型或模型通常需要执行数据验证和信号到视图的任何验证错误，以便用户可以更正它们。
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[配置管理](configuration-management.md)
 

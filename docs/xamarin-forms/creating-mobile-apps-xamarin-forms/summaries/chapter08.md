@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 8 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1aa5226e1e6867f77eea4d7679650e8d62f5b981
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: cf757976be1a95fb7ed56ba6c014389fbe520408
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156985"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563571"
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>第 8 章的摘要。 代码和 XAML 协调工作
 
@@ -79,5 +79,5 @@ ms.locfileid: "39156985"
 
 - [第 8 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf)
 - [第 8 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)
-- [第 8 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
+- [第 8 章F#示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
 - [在 XAML 中传递自变量](~/xamarin-forms/xaml/passing-arguments.md)

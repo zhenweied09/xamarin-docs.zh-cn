@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 80f37e1753362ec0503b70e49a2206684c0fedb5
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "50675323"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527165"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>适用于 Xamarin.iOS 的故障排除技巧 
 
@@ -187,7 +187,7 @@ Stacktrace:
 
 ## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException： 尝试 JIT 编译方法 （托管到托管的包装） Foo[]:System.Collections.Generic.ICollection'1.get_Count （）
 
-[] 后缀指示您或类库正在通过泛型集合，如 ienumerable<>、 icollection<> 或 IList <> 数组上调用的方法。 解决此问题，可以明确强制 AOT 编译器包含此类方法通过调用方法，并确保触发了异常的调用之前执行此代码。 在这种情况下，您可以编写：
+[] 后缀指示您或类库正在通过泛型集合，如 ienumerable<>、 icollection<> 或 IList <> 数组上调用的方法。 解决此问题，可以显式强制 AOT 编译器包含此类方法通过调用方法，并确保触发了异常的调用之前执行此代码。 在这种情况下，您可以编写：
 
 ```csharp
 Foo [] array = null;
@@ -358,7 +358,7 @@ IPhone SDK 4.0 安装程序安装 2 Sdk-3.2 SDK，用于构建仅限 iPad 的应
 
 Visual Studio for Mac iPhone 项目生成选项中构建您的应用程序包含将使用的 SDK 版本的设置。 此设置可在**项目选项-> 生成-> iPhone 生成**。
 
-Visual Studio for Mac 中的新项目作为其默认 SDK 设置，使用最早的已安装的 SDK 和 Visual Studio for Mac 如果指定的 SDK 不存在，将使用它可以找到以生成您的应用程序的最接近。 执行此操作，以便项目始终不会 requre 最新的 SDK。 但是，这当前会导致 3.2 SDK 正在使用-这会导致正在使用 iPad 模拟器。
+Visual Studio for Mac 中的新项目作为其默认 SDK 设置，使用最早的已安装的 SDK 和 Visual Studio for Mac 如果指定的 SDK 不存在，将使用它可以找到以生成您的应用程序的最接近。 执行此操作，以便项目始终就不需要最新的 SDK。 但是，这当前会导致 3.2 SDK 正在使用-这会导致正在使用 iPad 模拟器。
 
 若要解决此问题通过使用为 4.0 SDK，请转到**项目选项-> 生成-> iPhone 生成**> 并将 SDK 值更改为"4.0"，然后使用下拉列表框。 必须为每个配置和平台组合，访问面板的顶部使用下拉列表来执行此操作。
 

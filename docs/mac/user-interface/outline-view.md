@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113561"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527178"
 ---
 # <a name="outline-views-in-xamarinmac"></a>在 Xamarin.Mac 中的大纲视图
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的大纲视图。它介绍了创建和维护在 Xcode 和 Interface Builder 中的大纲视图和以编程方式使用它们。_
 
-如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个大纲视图，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护大纲视图 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问相同的大纲视图的使用的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护大纲视图 （或选择通过 C# 代码中直接创建）。
 
 大纲视图是一种表，用户可以通过展开或折叠的分层数据的行。 表视图中，如大纲视图显示数据的一组相关项，其中每行表示各个项和列，表示这些项的属性。 与不同的表视图中，在大纲视图中的项不在平面列表中，它们在层次结构中，如文件和文件夹在硬盘上的组织方式。
 

@@ -4,15 +4,15 @@ description: XAML 标记扩展构成允许将属性设置为对象或从其他�
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935610"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563831"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>第 3 部分。 XAML 标记扩展
 
@@ -387,7 +387,7 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-你将需要额外的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义一个新的前缀。 若要访问的共享的应用程序的.NET 标准库的本地类，例如`AppConstants`，XAML 编程人员通常使用该前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，是在 C# 中显示的名称`namespace`定义中或在`using`指令：
+你将需要额外的 XML 命名空间声明，若要访问其他类。 每个其他的 XML 命名空间声明定义一个新的前缀。 若要访问的共享的应用程序的.NET 标准库的本地类，例如`AppConstants`，XAML 编程人员通常使用该前缀`local`。 命名空间声明必须指示 CLR （公共语言运行时） 命名空间名称，也称为.NET 命名空间名称，名称将显示在C#`namespace`定义中或在`using`指令：
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"

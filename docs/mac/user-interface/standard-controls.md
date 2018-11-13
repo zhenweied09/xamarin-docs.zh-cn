@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 9f5bdc9a79c514f0310d29b3d054fb7e9659d669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 150d5a35a2ccae63a1ff9969f5751b0e93c12454
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123786"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526996"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>在 Xamarin.Mac 中标准控件
 
 _本文介绍如何使用标准的 AppKit 控件，如按钮、 标签、 文本字段、 复选框和分段控件中的 Xamarin.Mac 应用程序。它介绍了将其添加到使用 Interface Builder 的接口以及与其进行交互的代码中。_
 
-如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个 AppKit 控件使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护 Appkit 控件 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问相同的 AppKit 控件的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护 Appkit 控件 （或选择通过 C# 代码中直接创建）。
 
 AppKit 控件是用于创建 Xamarin.Mac 应用程序的用户界面的 UI 元素。 它们包含的元素，如按钮、 标签、 文本字段、 复选框和分段控件和导致出现时用户操作它们即时操作或显示结果。
 
