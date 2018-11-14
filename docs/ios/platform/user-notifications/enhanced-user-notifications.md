@@ -167,7 +167,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 2. 切换到**源**视图： 
 
     [![](enhanced-user-notifications-images/setup01.png "源视图")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. 单击**+** 按钮以添加新的密钥。
+3. 单击 **+** 按钮以添加新的密钥。
 4. 输入`aps-environment`有关**属性**，将保留**类型**作为`String`并输入`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02.png "Aps 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -176,7 +176,7 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 双击`Entitlements.plist`文件中**解决方案资源管理器**打开进行编辑。
-3. 单击**+** 按钮以添加新的密钥。
+3. 单击 **+** 按钮以添加新的密钥。
 4. 输入`aps-environment`有关**属性**，将保留**类型**作为`String`并输入`development`或`production`为**值**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Aps 环境属性")](enhanced-user-notifications-images/setup02.png#lightbox)
