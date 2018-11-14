@@ -13,11 +13,11 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51528437"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>使用 Xamarin.Forms 的企业应用程序模式电子书
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>《Xamarin.Forms企业应用程序模式》电子书
 
 _开发可适应的、 可维护的、 和可测试的 Xamarin.Forms 企业应用程序的架构指南_
 
-![](images/cover-sml.png "使用 Xamarin.Forms 电子书的企业应用程序模式")
+![](images/cover-sml.png "《Xamarin.Forms企业应用程序模式》电子书")
 
 此电子书提供有关如何实现Model-View-ViewModel (MVVM) 模式、 依赖关系注入、 导航、 验证和配置管理，同时保持松散耦合的指南。 此外，还有指导利用 IdentityServer 执行身份验证和授权，从容器化微服务访问数据和单元测试。
 
