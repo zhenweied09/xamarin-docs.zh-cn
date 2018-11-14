@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104006"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527061"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>在 Xamarin.Mac 中创建自定义控件
 
-如果在 Xamarin.Mac 应用程序中使用 C# 和.NET，则可以访问到同一个用户控件，使用的开发人员*Objective C*， *Swift*并*Xcode* does. 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护用户控件 （或选择通过 C# 代码中直接创建）。
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问同一个用户控件的开发人员*Objective C*， *Swift*和*Xcode*does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护用户控件 （或选择通过 C# 代码中直接创建）。
 
 虽然 macOS 提供了丰富的内置用户控件，可能需要创建自定义控件提供功能不提供的框，或以匹配自定义 UI 主题 （如游戏的接口） 的时间。
 
@@ -221,7 +221,7 @@ public override void DrawRect (CGRect dirtyRect)
 
 #### <a name="handling-user-input-with-override-methods"></a>处理用户输入与重写方法
 
-继承的对象`NSControl`(或`NSView`) 有多个重写方法的处理鼠标或键盘输入。 对于我们示例中的控件，我们想要翻转的状态之间切换**上**并**关闭**当用户单击鼠标左键在控件上。 我们可以添加以下重写方法到`NSFliwSwitch`类来处理这种情况：
+继承的对象`NSControl`(或`NSView`) 有多个重写方法的处理鼠标或键盘输入。 对于我们示例中的控件，我们想要翻转的状态之间切换**上**并**关闭**当用户单击鼠标左键在控件上。 我们可以添加以下重写方法到`NSFlipSwitch`类来处理这种情况：
 
 ```csharp
 #region Mouse Handling Methods
@@ -344,7 +344,7 @@ if (this.Action !=null)
 
 [![](custom-controls-images/custom04.png "设置视图的类")](custom-controls-images/custom04.png#lightbox)
 
-切换到**助手编辑器**并创建**Outlet**自定义控件 (并确保将其在绑定`ViewControler.h`文件，而不`.m`文件):
+切换到**助手编辑器**并创建**Outlet**自定义控件 (并确保将其在绑定`ViewController.h`文件，而不`.m`文件):
 
 [![](custom-controls-images/custom05.png "配置新输出口")](custom-controls-images/custom05.png#lightbox)
 

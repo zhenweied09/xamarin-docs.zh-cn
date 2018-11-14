@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102979"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983596"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>使用 MonoGame 管道工具
 
@@ -84,7 +84,7 @@ MonoGame 管道工具创建项目后，将显示有关项目的信息时根**Con
 
 ### <a name="output-folder"></a>输出文件夹
 
-是 （相对于内容项目本身） 的文件夹，其中输出 **.xnb**将保存文件。 为了简单起见，我们将使用相同的文件夹以保存我们的输入和输出文件。 换而言之，我们将更改**输出文件夹**为 **。\** :
+是 （相对于内容项目本身） 的文件夹，其中输出 **.xnb**将保存文件。 为了简单起见，我们将使用相同的文件夹以保存我们的输入和输出文件。 换而言之，我们将更改**输出文件夹**要 **。\\** :
 
 ![](walkthrough-images/image10.png "")
 

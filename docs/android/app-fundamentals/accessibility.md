@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 4eb4a97a346f3906c925dc9e324ed9378af0b560
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116159"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528125"
 ---
 # <a name="accessibility-on-android"></a>在 Android 上的辅助功能
 
@@ -74,7 +74,7 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
 
 **C#**
 
-在C#，设置`LabelFor`这是此内容控件的资源 id 的属性描述 （通常此属性设置上一个标签和引用其他输入的控件）：
+在C#，设置`LabelFor`属性设置为可描述此内容的控件的资源 ID （通常此属性设置上一个标签和引用其他输入的控件）：
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);

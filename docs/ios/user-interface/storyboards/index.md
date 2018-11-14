@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106879"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564000"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>在 Xamarin.iOS 中的情节提要简介
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 在此示例中，`PrepareForSegue`用户触发 segue 时，将调用方法。 我们首先需要创建的接收的视图控制器实例并将其设为 segue 的目标视图控制器。 这可通过下面的代码行：
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 该方法现在具有设置的属性的能力`DestinationViewController`。 在此示例中我们已通过传递一个名为列表中采取这样做的优点`PhoneNumbers`到`CallHistoryController`并将其分配到具有相同名称的对象：
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ public partial class MainViewController : UIViewController
 
 ## <a name="using-storyboard-references"></a>使用情节提要引用
 
-可以在情节提要引用大型、 复杂的情节提要设计并将其分割为较小获取引用从原始的情节提要，因此删除消除复杂性并使生成单个情节提要更轻松地设计和维护。
+情节提要引用，可采用庞大而复杂的情节提要设计并将其分割为较小的情节提要获取引用从原始，从而消除复杂性，并将生成单独的情节提要设为更轻松地设计和维护。
 
 另外，还可提供情节提要引用_定位点_到同一个情节提要或上一个不同的特定场景中的另一个场景。
 

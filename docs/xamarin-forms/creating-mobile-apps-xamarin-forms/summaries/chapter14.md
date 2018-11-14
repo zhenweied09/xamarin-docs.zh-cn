@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 14 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 07774bb5d63b8c9fb9c48192744d383b37f64900
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 6393794a20a80fae43e31a96efd4941f4b633c28
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156640"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563714"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>第 14 章的摘要。 绝对布局
 
@@ -55,7 +55,7 @@ ms.locfileid: "39156640"
 - [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) (12)
 - [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
 
-可以将它们与 C# 按位 OR 运算符组合。
+可以将它们与组合C#按位 OR 运算符。
 
 这些标志设置后，某些属性`Rectangle`布局边界结构使用的位置和大小子将按比例解释。
 

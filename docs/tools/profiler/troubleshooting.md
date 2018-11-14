@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103746"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563337"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 故障排除
 
@@ -79,7 +79,7 @@ Xamarin 团队可帮助跟踪问题，如果你向我们提供的信息，包括
 
 #### <a name="to-watch-a-specific-thread"></a>若要观看特定线程
 
-如果你有想要专门观看的线程，它将为命名在最开始创建，以便 get 获取线程的理想之选`ThreadName`而不是`0x0`。 若要为用户界面中设置线程名称示例，可以使用以下代码：
+如果你有想要专门观看的线程，则会命名为其创建以获取最开头的线程的理想之选`ThreadName`而不是`0x0`。 例如设置线程名称作为`UI`，可以使用以下代码：
 
 ```csharp
 RunOnUiThread (() => {

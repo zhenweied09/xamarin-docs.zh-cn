@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b9aa29507ebb37e3912b1027419e47c82832dfa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116506"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527191"
 ---
 # <a name="creating-android-services"></a>创建 Android 服务
 
@@ -47,7 +47,7 @@ Android 应用程序由至少一个以下四个主要组件组成：_活动_，_
 
 * **`IntentService`** &ndash; _`IntentService`_ 是一个专门的子类`Service`类，用于简化服务创建和使用情况。 `IntentService`旨在处理各个自治的调用。 与一个服务，它可以同时处理多个调用，不同`IntentService`更像是_工作队列处理器_&ndash;工作排队等候和`IntentService`在单个工作线程上一次处理一个每个作业。 通常情况下，`IntentService`未绑定到的活动或片段。 
 
-* **已启动服务** &ndash; A_已启动服务_是一种服务，已启动一些其他 Android 组件 （如活动），并且是持续在后台运行直到内容显式告知若要停止的服务。 不同于绑定的服务，已启动的服务不具有直接绑定到它的任何客户端。 出于此原因，务必设计，以便它们可以正常重新启动在必要时启动的服务。
+* **已启动服务** &ndash; A_已启动服务_是已启动一些其他 Android 组件 （如活动），直到内容显式告知在后台持续运行的服务若要停止的服务。 不同于绑定的服务，已启动的服务不具有直接绑定到它的任何客户端。 出于此原因，务必设计，以便它们可以正常重新启动在必要时启动的服务。
 
 * **混合服务** &ndash; A_混合服务_是一项服务具有的特征_已启动服务_和一个_绑定服务_。 组件绑定到它或它可能由某些事件启动时，可以通过启动一种混合服务。 客户端组件可能会或可能未绑定到混合服务。 一种混合服务将继续运行，直到明确指示若要停止，或者没有任何绑定到它的多个客户端。
 
@@ -59,7 +59,7 @@ Android 应用程序由至少一个以下四个主要组件组成：_活动_，_
 
 ### <a name="background-execution-limits-in-android-80"></a>Android 8.0 中的后台执行限制
 
-启动 Android 8.0 （API 级别为 26） 在 Android 应用程序不再能够自由地在后台运行。 当在前台，应用可以启动和运行不受限制的服务。 当应用程序移动到后台时，Android 将授予该应用程序一定的时间启动和使用服务。 后经过指定的时间，则应用无法再启动任何服务和启动的任何服务将被终止。 在此点是不能执行任何工作的应用。 Android 要考虑的应用程序位于前台，如果满足以下条件之一：
+启动 Android 8.0 （API 级别为 26） 在 Android 应用程序不再能够自由地在后台运行。 当在前台，应用可以启动和运行不受限制的服务。 当应用程序移动到后台时，Android 将授予该应用程序一定的时间启动和使用服务。 后经过指定的时间，则应用无法再启动任何服务和启动的任何服务将被终止。 此时不能执行任何工作的应用。 Android 要考虑的应用程序位于前台，如果满足以下条件之一：
 
 * 没有可见的活动 （启动或暂停）。
 * 应用程序已开始的前景色服务。
@@ -70,7 +70,7 @@ Android 应用程序由至少一个以下四个主要组件组成：_活动_，_
 * 应用程序将收到一个广播。 
 * 应用程序收到执行`PendingIntent`以响应一条通知。
 
-现有 Xamarin.Android 应用程序可能需要更改其执行后台工作以避免可能出现在 Android 8.0 上的任何问题的方式。 下面是一些实际 alterantives 到 Android 服务：
+现有 Xamarin.Android 应用程序可能需要更改其执行后台工作以避免可能出现在 Android 8.0 上的任何问题的方式。 下面是一些实用的替代方案到 Android 服务：
 
 * **计划在使用 Android 作业计划程序在后台中运行的工作或[Firebase 作业调度程序](~/android/platform/firebase-job-dispatcher.md)** &ndash;这两个库提供一个框架，用于应用程序分离到中的后台工作_作业_，离散的工作单位。 可以在运行作业时，应用程序然后可以有关计划操作系统以及某些条件的作业。
 * **启动该服务在前台**&ndash;前景服务可用于应用程序时必须执行某些任务在后台，用户可能需要定期与该任务进行交互。 前景服务将显示持久通知，以便用户可以知道应用正在运行的后台任务，且还提供了一种方法来监视或与任务交互。 此示例将向用户播放播客或可能下载播客一集中，以便可以更高版本感到满意的主发挥播客应用。 

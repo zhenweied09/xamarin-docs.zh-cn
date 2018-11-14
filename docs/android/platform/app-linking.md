@@ -56,7 +56,7 @@ Android 处理通过将应用链接*意向系统*&ndash;当用户单击移动浏
 它是所需配置一个意向筛选器，将从网站的 URI （或可能的一组 Uri） 映射到 Android 应用程序中的活动。 在 Xamarin.Android 中，此关系的建立方式装饰的活动[IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)。 意向筛选器必须声明以下信息：
 
 * **`Intent.ActionView`** &ndash; 此操作将注册意向筛选器可以响应请求来查看信息
-* **`Categories`** &ndash;  意向的筛选器应注册同时**[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** 和**[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** 为了能够正确处理 web URI。
+* **`Categories`** &ndash;  意向的筛选器应注册同时 **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** 和 **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** 为了能够正确处理 web URI。
 * **`DataScheme`** &ndash; 意向筛选器必须声明`http`和/或`https`。 这些是仅有两个有效的方案。
 * **`DataHost`** &ndash; 这是 Uri 将源于的域。
 * **`DataPathPrefix`** &ndash; 这是在网站上的资源的可选路径。

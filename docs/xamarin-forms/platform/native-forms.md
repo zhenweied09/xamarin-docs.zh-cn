@@ -6,13 +6,13 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/11/2018
-ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/09/2018
+ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122746"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563727"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin 本机项目中的 Xamarin.Forms
 
@@ -25,7 +25,7 @@ _本机窗体允许 Xamarin.Forms ContentPage 派生页可供本机 Xamarin.iOS�
 1. 对本机项目中添加的 Xamarin.Forms NuGet 包。
 1. 添加[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页上，以及任何依赖项，对本机项目。
 1. 调用 `Forms.Init` 方法。
-1. 构造的实例[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页并将其转换为适当的本机类型使用以下扩展方法之一：`CreateViewController`适用于 iOS，`CreateFragment`或`CreateSupportFragment`对于 Android，或`CreateFrameworkElement`适用于 UWP。
+1. 构造的实例[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页并将其转换为适当的本机类型使用以下扩展方法之一：`CreateViewController`适用于 iOS，`CreateSupportFragment`对于 Android，或`CreateFrameworkElement`为UWP。
 1. 导航到的本机类型表示形式[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页使用本机导航 API。
 
 必须通过调用初始化 Xamarin.Forms`Forms.Init`方法之前本机项目可以构造[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页。 选择何时执行此操作主要取决于你的应用程序流中最方便的时候 – 在应用程序启动时或之前无法执行其`ContentPage`-构造派生的页面。 在这篇文章，并随附的示例应用程序，`Forms.Init`在应用程序启动时调用方法。
@@ -134,8 +134,8 @@ public class MainActivity : AppCompatActivity
         SetSupportActionBar(toolbar);
         SupportActionBar.Title = "Phoneword";
 
-        var mainPage = new PhonewordPage().CreateFragment(this);
-        FragmentManager
+        var mainPage = new PhonewordPage().CreateSupportFragment(this);
+        SupportFragmentManager
             .BeginTransaction()
             .Replace(Resource.Id.fragment_frame_layout, mainPage)
             .Commit();
@@ -151,13 +151,10 @@ public class MainActivity : AppCompatActivity
 - 对引用`MainActivity`类存储在`static``Instance`字段。 这是为了提供其他类来调用方法中定义的一种机制`MainActivity`类。
 - `Activity`内容设置从布局资源。 在示例应用程序，布局组成`LinearLayout`，其中包含`Toolbar`，和一个`FrameLayout`充当片段容器。
 - `Toolbar`检索并设置为在操作栏`Activity`，并设置操作栏标题。
-- `PhonewordPage`类，该类是 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生在 XAML 中定义的页中，会构造并转换为`Fragment`使用`CreateFragment`扩展方法。
-- `FragmentManager`类创建并提交事务，用于替换`FrameLayout`实例与`Fragment`为`PhonewordPage`类。
+- `PhonewordPage`类，该类是 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生在 XAML 中定义的页中，会构造并转换为`Fragment`使用`CreateSupportFragment`扩展方法。
+- `SupportFragmentManager`类创建并提交事务，用于替换`FrameLayout`实例与`Fragment`为`PhonewordPage`类。
 
 片段有关的详细信息，请参阅[片段](~/android/platform/fragments/index.md)。
-
-> [!NOTE]
-> 除了`CreateFragment`扩展方法，还包括 Xamarin.Forms`CreateSupportFragment`方法。 `CreateFragment`方法创建`Android.App.Fragment`，可以在更高版本和目标 API 11 的应用程序中使用。 `CreateSupportFragment`方法创建`Android.Support.V4.App.Fragment`，可以在 11 之前的 API 版本为目标的应用程序中使用。
 
 一次`OnCreate`方法执行，在 Xamarin.Forms 中定义 UI`PhonewordPage`将显示类，如以下屏幕截图中所示：
 
@@ -177,8 +174,8 @@ void OnCallHistory(object sender, EventArgs e)
 ```csharp
 public void NavigateToCallHistoryPage()
 {
-    var callHistoryPage = new CallHistoryPage().CreateFragment(this);
-    FragmentManager
+    var callHistoryPage = new CallHistoryPage().CreateSupportFragment(this);
+    SupportFragmentManager
         .BeginTransaction()
         .AddToBackStack(null)
         .Replace(Resource.Id.fragment_frame_layout, callHistoryPage)
@@ -186,7 +183,7 @@ public void NavigateToCallHistoryPage()
 }
 ```
 
-`NavigateToCallHistoryPage`方法将为 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页`Fragment`与`CreateFragment`扩展方法，并将添加`Fragment`片段到后退堆栈。 因此，在 Xamarin.Forms 中定义 UI`CallHistoryPage`将显示，如以下屏幕截图中所示：
+`NavigateToCallHistoryPage`方法将为 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-派生页`Fragment`与`CreateSupportFragment`扩展方法，并将添加`Fragment`片段到后退堆栈。 因此，在 Xamarin.Forms 中定义 UI`CallHistoryPage`将显示，如以下屏幕截图中所示：
 
 [![](native-forms-images/android-callhistorypage.png "Android CallHistoryPage")](native-forms-images/android-callhistorypage-large.png#lightbox "Android CallHistoryPage")
 
@@ -194,12 +191,12 @@ public void NavigateToCallHistoryPage()
 
 ### <a name="enabling-back-navigation-support"></a>启用后退导航的支持
 
-`FragmentManager`类具有`BackStackChanged`片段 back 堆栈的内容发生更改时激发的事件。 `OnCreate`中的方法`MainActivity`类包含此事件的匿名事件处理程序：
+`SupportFragmentManager`类具有`BackStackChanged`片段 back 堆栈的内容发生更改时激发的事件。 `OnCreate`中的方法`MainActivity`类包含此事件的匿名事件处理程序：
 
 ```csharp
-FragmentManager.BackStackChanged += (sender, e) =>
+SupportFragmentManager.BackStackChanged += (sender, e) =>
 {
-    bool hasBack = FragmentManager.BackStackEntryCount > 0;
+    bool hasBack = SupportFragmentManager.BackStackEntryCount > 0;
     SupportActionBar.SetHomeButtonEnabled(hasBack);
     SupportActionBar.SetDisplayHomeAsUpEnabled(hasBack);
     SupportActionBar.Title = hasBack ? "Call History" : "Phoneword";
@@ -211,9 +208,9 @@ FragmentManager.BackStackChanged += (sender, e) =>
 ```csharp
 public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
 {
-    if (item.ItemId == global::Android.Resource.Id.Home && FragmentManager.BackStackEntryCount > 0)
+    if (item.ItemId == global::Android.Resource.Id.Home && SupportFragmentManager.BackStackEntryCount > 0)
     {
-        FragmentManager.PopBackStack();
+        SupportFragmentManager.PopBackStack();
         return true;
     }
     return base.OnOptionsItemSelected(item);

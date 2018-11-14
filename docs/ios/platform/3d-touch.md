@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2bbc61c7fe843fd020093ab7080f38e6e7b180f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08edd3166df8392a5f3e7485a6572f0c94a38f62
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107802"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563649"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.iOS 中的三维点触控简介
 
@@ -78,7 +78,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 3D Touch 提供了用户可以与您比以往任何时候，更快的应用程序中的信息而无需导航从其当前位置进行交互的新方法。
 
-例如，如果您的应用程序显示的消息表，用户可以按硬上一个项目来预览其内容的覆盖层视图中 (它是 Apple 指作为*扫视*)。
+例如，如果您的应用程序显示的消息表，用户可以按硬上要预览其内容的覆盖层视图中的项 (它是 Apple 指作为*扫视*)。
 
 [![](3d-touch-images/peekandpop01.png "举例说明如何查看在内容")](3d-touch-images/peekandpop01.png#lightbox)
 
@@ -188,7 +188,7 @@ public override void ViewDidLoad ()
 
     // Check to see if 3D Touch is available
     if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-        // Regiser for Peek and Pop
+        // Register for Peek and Pop
         RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
     }
     ...

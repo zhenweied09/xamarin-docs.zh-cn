@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9a6f7f5c82808b6430ba1aa6178a543945ae2634
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104903"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527230"
 ---
 # <a name="touch-in-android"></a>Android 中的触控
 
@@ -80,7 +80,7 @@ public override bool OnTouchEvent(MotionEvent e)
 -  *OnSingleTapUp* -点击一下发生时调用。
 
 
-在许多情况下应用程序仅可能感兴趣的手势子集。 在这种情况下，应用程序应扩展类 GestureDetector.SimpleOnGestureListener 和重写对应的事件的方法，他们感兴趣。
+在许多情况下应用程序仅可能感兴趣的手势子集。 在这种情况下，应用程序应扩展类 GestureDetector.SimpleOnGestureListener 和重写到他们感兴趣的事件对应的方法。
 
 ## <a name="custom-gestures"></a>自定义笔势
 
@@ -134,7 +134,7 @@ SetContentView(gestureOverlayView);
     android:layout_height="match_parent" />
 ```
 
-`GestureOverlayView`具有多个将在绘制笔势的过程中引发的事件。 最值得关注的事件是`GesturePeformed`。 当用户完成绘制其手势时，引发此事件。
+`GestureOverlayView`具有多个将在绘制笔势的过程中引发的事件。 最值得关注的事件是`GesturePerformed`。 当用户完成绘制其手势时，引发此事件。
 
 当引发此事件时，该活动要求`GestureLibrary`尝试进行匹配手势工具具有一个手势的用户创建的笔势。 `GestureLibrary` 将返回的预测对象的列表。
 

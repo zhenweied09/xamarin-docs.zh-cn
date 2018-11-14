@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8514d3b2c423e524d03a800f5f56359f3aee4b75
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.openlocfilehash: db312c4c102feb98791109af19185762bb25856e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737188"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528840"
 ---
 # <a name="running-android-services-in-remote-processes"></a>远程进程中的运行 Android 服务
 
@@ -76,7 +76,7 @@ _通常情况下，Android 应用程序中的所有组件将在同一进程中�
 
 1. `Exported` &ndash; 此属性必须设置为`true`以允许其他应用程序与服务交互。 此属性的默认值为 `false`。
 2. `Process` &ndash; 必须设置此属性。 它用于指定该服务将在运行进程的名称。
-3. `IsolatedProcess` &ndash; 此属性将启用额外的安全性，告知 Android 在最小权限 iteract 与系统其余部分使用独立的沙盒中运行服务。 请参阅[Bugzilla 51940-服务使用的隔离的进程和应用程序的自定义类无法正确解析重载](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)。
+3. `IsolatedProcess` &ndash; 此属性将启用额外的安全性，告知 Android 在与系统其余部分进行交互的最小权限与独立的沙盒中运行服务。 请参阅[Bugzilla 51940-服务使用的隔离的进程和应用程序的自定义类无法正确解析重载](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)。
 4. `Permission` &ndash; 就可以通过指定客户端必须请求 （并被授予） 的权限来控制对服务的客户端访问。
 
 若要运行其自己的进程的服务`Process`属性上的`ServiceAttribute`必须设置为服务的名称。 与外部应用程序进行交互`Exported`属性应设置为`true`。 如果`Exported`是`false`，然后在相同的 APK （即相同应用程序） 中的唯一客户端和运行在同一进程中的将能够与服务交互。
@@ -129,7 +129,7 @@ _通常情况下，Android 应用程序中的所有组件将在同一进程中�
 
 ### <a name="implementing-a-handler"></a>实现一个处理程序
 
-若要处理客户端请求，该服务必须实现`Handler`并重写`HandleMessage`methodThis 是方法采用`Message`实例的可封装来自客户端的方法调用，并将转换为某种操作调用或该服务将执行的任务。 `Message`对象会公开一个名为属性`What`这是一个整数值，其含义客户端和服务之间共享以及与该服务是针对客户端执行某些任务。
+若要处理客户端请求，该服务必须实现`Handler`并重写`HandleMessage`methodThis 是方法采用`Message`实例，其中封装的方法调用从客户端，并将转换到某些操作或任务调用该服务将执行。 `Message`对象会公开一个名为属性`What`这是一个整数值，其含义客户端和服务之间共享以及与该服务是针对客户端执行某些任务。
 
 示例应用程序中的以下代码段说明的一个示例`HandleMessage`。 在此示例中，有服务的客户端可以请求两个操作：
 
@@ -153,7 +153,7 @@ public class TimestampRequestHandler : Android.OS.Handler
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
-                // Call methods on the service to retrive a timestamp message.
+                // Call methods on the service to retrieve a timestamp message.
                 break;
             default:
                 Log.Warn(TAG, $"Unknown messageType, ignoring the value {messageType}.");
@@ -168,7 +168,7 @@ public class TimestampRequestHandler : Android.OS.Handler
 
 ### <a name="instantiating-the-messenger"></a>实例化 Messenger
 
-如前所述，反序列化`Message`对象并调用`Handler.HandleMessage`是的 responsibilty`Messenger`对象。 `Messenger`类还提供了`IBinder`对象在客户端将用于将消息发送到服务。  
+如前所述，反序列化`Message`对象并调用`Handler.HandleMessage`负责`Messenger`对象。 `Messenger`类还提供了`IBinder`对象在客户端将用于将消息发送到服务。  
 
 服务启动时，它将实例化`Messenger`注入和`Handler`。 执行此初始化的好时机是在`OnCreate`服务的方法。 此代码片段是初始化其自己的服务的一个示例`Handler`和`Messenger`:
 
@@ -296,7 +296,7 @@ catch (RemoteException ex)
 
 有几种不同形式的`Message.Obtain`方法。 上面的示例使用[ `Message.Obtain(Handler h, Int32 what)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/)。 由于这是向进程外服务; 的异步请求将无响应服务，因此`Handler`设置为`null`。 第二个参数， `Int32 what`，将存储在`.What`属性的`Message`对象。 `.What`服务进程中的代码使用属性对服务调用方法。
 
-`Message`类还公开两个可能的收件人使用的附加属性：`Arg1`和`Arg2`。 这两个属性都可能有一些特殊达成具有客户端和服务之间的含义的值的整数值。 例如，`Arg1`可能包含客户 ID 和`Arg2`可能保存该客户采购订单号。 [ `Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/System.Int32/System.Int32/)可用于设置两个属性时`Message`创建。 另一种方法来填充这两个值是设置`.Arg`并`.Arg2`属性是直接在`Message`对象后已创建。
+`Message`类还公开给接收方使用的两个附加属性：`Arg1`和`Arg2`。 这两个属性都可能有一些特殊达成具有客户端和服务之间的含义的值的整数值。 例如，`Arg1`可能包含客户 ID 和`Arg2`可能保存该客户采购订单号。 [ `Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/System.Int32/System.Int32/)可用于设置两个属性时`Message`创建。 另一种方法来填充这两个值是设置`.Arg`并`.Arg2`属性是直接在`Message`对象后已创建。
 
 ### <a name="passing-additional-values-to-the-service"></a>将其他值传递给该服务
 

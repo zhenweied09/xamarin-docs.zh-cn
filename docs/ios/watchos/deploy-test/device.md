@@ -26,7 +26,7 @@ ms.locfileid: "50116727"
 
 ## <a name="devices"></a>设备
 
-测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心注册的设备。 设备列表如下所示 (单击加号**+** 以添加新设备):
+测试真实 iPhone 或 iPad 上的 iOS 应用始终要求要在开发人员中心注册的设备。 设备列表如下所示 (单击加号 **+** 以添加新设备):
 
 ![](device-images/devices-sml.png "设备列表如下所示")
 

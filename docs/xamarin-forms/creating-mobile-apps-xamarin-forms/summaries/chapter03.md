@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 3 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 609b0066e033b48be55056d459e818a9acc9625c
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156569"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563317"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>第 3 章的摘要。 深入到文本
 
@@ -20,7 +20,7 @@ ms.locfileid: "39156569"
 
 ## <a name="wrapping-paragraphs"></a>包装段落
 
-当[ `Text` ](xref:Xamarin.Forms.Label.Text)的属性`Label`包含长文本`Label`会自动将其包装到多个行所示[ **Baskervilles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles)示例。 可以嵌入 Unicode 代码，如 \u2014 长破折号，或 C# 等 '\r' 中断到新行字符。
+当[ `Text` ](xref:Xamarin.Forms.Label.Text)的属性`Label`包含长文本`Label`会自动将其包装到多个行所示[ **Baskervilles**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles)示例。 可以嵌入 Unicode 代码 \u2014 为长破折号，如或C#字符，如 '\r' 中断到新行。
 
 当[ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)和[ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions)的属性`Label`设置为`LayoutOptions.Fill`，则的总体大小`Label`受到空间，其容器使可用。 `Label`称为*约束*。 大小`Label`是其容器的大小。
 
@@ -119,7 +119,7 @@ ms.locfileid: "39156569"
 
 或者，你可以获取多个预设依赖于平台的字体大小之一。 静态[ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type))方法并[重载](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element))两者都返回`double`适合于平台的字体大小值基于成员[ `NamedSize` ](xref:Xamarin.Forms.NamedSize)枚举 ([`Default`](xref:Xamarin.Forms.NamedSize.Default)， [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro)， [ `Small` ](xref:Xamarin.Forms.NamedSize.Small)， [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium)， 并[ `Large` ](xref:Xamarin.Forms.NamedSize.Large))。 从返回的值`Medium`成员不一定是相同`Default`。 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes)示例使用这些命名大小显示文本。
 
-设置[ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes)的属性`Label`给这些成员[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)枚举[ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold)， [ `Italic`](xref:Xamarin.Forms.FontAttributes.Italic)，或[ `None` ](xref:Xamarin.Forms.FontAttributes.None)。 你可以组合`Bold`和`Italic`使用 C# 按位 OR 运算符的成员。
+设置[ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes)的属性`Label`给这些成员[ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes)枚举[ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold)， [ `Italic`](xref:Xamarin.Forms.FontAttributes.Italic)，或[ `None` ](xref:Xamarin.Forms.FontAttributes.None)。 你可以组合`Bold`并`Italic`成员C#按位 OR 运算符。
 
 ## <a name="formatted-text"></a>带格式文本
 
@@ -139,6 +139,6 @@ ms.locfileid: "39156569"
 
 - [第 3 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [第 3 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [第 3 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [第 3 章F#示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [标签](~/xamarin-forms/user-interface/text/label.md)
 - [处理颜色](~/xamarin-forms/user-interface/colors.md)

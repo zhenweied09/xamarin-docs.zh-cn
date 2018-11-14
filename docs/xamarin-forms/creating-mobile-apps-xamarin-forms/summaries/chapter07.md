@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 7 章的摘要。 XA
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 1dc4fe12d3ca23a9ca87c3be7819c970683db469
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156907"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563493"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>第 7 章的摘要。 XAML 与代码
 
@@ -82,5 +82,5 @@ Property 元素的`Label`是`Text`。
 
 - [第 7 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [第 7 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
-- [第 7 章 F # 示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [第 7 章F#示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [XAML 基础知识](~/xamarin-forms/xaml/xaml-basics/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108972"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527269"
 ---
 # <a name="android-platform-specifics"></a>Android 平台特定信息
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 结果是通过中的数据的快速滚动[ `ListView` ](xref:Xamarin.Forms.ListView)可以启用，这将更改滚动块的大小：
 
-[![](android-images/fastscroll.png "ListView FastScroll 特定于平台的")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll 平台专属")](android-images/fastscroll-large.png#lightbox "ListView FastScroll 特定于平台的")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust
 
 结果是软键盘输入的输入的控件具有焦点时，可以设置运行模式的区域：
 
-[![](android-images/pan-resize.png "运行模式下特定于平台的屏幕键盘")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "软键盘操作模式的特定于平台")](android-images/pan-resize-large.png#lightbox "操作模式下特定于平台的屏幕键盘")
 
 <a name="disable_lifecycle_events" />
 

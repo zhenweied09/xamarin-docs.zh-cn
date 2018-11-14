@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8da13afb7fd8d7198e8bfe7476b40a5cd09769a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112542"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527282"
 ---
 # <a name="adding-a-second-toolbar"></a>添加第二个工具栏
 
 
 ## <a name="overview"></a>概述 
 
-`Toolbar`可以执行多个替换操作栏&ndash;它可以在活动内使用多个时间，它会将自定义放置任意位置在屏幕上，并且可以将它配置为跨越仅屏幕的部分的宽度。 下面的示例演示了如何创建第二个`Toolbar`并将其放在屏幕的底部。 这`Toolbar`实现**副本**，**剪切**，并且**粘贴**菜单项。 
+`Toolbar`可以执行多个替换操作栏&ndash;它可以在活动内使用多个时间可以放置任意位置在屏幕上，自定义，可以将它配置为跨越仅屏幕的部分的宽度。 下面的示例演示了如何创建第二个`Toolbar`并将其放在屏幕的底部。 这`Toolbar`实现**副本**，**剪切**，并且**粘贴**菜单项。 
 
 
 ## <a name="define-the-second-toolbar"></a>定义第二个工具栏 

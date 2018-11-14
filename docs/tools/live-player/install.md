@@ -6,12 +6,12 @@ ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 50cec7fc59d31ec0312894821f8fd071a445ab8f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dd987b6d1a6db8e27544ddd95cdc219bb5f783b5
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123669"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526645"
 ---
 # <a name="xamarin-live-player-setup"></a>Xamarin Live Player 安装程序
 
@@ -61,7 +61,7 @@ Xamarin Live Player 需要：
 
 7. 如果已配对设备和设备上运行 Xamarin Live Player 应用，将立即执行的代码 ！
 
-    如果没有设备配对的说明将显示 QR 码配对设备：
+    如果配对设备没有，则将收到有关如何对设备的显示 QR 码：
 
     ![对设备窗口](install-images/manage-empty-windows.png)
 

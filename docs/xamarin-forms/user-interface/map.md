@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cfa450c977ac9f1d6370f40d27f5d704cc774767
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123604"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526671"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 映射
 
@@ -36,7 +36,7 @@ Xamarin.Forms.Maps 每个平台上使用本机映射 Api。 这对于用户，�
 
 ## <a name="maps-initialization"></a>映射初始化
 
-将地图添加到 Xamarin.Forms 应用程序时**Xamarin.Forms.Maps**是您应将其添加到解决方案中的每个项目的单独 NuGet 包。
+将地图添加到 Xamarin.Forms 应用程序时**Xamarin.Forms.Maps**是一个单独的 NuGet 包，应添加到解决方案中的每个项目。
 在 Android 上，这也存在依赖关系添加 Xamarin.Forms.Maps 时，会自动下载的 GooglePlayServices (另一个 NuGet)。
 
 安装 NuGet 包后, 一些初始化代码需要在每个应用程序项目中，*后*`Xamarin.Forms.Forms.Init`方法调用。 对于 iOS 使用以下代码：
@@ -141,7 +141,7 @@ Xamarin 文档中的说明进行操作并遵照[获取 Google Maps API v2 密钥
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>使用映射
+## <a name="using-maps"></a>使用 Maps
 
 请参阅[MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) MobileCRM 示例以举例说明如何在代码中使用地图控件中。 一个简单`MapPage`类看起来像此-请注意，新`MapSpan`创建来定位地图的视图：
 
@@ -183,7 +183,7 @@ map.MapType == MapType.Street;
 上面的代码段中所示，提供`MapSpan`map 构造函数的实例设置的初始视图 （中心点和缩放级别） 的映射在加载时。 `MoveToRegion`然后使用 map 类上的方法来更改映射的位置或缩放级别。 有两种方法来创建一个新`MapSpan`实例：
 
 -  **MapSpan.FromCenterAndRadius()** 的静态方法，用于创建从 span`Position`并指定`Distance`。
--  **新 MapSpan （)** 的构造函数使用`Position`和 degress 的纬度和经度来显示。
+-  **新 MapSpan （)** 的构造函数使用`Position`和程度的纬度和经度来显示。
 
 
 若要更改地图的缩放级别而无需更改位置，请创建一个新`MapSpan`使用从当前位置`VisibleRegion.Center`地图控件的属性。 一个`Slider`无法用于控制此类地图缩放 （但是，缩放直接在地图控件中当前不能更新滑块的值）：

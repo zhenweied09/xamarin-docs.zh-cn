@@ -4,15 +4,15 @@ description: 使用 Xamarin.Forms 创建移动应用： 第 24 章的摘要。 �
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 35130baac4025fe69dbc7aa9b6928f824b35c573
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: d90bef4da589215247f412450905a5db541b0444
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156699"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563155"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>第 24 章的摘要。 页导航
 

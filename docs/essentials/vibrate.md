@@ -1,32 +1,34 @@
 ---
-title: Xamarin.Essentials： 振动
-description: 本文档介绍中 Xamarin.Essentials，可以启动和停止振动功能所需的时间内的振动类。
+title: Xamarin.Essentials：Vibration
+description: 本文档介绍 Xamarin.Essentials 中的 Vibration 类，此类使你能够在所需的时间内启动和停止振动功能。
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 622689342dd961a63318a88f098dea4d1a60e277
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: ff2e718953d86eb59b28fcaa8640e04f6bf422f3
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675297"
 ---
-# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials： 振动
+# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials：Vibration
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**振动**类，可以启动和停止在所需的时间内的振动功能。
+Vibration 类使你能够在所需的时间内启动和停止振动功能。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
-访问**振动**功能以下平台特定的安装程序是必需的。
+[!include[](~/essentials/includes/get-started.md)]
+
+若要访问 Vibration 功能，需要以下特定于平台的设置。
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-振动权限是必需的必须在 Android 项目中配置。 这可以通过以下方法添加：
+需要具有 Vibrate 权限，并且必须在 Android 项目中进行配置。 可以通过以下方法添加此权限：
 
-打开**AssemblyInfo.cs**文件下**属性**文件夹并添加：
+打开 Properties 文件夹下的 AssemblyInfo.cs 文件并添加：
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Vibrate)]
@@ -34,13 +36,13 @@ ms.locfileid: "39353862"
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹，并添加以下的内部**清单**节点。
+打开 Properties 文件夹下的 AndroidManifest.xml 文件，并在“manifest”节点内添加以下代码。
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-或右键单击 Android 项目，并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**振动**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Android 项目并打开项目的属性。 在“Android 清单”下找到“所需权限:”区域，然后选中“VIBRATE”权限。 这样会自动更新 AndroidManifest.xml 文件。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -48,19 +50,19 @@ ms.locfileid: "39353862"
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-任何平台的差异。
+无平台差异。
 
 -----
 
-## <a name="using-vibration"></a>使用振动
+## <a name="using-vibration"></a>使用 Vibration
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-可以请求一个设定的时间或默认值为 500 毫秒的振动功能。
+可以通过设置所需的时间量或使用默认 500 毫秒来使用 Vibration 功能。
 
 ```csharp
 try
@@ -82,7 +84,7 @@ catch (Exception ex)
 }
 ```
 
-可以使用请求取消的设备振动`Cancel`方法：
+可以使用 `Cancel` 方法来请求取消使用设备振动：
 
 ```csharp
 try
@@ -103,21 +105,21 @@ catch (Exception ex)
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-任何平台的差异。
+无平台差异。
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* 仅手机铃声时设备设置为"振动上环"。
-* 始终手机铃声 500 毫秒。
+* 仅在设备设置为“响铃时振动”时振动。
+* 振动时长始终为 500 毫秒。
 * 无法取消振动。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-任何平台的差异。
+无平台差异。
 
 -----
 
 ## <a name="api"></a>API
 
-- [振动源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
-- [振动 API 文档](xref:Xamarin.Essentials.Vibration)
+- [Vibration 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
+- [Vibration API 文档](xref:Xamarin.Essentials.Vibration)

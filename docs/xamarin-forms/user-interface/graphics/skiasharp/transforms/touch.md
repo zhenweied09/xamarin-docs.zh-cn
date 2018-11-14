@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 6f7236a3650c04098edbef92f3d6ed620be501c3
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 747c04d028b4c4ee142de04abd118572c5bea781
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615387"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527100"
 ---
 # <a name="touch-manipulations"></a>触摸操作
 
@@ -229,7 +229,7 @@ public partial class BitmapScalingPage : ContentPage
                         if (!float.IsNaN(scaleX) && !float.IsInfinity(scaleX) &&
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
-                            // If smething bad hasn't happened, calculate a scale and translation matrix
+                            // If something bad hasn't happened, calculate a scale and translation matrix
                             SKMatrix scaleMatrix = 
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
@@ -1060,7 +1060,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 缩放操作通常需要使用两根手指做出缩小手势。 但是，就可以实现使用单指通过手指移动的位图的边角进行缩放。
 
-了这一点**单个手指角规模**页。 因为此示例使用的略有不同类型的扩展，在中实现`TouchManipulationManager`类，它不使用该类或`TouchManipulationBitmap`类。 相反，所有触摸逻辑都是在代码隐藏文件中。 这是比往常稍微简单一些逻辑，因为它会跟踪一次只用一个手指并只需将忽略任何可能触摸屏幕的第二根手指。
+了这一点**单个手指角规模**页。 由于此示例使用的缩放比略有不同类型的实现中`TouchManipulationManager`类，它不使用该类或`TouchManipulationBitmap`类。 相反，所有触摸逻辑都是在代码隐藏文件中。 这是比往常稍微简单一些逻辑，因为它会跟踪一次只用一个手指并只需将忽略任何可能触摸屏幕的第二根手指。
 
 [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml)页实例化`SKCanvasView`类，并创建`TouchEffect`跟踪触控事件的对象：
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: af5554d08ac6c45fc0c392bd17cef5d91251bb1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 01ff4426dfb4764b7d9ca22703aa2b1667a90454
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106502"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528541"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>使用 ActionBar 的选项卡式的布局
 
@@ -23,7 +23,7 @@ _本指南介绍，并介绍了如何使用 ActionBar Api 创建 Xamarin.Android
 
 在操作栏是 Android UI 模式，它用于为选项卡、 应用程序标识、 菜单和搜索等主要功能提供一致的用户界面。 在 Android 3.0 （API 级别为 11） 中，Google 引入了 ActionBar Api 向 Android 平台。 ActionBar Api 引入了用户界面主题，以提供一致的外观和允许的选项卡式的用户界面的类。 本指南介绍如何将操作栏选项卡添加到 Xamarin.Android 应用程序。 它还讨论了如何使用 Android 支持库 v7 到向后移植到面向 Android 2.1 到 Android 2.3 的 Xamarin.Android 应用程序的操作栏选项卡。 
 
-请注意，`Toolbar`是一个更高版本和更通用的操作栏组件，您应使用而不是`ActionBar`(`Toolbar`旨在替换`ActionBar`)。 有关详细信息，请参阅[工具栏](~/android/user-interface/controls/tool-bar/index.md)。 
+请注意，`Toolbar`是一个更高版本和更通用的操作栏组件，应使用而不是`ActionBar`(`Toolbar`旨在替换`ActionBar`)。 有关详细信息，请参阅[工具栏](~/android/user-interface/controls/tool-bar/index.md)。 
 
 
 

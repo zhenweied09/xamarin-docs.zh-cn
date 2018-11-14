@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c176944d1bec4850f084043fdab81b5c2d51ceb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 0c95e4bcecb2ae787714b8ac6973646caada1b3e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105202"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528853"
 ---
 # <a name="dialogs-in-xamarinmac"></a>在 Xamarin.Mac 中的对话框
 
-当在 Xamarin.Mac 应用程序中使用 C# 和.NET，有权访问相同的对话框和模式的 Windows，使用的开发人员*Objective C*和*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护模式 Windows （或选择通过 C# 代码中直接创建）。
+使用时C#和.NET 在 Xamarin.Mac 应用程序中，有权访问相同的对话框和模式的 Windows，使用的开发人员*Objective C*并*Xcode* does。 由于 Xamarin.Mac 与 Xcode 直接集成，可以使用 Xcode 的_Interface Builder_创建和维护模式 Windows （或选择通过 C# 代码中直接创建）。
 
 一个对话框将出现在响应用户操作，并且通常会使方法的用户可以完成该操作。 它可以关闭之前，对话框需要来自用户的响应。
 
@@ -1090,7 +1090,7 @@ void ShowSaveAs (NSObject sender)
 
 [![](dialog-images/save04.png "一个扩展保存工作表")](dialog-images/save04.png#lightbox)
 
-有关使用保存对话框中的更多详细信息，请参阅 Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098)文档。
+有关使用保存对话框中的详细信息，请参阅 Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098)文档。
 
 <a name="Summary" />
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 0384d96ddc96f8d0b16a42f691305f26ea25881d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108751"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527386"
 ---
 # <a name="alternate-resources"></a>备用资源
 
@@ -54,10 +54,10 @@ ms.locfileid: "50108751"
 
 - **可用宽度**&ndash;格式 w 中的屏幕的最小宽度*N*dp，其中*N*是无关的像素密度的宽度。
   根据用户旋转设备，可能会更改此值。 中的更详细地介绍[对于不同的屏幕创建资源](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)。 
-  在中可用在 API 级别 13 (Android 3.2) 及更高版本。 示例： 使用限定符 w720dp 面向的宽度设置为最低 720dp 的设备。
+  在 API 级别 13 (Android 3.2) 及更高版本可用。 示例： 使用限定符 w720dp 面向的宽度设置为最低 720dp 的设备。
 
 - **可用高度**&ndash;格式小时内屏幕的最小高度*N*dp，其中*N*是在分发点的高度。 根据用户旋转设备，可能会更改此值。 中的更详细地介绍[对于不同的屏幕创建资源](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)。 
-  在中可用在 API 级别 13 (Android 3.2) 及更高版本。 例如，使用限定符 h720dp 面向具有的最低 720dp 高度的设备
+  在 API 级别 13 (Android 3.2) 及更高版本可用。 例如，使用限定符 h720dp 面向具有的最低 720dp 高度的设备
 
 - **屏幕大小**&ndash;此限定符是的则这些资源的屏幕大小的泛化。 中更详细地介绍了它[对于不同的屏幕创建资源](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)。 
   可能值为 `small`、`normal`、`large` 和 `xlarge`。 在 API 级别 9 (Android 2.3/Android 2.3.1/Android 2.3.2) 中添加

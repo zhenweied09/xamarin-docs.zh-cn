@@ -1,56 +1,56 @@
 ---
-title: 调用从效果的事件
-description: 一种效果可以定义和调用的事件，信号基础本机视图中的更改。 这篇文章演示如何实现低级别的多点触控手指跟踪，以及如何生成指示触摸活动的事件。
+title: 调用效果中的事件
+description: 一种效果可以定义和调用的事件，信号基础本机视图中的更改。 本文介绍如何实现低级别多点触控手指跟踪，以及如何生成信号触摸活动的事件。
 ms.prod: xamarin
 ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34050151"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527399"
 ---
-# <a name="invoking-events-from-effects"></a>调用从效果的事件
+# <a name="invoking-events-from-effects"></a>调用效果中的事件
 
-_一种效果可以定义和调用的事件，信号基础本机视图中的更改。这篇文章演示如何实现低级别的多点触控手指跟踪，以及如何生成指示触摸活动的事件。_
+_一种效果可以定义和调用的事件，信号基础本机视图中的更改。本文介绍如何实现低级别多点触控手指跟踪，以及如何生成信号触摸活动的事件。_
 
-本文中所述的效果提供低级别的触控事件对访问。 这些低级别的事件不是可通过现有`GestureRecognizer`类，但它们会对某些类型的应用程序至关重要。 例如，finger-paint 跟踪各个指随着在屏幕上的应用程序需要。 音乐键盘需要检测到分流并释放各个密钥，以及从一个项与另一种滑音 gliding 手指。
+本文中所述的效果提供低级的触摸事件的访问权限。 这些低级别的事件不是可通过现有`GestureRecognizer`类，但它们是对某些类型的应用程序至关重要。 例如，finger-paint 跟踪各手指，因为它们在屏幕上移动的应用程序需要。 音乐键盘需要检测分流点，并释放上各个项，以及从一个密钥为另一种滑奏 gliding 手指。
 
-一种效果非常适合于多点触控手指跟踪，因为它可以附加到 Xamarin.Forms 中的任何元素。
+效果非常适用于多点触控手指跟踪，因为可以将它附加到 Xamarin.Forms 的任何元素。
 
-## <a name="platform-touch-events"></a>平台触控事件
+## <a name="platform-touch-events"></a>平台触摸事件
 
-IOS、 Android 和通用 Windows 平台都包括一个低级别 API，用于应用程序能够检测触摸活动。 所有区分之间的三种基本类型的这些平台触控事件：
+IOS、 Android 和通用 Windows 平台都包括一个低级别 API，允许应用程序以检测触摸活动。 所有的三种基本类型之间区分这些平台触摸事件：
 
-- *按下*，当手指触摸屏幕
-- *移动*，当手指触摸屏幕移动
-- *发布*，当上方的手指从屏幕释放
+- *按下*，当有手指触摸屏幕
+- *移动*、 当移动手指触摸屏幕
+- *发布*，当手指松开的屏幕
 
-在多点触控环境中，多个指可以在同一时间触摸屏幕。 各种平台包括应用程序可用于区分多个指标识 (ID) 数。
+在多点触控环境中，多个手指可同时触摸屏幕。 各种平台包括应用程序可用于区分多个手指标识 (ID) 号。
 
-在 iOS 中，`UIView`类定义三个可重写方法， `TouchesBegan`， `TouchesMoved`，和`TouchesEnded`与这三个基本事件相对应。 文章[多点触控手指跟踪](~/ios/app-fundamentals/touch/touch-tracking.md)介绍如何使用这些方法。 但是，iOS 程序不需要重写派生自的类`UIView`才能使用这些方法。 IOS`UIGestureRecognizer`还定义了这些相同三个方法，并且你可以将派生自的类的实例附加`UIGestureRecognizer`到任何`UIView`对象。
+在 iOS 中，`UIView`类定义了三种可重写方法`TouchesBegan`， `TouchesMoved`，和`TouchesEnded`与这三个基本事件相对应。 文章[多点触控手指跟踪](~/ios/app-fundamentals/touch/touch-tracking.md)介绍如何使用这些方法。 但是，iOS 程序不需要重写派生类`UIView`使用这些方法。 IOS`UIGestureRecognizer`还定义了这些相同三种方法，并且您可以将派生的类的实例附加`UIGestureRecognizer`任何`UIView`对象。
 
-在 Android 中，`View`类定义名为的可重写方法`OnTouchEvent`来处理所有触摸活动。 触摸活动的类型定义的枚举成员`Down`， `PointerDown`， `Move`， `Up`，和`PointerUp`文章中所述[多点触控手指跟踪](~/android/app-fundamentals/touch/touch-tracking.md)。 Android`View`还定义了名为事件`Touch`允许事件处理程序附加到任何`View`对象。
+在 Android 中，`View`类定义可重写方法名为`OnTouchEvent`来处理所有触摸活动。 触摸活动的类型定义的枚举成员`Down`， `PointerDown`， `Move`， `Up`，并`PointerUp`文章中所述[多点触控手指跟踪](~/android/app-fundamentals/touch/touch-tracking.md)。 Android`View`还定义了名为的事件`Touch`允许事件处理程序附加到任何`View`对象。
 
-在通用 Windows 平台 (UWP)，`UIElement`类定义在名为的事件`PointerPressed`， `PointerMoved`，和`PointerReleased`。 这些文章中描述了[MSDN 上的处理指针输入文章](/windows/uwp/input-and-devices/handle-pointer-input/)和 API 文档[ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/)类。
+通用 Windows 平台 (UWP) 中，`UIElement`类定义名为事件`PointerPressed`， `PointerMoved`，和`PointerReleased`。 这些文章中所述[MSDN 上的处理指针输入文章](/windows/uwp/input-and-devices/handle-pointer-input/)和 API 文档[ `UIElement` ](/uwp/api/windows.ui.xaml.uielement/)类。
 
-`Pointer`在通用 Windows 平台的 API 用于统一鼠标、 触控和笔输入。 为此，`PointerMoved`在鼠标移过元素中，即使未按下鼠标按钮时调用事件。 `PointerRoutedEventArgs`附带这些事件的对象有一个名为`Pointer`，有一个名为`IsInContact`指示是否按鼠标左键或手指是与屏幕联系。
+`Pointer`中通用 Windows 平台的 API 旨在统一鼠标、 触控和笔输入。 为此，`PointerMoved`在即使在未按下鼠标按钮时，鼠标移过元素时调用事件。 `PointerRoutedEventArgs`通常会显示这些事件的对象有一个名为`Pointer`具有一个名为属性`IsInContact`指示是否按下鼠标或手指的屏幕。
 
-此外，UWP 定义两个名为的更多事件`PointerEntered`和`PointerExited`。 这些警报表示当鼠标或手指将移动从一个元素到另一个。 例如，考虑两个相邻元素名为 A 和 b。这两个元素已安装指针事件的处理程序。 当为指按下上 A，`PointerPressed`事件调用。 当上方的手指移动时，一个时，将调用`PointerMoved`事件。 如果上方的手指移从 A 到 B，将调用一个`PointerExited`事件和 B 调用`PointerEntered`事件。 如果然后发布上方的手指，B 时，将调用`PointerReleased`事件。
+此外，UWP 定义两个名为的更多事件`PointerEntered`和`PointerExited`。 这些错误表示当鼠标或手指移动从一个元素到另一个。 例如，考虑两个相邻元素名为 A 和 b。两个元素都已安装指针事件处理的程序。 当手指按下 A 上,`PointerPressed`调用事件。 当手指移动时，一个调用`PointerMoved`事件。 如果手指移动从 A 到 B，A 调用`PointerExited`事件和 B 调用`PointerEntered`事件。 如果手指然后释放，B 调用`PointerReleased`事件。
 
-IOS 和 Android 平台是不同于 UWP： 首先获取对的调用的视图`TouchesBegan`或`OnTouchEvent`时的手指触摸视图将继续获取所有活动即便如果上方的手指移到不同视图。 如果应用程序会捕获指针，UWP 可以具有同样行为： 在`PointerEntered`事件处理程序中，元素调用`CapturePointer`，然后从该手指中获取所有触摸活动。
+IOS 和 Android 平台是不同于 UWP： 首先获取对的调用的视图`TouchesBegan`或`OnTouchEvent`时上方的手指触摸视图将继续获取所有触摸活动，即使手指移动到不同的视图。 如果应用程序捕获该指针的 UWP 可以同样行为： 在`PointerEntered`事件处理程序中，元素调用`CapturePointer`，然后获取从该手指触摸屏输入的所有活动。
 
-UWP 方法经证明是对于某些类型的应用程序，例如，音乐键盘非常有用。 每个密钥可以处理该注册表项的触摸事件和检测何时从一个项，为指具有滑动到另一个使用`PointerEntered`和`PointerExited`事件。
+UWP 方法证明是非常有用，对于某些类型的应用程序，例如，音乐键盘。 每个密钥可以处理该注册表项的触摸事件，当有手指已从一个项滑到另一个使用时进行检测`PointerEntered`和`PointerExited`事件。
 
-为此，本文中所述的触摸跟踪效果实现 UWP 方法。
+出于此原因，本文中所述的触控跟踪效果实现 UWP 方法。
 
-## <a name="the-touch-tracking-effect-api"></a>触摸跟踪效果 API
+## <a name="the-touch-tracking-effect-api"></a>触控跟踪影响 API
 
-[ **Touch 跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)示例包含的类 （和枚举） 实现低级别的触摸跟踪。 这些类型属于命名空间`TouchTracking`并且单词的开头`Touch`。 **TouchTrackingEffectDemos** .NET 标准库项目包括`TouchActionType`触控事件的类型的枚举：
+[**接触跟踪效果演示**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)示例包含的类 （和枚举） 实现低级别触控跟踪。 这些类型属于命名空间`TouchTracking`和单词开头`Touch`。 **TouchTrackingEffectDemos** .NET Standard 库项目包括`TouchActionType`触控事件的类型的枚举：
 
 ```csharp
 public enum TouchActionType
@@ -64,9 +64,9 @@ public enum TouchActionType
 }
 ```
 
-所有平台还都包含指示已取消触摸事件的事件。
+所有平台还都包括一个事件，指出已取消触摸事件。
 
-`TouchEffect` .NET 标准库中的类派生自`RoutingEffect`并定义名为事件`TouchAction`和一个名为方法`OnTouchAction`，它调用`TouchAction`事件：
+`TouchEffect` .NET 标准库中的类派生自`RoutingEffect`，并定义名为的事件`TouchAction`和一个名为方法`OnTouchAction`，它调用`TouchAction`事件：
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -86,9 +86,9 @@ public class TouchEffect : RoutingEffect
 }
 ```
 
-另请注意`Capture`属性。 若要捕获触控事件，应用程序必须设置此属性为`true`之前`Pressed`事件。 否则，触控事件的行为类似于通用 Windows 平台中。
+另请注意`Capture`属性。 若要捕获触摸事件，应用程序必须设置此属性为`true`早于`Pressed`事件。 否则，触控事件的行为类似于通用 Windows 平台中。
 
-`TouchActionEventArgs` .NET 标准库中的类包含附带的每个事件的所有信息：
+`TouchActionEventArgs` .NET Standard 库中的类包含附带的每个事件的所有信息：
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -111,19 +111,19 @@ public class TouchActionEventArgs : EventArgs
 }
 ```
 
-应用程序可以使用`Id`跟踪各个指的属性。 请注意`IsInContact`属性。 此属性始终是`true`为`Pressed`事件和`false`为`Released`事件。 它也是始终`true`为`Moved`iOS 和 Android 上的事件。 `IsInContact`属性可能`false`为`Moved`当在桌面上运行程序并没有一个按钮的情况下移动鼠标指针在通用 Windows 平台上的事件按下。
+应用程序可以使用`Id`跟踪各手指的属性。 请注意`IsInContact`属性。 此属性始终为`true`有关`Pressed`事件并`false`为`Released`事件。 它也是始终`true`为`Moved`iOS 和 Android 上的事件。 `IsInContact`属性可能会`false`为`Moved`事件时在桌面上运行该程序并没有一个按钮的情况下移动鼠标指针在通用 Windows 平台上按下。
 
-你可以使用`TouchEffect`自己的应用程序，通过在解决方案的标准.NET 库项目中，包括该文件并添加到实例中的类`Effects`任何 Xamarin.Forms 元素的集合。 附加到处理程序`TouchAction`获取触控事件的事件。
+可以使用`TouchEffect`自己的应用程序通过在.NET Standard 库项目中的解决方案，包括该文件并添加到实例中的类`Effects`Xamarin.Forms 的任何元素的集合。 附加到处理程序`TouchAction`获取触控事件的事件。
 
-若要使用`TouchEffect`在自己的应用程序，还需要包括在平台实现**TouchTrackingEffectDemos**解决方案。
+若要使用`TouchEffect`在自己的应用程序，您将需要包含在平台的实现**TouchTrackingEffectDemos**解决方案。
 
-## <a name="the-touch-tracking-effect-implementations"></a>触摸跟踪效果实现
+## <a name="the-touch-tracking-effect-implementations"></a>触控跟踪效果实现
 
-IOS、 Android 和 UWP 的实现`TouchEffect`与的最简单的实现 (UWP) 开头和结尾与 iOS 实现，因为它是比其他更结构上复杂如下所述。
+IOS、 Android 和 UWP 的实现`TouchEffect`开头的最简单的实现 (UWP) 和结尾的 iOS 实现，因为它是比其他更多结构复杂如下所述。
 
 ### <a name="the-uwp-implementation"></a>UWP 实现
 
-UWP 实现`TouchEffect`是最简单。 像往常一样，类派生自`PlatformEffect`并包括两个程序集特性：
+UWP 实现`TouchEffect`最简单的方法。 像往常一样，类派生自`PlatformEffect`并包含两个程序集特性：
 
 ```csharp
 [assembly: ResolutionGroupName("XamarinDocs")]
@@ -174,7 +174,7 @@ public class TouchEffect : PlatformEffect
 }    
 ```
 
-`OnPointerPressed`处理程序通过调用调用效果事件`onTouchAction`字段`CommonHandler`方法：
+`OnPointerPressed`处理程序的调用来调用影响事件`onTouchAction`字段中`CommonHandler`方法：
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -204,9 +204,9 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` 此外将检查的值`Capture`中的标准.NET 库和调用中的影响类属性`CapturePointer`若是`true`。
+`OnPointerPressed` 此外会检查的值`Capture`属性的效果类中的.NET Standard 库和调用`CapturePointer`若是`true`。
 
- 其他 UWP 事件处理程序是甚至更简单：
+ 其他 UWP 事件处理程序是更简单：
 
 ```csharp
 public class TouchEffect : PlatformEffect
@@ -222,7 +222,7 @@ public class TouchEffect : PlatformEffect
 
 ### <a name="the-android-implementation"></a>Android 实现
 
-Android 和 iOS 实现不一定更复杂，因为它们必须实现`Exited`和`Entered`当手指从在元素移到另一个事件。 这两个实现同样的构成。
+Android 和 iOS 实现是一定更复杂，因为它们必须实现`Exited`和`Entered`事件时手指将从一个元素移到另一个。 这两个实现结构类似。
 
 Android`TouchEffect`类安装的处理程序`Touch`事件：
 
@@ -252,9 +252,9 @@ public class TouchEffect : PlatformEffect
 viewDictionary.Add(view, this);
 ```
 
-从字典中移除项`OnDetached`。 每个实例`TouchEffect`与效果附加到的特定视图相关联。 静态字典允许任何`TouchEffect`实例用于循环访问所有其他视图和及其相应`TouchEffect`实例。 这是必需的以便将事件从一个视图转移到另一个。
+从字典中删除该条目`OnDetached`。 每个实例`TouchEffect`效果附加到的特定视图相关联。 静态字典允许任何`TouchEffect`实例以枚举所有其他视图和其对应`TouchEffect`实例。 这是将事件从一个视图传输到另一个允许所必需的。
 
-Android 将分配一个 ID 代码来向下触控事件允许应用程序来跟踪各个指。 `idToEffectDictionary`将与此 ID 代码相关联`TouchEffect`实例。 项添加到此字典时`Touch`为手指按调用处理程序：
+Android 将分配一个 ID 代码触摸事件，允许应用程序可以跟踪各手指。 `idToEffectDictionary`将使用此 ID 代码相关联`TouchEffect`实例。 项添加到此字典时`Touch`的手指按调用处理程序：
 
 ```csharp
 void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
@@ -273,7 +273,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
 ```
 
-从移除的项`idToEffectDictionary`上方的手指从屏幕的发布时。 `FireEvent`方法只是积累调用所需的所有信息`OnTouchAction`方法：
+该项已从`idToEffectDictionary`手指从屏幕的发布时。 `FireEvent`方法只是积累调用所需的所有信息`OnTouchAction`方法：
 
 ```csharp
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
@@ -293,7 +293,7 @@ void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Poin
 }
 ```
 
-两种不同方式处理所有其他触摸类型： 如果`Capture`属性是`true`，触摸事件是相当简单的平移`TouchEffect`信息。 它变得更为复杂时`Capture`是`false`因为触控事件可能需要移动到另一个视图中。 这是责任`CheckForBoundaryHop`方法，在移动事件过程中调用该方法。 此方法使用这两个静态字典。 它通过枚举`viewDictionary`以确定当前接触上方的手指，并使用的视图`idToEffectDictionary`存储当前`TouchEffect`实例 （并因此，当前视图） 与某一特定 ID 相关联：
+在两种不同方式处理所有其他触摸屏输入类型： 如果`Capture`属性是`true`，触控事件是相当简单转换为`TouchEffect`信息。 它变得更加复杂时`Capture`是`false`因为可能需要从一个视图移到另一个触摸事件。 这负责`CheckForBoundaryHop`move 事件期间调用的方法。 此方法利用了这两个静态字典。 它通过枚举`viewDictionary`来确定当前触摸手指，和它使用的视图`idToEffectDictionary`用于存储当前`TouchEffect`实例 （并因此，当前视图） 具有特定 ID 相关联：
 
 ```csharp
 void CheckForBoundaryHop(int id, Point pointerLocation)
@@ -334,13 +334,13 @@ void CheckForBoundaryHop(int id, Point pointerLocation)
 }
 ```
 
-如果已在更改`idToEffectionDictionary`，该方法可能调用`FireEvent`为`Exited`和`Entered`到两个视图之间的传输。 但是，上方的手指可能已被移至占用不含一个附加的视图区域`TouchEffect`，或从该区域写入具有附加的效果的视图。
+如果已更改`idToEffectDictionary`，该方法可能会调用`FireEvent`有关`Exited`和`Entered`到传输到另一个视图中。 但是，手指可能已被移至占用而无需附加视图区域`TouchEffect`，或从该区域具有附加的效果的视图。
 
-请注意`try`和`catch`阻止访问视图时。 在导航到，然后向后定位到主页页面的页面中`OnDetached`不调用方法和项保留在`viewDictionary`但 Android 将认为它们释放。
+请注意`try`和`catch`访问视图时阻止。 在页中，导航到，然后导航回主页上，`OnDetached`不会调用方法和项将保留在`viewDictionary`但 Android 将认为它们释放。
 
 ### <a name="the-ios-implementation"></a>IOS 实现
 
-IOS 实现是类似于只不过的 Android 实现 iOS`TouchEffect`类必须实例化的派生`UIGestureRecognizer`。 这是名为的 iOS 项目中的类`TouchRecognizer`。 此类维护存储的两个静态字典`TouchRecognizer`实例：
+IOS 实现是类似于 Android 的实现不同之处在于 iOS`TouchEffect`类必须实例化的派生`UIGestureRecognizer`。 这是一个类中名为的 iOS 项目`TouchRecognizer`。 此类维护存储的两个静态字典`TouchRecognizer`实例：
 
 ```csharp
 static Dictionary<UIView, TouchRecognizer> viewDictionary =
@@ -350,15 +350,15 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
     new Dictionary<long, TouchRecognizer>();
 ```
 
-大部分此结构`TouchRecognizer`类是类似于 Android`TouchEffect`类。
+此结构的大部分`TouchRecognizer`类是类似于 Android`TouchEffect`类。
 
-## <a name="putting-the-touch-effect-to-work"></a>将 Touch 效果放到工作
+## <a name="putting-the-touch-effect-to-work"></a>将触摸效果放到工作
 
-[ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)程序包含 5 个测试常见任务的触摸跟踪效果的页。
+[ **TouchTrackingEffectDemos** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)程序包含五个测试的常见任务的触控跟踪效果的页。
 
-**字数拖动**页面允许您添加`BoxView`元素与`AbsoluteLayout`然后将它们拖动鼠标屏幕。 [XAML 文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml)实例化两个`Button`视图添加`BoxView`元素与`AbsoluteLayout`和清除`AbsoluteLayout`。
+**字数拖动**页面允许您添加`BoxView`元素到`AbsoluteLayout`然后将它们拖在屏幕上。 [XAML 文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml)实例化两个`Button`添加的视图`BoxView`元素`AbsoluteLayout`清除`AbsoluteLayout`。
 
-中的方法[代码隐藏文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs)，它将添加一个新`BoxView`到`AbsoluteLayout`还将添加`TouchEffect`对象传递给`BoxView`并将事件处理程序附加到效果：
+中的方法[代码隐藏文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml.cs)，添加一个新`BoxView`到`AbsoluteLayout`还添加了`TouchEffect`对象传递给`BoxView`并将事件处理程序附加到效果：
 
 ```csharp
 void AddBoxViewToLayout()
@@ -379,7 +379,7 @@ void AddBoxViewToLayout()
 }
 ```
 
-`TouchAction`事件处理程序会为所有处理所有触控事件`BoxView`元素，但它需要一些谨慎： 它不能在单个上允许双指`BoxView`因为程序仅实现拖动，并将两根手指会相互影响。 鉴于此页定义当前跟踪每个手指嵌入的类：
+`TouchAction`事件处理程序处理所有触控事件的所有`BoxView`元素，但它需要一些多加小心： 它不能在单个上允许两根手指`BoxView`因为该程序仅实现拖动，和两个手指的会相互干扰。 出于此原因，页上定义的当前跟踪每个手指嵌入的类：
 
 ```csharp
 class DragInfo
@@ -398,9 +398,9 @@ class DragInfo
 Dictionary<BoxView, DragInfo> dragDictionary = new Dictionary<BoxView, DragInfo>();
 ```
 
-`dragDictionary`包含条目适用于每个`BoxView`当前拖动。
+`dragDictionary`包含的一项每个`BoxView`当前正被拖动。
 
-`Pressed`触摸操作将项添加到此字典与`Released`操作将其删除。 `Pressed`逻辑必须检查是否有已项对该字典中`BoxView`。 如果是这样，`BoxView`为所拖动，新的事件是第二个手指上的相同`BoxView`。 有关`Moved`和`Released`操作，事件处理程序必须检查是否字典有一个条目，该`BoxView`且触摸`Id`属性拖动到`BoxView`是否匹配中作为字典项：
+`Pressed`触摸操作将项添加到此字典和`Released`操作将其删除。 `Pressed`逻辑必须检查是否已经存在某个项的字典中`BoxView`。 如果是这样，`BoxView`为正被拖动，新的事件是第二个手指上的相同`BoxView`。 有关`Moved`和`Released`操作，事件处理程序必须检查是否字典为此，有一个条目`BoxView`和的触摸屏输入`Id`属性拖动`BoxView`字典条目中的相匹配：
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -442,17 +442,17 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 }
 ```
 
-`Pressed`逻辑集`Capture`属性`TouchEffect`对象传递给`true`。 将该手指的所有后续事件传送到相同的事件处理程序效果。
+`Pressed`逻辑集`Capture`的属性`TouchEffect`对象传递给`true`。 这根手指的所有后续事件传送到同一个事件处理程序效果。
 
-`Moved`逻辑移动`BoxView`通过更改`LayoutBounds`附加属性。 `Location`属性的事件自变量始终是相对于`BoxView`正在拖动如果`BoxView`所拖动以恒定速度`Location`的连续事件属性将大约相同。 例如，如果为指按下`BoxView`在其中心`Pressed`操作存储区`PressPoint`属性 （50，50），也仍然是相同的后续事件。 如果`BoxView`以恒定速率，后续沿对角线拖`Location`期间属性`Moved`操作可能的值 （55，55），在这种情况下`Moved`逻辑将 5 添加到的水平和垂直位置`BoxView`. 这样会将移动`BoxView`，以便其中心再次是直接在上方的手指。
+`Moved`逻辑移动`BoxView`通过更改`LayoutBounds`附加属性。 `Location`属性的事件参数始终是相对于`BoxView`正在拖动，并且如果`BoxView`正被拖动的固定速度`Location`连续的事件的属性将大约相同。 例如，如果按下一个手指`BoxView`中的中心，而`Pressed`操作存储区`PressPoint`属性 （50，50），也仍然相同的后续事件。 如果`BoxView`沿对角线方向拖动以恒定速率，后续`Location`属性期间`Moved`操作可能的值 （55、 55），在这种情况下`Moved`逻辑的水平和垂直位置加上5`BoxView`. 这样可将移动`BoxView`，以便其中心再次是直接在手指下。
 
-你可以移动多个`BoxView`元素同时使用不同的手指。
+可以移动多个`BoxView`元素同时使用不同的手指。
 
-[![](touch-tracking-images/boxviewdragging-small.png "三重的字数拖动页的屏幕截图")](touch-tracking-images/boxviewdragging-large.png#lightbox "三倍的字数拖动页的屏幕截图")
+[![](touch-tracking-images/boxviewdragging-small.png "三重的字数拖动页面的屏幕截图")](touch-tracking-images/boxviewdragging-large.png#lightbox "字数拖动页面的三个屏幕截图")
 
 ### <a name="subclassing-the-view"></a>子类化视图
 
-通常情况下，很容易 Xamarin.Forms 元素来处理其自己的触摸事件。 **可拖动字数拖动**页面的功能相同**字数拖动**页上，但用户拖动的实例的元素[ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs)派生自的类`BoxView`:
+通常情况下，更加容易 Xamarin.Forms 元素来处理其自身的触摸事件。 **可拖动字数拖动**页面的功能与相同**字数拖动**页上，但用户拖动的实例的元素[ `DraggableBoxView` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/DraggableBoxView.cs)从派生类`BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView
@@ -503,19 +503,19 @@ class DraggableBoxView : BoxView
 }
 ```
 
-构造函数创建并将附加`TouchEffect`，并将设置`Capture`时首次实例化该对象的属性。 没有字典是必需的因为类本身将存储`isBeingDragged`， `pressPoint`，和`touchId`与每个手指关联的值。 `Moved`处理更改`TranslationX`和`TranslationY`属性，以便将工作逻辑即使的父`DraggableBoxView`不`AbsoluteLayout`。
+构造函数创建并附加`TouchEffect`，并设置`Capture`时首次实例化该对象的属性。 没有字典是必需的因为该类本身存储`isBeingDragged`， `pressPoint`，和`touchId`与每个手指关联的值。 `Moved`处理更改`TranslationX`并`TranslationY`属性，以便处理逻辑将即使的父`DraggableBoxView`不是`AbsoluteLayout`。
 
 ### <a name="integrating-with-skiasharp"></a>将与 SkiaSharp 集成
 
-下面的两个演示需要图形，并且为此目的使用 SkiaSharp。 你可能想要了解有关[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)你先研究这些示例之前。 （"SkiaSharp 绘制基础知识"和"SkiaSharp 行和路径"） 的前两个文章涵盖此处需要的所有内容。
+接下来两个演示需要图形，并且使用 SkiaSharp 实现此目的。 你可能想要了解有关[Xamarin.Forms 中使用 SkiaSharp](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)研究这些示例之前。 前两篇文章 （"SkiaSharp 绘制基础知识"和"SkiaSharp 线和路径"） 涵盖所有需要此处。
 
-**椭圆绘制**页面允许您通过轻扫手指在屏幕上的绘制椭圆形。 根据移动手指的方式，您可以从左上到右下角，或从任何其他角到相反角绘制椭圆。 绘制椭圆是随机的颜色和不透明度。
+**椭圆绘图**页面允许您通过轻扫手指在屏幕上的绘制一个椭圆。 具体取决于如何移动手指，您可以从左上到右下角或任何其他的对角角绘制椭圆。 使用随机颜色和不透明度是绘制椭圆。
 
-[![](touch-tracking-images/ellipsedrawing-small.png "三重的椭圆绘图页的屏幕截图")](touch-tracking-images/ellipsedrawing-large.png#lightbox "三重的椭圆绘图页的屏幕截图")
+[![](touch-tracking-images/ellipsedrawing-small.png "三个椭圆绘图页屏幕截图")](touch-tracking-images/ellipsedrawing-large.png#lightbox "的椭圆绘制页的三个屏幕截图")
 
-如果你然后触摸省略号之一，可以将其拖动到另一个位置。 这要求称为"命中测试，"这就需要搜索的特定点的图形对象的方法。 SkiaSharp 省略号不可 Xamarin.Forms 元素，因此它们无法执行其自己`TouchEffect`处理。 `TouchEffect`必须应用于整个`SKCanvasView`对象。
+如果您然后触摸省略号之一，可以将其拖到另一个位置。 这要求称为"命中测试，"这涉及到搜索的特定点处的图形对象的技术。 SkiaSharp 省略号不是 Xamarin.Forms 元素，因此它们不能执行其自己`TouchEffect`处理。 `TouchEffect`必须应用于整个`SKCanvasView`对象。
 
-[EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml)文件实例化`SKCanvasView`中单个单元格`Grid`。 `TouchEffect`对象附加到的`Grid`:
+[EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml)文件实例化`SKCanvasView`在单个单元格`Grid`。 `TouchEffect`对象附加到的`Grid`:
 
 ```xaml
 <Grid x:Name="canvasViewGrid"
@@ -531,7 +531,7 @@ class DraggableBoxView : BoxView
 </Grid>
 ```
 
-在 Android 和通用 Windows 平台上，`TouchEffect`可以直接向附加`SKCanvasView`，但不起作用的 iOS 上。 请注意，`Capture`属性设置为`true`。
+在 Android 和通用 Windows 平台，`TouchEffect`可以直接向附加`SKCanvasView`，但不起作用的 iOS 上。 请注意，`Capture`属性设置为`true`。
 
 由类型的对象表示 SkiaSharp 呈现每个椭圆`EllipseDrawingFigure`:
 
@@ -585,7 +585,7 @@ class EllipseDrawingFigure
 }
 ```
 
-`StartPoint`和`EndPoint`时该程序正在处理触摸屏输入; 使用属性`Rectangle`属性用于绘制椭圆。 `LastFingerLocation`属性派上用场时所拖动椭圆，和`IsInEllipse`方法辅助命中测试。 该方法返回`true`如果该点在内部椭圆。
+`StartPoint`并`EndPoint`程序处理触摸输入; 时所使用属性`Rectangle`属性用于绘制椭圆。 `LastFingerLocation`属性时所拖动的椭圆，发挥作用，`IsInEllipse`方法中的命中测试的辅助工具。 该方法将返回`true`如果点在 ellipse 内部的。
 
 [代码隐藏文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/EllipseDrawingPage.xaml.cs)维护三个集合：
 
@@ -595,7 +595,7 @@ List<EllipseDrawingFigure> completedFigures = new List<EllipseDrawingFigure>();
 Dictionary<long, EllipseDrawingFigure> draggingFigures = new Dictionary<long, EllipseDrawingFigure>();
 ```
 
-`draggingFigure`字典包含一部分`completedFigures`集合。 SkiaSharp`PaintSurface`事件处理程序只需呈现在这些对象`completedFigures`和`inProgressFigures`集合：
+`draggingFigure`字典包含的子集`completedFigures`集合。 SkiaSharp`PaintSurface`事件处理程序只需将呈现在这些对象`completedFigures`和`inProgressFigures`集合：
 
 ```csharp
 SKPaint paint = new SKPaint
@@ -621,7 +621,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-最棘手的触摸处理部分是`Pressed`处理。 这就是执行命中测试，但如果代码检测到用户的手指下的椭圆，如果当前未正在由另一个手指拖动可以仅将拖动该椭圆。 如果没有用户的手指下没有椭圆，该代码将开始绘制新椭圆的过程：
+触摸处理的最棘手部分是`Pressed`处理。 这就是执行命中测试，但如果代码检测到用户的手指下一个椭圆，如果当前未被另一个手指拖动可仅被拖动该椭圆形。 如果用户的手指下没有椭圆，代码开始绘制新椭圆的过程：
 
 ```csharp
 case TouchActionType.Pressed:
@@ -681,11 +681,11 @@ case TouchActionType.Pressed:
     break;
 ```
 
-其他 SkiaSharp 示例是**手指绘制**页。 可以从两个选择描边颜色和描边宽度`Picker`视图，然后绘制与一个或多个指：
+其他 SkiaSharp 示例是**手指绘制**页。 可以从两个选择笔画颜色和笔划宽度`Picker`视图，然后使用一个或多个手指绘制：
 
-[![](touch-tracking-images/fingerpaint-small.png "三重的手指绘制页的屏幕截图")](touch-tracking-images/fingerpaint-large.png#lightbox "手指绘制页面的三个屏幕截图")
+[![](touch-tracking-images/fingerpaint-small.png "手指绘制页的三个屏幕截图")](touch-tracking-images/fingerpaint-large.png#lightbox "的手指绘制页的三个屏幕截图")
 
-此示例还需要一个单独的类来表示在屏幕上绘制每个行：
+此示例还需要一个单独的类表示在屏幕上绘制每个行：
 
 ```csharp
 class FingerPaintPolyline
@@ -703,14 +703,14 @@ class FingerPaintPolyline
 }
 ```
 
-`SKPath`对象用于呈现每个行。 [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs)文件维护这些对象，一个用于当前绘制这些折线，另一个用于折线的已完成的两个集合：
+`SKPath`对象用于呈现每个行。 [FingerPaint.xaml.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/FingerPaintPage.xaml.cs)文件维护这些对象，一个用于当前所绘制这些折线，另一个用于已完成的折线的两个集合：
 
 ```csharp
 Dictionary<long, FingerPaintPolyline> inProgressPolylines = new Dictionary<long, FingerPaintPolyline>();
 List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 ```
 
-`Pressed`处理过程将创建一个新`FingerPaintPolyline`，调用`MoveTo`上要存储的初始点的路径对象，并将添加到该对象`inProgressPolylines`字典。 `Moved`处理调用`LineTo`上的新的手指位置的路径对象和`Released`处理传输已完成从折线`inProgressPolylines`到`completedPolylines`。 同样，绘制代码实际 SkiaSharp 是相对简单的：
+`Pressed`处理过程将创建一个新`FingerPaintPolyline`，调用`MoveTo`上要存储的初始点的路径对象，并添加到该对象`inProgressPolylines`字典。 `Moved`处理调用`LineTo`上的新的指位置的路径对象和`Released`处理传输已完成从 polyline`inProgressPolylines`到`completedPolylines`。 再次重申，实际 SkiaSharp 绘制代码是相对简单：
 
 ```csharp
 SKPaint paint = new SKPaint
@@ -741,23 +741,23 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-### <a name="tracking-view-to-view-touch"></a>跟踪视图以查看触摸
+### <a name="tracking-view-to-view-touch"></a>跟踪视图来查看触摸
 
-设置所有前面的示例`Capture`属性`TouchEffect`到`true`，当`TouchEffect`已创建，或者当`Pressed`发生事件。 这可确保同一元素收到与首次按下视图手指关联的所有事件。 最终的示例执行*不*设置`Capture`到`true`。 这会导致不同的行为，在与屏幕联系手指从一个元素移到另。 元素上方的手指从移动接收的事件`Type`属性设置为`TouchActionType.Exited`和第二个元素接收的事件`Type`设置`TouchActionType.Entered`。
+设置所有前面的示例`Capture`的属性`TouchEffect`到`true`，时`TouchEffect`已创建，或者当`Pressed`事件发生。 这可确保同一元素接收首次按下该视图的手指与关联的所有事件。 最后一个示例的用途*不*设置`Capture`到`true`。 当屏幕的手指移动从一个元素到另一个时，这会导致不同的行为。 从移动手指的元素接收的事件`Type`属性设置为`TouchActionType.Exited`和第二个元素接收的事件`Type`设置为`TouchActionType.Entered`。
 
-触摸处理此类型是对音乐键盘非常有用。 需要能够检测到它按下时，但还时手指从一个项滑到另一个项。
+此类型的触摸处理是非常有用的音乐键盘。 需要能够检测到它按下时，而且还时手指从一个项滑到另一个项。
 
-**无提示键盘**页定义小[ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs)和[ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs)派生自的类[ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs)，它派生自`BoxView`。
+**无提示键盘**页上定义小[ `WhiteKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/WhiteKey.cs)并[ `BlackKey` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BlackKey.cs)派生的类[ `Key` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/Key.cs)，它派生`BoxView`。
 
-`Key`类是可供在实际音乐程序中使用。 它定义公共属性名为`IsPressed`和`KeyNumber`，这是想要设置到由 MIDI 标准建立的键代码。 `Key`类还定义了名为事件`StatusChanged`，后者时调用`IsPressed`属性更改。
+`Key`类已准备好实际音乐程序中使用。 它定义了名为的公共属性`IsPressed`和`KeyNumber`，用于将设置为建立由 MIDI 标准的键代码。 `Key`类还定义了名为的事件`StatusChanged`，这当调用`IsPressed`属性更改。
 
-多个指可以在每个键。 为此，`Key`类维护`List`当前点击该注册表项的所有指的触摸屏输入 ID 号：
+每个密钥允许使用多根手指。 出于此原因，`Key`类维护`List`的当前接触该注册表项的所有根手指的触控 ID 号：
 
 ```csharp
 List<long> ids = new List<long>();
 ```
 
-`TouchAction`事件处理程序添加到一个 ID`ids`两个列表`Pressed`事件类型和`Entered`类型，但仅当`IsInContact`属性是`true`为`Entered`事件。 从删除该标识`List`为`Released`或`Exited`事件：
+`TouchAction`事件处理程序添加到一个 ID`ids`两个列表`Pressed`事件类型和一个`Entered`类型，但仅当`IsInContact`属性是`true`为`Entered`事件。 ID 已从`List`有关`Released`或`Exited`事件：
 
 ```csharp
 void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -787,21 +787,21 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 ```
 
-`AddToList`和`RemoveFromList`方法都检查如果`List`间空且非空，已更改时，如果是这样，将调用和`StatusChanged`事件。
+`AddToList`并`RemoveFromList`这两种方法检查是否`List`empty 和非空之间发生了更改，如果是这样，调用`StatusChanged`事件。
 
-各种`WhiteKey`和`BlackKey`元素排列在页中的[XAML 文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml)，它看起来最佳电话保存在横向模式中时：
+各种`WhiteKey`并`BlackKey`中的页的排列元素[XAML 文件](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/SilentKeyboardPage.xaml)，当手机保持在横向模式下时，该查找最佳：
 
-[![](touch-tracking-images/silentkeyboard-small.png "三重的无提示键盘页面屏幕截图")](touch-tracking-images/silentkeyboard-large.png#lightbox "三倍的无提示键盘页面屏幕截图")
+[![](touch-tracking-images/silentkeyboard-small.png "无提示键盘页的三个屏幕截图")](touch-tracking-images/silentkeyboard-large.png#lightbox "带来三倍的无提示键盘页屏幕截图")
 
-如果你扫描手指跨密钥中，你将看到的颜色的颜色的细微更改将触控事件传输从一个项到另一个。
+如果在扫描您的手指，您将看到颜色的细微更改从一个密钥传输触控事件，到另一个。
 
 ## <a name="summary"></a>总结
 
-本文演示了如何调用事件起作用，以及如何编写和使用实现低级别的多点触控处理效果。
+本文演示了如何调用事件起作用，以及如何编写和使用实现低级别多点触控处理的效果。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [在 iOS 中的多点触控手指跟踪](~/ios/app-fundamentals/touch/touch-tracking.md)
-- [在 Android 中跟踪的多点触控手指](~/android/app-fundamentals/touch/touch-tracking.md)
-- [触摸跟踪效果 （示例）](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [多点触控手指在 Android 中跟踪](~/android/app-fundamentals/touch/touch-tracking.md)
+- [触控跟踪效果 （示例）](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)

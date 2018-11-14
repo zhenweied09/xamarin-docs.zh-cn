@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 ms.custom: xamu-video
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108738"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564013"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -385,7 +385,7 @@ public partial class PhotoWrappingPage : ContentPage
 ## <a name="the-bindable-properties-in-detail"></a>详细信息中的可绑定属性
 
 现在，已了解的一些常见的应用程序`FlexLayout`的属性`FlexLayout`可以更详细地探讨了。 
-`FlexLayout` 定义设置的六个可绑定属性`FlexLayout`本身，在代码或 XAML 控件 orientatin 和对齐方式。 (这些属性之一[ `Position` ](xref:Xamarin.Forms.FlexLayout.Position)，本文不介绍。)
+`FlexLayout` 定义设置的六个可绑定属性`FlexLayout`本身，在代码或 XAML 控件方向和对齐方式。 (这些属性之一[ `Position` ](xref:Xamarin.Forms.FlexLayout.Position)，本文不介绍。)
 
 您可以尝试使用五个剩余可绑定属性使用 **试验** 页 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 示例。 此页面允许您添加或删除从子级`FlexLayout`并设置五个可绑定属性的组合。 所有子级`FlexLayout`都`Label`视图的各种颜色和大小，使用`Text`属性设置为对应的数字为在其位置`Children`集合。
 
@@ -584,7 +584,7 @@ FlexLayout.SetBasis(label, new FlexBasis(0.25f, true));
 
 [ `Grow` ](xref:Xamarin.Forms.FlexLayout.GrowProperty)附加可绑定属性属于类型`int`。 默认值为 0，并且值必须大于或等于 0。
 
-`Grow`属性所扮演的角色时，当`Wrap`属性设置为`NoWrap`的子行具有的宽度小于的总宽度`FlexLayout`，或子级的列具有比短高度`FlexLayout`。 `Grow`属性指示如何将子级之间剩余的空间分配。
+`Grow`属性的作用时`Wrap`属性设置为`NoWrap`的子行具有的宽度小于的总宽度`FlexLayout`，或子级的列具有比短高度`FlexLayout`。 `Grow`属性指示如何将子级之间剩余的空间分配。
 
 在中**增长实验**页上，五个`Label`交替颜色的元素排列在列和两个`Slider`元素，可以调整`Grow`属性的第二个和第四个`Label`。 在最左侧的 iOS 屏幕快照显示的默认`Grow`0 的属性：
 

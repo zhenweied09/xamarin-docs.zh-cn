@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105800"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983609"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>使用 iOS 设计器中的表
 
@@ -73,7 +73,7 @@ Visual Studio 中使用创建新的解决方案 **（创建） 新项目...> 单
 
 1.  选择视图控制器底部栏并将其删除。
 2.  拖动**导航控制器**和一个**表格视图控制器**到从工具箱情节提要上。 
-3.  从根视图控制器创建 segue，到刚添加的第二个表视图控制器。 若要创建 segue，控制 + 拖动*从详细信息单元格*到新添加的 UITableViewController。 选择的选项**显示*** 下**Segue 选择**。 
+3.  从根视图控制器创建 segue，到刚添加的第二个表视图控制器。 若要创建 segue，控制 + 拖动*从详细信息单元格*到新添加的 UITableViewController。 选择的选项**显示**下**Segue 选择**。 
 4.  选择新的 segue 您创建并将其提供给此 segue 在代码中引用的标识符。 单击 segue 并输入`TaskSegue`有关**标识符**中**Properties Pad**，如下所示：    
   [![属性面板中命名 segue](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
@@ -115,7 +115,7 @@ Visual Studio 中使用创建新的解决方案 **（创建） 新项目...> 单
 请执行以下操作： 
 
 -  拖动**栏按钮项**从工具箱拖到_导航栏的右侧_。
--  在中**Properties Pad**下**栏按钮项**选择**标识符： 添加**(以使其*+* 加号按钮)。 
+-  在中**Properties Pad**下**栏按钮项**选择**标识符： 添加**(以使其 *+* 加号按钮)。 
 -  请为其提供一个名称，以便它可以标识代码中在后面的阶段。 请注意，你将需要提供根视图控制器类名称 (例如**ItemViewController**) 以允许您设置栏按钮项的名称。
 
 

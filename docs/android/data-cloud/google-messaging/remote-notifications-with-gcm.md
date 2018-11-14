@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: e361444f2c717ff44e0771710836f156f90cfcb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118885"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528801"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google 云消息传送与远程通知
 
@@ -91,7 +91,7 @@ Android 应用程序必须具有配置才能从 Google Cloud Messaging 接收通
 -   `com.google.android.c2dm.permission.RECEIVE` &ndash; 向我们注册并接收来自 Google Cloud Messaging 的消息的应用程序授予权限。 (用途`c2dm`意味着？ 这代表_云到设备的消息传送_，这是到 GCM 现已弃用前置任务。 
     GCM 仍使用`c2dm`许多及其权限的字符串中。) 
 
--   `android.permission.WAKE_LOCK` &ndash; （可选）进入睡眠状态时侦听的一条消息将阻止设备的 CPU。 
+-   `android.permission.WAKE_LOCK` &ndash; （可选）防止设备 CPU 进入睡眠状态时侦听的一条消息。 
 
 -   `android.permission.INTERNET` &ndash; 授予 internet 访问权限，以便客户端应用程序能够与 GCM 通信。 
 
@@ -649,7 +649,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 此外，您会注意到一个新的通知图标已显示在通知栏： 
 
-[![Notiication 图标将出现在设备上](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![在设备上会显示通知图标](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 当您打开的通知送纸器，若要查看通知时，应会看到我们远程通知：
 
@@ -657,7 +657,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 恭喜，您的应用程序已收到其第一个远程通知 ！
 
-请注意是否应用强制停止，将无法再接收 GCM 消息。 若要强制停止后继续通知，应用程序必须手动重新启动。 有关此 Android 策略的详细信息，请参阅[启动已停止的应用程序上的控件](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)，这[堆栈溢出文章](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)。 
+请注意是否应用强制停止，将无法再接收 GCM 消息。 若要强制停止后恢复通知，应用程序必须手动重新启动。 有关此 Android 策略的详细信息，请参阅[启动已停止的应用程序上的控件](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)，这[堆栈溢出文章](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267)。 
 
  
 ## <a name="summary"></a>总结

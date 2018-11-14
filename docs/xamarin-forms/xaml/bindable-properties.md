@@ -4,15 +4,15 @@ description: 本文介绍了可绑定属性，并演示如何创建并使用它�
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 241579d51d1f0af84655f439bad3adb879404e91
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8dc53c37894af70d5183fe5c44b018fdf25af616
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995383"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563844"
 ---
 # <a name="bindable-properties"></a>可绑定属性
 
@@ -67,7 +67,7 @@ public static readonly BindableProperty EventNameProperty =
 
 （可选） 在创建时[ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty)实例，下面可以指定参数：
 
-- 绑定模式中。 这用于指定将属性值更改将传播的方向。 在默认绑定模式中，更改将传播从*源*到*目标*。
+- 绑定模式。 这用于指定将属性值更改将传播的方向。 在默认绑定模式中，更改将传播从*源*到*目标*。
 - 设置属性值时，将调用一个验证委托。 有关详细信息，请参阅[验证回叫](#validation)。
 - 属性更改将属性值已更改时调用的委托。 有关详细信息，请参阅[检测属性更改](#propertychanges)。
 - 一个属性，更改将属性值将更改时调用的委托。 此委托具有与属性更改委托相同的签名。

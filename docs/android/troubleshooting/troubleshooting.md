@@ -95,7 +95,7 @@ Xamarin.Android 支持以下系统属性：
 
 -   *debug.mono.env*： 竖线分隔 ('*|*) 的环境变量来导出应用程序启动期间列表*之前*mono 已初始化。 这允许将环境变量设置该控件 mono 日志记录。
 
-    - *请注意*： 因为值是*|*'-分隔，该值必须包含额外级别的用引号括起来，作为\` *adb shell* \`命令将删除组引号。
+    - *请注意*： 因为值是 '*|*'-分隔， 该值必须包含额外级别的用引号括起来，作为 \`*adb shell*\` 命令将删除组引号。
 
     - *请注意*: Android 系统属性值不能超过 92 个字符的长度。
 
@@ -271,7 +271,7 @@ Android 4.0 中，但是，已移动的收集器，并且无法再分发对 Andr
 
 ## <a name="receiving-activation-incomplete-error-message"></a>接收激活不完整的错误消息
 
-使用 Xamarin.Android for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从*contact@xamarin.com*。
+使用 Xamarin.Android for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从 *contact@xamarin.com*。
 
 -  日志位置： **%localappdata%\\Xamarin\\日志**
 

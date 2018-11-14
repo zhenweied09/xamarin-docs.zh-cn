@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d24d62bf190a2cb078bf82d7a8676f302e740762
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0401c2c05677c719bbe4914cc7e008b650fdd198
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115583"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526235"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>IOS 设计器中使用自定义控件
 
@@ -25,7 +25,7 @@ ms.locfileid: "50115583"
 ## <a name="walkthrough"></a>演练
 
 > [!IMPORTANT]
-> 从开始 Xamarin.Studio 5.5 版中，在其中创建自定义控件的方法是较早版本略有不同。 若要创建自定义控件，或者`IComponent`接口时，需要 （以及相关的实现方法中） 或类可以使用批注`[DesignTimeVisible(true)]`。 在下面的演练示例正在使用后一种方法。
+> 从开始 Xamarin.Studio 5.5 版中，在其中创建自定义控件的方法是较早版本略有不同。 若要创建自定义控件，或者`IComponent`接口时，需要 （以及相关的实现方法中） 或可以使用批注类`[DesignTimeVisible(true)]`。 在下面的演练示例正在使用后一种方法。
 
 
 1. 创建新的解决方案从**iOS > 应用程序 > 单视图应用程序 > C#** 模板，其命名为`ScratchTicket`，然后继续完成新建项目向导：

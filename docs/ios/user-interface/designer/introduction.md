@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123747"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51285581"
 ---
 # <a name="ios-designer-basics"></a>iOS 设计器基础知识
 
@@ -459,6 +459,14 @@ IOS 设计器还可以以大纲显示控件的接口层次结构。 概要中显
 在 Xcode Interface Builder 中进行编辑后, 保存该文件，并返回到 Visual Studio for mac。 所做的更改将同步到 Xamarin.iOS 项目。
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+## <a name="revert-to-xcode"></a>恢复到 Xcode
+
+它是可以互换使用 iOS 设计器和 Xcode Interface Builder，不过 Xcode Interface Builder 只是可用的 mac 上 若要在 Mac 上的 Xcode Interface Builder 中打开的情节提要或.xib 文件，打开包含在 Xamarin.iOS 项目的解决方案[Visual Studio for Mac](/visualstudio/mac/)，右键单击该文件并选择**打开方式 > Xcode 接口生成器**，如下面的屏幕截图所示：
+
+[![在 Xcode Interface Builder 中打开演示图板](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "在 Xcode Interface Builder 中打开演示图板")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
+
+在 Xcode Interface Builder 中进行编辑后, 保存该文件，并返回到 Visual Studio for mac。 所做的更改将同步到 Xamarin.iOS 项目。
 
 -----
 

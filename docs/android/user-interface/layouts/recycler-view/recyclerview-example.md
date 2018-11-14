@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108647"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526762"
 ---
 # <a name="a-basic-recyclerview-example"></a>基本 RecyclerView 示例
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 此代码驻留在主活动`OnCreate`方法。 布局管理器构造函数需要*上下文*，因此`MainActivity`使用传递`this`如上图所示。
 
-而不是使用 predefind `LinearLayoutManager`，可以显示两个自定义布局管理器中插入`CardView`项的并排方案，实现要遍历的照片集合翻页动画效果。 稍后在本指南中，将看到举例说明如何通过交换不同的布局管理器中修改布局。
+而不是使用预定义`LinearLayoutManager`，可以显示两个自定义布局管理器中插入`CardView`项的并排方案，实现要遍历的照片集合翻页动画效果。 稍后在本指南中，将看到举例说明如何通过交换不同的布局管理器中修改布局。
 
 <a name="view-holder" />
 
@@ -391,7 +391,7 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 
 [![使用水平滚动网格中的照片应用程序的示例屏幕截图](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-通过更改只有一行代码，是可以修改照片查看应用程序以不同的行为与使用不同的布局。
+通过更改只有一行代码，则可以修改照片查看应用程序以不同的行为与使用不同的布局。
 请注意，适配器代码既不布局 XML 必须进行修改以更改布局样式。 
 
 在下一主题[扩展 RecyclerView 示例](~/android/user-interface/layouts/recycler-view/extending-the-example.md)，此基本示例应用程序扩展以处理项的单击事件并更新`RecyclerView`当基础数据源发生更改。

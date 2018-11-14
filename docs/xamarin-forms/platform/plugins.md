@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/05/2018
-ms.openlocfilehash: 4d121c2dfcca380e1735da1a4ca47c42d1957b8a
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: ac8e5323a2a2e05ac03294bb6919e8dfadc93655
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854735"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526515"
 ---
 # <a name="consuming-and-creating-xamarinforms-plugins"></a>使用和创建 Xamarin.Forms 插件
 
@@ -53,7 +53,7 @@ Xamarin 社区已创建许多跨平台插件与 Xamarin.Forms 兼容。 大型�
 
 读取 James Montemagno[博客文章](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/)描述为 Xamarin 创建插件的过程。
 
-最近，插件可以将创建具有单一的多重目标平台。 James Montemagno 的讨论了这种方法[博客文章](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/)。 James Montemagno 的插件，上述链接中使用此方法和格式中也使用**Xamarin.Essentials**。
+最近，可以使用单一的多重目标平台创建插件。 James Montemagno 的讨论了这种方法[博客文章](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/)。 James Montemagno 的插件，上述链接中使用此方法和格式中也使用**Xamarin.Essentials**。
 
 最好避免引用 Xamarin.Forms 直接从插件是。
 当其他开发人员尝试使用该插件时，这可以创建版本冲突问题。 改为尝试设计 API，使其可由任何 Xamarin 或.NET 应用程序。

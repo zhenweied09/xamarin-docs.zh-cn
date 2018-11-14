@@ -5,12 +5,12 @@ description: 本文档会比较的相似之处和 Xamarin.Forms 和 WPF 应用�
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107102"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526788"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 与。Xamarin.Forms 应用程序生命周期
 
@@ -53,7 +53,7 @@ WPF 使用`Window`作为任何顶层可视元素的根元素。 这将在 Window
 
 ### <a name="views"></a>视图
 
-对于这两个框架可视层次结构是类似的。 WPF 是由于对所见即所得的文档的更深入地有点。
+这两个框架的可视化层次结构是类似的。 WPF 是有点深入由于它对所见即所得的文档的支持。
 
 **WPF**
 
@@ -83,7 +83,7 @@ Xamarin.Forms 主要面向围绕移动的方案。 在这种情况下，应用�
 |--- |--- |--- |
 |初始激活|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |所示|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |挂起/丢失焦点|Window.OnDeactivated|Page.OnSleep|
 |激活/实际焦点|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|n/a|
@@ -179,11 +179,11 @@ WPF 和 Xamarin.Forms 都具有资源和资源字典的概念。 可以将放置
 
 ## <a name="styles"></a>样式
 
-样式也完全支持在 Xamarin.Forms 中，可以是使用主题组成 UI 的 Xamarin.Forms 元素。 它们支持通过触发器 （属性、 事件和数据） 继承`BasedOn`，和值的资源查找。 样式应用于元素通过任一明确`Style`属性或通过不提供资源密钥-就像 WPF 的隐式。
+样式也完全支持在 Xamarin.Forms 中，可以是使用主题组成 UI 的 Xamarin.Forms 元素。 它们支持通过触发器 （属性、 事件和数据） 继承`BasedOn`，和值的资源查找。 样式应用于元素或者显式通过`Style`属性，或隐式不提供资源密钥-就像 WPF 一样。
 
 ### <a name="device-styles"></a>设备样式
 
-WPF 具有一组预定义的属性 (如存储为一组静态类上的静态值`SystemColors`) 的规定系统颜色、 字体和值和资源键的窗体中的指标。 Xamarin.Forms 与此类似，但定义了一组[设备样式](~/xamarin-forms/user-interface/styles/device.md)来表示相同的操作。 这些样式是由 frameowrk 提供，并将设置为根据运行时环境 （例如辅助功能） 的值。
+WPF 具有一组预定义的属性 (如存储为一组静态类上的静态值`SystemColors`) 的规定系统颜色、 字体和值和资源键的窗体中的指标。 Xamarin.Forms 与此类似，但定义了一组[设备样式](~/xamarin-forms/user-interface/styles/device.md)来表示相同的操作。 这些样式是框架所提供的并将设置为根据运行时环境 （例如辅助功能） 的值。
 
 **WPF**
 

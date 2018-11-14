@@ -21,7 +21,7 @@ _C#在 Xamarin.Android 中的代码是一种机制，用于提取指定了在 Ja
 
 ## <a name="overview"></a>概述
 
-Xamarin.Android **Java 绑定库**尝试自动执行所需绑定有时称为的工具的帮助的现有 Android 库的工作大部分_绑定生成器_。 在绑定 Java 库时，Xamarin.Android 将检查的 Java 类，并生成所有包、 类型和成员的列表的绑定。 Api 的此列表存储在一个 XML 文件，请参阅**\{项目 directory}\obj\Release\api.xml**有关**发布**生成而在**\{项目directory}\obj\Debug\api.xml**有关**调试**生成。
+Xamarin.Android **Java 绑定库**尝试自动执行所需绑定有时称为的工具的帮助的现有 Android 库的工作大部分_绑定生成器_。 在绑定 Java 库时，Xamarin.Android 将检查的 Java 类，并生成所有包、 类型和成员的列表的绑定。 Api 的此列表存储在一个 XML 文件，请参阅 **\{项目 directory}\obj\Release\api.xml** 有关 **发布** 生成而在 **\{项目directory}\obj\Debug\api.xml** 有关 **调试** 生成。
 
 ![Obj/Debug 文件夹中的 api.xml 文件的位置](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
@@ -246,7 +246,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="obfuscated"></a>经过模糊处理
 
-模糊处理 Java 库的工具可能会影响 Xamarin.Android 绑定生成器，并生成其功能与C#包装器类。 经过模糊处理类的特征包括: * 类名称中包含**$**，即 **$.class** * 类名完全破坏的小写字符，即**a.class**
+模糊处理 Java 库的工具可能会影响 Xamarin.Android 绑定生成器，并生成其功能与C#包装器类。 经过模糊处理类的特征包括: * 类名称中包含 **$**，即 **$.class**  * 类名完全破坏的小写字符，即 **a.class**
 
 此代码片段示范了如何生成一个"未经过模糊处理"C#类型：
 

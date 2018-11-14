@@ -1,26 +1,30 @@
 ---
-title: Xamarin.Essentials： 设备信息
-description: 本文档介绍中 Xamarin.Essentials，提供有关设备上运行应用程序的信息的 DeviceInfo 类。
+title: Xamarin.Essentials：设备信息
+description: 本文档介绍 Xamarin.Essentials 中的 DeviceInfo 类，此类提供有关运行应用程序的设备的信息。
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 18fe081372cc190e5ead2045f36d63652f8702c3
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 530b04446703d78452357b2c9f9089e59ebf6e6c
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674808"
 ---
-# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials： 设备信息
+# <a name="xamarinessentials-device-information"></a>Xamarin.Essentials：设备信息
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**DeviceInfo**类提供了有关设备上运行应用程序的信息。
+DeviceInfo 类提供有关运行应用程序的设备的信息。
+
+## <a name="get-started"></a>入门
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-deviceinfo"></a>使用 DeviceInfo
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
@@ -53,32 +57,32 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[平台](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-`DeviceInfo.Platform` 将关联到映射到操作系统的常量字符串。 可以使用检查值`Platforms`类：
+`DeviceInfo.Platform` 与映射到操作系统的一个常量字符串相关联。 可以使用 `Platforms` 类检查以下值：
 
-- **DeviceInfo.Platforms.iOS** – iOS
-- **DeviceInfo.Platforms.Android** -Android
-- **DeviceInfo.Platforms.UWP** – UWP
-- **DeviceInfo.Platforms.Unsupported** – 不受支持
+- **DeviceInfo.Platforms.iOS** - iOS
+- **DeviceInfo.Platforms.Android** - Android
+- **DeviceInfo.Platforms.UWP** - UWP
+- **DeviceInfo.Platforms.Unsupported** - 不受支持
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[习惯用语](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom` 关联应用程序映射到的设备类型的常量字符串上运行。 可以使用检查值`Idioms`类：
+`DeviceInfo.Idiom` 与映射到运行应用程序的设备类型的一个常量字符串相关联。 可以使用 `Idioms` 类检查以下值：
 
-- **DeviceInfo.Idioms.Phone** – 电话
-- **DeviceInfo.Idioms.Tablet** – 平板电脑
-- **DeviceInfo.Idioms.Desktop** -桌面
-- **DeviceInfo.Idioms.TV** – 电视
-- **DeviceInfo.Idioms.Unsupported** – 不受支持
+- **DeviceInfo.Idioms.Phone** - 手机
+- **DeviceInfo.Idioms.Tablet** - 平板电脑
+- **DeviceInfo.Idioms.Desktop** - 桌面
+- **DeviceInfo.Idioms.TV** - 电视
+- **DeviceInfo.Idioms.Unsupported** - 不受支持
 
 ## <a name="device-type"></a>设备类型
 
-`DeviceInfo.DeviceType` 将一个枚举以确定物理或虚拟设备上运行的应用程序相关联。 虚拟设备是模拟器或仿真程序。
+`DeviceInfo.DeviceType` 关联一个枚举以确定应用程序是在物理设备还是虚拟设备上运行。 虚拟设备是指模拟器或仿真程序。
 
-## <a name="platform-implementation-specifics"></a>平台实现的细节
+## <a name="platform-implementation-specifics"></a>平台实现细节
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-iOS 不公开的 API 为开发人员若要获取的特定 iOS 设备的名称。 而是如返回硬件标识符_iPhone10，6_指 iPhone X。这些标识符的映射不提供由 Apple，但可能位于[iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) （非官方源源）。
+iOS 不会向开发人员公开一个 API 来获取特定 iOS 设备的名称。 而是会返回一个硬件标识符，例如 iPhone10,6，这是指这些标识符的 iPhone X. A 映射不是由 Apple 提供的，但可以在 [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models)（一个非官方来源）上找到。
 
 --------------
 

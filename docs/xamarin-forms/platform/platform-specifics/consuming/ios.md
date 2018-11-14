@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 69f754db0fd9661fb317f43c7cda546b0b510265
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119396"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527074"
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台特定信息
 
@@ -332,7 +332,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 结果是，指定`UpdateMode`应用于[ `Picker` ](xref:Xamarin.Forms.Picker)，它可以控制项选择发生时：
 
-[![](ios-images/picker-updatemode.png "选取器 UpdateMode 特定于平台的")](ios-images/picker-updatemode-large.png#lightbox "Picker UpdateMode Plaform-Specific")
+[![](ios-images/picker-updatemode.png "选取器 UpdateMode 平台专属")](ios-images/picker-updatemode-large.png#lightbox "选取器 UpdateMode 特定于平台的")
 
 <a name="slider-updateontap" />
 
@@ -777,7 +777,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 结果是， [ `ScrollView` ](xref:Xamarin.Forms.ScrollView)可以禁用延迟接收内容收尾工作了，因此，在这种情况下[ `Slider` ](xref:Xamarin.Forms.Slider)接收手势而不是[ `Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail)页的[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
 
-[![](ios-images/scrollview-delay-content-touches.png "ScrollView 延迟内容涉及特定于平台的")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+[![](ios-images/scrollview-delay-content-touches.png "ScrollView 延迟内容涉及特定于平台的")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView 延迟内容涉及特定于平台的")
 
 ## <a name="application"></a>应用程序
 

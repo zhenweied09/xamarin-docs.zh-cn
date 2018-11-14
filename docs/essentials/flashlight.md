@@ -1,32 +1,34 @@
 ---
-title: Xamarin.Essentials： 闪光灯
-description: 本文档介绍中 Xamarin.Essentials，可以启用或禁用设备的照相机的闪存将其转换手电筒的闪光灯类。
+title: Xamarin.Essentials：Flashlight
+description: 本文档介绍 Xamarin.Essentials 中的 Flashlight 类，此类使你能够打开或关闭设备的照相机闪光灯，将其转换为一个手电筒。
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 8c471f64c14a2e41693c450e02f89e7ac845d060
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: d1a2ad675d615b48b8e8f8433065c5bd0bbae1d0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353355"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675076"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials： 闪光灯
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials：Flashlight
 
 ![预发行版 NuGet](~/media/shared/pre-release.png)
 
-**手电筒**类具有启用或禁用设备的照相机的闪存将其转换手电筒的功能。
+Flashlight 类，此类使你能够打开或关闭设备的照相机闪光灯，将其转换为一个手电筒。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
-访问**手电筒**功能以下平台特定的安装程序是必需的。
+[!include[](~/essentials/includes/get-started.md)]
+
+若要访问 Flashlight 功能，需要以下特定于平台的设置。
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-闪光灯和照相机权限所需，必须在 Android 项目中配置。 这可以通过以下方法添加：
+需要具有 Flashlight 和 Camera 权限，并且必须在 Android 项目中进行配置。 可以通过以下方法添加权限：
 
-打开**AssemblyInfo.cs**文件下**属性**文件夹并添加：
+打开 Properties 文件夹下的 AssemblyInfo.cs 文件并添加：
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.Flashlight)]
@@ -35,16 +37,16 @@ ms.locfileid: "39353355"
 
 或更新 Android 清单：
 
-打开**AndroidManifest.xml**文件下**属性**文件夹，并添加以下的内部**清单**节点。
+打开 Properties 文件夹下的 AndroidManifest.xml 文件，并在“manifest”节点内添加以下代码。
 
 ```xml
 <uses-permission android:name="android.permission.FLASHLIGHT" />
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-或右键单击 Android 项目，并打开项目的属性。 下**Android 清单**查找**所需的权限：** 区域并检查**手电筒**并**照相机**权限。 这将自动更新**AndroidManifest.xml**文件。
+或右键单击 Android 项目并打开项目的属性。 在“Android 清单”下找到“所需权限:”区域，然后选中“FLASHLIGHT”和“CAMERA”权限。 这样会自动更新 AndroidManifest.xml 文件。
 
-通过添加这些权限来[Google Play 将自动筛选出设备](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)无需任何特定硬件。 可以通过以下代码添加到你在 Android 项目的 AssemblyInfo.cs 文件获取解决此问题：
+通过添加这些权限，[Google Play 将自动筛选出设备](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features)，而无需任何特定硬件。 可以通过将以下代码添加到 Android 项目中的 AssemblyInfo.cs 文件中来绕过此操作：
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]
@@ -61,15 +63,15 @@ ms.locfileid: "39353355"
 
 -----
 
-## <a name="using-flashlight"></a>使用闪光灯
+## <a name="using-flashlight"></a>使用 Flashlight
 
-在类中添加对 Xamarin.Essentials 的引用：
+在你的类中添加对 Xamarin.Essentials 的引用：
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-闪光灯可以启用和禁用通过`TurnOnAsync`和`TurnOffAsync`方法：
+可以通过 `TurnOnAsync` 和 `TurnOffAsync` 方法来打开或关闭手电筒：
 
 ```csharp
 try
@@ -94,31 +96,31 @@ catch (Exception ex)
 }
 ```
 
-## <a name="platform-implementation-specifics"></a>平台实现的细节
+## <a name="platform-implementation-specifics"></a>平台实现细节
 
 ### <a name="androidtabandroid"></a>[Android](#tab/android)
 
-经过优化的闪光灯类，基于设备的操作系统。
+Flashlight 类已根据设备的操作系统进行了优化。
 
-#### <a name="api-level-23-and-higher"></a>API 级别 23 和更高版本
+#### <a name="api-level-23-and-higher"></a>API 级别 23 及更高版本
 
-在较新的 API 级别[Torch 模式](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode)将用于打开或关闭设备立刻正式投入工作单元。
+在更新的 API 级别上，[Torch 模式](https://developer.android.com/reference/android/hardware/camera2/CameraManager.html#setTorchMode)将用于打开或关闭设备的闪光单元。
 
-#### <a name="api-level-22-and-lower"></a>API 级别 22 和更低
+#### <a name="api-level-22-and-lower"></a>API 级别 22 及更高版本
 
-照相机图面上纹理创建以打开或关闭`FlashMode`的照相机单元。 
+创建一个相机表面纹理以打开或关闭相机单元的 `FlashMode`。 
 
 ### <a name="iostabios"></a>[iOS](#tab/ios)
 
-[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/)用于打开和关闭 Torch 和闪存设备模式。
+[AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) 用于打开和关闭设备的 Torch 和 Flash 模式。
 
 ### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp)用于检测要启用或禁用的设备背面的第一个灯泡。
+[Lamp](https://docs.microsoft.com/en-us/uwp/api/windows.devices.lights.lamp) 用于检测设备背面的第一盏灯是否打开或关闭。
 
 -----
 
 ## <a name="api"></a>API
 
-- [闪光灯源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
-- [闪光灯 API 文档](xref:Xamarin.Essentials.Flashlight)
+- [Flashlight 源代码](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Flashlight API 文档](xref:Xamarin.Essentials.Flashlight)

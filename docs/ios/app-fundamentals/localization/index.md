@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115921"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527256"
 ---
 # <a name="localization-in-xamarinios"></a>在 Xamarin.iOS 的本地化
 
@@ -248,7 +248,7 @@ Medium,None: 7/8/2015
 
 iOS 提供了许多功能可帮助构建 RTL 识别应用程序：
 
-- 使用自动布局`leading`和`trailing`控件对齐 （这对应于左侧和右侧表示英语，但是对于 RTL 语言相反） 的属性。
+- 使用自动布局`leading`和`trailing`控件的对齐方式 （这对应于左侧和右侧表示英语，但是对于 RTL 语言相反） 的属性。
   [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md)控件是对布局控件是 RTL 感知特别有用。
 - 使用`TextAlignment = UITextAlignment.Natural`（这将会保留对于大多数语言，但适合 RTL） 的文本对齐方式。
 - `UINavigationController` 自动翻转后退按钮，并反转轻扫方向。

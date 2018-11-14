@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 9954a27b0cc857efa158e8cbc0281737c822f0c7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130949"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526892"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>在 Xamarin.iOS Siri 快捷方式
 
@@ -39,7 +39,7 @@ iOS 12 添加 Siri 快捷方式，从而允许所有类型的应用程序以向 
 若要使用示例应用程序：
 
 - 安装和运行 Soup Chef 示例应用 iOS 12 模拟器上或[设备](#testing-on-device)。
-- 单击 **+** 右上方以创建新订单中的按钮。
+- 单击 **+** 右上方以创建新订单中的按钮。 
 - 选择一种类型的 soup，指定一个数量和选项，然后点击**下订单**。
 - 上**订单历史记录**屏幕上，点击新创建的顺序，以便查看其详细信息。
 - 在订单详细信息屏幕的底部，点击**将添加到 Siri**。
@@ -292,7 +292,7 @@ void HandleUserActivity()
 请注意，具体而言，此项目包括：
 
 - **ApiDefinitions.cs** – 文件由目标 Sharpie 上面生成并添加到此项目。 此文件的**生成操作**设置为**ObjcBindingApiDefinition**。
-- **StructsAndEnums.cs** – 另一个文件由目标 Sharpie genrated 上方，并添加到此项目。 此文件的**生成操作**设置为**ObjcBindingCoreSource**。
+- **StructsAndEnums.cs** – 另一个文件由目标 Sharpie 上面生成并添加到此项目。 此文件的**生成操作**设置为**ObjcBindingCoreSource**。
 - 一个**本机引用**到**libOrderSoupIntentStaticLib.a**，上面生成的静态库。
 
 > [!NOTE]
@@ -336,7 +336,7 @@ void DonateInteraction(Order order)
 `INInteraction`给定 [`Identifier`](https://developer.xamarin.com/api/property/Intents.INInteraction.Identifier/)
 （这会有助于稍后删除不再有效的意向捐赠时） 的顺序的唯一 ID 与相匹配。 然后，交互将捐赠给使用 Siri。
 
-在调用`order.Intent`getter 提取`OrderSoupIntent`，通过设置表示顺序其`Quantity`， `Soup`， `Options`，和图像，和要作为一项建议时用户记录 Siri 短语调用短语将与意图相关联：
+在调用`order.Intent`getter 提取`OrderSoupIntent`，通过设置表示顺序其`Quantity`， `Soup`， `Options`，和图像，并调用短语作为一项建议，用户记录 Siri 将相关联的短语时其目的：
 
 ```csharp
 public OrderSoupIntent Intent

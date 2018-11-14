@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8f84b688998251db52c8c2be71949e1a2e665dc0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6545b1423b809e42293302baf3eba9521848edc1
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103954"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526387"
 ---
 # <a name="alerts-in-xamarinmac"></a>在 Xamarin.Mac 中的警报
 
 _本文介绍如何使用 Xamarin.Mac 应用程序中的警报。它描述如何创建和显示的警报C#代码和响应用户交互。_
 
-使用时C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问相同的警报，使用的开发人员*Objective C*并*Xcode* does。 
+当使用C#和.NET 中的 Xamarin.Mac 应用程序中，您可以访问相同警报使用的开发人员*Objective C*和*Xcode* does。 
 
 警报是一种特殊的 （如错误） 出现严重问题时，将显示的对话框或作为警告 （如正在准备删除文件）。 由于警报是一个对话框，它还需要用户响应前可以关闭它。
 
