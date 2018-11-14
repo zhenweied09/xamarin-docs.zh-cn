@@ -5,12 +5,12 @@ ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 74c2066f673d27cf23af139380b45cd4223b1f30
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37a4fdbdc3f7e1ee309ee9d49c7ad67374035ab4
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675479"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617522"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials：文件系统帮助程序
 
@@ -72,8 +72,8 @@ var mainDir = FileSystem.AppDataDirectory;
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-- **CacheDirectory** - 返回 [LocalCacheFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) 目录。
-- **AppDataDirectory** - 返回备份到云的 [LocalFolder](https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) 目录。
+- **CacheDirectory** - 返回 [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) 目录。
+- **AppDataDirectory** - 返回备份到云的 [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) 目录。
 
 将任何文件添加到 UWP 项目中的根目录中，并将生成操作标记为 Content 以将其与 `OpenAppPackageFileAsync` 一起使用。
 

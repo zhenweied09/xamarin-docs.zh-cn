@@ -7,12 +7,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: 3c7f3558557c5ecf4df961b58c2dd147a6f89691
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d8dd6927daab563b4331e9e87c7b069d84078f66
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111486"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617431"
 ---
 # <a name="get-started-with-azure-functions"></a>开始使用 Azure Functions
 
@@ -24,7 +24,7 @@ _开始构建第一个 Azure 函数交互使用 Xamarin.Forms。_
 
 ## <a name="step-by-step-instructions"></a>分步说明
 
-除了此视频中，可以按照这些说明[生成第一个函数使用 Visual Studio 2017](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio)。
+除了此视频中，可以按照这些说明[生成第一个函数使用 Visual Studio 2017](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)。
 
 ## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -32,7 +32,7 @@ _开始构建第一个 Azure 函数交互使用 Xamarin.Forms。_
 
 ## <a name="step-by-step-instructions"></a>分步说明
 
-除了本视频中，还有[分步教程](https://docs.microsoft.com/en-us/visualstudio/mac/azure-functions-lab)，演示如何创建和调试 Azure Functions 在 Visual Studio for mac。
+除了本视频中，还有[分步教程](https://docs.microsoft.com/visualstudio/mac/azure-functions-lab)，演示如何创建和调试 Azure Functions 在 Visual Studio for mac。
 
 -----
 

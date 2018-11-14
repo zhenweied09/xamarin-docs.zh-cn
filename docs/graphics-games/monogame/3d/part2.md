@@ -15,9 +15,9 @@ ms.locfileid: "50121433"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>MonoGame 中绘制 3D 图形的顶点
 
-_MonoGame 支持使用数组的顶点来定义三维对象在每个点的基础上的呈现方式。用户可以利用顶点数组来创建动态的几何图形、 实现特殊效果，提高通过消除其呈现效率。_
+_MonoGame 支持使用顶点数组来定义3D对象在每个点上的渲染方式。用户可以利用顶点数组创建动态几何体，实现特殊效果，并通过剔除提高渲染效率。_
 
-用户已通读[上呈现模型指南](~/graphics-games/monogame/3d/part1.md)都非常熟悉呈现中 MonoGame 的 3D 模型。 `Model`类是呈现 3D 图形时使用的数据 （如.fbx)，文件中定义和处理静态数据时的有效方法。 某些游戏要求要定义或在运行时动态操作的三维几何图形。 在这些情况下，我们可以使用数组*顶点*来定义和呈现几何图形。 顶点是在 3D 空间的一部分使用来定义 geometry 的排序列表中的点的常规术语。 通常的顶点进行排序并定义一系列的三角形的方式。
+阅读过[模型渲染指南](~/graphics-games/monogame/3d/part1.md)的用户对于在 MonoGame 中渲染3D模型会比较熟悉。 在处理文件（例如 .fbx）中定义的数据时以及处理静态数据时，`Model` 类是渲染3D图形的一种有效方法。 某些游戏需要在运行时动态定义或操纵3D几何体。 在这些情况下，可以使用顶点数组来定义和渲染几何体。 顶点是3D空间中的点的概括性术语，它是用于定义几何体的有序列表的一部分。 通常，顶点的排序方式基于一系列三角形的定义。
 
 为直观显示如何使用顶点创建 3D 对象，请参考以下球体：
 
@@ -233,7 +233,7 @@ protected override void Draw (GameTime gameTime)
 
 此时，应用程序渲染出一个白色平面（在透视模式下）。 接下来要为渲染平面时使用的项目添加纹理。 
 
-为了简单起见，我们将直接向我们的项目，而不是使用 MonoGame 管道工具添加.png。 若要执行此操作，请下载[此.png 文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)到您的计算机。 下载完成后，右键单击**内容**在解决方案面板中，选择文件夹**添加 > 添加文件...** . 如果使用 Android 上，然后此文件夹将位于下面**资产**特定于 Android 的项目文件夹中。 如果在 iOS 上，则此文件夹将在 iOS 项目的根目录中。 导航到的位置， **checkerboard.png**保存和选择此文件。 选择此选项可以将文件复制到的目录。
+为简单起见，将 .png 直接添加到项目中，而不是使用 MonoGame Pipeline 工具。 为此，请将[此 .png  文件](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)下载到计算机上。 下载完成后，右键单击解决方案面板中的**内容**文件夹，然后选择**添加”>“添加文件…**。 如果是在 Android 上操作，则此文件夹位于特定于 Android 的项目中的**资产**文件夹下。 如果在 iOS 上操作，那么此文件夹位于 iOS 项目的根目录中。 导航到保存 **checkerboard.png** 的位置，然后选择此文件。 选择将文件复制到该目录中。
 
 接下来，要添加代码来创建 `Texture2D` 实例。 首先，将 `Texture2D` 作为 `Game1` 的成员添加到 `BasicEffect` 实例下方：
 

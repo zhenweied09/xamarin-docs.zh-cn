@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: f9034799355d01a3ade20a78540d6ecac43d9cc8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526892"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617756"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>在 Xamarin.iOS Siri 快捷方式
 
@@ -695,7 +695,7 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 ### <a name="automatic-provisioning"></a>自动预配
 
-请注意，可以使用[自动预配](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)用于完成许多这些设置直接在 IDE 中的任务。
+请注意，可以使用[自动预配](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/automatic-provisioning)用于完成许多这些设置直接在 IDE 中的任务。
 但是，自动预配不设置应用程序组。 将需要手动配置**Entitlements.plist**具有你想要使用，应用程序组的名称的文件，请访问 Apple 开发人员门户以创建应用程序组，将该应用程序组分配给由自动创建每个应用程序 ID预配，重新生成预配配置文件 （应用、 Intents 扩展、 Intents UI 扩展） 以包括新创建的应用组，然后下载并安装它们。
 
 ## <a name="related-links"></a>相关链接

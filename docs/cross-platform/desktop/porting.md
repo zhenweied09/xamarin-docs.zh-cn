@@ -1,74 +1,74 @@
 ---
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
-title: 桌面应用程序迁移指南
-description: 如何将现有的 Windows 窗体或 WPF 应用中，若要创建跨平台应用，以在 macOS、 iOS、 Android，以及 UWP/Windows 10 上运行的简单说明。
+title: 桌面应用程序的移植指南
+description: 如何分离现有 Windows 窗体或 WPF 应用程序创建跨平台应用，以在 macOS、 iOS、 Android 以及 UWP/Windows 10 上运行的简单说明。
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: b9cfad9c046d4f2ad89506f7172a0418e90478f5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3d3af9c78b7486e7ebfb063a3cb00fabdbd0f5b7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781041"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617535"
 ---
-# <a name="desktop-app-porting-guidance"></a>桌面应用程序迁移指南
+# <a name="desktop-app-porting-guidance"></a>桌面应用程序的移植指南
 
 大多数应用程序代码可以分为以下几个方面之一：
 
-* 用户界面代码 （如。 windows 和按钮）
-* 第三方控件 （如。 图）
-* 业务逻辑 （例如。 验证规则）
+* （例如用户界面代码。 windows 和按钮）
+* 第三方控件 （例如。 图）
+* （例如业务逻辑。 验证规则）
 * 本地数据存储和访问
 * Web 服务和远程数据访问
 
-Windows 窗体和 WPF 应用程序使用 C# （或 Visual Basic.NET） 编写少量令人惊讶的业务逻辑，本地数据访问，并可以在平台之间共享 web 服务代码。
+Windows 窗体和 WPF 编写的应用程序与C#（或 Visual Basic.NET） 极其大量的业务逻辑、 本地数据访问和 web 服务代码可以在平台之间共享。
 
 ## <a name="net-portability-analyzer"></a>.NET 可移植性分析器
 
-Visual Studio 2015 和 2017年支持[.NET 可移植性分析器](https://docs.microsoft.com/en-us/dotnet/articles/standard/portability-analyzer)([下载适用于 Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) 可以检查现有应用程序并将其告知你多少代码都可以移植"按原样"到其他平台. 你可以了解有关它从此[第 9 频道视频](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)。
+Visual Studio 2015 和 2017年的支持[.NET 可移植性分析器](https://docs.microsoft.com/dotnet/articles/standard/portability-analyzer)([下载适用于 Windows](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)) 的可以检查现有应用程序，并告知你多少代码可移植"按原样"到其他平台. 您可以了解有关它的详细信息从此[第 9 频道视频](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)。
 
-此外还有一个命令行工具可以从下载[GitHub 上的可移植性分析器](https://github.com/Microsoft/dotnet-apiport)，用于提供相同的报表。
+此外，还有一个命令行工具可以从下载[GitHub 上的可移植性分析器](https://github.com/Microsoft/dotnet-apiport)，用于提供相同的报告。
 
-## <a name="x-of-my-code-is-portable-what-next"></a>"x %我的代码的可移植。 接下来怎么？"
+## <a name="x-of-my-code-is-portable-what-next"></a>"x %的我的代码是可移植的。 下一步？"
 
-希望分析器显示大型部分代码可移植，但存在肯定要进行每个应用的某些部分，_无法_移动到其他平台。
+希望分析器显示一个较大的代码部分是可移植的但那里肯定会为每个应用程序的某些部分的_不能_移到其他平台。
 
-不同的数据块的代码可能将划分为这些存储桶，更详细地中所述之一：
+不同的代码块将可能的原因之一导致这些存储桶中，下面更详细地介绍了：
 
-* 重新可用的可移植代码
+* 可重用的可移植代码
 * 需要更改的代码
-* 不是可移植并需要重新编写的代码
+* 不是可移植并需要重新编写代码
 
-### <a name="re-useable-portable-code"></a>重新可用的可移植代码
+### <a name="re-useable-portable-code"></a>可重用的可移植代码
 
-在所有平台对可用的 Api 编写的.NET 代码时可以执行跨平台保持不变。 理想情况下，你将能够将所有此代码移到可移植类库、 共享库或.NET 标准库，然后在现有应用程序。
+在所有平台上针对可用的 Api 进行编写的.NET 代码时可以执行跨平台保持不变。 理想情况下，您可以将所有这些代码移到可移植类库、 共享库或.NET 标准库，然后在现有的应用程序中测试它。
 
-然后可以针对其他平台 （例如 Android、 iOS、 macOS） 的应用程序项目添加该共享的库。
+然后可以将该共享的库添加到应用程序项目类型提供的其他平台 （如 Android、 iOS、 macOS）。
 
 ### <a name="code-that-requires-changes"></a>需要更改的代码
 
-一些.NET Api 可能不能在所有平台上。 如果你的代码中存在这些 Api，你将需要重新编写这些部分来使用跨平台的 Api。
+一些.NET Api 可能不能在所有平台上。 如果在代码中存在这些 Api，你将需要重新编写这些部分以使用跨平台 Api。
 
-这样的示例包括使用反射 api，可用于.NET 4.6，但上不可在所有平台之间。
+这样的示例包括使用反射 api，可在.NET 4.6 中，但在所有平台上不可用上。
 
-已重新编写使用可移植的 Api 的代码后，你应能够包共享库中的代码并在现有应用程序对其进行测试。
+已重新编写使用可移植的 Api 的代码后，您应能够共享库中的该代码打包并在现有的应用程序中对其进行测试。
 
-### <a name="code-that-isnt-portable-and-requires-a-re-write"></a>不是可移植并需要重新编写的代码
+### <a name="code-that-isnt-portable-and-requires-a-re-write"></a>不是可移植并需要重新编写代码
 
 不可能是跨平台的代码的示例包括：
 
-- **用户界面**– Windows 窗体或 WPF 屏幕不例如 Android 或 iOS 上的项目中使用。 你的用户界面将需要重写，使用此[控件比较](~/cross-platform/desktop/controls/index.md)作为引用。
+- **用户界面**– Windows 窗体或 WPF 屏幕不能例如 Android 或 iOS 中，在项目中使用。 用户界面将需要重新编写，使用此[控件比较](~/cross-platform/desktop/controls/index.md)作为参考。
 
-- **特定于平台的存储**-依赖于特定于平台的技术 （如本地 SQL Server Express 数据库） 的代码。 你将需要重新编写这使用跨平台的替代项 （如数据库引擎的 SQLite)。
-某些文件系统操作可能还需要进行调整，由于 UWP 具有到 Android 和 iOS （如略有不同的 Api 某些文件系统是区分大小写和其他不）。
+- **特定于平台的存储**-依赖于特定于平台的技术 （如本地 SQL Server Express 数据库） 的代码。 你将需要重新编写此使用 （例如数据库引擎的 SQLite) 的跨平台替代方法。
+某些文件系统操作可能还需要进行调整，因为 UWP 有略有不同的 Api，用于 Android 和 iOS （例如。 某些文件系统是区分大小写和其他人不是）。
 
-- **第三方组件**– 检查是否在应用程序中的第三方组件在其他平台上可用。 一些，如非视觉 NuGet 程序包可能可用但他人 （尤其是可视控件如图表或媒体播放器）
+- **第三方组件**– 检查是否在应用程序中的第三方组件在其他平台上可用。 一些非可视 NuGet 包，如可能可用，但其他人 （尤其是可视控件如图表或媒体播放器）
 
-## <a name="tips-for-making-code-portable"></a>为使代码更可移植的提示
+## <a name="tips-for-making-code-portable"></a>使代码可移植的提示
 
-- **依赖关系注入**– 提供有关每个平台的不同实现和
+- **依赖关系注入**– 提供每个平台的不同实现和
 
-- **分层方法**– 是否 MVVM、 MVC、 MVP 或某些其他模式，可帮助你将可移植代码与特定于平台的代码分开。
+- **分层方法**– 是否 MVVM、 MVC、 MVP、 或某些其他模式，可以帮助您与特定于平台的代码分开的可移植代码。
 
-- **消息传送**– 你可以在代码中使用消息传递，以取消将应用程序的不同部分之间的交互。
+- **消息传送**– 可以在代码中使用消息传递取消耦合应用程序的不同部分之间的交互。

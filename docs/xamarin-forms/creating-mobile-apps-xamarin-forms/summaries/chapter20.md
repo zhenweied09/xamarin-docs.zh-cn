@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a795b382b9bcc727b0b0872d29d30a501cfed0a6
+ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563766"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598894"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>第 20 章的摘要。 异步和文件 I/O
 
@@ -23,7 +23,7 @@ ms.locfileid: "51563766"
 
 用户期望能够响应的图形用户界面。 这意味着程序必须快速处理用户输入事件。 如果这不可能，然后处理必须是要转移到辅助执行线程。
 
-本书中的几个示例程序使用过[ `WebRequest` ](xref:System.Net.WebRequest)类。 此类中[ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object))方法启动工作线程，完成时调用回调函数。 但是，该回调函数在运行工作线程，因此，程序必须调用[ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))方法访问的用户界面。
+本书中的几个示例程序使用过[ `WebRequest` ](xref:System.Net.WebRequest)类。 此类中[ `BeginGetResponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object))方法启动工作线程，完成时调用回调函数。 但是，该回调函数在运行工作线程，因此，程序必须调用[ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))方法访问的用户界面。
 
 > [!NOTE]
 > Xamarin.Forms 程序应使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)而非[ `WebRequest` ](xref:System.Net.WebRequest)用于通过 internet 访问的文件。 `HttpClient` 支持异步操作。

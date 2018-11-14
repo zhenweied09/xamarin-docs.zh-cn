@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 958ca967764b4547d6bdf64452e372d3ea4abd1e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 7d0ccfeaa85e74b15f1d1bf2feae8e4404b36813
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351517"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617340"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -57,7 +57,7 @@ sections:
     - href: ~/xamarin-forms/get-started/index.md
       html: 通过 Xamarin.Forms 启动和运行的相关教程。 请确保正确安装所有项目，并生成首个 Xamarin.Forms 应用。
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/xamarin-forms/get-started/index.md
       title: 入门
     - href: ~/xamarin-forms/xaml/
@@ -87,7 +87,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
       html: 用于文件访问、设备信息，硬件功能等常见任务的跨平台 API。
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
@@ -105,7 +105,7 @@ sections:
     - href: ~/xamarin-forms/internals/
       html: 有关 Xamarin.Forms 内部机制的其他信息，以及有关本地化和辅助功能等功能的帮助。
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/xamarin-forms/internals/
       title: 高级概念和内部机制
 - title: 参考

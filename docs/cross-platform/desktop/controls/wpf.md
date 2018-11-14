@@ -5,12 +5,12 @@ description: 本文档进行比较和对比 WPF 到 Xamarin.Forms。 它讨论�
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d3e772c270f6003d01e3e7b487f69f682fec2d61
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119813"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617587"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 与。Xamarin.Forms： 相似之处和差异
 
@@ -60,7 +60,7 @@ Xamarin.Forms 支持-自定义标记扩展，但实现起来略有不同。 在 
 
 ## <a name="binding-infrastructure"></a>绑定基础结构
 
-结转的核心概念之一是数据绑定基础结构，以连接到.NET 数据属性的视觉对象属性。 这样，如 MVVM 体系结构模式。 基本设计等同-您有一个可绑定的基本类[BindableObject](xref:Xamarin.Forms.BindableObject)，这是的 WPF 中[DependencyObject](https://msdn.microsoft.com/en-us/library/system.windows.dependencyobject(v=vs.110).aspx)类。 此基类用作将参与作为目标数据绑定中的所有对象的根的上级。 然后，派生的类公开[BindableProperty](xref:Xamarin.Forms.BindableProperty)对象充当属性值的后备存储 (它们定义为[DependencyProperty](https://msdn.microsoft.com/library/system.windows.dependencyproperty(v=vs.110).aspx) WPF 中的对象)。
+结转的核心概念之一是数据绑定基础结构，以连接到.NET 数据属性的视觉对象属性。 这样，如 MVVM 体系结构模式。 基本设计等同-您有一个可绑定的基本类[BindableObject](xref:Xamarin.Forms.BindableObject)，这是的 WPF 中[DependencyObject](xref:System.Windows.DependencyObject)类。 此基类用作将参与作为目标数据绑定中的所有对象的根的上级。 然后，派生的类公开[BindableProperty](xref:Xamarin.Forms.BindableProperty)对象充当属性值的后备存储 (它们定义为[DependencyProperty](xref:System.Windows.DependencyProperty) WPF 中的对象)。
 
 ### <a name="defining-bindable-properties"></a>定义可绑定属性
 

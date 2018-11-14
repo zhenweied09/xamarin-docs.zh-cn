@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 6c0de68f974c704b5f43232a1fc98065c90ee4f7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995716"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617600"
 ---
 # <a name="right-to-left-localization"></a>从右到左本地化
 
@@ -72,7 +72,7 @@ this.FlowDirection = Device.FlowDirection;
 
 ![Info.plist 支持语言](rtl-images/ios-locales.png "Info.plist 支持的语言")
 
-有关详细信息，请参阅[在 iOS 中的本地化基础知识](https://docs.microsoft.com/en-gb/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)。
+有关详细信息，请参阅[在 iOS 中的本地化基础知识](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)。
 
 然后可以通过更改为从右向左的区域设置中指定的语言和设备/模拟器上的区域进行测试从右到左本地化**Info.plist**。
 
