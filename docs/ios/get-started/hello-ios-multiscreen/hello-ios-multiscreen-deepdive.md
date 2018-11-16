@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 61a90632849787e28526f83d53247a0491148148
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: e8b3881db99d569008ce1290f81891f1b3b183d7
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235085"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563805"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>深入了解 iOS 多屏显示
 
@@ -125,13 +125,13 @@ iOS 在即将转换前调用 `PrepareForSegue`，然后将情节提要中创建�
 此时，必须手动设置 Segue 的目标视图控制器。 以下代码可获取目标视图控制器的句柄，并将其强制转换为适当的类 - 本例中为 CallHistoryController：
 
 ```csharp
-CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 最后，通过将 `CallHistoryController` 的 `PhoneHistory` 属性设为已拨号电话号码列表，将电话号码列表（模型）从 `ViewController` 传递到 `CallHistoryController`：
 
 ```csharp
-callHistoryContoller.PhoneNumbers = PhoneNumbers;
+callHistoryController.PhoneNumbers = PhoneNumbers;
 ```
 
 下面是使用 Segue 传递数据的完整代码：
@@ -141,10 +141,10 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+    var callHistoryController = segue.DestinationViewController as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-         callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+         callHistoryController.PhoneNumbers = PhoneNumbers;
     }
  }
 ```

@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
-ms.date: 05/11/2018
-ms.openlocfilehash: c923a62916959c74b8cd753d25361afee68e75fe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 21229bc9d56865d6365f8ddfe4dd2046fbabc03d
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130951"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681522"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>适用于 Windows 的远程 iOS 模拟器
 
@@ -32,11 +32,11 @@ ms.locfileid: "50130951"
 
 在模拟器窗口的顶部工具栏中包含了许多有用的按钮：
 
-- **家庭**– 模拟 iOS 设备上的主页按钮
-- **锁**– 锁定模拟器 （轻扫以解锁）
-- **屏幕截图**– 保存模拟器的屏幕截图
-- [**设置**](#settings) – 显示键盘、 位置和其他设置
-- [**其他选项**](#other-options) – 引出了各种模拟器选项，如旋转和抖动手势
+- **家庭**– 模拟 iOS 设备上的主页按钮。
+- **锁**– 锁定模拟器 （轻扫以解锁）。
+- **屏幕截图**– 将保存在模拟器的屏幕截图 (存储在 **Pictures\Xamarin\iOS 模拟器\**)。
+- [**设置**](#settings) – 显示键盘、 位置和其他设置。
+- [**其他选项**](#other-options) – 引出了各种模拟器选项，例如旋转、 抖动手势和 Touch id。
 
     [![](images/maps-app-sml.png "iOS 模拟器映射示例")](images/maps-app.png#lightbox)
 

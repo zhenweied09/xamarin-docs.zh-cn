@@ -6,13 +6,13 @@ ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 03/22/2017
-ms.openlocfilehash: 0dd9832a2e4dd0803f92d6e3923fe178252211f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/15/2018
+ms.openlocfilehash: 86055932edf82f04e11c9ae8dd684a3d77c3d830
+ms.sourcegitcommit: da2260a882dbda02732e21cad5cc9a9dd35e27e7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51709223"
 ---
 # <a name="appearance-api-in-xamarinios"></a>外观 API Xamarin.iOS 中
 
@@ -32,11 +32,10 @@ iOS 允许自定义许多 UIKit 控件可使你想要将应用于你的应用程
 
 外观示例应用程序演示了这三种方法，如以下屏幕截图中所示：
 
- [![](introduction-to-the-appearance-api-images/appearance01.png "外观示例应用程序演示了这三种方法")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![](introduction-to-the-appearance-api-images/appearance01-sml.png "外观示例应用程序演示了这三种方法")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 截至 iOS 8、 外观代理已扩展到 TraitCollections。
  `AppearanceForTraitCollection` 可用于在特定特征集合上设置的默认外观。 你可以阅读更多有关此信息[情节提要简介](~/ios/user-interface/storyboards/unified-storyboards.md)指南。
-
 
 ## <a name="setting-appearance-properties"></a>设置外观属性
 
@@ -72,7 +71,6 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 外观 API 时，可能会很有用[样式的 iOS 应用](~/xamarin-forms/platform/ios/theme.md#uiappearance)Xamarin.Forms 解决方案中。 中的几行`AppDelegate`类可帮助实现特定的配色方案，而无需创建[自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)。
 
-
 ### <a name="custom-themes-and-uiappearance"></a>自定义主题和 UIAppearance
 
 iOS 界面控件，为"主题"使用允许的用户的许多可视特性*UIAppearance* Api 来强制特定控件具有相同的外观的所有实例。 这作为在许多用户界面控件类，不在该控件的单个实例上的外观属性公开。 设置显示属性，静态`Appearance`属性会影响应用程序中该类型的所有控件。
@@ -91,7 +89,7 @@ sg1.TintColor = UIColor.Magenta;
 
 下图说明了，这将设置上的控件名为 sg1 色调。
 
- [![](introduction-to-the-appearance-api-images/image53.png "设置单个控件的浅色")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image53.png "设置单个控件的浅色")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 若要在这种方式中设置多个控件将完全效率较低，因此我们可以改为设置静态`Appearance`类本身的属性。 下面的代码所示：
 
@@ -101,16 +99,14 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 下图现在显示这两个分段的控件设置为洋红色的外观：
 
- [![](introduction-to-the-appearance-api-images/image54.png "设置外观控件浅色")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image54.png "设置外观控件浅色")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` 属性应设置尽早在应用程序生命周期，如在 AppDelegate 中的`FinishedLaunching`事件，或在 ViewController 才会显示受影响的控件。
 
-
 请参阅[外观 API 简介](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md)更多详细信息。
-
 
 ## <a name="related-links"></a>相关链接
 
-- [外观 （示例）](https://developer.xamarin.com/samples/monotouch/IntroToAppearance/)
+- [外观 （示例）](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [UIAppearance 协议参考](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
 - [在 Xamarin.Forms 中的外观](~/xamarin-forms/platform/ios/theme.md#uiappearance)

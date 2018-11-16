@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4cb0a1e598953af0c2bdb5afa6047bfb069c5588
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb9be2140c69578de85128cf7c3a013ad12aa511
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110259"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617561"
 ---
 # <a name="building-abi-specific-apks"></a>构建特定于 ABI 的 APK
 
@@ -174,7 +174,7 @@ rake 任务完成后，将有三个包含文件 `xamarin.helloworld.apk` 的 `bi
 
 
 > [!NOTE]
-> 本指南中概述的构建过程可以在许多不同的构建系统之一中实现。 尽管我们没有预先编写的示例，但 [Powershell](http://technet.microsoft.com/en-ca/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 或 [Fake](http://fsharp.github.io/FAKE/) 应该也适用。
+> 本指南中概述的构建过程可以在许多不同的构建系统之一中实现。 尽管我们没有预先编写的示例，但 [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 或 [Fake](http://fsharp.github.io/FAKE/) 应该也适用。
 
 
 ## <a name="summary"></a>总结

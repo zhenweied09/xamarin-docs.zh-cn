@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527165"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681561"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>适用于 Xamarin.iOS 的故障排除技巧 
 
@@ -46,9 +46,10 @@ ms.locfileid: "51527165"
 
 该成员可能已删除链接器，并因此在运行时程序集中不存在。  有多个解决方案：
 
--  添加[[保留]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute)属性成员。  这将阻止链接器中将其删除。
--  调用时[mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) ，使用 **-nolink**或 **-linksdkonly**选项。 -    **-nolink**禁用所有链接。
--    **-linksdkonly**仅将链接提供 Xamarin.iOS 程序集，如*monotouch.dll*或 xamarin.ios.dll。
+- 添加[ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute)属性成员。  这将阻止链接器中将其删除。
+- 调用时[ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29)，使用 **-nolink**或者 **-linksdkonly**选项：
+  - **-nolink**禁用所有链接。
+  - **-linksdkonly**仅将链接提供 Xamarin.iOS 程序集，如**xamarin.ios.dll**，同时保留用户创建的程序集中的所有类型 (即。 应用程序项目)。
 
 请注意，链接程序集，以便生成可执行文件是较小;因此，禁用链接可能会导致更大的可执行文件不是最好。
 
