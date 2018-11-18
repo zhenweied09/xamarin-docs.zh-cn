@@ -1,6 +1,6 @@
 ---
-title: 企业应用程序开发的简介
-description: 本章提供企业应用程序开发的简介，并引入了 eShopOnContainers 移动应用程序。
+title: 企业应用程序开发介绍
+description: 本章提供企业应用程序开发介绍，并引入了 eShopOnContainers 移动应用程序。
 ms.prod: xamarin
 ms.assetid: cbce0659-fa03-447a-86ec-140438143230
 ms.technology: xamarin-forms
@@ -14,38 +14,38 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35242955"
 ---
-# <a name="introduction-to-enterprise-app-development"></a>企业应用程序开发的简介
+# <a name="introduction-to-enterprise-app-development"></a>企业应用程序开发介绍
 
 不考虑平台，企业应用的开发人员面临一些挑战：
 
--   应用可随时间变化的要求。
--   新的业务机会和挑战。
--   在可以有明显的影响的作用域和应用程序要求的开发过程的持续反馈。
+-   应用的需求可随时间而变化。
+-   新的业务机会以及挑战。
+-   在开发过程中的持续反馈可明显的影响应用程序的机会(scope)以及需求。
 
-使用这些记住，务必生成应用程序可以轻松地修改或随着时间的推移扩展。 有关此类适应性设计可能很困难，因为它需要允许各个部分的应用程序独立开发和测试而不会影响其余应用程序的体系结构。
+考虑到这些挑战，构建可以随着时间推移能够被轻松地修改或扩展的应用程序很重要。 设计出这样的适应性可能很困难，因为它需要一种架构能同时允许应用程序的单个部分能够被独立开发以及隔离测试，而不会影响其余的部分。
 
-许多企业应用程序都足够复杂，需要多个开发人员。 它可以决定如何设计一个应用程序，以便多个开发人员可以有效地在不同的应用程序片段上独立工作，同时确保，部分一起无缝集成到应用程序时一项重大挑战。
+许多企业应用程序都足够复杂，需要多个开发人员。 决定如何设计一个应用程序，以便多个开发人员可以有效地在不同的应用程序片段上独立工作，同时确保这些片段无缝集成到应用程序，可能会是一项重大的挑战。
 
-设计和生成结果中新增功能的应用程序的传统方法被称为*整体*组件与它们之间没有明显的紧密耦合其中的应用程序。 通常情况下，此整体方法会导致应用程序是十分困难和维持，效率不高，因为它可能很难解决 bug，而不会断开其他组件在应用中，并可能很困难以添加新功能或替换现有功能。
+传统的方法设计和构建一款应用称作 *Monolithic* 应用， 这些应用的组件之间紧密耦合并且没有清晰的分层。 通常情况下，这种 monolithic 方法会导致应用程序维持起来十分困难和低效，因为在这种应用上， 可能很难在不破坏其他组件的情况下解决 bug，并且可能难以添加新功能或替换现有功能。
 
-有关这些挑战有效补救措施是应用划分为离散、 松散耦合可以轻松地集成在一起到应用的组件。 这种方法有多个优点：
+应对这些挑战的一种有效补救措施是将应用划分为离散、 松散耦合的组件，这些组件可以轻松地被集成在一起到应用中。 这样的方法有多个优点：
 
--   它允许单个功能开发、 测试、 扩展，并由不同的个人或团队维护。
--   这样还有助于提升重用，并完全分离关注点之间应用的水平功能，例如身份验证和数据访问和垂直的功能，如应用程序特定的业务功能。 这样的依赖关系和要更轻松地管理的应用程序组件之间的交互。
--   它可帮助维护的角色分离通过允许不同的个人或团队，以侧重显示特定任务或功能根据他们的专业技能的部分。 具体而言，它提供的用户界面和应用程序的业务逻辑之间分离开来。
+-   它允许单个功能由不同的个人或团队来开发、 测试、 扩展和维护。
+-   它有助于在应用的功能间提升重用，并清晰分离关注点；例如身份验证和数据访问等横向功能，以及如应用程序特定的业务功能等纵向功能。 这让应用程序组件之间的依赖关系和交互能够更轻松地被管理。
+-   它可帮助维持角色的分离，通过允许不同的个人或团队据他们的专长，以专注于一项特定任务或功能块。 具体而言，它提供了在用户界面和应用程序的业务逻辑之间更清晰的分离。
 
-但是，有许多分区为离散、 松散耦合的组件的应用程序时，必须解决的问题。 这些方法包括：
+然而，在把应用程序划分为离散、 松散耦合的组件时，有许多必须解决的问题。 这些问题包括：
 
--   决定如何提供完全分离的用户界面控件和其逻辑之间的问题。 创建 Xamarin.Forms 企业应用程序时的最重要决策之一是是否要将业务逻辑放在代码隐藏文件中，或是否创建完全分离关注点之间的用户界面控件和它们的逻辑，以使应用程序的详细信息可维护性和可测试。 有关详细信息，请参阅[模型-视图-视图模型](~/xamarin-forms/enterprise-application-patterns/mvvm.md)。
--   确定是否使用依赖关系注入容器。 依赖关系注入容器降低耦合通过提供一个工具用于构造插入，其依赖项的类的实例的对象之间的依赖性和管理基于容器的配置其生存期。 有关详细信息，请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
--   选择平台提供的事件处理之间和松散耦合会很不方便链接对象和类型引用的组件之间的基于消息的通信。 有关详细信息，请参阅简介[通信之间松散耦合组件](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)。
--   决定如何包括如何调用导航窗格中，在页之间导航，并导航逻辑应位于其中。 有关详细信息，请参阅[导航](~/xamarin-forms/enterprise-application-patterns/navigation.md)。
--   确定如何验证用户输入的正确性。 决策必须包括如何验证用户输入，以及如何通知用户有关验证错误。 有关详细信息，请参阅[验证](~/xamarin-forms/enterprise-application-patterns/validation.md)。
--   决定如何执行身份验证，以及如何保护资源与授权。 有关详细信息，请参阅[身份验证和授权](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md)。
--   确定如何访问远程数据从 web 服务 （），包括如何以可靠地检索数据，以及如何缓存数据。 有关详细信息，请参阅[访问远程数据](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)。
+-   决定如何在用户界面控件及其逻辑之间提供清晰的关注点分离。 创建 Xamarin.Forms 企业应用程序时的最重要决策之一是是否要将业务逻辑放在 code-behind 文件中，或是否在用户界面控件及其逻辑之间构建清晰的关注点分离，以使应用程序的更有可维护性和可测试性。 有关详细信息，请参阅[Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)。
+-   决定是否使用依赖关系注入容器。 依赖关系注入容器通过提供一个工具来构造类的实例以及他们的依赖项注入，以减少对象间的依赖耦合，以及基于容器的配置来管理他们的生命周期。 有关详细信息，请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
+-   通信方式的选择，如平台提供的事件机制，以及那些不方便对象链接和类型引用的基于消息的组件间通信。 有关详细信息，请参阅简介[松散耦合组件之间的通信](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)。
+-   决定如何在页面间导航，包括如何发起导航，以及导航逻辑应保留在哪里。 有关详细信息，请参阅[导航](~/xamarin-forms/enterprise-application-patterns/navigation.md)。
+-   确定如何验证用户输入的正确性。 这样的决策必须包括如何验证用户输入，以及如何通知用户有关验证的错误。 有关详细信息，请参阅[验证](~/xamarin-forms/enterprise-application-patterns/validation.md)。
+-   决定如何执行身份验证，以及如何保护带有授权的资源。 有关详细信息，请参阅[身份验证和授权](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md)。
+-   确定如何从 web 服务访问远程数据，包括如何可靠地检索数据，以及如何缓存数据。 有关详细信息，请参阅[访问远程数据](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)。
 -   决定如何测试应用程序。 有关详细信息，请参阅[单元测试](~/xamarin-forms/enterprise-application-patterns/unit-testing.md)。
 
-本指南提供有关这些问题的指导，着重关注的核心模式和用于构建使用 Xamarin.Forms 的跨平台企业应用程序的体系结构。 本指南旨在帮助生成自适应、 可维护性、 和可测试代码，通过解决常见 Xamarin.Forms 企业应用程序开发方案，并隔开的演示文稿、 演示文稿逻辑和通过对支持的实体的问题模型-视图-视图模型 (MVVM) 模式。
+本指南提供有关这些问题的指导，并着重关注使用 Xamarin.Forms 构建一款跨平台企业应用程序的核心模式和架构。 本指南旨在通过针对常见 Xamarin.Forms 企业应用程序开发情景，以及通过 Model-View-ViewModel(MVVM) 模式的支撑提供了外观、 展现逻辑和实体间的分离，帮助生产出可适应的、 可维护的、 和可测试的代码。
 
 ## <a name="sample-application"></a>示例应用程序
 
