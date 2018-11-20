@@ -49,41 +49,41 @@ ms.locfileid: "35242955"
 
 ## <a name="sample-application"></a>示例应用程序
 
-本指南包含的示例应用，eShopOnContainers，即在线商店包含以下功能：
+本指南包含的示例应用，eShopOnContainers，是一款在线商店应用，它包含了以下功能：
 
--   进行身份验证和针对后端服务进行授权。
--   浏览 shirts、 coffee 杯子和其他市场营销的项的目录。
+-   针对后端服务进行身份验证和授权。
+-   浏览衣服、咖啡杯和其他营销项的目录。
 -   筛选该目录。
 -   对目录中的项进行排序。
 -   查看用户的订单历史记录。
 -   配置设置。
 
-### <a name="sample-application-architecture"></a>示例应用程序体系结构
+### <a name="sample-application-architecture"></a>示例应用程序的架构
 
-图 1-1 提供的示例应用程序的体系结构的高级概述。
+图 1-1 提供了示例应用程序架构上的高级概述。
 
-![](introduction-images/architecture.png "eShopOnContainers 高级体系结构")
+![](introduction-images/architecture.png "eShopOnContainers 高级架构")
 
-**图 1-1**: eShopOnContainers 高级体系结构
+**图 1-1**: eShopOnContainers 高级架构
 
 示例应用程序附带有三个客户端应用程序：
 
--   使用 ASP.NET Core 开发的 MVC 应用程序。
--   用角度 2 和 Typescript 开发单页面应用程序 (SPA)。 此方法用于 web 应用程序可避免执行往返与每个操作的服务器。
--   使用 Xamarin.Forms，支持 iOS、 Android 和通用 Windows 平台 (UWP) 开发移动应用程序。
+-   一个使用 ASP.NET Core 开发的 MVC 应用程序。
+-   一个用Angular 2 和 Typescript 开发单页面应用程序 (SPA)。 此方法用于 web 应用程序可避免每个操作向服务器请求和等待。
+-   一个使用 Xamarin.Forms 开发的移动应用程序，它支持 iOS、 Android 和通用 Windows 平台 (UWP) 。
 
-有关 web 应用程序的信息，请参阅[Architecting 和开发现代 Web 应用程序使用 ASP.NET Core 和 Microsoft Azure](http://aka.ms/WebAppEbook)。
+有关 web 应用程序的信息，请参阅[《使用 ASP.NET Core 和 Microsoft Azure 架构现代化 Web 应用程序》](http://aka.ms/WebAppEbook)电子书。
 
 示例应用程序包括以下后端服务：
 
--   标识微服务，使用 ASP.NET Core 标识和 IdentityServer 中。
--   目录微服务，这是数据驱动的创建、 读取、 更新和删除 (CRUD) 服务，使用使用 EntityFramework 核心的 SQL Server 数据库。
--   排序 microservice，这是一个域驱动的服务使用域驱动的设计模式。
--   购物篮微服务使用 Redis 缓存的数据驱动 CRUD 服务。
+-   一个身份识别微服务，它使用了 ASP.NET Core Identity 和 IdentityServer。
+-   一个目录微服务，这是数据驱动的增删查改 (CRUD) 服务，使用了 EntityFramework Core 技术的 SQL Server 数据库。
+-   一个订单微服务，这是一个使用了领域驱动设计模式的服务。
+-   一个购物车微服务，这是使用了 Redis 缓存的数据驱动 CRUD 服务。
 
-这些后端服务作为微服务使用核心的 ASP.NET MVC，实现，并部署为在单个 Docker 主机的唯一容器。 统称为这些后端服务被指 eShopOnContainers 引用应用程序。 客户端应用与通过具象状态传输 (REST) web 界面的后端服务进行通信。 有关微服务和 Docker 的详细信息，请参阅[容器化微服务](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md)。
+这些后端服务利用 ASP.NET Core MVC 实现为微服务，并部署为在单个 Docker 主机上的唯一容器。 这些后端服务共同地作为 eShopOnContainers 的引用程序。 客户端应用通过具象状态传输 (REST) 网络接口与后端服务进行通信。 有关微服务和 Docker 的详细信息，请参阅[容器化微服务](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md)。
 
-有关后端服务的实现的信息，请参阅[.NET 微服务： 为容器化.NET 应用程序的体系结构](https://aka.ms/microservicesebook)。
+有关后端服务的实现的信息，请参阅[《.NET 微服务： 容器化.NET 应用程序架构](https://aka.ms/microservicesebook)电子书。
 
 ### <a name="mobile-app"></a>移动应用程序
 
