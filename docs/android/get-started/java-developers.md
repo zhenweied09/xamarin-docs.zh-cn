@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: eb1d08c5dee6c7944fa42e7446b34a5dbbb45ad3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3fb083457fa1fbf6590eb53eea504257e93ecc6
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120406"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617769"
 ---
 # <a name="xamarin-for-java-developers"></a>面向 Java 开发人员的 Xamarin
 
@@ -96,7 +96,7 @@ C# 为 Xamarin.Android 提供了许多主要功能，Java 开发人员当前尚�
 
 Java 通常将相关类打包到 .jar 文件中。 然而，在 C# 和 .NET 中，预编译代码的可重用位将打包到程序集，通常打包为 .dll 文件。 程序集是部署 C#/.NET 代码的单位，每个程序集通常与 C# 项目相关联。 程序集包含在运行时实时编译的中间代码 (IL)。
 
-有关程序集的详细信息，请参阅 MSDN [程序集和全局程序集缓存](https://msdn.microsoft.com/en-us/library/ms173099.aspx)主题。
+有关程序集的详细信息，请参阅[程序集和全局程序集缓存](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/)主题。
 
 
 ### <a name="packages-vs-namespaces"></a>包和命名空间
@@ -146,7 +146,7 @@ using System.Threading.Tasks;
 
 ### <a name="generics"></a>泛型
 
-Java 和 C# 支持泛型，这是允许你在编译时插入不同类型中的占位符。 但是，泛型在 C# 中的工作方式略有不同。 在 Java 中，[类型擦除](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)仅在编译时提供类型信息，而不是在运行时。 与此相反，.NET 公共语言运行时 (CLR) 对泛型类型提供显式支持，这意味着 C# 有权在运行时访问类型信息。 在日常 Xamarin.Android 开发中，这一区别的重要性通常不明显，但如果使用的是[反射](https://msdn.microsoft.com/en-us/library/ms173183.aspx)，你将依赖此功能在运行时访问类型信息。
+Java 和 C# 支持泛型，这是允许你在编译时插入不同类型中的占位符。 但是，泛型在 C# 中的工作方式略有不同。 在 Java 中，[类型擦除](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)仅在编译时提供类型信息，而不是在运行时。 与此相反，.NET 公共语言运行时 (CLR) 对泛型类型提供显式支持，这意味着 C# 有权在运行时访问类型信息。 在日常 Xamarin.Android 开发中，这一区别的重要性通常不明显，但如果使用的是[反射](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection)，你将依赖此功能在运行时访问类型信息。
 
 在 Xamarin.Android 中，通常会看到泛型方法 `FindViewById` 用于获取对布局控件的引用。 此方法接受一个泛型类型参数，指定要查找的控件类型。 例如:
 
@@ -156,7 +156,7 @@ TextView label = FindViewById<TextView> (Resource.Id.Label);
 
 在此代码示例中，`FindViewById` 将布局中定义的 `TextView` 控件作为标签引用，然后将其作为 `TextView` 类型返回。
 
-有关泛型的详细信息，请参阅 MSDN [泛型](https://msdn.microsoft.com/en-us/library/512aeb7t.aspx)主题。
+有关泛型的更多信息，请参阅[泛型](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index)主题。
 请注意，Xamarin.Android 对泛型 C# 类的支持存在一些限制；有关详细信息，请参阅[限制](~/android/internals/limitations.md)。
 
 
@@ -218,7 +218,7 @@ public class SensorsActivity : Activity, ISensorEventListener
 
 如果想要阻止类在 C# 中进一步子类化，请在类名前添加 `sealed` &ndash; 在 Java 中，在类名前添加 `final`。
 
-有关 C# 类定义的更多信息，请参阅 MSDN [类和结构](https://msdn.microsoft.com/en-us/library/x9afc042.aspx)以及[继承](https://msdn.microsoft.com/en-us/library/x9afc042.aspx)主题。
+有关 C# 类定义的更多信息，请参阅[类](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes)和[继承](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance)主题。
 
 
 <a name="properties" />
@@ -243,7 +243,7 @@ rulerView.DrawingCacheEnabled = true;
 
 对属性的访问权限可以是读/写、只读或只写。 此外，可以使用不同的访问修饰符进行读取和写入。 例如，可以定义一个具有公共读取访问权限和专有写入访问权限的属性。
 
-有关 C# 属性的详细信息，请参阅 MSDN [属性](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx)主题。
+有关 C# 属性的详细信息，请参阅[属性](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties)主题。
 
 
 
@@ -290,7 +290,7 @@ Java 和 C# 都支持 `public`、`private` 和 `protected` 访问修饰符。 �
 
 -   `protected internal` &ndash; 可在定义程序集、定义类和派生类中访问类成员定义（程序集内部和外部的派生类都具有访问权限）。
 
-有关 C# 访问修饰符的详细信息，请参阅 MSDN [访问修饰符](https://msdn.microsoft.com/en-us/library/ms173121.aspx)主题。
+有关 C# 访问修饰符的详细信息，请参阅[访问修饰符](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)主题。
 
 
 
@@ -307,7 +307,7 @@ Java 和 C# 均支持多形性，即能够以相同方式处理相关对象。 �
 
 -   C# 派生类必须使用 `override` 关键字显式指示正在重写虚拟基类方法。
 
-有关 C# 对多形性支持的详细信息，请参阅 MSDN [多形性](https://msdn.microsoft.com/en-us/library/ms173152.aspx)主题。
+有关 C# 对多形性支持的详细信息，请参阅[多形性](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism)主题。
 
 
 <a name="lambdas" />
@@ -338,7 +338,7 @@ button.Click += (sender, args) => {
 
 在此示例中，lambda 表达式代码（在大括号内的代码）递增点击数，并更新 `button` 文本以显示点击数。 此 lambda 表达式在 `button` 对象中注册为点击按钮时要调用的点击事件处理程序。 （下文对事件处理程序进行了更详细的说明。）在此简单示例中，lambda 表达式代码不使用 `sender` 和 `args` 参数，但 lambda 表达式需要这些参数来满足事件注册的方法签名要求。 实质上，C# 编译器将 lambda 表达式转换为一个匿名方法，在发生按钮点击事件时会调用该方法。
 
-有关 C# 和 lambda 表达式的详细信息，请参阅 MSDN [Lambda 表达式](https://msdn.microsoft.com/en-us/library/bb397687.aspx)主题。
+有关 C# 和 lambda 表达式的详细信息，请参阅[Lambda 表达式](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)主题。
 
 
 <a name="events" />
@@ -348,7 +348,7 @@ button.Click += (sender, args) => {
 事件是在对象出现一些有趣的内容时，该对象通知注册订阅者所采用的一种方式。 与 Java 不同，订阅者通常在 Java 中实现 `Listener` 接口，其中包含一个回调方法，而 C# 则通过委托为事件处理提供语言级别支持。 委托类似于面向对象的类型安全函数指针 &ndash; 它封装对象引用和方法令牌。 如果客户端对象想要订阅事件，它将创建委托并将该委托传递给通知对象。
 发生事件时，通知对象将调用委托对象所表示的方法，以通知订阅事件的客户端对象。 在 C# 中，事件处理程序实际上就是通过委托调用的方法。
 
-有关委托的详细信息，请参阅 MSDN [委托](https://msdn.microsoft.com/en-us/library/ms173171.aspx)主题。
+有关委托的详细信息，请参阅[委托](https://docs.microsoft.com/dotnet/csharp/programming-guide/delegates/index)主题。
 
 在 C# 中，事件为多播；也就是说，发生某事件时可以通知多个侦听器。 当你考虑 Java 和 C# 事件注册之间的语法差异时，将观察到这种差异。 在 Java 中，可以调用 `SetXXXListener` 来注册事件通知；在 C# 中，可以使用 `+=` 运算符来注册事件通知，方法是将委托“添加”到事件侦听器列表。
 在 Java 中，可以调用 `SetXXXListener` 以取消注册，而在 C# 中，则使用 `-=`将委托从侦听器列表中“去除”。
@@ -423,7 +423,7 @@ async void downloadAsync(object sender, System.EventArgs e)
 请注意，`downloadAsync` 的方法声明以 `async` 关键字开头，指示它将以异步方式运行，并返回一个任务。 另请注意，对 `DownloadDataTaskAsync` 的调用前面为 `await` 关键字。 应用将事件处理程序执行（从显示 `await` 的点开始）移至后台线程，直到 `DownloadDataTaskAsync` 完成并返回。
 同时，应用的 UI 线程仍可以响应用户输入，并激发其他控件的事件处理程序。 当 `DownloadDataTaskAsync` 完成时（这可能需要几秒钟），执行将恢复，其中 `bytes` 变量设置为调用 `DownloadDataTaskAsync` 的结果，事件处理程序代码的其余部分在调用方的 (UI) 线程上显示下载的映像。
 
-有关 C# 中 `async`/`await` 的说明，请参阅 MSDN [使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/en-us/library/hh191443.aspx)主题。
+有关 C# 中 `async`/`await` 的说明，请参阅[使用 Async 和 Await 的异步编程](https://docs.microsoft.com/dotnet/csharp/async)主题。
 有关 Xamarin 对异步编程功能的支持的详细信息，请参阅[异步支持概述](~/cross-platform/platform/async.md)。
 
 
@@ -435,46 +435,46 @@ Java 中使用的很多语言关键字也在 C# 中使用。 还有大量的 Jav
 
 |Java|C#|描述|
 |---|---|---|
-|`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|用于声明布尔值 true 和 false。|
+|`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|用于声明布尔值 true 和 false。|
 |`extends`|`:`|先于要从中继承的类和接口。|
 |`implements`|`:`|先于要从中继承的类和接口。|
-|`import`|[using](https://msdn.microsoft.com/en-us/library/zhdeatwt.aspx)|从命名空间导入类型，还可用于创建命名空间别名。|
-|`final`|[sealed](https://msdn.microsoft.com/en-us/library/88c54tsw.aspx)|防止类派生；防止方法和属性在派生类中被重写。|
-|`instanceof`|[is](https://msdn.microsoft.com/en-us/library/scekt9xw.aspx)|评估对象与给定类型是否兼容。|
-|`native`|[extern](https://msdn.microsoft.com/en-us/library/e59b22c5.aspx)|声明外部实现的方法。|
-|`package`|[namespace](https://msdn.microsoft.com/en-us/library/z2kcy19k.aspx)|声明一组相关对象的作用域。|
-|`T...`|[params T](https://msdn.microsoft.com/en-us/library/w5zay9db.aspx)|指定采用可变数目的参数的方法参数。|
-|`super`|[base](https://msdn.microsoft.com/en-us/library/hfw7t1ce.aspx)|用于从派生类中访问父类的成员。|
-|`synchronized`|[lock](https://msdn.microsoft.com/en-us/library/c5kehkcz.aspx)|使用锁获取和发布包装代码的关键部分。|
+|`import`|[using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using)|从命名空间导入类型，还可用于创建命名空间别名。|
+|`final`|[sealed](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/sealed)|防止类派生；防止方法和属性在派生类中被重写。|
+|`instanceof`|[is](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/is)|评估对象与给定类型是否兼容。|
+|`native`|[extern](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/extern)|声明外部实现的方法。|
+|`package`|[namespace](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/namespace)|声明一组相关对象的作用域。|
+|`T...`|[params T](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/params)|指定采用可变数目的参数的方法参数。|
+|`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|用于从派生类中访问父类的成员。|
+|`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|使用锁获取和发布包装代码的关键部分。|
 
 
 此外，还有很多关键字是 C# 所特有的，且在 Java 中没有对应项。 Xamarin.Android 代码通常使用下面的 C# 关键字（读取 Xamarin.Android [示例代码](https://developer.xamarin.com/samples/android/all/)时，可使用此表作为参考）:
 
 |C#|描述|
 |---|---|
-|[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|在兼容的引用类型或可以为 null 的类型之间执行转换。|
-|[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|指定方法或 lambda 表达式为异步。|
-|[await](https://msdn.microsoft.com/en-us/library/hh156528.aspx)|挂起方法执行，直到任务完成。|
-|[byte](https://msdn.microsoft.com/en-us/library/5bdb6693.aspx)|无符号的 8 位整数类型。|
-|[delegate](https://msdn.microsoft.com/en-us/library/900fyy8e.aspx)|用于封装方法或匿名方法。|
-|[enum](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)|声明枚举，这是一组命名的常数。|
-|[event](https://msdn.microsoft.com/en-us/library/8627sbea.aspx)|声明发布者类中的一个事件。|
-|[fixed](https://msdn.microsoft.com/en-us/library/f58wzh21.aspx)|防止变量被重定位。|
+|[as](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|在兼容的引用类型或可以为 null 的类型之间执行转换。|
+|[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|指定方法或 lambda 表达式为异步。|
+|[await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await)|挂起方法执行，直到任务完成。|
+|[byte](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/byte)|无符号的 8 位整数类型。|
+|[delegate](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/delegate)|用于封装方法或匿名方法。|
+|[enum](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)|声明枚举，这是一组命名的常数。|
+|[event](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/event)|声明发布者类中的一个事件。|
+|[fixed](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/fixed-statement)|防止变量被重定位。|
 |`get`|定义检索属性值的访问器方法。|
-|[in](https://msdn.microsoft.com/en-us/library/dd469484.aspx)|使一个参数接受泛型接口中派生程度更小的类型。|
-|[object](https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx)|.NET Framework 中 Object 类型的别名。|
-|[out](https://msdn.microsoft.com/en-us/library/t3c3bfhx.aspx)|参数修饰符或泛型类型参数声明。|
-|[override](https://msdn.microsoft.com/en-us/library/ebca9ah3.aspx)|扩展或修改继承成员的实现。|
-|[partial](https://msdn.microsoft.com/en-us/library/6b0scde8.aspx)|声明要拆分为多个文件的定义，或者将一个方法定义从其实现中分离出来。|
-|[readonly](https://msdn.microsoft.com/en-us/library/acdd6hb7.aspx)|声明只能在声明时分配或由类构造函数分配的类成员。|
-|[ref](https://msdn.microsoft.com/en-us/library/14akc2c7.aspx)|通过引用（而非值）来传递参数。|
-|[set](https://msdn.microsoft.com/en-us/library/ms228368.aspx)|定义设置属性值的访问器方法。|
-|[string](https://msdn.microsoft.com/en-us/library/362314fe.aspx)|.NET Framework 中 String 类型的别名。|
-|[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|封装一组相关变量的值类型。|
-|[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|获取对象类型。|
-|[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|声明一个隐式类型局部变量。|
-|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|引用客户端代码想要分配到属性的值。|
-|[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|允许在派生类中重写方法。|
+|[in](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/in-generic-modifier)|使一个参数接受泛型接口中派生程度更小的类型。|
+|[object](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/object)|.NET Framework 中 Object 类型的别名。|
+|[out](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/out)|参数修饰符或泛型类型参数声明。|
+|[override](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/override)|扩展或修改继承成员的实现。|
+|[partial](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/partial-method)|声明要拆分为多个文件的定义，或者将一个方法定义从其实现中分离出来。|
+|[readonly](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/readonly)|声明只能在声明时分配或由类构造函数分配的类成员。|
+|[ref](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/ref)|通过引用（而非值）来传递参数。|
+|[set](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/set)|定义设置属性值的访问器方法。|
+|[string](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/string)|.NET Framework 中 String 类型的别名。|
+|[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|封装一组相关变量的值类型。|
+|[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|获取对象类型。|
+|[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|声明一个隐式类型局部变量。|
+|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|引用客户端代码想要分配到属性的值。|
+|[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|允许在派生类中重写方法。|
 
 
 <a name="interop" />
@@ -493,9 +493,9 @@ Java 中使用的很多语言关键字也在 C# 中使用。 还有大量的 Jav
 
 ## <a name="for-further-reading"></a>其他阅读材料
 
-MSDN [C# 编程指南](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)是开始学习 C# 编程语言的绝佳方式，你可以使用 [C# 参考](https://msdn.microsoft.com/en-us/library/618ayhy6.aspx)查找特定的 C# 语言功能。
+MSDN [C# 编程指南](https://docs.microsoft.com/dotnet/csharp/programming-guide/)是开始学习 C# 编程语言的绝佳方式，你可以使用 [C# 参考](https://docs.microsoft.com/dotnet/csharp/language-reference/)查找特定的 C# 语言功能。
 
-同样，Java 知识要求至少像了解 Java 语言一样了解 Java 类库，C# 实践知识则要求熟悉 .NET framework。 Microsoft 的[移动到面向 Java 开发人员的 C# 和 .NET Framework](https://www.microsoft.com/en-us/download/details.aspx?id=6073) 学习数据包是从 Java 角度了解有关 .NET Framework 详细信息的非常好的途径（同时可以更加深入地了解 C#）。
+同样，Java 知识要求至少像了解 Java 语言一样了解 Java 类库，C# 实践知识则要求熟悉 .NET framework。 Microsoft 的[移动到面向 Java 开发人员的 C# 和 .NET Framework](https://www.microsoft.com/download/details.aspx?id=6073) 学习数据包是从 Java 角度了解有关 .NET Framework 详细信息的非常好的途径（同时可以更加深入地了解 C#）。
 
 当你准备好在 C# 中处理第一个 Xamarin.Android 项目时，[Hello，Android](~/android/get-started/hello-android/index.md) 系列可以帮助你生成第一个 Xamarin.Android 应用程序，并进一步加强你对通过 Xamarin 开发 Android 应用程序的基础知识的了解。
 
@@ -509,6 +509,6 @@ MSDN [C# 编程指南](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)�
 ## <a name="related-links"></a>相关链接
 
 - [Java 集成概述](~/android/platform/java-integration/index.md)
-- [C# 编程指南](https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx)
-- [C# 参考](https://msdn.microsoft.com/en-us/library/618ayhy6.aspx)
-- [移动到面向 Java 开发人员的 C# 和 .NET Framework](https://www.microsoft.com/en-us/download/details.aspx?id=6073)
+- [C# 编程指南](https://docs.microsoft.com/dotnet/csharp/programming-guide/)
+- [C# 参考](https://docs.microsoft.com/dotnet/csharp/language-reference/index)
+- [移动到面向 Java 开发人员的 C# 和 .NET Framework](https://www.microsoft.com/download/details.aspx?id=6073)
