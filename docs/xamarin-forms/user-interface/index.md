@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
-ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104942"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170905"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 用户界面视图
 
@@ -46,13 +46,17 @@ DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预�
 
 `DatePicker`使用户可以选择指定范围内的一个日期。 实现使用日期选取器受特定平台上运行应用程序。
 
-## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[使用 SkiaSharp 图形](graphics/skiasharp/index.md)
+## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[使用 SkiaSharp 处理图形](graphics/skiasharp/index.md)
 
 如何将图形合并到使用 SkiaSharp 的 Xamarin.Forms 应用程序。
 
 ## <a name="imagesimagesmd"></a>[图像](images.md)
 
 可以使用 Xamarin.Forms 跨平台共享映像、 可以专门为每个平台，加载它们或它们可以为显示下载。
+
+## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+
+`ImageButton`显示图像和响应点击或单击，将定向的应用程序来执行特定任务。
 
 ## <a name="layoutslayoutsindexmd"></a>[布局](layouts/index.md)
 
@@ -74,7 +78,7 @@ Xamarin.Forms 提供了显示的数据的滚动行的列表视图控件。 控�
 
 `Slider`允许用户从连续范围选择的数字值。
 
-## <a name="steppersteppermd"></a>[分档器](stepper.md)
+## <a name="steppersteppermd"></a>[步进器](stepper.md)
 
 `Stepper`允许用户从一系列值中选择的数字值。 它包含两个按钮带有负号和加号。 以增量方式将操作的两个按钮更改所选的值。
 

@@ -7,12 +7,12 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 6ad9c099f3a517a4667c0ea8635fbbc3001ae7ca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c0ee238e0fc72aaea2f73e11317fea7b7a63fb7
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130990"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171490"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 干扰和组合
 
@@ -20,7 +20,7 @@ ms.locfileid: "50130990"
 
 ![Perlin 噪音示例](noise-images/NoiseSample.png "Perlin 噪音示例")
 
-正如您所看到的每个像素不是随机的颜色值。 从像素到像素的连续性导致随机形状。 
+正如您所看到的每个像素不是随机的颜色值。 从像素到像素的连续性导致随机形状。
 
 在 Skia Perlin 噪音的支持基于 W3C 规范适用于 CSS 和 SVG。 部分 8.20 [**筛选器效果模块级别 1** ](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) C 代码中包含的基础的 Perlin 噪音算法。
 
@@ -36,7 +36,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 在具有附加重载版本中也存在这两种方法`SKPointI`参数。 部分[**平铺 Perlin 噪音**](#tiling-perlin-noise)讨论这些重载。
 
-这两个`baseFrequency`参数都为正值范围从 0 到 1，在 SkiaSharp 文档中定义，但它们可以设置为较高的值。 值越大，随机图像在水平和垂直方向上变化就越大。 
+这两个`baseFrequency`参数都为正值范围从 0 到 1，在 SkiaSharp 文档中定义，但它们可以设置为较高的值。 值越大，随机图像在水平和垂直方向上变化就越大。
 
 `numOctaves`值是一个整数为 1 或更高版本。 它与算法中的一个迭代因素。 每个其他八度音可发挥作用的效果，以便使用较高八度音值会影响是上一个八度音的一半。
 
@@ -51,7 +51,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.PerlinNoisePage"
              Title="Perlin Noise">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -64,7 +64,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
         <Label x:Name="baseFrequencyXText"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="baseFrequencyYSlider"
                 Maximum="4"
                 Margin="10, 0"
@@ -72,7 +72,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
         <Label x:Name="baseFrequencyYText"
                HorizontalTextAlignment="Center" />
-        
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      Margin="10">
@@ -81,7 +81,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
                                   Path=Value,
                                   StringFormat='Number of Octaves: {0:F0}'}"
                    VerticalOptions="Center" />
-            
+
             <Stepper x:Name="octavesStepper"
                      Minimum="1"
                      ValueChanged="OnStepperValueChanged" />
@@ -141,7 +141,7 @@ public partial class PerlinNoisePage : ContentPage
 
         using (SKPaint paint = new SKPaint())
         {
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseFractalNoise(baseFreqX,
                                                        baseFreqY,
                                                        numOctaves,
@@ -150,7 +150,7 @@ public partial class PerlinNoisePage : ContentPage
             SKRect rect = new SKRect(0, 0, info.Width, info.Height / 2);
             canvas.DrawRect(rect, paint);
 
-            paint.Shader = 
+            paint.Shader =
                 SKShader.CreatePerlinNoiseTurbulence(baseFreqX,
                                                      baseFreqY,
                                                      numOctaves,
@@ -193,7 +193,7 @@ public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float 
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.TiledPerlinNoisePage"
              Title="Tiled Perlin Noise">
-             
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -257,7 +257,7 @@ public partial class TiledPerlinNoisePage : ContentPage
                 using (SKPaint paint = new SKPaint())
                 {
                     paint.Shader = SKShader.CreatePerlinNoiseTurbulence(
-                                        0.02f, 0.02f, 1, seed, 
+                                        0.02f, 0.02f, 1, seed,
                                         new SKPointI(TILE_SIZE, TILE_SIZE));
 
                     bitmapCanvas.DrawRect(tileRect, paint);
@@ -267,13 +267,13 @@ public partial class TiledPerlinNoisePage : ContentPage
             // Draw tiled bitmap shader on canvas
             using (SKPaint paint = new SKPaint())
             {
-                paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                                     SKShaderTileMode.Repeat, 
+                paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                     SKShaderTileMode.Repeat,
                                                      SKShaderTileMode.Repeat);
                 canvas.DrawRect(info.Rect, paint);
             }
 
-            // Draw rectangle showing tile 
+            // Draw rectangle showing tile
             using (SKPaint paint = new SKPaint())
             {
                 paint.Style = SKPaintStyle.Stroke;
@@ -290,22 +290,22 @@ public partial class TiledPerlinNoisePage : ContentPage
 位图创建，另一个后`SKPaint`对象用于通过调用创建平铺的位图模式`SKShader.CreateBitmap`。 请注意，两个参数为`SKShaderTileMode.Repeat`:
 
 ```csharp
-paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                     SKShaderTileMode.Repeat, 
+paint.Shader = SKShader.CreateBitmap(bitmap,
+                                     SKShaderTileMode.Repeat,
                                      SKShaderTileMode.Repeat);
 ```
 
-此着色器用于涵盖画布。 最后，另一个`SKPaint`对象用于绘制矩形显示原始位图的大小。 
+此着色器用于涵盖画布。 最后，另一个`SKPaint`对象用于绘制矩形显示原始位图的大小。
 
-仅`seed`参数是可选择从用户界面。 如果相同`seed`在三个平台中使用模式，它们会出现相同的模式。 不同`seed`值会导致不同的模式：
+仅`seed`参数是可选择从用户界面。 如果相同`seed`每个平台上使用模式，它们将显示相同的模式。 不同`seed`值会导致不同的模式：
 
 [![平铺 Perlin 噪音](noise-images/TiledPerlinNoise.png "平铺 Perlin 噪音")](noise-images/TiledPerlinNoise-Large.png#lightbox)
 
-在左上角的 200 像素正方形模式无缝地排列到其他磁贴中。 
+在左上角的 200 像素正方形模式无缝地排列到其他磁贴中。
 
 ## <a name="combining-multiple-shaders"></a>组合多个着色器
 
-`SKShader`类包括[ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*)使用指定纯色创建着色器的方法。 此着色器不本身非常有用，因为只需将该颜色设置为`Color`的属性`SKPaint`对象，并将`Shader`属性设置为 null。 
+`SKShader`类包括[ `CreateColor` ](xref:SkiaSharp.SKShader.CreateColor*)使用指定纯色创建着色器的方法。 此着色器不本身非常有用，因为只需将该颜色设置为`Color`的属性`SKPaint`对象，并将`Shader`属性设置为 null。
 
 这`CreateColor`方法将会在另一种方法很有用的`SKShader`定义。 此方法是[ `CreateCompose` ](xref:SkiaSharp.SKShader.CreateCompose(SkiaSharp.SKShader,SkiaSharp.SKShader))，其中合并了两个着色器。 下面是语法：
 

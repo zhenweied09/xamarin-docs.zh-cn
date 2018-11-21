@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 12a97989ac675d2504a2c626da73ebccb596b99b
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563558"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170931"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 滑块
 
@@ -109,7 +109,7 @@ public class BasicSliderCodePage : ContentPage
 
 [![基本滑块代码](slider-images/BasicSliderCode.png "基本滑块代码")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-第二个`Label`直到显示"（未初始化）"的文本`Slider`操作，这将导致第一个`ValueChanged`事件被触发。 请注意显示的小数位数的数字是不同的三个平台。 这些差异的平台的实现与相关`Slider`和更高版本中的部分中的这篇文章讨论[平台实现差异](#implementations)。
+第二个`Label`直到显示"（未初始化）"的文本`Slider`操作，这将导致第一个`ValueChanged`事件被触发。 请注意，为每个平台不同的显示的小数位数。 这些差异的平台的实现与相关`Slider`和更高版本中的部分中的这篇文章讨论[平台实现差异](#implementations)。
 
 ### <a name="creating-a-slider-in-xaml"></a>在 XAML 中创建一个滑块
 

@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 18/10/2018
-ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 13/11/2018
+ms.openlocfilehash: b14cb6fd96bb5da1ba2f8612daa51b2db4242630
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107518"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172335"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 视图
 
@@ -43,7 +43,7 @@ _Xamarin.Forms 视图是跨平台移动用户界面的构建基块。_
 | [`BoxView`](xref:Xamarin.Forms.BoxView) 显示实心矩形通过着色[ `Color` ](xref:Xamarin.Forms.BoxView.Color)属性。 `BoxView` 有 40 x 40 个的默认大小请求。 其他大小，将分配[ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)并[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性。<br /><br />[API 文档](xref:Xamarin.Forms.BoxView) / [指南](~/xamarin-forms/user-interface/boxview.md) / [示例 1](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView)， [2](https://developer.xamarin.com/samples/xamarin-forms/BoxView/TextDecoration)， [3](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ColorListBox)， [4](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife)， [5](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock)，和[6](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock) | [![字数示例](views-images/BoxView.png "字数示例")](views-images/BoxView-Large.png#lightbox "字数示例")<br />[此页的 C# 代码](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) / [XAML 页](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
 |     |     |
 
-### <a name="webview"></a>Web 视图
+### <a name="webview"></a>WebView
 
 |     |     |
 | --- | --- |
@@ -71,6 +71,13 @@ _Xamarin.Forms 视图是跨平台移动用户界面的构建基块。_
 |     |     |
 | --- | --- |
 | [`Button`](xref:Xamarin.Forms.Button) 是一个矩形对象，显示的文本，并会激发[ `Clicked` ](xref:Xamarin.Forms.Button.Clicked)事件已按下时。<br /><br />[API 文档](xref:Xamarin.Forms.Button) / [指南](~/xamarin-forms/user-interface/button.md) / [示例](https://developer.xamarin.com/samples/UserInterface/ButtonDemos/) | [![按钮的示例](views-images/Button.png "按钮示例")](views-images/Button-Large.png#lightbox "按钮示例")<br /> [此页的 C# 代码](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [XAML 页面](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml)与[代码隐藏](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="imagebutton"></a>ImageButton
+
+|     |     |
+| --- | --- |
+| `ImageButton` 将矩形对象图中，该显示，并且这会触发`Clicked`事件已按下时。<br /><br /> [指南](~/xamarin-forms/user-interface/imagebutton.md) / [示例](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/) | [![ImageButton 示例](views-images/ImageButton.png "ImageButton 示例")](views-images/ImageButton-Large.png#lightbox "ImageButton 示例")<br /> [此页的 C# 代码](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [XAML 页面](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml)与[代码隐藏](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar

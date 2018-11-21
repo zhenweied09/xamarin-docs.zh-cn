@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e0ad67db0671996e594f9c5d48b329a5d676fc1d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563428"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171763"
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
 
@@ -327,7 +327,7 @@ XamlSamples 中包含的项目是一个名为类`NamedColor`。 每个`NamedColo
 </ContentPage>
 ```
 
-请注意，使用`OnPlatform`来定义的大小`BoxView`和的高度`ListView`行。 尽管所有三个平台的值是相同的标记可能容易就可以调整为其他值，以微调显示。
+请注意，使用`OnPlatform`来定义的大小`BoxView`和的高度`ListView`行。 尽管所有平台的值是相同的标记可能容易就可以调整为其他值，以微调显示。
 
 ## <a name="binding-value-converters"></a>绑定值转换器
 

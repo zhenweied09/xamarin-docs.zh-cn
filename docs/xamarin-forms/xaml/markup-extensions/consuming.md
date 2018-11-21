@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563948"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171711"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>使用 XAML 标记扩展
 
@@ -137,7 +137,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </Label>
 ```
 
-下面是在所有三个平台上运行的示例：
+下面是示例运行：
 
 [![x： 静态演示](consuming-images/staticdemo-small.png "x： 静态演示")](consuming-images/staticdemo-large.png#lightbox "x： 静态演示")
 
@@ -181,7 +181,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-这两`x:Reference`表达式使用的缩写的形式`ReferenceExtension`类名称，并消除`Name=`表达式的一部分。 在第一个示例中，`x:Reference`标记扩展嵌入在`Binding`标记扩展。 请注意，`Source`和`StringFormat`设置用逗号分隔。 下面是在所有三个平台上运行的程序：
+这两`x:Reference`表达式使用的缩写的形式`ReferenceExtension`类名称，并消除`Name=`表达式的一部分。 在第一个示例中，`x:Reference`标记扩展嵌入在`Binding`标记扩展。 请注意，`Source`和`StringFormat`设置用逗号分隔。 下面是运行的程序：
 
 [![x： 引用演示](consuming-images/referencedemo-small.png "x： 引用演示")](consuming-images/referencedemo-large.png#lightbox "x： 引用演示")
 
@@ -449,7 +449,7 @@ public partial class TypeDemoPage : ContentPage
 
 然后你将发现之一`Label`元素，所需的所有属性设置的隐式`Style`除`FontFamily`，想要将默认值。 您可以定义另一个`Style`为此目的，但更简单的方法是只需设置`FontFamily`属性的特定`Label`到`x:Null`，如下所示在中心`Label`。
 
-下面是三个平台上运行的程序：
+下面是运行的程序：
 
 [![x: Null 演示](consuming-images/nulldemo-small.png "x: Null 演示")](consuming-images/nulldemo-large.png#lightbox "x: Null 演示")
 
@@ -493,7 +493,7 @@ public partial class TypeDemoPage : ContentPage
 
 在此示例中，所有这三个`OnPlatform`表达式使用的缩写的形式`OnPlatformExtension`类名。 这三个`OnPlatform`标记扩展集[ `Color` ](xref:Xamarin.Forms.BoxView.Color)， [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)，并且[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性[`BoxView` ](xref:Xamarin.Forms.BoxView)为 iOS、 Android 和 UWP 上不同的值。 标记扩展还为未指定，同时消除了在平台上的这些属性提供默认值`Default=`表达式的一部分。 请注意，由逗号分隔的标记扩展属性的设置。
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![OnPlatform 演示](consuming-images/onplatformdemo-small.png "OnPlatform 演示")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform 演示")
 
@@ -531,7 +531,7 @@ public partial class TypeDemoPage : ContentPage
 
 在此示例中，所有这三个`OnIdiom`表达式使用的缩写的形式`OnIdiomExtension`类名。 这三个`OnIdiom`标记扩展集[ `Color` ](xref:Xamarin.Forms.BoxView.Color)， [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest)，并且[ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest)属性[`BoxView` ](xref:Xamarin.Forms.BoxView)为手机、 平板电脑和桌面的惯用语言在不同的值。 标记扩展还提供默认值为这些属性在未指定，同时消除习惯用语`Default=`表达式的一部分。 请注意，由逗号分隔的标记扩展属性的设置。
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![OnIdiom 演示](consuming-images/onidiomdemo-small.png "OnIdiom 演示")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom 演示")
 

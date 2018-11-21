@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 84870de28ffd30b2d29fb5d8fbea815e1fd0d9c4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996433"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171061"
 ---
 # <a name="custom-video-transport-controls"></a>自定义视频传输控件
 
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
 
 实现**播放**，**暂停**，并**停止**函数还不足以支持传输控件。 通常**播放**并**暂停**使用同一按钮来更改其外观来指示视频播放或暂停当前是实现命令。 此外，仅当尚未加载视频时，甚至不应启用按钮。
 
-这些要求意味着，视频播放器需要提供当前状态，指示如果它是播放或暂停，或者如果尚未准备好播放视频。 (三个平台还支持属性，指示是否视频可以暂停，也可以移动到新位置，但这些属性是适用于流式处理视频而不是视频文件，因此它们不支持在`VideoPlayer`此处所述。)
+这些要求意味着，视频播放器需要提供当前状态，指示如果它是播放或暂停，或者如果尚未准备好播放视频。 (每个平台还支持属性用来指示是否视频可以暂停，也可以移动到新位置，但这些属性是适用于流式处理视频而不是视频文件，因此它们不支持在`VideoPlayer`此处所述。)
 
 **VideoPlayerDemos**项目包括`VideoStatus`包含三个成员的枚举：
 
@@ -532,7 +532,7 @@ namespace FormsVideoLibrary.UWP
 
 - 0x25B6 （黑色右指三角形） 或&#x25B6;有关**播放**
 
-这支持的所有三个平台，只不过它是普通的黑色三角形不像的三维效果**暂停**并**停止**。 一种可能性是遵循 0x25B6 码位，变体的代码：
+这支持的每个平台，只不过它是普通的黑色三角形不像的三维效果**暂停**并**停止**。 一种可能性是遵循 0x25B6 码位，变体的代码：
 
 - 0x25B6 跟 0xFE0F （变量 16） 或&#x25B6;&#xFE0F;有关**播放**
 

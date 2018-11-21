@@ -6,13 +6,13 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: afecf5c173e919bd20015aadd8a874f492dc4e34
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: 12fd9e477e24058d36128e52b7b5dd9074598be8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527074"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171789"
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台特定信息
 
@@ -783,7 +783,34 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 在 iOS 上，以下特定于平台的功能提供适用于 Xamarin.Forms [ `Application` ](xref:Xamarin.Forms.Application)类：
 
+- 启用控件的布局和呈现要在主线程上执行更新。 有关详细信息，请参阅[主线程上处理控件更新](#update-on-main-thread)。
 - 启用[ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)中滚动视图来捕获和共享平移手势与滚动视图。 有关详细信息，请参阅[启用同时进行的平移手势识别](#simultaneous-pan-gesture)。
+
+<a name="update-on-main-thread" />
+
+### <a name="handling-control-updates-on-the-main-thread"></a>在主线程上处理控件更新
+
+此特定于平台的使控件的布局和呈现更新而不是在后台线程上执行，在主线程上执行。 它应很少需要但在某些情况下可能会阻止崩溃。 通过设置其已在使用的 XAML`Application.HandleControlUpdatesOnMainThread`可绑定属性设置为`true`:
+
+```xaml
+<Application ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Application.HandleControlUpdatesOnMainThread="true">
+    ...
+</Application>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+Xamarin.Forms.Application.Current.On<iOS>().SetHandleControlUpdatesOnMainThread(true);
+```
+
+`Application.On<iOS>`方法指定仅将在 iOS 上运行此特定于平台的。 `Application.SetHandleControlUpdatesOnMainThread`方法，请在[ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)命名空间，用于控制是否在主线程，而不是正在执行的后台线程上执行控件的布局和呈现更新。 此外，`Application.GetHandleControlUpdatesOnMainThread`方法可以用于返回是否控制布局和呈现更新在主线程上执行。
 
 <a name="simultaneous-pan-gesture" />
 

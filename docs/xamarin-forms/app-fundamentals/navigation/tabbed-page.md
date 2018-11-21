@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996290"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171373"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 选项卡式的页面
 
@@ -32,13 +32,13 @@ _Xamarin.Forms TabbedPage 包含一系列选项卡和较大的详细信息区域
 
 - 在 iOS 上，选项卡的列表显示在屏幕的底部，在详细信息区域上方。 每个选项卡还包含图标图像应是 30 倍的正常解析透明度具有 30 PNG、 高分辨率的 60 x 60 和 90 x 90 适用于 iPhone 6 Plus 解决方法。 如果有五个选项卡*详细*选项卡将出现，这可用于访问其他选项卡。 有关加载 Xamarin.Forms 应用程序中的映像的详细信息，请参阅[处理图像](~/xamarin-forms/user-interface/images.md)。 有关图标要求的详细信息，请参阅[创建选项卡式应用程序](~/ios/user-interface/controls/creating-tabbed-applications.md)。
 
-    > [!NOTE]
+  > [!NOTE]
   > 请注意， `TabbedRenderer` for iOS 的可重写`GetIcon`方法，可以用来从指定的数据源加载选项卡图标。 此重写就可以使用 SVG 图像以图标形式在`TabbedPage`。 此外，可以提供选定和未选定版本的图标。
 
 - 在 Android 上，在屏幕顶部显示默认情况下的选项卡的列表和详细信息区域低于。 但是，选项卡列表可以移动到具有平台特定屏幕的底部。 有关详细信息，请参阅[设置 TabbedPage 工具栏位置和颜色](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar)。
 
-    > [!NOTE]
-  > 请注意，当在 Android 上使用 AppCompat，每个选项卡还将显示一个图标。 此外， `TabbedPageRenderer` for Android AppCompat 的可重写`SetTabIcon`方法，可以用来加载的自定义选项卡图标`Drawable`。 此重写就可以使用 SVG 图像以图标形式在`TabbedPage`。
+  > [!NOTE]
+  > 请注意，当在 Android 上使用 AppCompat，每个选项卡还将显示一个图标。 此外， `TabbedPageRenderer` for Android AppCompat 的可重写`GetIconDrawable`方法，可以用来加载的自定义选项卡图标`Drawable`。 此重写就可以使用 SVG 图像以图标形式在`TabbedPage`，并适用于两者顶部和底部选项卡栏。 或者，可重写`SetTabIcon`方法可用于加载的自定义选项卡图标`Drawable`顶部的选项卡栏。
 
 - 在 Windows 平板电脑外形规格，选项卡始终不可见，并且用户需要对向轻扫取 （或右键单击，如果它们的附加是鼠标） 若要查看中的选项卡`TabbedPage`（如下所示）。
 
@@ -76,7 +76,7 @@ _Xamarin.Forms TabbedPage 包含一系列选项卡和较大的详细信息区域
 </TabbedPage>
 ```
 
-下面的代码示例显示等效[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) C# 创建的：
+下面的代码示例显示等效[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)中创建C#:
 
 ```csharp
 public class MainPageCS : TabbedPage
@@ -174,7 +174,7 @@ public TabbedPageDemoPage ()
 }
 ```
 
-下面的代码示例显示等效[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) C# 创建的：
+下面的代码示例显示等效[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)中创建C#:
 
 ```csharp
 public class TabbedPageDemoPageCS : TabbedPage

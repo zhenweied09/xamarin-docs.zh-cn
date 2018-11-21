@@ -7,16 +7,16 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: dfe2d81673804e2f77694a794ef82931eb88357d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: aa5f42596b6f92285b8b8bed40452928e3c494b1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563909"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170918"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>第 1 章的摘要。 Xamarin.Forms 如何组合？
 
-> [!NOTE] 
+> [!NOTE]
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 在编程中最令人不快的作业中的一个移植的代码库从一个平台，尤其是如果该平台涉及不同的编程语言。 倾向于时移植代码对其进行重构，但如果这两个平台必须同时维护，然后两个代码库之间的差异会使将来维护更加困难。
@@ -25,7 +25,7 @@ ms.locfileid: "51563909"
 
 面向移动平台时，此问题很常见。 目前，存在两个主要的移动平台、 Iphone 和 Ipad 运行 iOS 操作系统，并在各种手机和平板电脑运行 Android 操作系统的 Apple 系列。 另一个重要的一个平台是 Microsoft 的通用 Windows 平台 (UWP)，它允许单个程序以面向 Windows 10 和 Windows 10 移动版。
 
-想要针对这些三个平台的软件供应商必须处理不同的用户界面模式、 三个不同的开发环境、 三个不同的编程接口，并&mdash;可能是最滑雪&mdash;三个不同的编程语言： OBJECTIVE-C 的适用于 iPhone 和 iPad，适用于 Android、 Java 和 C# 的 Windows。
+想要面向这些平台的软件供应商必须处理不同的用户界面模式、 三个不同的开发环境、 三个不同的编程接口，并&mdash;可能是最滑雪&mdash;三个不同的编程语言： OBJECTIVE-C 的适用于 iPhone 和 iPad，适用于 Android、 Java 和C#为 Windows。
 
 ## <a name="the-c-and-net-solution"></a>C# 和.NET 解决方案
 
@@ -35,7 +35,7 @@ ms.locfileid: "51563909"
 
 开发人员可以使用 Xamarin 平台在 C# 中编写的应用程序，该目标 Mac、 iOS 或 Android。 但当目标多个平台，可以很有意义分享一些在目标平台的代码。 这涉及到将分成依赖于平台的代码 （通常涉及用户界面），并独立于平台的代码，通常需要只是基本的.NET framework 的程序。 此独立于平台的代码也可以驻留在可移植类库 (PCL) 或共享的项目，通常称为共享资产项目或 SAP。
 
-> [!NOTE] 
+> [!NOTE]
 > .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
 
 ## <a name="introducing-xamarinforms"></a>Xamarin.Forms 简介
@@ -48,18 +48,18 @@ ms.locfileid: "51563909"
 - Windows 8.1 的 Windows 运行时 API
 - Windows Phone 8.1 的 Windows 运行时 API
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 此外，还有支持预览版[Mac](~/xamarin-forms/platform/mac.md)， [WPF](~/xamarin-forms/platform/wpf.md)， [GTK #](~/xamarin-forms/platform/gtk.md)，以及[Tizen](/xamarin-forms/platform/tizen.md)平台。
 
-一个库或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包括调入此共享代码的小型应用程序存根。 
+一个库或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包括调入此共享代码的小型应用程序存根。
 
 Xamarin.Forms Api 将映射到每个平台上的本机控件，以便每个平台维护其特征的外观和感觉：
 
 [![平台共享的视觉对象的三个屏幕截图](images/ch01fg03-small.png "每个平台上的 Xamarin.Forms 控件")](images/ch01fg03-large.png#lightbox "每个平台上的 Xamarin.Forms 控件")
 
-从左到右的屏幕截图显示在 iPhone、 Android 手机和 Windows 10 移动电话。 
+从左到右的屏幕截图显示在 iPhone、 Android 手机和 Windows 10 移动电话。
 
-> [!NOTE] 
+> [!NOTE]
 > Xamarin.Forms 不再支持 Windows 10 移动版。
 
 每个屏幕上的页面包含 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label)用于显示文本， [ `Button` ](xref:Xamarin.Forms.Button)适用于启动操作， [ `Switch` ](xref:Xamarin.Forms.Switch)为选择开/关值和一个[ `Slider` ](xref:Xamarin.Forms.Slider)用于指定连续范围内的值。 所有这四个视图都是的子级[ `StackLayout` ](xref:Xamarin.Forms.StackLayout)上[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)。

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 731eb8cbcf062556e4c37b444376825527f662df
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564013"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171555"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
@@ -31,7 +31,7 @@ Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms 版�
 
 ## <a name="common-usage-scenarios"></a>常见使用方案
 
-**[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 示例程序包含多个页面的一些常见使用该份`FlexLayout`，当你尝试使用其属性。
+**[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 示例程序包含多个演示的一些常见用途的页面`FlexLayout`，当你尝试使用其属性。
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>使用适用于简单堆栈 FlexLayout
 
@@ -187,7 +187,7 @@ public partial class PhotoWrappingPage : ContentPage
 }
 ```
 
-下面是渐进式滚动从顶部到底部的三个平台上运行的程序：
+下面是该程序正在运行，以渐进方式滚动从上到下：
 
 [![照片包装页](flex-layout-images/PhotoWrapping.png "照片包装页")](flex-layout-images/PhotoWrapping-Large.png#lightbox)
 
@@ -242,7 +242,7 @@ public partial class PhotoWrappingPage : ContentPage
 </ContentPage>
 ```
 
-此处它三个平台上运行：
+运行此处：
 
 [![Holy Grail 布局页面](flex-layout-images/HolyGrailLayout.png "Holy Grail 布局页")](flex-layout-images/HolyGrailLayout-Large.png#lightbox)
 
@@ -384,7 +384,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ## <a name="the-bindable-properties-in-detail"></a>详细信息中的可绑定属性
 
-现在，已了解的一些常见的应用程序`FlexLayout`的属性`FlexLayout`可以更详细地探讨了。 
+现在，已了解的一些常见的应用程序`FlexLayout`的属性`FlexLayout`可以更详细地探讨了。
 `FlexLayout` 定义设置的六个可绑定属性`FlexLayout`本身，在代码或 XAML 控件方向和对齐方式。 (这些属性之一[ `Position` ](xref:Xamarin.Forms.FlexLayout.Position)，本文不介绍。)
 
 您可以尝试使用五个剩余可绑定属性使用 **试验** 页 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 示例。 此页面允许您添加或删除从子级`FlexLayout`并设置五个可绑定属性的组合。 所有子级`FlexLayout`都`Label`视图的各种颜色和大小，使用`Text`属性设置为对应的数字为在其位置`Children`集合。
@@ -532,7 +532,7 @@ FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
 
 ### <a name="the-basis-property"></a>基础属性
 
-[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty)附加可绑定属性指示的一个子级的已分配的空间量`FlexLayout`主要轴上。 按大小指定`Basis`属性为父该主轴大小`FlexLayout`。 因此，`Basis`子级排列的行或高度时在列中排列子级时指示的子级的宽度。
+[ `Basis` ](xref:Xamarin.Forms.FlexLayout.BasisProperty)附加可绑定属性指示的一个子级的已分配的空间量`FlexLayout`主要轴上。 指定的大小`Basis`属性为父该主轴大小`FlexLayout`。 因此，`Basis`子级排列的行或高度时在列中排列子级时指示的子级的宽度。
 
 `Basis`属性属于类型[ `FlexBasis` ](xref:Xamarin.Forms.FlexBasis)，一种结构。 可以指定的大小，在任一设备无关的单位或大小的百分比`FlexLayout`。 默认值`Basis`属性是静态属性`FlexBasis.Auto`，这意味着子的请求使用宽度或高度。
 
@@ -735,7 +735,7 @@ button {
 
 多个`FlexLayout`此处引用附加可绑定属性。 在`label.empty`选择器中，你将看到`flex-grow`属性设置为空的样式`Label`若要提供上述一些空白空间`Button`。 `image`选择器将包含`order`属性和一个`align-self`属性，这两个对应于`FlexLayout`附加可绑定属性。
 
-您已了解你可以直接在上设置属性`FlexLayout`您可以设置附加可绑定属性的子级和`FlexLayout`。 或者，可以设置这些属性间接使用传统的基于 XAML 的样式或 CSS 样式。 重要的是了解以及了解这些属性。 这些属性是使`FlexLayout`真正灵活。 
+您已了解你可以直接在上设置属性`FlexLayout`您可以设置附加可绑定属性的子级和`FlexLayout`。 或者，可以设置这些属性间接使用传统的基于 XAML 的样式或 CSS 样式。 重要的是了解以及了解这些属性。 这些属性是使`FlexLayout`真正灵活。
 
 ## <a name="flexlayout-with-xamarinuniversity"></a>使用 Xamarin.University FlexLayout
 

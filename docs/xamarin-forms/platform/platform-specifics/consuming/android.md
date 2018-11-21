@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527269"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171282"
 ---
 # <a name="android-platform-specifics"></a>Android 平台特定信息
 
@@ -143,6 +143,7 @@ _legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
 
 - 使用默认填充边距和阴影的 Android 按钮的值。 有关详细信息，请参阅[使用 Android 按钮](#button-padding-shadow)。
 - 输入的法编辑器为设置选项的软键盘[ `Entry` ](xref:Xamarin.Forms.Entry)。 有关详细信息，请参阅[设置条目输入法编辑器选项](#entry-imeoptions)。
+- 在启用投影`ImageButton`。 有关详细信息，请参阅[启用上 ImageButton 投影](#imagebutton-drop-shadow)。
 - 启用快速滚动[ `ListView` ](xref:Xamarin.Forms.ListView)的详细信息，请参阅[ListView 中启用快速滚动](#fastscroll)。
 - 控制是否[ `WebView` ](xref:Xamarin.Forms.WebView)可以显示混合的内容。 有关详细信息，请参阅[中的启用混合内容 WebView](#webview-mixed-content)。
 
@@ -227,6 +228,67 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 结果是，指定[ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)值将应用于软键盘[ `Entry` ](xref:Xamarin.Forms.Entry)，用于设置输入的法编辑器选项：
 
 [![条目输入方法编辑器平台专属](android-images/entry-imeoptions.png "条目输入方法编辑器平台特定")](android-images/entry-imeoptions-large.png#lightbox "条目输入方法编辑器特定于平台的")
+
+<a name="imagebutton-drop-shadow" />
+
+### <a name="enabling-a-drop-shadow-on-a-imagebutton"></a>启用上 ImageButton 投影
+
+此特定于平台的用于上启用投影`ImageButton`。 设置使用在 XAML`ImageButton.IsShadowEnabled`可绑定属性设置为`true`，以及数量的其他控制投影的可选可绑定属性：
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+或者，可以使用它从 C# 使用 fluent API:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> 作为的一部分绘制投影`ImageButton`如果仅绘制背景，并在后台`BackgroundColor`属性设置。 因此，投影将不绘制如果`ImageButton.BackgroundColor`属性未设置。
+
+`ImageButton.On<Android>`方法指定仅将在 Android 上运行此特定于平台的。 `ImageButton.SetIsShadowEnabled`方法，请在[ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)命名空间，用于控制是否在启用投影`ImageButton`。 此外，可以调用以下方法来控制投影：
+
+- `SetShadowColor` -设置投影的颜色。 默认颜色[ `Color.Default` ](xref:Xamarin.Forms.Color.Default*)。
+- `SetShadowOffset` -设置投影的偏移量。 偏移量更改阴影被强制转换，并指定为方向[ `Size` ](xref:Xamarin.Forms.Size)值。 `Size`正在向左 （负值） 或向右 （正值） 的距离的第一个值和第二个值被更高版本的距离 （负值） 或下方 （正值） 结构的值以与设备无关单位表示. 此属性的默认值为 （0.0，0.0），这会导致卷影被强制转换涉及的每个方面`ImageButton`。
+- `SetShadowRadius`– 设置用于呈现阴影的模糊半径。 默认半径值为 10.0。
+
+> [!NOTE]
+> 可以通过调用查询投影的状态`GetIsShadowEnabled`， `GetShadowColor`， `GetShadowOffset`，和`GetShadowRadius`方法。
+
+结果是，可以在启用投影`ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "带投影 ImageButton")
 
 <a name="fastscroll" />
 

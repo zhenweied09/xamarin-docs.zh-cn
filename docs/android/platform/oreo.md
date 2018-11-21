@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0c5e048dd3f3496691b83eb10d377d012efedc72
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: ca9c4ed0871b91bed82f746ccb36af9fb32816c0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528762"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171776"
 ---
 # <a name="oreo-features"></a>Oreo 功能
 
@@ -131,7 +131,7 @@ _如何开始使用 Xamarin.Android 开发适用于 Android 的最新版本的�
 
 -----
 
-显示此消息，因为 Google 不再提供独立支持 API 26.0 及更高版本的 GUI AVD 管理器。 对于 Android 8.0 Oreo，则必须使用 Xamarin Android 仿真器管理器或命令行`avdmanager`工具，用于为 Android Oreo 中创建的虚拟设备。
+显示此消息，因为 Google 不再提供独立的 GUI AVD 管理器支持 26.0 及更高版本的 API。 对于 Android 8.0 Oreo，则必须使用 Xamarin Android 仿真器管理器或命令行`avdmanager`工具，用于为 Android Oreo 中创建的虚拟设备。
 
 若要使用 Android 设备管理器创建和管理虚拟设备，请参阅[管理虚拟设备使用 Android 设备管理器](~/android/get-started/installation/android-emulator/device-manager.md)。
 若要创建虚拟设备而无需 Android 设备管理器，请执行下一节中的步骤。

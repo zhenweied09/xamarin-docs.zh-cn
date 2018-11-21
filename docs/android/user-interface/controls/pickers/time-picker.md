@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: faf2c35b49b0b02b9f3b16e19494d2e447361d84
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617665"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171646"
 ---
 # <a name="time-picker"></a>时间选取器
 
@@ -45,7 +45,7 @@ ms.locfileid: "51617665"
 在中`TimePickerDialog`，选择一次，然后单击**确定**按钮会导致`TimePickerDialog`来调用该方法[IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/)。
 此接口由宿主实现`DialogFragment`(`TimePickerFragment`，如下所示)。 单击**取消**按钮会导致片段和对话框，可以忽略。
 
-`DialogFragment` 托管 Actvity 中有三种方法将返回所选的时间：
+`DialogFragment` 中有三种方法的托管活动将返回所选的时间：
 
 1. **调用的方法或设置属性**&ndash;活动可以提供的属性或方法专门为此值设置。
 

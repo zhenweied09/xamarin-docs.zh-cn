@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 84767975eece4f8f0efae1fe53463cbc053bd836
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527230"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171467"
 ---
 # <a name="touch-in-android"></a>Android 中的触控
 
@@ -107,7 +107,7 @@ $ adb pull /storage/sdcard0/gestures <projectdirectory>/Resources/raw
 一旦已检索到它必须与你在目录 /Resources 内应用程序/原始一起打包的文件。 若要使用此手势文件的最简单方法是将文件加载到 GestureLibrary，如以下代码片段中所示：
 
 ```csharp
-GestureLibary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
+GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
 if (!myGestures.Load())
 {
     // The library didn't load, so close the activity.

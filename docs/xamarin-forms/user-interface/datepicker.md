@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 104985a4221cc6e5e6aa56420c1a41ee4c736b8d
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: b5d01aa451c9ab9be081b666e8c7ce51f58a3096
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563688"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172309"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
@@ -181,7 +181,7 @@ public partial class MainPage : ContentPage
 
 [![开始日期之间的天数](datepicker-images/DaysBetweenDatesStart.png "开始的日期之间的天数")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "开始的日期之间的天数")
 
-点击的`DatePicker`显示调用平台日期选取器。 三个平台实现此日期选取器很大不同，但是每种方法是熟悉该平台的用户：
+点击的`DatePicker`显示调用平台日期选取器。 平台实现此日期选取器很大不同，但是每种方法是熟悉该平台的用户：
 
 [![选择日期之间的天数](datepicker-images/DaysBetweenDatesSelect.png "日期之间的天数选择")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "天的日期之间选择")
 
