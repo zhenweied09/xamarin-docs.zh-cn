@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113048"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171465"
 ---
 # <a name="android-wear"></a>Android 穿戴设备
 
@@ -51,7 +51,7 @@ Android 开发人员站点提供有关关键 Wear Api 详细的信息，如[可�
 |示例|描述|屏幕快照|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|可穿戴项目，包括 GridViewPager 和交互式通知的基础知识的简单示例。|![Skeletonwear 的屏幕截图](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|检测到屏幕形状并自动加载正确的布局的 WatchViewStub 控件的简单演示。  请参阅的 WatchViewStub 工作原理**Resources/layout/main_actvity.xml**布局。|![WatchViewStub 的屏幕截图](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|检测到屏幕形状并自动加载正确的布局的 WatchViewStub 控件的简单演示。  请参阅的 WatchViewStub 工作原理**Resources/layout/main_activity.xml**布局。|![WatchViewStub 的屏幕截图](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Wear 通知页，方案步骤形式的演示。 RecipeService.cs 中创建通知。|![RecipeAssistant 的屏幕截图](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|与"个人助理"交互的有趣的示例调用 Eliza，穿戴设备交互式通知用于创建使用内置的响应的会话。|![ElizaChat 的屏幕截图](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager 实现 2D 导航模式，其中在用户轻扫垂直，然后水平导航选项和内容。|![GridViewPager 的屏幕截图](images/gridviewpager.png)|

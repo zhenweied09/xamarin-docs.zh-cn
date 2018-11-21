@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51027322"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171035"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>应用程序中使用 Google 地图 API
 
@@ -223,7 +223,7 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 
 有五种不同类型的映射从 Google Maps API 可用：
 
--  **正常**-这是默认映射类型。 它显示道路和重要自然功能，此外还 （如建筑物和桥） 感兴趣的某些 artifical 点。
+-  **正常**-这是默认映射类型。 它显示道路和重要自然功能，此外还 （如建筑物和桥） 感兴趣的一些人工分数。
 
 -  **附属**-此图显示了附属摄影。
 

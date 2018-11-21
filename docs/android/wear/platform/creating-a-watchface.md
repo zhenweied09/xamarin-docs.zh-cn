@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105527"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171997"
 ---
 # <a name="creating-a-watch-face"></a>创建表盘
 
@@ -302,7 +302,7 @@ public override void OnTimeTick()
 
 3.  声明名为 drawable 映像`preview`，将显示的监视选取器选择屏幕。
 
-4.  包括`intent-filter`让 Android 知道`MyWatchFaceSevice`将显示手表表盘。
+4.  包括`intent-filter`让 Android 知道`MyWatchFaceService`将显示手表表盘。
 
 完成为基本代码`WatchFace`示例。 下一步是添加所需的资源。
 

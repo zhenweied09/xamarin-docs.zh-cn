@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 7ee701c659e0051f5509934dbf0d86e9b3890c9a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 150818379a31fe7b22c1f04a49aba146df84c11c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563860"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171113"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>第 1 部分。 XAML 入门
 
@@ -26,7 +26,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-在 Windows 中，使用 Visual Studio 选择**文件 > 新建 > 项目**菜单中。 在**新的项目**对话框中，选择**Visual C# > 跨平台**在左侧，然后**移动应用 (Xamarin.Forms)** 从中心的列表中。 
+在 Windows 中，使用 Visual Studio 选择**文件 > 新建 > 项目**菜单中。 在**新的项目**对话框中，选择**Visual C# > 跨平台**在左侧，然后**移动应用 (Xamarin.Forms)** 从中心的列表中。
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "新建项目对话框")
 
@@ -36,7 +36,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
 ![](get-started-with-xaml-images/win/newcrossplatformapp.png "新建应用对话框")
 
-按**确定**。 
+按**确定**。
 
 在解决方案中创建四个项目： **XamlSamples** .NET Standard 库**XamlSamples.Android**， **XamlSamples.iOS**，和通用 Windows 平台解决方案中， **XamlSamples.UWP**。
 
@@ -52,7 +52,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
 ![](get-started-with-xaml-images/mac/newprojectdialog2.png "新建项目对话框 2")
 
-按**下一步**。 
+按**下一步**。
 
 在以下对话框中，可以选择该项目的位置：
 
@@ -60,7 +60,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
 按**创建**
 
-在解决方案中创建三个项目： **XamlSamples** .NET Standard 库**XamlSamples.Android**，并**XamlSamples.iOS**。 
+在解决方案中创建三个项目： **XamlSamples** .NET Standard 库**XamlSamples.Android**，并**XamlSamples.iOS**。
 
 -----
 
@@ -75,7 +75,7 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 - **App.xaml**，XAML 文件中; 和
 - **App.xaml.cs**、 C# *代码隐藏*与 XAML 文件相关联的文件。
 
-将需要单击旁边的箭头**App.xaml**若要查看的代码隐藏文件。 
+将需要单击旁边的箭头**App.xaml**若要查看的代码隐藏文件。
 
 这两**App.xaml**并**App.xaml.cs**到一个名为类参与`App`派生`Application`。 XAML 文件与大多数其他类派生的类参与`ContentPage`; 这些文件使用 XAML 来定义整个页面的可视内容。 这是中的其他两个文件，则返回 true **XamlSamples**项目：
 
@@ -92,8 +92,8 @@ _XAML 在 Xamarin.Forms 应用程序中，主要用于定义页面的可视内�
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin Forms!" 
-               VerticalOptions="Center" 
+        <Label Text="Welcome to Xamarin Forms!"
+               VerticalOptions="Center"
                HorizontalOptions="Center" />
     </StackLayout>
 
@@ -129,7 +129,7 @@ namespace XamlSamples
 }
 ```
 
-`MainPage`类派生自`ContentPage`，但请注意`partial`类定义。 这表明应为另一个分部类定义`MainPage`，但之类的问题？ 和新增功能的`InitializeComponent`方法？ 
+`MainPage`类派生自`ContentPage`，但请注意`partial`类定义。 这表明应为另一个分部类定义`MainPage`，但之类的问题？ 和新增功能的`InitializeComponent`方法？
 
 当 Visual Studio 生成项目时，它会分析要生成的 XAML 文件C#代码文件。 如果查看**XamlSamples\XamlSamples\obj\Debug**目录中，您会发现名为的文件**XamlSamples.MainPage.xaml.g.cs**。 G 表示生成的。 这是其他分部类定义的`MainPage`，其中包含的定义`InitializeComponent`方法从调用`MainPage`构造函数。 这些两个部分`MainPage`然后一起编译的类定义。 具体取决于是否或不编译 XAML，XAML 文件或二进制形式的 XAML 文件嵌入可执行文件中。
 
@@ -137,7 +137,7 @@ namespace XamlSamples
 
 尽管通常不需要花多长时间的生成的代码文件，但有时运行时异常会引发代码在所生成的文件，因此您应了解它们的用法。
 
-编译和运行此程序时`Label`元素出现在页面的中心，如 XAML 所示。 从左到右的三个平台有 iOS、 Android 和 UWP:
+编译和运行此程序时`Label`元素出现在页面的中心，如 XAML 所示：
 
 [![](get-started-with-xaml-images/xamlsamples.png "默认 Xamarin.Forms 显示")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "默认 Xamarin.Forms 显示")
 
@@ -159,7 +159,7 @@ namespace XamlSamples
 
 -----
 
-两个文件添加到项目中， **HelloXamlPage.xaml**和代码隐藏文件**HelloXamlPage.xaml.cs**。 
+两个文件添加到项目中， **HelloXamlPage.xaml**和代码隐藏文件**HelloXamlPage.xaml.cs**。
 
 ## <a name="setting-page-content"></a>设置页面内容
 
@@ -170,7 +170,7 @@ namespace XamlSamples
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamlSamples.HelloXamlPage">
     <ContentPage.Content>
-        
+
     </ContentPage.Content>
 </ContentPage>
 ```

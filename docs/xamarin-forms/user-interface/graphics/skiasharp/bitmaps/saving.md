@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: cd91f145d41d5e3bbb2f8061e04d87fdc495f1aa
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526502"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171048"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>将 SkiaSharp 位图保存到文件
 
@@ -44,7 +44,7 @@ SkiaSharp 应用程序具有创建或修改位图后，应用程序可能想要�
 
 此外， [ `SKCodec` ](xref:SkiaSharp.SKCodec)类有两个方法名为`Create`，可以创建`SKCodec`从压缩源对象，并允许在解码过程中获取更多地涉及应用程序。 (`SKCodec`类在本文中所示[**进行动画处理 SkiaSharp 位图**](animating.md#gif-animation)与解码动画的 GIF 文件。)
 
-如果编码位图，则需要详细信息： 编码器必须知道应用程序要使用 （JPEG 或 PNG 或其他内容） 的特定文件格式。 如果需要有损格式，则编码还必须知道所需的质量级别。 
+如果编码位图，则需要详细信息： 编码器必须知道应用程序要使用 （JPEG 或 PNG 或其他内容） 的特定文件格式。 如果需要有损格式，则编码还必须知道所需的质量级别。
 
 `SKBitmap`类定义了一个[ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32))方法具有以下语法：
 
@@ -60,7 +60,7 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>用于保存位图文件的特定于平台的代码
 
-当编码`SKBitmap`对象到特定文件格式，通常您会得到某种类型的流对象或数组的数据。 一些`Encode`方法 (包括不带任何参数定义的一个`SKImage`) 返回[ `SKData` ](xref:SkiaSharp.SKData)对象，将其转换为使用的字节数组[ `ToArray` ](xref:SkiaSharp.SKData.ToArray)方法。 然后，此数据必须保存到文件中。 
+当编码`SKBitmap`对象到特定文件格式，通常您会得到某种类型的流对象或数组的数据。 一些`Encode`方法 (包括不带任何参数定义的一个`SKImage`) 返回[ `SKData` ](xref:SkiaSharp.SKData)对象，将其转换为使用的字节数组[ `ToArray` ](xref:SkiaSharp.SKData.ToArray)方法。 然后，此数据必须保存到文件中。
 
 正在保存到应用程序本地存储中的文件是非常简单，因为您可以使用标准`System.IO`类和方法，此任务。 在本文中演示此技术[**进行动画处理 SkiaSharp 位图**](animating.md#bitmap-animation)与对一系列的 mandelbrot 位图进行动画处理。
 
@@ -81,7 +81,7 @@ public interface IPhotoLibrary
 
 有关`SavePhotoAsync`，第一个参数是包含已编码为特定文件格式，如 JPEG 或 PNG 的位图的字节数组。 很可能应用程序可能想要隔离到特定的文件夹，在下一个参数后, 接文件名称中指定它创建的所有位图。 该方法返回一个布尔值，指示成功与否。
 
-下面是如何`SavePhotoAsync`三个平台上实现：
+以下各节讨论如何`SavePhotoAsync`每个平台上实现。
 
 ### <a name="the-ios-implementation"></a>IOS 实现
 
@@ -107,7 +107,7 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-遗憾的是，没有方法来指定文件名或文件夹的图像。 
+遗憾的是，没有方法来指定文件名或文件夹的图像。
 
 **Info.plist** iOS 项目中的文件所需，该值指示它将图像添加到照片库的密钥：
 
@@ -276,7 +276,7 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-`SKManagedWStream`类派生自`SKWStream`（这表示"可写流"）。 `Encode`方法写入该流编码的位图文件。 该代码中的注释是指一些错误检查可能需要执行。 
+`SKManagedWStream`类派生自`SKWStream`（这表示"可写流"）。 `Encode`方法写入该流编码的位图文件。 该代码中的注释是指一些错误检查可能需要执行。
 
 **保存的文件格式**页面[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)应用程序使用类似的代码，以便您可以试验各种格式保存位图。
 
@@ -341,7 +341,7 @@ XAML 文件包含`SKCanvasView`显示位图时，应用程序页的其余部分�
                    HorizontalOptions="FillAndExpand" />
         </StackLayout>
 
-        <Button Text="Save" 
+        <Button Text="Save"
                 Clicked="OnButtonClicked">
             <Button.Triggers>
                 <DataTrigger TargetType="Button"
@@ -435,9 +435,9 @@ public partial class SaveFileFormatsPage : ContentPage
 
 `Clicked`处理程序`Button`所有实际的都工作原理。 获取两个参数`Encode`从`Picker`并`Slider`，然后使用代码来创建`SKManagedWStream`为`Encode`方法。 这两个`Entry`视图提供的文件夹和文件名称`SavePhotoAsync`方法。
 
-此方法的大多数都专门处理问题或错误。 如果`Encode`创建一个空数组，它表示特定文件格式不受支持。 如果`SavePhotoAsync`返回`false`，则文件不是已成功保存。 
+此方法的大多数都专门处理问题或错误。 如果`Encode`创建一个空数组，它表示特定文件格式不受支持。 如果`SavePhotoAsync`返回`false`，则文件不是已成功保存。
 
-下面是三个平台上运行的程序：
+下面是运行的程序：
 
 [![保存文件格式](saving-images/SaveFileFormats.png "保存文件格式")](saving-images/SaveFileFormats-Large.png#lightbox)
 
@@ -688,7 +688,7 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-**保存**按钮处理程序使用简化[ `Encode` ](xref:SkiaSharp.SKImage.Encode)方法从`SKImage`。 此方法将编码使用 PNG 格式。 `SKImage`对象会根据创建`saveBitmap`，和`SKData`对象包含已编码的 PNG 文件。 
+**保存**按钮处理程序使用简化[ `Encode` ](xref:SkiaSharp.SKImage.Encode)方法从`SKImage`。 此方法将编码使用 PNG 格式。 `SKImage`对象会根据创建`saveBitmap`，和`SKData`对象包含已编码的 PNG 文件。
 
 `ToArray`方法的`SKData`获取字节数组。 这是传递给`SavePhotoAsync`方法，以及一个固定的文件夹名称和唯一的文件名构造从当前日期和时间。
 

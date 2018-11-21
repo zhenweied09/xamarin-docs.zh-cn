@@ -6,13 +6,13 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/26/2018
-ms.openlocfilehash: cdff3e721aa91733e995e95ead533a3ad7b41a77
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.date: 11/19/2018
+ms.openlocfilehash: fbdb611df558c547a2470a8c8a9d7848ef7aa31f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563922"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171386"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 按钮
 
@@ -422,7 +422,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) 是文本的大小
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) 指示文本是斜体或粗体
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) 为边框的宽度
-- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 为圆角
+- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) 是的圆角半径 `Button`
 
 > [!NOTE]
 > `Button`类还具有[ `Margin` ](xref:Xamarin.Forms.View.Margin)并[ `Padding` ](xref:Xamarin.Forms.Button.Padding)控制的布局行为的属性`Button`。 有关详细信息，请参阅[边距和填充](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)。
@@ -543,6 +543,40 @@ public partial class PressAndReleaseButtonPage : ContentPage
 在 iOS 上，您会注意到，大边框宽度起、 强行进入到的内部`Button`和干扰中文本的显示。 如果您选择要用于 iOS 的边框`Button`，可能需要开始和结束`Text`空格保留其可见性属性。
 
 在 UWP 中，选择`CornerRadius`超过高度的一半`Button`引发异常。
+
+## <a name="button-visual-states"></a>按钮的视觉状态
+
+[`Button`](xref:Xamarin.Forms.Button) 具有`Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState)可用于启动到可视更改`Button`时用户按下，前提启用了。
+
+下面的 XAML 示例演示如何定义的可视状态`Pressed`状态：
+
+```xaml
+<Button Text="Click me!"
+        ...>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="1" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Pressed">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="0.8" />
+                </VisualState.Setters>
+            </VisualState>
+
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</ImageButton>
+```
+
+`Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState)指定当[ `Button` ](xref:Xamarin.Forms.Button)按下时，其[ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale)属性将更改从其默认值为 1 到 0.8。 `Normal` `VisualState`指定当`Button`处于正常状态，其`Scale`属性将设置为 1。 因此，总体效果是，当`Button`是按下时，它重新缩放为更略小，并且当`Button`是发布，它将其重新缩放为其默认大小。
+
+可视状态的详细信息，请参阅[Xamarin.Forms 视觉状态管理器](~/xamarin-forms/user-interface/visual-state-manager.md)。
 
 ## <a name="creating-a-toggle-button"></a>创建一个切换按钮
 
@@ -774,7 +808,7 @@ Button button = new Button
         ContentLayout="Right, 20" />
 ```
 
-**图像按钮演示**页上使用`OnPlatform`若要指定不同的文件名在 iOS、 Android 和 UWP 位图文件。 如果你想要用于所有三个平台使用相同的文件名和避免使用`OnPlatform`，都需要在项目的根目录中存储的 UWP 位图。
+**图像按钮演示**页上使用`OnPlatform`若要指定不同的文件名在 iOS、 Android 和 UWP 位图文件。 如果你想要为每个平台使用相同的文件名和避免使用`OnPlatform`，都需要在项目的根目录中存储的 UWP 位图。
 
 第一个`Button`上**图像按钮演示**页上设置`Image`属性但不是`Text`属性：
 

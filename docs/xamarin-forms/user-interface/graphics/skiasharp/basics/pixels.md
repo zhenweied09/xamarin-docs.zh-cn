@@ -1,5 +1,5 @@
 ---
-title: 像素和设备无关的单位
+title: 像素和与设备无关的单位
 description: 本文探讨了 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异，并演示此示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615296"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171919"
 ---
-# <a name="pixels-and-device-independent-units"></a>像素和设备无关的单位
+# <a name="pixels-and-device-independent-units"></a>像素和与设备无关的单位
 
 _了解 SkiaSharp 坐标和 Xamarin.Forms 坐标之间的差异_
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 该方法的开头 （适用于在左侧的小边距） 20 X 坐标和 Y 坐标的文本的第一行`fontSpacing`，这是更多，而不是所需的显示图面顶部显示完整的第一个文本行的高度。 每次调用后`DrawText`，由一个或两个为增量增加的 Y 坐标`fontSpacing`。
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![](pixels-images/surfacesize-small.png "三重的面大小页面的屏幕截图")](pixels-images/surfacesize-large.png#lightbox "面大小页面的三个屏幕截图")
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-此处它三个平台上运行：
+运行此处：
 
 [![](pixels-images/ellipsefill-small.png "三重的面大小页面的屏幕截图")](pixels-images/ellipsefill-large.png#lightbox "面大小页面的三个屏幕截图")
 

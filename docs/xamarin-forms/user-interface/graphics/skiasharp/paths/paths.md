@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 2980884c94bfa2cddbef89e8a2e5f6aaf778d033
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 647d9f82eab4d606a940ff887defb864d7770cc3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615530"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171074"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp 中的路径基础知识
 
@@ -187,7 +187,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-下面是三个平台上运行的程序：
+下面是运行的程序：
 
 [![](paths-images/strokejoins-small.png "三重笔划联接页屏幕截图")](paths-images/strokejoins-large.png#lightbox "笔划联接页的三个屏幕截图")
 

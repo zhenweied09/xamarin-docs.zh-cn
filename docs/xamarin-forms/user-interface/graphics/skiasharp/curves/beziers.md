@@ -1,5 +1,5 @@
 ---
-title: 三种类型的贝塞尔曲线
+title: 贝塞尔曲线的三种类型
 description: 此文介绍了如何使用 SkiaSharp 呈现在 Xamarin.Forms 应用程序中的三次方、 二次，和圆锥贝塞尔曲线，此示例代码进行了演示。
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 1da0ee6155548a38057e4c7bf49ae5b90d445d79
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 60024be0c39bd215a828acfd8a4ac6294eeac9d8
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615335"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172345"
 ---
-# <a name="three-types-of-bzier-curves"></a>三种类型的贝塞尔曲线
+# <a name="three-types-of-bzier-curves"></a>贝塞尔曲线的三种类型
 
 _了解如何使用 SkiaSharp 呈现三次方、 二次，和圆锥贝塞尔曲线_
 
@@ -89,7 +89,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-此处它在所有三个平台上运行：
+运行此处：
 
 [![](beziers-images/beziercurve-small.png "三重的贝塞尔曲线页屏幕截图")](beziers-images/beziercurve-large.png#lightbox "带来三倍的贝塞尔曲线页屏幕截图")
 
@@ -207,7 +207,7 @@ float Magnitude(SKPoint v)
 
 起点和终点 (`point0`和`point3`) 基于该圆形的普通参数等式计算。 因为圆的中心 （0，0），这些点可以也被视为径向向量从圆的中心到周长。 控制点是在行的正切值为圆圈，因此可以为这些径向向量直角。 直角到另一个向量是只需使用交换的 X 和 Y 坐标和负所做的其中一个原始向量。
 
-下面是使用三个不同的角度的三个平台上运行的程序：
+下面是运行使用不同的角度的程序：
 
 [![](beziers-images/beziercirculararc-small.png "三重的贝塞尔圆弧页屏幕截图")](beziers-images/beziercirculararc-large.png#lightbox "带来三倍的贝塞尔圆弧页屏幕截图")
 
@@ -289,7 +289,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-基于 sinusoidally 振荡值的插入点`t`。 内插的点然后用于构造一系列的四个已连接的贝塞尔曲线。 下面是显示一个圆圈正方形的进度的三个平台上运行的动画：
+基于 sinusoidally 振荡值的插入点`t`。 内插的点然后用于构造一系列的四个已连接的贝塞尔曲线。 下面是运行动画：
 
 [![](beziers-images/squaringthecircle-small.png "Squaring 的三个屏幕截图圆圈页")](beziers-images/squaringthecircle-large.png#lightbox "Squaring 的三个屏幕截图圆形页")
 
@@ -338,7 +338,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 它可能是非常好的练习来绘制图形纸上的这些坐标以查看它们如何相关。 无穷符号居中围绕点 （0，0），并在两个循环使用的中心 （–150，0） 和 （150，0） 和半径为 100。 中的一系列`CubicTo`命令，可以看到 X 坐标的控制点承接 –95 和 –205 的值 （这些值是 –150 加号和减号 55），205 和 95 (150 加号和减号 55)、 250 和左右两侧的 –250。 唯一的例外是无穷符号有超过本身在中心。 在这种情况下，控制点具有 50 和 – 50 若要查看中心附近的曲线下的组合使用的坐标。
 
-下面是在所有三个平台上的无穷符号：
+下面是无穷符号：
 
 [![](beziers-images/bezierinfinity-small.png "三重的贝塞尔无穷大页屏幕截图")](beziers-images/bezierinfinity-large.png#lightbox "带来三倍的贝塞尔无穷大页屏幕截图")
 
@@ -401,7 +401,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-和此处运行所有三个平台上：
+和此处运行：
 
 [![](beziers-images/quadraticcurve-small.png "三重的二次曲线页屏幕截图")](beziers-images/quadraticcurve-large.png#lightbox "带来三倍的二次曲线页屏幕截图")
 
@@ -479,7 +479,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-此处它在所有三个平台上运行：
+运行此处：
 
 [![](beziers-images/coniccurve-small.png "三个圆锥曲线页屏幕截图")](beziers-images/coniccurve-large.png#lightbox "三个圆锥曲线页屏幕截图")
 

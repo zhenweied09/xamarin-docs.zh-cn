@@ -7,12 +7,12 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 78fcbae8db70a83d7d0a643e0b27f575152e9515
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6eacc7f2688a563f9facf651b0a6da85bd75360f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112543"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171347"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 位图进行动画处理
 
@@ -20,7 +20,7 @@ ms.locfileid: "50112543"
 
 但是，如果图形过于复杂，需要呈现在 16 毫秒，动画会抖动。 程序员可能会选择刷新频率减少到 30 倍或 15 次第二个，但有时甚至这是不足够。 有时图形很复杂，它们只是无法呈现实时。
 
-一种解决方案是动画的通过呈现位图的一系列上的各个帧事先做好动画。 若要显示动画，它只是用来按顺序显示这些位图，则会每秒 60 次。 
+一种解决方案是动画的通过呈现位图的一系列上的各个帧事先做好动画。 若要显示动画，它只是用来按顺序显示这些位图，则会每秒 60 次。
 
 当然，这可能是大量的位图，但这就是如何大预算 3D 动画的影视进行。 3D 图形是得太复杂，无法在真实时间中呈现。 需要大量处理时间来呈现每个帧。 观看电影时看到的内容是位图的实质上是位图的一系列。
 
@@ -34,7 +34,7 @@ ms.locfileid: "50112543"
 
 Mandelbrot 集是以可视方式有吸引力，但 computionally 耗时较长。 (Mandelbrot 和此处使用的数学原理的讨论，请参阅[的第 20 章_使用 Xamarin.Forms 创建移动应用_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)页 666 上启动。 以下说明假定该背景知识）。
 
-[ **Mandelbrot 动画**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)示例使用位图动画来模拟中的 Mandelbrot 集的固定点的连续缩放。 放大后跟缩小，，然后重复这一循环下去，或者直到结束程序。 
+[ **Mandelbrot 动画**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/MandelAnima/)示例使用位图动画来模拟中的 Mandelbrot 集的固定点的连续缩放。 放大后跟缩小，，然后重复这一循环下去，或者直到结束程序。
 
 通过创建最多 50 位图，它在应用程序本地存储中存储此动画准备程序。 每个位图包含一半的宽度和高度的复平面与以前的位图。 (在程序中，这些位图被称为表示整型_缩放级别_。)将序列中显示的位图。 提供从一个位图的平滑过渡到另一个的动画的每个位图缩放。
 
@@ -150,7 +150,7 @@ class BitmapInfo
 
             <Button x:Name="deleteButton"
                     Text="Delete All"
-                    HorizontalOptions="EndAndExpand" 
+                    HorizontalOptions="EndAndExpand"
                     Clicked="OnDeleteButtonClicked" />
         </StackLayout>
     </StackLayout>
@@ -179,7 +179,7 @@ public partial class MainPage : ContentPage
 
 在某些时候，你可能需要更改`COUNT`为 50，若要查看动画的完整范围的值。 大于 50 的值不是很有用。 围绕 48 左右的缩放级别，双精度浮点数中的解决方法就无法满足的 Mandelbrot 集计算。 页 684 上讨论了此问题_使用 Xamarin.Forms 创建移动应用_。
 
-`center`值是非常重要。 这是动画缩放的焦点。 在文件中的三个值是三个中的第 20 章的最后一个屏幕截图中所用_使用 Xamarin.Forms 创建移动应用_在页上 684，但您可以尝试使用的程序中的相关章节拿你自己的值之一。 
+`center`值是非常重要。 这是动画缩放的焦点。 在文件中的三个值是三个中的第 20 章的最后一个屏幕截图中所用_使用 Xamarin.Forms 创建移动应用_在页上 684，但您可以尝试使用的程序中的相关章节拿你自己的值之一。
 
 **Mandelbrot 动画**示例将存储这些`COUNT`本地应用程序存储中的位图。 50 个位图需要超过 20 兆字节的存储在设备上，因此你可能想要知道多少存储空间占用这些位图，并在某些时候，可能想要删除所有这些。 底部的这两种方法的目的就在于此`MainPage`类：
 
@@ -222,10 +222,10 @@ public partial class MainPage : ContentPage
 {
     ···
     // File path for storing each bitmap in local storage
-    string FolderPath() => 
+    string FolderPath() =>
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-    string FilePath(int zoomLevel) => 
+    string FilePath(int zoomLevel) =>
         Path.Combine(FolderPath(),
                      String.Format("R{0}I{1}Z{2:D2}.png", center.Real, center.Imaginary, zoomLevel));
 
@@ -292,7 +292,7 @@ public partial class MainPage : ContentPage
 
                 CancellationToken cancelToken = cancelTokenSource.Token;
 
-                // Do the (generally lengthy) Mandelbrot calculation 
+                // Do the (generally lengthy) Mandelbrot calculation
                 BitmapInfo bitmapInfo =
                     await Mandelbrot.CalculateAsync(center,
                                                     4 / Math.Pow(2, zoomLevel),
@@ -376,7 +376,7 @@ public partial class MainPage : ContentPage
 
 创建或加载到内存中的所有位图完后，该方法开始`Stopwatch`对象并调用`Device.StartTimer`。 `OnTimerTick`方法调用每隔 16 毫秒。
 
-`OnTimerTick` 计算`time`值以毫秒为单位，范围从 0 到 6000 时间`COUNT`，其中 apportions 六秒进行的每个位图显示。 `progress`值使用`Math.Sin`值创建一个周期开始时将运行的慢的幅度动画并为其最终的速度要慢反转方向。 
+`OnTimerTick` 计算`time`值以毫秒为单位，范围从 0 到 6000 时间`COUNT`，其中 apportions 六秒进行的每个位图显示。 `progress`值使用`Math.Sin`值创建一个周期开始时将运行的慢的幅度动画并为其最终的速度要慢反转方向。
 
 `progress`值范围是从 0 到`COUNT`。 这意味着的整数部分`progress`是元素的索引`bitmaps`数组的小数部分时`progress`指示该特定的位图的缩放级别。 这些值存储在`bitmapIndex`并`bitmapProgress`字段，并由显示`Label`和`Slider`XAML 文件中。 `SKCanvasView`失效，这样更新位图显示：
 
@@ -448,7 +448,7 @@ public partial class MainPage : ContentPage
             SKBitmap bitmap = bitmaps[bitmapIndex];
             int width = bitmap.Width;
             int height = bitmap.Height;
-            SKRect sourceRect = new SKRect(fraction * width, fraction * height, 
+            SKRect sourceRect = new SKRect(fraction * width, fraction * height,
                                            (1 - fraction) * width, (1 - fraction) * height);
 
             // Display the bitmap
@@ -459,7 +459,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![Mandelbrot 集合动画](animating-images/MandelbrotAnimation.png "Mandelbrot 动画")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
@@ -482,7 +482,7 @@ public partial class MainPage : ContentPage
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" 
+        <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
@@ -494,11 +494,11 @@ public partial class MainPage : ContentPage
 </ContentPage>
 ```
 
-代码隐藏文件未通用化播放任何动画的 GIF 文件。 它会忽略的一些信息不可用，具体而言，一个重复计数，且只需播放在循环中的动态 gif 文件。 
+代码隐藏文件未通用化播放任何动画的 GIF 文件。 它会忽略的一些信息不可用，具体而言，一个重复计数，且只需播放在循环中的动态 gif 文件。
 
 SkisSharp 提取的帧的动画 GIF 文件使用似乎不记录任何位置，因此下面的代码的说明是比平常更多详细：
 
-动画 GIF 文件的解码的页面的构造函数中发生，并且要求`Stream`用于创建对象，用于引用位图`SKManagedStream`对象，然后[ `SKCodec` ](xref:SkiaSharp.SKCodec)对象。 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount)属性指示的构成了动画的帧数。 
+动画 GIF 文件的解码的页面的构造函数中发生，并且要求`Stream`用于创建对象，用于引用位图`SKManagedStream`对象，然后[ `SKCodec` ](xref:SkiaSharp.SKCodec)对象。 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount)属性指示的构成了动画的帧数。
 
 这些帧最终保存为各个位图，因此该构造函数使用`FrameCount`若要分配的类型数组`SKBitmap`以及两个`int`的持续时间内的每个帧和 （用于简化动画逻辑） 的累计数组持续时间。
 
@@ -562,10 +562,10 @@ public partial class AnimatedGifPage : ContentPage
                 totalDuration += durations[frame];
             }
 
-            // Calculate the accumulated durations 
+            // Calculate the accumulated durations
             for (int frame = 0; frame < durations.Length; frame++)
             {
-                accumulatedDurations[frame] = durations[frame] + 
+                accumulatedDurations[frame] = durations[frame] +
                     (frame == 0 ? 0 : accumulatedDurations[frame - 1]);
             }
         }
@@ -641,7 +641,7 @@ public partial class AnimatedGifPage : ContentPage
         SKCanvas canvas = surface.Canvas;
 
         canvas.Clear(SKColors.Black);
-            
+
         // Get the bitmap and center it
         SKBitmap bitmap = bitmaps[currentFrame];
         canvas.DrawBitmap(bitmap,info.Rect, BitmapStretch.Uniform);

@@ -7,12 +7,12 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615621"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172010"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>访问 SkiaSharp 位图像素位
 
@@ -35,7 +35,7 @@ SkiaSharp 提供几种方法用于访问位图的像素位。 你选择哪一个
 
 您可以将为"高级别"的前两个技术和第二个两个作为"低级别。 有一些其他方法和属性，您可以使用，但这些是最有价值。
 
-若要允许你查看这些技术之间的性能差异[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)应用程序包含一个名为页**渐变位图**，创建使用组合创建渐变的红色和蓝色阴影的像素的位图。 程序创建八个不同副本，此位图，所有使用的不同的方法用于设置位图像素。 每个这些八个位图创建在单独的方法，还设置该技术的简短文本说明，并计算所需设置所有像素为单位的时间。 每个方法循环访问的像素设置逻辑 100 次若要更好地估计的性能。 
+若要允许你查看这些技术之间的性能差异[ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)应用程序包含一个名为页**渐变位图**，创建使用组合创建渐变的红色和蓝色阴影的像素的位图。 程序创建八个不同副本，此位图，所有使用的不同的方法用于设置位图像素。 每个这些八个位图创建在单独的方法，还设置该技术的简短文本说明，并计算所需设置所有像素为单位的时间。 每个方法循环访问的像素设置逻辑 100 次若要更好地估计的性能。
 
 ### <a name="the-setpixel-method"></a>SetPixel 方法
 
@@ -55,7 +55,7 @@ SKColor color = bitmap.GetPixel(col, row);
 public class GradientBitmapPage : ContentPage
 {
     const int REPS = 100;
-        
+
     Stopwatch stopwatch = new Stopwatch();
     ···
     SKBitmap FillBitmapSetPixel(out string description, out int milliseconds)
@@ -107,7 +107,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
     stopwatch.Restart();
 
-    SKColor[] pixels = new SKColor[256 * 256]; 
+    SKColor[] pixels = new SKColor[256 * 256];
 
     for (int rep = 0; rep < REPS; rep++)
         for (int row = 0; row < 256; row++)
@@ -135,7 +135,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 IntPtr pixelsAddr = bitmap.GetPixels();
 ```
 
-.NET [ `IntPtr` ](xref:System.IntPtr)类型表示的指针。 它称为`IntPtr`因为它是本机处理器的程序正在运行的通常 32 位或 64 位的长度在计算机上的一个整数的长度。 `IntPtr`的`GetPixels`返回是实际的位图对象正在使用它来存储其像素为单位的内存块的地址。 
+.NET [ `IntPtr` ](xref:System.IntPtr)类型表示的指针。 它称为`IntPtr`因为它是本机处理器的程序正在运行的通常 32 位或 64 位的长度在计算机上的一个整数的长度。 `IntPtr`的`GetPixels`返回是实际的位图对象正在使用它来存储其像素为单位的内存块的地址。
 
 可以将转换`IntPtr`为 C# 指针类型，并使用[ `ToPointer` ](xref:System.IntPtr.ToPointer)方法。 C# 指针语法是 C 和 c + + 相同：
 
@@ -313,7 +313,7 @@ SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
                 buffer[row, col, 2] = (byte)row;   // blue
                 buffer[row, col, 3] = 0xFF;        // alpha
             }
-    
+
     unsafe
     {
         fixed (byte* ptr = buffer)
@@ -459,7 +459,7 @@ public class GradientBitmapPage : ContentPage
 
     void Display(SKCanvas canvas, int index, SKRect rect)
     {
-        string text = String.Format("{0}: {1:F1} msec", descriptions[index], 
+        string text = String.Format("{0}: {1:F1} msec", descriptions[index],
                                     (double)elapsedTimes[index] / REPS);
 
         SKRect bounds = new SKRect();
@@ -497,7 +497,7 @@ public class GradientBitmapPage : ContentPage
 
 按预期方式调用`SetPixel`65,536 情况下是设置位图的像素为单位的最少 effeicient 方法。 填充`SKColor`数组和设置`Pixels`属性是好得多，甚至更具优势的某些`GetPixels`和`SetPixels`技术。 使用`uint`像素值是通常比单独设置更快`byte`组件，并将转换`SKColor`为无符号整数值到进程会增加一些开销。
 
-它也是值得关注要比较各种渐变： 所有三个平台的前行是相同的并按预期显示渐变。 这意味着`SetPixel`方法和`Pixels`属性正确创建颜色而不考虑基础的像素格式中的像素为单位。
+它也是值得关注要比较各种渐变： 每个平台的前行是相同的并按预期显示渐变。 这意味着`SetPixel`方法和`Pixels`属性正确创建颜色而不考虑基础的像素格式中的像素为单位。
 
 IOS 和 Android 的屏幕截图的接下来两行也是相同的这可确认的一小`MakePixel`方法已正确定义默认值为`Rgba8888`这些平台的像素格式。
 
@@ -511,13 +511,13 @@ BB GG RR AA
 
 这是`Bgra8888`排序而不是`Rgba8888`排序。 `Brga8888`格式是通用 Windows 平台，这是为什么该屏幕快照的最后一行上的渐变的第一行与相同的默认值。 但中间两个行是不正确，因为创建这些位图的代码假定`Rgba8888`排序。
 
-如果你想要用于访问所有三个平台上的像素位使用相同的代码，可以显式创建`SKBitmap`使用`Rgba8888`或`Bgra8888`格式。 如果你想要强制转换`SKColor`位图像素为单位的值使用`Bgra8888`。
+如果你想要用于访问每个平台上的像素位使用相同的代码，可以显式创建`SKBitmap`使用`Rgba8888`或`Bgra8888`格式。 如果你想要强制转换`SKColor`位图像素为单位的值使用`Bgra8888`。
 
 ## <a name="random-access-of-pixels"></a>随机访问的像素为单位
 
-`FillBitmapBytePtr`并`FillBitmapUintPtr`中的方法**渐变位图**页受益`for`循环按顺序，从顶部到底部的行，并从左到右每行中的行填充位图。 可以使用递增指针在同一语句设置像素。 
+`FillBitmapBytePtr`并`FillBitmapUintPtr`中的方法**渐变位图**页受益`for`循环按顺序，从顶部到底部的行，并从左到右每行中的行填充位图。 可以使用递增指针在同一语句设置像素。
 
-有时是需要随机而不是按顺序访问像素。 如果您使用的`GetPixels`方法时，您将需要计算基于行和列的指针。 了这一点**彩虹正弦**页上，创建一个周期的正弦曲线的形式显示出喷薄彩虹的位图。 
+有时是需要随机而不是按顺序访问像素。 如果您使用的`GetPixels`方法时，您将需要计算基于行和列的指针。 了这一点**彩虹正弦**页上，创建一个周期的正弦曲线的形式显示出喷薄彩虹的位图。
 
 出喷薄彩虹的颜色是最简单的方法创建使用 HSL （色调、 饱和度、 亮度） 颜色模型。 `SKColor.FromHsl`方法创建`SKColor`值使用色调值范围从 0 到 360 之间 （如一个圆圈，但从红色、 绿色和蓝色，并返回到红色的角度） 和饱和度和亮度值范围从 0 到 100 之间。 对于出喷薄彩虹的颜色，饱和度应设置为最多为 100、 50 的中点的亮度。
 
@@ -617,7 +617,7 @@ uint* ptr = basePtr + bitmap.Width * row + col;
 
 对于每个像素颜色，第一个`Slider`添加一个值从 0 到 360 之间对色调、 但然后使用取模运算符来保留介于 0 至 360 之间的结果，有效地转移沿系列的颜色 （如 UWP 的屏幕截图所示）。 第二个`Slider`使你可以选择介于 0.5 和 2 对饱和度和第三个应用之间的乘法因子`Slider`执行相同的操作的亮度，Android 屏幕截图中所示。
 
-程序维护两个位图，名为的原始源位图`srcBitmap`和名为调整后的目标位图`dstBitmap`。 每次`Slider`移动，程序会计算中的所有新像素`dstBitmap`。 当然，用户将通过移动进行试验`Slider`视图速度非常快，因此你希望你可以管理的最佳性能。 这涉及到`GetPixels`源和目标位图的方法。 
+程序维护两个位图，名为的原始源位图`srcBitmap`和名为调整后的目标位图`dstBitmap`。 每次`Slider`移动，程序会计算中的所有新像素`dstBitmap`。 当然，用户将通过移动进行试验`Slider`视图速度非常快，因此你希望你可以管理的最佳性能。 这涉及到`GetPixels`源和目标位图的方法。
 
 **颜色调整**页上不会控制源和目标位图的颜色格式。 相反，它包含有关略有不同的逻辑`SKColorType.Rgba8888`和`SKColorType.Bgra8888`格式。 源和目标可以是不同的格式，并且程序仍将起作用。
 
@@ -764,7 +764,7 @@ public class PosterizePage : ContentPage
 
             for (int i = 0; i < pixelCount; i++)
             {
-                *ptr++ &= 0xE0E0E0FF; 
+                *ptr++ &= 0xE0E0E0FF;
             }
         }
 

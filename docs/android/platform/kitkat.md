@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527322"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172088"
 ---
 # <a name="kitkat-features"></a>KitKat 功能
 
@@ -413,7 +413,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 #### <a name="printing-html-content"></a>打印 HTML 内容
 
-会自动创建 KitKat [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)的 web 视图与`WebView.CreatePrintDocumentAdapter`。 打印 web 内容是之间协调的工作量[ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) ，等待要加载的 HTML 内容，可让活动知道选项菜单中提供打印选项和 Actvity，等待到用户选择打印选项并调用`Print`上`PrintManager`。 本部分介绍了屏幕上打印所需的基本设置 HTML 内容。
+会自动创建 KitKat [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)的 web 视图与`WebView.CreatePrintDocumentAdapter`。 打印 web 内容是之间协调的工作量[ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) ，等待要加载的 HTML 内容，可让活动知道选项菜单中提供打印选项和等待到用户的活动选择打印选项并调用`Print`上`PrintManager`。 本部分介绍了屏幕上打印所需的基本设置 HTML 内容。
 
 请注意，加载和打印的 web 内容需要 Internet 权限：
 

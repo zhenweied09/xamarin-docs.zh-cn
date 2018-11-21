@@ -1,5 +1,5 @@
 ---
-title: 若要绘制弧线的三种方法
+title: 绘制弧线的三个方法
 description: 本文介绍如何使用 SkiaSharp 定义弧线中三个不同的方式，并演示此示例代码。
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -7,14 +7,14 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615400"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172218"
 ---
-# <a name="three-ways-to-draw-an-arc"></a>若要绘制弧线的三种方法
+# <a name="three-ways-to-draw-an-arc"></a>绘制弧线的三个方法
 
 _了解如何使用 SkiaSharp 三种不同方式定义弧线_
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-下面是**正切弧线**所有三个平台上运行的页面：
+下面是**正切弧线**运行页面：
 
 [![](arcs-images/tangentarc-small.png "正切值弧线页的三个屏幕截图")](arcs-images/tangentarc-large.png#lightbox "带来三倍的正切值弧线页屏幕截图")
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-下面是三个平台上运行的程序：
+下面是运行的程序：
 
 [![](arcs-images/roundedheptagon-small.png "舍入 Heptagon 页的三个屏幕截图")](arcs-images/roundedheptagon-large.png#lightbox "带来三倍的舍入 Heptagon 页屏幕截图")
 
@@ -582,7 +582,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-此处它三个平台上运行：
+运行此处：
 
 [![](arcs-images/ellipticalarc-small.png "三个椭圆弧页屏幕截图")](arcs-images/ellipticalarc-large.png#lightbox "带来三倍的椭圆弧页屏幕截图")
 

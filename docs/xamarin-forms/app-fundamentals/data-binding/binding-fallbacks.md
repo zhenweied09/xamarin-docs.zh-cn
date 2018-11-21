@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: fa375720730630065609e328b343e16578c6f1df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130971"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171594"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 绑定回退
 
@@ -44,7 +44,7 @@ ms.locfileid: "50130971"
 > [!NOTE]
 > 不能设置`FallbackValue`使用绑定表达式的属性。
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 ![传输绑定](binding-fallbacks-images/bindingunavailable-detail-cropped.png "传输绑定")
 
@@ -93,7 +93,7 @@ ms.locfileid: "50130971"
 > [!NOTE]
 > 不能设置`TargetNullValue`使用绑定表达式的属性。
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![TargetNullValue 绑定](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue 绑定")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue 绑定")
 

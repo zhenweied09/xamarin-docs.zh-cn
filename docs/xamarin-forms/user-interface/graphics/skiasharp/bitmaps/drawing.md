@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527243"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171204"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>创建并在 SkiaSharp 位图上绘制
 
@@ -169,7 +169,7 @@ Color = new SKColor(0, 0, 0, 0)
 
 如今，编程人员几乎总是使用全彩色位图并不去费神具有其他格式。 例外情况是`RgbaF16`允许更大的颜色分辨率比甚至完整颜色格式的格式。 但是，此格式用于特殊的用途，如医疗图像处理，并且没有太大意义与标准全彩色显示一起使用时。
 
-本系列的文章将限制到本身`SKBitmap`默认情况下，如果未使用的格式的颜色`SKColorType`成员是指定。 此默认格式取决于基础平台。 Xamarin.Forms 支持的平台，为默认颜色类型是：
+本系列的文章将限制到本身`SKBitmap`默认情况下，如果未使用的格式的颜色`SKColorType`指定成员。 此默认格式取决于基础平台。 Xamarin.Forms 支持的平台，为默认颜色类型是：
 
 - `Rgba8888` 适用于 iOS 和 Android
 - `Bgra8888` 适用于 UWP

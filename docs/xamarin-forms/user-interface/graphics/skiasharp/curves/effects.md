@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615673"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171139"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp 中的路径效果
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-可以使用这种效果与描画或基于填充`Style`属性的`SKPaint`对象。 下面是在所有三个平台上：
+可以使用这种效果与描画或基于填充`Style`属性的`SKPaint`对象。 运行此处：
 
 [![](effects-images/anotherroundedheptagon-small.png "三重的另一个舍入 Heptagon 页屏幕截图")](effects-images/anotherroundedheptagon-large.png#lightbox "带来三倍的另一个舍入 Heptagon 页屏幕截图")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-此处它在横向模式下运行所有三个平台上：
+此处它在横向模式下运行：
 
 [![](effects-images/jittertext-small.png "三重抖动文本页面的屏幕截图")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

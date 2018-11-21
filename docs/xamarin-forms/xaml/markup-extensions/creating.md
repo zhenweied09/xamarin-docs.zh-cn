@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b928c55f447d68b8adfedaa031fd85750ee71267
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e11f7c95ccc65371ec5d844505682103025cd8af
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563701"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172231"
 ---
 # <a name="creating-xaml-markup-extensions"></a>创建 XAML 标记扩展
 
@@ -141,8 +141,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
         }
 
         string assemblyName = GetType().GetTypeInfo().Assembly.GetName().Name;
-
-        return ImageSource.FromResource(assemblyName + "." + Source);
+        return ImageSource.FromResource(assemblyName + "." + Source, typeof(ImageResourceExtension).GetTypeInfo().Assembly);
     }
 
     object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider)
@@ -152,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` 当需要访问作为嵌入资源的.NET Standard 库项目中存储的图像文件的 XAML 文件时非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法要求完全限定资源名称，其中包含的程序集名称、 文件夹名称和用句点分隔的文件名。 `ImageResourceExtension`不需要的程序集名称部分因为获取使用反射的程序集名称，并将前面添加到`Source`属性。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着除非图像还在该库中，此 XAML 资源扩展不能为外部库的一部分的程序集调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded-images)访问位图作为嵌入资源存储的详细信息的文章。)
+`ImageResourceExtension` 当需要访问作为嵌入资源的.NET Standard 库项目中存储的图像文件的 XAML 文件时非常有用。 它使用`Source`属性来调用静态`ImageSource.FromResource`方法。 此方法要求完全限定资源名称，其中包含的程序集名称、 文件夹名称和用句点分隔的文件名。 第二个参数`ImageSource.FromResource`方法提供的程序集名称，并仅为所需的发行版本 UWP 上。 无论如何，`ImageSource.FromResource`必须从包含位图，这意味着除非图像还在该库中，此 XAML 资源扩展不能为外部库的一部分的程序集调用。 (请参阅[**嵌入图像**](~/xamarin-forms/user-interface/images.md#embedded-images)访问位图作为嵌入资源存储的详细信息的文章。)
 
 尽管`ImageResourceExtension`需要`Source`属性设置，`Source`属性指示在属性中为类的内容属性。 这意味着，`Source=`可以省略大括号中的表达式的一部分。 在中**图像资源演示**页上，`Image`元素提取使用文件夹名称和文件名用句点分隔的两个映像：
 
@@ -178,7 +177,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 </ContentPage>
 ```
 
-下面是在所有三个平台上运行的程序：
+下面是运行的程序：
 
 [![图像资源演示](creating-images/imageresourcedemo-small.png "图像资源演示")](creating-images/imageresourcedemo-large.png#lightbox "图像资源演示")
 
@@ -199,7 +198,6 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 ## <a name="conclusion"></a>结束语
 
 XAML 标记扩展通过扩展从各种源中设置属性的功能，在 XAML 中扮演重要角色。 此外，如果现有的 XAML 标记扩展未提供所需内容，您还可以编写您自己。
-
 
 ## <a name="related-links"></a>相关链接
 

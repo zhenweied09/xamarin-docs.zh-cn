@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563974"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172244"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>第 28 章的摘要。 位置和地图
 
-> [!NOTE] 
+> [!NOTE]
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 Xamarin.Forms 支持[ `Map` ](xref:Xamarin.Forms.Maps.Map)派生的元素`View`。 由于使用映射所涉及的特殊平台要求，它们实现在单独的程序集， **Xamarin.Forms.Maps**，并涉及不同的命名空间： `Xamarin.Forms.Maps`。
@@ -194,7 +194,7 @@ IOS 应用程序中使用`Map`需要在 info.plist 文件中的两个行。
 
 ### <a name="the-phones-location"></a>手机所在的位置
 
-[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser)的属性`Map`与三个平台上工作略有不同[ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml)文件演示了：
+[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser)的属性`Map`运作方式有以不同的方式为每个平台上[ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml)文件演示了：
 
 - 在 iOS 上，则一个蓝点指示手机所在的位置，但您必须手动定位那里
 - 在 Android 上，将显示一个图标，当推送移动到手机所在的位置地图
