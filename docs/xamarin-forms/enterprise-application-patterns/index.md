@@ -1,6 +1,6 @@
 ---
-title: 《Xamarin.Forms企业应用程序模式》电子书
-description: 此电子书提供了用于开发可适应的、 可维护的、 和可测试的 Xamarin.Forms 企业应用程序的架构指南。
+title: 《使用 Xamarin.Forms 的企业应用程序模式》电子书
+description: 此电子书提供用于开发自适应、可维护和可测试的 Xamarin.Forms 企业应用程序的体系结构指南。
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
@@ -14,71 +14,71 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51528437"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>《Xamarin.Forms企业应用程序模式》电子书
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>《使用 Xamarin.Forms 的企业应用程序模式》电子书
 
-_开发可适应的、 可维护的、 和可测试的 Xamarin.Forms 企业应用程序的架构指南_
+开发自适应、可维护和可测试的 Xamarin.Forms 企业应用程序的体系结构指南
 
 ![](images/cover-sml.png "《Xamarin.Forms企业应用程序模式》电子书")
 
-此电子书提供有关如何实现Model-View-ViewModel (MVVM) 模式、 依赖关系注入、 导航、 验证和配置管理，同时保持松散耦合的指南。 此外，还有指导利用 IdentityServer 执行身份验证和授权，从容器化微服务访问数据和单元测试。
+此电子书提供有关如何实现模型-视图-视图模型 (MVVM) 模式、依赖关系注入、导航、验证和配置管理并同时保持松散耦合的指南。 此外，还提供有关利用 IdentityServer 执行身份验证和授权、通过容器化微服务访问数据以及执行单元测试的指南。
 
 ## <a name="prefaceprefacemd"></a>[前言](preface.md)
 
-本章介绍关于本指南的目的和范围，以及它面向的读者。
+本章介绍本指南的目的和范围及其目标人群。
 
 ## <a name="introductionintroductionmd"></a>[介绍](introduction.md)
 
-企业应用的开发人员面临着多种挑战，这会在开发过程中更改应用的架构。 因此，构建一款随着时间的推移可以被修改或扩展的应用很重要。 这种适应性的设计可能很困难，通常涉及把应用程序分到离散的，松散耦合的组件，这些组件可以轻松地集成在一起到应用程序。
+企业应用的开发人员面临着多种挑战，可能涉及在开发过程中更改应用架构。 因此，构建可随时间推移进行修改或扩展的应用则非常重要。这种适应性的设计可能很困难，通常涉及把应用分区可轻松集成到其他应用中的离散、松散耦合的组件当中。
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
-Model-View-ViewModel (MVVM) 模式有助于完全隔离的应用程序从其用户界面 (UI) 的业务和演示文稿逻辑。 维护应用程序逻辑与 UI 之间完全分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和 UI 设计人员在开发一个应用程序的各自部分时更轻松地进行协作。
+模型-视图-视图模型 (MVVM) 模式有助于将应用程序的的业务和演示逻辑与其用户界面 (UI) 隔离开来。始终清晰隔离应用程序逻辑和 UI 有助于解决诸多开发问题，还可使应用程序更加易于测试、维护和改进。这样做还可以显著改善代码重用机会，并允许开发人员和 UI 设计人员在开发各自的应用部分时能够更轻松地进行协作。
 
 ## <a name="dependency-injectiondependency-injectionmd"></a>[依赖关系注入](dependency-injection.md)
 
-依赖关系注入使代码无需依赖于具体类。 它通常使用一个容器来保存一个注册列表以及接口和抽象类型之间的映射，同时具体类型实现或扩展了这些类型。
+依赖关系注入将启用通过依赖于具体类型的代码来分离这些类型。它通常使用一个容器，该容器包含一系列注册和接口与抽象类型间的映射以及实现或扩展这些类型的具体类型。
 
-依赖关系注入容器通过提供一个用于实例化类实例的工具以及基于容器的配置来管理其生存期，来减少对象之间的耦合。 在对象创建期间，容器将该对象需要的任何依赖关系注入到它。 如果尚未创建这些依赖项，该容器会创建并将首先解析其依赖项。
+依赖关系注入根据容器的配置提供用于实例化类实例和管理器生命周期的工具，通过此方法减少对象之间的耦合。在对象创建期间，容器将向对象中注入其所需的任何依赖关系。如果这些依赖关系尚未创建，容器将首先创建并解析其依赖关系。
 
 ## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[松散耦合组件之间的通信](communicating-between-loosely-coupled-components.md)
 
-Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)类实现了发布-订阅模式，允许在不方便被对象链接和类型引用的组件之间基于消息的通信。 此机制允许发布者和订阅者进行通信而无需相互引用，帮助减少组件之间的相互依赖，同时还允许这些组件被单独开发和测试。
+Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) 类可实现发布-订阅模式，允许在对象和类型引用不便于链接的组件之间进行基于消息的通信。此机制允许发布者和订阅者在无需相互引用的情况下进行通信，帮助减少组件之间的依赖性，同时还允许这些组件接受独立开发和测试。
 
 ## <a name="navigationnavigationmd"></a>[导航](navigation.md)
 
-Xamarin.Forms 包含对页面导航的支持， 通常在用户与UI交互时，或从应用本身，在内部逻辑驱动的状态更改时。 然而，若要在使用 MVVM 模式的应用中实现，导航可能很复杂。
+Xamarin.Forms 包含对页面导航的支持，通常在逻辑驱动的状态更改时，因用户与 UI 交互或通过应用本身而引起页面导航。但是，在使用 MVVM 模式的应用中实现导航可能较为复杂。
 
-这一章介绍了一个`NavigationService`类，用于从ViewModel执行 “view model-first” 导航。 将导航逻辑放在ViewModel类意味着这些逻辑可以运用在自动测试。 此外，ViewModel然后可以实现逻辑来控制导航，以确保某些业务规则被强制实施。
+本章介绍 `NavigationService` 类，该类用于通过视图模型执行视图模型优先导航。将导航逻辑放置在视图模型类中意味着可通过自动测试来运用该逻辑。此外，视图模型接下来即可实现用于控制导航的逻辑，以确保强制实施特定业务规则。
 
 ## <a name="validationvalidationmd"></a>[验证](validation.md)
 
-任何接受用户输入的应用程序都应确保输入是有效的。 没有进行验证，用户提供的数据可能会导致应用程序故障。 验证强制业务规则的实施，可防止攻击者将恶意数据注入。
+任何接受用户输入的应用都应确保输入是有效的。 如果未进行验证，用户提供的数据可能导致应用故障。 验证可强制实施业务规则，并防止攻击者注入恶意数据。
 
-在Model-ViewModel的模型 (MVVM) 模式的上下文中，ViewModel 或 Model 通常需要执行数据验证以及通知 View 任何的验证错误，以便用户可以更正它们。
+在模型-视图-视图模型 (MVVM) 模式的上下文中，视图模型或模型将频繁需要执行数据验证并向视图发出任何验证错误的信号，以便用户可以进行修正。
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[配置管理](configuration-management.md)
 
-设置允许配置一个应用程序行为的数据从代码的分离，这些行为的变更无需重新生成应用程序。 应用程序设置是应用程序创建和管理的数据，同时用户设置是一个应用程序可自定义的设置，这些设置会影响应用的行为，并且不需要频繁地重新调整。
+设置可用于将配置应用行为的数据与代码相互分离，这允许在不重新构建应用的情况下更改行为。应用设置是应用创建和管理的数据；用户设置是应用的可自定义设置，可影响应用的行为，但不需要频繁进行重新调整。
 
 ## <a name="containerized-microservicescontainerized-microservicesmd"></a>[容器化微服务](containerized-microservices.md)
 
-微服务提供了一种适用于现代云应用程序敏捷性、 伸缩和可靠性要求的应用程序开发和部署方法。 微服务的主要优点之一是，它们可以独立地横向伸缩 (scaled-out)，这意味着那些需要更多的处理能力或网络带宽的特定的功能区域可以被扩展，以支持需求，避免在应用程序不必要的地方提供伸缩。
+微服务提供一种应用程序开发和部署的方法，可满足现代云应用程序的敏捷性、规模和可靠性要求。微服务的主要优点之一是，它们可以独立地横向扩展，这意味着可以为了支持需求而扩展需要更多处理能力或网络带宽的特定功能区域，但不必扩展未出现需求增加的应用程序的所在区域。
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[身份验证和授权](authentication-and-authorization.md)
 
-有许多方法可以为 Xamarin.Forms 应用集成身份验证和授权功能，与 ASP.NET MVC web 应用程序进行通信。 在这里，身份验证和授权，由一个使用了 IdentityServer 4 的容器化身份识别的微服务来提供。 IdentityServer 是一个ASP.NET Core 下开源的 OpenID Connect 和 OAuth 2.0 框架，集成到 ASP.NET Core Identity 来提供持有者令牌身份验证。
+可以通过许多方法将身份验证和授权集成到与 ASP.NET MVC Web 应用程序进行通讯的 Xamarin.Forms 应用中，此处将通过使用 IdentityServer 4 的容器化标识微服务来执行身份验证和授权。 IdentityServer 是一种适用于 ASP.NET Core 的开源 OpenID Connect 和 OAuth 2.0 框架，它与 ASP.NET Core Identity 集成以执行持有者令牌身份验证。
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[访问远程数据](accessing-remote-data.md)
 
-许多基于 web 的现代化解决方案使用 web 服务，以 web 服务器为宿主，以便为远程客户端应用程序提供功能的使用。 Web 服务公开的操作构成了 web API，并且客户端应用程序应该能够在不知道这些API公开的数据或操作是如何被实现的情况下来使用 web API。
+许多基于 Web 的现代化解决方案使用 Web 服务器托管的 Web 服务来为远程客户端应用程序提供功能。Web 服务公开的操作可构成 Web API，并且客户端应用应能够利用 Web API，但不需要了解该 API 公开的数据或操作的实现方式。
 
 ## <a name="unit-testingunit-testingmd"></a>[单元测试](unit-testing.md)
 
-从 MVVM 应用程序测试 Model 和 ViewModel 等同于测试任何其他类，并可以使用相同的工具和技术。 但是，有一些对于 Model 和 ViewModel 类的典型模式，可受益于特定的单元测试技术。
+测试 MVVM 应用程序的模型和视图模型与测试任何其他类的方式相同，可以使用相同的工具和方法。但是，模型和视图模型类具有一些典型模式，特定的单元测试技术可能对这些模式有益。
 
 ## <a name="feedback"></a>反馈
 
-此项目有一个社区站点，可以在其发布问题，并提供反馈。 社区站点位于[GitHub](https://github.com/dotnet-architecture/eShopOnContainers)。 或者，有关电子书的反馈可以通过电子邮件发送到[ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)。
+此项目设有社区网站，可在其中发布问题和提供反馈。社区网站位于 [GitHub](https://github.com/dotnet-architecture/eShopOnContainers)。或者，还可将有关该电子书的反馈通过电子邮件发送到 [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)。
 
 
 ## <a name="related-links"></a>相关链接
