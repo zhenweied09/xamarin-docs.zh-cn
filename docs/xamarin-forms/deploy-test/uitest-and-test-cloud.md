@@ -7,13 +7,13 @@ ms.assetid: b674db3d-c526-4e31-a9f4-b6d6528ce7a9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/31/2016
-ms.openlocfilehash: 215aa88b7e97a67242bd991dde0e66c445b47b0a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 10/24/2018
+ms.openlocfilehash: a4a3a1d35b675091319646a03fb0362e4d250b0e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526398"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171880"
 ---
 # <a name="automate-xamarinforms-testing-with-app-center"></a>使用 App Center 自动执行 Xamarin.Forms 测试
 
@@ -38,7 +38,7 @@ _Xamarin UITest 组件可以与 Xamarin.Forms 一起使用，以编写可在数�
 
 UITest 通过激活屏幕上的控件并对用户通常与应用程序交互的任何位置执行输入来自动化用户界面。 若要通过按某一按钮或在框中输入文本启用测试，测试代码需要某种可识别屏幕上控件的方法。
 
-若要启用引用控件的 UITest 代码，每个控件均需一个唯一标识符。 在 Xamarin.Forms 中，建议使用 `AutomationId` 属性设置此标识符，如下所示：
+若要启用引用控件的 UITest 代码，每个控件均需一个唯一标识符。 在 Xamarin.Forms 中，建议使用 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 属性设置此标识符，如下所示：
 
 ```csharp
 var b = new Button {
@@ -51,17 +51,19 @@ var l = new Label {
 };
 ```
 
-还可在 XAML 中设置 `AutomationId` 属性：
+还可在 XAML 中设置 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 属性：
 
 ```xaml
 <Button x:Name="b" AutomationId="MyButton" Text="Click me"/>
 <Label x:Name="l" AutomationId="MyLabel" Text="Hello, Xamarin.Forms!" />
 ```
 
-唯一 `AutomationId` 需添加到测试所需的所有控件（包括按钮、文本项和可能需要查询其值的标签）。
-
 > [!NOTE]
-> 注意，如果多次尝试设置 `Element` 的 `AutomationId` 属性，将引发 `InvalidOperationException`。
+> [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 是 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)，也可使用绑定的表达式进行设置。
+
+唯一 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 需添加到测试所需的所有控件（包括按钮、文本项和可能需要查询其值的标签）。
+
+> [!警告] 注意，如果多次尝试设置 [`Element`](xref:Xamarin.Forms.Element) 的 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 属性，将引发 `InvalidOperationException`。
 
 ### <a name="ios-application-project"></a>iOS 应用程序项目
 
@@ -102,16 +104,16 @@ Calabash 程序集使用非公开 Apple API，从而导致 App Store 拒绝应�
 
 ### <a name="use-automationid-in-the-xamarinforms-ui"></a>使用 Xamarin.Forms UI 中的 AutomationId
 
-编写任何 UITest 之前，必须确保 Xamarin.Forms 应用程序用户界面上的脚本可编辑。 确保用户界面中的所有控件都有 `AutomationId`，以便在测试代码中引用它们。
+编写任何 UITest 之前，必须确保 Xamarin.Forms 应用程序用户界面上的脚本可编辑。 确保用户界面中的所有控件都有 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId)，以便在测试代码中引用它们。
 
 #### <a name="referring-to-the-automationid-in-uitests"></a>在 UITest 中引用 AutomationId
 
-编写 UITest 时，`AutomationId` 值会在每个平台上以不同方式公开：
+编写 UITest 时，[`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 值会在每个平台上以不同方式公开：
 
 - **iOS** 使用 `id` 字段。
 - **Android** 使用 `label` 字段。
 
-若要编写可在 iOS 和 Android 上找到 `AutomationId` 的跨平台 UITest，请使用 `Marked` 测试查询：
+若要编写可在 iOS 和 Android 上找到 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 的跨平台 UITest，请使用 `Marked` 测试查询：
 
 ```csharp
 app.Query(c=>c.Marked("MyButton"))
@@ -200,7 +202,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 
 ## <a name="summary"></a>总结
 
-使用一种简单机制即可轻松通过 **Xamarin.UITest** 测试 Xamarin.Forms 应用程序，以将 `AutomationId` 公开为测试自动化的唯一视图标识符。 将 UITest 项目添加到 Xamarin.Forms 解决方案后，即可采用用于 Xamarin.Android 或 Xamarin.iOS 应用程序的相同步骤为 Xamarin.Forms 应用程序编写和运行测试。
+使用一种简单机制即可轻松通过 Xamarin.UITest 测试 Xamarin.Forms 应用程序，以将 [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId) 公开为测试自动化的唯一视图标识符。 将 UITest 项目添加到 Xamarin.Forms 解决方案后，即可采用用于 Xamarin.Android 或 Xamarin.iOS 应用程序的相同步骤为 Xamarin.Forms 应用程序编写和运行测试。
 
 有关如何将测试提交到 App Center Test 的信息，请参阅[提交 UITest](/appcenter/test-cloud/preparing-for-upload/uitest/)。 有关 UITest 的详细信息，请参阅 [App Center Test 文档](/appcenter/test-cloud/)。
 
