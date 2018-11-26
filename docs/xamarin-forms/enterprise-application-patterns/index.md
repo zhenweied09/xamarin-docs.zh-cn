@@ -18,7 +18,7 @@ ms.locfileid: "51528437"
 
 _开发自适应、可维护和可测试的 Xamarin.Forms 企业应用程序的体系结构指南_
 
-![](images/cover-sml.png "使用 Xamarin.Forms 电子书的企业应用程序模式")
+![](images/cover-sml.png "《使用 Xamarin.Forms 的企业应用程序模式》电子书")
 
 此电子书提供有关如何实现模型-视图-视图模型 (MVVM) 模式、依赖关系注入、导航、验证和配置管理并同时保持松散耦合的指南。 此外，还提供有关利用 IdentityServer 执行身份验证和授权、通过容器化微服务访问数据以及执行单元测试的指南。
 
@@ -66,7 +66,7 @@ Xamarin.Forms 包含对页面导航的支持，通常在逻辑驱动的状态更
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[身份验证和授权](authentication-and-authorization.md)
 
-有许多方法与 ASP.NET MVC web 应用程序进行通信的 Xamarin.Forms 应用中集成身份验证和授权。 在这里，与使用 IdentityServer 4 的容器化的标识微服务执行身份验证和授权。 IdentityServer 是用于与 ASP.NET Core 标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+可以通过许多方法将身份验证和授权集成到与 ASP.NET MVC Web 应用程序进行通讯的 Xamarin.Forms 应用中， 此处将通过使用 IdentityServer 4 的容器化标识微服务来执行身份验证和授权。 IdentityServer 是一种适用于 ASP.NET Core 的开源 OpenID Connect 和 OAuth 2.0  框架，它与 ASP.NET Core Identity 集成以执行持有者令牌身份验证。
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[访问远程数据](accessing-remote-data.md)
 
