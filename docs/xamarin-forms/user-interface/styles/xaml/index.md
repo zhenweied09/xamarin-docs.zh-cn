@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2607298bdc0842f60a1d1a3299bed61bbea925a1
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995070"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459858"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>使用 XAML 样式的样式设置 Xamarin.Forms 应用
 
 ## <a name="introductionintroductionmd"></a>[介绍](introduction.md)
 
-Xamarin.Forms 应用程序通常包含多个具有相同的外观的控件。 设置每个控件的外观会重复且容易出错。 相反，样式可以创建自定义控件外观的分组和可用的控件类型的设置属性。
+Xamarin.Forms 应用程序通常包含多个具有相同的外观的控件。 设置每个控件的外观会重复且容易出错。 相反，样式可以创建的分组和设置的控件类型的属性可通过自定义控件外观。
 
 ## <a name="explicit-stylesexplicitmd"></a>[显式样式](explicit.md)
 

@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61ed731f22122637963c28c42f44b84ec7fa9f4
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459949"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>认证提供移动解决方案的咨询合作伙伴
 
@@ -290,7 +290,7 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 
 | 合作伙伴 | 位置 | 描述 |
 | --- | --- | --- |
-|[高查看软件](http://www.highviewsoft.com)|北京，中国|Visionsoft 软件重点提供跨平台应用和基于云的服务程序设计、 开发、 实现、 技术培训和其他咨询服务|
+|[高查看软件](http://www.highviewsoft.com)|北京，中国|高查看软件重点提供跨平台应用和基于云的服务程序设计、 开发、 实现、 技术培训和其他咨询服务|
 
 
 ## <a name="colombia"></a>哥伦比亚

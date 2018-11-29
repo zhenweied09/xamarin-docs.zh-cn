@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e41f19c1a2d02537f300ae82b7f3d45bc6571e1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459832"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>在 Xamarin.Mac 中.storyboard/.xib-less 用户界面设计
 
@@ -34,7 +34,7 @@ _本文介绍如何创建 Xamarin.Mac 应用程序的用户界面直接从C#代�
 
 若要切换到 Xibless 窗口应用程序，请执行以下操作：
 
-1. 打开你想要停止使用的应用程序`.stroyboard`或.xib 文件定义用户界面在 Visual Studio for mac。
+1. 打开你想要停止使用的应用程序`.storyboard`或.xib 文件定义用户界面在 Visual Studio for mac。
 2. 在中**Solution Pad**，右键单击**Main.storyboard**或**MainWindow.xib**文件，然后选择**删除**: 
 
     ![主要情节提要或窗口中删除](xibless-ui-images/switch01.png "删除主要情节提要或窗口")
@@ -371,5 +371,5 @@ public override void DidFinishLaunching (NSNotification notification)
 - [MacXibless （示例）](https://developer.xamarin.com/samples/mac/MacXibless/)
 - [Windows](~/mac/user-interface/window.md)
 - [菜单](~/mac/user-interface/menu.md)
-- [macOS 人机接口指南 》](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [macOS 人机界面指南](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
 - [Windows 简介](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/WinPanel/Introduction.html)
