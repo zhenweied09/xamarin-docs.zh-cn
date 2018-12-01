@@ -1,5 +1,5 @@
 ---
-title: Android 9 饼图
+title: Android 9 Pie
 description: 如何开始开发应用程序使用 Xamarin.Android 的 Android 9 饼图。
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111499"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710018"
 ---
 # <a name="android-pie-features"></a>饼图的 android 功能
 
@@ -24,9 +24,7 @@ _如何开始开发应用程序使用 Xamarin.Android 的 Android 9 饼图。_
 
 本文旨在帮助您开始开发 Xamarin.Android 应用程序 Android 饼图。 它说明了如何安装所需更新、 配置 SDK，并准备好仿真器或设备进行测试。 它还提供了 Android 饼图中的新增功能的概述，并提供说明了如何使用某些关键的 Android 饼图功能的示例源代码。
 
-![预览](~/media/shared/preview.png)
-
-Xamarin.Android 9.0 提供对 Android 饼图的预览支持。 有关 Android 饼图的 Xamarin.Android 支持的详细信息，请参阅[Android P 开发人员预览版 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1)发行说明。
+Xamarin.Android 9.0 提供对 Android 饼图的支持。 有关 Android 饼图的 Xamarin.Android 支持的详细信息，请参阅[Android P 开发人员预览版 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1)发行说明。
 
 ## <a name="requirements"></a>要求
 
@@ -142,7 +140,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 如果需要更多详细的信息剪切块区域在设备上，你可以使用新[DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html)类。 `DisplayCutout` 表示不能用于显示内容的显示区域。 此信息可用于检索位置和形状的裁剪，使您的应用程序不会尝试在此非功能区域中显示的内容。
 
-有关 Android P 中的新切除功能的详细信息，请参阅[显示切除支持](https://developer.android.com/preview/features#cutout)。
+有关 Android P 中的新切除功能的详细信息，请参阅[显示切除支持](https://developer.android.com/about/versions/pie/android-9.0#cutout)。
 
 
 
@@ -223,12 +221,12 @@ Android 饼图支持 IEEE 802.11mc (也称为_WiFi Round 往返时间_或_WiFi R
 
 ### <a name="multi-camera-support"></a>多照相机支持
 
-许多较新的 Android 设备都具有双前面和/或双后可用于诸如立体声视觉、 增强视觉效果和改进的缩放功能等功能的摄像头。 Android P 引入了一个新[多照相机](https://developer.android.com/preview/features#camera)API，它使应用程序以使用*逻辑照相机*(或*逻辑多照相机*) 支持的两个或多个物理相机。
+许多较新的 Android 设备都具有双前面和/或双后可用于诸如立体声视觉、 增强视觉效果和改进的缩放功能等功能的摄像头。 Android P 引入了一个新[多照相机](https://developer.android.com/about/versions/pie/android-9.0#camera)API，它使应用程序以使用*逻辑照相机*(或*逻辑多照相机*) 支持的两个或多个物理相机。
 若要确定是否设备支持逻辑多照相机，则可以查看的每个设备上的照相机功能，以查看它是否支持[RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA)。
 
 Android 饼图还包括一个新[SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html)可用于帮助在初始捕获过程中减少延迟和无需启动并启动相机流的类。
 
-详细了解多照相机中 Android P 支持，请参阅[多照相机支持和照相机更新](https://developer.android.com/preview/features#camera)。
+详细了解多照相机中 Android P 支持，请参阅[多照相机支持和照相机更新](https://developer.android.com/about/versions/pie/android-9.0#camera)。
 
 
 ### <a name="other-features"></a>其他功能
@@ -256,7 +254,7 @@ Android 饼图还包括一个新[SessionConfiguration](https://developer.android
 
 -  不再允许直接访问另一个应用的数据目录的路径。
 
-有关面向 Android P 的应用程序的行为更改的详细信息，请参阅[的行为更改](https://developer.android.com/preview/behavior-changes.html#p-apps)。
+有关面向 Android P 的应用程序的行为更改的详细信息，请参阅[的行为更改](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps)。
 
 
 ## <a name="sample-code"></a>示例代码
