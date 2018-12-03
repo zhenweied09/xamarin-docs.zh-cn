@@ -98,7 +98,7 @@ nodeToAddTo.AddAction (coreAction);
 
 非线性内插是不太不和谐并且添加波兰语的元素，因此 CocosSharp 提供了各种各样的缓动操作用于修改变量更改操作。
 
-在中**ActionProject**示例中，我们可以切换通过单击第二个标签的缓动操作这些类型 (其默认值为**<None>**):
+在中**ActionProject**示例中，我们可以切换通过单击第二个标签的缓动操作这些类型 (其默认值为 **<None>**):
 
 ![](ccaction-images/image4.gif "用户可以通过单击第二个标签的缓动操作这些类型之间进行切换")
 

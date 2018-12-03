@@ -494,7 +494,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 调用另一个常见用途上位图_翻转_。 从概念上讲，在三个维度围绕垂直轴或通过位图的中心水平轴旋转位图。 垂直翻转创建镜像映像。
 
-**位图挡板**页面**[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序演示了这些过程。 XAML 文件包含`SKCanvasView`和用于翻转水平和垂直方向的两个按钮：
+**位图挡板** 页面 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 应用程序演示了这些过程。 XAML 文件包含`SKCanvasView`和用于翻转水平和垂直方向的两个按钮：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

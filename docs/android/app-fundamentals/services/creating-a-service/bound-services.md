@@ -34,7 +34,7 @@ _绑定的服务是 Android 提供客户端 （例如 Android 活动） 可与�
 
 ![一个显示每个服务组件之间的关系的图表](bound-services-images/bound-services-02.png "关系图显示每个服务组件之间的关系。")
 
-本指南介绍了如何扩展`Service`类，以实现绑定的服务。 它还将介绍实现`IServiceConnection`和扩展`Binder`以允许客户端与服务进行通信。 示例应用程序附带本指南中，其中包含一个名为 Xamarin.Android 项目使用的一种解决方案**[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** 。 这是非常基本的应用程序，该示例演示了如何实现的服务以及如何将活动绑定到它。 绑定的服务具有只有一个方法，使用非常简单的 API `GetFormattedTimestamp`，这会返回一个字符串，告知用户已启动该服务时，多长时间运行。 应用程序还允许用户手动解除绑定，并将绑定到该服务。
+本指南介绍了如何扩展`Service`类，以实现绑定的服务。 它还将介绍实现`IServiceConnection`和扩展`Binder`以允许客户端与服务进行通信。 示例应用程序附带本指南中，其中包含一个名为 Xamarin.Android 项目使用的一种解决方案 **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** 。 这是非常基本的应用程序，该示例演示了如何实现的服务以及如何将活动绑定到它。 绑定的服务具有只有一个方法，使用非常简单的 API `GetFormattedTimestamp`，这会返回一个字符串，告知用户已启动该服务时，多长时间运行。 应用程序还允许用户手动解除绑定，并将绑定到该服务。
 
 [![在 Android 手机上运行的应用程序的屏幕截图](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 

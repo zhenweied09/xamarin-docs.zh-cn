@@ -21,7 +21,7 @@ ms.locfileid: "51526515"
 开发人员可以通过编写共享此工作_插件_并将其发布到 NuGet。
 
 > [!NOTE]
-> 许多以前只能通过插件提供的跨平台功能现在是开放源代码的一部分**[Xamarin.Essentials](~/essentials/index.md)** 库。 这些功能包括： 电池状态、 指南针、 运动传感器、 地理位置、 文本到语音转换，和更多。 在将来**Xamarin.Essentials**将 Xamarin.Forms 应用程序的跨平台功能的主要来源。 尽管开发人员仍然可以创建和发布插件，请考虑促成**Xamarin.Essentials**。
+> 许多以前只能通过插件提供的跨平台功能现在是开放源代码的一部分 **[Xamarin.Essentials](~/essentials/index.md)** 库。 这些功能包括： 电池状态、 指南针、 运动传感器、 地理位置、 文本到语音转换，和更多。 在将来**Xamarin.Essentials**将 Xamarin.Forms 应用程序的跨平台功能的主要来源。 尽管开发人员仍然可以创建和发布插件，请考虑促成**Xamarin.Essentials**。
 
 ## <a name="finding-and-adding-plugins"></a>查找和添加插件
 
