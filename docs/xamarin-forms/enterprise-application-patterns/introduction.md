@@ -26,19 +26,19 @@ ms.locfileid: "35242955"
 
 许多企业应用非常复杂，需多名开发人员。 决定应用的设计方式是一项重大挑战，因为要允许多名开发人员独立且有效地开发应用的不同部分，同时确保将各部分集成到应用中时，各部分能无缝结合。
 
-设计和生成结果中新增功能的应用程序的传统方法被称为*整体*组件与它们之间没有明显的紧密耦合其中的应用程序。 通常情况下，此整体方法会导致应用程序是十分困难和维持，效率不高，因为它可能很难解决 bug，而不会断开其他组件在应用中，并可能很困难以添加新功能或替换现有功能。
+采用传统的设计和构建方法会得到所谓的单一应用，其中各组件紧密耦合，不存在明确的界限。 通常情况下，使用这种单一方法会增加应用的维护难度，降低维护效率，因为要在不破坏应用中其他组件的情况下解决 bug 十分困难，并且可能难以添加新功能或替换现有功能。
 
 应对这些挑战的一种有效补救措施是将应用划分为离散、松散耦合的组件，这些组件可轻松集成到应用中。 这样的方法有多个优点：
 
 -   允许由不同个人或团队来开发、测试、扩展和维护单个功能。
 -   有助于加强应用横向功能（如身份验证和数据访问）与纵向功能（如应用特定的业务功能）间的重用，并明确分离关注点。 这样便可更轻松地管理应用组件间的依赖关系和交互。
--   它可帮助维护的角色分离通过允许不同的个人或团队，以侧重显示特定任务或功能根据他们的专业技能的部分。 具体而言，它提供的用户界面和应用程序的业务逻辑之间分离开来。
+-   允许不同个人或团队根据其专业知识关注特定任务或功能，明确角色分工，尤其是它更加清晰地分离了用户界面和应用业务逻辑。 具体而言，它提供的用户界面和应用程序的业务逻辑之间分离开来。
 
 然而，在把应用划分为离散、松散耦合的组件时，有许多必须解决的问题。 这些问题包括：
 
 -   决定如何提供用户界面控件及其逻辑间的明确关注点分离。 创建 Xamarin.Forms 企业应用时，最重要的一点就是确定是否将业务逻辑放到 code-behind 文件中，或是否在用户界面控件及其逻辑之间创建明确的关注点分离，从而提高应用的可维护性和可测试性。 有关详细信息，请参阅[模型-视图-视图模型](~/xamarin-forms/enterprise-application-patterns/mvvm.md)。
 -   决定是否使用依赖关系注入容器。 依赖关系注入容器可提供一个工具来构造类的实例并注入对象的依赖关系，以减少对象间的依赖耦合，并且还可基于容器的配置来管理对象的生命周期。 有关详细信息，请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
--   选择平台提供的事件处理之间和松散耦合会很不方便链接对象和类型引用的组件之间的基于消息的通信。 有关详细信息，请参阅简介[通信之间松散耦合组件](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)。
+-   选择平台提供的事件或松散耦合的基于消息的通信，后者发生在不便通过对象和类型引用链接的组件间。 有关详细信息，请参阅[松散耦合组件间的通信简介](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)。
 -   决定如何在页面间导航，包括如何发起导航，以及将导航逻辑保留在哪里。 有关详细信息，请参阅[导航](~/xamarin-forms/enterprise-application-patterns/navigation.md)。
 -   确定如何验证用户输入正确与否。 制定决策时必须确定如何验证用户输入，以及如何通知用户验证错误。 有关详细信息，请参阅[验证](~/xamarin-forms/enterprise-application-patterns/validation.md)。
 -   决定如何执行身份验证，以及如何保护带有授权的资源。 有关详细信息，请参阅[身份验证和授权](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md)。
@@ -89,7 +89,7 @@ ms.locfileid: "35242955"
 
 本指南重点介绍使用 Xamarin.Forms 构建跨平台企业应用，并以 eShopOnContainers 移动应用为例。 图 1-2 显示了含上述功能的 eShopOnContainers 移动应用页面。
 
-[![](introduction-images/screenshots.png "EShopOnContainers 移动应用")](introduction-images/screenshots-large.png#lightbox "eShopOnContainers 移动应用程序")
+[![](introduction-images/screenshots.png "eShopOnContainers 移动应用")](introduction-images/screenshots-large.png#lightbox "eShopOnContainers 移动应用程序")
 
 **图 1-2**: eShopOnContainers 移动应用程序
 
