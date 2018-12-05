@@ -14,7 +14,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998437"
 ---
-# <a name="the-model-view-viewmodel-pattern"></a>模型-视图-视图模型模式
+# <a name="the-model-view-viewmodel-pattern"></a>Model-View-ViewModel模式
 
 Xamarin.Forms 开发人员通常通过在 XAML 创建用户界面，并且在 code-behind 文件添加代码来操作用户界面。 随着应用程序进行修改，代码量和范围的增加，可能出现复杂的维护问题。 这些问题包括 UI 控件和业务逻辑之间的紧密耦合，这会增加修改 UI 的代价和进行单元测试的难度。
 
