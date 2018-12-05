@@ -26,7 +26,7 @@ Connectivity 类可用于监视设备的网络状况是否发生变化，检查�
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-`AccessNetworkState` 权限是必需的，且必须在 Android 项目中配置。 可通过以下方法添加此权限：
+需要具有 `AccessNetworkState` 权限，并且必须在 Android 项目中进行配置。 可以通过以下方法添加此权限：
 
 打开 Properties 文件夹下的 AssemblyInfo.cs 文件并添加：
 
@@ -36,7 +36,7 @@ Connectivity 类可用于监视设备的网络状况是否发生变化，检查�
 
 或更新 Android 清单：
 
-打开 Properties 文件夹下的 AndroidManifest.xml 文件，并在 manifest 节点内添加。
+打开 Properties 文件夹下的 AndroidManifest.xml 文件，并在“manifest”节点内添加以下代码。
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
