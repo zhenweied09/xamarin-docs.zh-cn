@@ -83,7 +83,7 @@ ms.locfileid: "35242955"
 
 这些后端服务作为使用 ASP.NET Core MVC 的微服务实现，并在单个 Docker 主机中部署为唯一容器。 这些后端服务被统称为 eShopOnContainers 参考应用程序。 客户端应用通过具象状态传输 (REST) Web 接口与后端服务进行通信。 有关微服务和 Docker 的详细信息，请参阅[容器化微服务](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md)。
 
-有关后端服务的实现的信息，请参阅[《.NET 微服务： 容器化 .NET 应用程序架构](https://aka.ms/microservicesebook)电子书。
+有关后端服务的实现的信息，请参阅[《.NET 微服务： 容器化 .NET 应用程序架构》](https://aka.ms/microservicesebook)电子书。
 
 ### <a name="mobile-app"></a>移动应用程序
 
