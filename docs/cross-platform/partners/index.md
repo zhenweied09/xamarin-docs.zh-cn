@@ -672,11 +672,11 @@ _列出的主位置，很多合作伙伴提供服务，涵盖边框。_
 |[TechTalk](http://www.techtalk.at)|维也纳，奥地利;苏黎世，瑞士|我们中充分发挥您在软件开发中，从而节省时间和金钱的同时保护质量。 |
 
 
-## <a name="taiwan"></a>台湾
+## <a name="taiwan"></a>中国台湾
 
 | 合作伙伴 | 位置 | 描述 |
 | --- | --- | --- |
-|[iScreen Corporation](http://www.iscreen.com)|台北，台湾|iScreen 已生成其基础上可靠的技术，与业务专注于咨询、 设计和生成 Web 应用和任何移动平台应用|
+|[iScreen Corporation](http://www.iscreen.com)|台北，中国台湾|iScreen 已生成其基础上可靠的技术，与业务专注于咨询、 设计和生成 Web 应用和任何移动平台应用|
 |[JetFusion Information Co.，Ltd.正](http://www.jetfusion.com.tw/)|台北|我们提供高度灵活、 实时和专业软件开发和系统构建服务，而且还提供完整的企业信息系统解决方案。|
 
 
