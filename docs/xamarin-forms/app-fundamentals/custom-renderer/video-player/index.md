@@ -1,6 +1,6 @@
 ---
 title: 实现视频播放器
-description: 此文章介绍了如何实现使用 Xamarin.Forms 的视频播放器应用程序。
+description: 本文介绍如何使用 Xamarin.Forms 实现视频播放器应用程序。
 ms.prod: xamarin
 ms.assetid: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050
 ms.technology: xamarin-forms
@@ -9,60 +9,60 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 00697ca0adf3a34abec90c2f96d9fd9c273d06bb
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35239779"
 ---
 # <a name="implementing-a-video-player"></a>实现视频播放器
 
-因此，有时需要播放在 Xamarin.Forms 应用程序中的视频文件。 此系列文章讨论如何编写适用于 iOS、 Android 和一个名为的 Xamarin.Forms 类通用 Windows 平台 (UWP) 的自定义呈现器`VideoPlayer`。
+有时需要在 Xamarin.Forms 应用程序中播放视频文件。 本系列文章介绍如何为名为 `VideoPlayer` 的 Xamarin.Forms 类编写适用于 iOS、Android 和通用 Windows 平台 (UWP) 的自定义呈现器。
 
-在[ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)取样，请实现并支持所有文件`VideoPlayer`在文件夹中名为`FormsVideoLibrary`使用命名空间的标识`FormsVideoLibrary`或命名空间开始`FormsVideoLibrary`。 此组织命名应进行轻松地将视频播放器文件复制到 Xamarin.Forms 解决方案。
+在 [VideoPlayerDemos](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 示例中，所有实现和支持 `VideoPlayer` 的文件都位于名为 `FormsVideoLibrary` 的文件夹中，并使用 `FormsVideoLibrary` 命名空间或以 `FormsVideoLibrary` 开头的命名空间进行标识。 通过这种组织结构和命名方式，可以轻松地将视频播放器文件复制到自己的 Xamarin.Forms 解决方案中。
 
-`VideoPlayer` 可以播放从三种类型的源的视频文件：
+`VideoPlayer` 可播放来自以下三类源的视频文件：
 
-- 使用 URL 在 Internet
-- 在平台应用程序中嵌入的资源
+- 使用 URL 的 Internet
+- 嵌入在平台应用程序中的资源
 - 设备的视频库
 
-视频播放器需要*传输控件*、 它们用于播放和暂停视频中，按钮和定位栏，显示了通过视频的进度，并允许用户快速跳到不同的位置。 `VideoPlayer` 可以使用传输控件和定位栏提供的平台 （如下所示），也可以提供自定义传输控件和定位栏。 此处是在 iOS、 Android 和通用 Windows 平台下运行的程序：
+视频播放器需具备传输控件（即用于播放和暂停视频的按钮）和定位条（用于显示视频进度并允许用户快速跳转到不其他位置）。 `VideoPlayer` 可使用平台提供的传输控件和定位条（如下所示），也可使用你提供的自定义传输控件和定位条。 下面是 iOS、Android 和通用 Windows 平台上运行的程序：
 
 [![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png#lightbox "播放 Web 视频")
 
-当然，你可以打开手机上，以进行较大的视图。
+当然，也可横向播放，扩大画面视图。
 
-更复杂的视频播放器将具有一些其他功能，如卷控制、 电话呼叫时，通过中断视频的机制和一种在播放期间保持屏幕活动。
+复杂型视频播放器还具备其他功能，例如音量控制，来电时中断视频的机制以及在播放期间保持屏幕活动的方式。
 
-以下一系列文章渐进式演示如何生成的平台呈现器和支持类：
+以下系列文章逐步演示如何生成平台呈现器和支持类：
 
 ## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[创建平台视频播放器](player-creation.md)
 
-每个平台需要`VideoPlayerRenderer`类创建和维护包含平台支持的视频播放器控件。 这篇文章演示呈现器的结构类，以及如何创建播放器。
+每个平台都需要 `VideoPlayerRenderer` 类，用于创建和维护平台支持的视频播放器控件。 本文介绍了呈现器类的结构，以及创建播放器的方式。
 
 ## <a name="playing-a-web-videoweb-videosmd"></a>[播放 Web 视频](web-videos.md)
 
-可能的视频的视频播放器最常见来源是 Internet。 本文介绍如何引用和用作视频播放器源 Web 视频。
+Internet 或许是视频播放器最常见的视频来源。 本文介绍如何引用 Web 视频并将其用作视频播放器的源。
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[绑定到播放器的视频源](source-bindings.md)
+## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[将视频源绑定到播放器](source-bindings.md)
 
-本文章将使用`ListView`来呈现视频播放的集合。 一个程序显示的代码隐藏文件如何可以设置视频源的视频播放器，但第二个程序演示如何使用数据绑定之间`ListView`和视频播放器。
+本文使用 `ListView` 提供要播放的视频集合。 一个程序显示代码隐藏文件如何设置视频播放器的视频源；而另一个程序显示如何在 `ListView` 和视频播放器之间使用数据绑定。
 
 ## <a name="loading-application-resource-videosloading-resourcesmd"></a>[加载应用程序资源视频](loading-resources.md)
 
-在平台项目中，可以作为资源嵌入视频。 这篇文章演示如何存储这些资源和更高版本将它们加载到程序中要播放的视频播放器。
+视频可作为资源嵌入到平台项目中。 本文介绍如何存储这些资源，然后将其加载到将使用视频播放器播放的程序中。
 
 ## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[访问设备的视频库](accessing-library.md)
 
-使用设备的照相机创建视频时，视频文件存储在设备的映像库中。 这篇文章演示如何访问设备的图像选取器，以便选择的视频，并随后使用视频播放器播放。
+使用设备摄像头创建视频后，视频文件将存储在设备的图像库中。 本文介绍如何访问设备的图像选取器并选择视频，然后使用视频播放器进行播放。
 
 ## <a name="custom-video-transport-controlscustom-transportmd"></a>[自定义视频传输控件](custom-transport.md)
 
-尽管每个平台上的视频播放器提供自己的按钮的窗体中的传输控制**播放**和**暂停**，可以禁止显示这些按钮，还可以提供你自己。 本文介绍如何。
+虽然每个平台上的视频播放器都提供自己的传输控件（即“播放”和“暂停”按钮），但你可以不使用这些按钮并提供自己的按钮。 本文介绍如何进行此操作。
 
 ## <a name="custom-video-positioningcustom-positioningmd"></a>[自定义视频定位](custom-positioning.md)
 
-每个平台视频播放器都有一个位置栏，显示视频的进度，并允许你以跳到特定位置的向前或向后。 本文演示如何可以将该位置栏替换为自定义控件。
+每个平台视频播放器都具备定位条，用于显示视频进度并可跳过或返回特定位置。 本文演示如何使用自定义控件替换定位条。
 
 
 
@@ -70,4 +70,4 @@ ms.locfileid: "35239779"
 
 ## <a name="related-links"></a>相关链接
 
-- [视频播放器演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [视频播放器演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
