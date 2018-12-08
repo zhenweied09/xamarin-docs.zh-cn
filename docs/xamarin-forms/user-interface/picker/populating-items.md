@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 8d911108d7d72586a37a3281803eab9c0841f16c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997102"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057426"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>将数据添加到选取器的项集合
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 
 _选取器视图是一个用于选择文本项中的数据列表控件。本文介绍如何通过将其添加到项目集合中填充数据选取器以及如何响应用户的项选择。_
 

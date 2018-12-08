@@ -7,14 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 653904da37354db52ef6bbd303355e98ddc1582f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122629"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056566"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>裁剪 SkiaSharp 位图
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 [**创建和绘制 SkiaSharp 位图**](drawing.md)一文所述方式`SKBitmap`可以将对象传递给`SKCanvas`构造函数。 要在位图上呈现该画布原因图形上调用任何绘图方法。 这些绘制方法包括`DrawBitmap`，这意味着该技术允许将传输部分或全部一个位图到另一个位图，可能与应用的转换。
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 762d4752eb3882398f212e634c66305f74d5a459
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527323"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052658"
 ---
 # <a name="device-orientation"></a>设备方向
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
 
 请务必要考虑将如何使用你的应用程序和如何合并横向方向以改善用户体验。 可以设计单独的布局以容纳多个方向和最佳使用的可用空间。 在应用程序级别，可以禁用或启用旋转。
 

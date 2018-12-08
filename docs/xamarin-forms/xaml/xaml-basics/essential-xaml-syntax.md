@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0c7e0d01a75d72204ca086fc1b0639d584220651
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171568"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059738"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>第 2 部分。 基本 XAML 语法
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _XAML 主要用于实例化和初始化对象。但通常情况下，属性必须设置为复杂对象不能轻松地表示为 XML 字符串，并有时一个类定义的属性必须设置上一个子类。这些两个需要属性元素和附加的属性的基本 XAML 语法的功能。_
 

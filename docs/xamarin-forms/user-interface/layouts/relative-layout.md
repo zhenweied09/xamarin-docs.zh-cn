@@ -1,44 +1,46 @@
 ---
 title: Xamarin.Forms RelativeLayout
-description: 此文章介绍了如何使用 Xamarin.Forms RelativeLayout 类来创建 Ui 缩放以适合任何屏幕大小。
+description: 本文介绍如何使用 Xamarin.Forms RelativeLayout 类来创建扩展以适应任何屏幕大小的 Ui。
 ms.prod: xamarin
 ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 712092e58a7a7358ba1fa808614822c7988e6105
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 4bd4524f4bf84327571609c8fb43dec164c9db56
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245050"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061221"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-`RelativeLayout` 将使用位置和大小视图相对于布局或同级视图的属性。 与不同`AbsoluteLayout`，`RelativeLayout`不包含移动的定位点的概念，并且没有提供用于定位元素相对于底部或右边缘的布局的功能。 `RelativeLayout` 支持在其自己的边界之外的定位元素。
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+
+`RelativeLayout` 使用位置和大小视图相对于布局或同级视图的属性。 与不同`AbsoluteLayout`，`RelativeLayout`不具有移动定位点的概念并不具有用于定位的元素相对于底部或布局的右边缘的功能。 `RelativeLayout` 支持其自己的边界的定位元素。
 
 [![](relative-layout-images/layouts-sml.png "Xamarin.Forms 布局")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 ## <a name="purpose"></a>目标
 
-`RelativeLayout` 可以用于将在屏幕上相对于整体的布局或到其他视图的视图。
+`RelativeLayout` 可用来定位在屏幕上相对于整体的布局或到其他视图的视图。
 
-![](relative-layout-images/flag.png "RelativeLayout 浏览")
+![](relative-layout-images/flag.png "RelativeLayout 探索")
 
 ## <a name="usage"></a>用法
 
 ### <a name="understanding-constraints"></a>了解约束
 
-位置和大小内的某个视图`RelativeLayout`，可使用约束。 约束表达式可以包含以下信息：
+定位和调整大小内的某个视图`RelativeLayout`通过约束。 约束表达式可以包含以下信息：
 
-- **类型**&ndash;约束是相对于父或另一个视图。
-- **属性**&ndash;要用作基础的约束的属性。
-- **因素**&ndash;要应用到的属性值的系数。
+- **类型**&ndash;约束是相对于父级或另一个视图。
+- **属性**&ndash;要作为基础用于约束的属性。
+- **身份**&ndash;要应用到的属性值的系数。
 - **常量**&ndash;要用作值的偏移量的值。
-- **ElementName** &ndash;约束是相对于视图的名称。
+- **ElementName** &ndash;的约束是相对于视图的名称。
 
-在 XAML 中，约束表示为`ConstraintExpression`s。 请看下面的示例：
+在 XAML 中，约束都表示为`ConstraintExpression`s。 请看下面的示例：
 
 ```xaml
 <BoxView Color="Green" WidthRequest="50" HeightRequest="50"
@@ -54,7 +56,7 @@ ms.locfileid: "35245050"
                              Constant=-100}" />
 ```
 
-在 C# 中，约束表示略有不同，使用视图上的函数，而不是表达式。 为布局的变量指定约束`Add`方法：
+在C#，约束稍有不同，使用表示函数而不是表达式在视图上。 约束被指定为参数的布局`Add`方法：
 
 ```csharp
 layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
@@ -71,16 +73,16 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 请注意上述布局的以下方面：
 
 - `x`和`y`具有其自己的约束指定约束。
-- 在 C# 中，相对约束被定义为函数。 概念喜欢`Factor`不存在，但可以手动实现。
-- 该框的`x`坐标定义为父代、-100 的半角。
-- 该框的`y`坐标定义为父代、-100 的半高。
+- 在C#，相对约束被定义为函数。 概念喜欢`Factor`不存在，但可以手动实现。
+- 该框的`x`坐标被定义为父代、-100 宽度的一半。
+- 该框的`y`坐标被定义为父代、-100 的高度。
 
 > [!NOTE]
-> 由于未定义约束的方法，则可以在 C# 不是可以指定与 XAML 中进行更复杂的布局。
+> 由于定义的约束的方式，它是可以进行更复杂的布局，在C#不是可以使用 XAML 中指定。
 
-这两个上面的示例定义与约束`RelativeToParent` &ndash; ，即其值是相对于父元素。 它还可定义相对于另一个视图的约束。 这允许 （向开发人员） 更直观的布局，并且可以使布局代码意图更容易发现。
+这两个上面的示例定义与约束`RelativeToParent` &ndash; ，即它们的值是相对于父元素。 还有可能要相对于另一个视图中定义的约束。 这允许针对 （向开发人员） 更直观的布局，并可以使布局代码的意图更容易看出来。
 
-请考虑其中一个元素必须是 20 像素低于另一个布局。 如果与常量值定义了两个元素，可能具有较低其`Y`约束定义为一个常数，用于为大于 20 像素`Y`更高版本的元素的约束。 这种方法过程的更高版本的元素位于使用比例，以便像素大小不已知的情况下很短。 在这种情况下，限制基于另一个元素的位置的元素是更可靠的：
+请考虑需要为 20 像素比另一个更小的一个元素的布局。 如果这两个元素定义的常量值，可以让越低及其`Y`约束定义为一个常量，它是大于 20 像素`Y`更高版本的元素的约束。 这种方法显现不足如果更高版本放置该元素所使用的比例，以便像素大小不已知。 在这种情况下，约束基于另一个元素的位置的元素是更可靠：
 
 ```xaml
 <RelativeLayout>
@@ -103,7 +105,7 @@ layout.Children.Add(box, Constraint.RelativeToParent((parent) =>
 </RelativeLayout>
 ```
 
-若要完成的布局相同，在 C# 中：
+若要完成相同的布局中C#:
 
 ```csharp
 layout.Children.Add (redBox, Constraint.RelativeToParent ((parent) => {
@@ -126,23 +128,23 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
     }));
 ```
 
-这将生成以下输出，使用蓝色框中的位置确定_相对_到红色框的位置：
+这将产生以下输出，具有确定的蓝色框的位置_相对_到红色框的位置：
 
 ![](relative-layout-images/red-blue-box.png "使用红色和蓝色 BoxViews RelativeLayout")
 
 ### <a name="sizing"></a>大小调整
 
-视图布局的`RelativeLayout`具有两个选项指定其大小：
+布局视图`RelativeLayout`有两个选项用于指定其大小：
 
 - `HeightRequest & WidthRequest`
 - `RelativeLayout.WidthConstraint` & `RelativeLayout.HeightConstraint`
 
-`HeightRequest` 和`WidthRequest`指定的预期的高度和宽度的视图，但根据需要布局可能覆盖。 `WidthConstraint` 和`HeightConstraint`支持用作相对于布局的或另一个视图的属性值或常量的值设置的高度和宽度。
+`HeightRequest` 和`WidthRequest`指定预期的高度和宽度的视图，但可能会根据需要覆盖的布局。 `WidthConstraint` 和`HeightConstraint`支持将高度和宽度设置为相对于布局的或另一个视图的属性值或常量的值。
 
-## <a name="exploring-a-complex-layout"></a>浏览复杂布局
-每个布局有优点和缺点为特定布局的创建。 在这一系列的布局文章，整个示例应用程序已创建具有相同的页面布局实现使用三种不同的布局。
+## <a name="exploring-a-complex-layout"></a>浏览复杂的布局
+每个布局具有的优势和劣势为特定布局的创建。 在本系列的布局文章，整个示例应用程序已创建具有相同的页面布局使用三个不同的布局实现。
 
-请考虑下面的 XAML:
+请考虑以下 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -219,11 +221,11 @@ Title="RelativeLayout">
 </ContentPage>
 ```
 
-上面的代码将导致以下布局：
+上面的代码会导致以下布局：
 
 ![](relative-layout-images/relative.png "复杂 RelativeLayout")
 
-请注意， `RelativeLayouts`s 嵌套的因为在某些情况下嵌套布局可以更方便地比提供相同的布局中的所有元素。 此外请注意，某些元素均`RelativeToView`，因为它允许更轻松、 更直观布局视图之间的关系指导定位时。
+请注意， `RelativeLayouts`s 嵌套的因为在某些情况下嵌套布局可能会比提供相同的布局中的所有元素。 此外请注意，某些元素是`RelativeToView`，因为视图之间的关系指导定位时，可实现更轻松、 更直观的布局。
 
 
 ## <a name="related-links"></a>相关链接

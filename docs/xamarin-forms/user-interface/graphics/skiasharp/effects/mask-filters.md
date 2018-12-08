@@ -7,14 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 524ca31b6687709245507bce0baeb82e12a1b726
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111501"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060402"
 ---
 # <a name="skiasharp-mask-filters"></a>SkiaSharp 掩码筛选器
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 掩码筛选器是操作几何图形和 alpha 通道的图形对象的效果。 若要使用掩码筛选器，设置[ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter)的属性`SKPaint`对象的类型[ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter)已通过调用之一创建了`SKMaskFilter`静态方法。
 

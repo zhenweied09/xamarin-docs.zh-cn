@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 2130bbbedbab66fac9427947ca42f21c346360ce
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 39922ffaa144892c87d271e9b24524dc0a0a941a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38998409"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061915"
 ---
 # <a name="windows-platform-specifics"></a>Windows 平台特定信息
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
 _平台特定信息，可使用的功能仅适用于特定的平台，而无需实现自定义呈现器或效果。本文演示如何使用 Windows 平台特定信息的内置于 Xamarin.Forms。_
 
@@ -154,7 +156,7 @@ _legacyColorModeDisabledEditor.On<Windows>().SetIsLegacyColorModeEnabled(false);
 > [!NOTE]
 > 设置时[ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup)旧颜色模式被完全忽略上一个视图。 可视状态的详细信息，请参阅[Xamarin.Forms 视觉状态管理器](~/xamarin-forms/user-interface/visual-state-manager.md)。
 
-## <a name="views"></a>视图
+## <a name="views"></a>Views
 
 在通用 Windows 平台 (UWP)，以下特定于平台的功能用于 Xamarin.Forms 视图：
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: ecf8a1e6d7c248c7141039844324d45d28700854
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170905"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049337"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 用户界面视图
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/FormsGallery/)
 
 _如何使用 Xamarin.Forms 提供的视图_
 
@@ -29,6 +31,10 @@ Xamarin.Forms 具有自己的动画基础结构直接用于创建简单动画，
 ## <a name="buttonbuttonmd"></a>[Button](button.md)
 
 `Button`响应点击或单击，将定向的应用程序来执行特定任务。
+
+## <a name="collectionviewcollectionviewmd"></a>[CollectionView](collectionview.md)
+
+`CollectionView`是灵活且高性能的视图来显示数据使用不同的布局规范的列表。
 
 ## <a name="colorscolorsmd"></a>[颜色](colors.md)
 
@@ -54,7 +60,7 @@ DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预�
 
 可以使用 Xamarin.Forms 跨平台共享映像、 可以专门为每个平台，加载它们或它们可以为显示下载。
 
-## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+## <a name="imagebuttonimagebuttonmd"></a>[ImageButton](imagebutton.md)
 
 `ImageButton`显示图像和响应点击或单击，将定向的应用程序来执行特定任务。
 
@@ -102,6 +108,10 @@ Xamarin.Forms 主题定义特定的可视化外观，对标准控件。 一旦�
 
 `TimePicker`允许用户选择的时间。 它使用特定平台上运行应用程序的支持时间选取器实现。
 
+## <a name="visualvisualmd"></a>[视觉对象](visual.md)
+
+本文介绍了 Xamarin.Forms 视觉对象，在 iOS 和 Android 相同，或很大程度上相同，将视图呈现。
+
 ## <a name="visual-state-managervisual-state-managermd"></a>[可视状态管理器](visual-state-manager.md)
 
 视觉状态管理器提供的结构化的方法来触发从代码中，包括布局可适应更改设备方向或大小更改的用户界面中的更改。
@@ -110,8 +120,7 @@ Xamarin.Forms 主题定义特定的可视化外观，对标准控件。 一旦�
 
 Xamarin.Forms 使用每个平台上的本机 web 浏览器控件，并可以显示网站、 本地资源和生成的 Html 字符串。
 
-
 ## <a name="related-links"></a>相关链接
 
 - [Xamarin.Forms 简介](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Xamarin.Forms 库 （示例）](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms 库（示例）](https://developer.xamarin.com/samples/FormsGallery/)

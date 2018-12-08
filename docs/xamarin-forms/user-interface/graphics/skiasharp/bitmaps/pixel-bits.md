@@ -7,14 +7,16 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172010"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059199"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>访问 SkiaSharp 位图像素位
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 本文中所示[**到文件的保存 SkiaSharp 位图**](saving.md)，位图通常存储在文件中的压缩格式，如 JPEG 或 PNG。 在与此相反，不压缩 SkiaSharp 位图存储在内存中。 已存储为一系列连续的像素为单位。 此压缩的格式便于将位图转移到显示图面。
 

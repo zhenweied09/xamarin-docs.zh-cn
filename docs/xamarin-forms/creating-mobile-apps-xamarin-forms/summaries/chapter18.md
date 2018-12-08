@@ -7,14 +7,16 @@ ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 99378a2974891ec78977b29adc99350395b5ad14
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: db837ac8bfa1b7a946ee606e9481f9feb2a8a31f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563298"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050110"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>第 18 章的摘要。 MVVM
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
 
 构建应用程序的最佳方法之一是通过将用户界面与基础代码，这有时称为分离*业务逻辑*。 存在几种方法，但为基于 XAML 的环境量身定制的那个被称为模型-视图-视图模型或 MVVM。
 

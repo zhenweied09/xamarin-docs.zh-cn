@@ -7,14 +7,16 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6c666329664ad7dfaa8439068a60b6135d59d229
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563051"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048812"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>第 21 章的摘要。 转换
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
 在的位置和大小由其父级，通常是在屏幕上会显示一个 Xamarin.Forms 视图`Layout`或`Layout<View>`派生类。 *转换*是 Xamarin.Forms 功能，可以修改该位置、 大小或甚至方向。
 

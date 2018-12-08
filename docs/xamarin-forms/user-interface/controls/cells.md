@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 34e28d8532c232549c6f45e549787885a9155684
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: ac65122e35849786307afd2a4d6e64e186cad466
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526853"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060195"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 单元格
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _Xamarin.Forms 单元格可以添加到 Listview 和 TableViews。_
 

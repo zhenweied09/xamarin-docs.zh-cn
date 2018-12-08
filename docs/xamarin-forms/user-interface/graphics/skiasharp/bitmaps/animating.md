@@ -7,14 +7,16 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
-ms.openlocfilehash: 6eacc7f2688a563f9facf651b0a6da85bd75360f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: de27e151a475856f0789285dddc1526613e0b828
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171347"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053139"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 位图进行动画处理
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 通常 SkiaSharp 图形进行动画处理的应用程序调用`InvalidateSurface`上`SKCanvasView`按固定费率，通常每隔 16 毫秒。 使在图面无效触发调用`PaintSurface`处理程序以刷新显示。 当每秒 60 次重新绘制视觉对象，它们显示以顺利进行动画处理。
 

@@ -7,30 +7,32 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244592"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055797"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-`StackLayout` 将组织的一维的行 （"堆栈"） 中的视图水平或垂直。 视图中`StackLayout`可以基于使用布局选项的布局中的空间大小。 定位由视图添加到的布局和视图的布局选项的顺序确定。
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+
+`StackLayout` 水平或垂直方向组织是一维直线 （"堆栈"） 中的视图。 视图中`StackLayout`可以基于使用布局选项布局中的空间大小。 定位取决于视图已添加到的布局和视图的布局选项的顺序。
 
 [![](stack-layout-images/layouts-sml.png "Xamarin.Forms 布局")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms 布局")
 
 ## <a name="purpose"></a>目标
 
-`StackLayout` 并不太复杂比其他视图。 可以通过只需添加到视图中创建简单的线性接口`StackLayout`，和由嵌套它们创建更复杂的接口。
+`StackLayout` 是不太复杂比其他视图。 可以通过只添加到视图中创建简单的线性接口`StackLayout`，和更复杂的接口创建的嵌套。
 
-## <a name="usage--behavior"></a>使用情况和行为
+## <a name="usage--behavior"></a>根据使用情况和行为
 
 ### <a name="spacing"></a>间距
 
-默认情况下，`StackLayout`将添加视图之间的 6px 边距。 这可以控制或设置通过设置有无边距`Spacing`StackLayout 上的属性。 下面演示了如何设置间距和不同间距选项的效果：
+默认情况下，`StackLayout`将添加视图之间 6px 边距。 这可以控制或设置通过设置具有无边距`Spacing`StackLayout 上的属性。 下面演示了如何设置间距和其他间距选项的效果：
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -80,35 +82,35 @@ public class StackLayoutCode : ContentPage
 
 间距 = 0:
 
-![](stack-layout-images/spacing-zero.png "与间距 StackLayout = 0")
+![](stack-layout-images/spacing-zero.png "使用间距 StackLayout = 0")
 
-间距的 10 个：
+10 个间距：
 
-![](stack-layout-images/spacing-ten.png "与间距 StackLayout = 10")
+![](stack-layout-images/spacing-ten.png "使用间距 StackLayout = 10")
 
 ### <a name="sizing"></a>大小调整
 
-StackLayout 中的视图的大小取决于高度和宽度请求和布局选项。 `StackLayout` 将强制执行填充。 以下`LayoutOption`s 将导致视图以占用所从布局可用空间：
+在 StackLayout 中的视图的大小依赖于高度和宽度请求和布局选项。 `StackLayout` 将强制执行填充。 以下`LayoutOption`s 将导致占用所可从布局空间的视图：
 
-- **CenterAndExpand** &ndash;布局中的将视图中心和扩展以占用所布局将为其提供空间。
-- **EndAndExpand** &ndash;布局 （底部或最右侧的边界） 的末尾放置视图，并且扩展以占用所布局将为其提供空间。
-- **FillAndExpand** &ndash;放置视图，以便其不填充和占用所布局将为其提供空间。
-- **StartAndExpand** &ndash;布局的开头将视图并占用所父级将提供空间。
+- **CenterAndExpand** &ndash;布局中的将视图中心和展开此项可占用所布局将为其提供空间。
+- **EndAndExpand** &ndash;布局 （底部或最右侧的边界） 结束时将视图并将扩展以占用所布局将为其提供空间。
+- **FillAndExpand** &ndash;将视图，以便它无需进行填充，并将占用所布局将为其提供空间。
+- **StartAndExpand** &ndash;将视图放置在布局开头，而且占用所父级将提供空间。
 
 有关详细信息，请参阅[扩展](~/xamarin-forms/user-interface/layouts/layout-options.md#expansion)。
 
 ### <a name="positioning"></a>定位
 
-中 StackLayout 视图可以定位并调整其大小使用`LayoutOptions`。 可以指定每个视图`VerticalOptions`和`HorizontalOptions`，定义如何在视图将确定自己的位置相对于布局。 以下预定义`LayoutOptions`可用：
+视图在 StackLayout 中的可定位并调整其大小使用`LayoutOptions`。 可以指定每个视图`VerticalOptions`和`HorizontalOptions`，定义如何将视图将确定自己的位置相对于布局。 以下预定义`LayoutOptions`可用：
 
 - **Center** &ndash;布局中的将视图中心。
-- **结束**&ndash;布局 （底部或最右侧的边界） 的末尾放置视图。
-- **填充**&ndash;放置视图，以便它具有不填充。
-- **启动**&ndash;放置布局开头的视图。
+- **结束**&ndash;将视图放置在布局 （底部或最右侧的边界） 的末尾。
+- **填充**&ndash;将视图，以便它具有无需进行填充。
+- **启动**&ndash;将视图放置在布局开头。
 
 下面的代码演示设置布局选项：
 
-在 XAML 中：
+在 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,11 +158,11 @@ public class StackLayoutCode : ContentPage
 
 有关详细信息，请参阅[对齐](~/xamarin-forms/user-interface/layouts/layout-options.md#alignment)。
 
-## <a name="exploring-a-complex-layout"></a>浏览复杂布局
+## <a name="exploring-a-complex-layout"></a>浏览复杂的布局
 
-每个布局有优点和缺点为特定布局的创建。 在这一系列的布局文章，整个示例应用程序已创建具有相同的页面布局实现使用三种不同的布局。
+每个布局具有的优势和劣势为特定布局的创建。 在本系列的布局文章，整个示例应用程序已创建具有相同的页面布局使用三个不同的布局实现。
 
-请考虑下面的 XAML:
+请考虑以下 XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -213,11 +215,11 @@ Title="StackLayouts">
 
 ```
 
-上面的代码将导致以下布局：
+上面的代码会导致以下布局：
 
 ![](stack-layout-images/stack.png "复杂 StackLayout")
 
-请注意， `StackLayouts`s 嵌套的因为在某些情况下嵌套布局可以更方便地比提供相同的布局中的所有元素。 另请注意，因为`StackLayout`不支持重叠项，找到的页面不具有布局激动人心的一些其他布局的页中。
+请注意， `StackLayouts`s 嵌套的因为在某些情况下嵌套布局可能会比提供相同的布局中的所有元素。 另请注意，因为`StackLayout`不支持重叠项，找到的页面不会有布局奇思妙想的一些其他布局页中。
 
 
 

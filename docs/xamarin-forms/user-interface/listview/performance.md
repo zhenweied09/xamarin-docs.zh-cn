@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: c6a6ed38ec64c681075ffa3e42f3ffaf58c576ec
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997211"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059241"
 ---
 # <a name="listview-performance"></a>ListView 性能
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
 
 如果编写移动应用程序，性能很重要。 用户都希望能平滑滚动并快速加载。 未能满足用户的期望将您的应用程序商店中的评级或成本对于业务线应用程序，成本的组织的时间和金钱。
 
@@ -127,7 +129,7 @@ var listView = new ListView(ListViewCachingStrategy.RecycleElement);
 </ListView>
 ```
 
-这具有相同的效果与在 C# 中; 构造函数中设置的缓存策略参数请注意，没有任何`CachingStrategy`属性上的`ListView`。
+这具有相同的效果与设置的缓存策略参数的构造函数中C#;请注意，没有任何`CachingStrategy`属性上的`ListView`。
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>子类化 ListView 中设置缓存策略
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e02c04afe656b0eca3b7ae12b8b30f35836b9368
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563727"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054808"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin 本机项目中的 Xamarin.Forms
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
 
 _本机窗体允许 Xamarin.Forms ContentPage 派生页可供本机 Xamarin.iOS、 Xamarin.Android 和通用 Windows 平台 (UWP) 项目。本机项目都可以使用直接添加到项目中，或从.NET Standard 库、.NET Standard 库或共享项目的 ContentPage 派生页。本文介绍如何使用直接添加到本机项目的 ContentPage 派生页以及如何在它们之间导航。_
 

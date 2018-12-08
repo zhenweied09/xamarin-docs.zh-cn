@@ -7,14 +7,16 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171763"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055723"
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _数据绑定使两个用于链接，这样一个导致更改中的其他对象的属性。这是一个非常有价值的工具，并可以完全在代码中定义数据绑定，而 XAML 提供快捷方式和便利。因此，在 Xamarin.Forms 中最重要的标记扩展之一绑定。_
 

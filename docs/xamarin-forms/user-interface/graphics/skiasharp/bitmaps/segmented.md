@@ -7,14 +7,16 @@ ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be2d998916c81cb2216251e2112ff8ca2af5d87a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119223"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061363"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>SkiaSharp 位图的分段的显示
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 SkiaSharp`SKCanvas`对象定义一个名为方法`DrawBitmapNinePatch`和两个方法名为`DrawBitmapLattice`非常相似。 两个这些方法呈现到目标矩形的大小的位图，但而不是均匀拉伸位图，它们在其像素大小显示位图的部分和延伸位图的其他部分，使其适应矩形：
 

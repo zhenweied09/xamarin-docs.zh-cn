@@ -7,14 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: ebd4db28b2c20bd2b9e1d93e03dd101ebc5da663
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130994"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055032"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter Duff 的混合模式
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Thomas Porter 和 Tom Duff，他们负责开发组合的情况下在 Lucasfilm 代数后命名 Porter Duff 的混合模式。 其纸张[_组合的情况下数字图像_](https://graphics.pixar.com/library/Compositing/paper.pdf)在 1984 年 7 月发行的已发布_计算机图形中_，页 253 向 259。 这些混合模式是组合的情况下，这组合到复合场景的各种映像的基础：
 

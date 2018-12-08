@@ -7,16 +7,18 @@ ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: fcb832e851d7467679d979841dad60d117240b59
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563861"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052632"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用剖析
 
-> [!NOTE] 
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+
+> [!NOTE]
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 在 Xamarin.Forms 应用程序中，占用屏幕空间的对象称为*可视元素*、 通过封装[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)类。 可视元素可以拆分为三个类别对应于这些类：
@@ -31,9 +33,9 @@ ms.locfileid: "51563861"
 
 ## <a name="say-hello"></a>假设你好
 
-使用安装 Xamarin 平台，你可以创建新的 Xamarin.Forms 解决方案在 Visual Studio 或 Visual Studio for mac。 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello)解决方案使用可移植类库的通用代码。 
+使用安装 Xamarin 平台，你可以创建新的 Xamarin.Forms 解决方案在 Visual Studio 或 Visual Studio for mac。 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello)解决方案使用可移植类库的通用代码。
 
-> [!NOTE] 
+> [!NOTE]
 > .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
 
 此示例演示在 Visual Studio 中创建不作任何修改的 Xamarin.Forms 解决方案。 此解决方案由六个项目组成：
@@ -45,8 +47,8 @@ ms.locfileid: "51563861"
 - [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows)，用于 Windows 8.1 的应用程序项目
 - [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone)，适用于 Windows Phone 8.1 应用程序项目
 
-> [!NOTE] 
-> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 
+> [!NOTE]
+> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。
 
 您可以进行任何这些应用程序项目启动项目，然后生成并在设备或模拟器上运行该程序。
 
@@ -56,7 +58,7 @@ ms.locfileid: "51563861"
 
 显示的视觉对象**Hello**程序定义的构造函数中[ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs)类。 `App` 派生自 Xamarin.Forms 类[ `Application` ](xref:Xamarin.Forms.Application)。
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 解决方案模板适用于 Xamarin.Forms 使用 XAML 文件创建一个页面。 直到本书中未涵盖 XAML[第 7 章](chapter07.md)。
 
 **引用**一部分**Hello** PCL 项目中包括以下 Xamarin.Forms 程序集：
@@ -74,8 +76,8 @@ ms.locfileid: "51563861"
 - **Xamarin.Forms.Platform.WinRT.Tablet**
 - **Xamarin.Forms.Platform.WinRT.Phone**
 
-> [!NOTE] 
-> **引用**不再列出程序集，这些项目的部分。 相反，该项目文件包含**PackageReference**标记引用的 Xamarin.Forms NuGet 包。 **引用**Visual Studio 列表中的部分**Xamarin.Forms**包而不是 Xamarin.Forms 程序集。 
+> [!NOTE]
+> **引用**不再列出程序集，这些项目的部分。 相反，该项目文件包含**PackageReference**标记引用的 Xamarin.Forms NuGet 包。 **引用**Visual Studio 列表中的部分**Xamarin.Forms**包而不是 Xamarin.Forms 程序集。
 
 每个应用程序项目包含调用静态`Forms.Init`中的方法`Xamarin.Forms`命名空间。 此初始化 Xamarin.Forms 库。 不同版本的`Forms.Init`定义为每个平台。 调用此方法可在以下类：
 
@@ -95,7 +97,7 @@ ms.locfileid: "51563861"
 
 就可以使用可移植类库 (PCL) 或共享资产项目 (SAP) 中的常见代码创建 Xamarin.Forms 解决方案。 若要创建的 SAP 解决方案，请在 Visual Studio 中选择共享选项。 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap)解决方案演示了不作任何修改的 SAP 模板。
 
-> [!NOTE] 
+> [!NOTE]
 > .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。 否则，PCL 和.NET Standard 库在概念上非常类似。
 
 所有通用平台应用程序项目引用的库项目中的都代码库方法捆绑包。 使用 SAP 方法时，公共代码有效地在所有平台应用程序项目中存在并在它们之间共享。

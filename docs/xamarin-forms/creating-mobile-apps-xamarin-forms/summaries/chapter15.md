@@ -7,14 +7,16 @@ ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 25863bda5077e3630d77baccc23db26409b12e21
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6b519b15199373762965a8eeee6c9ae73f125cf3
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563740"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060428"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>第 15 章的摘要。 交互式接口
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 本章探讨了八个`View`允许与用户交互的派生类。
 
@@ -31,7 +33,7 @@ Xamarin.Forms 包含 20 可实例化类派生自`View`但不是`Layout`。 已�
 
 这一章中的八个视图有效地允许用户与基本.NET 数据类型进行交互：
 
-|数据类型|视图|
+|数据类型|Views|
 |--- |--- |
 |`Double`|[`Slider`](xref:Xamarin.Forms.Slider), [`Stepper`](xref:Xamarin.Forms.Stepper)|
 |`Boolean`|[`Switch`](xref:Xamarin.Forms.Switch)|

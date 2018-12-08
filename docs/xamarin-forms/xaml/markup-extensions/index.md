@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3a28963852b2b36be0a9751722b7f184c340d3e9
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563389"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060156"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 标记扩展
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 XAML 标记扩展可帮助元素特性，若要从文本字符串以外的源设置，从而扩展的功能和灵活性的 XAML。
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114309"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059751"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 设备类
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
 
 [ `Device` ](xref:Xamarin.Forms.Device)类包含大量属性和方法，以帮助开发人员自定义布局和根据每个平台的功能。
 
@@ -113,7 +115,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-[ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)值检索[ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection)枚举值，该值表示当前正由设备的流方向。 流方向是密切关注扫描的页上的 UI 元素的方向。 枚举值为：
+[ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)值检索[ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection)枚举值，该值表示当前正由设备的流方向。 流方向是指页面 UI 元素的浏览方向。 枚举值为：
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)

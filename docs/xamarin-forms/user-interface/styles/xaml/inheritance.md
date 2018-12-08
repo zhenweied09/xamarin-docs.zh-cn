@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f8cf3287c6d713d91a0217bd30ca2ee927534aea
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 05ec368fb0dd0e1adfac3eed88c5ddd50960f9ae
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995328"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056579"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>在 Xamarin.Forms 中的样式继承
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
 
 _样式可以继承其他样式以减少重复和使重复使用。_
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 60ca55999033adc375a139195c9c3e62da6d0184
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 1baad2e2edfb661fff9f3ef0ccf52c9922e9f351
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563753"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051819"
 ---
 # <a name="passing-arguments-in-xaml"></a>在 XAML 中传递自变量
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
 
 _本文演示如何使用可用于将参数传递到非默认构造函数，以调用工厂方法，并指定泛型参数的类型的 XAML 属性。_
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 12fd9e477e24058d36128e52b7b5dd9074598be8
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 749ed2876881f1c2005226e17a84bcb3a44425f8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171789"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056741"
 ---
 # <a name="ios-platform-specifics"></a>iOS 平台特定信息
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
 _平台特定信息，可使用的功能仅适用于特定的平台，而无需实现自定义呈现器或效果。本文演示如何使用 iOS 平台特定信息的内置于 Xamarin.Forms。_
 
@@ -163,7 +165,7 @@ boxView.On<iOS>()
 
 ![](ios-images/drop-shadow.png "已启用投影")
 
-## <a name="views"></a>视图
+## <a name="views"></a>Views
 
 在 iOS 上，为 Xamarin.Forms 视图提供以下特定于平台的功能：
 

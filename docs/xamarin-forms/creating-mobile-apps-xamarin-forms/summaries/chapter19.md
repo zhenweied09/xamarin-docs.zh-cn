@@ -7,14 +7,16 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 30fa9e86a82441052641c44a6c2ff8a682792267
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563610"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059439"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>第 19 章的摘要。 集合视图
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 
 > [!NOTE] 
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。

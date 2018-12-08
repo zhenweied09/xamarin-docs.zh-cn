@@ -7,14 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 6393794a20a80fae43e31a96efd4941f4b633c28
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a67a2e12a12039755970a78739ea2ca3d2ffae08
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563714"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053485"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>第 14 章的摘要。 绝对布局
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
 像`StackLayout`， [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout)派生自`Layout<View>`，并继承`Children`属性。 `AbsoluteLayout` 实现指定的位置及其子级和它们的大小，（可选），程序员需要布局系统。 位置由相对于左上角的子窗口左上角指定`AbsoluteLayout`以与设备无关单位。 `AbsoluteLayout` 此外实现按比例定位和调整大小功能。
 

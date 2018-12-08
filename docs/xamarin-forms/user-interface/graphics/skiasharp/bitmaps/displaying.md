@@ -7,14 +7,16 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615309"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054915"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>显示 SkiaSharp 位图
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 一文中引入了使用者的 SkiaSharp 位图 **[位图基础知识中 SkiaSharp](../basics/bitmaps.md)** 。 该文章介绍了三种方式来加载位图并通过三种方式显示位图。 本文介绍的技术加载位图并得更深入的使用`DrawBitmap`方法的`SKCanvas`。
 

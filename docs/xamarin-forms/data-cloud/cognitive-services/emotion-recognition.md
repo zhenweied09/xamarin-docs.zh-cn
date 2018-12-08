@@ -1,36 +1,38 @@
 ---
-title: 表情识别使用面临的 API
-description: 表面 API 在映像中作为输入，采用面部表达式并返回数据包含在映像中的每个表面情感一组之间的置信度级别。 此文章介绍了如何使用表面 API 来识别表情，进行评级 Xamarin.Forms 应用程序。
+title: 使用人脸 API 的情感识别
+description: 人脸 API 作为输入，图像中采用的面部表情，并返回数据，其中包括在映像中每张人脸的情感集的置信度级别。 此文章介绍了如何使用人脸 API 来识别情感进行评级的 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 4dc04cb077b894b255eb496b2cb2983626573897
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d703de90378991d262a4b056b9ebc98d183e3fb8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049761"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056485"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>表情识别使用面临的 API
+# <a name="emotion-recognition-using-the-face-api"></a>使用人脸 API 的情感识别
 
-_表面 API 在映像中作为输入，采用面部表达式并返回数据包含在映像中的每个表面情感一组之间的置信度级别。此文章介绍了如何使用表面 API 来识别表情，进行评级 Xamarin.Forms 应用程序。_
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+
+_人脸 API 作为输入，图像中采用的面部表情，并返回数据，其中包括在映像中每张人脸的情感集的置信度级别。此文章介绍了如何使用人脸 API 来识别情感进行评级的 Xamarin.Forms 应用程序。_
 
 ## <a name="overview"></a>概述
 
-表面 API 可以执行表情检测，以检测愤怒、 contempt、 厌恶，不必担心、 幸福、 非特定、 sadness 和意外情况发生，面部表情。 这些情感普遍和多个区域性传送通过相同的基本面部表情。 返回面部表情表情结果，以及表面 API 还可以返回检测到的表面的边界框。 请注意，必须获取 API 密钥用于表面 API。 这可以在获取[重认知服务](https://azure.microsoft.com/try/cognitive-services/?api=face-api)。
+人脸 API 可以执行情绪检测来检测愤怒、 蔑视、 厌恶、 恐惧、 幸福、 中立、 悲伤和惊讶的是中的面部表情。 这些情感普遍和区域性传递通过相同的基本面部表情。 返回的面部表情的情感结果，以及人脸 API 还可以返回检测的人脸的边界框。 请注意，必须获取 API 密钥以使用人脸 API。 这可以获得[试用认知服务](https://azure.microsoft.com/try/cognitive-services/?api=face-api)。
 
-通过客户端库，并通过 REST API，可以执行表情识别。 本文重点介绍在执行通过 REST API 的表情识别。 有关 REST API 的详细信息，请参阅[表面 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+通过客户端库，并通过 REST API，可以执行情感识别。 本文重点介绍对执行通过 REST API 的情感识别。 有关 REST API 的详细信息，请参阅[人脸 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
 
-表面 API 还可以用来识别在视频中，人员的面部表达式，并且可以返回其情感的摘要。 有关详细信息，请参阅[如何实时分析视频](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/)。
+人脸 API 还可用于识别在视频中，人员的面部表情，并可以返回其情感概况。 有关详细信息，请参阅[如何实时分析视频](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/)。
 
-有关表面 API 的详细信息，请参阅[表面 API](/azure/cognitive-services/face/overview/)。
+有关人脸 API 的详细信息，请参阅[人脸 API](/azure/cognitive-services/face/overview/)。
 
 ## <a name="authentication"></a>身份验证
 
-每个请求都会面临 api 需要 API 密钥应指定的值为`Ocp-Apim-Subscription-Key`标头。 下面的代码示例演示如何添加到 API 密钥`Ocp-Apim-Subscription-Key`请求标头：
+每个请求都会到人脸 API 需要 API 密钥，应将指定的值为`Ocp-Apim-Subscription-Key`标头。 下面的代码示例演示如何添加到的 API 密钥`Ocp-Apim-Subscription-Key`请求标头：
 
 ```csharp
 public FaceRecognitionService()
@@ -40,28 +42,28 @@ public FaceRecognitionService()
 }
 ```
 
-未能将有效的 API 密钥传递给表面 API 将导致 401 响应错误。
+未能传递给人脸 API 的一个有效的 API 密钥将导致 401 响应错误。
 
-## <a name="performing-emotion-recognition"></a>执行表情识别
+## <a name="performing-emotion-recognition"></a>对执行情感识别
 
-通过使包含图像的 POST 请求执行表情识别`detect`API 在`https://[location].api.cognitive.microsoft.com/face/v1.0`，其中`[location]]`是用于获取你的 API 密钥的区域。 可选的请求参数包括：
+包含图像的 POST 请求，从而执行情感识别`detect`API， `https://[location].api.cognitive.microsoft.com/face/v1.0`，其中`[location]]`是用于获取 API 密钥的区域。 可选的请求参数包括：
 
-- `returnFaceId` – 是否返回 faceIds 的检测到的平面。 默认值为 `true`。
-- `returnFaceLandmarks` – 是否返回表面界标的检测到的平面。 默认值为 `false`。
-- `returnFaceAttributes` – 是否分析，并返回一个或多个指定面临着属性。 支持的表面属性包括`age`， `gender`， `headPose`， `smile`， `facialHair`， `glasses`， `emotion`， `hair`， `makeup`， `occlusion`， `accessories`， `blur`， `exposure`，和`noise`。 请注意，表面属性分析计算和时间会增加成本。
+- `returnFaceId` – 是否返回 faceIds 检测的人脸。 默认值为 `true`。
+- `returnFaceLandmarks` – 是否返回人脸检测到的人脸特征点。 默认值为 `false`。
+- `returnFaceAttributes` -是否要分析，并返回指定的一个或多人脸属性。 受支持的人脸属性包括`age`， `gender`， `headPose`， `smile`， `facialHair`， `glasses`， `emotion`， `hair`， `makeup`， `occlusion`， `accessories`， `blur`， `exposure`，和`noise`。 请注意，人脸属性分析其他计算和时间成本。
 
-必须为 URL 或二进制数据的 POST 请求的正文中放置图像内容。
+必须在作为 URL 或二进制数据的 POST 请求正文中放置图像内容。
 
 > [!NOTE]
-> 支持的图像文件格式为 JPEG、 PNG、 GIF、 和 BMP，和允许的文件大小为 1 KB 到 4 MB。
+> 支持的图像文件格式为 JPEG、 PNG、 GIF 和 BMP，和允许的文件大小为 1 KB 到 4 MB。
 
-在示例应用程序，通过调用调用表情识别过程`DetectAsync`方法：
+在示例应用程序，情感识别过程调用通过调用`DetectAsync`方法：
 
 ```csharp
 Face[] faces = await _faceRecognitionService.DetectAsync(photoStream, true, false, new FaceAttributeType[] { FaceAttributeType.Emotion });
 ```
 
-此方法调用指定包含的图像数据，应返回 faceIds，，不应返回表面界标，并且应分析的映像表情的流。 它还指定，将数组的形式返回结果`Face`对象。 反过来，`DetectAsync`方法调用`detect`执行表情识别的 REST API:
+此方法调用中指定包含图像数据，应返回 faceIds，不应返回人脸特征点，并应分析的图像的情感的流。 它还指定将数组的形式返回结果`Face`对象。 依次`DetectAsync`方法将调用`detect`执行情感识别的 REST API:
 
 ```csharp
 public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, bool returnFaceLandmarks, IEnumerable<FaceAttributeType> returnFaceAttributes)
@@ -74,14 +76,14 @@ public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, boo
 }
 ```
 
-此方法生成请求 URI，然后将请求发送到`detect`API 通过`SendRequestAsync`方法。
+此方法生成请求 URI，并随后发送到请求`detect`API 通过`SendRequestAsync`方法。
 
 > [!NOTE]
-> 在为你用于获取你的订阅密钥你面临 API 调用中，必须使用同一区域。 例如，如果你获得你的订阅密钥从`westus`区域，表面检测终结点将是`https://westus.api.cognitive.microsoft.com/face/v1.0/detect`。
+> 在您为您用来获取订阅密钥的人脸 API 调用中，必须使用相同的区域。 例如，如果从订阅密钥的获取`westus`区域中，人脸检测终结点将是`https://westus.api.cognitive.microsoft.com/face/v1.0/detect`。
 
 ### <a name="sending-the-request"></a>发送请求
 
-`SendRequestAsync`方法向表面 API 发出的 POST 请求，并将结果作为返回`Face`数组：
+`SendRequestAsync`方法向人脸 API 的 POST 请求，并返回结果作为`Face`数组：
 
 ```csharp
 async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMethod, string requestUrl, TRequest requestBody)
@@ -124,15 +126,15 @@ async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMetho
 }
 ```
 
-如果通过流提供的映像，则该方法通过包装中的图像流来生成 POST 请求`StreamContent`实例，它提供基于流的 HTTP 内容。 或者，如果通过 URL 提供的映像，则该方法将生成 POST 请求通过包装中的 URL 来`StringContent`实例，它提供基于字符串的 HTTP 内容。
+如果通过流提供该映像，则该方法生成 POST 请求通过包装中的图像流`StreamContent`实例提供基于流的 HTTP 内容。 或者，如果通过 URL 提供该映像，则该方法将生成 POST 请求通过包装中的 URL`StringContent`实例提供基于字符串的 HTTP 内容。
 
 然后将 POST 请求发送到`detect`API。 读取响应，将其反序列化，并返回到调用方法。
 
-`detect` API 将在响应中，提供该请求是有效的表示请求成功，请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 有关可能的错误响应的列表，请参阅[表面 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
+`detect` API 将在响应中，提供请求的有效，指示请求成功，并且请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 有关可能的错误响应的列表，请参阅[人脸 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)。
 
 ### <a name="processing-the-response"></a>处理响应
 
-以 JSON 格式返回 API 响应。 以下 JSON 数据显示了一个典型的成功响应消息，提供所请求的示例应用程序数据：
+API 响应以 JSON 格式返回。 以下 JSON 数据显示了一个典型的成功响应消息，提供所请求的示例应用程序数据：
 
 ```json
 [  
@@ -160,24 +162,24 @@ async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMetho
 ]
 ```
 
-成功的响应消息包含的按降序排序，一个空响应指示检测到没有表面表面矩形大小排名的表面项数组。 每个识别表面包含一系列由指定的可选字体特性的`returnFaceAttributes`参数`DetectAsync`方法。
+成功的响应消息包含人脸条目按降序排序，空响应表示没有检测到的人脸的人脸矩形大小进行排序的数组。 每个识别人脸包含一系列可选人脸属性，由指定的`returnFaceAttributes`自变量`DetectAsync`方法。
 
-在示例应用程序，则 JSON 响应进行反序列化到的数组`Face`对象。 解释结果从表面 API，当检测到的表情应被视为具有最高的得分，表情如评分被规范化到其中一个的总和。 因此，示例应用程序将显示与面临的最大检测到的最高分数识别的表情图像中。 这是替换为以下代码来实现的：
+在示例应用程序，则 JSON 响应进行反序列化成一个数组`Face`对象。 因为规范化后的评分时解释从人脸 API 的结果，应将检测到的情感解释为具有最高评分的情感到累加为 1。 因此，示例应用程序在图中显示具有最大检测到人脸的最高分数的已识别的情感。 使用以下代码被实现此目的：
 
 ```csharp
 emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRankedList().FirstOrDefault().Key;
 ```
 
-下面的屏幕截图显示了示例应用程序中的表情识别过程的结果：
+下面的屏幕截图显示了示例应用程序中的情感识别过程的结果：
 
 ![](emotion-recognition-images/emotion-recognition.png "表情识别")
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何使用表面 API 来识别表情，进行评级 Xamarin.Forms 应用程序。 表面 API 在映像中作为输入，采用面部表达式并返回包括置信度在映像中的每个表面情感一组之间的数据。
+本文介绍了如何使用人脸 API 来识别情感进行评级的 Xamarin.Forms 应用程序。 人脸 API 采用的面部表情作为输入，图像中，并返回数据，其中包括在映像中每张人脸的情感集的置信度。
 
 ## <a name="related-links"></a>相关链接
 
-- [不会遇到 API](/azure/cognitive-services/face/overview/)。
+- [人脸 API](/azure/cognitive-services/face/overview/)。
 - [Todo 认知服务 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [表面 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)
+- [人脸 REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

@@ -7,14 +7,16 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: b37a32df9944cd7b312decd9cd9312669b777bc1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: bb2cd1c97cc588923e0da1a8793f16445c111f0e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563364"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058842"
 ---
 # <a name="summary-of-chapter-12-styles"></a>第 12 章的摘要。 样式
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
 
 在 Xamarin.Forms 中，样式允许多个视图来共享的属性设置的集合。 这减少了标记，并使维护一致的视觉主题。
 

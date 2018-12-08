@@ -7,14 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 5bd063f82cc1d09c6b2e9100429889a23a2eda7f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111478"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060373"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 位图平铺
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
 
 如您在两个之前的文章中所见[ `SKShader` ](xref:SkiaSharp.SKShader)类可以创建线性或循环渐变。 这篇文章重点`SKShader`使用一个位图平铺区域的对象。 可以重复位图，水平或垂直地在其原始方向或或者水平和垂直翻转。 翻转可避免磁贴之间的不连续性：
 

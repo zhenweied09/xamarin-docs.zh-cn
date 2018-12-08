@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171711"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054121"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>使用 XAML 标记扩展
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 XAML 标记扩展帮助元素特性，若要设置从各种源，从而增强的功能和灵活性的 XAML。 多个 XAML 标记扩展是 XAML 2009 规范的一部分。 这些通常在与 XAML 文件中出现`x`命名空间前缀，且通常被引用到具有此前缀。 本文讨论了以下标记扩展：
 

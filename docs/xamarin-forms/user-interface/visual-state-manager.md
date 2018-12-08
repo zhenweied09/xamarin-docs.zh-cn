@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: c2944aba05c2f0ea87f675b8830f3a1ee20b5ac1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 10d62ea050296eb6d36c9861b757ca44d3a2e452
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563859"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058186"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms 视觉状态管理器
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
 
 _使用可视状态管理器对 XAML 元素按从代码中设置的视觉状态进行更改。_
 

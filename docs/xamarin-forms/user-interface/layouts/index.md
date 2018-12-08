@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: cff5f9c15f4608ecfb643d2c49dd636df8b18b5c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: df2bd07ad5d91c237320b74d7a81828ba1c062c2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995750"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053268"
 ---
 # <a name="layouts-in-xamarinforms"></a>在 Xamarin.Forms 中的布局
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 Xamarin.Forms 具有多个布局和功能的组织在屏幕上的内容。
 

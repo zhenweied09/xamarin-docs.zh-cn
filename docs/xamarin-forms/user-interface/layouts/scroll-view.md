@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 34339b9ca3a15c7f7f24edee5401c542fd09ba74
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360807"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048982"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) 包含布局，使他们能够滚动屏幕外。 `ScrollView` 此外用于允许视图以显示键盘时自动移至屏幕的可见部分。
 
@@ -68,7 +70,7 @@ stack.Children.Add(new Entry());
 
 ![](scroll-view-images/scroll-end.png "ScrollView 中的条目")
 
-## <a name="properties"></a>属性
+## <a name="properties"></a>Properties
 
 `ScrollView` 定义以下属性：
 

@@ -7,14 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 07df66e69186803e3322bd71a4b3b37710655de4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130937"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055006"
 ---
 # <a name="the-non-separable-blend-modes"></a>非可分离的混合模式
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 本文中所示[ **SkiaSharp 可分离混合模式**](separable.md)，可分离的混合模式单独执行的红色、 绿色和蓝色通道上的操作。 非可分离的混合模式不适用。 对颜色的色调、 饱和度和亮度级别进行操作，非可分离的混合模式可以更改颜色以有趣的方式：
 

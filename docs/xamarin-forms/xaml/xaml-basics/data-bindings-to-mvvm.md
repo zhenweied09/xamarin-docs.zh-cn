@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 2376ff986db985c3764c90c3af76ea74c2936a29
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563142"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054028"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>第 5 部分。 从数据绑定到 MVVM
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _模型-视图-视图模型 (MVVM) 体系结构模式的发明时与 XAML 记住。该模式会强制实施三个软件层之间的隔离，XAML 用户界面，称为视图;基础数据，称为模型;并且在视图和模型之间的中介调用 ViewModel。通过 XAML 文件中定义的数据绑定通常连接中的视图和 ViewModel。视图 BindingContext 通常是 ViewModel 的实例。_
 

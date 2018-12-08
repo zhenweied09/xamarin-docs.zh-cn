@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: dc039a7a984fae9bd856a9e7147ad899f86f0592
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 9da3bd65dfb5cc6f9ca6bd0e2930003e6ac3d182
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "35244995"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059254"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
-ListView 是用于呈现数据，尤其是需要滚动的长列表的列表视图。 本指南将演示如何使用 ListView:
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/WorkingWithListview)
+
+视图是用于呈现数据，尤其是需要滚动的长列表的列表视图。 本指南将演示如何使用 ListView:
 
 1. **[数据源](data-and-databinding.md)** &ndash;填充数据，无论数据绑定 ListView。
 2. **[单元格外观](customizing-cell-appearance.md)** &ndash;自定义内置的单元格的外观或创建你自己的自定义单元格。

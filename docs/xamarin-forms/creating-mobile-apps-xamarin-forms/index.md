@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: d694d58b994309f26264459a69517c2bc3b526e2
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a1458d53cb6e57b73317bce77ebdfd5aea64acca
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563624"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061941"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>使用 Xamarin.Forms 书籍创建移动应用
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples)
 
 <p><img src="images/cover-sml.png" title="使用 Xamarin.Forms 书籍创建移动应用" align="left" />本书<i>使用 Xamarin.Forms 创建移动应用</i>Charles Petzold 的是有关学习如何编写 Xamarin.Forms 应用程序的指南。 唯一的先决条件是了解C#编程语言。 本书提供了大量探索到 Xamarin.Forms 的用户界面，还介绍了动画、 MVVM、 触发器、 行为、 自定义布局、 自定义呈现器，以及更多。 
 

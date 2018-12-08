@@ -1,66 +1,68 @@
 ---
-title: 使用 Azure 搜索中搜索数据
-description: 本文演示如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。
+title: 使用 Azure 搜索来搜索数据
+description: 本文演示如何使用 Microsoft Azure 搜索库可将 Azure 搜索集成到 Xamarin.Forms 应用程序。
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bb1ebec25d747f1188f39e9c9032145bcdc3cb97
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 81e6cbb39a522a471e739e7e9bbb8a0f451a38cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35242123"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052878"
 ---
-# <a name="searching-data-with-azure-search"></a>使用 Azure 搜索中搜索数据
+# <a name="searching-data-with-azure-search"></a>使用 Azure 搜索来搜索数据
 
-_Azure 搜索是云服务，提供了索引和查询上载的数据的功能。这将删除基础结构要求和传统上与应用程序中实现搜索功能关联的搜索算法复杂性。本文演示如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。_
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
+
+_Azure 搜索是云服务，提供索引和查询上传的数据的功能。这会删除基础结构要求和搜索算法复杂性通常与应用程序中实现搜索功能。本文演示如何使用 Microsoft Azure 搜索库可将 Azure 搜索集成到 Xamarin.Forms 应用程序。_
 
 ## <a name="overview"></a>概述
 
-数据存储在 Azure 搜索为索引和文档。 *索引*是 Azure 搜索服务中，可以搜索的数据的存储和从概念上讲类似于数据库表。 A*文档*是在索引中，可搜索数据的单个单元，它从概念上讲类似于数据库行。 当将文档上载和提交对 Azure 搜索的搜索查询，对特定索引中搜索服务发出请求。
+数据存储在 Azure 搜索为索引和文档。 *索引*是可由 Azure 搜索服务搜索的数据的存储和从概念上讲类似于数据库表。 一个*文档*是一个可搜索索引中的数据单元，从概念上讲类似于数据库行。 当将文档上载并提交到 Azure 搜索的搜索查询，搜索服务中的特定索引发出请求。
 
-对 Azure 搜索所做的每个请求必须包含服务和 API 密钥名称。 有两种类型的 API 密钥：
+对 Azure 搜索所做的每个请求必须包括服务和 API 密钥的名称。 有两种类型的 API 密钥：
 
-- *管理密钥*授予对所有操作的完全权限。 这包括管理服务、 创建和删除索引和数据源。
-- *查询密钥*授予对索引和文档，只读访问权限，应使用的应用程序发出搜索请求。
+- *管理密钥*授予所有操作的完全控制权限。 这包括管理服务、 创建和删除索引和数据源。
+- *查询密钥*授予只读访问权限对索引和文档，并应由发出搜索请求的应用程序。
 
-最常见的请求对 Azure 搜索是执行查询。 有两种类型的可以提交的查询：
+对 Azure 搜索的最常见请求是执行查询。 有两种类型的可提交的查询：
 
-- A*搜索*查询将搜索在索引中的所有可搜索字段中的一个或多个项。 搜索查询是使用简化的语法或 Lucene 查询语法生成的。 有关详细信息，请参阅[Azure 搜索中的简单查询语法](/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/)，和[Lucene Azure 搜索中的查询语法](/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/)。
-- A*筛选器*查询对索引中的所有可筛选字段计算布尔表达式。 使用 OData 筛选器语言的子集生成筛选器查询。 有关详细信息，请参阅[Azure 搜索的 OData 表达式语法](/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/)。
+- 一个*搜索*查询将搜索索引中的所有可搜索字段中的一个或多个项。 搜索查询是使用简化的语法或 Lucene 查询语法生成的。 有关详细信息，请参阅[Azure 搜索中的简单查询语法](/rest/api/searchservice/Simple-query-syntax-in-Azure-Search/)，并[在 Azure 搜索中 Lucene 查询语法](/rest/api/searchservice/Lucene-query-syntax-in-Azure-Search/)。
+- 一个*筛选器*查询对索引中的所有可筛选字段计算布尔表达式。 筛选器查询是使用 OData 筛选器语言的子集生成的。 有关详细信息，请参阅[Azure 搜索的 OData 表达式语法](/rest/api/searchservice/OData-Expression-Syntax-for-Azure-Search/)。
 
-单独或一起，可以使用搜索查询和筛选器查询。 筛选器查询一起使用时，到整个索引中，首先应用，然后搜索查询执行筛选器查询的结果。
+搜索查询和筛选器查询可以单独或一起使用。 筛选器查询一起使用时，对整个索引中，首先应用，然后搜索查询执行筛选器查询的结果。
 
 Azure 搜索还支持基于搜索输入检索建议。 有关详细信息，请参阅[建议查询](#suggestions)。
 
 ## <a name="setup"></a>安装
 
-将 Azure Search 集成到 Xamarin.Forms 应用程序的过程如下所示：
+将 Azure 搜索集成到 Xamarin.Forms 应用程序的过程如下所示：
 
 1. 创建 Azure 搜索服务。 有关详细信息，请参阅[创建 Azure 搜索服务使用 Azure 门户](/azure/search/search-create-service-portal/)。
-1. 作为目标框架的 Silverlight 移除 Xamarin.Forms 解决方案可移植类库 (PCL)。 这可以通过将 PCL 配置文件更改为支持跨平台开发，但不支持 Silverlight，如配置文件 151 或 92 任何配置文件来实现。
-1. 添加[Microsoft Azure 搜索库](https://www.nuget.org/packages/Microsoft.Azure.Search)到 PCL 项目中，Xamarin.Forms 解决方案的 NuGet 包。
+1. 删除 Silverlight 为目标框架从 Xamarin.Forms 解决方案可移植类库 (PCL)。 这可以通过更改为支持跨平台开发，但不支持 Silverlight 中，如配置文件 151 或配置文件 92 任何配置文件的 PCL 配置文件。
+1. 添加[Microsoft Azure 搜索库](https://www.nuget.org/packages/Microsoft.Azure.Search)到 PCL 项目中的 Xamarin.Forms 解决方案的 NuGet 包。
 
-执行这些步骤后，Microsoft 搜索库 API 可用来管理搜索索引和数据源、 上载和管理文档和执行查询。
+执行这些步骤后，可以使用 Microsoft 搜索库 API 管理搜索索引和数据源，上载和管理的文档，并执行查询。
 
 ## <a name="creating-the-azure-search-index"></a>创建 Azure 搜索索引
 
-索引架构必须定义映射到要搜索的数据的结构。 这可以完成在 Azure 门户中，或以编程方式使用`SearchServiceClient`类。 此类管理连接到 Azure 搜索中，并可以用于创建索引。 下面的代码示例演示如何创建此类的实例：
+索引架构必须定义映射到要在其中搜索的数据的结构。 这可以完成在 Azure 门户中，或以编程方式使用`SearchServiceClient`类。 此类管理连接到 Azure 搜索中，并可用于创建索引。 下面的代码示例演示如何创建此类的实例：
 
 ```csharp
 var searchClient =
   new SearchServiceClient(Constants.SearchServiceName, new SearchCredentials(Constants.AdminApiKey));
 ```
 
-`SearchServiceClient`构造函数重载采用一个搜索服务名称和一个`SearchCredentials`对象作为自变量，`SearchCredentials`对象包装*管理密钥*Azure 搜索服务。 *管理密钥*创建索引所需。
+`SearchServiceClient`构造函数重载采用一个搜索服务名称和一个`SearchCredentials`对象作为参数，与`SearchCredentials`对象包装*管理密钥*Azure 搜索服务。 *管理密钥*创建索引所需。
 
 > [!NOTE]
->  单个`SearchServiceClient`实例应使用应用程序中，以避免打开太多连接到 Azure Search。
+>  单个`SearchServiceClient`实例应使用应用程序中，以避免打开太多连接到 Azure 搜索。
 
-通过定义索引`Index`对象，如下面的代码示例中所示：
+定义索引`Index`对象，如以下代码示例所示：
 
 ```csharp
 static void CreateSearchIndex()
@@ -86,30 +88,30 @@ static void CreateSearchIndex()
 }
 ```
 
-`Index.Name`属性应设置为索引，名称和`Index.Fields`属性应设置为的数组`Field`对象。 每个`Field`实例指定名称、 类型和任何属性，指定如何使用此字段。 这些属性包括：
+`Index.Name`属性应设置为索引的名称和`Index.Fields`属性应设置为一个数组`Field`对象。 每个`Field`实例指定一个名称、 类型和任何属性，指定如何使用该字段。 这些属性包括：
 
-- `IsKey` – 指示字段是否索引的键。 在索引中，类型的一个字段`DataType.String`，必须指定为键字段。
-- `IsFacetable` – 指示是否可以对此字段执行分面导航。 默认值为 `false`。
-- `IsFilterable` – 表示是否可以在筛选器查询中使用该字段。 默认值为 `false`。
-- `IsRetrievable` – 指示是否可以在搜索结果中检索字段。 默认值为 `true`。
-- `IsSearchable` – 指示是否在全文搜索中包含的字段。 默认值为 `false`。
-- `IsSortable` – 表示是否可以在中使用字段`OrderBy`表达式。 默认值为 `false`。
+- `IsKey` – 指示字段是否为索引的键。 只有一个字段的类型的索引`DataType.String`，必须指定为键字段。
+- `IsFacetable` – 指示是否可以在此字段应进行分面导航。 默认值为 `false`。
+- `IsFilterable` – 指示是否可以在筛选器查询中使用该字段。 默认值为 `false`。
+- `IsRetrievable` – 指示是否可以在搜索结果中检索该字段。 默认值为 `true`。
+- `IsSearchable` – 指示字段是否包含在全文搜索。 默认值为 `false`。
+- `IsSortable` – 指示是否可以在中使用字段`OrderBy`表达式。 默认值为 `false`。
 
 > [!NOTE]
-> 在部署后更改索引涉及重新生成并重新加载数据。
+> 部署后更改索引需要重建和重新加载数据。
 
-`Index`对象可以选择指定`Suggesters`属性，用于定义索引中要用于支持自动完成或搜索建议查询的字段。 `Suggesters`属性应设置为的数组`Suggester`定义用于生成建议结果的搜索的字段的对象。
+`Index`对象可以选择性地指定`Suggesters`属性，该索引要用来支持自动完成或搜索建议查询中定义的字段属性。 `Suggesters`属性应设置为一个数组`Suggester`对象，定义用于生成建议结果的搜索的字段。
 
 在创建后`Index`对象，通过调用创建索引`Indexes.Create`上`SearchServiceClient`实例。
 
 > [!NOTE]
-> 当从应用程序创建索引必须响应保留时，则使用`Indexes.CreateAsync`方法。
+> 当从应用程序创建索引必须响应式保留时，则使用`Indexes.CreateAsync`方法。
 
-有关详细信息，请参阅[创建 Azure Search 索引使用.NET SDK](/azure/search/search-create-index-dotnet/)。
+有关详细信息，请参阅[创建 Azure 搜索索引使用.NET SDK](/azure/search/search-create-index-dotnet/)。
 
 ## <a name="deleting-the-azure-search-index"></a>删除 Azure 搜索索引
 
-可以通过调用删除索引`Indexes.Delete`上`SearchServiceClient`实例：
+可以通过调用来删除索引`Indexes.Delete`上`SearchServiceClient`实例：
 
 ```csharp
 searchClient.Indexes.Delete(Constants.Index);
@@ -117,12 +119,12 @@ searchClient.Indexes.Delete(Constants.Index);
 
 ## <a name="uploading-data-to-the-azure-search-index"></a>将数据上载到 Azure 搜索索引
 
-定义索引之后, 可以将数据上载到它使用两种模式之一：
+定义索引之后, 可将数据上传到它使用两种模型之一：
 
-- **拉取模型**– 数据定期引入从 Azure Cosmos DB、 Azure SQL 数据库、 Azure Blob 存储或 SQL Server 托管 Azure 虚拟机中。
-- **推送模型**– 数据以编程方式发送到索引。 这是采用此文章中的模型。
+- **请求模型**– 数据定期引入从 Azure Cosmos DB、 Azure SQL 数据库、 Azure Blob 存储或托管在 Azure 虚拟机中的 SQL Server。
+- **推送模型**– 数据以编程方式发送到索引。 这是在本文中采用的模型。
 
-A`SearchIndexClient`必须创建实例，以将数据导入索引。 这可以通过调用来实现`SearchServiceClient.Indexes.GetClient`方法，如下面的代码示例中所示：
+一个`SearchIndexClient`必须创建实例数据导入到索引。 这可以通过调用来实现`SearchServiceClient.Indexes.GetClient`方法，如下面的代码示例中所示：
 
 ```csharp
 static void UploadDataToSearchIndex()
@@ -154,25 +156,25 @@ static void UploadDataToSearchIndex()
 }
 ```
 
-要导入到索引数据打包为`IndexBatch`对象，封装的集合`IndexAction`对象。 每个`IndexAction`实例包含一个文档，以及指示要对文档执行的操作的 Azure 搜索的属性。 在上面的代码示例`IndexAction.Upload`指定，如果它是新的、 要插入到索引文档中的哪些结果或如果它已存在替换操作。 `IndexBatch`对象然后通过调用发送到索引`Documents.Index`方法`SearchIndexClient`对象。 有关其他索引操作的信息，请参阅[决定要使用的索引操作](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use)。
+要导入到索引数据打包成`IndexBatch`对象，该封装的集合对象`IndexAction`对象。 每个`IndexAction`实例包含一个文档，以及指示 Azure 搜索对文档执行的操作的属性。 在上面的代码示例`IndexAction.Upload`操作指定，如果是新的插入到索引文档中的结果或替换已存在。 `IndexBatch`对象然后通过调用发送到索引`Documents.Index`方法`SearchIndexClient`对象。 有关其他索引操作的信息，请参阅[决定要使用的索引操作](/azure/search/search-import-data-dotnet#ii-decide-which-indexing-action-to-use)。
 
 > [!NOTE]
 > 仅 1000 个文档可以包含在单个索引请求。
 
-请注意，在上面的代码示例`monkeyList`作为匿名对象的集合中创建集合`Monkey`对象。 这将创建数据`id`字段，并将其解析 Pascal 大小写的映射`Monkey`camel 大小写的属性名称搜索索引字段名称。 或者，此映射还可以通过添加`[SerializePropertyNamesAsCamelCase]`属性设为`Monkey`类。
+请注意，在上面的代码示例`monkeyList`集合创建为集合中的一个匿名对象`Monkey`对象。 这将创建的数据`id`字段，并解析的 Pascal 大小写映射`Monkey`为混合大小写的属性名称搜索索引字段名称。 或者，此映射可以也可以通过添加`[SerializePropertyNamesAsCamelCase]`属性为`Monkey`类。
 
-有关详细信息，请参阅[将数据上载到 Azure 搜索中使用.NET SDK](/azure/search/search-import-data-dotnet/)。
+有关详细信息，请参阅[将数据上传到 Azure 搜索.NET SDK](/azure/search/search-import-data-dotnet/)。
 
 ## <a name="querying-the-azure-search-index"></a>查询 Azure 搜索索引
 
-A`SearchIndexClient`必须创建实例查询的索引。 当应用程序执行查询时，则最好遵循最低特权原则，并创建`SearchIndexClient`直接传递*查询密钥*作为自变量。 这可确保用户具有对索引和文档的只读访问权限。 在下面的代码示例演示了这种方法：
+一个`SearchIndexClient`必须创建实例来查询索引。 当应用程序执行查询时，则最好遵循最低特权原则，并创建`SearchIndexClient`直接，传递*查询密钥*作为自变量。 这可确保用户具有对索引和文档的只读访问权限。 下面的代码示例演示了此方法：
 
 ```csharp
 SearchIndexClient indexClient =
   new SearchIndexClient(Constants.SearchServiceName, Constants.Index, new SearchCredentials(Constants.QueryApiKey));
 ```
 
-`SearchIndexClient`构造函数重载采用搜索服务名称、 索引名称和一个`SearchCredentials`对象作为自变量，`SearchCredentials`对象包装*查询密钥*Azure 搜索服务。
+`SearchIndexClient`构造函数重载采用一个搜索服务名称、 索引名称和一个`SearchCredentials`对象作为参数，与`SearchCredentials`对象包装*查询密钥*Azure 搜索服务。
 
 ### <a name="search-queries"></a>搜索查询
 
@@ -197,7 +199,7 @@ async Task AzureSearch(string text)
 }
 ```
 
-`SearchAsync`方法采用的搜索文本参数和可选`SearchParameters`可以用于进一步优化查询的对象。 可以通过将设置指定筛选器查询时，指定将搜索查询作为搜索文本自变量，`Filter`属性`SearchParameters`自变量。 下面的代码示例演示两种查询类型：
+`SearchAsync`方法采用搜索文本参数和可选`SearchParameters`可用于进一步优化查询的对象。 虽然可以通过设置指定一个筛选器查询作为搜索文本参数，指定了一个搜索查询`Filter`属性的`SearchParameters`参数。 下面的代码示例演示了两种查询类型：
 
 ```csharp
 var parameters = new SearchParameters
@@ -207,20 +209,20 @@ var parameters = new SearchParameters
 var searchResults = await indexClient.Documents.SearchAsync<Monkey>(text, parameters);
 ```
 
-此筛选器查询应用于整个索引，从结果中移除文档其中`location`字段不是等于中国且不等于越南。 在筛选之后，将搜索查询执行筛选器查询的结果。
+此筛选器查询应用于整个索引，并从结果中删除文档其中`location`字段不等于中国且不等于越南。 在筛选之后，搜索查询执行筛选器查询的结果。
 
 > [!NOTE]
 > 若要筛选而无需搜索，请将传递`*`作为搜索文本参数。
 
-`SearchAsync`方法返回`DocumentSearchResult`包含查询结果的对象。 此对象枚举，与每个`Document`对象创建为`Monkey`对象，并添加到`Monkeys``ObservableCollection`进行显示。 以下屏幕快照显示搜索查询返回的结果从 Azure 搜索：
+`SearchAsync`方法将返回`DocumentSearchResult`对象，其中包含查询结果。 此对象枚举，与每个`Document`对象创建为`Monkey`对象，并添加到`Monkeys``ObservableCollection`进行显示。 以下屏幕截图显示搜索查询返回的结果从 Azure 搜索：
 
 ![](azure-search-images/search.png "搜索结果")
 
-有关搜索和筛选的详细信息，请参阅[查询你使用.NET SDK 的 Azure 搜索索引](/azure/search/search-query-dotnet/)。
+有关搜索和筛选的详细信息，请参阅[查询 Azure 搜索索引使用.NET SDK](/azure/search/search-query-dotnet/)。
 
 <a name="suggestions" />
 
-### <a name="suggestion-queries"></a>建议查询
+### <a name="suggestion-queries"></a>建议的查询
 
 Azure 搜索允许请求的建议基于搜索查询，通过调用`Documents.SuggestAsync`方法`SearchIndexClient`实例。 在下面的代码示例说明了这一点：
 
@@ -254,25 +256,25 @@ async Task AzureSuggestions(string text)
 }
 ```
 
-`SuggestAsync`方法采用一个搜索文本自变量，若要使用的建议器名称 （即定义索引中），和一个可选`SuggestParameters`可以用于进一步优化查询的对象。 `SuggestParameters`实例将设置以下属性：
+`SuggestAsync`方法采用一个搜索文本自变量，若要使用的建议器名称 （即是在索引中定义），和一个可选`SuggestParameters`可用于进一步优化查询的对象。 `SuggestParameters`实例设置以下属性：
 
-- `UseFuzzyMatching` – 当设置为`true`，Azure 搜索会查找建议，即使搜索文本中没有替代或缺少字符。
-- `HighlightPreTag` – 建议命中前面预置的标记。
+- `UseFuzzyMatching` – 如果设置为`true`，Azure 搜索将查找建议，即使搜索文本中没有替代或缺少字符。
+- `HighlightPreTag` – 将追加到建议命中前面的标记。
 - `HighlightPostTag` – 追加到建议命中数的标记。
-- `MinimumCoverage` – 表示报告为成功，则必须通过建议查询查询要涵盖的索引的百分比。 默认值为 80。
-- `Top` – 若要检索的建议的数量。 它必须是 1 到 100，默认值为 5 之间的整数。
+- `MinimumCoverage` – 表示查询的建议查询必须覆盖的索引百分比报告成功。 默认值为 80。
+- `Top` – 要检索的建议数。 它必须是介于 1 和 100，默认值为 5 之间的整数。
 
-总体效果是命中突出显示，并且结果将包括包括相似的拼写搜索词的文档，将会从索引前的 10 个结果返回与。
+总体效果是索引的前 10 个结果将返回具有中，命中项突出显示，并且结果将包括包含同样拼写搜索词的文档。
 
-`SuggestAsync`方法返回`DocumentSuggestResult`包含查询结果的对象。 此对象枚举，与每个`Document`对象创建为`Monkey`对象，并添加到`Monkeys``ObservableCollection`进行显示。 以下屏幕截图显示了从 Azure 搜索返回的建议结果：
+`SuggestAsync`方法将返回`DocumentSuggestResult`对象，其中包含查询结果。 此对象枚举，与每个`Document`对象创建为`Monkey`对象，并添加到`Monkeys``ObservableCollection`进行显示。 以下屏幕截图显示从 Azure 搜索返回的建议结果：
 
 ![](azure-search-images/suggest.png "建议结果")
 
-请注意，在示例应用程序，`SuggestAsync`用户完成输入的搜索词时，才会调用方法。 但是，它还可支持自动完成搜索查询，通过在每个 keypress 上执行。
+请注意，在示例应用程序，`SuggestAsync`用户完成输入搜索词时，才会调用方法。 但是，它还可用来通过执行在每个按键上支持自动补全搜索查询。
 
 ## <a name="summary"></a>总结
 
-这篇文章演示了如何使用 Microsoft Azure 搜索库将 Azure Search 集成到 Xamarin.Forms 应用程序。 Azure 搜索是云服务，提供了索引和查询上载的数据的功能。 这将删除基础结构要求和传统上与应用程序中实现搜索功能关联的搜索算法复杂性。
+本文演示了如何使用 Microsoft Azure 搜索库可将 Azure 搜索集成到 Xamarin.Forms 应用程序。 Azure 搜索是云服务，提供索引和查询上传的数据的功能。 这会删除基础结构要求和搜索算法复杂性通常与应用程序中实现搜索功能。
 
 
 ## <a name="related-links"></a>相关链接

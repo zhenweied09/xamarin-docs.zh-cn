@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 1326a1326b4a88459e4e0a01ef590e770e3a88c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997343"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059452"
 ---
 # <a name="customizing-listview-appearance"></a>自定义 ListView 外观
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
 `ListView` 具有用于控制总体列表中，除了基础的演示文稿选项`ViewCell`s。 选项包括：
 

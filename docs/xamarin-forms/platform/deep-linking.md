@@ -8,14 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: f73760e2dc2310a9c1cd7a63a03ead37283a415f
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: c4e634ce51080ad38b093e1355767c73c72e837a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710005"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059621"
 ---
 # <a name="application-indexing-and-deep-linking"></a>应用程序索引和深层链接
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
 
 _应用程序索引，否则将几个使用通过出现在搜索结果中了解相关信息后忘记的应用程序。深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。本文介绍如何使用应用程序的索引和深层链接可供搜索 iOS 和 Android 设备上的 Xamarin.Forms 应用程序内容。_
 

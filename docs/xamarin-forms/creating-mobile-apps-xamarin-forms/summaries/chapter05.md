@@ -7,16 +7,18 @@ ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 0e99d15bbecf6640b714b499997144eb18268183
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562700"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056079"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>第 5 章的摘要。 处理大小
 
-> [!NOTE] 
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+
+> [!NOTE]
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
 到目前为止已经遇到在 Xamarin.Forms 中的多个大小：

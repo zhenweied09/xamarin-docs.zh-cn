@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: fea1db6c65e533692601439f4712d15371740644
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 588c04729b3387cd1a072f73a21f1e49df4529e5
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995893"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050070"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms 页面
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Xamarin.Forms 页呈现跨平台移动应用程序屏幕。_
 
@@ -22,7 +24,7 @@ _Xamarin.Forms 页呈现跨平台移动应用程序屏幕。_
 
 [ ![](pages-images/pages-sml.png "Xamarin.Forms 页面类型")](pages-images/pages.png#lightbox "Xamarin.Forms 页面类型")
 
-## <a name="pages"></a>页数
+## <a name="pages"></a>Pages
 
 Xamarin.Forms 支持以下的页类型：
 

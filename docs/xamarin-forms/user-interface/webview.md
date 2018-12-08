@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 02ea94fa67491384e6ca6768e429ee96b46c6143
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 6d3355b1ebac5001984677eb8cc527fe619b8349
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171334"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052246"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
 
 [`WebView`](xref:Xamarin.Forms.WebView) 是应用程序中显示 web 和 HTML 内容的视图。 与不同`OpenUri`，使用户转到 web 浏览器在设备上，`WebView`显示您的应用程序中的 HTML 内容。
 

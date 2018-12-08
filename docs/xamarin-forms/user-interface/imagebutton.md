@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 26f69f9ac2d315e1076cab6f7c1534cbdd39a9b3
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52173880"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050123"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 _ImageButton 显示图像和响应点击或单击，将定向的应用程序来执行特定任务。_
 

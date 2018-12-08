@@ -7,14 +7,16 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: d90bef4da589215247f412450905a5db541b0444
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563155"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052736"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>第 24 章的摘要。 页导航
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
 许多应用程序包含多个用户在其之间导航的页面。 应用程序始终都*主要*页或*家庭*页上，并从那里用户导航到其他页面，用于向后导航堆栈中维护。 中包括其他导航选项[**第 25 章。页上品种**](chapter25.md)。
 

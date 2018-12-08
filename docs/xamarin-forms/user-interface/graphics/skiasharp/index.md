@@ -1,19 +1,21 @@
 ---
-title: 在 Xamarin.Forms 中 SkiaSharp 图形
+title: Xamarin.Forms 中的 SkiaSharp Graphics
 description: SkiaSharp 是.NET 和 C# 由 Google 产品中广泛使用的开放源代码 Skia 图形引擎提供支持的 2D 图形系统。 本指南介绍如何使用 SkiaSharp 的 Xamarin.Forms 应用程序中的 2D 图形。
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 05c4b00f1551ffe21b3042a7da6bf0483dacf620
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615868"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055836"
 ---
-# <a name="skiasharp-graphics-in-xamarinforms"></a>在 Xamarin.Forms 中 SkiaSharp 图形
+# <a name="skiasharp-graphics-in-xamarinforms"></a>Xamarin.Forms 中的 SkiaSharp Graphics
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _用于二维图形 Xamarin.Forms 应用程序中使用 SkiaSharp_
 

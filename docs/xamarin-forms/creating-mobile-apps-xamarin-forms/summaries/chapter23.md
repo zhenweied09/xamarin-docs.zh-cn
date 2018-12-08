@@ -7,14 +7,16 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563987"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058631"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>第 23 章的摘要。 触发器和行为
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
 触发器和行为的类似，在于它们都旨在简化元素交互，而不仅仅使用的数据绑定并扩展功能的 XAML 元素在 XAML 文件中使用。 使用可视用户界面对象几乎始终使用触发器和行为。
 
@@ -23,7 +25,7 @@ ms.locfileid: "51563987"
 - [`VisualElement.Triggers`](xref:Xamarin.Forms.VisualElement.Triggers) 并[ `Style.Triggers` ](xref:Xamarin.Forms.Style.Triggers)的类型 `IList<TriggerBase>`
 - [`VisualElement.Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 并[ `Style.Behaviors` ](xref:Xamarin.Forms.Style.Behaviors)的类型 `IList<Behavior>`
 
-## <a name="triggers"></a>触发器
+## <a name="triggers"></a>Triggers
 
 触发器是导致出现响应 （其他属性更改或运行一些代码） 的条件 （更改属性或事件触发）。 `Triggers`的属性`VisualElement`并`Style`的类型`IList<TriggersBase>`。 [`TriggerBase`](xref:Xamarin.Forms.TriggerBase) 是以下四个密封的类派生一个抽象类：
 
@@ -123,7 +125,7 @@ ms.locfileid: "51563987"
 
 组合 AND 和或逻辑并不简单，而且通常不需要不可见`Switch`中间结果的元素。 [ **XorConditions** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/XorConditions)示例演示如何`Button`如果可以启用两个`Entry`元素具有在中，键入一些文本，但如果二者都提供中键入一些文本。
 
-## <a name="behaviors"></a>行为
+## <a name="behaviors"></a>Behaviors
 
 可以使用触发器执行的任何内容，还可以执行行为，但行为始终需要派生的类[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)并重写以下两个方法：
 

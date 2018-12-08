@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c505b12a745017664e56e8c84d0cf847a262208d
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171282"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060208"
 ---
 # <a name="android-platform-specifics"></a>Android 平台特定信息
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 
 _平台特定信息，可使用的功能仅适用于特定的平台，而无需实现自定义呈现器或效果。本文演示如何使用 Android 平台特定信息的内置于 Xamarin.Forms。_
 
@@ -137,7 +139,7 @@ _legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
 > [!NOTE]
 > 设置时[ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup)旧颜色模式被完全忽略上一个视图。 可视状态的详细信息，请参阅[Xamarin.Forms 视觉状态管理器](~/xamarin-forms/user-interface/visual-state-manager.md)。
 
-## <a name="views"></a>视图
+## <a name="views"></a>Views
 
 在 Android 上，为 Xamarin.Forms 视图提供以下特定于平台的功能：
 

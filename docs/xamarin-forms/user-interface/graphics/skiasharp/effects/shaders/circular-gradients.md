@@ -7,14 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 08a79c7685b6e7d210baf11e99edcf928df88c67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130977"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056040"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 循环渐变
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 [ `SKShader` ](xref:SkiaSharp.SKShader)类定义用于创建四种不同类型的渐变的静态方法。 [ **SkiaSharp 线性渐变**](linear-gradient.md)一文讨论[ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*)方法。 本文介绍了其他三种类型的渐变，所有这些都按圆圈。
 

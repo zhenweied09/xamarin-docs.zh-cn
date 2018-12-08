@@ -7,14 +7,16 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: a795b382b9bcc727b0b0872d29d30a501cfed0a6
-ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
+ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598894"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058228"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>第 20 章的摘要。 异步和文件 I/O
+
+[![下载示例](~/media/shared/download.png)下载示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
 > [!NOTE] 
 > 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。

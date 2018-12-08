@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/13/2018
-ms.openlocfilehash: 77a48e36f33fc690306f5e590f9f4f3064fe1ddf
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: f5b5a8a2d7adf207a583d71953ead1e0e7306b3f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202937"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052311"
 ---
 # <a name="listview-interactivity"></a>ListView 交互性
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
 
 ListView 支持与它将通过以下方法提供的数据进行交互：
 
