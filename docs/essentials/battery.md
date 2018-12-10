@@ -4,19 +4,17 @@ description: 本文档介绍 Xamarin.Essentials 中的 Battery 类，此类使�
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 6a14c939064538a405a1fe64061e0bb2e903fedd
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 3d69d082495f11c48273e9329bd2a4a61451b33f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675427"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058683"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials：Battery
 
-![预发行版 NuGet](~/media/shared/pre-release.png)
-
-Battery 类使你能够查看设备的电池信息并监视更改。
+Battery类允许检查设备的电池信息、监视更改，并提供有关设备的节能模式状态的信息，该状态指示设备是否正在低功耗模式下运行。 如果设备的节能模式状态已打开，则应用程序应避免后台处理。
 
 ## <a name="get-started"></a>入门
 
@@ -65,7 +63,7 @@ using Xamarin.Essentials;
 查看当前的电池信息：
 
 ```csharp
-var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
+var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
 
 var state = Battery.State;
 
@@ -121,7 +119,7 @@ public class BatteryTest
         Battery.BatteryChanged += Battery_BatteryChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryChangedEventArgs   e)
+    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -130,6 +128,39 @@ public class BatteryTest
     }
 }
 ```
+
+使用电池运行的设备可以置于低功耗节能模式。 有时，设备会自动切换到此模式，例如，当电池电量降到 20% 以下时。 操作系统通过减少往往会消耗电池的活动来响应节能模式。 打开节能模式时，应用程序有助于避免后台处理或其他高功率活动。
+
+还可以使用静态 `Battery.EnergySaverStatus` 属性获取设备的当前节能状态：
+
+```csharp
+// Get energy saver status
+var status = Battery.EnergySaverStatus;
+```
+
+此属性会返回 `EnergySaverStatus` 枚举的成员，可以是 `On`、`Off` 或 `Unknown`。 如果该属性返回 `On`，则应用程序应避免后台处理或可能会消耗大量电力的其他活动。
+
+应用程序还应安装事件处理程序。 Battery 类会公开节能模式状态发生更改时触发的事件：
+
+```csharp
+public class EnergySaverTest
+{
+    public EnergySaverTest()
+    {
+        // Subscribe to changes of energy-saver status
+        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+    }
+
+    private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
+    {
+        // Process change
+        var status = e.EnergySaverStatus;
+    }
+}
+```
+
+如果节能模式状态更改为 `On`，则应用程序应停止执行后台处理。 如果状态更改为 `Unknown` 或 `Off`，则应用程序可以继续执行后台处理。
+
 
 ## <a name="platform-differences"></a>平台差异
 
@@ -141,7 +172,6 @@ public class BatteryTest
 
 * 必须使用设备来测试 API。 
 * 将仅为 `PowerSource` 返回 `AC` 或 `Battery`。
-* 无法取消振动。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

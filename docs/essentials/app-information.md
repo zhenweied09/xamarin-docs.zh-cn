@@ -4,17 +4,15 @@ description: 本文档介绍 Xamarin.Essentials 中的 AppInfo 类，此类提�
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 00419fb746609464b49be343938905614c59ab29
-ms.sourcegitcommit: 704d4cfd418c17b0e85a20c33a16d2419db0be71
+ms.date: 11/04/2018
+ms.openlocfilehash: 3e67b605e485b724ec11f2ac94dcf3d1aa77d5cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51691758"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057287"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials：应用信息
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 AppInfo 类提供应用程序的相关信息。
 
@@ -54,10 +52,42 @@ AppInfo 类还可以显示由操作系统为应用程序维护的设置页面：
 
 ```csharp
 // Display settings page
-AppInfo.OpenSettings();
+AppInfo.ShowSettingsUI();
 ```
 
 此设置页面使用户能够更改应用程序权限，并执行其他特定于平台的任务。
+
+## <a name="platform-implementation-specifics"></a>平台实现细节
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+应用信息提取自 `AndroidManifest.xml` 的以下字段：
+
+- 版本 – `manifest` 节点中的 `android:versionCode`
+- 名称 - `application` 节点中的 `android:label`
+- PackageName：`manifest` 节点中的 `package`
+- VersionString – `application` 节点中的 `android:versionName`
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+应用信息提取自 `Info.plist` 的以下字段：
+
+- 版本 – `CFBundleVersion`
+- 名称 - `CFBundleDisplayName`如果已设置否则为 `CFBundleName`
+- PackageName：`CFBundleIdentifier`
+- VersionString – `CFBundleShortVersionString`
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+应用信息提取自 `Package.appxmanifest` 的以下字段：
+
+- 版本 – 使用 `Identity` 节点上 `Version` 中的 `Build`
+- 名称 - `Properties` 节点上的 `DisplayName`
+- PackageName：`Identity` 节点上的 `Name`
+- VersionString – `Identity` 节点上的 `Version`
+
+
+--------------
 
 ## <a name="api"></a>API
 
