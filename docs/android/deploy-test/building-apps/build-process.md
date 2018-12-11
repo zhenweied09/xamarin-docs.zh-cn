@@ -5,13 +5,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/14/2018
-ms.openlocfilehash: b63efb3f9bfa432f15415e652cd5d59f929c4488
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.date: 12/03/2018
+ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617782"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899169"
 ---
 # <a name="build-process"></a>生成过程
 
@@ -76,7 +76,7 @@ Xamarin.Android 生成过程基于 MSBuild，它也是 Visual Studio for Mac 和
 
 ## <a name="build-properties"></a>生成属性
 
-MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild)中的 MyApp.csproj。
+MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，例如 [MSBuild PropertyGroup 元素](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild)中的 MyApp.csproj。 
 
 -   配置 &ndash; 指定要使用的生成配置，例如“调试”或“发行”。 配置属性用于确定其他属性（确定目标行为）的默认值。 其他配置可能会在 IDE 中创建。
 
@@ -94,7 +94,8 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     如果 `DebugType` 未设置或为空字符串，则 `DebugSymbols` 属性控制应用程序是否可调试。
 
-
+    - **AndroidGenerateLayoutBindings** &ndash; 设置为 `true` 能够生成[布局代码隐藏](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)，设置为 `false` 完全禁用。 默认值为 `false`。
+    
 ### <a name="install-properties"></a>安装属性
 
 安装属性控制 `Install` 和 `Uninstall` 目标的行为。
@@ -129,6 +130,16 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     在 Xamarin.Android 7.1 之后添加了对该属性的支持。
 
     该属性默认为 `False`。
+
+-   **AndroidD8JarPath** &ndash; 指向 `d8.jar` 的路径，供与 D8 Dex 编译器结合使用。 默认为 Xamarin.Android 安装中的路径。 有关详细信息，请参阅 [D8 和 R8][d8-r8] 相关文档。
+
+-   **AndroidDexTool** &ndash; 枚举样式的属性，有效值为 `dx` 或 `d8`。 指示在 Xamarin.Android 生成过程中使用的 Android [Dex][dex] 编译器。
+    当前默认为 `dx`。 有关详细信息，请参阅 [D8 和 R8][d8-r8] 相关文档。
+
+    [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **AndroidEnableDesugar** &ndash; 确定是否启用了 `desugar` 的布尔属性。 Android 当前不支持所有 Java 8 功能；默认工具链通过对 `javac` 编译器的输出执行称为 `desugar` 的字节码转换，实现新的语言功能。 如果使用 `AndroidDexTool=dx`，默认为 `False`；如果使用 `AndroidDexTool=d8`，默认为`True`。
 
 -   AndroidEnableMultiDex &ndash; 一个布尔属性，用于确定是否将在最终的 `.apk` 中使用 multi-dex 支持。
 
@@ -229,6 +240,14 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
     ```
 
+-   **AndroidLinkTool** &ndash; 枚举样式的属性，有效值为 `proguard` 或 `r8`。 指示用于 Java 代码的代码压缩器。 当前默认为空字符串；如果 `$(AndroidEnableProguard)` 是 `True`，则为 `proguard`。 有关详细信息，请参阅 [D8 和 R8][d8-r8] 相关文档。
+
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **LinkerDumpDependencies** &ndash; 布尔属性，能够生成链接器依赖项文件。 可将此文件用作 [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer) 工具的输入。
+
+    默认值为 False。
+
 -   AndroidManagedSymbols &ndash; 一个布尔属性，用于控制是否生成序列点，以便可以从 `Release` 堆栈跟踪中提取文件名和行号信息。
 
     已在 Xamarin.Android 6.1 中添加。
@@ -236,6 +255,8 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 -   AndroidManifest &ndash; 指定用于应用 [`AndroidManifest.xml`](~/android/platform/android-manifest.md) 的模板的文件名。
     在生成期间，将合并任何其他必要的值以生成实际的 `AndroidManifest.xml`。
     `$(AndroidManifest)` 必须在 `/manifest/@package` 属性中包含程序包名称。
+
+-   **AndroidR8JarPath** &ndash; 指向 `r8.jar` 的路径，供与 R8 Dex 编译器和压缩器结合使用。 默认为 Xamarin.Android 安装中的路径。 有关详细信息，请参阅 [D8 和 R8][d8-r8] 相关文档。
 
 -   AndroidSdkBuildToolsVersion &ndash; Android SDK 生成工具包提供 aapt 和 zipalign 工具等。 可以同时安装多个不同版本的生成工具包。 若要选择用于打包的生成工具包，请检查是否有“首选”生成工具版本。如果有，请使用它；如果没有“首选”版本，请使用版本最高的已安装生成工具包。
 
@@ -245,7 +266,6 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     支持的值包括：
 
-    -   `armeabi`
     -   `armeabi-v7a`
     -   `x86`
     -   `arm64-v8a`：需要 Xamarin.Android 5.1 及更高版本。
@@ -284,10 +304,11 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     如果 `True`，[ProguardConfiguration](#ProguardConfiguration) 文件将用于控制 `proguard` 的执行。
 
 -   JavaMaximumHeapSize &ndash; 指定构建 `.dex` 文件作为打包过程一部分时使用的 java
-    `-Xmx` 参数值的值。 如果未指定，则不会为 java 提供 `-Xmx` 选项。
+    `-Xmx` 参数值的值。 如果未指定，则 `-Xmx` 选项向 java 提供值 `1G`。 我们发现与其他平台相比，Windows 常常要求这样设置。
 
     如果 [`_CompileDex` 目标引发 `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327)，则指定该属性是必需的。
 
+    通过如下更改自定义值：
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```
@@ -334,8 +355,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
     
     预定义的键项
 
-    -   **abi** &ndash; 插入应用的目标 abi
-        -   1 &ndash; `armeabi`
+    -   abi &ndash; 插入应用程序的目标 abi
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
         -   4 &ndash; `arm64-v8a`
@@ -351,7 +371,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
     已在 Xamarin.Android 7.2 中添加。
 
--   AndroidVersionCodeProperties &ndash; 一个字符串属性，它允许开发人员定义要与 `AndroidVersionCodePattern` 一起使用的自定义项。 它们采用 `key=value` 对的形式。 `value` 中的所有项都应是整数值。 例如：`screen=23;target=$(_SupportedApiLevel)`。 正如你所看到的，你可以使用字符串中现有或自定义的 MSBuild 属性。
+-   AndroidVersionCodeProperties &ndash; 一个字符串属性，它允许开发人员定义要与 `AndroidVersionCodePattern` 一起使用的自定义项。 它们采用 `key=value` 对的形式。 `value` 中的所有项都应是整数值。 例如：`screen=23;target=$(_AndroidApiLevel)`。 正如你所看到的，你可以使用字符串中现有或自定义的 MSBuild 属性。
 
     已在 Xamarin.Android 7.2 中添加。
 
@@ -370,6 +390,65 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 -  **AndroidApkSignerAdditionalArguments** &ndash; 字符串属性，允许开发人员向 `apksigner` 工具提供其他参数。
 
     在 Xamarin.Android 8.2 中新增。
+
+-  **AndroidLintEnabled** &ndash; 布尔属性，使开发人员能够在打包过程中运行 Android `lint` 工具。
+
+    -   **AndroidLintEnabledIssues** &ndash; 要启用的 lint 问题逗号分隔列表。
+
+    -   **AndroidLintDisabledIssues** &ndash; 要禁用的 lint 问题逗号分隔列表。
+
+    -   **AndroidLintCheckIssues** &ndash; 要检查的 lint 问题逗号分隔列表。 
+       请注意：只检查这些问题。
+
+    -   **AndroidLintConfig** &ndash; 这是 lint 样式配置文件的生成操作。 可用于启用/禁用要检查的问题。 多个文件均可使用此生成操作，因为它们的内容会被合并。
+
+    请参阅 [Lint 帮助](http://www.androiddocs.com/tools/help/lint.html)，了解有关 Android `lint` 工具的详细信息。
+
+-  **AndroidGenerateJniMarshalMethods** &ndash; 布尔属性，能够在生成过程中生成 JNI 封送方法。 大大减少了在绑定帮助程序代码中对 System.Reflection 的使用。
+
+   默认设置为 False。 如果开发者希望使用新的 JNI 封送方法功能，他们可以进行如下设置：
+
+    ```xml
+    <AndroidGenerateJniMarshalMethods>True</AndroidGenerateJniMarshalMethods>
+    ```
+
+    （其 csproj 中）。 或者通过如下设置，在命令行上提供该属性：
+
+    `/p:AndroidGenerateJniMarshalMethods=True`
+
+    “实验”。 在 Xamarin.Android 9.2 中新增。
+    默认值为 False。
+
+- **AndroidGenerateJniMarshalMethodsAdditionalArguments** &ndash; 字符串属性，可用于向 `jnimarshalmethod-gen.exe` 调用添加额外的参数。  对调试非常有用，以便可使用 `-v`、`-d` 或 `--keeptemp` 等选项。
+
+   默认值为空字符串。 可以在 csproj 文件中或命令行上设置。 例如:
+
+    ```xml
+    <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
+    ```
+
+   或：
+
+    `/p:AndroidGenerateJniMarshalMethodsAdditionalArguments="-v -d --keeptemp"`
+
+    在 Xamarin.Android 9.2 中新增。
+
+- **AndroidMultiDexClassListExtraArgs** &ndash; 字符串属性，使开发人员能够在生成 `multidex.keep` 文件时，向 `com.android.multidex.MainDexListBuilder` 传递额外的参数。 
+
+    具体事例：是否在 `dx` 编译期间发生以下错误。
+
+        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+
+    如果发生此错误，可以向 .csproj 添加以下内容。
+
+    ```xml
+    <DxExtraArguments>--force-jumbo </DxExtraArguments>
+    <AndroidMultiDexClassListExtraArgs>--disable-annotation-resolution-workaround</AndroidMultiDexClassListExtraArgs>
+    ```
+
+    这样，`dx` 步骤才能成功。
+
+    在 Xamarin.Android 8.3 中新增。
 
 ### <a name="binding-project-build-properties"></a>绑定项目生成属性
 
@@ -408,9 +487,7 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
       - 用于托管子类的 Java Callable Wrapper 构造函数的 `jmethodID` 缓存。
 
-    默认值为 `XamarinAndroid`。
-
-    默认值将会在未来版本中更改。
+    默认值为 `XAJavaInterop1`。
 
 
 ### <a name="resource-properties"></a>资源属性
@@ -427,8 +504,31 @@ MSBuild 属性控制目标的行为。 它们是在项目文件中指定的，�
 
 -   AndroidExplicitCrunch &ndash; 如果你正在生成具有大量本地绘图的应用，则需要花费数分钟才能完成初始生成（或重新生成）。 要加快生成过程，请尝试包含该属性并将其设置为 `True`。 设置该属性时，生成过程会预处理 .png 文件。
 
+    请注意：该选项与 `$(AndroidUseAapt2)` 选项不兼容。 如果启用了 `$(AndroidUseAapt2)`，将禁用此功能。 如果希望继续使用此功能，请将 `$(AndroidUseAapt2)` 设置为 `False`。
+
     “实验”。 已在 Xamarin.Android 7.0 中添加。
 
+-  **AndroidUseAapt2** &ndash; 布尔属性，使开发者能够控制 `aapt2` 打包工具的使用。
+    该属性默认设置为 false，我们要使用的是 `aapt`。
+    如果开发者要使用新的 `aapt2` 功能，他们可以进行如下设置：
+        
+    ```xml
+    <AndroidUseAapt2>True</AndroidUseAapt2>
+    ```
+        
+    （其 csproj 中）。 或者通过如下设置，在命令行上提供该属性：
+
+    `/p:AndroidUseAapt2=True`
+
+    在 Xamarin.Android 8.3 中新增。
+
+-   **AndroidAapt2CompileExtraArgs** &ndash; 指定处理 Android 资产和资源时传递给 aapt2 compile 命令的附加命令行选项。
+
+    在 Xamarin.Android 9.1 中新增。
+
+-   **AndroidAapt2LinkExtraArgs** &ndash; 指定处理 Android 资产和资源时传递给 aapt2 link 命令的附加命令行选项。
+
+    在 Xamarin.Android 9.1 中新增。
 
 <a name="Signing_Properties" />
 
@@ -542,6 +642,18 @@ LogicalName &ndash; 显式指定资源路径。 允许使用 &ldquo;aliasing&rdq
 </ItemGroup>
 ```
 
+### <a name="androidboundlayout"></a>AndroidBoundLayout
+
+指示 `AndroidGenerateLayoutBindings` 属性设置为 `false` 时，系统会为布局文件生成代码隐藏。 在所有其他情况下，它与上面所述的 `AndroidResource` 相同。 此操作仅适用于布局文件：
+
+```xml
+<AndroidBoundLayout Include="Resources\layout\Main.axml" />
+```
+
+### <a name="androidfragmenttype"></a>AndroidFragmentType
+
+指定生成布局绑定代码时，要用于所有 `<fragment>` 布局元素的默认完全限定的类型。 该属性默认为标准的 Android `Android.App.Fragment` 类型。
+
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -552,7 +664,7 @@ LogicalName &ndash; 显式指定资源路径。 允许使用 &ldquo;aliasing&rdq
 1.  路径“探查”。
 2.  使用 `Abi` 项目属性。
 
-通过路径探查，本机库的父目录名称用于指定库的目标 ABI。 因此，如果将 `lib/armeabi/libfoo.so` 添加到版本中，则 ABI 将被“探查”为 `armeabi`。 
+通过路径探查，本机库的父目录名称用于指定库的目标 ABI。 因此，如果将 `lib/armeabi-v7a/libfoo.so` 添加到版本中，则 ABI 将被“探查”为 `armeabi-v7a`。 
 
 
 #### <a name="item-attribute-name"></a>项属性名称
@@ -562,7 +674,7 @@ Abi &ndash; 指定本机库的 ABI。
 ```xml
 <ItemGroup>
   <AndroidNativeLibrary Include="path/to/libfoo.so">
-    <Abi>armeabi</Abi>
+    <Abi>armeabi-v7a</Abi>
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
@@ -572,7 +684,13 @@ Abi &ndash; 指定本机库的 ABI。
 
 生成操作 `AndroidAarLibrary` 应用于直接引用 .aar 文件。 Xamarin 组件最常使用此生成操作。 也就是说，要添加对 .aar 文件的引用，它们是 Google Play 和其他服务正常运行所必需。
 
-包含此生成操作的文件的处理方式类似于库项目中嵌入的资源。 .aar 会被提取到中间目录。 然后，任何资产、资源和 .jar 文件都会被添加到相应项组中。  
+包含此生成操作的文件的处理方式类似于库项目中嵌入的资源。 .aar 会被提取到中间目录。 然后，任何资产、资源和 .jar 文件都会被添加到相应项组中。 
+
+### <a name="androidlintconfig"></a>AndroidLintConfig
+
+应将“AndroidLintConfig”生成操作与 `AndroidLintEnabled` 生成属性结合使用。 系统将使用此生成操作的文件合并起来并传递给 Android `lint` 工具。 它们应当是包含要启用/禁用哪些测试的信息的 xml 文件。
+
+有关详细信息，请参阅 [lint 文档](http://www.androiddocs.com/tools/help/lint.html)。
 
 ### <a name="content"></a>内容
 
