@@ -4,17 +4,15 @@ description: Xamarin.Essentials 中的 Geocoding 类提供了 API，既可以将
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 3202d4ace85c68042425ca5f23641ca7a76a6c7e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528385"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898974"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials：Geocoding
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Geocoding 类提供了 API，既可以将地标地理编码为位置坐标，又可以将坐标反向地理编码为地标。
 
@@ -36,10 +34,10 @@ Geocoding 类提供了 API，既可以将地标地理编码为位置坐标，又
 
 需要必应地图 API 密钥才能使用地理编码功能。 注册免费的[必应地图](https://www.bingmapsportal.com/)帐户。 在“我的帐户”>“我的密钥”下创建一个新密钥，并根据你的应用程序类型（对于 UWP 应用，应该是公共 Windows 应用（UWP、8.x 及更早版本））填写信息。
 
-在应用程序生命周期的早期调用任何 Geocoding 方法之前，应设置 API 密钥：
+在应用程序生命周期的早期调用任何 Geocoding 方法之前，应设置 API 密钥（仅在 UWP 上可用）：
 
 ```csharp
-Geocoding.MapKey = "YOUR-KEY-HERE";
+Platform.MapServiceToken = "YOUR-KEY-HERE";
 ```
 
 -----

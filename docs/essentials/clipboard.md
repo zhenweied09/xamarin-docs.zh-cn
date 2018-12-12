@@ -4,17 +4,15 @@ description: 本文档介绍 Xamarin.Essentials 中的 Clipboard 类，此类使
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 8dd238da678dfb5773801137d313b286590aa463
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 90ede9d0d0fbee9efabcce25c0ae7c3c439d9e69
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675531"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898696"
 ---
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials：Clipboard
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Clipboard 类使你能够在应用程序之间将文本复制并粘贴到系统剪贴板。
 
@@ -39,7 +37,7 @@ var hasText = Clipboard.HasText;
 将文本设置到 Clipboard：
 
 ```csharp
-Clipboard.SetText("Hello World");
+await Clipboard.SetTextAsync("Hello World");
 ```
 
 从 Clipboard 读取文本：

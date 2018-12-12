@@ -4,17 +4,15 @@ description: Xamarin.Essentials 中的 Magnetometer 类使你能够监视设备�
 ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 2fe610195f881f3d20ecc327c02dd2dfbced35ce
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675050"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898711"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials：Magnetometer
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Magnetometer 类使你能够监视设备的磁力计传感器，此传感器指示设备相对于地球磁场的方向。
 
@@ -73,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-所有数据将以微特斯拉为单位返回。
+所有数据将以 µ（微特斯拉）为单位返回。
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

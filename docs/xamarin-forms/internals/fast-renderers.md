@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 42889e3805391e9e586cda61d26103398ba16269
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38997108"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898519"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms 快速呈现器
+
+![预览](~/media/shared/preview.png)
 
 _本文介绍了快速呈现器，减少的通货膨胀和呈现成本在 Android 上 Xamarin.Forms 控件通过平展生成的本机控件层次结构。_
 

@@ -5,17 +5,15 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 08/08/2018
-ms.openlocfilehash: 78b7235d8c9e45c2179b1cca2827f45fe6edd8b2
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675102"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899103"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 入门
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Xamarin.Essentials 提供了适用于任何 iOS、Android 或 UWP 应用程序的单一跨平台 API，不管如何创建用户界面，都可以通过共享代码进行访问。
 

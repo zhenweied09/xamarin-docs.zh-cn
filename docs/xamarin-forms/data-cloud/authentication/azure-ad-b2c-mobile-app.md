@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: cafc1e78779dc393fa0409daa08b3daa8948a1ee
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 135977329e2a190dd4c611937f6b8a664f135f5c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815672"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051939"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>将 Azure Active Directory B2C 集成与 Azure 移动应用程序
+
+[![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuthADB2CClientFlow/)
 
 _Azure Active Directory B2C 是面向消费者的 web 和移动应用程序的云标识管理解决方案。本文演示如何使用 Azure Active Directory B2C 为 Xamarin.Forms 中提供身份验证和授权对 Azure 移动应用实例。_
 
@@ -30,7 +32,7 @@ Azure 移动应用让你能够使用移动身份验证、 脱机同步和推送�
 Azure Active Directory B2C 是标识管理服务的面向消费者的应用程序，允许使用者来登录到由应用程序：
 
 - 使用现有社交帐户 （Microsoft、 Google、 Facebook、 Amazon、 LinkedIn）。
-- 创建新凭据 （电子邮件地址和密码，或用户名和密码）。 这些凭据*本地*帐户。
+- 创建新凭据 （电子邮件地址和密码，或用户名和密码）。 这些凭据嘿*本地*帐户。
 
 有关 Azure Active Directory B2C 的详细信息，请参阅[与 Azure Active Directory B2C 进行身份验证用户](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md)。
 

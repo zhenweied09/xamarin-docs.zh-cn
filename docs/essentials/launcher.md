@@ -4,17 +4,15 @@ description: Xamarin.Essentials 中的 Launcher 类允许应用程序打开系�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/25/2018
-ms.openlocfilehash: b9dc211a8b8b007e6975448a6c6c35f870021cc6
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 502ccaf8ef4fbeadb4b46f47668ac11f2747b89d
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674790"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898261"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials：Launcher
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Launcher 类允许应用程序打开系统的 URI。 通常在深入链接到另一个应用程序的自定义 URI 方案后使用此类。 如果想要将浏览器打开到某个网站，则应引用[浏览器](open-browser.md) API。
 

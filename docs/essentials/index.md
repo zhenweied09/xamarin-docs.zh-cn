@@ -4,17 +4,15 @@ description: 本文档链接到介绍可为开发人员提供其移动应用程�
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/30/2018
-ms.openlocfilehash: b81102c6c0e0d65aaa46b2d32e34db536ab58e03
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.date: 11/04/2018
+ms.openlocfilehash: 0f4271e5c0c9de53a83a840f7fe0a83b594a06fa
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "39360997"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898636"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Xamarin.Essentials 可为开发人员提供其移动应用程序的跨平台 API。
 
@@ -35,7 +33,6 @@ Android、iOS 和 UWP 提供了唯一的操作系统和平台 API，开发人员
 * [剪贴板](clipboard.md?context=xamarin/xamarin-forms) – 快速方便地设置或读取剪贴板上的文本。
 * [指南针](compass.md?context=xamarin/xamarin-forms) – 监视指南针是否发生变化。
 * [连接性](connectivity.md?context=xamarin/xamarin-forms) – 检查连接状态并检测变化。
-* [数据传输](data-transfer.md?context=xamarin/xamarin-forms) – 将文本和网站 URI 发送到其他应用。
 * [设备显示信息](device-display.md?context=xamarin/xamarin-forms) – 获取设备的屏幕指标和方向。
 * [设备信息](device-information.md?context=xamarin/xamarin-forms) – 轻松查找有关设备的信息。
 * [电子邮件](email.md?context=xamarin/xamarin-forms) – 轻松发送电子邮件。
@@ -51,10 +48,9 @@ Android、iOS 和 UWP 提供了唯一的操作系统和平台 API，开发人员
 * [打开浏览器](open-browser.md?context=xamarin/xamarin-forms) – 快速方便地将浏览器打开到特定网站。
 * [方向传感器](orientation-sensor.md?context=xamarin/xamarin-forms) – 检索设备在三个维空间中的方向。
 * [电话拨号程序](phone-dialer.md?context=xamarin/xamarin-forms) – 打开电话拨号程序。
-* [能源](power.md?context=xamarin/xamarin-forms) – 获取设备的节能模式状态。
 * [首选项](preferences.md?context=xamarin/xamarin-forms) – 快速方便地添加永久首选项。
-* [屏幕锁定](screen-lock.md?context=xamarin/xamarin-forms) – 使设备屏幕保持唤醒状态。
 * [安全存储](secure-storage.md?context=xamarin/xamarin-forms) – 安全地存储数据。
+* [Share](share.md?context=xamarin/xamarin-forms) – 将文本和网站 URI 发送到其他应用。
 * [SMS](sms.md?context=xamarin/xamarin-forms) – 创建要发送的短信。
 * [文本到语音转换](text-to-speech.md?context=xamarin/xamarin-forms) – 在设备上读出文本。
 * [版本跟踪](version-tracking.md?context=xamarin/xamarin-forms) – 跟踪应用程序版本和内部版本号。

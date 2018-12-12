@@ -4,17 +4,15 @@ description: Xamarin.Essentials 中的 Gyroscope 类使你能够监控设备的�
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 1d42658160855e260e0d159c58a1f95e7a8c7d4c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 1e19585e238d66568364be7ccdbdb52d22b04066
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674699"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898506"
 ---
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials：Gyroscope
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 Gyroscope 类使你能够监控设备的陀螺仪传感器，此传感器测量围绕设备三个主轴的旋转。
 
@@ -30,7 +28,7 @@ Gyroscope 类使你能够监控设备的陀螺仪传感器，此传感器测量�
 using Xamarin.Essentials;
 ```
 
-通过调用 `Start` 和 `Stop` 方法来使用 Gyroscope 功能以侦听陀螺仪的变化。 然后通过 `ReadingChanged` 事件反馈任何变化。 示例用法如下：
+通过调用 `Start` 和 `Stop` 方法来使用 Gyroscope 功能以侦听陀螺仪的变化。 然后通过 `ReadingChanged` 事件反馈任何变化（以 rad/s 为单位）。 示例用法如下：
 
 ```csharp
 
@@ -48,7 +46,7 @@ public class GyroscopeTest
     void Gyroscope_ReadingChanged(object sender, GyroscopeChangedEventArgs e)
     {
         var data = e.Reading;
-        // Process Angular Velocity X, Y, and Z
+        // Process Angular Velocity X, Y, and Z reported in rad/s
         Console.WriteLine($"Reading: X: {data.AngularVelocity.X}, Y: {data.AngularVelocity.Y}, Z: {data.AngularVelocity.Z}");
     }
 

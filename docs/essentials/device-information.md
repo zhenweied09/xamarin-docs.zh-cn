@@ -4,17 +4,15 @@ description: 本文档介绍 Xamarin.Essentials 中的 DeviceInfo 类，此类�
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 530b04446703d78452357b2c9f9089e59ebf6e6c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674808"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898948"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials：设备信息
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 DeviceInfo 类提供有关运行应用程序的设备的信息。
 
@@ -57,22 +55,23 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[平台](xref:Xamarin.Essentials.DeviceInfo.Platforms)
 
-`DeviceInfo.Platform` 与映射到操作系统的一个常量字符串相关联。 可以使用 `Platforms` 类检查以下值：
+`DeviceInfo.Platform` 与映射到操作系统的一个常量字符串相关联。 可以使用 `DevicePlatform` 结构检查以下值：
 
-- **DeviceInfo.Platforms.iOS** - iOS
-- **DeviceInfo.Platforms.Android** - Android
-- **DeviceInfo.Platforms.UWP** - UWP
-- **DeviceInfo.Platforms.Unsupported** - 不受支持
+- DevicePlatform.iOS – iOS
+- DevicePlatform.Android – Android
+- DevicePlatform.UWP – UWP
+- DevicePlatform.Unknown – 未知
 
 ## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[习惯用语](xref:Xamarin.Essentials.DeviceInfo.Idioms)
 
-`DeviceInfo.Idiom` 与映射到运行应用程序的设备类型的一个常量字符串相关联。 可以使用 `Idioms` 类检查以下值：
+`DeviceInfo.Idiom` 与映射到运行应用程序的设备类型的一个常量字符串相关联。 可以使用 `DeviceIdiom` 结构检查以下值：
 
-- **DeviceInfo.Idioms.Phone** - 手机
-- **DeviceInfo.Idioms.Tablet** - 平板电脑
-- **DeviceInfo.Idioms.Desktop** - 桌面
-- **DeviceInfo.Idioms.TV** - 电视
-- **DeviceInfo.Idioms.Unsupported** - 不受支持
+- DeviceIdiom.Phone – 电话
+- DeviceIdiom.Tablet – 平板电脑
+- DeviceIdiom.Desktop – 台式计算机
+- DeviceIdiom.TV – TV
+- DeviceIdiom.Watch – 手表
+- DeviceIdiom.Unknown – 未知
 
 ## <a name="device-type"></a>设备类型
 

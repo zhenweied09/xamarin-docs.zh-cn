@@ -4,17 +4,15 @@ description: Xamarin.Essentials 中的 SMS 类允许应用程序使用要发送�
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 276c1a03b1446c30e7047d454e06598b39bdad6c
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: d0655f3e687750e0fca626fb017096a946c0abb3
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675231"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898766"
 ---
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials：SMS
-
-![预发行版 NuGet](~/media/shared/pre-release.png)
 
 SMS 类允许应用程序使用要发送到收件人的指定消息打开默认短信应用程序。
 

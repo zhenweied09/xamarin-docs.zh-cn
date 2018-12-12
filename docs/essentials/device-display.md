@@ -4,19 +4,17 @@ description: 本文档介绍 Xamarin.Essentials 中的 DeviceDisplay 类，此�
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ebe97cf7fbb78bff17196110e835bd35ff76b826
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: d3102f0a4ed5f16c77c4a4768feb4a1565f2dd1a
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674881"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898885"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials：设备显示信息
 
-![预发行版 NuGet](~/media/shared/pre-release.png)
-
-DeviceDisplay 类提供有关运行应用程序的设备的屏幕指标信息。
+DeviceDisplay 类提供有关运行应用程序的设备屏幕指标的信息，并可以请求在应用程序运行时防止屏幕进入睡眠状态。
 
 ## <a name="get-started"></a>入门
 
@@ -30,45 +28,57 @@ DeviceDisplay 类提供有关运行应用程序的设备的屏幕指标信息。
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>屏幕指标
+## <a name="main-display-info"></a>主显示器信息
 
 除了基本的设备信息外，DeviceDisplay 类还包含有关设备的屏幕和方向信息。
 
 ```csharp
 // Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
 // Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+var orientation = mainDisplayInfo.Orientation;
 
 // Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+var rotation = mainDisplayInfo.Rotation;
 
 // Width (in pixels)
-var width = metrics.Width;
+var width = mainDisplayInfo.Width;
 
 // Height (in pixels)
-var height = metrics.Height;
+var height = mainDisplayInfo.Height;
 
 // Screen density
-var density = metrics.Density;
+var density = mainDisplayInfo.Density;
 ```
 
 DeviceDisplay 类还会公开可以订阅的一个事件，每当任何屏幕指标更改时就会触发此事件：
 
 ```csharp
-public class ScreenMetricsTest
+public class DisplayInfoTest
 {
-    public ScreenMetricsTest()
+    public DisplayInfoTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
+        DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
     {
         // Process changes
-        var metrics = e.Metrics;
+        var displayInfo = e.DisplayInfo;
+    }
+}
+```
+
+DeviceDisplay 类公开调用了 `KeepScreenOn` 的 `bool` 属性，可将其设置为防止关闭或锁定设备的显示器。
+
+```csharp
+public class KeepScreenOnTest
+{
+    public void ToggleScreenLock()
+    {
+        DeviceDisplay.KeepScreenOn = !DeviceDisplay.KeepScreenOn;
     }
 }
 ```
@@ -81,7 +91,7 @@ public class ScreenMetricsTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* 必须在 UI 线程上访问 `ScreenMetrics`，否则将引发异常。 可以使用 [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 方法在 UI 线程上运行该代码。
+* 必须在 UI 线程上访问 `DeviceDisplay`，否则将引发异常。 可以使用 [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 方法在 UI 线程上运行该代码。
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
