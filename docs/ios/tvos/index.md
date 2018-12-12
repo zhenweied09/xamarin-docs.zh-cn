@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: cbec49844d34ab8ad04282b383de15093ecdd891
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118274"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267503"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>在 Xamarin 中的 tvOS 简介
 
@@ -64,11 +64,11 @@ TvOS 的详细信息，请参阅[Getting Started](~/ios/tvos/get-started/index.m
 
 此外，Apple 提供了可以进行转码为 C#，以使用对 tvOS 应用的 Xamarin 的支持的以下示例应用：
 
-- [DemoBots： 构建使用 SpriteKit 和 GameplayKit 跨平台游戏](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
+- [DemoBots:构建跨平台游戏，SpriteKit 和 GameplayKit](https://developer.apple.com/library/prerelease/tvos/samplecode/DemoBots/)
 
 ## <a name="known-issues-and-troubleshooting"></a>已知的问题和故障排除
 
-如果遇到任何问题生成 tvOS 使用 Xamarin，检查[发行说明](http://releases.xamarin.com/)， [Xamarin.iOS 论坛](https://forums.xamarin.com/categories/ios)， [Xamarin Bugzilla 跟踪器](https://bugzilla.xamarin.com/query.cgi?product=iOS)，和[GitHub](https://github.com/xamarin/xamarin-macios/issues)针对现有问题。
+如果遇到任何问题生成 tvOS 使用 Xamarin，检查[发行说明](https://docs.microsoft.com/xamarin/ios/release-notes/)， [Xamarin.iOS 论坛](https://forums.xamarin.com/categories/ios)， [Xamarin Bugzilla 跟踪器](https://bugzilla.xamarin.com/query.cgi?product=iOS)，和[GitHub](https://github.com/xamarin/xamarin-macios/issues)针对现有问题。
 
 报告新问题和建议[GitHub 上](https://github.com/xamarin/xamarin-macios/issues)。
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/31/2017
-ms.openlocfilehash: ce0e61bdda9f163b25e5152e7012944765a5ac39
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61aa360e91c3881c77c4bc3776e2cfdc36efb61b
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103017"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267351"
 ---
 # <a name="troubleshooting-tips-for-ios-11-and-xamarinios"></a>IOS 11 和 Xamarin.iOS 的疑难解答提示
 
@@ -20,7 +20,7 @@ ms.locfileid: "50103017"
 
 ## <a name="known-issues-and-troubleshooting"></a>已知的问题和故障排除
 
-如果遇到任何问题构建使用 Xamarin 的 iOS 11 应用程序，请检查[发行说明](http://releases.xamarin.com/)， [Xamarin.iOS 论坛](https://forums.xamarin.com/categories/ios)， [Xamarin Bugzilla 跟踪器](https://bugzilla.xamarin.com/query.cgi?product=iOS)，和[GitHub](https://github.com/xamarin/xamarin-macios/issues)针对现有问题。
+如果遇到任何问题构建使用 Xamarin 的 iOS 11 应用程序，请检查[发行说明](https://docs.microsoft.com/xamarin/ios/release-notes/)， [Xamarin.iOS 论坛](https://forums.xamarin.com/categories/ios)， [Xamarin Bugzilla 跟踪器](https://bugzilla.xamarin.com/query.cgi?product=iOS)，和[GitHub](https://github.com/xamarin/xamarin-macios/issues)针对现有问题。
 
 如果您认为在 Xamarin.iOS 中发现了程序错误，报告此问题[GitHub 上](https://github.com/xamarin/xamarin-macios/issues)。
 

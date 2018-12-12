@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 140307dbfe55d5445c329ea83eafedd467fe58fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109349"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267594"
 ---
 # <a name="troubleshooting-tips"></a>疑难解答指南
 
@@ -20,7 +20,7 @@ ms.locfileid: "50109349"
 ## <a name="getting-diagnostic-information"></a>获取诊断信息
 
 Xamarin.Android 有许多方法可以跟踪各种 bug 时的外观。
-这些方法包括：
+这些问题包括：
 
 1.  诊断 MSBuild 输出。
 2.  设备部署日志。
@@ -66,7 +66,7 @@ Xamarin.Android 有许多方法可以跟踪各种 bug 时的外观。
 4.  日志消息都写入到在您的桌面上 monodroid.log 文件。
 
 
-Visual Studio for Mac 始终会写入设备部署日志。 找到它们会稍有难度;*AndroidUtils*日志文件创建的每一天 + 进行部署时，例如： **AndroidTools-2012-10-24_12-35-45.log**。
+Visual Studio for Mac 始终会写入设备部署日志。 找到它们会稍有难度;*AndroidUtils*每一天 + 进行部署时，例如创建的日志文件：**AndroidTools-2012-10-24_12-35-45.log**。
 
 -  在 Windows 中，日志文件将写入到`%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`。
 -  在 OS X 上的日志文件写入到`$HOME/Library/Logs/XamarinStudio-{VERSION}`。
@@ -91,28 +91,28 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 Xamarin.Android 支持以下系统属性：
 
--   *debug.mono.debug*： 如果一个非空字符串，这相当于`*mono-debug*`。
+-   *debug.mono.debug*:如果一个非空字符串，这相当于`*mono-debug*`。
 
--   *debug.mono.env*： 竖线分隔 ('*|*) 的环境变量来导出应用程序启动期间列表*之前*mono 已初始化。 这允许将环境变量设置该控件 mono 日志记录。
+-   *debug.mono.env*:竖线分隔 ('*|*) 的环境变量来导出应用程序启动期间列表*之前*mono 已初始化。 这允许将环境变量设置该控件 mono 日志记录。
 
-    - *请注意*： 因为值是 '*|*'-分隔， 该值必须包含额外级别的用引号括起来，作为 \`*adb shell*\` 命令将删除组引号。
+    - *请注意*:由于值是*|* 的隔离，该值必须包含额外级别的用引号括起来，作为\` *adb shell* \`命令将删除引号引起来的一组。
 
-    - *请注意*: Android 系统属性值不能超过 92 个字符的长度。
+    - *请注意*:Android 系统属性值不能超过 92 个字符的长度。
 
     - 示例:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *debug.mono.log*： 以逗号分隔 ('*，*) 应打印到 Android 调试日志的其他消息的组件的列表。 默认情况下，设置执行任何操作。 组件包括：
+-   *debug.mono.log*:以逗号分隔 ('*，*) 应打印到 Android 调试日志的其他消息的组件的列表。 默认情况下，设置执行任何操作。 组件包括：
 
-    -   *所有*： 打印所有消息
-    -   *gc*： 与打印 GC 相关的消息。
-    -   *gref*： 打印弱 （全局） 引用分配和解除分配消息。
-    -   *lref*： 打印本地引用分配和解除分配消息。
+    -   *所有*:打印所有消息
+    -   *gc*:打印与 GC 相关的消息。
+    -   *gref*:打印弱 （全局） 引用分配和解除分配消息。
+    -   *lref*:打印本地引用分配和解除分配消息。
 
     *请注意*： 这些是*极*详细。 不要启用，除非确实需要。
 
--   *debug.mono.trace*： 允许设置[mono-跟踪](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`设置。
+-   *debug.mono.trace*:す 砛[mono-跟踪](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`设置。
 
 
 
@@ -250,63 +250,6 @@ Android 4.0 中，但是，已移动的收集器，并且无法再分发对 Andr
 
 
 
-## <a name="offline-activation"></a>脱机激活
-
-如果您是无法激活 Windows，在 Xamarin.Android 或无法在 Mac OS X 上安装 Xamarin.Android 的完整版本，请参阅[脱机激活](~/android/get-started/installation/index.md)页。
-
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>从试用版帐户不能升级到独立/企业版
-
-如果你最近购买了 Xamarin.Android 和以前启动了 Xamarin.Android 的试用版，你可能需要完成以下步骤以获取此拾取 Visual Studio for Mac 或 Visual Studio 的许可证更改。
-
--  关闭 Visual Studio for Mac/Visual Studio
--  为 Android\License\ 为 Windows 从 Mac 上的 ~/Library/MonoAndroid 或 %PROGRAMDATA%\Mono 中删除所有文件
--  重新打开 Visual Studio for Mac/Visual Studio 和生成 Xamarin.Android 项目
-
-
-这应让您振奋并正在运行。 如果继续遇到问题，可能需要尝试[脱机激活](~/android/get-started/installation/index.md)以完成激活你的工作站。
-
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>接收激活不完整的错误消息
-
-使用 Xamarin.Android for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从 *contact@xamarin.com*。
-
--  日志位置： **%localappdata%\\Xamarin\\日志**
-
-
-
-
-## <a name="receiving-error-retrieving-update-information-error-message"></a>收到检索更新信息的错误错误消息
-
-有时，更新将失败并检查更新时，会经常发生此以下错误：
-
-大多数时候，只需通过注销你的 Xamarin 帐户，可以解决此错误，日志记录然后中返回。
-
-若要完成此操作，请找到以下所选平台，并按相关步骤：
-
-在 Mac 上：
-1. 打开 Visual Studio for Mac
-2. 选择 Visual Studio for Mac > 帐户...
-3. 单击查看日志
-4. 单击登录
-5. 输入你的凭据
-6. 检查更新
-
-**在 PC 上使用 Visual Studo:**
-1. 打开 Visual Studio
-2. 选择工具 > Xamarin 帐户
-3. 单击查看日志
-4. 单击登录
-5. 输入你的凭据
-6. 检查更新
-
-如果此错误消息继续出现，请发送电子邮件**contact@xamarin.com**。
-
-
-
-
 ## <a name="android-debug-logs"></a>Android 调试日志
 
 [Android 调试日志](~/android/deploy-test/debugging/android-debug-log.md)可能提供有关您要查看的任何运行时错误的更多上下文。
@@ -365,7 +308,7 @@ HTC 同步软件可能会阻止**adb 开始服务器**无法正常工作。 如�
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid.exe 或 aresgen.exe 已退出，代码 1
 
-若要帮助你调试此问题，请转到 Visual Studio 和更改 MSBuild 详细级别，为此，请选择：**工具 > 选项 > 项目**并**解决方案 > 构建**和**运行 >MSBuild 项目生成输出详细信息**并将此值设置为**正常**。
+若要帮助你调试此问题，请转到 Visual Studio 和更改 MSBuild 详细级别，为此，请选择：**工具 > 选项 > 项目**并**解决方案 > 构建**并**运行 > MSBuild 项目生成输出详细信息**并将此值设置为**正常**。
 
 重新生成，并检查 Visual Studio 输出窗格中，其中应包含完整的错误。
 

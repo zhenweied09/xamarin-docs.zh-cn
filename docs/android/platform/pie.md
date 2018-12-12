@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710018"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267633"
 ---
 # <a name="android-pie-features"></a>饼图的 android 功能
 
@@ -24,7 +24,7 @@ _如何开始开发应用程序使用 Xamarin.Android 的 Android 9 饼图。_
 
 本文旨在帮助您开始开发 Xamarin.Android 应用程序 Android 饼图。 它说明了如何安装所需更新、 配置 SDK，并准备好仿真器或设备进行测试。 它还提供了 Android 饼图中的新增功能的概述，并提供说明了如何使用某些关键的 Android 饼图功能的示例源代码。
 
-Xamarin.Android 9.0 提供对 Android 饼图的支持。 有关 Android 饼图的 Xamarin.Android 支持的详细信息，请参阅[Android P 开发人员预览版 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1)发行说明。
+Xamarin.Android 9.0 提供对 Android 饼图的支持。 有关 Android 饼图的 Xamarin.Android 支持的详细信息，请参阅[Android P 开发人员预览版 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1)发行说明。
 
 ## <a name="requirements"></a>要求
 
