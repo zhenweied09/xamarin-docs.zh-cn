@@ -1,6 +1,6 @@
 ---
 title: DependencyService 简介
-description: 此文章介绍了 Xamarin.Forms DependencyService 类以访问本机平台功能的工作方式。
+description: 此文章介绍了 Xamarin.Forms DependencyService 类访问本机平台功能的工作原理。
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 09/15/2018
 ms.openlocfilehash: 3c8cc31c21f354b60001cefb919b51bf4d42da9f
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675011"
@@ -18,23 +18,23 @@ ms.locfileid: "50675011"
 
 ## <a name="overview"></a>概述
 
-[`DependencyService`](xref:Xamarin.Forms.DependencyService) 允许应用从共享代码调用特定于平台的功能。 此功能通过 Xamarin.Forms 应用，若要执行的本机应用程序可以执行任何操作。
+[`DependencyService`](xref:Xamarin.Forms.DependencyService) 允许应用从共享代码中调用特定于平台的功能。 此功能允许 Xamarin.Forms 应用执行本机应用可以执行的任何操作。
 
-`DependencyService` 是服务定位器。 在实践中，定义了一个接口和`DependencyService`查找该接口从各种平台项目的正确实现。
+`DependencyService` 是服务定位符。 在实践中，定义了一个界面且 `DependencyService` 在多种平台项目中发现该界面的正确实现。
 
 > [!NOTE]
-> 默认情况下[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)将唯一解析平台具有无参数构造函数的实现。 但是，依赖关系解析方法可以注入到 Xamarin.Forms 使用依赖关系注入容器或工厂方法来解析平台的实现。 这种方法可以用于解决平台实现个构造函数的参数。 有关详细信息，请参阅[Xamarin.Forms 中的依赖项解析](~/xamarin-forms/internals/dependency-resolution.md)。
+> 默认情况下，[`DependencyService`](xref:Xamarin.Forms.DependencyService) 仅解析具有无参数构造函数的平台实现。 但是，依赖项解析方法可以注入到使用依赖项注入容器或工厂方法的 Xamarin.Forms 中，以解析平台实现。 这种方法可用于解析具有带有参数的构造函数的平台实现。 有关详细信息，请参阅 [Xamarin.Forms 中的依赖项解析](~/xamarin-forms/internals/dependency-resolution.md)。
 
 ## <a name="how-dependencyservice-works"></a>DependencyService 的工作原理
 
-Xamarin.Forms 应用需要四个组件来使用`DependencyService`:
+Xamarin.Forms 应用需要四个组件才能使用 `DependencyService`：
 
-- **接口**&ndash;由共享代码中的接口定义所需的功能。
-- **实现每个平台**&ndash;实现接口的类必须添加到每个平台项目。
-- **注册**&ndash;每个实现类必须与注册`DependencyService`通过元数据属性。 注册启用`DependencyService`来找到实现类并将其提供替代该接口在运行时。
-- **调用到 DependencyService** &ndash;共享代码需要显式调用`DependencyService`寻求接口的实现。
+- **接口** &ndash; 所需的功能由共享代码中的接口定义。
+- **按平台实现** &ndash; 实现接口的类必须添加到每个平台项目。
+- **注册** &ndash; 必须通过元数据属性向 `DependencyService` 注册每个实现类。 注册使 `DependencyService` 能够找到实现类并在运行时将其提供到位。
+- **DependencyService 的调用** &ndash; 共享代码需要显式调用 `DependencyService`，以寻求接口实现。
 
-请注意，必须为每个平台项目在解决方案中提供实现。 平台项目中的不包含实现将在运行时失败。
+请注意，必须为解决方案中的每个平台项目提供实现。 没有实现的平台项目在运行时将失败。
 
 下图介绍了应用程序的结构：
 
@@ -42,7 +42,7 @@ Xamarin.Forms 应用需要四个组件来使用`DependencyService`:
 
 ### <a name="interface"></a>接口
 
-您设计的接口将定义如何与特定于平台的功能进行交互。 注意如果你正在开发的组件或 NuGet 包作为共享的组件。 API 设计可以执行或破坏包。 下面的示例指定语音文本的允许的灵活指定字要朗读但由要为每个平台自定义的实现简单的界面：
+你设计的接口将定义如何与特定于平台的功能进行交互。 如果正在开发要以组件或 NuGet 包形式共享的组件，请小心。 API 设计可以创建或破坏包。 下面的示例指定语音文本的简单接口，该接口允许灵活指定要说出的字词，但还需要为每个平台自定义实现：
 
 ```csharp
 public interface ITextToSpeech {
@@ -50,9 +50,9 @@ public interface ITextToSpeech {
 }
 ```
 
-### <a name="implementation-per-platform"></a>每个平台的实现
+### <a name="implementation-per-platform"></a>按平台的实现
 
-一旦合适接口在设计时，必须为您面向的每个平台项目中实现该接口。 例如，以下类实现`ITextToSpeech`在 iOS 上的接口：
+设计了合适的接口后，必须在针对面向的每个平台的项目中实现该接口。 例如，以下类可在 iOS 上实现 `ITextToSpeech` 接口：
 
 ```csharp
 namespace UsingDependencyService.iOS
@@ -78,7 +78,7 @@ namespace UsingDependencyService.iOS
 
 ### <a name="registration"></a>注册
 
-每个接口的实现需要使用注册`DependencyService`与元数据特性。 下面的代码注册适用于 iOS 的实现：
+接口的每个实现都需要向具有元数据属性的 `DependencyService` 注册。 下面的代码注册适用于 iOS 的实现：
 
 ```csharp
 [assembly: Dependency (typeof (TextToSpeech_iOS))]
@@ -88,7 +88,7 @@ namespace UsingDependencyService.iOS
 }
 ```
 
-将所有组合在一起，特定于平台的实现如下所示：
+综合来讲，特定于平台的实现如下所示：
 
 ```csharp
 [assembly: Dependency (typeof (TextToSpeech_iOS))]
@@ -113,13 +113,13 @@ namespace UsingDependencyService.iOS
 }
 ```
 
-注意： 在命名空间级别而不是类级别执行注册。
+注意：在命名空间级别，而不是类级别进行注册。
 
-#### <a name="universal-windows-platform-net-native-compilation"></a>通用 Windows 平台.NET Native 编译
+#### <a name="universal-windows-platform-net-native-compilation"></a>通用 Windows 平台 .NET Native 编译
 
-使用.NET Native 编译选项的 UWP 项目应遵循[略有不同的配置](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception)初始化 Xamarin.Forms 时。 .NET native 编译依赖关系服务还要求略有不同的注册。
+初始化 Xamarin.Forms 时，使用 .NET Native 编译选项的 UWP 项目应遵循[略有不同的配置](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception)。 对于依赖项服务，.NET Native 编译还要求注册略有不同。
 
-在中**App.xaml.cs**文件中，手动注册每个依赖关系服务，在 UWP 项目中使用定义`Register<T>`方法，如下所示：
+在 App.xaml.cs 文件中，使用 `Register<T>` 方法，手动注册 UWP 项目中定义的每个依赖项服务，如下所示：
 
 ```csharp
 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
@@ -127,26 +127,26 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 Xamarin.Forms.DependencyService.Register<TextToSpeechImplementation>();
 ```
 
-注意： 手动注册使用`Register<T>`是使用.NET Native 编译生成的版本中的才有效。 如果省略此行，调试版本中仍将起作用，但发布版本将无法加载依赖关系服务。
+注意：使用 `Register<T>` 的手动注册仅在使用 .NET Native 编译的发行内部版本中有效。 如果省略此行，调试内部版本仍能运行，但发行内部版本将无法加载依赖项服务。
 
-### <a name="call-to-dependencyservice"></a>调用到 DependencyService
+### <a name="call-to-dependencyservice"></a>调用 DependencyService
 
-一旦项目已具有一个公共接口和实现为每个平台已设置，使用`DependencyService`若要在运行时获取正确的实现：
+使用通用接口和每个平台的实现设置项目后，请使用 `DependencyService` 在运行时获取正确的实现：
 
 ```csharp
 DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 ```
 
-`DependencyService.Get<T>` 将找到正确的接口实现`T`。
+`DependencyService.Get<T>` 将查找接口 `T` 的正确实现。
 
 ### <a name="solution-structure"></a>解决方案结构
 
-[示例 UsingDependencyService 解决方案](https://developer.xamarin.com/samples/UsingDependencyService/)是适用于 iOS 和 Android 如下所示，使用上面所述的代码更改突出显示。
+适用于 iOS 和 Android 的[示例 UsingDependencyService 解决方案](https://developer.xamarin.com/samples/UsingDependencyService/)如下所示，并且突出显示上述代码更改。
 
- [![iOS 和 Android 的解决方案](introduction-images/solution-sml.png "DependencyService 示例解决方案结构")](introduction-images/solution.png#lightbox "DependencyService 示例解决方案结构")
+ [![iOS 和 Android 解决方案](introduction-images/solution-sml.png "DependencyService 示例解决方案结构")](introduction-images/solution.png#lightbox "DependencyService Sample Solution Structure")
 
 > [!NOTE]
-> 您**必须**提供每个平台项目中的实现。 如果不注册了任何接口实现，则`DependencyService`将不能解决`Get<T>()`方法在运行时。
+> 必须在每个平台项目中提供实现。 如果未注册任何接口实现，则 `DependencyService` 无法在运行时解析 `Get<T>()` 方法。
 
 ## <a name="related-links"></a>相关链接
 

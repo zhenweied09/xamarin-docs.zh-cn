@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 触发器
-description: 此文章介绍了如何使用 Xamarin.Forms 触发器来响应具有 XAML 用户界面更改。 触发器可以表示 XAML 中声明的方式更改的基于事件或属性更改控件外观的操作。
+description: 此文章介绍了如何使用 Xamarin.Forms 触发器来响应 XAML 的用户界面更改。 触发器允许你在根据事件或属性更改更改控件外观的 XAML 中以声明的方式表达操作。
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
@@ -9,33 +9,33 @@ ms.author: dabritch
 ms.date: 07/01/2016
 ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675206"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 触发器
 
-触发器可以表示 XAML 中声明的方式更改的基于事件或属性更改控件外观的操作。
+触发器允许你在根据事件或属性更改更改控件外观的 XAML 中以声明的方式表达操作。
 
-可以一个触发器将直接分配给一个控件，或将其添加到要应用于多个控件的页级别或应用程序级资源字典。
+可以直接分配控件触发器，或将其添加到页面级别或应用级别的资源词典中，以应用到多个控件。
 
-有四种类型的触发器：
+有四种类型触发器：
 
-* [属性触发器](#property)-上一个控件的属性设置为特定值时，会发生。
+* [属性触发器](#property) - 将控件上的属性设置为特定值时发生。
 
-* [数据触发器](#data)-使用数据绑定到触发器基于另一个控件的属性。
+* [数据触发器](#data) - 根据其他控件的属性使用到触发器的数据绑定。
 
-* [事件触发器](#event)-当事件发生在控件上时发生。
+* [事件触发器](#event) - 当控件上发生某事件时发生。
 
-* [多触发器](#multi)-允许多个操作发生之前要设置的触发器条件。
+* [多触发器](#multi) - 允许操作发生前设置多个触发条件。
 
 <a name="property" />
 
 ## <a name="property-triggers"></a>属性触发器
 
-简单触发器可以表示完全在 XAML 中，添加`Trigger`触发回收时给控件的元素。
-此示例显示了更改的触发器`Entry`接收焦点时，背景色：
+简单的触发器可以完全在 XAML 中表达，向控件的触发器集合添加 `Trigger` 元素。
+此示例显示了收到焦点时更改 `Entry` 颜色的触发器：
 
 ```xaml
 <Entry Placeholder="enter name">
@@ -48,21 +48,21 @@ ms.locfileid: "50675206"
 </Entry>
 ```
 
-触发器的重要部分是声明的：
+触发器声明的重要部件有：
 
-* **TargetType** -触发器应用于控件类型。
+* **TargetType** - 触发器适用的控件类型。
 
-* **属性**-监视在控件上的属性。
+* **Property** - 要监视的控件上的属性。
 
-* **值**-的值，为受监视的属性时，导致触发器激活。
+* **Value** - 当针对监视的属性发生时，导致激活触发器的值。
 
-* **Setter** -一系列`Setter`可以添加元素，并且满足触发器条件时。 必须指定`Property`和`Value`设置。
+* **Setter** - `Setter` 元素的集合，可进行添加且在满足触发条件时使用。 必须指定要设置的 `Property` 和 `Value`。
 
-* **EnterActions 和 ExitActions** （未显示）-在代码中编写并可以在除 （或 instead of）`Setter`元素。 它们是[如下所述](#enterexit)。
+* **EnterActions 和 ExitActions** （未显示） - 编写于代码中，且可用于 `Setter` 之外（或者不是该元素）的元素。 它们[如下所述](#enterexit)。
 
-### <a name="applying-a-trigger-using-a-style"></a>应用触发器，请使用一种样式
+### <a name="applying-a-trigger-using-a-style"></a>使用样式应用触发器
 
-触发器还可以添加到`Style`页上或应用程序中的控件上的声明`ResourceDictionary`。 此示例中声明的隐式样式 (ie。 没有`Key`设置) 这意味着它将适用于所有`Entry`页上的控件。
+还可将触发器添加到控件、页面或应用程序 `ResourceDictionary` 中的 `Style` 声明。 此示例声明隐式样式（即未设置 `Key`），这表示它适用于页面上的所有 `Entry` 控件。
 
 ```xaml
 <ContentPage.Resources>
@@ -83,10 +83,10 @@ ms.locfileid: "50675206"
 
 ## <a name="data-triggers"></a>数据触发器
 
-数据触发器使用数据绑定来监视另一个控件来导致`Setter`以调用。 而不是`Property`属性中的属性触发器，请设置`Binding`属性来监视指定的值。
+数据触发器使用数据绑定来监视另一个控件，以导致调用 `Setter`。 设置 `Binding` 特性，而不是属性触发器中的 `Property` 特性，以监视指定值。
 
 下面的示例使用数据绑定语法 `{Binding Source={x:Reference entry}, Path=Text.Length}`
-这是我们是如何引用另一个控件的属性。 时的长度`entry`为零，激活触发器。 在此示例中触发禁用的按钮时输入为空。
+这是我们引用另一个控件的属性的方式。 如果 `entry` 的长度为零，将激活触发器。 在此示例中，当输入为空时，触发器将禁用该按钮。
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -109,15 +109,15 @@ ms.locfileid: "50675206"
 </Button>
 ```
 
-提示： 评估时`Path=Text.Length`始终提供的目标属性 （例如默认值。 `Text=""`) 因为否则它将为`null`和触发器不会使用起来就像您预期。
+提示：对 `Path=Text.Length` 求值时，请务必提供目标属性的默认值（例如， `Text=""`），因为如不提供，它将为 `null`，且触发器将不按预期工作。
 
-除了指定`Setter`还可以提供的 s [ `EnterActions`并`ExitActions` ](#enterexit)。
+除了指定 `Setter`，你还可提供 [`EnterActions` 和 `ExitActions`](#enterexit)。
 
 <a name="event" />
 
 ## <a name="event-triggers"></a>事件触发器
 
-`EventTrigger`元素仅需要`Event`属性，如`"Clicked"`在下面的示例。
+`EventTrigger` 元素只需 `Event` 属性，例如，下面示例中的 `"Clicked"`。
 
 ```xaml
 <EventTrigger Event="Clicked">
@@ -125,7 +125,7 @@ ms.locfileid: "50675206"
 </EventTrigger>
 ```
 
-请注意，有没有`Setter`元素，但而不是对定义的类的引用`local:NumericValidationTriggerAction`需要`xmlns:local`页面中声明的 XAML:
+请注意，没有 `Setter` 元素，而是对 `local:NumericValidationTriggerAction` 定义的类的引用，这要求在页面的 XAML 中声明 `xmlns:local`：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,15 +133,15 @@ ms.locfileid: "50675206"
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-实现类本身`TriggerAction`这意味着它应提供的替代`Invoke`每当触发器事件发生时调用的方法。
+类本身可实现 `TriggerAction`，这表示它应提供 `Invoke` 方法的替代，每当发生触发事件时就会调用该方法。
 
-触发器操作实现应：
+触发器操作实现应该：
 
-* 实现泛型`TriggerAction<T>`类，与该触发器将应用于控件类型相对应的泛型参数。 您可以使用如超类`VisualElement`编写适用于各种控件，或指定控件类型的触发器操作`Entry`。
+* 实现泛型 `TriggerAction<T>` 类，并且泛型参数对应于触发器将应用到的控件类型。 可以使用 `VisualElement` 之类的超类编写适用于多种控件的触发器操作，或指定 `Entry` 等控件类型。
 
-* 重写`Invoke`方法-这称为只要满足触发器条件。
+* 替代 `Invoke` 方法 - 每当满足触发器条件时调用该方法。
 
-* 选择公开声明触发器时可以在 XAML 中设置属性 (如`Anchor`， `Scale`，和`Length`在此示例中)。
+* 声明触发器时，可选择公开可在 XAML 中设置的属性（例如此示例中的 `Anchor`、`Scale` 和 `Length`）。
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -155,7 +155,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-由触发器操作公开的属性可以按如下所示设置 XAML 声明中：
+触发器操作公开的属性可在 XAML 声明中进行设置，如下所示：
 
 ```xaml
 <EventTrigger Event="TextChanged">
@@ -163,17 +163,17 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 </EventTrigger>
 ```
 
-共享中的触发器时要小心`ResourceDictionary`，以便对其所有应用将配置一次的任何状态，在控件之间共享一个实例。
+共享 `ResourceDictionary` 中的触发器时请小心，由于可在控件之间共享同一个实例，因此配置一次的任何状态都会应用到所有这些控件。
 
-请注意，不支持事件触发器`EnterActions`并`ExitActions`[如下所述](#enterexit)。
+注意：事件触发器不支持[如下所述](#enterexit)的 `EnterActions` 和 `ExitActions`。
 
 <a name="multi" />
 
 ## <a name="multi-triggers"></a>多触发器
 
-一个`MultiTrigger`看起来类似于`Trigger`或`DataTrigger`只可以有多个条件。 所有条件均都为 true，然后才能`Setter`触发 s。
+`MultiTrigger` 外观类似于 `Trigger` 或 `DataTrigger`，只是可能有多个条件。 触发 `Setter` 前，所有条件必须为 true。
 
-下面是将绑定到两个不同的输入的按钮触发器的示例 (`email`和`phone`):
+下面的示例是绑定到两个不同输入（`email` 和 `phone`）的按钮的触发器：
 
 ```xaml
 <MultiTrigger TargetType="Button">
@@ -191,17 +191,17 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 </MultiTrigger>
 ```
 
-`Conditions`还可以包含在集合`PropertyCondition`元素如下所示：
+`Conditions` 集合还可以包含 `PropertyCondition` 元素，如下所示：
 
 ```xaml
 <PropertyCondition Property="Text" Value="OK" />
 ```
 
-### <a name="building-a-require-all-multi-trigger"></a>生成的"要求所有"多触发器
+### <a name="building-a-require-all-multi-trigger"></a>生成“全部需要”的多触发器
 
-满足所有条件时，多触发器只更新其控件。 测试为"所有字段长度零"（如登录页面，其中所有输入必须都是完整） 是比较棘手，因为所需条件"其中 Text.Length > 0"，但这不能在 XAML 中表示。
+仅当满足所有条件时，多触发器才会更新其控件。 针对“所有字段长度均为零”（例如所有输入必须完整的登录页）测试很棘手，因为你需要“其中 Text.Length > 0”的条件，但该条件无法在 XAML 中表达。
 
-这可以通过`IValueConverter`。 以下转换转换器代码`Text.Length`绑定到`bool`，该值指示字段是否为空：
+可以使用 `IValueConverter` 执行此操作。 下面的转换器代码可将 `Text.Length` 绑定转换为 `bool`，指示字段是否为空：
 
 ```csharp
 public class MultiTriggerConverter : IValueConverter
@@ -223,7 +223,7 @@ public class MultiTriggerConverter : IValueConverter
 }
 ```
 
-若要在多触发器中使用此转换器，首先将其添加到页面的资源字典 (以及自定义`xmlns:local`命名空间定义):
+若要在多触发器中使用此转换器，首先请将其添加到页面的资源字典（以及自定义 `xmlns:local` 命名空间定义）：
 
 ```xaml
 <ResourceDictionary>
@@ -231,11 +231,11 @@ public class MultiTriggerConverter : IValueConverter
 </ResourceDictionary>
 ```
 
-XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
+XAML 如下所示。 请注意下面的示例与第一个触发器示例之间的差异：
 
-* 该按钮具有`IsEnabled="false"`默认设置。
-* 多触发器条件使用转换器来启用`Text.Length`值到`boolean`。
-* 当所有条件都都`true`，setter 使按钮的`IsEnabled`属性`true`。
+* 该按钮默认设置为 `IsEnabled="false"`。
+* 多触发器条件可使用转换器将 `Text.Length` 值转换为 `boolean`。
+* 如果所有条件为 `true`，setter 可使按钮的 `IsEnabled` 属性为 `true`。
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />
@@ -264,8 +264,8 @@ XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
 </Button>
 ```
 
-这些屏幕截图显示了上述的两个多触发器示例之间的差异。 屏幕的顶部，一个中输入文本`Entry`足以**保存**按钮。
-在屏幕的底部**登录名**按钮始终处于非活动状态，直到这两个字段包含数据。
+这些屏幕截图显示了上述两个多触发器示例之间的差异。 在屏幕的顶部，仅一个 `Entry` 中的文本输入便足以启用“保存”按钮。
+在屏幕的底部，“登录”按钮在两个字段均包含数据迁保持非活动状态。
 
 ![](triggers-images/multi-requireall.png "MultiTrigger 示例")
 
@@ -273,9 +273,9 @@ XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions 和 ExitActions
 
-若要实现更改触发器发生时的另一种方法是通过添加`EnterActions`并`ExitActions`集合，并指定`TriggerAction<T>`实现。
+发生触发器时实现更改的另一方式是通过添加 `EnterActions` 和 `ExitActions` 集合，并指定 `TriggerAction<T>` 实现。
 
-可以提供*同时*`EnterActions`并`ExitActions`，以及`Setter`中触发器，但请注意， `Setter`s 将立即调用 (它们不会等待`EnterAction`或`ExitAction`到完成）。 或者，可以在代码中执行的所有内容，且不将`Setter`根本的 s。
+可以在触发器中同时提供 `EnterActions` 和 `ExitActions`，以及 `Setter`，但注意，将立即调用 `Setter`（它们不等待 `EnterAction` 或 `ExitAction` 完成）。 或者，可以在代码中执行所有内容，根本无需使用 `Setter`。
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -295,7 +295,7 @@ XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
 </Entry>
 ```
 
-如往常一样，一个类引用 XAML 中应如声明一个命名空间`xmlns:local`如下所示：
+如往常一样，如果在 XAML 中引用某个类，应声明命名空间（如 `xmlns:local`），如下所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,7 +303,7 @@ XAML 如下所示。 请注意以下差异，从第一个多触发器示例：
              xmlns:local="clr-namespace:WorkingWithTriggers;assembly=WorkingWithTriggers"
 ```
 
-`FadeTriggerAction`代码如下所示：
+`FadeTriggerAction` 代码如下所示：
 
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
@@ -325,7 +325,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 }
 ```
 
-注意：`EnterActions`并`ExitActions`上忽略**事件触发器**。
+注意：事件触发器上已忽略 `EnterActions` 和 `ExitActions`。
 
 
 

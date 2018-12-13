@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 数据模板的简介
-description: Xamarin.Forms 数据模板提供支持的控件上定义数据的表示形式的功能。 本文介绍数据模板，检查它们是必需的原因。
+title: Xamarin.Forms 数据模板简介
+description: 借助 Xamarin.Forms 数据模板，可定义受支持控件上的数据表示形式。 本文介绍了数据模板，并且分析了它们必不可少的原因。
 ms.prod: xamarin
 ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 129ce7a04b93bfb3cb1b9a1639aee61cd56d09d5
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998905"
 ---
-# <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 数据模板的简介
+# <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 数据模板简介
 
-_Xamarin.Forms 数据模板提供支持的控件上定义数据的表示形式的功能。本文介绍数据模板，检查它们是必需的原因。_
+_借助 Xamarin.Forms 数据模板，可定义受支持控件上的数据表示形式。本文介绍了数据模板，并且分析了它们必不可少的原因。_
 
-请考虑[ `ListView` ](xref:Xamarin.Forms.ListView)显示的集合`Person`对象。 下面的代码示例显示的定义`Person`类：
+以显示 `Person` 对象集合的 [`ListView`](xref:Xamarin.Forms.ListView) 为例。 以下代码示例展示了 `Person` 类的定义：
 
 ```csharp
 public class Person
@@ -29,7 +29,7 @@ public class Person
 }
 ```
 
-`Person`类定义`Name`， `Age`，和`Location`属性时可以设置`Person`创建对象。 [ `ListView` ](xref:Xamarin.Forms.ListView)用来显示的集合`Person`对象，如下面的 XAML 代码示例中所示：
+`Person` 类定义 `Name`、`Age` 和 `Location` 属性，这些属性可在创建 `Person` 对象时设置。 [`ListView`](xref:Xamarin.Forms.ListView) 用于显示 `Person` 对象的集合，如以下 XAML 代码示例所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -54,12 +54,12 @@ public class Person
 </ContentPage>
 ```
 
-将项添加到[ `ListView` ](xref:Xamarin.Forms.ListView)中通过初始化 XAML [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource)属性的数组从`Person`实例。
+通过从 `Person` 实例数组初始化 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 属性，在 XAML 中向 [`ListView`](xref:Xamarin.Forms.ListView) 添加项目。
 
 > [!NOTE]
-> 请注意，`x:Array`元素需要`Type`属性，指示数组中的项的类型。
+> 请注意，`x:Array` 元素需要用于指示数组中项目类型的 `Type` 属性。
 
-在以下代码示例中，这将初始化显示等效的 C# 页面[ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource)属性设置为`List`的`Person`实例：
+以下代码示例展示了等效的 C# 页面，该示例将 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 属性初始化为 `Person` 实例的 `List`：
 
 ```csharp
 public WithoutDataTemplatePageCS()
@@ -86,11 +86,11 @@ public WithoutDataTemplatePageCS()
 }
 ```
 
-[ `ListView` ](xref:Xamarin.Forms.ListView)调用`ToString`时显示的对象集合中。 因为没有任何`Person.ToString`重写，`ToString`返回的每个对象的类型名称，如以下屏幕截图中所示：
+当显示集合中的对象时，[`ListView`](xref:Xamarin.Forms.ListView) 调用 `ToString`。 由于没有 `Person.ToString` 重写，`ToString` 会返回每个对象的类型名称，如以下屏幕截图所示：
 
 ![](introduction-images/no-data-template.png "不使用数据模板的 ListView")
 
-`Person`对象可以重写`ToString`方法来显示有意义的数据，如下面的代码示例中所示：
+`Person` 对象可以重写 `ToString` 方法以显示有意义的数据，如以下代码示例所示：
 
 ```csharp
 public class Person
@@ -103,38 +103,38 @@ public class Person
 }
 ```
 
-这会导致[ `ListView` ](xref:Xamarin.Forms.ListView)显示`Person.Name`属性值为每个对象在集合中，如以下屏幕截图中所示：
+这导致 [`ListView`](xref:Xamarin.Forms.ListView) 显示集合中每个对象的 `Person.Name` 属性值，如以下屏幕截图所示：
 
 ![](introduction-images/override-tostring.png "使用数据模板的 ListView")
 
-`Person.ToString`重写可能会返回格式化的字符串组成`Name`， `Age`，和`Location`属性。 但是，此方法提供仅有限的控制数据的每个项的外观。 为提高灵活性[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)可以创建用于定义数据的外观。
+`Person.ToString` 重写可能会返回由 `Name`、`Age` 和 `Location` 属性组成的格式化字符串。 但是，此方法仅对每个数据项的外观提供有限的控制。 为了提高灵活性，可以创建 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 来定义数据的外观。
 
 ## <a name="creating-a-datatemplate"></a>创建 DataTemplate
 
-一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)用于指定数据的外观，通常使用数据绑定来显示数据。 显示中的对象的集合中的数据时，其常见使用方案[ `ListView` ](xref:Xamarin.Forms.ListView)。 例如，当`ListView`绑定到的集合`Person`对象，`ListView.ItemTemplate`属性将设置为`DataTemplate`定义的每个外观`Person`对象中`ListView`。 `DataTemplate`将包含绑定到的每个属性值的元素`Person`对象。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 用于指定数据的外观，并且通常使用数据绑定来显示数据。 它的常见使用场景是在 [`ListView`](xref:Xamarin.Forms.ListView) 中显示来自对象集合的数据。 例如，当 `ListView` 绑定到 `Person` 对象集合时，`ListView.ItemTemplate` 属性将设置为定义 `ListView` 中每个 `Person` 对象的外观的 `DataTemplate`。 `DataTemplate` 将包含绑定到每个 `Person` 对象的属性值的元素。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
-一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)可以用作以下属性值：
+[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 可用作以下属性的值：
 
 - [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
 - [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
 - [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
-- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1)由继承[ `ListView` ](xref:Xamarin.Forms.ListView)。
-- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1)由继承[ `CarouselPage` ](xref:Xamarin.Forms.CarouselPage)， [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)，以及[ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)。
+- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1)，由 [`ListView`](xref:Xamarin.Forms.ListView) 继承。
+- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1)，由 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)、[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 和 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 继承。
 
 > [!NOTE]
-> 请注意，虽然[ `TableView` ](xref:Xamarin.Forms.TableView)使用[ `Cell` ](xref:Xamarin.Forms.Cell)对象，它不使用[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)。 这是因为数据绑定始终设置上直接`Cell`对象。
+> 请注意，虽然 [`TableView`](xref:Xamarin.Forms.TableView) 使用 [`Cell`](xref:Xamarin.Forms.Cell) 对象，但它不使用 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)。 这是因为数据绑定始终直接在 `Cell` 对象上设置。
 
-一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)如上面列出的属性的直接子级称为放置*内联模板*。 或者，`DataTemplate`可以定义为控件级别、 页面级别或应用程序级资源。 选择定义的位置[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)可以使用它的影响：
+作为上面所列属性的直接子级放置的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 称为*内联模板*。 或者，可以将 `DataTemplate` 定义为控件级别、页面级别或应用程序级别资源。 选择在何处定义 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 会影响其应用范围：
 
-- 一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)定义在控件级别只能应用到控件。
-- 一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)定义的页级别可以应用于页面上的多个有效控件。
-- 一个[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)在应用程序级别定义可以是整个应用程序应用于有效控件。
+- 在控件级别定义的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 只能应用于控件。
+- 在页面级别定义的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 可以应用于页面上的多个有效控件。
+- 在应用程序级别定义的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 可以应用于整个应用程序中的有效控件。
 
-数据模板的视图层次结构中较低级别优先于那些共享时，更高版本定义了`x:Key`属性。 例如，一个页级别的数据模板，将重写应用程序级别的数据模板和的控制级别的数据模板或内联数据模板，将重写页面级数据模板。
+当视图层次结构中的数据模板共享 `x:Key` 属性时，层次较低的数据模板优先于在较高层次定义的数据模板。 例如，应用程序级别的数据模板将被页面级别的数据模板替代，而页面级别的数据模板将被控件级别的数据模板或内联数据模板替代。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [单元格外观](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [数据模板 （示例）](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
-- [数据模板](xref:Xamarin.Forms.DataTemplate)
+- [数据模板（示例）](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [DataTemplate](xref:Xamarin.Forms.DataTemplate)

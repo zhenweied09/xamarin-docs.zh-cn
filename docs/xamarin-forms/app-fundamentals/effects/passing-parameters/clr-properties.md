@@ -1,6 +1,6 @@
 ---
-title: 公共语言运行时属性作为参数传递的效果
-description: 公共语言运行时 (CLR) 属性可以用于定义不响应运行时属性更改的效果参数。 本文演示如何使用 CLR 属性将参数传递给效果。
+title: 将效果参数作为公共语言运行时属性传递
+description: 公共语言运行时 (CLR) 属性可用于定义不响应运行时属性更改的效果参数。 本文演示如何使用 CLR 属性将参数传递给效果。
 ms.prod: xamarin
 ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
 ms.technology: xamarin-forms
@@ -9,34 +9,34 @@ ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 1bb357b256a7cc6d52d1d92613f38cbf48400c4c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38995763"
 ---
-# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>公共语言运行时属性作为参数传递的效果
+# <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>将效果参数作为公共语言运行时属性传递
 
-_公共语言运行时 (CLR) 属性可以用于定义不响应运行时属性更改的效果参数。本文演示如何使用 CLR 属性将参数传递给效果。_
+公共语言运行时 (CLR) 属性可用于定义不响应运行时属性更改的效果参数。本文演示如何使用 CLR 属性将参数传递给效果。
 
-创建不响应运行时属性更改的效果参数的过程如下所示：
+创建不响应运行时属性更改的效果参数的过程如下：
 
-1. 创建`public`类的子类[ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect)类。 `RoutingEffect`类表示包装内部效果通常特定于平台的一个独立于平台的效果。
-1. 创建调用基类构造函数，传递解析组名称，并已在每个特定于平台的效果类中指定的唯一 ID 的串联中的构造函数。
-1. 将属性添加到每个参数传递的效果的类。
+1. 创建一个 `public` 类，它将 [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 类作为子类。 `RoutingEffect` 类表示独立于平台的效果，该效果包装通常特定于平台的内部效果。
+1. 创建一个调用基类构造函数的构造函数，传递解析组名称以及每个特定于平台的效果类上指定的唯一 ID 的串联。
+1. 为要传递给效果的每个参数向类添加属性。
 
-通过实例化效果时指定的每个属性的值之前，然后可以是参数传递到效果。
+在实例化效果时，为每个属性指定值可将参数传递给效果。
 
-该示例应用程序演示`ShadowEffect`，它将到显示的文本阴影[ `Label` ](xref:Xamarin.Forms.Label)控件。 下图演示了示例应用程序，以及它们之间的关系的每个项目的职责：
+示例应用程序展示了向 [`Label`](xref:Xamarin.Forms.Label) 控件显示的文本添加阴影的 `ShadowEffect`。 下图说明了示例应用程序中每个项目的职责，以及它们之间的关系：
 
 ![](clr-properties-images/shadow-effect.png "阴影效果项目职责")
 
-一个[ `Label` ](xref:Xamarin.Forms.Label)对的 control 权限`HomePage`由自定义`LabelShadowEffect`每个特定于平台的项目中。 参数传递给每个`LabelShadowEffect`中的属性通过`ShadowEffect`类。 每个`LabelShadowEffect`类派生自`PlatformEffect`为每个平台的类。 这会导致要添加到显示的文本阴影`Label`控制，如以下屏幕截图中所示：
+`HomePage` 上的 [`Label`](xref:Xamarin.Forms.Label) 控件由特定于平台的各项目中的 `LabelShadowEffect` 自定义。 参数通过 `ShadowEffect` 类中的属性传递给每个 `LabelShadowEffect`。 每个 `LabelShadowEffect` 类均派生自各平台的 `PlatformEffect` 类。 这就使阴影被添加到 `Label` 控件显示的文本中，如以下屏幕截图所示：
 
-![](clr-properties-images/screenshots.png "每个平台上的阴影效果")
+![](clr-properties-images/screenshots.png "各平台上的阴影效果")
 
 ## <a name="creating-effect-parameters"></a>创建效果参数
 
-一个`public`类的子类[ `RoutingEffect` ](xref:Xamarin.Forms.RoutingEffect)类应创建表示效果参数，如下面的代码示例中所示：
+应创建将 [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) 类作为子类的 `public` 类，用于表示效果参数，如以下代码示例所示：
 
 ```csharp
 public class ShadowEffect : RoutingEffect
@@ -55,11 +55,11 @@ public class ShadowEffect : RoutingEffect
 }
 ```
 
-`ShadowEffect`包含四个属性表示参数传递到每个特定于平台的`LabelShadowEffect`。 类构造函数调用基类构造函数，传入参数包含解析组名称，并已在每个特定于平台的效果类中指定的唯一 ID 的串联。 因此的新实例`MyCompany.LabelShadowEffect`将添加到控件的[ `Effects` ](xref:Xamarin.Forms.Element.Effects)集合时`ShadowEffect`实例化。
+`ShadowEffect` 包含四个属性，它们表示要传递给每个特定于平台的 `LabelShadowEffect` 的参数。 类构造函数调用基类构造函数，传入由解析组名称以及每个特定于平台的效果类上指定的唯一 ID 的串联组成的参数。 因此，在实例化 `ShadowEffect` 时，将向控件的 [`Effects`](xref:Xamarin.Forms.Element.Effects) 集合添加 `MyCompany.LabelShadowEffect` 的新实例。
 
 ## <a name="consuming-the-effect"></a>使用效果
 
-以下 XAML 代码示例所示[ `Label` ](xref:Xamarin.Forms.Label)控件`ShadowEffect`附加：
+下面的 XAML 代码示例演示附加了 `ShadowEffect` 的 [`Label`](xref:Xamarin.Forms.Label) 控件：
 
 ```xaml
 <Label Text="Label Shadow Effect" ...>
@@ -77,7 +77,7 @@ public class ShadowEffect : RoutingEffect
 </Label>
 ```
 
-等效于[ `Label` ](xref:Xamarin.Forms.Label) C# 中所示下面的代码示例：
+下面的代码示例介绍了 C# 中的等效 [`Label`](xref:Xamarin.Forms.Label)：
 
 ```csharp
 var label = new Label {
@@ -107,15 +107,15 @@ label.Effects.Add (new ShadowEffect {
 });
 ```
 
-在这两个代码示例中，实例`ShadowEffect`类实例化之前要添加到控件的每个属性指定的值与[ `Effects` ](xref:Xamarin.Forms.Element.Effects)集合。 请注意，`ShadowEffect.Color`属性使用特定于平台的颜色值。 有关详细信息，请参阅[设备类](~/xamarin-forms/platform/device.md)。
+在这两个代码示例中，先通过为每个属性指定值来实例化 `ShadowEffect` 类的实例，然后再将其添加到控件的 [`Effects`](xref:Xamarin.Forms.Element.Effects) 集合。 请注意，`ShadowEffect.Color` 属性使用特定于平台的颜色值。 有关详细信息，请参阅 [Device 类](~/xamarin-forms/platform/device.md)。
 
-## <a name="creating-the-effect-on-each-platform"></a>创建每个平台上的效果
+## <a name="creating-the-effect-on-each-platform"></a>在各平台上创建效果
 
-以下各节讨论的特定于平台的实现`LabelShadowEffect`类。
+以下各部分讨论特定于平台的 `LabelShadowEffect` 类的实现。
 
 ### <a name="ios-project"></a>iOS 项目
 
-下面的代码示例演示`LabelShadowEffect`实现针对 iOS 项目：
+以下代码示例展示了 iOS 项目的 `LabelShadowEffect` 实现：
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -146,11 +146,11 @@ namespace EffectsDemo.iOS
 }
 ```
 
-`OnAttached`方法检索`ShadowEffect`实例，并设置`Control.Layer`属性设置为指定的属性值以创建阴影。 此功能包装在`try` / `catch`阻止以防效果附加到该控件不具有`Control.Layer`属性。 通过提供任何实现`OnDetached`方法因为任何清理不不需要。
+`OnAttached` 方法检索 `ShadowEffect` 实例，并将 `Control.Layer` 属性设置为指定的属性值以创建阴影。 效果所附加到的控件没有 `Control.Layer` 属性时，此功能包装在 `try`/`catch` 块中。 `OnDetached` 方法不提供任何实现，因为不需要进行清理。
 
 ### <a name="android-project"></a>Android 项目
 
-下面的代码示例演示`LabelShadowEffect`实现针对 Android 项目：
+以下代码示例展示了 Android 项目的 `LabelShadowEffect` 实现：
 
 ```csharp
 [assembly:ResolutionGroupName ("MyCompany")]
@@ -183,11 +183,11 @@ namespace EffectsDemo.Droid
 }
 ```
 
-`OnAttached`方法检索`ShadowEffect`实例，并调用[ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/)方法来创建一个使用指定的属性值的阴影。 此功能包装在`try` / `catch`阻止以防效果附加到该控件不具有`Control.Layer`属性。 通过提供任何实现`OnDetached`方法因为任何清理不不需要。
+`OnAttached` 方法检索 `ShadowEffect` 实例，并调用 [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 方法使用指定的属性值创建阴影。 效果所附加到的控件没有 `Control.Layer` 属性时，此功能包装在 `try`/`catch` 块中。 `OnDetached` 方法不提供任何实现，因为不需要进行清理。
 
 ### <a name="universal-windows-platform-project"></a>通用 Windows 平台项目
 
-下面的代码示例演示`LabelShadowEffect`实现通用 Windows 平台 (UWP) 项目：
+以下代码示例展示了通用 Windows 平台 (UWP) 项目的 `LabelShadowEffect` 实现：
 
 ```csharp
 [assembly: ResolutionGroupName ("Xamarin")]
@@ -230,17 +230,17 @@ namespace EffectsDemo.UWP
 }
 ```
 
-通用 Windows 平台不提供阴影效果，因此`LabelShadowEffect`两个平台上的实现模拟一个通过添加第二个偏移量[ `Label` ](xref:Xamarin.Forms.Label)落后于主要`Label`。 `OnAttached`方法检索`ShadowEffect`实例，创建新`Label`，并在设置某些布局属性`Label`。 然后通过设置，创建卷影[ `TextColor` ](xref:Xamarin.Forms.Label.TextColor)， [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX)，以及[ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY)属性控制的颜色和位置`Label`. `shadowLabel`然后插入偏移量落后于主要`Label`。 此功能包装在`try` / `catch`阻止以防效果附加到该控件不具有`Control.Layer`属性。 通过提供任何实现`OnDetached`方法因为任何清理不不需要。
+通用 Windows 平台不提供阴影效果，因此，两个平台上的 `LabelShadowEffect` 实现通过在主 `Label` 后面添加第二个偏移 [`Label`](xref:Xamarin.Forms.Label) 来进行模拟。 `OnAttached` 方法检索 `ShadowEffect` 实例，创建新的 `Label`，并在 `Label` 上设置一些布局属性。 然后通过设置 [`TextColor`](xref:Xamarin.Forms.Label.TextColor)、[`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) 和 [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) 属性来控制 `Label` 的颜色和位置，从而创建阴影。 `shadowLabel` 随后插入主 `Label` 后面并偏移。 效果所附加到的控件没有 `Control.Layer` 属性时，此功能包装在 `try`/`catch` 块中。 `OnDetached` 方法不提供任何实现，因为不需要进行清理。
 
 ## <a name="summary"></a>总结
 
-本文演示了使用 CLR 属性将参数传递给效果。 可以使用 CLR 属性定义不响应运行时属性更改的效果参数。
+本文演示如何使用 CLR 属性将参数传递给效果。 CLR 属性可用于定义不响应运行时属性更改的效果参数。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](xref:Xamarin.Forms.Effect)
+- [效果](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [阴影效果 （示例）](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)
+- [阴影效果（示例）](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)

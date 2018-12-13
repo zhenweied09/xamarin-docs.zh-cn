@@ -1,6 +1,6 @@
 ---
 title: 突出显示地图上的区域
-description: 本文介绍如何将多边形覆盖添加到映射中，以突出显示地图上的区域。 多边形是一个闭合的形状和中填充其内部。
+description: 本文介绍如何向地图添加多边形叠加层，以突出显示地图上的某一区域。 多边形是内部空间已填充的封闭形状。
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
@@ -9,37 +9,37 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 0a11e9c25922531727ad2fee3bbed9c8d4e2b80c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998129"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>突出显示地图上的区域
 
-_本文介绍了如何将多边形覆盖添加到映射，以突出显示地图上的区域。多边形是一个闭合的形状和中填充其内部。_
+本文介绍如何向地图添加多边形叠加层，以突出显示地图上的某一区域。多边形是内部空间已填充的封闭形状。
 
 ## <a name="overview"></a>概述
 
-覆盖是在地图上的分层的图形。 覆盖层支持绘制图形的内容，它被放大随着与该映射。 以下屏幕截图显示向地图添加多边形覆盖的结果：
+叠加层是地图上的分层图形。 叠加层支持绘制在地图缩放时随之缩放的图形内容。 以下屏幕截图显示了向地图添加多边形叠加层的结果：
 
 ![](polygon-map-overlay-images/screenshots.png)
 
-当[ `Map` ](xref:Xamarin.Forms.Maps.Map) Xamarin.Forms 应用程序，在 iOS 中呈现控件`MapRenderer`类实例化时，这反过来实例化本机`MKMapView`控件。 在 Android 平台上`MapRenderer`类实例化本机`MapView`控件。 在通用 Windows 平台 (UWP)，`MapRenderer`类实例化本机`MapControl`。 渲染过程时可以执行利用通过创建自定义呈现器为实现特定于平台的映射自定义`Map`每个平台上。 执行此操作的过程如下所示：
+当 Xamarin.Forms 应用程序呈现 [`Map`](xref:Xamarin.Forms.Maps.Map) 控件时，将在 iOS 中实例化 `MapRenderer` 类，而该操作又会实例化本机 `MKMapView` 控件。 在 Android 平台上，`MapRenderer` 类实例化本机 `MapView` 控件。 在通用 Windows 平台 (UWP) 上，`MapRenderer` 类实例化本机 `MapControl`。 通过在每个平台上为 `Map` 创建自定义呈现器，可以利用呈现过程来实现特定于平台的地图自定义。 执行此操作的过程如下：
 
-1. [创建](#Creating_the_Custom_Map)Xamarin.Forms 自定义地图。
-1. [使用](#Consuming_the_Custom_Map)Xamarin.Forms 中的自定义映射。
-1. [自定义](#Customizing_the_Map)通过每个平台上创建代码图的自定义呈现器映射。
+1. [创建](#Creating_the_Custom_Map) Xamarin.Forms 自定义地图。
+1. [使用](#Consuming_the_Custom_Map) Xamarin.Forms 中的自定义地图。
+1. 通过在每个平台上为地图创建自定义呈现器来[自定义](#Customizing_the_Map)地图。
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) 必须初始化和使用之前配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)。
+> 必须在使用前对 [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) 进行初始化和配置。 有关详细信息，请参阅 [`Maps Control`](~/xamarin-forms/user-interface/map.md)。
 
-有关自定义使用自定义呈现器的映射的信息，请参阅[自定义图钉](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
+有关使用自定义呈现器自定义地图的信息，请参阅[自定义图钉](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)。
 
 <a name="Creating_the_Custom_Map" />
 
 ### <a name="creating-the-custom-map"></a>创建自定义地图
 
-创建一个子类[ `Map` ](xref:Xamarin.Forms.Maps.Map)类，它将`ShapeCoordinates`属性：
+创建 [`Map`](xref:Xamarin.Forms.Maps.Map) 类的子类，该子类添加 `ShapeCoordinates` 属性：
 
 ```csharp
 public class CustomMap : Map
@@ -53,13 +53,13 @@ public class CustomMap : Map
 }
 ```
 
-`ShapeCoordinates`属性将存储的定义以突出显示的区域的坐标集合。
+`ShapeCoordinates` 属性将存储定义要突出显示的区域的坐标集合。
 
 <a name="Consuming_the_Custom_Map" />
 
 ### <a name="consuming-the-custom-map"></a>使用自定义地图
 
-使用`CustomMap`控件通过声明它的实例中的 XAML 页实例：
+通过在 XAML 页面实例中声明 `CustomMap` 控件的实例以使用该控件：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -72,7 +72,7 @@ public class CustomMap : Map
 </ContentPage>
 ```
 
-或者，使用`CustomMap`控件通过声明它的实例中的 C# 页实例：
+或者，通过在 C# 页面实例中声明 `CustomMap` 控件的实例以使用该控件：
 
 ```csharp
 public class MapPageCS : ContentPage
@@ -90,7 +90,7 @@ public class MapPageCS : ContentPage
 }
 ```
 
-初始化`CustomMap`控件：
+根据需要初始化 `CustomMap` 控件：
 
 ```csharp
 public partial class MapPage : ContentPage
@@ -108,17 +108,17 @@ public partial class MapPage : ContentPage
 }
 ```
 
-此初始化指定一系列的纬度和经度坐标定义的映射会突出显示的区域。 然后将定位具有地图的视图[ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion*)方法，以通过创建更改的位置和地图的缩放级别[ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan)从[ `Position`](xref:Xamarin.Forms.Maps.Position)和一个[ `Distance` ](xref:Xamarin.Forms.Maps.Distance)。
+此初始化指定一系列纬度和经度坐标，以定义要突出显示的地图区域。 然后使用 [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) 方法（该方法通过根据 [`Position`](xref:Xamarin.Forms.Maps.Position) 和 [`Distance`](xref:Xamarin.Forms.Maps.Distance) 创建 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 来更改地图的位置和缩放级别）定位地图的视图。
 
 <a name="Customizing_the_Map" />
 
 ### <a name="customizing-the-map"></a>自定义地图
 
-现在必须为要向地图添加多边形覆盖每个应用程序项目添加自定义呈现器。
+现在必须将自定义呈现器添加到每个应用程序项目中，以将多边形叠加层添加到地图中。
 
-#### <a name="creating-the-custom-renderer-on-ios"></a>在 ios 设备上创建自定义呈现器
+#### <a name="creating-the-custom-renderer-on-ios"></a>在 iOS 上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法添加多边形覆盖：
+创建 `MapRenderer` 类的一个子类并替代其 `OnElementChanged` 方法以添加多边形叠加层：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -166,14 +166,14 @@ namespace MapOverlay.iOS
 
 ```
 
-此方法执行下面的配置，前提是自定义呈现器附加到新 Xamarin.Forms 元素：
+如果自定义呈现器附加到新的 Xamarin.Forms 元素，则此方法执行以下配置：
 
-- `MKMapView.OverlayRenderer`属性设置为对应的委托。
-- 从纬度和经度坐标的集合中检索`CustomMap.ShapeCoordinates`属性和数组的形式存储`CLLocationCoordinate2D`实例。
-- 通过调用静态创建多边形`MKPolygon.FromCoordinates`方法，后者指定的纬度和经度的每个点。
-- 多边形被添加到映射通过调用`MKMapView.AddOverlay`方法。 此方法会自动关闭多边形通过绘制一条连接的第一个和最后一个点线。
+- 将 `MKMapView.OverlayRenderer` 属性设置为相应的委托。
+- 从 `CustomMap.ShapeCoordinates` 属性检索经纬度坐标的集合并存储为 `CLLocationCoordinate2D` 实例数组。
+- 多边形是通过调用静态 `MKPolygon.FromCoordinates` 方法创建的，该方法指定每个点的纬度和经度。
+- 通过调用 `MKMapView.AddOverlay` 方法将多边形添加到地图中。 此方法画一条连接第一个点和最后一个点的线，通过这种方式使多边形自动封闭。
 
-然后，实现`GetOverlayRenderer`方法以自定义在覆盖区上的呈现：
+然后，实现 `GetOverlayRenderer` 方法以自定义叠加层的呈现：
 
 ```csharp
 public class CustomMapRenderer : MapRenderer
@@ -199,7 +199,7 @@ public class CustomMapRenderer : MapRenderer
 
 #### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`和`OnMapReady`添加多边形覆盖的方法：
+创建 `MapRenderer` 类的一个子类并替代其 `OnElementChanged` 和 `OnMapReady` 方法以添加多边形叠加层：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -249,11 +249,11 @@ namespace MapOverlay.Droid
 }
 ```
 
-`OnElementChanged`方法检索集合中的纬度和经度坐标`CustomMap.ShapeCoordinates`属性并将它们存储在成员变量中。 然后，它调用`MapView.GetMapAsync`方法，获取基础`GoogleMap`的，提供自定义呈现器附加到新 Xamarin.Forms 元素绑定到视图。 一次`GoogleMap`实例不可用，`OnMapReady`将调用方法，其中通过实例化创建多边形`PolygonOptions`对象，它指定的纬度和经度的每个点。 多边形然后通过调用添加到映射`NativeMap.AddPolygon`方法。 此方法会自动关闭多边形通过绘制一条连接的第一个和最后一个点线。
+`OnElementChanged` 方法从 `CustomMap.ShapeCoordinates` 属性检索经纬度坐标集合，并将它们存储在一个成员变量中。 如果自定义呈现器附加到新的 Xamarin.Forms 元素，则调用 `MapView.GetMapAsync` 方法，该方法获取与视图关联的基础 `GoogleMap`。 一旦 `GoogleMap` 实例可用，将调用 `OnMapReady` 方法，其中通过实例化指定各点经纬度的 `PolygonOptions` 对象创建多边形。 然后，通过调用 `NativeMap.AddPolygon` 方法将多边形添加到地图中。 此方法画一条连接第一个点和最后一个点的线，通过这种方式使多边形自动封闭。
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>在通用 Windows 平台上创建自定义呈现器
 
-创建一个子类`MapRenderer`类并重写其`OnElementChanged`方法添加多边形覆盖：
+创建 `MapRenderer` 类的一个子类并替代其 `OnElementChanged` 方法以添加多边形叠加层：
 
 ```csharp
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
@@ -293,19 +293,19 @@ namespace MapOverlay.UWP
 }
 ```
 
-提供自定义呈现器附加到新 Xamarin.Forms 元素，此方法将执行以下操作：
+如果自定义呈现器附加到新的 Xamarin.Forms 元素，则此方法执行以下操作：
 
-- 从纬度和经度坐标的集合中检索`CustomMap.ShapeCoordinates`属性和转换为`List`的`BasicGeoposition`坐标。
-- 多边形创建的实例化`MapPolygon`对象。 `MapPolygon`类用于在地图上显示多点形状，通过设置其`Path`属性设置为`Geopath`对象，其中包含的形状坐标。
-- 将其添加到地图上呈现多边形`MapControl.MapElements`集合。 请注意，多边形通过绘制一条连接的第一个和最后一个点线将为自动关闭。
+- 从 `CustomMap.ShapeCoordinates` 属性检索经纬度坐标集合，并将其转换为 `BasicGeoposition` 坐标的 `List`。
+- 通过实例化 `MapPolygon` 对象来创建多边形。 将 `Path` 属性设置为包含形状坐标的 `Geopath` 对象，使 `MapPolygon` 类用于在地图上显示多点形状。
+- 通过将多边形添加到 `MapControl.MapElements` 集合中，可在地图上呈现多边形。 注意，绘制一条连接第一个点和最后一个点的线即可使多边形自动封闭。
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何将多边形覆盖添加到映射，以突出显示的地图区域。 多边形是一个闭合的形状和中填充其内部。
+本文介绍如何向地图添加多边形叠加层，以突出显示地图的某一区域。 多边形是内部空间已填充的封闭形状。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [多边形映射覆盖 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+- [多边形地图叠加层（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
 - [自定义图钉](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

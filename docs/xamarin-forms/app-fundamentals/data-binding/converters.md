@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 绑定值转换器
-description: 此文章介绍了如何强制转换或转换 Xamarin.Forms 数据绑定中的值通过实现值转换器 （这是也称为绑定转换器或绑定值转换器）。
+description: 此文章介绍了如何通过实现值转换器（也称为绑定转换器或绑定值转换器）来强制转换或转换 Xamarin.Forms 数据绑定中的值。
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38997474"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 绑定值转换器
 
-数据绑定到目标属性，并在某些情况下从目标属性到源属性，通常将数据传输源属性中。 当源和目标属性都是相同的类型，或一个类型可以转换为另一种类型的隐式转换通过时，此传输非常简单。 如果不是这种情况，类型转换必须执行的位置。
+一般情况下数据绑定会将数据从源属性传递到目标属性，某些情况下则从目标属性传递到源属性。 当源和目标属性都是同一类型，或当一个类型可以隐式转换为另一种类型时，这类传递都是非常简单的。 如果不是这种情况，则必须执行类型转换。
 
-在中[**字符串格式设置**](string-formatting.md)文章中，你已了解如何使用`StringFormat`数据绑定来转换为字符串的任何类型的属性。 对于其他类型的转换，需要编写一些专门的代码中实现的类[ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter)接口。 (通用 Windows 平台包含一个名为的相似类[ `IValueConverter` ](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/)中`Windows.UI.Xaml.Data`命名空间，但这`IValueConverter`处于`Xamarin.Forms`命名空间。)类实现`IValueConverter`称为*值转换器*，但它们通常也称为*绑定转换器*或*绑定值转换器*。
+[字符串格式设置](string-formatting.md)一文已介绍如何使用数据绑定的 `StringFormat` 属性将任意类型转换为字符串。 对于其他类型的转换，需要在类中编写一些专门的代码以实现 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 接口。 （通用 Windows 平台在 `Windows.UI.Xaml.Data` 命名空间中包含一个名为 [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) 的类似的类，但此 `IValueConverter` 在 `Xamarin.Forms` 命名空间中。）实现 `IValueConverter` 的类被称为“值转换器”，但它们通常也被称为“绑定转换器”或“绑定值转换器”。
 
 ## <a name="the-ivalueconverter-interface"></a>IValueConverter 接口
 
-假设你想要定义其中源属性是类型的数据绑定`int`但目标属性为`bool`。 你想要生成此数据绑定`false`值等于 0，整数源时和`true`否则为。  
+假设想要定义源属性为类型 `int` 但目标属性为 `bool` 的数据绑定。 想要此数据绑定在整数源等于 0 时生成 `false` 值，在其他情况则生成 `true`。  
 
-可以使用实现的类来执行此操作`IValueConverter`接口：
+可以使用实现 `IValueConverter` 接口的类做到这一点：
 
 ```csharp
 public class IntToBoolConverter : IValueConverter
@@ -41,15 +41,15 @@ public class IntToBoolConverter : IValueConverter
 }
 ```
 
-设置到此类的实例[ `Converter` ](xref:Xamarin.Forms.Binding.Converter)的属性`Binding`类或设置为[ `Converter` ](xref:Xamarin.Forms.Xaml.BindingExtension.Converter)属性`Binding`标记扩展。 此类将成为数据绑定的一部分。
+将此类的实例设为 `Binding` 类的 [`Converter`](xref:Xamarin.Forms.Binding.Converter) 属性或 `Binding` 标记扩展的 [`Converter`](xref:Xamarin.Forms.Xaml.BindingExtension.Converter) 属性。 此类成为数据绑定的一部分。
 
-`Convert`时数据将从源系统移到目标中调用方法`OneWay`或`TwoWay`绑定。 `value`参数是对象或数据绑定源中的值。 该方法必须返回的数据绑定目标类型的值。 如下所示的强制转换的方法`value`参数`int`，然后将它与 0 进行比较`bool`返回值。
+当数据在 `OneWay` 或 `TwoWay` 绑定中由源移动到目标时，将调用 `Convert` 方法。 `value` 是来自数据绑定源的对象或值。 该方法必须返回数据绑定目标类型的值。 此处所示的方法将 `value` 参数强制转换为 `int`，然后将其与 0 比较并得到 `bool` 返回值。
 
-`ConvertBack`时数据从目标移动到的源中调用方法`TwoWay`或`OneWayToSource`绑定。 `ConvertBack` 执行相反的转换： 它假定`value`参数是`bool`目标，并将其转换为`int`返回源值。
+当数据在 `TwoWay` 或 `OneWayToSource` 绑定中由目标移动到源时，将调用 `ConvertBack` 方法。 `ConvertBack` 执行相反的转换：它假定 `value` 参数是来自目标的 `bool`，然后将其转换为源的 `int` 返回值。
 
-如果数据绑定还包括`StringFormat`设置，值转换器之前调用结果格式化为字符串。
+如果数据绑定还包括 `StringFormat` 设置，则在结果格式化为字符串之前调用值转换器。
 
-**启用按钮**页面[**数据绑定演示**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)示例演示如何在数据绑定中使用此值转换器。 `IntToBoolConverter`在页面的资源字典中实例化。 它然后使用引用`StaticResource`标记扩展来设置`Converter`中两个数据绑定属性。 它是共享的页上的多个数据绑定中的数据转换器非常常见：
+[数据绑定演示](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)示例中的启用按钮页面演示了如何在数据绑定中使用此值转换器。 `IntToBoolConverter` 在页面的资源字典中实例化。 然后使用 `StaticResource` 标记扩展引用它以在两个数据绑定中设置 `Converter` 属性。 在页面中的多个数据绑定中共享数据转换器是很常见的：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,25 +91,25 @@ public class IntToBoolConverter : IValueConverter
 </ContentPage>
 ```
 
-如果你的应用程序的多个页中使用值转换器，则您可以在实例化它中的资源字典**App.xaml**文件。
+如果在应用程序的多个页面中使用值转换器，则可以在 App.xaml 文件的资源字典中将其实例化。
 
-**启用按钮**页说明时需要一种常见`Button`执行一个操作基于文本的用户键入到`Entry`视图。 如果不具有已键入`Entry`，则`Button`应禁用。 每个`Button`包含数据绑定在其`IsEnabled`属性。 数据绑定源是`Length`的属性`Text`的相应属性`Entry`。 如果该`Length`属性不是 0，则返回值转换器`true`和`Button`已启用：
+启用按钮页面演示了当 `Button` 基于用户在 `Entry` 视图中键入的文本执行操作时的常见需求。 如果用户没有在 `Entry` 中键入任何内容，则应禁用 `Button`。 每个 `Button` 都包含其 `IsEnabled` 属性的数据绑定。 数据绑定源是相应 `Entry` 的 `Text` 属性的 `Length` 属性。 如果 `Length`属性不是 0，则值转换器返回 `true` 并启用 `Button`：
 
-[![启用按钮](converters-images/enablebuttons-small.png "启用按钮")](converters-images/enablebuttons-large.png#lightbox "启用按钮")
+[![启用按钮](converters-images/enablebuttons-small.png "Enable Buttons")](converters-images/enablebuttons-large.png#lightbox "Enable Buttons")
 
-请注意，`Text`中每个属性`Entry`初始化为空字符串。 `Text`属性是`null`默认情况下，数据绑定不会在这种情况下。
+请注意，每个 `Entry` 中的 `Text` 属性都将初始化为空字符串。 默认情况下 `Text` 属性为 `null`，且在此情况下不会运行数据绑定。
 
-某些值转换器编写专门为特定应用程序，而其他人已通用化。 如果您知道值转换器将只应用于`OneWay`绑定，则`ConvertBack`方法可以只返回`null`。
+某些值转换器是专门为特定应用程序编写的，而其他值转换器已通用化。 如果知道值转换器将仅用于 `OneWay` 绑定，则 `ConvertBack` 方法只能返回 `null`。
 
-`Convert`隐式上面所示方法假定`value`自变量的类型是`int`并且返回值必须是类型`bool`。 同样，`ConvertBack`方法假设`value`自变量的类型是`bool`和返回值是`int`。 如果这不是这种情况，将发生运行时异常。
+上面所示的 `Convert` 方法隐式假设 `value` 参数的类型为 `int`，返回值的类型必须为 `bool`。 同样，`ConvertBack` 方法假设 `value` 参数的类型为 `bool`，返回值为 `int`。 如果不是这种情况，将发生运行时异常。
 
-您可以编写更通用化并接受多个不同类型的数据值转换器。 `Convert`并`ConvertBack`方法可使用`as`或`is`运算符`value`参数，也可以调用`GetType`上该参数，以确定其类型，然后再执行一些适当的。 每个方法的返回值的预期的类型由`targetType`参数。 有时，使用数据绑定的不同的目标类型; 使用值转换器可以使用值转换器`targetType`参数来执行转换为正确的类型。
+可以将值转换器编写得更加通用化且可以接受多种不同类型的数据。 `Convert` 和 `ConvertBack` 方法可以使用带有 `value` 参数的 `as` 或 `is` 运算符，或者可以在该参数上调用 `GetType` 以确定其类型，然后再执行适当的操作。 每个方法的返回值的预期类型由 `targetType` 参数给出。 有时，值转换器与不同目标类型的数据绑定一起使用；值转换器可以使用 `targetType` 参数来执行正确类型的转换。
 
-如果正在执行的转换为不同的区域性不同，请使用`culture`实现此目的的参数。 `parameter`自变量`Convert`和`ConvertBack`本文稍后介绍。
+如果正在执行对于不同区域性会有所不同的转换，请使用 `culture` 参数实现此目的。 `Convert` 和 `ConvertBack` 的 `parameter` 参数稍后将在本文中介绍。
 
 ## <a name="binding-converter-properties"></a>绑定转换器属性
 
-值转换器类可以具有属性和泛型参数。 此特定值转换器转换`bool`从源类型的对象到`T`目标：
+值转换器类可以具有属性和泛型参数。 此特定值转换器将 `bool` 从源转换为目标的 `T` 类型对象：
 
 ```csharp
 public class BoolToObjectConverter<T> : IValueConverter
@@ -130,7 +130,7 @@ public class BoolToObjectConverter<T> : IValueConverter
 }
 ```
 
-**交换机指示器**页说明如何使用它来显示的值`Switch`视图。 虽然通常会作为资源字典中的资源实例化的值转换器，但此页将演示一种替代方法： 之间实例化每个值转换器`Binding.Converter`属性元素标记。 `x:TypeArguments`指示泛型自变量，并`TrueObject`和`FalseObject`均设置为该类型的对象：
+切换指示器页面演示了如何使用它来显示 `Switch` 视图的值。 虽然将值转换器实例化为资源字典中的资源很常见，但此页面演示了另一种选择：每个值转换器都在 `Binding.Converter` 属性元素标记之间实例化。 `x:TypeArguments` 指示泛型参数，并将 `TrueObject` 和 `FalseObject` 都设置为该类型的对象：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -234,17 +234,17 @@ public class BoolToObjectConverter<T> : IValueConverter
 </ContentPage>
 ```
 
-在过去三个`Switch`并`Label`对，泛型自变量设置为`Style`，和整个`Style`对象提供的值`TrueObject`和`FalseObject`。 这些重写的隐式样式`Label`在资源字典中设置，因此该样式中的属性显式分配给`Label`。 切换`Switch`会导致相应`Label`以反映此更改：
+在三个 `Switch` 和 `Label` 对中的最后一个对中，泛型参数被设为 `Style`，并且为 `TrueObject` 和 `FalseObject` 的值提供了整个 `Style` 对象。 这些替代了资源字典中设置的 `Label` 的隐式样式，因此该样式中的属性被显式分配给 `Label`。 切换 `Switch` 会导致相应的 `Label` 对此更改作出反应：
 
-[![切换指示器](converters-images/switchindicators-small.png "切换指示器")](converters-images/switchindicators-large.png#lightbox "切换指标")
+[![切换指示器](converters-images/switchindicators-small.png "Switch Indicators")](converters-images/switchindicators-large.png#lightbox "Switch Indicators")
 
-它也是可以使用[ `Triggers` ](~/xamarin-forms/app-fundamentals/triggers.md)基于其他视图的用户界面中实现类似的更改。
+它也可以使用 [`Triggers`](~/xamarin-forms/app-fundamentals/triggers.md) 在基于其他视图的用户界面中实现类似的更改。
 
 ## <a name="binding-converter-parameters"></a>绑定转换器参数
 
-`Binding`类定义[ `ConverterParameter` ](xref:Xamarin.Forms.Binding.ConverterParameter)属性，并且`Binding`标记扩展还定义[ `ConverterParameter` ](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter)属性。 如果设置此属性，则该值将传递到`Convert`并`ConvertBack`方法，例如`parameter`参数。 即使在多个数据绑定，间共享的值转换器实例`ConverterParameter`可以不同执行稍有不同的转换。
+`Binding` 类定义 [`ConverterParameter`](xref:Xamarin.Forms.Binding.ConverterParameter) 属性，`Binding` 标记扩展也定义 [`ConverterParameter`](xref:Xamarin.Forms.Xaml.BindingExtension.ConverterParameter) 属性。 如果设置此属性，则该值将作为 `parameter` 参传递到 `Convert` 和 `ConvertBack` 方法。 即使值转换器实例在多个数据绑定之间共享，`ConverterParameter` 也可能不同，执行的转换就会有所不同。
 
-使用`ConverterParameter`演示了颜色选择程序。 在这种情况下，`RgbColorViewModel`有三个属性的类型`double`名为`Red`， `Green`，并`Blue`它用来构造`Color`值：
+使用颜色选择程序演示了 `ConverterParameter` 的用法。 在这种情况下，`RgbColorViewModel` 有三个分别名为 `Red`、`Green` 和 `Blue` 的类型 `double` 属性，用于构造 `Color` 值：
 
 ```csharp
 public class RgbColorViewModel : INotifyPropertyChanged
@@ -338,9 +338,9 @@ public class RgbColorViewModel : INotifyPropertyChanged
 }
 ```
 
-`Red`， `Green`，和`Blue`属性范围介于 0 和 1 之间。 但是，你可能倾向，组件显示为两位数字的十六进制值。
+`Red`、`Green` 和 `Blue` 的属性范围介于 0 和 1 之间。 但是，你可能更愿意将组件显示为两位数的十六进制值。
 
-若要在 XAML 中显示为十六进制值，它们必须乘以 255，转换为整数，然后使用"X2"的规范格式中`StringFormat`属性。 值转换器可以处理的前两个任务 （乘以 255 和将转换为整数）。 若要使值转换器以尽可能通用，乘法因子可以指定与`ConverterParameter`属性，这意味着它将进入`Convert`并`ConvertBack`的方法作为`parameter`参数：
+若要在 XAML 中将这些显示为十六进制值，它们必须乘以 255，转换为整数，然后使用 `StringFormat` 属性中的“X2”规范格式化。 前两个任务（乘以 255 并转换为整数）可以由值转换器处理。 若要尽可能提高值转换器的通用性，可以使用 `ConverterParameter` 属性指定乘法因数，这意味着它将作为 `parameter` 参数进入 `Convert` 和 `ConvertBack` 方法：
 
 ```csharp
 public class DoubleToIntConverter : IValueConverter
@@ -371,17 +371,17 @@ public class DoubleToIntConverter : IValueConverter
 }
 ```
 
-`Convert`将从转换`double`到`int`时乘以`parameter`值;`ConvertBack`除以整数`value`自变量`parameter`，并返回`double`结果。 (在程序中如下所示，值转换器仅用于字符串格式设置，因此`ConvertBack`不使用。)
+`Convert` 从 `double` 转换为 `int`，同时乘以 `parameter` 值；`ConvertBack` 将整数 `value` 参数除以 `parameter` 并返回 `double` 结果。 （在下面显示的程序中，值转换器仅用于和字符串格式设置的连接中，因此不使用 `ConvertBack`。）
 
-类型`parameter`参数是可能不同，具体取决于是否在代码或 XAML 中定义的数据绑定。 如果`ConverterParameter`属性的`Binding`设置在代码中，很可能设置为数字值：
+`parameter` 参数的类型可能会有所不同，具体取决于数据绑定是在代码中还是在 XAML 中定义的。 如果 `Binding` 的 `ConverterParameter` 属性是在代码中设置的，则很可能设置为数字值：
 
 ```csharp
 binding.ConverterParameter = 255;
 ```
 
-`ConverterParameter`属性属于类型`Object`，因此，C# 编译器将文字 255 解释为一个整数，并且将属性设置为该值。
+`ConverterParameter` 属性的类型为 `Object`，因此 C# 编译器将文字 255 解释为整数，并将该属性设置为该值。
 
-在 XAML，但是，`ConverterParameter`很可能设置如下：
+但是，在 XAML 中，`ConverterParameter` 很可能设置为这样：
 
 ```xaml
 <Label Text="{Binding Red,
@@ -390,11 +390,11 @@ binding.ConverterParameter = 255;
                       StringFormat='Red = {0:X2}'}" />
 ```
 
-255 看起来像一个数字，但，因为`ConverterParameter`属于类型`Object`，XAML 分析器将 255 视为字符串。
+255 看起来是一个数字，但因为 `ConverterParameter` 属于类型 `Object`，因此 XAML 分析器将 255 视为字符串。
 
-为此，如上所示的值转换器包含一个单独`GetParameter`处理的情况下方法`parameter`类型的正在`double`， `int`，或`string`。  
+为此，上述的值转换器包含一个单独的 `GetParameter` 方法，该方法用于处理 `parameter` 属于类型 `double`、`int` 或 `string` 的情况。  
 
-**RGB 颜色选择器**页上实例化`DoubleToIntConverter`在以下两个隐式样式的定义及其资源字典中：
+RGB 颜色选择器页面遵照两个隐式样式的定义在其资源字典中实例化 `DoubleToIntConverter`：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -456,14 +456,14 @@ binding.ConverterParameter = 255;
 </ContentPage>    
 ```
 
-值`Red`并`Green`属性将显示与`Binding`标记扩展。 `Blue`属性，但是，实例化`Binding`类，以演示如何使用显式`double`可以将值设置为`ConverterParameter`属性。
+`Red` 和 `Green` 属性的值是使用 `Binding` 标记扩展显示的。 但是，`Blue` 属性实例化 `Binding` 以演示如何将显式 `double` 值设置为 `ConverterParameter` 属性。
 
-下面是结果：
+结果如下：
 
-[![RGB 颜色选择器](converters-images/rgbcolorselector-small.png "RGB 颜色选择器")](converters-images/rgbcolorselector-large.png#lightbox "RGB 颜色选择器")
+[![RGB 颜色选择器](converters-images/rgbcolorselector-small.png "RGB Color Selector")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
 
 
 ## <a name="related-links"></a>相关链接
 
-- [数据绑定演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [数据绑定 Xamarin.Forms 书籍章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [数据绑定演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Xamarin.Forms 书中的数据绑定章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

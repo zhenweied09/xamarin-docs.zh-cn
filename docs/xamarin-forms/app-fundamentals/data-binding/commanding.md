@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 命令界面
-description: 本文介绍如何使用 Xamarin.Forms 数据绑定实现的命令属性。 命令接口提供对 MVVM 体系结构更适合一种方法来实现命令。
+title: Xamarin.Forms 命令接口
+description: 本文介绍如何使用 Xamarin.Forms 数据绑定实现 Command 属性。 命令接口提供了另一种实现命令的方法，这种方法更适合 MVVM 体系结构。
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
@@ -9,37 +9,37 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675236"
 ---
-# <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 命令界面
+# <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 命令接口
 
-在模型-视图-视图模型 (MVVM) 体系结构中，定义数据绑定的 ViewModel，这通常是派生的类中属性之间`INotifyPropertyChanged`，并在视图中，这通常是 XAML 文件的属性。 有时应用程序能够通过要求用户若要启动命令会影响在 ViewModel 中的某些内容超越这些属性绑定的需求。 这些命令通常通过单击按钮来发出信号或手指点击，以及传统上在代码隐藏文件中的处理程序中处理这些请求`Clicked`的事件`Button`或`Tapped`事件的`TapGestureRecognizer`。
+在“模型-视图-视图模型”（即 MVVM）体系结构中，数据绑定是在 ViewModel（通常是派生自 `INotifyPropertyChanged` 的类）中的属性和视图（通常为 XAML 文件）中的属性之间定义的。 有时，应用程序的需求超越了属性绑定层面，它要求用户启动影响 ViewModel 中某些内容的命令。 这些命令通常通过点击按钮或手指敲击触发信号，往往是以下两个事件的处理程序中的代码隐藏文件中处理它们：`Button` 的 `Clicked` 事件或 `TapGestureRecognizer` 的 `Tapped` 事件。
 
-命令接口提供对 MVVM 体系结构更适合一种方法来实现命令。 ViewModel 本身可以包含命令，如在视图中的特定活动的反应中执行的方法`Button`单击。 这些命令之间定义数据绑定和`Button`。
+命令接口提供了另一种实现命令的方法，这种方法更适合 MVVM 体系结构。 ViewModel 本身可以包含命令，这些命令是针对视图中的特定活动（例如单击 `Button`）而执行的方法。 在这些命令和 `Button` 之间定义了数据绑定。
 
-若要允许之间的数据绑定`Button`和 ViewModel，`Button`定义两个属性：
+为允许使用 `Button` 和 ViewModel 之间的绑定数据，`Button` 定义两个属性：
 
-- [`Command`](xref:Xamarin.Forms.Button.Command) 类型 [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
-- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) 类型 `Object`
+- [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand) 类型的 [`Command`](xref:Xamarin.Forms.Button.Command)
+- `Object` 类型的 [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)
 
-若要使用命令接口，您可以定义数据绑定面向`Command`的属性`Button`其中源是类型的 ViewModel 中的属性`ICommand`。 ViewModel 包含与该代码`ICommand`时单击该按钮时执行的属性。 可以设置`CommandParameter`到同一个绑定到任意数据来区分多个按钮，如果所有`ICommand`ViewModel 中的属性。
+若要使用命令接口，请定义将 `Button` 的 `Command` 属性作为目标的数据绑定，其中源是 `ICommand` 类型的 ViewModel 中的属性。 ViewModel 包含与单击按钮时执行的 `ICommand` 属性关联的代码。 如果多个按钮都绑定到 ViewModel 中的同一个 `ICommand` 属性，可以将 `CommandParameter` 设置为任意数据以区分这些按钮。
 
-`Command`和`CommandParameter`属性也由以下类定义：
+下列类也定义了 `Command` 和 `CommandParameter` 属性：
 
-- [`MenuItem`](xref:Xamarin.Forms.MenuItem) 因此， [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem)，又派生自 `MenuItem`
-- [`TextCell`](xref:Xamarin.Forms.TextCell) 因此， [ `ImageCell` ](xref:Xamarin.Forms.ImageCell)，又派生自 `TextCell`
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem) 以及派生自 `MenuItem` 的 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- [`TextCell`](xref:Xamarin.Forms.TextCell) 以及派生自 `TextCell` 的 [`ImageCell`](xref:Xamarin.Forms.ImageCell)
 - [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](xref:Xamarin.Forms.SearchBar) 定义[ `SearchCommand` ](xref:Xamarin.Forms.SearchBar.SearchCommand)类型的属性`ICommand`和一个[ `SearchCommandParameter` ](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)属性。 [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand)的属性[ `ListView` ](xref:Xamarin.Forms.ListView)类型的也是`ICommand`。
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) 定义一个 `ICommand` 类型的 [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) 属性和一个 [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) 属性。 [`ListView`](xref:Xamarin.Forms.ListView) 的 [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) 属性也是 `ICommand` 类型。
 
-在中的 ViewModel 不依赖于在视图中的特定用户界面对象的方式处理所有这些命令。
+可以在 ViewModel 中以不依赖视图中的特定用户界面对象的方式处理上述所有命令。
 
 ## <a name="the-icommand-interface"></a>ICommand 接口
 
-[ `System.Windows.Input.ICommand` ](xref:System.Windows.Input.ICommand)接口不是 Xamarin.Forms 的一部分。 而定义在[System.Windows.Input](xref:System.Windows.Input)命名空间，它包括两个方法和一个事件：
+[`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand) 接口不属于 Xamarin.Forms。 而是在 [System.Windows.Input](xref:System.Windows.Input) 命名空间中定义的，由两个方法和一个事件组成：
 
 ```csharp
 public interface ICommand
@@ -52,41 +52,41 @@ public interface ICommand
 }
 ```
 
-若要使用命令接口，将 ViewModel 包含类型的属性`ICommand`:
+若要使用命令接口，ViewModel 需包含 `ICommand` 类型的属性：
 
 ```csharp
 public ICommand MyCommand { private set; get; }
 ```
 
-ViewModel 还必须引用实现的类`ICommand`接口。 此类将稍后所述。 在视图中，`Command`属性的`Button`绑定到该属性：
+ViewModel 还必须引用实现 `ICommand` 接口的类。 此类稍后再述。 在视图中，`Button` 的 `Command` 属性绑定到该属性：
 
 ```xaml
 <Button Text="Execute command"
         Command="{Binding MyCommand}" />
 ```
 
-当用户按`Button`，则`Button`调用`Execute`中的方法`ICommand`对象绑定到其`Command`属性。 是接口的最简单的命令的一部分。
+用户按下 `Button` 时，`Button` 调用绑定到其 `Command` 属性的 `ICommand` 对象中的 `Execute` 方法。 这是命令接口中最简单的一部分。
 
-`CanExecute`方法是更复杂。 绑定上的第一个定义当`Command`的属性`Button`，并以某种方式更改数据绑定时`Button`调用`CanExecute`中的方法`ICommand`对象。 如果`CanExecute`将返回`false`，则`Button`禁用其自身。 这表示特定命令目前不可用或无效。
+`CanExecute` 方法更复杂。 首次在 `Button` 的 `Command` 属性上定义绑定时，以及数据绑定以某种方式更改时，`Button` 调用 `ICommand` 对象中的 `CanExecute` 方法。 如果 `CanExecute` 返回 `false`，则 `Button` 将禁用其自身。 这表示特定命令当前不可用或无效。
 
-`Button`还会将一个处理程序附加上`CanExecuteChanged`事件的`ICommand`。 从在 ViewModel 中激发事件。 当触发该事件时，`Button`调用`CanExecute`试。 `Button`情况下启用自身`CanExecute`返回`true`和禁用它自己`CanExecute`返回`false`。
+`Button` 还在 `ICommand` 的 `CanExecuteChanged` 事件上附加处理程序。 该事件是从 ViewModel 内触发的。 触发该事件时，`Button` 再次调用 `CanExecute`。 如果 `CanExecute` 返回 `true`，`Button` 启用其自身；如果 `CanExecute` 返回 `false`，则禁用其自身。
 
 > [!IMPORTANT]
-> 不要使用`IsEnabled`属性的`Button`如果使用的命令接口。  
+> 如果使用命令接口，请勿使用 `Button` 的 `IsEnabled` 属性。  
 
 ## <a name="the-command-class"></a>命令类
 
-当将 ViewModel 定义类型的属性`ICommand`，ViewModel 也必须包含或引用实现的类`ICommand`接口。 此类必须包含或引用`Execute`并`CanExecute`方法和激发`CanExecuteChanged`事件每当`CanExecute`方法可能返回不同的值。
+ViewModel 定义 `ICommand` 类型的属性时，它还必须包含或引用实现 `ICommand` 接口的类。 该类必须包含或引用 `Execute` 和 `CanExecute` 方法，并且每当 `CanExecute` 方法返回不同的值时均触发 `CanExecuteChanged` 事件。
 
-可以自己，编写此类也可以使用其他人编写了一个类。 因为`ICommand`是一部分的 Microsoft Windows，它具有已使用多年与 Windows MVVM 应用程序。 使用的 Windows 类，实现`ICommand`使你可共享 Windows 应用程序和 Xamarin.Forms 应用程序之间将 Viewmodel。
+可以自己编写这样的类，也可以使用其他人编写的类。 `ICommand` 是 Microsoft Windows 的一部分，已在 Windows MVVM 应用程序中使用多年。 使用实现 `ICommand` 的 Windows 类，可以在 Windows 应用程序和 Xamarin.Forms 应用程序之间共享 ViewModel。
 
-如果共享 Viewmodel 之间 Windows 和 Xamarin.Forms 不是关键因素，则可以使用[ `Command` ](xref:Xamarin.Forms.Command)或[ `Command<T>` ](xref:Xamarin.Forms.Command`1)类包含在 Xamarin.Forms 中实现`ICommand`接口。 这些类允许您指定的正文`Execute`和`CanExecute`类构造函数中的方法。 使用`Command<T>`使用时`CommandParameter`属性来区分多个视图绑定到同一`ICommand`属性，且更简单`Command`类不需要时。
+如果在 Windows 和 Xamarin.Forms 之间共享 ViewModel 不成问题，则可以使用 Xamarin.Forms 中包含的 [`Command`](xref:Xamarin.Forms.Command) 或 [`Command<T>`](xref:Xamarin.Forms.Command`1) 类来实现 `ICommand` 接口。 通过这些类，可以在类构造函数中指定 `Execute` 和 `CanExecute` 方法的主体。 使用 `CommandParameter` 属性区分绑定同一 `ICommand` 属性的多个视图时，请使用 `Command<T>`不需要区分时，使用更简单的 `Command` 类。
 
 ## <a name="basic-commanding"></a>基本命令
 
-**人的项**页面[**数据绑定演示**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)程序演示了一些简单的命令在 ViewModel 中实现。
+[数据绑定演示](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)程序中的“人员录入”页演示了在 ViewModel 中实现的一些简单命令。
 
-`PersonViewModel`定义名为三个属性`Name`， `Age`，和`Skills`定义一个人。 此类可进行*不*包含任何`ICommand`属性：
+`PersonViewModel` 定义了分别名为 `Name`、`Age` 和 `Skills` 的三个属性，这三个属性定义一个人。 此类不包含任何 `ICommand` 属性
 
 ```csharp
 public class PersonViewModel : INotifyPropertyChanged
@@ -137,7 +137,7 @@ public class PersonViewModel : INotifyPropertyChanged
 }
 ```
 
-`PersonCollectionViewModel`所示下面创建新对象的类型`PersonViewModel`，并允许用户以填充数据。 为此，该类定义了属性`IsEditing`类型的`bool`并`PersonEdit`类型的`PersonViewModel`。 此外，该类定义了三个属性的类型`ICommand`和一个名为属性`Persons`类型的`IList<PersonViewModel>`:
+下面所示的 `PersonCollectionViewModel` 创建 `PersonViewModel` 类型的新对象，并允许用户填写数据。 为此，类定义两个属性：`bool` 类型的 `IsEditing` 和 `PersonViewModel` 类型的 `PersonEdit`。 此外，该类还定义了 `ICommand` 类型的三个属性和 `IList<PersonViewModel>` 类型的一个名为 `Persons` 的属性：
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -186,9 +186,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-此缩写的列表不包含类的构造函数，该类型的三个属性`ICommand`定义，这将会显示。 请注意，更改为三种类型的属性`ICommand`并`Persons`属性不会导致`PropertyChanged`所激发事件。 这些属性都设置为，首次创建类时，并且此后不会更改。
+这个简短的列表不包括类的构造函数，该构造函数是定义 `ICommand` 类型的三个属性的位置，稍后再作演示。 请注意，对 `ICommand` 类型的三个属性以及 `Persons` 属性的更改不会触发 `PropertyChanged` 事件。 这些属性都是在类首次创建时设置的，此后不会更改。
 
-之前检查的构造函数`PersonCollectionViewModel`类中，让我们看一下 XAML 文件**人的项**程序。 此文件包含`Grid`使用其`BindingContext`属性设置为`PersonCollectionViewModel`。 `Grid`包含`Button`包含文本**新建**使用其`Command`属性绑定到`NewCommand`ViewModel 中的属性，使用属性的输入窗体绑定到`IsEditing`属性，为属性以及`PersonViewModel`，并将其绑定到的两个按钮`SubmitCommand`和`CancelCommand`ViewModel 的属性。 最后一个`ListView`显示人员已经输入的集合：
+在检查 `PersonCollectionViewModel` 类的构造函数之前，看一看“人员录入”程序的 XAML 文件。 此文件包含 `Grid`，其 `BindingContext` 属性设置为 `PersonCollectionViewModel`。 `Grid` 包含：一个 `Button`（其文本为“New”，`Command` 属性绑定到 ViewModel 中的 `NewCommand` 属性）、一个输入窗体（其属性绑定到 `IsEditing` 属性以及 `PersonViewModel` 的属性）以及另外两个绑定到 ViewModel 的 `SubmitCommand` 和 `CancelCommand` 属性的按钮。 最后 `ListView` 显示已录入的人员的集合：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -275,17 +275,17 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-下面是它的工作原理： 用户首次按下**新建**按钮。 这使输入窗体，但禁用**新建**按钮。 用户然后输入一个名称、 年龄和技能。 在编辑时，用户可以按**取消**按钮以重新开始。 仅当已输入的名称和有效期限**提交**按钮已启用。 按这**提交**按钮将此人传输到由显示的集合`ListView`。 之后可以**取消**或**提交**按下按钮，清除输入窗体并**新建**按钮已再次启用。
+它的工作原理如下：用户首先按“新建”按钮。 这将启用输入窗体，但禁用“新建”按钮。 然后用户输入姓名、年龄和技能。 在编辑过程中，用户随时都可以按下“取消”按钮重新开始。 只有在输入了姓名和有效年龄后，才启用“提交”按钮。 按“提交”按钮可将人员转移到 `ListView` 显示的集合中。 按“取消”或“提交”按钮后，会清除输入窗体中的内容并再次启用“新建”按钮。
 
-输入有效的期限之前，在左侧的 iOS 屏幕显示的布局。 Android 和 UWP 屏幕显示**提交**设置年龄后启用按钮：
+左侧的 iOS 屏幕显示输入有效年龄之前的布局。 Android 和 UWP 屏幕显示设置年龄之后启用的“提交”按钮：
 
-[![人的项](commanding-images/personentry-small.png "人的项")](commanding-images/personentry-large.png#lightbox "人的项")
+[![人员录入](commanding-images/personentry-small.png "人员录入")](commanding-images/personentry-large.png#lightbox "人员录入")
 
-该程序没有任何工具，以便编辑现有条目，并在导航离开页面时不保存这些条目。
+该程序没有任何功能可供编辑现有条目，并且在离开该页面时不会保存这些条目。
 
-所有的逻辑**新建**，**提交**，并**取消**中处理按钮`PersonCollectionViewModel`通过定义`NewCommand`， `SubmitCommand`，和`CancelCommand`属性。 构造函数`PersonCollectionViewModel`将这三个属性设置为类型的对象`Command`。  
+“新建”、“提交”和“取消”按钮的所有逻辑都通过定义 `NewCommand`、`SubmitCommand` 和 `CancelCommand` 属性在 `PersonCollectionViewModel` 中处理。 `PersonCollectionViewModel` 的构造函数将这三个属性设置为 `Command` 类型的对象。  
 
-一个[构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean}))的`Command`类，可将类型的自变量传递`Action`并`Func<bool>`对应于`Execute`和`CanExecute`方法。 它是最简单的方法将这些操作和函数定义为 lambda 函数直接在`Command`构造函数。 下面是定义`Command`对象`NewCommand`属性：
+通过 `Command` 类的[构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean}))，你可以传递与 `Execute` 和 `CanExecute` 方法对应的 `Action` 和 `Func<bool>` 类型的参数。 在 `Command` 构造函数中将这些操作和函数定义为 lambda 函数是最简单的。 下面是 `NewCommand` 属性的 `Command` 对象的定义：
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -329,13 +329,13 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-当用户单击**新建**按钮，`execute`函数传递给`Command`执行构造函数。 这将创建一个新`PersonViewModel`对象，该对象上设置的处理程序`PropertyChanged`事件，设置`IsEditing`到`true`，并调用`RefreshCanExecutes`后构造函数定义的方法。
+用户单击“新建”按钮时，执行传递给 `Command` 构造函数的 `execute` 函数。 这将创建一个新的 `PersonViewModel` 对象，为该对象的 `PropertyChanged` 事件设置一个处理程序，将 `IsEditing` 设置为 `true`，并调用在构造函数之后定义的 `RefreshCanExecutes` 方法。
 
-除了实现`ICommand`接口，`Command`类还定义了一个名为方法`ChangeCanExecute`。 应调用到 ViewModel`ChangeCanExecute`有关`ICommand`属性时，发生任何可能会更改的返回值`CanExecute`方法。 调用`ChangeCanExecute`会导致`Command`类，以触发`CanExecuteChanged`方法。 `Button`已附加该事件的处理程序并响应通过调用`CanExecute`同样，然后启用本身基于该方法的返回值。
+除了实现 `ICommand` 接口外，`Command` 类还定义了名为 `ChangeCanExecute` 的方法。 每当发生任何可能更改 `CanExecute` 方法返回值的事情时，ViewModel 都应该为 `ICommand` 属性调用 `ChangeCanExecute`。 调用 `ChangeCanExecute` 将导致 `Command` 类触发 `CanExecuteChanged` 方法。 `Button` 已为该事件附加了一个处理程序，并通过再次调用 `CanExecute` 进行响应，然后根据该方法的返回值启用自身。
 
-时`execute`方法`NewCommand`调用`RefreshCanExecutes`，则`NewCommand`属性获取调用`ChangeCanExecute`，和`Button`调用`canExecute`方法，现在返回`false`因为`IsEditing`属性现`true`。
+当 `NewCommand` 的 `execute` 方法调用 `RefreshCanExecutes` 时，`NewCommand` 属性得到对 `ChangeCanExecute` 的调用，`Button` 调用 `canExecute` 方法，该方法现在返回 `false`，因为 `IsEditing` 的属性现在是 `true`。
 
-`PropertyChanged`处理程序的新`PersonViewModel`对象调用`ChangeCanExecute`方法的`SubmitCommand`。 下面是该命令属性的实现方式：
+新 `PersonViewModel` 对象的 `PropertyChanged` 处理程序调用 `SubmitCommand` 的 `ChangeCanExecute` 方法。 以下是该命令属性的实现方式：
 
 
 ```csharp
@@ -374,11 +374,11 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-`canExecute`函数`SubmitCommand`每次在中更改某个属性调用`PersonViewModel`对象正在编辑。 它将返回`true`仅当`Name`属性是至少包含一个字符和`Age`大于 0。 此时，**提交**按钮将变为启用状态。
+每当编辑的 `PersonViewModel` 对象中的属性发生更改时，都会调用 `SubmitCommand` 的 `canExecute` 函数。 仅当 `Name` 属性的长度至少为一个字符且 `Age` 大于 0 时，它返回 `true`。 此时，“提交”按钮将变为启用状态。
 
-`execute`函数**提交**移除属性更改处理程序从`PersonViewModel`，将对象添加到`Persons`集合，并返回到初始条件的所有内容。
+“提交”的 `execute` 函数从 `PersonViewModel` 中删除属性已更改的处理程序，将对象添加到 `Persons` 集合中，并使所有内容回到初始状态。
 
-`execute`函数**取消**按钮执行所有操作的**提交**does 除外按钮添加到集合的对象：
+“取消”按钮的 `execute` 函数执行“提交”按钮所执行的所有操作，但不将对象添加到集合中：
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -410,21 +410,21 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-`canExecute`方法将返回`true`随时`PersonViewModel`正在编辑。
+`canExecute` 方法在编辑 `PersonViewModel` 时随时返回 `true`。
 
-这些技术可能是适用于更复杂的方案： 中的属性`PersonCollectionViewModel`无法绑定到`SelectedItem`的属性`ListView`用于编辑现有项和一个**删除**无法添加按钮以删除这些项。
+这些技术可以适用于更复杂的场景：可以将 `PersonCollectionViewModel` 中的属性绑定到 `ListView` 的 `SelectedItem` 属性以编辑现有项，还可以添加“删除”按钮以删除这些项。
 
-但并不需要定义`execute`和`canExecute`作为 lambda 函数的方法。 您可以将其写入 ViewModel 中为常规的私有方法以及中引用它们`Command`构造函数。 但是，这种方法 does 往往会导致大量的 ViewModel 中只有一次引用的方法。
+不必将 `execute` 和 `canExecute` 方法定义为 lambda 函数。 在 ViewModel 中可以将它们作为常规的专用方法写入，并在 `Command` 构造函数中引用它们。 但是，这种方式往往会导致许多方法在 ViewModel 中只得到一次引用。
 
 ## <a name="using-command-parameters"></a>使用命令参数
 
-可以很方便的一个或多个按钮 （或其他用户界面对象） 来共用同一个`ICommand`ViewModel 中的属性。 在这种情况下，使用`CommandParameter`属性来区分按钮。
+有时，一个或多个按钮（或其他用户界面对象）在 ViewModel 中共享相同的 `ICommand` 属性是很方便的。 在这种情况下，使用 `CommandParameter` 属性来区分按钮。
 
-你可以继续使用`Command`类，这些共享`ICommand`属性。 类定义[备用构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean}))接受`execute`并`canExecute`带参数的类型的方法`Object`。 这是如何`CommandParameter`传递给这些方法。
+可以继续为这些共享 `ICommand` 属性使用 `Command` 类。 该类定义[构造函数](xref:Xamarin.Forms.Command.%23ctor(System.Action{System.Object},System.Func{System.Object,System.Boolean}))，该构造函数接受参数为 `Object` 类型的 `execute` 和 `canExecute` 方法。 这就是将 `CommandParameter` 传递给这些方法的方式。
 
-但是，使用时`CommandParameter`，它是最容易使用泛型[ `Command<T>` ](xref:Xamarin.Forms.Command`1)类，以指定的对象设置为类型`CommandParameter`。 `execute`和`canExecute`您指定的方法具有该类型的参数。
+但是，在使用 `CommandParameter` 时，最容易使用泛型 [`Command<T>`](xref:Xamarin.Forms.Command`1) 类来指定对象设置为 `CommandParameter` 的类型。 指定的 `execute` 和 `canExecute` 方法具有该类型的参数。
 
-**十进制键盘**页通过显示如何实现用于输入十进制数字键盘来演示此方法。 `BindingContext`有关`Grid`是`DecimalKeypadViewModel`。 `Entry`此 ViewModel 属性绑定到`Text`属性的`Label`。 所有`Button`对象绑定到 ViewModel 中的各种命令： `ClearCommand`， `BackspaceCommand`，和`DigitCommand`:
+“十进制键盘”页通过展示如何实现用于输入十进制数字的键盘，对这种技术作出了说明。 `Grid` 的 `BindingContext` 是 `DecimalKeypadViewModel`。 此 ViewModel 的 `Entry` 属性绑定到 `Label` 的 `Text` 属性。 所有 `Button` 对象都绑定到 ViewModel 中的各种命令：`ClearCommand`、`BackspaceCommand` 和 `DigitCommand`：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -527,15 +527,15 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-10 位数字和小数点的 11 按钮共享绑定到`DigitCommand`。 `CommandParameter`区分这些按钮。 将值设置为`CommandParameter`通常是与除小数点，它为清晰起见使用中间的点字符显示的按钮显示的文本相同。
+表示 10 位数和小数点的共计 11 个按钮共享与 `DigitCommand` 的绑定。 `CommandParameter` 区分这些按钮。 设置为 `CommandParameter` 的值通常与按钮显示的文本相同，但小数点除外，为了清晰起见，它在按钮中间显示一个点。
 
-下面是该程序的操作：
+下面是正在执行操作的程序：
 
 [![十进制键盘](commanding-images/decimalkeyboard-small.png "十进制键盘")](commanding-images/decimalkeyboard-large.png#lightbox "十进制键盘")
 
-请注意，所有三个屏幕截图中的十进制点按钮被禁用，因为输入的数字中已包含小数点。
+注意，所有屏幕截图中的小数点按钮均为禁用状态，因为输入的数字中已包含一个小数点。
 
-`DecimalKeypadViewModel`定义`Entry`类型的属性`string`(这是唯一的属性触发`PropertyChanged`事件) 和类型的三个属性`ICommand`:
+`DecimalKeypadViewModel` 定义 `string` 类型的 `Entry` 属性（这是触发 `PropertyChanged` 事件的唯一属性）和 `ICommand` 类型的三个属性：
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -570,7 +570,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-按钮对应于`ClearCommand`始终处于启用状态，并只需设置回"0"的条目：
+始终启用与 `ClearCommand` 对应的按钮，并将条目设置为“0”：
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -602,11 +602,11 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-由于始终启用按钮，因此不需要指定`canExecute`中的参数`Command`构造函数。
+由于始终启用按钮，因此不必在 `Command` 构造函数中指定 `canExecute` 参数。
 
-输入数字和退格的逻辑是有些棘手，因为如果已不输入任何数字，则`Entry`属性是字符串"0"。 如果用户键入更多的零，则`Entry`仍包含只是一个零。 如果用户键入任何其他数字，该数字将替换为零。 但是，如果用户键入小数点前任何其他数字，然后`Entry`是字符串"0。
+输入数字和退格的逻辑有点复杂，因为如果没有输入数字，那么 `Entry` 属性就是字符串“0”。 即使用户键入更多的零，`Entry` 仍然只包含一个零。 如果用户键入任何其他数字，该数字将替换零。 但是如果用户在其他数字之前键入小数点，那么 `Entry` 就是字符串“0.”。
 
-**退格符**仅当项的长度大于 1，或如果启用按钮`Entry`不等于字符串"0":
+退格按钮仅在输入的长度大于 1 或 `Entry` 不等于字符串“0”时启用：
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -643,9 +643,9 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-逻辑`execute`函数**退格符**按钮可确保`Entry`是至少一个"0"的字符串。
+退格按钮的 `execute` 函数的逻辑确保 `Entry` 至少是字符串“0”。
 
-`DigitCommand`属性将绑定到 11 按钮，其中每个标识本身与`CommandParameter`属性。 `DigitCommand`可以将设置为常规的实例`Command`，但它的更轻松地使用`Command<T>`泛型类。 使用 XAML，命令接口时`CommandParameter`属性通常是字符串，并且这是泛型参数的类型。 `execute`并`canExecute`函数然后具有类型的自变量`string`:
+`DigitCommand` 属性绑定到 11 个按钮，每个按钮用 `CommandParameter` 属性标识自己。 可以将 `DigitCommand` 设置为常规 `Command` 类的实例，但使用 `Command<T>` 泛型类更容易。 当使用 XAML 命令接口时，`CommandParameter` 属性通常是字符串，这是泛型参数的类型。 然后，`execute` 和 `canExecute` 函数具有 `string` 类型的参数：
 
 ```csharp
 public class DecimalKeypadViewModel : INotifyPropertyChanged
@@ -679,19 +679,19 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 }
 ```
 
-`execute`方法将追加到字符串自变量`Entry`属性。 但是，如果结果开头零 （但不是零和小数点） 然后该初始零必须删除使用`Substring`函数。
+`execute` 方法将字符串参数追加到 `Entry` 属性。 但是，如果结果以零（但不是零和小数点）开头，则必须使用 `Substring` 函数删除初始零。
 
-`canExecute`方法将返回`false`仅当参数为 （指示十进制点是否已按下） 的小数点和`Entry`已包含小数点。
+`canExecute` 方法仅在参数为小数点（指示按下小数点）且 `Entry` 已经包含小数点时才返回 `false`。
 
-所有`execute`方法将调用`RefreshCanExecutes`，后者随后调用`ChangeCanExecute`两个`DigitCommand`和`ClearCommand`。 这可确保小数点和退格符按钮已启用或禁用基于当前的输入的数字序列。
+所有 `execute` 方法都调用 `RefreshCanExecutes`，然后它再为 `DigitCommand` 和 `ClearCommand` 调用 `ChangeCanExecute`。 这确保根据当前输入的数字的序列启用或禁用小数点和退格按钮。
 
-## <a name="adding-commands-to-existing-views"></a>将命令添加到现有视图
+## <a name="adding-commands-to-existing-views"></a>向现有视图添加命令
 
-如果你想要使用的命令的接口与不支持它的视图，则可以使用 Xamarin.Forms 行为，可将事件转换为命令。 这本文所述[**可重用 EventToCommandBehavior**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md)。
+如果想在不支持命令接口的视图中使用命令接口，可以使用将事件转换为命令的 Xamarin.Forms 行为。 [可重用 EventToCommandBehavior](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md)一文中对此进行了介绍。
 
-## <a name="asynchronous-commanding-for-navigation-menus"></a>异步导航菜单的命令
+## <a name="asynchronous-commanding-for-navigation-menus"></a>导航菜单的异步命令
 
-命令是用于实现导航菜单，例如，在方便[**数据绑定演示**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)程序本身。 下面是部分**MainPage.xaml**:
+命令便于实现导航菜单，比如[数据绑定演示](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)程序自身的导航菜单。 以下是部分“MainPage.xaml”：
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -728,9 +728,9 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-使用与 XAML，发出命令时`CommandParameter`属性通常设置为字符串。 在这种情况下，但是，XAML 标记扩展使用，以便`CommandParameter`属于类型`System.Type`。
+通过 XAML 使用命令时，`CommandParameter` 属性通常设置为字符串。 但本例使用的是 XAML 标记扩展，因此 `CommandParameter` 的类型为 `System.Type`。
 
-每个`Command`属性绑定到一个名为属性`NavigateCommand`。 属性定义在代码隐藏文件中， **MainPage.xaml.cs**:
+每个 `Command` 属性都绑定到一个名为 `NavigateCommand` 的属性。 该属性是在代码隐藏文件“MainPage.xaml.cs”中定义的：
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -753,17 +753,17 @@ public partial class MainPage : ContentPage
 }
 ```
 
-构造函数设置`NavigateCommand`属性设置为`execute`方法实例化`System.Type`参数，然后转到它。 因为`PushAsync`调用需要`await`运算符，`execute`方法必须被标记为异步。 这通过实现`async`参数列表前面的关键字。
+构造函数将 `NavigateCommand` 属性设置为 `execute` 方法，该方法将 `System.Type` 参数实例化，然后导航到它。 因为 `PushAsync` 调用需要一个 `await` 操作符，所以必须将 `execute` 方法标记为异步。 这是通过参数列表前面的 `async` 关键字完成的。
 
-该构造函数还设置`BindingContext`到其自身的页，以便绑定引用`NavigateCommand`此类中。
+构造函数还将页面的 `BindingContext` 设置为其自身，以便绑定在该类中引用 `NavigateCommand`。
 
-此构造函数中的代码的顺序具有重要意义：`InitializeComponent`调用会导致 XAML 进行分析，但在该时间绑定到属性命名`NavigateCommand`不能解析，因为`BindingContext`设置为`null`。 如果`BindingContext`构造函数中设置*之前*`NavigateCommand`设置，则绑定时，可能会解决`BindingContext`设置，但此时，`NavigateCommand`仍是`null`。 设置`NavigateCommand`后`BindingContext`将不在绑定上的没有影响，因为对更改`NavigateCommand`不会激发`PropertyChanged`事件，并绑定并不知道这`NavigateCommand`现在是否有效。
+此构造函数中代码的顺序会产生一定影响：`InitializeComponent` 调用导致 XAML 得到解析，但此时无法解析与名为 `NavigateCommand` 的属性的绑定，因为 `BindingContext` 设置为 `null`。 如果于设置 `NavigateCommand`之前在构造函数中设置了 `BindingContext`，则可在设置 `BindingContext` 时解析绑定，但此时 `NavigateCommand` 仍然是 `null`。 在 `BindingContext` 之后设置 `NavigateCommand` 不会对绑定产生影响，因为更改 `NavigateCommand` 不会触发 `PropertyChanged` 事件，绑定不知道 `NavigateCommand` 现在是有效的。
 
-将两者都设置`NavigateCommand`并`BindingContext`（按任何顺序） 到在调用前先`InitializeComponent`正常工作，因为 XAML 分析器遇到绑定定义时设置的绑定的这两个组件。
+在调用 `InitializeComponent` 之前设置 `NavigateCommand` 和 `BindingContext`（按照任何顺序）均有效，因为在 XAML 解析器遇到绑定定义时设置了绑定的两个组件。
 
-数据绑定有时会很棘手，但是，如您所见本系列的文章中，功能强大且用途广泛，而且极大地帮助来分隔从用户界面的基本逻辑来组织你的代码。
+数据绑定有时很棘手，但正如本系列文章中所述，它们功能强大且用途广泛，并且它们从用户界面分离底层逻辑，非常有助于组织代码。
 
 ## <a name="related-links"></a>相关链接
 
-- [数据绑定演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [数据绑定 Xamarin.Forms 书籍章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
+- [数据绑定演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Xamarin.Forms 书中的数据绑定章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

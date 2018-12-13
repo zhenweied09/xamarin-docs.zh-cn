@@ -1,6 +1,6 @@
 ---
 title: 自定义 ListView
-description: Xamarin.Forms ListView 是视图，以垂直列表的形式显示数据的集合。 本文演示如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控制性能。
+description: Xamarin.Forms ListView 是以垂直列表的形式显示数据集合的视图。 本文演示如何创建自定义呈现器来封装特定于平台的列表控件和本机单元布局，从而进一步控制本机列表控件的性能。
 ms.prod: xamarin
 ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
 ms.technology: xamarin-forms
@@ -9,34 +9,34 @@ ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: b3b73d542faebdb8ab85c989d7812368f4f3ffac
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38997475"
 ---
 # <a name="customizing-a-listview"></a>自定义 ListView
 
-_Xamarin.Forms ListView 是视图，以垂直列表的形式显示数据的集合。本文演示如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控制性能。_
+_Xamarin.Forms ListView 是以垂直列表的形式显示数据集合的视图。本文演示如何创建自定义呈现器来封装特定于平台的列表控件和本机单元布局，从而进一步控制本机列表控件的性能。_
 
-每个 Xamarin.Forms 视图都会随附的呈现器为每个平台创建本机控件的实例。 当[ `ListView` ](xref:Xamarin.Forms.ListView) Xamarin.Forms 应用程序，在 iOS 中呈现`ListViewRenderer`类实例化时，这反过来实例化本机`UITableView`控件。 在 Android 平台上`ListViewRenderer`类实例化本机`ListView`控件。 在通用 Windows 平台 (UWP)，`ListViewRenderer`类实例化本机`ListView`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+每个 Xamarin.Forms 视图都有一个附带的呈现器，适用于创建本机控件实例的各个平台。 当 Xamarin.Forms 应用程序呈现 [`ListView`](xref:Xamarin.Forms.ListView) 时，将在 iOS 中实例化 `ListViewRenderer` 类，而该操作又会实例化本机 `UITableView` 控件。 在 Android 平台上，`ListViewRenderer` 类实例化本机 `ListView` 控件。 在通用 Windows 平台 (UWP) 上，`ListViewRenderer` 类实例化本机 `ListView` 控件。 有关 Xamarin.Forms 控件映射到的呈现器和本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
-下图说明了之间的关系[ `ListView` ](xref:Xamarin.Forms.ListView)控制和相应的本机控件可实现它：
+下图说明了 [`ListView`](xref:Xamarin.Forms.ListView) 控件和实现它的相应本机控件之间的关系：
 
 ![](listview-images/listview-classes.png "ListView 控件和实现的本机控件之间的关系")
 
-渲染过程时可以执行利用通过创建自定义呈现器为实现特定于平台的自定义[ `ListView` ](xref:Xamarin.Forms.ListView)每个平台上。 执行此操作的过程如下所示：
+通过在每个平台上为 [`ListView`](xref:Xamarin.Forms.ListView) 创建自定义呈现器，可以利用呈现过程来实现特定于平台的自定义。 执行此操作的过程如下：
 
-1. [创建](#Creating_the_Custom_ListView_Control)Xamarin.Forms 自定义控件。
-1. [使用](#Consuming_the_Custom_Control)Xamarin.Forms 中的自定义控件。
-1. [创建](#Creating_the_Custom_Renderer_on_each_Platform)每个平台上的控件的自定义呈现器。
+1. [创建](#Creating_the_Custom_ListView_Control) Xamarin.Forms 自定义控件。
+1. [使用](#Consuming_the_Custom_Control) Xamarin.Forms 中的自定义控件。
+1. 在每个平台上为控件[创建](#Creating_the_Custom_Renderer_on_each_Platform)自定义呈现器。
 
-每个项将现在讨论反过来，若要实现`NativeListView`充分利用特定于平台的列表控件和本机单元格布局的呈现器。 移植现有本机应用，其中包含列表和可重复使用的单元格代码时，此方案非常有用。 此外，它允许详细自定义可能会影响性能，例如数据虚拟化的列表控件功能。
+现在将依次讨论每个项目，以实现 `NativeListView` 呈现器，该呈现器利用特定于平台的列表控件和本机单元布局。 移植包含可以重复使用的列表和单元代码的现有本机应用时，此方案很有用。 此外，它还允许对可能影响性能的列表控件功能进行详细自定义，例如数据虚拟化。
 
 <a name="Creating_the_Custom_ListView_Control" />
 
 ## <a name="creating-the-custom-listview-control"></a>创建自定义 ListView 控件
 
-自定义[ `ListView` ](xref:Xamarin.Forms.ListView)控制可以创建通过子类化`ListView`类，如下面的代码示例中所示：
+通过子类化 `ListView` 类，可以创建自定义 [`ListView`](xref:Xamarin.Forms.ListView) 控件，如以下代码示例所示：
 
 ```csharp
 public class NativeListView : ListView
@@ -60,13 +60,13 @@ public class NativeListView : ListView
 }
 ```
 
-`NativeListView` .NET Standard 库项目中创建和定义自定义控件的 API。 此控件公开`Items`属性，可用于填充`ListView`提供数据，并可以是数据绑定到用于显示目的。 它还公开了`ItemSelected`变化的特定于平台的本机列表控件中选择一项均会触发的事件。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
+`NativeListView` 在 .NET Standard 库项目中创建，它定义自定义控件的 API。 此控件公开 `Items` 属性，该属性用于使用数据填充 `ListView`，并且可出于显示目的绑定数据。 它还公开了 `ItemSelected` 事件，只要在特定于平台的本机列表控件中选中了某个项目，就会触发该事件。 若要深入了解数据绑定，请参阅[数据绑定基本知识](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)。
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>使用自定义控件
 
-`NativeListView`自定义控件，可以引用在 Xaml 中的.NET Standard 库项目中声明其位置的命名空间并在控件上使用的命名空间前缀。 下面的代码示例演示如何将`NativeListView`自定义控件可供 XAML 页：
+通过在控件上声明 `NativeListView` 自定义控件位置的命名空间并使用命名空间前缀，可以在 .NET Standard 库项目的 XAML 中引用该自定义控件。 以下代码示例展示了 XAML 页可以如何使用 `NativeListView` 自定义控件：
 
 ```xaml
 <ContentPage ...
@@ -86,9 +86,9 @@ public class NativeListView : ListView
 </ContentPage>
 ```
 
-`local`命名空间前缀可以命名任何内容。 但是，`clr-namespace`和`assembly`值必须匹配的自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
+`local` 命名空间前缀可以命名为任何内容。 但是，`clr-namespace` 和 `assembly` 值必须与自定义控件的详细信息相匹配。 声明命名空间后，前缀用于引用自定义控件。
 
-下面的代码示例演示如何将`NativeListView`自定义控件可供 C# 页：
+以下代码示例展示了 C# 页可以如何使用 `NativeListView` 自定义控件：
 
 ```csharp
 public class MainPageCS : ContentPage
@@ -131,12 +131,12 @@ public class MainPageCS : ContentPage
 }
 ```
 
-`NativeListView`自定义控件使用特定于平台的自定义呈现器来显示数据，通过填充一系列`Items`属性。 在列表中的每一行都包含三个项的数据-名称、 类别和图像文件名。 在列表中每行的布局定义特定于平台的自定义呈现器。
+`NativeListView` 自定义控件使用特定于平台的自定义呈现器来显示数据列表，该列表通过 `Items` 属性进行填充。 列表中的每一行都包含三项数据：名称、类别和图像文件名。 列表中每行的布局由特定于平台的自定义呈现器定义。
 
 > [!NOTE]
-> 因为`NativeListView`可使用特定于平台的列表控件包含滚动功能的呈现自定义控件、 自定义控件应该不托管在可滚动的布局控件等[ `ScrollView` ](xref:Xamarin.Forms.ScrollView)。
+> 由于 `NativeListView` 自定义控件将使用包含滚动功能的特定于平台的列表控件进行呈现，自定义控件不应托管在可滚动的布局控件中，例如 [`ScrollView`](xref:Xamarin.Forms.ScrollView)。
 
-自定义呈现器现在可以添加到每个应用程序项目来创建特定于平台的列表控件和本机单元格布局。
+现在可以向每个应用程序项目添加自定义呈现器，以便创建特定于平台的列表控件和本机单元布局。
 
 <a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
@@ -144,26 +144,26 @@ public class MainPageCS : ContentPage
 
 创建自定义呈现器类的过程如下所示：
 
-1. 创建一个子类`ListViewRenderer`呈现自定义控件的类。
-1. 重写`OnElementChanged`呈现其进行自定义的自定义控件和写入逻辑的方法。 此方法时调用相应的 Xamarin.Forms [ `ListView` ](xref:Xamarin.Forms.ListView)创建。
-1. 添加`ExportRenderer`到自定义呈现器类，以指定它将用于呈现 Xamarin.Forms 自定义控件属性。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
+1. 创建呈现自定义控件的 `ListViewRenderer` 类的子类。
+1. 替代呈现自定义控件的 `OnElementChanged` 方法，并编写逻辑以自定义控件。 创建相应的 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 时将调用此方法。
+1. 向自定义呈现器类添加 `ExportRenderer` 属性，以指定其将用于呈现 Xamarin.Forms 自定义控件。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
 
 > [!NOTE]
-> 若要提供每个平台项目中的自定义呈现器可以选择它。 如果未注册的自定义呈现器，则将使用默认的呈现器的单元格的基类。
+> 可选择在每个平台项目中提供自定义呈现器。 如果未注册自定义呈现器，则之后将使用单元基类的默认呈现器。
 
-下图演示了示例应用程序，以及它们之间的关系的每个项目的职责：
+下图说明了示例应用程序中每个项目的职责，以及它们之间的关系：
 
-![](listview-images/solution-structure.png "NativeListView 自定义呈现器项目职责")
+![](listview-images/solution-structure.png "NativeListView 自定义呈现器项目的职责")
 
-`NativeListView`自定义控件呈现的特定于平台的呈现器类，它们都派生自`ListViewRenderer`为每个平台的类。 这会导致每个`NativeListView`自定义控件呈现特定于平台的列表控件和本机单元格布局，如以下屏幕截图中所示：
+`NativeListView` 自定义控件由特定于平台的呈现器类呈现，这些类全都派生自各平台的 `ListViewRenderer` 类。 这导致每个 `NativeListView` 自定义控件都使用特定于平台的列表控件和本机单元布局呈现，如以下屏幕截图所示：
 
-![](listview-images/screenshots.png "每个平台上 NativeListView")
+![](listview-images/screenshots.png "每个平台上的 NativeListView")
 
-`ListViewRenderer`类公开`OnElementChanged`创建 Xamarin.Forms 自定义控件来呈现相应的本机控件时调用的方法。 此方法采用`ElementChangedEventArgs`参数，其中包含`OldElement`和`NewElement`属性。 这些属性表示 Xamarin.Forms 元素的呈现器*已*附加到，和 Xamarin.Forms 元素的呈现器*是*附加到分别。 在示例应用程序，`OldElement`属性将为`null`并`NewElement`属性将包含对引用`NativeListView`实例。
+`ListViewRenderer` 类公开 `OnElementChanged` 方法，创建 Xamarin.Forms 自定义控件时调用此方法以呈现对应的本机控件。 此方法采用 `ElementChangedEventArgs` 参数，其中包含 `OldElement` 和 `NewElement` 属性。 这两个属性分别表示呈现器“曾经”附加到的 Xamarin.Forms 元素和呈现器“现在”附加到的 Xamarin.Forms 元素。 在示例应用程序中，`OldElement` 属性将为 `null`，且 `NewElement` 属性将包含对 `NativeListView` 实例的引用。
 
-重写的版本`OnElementChanged`中每个特定于平台的呈现器类，方法是执行的本机控件自定义的位置。 可以通过访问对正在使用在平台上的本机控件的类型化的引用`Control`属性。 此外，通过获取对所呈现的 Xamarin.Forms 控件的引用`Element`属性。
+在每个特定于平台的呈现器类中，`OnElementChanged` 方法的替代版本可执行本机控件自定义。 可以通过 `Control` 属性访问平台上使用的对本机控件的类型化引用。 此外，可以通过 `Element` 属性获取正在呈现的 Xamarin.Forms 控件的引用。
 
-订阅中的事件处理程序时必须小心`OnElementChanged`方法，如下面的代码示例中所示：
+订阅 `OnElementChanged` 方法中的事件处理程序时必须小心，如以下代码示例所示：
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
@@ -180,17 +180,17 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-本机控件应仅配置和自定义呈现器附加到新 Xamarin.Forms 元素时订阅到事件处理程序。 同样，任何已订阅的事件处理程序应取消订阅仅元素呈现器附加到更改时。 采用此方法将有助于创建不会遭受内存泄漏的自定义呈现器。
+仅当自定义呈现器附加到新的 Xamarin.Forms 元素时，才应配置本机控件并订阅事件处理程序。 同样，仅当呈现器所附加到的元素更改时，才应取消订阅任何订阅的事件处理程序。 采用此方法将有助于创建不会遭受内存泄漏的自定义呈现器。
 
-重写的版本`OnElementPropertyChanged`中每个特定于平台的呈现器类，方法是对 Xamarin.Forms 自定义控件上的可绑定属性更改做出响应的位置。 始终应进行检查更改的属性，如可以多次调用此重写。
+在每个特定于平台的呈现器类中，`OnElementPropertyChanged` 方法的替代版本是响应 Xamarin.Forms 自定义控件上的可绑定属性更改的位置。 应始终检查已更改的属性，因为可多次调用此替代。
 
-每个自定义呈现器类用修饰`ExportRenderer`与 Xamarin.Forms 结合注册呈现器的属性。 该属性采用两个参数 – 正在呈现的 Xamarin.Forms 自定义控件的类型名称和自定义呈现器的类型名称。 `assembly`到的属性的前缀指定特性应用于整个程序集。
+每个自定义呈现器类均用 `ExportRenderer` 属性修饰，该属性向 Xamarin.Forms 注册呈现器。 该属性采用两个参数：要呈现的 Xamarin.Forms 自定义控件的类型名称和自定义呈现器的类型名称。 属性的 `assembly` 前缀指示属性适用于整个程序集。
 
-以下各节讨论每个特定于平台的自定义呈现器类的实现。
+以下各节讨论每个平台特定的自定义呈现器类的实现。
 
-### <a name="creating-the-custom-renderer-on-ios"></a>在 ios 设备上创建自定义呈现器
+### <a name="creating-the-custom-renderer-on-ios"></a>在 iOS 上创建自定义呈现器
 
-下面的代码示例显示了为 iOS 平台的自定义呈现器：
+以下代码示例展示了适用于 iOS 平台的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer (typeof(NativeListView), typeof(NativeiOSListViewRenderer))]
@@ -214,7 +214,7 @@ namespace CustomRenderer.iOS
 }
 ```
 
-`UITableView`通过在创建实例的配置控制`NativeiOSListViewSource`类，前提是自定义呈现器附加到新 Xamarin.Forms 元素。 此类提供到数据`UITableView`通过重写控件`RowsInSection`并`GetCell`方法从`UITableViewSource`类，并通过公开`Items`属性，其中包含要显示的数据列表。 类还提供了`RowSelected`调用的方法重写`ItemSelected`事件提供的`NativeListView`自定义控件。 重写的方法的相关详细信息，请参阅[子类化 UITableViewSource](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。 `GetCell`方法将返回`UITableCellView`，使用在列表中，每行数据填充，并在下面的代码示例所示：
+如果自定义呈现器附加到新的 Xamarin.Forms 元素，则通过创建 `NativeiOSListViewSource` 类的实例来配置 `UITableView` 控件。 此类通过替代 `UITableViewSource` 类中的 `RowsInSection` 和 `GetCell` 方法，以及通过公开包含要显示的数据列表的 `Items` 属性，向 `UITableView` 控件提供数据。 该类还提供 `RowSelected` 方法替代，可调用 `NativeListView` 自定义控件提供的 `ItemSelected` 事件。 有关方法替代的详细信息，请参阅[子类化 UITableViewSource](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。 `GetCell` 方法返回 `UITableCellView`，其中填充列表中每行的数据，如以下代码示例所示：
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -241,9 +241,9 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-此方法创建`NativeiOSListViewCell`实例将在屏幕显示的数据的每一行。 `NativeiOSCell`实例定义的每个单元格和单元格的数据布局。 当单元格从由于滚动屏幕消失后时，该单元格将可供重复使用。 这可以避免通过确保仅有的浪费内存`NativeiOSCell`要显示在屏幕上，而不是所有在列表中的数据的数据的实例。 有关单元格重复使用的详细信息，请参阅[单元格重用](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。 `GetCell`方法还会读取`ImageFilename`属性的数据，提供它存在，并读取图像，并将其存储为每一行`UIImage`实例，然后更新`NativeiOSListViewCell`实例 （名称、 类别和图像） 的数据行。
+此方法为将在屏幕上显示的每行数据创建 `NativeiOSListViewCell` 实例。 `NativeiOSCell` 实例定义每个单元的布局和单元的数据。 当一个单元因滚动而从屏幕上消失时，该单元将可供重复使用。 这样一来，可通过确保屏幕上仅显示数据的 `NativeiOSCell` 实例（而不是列表中的所有数据）来避免浪费内存。 有关单元重用的详细信息，请参阅[单元重用](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)。 `GetCell` 方法还会读取每行数据的 `ImageFilename` 属性（如果存在），并在使用该列数据（名称、类别和图像）更新 `NativeiOSListViewCell` 实例前，读取图像及将其作为 `UIImage` 实例存储。
 
-`NativeiOSListViewCell`类定义每个单元格的布局，并在下面的代码示例所示：
+`NativeiOSListViewCell` 类定义每个单元的布局，如以下代码示例所示：
 
 ```csharp
 public class NativeiOSListViewCell : UITableViewCell
@@ -295,11 +295,11 @@ public class NativeiOSListViewCell : UITableViewCell
 }
 ```
 
-此类定义用于呈现该单元格的内容和其布局的控件。 `NativeiOSListViewCell`构造函数创建的实例`UILabel`和`UIImageView`控件，并初始化它们的外观。 这些控件用于显示与每个行的数据，而`UpdateCell`用来设置此数据方法`UILabel`和`UIImageView`实例。 这些实例的位置设置的重写`LayoutSubviews`方法，通过指定单元格内的其坐标。
+此类定义用于呈现该单元内容及其布局的控件。 `NativeiOSListViewCell` 构造函数创建 `UILabel` 和 `UIImageView` 控件的实例，并初始化其外观。 这些控件用于显示每行的数据，包括用于在 `UILabel` 和 `UIImageView` 实例上设置此数据的 `UpdateCell` 方法。 这些实例的位置由替代的 `LayoutSubviews` 方法设置，方法是在单元内指定其坐标。
 
-#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应的自定义控件上的属性更改
+#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应自定义控件的属性更改
 
-如果`NativeListView.Items`属性发生更改，由于添加到的项或从列表中删除，自定义呈现器需要通过显示所做的更改做出响应。 这可以通过重写实现`OnElementPropertyChanged`方法，在下面的代码示例所示：
+如果 `NativeListView.Items` 属性更改，由于项目被添加到列表或从列表中删除，自定义呈现器需要通过显示更改来进行响应。 这可以通过替代 `OnElementPropertyChanged` 方法来完成，如以下代码示例所示：
 
 ```csharp
 protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -312,11 +312,11 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 }
 ```
 
-方法创建的新实例`NativeiOSListViewSource`向提供数据的类`UITableView`控件，提供的可绑定`NativeListView.Items`属性已更改。
+该方法创建 `NativeiOSListViewSource` 类的新实例，如果可绑定的 `NativeListView.Items` 属性已更改，该实例会向 `UITableView` 控件提供数据。
 
 ### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
-下面的代码示例显示了 Android 平台的自定义呈现器：
+以下代码示例展示了适用于 Android 平台的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeListView), typeof(NativeAndroidListViewRenderer))]
@@ -358,9 +358,9 @@ namespace CustomRenderer.Droid
 }
 ```
 
-本机`ListView`控件配置为提供的自定义呈现器附加到新 Xamarin.Forms 元素。 此配置涉及到创建的实例`NativeAndroidListViewAdapter`类，该类提供数据的本机`ListView`控件，并注册事件处理程序来处理`ItemClick`事件。 反过来，此处理程序将调用`ItemSelected`事件提供的`NativeListView`自定义控件。 `ItemClick`如果 Xamarin.Forms 元素呈现器附加到更改从订阅的事件，将取消。
+如果自定义呈现器附加到新的 Xamarin.Forms 元素，则会配置本机 `ListView` 控件。 此配置涉及创建向本机 `ListView` 控件提供数据的 `NativeAndroidListViewAdapter` 类的实例，以及注册事件处理程序用于处理 `ItemClick` 事件。 此处理程序转而会调用 `NativeListView` 自定义控件提供的 `ItemSelected` 事件。 如果呈现器所附加到的 Xamarin.Forms 元素更改，则会取消订阅 `ItemClick` 事件。
 
-`NativeAndroidListViewAdapter`派生自`BaseAdapter`类并公开`Items`属性，其中包含要显示数据的列表，以及重写`Count`， `GetView`， `GetItemId`，和`this[int]`方法。 有关这些方法重写的详细信息，请参阅[实现 ListAdapter](~/android/user-interface/layouts/list-view/populating.md)。 `GetView`方法返回填充了数据，每个行的视图，并在下面的代码示例所示：
+`NativeAndroidListViewAdapter` 派生自 `BaseAdapter` 类，并公开包含要显示的数据列表的 `Items` 属性，同时替代 `Count`、`GetView`、`GetItemId` 和 `this[int]` 方法。 有关这些方法替代的详细信息，请参阅[实现 ListAdapter](~/android/user-interface/layouts/list-view/populating.md)。 `GetView` 方法返回每行的视图，其中填充数据，如以下代码示例所示：
 
 ```csharp
 public override View GetView (int position, View convertView, ViewGroup parent)
@@ -405,11 +405,11 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 }
 ```
 
-`GetView`调用方法以返回要呈现的单元格作为`View`，列表中的数据的每一行。 它会创建`View`实例将使用的外观在屏幕显示的数据的每一行`View`布局文件中定义的实例。 当单元格从由于滚动屏幕消失后时，该单元格将可供重复使用。 这可以避免通过确保仅有的浪费内存`View`要显示在屏幕上，而不是所有在列表中的数据的数据的实例。 有关视图重用的详细信息，请参阅[重复使用行视图](~/android/user-interface/layouts/list-view/populating.md)。
+调用 `GetView` 方法，以 `View` 的形式返回列表中每行数据要呈现的单元。 它会为将在屏幕上显示的每行数据创建 `View` 实例，并在布局文件中定义 `View` 实例的外观。 当一个单元因滚动而从屏幕上消失时，该单元将可供重复使用。 这样一来，可通过确保屏幕上仅显示数据的 `View` 实例（而不是列表中的所有数据）来避免浪费内存。 有关视图重用的详细信息，请参阅[行视图重用](~/android/user-interface/layouts/list-view/populating.md)。
 
-`GetView`方法还填充`View`具有数据，包括从在指定的文件名中读取图像数据实例`ImageFilename`属性。
+`GetView` 方法还使用数据填充 `View` 实例，包括从 `ImageFilename` 属性中指定的文件名读取图像数据。
 
-通过本机每个单元格 dispayed 布局`ListView`中定义`NativeAndroidListViewCell.axml`布局文件，它被放大`LayoutInflater.Inflate`方法。 下面的代码示例显示了布局定义：
+本机 `ListView` 显示的每个单元的布局在 `NativeAndroidListViewCell.axml` 布局文件中定义，该文件由 `LayoutInflater.Inflate` 方法膨胀。 以下代码示例展示了布局定义：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -449,11 +449,11 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 </RelativeLayout>
 ```
 
-此布局指定两个`TextView`控件和一个`ImageView`控件用于显示单元格的内容。 这两个`TextView`控件是在垂直方向`LinearLayout`控件，与中所包含的所有控件`RelativeLayout`。
+此布局指定使用两个 `TextView` 控件和一个 `ImageView` 控件来显示单元内容。 两个 `TextView` 控件在 `LinearLayout` 控件中为垂直方向，并且要包含的所有控件都在 `RelativeLayout` 内。
 
-#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应的自定义控件上的属性更改
+#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应自定义控件的属性更改
 
-如果`NativeListView.Items`属性发生更改，由于添加到的项或从列表中删除，自定义呈现器需要通过显示所做的更改做出响应。 这可以通过重写实现`OnElementPropertyChanged`方法，在下面的代码示例所示：
+如果 `NativeListView.Items` 属性更改，由于项目被添加到列表或从列表中删除，自定义呈现器需要通过显示更改来进行响应。 这可以通过替代 `OnElementPropertyChanged` 方法来完成，如以下代码示例所示：
 
 ```csharp
 protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -466,11 +466,11 @@ protected override void OnElementPropertyChanged (object sender, System.Componen
 }
 ```
 
-方法创建的新实例`NativeAndroidListViewAdapter`类，该类提供数据的本机`ListView`控件，提供的可绑定`NativeListView.Items`属性已更改。
+该方法创建 `NativeAndroidListViewAdapter` 类的新实例，如果可绑定的 `NativeListView.Items` 属性已更改，该实例会向本地 `ListView` 控件提供数据。
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了适用于 UWP 的自定义呈现器：
+以下代码示例展示了适用于 UWP 的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(NativeListView), typeof(NativeUWPListViewRenderer))]
@@ -511,9 +511,9 @@ namespace CustomRenderer.UWP
 }
 ```
 
-本机`ListView`控件配置为提供的自定义呈现器附加到新 Xamarin.Forms 元素。 此配置涉及到设置如何本机`ListView`控件将响应所选择的项填充数据显示由该控件的外观和每个单元格的内容定义和注册事件处理程序来处理`SelectionChanged`事件。 反过来，此处理程序将调用`ItemSelected`事件提供的`NativeListView`自定义控件。 `SelectionChanged`如果 Xamarin.Forms 元素呈现器附加到更改从订阅的事件，将取消。
+如果自定义呈现器附加到新的 Xamarin.Forms 元素，则会配置本机 `ListView` 控件。 此配置涉及设置本机 `ListView` 控件将如何响应所选项、填充控件显示的数据、定义每个单元的外观和内容，以及注册事件处理程序用于处理 `SelectionChanged` 事件。 此处理程序转而会调用 `NativeListView` 自定义控件提供的 `ItemSelected` 事件。 如果呈现器所附加到的 Xamarin.Forms 元素更改，则会取消订阅 `SelectionChanged` 事件。
 
-外观和内容的每个本机`ListView`由定义单元格`DataTemplate`名为`ListViewItemTemplate`。 这`DataTemplate`存储在应用程序级资源字典中，并在下面的代码示例所示：
+每个本机 `ListView` 单元的外观和内容均由名为 `ListViewItemTemplate` 的 `DataTemplate` 定义。 此 `DataTemplate` 存储在应用程序级资源字典中，如以下代码示例所示：
 
 ```xaml
 <DataTemplate x:Key="ListViewItemTemplate">
@@ -538,11 +538,11 @@ namespace CustomRenderer.UWP
 </DataTemplate>
 ```
 
-`DataTemplate`指定用来显示该单元格，其布局和外观的内容的控件。 两个`TextBlock`控件和一个`Image`控件用于显示通过数据绑定的单元格的内容。 此外，实例`ConcatImageExtensionConverter`用于连接`.jpg`文件扩展名为每个图像文件名称。 这可确保`Image`控件可以加载并呈现图像时`Source`属性设置。
+`DataTemplate` 指定用于显示单元内容及其布局和外观的控件。 两个 `TextBlock` 控件和一个 `Image` 控件用于通过数据绑定显示单元内容。 此外，`ConcatImageExtensionConverter` 实例用于将 `.jpg` 文件扩展连接到每个图像文件名。 这可确保 `Source` 控件在其 `Image` 属性设置后可以加载和呈现图像。
 
-#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应的自定义控件上的属性更改
+#### <a name="responding-to-a-property-change-on-the-custom-control"></a>响应自定义控件的属性更改
 
-如果`NativeListView.Items`属性发生更改，由于添加到的项或从列表中删除，自定义呈现器需要通过显示所做的更改做出响应。 这可以通过重写实现`OnElementPropertyChanged`方法，在下面的代码示例所示：
+如果 `NativeListView.Items` 属性更改，由于项目被添加到列表或从列表中删除，自定义呈现器需要通过显示更改来进行响应。 这可以通过替代 `OnElementPropertyChanged` 方法来完成，如以下代码示例所示：
 
 ```csharp
 protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -556,13 +556,13 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 }
 ```
 
-该方法将重新填充本机`ListView`控件的已更改的数据，提供的可绑定`NativeListView.Items`属性已更改。
+如果可绑定的 `NativeListView.Items` 属性已更改，则该方法会使用已更改的数据重新填充本机 `ListView` 控件。
 
 ## <a name="summary"></a>总结
 
-本文演示了如何创建自定义呈现器，用于封装特定于平台的列表控件和本机单元格的布局，允许更好地控制本机列表控制性能。
+本文演示了如何创建自定义呈现器来封装特定于平台的列表控件和本机单元布局，从而进一步控制本机列表控件的性能。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [CustomRendererListView （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
+- [CustomRendererListView（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)

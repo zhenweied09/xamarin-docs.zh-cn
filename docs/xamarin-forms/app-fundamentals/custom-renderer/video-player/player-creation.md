@@ -1,6 +1,6 @@
 ---
 title: 创建平台视频播放器
-description: 本文介绍如何使用 Xamarin.Forms 的每个平台上实现视频播放器自定义呈现器。
+description: 本文介绍如何使用 Xamarin.Forms 在每个平台上实现视频播放器自定义呈现器。
 ms.prod: xamarin
 ms.assetid: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149
 ms.technology: xamarin-forms
@@ -9,18 +9,18 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171906"
 ---
 # <a name="creating-the-platform-video-players"></a>创建平台视频播放器
 
-[ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)解决方案包含所有代码，以实现适用于 Xamarin.Forms 的视频播放器。 它还包括一系列页面，演示如何使用应用程序中的视频播放器。 所有`VideoPlayer`代码和其平台呈现器驻留在项目文件夹名为`FormsVideoLibrary`，并且也使用命名空间`FormsVideoLibrary`。 这应使轻松地将文件复制到自己的应用程序和引用的类。
+[VideoPlayerDemos](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 解决方案包含为 Xamarin.Forms 实现视频播放器的所有代码。 它还包括一系列页面，演示如何在应用程序中使用视频播放器。 所有 `VideoPlayer` 代码及其平台呈现器都存于名为 `FormsVideoLibrary` 的项目文件夹中，并且也使用命名空间 `FormsVideoLibrary`。 这样应可以很容易地将文件复制到自己的应用程序中并引用这些类。
 
 ## <a name="the-video-player"></a>视频播放器
 
-[ `VideoPlayer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs)类属于**VideoPlayerDemos**在平台间共享的.NET Standard 库。 它派生`View`:
+[`VideoPlayer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos/VideoPlayer.cs) 类是各个平台之间共享的“VideoPlayerDemos”.NET Standard 库的一部分。 它派生自 `View`：
 
 ```csharp
 using System;
@@ -35,15 +35,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-此类的成员 (和`IVideoPlayerController`接口) 按照文章所述。
+此类的成员（以及 `IVideoPlayerController` 接口）在下面的文章中进行描述。
 
-每个平台包含一个名为类`VideoPlayerRenderer`，其中包含特定于平台的代码以实现视频播放器。 此呈现器的主要任务是创建该平台的视频播放器。
+每个平台都包含名为 `VideoPlayerRenderer` 的类，该类包含实现视频播放器的特定于平台的代码。 该呈现器的主要任务是为该平台创建视频播放器。
 
 ### <a name="the-ios-player-view-controller"></a>IOS 播放器视图控制器
 
-在 iOS 中实现视频播放器时，会涉及多个类。 应用程序首次创建[ `AVPlayerViewController` ](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/) ，然后设置[ `Player` ](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/)类型的对象的属性[ `AVPlayer` ](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/)。 播放机分配的视频源时，其他类是必需的。
+在 iOS 中实现视频播放器时，涉及到几个类。 应用程序首先创建 [`AVPlayerViewController`](https://developer.xamarin.com/api/type/AVKit.AVPlayerViewController/)，然后将 [`Player`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.Player/) 属性设置为类型 [`AVPlayer`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayer/) 的对象。 给播放器分配视频源时，需要额外的类。
 
-像所有呈现器，iOS [ `VideoPlayerRenderer` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs)包含`ExportRenderer`属性，用于标识`VideoPlayer`与呈现器的视图：
+像所有呈现器一样，iOS [`VideoPlayerRenderer`](https://github.com/xamarin/xamarin-forms-samples/blob/master/CustomRenderers/VideoPlayerDemos/VideoPlayerDemos/VideoPlayerDemos.iOS/VideoPlayerRenderer.cs) 也包含 `ExportRenderer` 属性，该属性使用呈现器标识 `VideoPlayer` 视图：
 
 ```csharp
 using System;
@@ -71,9 +71,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-设置平台控件的呈现器通常派生自[ `ViewRenderer<View, NativeView>` ](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs)类，其中`View`是 Xamarin.Forms`View`派生类 (在这种情况下， `VideoPlayer`) 和`NativeView`是 iOS`UIView`呈现器类派生。 此呈现器，该泛型自变量只是设置为`UIView`，稍后您将看到的原因。
+通常，设置平台控件的呈现器派生自 [`ViewRenderer<View, NativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/ViewRenderer.cs) 类，其中 `View` 是 Xamarin.Forms `View` 派生物（在本例中为 `VideoPlayer`），并且 `NativeView` 是呈现器类的 iOS `UIView` 派生物。 对于此呈现器，该通用参数简单地设置为 `UIView`，下文将分析原因。
 
-当呈现器基于`UIViewController`派生类 （与为），则此类应重写`ViewController`属性，并返回视图控制器，在此情况下`AVPlayerViewController`。 用途，它是`_playerViewController`字段：
+如果呈现器基于 `UIViewController` 派生物（如同此项），那么类应替代 `ViewController` 属性并返回视图控制器，即本例中的 `AVPlayerViewController`。 这就是 `_playerViewController` 字段的用途：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -112,13 +112,13 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-主要职责`OnElementChanged`重写是用于检查是否`Control`属性是`null`和，如果是，创建一个平台控件中，并将其传递给`SetNativeControl`方法。 在这种情况下，该对象才可从`View`属性的`AVPlayerViewController`。 `UIView`派生类恰好是名为的私有类`AVPlayerView`，因为它是私有的不能将它显式指定为第二个泛型参数，但`ViewRenderer`。
+`OnElementChanged` 替代的主要职责是检查 `Control` 属性是否为 `null`，如果是，则创建平台控件，并将其传递给 `SetNativeControl` 方法。 在这种情况下，该对象只能从 `AVPlayerViewController` 的 `View` 属性中获取。 `UIView` 的派生物碰巧是名为 `AVPlayerView` 的专用类，但是因为它是专用的，所以它不能显式地指定为 `ViewRenderer` 的第二个泛型参数。
 
-通常`Control`呈现器类的属性之后是指`UIView`用来实现呈现器，但在这种情况下`Control`属性不在其他地方使用。
+通常，此后呈现器类的 `Control` 属性引用用于实现该呈现器的 `UIView`，但在这种情况下，`Control` 属性不在其他地方使用。
 
 ### <a name="the-android-video-view"></a>Android 视频视图
 
-用于 Android 的呈现器`VideoPlayer`在 Android 上基于[ `VideoView` ](https://developer.xamarin.com/api/type/Android.Widget.VideoView/)类。 但是，如果`VideoView`本身中用于播放视频在 Xamarin.Forms 应用程序中，视频填充的区域分配`VideoPlayer`而无需维护正确的纵横比。 此原因 （如稍后您将看到） 都`VideoView`进行的 Android 子`RelativeLayout`。 一个`using`指令定义`ARelativeLayout`若要使其不同于 Xamarin.Forms `RelativeLayout`，并且所在的第二个泛型参数`ViewRenderer`:
+`VideoPlayer` 的 Android 呈现器基于 Android [`VideoView`](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) 类。 但是，如果 `VideoView` 本身用于在 Xamarin.Forms 应用程序中播放视频，则视频填充分配给 `VideoPlayer` 的区域，且无需保持正确的纵横比。 出于这个原因（很快将进行说明），`VideoView` 设置为 Android `RelativeLayout` 的子类。 `using` 指令定义 `ARelativeLayout` 来区别于 Xamarin.Forms `RelativeLayout`，并且这是 `ViewRenderer` 中的第二个泛型参数：
 
 ```csharp
 using System;
@@ -149,9 +149,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-从 Xamarin.Forms 2.5 开始，Android 呈现器应包括具有的构造函数`Context`参数。
+从 Xamarin.Forms 2.5 开始，Android 呈现器应包含带有 `Context` 参数的构造函数。
 
-`OnElementChanged`重写创建这`VideoView`并`RelativeLayout`和设置的布局参数`VideoView`若要使其内居中`RelativeLayout`。
+`OnElementChanged` 替代创建 `VideoView` 和 `RelativeLayout`，并为 `VideoView` 设置布局参数，使其在 `RelativeLayout` 中居中。
 
 
 ```csharp
@@ -214,13 +214,13 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-处理程序`Prepared`事件在此方法中附加和分离中`Dispose`方法。 此事件激发时`VideoView`有足够的信息以开始播放视频文件。
+使用此方法附加 `Prepared` 事件的处理程序，并使用 `Dispose` 方法进行拆离。 `VideoView` 有足够信息开始播放视频文件时，触发此事件。
 
 ### <a name="the-uwp-media-element"></a>UWP 媒体元素
 
-通用 Windows 平台 (UWP) 中，最常见的视频播放机[ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/)。 该文档的`MediaElement`指示[ `MediaPlayerElement` ](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/)应改为使用时才需要支持版本的 Windows 10 内部版本 1607年开头。
+在通用 Windows 平台 (UWP) 中，最常见的视频播放器是 [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/)。 `MediaElement` 的相关文档指出，如果只需支持从版本 1607 开始的 Windows 10 版本，则应使用 [`MediaPlayerElement`](/uwp/api/windows.ui.xaml.controls.mediaplayerelement/)。
 
-`OnElementChanged`创建所需的重写`MediaElement`，请设置两个事件处理程序，并将传递`MediaElement`对象传递给`SetNativeControl`:
+`OnElementChanged` 替代需要创建 `MediaElement`、设置两个事件处理程序并将 `MediaElement` 对象传递给 `SetNativeControl`：
 
 ```csharp
 using System;
@@ -275,13 +275,13 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-两个事件处理程序中分离`Dispose`呈现器的事件。
+这两个事件处理程序在呈现器的 `Dispose` 事件中进行分离。
 
 ## <a name="showing-the-transport-controls"></a>显示传输控件
 
-在平台中包含的所有视频播放机支持一组默认的传输控件，其中包含用于播放和暂停和栏来指示视频中中的当前位置，并将移至新位置的按钮。
+平台中包含的所有视频播放器都支持一组默认传输控件，其中包括用于播放和暂停的按钮，以及用于指示视频的当前位置和用于移动到新位置的定位条。
 
-`VideoPlayer`类定义一个名为属性`AreTransportControlsEnabled`，并设置默认值为`true`:
+`VideoPlayer` 类定义名为 `AreTransportControlsEnabled` 的属性，并将默认值设置为 `true`：
 
 
 ```csharp
@@ -304,19 +304,19 @@ namespace FormsVideoLibrary
 }
 ```
 
-尽管此属性具有`set`和`get`访问器，呈现器必须处理情况下，仅当设置属性时。 `get`访问器只需返回该属性的当前值。
+尽管此属性同时具有 `set` 和 `get` 访问器，但呈现器仅在设置属性时才处理事例。 `get` 访问器只返回该属性的当前值。
 
-属性，如`AreTransportControlsEnabled`平台呈现器中通过两种方式处理：
+像 `AreTransportControlsEnabled` 这样的属性在平台呈现器中以两种方式进行处理：
 
-- 第一次是 Xamarin.Forms 创建时`VideoPlayer`元素。 在指示这一点`OnElementChanged`呈现器的重写时`NewElement`属性不是`null`。 在此期间，可以设置呈现器中的定义是从该属性的初始值的自己的平台视频播放器`VideoPlayer`。
+- 第一次是 Xamarin.Forms 创建 `VideoPlayer` 元素时。 如果 `NewElement` 属性不是 `null`，则会在呈现器的 `OnElementChanged` 替代中说明这一点。 此时，呈现器可以根据 `VideoPlayer` 中定义的属性初始值设置自己的平台视频播放器。
 
-- 如果中的属性`VideoPlayer`更高版本发生更改，则`OnElementPropertyChanged`调用呈现器中的方法。 这样，更新基于新的属性设置的平台视频播放器的呈现器。
+- 如果稍后 `VideoPlayer` 中的属性发生变化，则调用呈现器中的 `OnElementPropertyChanged` 方法。 这允许呈现器基于新的属性设置更新平台视频播放器。
 
-以下各节讨论了`AreTransportControlsEnabled`属性处理每个平台上。
+下面几节讨论如何在每个平台上处理 `AreTransportControlsEnabled` 属性。
 
 ### <a name="ios-playback-controls"></a>iOS 播放控件
 
-IOS 的属性`AVPlayerViewController`控制显示的传输控件是[ `ShowsPlaybackControls` ](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/)。 下面是如何在 iOS 中设置该属性`VideoViewRenderer`:
+管理传输控件显示的 iOS `AVPlayerViewController` 属性是 [`ShowsPlaybackControls`](https://developer.xamarin.com/api/property/AVKit.AVPlayerViewController.ShowsPlaybackControls/)。 下面介绍如何在 iOS `VideoViewRenderer` 中设置该属性：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -359,11 +359,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-`Element`呈现器的属性是指`VideoPlayer`类。
+呈现器的 `Element` 属性引用 `VideoPlayer` 类。
 
 ### <a name="the-android-media-controller"></a>Android 媒体控制器
 
-在 Android 中，显示传输控件要求创建[ `MediaController` ](https://developer.xamarin.com/api/type/Android.Widget.MediaController/)对象并将其与`VideoView`对象。 机制中演示了`SetAreTransportControlsEnabled`方法：
+在 Android 中，显示传输控件需要创建 [`MediaController`](https://developer.xamarin.com/api/type/Android.Widget.MediaController/) 对象，并将其与 `VideoView` 对象关联。 该机制采用 `SetAreTransportControlsEnabled` 方法进行演示：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -422,7 +422,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="the-uwp-transport-controls-property"></a>UWP 传输控件属性
 
-UWP`MediaElement`定义一个名为属性[ `AreTransportControlsEnabled` ](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled)，以便从设置属性`VideoPlayer`相同名称的属性：
+UWP `MediaElement` 定义名为 [`AreTransportControlsEnabled`](/uwp/api/windows.ui.xaml.controls.mediaelement#Windows_UI_Xaml_Controls_MediaElement_AreTransportControlsEnabled) 的属性，因此，该属性是根据同名的 `VideoPlayer` 属性设置的：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -460,9 +460,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-一个属性，才可开始播放视频： 这一点非常重要`Source`属性，引用视频文件。 实现`Source`属性在下一篇文章中所述[播放 Web 视频](web-videos.md)。
+开始播放视频还需要另一个属性：这是引用视频文件的关键 `Source` 属性。 将在下一篇文章（[播放 Web 视频](web-videos.md)）中介绍 `Source` 属性的实现。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [视频播放机演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [视频播放器演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

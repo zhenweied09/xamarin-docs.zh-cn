@@ -1,6 +1,6 @@
 ---
 title: 键盘导航
-description: 不使用默认选项卡上序列，而是，有时需要通过 tab 键序列指定的 TabIndex 和 IsTapStop 属性组合优化你的 UI。
+description: 与使用默认的选项卡序列不同，有时需要通过结合 TabIndex 和 IsTapStop 属性的指定选项卡序列来优化 UI。
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 10/15/2018
 ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50130958"
 ---
-# <a name="keyboard-navigation-in-xamarinforms"></a>在 Xamarin.Forms 中的键盘导航
+# <a name="keyboard-navigation-in-xamarinforms"></a>Xamarin.Forms 中的键盘导航
 
-某些用户都可以使用不提供相应的键盘访问的应用程序引起的困难。 指定控件的 tab 键顺序使键盘导航并准备应用程序页，以按特定顺序接收输入。
+有些用户在使用不提供相应键盘访问的应用程序时可能会遇到困难。 为控件指定 Tab 键顺序可启用键盘导航，并准备应用程序页以特定顺序接收输入。
 
-默认情况下，控件的 tab 键顺序是它们是列入 XAML，或以编程方式添加到子集合的相同顺序。 此顺序是在其中控件将导航到与键盘、 顺序和此默认顺序通常是最佳顺序。 但是，默认顺序并不总是与预期的顺序相同，在下面的 XAML 代码示例所示：
+默认情况下，控件的 Tab 键顺序与在 XAML 中列出或以编程方式添加到子集合中的顺序相同。 此顺序是使用键盘导航控件的顺序，通常这种默认顺序是最佳顺序。 但是，默认顺序并不总是与预期顺序相同，如以下 XAML 代码示例所示：
 
 ```xaml
 <Grid>
@@ -49,29 +49,29 @@ ms.locfileid: "50130958"
 </Grid>
 ```
 
-下面的屏幕截图显示了此代码示例的默认选项卡顺序：
+以下屏幕截图显示了此代码示例的默认 Tab 键顺序：
 
-![](keyboard-images/default-tab-order.png "默认值基于行的 tab 键顺序")
+![](keyboard-images/default-tab-order.png "默认基于行的 Tab 键顺序")
 
-此处的 tab 键顺序是基于行，控件 XAML 中的列出顺序。 因此，按 Tab 键导航名[ `Entry` ](xref:Xamarin.Forms.Entry)情况下后, 跟姓氏`Entry`实例。 但是，更直观的体验是使用列的第一个选项卡导航栏中，以便按 Tab 键导航名姓氏对。 这可以通过指定的输入控件的 tab 键顺序来实现。
+此处的 Tab 键顺序是基于行的，是在 XAML 中列出控件的顺序。 因此，按 Tab 键可以导航到名 [`Entry`](xref:Xamarin.Forms.Entry) 实例，然后是姓氏 `Entry` 实例。 但是，更直观的体验是使用列优先的 Tab 导航，这样按下 Tab 键就可以通过名字对导航。 这可以通过指定输入控件的 Tab 键顺序来实现。
 
 > [!NOTE]
-> 通用 Windows 平台上的键盘快捷方式可定义，使应用程序的可见 UI 通过键盘，而不是通过触摸或鼠标用户可以快速导航并进行交互以直观的方式。 有关详细信息，请参阅[设置 VisualElement 访问密钥](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys)。
+> 在通用 Windows 平台上，可以定义键盘快捷方式，为用户提供一种直观的方式，以便通过键盘快速导航并与应用程序的可见 UI 交互，而不是通过触摸或鼠标。 有关更多信息，请参阅[设置 VisualElement 访问键](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys)。
 
-## <a name="setting-the-tab-order"></a>设置 tab 键顺序
+## <a name="setting-the-tab-order"></a>设置 Tab 键顺序
 
-`VisualElement.TabIndex`属性用于指示的顺序[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)实例时用户通过按 Tab 键导航控件接收焦点。 该属性的默认值为 0，并将它设置为任何`int`值。
+当用户通过按 Tab 键导航控件时，`VisualElement.TabIndex` 属性用于指示 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例接收焦点的顺序。 属性的默认值是 0，可以将其设置为任何 `int` 值。
 
-以下规则适用时使用默认 tab 键顺序，或通过`TabIndex`属性：
+使用默认 Tab 键顺序或设置 `TabIndex` 属性时，以下规则适用：
 
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例`TabIndex`等于 0 添加到基于其在 XAML 或子集合中的声明顺序的 tab 键顺序。
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例`TabIndex`大于 0 添加到 tab 键顺序基于其`TabIndex`值。
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例`TabIndex`小于 0 添加到 tab 键顺序，并且出现前面任何零值。
- - 在冲突`TabIndex`通过按声明顺序来解析。
+ - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例（`TabIndex` 等于 0）将根据 XAML 或子集合中的声明顺序添加到 Tab 键顺序中。
+ - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例（`TabIndex` 大于 0）将根据其 `TabIndex` 值添加到 Tab 键顺序中。
+ - [`VisualElement`](xref:Xamarin.Forms.VisualElement) 实例（`TabIndex` 小于 0）将添加到 Tab 键顺序中，并显示在任何零值之前。
+ - `TabIndex` 中的冲突可通过声明顺序解决。
 
-在定义后 tab 键顺序，按 Tab 键将循环移动焦点控件按升序`TabIndex`顺序，一旦达到最终的控件周围包装到开头。
+定义 Tab 键顺序后，按 Tab 键焦点将按升序 `TabIndex` 顺序循环通过控件，并在到达最后一个控件后绕到开头。
 
-下面的 XAML 示例演示`TabIndex`设置输入控件的启用列第一个选项卡导航属性：
+下面的 XAML 示例显示了输入控件上设置的 `TabIndex` 属性，可用于启用列优先 Tab 导航：
 
 ```xaml
 <Grid>
@@ -106,21 +106,21 @@ ms.locfileid: "50130958"
 </Grid>
 ```
 
-下面的屏幕截图显示了此代码示例的选项卡顺序：
+以下屏幕截图显示了此代码示例的 Tab 键顺序：
 
-![](keyboard-images/correct-tab-order.png "基于列的 tab 键顺序")
+![](keyboard-images/correct-tab-order.png "基于列的 Tab 键顺序")
 
-此处的 tab 键顺序是基于列的。 因此，按 Tab 键导航名姓氏[ `Entry` ](xref:Xamarin.Forms.Entry)对。
+此处的 Tab 键顺序是基于列的。 因此，按 Tab 键可以通过姓-名 [`Entry`](xref:Xamarin.Forms.Entry) 对导航。
 
-## <a name="excluding-controls-from-the-tab-order"></a>不从 tab 键顺序包括控件
+## <a name="excluding-controls-from-the-tab-order"></a>从 Tab 键顺序中排除控件
 
-除了设置控件的 tab 键顺序，可能需要从 tab 键顺序中排除控件。 这是通过设置一种方法的实现[ `IsEnabled` ](xref:Xamarin.Forms.VisualElement)属性的控件，以便`false`，因为已禁用的控件不在 tab 键顺序。
+除了设置控件的 Tab 键顺序之外，可能还需要从 Tab 键顺序中排除控件。 实现此目的的一种方法是将控件的 [`IsEnabled`](xref:Xamarin.Forms.VisualElement) 属性设置为 `false`，因为禁用的控件将从 Tab 键顺序中排除。
 
-但是，可能需要从 tab 键顺序中排除控件，即使它们不已禁用。 这可以通过`VisualElement.IsTapStop`属性，用于指示是否[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)包含在 tab 导航。 其默认值是`true`，并且其值为时`false`如果控件将被忽略的 tab 键导航基础结构，而无论`TabIndex`设置。
+但是，即便在未禁用这些控件时，也可能需要从 Tab 键顺序中排除它们。 这可以通过 `VisualElement.IsTapStop` 属性实现，该属性指示 Tab 导航中是否包含 [`VisualElement`](xref:Xamarin.Forms.VisualElement)。 其默认值是 `true`，当它的值是 `false` 时，Tab 导航基础设施将忽略该控件，而不管是否设置了 `TabIndex`。
 
 ## <a name="supported-controls"></a>支持的控件
 
-`TabIndex`和`IsTapStop`接受键盘输入一个或多个平台上的以下控件支持属性：
+以下控件支持 `TabIndex` 和 `IsTapStop` 属性，这些控件在一个或多个平台上接受键盘输入：
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
@@ -137,8 +137,8 @@ ms.locfileid: "50130958"
 - [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 
 > [!NOTE]
-> 每个控件不是每个平台上可获得焦点的选项卡。
+> 这些控件并不是在每个平台上都可通过 Tab 键聚焦。
 
 ## <a name="related-links"></a>相关链接
 
-- [可访问性 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [可访问性（示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)

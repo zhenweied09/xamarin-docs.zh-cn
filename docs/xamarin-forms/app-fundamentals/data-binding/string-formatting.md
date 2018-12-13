@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 字符串格式设置
-description: 本文介绍如何使用 Xamarin.FOrms 数据绑定进行格式化和显示为字符串的对象。 这被通过将绑定的 StringFormat 设置为与占位符的标准.NET 格式设置字符串。
+title: Xamarin.Forms 字符串格式
+description: 本文介绍如何使用 Xamarin.FOrms 数据绑定设置对象格式并将对象显示为字符串。 通过将绑定的字符串格式设置为带有占位符的标准 .NET 格式设置字符串，可实现实现此操作。
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52170944"
 ---
-# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 字符串格式设置
+# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 字符串格式
 
-有时很方便地使用数据绑定来显示对象或值的字符串表示形式。 例如，你可能想要使用`Label`若要显示的当前值`Slider`。 在此数据绑定中，`Slider`是源和目标数据库中均`Text`属性的`Label`。
+有时，使用数据绑定来显示代表对象或值的字符串十分方便。 例如，可能想使用 `Label` 来显示 `Slider` 当前的值。 在此数据绑定中，`Slider` 是源，目标是 `Label` 的 `Text` 属性。
 
-在代码中显示字符串，该功能最强大的工具时，静态[ `String.Format` ](xref:System.String.Format(System.String,System.Object))方法。 格式设置字符串包含格式设置代码特定于不同类型的对象，并可包含要设置格式的值以及其他文本。 请参阅[.NET 中的格式设置类型](/dotnet/standard/base-types/formatting-types/)一文，了解字符串格式设置的详细信息。
+在代码中显示字符串时，最强大的工具是静态 [`String.Format`](xref:System.String.Format(System.String,System.Object)) 方法。 格式设置字符串包括特定于各种类型的对象的格式代码，也可以包括其他文本以及正在进行格式设置的值。 有关字符串格式的详细信息，请参阅[设置 .NET 中类型的格式](/dotnet/standard/base-types/formatting-types/)一文。
 
 ## <a name="the-stringformat-property"></a>StringFormat 属性
 
-此功能被传送到数据绑定： 您设置[ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat)的属性`Binding`(或[ `StringFormat` ](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat)属性`Binding`标记扩展) 到标准.NET 格式设置字符串包含一个占位符：
+此功能将沿用到数据绑定中：将 `Binding` 的 [`StringFormat`](xref:Xamarin.Forms.BindingBase.StringFormat) 属性（或 `Binding` 标记扩展的 [`StringFormat`](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) 属性）设置为带一个占位符的标准 .NET 格式设置字符串：
 
 ```xaml
 <Slider x:Name="slider" />
@@ -31,13 +31,13 @@ ms.locfileid: "52170944"
                       StringFormat='The slider value is {0:F2}'}" />
 ```
 
-请注意，由以帮助避免将大括号视为另一个 XAML 标记扩展的 XAML 分析器的单引号 （撇号） 字符分隔格式设置字符串。 否则，此字符串没有单引号字符是相同的字符串将显示一个浮点值对的调用中`String.Format`。 格式规范`F2`导致带两位小数显示的值。
+请注意，格式设置字符串由单引号（撇号）字符分隔，以帮助 XAML 分析器避免将大括号视为另一个 XAML 标记扩展。 否则，不带单引号字符的此字符串会与用于在 `String.Format` 的调用中显示浮点值的字符串相同。 `F2` 的格式设置规范导致值在显示时会带两个小数位数。
 
-`StringFormat`属性仅在如果目标属性的类型有意义`string`，并且绑定模式是`OneWay`或`TwoWay`。 对于双向绑定，`StringFormat`是仅适用于从源向目标传递的值。
+仅当目标属性为类型 `string` 且绑定模式为 `OneWay` 或 `TwoWay` 时，`StringFormat` 属性才有意义。 对于双向绑定，`StringFormat` 仅适用于从源向目标传递的值。
 
-正如您将在下一篇文章中看到上[绑定路径](binding-path.md)，数据绑定可能会变得非常复杂而又费解。 在调试时这些数据绑定，可以添加`Label`到 XAML 文件与`StringFormat`显示某些中间结果。 即使使用仅用于显示对象的类型，可帮助你。
+将在[绑定路径](binding-path.md)中的下一篇文章中看到，数据绑定可能会变得相当复杂且费解。 调试这些数据绑定时，可以将 `Label` 添加到带 `StringFormat` 的 XAML 文件中以显示某些中间结果。 即使仅用于显示对象类型，这仍然非常有用。
 
-**字符串格式设置**页说明了几种用法的`StringFormat`属性：
+字符串格式页面说明了 `StringFormat` 属性的多种用法：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,33 +101,33 @@ ms.locfileid: "52170944"
 </ContentPage>
 ```
 
-上的绑定`Slider`并`TimePicker`显示了如何使用格式规范的特定于`double`和`TimeSpan`数据类型。 `StringFormat`显示从文本`Entry`视图演示如何通过使用在格式设置字符串中指定两个双引号`&quot;`HTML 实体。
+`Slider` 和 `TimePicker` 上的绑定显示了特定于 `double` 和 `TimeSpan` 数据类型的格式规范的用法。 显示 `Entry` 视图中文本的 `StringFormat` 演示了如何使用 `&quot;` HTML 实体在格式设置字符串中指定双引号。
 
-XAML 文件中的下一个部分是`StackLayout`与`BindingContext`设置为`x:Static`标记扩展引用静态`DateTime.Now`属性。 第一个绑定具有任何属性：
+XAML 文件的下一部分是 `StackLayout`，其中 `BindingContext` 设置为引用静态 `DateTime.Now` 属性的 `x:Static` 标记扩展。 第一个绑定不具有属性：
 
 ```xaml
 <Label Text="{Binding}" />
 ```
 
-这只是显示`DateTime`的值`BindingContext`使用默认格式设置。 第二个绑定显示`Ticks`的属性`DateTime`，而其他两个绑定显示`DateTime`本身具有特定格式设置。 请注意，这`StringFormat`:
+这只显示带有默认格式的 `BindingContext` 的 `DateTime` 值。 第二个绑定显示 `DateTime` 的 `Ticks` 属性，而其他两个绑定显示带有特定格式的 `DateTime` 本身。 请注意此 `StringFormat`：
 
 ```xaml
 <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
 ```
 
-如果需要显示在格式设置字符串中的向左或右大括号，只需使用其中一对。
+如果需要在格式设置字符串中显示左大括号或右大括号，只需使用一对即可。
 
-最后一个部分集`BindingContext`的值`Math.PI`，并使用默认格式设置和两个不同类型的数字格式显示。
+最后一部分将 `BindingContext` 设置为 `Math.PI` 的值，并以默认格式和两种不同类型的数字格式显示。
 
-下面是运行的程序：
+下面是正在运行的程序：
 
-[![字符串格式设置](string-formatting-images/stringformatting-small.png "字符串格式设置")](string-formatting-images/stringformatting-large.png#lightbox "字符串格式设置")
+[![字符串格式](string-formatting-images/stringformatting-small.png "String Formatting")](string-formatting-images/stringformatting-large.png#lightbox "String Formatting")
 
-## <a name="viewmodels-and-string-formatting"></a>Viewmodel 和字符串格式设置
+## <a name="viewmodels-and-string-formatting"></a>Viewmodel 和字符串格式
 
-当使用`Label`并`StringFormat`若要显示的一个视图，它也是 ViewModel 的目标值，可以定义从视图到绑定`Label`或从 ViewModel 到达`Label`。 一般情况下，第二种方法是最佳的因为它将验证的视图和 ViewModel 之间的绑定都正常工作。
+当使用 `Label` 和 `StringFormat` 显示同为 ViewModel 目标的视图的值时，可以将绑定定义为从视图到 `Label` 或从 ViewModel 到 `Label`。 一般情况下第二种方法最佳，因为它验证了试图和 ViewModel 之间的绑定是否正常运作。
 
-这种方法所示**更好的颜色选择器**示例中，使用同一个 ViewModel 作为**简单颜色选择器**中所示的程序[**绑定模式**](binding-mode.md)文章：
+此方法展示在更好的颜色选择器示例中，其中使用与[绑定模式](binding-mode.md)一文中展示的简单颜色选择器程序使用的相同 ViewModel：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,18 +172,18 @@ XAML 文件中的下一个部分是`StackLayout`与`BindingContext`设置为`x:S
 </ContentPage>    
 ```
 
-现在有三对`Slider`并`Label`元素绑定到相同的源中的属性`HslColorViewModel`对象。 唯一的区别在于`Label`已`StringFormat`属性来显示每个`Slider`值。
+现在有三对 `Slider` 和 `Label` 元素绑定到了 `HslColorViewModel` 对象中的相同的源属性中。 唯一的区别在于 `Label` 有 `StringFormat` 属性来显示每个 `Slider` 值。
 
-[![更好地颜色选择器](string-formatting-images/bettercolorselector-small.png "更好地颜色选择器")](string-formatting-images/bettercolorselector-large.png#lightbox "更好地颜色选择器")
+[![更好的颜色选择器](string-formatting-images/bettercolorselector-small.png "Better Color Selector")](string-formatting-images/bettercolorselector-large.png#lightbox "Better Color Selector")
 
-您可能想知道如何可以在传统两位数字的十六进制格式中显示 RGB （红色、 绿色、 蓝色） 值。 这些整数值不从直接可用`Color`结构。 一种解决方案是计算颜色组件是在 ViewModel 中的整数值并将其作为属性公开。 你可以然后格式化它们使用`X2`格式规范。
+你可能想知道如何在传统的两位数十六进制格式中显示 RGB（红、绿、蓝）值。 这些整数值不是从 `Color` 结构中直接提供的。 一种解决方案是计算 ViewModel 中的颜色组件的整数值，并将其作为属性公开。 然后可以使用 `X2` 格式规范对这些值进行格式设置。
 
-另一种方法是更多常规： 你可以编写*绑定值转换器*更高版本的文章中所述[**绑定值转换器**](converters.md)。
+另一种方法更常用：可以编写一个绑定值转换器，在后文[绑定值转换器](converters.md)中有所描述。
 
-下一篇文章中，但是，探讨[**绑定路径**](binding-path.md)更详细介绍，并且显示了如何使用它来引用子属性和集合中的项。
+但下一篇文章更详细地探讨了[绑定路径](binding-path.md)并展示了如何使用它来引用子属性和集合中的项。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [数据绑定演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [数据绑定 Xamarin.Forms 书籍章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [数据绑定演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Xamarin.Forms 书中的数据绑定章节](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

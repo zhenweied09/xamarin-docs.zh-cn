@@ -1,6 +1,6 @@
 ---
 title: 添加轻扫手势识别器
-description: 本文介绍如何识别上一个视图发生轻扫手势。
+description: 本文介绍如何识别视图上的轻扫手势。
 ms.prod: xamarin
 ms.assetid: 164976C2-1429-49FB-9EB6-621E2681C19B
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 95e95d8849824cd2dc31c2019627cc5adbbefeec
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50130948"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>添加轻扫手势识别器
 
-_轻扫手势手指在水平或垂直方向，在屏幕上移动，并且通常用于初始化通过内容导航时发生。在本文中的代码示例摘自[轻扫手势](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)示例。_
+“手指在水平或垂直方向上滑过屏幕即产生轻扫手势，该手势通常用于启动内容导航。在本文中的代码示例摘自[轻扫手势](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)示例。
 
-若要使[ `View` ](xref:Xamarin.Forms.View)识别轻扫手势，创建[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)实例，设置[ `Direction` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction)属性设置为[ `SwipeDirection`](xref:Xamarin.Forms.SwipeDirection)枚举值 (`Left`， `Right`， `Up`，或`Down`)，根据需要设置[ `Threshold` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold)属性、 句柄[ `Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped)事件，并添加到新的笔势识别器[ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers)在视图上的集合。 下面的代码示例演示`SwipeGestureRecognizer`附加到[ `BoxView` ](xref:Xamarin.Forms.BoxView):
+若要使 [`View`](xref:Xamarin.Forms.View) 识别轻扫手势，请创建 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 实例，将 [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) 属性设置为 [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) 枚举值（`Left`、`Right`、`Up` 或 `Down`），或者根据需要设置 [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) 属性、处理 [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 事件，以及将新的笔势识别器添加到视图上的 [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) 集合。 下面的代码示例显示附加到 [`BoxView`](xref:Xamarin.Forms.BoxView) 上的 `SwipeGestureRecognizer`：
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -28,7 +28,7 @@ _轻扫手势手指在水平或垂直方向，在屏幕上移动，并且通常�
 </BoxView>
 ```
 
-下面是等效的C#代码：
+下面是等效 C# 代码：
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -38,23 +38,23 @@ leftSwipeGesture.Swiped += OnSwiped;
 boxView.GestureRecognizers.Add(leftSwipeGesture);
 ```
 
-[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)类还包括[ `Threshold` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold)属性，可根据需要设置为`uint`值，该值表示为而必须实现的最小轻扫距离轻扫，若要在设备无关的单位中识别。 此属性的默认值为 100，也就是说，任何扫的少于 100 个与设备无关单位将被忽略。
+[`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 类还包括 [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) 属性，可根据需要设置为 `uint` 值，该值表示在独立于设备的单元中实现轻扫手势识别所需的最小轻扫距离。 此属性的默认值为 100，也就是说，将忽略任何小于 100 个独立于设备的单元的轻扫手势。
 
 ## <a name="recognizing-the-swipe-direction"></a>识别轻扫方向
 
-在上面的示例[ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction)属性设置为单个值从[ `SwipeDirection` ](xref:Xamarin.Forms.SwipeDirection)枚举。 但是，还有可能要将此属性设置为从多个值`SwipeDirection`枚举，以便[ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped)事件激发以响应在多个方向轻扫。 但是，约束是单个[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)只能识别扫发生在同一个轴上。 因此，可以通过设置识别发生在水平轴的扫`Direction`属性设置为`Left`和`Right`:
+在上面的示例中，[`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) 属性设置为 [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) 枚举中的单个值。 但是，也可以将此属性设置为 `SwipeDirection` 枚举中的多个值，以便触发 [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 事件以响应多个方向的轻扫手势。 但是，约束是单个 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 只能识别同一个轴上的轻扫手势。 因此，可以通过将 `Direction` 属性设置为 `Left` 和 `Right` 来识别水平轴上的轻扫手势：
 
 ```xaml
 <SwipeGestureRecognizer Direction="Left,Right" Swiped="OnSwiped"/>
 ```
 
-同样，可以通过设置识别垂直轴发生的扫[ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction)属性设置为`Up`和`Down`:
+同样，可以通过将 [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) 属性设置为 `Up` 和 `Down` 来识别垂直轴上的轻扫手势：
 
 ```csharp
 var swipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Up | SwipeDirection.Down };
 ```
 
-或者， [ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)为每个轻扫可以创建方向识别扫中每个方向：
+或者，可以创建每个轻扫方向的 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 来识别每个方向的轻扫手势：
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -67,7 +67,7 @@ var swipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Up | 
 </BoxView>
 ```
 
-下面是等效的C#代码：
+下面是等效 C# 代码：
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -87,11 +87,11 @@ boxView.GestureRecognizers.Add(downSwipeGesture);
 ```
 
 > [!NOTE]
-> 在上述示例中，同一个事件处理程序响应[ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped)事件触发。 但是，每个[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)实例，如果需要，也可以使用不同的事件处理程序。
+> 在上面的例子中，相同事件处理程序响应 [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 事件触发。 但是，如果需要，每个 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 实例可以使用不同的事件处理程序。
 
-## <a name="responding-to-the-swipe"></a>轻扫响应
+## <a name="responding-to-the-swipe"></a>响应轻扫手势
 
-事件处理程序[ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped)事件在下面的示例所示：
+[`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 事件的事件处理程序如下例所示：
 
 ```csharp
 void OnSwiped(object sender, SwipedEventArgs e)
@@ -114,11 +114,11 @@ void OnSwiped(object sender, SwipedEventArgs e)
 }
 ```
 
-[ `SwipedEventArgs` ](xref:Xamarin.Forms.SwipedEventArgs)可以检查以确定方向轻扫，使用响应所需轻扫的自定义逻辑。 可以从获取方向轻扫[ `Direction` ](xref:Xamarin.Forms.SwipedEventArgs.Direction)属性的事件自变量，都将设置为的值之一[ `SwipeDirection` ](xref:Xamarin.Forms.SwipeDirection)枚举。 此外，事件参数还具有[ `Parameter` ](xref:Xamarin.Forms.SwipedEventArgs.Parameter)将设置为的值的属性[ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter)属性，如果定义。
+可以检查 [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) 以确定轻扫方向，并根据需要使用自定义逻辑响应轻扫手势。 可以从事件参数的 [`Direction`](xref:Xamarin.Forms.SwipedEventArgs.Direction) 属性获得轻扫方向，该属性将设置为 [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) 枚举中的某个值。 此外，事件参数还具有 [`Parameter`](xref:Xamarin.Forms.SwipedEventArgs.Parameter) 属性，如果定义了该属性，则该属性将设置为 [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) 属性中的值。
 
 ## <a name="using-commands"></a>使用命令
 
-[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)类还包括[ `Command` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Command)并[ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter)属性。 使用模型-视图-视图模型 (MVVM) 模式的应用程序中通常使用这些属性。 `Command`属性定义`ICommand`轻扫手势识别时, 要调用与`CommandParameter`属性定义的对象传递给`ICommand.`下面的代码示例演示如何将绑定`Command`属性设置为`ICommand`其实例设置为网页的视图模型中定义[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext):
+[`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 类还包括 [`Command`](xref:Xamarin.Forms.SwipeGestureRecognizer.Command) 和 [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) 属性。 这些属性通常用于使用模型-视图-视图模型 (MVVM) 模式的应用程序。 识别轻扫手势时，`Command` 属性定义要调用的 `ICommand`并且 `CommandParameter` 属性定义要传递给 `ICommand.` 的对象。下面的代码示例演示如何将 `Command` 属性绑定到视图模型中定义的 `ICommand`，该视图模型实例设置为页 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)：
 
 ```csharp
 var boxView = new BoxView { Color = Color.Teal, ... };
@@ -127,7 +127,7 @@ leftSwipeGesture.SetBinding(SwipeGestureRecognizer.CommandProperty, "SwipeComman
 boxView.GestureRecognizers.Add(leftSwipeGesture);
 ```
 
-是等效的 XAML 代码：
+等效 XAML 代码为：
 
 ```xaml
 <BoxView Color="Teal" ...>
@@ -137,11 +137,11 @@ boxView.GestureRecognizers.Add(leftSwipeGesture);
 </BoxView>
 ```
 
-`SwipeCommand` 是类型的属性`ICommand`设置为网页的视图模型实例中定义[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)。 轻扫手势识别时，`Execute`方法的`SwipeCommand`将执行对象。 参数`Execute`method 的值是[ `CommandParameter` ](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter)属性。 有关命令的详细信息，请参阅[命令界面](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)。
+`SwipeCommand` 是视图模型实例中定义的类型 `ICommand` 的属性，该视图模型实例设置为页 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)。 识别轻扫手势时，将执行 `SwipeCommand` 对象的 `Execute` 方法。 `Execute` 方法的参数是 [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) 属性的值。 有关命令的详细信息，请参阅[命令接口](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)。
 
-## <a name="creating-a-swipe-container"></a>正在创建轻扫容器
+## <a name="creating-a-swipe-container"></a>创建轻扫手势容器
 
-`SwipeContainer`类，下面的代码示例中所示，是将一个通用轻扫识别类封装[ `View` ](xref:Xamarin.Forms.View)执行轻扫手势识别：
+`SwipeContainer` 类（如下面的代码示例所示）是通用的轻扫识别类，包装在 [`View`](xref:Xamarin.Forms.View) 中，用于执行轻扫手势的识别：
 
 ```csharp
 public class SwipeContainer : ContentView
@@ -165,9 +165,9 @@ public class SwipeContainer : ContentView
 }
 ```
 
-`SwipeContainer`类创建[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)对象的所有四个轻扫方向，并将附加`Swipe`事件处理程序。 这些事件处理程序调用`Swipe`事件定义的`SwipeContainer`。
+`SwipeContainer` 类创建所有四个轻扫方向的 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 对象，并附加 `Swipe` 事件处理程序。 这些事件处理程序调用由 `SwipeContainer` 定义的 `Swipe` 事件。
 
-以下 XAML 代码示例所示`SwipeContainer`类包装[ `BoxView` ](xref:Xamarin.Forms.BoxView):
+下面的 XAML 代码示例演示包装 [`BoxView`](xref:Xamarin.Forms.BoxView) 的 `SwipeContainer` 类：
 
 ```xaml
 <ContentPage ...>
@@ -179,7 +179,7 @@ public class SwipeContainer : ContentView
 </ContentPage>
 ```
 
-下面的代码示例演示如何`SwipeContainer`包装[ `BoxView` ](xref:Xamarin.Forms.BoxView)在C#页：
+下面的代码示例演示 `SwipeContainer` 如何在 C# 页中包装 [`BoxView`](xref:Xamarin.Forms.BoxView)：
 
 ```csharp
 public class SwipeContainerPageCS : ContentPage
@@ -201,10 +201,10 @@ public class SwipeContainerPageCS : ContentPage
 }
 ```
 
-当[ `BoxView` ](xref:Xamarin.Forms.BoxView)接收轻扫手势[ `Swiped` ](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped)中的事件[ `SwipeGestureRecognizer` ](xref:Xamarin.Forms.SwipeGestureRecognizer)激发。 这将由`SwipeContainer`类，该类会触发其自己`Swipe`事件。 这`Swipe`页面上处理事件。 [ `SwipedEventArgs` ](xref:Xamarin.Forms.SwipedEventArgs)之后进行检查以确定方向轻扫，使用响应所需轻扫的自定义逻辑。
+[`BoxView`](xref:Xamarin.Forms.BoxView) 接收到轻扫手势时，触发 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 中的 [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 事件。 这是由 `SwipeContainer` 类处理，该类触发自己的 `Swipe` 事件。 此 `Swipe` 事件在页上进行处理。 然后可以检查 [`SwipedEventArgs`](xref:Xamarin.Forms.SwipedEventArgs) 以确定轻扫方向，并根据需要使用自定义逻辑响应轻扫手势。
 
 ## <a name="related-links"></a>相关链接
 
-- [轻扫手势 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [轻扫手势（示例）](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

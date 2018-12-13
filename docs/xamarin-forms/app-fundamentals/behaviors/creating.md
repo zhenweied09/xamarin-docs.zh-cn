@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms 行为
-description: Xamarin.Forms 行为创建的派生自的行为或行为<T>类。 本文演示如何创建和使用 Xamarin.Forms 行为。
+description: Xamarin.Forms 行为是通过从行为或行为 <T> 类派生来创建的。 本文演示如何创建和使用 Xamarin.Forms 行为。
 ms.prod: xamarin
 ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
 ms.technology: xamarin-forms
@@ -9,25 +9,25 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 7e057567ec0bb72e9bcc016d4a9fef3af78a3ea1
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998890"
 ---
 # <a name="xamarinforms-behaviors"></a>Xamarin.Forms 行为
 
-_Xamarin.Forms 行为创建的派生自的行为或行为<T>类。本文演示如何创建和使用 Xamarin.Forms 行为。_
+Xamarin.Forms 行为是通过从行为或行为 <T> 类派生来创建的。_本文演示如何创建和使用 Xamarin.Forms 行为。_
 
 ## <a name="overview"></a>概述
 
 创建 Xamarin.Forms 行为的过程如下所示：
 
-1. 创建一个类继承自[ `Behavior` ](xref:Xamarin.Forms.Behavior)或[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类，其中`T`是一种行为要应用到的控件。
-1. 重写[ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject))方法来执行任何所需的设置。
-1. 重写[ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法来执行任何所需的清理。
-1. 实现的核心功能的行为。
+1. 创建一个继承自 [`Behavior`](xref:Xamarin.Forms.Behavior) 或 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 类的类，其中 `T` 是施加该行为的控件类型。
+1. 重写 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 方法以执行任何所需设置。
+1. 重写 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法以执行任何所需清理。
+1. 实现行为的核心功能。
 
-这会导致在下面的代码示例所示的结构：
+这将导致以下代码示例所示的结构：
 
 ```csharp
 public class CustomBehavior : Behavior<View>
@@ -48,15 +48,15 @@ public class CustomBehavior : Behavior<View>
 }
 ```
 
-[ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject))行为附加到控件后将立即激发方法。 此方法将接收到它已附加，并可用于注册事件处理程序或执行其他安装程序支持行为功能所需的控件的引用。 例如，您可以订阅一个控件中的事件。 然后将该事件在事件处理程序实现行为功能。
+[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 方法在行为附加到控件后立即触发。 此方法接收对其附加的控件的引用，并可用于注册事件处理程序或执行支持行为功能所需的其他设置。 例如，你可以订阅控件上的事件。 然后，行为功能将在事件的事件处理程序中实现。
 
-[ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法在从控件中移除行为时被激发。 此方法将接收到它已附加，并用于执行任何所需的清理控件的引用。 例如，可以从上一个控件，以防止内存泄漏事件取消订阅。
+当行为从控件中移除时，将触发 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法。 此方法接收对其附加的控件的引用，并用于执行任何所需的清理。 例如，可以取消订阅控件上的事件，以防止内存泄漏。
 
-然后可以通过将附加到已使用行为[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors)相应的控件的集合。
+然后，可以通过将其附加到相应控件的 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 集合来使用该行为。
 
 ## <a name="creating-a-xamarinforms-behavior"></a>创建 Xamarin.Forms 行为
 
-该示例应用程序演示`NumericValidationBehavior`，其中突出显示了通过到用户输入的值[ `Entry` ](xref:Xamarin.Forms.Entry)控件中以红色，如果不是`double`。 行为是在下面的代码示例所示：
+示例应用程序演示一个 `NumericValidationBehavior`，并用红色突出显示用户输入到 [`Entry`](xref:Xamarin.Forms.Entry) 控件的值（如果该值不是 `double`）。 此行为如下面的代码示例所示：
 
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
@@ -82,14 +82,14 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior`派生自[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类，其中`T`是[ `Entry` ](xref:Xamarin.Forms.Entry)。 [ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject))方法注册的事件处理程序[ `TextChanged` ](xref:Xamarin.Forms.Entry.TextChanged)事件，与[ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法取消注册`TextChanged`事件，以防止内存泄漏。 提供的核心功能的行为`OnEntryTextChanged`方法，将为用户输入的值解析`Entry`，并设置[ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor)属性设置为红色，如果该值不`double`。
+`NumericValidationBehavior` 派生自 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 类，其中 `T` 是 [`Entry`](xref:Xamarin.Forms.Entry)。 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 方法注册 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 事件的事件处理程序，并使用 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法注销 `TextChanged` 事件以防止内存泄漏。 该行为的核心功能由 `OnEntryTextChanged` 方法提供，该方法将用户输入的值解析为 `Entry`，如果该值不是 `double`，则将 [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) 属性设置为红色。
 
 > [!NOTE]
-> Xamarin.Forms 不会设置`BindingContext`的行为，因为可以共享行为，并将其应用于多个控件通过样式。
+> Xamarin.Forms 不会设置行为的 `BindingContext`，因为可以通过样式共享行为并将其应用于多个控件。
 
 ## <a name="consuming-a-xamarinforms-behavior"></a>使用 Xamarin.Forms 行为
 
-每个 Xamarin.Forms 控件具有[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors) ，添加到集合的一个或多个行为可以如以下 XAML 代码示例所示：
+每个 Xamarin.Forms 控件都有一个 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 集合，其中可以添加一个或多个行为，如以下 XAML 代码示例所示：
 
 ```xaml
 <Entry Placeholder="Enter a System.Double">
@@ -99,29 +99,29 @@ public class NumericValidationBehavior : Behavior<Entry>
 </Entry>
 ```
 
-等效于[ `Entry` ](xref:Xamarin.Forms.Entry) C# 中所示下面的代码示例：
+下面的代码示例介绍了 C# 中的等效 [`Entry`](xref:Xamarin.Forms.Entry)：
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 entry.Behaviors.Add (new NumericValidationBehavior ());
 ```
 
-在运行时行为将根据行为实现响应与该控件的交互。 下面的屏幕截图演示了如何对无效输入进行响应的行为：
+在运行时，根据行为实现，行为将响应与控件的交互。 以下屏幕截图演示了响应无效输入的行为：
 
-[![](creating-images/screenshots-sml.png "示例应用程序与 Xamarin.Forms 行为")](creating-images/screenshots.png#lightbox "示例应用程序与 Xamarin.Forms 行为")
+[![](creating-images/screenshots-sml.png "具有 Xamarin.Forms 行为的示例应用程序")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
-> 行为针对特定的控件类型 （或适用于许多控件的超类） 编写的它们只应添加到一个兼容的控件。 尝试将行为附加到不兼容的控件将导致引发异常。
+> 行为是为特定的控件类型（或者可以应用于许多控件的超类）编写的，它们只应添加到兼容的控件中。 试图将行为附加到不兼容控件将引发异常。
 
-### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>使用 Xamarin.Forms 行为的方式
+### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>使用具有样式的 Xamarin.Forms 行为
 
-显式或隐式样式也可以使用行为。 但是，创建设置样式[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors)控件的属性不能，因为该属性是只读的。 解决方案是将附加的属性添加到控件添加和删除行为的行为类。 过程如下所示：
+行为也可以通过显式或隐式样式使用。 但是，不能创建设置控件的 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 属性的样式，因为该属性只读。 解决方案是向行为类添加附加属性，以控制添加和删除行为。 流程如下：
 
-1. 将附加的属性添加到将用于控制添加或删除行为将附加的控件的行为的行为类。 请确保附加的属性注册`propertyChanged`属性的值发生更改时将执行的委托。
-1. 创建`static`getter 和 setter 的附加属性。
-1. 实现中的逻辑`propertyChanged`委托来添加和删除行为。
+1. 将附加属性添加到行为类中，以控制将附加行为的控件添加行为和删除行为。 确保附加的属性注册 `propertyChanged` 委托，该委托将在属性值更改时执行。
+1. 为附加属性创建 `static` getter 和 setter。
+1. 在 `propertyChanged` 委托中实现逻辑以添加和删除行为。
 
-下面的代码示例显示了附加的属性，用于控制添加和删除`NumericValidationBehavior`:
+下面的代码示例显示了一个附加属性，用于控制添加和删除 `NumericValidationBehavior`：
 
 ```csharp
 public class NumericValidationBehavior : Behavior<Entry>
@@ -160,9 +160,9 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior`类包含一个名为的附加的属性`AttachBehavior`与`static`getter 和 setter，它控制的添加或删除到要附加的控件的行为。 此附加属性寄存器`OnAttachBehaviorChanged`属性的值发生更改时将执行的方法。 此方法添加或删除到值的基础的控件行为`AttachBehavior`附加属性。
+`NumericValidationBehavior` 类包含带有 `static` getter 和 setter 且名为 `AttachBehavior` 的附加属性，该属性控制将附加行为的控件添加和删除行为。 该附加属性注册属性值更改时执行的 `OnAttachBehaviorChanged` 方法。 该方法根据 `AttachBehavior` 附加属性的值向控件添加或移除行为。
 
-下面的代码示例演示*显式*的样式`NumericValidationBehavior`，它使用`AttachBehavior`附加属性，并将其应用于[ `Entry` ](xref:Xamarin.Forms.Entry)控件：
+下面的代码示例显示使用 `AttachBehavior` 附加属性的 `NumericValidationBehavior` 的显式样式，该样式可应用于 [`Entry`](xref:Xamarin.Forms.Entry) 控件：
 
 ```xaml
 <Style x:Key="NumericValidationStyle" TargetType="Entry">
@@ -172,7 +172,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 </Style>
 ```
 
-[ `Style` ](xref:Xamarin.Forms.Style)可应用于[ `Entry` ](xref:Xamarin.Forms.Entry)通过设置其[ `Style` ](xref:Xamarin.Forms.VisualElement.Style)属性设置为`Style`使用实例的步骤`StaticResource`标记扩展，如下面的代码示例中所示：
+[`Style`](xref:Xamarin.Forms.Style) 通过使用 `StaticResource` 标记扩展将其 [`Style`](xref:Xamarin.Forms.VisualElement.Style) 属性设置为 `Style` 实例使其可应用于 [`Entry`](xref:Xamarin.Forms.Entry) 控件，如以下代码示例所示：
 
 ```xaml
 <Entry Placeholder="Enter a System.Double" Style="{StaticResource NumericValidationStyle}">
@@ -181,11 +181,11 @@ public class NumericValidationBehavior : Behavior<Entry>
 有关样式的详细信息，请参阅[样式](~/xamarin-forms/user-interface/styles/index.md)。
 
 > [!NOTE]
-> 虽然您可以添加可绑定属性设置或查询中 XAML，如果执行操作，创建行为的行为将状态它们不应共享中的控件之间`Style`在`ResourceDictionary`。
+> 虽然可以向 XAML 中设置或查询的行为添加可绑定属性，但如果你确实创建了有状态的行为，则这些行为不应该在 `ResourceDictionary` 的`Style` 中的控件之间共享。
 
 ### <a name="removing-a-behavior-from-a-control"></a>从控件中删除行为
 
-[ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法触发行为已从一个控件，以及用于执行任何所需的清理如取消订阅事件，以防止内存泄漏。 但是，行为不会隐式删除从控件除非控件的[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors)通过修改集合`Remove`或`Clear`方法。 下面的代码示例演示了如何从控件的移除特定行为`Behaviors`集合：
+当从控件中删除某个行为时，将触发 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法，该方法用于执行任何所需的清理，例如取消对事件的订阅，以防止内存泄漏。 但是，除非控件的 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 集合被 `Remove` 或 `Clear` 方法修改，否则行为不会从控件中隐式删除。 以下代码示例演示了如何从控件的 `Behaviors` 集合中删除特定的行为：
 
 ```csharp
 var toRemove = entry.Behaviors.FirstOrDefault (b => b is NumericValidationBehavior);
@@ -194,22 +194,22 @@ if (toRemove != null) {
 }
 ```
 
-或者，该控件的[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors)可以清除集合，如下面的代码示例中所示：
+或者，可以清除控件的 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 集合，如下面的代码示例所示：
 
 ```csharp
 entry.Behaviors.Clear();
 ```
 
-此外，请注意，行为不会隐式从删除控件时从导航堆栈中弹出页。 相反，它们之前，必须显式删除超出作用域的页。
+此外，请注意，当从导航堆栈中弹出页面时，行为不会从控件中隐式删除。 相反，必须在页面超出范围之前显式删除它们。
 
 ## <a name="summary"></a>总结
 
-本文演示了如何创建和使用 Xamarin.Forms 行为。 Xamarin.Forms 行为创建的派生自[ `Behavior` ](xref:Xamarin.Forms.Behavior)或[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类。
+本文演示如何创建和使用 Xamarin.Forms 行为。 Xamarin.Forms 行为由 [`Behavior`](xref:Xamarin.Forms.Behavior) 或 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 类派生创建而成。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [Xamarin.Forms 行为 （示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
-- [Xamarin.Forms 行为应用具有样式 （示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
+- [Xamarin.Forms 行为（示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
+- [通过样式应用的 Xamarin.Forms 行为（示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehaviorstyle/)
 - [行为](xref:Xamarin.Forms.Behavior)
 - [行为<T>](xref:Xamarin.Forms.Behavior`1)

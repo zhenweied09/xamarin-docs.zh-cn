@@ -1,6 +1,6 @@
 ---
 title: 可重用 EffectBehavior
-description: 行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。 本文演示如何创建和使用 Xamarin.Forms 行为添加到控件的效果。
+description: 行为是一种非常有用的方法，用于向控件添加效果、从代码隐藏文件中删除冗余重复的效果处理代码。 本文演示如何创建 Xamarin.Forms 行为并将其用于向控件添加效果。
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
@@ -9,36 +9,36 @@ ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 2696f0103ce1aa969039c982fb9b82f89b37811e
 ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/01/2018
 ms.locfileid: "50911588"
 ---
 # <a name="reusable-effectbehavior"></a>可重用 EffectBehavior
 
-_行为是将效果添加到控件时，删除处理代码中的代码隐藏文件的样板效果很有用的方法。本文演示如何创建和使用 Xamarin.Forms 行为添加到控件的效果。_
+行为是一种非常有用的方法，用于向控件添加效果、从代码隐藏文件中删除冗余重复的效果处理代码。_本文演示如何创建 Xamarin.Forms 行为并将其用于向控件添加效果。_
 
 ## <a name="overview"></a>概述
 
-`EffectBehavior`类是一个可重用的 Xamarin.Forms 自定义行为，将添加[ `Effect` ](xref:Xamarin.Forms.Effect)实例与控件时的行为附加到控件，并且删除`Effect`实例时的行为是从控件中分离。
+`EffectBehavior` 类是可重用的 Xamarin.Forms 自定义行为，当行为附加到控件时，它将 [`Effect`](xref:Xamarin.Forms.Effect) 实例添加到控件，当行为与控件分离时，它将删除 `Effect` 实例。
 
-以下行为属性必须设置为使用行为：
+必须设置以下行为属性才能使用该行为：
 
-- **组**– 的值[ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute)影响类的属性。
-- **名称**– 的值[ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute)影响类的属性。
+- **组** - 效果类的 [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) 属性的值。
+- **名称** - 效果类的 [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) 属性的值。
 
-有关效果的详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+有关效果的更多信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
 
 > [!NOTE]
-> `EffectBehavior`是一个自定义类，可以位于[效果行为示例](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)，并不是 Xamarin.Forms 的一部分。
+> `EffectBehavior` 是一个自定义类，它可以位于[效果行为示例](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)中，但并不属于 Xamarin.Forms。
 
 ## <a name="creating-the-behavior"></a>创建行为
 
-`EffectBehavior`类派生自[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类，其中`T`是[ `View` ](xref:Xamarin.Forms.View)。 这意味着，`EffectBehavior`类可以附加到任何 Xamarin.Forms 控件。
+`EffectBehavior` 类派生自 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 类，其中 `T` 是 [`View`](xref:Xamarin.Forms.View)。 这意味着，`EffectBehavior` 类可以附加到任何 Xamarin.Forms 控件。
 
 ### <a name="implementing-bindable-properties"></a>实现可绑定属性
 
-`EffectBehavior`类定义了两个[ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty)实例，用于添加[ `Effect` ](xref:Xamarin.Forms.Effect)到控件时行为附加到控件。 这些属性下面的代码示例所示：
+`EffectBehavior` 类定义了两个 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 实例，当行为附加到控件时，这些实例用于向控件添加 [`Effect`](xref:Xamarin.Forms.Effect)。 以下代码示例中显示了这些属性：
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -61,11 +61,11 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-当`EffectBehavior`用`Group`属性应设置为的值[ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute)效果的属性。 此外，`Name`属性应设置为值[ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute)影响类的属性。
+当使用 `EffectBehavior` 时，应将 `Group` 属性设置为效果的 [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) 特性的值。 此外，应将 `Name` 属性设置为效果类的 [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) 特性的值。
 
-### <a name="implementing-the-overrides"></a>实现重写
+### <a name="implementing-the-overrides"></a>实现替代
 
-`EffectBehavior`类将重写[ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject))并[ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类，如以下代码所示示例：
+`EffectBehavior` 类替代 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 类的 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 和 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法，如以下代码示例所示：
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -86,11 +86,11 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-[ `OnAttachedTo` ](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject))方法执行安装程序通过调用`AddEffect`方法，在附加的控件作为参数传递。 [ `OnDetachingFrom` ](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject))方法通过调用执行清理`RemoveEffect`方法，在附加的控件作为参数传递。
+[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 方法通过调用 `AddEffect` 方法执行设置，并将附加的控件作为参数传递。 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 方法通过调用 `RemoveEffect` 方法执行清理，并将附加的控件作为参数传递。
 
 ### <a name="implementing-the-behavior-functionality"></a>实现行为功能
 
-行为的目的是要添加[ `Effect` ](xref:Xamarin.Forms.Effect)中定义`Group`并`Name`属性，以控制时的行为附加到控件，并且删除`Effect`时的行为是从控件中分离。 核心行为功能下面的代码示例所示：
+此行为的目的是，当行为附加到控件时，将 `Group` 和 `Name` 属性中定义的 [`Effect`](xref:Xamarin.Forms.Effect) 添加到控件，并在行为与控件分离时删除 `Effect`。 核心行为功能如以下代码示例所示：
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -122,13 +122,13 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-`AddEffect`方法执行响应`EffectBehavior`附加到一个控件，并接收作为参数的附加的控件。 该方法然后将检索到的效果添加到控件的[ `Effects` ](xref:Xamarin.Forms.Element.Effects)集合。 `RemoveEffect`方法执行响应`EffectBehavior`正在分离从一个控件，并接收作为参数的附加的控件。 方法然后从控件的删除效果[ `Effects` ](xref:Xamarin.Forms.Element.Effects)集合。
+执行 `AddEffect` 方法以响应要附加到控件的 `EffectBehavior`，并且它将以参数形式接收所附加的控件。 然后，该方法将检索到的效果添加到控件的 [`Effects`](xref:Xamarin.Forms.Element.Effects) 集合。 执行 `RemoveEffect` 方法以相应要与控件拆离的 `EffectBehavior`，并且它将以参数形式接收所附加的控件。 然后该方法从控件的 [`Effects`](xref:Xamarin.Forms.Element.Effects) 集合中移除效果。
 
-`GetEffect`方法使用[ `Effect.Resolve` ](xref:Xamarin.Forms.Effect.Resolve(System.String))方法来检索[ `Effect` ](xref:Xamarin.Forms.Effect)。 效果是通过串联所在`Group`和`Name`属性值。 如果一个平台不提供效果`Effect.Resolve`方法将返回一个非`null`值。
+`GetEffect` 方法使用 [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) 方法检索 [`Effect`](xref:Xamarin.Forms.Effect)。 通过串联 `Group` 和 `Name` 属性值来定位该效果。 如果平台不提供此效果，则 `Effect.Resolve` 方法将返回一个非 `null` 值。
 
 ## <a name="consuming-the-behavior"></a>使用行为
 
-`EffectBehavior`类可以附加到[ `Behaviors` ](xref:Xamarin.Forms.VisualElement.Behaviors)集合的一个控件，如以下 XAML 代码示例所示：
+`EffectBehavior` 类可以附加到控件的 [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors) 集合，如以下 XAML 代码示例所示：
 
 ```xaml
 <Label Text="Label Shadow Effect" ...>
@@ -151,22 +151,22 @@ label.Behaviors.Add (new EffectBehavior {
 });
 ```
 
-`Group`并`Name`行为的属性设置为的值[ `ResolutionGroupName` ](xref:Xamarin.Forms.ResolutionGroupNameAttribute)并[ `ExportEffect` ](xref:Xamarin.Forms.ExportEffectAttribute)中每个特定于平台的影响类的属性项目。
+行为的 `Group` 和 `Name` 属性被设置为每个平台特定项目的效果类的 [`ResolutionGroupName`](xref:Xamarin.Forms.ResolutionGroupNameAttribute) 和 [`ExportEffect`](xref:Xamarin.Forms.ExportEffectAttribute) 特性的值。
 
-在运行时，行为附加到时[ `Label` ](xref:Xamarin.Forms.Label)控件，`Xamarin.LabelShadowEffect`将添加到控件的[ `Effects` ](xref:Xamarin.Forms.Element.Effects)集合。 这会导致要添加到显示的文本阴影`Label`控制，如以下屏幕截图中所示：
+在运行时，当行为附加到 [`Label`](xref:Xamarin.Forms.Label) 控件时，`Xamarin.LabelShadowEffect` 将添加到控件的 [`Effects`](xref:Xamarin.Forms.Element.Effects) 集合中。 这就使阴影被添加到 `Label` 控件显示的文本中，如以下屏幕截图所示：
 
-![](effect-behavior-images/screenshots.png "包含 EffectsBehavior 示例应用程序")
+![](effect-behavior-images/screenshots.png "具有 EffectsBehavior 的示例应用程序")
 
-使用此行为来添加和删除效果从控件的优点是样板效果处理代码可从代码隐藏文件。
+使用这种行为从控件中添加和删除效果的优点是，可以从代码隐藏文件中删除冗余重复的效果处理代码。
 
 ## <a name="summary"></a>总结
 
-本文演示了使用行为添加到控件的效果。 `EffectBehavior`类是一个可重用的 Xamarin.Forms 自定义行为，将添加[ `Effect` ](xref:Xamarin.Forms.Effect)实例与控件时的行为附加到控件，并且删除`Effect`实例时的行为是从控件中分离。
+本文演示了如何使用行为向控件添加效果。 `EffectBehavior` 类是可重用的 Xamarin.Forms 自定义行为，当行为附加到控件时，它将 [`Effect`](xref:Xamarin.Forms.Effect) 实例添加到控件，当行为与控件分离时，它将删除 `Effect` 实例。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [效果](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [影响行为 （示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+- [影响行为（示例）](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 - [行为](xref:Xamarin.Forms.Behavior)
 - [行为<T>](xref:Xamarin.Forms.Behavior`1)

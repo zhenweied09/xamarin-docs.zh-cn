@@ -1,6 +1,6 @@
 ---
 title: 访问设备的视频库
-description: 本文介绍如何访问设备的视频库中使用 Xamarin.Forms 的视频播放器应用程序。
+description: 本文说明如何使用 Xamarin.Forms 在视频播放器应用程序中访问设备的视频库。
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 619469e4c4fd3901491c20d6215ec0a25c49f69d
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171178"
 ---
 # <a name="accessing-the-devices-video-library"></a>访问设备的视频库
 
-大多数新式移动设备和台式计算机可以记录使用设备的摄像机的视频。 然后作为设备上的文件存储的用户创建的视频。 可以从映像库中检索这些文件，并将其通过播放`VideoPlayer`类就像任何其他视频。
+大多数现代移动设备和台式电脑都能够使用其设备的摄像头录制视频。 用户创建的视频之后将以文件形式存储在设备上。 可从图片库中检索这些文件，并通过 `VideoPlayer` 类像任何其他视频一样播放它们。
 
-## <a name="the-photo-picker-dependency-service"></a>照片选取器依赖关系服务
+## <a name="the-photo-picker-dependency-service"></a>照片选取器依赖项服务
 
-每个平台包括一种工具，允许用户从设备的映像库中选择照片或视频。 播放视频设备的映像库中的第一步构建每个平台上的映像选取器将调用一个依赖关系服务。 如下所述的依赖关系服务是非常类似于一个中定义[**从图片库中选取照片**](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)文章中，不同的是视频选取器返回文件名而不是`Stream`对象。
+每个平台都包含允许用户从设备图片库中选择照片或视频的工具。 从设备图片库播放视频的第一步是构建在每个平台上调用该图片选取器的依赖项服务。 下面描述的依赖项服务非常类似于[从图片库选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)一文中所描述的依赖项服务，除了视频选取器返回的是文件名，而不是 `Stream` 对象。
 
-.NET Standard 库项目定义一个接口，名为`IVideoPicker`依赖关系服务：
+.NET Standard 库项目为依赖项服务定义名为 `IVideoPicker` 的接口：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -34,11 +34,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-每个平台包含一个名为类`VideoPicker`实现此接口。
+每个平台都包含实现此接口的 `VideoPicker` 类。
 
-### <a name="the-ios-video-picker"></a>IOS 视频选取器
+### <a name="the-ios-video-picker"></a>iOS 视频选取器
 
-IOS`VideoPicker`使用 iOS [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/)访问映像库中，指定它应被限制为在 iOS 中 （称为"电影"） 的视频`MediaType`属性。 请注意，`VideoPicker`显式实现`IVideoPicker`接口。 另请注意`Dependency`属性，用于标识此类作为一个依赖关系服务。 这些是允许 Xamarin.Forms 平台项目中查找依赖关系服务的两个要求：
+iOS `VideoPicker` 使用 iOS [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) 访问图片库，并指定在 iOS `MediaType` 属性中其应限制为视频（称为“电影”）。 请注意，`VideoPicker` 显式实现 `IVideoPicker` 接口。 还要注意将此类标识为依赖项服务的 `Dependency` 属性。 这是 Xamarin.Forms 在平台项目中找到依赖项服务的两个要求：
 
 ```csharp
 using System;
@@ -102,7 +102,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-video-picker"></a>Android 视频选取器
 
-Android 实现`IVideoPicker`需要属于应用程序的活动的回调方法。 为此，`MainActivity`类定义了两个属性、 字段和一个回调方法：
+`IVideoPicker` 的 Android 实现需要回调方法，该回调方法是应用程序活动的一部分。 因此，`MainActivity` 类定义两个属性，即字段和回调方法：
 
 ```csharp
 namespace VideoPlayerDemos.Droid
@@ -144,7 +144,7 @@ namespace VideoPlayerDemos.Droid
 }
 ```
 
-`OnCreate`中的方法`MainActivity`将自己的实例存储在静态`Current`属性。 这允许实现`IVideoPicker`来获取`MainActivity`启动的实例**选择视频**选择器：
+`MainActivity` 中的 `OnCreate` 方法将自己的实例存储在静态 `Current` 属性中。 这使得 `IVideoPicker` 的实现可以获得 `MainActivity` 实例，以启动“选择视频”选择器：
 
 ```csharp
 using System;
@@ -186,11 +186,11 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-新增功能`MainActivity`对象是中的唯一代码[ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)解决方案正常的应用程序代码需要更改以支持`FormsVideoLibrary`类。
+添加到 `MainActivity` 对象的部分是 [VideoPlayerDemos](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 解决方案中惟一的代码，在该方案中需更改常规应用程序代码以支持 `FormsVideoLibrary` 类。
 
 ### <a name="the-uwp-video-picker"></a>UWP 视频选取器
 
-UWP 实现`IVideoPicker`接口使用 UWP [ `FileOpenPicker` ](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/)。 它开始与图片库的文件搜索，并将文件类型限制为 MP4 和 WMV (Windows Media Video):
+`IVideoPicker` 接口的 UWP 实现使用 UWP [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/)。 选取器从图片库开始搜索文件，并将文件类型限制为 MP4 和 WMV（Windows Media 视频）：
 
 ```csharp
 using System;
@@ -225,9 +225,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-## <a name="invoking-the-dependency-service"></a>调用依赖关系服务
+## <a name="invoking-the-dependency-service"></a>调用依赖项服务
 
-**播放视频库**页[ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)程序演示了如何使用视频选取器依赖关系服务。 XAML 文件包含`VideoPlayer`实例和一个`Button`标记为**显示视频库**:
+[VideoPlayerDemos](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 程序的“播放库视频”页面演示如何使用视频选取器依赖项服务。 XAML 文件包含 `VideoPlayer` 实例和标记为“显示视频库”的 `Button`：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -247,7 +247,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-代码隐藏文件包含`Clicked`处理程序`Button`。 调用依赖关系服务需要调用`DependencyService.Get`若要获取的实现`IVideoPicker`平台项目中的接口。 `GetVideoFileAsync`然后在该实例上调用方法：
+代码隐藏文件包含 `Button` 的 `Clicked` 处理程序。 调用依赖项服务需要调用 `DependencyService.Get` 来获取平台项目中 `IVideoPicker` 接口的实现。 然后在该实例上调用 `GetVideoFileAsync` 方法：
 
 ```csharp
 namespace VideoPlayerDemos
@@ -280,13 +280,13 @@ namespace VideoPlayerDemos
 }
 ```
 
-`Clicked`处理程序然后使用该文件名来创建`FileVideoSource`对象并将其设置为`Source`属性的`VideoPlayer`。
+然后，`Clicked` 处理程序使用该文件名创建 `FileVideoSource` 对象，并将其设置为 `VideoPlayer` 的 `Source` 属性。
 
-每个`VideoPlayerRenderer`类包含中的代码及其`SetSource`类型的对象的方法`FileVideoSource`。 这些如下所示：
+每个 `VideoPlayerRenderer` 类都包含类型为 `FileVideoSource` 的对象的 `SetSource` 方法中的代码。 如下所示：
 
 ### <a name="handling-ios-files"></a>处理 iOS 文件
 
-IOS 版本的`VideoPlayerRenderer`进程`FileVideoSource`通过使用静态对象`Asset.FromUrl`文件名的方法。 这创建`AVAsset`对象，表示设备的映像库中的文件：
+iOS 版本的 `VideoPlayerRenderer` 通过使用带有文件名的静态 `Asset.FromUrl` 方法处理 `FileVideoSource` 对象。 这会创建一个 `AVAsset` 对象，表示设备图片库中的文件：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -316,7 +316,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="handling-android-files"></a>处理 Android 文件
 
-处理类型的对象时`FileVideoSource`，Android 的实现`VideoPlayerRenderer`使用`SetVideoPath`方法的`VideoView`设备的映像库中指定的文件：
+处理类型为 `FileVideoSource` 的对象时，`VideoPlayerRenderer` 的 Android 实现使用 `VideoView` 的 `SetVideoPath` 方法指定设备图片库中的文件：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -348,7 +348,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="handling-uwp-files"></a>处理 UWP 文件
 
-处理类型的对象时`FileVideoSource`的 UWP 实现`SetSource`方法需要创建`StorageFile`对象中，打开该文件进行读取，并将传递到流对象`SetSource`方法`MediaElement`:
+处理类型为 `FileVideoSource` 的对象时，`SetSource` 方法的 UWP 实现需要创建 `StorageFile` 对象、打开该文件进行读取并将流对象传递给 `MediaElement` 的 `SetSource` 方法：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -382,11 +382,11 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-为每个平台视频开始播放视频后几乎立即设置源，因为该文件已在设备上，无需下载。
+对于每个平台，由于文件就在设备上，不需要下载，因此视频几乎可在视频源设置完成后立即开始播放。
 
 
 
 ## <a name="related-links"></a>相关链接
 
-- [视频播放机演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [视频播放器演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 - [从图片库中选取照片](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

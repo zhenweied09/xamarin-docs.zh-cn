@@ -1,6 +1,6 @@
 ---
 title: 播放 Web 视频
-description: 本文介绍如何在使用 Xamarin.Forms 的视频播放器应用程序中播放 web 视频。
+description: 本文说明如何使用 Xamarin.Forms 在视频播放器应用程序中播放 Web 视频。
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
@@ -9,14 +9,14 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52172205"
 ---
 # <a name="playing-a-web-video"></a>播放 Web 视频
 
-`VideoPlayer`类定义`Source`属性用于指定的源视频文件，以及`AutoPlay`属性。 `AutoPlay` 其默认设置为`true`，这意味着视频应开始播放之后自动`Source`已设置：
+`VideoPlayer` 类定义用于指定视频文件源的 `Source` 属性，以及 `AutoPlay` 属性。 `AutoPlay` 默认设置为 `true`，这意味着视频应在设置 `Source` 后自动开始播放：
 
 ```csharp
 using System;
@@ -52,11 +52,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-`Source`属性属于类型`VideoSource`，这模仿 Xamarin.Forms [ `ImageSource` ](xref:Xamarin.Forms.ImageSource)抽象类，并且其三个派生[ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource)， [`FileImageSource` ](xref:Xamarin.Forms.FileImageSource)，并[ `StreamImageSource` ](xref:Xamarin.Forms.StreamImageSource)。 没有流选项仅适用于`VideoPlayer`但是，因为 iOS 和 Android 不支持播放从流视频。
+`Source` 属性为 `VideoSource` 类型，它根据 Xamarin.Forms [`ImageSource`](xref:Xamarin.Forms.ImageSource) 抽象类及其三个派生类 [`UriImageSource`](xref:Xamarin.Forms.UriImageSource)、[`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 和 [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) 进行模式化。 但是，`VideoPlayer` 没有可用的数据流选项，因为 iOS 和 Android 不支持播放来自数据流的视频。
 
 ## <a name="video-sources"></a>视频源
 
-抽象`VideoSource`类只包含三个实例化派生自的三个类的静态方法`VideoSource`:
+`VideoSource` 抽象类仅由三个静态方法组成，这些方法实例化派生自 `VideoSource` 的三个类：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -82,7 +82,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-`UriVideoSource`类用于与 URI 指定一个可下载的视频文件。 它定义类型的单个属性`string`:
+`UriVideoSource` 类用于指定带有 URI 的可下载视频文件。 它定义类型为 `string` 的单一属性：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -101,9 +101,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-处理类型的对象`UriVideoSource`如下所述。
+下文介绍如何处理类型为 `UriVideoSource` 的对象。
 
-`ResourceVideoSource`类用于访问作为平台应用程序还使用指定的嵌入资源存储的视频文件`string`属性：
+`ResourceVideoSource` 类用于访问在平台应用程序中作为嵌入资源存储的视频文件，该类也使用 `string` 属性进行指定：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -122,9 +122,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-处理类型的对象`ResourceVideoSource`文章中介绍了[加载应用程序资源视频](loading-resources.md)。 `VideoPlayer`类具有任何工具可以加载为.NET Standard 库中的资源存储的视频文件。
+[加载应用程序资源视频](loading-resources.md)一文中介绍了如何处理类型为 `ResourceVideoSource` 的对象。 `VideoPlayer` 类没有可用于加载在 .NET Standard 库中作为资源存储的视频文件的功能。
 
-`FileVideoSource`类用于从设备的视频库访问视频文件。 单个属性的类型也是`string`:
+`FileVideoSource` 类用于访问设备视频库中的视频文件。 该单一属性也为 `string` 类型：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -143,9 +143,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-处理类型的对象`FileVideoSource`文章中介绍了[访问设备的视频库](accessing-library.md)。
+[访问设备视频库](accessing-library.md)一文中介绍了如何处理类型为 `FileVideoSource` 的对象。
 
-`VideoSource`类包括`TypeConverter`引用的属性`VideoSourceConverter`:
+`VideoSource` 类包含引用 `VideoSourceConverter` 的 `TypeConverter` 属性：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -158,7 +158,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-调用此类型转换器时`Source`属性设置为在 XAML 中的字符串。 下面是`VideoSourceConverter`类：
+当 `Source` 属性设置为 XAML 中的字符串时，将调用此类型转换器。 以下是 `VideoSourceConverter` 类：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -180,15 +180,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-`ConvertFromInvariantString`方法尝试将字符串转换为`Uri`对象。 如果成功，并且该方案不是`file:`，则该方法返回`UriVideoSource`。 否则，它将返回`ResourceVideoSource`。
+`ConvertFromInvariantString` 方法尝试将字符串转换为 `Uri` 对象。 如果成功，并且方案不为 `file:`，则该方法返回 `UriVideoSource`。 否则，将返回 `ResourceVideoSource`。
 
 ## <a name="setting-the-video-source"></a>设置视频源
 
-单个平台呈现器被实现所有其他逻辑相关的视频源。 以下部分介绍了如何平台呈现器播放视频时`Source`属性设置为`UriVideoSource`对象。
+涉及视频源的所有其他逻辑都在各个平台呈现器中实现。 以下各部分介绍当 `Source` 属性设置为 `UriVideoSource` 对象时，平台呈现器如何播放视频。
 
-### <a name="the-ios-video-source"></a>IOS 视频源
+### <a name="the-ios-video-source"></a>iOS 视频源
 
-两个部分`VideoPlayerRenderer`参与视频播放器将视频源设置。 Xamarin.Forms 首先创建类型的对象`VideoPlayer`，则`OnElementChanged`方法调用与`NewElement`自变量对象的属性设置为的`VideoPlayer`。 `OnElementChanged`方法调用`SetSource`:
+`VideoPlayerRenderer` 的两个节与设置视频播放器的视频源有关。 当 Xamarin.Forms 首次创建类型为 `VideoPlayer` 的对象时，将调用 `OnElementChanged` 方法，并将 arguments 对象的 `NewElement` 属性设置为该 `VideoPlayer`。 `OnElementChanged` 方法调用 `SetSource`：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -221,9 +221,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-更高版本上，当`Source`更改属性时，`OnElementPropertyChanged`方法调用与`PropertyName`"源"属性和`SetSource`再次调用。
+稍后，当 `Source` 属性更改时，将使用“Source”的 `PropertyName` 属性调用 `OnElementPropertyChanged` 方法，并再次调用 `SetSource`。
 
-若要播放视频文件在 iOS 中，类型的对象[ `AVAsset` ](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/)首次创建封装该视频文件，并用于创建[ `AVPlayerItem` ](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/)，其中然后交给`AVPlayer`对象。 下面是如何`SetSource`方法将处理`Source`属性的类型时`UriVideoSource`:
+若要在 iOS 中播放视频文件，首先需要创建类型为 [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) 的对象来封装视频文件，该对象会用于创建 [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/)，后者之后会传递到 `AVPlayer` 对象。 以下代码展示 `SetSource` 方法在 `Source` 属性为 `UriVideoSource` 类型时如何对其进行处理：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -268,9 +268,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-`AutoPlay`属性中的 iOS 视频类，具有不相似之处，因此属性检查的末尾`SetSource`方法来调用`Play`方法`AVPlayer`对象。
+`AutoPlay` 属性在 iOS 视频类中无模拟属性，因此会在 `SetSource` 方法的末尾检查该属性，以便调用 `AVPlayer` 对象上的 `Play` 方法。
 
-在某些情况下，视频继续与页之后播放`VideoPlayer`导航回主页。 若要停止视频中，`ReplaceCurrentItemWithPlayerItem`还在设置`Dispose`重写：
+在某些情况下，视频会在包含 `VideoPlayer` 的页面导航回主页后继续播放。 为了停止视频，`Dispose` 替代中还会设置 `ReplaceCurrentItemWithPlayerItem`：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -292,9 +292,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-### <a name="the-android-video-source"></a>Android 的视频源
+### <a name="the-android-video-source"></a>Android 视频源
 
-Android`VideoPlayerRenderer`需要在设置播放机的视频源时`VideoPlayer`是首次创建及更高版本时`Source`属性更改：
+Android `VideoPlayerRenderer` 需要在首次创建 `VideoPlayer` 时以及稍后 `Source` 属性更改时设置播放器的视频源：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -327,7 +327,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-`SetSource`方法可处理类型的对象`UriVideoSource`通过调用`SetVideoUri`上`VideoView`与 Android`Uri`从 URI 的字符串创建对象。 `Uri`类完全限定此处以便将其从.NET`Uri`类：
+`SetSource` 方法通过使用自字符串 URI 创建的 Android `Uri` 对象来调用 `VideoView` 上的 `SetVideoUri`，从而处理类型为 `UriVideoSource` 的对象。 此处的 `Uri` 类处于完全限定状态，以便与 .NET `Uri` 类进行区分：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -362,15 +362,15 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Android`VideoView`无相应`AutoPlay`属性，因此`Start`调用方法时如果已设置新视频。
+Android `VideoView` 没有对应的 `AutoPlay` 属性，因此，如果设置了新视频，则会调用 `Start` 方法。
 
-如果存在是有区别的行为的 ios 和 Android 的呈现器`Source`属性`VideoPlayer`设置为`null`，或者如果`Uri`属性`UriVideoSource`设置为`null`或空白字符串。 如果 iOS 视频播放器当前播放的视频，并`Source`设置为`null`(或字符串是`null`或保留为空)，`ReplaceCurrentItemWithPlayerItem`使用调用`null`值。 当前的视频将被替换，并停止播放。
+如果 `VideoPlayer` 的 `Source` 属性设置为 `null`，或如果 `UriVideoSource` 的 `Uri` 属性设置为 `null`或空白字符串，则 iOS 呈现器和 Android 呈现器的行为会有所不同。 如果 iOS 视频播放器目前正在播放视频，并且 `Source` 设置为 `null`（或字符串为 `null` 或空白），则会使用 `null` 值调用 `ReplaceCurrentItemWithPlayerItem`。 当前视频会被替换并停止播放。
 
-Android 不支持类似的工具。 如果`Source`属性设置为`null`，则`SetSource`方法只需忽略它，并将持续播放，当前的视频。
+Android 不支持类似的功能。 如果 `Source` 属性设置为 `null`，则 `SetSource` 方法会忽略它，并且当前视频会继续播放。
 
 ### <a name="the-uwp-video-source"></a>UWP 视频源
 
-UWP`MediaElement`定义`AutoPlay`属性，它在与任何其他属性一样呈现器中处理：
+UWP `MediaElement` 定义 `AutoPlay` 属性，该属性在呈现器中像任何其他属性一样进行处理：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -407,7 +407,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-`SetSource`属性句柄`UriVideoSource`通过设置对象`Source`的属性`MediaElement`到.NET`Uri`值，或设置为`null`如果`Source`属性`VideoPlayer`设置为`null`:
+`SetSource` 属性通过将 `MediaElement` 的 `Source` 属性设置为 .NET `Uri` 值或设置为 `null`（如果 `VideoPlayer` 的 `Source` 属性设置为 `null`）来处理 `UriVideoSource` 对象：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -445,9 +445,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-## <a name="setting-a-url-source"></a>URL 源设置
+## <a name="setting-a-url-source"></a>设置 URL 源
 
-使用三个呈现器中的这些属性的实现，就可能要播放的视频 URL 的来源。 **播放 Web 视频**页面[ **VideoPlayDemos** ]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md)程序由下面的 XAML 文件：
+通过在三个呈现器中实现这些属性，可以播放来自 URL 源的视频。 [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) 程序中的“播放 Web 视频”页由以下 XAML 文件定义：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -461,31 +461,31 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-`VideoSourceConverter`类将字符串转换为`UriVideoSource`。 导航到**播放 Web 视频**页上，视频开始加载和播放下载足够数量的数据并将其缓冲时启动。 视频为大约 10 分钟的长度：
+`VideoSourceConverter` 类将字符串转换为 `UriVideoSource`。 导航到“播放 Web 视频”页时，视频会开始加载，并在下载和缓冲足够数量的数据后开始播放。 视频时长约为 10 分钟：
 
 [![播放 Web 视频](web-videos-images/playwebvideo-small.png "播放 Web 视频")](web-videos-images/playwebvideo-large.png#lightbox "播放 Web 视频")
 
-在每个平台上传输控件淡出如果它们不会用到，但可以还原以查看通过点击该视频。
+在每个平台上，如果未使用传输控件，则传输控件会淡出，但可以通过点击视频将其恢复为查看状态。
 
-可以阻止自动启动设置视频`AutoPlay`属性设置为`false`:
+可以通过将 `AutoPlay` 属性设置为 `false` 来阻止视频自动启动：
 
 ```xaml
 <video:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
                    AutoPlay="false" />
 ```
 
-你将需要按**播放**按钮以开始播放视频。
+需要按“播放”按钮才能启动视频。
 
-类似地，可以通过设置隐含的传输控件显示`AreTransportControlsEnabled`属性设置为`false`:
+同样，可以通过将 `AreTransportControlsEnabled` 属性设置为 `false` 来禁止显示传输控件：
 
 ```xaml
 <video:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
                    AreTransportControlsEnabled="False" />
 ```
 
-如果这两个属性设置为`false`，然后视频不会开始播放，并将启动该服务没有办法 ！ 可能需要调用`Play`从代码隐藏文件，或创建你自己的传输控件，如本文所述[实现自定义视频传输控件](custom-transport.md)。
+如果将这两个属性都设置为 `false`，则视频不会开始播放，且没有任何方法可以启动视频！ 需要从代码隐藏文件中调用 `Play`，或者创建自己的传输控件，如[实现自定义视频传输控件](custom-transport.md)一文中所述。
 
-**App.xaml**文件包含资源的两个其他视频：
+**App.xaml** 文件包含用于两个其他视频的资源：
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -509,13 +509,13 @@ namespace FormsVideoLibrary.UWP
 </Application>
 ```
 
-可以为这些其他电影之一的引用，替换中的显式 URL **PlayWebVideo.xaml**文件具有`StaticResource`标记扩展，这种情况下的`VideoSourceConverter`不需要创建`UriVideoSource`对象：
+若要引用这些其他电影之一，可以使用 `StaticResource` 标记扩展替换 **PlayWebVideo.xaml** 文件中的显式 URL，在这种情况下，不需要 `VideoSourceConverter` 即可创建 `UriVideoSource` 对象：
 
 ```xaml
 <video:VideoPlayer Source="{StaticResource ElephantsDream}" />
 ```
 
-或者，可以设置`Source`中的视频文件的属性`ListView`，如在下一篇文章中所述[绑定到播放器的视频源](source-bindings.md)。
+或者，可以在 `ListView` 中设置视频文件的 `Source` 属性，如下一篇文章[将视频源绑定到播放器](source-bindings.md)中所述。
 
 
 
@@ -523,4 +523,4 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>相关链接
 
-- [视频播放机演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [视频播放器演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

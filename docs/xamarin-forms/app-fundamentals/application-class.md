@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 应用程序类
-description: 此文章介绍了功能的默认应用程序类，其中包含要设置为应用程序的初始页的属性，并为永久性字典在生命周期状态更改存储简单的值。
+title: Xamarin.Forms App 类
+description: 本文说明默认 App 类的功能，其中包括一个可设置应用初始页面的属性，以及一个跨生命周期状态更改存储简单值的持久字典。
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
@@ -9,27 +9,27 @@ ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
 ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50675089"
 ---
-# <a name="xamarinforms-app-class"></a>Xamarin.Forms 应用程序类
+# <a name="xamarinforms-app-class"></a>Xamarin.Forms App 类
 
-`Application`基类提供以下功能，它们在默认的项目中公开`App`子类：
+`Application` 基类提供以下功能，这些功能在项目的默认 `App` 子类中公开：
 
-* 一个`MainPage`属性，它是在何处设置应用的初始页。
-* 持久[`Properties`字典](#Properties_Dictionary)在生命周期状态更改存储简单值。
-* 静态`Current`属性，其中包含对当前应用程序对象的引用。
+* `MainPage` 属性，可在其中设置应用的初始页面。
+* 持久 [`Properties` 字典](#Properties_Dictionary)，用于跨生命周期状态更改存储简单值。
+* 静态 `Current` 属性，其中包含对当前应用程序对象的引用。
 
-它还公开[生命周期方法](~/xamarin-forms/app-fundamentals/app-lifecycle.md)如`OnStart`， `OnSleep`，和`OnResume`以及模式导航的事件。
+它还公开[生命周期方法](~/xamarin-forms/app-fundamentals/app-lifecycle.md)，例如 `OnStart`、`OnSleep` 和 `OnResume` 以及模式导航事件。
 
-具体的模板取决于您选择，`App`类可以定义在两种方式之一：
+根据选择的模板，可以通过以下两种方式之一定义 `App` 类：
 
 * **C#**，或
 * **XAML 和 C#**
 
-若要创建**应用程序**类使用 XAML，默认**应用**类必须替换 XAML**应用**类和关联的代码隐藏，如下面的代码示例中所示：
+若要使用 XAML 创建 **App** 类，必须使用 XAML **App** 类和关联的代码隐藏替换默认的 **App** 类，如以下代码示例所示：
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
@@ -37,7 +37,7 @@ ms.locfileid: "50675089"
 </Application>
 ```
 
-下面的代码示例显示了关联的代码隐藏：
+以下代码示例展示了关联的代码隐藏：
 
 ```csharp
 public partial class App : Application
@@ -51,15 +51,15 @@ public partial class App : Application
 }
 ```
 
-设置以及[ `MainPage` ](xref:Xamarin.Forms.Application.MainPage)属性，还必须调用代码隐藏`InitializeComponent`方法来加载和分析相关联的 XAML。
+除了设置 [`MainPage`](xref:Xamarin.Forms.Application.MainPage) 属性外，代码隐藏还必须调用 `InitializeComponent` 方法来加载和分析相关的 XAML。
 
 ## <a name="mainpage-property"></a>MainPage 属性
 
-`MainPage`属性上的`Application`类设置的根页的应用程序。
+`Application` 类上的 `MainPage` 属性可设置应用程序的根页面。
 
-例如，可以创建在逻辑应用`App`类，以显示不同的页，具体取决于是否用户登录或未。
+例如，可在 `App` 类中创建逻辑，以便根据用户的登录状态来显示不同的页面。
 
-`MainPage`属性应设置`App`构造函数，
+应在 `App` 构造函数中设置 `MainPage` 属性。
 
 ```csharp
 public class App : Xamarin.Forms.Application
@@ -75,17 +75,17 @@ public class App : Xamarin.Forms.Application
 
 ## <a name="properties-dictionary"></a>属性字典
 
-`Application`子类具有静态`Properties`可以使用字典来存储数据，特别是在中使用`OnStart`， `OnSleep`，和`OnResume`方法。 这可以从访问，你的代码使用 Xamarin.Forms 中的任意位置`Application.Current.Properties`。
+`Application` 子类具有静态 `Properties` 字典，该字典可用于存储数据，特别是用于 `OnStart`、`OnSleep` 和 `OnResume` 方法。 可以使用 `Application.Current.Properties` 从 Xamarin.Forms 代码中的任何位置对此进行访问。
 
-`Properties` Dictionary 使用`string`密钥和存储`object`值。
+`Properties` 字典使用 `string` 密钥并存储 `object` 值。
 
-例如，您可以设置永久`"id"`在代码中的任意位置的属性 (当选择项，在页面的`OnDisappearing`方法，或在`OnSleep`方法) 如下所示：
+例如，可以在代码中的任何位置（选中某个项目时，在页面的 `OnDisappearing` 方法中，或在 `OnSleep` 方法中）设置持久 `"id"` 属性，如下所示：
 
 ```csharp
 Application.Current.Properties ["id"] = someClass.ID;
 ```
 
-在中`OnStart`或`OnResume`方法可以使用此值以重新创建以某种方式的用户的体验。 `Properties`字典存储`object`s，因此您需要其值强制转换之前使用它。
+在 `OnStart` 或 `OnResume` 方法中，随后可使用此值以某种方式重新创建用户体验。 `Properties` 字典存储 `object`，因此，需要在使用之前强制转换其值。
 
 ```csharp
 if (Application.Current.Properties.ContainsKey("id"))
@@ -95,27 +95,27 @@ if (Application.Current.Properties.ContainsKey("id"))
 }
 ```
 
-始终检查存在的密钥才能访问它以防止出现意外的错误。
+在访问密钥前，请务必检查密钥是否存在，以防止意外错误。
 
 > [!NOTE]
-> `Properties`字典可以仅序列化的存储基元类型。 尝试存储的其他类型 (如`List<string>`) 可能会以静默方式失败。
+> `Properties` 字典只能序列化基元类型用于存储。 尝试存储其他类型（例如 `List<string>`）可能会在无提示的情况下失败。
 
 <!-- bugzilla 28657 -->
 
 ### <a name="persistence"></a>持久性
 
-`Properties`字典自动保存到设备。
-当应用程序将返回从后台或甚至重新启动之后，将可添加到字典中的数据。
+`Properties` 字典会自动保存到设备中。
+当应用程序从后台返回，甚或在其重启后，添加到字典中的数据将可用。
 
-Xamarin.Forms 1.4 上引入的其他方法`Application`类的`SavePropertiesAsync()`-这可以调用以进行主动保留`Properties`字典。 这将允许您保存后的重要更新的属性，而不是它们不获取序列化出由于故障或丢失的 os 的风险。
+Xamarin.Forms 1.4 在 `Application` 类上引入了其他方法 (`SavePropertiesAsync()`)，可调用该方法来主动保存 `Properties` 字典。 这是为了让用户能够在重要更新后保存属性，而不用冒因崩溃或被 OS 终止而无法将这些属性序列化的风险。
 
-您可以查找对使用的引用`Properties`字典中的**使用 Xamarin.Forms 创建移动应用**书籍章节[6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf)， [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf)，和[20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf)，与关联[示例](https://github.com/xamarin/xamarin-forms-book-preview-2)。
+可在**使用 Xamarin.Forms 创建移动应用**一书的第 [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf)、[15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) 和 [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 章以及相关[示例](https://github.com/xamarin/xamarin-forms-book-preview-2)中找到如何使用 `Properties` 字典的参考。
 
 
 
 ## <a name="the-application-class"></a>Application 类
 
-完整`Application`类的实现如下所示的引用：
+完整的 `Application` 类实现如下所示，以供参考：
 
 ```csharp
 public class App : Xamarin.Forms.Application
@@ -146,17 +146,17 @@ public class App : Xamarin.Forms.Application
 
 ```
 
-然后在每个特定于平台的项目中实例化并传递给此类`LoadApplication`这是 where 方法`MainPage`加载并显示给用户。
-以下各节中显示为每个平台的代码。 最新的 Xamarin.Forms 解决方案模板已包含所有这些代码，为您的应用程序预先配置的。
+此类随后在每个特定于平台的项目中实例化并传递到 `LoadApplication` 方法，该方法可供加载 `MainPage` 并向用户显示。
+以下各部分展示了每个平台的代码。 最新的 Xamarin.Forms 解决方案模板已包含所有这些为应用预先配置的代码。
 
 
 ### <a name="ios-project"></a>iOS 项目
 
-IOS`AppDelegate`类继承自`FormsApplicationDelegate`。 它应当：
+iOS `AppDelegate` 类继承自 `FormsApplicationDelegate`。 它应该：
 
-* 调用`LoadApplication`的实例与`App`类。
+* 使用 `App` 类的实例调用 `LoadApplication`。
 
-* 始终返回`base.FinishedLaunching (app, options);`。
+* 始终返回 `base.FinishedLaunching (app, options);`。
 
 ```csharp
 [Register ("AppDelegate")]
@@ -176,7 +176,7 @@ public partial class AppDelegate :
 
 ### <a name="android-project"></a>Android 项目
 
-Android`MainActivity`继承`FormsAppCompatActivity`。 在中`OnCreate`重写`LoadApplication`使用的实例调用方法`App`类。
+Android `MainActivity` 继承自 `FormsAppCompatActivity`。 在 `OnCreate` 替代中，使用 `App` 类的实例调用 `LoadApplication` 方法。
 
 ```csharp
 [Activity (Label = "App Lifecycle Sample", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
@@ -196,9 +196,9 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>适用于 Windows 10 的通用 Windows 项目 (UWP)
 
-请参阅[安装 Windows 项目](~/xamarin-forms/platform/windows/installation/index.md)有关 Xamarin.Forms 中的 UWP 支持信息。
+有关 Xamarin.Forms 中的 UWP 支持的信息，请参阅[设置 Windows 项目](~/xamarin-forms/platform/windows/installation/index.md)。
 
-在 UWP 项目的主页应继承自`WindowsPage`:
+UWP 项目中的主页应继承自 `WindowsPage`：
 
 ```xaml
 <forms:WindowsPage
@@ -208,7 +208,7 @@ public class MainActivity : FormsAppCompatActivity
 </forms:WindowsPage>
 ```
 
-C#代码隐藏构造必须调用`LoadApplication`创建一个实例在 Xamarin.Forms `App`。 请注意，它是显式使用应用程序的命名空间限定的好办法`App`因为 UWP 应用程序也有其自己`App`与 Xamarin.Forms 不相关的类。
+C# 代码隐藏构造必须调用 `LoadApplication` 来创建 Xamarin.Forms `App` 的实例。 请注意，最好显式使用应用程序命名空间来限定 `App`，因为 UWP 应用程序还有自己的与 Xamarin.Forms 无关的 `App` 类。
 
 ```csharp
 public sealed partial class MainPage
@@ -222,4 +222,4 @@ public sealed partial class MainPage
  }
 ```
 
-请注意，`Forms.Init()`必须调用**App.xaml.cs**围绕第 63 行。
+请注意，必须在 **App.xaml.cs** 的第 63 行调用 `Forms.Init()`。

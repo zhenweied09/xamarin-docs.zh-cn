@@ -1,6 +1,6 @@
 ---
-title: 正在检查电池状态
-description: 此文章介绍了如何使用 Xamarin.Forms DependencyService 类访问本机为每个平台的电池信息。
+title: 检查电池状态
+description: 本文介绍如何使用 Xamarin.Forms DependencyService 类访问每个平台的电池信息。
 ms.prod: xamarin
 ms.assetid: CF1C5A73-84ED-407D-BDC5-EB1D83D2D3DB
 ms.technology: xamarin-forms
@@ -9,24 +9,24 @@ ms.author: dabritch
 ms.date: 08/09/2016
 ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998385"
 ---
-# <a name="checking-battery-status"></a>正在检查电池状态
+# <a name="checking-battery-status"></a>检查电池状态
 
-本文将指导完成创建应用程序，用于检查电池状态。 这篇文章基于 James montemagno 电池插件。 有关详细信息，请参阅[GitHub 存储库](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)。
+本文介绍如何创建检查电池状态的应用程序。 本文基于 James Montemagno 所著的《电池插件》。 有关详细信息，请参阅 [GitHub 存储库](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)。
 
-因为 Xamarin.Forms 不包括用于检查当前的电池状态的功能，此应用程序将需要使用[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)以充分利用本机 Api。  本文将介绍以下步骤使用`DependencyService`:
+由于 Xamarin.Forms 不包含检查当前电池状态的功能，因此该应用程序将需要使用 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 才能利用本机 API。  本文将介绍使用 `DependencyService` 的以下步骤：
 
-- **[创建接口](#Creating_the_Interface)** &ndash;了解如何共享代码中创建接口。
-- **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
-- **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码中实现的接口。
-- **[通用 Windows 平台实现](#UWPImplementation)** &ndash;了解如何为通用 Windows 平台 (UWP) 中的本机代码实现的接口。
-- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现从共享代码。
+- **[创建接口](#Creating_the_Interface)** &ndash; 了解如何在共享代码中创建接口。
+- **[iOS 实现](#iOS_Implementation)**](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
+- **[Android 实现](#Android_Implementation)**](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
+- **[通用 Windows 平台实现](#UWPImplementation)**](#UWPImplementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
+- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash; 了解如何使用 `DependencyService` 从共享代码调用本机实现。
 
-完成后，应用程序使用`DependencyService`将具有以下结构：
+完成后，使用 `DependencyService` 的应用程序将具有以下结构：
 
 ![](battery-info-images/battery-diagram.png "DependencyService 应用程序结构")
 
@@ -34,7 +34,7 @@ ms.locfileid: "38998385"
 
 ## <a name="creating-the-interface"></a>创建界面
 
-首先，创建一个接口，表示所需的功能的共享代码中。 在电池检查应用程序的情况下的相关信息是电池剩余的百分比，无论设备已充电，且在设备接通电源的方式：
+首先，在表示所需功能的共享代码中创建接口。 如果是电池检测应用程序，则相关信息为剩余电量的百分比、设备是否充电以及设备如何接收电源：
 
 ```csharp
 namespace DependencyServiceSample
@@ -66,16 +66,16 @@ namespace DependencyServiceSample
 }
 ```
 
-针对此接口在共享代码中编写代码将允许 Xamarin.Forms 应用程序访问每个平台上的电源管理 Api。
+在共享代码中对这个接口进行编码将允许 Xamarin.Forms 应用程序访问每个平台上的电源管理 API。
 
 > [!NOTE]
-> 实现接口的类必须具有无参数的构造函数，以使用`DependencyService`。 不能由接口定义构造函数。
+> 实现接口的类必须具有无参数的构造函数才能使用 `DependencyService`。 构造函数不能由接口定义。
 
 <a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>iOS 实现
 
-`IBattery`接口必须实现每个特定于平台的应用程序项目中。 IOS 实现将使用本机[ `UIDevice` ](https://developer.xamarin.com/api/type/UIKit.UIDevice/)访问电池信息的 Api。 请注意，下面的类具有无参数构造函数，以便`DependencyService`可以创建新实例：
+`IBattery` 接口必须在每个特定于平台的应用程序项目中实现。 iOS 实现将使用本机 [`UIDevice`](https://developer.xamarin.com/api/type/UIKit.UIDevice/) API 访问电池信息。 请注意，以下类有一个无参数的构造函数，以便 `DependencyService` 可以创建新的实例：
 
 ```csharp
 using UIKit;
@@ -138,7 +138,7 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-最后，添加以下`[assembly]`包括任何所需属性该类上方 （和任何已定义的命名空间之外），`using`语句：
+最后，将该 `[assembly]` 属性添加到类的上面（以及任何已经定义的名称空间的外面），包括任何必需的 `using` 语句：
 
 ```csharp
 using UIKit;
@@ -152,13 +152,13 @@ namespace DependencyServiceSample.iOS
     ...
 ```
 
-此属性的实现作为注册类`IBattery`接口，这意味着`DependencyService.Get<IBattery>`可用于共享代码中创建它的一个实例：
+此属性将该类注册为 `IBattery` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<IBattery>` 来创建它的实例：
 
 <a name="Android_Implementation" />
 
 ## <a name="android-implementation"></a>Android 实现
 
-Android 实现使用[ `Android.OS.BatteryManager` ](https://developer.xamarin.com/api/type/Android.OS.BatteryManager/) API。 此实现起来更为复杂的 iOS 版本，需要检查，以处理缺少的电池权限：
+Android 实现使用 [`Android.OS.BatteryManager`](https://developer.xamarin.com/api/type/Android.OS.BatteryManager/) API。 该实现比 iOS 版本的实现更复杂，要求检查以处理电池权限不足的问题：
 
 ```csharp
 using System;
@@ -295,7 +295,7 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-添加以下`[assembly]`包括任何所需属性该类上方 （和任何已定义的命名空间之外），`using`语句：
+将该 `[assembly]` 属性添加到类的上面（以及任何已经定义的名称空间的外面），包括任何必需的 `using` 语句：
 
 ```csharp
 ...
@@ -309,13 +309,13 @@ namespace DependencyServiceSample.Droid
     ...
 ```
 
-此属性的实现作为注册类`IBattery`接口，这意味着`DependencyService.Get<IBattery>`可在共享的代码可以创建它的一个实例。
+此属性将该类注册为 `IBattery` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<IBattery>` 来创建它的实例。
 
 <a name="UWPImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>通用 Windows 平台实现
 
-UWP 实现使用`Windows.Devices.Power`Api 以获取电池状态信息：
+UWP 实现使用 `Windows.Devices.Power` API 获取电池状态信息：
 
 ```csharp
 using DependencyServiceSample.UWP;
@@ -409,13 +409,13 @@ namespace DependencyServiceSample.UWP
 }
 ```
 
-`[assembly]`上面的命名空间声明的属性的实现作为注册类`IBattery`接口，这意味着`DependencyService.Get<IBattery>`可用于共享代码中创建它的一个实例。
+命名空间声明上面的 `[assembly]` 属性将该类注册为 `IBattery` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<IBattery>` 来创建它的实例。
 
 <a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>在共享代码中实现
 
-现在，已针对每个平台实现该接口，可以编写共享的应用程序以充分利用它。 将包含应用程序具有一个按钮的页，当点击更新其文本与当前的电池状态。 它使用`DependencyService`若要获取的实例`IBattery`接口。 在运行时，此实例将是具有完全访问权限的本机 SDK 的特定于平台的实现。
+为每个平台实现接口后，现在即可编写共享应用程序来利用该接口。 该应用程序将包含带有按钮的页面，点击该按钮时即可更新当前电池状态的文本。 它使用 `DependencyService` 来获取 `IBattery` 接口的实例。 在运行时，该实例将是特定于平台的实现，可以完全访问本机 SDK。
 
 ```csharp
 public MainPage ()
@@ -469,13 +469,13 @@ public MainPage ()
 }
 ```
 
-在 iOS 上运行此应用程序，Android 或 UWP 和按下按钮将导致更新以反映设备的当前电源状态的按钮文本。
+在 iOS、Android 或 UWP 上运行此应用程序并按下按钮将导致按钮文本更新，以反映设备当前的电源状态。
 
 ![](battery-info-images/battery.png "电池状态示例")
 
 
 ## <a name="related-links"></a>相关链接
 
-- [DependencyService （示例）](https://developer.xamarin.com/samples/DependencyService)
-- [使用 DependencyService （示例）](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [DependencyService（示例）](https://developer.xamarin.com/samples/DependencyService)
+- [使用 DependencyService（示例）](https://developer.xamarin.com/samples/UsingDependencyService/)
 - [Xamarin.Forms 示例](https://github.com/xamarin/xamarin-forms-samples)

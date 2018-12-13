@@ -1,6 +1,6 @@
 ---
 title: 实现 HybridWebView
-description: 本文演示如何创建 HybridWebView 自定义控件，该示例演示了如何增强特定于平台的 web 控件，以便 C# 代码调用 JavaScript 中的自定义呈现器。
+description: 本文演示如何为 HybridWebView 自定义控件创建自定义呈现器，演示如何增强特定于平台的 Web 控件以允许从 JavaScript 调用 C# 代码。
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
@@ -9,36 +9,36 @@ ms.author: dabritch
 ms.date: 10/19/2018
 ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50105033"
 ---
 # <a name="implementing-a-hybridwebview"></a>实现 HybridWebView
 
-_Xamarin.Forms 自定义用户界面控件应派生视图类，用于放置布局和屏幕上的控件。本文演示如何创建 HybridWebView 自定义控件，该示例演示了如何增强特定于平台的 web 控件，以便 C# 代码调用 JavaScript 中的自定义呈现器。_
+_Xamarin.Forms 自定义用户界面控件应派生自视图类，该类用于在屏幕上放置布局和控件。本文演示如何为 HybridWebView 自定义控件创建自定义呈现器，演示如何增强特定于平台的 Web 控件以允许从 JavaScript 调用 C# 代码。_
 
-每个 Xamarin.Forms 视图都会随附的呈现器为每个平台创建本机控件的实例。 当[ `View` ](xref:Xamarin.Forms.View) Xamarin.Forms 应用程序在 iOS 中，呈现`ViewRenderer`类实例化时，这反过来实例化本机`UIView`控件。 在 Android 平台上`ViewRenderer`类实例化`View`控件。 在通用 Windows 平台 (UWP)，`ViewRenderer`类实例化本机`FrameworkElement`控件。 有关呈现器和 Xamarin.Forms 控件映射到的本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
+每个 Xamarin.Forms 视图都有一个附带的呈现器，适用于创建本机控件实例的各个平台。 当 Xamarin.Forms 应用程序在 iOS 中呈现 [`View`](xref:Xamarin.Forms.View) 时，会实例化 `ViewRenderer` 类，该类又会实例化本机 `UIView` 控件。 在 Android 平台上，`ViewRenderer` 类实例化 `View` 控件。 在通用 Windows 平台 (UWP) 上，`ViewRenderer` 类实例化本机 `FrameworkElement` 控件。 有关 Xamarin.Forms 控件映射到的呈现器和本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 
-下图说明了之间的关系[ `View` ](xref:Xamarin.Forms.View)和相应的本机控件实现它：
+下图说明了 [`View`](xref:Xamarin.Forms.View) 和实现它的相应本机控件之间的关系：
 
-![](hybridwebview-images/view-classes.png "视图类和其实现的本机类之间的关系")
+![](hybridwebview-images/view-classes.png "视图类及其实现本机类之间的关系")
 
-呈现过程可用于通过创建自定义呈现器为实现特定于平台的自定义[ `View` ](xref:Xamarin.Forms.View)每个平台上。 执行此操作的过程如下所示：
+通过在每个平台上为 [`View`](xref:Xamarin.Forms.View) 创建自定义呈现器，可以使用呈现过程来实现特定于平台的自定义。 执行此操作的过程如下：
 
-1. [创建](#Creating_the_HybridWebView)`HybridWebView`自定义控件。
-1. [占用](#Consuming_the_HybridWebView)`HybridWebView`从 Xamarin.Forms。
-1. [创建](#Creating_the_Custom_Renderer_on_each_Platform)的自定义呈现器`HybridWebView`每个平台上。
+1. [创建](#Creating_the_HybridWebView) `HybridWebView`自定义控件。
+1. [使用](#Consuming_the_HybridWebView) Xamarin.Forms 中的 `HybridWebView`。
+1. 在每个平台上为 `HybridWebView` [创建](#Creating_the_Custom_Renderer_on_each_Platform)自定义呈现器。
 
-每个项将现在讨论反过来实现`HybridWebView`增强了特定于平台的 web 控件，以便 C# 代码调用 JavaScript 中的呈现器。 `HybridWebView`实例将用于显示要求用户输入其名称的 HTML 页。 然后，当用户单击 HTML 按钮，将调用 JavaScript 函数的 C#`Action`显示一个弹出窗口，其中包含用户名称。
+现在将依次讨论每个项目以实现 `HybridWebView` 呈现器，该呈现器增强特定于平台的 Web 控件以允许从 JavaScript 调用 C# 代码。 `HybridWebView` 实例将用于显示要求用户输入其名称的 HTML 页。 然后，当用户单击 HTML 按钮，JavaScript 函数将调用 C# `Action` 显示一个包含用户名称的弹出项。
 
-调用 C# 从 JavaScript 中为该过程的详细信息，请参阅[调用 C# 从 JavaScript](#Invoking_C_from_JavaScript)。 有关 HTML 页的详细信息，请参阅[创建 Web 页](#Creating_the_Web_Page)。
+若要详细了解从 JavaScript 调用 C# 的过程，请参阅[从 JavaScript 调用 C#](#Invoking_C_from_JavaScript)。 有关 HTML 页的详细信息，请参阅[创建网页](#Creating_the_Web_Page)。
 
 <a name="Creating_the_HybridWebView" />
 
 ## <a name="creating-the-hybridwebview"></a>创建 HybridWebView
 
-`HybridWebView`可以通过子类化创建自定义控件[ `View` ](xref:Xamarin.Forms.View)类，如下面的代码示例中所示：
+通过子类化 [`View`](xref:Xamarin.Forms.View) 类，可以创建 `HybridWebView` 自定义控件，如以下代码示例所示：
 
 ```csharp
 public class HybridWebView : View
@@ -75,18 +75,18 @@ public class HybridWebView : View
 }
 ```
 
-`HybridWebView`自定义控件在.NET Standard 库项目中创建和定义控件的以下 API:
+`HybridWebView` 自定义控件创建于 .NET Standard 库项目中，它为控件定义以下 API：
 
-- 一个`Uri`属性，它指定要加载的网页的地址。
-- 一个`RegisterAction`方法是否注册`Action`与该控件。 已注册的操作将从通过引用该 HTML 文件中包含的 JavaScript 调用`Uri`属性。
-- 一个`CleanUp`删除对已注册的引用的方法`Action`。
-- `InvokeAction`方法调用的已注册`Action`。 从每个特定于平台的项目中的自定义呈现器将调用此方法。
+- 指定要加载的网页的地址的 `Uri` 属性。
+- 用于向控件注册 `Action` 的 `RegisterAction` 方法。 已注册的操作将从通过 `Uri` 属性引用的 HTML 文件中包含的 JavaScript 调用。
+- 移除对已注册的 `Action` 的引用的 `CleanUp` 方法。
+- 调用已注册的 `Action` 的 `InvokeAction` 方法。 将从每个特定于平台的项目中的自定义呈现器中调用此方法。
 
 <a name="Consuming_the_HybridWebView" />
 
 ## <a name="consuming-the-hybridwebview"></a>使用 HybridWebView
 
-`HybridWebView`自定义控件可以在 XAML 中引用.NET Standard 库项目通过声明其位置的命名空间和自定义控件上使用的命名空间前缀。 下面的代码示例演示如何将`HybridWebView`自定义控件可供 XAML 页：
+通过在自定义控件上声明 `HybridWebView` 自定义控件位置的命名空间并使用命名空间前缀，可以在 .NET Standard 库项目的 XAML 中引用该自定义控件。 以下代码示例展示了 XAML 页可以如何使用 `HybridWebView` 自定义控件：
 
 ```xaml
 <ContentPage ...
@@ -100,9 +100,9 @@ public class HybridWebView : View
 </ContentPage>
 ```
 
-`local`命名空间前缀可以命名任何内容。 但是，`clr-namespace`和`assembly`值必须匹配的自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
+`local` 命名空间前缀可以命名为任何内容。 但是，`clr-namespace` 和 `assembly` 值必须与自定义控件的详细信息相匹配。 声明命名空间后，前缀用于引用自定义控件。
 
-下面的代码示例演示如何将`HybridWebView`自定义控件可供 C# 页：
+以下代码示例展示了 C# 页可以如何使用 `HybridWebView` 自定义控件：
 
 ```csharp
 public class HybridWebViewPageCS : ContentPage
@@ -121,9 +121,9 @@ public class HybridWebViewPageCS : ContentPage
 }
 ```
 
-`HybridWebView`实例将用于显示每个平台上的本机 web 控件。 它具有`Uri`属性设置为某一 HTML 文件存储在每个特定于平台的项目，并将由本机 web 控件。 呈现的 HTML 会要求用户输入其名称，使用 JavaScript 函数调用 C# `Action` HTML 按钮单击响应中。
+`HybridWebView` 实例将用于显示每个平台上的本地 Web 控件。 它的 `Uri` 属性设置为一个存储在每个特定于平台的项目中的 HTML 文件，并由本机 Web 控件显示。 呈现的 HTML 要求用户输入其名称，并使用 JavaScript 函数调用 C# `Action` 以对 HTML 按钮单击进行响应。
 
-`HybridWebViewPage`注册要从 JavaScript 调用的操作，如下面的代码示例中所示：
+`HybridWebViewPage` 注册要从 JavaScript 调用的操作，如以下代码示例所示：
 
 ```csharp
 public partial class HybridWebViewPage : ContentPage
@@ -136,9 +136,9 @@ public partial class HybridWebViewPage : ContentPage
 }
 ```
 
-此操作会调用[ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String))方法来显示模式弹出框，其中的情况下显示的 HTML 页中输入的名称`HybridWebView`实例。
+此操作调用 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 方法以显示模式弹出项，该弹出项显示在 `HybridWebView` 实例显示的 HTML 页面中输入的名称。
 
-自定义呈现器现在可以添加到每个应用程序项目，以增强特定于平台的 web 控件，因为它允许 C# 代码从 JavaScript 调用。
+现在可以将自定义呈现器添加到每个应用程序项目，以通过允许从 JavaScript 调用 C# 代码来增强特定于平台的 Web 控件。
 
 <a nane="Creating_the_Custom_Renderer_on_each_Platform" />
 
@@ -146,26 +146,26 @@ public partial class HybridWebViewPage : ContentPage
 
 创建自定义呈现器类的过程如下所示：
 
-1. 创建一个子类`ViewRenderer<T1,T2>`呈现自定义控件的类。 第一个类型参数应为自定义控件呈现器，在这种情况下是`HybridWebView`。 第二个类型参数应将实现自定义视图的本机控件。
-1. 重写`OnElementChanged`呈现其进行自定义的自定义控件和写入逻辑的方法。 创建相应的 Xamarin.Forms 自定义控件时，调用此方法。
-1. 添加`ExportRenderer`到自定义呈现器类，以指定它将用于呈现 Xamarin.Forms 自定义控件属性。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
+1. 创建呈现自定义控件的 `ViewRenderer<T1,T2>` 类的子类。 第一个类型参数应该是使用呈现器的自定义控件，在本例中为 `HybridWebView`。 第二个类型参数应该是实现自定义视图的本机控件。
+1. 替代呈现自定义控件的 `OnElementChanged` 方法，并编写逻辑以自定义控件。 创建相应的 Xamarin.Forms 自定义控件时将调用此方法。
+1. 向自定义呈现器类添加 `ExportRenderer` 属性，以指定其将用于呈现 Xamarin.Forms 自定义控件。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
 
 > [!NOTE]
-> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果未注册的自定义呈现器，则将使用默认的呈现器的控件的基类。 但是，自定义呈现器呈现时所需的每个平台项目中[视图](xref:Xamarin.Forms.View)元素。
+> 对大多数 Xamarin.Forms 元素来说，可以选择在每个平台项目中提供自定义呈现器。 如果未注册自定义呈现器，将使用控件基类的默认呈现器。 但是，呈现[视图](xref:Xamarin.Forms.View)元素时，每个平台项目中都需要自定义呈现器。
 
-下图演示了示例应用程序，以及它们之间的关系的每个项目的职责：
+下图说明了示例应用程序中每个项目的职责，以及它们之间的关系：
 
-![](hybridwebview-images/solution-structure.png "HybridWebView 自定义呈现器项目职责")
+![](hybridwebview-images/solution-structure.png "HybridWebView 自定义呈现器项目的职责")
 
-`HybridWebView`自定义控件呈现的特定于平台的呈现器类，它们都派生自`ViewRenderer`为每个平台的类。 这会导致每个`HybridWebView`自定义控件呈现与特定于平台的 web 控件，如以下屏幕截图中所示：
+`HybridWebView` 自定义控件由特定于平台的呈现器类呈现，这些类全都派生自各平台的 `ViewRenderer` 类。 这导致每个 `HybridWebView` 自定义控件都使用特定于平台的 Web 控件呈现，如以下屏幕截图所示：
 
-![](hybridwebview-images/screenshots.png "每个平台上 HybridWebView")
+![](hybridwebview-images/screenshots.png "每个平台上的 HybridWebView")
 
-`ViewRenderer`类公开`OnElementChanged`创建 Xamarin.Forms 自定义控件以呈现相应的本机 web 控件时调用的方法。 此方法采用`ElementChangedEventArgs`参数，其中包含`OldElement`和`NewElement`属性。 这些属性表示 Xamarin.Forms 元素的呈现器*已*附加到，和 Xamarin.Forms 元素的呈现器*是*附加到分别。 在示例应用程序`OldElement`属性将为`null`并`NewElement`属性将包含对引用`HybridWebView`实例。
+`ViewRenderer` 类公开 `OnElementChanged` 方法，创建 Xamarin.Forms 自定义控件时调用此方法以呈现对应的本机 Web 控件。 此方法采用 `ElementChangedEventArgs` 参数，其中包含 `OldElement` 和 `NewElement` 属性。 这两个属性分别表示呈现器“曾经”附加到的 Xamarin.Forms 元素和呈现器“现在”附加到的 Xamarin.Forms 元素。 在示例应用程序中，`OldElement` 属性将为 `null`，且 `NewElement` 属性将包含对 `HybridWebView` 实例的引用。
 
-重写的版本`OnElementChanged`中每个特定于平台的呈现器类，方法是执行的本机 web 控件实例化和自定义的位置。 `SetNativeControl`应使用方法进行实例化本机 web 控件，并且此方法还会将分配到的控件引用`Control`属性。 此外，通过获取对所呈现的 Xamarin.Forms 控件的引用`Element`属性。
+在每个特定于平台的呈现器类中，`OnElementChanged` 方法的替代版本是执行本机 Web 控件实例化和自定义的地方。 `SetNativeControl` 方法应该用于实例化本机 Web 控件，此方法还会将控件引用分配给 `Control` 属性。 此外，可以通过 `Element` 属性获取正在呈现的 Xamarin.Forms 控件的引用。
 
-在某些情况下`OnElementChanged`可以多次调用方法。 因此，若要防止内存泄漏，必须格外小心实例化新的本机控件时。 下面的代码示例中演示了在自定义呈现器中实例化新的本机控件时要使用的方法：
+在某些情况下，可以多次调用 `OnElementChanged` 方法。 因此，为了防止内存泄漏，在实例化新的本机控件时务必要格外小心。 下面的代码示例中演示了在自定义呈现器中实例化新的本机控件时要使用的方法：
 
 ```csharp
 protected override void OnElementChanged (ElementChangedEventArgs<NativeListView> e)
@@ -189,15 +189,15 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 
 当 `Control` 属性是 `null` 时，新的本机控件只应实例化一次。 仅当自定义呈现器附加到新 Xamarin.Forms 元素时，才应配置该控件并订阅事件处理程序。 同样，仅当呈现器所附加到的元素更改时，才应取消订阅任何订阅的事件处理程序。 采用此方法将有助于创建不会遭受内存泄漏的高性能自定义呈现器。
 
-每个自定义呈现器类用修饰`ExportRenderer`与 Xamarin.Forms 结合注册呈现器的属性。 该属性采用两个参数 – 正在呈现的 Xamarin.Forms 自定义控件的类型名称和自定义呈现器的类型名称。 `assembly`到的属性的前缀指定特性应用于整个程序集。
+每个自定义呈现器类均用 `ExportRenderer` 属性修饰，该属性向 Xamarin.Forms 注册呈现器。 该属性采用两个参数：要呈现的 Xamarin.Forms 自定义控件的类型名称和自定义呈现器的类型名称。 属性的 `assembly` 前缀指示属性适用于整个程序集。
 
-以下各节讨论每个本机 web 控件、 的过程调用 C# 从 JavaScript 中，并在每个特定于平台的自定义呈现器类中的此实现由加载 web 页的结构。
+以下各节讨论每个本机 Web 控件加载的网页的结构、从 JavaScript 调用 C# 的过程以及在每个特定于平台的自定义呈现器类中的实现。
 
 <a name="Creating_the_Web_Page" />
 
-### <a name="creating-the-web-page"></a>创建 Web 页
+### <a name="creating-the-web-page"></a>创建网页
 
-下面的代码示例显示了将显示的网页`HybridWebView`自定义控件：
+下面的代码示例显示了将由 `HybridWebView` 自定义控件显示的网页：
 
 ```html
 <html>
@@ -231,30 +231,30 @@ function invokeCSCode(data) {
 </html>
 ```
 
-在 web 页上，用户输入其名称中的`input`元素，并提供`button`将调用 C# 代码时单击的元素。 实现此目的的过程如下所示：
+网页允许用户在 `input` 元素中输入他们的名称，并在单击时提供引用 C# 代码的 `button` 元素。 实现此操作的过程如下：
 
-- 当用户单击`button`元素中，`invokeCSCode`调用 JavaScript 函数时，值为`input`元素传递给函数。
-- `invokeCSCode`函数调用`log`函数来显示的数据发送到 C# `Action`。 然后，它调用`invokeCSharpAction`方法以调用 C# `Action`，将从接收到该参数传递`input`元素。
+- 当用户单击 `button` 元素时，调用 `invokeCSCode` JavaScript 函数，并将 `input` 元素的值传递到函数。
+- `invokeCSCode` 函数调用 `log` 函数以显示发送给 C# `Action` 的数据。 然后它调用 `invokeCSharpAction` 方法以调用 C# `Action`，传递来自 `input` 元素的参数。
 
-`invokeCSharpAction` JavaScript 函数未定义在 web 页中，并将每个自定义呈现器注入到它。
+`invokeCSharpAction` JavaScript 函数未在网页中定义，并将由每个自定义渲染器注入其中。
 
 <a name="Invoking_C_from_JavaScript" />
 
-### <a name="invoking-c-from-javascript"></a>调用 C# 从 JavaScript
+### <a name="invoking-c-from-javascript"></a>从 JavaScript 调用 C#
 
-调用 C# 从 JavaScript 的过程是在每个平台上完全相同：
+从 JavaScript 调用 C# 的过程在每个平台上完全相同：
 
-- 自定义呈现器创建本机 web 控件，并加载指定的 HTML 文件`HybridWebView.Uri`属性。
-- 自定义呈现器网页加载后，会注入`invokeCSharpAction`到的网页的 JavaScript 函数。
-- 当用户输入其名称并单击 HTML`button`元素中，`invokeCSCode`调用函数时，这反过来调用`invokeCSharpAction`函数。
-- `invokeCSharpAction`函数将调用方法中调用的自定义呈现器`HybridWebView.InvokeAction`方法。
-- `HybridWebView.InvokeAction`方法调用的已注册`Action`。
+- 自定义呈现器创建本机 Web 控件并加载 `HybridWebView.Uri` 属性指定的 HTML 文件。
+- 加载网页后，自定义呈现器将 `invokeCSharpAction` JavaScript 函数注入到网页中。
+- 当用户输入其名称并单击 HTML `button` 元素时，会调用 `invokeCSCode` 函数，并随之调用 `invokeCSharpAction` 函数。
+- `invokeCSharpAction` 函数调用自定义呈现器中的方法，该方法随之调用 `HybridWebView.InvokeAction` 方法。
+- `HybridWebView.InvokeAction` 方法调用已注册的 `Action`。
 
-以下各节将讨论此过程的每个平台上的实现方式。
+以下各节将讨论此过程在每个平台上的实现方式。
 
-### <a name="creating-the-custom-renderer-on-ios"></a>在 ios 设备上创建自定义呈现器
+### <a name="creating-the-custom-renderer-on-ios"></a>在 iOS 上创建自定义呈现器
 
-下面的代码示例显示了为 iOS 平台的自定义呈现器：
+以下代码示例展示了适用于 iOS 平台的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer (typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -299,28 +299,28 @@ namespace CustomRenderer.iOS
 }
 ```
 
-`HybridWebViewRenderer`类加载 web 页中指定`HybridWebView.Uri`属性转换成一个本机[ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/)控件，并`invokeCSharpAction`JavaScript 函数注入到 web 页。 用户输入其名称并单击 HTML 后`button`元素中，`invokeCSharpAction`执行的 JavaScript 函数时，使用`DidReceiveScriptMessage`从网页上收到一条消息后调用的方法。 反过来，此方法将调用`HybridWebView.InvokeAction`方法，将调用已注册的操作，以显示弹出窗口中。
+`HybridWebViewRenderer` 类将 `HybridWebView.Uri` 属性中指定的网页加载到本机 [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) 控件中，并将 `invokeCSharpAction` JavaScript 函数注入到网页中。 用户输入其名称并单击 HTML `button` 元素后，执行 `invokeCSharpAction` JavaScript 函数，并在收到来自网页的消息后调用 `DidReceiveScriptMessage` 方法。 然后此方法将调用 `HybridWebView.InvokeAction` 方法，该方法调用已注册的操作以显示弹出项。
 
-此功能来实现，如下所示：
+此功能以下述方式实现：
 
-- 前提`Control`属性是`null`，执行以下操作：
-  - 一个[ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/)创建实例后，它允许将消息发布并将用户脚本注入到 web 页。
-  - 一个[ `WKUserScript` ](https://developer.xamarin.com/api/type/WebKit.WKUserScript/)创建实例注入`invokeCSharpAction`到加载 web 页之后发送的网页的 JavaScript 函数。
-  - [ `WKUserContentController.AddScript` ](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddUserScript/p/WebKit.WKUserScript/)方法将添加[ `WKUserScript` ](https://developer.xamarin.com/api/type/WebKit.WKUserScript/)到内容的控制器实例。
-  - [ `WKUserContentController.AddScriptMessageHandler` ](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/)方法将添加名为脚本消息处理程序`invokeAction`到[ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/)实例，这将导致 JavaScript 函数`window.webkit.messageHandlers.invokeAction.postMessage(data)`中所有定义将使用的所有 web 视图中的帧`WKUserContentController`实例。
-  - 一个[ `WKWebViewConfiguration` ](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/)创建实例后，使用[ `WKUserContentController` ](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/)实例设置为内容的控制器。
-  - 一个[ `WKWebView` ](https://developer.xamarin.com/api/type/WebKit.WKWebView/)实例化控件，并`SetNativeControl`调用方法来分配对引用`WKWebView`控制对`Control`属性。
-- 提供自定义呈现器附加到新 Xamarin.Forms 元素：
-  - [ `WKWebView.LoadRequest` ](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/)方法将加载指定的 HTML 文件`HybridWebView.Uri`属性。 该代码指定该文件存储在`Content`项目文件夹中的。 后显示的网页， `invokeCSharpAction` JavaScript 函数将注入到 web 页。
-- 当元素呈现器附加到的更改：
-  - 释放资源。
+- 如果 `Control` 属性为 `null`，则执行以下操作：
+  - 创建了 [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 实例，该实例允许发布消息并将用户脚本注入网页。
+  - 创建 [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) 实例以在加载网页后将 `invokeCSharpAction` JavaScript 函数注入到网页中。
+  - [`WKUserContentController.AddScript`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddUserScript/p/WebKit.WKUserScript/) 方法将 [`WKUserScript`](https://developer.xamarin.com/api/type/WebKit.WKUserScript/) 实例添加到内容控件。
+  - [`WKUserContentController.AddScriptMessageHandler`](https://developer.xamarin.com/api/member/WebKit.WKUserContentController.AddScriptMessageHandler/p/WebKit.IWKScriptMessageHandler/System.String/) 方法将名为 `invokeAction` 的脚本消息处理程序添加到 [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 实例，这将导致 JavaScript 函数 `window.webkit.messageHandlers.invokeAction.postMessage(data)` 在会使用 `WKUserContentController` 实例的所有 Web 视图中的所有框架中定义。
+  - 创建 [`WKWebViewConfiguration`](https://developer.xamarin.com/api/type/WebKit.WKWebViewConfiguration/) 实例，并将 [`WKUserContentController`](https://developer.xamarin.com/api/type/WebKit.WKUserContentController/) 实例设置为内容控件。
+  - 实例化 [`WKWebView`](https://developer.xamarin.com/api/type/WebKit.WKWebView/) 控件，并调用 `SetNativeControl` 方法将 `WKWebView` 控件的引用分配给 `Control` 属性。
+- 如果已将自定义呈现器附加到新的 Xamarin.Forms 元素：
+  - [`WKWebView.LoadRequest`](https://developer.xamarin.com/api/member/WebKit.WKWebView.LoadRequest/p/Foundation.NSUrlRequest/) 方法加载 `HybridWebView.Uri` 属性指定的 HTML 文件。 该代码指定该文件存储在 `Content` 项目的文件夹中。 显示网页后，`invokeCSharpAction` JavaScript 函数将注入到网页中。
+- 当呈现器附加到的元素产生更改时：
+  - 资源被释放。
 
 > [!NOTE]
-> `WKWebView`类仅支持 iOS 8 及更高版本。
+> `WKWebView` 类仅支持 iOS 8 及更高版本。
 
 ### <a name="creating-the-custom-renderer-on-android"></a>在 Android 上创建自定义呈现器
 
-下面的代码示例显示了 Android 平台的自定义呈现器：
+以下代码示例展示了适用于 Android 平台的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -363,7 +363,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-`HybridWebViewRenderer`类加载 web 页中指定`HybridWebView.Uri`属性转换成一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)控件，并`invokeCSharpAction`JavaScript 函数注入到网页，网页后完成加载后，`OnPageFinished`重写中`JavascriptWebViewClient`类：
+`HybridWebViewRenderer` 类将 `HybridWebView.Uri` 属性中指定的网页加载到本机 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 控件中，并在网页加载完成后使用 `JavascriptWebViewClient` 类中 `OnPageFinished` 的替代方法将 `invokeCSharpAction` JavaScript函数注入到网页中：
 
 ```csharp
 public class JavascriptWebViewClient : WebViewClient
@@ -383,19 +383,19 @@ public class JavascriptWebViewClient : WebViewClient
 }
 ```
 
-用户输入其名称并单击 HTML 后`button`元素，`invokeCSharpAction`执行 JavaScript 函数。 此功能来实现，如下所示：
+用户输入其名称并单击 HTML `button` 元素后，执行 `invokeCSharpAction` JavaScript 函数。 此功能以下述方式实现：
 
-- 前提`Control`属性是`null`，执行以下操作：
-  - 一个本机[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)创建实例，在该控件中启用 JavaScript 和一个`JavascriptWebViewClient`实例设置的实现为`WebViewClient`。
-  - `SetNativeControl`调用方法来分配对本机引用[ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)控制对`Control`属性。
-- 提供自定义呈现器附加到新 Xamarin.Forms 元素：
-  - [ `WebView.AddJavascriptInterface` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/)方法将一个新中注入`JSBridge`WebView 的 JavaScript 上下文，其命名的实例到主框架`jsBridge`。 这允许在方法`JSBridge`类从 JavaScript 访问。
-  - [ `WebView.LoadUrl` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/)方法将加载指定的 HTML 文件`HybridWebView.Uri`属性。 该代码指定该文件存储在`Content`项目文件夹中的。
-  - 在中`JavascriptWebViewClient`类，`invokeCSharpAction`页面加载完毕后，JavaScript 函数注入到 web 页。
-- 当元素呈现器附加到的更改：
-  - 释放资源。
+- 如果 `Control` 属性为 `null`，则执行以下操作：
+  - 创建本机 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 实例，启用控件中的 JavaScript，并将 `JavascriptWebViewClient` 实例设置为 `WebViewClient` 实现。
+  - 调用 `SetNativeControl` 方法以将对本机 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 控件的引用分配给 `Control` 属性。
+- 如果已将自定义呈现器附加到新的 Xamarin.Forms 元素：
+  - [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) 方法将新的 `JSBridge` 实例注入到 WebView 的 JavaScript 上下文的主框架中，并将其命名为 `jsBridge`。 这允许从 JavaScript 访问 `JSBridge` 类中的方法。
+  - [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) 方法加载 `HybridWebView.Uri` 属性指定的 HTML 文件。 该代码指定该文件存储在 `Content` 项目的文件夹中。
+  - 在 `JavascriptWebViewClient` 类中，页面加载完成后会将 `invokeCSharpAction` JavaScript 函数注入到网页中。
+- 当呈现器附加到的元素产生更改时：
+  - 资源被释放。
 
-当`invokeCSharpAction`执行的 JavaScript 函数，它又调用`JSBridge.InvokeAction`方法，在下面的代码示例所示：
+当执行 `invokeCSharpAction` JavaScript 函数时，它会调用 `JSBridge.InvokeAction` 方法，该方法如下面的代码示例所示：
 
 ```csharp
 public class JSBridge : Java.Lang.Object
@@ -421,16 +421,16 @@ public class JSBridge : Java.Lang.Object
 }
 ```
 
-类必须派生自`Java.Lang.Object`，并向 JavaScript 公开的方法必须使用修饰`[JavascriptInterface]`和`[Export]`属性。 因此，当`invokeCSharpAction`注入到 web 页和执行 JavaScript 功能，它将调用`JSBridge.InvokeAction`方法，因为正在使用修饰`[JavascriptInterface]`和`[Export("invokeAction")]`属性。 依次`InvokeAction`方法将调用`HybridWebView.InvokeAction`方法，它将调用已注册的操作，以显示弹出窗口中。
+该类必须派生自 `Java.Lang.Object` 且必须使用 `[JavascriptInterface]` 和 `[Export]` 属性修饰公开给 JavaScript 的方法。 因此，当 `invokeCSharpAction` JavaScript 函数注入到网页中并执行时，由于使用 `[JavascriptInterface]` 和 `[Export("invokeAction")]` 属性进行了修饰，它将调用 `JSBridge.InvokeAction` 方法。 然后 `InvokeAction` 方法将调用 `HybridWebView.InvokeAction` 方法，该方法调用已注册的操作以显示弹出项。
 
 > [!NOTE]
-> 项目使用`[Export]`属性必须包含对引用`Mono.Android.Export`，或将导致编译器错误。
+> 使用 `[Export]` 属性的项目必须包含对 `Mono.Android.Export` 的引用，否则将导致编译器错误。
 
-请注意，`JSBridge`类维护`WeakReference`到`HybridWebViewRenderer`类。 这是为了避免创建两个类之间的循环引用。 有关详细信息请参阅[弱引用](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx)MSDN 上。
+请注意，`JSBridge` 类保持对 `HybridWebViewRenderer` 类的 `WeakReference`。 这是为了避免在两个类之间创建循环引用。 更多详细信息请在 MSDN 上参阅[弱引用](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx)。
 
 ### <a name="creating-the-custom-renderer-on-uwp"></a>在 UWP 上创建自定义呈现器
 
-下面的代码示例显示了适用于 UWP 的自定义呈现器：
+以下代码示例展示了适用于 UWP 的自定义呈现器：
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
@@ -478,24 +478,24 @@ namespace CustomRenderer.UWP
 }
 ```
 
-`HybridWebViewRenderer`类加载 web 页中指定`HybridWebView.Uri`属性转换成一个本机`WebView`控件，并`invokeCSharpAction`JavaScript 函数注入到 web 页上，加载 web 页之后, 使用`WebView.InvokeScriptAsync`方法。 用户输入其名称并单击 HTML 后`button`元素中，`invokeCSharpAction`执行的 JavaScript 函数时，使用`OnWebViewScriptNotify`从网页上收到通知后被调用方法。 反过来，此方法将调用`HybridWebView.InvokeAction`方法，将调用已注册的操作，以显示弹出窗口中。
+`HybridWebViewRenderer` 类将 `HybridWebView.Uri` 属性中指定的网页加载到本机 `WebView` 控件中，并在加载网页后使用 `WebView.InvokeScriptAsync` 方法将 `invokeCSharpAction` JavaScript函数注入到网页中。 用户输入其名称并单击 HTML `button` 元素后，执行 `invokeCSharpAction` JavaScript 函数，并在收到来自网页的通知后调用 `OnWebViewScriptNotify` 方法。 然后此方法将调用 `HybridWebView.InvokeAction` 方法，该方法调用已注册的操作以显示弹出项。
 
-此功能来实现，如下所示：
+此功能以下述方式实现：
 
-- 前提`Control`属性是`null`，执行以下操作：
-  - `SetNativeControl`调用方法来实例化一个新的本机`WebView`控件并为其分配一个引用`Control`属性。
-- 提供自定义呈现器附加到新 Xamarin.Forms 元素：
-  - 事件处理程序`NavigationCompleted`和`ScriptNotify`注册事件。 `NavigationCompleted`时将激发事件位于本机`WebView`控件完成加载当前内容或导航已失败。 `ScriptNotify`事件时将触发在本机内容`WebView`控件使用 JavaScript 来将字符串传递给应用程序。 Web 页面触发`ScriptNotify`通过调用事件`window.external.notify`而传递`string`参数。
-  - `WebView.Source`属性设置为指定的 HTML 文件的 URI`HybridWebView.Uri`属性。 此代码假定该文件存储在`Content`项目文件夹中的。 显示的网页，一旦`NavigationCompleted`会触发事件和`OnWebViewNavigationCompleted`将调用方法。 `invokeCSharpAction` JavaScript 函数然后会注入与网页`WebView.InvokeScriptAsync`方法，前提是已成功完成的导航。
-- 当元素呈现器附加到的更改：
-  - 事件已取消订阅。
+- 如果 `Control` 属性为 `null`，则执行以下操作：
+  - 调用 `SetNativeControl` 方法实例化新的本机 `WebView` 控件，并将其引用给 `Control` 属性。
+- 如果已将自定义呈现器附加到新的 Xamarin.Forms 元素：
+  - 已注册用于 `NavigationCompleted` 和 `ScriptNotify` 事件的事件处理程序。 当本机 `WebView` 控件已完成加载当前内容或导航失败时，将触发 `NavigationCompleted` 事件。 当本机 `WebView` 控件中的内容使用 JavaScript 传递字符串到应用程序时，会激发 `ScriptNotify` 事件。 网页在传递 `string` 参数时通过调用 `window.external.notify` 激发 `ScriptNotify` 事件。
+  - `WebView.Source` 属性设置为 `HybridWebView.Uri` 属性指定的 HTML 文件的 URI。 该代码假定该文件存储在项目 `Content` 文件夹中。 显示网页后，会激发 `NavigationCompleted` 事件，并调用 `OnWebViewNavigationCompleted` 方法。 导航成功完成后，会使用 `WebView.InvokeScriptAsync` 方法将 `invokeCSharpAction` JavaScript 函数注入到网页。
+- 当呈现器附加到的元素产生更改时：
+  - 取消订阅事件。
 
 ## <a name="summary"></a>总结
 
-本文演示了如何创建自定义呈现器`HybridWebView`演示了如何增强特定于平台的 web 控件，以便 C# 代码调用 JavaScript 中的自定义的控件。
+本文已演示了如何为 `HybridWebView` 自定义控件创建自定义呈现器，演示如何增强特定于平台的 Web 控件以允许从 JavaScript 调用 C# 代码。
 
 
 ## <a name="related-links"></a>相关链接
 
-- [CustomRendererHybridWebView （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
-- [从 JavaScript 中调用 C#](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
+- [CustomRendererHybridWebView（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+- [从 JavaScript 调用 C#](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

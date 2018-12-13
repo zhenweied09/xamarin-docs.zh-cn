@@ -1,6 +1,6 @@
 ---
 title: 实现文本到语音转换
-description: 本文介绍如何使用 Xamarin.Forms DependencyService 类来调入每个平台的本机文本到语音转换 API。
+description: 本文说明如何使用 Xamarin.Forms DependencyService 类调用每个平台的本机文本转语音 API。
 ms.prod: xamarin
 ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 09/18/2017
 ms.openlocfilehash: 6d1948214b97a1b536b07b6420c32e4d27124518
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38997538"
 ---
 # <a name="implementing-text-to-speech"></a>实现文本到语音转换
 
-创建使用的跨平台应用这篇文章将指导你[ `DependencyService` ](xref:Xamarin.Forms.DependencyService)访问本机文本到语音转换 Api:
+本文将指导你创建一个使用 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 访问本机文本转语音 API 的跨平台应用：
 
-- **[创建接口](#Creating_the_Interface)** &ndash;了解如何共享代码中创建接口。
-- **[iOS 实现](#iOS_Implementation)** &ndash;了解如何在适用于 iOS 的本机代码中实现接口。
-- **[Android 实现](#Android_Implementation)** &ndash;了解如何适用于 Android 的本机代码中实现的接口。
-- **[UWP 实现](#WindowsImplementation)** &ndash;了解如何为通用 Windows 平台 (UWP) 中的本机代码实现的接口。
-- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash;了解如何使用`DependencyService`来调入本机实现从共享代码。
+- **[创建接口](#Creating_the_Interface)** &ndash; 了解如何在共享代码中创建接口。
+- **[iOS 实现](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
+- **[Android 实现](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
+- **[UWP 实现](#WindowsImplementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
+- **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash; 了解如何使用 `DependencyService` 从共享代码调用本机实现。
 
-应用程序使用`DependencyService`将具有以下结构：
+使用 `DependencyService` 的应用程序将具有以下结构：
 
 ![](text-to-speech-images/tts-diagram.png "DependencyService 应用程序结构")
 
@@ -32,7 +32,7 @@ ms.locfileid: "38997538"
 
 ## <a name="creating-the-interface"></a>创建界面
 
-首先，表达你打算实现的功能的共享代码中创建的接口。 对于此示例，该接口包含一个方法， `Speak`:
+首先，在表示打算实现的功能的共享代码中创建一个接口。 就此示例而言，该接口包含一个方法，即 `Speak`：
 
 ```csharp
 public interface ITextToSpeech
@@ -41,16 +41,16 @@ public interface ITextToSpeech
 }
 ```
 
-针对此接口在共享代码中编写代码将允许 Xamarin.Forms 应用程序访问每个平台上的语音 Api。
+在共享代码中对这个接口进行编码将使 Xamarin.Forms 应用能够访问各平台上的语音 API。
 
 > [!NOTE]
-> 实现接口的类必须具有无参数的构造函数，以使用`DependencyService`。
+> 实现接口的类必须具有无参数的构造函数才能使用 `DependencyService`。
 
 <a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>iOS 实现
 
-必须在每个特定于平台的应用程序项目中实现该接口。 请注意，类具有无参数构造函数，以便`DependencyService`可以创建新实例。
+必须在每个特定于平台的应用程序项目中实现接口。 请注意，类有一个无参数的构造函数，从而使 `DependencyService` 可以创建新实例。
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -78,13 +78,13 @@ namespace DependencyServiceSample.iOS
 }
 ```
 
-`[assembly]`属性的实现作为注册类`ITextToSpeech`接口，这意味着`DependencyService.Get<ITextToSpeech>()`可用于共享代码中创建它的一个实例。
+`[assembly]` 属性将该类注册为 `ITextToSpeech` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<ITextToSpeech>()` 来创建它的实例。
 
 <a name="Android_Implementation" />
 
 ## <a name="android-implementation"></a>Android 实现
 
-Android 代码将更复杂的 iOS 版本比： 它需要实现的类从特定于 Android 的继承`Java.Lang.Object`并实现`IOnInitListener`接口也。 它还需要访问当前的 Android 上下文，它公开由`MainActivity.Instance`属性。
+Android 代码比 iOS 版本更复杂：它需要实现类从特定于 Android 的 `Java.Lang.Object` 继承并实现 `IOnInitListener` 接口。 它还需要访问由 `MainActivity.Instance` 属性公开的当前的 Android 上下文。
 
 ```csharp
 [assembly: Dependency(typeof(TextToSpeechImplementation))]
@@ -119,13 +119,13 @@ namespace DependencyServiceSample.Droid
 }
 ```
 
-`[assembly]`属性的实现作为注册类`ITextToSpeech`接口，这意味着`DependencyService.Get<ITextToSpeech>()`可用于共享代码中创建它的一个实例。
+`[assembly]` 属性将该类注册为 `ITextToSpeech` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<ITextToSpeech>()` 来创建它的实例。
 
 <a name="WindowsImplementation" />
 
 ## <a name="universal-windows-platform-implementation"></a>通用 Windows 平台实现
 
-通用 Windows 平台具有中的语音 API`Windows.Media.SpeechSynthesis`命名空间。 唯一需要注意的是记住勾选**麦克风**功能在清单中，否则访问到语音 Api 被阻止。
+通用 Windows 平台在 `Windows.Media.SpeechSynthesis` 命名空间中有一个语音 API。 唯一需要注意的是，请记住在清单中勾选“麦克风”功能，否则对语音 API 的访问会受到阻止。
 
 ```csharp
 [assembly:Dependency(typeof(TextToSpeechImplementation))]
@@ -143,13 +143,13 @@ public class TextToSpeechImplementation : ITextToSpeech
 }
 ```
 
-`[assembly]`属性的实现作为注册类`ITextToSpeech`接口，这意味着`DependencyService.Get<ITextToSpeech>()`可用于共享代码中创建它的一个实例。
+`[assembly]` 属性将该类注册为 `ITextToSpeech` 接口的实现，这意味着可以在共享代码中使用 `DependencyService.Get<ITextToSpeech>()` 来创建它的实例。
 
 <a name="Implementing_in_Shared_Code" />
 
 ## <a name="implementing-in-shared-code"></a>在共享代码中实现
 
-现在我们可以编写并测试访问文本到语音转换接口的共享的代码。 此简单的页面包括触发的语音功能的按钮。 它使用`DependencyService`若要获取的实例`ITextToSpeech`接口&ndash;此实例将在运行时是具有完全访问权限的本机 SDK 的特定于平台的实现。
+现在我们可以编写和测试访问文本转语音接口的共享代码。 此简单页面包含一个触发语音功能的按钮。 它使用 `DependencyService` 获取 `ITextToSpeech` 接口的实例 &ndash; 在运行时，这个实例是特定于平台的实现，拥有对本机 SDK 的完全访问权限。
 
 ```csharp
 public MainPage ()
@@ -166,13 +166,13 @@ public MainPage ()
 }
 ```
 
-在 iOS、 Android 或 UWP 上运行此应用程序并按下按钮会讲到，每个平台上使用本机语音 SDK 的应用程序。
+在 iOS、Android 或 UWP 上运行此应用程序并按下该按钮，应用程序就会使用各平台上的本机语音 SDK 与你对话。
 
- ![iOS 和 Android 的文本到语音转换按钮](text-to-speech-images/running.png "文本到语音转换示例")
+ ![iOS 和 Android 文本转语音按钮](text-to-speech-images/running.png "文本转语音示例")
 
 
 ## <a name="related-links"></a>相关链接
 
-- [使用 DependencyService （示例）](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [使用 DependencyService（示例）](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
 

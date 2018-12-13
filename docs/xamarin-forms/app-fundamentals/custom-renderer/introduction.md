@@ -1,6 +1,6 @@
 ---
 title: 自定义呈现器简介
-description: 本文介绍了自定义呈现器，并概述了用于创建自定义呈现器的过程。
+description: 本文介绍了自定义呈现器，并概述了创建自定义呈现器的过程。
 ms.prod: xamarin
 ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 01/19/2016
 ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50108426"
 ---
 # <a name="introduction-to-custom-renderers"></a>自定义呈现器简介
 
-_自定义呈现器为自定义外观和行为的 Xamarin.Forms 控件提供一种有效方法。它们可用于小型样式更改或复杂的特定于平台的布局和行为自定义。本文介绍了自定义呈现器，并概述了用于创建自定义呈现器的过程。_
+“自定义呈现器为自定义 Xamarin.Forms 控件的外观和行为提供了一种功能强大的方法。可使用它们进行细微的样式更改，也可进行复杂的特定于平台的布局和行为自定义。本文介绍了自定义呈现器，并概述了创建自定义呈现器的过程。”
 
-Xamarin.Forms[页面、 布局和控件](~/xamarin-forms/user-interface/controls/index.md)提供常见的 API，用于描述跨平台移动用户界面。 每个页面、 布局和控件的呈现不同，每个平台上使用`Renderer`类，该类又创建本机控件 （对应于 Xamarin.Forms 表示形式），对其进行排列在屏幕上，并将添加中指定的行为共享的代码。
+Xamarin.Forms [页、布局和控件](~/xamarin-forms/user-interface/controls/index.md)提供常见的 API，用于描述跨平台的移动用户界面。 通过 `Renderer` 类可以在每个平台上以不同方式呈现每个页面、布局和控件，反过来又可以创建本机控件（对应于 Xamarin.Forms 表示），在屏幕上排列该控件，并添加共享代码中指定的行为。
 
-开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 为给定类型的自定义呈现器可以添加到一个应用程序项目，以自定义控件在一个位置，同时允许在其他平台; 上的默认行为或不同的自定义呈现器可以添加到 iOS、 Android 和通用 Windows 平台 (UWP) 上创建不同的外观和感觉的每个应用程序项目。 但是，实现执行简单控件自定义的自定义呈现器类通常是重型的响应。 效果简化此过程中，并通常用于较小的样式更改。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
+开发人员可以实现自定义 `Renderer` 类，以自定义控件的外观和/或行为。 可以将给定类型的自定义呈现器添加到一个应用程序项目中，以便在同一个位置自定义控件，同时允许其他平台上的默认行为，或者将不同的自定义呈现器添加到每个应用程序项目中，以便在 iOS、Android 和通用 Windows 平台 (UWP) 上创建不同的外观和感觉。 但是，实现自定义呈现器类以执行简单的控件自定义通常是大型响应。 Effects 可简化此过程，并通常用于较小的样式更改。 有关详细信息，请参阅[效果](~/xamarin-forms/app-fundamentals/effects/index.md)。
 
-## <a name="examining-why-custom-renderers-are-necessary"></a>正在检查为何自定义呈现器有必要
+## <a name="examining-why-custom-renderers-are-necessary"></a>检查需要自定义呈现器的原因
 
-更改 Xamarin.Forms 控件的外观，而无需使用自定义呈现器，是涉及到创建自定义控件子类化，然后使用自定义控件代替原始控件通过一个两步过程。 下面的代码示例显示了子类化的示例`Entry`控件：
+要在不使用自定义呈现器的情况下更改 Xamarin.Forms 控件的外观，这一过程包含两个步骤：通过子类化创建自定义控件，然后使用自定义控件代替原始控件。 下面的代码示例演示将 `Entry` 控件子类化的示例:
 
 ```csharp
 public class MyEntry : Entry
@@ -36,7 +36,7 @@ public class MyEntry : Entry
 }
 ```
 
-`MyEntry`控件是`Entry`控制在何处`BackgroundColor`设置为灰色，并可以通过声明其位置的命名空间和控件元素上使用的命名空间前缀在 Xaml 中引用。 下面的代码示例演示如何`MyEntry`自定义控件可供`ContentPage`:
+`MyEntry` 控件是 `BackgroundColor` 设置为灰色的 `Entry` 控件，可以通过声明其位置的名称空间并在控件元素上使用该名称空间的前缀在 Xaml 中引用。 下面的代码示例演示 `ContentPage` 可以如何使用 `MyEntry` 自定义控件：
 
 ```xaml
 <ContentPage
@@ -49,49 +49,49 @@ public class MyEntry : Entry
 </ContentPage>
 ```
 
-`local`命名空间前缀可以是任何内容。 但是，`namespace`和`assembly`值必须匹配的自定义控件的详细信息。 一旦声明的命名空间，前缀用于引用自定义控件。
+`local` 命名空间前缀可以是任何内容。 但是，`namespace` 和 `assembly` 值必须与自定义控件的详细信息相匹配。 声明命名空间后，前缀用于引用自定义控件。
 
 > [!NOTE]
-> 定义`xmlns`比要简单得在.NET Standard 类库项目中共享的项目。 .NET Standard 库编译为程序集，因此很容易地确定什么`assembly=CustomRenderer`值应为。 （包括 XAML） 的所有共享的资源时使用共享项目，将编译到每个引用的项目，这意味着，如果 iOS、 Android 和 UWP 项目具有其自己*程序集名称*就无法写入`xmlns`声明由于需要为每个应用程序不同的值。 共享的项目的 XAML 中的自定义控件需要用相同的程序集名称来配置每个应用程序项目。
+> 在 .NET Standard 库项目中定义 `xmlns` 比在共享项目中定义简单得多。 由于 .NET Standard 库已编译到程序集中，因此可以轻松确定 `assembly=CustomRenderer` 值。 使用共享项目时，所有共享资产（包括 XAML）都编译到每个引用项目中，这意味着如果 iOS、Android 和 UWP 项目有自己的程序集名称，则不能写入 `xmlns` 声明，因为每个应用程序需要不同的值。 XAML 中的共享项目的自定义控件将需要每个应用程序项目用相同的程序集名称来配置。
 
-`MyEntry`自定义控件然后呈现在每个平台，具有灰色背景上，如以下屏幕截图中所示：
+然后在每个平台上呈现背景为灰色的 `MyEntry` 自定义控件，如以下屏幕截图中所示：
 
-![](introduction-images/screenshots.png "每个平台上 MyEntry 自定义控件")
+![](introduction-images/screenshots.png "每个平台上的 MyEntry 自定义控件")
 
-仅通过将控件子类化已经完成更改每个平台上的控件的背景色。 但是，这种技术中因为不能充分利用特定于平台的增强功能和自定义它可以实现限制。 在需要时，必须实现自定义呈现器。
+仅通过将控件子类化即可完成对每个平台上的控件背景色的更改。 但是，由于无法利用特定于平台的增强和自定义，这种技术的用途有限。 必要时，必须实现自定义呈现器。
 
 ## <a name="creating-a-custom-renderer-class"></a>创建自定义呈现器类
 
 创建自定义呈现器类的过程如下所示：
 
-1. 创建呈现本机控件呈现器类的子类。
-1. 重写呈现本机控件的方法并编写逻辑以自定义控件。 通常情况下，`OnElementChanged`方法用于呈现本机控件，创建相应的 Xamarin.Forms 控件时调用。
-1. 添加`ExportRenderer`到自定义呈现器类，以指定它将用于呈现 Xamarin.Forms 控件属性。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
+1. 创建呈现本机控件的呈现器类的子类。
+1. 替代呈现本机控件的方法并写入逻辑以自定义控件。 通常，`OnElementChanged` 方法用于呈现本机控件，当创建相应的 Xamarin.Forms 控件时，调用该本机控件。
+1. 向自定义呈现器类添加 `ExportRenderer` 属性，以指定其将用于呈现 Xamarin.Forms 控件。 此属性用于向 Xamarin.Forms 注册自定义呈现器。
 
 > [!NOTE]
-> 对于大多数 Xamarin.Forms 元素，它是可选提供每个平台项目中的自定义呈现器。 如果未注册的自定义呈现器，则将使用默认的呈现器的控件的基类。 但是，自定义呈现器呈现时所需的每个平台项目中[视图](xref:Xamarin.Forms.View)或[ViewCell](xref:Xamarin.Forms.ViewCell)元素。
+> 对大多数 Xamarin.Forms 元素来说，可以选择在每个平台项目中提供自定义呈现器。 如果未注册自定义呈现器，将使用控件基类的默认呈现器。 但是，呈现 [View](xref:Xamarin.Forms.View) 或 [ViewCell](xref:Xamarin.Forms.ViewCell) 元素时，每个平台项目中都需要自定义呈现器。
 
-本系列中的主题将提供演示并解释了此过程的不同的 Xamarin.Forms 元素。
+本系列的主题将提供针对不同 Xamarin.Forms 元素的此过程的演示和解释。
 
 ## <a name="troubleshooting"></a>疑难解答
 
-如果自定义控件包含在.NET Standard 库项目已添加到解决方案 （即不是.NET 标准库由 Visual Studio for Mac/Visual Studio Xamarin.Forms 应用程序项目模板创建），异常可能会发生在 iOS 中时尝试访问自定义控件。 如果发生此问题，可以通过创建从自定义控件的引用来解决`AppDelegate`类：
+如果自定义控件包含在已添加到解决方案的 .NET Standard 库项目中（即不是由 Visual Studio for Mac/Visual Studio Xamarin.Forms 应用项目模板创建的 .NET Standard 库），尝试访问自定义控件时，iOS 中可能会发生异常。 如果发生此问题，可以通过从 `AppDelegate` 类创建对自定义控件的引用来解决此问题：
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere
 ```
 
-这将强制使编译器可以识别`ClassInPCL`通过解析它的类型。 或者，`Preserve`可以将属性添加到`AppDelegate`类来实现相同的结果：
+这迫使编译器通过解析来识别 `ClassInPCL` 类型。 或者，可以将 `Preserve` 属性添加到 `AppDelegate` 类，以实现相同结果：
 
 ```csharp
 [assembly: Preserve (typeof (ClassInPCL))]
 ```
 
-这将创建对引用`ClassInPCL`指示它已在运行时所需的类型。 有关详细信息，请参阅[保留代码](~/ios/deploy-test/linker.md)。
+这会创建对 `ClassInPCL` 类型的引用，指明其在运行时是必需的。 有关详细信息，请参阅[保留代码](~/ios/deploy-test/linker.md)。
 
 ## <a name="summary"></a>总结
 
-本文提供了自定义呈现器的简介，并概述了在创建自定义呈现器的过程。 自定义呈现器为自定义外观和行为的 Xamarin.Forms 控件提供一种有效方法。 它们可用于小型样式更改或复杂的特定于平台的布局和行为自定义。
+本文介绍了自定义呈现器，并概述了创建自定义呈现器的过程。 自定义呈现器为自定义 Xamarin.Forms 控件的外观和行为提供了一种功能强大的方法。 可使用它们进行细微的样式更改，也可进行复杂的特定于平台的布局和行为自定义。
 
 
 ## <a name="related-links"></a>相关链接

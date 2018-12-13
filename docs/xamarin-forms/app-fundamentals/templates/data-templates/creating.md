@@ -1,6 +1,6 @@
 ---
 title: 创建 Xamarin.Forms DataTemplate
-description: 数据模板可以以内联方式创建的 ResourceDictionary、 中或从自定义类型或适当的 Xamarin.Forms 单元格类型。 本文探讨了每种技术。
+description: 可通过内联方式创建数据模板，也可在 ResourceDictionary 中或根据自定义类型或适当的 Xamarin.Forms 单元类型进行创建。 本文对每种技术进行了探讨。
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
 ms.technology: xamarin-forms
@@ -9,22 +9,22 @@ ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 63f9bf82bc8e637aced1afa5d5699ac1e8dc3f8c
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38994610"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>创建 Xamarin.Forms DataTemplate
 
-_数据模板可以以内联方式创建的 ResourceDictionary、 中或从自定义类型或适当的 Xamarin.Forms 单元格类型。本文探讨了每种技术。_
+_可通过内联方式创建数据模板，也可在 ResourceDictionary 中或根据自定义类型或适当的 Xamarin.Forms 单元类型进行创建。本文对每种技术进行了探讨。_
 
-有关的常见使用方案[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)显示在对象的集合中的数据[ `ListView` ](xref:Xamarin.Forms.ListView)。 在每个单元格的数据的外观[ `ListView` ](xref:Xamarin.Forms.ListView)可以设置管理[ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)属性设置为[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)。 有许多可以用于实现此目的的方法：
+[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 的常见使用场景是在 [`ListView`](xref:Xamarin.Forms.ListView) 中显示来自对象集合的数据。 可通过将 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 属性设置为 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)，来管理 [`ListView`](xref:Xamarin.Forms.ListView) 中每个单元的数据外观。 可使用多种技术实现此目的：
 
 - [创建内联 DataTemplate](#inline)。
-- [使用一种类型创建 DataTemplate](#type)。
-- [创建为资源 DataTemplate](#resource)。
+- [使用类型创建 DataTemplate](#type)。
+- [将 DataTemplate 创建为资源](#resource)。
 
-无论所使用的技术，其结果是，在每个单元格的外观[ `ListView` ](xref:Xamarin.Forms.ListView)由定义[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)，如以下屏幕截图所示：
+无论使用何种技术，结果都是 [`ListView`](xref:Xamarin.Forms.ListView) 中每个单元的外观由 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 定义，如以下屏幕截图所示：
 
 ![](creating-images/data-template-appearance.png "使用 DataTemplate 的 ListView")
 
@@ -32,7 +32,7 @@ _数据模板可以以内联方式创建的 ResourceDictionary、 中或从自�
 
 ## <a name="creating-an-inline-datatemplate"></a>创建内联 DataTemplate
 
-[ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)属性可以设置为内联[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)。 如果不需要重复利用其他位置的数据模板，应使用一个内联模板，这是指位于作为相应的控件属性的直接子级。 中指定的元素`DataTemplate`定义每个单元格的外观，如下面的 XAML 代码示例中所示：
+可以将 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 属性设置为内联 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)。 如果不需要在其他地方重复使用数据模板，则应使用内联模板，该模板作为相应控件属性的直接子级进行放置。 `DataTemplate` 中指定的元素定义每个单元的外观，如以下 XAML 代码示例所示：
 
 ```xaml
 <ListView Margin="0,20,0,0">
@@ -61,7 +61,7 @@ _数据模板可以以内联方式创建的 ResourceDictionary、 中或从自�
 </ListView>
 ```
 
-内嵌元素的子[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)必须是的或从派生，键入[ `ViewCell` ](xref:Xamarin.Forms.ViewCell)。 内的布局`ViewCell`此处由[ `Grid` ](xref:Xamarin.Forms.Grid)。 `Grid`包含三种[ `Label` ](xref:Xamarin.Forms.Label)实例的绑定及其[ `Text` ](xref:Xamarin.Forms.Label.Text)属性设置为相应的属性的每个`Person`集合中的对象。
+内联 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 的子级必须属于或派生自 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 类型。 `ViewCell` 内的布局在此处由 [`Grid`](xref:Xamarin.Forms.Grid) 进行管理。 `Grid` 包含三个 [`Label`](xref:Xamarin.Forms.Label) 实例，这些实例将其 [`Text`](xref:Xamarin.Forms.Label.Text) 属性绑定到集合中每个 `Person` 对象的相应属性。
 
 以下代码示例显示相应的 C# 代码：
 
@@ -108,13 +108,13 @@ public class WithDataTemplatePageCS : ContentPage
 }
 ```
 
-在 C# 中，内联[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)创建使用指定的构造函数重载`Func`参数。
+在 C# 中，内联 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 是使用指定 `Func` 参数的构造函数重载创建的。
 
 <a name="type" />
 
-## <a name="creating-a-datatemplate-with-a-type"></a>使用一种类型创建 DataTemplate
+## <a name="creating-a-datatemplate-with-a-type"></a>使用类型创建 DataTemplate
 
-[ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)属性也设置为[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)创建从单元格类型。 此方法的优点是整个应用程序的多个数据模板可以重用单元格类型所定义的外观。 下面的 XAML 代码演示此方法的一个示例：
+也可以将 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 属性设置为根据某个单元类型创建的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)。 这种方法的优点在于，由该单元类型定义的外观可由整个应用程序中的多个数据模板重复使用。 以下 XAML 代码展示了此方法的一个示例：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ public class WithDataTemplatePageCS : ContentPage
 </ContentPage>
 ```
 
-在这里， [ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)属性设置为[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)创建自定义单元格的外观的自定义类型。 自定义的类型必须派生自类型[ `ViewCell` ](xref:Xamarin.Forms.ViewCell)，下面的代码示例中所示：
+在这里，[`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 属性设置为根据定义单元外观的自定义类型创建的 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)。 该自定义类型必须派生自 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 类型，如以下代码示例所示：
 
 ```xaml
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -159,9 +159,9 @@ public class WithDataTemplatePageCS : ContentPage
 </ViewCell>
 ```
 
-内[ `ViewCell` ](xref:Xamarin.Forms.ViewCell)，通过此处管理布局[ `Grid` ](xref:Xamarin.Forms.Grid)。 `Grid`包含三种[ `Label` ](xref:Xamarin.Forms.Label)实例的绑定及其[ `Text` ](xref:Xamarin.Forms.Label.Text)属性设置为相应的属性的每个`Person`集合中的对象。
+[`ViewCell`](xref:Xamarin.Forms.ViewCell) 内的布局在此处由 [`Grid`](xref:Xamarin.Forms.Grid) 进行管理。 `Grid` 包含三个 [`Label`](xref:Xamarin.Forms.Label) 实例，这些实例将其 [`Text`](xref:Xamarin.Forms.Label.Text) 属性绑定到集合中每个 `Person` 对象的相应属性。
 
-等效的 C# 代码如以下示例所示：
+以下示例展示了等效的 C# 代码：
 
 ```csharp
 public class WithDataTemplatePageFromTypeCS : ContentPage
@@ -187,7 +187,7 @@ public class WithDataTemplatePageFromTypeCS : ContentPage
 }
 ```
 
-在 C# 中， [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)创建使用指定的单元格类型作为参数的构造函数重载。 单元格类型必须派生自类型[ `ViewCell` ](xref:Xamarin.Forms.ViewCell)，下面的代码示例中所示：
+在 C# 中，[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 是使用构造函数重载创建的，该重载将单元类型指定为参数。 单元类型必须派生自 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 类型，如以下代码示例所示：
 
 ```csharp
 public class PersonCellCS : ViewCell
@@ -214,13 +214,13 @@ public class PersonCellCS : ViewCell
 ```
 
 > [!NOTE]
-> 请注意，Xamarin.Forms 还包括可用于显示简单的数据中的单元格类型[ `ListView` ](xref:Xamarin.Forms.ListView)单元格。 有关详细信息，请参阅[单元格的外观](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)。
+> 请注意，Xamarin.Forms 还包括可用于在 [`ListView`](xref:Xamarin.Forms.ListView) 单元中显示简单数据的单元类型。 有关详细信息，请参阅[单元外观](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)。
 
 <a name="resource" />
 
-## <a name="creating-a-datatemplate-as-a-resource"></a>DataTemplate 创建为资源
+## <a name="creating-a-datatemplate-as-a-resource"></a>将 DataTemplate 创建为资源
 
-数据模板也可以创建可重用对象作为[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)。 这通过为每个声明提供一个唯一`x:Key`属性，为其提供中的描述性键`ResourceDictionary`，如以下 XAML 代码示例中所示：
+也可以将数据模板创建为 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 中的可重用对象。 这是通过为每个声明赋予一个唯一的 `x:Key` 属性来实现的，此属性为声明提供 `ResourceDictionary` 中的描述性键，如以下 XAML 代码示例所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -251,9 +251,9 @@ public class PersonCellCS : ViewCell
 </ContentPage>
 ```
 
-[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)分配给[ `ListView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1)属性使用`StaticResource`标记扩展。 请注意，当`DataTemplate`页中定义[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)，也可以在控件级别或应用程序级别定义。
+使用 `StaticResource` 标记扩展将 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 分配给 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) 属性。 请注意，虽然 `DataTemplate` 是在页面的 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 中定义的，但它也可以在控件级别或应用程序级别定义。
 
-下面的代码示例显示了 C# 中的等效页：
+以下代码示例展示了 C# 中的等效页面：
 
 ```csharp
 public class WithDataTemplatePageCS : ContentPage
@@ -281,15 +281,15 @@ public class WithDataTemplatePageCS : ContentPage
 }
 ```
 
-[ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)添加到[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)使用[ `Add` ](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object))方法，后者指定`Key`用于字符串引用`DataTemplate`时检索它。
+使用 [`Add`](xref:Xamarin.Forms.ResourceDictionary.Add(System.String,System.Object)) 方法将 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 添加到 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)，该方法指定了用于在检索到 `DataTemplate` 时对其进行引用的 `Key` 字符串。
 
 ## <a name="summary"></a>总结
 
-本文介绍了如何从自定义类型，或在创建数据模板、 内联[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)。 如果不需要重复利用其他位置的数据模板，应使用内联模板。 或者，可以通过定义它作为自定义的类型，或作为控件级别页级别或应用程序级别资源重复使用数据模板。
+本文说明了如何以内联方式、根据自定义类型或在 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 中创建数据模板。 如果不需要在其他地方重复使用数据模板，则应使用内联模板。 或者，可将数据模板定义为自定义类型或控件级别、页面级别或应用程序级别资源，从而重复使用数据模板。
 
 
 ## <a name="related-links"></a>相关链接
 
 - [单元格外观](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [数据模板 （示例）](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
-- [数据模板](xref:Xamarin.Forms.DataTemplate)
+- [数据模板（示例）](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [DataTemplate](xref:Xamarin.Forms.DataTemplate)

@@ -1,6 +1,6 @@
 ---
 title: 自定义视频定位
-description: 此文章介绍了如何在使用 Xamarin.Forms 的视频播放器应用程序中实现自定义位置栏。
+description: 本文介绍如何使用 Xamarin.Forms 在视频播放器应用程序中实现自定义定位条。
 ms.prod: xamarin
 ms.assetid: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
 ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/08/2018
 ms.locfileid: "35241905"
 ---
 # <a name="custom-video-positioning"></a>自定义视频定位
 
-由每个平台实现的传输控制包括位置栏。 此栏类似于滑块或滚动条，并在其总持续时间内显示视频的当前位置。 此外，用户可以操作的位置栏将向前或向后移动到视频中的新位置。
+由每个平台实现的传输控件都有一个定位条。 该定位条类似于滑块或滚动条，用于显示视频进度。 此外，用户可以操纵该定位条，前移或后移到视频中的新位置。
 
-这篇文章演示如何实现你自己的自定义位置栏。
+本文演示如何实现自己的自定义定位条。
 
-## <a name="the-duration-property"></a>持续时间属性
+## <a name="the-duration-property"></a>Duration 属性
 
-信息的一个项，`VideoPlayer`需要支持自定义位置栏是视频的持续时间。 `VideoPlayer`定义只读`Duration`类型的属性`TimeSpan`:
+`VideoPlayer` 支持自定义定位条的所需信息之一是视频的持续时间。 `VideoPlayer` 定义类型 `TimeSpan` 的只读 `Duration` 属性：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -52,7 +52,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-如`Status`属性中所述[上一篇文章](custom-transport.md)，则此`Duration`属性是只读的。 定义专用`BindablePropertyKey`并且仅可通过引用设置`IVideoPlayerController`接口，其中包括这`Duration`属性：
+就像 [上一篇文章](custom-transport.md) 中描述的 `Status` 属性一样，该 `Duration` 属性也是只读状态。 它由专属的 `BindablePropertyKey` 定义，并只能通过引用 `IVideoPlayerController` 接口进行设置，该接口包含 `Duration` 属性：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -66,15 +66,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-此外会注意到的属性更改的处理程序调用一个名为方法`SetTimeToEnd`描述此文章中更高版本。
+另请注意，本文稍后将介绍调用名为 `SetTimeToEnd` 方法的属性更改处理程序。
 
-视频的持续时间是*不*可用后立即`Source`属性`VideoPlayer`设置。 部分必须下载视频文件，才能基础视频播放器可以确定其持续时间。
+设置 `VideoPlayer` 的 `Source` 属性后，无法立即获取视频持续时间。 必须先下载部分视频文件，然后基础视频播放器才能确定其持续时间。
 
-下面是每个平台呈现器如何获取视频的持续时间：
+下面是每个平台呈现器获取视频持续时间的方法：
 
-### <a name="video-duration-in-ios"></a>在 iOS 中的视频持续时间
+### <a name="video-duration-in-ios"></a>iOS 中的视频持续时间
 
-在 iOS 视频的持续时间获取从`Duration`属性`AVPlayerItem`，但不是立即晚于`AVPlayerItem`创建。 可以设置的 iOS 观察者`Duration`属性，但`VideoPlayerRenderer`获取的持续时间以`UpdateStatus`方法，即每秒 10 次：
+在 iOS 中，是从 `AVPlayerItem` 的 `Duration` 属性获取视频持续时间，但不是在创建 `AVPlayerItem` 后立即获得。 可以为 `Duration` 属性设置 iOS 观察程序，但 `VideoPlayerRenderer` 是使用每秒调用 10 次的 `UpdateStatus` 方法获取持续时间：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -102,11 +102,11 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-`ConvertTime`方法将`CMTime`对象传递给`TimeSpan`值。
+`ConvertTime` 方法将 `CMTime` 对象转换为 `TimeSpan` 值。
 
-### <a name="video-duration-in-android"></a>在 Android 中的视频持续时间
+### <a name="video-duration-in-android"></a>Android 中的视频持续时间
 
-`Duration` Android 属性`VideoView`报告以毫秒为单位的有效持续时间时`Prepared`事件`VideoView`激发。 Android`VideoPlayerRenderer`类使用该处理程序来获取`Duration`属性：
+触发 `VideoView` 的 `Prepared` 事件时，Android `VideoView` 的 `Duration` 属性以毫秒为单位报告有效持续时间。 Android `VideoPlayerRenderer` 类使用该处理程序获取 `Duration` 属性：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -124,9 +124,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="video-duration-in-uwp"></a>在 UWP 视频持续时间
+### <a name="video-duration-in-uwp"></a>UWP 中的视频持续时间
 
-`NaturalDuration`属性`MediaElement`是`TimeSpan`值并成为有效`MediaElement`激发`MediaOpened`事件：
+`MediaElement` 的 `NaturalDuration` 属性是一个 `TimeSpan` 值，该值在 `MediaElement` 触发 `MediaOpened` 事件时有效：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -143,9 +143,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-## <a name="the-position-property"></a>位置属性
+## <a name="the-position-property"></a>Position 属性
 
-`VideoPlayer` 此外需要`Position`属性可提高从零到`Duration`播放视频。 `VideoPlayer` 实现此属性，如`Position`UWP 中的属性`MediaElement`，这是正常的可绑定属性的公共`set`和`get`访问器：
+`VideoPlayer` 还需要 `Position` 属性，该属性在视频播放时从零增加到 `Duration`。 `VideoPlayer` 实现该属性的方式类似于 UWP `MediaElement` 中的 `Position` 属性，它是具有公共的 `set` 和 `get` 访问器的常规可绑定属性：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -168,15 +168,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-`get`访问器返回的视频当前位置播放它时，但`set`访问器旨在通过向前或向后移动的视频的位置的位置栏的用户的操作做出响应。
+播放视频时，`get` 访问器返回当前的视频位置，但 `set` 访问器旨在通过前移或后移视频位置来响应用户对定位条的操作。
 
-在 iOS 和 Android 中，获取当前的位置的属性仅具有`get`访问器和`Seek`方法是可用于执行此第二个任务。 如果你认为一下，单独`Seek`方法似乎是一个更明智的做法比单个`Position`属性。 单个`Position`属性具有固有的问题： 在视频播放时`Position`属性必须持续更新，以反映新的位置。 但你不希望对大多数更改`Position`属性以使视频播放器将移到视频中的新位置。 如果发生这种情况，通过查找到最后一个值以响应视频播放器会`Position`不向前移动属性和视频。
+在 iOS 和 Android 中，获取当前位置的属性只有一个 `get` 访问器，并且只有一个 `Seek` 方法可用于执行第二个任务。 如果仔细想想，单独的 `Seek` 方法似乎比单个 `Position` 属性更为合理。 单个 `Position` 属性有一个固有问题：视频播放时，必须不断更新 `Position` 属性，以反映新的位置。 但你不希望通过对 `Position` 属性执行太多更改来让视频播放器移动到视频中的新位置。 如果发生这种情况，视频播放器将通过查找 `Position` 属性的最后值来响应，并且视频不会前移。
 
-尽管的实现难度`Position`具有属性`set`和`get`访问器中，因为它是与 UWP 一致这种方法选择`MediaElement`，并且具有与数据绑定一起很大的优势： `Position`属性`VideoPlayer`可以绑定到用于同时显示的位置并要查找到新位置的滑块。 但是，一些预防措施是必需的实现这时`Position`属性以避免反馈循环。
+尽管使用 `set` 和 `get` 访问器实现 `Position` 属性比较困难，但是选择这种方法是因为它与 UWP `MediaElement` 是一致的，并且在数据绑定方面有很大优势：`VideoPlayer` 的 `Position` 属性可以绑定到用于显示位置和查找新位置的滑块。 但是，实现该 `Position` 属性时需要注意一些事项，以避免反馈循环。
 
 ### <a name="setting-and-getting-ios-position"></a>设置和获取 iOS 位置
 
-在 iOS 中，`CurrentTime`属性`AVPlayerItem`对象指示播放视频的当前位置。 IOS`VideoPlayerRenderer`设置`Position`中的属性`UpdateStatus`同时它所设置的处理程序`Duration`属性：
+在 iOS 中，`AVPlayerItem` 对象的 `CurrentTime` 属性表示正在播放的视频的当前位置。 iOS `VideoPlayerRenderer` 在设置 `UpdateStatus` 处理程序中的 `Position` 属性的同时，也设置 `Duration` 属性：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -198,7 +198,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-呈现器检测到时`Position`属性设置从`VideoPlayer`中已更改`OnElementPropertyChanged`重写，并使用该新值来调用`Seek`方法`AVPlayer`对象：
+呈现器可检测出 `VideoPlayer` 的 `Position` 属性集在 `OnElementPropertyChanged` 替代中发生更改的时间，并使用该新值调用 `AVPlayer` 对象上的 `Seek` 方法：
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -224,13 +224,13 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-请记住，每次`Position`中的属性`VideoPlayer`设置从`OnUpdateStatus`处理程序，`Position`属性激发`PropertyChanged`事件，在中检测到`OnElementPropertyChanged`重写。 有关这些更改中的大多数`OnElementPropertyChanged`方法不执行任何操作。 否则，视频的位置中的每个更改，它将移到刚达到的相同位置 ！
+请记住，每次从 `OnUpdateStatus` 处理程序设置 `VideoPlayer` 中的 `Position` 属性时，`Position` 属性都会触发 `PropertyChanged` 事件，该事件会在 `OnElementPropertyChanged` 替代中检测到。 对于大多数此类更改，`OnElementPropertyChanged` 方法不应执行任何操作。 否则，在视频位置每次发生更改时，它都会移动到刚刚到达的同一位置！
 
-若要避免这种反馈循环，`OnElementPropertyChanged`方法仅调用`Seek`时之间的差异`Position`属性和的当前位置`AVPlayer`大于 1 秒。
+为了避免这种反馈循环，`Position` 属性与 `AVPlayer` 的当前位置的时间差大于一秒时，`OnElementPropertyChanged` 方法才调用 `Seek`。
 
 ### <a name="setting-and-getting-android-position"></a>设置和获取 Android 位置
 
-IOS 呈现器，Android 中一样`VideoPlayerRenderer`设置的新值`Position`中的属性`OnUpdateStatus`处理程序。 `CurrentPosition`属性`VideoView`包含单元中的毫秒的新位置：
+就像在 iOS 呈现器中一样，Android `VideoPlayerRenderer` 为 `OnUpdateStatus` 处理程序中的 `Position` 属性设置新值。 `VideoView` 的 `CurrentPosition` 属性包含以毫秒为单位的新位置：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -249,7 +249,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-此外，iOS 呈现器中一样 Android 呈现器调用`SeekTo`方法`VideoView`时`Position`属性已更改，但仅限于时更改为多个为一秒从不同`CurrentPosition`值`VideoView`:
+而且，就像在 iOS 呈现器中一样，在 `Position` 属性已发生变化，但仅在该变化与 `VideoView` 的 `CurrentPosition` 值相差一秒以上时，Android 呈现器才调用 `VideoView` 的 `SeekTo` 方法：
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -275,7 +275,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="setting-and-getting-uwp-position"></a>设置和获取 UWP 位置
 
-UWP`VideoPlayerRenderer`句柄`Position`中一样的 iOS 和 Android 的呈现器，但是，由于`Position`UWP 属性`MediaElement`也`TimeSpan`值，则不必进行转换：
+UWP `VideoPlayerRenderer` 处理 `Position` 的方式与 iOS 和 Android 呈现器相同，但由于 UWP `MediaElement` 的 `Position` 属性也是 `TimeSpan` 值，因此不需要进行转换：
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -306,9 +306,9 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="calculating-a-timetoend-property"></a>计算 TimeToEnd 属性
 
-有时视频播放器显示视频中的剩余时间。 此值匹配位置始于当视频开始，并减少到零，视频结束时的视频的持续时间。
+有时视频播放器会显示视频的剩余时间。 在视频持续时间中，该值在视频开始时开始计算，在视频结束时减少到零。
 
-`VideoPlayer` 包括的只读`TimeToEnd`完全在类处理的属性基于更改`Duration`和`Position`属性：
+`VideoPlayer` 包括一个只读 `TimeToEnd` 属性，该属性完全在该类中根据对 `Duration` 和 `Position` 属性的更改进行处理：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -336,11 +336,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-`SetTimeToEnd`从这两者的属性更改的处理程序调用方法`Duration`和`Position`。
+从两个 `Duration` 和 `Position` 的属性更改处理程序调用 `SetTimeToEnd` 方法。
 
-## <a name="a-custom-slider-for-video"></a>一个自定义的滑块，用于视频
+## <a name="a-custom-slider-for-video"></a>用于视频的自定义滑块
 
-可以编写一个位置栏中，自定义控件或使用 Xamarin.Forms`Slider`或派生自类`Slider`，如下所示`PositionSlider`类。 类定义名为的两个新属性`Duration`和`Position`类型的`TimeSpan`想要将数据绑定到中的相同名称的两个属性`VideoPlayer`。 请注意，对默认的绑定模式`Position`属性是双向：
+可以为定位条写入自定义控件，也可以使用 Xamarin.Forms `Slider` 或派生自 `Slider` 的类，例如下面的 `PositionSlider` 类。 该类定义两个新属性 `Duration` 和 `Position`，它们的类型为 `TimeSpan`，旨在作为 `VideoPlayer` 中同名的两个属性的数据绑定。 注意，`Position` 属性的默认绑定模式为双向：
 
 ```csharp
 namespace FormsVideoLibrary
@@ -395,11 +395,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-属性更改处理程序`Duration`属性集`Maximum`基础属性`Slider`到`TotalSeconds`属性`TimeSpan`值。 同样的属性更改处理程序`Position`设置`Value`属性`Slider`。 这样，基础`Slider`跟踪的位置`PositionSlider`。
+`Duration` 属性的属性更改处理程序将基础 `Slider` 的 `Maximum` 属性设置为 `TimeSpan` 值的 `TotalSeconds` 属性。 同样，`Position` 的属性更改处理程序设置 `Slider` 的 `Value` 属性。 通过这种方式，基础 `Slider` 跟踪 `PositionSlider` 的位置。
 
-`PositionSlider`从基础更新`Slider`只有一个实例中： 当用户操作`Slider`以指示视频应高级或反转到新位置。 这中检测到`PropertyChanged`的构造函数中的处理程序`PositionSlider`。 处理程序检查中的更改`Value`属性，以及是否不同于`Position`属性，则`Position`属性设置从`Value`属性。
+`PositionSlider` 更新自仅一个实例中的基础 `Slider`：用户操作 `Slider` 以指明应该将视频前移或反转到新的位置时。 这是在 `PositionSlider` 构造函数中的 `PropertyChanged` 处理程序中检测到的。 处理程序检查 `Value` 属性中的更改，并且如果它与 `Position` 属性不同，那么 `Position` 属性将从 `Value` 属性进行设置。
 
-从理论上讲，内部`if`语句无法编写如下：
+理论上，内部的 `if` 语句可以这样写：
 
 ```csharp
 if (newPosition.Seconds != Position.Seconds)
@@ -408,15 +408,15 @@ if (newPosition.Seconds != Position.Seconds)
 }
 ```
 
-但是的 Android 实现`Slider`具有仅 1,000 离散步骤而不考虑`Minimum`和`Maximum`设置。 该视频的总长度超过 1,000 秒，然后两种不同`Position`值将对应于相同`Value`设置`Slider`，，这`if`语句会触发用户操作的假正`Slider`。 它会改为检查新的位置和现有的位置大于总持续时间的百分之一更加安全。
+然而，无论 `Minimum` 和 `Maximum` 设置如何，`Slider` 的 Android 实现都只有 1000 个独立步骤。 如果视频持续时间大于 1000 秒，那么两个不同的 `Position` 值将对应 `Slider` 的同一 `Value` 设置，并且这个 `if` 语句将因用户操作 `Slider` 而触发误报。 相反，检查新位置和现有位置是否大于总持续时间的百分之一更安全。
 
 ## <a name="using-the-positionslider"></a>使用 PositionSlider
 
-适用于 UWP 文档[ `MediaElement` ](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/)警告有关绑定到`Position`属性由于属性频繁更新。 文档建议，使用计时器查询`Position`属性。
+UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.MediaElement/) 的文档会针对对 `Position` 属性的绑定进行警告，因为属性经常更新。 文档建议使用计时器查询 `Position` 属性。
 
-这是一个不错的建议，但这三种`VideoPlayerRenderer`类已间接使用计时器来更新`Position`属性。 `Position`的处理程序中更改属性`UpdateStatus`事件，激发每秒仅 10 次。
+这是很好的建议，但是这三个 `VideoPlayerRenderer` 类已经间接地使用计时器来更新 `Position` 属性了。 `Position` 属性在 `UpdateStatus` 事件的处理程序中更改，其每秒仅触发 10 次。
 
-因此，`Position`属性`VideoPlayer`可以绑定到`Position`属性`PositionSlider`不会出现性能问题，如中所示**自定义位置栏**页：
+因此，`VideoPlayer` 的 `Position` 属性可以绑定到 `PositionSlider` 的 `Position` 属性上，而且不存在性能问题，如“自定义定位条”页面中所示：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -471,12 +471,12 @@ if (newPosition.Seconds != Position.Seconds)
 </ContentPage>
 ```
 
-第一个省略号 （···） 隐藏`ActivityIndicator`; 它是与以前相同**自定义传输**页。 请注意两个`Label`元素显示`Position`和`TimeToEnd`属性。 这两个之间省略号`Label`元素隐藏这两个`Button`元素中所示**自定义传输**页面的播放、 暂停和停止。 代码隐藏逻辑也是相同**自定义传输**页。
+第一个省略号 (···) 隐藏 `ActivityIndicator`；与上一个“自定义传输”页面中的省略号相同。 请注意两个显示 `Position` 和 `TimeToEnd` 属性的 `Label` 元素。 这两个 `Label` 元素之间的省略号隐藏“自定义传输”页面中显示的“播放”、“暂停”和“停止”的两个 `Button` 元素。 代码隐藏逻辑也与“自定义传输”页面相同。
 
-[![自定义定位](custom-positioning-images/custompositioning-small.png "自定义定位")](custom-positioning-images/custompositioning-large.png#lightbox "自定义定位")
+[![自定义定位](custom-positioning-images/custompositioning-small.png "Custom Positioning")](custom-positioning-images/custompositioning-large.png#lightbox "Custom Positioning")
 
-到此结束的讨论`VideoPlayer`。
+关于 `VideoPlayer` 的讨论到此为止。
 
 ## <a name="related-links"></a>相关链接
 
-- [视频播放器演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [视频播放器演示（示例）](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

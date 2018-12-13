@@ -1,6 +1,6 @@
 ---
 title: 从右到左本地化
-description: 从右到左本地化将对从右到左的流方向的支持添加到 Xamarin.Forms 应用程序。
+description: 从右到左本地化为 Xamarin.Forms 应用程序添加了对从右到左流方向的支持。
 ms.prod: xamarin
 ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
 ms.technology: xamarin-forms
@@ -10,39 +10,39 @@ ms.author: dabritch
 ms.date: 05/07/2018
 ms.openlocfilehash: 67b0d90290b18c7a5b55c5e3496b54970a8cfc38
 ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/13/2018
 ms.locfileid: "51617600"
 ---
 # <a name="right-to-left-localization"></a>从右到左本地化
 
-_从右到左本地化将对从右到左的流方向的支持添加到 Xamarin.Forms 应用程序。_
+从右到左本地化为 Xamarin.Forms 应用程序添加了对从右到左流方向的支持。
 
 > [!NOTE]
-> 从右到左本地化需要 iOS 9 或更高版本，以及 API 17 或更高版本在 Android 上使用。
+> 从右到左本地化需要使用 iOS 9 或更高版本，或者 Android 版 API 17 或更高版本。
 
-流方向是密切关注扫描的页上的 UI 元素的方向。 某些语言，如阿拉伯语和希伯来语，需要从右到左流动方向进行布局的 UI 元素。 这可以通过设置来实现[ `VisualElement.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。 此属性获取或设置在任何的控制其布局，并应将设置为其中一个父元素的 UI 元素流中的方向[ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection)枚举值：
+流方向是指页面 UI 元素的浏览方向。 某些语言（例如阿拉伯语和希伯来语）需要按从右到左流动方向对 UI 元素进行布局。 这也可以通过设置 [`VisualElement.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性来实现。 此属性获取或设置 UI 元素在控制其布局的任何父元素中的流动方向，并且此属性应设置为一个 [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) 枚举值：
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-设置[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性设置为[ `RightToLeft` ](xref:Xamarin.Forms.FlowDirection.RightToLeft)元素通常设置的对齐方式向右、 向右到左的阅读顺序和控件的布局从流从右到左：
+在一个元素上将 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性设置为 [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) 通常会将对齐方式设置为向右，阅读顺序设置为从右到左，控件布局设置为从右到左流动：
 
-[![在阿拉伯语从右到左流动方向与 TodoItemPage](rtl-images/TodoItemPage-Arabic.png "TodoItemPage 在阿拉伯语从右到左流方向")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "TodoItemPage 在阿拉伯语从右到左流方向")
-
-> [!TIP]
-> 您应该只设置[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)初始布局的属性。 更改此值在运行时将导致一个成本高昂的布局过程，将会影响性能。
-
-默认值[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)无父元素的属性值是[ `LeftToRight` ](xref:Xamarin.Forms.FlowDirection.LeftToRight)，而默认`FlowDirection`使用的父元素为[ `MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent). 因此，一个元素继承`FlowDirection`从可视化树中，并且任何元素中其父级的属性值可以重写它从其父级中获取的值。
+[![使用阿拉伯语且流动方向为从右到左的 TodoItemPage](rtl-images/TodoItemPage-Arabic.png "使用阿拉伯语且流动方向为从右到左的 TodoItemPage")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "使用阿拉伯语且流动方向为从右到左的 TodoItemPage")
 
 > [!TIP]
-> 在本地化右到左的语言的应用时，设置[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)页或根布局上的属性。 这将导致所有页上或根布局，以与流方向做出适当的响应中包含的元素。
+> 在初始布局上，应该只设置 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性。 运行时更改此值会导致影响性能的成本高昂的布局过程。
 
-## <a name="respecting-device-flow-direction"></a>并遵循设备的流方向
+无父级的元素的默认 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性值是 [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)，有父级的元素的默认 `FlowDirection` 为 [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)。 因此，元素从可视化树中的其父级处继承 `FlowDirection` 属性值，并且任何元素都可以替代该元素从其父级处获取的值。
 
-并遵循设备的流方向基于所选的语言和区域是一个显式的开发人员的选择，而且不会自动发生。 它可以通过设置来实现[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)页上或根布局属性为`static` [ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection)值：
+> [!TIP]
+> 本地化采用从右到左语言的应用时，设置页或根布局上的 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性。 这导致页或根布局包含的所有元素对流方向作出相应响应。
+
+## <a name="respecting-device-flow-direction"></a>遵循设备流方向
+
+遵循基于所选语言和区域的设备流动方向是开发人员的选择，不会自动发生。 可以通过将页或根布局上的 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性设置为 `static`[`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) 值来实现：
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
@@ -52,15 +52,15 @@ _从右到左本地化将对从右到左的流方向的支持添加到 Xamarin.F
 this.FlowDirection = Device.FlowDirection;
 ```
 
-页上或根布局的所有子元素将默认情况下都继承[ `Device.FlowDirection` ](xref:Xamarin.Forms.Device.FlowDirection)值。
+页或根布局的所有子元素会默认继承 [`Device.FlowDirection`](xref:Xamarin.Forms.Device.FlowDirection) 值。
 
-## <a name="platform-setup"></a>平台安装程序
+## <a name="platform-setup"></a>平台设置
 
-启用从右到左的区域设置需要特定平台安装程序。
+启用从右到左的区域设置需要特定平台设置。
 
 ### <a name="ios"></a>iOS
 
-所需的从右向左的区域设置应作为受支持的语言添加到的数组项`CFBundleLocalizations`中的键**Info.plist**。 下面的示例演示具有已添加到数组中的阿拉伯语`CFBundleLocalizations`密钥：
+所需的从右向左的区域设置应作为支持语言添加到 Info.plist 中的 `CFBundleLocalizations` 键的数组项。 下面的示例显示阿拉伯语已添加到 `CFBundleLocalizations` 键的数组：
 
 ```xml
 <key>CFBundleLocalizations</key>
@@ -70,18 +70,18 @@ this.FlowDirection = Device.FlowDirection;
 </array>
 ```
 
-![Info.plist 支持语言](rtl-images/ios-locales.png "Info.plist 支持的语言")
+![Info.plist 支持语言](rtl-images/ios-locales.png "Info.plist supported languages")
 
-有关详细信息，请参阅[在 iOS 中的本地化基础知识](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)。
+有关详细信息，请参阅[ iOS 中的本地化基础知识](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)。
 
-然后可以通过更改为从右向左的区域设置中指定的语言和设备/模拟器上的区域进行测试从右到左本地化**Info.plist**。
+然后可以通过将设备/模拟器上的语言和区域更改为 Info.plist 中指定的从右向左的区域设置，以测试从右到左的本地化。
 
 > [!WARNING]
-> 请注意，当更改语言和区域为从右向左的区域设置在 iOS 上，任何[ `DatePicker` ](xref:Xamarin.Forms.DatePicker)视图将引发异常，如果不包括所需的区域设置的资源。 例如，当在阿拉伯语已测试的应用程序`DatePicker`，确保**mideast**中选择**国际化**一部分**iOS 生成**窗格。
+> 请注意，在 iOS 上将语言和区域更改为从右向左的区域设置时，如果未包括区域设置所需资源，任何 [`DatePicker`](xref:Xamarin.Forms.DatePicker) 视图都将引发异常。 例如，测试具有 `DatePicker` 的阿拉伯语应用时，请确保选中“iOS 生成”窗格的“国际化”部分中的“中东”。
 
 ### <a name="android"></a>Android
 
-应用程序的**AndroidManifest.xml**应更新文件，以便`<uses-sdk>`的节点集`android:minSdkVersion`属性为 17，并`<application>`的节点集`android:supportsRtl`属性为`true`:
+应更新应用的“AndroidManifest.xml”文件，使 `<uses-sdk>` 节点将 `android:minSdkVersion` 属性设置为 17，`<application>` 节点将 `android:supportsRtl` 属性设置为 `true`：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,11 +92,11 @@ this.FlowDirection = Device.FlowDirection;
 </manifest>
 ```
 
-通过更改设备/模拟器以使用从右到左语言中，或者通过启用，然后可以测试从右向左的本地化**Force RTL 布局方向**中**设置 > 开发人员选项**。
+通过将设备/模拟器更改为使用从右到左的语言，或者通过启用“设置”>“开发人员选项”中的“强制执行 RTL 布局方向”，可以测试从右向左的本地化。
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-应在中指定所需的语言资源`<Resources>`的节点**Package.appxmanifest**文件。 下面的示例显示了已加入的阿拉伯语`<Resources>`节点：
+应在“Package.appxmanifest”文件的 `<Resources>` 节点中指定所需语言资源。 下面的示例显示阿拉伯语已添加到 `<Resources>` 节点中：
 
 ```xml
 <Resources>
@@ -106,7 +106,7 @@ this.FlowDirection = Device.FlowDirection;
 </Resources>
 ```
 
-此外，UWP 需要.NET Standard 库中显式定义应用程序的默认区域性。 这可以通过设置来实现`NeutralResourcesLanguage`属性中`AssemblyInfo.cs`，或在另一个类中，为默认区域性：
+此外，UWP 要求在 .NET Standard 库中显式定义应用的默认区域性。 这可以通过将 `AssemblyInfo.cs` 或另一个类中的 `NeutralResourcesLanguage` 属性设置为默认区域性来实现：
 
 ```csharp
 using System.Resources;
@@ -114,41 +114,41 @@ using System.Resources;
 [assembly: NeutralResourcesLanguage("en")]
 ```
 
-更改为相应从右向左的区域设置的语言和设备上的区域，然后可以测试从右向左的本地化。
+然后可以通过将设备上的语言和区域更改为适当的从右向左的区域设置，测试从右到左的本地化。
 
 ## <a name="limitations"></a>限制
 
-Xamarin.Forms 从右到左本地化当前具有许多限制：
+Xamarin.Forms 从右到左本地化当前有许多限制：
 
-- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 按钮位置工具栏项的位置，并转换动画受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) 轻扫方向不能翻转。
-- [`Image`](xref:Xamarin.Forms.Image) 可视内容不能翻转。
-- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 并[ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[]))方向受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`WebView`](xref:Xamarin.Forms.WebView) 内容不遵从[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- 一个`TextDirection`属性需要要添加，用于控制文本对齐方式。
+- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 按钮位置、工具栏项的位置和转换动画都是由设备区域设置控制，而不是由 [`FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) 轻扫方向不翻转。
+- [`Image`](xref:Xamarin.Forms.Image) 可视内容不翻转。
+- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 和 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) 方向由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- [`WebView`](xref:Xamarin.Forms.WebView) 内容不遵从 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性。
+- 需要添加 `TextDirection` 属性以控制文本对齐方式。
 
 ### <a name="ios"></a>iOS
 
-- [`Stepper`](xref:Xamarin.Forms.Stepper) 由设备的区域设置，控制方向而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`EntryCell`](xref:Xamarin.Forms.EntryCell) 文本对齐方式受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 不会逆转手势和对齐方式。
+- [`Stepper`](xref:Xamarin.Forms.Stepper) 方向由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- [`EntryCell`](xref:Xamarin.Forms.EntryCell) 文本对齐方式由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- 不逆转 [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 笔势和对齐方式。
 
 ### <a name="android"></a>Android
 
-- [`SearchBar`](xref:Xamarin.Forms.SearchBar) 由设备的区域设置，控制方向而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 放置受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
+- [`SearchBar`](xref:Xamarin.Forms.SearchBar) 方向由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 放置由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
 
 ### <a name="uwp"></a>UWP
 
-- [`Editor`](xref:Xamarin.Forms.Editor) 文本对齐方式受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
-- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性不会继承[ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage)子级。
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 文本对齐方式受设备区域设置，而不是[ `FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection)属性。
+- [`Editor`](xref:Xamarin.Forms.Editor) 文本对齐方式由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
+- [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 子级不继承 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性。
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 文本对齐方式由设备区域设置控制，而不是由 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 属性控制。
 
-## <a name="right-to-left-language-support-with-xamarinuniversity"></a>从右至左的语言支持使用 Xamarin.University
+## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Xamarin.University 的从右至左的语言支持
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Xamarin.Forms 3.0 右到左支持，通过[Xamarin 学院课程](https://university.xamarin.com/)**
+Xamarin.Forms 3.0 从右到左支持，提供者：[Xamarin University](https://university.xamarin.com/)
 
 ## <a name="related-links"></a>相关链接
 
