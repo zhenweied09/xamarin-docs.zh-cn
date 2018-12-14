@@ -70,26 +70,26 @@ MVVM 模式中有三个核心部分： 模型（Model）、 视图（View）和�
 
 ### <a name="model"></a>模型
 
-模型类是封装应用程序的数据的非可视类。 因此，该模型可以认为的表示在应用的域模型，通常包括数据模型以及业务和验证逻辑。 模型对象的示例包括数据传输对象 (Dto)、 普通旧 CLR 对象 (Poco) 和生成的实体和代理对象。
+模型类是封装应用程序的数据的非可视类。 因此，该模型可以认为的代表应用的领域模型，通常包括数据模型以及业务和验证逻辑。 模型对象的示例包括数据传输对象 (Dto)、 普通旧 CLR 对象 (Poco) 和生成的实体以及代理对象。
 
-模型类通常使用与服务或封装数据访问和缓存的存储库中。
+模型类通常与封装数据访问和缓存的服务 (services) 或存储库（repositories）一起使用。
 
-## <a name="connecting-view-models-to-views"></a>连接到视图的视图模型
+## <a name="connecting-view-models-to-views"></a>连接视图模型到视图
 
-视图模型可以连接到视图中，通过使用 Xamarin.Forms 的数据绑定功能。 有许多可用于构造视图和视图模型，将其在运行时相关联的方法。 这些方法划分为两个类别，称为复合视图第一个和第一个视图模型的组合。 第一个复合视图和模型的第一个组合是首选项和复杂性的问题的视图之间进行选择。 但是，所有方法都共享相同的目的，这是要有分配给它的 BindingContext 属性视图模型的视图。
+视图模型可以通过使用 Xamarin.Forms 的数据绑定功能连接到视图中。 有许多方法可用于构造视图和视图模型，并将其在运行时相关联。 这些方法划分为两个类别，称为视图优先（view first）组合和视图模型优先 (view model first) 组合。 两者之间的选择取决于编好和复杂度。 但是，所有方法都有一个相同的目的，这就是要有给视图的 BindingContext 属性分配一个视图模型。
 
-视图与第一个复合应用程序从概念上讲组成连接到它们所依赖的视图模型的视图。 这种方法的主要优点是，它可用于轻松地构建松散耦合，单元可测试应用程序因为视图模型都具有不依赖于视图本身。 它也很容易遵循其可视结构，而无需来跟踪代码执行，若要了解如何创建和关联类通过了解应用程序的结构。 此外，查看第一个构造符合 Xamarin.Forms 导航系统，它负责构造页导航时，这样可使视图模型第一个构成复杂且与平台未对齐。
+对于视图优先组合的应用程序从概念上讲是由视图以及连接到它们所依赖的视图模型组成。 这种方法的主要优点是，它可用于轻松地构建松散耦合，可单元测试应用程序因为视图模型不依赖于视图本身。 它也很容易遵循其可视结构来了解应用程序的结构，而无需跟踪代码执行来了解类如何创建和关联。 此外，视图优先的构造方法符合 Xamarin.Forms 导航系统，它负责在导航发生时构造页面，这样可使视图模型优先组合的方法变得复杂且与平台偏离。
 
-与视图模型第一个组合应用程序是从概念上讲组成视图模型与服务负责查找视图模型的视图。 视图模型第一个组合感觉有些开发人员，更自然，因为视图创建，可将抽象化，从而可以专注于应用程序的逻辑非 UI 结构将。 此外，它允许创建的其他视图模型的视图模型。 但是，这种方法通常比较复杂并且它可能会比较困难，若要了解如何创建和关联应用程序的各个部分。
+对于视图模型优先组合的应用程序从概念上讲是由视图模型组成，有一个服务来负责查找对应的视图给视图模型。 视图模型优先组合对于有些开发人员来说感觉更自然，因为视图创建可以被抽象化，让他们可以专注于应用程序的非 UI 逻辑结构。 此外，它允许视图模型通过其他视图模型来创建。 但是，这种方法通常比较复杂并且它可能会让了解应用程序的各个部分如何创建和关联变得困难。
 
 > [!TIP]
-> 使视图模型和视图独立。 绑定到数据源中的属性的视图应该是视图的主体依赖于其相应的视图模型。 具体而言，不引用视图类型，如[ `Button` ](xref:Xamarin.Forms.Button)并[ `ListView` ](xref:Xamarin.Forms.ListView)，从视图模型。 按照此处列出的原则，视图模型可以进行测试以隔离方式，因此通过限制作用域中减少软件缺陷的可能性。
+> 保持视图模型和视图独立。 绑定视图到数据源中的属性应该是视图对于其相应的视图模型的主要依赖。 具体而言，不要从视图模型引用视图类型，如[ `Button` ](xref:Xamarin.Forms.Button)和[ `ListView` ](xref:Xamarin.Forms.ListView)。 按照此处列出的原则，视图模型可以被隔离测试，因此通过限制作用域来减少软件缺陷的可能性。
 
-以下各节讨论连接到视图的视图模型的主要方法。
+以下各节讨论连接视图模型到视图的主要方法。
 
 ### <a name="creating-a-view-model-declaratively"></a>以声明方式创建视图模型
 
-最简单方法是要以声明方式实例化其对应的视图模型在 XAML 中的视图。 当构造视图时，还将构造相应的视图模型对象。 下面的代码示例演示了此方法：
+最简单方法是在视图 XAML 中以声明方式实例化其对应的视图模型。 当构造视图时，还将构造相应的视图模型对象。 下面的代码示例演示了此方法：
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:eShop">  
@@ -100,13 +100,13 @@ MVVM 模式中有三个核心部分： 模型（Model）、 视图（View）和�
 </ContentPage>
 ```
 
-当[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)创建实例`LoginViewModel`自动构造和设置为视图[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)。
+当[ `ContentPage` ](xref:Xamarin.Forms.ContentPage)创建时，一个`LoginViewModel`的实例会自动构造并设置为视图的[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)。
 
-此声明性构造和分配由该视图的视图模型的优点是它很简单，但它需要视图模型中的默认 （无参数） 构造函数的缺点是。
+此声明性构造和由该视图分配的视图模型的优点是它很简单，但它的缺点是需要视图模型中有一个默认 （无参数） 构造函数。
 
 ### <a name="creating-a-view-model-programmatically"></a>以编程方式创建视图模型
 
-可以在结果分配给在视图模型中的代码隐藏文件中具有代码视图及其[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)属性。 通常中完成此操作视图的构造函数，如下面的代码示例中所示：
+视图可以在 code-behind 文件中有用于分配视图模型给其 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)属性的代码。 通常在视图的构造函数中完成此操作，如下面的代码示例中所示：
 
 ```csharp
 public LoginView()  
@@ -116,17 +116,17 @@ public LoginView()
 }
 ```
 
-以编程方式构造和分配视图的代码隐藏中的视图模型的优点是简单。 但是，这种方法的主要缺点是视图需要向视图模型提供所需依赖项。 使用依赖关系注入容器有助于保持松散耦合的视图和视图模型之间。 有关详细信息，请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
+在视图的 code-behind 文件中以编程方式构造和分配视图模型的优点是简单。 但是，这种方法的主要缺点是视图需要向视图模型提供所需依赖项。 使用依赖关系注入容器有助于在视图和视图模型之间保持松散耦合。 有关详细信息，请参阅[依赖关系注入](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)。
 
-### <a name="creating-a-view-defined-as-a-data-template"></a>创建视图定义为一个数据模板
+### <a name="creating-a-view-defined-as-a-data-template"></a>创建一个定义为数据模板的视图
 
-视图可以定义为一个数据模板和与视图模型类型相关联。 数据模板可以定义为资源，或者它们可以是以内联方式定义中将显示视图模型的控件。 控件的内容视图模型实例，并且数据模板用于以可视方式表示。 这种方法是在视图模型实例化的第一次，然后创建该视图的情况下一个示例。
+视图可以被定义为一个数据模板并与一个视图模型类型相关联。 数据模板可以定义为资源，或者它们可以在将要显示视图模型的控件中以内联方式定义。 控件的内容是视图模型的实例，并且数据模板用于以可视化的方式表示它。 这种方法是在视图模型优先实例化，然后创建该视图的情况下的一个示例。
 
 <a name="automatically_creating_a_view_model_with_a_view_model_locator" />
 
-### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>自动使用视图模型定位符创建视图模型
+### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>使用视图模型定位器自动创建视图模型
 
-视图模型定位符是管理视图模型和其关联到视图的实例化一个自定义类。 在 eShopOnContainers 移动应用中，`ViewModelLocator`类具有附加的属性， `AutoWireViewModel`，用于将视图模型与视图相关联。 在该视图的 XAML，此附加的属性设置为 true 以指示视图模型应会自动连接到视图，如下面的代码示例中所示：
+视图模型定位器是管理视图模型实例化及其关联到视图的一个自定义类。 在 eShopOnContainers 移动应用中，`ViewModelLocator`类有一个附加属性， `AutoWireViewModel`，用于将视图模型与视图相关联。 在该视图的 XAML，此附加属性设置为 true 以指示视图模型应会自动连接到视图，如下面的代码示例中所示：
 
 ```xaml
 viewModelBase:ViewModelLocator.AutoWireViewModel="true"
