@@ -22,7 +22,7 @@ ms.locfileid: "51526944"
 
 - **Apple 的 [Mac 开发人员中心](https://developer.apple.com/devcenter/mac/)** - 其中一个示例：在 Objective-C 中调用的 API 可直接转换成 C#。 请参阅[了解 Mac API](~/mac/app-fundamentals/mac-apis.md)了解有关如何实现此操作的详细信息。
 
-- [**Stack Overflow**](http://stackoverflow.com/)（堆栈溢出） - 一个很有用的资源源，用于解答简单的一次性问题，例如[“How do I auto expand all nodes in an NSOutlineView”](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes)（如何在 NSOutlineView 中自动展开所有节点）。 这些示例通常是 Objective-C 的，并且需要转换成 C#，但 C# 中存在答案的子集。
+- [**Stack Overflow**](http://stackoverflow.com/)（堆栈溢出） - 一个很有用的资源源，用于解答简单的一次性问题，例如[如何在 NSOutlineView 中自动展开所有节点](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes)。 这些示例通常是 Objective-C 的，并且需要转换成 C#，但 C# 中存在答案的子集。
 
 ## <a name="user-interface"></a>用户界面
 
