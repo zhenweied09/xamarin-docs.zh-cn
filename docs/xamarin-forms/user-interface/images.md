@@ -90,7 +90,7 @@ iOS、 Android 和 UWP 包括针对不同的图像分辨率，其中操作系统
 
 因为 iOS 9 管理映像的首选的方法是拖动到相应的资产目录图像集所需的每个分辨率的图像。 有关详细信息，请参阅[将图像添加到资产目录映像集](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
-在 iOS 9 之前, retina 版本的映像无法放置在**资源**文件夹的两个和第三次使用的分辨率**@2x**或**@3x**上的文件扩展名 （例如之前, 的文件名的后缀。 **myimage@2x.png**). 但是，apple 已弃用的 iOS 应用程序中的映像的使用此方法。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
+在 iOS 9 之前, retina 版本的映像无法放置在**资源**文件夹的两个和第三次使用的分辨率 **@2x** 或 **@3x** 上的文件扩展名 （例如之前, 的文件名的后缀。 **myimage@2x.png**). 但是，apple 已弃用的 iOS 应用程序中的映像的使用此方法。 有关详细信息，请参阅[图像大小和文件名](~/ios/app-fundamentals/images-icons/displaying-an-image.md)。
 
 Android 备用分辨率图像应置于[特殊命名目录](http://developer.android.com/guide/practices/screens_support.html)在 Android 项目中，如以下屏幕截图中所示：
 
