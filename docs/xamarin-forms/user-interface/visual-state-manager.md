@@ -180,7 +180,7 @@ Xamarin.Forms 视觉状态管理器定义一个可视状态组名"CommonStates"�
 
 每个`Setter`标记指示特定属性的值时该状态是最新。 引用的任何属性`Setter`对象必须由可绑定的属性。
 
-标记类似于以下是的基础**视图上的 VSM**页面**[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 示例程序。 此页包含三个`Entry`视图中，但是仅第二个具有 VSM 标记附加到它：
+标记类似于以下是的基础 **视图上的 VSM** 页面 **[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 示例程序。 此页包含三个`Entry`视图中，但是仅第二个具有 VSM 标记附加到它：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -430,7 +430,7 @@ VisualStateManager.GoToState(this, "Focused");
 
 如果你想要实现您自己的视觉状态，你将需要调用`VisualStateManager.GoToState`从代码。 通常，你将使此调用的页类代码隐藏文件中。
 
-**VSM 验证**页面**[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 示例演示如何使用输入验证与可视状态管理器。 XAML 文件包含两个`Label`元素， `Entry`，和`Button`:
+**VSM 验证** 页面 **[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 示例演示如何使用输入验证与可视状态管理器。 XAML 文件包含两个`Label`元素， `Entry`，和`Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
