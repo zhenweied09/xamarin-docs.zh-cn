@@ -132,7 +132,7 @@ public LoginView()
 viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 ```
 
-`AutoWireViewModel`属性是可绑定属性的已初始化为 false，并且其值更改时`OnAutoWireViewModelChanged`调用事件处理程序。 此方法解析视图的视图模型。 下面的代码示例演示如何实现此目的：
+`AutoWireViewModel`属性是一个已初始化为 false 的可绑定属性，并且其值更改时`OnAutoWireViewModelChanged`事件处理器会被调用。 此方法为视图解析视图模型。 下面的代码示例演示如何实现此目的：
 
 ```csharp
 private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
@@ -159,34 +159,34 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, object o
 }
 ```
 
-`OnAutoWireViewModelChanged`方法尝试解决在视图模型中使用基于约定的方法。 此约定可假定：
+`OnAutoWireViewModelChanged`方法尝试使用基于约定的方法来解析视图模型。 此约定可假定：
 
--   视图模型以相同的程序集中的视图类型。
--   视图位于。视图子命名空间。
--   视图模型以。ViewModels 子命名空间。
--   视图模型名称与视图名称开头和结尾是"ViewModel"。
+-   视图模型与视图类型处于相同的程序集中。
+-   视图位于 .Views 子命名空间。
+-   视图模型位于 .ViewModels 子命名空间。
+-   视图模型名称与视图名称一致并以"ViewModel"结尾。
 
-最后，`OnAutoWireViewModelChanged`方法设置[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)到解决的视图模型类型的视图类型。 有关解决视图模型类型的详细信息，请参阅[解析](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution)。
+最后，`OnAutoWireViewModelChanged`方法设置解析到的视图模型类型到视图类型的[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)。 有关解析视图模型类型的详细信息，请参阅[解析方法](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#resolution)。
 
-此方法具有应用具有单个类，它负责的视图模型和其连接的视图实例化的优点。
+此方法具有的优点是应用具有单个类来负责视图模型的实例化及其到视图的连接。
 
 > [!TIP]
-> 使用视图模型定位符，以便于替换。 视图模型定位符可以还用于为点替换为备用实现的依赖项，如单元测试或设计时数据。
+> 使用视图模型定位器来方便替换。 视图模型定位器可以用于作为依赖项的备用实现的替换点，如单元测试或设计时数据。
 
-## <a name="updating-views-in-response-to-changes-in-the-underlying-view-model-or-model"></a>在响应中的基础的更改更新 Views 视图模型
+## <a name="updating-views-in-response-to-changes-in-the-underlying-view-model-or-model"></a>更新视图以响应其视图模型与模型的变更
 
-所有视图模型和可访问到视图的模型类应都实现`INotifyPropertyChanged`接口。 视图模型或模型类中实现此接口允许基础属性值更改时提供更改通知到视图中的任何数据绑定控件的类。
+所有在视图中可访问的视图模型和模型类都应实现`INotifyPropertyChanged`接口。 视图模型或模型类中实现此接口允许其属性值变更时提供变更通知到视图中的任何数据绑定控件。
 
-应用程序应通过满足以下要求架构适用于在属性更改通知的正确用法：
+应用程序应通过满足以下要求，以被架构为正确使用属性变更通知：
 
--   始终引发`PropertyChanged`如果公共属性的值发生更改的事件。 不要假定该引发`PropertyChanged`事件可以忽略由于 XAML 绑定方式的知识。
--   始终引发`PropertyChanged`ㄆ ン 计算其值由视图中的其他属性的属性模型。
--   始终引发`PropertyChanged`末尾的方法，使属性更改，或当已知对象处于安全状态的事件。 通过以同步方式调用事件的处理程序引发事件中断该操作。 如果操作期间发生这种情况，它可能会公开给回调函数的对象时处于不安全的、 部分更新状态。 此外，它是由触发级联更改可能`PropertyChanged`事件。 级联更改通常要求要安全地执行级联更改才会在完成更新。
--   永远不会引发`PropertyChanged`如果属性不会更改的事件。 这意味着您必须在引发之前比较旧的和新值`PropertyChanged`事件。
--   永远不会引发`PropertyChanged`期间如果正在初始化属性的视图模型的构造函数的事件。 不具有订阅视图中的数据绑定控件以在此时接收更改通知。
--   永远不会引发多个`PropertyChanged`事件具有相同属性名称参数中的单个同步调用的类的公共方法。 例如，给定`NumberOfItems`其后备存储为的属性`_numberOfItems`字段中，如果方法为增量`_numberOfItems`50 次循环的执行，过程应只引发属性更改通知上`NumberOfItems`属性一次，所有工作完成后。 对于异步方法，引发`PropertyChanged`异步延续链中的每个同步段中的给定的属性名称的事件。
+-   如果公共属性的值发生变更，则始终引发`PropertyChanged`事件。 不要因为了解 XAML 绑定如何发生就假定引发`PropertyChanged`事件可以被忽略。
+-   对于任何需要通过计算的属性，其值被视图模型或模型中的其他属性使用时，则始终引发`PropertyChanged`。
+-   始终在一个导致属性变更的方法的结尾处，或当对象已知处于安全状态时引发`PropertyChanged`事件。 通过以同步方式调用事件处理器来引发事件会中断其操作。 如果操作期间发生这种情况，它可能会在对象时处于不安全的、 部分更新的状态时公开给回调函数。 此外，`PropertyChanged`事件可能会触发级联变更。 级联变更通常要求在安全地执行其（随后的）级联更改后才会在完成更新。
+-   如果属性没有变更，则永远不要引发`PropertyChanged`事件。 这意味着您必须在引发`PropertyChanged`事件之前比较旧的和新的值。
+-   如果你正在初始化一个属性，则永远不要在视图模型的构造函数中引发`PropertyChanged`事件。 视图中的数据绑定控件不会在此时就订阅了接收变更通知。
+-   永远不要一个类的公共方法的单个同步调用中引发多个具有相同属性名称参数的`PropertyChanged`事件。 例如，给定`NumberOfItems`属性其后备存储是`_numberOfItems`字段，如果一个方法在执行一个循环的过程中对`_numberOfItems`递增50次，它应在所有工作完成后在`NumberOfItems`属性上只引发一次变更通知。 对于异步方法，在一个异步连续链的每个同步段中引发给定的属性名称的`PropertyChanged`事件。
 
-EShopOnContainers 移动应用使用`ExtendedBindableObject`类以提供更改通知，下面的代码示例所示：
+eShopOnContainers 移动应用使用`ExtendedBindableObject`类来提供变更通知，下面的代码示例所示：
 
 ```csharp
 public abstract class ExtendedBindableObject : BindableObject  
@@ -204,9 +204,9 @@ public abstract class ExtendedBindableObject : BindableObject
 }
 ```
 
-Xamarin.Form 的[ `BindableObject` ](xref:Xamarin.Forms.BindableObject)类实现`INotifyPropertyChanged`接口，并提供[ `OnPropertyChanged` ](xref:Xamarin.Forms.BindableObject.OnPropertyChanged(System.String))方法。 `ExtendedBindableObject`类提供了`RaisePropertyChanged`方法来调用属性更改通知，并在此过程中使用提供的功能`BindableObject`类。
+Xamarin.Form 的[ `BindableObject` ](xref:Xamarin.Forms.BindableObject)类实现了`INotifyPropertyChanged`接口，并提供[ `OnPropertyChanged` ](xref:Xamarin.Forms.BindableObject.OnPropertyChanged(System.String))方法。 `ExtendedBindableObject`类提供了`RaisePropertyChanged`方法来调用属性变更通知，并在此过程中使用了`BindableObject`类提供的功能。
 
-在 eShopOnContainers 的移动应用中每个视图模型类派生`ViewModelBase`类，后者又派生`ExtendedBindableObject`类。 因此，使用每个视图模型类`RaisePropertyChanged`中的方法`ExtendedBindableObject`类以提供属性更改通知。 下面的代码示例显示了如何在 eShopOnContainers 的移动应用通过使用 lambda 表达式调用属性更改通知：
+在 eShopOnContainers 移动应用中的每个视图模型类派生自`ViewModelBase`类，后者又派生自`ExtendedBindableObject`类。 因此，每个视图模型类使用`ExtendedBindableObject`类中的`RaisePropertyChanged`方法以提供属性变更通知。 下面的代码示例显示了如何在 eShopOnContainers 的移动应用通过使用 lambda 表达式调用属性变更通知：
 
 ```csharp
 public bool IsLogin  
@@ -223,7 +223,7 @@ public bool IsLogin
 }
 ```
 
-请注意，在这种方式中使用 lambda 表达式涉及到较低的性能开销，原因是 lambda 表达式必须计算为每个调用。 虽然性能开销很小，并且通常不会影响应用程序，有很多更改通知时，可以会产生成本。 但是，此方法的好处是，它提供了编译时类型安全和重构支持重命名属性时。
+请注意，在这种方式中使用 lambda 表达式增加了少许的性能开销，原因是 lambda 表达式必须为每个调用进行解析。 虽然性能开销很小，并且通常不会影响应用程序，但是当有很多变更通知时这些开销会累积起来。 然而，此方法的好处是，它提供了编译时类型安全和重命名属性时的重构支持。
 
 ## <a name="ui-interaction-using-commands-and-behaviors"></a>使用命令和行为的 UI 交互
 
