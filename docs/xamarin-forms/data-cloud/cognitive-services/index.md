@@ -38,7 +38,7 @@ _Microsoft 认知服务是一组 Api、 Sdk 和适用于开发人员可以通过
 
 ![](images/sample-application-1.png "TodoListPage")
 
-可以通过单击创建新项*+* 按钮，导航到`TodoItemPage`。 此页还可通过选择一项任务定位：
+可以通过单击创建新项 *+* 按钮，导航到`TodoItemPage`。 此页还可通过选择一项任务定位：
 
 ![](images/sample-application-2.png "TodoItemPage")
 
