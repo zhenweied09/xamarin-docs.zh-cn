@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 65316bde1d1c709028eae39c19e5dc318821ff70
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055723"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746877"
 ---
 # <a name="part-4-data-binding-basics"></a>第 4 部分。 数据绑定基础知识
 
@@ -22,7 +22,7 @@ _数据绑定使两个用于链接，这样一个导致更改中的其他对象�
 
 ## <a name="data-bindings"></a>数据绑定
 
-数据绑定连接两个对象，调用的属性*源*并*目标*。 在代码中，两个步骤是必需的：`BindingContext`的目标对象的属性必须设置为源对象，并`SetBinding`方法 (通常与结合使用`Binding`类) 必须要绑定的属性的目标对象上调用源对象的属性对象。
+数据绑定连接两个对象，调用的属性*源*并*目标*。 在代码中，则需要两个步骤：`BindingContext`的目标对象的属性必须设置为源对象，并`SetBinding`方法 (通常与结合使用`Binding`类) 必须在要将该对象的属性绑定到源属性的目标对象上调用对象。
 
 目标属性必须是可绑定属性，这意味着目标对象必须派生自`BindableObject`。 联机 Xamarin.Forms 文档将指示哪个属性是可绑定属性。 属性`Label`如`Text`与可绑定属性关联`TextProperty`。
 
@@ -71,7 +71,7 @@ _数据绑定使两个用于链接，这样一个导致更改中的其他对象�
 
 `x:Reference`绑定扩展定义名为的属性`Name`若要在这种情况下设置为引用的元素的名称`slider`。 但是，`ReferenceExtension`定义的类`x:Reference`标记扩展还定义`ContentProperty`属性`Name`，这意味着它不是明确要求。 仅针对各种，第一个`x:Reference`包括"名称 ="，但第二个不：
 
-```csharp
+```xaml
 BindingContext="{x:Reference Name=slider}"
 …
 BindingContext="{x:Reference slider}"
@@ -79,7 +79,7 @@ BindingContext="{x:Reference slider}"
 
 `Binding`标记扩展本身可以有多个属性，就像`BindingBase`和`Binding`类。 `ContentProperty`有关`Binding`是`Path`，但"路径 ="可以省略标记扩展的一部分，如果路径中的第一项`Binding`标记扩展。 第一个示例具有"路径 ="，但第二个示例省略它：
 
-```csharp
+```xaml
 Rotation="{Binding Path=Value}"
 …
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
@@ -87,7 +87,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 属性可以是在同一行或分成多行：
 
-```csharp
+```xaml
 Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
@@ -96,7 +96,7 @@ Text="{Binding Value,
 
 请注意`StringFormat`在第二个属性`Binding`标记扩展。 在 Xamarin.Forms 中，绑定不执行任何隐式类型转换，并且如果您需要将非字符串对象显示为一个字符串，你必须提供类型转换器或使用`StringFormat`。 在后台，静态`String.Format`方法用于实现`StringFormat`。 这可能是问题，因为.NET 格式规范涉及大括号，还用来分隔标记扩展。 这将创建令人混乱 XAML 分析器的风险。 若要避免这种情况，请用单引号引起来将整个的格式设置字符串：
 
-```csharp
+```xaml
 Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -117,7 +117,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 下面的程序说明的一个常见用途`OneWayToSource`和`TwoWay`绑定模式。 四个`Slider`视图都为了控制`Scale`， `Rotate`， `RotateX`，并`RotateY`属性的`Label`。 首先，它看起来像的这四个属性`Label`应为数据绑定目标，因为每个所设置`Slider`。 但是，`BindingContext`的`Label`可以是只有一个对象，并且有四个不同的滑块。
 
-出于此原因，所有绑定中都设置似乎是向后的方法：`BindingContext`的每四个滑块都设置为`Label`，和上都设置绑定`Value`滑块的属性。 通过使用`OneWayToSource`和`TwoWay`模式下，这些`Value`属性可以设置的源属性，即`Scale`， `Rotate`， `RotateX`，并`RotateY`的属性`Label`:
+因此，所有绑定中都设置似乎是向后的方式：`BindingContext`的每四个滑块设置为`Label`，并在设置绑定`Value`滑块的属性。 通过使用`OneWayToSource`和`TwoWay`模式下，这些`Value`属性可以设置的源属性，即`Scale`， `Rotate`， `RotateX`，并`RotateY`的属性`Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

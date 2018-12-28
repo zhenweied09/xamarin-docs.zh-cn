@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8df7e14088486d0eff9a6370303e83c5e69d4484
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119093"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746903"
 ---
 # <a name="images-in-xamarinmac"></a>在 Xamarin.Mac 中的图像
 
@@ -219,22 +219,23 @@ MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 将以下公共函数添加到视图控制器：
 
 ```csharp
-public NSImage ImageTintedWithColor (NSImage image, NSColor tint)
-{
-    var tintedImage = image.Copy () as NSImage;
-    var frame = new CGRect (0, 0, image.Size.Width, image.Size.Height);
+public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
+    => NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+        // Draw the original source image
+        sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-    // Apply tint
-    tintedImage.LockFocus ();
-    tint.Set ();
-    NSGraphics.RectFill (frame, NSCompositingOperation.SourceAtop);
-    tintedImage.UnlockFocus ();
-    tintedImage.Template = false;
+        // Apply tint
+        tintColor.Set();
+        NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-    // Return tinted image
-    return tintedImage;
-}
+        return true;
+    });
 ```
+
+> [!IMPORTANT]
+> 尤其是对于 macos Mojave 深色模式的问世，务必要避免`LockFocus`API 自定义呈现时`NSImage`对象。 此类映像成为静态值，将不会自动更新的外观或显示密度变化。
+>
+> 通过采用基于处理程序的机制更高版本，重新呈现的动态条件会自动发生时`NSImage`托管，例如，在`NSImageView`。
 
 最后，若要染色模板映像，调用此函数对着色，让该映像：
 

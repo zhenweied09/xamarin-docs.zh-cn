@@ -1,18 +1,18 @@
 ---
 title: 创建 XAML 标记扩展
-description: 本文介绍如何定义自己的自定义 Xamarin.Forms XAML 标记扩展。 XAML 标记扩展是实现 IMarkupExtension IMarkupExtension 接口的类。
+description: 本文介绍如何定义自己的自定义 Xamarin.Forms XAML 标记扩展。 XAML 标记扩展是一个类，实现 IMarkupExtension 或 IMarkupExtension<T>接口。
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 531fb9500bdbf9d07ac3f781113768395465bd50
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050551"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746799"
 ---
 # <a name="creating-xaml-markup-extensions"></a>创建 XAML 标记扩展
 

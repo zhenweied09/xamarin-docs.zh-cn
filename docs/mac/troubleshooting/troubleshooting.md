@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116740"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609904"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.Mac 故障排除提示
 
@@ -77,7 +77,7 @@ ms.locfileid: "50116740"
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>没有数据是可用于编码 437 System.NotSupportedException:
  
-Xamarin.Mac 应用程序中包括第三方库，你可能会遇到错误，在窗体"System.NotSupportedException： 没有数据是可用于编码 437"尝试编译和运行应用时。 例如，库，如`Ionic.Zip.ZipFile`，可能会引发此异常在操作过程。
+Xamarin.Mac 应用程序中包括第三方库，你可能会遇到错误，在窗体"System.NotSupportedException:没有数据是可用于编码 437"尝试编译和运行应用时。 例如，库，如`Ionic.Zip.ZipFile`，可能会引发此异常在操作过程。
 
 这可以通过打开 Xamarin.Mac 项目中，转到用于解决**Mac 生成** > **国际化**并检查**西部**国际化：
 
@@ -110,10 +110,6 @@ Visual Studio for Mac 的最新版本已删除的权利部分**Info.plist**编�
 输入`Entitlements`的名称，然后单击**新建**按钮。 如果你的项目之前包含授权文件，系统将提示将其添加到项目而不是创建一个新的文件：
 
 [![验证文件的覆盖](troubleshooting-images/entitlements04.png "验证的文件覆盖")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>联系支持 （企业或企业许可证）
-
-如果你有企业版许可证，你有资格直接从 Xamarin 工程师通过支持票证请求帮助。 请参阅[xamarin.com/support](http://xamarin.com/support)有关详细信息。
 
 ## <a name="community-support-on-the-forums"></a>在论坛上的社区支持
 

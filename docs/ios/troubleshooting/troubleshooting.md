@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681561"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609930"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>适用于 Xamarin.iOS 的故障排除技巧 
 
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException： 未找到构造函数为 Foo.Bar::ctor(System.IntPtr)
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException:未找到为 Foo.Bar::ctor(System.IntPtr) 构造函数
 
 当代码尝试实例化从 Interface Builder 文件引用的类的实例时，将在运行时生成此错误。 这意味着你忘记添加采用一个单一 IntPtr，作为参数的构造函数。
 
@@ -123,13 +123,13 @@ public Bar (IntPtr handle) : base (handle) { }
 
 在项目选项对话框中，可以找到 Namespace 设置。 默认命名空间中找到**常规-> Main 设置**部分。 如果为空，则项目的名称用作默认值。 更多高级命名空间设置可在**源代码->.NET 命名策略**部分。
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>用于操作的警告： 永远不会使用 Foo 的私有方法。 (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>警告的操作：永远不会使用 Foo 的私有方法。 (CS0169)
 
 接口生成器文件的操作被连接到小组件通过在运行时，反射，因此预期此警告。
 
 可以使用"#pragma 警告禁用 0169年""#pragma 警告启用 0169" 围绕你的操作如果你想要取消显示此警告只需为这些方法，或如果你想要禁用其整个项目 （非添加 0169 编译器选项中的"忽略警告"字段建议）。
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch 失败，出现以下消息： 无法打开程序集 ' / path/to/yourproject.exe
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch 失败，出现以下消息：无法打开程序集 ' / path/to/yourproject.exe
 
 如果看到此错误消息，通常问题是你的项目的绝对路径包含空格。 这将修复的 Xamarin.iOS，未来版本中，但可以通过将项目移到不含空格的文件夹来解决此问题。
 
@@ -144,7 +144,7 @@ public Bar (IntPtr handle) : base (handle) { }
 
 问题是 Mono 选取 OS X `libsqlite3.dylib`，不 iPhoneSimulator 的`libsqlite3.dylib`文件。 您的应用程序*将*设备，但只是无法在模拟器上工作。
 
-## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>将部署到设备失败，并 System.Exception: AMDeviceInstallApplication 返回 3892346901
+## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>将部署到设备失败，并 System.Exception:返回 3892346901 AMDeviceInstallApplication
 
 此错误意味着你的证书/捆绑包 id 的代码签名配置与在设备上安装了预配配置文件不匹配。  确认您有适当的证书在项目选项中选择-> iPhone 捆绑包签名，并且项目选项中指定的正确程序包 id-> iPhone 应用程序
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 这意味着要链接到你的项目使用 thumb 代码编译的静态库。 从 iPhone SDK 版本 3.1 （或更高版本在撰写本文时） 开始链接非 Thumb 代码 (Xamarin.iOS) 和 Thumb 代码 （静态库） 时，Apple 引入了其链接器中的 bug。你将需要与静态库来缓解此问题的非 Thumb 版本链接。
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException： 尝试 JIT 编译方法 （托管到托管的包装） Foo[]:System.Collections.Generic.ICollection'1.get_Count （）
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1getcount-"></a>System.ExecutionEngineException:尝试 JIT 编译方法 （托管到托管的包装） Foo[]:System.Collections.Generic.ICollection'1.get_Count （）
 
 [] 后缀指示您或类库正在通过泛型集合，如 ienumerable<>、 icollection<> 或 IList <> 数组上调用的方法。 解决此问题，可以显式强制 AOT 编译器包含此类方法通过调用方法，并确保触发了异常的调用之前执行此代码。 在这种情况下，您可以编写：
 
@@ -212,7 +212,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 请附加 XS 日志 **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**， **AndroidTools-{TIMESTAMP}.log**，和**组件-{TIMESTAMP}.log**(在较旧版本的 XS/MonoDevelop，只需发送 **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**)。
 
- **注意： 上述问题已修复在 XS 2.2 最终**
+ **注意：中 XS 2.2 最终修复上述问题**
 
 ## <a name="compiled-application-is-very-large"></a>编译的应用程序是非常大
 
@@ -281,9 +281,9 @@ int count = ((ICollection<Foo>) array).Count;
 
 Visual Studio for Mac 2.2 具有导致其无法检测包含逗号的分发证书的 bug。 请更新 Visual Studio for Mac 2.2.1。
 
-## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>错误"AFCFileRefWrite 返回： 1"上传期间
+## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>错误"AFCFileRefWrite 返回：1"上传期间
 
-将应用上传到你的设备时可能会收到错误"AFCFileRefWrite 返回： 1"。 这可能是如果您有一个零长度文件。
+将应用上传到你的设备时可能会收到错误"AFCFileRefWrite 返回：1"。 这可能是如果您有一个零长度文件。
 
 ## <a name="error-mtouch-failed-with-no-output"></a>错误"mtouch 失败且无输出"
 
@@ -317,7 +317,7 @@ Xamarin.iOS 和 Visual Studio for Mac 的当前版本失败时的项目名称或
 -  创建自定义项目的 Info.plist 并显式设置为在其中 3.0 MinimumOSVersion。   这将重写设置 Xamarin.iOS 的 MinimumOSVersion 3.2 值。   如果不这样做，应用程序不能在 iPhone 上运行。
 -  重新生成、 zip 和上的传到 iTunes connect。
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>未经处理的异常： System.Exception： 无法找到选择器 someSelector： 在 {type}
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>未经处理的异常：“System.Exception:找不到选择器 someSelector： 在 {type}
 
 此异常是由以下三种情况引起的：
 
@@ -398,7 +398,7 @@ Visual Studio for Mac 中的新项目作为其默认 SDK 设置，使用最早�
 
  *"值不应包含任何扩展名称。"- [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>错误:"自定义属性类型 0x43 不支持"时双击.xib 文件
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>错误："不支持自定义特性类型 0x43"时双击.xib 文件
 
 原因是尝试打开.xib 文件时未正确设置环境变量。 这应不会使用正常使用的 Visual Studio 针对 Mac/Xamarin.iOS，并重新打开 Visual Studio for Mac 进行/应用程序 — 应修复的问题。
 
@@ -411,28 +411,8 @@ Visual Studio for Mac 中的新项目作为其默认 SDK 设置，使用最早�
 若要检查的生成操作，请右键单击.xib 文件，然后选择**生成操作**。
 
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>没有数据是可用于编码 437 System.NotSupportedException:
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException:没有数据是可用于编码 437
 
-当 Xamarin.iOS 应用程序中包括第三方库，你可能会遇到错误，在窗体"System.NotSupportedException： 没有数据是可用于编码 437"尝试编译和运行应用时。 例如，库，如`Ionic.Zip.ZipFile`，可能会引发此异常在操作过程。
+当 Xamarin.iOS 应用程序中包括第三方库，你可能会遇到错误，在窗体"System.NotSupportedException:没有数据是可用于编码 437"尝试编译和运行应用时。 例如，库，如`Ionic.Zip.ZipFile`，可能会引发此异常在操作过程。
 
 这可以通过打开 Xamarin.iOS 项目中，转到用于解决**iOS 生成** > **国际化**并检查**西部**国际化。
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>从试用版帐户不能升级到独立/企业版
-
-如果你最近购买了 Xamarin.iOS，并且以前开始 Xamarin.iOS 试用版，你可能需要完成以下步骤以获取此拾取 Visual Studio for Mac 或 Visual Studio 的许可证更改。
-
--  关闭 Visual Studio for Mac/Visual Studio
--  对于 Windows 从 Mac 上的 ~/Library/MonoTouch 或 %PROGRAMDATA%\MonoTouch\License\ 中删除所有文件
--  重新打开 Visual Studio for Mac/Visual Studio 和生成 Xamarin.iOS 项目
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>接收激活不完整错误消息
-
-使用 Xamarin.iOS for Visual Studio 时，可能出现此问题。 若要解决此问题，请将日志发送到以下位置从 [contact@xamarin.com](mailto:contact@xamarin.com)。
-
--  日志位置： %LocalAppData%/Xamarin/Logs
