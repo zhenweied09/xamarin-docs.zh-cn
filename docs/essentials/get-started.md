@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: 5cb53006d7cc965f378f6e971bfc623f0c4cbd60
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c40762ad4d165c1e5a29bdf9dc6d3c0fdb8581f7
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899103"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411721"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 入门
 
@@ -33,7 +33,7 @@ Xamarin.Essentials 可用作 NuGet 包，可以通过使用 Visual Studio 将其
 
 1. 使用 [Visual Studio tools for Xamarin](~/cross-platform/get-started/installation/index.md) 下载并安装 [Visual Studio](http://visualstudio.com)。
 
-2. 使用 Visual Studio C#（Android、iPhone 和 iPad 或跨平台）下的空白应用模板打开现有项目，或创建新项目。 **重要说明**：如果添加到 UWP 项目，请确保在项目属性中设置内部版本 16299 或更高版本。
+2. 使用 Visual Studio C#（Android、iPhone 和 iPad 或跨平台）下的空白应用模板打开现有项目，或创建新项目。 **重要说明**：若要添加到 UWP 项目，请务必在项目属性中设置内部版本 16299 或更高版本。
 
 3. 将 Xamarin.Essentials NuGet 包添加到每个项目：
 
@@ -47,9 +47,6 @@ Xamarin.Essentials 可用作 NuGet 包，可以通过使用 Visual Studio 将其
     # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
     在“解决方案资源管理器”面板中，右键单击项目名称，然后选择“添加”>“添加 NuGet 包...”。搜索 Xamarin.Essentials 并将包安装到所有项目，包括 Android、iOS 和 .NET Standard 库。
-
-    > [!TIP]
-    > [Xamarin.Essentials NuGet](https://www.nuget.org/packages/Xamarin.Essentials) 处于预览状态时，选中“显示预发行包”框。
 
     -----
 
