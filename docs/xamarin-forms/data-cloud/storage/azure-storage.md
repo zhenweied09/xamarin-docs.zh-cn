@@ -1,26 +1,24 @@
 ---
 title: 存储和访问 Azure 存储中的数据
-description: Azure 存储是一种可缩放的云存储解决方案，可以用于存储非结构化和结构化数据。 本文演示如何使用 Xamarin.Forms 来在 Azure 存储中存储文本和二进制数据以及如何访问数据。
+description: Azure 存储是一种可缩放的云存储解决方案，可以用于存储非结构化和结构化数据。 本文介绍如何使用 Xamarin.Forms 来在 Azure 存储中存储文本和二进制数据以及如何访问数据。
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2017
-ms.openlocfilehash: 1f920eb36eab3e451b20aa91734f00cee5ba6485
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/28/2018
+ms.openlocfilehash: 4ecffa0902d186b659e7df07dbcf17053e29c818
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059215"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814006"
 ---
 # <a name="storing-and-accessing-data-in-azure-storage"></a>存储和访问 Azure 存储中的数据
 
 [![下载示例](~/media/shared/download.png)下载示例](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 
 _Azure 存储是一种可缩放的云存储解决方案，可以用于存储非结构化和结构化数据。本文演示如何使用 Xamarin.Forms 来在 Azure 存储中存储文本和二进制数据以及如何访问数据。_
-
-## <a name="overview"></a>概述
 
 Azure 存储提供了四个存储服务：
 
@@ -69,9 +67,6 @@ Azure 存储中存储每个对象具有唯一的 URL 地址。 存储帐户名�
 1. 添加[Azure 存储客户端库](https://www.nuget.org/packages/WindowsAzure.Storage/)到 Xamarin.Forms 应用程序。
 1. 配置存储连接字符串。 有关详细信息，请参阅[连接到 Azure 存储](#connecting)。
 1. 添加`using`指令`Microsoft.WindowsAzure.Storage`和`Microsoft.WindowsAzure.Storage.Blob`到将访问 Azure 存储的类的命名空间。
-
-> [!NOTE]
-> 此示例使用共享访问项目，而 Azure 存储客户端库现在还支持从可移植类库 (PCL) 项目已使用。
 
 <a name="connecting" />
 
@@ -263,15 +258,10 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 检索容器引用之后, 该方法检索指定的 blob 的 blob 引用。 使用然后删除该 blob`DeleteIfExistsAsync`方法。
 
-## <a name="summary"></a>总结
-
-本文演示了如何使用 Xamarin.Forms 来在 Azure 存储中存储文本和二进制数据以及如何访问数据。 Azure 存储是一种可缩放的云存储解决方案，可用于存储非结构化和结构化数据。
-
-
 ## <a name="related-links"></a>相关链接
 
 - [Azure 存储 （示例）](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
 - [存储简介](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [如何通过 Xamarin 使用 Blob 存储](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [使用共享的访问签名 (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
-- [Windows Azure 存储](https://www.nuget.org/packages/WindowsAzure.Storage/)
+- [Windows Azure 存储 (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

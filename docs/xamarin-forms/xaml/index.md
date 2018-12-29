@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: adebd5fe7e05d6698a7d69cef56a1d4035b6d8e7
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 9924e588808783fe35dbd830bbc9af288f37e7ea
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563065"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53813955"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>可扩展应用程序标记语言 (XAML)
 
@@ -20,7 +20,7 @@ _XAML 是一种声明性标记语言，可用于定义用户界面。使用 XAML
 
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
-**Evolve 2016： 成为 XAML Master**
+**Evolve 2016:成为 XAML Master**
 
 > [!NOTE]
 > 试用[XAML 标准预览版](standard/index.md)
@@ -29,7 +29,7 @@ _XAML 是一种声明性标记语言，可用于定义用户界面。使用 XAML
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[XAML 基础知识](xaml-basics/index.md)
 
-XAML 允许开发人员在 Xamarin.Forms 应用程序使用标记而不是代码中定义的用户界面。 XAML 永远不会需要 Xamarin.Forms 程序中，但它是工具化程度，并通常会更直观地一致和比等效的代码更简洁。 XAML 是非常适合于与常用的模型-视图-视图模型 (MVVM) 应用程序体系结构一起使用： XAML 定义通过基于 XAML 的数据绑定链接到 ViewModel 代码的视图。
+XAML 允许开发人员在 Xamarin.Forms 应用程序使用标记而不是代码中定义的用户界面。 XAML 永远不会需要 Xamarin.Forms 程序中，但它是工具化程度，并通常会更直观地一致和比等效的代码更简洁。 XAML 是非常适合于与常用的模型-视图-视图模型 (MVVM) 应用程序体系结构一起使用：XAML 定义通过基于 XAML 的数据绑定链接到 ViewModel 代码的视图。
 
 ## <a name="xaml-compilationxamlcmd"></a>[XAML 编译](xamlc.md)
 
@@ -66,3 +66,7 @@ XAML 可用于将参数传递到非默认构造函数或工厂方法。 本文�
 ## <a name="resource-dictionariesresource-dictionariesmd"></a>[资源字典](resource-dictionaries.md)
 
 XAML 资源是可以多次使用的对象的定义。 一个[ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)允许在单个位置中，定义和重新整个 Xamarin.Forms 应用程序中使用的资源。 本文演示了如何创建和使用`ResourceDictionary`，以及如何合并一个`ResourceDictionary`到另一个。
+
+## <a name="loading-xaml-at-runtimeruntime-loadmd"></a>[加载 XAML 在运行时](runtime-load.md)
+
+可以加载和分析在运行时可使用 XAML [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*)扩展方法。
