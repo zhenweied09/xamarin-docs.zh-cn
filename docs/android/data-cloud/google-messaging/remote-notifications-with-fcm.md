@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: de0e2c5ff10de9136c4cb5987c80ce22c7b18c4d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0c84f530f759285c2cfc71f60d7b6f80fba6a03d
+ms.sourcegitcommit: f890b5ec9b7c2702875070859e1a8cbf6e870e46
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105540"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814032"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>远程通知使用 Firebase Cloud Messaging
 
@@ -137,7 +137,7 @@ using Android.Gms.Common;
 
 1.  在 Visual Studio for Mac 中，右键单击**包 > 添加包...**.
 
-2.  检查**显示预发行包**并搜索**Xamarin.Firebase.Messaging**。
+2.  搜索**Xamarin.Firebase.Messaging**。
 
 3.  安装到此包**FCMClient**项目：
 
@@ -793,8 +793,7 @@ Java.Lang.IllegalStateException: Default FirebaseApp is not initialized in this 
 Make sure to call FirebaseApp.initializeApp(Context) first.
 ```
 
-这是一个可以通过清除解决方案并重新生成项目解决的已知的问题 (**生成 > 清理解决方案**，**生成 > 重新生成解决方案**)。 有关详细信息，请参阅此[论坛讨论](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process)。
-
+这是一个可以通过清除解决方案并重新生成项目解决的已知的问题 (**生成 > 清理解决方案**，**生成 > 重新生成解决方案**)。
 
 ## <a name="summary"></a>总结
 
