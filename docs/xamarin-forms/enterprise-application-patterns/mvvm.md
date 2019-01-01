@@ -225,21 +225,21 @@ public bool IsLogin
 
 请注意，在这种方式中使用 lambda 表达式增加了少许的性能开销，原因是 lambda 表达式必须为每个调用进行解析。 虽然性能开销很小，并且通常不会影响应用程序，但是当有很多变更通知时这些开销会累积起来。 然而，此方法的好处是，它提供了编译时类型安全和重命名属性时的重构支持。
 
-## <a name="ui-interaction-using-commands-and-behaviors"></a>使用命令和行为的 UI 交互
+## <a name="ui-interaction-using-commands-and-behaviors"></a>使用命令 (Commands) 和行为 (Behaviors) 的 UI 交互
 
-在移动应用中，通常以响应用户操作，例如按钮单击，可以通过在代码隐藏文件中创建一个事件处理程序实现的调用操作。 但是，在 MVVM 模式下，实现操作的职责在于视图模型，并且应避免在代码隐藏中的放置代码。
+在移动应用中，通常包括响应用户操作，例如按钮单击，可以通过在 code-behind 文件中创建一个事件处理器来实现的调用操作。 但是，在 MVVM 模式下，实现操作的职责在于视图模型，并且应避免在 code-behind 中的放置代码。
 
-命令提供了方便地表示可以绑定到 UI 中控件的操作。 它们封装实现操作的代码，并帮助以使其从视图中其可视表示形式中分离。 Xamarin.Forms 具有控件可以以声明方式连接到一个命令，并在用户与控件交互时，这些控件将调用该命令。
+命令提供了一种可方便地表示可以绑定到 UI 中控件的操作的方式。 它们封装实现操作的代码，并帮助以使其从视图中其可视表示形式中分离。 Xamarin.Forms 具有控件可以以声明方式连接到一个命令，并在用户与控件交互时，这些控件将调用该命令。
 
-行为还允许以声明方式连接到命令的控件。 但是，可以使用行为调用操作与一系列由某个控件引发的事件相关联。 因此，行为可以解决许多相同的方案为启用了命令的控件，同时提供更高的灵活性和控制。 此外，行为，还可以使用能够不专门设计的命令与之交互的控件相关联的命令对象或方法。
+行为还允许控件以声明方式被连接到命令。 然而，可以使用行为调用一个操作，这个操作与由某个控件引发的一系列事件相关联。 因此，对于控件，行为就像命令一样可以解决许多相同的场景，同时提供更高的灵活性和控制。 此外，行为还可以被用于把命令对象或方法关联到那些不专门设计为与命令交互的控件。
 
 ### <a name="implementing-commands"></a>实现命令
 
-视图模型通常公开命令属性，用于从视图中，绑定所实现的对象实例`ICommand`接口。 提供了许多的 Xamarin.Forms 控件`Command`属性，可以将数据绑定到`ICommand`视图模型提供的对象。 `ICommand`接口定义`Execute`方法，它封装操作本身，`CanExecute`方法，它指示是否可以调用该命令，与`CanExecuteChanged`是否发生影响更改时发生的事件应执行该命令。 [ `Command` ](xref:Xamarin.Forms.Command)并[ `Command<T>` ](xref:Xamarin.Forms.Command) Xamarin.Forms 中，通过提供的类实现`ICommand`接口，其中`T`是个自变量类型`Execute`和`CanExecute`。
+视图模型通常公开命令属性，用于从视图中绑定，这些属性是实现`ICommand`接口的对象实例。 许多的 Xamarin.Forms 控件提供了`Command`属性，可以被数据绑定到视图模型提供的`ICommand`对象。 `ICommand`接口定义了`Execute`方法，它封装了操作本身，`CanExecute`方法，它指示是否可以调用该命令，和`CanExecuteChanged`事件，它在影响是否应执行该命令的变更发生时才出现。 [ `Command` ](xref:Xamarin.Forms.Command)和[ `Command<T>` ](xref:Xamarin.Forms.Command) 类，由 Xamarin.Forms 提供，实现了`ICommand`接口，其中`T`是`Execute`和`CanExecute`方法的参数类型。
 
-在视图模型中，应类型的对象[ `Command` ](xref:Xamarin.Forms.Command)或[ `Command<T>` ](xref:Xamarin.Forms.Command)类型的视图模型中每个公共属性`ICommand`。 `Command`或`Command<T>`构造函数需要`Action`具有时调用的回调对象`ICommand.Execute`调用方法。 `CanExecute`方法是一个可选的构造函数参数，并将`Func`返回`bool`。
+在视图模型中，对于视图模型中每个公共属性`ICommand`都应有一个类型为[ `Command` ](xref:Xamarin.Forms.Command)或[ `Command<T>` ](xref:Xamarin.Forms.Command)的对象。 `Command`或`Command<T>`构造函数需要一个`Action`回调对象，它在`ICommand.Execute`方法被调用时被使用。 `CanExecute`方法是一个可选的构造函数参数，并是一个返回`bool`的`Func`。
 
-下面的代码演示如何[ `Command` ](xref:Xamarin.Forms.Command)通过指定的委托构造实例，它表示注册命令，`Register`查看模型的方法：
+下面的代码演示一个表示注册命令的[ `Command` ](xref:Xamarin.Forms.Command)实例，是如何通过指定一个委托到`Register`视图模型的方法来构造的：
 
 ```csharp
 public ICommand RegisterCommand => new Command(Register);
