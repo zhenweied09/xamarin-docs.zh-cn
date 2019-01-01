@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 3d031489fe71c580b309bedba30c524dfe6666db
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1d164c8593e358a97b21f42bf7116f64d0ac460d
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057939"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815212"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 映射
 
@@ -216,7 +216,7 @@ var pin = new Pin {
 map.Pins.Add(pin);
 ```
 
- `PinType` 可以设置为以下值，可能会影响在 pin 呈现 （具体取决于平台） 的方法之一：
+ `PinType` 可以设置为以下值，可能会影响固定呈现 （具体取决于平台） 的方法之一：
 
 -  泛型
 -  位置
