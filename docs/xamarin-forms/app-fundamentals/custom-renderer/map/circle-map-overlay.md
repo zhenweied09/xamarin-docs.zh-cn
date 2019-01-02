@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3064296d4c78a3342fb27afc971c37a029987e5e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: ed671063aad55cb6c4730494f024a2ec2a016de1
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998552"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051926"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>突出显示地图上的圆形区域
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
 
 本文介绍如何向地图添加圆形叠加层，以突出显示地图上的某一圆形区域。
 

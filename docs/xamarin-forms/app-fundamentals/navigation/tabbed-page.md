@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171373"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058395"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms 选项卡式页面
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
 
 _Xamarin.Forms TabbedPage 包含一系列选项卡和较大的详细信息区域，其中每个选项卡都将内容加载到详细信息区域。本文演示如何使用 TabbedPage 浏览页集合。_
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 0fe170aaa880aebcaff7899c440a0522e1f83a0c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240025"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051116"
 ---
 # <a name="binding-video-sources-to-the-player"></a>将视频源绑定到播放器
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 如果将 `VideoPlayer` 视图的 `Source` 属性设置为新视频文件，当前视频会停止播放并且开始播放新视频。 这通过[“VideoPlayerDemos”](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)示例的“选择 Web 视频”页演示。 该页包含 `ListView`，并且三个视频的标题引用自“App.xaml”文件：
 

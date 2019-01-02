@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172296"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059374"
 ---
 # <a name="customizing-a-map-pin"></a>自定义图钉
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 本文介绍如何为地图控件创建自定义呈现器，该控件显示带有自定义图钉的本机地图以及每个平台上图钉数据的自定义视图。
 

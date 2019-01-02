@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: c720b9f38d2a34155face10b75f5f054f3313711
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f59a528916d2cc5efd19ba7c35a7b4f041ecbe09
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130945"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056157"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms 中的自动化属性
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 _Xamarin.Forms 允许通过使用 AutomationProperties 类中的附加属性在用户界面元素上设置可访问性值，且后者反过来设置了本机可访问性值。本文介绍如何使用 AutomationProperties 类，以便屏幕阅读器可讲述页面上的元素。_
 

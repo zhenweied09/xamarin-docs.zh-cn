@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: a017cfaa6f96c95f4b501f189fe778fbd5ece3f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: f07b26ed06e85e1b20a29459d2f8f0d2626a2855
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241620"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054863"
 ---
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.Forms DependencyService
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/UsingDependencyService)
 
 通过 Xamarin.Forms，开发人员可在特定于平台的项目中定义行为。随后，DependencyService 将找到适当的平台实现，允许共享代码访问本机功能。
 

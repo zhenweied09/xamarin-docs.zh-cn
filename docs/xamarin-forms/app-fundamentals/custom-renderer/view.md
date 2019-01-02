@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8ee9926eb3b726673711141e7c75a68b607d02d3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994697"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057965"
 ---
 # <a name="implementing-a-view"></a>实现视图
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
 
 _Xamarin.Forms 自定义用户界面控件应派生自视图类，该类用于在屏幕上放置布局和控件。本文演示如何为 Xamarin.Forms 自定义控件创建自定义呈现器，用于显示设备摄像头的预览视频流。_
 

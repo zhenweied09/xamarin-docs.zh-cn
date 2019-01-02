@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 00697ca0adf3a34abec90c2f96d9fd9c273d06bb
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1677f86379310ee6d5e0973108f85db2a328cd23
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239779"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048825"
 ---
 # <a name="implementing-a-video-player"></a>实现视频播放器
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 有时需要在 Xamarin.Forms 应用程序中播放视频文件。 本系列文章介绍如何为名为 `VideoPlayer` 的 Xamarin.Forms 类编写适用于 iOS、Android 和通用 Windows 平台 (UWP) 的自定义呈现器。
 

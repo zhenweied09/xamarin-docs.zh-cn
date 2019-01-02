@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994671"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058985"
 ---
 # <a name="hierarchical-navigation"></a>分层导航
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 NavigationPage 类提供分层导航体验，用户可以随心所欲地向前或向后导航页面。_此类将导航实现为页对象的后进先出 (LIFO) 堆栈。本文演示如何使用 NavigationPage 类在页面的堆栈中执行导航。_
 

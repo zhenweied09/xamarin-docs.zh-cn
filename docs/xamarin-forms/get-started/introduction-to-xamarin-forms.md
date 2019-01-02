@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2018
-ms.openlocfilehash: c5d2f93c8cb97c50f9d35d9ad91adf4c6437a3db
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.openlocfilehash: c716f39faad0b58159df5631bf415239a2c658b1
+ms.sourcegitcommit: 06f88979db160fb8dd1c9ee0d5000d8749107489
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "38999008"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53806946"
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Xamarin.Forms 简介
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/GettingStarted/)
 
 _Xamarin.Forms 是一种框架，开发人员可以使用它生成适用于 Android、iOS 和 Windows 的跨平台应用程序。平台之间将共享代码和用户界面定义，但使用本机控件呈现它们。本文介绍了 Xamarin.Forms 以及如何开始在 Visual Studio 中使用 C# 和 XAML 编写应用程序。_
 
@@ -424,7 +426,7 @@ class EmployeeCell : ViewCell
         var twitterLabel = new Label
         {
            HorizontalOptions = LayoutOptions.FillAndExpand,
-           Font = Fonts.Twitter
+           FontSize = 24
         };
         twitterLabel.SetBinding(Label.TextProperty, "Twitter");
 

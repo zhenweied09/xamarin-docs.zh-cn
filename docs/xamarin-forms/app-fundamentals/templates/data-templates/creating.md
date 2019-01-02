@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 63f9bf82bc8e637aced1afa5d5699ac1e8dc3f8c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4eea0db32bcfae4dc2ecdec8c2e494989515ef00
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994610"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060221"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>创建 Xamarin.Forms DataTemplate
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 
 _可通过内联方式创建数据模板，也可在 ResourceDictionary 中或根据自定义类型或适当的 Xamarin.Forms 单元类型进行创建。本文对每种技术进行了探讨。_
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 505b5bfb9681e5bc30ff84aa90c8e148ed6db4b1
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171594"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058280"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 绑定回退
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 有时数据绑定会失败，因为无法解析绑定源，或者因为绑定成功但返回 `null` 值。 虽然可以使用值转换器或其他附加代码处理这些情况，但是通过定义在绑定过程失败时要使用的回退值，可以使数据绑定更加可靠。 这可以通过定义绑定表达式中的 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 和 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 属性来实现。 因为这些属性位于 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 类中，它们可以与绑定、编译绑定和 `Binding` 标记扩展一起使用。
 

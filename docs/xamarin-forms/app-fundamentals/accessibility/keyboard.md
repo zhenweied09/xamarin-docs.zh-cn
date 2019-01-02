@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: f703dff56d2947c35a9bc76e0eb909bfe9023bac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130958"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050434"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Xamarin.Forms 中的键盘导航
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
 有些用户在使用不提供相应键盘访问的应用程序时可能会遇到困难。 为控件指定 Tab 键顺序可启用键盘导航，并准备应用程序页以特定顺序接收输入。
 
