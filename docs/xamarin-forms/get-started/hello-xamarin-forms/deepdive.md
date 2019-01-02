@@ -147,7 +147,7 @@ namespace Phoneword.iOS
 }
 ```
 
-通过调用 `Init` 方法，`FinishedLaunching` 替代初始化 Xamarin.Forms 框架。这会导致在调用 `LoadApplication` 方法设置根视图之前，先将特定于iOS的Xamarin.Forms实现加载到应用程序。
+通过调用 `Init` 方法，`FinishedLaunching` 替代会初始化 Xamarin.Forms 框架。这会导致在通过调用 `LoadApplication` 方法来设置根视图控制器之前，先将特定于 iOS 的 Xamarin.Forms 实现加载到应用程序。
 
 ### <a name="android"></a>Android
 
