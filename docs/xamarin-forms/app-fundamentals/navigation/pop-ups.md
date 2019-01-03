@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 156c2f9dca47a7755d4f810d7921a05662388ded
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 1334340f18e664d4c652803e7678f45ee942eea8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996709"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057400"
 ---
 # <a name="displaying-pop-ups"></a>显示弹出窗口
 
-Xamarin.Forms 提供了两个弹出式用户界面元素：警报和操作表。本文演示了如何使用警报和操作表 API 向用户询问简单的问题并指导用户完成任务。
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+
+Xamarin.Forms 提供了两个弹出式用户界面元素：警报和操作表。本文演示了如何使用警报和操作表 API 向用户询问简单的问题并指导用户完成任务。_
 
 显示警报或要求用户做出选择是一个常见的 UI 任务。 Xamarin.Forms 在 [`Page`](xref:Xamarin.Forms.Page) 类上有两个方法可以通过弹出窗口与用户交互：[`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 和 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)。 在每个平台上使用相应的本机控件呈现。
 

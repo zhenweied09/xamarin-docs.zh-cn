@@ -7,23 +7,25 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: cbb4a01ac2c6d933fe40a0b3c2571d1fe3ce75c0
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bdfef88e0cf5916b1eec08ddfaa09165a057765a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998385"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058573"
 ---
 # <a name="checking-battery-status"></a>检查电池状态
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/DependencyService)
 
 本文介绍如何创建检查电池状态的应用程序。 本文基于 James Montemagno 所著的《电池插件》。 有关详细信息，请参阅 [GitHub 存储库](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)。
 
 由于 Xamarin.Forms 不包含检查当前电池状态的功能，因此该应用程序将需要使用 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 才能利用本机 API。  本文将介绍使用 `DependencyService` 的以下步骤：
 
 - **[创建接口](#Creating_the_Interface)** &ndash; 了解如何在共享代码中创建接口。
-- **[iOS 实现](#iOS_Implementation)**](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
-- **[Android 实现](#Android_Implementation)**](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
-- **[通用 Windows 平台实现](#UWPImplementation)**](#UWPImplementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
+- **[iOS 实现](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
+- **[Android 实现](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
+- **[通用 Windows 平台实现](#UWPImplementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
 - **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash; 了解如何使用 `DependencyService` 从共享代码调用本机实现。
 
 完成后，使用 `DependencyService` 的应用程序将具有以下结构：

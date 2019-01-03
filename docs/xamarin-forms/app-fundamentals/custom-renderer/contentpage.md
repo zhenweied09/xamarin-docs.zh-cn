@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
+ms.openlocfilehash: e310726ae4ad72d10e8e2890e9fbf07dda9bc48e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "38995737"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052324"
 ---
 # <a name="customizing-a-contentpage"></a>自定义 ContentPage
 
-ContentPage 是一个可视元素，它显示单个视图并占据大部分屏幕区域。本文演示了如何为 ContentPage 页面创建自定义呈现器，使开发人员能够使用自己特定于平台的自定义呈现替代默认本机呈现。
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/)
+
+ContentPage 是一个可视元素，它显示单个视图并占据大部分屏幕区域。本文演示了如何为 ContentPage 页面创建自定义呈现器，使开发人员能够使用自己特定于平台的自定义呈现替代默认本机呈现。_
 
 每个 Xamarin.Forms 控件都有一个附带的呈现器，适用于创建本机控件实例的各个平台。 当 Xamarin.Forms 应用程序呈现 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 时，将在 iOS 中实例化 `PageRenderer` 类，而该操作又会实例化本机 `UIViewController` 控件。 在 Android 平台上，`PageRenderer` 类实例化 `ViewGroup` 控件。 在通用 Windows 平台 (UWP) 上，`PageRenderer` 类实例化 `FrameworkElement` 控件。 有关 Xamarin.Forms 控件映射到的呈现器和本机控件类的详细信息，请参阅[呈现器基类和本机控件](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)。
 

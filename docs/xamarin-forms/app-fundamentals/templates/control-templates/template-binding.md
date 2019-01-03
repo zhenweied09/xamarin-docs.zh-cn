@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106424"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051576"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>从 Xamarin.Forms ControlTemplate 绑定
 
-模板绑定允许控件模板中的控件将数据绑定到公共属性，从而可以轻松更改控件模板中控件的属性值。本文演示如何使用模板绑定从控件模板执行数据绑定。
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
+
+模板绑定允许控件模板中的控件将数据绑定到公共属性，从而可以轻松更改控件模板中控件的属性值。本文演示如何使用模板绑定从控件模板执行数据绑定_。
 
 [`TemplateBinding`](xref:Xamarin.Forms.TemplateBinding) 用于将控件模板中的控件属性绑定到拥有控件模板的目标视图的父级上的可绑定属性。 例如，可以使用模板绑定将 [`Label.Text`](xref:Xamarin.Forms.Label.Text) 属性绑定到定义要显示的文本的可绑定属性，而不是定义通过 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) 中的 [`Label`](xref:Xamarin.Forms.Label) 实例显示的文字。
 

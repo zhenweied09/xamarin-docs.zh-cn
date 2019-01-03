@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 2eb6e6f94887301b78f401bf73a4ffaa01559c37
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38998693"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059387"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>添加捏合手势识别器
 
-捏合手势用于执行交互式缩放，并通过 PinchGestureRecognizer 类实现。捏合手势的一个常见场景是在捏合位置对图像进行交互式缩放。这是通过缩放视图的内容来实现的，本文将对此进行演示。
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
+
+捏合手势用于执行交互式缩放，并通过 PinchGestureRecognizer 类实现。捏合手势的一个常见场景是在捏合位置对图像进行交互式缩放。这是通过缩放视图的内容来实现的，本文将对此进行演示。_
 
 若要让用户界面元素可以使用捏合手势进行缩放，请创建 [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) 实例，处理 [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) 事件，并将新的手势识别器添加到用户界面元素上的 [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) 集合。 以下代码示例展示了附加到 [`Image`](xref:Xamarin.Forms.Image) 元素的 `PinchGestureRecognizer`：
 

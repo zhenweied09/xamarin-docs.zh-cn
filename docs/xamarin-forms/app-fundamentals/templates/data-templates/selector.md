@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: a72777c7e51e96a8e123ecd85ad0aa24fc60fc6c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 75ea30dd510021d7755814e19728bfe60f765645
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994512"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057280"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>创建 Xamarin.Forms DataTemplateSelector
 
-DataTemplateSelector 可用于在运行时根据数据绑定属性的值来选择 DataTemplate。如此可将多个 DataTemplate 应用于同一类型的对象，以自定义特定对象的外观。本文演示如何创建和使用 DataTemplateSelector。 
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplateselector/)
+
+DataTemplateSelector 可用于在运行时根据数据绑定属性的值来选择 DataTemplate。如此可将多个 DataTemplate 应用于同一类型的对象，以自定义特定对象的外观。本文演示如何创建和使用 DataTemplateSelector。 _
 
 数据模板选择器支持多种方案，例如：将 [`ListView`](xref:Xamarin.Forms.ListView) 绑定到对象集合，其中返回特定 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 的数据模板选择器可以在运行时选择 `ListView` 中各对象的外观。
 
