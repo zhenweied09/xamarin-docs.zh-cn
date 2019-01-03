@@ -30,6 +30,7 @@
 ### [资源字典](xaml/resource-dictionaries.md)
 ### [XAML 标准（预览）](xaml/standard/index.md)
 #### [控件](xaml/standard/controls.md)
+### [在运行时加载 XAML](xaml/runtime-load.md)
 ## [应用程序基础知识](app-fundamentals/index.md)
 ### [辅助功能](app-fundamentals/accessibility/index.md)
 #### [自动化属性](app-fundamentals/accessibility/automation-properties.md)

@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43780508"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815199"
 ---
 # <a name="introduction-to-mobile-development"></a>移动开发简介
 
@@ -61,7 +61,7 @@ Xamarin 提供两种商业产品：Xamarin.iOS 和 Xamarin.Android。 两者都�
 
 Xamarin 应用程序针对 .NET BCL（称为 Xamarin 移动配置文件）的子集生成。 此配置文件专门为移动应用程序创建，并打包在 MonoTouch.dll 和 Mono.Android.dll（分别针对 iOS 和 Android）中。 这与 Silverlight（和 Moonlight）应用程序针对 Silverlight/Moonlight .NET 配置文件生成的方式很类似。 事实上，Xamarin 移动配置文件相当于 Silverlight 4.0 配置文件以及加回其中的一系列 BCL 类。
 
-有关可用程序集和类的完整列表，请参阅 [Xamarin.iOS 程序集列表](~/cross-platform/internals/available-assemblies.md)和 [Xamarin.Android 程序集列表](~/cross-platform/internals/available-assemblies.md)
+有关可用程序集和类的完整列表，请参阅 [Xamarin.iOS 程序集列表](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios)和 [Xamarin.Android 程序集列表](~/cross-platform/internals/available-assemblies.md?context=xamarin/android)
 
 除了 BCL，这些 .dll 还包括几乎整个 iOS SDK 和 Android SDK 的包装器，允许直接从 C# 调用基础 SDK API。
 

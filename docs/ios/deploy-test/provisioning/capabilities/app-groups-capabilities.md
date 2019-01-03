@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 4ce04f21a3e520fea9da5d538fb7cc0ac098ad31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119816"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411734"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Xamarin.iOS 中的应用组功能
 
@@ -34,12 +34,12 @@ _向应用程序添加功能通常需要其他预配设置。本指南将介绍�
 
 1.  访问 Apple 的 [iOS 开发人员中心](https://developer.apple.com/account/)，打开“帐户”并登录。 **** 
 2.  选择“证书、ID 和配置文件”。
-3.  在“标识符”下选择“应用组”，然后单击 + 按钮以创建新组。 ****  ****  **** 
+3.  在“标识符”下选择“应用组”，然后单击“+”按钮以创建新的组。
 4.  输入新组的“名称”和“标识符”，然后单击“继续”按钮： ****  ****  ****  
    
     ![添加应用组详细信息](app-groups-capabilities-images/image52.png)
 
-5.  单击“注册”按钮创建组，然后单击“完成”返回到已注册的应用组的列表。 ****  **** 
+5.  单击“注册”按钮创建组，然后单击“完成”按钮返回到已注册应用组的列表。
 
 ## <a name="configure-an-app-to-use-app-groups"></a>配置应用以使用应用组
 
@@ -48,15 +48,15 @@ _向应用程序添加功能通常需要其他预配设置。本指南将介绍�
 请执行以下操作：
 
 1.  请访问 Apple 的 [iOS 开发人员中心](https://developer.apple.com/account/)，并使用 Apple 开发人员帐户登录。
-2.  从“程序资源”菜单中选择“证书、ID 和配置文件”。 ****  ****
-3.  在“标识符”下选择“应用 ID”然后单击 + 按钮创建新 ID。 ****  ****  **** 
+2.  从“程序资源”菜单中选择“证书、ID 和配置文件”。
+3.  在“标识符”下选择“应用 ID”，然后单击“+”按钮以创建新的 ID。
 4.  输入应用 ID 的名称，并赋予显式应用 ID。
-5.  在“应用服务”下启用“应用组”，然后单击“继续”按钮： ****  ****
+5.  在“应用服务”下启用“应用组”，然后单击“继续”按钮：
 
     ![添加应用组应用服务](app-groups-capabilities-images/image53.png)
 
 6.  验证设置，然后单击“注册”按钮，创建应用 ID。 **** 
-7.  单击“完成”按钮，返回到已注册的应用 ID 列表。 **** 
+7.  单击“完成”按钮，返回到已注册的应用 ID 列表。
 8.  从列表中选择新创建的应用 ID，然后单击“编辑”按钮： **** 
 
     ![从列表中选择应用 ID](app-groups-capabilities-images/image54.png)
@@ -69,7 +69,7 @@ _向应用程序添加功能通常需要其他预配设置。本指南将介绍�
 
     ![添加应用组](app-groups-capabilities-images/image56.png)
 
-11. 依次单击“分配”按钮和“完成”按钮，返回到已注册的应用 ID 列表。 ****  **** 
+11. 依次单击“分配”按钮和“完成”按钮，返回到已注册的应用 ID 列表。
 12. 对将使用应用组的任何应用（或扩展）重复这些步骤。
 
 ## <a name="next-steps"></a>后续步骤

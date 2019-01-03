@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cf2de96022366165e726bc3e6447bb88f30a26bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241905"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057134"
 ---
 # <a name="custom-video-positioning"></a>自定义视频定位
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 由每个平台实现的传输控件都有一个定位条。 该定位条类似于滑块或滚动条，用于显示视频进度。 此外，用户可以操纵该定位条，前移或后移到视频中的新位置。
 
@@ -172,7 +174,7 @@ namespace FormsVideoLibrary
 
 在 iOS 和 Android 中，获取当前位置的属性只有一个 `get` 访问器，并且只有一个 `Seek` 方法可用于执行第二个任务。 如果仔细想想，单独的 `Seek` 方法似乎比单个 `Position` 属性更为合理。 单个 `Position` 属性有一个固有问题：视频播放时，必须不断更新 `Position` 属性，以反映新的位置。 但你不希望通过对 `Position` 属性执行太多更改来让视频播放器移动到视频中的新位置。 如果发生这种情况，视频播放器将通过查找 `Position` 属性的最后值来响应，并且视频不会前移。
 
-尽管使用 `set` 和 `get` 访问器实现 `Position` 属性比较困难，但是选择这种方法是因为它与 UWP `MediaElement` 是一致的，并且在数据绑定方面有很大优势：`VideoPlayer` 的 `Position` 属性可以绑定到用于显示位置和查找新位置的滑块。 但是，实现该 `Position` 属性时需要注意一些事项，以避免反馈循环。
+尽管使用 `set` 和`get` 访问器实现 `Position` 属性有一定难度，仍然选用此方法是因为它与 UWP `MediaElement` 一致，且它在数据绑定方面具有很大的优势：可将 `VideoPlayer` 的 `Position` 属性绑定到用于显示位置和查找新位置的滑块。 但是，实现该 `Position` 属性时需要注意一些事项，以避免反馈循环。
 
 ### <a name="setting-and-getting-ios-position"></a>设置和获取 iOS 位置
 

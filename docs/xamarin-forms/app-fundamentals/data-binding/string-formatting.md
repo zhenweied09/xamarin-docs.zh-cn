@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170944"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056118"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 字符串格式
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 有时，使用数据绑定来显示代表对象或值的字符串十分方便。 例如，可能想使用 `Label` 来显示 `Slider` 当前的值。 在此数据绑定中，`Slider` 是源，目标是 `Label` 的 `Text` 属性。
 
@@ -178,7 +180,7 @@ XAML 文件的下一部分是 `StackLayout`，其中 `BindingContext` 设置为�
 
 你可能想知道如何在传统的两位数十六进制格式中显示 RGB（红、绿、蓝）值。 这些整数值不是从 `Color` 结构中直接提供的。 一种解决方案是计算 ViewModel 中的颜色组件的整数值，并将其作为属性公开。 然后可以使用 `X2` 格式规范对这些值进行格式设置。
 
-另一种方法更常用：可以编写一个绑定值转换器，在后文[绑定值转换器](converters.md)中有所描述。
+另一种方法更常用：可以编写一个绑定值转换器，在后文[**绑定值转换器**](converters.md)中有所描述。
 
 但下一篇文章更详细地探讨了[绑定路径](binding-path.md)并展示了如何使用它来引用子属性和集合中的项。
 

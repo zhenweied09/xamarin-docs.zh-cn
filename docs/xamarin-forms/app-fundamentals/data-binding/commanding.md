@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675236"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053459"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 命令接口
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 在“模型-视图-视图模型”（即 MVVM）体系结构中，数据绑定是在 ViewModel（通常是派生自 `INotifyPropertyChanged` 的类）中的属性和视图（通常为 XAML 文件）中的属性之间定义的。 有时，应用程序的需求超越了属性绑定层面，它要求用户启动影响 ViewModel 中某些内容的命令。 这些命令通常通过点击按钮或手指敲击触发信号，往往是以下两个事件的处理程序中的代码隐藏文件中处理它们：`Button` 的 `Clicked` 事件或 `TapGestureRecognizer` 的 `Tapped` 事件。
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172101"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050774"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 绑定路径
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 在前面的所有数据绑定示例中，`Binding` 类的 [`Path`](xref:Xamarin.Forms.Binding.Path) 属性（或 `Binding` 标记扩展的 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 属性）已设置为单个属性。 实际上，可以将 `Path` 设置为“子属性”（属性的属性），也可以设置为集合的成员。
 
@@ -140,7 +142,7 @@ ms.locfileid: "52172101"
 
 ## <a name="debugging-complex-paths"></a>调试复杂路径
 
-复杂路径的定义可能很难构造：你需要知道每个子属性的类型或集合中项的类型，以便正确地添加下一个子属性，但是类型本身不会出现在路径中。 较好的方式是以增量方式逐步构建路径并查看中间结果。 对于上一个示例，你可以从完全没有 `Path` 定义开始：
+复杂路径定义可能很难构造：你需要知道每个子属性的类型或集合中项的类型，以便正确地添加下一个子属性，但是类型本身不会出现在路径中。 较好的方式是以增量方式逐步构建路径并查看中间结果。 对于上一个示例，你可以从完全没有 `Path` 定义开始：
 
 ```xaml
 <Label Text="{Binding Source={x:Reference page},

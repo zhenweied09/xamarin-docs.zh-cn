@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 28892692133020de1fa5a6eb007bb3f9bcf2612b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997474"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054326"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 绑定值转换器
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 一般情况下数据绑定会将数据从源属性传递到目标属性，某些情况下则从目标属性传递到源属性。 当源和目标属性都是同一类型，或当一个类型可以隐式转换为另一种类型时，这类传递都是非常简单的。 如果不是这种情况，则必须执行类型转换。
 
@@ -45,7 +47,7 @@ public class IntToBoolConverter : IValueConverter
 
 当数据在 `OneWay` 或 `TwoWay` 绑定中由源移动到目标时，将调用 `Convert` 方法。 `value` 是来自数据绑定源的对象或值。 该方法必须返回数据绑定目标类型的值。 此处所示的方法将 `value` 参数强制转换为 `int`，然后将其与 0 比较并得到 `bool` 返回值。
 
-当数据在 `TwoWay` 或 `OneWayToSource` 绑定中由目标移动到源时，将调用 `ConvertBack` 方法。 `ConvertBack` 执行相反的转换：它假定 `value` 参数是来自目标的 `bool`，然后将其转换为源的 `int` 返回值。
+当数据在 `TwoWay` 或 `OneWayToSource` 绑定中由目标移动到源时，将调用 `ConvertBack` 方法。 `ConvertBack`执行相反的转换：它假定 `value` 参数是来自目标的 `bool`，然后将其转换为源的 `int` 返回值。
 
 如果数据绑定还包括 `StringFormat` 设置，则在结果格式化为字符串之前调用值转换器。
 

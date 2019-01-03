@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563935"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056953"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 绑定模式
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 在[上一篇文章](basic-bindings.md)中，“替代代码绑定”和“替代 XAML 绑定”页面都有一个 `Label`，其 `Scale` 属性绑定到 `Slider` 的 `Value` 属性。 由于 `Slider` 初始值为 0，所以这导致 `Label` 的 `Scale` 属性被设置为 0 而不是 1，并且 `Label` 消失。
 
@@ -112,7 +114,7 @@ ms.locfileid: "51563935"
 
 ViewModel 是数据绑定源。 ViewModel 没有定义可绑定属性，但它实现了一种通知机制，允许在属性值更改时通知绑定基础结构。 此通知机制是 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 接口，该接口定义名为 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged) 的单个属性。 实现此接口的类通常在其某个公共属性更改值时触发该事件。 如果属性永远不会更改，则不需要触发该事件。 （`INotifyPropertyChanged` 接口也由 `BindableObject` 实现，并且只要可绑定属性更改值，就会触发 `PropertyChanged` 事件。）
 
-`HslColorViewModel` 类定义四个属性：`Hue`、`Saturation`、`Luminosity` 和 `Color` 属性彼此相互关联。 当这三个颜色组件中的任何一个更改值时，都将重新计算 `Color` 属性，并为所有四个属性触发 `PropertyChanged` 事件：
+`HslColorViewModel` 类定义五个属性：`Hue`、`Saturation`、`Luminosity` 和 `Color` 属性是相互关联的。 当这三个颜色组件中的任何一个更改值时，都将重新计算 `Color` 属性，并为所有四个属性触发 `PropertyChanged` 事件：
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -256,7 +258,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-`BoxView`、`Label` 和三个 `Slider` 视图从 `Grid` 继承绑定上下文。 这些视图都是引用 ViewModel 中的源属性的绑定目标。 对于 `BoxView` 的 `Color` 属性和 `Label` 的 `Text` 属性，数据绑定为 `OneWay`：视图中的属性根据 ViewModel 中的属性进行设置。
+`BoxView`、`Label` 和三个 `Slider` 视图从 `Grid` 继承绑定上下文。 这些视图都是引用 ViewModel 中的源属性的绑定目标。 对于 `BoxView` 的 `Color` 属性和 `Label` 的 `Text` 属性，数据绑定是 `OneWay`：从 ViewModel 中的属性中设置视图中的属性。
 
 但是，`Slider` 的 `Value` 属性为 `TwoWay`。 此模式允许从 ViewModel 设置每个 `Slider`，也允许从每个 `Slider` 设置 ViewModel。
 

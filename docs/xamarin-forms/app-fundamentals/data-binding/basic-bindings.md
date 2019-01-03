@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675193"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051978"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 基本绑定
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Xamarin.Forms 数据绑定连接两个对象之间的一对属性，其中至少有一个通常是用户界面对象。 这两个对象称为“目标”和“源”：
 
 - “目标”是设置数据要绑定的对象（和属性）。
 - “源”是数据绑定引用的对象（和属性）。
 
-这种区别有时可能会令人困惑：在最简单的情况下，数据从源流到目标，这意味着目标属性值是从源属性的值设置的。 但是，在某些情况下，数据也可以从目标流向源，或者双向流动。 为了避免混淆，请记住，即使目标提供数据而非接收数据，也始终是设置数据绑定的对象。
+这种区别有时可能有点令人困惑：在最简单的情况下，数据从源流到目标，这意味着目标属性值是从源属性的值设置的。 但是，在某些情况下，数据也可以从目标流向源，或者双向流动。 为了避免混淆，请记住，即使目标提供数据而非接收数据，也始终是设置数据绑定的对象。
 
 ## <a name="bindings-with-a-binding-context"></a>使用绑定上下文绑定
 

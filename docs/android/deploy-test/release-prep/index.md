@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123448"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059725"
 ---
 # <a name="preparing-an-application-for-release"></a>做好应用程序发布准备
-
 
 应用程序经编码和测试后，必须准备一个包进行分发。 准备此包的第一个任务是生成供发布的应用程序，其中主要涉及到设置应用程序的一些属性。
 
@@ -63,7 +62,6 @@ ms.locfileid: "50123448"
 ```
 
 通常情况下，`using Android.App` 在 **AssemblyInfo.cs**（`Application` 属性的命名空间为 `Android.App`）顶部声明；不过，可能需要添加此 `using` 语句（如果尚不存在）。
-
 
 <a name="Versioning" />
 
@@ -137,7 +135,6 @@ ms.locfileid: "50123448"
 
 链接可能产生一些意外的副作用，因此必须在物理设备上的发布模式下重新测试应用程序。
 
-
 ### <a name="proguard"></a>ProGuard
 
 ProGuard 是一种链接和模糊处理 Java 代码的 Android SDK 工具。 ProGuard 通常用于创建小型应用程序，工作原理是减少 APK 中包含的大型库的内存占用。 ProGuard 将删除未使用的 Java 字节码，使生成的应用变得更小。 例如，在小型 Xamarin.Android 应用中使用 ProGuard 通常可减少约 24% 大小&ndash; 在具有多个库依赖关系的大型应用中使用 ProGuard 通常可实现更大幅度的大小缩减。 
@@ -184,7 +181,6 @@ Android 清单包含 `android:debuggable` 属性，该属性控制是否可以�
 ```
 
 注意，调试版本会自动设置某些权限以简化调试（如 **Internet** 和 **ReadExternalStorage**）。 但是，发布版本只使用显式配置的权限。 若发现切换到发布版本会导致应用失去可在调试版本中使用的权限，请验证是否已在“所需权限”列表中显式启用了此权限，如[权限](~/android/app-fundamentals/permissions.md)中所述。 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -228,14 +224,13 @@ Dotfuscator CE 随附在 Visual Studio 中，但是仅 Visual Studio 2015 Update
 
 “AOT 编译”选项要求使用 Enterprise 或更高版本的许可证。 仅在项目配置为发布模式时，才可使用“AOT 编译”，并且该选项默认处于禁用状态。 有关 AOT 编译的详细信息，请参阅 [AOT](http://www.mono-project.com/docs/advanced/aot/)。
 
-
 #### <a name="llvm-optimizing-compiler"></a>LLVM 优化编译器
 
 LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译的程序集转换为本机代码，但生成时间会变缓慢。 默认情况下，LLVM 编译器处于禁用状态。 要使用 LLVM 编译器，必须首先启用“AOT 编译”选项（在[打包属性](#Set_Packaging_Properties)页面上）。
 
 
 > [!NOTE]
-> “LLVM 优化编译器”选项需要业务许可证。  
+> “LLVM 优化编译器”选项需要企业许可证。  
 
 <a name="Set_Packaging_Properties" />
 
@@ -257,16 +252,13 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 其中许多属性（例如“使用共享运行时”和“使用快速部署”）专用于调试模式。 但是，在发布模式下配置应用程序时，还需要进行其他设置，这些设置用于确定如何[针对大小和执行速度优化应用](#shrink_apk)、如何[防止篡改应用](#protect_app)，以及如何打包应用以支持不同的体系结构和大小限制。
 
-
 ### <a name="specify-supported-architectures"></a>指定支持的体系结构
 
 准备 Xamarin.Android 应用进行发布时，必须指定支持的 CPU 体系结构。 单个 APK 可包含计算机代码，以支持多个不同的体系结构。 请参阅 [CPU 体系结构](~/android/app-fundamentals/cpu-architectures.md)，深入了解如何支持多个 CPU 体系结构。
 
-
 ### <a name="generate-one-package-apk-per-selected-abi"></a>每个选定 ABI 生成一个包 (.APK)
 
 启用此选项后，会为每个支持的 ABI（在“高级”选项卡上进行选择，如 [CPU 体系结构](~/android/app-fundamentals/cpu-architectures.md)中所述）分别创建一个 APK，而不是为所有支持的 ABI 创建单个大型 APK。 仅在项目配置为用于发布模式时，才可使用此选项，并且其默认处于禁用状态。
-
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -292,7 +284,6 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 -----
 
-
 <a name="archive" />
 
 ## <a name="archive-for-publishing"></a>存档以供发布
@@ -310,7 +301,6 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 另一种创建存档的方法是：在**解决方案资源管理器**中，右键单击“解决方案”，然后选择“全部存档...”，这会生成解决方案并存档可生成存档的所有 Xamarin 项目：
 
 [![全部存档](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 “存档”和“全部存档”均会自动启动**存档管理器**。 若要直接启动**存档管理器**，请单击“工具”>“存档管理器...”菜单项：
 
@@ -370,7 +360,6 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
 
 [![签名和分发](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 可从此处选择分发渠道：
 
 -   Ad-Hoc &ndash; 将已签名的 APK 保存到磁盘，以将其旁加载到 Android 设备。 继续查看[对应用包进行签名](~/android/deploy-test/signing/index.md)，了解如何创建 Android 签名标识、为 Android 应用程序创建新的签名证书以及将“临时”版本的应用发布到磁盘&ldquo;&rdquo;。 这是为测试创建 APK 的好方法。
@@ -380,7 +369,6 @@ LLVM 优化编译器会创建更小更快速的编译代码，并将 AOT 编译�
     继续查看[发布到 Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)，了解如何对 APK 进行签名并将其发布到 Google Play 商店。
 
 -----
-
 
 ## <a name="related-links"></a>相关链接
 

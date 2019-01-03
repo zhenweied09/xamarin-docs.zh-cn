@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171906"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061954"
 ---
 # <a name="creating-the-platform-video-players"></a>创建平台视频播放器
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 [VideoPlayerDemos](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) 解决方案包含为 Xamarin.Forms 实现视频播放器的所有代码。 它还包括一系列页面，演示如何在应用程序中使用视频播放器。 所有 `VideoPlayer` 代码及其平台呈现器都存于名为 `FormsVideoLibrary` 的项目文件夹中，并且也使用命名空间 `FormsVideoLibrary`。 这样应可以很容易地将文件复制到自己的应用程序中并引用这些类。
 
@@ -460,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-开始播放视频还需要另一个属性：这是引用视频文件的关键 `Source` 属性。 将在下一篇文章（[播放 Web 视频](web-videos.md)）中介绍 `Source` 属性的实现。
+还需要另一个属性才能开始播放视频：这是引用视频文件的非常重要的 `Source` 属性。 将在下一篇文章（[播放 Web 视频](web-videos.md)）中介绍 `Source` 属性的实现。
 
 
 ## <a name="related-links"></a>相关链接

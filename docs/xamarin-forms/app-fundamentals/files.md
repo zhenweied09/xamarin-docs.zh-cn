@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527360"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057608"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms 中的文件处理
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 
 使用 .NET Standard 库中的代码或使用嵌入式资源，即可实现使用 Xamarin.Forms 处理文件。
 
@@ -62,7 +64,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 ## <a name="loading-files-embedded-as-resources"></a>加载作为资源嵌入的文件
 
-若要将文件嵌入到“.NET Standard”程序集中，请创建或添加文件并确保“生成操作：EmbeddedResource”。
+若要将文件嵌入到“.NET Standard”程序集中，请创建或添加文件，并确保“生成操作：EmbeddedResource”。
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
