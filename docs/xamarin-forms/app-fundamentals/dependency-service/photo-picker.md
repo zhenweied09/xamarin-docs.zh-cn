@@ -7,21 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 00308a6c7883d4ac6ce41592d4a0e18f9fb28d52
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3452c79621013690f967e065c7afaf0768a50c3f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113308"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057475"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>从图片库中选取照片
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
 
 本文介绍如何创建一种应用程序，使用户可通过该应用程序从手机的图片库中选取照片。 由于 Xamarin.Forms 不包含此功能，因此有必要使用 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 来访问每个平台上的本机 API。  本文将介绍在此任务中使用 `DependencyService` 的以下步骤：
 
 - **[创建接口](#Creating_the_Interface)** &ndash; 了解如何在共享代码中创建接口。
-- **[iOS 实现](#iOS_Implementation)**](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
-- **[Android 实现](#Android_Implementation)**](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
-- **[通用 Windows 平台实现](#UWP_Implementation)**](#UWP_Implementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
+- **[iOS 实现](#iOS_Implementation)** &ndash; 了解如何在 iOS 本机代码中实现接口。
+- **[Android 实现](#Android_Implementation)** &ndash; 了解如何在 Android 本机代码中实现接口。
+- **[通用 Windows 平台实现](#UWP_Implementation)** &ndash; 了解如何在通用 Windows 平台 (UWP) 的本机代码中实现接口。
 - **[在共享代码中实现](#Implementing_in_Shared_Code)** &ndash; 了解如何使用 `DependencyService` 从共享代码调用本机实现。
 
 <a name="Creating_the_Interface" />

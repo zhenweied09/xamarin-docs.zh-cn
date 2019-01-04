@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108452"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054056"
 ---
 # <a name="localization"></a>本地化
+
+[![下载示例](~/media/shared/download.png) 下载示例](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 可以使用 .NET 资源文件本地化 Xamarin.Forms 应用。
 
@@ -73,7 +75,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 默认情况下，如果生成对字符串的强类型引用，则它们对程序集将为 `internal`。 这是因为 RESX 文件的默认生成工具将生成具有 `internal` 属性的 .designer.cs 文件。
 
-选择 AppResources.resx 文件，并显示 Properties Pad，以查看配置此生成工具的位置。 下面的屏幕截图显示自定义工具：ResXFileCodeGenerator。
+选择 AppResources.resx 文件，并显示 Properties Pad，以查看配置此生成工具的位置。 下面的截图显示“自定义工具：ResXFileCodeGenerator”。
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -86,7 +88,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 -----
 
-若要使强类型字符串属性 `public`，必须手动将配置更改为自定义工具：PublicResXFileCodeGenerator，如以下屏幕截图中所示：
+若要使强类型字符串属性为 `public`，必须手动将配置更改为“自定义工具：PublicResXFileCodeGenerator”，如以下屏幕截图中所示：
 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -154,7 +156,7 @@ TodoLocalized 示例包括[共享项目演示](https://github.com/xamarin/xamari
 
 常规模式是使用两个字母的语言代码，但也有使用不同格式的示例（例如中文）以及需要 4 字符区域设置标识符的其他示例（例如葡萄牙语（巴西））。
 
-这些特定语言资源文件不需要 .designer.cs 分部类，因此如果已设置“生成操作: EmbeddedResource”，则可添加为常规的 XML 文件。 此屏幕截图显示了一个包含特定语言资源文件的解决方案：
+这些特定语言资源文件不需要 .designer.cs 分部类，因此如果已设置“生成操作：EmbeddedResource”，则可添加为常规的 XML 文件。 此屏幕截图显示了一个包含特定语言资源文件的解决方案：
 
 ![](text-images/appresources-langs.png "特定语言资源文件")
 
@@ -255,7 +257,7 @@ System.Resources.ResourceManager temp =
 
 * 项目的默认命名空间与 AppResources.Designer.cs 文件中的根命名空间匹配。
 * 如果 AppResources.resx 文件位于子目录中，则子目录名称应为命名空间和资源标识符的一部分。
-* AppResources.resx 文件包含“生成操作: EmbeddedResource”。
+* AppResources.resx 文件包含“生成操作：EmbeddedResource”。
 * 勾选了“项目选项”>“源代码”>“.NET 命名策略”>“使用 Visual Studio 样式的资源名称”。 如果愿意可以取消勾选，但是引用 RESX 资源时将使用命名空间，以更新整个应用。
 
 #### <a name="doesnt-work-in-debug-mode-android-only"></a>不能在调试模式下操作（仅限 Android）
@@ -556,7 +558,7 @@ namespace UsingResxLocalization.Android
 此代码添加到 Android 应用程序项目后，它将能够自动显示已翻译的字符串。
 
 > [!NOTE]
->警告：如果已翻译的字符串在发行 Android 内部版本中正常，但调试时不正常，请右键单击“Android 项目”并选择“选项”>“生成”>“Android 内部版本”，然后确保未勾选“快速程序集部署”。 此选项会导致加载资源的问题，并且在测试本地化应用时序不应使用。
+>**警告：** 如果已翻译的字符串在发行 Android 内部版本中正常，但调试时不正常，请右键单击“Android 项目”并选择“选项”>“生成”>“Android 内部版本”，然后确保未勾选“快速程序集部署”。 此选项会导致加载资源的问题，并且在测试本地化应用时序不应使用。
 
 有关 Android 本地化的详细信息，请参阅 [Android 本地化](~/android/app-fundamentals/localization.md)。
 
