@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171035"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012290"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>应用程序中使用 Google 地图 API
 
@@ -45,7 +45,7 @@ ms.locfileid: "52171035"
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> 安装 Google Play Services SDK
 
-Google Play Services 是一种技术将来自 Google，Android 应用程序可以充分利用各种 Google 功能，例如 Google +、 应用内计费和映射。 这些功能都在 Android 设备上可以访问作为后台服务，它包含在 f [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)。
+Google Play Services 是一种技术将来自 Google，Android 应用程序可以充分利用各种 Google 功能，例如 Google +、 应用内计费和映射。 这些功能都在 Android 设备上可以访问作为后台服务，它包含在[Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)。
 
 与 Google Play Services 进行交互的 android 应用程序通过 Google Play 服务客户端库。 此库包含的接口和类，如映射单个服务。 下图显示了 Android 应用程序和 Google Play Services 之间的关系：
 
@@ -236,7 +236,7 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 
 下图显示了三个不同类型的地图，从左到右 （正常、 混合，地形）：
 
-[![三个映射示例屏幕快照： 正常、 混合和地形](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
+[![三个映射示例屏幕快照：Normal、 混合和地形](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 `GoogleMap.MapType`属性用于设置或更改显示哪种类型的映射。 下面的代码段演示如何显示附属映射。
 

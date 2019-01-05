@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9c28cc892536ebe841fb28e8313cf380c7f051b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120419"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012277"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>在 Xamarin.iOS 中的 iOS 扩展
 
@@ -49,7 +49,7 @@ ms.locfileid: "50120419"
 - 扩展无法访问设备的摄像机或麦克风 （尽管它们可能访问现有的媒体文件）
 - 扩展不能将收到以无线方式删除数据 （但它们可以传输通过以无线方式删除数据）
 - [UIActionSheet](https://developer.xamarin.com/api/type/UIKit.UIActionSheet/)并[UIAlertView](https://developer.xamarin.com/api/type/UIKit.UIAlertView/)不可用; 扩展必须使用[看到](https://developer.xamarin.com/api/type/UIKit.UIAlertController/)
-- 多个成员[UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/)不可用： [UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)， `UIApplication.OpenURL`，`UIApplication.BeginIgnoringInteractionEvents`和 `UIApplication.EndIgnoringInteractionEvents`
+- 多个成员[UIApplication](https://developer.xamarin.com/api/type/UIKit.UIApplication/)都不可用：[UIApplication.SharedApplication](https://developer.xamarin.com/api/property/UIKit.UIApplication.SharedApplication/)， `UIApplication.OpenURL`，`UIApplication.BeginIgnoringInteractionEvents`和 `UIApplication.EndIgnoringInteractionEvents`
 - iOS 增强今天的扩展了 16 MB 内存使用情况限制。
 - 默认情况下键盘扩展无网络访问权限。 这会影响调试在设备上 （该限制不在模拟器中强制执行），因为 Xamarin.iOS 需要网络访问权限来调试工作。 它通过设置就可以请求网络访问权限`Requests Open Access`到项目的 Info.plist 中的值`Yes`。 请参阅 Apple[自定义键盘指南](https://developer.apple.com/library/content/documentation/General/Conceptual/ExtensibilityPG/CustomKeyboard.html)有关键盘扩展限制的详细信息。
 
@@ -452,7 +452,7 @@ results.ObjectForKey("NSExtensionJavaScriptPreprocessingResultsKey");
 
 ## <a name="precautions-and-considerations"></a>预防措施和注意事项
 
-扩展具有更少的内存提供给他们不是执行应用程序。 它们应执行快速和具有对用户和应用程序中托管的最小入侵。 但是，扩展还应提供一个经过品牌打造的用户界面，允许用户标识扩展的开发人员与正在使用的应用或其所属的容器应用的独特、 有用函数。
+扩展具有更少的内存提供给他们不是应用程序这样做。 它们应执行快速和具有对用户和应用程序中托管的最小入侵。 但是，扩展还应提供一个经过品牌打造的用户界面，允许用户标识扩展的开发人员与正在使用的应用或其所属的容器应用的独特、 有用函数。
 
 给定这些严格要求，应仅将部署扩展，它已彻底进行测试和优化性能和内存消耗。 
 
