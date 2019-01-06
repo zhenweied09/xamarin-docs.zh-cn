@@ -16,7 +16,7 @@ ms.locfileid: "38998437"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>Model-View-ViewModel模式
 
-Xamarin.Forms 开发人员通常通过在 XAML 创建用户界面，并且在 code-behind 文件添加代码来操作用户界面。 随着应用程序进行修改，代码量和范围的增加，可能出现复杂的维护问题。 这些问题包括 UI 控件和业务逻辑之间的紧密耦合，这会增加修改 UI 的代价和进行单元测试的难度。
+Xamarin.Forms 开发人员通常通过在 XAML 创建用户界面，并且在 code-behind 文件中添加代码来操作用户界面。 随着应用程序进行修改，代码量和范围的增加，可能出现复杂的维护问题。 这些问题包括 UI 控件和业务逻辑之间的紧密耦合，这会增加修改 UI 的代价和进行单元测试的难度。
 
 模型-视图-视图模型 (MVVM) 模式有助于从应用程序的用户界面 (UI) 清晰隔离业务和展现逻辑。 维护应用程序逻辑与 UI 之间的清晰隔离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和 UI 设计人员在开发一个应用程序的各自部分时更轻松地进行协作。
 
@@ -132,7 +132,7 @@ public LoginView()
 viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 ```
 
-`AutoWireViewModel`属性是一个已初始化为 false 的可绑定属性，并且其值更改时`OnAutoWireViewModelChanged`事件处理器会被调用。 此方法为视图解析视图模型。 下面的代码示例演示如何实现此目的：
+`AutoWireViewModel`属性是一个已初始化为 false 的可绑定属性，并且其值更改时`OnAutoWireViewModelChanged`事件处理程序会被调用。 此方法为视图解析视图模型。 下面的代码示例演示如何实现此目的：
 
 ```csharp
 private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
@@ -181,7 +181,7 @@ private static void OnAutoWireViewModelChanged(BindableObject bindable, object o
 
 -   如果公共属性的值发生变更，则始终引发`PropertyChanged`事件。 不要因为了解 XAML 绑定如何发生就假定引发`PropertyChanged`事件可以被忽略。
 -   对于任何需要通过计算的属性，其值被视图模型或模型中的其他属性使用时，则始终引发`PropertyChanged`。
--   始终在一个导致属性变更的方法的结尾处，或当对象已知处于安全状态时引发`PropertyChanged`事件。 通过以同步方式调用事件处理器来引发事件会中断其操作。 如果操作期间发生这种情况，它可能会在对象时处于不安全的、 部分更新的状态时公开给回调函数。 此外，`PropertyChanged`事件可能会触发级联变更。 级联变更通常要求在安全地执行其（随后的）级联更改后才会在完成更新。
+-   始终在一个导致属性变更的方法的结尾处，或当对象已知处于安全状态时引发`PropertyChanged`事件。 通过以同步方式调用事件处理程序来引发事件会中断其操作。 如果操作期间发生这种情况，它可能会在对象时处于不安全的、 部分更新的状态时公开给回调函数。 此外，`PropertyChanged`事件可能会触发级联变更。 级联变更通常要求在安全地执行其（随后的）级联更改后才会在完成更新。
 -   如果属性没有变更，则永远不要引发`PropertyChanged`事件。 这意味着您必须在引发`PropertyChanged`事件之前比较旧的和新的值。
 -   如果你正在初始化一个属性，则永远不要在视图模型的构造函数中引发`PropertyChanged`事件。 视图中的数据绑定控件不会在此时就订阅了接收变更通知。
 -   永远不要一个类的公共方法的单个同步调用中引发多个具有相同属性名称参数的`PropertyChanged`事件。 例如，给定`NumberOfItems`属性其后备存储是`_numberOfItems`字段，如果一个方法在执行一个循环的过程中对`_numberOfItems`递增50次，它应在所有工作完成后在`NumberOfItems`属性上只引发一次变更通知。 对于异步方法，在一个异步连续链的每个同步段中引发给定的属性名称的`PropertyChanged`事件。
@@ -227,7 +227,7 @@ public bool IsLogin
 
 ## <a name="ui-interaction-using-commands-and-behaviors"></a>使用命令 (Commands) 和行为 (Behaviors) 的 UI 交互
 
-在移动应用中，通常包括响应用户操作，例如按钮单击，可以通过在 code-behind 文件中创建一个事件处理器来实现的调用操作。 但是，在 MVVM 模式下，实现操作的职责在于视图模型，并且应避免在 code-behind 中的放置代码。
+在移动应用中，通常包括响应用户操作，例如按钮单击，可以通过在 code-behind 文件中创建一个事件处理程序来实现的调用操作。 但是，在 MVVM 模式下，实现操作的职责在于视图模型，并且应避免在 code-behind 中的放置代码。
 
 命令提供了一种可方便地表示可以绑定到 UI 中控件的操作的方式。 它们封装实现操作的代码，并帮助以使其从视图中其可视表示形式中分离。 Xamarin.Forms 具有控件可以以声明方式连接到一个命令，并在用户与控件交互时，这些控件将调用该命令。
 
@@ -239,31 +239,31 @@ public bool IsLogin
 
 在视图模型中，对于视图模型中每个公共属性`ICommand`都应有一个类型为[ `Command` ](xref:Xamarin.Forms.Command)或[ `Command<T>` ](xref:Xamarin.Forms.Command)的对象。 `Command`或`Command<T>`构造函数需要一个`Action`回调对象，它在`ICommand.Execute`方法被调用时被使用。 `CanExecute`方法是一个可选的构造函数参数，并是一个返回`bool`的`Func`。
 
-下面的代码演示一个表示注册命令的[ `Command` ](xref:Xamarin.Forms.Command)实例，是如何通过指定一个委托到`Register`视图模型的方法来构造的：
+下面的代码演示一个表示注册命令的[ `Command` ](xref:Xamarin.Forms.Command)实例，是如何通过指定一个委托到名为`Register`的视图模型方法来构造的：
 
 ```csharp
 public ICommand RegisterCommand => new Command(Register);
 ```
 
-该命令就会遭受视图返回的引用的属性通过`ICommand`。 当`Execute`上调用方法[ `Command` ](xref:Xamarin.Forms.Command)对象，它只是将转发到视图模型中指定的委托通过中的方法调用`Command`构造函数。
+该命令通过一个返回`ICommand`引用的属性暴露给视图。 当`Execute`方法在[ `Command` ](xref:Xamarin.Forms.Command)对象上被调用时，它只是将该调用通过`Command`构造函数中指定的委托转发到视图模型中的方法。
 
-异步方法可以通过使用调用某一命令`async`并`await`关键字指定的命令时`Execute`委托。 这表示回调是`Task`和应处于等待状态。 例如，下面的代码演示如何[ `Command` ](xref:Xamarin.Forms.Command)通过指定的委托构造实例，它表示登录命令，`SignInAsync`查看模型的方法：
+当指定了一个命令的`Execute`委托时，异步方法可以通过使用`async`和`await`关键字被该命令调用。 这表示回调是一个`Task`并且应处于等待状态。 例如，下面的代码演示一个表示登录命令的[ `Command` ](xref:Xamarin.Forms.Command)实例，是如何通过指定一个委托到名为`SignInAsync`的视图模型方法来构造的：
 
 ```csharp
 public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
-可以将参数传递给`Execute`并`CanExecute`使用操作[ `Command<T>` ](xref:Xamarin.Forms.Command)类来实例化该命令。 例如，下面的代码演示如何`Command<T>`实例用于指示`NavigateAsync`方法将要求类型的自变量`string`:
+可以通过使用[ `Command<T>` ](xref:Xamarin.Forms.Command)类将参数传递给`Execute`和`CanExecute`操作来实例化该命令。 例如，下面的代码演示一个`Command<T>`实例是如何用于指示`NavigateAsync`方法将要求`string`类型的参数:
 
 ```csharp
 public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
-在这种[ `Command` ](xref:Xamarin.Forms.Command)并[ `Command<T>` ](xref:Xamarin.Forms.Command)类对委托`CanExecute`中每个构造函数的方法是可选的。 如果未指定一个委托，`Command`将返回`true`为`CanExecute`。 但是，视图模型可以指示该命令的变化`CanExecute`通过调用状态`ChangeCanExecute`方法`Command`对象。 这将导致`CanExecuteChanged`事件被引发。 任何 UI 中的控件绑定到该命令将更新其已启用的状态以反映数据绑定命令的可用性。
+在[ `Command` ](xref:Xamarin.Forms.Command)和[ `Command<T>` ](xref:Xamarin.Forms.Command)类中，对于`CanExecute`方法的委托在每个构造函数中都是可选的。 如果未指定一个委托，`Command`将返回`true`为`CanExecute`。 但是，视图模型可以指示该命令的变化`CanExecute`通过调用状态`ChangeCanExecute`方法`Command`对象。 这将导致`CanExecuteChanged`事件被引发。 任何 UI 中的控件绑定到该命令将更新其已启用的状态以反映数据绑定命令的可用性。
 
-#### <a name="invoking-commands-from-a-view"></a>调用视图中的命令
+#### <a name="invoking-commands-from-a-view"></a>从视图调用命令
 
-例如，[使用`Grid`执行](xref:Xamarin.Forms.Grid)时`LoginView` `RegisterCommand` `LoginViewModel`上触发事件时[ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer)所示，它列出用户的订单在下面的代码：
+下面的代码演示了`LoginView`上的[`Grid`](xref:Xamarin.Forms.Grid)如何通过使用[`TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 实例来绑定`LoginViewModel`类中的`RegisterCommand`：
 
 ```xaml
 <Grid Grid.Column="1" HorizontalOptions="Center">  
@@ -274,23 +274,23 @@ public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 </Grid>
 ```
 
-中选择一项时[，则`CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) 会触发事件，其将执行中。 此数据将转换源和目标之间传递中指定的转换器`Execute`属性，它返回`CanExecute`  的从 . 当用户与附加控件交互时，[`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)将自动调用目标命令。 有关行为的详细信息，请参阅`Execute`行为。
+命令的参数也可以选择性地通过[`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter)属性进行定义。 期望的参数类型在`Execute`和`CanExecute`目标方法中被指定。 当用户与附加控件交互时，[`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)将自动调用目标命令。 如果提供了命令的参数，将会作为实参传递给命令的`Execute`委托。
 
 <a name="implementing_behaviors" />
 
-### <a name="implementing-behaviors"></a>使用 MVVM 模式，应用的 UI 和基本的呈现和业务逻辑分为三个单独的类： 视图，它封装 UI 和 UI 逻辑;封装表示逻辑和状态，则该视图模型和封装应用程序的业务逻辑和数据的模型。
+### <a name="implementing-behaviors"></a>实现行为
 
-行为允许添加到 UI 控件，而无需为子类它们的功能。 相反，该功能是行为类中实现并附加到控件，就像它是控件本身的一部分。 行为，可实现您通常必须编写为代码隐藏中，因为它直接与 API 中的方式。 可以简洁地附加到控件，并跨多个视图或应用程序打包以供重复使用的控件进行交互的代码。 在 MVVM 的上下文中，行为是用于连接到命令的控件很有用的方法。
+行为允许添加功能到 UI 控件，而无需作为它们的子类。 相反，该功能是在行为类中实现并附加到控件，就像它是控件本身的一部分。 行为，可实现您通常必须编写在code-behind中的代码，因为它直接与控件的 API 进行交互，这样可以简洁地附加到控件，并可打包以供多个视图或应用程序重复使用。 在 MVVM 的上下文中，行为是用于连接控件到命令的一种很有用的方法。
 
-附加到通过附加属性的控件行为被称为*附加行为*。 该行为可以使用它连接到将功能添加到该控件或该视图的可视化树中的其他控件的元素公开的 API。 EShopOnContainers 移动应用中包含`LineColorBehavior`类，该类是一个附加的行为。 有关此行为的详细信息，请参阅[显示验证错误](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors)。
+行为通过附加属性附加到控件被称为*附加行为*。 该行为可以使用它连接到的元素的公开 API 以添加功能到该控件，或该视图的可视化树中的其他控件。 eShopOnContainers 移动应用中包含`LineColorBehavior`类，该类是一个附加行为。 有关此行为的详细信息，请参阅[显示验证错误](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors)。
 
-Xamarin.Forms 行为是一个类，派生自[ `Behavior` ](xref:Xamarin.Forms.Behavior)或[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类，其中`T `是一种行为要应用到的控件。 这些类提供`OnAttachedTo`和`OnDetachingFrom`方法，应重写以提供附加到该行为，将其从控件中分离时，将执行的逻辑。
+一个 Xamarin.Forms 行为是派生自[ `Behavior` ](xref:Xamarin.Forms.Behavior)或[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类的一个类，其中`T `是该行为要应用到的控件类型。 这些类提供`OnAttachedTo`和`OnDetachingFrom`方法，这些方法应被重写以提供行为被附加到控件，或从控件中分离时，将执行的逻辑。
 
-在 eShopOnContainers 移动应用中，`BindableBehavior<T>`类派生自[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类。 目的`BindableBehavior<T>`类是为需要的 Xamarin.Forms 行为提供基类[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)设置为附加的控件的行为。
+在 eShopOnContainers 移动应用中，`BindableBehavior<T>`类派生自[ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1)类。 `BindableBehavior<T>`类目的是为那些需要设置其[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)为附加的控件的 Xamarin.Forms 行为提供基类。
 
-`BindableBehavior<T>`类提供了可重写`OnAttachedTo`方法以设置[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)的行为，并可重写`OnDetachingFrom`清理方法`BindingContext`。 此外，类存储中的附加控件的引用`AssociatedObject`属性。
+`BindableBehavior<T>`类提供了可重写的`OnAttachedTo`方法以设置行为的[ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)，以及可重写的`OnDetachingFrom`方法来清理`BindingContext`。 此外，类还存储了附加控件的引用在`AssociatedObject`属性中。
 
-EShopOnContainers 移动应用包含`EventToCommandBehavior`类，该类在事件发生的响应中执行的命令。 此类派生自`BindableBehavior<T>`类，使该行为可以绑定到或执行`ICommand`指定的`Command`属性时使用行为。 以下代码示例演示 `EventToCommandBehavior` 类：
+eShopOnContainers 移动应用包含`EventToCommandBehavior`类，该类在事件发生的响应中执行命令。 此类派生自`BindableBehavior<T>`类，当使用行为时，使该行为可以绑定到或执行由`Command`属性指定的`ICommand`。 以下代码示例演示 `EventToCommandBehavior` 类：
 
 ```csharp
 public class EventToCommandBehavior : BindableBehavior<View>  
@@ -334,13 +334,13 @@ public class EventToCommandBehavior : BindableBehavior<View>
 }
 ```
 
-`OnAttachedTo`并`OnDetachingFrom`方法用于注册和取消注册事件处理程序中定义的事件`EventName`属性。 然后，当触发事件时，`OnFired`调用方法时，它将执行该命令。
+`OnAttachedTo`和`OnDetachingFrom`方法用于注册或取消注册在`EventName`属性中定义的事件的事件处理程序。 然后，当触发事件时，`OnFired`被调用，它将执行已绑定的命令。
 
-使用的优点`EventToCommandBehavior`来执行命令时触发事件时，是命令可以与没有专门用于使用命令进行交互的控件相关联。 此外，此事件处理将代码移动到视图模型，它可以在其中进行单元测试。
+当事件触发时使用`EventToCommandBehavior`来执行命令的优点，是命令可以与那些没有被设计为使用命令进行交互的控件相关联。 此外，这将事件处理代码移动到视图模型，它可以在其中进行单元测试。
 
 #### <a name="invoking-behaviors-from-a-view"></a>从视图调用行为
 
-`EventToCommandBehavior`将命令附加到不支持命令的控件特别有用。 例如，`ProfileView`使用`EventToCommandBehavior`执行`OrderDetailCommand`时[ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped)上触发事件时[ `ListView` ](xref:Xamarin.Forms.ListView)所示，它列出用户的订单在下面的代码：
+`EventToCommandBehavior`将命令附加到不支持命令的控件时特别有用。 例如，在[ `ListView` ](xref:Xamarin.Forms.ListView)上触发[ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped)事件列出用户的订单时，`ProfileView`使用`EventToCommandBehavior`执行`OrderDetailCommand`，它在下面的代码所示：
 
 ```xaml
 <ListView>  
@@ -354,15 +354,15 @@ public class EventToCommandBehavior : BindableBehavior<View>
 </ListView>
 ```
 
-在运行时，`EventToCommandBehavior`将会响应与交互[ `ListView` ](xref:Xamarin.Forms.ListView)。 中选择一项时`ListView`，则[ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped)会触发事件，其将执行`OrderDetailCommand`中`ProfileViewModel`。 默认情况下，会将该事件的事件自变量传递给命令。 此数据将转换源和目标之间传递中指定的转换器`EventArgsConverter`属性，它返回[ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item)的`ListView`从[ `ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs). 因此，当`OrderDetailCommand`执行时，所选`Order`作为参数传递给已注册的操作。
+在运行时，`EventToCommandBehavior`将会响应与[ `ListView` ](xref:Xamarin.Forms.ListView)交互。 当在`ListView`中选择其中一项时，则会触发[ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped)事件，其将执行`ProfileViewModel`中的`OrderDetailCommand`。 默认情况下，会将该事件的事件自变量传递给命令。 此数据将在`EventArgsConverter`属性中指定的转换器进行转换，就像它在转换器中的源和目标之间传递，它从[ `ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs)返回`ListView`的[ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item)。因此，当`OrderDetailCommand`执行时，所选`Order`作为参数传递给已注册的操作。
 
 有关行为的详细信息，请参阅[行为](~/xamarin-forms/app-fundamentals/behaviors/index.md)。
 
 ## <a name="summary"></a>总结
 
-模型-视图-视图模型 (MVVM) 模式有助于完全隔离的应用程序从其用户界面 (UI) 的业务和演示文稿逻辑。 维护应用程序逻辑与 UI 之间完全分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和开发的应用程序及其相应部分时，UI 设计器更轻松地进行协作。
+模型-视图-视图模型 (MVVM) 模式有助于从应用程序的用户界面（UI）清晰地分离业务和展现逻辑。 维护应用程序逻辑与 UI 之间的清晰分离有助于解决许多开发问题，并可以使应用程序更易于测试、 维护和改进。 它还可以显著改善代码重用机会，并允许开发人员和 UI 设计人员 在开发应用程序的相应部分时更轻松地进行协作。
 
-使用 MVVM 模式，应用的 UI 和基本的呈现和业务逻辑分为三个单独的类： 视图，它封装 UI 和 UI 逻辑;封装表示逻辑和状态，则该视图模型和封装应用程序的业务逻辑和数据的模型。
+使用 MVVM 模式，应用的 UI 及其之下的展现和业务逻辑被分为三个单独的类： 视图，它封装 UI 和 UI 逻辑; 视图模型，它封装展现逻辑和状态；模型，则封装了应用程序的业务逻辑和数据。
 
 
 ## <a name="related-links"></a>相关链接
