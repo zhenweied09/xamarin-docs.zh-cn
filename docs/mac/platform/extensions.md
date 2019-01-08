@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
+ms.sourcegitcommit: e3e851080e6ea0b77e355487a61348d8e0419b09
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117559"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060065"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 扩展支持
 
-在 Xamarin.Mac 2.10 预览版中添加了对支持多个 macOS 扩展点：
+Xamarin.Mac 2.10 中添加了对支持多个 macOS 扩展点：
 
 - 查找器
 - 共享
@@ -59,10 +59,10 @@ ms.locfileid: "50117559"
 
 ## <a name="summary"></a>总结
 
-本文已介绍一下使用 Xamarin.Max 版本 2.10 （和更高版本） 应用程序中的扩展。
+本文已采取快速了解如何使用 Xamarin.Mac 版本 2.10 （和更高版本） 应用程序中的扩展。
 
 ## <a name="related-links"></a>相关链接
 
 - [了解 Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X 人机界面指南](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS 人机界面指南](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
