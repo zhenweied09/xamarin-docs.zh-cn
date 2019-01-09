@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d83470db23b1376d18fa36c52c1daabaf68cfe0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61b5a8bd99afda5e8fbeea44e3362574fa7feea
+ms.sourcegitcommit: b18ceed35aa94999d13faf4a3e3177c0b9fc33b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117754"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084576"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.iOS 中的映射
 
@@ -175,7 +175,7 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 ### <a name="overlays"></a>覆盖层
 
-在地图上的层图形到另一种方法使用覆盖。 覆盖层支持绘制图形的内容，它被放大随着与该映射。 iOS 提供支持几种类型的覆盖层，包括：
+在地图上的层图形到另一种方法使用覆盖。 叠加层支持绘制在地图缩放时随之缩放的图形内容。 iOS 提供支持几种类型的覆盖层，包括：
 
 -  多边形-通常用于突出显示地图上的某些区域。
 -  折线-通常出现时显示一个路由。
@@ -267,23 +267,23 @@ DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
 NavigationItem.TitleView = searchController.SearchBar;
+```
 
-```csharp
-Note that you are responsible for incorporating the search bar object into the user interface. In this example, we assigned it to the TitleView of the navigation bar, but if you do not use a navigation controller in your application you will have to find another place to display it.
+请注意，您负责将搜索栏对象合并到用户界面。 在此示例中，我们将其分配给 TitleView 的导航栏中，但如果不在应用程序中使用导航控制器需要查找其显示的另一个位置。
 
-In this code snippet, we created another custom view controller – `searchResultsController` –  that displays the search results and then we used this object to create our search controller object. We also created a new search updater, which becomes active when the user interacts with the search bar. It receives notifications about searches with each keystroke and is responsible for updating the UI.
-We will take a look at how to implement both the `searchResultsController` and the `searchResultsUpdater` later in this guide.
+在此代码片段中，我们创建另一个自定义视图控制器 – `searchResultsController` – 显示搜索结果，然后我们使用此对象将创建我们搜索的控制器对象。 我们还创建了新的搜索更新程序时用户与搜索栏将变为活动状态。 它接收通知有关与每个击键的搜索，并负责更新用户界面。
+我们将看看如何实现两者`searchResultsController`和`searchResultsUpdater`本指南中更高版本。
 
-This results in a search bar displayed over the map as shown below:
+这会导致搜索栏显示此工具针对映射，如下所示：
 
- ![](images/07-searchbar.png "A search bar displayed over the map")
+ ![](images/07-searchbar.png "通过代码图显示一个搜索栏")
  
 
 
-### Displaying the Search Results
+### <a name="displaying-the-search-results"></a>显示搜索结果
 
-To display search results, we need to create a custom View Controller; normally a `UITableViewController`. As shown above, the `searchResultsController` is passed to the constructor of the `searchController` when it is being created.
-The following code is an example of how to create this custom View Controller:
+若要显示搜索结果，我们需要创建自定义视图控制器;通常情况下`UITableViewController`。 如上所示`searchResultsController`传递给构造函数的`searchController`创建时。
+下面的代码是如何创建此自定义视图控制器的示例：
 
 ```csharp
 public class SearchResultsViewController : UITableViewController
