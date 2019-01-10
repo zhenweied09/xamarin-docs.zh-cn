@@ -27,9 +27,9 @@ ms.locfileid: "50121628"
 
 ## <a name="working-with-continuous-integration-environments"></a>使用持续集成环境
 
-### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[使用 Azure 流水线构建 Xamarin 应用程序](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
+### <a name="build-xamarin-apps-with-azure-pipelineshttpsdocsmicrosoftcomazuredevopspipelineslanguagesxamarin"></a>[使用 Azure 管道构建 Xamarin 应用程序](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
 
-使用 Azure 流水线自动构建面向 Android 和 iOS 的 Xamarin 应用。
+使用 Azure 管道自动构建面向 Android 和 iOS 的 Xamarin 应用。
 
 ### <a name="build-xamarin-apps-using-app-centerhttpsdocsmicrosoftcomappcenterbuildxamarin"></a>[使用 App Center 构建 Xamarin 应用](https://docs.microsoft.com/appcenter/build/xamarin/)
 
