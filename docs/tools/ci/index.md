@@ -1,5 +1,5 @@
 ---
-title: 与 Xamarin 持续集成简介
+title: Xamarin 持续集成简介
 description: 本文档所链接到指南描述与 Xamarin 持续集成。 链接的内容提供了持续集成的概述，并讨论了应用中心的生成、 TeamCity 和 Jenkins。
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
