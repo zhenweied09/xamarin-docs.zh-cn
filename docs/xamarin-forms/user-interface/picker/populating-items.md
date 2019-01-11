@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057426"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54208007"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>将数据添加到选取器的项集合
 
@@ -58,7 +58,7 @@ picker.Items.Add("Japanese Macaque");
 一个[ `Picker` ](xref:Xamarin.Forms.Picker)支持一次的一项选择。 当用户选择某个项， [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged)事件触发时，和[ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex)属性更新为一个整数，表示列表中的选定项的索引。 `SelectedIndex`属性是一个从零开始的数字，指示用户选择的项。 如果未不选择任何项，这是这种情况时`Picker`首次创建和初始化，`SelectedIndex`将为-1。
 
 > [!NOTE]
-> 项中的选择行为[ `Picker` ](xref:Xamarin.Forms.Picker)可以上具有平台特定的 iOS 自定义。 有关详细信息，请参阅[控制选取器项选择](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode)。
+> 项中的选择行为[ `Picker` ](xref:Xamarin.Forms.Picker)可以上具有平台特定的 iOS 自定义。 有关详细信息，请参阅[控制选取器项选择](~/xamarin-forms/platform/ios/picker-selection.md)。
 
 下面的代码示例演示`OnPickerSelectedIndexChanged`事件处理程序方法，该方法时执行[ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged)触发事件：
 

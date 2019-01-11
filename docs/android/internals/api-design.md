@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110708"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207929"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API 设计原则
 
@@ -107,13 +107,13 @@ if (goodSource.Count != 4) // false
 ```
 
 
-### <a name="properties"></a>属性
+### <a name="properties"></a>Properties
 
 Java 方法转换为属性，在适当的时候：
 
--  Java 方法对`T getFoo()`并`void setFoo(T)`转换为`Foo`属性。 示例： [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)。
+-  Java 方法对`T getFoo()`并`void setFoo(T)`转换为`Foo`属性。 示例:[Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)。
 
--  Java 方法`getFoo()`转换为只读的 Foo 属性。 示例： [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/)。
+-  Java 方法`getFoo()`转换为只读的 Foo 属性。 示例:[Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/)。
 
 -  只有组的属性不会生成。
 
@@ -322,6 +322,6 @@ public class Resource {
 在这些情况下，我们尽力一起分组相关的常量是.NET 的枚举，并将重新映射要改为采用枚举的方法。
 通过执行此操作，我们就能够提供 IntelliSense 所选内容的可能的值。
 
-上面的示例将成为： [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/))。
+上面的示例中将变为：[Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)。
 
-请注意，这是一个大量的手动过程，以找出哪些常量一起，属于哪些 Api 使用这些常量。 请在 API 中，将能够更好地表示为一个枚举文件常量用于任何 bug。
+请注意，这是一个大量的手动过程，以找出哪些常量一起，属于哪些 Api 使用这些常量。 请提交 bug 的会是更好地表示为一个枚举，在 API 中使用的任何常量。

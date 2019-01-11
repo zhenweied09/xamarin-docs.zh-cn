@@ -7,12 +7,12 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 40f319a67ecc2ca81243c8ac7c415266c1ea0b5c
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746851"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207903"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>第 1 章的摘要。 Xamarin.Forms 如何组合？
 
@@ -49,7 +49,7 @@ ms.locfileid: "53746851"
 - 面向 Windows 10 通用 Windows 平台
 
 > [!NOTE]
-> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 此外，还有支持预览版[Mac](~/xamarin-forms/platform/mac.md)， [WPF](~/xamarin-forms/platform/wpf.md)， [GTK #](~/xamarin-forms/platform/gtk.md)，以及[Tizen](~/xamarin-forms/platform/tizen.md)平台。
+> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。 此外，还有支持预览版[Mac](~/xamarin-forms/platform/other/mac.md)， [WPF](~/xamarin-forms/platform/other/wpf.md)， [GTK #](~/xamarin-forms/platform/other/gtk.md)，以及[Tizen](~/xamarin-forms/platform/other/tizen.md)平台。
 
 一个库或 SAP 中存在的 Xamarin.Forms 程序大容量。 每个平台包括调入此共享代码的小型应用程序存根。
 

@@ -6,13 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/06/2018
-ms.openlocfilehash: 070602f05170f7d37a38b184ecd3dbb7864ac73d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 01/08/2018
+ms.openlocfilehash: 3f0156926f8d7a31e2e80318d7b05a909f158653
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118755"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207721"
 ---
 # <a name="xamarinforms-platform-features"></a>Xamarin.Forms 平台功能
 
@@ -20,27 +20,15 @@ Xamarin.Forms 是可扩展的并允许您使用的合并特定于平台的功能
 
 ## <a name="androidandroidindexmd"></a>[Android](android/index.md)
 
-本指南介绍如何通过更新现有 Xamarin.Forms Android 应用程序实现材料设计。
+本指南介绍了 Android 平台特定信息提供的 Xamarin.Forms，以及如何更新现有 Xamarin.Forms Android 应用程序以实现材料设计。
 
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[应用程序索引和深层链接](deep-linking.md)
-
-应用程序索引，否则将几个使用通过出现在搜索结果中了解相关信息后忘记的应用程序。 深层链接允许应用程序响应通过导航到从深层链接引用的页面通常包含应用程序数据的搜索结果。
-
-## <a name="device-classdevicemd"></a>[设备分类](device.md)
+## <a name="device-classdevicemd"></a>[设备类](device.md)
 
 如何使用`Device`类，以在共享的代码和用户界面 （包括使用 XAML） 创建特定于平台的行为。 此外介绍了`BeginInvokeOnMainThread`时修改 UI 控件从后台线程，这非常重要。
 
 ## <a name="iosiosindexmd"></a>[iOS](ios/index.md)
 
-可以通过执行某种 iOS 样式**Info.plist**和`UIAppearance`API。 本指南包括有关如何在 iOS 应用的 Xamarin.Forms 解决方案，包括核心 Spotlight 搜索中包括 iOS 9 功能的示例。
-
-## <a name="gtkgtkmd"></a>[GTK](gtk.md)
-
-Xamarin.Forms 现在具有对 GTK # 应用程序的预览支持。
-
-## <a name="macmacmd"></a>[Mac](mac.md)
-
-Xamarin.Forms 现在具有对 macOS 应用的预览支持。
+本指南介绍 iOS 平台特定信息提供的 Xamarin.Forms，以及如何执行其他 iOS 通过设置样式**Info.plist**和`UIAppearance`API。
 
 ## <a name="native-formsnative-formsmd"></a>[本机窗体](native-forms.md)
 
@@ -52,20 +40,8 @@ Xamarin.Forms 现在具有对 macOS 应用的预览支持。
 
 ## <a name="platform-specificsplatform-specificsindexmd"></a>[平台特定信息](platform-specifics/index.md)
 
-平台特定信息，可使用的功能仅适用于特定的平台，而无需自定义呈现器或效果。
-
-## <a name="pluginspluginsmd"></a>[插件](plugins.md)
-
-在 Github、 Nuget 和 Xamarin Component Store 帮助延长 Xamarin.Forms 应用上有可用的各种开源的插件。
-
-## <a name="tizentizenmd"></a>[Tizen](tizen.md)
-
-Tizen.NET 可以构建使用 Xamarin.Forms 和 Tizen.NET Framework 的.NET 应用程序。
+平台特定信息，可使用的功能仅适用于特定的平台，而无需自定义呈现器或效果。 此外，供应商可以使用效果创建其自己的平台特定信息。
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms 具有 Windows 10 上支持的通用 Windows 平台 (UWP)。 本文介绍如何将 UWP 项目添加到现有的 Xamarin.Forms 解决方案。
-
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin.Forms 现在具有对 Windows Presentation Foundation (WPF) 应用程序的预览支持。
+本指南介绍了 Windows 平台特定信息提供的 Xamarin.Forms，以及如何将 UWP 项目添加到现有的 Xamarin.Forms 解决方案。

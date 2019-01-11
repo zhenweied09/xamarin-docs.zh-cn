@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 102ff15ea0e0002b783f993c59eb50d03a5ece63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051064"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207840"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>设置选取器的 ItemsSource 属性
 
@@ -66,7 +66,7 @@ picker.ItemsSource = monkeyList;
 一个[ `Picker` ](xref:Xamarin.Forms.Picker)支持一次的一项选择。 当用户选择某个项， [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged)事件触发时， [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex)属性更新为一个整数，表示在列表中，所选的项的索引和[`SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem)属性更新为`object`表示所选的项。 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex)属性是一个从零开始的数字，指示用户所选的项。 如果未不选择任何项，这是这种情况时[ `Picker` ](xref:Xamarin.Forms.Picker)首次创建和初始化，`SelectedIndex`将为-1。
 
 > [!NOTE]
-> 项中的选择行为[ `Picker` ](xref:Xamarin.Forms.Picker)可以上具有平台特定的 iOS 自定义。 有关详细信息，请参阅[控制选取器项选择](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode)。
+> 项中的选择行为[ `Picker` ](xref:Xamarin.Forms.Picker)可以上具有平台特定的 iOS 自定义。 有关详细信息，请参阅[控制选取器项选择](~/xamarin-forms/platform/ios/picker-selection.md)。
 
 下面的代码示例演示如何检索[ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem)属性值从[ `Picker` ](xref:Xamarin.Forms.Picker)在 XAML 中：
 
@@ -178,10 +178,9 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 [ `Picker` ](xref:Xamarin.Forms.Picker)视图是一个用于选择文本项中的数据列表控件。 本文介绍了如何填充`Picker`通过设置数据[ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource)属性，以及如何响应用户的项选择。 在 Xamarin.Forms 中 2.3.4 引入时，此方法是用来与交互的推荐的方法`Picker`。
 
-
 ## <a name="related-links"></a>相关链接
 
 - [选取器演示 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Monkey 应用 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 - [可绑定选取器 （示例）](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [选取器](xref:Xamarin.Forms.Picker)
+- [选取器 API](xref:Xamarin.Forms.Picker)

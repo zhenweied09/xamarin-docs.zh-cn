@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/15/2018
-ms.openlocfilehash: 86055932edf82f04e11c9ae8dd684a3d77c3d830
-ms.sourcegitcommit: da2260a882dbda02732e21cad5cc9a9dd35e27e7
+ms.openlocfilehash: bfbc902b0912527fea6aaa58c6706ef5a0ccbf8e
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51709223"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207916"
 ---
 # <a name="appearance-api-in-xamarinios"></a>外观 API Xamarin.iOS 中
 
@@ -69,7 +69,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 ## <a name="using-uiappearance-in-xamarinforms"></a>在 Xamarin.Forms 中使用 UIAppearance
 
-外观 API 时，可能会很有用[样式的 iOS 应用](~/xamarin-forms/platform/ios/theme.md#uiappearance)Xamarin.Forms 解决方案中。 中的几行`AppDelegate`类可帮助实现特定的配色方案，而无需创建[自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)。
+外观 API 时，可能会很有用[样式的 iOS 应用](~/xamarin-forms/platform/ios/formatting.md#uiappearance)Xamarin.Forms 解决方案中。 中的几行`AppDelegate`类可帮助实现特定的配色方案，而无需创建[自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)。
 
 ### <a name="custom-themes-and-uiappearance"></a>自定义主题和 UIAppearance
 
@@ -83,7 +83,7 @@ iOS 界面控件，为"主题"使用允许的用户的许多可视特性*UIAppea
 sg1.TintColor = UIColor.Magenta;
 ```
 
-或者，在设计器的属性面板中设置的值： 
+或者，在设计器的属性面板中设置的值：
 
 [![](introduction-to-the-appearance-api-images/propertiespadtint.png "属性填充色彩")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
@@ -109,4 +109,4 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 - [外观 （示例）](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [UIAppearance 协议参考](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [在 Xamarin.Forms 中的外观](~/xamarin-forms/platform/ios/theme.md#uiappearance)
+- [在 Xamarin.Forms 中的外观](~/xamarin-forms/platform/ios/formatting.md#uiappearance)

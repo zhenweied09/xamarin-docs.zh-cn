@@ -1,18 +1,18 @@
 ---
 title: 第 3 章的摘要。 深入到文本
-description: 使用 Xamarin.Forms 创建移动应用： 第 3 章的摘要。 深入到文本
+description: 使用 Xamarin.Forms 创建移动应用：第 3 章的摘要。 深入到文本
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052590"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207839"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>第 3 章的摘要。 深入到文本
 
@@ -28,7 +28,7 @@ ms.locfileid: "53052590"
 
 当`HorizontalOptions`和`VerticalOptions`属性设置为值而不`LayoutOptions.Fill`，则大小`Label`受呈现的文本，最大大小，其容器使可用于所需的空间`Label`。 `Label`称为*不受约束*并确定其自身的大小。
 
-(注意： 条款*约束*并*不受约束*可能违反语感，因为不受约束的视图是通常小于受约束的视图。 此外，这些条款不使用一致地中书籍的章节。）
+（注意：条款*约束*并*不受约束*可能违反语感，因为不受约束的视图是通常小于受约束的视图。 此外，这些条款不使用一致地中书籍的章节。）
 
 如视图`Label`可以被限制在一个维度和其他不受约束。 一个`Label`将仅文本换行在多个行上如果水平约束。
 
@@ -99,9 +99,9 @@ ms.locfileid: "53052590"
 
 `Color.Default` 用于强制实施平台的配色方案，并因此在不同的平台上的不同上下文中具有不同的含义。 默认情况下将平台的颜色方案：
 
-- iOS： 浅色背景上的深文本
-- Android： 浅色 （在工作簿） 深色背景上的文本或浅色背景上的深文本 (材料设计通过在 AppCompat**主**的示例代码存储库的分支)
-- 浅色背景上的 UWP： 深文本
+- iOS:浅色背景上的深文本
+- Android:浅色 （在工作簿） 深色背景上的文本或浅色背景上的深文本 (材料设计通过在 AppCompat**主**的示例代码存储库的分支)
+- UWP:浅色背景上的深文本
 
 `Color.Accent`值会导致在深色或浅色背景可见的特定于平台的 （和用户有时可选） 颜色。
 
@@ -109,7 +109,7 @@ ms.locfileid: "53052590"
 
 各种平台都具有默认配色方案，如上面的列表中所示。
 
-如果以 Android 为目标，就可以通过指定浅色主题 Android.Manifest.xml 文件中或通过切换到深上浅方案[添加 AppCompat 和材料设计](~/xamarin-forms/platform/android/appcompat.md)。
+如果以 Android 为目标，就可以通过指定浅色主题 Android.Manifest.xml 文件中或通过切换到深上浅方案[添加 AppCompat 和材料设计](~/xamarin-forms/platform/android/appcompat-material-design.md)。
 
 对于 Windows 平台中，颜色主题通常选择用户，但您可以添加`RequestedTheme`属性设置为`Light`或`Dark`平台的 App.xaml 文件中。 默认情况下，在 UWP 项目的 App.xaml 文件包含`RequestedTheme`属性设置为`Light`。
 
