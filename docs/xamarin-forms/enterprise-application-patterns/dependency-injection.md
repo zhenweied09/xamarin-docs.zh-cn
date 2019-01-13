@@ -82,7 +82,7 @@ public class ProfileViewModel : ViewModelBase
 有两种方法可以在容器中通过代码注册类型和对象：
 
 -   在容器中注册一个类型或映射。 在需要时，容器将生成指定类型的一个实例。
--   在容器中注册一个现有的对象为单例模式。 在需要时，容器将返回现有对象的一个引用。
+-   在容器中注册一个现有的对象为单一实例。 在需要时，容器将返回现有对象的一个引用。
 
 > [!TIP]
 > 依赖关系注入容器并不总是合适的。 依赖关系注入引入了额外的复杂性并且可能不合适小型应用程序或作用不大。 如果一个类没有任何依赖项，或不作为其他类型的依赖项，那么将其放在容器可能毫无意义。 此外，如果类具有单一一组依赖项，作这个类不可或缺的一部分并且将永远不会更改，那么将其放在容器上可能毫无意义。
@@ -115,7 +115,7 @@ builder.RegisterType<ProfileViewModel>();
 
 当`ProfileViewModel`类型被解析时，容器将注入其必需的依赖项。
 
-Autofac 还允许实例注册，容器负责维护一个类型的单例模式实例的引用。 例如，下面的代码示例显示了当`ProfileViewModel`实例需要`IOrderService`实例时， eShopOnContainers 移动应用如何注册要使用的具体类型：
+Autofac 还允许实例注册，容器负责维护一个类型的单一实例的引用。 例如，下面的代码示例显示了当`ProfileViewModel`实例需要`IOrderService`实例时， eShopOnContainers 移动应用如何注册要使用的具体类型：
 
 ```csharp
 builder.RegisterType<OrderService>().As<IOrderService>().SingleInstance();
@@ -145,57 +145,57 @@ _container = builder.Build();
 
 ## <a name="resolution"></a>解析
 
-类型已注册后，它可以解析或插入作为依赖项。 当正在解析类型，并且容器需要创建的新实例时，它会将任何依赖关系注入到实例。
+类型已注册后，它可以作为依赖项被解析或注入。 当类型正在被解析，并且容器需要创建的新实例时，它会将任何依赖关系注入到该实例。
 
-通常情况下，在某种得以解决后，三个操作之一发生情况：
+通常情况下，在一个类型被解析后，会发生以下三种情形之一：
 
-1.  如果该类型尚未注册，容器将引发异常。
-1.  如果该类型具有已注册为 singleton，容器将返回的单独实例。 如果这是在首次类型调用为，容器将创建它必要情况下，并维护对它的引用。
-1.  如果该类型没有已注册为 singleton，容器将返回的新实例，并不会继续对它的引用。
+1.  如果该类型尚未被注册，容器将抛出一个异常。
+2.  如果该类型已注册为单一实例，容器将返回的单例的引用。 如果这是类型在首次被调用，容器将在必要情况下创建它，并维护对它的引用。
+3.  如果该类型没有被注册为单一实例，容器将返回新的实例，并不会维护对它的引用。
 
-下面的代码示例演示如何`RequestProvider`Autofac 以前注册的类型可以是已解决：
+下面的代码示例演示之前被 Autofac 注册过的`RequestProvider`类型是如何被解析的：
 
 ```csharp
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-在此示例中，Autofac 需要解决的具体类型`IRequestProvider`类型，以及任何依赖关系。 通常情况下，`Resolve`需要特定类型的实例时调用方法。 有关控制解析对象的生存期的信息，请参阅[管理解析的对象生存期](#managing_the_lifetime_of_resolved_objects)。
+在此示例中，Autofac 需要解析`IRequestProvider`类型的具体类型，以及其任何的依赖关系。 通常情况下，当需要特定类型的实例时`Resolve`方法会被调用。 有关控制已解析对象的生存期的信息，请参阅[已解析对象的生存期管理](#managing_the_lifetime_of_resolved_objects)。
 
-下面的代码示例演示如何 eShopOnContainers 移动应用程序实例化视图模型类型和其依赖项：
+下面的代码示例演示 eShopOnContainers 移动应用程序如何实例化视图模型类型及其依赖项：
 
 ```csharp
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-在此示例中，要求 Autofac 解析请求的视图模型，该视图模型类型和容器还会解析任何依赖关系。 在解析时`ProfileViewModel`类型，依赖关系，以解决是`IOrderService`对象。 因此，Autofac 首先构造`OrderService`对象，然后将其传递给的构造函数`ProfileViewModel`类。 有关如何 eShopOnContainers 移动应用程序构造视图的详细信息建模和将其关联到视图，请参阅[自动向视图模型定位器创建视图模型](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)。
+在此示例中，要求 Autofac 解析已请求的视图模型类型，容器还会解析其任何的依赖关系。 在解析`ProfileViewModel`类型时，被解析的依赖关系是一个`IOrderService`对象。 因此，Autofac 首先构造一个`OrderService`对象，然后将其传递给`ProfileViewModel`类的构造函数。 有关 eShopOnContainers 移动应用程序如何构造视图模型并将其关联到视图的详细信息，请参阅[通过视图模型定位器自动创建视图模型](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)。
 
 > [!NOTE]
-> 注册和解析与容器的类型具有一定的性能开销由于用于创建每种类型，反射的容器的使用，特别是如果正在进行的应用中每个页面导航重构依赖关系。 如果有许多或深入的依赖关系，则创建的成本会显著增加。
+> 通过容器注册和解析类型具有一定的性能开销，因为容器的使用反射技术来创建每种类型，尤其是，如果依赖关系在应用中每个页面导航都需要被构造时。 如果有许多或层次较深的依赖关系，则构建的成本会显著增加。
 
 <a name="managing_the_lifetime_of_resolved_objects" />
 
-## <a name="managing-the-lifetime-of-resolved-objects"></a>解析对象的生存期管理
+## <a name="managing-the-lifetime-of-resolved-objects"></a>已解析对象的生存期管理
 
-注册后一种类型，Autofac 的默认行为是要创建已注册类型的新实例每次类型得到解决，或当依赖项机制都注入其他类的实例。 在此方案中，该容器不保存对已解析的对象的引用。 但是，注册实例时, Autofac 的默认行为是对象的管理为 singleton 的生存期。 因此，该实例保持在范围内，容器是位于范围内，而当容器都超出范围且被垃圾回收时释放或在代码显式释放容器时。
+在一个类型被注册后，Autofac 的默认行为是在一个类型每次被解析后，或当依赖项机制注入实例到其他类，会创建已注册类型的一个新实例。 在此情况下，容器不保存对已解析对象的引用。 然而，当注册一个实例时, Autofac 的默认行为是对象生存期会作为单一实例来管理。 因此，当容器在作用域时该实例也保持在作用域内，而当容器都超出作用域且被垃圾回收时，或在代码显式释放容器时，这个实例会被释放。
 
-Autofac 实例作用域可以用于指定 Autofac 创建从已注册类型的对象的单一实例行为。 Autofac 实例作用域管理容器来实例化的对象生存期。 默认实例范围`RegisterType`方法是`InstancePerDependency`作用域。 但是，`SingleInstance`作用域可以与使用`RegisterType`方法，以便在容器创建或返回类型的单一实例时调用`Resolve`方法。 下面的代码示例演示如何指示 Autofac 若要创建的单一实例`NavigationService`类：
+Autofac 实例作用域可以用于为那些通过 Autofac 从已注册类型创建的对象指定单一实例行为。 Autofac 实例作用域通过容器来管理实例化对象的生存期。 `RegisterType`方法默认的实例作用域是`InstancePerDependency`作用域。 然而，`SingleInstance`作用域可以与`RegisterType`方法一起使用，以便在调用`Resolve`方法时该容器创建或返回类型的单一实例。 下面的代码示例演示如何指示 Autofac 创建`NavigationService`类的单一实例：
 
 ```csharp
 builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
 ```
 
-第一次`INavigationService`接口处于已解决状态，容器创建一个新`NavigationService`对象，并保留它的引用。 上的任何后续解决方案`INavigationService`接口，容器返回的引用`NavigationService`先前创建的对象。
+当`INavigationService`接口第一次被解析后，容器创建一个新的`NavigationService`对象，并保留对它的引用。 在`INavigationService`接口上的任何后续解析，容器将返回先前创建的`NavigationService`对象的引用。
 
 > [!NOTE]
-> SingleInstance 作用域容器被释放后释放创建的对象。
+> SingleInstance 作用域会在容器被释放后释放已创建的对象。
 
-Autofac 包括其他实例作用域。 有关详细信息，请参阅[实例范围](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html)readthedocs.io 上。
+Autofac 包括其他实例作用域。 有关详细信息，请参阅 readthedocs.io 上的[实例作用域](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html)。
 
 ## <a name="summary"></a>总结
 
-依赖关系注入可以实现的具体类型来自依赖于这些类型的代码分离。 它通常使用实现或扩展这些类型的具体类型并包含一系列的注册和接口和抽象类型之间的映射的容器。
+依赖关系注入允许具体类型从那些依赖于这些类型的代码中解除耦合。 它通常使用一个包含一系列注册和映射关系的容器，这些关系表示接口和抽象类型，并与实现或扩展这些类型的具体类型之间的注册和映射。
 
-Autofac 促进构建松耦合应用程序，并提供所有依赖关系注入容器，包括注册类型映射和对象实例的方法中的功能通常解析对象、 管理对象生存期和插入到它解析的对象的构造函数的依赖对象。
+Autofac 促进了构建松耦合应用程序，并提供了依赖关系注入容器所有常见的功能，包括注册类型映射和对象实例的方法、对象解析、 管理对象生存期和注入已解析的依赖对象到对象的构造函数。
 
 
 ## <a name="related-links"></a>相关链接
